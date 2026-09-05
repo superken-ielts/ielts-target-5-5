@@ -1,0 +1,2624 @@
+<title>Bạn Đồng Hành IELTS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F1F4F3; --surface:#FFFFFF; --surface-2:#E8EDEB; --sunken:#E4EAE8;
+  --ink:#14201E; --ink-2:#4C5C58; --ink-3:#778783;
+  --line:#D6DEDB; --line-2:#C2CDC9;
+  --accent:#9A6008; --accent-ink:#FFFFFF; --accent-soft:#F5E9D6;
+  --sk-l:#166B62; --sk-r:#3F53A0; --sk-w:#9C4A26; --sk-s:#7E3F68; --sk-v:#5D6D69;
+  --ok:#1F6B4C; --ok-soft:#DCEBE3;
+  --warn:#8A5A0B; --danger:#973038;
+  --shadow:0 1px 2px rgba(20,32,30,.05), 0 8px 24px -12px rgba(20,32,30,.16);
+  --r:14px; --r-sm:9px;
+  --font-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-dis:"Lora",Georgia,"Times New Roman",serif;
+  --font-num:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0D1312; --surface:#151D1B; --surface-2:#1D2725; --sunken:#101715;
+    --ink:#E7EEEC; --ink-2:#A2B2AE; --ink-3:#788884;
+    --line:#26312F; --line-2:#354340;
+    --accent:#E0A34A; --accent-ink:#1A1204; --accent-soft:#2C2416;
+    --sk-l:#4FB5A6; --sk-r:#8496DE; --sk-w:#D98A5E; --sk-s:#C286AC; --sk-v:#93A5A0;
+    --ok:#5FC094; --ok-soft:#172C23;
+    --warn:#D9A445; --danger:#E4818A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0D1312; --surface:#151D1B; --surface-2:#1D2725; --sunken:#101715;
+  --ink:#E7EEEC; --ink-2:#A2B2AE; --ink-3:#788884;
+  --line:#26312F; --line-2:#354340;
+  --accent:#E0A34A; --accent-ink:#1A1204; --accent-soft:#2C2416;
+  --sk-l:#4FB5A6; --sk-r:#8496DE; --sk-w:#D98A5E; --sk-s:#C286AC; --sk-v:#93A5A0;
+  --ok:#5FC094; --ok-soft:#172C23;
+  --warn:#D9A445; --danger:#E4818A;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--font-ui); font-size:15px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; padding-bottom:76px;
+}
+h1,h2,h3,h4{font-family:var(--font-dis); font-weight:600; text-wrap:balance; margin:0; line-height:1.25}
+p{margin:0}
+button{font-family:inherit; font-size:inherit; color:inherit; cursor:pointer}
+input,textarea,select{font-family:inherit; font-size:inherit; color:inherit}
+a{color:var(--accent); text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important; transition-duration:.01ms!important}}
+
+.wrap{max-width:640px; margin:0 auto; padding:0 16px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky; top:0; z-index:40; background:var(--ground);
+  border-bottom:1px solid var(--line);
+}
+.hdr{display:flex; align-items:center; gap:12px; padding:12px 0 10px}
+.hdr-main{flex:1; min-width:0}
+.hdr-week{font-family:var(--font-dis); font-size:19px; font-weight:600; letter-spacing:-.01em}
+.hdr-sub{font-size:12px; color:var(--ink-3); letter-spacing:.04em; text-transform:uppercase; font-weight:500}
+.streak{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  min-width:58px; padding:5px 8px; border-radius:var(--r-sm);
+  background:var(--accent-soft); border:1px solid var(--line);
+}
+.streak b{font-family:var(--font-num); font-size:18px; font-weight:600; color:var(--accent); line-height:1}
+.streak span{font-size:9.5px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.06em; margin-top:2px}
+.icon-btn{
+  width:38px; height:38px; display:grid; place-items:center; flex:none;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.icon-btn svg{width:17px; height:17px; stroke:var(--ink-2); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+
+.railbar{height:4px; background:var(--sunken); border-radius:99px; overflow:hidden; margin-bottom:10px}
+.railbar i{display:block; height:100%; background:var(--accent); border-radius:99px; transition:width .4s ease}
+
+/* ---------- generic ---------- */
+main{padding-top:18px}
+.panel{display:none}
+.panel.on{display:block}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  padding:16px; box-shadow:var(--shadow); margin-bottom:14px;
+}
+.eyebrow{
+  font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:8px;
+}
+.sec-title{font-size:20px; margin-bottom:4px}
+.sec-note{font-size:13.5px; color:var(--ink-2); margin-bottom:14px}
+.muted{color:var(--ink-2)}
+.small{font-size:13px}
+.tiny{font-size:12px; color:var(--ink-3)}
+.num{font-family:var(--font-num); font-variant-numeric:tabular-nums}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:7px;
+  padding:9px 15px; border-radius:var(--r-sm); border:1px solid var(--line-2);
+  background:var(--surface); font-weight:500; font-size:14px;
+}
+.btn:hover{border-color:var(--ink-3)}
+.btn-primary{background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn:disabled{opacity:.5; cursor:not-allowed}
+.btn-sm{padding:6px 11px; font-size:13px}
+
+.field{display:flex; flex-direction:column; gap:5px; margin-bottom:12px}
+.field label{font-size:12.5px; font-weight:600; color:var(--ink-2)}
+.inp{
+  width:100%; padding:9px 11px; background:var(--sunken); color:var(--ink);
+  border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.inp:focus{outline:none; border-color:var(--accent); background:var(--surface)}
+textarea.inp{resize:vertical; min-height:150px; line-height:1.65; font-size:14.5px}
+
+/* ---------- today blocks ---------- */
+.blocks{display:flex; flex-direction:column; gap:9px}
+.blk{
+  display:flex; gap:12px; align-items:flex-start; padding:13px 14px 13px 12px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  border-left:3px solid var(--rail,var(--ink-3)); box-shadow:var(--shadow);
+  transition:opacity .2s;
+}
+.blk.done{opacity:.55}
+.blk.done .blk-what{text-decoration:line-through; text-decoration-color:var(--ink-3)}
+.tick{
+  flex:none; width:24px; height:24px; margin-top:1px; border-radius:7px;
+  border:1.5px solid var(--line-2); background:var(--sunken);
+  display:grid; place-items:center; padding:0;
+}
+.tick svg{width:13px; height:13px; stroke:var(--accent-ink); fill:none; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; opacity:0}
+.blk.done .tick{background:var(--ok); border-color:var(--ok)}
+.blk.done .tick svg{opacity:1; stroke:#fff}
+.blk-body{flex:1; min-width:0}
+.blk-top{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:3px}
+.blk-tag{
+  font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--rail,var(--ink-3));
+}
+.blk-min{font-family:var(--font-num); font-size:11.5px; color:var(--ink-3); font-weight:500}
+.blk-what{font-size:14.5px; font-weight:600; line-height:1.4; margin-bottom:3px}
+.blk-how{font-size:13px; color:var(--ink-2); line-height:1.55}
+.blk-how a{font-weight:500}
+
+.seg{display:flex; gap:0; background:var(--sunken); padding:3px; border-radius:var(--r-sm); border:1px solid var(--line)}
+.seg button{
+  flex:1; padding:7px 8px; border:0; background:transparent; border-radius:7px;
+  font-size:13px; font-weight:500; color:var(--ink-2);
+}
+.seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); font-weight:600; box-shadow:var(--shadow)}
+
+.statrow{display:grid; grid-template-columns:repeat(3,1fr); gap:9px}
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:11px 12px; text-align:center}
+.stat b{display:block; font-family:var(--font-num); font-size:21px; font-weight:600; line-height:1.1}
+.stat span{font-size:11px; color:var(--ink-3); letter-spacing:.03em}
+
+/* ---------- roadmap ---------- */
+.phase-head{
+  display:flex; align-items:baseline; gap:9px; margin:22px 0 9px; padding-bottom:7px;
+  border-bottom:1px solid var(--line);
+}
+.phase-head h3{font-size:16px}
+.phase-head span{font-family:var(--font-num); font-size:12px; color:var(--ink-3)}
+.wk{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm);
+  margin-bottom:7px; overflow:hidden;
+}
+.wk.now{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent)}
+.wk.past{opacity:.62}
+.wk-btn{
+  width:100%; display:flex; align-items:center; gap:11px; padding:11px 13px;
+  background:transparent; border:0; text-align:left;
+}
+.wk-n{
+  font-family:var(--font-num); font-size:12px; font-weight:600; color:var(--ink-3);
+  min-width:30px; flex:none;
+}
+.wk.now .wk-n{color:var(--accent)}
+.wk-t{flex:1; font-size:14px; font-weight:500; line-height:1.4}
+.wk-chev{width:14px; height:14px; flex:none; stroke:var(--ink-3); fill:none; stroke-width:2; transition:transform .2s}
+.wk[open] .wk-chev{transform:rotate(90deg)}
+.wk-body{padding:0 13px 13px 54px; font-size:13.5px}
+.wk-body dl{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin:0}
+.wk-body dt{font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3); padding-top:3px}
+.wk-body dd{margin:0; color:var(--ink-2); line-height:1.55}
+.mile{
+  margin-top:10px; padding:9px 11px; background:var(--accent-soft);
+  border-radius:var(--r-sm); font-size:12.5px; font-weight:500; color:var(--ink);
+  border:1px solid var(--line);
+}
+
+/* ---------- resources ---------- */
+.res-grp{margin-bottom:18px}
+.res-grp > h4{font-size:14px; margin-bottom:2px; display:flex; align-items:center; gap:7px}
+.dot{width:8px; height:8px; border-radius:99px; background:var(--rail); flex:none}
+.res-grp > p{font-size:12.5px; color:var(--ink-3); margin-bottom:9px}
+.res{
+  display:flex; gap:11px; align-items:flex-start; padding:11px 13px; margin-bottom:6px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm);
+  text-decoration:none; color:inherit;
+}
+.res:hover{border-color:var(--line-2); background:var(--surface-2)}
+.res-n{font-size:14px; font-weight:600; margin-bottom:1px}
+.res-d{font-size:12.5px; color:var(--ink-2); line-height:1.5}
+.res-go{width:14px; height:14px; flex:none; margin-top:4px; stroke:var(--ink-3); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+.pill{
+  display:inline-block; font-size:10px; font-weight:700; letter-spacing:.05em;
+  text-transform:uppercase; padding:2px 6px; border-radius:5px; margin-left:6px;
+  background:var(--accent-soft); color:var(--accent); vertical-align:1px;
+}
+
+/* ---------- practice ---------- */
+.cue{
+  background:var(--surface-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:16px; margin-bottom:12px;
+}
+.cue h4{font-family:var(--font-dis); font-size:16.5px; margin-bottom:9px; font-style:italic}
+.cue ul{margin:0; padding-left:19px; font-size:14px; color:var(--ink-2)}
+.cue li{margin-bottom:3px}
+.timer{
+  font-family:var(--font-num); font-size:42px; font-weight:600; text-align:center;
+  letter-spacing:-.02em; line-height:1.1; margin:6px 0 2px;
+}
+.timer.warn{color:var(--warn)}
+.timer.over{color:var(--ok)}
+.timer-lbl{text-align:center; font-size:12px; color:var(--ink-3); margin-bottom:12px; letter-spacing:.04em}
+.grader-out{
+  background:var(--sunken); border:1px solid var(--line); border-radius:var(--r-sm);
+  padding:14px; margin-top:12px; font-size:14px; line-height:1.7; white-space:pre-wrap;
+  word-wrap:break-word;
+}
+.grader-out:empty{display:none}
+.wc{font-family:var(--font-num); font-size:12.5px; color:var(--ink-3); text-align:right; margin-top:-6px}
+.wc.bad{color:var(--danger); font-weight:600}
+.wc.good{color:var(--ok); font-weight:600}
+
+/* ---------- progress ---------- */
+.chart{display:flex; align-items:flex-end; gap:4px; height:104px; padding-top:8px}
+.bar{flex:1; display:flex; flex-direction:column; justify-content:flex-end; height:100%; gap:4px; min-width:0}
+.bar i{display:block; background:var(--accent); border-radius:3px 3px 0 0; min-height:2px; transition:height .3s}
+.bar i.low{background:var(--line-2)}
+.bar span{font-family:var(--font-num); font-size:9px; color:var(--ink-3); text-align:center; overflow:hidden}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+table{width:100%; border-collapse:collapse; font-size:13.5px}
+th,td{padding:8px 9px; text-align:left; border-bottom:1px solid var(--line)}
+th{font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-3); font-weight:600}
+td.num,th.num{font-family:var(--font-num); font-variant-numeric:tabular-nums; text-align:right}
+.err{
+  padding:10px 12px; background:var(--surface); border:1px solid var(--line);
+  border-left:3px solid var(--rail,var(--ink-3)); border-radius:var(--r-sm); margin-bottom:6px;
+}
+.err-w{font-size:13.5px; text-decoration:line-through; text-decoration-color:var(--danger); color:var(--ink-2)}
+.err-r{font-size:14px; font-weight:600; color:var(--ok)}
+.err-m{font-size:12px; color:var(--ink-3); margin-top:2px}
+.row2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.rowx{display:flex; gap:8px; align-items:flex-end}
+.empty{text-align:center; padding:26px 16px; color:var(--ink-3); font-size:13.5px}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed; bottom:0; left:0; right:0; z-index:50;
+  background:var(--surface); border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.nav-in{display:flex; max-width:640px; margin:0 auto}
+nav button{
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;
+  padding:9px 3px 8px; border:0; background:transparent; color:var(--ink-3);
+}
+nav button svg{width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+nav button span{font-size:10px; font-weight:600; letter-spacing:.01em}
+nav button[aria-current="page"]{color:var(--accent)}
+@media (max-width:400px){
+  nav button{padding:8px 1px 7px; gap:2px}
+  nav button svg{width:18px; height:18px}
+  nav button span{font-size:9px; letter-spacing:-.01em}
+}
+
+@media (min-width:900px){
+  body{padding-bottom:0; padding-left:210px}
+  header{padding-left:0}
+  nav{
+    top:0; bottom:0; right:auto; width:210px; border-top:0; border-right:1px solid var(--line);
+    padding:22px 12px;
+  }
+  .nav-in{flex-direction:column; gap:3px}
+  nav button{flex-direction:row; justify-content:flex-start; gap:11px; padding:10px 13px; border-radius:var(--r-sm)}
+  nav button span{font-size:13.5px}
+  nav button[aria-current="page"]{background:var(--accent-soft)}
+  .wrap{max-width:700px}
+}
+/* ---------- chọn kỹ năng để luyện ---------- */
+.skgrid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px}
+.skcard{
+  display:flex; flex-direction:column; gap:6px; text-align:left; padding:14px 13px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  border-top:3px solid var(--rail); box-shadow:var(--shadow); min-height:118px;
+}
+.skcard:hover{border-color:var(--line-2)}
+.skcard b{font-family:var(--font-dis); font-size:16px; font-weight:600; color:var(--rail)}
+.skcard span{font-size:12.5px; color:var(--ink-2); line-height:1.45; flex:1}
+.skcard i{
+  font-family:var(--font-num); font-style:normal; font-size:11px; color:var(--ink-3);
+  border-top:1px solid var(--line); padding-top:6px;
+}
+.goal{
+  margin-top:12px; padding:10px 12px; background:var(--accent-soft);
+  border:1px solid var(--line); border-radius:var(--r-sm);
+  font-size:13px; font-weight:500; line-height:1.5;
+}
+.steps{display:flex; flex-direction:column; gap:7px}
+.step{
+  display:flex; gap:11px; align-items:flex-start; padding:10px 12px;
+  background:var(--sunken); border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.step.done{opacity:.55}
+.step.done .step-t{text-decoration:line-through; text-decoration-color:var(--ink-3)}
+.step-n{
+  flex:none; width:21px; height:21px; border-radius:50%; display:grid; place-items:center;
+  font-family:var(--font-num); font-size:11px; font-weight:600;
+  background:var(--surface); border:1px solid var(--line-2); color:var(--ink-2);
+}
+.step.done .step-n{background:var(--ok); border-color:var(--ok); color:#fff}
+.step-t{font-size:13.5px; font-weight:600; margin-bottom:2px}
+.step-d{font-size:12.5px; color:var(--ink-2); line-height:1.5}
+.logrow{
+  display:flex; gap:10px; align-items:baseline; padding:9px 11px; margin-bottom:5px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm);
+  border-left:3px solid var(--rail,var(--ink-3));
+}
+.logrow .lg-d{font-family:var(--font-num); font-size:11px; color:var(--ink-3); flex:none}
+.logrow .lg-v{font-family:var(--font-num); font-size:14px; font-weight:600; flex:none}
+.logrow .lg-n{font-size:12.5px; color:var(--ink-2); flex:1; min-width:0;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.spark{display:flex; align-items:flex-end; gap:3px; height:46px; margin:10px 0 4px}
+.spark i{flex:1; background:var(--accent); border-radius:2px 2px 0 0; min-height:2px}
+
+/* ---------- đọc tài liệu ---------- */
+.doc-item{
+  display:flex; gap:12px; align-items:flex-start; width:100%; text-align:left;
+  padding:12px 13px; margin-bottom:6px; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.doc-item:hover{border-color:var(--line-2); background:var(--surface-2)}
+.doc-ix{
+  font-family:var(--font-num); font-size:11px; font-weight:600; color:var(--ink-3);
+  min-width:22px; flex:none; padding-top:3px;
+}
+.doc-t{font-size:14.5px; font-weight:600; line-height:1.35; margin-bottom:2px}
+.doc-d{font-size:12.5px; color:var(--ink-2); line-height:1.5}
+.doc-meta{font-family:var(--font-num); font-size:11px; color:var(--ink-3); margin-top:3px}
+
+.reader-bar{
+  display:flex; align-items:center; gap:10px; margin-bottom:4px;
+  position:sticky; top:0; z-index:20; background:var(--ground); padding:8px 0;
+}
+.reader-bar .btn{flex:none}
+.reader-title{
+  flex:1; min-width:0; font-family:var(--font-dis); font-size:16px; font-weight:600;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.toc{
+  background:var(--surface-2); border:1px solid var(--line); border-radius:var(--r-sm);
+  margin-bottom:18px; overflow:hidden;
+}
+.toc summary{
+  padding:10px 13px; font-size:12px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ink-3); cursor:pointer;
+}
+.toc ol{margin:0; padding:0 13px 12px 30px; font-size:13.5px}
+.toc li{margin-bottom:4px}
+.toc a{color:var(--ink-2); text-decoration:none}
+.toc a:hover{color:var(--accent); text-decoration:underline}
+
+.hit{
+  display:block; width:100%; text-align:left; padding:10px 12px; margin-bottom:6px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm);
+  border-left:3px solid var(--accent);
+}
+.hit:hover{background:var(--surface-2)}
+.hit b{display:block; font-size:12px; color:var(--accent); font-weight:700; margin-bottom:3px}
+.hit span{font-size:13px; color:var(--ink-2); line-height:1.5}
+.hit mark{background:var(--accent-soft); color:var(--ink); font-weight:600; padding:0 2px; border-radius:3px}
+
+/* nội dung markdown đã dựng */
+.prose{font-size:15px; line-height:1.72; padding-bottom:30px}
+.prose h1{font-size:24px; margin:6px 0 14px; line-height:1.25}
+.prose h2{font-size:19px; margin:30px 0 10px; padding-bottom:7px; border-bottom:1px solid var(--line)}
+.prose h3{font-size:16.5px; margin:24px 0 8px}
+.prose h4{font-size:14.5px; margin:18px 0 6px; font-family:var(--font-ui); font-weight:700}
+.prose p{margin:0 0 13px}
+.prose ul,.prose ol{margin:0 0 14px; padding-left:22px}
+.prose li{margin-bottom:5px}
+.prose li.sub{margin-left:18px; list-style:none; position:relative}
+.prose li.sub::before{content:"–"; position:absolute; left:-14px; color:var(--ink-3)}
+.prose strong{font-weight:700}
+.prose em{font-style:italic}
+.prose hr{border:0; border-top:1px solid var(--line); margin:26px 0}
+.prose code{
+  font-family:var(--font-num); font-size:.88em; background:var(--sunken);
+  padding:1px 5px; border-radius:4px; border:1px solid var(--line);
+}
+.prose pre{
+  background:var(--sunken); border:1px solid var(--line); border-radius:var(--r-sm);
+  padding:13px 14px; overflow-x:auto; margin:0 0 15px;
+}
+.prose pre code{background:none; border:0; padding:0; font-size:12.5px; line-height:1.6}
+.prose blockquote{
+  margin:0 0 15px; padding:2px 0 2px 14px; border-left:3px solid var(--accent);
+  color:var(--ink-2);
+}
+.prose blockquote p:last-child{margin-bottom:0}
+.prose table{margin-bottom:4px}
+.prose .tbl-scroll{margin:0 0 16px}
+.prose td,.prose th{vertical-align:top}
+.prose a[data-doc]{cursor:pointer}
+.md-cb{
+  display:inline-block; width:13px; height:13px; margin-right:7px; vertical-align:-1px;
+  border:1.5px solid var(--line-2); border-radius:3.5px; background:var(--sunken);
+}
+.md-cb.on{background:var(--ok); border-color:var(--ok)}
+
+.nav-brand{display:none}
+@media (min-width:900px){
+  .nav-brand{
+    display:block; font-family:var(--font-dis); font-size:16px; font-weight:600;
+    padding:0 13px 18px; color:var(--ink); line-height:1.3;
+  }
+  .nav-brand em{display:block; font-family:var(--font-ui); font-style:normal; font-size:11px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em; margin-top:3px; font-weight:600}
+}
+.sync{
+  display:inline-flex; align-items:center; gap:5px; font-size:11.5px; color:var(--ink-3);
+}
+.sync i{width:6px; height:6px; border-radius:99px; background:var(--ink-3); display:block}
+.sync.on i{background:var(--ok)}
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="hdr">
+      <div class="hdr-main">
+        <div class="hdr-week" id="hWeek">Đang tải…</div>
+        <div class="hdr-sub" id="hPhase">—</div>
+      </div>
+      <div class="streak"><b class="num" id="hStreak">0</b><span>ngày</span></div>
+      <button class="icon-btn" id="themeBtn" title="Đổi giao diện sáng/tối" aria-label="Đổi giao diện sáng tối">
+        <svg viewBox="0 0 24 24"><path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21M5.6 5.6l1.1 1.1M17.3 17.3l1.1 1.1M5.6 18.4l1.1-1.1M17.3 6.7l1.1-1.1"/><circle cx="12" cy="12" r="3.8"/></svg>
+      </button>
+    </div>
+    <div class="railbar"><i id="hBar" style="width:0%"></i></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ HÔM NAY ============ -->
+  <section class="panel on" id="p-today">
+    <div class="statrow" style="margin-bottom:14px">
+      <div class="stat"><b id="sHours">0</b><span>giờ tuần này</span></div>
+      <div class="stat"><b id="sWords">0</b><span>từ đã học</span></div>
+      <div class="stat"><b id="sDays">0</b><span>tuần còn lại</span></div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow" id="tDate">—</div>
+      <h2 class="sec-title" id="tTitle">Kế hoạch hôm nay</h2>
+      <p class="sec-note" id="tNote">—</p>
+      <div class="seg" style="margin-bottom:14px">
+        <button id="modeFull" aria-pressed="true">Ngày thường · 2 tiếng</button>
+        <button id="modeShort" aria-pressed="false">Ngày bận · 1 tiếng</button>
+      </div>
+      <div class="blocks" id="tBlocks"></div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Ghi lại hôm nay</div>
+      <div class="row2">
+        <div class="field" style="margin:0">
+          <label for="inHours">Số giờ đã học</label>
+          <input class="inp num" type="number" id="inHours" min="0" max="12" step="0.25" placeholder="0">
+        </div>
+        <div class="field" style="margin:0">
+          <label for="inWords">Số từ mới</label>
+          <input class="inp num" type="number" id="inWords" min="0" max="100" step="1" placeholder="0">
+        </div>
+      </div>
+      <p class="tiny" style="margin-top:9px">Ghi giờ <strong>thật sự đã học</strong>, không ghi giờ định học. Đây là chỉ số dự báo kết quả chính xác nhất trong cả lộ trình.</p>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Nhắc mỗi ngày</div>
+      <p class="small" id="tTip">—</p>
+    </div>
+  </section>
+
+  <!-- ============ LỘ TRÌNH ============ -->
+  <section class="panel" id="p-road">
+    <h2 class="sec-title">Lộ trình 40 tuần</h2>
+    <p class="sec-note">General Training · 3.0 → 5.5 · khoảng 480 giờ ở nhịp 12 tiếng mỗi tuần. Chạm vào một tuần để xem chi tiết.</p>
+    <div id="roadmap"></div>
+  </section>
+
+  <!-- ============ LUYỆN TẬP ============ -->
+  <section class="panel" id="p-practice">
+
+    <div id="skHome">
+      <h2 class="sec-title">Luyện tập</h2>
+      <p class="sec-note">Chọn kỹ năng muốn luyện. Nội dung lấy theo đúng tuần bạn đang học, và mọi buổi luyện đều được ghi vào lịch sử.</p>
+      <div class="skgrid" id="skGrid"></div>
+      <div class="card" style="margin-top:4px">
+        <div class="eyebrow">Nhắc hôm nay</div>
+        <p class="small" id="skTip">—</p>
+      </div>
+    </div>
+
+    <div id="skPanel" hidden>
+      <div class="reader-bar">
+        <button class="btn btn-sm" id="skBack">← Kỹ năng</button>
+        <span class="reader-title" id="skTitle"></span>
+      </div>
+
+      <!-- ---------- LISTENING ---------- -->
+      <div class="skpane" id="sk-L" hidden>
+        <div class="card">
+          <div class="eyebrow">Nguồn nghe của tuần này</div>
+          <h3 class="sec-title" style="font-size:17px" id="lSrc">—</h3>
+          <p class="sec-note" id="lFocus" style="margin-bottom:12px">—</p>
+          <a class="btn btn-sm" id="lLink" target="_blank" rel="noopener noreferrer">Mở nguồn nghe →</a>
+          <div class="goal" id="lTarget"></div>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Quy trình 4 lượt — làm đủ, đừng cắt bớt</div>
+          <div class="steps" id="lSteps"></div>
+          <p class="tiny" style="margin-top:10px">Lượt 3 là lượt tạo ra tiến bộ và cũng là lượt hay bị bỏ nhất. Nhìn chữ mà nghe được là đương nhiên — nhưng đó chính là chỗ bạn phát hiện mình nghe hụt vì chưa biết từ, hay vì biết từ mà không nhận ra khi nói nhanh.</p>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Chép chính tả — 10 phút</div>
+          <p class="small muted" style="margin-bottom:12px">Chọn một đoạn 30 giây, nghe và chép lại từng từ ra giấy, tua đi tua lại tùy ý, rồi mới đối chiếu transcript.</p>
+          <div class="timer num" id="dtDisplay">10:00</div>
+          <div class="timer-lbl" id="dtLabel">Bấm bắt đầu rồi mở nguồn nghe</div>
+          <div class="rowx">
+            <button class="btn btn-primary" id="dtStart" style="flex:1">Bắt đầu</button>
+            <button class="btn" id="dtReset">Đặt lại</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Ghi kết quả buổi này</div>
+          <div class="row2">
+            <div class="field" style="margin:0"><label for="lRight">Số câu đúng</label><input class="inp num" id="lRight" type="number" min="0" max="40" placeholder="7"></div>
+            <div class="field" style="margin:0"><label for="lTotal">Trên tổng số</label><input class="inp num" id="lTotal" type="number" min="1" max="40" placeholder="10"></div>
+          </div>
+          <div class="field" style="margin-top:10px"><label for="lNote">Ghi chú — dạng bài, lỗi hay gặp</label><input class="inp" id="lNote" placeholder="Section 1, sai 2 câu vì nhầm -teen với -ty"></div>
+          <button class="btn btn-primary btn-sm" id="lSave" style="width:100%">Lưu vào lịch sử</button>
+          <div id="lHist" style="margin-top:16px"></div>
+        </div>
+      </div>
+
+      <!-- ---------- READING ---------- -->
+      <div class="skpane" id="sk-R" hidden>
+        <div class="card">
+          <div class="eyebrow">Dạng bài của tuần này</div>
+          <h3 class="sec-title" style="font-size:17px" id="rFocus">—</h3>
+          <p class="sec-note" id="rWhy" style="margin-bottom:12px">—</p>
+          <a class="btn btn-sm" id="rLink" target="_blank" rel="noopener noreferrer">Mở nguồn đọc →</a>
+          <div class="goal" id="rTarget"></div>
+        </div>
+
+        <div class="card" id="rSecCard">
+          <div class="eyebrow">Phân bổ thời gian General Training</div>
+          <div class="tbl-scroll"><table><thead><tr>
+            <th>Phần</th><th>Nội dung</th><th class="num">Phút</th><th class="num">Mục tiêu</th>
+          </tr></thead><tbody id="rSecBody"></tbody></table></div>
+          <p class="tiny" style="margin-top:10px">Quy tắc 90 giây: một câu mất quá 90 giây thì đánh dấu, đoán một đáp án và đi tiếp. Ngồi lại một câu khó là cách đánh mất bốn câu dễ ở sau.</p>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Đồng hồ đếm ngược</div>
+          <div class="timer num" id="rtDisplay">15:00</div>
+          <div class="timer-lbl" id="rtLabel">Section 1 — 15 phút</div>
+          <div class="seg" id="rtPresets" style="margin-bottom:12px"></div>
+          <div class="rowx">
+            <button class="btn btn-primary" id="rtStart" style="flex:1">Bắt đầu</button>
+            <button class="btn" id="rtReset">Đặt lại</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Ghi kết quả buổi này</div>
+          <div class="row2">
+            <div class="field" style="margin:0"><label for="rRight">Số câu đúng</label><input class="inp num" id="rRight" type="number" min="0" max="40" placeholder="10"></div>
+            <div class="field" style="margin:0"><label for="rTotal">Trên tổng số</label><input class="inp num" id="rTotal" type="number" min="1" max="40" placeholder="14"></div>
+          </div>
+          <div class="field" style="margin-top:10px"><label for="rMins">Làm hết bao nhiêu phút</label><input class="inp num" id="rMins" type="number" min="1" max="90" placeholder="18"></div>
+          <div class="field"><label for="rNote">Ghi chú — dạng bài sai nhiều nhất</label><input class="inp" id="rNote" placeholder="Sai 3 câu True/False/Not Given, toàn chọn False thay vì Not Given"></div>
+          <button class="btn btn-primary btn-sm" id="rSave" style="width:100%">Lưu vào lịch sử</button>
+          <div id="rHist" style="margin-top:16px"></div>
+        </div>
+      </div>
+
+      <!-- ---------- SPEAKING ---------- -->
+      <div class="skpane" id="sk-S" hidden>
+        <div class="card">
+          <div class="eyebrow">Trọng tâm tuần này</div>
+          <p class="small" id="sFocus" style="margin-bottom:0">—</p>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow" id="cueKind">Đề Part 2</div>
+          <div class="cue" id="cueCard"></div>
+          <div class="rowx" style="margin-bottom:14px">
+            <button class="btn btn-sm" id="cueNew">Đề khác</button>
+            <button class="btn btn-sm" id="cuePart1">Đổi sang Part 1</button>
+          </div>
+          <div class="timer num" id="tmDisplay">1:00</div>
+          <div class="timer-lbl" id="tmLabel">Chuẩn bị — viết 4 từ khóa, không viết câu hoàn chỉnh</div>
+          <div class="rowx">
+            <button class="btn btn-primary" id="tmStart" style="flex:1">Bắt đầu chuẩn bị</button>
+            <button class="btn" id="tmReset">Đặt lại</button>
+          </div>
+          <p class="tiny" style="margin-top:11px">Bật ghi âm trên điện thoại trước khi nói. Nghe lại và đếm số lần dừng quá 3 giây — bước này mới là chỗ tạo ra tiến bộ.</p>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Ghi kết quả buổi này</div>
+          <div class="row2">
+            <div class="field" style="margin:0"><label for="sSecs">Nói được bao nhiêu giây</label><input class="inp num" id="sSecs" type="number" min="0" max="300" placeholder="95"></div>
+            <div class="field" style="margin:0"><label for="sPause">Số lần dừng quá 3 giây</label><input class="inp num" id="sPause" type="number" min="0" max="50" placeholder="4"></div>
+          </div>
+          <div class="field" style="margin-top:10px"><label for="sNote">Đề đã nói và lỗi tự nghe thấy</label><input class="inp" id="sNote" placeholder="Describe a person you admire — quên -s ngôi 3 nhiều lần"></div>
+          <button class="btn btn-primary btn-sm" id="sSave" style="width:100%">Lưu vào lịch sử</button>
+          <div id="sHist" style="margin-top:16px"></div>
+        </div>
+      </div>
+
+      <!-- ---------- WRITING ---------- -->
+      <div class="skpane" id="sk-W" hidden>
+        <div class="card">
+          <div class="eyebrow">Trọng tâm tuần này</div>
+          <p class="small" id="wFocus" style="margin-bottom:0">—</p>
+        </div>
+
+    <div class="card" id="graderCard">
+      <div class="eyebrow">Chấm bài</div>
+      <div class="seg" style="margin-bottom:13px">
+        <button id="gmEssay" aria-pressed="true">Chấm cả bài</button>
+        <button id="gmFix" aria-pressed="false">Sửa câu</button>
+      </div>
+      <div id="gEssayWrap">
+        <div class="field">
+          <label for="gType">Loại bài</label>
+          <select class="inp" id="gType">
+            <option value="t2">Task 2 — bài luận 250 từ, 40 phút</option>
+            <option value="formal">Task 1 — thư trang trọng (Dear Sir or Madam)</option>
+            <option value="semi">Task 1 — thư bán trang trọng (Dear Mr/Ms + tên)</option>
+            <option value="informal">Task 1 — thư thân mật (bạn bè, người thân)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="gText" id="gLabel">Dán bài viết của bạn vào đây</label>
+        <textarea class="inp" id="gText" placeholder="Gõ hoặc dán bài viết bằng tiếng Anh…"></textarea>
+      </div>
+      <div class="wc num" id="gWc">0 từ</div>
+      <div class="rowx" style="margin-top:10px">
+        <button class="btn btn-primary" id="gRun" style="flex:1">Chấm bài</button>
+        <button class="btn" id="gStop" hidden>Dừng</button>
+      </div>
+      <div class="grader-out" id="gOut"></div>
+
+      <p class="tiny" style="margin-top:11px">Sau khi nhận kết quả: ghi 3 lỗi nặng nhất vào tab Tiến độ, rồi <strong>viết lại bài này vào ngày mai</strong>. Viết lại một bài cũ có giá trị hơn viết một bài mới.</p>
+    </div>
+
+        <div class="card">
+          <div class="eyebrow">Ghi điểm vào lịch sử</div>
+          <p class="tiny" id="gSaveHint" style="margin-bottom:11px">Chấm bài ở trên thì điểm tự điền vào đây. Nếu chấm bằng Write &amp; Improve hay nguồn khác thì nhập tay cũng được.</p>
+          <div class="row2">
+            <div class="field" style="margin:0"><label for="gBand">Điểm tổng</label><input class="inp num" id="gBand" type="number" min="0" max="9" step="0.5" placeholder="5.0"></div>
+            <div class="field" style="margin:0"><label for="gWords2">Số từ</label><input class="inp num" id="gWords2" type="number" min="0" placeholder="263"></div>
+          </div>
+          <button class="btn btn-primary btn-sm" id="gSave" style="width:100%; margin-top:11px">Lưu bài này</button>
+        </div>
+
+    <div class="card" id="graderOff" hidden>
+      <div class="eyebrow">Chấm bài</div>
+      <p class="small">Công cụ chấm bài bằng AI chỉ chạy được khi mở trang này trong Claude. Nếu đang xem bản tự host, dùng <a href="https://writeandimprove.com" target="_blank" rel="noopener">Write &amp; Improve</a> để chấm bài miễn phí, rồi tự nhập điểm vào lịch sử bên dưới.</p>
+    </div>
+
+        <div class="card">
+          <div class="eyebrow">Lịch sử chấm bài</div>
+          <div id="wHist"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TÀI LIỆU ============ -->
+  <section class="panel" id="p-res">
+    <h2 class="sec-title">Tài liệu miễn phí</h2>
+    <p class="sec-note">Toàn bộ miễn phí thật, không phải bản dùng thử. Danh sách này đã đủ cho cả 40 tuần — đừng đi sưu tầm thêm.</p>
+    <div id="resList"></div>
+  </section>
+
+  <!-- ============ KẾ HOẠCH (đọc tài liệu) ============ -->
+  <section class="panel" id="p-docs">
+    <div id="docHome">
+      <h2 class="sec-title">Kế hoạch đầy đủ</h2>
+      <p class="sec-note">Toàn bộ tài liệu của lộ trình, đọc được ngay tại đây kể cả khi không mở được máy tính.</p>
+
+      <div class="field">
+        <label for="docQ">Tìm trong toàn bộ tài liệu</label>
+        <input class="inp" id="docQ" type="search" placeholder="ví dụ: mạo từ, Not Given, viết thư, sổ lỗi" autocomplete="off">
+      </div>
+      <div id="docHits"></div>
+      <div id="docList"></div>
+    </div>
+
+    <div id="docView" hidden>
+      <div class="reader-bar">
+        <button class="btn btn-sm" id="docBack">← Danh sách</button>
+        <span class="reader-title" id="docTitle"></span>
+      </div>
+      <details class="toc" id="docToc"><summary>Mục lục</summary><ol id="docTocList"></ol></details>
+      <article class="prose" id="docBody"></article>
+      <button class="btn btn-sm" id="docTop" style="width:100%; margin-bottom:24px">↑ Về đầu trang</button>
+    </div>
+  </section>
+
+  <!-- ============ TIẾN ĐỘ ============ -->
+  <section class="panel" id="p-prog">
+    <h2 class="sec-title">Tiến độ</h2>
+    <p class="sec-note">Đo bằng con số. Cảm giác “hình như khá hơn” không dùng để ra quyết định được.</p>
+
+    <div class="card">
+      <div class="eyebrow">Giờ học 12 tuần gần nhất</div>
+      <div class="chart" id="chart"></div>
+      <p class="tiny" style="margin-top:10px">Mục tiêu 12 giờ mỗi tuần, sàn 10 giờ. Cột xám là tuần dưới 8 giờ — hai tuần xám liên tiếp là báo động đỏ.</p>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Điểm thi thử</div>
+      <div class="tbl-scroll"><table id="mockTbl"><thead><tr>
+        <th>Ngày</th><th class="num">L</th><th class="num">R</th><th class="num">W</th><th class="num">S</th><th class="num">Tổng</th>
+      </tr></thead><tbody id="mockBody"></tbody></table></div>
+      <div style="margin-top:12px">
+        <div class="row2">
+          <div class="field" style="margin:0"><label for="mkL">Listening</label><input class="inp num" id="mkL" type="number" min="0" max="9" step="0.5" placeholder="5.0"></div>
+          <div class="field" style="margin:0"><label for="mkR">Reading</label><input class="inp num" id="mkR" type="number" min="0" max="9" step="0.5" placeholder="5.0"></div>
+        </div>
+        <div class="row2" style="margin-top:10px">
+          <div class="field" style="margin:0"><label for="mkW">Writing</label><input class="inp num" id="mkW" type="number" min="0" max="9" step="0.5" placeholder="4.5"></div>
+          <div class="field" style="margin:0"><label for="mkS">Speaking</label><input class="inp num" id="mkS" type="number" min="0" max="9" step="0.5" placeholder="4.5"></div>
+        </div>
+        <button class="btn btn-primary btn-sm" id="mkAdd" style="margin-top:11px; width:100%">Lưu điểm thi thử</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Sổ lỗi</div>
+      <p class="small muted" style="margin-bottom:12px">Người tự học thất bại hiếm khi vì thiếu tài liệu. Họ thất bại vì lặp lại đúng những lỗi cũ suốt nhiều tháng.</p>
+      <div class="field">
+        <label for="erSkill">Kỹ năng</label>
+        <select class="inp" id="erSkill">
+          <option value="Wr">Writing</option><option value="S">Speaking</option>
+          <option value="L">Listening</option><option value="R">Reading</option>
+          <option value="V">Từ vựng / Ngữ pháp</option>
+        </select>
+      </div>
+      <div class="field"><label for="erWrong">Câu sai của tôi</label><input class="inp" id="erWrong" placeholder="He go to work every day"></div>
+      <div class="field"><label for="erRight">Câu đúng</label><input class="inp" id="erRight" placeholder="He goes to work every day"></div>
+      <div class="field"><label for="erNote">Vì sao sai</label><input class="inp" id="erNote" placeholder="Chia động từ ngôi thứ ba số ít — thiếu -s"></div>
+      <button class="btn btn-primary btn-sm" id="erAdd" style="width:100%">Thêm vào sổ lỗi</button>
+      <div id="erList" style="margin-top:16px"></div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Lịch sử học — file JSON</div>
+      <p class="small muted" style="margin-bottom:12px">Toàn bộ dữ liệu của bạn trong một file: tiến độ từng ngày, giờ học, từ vựng, buổi luyện từng kỹ năng, bài viết đã chấm, sổ lỗi và điểm thi thử. Tải về để sao lưu, hoặc để mở bằng công cụ khác.</p>
+      <div id="expStats" class="tbl-scroll" style="margin-bottom:12px"></div>
+      <div class="rowx">
+        <button class="btn btn-primary btn-sm" id="expBtn" style="flex:1">Tải file JSON</button>
+        <button class="btn btn-sm" id="impBtn">Nhập lại</button>
+      </div>
+      <input type="file" id="impFile" accept=".json,application/json" aria-label="Chọn file JSON để nhập lại lịch sử học" hidden>
+      <p class="tiny" id="expMsg" style="margin-top:10px"></p>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Thiết lập</div>
+      <div class="field">
+        <label for="inStart">Ngày bắt đầu tuần 1 (chọn một ngày thứ Hai)</label>
+        <input class="inp" type="date" id="inStart">
+      </div>
+      <p class="tiny" id="syncNote"><span class="sync" id="syncPill"><i></i><span id="syncTxt">Đang kiểm tra đồng bộ…</span></span></p>
+      <button class="btn btn-sm" id="btnReset" style="margin-top:12px">Xóa toàn bộ tiến độ</button>
+    </div>
+  </section>
+</main>
+
+<nav>
+  <div class="nav-in">
+    <div class="nav-brand">Bạn đồng hành IELTS<em>General Training 5.5</em></div>
+    <button data-go="today" aria-current="page"><svg viewBox="0 0 24 24"><path d="M9 11l2.5 2.5L15.5 9"/><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M8 2.5v4M16 2.5v4"/></svg><span>Hôm nay</span></button>
+    <button data-go="road"><svg viewBox="0 0 24 24"><path d="M6 20V9m0 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/><path d="M18 4v11m0 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/><path d="M6 12h6a3 3 0 013 3v0"/></svg><span>Lộ trình</span></button>
+    <button data-go="practice"><svg viewBox="0 0 24 24"><path d="M12 15a3.5 3.5 0 003.5-3.5v-5a3.5 3.5 0 10-7 0v5A3.5 3.5 0 0012 15z"/><path d="M5.5 11.5a6.5 6.5 0 0013 0M12 18v3.5"/></svg><span>Luyện tập</span></button>
+    <button data-go="res"><svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 015.5 4H10a2 2 0 012 2v13a2 2 0 00-2-2H5.5A1.5 1.5 0 014 15.5z"/><path d="M20 5.5A1.5 1.5 0 0018.5 4H14a2 2 0 00-2 2v13a2 2 0 012-2h4.5a1.5 1.5 0 001.5-1.5z"/></svg><span>Tài liệu</span></button>
+    <button data-go="docs"><svg viewBox="0 0 24 24"><path d="M5.5 3.5h9L19 8v12.5H5.5z"/><path d="M14 3.5V8h5"/><path d="M8.5 12.5h7M8.5 16h4.5"/></svg><span>Kế hoạch</span></button>
+    <button data-go="prog"><svg viewBox="0 0 24 24"><path d="M4 19.5V13M9.3 19.5V7M14.7 19.5v-6M20 19.5V4"/></svg><span>Tiến độ</span></button>
+  </div>
+</nav>
+
+<script>
+"use strict";
+
+/* =========================================================
+   1. DỮ LIỆU LỘ TRÌNH
+   ========================================================= */
+const PHASES = [
+  {n:1, name:"Nền tảng",        from:1,  to:12, blurb:"Xây từ vựng, 12 điểm ngữ pháp lõi và luyện tai. Không đụng đề IELTS."},
+  {n:2, name:"Kỹ năng IELTS",   from:13, to:26, blurb:"Học dạng bài General Training và chiến thuật từng phần."},
+  {n:3, name:"Củng cố",         from:27, to:34, blurb:"Xóa 5 lỗi cố hữu và tăng tốc độ. Không học dạng bài mới."},
+  {n:4, name:"Luyện đề",        from:35, to:40, blurb:"Thi thử trong điều kiện thật, phân tích, sửa, lặp lại."}
+];
+
+const W = [
+ {w:1, t:"Thiết lập + Hiện tại đơn & tiếp diễn", d:"Ngày 1 chuẩn bị công cụ. Ngày 2 làm bài kiểm tra đầu vào để có mốc so sánh — điểm sẽ thấp, đó là chuyện bình thường. Từ ngày 3 vào nhịp học bình thường.", L:"VOA Learning English Level 1 — nghe đủ 4 lượt", R:"Breaking News English Level 2", Wr:"10 câu đơn mỗi ngày ở thì hiện tại", S:"Shadowing VOA 15 phút + nói 1 phút về bản thân"},
+ {w:2, t:"Quá khứ đơn & quá khứ tiếp diễn", d:"Học thuộc 60 động từ bất quy tắc thông dụng nhất. Bắt đầu chép chính tả 10 phút mỗi ngày — hoạt động chán nhất và hiệu quả nhất của giai đoạn này.", L:"VOA Level 1 + chép chính tả 10 phút", R:"Breaking News English Level 3", Wr:"10 câu quá khứ mỗi ngày: kể lại ngày hôm qua", S:"Shadowing + kể lại cuối tuần vừa rồi"},
+ {w:3, t:"Hiện tại hoàn thành", d:"Phân biệt hiện tại hoàn thành với quá khứ đơn — điểm yếu kinh điển của người Việt vì tiếng Việt không phân biệt hai thì này.", L:"VOA Level 2 + esl-lab.com mức Easy", R:"Breaking News English Level 3", Wr:"10 câu hiện tại hoàn thành mỗi ngày", S:"Part 1 của IELTS Liz — 3 câu mỗi ngày, mỗi câu 30 giây"},
+ {w:4, t:"Mạo từ a / an / the", d:"Lỗi mất điểm nhiều nhất của người Việt trong Writing, vì tiếng Việt không có mạo từ. Đầu tư nghiêm túc tuần này sẽ tiết kiệm điểm suốt 9 tháng còn lại.", L:"esl-lab Easy → Medium, chép chính tả 10 phút", R:"Breaking News English Level 4", Wr:"Chuyển từ viết câu sang viết đoạn 60 từ", S:"Part 1, mỗi câu cố nói 40 giây", m:"Mốc tháng 1 — thuộc chắc 240 từ · nói liên tục 45 giây · viết 8 câu đúng ngữ pháp"},
+ {w:5, t:"Danh từ đếm được và không đếm được", d:"Kèm số ít / số nhiều. Thiếu -s là lỗi bị trừ điểm cả trong Writing lẫn Listening.", L:"esl-lab Medium", R:"Breaking News English Level 4", Wr:"1 đoạn 80 từ mỗi ngày, có câu chủ đề", S:"Part 1, 40 giây mỗi câu, ghi âm và nghe lại"},
+ {w:6, t:"Giới từ chỉ thời gian và nơi chốn", d:"in / on / at. Học theo cụm cố định thay vì học quy tắc rời — cách duy nhất thật sự nhớ được.", L:"esl-lab + ELLLO", R:"Breaking News English Level 5", Wr:"1 đoạn 80 từ mỗi ngày", S:"Part 1 — 12 chủ đề thông dụng"},
+ {w:7, t:"So sánh hơn và so sánh nhất", d:"Cấu trúc này xuất hiện dày đặc trong thư khiếu nại và bài Task 2, nên phải dùng được tự động.", L:"ELLLO — làm quen nhiều giọng khác nhau", R:"Breaking News English Level 5", Wr:"1 đoạn 100 từ mỗi ngày", S:"Part 1, bắt đầu dùng công thức PPF"},
+ {w:8, t:"Chuyển sang nghe tốc độ thật", d:"Đổi từ VOA sang BBC 6 Minute English. Sẽ thấy như thụt lùi — đó là hiện tượng bình thường và hết sau khoảng 10 ngày. Đừng quay lại VOA.", L:"BBC 6 Minute English — vẫn làm đủ 4 lượt", R:"Breaking News English Level 5", Wr:"1 đoạn 100 từ, dùng because / but / so / although", S:"Part 1 đủ 12 chủ đề, ghi âm hằng ngày", m:"Mốc tháng 2 — 480 từ · Listening Section 1 đạt 6/10 · viết đoạn 80 từ có câu chủ đề"},
+ {w:9, t:"Mệnh đề quan hệ (who / which / that)", d:"Công cụ tạo câu phức đầu tiên. Band 5.5 cần có câu phức xuất hiện, dù chưa cần nhiều.", L:"BBC 6 Minute English + ELLLO", R:"Breaking News English Level 6", Wr:"1 đoạn 120 từ, mỗi đoạn ít nhất 2 mệnh đề quan hệ", S:"Bắt đầu Part 2 — nói 1 phút, chưa cần đủ 2 phút"},
+ {w:10, t:"Câu điều kiện loại 1 và loại 2", d:"Chỉ học hai loại này. Loại 3 và các biến thể hỗn hợp không cần cho band 5.5.", L:"BBC + chép chính tả", R:"Breaking News English Level 6", Wr:"1 đoạn 120 từ mỗi ngày", S:"Part 2, kéo dài lên 75 giây"},
+ {w:11, t:"Câu bị động + liên từ nối câu", d:"Bị động chỉ ở hiện tại và quá khứ đơn. Liên từ: and, but, so, because, although, however.", L:"BBC + ELLLO", R:"Breaking News English Level 6", Wr:"1 đoạn 120 từ có bố cục rõ, nộp Write & Improve", S:"Part 2, kéo dài lên 90 giây"},
+ {w:12, t:"Tổng ôn + làm quen định dạng General Training", d:"Ôn lại toàn bộ 12 điểm ngữ pháp lõi. Lần đầu chạm vào định dạng đề thật: 1 bài Listening Section 1 và 1 bài GT Reading Section 1, không bấm giờ, được tra từ thoải mái.", L:"1 bài Listening Section 1 để làm quen", R:"1 bài GT Reading Section 1, không bấm giờ", Wr:"Viết thử 1 lá thư 120 từ", S:"Part 2 đủ 90 giây", m:"Mốc tháng 3 — kết thúc giai đoạn 1. 720 từ · Listening S1 đạt 7/10 · nói 90 giây · viết đoạn 120 từ"},
+
+ {w:13, t:"Listening Section 1 + Reading completion + Thư trang trọng", d:"Giai đoạn 2 bắt đầu. Nguyên tắc xuyên suốt: học từng dạng bài đến khi làm được rồi mới sang dạng tiếp theo.", L:"Section 1 — form và note completion", R:"Sentence / summary / note completion", Wr:"Thư formal: mở bài và nêu mục đích", S:"Part 1 với công thức PPF"},
+ {w:14, t:"Nghe số, tên đánh vần, ngày tháng", d:"Bốn loại thông tin gần như luôn xuất hiện ở Section 1. Luyện riêng từng loại, mỗi loại 20 phút.", L:"Phân biệt 13/30, 14/40, 15/50 và tên đánh vần", R:"Completion — luyện lấy đáp án nguyên văn từ bài", Wr:"Thư formal: khiếu nại", S:"Part 1 — PPF, ba câu ba thì"},
+ {w:15, t:"Section 1 hoàn chỉnh + bẫy sửa đáp án", d:'Bẫy phổ biến: người nói đưa thông tin rồi sửa lại — "It is on Tuesday… sorry, we moved it to Wednesday". Đáp án là thông tin sau. Phải nghe hết câu.', L:"Section 1 — mục tiêu 8/10", R:"Completion — mục tiêu 10/14 ở Section 1", Wr:"Thư formal: xin phép và yêu cầu thông tin", S:"Part 1 — mở rộng mọi câu thành 3–4 câu"},
+ {w:16, t:"Listening Section 2 + True/False/Not Given", d:"True/False/Not Given là dạng chiếm nhiều câu nhất và sai nhiều nhất. Quy tắc: nếu phải suy luận hoặc phải dùng kiến thức bên ngoài thì đáp án là Not Given.", L:"Section 2 — map và plan labelling", R:"True/False/Not Given — học quy tắc quyết định", Wr:"Thư semi-formal: gửi hàng xóm, chủ nhà", S:"Part 1 — 12 chủ đề thông dụng"},
+ {w:17, t:"Section 2 multiple choice + TFNG nâng cao", d:"Từ tuyệt đối trong câu hỏi (all, always, never, only) thường dẫn tới False hoặc Not Given.", L:"Section 2 — multiple choice", R:"TFNG — luyện phân biệt False với Not Given", Wr:"Thư semi-formal: gửi đồng nghiệp", S:"Part 1 — 12 chủ đề, ghi âm và tự chấm", m:"Mốc tháng 4 — GT Reading Section 1 đạt 12/14 · viết được một lá thư 150 từ đúng mức trang trọng"},
+ {w:18, t:"Section 2 hoàn chỉnh + Part 2 cấu trúc 2 phút", d:"Trong 1 phút chuẩn bị chỉ viết 4 TỪ KHÓA, không viết câu hoàn chỉnh — viết câu sẽ dẫn tới đọc bài thay vì nói.", L:"Section 2 — mục tiêu 7/10", R:"Yes/No/Not Given", Wr:"Thư semi-formal: ôn tổng hợp", S:"Part 2 — cấu trúc 10s + 30s×3 + 20s"},
+ {w:19, t:"Thi thử giữa kỳ (Listening + Reading)", d:"Mock đầu tiên. Mục đích là làm quen định dạng và áp lực thời gian, không phải để đo điểm chính xác. Điểm còn thấp là bình thường.", L:"Mock Listening đầy đủ 40 câu", R:"Mock GT Reading đầy đủ 60 phút", Wr:"Task 2 — dạng Advantages/Disadvantages", S:"Part 2 — tả người"},
+ {w:20, t:"Listening Section 3 + Task 2 bấm giờ", d:"Section 3 là hội thoại nhiều người, khó vì phải theo dõi ai đang nói. Bài Task 2 bấm giờ 40 phút đầu tiên.", L:"Section 3 — hội thoại nhiều người, matching", R:"Multiple choice", Wr:"Task 2 bấm giờ 40 phút lần đầu", S:"Part 2 — tả người và nơi chốn"},
+ {w:21, t:"Section 3 + thư thân mật", d:"Thư informal dùng ngôn ngữ đời thường: contraction được phép, câu ngắn được phép. Lỗi phổ biến là viết quá trang trọng.", L:"Section 3 — matching và multiple choice", R:"Multiple choice + luyện tốc độ Section 1", Wr:"Thư informal: gửi bạn bè, người thân", S:"Part 2 — tả nơi chốn", m:"Mốc tháng 5 — Task 2 đủ 250 từ trong 40 phút · Speaking Part 2 nói đủ 2 phút"},
+ {w:22, t:"Section 3 hoàn chỉnh + Problem/Solution", d:"Mục tiêu Section 3 chỉ là 4/10. Đừng dồn quá nhiều giờ vào đây — Section 1 và 2 cho nhiều điểm hơn trên mỗi giờ bỏ ra.", L:"Section 3 — mục tiêu 4/10", R:"Matching information", Wr:"Task 2 — dạng Problem/Solution", S:"Part 2 — tả đồ vật"},
+ {w:23, t:"Listening Section 4 + matching features", d:"Section 4 là bài giảng học thuật, không có khoảng nghỉ giữa chừng. Đọc trước toàn bộ câu hỏi là bắt buộc.", L:"Section 4 — note completion", R:"Matching features", Wr:"Task 2 — Problem/Solution, bấm giờ", S:"Part 2 — tả sự kiện"},
+ {w:24, t:"Section 4 + matching headings + Two-part question", d:"Matching headings tốn giờ nhất nên học cuối cùng. Chiến thuật: đọc câu đầu và câu cuối mỗi đoạn, bỏ phần giữa.", L:"Section 4 — luyện đoán từ ngữ cảnh", R:"Matching headings", Wr:"Task 2 — dạng Two-part question", S:"Part 3 — công thức OREO"},
+ {w:25, t:"Luyện tốc độ toàn diện", d:"Mục tiêu tuần này là làm đúng giờ, không phải làm đúng nhiều hơn. GT Reading: 15 phút cho Section 1, 17 phút cho Section 2, 23 phút cho Section 3.", L:"Luyện tổng hợp cả 4 section", R:"Full GT Reading bấm giờ 60 phút", Wr:"Task 1 + Task 2 trong 60 phút liên tục", S:"Part 3 — kéo dài câu trả lời 40–60 giây"},
+ {w:26, t:"Thi thử cuối giai đoạn 2", d:"Full test đầy đủ 4 kỹ năng, đúng trình tự và giờ thi thật. Sau mock phải trả lời 3 câu: kỹ năng nào cách mục tiêu xa nhất, dạng bài nào sai nhiều nhất, 3 lỗi Writing lặp nhiều nhất.", L:"Mock Listening", R:"Mock GT Reading", Wr:"Mock Writing — Task 1 + Task 2 trong 60 phút", S:"Mock Speaking đầy đủ 3 part", m:"Mốc tháng 6 — kết thúc giai đoạn 2. Mock đạt 4.5–5.0"},
+
+ {w:27, t:"Chẩn đoán 5 lỗi cố hữu", d:"Hoạt động có tỷ suất sinh lợi cao nhất trong cả lộ trình. Lấy 10 bài viết và 5 bản ghi âm gần nhất, đếm tần suất từng loại lỗi, chốt danh sách 5 lỗi ưu tiên và dán lên bàn học.", L:"Luyện dạng bài sai nhiều nhất theo sổ lỗi", R:"Luyện dạng bài sai nhiều nhất theo sổ lỗi", Wr:"2 bài, mỗi bài viết 2 lần", S:"Ghi âm Part 2 mỗi ngày, đếm lỗi ưu tiên"},
+ {w:28, t:"Chữa lỗi ngữ pháp cố hữu", d:"Với mỗi lỗi ưu tiên, làm 30 câu bài tập chuyên biệt. Đọc lại lý thuyết không đủ để sửa lỗi cố hữu — phải làm bài tập số lượng lớn.", L:"2 bài mỗi ngày, tập trung dạng yếu", R:"1 section mỗi ngày, bấm giờ", Wr:"Lần viết lại chỉ được sai tối đa 1 trong 5 lỗi ưu tiên", S:"Nghe lại bản ghi, đếm số lần mắc lỗi ưu tiên"},
+ {w:29, t:"Tốc độ Reading — skimming có hệ thống", d:"Mỗi ngày: đọc lướt 1 bài trong 3 phút, viết ý chính từng đoạn bằng 5 từ, rồi mới làm câu hỏi. Đọc kỹ cả 3 section cần khoảng 90 phút trong khi chỉ có 60.", L:"Full Listening test", R:"GT Section 1 trong 15 phút", Wr:"3 bài Task 2 bấm giờ", S:"Part 1-2-3 liên tục, ghi âm"},
+ {w:30, t:"Tốc độ Reading — scanning và quy tắc 90 giây", d:"Một câu mất quá 90 giây thì đánh dấu, đoán một đáp án, đi tiếp. Ngồi lại một câu khó là cách đánh mất 4 câu dễ ở sau.", L:"Full Listening test", R:"Section 1 + 2 trong 32 phút", Wr:"3 bài, có viết lại", S:"Mock Speaking, nhờ AI chấm", m:"Mốc tháng 7 — 5 lỗi ưu tiên giảm một nửa · GT Section 1 xong trong 15 phút đạt 12/14"},
+ {w:31, t:"Tốc độ Writing — viết đủ số từ trong giờ", d:"Mục tiêu: 270 từ Task 2 trong 40 phút. Không kịp thì nguyên nhân gần như luôn là một trong ba: dàn ý quá lâu, vừa viết vừa sửa, hoặc không đủ ý nên ngồi nghĩ giữa chừng.", L:"Full Listening test", R:"Full GT Reading 60 phút", Wr:"4 bài, đo số từ và số lỗi mỗi bài", S:"Part 2 và Part 3, ghi âm và nghe lại"},
+ {w:32, t:"Độ chính xác Writing", d:"Giới hạn cứng: 5 phút cho dàn ý, viết một mạch không sửa, 3 phút cuối soát đúng 5 lỗi ưu tiên của mình.", L:"Full Listening test", R:"Full GT Reading 60 phút", Wr:"4 bài, mục tiêu không quá 8 lỗi mỗi bài", S:"Mock Speaking đầy đủ"},
+ {w:33, t:"Luyện tổng hợp", d:"Tuần chạy full mọi kỹ năng để chuẩn bị cho mock tuần 34.", L:"2 full Listening test", R:"2 full GT Reading", Wr:"3 bài, 2 bài làm Task 1 + Task 2 trong 60 phút", S:"2 mock đầy đủ 3 part"},
+ {w:34, t:"Thi thử cuối giai đoạn 3", d:"Full test trong điều kiện thi thật: bắt đầu 9 giờ sáng, làm liên tục Listening → Reading → Writing trong 2 tiếng 40 phút không nghỉ, Speaking ngay sau đó. Không tra từ điển, không nghe lại, điện thoại tắt.", L:"Mock Listening", R:"Mock GT Reading", Wr:"Mock Writing đầy đủ", S:"Mock Speaking đầy đủ", m:"Mốc tháng 8 — kết thúc giai đoạn 3. Mock đạt 5.0–5.5 · Writing được chấm 5.0 ổn định"},
+
+ {w:35, t:"Thi thử lần 1 + đăng ký thi", d:"Đây là thời điểm đăng ký thi, chọn ngày cách khoảng 5–6 tuần. Thời gian phân tích đề phải gần bằng thời gian làm đề.", L:"Full test + phân loại lỗi A/B/C/D", R:"Full test + ghi vị trí đáp án trong bài", Wr:"Task 1 + Task 2 trong 60 phút", S:"Mock 3 part, ghi âm"},
+ {w:36, t:"Thi thử lần 2", d:"Kỹ năng thấp nhất ở tuần 35 được cấp thêm 2 giờ trong tuần này.", L:"Full test", R:"Full test", Wr:"2 bài đầy đủ, có viết lại", S:"Mock 3 part"},
+ {w:37, t:"Thi thử lần 3 — trọng tâm Writing", d:"Tuần này viết 4 bài đúng giờ. Kiểm tra: Write & Improve đã chấm B1 trở lên ổn định chưa.", L:"Full test", R:"Full test", Wr:"4 bài đúng giờ", S:"Mock 3 part"},
+ {w:38, t:"Thi thử lần 4 + mock Speaking với người thật", d:"Thi Speaking với người thật khác hẳn tự ghi âm một mình. Dùng HelloTalk hoặc Tandem, hoặc nhờ người biết tiếng Anh đóng vai giám khảo. Kiểm tra giấy tờ tùy thân trùng khớp với đăng ký.", L:"Full test", R:"Full test", Wr:"2 bài đầy đủ", S:"Mock với người thật", m:"Mốc tháng 9 — Writing đạt 5.0 ổn định qua 5 bài liên tiếp"},
+ {w:39, t:"Thi thử lần 5 + rà soát sổ lỗi", d:"Đọc lại toàn bộ sổ lỗi từ đầu lộ trình. Đánh dấu những lỗi đã xử lý xong và khoanh lại những lỗi vẫn còn.", L:"Full test", R:"Full test", Wr:"2 bài, tập trung 5 lỗi ưu tiên", S:"Mock 3 part"},
+ {w:40, t:"Tuần thi — giảm tải, không nhồi", d:"Thứ 2 full test nhẹ nhàng · Thứ 3 phân tích và ôn sổ lỗi · Thứ 4 ôn từ vựng và đọc lại 5 bài viết tốt nhất của mình · Thứ 5 Speaking nhẹ 30 phút · Thứ 6 KHÔNG HỌC, chuẩn bị giấy tờ và ngủ sớm · Thứ 7 thi. Nhồi 3 ngày cuối không tăng điểm mà làm tăng lo lắng, thứ chắc chắn làm giảm điểm Speaking.", L:"Nghe nhẹ để giữ tai", R:"Đọc lại đề cũ, không làm đề mới", Wr:"Đọc lại bài viết tốt nhất của mình", S:"30 phút nhẹ nhàng, không tạo áp lực", m:"Mốc tháng 10 — 2 mock liên tiếp đạt 5.5+ · đi thi"}
+];
+
+/* Giáo án từng ngày cho giai đoạn 1 (tuần 1–12), sáu ngày học mỗi tuần.
+   f = việc chính của ngày · g = điểm ngữ pháp · w = việc viết · s = việc nói.
+   Listening và Reading lấy theo nguồn của tuần, đã có ở LPLAN và RPLAN. */
+const P1DAYS = {
+ 1:[
+  {f:"Chuẩn bị công cụ, chưa học", g:"Chưa học ngữ pháp. Hôm nay chỉ dựng chỗ làm việc.", w:"Cài Anki và tải deck Oxford 3000. Tạo tài khoản writeandimprove.com. Lập sổ lỗi.", s:"Chọn khung giờ cố định trong ngày và ghi vào lịch điện thoại. Bảo vệ khung giờ đó suốt 40 tuần."},
+  {f:"Bài kiểm tra đầu vào", g:"Chưa học. Hôm nay chỉ đo để có mốc so sánh.", w:"Viết 150 từ về 'Describe your daily routine' trong 30 phút, nộp Write & Improve, ghi lại điểm CEFR.", s:"Ghi âm 2 phút trả lời 'Tell me about your hometown'. Nghe lại, đếm số lần dừng quá 3 giây. Giữ bản ghi này — tuần 20 nghe lại sẽ thấy mình đã đi bao xa."},
+  {f:"Hiện tại đơn — thể khẳng định", g:"Chia động từ theo chủ ngữ. Ngôi thứ ba số ít thêm -s, và đây là lỗi bạn sẽ mắc suốt nhiều tháng nếu không xử lý ngay.", w:"10 câu về thói quen hằng ngày của bạn, mỗi câu một động từ khác nhau.", s:"Shadowing VOA 15 phút. Tự nói 1 phút: What do you do every morning?"},
+  {f:"Hiện tại đơn — phủ định và nghi vấn", g:"do / does trong câu phủ định và câu hỏi. Sau do và does thì động từ chính về nguyên thể — 'He doesn't likes' là lỗi kinh điển.", w:"10 câu: 5 câu phủ định về việc bạn không làm, 5 câu hỏi bạn muốn hỏi người khác.", s:"Shadowing 15 phút. Tự đặt và tự trả lời 5 câu hỏi Yes/No về bản thân."},
+  {f:"Hiện tại tiếp diễn", g:"am / is / are + V-ing. Dùng cho việc đang xảy ra lúc nói hoặc quanh thời điểm này.", w:"10 câu mô tả những gì đang diễn ra quanh bạn lúc này.", s:"Shadowing 15 phút. Tả bằng lời những gì bạn nhìn thấy quanh mình trong 1 phút."},
+  {f:"Phân biệt hai thì hiện tại", g:"Hiện tại đơn cho thói quen và sự thật; hiện tại tiếp diễn cho việc đang xảy ra. Động từ chỉ trạng thái (know, like, want) không dùng tiếp diễn.", w:"10 câu trộn hai thì, tự đánh dấu câu nào dùng thì gì và vì sao.", s:"Nói 1 phút: chọn thì đúng cho từng câu, đối chiếu 'I usually...' với 'Right now I am...'"}
+ ],
+ 2:[
+  {f:"Quá khứ đơn — động từ có quy tắc", g:"Thêm -ed. Ba cách phát âm đuôi -ed: /t/ sau âm vô thanh, /d/ sau âm hữu thanh, /ɪd/ sau t và d. Phát âm sai đuôi này là lỗi bị trừ điểm Speaking.", w:"10 câu kể lại ngày hôm qua, chỉ dùng động từ có quy tắc.", s:"Shadowing 15 phút, chú ý riêng đuôi -ed. Kể lại ngày hôm qua trong 1 phút."},
+  {f:"30 động từ bất quy tắc — nhóm 1", g:"Nhóm hay dùng nhất: be, have, do, go, get, make, say, see, come, take, know, think, find, give, tell.", w:"10 câu dùng ít nhất 8 động từ trong nhóm vừa học.", s:"Đọc to bảng ba cột (nguyên thể — quá khứ — phân từ) 3 lần. Kể một việc đã làm tuần trước."},
+  {f:"Quá khứ đơn — phủ định và nghi vấn", g:"didn't và did. Sau didn't thì động từ về nguyên thể — 'I didn't went' là lỗi rất phổ biến.", w:"10 câu: 5 câu về việc bạn đã không làm hôm qua, 5 câu hỏi về quá khứ.", s:"Tự hỏi tự trả lời 5 câu bắt đầu bằng Did you...?"},
+  {f:"30 động từ bất quy tắc — nhóm 2", g:"Nhóm còn lại: leave, feel, bring, begin, keep, hold, write, stand, hear, let, mean, meet, run, pay, sit.", w:"10 câu dùng nhóm 2.", s:"Đọc to bảng ba cột. Kể lại một chuyến đi cũ trong 1 phút."},
+  {f:"Quá khứ tiếp diễn", g:"was / were + V-ing. Dùng cho việc đang diễn ra tại một thời điểm trong quá khứ.", w:"10 câu: 8 giờ tối qua bạn đang làm gì, cả nhà bạn đang làm gì.", s:"Nói 1 phút: What were you doing at 8pm yesterday?"},
+  {f:"Kết hợp hai thì quá khứ", g:"was doing khi did — việc dài đang diễn ra thì việc ngắn xen vào. Đây là cấu trúc kể chuyện, dùng nhiều ở Speaking Part 2.", w:"10 câu dạng 'I was ... when ...'", s:"Kể một sự việc bất ngờ đã xảy ra, dùng ít nhất 3 câu when."}
+ ],
+ 3:[
+  {f:"Hiện tại hoàn thành — cấu trúc", g:"have / has + phân từ quá khứ. Dùng khi việc đã xảy ra nhưng không nêu thời điểm cụ thể. Nêu thời điểm là phải chuyển sang quá khứ đơn.", w:"10 câu về những việc bạn đã làm trong đời, không nêu thời điểm.", s:"Shadowing 15 phút. Nói 1 phút về những nơi bạn đã từng đến."},
+  {f:"for và since", g:"for + khoảng thời gian (for three years), since + mốc bắt đầu (since 2020). Người Việt hay nhầm hai từ này vì tiếng Việt dùng chung một chữ.", w:"10 câu về những việc bạn đã làm được bao lâu.", s:"Trả lời: How long have you lived here? How long have you studied English?"},
+  {f:"already, yet, just", g:"already trong câu khẳng định, yet cuối câu phủ định và câu hỏi, just cho việc vừa mới xong.", w:"10 câu dùng đủ ba từ, mỗi từ ít nhất 3 câu.", s:"Nói về việc bạn đã làm xong hôm nay và việc chưa làm."},
+  {f:"ever và never", g:"Have you ever...? để hỏi kinh nghiệm. never mang nghĩa phủ định nên không đi kèm not.", w:"10 câu: 5 câu Have you ever, 5 câu I have never.", s:"Tự hỏi tự trả lời 5 câu Have you ever...? Đây là dạng câu hỏi hay gặp ở Speaking Part 1."},
+  {f:"Phân biệt với quá khứ đơn", g:"Điểm khó nhất của tuần. Có mốc thời gian rõ (yesterday, last year, in 2020, ago) thì dùng quá khứ đơn. Không có mốc, hoặc thời gian còn đang tiếp diễn (today, this week) thì hiện tại hoàn thành.", w:"10 câu trộn hai thì, ghi rõ lý do chọn thì cho từng câu.", s:"Nói 1 phút, cố tình dùng cả hai thì và tự nghe lại xem có nhầm không."},
+  {f:"Ôn cả tuần", g:"30 câu chọn thì giữa hiện tại hoàn thành và quá khứ đơn. Nhờ AI tạo bài tập nếu cần.", w:"Viết một đoạn 60 từ về kinh nghiệm học tiếng Anh của bạn, dùng cả hai thì.", s:"Part 1 của IELTS Liz — 3 câu, mỗi câu cố nói 30 giây."}
+ ],
+ 4:[
+  {f:"a và an", g:"Dùng cho danh từ đếm được số ít, lần đầu nhắc đến. Chọn a hay an theo ÂM chứ không theo chữ cái: an hour, a university, an MBA.", w:"10 câu giới thiệu người và vật, mỗi câu có ít nhất một mạo từ a hoặc an.", s:"Shadowing 15 phút. Tả 5 đồ vật quanh bạn, mỗi thứ một câu đầy đủ."},
+  {f:"the — khi người nghe đã biết", g:"Dùng the khi cả hai bên đều biết đang nói về cái nào: đã nhắc trước đó, hoặc chỉ có một cái duy nhất trong ngữ cảnh.", w:"10 câu dạng 'I bought a book. The book is about...'", s:"Kể một việc, chú ý lần đầu dùng a, lần sau dùng the."},
+  {f:"Không mạo từ", g:"Danh từ số nhiều nói chung (Dogs are friendly) và danh từ không đếm được (Water is important) đứng trần. Đây là chỗ người Việt hay thừa the.", w:"10 câu phát biểu chung về một loại sự vật, không dùng the.", s:"Nói 1 phút về sở thích chung chung: I like books, I enjoy music."},
+  {f:"the với thứ duy nhất", g:"the sun, the moon, the internet. Dùng với so sánh nhất (the best), số thứ tự (the first), và tên nước số nhiều (the Philippines).", w:"10 câu dùng the với so sánh nhất và số thứ tự.", s:"Nói về thứ tốt nhất, tệ nhất, đầu tiên trong đời bạn."},
+  {f:"Cụm cố định", g:"Nhóm không theo quy tắc nào, phải học thuộc: by bus, at home, go to school, in bed, at work, on foot. 'I go to school by the bus' là lỗi điển hình.", w:"10 câu dùng ít nhất 6 cụm cố định.", s:"Tả cách bạn đi làm và một ngày bình thường, dùng các cụm vừa học."},
+  {f:"Ôn mạo từ + kiểm tra mốc tháng 1", g:"40 câu điền mạo từ trộn cả bốn tình huống. Ghi mọi câu sai vào sổ lỗi.", w:"Viết đoạn 60 từ về gia đình, tự soát riêng mạo từ trước khi nộp.", s:"Kiểm tra mốc: ghi âm nói liên tục 45 giây về 'My family' mà không dừng quá 3 giây."}
+ ],
+ 5:[
+  {f:"Đếm được và không đếm được", g:"Danh sách hay nhầm nhất, vì trong tiếng Việt chúng đếm được bình thường: information, advice, furniture, news, money, work, luggage, equipment. Tất cả đều KHÔNG có dạng số nhiều.", w:"1 đoạn 80 từ về đồ đạc trong nhà bạn, chú ý furniture và equipment.", s:"Shadowing 15 phút. Tả phòng của bạn trong 1 phút."},
+  {f:"much, many, a lot of", g:"many + đếm được, much + không đếm được, a lot of dùng được cho cả hai. much thường chỉ xuất hiện trong câu phủ định và câu hỏi.", w:"1 đoạn 80 từ dùng đủ ba từ này.", s:"Trả lời: How much time do you spend on your phone? How many books do you read?"},
+  {f:"some và any", g:"some trong câu khẳng định và lời mời, any trong phủ định và câu hỏi. Nhưng lời mời thì dùng some: Would you like some tea?", w:"1 đoạn 80 từ về việc đi chợ hoặc siêu thị.", s:"Nói về những thứ bạn có và không có trong tủ lạnh."},
+  {f:"a few và a little", g:"a few + đếm được số nhiều, a little + không đếm được. Bỏ chữ a thì nghĩa đổi sang tiêu cực: few means hầu như không có.", w:"1 đoạn 80 từ dùng cả bốn cách: a few, few, a little, little.", s:"Nói về thời gian rảnh và tiền tiêu vặt của bạn."},
+  {f:"Đơn vị đo", g:"Cách đếm danh từ không đếm được: a piece of advice, a bottle of water, a slice of bread, a bar of soap, a loaf of bread.", w:"1 đoạn 80 từ tả một bữa ăn, dùng ít nhất 4 đơn vị đo.", s:"Tả món ăn bạn thích nhất và cách nấu nó."},
+  {f:"Ôn cả tuần", g:"40 câu trộn: chọn much/many, some/any, a few/a little, và sửa danh từ không đếm được bị thêm -s.", w:"Viết lại đoạn tốt nhất trong tuần, sửa đúng lỗi đã được chấm.", s:"Part 1 — 3 câu về food, mỗi câu 40 giây."}
+ ],
+ 6:[
+  {f:"Giới từ thời gian", g:"at + giờ (at 7 o'clock), on + ngày và thứ (on Monday, on 5 May), in + tháng, mùa, năm, thế kỷ (in May, in 2026).", w:"1 đoạn 80 từ về lịch sinh hoạt một tuần của bạn.", s:"Shadowing 15 phút. Kể lịch làm việc trong tuần."},
+  {f:"Giới từ nơi chốn", g:"at + một điểm (at the door), on + bề mặt (on the table), in + không gian có ranh giới (in the room, in Vietnam).", w:"1 đoạn 80 từ tả vị trí đồ vật trong phòng.", s:"Tả đường đi từ nhà bạn tới nơi làm việc."},
+  {f:"Cụm cố định thời gian", g:"at night nhưng in the morning. on time nghĩa là đúng giờ, in time nghĩa là kịp giờ — hai nghĩa khác hẳn nhau.", w:"1 đoạn 80 từ dùng ít nhất 5 cụm thời gian cố định.", s:"Nói về thói quen buổi sáng và buổi tối."},
+  {f:"Cụm cố định nơi chốn", g:"at work, at school, in hospital, on the bus nhưng in the car. Không có quy tắc, chỉ có thói quen dùng.", w:"1 đoạn 80 từ về một ngày đi làm hoặc đi học.", s:"Tả nơi bạn làm việc hoặc học tập."},
+  {f:"Giới từ đi với động từ", g:"depend on, listen to, look for, wait for, arrive at, belong to. Đây là nhóm gây lỗi nhiều nhất trong Writing vì tiếng Việt dùng giới từ khác.", w:"1 đoạn 100 từ dùng ít nhất 5 cụm động từ + giới từ.", s:"Nói 1 phút về việc bạn đang chờ đợi hoặc tìm kiếm điều gì."},
+  {f:"Ôn cả tuần", g:"40 câu điền giới từ. Ghi mọi câu sai vào sổ lỗi kèm cả cụm, đừng ghi mỗi giới từ.", w:"Viết lại đoạn tốt nhất trong tuần.", s:"Part 1 — 3 câu về hometown, mỗi câu 40 giây."}
+ ],
+ 7:[
+  {f:"So sánh với tính từ ngắn", g:"Một âm tiết thêm -er và -est: bigger, the biggest. Chú ý gấp đôi phụ âm cuối (hot → hotter) và đổi y thành i (easy → easier).", w:"1 đoạn 100 từ so sánh hai nơi bạn từng sống hoặc từng đến.", s:"Shadowing BBC 15 phút. So sánh hai mùa trong năm."},
+  {f:"So sánh với tính từ dài", g:"Từ hai âm tiết trở lên dùng more và the most: more expensive, the most beautiful. Không được vừa more vừa -er.", w:"1 đoạn 100 từ so sánh hai công việc hoặc hai ngành nghề.", s:"So sánh cuộc sống thành phố với nông thôn."},
+  {f:"So sánh bất quy tắc", g:"good/better/the best, bad/worse/the worst, far/further/the furthest, little/less/the least, many/more/the most.", w:"1 đoạn 100 từ dùng đủ ba bộ bất quy tắc.", s:"Nói về điều tốt nhất và tệ nhất đã xảy ra với bạn năm nay."},
+  {f:"as ... as", g:"as + tính từ nguyên dạng + as để chỉ ngang bằng. Phủ định not as ... as nghĩa là kém hơn.", w:"1 đoạn 100 từ dùng ít nhất 4 cấu trúc as ... as.", s:"So sánh bản thân bạn với một người bạn."},
+  {f:"Mức độ của so sánh", g:"much / far / a lot / a bit + so sánh hơn: much better, a bit cheaper. Đây là cách làm câu tự nhiên hơn hẳn và dễ ăn điểm Lexical Resource.", w:"1 đoạn 100 từ dùng ít nhất 4 trạng từ mức độ.", s:"Part 1 — bắt đầu dùng công thức PPF: hiện tại, quá khứ, tương lai."},
+  {f:"Ôn cả tuần", g:"40 câu so sánh. Kiểm tra riêng lỗi vừa more vừa -er.", w:"Viết đoạn 100 từ so sánh hai thành phố ở Việt Nam.", s:"Part 1 — 3 câu, mỗi câu dùng đủ ba thì theo PPF."}
+ ],
+ 8:[
+  {f:"Lần đầu nghe tốc độ thật", g:"Không có điểm ngữ pháp mới tuần này. Toàn bộ sức dồn vào việc chuyển tai từ VOA sang BBC.", w:"1 đoạn 100 từ dùng because, but, so.", s:"Shadowing BBC 6 Minute English 15 phút. Sẽ khó hơn VOA rõ rệt — đó là chủ đích, đừng quay lại VOA."},
+  {f:"Ôn bốn thì đã học", g:"30 câu chọn thì giữa hiện tại đơn, hiện tại tiếp diễn, quá khứ đơn, quá khứ tiếp diễn và hiện tại hoàn thành.", w:"1 đoạn 100 từ kể một tuần vừa qua, dùng ít nhất 3 thì.", s:"Shadowing BBC. Kể lại nội dung bài nghe bằng lời của bạn."},
+  {f:"Ôn mạo từ và danh từ", g:"40 câu trộn mạo từ với danh từ đếm được và không đếm được — hai điểm này luôn đi cùng nhau.", w:"1 đoạn 100 từ, tự soát riêng mạo từ.", s:"Shadowing BBC. Part 1 về work hoặc study."},
+  {f:"Ôn giới từ", g:"40 câu điền giới từ, gồm cả cụm động từ + giới từ.", w:"1 đoạn 100 từ, tự soát riêng giới từ.", s:"Shadowing BBC. Part 1 về hobbies."},
+  {f:"Ôn so sánh", g:"30 câu so sánh, gồm cả as ... as và trạng từ mức độ.", w:"1 đoạn 100 từ so sánh hai lựa chọn của bạn.", s:"Shadowing BBC. Part 1 về travel."},
+  {f:"Bài tập tổng hợp + mốc tháng 2", g:"60 câu trộn toàn bộ 7 điểm ngữ pháp đã học. Đây là bài kiểm tra thật, không tra cứu.", w:"Viết đoạn 80 từ có câu chủ đề rõ ràng — đây là mốc phải đạt của tháng 2.", s:"Kiểm tra mốc: Listening Section 1 đạt 6/10, và nói liên tục 60 giây."}
+ ],
+ 9:[
+  {f:"Mệnh đề quan hệ với who", g:"who thay cho người, đứng ngay sau danh từ nó bổ nghĩa. Đây là công cụ tạo câu phức đầu tiên, và band 5.5 cần có câu phức xuất hiện.", w:"1 đoạn 120 từ về những người quan trọng với bạn, dùng ít nhất 3 mệnh đề who.", s:"Shadowing 15 phút. Tả một người bạn ngưỡng mộ, dùng who ít nhất 3 lần."},
+  {f:"Mệnh đề quan hệ với which", g:"which thay cho vật và sự việc. Không dùng which cho người.", w:"1 đoạn 120 từ về đồ vật bạn quý, dùng ít nhất 3 mệnh đề which.", s:"Tả một món đồ bạn dùng hằng ngày."},
+  {f:"that thay cho cả hai", g:"that dùng được cho cả người và vật trong mệnh đề xác định. Trong văn viết trang trọng thì who và which vẫn tự nhiên hơn.", w:"1 đoạn 120 từ, viết mỗi câu hai lần: một lần dùng who/which, một lần dùng that.", s:"Nói về nơi bạn sống, dùng cả that lẫn which."},
+  {f:"where và when", g:"where cho nơi chốn, when cho thời gian. 'The city where I grew up' tự nhiên hơn nhiều so với 'the city which I grew up in'.", w:"1 đoạn 120 từ về một nơi và một thời điểm đáng nhớ.", s:"Tả nơi bạn lớn lên, dùng where ít nhất 2 lần."},
+  {f:"Rút gọn mệnh đề quan hệ", g:"Bỏ who/which và chuyển động từ sang V-ing hoặc V3: 'the man who is sitting there' thành 'the man sitting there'. Cấu trúc này làm câu gọn và tự nhiên hơn.", w:"1 đoạn 120 từ, viết 5 câu dạng đầy đủ rồi rút gọn cả 5.", s:"Tả một bức ảnh, dùng ít nhất 3 mệnh đề rút gọn."},
+  {f:"Ôn cả tuần", g:"40 câu nối hai câu đơn thành một câu có mệnh đề quan hệ.", w:"Viết đoạn 120 từ có ít nhất 3 mệnh đề quan hệ, nộp Write & Improve.", s:"Bắt đầu Part 2: chọn 1 cue card, chuẩn bị 1 phút, nói 1 phút. Ghi âm."}
+ ],
+ 10:[
+  {f:"Câu điều kiện loại 1", g:"If + hiện tại đơn, will + nguyên thể. Dùng cho điều có thể xảy ra thật. Sau if KHÔNG dùng will — đây là lỗi phổ biến nhất của cấu trúc này.", w:"1 đoạn 120 từ về kế hoạch của bạn nếu điều kiện thuận lợi.", s:"Shadowing 15 phút. Nói về dự định cuối tuần này, dùng if ít nhất 3 lần."},
+  {f:"Loại 1 với động từ khuyết thiếu", g:"Thay will bằng can, may, should, might để đổi sắc thái: If it rains, we should stay home.", w:"1 đoạn 120 từ dùng ít nhất 4 động từ khuyết thiếu khác nhau.", s:"Đưa lời khuyên cho một người bạn đang phân vân."},
+  {f:"Câu điều kiện loại 2", g:"If + quá khứ đơn, would + nguyên thể. Dùng cho điều không có thật ở hiện tại hoặc khó xảy ra.", w:"1 đoạn 120 từ về điều bạn sẽ làm nếu có nhiều tiền hoặc nhiều thời gian.", s:"Nói 1 phút: What would you do if you could live anywhere?"},
+  {f:"If I were you", g:"Trong loại 2, were dùng cho mọi chủ ngữ, kể cả I và he. 'If I were you' là cách đưa lời khuyên tự nhiên nhất và rất hợp cho Speaking Part 3.", w:"1 đoạn 120 từ đưa lời khuyên cho ba tình huống khác nhau.", s:"Đưa lời khuyên dùng If I were you ít nhất 3 lần."},
+  {f:"Phân biệt loại 1 với loại 2", g:"Loại 1 cho điều có thể xảy ra, loại 2 cho điều giả định không có thật. Chọn sai loại làm người nghe hiểu sai mức độ khả thi.", w:"1 đoạn 120 từ trộn cả hai loại, ghi rõ vì sao chọn loại đó.", s:"Part 2 — nói 75 giây, ghi âm và nghe lại."},
+  {f:"Ôn cả tuần", g:"40 câu chia động từ trong câu điều kiện. Kiểm tra riêng lỗi dùng will sau if.", w:"Viết đoạn 120 từ, nộp Write & Improve và ghi 3 lỗi nặng nhất vào sổ lỗi.", s:"Part 2 — 90 giây."}
+ ],
+ 11:[
+  {f:"Bị động ở hiện tại đơn", g:"is / are + phân từ quá khứ. Chủ ngữ là thứ chịu tác động: 'English is spoken here'.", w:"1 đoạn 120 từ mô tả một quy trình quen thuộc bằng câu bị động.", s:"Shadowing 15 phút. Tả cách một món ăn được làm ra."},
+  {f:"Bị động ở quá khứ đơn", g:"was / were + phân từ quá khứ. Chỉ cần hai thì này cho band 5.5, không cần bị động ở các thì phức tạp hơn.", w:"1 đoạn 120 từ kể một sự việc đã xảy ra bằng câu bị động.", s:"Kể một việc đã được làm cho bạn hoặc vì bạn."},
+  {f:"Khi nào nên dùng bị động", g:"Khi không biết ai làm, khi không quan trọng ai làm, hoặc khi muốn nhấn mạnh vào kết quả. Đừng lạm dụng — bị động dùng sai chỗ làm câu nặng nề.", w:"1 đoạn 120 từ, viết 5 câu chủ động rồi chuyển sang bị động và tự đánh giá câu nào hay hơn.", s:"Part 2 về một nơi chốn, dùng ít nhất 2 câu bị động."},
+  {f:"Liên từ cơ bản", g:"and, but, so, because. Bốn từ này nối được hầu hết mọi ý ở band 5.5, và dùng đúng chúng tốt hơn nhiều so với dùng sai từ nối hoa mỹ.", w:"1 đoạn 120 từ dùng đủ bốn liên từ, mỗi từ ít nhất hai lần.", s:"Nói 90 giây, cố ý nối câu bằng because và so."},
+  {f:"Liên từ nâng cao", g:"although, however, therefore. Chú ý dấu câu: although nối trong một câu, còn however đứng đầu câu mới và có dấu phẩy theo sau.", w:"1 đoạn 120 từ dùng đủ ba từ, đặt dấu câu đúng.", s:"Trình bày hai mặt của một vấn đề, dùng however."},
+  {f:"Ôn cả tuần", g:"30 câu chuyển chủ động sang bị động, và 30 câu chọn liên từ.", w:"Viết đoạn 120 từ có bố cục rõ, dùng đủ 6 liên từ đã học.", s:"Part 2 — 90 giây trôi chảy, đây là mốc của tuần 11."}
+ ],
+ 12:[
+  {f:"Tổng ôn các thì", g:"40 câu chọn thì trộn cả 5 thì đã học. Làm như bài kiểm tra: không tra cứu, chấm xong mới xem lại.", w:"1 đoạn 120 từ kể lại ba tháng học vừa qua, dùng ít nhất 4 thì.", s:"Shadowing 15 phút. Part 2 — 90 giây."},
+  {f:"Tổng ôn mạo từ và danh từ", g:"40 câu trộn mạo từ, danh từ đếm được và không đếm được, much/many/some/any.", w:"1 đoạn 120 từ, tự soát riêng hai nhóm lỗi này.", s:"Part 1 — 5 câu liên tiếp, mỗi câu 40 giây."},
+  {f:"Tổng ôn giới từ và so sánh", g:"40 câu trộn giới từ thời gian, nơi chốn, cụm động từ + giới từ, và so sánh.", w:"1 đoạn 120 từ so sánh hai giai đoạn trong đời bạn.", s:"Part 2 về một sự thay đổi, nói 100 giây."},
+  {f:"Tổng ôn câu phức", g:"40 câu trộn mệnh đề quan hệ, câu điều kiện và bị động — ba công cụ tạo câu phức.", w:"1 đoạn 120 từ có ít nhất 2 mệnh đề quan hệ, 1 câu điều kiện và 1 câu bị động.", s:"Part 2 — 100 giây."},
+  {f:"Làm quen định dạng General Training", g:"Lần đầu chạm vào đề thật. Không bấm giờ, được tra từ thoải mái. Mục đích là biết đề trông như thế nào, không phải để đo điểm.", w:"Đọc một bài mẫu thư General Training trên IELTS Liz, chưa cần tự viết.", s:"Part 2 — 90 giây về chủ đề bất kỳ."},
+  {f:"Viết thư thử + mốc tháng 3", g:"Ôn lại toàn bộ sổ lỗi của 12 tuần. Đánh dấu những lỗi đã hết tái xuất hiện.", w:"Viết thử một lá thư 120 từ gửi bạn bè, chưa cần đúng chuẩn IELTS.", s:"Kiểm tra mốc kết thúc giai đoạn 1: nói liên tục 90 giây về một cue card Part 2."}
+ ]
+};
+
+const P1SUNDAY = {
+  f:"Ôn sổ lỗi và bài test tuần",
+  g:"30 phút đầu cố định: đọc lại sổ lỗi cả tuần, chọn 5 lỗi lặp nhiều nhất, viết lại 5 câu chứa 5 lỗi đó ở dạng đã sửa.",
+  w:"30 phút sau: kiểm tra ngẫu nhiên 60 từ vựng của tuần, rồi viết một đoạn theo độ dài của tuần đó.",
+  s:"Chủ nhật không nạp từ mới. Một ngày nghỉ nạp mỗi tuần giúp Anki không dồn thẻ."
+};
+
+/* Kế hoạch luyện Listening theo tuần. `to` là tuần cuối cùng của khoảng. */
+const LPLAN = [
+ {to:2,  src:"VOA Learning English — Level 1", url:"https://learningenglish.voanews.com/z/3521",
+  focus:"Làm quen tốc độ nói chậm, ngữ điệu và cách nối âm. Chưa cần bắt từng từ.",
+  target:"Nghe ra được ý chính của bài. Chưa đo bằng số câu đúng."},
+ {to:4,  src:"VOA Level 1–2 + esl-lab.com mức Easy", url:"https://www.esl-lab.com",
+  focus:"Bắt đầu chép chính tả 10 phút mỗi ngày — buộc tai phân biệt từng âm thay vì đoán nghĩa chung.",
+  target:"Chép đúng 80% một đoạn 30 giây ở lượt thứ hai."},
+ {to:7,  src:"esl-lab mức Medium + ELLLO", url:"https://elllo.org",
+  focus:"Làm quen nhiều giọng khác nhau: Anh, Mỹ, Úc, Canada. Đề thi có đủ cả bốn.",
+  target:"Nghe hiểu hội thoại đời sống không cần transcript."},
+ {to:12, src:"BBC 6 Minute English + ELLLO", url:"https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+  focus:"Chuyển sang tốc độ nói thật. Sẽ thấy như thụt lùi trong khoảng 10 ngày đầu — đó là bình thường, đừng quay lại VOA.",
+  target:"Cuối tuần 12: Listening Section 1 đạt 7/10."},
+ {to:15, src:"IELTS Section 1 — mini-ielts.com", url:"https://mini-ielts.com/listening",
+  focus:"Form và note completion. Luyện riêng bốn loại thông tin: số (13/30, 14/40 — khác trọng âm), tên đánh vần, ngày tháng, địa chỉ và giá tiền.",
+  target:"Section 1 đạt 8/10. Đây là phần dễ nhất và phải chiếm gần trọn."},
+ {to:18, src:"IELTS Section 2 — mini-ielts.com", url:"https://mini-ielts.com/listening",
+  focus:"Map và plan labelling, multiple choice. Cẩn thận bẫy sửa đáp án: người nói đưa thông tin rồi sửa lại, đáp án là thông tin sau.",
+  target:"Section 2 đạt 7/10."},
+ {to:19, src:"Thi thử Listening đầy đủ — Cambridge", url:"https://mini-ielts.com/listening",
+  focus:"Mock giữa kỳ. Mục đích là làm quen định dạng và áp lực thời gian, không phải đo điểm chính xác.",
+  target:"Tổng 18–20/40. Thấp hơn cũng là bình thường ở mốc này."},
+ {to:22, src:"IELTS Section 3 — mini-ielts.com", url:"https://mini-ielts.com/listening",
+  focus:"Hội thoại nhiều người, matching. Khó vì phải theo dõi ai đang nói.",
+  target:"Section 3 đạt 4/10. Đừng dồn quá nhiều giờ vào đây."},
+ {to:25, src:"IELTS Section 4 — mini-ielts.com", url:"https://mini-ielts.com/listening",
+  focus:"Bài giảng học thuật, không có khoảng nghỉ giữa chừng. Đọc trước toàn bộ câu hỏi là bắt buộc.",
+  target:"Section 4 đạt 3/10."},
+ {to:26, src:"Thi thử Listening đầy đủ — Cambridge", url:"https://mini-ielts.com/listening",
+  focus:"Mock cuối giai đoạn 2, làm đủ 4 section liên tục.",
+  target:"Tổng 21–23/40."},
+ {to:34, src:"Full test + dạng bài yếu theo sổ lỗi", url:"https://mini-ielts.com/listening",
+  focus:"Không học dạng mới. Mỗi câu sai phân vào bốn nhóm: A không biết từ, B biết mà không nghe ra, C sai kỹ thuật, D bất cẩn.",
+  target:"Tổng 23/40. Nhóm D không quá 3 câu mỗi đề."},
+ {to:40, src:"Full test có bấm giờ — Cambridge GT", url:"https://mini-ielts.com/listening",
+  focus:"Làm đúng điều kiện thi thật. Chép đáp án sang answer sheet ở 10 phút cuối, kiểm tra chính tả và số ít số nhiều.",
+  target:"Ổn định 23/40 trở lên."}
+];
+
+/* Kế hoạch luyện Reading theo tuần — General Training. */
+const RPLAN = [
+ {to:4,  focus:"Breaking News English — Level 2 đến 3", url:"https://breakingnewsenglish.com",
+  why:"Mỗi bản tin có 7 cấp độ cùng một nội dung. Đọc cấp dễ trước, làm bài tập từ vựng đi kèm.",
+  target:"Đọc hết một bài mà không phải tra quá 10 từ.", gt:false},
+ {to:8,  focus:"Breaking News English — Level 4 đến 5", url:"https://breakingnewsenglish.com",
+  why:"Tăng dần độ khó. Bắt đầu bấm giờ: một bài trong 10 phút.",
+  target:"Một bài Level 5 trong 10 phút.", gt:false},
+ {to:12, focus:"Breaking News English — Level 5 đến 6", url:"https://breakingnewsenglish.com",
+  why:"Cuối tuần 12 làm thử một bài GT Reading Section 1, không bấm giờ, được tra từ thoải mái.",
+  target:"Đọc được văn bản đời sống ở tốc độ tự nhiên.", gt:false},
+ {to:15, focus:"Sentence, summary và note completion", url:"https://mini-ielts.com/reading",
+  why:"Dạng dễ ăn điểm nhất vì đáp án lấy nguyên văn từ bài. Học đầu tiên để có điểm nền.",
+  target:"Section 1 đạt 10/14.", gt:true},
+ {to:18, focus:"True / False / Not Given và Yes / No / Not Given", url:"https://mini-ielts.com/reading",
+  why:"Dạng chiếm nhiều câu nhất và sai nhiều nhất. Nếu phải suy luận hoặc dùng kiến thức bên ngoài thì đáp án là Not Given.",
+  target:"Đúng 7/10 câu dạng này.", gt:true},
+ {to:19, focus:"Thi thử GT Reading đầy đủ", url:"https://mini-ielts.com/reading",
+  why:"Mock giữa kỳ, 40 câu trong 60 phút.",
+  target:"Tổng 20–24/40.", gt:true},
+ {to:21, focus:"Multiple choice", url:"https://mini-ielts.com/reading",
+  why:"Đọc kỹ cả bốn phương án trước khi chọn. Phương án sai thường đúng một nửa.",
+  target:"Section 2 đạt 9/12.", gt:true},
+ {to:23, focus:"Matching information và matching features", url:"https://mini-ielts.com/reading",
+  why:"Tốn giờ vì phải quét cả bài. Làm sau cùng trong mỗi section.",
+  target:"Section 1 và 2 cộng lại đạt 20/26.", gt:true},
+ {to:25, focus:"Matching headings và luyện tốc độ", url:"https://mini-ielts.com/reading",
+  why:"Dạng tốn giờ nhất nên học cuối. Chiến thuật: đọc câu đầu và câu cuối mỗi đoạn, bỏ phần giữa.",
+  target:"Hoàn thành cả 3 section trong 60 phút.", gt:true},
+ {to:26, focus:"Thi thử GT Reading đầy đủ", url:"https://mini-ielts.com/reading",
+  why:"Mock cuối giai đoạn 2.",
+  target:"Tổng 24–27/40.", gt:true},
+ {to:30, focus:"Skimming và scanning có hệ thống", url:"https://mini-ielts.com/reading",
+  why:"Mỗi ngày đọc lướt một bài trong 3 phút, viết ý chính từng đoạn bằng đúng 5 từ, rồi mới làm câu hỏi.",
+  target:"Section 1 xong trong 15 phút và đạt 12/14.", gt:true},
+ {to:34, focus:"Full test bấm giờ 60 phút", url:"https://mini-ielts.com/reading",
+  why:"Ghi rõ đáp án nằm ở section nào, văn bản nào, dòng nào. Với GT, tìm ra đáp án đủ nhanh mới là kỹ năng quyết định.",
+  target:"Tổng 27–30/40.", gt:true},
+ {to:40, focus:"Full test đúng điều kiện thi", url:"https://mini-ielts.com/reading",
+  why:"Reading không có thời gian chép đáp án riêng như Listening — viết thẳng vào answer sheet.",
+  target:"Ổn định 30/40.", gt:true}
+];
+
+const planFor = (table, w) => table.find(x => w <= x.to) || table[table.length - 1];
+
+const GTSECTIONS = [
+ {n:"Section 1", d:"Sinh tồn xã hội — thông báo, quảng cáo, lịch trình", m:15, t:"12/14"},
+ {n:"Section 2", d:"Môi trường làm việc — mô tả công việc, hợp đồng, tài liệu đào tạo", m:17, t:"12/12"},
+ {n:"Section 3", d:"Một bài dài về chủ đề quan tâm chung", m:23, t:"6/14"},
+ {n:"Kiểm tra", d:"Soát ô trống, chính tả, số ít số nhiều", m:5, t:"—"}
+];
+
+const LSTEPS = [
+ {t:"Lượt 1 — nghe chay", d:"Nghe hết bài, không nhìn gì cả. Đo xem tai bắt được bao nhiêu ở trạng thái thi thật."},
+ {t:"Lượt 2 — làm câu hỏi", d:"Nghe lại và trả lời câu hỏi. Luyện vừa nghe vừa xử lý thông tin."},
+ {t:"Lượt 3 — đối chiếu transcript", d:"Nghe cùng lúc đọc transcript, khoanh mọi chỗ nghe hụt. Đây là lượt tạo ra tiến bộ và cũng là lượt hay bị bỏ nhất."},
+ {t:"Lượt 4 — nghe lại lần cuối", d:"Bỏ transcript. Những chỗ vừa khoanh bây giờ phải nghe ra được."}
+];
+
+/* Ngữ pháp lõi — 12 điểm, mỗi điểm trọn một tuần trong giai đoạn 1.
+   Từ tuần 13 không học điểm ngữ pháp mới nữa, chỉ chữa lỗi theo sổ lỗi. */
+const GRAM = {
+ 1:"Hiện tại đơn và hiện tại tiếp diễn. 1 unit Murphy + bài tập tự chấm British Council.",
+ 2:"Quá khứ đơn và quá khứ tiếp diễn. Học thuộc 60 động từ bất quy tắc thông dụng nhất.",
+ 3:"Hiện tại hoàn thành — phân biệt với quá khứ đơn. Điểm yếu kinh điển của người Việt.",
+ 4:"Mạo từ a / an / the. Lỗi mất điểm nhiều nhất trong Writing vì tiếng Việt không có mạo từ.",
+ 5:"Danh từ đếm được và không đếm được, số ít và số nhiều.",
+ 6:"Giới từ chỉ thời gian và nơi chốn: in / on / at. Học theo cụm cố định, không học quy tắc rời.",
+ 7:"So sánh hơn và so sánh nhất.",
+ 8:"Không có điểm ngữ pháp mới. Ôn lại 7 điểm đã học và làm bài tập tổng hợp.",
+ 9:"Mệnh đề quan hệ: who / which / that. Công cụ tạo câu phức đầu tiên.",
+ 10:"Câu điều kiện loại 1 và loại 2. Không học loại 3 — không cần cho band 5.5.",
+ 11:"Câu bị động ở hiện tại và quá khứ đơn, cùng liên từ nối câu: and, but, so, because, although, however.",
+ 12:"Tổng ôn toàn bộ 12 điểm ngữ pháp lõi. Làm bài tập tổng hợp trên British Council."
+};
+
+/* Lịch tuần: 0=CN … 6=T7. A = kỹ năng chính 45', D = kỹ năng phụ 25'.
+   Giai đoạn 1 (tuần 1–12) dùng lịch riêng vì ngữ pháp là hạng mục nặng nhất
+   của ba tháng đầu; từ tuần 13 quay về khung chung. */
+const ROTA = {
+  1:{A:"L", D:"V"}, 2:{A:"R", D:"Wr"}, 3:{A:"Wr", D:"L"},
+  4:{A:"R", D:"G"}, 5:{A:"L", D:"Wr"}, 6:{A:"Wr", D:"R"}, 0:null
+};
+const ROTA1 = {
+  1:{A:"L", D:"V"}, 2:{A:"R", D:"G"}, 3:{A:"Wr", D:"L"},
+  4:{A:"G", D:"R"}, 5:{A:"L", D:"Wr"}, 6:{A:"Wr", D:"G"}, 0:null
+};
+const SKILL = {
+  L:{name:"Listening", rail:"var(--sk-l)"}, R:{name:"Reading", rail:"var(--sk-r)"},
+  Wr:{name:"Writing", rail:"var(--sk-w)"}, S:{name:"Speaking", rail:"var(--sk-s)"},
+  V:{name:"Sổ lỗi + ngữ pháp", rail:"var(--sk-v)"}, G:{name:"Ngữ pháp", rail:"var(--sk-v)"}
+};
+const DAYNAME = ["Chủ nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy"];
+
+const TIPS = [
+ "Im lặng nguy hiểm hơn nói sai. Trả lời một từ rồi dừng gần như chắc chắn bị chấm 4.0; nói sai ngữ pháp nhưng liên tục 40 giây thì được 5.5.",
+ "Band 5.5 là band của câu đơn giản mà đúng, không phải câu hoa mỹ mà sai. Đừng chèn cấu trúc học thuộc vào bài viết.",
+ "Mỗi thẻ Anki ghi một cụm từ, không ghi từ đơn. Ghi \"make a decision\" chứ không ghi \"decision\".",
+ "Trong Listening, viết quá số từ cho phép là sai hoàn toàn dù nội dung đúng. Đọc kỹ chỉ dẫn ở đầu mỗi nhóm câu hỏi.",
+ "Thư Task 1 thiếu một gạch đầu dòng là mất điểm Task Achievement rất nặng. Đếm lại đủ 3 gạch trước khi nộp.",
+ "Không để trống ô nào trong Listening và Reading. Không có điểm âm — ô trống là điểm chắc chắn mất.",
+ "Viết lại một bài cũ có giá trị hơn viết một bài mới. Đây là bước bị bỏ nhiều nhất và có giá trị cao nhất.",
+ "Nói mà không nghe lại bản ghi là đang luyện cho thành thục chính những lỗi của mình.",
+ "Làm Task 2 trước rồi mới Task 1. Task 2 chiếm hai phần ba điểm Writing — nếu hết giờ thì phải hết ở Task 1.",
+ "Lượt nghe thứ ba — nghe cùng lúc đọc transcript — là lượt tạo ra tiến bộ, và là lượt hay bị bỏ nhất.",
+ "Trong Reading, một câu mất quá 90 giây thì đánh dấu, đoán một đáp án và đi tiếp.",
+ "Không hiểu câu hỏi Speaking thì hỏi lại. Hỏi lại không bị trừ điểm, trả lời lạc đề mới bị."
+];
+
+const CUES2 = [
+ {t:"Describe a person you admire.", b:["who this person is","how you know them","what they do","and explain why you admire them"]},
+ {t:"Describe a place you have visited that you liked.", b:["where it is","when you went there","what you did there","and explain why you liked it"]},
+ {t:"Describe a useful piece of technology you own.", b:["what it is","how long you have had it","how you use it","and explain why it is useful"]},
+ {t:"Describe a memorable day in your life.", b:["when it was","where you were","what happened","and explain why you remember it"]},
+ {t:"Describe a skill you learned recently.", b:["what the skill is","how you learned it","how long it took","and explain why you wanted to learn it"]},
+ {t:"Describe a time you helped someone.", b:["who you helped","what the situation was","what you did","and explain how you felt afterwards"]},
+ {t:"Describe your favourite meal.", b:["what it is","who usually makes it","when you eat it","and explain why you like it"]},
+ {t:"Describe a job you would like to do in the future.", b:["what the job is","what skills it needs","how you could get it","and explain why it appeals to you"]},
+ {t:"Describe a shop you often go to.", b:["where it is","what it sells","how often you go","and explain why you like going there"]},
+ {t:"Describe a photograph you like.", b:["what is in it","who took it","when it was taken","and explain why you like it"]},
+ {t:"Describe a difficult decision you had to make.", b:["what the decision was","what the choices were","what you chose","and explain how you felt about it"]},
+ {t:"Describe a friend you have known for a long time.", b:["who this person is","how you met","what you do together","and explain why your friendship has lasted"]},
+ {t:"Describe a website or app you use often.", b:["what it is","what you use it for","how often you use it","and explain why it is useful to you"]},
+ {t:"Describe a change you would like to make in your city.", b:["what the change is","why it is needed","who would benefit","and explain how it could be done"]},
+ {t:"Describe a gift you gave someone.", b:["what it was","who you gave it to","why you chose it","and explain how they reacted"]},
+ {t:"Describe a time you were late for something.", b:["what you were late for","why you were late","what happened","and explain how you felt"]},
+ {t:"Describe a book or film that made an impression on you.", b:["what it was","when you read or watched it","what it was about","and explain why it made an impression"]},
+ {t:"Describe a piece of clothing you often wear.", b:["what it is","where you got it","when you wear it","and explain why you like it"]},
+ {t:"Describe a family celebration you enjoyed.", b:["what the occasion was","who was there","what you did","and explain why you enjoyed it"]},
+ {t:"Describe a place where you go to relax.", b:["where it is","how often you go","what you do there","and explain why it helps you relax"]}
+];
+const CUES1 = [
+ "Do you work or are you a student?","Tell me about your hometown.","Do you like the area you live in?",
+ "What do you usually do at weekends?","Do you enjoy cooking?","What kind of music do you like?",
+ "Do you use public transport often?","How do you usually keep in touch with friends?",
+ "What is the weather like in your country?","Do you prefer shopping online or in shops?",
+ "Do you play any sports?","What did you do on your last holiday?",
+ "Do you read much in your free time?","Is there a job you would like to try one day?",
+ "Do you use your phone a lot?","What do you usually eat for breakfast?",
+ "Do you like taking photographs?","How often do you eat out at restaurants?"
+];
+
+const RES = [
+ {g:"Bộ lõi — thiết lập trong ngày đầu tiên", rail:"var(--accent)", note:"Năm thứ này là xương sống của cả 40 tuần.", items:[
+   {n:"Write & Improve", u:"https://writeandimprove.com", d:"Chấm bài viết tự động của Cambridge, cho điểm CEFR và chỉ ra lỗi trong vài giây. Công cụ giá trị nhất cho người yếu Writing tự học.", tag:"Bắt buộc"},
+   {n:"Anki", u:"https://apps.ankiweb.net", d:"Học từ vựng theo thuật toán lặp lại ngắt quãng. Miễn phí trên máy tính, Android và web. Trên iPhone dùng qua trình duyệt tại ankiweb.net.", tag:"Bắt buộc"},
+   {n:"IELTS Liz", u:"https://ieltsliz.com", d:"Kho hướng dẫn dạng bài, đề mẫu và câu hỏi Speaking cho cả 4 kỹ năng. Nguồn hướng dẫn rõ ràng và đáng tin nhất cho người mới."},
+   {n:"IELTS Simon", u:"https://ielts-simon.com", d:"Blog của một cựu giám khảo IELTS. Kho bài cũ miễn phí có hàng trăm bài mẫu kèm phân tích. Đọc để hiểu bố cục, đừng học thuộc."}
+ ]},
+ {g:"Listening", rail:"var(--sk-l)", note:"Đi từ nghe chậm lên nghe tốc độ thật. Tuần 1–7 dùng nhóm đầu, tuần 8 trở đi chuyển sang nhóm sau.", items:[
+   {n:"VOA Learning English", u:"https://learningenglish.voanews.com", d:"Tin tức đọc chậm, có bản chép lời đầy đủ. Level 1 và 2 phù hợp với band 3.0. Nguồn khởi động tốt nhất.", tag:"Tuần 1–7"},
+   {n:"Randall's ESL Cyber Listening Lab", u:"https://www.esl-lab.com", d:"Hội thoại ngắn theo chủ đề đời sống, có câu hỏi và transcript. Đã hoạt động hơn 20 năm.", tag:"Tuần 3–8"},
+   {n:"ELLLO", u:"https://elllo.org", d:"Hơn 3000 bài nghe hội thoại thật, đa dạng giọng Anh, Mỹ, Úc, Canada. Rất sát với giọng trong đề thi."},
+   {n:"BBC Learning English — 6 Minute English", u:"https://www.bbc.co.uk/learningenglish", d:"Mỗi tập 6 phút, có transcript và danh sách từ vựng. Giọng Anh chuẩn, đúng loại giọng gặp trong đề.", tag:"Tuần 8+"},
+   {n:"Mini-IELTS", u:"https://mini-ielts.com", d:"Hàng trăm bài Listening và Reading miễn phí, chấm tự động, không cần đăng ký.", tag:"Tuần 13+"}
+ ]},
+ {g:"Reading — General Training", rail:"var(--sk-r)", note:"GT Reading có 3 section: sinh tồn xã hội, môi trường làm việc, và một bài dài. Cần đúng 30/40 để đạt band 6.0.", items:[
+   {n:"Breaking News English", u:"https://breakingnewsenglish.com", d:"Mỗi bản tin có 7 cấp độ khó cùng một nội dung, kèm audio và hơn 20 bài tập. Bắt đầu từ Level 2–3, tăng dần tới Level 6.", tag:"Tuần 1–12"},
+   {n:"News in Levels", u:"https://www.newsinlevels.com", d:"Tin ngắn chia 3 cấp độ, có audio đi kèm."},
+   {n:"Simple English Wikipedia", u:"https://simple.wikipedia.org", d:"Bách khoa toàn thư viết bằng tiếng Anh đơn giản. Đọc về chủ đề đã biết trong tiếng Việt để dễ đoán nghĩa."},
+   {n:"Mini-IELTS — Reading", u:"https://mini-ielts.com/reading", d:"Kho bài đọc IELTS miễn phí lớn nhất, chấm tự động. Có mục General Training riêng.", tag:"Tuần 13+"},
+   {n:"IELTS Online Tests", u:"https://ieltsonlinetests.com", d:"Đề thi thử miễn phí có giải thích vì sao đáp án đúng — rất hữu ích khi tự học. Có mục GT riêng.", tag:"Tuần 13+"}
+ ]},
+ {g:"Writing", rail:"var(--sk-w)", note:"Task 1 của General Training là viết thư 150 từ, không phải mô tả biểu đồ. Task 2 là bài luận 250 từ.", items:[
+   {n:"Write & Improve", u:"https://writeandimprove.com", d:"Nộp bài, nhận điểm và phản hồi lỗi ngay. Không giới hạn số lần. Dùng cho mọi bài viết.", tag:"Bắt buộc"},
+   {n:"IELTS Liz — Writing", u:"https://ieltsliz.com/ielts-writing-task-2/", d:"Hướng dẫn từng dạng Task 2 rất rõ ràng, có video đi kèm."},
+   {n:"IELTS Liz — GT Letters", u:"https://ieltsliz.com/ielts-general-training-writing-task-1/", d:"Hướng dẫn viết thư General Training: ba mức trang trọng, cách mở và kết từng loại."},
+   {n:"Grammarly", u:"https://www.grammarly.com", d:"Bắt lỗi chính tả, mạo từ và dấu câu. Dùng sau khi đã tự soát bài, không dùng thay việc tự soát."}
+ ]},
+ {g:"Speaking", rail:"var(--sk-s)", note:"Kỹ năng khó tự học nhất. Công cụ quan trọng nhất là ứng dụng ghi âm có sẵn trên điện thoại.", items:[
+   {n:"IELTS Liz — Speaking", u:"https://ieltsliz.com/ielts-speaking-free-lessons-essential-tips/", d:"Danh sách đầy đủ câu hỏi Part 1, đề Part 2 và câu hỏi Part 3 theo chủ đề. Ngân hàng đề chính."},
+   {n:"ELSA Speak", u:"https://elsaspeak.com", d:"Chấm phát âm từng âm tiết, chỉ ra âm nào sai. Bản miễn phí giới hạn số bài mỗi ngày nhưng đủ dùng. Hợp với người Việt vì bắt được lỗi âm cuối."},
+   {n:"YouGlish", u:"https://youglish.com", d:"Gõ một từ, nghe hàng nghìn người bản xứ phát âm từ đó trong video thật."},
+   {n:"HelloTalk", u:"https://www.hellotalk.com", d:"Kết nối với người bản xứ đang học tiếng Việt. Nhắn tin và gọi thoại miễn phí. Dùng cho mock Speaking ở tuần 38."},
+   {n:"Speechling", u:"https://speechling.com", d:"Bản miễn phí cho phép nộp một số bản ghi âm mỗi tháng và được người thật sửa."}
+ ]},
+ {g:"Từ vựng và ngữ pháp", rail:"var(--sk-v)", note:"10 từ mới mỗi ngày. Không tăng lên 20 — số thẻ ôn lại sẽ phình ra và bạn sẽ bỏ cuộc vào tuần thứ năm.", items:[
+   {n:"Oxford 3000 & 5000", u:"https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000", d:"Danh sách từ thông dụng nhất, phân theo cấp CEFR A1 đến C1. Đây là danh sách từ vựng chính, học theo thứ tự."},
+   {n:"Cambridge Dictionary", u:"https://dictionary.cambridge.org", d:"Phát âm Anh và Mỹ, ví dụ câu, collocation. Dùng cái này để tra từ, không dùng Google Dịch."},
+   {n:"British Council — Grammar", u:"https://learnenglish.britishcouncil.org/grammar", d:"Giải thích ngắn gọn kèm bài tập tự chấm, chia theo trình độ. Nguồn ngữ pháp chính."},
+   {n:"Perfect English Grammar", u:"https://www.perfect-english-grammar.com", d:"Giải thích cực kỳ dễ hiểu, có bài tập PDF tải miễn phí. Tốt nhất cho phần thì và mạo từ."},
+   {n:"engVid", u:"https://www.engvid.com", d:"Hàng nghìn bài giảng video miễn phí. Xem bài của Adam và Rebecca cho trình độ trung cấp."}
+ ]}
+];
+
+/* =========================================================
+   1b. TÀI LIỆU KẾ HOẠCH
+   Nội dung markdown được build.py nhúng vào lúc dựng file.
+   ========================================================= */
+const DOCS = /*__DOCS__*/{};
+
+const DOCMETA = {
+ "README.md":                      {t:"Tổng quan lộ trình", d:"Con số chốt, bốn giai đoạn, mục tiêu điểm từng kỹ năng và vì sao không còn là 6 tháng."},
+ "00-tong-quan-va-cam-ket.md":     {t:"Tổng quan và cam kết", d:"Band 5.5 General Training thật sự đòi hỏi gì, khoảng cách phải lấp, mốc kiểm tra từng tháng."},
+ "01-giai-doan-1-nen-tang.md":     {t:"Giai đoạn 1 — Nền tảng", d:"Tuần 1–12. Từ vựng, 12 điểm ngữ pháp lõi, chép chính tả, luyện tai. Chưa đụng đề IELTS."},
+ "02-giai-doan-2-ky-nang-ielts.md":{t:"Giai đoạn 2 — Kỹ năng IELTS", d:"Tuần 13–26. Dạng bài General Training và chiến thuật từng phần thi."},
+ "03-giai-doan-3-cung-co.md":      {t:"Giai đoạn 3 — Củng cố", d:"Tuần 27–34. Xóa 5 lỗi cố hữu và tăng tốc độ làm bài."},
+ "04-giai-doan-4-luyen-de.md":     {t:"Giai đoạn 4 — Luyện đề", d:"Tuần 35–40. Thi thử áp lực thật, chiến thuật phòng thi, quyết định có nên thi."},
+ "05-tai-lieu-mien-phi.md":        {t:"Tài liệu miễn phí", d:"Danh sách đầy đủ kèm cách dùng đúng từng nguồn, và những thứ nên tránh."},
+ "06-lich-hoc-hang-ngay.md":       {t:"Lịch học hằng ngày", d:"Khung 2 tiếng, khung 1 tiếng cho ngày bận, lịch tuần luân phiên kỹ năng."},
+ "07-so-loi-va-theo-doi.md":       {t:"Sổ lỗi và theo dõi", d:"Cơ chế quan trọng nhất của toàn bộ lộ trình. Cách xử lý khi mất nhịp."},
+ "08-chien-thuat-tung-ky-nang.md": {t:"Chiến thuật từng kỹ năng", d:"Chiến thuật riêng cho band 5.5, đi từng kỹ năng một."},
+ "templates/so-loi.md":            {t:"Mẫu sổ lỗi", d:"Bốn sổ tách riêng và quy trình ôn 30 phút mỗi Chủ nhật."},
+ "templates/bang-theo-doi-tuan.md":{t:"Mẫu theo dõi tuần", d:"Giờ học thực tế, sản lượng, chất lượng, lỗi. Điền tối Chủ nhật."},
+ "templates/checklist-writing.md": {t:"Checklist Writing", d:"Tự soát 3 phút sau mỗi bài viết, cho cả Task 2 và thư General Training."},
+ "templates/checklist-speaking.md":{t:"Checklist Speaking", d:"Tự đánh giá sau mỗi buổi ghi âm, kèm bảng theo dõi theo tuần."},
+ "web/README.md":                  {t:"Về trang web này", d:"Cách trang hoạt động và hướng dẫn tự host miễn phí."}
+};
+
+const DOCGROUPS = [
+ {g:"Bắt đầu từ đây", f:["README.md", "00-tong-quan-va-cam-ket.md", "06-lich-hoc-hang-ngay.md", "05-tai-lieu-mien-phi.md"]},
+ {g:"Bốn giai đoạn", f:["01-giai-doan-1-nen-tang.md", "02-giai-doan-2-ky-nang-ielts.md", "03-giai-doan-3-cung-co.md", "04-giai-doan-4-luyen-de.md"]},
+ {g:"Tham chiếu", f:["07-so-loi-va-theo-doi.md", "08-chien-thuat-tung-ky-nang.md"]},
+ {g:"Mẫu biểu — copy ra dùng", f:["templates/so-loi.md", "templates/bang-theo-doi-tuan.md", "templates/checklist-writing.md", "templates/checklist-speaking.md"]},
+ {g:"Kỹ thuật", f:["web/README.md"]}
+];
+
+/* --- Bộ dựng markdown gọn, đủ dùng cho bộ tài liệu này --- */
+const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d");
+
+function mdInline(s){
+  s = esc(s);
+  s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
+  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+  s = s.replace(/\[([^\]]*)\]\(([^)\s]+)\)/g, (m, txt, href) => {
+    if(/^(https?:|mailto:)/.test(href))
+      return `<a href="${href}" target="_blank" rel="noopener noreferrer">${txt}</a>`;
+    const doc = href.split("#")[0].replace(/^\.\//, "");
+    return DOCS[doc] ? `<a data-doc="${doc}" tabindex="0" role="link">${txt}</a>` : txt;
+  });
+  return linkifyBare(s);
+}
+
+/* Tài liệu viết địa chỉ web dưới dạng chữ thường (ieltsliz.com, bbc.co.uk/learningenglish).
+   Trên điện thoại thì phải bấm được, nên tự nhận diện và bọc lại thành liên kết —
+   nhưng chỉ ở phần văn bản, bỏ qua những gì đã nằm trong thẻ <a> hoặc <code>. */
+function linkifyBare(html){
+  const parts = html.split(/(<a\b[^>]*>[\s\S]*?<\/a>|<code>[\s\S]*?<\/code>)/g);
+  const re = /\b((?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:com|org|net|io|edu|vn|uk|me))(?![a-z])((?:\/[^\s,;)"'<]*)?)/gi;
+  return parts.map((p, i) => i % 2 === 1 ? p : p.replace(re,
+    (m, host, path) => `<a href="https://${host}${path}" target="_blank" rel="noopener noreferrer">${m}</a>`
+  )).join("");
+}
+
+function mdRender(src, headings){
+  const L = src.split("\n");
+  const out = [];
+  let para = [], i = 0;
+  const flush = () => { if(para.length){ out.push("<p>" + mdInline(para.join(" ")) + "</p>"); para = []; } };
+  const isItem = x => /^\s*([-*+]|\d+\.)\s+/.test(x);
+
+  while(i < L.length){
+    const ln = L[i];
+
+    if(/^```/.test(ln)){
+      flush(); i++;
+      const body = [];
+      while(i < L.length && !/^```/.test(L[i])) body.push(L[i++]);
+      i++;
+      out.push("<pre><code>" + esc(body.join("\n")) + "</code></pre>");
+      continue;
+    }
+
+    const h = /^(#{1,6})\s+(.*)$/.exec(ln);
+    if(h){
+      flush();
+      const lv = h[1].length, txt = mdInline(h[2]);
+      const id = "s" + out.length;
+      if(headings && lv === 2) headings.push({id, txt});
+      out.push(`<h${lv} id="${id}">${txt}</h${lv}>`);
+      i++; continue;
+    }
+
+    if(/^\s*---+\s*$/.test(ln)){ flush(); out.push("<hr>"); i++; continue; }
+
+    if(/^\s*\|/.test(ln) && i + 1 < L.length && /^\s*\|[\s:|-]+\|\s*$/.test(L[i + 1])){
+      flush();
+      const cells = r => r.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => mdInline(c.trim()));
+      const head = cells(L[i]);
+      i += 2;
+      const rows = [];
+      while(i < L.length && /^\s*\|/.test(L[i])) rows.push(cells(L[i++]));
+      out.push('<div class="tbl-scroll"><table><thead><tr>'
+        + head.map(c => `<th>${c}</th>`).join("")
+        + "</tr></thead><tbody>"
+        + rows.map(r => "<tr>" + r.map(c => `<td>${c}</td>`).join("") + "</tr>").join("")
+        + "</tbody></table></div>");
+      continue;
+    }
+
+    if(/^>\s?/.test(ln)){
+      flush();
+      const body = [];
+      while(i < L.length && /^>\s?/.test(L[i])) body.push(L[i++].replace(/^>\s?/, ""));
+      out.push("<blockquote>" + mdRender(body.join("\n")) + "</blockquote>");
+      continue;
+    }
+
+    if(isItem(ln)){
+      flush();
+      const ordered = /^\s*\d+\./.test(ln);
+      const items = [];
+      while(i < L.length && isItem(L[i])){
+        const indent = /^(\s*)/.exec(L[i])[1].length;
+        let t = L[i].replace(/^\s*([-*+]|\d+\.)\s+/, "");
+        i++;
+        while(i < L.length && /^\s{2,}\S/.test(L[i]) && !isItem(L[i])) t += " " + L[i++].trim();
+        let cb = "";
+        const c = /^\[([ xX])\]\s*/.exec(t);
+        if(c){ cb = `<span class="md-cb${c[1] === " " ? "" : " on"}"></span>`; t = t.slice(c[0].length); }
+        items.push(`<li class="${indent >= 2 ? "sub" : ""}">${cb}${mdInline(t)}</li>`);
+      }
+      out.push((ordered ? "<ol>" : "<ul>") + items.join("") + (ordered ? "</ol>" : "</ul>"));
+      continue;
+    }
+
+    if(!ln.trim()){ flush(); i++; continue; }
+    para.push(ln.trim()); i++;
+  }
+  flush();
+  return out.join("\n");
+}
+
+/* =========================================================
+   2. TRẠNG THÁI
+   ========================================================= */
+const DEF = () => ({
+  startDate:null, blocks:{}, hours:{}, vocab:{}, shortDays:{},
+  mocks:[], errors:[], sessions:[], essays:[]
+});
+let S = DEF();
+let DB = null, saveTimer = null;
+const LS = "ielts-gt-40w-v1";
+const LSE = LS + "-essays";
+
+/* Bài viết đầy đủ nằm riêng, không nhét vào tài liệu tiến độ chính:
+   một tài liệu db tối đa 256KB, mà mỗi bài kèm nhận xét đã khoảng 4KB. */
+function saveEssayBody(id, body){
+  try{
+    const all = JSON.parse(localStorage.getItem(LSE) || "{}");
+    all[id] = body;
+    const keys = Object.keys(all);
+    if(keys.length > 25) keys.slice(0, keys.length - 25).forEach(k => delete all[k]);
+    localStorage.setItem(LSE, JSON.stringify(all));
+  }catch(e){ /* hết chỗ lưu cục bộ thì vẫn còn bản trên máy chủ */ }
+  if(DB) DB.collection("essays").doc(id).set(body).catch(() => {});
+}
+
+async function loadEssayBody(id){
+  try{
+    const all = JSON.parse(localStorage.getItem(LSE) || "{}");
+    if(all[id]) return all[id];
+  }catch(e){ /* bỏ qua, thử tiếp trên máy chủ */ }
+  if(DB){
+    try{
+      const snap = await DB.collection("essays").doc(id).get();
+      if(snap.exists) return snap.data();
+    }catch(e){ /* không lấy được thì trả về rỗng */ }
+  }
+  return {};
+}
+
+function localEssayBodies(){
+  try{ return JSON.parse(localStorage.getItem(LSE) || "{}"); }catch(e){ return {}; }
+}
+
+const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const parseISO = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); };
+const today = () => { const d = new Date(); d.setHours(0,0,0,0); return d; };
+
+function mondayOf(d){
+  const x = new Date(d); x.setHours(0,0,0,0);
+  const off = (x.getDay() + 6) % 7;   // T2 = 0
+  x.setDate(x.getDate() - off);
+  return x;
+}
+function loadLocal(){
+  try{ const raw = localStorage.getItem(LS); if(raw) S = Object.assign(DEF(), JSON.parse(raw)); }catch(e){}
+  if(!S.startDate) S.startDate = iso(mondayOf(new Date()));
+}
+function saveLocal(){ try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){} }
+function save(){
+  saveLocal();
+  if(!DB) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(async () => {
+    try{ await DB.doc("progress/main").set(JSON.parse(JSON.stringify(S))); }
+    catch(e){ setSync(false, "Lưu trên máy này"); }
+  }, 900);
+}
+function setSync(on, txt){
+  const pill = document.getElementById("syncPill");
+  pill.classList.toggle("on", !!on);
+  document.getElementById("syncTxt").textContent = txt;
+}
+
+function weekNo(d){
+  const start = parseISO(S.startDate);
+  const diff = Math.floor((mondayOf(d) - mondayOf(start)) / 86400000 / 7);
+  return diff + 1;
+}
+function clampWeek(n){ return Math.min(40, Math.max(1, n)); }
+function phaseOf(w){ return PHASES.find(p => w >= p.from && w <= p.to) || PHASES[0]; }
+
+/* =========================================================
+   3. NỘI DUNG BLOCK THEO NGÀY
+   ========================================================= */
+function weekData(w){ return W[clampWeek(w) - 1]; }
+
+function skillTask(code, w){
+  const d = weekData(w);
+  if(code === "L")  return d.L;
+  if(code === "R")  return d.R;
+  if(code === "Wr") return d.Wr;
+  if(code === "S")  return d.S;
+  if(code === "V")  return "Đọc lại sổ lỗi tuần này, đếm 3 lỗi lặp nhiều nhất, tự đặt 5 câu đúng cho mỗi lỗi.";
+  if(code === "G")  return GRAM[w] || "Ôn ngữ pháp theo sổ lỗi — chỉ chữa lỗi của chính mình, không học điểm ngữ pháp mới.";
+  return "";
+}
+
+function todayBlocks(date, w, short){
+  const dow = date.getDay();
+  const d = weekData(w);
+  if(dow === 0){
+    return [
+      {tag:"Ôn tập", min:"30 phút", rail:"var(--sk-v)", what:"Ôn sổ lỗi tuần này",
+       how:"Đọc lướt toàn bộ mục mới (10 phút), xác định 3 lỗi lặp nhiều nhất (5 phút), tự đặt 5 câu đúng cho mỗi lỗi (15 phút). Bước cuối mới là bước chữa.", id:"A"},
+      {tag:"Kiểm tra", min:"30 phút", rail:"var(--accent)", what: w<=12 ? "Kiểm tra 100 từ của tuần + 1 bài nghe ngắn"
+        : (w<=26 ? "1 bài Listening hoặc 1 section GT Reading, bấm giờ" : "Nửa đề hoặc full test, đúng điều kiện thi thật"),
+       how:"Chấm điểm và ghi lại. Bài test không ghi lại thì không biết mình đang đi lên hay đứng yên.", id:"B"}
+    ];
+  }
+  const r = (w <= 12 ? ROTA1 : ROTA)[dow];
+  const mainC = r.A, subC = r.D;
+  if(short){
+    return [
+      {tag:"Anki", min:"15 phút", rail:"var(--sk-v)", what:"Ôn thẻ đến hạn + 10 từ mới",
+       how:"Mỗi thẻ ghi một cụm từ kèm câu ví dụ tự đặt. Làm trước, đừng để cuối ngày.", id:"B"},
+      {tag:SKILL[mainC].name, min:"30 phút", rail:SKILL[mainC].rail, what:skillTask(mainC, w),
+       how:"Rút gọn nhưng vẫn làm đúng quy trình, chỉ giảm khối lượng.", id:"A"},
+      {tag:"Speaking", min:"15 phút", rail:"var(--sk-s)", what:"Shadowing + ghi âm 1 lần",
+       how:"Ngày bận vẫn phải nói thành tiếng. Giữ chuỗi ngày liên tục quan trọng hơn khối lượng của một ngày.", id:"C"}
+    ];
+  }
+  return [
+    {tag:SKILL[mainC].name, min:"45 phút", rail:SKILL[mainC].rail, what:skillTask(mainC, w),
+     how: w<=12 && mainC==="L" ? "Làm đủ 4 lượt nghe, và chép chính tả 10 phút. Lượt thứ ba — nghe cùng lúc đọc transcript — là lượt tạo ra tiến bộ."
+        : (mainC==="Wr" ? "Dàn ý 5 phút, viết một mạch không sửa, soát 3 phút cuối. Nộp Write & Improve rồi ghi 3 lỗi nặng nhất vào sổ lỗi."
+        : "Ghi mọi câu sai vào sổ lỗi kèm lý do sai, không chỉ ghi đáp án đúng."), id:"A"},
+    {tag:"Anki", min:"20 phút", rail:"var(--sk-v)", what:"Ôn thẻ đến hạn + 10 từ mới",
+     how:"Ghi cụm từ chứ không ghi từ đơn, kèm một câu ví dụ do chính bạn đặt.", id:"B"},
+    {tag:"Speaking", min:"30 phút", rail:"var(--sk-s)", what:d.S,
+     how:"Shadowing 10 phút, ghi âm 2 phút, nghe lại và đếm số lần dừng quá 3 giây, rồi nói lại lần hai. Block này không được đổi sang việc khác.", id:"C"},
+    {tag:SKILL[subC].name, min:"25 phút", rail:SKILL[subC].rail, what:skillTask(subC, w),
+     how: subC==="Wr" ? "Ưu tiên viết lại bài cũ đã được chấm, sửa đúng 3 lỗi đã ghi." : "Ghi lỗi mới vào sổ lỗi trước khi kết thúc.", id:"D"}
+  ];
+}
+
+/* =========================================================
+   4. RENDER
+   ========================================================= */
+function streak(){
+  let n = 0; const d = today();
+  for(let i = 0; i < 400; i++){
+    const k = iso(d);
+    const hrs = S.hours[k] || 0;
+    const anyBlock = Object.keys(S.blocks).some(x => x.startsWith(k + ":"));
+    if(hrs > 0 || anyBlock) n++;
+    else if(i > 0) break;
+    else { d.setDate(d.getDate() - 1); continue; }
+    d.setDate(d.getDate() - 1);
+  }
+  return n;
+}
+
+function renderHeader(){
+  const w = clampWeek(weekNo(today()));
+  const p = phaseOf(w);
+  document.getElementById("hWeek").textContent = `Tuần ${w} trên 40`;
+  document.getElementById("hPhase").textContent = `Giai đoạn ${p.n} — ${p.name}`;
+  document.getElementById("hBar").style.width = (w / 40 * 100).toFixed(1) + "%";
+  document.getElementById("hStreak").textContent = streak();
+}
+
+function weekHours(w){
+  const start = parseISO(S.startDate);
+  const mon = new Date(start); mon.setDate(mon.getDate() + (w - 1) * 7);
+  let sum = 0;
+  for(let i = 0; i < 7; i++){
+    const d = new Date(mon); d.setDate(d.getDate() + i);
+    sum += Number(S.hours[iso(d)] || 0);
+  }
+  return sum;
+}
+
+function renderToday(){
+  const now = today(), k = iso(now);
+  const w = clampWeek(weekNo(now));
+  const d = weekData(w);
+  const short = !!S.shortDays[k];
+
+  document.getElementById("tDate").textContent = `${DAYNAME[now.getDay()]} · ${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
+  document.getElementById("tTitle").textContent = d.t;
+  document.getElementById("tNote").textContent = d.d;
+  document.getElementById("modeFull").setAttribute("aria-pressed", String(!short));
+  document.getElementById("modeShort").setAttribute("aria-pressed", String(short));
+
+  const wrap = document.getElementById("tBlocks");
+  wrap.textContent = "";
+  todayBlocks(now, w, short).forEach(b => {
+    const key = `${k}:${b.id}`;
+    const done = !!S.blocks[key];
+    const el = document.createElement("div");
+    el.className = "blk" + (done ? " done" : "");
+    el.style.setProperty("--rail", b.rail);
+    const btn = document.createElement("button");
+    btn.className = "tick"; btn.setAttribute("aria-pressed", String(done));
+    btn.setAttribute("aria-label", (done ? "Bỏ đánh dấu: " : "Đánh dấu đã xong: ") + b.what);
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></svg>';
+    btn.onclick = () => {
+      if(S.blocks[key]) delete S.blocks[key]; else S.blocks[key] = 1;
+      save(); renderToday(); renderHeader();
+    };
+    const body = document.createElement("div");
+    body.className = "blk-body";
+    const top = document.createElement("div"); top.className = "blk-top";
+    const tg = document.createElement("span"); tg.className = "blk-tag"; tg.textContent = b.tag;
+    const mn = document.createElement("span"); mn.className = "blk-min"; mn.textContent = b.min;
+    top.append(tg, mn);
+    const wt = document.createElement("div"); wt.className = "blk-what"; wt.textContent = b.what;
+    const hw = document.createElement("div"); hw.className = "blk-how"; hw.textContent = b.how;
+    body.append(top, wt, hw);
+    el.append(btn, body);
+    wrap.append(el);
+  });
+
+  document.getElementById("inHours").value = S.hours[k] ?? "";
+  document.getElementById("inWords").value = S.vocab[k] ?? "";
+  document.getElementById("sHours").textContent = weekHours(w).toFixed(weekHours(w) % 1 ? 1 : 0);
+  document.getElementById("sWords").textContent = Object.values(S.vocab).reduce((a,b) => a + Number(b || 0), 0);
+  document.getElementById("sDays").textContent = Math.max(0, 40 - w);
+  document.getElementById("tTip").textContent = TIPS[(now.getDate() + now.getMonth()) % TIPS.length];
+}
+
+function renderRoadmap(){
+  const host = document.getElementById("roadmap");
+  host.textContent = "";
+  const cur = clampWeek(weekNo(today()));
+  PHASES.forEach(p => {
+    const h = document.createElement("div"); h.className = "phase-head";
+    const t = document.createElement("h3"); t.textContent = `Giai đoạn ${p.n} — ${p.name}`;
+    const s = document.createElement("span"); s.textContent = `tuần ${p.from}–${p.to}`;
+    h.append(t, s); host.append(h);
+    const bl = document.createElement("p"); bl.className = "small muted"; bl.style.marginBottom = "10px";
+    bl.textContent = p.blurb; host.append(bl);
+
+    W.filter(x => x.w >= p.from && x.w <= p.to).forEach(x => {
+      const det = document.createElement("details");
+      det.className = "wk" + (x.w === cur ? " now" : (x.w < cur ? " past" : ""));
+      if(x.w === cur) det.open = true;
+      const sum = document.createElement("summary");
+      sum.className = "wk-btn";
+      sum.innerHTML = `<span class="wk-n">T${x.w}</span><span class="wk-t"></span>`
+        + `<svg class="wk-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>`;
+      sum.querySelector(".wk-t").textContent = x.t;
+      const body = document.createElement("div"); body.className = "wk-body";
+      const p2 = document.createElement("p"); p2.className = "muted"; p2.style.marginBottom = "10px";
+      p2.textContent = x.d;
+      const dl = document.createElement("dl");
+      [["Listening", x.L], ["Reading", x.R], ["Writing", x.Wr], ["Speaking", x.S]].forEach(([a,b]) => {
+        const dt = document.createElement("dt"); dt.textContent = a;
+        const dd = document.createElement("dd"); dd.textContent = b;
+        dl.append(dt, dd);
+      });
+      body.append(p2, dl);
+      if(P1DAYS[x.w]) body.append(dayPlan(x.w));
+      if(x.m){ const m = document.createElement("div"); m.className = "mile"; m.textContent = x.m; body.append(m); }
+      det.append(sum, body);
+      host.append(det);
+    });
+  });
+}
+
+function renderRes(){
+  const host = document.getElementById("resList");
+  host.textContent = "";
+  RES.forEach(g => {
+    const box = document.createElement("div"); box.className = "res-grp";
+    box.style.setProperty("--rail", g.rail);
+    const h = document.createElement("h4");
+    h.innerHTML = '<span class="dot"></span>';
+    h.append(document.createTextNode(g.g));
+    const n = document.createElement("p"); n.textContent = g.note;
+    box.append(h, n);
+    g.items.forEach(it => {
+      const a = document.createElement("a");
+      a.className = "res"; a.href = it.u; a.target = "_blank"; a.rel = "noopener noreferrer";
+      const bd = document.createElement("div"); bd.style.flex = "1"; bd.style.minWidth = "0";
+      const nm = document.createElement("div"); nm.className = "res-n"; nm.textContent = it.n;
+      if(it.tag){ const pl = document.createElement("span"); pl.className = "pill"; pl.textContent = it.tag; nm.append(pl); }
+      const ds = document.createElement("div"); ds.className = "res-d"; ds.textContent = it.d;
+      bd.append(nm, ds);
+      const go = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      go.setAttribute("class", "res-go"); go.setAttribute("viewBox", "0 0 24 24");
+      go.innerHTML = '<path d="M7 17L17 7M17 7H9M17 7v8"/>';
+      a.append(bd, go);
+      box.append(a);
+    });
+    host.append(box);
+  });
+}
+
+function renderProgress(){
+  const cur = clampWeek(weekNo(today()));
+  const from = Math.max(1, cur - 11);
+  const chart = document.getElementById("chart");
+  chart.textContent = "";
+  let max = 12;
+  for(let w = from; w <= from + 11; w++) max = Math.max(max, weekHours(w));
+  for(let w = from; w <= from + 11; w++){
+    const h = weekHours(w);
+    const bar = document.createElement("div"); bar.className = "bar";
+    const i = document.createElement("i");
+    i.style.height = Math.max(2, h / max * 78) + "px";
+    if(h < 8) i.classList.add("low");
+    i.title = `Tuần ${w}: ${h} giờ`;
+    const s = document.createElement("span"); s.textContent = w;
+    bar.append(i, s); chart.append(bar);
+  }
+
+  const tb = document.getElementById("mockBody"); tb.textContent = "";
+  if(!S.mocks.length){
+    const tr = document.createElement("tr");
+    const td = document.createElement("td"); td.colSpan = 6;
+    td.className = "empty"; td.textContent = "Chưa có bài thi thử nào. Mock đầu tiên rơi vào tuần 19.";
+    tr.append(td); tb.append(tr);
+  } else {
+    S.mocks.slice().reverse().forEach(m => {
+      const tot = (m.l + m.r + m.w + m.s) / 4;
+      const band = Math.round(tot * 2) / 2;
+      const tr = document.createElement("tr");
+      [m.d, m.l.toFixed(1), m.r.toFixed(1), m.w.toFixed(1), m.s.toFixed(1), band.toFixed(1)].forEach((v, ix) => {
+        const td = document.createElement("td");
+        if(ix > 0) td.className = "num";
+        if(ix === 5) td.style.fontWeight = "700";
+        td.textContent = v; tr.append(td);
+      });
+      tb.append(tr);
+    });
+  }
+
+  const el = document.getElementById("erList"); el.textContent = "";
+  if(!S.errors.length){
+    const e = document.createElement("div"); e.className = "empty";
+    e.textContent = "Sổ lỗi đang trống. Mọi lỗi sai đều nên được ghi lại ngay khi phát hiện.";
+    el.append(e);
+  } else {
+    S.errors.slice().reverse().slice(0, 40).forEach((x, i) => {
+      const d = document.createElement("div"); d.className = "err";
+      d.style.setProperty("--rail", SKILL[x.k === "Wr" ? "Wr" : x.k]?.rail || "var(--sk-v)");
+      const a = document.createElement("div"); a.className = "err-w"; a.textContent = x.a;
+      const b = document.createElement("div"); b.className = "err-r"; b.textContent = x.b;
+      const c = document.createElement("div"); c.className = "err-m";
+      c.textContent = (x.n ? x.n + " · " : "") + x.d;
+      d.append(a, b, c);
+      const del = document.createElement("button");
+      del.className = "btn btn-sm"; del.style.marginTop = "7px"; del.textContent = "Đã xử lý";
+      del.onclick = () => {
+        const realIdx = S.errors.length - 1 - i;
+        S.errors.splice(realIdx, 1); save(); renderProgress();
+      };
+      d.append(del);
+      el.append(d);
+    });
+  }
+  document.getElementById("inStart").value = S.startDate;
+  renderExportStats();
+}
+
+function renderAll(){ renderHeader(); renderToday(); renderRoadmap(); renderProgress(); renderSkillGrid(); }
+
+/* =========================================================
+   4a. LUYỆN TẬP THEO KỸ NĂNG
+   ========================================================= */
+const SKINFO = {
+  L:{name:"Listening", rail:"var(--sk-l)", goal:"Mục tiêu 6.0 — 23/40 câu"},
+  R:{name:"Reading",   rail:"var(--sk-r)", goal:"Mục tiêu 6.0 — 30/40 câu"},
+  W:{name:"Writing",   rail:"var(--sk-w)", goal:"Mục tiêu 5.0 — thư 150 từ và bài luận 250 từ"},
+  S:{name:"Speaking",  rail:"var(--sk-s)", goal:"Mục tiêu 5.0 — nói liên tục, đừng im lặng"}
+};
+
+function skSummary(k, w){
+  const d = weekData(w);
+  if(k === "L") return planFor(LPLAN, w).src;
+  if(k === "R") return planFor(RPLAN, w).focus;
+  if(k === "W") return d.Wr;
+  return d.S;
+}
+
+function renderSkillGrid(){
+  const w = clampWeek(weekNo(today()));
+  const host = document.getElementById("skGrid");
+  host.textContent = "";
+  ["L", "R", "W", "S"].forEach(k => {
+    const info = SKINFO[k];
+    const b = document.createElement("button");
+    b.className = "skcard";
+    b.style.setProperty("--rail", info.rail);
+    b.onclick = () => openSkill(k);
+    const t = document.createElement("b"); t.textContent = info.name;
+    const s = document.createElement("span"); s.textContent = skSummary(k, w);
+    const i = document.createElement("i");
+    const n = S.sessions.filter(x => x.k === k).length;
+    i.textContent = n ? `${n} buổi đã ghi` : "chưa có buổi nào";
+    b.append(t, s, i);
+    host.append(b);
+  });
+  const now = today();
+  document.getElementById("skTip").textContent = TIPS[(now.getDate() + now.getMonth()) % TIPS.length];
+}
+
+function openSkill(k){
+  const w = clampWeek(weekNo(today()));
+  document.getElementById("skTitle").textContent = SKINFO[k].name + " · tuần " + w;
+  document.querySelectorAll(".skpane").forEach(p => { p.hidden = true; });
+  document.getElementById("sk-" + k).hidden = false;
+  document.getElementById("skHome").hidden = true;
+  document.getElementById("skPanel").hidden = false;
+
+  if(k === "L") fillListening(w);
+  if(k === "R") fillReading(w);
+  if(k === "W") fillWriting(w);
+  if(k === "S") fillSpeaking(w);
+  renderSkillHistory(k);
+  window.scrollTo({top:0, behavior:"instant"});
+}
+
+function closeSkill(){
+  document.getElementById("skPanel").hidden = true;
+  document.getElementById("skHome").hidden = false;
+  renderSkillGrid();
+  window.scrollTo({top:0, behavior:"instant"});
+}
+
+function fillListening(w){
+  const p = planFor(LPLAN, w);
+  document.getElementById("lSrc").textContent = p.src;
+  document.getElementById("lFocus").textContent = p.focus;
+  document.getElementById("lLink").href = p.url;
+  document.getElementById("lTarget").textContent = p.target;
+  document.getElementById("lTotal").placeholder = w <= 12 ? "10" : "40";
+
+  const host = document.getElementById("lSteps");
+  host.textContent = "";
+  const k = iso(today());
+  LSTEPS.forEach((s, ix) => {
+    const key = `${k}:L${ix}`;
+    const done = !!S.blocks[key];
+    const row = document.createElement("div");
+    row.className = "step" + (done ? " done" : "");
+    const n = document.createElement("button");
+    n.className = "step-n"; n.textContent = String(ix + 1);
+    n.setAttribute("aria-pressed", String(done));
+    n.setAttribute("aria-label", (done ? "Bỏ đánh dấu " : "Đánh dấu đã xong ") + s.t);
+    n.onclick = () => {
+      if(S.blocks[key]) delete S.blocks[key]; else S.blocks[key] = 1;
+      save(); fillListening(w);
+    };
+    const body = document.createElement("div");
+    const t = document.createElement("div"); t.className = "step-t"; t.textContent = s.t;
+    const d = document.createElement("div"); d.className = "step-d"; d.textContent = s.d;
+    body.append(t, d);
+    row.append(n, body);
+    host.append(row);
+  });
+}
+
+function fillReading(w){
+  const p = planFor(RPLAN, w);
+  document.getElementById("rFocus").textContent = p.focus;
+  document.getElementById("rWhy").textContent = p.why;
+  document.getElementById("rLink").href = p.url;
+  document.getElementById("rTarget").textContent = p.target;
+  document.getElementById("rSecCard").hidden = !p.gt;
+  document.getElementById("rTotal").placeholder = p.gt ? "14" : "8";
+
+  const tb = document.getElementById("rSecBody");
+  tb.textContent = "";
+  GTSECTIONS.forEach(s => {
+    const tr = document.createElement("tr");
+    const a = document.createElement("td"); a.textContent = s.n; a.style.fontWeight = "600";
+    const b = document.createElement("td"); b.textContent = s.d;
+    const c = document.createElement("td"); c.className = "num"; c.textContent = s.m;
+    const d = document.createElement("td"); d.className = "num"; d.textContent = s.t;
+    tr.append(a, b, c, d); tb.append(tr);
+  });
+
+  const seg = document.getElementById("rtPresets");
+  seg.textContent = "";
+  [[15, "S1"], [17, "S2"], [23, "S3"], [60, "Full"]].forEach(([m, lbl], ix) => {
+    const b = document.createElement("button");
+    b.textContent = `${lbl} · ${m}′`;
+    b.setAttribute("aria-pressed", String(ix === 0));
+    b.onclick = () => {
+      [...seg.children].forEach(c => c.setAttribute("aria-pressed", "false"));
+      b.setAttribute("aria-pressed", "true");
+      rTimer.set(m * 60, `${lbl === "Full" ? "Cả bài" : "Section " + lbl[1]} — ${m} phút`);
+    };
+    seg.append(b);
+  });
+}
+
+function fillWriting(w){
+  const d = weekData(w);
+  document.getElementById("wFocus").textContent = d.Wr;
+}
+
+function fillSpeaking(w){
+  const d = weekData(w);
+  document.getElementById("sFocus").textContent = d.S;
+}
+
+/* --- ghi và hiển thị lịch sử luyện tập --- */
+function newId(){ return Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36); }
+
+function logSession(k, payload){
+  S.sessions.push(Object.assign({id:newId(), d:iso(today()), w:clampWeek(weekNo(today())), k}, payload));
+  if(S.sessions.length > 800) S.sessions = S.sessions.slice(-800);
+  save();
+}
+
+function sessionLabel(x){
+  if(x.k === "S") return `${x.secs ?? "?"}s`;
+  if(x.k === "W") return (x.band ?? "?") + "";
+  return `${x.right ?? "?"}/${x.total ?? "?"}`;
+}
+
+function renderSkillHistory(k){
+  const hostId = {L:"lHist", R:"rHist", S:"sHist", W:"wHist"}[k];
+  const host = document.getElementById(hostId);
+  if(!host) return;
+  host.textContent = "";
+
+  const rows = k === "W"
+    ? S.essays.slice().reverse()
+    : S.sessions.filter(x => x.k === k).reverse();
+
+  if(!rows.length){
+    const e = document.createElement("div");
+    e.className = "empty";
+    e.textContent = k === "W"
+      ? "Chưa có bài viết nào được chấm. Chấm một bài ở trên rồi bấm lưu."
+      : "Chưa có buổi nào được ghi. Ghi lại kết quả để thấy đường tiến bộ.";
+    host.append(e);
+    return;
+  }
+
+  // đường điểm gần nhất, chỉ vẽ khi đã có ít nhất 3 buổi
+  const vals = rows.slice(0, 14).reverse()
+    .map(x => k === "W" ? Number(x.band) : (Number(x.right) / Number(x.total || 1)) * 100)
+    .filter(v => !isNaN(v) && isFinite(v));
+  if(vals.length >= 3){
+    const mx = Math.max(...vals, k === "W" ? 9 : 100);
+    const sp = document.createElement("div");
+    sp.className = "spark";
+    vals.forEach(v => {
+      const i = document.createElement("i");
+      i.style.height = Math.max(2, (v / mx) * 42) + "px";
+      i.title = k === "W" ? `band ${v}` : Math.round(v) + "%";
+      sp.append(i);
+    });
+    host.append(sp);
+    const cap = document.createElement("p");
+    cap.className = "tiny"; cap.style.marginBottom = "10px";
+    cap.textContent = k === "W" ? "Điểm 14 bài gần nhất" : "Tỷ lệ đúng 14 buổi gần nhất";
+    host.append(cap);
+  }
+
+  rows.slice(0, 12).forEach(x => {
+    const r = document.createElement("div");
+    r.className = "logrow";
+    r.style.setProperty("--rail", SKINFO[k].rail);
+    const d = document.createElement("span"); d.className = "lg-d";
+    d.textContent = `T${x.w} · ${x.d.slice(8)}/${x.d.slice(5, 7)}`;
+    const v = document.createElement("span"); v.className = "lg-v"; v.textContent = sessionLabel(x);
+    const n = document.createElement("span"); n.className = "lg-n";
+    n.textContent = x.note || (k === "W" ? `${x.words} từ · ${GTYPE[x.type] || x.type}` : "");
+    r.append(d, v, n);
+    if(k === "W" && (x.text || x.feedback)){
+      r.style.cursor = "pointer";
+      r.onclick = () => showEssay(x);
+    }
+    host.append(r);
+  });
+
+  if(rows.length > 12){
+    const more = document.createElement("p");
+    more.className = "tiny"; more.style.marginTop = "8px";
+    more.textContent = `Còn ${rows.length - 12} mục cũ hơn — tải file JSON ở tab Tiến độ để xem hết.`;
+    host.append(more);
+  }
+}
+
+const GTYPE = {t2:"Task 2", formal:"Thư trang trọng", semi:"Thư bán trang trọng", informal:"Thư thân mật"};
+
+/* Mở lại một bài cũ: đổ bài và nhận xét vào ô chấm để đọc lại, hoặc để sửa
+   rồi chấm lần hai. Không tự lưu đè — bài viết lại là một mục mới trong lịch sử. */
+async function showEssay(x){
+  const body = await loadEssayBody(x.id);
+  const out = document.getElementById("gOut");
+  if(body.text){
+    document.getElementById("gText").value = body.text;
+    if(x.type) document.getElementById("gType").value = x.type;
+    updWc();
+  }
+  out.textContent = body.feedback
+    || "Bài này chỉ còn lưu điểm, không còn phần nhận xét — bản đầy đủ nằm trong file JSON đã tải về, nếu có.";
+  lastGrade = null;
+  document.getElementById("gBand").value = "";
+  document.getElementById("gWords2").value = "";
+  document.getElementById("gSaveHint").textContent =
+    `Đang xem lại bài tuần ${x.w}, chấm ngày ${x.d.slice(8)}/${x.d.slice(5, 7)}.`;
+  out.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+/* =========================================================
+   4b. ĐỌC TÀI LIỆU KẾ HOẠCH
+   ========================================================= */
+function docLabel(path){
+  return DOCMETA[path] || {t:path, d:""};
+}
+
+function renderDocList(){
+  const host = document.getElementById("docList");
+  host.textContent = "";
+  const known = new Set();
+  DOCGROUPS.forEach(grp => {
+    const files = grp.f.filter(f => DOCS[f]);
+    if(!files.length) return;
+    const h = document.createElement("div");
+    h.className = "phase-head";
+    const t = document.createElement("h3"); t.textContent = grp.g;
+    const c = document.createElement("span"); c.textContent = files.length + " tài liệu";
+    h.append(t, c); host.append(h);
+    files.forEach((f, ix) => {
+      known.add(f);
+      host.append(docRow(f, ix + 1));
+    });
+  });
+  // bất kỳ file nào chưa được xếp nhóm vẫn phải hiện ra
+  const rest = Object.keys(DOCS).filter(f => !known.has(f));
+  if(rest.length){
+    const h = document.createElement("div");
+    h.className = "phase-head";
+    const t = document.createElement("h3"); t.textContent = "Khác";
+    h.append(t); host.append(h);
+    rest.forEach((f, ix) => host.append(docRow(f, ix + 1)));
+  }
+}
+
+function docRow(path, ix){
+  const meta = docLabel(path);
+  const b = document.createElement("button");
+  b.className = "doc-item";
+  b.onclick = () => openDoc(path);
+  const n = document.createElement("span");
+  n.className = "doc-ix"; n.textContent = String(ix).padStart(2, "0");
+  const body = document.createElement("span");
+  body.style.flex = "1"; body.style.minWidth = "0";
+  const t = document.createElement("span");
+  t.className = "doc-t"; t.style.display = "block"; t.textContent = meta.t;
+  const d = document.createElement("span");
+  d.className = "doc-d"; d.style.display = "block"; d.textContent = meta.d;
+  const m = document.createElement("span");
+  m.className = "doc-meta"; m.style.display = "block";
+  const words = (DOCS[path].match(/\S+/g) || []).length;
+  m.textContent = `${path} · ${words.toLocaleString("vi-VN")} từ · khoảng ${Math.max(1, Math.round(words / 200))} phút đọc`;
+  body.append(t, d, m);
+  b.append(n, body);
+  return b;
+}
+
+function openDoc(path, scrollTo){
+  const src = DOCS[path];
+  if(!src) return;
+  const meta = docLabel(path);
+  const headings = [];
+  const html = mdRender(src, headings);
+
+  document.getElementById("docTitle").textContent = meta.t;
+  const body = document.getElementById("docBody");
+  body.innerHTML = html;
+  body.querySelectorAll("a[data-doc]").forEach(a => {
+    a.onclick = ev => { ev.preventDefault(); openDoc(a.dataset.doc); };
+    a.onkeydown = ev => { if(ev.key === "Enter"){ ev.preventDefault(); openDoc(a.dataset.doc); } };
+  });
+
+  const toc = document.getElementById("docToc");
+  const list = document.getElementById("docTocList");
+  list.textContent = "";
+  if(headings.length >= 3){
+    toc.hidden = false; toc.open = false;
+    headings.forEach(h => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#"; a.innerHTML = h.txt;
+      a.onclick = ev => {
+        ev.preventDefault();
+        const el = document.getElementById(h.id);
+        if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+      };
+      li.append(a); list.append(li);
+    });
+  } else {
+    toc.hidden = true;
+  }
+
+  document.getElementById("docHome").hidden = true;
+  document.getElementById("docView").hidden = false;
+  if(scrollTo){
+    const el = [...body.querySelectorAll("*")].find(x => norm(x.textContent).includes(norm(scrollTo)));
+    if(el){ el.scrollIntoView({behavior:"auto", block:"center"}); return; }
+  }
+  window.scrollTo({top:0, behavior:"instant"});
+}
+
+function closeDoc(){
+  document.getElementById("docView").hidden = true;
+  document.getElementById("docHome").hidden = false;
+  window.scrollTo({top:0, behavior:"instant"});
+}
+
+function searchDocs(q){
+  const host = document.getElementById("docHits");
+  host.textContent = "";
+  const needle = norm(q.trim());
+  const listEl = document.getElementById("docList");
+  if(needle.length < 2){ listEl.hidden = false; return; }
+  listEl.hidden = true;
+
+  const hits = [];
+  for(const path of Object.keys(DOCS)){
+    const lines = DOCS[path].split("\n");
+    for(let i = 0; i < lines.length && hits.length < 60; i++){
+      const raw = lines[i].trim();
+      if(raw.length < 4) continue;
+      if(norm(raw).includes(needle)) hits.push({path, raw});
+    }
+    if(hits.length >= 60) break;
+  }
+
+  if(!hits.length){
+    const e = document.createElement("div");
+    e.className = "empty";
+    e.textContent = `Không tìm thấy “${q.trim()}” trong tài liệu nào.`;
+    host.append(e);
+    return;
+  }
+
+  const head = document.createElement("p");
+  head.className = "tiny";
+  head.style.marginBottom = "10px";
+  head.textContent = `${hits.length} kết quả${hits.length >= 60 ? " đầu tiên" : ""} cho “${q.trim()}”`;
+  host.append(head);
+
+  hits.forEach(h => {
+    const b = document.createElement("button");
+    b.className = "hit";
+    b.onclick = () => openDoc(h.path, h.raw.slice(0, 60));
+    const t = document.createElement("b");
+    t.textContent = docLabel(h.path).t;
+    const s = document.createElement("span");
+    // tô sáng đoạn khớp mà vẫn giữ nguyên văn bản gốc
+    const plain = h.raw.replace(/[*`#|]/g, "").replace(/\s+/g, " ").trim();
+    const idx = norm(plain).indexOf(needle);
+    if(idx < 0){ s.textContent = plain.slice(0, 160); }
+    else {
+      const from = Math.max(0, idx - 50);
+      s.append(document.createTextNode((from ? "…" : "") + plain.slice(from, idx)));
+      const mk = document.createElement("mark");
+      mk.textContent = plain.slice(idx, idx + q.trim().length);
+      s.append(mk, document.createTextNode(plain.slice(idx + q.trim().length, idx + q.trim().length + 90) + "…"));
+    }
+    b.append(t, s);
+    host.append(b);
+  });
+}
+
+/* =========================================================
+   5. TƯƠNG TÁC
+   ========================================================= */
+document.querySelectorAll("nav button[data-go]").forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll("nav button[data-go]").forEach(x => x.removeAttribute("aria-current"));
+    b.setAttribute("aria-current", "page");
+    document.querySelectorAll(".panel").forEach(p => p.classList.remove("on"));
+    document.getElementById("p-" + b.dataset.go).classList.add("on");
+    window.scrollTo({top:0, behavior:"instant"});
+  };
+});
+
+/* --- Luyện tập: điều hướng, đồng hồ, ghi kết quả --- */
+document.getElementById("skBack").onclick = closeSkill;
+
+/* Đồng hồ đếm ngược dùng chung cho chép chính tả và bấm giờ Reading. */
+function countdown(ids, initSecs, initLabel){
+  let left = initSecs, tick = null, label = initLabel;
+  const el = id => document.getElementById(id);
+  const paint = () => {
+    el(ids.d).textContent = fmt(Math.abs(left));
+    el(ids.d).className = "timer num" + (left < 0 ? " over" : (left <= 30 ? " warn" : ""));
+    el(ids.l).textContent = left < 0 ? "Đã quá giờ " + fmt(-left) : label;
+  };
+  const api = {
+    set(secs, lb){
+      clearInterval(tick); tick = null;
+      left = secs; if(lb) label = lb;
+      el(ids.b).textContent = "Bắt đầu"; paint();
+    },
+    toggle(){
+      if(tick){ clearInterval(tick); tick = null; el(ids.b).textContent = "Tiếp tục"; return; }
+      el(ids.b).textContent = "Tạm dừng";
+      tick = setInterval(() => {
+        left--;
+        if(left === 0 && navigator.vibrate) navigator.vibrate([120, 80, 120]);
+        paint();
+      }, 1000);
+    },
+    reset(){ api.set(initSecs, initLabel); }
+  };
+  paint();
+  return api;
+}
+
+const dtTimer = countdown({d:"dtDisplay", l:"dtLabel", b:"dtStart"}, 600, "Chép chính tả — 10 phút");
+document.getElementById("dtStart").onclick = () => dtTimer.toggle();
+document.getElementById("dtReset").onclick = () => dtTimer.reset();
+
+const rTimer = countdown({d:"rtDisplay", l:"rtLabel", b:"rtStart"}, 900, "Section 1 — 15 phút");
+document.getElementById("rtStart").onclick = () => rTimer.toggle();
+document.getElementById("rtReset").onclick = () => rTimer.reset();
+
+function wireLog(btnId, skill, fields, build){
+  document.getElementById(btnId).onclick = () => {
+    const v = {};
+    fields.forEach(f => { v[f] = document.getElementById(f).value.trim(); });
+    const payload = build(v);
+    if(!payload) return;
+    logSession(skill, payload);
+    fields.forEach(f => { document.getElementById(f).value = ""; });
+    renderSkillHistory(skill);
+  };
+}
+
+wireLog("lSave", "L", ["lRight", "lTotal", "lNote"], v => {
+  const total = Number(v.lTotal);
+  if(!total) return null;
+  return {right: Number(v.lRight) || 0, total, note: v.lNote};
+});
+
+wireLog("rSave", "R", ["rRight", "rTotal", "rMins", "rNote"], v => {
+  const total = Number(v.rTotal);
+  if(!total) return null;
+  return {right: Number(v.rRight) || 0, total, mins: Number(v.rMins) || null, note: v.rNote};
+});
+
+wireLog("sSave", "S", ["sSecs", "sPause", "sNote"], v => {
+  const secs = Number(v.sSecs);
+  if(!secs) return null;
+  return {secs, pauses: Number(v.sPause) || 0, note: v.sNote};
+});
+
+document.getElementById("gSave").onclick = () => {
+  const band = parseFloat(document.getElementById("gBand").value);
+  const words = parseInt(document.getElementById("gWords2").value, 10);
+  if(isNaN(band) && isNaN(words)) return;
+  const id = newId();
+  S.essays.push({
+    id, d: iso(today()), w: clampWeek(weekNo(today())),
+    type: lastGrade ? lastGrade.type : document.getElementById("gType").value,
+    words: isNaN(words) ? (lastGrade ? lastGrade.words : 0) : words,
+    band: isNaN(band) ? null : band
+  });
+  if(S.essays.length > 300) S.essays = S.essays.slice(-300);
+  if(lastGrade) saveEssayBody(id, {text: lastGrade.text, feedback: lastGrade.feedback});
+  save();
+  lastGrade = null;
+  document.getElementById("gBand").value = "";
+  document.getElementById("gWords2").value = "";
+  document.getElementById("gSaveHint").textContent = "Đã lưu. Đường điểm cập nhật ở lịch sử bên dưới.";
+  renderSkillHistory("W");
+};
+
+/* --- Xuất và nhập file JSON --- */
+function exportBundle(){
+  return {
+    app: "ielts-companion",
+    schema: 1,
+    exportedAt: new Date().toISOString(),
+    note: "Lich su tu hoc IELTS General Training 3.0 -> 5.5, 40 tuan.",
+    startDate: S.startDate,
+    blocks: S.blocks, hours: S.hours, vocab: S.vocab, shortDays: S.shortDays,
+    mocks: S.mocks, errors: S.errors, sessions: S.sessions, essays: S.essays,
+    essayBodies: localEssayBodies()
+  };
+}
+
+function renderExportStats(){
+  const host = document.getElementById("expStats");
+  host.textContent = "";
+  const rows = [
+    ["Ngày đã đánh dấu", new Set(Object.keys(S.blocks).map(k => k.split(":")[0])).size],
+    ["Ngày có ghi giờ học", Object.keys(S.hours).length],
+    ["Buổi luyện đã ghi", S.sessions.length],
+    ["Bài viết đã chấm", S.essays.length],
+    ["Mục trong sổ lỗi", S.errors.length],
+    ["Bài thi thử", S.mocks.length]
+  ];
+  const t = document.createElement("table");
+  const tb = document.createElement("tbody");
+  rows.forEach(([k, v]) => {
+    const tr = document.createElement("tr");
+    const a = document.createElement("td"); a.textContent = k;
+    const b = document.createElement("td"); b.className = "num";
+    b.style.fontWeight = "600"; b.textContent = v;
+    tr.append(a, b); tb.append(tr);
+  });
+  t.append(tb); host.append(t);
+}
+
+document.getElementById("expBtn").onclick = async () => {
+  const msg = document.getElementById("expMsg");
+  const data = JSON.stringify(exportBundle(), null, 2);
+  const name = `ielts-lich-su-${iso(today())}.json`;
+  if(downloadsFn){
+    try{
+      await downloadsFn.save({filename: name, data});
+      msg.textContent = `Đã lưu ${name} (${Math.round(data.length / 1024)}KB).`;
+    }catch(e){
+      msg.textContent = e.code === "declined"
+        ? "Bạn đã bỏ qua lần tải này."
+        : "Không tải được file. Thử lại sau ít phút.";
+    }
+    return;
+  }
+  // bản tự host: trình duyệt tải trực tiếp được
+  try{
+    const url = URL.createObjectURL(new Blob([data], {type:"application/json"}));
+    const a = document.createElement("a");
+    a.href = url; a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    msg.textContent = `Đã tạo ${name} (${Math.round(data.length / 1024)}KB).`;
+  }catch(e){
+    msg.textContent = "Trình duyệt này không cho tải file từ trang.";
+  }
+};
+
+document.getElementById("impBtn").onclick = () => document.getElementById("impFile").click();
+
+document.getElementById("impFile").onchange = ev => {
+  const file = ev.target.files && ev.target.files[0];
+  const msg = document.getElementById("expMsg");
+  if(!file) return;
+  const fr = new FileReader();
+  fr.onload = () => {
+    let d;
+    try{ d = JSON.parse(String(fr.result)); }
+    catch(e){ msg.textContent = "File không đọc được — phải là file JSON đã tải từ trang này."; return; }
+    if(!d || d.app !== "ielts-companion"){
+      msg.textContent = "Đây không phải file lịch sử của trang này.";
+      return;
+    }
+    if(!confirm("Nhập dữ liệu từ file sẽ thay thế toàn bộ tiến độ hiện tại. Tiếp tục?")) return;
+
+    S = Object.assign(DEF(), {
+      startDate: d.startDate || S.startDate,
+      blocks: d.blocks || {}, hours: d.hours || {}, vocab: d.vocab || {},
+      shortDays: d.shortDays || {}, mocks: d.mocks || [], errors: d.errors || [],
+      sessions: d.sessions || [], essays: d.essays || []
+    });
+    if(d.essayBodies){
+      try{ localStorage.setItem(LSE, JSON.stringify(d.essayBodies)); }catch(e){ /* bỏ qua */ }
+    }
+    save(); renderAll(); renderExportStats();
+    msg.textContent = `Đã nhập xong: ${S.sessions.length} buổi luyện, ${S.essays.length} bài viết, ${S.errors.length} mục sổ lỗi.`;
+  };
+  fr.readAsText(file);
+  ev.target.value = "";
+};
+
+document.getElementById("docBack").onclick = closeDoc;
+document.getElementById("docTop").onclick = () => window.scrollTo({top:0, behavior:"smooth"});
+{
+  let t = null;
+  const q = document.getElementById("docQ");
+  q.oninput = () => { clearTimeout(t); t = setTimeout(() => searchDocs(q.value), 180); };
+  q.onkeydown = ev => { if(ev.key === "Escape"){ q.value = ""; searchDocs(""); } };
+}
+
+const themeBtn = document.getElementById("themeBtn");
+themeBtn.onclick = () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const next = cur ? (cur === "dark" ? "light" : "dark") : (sysDark ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", next);
+  try{ localStorage.setItem(LS + "-theme", next); }catch(e){}
+};
+try{ const t = localStorage.getItem(LS + "-theme"); if(t) document.documentElement.setAttribute("data-theme", t); }catch(e){}
+
+document.getElementById("modeFull").onclick = () => {
+  delete S.shortDays[iso(today())]; save(); renderToday();
+};
+document.getElementById("modeShort").onclick = () => {
+  S.shortDays[iso(today())] = 1; save(); renderToday();
+};
+document.getElementById("inHours").oninput = e => {
+  const k = iso(today()), v = parseFloat(e.target.value);
+  if(isNaN(v) || v <= 0) delete S.hours[k]; else S.hours[k] = v;
+  save(); renderHeader();
+  document.getElementById("sHours").textContent = weekHours(clampWeek(weekNo(today()))).toString();
+};
+document.getElementById("inWords").oninput = e => {
+  const k = iso(today()), v = parseInt(e.target.value, 10);
+  if(isNaN(v) || v <= 0) delete S.vocab[k]; else S.vocab[k] = v;
+  save();
+  document.getElementById("sWords").textContent = Object.values(S.vocab).reduce((a,b) => a + Number(b || 0), 0);
+};
+document.getElementById("inStart").onchange = e => {
+  if(!e.target.value) return;
+  S.startDate = iso(mondayOf(parseISO(e.target.value)));
+  e.target.value = S.startDate;
+  save(); renderAll();
+};
+document.getElementById("mkAdd").onclick = () => {
+  const g = id => parseFloat(document.getElementById(id).value);
+  const l = g("mkL"), r = g("mkR"), w = g("mkW"), s = g("mkS");
+  if([l,r,w,s].some(v => isNaN(v))) return;
+  S.mocks.push({d: iso(today()), l, r, w, s});
+  ["mkL","mkR","mkW","mkS"].forEach(id => document.getElementById(id).value = "");
+  save(); renderProgress();
+};
+document.getElementById("erAdd").onclick = () => {
+  const a = document.getElementById("erWrong").value.trim();
+  const b = document.getElementById("erRight").value.trim();
+  if(!a || !b) return;
+  S.errors.push({
+    d: iso(today()), k: document.getElementById("erSkill").value,
+    a, b, n: document.getElementById("erNote").value.trim()
+  });
+  ["erWrong","erRight","erNote"].forEach(id => document.getElementById(id).value = "");
+  save(); renderProgress();
+};
+document.getElementById("btnReset").onclick = () => {
+  if(!confirm("Xóa toàn bộ tiến độ, sổ lỗi và điểm thi thử? Không thể hoàn tác.")) return;
+  const sd = S.startDate; S = DEF(); S.startDate = sd; save(); renderAll();
+};
+
+/* --- Speaking: cue card + đồng hồ --- */
+let cueMode = 2, tmId = null, tmLeft = 60, tmPhase = "prep";
+function newCue(){
+  const box = document.getElementById("cueCard");
+  box.textContent = "";
+  if(cueMode === 2){
+    const c = CUES2[Math.floor(Math.random() * CUES2.length)];
+    const h = document.createElement("h4"); h.textContent = c.t;
+    const ul = document.createElement("ul");
+    c.b.forEach(x => { const li = document.createElement("li"); li.textContent = x; ul.append(li); });
+    box.append(h, ul);
+  } else {
+    const q = CUES1[Math.floor(Math.random() * CUES1.length)];
+    const h = document.createElement("h4"); h.textContent = q;
+    const p = document.createElement("p"); p.className = "small muted"; p.style.marginTop = "8px";
+    p.textContent = "Trả lời bằng công thức PPF: hiện tại (I usually…) → quá khứ (When I was younger, I used to…) → tương lai (In the future, I'd like to…). Ba câu, ba thì, khoảng 40 giây.";
+    box.append(h, p);
+  }
+}
+function fmt(s){ return Math.floor(s/60) + ":" + String(s % 60).padStart(2, "0"); }
+function tmRender(){
+  const el = document.getElementById("tmDisplay");
+  el.textContent = fmt(Math.abs(tmLeft));
+  el.className = "timer num" + (tmLeft < 0 ? " over" : (tmLeft <= 10 && tmPhase === "speak" ? " warn" : ""));
+}
+function tmStop(){ clearInterval(tmId); tmId = null; }
+function tmReset(){
+  tmStop(); tmPhase = "prep"; tmLeft = cueMode === 2 ? 60 : 10; tmRender();
+  document.getElementById("tmLabel").textContent = cueMode === 2
+    ? "Chuẩn bị — viết 4 từ khóa, không viết câu hoàn chỉnh"
+    : "Chuẩn bị — nghĩ nhanh một ý, đừng dịch từ tiếng Việt";
+  document.getElementById("tmStart").textContent = "Bắt đầu chuẩn bị";
+}
+document.getElementById("tmStart").onclick = () => {
+  if(tmId){ tmStop(); document.getElementById("tmStart").textContent = "Tiếp tục"; return; }
+  document.getElementById("tmStart").textContent = "Tạm dừng";
+  tmId = setInterval(() => {
+    tmLeft--;
+    if(tmLeft === 0 && tmPhase === "prep"){
+      tmPhase = "speak";
+      tmLeft = cueMode === 2 ? 120 : 40;
+      document.getElementById("tmLabel").textContent = cueMode === 2
+        ? "Nói — bật ghi âm, nói cho tới khi hết giờ, đừng dừng sớm"
+        : "Nói — mở rộng thành 3–4 câu, đừng trả lời một từ";
+      if(navigator.vibrate) navigator.vibrate(200);
+    }
+    if(tmLeft === 0 && tmPhase === "speak"){
+      document.getElementById("tmLabel").textContent = "Hết giờ — nghe lại bản ghi và đếm số lần dừng quá 3 giây";
+      if(navigator.vibrate) navigator.vibrate([120,80,120]);
+    }
+    tmRender();
+  }, 1000);
+};
+document.getElementById("tmReset").onclick = tmReset;
+document.getElementById("cueNew").onclick = () => { newCue(); tmReset(); };
+document.getElementById("cuePart1").onclick = e => {
+  cueMode = cueMode === 2 ? 1 : 2;
+  e.target.textContent = cueMode === 2 ? "Đổi sang Part 1" : "Đổi sang Part 2";
+  newCue(); tmReset();
+};
+
+/* --- Writing grader --- */
+const gText = document.getElementById("gText");
+const gOut  = document.getElementById("gOut");
+let gMode = "essay", sampleFn = null, gCtl = null;
+let downloadsFn = null, lastGrade = null;
+
+/* Prompt chấm bài cố định định dạng "ĐIỂM TỔNG: x.x" nên đọc lại được bằng regex.
+   Đọc trượt thì ô điểm để trống và người dùng tự nhập — không đoán bừa. */
+function parseBand(txt){
+  const m = /ĐIỂM\s*TỔNG\s*:?\s*\**\s*([0-9](?:[.,]\d)?)/i.exec(txt);
+  return m ? parseFloat(m[1].replace(",", ".")) : null;
+}
+
+const MINW = {t2:250, formal:150, semi:150, informal:150};
+function wcount(s){ return (s.trim().match(/\S+/g) || []).length; }
+function updWc(){
+  const n = wcount(gText.value);
+  const el = document.getElementById("gWc");
+  if(gMode === "fix"){ el.textContent = n + " từ"; el.className = "wc num"; return; }
+  const need = MINW[document.getElementById("gType").value];
+  el.textContent = `${n} / ${need} từ tối thiểu`;
+  el.className = "wc num " + (n === 0 ? "" : (n < need ? "bad" : "good"));
+}
+gText.oninput = updWc;
+document.getElementById("gType").onchange = updWc;
+
+function setGMode(m){
+  gMode = m;
+  document.getElementById("gmEssay").setAttribute("aria-pressed", String(m === "essay"));
+  document.getElementById("gmFix").setAttribute("aria-pressed", String(m === "fix"));
+  document.getElementById("gEssayWrap").hidden = m !== "essay";
+  document.getElementById("gLabel").textContent = m === "essay"
+    ? "Dán bài viết của bạn vào đây" : "Dán một hoặc vài câu tiếng Anh cần kiểm tra";
+  gText.placeholder = m === "essay"
+    ? "Gõ hoặc dán bài viết bằng tiếng Anh…" : "He go to work every day and he don't like it.";
+  document.getElementById("gRun").textContent = m === "essay" ? "Chấm bài" : "Sửa câu";
+  gText.style.minHeight = m === "essay" ? "150px" : "90px";
+  updWc();
+}
+document.getElementById("gmEssay").onclick = () => setGMode("essay");
+document.getElementById("gmFix").onclick   = () => setGMode("fix");
+
+const TASKNAME = {
+  t2:"IELTS Writing Task 2 (bài luận, tối thiểu 250 từ, 40 phút)",
+  formal:"IELTS General Training Writing Task 1 — thư TRANG TRỌNG (formal, mở đầu Dear Sir or Madam, kết Yours faithfully), tối thiểu 150 từ, 20 phút",
+  semi:"IELTS General Training Writing Task 1 — thư BÁN TRANG TRỌNG (semi-formal, mở đầu Dear Mr/Ms + tên, kết Yours sincerely), tối thiểu 150 từ, 20 phút",
+  informal:"IELTS General Training Writing Task 1 — thư THÂN MẬT (informal, gửi bạn bè hoặc người thân, kết Best wishes/Love), tối thiểu 150 từ, 20 phút"
+};
+
+function buildPrompt(){
+  const txt = gText.value.trim().slice(0, 12000);
+  if(gMode === "fix"){
+    return "Bạn là giáo viên tiếng Anh đang dạy một học viên người Việt ở trình độ IELTS 3.0, "
+      + "đang hướng tới 5.5, yếu ngữ pháp cơ bản.\n\n"
+      + "Kiểm tra đoạn tiếng Anh dưới đây:\n---\n" + txt + "\n---\n\n"
+      + "Trả lời bằng tiếng Việt theo đúng cấu trúc này, không thêm phần nào khác:\n\n"
+      + "CÂU ĐÚNG\n(viết lại toàn bộ đoạn đã sửa)\n\n"
+      + "TỪNG LỖI MỘT\nVới mỗi lỗi, viết ba dòng: câu sai (trích nguyên văn) / tên loại lỗi / vì sao sai và cách nhớ để không lặp lại.\n\n"
+      + "LỖI NÀO CẦN GHI VÀO SỔ LỖI\nChọn tối đa 3 lỗi đáng ghi nhất và giải thích ngắn gọn vì sao chúng đáng ưu tiên.\n\n"
+      + "Giải thích đơn giản, dùng thuật ngữ ngữ pháp tiếng Việt quen thuộc. Không khen xã giao.";
+  }
+  const type = document.getElementById("gType").value;
+  const n = wcount(txt), need = MINW[type];
+  return "Bạn là giám khảo IELTS General Training có kinh nghiệm chấm bài thật.\n\n"
+    + "LOẠI BÀI: " + TASKNAME[type] + "\n"
+    + "SỐ TỪ THỰC TẾ CỦA BÀI: " + n + " từ (yêu cầu tối thiểu " + need + " từ)\n\n"
+    + "BÀI VIẾT CỦA THÍ SINH:\n---\n" + txt + "\n---\n\n"
+    + "Người viết đang ở band 3.0 và hướng tới 5.5, yếu Writing, tự học không có giáo viên. "
+    + "Chấm đúng thực tế, không nới điểm vì lịch sự — điểm nới sẽ khiến họ đi thi và trượt.\n\n"
+    + "Trả lời bằng tiếng Việt theo đúng cấu trúc này, không thêm phần nào khác:\n\n"
+    + "ĐIỂM TỪNG TIÊU CHÍ\n"
+    + (type === "t2" ? "Task Response: " : "Task Achievement: ") + "x.x — một câu giải thích\n"
+    + "Coherence & Cohesion: x.x — một câu giải thích\n"
+    + "Lexical Resource: x.x — một câu giải thích\n"
+    + "Grammatical Range & Accuracy: x.x — một câu giải thích\n"
+    + "ĐIỂM TỔNG: x.x\n\n"
+    + (n < need ? "LƯU Ý BẮT BUỘC: bài này thiếu số từ tối thiểu. Nói rõ mức trừ điểm ở ngay đầu phần nhận xét.\n\n" : "")
+    + "NĂM LỖI NGHIÊM TRỌNG NHẤT\nXếp theo mức độ nghiêm trọng. Với mỗi lỗi viết ba dòng: câu sai (trích nguyên văn từ bài) / vì sao sai / câu sửa lại.\n\n"
+    + "BA VIỆC CẦN LÀM ĐỂ LÊN NỬA BAND\nBa gạch đầu dòng cụ thể, làm được ngay trong bài viết tiếp theo. Không nói chung chung như \"cải thiện ngữ pháp\".\n\n"
+    + (type === "t2" ? "" : "KIỂM TRA RIÊNG CHO THƯ\nNêu rõ: bài đã trả lời đủ cả 3 gạch đầu dòng của đề chưa (nếu đoán được từ nội dung), và mức độ trang trọng có nhất quán từ đầu đến cuối không.\n\n")
+    + "Viết ngắn gọn, đi thẳng vào việc. Không mở đầu bằng lời khen xã giao.";
+}
+
+document.getElementById("gRun").onclick = async () => {
+  if(!sampleFn) return;
+  const txt = gText.value.trim();
+  if(wcount(txt) < 12){ gOut.textContent = "Bài quá ngắn để chấm. Viết ít nhất vài câu rồi thử lại."; return; }
+  const btn = document.getElementById("gRun"), stop = document.getElementById("gStop");
+  btn.disabled = true; stop.hidden = false;
+  gOut.textContent = "Đang đọc bài… việc này thường mất 20–60 giây.";
+  gCtl = new AbortController();
+  try{
+    const r = await sampleFn(buildPrompt(), {
+      signal: gCtl.signal, modelTier: "default", cache: false,
+      onText: ({text}) => { gOut.textContent = text; }
+    });
+    if(r.truncated) gOut.textContent += "\n\n[Phản hồi bị cắt vì quá dài. Thử chấm bài ngắn hơn.]";
+    if(gMode === "essay"){
+      const band = parseBand(r.text);
+      lastGrade = {text: txt, feedback: r.text, type: document.getElementById("gType").value, words: wcount(txt)};
+      document.getElementById("gBand").value = band ?? "";
+      document.getElementById("gWords2").value = lastGrade.words;
+      document.getElementById("gSaveHint").textContent = band
+        ? "Điểm đã đọc được từ phần chấm ở trên. Kiểm tra lại rồi bấm lưu."
+        : "Không đọc được điểm tự động — nhập tay từ phần chấm ở trên rồi bấm lưu.";
+    }
+  }catch(e){
+    const msg = {
+      cancelled: "", not_granted: "Bạn chưa cho phép trang này dùng Claude. Mở lại và chọn Cho phép khi được hỏi.",
+      sampling_disabled: "Tài khoản này không dùng được tính năng hỏi Claude từ trang.",
+      rate_limited: "Đã gửi quá nhiều yêu cầu. Chờ vài phút rồi thử lại.",
+      prompt_too_large: "Bài quá dài. Chấm từng phần ngắn hơn.",
+      refused: "Claude không chấm được nội dung này. Thử dán lại phần bài viết tiếng Anh.",
+      session_expired: "Phiên đăng nhập đã hết hạn. Tải lại trang."
+    }[e.code] ?? "Có lỗi khi gọi Claude. Thử lại sau ít phút.";
+    if(e.code === "cancelled") gOut.textContent = e.text || "";
+    else gOut.textContent = (e.text ? e.text + "\n\n— — —\n" : "") + msg;
+  }finally{
+    btn.disabled = false; stop.hidden = true; gCtl = null;
+  }
+};
+document.getElementById("gStop").onclick = () => gCtl?.abort();
+
+/* =========================================================
+   6. KHỞI ĐỘNG
+   ========================================================= */
+loadLocal();
+renderAll(); renderRes(); renderDocList(); newCue(); tmReset(); setGMode("essay");
+
+(async function boot(){
+  if(typeof window.claude?.use !== "function"){
+    setSync(false, "Lưu trên máy này (bản tự host)");
+    document.getElementById("graderCard").hidden = true;
+    document.getElementById("graderOff").hidden = false;
+    return;
+  }
+  try{
+    downloadsFn = await claude.use("downloads");
+  }catch(e){ downloadsFn = null; }
+  try{
+    sampleFn = await claude.use("sample");
+    if(!sampleFn){
+      document.getElementById("graderCard").hidden = true;
+      document.getElementById("graderOff").hidden = false;
+    }
+  }catch(e){
+    document.getElementById("graderCard").hidden = true;
+    document.getElementById("graderOff").hidden = false;
+  }
+  try{
+    DB = await claude.use("db");
+    if(!DB){ setSync(false, "Lưu trên máy này"); return; }
+    const snap = await DB.doc("progress/main").get();
+    if(snap.exists){
+      const remote = snap.data();
+      const localCount = Object.keys(S.blocks).length + Object.keys(S.hours).length;
+      const remoteCount = Object.keys(remote.blocks || {}).length + Object.keys(remote.hours || {}).length;
+      if(remoteCount >= localCount){ S = Object.assign(DEF(), remote); saveLocal(); }
+      else { await DB.doc("progress/main").set(JSON.parse(JSON.stringify(S))); }
+      renderAll();
+    } else {
+      await DB.doc("progress/main").set(JSON.parse(JSON.stringify(S)));
+    }
+    setSync(true, "Đồng bộ giữa các thiết bị");
+    DB.doc("progress/main").onSnapshot(snap => {
+      if(!snap.exists || snap.metadata.hasPendingWrites) return;
+      S = Object.assign(DEF(), snap.data()); saveLocal(); renderAll();
+    }, () => setSync(false, "Mất kết nối đồng bộ"));
+  }catch(e){
+    setSync(false, "Lưu trên máy này");
+  }
+})();
+</script>
