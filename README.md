@@ -123,8 +123,9 @@ không làm được:
 | **Lộ trình** | Cả 40 tuần, tuần hiện tại được đánh dấu sẵn, chạm vào để xem trọng tâm 4 kỹ năng và các mốc kiểm tra. |
 | **Luyện tập** | Bốn kỹ năng tách riêng — chọn kỹ năng nào vào thẳng phần luyện của kỹ năng đó, nội dung lấy theo đúng tuần đang học. Listening có quy trình 4 lượt và đồng hồ chép chính tả; Reading có bảng phân bổ 15/17/23 phút và đồng hồ đếm ngược; Writing có công cụ chấm bài; Speaking có ngân hàng đề và đồng hồ 1 phút chuẩn bị + 2 phút nói. Mỗi buổi đều ghi được kết quả. |
 | **Tài liệu** | Toàn bộ danh sách ở file 05, bấm là mở. |
-| **Kế hoạch** | Cả 15 file markdown trong thư mục này, đọc ngay trên điện thoại. Có mục lục từng tài liệu và tìm kiếm không dấu trên toàn bộ nội dung — gõ "mao tu" hay "so loi" đều ra. |
+| **Kế hoạch** | Cả 16 file markdown trong thư mục này, đọc ngay trên điện thoại. Có mục lục từng tài liệu và tìm kiếm không dấu trên toàn bộ nội dung — gõ "mao tu" hay "so loi" đều ra. |
 | **Tiến độ** | Biểu đồ giờ học, bảng điểm thi thử, và sổ lỗi nhập ngay trên điện thoại. |
+| **Lịch sử** | Danh sách mọi người đang học trên trang, lọc theo tên. Chạm một người để xem lịch sử đầy đủ của họ: giờ học từng tuần, ngày đã chốt, buổi luyện từng kỹ năng, điểm bài viết và điểm thi thử. |
 
 Tiến độ được đồng bộ giữa các thiết bị, nên đánh dấu trên điện thoại thì mở máy tính
 vẫn thấy. Mã nguồn và hướng dẫn tự host miễn phí ở [web/](web/).

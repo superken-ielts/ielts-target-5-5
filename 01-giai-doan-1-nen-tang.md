@@ -149,7 +149,7 @@ bộ — là nguyên nhân thất bại phổ biến của người tự học. 
 | Writing | Câu đơn (tuần 1–4) → đoạn 80 từ (tuần 5–7) | Đoạn 80 từ (tuần 8) → đoạn 120 từ (tuần 9–12) |
 | Speaking | Shadowing + nói về chủ đề quen thuộc (tuần 1–6) | Câu hỏi Part 1 của ieltsliz.com (tuần 7–12) |
 | Từ vựng | Oxford 3000 mức A1 → A2 | Oxford 3000 mức A2 → B1 |
-| Ngữ pháp | English Grammar in Use (Murphy) + bài tập British Council | như trên |
+| Ngữ pháp | British Council + Perfect English Grammar (miễn phí, đủ dùng). Tùy chọn: Essential Grammar in Use bản đỏ | như trên |
 
 Mọi bài viết đều nộp lên writeandimprove.com để lấy điểm CEFR. Đây là nguồn phản hồi
 miễn phí duy nhất chấm theo thang chuẩn, và điểm CEFR của nó là thước đo tiến bộ đáng
@@ -170,6 +170,23 @@ cho band 5.5.
 Mỗi thẻ Anki phải có cụm từ đi kèm và một câu do chính bạn đặt, không chỉ có từ và
 nghĩa. Học từ rời rạc là cách nhanh nhất để biết nghĩa nhưng không dùng được từ đó
 trong câu.
+
+---
+
+## Giáo án tới từng ngày
+
+Phần còn lại của file này mô tả từng tuần: trọng tâm, tài liệu, mốc cần đạt. Nếu bạn
+muốn biết **hôm nay cụ thể phải học gì**, xem
+[01a — Giáo án từng ngày, giai đoạn 1](01a-giao-an-tung-ngay-giai-doan-1.md). File đó
+chia trọn 72 ngày học của 12 tuần, mỗi ngày gồm một điểm ngữ pháp, một việc viết và
+một việc nói.
+
+Lý do tách thành hai file: mô tả tuần dùng để hiểu *vì sao* lộ trình xếp như vậy và
+đọc một lần là đủ, còn giáo án ngày là thứ mở ra mỗi buổi học. Trộn chung sẽ khiến cả
+hai đều khó dùng.
+
+Trên bản web, giáo án ngày nằm ngay trong tab **Lộ trình** — mở một tuần ra rồi bấm
+"Chi tiết từng ngày", ngày hôm nay được đánh dấu sẵn.
 
 ---
 
@@ -215,7 +232,7 @@ này, và chúng là bằng chứng cụ thể duy nhất về quãng đường 
 | | Nội dung |
 |---|---|
 | Từ vựng | 10 từ/ngày, Oxford 3000 mức A1. Block B chạy từ ngày 1, kể cả ngày thiết lập và ngày kiểm tra đầu vào. |
-| Ngữ pháp | Hiện tại đơn và hiện tại tiếp diễn. Một unit Murphy mỗi buổi ngữ pháp, kèm bài tập British Council. |
+| Ngữ pháp | Hiện tại đơn và hiện tại tiếp diễn. Đọc lý thuyết trên British Council rồi làm bài tập tự chấm ngay tại đó. Ai có sẵn Essential Grammar in Use bản đỏ thì làm thêm unit tương ứng. |
 | Listening | VOA Learning English Level 1, mỗi ngày 1 bài, làm đủ 4 lượt |
 | Reading | Breaking News English Level 2, mỗi ngày 1 bài kèm bài tập từ vựng |
 | Writing | Mỗi buổi Writing viết **10 câu đơn** về bản thân, chỉ dùng hiện tại đơn và hiện tại tiếp diễn. Soát bằng Grammarly trước khi ghi lỗi vào sổ. |

@@ -60,7 +60,33 @@ Năm thứ này là xương sống. Cài đặt và đánh dấu hết trong ng�
 | **British Council LearnEnglish — Grammar** | learnenglish.britishcouncil.org/grammar — giải thích ngắn gọn kèm bài tập tự chấm, chia theo trình độ. Nguồn ngữ pháp chính. |
 | **Perfect English Grammar** | perfect-english-grammar.com — của Seonaid Beckwith. Giải thích cực kỳ dễ hiểu, có bài tập PDF tải miễn phí. Tốt nhất cho phần thì và mạo từ. |
 | **engVid** | engvid.com và kênh YouTube cùng tên — hàng nghìn bài giảng video miễn phí. Xem các bài của thầy Adam và Rebecca cho trình độ trung cấp. |
-| **English Grammar in Use (Raymond Murphy)** | Sách kinh điển, bản PDF lưu hành rộng rãi. Dùng bản màu xanh (Intermediate). Học đúng 1 unit/ngày trong 12 tuần đầu. |
+
+### Về sách Grammar in Use — đọc kỹ mục này
+
+Ba nguồn ở bảng trên **đã phủ đủ toàn bộ 12 điểm ngữ pháp lõi**. Bạn không cần mua sách
+nào để hoàn thành giai đoạn 1. Nói vậy vì nhiều người mất vài tuần đầu chỉ để đi tìm
+sách, trong khi thứ quyết định kết quả là làm đủ bài tập chứ không phải sở hữu tài liệu.
+
+Nếu vẫn muốn có một cuốn sách giấy để học theo tuyến tính, có hai điều cần biết:
+
+**Chọn đúng bản.** Loạt sách của Raymond Murphy có nhiều cấp độ, và hai bản hay bị nhầm:
+
+| Sách | Bìa | Trình độ | Hợp với bạn không |
+|---|---|---|---|
+| *Essential Grammar in Use* | Đỏ | A1–B1, sơ cấp | **Đúng bản cần dùng** khi xuất phát từ 3.0 |
+| *English Grammar in Use* | Xanh | B1–B2, trung cấp | Cao hơn trình độ hiện tại, để dành tới giai đoạn 3 |
+
+Bắt đầu bằng bản xanh khi đang ở 3.0 là cách chắc chắn nhất để nản trong hai tuần.
+
+**Đây là sách có bản quyền, phải mua.** Cambridge có bán bản giấy và bản điện tử, và có
+đăng một số unit mẫu miễn phí trên cambridge.org để xem thử trước khi quyết định. Trong
+bộ tài liệu này, sách luôn được đánh dấu là **tùy chọn** — mọi lộ trình đều chạy trọn vẹn
+mà không cần tới nó.
+
+Số unit tương ứng với từng ngày của tuần 1 đến tuần 4 đã được ghi sẵn ở
+[01a — Giáo án từng ngày](01a-giao-an-tung-ngay-giai-doan-1.md), dòng **Sách**. Số unit
+có thể xê dịch giữa các lần tái bản nên khi mở sách hãy đối chiếu cả tên unit, đừng chỉ
+nhìn số.
 
 **Danh sách ngữ pháp lõi cần xử lý xong trong 12 tuần đầu** — không học ngữ pháp ngoài
 danh sách này ở giai đoạn 1:
@@ -238,8 +264,8 @@ củng cố 27–34, luyện đề 35–40.
 
 | Tuần | Từ vựng | Ngữ pháp | Listening | Reading | Writing | Speaking |
 |---|---|---|---|---|---|---|
-| 1–6 | Oxford 3000 (A1–A2) qua Anki, 10 từ/ngày | Murphy + British Council | VOA Level 1–2, esl-lab | Breaking News English Lv 2–3 | Viết câu đúng ngữ pháp, Write & Improve | Shadowing VOA, ghi âm hằng ngày |
-| 7–12 | Oxford 3000 (A2–B1) | Murphy + Perfect English Grammar, xong 12 điểm ngữ pháp lõi | BBC 6 Minute English, ELLLO | Breaking News English Lv 4–5, News in Levels | Viết đoạn 80–100 từ, Write & Improve | Shadowing BBC, trả lời Part 1 |
+| 1–6 | Oxford 3000 (A1–A2) qua Anki, 10 từ/ngày | British Council + Perfect English Grammar | VOA Level 1–2, esl-lab | Breaking News English Lv 2–3 | Viết câu đúng ngữ pháp, Write & Improve | Shadowing VOA, ghi âm hằng ngày |
+| 7–12 | Oxford 3000 (A2–B1) | British Council + engVid, xong 12 điểm ngữ pháp lõi | BBC 6 Minute English, ELLLO | Breaking News English Lv 4–5, News in Levels | Viết đoạn 80–100 từ, Write & Improve | Shadowing BBC, trả lời Part 1 |
 | 13–26 | Oxford 3000 (B1) + từ đời sống và nơi làm việc | Ôn lại theo sổ lỗi | mini-ielts, Cambridge (Listening dùng chung cho GT) | mini-ielts và ieltsonlinetests **mục GT**, Cambridge GT | IELTS Liz mục GT letter + Simon (Task 2) + AI chấm | IELTS Liz cue cards, AI đóng vai giám khảo |
 | 27–34 | Oxford 5000 (B2) + từ vựng công việc lấy từ đề GT Section 2 | Chỉ sửa 5 lỗi cố hữu | Cambridge 16–19 | Cambridge 16–19 bản GT, bấm giờ 15/17/23 phút | Viết thư đủ ba mức trang trọng + Task 2 đúng giờ, AI chấm và tự soát | Ghi âm đủ Part 1-2-3 |
 | 35–40 | Ôn lại toàn bộ, không thêm từ mới | Không học mới | Full test GT | Full test GT | Full test có bấm giờ, Task 2 trước Task 1 | Mock Speaking đầy đủ, có người thật ở tuần 38 |

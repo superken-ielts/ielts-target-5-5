@@ -1,19 +1,20 @@
 # Bản web — Bạn đồng hành IELTS
 
 Trang web đi kèm bộ kế hoạch, dùng để học trên điện thoại. Một file HTML duy nhất,
-không cần server, không phụ thuộc thư viện ngoài. Toàn bộ 15 file markdown của lộ
+không cần server, không phụ thuộc thư viện ngoài. Toàn bộ 16 file markdown của lộ
 trình được nhúng thẳng vào trang, nên đọc được cả kế hoạch mà không cần mở máy tính.
 
 ## Trang có gì
 
 | Tab | Nội dung |
 |---|---|
-| **Hôm nay** | Bốn block của ngày hôm nay với nội dung cụ thể theo đúng tuần đang học, có ô đánh dấu hoàn thành. Nút chuyển sang khung rút gọn cho ngày bận chỉ có 1 tiếng. Ô ghi số giờ đã học và số từ mới. |
+| **Hôm nay** | Bốn block của ngày hôm nay với nội dung cụ thể theo đúng tuần đang học, có ô đánh dấu hoàn thành. Nút chuyển sang khung rút gọn cho ngày bận chỉ có 1 tiếng (ẩn vào Chủ nhật vì Chủ nhật cố định 1 tiếng). Khối **Chi tiết ngày hôm nay** mở ra đủ năm phần kèm link bài học. Nút **Hoàn thành hôm nay** để chốt ngày, và màn chặn buộc đóng sổ những ngày cũ còn treo trước khi sang ngày mới. |
 | **Lộ trình** | Toàn bộ 40 tuần, nhóm theo 4 giai đoạn, tuần hiện tại được đánh dấu. Chạm vào một tuần để xem trọng tâm của cả 4 kỹ năng và các mốc kiểm tra theo tháng. |
 | **Luyện tập** | Bốn kỹ năng tách riêng, chọn kỹ năng nào thì vào thẳng phần luyện của kỹ năng đó. Nội dung lấy theo đúng tuần đang học. Mỗi buổi luyện đều ghi được kết quả vào lịch sử. |
 | **Tài liệu** | Danh sách tài liệu miễn phí bên ngoài, bấm là mở. |
-| **Kế hoạch** | Toàn bộ 15 file markdown, đọc ngay trong trang. Có mục lục cho từng tài liệu, tìm kiếm không dấu trên toàn bộ nội dung, và liên kết giữa các tài liệu bấm được. |
+| **Kế hoạch** | Toàn bộ 16 file markdown, đọc ngay trong trang. Có mục lục cho từng tài liệu, tìm kiếm không dấu trên toàn bộ nội dung, và liên kết giữa các tài liệu bấm được. |
 | **Tiến độ** | Biểu đồ giờ học 12 tuần gần nhất, bảng điểm thi thử, sổ lỗi, và xuất/nhập toàn bộ lịch sử ra file JSON. |
+| **Lịch sử** | Mọi học viên đang học trên trang, lọc theo tên (không cần dấu) và sắp theo lần học gần nhất, số giờ hoặc tên. Chạm một người để mở lịch sử đầy đủ của họ. Hiện chưa phân quyền — xem mục dưới. |
 
 ### Bên trong tab Luyện tập
 
@@ -29,11 +30,40 @@ Mỗi kỹ năng có đường biểu diễn tiến bộ của 14 buổi gần n
 
 ### Dữ liệu được lưu ở đâu
 
+Mọi thứ nằm dưới **gốc mang tên học viên**. Tên được chuyển thành slug không dấu —
+"Nguyễn Văn Đức" thành `nguyen-van-duc` — và slug đó là thư mục gốc của toàn bộ dữ liệu:
+
 | Loại | Nơi lưu | Lý do |
 |---|---|---|
-| Tiến độ, giờ học, buổi luyện, điểm bài viết, sổ lỗi | Tài liệu `progress/main` | Nhỏ gọn, đồng bộ tức thì giữa các thiết bị |
-| Nội dung bài viết và nhận xét đầy đủ | Mỗi bài một tài liệu riêng trong `essays` | Một tài liệu tối đa 256KB, mà mỗi bài kèm nhận xét đã khoảng 4KB — gộp chung sẽ tràn sau vài chục bài |
-| Bản sao cục bộ | `localStorage` | Để trang hiện ngay lúc mở, không phải chờ mạng |
+| Tiến độ, giờ học, ngày đã chốt, buổi luyện, điểm bài viết, sổ lỗi | `students/<slug>/progress/main` | Nhỏ gọn, đồng bộ tức thì giữa các thiết bị |
+| Nội dung bài viết và nhận xét đầy đủ | `students/<slug>/essays/<id>`, mỗi bài một tài liệu | Một tài liệu tối đa 256KB, mà mỗi bài kèm nhận xét đã khoảng 4KB — gộp chung sẽ tràn sau vài chục bài |
+| Bản sao cục bộ | `localStorage`, khóa `ielts-gt-40w-v1:<slug>` | Để trang hiện ngay lúc mở, không phải chờ mạng |
+| Hồ sơ học viên | `localStorage`, khóa `ielts-gt-40w-v1:profile` | Con trỏ tới gốc đang dùng, không nằm trong gốc nào |
+| Danh bạ học viên | `roster/<slug>`, mỗi người một dòng tóm tắt | Xem mục dưới |
+
+Nhờ vậy hai người dùng chung một máy hoặc một tài khoản sẽ không đè lên nhau. Đổi tên
+học viên sẽ tạo gốc mới và chuyển toàn bộ tiến độ hiện tại sang đó, có hỏi xác nhận.
+
+File JSON xuất ra mang tên `ielts-<slug>-<ngày>.json` và có trường `student` ghi rõ của
+ai, nên gom nhiều file của nhiều người vẫn phân biệt được.
+
+### Vì sao cần danh bạ `roster/`
+
+Tiến độ nằm ở `students/<slug>/progress/main`. Một tài liệu nằm sâu như vậy chỉ đọc được
+khi đã biết slug — kho dữ liệu không cho liệt kê `students/` từ bên ngoài. Nên mỗi người,
+mỗi lần lưu, tự ghi một dòng tóm tắt vào `roster/<slug>`: tên, ngày bắt đầu, tổng giờ, số
+ngày đã chốt, số buổi luyện, điểm thi thử gần nhất và ngày học gần nhất. Tab **Lịch sử**
+liệt kê đúng bộ sưu tập đó, rồi chỉ khi bấm vào một người mới mở tiến độ đầy đủ của họ.
+
+Hệ quả: một học viên chỉ xuất hiện trong danh sách **sau lần đầu họ mở trang** kể từ khi
+có tính năng này. Trang cũng giữ một bản danh bạ trong `localStorage` để bản tự host —
+vốn không có kho chung — vẫn liệt kê được những người đã dùng chính trình duyệt đó.
+
+**Chưa phân quyền.** Ai mở được trang thì xem được lịch sử của tất cả mọi người, kể cả
+bài viết đã chấm và sổ lỗi. Đây là lựa chọn có chủ đích ở thời điểm hiện tại, không phải
+sơ suất. Muốn siết lại thì khai báo `rules` cho capability `db` lúc đăng bản mới — ví dụ
+để `roster` ai cũng đọc được nhưng `students/` thì chỉ chủ sở hữu, hoặc chuyển hẳn dữ
+liệu cá nhân xuống `data/users/<id>/` để mỗi người chỉ thấy phần của mình.
 
 Nút **Tải file JSON** ở tab Tiến độ gom tất cả lại thành một file duy nhất, gồm cả
 nội dung bài viết. Nút **Nhập lại** đọc ngược file đó về — dùng khi đổi máy, hoặc khi
@@ -43,10 +73,15 @@ muốn quay lại một bản sao lưu cũ.
 
 | File | Vai trò |
 |---|---|
-| `app.template.html` | **Bản nguồn — đây là file cần sửa.** Chứa toàn bộ giao diện và mã, cùng một chỗ đánh dấu `/*__DOCS__*/{}` để build chèn nội dung markdown vào. |
+| `app.template.html` | **Bản nguồn giao diện và mã — file cần sửa khi đổi cách trang hoạt động.** Có hai chỗ đánh dấu cho build chèn dữ liệu: `/*__DOCS__*/{}` cho nội dung markdown và `/*__P1DAYS__*/{...}` cho giáo án ngày. |
+| `phase1-days.json` | **Nguồn duy nhất của giáo án từng ngày giai đoạn 1** — 12 tuần × 6 ngày, cộng phần Chủ nhật. Sửa nội dung học ở đây. |
+| `build.py` | Đọc `phase1-days.json`, sinh ra file markdown giáo án, gom mọi file `.md`, nhúng tất cả vào bản nguồn, rồi xuất hai file dưới. |
 | `ielts-companion.html` | Bản dựng để đăng lên Claude Artifact. Không có thẻ `<!doctype>`/`<html>`/`<head>`/`<body>` vì nền tảng tự bọc. **Sinh ra tự động, đừng sửa tay.** |
 | `index.html` | Bản dựng standalone để tự host hoặc mở trực tiếp bằng trình duyệt. **Sinh ra tự động, đừng sửa tay.** |
-| `build.py` | Đọc mọi file `.md` trong thư mục lộ trình, nhúng vào bản nguồn, rồi sinh ra hai file trên. |
+| `../01a-giao-an-tung-ngay-giai-doan-1.md` | Bản markdown của giáo án ngày. **Sinh ra tự động từ file JSON, đừng sửa tay.** |
+
+Vì giáo án ngày chỉ có một nguồn là file JSON, bản web và bản markdown không bao giờ
+lệch nhau. Sửa một chỗ, chạy build, cả hai đổi theo.
 
 Chạy lại build sau **mỗi lần sửa `app.template.html` hoặc sửa bất kỳ file `.md` nào**:
 
@@ -57,7 +92,7 @@ python3 web/build.py
 
 Vì sao phải nhúng markdown vào thay vì để trang tự tải file: trang chạy dưới một CSP
 chặt, mọi yêu cầu ra ngoài đều bị chặn. Muốn đọc tài liệu ngay trong trang thì nội
-dung phải nằm sẵn trong HTML tại thời điểm dựng. Đổi lại, trang nặng khoảng 280KB —
+dung phải nằm sẵn trong HTML tại thời điểm dựng. Đổi lại, trang nặng khoảng 440KB —
 tải một lần rồi chạy hoàn toàn ngoại tuyến.
 
 Khác biệt về tính năng giữa hai bản dựng:
@@ -65,7 +100,7 @@ Khác biệt về tính năng giữa hai bản dựng:
 | Tính năng | Bản Claude Artifact | Bản tự host |
 |---|---|---|
 | Toàn bộ lộ trình, checklist, đồng hồ, tài liệu | Có | Có |
-| Đọc 15 file kế hoạch, mục lục, tìm kiếm không dấu | Có | Có |
+| Đọc 16 file kế hoạch, mục lục, tìm kiếm không dấu | Có | Có |
 | Lưu tiến độ | Có | Có |
 | **Đồng bộ tiến độ giữa điện thoại và máy tính** | Có | Không — mỗi trình duyệt lưu riêng |
 | **Chấm bài Writing bằng AI** | Có | Không — trang tự ẩn mục này và chỉ sang Write & Improve |
@@ -100,7 +135,7 @@ chọn **Create new deployment** và tải file mới lên.
 Phù hợp nếu đã có sẵn tài khoản GitHub và muốn quản lý bằng Git.
 
 ```bash
-cd /Users/duc.nguyen/data/projects/success/motives/motivesidp-ai-learning/ielts/web
+cd /Users/duc.nguyen/data/projects/success/motives/motivesidp-ai-learning/ielts-target-5-5/web
 
 git init
 git add index.html

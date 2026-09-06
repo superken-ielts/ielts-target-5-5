@@ -297,6 +297,25 @@ nav button[aria-current="page"]{color:var(--accent)}
   nav button[aria-current="page"]{background:var(--accent-soft)}
   .wrap{max-width:700px}
 }
+.hdr-who{
+  display:flex; align-items:baseline; gap:7px; flex-wrap:wrap;
+  padding:9px 0 0; font-size:11.5px; color:var(--ink-3);
+}
+.hdr-who b{
+  font-size:12.5px; font-weight:700; color:var(--ink-2);
+  letter-spacing:.01em;
+}
+.hdr-who span{font-family:var(--font-num); font-size:11px}
+
+/* ---------- chốt ngày ---------- */
+.gate{border-left:3px solid var(--accent)}
+.gaterow{
+  display:flex; align-items:center; gap:8px; padding:9px 11px; margin-bottom:6px;
+  background:var(--sunken); border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.gate-d{flex:1; min-width:0; font-size:13.5px; font-weight:600}
+.gaterow .btn{flex:none; padding:5px 12px; font-size:12.5px}
+
 /* ---------- chọn kỹ năng để luyện ---------- */
 .skgrid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px}
 .skcard{
@@ -343,6 +362,36 @@ nav button[aria-current="page"]{color:var(--accent)}
 .spark{display:flex; align-items:flex-end; gap:3px; height:46px; margin:10px 0 4px}
 .spark i{flex:1; background:var(--accent); border-radius:2px 2px 0 0; min-height:2px}
 
+/* ---------- lịch sử học viên ---------- */
+.pp{
+  display:flex; gap:12px; align-items:center; width:100%; text-align:left;
+  padding:11px 13px; margin-bottom:7px; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.pp:hover{border-color:var(--line-2); background:var(--surface-2)}
+.pp.me{border-color:var(--accent)}
+.pp-av{
+  width:36px; height:36px; flex:none; border-radius:50%; display:grid; place-items:center;
+  background:var(--accent-soft); color:var(--accent);
+  font-family:var(--font-num); font-size:13px; font-weight:600; letter-spacing:-.02em;
+}
+.pp-b{flex:1; min-width:0}
+.pp-n{
+  font-size:14.5px; font-weight:600; line-height:1.3; display:flex; align-items:center; gap:6px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.pp-m{
+  font-family:var(--font-num); font-size:11.5px; color:var(--ink-3); margin-top:2px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.pp-v{font-family:var(--font-num); font-size:16px; font-weight:600; flex:none; text-align:right; line-height:1.15}
+.pp-v span{display:block; font-family:var(--font-ui); font-size:10px; font-weight:500; color:var(--ink-3); letter-spacing:.03em}
+.tag{
+  flex:none; font-size:9.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  padding:1px 6px; border-radius:99px; background:var(--accent-soft); color:var(--accent);
+}
+.tag.q{background:var(--sunken); color:var(--ink-3)}
+
 /* ---------- đọc tài liệu ---------- */
 .doc-item{
   display:flex; gap:12px; align-items:flex-start; width:100%; text-align:left;
@@ -379,6 +428,36 @@ nav button[aria-current="page"]{color:var(--accent)}
 .toc li{margin-bottom:4px}
 .toc a{color:var(--ink-2); text-decoration:none}
 .toc a:hover{color:var(--accent); text-decoration:underline}
+
+/* chi tiết từng ngày trong lộ trình */
+.day{
+  padding:11px 12px; margin-bottom:7px; background:var(--surface);
+  border:1px solid var(--line); border-radius:var(--r-sm);
+  border-left:3px solid var(--line-2);
+}
+.day.today{border-left-color:var(--accent); background:var(--accent-soft)}
+.day-h{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:4px}
+.day-n{font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+.day.today .day-n{color:var(--accent)}
+.day-b{font-family:var(--font-num); font-size:10.5px; color:var(--ink-3)}
+.day-f{font-size:14px; font-weight:600; line-height:1.4; margin-bottom:7px}
+.day-t{font-size:12.5px; color:var(--ink-2); line-height:1.55; margin-bottom:4px}
+.day-t b{
+  display:inline-block; min-width:64px; font-size:10.5px; font-weight:700;
+  letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3);
+  vertical-align:1px; margin-right:4px;
+}
+.day-lk{display:flex; flex-wrap:wrap; gap:5px; margin:0 0 9px 68px}
+.lkchip{
+  display:inline-block; max-width:100%; padding:3px 9px 3px 8px;
+  font-size:11.5px; font-weight:500; line-height:1.45;
+  color:var(--accent); text-decoration:none;
+  background:var(--surface); border:1px solid var(--line-2); border-radius:99px;
+}
+.lkchip::before{content:"↗"; font-size:10px; margin-right:4px; opacity:.7}
+.lkchip:hover{border-color:var(--accent); background:var(--accent-soft)}
+.day.today .lkchip{background:var(--surface)}
+@media (max-width:420px){ .day-lk{margin-left:0} }
 
 .hit{
   display:block; width:100%; text-align:left; padding:10px 12px; margin-bottom:6px;
@@ -446,6 +525,7 @@ nav button[aria-current="page"]{color:var(--accent)}
 
 <header>
   <div class="wrap">
+    <div class="hdr-who" id="hWho" hidden></div>
     <div class="hdr">
       <div class="hdr-main">
         <div class="hdr-week" id="hWeek">Đang tải…</div>
@@ -464,6 +544,31 @@ nav button[aria-current="page"]{color:var(--accent)}
 
   <!-- ============ HÔM NAY ============ -->
   <section class="panel on" id="p-today">
+    <div class="card gate" id="setup" hidden>
+      <div class="eyebrow">Bắt đầu</div>
+      <h2 class="sec-title" style="font-size:17px">Trước tiên, cho biết bạn là ai</h2>
+      <p class="sec-note">Tên học viên dùng để đặt tên cho kho dữ liệu của bạn — toàn bộ tiến độ, sổ lỗi, bài viết và file JSON đều nằm dưới tên này. Hai người dùng chung một máy sẽ không đè lên nhau.</p>
+      <div class="field">
+        <label for="suName">Tên học viên</label>
+        <input class="inp" id="suName" placeholder="Nguyễn Văn A" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="suStart">Ngày bắt đầu tuần 1 — chọn một ngày thứ Hai</label>
+        <input class="inp" type="date" id="suStart">
+      </div>
+      <button class="btn btn-primary" id="suSave" style="width:100%">Bắt đầu lộ trình</button>
+      <p class="tiny" id="suNote" style="margin-top:10px"></p>
+    </div>
+
+    <div class="card gate" id="gate" hidden>
+      <div class="eyebrow">Còn ngày chưa chốt</div>
+      <h2 class="sec-title" style="font-size:17px">Đóng sổ những ngày trước đã</h2>
+      <p class="sec-note">Mỗi ngày phải được chốt trước khi sang ngày mới, để bảng theo dõi phản ánh đúng thực tế chứ không phải trí nhớ. Mỗi ngày một chạm.</p>
+      <div id="gateList"></div>
+      <button class="btn btn-sm" id="gateAllOff" style="width:100%; margin-top:8px">Đánh dấu tất cả là ngày nghỉ</button>
+    </div>
+
+    <div id="todayWrap">
     <div class="statrow" style="margin-bottom:14px">
       <div class="stat"><b id="sHours">0</b><span>giờ tuần này</span></div>
       <div class="stat"><b id="sWords">0</b><span>từ đã học</span></div>
@@ -474,11 +579,22 @@ nav button[aria-current="page"]{color:var(--accent)}
       <div class="eyebrow" id="tDate">—</div>
       <h2 class="sec-title" id="tTitle">Kế hoạch hôm nay</h2>
       <p class="sec-note" id="tNote">—</p>
-      <div class="seg" style="margin-bottom:14px">
+      <div class="seg" id="modeSeg" style="margin-bottom:14px">
         <button id="modeFull" aria-pressed="true">Ngày thường · 2 tiếng</button>
         <button id="modeShort" aria-pressed="false">Ngày bận · 1 tiếng</button>
       </div>
+      <p class="tiny" id="modeNote" hidden style="margin-bottom:14px"></p>
       <div class="blocks" id="tBlocks"></div>
+
+      <details class="toc" id="tDetail" style="margin-top:14px">
+        <summary>Chi tiết ngày hôm nay</summary>
+        <div style="padding:0 13px 13px" id="tDetailBody"></div>
+      </details>
+
+      <div id="doneBox" style="margin-top:16px; padding-top:15px; border-top:1px solid var(--line)">
+        <p class="small" id="doneStatus" style="margin-bottom:11px">—</p>
+        <button class="btn btn-primary" id="doneBtn" style="width:100%">Hoàn thành hôm nay</button>
+      </div>
     </div>
 
     <div class="card">
@@ -499,6 +615,7 @@ nav button[aria-current="page"]{color:var(--accent)}
     <div class="card">
       <div class="eyebrow">Nhắc mỗi ngày</div>
       <p class="small" id="tTip">—</p>
+    </div>
     </div>
   </section>
 
@@ -738,6 +855,36 @@ nav button[aria-current="page"]{color:var(--accent)}
     </div>
   </section>
 
+  <!-- ============ LỊCH SỬ HỌC VIÊN ============ -->
+  <section class="panel" id="p-people">
+
+    <div id="ppHome">
+      <h2 class="sec-title">Lịch sử học viên</h2>
+      <p class="sec-note">Mọi người đang học trên trang này. Hiện chưa phân quyền — ai mở trang cũng xem được lịch sử của tất cả.</p>
+
+      <div class="field">
+        <label for="ppQ">Lọc theo tên</label>
+        <input class="inp" id="ppQ" type="search" placeholder="gõ tên, không cần dấu" autocomplete="off">
+      </div>
+      <div class="seg" id="ppSort" style="margin-bottom:12px">
+        <button data-s="last" aria-pressed="true">Học gần đây</button>
+        <button data-s="hours" aria-pressed="false">Nhiều giờ</button>
+        <button data-s="name" aria-pressed="false">Theo tên</button>
+      </div>
+      <div id="ppList"></div>
+      <p class="tiny" id="ppNote" style="margin-top:12px"></p>
+      <button class="btn btn-sm" id="ppRefresh" style="width:100%; margin-top:12px">Tải lại danh sách</button>
+    </div>
+
+    <div id="ppView" hidden>
+      <div class="reader-bar">
+        <button class="btn btn-sm" id="ppBack">← Danh sách</button>
+        <span class="reader-title" id="ppTitle"></span>
+      </div>
+      <div id="ppBody"></div>
+    </div>
+  </section>
+
   <!-- ============ TIẾN ĐỘ ============ -->
   <section class="panel" id="p-prog">
     <h2 class="sec-title">Tiến độ</h2>
@@ -798,11 +945,20 @@ nav button[aria-current="page"]{color:var(--accent)}
     </div>
 
     <div class="card">
-      <div class="eyebrow">Thiết lập</div>
+      <div class="eyebrow">Học viên</div>
+      <div class="field">
+        <label for="inName">Tên học viên</label>
+        <input class="inp" id="inName" placeholder="Nguyễn Văn A" autocomplete="name">
+      </div>
       <div class="field">
         <label for="inStart">Ngày bắt đầu tuần 1 (chọn một ngày thứ Hai)</label>
         <input class="inp" type="date" id="inStart">
       </div>
+      <p class="tiny" id="rootNote">—</p>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Thiết lập khác</div>
       <p class="tiny" id="syncNote"><span class="sync" id="syncPill"><i></i><span id="syncTxt">Đang kiểm tra đồng bộ…</span></span></p>
       <button class="btn btn-sm" id="btnReset" style="margin-top:12px">Xóa toàn bộ tiến độ</button>
     </div>
@@ -818,6 +974,7 @@ nav button[aria-current="page"]{color:var(--accent)}
     <button data-go="res"><svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 015.5 4H10a2 2 0 012 2v13a2 2 0 00-2-2H5.5A1.5 1.5 0 014 15.5z"/><path d="M20 5.5A1.5 1.5 0 0018.5 4H14a2 2 0 00-2 2v13a2 2 0 012-2h4.5a1.5 1.5 0 001.5-1.5z"/></svg><span>Tài liệu</span></button>
     <button data-go="docs"><svg viewBox="0 0 24 24"><path d="M5.5 3.5h9L19 8v12.5H5.5z"/><path d="M14 3.5V8h5"/><path d="M8.5 12.5h7M8.5 16h4.5"/></svg><span>Kế hoạch</span></button>
     <button data-go="prog"><svg viewBox="0 0 24 24"><path d="M4 19.5V13M9.3 19.5V7M14.7 19.5v-6M20 19.5V4"/></svg><span>Tiến độ</span></button>
+    <button data-go="people"><svg viewBox="0 0 24 24"><path d="M3.6 12a8.4 8.4 0 1 0 2.7-6.2"/><path d="M3 4.6V9.2h4.6"/><path d="M12 7.6V12l3.1 1.9"/></svg><span>Lịch sử</span></button>
   </div>
 </nav>
 
@@ -883,111 +1040,12 @@ const W = [
 /* Giáo án từng ngày cho giai đoạn 1 (tuần 1–12), sáu ngày học mỗi tuần.
    f = việc chính của ngày · g = điểm ngữ pháp · w = việc viết · s = việc nói.
    Listening và Reading lấy theo nguồn của tuần, đã có ở LPLAN và RPLAN. */
-const P1DAYS = {
- 1:[
-  {f:"Chuẩn bị công cụ, chưa học", g:"Chưa học ngữ pháp. Hôm nay chỉ dựng chỗ làm việc.", w:"Cài Anki và tải deck Oxford 3000. Tạo tài khoản writeandimprove.com. Lập sổ lỗi.", s:"Chọn khung giờ cố định trong ngày và ghi vào lịch điện thoại. Bảo vệ khung giờ đó suốt 40 tuần."},
-  {f:"Bài kiểm tra đầu vào", g:"Chưa học. Hôm nay chỉ đo để có mốc so sánh.", w:"Viết 150 từ về 'Describe your daily routine' trong 30 phút, nộp Write & Improve, ghi lại điểm CEFR.", s:"Ghi âm 2 phút trả lời 'Tell me about your hometown'. Nghe lại, đếm số lần dừng quá 3 giây. Giữ bản ghi này — tuần 20 nghe lại sẽ thấy mình đã đi bao xa."},
-  {f:"Hiện tại đơn — thể khẳng định", g:"Chia động từ theo chủ ngữ. Ngôi thứ ba số ít thêm -s, và đây là lỗi bạn sẽ mắc suốt nhiều tháng nếu không xử lý ngay.", w:"10 câu về thói quen hằng ngày của bạn, mỗi câu một động từ khác nhau.", s:"Shadowing VOA 15 phút. Tự nói 1 phút: What do you do every morning?"},
-  {f:"Hiện tại đơn — phủ định và nghi vấn", g:"do / does trong câu phủ định và câu hỏi. Sau do và does thì động từ chính về nguyên thể — 'He doesn't likes' là lỗi kinh điển.", w:"10 câu: 5 câu phủ định về việc bạn không làm, 5 câu hỏi bạn muốn hỏi người khác.", s:"Shadowing 15 phút. Tự đặt và tự trả lời 5 câu hỏi Yes/No về bản thân."},
-  {f:"Hiện tại tiếp diễn", g:"am / is / are + V-ing. Dùng cho việc đang xảy ra lúc nói hoặc quanh thời điểm này.", w:"10 câu mô tả những gì đang diễn ra quanh bạn lúc này.", s:"Shadowing 15 phút. Tả bằng lời những gì bạn nhìn thấy quanh mình trong 1 phút."},
-  {f:"Phân biệt hai thì hiện tại", g:"Hiện tại đơn cho thói quen và sự thật; hiện tại tiếp diễn cho việc đang xảy ra. Động từ chỉ trạng thái (know, like, want) không dùng tiếp diễn.", w:"10 câu trộn hai thì, tự đánh dấu câu nào dùng thì gì và vì sao.", s:"Nói 1 phút: chọn thì đúng cho từng câu, đối chiếu 'I usually...' với 'Right now I am...'"}
- ],
- 2:[
-  {f:"Quá khứ đơn — động từ có quy tắc", g:"Thêm -ed. Ba cách phát âm đuôi -ed: /t/ sau âm vô thanh, /d/ sau âm hữu thanh, /ɪd/ sau t và d. Phát âm sai đuôi này là lỗi bị trừ điểm Speaking.", w:"10 câu kể lại ngày hôm qua, chỉ dùng động từ có quy tắc.", s:"Shadowing 15 phút, chú ý riêng đuôi -ed. Kể lại ngày hôm qua trong 1 phút."},
-  {f:"30 động từ bất quy tắc — nhóm 1", g:"Nhóm hay dùng nhất: be, have, do, go, get, make, say, see, come, take, know, think, find, give, tell.", w:"10 câu dùng ít nhất 8 động từ trong nhóm vừa học.", s:"Đọc to bảng ba cột (nguyên thể — quá khứ — phân từ) 3 lần. Kể một việc đã làm tuần trước."},
-  {f:"Quá khứ đơn — phủ định và nghi vấn", g:"didn't và did. Sau didn't thì động từ về nguyên thể — 'I didn't went' là lỗi rất phổ biến.", w:"10 câu: 5 câu về việc bạn đã không làm hôm qua, 5 câu hỏi về quá khứ.", s:"Tự hỏi tự trả lời 5 câu bắt đầu bằng Did you...?"},
-  {f:"30 động từ bất quy tắc — nhóm 2", g:"Nhóm còn lại: leave, feel, bring, begin, keep, hold, write, stand, hear, let, mean, meet, run, pay, sit.", w:"10 câu dùng nhóm 2.", s:"Đọc to bảng ba cột. Kể lại một chuyến đi cũ trong 1 phút."},
-  {f:"Quá khứ tiếp diễn", g:"was / were + V-ing. Dùng cho việc đang diễn ra tại một thời điểm trong quá khứ.", w:"10 câu: 8 giờ tối qua bạn đang làm gì, cả nhà bạn đang làm gì.", s:"Nói 1 phút: What were you doing at 8pm yesterday?"},
-  {f:"Kết hợp hai thì quá khứ", g:"was doing khi did — việc dài đang diễn ra thì việc ngắn xen vào. Đây là cấu trúc kể chuyện, dùng nhiều ở Speaking Part 2.", w:"10 câu dạng 'I was ... when ...'", s:"Kể một sự việc bất ngờ đã xảy ra, dùng ít nhất 3 câu when."}
- ],
- 3:[
-  {f:"Hiện tại hoàn thành — cấu trúc", g:"have / has + phân từ quá khứ. Dùng khi việc đã xảy ra nhưng không nêu thời điểm cụ thể. Nêu thời điểm là phải chuyển sang quá khứ đơn.", w:"10 câu về những việc bạn đã làm trong đời, không nêu thời điểm.", s:"Shadowing 15 phút. Nói 1 phút về những nơi bạn đã từng đến."},
-  {f:"for và since", g:"for + khoảng thời gian (for three years), since + mốc bắt đầu (since 2020). Người Việt hay nhầm hai từ này vì tiếng Việt dùng chung một chữ.", w:"10 câu về những việc bạn đã làm được bao lâu.", s:"Trả lời: How long have you lived here? How long have you studied English?"},
-  {f:"already, yet, just", g:"already trong câu khẳng định, yet cuối câu phủ định và câu hỏi, just cho việc vừa mới xong.", w:"10 câu dùng đủ ba từ, mỗi từ ít nhất 3 câu.", s:"Nói về việc bạn đã làm xong hôm nay và việc chưa làm."},
-  {f:"ever và never", g:"Have you ever...? để hỏi kinh nghiệm. never mang nghĩa phủ định nên không đi kèm not.", w:"10 câu: 5 câu Have you ever, 5 câu I have never.", s:"Tự hỏi tự trả lời 5 câu Have you ever...? Đây là dạng câu hỏi hay gặp ở Speaking Part 1."},
-  {f:"Phân biệt với quá khứ đơn", g:"Điểm khó nhất của tuần. Có mốc thời gian rõ (yesterday, last year, in 2020, ago) thì dùng quá khứ đơn. Không có mốc, hoặc thời gian còn đang tiếp diễn (today, this week) thì hiện tại hoàn thành.", w:"10 câu trộn hai thì, ghi rõ lý do chọn thì cho từng câu.", s:"Nói 1 phút, cố tình dùng cả hai thì và tự nghe lại xem có nhầm không."},
-  {f:"Ôn cả tuần", g:"30 câu chọn thì giữa hiện tại hoàn thành và quá khứ đơn. Nhờ AI tạo bài tập nếu cần.", w:"Viết một đoạn 60 từ về kinh nghiệm học tiếng Anh của bạn, dùng cả hai thì.", s:"Part 1 của IELTS Liz — 3 câu, mỗi câu cố nói 30 giây."}
- ],
- 4:[
-  {f:"a và an", g:"Dùng cho danh từ đếm được số ít, lần đầu nhắc đến. Chọn a hay an theo ÂM chứ không theo chữ cái: an hour, a university, an MBA.", w:"10 câu giới thiệu người và vật, mỗi câu có ít nhất một mạo từ a hoặc an.", s:"Shadowing 15 phút. Tả 5 đồ vật quanh bạn, mỗi thứ một câu đầy đủ."},
-  {f:"the — khi người nghe đã biết", g:"Dùng the khi cả hai bên đều biết đang nói về cái nào: đã nhắc trước đó, hoặc chỉ có một cái duy nhất trong ngữ cảnh.", w:"10 câu dạng 'I bought a book. The book is about...'", s:"Kể một việc, chú ý lần đầu dùng a, lần sau dùng the."},
-  {f:"Không mạo từ", g:"Danh từ số nhiều nói chung (Dogs are friendly) và danh từ không đếm được (Water is important) đứng trần. Đây là chỗ người Việt hay thừa the.", w:"10 câu phát biểu chung về một loại sự vật, không dùng the.", s:"Nói 1 phút về sở thích chung chung: I like books, I enjoy music."},
-  {f:"the với thứ duy nhất", g:"the sun, the moon, the internet. Dùng với so sánh nhất (the best), số thứ tự (the first), và tên nước số nhiều (the Philippines).", w:"10 câu dùng the với so sánh nhất và số thứ tự.", s:"Nói về thứ tốt nhất, tệ nhất, đầu tiên trong đời bạn."},
-  {f:"Cụm cố định", g:"Nhóm không theo quy tắc nào, phải học thuộc: by bus, at home, go to school, in bed, at work, on foot. 'I go to school by the bus' là lỗi điển hình.", w:"10 câu dùng ít nhất 6 cụm cố định.", s:"Tả cách bạn đi làm và một ngày bình thường, dùng các cụm vừa học."},
-  {f:"Ôn mạo từ + kiểm tra mốc tháng 1", g:"40 câu điền mạo từ trộn cả bốn tình huống. Ghi mọi câu sai vào sổ lỗi.", w:"Viết đoạn 60 từ về gia đình, tự soát riêng mạo từ trước khi nộp.", s:"Kiểm tra mốc: ghi âm nói liên tục 45 giây về 'My family' mà không dừng quá 3 giây."}
- ],
- 5:[
-  {f:"Đếm được và không đếm được", g:"Danh sách hay nhầm nhất, vì trong tiếng Việt chúng đếm được bình thường: information, advice, furniture, news, money, work, luggage, equipment. Tất cả đều KHÔNG có dạng số nhiều.", w:"1 đoạn 80 từ về đồ đạc trong nhà bạn, chú ý furniture và equipment.", s:"Shadowing 15 phút. Tả phòng của bạn trong 1 phút."},
-  {f:"much, many, a lot of", g:"many + đếm được, much + không đếm được, a lot of dùng được cho cả hai. much thường chỉ xuất hiện trong câu phủ định và câu hỏi.", w:"1 đoạn 80 từ dùng đủ ba từ này.", s:"Trả lời: How much time do you spend on your phone? How many books do you read?"},
-  {f:"some và any", g:"some trong câu khẳng định và lời mời, any trong phủ định và câu hỏi. Nhưng lời mời thì dùng some: Would you like some tea?", w:"1 đoạn 80 từ về việc đi chợ hoặc siêu thị.", s:"Nói về những thứ bạn có và không có trong tủ lạnh."},
-  {f:"a few và a little", g:"a few + đếm được số nhiều, a little + không đếm được. Bỏ chữ a thì nghĩa đổi sang tiêu cực: few means hầu như không có.", w:"1 đoạn 80 từ dùng cả bốn cách: a few, few, a little, little.", s:"Nói về thời gian rảnh và tiền tiêu vặt của bạn."},
-  {f:"Đơn vị đo", g:"Cách đếm danh từ không đếm được: a piece of advice, a bottle of water, a slice of bread, a bar of soap, a loaf of bread.", w:"1 đoạn 80 từ tả một bữa ăn, dùng ít nhất 4 đơn vị đo.", s:"Tả món ăn bạn thích nhất và cách nấu nó."},
-  {f:"Ôn cả tuần", g:"40 câu trộn: chọn much/many, some/any, a few/a little, và sửa danh từ không đếm được bị thêm -s.", w:"Viết lại đoạn tốt nhất trong tuần, sửa đúng lỗi đã được chấm.", s:"Part 1 — 3 câu về food, mỗi câu 40 giây."}
- ],
- 6:[
-  {f:"Giới từ thời gian", g:"at + giờ (at 7 o'clock), on + ngày và thứ (on Monday, on 5 May), in + tháng, mùa, năm, thế kỷ (in May, in 2026).", w:"1 đoạn 80 từ về lịch sinh hoạt một tuần của bạn.", s:"Shadowing 15 phút. Kể lịch làm việc trong tuần."},
-  {f:"Giới từ nơi chốn", g:"at + một điểm (at the door), on + bề mặt (on the table), in + không gian có ranh giới (in the room, in Vietnam).", w:"1 đoạn 80 từ tả vị trí đồ vật trong phòng.", s:"Tả đường đi từ nhà bạn tới nơi làm việc."},
-  {f:"Cụm cố định thời gian", g:"at night nhưng in the morning. on time nghĩa là đúng giờ, in time nghĩa là kịp giờ — hai nghĩa khác hẳn nhau.", w:"1 đoạn 80 từ dùng ít nhất 5 cụm thời gian cố định.", s:"Nói về thói quen buổi sáng và buổi tối."},
-  {f:"Cụm cố định nơi chốn", g:"at work, at school, in hospital, on the bus nhưng in the car. Không có quy tắc, chỉ có thói quen dùng.", w:"1 đoạn 80 từ về một ngày đi làm hoặc đi học.", s:"Tả nơi bạn làm việc hoặc học tập."},
-  {f:"Giới từ đi với động từ", g:"depend on, listen to, look for, wait for, arrive at, belong to. Đây là nhóm gây lỗi nhiều nhất trong Writing vì tiếng Việt dùng giới từ khác.", w:"1 đoạn 100 từ dùng ít nhất 5 cụm động từ + giới từ.", s:"Nói 1 phút về việc bạn đang chờ đợi hoặc tìm kiếm điều gì."},
-  {f:"Ôn cả tuần", g:"40 câu điền giới từ. Ghi mọi câu sai vào sổ lỗi kèm cả cụm, đừng ghi mỗi giới từ.", w:"Viết lại đoạn tốt nhất trong tuần.", s:"Part 1 — 3 câu về hometown, mỗi câu 40 giây."}
- ],
- 7:[
-  {f:"So sánh với tính từ ngắn", g:"Một âm tiết thêm -er và -est: bigger, the biggest. Chú ý gấp đôi phụ âm cuối (hot → hotter) và đổi y thành i (easy → easier).", w:"1 đoạn 100 từ so sánh hai nơi bạn từng sống hoặc từng đến.", s:"Shadowing BBC 15 phút. So sánh hai mùa trong năm."},
-  {f:"So sánh với tính từ dài", g:"Từ hai âm tiết trở lên dùng more và the most: more expensive, the most beautiful. Không được vừa more vừa -er.", w:"1 đoạn 100 từ so sánh hai công việc hoặc hai ngành nghề.", s:"So sánh cuộc sống thành phố với nông thôn."},
-  {f:"So sánh bất quy tắc", g:"good/better/the best, bad/worse/the worst, far/further/the furthest, little/less/the least, many/more/the most.", w:"1 đoạn 100 từ dùng đủ ba bộ bất quy tắc.", s:"Nói về điều tốt nhất và tệ nhất đã xảy ra với bạn năm nay."},
-  {f:"as ... as", g:"as + tính từ nguyên dạng + as để chỉ ngang bằng. Phủ định not as ... as nghĩa là kém hơn.", w:"1 đoạn 100 từ dùng ít nhất 4 cấu trúc as ... as.", s:"So sánh bản thân bạn với một người bạn."},
-  {f:"Mức độ của so sánh", g:"much / far / a lot / a bit + so sánh hơn: much better, a bit cheaper. Đây là cách làm câu tự nhiên hơn hẳn và dễ ăn điểm Lexical Resource.", w:"1 đoạn 100 từ dùng ít nhất 4 trạng từ mức độ.", s:"Part 1 — bắt đầu dùng công thức PPF: hiện tại, quá khứ, tương lai."},
-  {f:"Ôn cả tuần", g:"40 câu so sánh. Kiểm tra riêng lỗi vừa more vừa -er.", w:"Viết đoạn 100 từ so sánh hai thành phố ở Việt Nam.", s:"Part 1 — 3 câu, mỗi câu dùng đủ ba thì theo PPF."}
- ],
- 8:[
-  {f:"Lần đầu nghe tốc độ thật", g:"Không có điểm ngữ pháp mới tuần này. Toàn bộ sức dồn vào việc chuyển tai từ VOA sang BBC.", w:"1 đoạn 100 từ dùng because, but, so.", s:"Shadowing BBC 6 Minute English 15 phút. Sẽ khó hơn VOA rõ rệt — đó là chủ đích, đừng quay lại VOA."},
-  {f:"Ôn bốn thì đã học", g:"30 câu chọn thì giữa hiện tại đơn, hiện tại tiếp diễn, quá khứ đơn, quá khứ tiếp diễn và hiện tại hoàn thành.", w:"1 đoạn 100 từ kể một tuần vừa qua, dùng ít nhất 3 thì.", s:"Shadowing BBC. Kể lại nội dung bài nghe bằng lời của bạn."},
-  {f:"Ôn mạo từ và danh từ", g:"40 câu trộn mạo từ với danh từ đếm được và không đếm được — hai điểm này luôn đi cùng nhau.", w:"1 đoạn 100 từ, tự soát riêng mạo từ.", s:"Shadowing BBC. Part 1 về work hoặc study."},
-  {f:"Ôn giới từ", g:"40 câu điền giới từ, gồm cả cụm động từ + giới từ.", w:"1 đoạn 100 từ, tự soát riêng giới từ.", s:"Shadowing BBC. Part 1 về hobbies."},
-  {f:"Ôn so sánh", g:"30 câu so sánh, gồm cả as ... as và trạng từ mức độ.", w:"1 đoạn 100 từ so sánh hai lựa chọn của bạn.", s:"Shadowing BBC. Part 1 về travel."},
-  {f:"Bài tập tổng hợp + mốc tháng 2", g:"60 câu trộn toàn bộ 7 điểm ngữ pháp đã học. Đây là bài kiểm tra thật, không tra cứu.", w:"Viết đoạn 80 từ có câu chủ đề rõ ràng — đây là mốc phải đạt của tháng 2.", s:"Kiểm tra mốc: Listening Section 1 đạt 6/10, và nói liên tục 60 giây."}
- ],
- 9:[
-  {f:"Mệnh đề quan hệ với who", g:"who thay cho người, đứng ngay sau danh từ nó bổ nghĩa. Đây là công cụ tạo câu phức đầu tiên, và band 5.5 cần có câu phức xuất hiện.", w:"1 đoạn 120 từ về những người quan trọng với bạn, dùng ít nhất 3 mệnh đề who.", s:"Shadowing 15 phút. Tả một người bạn ngưỡng mộ, dùng who ít nhất 3 lần."},
-  {f:"Mệnh đề quan hệ với which", g:"which thay cho vật và sự việc. Không dùng which cho người.", w:"1 đoạn 120 từ về đồ vật bạn quý, dùng ít nhất 3 mệnh đề which.", s:"Tả một món đồ bạn dùng hằng ngày."},
-  {f:"that thay cho cả hai", g:"that dùng được cho cả người và vật trong mệnh đề xác định. Trong văn viết trang trọng thì who và which vẫn tự nhiên hơn.", w:"1 đoạn 120 từ, viết mỗi câu hai lần: một lần dùng who/which, một lần dùng that.", s:"Nói về nơi bạn sống, dùng cả that lẫn which."},
-  {f:"where và when", g:"where cho nơi chốn, when cho thời gian. 'The city where I grew up' tự nhiên hơn nhiều so với 'the city which I grew up in'.", w:"1 đoạn 120 từ về một nơi và một thời điểm đáng nhớ.", s:"Tả nơi bạn lớn lên, dùng where ít nhất 2 lần."},
-  {f:"Rút gọn mệnh đề quan hệ", g:"Bỏ who/which và chuyển động từ sang V-ing hoặc V3: 'the man who is sitting there' thành 'the man sitting there'. Cấu trúc này làm câu gọn và tự nhiên hơn.", w:"1 đoạn 120 từ, viết 5 câu dạng đầy đủ rồi rút gọn cả 5.", s:"Tả một bức ảnh, dùng ít nhất 3 mệnh đề rút gọn."},
-  {f:"Ôn cả tuần", g:"40 câu nối hai câu đơn thành một câu có mệnh đề quan hệ.", w:"Viết đoạn 120 từ có ít nhất 3 mệnh đề quan hệ, nộp Write & Improve.", s:"Bắt đầu Part 2: chọn 1 cue card, chuẩn bị 1 phút, nói 1 phút. Ghi âm."}
- ],
- 10:[
-  {f:"Câu điều kiện loại 1", g:"If + hiện tại đơn, will + nguyên thể. Dùng cho điều có thể xảy ra thật. Sau if KHÔNG dùng will — đây là lỗi phổ biến nhất của cấu trúc này.", w:"1 đoạn 120 từ về kế hoạch của bạn nếu điều kiện thuận lợi.", s:"Shadowing 15 phút. Nói về dự định cuối tuần này, dùng if ít nhất 3 lần."},
-  {f:"Loại 1 với động từ khuyết thiếu", g:"Thay will bằng can, may, should, might để đổi sắc thái: If it rains, we should stay home.", w:"1 đoạn 120 từ dùng ít nhất 4 động từ khuyết thiếu khác nhau.", s:"Đưa lời khuyên cho một người bạn đang phân vân."},
-  {f:"Câu điều kiện loại 2", g:"If + quá khứ đơn, would + nguyên thể. Dùng cho điều không có thật ở hiện tại hoặc khó xảy ra.", w:"1 đoạn 120 từ về điều bạn sẽ làm nếu có nhiều tiền hoặc nhiều thời gian.", s:"Nói 1 phút: What would you do if you could live anywhere?"},
-  {f:"If I were you", g:"Trong loại 2, were dùng cho mọi chủ ngữ, kể cả I và he. 'If I were you' là cách đưa lời khuyên tự nhiên nhất và rất hợp cho Speaking Part 3.", w:"1 đoạn 120 từ đưa lời khuyên cho ba tình huống khác nhau.", s:"Đưa lời khuyên dùng If I were you ít nhất 3 lần."},
-  {f:"Phân biệt loại 1 với loại 2", g:"Loại 1 cho điều có thể xảy ra, loại 2 cho điều giả định không có thật. Chọn sai loại làm người nghe hiểu sai mức độ khả thi.", w:"1 đoạn 120 từ trộn cả hai loại, ghi rõ vì sao chọn loại đó.", s:"Part 2 — nói 75 giây, ghi âm và nghe lại."},
-  {f:"Ôn cả tuần", g:"40 câu chia động từ trong câu điều kiện. Kiểm tra riêng lỗi dùng will sau if.", w:"Viết đoạn 120 từ, nộp Write & Improve và ghi 3 lỗi nặng nhất vào sổ lỗi.", s:"Part 2 — 90 giây."}
- ],
- 11:[
-  {f:"Bị động ở hiện tại đơn", g:"is / are + phân từ quá khứ. Chủ ngữ là thứ chịu tác động: 'English is spoken here'.", w:"1 đoạn 120 từ mô tả một quy trình quen thuộc bằng câu bị động.", s:"Shadowing 15 phút. Tả cách một món ăn được làm ra."},
-  {f:"Bị động ở quá khứ đơn", g:"was / were + phân từ quá khứ. Chỉ cần hai thì này cho band 5.5, không cần bị động ở các thì phức tạp hơn.", w:"1 đoạn 120 từ kể một sự việc đã xảy ra bằng câu bị động.", s:"Kể một việc đã được làm cho bạn hoặc vì bạn."},
-  {f:"Khi nào nên dùng bị động", g:"Khi không biết ai làm, khi không quan trọng ai làm, hoặc khi muốn nhấn mạnh vào kết quả. Đừng lạm dụng — bị động dùng sai chỗ làm câu nặng nề.", w:"1 đoạn 120 từ, viết 5 câu chủ động rồi chuyển sang bị động và tự đánh giá câu nào hay hơn.", s:"Part 2 về một nơi chốn, dùng ít nhất 2 câu bị động."},
-  {f:"Liên từ cơ bản", g:"and, but, so, because. Bốn từ này nối được hầu hết mọi ý ở band 5.5, và dùng đúng chúng tốt hơn nhiều so với dùng sai từ nối hoa mỹ.", w:"1 đoạn 120 từ dùng đủ bốn liên từ, mỗi từ ít nhất hai lần.", s:"Nói 90 giây, cố ý nối câu bằng because và so."},
-  {f:"Liên từ nâng cao", g:"although, however, therefore. Chú ý dấu câu: although nối trong một câu, còn however đứng đầu câu mới và có dấu phẩy theo sau.", w:"1 đoạn 120 từ dùng đủ ba từ, đặt dấu câu đúng.", s:"Trình bày hai mặt của một vấn đề, dùng however."},
-  {f:"Ôn cả tuần", g:"30 câu chuyển chủ động sang bị động, và 30 câu chọn liên từ.", w:"Viết đoạn 120 từ có bố cục rõ, dùng đủ 6 liên từ đã học.", s:"Part 2 — 90 giây trôi chảy, đây là mốc của tuần 11."}
- ],
- 12:[
-  {f:"Tổng ôn các thì", g:"40 câu chọn thì trộn cả 5 thì đã học. Làm như bài kiểm tra: không tra cứu, chấm xong mới xem lại.", w:"1 đoạn 120 từ kể lại ba tháng học vừa qua, dùng ít nhất 4 thì.", s:"Shadowing 15 phút. Part 2 — 90 giây."},
-  {f:"Tổng ôn mạo từ và danh từ", g:"40 câu trộn mạo từ, danh từ đếm được và không đếm được, much/many/some/any.", w:"1 đoạn 120 từ, tự soát riêng hai nhóm lỗi này.", s:"Part 1 — 5 câu liên tiếp, mỗi câu 40 giây."},
-  {f:"Tổng ôn giới từ và so sánh", g:"40 câu trộn giới từ thời gian, nơi chốn, cụm động từ + giới từ, và so sánh.", w:"1 đoạn 120 từ so sánh hai giai đoạn trong đời bạn.", s:"Part 2 về một sự thay đổi, nói 100 giây."},
-  {f:"Tổng ôn câu phức", g:"40 câu trộn mệnh đề quan hệ, câu điều kiện và bị động — ba công cụ tạo câu phức.", w:"1 đoạn 120 từ có ít nhất 2 mệnh đề quan hệ, 1 câu điều kiện và 1 câu bị động.", s:"Part 2 — 100 giây."},
-  {f:"Làm quen định dạng General Training", g:"Lần đầu chạm vào đề thật. Không bấm giờ, được tra từ thoải mái. Mục đích là biết đề trông như thế nào, không phải để đo điểm.", w:"Đọc một bài mẫu thư General Training trên IELTS Liz, chưa cần tự viết.", s:"Part 2 — 90 giây về chủ đề bất kỳ."},
-  {f:"Viết thư thử + mốc tháng 3", g:"Ôn lại toàn bộ sổ lỗi của 12 tuần. Đánh dấu những lỗi đã hết tái xuất hiện.", w:"Viết thử một lá thư 120 từ gửi bạn bè, chưa cần đúng chuẩn IELTS.", s:"Kiểm tra mốc kết thúc giai đoạn 1: nói liên tục 90 giây về một cue card Part 2."}
- ]
-};
-
-const P1SUNDAY = {
-  f:"Ôn sổ lỗi và bài test tuần",
-  g:"30 phút đầu cố định: đọc lại sổ lỗi cả tuần, chọn 5 lỗi lặp nhiều nhất, viết lại 5 câu chứa 5 lỗi đó ở dạng đã sửa.",
-  w:"30 phút sau: kiểm tra ngẫu nhiên 60 từ vựng của tuần, rồi viết một đoạn theo độ dài của tuần đó.",
-  s:"Chủ nhật không nạp từ mới. Một ngày nghỉ nạp mỗi tuần giúp Anki không dồn thẻ."
-};
+const P1DATA = /*__P1DAYS__*/{days:{},sunday:{}};
+const P1DAYS = P1DATA.days;
+const P1SUNDAY = P1DATA.sunday;
+/* Tuần nào có phần Chủ nhật riêng thì dùng bản riêng, không thì dùng bản chung. */
+const P1SUNDAYS = P1DATA.sundays || {};
+const sundayFor = w => P1SUNDAYS[w] || P1SUNDAY;
 
 /* Kế hoạch luyện Listening theo tuần. `to` là tuần cuối cùng của khoảng. */
 const LPLAN = [
@@ -1224,6 +1282,7 @@ const DOCMETA = {
  "README.md":                      {t:"Tổng quan lộ trình", d:"Con số chốt, bốn giai đoạn, mục tiêu điểm từng kỹ năng và vì sao không còn là 6 tháng."},
  "00-tong-quan-va-cam-ket.md":     {t:"Tổng quan và cam kết", d:"Band 5.5 General Training thật sự đòi hỏi gì, khoảng cách phải lấp, mốc kiểm tra từng tháng."},
  "01-giai-doan-1-nen-tang.md":     {t:"Giai đoạn 1 — Nền tảng", d:"Tuần 1–12. Từ vựng, 12 điểm ngữ pháp lõi, chép chính tả, luyện tai. Chưa đụng đề IELTS."},
+ "01a-giao-an-tung-ngay-giai-doan-1.md": {t:"Giáo án từng ngày — giai đoạn 1", d:"Cả 72 ngày học của tuần 1–12: mỗi ngày một điểm ngữ pháp, một việc viết, một việc nói."},
  "02-giai-doan-2-ky-nang-ielts.md":{t:"Giai đoạn 2 — Kỹ năng IELTS", d:"Tuần 13–26. Dạng bài General Training và chiến thuật từng phần thi."},
  "03-giai-doan-3-cung-co.md":      {t:"Giai đoạn 3 — Củng cố", d:"Tuần 27–34. Xóa 5 lỗi cố hữu và tăng tốc độ làm bài."},
  "04-giai-doan-4-luyen-de.md":     {t:"Giai đoạn 4 — Luyện đề", d:"Tuần 35–40. Thi thử áp lực thật, chiến thuật phòng thi, quyết định có nên thi."},
@@ -1240,7 +1299,7 @@ const DOCMETA = {
 
 const DOCGROUPS = [
  {g:"Bắt đầu từ đây", f:["README.md", "00-tong-quan-va-cam-ket.md", "06-lich-hoc-hang-ngay.md", "05-tai-lieu-mien-phi.md"]},
- {g:"Bốn giai đoạn", f:["01-giai-doan-1-nen-tang.md", "02-giai-doan-2-ky-nang-ielts.md", "03-giai-doan-3-cung-co.md", "04-giai-doan-4-luyen-de.md"]},
+ {g:"Bốn giai đoạn", f:["01-giai-doan-1-nen-tang.md", "01a-giao-an-tung-ngay-giai-doan-1.md", "02-giai-doan-2-ky-nang-ielts.md", "03-giai-doan-3-cung-co.md", "04-giai-doan-4-luyen-de.md"]},
  {g:"Tham chiếu", f:["07-so-loi-va-theo-doi.md", "08-chien-thuat-tung-ky-nang.md"]},
  {g:"Mẫu biểu — copy ra dùng", f:["templates/so-loi.md", "templates/bang-theo-doi-tuan.md", "templates/checklist-writing.md", "templates/checklist-speaking.md"]},
  {g:"Kỹ thuật", f:["web/README.md"]}
@@ -1358,35 +1417,62 @@ function mdRender(src, headings){
    2. TRẠNG THÁI
    ========================================================= */
 const DEF = () => ({
-  startDate:null, blocks:{}, hours:{}, vocab:{}, shortDays:{},
+  startDate:null, blocks:{}, hours:{}, vocab:{}, shortDays:{}, dayDone:{},
   mocks:[], errors:[], sessions:[], essays:[]
 });
 let S = DEF();
 let DB = null, saveTimer = null;
 const LS = "ielts-gt-40w-v1";
-const LSE = LS + "-essays";
+const LSE = LS + "-essays";          // kho cũ, chỉ còn dùng để chuyển dữ liệu sang
+const LSP = LS + ":profile";
+
+/* Hồ sơ học viên. Mọi thứ của một người nằm gọn dưới slug của người đó, nên hai
+   người dùng chung một máy hay một tài khoản sẽ không đè lên nhau. */
+let PROFILE = {name:"", slug:""};
+
+function slugify(s){
+  const out = String(s).toLowerCase().normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40);
+  return out || "hoc-vien";
+}
+const rootSlug = () => PROFILE.slug || "mac-dinh";
+const lsKey = () => LS + ":" + rootSlug();
+const lsEssayKey = () => lsKey() + ":essays";
+const dbProgress = () => DB.doc("students/" + rootSlug() + "/progress/main");
+const dbEssay = id => DB.doc("students/" + rootSlug() + "/essays/" + id);
+
+function loadProfile(){
+  try{
+    const raw = localStorage.getItem(LSP);
+    if(raw) PROFILE = Object.assign(PROFILE, JSON.parse(raw));
+  }catch(e){ /* chưa có hồ sơ thì hỏi ở màn bắt đầu */ }
+}
+function saveProfile(){
+  try{ localStorage.setItem(LSP, JSON.stringify(PROFILE)); }catch(e){ /* bỏ qua */ }
+}
 
 /* Bài viết đầy đủ nằm riêng, không nhét vào tài liệu tiến độ chính:
    một tài liệu db tối đa 256KB, mà mỗi bài kèm nhận xét đã khoảng 4KB. */
 function saveEssayBody(id, body){
   try{
-    const all = JSON.parse(localStorage.getItem(LSE) || "{}");
+    const all = JSON.parse(localStorage.getItem(lsEssayKey()) || "{}");
     all[id] = body;
     const keys = Object.keys(all);
     if(keys.length > 25) keys.slice(0, keys.length - 25).forEach(k => delete all[k]);
-    localStorage.setItem(LSE, JSON.stringify(all));
+    localStorage.setItem(lsEssayKey(), JSON.stringify(all));
   }catch(e){ /* hết chỗ lưu cục bộ thì vẫn còn bản trên máy chủ */ }
-  if(DB) DB.collection("essays").doc(id).set(body).catch(() => {});
+  if(DB) dbEssay(id).set(body).catch(() => {});
 }
 
 async function loadEssayBody(id){
   try{
-    const all = JSON.parse(localStorage.getItem(LSE) || "{}");
+    const all = JSON.parse(localStorage.getItem(lsEssayKey()) || "{}");
     if(all[id]) return all[id];
   }catch(e){ /* bỏ qua, thử tiếp trên máy chủ */ }
   if(DB){
     try{
-      const snap = await DB.collection("essays").doc(id).get();
+      const snap = await dbEssay(id).get();
       if(snap.exists) return snap.data();
     }catch(e){ /* không lấy được thì trả về rỗng */ }
   }
@@ -1394,7 +1480,7 @@ async function loadEssayBody(id){
 }
 
 function localEssayBodies(){
-  try{ return JSON.parse(localStorage.getItem(LSE) || "{}"); }catch(e){ return {}; }
+  try{ return JSON.parse(localStorage.getItem(lsEssayKey()) || "{}"); }catch(e){ return {}; }
 }
 
 const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
@@ -1408,18 +1494,94 @@ function mondayOf(d){
   return x;
 }
 function loadLocal(){
-  try{ const raw = localStorage.getItem(LS); if(raw) S = Object.assign(DEF(), JSON.parse(raw)); }catch(e){}
+  try{
+    // Chưa đặt tên thì vẫn đọc kho cũ, để dữ liệu học từ trước không biến mất.
+    const raw = localStorage.getItem(lsKey()) ?? (PROFILE.slug ? null : localStorage.getItem(LS));
+    if(raw) S = Object.assign(DEF(), JSON.parse(raw));
+  }catch(e){ /* hỏng thì bắt đầu lại từ trạng thái rỗng */ }
   if(!S.startDate) S.startDate = iso(mondayOf(new Date()));
 }
-function saveLocal(){ try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){} }
+function saveLocal(){ try{ localStorage.setItem(lsKey(), JSON.stringify(S)); }catch(e){ /* hết chỗ */ } }
 function save(){
   saveLocal();
+  writeRoster(false);
   if(!DB) return;
   clearTimeout(saveTimer);
   saveTimer = setTimeout(async () => {
-    try{ await DB.doc("progress/main").set(JSON.parse(JSON.stringify(S))); }
+    try{ await dbProgress().set(JSON.parse(JSON.stringify(S))); writeRoster(true); }
     catch(e){ setSync(false, "Lưu trên máy này"); }
   }, 900);
+}
+
+/* ---------------------------------------------------------
+   Danh bạ học viên.
+   Tiến độ nằm ở students/<slug>/progress/main, mà một tài liệu nằm sâu
+   như vậy thì không liệt kê được từ bên ngoài — chỉ đọc được khi đã
+   biết slug. Nên mỗi người tự ghi một dòng tóm tắt vào roster/<slug>;
+   tab Lịch sử liệt kê đúng bộ sưu tập đó rồi mới mở tiến độ đầy đủ.
+   --------------------------------------------------------- */
+const LSR = LS + ":roster";
+
+function stWeekNo(st, d){
+  if(!st || !st.startDate) return 1;
+  return Math.floor((mondayOf(d) - mondayOf(parseISO(st.startDate))) / 86400000 / 7) + 1;
+}
+function stWeekHours(st, w){
+  if(!st || !st.startDate) return 0;
+  const mon = mondayOf(parseISO(st.startDate));
+  mon.setDate(mon.getDate() + (w - 1) * 7);
+  let sum = 0;
+  for(let i = 0; i < 7; i++){
+    const d = new Date(mon); d.setDate(d.getDate() + i);
+    sum += Number((st.hours || {})[iso(d)] || 0);
+  }
+  return Math.round(sum * 10) / 10;
+}
+/* Tóm tắt một trạng thái bất kỳ — dùng cho cả mình lẫn người khác. */
+function stStats(st){
+  const hours = Object.values(st.hours || {}).reduce((a, b) => a + Number(b || 0), 0);
+  const dd = st.dayDone || {};
+  const dkeys = Object.keys(dd);
+  const off = dkeys.filter(k => dd[k] && dd[k].off).length;
+  const bands = (st.essays || []).filter(e => e.band != null).map(e => Number(e.band));
+  const last3 = bands.slice(-3);
+  const mocks = st.mocks || [];
+  const lm = mocks.length ? mocks[mocks.length - 1] : null;
+  const dates = [].concat(
+    Object.keys(st.hours || {}), dkeys,
+    (st.sessions || []).map(x => x.d), (st.essays || []).map(x => x.d), mocks.map(x => x.d)
+  ).filter(Boolean).sort();
+  return {
+    startDate: st.startDate || null,
+    hours: Math.round(hours * 10) / 10,
+    days: dkeys.length - off,
+    off,
+    sessions: (st.sessions || []).length,
+    essays: (st.essays || []).length,
+    errors: (st.errors || []).length,
+    mocks: mocks.length,
+    band: lm ? Math.round((lm.l + lm.r + lm.w + lm.s) / 4 * 2) / 2 : null,
+    wband: last3.length ? Math.round(last3.reduce((a, b) => a + b, 0) / last3.length * 10) / 10 : null,
+    last: dates.length ? dates[dates.length - 1] : null
+  };
+}
+function rosterRec(){
+  return Object.assign(
+    {name: PROFILE.name, slug: rootSlug(), week: clampWeek(stWeekNo(S, today())), at: iso(today())},
+    stStats(S)
+  );
+}
+function localRoster(){
+  try{ return JSON.parse(localStorage.getItem(LSR) || "{}"); }catch(e){ return {}; }
+}
+function writeRoster(remote){
+  if(!PROFILE.name) return;
+  const rec = rosterRec();
+  try{
+    const all = localRoster(); all[rec.slug] = rec;
+    localStorage.setItem(LSR, JSON.stringify(all));
+  }catch(e){ /* hết chỗ cục bộ thì vẫn còn bản trên máy chủ */ }
+  if(remote && DB) DB.doc("roster/" + rec.slug).set(rec).catch(() => {});
 }
 function setSync(on, txt){
   const pill = document.getElementById("syncPill");
@@ -1440,8 +1602,16 @@ function phaseOf(w){ return PHASES.find(p => w >= p.from && w <= p.to) || PHASES
    ========================================================= */
 function weekData(w){ return W[clampWeek(w) - 1]; }
 
-function skillTask(code, w){
+/* dow: 1 = thứ Hai … 6 = thứ Bảy. Trong giai đoạn 1 thì giáo án từng ngày
+   thắng nội dung chung của tuần, vì nó cụ thể hơn. */
+function skillTask(code, w, dow){
   const d = weekData(w);
+  const dp = (P1DAYS[w] && dow >= 1 && dow <= 6) ? P1DAYS[w][dow - 1] : null;
+  if(dp){
+    if(code === "G")  return dp.g;
+    if(code === "Wr") return dp.w;
+    if(code === "S")  return dp.s;
+  }
   if(code === "L")  return d.L;
   if(code === "R")  return d.R;
   if(code === "Wr") return d.Wr;
@@ -1469,22 +1639,22 @@ function todayBlocks(date, w, short){
     return [
       {tag:"Anki", min:"15 phút", rail:"var(--sk-v)", what:"Ôn thẻ đến hạn + 10 từ mới",
        how:"Mỗi thẻ ghi một cụm từ kèm câu ví dụ tự đặt. Làm trước, đừng để cuối ngày.", id:"B"},
-      {tag:SKILL[mainC].name, min:"30 phút", rail:SKILL[mainC].rail, what:skillTask(mainC, w),
+      {tag:SKILL[mainC].name, min:"30 phút", rail:SKILL[mainC].rail, what:skillTask(mainC, w, dow),
        how:"Rút gọn nhưng vẫn làm đúng quy trình, chỉ giảm khối lượng.", id:"A"},
       {tag:"Speaking", min:"15 phút", rail:"var(--sk-s)", what:"Shadowing + ghi âm 1 lần",
        how:"Ngày bận vẫn phải nói thành tiếng. Giữ chuỗi ngày liên tục quan trọng hơn khối lượng của một ngày.", id:"C"}
     ];
   }
   return [
-    {tag:SKILL[mainC].name, min:"45 phút", rail:SKILL[mainC].rail, what:skillTask(mainC, w),
+    {tag:SKILL[mainC].name, min:"45 phút", rail:SKILL[mainC].rail, what:skillTask(mainC, w, dow),
      how: w<=12 && mainC==="L" ? "Làm đủ 4 lượt nghe, và chép chính tả 10 phút. Lượt thứ ba — nghe cùng lúc đọc transcript — là lượt tạo ra tiến bộ."
         : (mainC==="Wr" ? "Dàn ý 5 phút, viết một mạch không sửa, soát 3 phút cuối. Nộp Write & Improve rồi ghi 3 lỗi nặng nhất vào sổ lỗi."
         : "Ghi mọi câu sai vào sổ lỗi kèm lý do sai, không chỉ ghi đáp án đúng."), id:"A"},
     {tag:"Anki", min:"20 phút", rail:"var(--sk-v)", what:"Ôn thẻ đến hạn + 10 từ mới",
      how:"Ghi cụm từ chứ không ghi từ đơn, kèm một câu ví dụ do chính bạn đặt.", id:"B"},
-    {tag:"Speaking", min:"30 phút", rail:"var(--sk-s)", what:d.S,
+    {tag:"Speaking", min:"30 phút", rail:"var(--sk-s)", what:skillTask("S", w, dow),
      how:"Shadowing 10 phút, ghi âm 2 phút, nghe lại và đếm số lần dừng quá 3 giây, rồi nói lại lần hai. Block này không được đổi sang việc khác.", id:"C"},
-    {tag:SKILL[subC].name, min:"25 phút", rail:SKILL[subC].rail, what:skillTask(subC, w),
+    {tag:SKILL[subC].name, min:"25 phút", rail:SKILL[subC].rail, what:skillTask(subC, w, dow),
      how: subC==="Wr" ? "Ưu tiên viết lại bài cũ đã được chấm, sửa đúng 3 lỗi đã ghi." : "Ghi lỗi mới vào sổ lỗi trước khi kết thúc.", id:"D"}
   ];
 }
@@ -1492,18 +1662,64 @@ function todayBlocks(date, w, short){
 /* =========================================================
    4. RENDER
    ========================================================= */
+/* Chuỗi ngày liên tục, đếm theo ngày đã chốt. Ngày đánh dấu nghỉ không làm
+   đứt chuỗi nhưng cũng không cộng vào — nghỉ có kế hoạch khác với bỏ cuộc. */
 function streak(){
   let n = 0; const d = today();
   for(let i = 0; i < 400; i++){
-    const k = iso(d);
-    const hrs = S.hours[k] || 0;
-    const anyBlock = Object.keys(S.blocks).some(x => x.startsWith(k + ":"));
-    if(hrs > 0 || anyBlock) n++;
-    else if(i > 0) break;
-    else { d.setDate(d.getDate() - 1); continue; }
+    const rec = S.dayDone[iso(d)];
+    if(rec && !rec.off) n++;
+    else if(!rec && i > 0) break;
+    else if(!rec && i === 0){ d.setDate(d.getDate() - 1); continue; }
     d.setDate(d.getDate() - 1);
   }
   return n;
+}
+
+/* Ngày bắt đầu và tên học viên hiện ngay trên đầu, để lúc nào cũng thấy
+   mình đang ở trong lộ trình của ai và tính từ mốc nào. */
+function renderWho(){
+  const el = document.getElementById("hWho");
+  if(!PROFILE.name){ el.hidden = true; return; }
+  el.hidden = false;
+  el.textContent = "";
+  const b = document.createElement("b"); b.textContent = PROFILE.name;
+  const sep = document.createElement("span"); sep.textContent = "·";
+  const d = parseISO(S.startDate);
+  const s = document.createElement("span");
+  s.textContent = `bắt đầu ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+  el.append(b, sep, s);
+}
+
+function renderSetup(){
+  const box = document.getElementById("setup");
+  const need = !PROFILE.name;
+  box.hidden = !need;
+  if(!need) return;
+  document.getElementById("suStart").value = S.startDate;
+  const had = Object.keys(S.blocks).length + Object.keys(S.hours).length;
+  document.getElementById("suNote").textContent = had
+    ? `Đã thấy dữ liệu học từ trước (${had} mục). Đặt tên xong sẽ chuyển hết sang tên đó, không mất gì.`
+    : "";
+}
+
+function applyProfile(name, startISO){
+  const clean = String(name || "").trim();
+  if(!clean) return false;
+  PROFILE = {name: clean, slug: slugify(clean)};
+  saveProfile();
+  if(startISO) S.startDate = iso(mondayOf(parseISO(startISO)));
+  saveLocal();
+  save();
+  return true;
+}
+
+function renderRootNote(){
+  const el = document.getElementById("rootNote");
+  if(!el) return;
+  el.textContent = PROFILE.name
+    ? `Dữ liệu của bạn nằm dưới gốc "${rootSlug()}". Đổi tên sẽ tạo một gốc mới và chuyển toàn bộ tiến độ hiện tại sang đó.`
+    : "Chưa đặt tên học viên — dữ liệu đang nằm ở gốc tạm.";
 }
 
 function renderHeader(){
@@ -1533,8 +1749,17 @@ function renderToday(){
   const short = !!S.shortDays[k];
 
   document.getElementById("tDate").textContent = `${DAYNAME[now.getDay()]} · ${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
-  document.getElementById("tTitle").textContent = d.t;
-  document.getElementById("tNote").textContent = d.d;
+  const dow = now.getDay();
+  const dp = (P1DAYS[w] && dow >= 1 && dow <= 6) ? P1DAYS[w][dow - 1] : null;
+  document.getElementById("tTitle").textContent = dp ? dp.f : d.t;
+  document.getElementById("tNote").textContent = dp ? `Tuần ${w} — ${d.t}` : d.d;
+  /* Chủ nhật là ngày cố định 1 tiếng — 30 phút sổ lỗi cộng 30 phút test —
+     nên nút chọn 2 tiếng / 1 tiếng không có gì để đổi. Ẩn đi thay vì để nó trơ. */
+  const isSun = dow === 0;
+  document.getElementById("modeSeg").hidden = isSun;
+  const note = document.getElementById("modeNote");
+  note.hidden = !isSun;
+  if(isSun) note.textContent = "Chủ nhật cố định 1 tiếng: 30 phút ôn sổ lỗi và 30 phút bài test tuần. Không có lựa chọn ngày thường hay ngày bận.";
   document.getElementById("modeFull").setAttribute("aria-pressed", String(!short));
   document.getElementById("modeShort").setAttribute("aria-pressed", String(short));
 
@@ -1573,6 +1798,127 @@ function renderToday(){
   document.getElementById("sWords").textContent = Object.values(S.vocab).reduce((a,b) => a + Number(b || 0), 0);
   document.getElementById("sDays").textContent = Math.max(0, 40 - w);
   document.getElementById("tTip").textContent = TIPS[(now.getDate() + now.getMonth()) % TIPS.length];
+  renderDoneBox(k, todayBlocks(now, w, short));
+  renderTodayDetail(w, dow);
+  renderGate();
+  renderWho();
+  renderSetup();
+}
+
+/* Cùng một thẻ chi tiết dùng ở tab Lộ trình, nhưng ở đây là cho đúng ngày hôm nay
+   — đỡ phải sang tab khác rồi tự dò xem hôm nay là ngày thứ mấy của tuần. */
+function renderTodayDetail(w, dow){
+  const box = document.getElementById("tDetail");
+  const body = document.getElementById("tDetailBody");
+  const d = dayFor(w, dow);
+  if(!d){ box.hidden = true; return; }
+  box.hidden = false;
+  body.textContent = "";
+  body.append(dayRow(dow === 0 ? "Chủ nhật" : `Thứ ${dow + 1}`, blocksLabel(w, dow, d), d, false));
+}
+
+/* Ngày thứ mấy của tuần nào — dùng chung cho tab Hôm nay và màn chốt ngày. */
+function dayFor(w, dow){
+  if(!P1DAYS[w]) return null;
+  return dow === 0 ? sundayFor(w) : P1DAYS[w][dow - 1];
+}
+function blocksLabel(w, dow, d){
+  if(dow === 0) return "Ôn tập + kiểm tra";
+  const r = (w <= 12 ? ROTA1 : ROTA)[dow];
+  return d.b || `${SKILL[r.A].name} + ${SKILL[r.D].name}`;
+}
+
+/* =========================================================
+   4c. CHỐT NGÀY
+   Một ngày chỉ tính là xong khi bạn tự bấm chốt. Nhờ vậy bảng theo dõi
+   phản ánh việc đã làm thật, không phải suy ra từ vài ô tick còn dở.
+   ========================================================= */
+function renderDoneBox(k, blocks){
+  const st = document.getElementById("doneStatus");
+  const btn = document.getElementById("doneBtn");
+  const rec = S.dayDone[k];
+  const total = blocks.length;
+  const done = blocks.filter(b => S.blocks[`${k}:${b.id}`]).length;
+
+  if(rec){
+    st.textContent = rec.off
+      ? "Hôm nay đã đánh dấu là ngày nghỉ."
+      : `Đã chốt hôm nay: ${done}/${total} việc, ${rec.h || 0} giờ.`;
+    btn.textContent = "Mở lại để sửa";
+    btn.className = "btn";
+    btn.onclick = () => { delete S.dayDone[k]; save(); renderToday(); renderHeader(); };
+    return;
+  }
+
+  st.textContent = done === total
+    ? `Xong cả ${total} việc. Bấm chốt để ghi vào lịch sử.`
+    : `Mới xong ${done}/${total} việc. Vẫn chốt được — ngày học dở vẫn hơn ngày bỏ trắng.`;
+  btn.textContent = "Hoàn thành hôm nay";
+  btn.className = "btn btn-primary";
+  btn.onclick = () => {
+    S.dayDone[k] = {h: Number(S.hours[k] || 0), n: done, t: total};
+    save(); renderToday(); renderHeader();
+  };
+}
+
+/* Những ngày đã qua kể từ lúc bắt đầu mà chưa được chốt. Chỉ lấy tối đa 5 ngày
+   gần nhất để không dựng một bức tường khi người học vắng lâu. */
+function pendingDays(){
+  const start = parseISO(S.startDate);
+  const out = [];
+  const d = new Date(today());
+  d.setDate(d.getDate() - 1);
+  for(let i = 0; i < 30 && d >= start && out.length < 5; i++){
+    const k = iso(d);
+    if(!S.dayDone[k]) out.push({k, d: new Date(d)});
+    d.setDate(d.getDate() - 1);
+  }
+  return out.reverse();
+}
+
+function renderGate(){
+  const list = pendingDays();
+  const gate = document.getElementById("gate");
+  const wrap = document.getElementById("todayWrap");
+  gate.hidden = list.length === 0;
+  wrap.hidden = list.length > 0;
+  if(!list.length) return;
+
+  const host = document.getElementById("gateList");
+  host.textContent = "";
+  list.forEach(x => {
+    const row = document.createElement("div");
+    row.className = "gaterow";
+    const lab = document.createElement("span");
+    lab.className = "gate-d";
+    lab.textContent = `${DAYNAME[x.d.getDay()]} · ${x.d.getDate()}/${x.d.getMonth() + 1}`;
+    const a = document.createElement("button");
+    a.className = "btn btn-sm"; a.textContent = "Đã học";
+    a.onclick = () => { S.dayDone[x.k] = {h: Number(S.hours[x.k] || 0), late: 1}; save(); renderToday(); renderHeader(); };
+    const b = document.createElement("button");
+    b.className = "btn btn-sm"; b.textContent = "Nghỉ";
+    b.onclick = () => { S.dayDone[x.k] = {off: 1}; save(); renderToday(); renderHeader(); };
+    row.append(lab, a, b);
+
+    const wk = clampWeek(weekNo(x.d));
+    const dd = dayFor(wk, x.d.getDay());
+    if(dd){
+      const see = document.createElement("button");
+      see.className = "btn btn-sm"; see.textContent = "Chi tiết";
+      const det = document.createElement("div");
+      det.hidden = true; det.style.marginBottom = "6px";
+      see.onclick = () => {
+        if(det.hidden && !det.children.length)
+          det.append(dayRow(DAYNAME[x.d.getDay()], blocksLabel(wk, x.d.getDay(), dd), dd, false));
+        det.hidden = !det.hidden;
+        see.textContent = det.hidden ? "Chi tiết" : "Thu gọn";
+      };
+      row.append(see);
+      host.append(row, det);
+      return;
+    }
+    host.append(row);
+  });
 }
 
 function renderRoadmap(){
@@ -1612,6 +1958,85 @@ function renderRoadmap(){
       host.append(det);
     });
   });
+}
+
+/* Chi tiết từng ngày, chỉ có ở giai đoạn 1. Từ tuần 13 kế hoạch chuyển sang
+   luyện theo dạng bài, nên chia tới từng ngày không còn hợp — lúc đó tab
+   Luyện tập là chỗ xem việc của hôm nay. */
+function dayPlan(w){
+  const days = P1DAYS[w];
+  const wrap = document.createElement("details");
+  wrap.className = "toc";
+  wrap.style.marginTop = "14px";
+  const sum = document.createElement("summary");
+  sum.textContent = "Chi tiết từng ngày";
+  wrap.append(sum);
+
+  const box = document.createElement("div");
+  box.style.padding = "0 13px 13px";
+
+  const intro = document.createElement("p");
+  intro.className = "tiny";
+  intro.style.marginBottom = "11px";
+  intro.textContent = "Mỗi ngày có một điểm ngữ pháp riêng — đó là sợi chỉ xuyên suốt cả ngày, học ở block ngữ pháp rồi dùng lại ngay trong bài viết và lúc nói, chứ không phải một mục tách rời. Dòng chữ nhỏ bên phải mỗi ngày là hai block chính của ngày đó theo lịch luân phiên.";
+  box.append(intro);
+
+  const cur = clampWeek(weekNo(today()));
+  const todayDow = today().getDay();
+
+  days.forEach((d, ix) => {
+    const dow = ix + 1;                        // 0=CN nên thứ 2 là 1
+    const r = ROTA1[dow];
+    const isToday = w === cur && dow === todayDow;
+    const blocks = d.b || `${SKILL[r.A].name} + ${SKILL[r.D].name}`;
+    box.append(dayRow(`Thứ ${dow + 1}`, blocks, d, isToday));
+  });
+  box.append(dayRow("Chủ nhật", "Ôn tập + kiểm tra", sundayFor(w), w === cur && todayDow === 0));
+
+  wrap.append(box);
+  return wrap;
+}
+
+function dayRow(dayName, blocks, d, isToday){
+  const el = document.createElement("div");
+  el.className = "day" + (isToday ? " today" : "");
+  const head = document.createElement("div");
+  head.className = "day-h";
+  const n = document.createElement("span");
+  n.className = "day-n";
+  n.textContent = dayName + (isToday ? " · hôm nay" : "");
+  const b = document.createElement("span");
+  b.className = "day-b"; b.textContent = blocks;
+  head.append(n, b);
+  const f = document.createElement("div");
+  f.className = "day-f"; f.textContent = d.f;
+  el.append(head, f);
+
+  const lk = d.lk || {};
+  [["Ngữ pháp", d.g, "g"], ["Sách", d.book, "book"], ["Viết", d.w, "w"],
+   ["Nói", d.s, "s"], ["Nghe & Đọc", d.lr, "lr"]]
+  .forEach(([label, text, key]) => {
+    if(!text) return;
+    const row = document.createElement("div");
+    row.className = "day-t";
+    const b = document.createElement("b"); b.textContent = label;
+    row.append(b, document.createTextNode(text));
+    el.append(row);
+
+    const links = lk[key];
+    if(!links || !links.length) return;
+    const bar = document.createElement("div");
+    bar.className = "day-lk";
+    links.forEach(x => {
+      const a = document.createElement("a");
+      a.className = "lkchip";
+      a.href = x.u; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.textContent = x.n;
+      bar.append(a);
+    });
+    el.append(bar);
+  });
+  return el;
 }
 
 function renderRes(){
@@ -2120,6 +2545,308 @@ function searchDocs(q){
 }
 
 /* =========================================================
+   4d. LỊCH SỬ HỌC VIÊN
+   ========================================================= */
+let PEOPLE = [];
+let ppSort = "last";
+let ppLoaded = false;
+
+function fmtDate(s){ const d = parseISO(s); return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`; }
+function fmtShort(s){ const d = parseISO(s); return `${d.getDate()}/${d.getMonth() + 1}`; }
+function agoTxt(s){
+  if(!s) return "chưa học buổi nào";
+  const n = Math.round((today() - parseISO(s)) / 86400000);
+  if(n <= 0) return "học hôm nay";
+  if(n === 1) return "học hôm qua";
+  if(n < 30) return `học cách đây ${n} ngày`;
+  return "học lần cuối " + fmtDate(s);
+}
+function initials(name){
+  const w = String(name || "").trim().split(/\s+/).filter(Boolean);
+  if(!w.length) return "?";
+  const t = w.length === 1 ? w[0].slice(0, 2) : w[w.length - 2][0] + w[w.length - 1][0];
+  return t.toUpperCase();
+}
+function mkCard(label){
+  const c = document.createElement("div"); c.className = "card";
+  if(label){ const e = document.createElement("div"); e.className = "eyebrow"; e.textContent = label; c.append(e); }
+  return c;
+}
+function mkStatRow(items){
+  const r = document.createElement("div"); r.className = "statrow";
+  items.forEach(([v, l]) => {
+    const d = document.createElement("div"); d.className = "stat";
+    const b = document.createElement("b"); b.textContent = v;
+    const s = document.createElement("span"); s.textContent = l;
+    d.append(b, s); r.append(d);
+  });
+  return r;
+}
+function mkTiny(txt){ const p = document.createElement("p"); p.className = "tiny"; p.textContent = txt; return p; }
+function mkEmpty(txt){ const d = document.createElement("div"); d.className = "empty"; d.textContent = txt; return d; }
+function mkLog(rail, left, val, note){
+  const row = document.createElement("div"); row.className = "logrow";
+  row.style.setProperty("--rail", rail);
+  const a = document.createElement("span"); a.className = "lg-d"; a.textContent = left;
+  const b = document.createElement("span"); b.className = "lg-v"; b.textContent = val;
+  const c = document.createElement("span"); c.className = "lg-n"; c.textContent = note;
+  row.append(a, b, c);
+  return row;
+}
+
+async function loadPeople(){
+  const map = {};
+  Object.values(localRoster()).forEach(r => { if(r && r.slug) map[r.slug] = Object.assign({}, r); });
+  if(DB){
+    try{
+      const snap = await DB.collection("roster").get();
+      snap.docs.forEach(d => {
+        const r = Object.assign({}, d.data(), {slug: d.id});
+        const cur = map[r.slug];
+        // dòng nào được ghi gần đây hơn thì tin dòng đó
+        if(!cur || String(r.at || "") >= String(cur.at || "")) map[r.slug] = Object.assign({}, cur, r);
+      });
+    }catch(e){ /* mất mạng thì hiện những gì máy này biết */ }
+  }
+  if(PROFILE.name) map[rootSlug()] = Object.assign({}, map[rootSlug()], rosterRec());
+  PEOPLE = Object.values(map).filter(p => p && p.slug);
+  ppLoaded = true;
+}
+
+function ppFiltered(){
+  const q = norm(document.getElementById("ppQ").value.trim());
+  const out = PEOPLE.filter(p => !q || norm(p.name || "").includes(q) || (p.slug || "").includes(q));
+  const byName = (a, b) => String(a.name || a.slug).localeCompare(String(b.name || b.slug), "vi");
+  if(ppSort === "name") out.sort(byName);
+  else if(ppSort === "hours") out.sort((a, b) => (b.hours || 0) - (a.hours || 0) || byName(a, b));
+  else out.sort((a, b) => String(b.last || "").localeCompare(String(a.last || "")) || byName(a, b));
+  return out;
+}
+
+function renderPeople(){
+  const host = document.getElementById("ppList");
+  host.textContent = "";
+  const rows = ppFiltered();
+  if(!rows.length){
+    host.append(mkEmpty(PEOPLE.length
+      ? "Không có tên nào khớp."
+      : "Chưa có học viên nào. Đặt tên ở tab Hôm nay là bạn xuất hiện tại đây."));
+  }
+  rows.forEach(p => {
+    const me = p.slug === rootSlug() && !!PROFILE.name;
+    const b = document.createElement("button");
+    b.className = "pp" + (me ? " me" : "");
+    const av = document.createElement("div"); av.className = "pp-av";
+    av.textContent = initials(p.name || p.slug);
+    const bd = document.createElement("div"); bd.className = "pp-b";
+    const n = document.createElement("div"); n.className = "pp-n";
+    const nm = document.createElement("span"); nm.textContent = p.name || p.slug;
+    n.append(nm);
+    if(me){ const t = document.createElement("span"); t.className = "tag"; t.textContent = "Bạn"; n.append(t); }
+    const m = document.createElement("div"); m.className = "pp-m";
+    m.textContent = `Tuần ${p.week || 1} · ${p.days || 0} ngày · ${agoTxt(p.last)}`;
+    bd.append(n, m);
+    const v = document.createElement("div"); v.className = "pp-v";
+    v.textContent = Number(p.hours || 0).toFixed(1);
+    const s = document.createElement("span"); s.textContent = "giờ";
+    v.append(s);
+    b.append(av, bd, v);
+    b.onclick = () => openPerson(p);
+    host.append(b);
+  });
+  document.getElementById("ppNote").textContent =
+    `${rows.length} trên ${PEOPLE.length} học viên. ` +
+    (DB ? "Một người xuất hiện ở đây sau lần đầu họ mở trang và đặt tên."
+        : "Bản tự host không có kho chung, nên chỉ thấy học viên đã dùng trình duyệt này.");
+}
+
+/* Tiến độ đầy đủ của một người: của mình thì lấy ngay trong bộ nhớ,
+   của người khác thì đọc từ máy chủ, và nếu mất mạng thì thử bản cục bộ. */
+async function personState(slug){
+  if(slug === rootSlug() && PROFILE.name) return S;
+  if(DB){
+    try{
+      const snap = await DB.doc("students/" + slug + "/progress/main").get();
+      if(snap.exists) return Object.assign(DEF(), snap.data());
+    }catch(e){ /* thử tiếp bản trên máy này */ }
+  }
+  try{
+    const raw = localStorage.getItem(LS + ":" + slug);
+    if(raw) return Object.assign(DEF(), JSON.parse(raw));
+  }catch(e){ /* không có thì thôi */ }
+  return null;
+}
+
+function personCards(p, st){
+  const f = document.createDocumentFragment();
+  const s = st ? stStats(st) : p;
+  const week = st ? clampWeek(stWeekNo(st, today())) : clampWeek(p.week || 1);
+
+  const top = mkCard("Tổng quan");
+  top.append(mkStatRow([
+    [String(week), "tuần"],
+    [Number(s.hours || 0).toFixed(1), "giờ học"],
+    [String(s.days || 0), "ngày đã chốt"]
+  ]));
+  const r2 = mkStatRow([
+    [String(s.sessions || 0), "buổi luyện"],
+    [String(s.essays || 0), "bài viết"],
+    [String(s.errors || 0), "sổ lỗi"]
+  ]);
+  r2.style.marginTop = "9px";
+  top.append(r2);
+  const bits = [];
+  if(s.startDate) bits.push("Bắt đầu " + fmtDate(s.startDate));
+  bits.push(agoTxt(s.last).charAt(0).toUpperCase() + agoTxt(s.last).slice(1));
+  if(s.off) bits.push(`${s.off} ngày nghỉ`);
+  if(s.band != null) bits.push("Thi thử gần nhất " + Number(s.band).toFixed(1));
+  if(s.wband != null) bits.push("Writing 3 bài gần nhất " + Number(s.wband).toFixed(1));
+  const t = mkTiny(bits.join(" · ")); t.style.marginTop = "11px";
+  top.append(t, mkTiny(`Gốc dữ liệu: students/${p.slug}`));
+  f.append(top);
+
+  if(!st){
+    const c = mkCard("Chi tiết");
+    c.append(mkEmpty("Không mở được tiến độ đầy đủ của người này — máy chủ không trả về dữ liệu, và máy này cũng không có bản sao. Phần tóm tắt ở trên vẫn là số thật, lấy từ dòng người đó tự ghi."));
+    f.append(c);
+    return f;
+  }
+
+  // giờ học 12 tuần gần nhất
+  const ch = mkCard("Giờ học 12 tuần gần nhất");
+  const chart = document.createElement("div"); chart.className = "chart";
+  const from = Math.max(1, week - 11);
+  let max = 12;
+  for(let w = from; w <= from + 11; w++) max = Math.max(max, stWeekHours(st, w));
+  for(let w = from; w <= from + 11; w++){
+    const h = stWeekHours(st, w);
+    const bar = document.createElement("div"); bar.className = "bar";
+    const i = document.createElement("i");
+    i.style.height = Math.max(2, h / max * 78) + "px";
+    if(h < 8) i.classList.add("low");
+    i.title = `Tuần ${w}: ${h} giờ`;
+    const sp = document.createElement("span"); sp.textContent = w;
+    bar.append(i, sp); chart.append(bar);
+  }
+  ch.append(chart, mkTiny("Mục tiêu 12 giờ mỗi tuần. Cột xám là tuần dưới 8 giờ."));
+  f.append(ch);
+
+  // ngày đã chốt
+  const dd = st.dayDone || {};
+  const dkeys = Object.keys(dd).sort().reverse();
+  const dc = mkCard("Ngày đã chốt");
+  if(!dkeys.length) dc.append(mkEmpty("Chưa chốt ngày nào."));
+  dkeys.slice(0, 24).forEach(k => {
+    const rec = dd[k] || {};
+    const note = rec.off ? "Nghỉ"
+      : rec.late ? "Chốt bù"
+      : (rec.n != null ? `Xong ${rec.n}/${rec.t} block` : "Đã học");
+    dc.append(mkLog(rec.off ? "var(--line-2)" : "var(--ok)", fmtShort(k),
+      rec.off ? "—" : Number(rec.h || 0).toFixed(1) + "h", note));
+  });
+  if(dkeys.length > 24) dc.append(mkTiny(`Hiện 24 ngày gần nhất trên tổng ${dkeys.length}.`));
+  f.append(dc);
+
+  // buổi luyện từng kỹ năng
+  const ses = (st.sessions || []).slice().reverse();
+  const sc = mkCard("Buổi luyện gần nhất");
+  if(!ses.length) sc.append(mkEmpty("Chưa ghi buổi luyện nào."));
+  ses.slice(0, 24).forEach(x => {
+    const info = SKINFO[x.k];
+    sc.append(mkLog(info ? info.rail : "var(--sk-v)", fmtShort(x.d),
+      sessionLabel(x), `${info ? info.name : x.k} · tuần ${x.w}`));
+  });
+  if(ses.length > 24) sc.append(mkTiny(`Hiện 24 buổi gần nhất trên tổng ${ses.length}.`));
+  f.append(sc);
+
+  // điểm bài viết
+  const es = (st.essays || []).slice();
+  const wc = mkCard("Điểm bài viết");
+  if(!es.length) wc.append(mkEmpty("Chưa có bài viết nào được chấm."));
+  else {
+    const vals = es.filter(e => e.band != null).slice(-14).map(e => Number(e.band));
+    if(vals.length >= 3){
+      const sp = document.createElement("div"); sp.className = "spark";
+      vals.forEach(v => {
+        const i = document.createElement("i");
+        i.style.height = Math.max(2, (v / 9) * 42) + "px";
+        i.title = "band " + v;
+        sp.append(i);
+      });
+      wc.append(sp, mkTiny("Điểm " + vals.length + " bài gần nhất, thang 9.0"));
+    }
+    es.slice().reverse().slice(0, 16).forEach(x => {
+      wc.append(mkLog("var(--sk-w)", fmtShort(x.d),
+        x.band != null ? Number(x.band).toFixed(1) : "—",
+        `${x.type === "letter" ? "Thư" : "Bài luận"} · ${x.words || 0} từ · tuần ${x.w}`));
+    });
+  }
+  f.append(wc);
+
+  // thi thử
+  const mocks = (st.mocks || []).slice().reverse();
+  const mc = mkCard("Điểm thi thử");
+  if(!mocks.length) mc.append(mkEmpty("Chưa có bài thi thử nào."));
+  else {
+    const sc2 = document.createElement("div"); sc2.className = "tbl-scroll";
+    const tbl = document.createElement("table");
+    const thead = document.createElement("thead");
+    const htr = document.createElement("tr");
+    ["Ngày", "L", "R", "W", "S", "Tổng"].forEach((h, ix) => {
+      const th = document.createElement("th");
+      if(ix > 0) th.className = "num";
+      th.textContent = h; htr.append(th);
+    });
+    thead.append(htr);
+    const tb = document.createElement("tbody");
+    mocks.forEach(m => {
+      const band = Math.round((m.l + m.r + m.w + m.s) / 4 * 2) / 2;
+      const tr = document.createElement("tr");
+      [m.d, m.l.toFixed(1), m.r.toFixed(1), m.w.toFixed(1), m.s.toFixed(1), band.toFixed(1)]
+        .forEach((v, ix) => {
+          const td = document.createElement("td");
+          if(ix > 0) td.className = "num";
+          if(ix === 5) td.style.fontWeight = "700";
+          td.textContent = v; tr.append(td);
+        });
+      tb.append(tr);
+    });
+    tbl.append(thead, tb); sc2.append(tbl); mc.append(sc2);
+  }
+  f.append(mc);
+  return f;
+}
+
+async function openPerson(p){
+  document.getElementById("ppHome").hidden = true;
+  document.getElementById("ppView").hidden = false;
+  document.getElementById("ppTitle").textContent = p.name || p.slug;
+  const body = document.getElementById("ppBody");
+  body.textContent = "";
+  body.append(mkEmpty("Đang mở lịch sử…"));
+  window.scrollTo({top:0, behavior:"instant"});
+  const st = await personState(p.slug);
+  body.textContent = "";
+  body.append(personCards(p, st));
+}
+
+async function openPeopleTab(){
+  document.getElementById("ppView").hidden = true;
+  document.getElementById("ppHome").hidden = false;
+  if(!ppLoaded){
+    const host = document.getElementById("ppList");
+    host.textContent = "";
+    host.append(mkEmpty("Đang tải danh sách…"));
+    await loadPeople();
+  } else if(PROFILE.name){
+    const me = rosterRec();
+    const ix = PEOPLE.findIndex(x => x.slug === me.slug);
+    if(ix >= 0) PEOPLE[ix] = Object.assign({}, PEOPLE[ix], me); else PEOPLE.push(me);
+  }
+  renderPeople();
+}
+
+/* =========================================================
    5. TƯƠNG TÁC
    ========================================================= */
 document.querySelectorAll("nav button[data-go]").forEach(b => {
@@ -2129,8 +2856,32 @@ document.querySelectorAll("nav button[data-go]").forEach(b => {
     document.querySelectorAll(".panel").forEach(p => p.classList.remove("on"));
     document.getElementById("p-" + b.dataset.go).classList.add("on");
     window.scrollTo({top:0, behavior:"instant"});
+    if(b.dataset.go === "people") openPeopleTab();
   };
 });
+
+/* --- Lịch sử học viên --- */
+document.getElementById("ppBack").onclick = () => {
+  document.getElementById("ppView").hidden = true;
+  document.getElementById("ppHome").hidden = false;
+  window.scrollTo({top:0, behavior:"instant"});
+};
+document.getElementById("ppQ").oninput = renderPeople;
+document.querySelectorAll("#ppSort button").forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll("#ppSort button").forEach(x => x.setAttribute("aria-pressed", "false"));
+    b.setAttribute("aria-pressed", "true");
+    ppSort = b.dataset.s;
+    renderPeople();
+  };
+});
+document.getElementById("ppRefresh").onclick = async () => {
+  const btn = document.getElementById("ppRefresh");
+  btn.disabled = true; btn.textContent = "Đang tải…";
+  await loadPeople();
+  renderPeople();
+  btn.disabled = false; btn.textContent = "Tải lại danh sách";
+};
 
 /* --- Luyện tập: điều hướng, đồng hồ, ghi kết quả --- */
 document.getElementById("skBack").onclick = closeSkill;
@@ -2228,11 +2979,12 @@ document.getElementById("gSave").onclick = () => {
 function exportBundle(){
   return {
     app: "ielts-companion",
-    schema: 1,
+    schema: 2,
     exportedAt: new Date().toISOString(),
     note: "Lich su tu hoc IELTS General Training 3.0 -> 5.5, 40 tuan.",
+    student: {name: PROFILE.name, slug: rootSlug()},
     startDate: S.startDate,
-    blocks: S.blocks, hours: S.hours, vocab: S.vocab, shortDays: S.shortDays,
+    blocks: S.blocks, hours: S.hours, vocab: S.vocab, shortDays: S.shortDays, dayDone: S.dayDone,
     mocks: S.mocks, errors: S.errors, sessions: S.sessions, essays: S.essays,
     essayBodies: localEssayBodies()
   };
@@ -2242,6 +2994,8 @@ function renderExportStats(){
   const host = document.getElementById("expStats");
   host.textContent = "";
   const rows = [
+    ["Gốc dữ liệu", rootSlug()],
+    ["Ngày đã chốt", Object.keys(S.dayDone).length],
     ["Ngày đã đánh dấu", new Set(Object.keys(S.blocks).map(k => k.split(":")[0])).size],
     ["Ngày có ghi giờ học", Object.keys(S.hours).length],
     ["Buổi luyện đã ghi", S.sessions.length],
@@ -2264,7 +3018,7 @@ function renderExportStats(){
 document.getElementById("expBtn").onclick = async () => {
   const msg = document.getElementById("expMsg");
   const data = JSON.stringify(exportBundle(), null, 2);
-  const name = `ielts-lich-su-${iso(today())}.json`;
+  const name = `ielts-${rootSlug()}-${iso(today())}.json`;
   if(downloadsFn){
     try{
       await downloadsFn.save({filename: name, data});
@@ -2303,16 +3057,18 @@ document.getElementById("impFile").onchange = ev => {
       msg.textContent = "Đây không phải file lịch sử của trang này.";
       return;
     }
-    if(!confirm("Nhập dữ liệu từ file sẽ thay thế toàn bộ tiến độ hiện tại. Tiếp tục?")) return;
+    const who = d.student && d.student.name ? d.student.name : "không ghi tên";
+    if(!confirm(`File này của học viên: ${who}.\n\nNhập vào gốc "${rootSlug()}" sẽ thay thế toàn bộ tiến độ hiện tại ở đó. Tiếp tục?`)) return;
 
     S = Object.assign(DEF(), {
       startDate: d.startDate || S.startDate,
       blocks: d.blocks || {}, hours: d.hours || {}, vocab: d.vocab || {},
-      shortDays: d.shortDays || {}, mocks: d.mocks || [], errors: d.errors || [],
+      shortDays: d.shortDays || {}, dayDone: d.dayDone || {},
+      mocks: d.mocks || [], errors: d.errors || [],
       sessions: d.sessions || [], essays: d.essays || []
     });
     if(d.essayBodies){
-      try{ localStorage.setItem(LSE, JSON.stringify(d.essayBodies)); }catch(e){ /* bỏ qua */ }
+      try{ localStorage.setItem(lsEssayKey(), JSON.stringify(d.essayBodies)); }catch(e){ /* bỏ qua */ }
     }
     save(); renderAll(); renderExportStats();
     msg.textContent = `Đã nhập xong: ${S.sessions.length} buổi luyện, ${S.essays.length} bài viết, ${S.errors.length} mục sổ lỗi.`;
@@ -2358,6 +3114,22 @@ document.getElementById("inWords").oninput = e => {
   save();
   document.getElementById("sWords").textContent = Object.values(S.vocab).reduce((a,b) => a + Number(b || 0), 0);
 };
+document.getElementById("suSave").onclick = () => {
+  const ok = applyProfile(document.getElementById("suName").value,
+                          document.getElementById("suStart").value);
+  if(!ok){ document.getElementById("suNote").textContent = "Nhập tên trước đã."; return; }
+  renderAll(); renderExportStats(); renderRootNote();
+};
+document.getElementById("inName").onchange = e => {
+  const clean = e.target.value.trim();
+  if(!clean){ e.target.value = PROFILE.name; return; }
+  if(slugify(clean) === PROFILE.slug){ PROFILE.name = clean; saveProfile(); renderWho(); return; }
+  if(!confirm(`Chuyển toàn bộ tiến độ hiện tại sang gốc "${slugify(clean)}"?`)){
+    e.target.value = PROFILE.name; return;
+  }
+  applyProfile(clean, null);
+  renderAll(); renderExportStats(); renderRootNote();
+};
 document.getElementById("inStart").onchange = e => {
   if(!e.target.value) return;
   S.startDate = iso(mondayOf(parseISO(e.target.value)));
@@ -2382,6 +3154,11 @@ document.getElementById("erAdd").onclick = () => {
   });
   ["erWrong","erRight","erNote"].forEach(id => document.getElementById(id).value = "");
   save(); renderProgress();
+};
+document.getElementById("gateAllOff").onclick = () => {
+  if(!confirm("Đánh dấu tất cả những ngày còn treo là ngày nghỉ?")) return;
+  pendingDays().forEach(x => { S.dayDone[x.k] = {off: 1}; });
+  save(); renderToday(); renderHeader();
 };
 document.getElementById("btnReset").onclick = () => {
   if(!confirm("Xóa toàn bộ tiến độ, sổ lỗi và điểm thi thử? Không thể hoàn tác.")) return;
@@ -2575,8 +3352,12 @@ document.getElementById("gStop").onclick = () => gCtl?.abort();
 /* =========================================================
    6. KHỞI ĐỘNG
    ========================================================= */
+loadProfile();
 loadLocal();
 renderAll(); renderRes(); renderDocList(); newCue(); tmReset(); setGMode("essay");
+renderRootNote();
+writeRoster(false);
+document.getElementById("inName").value = PROFILE.name;
 
 (async function boot(){
   if(typeof window.claude?.use !== "function"){
@@ -2601,19 +3382,30 @@ renderAll(); renderRes(); renderDocList(); newCue(); tmReset(); setGMode("essay"
   try{
     DB = await claude.use("db");
     if(!DB){ setSync(false, "Lưu trên máy này"); return; }
-    const snap = await DB.doc("progress/main").get();
+    let snap = await dbProgress().get();
+    if(!snap.exists){
+      // Bản cũ lưu chung ở progress/main, chưa chia theo học viên. Rước sang một lần.
+      try{
+        const legacy = await DB.doc("progress/main").get();
+        if(legacy.exists){
+          await dbProgress().set(JSON.parse(JSON.stringify(legacy.data())));
+          snap = await dbProgress().get();
+        }
+      }catch(e){ /* không có bản cũ thì thôi */ }
+    }
     if(snap.exists){
       const remote = snap.data();
       const localCount = Object.keys(S.blocks).length + Object.keys(S.hours).length;
       const remoteCount = Object.keys(remote.blocks || {}).length + Object.keys(remote.hours || {}).length;
       if(remoteCount >= localCount){ S = Object.assign(DEF(), remote); saveLocal(); }
-      else { await DB.doc("progress/main").set(JSON.parse(JSON.stringify(S))); }
+      else { await dbProgress().set(JSON.parse(JSON.stringify(S))); }
       renderAll();
     } else {
-      await DB.doc("progress/main").set(JSON.parse(JSON.stringify(S)));
+      await dbProgress().set(JSON.parse(JSON.stringify(S)));
     }
-    setSync(true, "Đồng bộ giữa các thiết bị");
-    DB.doc("progress/main").onSnapshot(snap => {
+    setSync(true, `Đồng bộ giữa các thiết bị · students/${rootSlug()}`);
+    writeRoster(true);   // ghi danh vào danh bạ chung để tab Lịch sử thấy
+    dbProgress().onSnapshot(snap => {
       if(!snap.exists || snap.metadata.hasPendingWrites) return;
       S = Object.assign(DEF(), snap.data()); saveLocal(); renderAll();
     }, () => setSync(false, "Mất kết nối đồng bộ"));
