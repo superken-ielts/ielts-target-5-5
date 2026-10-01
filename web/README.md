@@ -69,6 +69,24 @@ Nút **Tải file JSON** ở tab Tiến độ gom tất cả lại thành một 
 nội dung bài viết. Nút **Nhập lại** đọc ngược file đó về — dùng khi đổi máy, hoặc khi
 muốn quay lại một bản sao lưu cũ.
 
+### Hai mức xóa
+
+| Nút | Ở đâu | Xóa gì | Giữ gì |
+|---|---|---|---|
+| **Xóa toàn bộ tiến độ** | Tiến độ → Thiết lập khác | Ngày đã chốt, giờ học, từ vựng, buổi luyện, điểm thi thử, sổ lỗi, danh sách bài viết | Tên học viên, ngày bắt đầu, phần chữ của các bài viết cũ, dòng trong tab Lịch sử (về 0) |
+| **Xóa hẳn học viên** | Tiến độ → Học viên, và trong từng người ở tab Lịch sử | Tất cả những thứ trên, cộng hồ sơ, toàn bộ nội dung bài viết kèm nhận xét, và dòng trong danh bạ — cả `localStorage` lẫn `students/<slug>/…` và `roster/<slug>` trên máy chủ | Không gì cả |
+
+Mức thứ hai bắt **gõ đúng tên học viên** mới mở khóa nút xóa, và mời tải file JSON về
+trước. Nó cũng dọn luôn những bài viết mồ côi — phần chữ còn sót lại sau một lần xóa
+tiến độ trước đó, vốn không còn đường nào mở lại trong trang.
+
+Xóa chính mình thì trang quay về màn đặt tên như lần đầu mở. Xóa người khác từ tab Lịch
+sử thì chỉ dòng của họ biến mất; nếu chính họ mở lại trang trên máy của họ, bản sao cục
+bộ bên đó sẽ dựng lại dòng danh bạ — trang có ghi rõ điều này ngay tại nút xóa.
+
+Lưu ý cho bản đăng trên Claude: **xóa dữ liệu duyệt web của trình duyệt là vô ích**, vì
+mở lại trang là bản trên máy chủ tự tải xuống. Phải dùng đúng nút trong trang.
+
 ## Ba file, ba vai trò
 
 | File | Vai trò |

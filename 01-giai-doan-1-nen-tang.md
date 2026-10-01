@@ -147,7 +147,7 @@ bộ — là nguyên nhân thất bại phổ biến của người tự học. 
 | Listening | VOA Learning English Level 1 → Level 2 | BBC 6 Minute English + ELLLO |
 | Reading | Breaking News English Level 2 → Level 4 | Breaking News English Level 5 → Level 6 |
 | Writing | Câu đơn (tuần 1–4) → đoạn 80 từ (tuần 5–7) | Đoạn 80 từ (tuần 8) → đoạn 120 từ (tuần 9–12) |
-| Speaking | Shadowing + nói về chủ đề quen thuộc (tuần 1–6) | Câu hỏi Part 1 của ieltsliz.com (tuần 7–12) |
+| Speaking | British Council Speaking A1 — mỗi tuần 1 bài có video, kèm shadowing. Câu hỏi Part 1 xuất hiện lẻ tẻ từ tuần 3. | British Council Speaking A2 → B1. Part 1 thành việc hằng ngày từ tuần 7, cue card Part 2 từ tuần 9. |
 | Từ vựng | Oxford 3000 mức A1 → A2 | Oxford 3000 mức A2 → B1 |
 | Ngữ pháp | British Council + Perfect English Grammar (miễn phí, đủ dùng). Tùy chọn: Essential Grammar in Use bản đỏ | như trên |
 
@@ -199,8 +199,11 @@ bỏ ra trọn một buổi.
 
 - [ ] Cài Anki, tải deck "Oxford 3000", đặt giới hạn 10 thẻ mới mỗi ngày
 - [ ] Tạo tài khoản writeandimprove.com
-- [ ] Đánh dấu trang: ieltsliz.com, breakingnewsenglish.com, learningenglish.voanews.com,
-      bbc.co.uk/learningenglish, mini-ielts.com, ieltsonlinetests.com
+- [ ] Đánh dấu trang: learnenglish.britishcouncil.org/skills/speaking,
+      breakingnewsenglish.com, learningenglish.voanews.com, bbc.co.uk/learningenglish,
+      mini-ielts.com, ieltsonlinetests.com
+- [ ] Tải về máy [bộ 26 chủ đề Speaking Part 1 dạng PDF](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
+      của IELTS Liz — dùng từ tuần 7, tải sớm để khỏi phụ thuộc đường dẫn về sau
 - [ ] Tải bộ Cambridge IELTS **General Training** (tìm "Cambridge IELTS General Training
       16 PDF") — chưa dùng, để dành đến tuần 19
 - [ ] Lập sổ lỗi theo mẫu [templates/so-loi.md](templates/so-loi.md)
@@ -364,7 +367,7 @@ hỏi IELTS thật.
 | Listening | VOA Level 2 — tuần cuối dùng VOA. Chép chính tả 10 phút/ngày. |
 | Reading | Breaking News English Level 4–5 |
 | Writing | 1 đoạn 80 từ mỗi buổi, chủ đề so sánh hai thứ (hai thành phố, hai công việc, hai cách di chuyển) |
-| Speaking | Shadowing 15 phút. **Bắt đầu trả lời câu hỏi Part 1 của ieltsliz.com**: 3 câu mỗi buổi, mỗi câu cố nói 30 giây, có ghi âm. |
+| Speaking | Shadowing 15 phút. **Bắt đầu trả lời câu hỏi Part 1** lấy từ [bộ 26 chủ đề PDF của IELTS Liz](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf): 3 câu mỗi buổi, mỗi câu cố nói 30 giây, có ghi âm. |
 
 Speaking chuyển từ "nói về chủ đề quen thuộc" sang câu hỏi Part 1 thật ở tuần này, sớm
 hơn phần dạng bài của các kỹ năng khác. Lý do là Speaking là kỹ năng lên chậm nhất và
@@ -490,7 +493,7 @@ tiêu chí này chấm việc ý có nối được với nhau hay không, khôn
 | Listening | BBC + **1 bài IELTS Listening Section 1** để làm quen định dạng, không đặt mục tiêu điểm |
 | Reading | **1 bài GT Reading Section 1** từ mini-ielts.com, **không bấm giờ, được tra từ thoải mái** |
 | Writing | 1 đoạn 120 từ mỗi buổi, tự chấm bằng [templates/checklist-writing.md](templates/checklist-writing.md) |
-| Speaking | Nói 90 giây về một cue card Part 2 lấy từ ieltsliz.com, có ghi âm |
+| Speaking | Nói 90 giây về một [cue card Part 2](https://ieltsliz.com/ielts-speaking-part-2-topics/), có ghi âm |
 
 **Mười hai điểm ngữ pháp lõi cần thuộc ở cuối tuần 12:**
 

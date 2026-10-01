@@ -90,7 +90,7 @@ nói lại chỉ là luyện cho thành thục chính những lỗi của mình.
 
 Đánh dấu đề đã luyện để không lặp lại quá nhiều và đảm bảo phủ hết các chủ đề.
 
-**Part 2 — 6 nhóm chủ đề chính** (lấy đề từ ieltsliz.com)
+**Part 2 — 6 nhóm chủ đề chính** (lấy đề từ https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 | Nhóm | Số đề đã luyện | Ghi chú |
 |---|---|---|

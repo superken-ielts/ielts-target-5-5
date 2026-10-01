@@ -527,7 +527,7 @@ nghĩ mà vẫn giữ được dòng chảy của bài nói.
 
 Block C, 30 phút, mọi ngày từ thứ Hai đến thứ Bảy, không đổi sang việc khác:
 
-1. Shadowing 10 phút (BBC hoặc kênh IELTS Speaking Success)
+1. Shadowing 10 phút (BBC hoặc kênh YouTube English Speaking Success)
 2. Chọn 1 đề, chuẩn bị 1 phút, **ghi âm** 2 phút
 3. Nghe lại bản ghi và ghi ra ba con số: số lần dừng quá 3 giây, số lỗi ngữ pháp nghe
    được, những từ bị lặp nhiều lần

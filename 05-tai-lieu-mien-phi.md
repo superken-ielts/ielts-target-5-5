@@ -23,7 +23,7 @@ Năm thứ này là xương sống. Cài đặt và đánh dấu hết trong ng�
 | 1 | **Anki** | Học và ôn từ vựng theo thuật toán lặp lại ngắt quãng | apps.ankiweb.net — miễn phí trên máy tính, Android và web. Bản iOS có phí; nếu dùng iPhone thì học qua trình duyệt tại ankiweb.net hoặc dùng Quizlet thay thế. |
 | 2 | **Cambridge IELTS 10 → 19, bản General Training** | Nguồn đề thi thật, dùng từ tuần 13 | Bộ sách có **bản General Training riêng**, không phải bản Academic. Tìm theo tên "Cambridge IELTS General Training PDF" hoặc "Cambridge IELTS 18 General Training PDF audio". Phần Listening và Speaking của hai bản giống nhau; Reading và Writing Task 1 thì khác hoàn toàn. |
 | 3 | **Write & Improve (Cambridge)** | Chấm bài viết tự động, cho điểm ước lượng theo thang CEFR và chỉ ra lỗi | writeandimprove.com — **công cụ giá trị nhất trong toàn bộ danh sách đối với người yếu Writing.** Nộp bài, nhận phản hồi trong vài giây, viết lại, nộp lại. |
-| 4 | **IELTS Liz** | Kho hướng dẫn dạng bài, đề mẫu, bài mẫu cho cả 4 kỹ năng | ieltsliz.com — miễn phí toàn bộ phần blog. Nguồn hướng dẫn dạng bài rõ ràng và đáng tin nhất cho người mới. |
+| 4 | **IELTS Liz** | Ngân hàng đề Speaking và hướng dẫn dạng bài Writing | ieltsliz.com — phần chữ vẫn miễn phí toàn bộ, nhưng **phần video miễn phí gần như không còn** và trang chủ đẩy mạnh khóa trả phí. Dùng đúng những địa chỉ ghi ở mục G và mục F bên dưới, đừng vào trang chủ mò. |
 | 5 | **Sổ lỗi** | Ghi lại mọi lỗi sai và ôn lại hằng tuần | Sổ giấy hoặc file. Mẫu ở [templates/so-loi.md](templates/so-loi.md) |
 
 ---
@@ -174,7 +174,7 @@ Lượt 3 là lượt tạo ra tiến bộ. Người tự học thường bỏ �
 |---|---|---|
 | **Write & Improve** | writeandimprove.com — nộp bài, nhận điểm CEFR và phản hồi lỗi ngay lập tức, không giới hạn số lần. Có sẵn đề IELTS trong phần "IELTS Writing". | **Cao nhất.** Đây là thứ thay thế được giáo viên chấm bài. Dùng mỗi bài viết. |
 | **IELTS Simon** | ielts-simon.com — blog của một cựu giám khảo IELTS. Kho bài cũ miễn phí chứa hàng trăm bài mẫu band 7–8 kèm phân tích. Đọc bài mẫu của Simon để hiểu bố cục, đừng học thuộc. | Cao |
-| **IELTS Liz — Writing** | ieltsliz.com — có **mục riêng cho GT Writing Task 1 (letter writing)**: danh sách đề thư đã ra, bài mẫu cho cả ba mức trang trọng, và bộ mẫu câu mở đầu. Vào đúng mục đó thay vì mục Academic Task 1. | Cao |
+| **IELTS Liz — GT letter** | [ieltsliz.com/ielts-letter-writing-essential-tips](https://ieltsliz.com/ielts-letter-writing-essential-tips/) — mục riêng cho GT Writing Task 1: ba mức trang trọng, cách mở và kết từng loại, đề thư đã ra. Đây là địa chỉ đúng; đường dẫn `ielts-general-training-writing-task-1` cũ đã chết. | Cao |
 | **Grammarly (bản miễn phí)** | grammarly.com — bắt lỗi chính tả, mạo từ, dấu câu. Dùng **sau khi** đã tự soát bài, không dùng thay việc tự soát. | Trung bình |
 | **Claude / ChatGPT** | Dùng làm người chấm bài: dán bài viết và yêu cầu "chấm bài này theo 4 tiêu chí IELTS Writing, cho điểm từng tiêu chí, liệt kê 5 lỗi nghiêm trọng nhất và viết lại 3 câu sai nhất". Cho phản hồi chi tiết hơn Write & Improve. | Cao |
 | **IELTS Advantage** | ieltsadvantage.com — nhiều bài hướng dẫn cấu trúc bài viết miễn phí | Trung bình |
@@ -215,16 +215,64 @@ có đủ 150 từ không, ghi rõ số từ; (4) năm lỗi ngữ pháp nghiêm
 
 ## G. Speaking — phần khó tự học nhất
 
+> **Đã đổi nguồn ngày 30/09/2026.** Hai chuyện đã xảy ra với IELTS Liz. Một là trang
+> tổng hợp Speaking của họ giờ chỉ còn đúng **một** video nhúng, nên không còn đủ để
+> gọi là nguồn video. Hai là địa chỉ `ieltsliz.com/ielts-speaking-part-1/` mà lộ trình
+> dùng ở 19 ngày học nay **bị chuyển hướng về một trang chủ đề lẻ** (Camping) — vẫn trả
+> về mã 200 nên không công cụ dò link nào báo hỏng, nhưng bấm vào thì không ra danh
+> sách câu hỏi như lời hứa trong giáo án.
+>
+> Nguồn video chuyển sang British Council. IELTS Liz vẫn là ngân hàng đề, nhưng lấy
+> qua **file PDF tải về** thay vì trang web — file PDF không bị đổi đường dẫn.
+
 | Tài liệu | Mô tả |
 |---|---|
-| **IELTS Liz — Speaking** | ieltsliz.com — danh sách đầy đủ câu hỏi Part 1, đề Part 2 (cue card) và câu hỏi Part 3 theo chủ đề. Đây là ngân hàng đề chính. |
+| **British Council — Speaking A1 / A2 / B1** | [learnenglish.britishcouncil.org/skills/speaking](https://learnenglish.britishcouncil.org/skills/speaking) — 15 bài, mỗi bài gồm **một video hội thoại ngắn, transcript đầy đủ và 3 bài tập tự chấm**, chia đúng theo trình độ A1 → B1. Đây là **nguồn video chính** của lộ trình. Giáo án giai đoạn 1 đã gắn sẵn mỗi tuần một bài, đi từ A1 tuần 1 lên B1 tuần 12. |
+| **IELTS Liz — 26 chủ đề Part 1 (PDF)** | Tải [file PDF 6 trang](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf) từ trang [ielts-speaking-part-1-topics](https://ieltsliz.com/ielts-speaking-part-1-topics/). Bốn chủ đề chính (Work, Study, Hometown, Home) cộng 22 chủ đề thường gặp, mỗi chủ đề khoảng 10 câu. **Ngân hàng đề Part 1 chính.** Tải về một lần rồi dùng offline. |
+| **IELTS Liz — Part 2 và Part 3** | [30 cue card Part 2](https://ieltsliz.com/ielts-speaking-part-2-topics/) và [câu hỏi Part 3](https://ieltsliz.com/ielts-speaking-part-3-topics-2/) theo chủ đề. Dùng từ tuần 9 trở đi, khi bắt đầu nói 90 giây. |
 | **Điện thoại của bạn** | Ứng dụng ghi âm có sẵn. **Công cụ Speaking quan trọng nhất.** Ghi âm — nghe lại — ghi ra lỗi — nói lại. Không có bước nghe lại thì không có tiến bộ. |
 | **Claude / ChatGPT ở chế độ voice** | Đóng vai giám khảo IELTS, hỏi và cho phản hồi. Dòng lệnh: *"Hãy đóng vai giám khảo IELTS Speaking. Hỏi tôi Part 1 về chủ đề [X], mỗi lần một câu, chờ tôi trả lời. Sau 5 câu, chấm điểm 4 tiêu chí và chỉ ra lỗi."* |
 | **ELSA Speak** | Bản miễn phí có giới hạn số bài mỗi ngày nhưng đủ dùng. Chấm phát âm từng âm tiết, chỉ ra âm nào phát âm sai. Rất hợp với người Việt vì bắt được các lỗi âm cuối. |
 | **Speechling** | speechling.com — bản miễn phí cho phép nộp một số bản ghi âm mỗi tháng và được **người thật** sửa. |
 | **HelloTalk / Tandem** | Ứng dụng miễn phí kết nối người học ngôn ngữ. Nhắn tin và gọi thoại với người bản xứ đang học tiếng Việt. Miễn phí hoàn toàn cho chức năng cơ bản. |
 | **YouGlish** | youglish.com — nghe cách phát âm một từ trong ngữ cảnh thật |
-| **Kênh YouTube "IELTS Speaking Success"** (Keith O'Hare) | Nhiều video mô phỏng thi thật với thí sinh ở nhiều band khác nhau. Xem video band 5.5 để biết đích của mình trông như thế nào. |
+| **Oxford Online English** | [oxfordonlineenglish.com](https://www.oxfordonlineenglish.com/free-spoken-english-lessons) — bài nói theo từng tình huống, mỗi bài một video **nhúng qua YouTube** kèm script đầy đủ và quiz. Dùng làm bản dự phòng khi video British Council không chạy; bảng dưới ghi rõ tuần nào dùng bài nào. |
+| **Kênh YouTube "English Speaking Success"** (Keith O'Hare) | [youtube.com/@EnglishSpeakingSuccess](https://www.youtube.com/@EnglishSpeakingSuccess) — video mô phỏng thi thật với thí sinh ở nhiều band, có nhận xét của giám khảo ở cuối. Xem video band 5–6 để biết đích của mình trông như thế nào. **Tên kênh là _English_ Speaking Success**, không phải "IELTS Speaking Success" như các bản lộ trình trước ghi nhầm. |
+
+
+### Bài nói British Council dùng ở tuần nào
+
+Mỗi tuần một bài, dùng lại suốt sáu ngày của tuần đó: ngày đầu xem video và làm ba
+bài tập, những ngày sau lấy đúng cụm vừa học ra dùng trong bài nói của mình. Đây là
+bài **chức năng giao tiếp**, không phải bài ngữ pháp — phần ngữ pháp của tuần nằm ở
+cột riêng. Giáo án từng ngày đã gắn sẵn link, bảng này chỉ để tra nhanh.
+
+**Nếu video British Council hiện khung mà bấm không chạy**, đó là máy chủ video của họ
+bị chặn, không phải lỗi máy bạn. Phần chữ của bài vẫn dùng được bình thường: transcript
+nằm ngay trong trang, ba bài tập vẫn tự chấm được, và có file worksheet PDF tải về tại
+`learnenglish.britishcouncil.org/sites/podcasts/files/…`. Còn muốn xem video thì dùng
+cột **Dự phòng** — Oxford Online English nhúng video qua YouTube nên xem được, và trang
+của họ cũng có script đầy đủ. Mọi video ở cột đó đã kiểm tra còn sống ngày 01/10/2026.
+
+| Tuần | Bài British Council | Khớp với việc gì của tuần | Dự phòng (chạy qua YouTube) |
+|---|---|---|---|
+| 1 | [Talking about where you're from](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre) · A1 | Ngày 2 ghi âm về hometown | [Nói về quê mình](https://www.oxfordonlineenglish.com/talking-about-hometown) |
+| 2 | [Talking about other people](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · A1 | Quá khứ đơn — kể về người | [Tả một người](https://www.oxfordonlineenglish.com/describe-people-english) |
+| 3 | [Meeting new people](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · A1 | Hiện tại hoàn thành, 'Have you ever…' | [Chào hỏi và giới thiệu](https://www.oxfordonlineenglish.com/greetings-introductions) |
+| 4 | [Checking understanding](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · A1 | Mốc tháng 1 — nói 45 giây | [Nghe không kịp thì làm gì](https://www.oxfordonlineenglish.com/understand-native-speakers) |
+| 5 | [Making suggestions](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · A1 | Chủ đề đồ ăn, thời gian rảnh | [Đưa ra gợi ý](https://www.oxfordonlineenglish.com/making-suggestions-in-english) |
+| 6 | [Talking about your job](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · A2 | Cả tuần nói về công việc | [Nói về công việc](https://www.oxfordonlineenglish.com/talking-about-job) |
+| 7 | [Talking about personal interests](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · A2 | So sánh hơn | [Thời gian rảnh và sở thích](https://www.oxfordonlineenglish.com/free-time-and-hobbies) |
+| 8 | [Showing interest](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · A2 | Tuần đổi sang nghe tốc độ thật | [Nghe chủ động, biết đáp lại](https://www.oxfordonlineenglish.com/active-listening) |
+| 9 | [Giving instructions](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · A2 | Mệnh đề quan hệ, bắt đầu Part 2 | [Tả một bức ảnh](https://www.oxfordonlineenglish.com/describe-pictures) |
+| 10 | [Asking a favour](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · B1 | Câu điều kiện, đề nghị lịch sự | [Modal verb — khuyên và đề nghị](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) |
+| 11 | [Keeping a conversation going](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · B1 | Mốc nói 90 giây | [Nói chuyện không đứt mạch](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) |
+| 12 | [Meeting face-to-face](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · B1 | Tổng ôn cuối giai đoạn 1 | [Bắt chuyện xã giao](https://www.oxfordonlineenglish.com/how-to-make-small-talk) |
+
+Ba bài còn lại của bộ 15 để dành cho giai đoạn 2, khi vào Part 3:
+[Agreeing and disagreeing](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/agreeing-disagreeing) và
+[Responding to news](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/responding-news) (B1), cùng
+[Apologising](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/apologising) (A2) cho các tình huống nơi làm việc.
 
 **Kỹ thuật shadowing** — kỹ thuật tạo tiến bộ nhanh nhất cho phát âm và độ trôi chảy:
 
@@ -264,9 +312,9 @@ củng cố 27–34, luyện đề 35–40.
 
 | Tuần | Từ vựng | Ngữ pháp | Listening | Reading | Writing | Speaking |
 |---|---|---|---|---|---|---|
-| 1–6 | Oxford 3000 (A1–A2) qua Anki, 10 từ/ngày | British Council + Perfect English Grammar | VOA Level 1–2, esl-lab | Breaking News English Lv 2–3 | Viết câu đúng ngữ pháp, Write & Improve | Shadowing VOA, ghi âm hằng ngày |
-| 7–12 | Oxford 3000 (A2–B1) | British Council + engVid, xong 12 điểm ngữ pháp lõi | BBC 6 Minute English, ELLLO | Breaking News English Lv 4–5, News in Levels | Viết đoạn 80–100 từ, Write & Improve | Shadowing BBC, trả lời Part 1 |
-| 13–26 | Oxford 3000 (B1) + từ đời sống và nơi làm việc | Ôn lại theo sổ lỗi | mini-ielts, Cambridge (Listening dùng chung cho GT) | mini-ielts và ieltsonlinetests **mục GT**, Cambridge GT | IELTS Liz mục GT letter + Simon (Task 2) + AI chấm | IELTS Liz cue cards, AI đóng vai giám khảo |
+| 1–6 | Oxford 3000 (A1–A2) qua Anki, 10 từ/ngày | British Council + Perfect English Grammar | VOA Level 1–2, esl-lab | Breaking News English Lv 2–3 | Viết câu đúng ngữ pháp, Write & Improve | British Council Speaking A1 — mỗi tuần 1 bài có video; shadowing VOA, ghi âm hằng ngày |
+| 7–12 | Oxford 3000 (A2–B1) | British Council + engVid, xong 12 điểm ngữ pháp lõi | BBC 6 Minute English, ELLLO | Breaking News English Lv 4–5, News in Levels | Viết đoạn 80–100 từ, Write & Improve | British Council Speaking A2→B1 + PDF Part 1 của IELTS Liz; từ tuần 9 thêm cue card Part 2; shadowing BBC |
+| 13–26 | Oxford 3000 (B1) + từ đời sống và nơi làm việc | Ôn lại theo sổ lỗi | mini-ielts, Cambridge (Listening dùng chung cho GT) | mini-ielts và ieltsonlinetests **mục GT**, Cambridge GT | IELTS Liz mục GT letter + Simon (Task 2) + AI chấm | Cue card Part 2 và câu hỏi Part 3 của IELTS Liz, AI đóng vai giám khảo |
 | 27–34 | Oxford 5000 (B2) + từ vựng công việc lấy từ đề GT Section 2 | Chỉ sửa 5 lỗi cố hữu | Cambridge 16–19 | Cambridge 16–19 bản GT, bấm giờ 15/17/23 phút | Viết thư đủ ba mức trang trọng + Task 2 đúng giờ, AI chấm và tự soát | Ghi âm đủ Part 1-2-3 |
 | 35–40 | Ôn lại toàn bộ, không thêm từ mới | Không học mới | Full test GT | Full test GT | Full test có bấm giờ, Task 2 trước Task 1 | Mock Speaking đầy đủ, có người thật ở tuần 38 |
 

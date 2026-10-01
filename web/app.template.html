@@ -111,6 +111,13 @@ main{padding-top:18px}
 .btn-primary:hover{filter:brightness(1.08)}
 .btn:disabled{opacity:.5; cursor:not-allowed}
 .btn-sm{padding:6px 11px; font-size:13px}
+.btn-danger{border-color:var(--danger); color:var(--danger)}
+.btn-danger:hover{background:var(--danger); border-color:var(--danger); color:#fff}
+.danger{
+  margin-top:15px; padding:13px; border:1px solid var(--danger);
+  border-radius:var(--r-sm); background:var(--sunken);
+}
+.danger .eyebrow{color:var(--danger)}
 
 .field{display:flex; flex-direction:column; gap:5px; margin-bottom:12px}
 .field label{font-size:12.5px; font-weight:600; color:var(--ink-2)}
@@ -955,6 +962,24 @@ nav button[aria-current="page"]{color:var(--accent)}
         <input class="inp" type="date" id="inStart">
       </div>
       <p class="tiny" id="rootNote">—</p>
+
+      <div class="danger" id="wipeBox">
+        <div class="eyebrow">Xóa hẳn học viên</div>
+        <p class="small muted" id="wipeWhat" style="margin-bottom:11px">—</p>
+        <button class="btn btn-sm" id="wipeBackup" style="width:100%; margin-bottom:8px">Tải file JSON trước khi xóa</button>
+        <button class="btn btn-sm btn-danger" id="wipeStart" style="width:100%">Xóa hẳn học viên này</button>
+        <div id="wipeConfirm" hidden style="margin-top:12px">
+          <div class="field" style="margin-bottom:9px">
+            <label for="wipeName">Gõ đúng tên học viên để xác nhận</label>
+            <input class="inp" id="wipeName" autocomplete="off" placeholder="tên học viên">
+          </div>
+          <div class="rowx">
+            <button class="btn btn-sm btn-danger" id="wipeGo" style="flex:1" disabled>Xóa vĩnh viễn</button>
+            <button class="btn btn-sm" id="wipeCancel">Hủy</button>
+          </div>
+        </div>
+        <p class="tiny" id="wipeMsg" style="margin-top:9px"></p>
+      </div>
     </div>
 
     <div class="card">
@@ -992,9 +1017,9 @@ const PHASES = [
 ];
 
 const W = [
- {w:1, t:"Thiết lập + Hiện tại đơn & tiếp diễn", d:"Ngày 1 chuẩn bị công cụ. Ngày 2 làm bài kiểm tra đầu vào để có mốc so sánh — điểm sẽ thấp, đó là chuyện bình thường. Từ ngày 3 vào nhịp học bình thường.", L:"VOA Learning English Level 1 — nghe đủ 4 lượt", R:"Breaking News English Level 2", Wr:"10 câu đơn mỗi ngày ở thì hiện tại", S:"Shadowing VOA 15 phút + nói 1 phút về bản thân"},
+ {w:1, t:"Thiết lập + Hiện tại đơn & tiếp diễn", d:"Ngày 1 chuẩn bị công cụ. Ngày 2 làm bài kiểm tra đầu vào để có mốc so sánh — điểm sẽ thấp, đó là chuyện bình thường. Từ ngày 3 vào nhịp học bình thường.", L:"VOA Learning English Level 1 — nghe đủ 4 lượt", R:"Breaking News English Level 2", Wr:"10 câu đơn mỗi ngày ở thì hiện tại", S:"British Council A1 — nói về nơi bạn đến từ. Shadowing VOA 15 phút + nói 1 phút về bản thân"},
  {w:2, t:"Quá khứ đơn & quá khứ tiếp diễn", d:"Học thuộc 60 động từ bất quy tắc thông dụng nhất. Bắt đầu chép chính tả 10 phút mỗi ngày — hoạt động chán nhất và hiệu quả nhất của giai đoạn này.", L:"VOA Level 1 + chép chính tả 10 phút", R:"Breaking News English Level 3", Wr:"10 câu quá khứ mỗi ngày: kể lại ngày hôm qua", S:"Shadowing + kể lại cuối tuần vừa rồi"},
- {w:3, t:"Hiện tại hoàn thành", d:"Phân biệt hiện tại hoàn thành với quá khứ đơn — điểm yếu kinh điển của người Việt vì tiếng Việt không phân biệt hai thì này.", L:"VOA Level 2 + esl-lab.com mức Easy", R:"Breaking News English Level 3", Wr:"10 câu hiện tại hoàn thành mỗi ngày", S:"Part 1 của IELTS Liz — 3 câu mỗi ngày, mỗi câu 30 giây"},
+ {w:3, t:"Hiện tại hoàn thành", d:"Phân biệt hiện tại hoàn thành với quá khứ đơn — điểm yếu kinh điển của người Việt vì tiếng Việt không phân biệt hai thì này.", L:"VOA Level 2 + esl-lab.com mức Easy", R:"Breaking News English Level 3", Wr:"10 câu hiện tại hoàn thành mỗi ngày", S:"British Council A1 — gặp người mới. Part 1 từ bộ 26 chủ đề PDF — 3 câu mỗi ngày, mỗi câu 30 giây"},
  {w:4, t:"Mạo từ a / an / the", d:"Lỗi mất điểm nhiều nhất của người Việt trong Writing, vì tiếng Việt không có mạo từ. Đầu tư nghiêm túc tuần này sẽ tiết kiệm điểm suốt 9 tháng còn lại.", L:"esl-lab Easy → Medium, chép chính tả 10 phút", R:"Breaking News English Level 4", Wr:"Chuyển từ viết câu sang viết đoạn 60 từ", S:"Part 1, mỗi câu cố nói 40 giây", m:"Mốc tháng 1 — thuộc chắc 240 từ · nói liên tục 45 giây · viết 8 câu đúng ngữ pháp"},
  {w:5, t:"Danh từ đếm được và không đếm được", d:"Kèm số ít / số nhiều. Thiếu -s là lỗi bị trừ điểm cả trong Writing lẫn Listening.", L:"esl-lab Medium", R:"Breaking News English Level 4", Wr:"1 đoạn 80 từ mỗi ngày, có câu chủ đề", S:"Part 1, 40 giây mỗi câu, ghi âm và nghe lại"},
  {w:6, t:"Giới từ chỉ thời gian và nơi chốn", d:"in / on / at. Học theo cụm cố định thay vì học quy tắc rời — cách duy nhất thật sự nhớ được.", L:"esl-lab + ELLLO", R:"Breaking News English Level 5", Wr:"1 đoạn 80 từ mỗi ngày", S:"Part 1 — 12 chủ đề thông dụng"},
@@ -1233,7 +1258,7 @@ const RES = [
  {g:"Bộ lõi — thiết lập trong ngày đầu tiên", rail:"var(--accent)", note:"Năm thứ này là xương sống của cả 40 tuần.", items:[
    {n:"Write & Improve", u:"https://writeandimprove.com", d:"Chấm bài viết tự động của Cambridge, cho điểm CEFR và chỉ ra lỗi trong vài giây. Công cụ giá trị nhất cho người yếu Writing tự học.", tag:"Bắt buộc"},
    {n:"Anki", u:"https://apps.ankiweb.net", d:"Học từ vựng theo thuật toán lặp lại ngắt quãng. Miễn phí trên máy tính, Android và web. Trên iPhone dùng qua trình duyệt tại ankiweb.net.", tag:"Bắt buộc"},
-   {n:"IELTS Liz", u:"https://ieltsliz.com", d:"Kho hướng dẫn dạng bài, đề mẫu và câu hỏi Speaking cho cả 4 kỹ năng. Nguồn hướng dẫn rõ ràng và đáng tin nhất cho người mới."},
+   {n:"IELTS Liz — 26 chủ đề Part 1 (PDF)", u:"https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf", d:"Ngân hàng đề Speaking Part 1: 4 chủ đề chính và 22 chủ đề thường gặp, mỗi chủ đề khoảng 10 câu. Tải về một lần rồi dùng offline — file PDF không bị đổi đường dẫn như trang web."},
    {n:"IELTS Simon", u:"https://ielts-simon.com", d:"Blog của một cựu giám khảo IELTS. Kho bài cũ miễn phí có hàng trăm bài mẫu kèm phân tích. Đọc để hiểu bố cục, đừng học thuộc."}
  ]},
  {g:"Listening", rail:"var(--sk-l)", note:"Đi từ nghe chậm lên nghe tốc độ thật. Tuần 1–7 dùng nhóm đầu, tuần 8 trở đi chuyển sang nhóm sau.", items:[
@@ -1252,12 +1277,16 @@ const RES = [
  ]},
  {g:"Writing", rail:"var(--sk-w)", note:"Task 1 của General Training là viết thư 150 từ, không phải mô tả biểu đồ. Task 2 là bài luận 250 từ.", items:[
    {n:"Write & Improve", u:"https://writeandimprove.com", d:"Nộp bài, nhận điểm và phản hồi lỗi ngay. Không giới hạn số lần. Dùng cho mọi bài viết.", tag:"Bắt buộc"},
-   {n:"IELTS Liz — Writing", u:"https://ieltsliz.com/ielts-writing-task-2/", d:"Hướng dẫn từng dạng Task 2 rất rõ ràng, có video đi kèm."},
-   {n:"IELTS Liz — GT Letters", u:"https://ieltsliz.com/ielts-general-training-writing-task-1/", d:"Hướng dẫn viết thư General Training: ba mức trang trọng, cách mở và kết từng loại."},
+   {n:"IELTS Liz — Task 2", u:"https://ieltsliz.com/ielts-writing-task-2/", d:"Hướng dẫn từng dạng bài luận Task 2, kèm bài mẫu và dàn ý."},
+   {n:"IELTS Liz — thư GT (Task 1)", u:"https://ieltsliz.com/ielts-letter-writing-essential-tips/", d:"Hướng dẫn viết thư General Training: ba mức trang trọng, cách mở và kết từng loại, đề thư đã ra."},
    {n:"Grammarly", u:"https://www.grammarly.com", d:"Bắt lỗi chính tả, mạo từ và dấu câu. Dùng sau khi đã tự soát bài, không dùng thay việc tự soát."}
  ]},
- {g:"Speaking", rail:"var(--sk-s)", note:"Kỹ năng khó tự học nhất. Công cụ quan trọng nhất là ứng dụng ghi âm có sẵn trên điện thoại.", items:[
-   {n:"IELTS Liz — Speaking", u:"https://ieltsliz.com/ielts-speaking-free-lessons-essential-tips/", d:"Danh sách đầy đủ câu hỏi Part 1, đề Part 2 và câu hỏi Part 3 theo chủ đề. Ngân hàng đề chính."},
+ {g:"Speaking", rail:"var(--sk-s)", note:"Kỹ năng khó tự học nhất. Công cụ quan trọng nhất vẫn là ứng dụng ghi âm có sẵn trên điện thoại. Phần video học theo cấp độ lấy từ British Council, ngân hàng đề lấy từ IELTS Liz.", items:[
+   {n:"British Council — Speaking A1/A2/B1", u:"https://learnenglish.britishcouncil.org/skills/speaking", d:"15 bài nói, mỗi bài một video hội thoại ngắn kèm transcript và 3 bài tập tự chấm, chia theo trình độ A1 đến B1. Giáo án đã gắn sẵn mỗi tuần một bài. Nếu khung video hiện ra mà bấm không chạy thì là máy chủ video của họ bị chặn — transcript và bài tập vẫn dùng bình thường, phần video xem ở Oxford Online English.", tag:"Tuần 1–12"},
+   {n:"Oxford Online English", u:"https://www.oxfordonlineenglish.com/free-spoken-english-lessons", d:"Bài nói theo tình huống, mỗi bài một video nhúng qua YouTube nên xem được kể cả khi video British Council không chạy. Có script đầy đủ và quiz. Giáo án đã gắn link dự phòng cho cả 12 tuần.", tag:"Dự phòng"},
+   {n:"IELTS Liz — 26 chủ đề Part 1 (PDF)", u:"https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf", d:"Ngân hàng đề Part 1: Work, Study, Hometown, Home cộng 22 chủ đề thường gặp, mỗi chủ đề khoảng 10 câu. Dùng lẻ tẻ từ tuần 3, hằng ngày từ tuần 7.", tag:"Tuần 3+"},
+   {n:"IELTS Liz — cue card Part 2", u:"https://ieltsliz.com/ielts-speaking-part-2-topics/", d:"Khoảng 30 đề Part 2 theo chủ đề. Dùng từ tuần 9, khi bắt đầu nói 90 giây.", tag:"Tuần 9+"},
+   {n:"English Speaking Success", u:"https://www.youtube.com/@EnglishSpeakingSuccess", d:"Kênh của Keith O'Hare: video thi thử Speaking với thí sinh thật, có nhận xét của giám khảo ở cuối. Xem band 5–6 để biết đích của mình trông như thế nào."},
    {n:"ELSA Speak", u:"https://elsaspeak.com", d:"Chấm phát âm từng âm tiết, chỉ ra âm nào sai. Bản miễn phí giới hạn số bài mỗi ngày nhưng đủ dùng. Hợp với người Việt vì bắt được lỗi âm cuối."},
    {n:"YouGlish", u:"https://youglish.com", d:"Gõ một từ, nghe hàng nghìn người bản xứ phát âm từ đó trong video thật."},
    {n:"HelloTalk", u:"https://www.hellotalk.com", d:"Kết nối với người bản xứ đang học tiếng Việt. Nhắn tin và gọi thoại miễn phí. Dùng cho mock Speaking ở tuần 38."},
@@ -1720,6 +1749,21 @@ function renderRootNote(){
   el.textContent = PROFILE.name
     ? `Dữ liệu của bạn nằm dưới gốc "${rootSlug()}". Đổi tên sẽ tạo một gốc mới và chuyển toàn bộ tiến độ hiện tại sang đó.`
     : "Chưa đặt tên học viên — dữ liệu đang nằm ở gốc tạm.";
+  renderWipeBox();
+}
+
+/* Khu vực xóa hẳn: chỉ hiện khi đã có tên, vì chưa có tên thì không có gì để xóa. */
+function renderWipeBox(){
+  const box = document.getElementById("wipeBox");
+  if(!box) return;
+  box.hidden = !PROFILE.name;
+  if(!PROFILE.name) return;
+  const n = essayIdsOf(rootSlug(), S).length;
+  document.getElementById("wipeWhat").textContent =
+    `Xóa sạch gốc "${rootSlug()}": tiến độ, sổ lỗi, điểm thi thử, ${n} bài viết kèm nhận xét, ` +
+    `tên học viên và dòng của bạn trong tab Lịch sử — cả trên máy này lẫn trên máy chủ. ` +
+    `Không thể hoàn tác, trừ khi bạn đã tải file JSON về trước.`;
+  document.getElementById("wipeName").placeholder = PROFILE.name;
 }
 
 function renderHeader(){
@@ -2544,6 +2588,54 @@ function searchDocs(q){
   });
 }
 
+/* ---------------------------------------------------------
+   Xóa hẳn một học viên.
+   Nút "Xóa toàn bộ tiến độ" chỉ dọn phần nội dung và vẫn giữ tên, hồ sơ, nội
+   dung bài viết cũ và dòng trong danh bạ. Hàm dưới đây dọn sạch cả bốn thứ đó,
+   ở cả bản cục bộ lẫn bản trên máy chủ.
+   --------------------------------------------------------- */
+
+/* Gom mọi id bài viết của một học viên: cả bài còn trong danh sách lẫn bài đã
+   rụng khỏi danh sách sau một lần "xóa tiến độ" mà phần chữ vẫn nằm lại. */
+function essayIdsOf(slug, st){
+  const ids = new Set();
+  ((st && st.essays) || []).forEach(x => { if(x && x.id) ids.add(x.id); });
+  try{
+    Object.keys(JSON.parse(localStorage.getItem(LS + ":" + slug + ":essays") || "{}"))
+      .forEach(k => ids.add(k));
+  }catch(e){ /* không đọc được thì thôi */ }
+  return [...ids];
+}
+
+async function wipeStudent(slug, st){
+  const ids = essayIdsOf(slug, st);
+  const me = slug === rootSlug() && !!PROFILE.name;
+  try{
+    localStorage.removeItem(LS + ":" + slug);
+    localStorage.removeItem(LS + ":" + slug + ":essays");
+    const r = localRoster();
+    delete r[slug];
+    localStorage.setItem(LSR, JSON.stringify(r));
+    if(me){
+      localStorage.removeItem(LSP);
+      localStorage.removeItem(LS);    // kho cũ chưa chia theo tên, từng được rước sang
+      localStorage.removeItem(LSE);
+    }
+  }catch(e){ /* bộ nhớ cục bộ hỏng thì vẫn xóa tiếp trên máy chủ */ }
+
+  let remoteFail = 0;
+  if(DB){
+    clearTimeout(saveTimer);        // chặn lần lưu đang chờ ghi lại dữ liệu vừa xóa
+    const jobs = [DB.doc("students/" + slug + "/progress/main").delete(),
+                  DB.doc("roster/" + slug).delete()];
+    ids.forEach(id => jobs.push(DB.doc("students/" + slug + "/essays/" + id).delete()));
+    const out = await Promise.allSettled(jobs);
+    remoteFail = out.filter(x => x.status === "rejected").length;
+  }
+  PEOPLE = PEOPLE.filter(x => x.slug !== slug);
+  return {essays: ids.length, remoteFail};
+}
+
 /* =========================================================
    4d. LỊCH SỬ HỌC VIÊN
    ========================================================= */
@@ -2814,6 +2906,73 @@ function personCards(p, st){
     tbl.append(thead, tb); sc2.append(tbl); mc.append(sc2);
   }
   f.append(mc);
+
+  // xóa hẳn người này
+  const dz = document.createElement("div");
+  dz.className = "card";
+  const inner = document.createElement("div");
+  inner.className = "danger";
+  inner.style.marginTop = "0";
+  const eb = document.createElement("div");
+  eb.className = "eyebrow";
+  eb.textContent = "Xóa hẳn học viên";
+  const wh = document.createElement("p");
+  wh.className = "small muted";
+  wh.style.marginBottom = "11px";
+  wh.textContent = `Xóa sạch gốc "${p.slug}": tiến độ, sổ lỗi, điểm thi thử, bài viết và dòng trong ` +
+    `danh sách này, cả trên máy này lẫn trên máy chủ. Không thể hoàn tác.` +
+    (p.slug === rootSlug() && PROFILE.name ? " Đây là dữ liệu của chính bạn." :
+     " Nếu người này mở lại trang trên máy của họ, bản sao trên máy họ sẽ dựng lại dòng này.");
+  const st2 = document.createElement("button");
+  st2.className = "btn btn-sm btn-danger";
+  st2.style.width = "100%";
+  st2.textContent = "Xóa hẳn học viên này";
+  const wrap2 = document.createElement("div");
+  wrap2.hidden = true;
+  wrap2.style.marginTop = "12px";
+  const fld = document.createElement("div");
+  fld.className = "field";
+  fld.style.marginBottom = "9px";
+  const lb = document.createElement("label");
+  const inpId = "ppWipe-" + p.slug;
+  lb.setAttribute("for", inpId);
+  lb.textContent = "Gõ đúng tên học viên để xác nhận";
+  const inp = document.createElement("input");
+  inp.className = "inp"; inp.id = inpId; inp.autocomplete = "off";
+  inp.placeholder = p.name || p.slug;
+  fld.append(lb, inp);
+  const row = document.createElement("div");
+  row.className = "rowx";
+  const go = document.createElement("button");
+  go.className = "btn btn-sm btn-danger"; go.style.flex = "1";
+  go.textContent = "Xóa vĩnh viễn"; go.disabled = true;
+  const cancel = document.createElement("button");
+  cancel.className = "btn btn-sm"; cancel.textContent = "Hủy";
+  row.append(go, cancel);
+  wrap2.append(fld, row);
+  const msg = document.createElement("p");
+  msg.className = "tiny"; msg.style.marginTop = "9px";
+
+  const want = (p.name || p.slug).trim().toLowerCase();
+  inp.oninput = () => { go.disabled = inp.value.trim().toLowerCase() !== want; };
+  st2.onclick = () => { wrap2.hidden = false; st2.hidden = true; inp.focus(); };
+  cancel.onclick = () => { wrap2.hidden = true; st2.hidden = false; inp.value = ""; go.disabled = true; };
+  go.onclick = async () => {
+    go.disabled = cancel.disabled = true;
+    msg.textContent = "Đang xóa…";
+    const r = await wipeStudent(p.slug, st);
+    if(p.slug === rootSlug() && PROFILE.name) { afterWipeSelf(); return; }
+    msg.textContent = r.remoteFail
+      ? `Đã xóa trên máy này. ${r.remoteFail} mục trên máy chủ chưa xóa được — thử lại khi có mạng.`
+      : "Đã xóa xong.";
+    setTimeout(() => {
+      document.getElementById("ppBack").click();
+      renderPeople();
+    }, 900);
+  };
+  inner.append(eb, wh, st2, wrap2, msg);
+  dz.append(inner);
+  f.append(dz);
   return f;
 }
 
@@ -3160,6 +3319,56 @@ document.getElementById("gateAllOff").onclick = () => {
   pendingDays().forEach(x => { S.dayDone[x.k] = {off: 1}; });
   save(); renderToday(); renderHeader();
 };
+/* --- Xóa hẳn học viên (thẻ Học viên ở tab Tiến độ) --- */
+function afterWipeSelf(){
+  PROFILE = {name:"", slug:""};
+  S = DEF();
+  S.startDate = iso(mondayOf(new Date()));
+  ppLoaded = false;
+  document.getElementById("inName").value = "";
+  document.getElementById("wipeName").value = "";
+  document.getElementById("wipeConfirm").hidden = true;
+  document.getElementById("wipeStart").hidden = false;
+  document.getElementById("wipeMsg").textContent = "";
+  renderAll(); renderExportStats(); renderRootNote();
+  // quay về màn đặt tên, vì giờ trang không còn thuộc về ai
+  document.querySelectorAll("nav button[data-go]").forEach(x => x.removeAttribute("aria-current"));
+  const home = document.querySelector('nav button[data-go="today"]');
+  home.setAttribute("aria-current", "page");
+  document.querySelectorAll(".panel").forEach(x => x.classList.remove("on"));
+  document.getElementById("p-today").classList.add("on");
+  window.scrollTo({top:0, behavior:"instant"});
+}
+
+document.getElementById("wipeBackup").onclick = () => document.getElementById("expBtn").click();
+document.getElementById("wipeStart").onclick = () => {
+  document.getElementById("wipeConfirm").hidden = false;
+  document.getElementById("wipeStart").hidden = true;
+  document.getElementById("wipeName").focus();
+};
+document.getElementById("wipeCancel").onclick = () => {
+  document.getElementById("wipeConfirm").hidden = true;
+  document.getElementById("wipeStart").hidden = false;
+  document.getElementById("wipeName").value = "";
+  document.getElementById("wipeGo").disabled = true;
+  document.getElementById("wipeMsg").textContent = "";
+};
+document.getElementById("wipeName").oninput = e => {
+  document.getElementById("wipeGo").disabled =
+    e.target.value.trim().toLowerCase() !== PROFILE.name.trim().toLowerCase();
+};
+document.getElementById("wipeGo").onclick = async () => {
+  const msg = document.getElementById("wipeMsg");
+  const go = document.getElementById("wipeGo");
+  go.disabled = true;
+  msg.textContent = "Đang xóa…";
+  const r = await wipeStudent(rootSlug(), S);
+  afterWipeSelf();
+  document.getElementById("wipeMsg").textContent = r.remoteFail
+    ? `Đã xóa trên máy này. ${r.remoteFail} mục trên máy chủ chưa xóa được — mở lại trang khi có mạng để xóa nốt.`
+    : "Đã xóa xong. Trang đã quay về màn đặt tên.";
+};
+
 document.getElementById("btnReset").onclick = () => {
   if(!confirm("Xóa toàn bộ tiến độ, sổ lỗi và điểm thi thử? Không thể hoàn tác.")) return;
   const sd = S.startDate; S = DEF(); S.startDate = sd; save(); renderAll();

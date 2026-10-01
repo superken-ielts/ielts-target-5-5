@@ -44,7 +44,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — Viết 150 từ về 'Describe your daily routine' trong 30 phút, nộp Write & Improve, ghi lại điểm CEFR.
   - Bài học: [Write & Improve — nộp bài 150 từ](https://writeandimprove.com)
 - **Nói** — Ghi âm 2 phút trả lời 'Tell me about your hometown'. Nghe lại, đếm số lần dừng quá 3 giây. Giữ bản ghi này — tuần 20 nghe lại sẽ thấy mình đã đi bao xa.
-  - Bài học: [IELTS Liz — câu hỏi Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về nơi bạn đến từ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre) · [Oxford Online English — Nói về quê mình (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-hometown)
 - **Nghe & Đọc** — Làm 1 bài Listening Section 1 và 1 bài Reading để lấy mốc. Ghi lại số câu đúng.
   - Bài học: [Mini-IELTS — bài Listening để đo](https://mini-ielts.com/listening) · [Mini-IELTS — bài Reading để đo](https://mini-ielts.com/reading)
 
@@ -58,7 +58,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu về thói quen hằng ngày của bạn, mỗi câu một động từ khác nhau.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/present-simple-exercise-1.html) · [Write & Improve — nộp 10 câu](https://writeandimprove.com)
 - **Nói** — Shadowing VOA 15 phút. Tự nói 1 phút: What do you do every morning?
-  - Bài học: [VOA Level 1 — Lesson 1: Welcome!](https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-1-welcome-/5781394.html)
+  - Bài học: [British Council — Nói về nơi bạn đến từ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre) · [Oxford Online English — Nói về quê mình (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-hometown) · [VOA Level 1 — Lesson 1: Welcome!](https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-1-welcome-/5781394.html)
 - **Nghe & Đọc** — VOA Level 1 Lesson 1 — nghe đủ 4 lượt. Đọc 1 bài Breaking News English Level 2.
   - Bài học: [VOA Level 1 — Lesson 1 (nghe 4 lượt)](https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-1-welcome-/5781394.html)
 
@@ -72,7 +72,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu: 5 câu phủ định về việc bạn không làm, 5 câu hỏi bạn muốn hỏi người khác.
   - Bài học: [Write & Improve — nộp 10 câu](https://writeandimprove.com)
 - **Nói** — Shadowing 15 phút. Tự đặt và tự trả lời 5 câu hỏi Yes/No về bản thân.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về nơi bạn đến từ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre) · [Oxford Online English — Nói về quê mình (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-hometown)
 - **Nghe & Đọc** — VOA Level 1 Lesson 2 — nghe đủ 4 lượt. Đọc 1 bài Breaking News Level 2.
   - Bài học: [VOA Let's Learn English — Level 1](https://learningenglish.voanews.com/p/5644.html) · [Breaking News English — Level 2](https://breakingnewsenglish.com/news_levels.html)
 
@@ -86,7 +86,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu mô tả những gì đang diễn ra quanh bạn lúc này.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/present-continuous-exercise-1.html) · [Write & Improve — nộp 10 câu](https://writeandimprove.com)
 - **Nói** — Shadowing 15 phút. Tả bằng lời những gì bạn nhìn thấy quanh mình trong 1 phút.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về nơi bạn đến từ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre) · [Oxford Online English — Nói về quê mình (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-hometown)
 - **Nghe & Đọc** — VOA Level 1 Lesson 3 — nghe đủ 4 lượt.
   - Bài học: [VOA Let's Learn English — Level 1](https://learningenglish.voanews.com/p/5644.html)
 
@@ -100,7 +100,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu trộn hai thì, tự đánh dấu câu nào dùng thì gì và vì sao.
   - Bài học: [Write & Improve — nộp 10 câu trộn hai thì](https://writeandimprove.com)
 - **Nói** — Nói 1 phút: chọn thì đúng cho từng câu, đối chiếu 'I usually...' với 'Right now I am...'
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về nơi bạn đến từ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre) · [Oxford Online English — Nói về quê mình (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-hometown)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News English Level 2, làm hết bài tập từ vựng đi kèm.
   - Bài học: [Breaking News English — Level 2](https://breakingnewsenglish.com/news_levels.html)
 
@@ -131,7 +131,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu kể lại ngày hôm qua, chỉ dùng động từ có quy tắc.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/past-simple-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Shadowing 15 phút, chú ý riêng đuôi -ed. Kể lại ngày hôm qua trong 1 phút.
-  - Bài học: [VOA Let's Learn English — Level 1](https://learningenglish.voanews.com/p/5644.html)
+  - Bài học: [British Council — Nói về người khác (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · [Oxford Online English — Tả một người (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-people-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf) · [VOA Let's Learn English — Level 1](https://learningenglish.voanews.com/p/5644.html)
 - **Nghe & Đọc** — VOA Level 1 — nghe đủ 4 lượt, chú ý riêng đuôi -ed. Đọc 1 bài Breaking News Level 3.
   - Bài học: [VOA Level 1](https://learningenglish.voanews.com/p/5644.html) · [Breaking News English — chọn Level 3](https://breakingnewsenglish.com/news_levels.html)
 
@@ -145,7 +145,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dùng ít nhất 8 động từ trong nhóm vừa học.
   - Bài học: [Perfect English Grammar — bài tập quá khứ đơn](https://www.perfect-english-grammar.com/past-simple-exercise-1.html)
 - **Nói** — Đọc to bảng ba cột (nguyên thể — quá khứ — phân từ) 3 lần. Kể một việc đã làm tuần trước.
-  - Bài học: [engVid — video Irregular Verbs nhóm 1 & 2](https://www.engvid.com/irregular-verbs-in-english-groups-1-2/)
+  - Bài học: [British Council — Nói về người khác (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · [Oxford Online English — Tả một người (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-people-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf) · [engVid — video Irregular Verbs nhóm 1 & 2](https://www.engvid.com/irregular-verbs-in-english-groups-1-2/)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News Level 3, gạch chân mọi động từ ở quá khứ.
   - Bài học: [Breaking News English — Level 3](https://breakingnewsenglish.com/news_levels.html)
 
@@ -159,7 +159,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu: 5 câu về việc bạn đã không làm hôm qua, 5 câu hỏi về quá khứ.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/past-simple-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Tự hỏi tự trả lời 5 câu bắt đầu bằng Did you...?
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về người khác (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · [Oxford Online English — Tả một người (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-people-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — VOA Level 1 — nghe đủ 4 lượt. Chép chính tả 10 phút.
   - Bài học: [VOA Level 1](https://learningenglish.voanews.com/p/5644.html)
 
@@ -173,7 +173,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dùng nhóm 2.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Đọc to bảng ba cột. Kể lại một chuyến đi cũ trong 1 phút.
-  - Bài học: [engVid — Irregular Verbs nhóm 1 & 2](https://www.engvid.com/irregular-verbs-in-english-groups-1-2/)
+  - Bài học: [British Council — Nói về người khác (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · [Oxford Online English — Tả một người (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-people-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf) · [engVid — Irregular Verbs nhóm 1 & 2](https://www.engvid.com/irregular-verbs-in-english-groups-1-2/)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News Level 3, làm bài tập từ vựng đi kèm.
   - Bài học: [Breaking News English — Level 3](https://breakingnewsenglish.com/news_levels.html)
 
@@ -187,7 +187,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu: 8 giờ tối qua bạn đang làm gì, cả nhà bạn đang làm gì.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/past-continuous-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Nói 1 phút: What were you doing at 8pm yesterday?
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về người khác (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · [Oxford Online English — Tả một người (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-people-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — VOA Level 1 — nghe đủ 4 lượt. Chép chính tả 10 phút.
   - Bài học: [VOA Level 1](https://learningenglish.voanews.com/p/5644.html)
 
@@ -201,7 +201,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dạng 'I was ... when ...'
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/past-continuous-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Kể một sự việc bất ngờ đã xảy ra, dùng ít nhất 3 câu when.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Nói về người khác (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people) · [Oxford Online English — Tả một người (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-people-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News Level 3, tìm câu có hai hành động quá khứ lồng nhau.
   - Bài học: [Breaking News English — Level 3](https://breakingnewsenglish.com/news_levels.html)
 
@@ -232,7 +232,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu về những việc bạn đã làm trong đời, không nêu thời điểm.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/present-perfect-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Shadowing 15 phút. Nói 1 phút về những nơi bạn đã từng đến.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Gặp người mới (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · [Oxford Online English — Chào hỏi và giới thiệu (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/greetings-introductions) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — VOA Level 2 — nghe đủ 4 lượt. Chép chính tả 10 phút.
   - Bài học: [VOA Let's Learn English](https://learningenglish.voanews.com/p/5644.html) · [Randall's ESL Lab — mức Easy](https://www.esl-lab.com/easy/)
 
@@ -246,7 +246,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu về những việc bạn đã làm được bao lâu.
   - Bài học: [Perfect English Grammar — bài tập 1](https://www.perfect-english-grammar.com/present-perfect-exercise-1.html)
 - **Nói** — Trả lời: How long have you lived here? How long have you studied English?
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Gặp người mới (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · [Oxford Online English — Chào hỏi và giới thiệu (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/greetings-introductions) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — 1 bài esl-lab mức Easy, làm hết câu hỏi rồi đối chiếu transcript.
   - Bài học: [Randall's ESL Lab — mức Easy](https://www.esl-lab.com/easy/)
 
@@ -260,7 +260,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dùng đủ ba từ, mỗi từ ít nhất 3 câu.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Nói về việc bạn đã làm xong hôm nay và việc chưa làm.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Gặp người mới (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · [Oxford Online English — Chào hỏi và giới thiệu (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/greetings-introductions) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — VOA Level 2 — nghe đủ 4 lượt.
   - Bài học: [VOA Let's Learn English](https://learningenglish.voanews.com/p/5644.html)
 
@@ -274,7 +274,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu: 5 câu Have you ever, 5 câu I have never.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Tự hỏi tự trả lời 5 câu Have you ever...? Đây là dạng câu hỏi hay gặp ở Speaking Part 1.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Gặp người mới (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · [Oxford Online English — Chào hỏi và giới thiệu (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/greetings-introductions) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — 1 bài esl-lab mức Easy. Chép chính tả 10 phút.
   - Bài học: [Randall's ESL Lab — mức Easy](https://www.esl-lab.com/easy/)
 
@@ -288,7 +288,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu trộn hai thì, ghi rõ lý do chọn thì cho từng câu.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Nói 1 phút, cố tình dùng cả hai thì và tự nghe lại xem có nhầm không.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Gặp người mới (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · [Oxford Online English — Chào hỏi và giới thiệu (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/greetings-introductions) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News Level 3, tìm câu dùng hiện tại hoàn thành.
   - Bài học: [Breaking News English — Level 3](https://breakingnewsenglish.com/news_levels.html)
 
@@ -302,7 +302,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — Viết một đoạn 60 từ về kinh nghiệm học tiếng Anh của bạn, dùng cả hai thì.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Part 1 của IELTS Liz — 3 câu, mỗi câu cố nói 30 giây.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Gặp người mới (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people) · [Oxford Online English — Chào hỏi và giới thiệu (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/greetings-introductions) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News Level 3, làm hết bài tập đi kèm.
   - Bài học: [Breaking News English — Level 3](https://breakingnewsenglish.com/news_levels.html)
 
@@ -316,7 +316,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — Kiểm tra 60 từ của tuần, rồi viết đoạn 60 từ về kinh nghiệm học tiếng Anh, dùng cả hai thì.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Không nạp từ mới. Tự hỏi tự trả lời 5 câu Have you ever...?
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — Một bài đọc Breaking News Level 3 có bấm giờ 10 phút.
   - Bài học: [Breaking News English — bài đọc phân cấp](https://breakingnewsenglish.com/graded-news-stories.html)
 
@@ -334,7 +334,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu giới thiệu người và vật, mỗi câu có ít nhất một mạo từ a hoặc an.
   - Bài học: [Perfect English Grammar — bài tập mạo từ](https://www.perfect-english-grammar.com/articles-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Shadowing 15 phút. Tả 5 đồ vật quanh bạn, mỗi thứ một câu đầy đủ.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — 1 bài esl-lab mức Easy sang Medium. Đọc 1 bài Breaking News Level 4.
   - Bài học: [Randall's ESL Lab — mức Easy](https://www.esl-lab.com/easy/) · [Breaking News English — Level 4](https://breakingnewsenglish.com/news_levels.html)
 
@@ -348,7 +348,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dạng 'I bought a book. The book is about...'
   - Bài học: [Perfect English Grammar — bài tập mạo từ](https://www.perfect-english-grammar.com/articles-exercise-1.html) · [Write & Improve](https://writeandimprove.com)
 - **Nói** — Kể một việc, chú ý lần đầu dùng a, lần sau dùng the.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — VOA Level 2 — nghe đủ 4 lượt.
   - Bài học: [VOA Let's Learn English](https://learningenglish.voanews.com/p/5644.html)
 
@@ -362,7 +362,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu phát biểu chung về một loại sự vật, không dùng the.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Nói 1 phút về sở thích chung chung: I like books, I enjoy music.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — 1 bài esl-lab mức Medium. Chép chính tả 10 phút.
   - Bài học: [Randall's ESL Lab](https://www.esl-lab.com/easy/)
 
@@ -376,7 +376,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dùng the với so sánh nhất và số thứ tự.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Nói về thứ tốt nhất, tệ nhất, đầu tiên trong đời bạn.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — VOA Level 2 — nghe đủ 4 lượt.
   - Bài học: [VOA Let's Learn English](https://learningenglish.voanews.com/p/5644.html)
 
@@ -390,7 +390,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — 10 câu dùng ít nhất 6 cụm cố định.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Tả cách bạn đi làm và một ngày bình thường, dùng các cụm vừa học.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — Đọc 1 bài Breaking News Level 4, gạch chân mọi cụm có mạo từ cố định.
   - Bài học: [Breaking News English — Level 4](https://breakingnewsenglish.com/news_levels.html)
 
@@ -404,7 +404,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — Viết đoạn 60 từ về gia đình, tự soát riêng mạo từ trước khi nộp.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Kiểm tra mốc: ghi âm nói liên tục 45 giây về 'My family' mà không dừng quá 3 giây.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 - **Nghe & Đọc** — 1 bài Listening Section 1 để kiểm tra mốc tháng 1.
   - Bài học: [Mini-IELTS — Listening để đo mốc](https://mini-ielts.com/listening)
 
@@ -418,7 +418,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Viết** — Mốc phải đạt: viết 8 câu về bản thân, Grammarly hoặc Write & Improve báo không quá 2 lỗi ngữ pháp.
   - Bài học: [Write & Improve](https://writeandimprove.com)
 - **Nói** — Mốc phải đạt: ghi âm nói liên tục 45 giây về 'My family' mà không dừng quá 3 giây.
-  - Bài học: [IELTS Liz — Speaking Part 1](https://ieltsliz.com/ielts-speaking-part-1/)
+  - Bài học: [British Council — Hỏi lại khi chưa nghe rõ (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding) · [Oxford Online English — Nghe không kịp người bản xứ thì làm gì (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/understand-native-speakers)
 - **Nghe & Đọc** — Mốc phải đạt: kiểm tra ngẫu nhiên 50 thẻ Anki, đúng ít nhất 40. Nếu trượt thì giảm còn 8 từ mỗi ngày và tăng thời gian ôn.
   - Bài học: [Mini-IELTS — Listening](https://mini-ielts.com/listening)
 
@@ -433,6 +433,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Danh sách hay nhầm nhất, vì trong tiếng Việt chúng đếm được bình thường: information, advice, furniture, news, money, work, luggage, equipment. Tất cả đều KHÔNG có dạng số nhiều.
 - **Viết** — 1 đoạn 80 từ về đồ đạc trong nhà bạn, chú ý furniture và equipment.
 - **Nói** — Shadowing 15 phút. Tả phòng của bạn trong 1 phút.
+  - Bài học: [British Council — Đưa ra gợi ý (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · [Oxford Online English — Đưa ra gợi ý (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/making-suggestions-in-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — much, many, a lot of
 
@@ -441,6 +442,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — many + đếm được, much + không đếm được, a lot of dùng được cho cả hai. much thường chỉ xuất hiện trong câu phủ định và câu hỏi.
 - **Viết** — 1 đoạn 80 từ dùng đủ ba từ này.
 - **Nói** — Trả lời: How much time do you spend on your phone? How many books do you read?
+  - Bài học: [British Council — Đưa ra gợi ý (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · [Oxford Online English — Đưa ra gợi ý (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/making-suggestions-in-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — some và any
 
@@ -449,6 +451,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — some trong câu khẳng định và lời mời, any trong phủ định và câu hỏi. Nhưng lời mời thì dùng some: Would you like some tea?
 - **Viết** — 1 đoạn 80 từ về việc đi chợ hoặc siêu thị.
 - **Nói** — Nói về những thứ bạn có và không có trong tủ lạnh.
+  - Bài học: [British Council — Đưa ra gợi ý (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · [Oxford Online English — Đưa ra gợi ý (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/making-suggestions-in-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Năm — a few và a little
 
@@ -457,6 +460,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — a few + đếm được số nhiều, a little + không đếm được. Bỏ chữ a thì nghĩa đổi sang tiêu cực: few means hầu như không có.
 - **Viết** — 1 đoạn 80 từ dùng cả bốn cách: a few, few, a little, little.
 - **Nói** — Nói về thời gian rảnh và tiền tiêu vặt của bạn.
+  - Bài học: [British Council — Đưa ra gợi ý (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · [Oxford Online English — Đưa ra gợi ý (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/making-suggestions-in-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Đơn vị đo
 
@@ -465,6 +469,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Cách đếm danh từ không đếm được: a piece of advice, a bottle of water, a slice of bread, a bar of soap, a loaf of bread.
 - **Viết** — 1 đoạn 80 từ tả một bữa ăn, dùng ít nhất 4 đơn vị đo.
 - **Nói** — Tả món ăn bạn thích nhất và cách nấu nó.
+  - Bài học: [British Council — Đưa ra gợi ý (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · [Oxford Online English — Đưa ra gợi ý (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/making-suggestions-in-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Bảy — Ôn cả tuần
 
@@ -473,6 +478,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu trộn: chọn much/many, some/any, a few/a little, và sửa danh từ không đếm được bị thêm -s.
 - **Viết** — Viết lại đoạn tốt nhất trong tuần, sửa đúng lỗi đã được chấm.
 - **Nói** — Part 1 — 3 câu về food, mỗi câu 40 giây.
+  - Bài học: [British Council — Đưa ra gợi ý (A1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions) · [Oxford Online English — Đưa ra gợi ý (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/making-suggestions-in-english) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -493,6 +499,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — at + giờ (at 7 o'clock), on + ngày và thứ (on Monday, on 5 May), in + tháng, mùa, năm, thế kỷ (in May, in 2026).
 - **Viết** — 1 đoạn 80 từ về lịch sinh hoạt một tuần của bạn.
 - **Nói** — Shadowing 15 phút. Kể lịch làm việc trong tuần.
+  - Bài học: [British Council — Nói về công việc của bạn (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · [Oxford Online English — Nói về công việc (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-job) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — Giới từ nơi chốn
 
@@ -501,6 +508,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — at + một điểm (at the door), on + bề mặt (on the table), in + không gian có ranh giới (in the room, in Vietnam).
 - **Viết** — 1 đoạn 80 từ tả vị trí đồ vật trong phòng.
 - **Nói** — Tả đường đi từ nhà bạn tới nơi làm việc.
+  - Bài học: [British Council — Nói về công việc của bạn (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · [Oxford Online English — Nói về công việc (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-job) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — Cụm cố định thời gian
 
@@ -509,6 +517,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — at night nhưng in the morning. on time nghĩa là đúng giờ, in time nghĩa là kịp giờ — hai nghĩa khác hẳn nhau.
 - **Viết** — 1 đoạn 80 từ dùng ít nhất 5 cụm thời gian cố định.
 - **Nói** — Nói về thói quen buổi sáng và buổi tối.
+  - Bài học: [British Council — Nói về công việc của bạn (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · [Oxford Online English — Nói về công việc (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-job) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Năm — Cụm cố định nơi chốn
 
@@ -517,6 +526,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — at work, at school, in hospital, on the bus nhưng in the car. Không có quy tắc, chỉ có thói quen dùng.
 - **Viết** — 1 đoạn 80 từ về một ngày đi làm hoặc đi học.
 - **Nói** — Tả nơi bạn làm việc hoặc học tập.
+  - Bài học: [British Council — Nói về công việc của bạn (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · [Oxford Online English — Nói về công việc (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-job) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Giới từ đi với động từ
 
@@ -525,6 +535,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — depend on, listen to, look for, wait for, arrive at, belong to. Đây là nhóm gây lỗi nhiều nhất trong Writing vì tiếng Việt dùng giới từ khác.
 - **Viết** — 1 đoạn 100 từ dùng ít nhất 5 cụm động từ + giới từ.
 - **Nói** — Nói 1 phút về việc bạn đang chờ đợi hoặc tìm kiếm điều gì.
+  - Bài học: [British Council — Nói về công việc của bạn (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · [Oxford Online English — Nói về công việc (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-job) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Bảy — Ôn cả tuần
 
@@ -533,6 +544,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu điền giới từ. Ghi mọi câu sai vào sổ lỗi kèm cả cụm, đừng ghi mỗi giới từ.
 - **Viết** — Viết lại đoạn tốt nhất trong tuần.
 - **Nói** — Part 1 — 3 câu về hometown, mỗi câu 40 giây.
+  - Bài học: [British Council — Nói về công việc của bạn (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job) · [Oxford Online English — Nói về công việc (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/talking-about-job) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -553,6 +565,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Một âm tiết thêm -er và -est: bigger, the biggest. Chú ý gấp đôi phụ âm cuối (hot → hotter) và đổi y thành i (easy → easier).
 - **Viết** — 1 đoạn 100 từ so sánh hai nơi bạn từng sống hoặc từng đến.
 - **Nói** — Shadowing BBC 15 phút. So sánh hai mùa trong năm.
+  - Bài học: [British Council — Nói về sở thích riêng (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · [Oxford Online English — Thời gian rảnh và sở thích (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/free-time-and-hobbies) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — So sánh với tính từ dài
 
@@ -561,6 +574,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Từ hai âm tiết trở lên dùng more và the most: more expensive, the most beautiful. Không được vừa more vừa -er.
 - **Viết** — 1 đoạn 100 từ so sánh hai công việc hoặc hai ngành nghề.
 - **Nói** — So sánh cuộc sống thành phố với nông thôn.
+  - Bài học: [British Council — Nói về sở thích riêng (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · [Oxford Online English — Thời gian rảnh và sở thích (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/free-time-and-hobbies) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — So sánh bất quy tắc
 
@@ -569,6 +583,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — good/better/the best, bad/worse/the worst, far/further/the furthest, little/less/the least, many/more/the most.
 - **Viết** — 1 đoạn 100 từ dùng đủ ba bộ bất quy tắc.
 - **Nói** — Nói về điều tốt nhất và tệ nhất đã xảy ra với bạn năm nay.
+  - Bài học: [British Council — Nói về sở thích riêng (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · [Oxford Online English — Thời gian rảnh và sở thích (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/free-time-and-hobbies) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Năm — as ... as
 
@@ -577,6 +592,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — as + tính từ nguyên dạng + as để chỉ ngang bằng. Phủ định not as ... as nghĩa là kém hơn.
 - **Viết** — 1 đoạn 100 từ dùng ít nhất 4 cấu trúc as ... as.
 - **Nói** — So sánh bản thân bạn với một người bạn.
+  - Bài học: [British Council — Nói về sở thích riêng (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · [Oxford Online English — Thời gian rảnh và sở thích (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/free-time-and-hobbies) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Mức độ của so sánh
 
@@ -585,6 +601,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — much / far / a lot / a bit + so sánh hơn: much better, a bit cheaper. Đây là cách làm câu tự nhiên hơn hẳn và dễ ăn điểm Lexical Resource.
 - **Viết** — 1 đoạn 100 từ dùng ít nhất 4 trạng từ mức độ.
 - **Nói** — Part 1 — bắt đầu dùng công thức PPF: hiện tại, quá khứ, tương lai.
+  - Bài học: [British Council — Nói về sở thích riêng (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · [Oxford Online English — Thời gian rảnh và sở thích (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/free-time-and-hobbies) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Bảy — Ôn cả tuần
 
@@ -593,6 +610,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu so sánh. Kiểm tra riêng lỗi vừa more vừa -er.
 - **Viết** — Viết đoạn 100 từ so sánh hai thành phố ở Việt Nam.
 - **Nói** — Part 1 — 3 câu, mỗi câu dùng đủ ba thì theo PPF.
+  - Bài học: [British Council — Nói về sở thích riêng (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests) · [Oxford Online English — Thời gian rảnh và sở thích (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/free-time-and-hobbies) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -613,6 +631,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Không có điểm ngữ pháp mới tuần này. Toàn bộ sức dồn vào việc chuyển tai từ VOA sang BBC.
 - **Viết** — 1 đoạn 100 từ dùng because, but, so.
 - **Nói** — Shadowing BBC 6 Minute English 15 phút. Sẽ khó hơn VOA rõ rệt — đó là chủ đích, đừng quay lại VOA.
+  - Bài học: [British Council — Tỏ ra quan tâm khi nghe (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · [Oxford Online English — Nghe chủ động, biết đáp lại (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/active-listening) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — Ôn bốn thì đã học
 
@@ -621,6 +640,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 30 câu chọn thì giữa hiện tại đơn, hiện tại tiếp diễn, quá khứ đơn, quá khứ tiếp diễn và hiện tại hoàn thành.
 - **Viết** — 1 đoạn 100 từ kể một tuần vừa qua, dùng ít nhất 3 thì.
 - **Nói** — Shadowing BBC. Kể lại nội dung bài nghe bằng lời của bạn.
+  - Bài học: [British Council — Tỏ ra quan tâm khi nghe (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · [Oxford Online English — Nghe chủ động, biết đáp lại (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/active-listening) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — Ôn mạo từ và danh từ
 
@@ -629,6 +649,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu trộn mạo từ với danh từ đếm được và không đếm được — hai điểm này luôn đi cùng nhau.
 - **Viết** — 1 đoạn 100 từ, tự soát riêng mạo từ.
 - **Nói** — Shadowing BBC. Part 1 về work hoặc study.
+  - Bài học: [British Council — Tỏ ra quan tâm khi nghe (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · [Oxford Online English — Nghe chủ động, biết đáp lại (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/active-listening) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Năm — Ôn giới từ
 
@@ -637,6 +658,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu điền giới từ, gồm cả cụm động từ + giới từ.
 - **Viết** — 1 đoạn 100 từ, tự soát riêng giới từ.
 - **Nói** — Shadowing BBC. Part 1 về hobbies.
+  - Bài học: [British Council — Tỏ ra quan tâm khi nghe (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · [Oxford Online English — Nghe chủ động, biết đáp lại (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/active-listening) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Ôn so sánh
 
@@ -645,6 +667,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 30 câu so sánh, gồm cả as ... as và trạng từ mức độ.
 - **Viết** — 1 đoạn 100 từ so sánh hai lựa chọn của bạn.
 - **Nói** — Shadowing BBC. Part 1 về travel.
+  - Bài học: [British Council — Tỏ ra quan tâm khi nghe (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · [Oxford Online English — Nghe chủ động, biết đáp lại (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/active-listening) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Bảy — Bài tập tổng hợp + mốc tháng 2
 
@@ -653,6 +676,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 60 câu trộn toàn bộ 7 điểm ngữ pháp đã học. Đây là bài kiểm tra thật, không tra cứu.
 - **Viết** — Viết đoạn 80 từ có câu chủ đề rõ ràng — đây là mốc phải đạt của tháng 2.
 - **Nói** — Kiểm tra mốc: Listening Section 1 đạt 6/10, và nói liên tục 60 giây.
+  - Bài học: [British Council — Tỏ ra quan tâm khi nghe (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest) · [Oxford Online English — Nghe chủ động, biết đáp lại (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/active-listening) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -673,6 +697,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — who thay cho người, đứng ngay sau danh từ nó bổ nghĩa. Đây là công cụ tạo câu phức đầu tiên, và band 5.5 cần có câu phức xuất hiện.
 - **Viết** — 1 đoạn 120 từ về những người quan trọng với bạn, dùng ít nhất 3 mệnh đề who.
 - **Nói** — Shadowing 15 phút. Tả một người bạn ngưỡng mộ, dùng who ít nhất 3 lần.
+  - Bài học: [British Council — Hướng dẫn ai đó làm gì (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · [Oxford Online English — Tả một bức ảnh (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-pictures) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — Mệnh đề quan hệ với which
 
@@ -681,6 +706,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — which thay cho vật và sự việc. Không dùng which cho người.
 - **Viết** — 1 đoạn 120 từ về đồ vật bạn quý, dùng ít nhất 3 mệnh đề which.
 - **Nói** — Tả một món đồ bạn dùng hằng ngày.
+  - Bài học: [British Council — Hướng dẫn ai đó làm gì (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · [Oxford Online English — Tả một bức ảnh (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-pictures) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — that thay cho cả hai
 
@@ -689,6 +715,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — that dùng được cho cả người và vật trong mệnh đề xác định. Trong văn viết trang trọng thì who và which vẫn tự nhiên hơn.
 - **Viết** — 1 đoạn 120 từ, viết mỗi câu hai lần: một lần dùng who/which, một lần dùng that.
 - **Nói** — Nói về nơi bạn sống, dùng cả that lẫn which.
+  - Bài học: [British Council — Hướng dẫn ai đó làm gì (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · [Oxford Online English — Tả một bức ảnh (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-pictures) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Năm — where và when
 
@@ -697,6 +724,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — where cho nơi chốn, when cho thời gian. 'The city where I grew up' tự nhiên hơn nhiều so với 'the city which I grew up in'.
 - **Viết** — 1 đoạn 120 từ về một nơi và một thời điểm đáng nhớ.
 - **Nói** — Tả nơi bạn lớn lên, dùng where ít nhất 2 lần.
+  - Bài học: [British Council — Hướng dẫn ai đó làm gì (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · [Oxford Online English — Tả một bức ảnh (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-pictures) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Rút gọn mệnh đề quan hệ
 
@@ -705,6 +733,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Bỏ who/which và chuyển động từ sang V-ing hoặc V3: 'the man who is sitting there' thành 'the man sitting there'. Cấu trúc này làm câu gọn và tự nhiên hơn.
 - **Viết** — 1 đoạn 120 từ, viết 5 câu dạng đầy đủ rồi rút gọn cả 5.
 - **Nói** — Tả một bức ảnh, dùng ít nhất 3 mệnh đề rút gọn.
+  - Bài học: [British Council — Hướng dẫn ai đó làm gì (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · [Oxford Online English — Tả một bức ảnh (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-pictures) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Bảy — Ôn cả tuần
 
@@ -713,6 +742,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu nối hai câu đơn thành một câu có mệnh đề quan hệ.
 - **Viết** — Viết đoạn 120 từ có ít nhất 3 mệnh đề quan hệ, nộp Write & Improve.
 - **Nói** — Bắt đầu Part 2: chọn 1 cue card, chuẩn bị 1 phút, nói 1 phút. Ghi âm.
+  - Bài học: [British Council — Hướng dẫn ai đó làm gì (A2, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions) · [Oxford Online English — Tả một bức ảnh (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/describe-pictures) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/) · [English Speaking Success — xem một bài Part 2 thật kèm nhận xét](https://www.youtube.com/@EnglishSpeakingSuccess)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -733,6 +763,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — If + hiện tại đơn, will + nguyên thể. Dùng cho điều có thể xảy ra thật. Sau if KHÔNG dùng will — đây là lỗi phổ biến nhất của cấu trúc này.
 - **Viết** — 1 đoạn 120 từ về kế hoạch của bạn nếu điều kiện thuận lợi.
 - **Nói** — Shadowing 15 phút. Nói về dự định cuối tuần này, dùng if ít nhất 3 lần.
+  - Bài học: [British Council — Nhờ vả người khác (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · [Oxford Online English — Modal verb — lời khuyên và đề nghị lịch sự (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — Loại 1 với động từ khuyết thiếu
 
@@ -741,6 +772,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Thay will bằng can, may, should, might để đổi sắc thái: If it rains, we should stay home.
 - **Viết** — 1 đoạn 120 từ dùng ít nhất 4 động từ khuyết thiếu khác nhau.
 - **Nói** — Đưa lời khuyên cho một người bạn đang phân vân.
+  - Bài học: [British Council — Nhờ vả người khác (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · [Oxford Online English — Modal verb — lời khuyên và đề nghị lịch sự (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — Câu điều kiện loại 2
 
@@ -749,6 +781,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — If + quá khứ đơn, would + nguyên thể. Dùng cho điều không có thật ở hiện tại hoặc khó xảy ra.
 - **Viết** — 1 đoạn 120 từ về điều bạn sẽ làm nếu có nhiều tiền hoặc nhiều thời gian.
 - **Nói** — Nói 1 phút: What would you do if you could live anywhere?
+  - Bài học: [British Council — Nhờ vả người khác (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · [Oxford Online English — Modal verb — lời khuyên và đề nghị lịch sự (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Năm — If I were you
 
@@ -757,6 +790,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Trong loại 2, were dùng cho mọi chủ ngữ, kể cả I và he. 'If I were you' là cách đưa lời khuyên tự nhiên nhất và rất hợp cho Speaking Part 3.
 - **Viết** — 1 đoạn 120 từ đưa lời khuyên cho ba tình huống khác nhau.
 - **Nói** — Đưa lời khuyên dùng If I were you ít nhất 3 lần.
+  - Bài học: [British Council — Nhờ vả người khác (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · [Oxford Online English — Modal verb — lời khuyên và đề nghị lịch sự (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Phân biệt loại 1 với loại 2
 
@@ -765,6 +799,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Loại 1 cho điều có thể xảy ra, loại 2 cho điều giả định không có thật. Chọn sai loại làm người nghe hiểu sai mức độ khả thi.
 - **Viết** — 1 đoạn 120 từ trộn cả hai loại, ghi rõ vì sao chọn loại đó.
 - **Nói** — Part 2 — nói 75 giây, ghi âm và nghe lại.
+  - Bài học: [British Council — Nhờ vả người khác (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · [Oxford Online English — Modal verb — lời khuyên và đề nghị lịch sự (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Thứ Bảy — Ôn cả tuần
 
@@ -773,6 +808,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu chia động từ trong câu điều kiện. Kiểm tra riêng lỗi dùng will sau if.
 - **Viết** — Viết đoạn 120 từ, nộp Write & Improve và ghi 3 lỗi nặng nhất vào sổ lỗi.
 - **Nói** — Part 2 — 90 giây.
+  - Bài học: [British Council — Nhờ vả người khác (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/asking-favour) · [Oxford Online English — Modal verb — lời khuyên và đề nghị lịch sự (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/english-modal-verbs-introduction) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -793,6 +829,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — is / are + phân từ quá khứ. Chủ ngữ là thứ chịu tác động: 'English is spoken here'.
 - **Viết** — 1 đoạn 120 từ mô tả một quy trình quen thuộc bằng câu bị động.
 - **Nói** — Shadowing 15 phút. Tả cách một món ăn được làm ra.
+  - Bài học: [British Council — Giữ cho hội thoại không đứt (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · [Oxford Online English — Nói chuyện tự nhiên, không đứt mạch (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Ba — Bị động ở quá khứ đơn
 
@@ -801,6 +838,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — was / were + phân từ quá khứ. Chỉ cần hai thì này cho band 5.5, không cần bị động ở các thì phức tạp hơn.
 - **Viết** — 1 đoạn 120 từ kể một sự việc đã xảy ra bằng câu bị động.
 - **Nói** — Kể một việc đã được làm cho bạn hoặc vì bạn.
+  - Bài học: [British Council — Giữ cho hội thoại không đứt (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · [Oxford Online English — Nói chuyện tự nhiên, không đứt mạch (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — Khi nào nên dùng bị động
 
@@ -809,6 +847,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Khi không biết ai làm, khi không quan trọng ai làm, hoặc khi muốn nhấn mạnh vào kết quả. Đừng lạm dụng — bị động dùng sai chỗ làm câu nặng nề.
 - **Viết** — 1 đoạn 120 từ, viết 5 câu chủ động rồi chuyển sang bị động và tự đánh giá câu nào hay hơn.
 - **Nói** — Part 2 về một nơi chốn, dùng ít nhất 2 câu bị động.
+  - Bài học: [British Council — Giữ cho hội thoại không đứt (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · [Oxford Online English — Nói chuyện tự nhiên, không đứt mạch (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Thứ Năm — Liên từ cơ bản
 
@@ -817,6 +856,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — and, but, so, because. Bốn từ này nối được hầu hết mọi ý ở band 5.5, và dùng đúng chúng tốt hơn nhiều so với dùng sai từ nối hoa mỹ.
 - **Viết** — 1 đoạn 120 từ dùng đủ bốn liên từ, mỗi từ ít nhất hai lần.
 - **Nói** — Nói 90 giây, cố ý nối câu bằng because và so.
+  - Bài học: [British Council — Giữ cho hội thoại không đứt (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · [Oxford Online English — Nói chuyện tự nhiên, không đứt mạch (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Sáu — Liên từ nâng cao
 
@@ -825,6 +865,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — although, however, therefore. Chú ý dấu câu: although nối trong một câu, còn however đứng đầu câu mới và có dấu phẩy theo sau.
 - **Viết** — 1 đoạn 120 từ dùng đủ ba từ, đặt dấu câu đúng.
 - **Nói** — Trình bày hai mặt của một vấn đề, dùng however.
+  - Bài học: [British Council — Giữ cho hội thoại không đứt (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · [Oxford Online English — Nói chuyện tự nhiên, không đứt mạch (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Bảy — Ôn cả tuần
 
@@ -833,6 +874,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 30 câu chuyển chủ động sang bị động, và 30 câu chọn liên từ.
 - **Viết** — Viết đoạn 120 từ có bố cục rõ, dùng đủ 6 liên từ đã học.
 - **Nói** — Part 2 — 90 giây trôi chảy, đây là mốc của tuần 11.
+  - Bài học: [British Council — Giữ cho hội thoại không đứt (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/keeping-conversation-going) · [Oxford Online English — Nói chuyện tự nhiên, không đứt mạch (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/take-turns-in-english-conversation) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
@@ -853,6 +895,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu chọn thì trộn cả 5 thì đã học. Làm như bài kiểm tra: không tra cứu, chấm xong mới xem lại.
 - **Viết** — 1 đoạn 120 từ kể lại ba tháng học vừa qua, dùng ít nhất 4 thì.
 - **Nói** — Shadowing 15 phút. Part 2 — 90 giây.
+  - Bài học: [British Council — Gặp mặt trực tiếp (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · [Oxford Online English — Bắt chuyện xã giao (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/how-to-make-small-talk) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Thứ Ba — Tổng ôn mạo từ và danh từ
 
@@ -861,6 +904,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu trộn mạo từ, danh từ đếm được và không đếm được, much/many/some/any.
 - **Viết** — 1 đoạn 120 từ, tự soát riêng hai nhóm lỗi này.
 - **Nói** — Part 1 — 5 câu liên tiếp, mỗi câu 40 giây.
+  - Bài học: [British Council — Gặp mặt trực tiếp (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · [Oxford Online English — Bắt chuyện xã giao (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/how-to-make-small-talk) · [IELTS Liz — 26 chủ đề Part 1 kèm câu hỏi (PDF)](https://ieltsliz.com/wp-content/uploads/2014/08/IELTS-Speaking-Part-1-Topics-Questions.pdf)
 
 ### Thứ Tư — Tổng ôn giới từ và so sánh
 
@@ -869,6 +913,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu trộn giới từ thời gian, nơi chốn, cụm động từ + giới từ, và so sánh.
 - **Viết** — 1 đoạn 120 từ so sánh hai giai đoạn trong đời bạn.
 - **Nói** — Part 2 về một sự thay đổi, nói 100 giây.
+  - Bài học: [British Council — Gặp mặt trực tiếp (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · [Oxford Online English — Bắt chuyện xã giao (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/how-to-make-small-talk) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Thứ Năm — Tổng ôn câu phức
 
@@ -877,6 +922,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — 40 câu trộn mệnh đề quan hệ, câu điều kiện và bị động — ba công cụ tạo câu phức.
 - **Viết** — 1 đoạn 120 từ có ít nhất 2 mệnh đề quan hệ, 1 câu điều kiện và 1 câu bị động.
 - **Nói** — Part 2 — 100 giây.
+  - Bài học: [British Council — Gặp mặt trực tiếp (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · [Oxford Online English — Bắt chuyện xã giao (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/how-to-make-small-talk) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Thứ Sáu — Làm quen định dạng General Training
 
@@ -885,6 +931,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Lần đầu chạm vào đề thật. Không bấm giờ, được tra từ thoải mái. Mục đích là biết đề trông như thế nào, không phải để đo điểm.
 - **Viết** — Đọc một bài mẫu thư General Training trên IELTS Liz, chưa cần tự viết.
 - **Nói** — Part 2 — 90 giây về chủ đề bất kỳ.
+  - Bài học: [British Council — Gặp mặt trực tiếp (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · [Oxford Online English — Bắt chuyện xã giao (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/how-to-make-small-talk) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Thứ Bảy — Viết thư thử + mốc tháng 3
 
@@ -893,6 +940,7 @@ Ngày bận chỉ 1 tiếng thì giữ ba việc: Anki 15 phút, kỹ năng chí
 - **Ngữ pháp** — Ôn lại toàn bộ sổ lỗi của 12 tuần. Đánh dấu những lỗi đã hết tái xuất hiện.
 - **Viết** — Viết thử một lá thư 120 từ gửi bạn bè, chưa cần đúng chuẩn IELTS.
 - **Nói** — Kiểm tra mốc kết thúc giai đoạn 1: nói liên tục 90 giây về một cue card Part 2.
+  - Bài học: [British Council — Gặp mặt trực tiếp (B1, có video)](https://learnenglish.britishcouncil.org/free-resources/speaking/b1/meeting-face-face) · [Oxford Online English — Bắt chuyện xã giao (video chạy qua YouTube)](https://www.oxfordonlineenglish.com/how-to-make-small-talk) · [IELTS Liz — ngân hàng đề Part 2 (cue card)](https://ieltsliz.com/ielts-speaking-part-2-topics/)
 
 ### Chủ nhật — Ôn sổ lỗi và bài test tuần
 
