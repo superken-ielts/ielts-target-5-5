@@ -1,0 +1,66 @@
+# Hồ sơ cuốn sách cho agent book_ingest (docs/agent-hoc-tap/02 mục 3.2).
+# Điền ở chế độ --llm manual: Claude Code đọc trang Contents (PDF trang 4) rồi ghi lại.
+# Số trang trong mục `toc` là SỐ IN trong sách; agent tự đổi sang chỉ số trang PDF bằng page_offset.
+
+book: ielts-target-5.0
+title: IELTS Target 5.0
+edition: garnet-2011
+template: target-gt-v1
+start_week: 6
+sessions_per_week: 6
+
+files:
+  course-book:
+    kind: pdf
+    path: IELTS_Target_5.0.pdf
+    page_offset: 1            # trang in 10 = trang PDF 11
+  listening:
+    kind: pdf
+    path: Target5.0_Listening_R.pdf
+    note: Bản trích các trang Listening, Answer key và Tapescript — nhẹ, dùng cho phiên Listening
+  audio:
+    kind: audio
+    dir: Target5.0_Listening_R_audio
+    # Unit1_listening_1c.mp3 → unit 1, Listening 1, bài C
+    pattern: '^Unit(?P<unit>\d+)_listening_(?P<part>\d)(?P<ex>[A-Za-z]+)\.mp3$'
+
+# Thứ tự module trong mỗi unit. Agent nhận ra trang mở đầu module bằng băng tiêu đề đỏ.
+modules: [speaking-vocab, listening, reading, writing, consolidation, exam-practice]
+# Bố cục dự phòng (độ lệch trang so với trang đầu unit) khi không đếm đủ băng tiêu đề.
+module_offsets: [0, 2, 4, 7, 9, 10]
+banner:
+  top: 0.08                   # dải 8% trên cùng của trang
+  min_red: 0.03               # tỷ lệ điểm ảnh đỏ tối thiểu
+
+toc:
+  sections:
+    - id: S1
+      title: Section 1
+      units: [[1, Life, 10], [2, Learning, 22], [3, Work, 34], [4, Achievements, 46], [5, Thoughts, 58]]
+      review: [1, 70]
+    - id: S2
+      title: Section 2
+      units: [[6, Place, 74], [7, Movement, 86], [8, Time, 98], [9, Money, 110], [10, Feelings, 122]]
+      review: [2, 134]
+    - id: S3
+      title: Section 3
+      units: [[11, Health, 138], [12, Nature, 150], [13, Construction, 162], [14, Technology, 174], [15, Society, 186]]
+      review: [3, 200]
+  key_vocab: [204, 206]
+  skip:
+    - {title: Academic section, from: 207, to: 265}
+  answer_key: [266, 276]
+  tapescript: [277, 324]
+
+# Bản trích Listening: trang 1 là bìa, unit N ở trang 2N và 2N+1 (chỉ số PDF).
+listening_extract:
+  file: listening
+  first_unit_page: 2
+  pages_per_unit: 2
+  answer_key: [32, 42]
+  tapescript: [43, 90]
+
+# Bộ sách đầy đủ còn có Work Book và 3 quyển Test — chưa có trong thư mục này.
+missing: [work-book, test-books]
+
+review_threshold: 0.9

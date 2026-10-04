@@ -12,6 +12,12 @@ Thư mục này là tài liệu kỹ thuật, `web/build.py` không nhúng nó v
 | [02-kien-truc-va-hop-dong-du-lieu.md](02-kien-truc-va-hop-dong-du-lieu.md) | Cấu trúc thư mục, schema `book.yaml` / `book.json` / `plan.json` / `review.json` / tiến độ, thuật toán từng bước nhập sách, thiết kế tích hợp từng tab |
 | [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md) | 10 quyết định cần chốt, đường găng theo tuần học, 5 giai đoạn với spike và cổng kiểm tra, chiến lược test, rủi ro |
 | [04-checklist.md](04-checklist.md) | Checklist từng task (P0-01 … P4-07) kèm điều kiện đạt và cổng G0–G4 |
+| [05-lich-su-thay-doi.md](05-lich-su-thay-doi.md) | Lịch sử từng đợt triển khai: file thêm/sửa/xóa, chỗ làm khác plan, kết quả kiểm thử, việc còn treo |
+
+## Trạng thái
+
+**Đợt 1 (04/10/2026):** agent nhập sách `agents/book_ingest` đã chạy trên IELTS Target 5.0 (120 phiên, 59 track,
+27 đoạn PDF) và app có tab **Sách** để học theo lộ trình. Chi tiết ở file 05; việc còn lại tick ở file 04.
 
 ## Tóm tắt trong năm dòng
 

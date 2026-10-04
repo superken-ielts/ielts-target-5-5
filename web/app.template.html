@@ -528,6 +528,7 @@ nav button[aria-current="page"]{color:var(--accent)}
 }
 .sync i{width:6px; height:6px; border-radius:99px; background:var(--ink-3); display:block}
 .sync.on i{background:var(--ok)}
+/*__BOOK_CSS__*/
 </style>
 
 <header>
@@ -632,6 +633,9 @@ nav button[aria-current="page"]{color:var(--accent)}
     <p class="sec-note">General Training · 3.0 → 5.5 · khoảng 480 giờ ở nhịp 12 tiếng mỗi tuần. Chạm vào một tuần để xem chi tiết.</p>
     <div id="roadmap"></div>
   </section>
+
+  <!-- ============ SÁCH (web/src/book) ============ -->
+  <section class="panel" id="p-book"></section>
 
   <!-- ============ LUYỆN TẬP ============ -->
   <section class="panel" id="p-practice">
@@ -995,6 +999,7 @@ nav button[aria-current="page"]{color:var(--accent)}
     <div class="nav-brand">Bạn đồng hành IELTS<em>General Training 5.5</em></div>
     <button data-go="today" aria-current="page"><svg viewBox="0 0 24 24"><path d="M9 11l2.5 2.5L15.5 9"/><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M8 2.5v4M16 2.5v4"/></svg><span>Hôm nay</span></button>
     <button data-go="road"><svg viewBox="0 0 24 24"><path d="M6 20V9m0 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/><path d="M18 4v11m0 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/><path d="M6 12h6a3 3 0 013 3v0"/></svg><span>Lộ trình</span></button>
+    <button data-go="book"><svg viewBox="0 0 24 24"><path d="M5 4.5h10.5a3 3 0 013 3V20H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h10.5"/><path d="M9 8h6"/></svg><span>Sách</span></button>
     <button data-go="practice"><svg viewBox="0 0 24 24"><path d="M12 15a3.5 3.5 0 003.5-3.5v-5a3.5 3.5 0 10-7 0v5A3.5 3.5 0 0012 15z"/><path d="M5.5 11.5a6.5 6.5 0 0013 0M12 18v3.5"/></svg><span>Luyện tập</span></button>
     <button data-go="res"><svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 015.5 4H10a2 2 0 012 2v13a2 2 0 00-2-2H5.5A1.5 1.5 0 014 15.5z"/><path d="M20 5.5A1.5 1.5 0 0018.5 4H14a2 2 0 00-2 2v13a2 2 0 012-2h4.5a1.5 1.5 0 001.5-1.5z"/></svg><span>Tài liệu</span></button>
     <button data-go="docs"><svg viewBox="0 0 24 24"><path d="M5.5 3.5h9L19 8v12.5H5.5z"/><path d="M14 3.5V8h5"/><path d="M8.5 12.5h7M8.5 16h4.5"/></svg><span>Kế hoạch</span></button>
@@ -3559,12 +3564,19 @@ document.getElementById("gRun").onclick = async () => {
 document.getElementById("gStop").onclick = () => gCtl?.abort();
 
 /* =========================================================
+   5b. SÁCH — book.json + plan.json do agents/book_ingest sinh, build.py nhúng vào
+   ========================================================= */
+const BOOKS = /*__BOOKS__*/{};
+/*__BOOK_JS__*/
+
+/* =========================================================
    6. KHỞI ĐỘNG
    ========================================================= */
 loadProfile();
 loadLocal();
 renderAll(); renderRes(); renderDocList(); newCue(); tmReset(); setGMode("essay");
 renderRootNote();
+BookUI.init();
 writeRoster(false);
 document.getElementById("inName").value = PROFILE.name;
 

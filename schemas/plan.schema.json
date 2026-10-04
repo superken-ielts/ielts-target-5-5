@@ -1,0 +1,140 @@
+{
+ "$defs": {
+  "Session": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "seq": {
+     "title": "Seq",
+     "type": "integer"
+    },
+    "week": {
+     "title": "Week",
+     "type": "integer"
+    },
+    "section": {
+     "title": "Section",
+     "type": "string"
+    },
+    "item": {
+     "title": "Item",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "unit",
+      "review",
+      "test"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "step": {
+     "title": "Step",
+     "type": "string"
+    },
+    "core": {
+     "title": "Core",
+     "type": "boolean"
+    },
+    "activityIds": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Activityids",
+     "type": "array"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "estMinutes": {
+     "default": 75,
+     "title": "Estminutes",
+     "type": "integer"
+    },
+    "note": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Note"
+    }
+   },
+   "required": [
+    "id",
+    "seq",
+    "week",
+    "section",
+    "item",
+    "kind",
+    "step",
+    "core",
+    "activityIds",
+    "title"
+   ],
+   "title": "Session",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema": {
+   "const": "plan/1",
+   "default": "plan/1",
+   "title": "Schema",
+   "type": "string"
+  },
+  "bookId": {
+   "title": "Bookid",
+   "type": "string"
+  },
+  "template": {
+   "title": "Template",
+   "type": "string"
+  },
+  "startWeek": {
+   "title": "Startweek",
+   "type": "integer"
+  },
+  "sessionsPerWeek": {
+   "title": "Sessionsperweek",
+   "type": "integer"
+  },
+  "minutesPerSession": {
+   "title": "Minutespersession",
+   "type": "integer"
+  },
+  "rules": {
+   "additionalProperties": true,
+   "title": "Rules",
+   "type": "object"
+  },
+  "sessions": {
+   "items": {
+    "$ref": "#/$defs/Session"
+   },
+   "title": "Sessions",
+   "type": "array"
+  }
+ },
+ "required": [
+  "bookId",
+  "template",
+  "startWeek",
+  "sessionsPerWeek",
+  "minutesPerSession",
+  "rules",
+  "sessions"
+ ],
+ "title": "Plan",
+ "type": "object"
+}
