@@ -10,6 +10,7 @@ trình được nhúng thẳng vào trang, nên đọc được cả kế hoạc
 |---|---|
 | **Hôm nay** | Bốn block của ngày hôm nay với nội dung cụ thể theo đúng tuần đang học, có ô đánh dấu hoàn thành. Nút chuyển sang khung rút gọn cho ngày bận chỉ có 1 tiếng (ẩn vào Chủ nhật vì Chủ nhật cố định 1 tiếng). Khối **Chi tiết ngày hôm nay** mở ra đủ năm phần kèm link bài học. Nút **Hoàn thành hôm nay** để chốt ngày, và màn chặn buộc đóng sổ những ngày cũ còn treo trước khi sang ngày mới. |
 | **Lộ trình** | Toàn bộ 40 tuần, nhóm theo 4 giai đoạn, tuần hiện tại được đánh dấu. Chạm vào một tuần để xem trọng tâm của cả 4 kỹ năng và các mốc kiểm tra theo tháng. |
+| **Sách** | Menu học IELTS Target 5.0 theo lộ trình: 120 phiên × 75 phút, phiên kế tiếp, tuần dự kiến xong. Mỗi phiên mở đúng trang sách (PDF), đáp án, tapescript, phát audio có ±5 giây, tốc độ, lặp A–B, đồng hồ 75 phút, ghi lỗi vào sổ lỗi, và cộng giờ học khi xong. Xem mục *Tab Sách* bên dưới. |
 | **Luyện tập** | Bốn kỹ năng tách riêng, chọn kỹ năng nào thì vào thẳng phần luyện của kỹ năng đó. Nội dung lấy theo đúng tuần đang học. Mỗi buổi luyện đều ghi được kết quả vào lịch sử. |
 | **Tài liệu** | Danh sách tài liệu miễn phí bên ngoài, bấm là mở. |
 | **Kế hoạch** | Toàn bộ 16 file markdown, đọc ngay trong trang. Có mục lục cho từng tài liệu, tìm kiếm không dấu trên toàn bộ nội dung, và liên kết giữa các tài liệu bấm được. |
@@ -87,13 +88,39 @@ bộ bên đó sẽ dựng lại dòng danh bạ — trang có ghi rõ điều n
 Lưu ý cho bản đăng trên Claude: **xóa dữ liệu duyệt web của trình duyệt là vô ích**, vì
 mở lại trang là bản trên máy chủ tự tải xuống. Phải dùng đúng nút trong trang.
 
+## Tab Sách
+
+Dữ liệu sách do agent nhập sách sinh ra (`agents/`, xem `agents/README.md`): `books/<sách>/book.json`
+và `plan.json`. `build.py` nhúng hai file này vào trang, nên menu và lộ trình chạy ở mọi bản dựng.
+Mã của tab nằm ở `web/src/book/` (`core.js` hàm thuần, `ui.js` giao diện, `book.css`), cũng được nhúng.
+
+File sách (PDF, MP3) thì không nhúng — trang lấy theo thứ tự:
+
+1. File đã **nhập vào trình duyệt** (tab Sách → Quản lý file sách → Nhập file sách từ máy, lưu IndexedDB).
+2. File trên **máy chủ** cạnh trang: `../books/<sách>/…` — bản tự host từ gốc repo (GitHub Pages, hoặc
+   `python3 web/serve.py` rồi mở `http://localhost:8000/web/index.html`).
+
+Course Book 100 MB được agent cắt thành các đoạn nhỏ theo unit trong `books/<sách>/web/`; trang chỉ tải
+đoạn chứa trang đang xem (vài MB). Trình xem PDF dùng PDF.js 4.10.38 trong `web/vendor/pdfjs/`, tải lười
+lúc mở trang sách; không có thì lấy cùng phiên bản trên cdn.jsdelivr.net.
+
+Tiến độ sách lưu riêng, không đụng tiến độ cũ: `localStorage` khóa `ielts-gt-40w-v1:<slug>:book:<id>` và
+`students/<slug>/books/<id>` trên máy chủ (đồng bộ khi mở tab Sách). Tab Lịch sử không hiện tiến độ sách.
+
+Bản trên Claude không truy cập được thư mục `books/`: phải nhập file từ máy (các MP3, `Target5.0_Listening_R.pdf`
+và các đoạn trong `books/ielts_target_5_0/web/`). Việc đọc PDF trong bản Claude phụ thuộc chính sách nạp script
+của nền tảng — chưa kiểm tra được (spike S0.2 trong `docs/agent-hoc-tap/03`).
+
 ## Ba file, ba vai trò
 
 | File | Vai trò |
 |---|---|
-| `app.template.html` | **Bản nguồn giao diện và mã — file cần sửa khi đổi cách trang hoạt động.** Có hai chỗ đánh dấu cho build chèn dữ liệu: `/*__DOCS__*/{}` cho nội dung markdown và `/*__P1DAYS__*/{...}` cho giáo án ngày. |
+| `app.template.html` | **Bản nguồn giao diện và mã — file cần sửa khi đổi cách trang hoạt động.** Có các chỗ đánh dấu cho build chèn dữ liệu: `/*__DOCS__*/{}` cho nội dung markdown, `/*__P1DAYS__*/{...}` cho giáo án ngày, `/*__BOOKS__*/{}` cho dữ liệu sách, `/*__BOOK_JS__*/` và `/*__BOOK_CSS__*/` cho mã tab Sách. |
+| `src/book/` | Mã tab Sách: `core.js` (hàm thuần, có test ở `tests/web/`), `ui.js`, `book.css`. |
+| `vendor/pdfjs/` | PDF.js 4.10.38 (Apache-2.0), tải lười khi mở trang sách. |
+| `serve.py` | Máy chủ chạy thử có hỗ trợ HTTP Range — `python3 -m http.server` không có, PDF.js sẽ phải tải trọn file. |
 | `phase1-days.json` | **Nguồn duy nhất của giáo án từng ngày giai đoạn 1** — 12 tuần × 6 ngày, cộng phần Chủ nhật. Sửa nội dung học ở đây. |
-| `build.py` | Đọc `phase1-days.json`, sinh ra file markdown giáo án, gom mọi file `.md`, nhúng tất cả vào bản nguồn, rồi xuất hai file dưới. |
+| `build.py` | Đọc `phase1-days.json`, sinh ra file markdown giáo án, gom mọi file `.md` (trừ `docs/`, `agents/`, `.claude/`, `books/`, `vendor/`), gom `books/*/book.json` + `plan.json` và mã tab Sách, nhúng tất cả vào bản nguồn, rồi xuất hai file dưới. |
 | `ielts-companion.html` | Bản dựng để đăng lên Claude Artifact. Không có thẻ `<!doctype>`/`<html>`/`<head>`/`<body>` vì nền tảng tự bọc. **Sinh ra tự động, đừng sửa tay.** |
 | `index.html` | Bản dựng standalone để tự host hoặc mở trực tiếp bằng trình duyệt. **Sinh ra tự động, đừng sửa tay.** |
 | `../01a-giao-an-tung-ngay-giai-doan-1.md` | Bản markdown của giáo án ngày. **Sinh ra tự động từ file JSON, đừng sửa tay.** |

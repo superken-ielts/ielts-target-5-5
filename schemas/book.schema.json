@@ -1,0 +1,527 @@
+{
+ "$defs": {
+  "Activity": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "module": {
+     "title": "Module",
+     "type": "string"
+    },
+    "skill": {
+     "enum": [
+      "listening",
+      "reading",
+      "writing",
+      "speaking",
+      "vocab",
+      "grammar",
+      "other"
+     ],
+     "title": "Skill",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "pdf": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Pdf"
+    },
+    "pages": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Pages"
+    },
+    "printedPages": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Printedpages"
+    },
+    "tracks": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Tracks",
+     "type": "array"
+    },
+    "answer": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Ref"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "script": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Ref"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "vocab": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Ref"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "alt": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/Ref"
+     },
+     "title": "Alt",
+     "type": "array"
+    },
+    "note": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Note"
+    },
+    "estMinutes": {
+     "default": 75,
+     "title": "Estminutes",
+     "type": "integer"
+    },
+    "confidence": {
+     "default": 1.0,
+     "title": "Confidence",
+     "type": "number"
+    }
+   },
+   "required": [
+    "id",
+    "module",
+    "skill",
+    "title"
+   ],
+   "title": "Activity",
+   "type": "object"
+  },
+  "AudioFile": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "const": "audio",
+     "title": "Kind",
+     "type": "string"
+    },
+    "path": {
+     "title": "Path",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "integer"
+    },
+    "durationSec": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Durationsec"
+    },
+    "bytes": {
+     "title": "Bytes",
+     "type": "integer"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    },
+    "script": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Ref"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    }
+   },
+   "required": [
+    "kind",
+    "path",
+    "title",
+    "unit",
+    "bytes",
+    "sha256"
+   ],
+   "title": "AudioFile",
+   "type": "object"
+  },
+  "Chunk": {
+   "additionalProperties": false,
+   "description": "Một đoạn PDF nhỏ cắt từ file gốc để app tải nhanh. Trang trong book.json vẫn tính theo file gốc.",
+   "properties": {
+    "path": {
+     "title": "Path",
+     "type": "string"
+    },
+    "from": {
+     "title": "From",
+     "type": "integer"
+    },
+    "to": {
+     "title": "To",
+     "type": "integer"
+    },
+    "bytes": {
+     "title": "Bytes",
+     "type": "integer"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "path",
+    "from",
+    "to",
+    "bytes",
+    "sha256"
+   ],
+   "title": "Chunk",
+   "type": "object"
+  },
+  "Item": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "unit",
+      "review",
+      "test"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "no": {
+     "title": "No",
+     "type": "integer"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "pages": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Pages"
+    },
+    "activities": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/Activity"
+     },
+     "title": "Activities",
+     "type": "array"
+    }
+   },
+   "required": [
+    "id",
+    "kind",
+    "no",
+    "title"
+   ],
+   "title": "Item",
+   "type": "object"
+  },
+  "PdfFile": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "const": "pdf",
+     "title": "Kind",
+     "type": "string"
+    },
+    "path": {
+     "title": "Path",
+     "type": "string"
+    },
+    "pages": {
+     "title": "Pages",
+     "type": "integer"
+    },
+    "pageOffset": {
+     "default": 0,
+     "title": "Pageoffset",
+     "type": "integer"
+    },
+    "bytes": {
+     "title": "Bytes",
+     "type": "integer"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    },
+    "chunks": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/Chunk"
+     },
+     "title": "Chunks",
+     "type": "array"
+    }
+   },
+   "required": [
+    "kind",
+    "path",
+    "pages",
+    "bytes",
+    "sha256"
+   ],
+   "title": "PdfFile",
+   "type": "object"
+  },
+  "Ref": {
+   "additionalProperties": false,
+   "description": "Trỏ tới một khoảng trang trong một file PDF của sách.",
+   "properties": {
+    "pdf": {
+     "title": "Pdf",
+     "type": "string"
+    },
+    "pages": {
+     "items": {
+      "type": "integer"
+     },
+     "title": "Pages",
+     "type": "array"
+    },
+    "label": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Label"
+    }
+   },
+   "required": [
+    "pdf",
+    "pages"
+   ],
+   "title": "Ref",
+   "type": "object"
+  },
+  "Section": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "items": {
+     "items": {
+      "$ref": "#/$defs/Item"
+     },
+     "title": "Items",
+     "type": "array"
+    }
+   },
+   "required": [
+    "id",
+    "title",
+    "items"
+   ],
+   "title": "Section",
+   "type": "object"
+  },
+  "Source": {
+   "additionalProperties": false,
+   "properties": {
+    "agent": {
+     "title": "Agent",
+     "type": "string"
+    },
+    "profileSha256": {
+     "title": "Profilesha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "agent",
+    "profileSha256"
+   ],
+   "title": "Source",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema": {
+   "const": "book/1",
+   "default": "book/1",
+   "title": "Schema",
+   "type": "string"
+  },
+  "id": {
+   "title": "Id",
+   "type": "string"
+  },
+  "title": {
+   "title": "Title",
+   "type": "string"
+  },
+  "edition": {
+   "default": "",
+   "title": "Edition",
+   "type": "string"
+  },
+  "template": {
+   "title": "Template",
+   "type": "string"
+  },
+  "source": {
+   "$ref": "#/$defs/Source"
+  },
+  "files": {
+   "additionalProperties": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/PdfFile"
+     },
+     {
+      "$ref": "#/$defs/AudioFile"
+     }
+    ]
+   },
+   "title": "Files",
+   "type": "object"
+  },
+  "sections": {
+   "items": {
+    "$ref": "#/$defs/Section"
+   },
+   "title": "Sections",
+   "type": "array"
+  },
+  "keyVocab": {
+   "anyOf": [
+    {
+     "$ref": "#/$defs/Ref"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null
+  },
+  "skipped": {
+   "default": [],
+   "items": {
+    "additionalProperties": true,
+    "type": "object"
+   },
+   "title": "Skipped",
+   "type": "array"
+  },
+  "missing": {
+   "default": [],
+   "items": {
+    "type": "string"
+   },
+   "title": "Missing",
+   "type": "array"
+  }
+ },
+ "required": [
+  "id",
+  "title",
+  "template",
+  "source",
+  "files",
+  "sections"
+ ],
+ "title": "Book",
+ "type": "object"
+}

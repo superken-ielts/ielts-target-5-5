@@ -1,0 +1,65 @@
+{
+ "schema": "review/1",
+ "agent": "book-ingest",
+ "items": [
+  {
+   "id": "unit-range:U15",
+   "kind": "unit-range",
+   "severity": "warn",
+   "subject": "U15",
+   "message": "Unit 15 có 7 băng tiêu đề, nhiều hơn 6 module. Đề xuất gộp trang [199] vào module cuối (exam-practice).",
+   "confidence": 0.8,
+   "proposal": {
+    "starts": [
+     187,
+     189,
+     191,
+     194,
+     196,
+     197
+    ]
+   },
+   "options": [],
+   "evidence": [
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 187
+    },
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 189
+    },
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 191
+    },
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 194
+    },
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 196
+    },
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 197
+    },
+    {
+     "type": "page",
+     "file": "course-book",
+     "page": 199
+    }
+   ],
+   "decision": {
+    "accept": true
+   }
+  }
+ ]
+}

@@ -35,6 +35,14 @@ P1MD = ROOT / "01a-giao-an-tung-ngay-giai-doan-1.md"
 PLACEHOLDER = "/*__DOCS__*/{}"
 P1_PLACEHOLDER = "/*__P1DAYS__*/{days:{},sunday:{}}"
 
+# Tab Sach: ma nguon o web/src/book, du lieu sach do agents/book_ingest sinh o books/<sach>/.
+BOOKS_DIR = ROOT / "books"
+BOOK_SRC = WEB / "src" / "book"
+BOOK_JS_FILES = ("core.js", "ui.js")
+BOOKS_PLACEHOLDER = "/*__BOOKS__*/{}"
+BOOK_JS_PLACEHOLDER = "/*__BOOK_JS__*/"
+BOOK_CSS_PLACEHOLDER = "/*__BOOK_CSS__*/"
+
 # Lich luan phien rieng cua giai doan 1 — phai khop ROTA1 trong app.template.html.
 LIS, REA, WRI, GRA = "Listening", "Reading", "Writing", "Ngữ pháp"
 ROTA1 = {
@@ -48,8 +56,10 @@ ROTA1 = {
 DAYNAME = {1: "Thứ Hai", 2: "Thứ Ba", 3: "Thứ Tư", 4: "Thứ Năm", 5: "Thứ Sáu", 6: "Thứ Bảy"}
 
 # Thu tu uu tien khi liet ke; file khong nam trong danh sach van duoc gom vao cuoi.
-# docs/ la tai lieu ky thuat cho nguoi phat trien, khong nhung vao app hoc.
-SKIP_DIRS = {".git", "node_modules", "__pycache__", "docs"}
+# docs/, agents/, .claude/, books/, vendor/ la tai lieu ky thuat hoac du lieu sach — khong nhung vao
+# tab Ke hoach cua app hoc.
+SKIP_DIRS = {".git", "node_modules", "__pycache__", "docs", "agents", ".claude", "books", "vendor"}
+SKIP_FILES = {"CLAUDE.md"}
 
 HEAD = """<!doctype html>
 <html lang="vi">
@@ -139,11 +149,33 @@ def collect_docs() -> dict:
     docs = {}
     for path in sorted(ROOT.rglob("*.md")):
         # Xet duong dan tuong doi: thu muc cha cua repo ten "docs" khong duoc lam mat het file.
-        if any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts):
+        if any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts) or path.name in SKIP_FILES:
             continue
         rel = path.relative_to(ROOT).as_posix()
         docs[rel] = path.read_text(encoding="utf-8")
     return docs
+
+
+def collect_books() -> dict:
+    """Gom book.json + plan.json cua moi sach da qua agent nhap sach."""
+    books = {}
+    for book_json in sorted(BOOKS_DIR.glob("*/book.json")):
+        plan_json = book_json.with_name("plan.json")
+        if not plan_json.exists():
+            sys.exit(f"Thieu {plan_json} — chay lai agent: python -m book_ingest ingest {book_json.parent}")
+        book = json.loads(book_json.read_text(encoding="utf-8"))
+        plan = json.loads(plan_json.read_text(encoding="utf-8"))
+        books[book["id"]] = {"dir": book_json.parent.name, "book": book, "plan": plan}
+    return books
+
+
+def book_code() -> tuple[str, str]:
+    """Ma JS va CSS cua tab Sach, chen thang vao trang (trang chay duoi CSP nen khong tai file rieng)."""
+    js = "\n".join((BOOK_SRC / name).read_text(encoding="utf-8") for name in BOOK_JS_FILES)
+    css = (BOOK_SRC / "book.css").read_text(encoding="utf-8")
+    if "</script" in js.lower() or "</style" in css.lower():
+        sys.exit("Ma tab Sach chua chuoi dong the script/style — se lam vo trang.")
+    return js, css
 
 
 def js_safe(payload: str) -> str:
@@ -156,7 +188,7 @@ def main() -> None:
         sys.exit(f"Khong thay {TEMPLATE.name}. Day la file nguon can sua.")
 
     tpl = TEMPLATE.read_text(encoding="utf-8")
-    for ph in (PLACEHOLDER, P1_PLACEHOLDER):
+    for ph in (PLACEHOLDER, P1_PLACEHOLDER, BOOKS_PLACEHOLDER, BOOK_JS_PLACEHOLDER, BOOK_CSS_PLACEHOLDER):
         if ph not in tpl:
             sys.exit(f"Khong thay cho danh dau {ph} trong {TEMPLATE.name}.")
 
@@ -170,6 +202,12 @@ def main() -> None:
     docs = collect_docs()
     if not docs:
         sys.exit("Khong tim thay file .md nao de nhung.")
+
+    books = collect_books()
+    book_js, book_css = book_code()
+    # Thay cho danh dau cua Sach TRUOC khi nhung tai lieu, de chu trong tai lieu khong bi thay nham.
+    tpl = tpl.replace(BOOK_CSS_PLACEHOLDER, book_css).replace(BOOK_JS_PLACEHOLDER, book_js).replace(
+        BOOKS_PLACEHOLDER, js_safe(json.dumps(books, ensure_ascii=False, separators=(",", ":"))))
 
     artifact = tpl.replace(
         P1_PLACEHOLDER,
@@ -190,6 +228,8 @@ def main() -> None:
     print(f"Da nhung {len(docs)} file markdown ({total_words:,} tu).")
     for rel in docs:
         print(f"  - {rel}")
+    for bid, b in books.items():
+        print(f"Da nhung sach {bid} ({b['dir']}): {len(b['plan']['sessions'])} phien.")
     print()
     print(f"{OUT_ARTIFACT.name:24s} {len(artifact):>9,} bytes  -> dang len Claude Artifact")
     print(f"{OUT_STANDALONE.name:24s} {len(standalone):>9,} bytes  -> tu host")

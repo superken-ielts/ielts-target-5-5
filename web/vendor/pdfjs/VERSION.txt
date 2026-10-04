@@ -1,0 +1,5 @@
+pdfjs-dist 4.10.38 (Mozilla PDF.js), bản legacy/build — chạy được trên trình duyệt cũ hơn, kể cả Safari iOS.
+Nguồn: https://www.npmjs.com/package/pdfjs-dist  ·  Giấy phép: Apache-2.0 (xem LICENSE).
+Tab Sách tải lười hai file này khi mở trang sách; không có thì dùng bản cùng phiên bản trên cdn.jsdelivr.net.
+Nâng phiên bản: npm pack pdfjs-dist@<bản> rồi chép legacy/build/pdf.min.mjs và pdf.worker.min.mjs vào đây,
+đổi PDFJS_VER trong web/src/book/ui.js cho khớp.

@@ -1,0 +1,123 @@
+{
+ "$defs": {
+  "ReviewItem": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "kind": {
+     "title": "Kind",
+     "type": "string"
+    },
+    "severity": {
+     "enum": [
+      "info",
+      "warn",
+      "error"
+     ],
+     "title": "Severity",
+     "type": "string"
+    },
+    "subject": {
+     "title": "Subject",
+     "type": "string"
+    },
+    "message": {
+     "title": "Message",
+     "type": "string"
+    },
+    "confidence": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Confidence"
+    },
+    "proposal": {
+     "anyOf": [
+      {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Proposal"
+    },
+    "options": {
+     "default": [],
+     "items": {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "title": "Options",
+     "type": "array"
+    },
+    "evidence": {
+     "default": [],
+     "items": {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "title": "Evidence",
+     "type": "array"
+    },
+    "decision": {
+     "anyOf": [
+      {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Decision"
+    }
+   },
+   "required": [
+    "id",
+    "kind",
+    "severity",
+    "subject",
+    "message"
+   ],
+   "title": "ReviewItem",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "schema": {
+   "const": "review/1",
+   "default": "review/1",
+   "title": "Schema",
+   "type": "string"
+  },
+  "agent": {
+   "default": "book-ingest",
+   "title": "Agent",
+   "type": "string"
+  },
+  "items": {
+   "default": [],
+   "items": {
+    "$ref": "#/$defs/ReviewItem"
+   },
+   "title": "Items",
+   "type": "array"
+  }
+ },
+ "title": "Review",
+ "type": "object"
+}
