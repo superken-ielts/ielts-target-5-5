@@ -46,11 +46,24 @@ try{
     assert.ok((await page.locator("#tBlocks .blk").count()) > 0);
   });
 
-  await step("tab Sách hiện 120 phiên và phiên kế tiếp", async () => {
+  await step("menu Sách: danh sách sách kèm trình độ và thời lượng", async () => {
     await page.click('nav button[data-go="book"]');
+    await page.waitForSelector("#p-book .bk-lib");
+    const lib = await page.textContent("#p-book");
+    assert.match(lib, /IELTS Target 5\.0/);
+    assert.match(lib, /Band 3\.5 → 5\.0/);
+    assert.match(lib, /Khoảng 4–5,5 tháng/);
+    assert.match(lib, /Cambridge IELTS 20 General Training/);          // sách trong lộ trình chưa nhập
+    assert.match(lib, /Chưa nhập vào app/);
+  });
+
+  await step("chi tiết sách: đủ section, unit, 120 phiên và phiên kế tiếp", async () => {
+    await page.click("#p-book .bk-lib .btn-primary");
     await page.waitForSelector("#p-book .bk-next");
     assert.match(await page.textContent("#p-book .bk-next"), /Unit 1 · Speaking & Vocabulary/);
+    assert.equal(await page.locator("#p-book .bk-unit").count(), 21);  // 15 unit + 3 review + 3 test
     assert.equal(await page.locator("#p-book .bk-row").count(), 120);
+    assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
   await step("mở phiên, xem trang sách qua đoạn PDF nhỏ", async () => {
@@ -79,6 +92,17 @@ try{
     assert.equal(hours, 1);
   });
 
+  await step("chọn học tự do Unit 7, rồi quay về theo lộ trình", async () => {
+    await page.locator("#p-book .bk-unit", { hasText: "Unit 7 · Movement" }).locator("button.btn").first().click();
+    await page.waitForSelector("#p-book .bk-act");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 7 · Speaking & Vocabulary/);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+    assert.match(await page.textContent("#p-book .bk-next"), /unit tự chọn[\s\S]*Unit 7 · Speaking/);
+    await page.click("#p-book .bk-next >> text=Quay về theo lộ trình");
+    await page.waitForFunction(() => /Unit 1 · Listening/.test(document.querySelector("#p-book .bk-next").textContent));
+  });
+
   await step("phiên Listening phát được audio", async () => {
     await page.click("#p-book .bk-next .btn-primary");
     await page.waitForFunction(() => { const a = document.querySelector("#p-book audio"); return a && a.duration > 0; }, null, { timeout: 15000 });
@@ -90,7 +114,10 @@ try{
   await step("tải lại trang, tiến độ sách vẫn còn", async () => {
     await page.reload();
     await page.click('nav button[data-go="book"]');
-    await page.waitForSelector("#p-book .bk-next");
+    await page.waitForSelector("#p-book .bk-lib");
+    assert.match(await page.textContent("#p-book .bk-lib"), /Đã xong 1\/120 phiên/);
+    await page.click("#p-book .bk-lib .btn-primary");
+    await page.waitForSelector("#p-book .bk-stat");
     assert.match(await page.textContent("#p-book .bk-stat"), /1\/120/);
   });
 
@@ -115,6 +142,17 @@ try{
       return c && c.width > 100 && m && m.hidden;
     }, null, { timeout: 30000 });
     await page.click(".bk-vbar button:last-child");
+  });
+
+  await step("xem checklist triển khai ngay trong app", async () => {
+    await page.click('nav button[data-go="book"]');
+    assert.match(await page.textContent("#p-book"), /Đã xong\s*\d+\/\d+ task/);
+    await page.click("#p-book >> text=Checklist triển khai");
+    await page.waitForSelector("#docView:not([hidden])");
+    assert.equal(await page.textContent("#docTitle"), "Checklist triển khai agent");
+    assert.ok(await page.locator("#docBody .md-cb.on").count() > 10);
+    await page.click("#docBody a[data-doc] >> text=05-lich-su-thay-doi.md");   // link tương đối giữa tài liệu
+    await page.waitForFunction(() => document.getElementById("docTitle").textContent === "Lịch sử thay đổi");
   });
 
   assert.deepEqual(errors, [], "lỗi JS trên trang: " + errors.join(" | "));

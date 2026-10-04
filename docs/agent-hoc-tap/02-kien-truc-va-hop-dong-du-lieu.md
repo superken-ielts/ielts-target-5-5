@@ -68,7 +68,7 @@ ielts-target-5-5/
 ├─ tests/web/                  node:test cho core.js; e2e Playwright chạy index.html với gói mẫu
 ├─ .claude/skills/book-ingest/SKILL.md
 ├─ CLAUDE.md  .gitignore  .github/workflows/ci.yml
-└─ docs/agent-hoc-tap/         bộ tài liệu này (build.py bỏ qua, không nhúng vào app)
+└─ docs/agent-hoc-tap/         bộ tài liệu này (từ đợt 2 nhúng vào tab Kế hoạch)
 ```
 
 ### 2.2 Thư mục làm việc riêng tư (ngoài repo)

@@ -24,8 +24,39 @@ const BookCore = (() => {
     return (r && r.st) || "todo";
   }
 
+  /* Unit đang học tự chọn (settings.focus) — chỉ còn hiệu lực khi unit đó còn phiên chưa xong. */
+  function focusOf(plan, progress){
+    const f = progress && progress.settings && progress.settings.focus;
+    return f && plan.sessions.some(s => s.item === f && !DONE.has(statusOf(progress, s.id))) ? f : null;
+  }
+
+  /* Phiên kế tiếp: đang chọn học một unit thì lấy phiên chưa xong đầu tiên của unit đó,
+     không thì theo thứ tự lộ trình. */
   function nextSession(plan, progress){
-    return plan.sessions.find(s => !DONE.has(statusOf(progress, s.id))) || null;
+    const f = focusOf(plan, progress);
+    const pool = f ? plan.sessions.filter(s => s.item === f) : plan.sessions;
+    return pool.find(s => !DONE.has(statusOf(progress, s.id))) || null;
+  }
+
+  function itemSessions(plan, itemId){ return plan.sessions.filter(s => s.item === itemId); }
+
+  function itemCounts(plan, progress, itemId){
+    const ss = itemSessions(plan, itemId);
+    return { total: ss.length, done: ss.filter(s => DONE.has(statusOf(progress, s.id))).length };
+  }
+
+  /* Phiên mở khi bấm "Học unit này": phiên chưa xong đầu tiên, hoặc phiên đầu nếu đã xong cả unit. */
+  function entrySession(plan, progress, itemId){
+    const ss = itemSessions(plan, itemId);
+    return ss.find(s => !DONE.has(statusOf(progress, s.id))) || ss[0] || null;
+  }
+
+  /* Thời lượng cả sách và số tuần/tháng cần ở một nhịp học. */
+  function duration(plan, perWeek){
+    const minutes = plan.sessions.reduce((a, s) => a + (Number(s.estMinutes) || plan.minutesPerSession || 75), 0);
+    const weeks = Math.ceil(plan.sessions.length / perWeek);
+    return { sessions: plan.sessions.length, minutes, hours: Math.round(minutes / 60), weeks,
+             months: Math.round(weeks / 4.345 * 10) / 10 };
   }
 
   function counts(plan, progress){
@@ -144,15 +175,28 @@ const BookCore = (() => {
     return file.chunks.find(c => c.from <= page && page <= c.to) || null;
   }
 
+  /* Đếm task trong checklist markdown (dòng "- [x] **P1-03** …") theo từng giai đoạn. */
+  function checklistStats(md){
+    const out = {};
+    String(md || "").split("\n").forEach(line => {
+      const m = /^- \[( |x|X)\] \*\*P(\d)-\d+\*\*/.exec(line);
+      if(!m) return;
+      const g = out[m[2]] || (out[m[2]] = { done: 0, total: 0 });
+      g.total++;
+      if(m[1] !== " ") g.done++;
+    });
+    return out;
+  }
+
   function fmtClock(sec){
     const s = Math.abs(Math.round(sec));
     return (sec < 0 ? "-" : "") + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
   }
 
   return {
-    emptyProgress, settingsOf, statusOf, nextSession, counts, plannedWeek, projectFinishWeek,
+    emptyProgress, settingsOf, statusOf, focusOf, nextSession, itemSessions, itemCounts, entrySession, duration, counts, plannedWeek, projectFinishWeek,
     canSkip, setSession, setSettings, mergeProgress, elapsedSec, activitiesOf, itemsOf,
-    printedPage, basename, matchFiles, requiredPaths, chunkFor, fmtClock
+    printedPage, basename, matchFiles, requiredPaths, chunkFor, checklistStats, fmtClock
   };
 })();
 if(typeof module !== "undefined" && module.exports) module.exports = BookCore;

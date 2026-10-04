@@ -100,3 +100,18 @@ def test_heading_patterns():
                      ("Listen again", False), ("I'm here", False), ("[Play track 5]", False)):
         assert bool(EXERCISE.match(text)) is ok, text
     assert HEAD_TEST.match("TEST3") and HEAD_TEST.match("TEST 1")
+
+
+def test_book_info_passes_through(fake_book):
+    yml = fake_book / "book.yaml"
+    yml.write_text(yml.read_text() + "info:\n  role: Giáo trình chính\n  cefr: A2–B1\n  band_from: 3.5\n"
+                   "  band_to: 5.0\n  start_when: Sau tuần 5\n  unknown_key: bị bỏ qua\n", encoding="utf-8")
+    run(fake_book)
+    path = fake_book / "work" / "review.json"
+    review = rv.load(path)
+    rv.accept_all(review)
+    rv.save(path, review)
+    assert run(fake_book).code == pipeline.OK
+    info = json.loads((fake_book / "book.json").read_text())["info"]
+    assert info == {"role": "Giáo trình chính", "module": "", "author": "", "publisher": "", "cefr": "A2–B1",
+                    "bandFrom": 3.5, "bandTo": 5.0, "summary": "", "startWhen": "Sau tuần 5"}

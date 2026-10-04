@@ -100,3 +100,33 @@ test("gói IELTS Target 5.0: mọi phiên trỏ tới hoạt động có thật,
   });
   assert.equal(C.nextSession(p, C.emptyProgress(book.id)).id, "S1-U01-1");
 });
+
+test("học unit tự chọn: phiên kế tiếp đi theo unit đó tới khi xong rồi quay về lộ trình", () => {
+  const p2 = { startWeek: 6, sessionsPerWeek: 6, minutesPerSession: 75, sessions: [
+    ...["U01", "U02"].flatMap(u => [1, 2].map(n => ({ id: "S1-" + u + "-" + n, seq: 0, item: u, core: false }))) ] };
+  p2.sessions.forEach((s, i) => { s.seq = i + 1; });
+  let p = C.emptyProgress("b");
+  assert.equal(C.nextSession(p2, p).id, "S1-U01-1");
+  p = C.setSettings(p, { focus: "U02" }, 1);
+  assert.equal(C.focusOf(p2, p), "U02");
+  assert.equal(C.nextSession(p2, p).id, "S1-U02-1");
+  assert.equal(C.entrySession(p2, p, "U02").id, "S1-U02-1");
+  p = C.setSession(p, "S1-U02-1", { st: "done" }, 2);
+  p = C.setSession(p, "S1-U02-2", { st: "done" }, 3);
+  assert.equal(C.focusOf(p2, p), null);                       // unit tự chọn đã xong
+  assert.equal(C.nextSession(p2, p).id, "S1-U01-1");          // quay về thứ tự lộ trình
+  assert.equal(C.entrySession(p2, p, "U02").id, "S1-U02-1");  // ôn lại: mở phiên đầu
+  assert.deepEqual(C.itemCounts(p2, p, "U02"), { total: 2, done: 2 });
+});
+
+test("thời lượng sách theo nhịp học", () => {
+  const p120 = { minutesPerSession: 75, sessions: Array.from({ length: 120 }, () => ({})) };
+  assert.deepEqual(C.duration(p120, 6), { sessions: 120, minutes: 9000, hours: 150, weeks: 20, months: 4.6 });
+  assert.equal(C.duration(p120, 7).weeks, 18);
+  assert.equal(C.duration(p120, 5).weeks, 24);
+});
+
+test("đếm task trong checklist theo giai đoạn", () => {
+  const md = "- [x] **P0-01** a\n  - [x] con, không tính\n- [ ] **P0-02** b\n- [X] **P1-01** c\n- [ ] ghi chú không phải task";
+  assert.deepEqual(C.checklistStats(md), { 0: { done: 1, total: 2 }, 1: { done: 1, total: 1 } });
+});
