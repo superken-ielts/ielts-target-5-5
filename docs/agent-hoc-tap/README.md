@@ -4,7 +4,8 @@ Kế hoạch hiện thực hóa technical summary *"Hệ thống agent học t�
 (04/10/2026) trên mã nguồn hiện có của repo: biến bộ IELTS Target 5.0 (PDF + MP3) thành
 menu sách và phiên học trong app, rồi dùng lại cho sách khác và các agent sau.
 
-Thư mục này là tài liệu kỹ thuật, `web/build.py` không nhúng nó vào app học.
+Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhúng cả thư mục vào app học: xem ở tab **Kế hoạch**
+(nhóm "Agent học tập — checklist và kế hoạch") hoặc từ thẻ "Agent nhập sách" ở tab **Sách**.
 
 | File | Nội dung |
 |---|---|
@@ -17,7 +18,11 @@ Thư mục này là tài liệu kỹ thuật, `web/build.py` không nhúng nó v
 ## Trạng thái
 
 **Đợt 1 (04/10/2026):** agent nhập sách `agents/book_ingest` đã chạy trên IELTS Target 5.0 (120 phiên, 59 track,
-27 đoạn PDF) và app có tab **Sách** để học theo lộ trình. Chi tiết ở file 05; việc còn lại tick ở file 04.
+27 đoạn PDF) và app có tab **Sách** để học theo lộ trình.
+
+**Đợt 2 (04/10/2026):** tab Sách có màn danh sách sách (trình độ, thời lượng, số tháng học xong) và màn chi tiết để
+chọn học bất kỳ unit nào; bộ tài liệu này xem được ngay trong app (tab Kế hoạch). Chi tiết ở file 05; việc còn lại
+tick ở file 04.
 
 ## Tóm tắt trong năm dòng
 

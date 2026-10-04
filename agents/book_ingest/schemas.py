@@ -102,6 +102,19 @@ class AudioFile(_M):
     script: Optional[Ref] = None
 
 
+class BookInfo(_M):
+    """Thông tin giới thiệu sách cho màn hình danh sách sách của app (khai báo ở book.yaml › info)."""
+    role: str = ""            # vai trò trong lộ trình, ví dụ "Giáo trình chính"
+    module: str = ""          # General Training / Academic
+    author: str = ""
+    publisher: str = ""
+    cefr: str = ""            # "A2–B1"
+    bandFrom: Optional[float] = None
+    bandTo: Optional[float] = None
+    summary: str = ""
+    startWhen: str = ""       # nên bắt đầu khi nào / cần nền tảng gì
+
+
 class Source(_M):
     agent: str
     profileSha256: str
@@ -114,6 +127,7 @@ class Book(_M):
     edition: str = ""
     template: str
     source: Source
+    info: BookInfo = BookInfo()
     files: dict[str, Union[PdfFile, AudioFile]]
     sections: list[Section]
     keyVocab: Optional[Ref] = None

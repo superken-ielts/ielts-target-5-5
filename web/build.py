@@ -40,6 +40,8 @@ BOOKS_DIR = ROOT / "books"
 BOOK_SRC = WEB / "src" / "book"
 BOOK_JS_FILES = ("core.js", "ui.js")
 BOOKS_PLACEHOLDER = "/*__BOOKS__*/{}"
+CATALOG_PLACEHOLDER = "/*__BOOK_CATALOG__*/{}"
+CATALOG = BOOKS_DIR / "catalog.json"
 BOOK_JS_PLACEHOLDER = "/*__BOOK_JS__*/"
 BOOK_CSS_PLACEHOLDER = "/*__BOOK_CSS__*/"
 
@@ -60,6 +62,8 @@ DAYNAME = {1: "Thứ Hai", 2: "Thứ Ba", 3: "Thứ Tư", 4: "Thứ Năm", 5: "T
 # tab Ke hoach cua app hoc.
 SKIP_DIRS = {".git", "node_modules", "__pycache__", "docs", "agents", ".claude", "books", "vendor"}
 SKIP_FILES = {"CLAUDE.md"}
+# Ngoai le: ke hoach, checklist va lich su trien khai agent hoc tap duoc xem ngay trong app (tab Ke hoach).
+INCLUDE_DIRS = ("docs/agent-hoc-tap/",)
 
 HEAD = """<!doctype html>
 <html lang="vi">
@@ -149,7 +153,9 @@ def collect_docs() -> dict:
     docs = {}
     for path in sorted(ROOT.rglob("*.md")):
         # Xet duong dan tuong doi: thu muc cha cua repo ten "docs" khong duoc lam mat het file.
-        if any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts) or path.name in SKIP_FILES:
+        rel_posix = path.relative_to(ROOT).as_posix()
+        skipped = any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts) or path.name in SKIP_FILES
+        if skipped and not rel_posix.startswith(INCLUDE_DIRS):
             continue
         rel = path.relative_to(ROOT).as_posix()
         docs[rel] = path.read_text(encoding="utf-8")
@@ -188,7 +194,7 @@ def main() -> None:
         sys.exit(f"Khong thay {TEMPLATE.name}. Day la file nguon can sua.")
 
     tpl = TEMPLATE.read_text(encoding="utf-8")
-    for ph in (PLACEHOLDER, P1_PLACEHOLDER, BOOKS_PLACEHOLDER, BOOK_JS_PLACEHOLDER, BOOK_CSS_PLACEHOLDER):
+    for ph in (PLACEHOLDER, P1_PLACEHOLDER, BOOKS_PLACEHOLDER, CATALOG_PLACEHOLDER, BOOK_JS_PLACEHOLDER, BOOK_CSS_PLACEHOLDER):
         if ph not in tpl:
             sys.exit(f"Khong thay cho danh dau {ph} trong {TEMPLATE.name}.")
 
@@ -206,8 +212,10 @@ def main() -> None:
     books = collect_books()
     book_js, book_css = book_code()
     # Thay cho danh dau cua Sach TRUOC khi nhung tai lieu, de chu trong tai lieu khong bi thay nham.
+    catalog = json.loads(CATALOG.read_text(encoding="utf-8")) if CATALOG.exists() else {"books": []}
     tpl = tpl.replace(BOOK_CSS_PLACEHOLDER, book_css).replace(BOOK_JS_PLACEHOLDER, book_js).replace(
-        BOOKS_PLACEHOLDER, js_safe(json.dumps(books, ensure_ascii=False, separators=(",", ":"))))
+        BOOKS_PLACEHOLDER, js_safe(json.dumps(books, ensure_ascii=False, separators=(",", ":")))).replace(
+        CATALOG_PLACEHOLDER, js_safe(json.dumps(catalog, ensure_ascii=False, separators=(",", ":"))))
 
     artifact = tpl.replace(
         P1_PLACEHOLDER,

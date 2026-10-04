@@ -13,7 +13,10 @@ from typing import Optional
 
 from . import __version__
 from .profile import Profile
-from .schemas import Activity, AudioFile, Book, Chunk, Item, PdfFile, Plan, Ref, Section, Session, Source
+from .schemas import Activity, AudioFile, Book, BookInfo, Chunk, Item, PdfFile, Plan, Ref, Section, Session, Source
+
+INFO_KEYS = {"role": "role", "module": "module", "author": "author", "publisher": "publisher", "cefr": "cefr",
+             "band_from": "bandFrom", "band_to": "bandTo", "summary": "summary", "start_when": "startWhen"}
 
 MODULE_TITLE = {
     "speaking-vocab": "Speaking & Vocabulary", "listening": "Listening", "reading": "Reading",
@@ -118,6 +121,7 @@ def build_book(profile: Profile, scan: dict, structure: dict, matched: dict,
     return Book(
         id=profile.book, title=profile.title, edition=profile.edition, template=profile.template,
         source=Source(agent=f"book-ingest {__version__}", profileSha256=profile.sha256),
+        info=BookInfo(**{INFO_KEYS[k]: v for k, v in profile.info.items() if k in INFO_KEYS}),
         files=files, sections=sections, keyVocab=kv,
         skipped=[{"title": s.get("title"), "printed": [s.get("from"), s.get("to")]} for s in profile.skip],
         missing=profile.missing,

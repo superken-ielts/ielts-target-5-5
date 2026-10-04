@@ -10,7 +10,7 @@ trình được nhúng thẳng vào trang, nên đọc được cả kế hoạc
 |---|---|
 | **Hôm nay** | Bốn block của ngày hôm nay với nội dung cụ thể theo đúng tuần đang học, có ô đánh dấu hoàn thành. Nút chuyển sang khung rút gọn cho ngày bận chỉ có 1 tiếng (ẩn vào Chủ nhật vì Chủ nhật cố định 1 tiếng). Khối **Chi tiết ngày hôm nay** mở ra đủ năm phần kèm link bài học. Nút **Hoàn thành hôm nay** để chốt ngày, và màn chặn buộc đóng sổ những ngày cũ còn treo trước khi sang ngày mới. |
 | **Lộ trình** | Toàn bộ 40 tuần, nhóm theo 4 giai đoạn, tuần hiện tại được đánh dấu. Chạm vào một tuần để xem trọng tâm của cả 4 kỹ năng và các mốc kiểm tra theo tháng. |
-| **Sách** | Menu học IELTS Target 5.0 theo lộ trình: 120 phiên × 75 phút, phiên kế tiếp, tuần dự kiến xong. Mỗi phiên mở đúng trang sách (PDF), đáp án, tapescript, phát audio có ±5 giây, tốc độ, lặp A–B, đồng hồ 75 phút, ghi lỗi vào sổ lỗi, và cộng giờ học khi xong. Xem mục *Tab Sách* bên dưới. |
+| **Sách** | Danh sách sách của lộ trình kèm trình độ, thời lượng, số tháng học xong theo nhịp. Chạm một sách để xem mọi section, unit và chọn học unit bất kỳ (hoặc theo thứ tự lộ trình). Mỗi phiên mở đúng trang sách (PDF), đáp án, tapescript, phát audio có ±5 giây, tốc độ, lặp A–B, đồng hồ 75 phút, ghi lỗi vào sổ lỗi, và cộng giờ học khi xong. Xem mục *Tab Sách* bên dưới. |
 | **Luyện tập** | Bốn kỹ năng tách riêng, chọn kỹ năng nào thì vào thẳng phần luyện của kỹ năng đó. Nội dung lấy theo đúng tuần đang học. Mỗi buổi luyện đều ghi được kết quả vào lịch sử. |
 | **Tài liệu** | Danh sách tài liệu miễn phí bên ngoài, bấm là mở. |
 | **Kế hoạch** | Toàn bộ 16 file markdown, đọc ngay trong trang. Có mục lục cho từng tài liệu, tìm kiếm không dấu trên toàn bộ nội dung, và liên kết giữa các tài liệu bấm được. |
@@ -91,7 +91,9 @@ mở lại trang là bản trên máy chủ tự tải xuống. Phải dùng đ�
 ## Tab Sách
 
 Dữ liệu sách do agent nhập sách sinh ra (`agents/`, xem `agents/README.md`): `books/<sách>/book.json`
-và `plan.json`. `build.py` nhúng hai file này vào trang, nên menu và lộ trình chạy ở mọi bản dựng.
+và `plan.json`. `books/catalog.json` ghi thứ tự 5 sách của lộ trình 40 tuần, kể cả sách chưa nhập.
+`build.py` nhúng các file này vào trang, nên danh sách sách, chi tiết unit và lộ trình chạy ở mọi bản dựng.
+Checklist và lịch sử triển khai agent (`docs/agent-hoc-tap/`) cũng được nhúng, xem ở tab Kế hoạch.
 Mã của tab nằm ở `web/src/book/` (`core.js` hàm thuần, `ui.js` giao diện, `book.css`), cũng được nhúng.
 
 File sách (PDF, MP3) thì không nhúng — trang lấy theo thứ tự:

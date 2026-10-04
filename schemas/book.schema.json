@@ -214,6 +214,73 @@
    "title": "AudioFile",
    "type": "object"
   },
+  "BookInfo": {
+   "additionalProperties": false,
+   "description": "Thông tin giới thiệu sách cho màn hình danh sách sách của app (khai báo ở book.yaml › info).",
+   "properties": {
+    "role": {
+     "default": "",
+     "title": "Role",
+     "type": "string"
+    },
+    "module": {
+     "default": "",
+     "title": "Module",
+     "type": "string"
+    },
+    "author": {
+     "default": "",
+     "title": "Author",
+     "type": "string"
+    },
+    "publisher": {
+     "default": "",
+     "title": "Publisher",
+     "type": "string"
+    },
+    "cefr": {
+     "default": "",
+     "title": "Cefr",
+     "type": "string"
+    },
+    "bandFrom": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Bandfrom"
+    },
+    "bandTo": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Bandto"
+    },
+    "summary": {
+     "default": "",
+     "title": "Summary",
+     "type": "string"
+    },
+    "startWhen": {
+     "default": "",
+     "title": "Startwhen",
+     "type": "string"
+    }
+   },
+   "title": "BookInfo",
+   "type": "object"
+  },
   "Chunk": {
    "additionalProperties": false,
    "description": "Một đoạn PDF nhỏ cắt từ file gốc để app tải nhanh. Trang trong book.json vẫn tính theo file gốc.",
@@ -463,6 +530,20 @@
   },
   "source": {
    "$ref": "#/$defs/Source"
+  },
+  "info": {
+   "$ref": "#/$defs/BookInfo",
+   "default": {
+    "role": "",
+    "module": "",
+    "author": "",
+    "publisher": "",
+    "cefr": "",
+    "bandFrom": null,
+    "bandTo": null,
+    "summary": "",
+    "startWhen": ""
+   }
   },
   "files": {
    "additionalProperties": {

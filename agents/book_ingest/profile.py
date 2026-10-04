@@ -54,6 +54,7 @@ class Profile:
     listening_extract: Optional[dict]
     missing: list[str] = field(default_factory=list)
     review_threshold: float = 0.9
+    info: dict = field(default_factory=dict)
 
     # --- quy đổi trang -------------------------------------------------
     def offset(self, file_id: str) -> int:
@@ -158,4 +159,5 @@ def load(book_dir: Path) -> Profile:
         listening_extract=raw.get("listening_extract"),
         missing=list(raw.get("missing", [])),
         review_threshold=float(raw.get("review_threshold", 0.9)),
+        info=dict(raw.get("info") or {}),
     )

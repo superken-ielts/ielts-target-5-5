@@ -5,6 +5,63 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 2 — 04/10/2026: danh sách sách, chọn unit tự do, xem checklist trong app
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `754d175` (đã merge PR #2).
+
+### Yêu cầu
+
+1. Xem checklist những gì đã triển khai cho agent ngay trên UI.
+2. Bấm menu Sách → danh sách sách, mỗi sách có thông tin lộ trình: học bao lâu, từ trình độ nào, học xong đạt tới đâu.
+3. Bấm vào một sách → liệt kê mọi section và unit để chọn học bất kỳ unit nào.
+
+### Đã làm
+
+| Yêu cầu | Cách làm |
+|---|---|
+| Checklist trên UI | `build.py` nhúng `docs/agent-hoc-tap/*.md` vào tab Kế hoạch, nhóm "Agent học tập — checklist và kế hoạch" (checklist đứng đầu, ô tick hiện sẵn). Thẻ "Agent nhập sách" cuối màn danh sách sách đếm task đã xong theo giai đoạn (đọc thẳng từ checklist) và có nút mở Checklist, Lịch sử thay đổi. Link tương đối giữa các tài liệu nay bấm được |
+| Danh sách sách | Menu Sách luôn mở màn danh sách. Sách đã nhập hiện: vai trò và tuần trong lộ trình, tác giả/NXB, trình độ (Band 3.5 → 5.0 · CEFR A2–B1), nội dung (3 section · 15 unit · 3 review · 3 test · 59 track), thời lượng (120 phiên × 75 phút ≈ 150 giờ), học xong trong (khoảng 4–5,5 tháng ở nhịp 7–5 phiên/tuần; nhịp đang chọn ra số tuần và tháng), bắt đầu khi nào, mục tiêu, tiến độ, nút "Xem unit & chọn bài học" và "Học tiếp". Bốn sách còn lại của lộ trình (Cambridge 20 GT, Trainer 2 GT, Barron's Writing, Cambridge 21 GT) hiện mờ kèm "chưa nhập vào app" |
+| Chi tiết sách, chọn unit | Màn chi tiết có nút quay về danh sách, thẻ giới thiệu, phiên kế tiếp, tiến độ, cài đặt, quản lý file, rồi "Chọn unit để học": 3 section, 21 thẻ (15 unit, 3 review, 3 test) — mỗi thẻ có trang in, số phiên, chấm trạng thái từng phiên, nút Học / Học tiếp / Ôn lại và danh sách phiên để chọn lẻ. Bấm Học ở một unit thì "Phiên kế tiếp" chuyển sang chế độ unit tự chọn cho tới khi unit đó xong; nút "Quay về theo lộ trình" bỏ chế độ này |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/catalog.json` | Thứ tự và vai trò 5 sách trong lộ trình 40 tuần (tuần, mục tiêu, giới thiệu ngắn cho sách chưa nhập) |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/book_ingest/schemas.py` | Model `BookInfo` (role, module, author, publisher, cefr, bandFrom, bandTo, summary, startWhen); `Book.info` |
+| `agents/book_ingest/profile.py`, `templates.py` | Đọc `info` trong `book.yaml`, ghi vào `book.json` (khóa lạ bị bỏ qua) |
+| `agents/tests/test_pipeline.py` | Test `info` đi từ `book.yaml` sang `book.json` |
+| `schemas/book.schema.json` | Xuất lại theo model mới |
+| `books/ielts_target_5_0/book.yaml` | Thêm mục `info` (tác giả theo bìa sách; trình độ theo technical summary) |
+| `books/ielts_target_5_0/book.json` | Chạy lại agent: thêm `info`; `plan.json` không đổi |
+| `web/build.py` | Nhúng `docs/agent-hoc-tap/` vào tab Kế hoạch; nhúng `books/catalog.json` vào chỗ đánh dấu `/*__BOOK_CATALOG__*/` |
+| `web/app.template.html` | +9 dòng nhãn và nhóm tài liệu agent trong `DOCMETA`/`DOCGROUPS`; `const BOOK_CATALOG`; `mdInline` tìm link tương đối theo tên file (2 dòng) |
+| `web/src/book/core.js` | `focusOf`, `nextSession` theo unit tự chọn, `itemSessions`, `itemCounts`, `entrySession`, `duration`, `checklistStats` |
+| `web/src/book/ui.js` | Màn danh sách sách, màn chi tiết với thẻ unit, nút Học theo unit, nút quay về lộ trình, thẻ Agent nhập sách; menu Sách luôn mở danh sách; nút quay lại trong phiên ghi "← Danh sách unit" |
+| `web/src/book/book.css` | Kiểu thẻ sách, dòng thông tin, thẻ unit, chấm tiến độ |
+| `tests/web/book-core.test.mjs` | +3 test: unit tự chọn, thời lượng theo nhịp, đếm checklist |
+| `tests/web/book.e2e.mjs` | Đi qua danh sách → chi tiết; thêm bước chọn Unit 7 rồi quay về lộ trình, bước mở checklist và bấm link sang lịch sử |
+| `web/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs), `02-kien-truc-va-hop-dong-du-lieu.md` | Mô tả tab Sách mới; task P2-27 … P2-29; trạng thái; sửa ghi chú cũ "thư mục này không nhúng vào app" |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại (thêm tài liệu agent và catalog, khoảng +120 KB) |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 12 passed |
+| `node --test "tests/web/*.test.mjs"` | 11 passed |
+| `node tests/web/book.e2e.mjs` | 11/11 bước OK |
+| `python3 web/build.py` | 22 tài liệu (thêm 6 tài liệu agent) + 1 sách 120 phiên |
+
+---
+
 ## Đợt 1 — 04/10/2026: agent nhập sách + tab Sách
 
 Nhánh `claude/gallant-ramanujan-ym30oy`, dựa trên `main` tại `89133a0` (commit thêm bộ sách

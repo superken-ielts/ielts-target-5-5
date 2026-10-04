@@ -35,3 +35,22 @@
 .bk-vbody canvas{background:#fff; box-shadow:var(--shadow); max-width:none}
 .bk-vfoot{display:flex; justify-content:center; gap:8px; padding:8px; border-top:1px solid var(--line); background:var(--surface);
   padding-bottom:max(8px, env(safe-area-inset-bottom))}
+/* danh sách sách và thẻ unit */
+.bk-lib h3.sec-title{margin-bottom:2px}
+.bk-dim{opacity:.72}
+.bk-kvs{display:grid; gap:6px; margin:10px 0 8px}
+.bk-kv{display:grid; grid-template-columns:104px 1fr; gap:10px; font-size:13px; line-height:1.45}
+.bk-k{color:var(--ink-3); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; padding-top:1px}
+.bk-v{color:var(--ink)}
+.bk-h{font-size:17px; margin:20px 0 4px}
+.bk-unit{border:1px solid var(--line); border-radius:var(--r-sm); background:var(--surface); padding:10px 11px; margin-bottom:8px}
+.bk-unit.now{border-color:var(--accent); box-shadow:inset 3px 0 0 var(--accent)}
+.bk-unit.past{background:var(--sunken)}
+.bk-unit-top{display:flex; align-items:center; gap:10px}
+.bk-unit-mid{flex:1; min-width:0}
+.bk-unit-t{font-weight:600; font-size:14.5px; line-height:1.35}
+.bk-unit details{margin-top:6px}
+.bk-unit details .bk-row{margin-top:6px}
+.bk-dots{display:flex; gap:4px; margin-top:5px}
+.bk-dots .bk-dot{width:10px; height:10px}
+@media (max-width:400px){ .bk-kv{grid-template-columns:86px 1fr} }

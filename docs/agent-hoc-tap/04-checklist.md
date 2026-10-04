@@ -256,6 +256,15 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 1:* bản dựng đã sẵn sàng; cần chủ tài khoản đăng lại.
 - [ ] **P2-26** Dùng thật 1–2 tuần, ghi lỗi và xử lý.
 
+### Bổ sung theo yêu cầu
+
+- [x] **P2-27** Xem checklist và lịch sử triển khai ngay trong app.
+  - *Đợt 2:* `docs/agent-hoc-tap/*.md` nhúng vào tab Kế hoạch (nhóm "Agent học tập — checklist và kế hoạch"); link tương đối giữa các tài liệu bấm được; thẻ "Agent nhập sách" ở tab Sách đếm task đã xong theo giai đoạn và mở thẳng checklist, lịch sử.
+- [x] **P2-28** Menu Sách mở **danh sách sách**: tên, vai trò và tuần trong lộ trình, trình độ (band, CEFR), nội dung, thời lượng, số tuần/tháng học xong theo nhịp 5–7 phiên/tuần, bắt đầu khi nào, mục tiêu, tiến độ; sách trong lộ trình chưa nhập vẫn hiện kèm hướng dẫn nhập.
+  - *Đợt 2:* `book.yaml › info` → `book.json › info` (agent, schema `BookInfo`); `books/catalog.json` cho 5 sách của lộ trình (mục K file 05).
+- [x] **P2-29** **Chi tiết sách**: mọi section, unit, review, test kèm trang in, số phiên, chấm tiến độ và nút Học; chọn học bất kỳ unit nào — phiên kế tiếp đi theo unit đó tới khi xong rồi tự quay về thứ tự lộ trình (nút "Quay về theo lộ trình").
+  - *Đợt 2:* `focus` trong cài đặt tiến độ sách; `focusOf`, `entrySession`, `itemCounts`, `duration` trong `core.js` có test.
+
 ### Cổng G2
 
 - [ ] Học trọn 7 phiên một unit chỉ trong app trên iPhone

@@ -371,9 +371,128 @@ const BookUI = (() => {
       root.append(c);
       return;
     }
-    if(!view.bookId || !BOOKS[view.bookId]) view.bookId = ids[0];
-    if(view.name === "session" && view.sessionId) renderSession();
-    else renderBook(ids);
+    if(view.name === "session" && view.sessionId && BOOKS[view.bookId]) renderSession();
+    else if(view.name === "book" && BOOKS[view.bookId]) renderBook();
+    else renderLibrary();
+  }
+
+  /* ---------- màn 1: danh sách sách + thông tin lộ trình ---------- */
+  const fmtNum = x => String(x).replace(".", ",");
+  const fmtMonths = m => "~" + fmtNum(Math.round(m * 2) / 2) + " tháng";
+
+  function kv(box, label, value){
+    if(!value) return;
+    const row = h("div", "bk-kv");
+    row.append(h("span", "bk-k", label), h("span", "bk-v", value));
+    box.append(row);
+  }
+
+  function levelText(info){
+    if(!info) return "";
+    const band = info.bandFrom != null && info.bandTo != null
+      ? "Band " + Number(info.bandFrom).toFixed(1) + " → " + Number(info.bandTo).toFixed(1) : "";
+    return [band, info.cefr ? "CEFR " + info.cefr : ""].filter(Boolean).join(" · ");
+  }
+
+  function contentText(book){
+    const items = book.sections.flatMap(s => s.items);
+    const n = k => items.filter(i => i.kind === k).length;
+    const tracks = Object.values(book.files).filter(f => f.kind === "audio").length;
+    return book.sections.length + " section · " + n("unit") + " unit · " + n("review") + " review · " + n("test") + " test"
+      + (tracks ? " · " + tracks + " track audio" : "");
+  }
+
+  function paceText(plan, current){
+    const fast = BookCore.duration(plan, 7), slow = BookCore.duration(plan, 5), cur = BookCore.duration(plan, current);
+    return "Khoảng " + fmtNum(Math.round(fast.months * 2) / 2) + "–" + fmtNum(Math.round(slow.months * 2) / 2)
+      + " tháng (7 đến 5 phiên/tuần). Nhịp đang chọn " + current + " phiên/tuần: " + cur.weeks + " tuần, " + fmtMonths(cur.months) + ".";
+  }
+
+  function catalogEntries(){
+    const list = ((BOOK_CATALOG && BOOK_CATALOG.books) || []).slice();
+    Object.keys(BOOKS).forEach(id => { if(!list.some(e => e.id === id)) list.push({id, title: BOOKS[id].book.title}); });
+    return list;
+  }
+
+  function renderLibrary(){
+    root.append(h("h2", "sec-title", "Sách"));
+    root.append(h("p", "sec-note", "Các sách trong lộ trình 40 tuần. Chạm vào một sách để xem toàn bộ section, unit và chọn unit muốn học."));
+    catalogEntries().forEach(entry => {
+      const data = BOOKS[entry.id];
+      const c = card((entry.role || (data && data.book.info && data.book.info.role) || "Sách")
+        + (entry.weeks ? " · tuần " + entry.weeks[0] + "–" + entry.weeks[1] : ""));
+      c.classList.add("bk-lib");
+      c.append(h("h3", "sec-title", entry.title || (data && data.book.title)));
+      if(!data){
+        c.classList.add("bk-dim");
+        if(entry.summary) c.append(h("p", "small", entry.summary));
+        const box = h("div", "bk-kvs");
+        kv(box, "Mục tiêu", entry.goal);
+        c.append(box);
+        c.append(h("p", "tiny", "Chưa nhập vào app — đặt PDF và audio vào books/<thư mục sách>/, viết book.yaml rồi chạy agent nhập sách."));
+        root.append(c);
+        return;
+      }
+      const {book, plan} = data;
+      const info = book.info || {};
+      const p = prog(entry.id);
+      const st = BookCore.settingsOf(plan, p);
+      const cnt = BookCore.counts(plan, p);
+      const d = BookCore.duration(plan, st.sessionsPerWeek);
+      const meta = [info.module, info.author, info.publisher].filter(Boolean).join(" · ");
+      if(meta) c.append(h("p", "small muted", meta));
+      const box = h("div", "bk-kvs");
+      kv(box, "Trình độ", levelText(info));
+      kv(box, "Nội dung", contentText(book));
+      kv(box, "Thời lượng", d.sessions + " phiên × " + (plan.minutesPerSession || 75) + " phút ≈ " + d.hours + " giờ");
+      kv(box, "Học xong trong", paceText(plan, st.sessionsPerWeek));
+      kv(box, "Bắt đầu khi", info.startWhen);
+      kv(box, "Mục tiêu", entry.goal);
+      c.append(box);
+      if(info.summary){
+        const more = document.createElement("details");
+        const sm = document.createElement("summary"); sm.className = "tiny"; sm.style.cursor = "pointer";
+        sm.textContent = "Giới thiệu sách";
+        more.append(sm, h("p", "small", info.summary));
+        c.append(more);
+      }
+      const bar = h("div", "bk-bar"); const fill = h("i");
+      fill.style.width = (cnt.total ? Math.round((cnt.done + cnt.skipped) / cnt.total * 100) : 0) + "%";
+      bar.append(fill);
+      c.append(bar, h("p", "tiny", "Đã xong " + cnt.done + "/" + cnt.total + " phiên" + (cnt.minutes ? " · " + fmtNum(Math.round(cnt.minutes / 6) / 10) + " giờ" : "")));
+      const row = h("div", "rowx"); row.style.flexWrap = "wrap"; row.style.marginTop = "10px";
+      const detail = btn("Xem unit & chọn bài học", "btn-primary btn-sm", () => go("book", {bookId: entry.id}));
+      row.append(detail);
+      const next = BookCore.nextSession(plan, p);
+      if(next) row.append(btn("Học tiếp: " + next.title, "btn-sm", () => go("session", {bookId: entry.id, sessionId: next.id})));
+      c.append(row);
+      root.append(c);
+    });
+
+    const ac = card("Agent nhập sách");
+    ac.append(h("p", "small", "Sách ở đây do agent nhập sách (agents/book_ingest) tạo từ PDF và audio. Xem việc đã triển khai và lịch sử thay đổi:"));
+    const md = typeof DOCS !== "undefined" ? DOCS["docs/agent-hoc-tap/04-checklist.md"] : "";
+    const stats = BookCore.checklistStats(md);
+    const phases = Object.keys(stats).sort();
+    if(phases.length){
+      const all = phases.reduce((a, k) => ({done: a.done + stats[k].done, total: a.total + stats[k].total}), {done: 0, total: 0});
+      const sbox = h("div", "bk-kvs");
+      kv(sbox, "Đã xong", all.done + "/" + all.total + " task");
+      phases.forEach(k => kv(sbox, "Giai đoạn " + k, stats[k].done + "/" + stats[k].total));
+      ac.append(sbox);
+    }
+    const row = h("div", "rowx"); row.style.flexWrap = "wrap"; row.style.marginTop = "10px";
+    row.append(btn("Checklist triển khai", "btn-sm", () => openPlanDoc("docs/agent-hoc-tap/04-checklist.md")),
+               btn("Lịch sử thay đổi", "btn-sm", () => openPlanDoc("docs/agent-hoc-tap/05-lich-su-thay-doi.md")));
+    ac.append(row);
+    root.append(ac);
+  }
+
+  /* Mở một tài liệu ở tab Kế hoạch (dùng hàm openDoc sẵn có của app). */
+  function openPlanDoc(path){
+    const nav = document.querySelector('nav button[data-go="docs"]');
+    if(nav) nav.click();
+    if(typeof openDoc === "function" && typeof DOCS !== "undefined" && DOCS[path]) openDoc(path);
   }
 
   function sessionRow(bookId, s, isNext){
@@ -390,40 +509,99 @@ const BookUI = (() => {
     return row;
   }
 
-  function renderBook(ids){
-    const {book, plan} = BOOKS[view.bookId];
-    const bookId = view.bookId;
+  /* ---------- màn 2: chi tiết sách — mọi section, unit; chọn unit nào học cũng được ---------- */
+  function startItem(bookId, itemId){
+    const {plan} = BOOKS[bookId];
+    setProg(bookId, BookCore.setSettings(prog(bookId), {focus: itemId}, nowMs()));
+    const s = BookCore.entrySession(plan, prog(bookId), itemId);
+    if(s) go("session", {bookId, sessionId: s.id});
+  }
+
+  function itemLabel(item){
+    return item.kind === "unit" ? "U" + item.no : (item.kind === "review" ? "R" + item.no : "T" + item.no);
+  }
+
+  function unitCard(bookId, item, nextId){
+    const {book, plan} = BOOKS[bookId];
     const p = prog(bookId);
+    const sess = BookCore.itemSessions(plan, item.id);
+    const cnt = BookCore.itemCounts(plan, p, item.id);
+    const isNext = sess.some(s => s.id === nextId);
+    const box = h("div", "bk-unit" + (isNext ? " now" : cnt.done === cnt.total && cnt.total ? " past" : ""));
+    const top = h("div", "bk-unit-top");
+    top.append(h("span", "wk-n", itemLabel(item)));
+    const mid = h("div", "bk-unit-mid");
+    const name = item.kind === "unit" ? "Unit " + item.no + " · " + item.title : item.title;
+    mid.append(h("div", "bk-unit-t", name));
+    const pr = item.pages ? [BookCore.printedPage(book, "course-book", item.pages[0]), BookCore.printedPage(book, "course-book", item.pages[1])] : null;
+    const note = item.kind === "test" && item.activities[0] && item.activities[0].note ? " · chưa có sách Test" : "";
+    mid.append(h("div", "tiny", (pr ? "Trang " + pr[0] + "–" + pr[1] + " · " : "") + sess.length + " phiên · đã xong " + cnt.done + "/" + cnt.total + note));
+    const dots = h("div", "bk-dots");
+    sess.forEach(s => {
+      const st = BookCore.statusOf(p, s.id);
+      const dd = h("i", "bk-dot " + st);
+      dd.title = s.title + " — " + STATUS_TXT[st];
+      dots.append(dd);
+    });
+    mid.append(dots);
+    const learn = btn(cnt.done === cnt.total && cnt.total ? "Ôn lại" : (cnt.done ? "Học tiếp" : "Học"), isNext ? "btn-primary btn-sm" : "btn-sm",
+      () => startItem(bookId, item.id));
+    learn.setAttribute("aria-label", "Học " + name);
+    top.append(mid, learn);
+    box.append(top);
+    const det = document.createElement("details");
+    const sm = document.createElement("summary"); sm.className = "tiny"; sm.style.cursor = "pointer";
+    sm.textContent = "Chọn từng phiên";
+    det.append(sm);
+    if(isNext) det.open = true;
+    sess.forEach(s => det.append(sessionRow(bookId, s, s.id === nextId)));
+    box.append(det);
+    return box;
+  }
+
+  function renderBook(){
+    const bookId = view.bookId;
+    const {book, plan} = BOOKS[bookId];
+    const p = prog(bookId);
+    const info = book.info || {};
     const c = BookCore.counts(plan, p);
+    const focus = BookCore.focusOf(plan, p);
     const next = BookCore.nextSession(plan, p);
     const week = curWeek();
     const finish = BookCore.projectFinishWeek(plan, p, week);
     const st = BookCore.settingsOf(plan, p);
+    const items = BookCore.itemsOf(book);
 
-    root.append(h("h2", "sec-title", book.title));
-    root.append(h("p", "sec-note", plan.sessions.length + " phiên × " + plan.minutesPerSession + " phút, học theo thứ tự. "
-      + "Mỗi unit 7 phiên; phiên có nhãn \"lõi\" (Speaking, Writing, bài Test) không được bỏ qua."));
-    if(ids.length > 1){
-      const seg = h("div", "seg"); seg.style.marginBottom = "12px";
-      ids.forEach(id => {
-        const b = h("button", null, BOOKS[id].book.title); b.type = "button";
-        b.setAttribute("aria-pressed", String(id === bookId));
-        b.onclick = () => go("book", {bookId: id});
-        seg.append(b);
-      });
-      root.append(seg);
-    }
+    const top = h("div", "reader-bar");
+    top.append(btn("← Danh sách sách", "btn-sm", () => go("library")), h("span", "reader-title", book.title));
+    root.append(top);
 
-    const nc = card(next ? "Phiên kế tiếp" : "Đã xong cả sách");
+    const ic = card(info.role || "Sách");
+    ic.append(h("h2", "sec-title", book.title));
+    const box = h("div", "bk-kvs");
+    kv(box, "Trình độ", levelText(info));
+    kv(box, "Nội dung", contentText(book));
+    kv(box, "Học xong trong", paceText(plan, st.sessionsPerWeek));
+    ic.append(box);
+    ic.append(h("p", "tiny", "Học theo thứ tự lộ trình, hoặc chọn bất kỳ unit nào bên dưới. Chọn một unit thì \"Phiên kế tiếp\" sẽ đi theo unit đó cho tới khi học xong, rồi tự quay về thứ tự lộ trình."));
+    root.append(ic);
+
+    const nc = card(next ? (focus ? "Phiên kế tiếp · unit tự chọn" : "Phiên kế tiếp theo lộ trình") : "Đã xong cả sách");
     nc.classList.add("bk-next");
     if(next){
       nc.append(h("h3", "sec-title", next.title));
       const wk = BookCore.plannedWeek(plan, p, next);
       nc.append(h("p", "small muted", "Tuần dự kiến " + wk + " · bạn đang ở tuần " + week
         + (BookCore.statusOf(p, next.id) === "doing" ? " · đang học dở" : "")));
+      const row = h("div", "rowx"); row.style.flexWrap = "wrap"; row.style.marginTop = "12px";
       const go1 = btn("Học phiên này", "btn-primary", () => go("session", {bookId, sessionId: next.id}));
-      go1.style.marginTop = "12px"; go1.style.width = "100%";
-      nc.append(go1);
+      go1.style.flex = "1";
+      row.append(go1);
+      if(focus) row.append(btn("Quay về theo lộ trình", "btn-sm", () => {
+        setProg(bookId, BookCore.setSettings(prog(bookId), {focus: null}, nowMs()));
+        render();
+      }));
+      nc.append(row);
     } else {
       nc.append(h("p", "small", "Mọi phiên đã xong hoặc bỏ qua. Tiếp tục với đề Cambridge GT theo lộ trình."));
     }
@@ -449,28 +627,16 @@ const BookUI = (() => {
     root.append(settingsCard(bookId, plan, st));
     root.append(filesCard(bookId));
 
+    root.append(h("h3", "sec-title bk-h", "Chọn unit để học"));
     book.sections.forEach(sec => {
       const head = h("div", "phase-head");
       const secSessions = plan.sessions.filter(s => s.section === sec.id);
       const secDone = secSessions.filter(s => ["done", "skipped"].includes(BookCore.statusOf(p, s.id))).length;
-      head.append(h("h3", null, sec.title), h("span", null, secDone + "/" + secSessions.length + " phiên"));
+      const units = sec.items.filter(i => i.kind === "unit");
+      head.append(h("h3", null, sec.title + (units.length ? " · Unit " + units[0].no + "–" + units[units.length - 1].no : "")),
+                  h("span", null, secDone + "/" + secSessions.length + " phiên"));
       root.append(head);
-      sec.items.forEach(item => {
-        const sess = secSessions.filter(s => s.item === item.id);
-        const done = sess.filter(s => ["done", "skipped"].includes(BookCore.statusOf(p, s.id))).length;
-        const det = document.createElement("details");
-        det.className = "wk" + (next && next.item === item.id ? " now" : (done === sess.length ? " past" : ""));
-        if(next && next.item === item.id) det.open = true;
-        const sum = document.createElement("summary");
-        sum.className = "wk-btn";
-        const label = item.kind === "unit" ? "U" + item.no : (item.kind === "review" ? "R" + item.no : "T" + item.no);
-        sum.append(h("span", "wk-n", label),
-                   h("span", "wk-t", item.title + " · " + done + "/" + sess.length));
-        const body = h("div", "wk-body");
-        sess.forEach(s => body.append(sessionRow(bookId, s, next && next.id === s.id)));
-        det.append(sum, body);
-        root.append(det);
-      });
+      sec.items.forEach(item => root.append(unitCard(bookId, items[item.id] || item, next && next.id)));
     });
   }
 
@@ -596,7 +762,7 @@ const BookUI = (() => {
     const item = ITEMS[bookId][s.item];
 
     const top = h("div", "reader-bar");
-    top.append(btn("← Sách", "btn-sm", () => go("book", {bookId})), h("span", "reader-title", s.title));
+    top.append(btn("← Danh sách unit", "btn-sm", () => go("book", {bookId})), h("span", "reader-title", s.title));
     root.append(top);
 
     const head = card("Tuần dự kiến " + BookCore.plannedWeek(plan, prog(bookId), s) + " · phiên " + s.seq + "/" + plan.sessions.length);
@@ -738,9 +904,10 @@ const BookUI = (() => {
 
   /* ---------- khởi động ---------- */
   function show(){
-    if(view.name !== "session") view.name = "book";
+    if(tick){ clearInterval(tick); tick = null; }
+    view = {name: "library"};
     render();
-    if(view.bookId) pull(view.bookId);
+    Object.keys(BOOKS).forEach(id => pull(id));
     if(msg){ flash(msg); msg = ""; }
   }
   function flash(text){
