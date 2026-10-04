@@ -48,7 +48,8 @@ ROTA1 = {
 DAYNAME = {1: "Thứ Hai", 2: "Thứ Ba", 3: "Thứ Tư", 4: "Thứ Năm", 5: "Thứ Sáu", 6: "Thứ Bảy"}
 
 # Thu tu uu tien khi liet ke; file khong nam trong danh sach van duoc gom vao cuoi.
-SKIP_DIRS = {".git", "node_modules", "__pycache__"}
+# docs/ la tai lieu ky thuat cho nguoi phat trien, khong nhung vao app hoc.
+SKIP_DIRS = {".git", "node_modules", "__pycache__", "docs"}
 
 HEAD = """<!doctype html>
 <html lang="vi">
@@ -137,7 +138,8 @@ def collect_docs() -> dict:
     """Doc moi file .md duoi thu muc goc, tru chinh cac file sinh ra."""
     docs = {}
     for path in sorted(ROOT.rglob("*.md")):
-        if any(part in SKIP_DIRS for part in path.parts):
+        # Xet duong dan tuong doi: thu muc cha cua repo ten "docs" khong duoc lam mat het file.
+        if any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts):
             continue
         rel = path.relative_to(ROOT).as_posix()
         docs[rel] = path.read_text(encoding="utf-8")
