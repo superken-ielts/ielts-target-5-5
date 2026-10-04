@@ -46,7 +46,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
 ### Nội dung tĩnh
 
 - [ ] **P0-08** Đổi nội dung tuần 6–25 sang Target 5.0 (theo D4).
-  - `W` tuần 6–25 ghi section/unit dự kiến; tuần 19 = Target Test 2, tuần 25 = Test 3, tuần 26 = Cambridge IELTS 20 GT Test 1; tuần 27–34 Trainer 2 GT + Barron's Writing; tuần 35–40 Cambridge 20 GT + 21 GT.
+  - `W` tuần 6–25 ghi section/unit dự kiến; tuần 19 = Target Test 2, tuần 25 = Test 3, tuần 26 = Cambridge IELTS 20 GT Test 1; tuần 27–34 Trainer 2 GT (hoặc The Official Cambridge Guide) + Barron's Writing; tuần 35–40 Cambridge 20 GT + 21 GT. Bộ sách chốt và bảng lọc danh sách tổng hợp đã có ở `05-tai-lieu-mien-phi.md` mục K.
   - `phase1-days.json` tuần 6–12: block chính trỏ tới phiên Target 5.0, điểm ngữ pháp giữ làm tham khảo.
   - Cập nhật `README.md` (bỏ "chỉ dùng tài liệu miễn phí"), `00`, `01`, `02`, `05`, `06` cho khớp.
   - Tài liệu mới cho người học `09-hoc-voi-ielts-target-5.md`: 7 phiên mỗi unit, khung ngày 75′ + 30′ + 15′, xếp lớp, rút gọn, cách chọn số phiên/tuần; thêm vào `DOCMETA`, `DOCGROUPS`.
@@ -223,7 +223,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
 - [ ] **P3-07** Speaking: ghi âm ở bản tự host → Azure Pronunciation Assessment (đọc theo câu mẫu và nói tự do) + nhận xét LLM; artifact hiện "chỉ có ở bản tự host".
 - [ ] **P3-08** Langfuse (tự host hoặc project riêng tư) cho pipeline và backend: từng bước, token, chi phí.
 - [ ] **P3-09** Nhập **Cambridge IELTS 20 GT** bằng mẫu phiên `cambridge-test-v1` (đề → Listening, Reading, Writing, Speaking, chấm) — trước tuần 26.
-- [ ] **P3-10** Nhập **IELTS Trainer 2 GT** (`trainer-gt-v1`) và Barron's IELTS Writing (mẫu theo chương) — trước tuần 27.
+- [ ] **P3-10** Nhập **IELTS Trainer 2 GT** (`trainer-gt-v1`) — hoặc The Official Cambridge Guide nếu chọn phương án thay thế — và Barron's Writing for IELTS (mẫu theo chương), trước tuần 27.
 - [ ] **P3-11** Đáp án số hóa: bước `book answers` đọc trang đáp án thành `answers.json` (riêng tư, có duyệt); app nạp vào store `answers`, phiếu trả lời chấm tự động.
 
 ### Cổng G3

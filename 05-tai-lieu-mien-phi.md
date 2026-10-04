@@ -7,6 +7,9 @@ mất giữa chừng. Nếu một địa chỉ bị chết, tìm lại bằng đ
 Cảnh báo quan trọng: danh sách này đã đủ cho cả 40 tuần. **Đừng đi sưu tầm thêm.** Bệnh
 phổ biến nhất của người tự học là tải về 50 bộ tài liệu rồi học hết 2 bộ.
 
+Ngoại lệ duy nhất là **mục K ở cuối file**: bộ sách in có bản quyền mà lộ trình dùng từ
+tuần 6, kèm cách lọc những danh sách "tổng hợp sách IELTS" hay được chia sẻ.
+
 Một lưu ý xuyên suốt file này: bạn thi **General Training**, nên mọi lần gặp chữ
 "Cambridge IELTS" hay "đề thi thử" thì phải lấy đúng bản General Training. Đề Academic và
 đề GT khác nhau hoàn toàn ở Reading và ở Writing Task 1; luyện nhầm bản là mất thời gian
@@ -333,3 +336,64 @@ củng cố 27–34, luyện đề 35–40.
   thuật hơn và có những dạng bài không xuất hiện trong đề GT; còn Task 1 Academic là mô tả
   biểu đồ, thứ bạn sẽ không gặp trong phòng thi. Mỗi giờ bỏ vào đó là một giờ mất trắng.
 - **Đổi tài liệu liên tục.** Danh sách này đã chốt.
+
+---
+
+## K. Sách in có bản quyền — chọn sách và lọc các danh sách tổng hợp
+
+Từ tuần 6, lộ trình học theo giáo trình in thay cho phần lớn tài liệu miễn phí ở trên.
+Đây là **sách có bản quyền, phải mua** — bản giấy hoặc bản điện tử chính hãng. Các bộ
+sách chia sẻ qua link Drive thường là bản không có bản quyền, hay thiếu audio hoặc thiếu
+đáp án, nên file này không chép lại những link đó.
+
+### Ba tiêu chí lọc một cuốn sách
+
+1. **Viết cho General Training.** Writing Task 1 của GT là viết thư; Reading GT là thông
+   báo, quảng cáo, tài liệu nơi làm việc. Sách dạy mô tả biểu đồ là sai bài.
+2. **Bắt đầu được từ trình độ A2–B1** (khoảng band 3.5–5.0). Sách B2 trở lên sẽ gây nản.
+3. **Tự học được:** có đáp án, có audio, có bài mẫu Writing.
+
+Listening và Speaking của GT giống hệt Academic, nên sách hai kỹ năng này dùng được gần
+hết. Riêng Reading và Writing phải đúng GT.
+
+### Bộ sách chốt cho lộ trình
+
+| Tuần | Sách | Vai trò |
+|---|---|---|
+| 6–25 | **IELTS Target 5.0** (Garnet, bản Nhân Trí Việt: Course Book, Work Book, Test, MP3) | Giáo trình chính. Viết cho GT, trình độ A2–B1, mỗi unit đủ 4 kỹ năng, dạy cả thư lẫn essay. Kiểm tra có Answer key trước khi mua |
+| 26 | **Cambridge IELTS 20 General Training**, Test 1 | Mock đo mốc, kỳ vọng 4.5–5.0 |
+| 27–34 | **IELTS Trainer 2 General Training** (Cambridge) + **Barron's Writing for IELTS** | 2 đề có hướng dẫn + 4 đề; luyện thư và essay |
+| 35–40 | **Cambridge IELTS 20 GT** (3 đề còn lại) + **Cambridge IELTS 21 GT** (4 đề) | Làm đề với áp lực thời gian thật |
+
+Phương án thay thế cho tuần 27–34: **The Official Cambridge Guide to IELTS** — dạy cả
+Academic lẫn GT, có đề GT, đáp án và audio. Dày hơn và trình độ cao hơn Target 5.0, nên
+hợp làm sách củng cố hơn là sách nhập môn.
+
+Học hết Target 5.0 rồi luyện đề Cambridge GT là đủ cho mục tiêu 5.5. Không cần mua thêm
+sách ngữ pháp hay từ vựng riêng.
+
+### Lọc danh sách "Tổng hợp sách IELTS chia theo band và kỹ năng"
+
+Danh sách này hay được chia sẻ kèm link Drive: khoảng 50 đầu sách, chia 4 kỹ năng × 5 mức
+(Mất gốc, < 4.5, 4.5–6.0, 6.0–7.5, 7.5+). Ba điều cần biết trước khi dùng:
+
+- **Không có nhãn General Training.** Nhiều sách trong đó chỉ dạy Academic.
+- **Không có IELTS Target 5.0 và IELTS Trainer 2 GT** — hai cuốn chính của lộ trình này.
+- **Mức band là band bắt đầu học,** không phải band đạt được sau khi học.
+
+Đối chiếu từng cuốn với mục tiêu GT 5.5 (band ghi trong ngoặc là mức danh sách xếp):
+
+| Đánh giá | Sách | Cách dùng |
+|---|---|---|
+| **Dùng** | The Official Cambridge Guide (4.5–6.0) · Barron's Writing for IELTS (4.5–6.0) · Cambridge IELTS (4.5–6.0) | Official Cambridge Guide là cuốn tổng hợp duy nhất trong danh sách chắc chắn có phần GT. Cambridge IELTS: chỉ lấy **bản General Training** cho Reading và Writing |
+| **Chỉ dùng cho Listening** | Basic Tactics for Listening, Listen Carefully (mất gốc) · Developing Tactics for Listening (< 4.5) · Expanding Tactics for Listening, Listening Practice Through Dictation, Collins Listening for IELTS (4.5–6.0) | Bổ sung bài nghe nếu cần. Đang ở band 3–4 thì Developing Tactics, sau đó Expanding Tactics. Dictation hợp với block chép chính tả 10 phút |
+| **Chỉ dùng cho Speaking** | Succeed in IELTS Speaking (< 4.5) · Improve your IELTS: Listening + Speaking, Collins Speaking for IELTS, 220 IELTS Speaking Topics (4.5–6.0) | Chọn một cuốn học cách trả lời; 220 Topics chỉ dùng làm ngân hàng đề, không học thuộc câu mẫu |
+| **Tiếng Anh tổng quát** | English Unlimited A1, A2 (mất gốc) · B1 (4.5–6.0) | Không phải sách IELTS. Lộ trình đã có nguồn miễn phí cho tuần 1–5 nên không cần |
+| **Bỏ qua — thiên Academic** | Get Ready for IELTS (< 4.5) · Focus on Academic Skills, Complete IELTS 4.0–5.0, Mindset for IELTS 1, Collins Writing for IELTS, Collins Reading for IELTS (4.5–6.0) · Complete IELTS 5.0–6.5, Mission IELTS 1 Academic, Mindset for IELTS 2 (6.0–7.5) · Complete IELTS 6.5–7.5, Mindset for IELTS 3, Mission IELTS 2 Academic (7.5+) | Writing Task 1 dạy mô tả biểu đồ, Reading là văn bản học thuật |
+| **Bỏ qua — quá cao so với 5.5** | IELTS Advantage, English Unlimited B2, Common Mistakes at IELTS, IELTS Express Upper Intermediate, Target 7.0, Cambridge IELTS Trainer, Expert on IELTS, IELTS Practice Tests Plus, 31 High-scoring Formulas, Book of Idioms, Improve your Skills: Writing, Improve your Skills: Reading, Writing for Success, High-Scoring IELTS Writing Model Answers (6.0–7.5) · English Unlimited C1, Objective IELTS Advanced (7.5+) | Không cần cho mục tiêu 5.5. Cambridge IELTS Trainer trong danh sách nhiều khả năng là bản Academic — đừng nhầm với IELTS Trainer 2 GT. Sách bài mẫu band cao dễ dẫn tới học thuộc (xem mục J) |
+| **Bỏ qua — không chính thức** | IELTS Listening Recent Actual Test 1–6 (4.5–6.0) | Đề sưu tầm, chất lượng khó kiểm chứng; đã có Cambridge và mini-ielts |
+| **Cần mở mục lục kiểm tra** | Intensive Listening, Listening Strategies, Basic IELTS, Bridge to IELTS (< 4.5) · IELTS Express Intermediate, IELTS Testbuilder 1+2, Longman High Impact, Hackers IELTS, 15 Days' Practice for IELTS, Step Up to IELTS, Marvellous Writing (4.5–6.0) | Tìm chữ "General Training", "letter", hoặc bài đọc là thông báo, quảng cáo, tài liệu công việc. Không có thì chỉ dùng phần Listening và Speaking |
+
+**Kết luận:** danh sách tổng hợp này không thay đổi bộ sách chốt ở trên. Thứ duy nhất nó
+thêm được là sách luyện nghe (bộ Tactics, Dictation) và ngân hàng đề Speaking — cả hai đều
+là tùy chọn.
