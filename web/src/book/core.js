@@ -188,6 +188,20 @@ const BookCore = (() => {
     return out;
   }
 
+  /* Video bài giảng (books/<sách>/lessons/lessons.json do agents/lesson_video sinh, build.py nhúng vào BOOKS[id].lessons) */
+  function lessonsOf(entry, filter){
+    const f = filter || {};
+    return ((entry && entry.lessons) || []).filter(l => (!f.activity || l.activity === f.activity) && (!f.item || l.item === f.item));
+  }
+  function lessonSession(plan, lesson){
+    return plan.sessions.find(s => (s.activityIds || []).includes(lesson.activity)) || null;
+  }
+  function chapterAt(lesson, t){
+    let cur = -1;
+    (lesson.chapters || []).forEach((c, i) => { if(t + 0.05 >= c.t) cur = i; });
+    return cur;
+  }
+
   function fmtClock(sec){
     const s = Math.abs(Math.round(sec));
     return (sec < 0 ? "-" : "") + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
@@ -196,7 +210,8 @@ const BookCore = (() => {
   return {
     emptyProgress, settingsOf, statusOf, focusOf, nextSession, itemSessions, itemCounts, entrySession, duration, counts, plannedWeek, projectFinishWeek,
     canSkip, setSession, setSettings, mergeProgress, elapsedSec, activitiesOf, itemsOf,
-    printedPage, basename, matchFiles, requiredPaths, chunkFor, checklistStats, fmtClock
+    printedPage, basename, matchFiles, requiredPaths, chunkFor, checklistStats, fmtClock,
+    lessonsOf, lessonSession, chapterAt
   };
 })();
 if(typeof module !== "undefined" && module.exports) module.exports = BookCore;

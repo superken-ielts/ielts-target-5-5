@@ -1,0 +1,313 @@
+# Video bài giảng Unit 1 · Speaking 1 (sách in trang 10). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-1.yaml
+# Mỗi dòng thoại: <người nói>: "câu hiện trên màn hình"; say = cách đọc khác (số, tên riêng); vi = phụ đề tiếng Việt;
+# focus = mục đang nói; reveal = mở đáp án; wait = im lặng có đếm ngược để người học tự nói.
+id: U01-speaking-1
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Speaking 1: talking about personal information"
+title_vi: "Nói về thông tin cá nhân — từ mới, bài A, bài B, Grammar check"
+tag: "UNIT 1 · LIFE"
+speakers:
+  emma: {name: Emma, role: teacher, voice: slt, color: "#C8102E"}
+  tom: {name: Tom, role: student, voice: rms, color: "#1F5FAD"}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello, and welcome to IELTS Target 5.0, Unit 1: Life."
+        say: "Hello, and welcome to eye-elts Target five point oh. Unit one: Life."
+        vi: "Chào mừng bạn đến với Unit 1: Life (Cuộc sống)."
+      - emma: "I'm Emma, your speaking teacher."
+        vi: "Tôi là Emma, giáo viên dạy nói của bạn."
+      - tom: "Hi! I'm Tom. I'm a student, like you."
+        vi: "Chào! Mình là Tom, cũng là người học như bạn."
+      - emma: "Today we study Speaking 1: talking about personal information."
+        say: "Today we study Speaking one: talking about personal information."
+        vi: "Hôm nay: Speaking 1 — nói về thông tin cá nhân."
+      - emma: "In IELTS Speaking Part 1, the examiner asks about you: your family, your work or studies, your home and your free time."
+        say: "In eye-elts Speaking Part one, the examiner asks about you: your family, your work or studies, your home, and your free time."
+        vi: "Phần 1 bài thi Nói hỏi về chính bạn: gia đình, việc học hay đi làm, nơi ở, thời gian rảnh."
+      - tom: "So this lesson is really useful for the exam!"
+        vi: "Vậy bài này rất có ích cho kỳ thi!"
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "New words for personal information", vi: "Từ mới để nói về bản thân"}
+      - {en: "Exercise A: match the pictures a–f with the questions 1–6", vi: "Bài A: nối tranh với câu hỏi"}
+      - {en: "Exercise B: ask and answer — listen to Tom's answers", vi: "Bài B: hỏi và trả lời — nghe câu trả lời mẫu của Tom"}
+      - {en: "Grammar check: Do you have…? / Have you got…? and the present continuous", vi: "Ngữ pháp: hai cách hỏi 'có…' và thì hiện tại tiếp diễn"}
+      - {en: "Your turn: answer six questions out loud", vi: "Đến lượt bạn: trả lời thành tiếng 6 câu hỏi"}
+    lines:
+      - emma: "Here is our plan for today."
+        vi: "Đây là kế hoạch hôm nay."
+      - emma: "First, we learn some new words."
+        focus: 0
+      - emma: "Then, in Exercise A, we match six pictures with six questions."
+        say: "Then, in Exercise ay, we match six pictures with six questions."
+        focus: 1
+      - emma: "In Exercise B, Tom answers the questions, and you listen."
+        focus: 2
+      - emma: "After that, we look at the grammar check."
+        focus: 3
+      - emma: "And finally, it's your turn to speak."
+        focus: 4
+
+  - kind: vocab
+    chapter: "Từ mới"
+    heading: "New words"
+    heading_vi: "Từ mới — nghe và nhắc lại"
+    items:
+      - {w: "personal information", pos: "noun", vi: "thông tin cá nhân", ex: "Your name, your age and your job are personal information."}
+      - {w: "brothers and sisters", pos: "noun", vi: "anh chị em ruột", ex: "I have one brother and two sisters."}
+      - {w: "an only child", pos: "noun", vi: "con một (không có anh chị em)", ex: "I don't have any brothers or sisters. I'm an only child."}
+      - {w: "at the moment", pos: "phrase", vi: "hiện tại, lúc này", ex: "At the moment, I'm living with my aunt."}
+      - {w: "free time", pos: "noun", vi: "thời gian rảnh", ex: "In my free time, I play basketball."}
+      - {w: "enjoy travelling", pos: "verb + -ing", vi: "thích đi du lịch", ex: "I enjoy travelling to the beach with my friends."}
+      - {w: "hope to", pos: "verb", vi: "hy vọng sẽ (làm gì)", ex: "I hope to study abroad next year."}
+      - {w: "in the future", pos: "phrase", vi: "trong tương lai", ex: "In the future, I want to be a nurse."}
+      - {w: "graduate", pos: "verb", vi: "tốt nghiệp", ex: "My sister graduated from university last year."}
+      - {w: "office", pos: "noun", vi: "văn phòng", ex: "My father works in an office in the city centre."}
+    lines:
+      - emma: "First, some new words. Listen, and repeat after Tom."
+        vi: "Trước tiên là từ mới. Nghe rồi nhắc lại theo Tom."
+      - {emma: "personal information", focus: 0}
+      - {tom: "personal information"}
+      - {emma: "Your name, your age and your job are personal information."}
+      - {emma: "brothers and sisters", focus: 1}
+      - {tom: "brothers and sisters"}
+      - {emma: "I have one brother and two sisters."}
+      - {emma: "an only child", focus: 2}
+      - {tom: "an only child"}
+      - {emma: "I don't have any brothers or sisters. I'm an only child."}
+      - {emma: "at the moment", focus: 3}
+      - {tom: "at the moment"}
+      - {emma: "At the moment, I'm living with my aunt."}
+      - {emma: "free time", focus: 4}
+      - {tom: "free time"}
+      - {emma: "In my free time, I play basketball."}
+      - {emma: "enjoy travelling", focus: 5}
+      - {tom: "enjoy travelling"}
+      - {emma: "I enjoy travelling to the beach with my friends."}
+      - {emma: "hope to", focus: 6}
+      - {tom: "hope to"}
+      - {emma: "I hope to study abroad next year."}
+      - {emma: "in the future", focus: 7}
+      - {tom: "in the future"}
+      - {emma: "In the future, I want to be a nurse."}
+      - {emma: "graduate", focus: 8}
+      - {tom: "graduate"}
+      - {emma: "My sister graduated from university last year."}
+      - {emma: "office", focus: 9}
+      - {tom: "office"}
+      - {emma: "My father works in an office in the city centre."}
+
+  - kind: match
+    chapter: "Bài A: nối tranh với câu hỏi"
+    heading: "Exercise A · Match the pictures a–f with the questions 1–6"
+    heading_vi: "Nối tranh a–f với câu hỏi 1–6"
+    image: {pdf: course-book, page: 11, clip: [58, 209, 536, 418]}
+    items:
+      - {n: 1, q: "Are you studying or are you working?", answer: d}
+      - {n: 2, q: "Do you have brothers and sisters?", answer: a}
+      - {n: 3, q: "Where are you living at the moment?", answer: f}
+      - {n: 4, q: "What do you do in your free time?", answer: b}
+      - {n: 5, q: "Do you enjoy travelling?", answer: c}
+      - {n: 6, q: "What do you hope to do in the future?", answer: e}
+    lines:
+      - emma: "Exercise A. Look at the six pictures, a to f."
+        say: "Exercise ay. Look at the six pictures, ay to F."
+        vi: "Bài A. Nhìn sáu bức tranh a đến f."
+      - emma: "Match each picture with one question, one to six."
+        vi: "Nối mỗi tranh với một câu hỏi từ 1 đến 6."
+      - emma: "Pause the video now and try it yourself."
+        vi: "Tạm dừng video và tự làm trước nhé."
+      - wait: 5
+        note: "Pause the video and try"
+        vi: "Tạm dừng video, nối tranh với câu hỏi rồi xem tiếp."
+      - emma: "Ready? Let's check together."
+        vi: "Xong chưa? Cùng kiểm tra nhé."
+      - emma: "Picture a shows a family together on a holiday."
+        say: "Picture ay shows a family together on a holiday."
+      - tom: "So it matches question two: Do you have brothers and sisters?"
+        focus: 1
+        reveal: 2
+      - emma: "In picture b, two boys are playing basketball."
+        say: "In picture B, two boys are playing basketball."
+      - tom: "That's question four: What do you do in your free time?"
+        focus: 3
+        reveal: 4
+      - emma: "In picture c, a man is taking a photo of the Statue of Liberty."
+        say: "In picture C, a man is taking a photo of the Statue of Liberty."
+      - tom: "Question five: Do you enjoy travelling?"
+        focus: 4
+        reveal: 5
+      - emma: "Picture d shows a man at his desk in an office."
+        say: "Picture D shows a man at his desk in an office."
+      - tom: "Question one: Are you studying or are you working?"
+        focus: 0
+        reveal: 1
+      - emma: "In picture e, a young man is graduating from university. He's thinking about his future."
+        say: "In picture E, a young man is graduating from university. He's thinking about his future."
+      - tom: "Question six: What do you hope to do in the future?"
+        focus: 5
+        reveal: 6
+      - emma: "And picture f shows people in the city where they live."
+        say: "And picture F shows people in the city where they live."
+      - tom: "Question three: Where are you living at the moment?"
+        focus: 2
+        reveal: 3
+      - emma: "Well done! The answer key does not cover this exercise, so these are our suggested answers."
+        vi: "Phần đáp án cuối sách không có bài này — đây là đáp án gợi ý."
+
+  - kind: qa
+    chapter: "Bài B: hỏi và trả lời"
+    heading: "Exercise B · Ask and answer questions 1–6 with a partner"
+    heading_vi: "Hỏi và trả lời với bạn học — nghe câu trả lời mẫu của Tom"
+    items:
+      - q: "Are you studying or are you working?"
+        a: "I'm studying at the moment. I'm in my second year at university, and I'm studying business."
+        phrases: ["I'm studying…", "at the moment", "in my second year"]
+      - q: "Do you have brothers and sisters?"
+        a: "Yes, I do. I have one older sister. She's a nurse, and she's very kind."
+        phrases: ["Yes, I do.", "an older sister", "She's a nurse."]
+      - q: "Where are you living at the moment?"
+        a: "I'm living in a small flat near my university. I share it with two friends."
+        phrases: ["I'm living in…", "near my university", "I share it with…"]
+      - q: "What do you do in your free time?"
+        a: "I usually play basketball with my friends. I also watch films at the weekend."
+        phrases: ["I usually…", "I also…", "at the weekend"]
+      - q: "Do you enjoy travelling?"
+        a: "Yes, I really enjoy it. Last summer I went to Da Nang with my family, and we loved the beach."
+        phrases: ["I really enjoy it.", "Last summer I went to…"]
+      - q: "What do you hope to do in the future?"
+        a: "I hope to work for an international company. I also hope to travel around the world."
+        phrases: ["I hope to…", "an international company"]
+    lines:
+      - emma: "Exercise B. Ask and answer the questions with a partner. Today, Tom is my partner."
+        vi: "Bài B. Hỏi và trả lời với bạn học. Hôm nay Tom là bạn học của tôi."
+      - emma: "A good answer has two or three sentences: answer the question, then add a reason or an example."
+        vi: "Câu trả lời tốt có 2–3 câu: trả lời thẳng, rồi thêm lý do hoặc ví dụ."
+      - {emma: "Tom, are you studying or are you working?", focus: 0}
+      - {tom: "I'm studying at the moment. I'm in my second year at university, and I'm studying business.", reveal: 0}
+      - {emma: "Do you have brothers and sisters?", focus: 1}
+      - {tom: "Yes, I do. I have one older sister. She's a nurse, and she's very kind.", reveal: 1}
+      - emma: "Notice: Tom says, yes, I do. Then he adds more information."
+        vi: "Để ý: Tom không chỉ nói 'Yes, I do' mà nói thêm 1–2 câu."
+      - {emma: "Where are you living at the moment?", focus: 2}
+      - {tom: "I'm living in a small flat near my university. I share it with two friends.", reveal: 2}
+      - {emma: "What do you do in your free time?", focus: 3}
+      - {tom: "I usually play basketball with my friends. I also watch films at the weekend.", reveal: 3}
+      - emma: "Good. Words like usually and also help you add more ideas."
+        vi: "'usually' (thường), 'also' (cũng) giúp bạn nói thêm ý."
+      - {emma: "Do you enjoy travelling?", focus: 4}
+      - tom: "Yes, I really enjoy it. Last summer I went to Da Nang with my family, and we loved the beach."
+        say: "Yes, I really enjoy it. Last summer I went to Dah Nahng with my family, and we loved the beach."
+        reveal: 4
+      - {emma: "What do you hope to do in the future?", focus: 5}
+      - {tom: "I hope to work for an international company. I also hope to travel around the world.", reveal: 5}
+      - emma: "Great answers, Tom!"
+
+  - kind: compare
+    chapter: "Grammar check"
+    heading: "Grammar check · Do you have…? / Have you got…?"
+    heading_vi: "Hai cách hỏi 'Bạn có… không?'"
+    items:
+      - title: "American English"
+        title_vi: "Tiếng Anh Mỹ"
+        lines: ["Do you have brothers and sisters?", "Yes, I do. / No, I don't."]
+      - title: "British English"
+        title_vi: "Tiếng Anh Anh"
+        lines: ["Have you got any brothers and sisters?", "Yes, I have. / No, I haven't."]
+    lines:
+      - emma: "Now, the grammar check."
+        vi: "Giờ đến phần Grammar check."
+      - emma: "In American English, people often say: Do you have brothers and sisters?"
+        focus: 0
+      - tom: "In British English, people often say: Have you got any brothers and sisters?"
+        focus: 1
+      - emma: "Both are correct. Be careful with the short answers."
+        vi: "Cả hai đều đúng. Chú ý câu trả lời ngắn khác nhau."
+      - {tom: "Do you have a car? Yes, I do.", focus: 0}
+      - {tom: "Have you got a car? Yes, I have.", focus: 1}
+
+  - kind: compare
+    heading: "Grammar check · Present continuous"
+    heading_vi: "Vì sao câu 1 và câu 3 dùng thì hiện tại tiếp diễn?"
+    items:
+      - title: "Present continuous — now, temporary"
+        title_vi: "Hiện tại tiếp diễn: đang diễn ra, tạm thời"
+        lines: ["Are you studying or are you working?", "Where are you living at the moment?", "I'm living with my aunt this year."]
+      - title: "Present simple — permanent, habits"
+        title_vi: "Hiện tại đơn: lâu dài, thói quen"
+        lines: ["I live in Hanoi.", "My father works in a bank.", "I play basketball every weekend."]
+    lines:
+      - emma: "Question one in the grammar check: which two questions are in the present continuous?"
+        vi: "Câu hỏi 1: hai câu nào dùng thì hiện tại tiếp diễn?"
+      - tom: "Question one: Are you studying or are you working? And question three: Where are you living at the moment?"
+        focus: 0
+      - emma: "Correct! Question two: why do we use the continuous form?"
+        vi: "Đúng! Câu hỏi 2: vì sao dùng dạng tiếp diễn?"
+      - emma: "Because these situations are temporary. They are true now, but they can change soon."
+        focus: 0
+        vi: "Vì đây là tình huống tạm thời — đúng ở hiện tại nhưng có thể sớm thay đổi."
+      - tom: "So, I'm living with my aunt this year, but next year I'll move."
+        focus: 0
+      - emma: "For something permanent, or a habit, use the present simple. I live in Hanoi. I play basketball every weekend."
+        say: "For something permanent, or a habit, use the present simple. I live in Ha Noi. I play basketball every weekend."
+        focus: 1
+        vi: "Việc lâu dài hoặc thói quen → dùng hiện tại đơn."
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn"
+    heading_vi: "Trả lời thành tiếng — mỗi câu 10 giây"
+    items:
+      - {q: "Are you studying or are you working?", hint: "I'm studying… / I'm working as…"}
+      - {q: "Do you have brothers and sisters?", hint: "Yes, I do. I have… / No, I'm an only child."}
+      - {q: "Where are you living at the moment?", hint: "I'm living in… with…"}
+      - {q: "What do you do in your free time?", hint: "I usually… I also…"}
+      - {q: "Do you enjoy travelling?", hint: "Yes, I really enjoy it. Last year I went to…"}
+      - {q: "What do you hope to do in the future?", hint: "I hope to…"}
+    lines:
+      - emma: "Now it's your turn. I will ask you the six questions."
+        vi: "Đến lượt bạn. Tôi sẽ hỏi bạn 6 câu."
+      - emma: "Answer each question out loud, in two or three sentences. You have ten seconds."
+        vi: "Trả lời thành tiếng mỗi câu bằng 2–3 câu. Bạn có 10 giây."
+      - {emma: "Are you studying or are you working?", focus: 0}
+      - {wait: 10, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Do you have brothers and sisters?", focus: 1}
+      - {wait: 10, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Where are you living at the moment?", focus: 2}
+      - {wait: 10, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "What do you do in your free time?", focus: 3}
+      - {wait: 10, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Do you enjoy travelling?", focus: 4}
+      - {wait: 10, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "What do you hope to do in the future?", focus: 5}
+      - {wait: 10, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Answer, then add a reason or an example: two or three sentences", vi: "Trả lời + lý do/ví dụ: 2–3 câu"}
+      - {en: "Present continuous for now and temporary: I'm studying… I'm living…", vi: "Hiện tại tiếp diễn cho việc đang diễn ra, tạm thời"}
+      - {en: "Do you have…? = Have you got…?", vi: "Hai cách hỏi đều đúng; chú ý câu trả lời ngắn"}
+      - {en: "Homework: record your answers to the six questions and listen again", vi: "Bài về nhà: ghi âm câu trả lời 6 câu hỏi rồi nghe lại"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Answer the question, then add a reason or an example.", focus: 0}
+      - {emma: "Use the present continuous for things that are true now, but temporary.", focus: 1}
+      - {emma: "Do you have, and have you got, are both correct.", focus: 2}
+      - emma: "For homework, record your answers to the six questions, and listen to yourself."
+        focus: 3
+        vi: "Bài về nhà: ghi âm câu trả lời và tự nghe lại."
+      - tom: "Thanks, Emma! See you in Speaking 2."
+        say: "Thanks, Emma! See you in Speaking two."
+      - emma: "Goodbye, and good luck!"

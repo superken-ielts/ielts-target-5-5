@@ -10,7 +10,7 @@ trình được nhúng thẳng vào trang, nên đọc được cả kế hoạc
 |---|---|
 | **Hôm nay** | Bốn block của ngày hôm nay với nội dung cụ thể theo đúng tuần đang học, có ô đánh dấu hoàn thành. Nút chuyển sang khung rút gọn cho ngày bận chỉ có 1 tiếng (ẩn vào Chủ nhật vì Chủ nhật cố định 1 tiếng). Khối **Chi tiết ngày hôm nay** mở ra đủ năm phần kèm link bài học. Nút **Hoàn thành hôm nay** để chốt ngày, và màn chặn buộc đóng sổ những ngày cũ còn treo trước khi sang ngày mới. |
 | **Lộ trình** | Toàn bộ 40 tuần, nhóm theo 4 giai đoạn, tuần hiện tại được đánh dấu. Chạm vào một tuần để xem trọng tâm của cả 4 kỹ năng và các mốc kiểm tra theo tháng. |
-| **Sách** | Danh sách sách của lộ trình kèm trình độ, thời lượng, số tháng học xong theo nhịp. Chạm một sách để xem mọi section, unit và chọn học unit bất kỳ (hoặc theo thứ tự lộ trình). Mỗi phiên mở đúng trang sách (PDF), đáp án, tapescript, phát audio có ±5 giây, tốc độ, lặp A–B, đồng hồ 75 phút, ghi lỗi vào sổ lỗi, và cộng giờ học khi xong. Xem mục *Tab Sách* bên dưới. |
+| **Sách** | Danh sách sách của lộ trình kèm trình độ, thời lượng, số tháng học xong theo nhịp. Chạm một sách để xem mọi section, unit và chọn học unit bất kỳ (hoặc theo thứ tự lộ trình). Mỗi phiên mở đúng trang sách (PDF), đáp án, tapescript, phát audio có ±5 giây, tốc độ, lặp A–B, video bài giảng (Unit 1 Speaking), đồng hồ 75 phút, ghi lỗi vào sổ lỗi, và cộng giờ học khi xong. Xem mục *Tab Sách* bên dưới. |
 | **Luyện tập** | Bốn kỹ năng tách riêng, chọn kỹ năng nào thì vào thẳng phần luyện của kỹ năng đó. Nội dung lấy theo đúng tuần đang học. Mỗi buổi luyện đều ghi được kết quả vào lịch sử. |
 | **Tài liệu** | Danh sách tài liệu miễn phí bên ngoài, bấm là mở. |
 | **Kế hoạch** | Toàn bộ 16 file markdown, đọc ngay trong trang. Có mục lục cho từng tài liệu, tìm kiếm không dấu trên toàn bộ nội dung, và liên kết giữa các tài liệu bấm được. |
@@ -112,6 +112,11 @@ Tiến độ sách lưu riêng, không đụng tiến độ cũ: `localStorage` 
 Bản trên Claude không truy cập được thư mục `books/`: phải nhập file từ máy (các MP3, `Target5.0_Listening_R.pdf`
 và các đoạn trong `books/ielts_target_5_0/web/`). Việc đọc PDF trong bản Claude phụ thuộc chính sách nạp script
 của nền tảng — chưa kiểm tra được (spike S0.2 trong `docs/agent-hoc-tap/03`).
+
+**Video bài giảng.** `books/<sách>/lessons/lessons.json` (do `agents/lesson_video` sinh) cũng được nhúng. Thẻ unit có
+nút mở từng video; trong phiên học, hoạt động có video hiện trình phát kèm nút nhảy theo chương. File MP4 (H.264 + AAC)
+lấy từ máy chủ như PDF (`../books/<sách>/lessons/…`), nên chỉ xem được ở bản tự host; trình duyệt cần phát được
+MP4 H.264 (Chrome, Edge, Safari, Firefox — Chromium trần của Playwright thì không, trang sẽ báo).
 
 ## Ba file, ba vai trò
 

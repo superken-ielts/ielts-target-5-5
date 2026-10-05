@@ -1,0 +1,285 @@
+# Video bài giảng Unit 1 · Speaking 2 (sách in trang 10–11). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml.
+id: U01-speaking-2
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Speaking 2: exchanging personal information"
+title_vi: "Hỏi – đáp thông tin cá nhân — từ mới, bài A, phát âm, lỗi thường gặp"
+tag: "UNIT 1 · LIFE"
+speakers:
+  emma: {name: Emma, role: teacher, voice: slt, color: "#C8102E"}
+  tom: {name: Tom, role: student, voice: rms, color: "#1F5FAD"}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 1: Life. This is Speaking 2: exchanging personal information."
+        say: "Welcome back to Unit one: Life. This is Speaking two: exchanging personal information."
+        vi: "Chào mừng trở lại Unit 1. Đây là Speaking 2 — trao đổi thông tin cá nhân."
+      - tom: "Exchanging means we ask questions, and we give answers."
+        vi: "'Exchange' nghĩa là hỏi và trả lời qua lại."
+      - emma: "That's right. You will learn eight common questions, how to say them, and some typical mistakes."
+        vi: "Bạn sẽ học 8 câu hỏi thường gặp, cách nói cho tự nhiên và các lỗi hay mắc."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "New words: city, job, family, hobbies", vi: "Từ mới: thành phố, nghề nghiệp, gia đình, sở thích"}
+      - {en: "Exercise A: match the questions 1–8 with the answers a–h", vi: "Bài A: nối câu hỏi 1–8 với câu trả lời a–h"}
+      - {en: "Pronunciation check: what's, are, do", vi: "Phát âm: dạng rút gọn và âm yếu"}
+      - {en: "Watch out: typical errors", vi: "Lỗi thường gặp"}
+      - {en: "Exercise C: Tom and Emma talk — then your turn", vi: "Bài C: nghe hội thoại mẫu rồi đến lượt bạn"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "New words.", focus: 0}
+      - {emma: "Exercise A: eight questions and eight answers.", say: "Exercise ay: eight questions and eight answers.", focus: 1}
+      - {emma: "A pronunciation check.", focus: 2}
+      - {emma: "Some typical errors.", focus: 3}
+      - {emma: "And a short conversation. Then it's your turn.", focus: 4}
+
+  - kind: vocab
+    chapter: "Từ mới"
+    heading: "New words"
+    heading_vi: "Từ mới — nghe và nhắc lại"
+    items:
+      - {w: "Where are you from?", pos: "question", vi: "Bạn đến từ đâu?", ex: "I'm from Hue, in central Vietnam."}
+      - {w: "capital city", pos: "noun", vi: "thủ đô", ex: "Hanoi is the capital city of Vietnam."}
+      - {w: "busy", pos: "adjective", vi: "đông đúc, nhộn nhịp; bận rộn", ex: "Ho Chi Minh City is very big and very busy."}
+      - {w: "do for a living", pos: "phrase", vi: "làm nghề gì (để kiếm sống)", ex: "What do you do for a living? I'm a teacher."}
+      - {w: "accountant", pos: "noun", vi: "kế toán", ex: "An accountant works with money and numbers."}
+      - {w: "married", pos: "adjective", vi: "đã kết hôn", ex: "My sister is married. She has two children."}
+      - {w: "single", pos: "adjective", vi: "độc thân", ex: "No, I'm not married. I'm single."}
+      - {w: "son / daughter", pos: "noun", vi: "con trai / con gái", ex: "They have one son and one daughter."}
+      - {w: "hobbies and interests", pos: "noun", vi: "sở thích", ex: "My hobbies are reading and playing chess."}
+      - {w: "chess", pos: "noun", vi: "cờ vua", ex: "I sometimes play chess with my grandfather."}
+    lines:
+      - emma: "First, new words. Listen, and repeat after Tom."
+        vi: "Từ mới. Nghe rồi nhắc lại theo Tom."
+      - {emma: "Where are you from?", focus: 0}
+      - {tom: "Where are you from?"}
+      - {emma: "I'm from Hue, in central Vietnam.", say: "I'm from Hway, in central Vietnam."}
+      - {emma: "capital city", focus: 1}
+      - {tom: "capital city"}
+      - {emma: "Hanoi is the capital city of Vietnam.", say: "Ha Noi is the capital city of Vietnam."}
+      - {emma: "busy", focus: 2}
+      - {tom: "busy"}
+      - {emma: "Ho Chi Minh City is very big and very busy.", say: "Ho Chee Min City is very big and very busy."}
+      - {emma: "do for a living", focus: 3}
+      - {tom: "do for a living"}
+      - {emma: "What do you do for a living? I'm a teacher."}
+      - {emma: "accountant", focus: 4}
+      - {tom: "accountant"}
+      - {emma: "An accountant works with money and numbers."}
+      - {emma: "married", focus: 5}
+      - {tom: "married"}
+      - {emma: "My sister is married. She has two children."}
+      - {emma: "single", focus: 6}
+      - {tom: "single"}
+      - {emma: "No, I'm not married. I'm single."}
+      - {emma: "son, daughter", focus: 7}
+      - {tom: "son, daughter"}
+      - {emma: "They have one son and one daughter."}
+      - {emma: "hobbies and interests", focus: 8}
+      - {tom: "hobbies and interests"}
+      - {emma: "My hobbies are reading and playing chess."}
+      - {emma: "chess", focus: 9}
+      - {tom: "chess"}
+      - {emma: "I sometimes play chess with my grandfather."}
+
+  - kind: pairs
+    chapter: "Bài A: nối câu hỏi với câu trả lời"
+    heading: "Exercise A · Match the questions 1–8 with the answers a–h"
+    heading_vi: "Nối câu hỏi 1–8 với câu trả lời a–h"
+    items:
+      - {n: 1, q: "Where are you from?", answer: d}
+      - {n: 2, q: "What's your city like?", answer: a}
+      - {n: 3, q: "How old are you?", answer: h}
+      - {n: 4, q: "What do you do for a living?", answer: g}
+      - {n: 5, q: "Do you have a big family?", answer: f}
+      - {n: 6, q: "Are you married?", answer: c}
+      - {n: 7, q: "Do you have any children?", answer: e}
+      - {n: 8, q: "What are your hobbies and interests?", answer: b}
+    options:
+      - {k: a, text: "It's very big and very busy."}
+      - {k: b, text: "I read a lot and sometimes play chess."}
+      - {k: c, text: "No, I'm single."}
+      - {k: d, text: "From Riyadh. It's the capital city."}
+      - {k: e, text: "Yes, one son. His name's Sam."}
+      - {k: f, text: "Yes, I have five brothers and two sisters."}
+      - {k: g, text: "I'm an accountant."}
+      - {k: h, text: "I'm twenty-four."}
+    lines:
+      - emma: "Exercise A. Match the questions, one to eight, with the answers, a to h."
+        say: "Exercise ay. Match the questions, one to eight, with the answers, ay to H."
+        vi: "Bài A. Nối câu hỏi 1–8 với câu trả lời a–h."
+      - emma: "Pause the video now and try it yourself."
+        vi: "Tạm dừng video và tự làm trước nhé."
+      - wait: 5
+        note: "Pause the video and try"
+        vi: "Tạm dừng video, nối câu hỏi với câu trả lời rồi xem tiếp."
+      - emma: "Let's check. Tom, ask me the questions. I'll give the answers."
+        vi: "Cùng kiểm tra: Tom hỏi, Emma trả lời theo đáp án."
+      - {tom: "Number one. Where are you from?", focus: 0}
+      - {emma: "From Riyadh. It's the capital city. That's d.", say: "From Ree-yahd. It's the capital city. That's D.", reveal: 1}
+      - {tom: "Number two. What's your city like?", focus: 1}
+      - {emma: "It's very big and very busy. That's a.", say: "It's very big and very busy. That's ay.", reveal: 2}
+      - {tom: "Number three. How old are you?", focus: 2}
+      - {emma: "I'm twenty-four. That's h.", say: "I'm twenty four. That's H.", reveal: 3}
+      - {tom: "Number four. What do you do for a living?", focus: 3}
+      - {emma: "I'm an accountant. That's g.", say: "I'm an accountant. That's G.", reveal: 4}
+      - {tom: "Number five. Do you have a big family?", focus: 4}
+      - {emma: "Yes, I have five brothers and two sisters. That's f.", say: "Yes, I have five brothers and two sisters. That's F.", reveal: 5}
+      - {tom: "Number six. Are you married?", focus: 5}
+      - {emma: "No, I'm single. That's c.", say: "No, I'm single. That's C.", reveal: 6}
+      - {tom: "Number seven. Do you have any children?", focus: 6}
+      - {emma: "Yes, one son. His name's Sam. That's e.", say: "Yes, one son. His name's Sam. That's E.", reveal: 7}
+      - {tom: "Number eight. What are your hobbies and interests?", focus: 7}
+      - {emma: "I read a lot and sometimes play chess. That's b.", say: "I read a lot, and sometimes play chess. That's B.", reveal: 8}
+      - emma: "In Exercise B in the book, you listen to the audio and check your answers."
+        vi: "Bài B trong sách: nghe audio để kiểm tra đáp án."
+
+  - kind: bullets
+    chapter: "Phát âm"
+    heading: "Pronunciation check"
+    heading_vi: "Dạng rút gọn của 'is' và âm yếu của 'are', 'do'"
+    items:
+      - {en: "What's your city like?", vi: "What's = What is — nói rút gọn, không tách hai từ"}
+      - {en: "Where are you from?", vi: "'are' đọc yếu /ə/, rất ngắn: where-ə-you"}
+      - {en: "Do you have a big family?", vi: "'do' đọc yếu /də/: d'you have…"}
+    lines:
+      - emma: "Now, the pronunciation check. Listen to three questions again."
+        vi: "Phần phát âm: nghe lại ba câu hỏi."
+      - emma: "Notice the contraction of is, and the pronunciation of are and do."
+        vi: "Để ý dạng rút gọn của 'is' và cách đọc 'are', 'do'."
+      - {tom: "What's your city like?", focus: 0}
+      - emma: "We say what's, not what is."
+        focus: 0
+        vi: "Nói 'what's', không nói 'what is'."
+      - {tom: "Where are you from?", focus: 1}
+      - emma: "Are is short and weak. Where are you from?"
+        focus: 1
+        vi: "'are' ngắn và nhẹ."
+      - {tom: "Do you have a big family?", focus: 2}
+      - emma: "Do is weak too. Do you have a big family?"
+        focus: 2
+        vi: "'do' cũng đọc nhẹ."
+      - emma: "Practise asking the questions using the weak forms."
+        vi: "Luyện hỏi ba câu này với âm yếu."
+      - {wait: 6, note: "Practise the three questions", vi: "Đọc to ba câu hỏi trên, nhẹ ở 'are' và 'do'."}
+
+  - kind: errors
+    chapter: "Lỗi thường gặp"
+    heading: "Watch out! Typical errors"
+    heading_vi: "Lỗi hay gặp khi nói về bản thân"
+    items:
+      - {wrong: "My brother has three childs.", right: "My brother has three children.", note: "child → children (số nhiều bất quy tắc)"}
+      - {wrong: "He is teenager.", right: "He is a teenager.", note: "Cần mạo từ 'a' trước danh từ đếm được số ít"}
+      - {wrong: "Where did you born?", right: "Where were you born?", note: "be born: Where were you born? — I was born in…"}
+      - {wrong: "I'm 24 years.", right: "I'm 24. / I'm 24 years old.", note: "Nói tuổi: thêm 'old' hoặc chỉ nói số"}
+    lines:
+      - emma: "Watch out! Here are some typical errors."
+        vi: "Chú ý! Đây là những lỗi hay gặp."
+      - {emma: "The plural of child is children.", focus: 0}
+      - {tom: "My brother has three children.", focus: 0}
+      - {emma: "Teenager needs the article a.", focus: 1}
+      - {tom: "He is a teenager.", focus: 1}
+      - {emma: "We say: where were you born?", focus: 2}
+      - {tom: "Where were you born? I was born in Can Tho.", say: "Where were you born? I was born in Kahn Toh.", focus: 2}
+      - {emma: "For your age, say: I'm twenty-four, or, I'm twenty-four years old.", say: "For your age, say: I'm twenty four, or, I'm twenty four years old.", focus: 3}
+      - {tom: "I'm twenty-four years old.", say: "I'm twenty four years old.", focus: 3}
+
+  - kind: qa
+    chapter: "Bài C: hội thoại mẫu"
+    heading: "Exercise C · Ask and answer questions 1–8 with a partner"
+    heading_vi: "Nghe Emma và Tom hỏi – đáp về chính họ"
+    items:
+      - q: "Where are you from, Tom?"
+        a: "I'm from Da Lat. It's a small city in the mountains."
+        phrases: ["I'm from…", "a small city"]
+      - q: "What's your city like?"
+        a: "It's quiet and cool, and there are lots of flowers."
+        phrases: ["It's quiet and cool", "there are lots of…"]
+      - q: "What do you do for a living, Emma?"
+        a: "I'm a teacher. I teach English to adults."
+        ask: tom
+        by: emma
+        phrases: ["I'm a teacher.", "I teach…"]
+      - q: "What are your hobbies and interests?"
+        a: "I love cooking, and I sometimes go hiking at the weekend."
+        ask: tom
+        by: emma
+        phrases: ["I love…", "I sometimes…", "at the weekend"]
+    lines:
+      - emma: "Exercise C. Ask and answer the questions with a partner. Listen to Tom and me first."
+        vi: "Bài C. Hỏi – đáp với bạn học. Nghe Tom và Emma trước."
+      - {emma: "Where are you from, Tom?", focus: 0}
+      - {tom: "I'm from Da Lat. It's a small city in the mountains.", say: "I'm from Dah Lot. It's a small city in the mountains.", reveal: 0}
+      - {emma: "What's your city like?", focus: 1}
+      - {tom: "It's quiet and cool, and there are lots of flowers.", reveal: 1}
+      - {tom: "What do you do for a living, Emma?", focus: 2}
+      - {emma: "I'm a teacher. I teach English to adults.", reveal: 2}
+      - {tom: "What are your hobbies and interests?", focus: 3}
+      - {emma: "I love cooking, and I sometimes go hiking at the weekend.", reveal: 3}
+      - emma: "See? A short answer, plus one more detail."
+        vi: "Câu trả lời ngắn + thêm một chi tiết."
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn"
+    heading_vi: "Trả lời thành tiếng — mỗi câu 8 giây"
+    items:
+      - {q: "Where are you from?", hint: "I'm from… It's…"}
+      - {q: "What's your city like?", hint: "It's big / small / busy / quiet…"}
+      - {q: "How old are you?", hint: "I'm twenty… (years old)."}
+      - {q: "What do you do for a living?", hint: "I'm a / an… / I'm a student."}
+      - {q: "Do you have a big family?", hint: "Yes, I have… / No, it's a small family."}
+      - {q: "Are you married?", hint: "Yes, I am. / No, I'm single."}
+      - {q: "Do you have any children?", hint: "Yes, one son… / No, I don't."}
+      - {q: "What are your hobbies and interests?", hint: "I love… and I sometimes…"}
+    lines:
+      - emma: "Now it's your turn. Answer each question out loud. You have eight seconds."
+        vi: "Đến lượt bạn. Trả lời thành tiếng, mỗi câu 8 giây."
+      - {emma: "Where are you from?", focus: 0}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "What's your city like?", focus: 1}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "How old are you?", focus: 2}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "What do you do for a living?", focus: 3}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Do you have a big family?", focus: 4}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Are you married?", focus: 5}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Do you have any children?", focus: 6}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "What are your hobbies and interests?", focus: 7}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Eight questions about you: from, city, age, job, family, married, children, hobbies", vi: "8 câu hỏi về bản thân thường gặp ở Part 1"}
+      - {en: "Short answer + one more detail", vi: "Trả lời ngắn + thêm một chi tiết"}
+      - {en: "What's = What is; 'are' and 'do' are weak in questions", vi: "Rút gọn và âm yếu giúp nói tự nhiên hơn"}
+      - {en: "children · a teenager · Where were you born? · I'm 24 years old", vi: "Bốn lỗi hay gặp"}
+      - {en: "Next in the book: Vocabulary 1–3 — family and stages of life", vi: "Tiếp theo trong sách: từ vựng gia đình và các giai đoạn cuộc đời"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Eight common questions about you.", focus: 0}
+      - {emma: "Give a short answer, plus one more detail.", focus: 1}
+      - {emma: "Use contractions and weak forms. What's your city like? Where are you from?", focus: 2}
+      - {emma: "And watch out for the typical errors.", focus: 3}
+      - emma: "Next, open the book for Vocabulary 1 to 3: family, and the stages of life."
+        say: "Next, open the book for Vocabulary one to three: family, and the stages of life."
+        focus: 4
+        vi: "Tiếp theo, mở sách học Vocabulary 1–3."
+      - tom: "Thank you, Emma. Goodbye, everyone!"
+      - emma: "Goodbye, and keep practising!"

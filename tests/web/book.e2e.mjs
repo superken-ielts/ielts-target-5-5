@@ -66,6 +66,30 @@ try{
     assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
+  await step("Unit 1 có 2 video bài giảng, mở video từ thẻ unit", async () => {
+    const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" });
+    assert.equal(await u1.locator(".bk-vids button").count(), 2);
+    await u1.locator(".bk-vids button").first().click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Speaking & Vocabulary/);
+    assert.equal(await page.locator("#p-book video").count(), 2);
+    const src = await page.locator("#p-book video").first().getAttribute("src");
+    assert.match(src, /books\/ielts_target_5_0\/lessons\/U01-speaking-1\.mp4$/);
+    const got = await page.evaluate(async u => {
+      const r = await fetch(u, { headers: { Range: "bytes=0-99" } });
+      return [r.status, (await r.arrayBuffer()).byteLength];
+    }, src);
+    assert.deepEqual(got, [206, 100]);                                  // tua được: máy chủ trả từng đoạn
+    const v1 = page.locator("#p-book .bk-video").first();
+    assert.equal(await v1.locator(".bk-chaps button").count(), 8);
+    // Chromium của Playwright không có H.264: app phải báo rõ thay vì im lặng; trình duyệt thật thì phát được
+    const mp4 = await page.evaluate(() => document.createElement("video").canPlayType('video/mp4; codecs="avc1.64001F, mp4a.40.2"'));
+    if(!mp4) assert.match(await v1.locator(".bk-msg").textContent(), /không phát được video MP4/);
+    else await page.waitForFunction(() => document.querySelector("#p-book video").duration > 60, null, { timeout: 15000 });
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("mở phiên, xem trang sách qua đoạn PDF nhỏ", async () => {
     await page.click("#p-book .bk-next .btn-primary");
     await page.click("#p-book .bk-act .btn-primary");

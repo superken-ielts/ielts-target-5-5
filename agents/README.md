@@ -39,3 +39,31 @@ Không cài gì cũng chạy được bằng `PYTHONPATH=agents python3 -m book_
 ## Mã thoát
 
 `0` xong · `2` còn mục cần duyệt · `3` gói không qua kiểm tra.
+
+## Video bài giảng — `lesson_video`
+
+Công cụ riêng, không thuộc agent nhập sách: biến một kịch bản YAML hai người nói thành video MP4 để gắn vào
+một hoạt động của sách.
+
+```bash
+cd agents
+python -m lesson_video check ../books/ielts_target_5_0/lessons/*.yaml
+python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-1.yaml
+python -m lesson_video build <kịch bản> --engine silent --out /tmp/xem-thu --work /tmp/khung   # xem bố cục nhanh, không giọng
+```
+
+Cần `pymupdf pyyaml pydantic pillow numpy` (`pip install -e '.[video]'`), `ffmpeg`, và thư viện **Flite** cho giọng đọc
+(miễn phí, chạy offline; Ubuntu/Debian `sudo apt install libflite1`, macOS `brew install flite`). Giọng dùng:
+`slt` (nữ, Mỹ) cho cô giáo, `rms` (nam, Mỹ) cho học viên; có thêm `awb`, `kal16`.
+
+| Bước | Module | Làm gì |
+|---|---|---|
+| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match`, `pairs`, `qa`, `compare`, `errors`, `practice`), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói); đối chiếu `activity` với `book.json` |
+| giọng đọc | `tts.py` | Flite qua `ctypes`; `silent` để thử nhanh và để test |
+| dòng thời gian | `timeline.py` | Đọc từng câu, chuẩn hóa âm lượng hai giọng, ghép thành một dải tiếng; mỗi câu một khung hình, đếm ngược mỗi giây một khung; chương theo cảnh |
+| slide | `slides.py` | Pillow vẽ 1280×720: thanh đầu, nội dung theo kiểu cảnh (ảnh cắt từ trang sách cho bài nối tranh), phụ đề người nói, thanh tiến độ |
+| video | `video.py` | ffmpeg ghép ảnh + tiếng → H.264/AAC có chương; ghi `books/<sách>/lessons/lessons.json` (id, hoạt động, unit, thời lượng, chương, giọng) |
+
+Sửa kịch bản `.yaml` rồi chạy lại `build`; không sửa tay `lessons.json` hay file `.mp4`. Thêm video mới: viết
+`books/<sách>/lessons/<id>.yaml` với `activity` là id hoạt động trong `book.json`, chạy `build`, rồi `python3 web/build.py`.
+

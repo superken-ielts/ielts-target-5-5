@@ -5,6 +5,76 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 3 — 05/10/2026: video bài giảng Unit 1 Speaking 1 và 2
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `9c436de` (đã merge PR #3).
+
+### Yêu cầu
+
+Tạo video nói tiếng Anh dạy Speaking Unit 1 (Speaking 1: talking about personal information; Speaking 2:
+exchanging personal information), dạy cả từ mới, mỗi bài một video, giọng miễn phí có hai người; gắn video vào
+section Unit 1 trong app.
+
+### Đã làm
+
+| Việc | Cách làm |
+|---|---|
+| Công cụ dựng video | `agents/lesson_video`: kịch bản YAML → đọc từng câu bằng Flite → Pillow vẽ slide → ffmpeg ghép MP4 có chương → `lessons.json`. Tách khỏi agent nhập sách, không đụng `book.json` / `plan.json` |
+| Giọng đọc | Hai giọng Flite có sẵn trên Ubuntu (`libflite1`): Emma — cô giáo, `cmu_us_slt` (nữ); Tom — học viên, `cmu_us_rms` (nam). Đọc chậm hơn bình thường 10%. Hugging Face (Kokoro, Piper) bị chặn trong môi trường cloud; chạy model Kokoro lấy từ npm thì bị chặn quyền vì là model tải từ ngoài → dùng Flite |
+| Speaking 1 (8:06) | Giới thiệu · Hôm nay học gì · 10 từ mới (nghe Emma, nhắc lại theo Tom, câu ví dụ) · Bài A: nối 6 tranh (ảnh cắt từ trang 10) với 6 câu hỏi, có đếm ngược để tự làm, đáp án gợi ý (Answer key của sách không có bài này) · Bài B: 6 câu trả lời mẫu kèm cụm từ hữu ích · Grammar check: Do you have…? / Have you got…? và vì sao câu 1, 3 dùng hiện tại tiếp diễn · Đến lượt bạn: 6 câu, mỗi câu 10 giây · Tổng kết, bài về nhà |
+| Speaking 2 (6:56) | Giới thiệu · Hôm nay học gì · 10 từ mới · Bài A: nối 8 câu hỏi với 8 câu trả lời (Tom hỏi, Emma trả lời và đọc đáp án) · Pronunciation check (what's, âm yếu của are, do) · Watch out: 4 lỗi hay gặp · Bài C: hội thoại mẫu · Đến lượt bạn: 8 câu, mỗi câu 8 giây · Tổng kết |
+| Gắn vào Unit 1 | Thẻ Unit 1 ở màn chi tiết sách có dòng "Video bài giảng" với hai nút; bấm thì mở phiên Unit 1 · Speaking & Vocabulary, cuộn tới video và phát. Trong phiên, hoạt động Speaking & Vocabulary có trình phát từng video, nút nhảy theo chương (sáng nút chương đang phát), nhớ vị trí đang xem khi quay lại. Trình duyệt không phát được MP4 H.264 hoặc không tải được file thì báo rõ |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `agents/lesson_video/__init__.py`, `__main__.py`, `cli.py` | Lệnh `python -m lesson_video check|build` |
+| `agents/lesson_video/script.py` | Model kịch bản (pydantic), chuẩn hóa dòng thoại, kiểm tra với `book.json` |
+| `agents/lesson_video/tts.py` | Giọng Flite qua `ctypes`; bộ đọc `silent` |
+| `agents/lesson_video/timeline.py` | Ghép tiếng, tính thời lượng từng khung hình, đếm ngược, chương |
+| `agents/lesson_video/slides.py` | Vẽ slide 9 kiểu cảnh bằng Pillow |
+| `agents/lesson_video/video.py` | ffmpeg → MP4 có chương; ghi `lessons.json` |
+| `agents/tests/test_lesson_video.py` | 14 test (kể cả 7 kịch bản lỗi, Flite hai giọng, dựng video thật bằng `silent`, hồi quy kịch bản đã commit) |
+| `books/ielts_target_5_0/lessons/U01-speaking-1.yaml`, `U01-speaking-2.yaml` | Kịch bản hai video |
+| `books/ielts_target_5_0/lessons/U01-speaking-1.mp4` (6,7 MB), `U01-speaking-2.mp4` (5,3 MB) | Video 1280×720, H.264 + AAC mono, có chương |
+| `books/ielts_target_5_0/lessons/lessons.json` | Mục lục video: hoạt động, unit, thời lượng, chương, giọng |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/pyproject.toml` | Thêm gói `lesson_video`, lệnh `lesson-video`, extra `[video]` (pillow, numpy) |
+| `web/build.py` | Nhúng `books/<sách>/lessons/lessons.json` vào `BOOKS[id].lessons` |
+| `web/src/book/core.js` | `lessonsOf`, `lessonSession`, `chapterAt` |
+| `web/src/book/ui.js` | Nút video trên thẻ unit; khối "Video bài giảng" trong hoạt động của phiên (trình phát, chương, báo lỗi) |
+| `web/src/book/book.css` | Kiểu khối video, nút chương |
+| `tests/web/book-core.test.mjs` | +2 test: hàm video, dữ liệu video thật trỏ đúng hoạt động và file |
+| `tests/web/book.e2e.mjs` | +1 bước: Unit 1 có 2 video, mở từ thẻ unit, 8 nút chương, máy chủ trả đoạn 206 |
+| `agents/README.md`, `web/README.md`, `CLAUDE.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Hướng dẫn `lesson_video`; mô tả video trong tab Sách; task P2-30 … P2-33; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. `book.json`, `plan.json` không đổi.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 26 passed (12 cũ + 14 video) |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK |
+| `python3 web/build.py` | 22 tài liệu + 1 sách 120 phiên, 2 video |
+
+Chromium của Playwright không có H.264 nên e2e chỉ kiểm tra trang báo lỗi rõ ràng và máy chủ phục vụ file; giải mã
+video kiểm tra bằng `ffprobe` (thời lượng khớp lời thoại, có chương) và xem khung hình trích từ MP4.
+
+### Việc còn treo
+
+- Giọng Flite nghe máy hơn giọng thật; muốn giọng tự nhiên (Kokoro) cần cho phép tải và chạy model ngoài (P2-32).
+- Bài Speaking 2B "Listen and check" cần audio của sách, nhưng hoạt động Unit 1 · Speaking & Vocabulary trong gói chưa có track nào.
+
+---
+
 ## Đợt 2 — 04/10/2026: danh sách sách, chọn unit tự do, xem checklist trong app
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `754d175` (đã merge PR #2).
