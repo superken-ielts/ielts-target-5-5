@@ -20,6 +20,7 @@ const BookUI = (() => {
   let root = null;
   let view = {name:"home", bookId:null, sessionId:null};
   let PROG = {}, progSlug = null, pushTimer = null, tick = null, msg = "";
+  const VPOS = {};  // vị trí đang xem của từng video bài giảng (trong phiên làm việc)
   const ACTS = {}, ITEMS = {};
 
   /* ---------- tiện ích DOM ---------- */
@@ -549,6 +550,20 @@ const BookUI = (() => {
     learn.setAttribute("aria-label", "Học " + name);
     top.append(mid, learn);
     box.append(top);
+    const vids = BookCore.lessonsOf(BOOKS[bookId], {item: item.id});
+    if(vids.length){
+      const vr = h("div", "bk-vids");
+      vr.append(h("span", "tiny", "Video bài giảng:"));
+      vids.forEach(l => {
+        const s = BookCore.lessonSession(plan, l);
+        if(!s) return;
+        const b = btn("▶ " + (l.label || l.title) + " · " + BookCore.fmtClock(l.duration), "btn-sm",
+          () => go("session", {bookId, sessionId: s.id, lessonId: l.id}));
+        b.setAttribute("aria-label", "Xem video " + l.title);
+        vr.append(b);
+      });
+      box.append(vr);
+    }
     const det = document.createElement("details");
     const sm = document.createElement("summary"); sm.className = "tiny"; sm.style.cursor = "pointer";
     sm.textContent = "Chọn từng phiên";
@@ -751,6 +766,47 @@ const BookUI = (() => {
     return box;
   }
 
+  const MP4 = 'video/mp4; codecs="avc1.64001F, mp4a.40.2"';
+  function videoBox(bookId, l, start){
+    const box = h("div", "bk-video");
+    box.id = "lesson-" + l.id;
+    box.append(h("div", "bk-vid-t", l.label || l.title));
+    if(l.titleVi) box.append(h("div", "tiny", l.titleVi));
+    const v = document.createElement("video");
+    v.controls = true; v.preload = "metadata"; v.playsInline = true;
+    v.setAttribute("data-lesson", l.id);
+    v.src = fileUrl(bookId, l.file);
+    const out = h("p", "bk-msg");
+    const fail = text => { out.className = "bk-msg err"; out.textContent = text; };
+    const codecOk = !!v.canPlayType(MP4);
+    if(!codecOk) fail("Trình duyệt này không phát được video MP4 (H.264). Mở app bằng Chrome, Edge, Safari hoặc Firefox.");
+    v.addEventListener("error", () => {
+      if(codecOk) fail("Không tải được video. Bản tự host cần máy chủ thấy thư mục books/ (web/serve.py); bản trên Claude chưa xem được video.");
+    });
+    const chaps = h("div", "bk-chaps");
+    const chapBtns = (l.chapters || []).map(c => {
+      const b = btn(BookCore.fmtClock(c.t) + " " + c.title, "btn-sm", () => {
+        try{ v.currentTime = c.t; v.play().catch(() => {}); }catch(e){ /* chưa tải xong */ }
+      });
+      chaps.append(b);
+      return b;
+    });
+    const mark = () => {
+      const i = BookCore.chapterAt(l, v.currentTime || 0);
+      chapBtns.forEach((b, k) => b.setAttribute("aria-pressed", String(k === i)));
+    };
+    v.addEventListener("timeupdate", () => { VPOS[l.id] = v.currentTime; mark(); });
+    v.addEventListener("loadedmetadata", () => { if(VPOS[l.id]) v.currentTime = VPOS[l.id]; });
+    mark();
+    const meta = h("p", "tiny", BookCore.fmtClock(l.duration) + " · " + (l.voices || []).join(" · "));
+    box.append(v, chaps, out, meta);
+    if(start){  // mở từ nút trên thẻ unit: cuộn tới video và phát một lần (vẽ lại trang thì không tự phát nữa)
+      view.lessonId = null;
+      setTimeout(() => { box.scrollIntoView({block: "start"}); v.play().catch(() => {}); }, 0);
+    }
+    return box;
+  }
+
   function renderSession(){
     const bookId = view.bookId;
     const {book, plan} = BOOKS[bookId];
@@ -807,6 +863,11 @@ const BookUI = (() => {
       if(a.note) box.append(h("p", "bk-note", a.note));
       box.append(refButtons(bookId, a));
       if(a.tracks && a.tracks.length) box.append(audioBar(bookId, a.tracks));
+      const vids = BookCore.lessonsOf(BOOKS[bookId], {activity: a.id});
+      if(vids.length){
+        box.append(h("div", "eyebrow bk-vh", "Video bài giảng · " + vids.length));
+        vids.forEach(l => box.append(videoBox(bookId, l, view.lessonId === l.id)));
+      }
       ac.append(box);
     });
     if(!s.activityIds.length) ac.append(h("p", "small muted", "Phiên này chưa có tài liệu trong sách."));

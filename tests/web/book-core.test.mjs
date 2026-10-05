@@ -130,3 +130,34 @@ test("đếm task trong checklist theo giai đoạn", () => {
   const md = "- [x] **P0-01** a\n  - [x] con, không tính\n- [ ] **P0-02** b\n- [X] **P1-01** c\n- [ ] ghi chú không phải task";
   assert.deepEqual(C.checklistStats(md), { 0: { done: 1, total: 2 }, 1: { done: 1, total: 1 } });
 });
+
+test("video bài giảng: lọc theo hoạt động / unit, tìm phiên chứa video, chương đang phát", () => {
+  const entry = { lessons: [
+    { id: "U01-speaking-1", activity: "U01-speaking-vocab", item: "U01", chapters: [{ t: 0, title: "a" }, { t: 30, title: "b" }, { t: 90, title: "c" }] },
+    { id: "U02-x", activity: "U02-listening", item: "U02", chapters: [] },
+  ] };
+  assert.deepEqual(C.lessonsOf(entry, { activity: "U01-speaking-vocab" }).map(l => l.id), ["U01-speaking-1"]);
+  assert.deepEqual(C.lessonsOf(entry, { item: "U02" }).map(l => l.id), ["U02-x"]);
+  assert.deepEqual(C.lessonsOf({}, { item: "U01" }), []);
+  const pl = { sessions: [{ id: "A", activityIds: ["U01-listening"] }, { id: "B", activityIds: ["U01-speaking-vocab"] }] };
+  assert.equal(C.lessonSession(pl, entry.lessons[0]).id, "B");
+  assert.equal(C.lessonSession(pl, entry.lessons[1]), null);
+  const l = entry.lessons[0];
+  assert.deepEqual([C.chapterAt(l, 0), C.chapterAt(l, 29.9), C.chapterAt(l, 30), C.chapterAt(l, 500)], [0, 0, 1, 2]);
+  assert.equal(C.chapterAt(entry.lessons[1], 10), -1);
+});
+
+test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt động có thật và có file", { skip: !existsSync(new URL("lessons/lessons.json", BOOK)) }, () => {
+  const book = JSON.parse(readFileSync(new URL("book.json", BOOK), "utf8"));
+  const pl = JSON.parse(readFileSync(new URL("plan.json", BOOK), "utf8"));
+  const { lessons } = JSON.parse(readFileSync(new URL("lessons/lessons.json", BOOK), "utf8"));
+  const acts = C.activitiesOf(book);
+  assert.ok(lessons.length >= 2);
+  for(const l of lessons){
+    assert.ok(acts[l.activity], l.activity);
+    assert.ok(C.lessonSession(pl, l), "không phiên nào chứa " + l.activity);
+    assert.ok(existsSync(new URL(l.file, BOOK)), l.file);
+    assert.ok(l.duration > 60 && l.chapters.length > 0 && l.chapters[0].t === 0);
+  }
+  assert.deepEqual(C.lessonsOf({ lessons }, { item: "U01" }).map(l => l.id), ["U01-speaking-1", "U01-speaking-2"]);
+});

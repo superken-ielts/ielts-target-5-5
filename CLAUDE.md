@@ -18,6 +18,12 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
 - Không sửa tay `book.json` / `plan.json` / `report.md`: sửa `book.yaml` hoặc quyết định trong `work/review.json`
   rồi chạy lại. Đổi model trong `schemas.py` thì chạy `python -m book_ingest schemas`.
 
+## Video bài giảng
+
+- Kịch bản `books/<sách>/lessons/<id>.yaml`; dựng: `cd agents && python -m lesson_video build ../books/<sách>/lessons/<id>.yaml`
+  (cần ffmpeg + Flite `libflite1`), rồi chạy `python3 web/build.py`.
+- Không sửa tay `lessons.json` / `.mp4`. Chữ trên màn hình ở dòng thoại, cách đọc khác (chữ cái, số, tên riêng) ở `say`.
+
 ## Kiểm tra trước khi commit
 
 ```bash

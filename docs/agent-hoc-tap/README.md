@@ -24,6 +24,9 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 chọn học bất kỳ unit nào; bộ tài liệu này xem được ngay trong app (tab Kế hoạch). Chi tiết ở file 05; việc còn lại
 tick ở file 04.
 
+**Đợt 3 (05/10/2026):** công cụ `agents/lesson_video` dựng video bài giảng từ kịch bản hai người nói (giọng Flite miễn
+phí); hai video Unit 1 Speaking 1 và 2 gắn vào Unit 1 trong tab Sách.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

@@ -171,7 +171,10 @@ def collect_books() -> dict:
             sys.exit(f"Thieu {plan_json} — chay lai agent: python -m book_ingest ingest {book_json.parent}")
         book = json.loads(book_json.read_text(encoding="utf-8"))
         plan = json.loads(plan_json.read_text(encoding="utf-8"))
-        books[book["id"]] = {"dir": book_json.parent.name, "book": book, "plan": plan}
+        # Video bai giang do agents/lesson_video sinh (khong bat buoc)
+        lessons_json = book_json.parent / "lessons" / "lessons.json"
+        lessons = json.loads(lessons_json.read_text(encoding="utf-8"))["lessons"] if lessons_json.exists() else []
+        books[book["id"]] = {"dir": book_json.parent.name, "book": book, "plan": plan, "lessons": lessons}
     return books
 
 
@@ -237,7 +240,7 @@ def main() -> None:
     for rel in docs:
         print(f"  - {rel}")
     for bid, b in books.items():
-        print(f"Da nhung sach {bid} ({b['dir']}): {len(b['plan']['sessions'])} phien.")
+        print(f"Da nhung sach {bid} ({b['dir']}): {len(b['plan']['sessions'])} phien, {len(b['lessons'])} video bai giang.")
     print()
     print(f"{OUT_ARTIFACT.name:24s} {len(artifact):>9,} bytes  -> dang len Claude Artifact")
     print(f"{OUT_STANDALONE.name:24s} {len(standalone):>9,} bytes  -> tu host")

@@ -1,0 +1,131 @@
+"""Đọc từng câu thoại, ghép tiếng thành một dải, tính khung hình nào hiện trong bao lâu."""
+from __future__ import annotations
+
+import math
+from dataclasses import dataclass, field
+from typing import Callable, Optional
+
+import numpy as np
+
+from .script import Lesson
+
+LEAD = 0.5   # im lặng đầu video
+TAIL = 1.5   # im lặng cuối video
+PEAK = 0.8   # chuẩn hóa đỉnh mỗi câu để hai giọng to ngang nhau
+
+
+@dataclass
+class Frame:
+    scene: int
+    focus: Optional[int]
+    revealed: frozenset
+    speaker: Optional[str]
+    text: str
+    vi: str
+    countdown: Optional[int] = None
+    note: str = ""
+    start: float = 0.0
+    dur: float = 0.0
+
+
+@dataclass
+class Timeline:
+    frames: list[Frame]
+    audio: np.ndarray
+    rate: int
+    chapters: list[tuple[float, str]] = field(default_factory=list)
+
+    @property
+    def total(self) -> float:
+        return len(self.audio) / self.rate
+
+
+def _resample(x: np.ndarray, src: int, dst: int) -> np.ndarray:
+    if src == dst or not len(x):
+        return x
+    n = int(round(len(x) * dst / src))
+    return np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x.astype(np.float32)).astype(np.int16)
+
+
+def _norm(x: np.ndarray) -> np.ndarray:
+    peak = int(np.abs(x.astype(np.int32)).max()) if len(x) else 0
+    if peak == 0:
+        return x
+    return np.clip(x.astype(np.float32) * (PEAK * 32767 / peak), -32768, 32767).astype(np.int16)
+
+
+def build(lesson: Lesson, engine, say: Callable[[str], None] = print) -> Timeline:
+    cache: dict[tuple[str, str], tuple[np.ndarray, int]] = {}
+    rate: Optional[int] = None
+    parts: list[np.ndarray] = []
+    frames: list[Frame] = []
+    chapters: list[tuple[float, str]] = []
+    pos = 0  # số mẫu đã ghép
+
+    def silence(sec: float) -> np.ndarray:
+        return np.zeros(int(round(sec * (rate or 16000))), dtype=np.int16)
+
+    def add(samples: np.ndarray, frame: Optional[Frame]):
+        nonlocal pos
+        parts.append(samples)
+        if frame is not None:
+            frame.start = pos / rate
+            frames.append(frame)
+        elif frames:
+            frames[-1].dur += len(samples) / rate
+        if frame is not None:
+            frame.dur = len(samples) / rate
+        pos += len(samples)
+
+    spoken = sum(1 for sc in lesson.scenes for ln in sc.lines if ln.speaker)
+    done = 0
+    for si, sc in enumerate(lesson.scenes):
+        focus, revealed = None, set()
+        if si and rate:
+            add(silence(lesson.scene_gap), None)
+        if sc.chapter:
+            chapters.append((pos / rate if rate else 0.0, sc.chapter))
+        for ln in sc.lines:
+            if ln.focus is not None:
+                focus = ln.focus
+            revealed |= set(ln.reveal)
+            if ln.speaker:
+                voice = lesson.speakers[ln.speaker].voice
+                key = (voice, ln.spoken)
+                if key not in cache:
+                    cache[key] = engine.synth(ln.spoken, voice)
+                data, r = cache[key]
+                if rate is None:
+                    rate = r
+                    parts.append(silence(LEAD))
+                    pos = len(parts[0])
+                data = _norm(_resample(data, r, rate))
+                fr = Frame(si, focus, frozenset(revealed), ln.speaker, ln.text, ln.vi)
+                add(np.concatenate([data, silence(lesson.gap + ln.pause)]), fr)
+                done += 1
+                if done % 10 == 0 or done == spoken:
+                    say(f"  đọc {done}/{spoken} câu")
+            else:
+                if rate is None:
+                    rate = getattr(engine, "RATE", 16000)
+                    parts.append(silence(LEAD))
+                    pos = len(parts[0])
+                left = ln.wait
+                k = math.ceil(left)
+                while left > 1e-6:
+                    step = left - (k - 1) if k > 1 else left
+                    fr = Frame(si, focus, frozenset(revealed), None, "", ln.vi, countdown=k, note=ln.note)
+                    add(silence(step), fr)
+                    left -= step
+                    k -= 1
+                if ln.pause:
+                    add(silence(ln.pause), None)
+    if rate is None:
+        raise ValueError("kịch bản không có câu thoại nào")
+    add(silence(TAIL), None)
+    if frames:  # khung đầu bắt đầu từ 0 (gồm cả khoảng lặng mở đầu)
+        frames[0].dur += frames[0].start
+        frames[0].start = 0.0
+    audio = np.concatenate(parts)
+    chapters = [(0.0 if i == 0 else t, name) for i, (t, name) in enumerate(chapters)]
+    return Timeline(frames, audio, rate, chapters)

@@ -264,6 +264,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 2:* `book.yaml › info` → `book.json › info` (agent, schema `BookInfo`); `books/catalog.json` cho 5 sách của lộ trình (mục K file 05).
 - [x] **P2-29** **Chi tiết sách**: mọi section, unit, review, test kèm trang in, số phiên, chấm tiến độ và nút Học; chọn học bất kỳ unit nào — phiên kế tiếp đi theo unit đó tới khi xong rồi tự quay về thứ tự lộ trình (nút "Quay về theo lộ trình").
   - *Đợt 2:* `focus` trong cài đặt tiến độ sách; `focusOf`, `entrySession`, `itemCounts`, `duration` trong `core.js` có test.
+- [x] **P2-30** Công cụ dựng **video bài giảng** `agents/lesson_video` (tách khỏi agent nhập sách): kịch bản YAML hai người nói → giọng đọc miễn phí chạy offline → slide 1280×720 có phụ đề Anh/Việt, đếm ngược cho phần tự nói, ảnh cắt từ trang sách → MP4 H.264/AAC có chương + `books/<sách>/lessons/lessons.json`.
+  - *Đợt 3:* giọng Flite (CMU, `slt` nữ / `rms` nam) qua `ctypes`; kiểm tra cách Flite tách từ để sửa chỗ đọc sai bằng `say` (chữ cái "A", "IELTS", tên địa danh Việt Nam); 14 test pytest (kể cả hồi quy trên kịch bản đã commit).
+- [x] **P2-31** Video **Unit 1 · Speaking 1** (8:06, 8 chương) và **Speaking 2** (6:56, 9 chương): từ mới, bài A nối tranh / nối câu, bài B–C câu trả lời mẫu, Grammar check, phát âm, lỗi thường gặp, phần "Đến lượt bạn" có đếm ngược. Gắn vào hoạt động Unit 1 · Speaking & Vocabulary: nút trên thẻ Unit 1, trình phát trong phiên học, nút nhảy theo chương.
+  - *Đợt 3:* `lessonsOf`, `lessonSession`, `chapterAt` trong `core.js` có test; e2e mở video từ thẻ Unit 1 và kiểm tra máy chủ trả từng đoạn (tua được).
+- [ ] **P2-32** Giọng đọc tự nhiên hơn (Kokoro-82M, Apache-2.0) thay Flite: Hugging Face bị chặn trong môi trường cloud, chạy model tải từ ngoài cần người dùng cho phép — chưa làm.
+- [ ] **P2-33** Video cho các unit và kỹ năng còn lại (viết thêm kịch bản `books/<sách>/lessons/*.yaml`).
 
 ### Cổng G2
 
