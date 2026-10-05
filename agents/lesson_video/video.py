@@ -63,7 +63,9 @@ def encode(lesson: Lesson, tl: Timeline, slides: Slides, out: Path, work: Path,
            "-i", str(work / "voice.wav"), "-i", str(work / "meta.txt"),
            "-map", "0:v", "-map", "1:a", "-map_metadata", "2", "-map_chapters", "2",
            "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-tune", "stillimage", "-crf", "26",
-           "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-ar", "44100", "-ac", "1",
+           "-pix_fmt", "yuv420p",
+           # chuẩn độ to lời nói (-16 LUFS) để video nào nghe cũng to ngang nhau trên loa điện thoại
+           "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "64k", "-ar", "44100", "-ac", "1",
            "-movflags", "+faststart", "-shortest", str(out)]
     say(f"  mã hóa {out.name}")
     subprocess.run(cmd, check=True)
