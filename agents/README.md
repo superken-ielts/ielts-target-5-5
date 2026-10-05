@@ -56,11 +56,11 @@ Cần `pymupdf pyyaml pydantic pillow numpy` (`pip install -e '.[video]'`) và `
 
 | Bộ đọc | Cài | Giọng trong kịch bản Unit 1 |
 |---|---|---|
-| **Kokoro-82M** (mặc định, Apache-2.0) | `pip install -e '.[kokoro]'`; tải từ Hugging Face `onnx-community/Kokoro-82M-v1.0-ONNX` file `onnx/model_quantized.onnx` (bản nén q8, ~92 MB) và các file giọng `voices/<giọng>.bin` (~0,5 MB mỗi giọng), đặt vào `~/.cache/lesson_video/kokoro/` (giọng trong thư mục `voices/`) hoặc chỉ đường bằng `--model`, `--voices` / biến `KOKORO_MODEL`, `KOKORO_VOICES` | Emma `bf_emma` (nữ, Anh), Tom `am_michael` (nam, Mỹ) |
+| **Kokoro-82M** (mặc định, Apache-2.0) | `pip install -e '.[kokoro]'`; tải từ Hugging Face `onnx-community/Kokoro-82M-v1.0-ONNX` file `onnx/model_quantized.onnx` (bản nén q8, ~92 MB) và các file giọng `voices/<giọng>.bin` (~0,5 MB mỗi giọng), đặt vào `~/.cache/lesson_video/kokoro/` (giọng trong thư mục `voices/`) hoặc chỉ đường bằng `--model`, `--voices` / biến `KOKORO_MODEL`, `KOKORO_VOICES` | Emma `af_heart` (nữ, Mỹ), Tom `am_michael` (nam, Mỹ) |
 | Flite (dự phòng, nghe máy) | Ubuntu/Debian `sudo apt install libflite1`, macOS `brew install flite` | Emma `slt`, Tom `rms` |
 
 `--engine auto` (mặc định) dùng Kokoro khi tìm thấy model và giọng, không thì Flite. Giọng khai theo bộ đọc:
-`voice: {kokoro: bf_emma, flite: slt}`. Giọng Kokoro tiếng Anh: `af_*`, `am_*` (Mỹ), `bf_*`, `bm_*` (Anh); giọng `b*`
+`voice: {kokoro: af_heart, flite: slt}`. Giọng Kokoro tiếng Anh: `af_*`, `am_*` (Mỹ), `bf_*`, `bm_*` (Anh); giọng `b*`
 được tách âm kiểu Anh. `--speed 0.9` (mặc định) đọc chậm hơn bình thường 10%. Tiếng từng câu lưu ở
 `~/.cache/lesson_video/tts/` theo (bộ đọc, giọng, chữ), nên sửa vài câu rồi dựng lại chỉ đọc lại những câu đó.
 

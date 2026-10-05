@@ -27,7 +27,7 @@ tick ở file 04.
 **Đợt 3 (05/10/2026):** công cụ `agents/lesson_video` dựng video bài giảng từ kịch bản hai người nói (giọng Flite miễn
 phí); hai video Unit 1 Speaking 1 và 2 gắn vào Unit 1 trong tab Sách.
 
-**Đợt 4 (05/10/2026):** video đọc bằng giọng Kokoro-82M (bản q8) — Emma giọng Anh, Tom giọng Mỹ; Flite giữ làm dự phòng.
+**Đợt 4 (05/10/2026):** video đọc bằng giọng Kokoro-82M (bản q8) — Emma `af_heart`, Tom `am_michael` (giọng Mỹ, người dùng chọn qua video mẫu); Flite giữ làm dự phòng.
 
 ## Tóm tắt trong năm dòng
 
