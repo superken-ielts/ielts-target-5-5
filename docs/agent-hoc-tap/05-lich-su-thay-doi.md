@@ -35,11 +35,20 @@ Giọng Flite nghe dở; gợi ý giọng miễn phí khác. Người dùng ch�
 | `agents/tests/test_lesson_video.py` | +5 test: giọng theo bộ đọc, bộ nhớ tiếng, thiếu model Kokoro, đọc file giọng, Kokoro đọc giọng tiếng Anh (bỏ qua khi máy chưa có model); hồi quy kiểm tra giọng khớp bộ đọc đã dùng |
 | `agents/pyproject.toml` | Extra `[kokoro]` (`kokoro-onnx>=0.6`) |
 | `books/ielts_target_5_0/lessons/U01-speaking-1.yaml`, `U01-speaking-2.yaml` | Giọng theo bộ đọc; `say` đúng với cả hai bộ đọc |
-| `books/ielts_target_5_0/lessons/U01-speaking-1.mp4`, `U01-speaking-2.mp4`, `lessons.json` | Dựng lại bằng Kokoro |
+| `books/ielts_target_5_0/lessons/U01-speaking-1.mp4`, `U01-speaking-2.mp4`, `lessons.json` | Dựng lại bằng Kokoro: Speaking 1 dài 7:14 (6,0 MB), Speaking 2 dài 6:16 (4,7 MB) — ngắn hơn bản Flite (8:06, 6:56) vì đọc liền mạch hơn; chương giữ nguyên (8 và 9) |
 | `agents/README.md`, `CLAUDE.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Cài và dùng Kokoro; task P2-32 |
 | `web/index.html`, `web/ielts-companion.html` | Bản dựng lại (`lessons.json` mới) |
 
 Không thêm, không xóa file nào trong repo.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 31 passed (kể cả Kokoro đọc giọng tiếng Anh vì máy có model) |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK |
+| `ffprobe` / `volumedetect` | Thời lượng khớp lời thoại; tiếng trung bình -18 dB, đỉnh dưới 0 dB |
 
 ---
 
