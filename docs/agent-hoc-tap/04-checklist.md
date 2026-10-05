@@ -268,7 +268,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 3:* giọng Flite (CMU, `slt` nữ / `rms` nam) qua `ctypes`; kiểm tra cách Flite tách từ để sửa chỗ đọc sai bằng `say` (chữ cái "A", "IELTS", tên địa danh Việt Nam); 14 test pytest (kể cả hồi quy trên kịch bản đã commit).
 - [x] **P2-31** Video **Unit 1 · Speaking 1** (8:06, 8 chương) và **Speaking 2** (6:56, 9 chương): từ mới, bài A nối tranh / nối câu, bài B–C câu trả lời mẫu, Grammar check, phát âm, lỗi thường gặp, phần "Đến lượt bạn" có đếm ngược. Gắn vào hoạt động Unit 1 · Speaking & Vocabulary: nút trên thẻ Unit 1, trình phát trong phiên học, nút nhảy theo chương.
   - *Đợt 3:* `lessonsOf`, `lessonSession`, `chapterAt` trong `core.js` có test; e2e mở video từ thẻ Unit 1 và kiểm tra máy chủ trả từng đoạn (tua được).
-- [ ] **P2-32** Giọng đọc tự nhiên hơn (Kokoro-82M, Apache-2.0) thay Flite: Hugging Face bị chặn trong môi trường cloud, chạy model tải từ ngoài cần người dùng cho phép — chưa làm.
+- [x] **P2-32** Giọng đọc tự nhiên hơn: **Kokoro-82M** (Apache-2.0, bản nén q8 ~92 MB, mỗi giọng ~0,5 MB) thay Flite; dựng lại hai video Unit 1 với Emma `bf_emma` (nữ, giọng Anh) và Tom `am_michael` (nam, giọng Mỹ).
+  - *Đợt 4:* bộ đọc `kokoro` (kokoro-onnx, giọng `b*` tách âm kiểu Anh), `--engine auto` (Kokoro nếu có model, không thì Flite), giọng khai theo bộ đọc, bộ nhớ tiếng từng câu; cách đọc trong `say` kiểm tra với cả hai bộ đọc. Model lấy từ gói npm `kokoro-q8-shards` (Hugging Face bị chặn trong môi trường cloud) theo lựa chọn của người dùng.
 - [ ] **P2-33** Video cho các unit và kỹ năng còn lại (viết thêm kịch bản `books/<sách>/lessons/*.yaml`).
 
 ### Cổng G2

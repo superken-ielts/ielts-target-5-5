@@ -8,8 +8,9 @@ subtitle: "Speaking 1: talking about personal information"
 title_vi: "Nói về thông tin cá nhân — từ mới, bài A, bài B, Grammar check"
 tag: "UNIT 1 · LIFE"
 speakers:
-  emma: {name: Emma, role: teacher, voice: slt, color: "#C8102E"}
-  tom: {name: Tom, role: student, voice: rms, color: "#1F5FAD"}
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: bf_emma, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
 
 scenes:
   - kind: title
@@ -47,7 +48,7 @@ scenes:
       - emma: "First, we learn some new words."
         focus: 0
       - emma: "Then, in Exercise A, we match six pictures with six questions."
-        say: "Then, in Exercise ay, we match six pictures with six questions."
+        say: "Then, in Exercise eigh, we match six pictures with six questions."
         focus: 1
       - emma: "In Exercise B, Tom answers the questions, and you listen."
         focus: 2
@@ -119,7 +120,7 @@ scenes:
       - {n: 6, q: "What do you hope to do in the future?", answer: e}
     lines:
       - emma: "Exercise A. Look at the six pictures, a to f."
-        say: "Exercise ay. Look at the six pictures, ay to F."
+        say: "Exercise eigh. Look at the six pictures, eigh to F."
         vi: "Bài A. Nhìn sáu bức tranh a đến f."
       - emma: "Match each picture with one question, one to six."
         vi: "Nối mỗi tranh với một câu hỏi từ 1 đến 6."
@@ -131,7 +132,7 @@ scenes:
       - emma: "Ready? Let's check together."
         vi: "Xong chưa? Cùng kiểm tra nhé."
       - emma: "Picture a shows a family together on a holiday."
-        say: "Picture ay shows a family together on a holiday."
+        say: "Picture eigh shows a family together on a holiday."
       - tom: "So it matches question two: Do you have brothers and sisters?"
         focus: 1
         reveal: 2

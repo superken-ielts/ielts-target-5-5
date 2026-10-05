@@ -7,8 +7,9 @@ subtitle: "Speaking 2: exchanging personal information"
 title_vi: "Hỏi – đáp thông tin cá nhân — từ mới, bài A, phát âm, lỗi thường gặp"
 tag: "UNIT 1 · LIFE"
 speakers:
-  emma: {name: Emma, role: teacher, voice: slt, color: "#C8102E"}
-  tom: {name: Tom, role: student, voice: rms, color: "#1F5FAD"}
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: bf_emma, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
 
 scenes:
   - kind: title
@@ -36,7 +37,7 @@ scenes:
       - emma: "Here is our plan."
         vi: "Kế hoạch hôm nay."
       - {emma: "New words.", focus: 0}
-      - {emma: "Exercise A: eight questions and eight answers.", say: "Exercise ay: eight questions and eight answers.", focus: 1}
+      - {emma: "Exercise A: eight questions and eight answers.", say: "Exercise eigh: eight questions and eight answers.", focus: 1}
       - {emma: "A pronunciation check.", focus: 2}
       - {emma: "Some typical errors.", focus: 3}
       - {emma: "And a short conversation. Then it's your turn.", focus: 4}
@@ -61,7 +62,7 @@ scenes:
         vi: "Từ mới. Nghe rồi nhắc lại theo Tom."
       - {emma: "Where are you from?", focus: 0}
       - {tom: "Where are you from?"}
-      - {emma: "I'm from Hue, in central Vietnam.", say: "I'm from Hway, in central Vietnam."}
+      - {emma: "I'm from Hue, in central Vietnam.", say: "I'm from Whey, in central Vietnam."}
       - {emma: "capital city", focus: 1}
       - {tom: "capital city"}
       - {emma: "Hanoi is the capital city of Vietnam.", say: "Ha Noi is the capital city of Vietnam."}
@@ -114,7 +115,7 @@ scenes:
       - {k: h, text: "I'm twenty-four."}
     lines:
       - emma: "Exercise A. Match the questions, one to eight, with the answers, a to h."
-        say: "Exercise ay. Match the questions, one to eight, with the answers, ay to H."
+        say: "Exercise eigh. Match the questions, one to eight, with the answers, eigh to H."
         vi: "Bài A. Nối câu hỏi 1–8 với câu trả lời a–h."
       - emma: "Pause the video now and try it yourself."
         vi: "Tạm dừng video và tự làm trước nhé."
@@ -126,7 +127,7 @@ scenes:
       - {tom: "Number one. Where are you from?", focus: 0}
       - {emma: "From Riyadh. It's the capital city. That's d.", say: "From Ree-yahd. It's the capital city. That's D.", reveal: 1}
       - {tom: "Number two. What's your city like?", focus: 1}
-      - {emma: "It's very big and very busy. That's a.", say: "It's very big and very busy. That's ay.", reveal: 2}
+      - {emma: "It's very big and very busy. That's a.", say: "It's very big and very busy. That's eigh.", reveal: 2}
       - {tom: "Number three. How old are you?", focus: 2}
       - {emma: "I'm twenty-four. That's h.", say: "I'm twenty four. That's H.", reveal: 3}
       - {tom: "Number four. What do you do for a living?", focus: 3}

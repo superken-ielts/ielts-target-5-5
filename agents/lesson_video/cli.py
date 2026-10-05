@@ -1,10 +1,12 @@
 """Dòng lệnh `python -m lesson_video`.
 
     python -m lesson_video check <kịch bản.yaml>…
-    python -m lesson_video build <kịch bản.yaml>… [--engine flite|silent] [--stretch 1.1] [--out THƯ_MỤC] [--work THƯ_MỤC]
+    python -m lesson_video build <kịch bản.yaml>… [--engine auto|kokoro|flite|silent] [--speed 0.9]
+                                 [--model F.onnx] [--voices THƯ_MỤC] [--out THƯ_MỤC] [--work THƯ_MỤC] [--no-cache]
 
 `build` ghi <id>.mp4 cạnh kịch bản và cập nhật lessons.json; có `--out` thì chỉ ghi video vào thư mục đó
 (xem thử), không đụng lessons.json. `--work` giữ lại ảnh từng khung hình và file tiếng để soát.
+Tiếng từng câu được lưu ở ~/.cache/lesson_video/tts nên dựng lại chỉ đọc những câu đã đổi.
 """
 from __future__ import annotations
 
@@ -33,7 +35,9 @@ def _check(paths: list[str]) -> int:
 
 
 def _build(args) -> int:
-    engine = tts.get(args.engine, stretch=args.stretch)
+    engine = tts.get(args.engine, speed=args.speed, model=args.model, voices=args.voices)
+    cache = None if args.no_cache else Path(args.cache)
+    print(f"bộ đọc: {engine.name} ({engine.tag})")
     for p in args.lessons:
         path = Path(p).resolve()
         lesson = sc.load(path)
@@ -42,9 +46,9 @@ def _build(args) -> int:
         if problems:
             print("\n".join(f"{p}: {m}" for m in problems))
             return 3
-        voices = {k: engine.describe(s.voice) for k, s in lesson.speakers.items()}
         print(f"{lesson.id}: đọc lời thoại ({engine.name})")
-        tl = timeline.build(lesson, engine)
+        tl = timeline.build(lesson, engine, cache_dir=cache)
+        voices = {k: engine.describe(s.voice_for(engine.name)) for k, s in lesson.speakers.items()}
         slides = Slides(lesson, bdir, voices)
         out = (Path(args.out).resolve() if args.out else path.parent) / f"{lesson.id}.mp4"
         with tempfile.TemporaryDirectory(prefix="lesson-") as tmp:
@@ -58,7 +62,7 @@ def _build(args) -> int:
         print(f"{lesson.id}: {out} — {mins}:{secs:02d}, {out.stat().st_size / 1e6:.1f} MB, {len(tl.chapters)} chương")
         if not args.out:
             book = json.loads((bdir / "book.json").read_text(encoding="utf-8"))
-            entry = video.manifest_entry(lesson, sc.find_item(book, lesson.activity), tl, out, voices)
+            entry = video.manifest_entry(lesson, sc.find_item(book, lesson.activity), tl, out, voices, engine.name)
             print(f"  cập nhật {video.write_manifest(path.parent, entry)}")
     return 0
 
@@ -70,8 +74,13 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("lessons", nargs="+")
     b = sub.add_parser("build", help="đọc lời, vẽ slide, ghép video")
     b.add_argument("lessons", nargs="+")
-    b.add_argument("--engine", default="flite", choices=["flite", "silent"])
-    b.add_argument("--stretch", type=float, default=1.1, help="giãn tốc độ đọc (1.0 = bình thường, lớn hơn = chậm hơn)")
+    b.add_argument("--engine", default="auto", choices=["auto", "kokoro", "flite", "silent"],
+                   help="auto = kokoro nếu tìm thấy model, không thì flite")
+    b.add_argument("--speed", type=float, default=0.9, help="tốc độ đọc (1.0 = bình thường; 0.9 chậm hơn cho người mới)")
+    b.add_argument("--model", help="file model Kokoro .onnx (mặc định: biến KOKORO_MODEL hoặc ~/.cache/lesson_video/kokoro/*.onnx)")
+    b.add_argument("--voices", help="thư mục giọng Kokoro *.bin hoặc file .npz (mặc định: KOKORO_VOICES hoặc …/kokoro/voices)")
+    b.add_argument("--cache", default=str(tts.HOME / "tts"), help="thư mục lưu tiếng từng câu")
+    b.add_argument("--no-cache", action="store_true", help="không dùng bộ nhớ tiếng đã đọc")
     b.add_argument("--out", help="ghi video vào thư mục này, không cập nhật lessons.json")
     b.add_argument("--work", help="giữ khung hình và file tiếng ở thư mục này")
     args = ap.parse_args(argv)

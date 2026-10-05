@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Literal, Optional
+from typing import Literal, Optional, Union
 
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
@@ -38,8 +38,24 @@ class _M(BaseModel):
 class Speaker(_M):
     name: str
     role: str = ""
-    voice: str
+    voice: Union[str, dict[str, str]]   # một giọng, hoặc giọng theo bộ đọc: {kokoro: bf_emma, flite: slt}
     color: str = "#C8102E"
+
+    @field_validator("voice")
+    @classmethod
+    def _voice(cls, v):
+        if not v:
+            raise ValueError("thiếu giọng đọc")
+        return v
+
+    def voice_for(self, engine: str) -> str:
+        if isinstance(self.voice, str):
+            return self.voice
+        if engine in self.voice:
+            return self.voice[engine]
+        if engine == "silent":
+            return next(iter(self.voice.values()))
+        raise ValueError(f"{self.name}: chưa khai báo giọng cho bộ đọc {engine} (có: {', '.join(self.voice)})")
 
     @field_validator("color")
     @classmethod
@@ -144,12 +160,20 @@ class Lesson(_M):
         """`- emma: "Hello"` → {"speaker": "emma", "text": "Hello"}."""
         if not isinstance(data, dict):
             return data
+        data = dict(data)  # không sửa dữ liệu của người gọi
         known = set((data.get("speakers") or {}).keys())
+        scenes = []
         for sc in data.get("scenes") or []:
-            out = []
-            for ln in (sc.get("lines") or []) if isinstance(sc, dict) else []:
+            if not isinstance(sc, dict):
+                scenes.append(sc)
+                continue
+            sc, out = dict(sc), []
+            for ln in sc.get("lines") or []:
                 if not isinstance(ln, dict):
                     raise ValueError(f"dòng thoại phải là bảng khóa–giá trị: {ln!r}")
+                if "speaker" in ln or "text" in ln:  # đã ở dạng chuẩn (ví dụ từ model_dump)
+                    out.append(dict(ln))
+                    continue
                 who = [k for k in ln if k not in LINE_FIELDS]
                 if len(who) > 1:
                     raise ValueError(f"một dòng chỉ có một người nói: {who}")
@@ -159,8 +183,10 @@ class Lesson(_M):
                 if who:
                     row["speaker"], row["text"] = who[0], str(ln[who[0]])
                 out.append(row)
-            if isinstance(sc, dict):
-                sc["lines"] = out
+            sc["lines"] = out
+            scenes.append(sc)
+        if "scenes" in data:
+            data["scenes"] = scenes
         return data
 
     @model_validator(mode="after")

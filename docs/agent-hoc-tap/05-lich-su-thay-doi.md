@@ -5,6 +5,44 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 4 — 05/10/2026: giọng Kokoro cho video bài giảng
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `8dd99b8` (đã merge PR #4).
+
+### Yêu cầu
+
+Giọng Flite nghe dở; gợi ý giọng miễn phí khác. Người dùng chọn **Kokoro bản q8**.
+
+### Đã làm
+
+| Việc | Cách làm |
+|---|---|
+| Lấy model | Hugging Face bị chặn bởi chính sách mạng của môi trường cloud → dùng bản q8 trong gói npm `kokoro-q8-shards` (6 mảnh ghép lại, sha256 `fbae9257…a1478` khớp mã gói ghi; bản gốc là `model_quantized.onnx` của `onnx-community/Kokoro-82M-v1.0-ONNX`) và file giọng trong gói npm `kokoro-js` (thư mục `voices/`, 28 giọng tiếng Anh, ~0,5 MB mỗi giọng). Không commit model hay giọng: đặt ở `~/.cache/lesson_video/kokoro/` |
+| Bộ đọc Kokoro | `tts.Kokoro` qua thư viện `kokoro-onnx` 0.6: đọc 24 kHz, giọng `b*` tách âm `en-gb`, còn lại `en-us`; tốc độ 0,9. `--engine auto` chọn Kokoro khi tìm thấy model + giọng (tham số, biến môi trường hoặc thư mục mặc định), không thì Flite và báo lý do |
+| Chọn giọng | Video mẫu 53 giây với 4 cặp (bf_emma + am_michael · af_heart + am_michael · bf_emma + bm_george · af_bella + am_fenrir). Dựng hai video bằng cặp đề xuất: Emma `bf_emma` (nữ, giọng Anh), Tom `am_michael` (nam, giọng Mỹ) — nghe được cả hai giọng như đề IELTS |
+| Kịch bản | `voice` khai theo bộ đọc `{kokoro: …, flite: …}`. Soát cách Kokoro tách âm: `ay` (đã dùng cho Flite) bị đọc thành "eye", `Hway` thành "aitch-way" → đổi sang `eigh`, `Whey` (đúng ở cả hai bộ đọc) |
+| Dựng lại nhanh | Tiếng từng câu lưu ở `~/.cache/lesson_video/tts/` theo (bộ đọc, giọng, chữ); dựng lại chỉ đọc câu đã đổi. Kokoro trên CPU 4 nhân chậm hơn thời gian thật một chút (~5 giây cho một câu) |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/tts.py` | Thêm `Kokoro`, `load_voices`, `kokoro_files`, chế độ `auto`; mọi bộ đọc có `check(voice)` và `tag`; Flite nhận `speed` thay cho `stretch` |
+| `agents/lesson_video/script.py` | `Speaker.voice` là một giọng hoặc bảng giọng theo bộ đọc, `voice_for()`; chuẩn hóa dòng thoại không sửa dữ liệu của người gọi và đọc lại được dạng chuẩn |
+| `agents/lesson_video/timeline.py` | Kiểm tra giọng trước khi đọc; bộ nhớ tiếng từng câu (`cache_dir`) |
+| `agents/lesson_video/cli.py` | `--engine auto|kokoro|flite|silent`, `--speed`, `--model`, `--voices`, `--cache`, `--no-cache`; in bộ đọc đang dùng |
+| `agents/lesson_video/video.py` | `lessons.json` ghi thêm `engine` |
+| `agents/tests/test_lesson_video.py` | +5 test: giọng theo bộ đọc, bộ nhớ tiếng, thiếu model Kokoro, đọc file giọng, Kokoro đọc giọng tiếng Anh (bỏ qua khi máy chưa có model); hồi quy kiểm tra giọng khớp bộ đọc đã dùng |
+| `agents/pyproject.toml` | Extra `[kokoro]` (`kokoro-onnx>=0.6`) |
+| `books/ielts_target_5_0/lessons/U01-speaking-1.yaml`, `U01-speaking-2.yaml` | Giọng theo bộ đọc; `say` đúng với cả hai bộ đọc |
+| `books/ielts_target_5_0/lessons/U01-speaking-1.mp4`, `U01-speaking-2.mp4`, `lessons.json` | Dựng lại bằng Kokoro |
+| `agents/README.md`, `CLAUDE.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Cài và dùng Kokoro; task P2-32 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại (`lessons.json` mới) |
+
+Không thêm, không xóa file nào trong repo.
+
+---
+
 ## Đợt 3 — 05/10/2026: video bài giảng Unit 1 Speaking 1 và 2
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `9c436de` (đã merge PR #3).

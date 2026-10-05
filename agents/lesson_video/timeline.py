@@ -1,13 +1,16 @@
 """Đọc từng câu thoại, ghép tiếng thành một dải, tính khung hình nào hiện trong bao lâu."""
 from __future__ import annotations
 
+import hashlib
 import math
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Callable, Optional
 
 import numpy as np
 
 from .script import Lesson
+from .tts import TTSError
 
 LEAD = 0.5   # im lặng đầu video
 TAIL = 1.5   # im lặng cuối video
@@ -54,8 +57,35 @@ def _norm(x: np.ndarray) -> np.ndarray:
     return np.clip(x.astype(np.float32) * (PEAK * 32767 / peak), -32768, 32767).astype(np.int16)
 
 
-def build(lesson: Lesson, engine, say: Callable[[str], None] = print) -> Timeline:
-    cache: dict[tuple[str, str], tuple[np.ndarray, int]] = {}
+def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir: Optional[Path] = None) -> Timeline:
+    """`cache_dir`: lưu tiếng từng câu theo (bộ đọc, giọng, chữ) — dựng lại chỉ đọc những câu đã đổi."""
+    voices: dict[str, str] = {}
+    for key, sp in lesson.speakers.items():  # báo lỗi giọng trước khi đọc câu nào
+        try:
+            voices[key] = sp.voice_for(engine.name)
+        except ValueError as e:
+            raise TTSError(str(e)) from None
+        engine.check(voices[key])
+    memo: dict[tuple[str, str], tuple[np.ndarray, int]] = {}
+
+    def synth(text: str, voice: str) -> tuple[np.ndarray, int]:
+        if (voice, text) in memo:
+            return memo[(voice, text)]
+        path = None
+        if cache_dir is not None and engine.name != "silent":
+            h = hashlib.sha1(f"{engine.tag}\n{voice}\n{text}".encode("utf-8")).hexdigest()
+            path = Path(cache_dir) / h[:2] / f"{h}.npz"
+            if path.exists():
+                with np.load(path) as z:
+                    memo[(voice, text)] = (z["data"], int(z["rate"]))
+                return memo[(voice, text)]
+        data, r = engine.synth(text, voice)
+        if path is not None:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            np.savez(path, data=data, rate=r)
+        memo[(voice, text)] = (data, r)
+        return data, r
+
     rate: Optional[int] = None
     parts: list[np.ndarray] = []
     frames: list[Frame] = []
@@ -90,11 +120,7 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print) -> Timelin
                 focus = ln.focus
             revealed |= set(ln.reveal)
             if ln.speaker:
-                voice = lesson.speakers[ln.speaker].voice
-                key = (voice, ln.spoken)
-                if key not in cache:
-                    cache[key] = engine.synth(ln.spoken, voice)
-                data, r = cache[key]
+                data, r = synth(ln.spoken, voices[ln.speaker])
                 if rate is None:
                     rate = r
                     parts.append(silence(LEAD))

@@ -51,6 +51,10 @@ def test_lines_are_normalised():
     assert ln[1].speaker is None and ln[1].wait == 2.5
     assert lesson.scenes[0].lines[1].vi == "Chào!"
     assert [c for _, c in lesson.chapters()] == ["Intro", "Match", "Your turn"]
+    data = copy.deepcopy(LESSON)
+    sc.Lesson.model_validate(data)
+    assert data == LESSON                                              # không sửa dữ liệu đầu vào
+    assert sc.Lesson.model_validate(lesson.model_dump()) == lesson     # dạng chuẩn đọc lại được
 
 
 @pytest.mark.parametrize("patch", [
@@ -155,4 +159,94 @@ def test_committed_lessons_match_manifest():
         assert entry["activity"] == lesson.activity and entry["source"] == f"lessons/{path.name}"
         assert [c["title"] for c in entry["chapters"]] == [c for _, c in lesson.chapters()]
         assert (REAL / entry["file"]).stat().st_size == entry["bytes"]
-        assert all("Flite" in v for v in entry["voices"])
+        label = {"kokoro": "Kokoro", "flite": "Flite"}[entry["engine"]]
+        assert len(entry["voices"]) == len(lesson.speakers) and all(label in v for v in entry["voices"])
+        for sp in lesson.speakers.values():   # kịch bản khai giọng cho bộ đọc đã dùng
+            sp.voice_for(entry["engine"])
+
+
+def test_voice_per_engine():
+    data = copy.deepcopy(LESSON)
+    data["speakers"]["a"]["voice"] = {"kokoro": "bf_emma", "flite": "slt"}
+    lesson = sc.Lesson.model_validate(data)
+    sp = lesson.speakers["a"]
+    assert (sp.voice_for("kokoro"), sp.voice_for("flite"), sp.voice_for("silent")) == ("bf_emma", "slt", "bf_emma")
+    assert lesson.speakers["b"].voice_for("kokoro") == "rms"           # một giọng chung cho mọi bộ đọc
+    data["speakers"]["a"]["voice"] = {"kokoro": "bf_emma"}
+    lesson = sc.Lesson.model_validate(data)
+
+    class OnlyFlite(tts.Silent):
+        name, tag = "flite", "x"
+    with pytest.raises(tts.TTSError, match="chưa khai báo giọng cho bộ đọc flite"):
+        timeline.build(lesson, OnlyFlite(), say=quiet)                 # báo lỗi trước khi đọc câu nào
+
+
+class Counting(tts.Silent):
+    name, tag = "count", "count:1"
+
+    def __init__(self):
+        self.calls = 0
+
+    def synth(self, text, voice):
+        self.calls += 1
+        return super().synth(text, voice)
+
+
+def test_cache_only_reads_changed_lines(tmp_path):
+    lesson = sc.Lesson.model_validate(copy.deepcopy(LESSON))
+    n = len({(sp.voice, ln.spoken) for s in lesson.scenes for ln in s.lines if ln.speaker
+             for sp in [lesson.speakers[ln.speaker]]})
+    eng = Counting()
+    first = timeline.build(lesson, eng, say=quiet, cache_dir=tmp_path)
+    assert eng.calls == n
+    eng2 = Counting()
+    again = timeline.build(lesson, eng2, say=quiet, cache_dir=tmp_path)
+    assert eng2.calls == 0 and (again.audio == first.audio).all()
+    data = copy.deepcopy(LESSON)
+    data["scenes"][0]["lines"][0]["a"] = "Hello again."
+    eng3 = Counting()
+    timeline.build(sc.Lesson.model_validate(data), eng3, say=quiet, cache_dir=tmp_path)
+    assert eng3.calls == 1
+
+
+def test_kokoro_needs_model(tmp_path, monkeypatch):
+    monkeypatch.setattr(tts, "KOKORO_HOME", tmp_path / "none")
+    monkeypatch.delenv("KOKORO_MODEL", raising=False)
+    monkeypatch.delenv("KOKORO_VOICES", raising=False)
+    assert tts.kokoro_files() == (None, None)
+    with pytest.raises(tts.TTSError, match="model_quantized.onnx"):
+        tts.get("kokoro")
+    if _flite() is not None:
+        assert tts.get("auto").name == "flite"
+
+
+def test_load_voices_from_folder_and_npz(tmp_path):
+    import numpy as np
+    vdir = tmp_path / "voices"
+    vdir.mkdir()
+    np.zeros((510, 256), np.float32).tofile(vdir / "bf_emma.bin")
+    np.ones((510, 256), np.float32).tofile(vdir / "am_michael.bin")
+    got = tts.load_voices(vdir)
+    assert sorted(got) == ["am_michael", "bf_emma"] and got["bf_emma"].shape == (510, 1, 256)
+    np.savez(tmp_path / "v.npz", **got)
+    assert sorted(tts.load_voices(tmp_path / "v.npz")) == ["am_michael", "bf_emma"]
+    (vdir / "broken.bin").write_bytes(b"abc")
+    with pytest.raises(tts.TTSError):
+        tts.load_voices(vdir)
+
+
+def _has_kokoro() -> bool:
+    try:
+        import kokoro_onnx  # noqa: F401
+    except ImportError:
+        return False
+    return all(tts.kokoro_files())
+
+
+@pytest.mark.skipif(not _has_kokoro(), reason="chưa có model Kokoro (xem agents/README.md)")
+def test_kokoro_reads_english_voices():
+    eng = tts.Kokoro(*tts.kokoro_files())
+    a, rate = eng.synth("Where are you from?", "bf_emma")
+    assert rate == 24000 and len(a) > 0.5 * rate and abs(a.astype(int)).max() > 1000
+    with pytest.raises(tts.TTSError):
+        eng.check("zf_xiaobei")      # không phải giọng tiếng Anh, hoặc không có

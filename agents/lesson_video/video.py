@@ -78,7 +78,7 @@ def probe(path: Path) -> float:
     return float(r.stdout.strip() or 0)
 
 
-def manifest_entry(lesson: Lesson, item: dict, tl: Timeline, mp4: Path, voices: dict[str, str]) -> dict:
+def manifest_entry(lesson: Lesson, item: dict, tl: Timeline, mp4: Path, voices: dict[str, str], engine: str) -> dict:
     return {
         "id": lesson.id,
         "activity": lesson.activity,
@@ -90,6 +90,7 @@ def manifest_entry(lesson: Lesson, item: dict, tl: Timeline, mp4: Path, voices: 
         "source": "lessons/" + lesson.id + ".yaml",
         "duration": round(tl.total, 1),
         "bytes": mp4.stat().st_size,
+        "engine": engine,
         "voices": [f"{sp.name} ({sp.role}) — {voices[k]}" if sp.role else f"{sp.name} — {voices[k]}"
                    for k, sp in lesson.speakers.items()],
         "chapters": [{"t": round(t, 1), "title": name} for t, name in tl.chapters],
