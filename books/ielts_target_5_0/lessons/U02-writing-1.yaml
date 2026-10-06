@@ -1,0 +1,249 @@
+# Video bài giảng Unit 2 · Writing 1 + Writing 2 (sách in trang 29–30). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-writing-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Answer key không có các bài này: thứ tự ba phần thư, câu trả lời 1B,
+# câu mở đầu tốt nhất (2C: câu 2) và câu mở đầu 2D là đáp án gợi ý. Câu mở đầu câu 2 trùng câu đầu thư mẫu Writing 3A (Answer key).
+id: U02-writing-1
+activity: U02-writing
+title: "Unit 2 · Learning"
+subtitle: "Writing 1 & 2: structuring a letter, stating your purpose"
+title_vi: "Ba phần của một lá thư; câu mở đầu nêu mục đích — thư phàn nàn về khóa học"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 2 Writing. Today: how to structure a letter, and how to start it."
+        say: "Welcome to Unit two Writing. Today: how to structure a letter, and how to start it."
+        vi: "Writing Unit 2: bố cục một lá thư và câu mở đầu."
+      - tom: "In Unit 1 we wrote letters to friends. Is this different?"
+        say: "In Unit one we wrote letters to friends. Is this different?"
+      - emma: "Today's letter is a complaint, to a language school. It's formal, so the structure is very important."
+        vi: "Hôm nay là thư phàn nàn gửi trường ngôn ngữ — thư trang trọng, bố cục rất quan trọng."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Exam tip: the letter task in the Writing Module", vi: "Phần 1 bài thi Viết là viết thư"}
+      - {en: "Writing 1A: the three stages of a letter", vi: "Ba phần của một lá thư"}
+      - {en: "Writing 1B: how long is each part?", vi: "Mỗi phần dài bao nhiêu?"}
+      - {en: "Writing 2: the advertisement and the student's problems", vi: "Quảng cáo và những điều học viên không hài lòng"}
+      - {en: "Writing 2C–D: choose and write the opening line", vi: "Chọn và viết câu mở đầu"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, the exam tip.", focus: 0}
+      - {emma: "Then, the three stages of a letter.", focus: 1}
+      - {emma: "How long each part should be.", focus: 2}
+      - {emma: "Then, an advertisement, and a student who is not happy.", focus: 3}
+      - {emma: "And finally, the most important line: the opening line.", focus: 4}
+
+  - kind: bullets
+    chapter: "Exam tip"
+    heading: "Exam tip · The first part of the Writing Module"
+    heading_vi: "Phần 1 bài thi Viết (General Training): viết một lá thư"
+    items:
+      - {en: "You write a letter: to a friend, or to somebody you don't know", vi: "Thư cho bạn bè hoặc cho người lạ"}
+      - {en: "Sometimes you ask for information or apply for a position", vi: "Hỏi thông tin, xin việc"}
+      - {en: "Often you explain a situation and say what you want somebody to do", vi: "Thường là giải thích tình huống và nói bạn muốn người kia làm gì"}
+    lines:
+      - emma: "The exam tip. In the first part of the Writing Module, you have to write a letter."
+        vi: "Phần 1 bài thi Viết: viết một lá thư."
+      - {emma: "It might be a letter to a friend, or to somebody that you do not know.", focus: 0}
+      - {emma: "Sometimes you will need to ask for information, or apply for a position.", focus: 1}
+      - {emma: "Often you will need to explain a situation, and say what you want somebody to do.", focus: 2}
+      - tom: "Like a letter of complaint!"
+      - emma: "Exactly."
+
+  - kind: order
+    chapter: "Writing 1A: ba phần của lá thư"
+    heading: "Writing 1A · Put the stages of the letter into the correct order"
+    heading_vi: "Thư giải thích một vấn đề: sắp xếp ba phần cho đúng thứ tự"
+    items:
+      - {k: a, label: "", text: "Explain the situation and how it affects you.", pos: 2, short: "Explain the situation"}
+      - {k: b, label: "", text: "Say what you want the other person to do.", pos: 3, short: "Say what you want"}
+      - {k: c, label: "", text: "State the purpose of your letter.", pos: 1, short: "State the purpose"}
+    lines:
+      - emma: "Writing 1, Exercise A. You are writing a letter to somebody explaining a problem that you have. Put these stages of the letter into the correct order."
+        say: "Writing one, Exercise eigh. You are writing a letter to somebody explaining a problem that you have. Put these stages of the letter into the correct order."
+        vi: "Bài 1A: sắp xếp ba phần của thư giải thích một vấn đề."
+      - {wait: 6, note: "Pause the video and put them in order", vi: "Tạm dừng video và sắp xếp."}
+      - {emma: "What comes first, Tom?"}
+      - {tom: "First, state the purpose of your letter. Why are you writing?", focus: 2, reveal: c}
+      - {tom: "Second, explain the situation, and how it affects you.", focus: 0, reveal: a}
+      - {tom: "And last, say what you want the other person to do.", focus: 1, reveal: b}
+      - emma: "Perfect. Purpose, situation, action. Remember these three words."
+        vi: "Mục đích → tình huống → điều bạn muốn. Nhớ ba từ này."
+
+  - kind: qa
+    chapter: "Writing 1B: mỗi phần dài bao nhiêu?"
+    heading: "Writing 1B · Answer these questions"
+    heading_vi: "Mỗi phần của lá thư dài bao nhiêu? (đáp án gợi ý)"
+    items:
+      - q: "How many sentences should you write to say why you are writing?"
+        a: "Just one, or maybe two. Say your purpose clearly and quickly."
+        phrases: ["one sentence", "I am writing to…"]
+        ask: emma
+        by: tom
+      - q: "How long should the main part of your letter be?"
+        a: "It's the longest part: two or three paragraphs, one paragraph for each point."
+        phrases: ["2–3 paragraphs", "one point per paragraph"]
+        ask: emma
+        by: tom
+      - q: "How many sentences should you write to close your letter?"
+        a: "One or two sentences: say what you want, and finish politely."
+        phrases: ["I would like you to…", "I look forward to hearing from you."]
+        ask: emma
+        by: tom
+    lines:
+      - emma: "Exercise B. Let's answer these questions together."
+        vi: "Bài 1B: trả lời ba câu hỏi."
+      - {emma: "How many sentences should you write to say why you are writing?", focus: 0}
+      - {tom: "Just one, or maybe two. Say your purpose clearly and quickly.", reveal: 0}
+      - {emma: "How long should the main part of your letter be?", focus: 1}
+      - {tom: "It's the longest part: two or three paragraphs, one paragraph for each point.", reveal: 1}
+      - {emma: "How many sentences should you write to close your letter?", focus: 2}
+      - {tom: "One or two sentences: say what you want, and finish politely.", reveal: 2}
+      - emma: "Good. In a letter of 150 words, the main part is about 100 words."
+        say: "Good. In a letter of a hundred and fifty words, the main part is about a hundred words."
+        vi: "Thư 150 từ: phần chính khoảng 100 từ."
+
+  - kind: bullets
+    chapter: "Writing 2: nêu mục đích"
+    heading: "Writing 2 · Stating your purpose"
+    heading_vi: "Exam tip: mỗi đoạn có một mục đích; đoạn đầu nêu mục đích của cả lá thư"
+    items:
+      - {en: "Each paragraph must have a purpose", vi: "Đoạn nào cũng phải rõ viết để làm gì"}
+      - {en: "The first paragraph states the purpose of the whole letter", vi: "Đoạn đầu: vì sao bạn viết thư"}
+      - {en: "Unit 1: I am writing to ask for information about…", vi: "Nhớ lại Unit 1 Writing 2: câu mở đầu nêu mục đích"}
+      - {en: "Unit 1: I am writing to apply for the job advertised in…", vi: "Thư xin việc"}
+    lines:
+      - emma: "Writing 2. The exam tip: each paragraph of your letter must have a purpose. The first paragraph should state the purpose of the whole letter."
+        say: "Writing two. The exam tip: each paragraph of your letter must have a purpose. The first paragraph should state the purpose of the whole letter."
+        vi: "Mỗi đoạn có mục đích; đoạn đầu nêu mục đích cả lá thư."
+      - {emma: "Each paragraph has a job.", focus: 0}
+      - {emma: "And the first paragraph tells the reader why you are writing.", focus: 1}
+      - emma: "Exercise A. Look back at Unit 1, Writing 2. Remember the opening lines?"
+        say: "Exercise eigh. Look back at Unit one, Writing two. Remember the opening lines?"
+        vi: "Bài 2A: nhớ lại câu mở đầu ở Unit 1."
+      - {tom: "I am writing to ask for information about your course.", focus: 2}
+      - {tom: "I am writing to apply for the job advertised in the Daily Argus.", focus: 3}
+      - emma: "Yes. I am writing to, and then the purpose. Simple and clear."
+        vi: "I am writing to + mục đích: đơn giản, rõ ràng."
+
+  - kind: match
+    chapter: "Writing 2B: quảng cáo"
+    heading: "Writing 2B · The advertisement and the student's notes"
+    heading_vi: "Quảng cáo nói gì — thực tế ra sao? (chữ viết tay là ghi chú của học viên)"
+    image: {pdf: course-book, page: 30, clip: [80, 536, 512, 656]}
+    items:
+      - {n: 1, q: "Small groups → 16 students in class!", answer: "✗"}
+      - {n: 2, q: "Highly qualified teachers → 3 different teachers, not very good", answer: "✗"}
+      - {n: 3, q: "Free Course Book and Workbook → Course Book after 1 week, no Workbook", answer: "✗"}
+      - {n: 4, q: "Modern school in city centre → old building, 5 km from the centre", answer: "✗"}
+    lines:
+      - emma: "Exercise B. Look at the advertisement, and the notes that a student has made on it. What is the advertisement for?"
+        vi: "Bài 2B: quảng cáo cho cái gì? Vì sao học viên không vui?"
+      - tom: "Two-week and four-week intensive courses in business English."
+      - emma: "Right. And why is the student unhappy? Look at the handwritten notes."
+        vi: "Xem các ghi chú viết tay."
+      - {emma: "The advertisement says: small groups.", focus: 0}
+      - {tom: "But there were sixteen students in the class!", reveal: 1}
+      - {emma: "Highly qualified teachers.", focus: 1}
+      - {tom: "Three different teachers, and not very good.", reveal: 2}
+      - {emma: "A free Course Book and Workbook.", focus: 2}
+      - {tom: "The Course Book came after one week, and there was no Workbook.", reveal: 3}
+      - {emma: "A modern school in the city centre.", focus: 3}
+      - {tom: "An old building, five kilometres from the centre.", reveal: 4}
+      - emma: "Four promises, four problems. That's the main part of the letter!"
+        vi: "Bốn lời hứa, bốn vấn đề — đó chính là phần thân thư."
+
+  - kind: mcq
+    chapter: "Writing 2C: câu mở đầu tốt nhất"
+    heading: "Writing 2C · Which opening line is best? What is wrong with the other three?"
+    heading_vi: "Câu mở đầu chỉ nêu mục đích — lịch sự, ngắn gọn"
+    items:
+      - n: C
+        q: "A student is writing to a language school about a business English course."
+        keys: [1, 2, 3, 4]
+        options:
+          - "I am really angry with you because my business English course was so bad."
+          - "I am writing about a business English course I recently took at your school."
+          - "I am writing to tell you that my English has not improved at all because I learnt nothing on the course."
+          - "I want some money back from your school because I am not happy with the course."
+        answer: 2
+    lines:
+      - emma: "Exercise C. Which opening line is best? And what is wrong with the other three?"
+        vi: "Bài 2C: câu mở đầu nào tốt nhất? Ba câu kia sai ở đâu?"
+      - {wait: 8, note: "Pause the video and choose", vi: "Tạm dừng video và chọn."}
+      - {emma: "Tom?", focus: 0}
+      - {tom: "Number two. I am writing about a business English course I recently took at your school.", reveal: C}
+      - emma: "Yes. It's polite, and it states the purpose. Now, what's wrong with number one?"
+        vi: "Câu 2: lịch sự, nêu đúng mục đích."
+      - tom: "It's too angry. Really angry, so bad: that's not formal."
+        vi: "Câu 1: quá giận dữ, không trang trọng."
+      - emma: "Number three?"
+      - tom: "It gives the details too early. The problems go in the main part."
+        vi: "Câu 3: nói chi tiết quá sớm — chi tiết để ở phần thân."
+      - emma: "And number four?"
+      - tom: "It says what the student wants. That goes at the end of the letter. And I want is not very polite."
+        vi: "Câu 4: điều muốn yêu cầu để ở cuối thư; 'I want' thiếu lịch sự."
+      - emma: "Excellent. These are our suggested answers; the answer key doesn't include this exercise."
+        vi: "Đáp án gợi ý — Answer key không có bài này."
+
+  - kind: qa
+    chapter: "Writing 2D: viết câu mở đầu"
+    heading: "Writing 2D · Write the opening line for each situation"
+    heading_vi: "Câu mở đầu mẫu (đáp án gợi ý)"
+    items:
+      - q: "You write to a tour operator to complain about a hotel that you stayed in."
+        a: "I am writing to complain about the hotel I stayed in on my recent holiday with your company."
+        phrases: ["I am writing to complain about…", "formal"]
+        ask: emma
+        by: tom
+      - q: "You write to tell a friend that you cannot go to his wedding."
+        a: "I'm really sorry, but I'm writing to tell you that I can't come to your wedding."
+        phrases: ["I'm really sorry, but…", "informal: I'm, can't"]
+        ask: emma
+        by: tom
+      - q: "You write to a telephone company to say that your line is not working."
+        a: "I am writing to inform you that my telephone line has not been working since Monday."
+        phrases: ["I am writing to inform you that…", "formal"]
+        ask: emma
+        by: tom
+    lines:
+      - emma: "Exercise D. Write the opening line for each of these situations."
+        vi: "Bài 2D: viết câu mở đầu cho từng tình huống."
+      - {emma: "One: you write to a tour operator to complain about a hotel that you stayed in.", focus: 0}
+      - {wait: 8, note: "Write your opening line", vi: "Viết câu mở đầu của bạn."}
+      - {tom: "I am writing to complain about the hotel I stayed in on my recent holiday with your company.", reveal: 0}
+      - {emma: "Two: you write to tell a friend that you cannot go to his wedding.", focus: 1}
+      - {wait: 8, note: "Write your opening line", vi: "Viết câu mở đầu của bạn."}
+      - {tom: "I'm really sorry, but I'm writing to tell you that I can't come to your wedding.", reveal: 1}
+      - emma: "Good. It's a friend, so we can use short forms: I'm, can't."
+        vi: "Viết cho bạn: dùng dạng rút gọn I'm, can't."
+      - {emma: "Three: you write to a telephone company to say that your line is not working.", focus: 2}
+      - {wait: 8, note: "Write your opening line", vi: "Viết câu mở đầu của bạn."}
+      - {tom: "I am writing to inform you that my telephone line has not been working since Monday.", reveal: 2}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Three stages: purpose → situation → what you want", vi: "Mục đích → tình huống → điều bạn muốn"}
+      - {en: "Opening: one sentence — I am writing about / to complain about / to inform you that…", vi: "Câu mở đầu: một câu, nêu mục đích"}
+      - {en: "No anger, no details, no demands in the first line", vi: "Không giận dữ, không chi tiết, không đòi hỏi ở câu đầu"}
+      - {en: "Next: Writing 3 and 4 — the main part and the closing", vi: "Tiếp theo: phần thân và phần kết thư"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Three stages: purpose, situation, what you want.", focus: 0}
+      - {emma: "One clear opening sentence.", focus: 1}
+      - {emma: "And keep the first line calm and simple.", focus: 2}
+      - {tom: "Next, we write the main part and the closing!", focus: 3}

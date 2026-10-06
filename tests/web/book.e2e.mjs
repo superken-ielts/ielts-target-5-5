@@ -110,6 +110,20 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
+  await step("Unit 2 có 12 video đủ sáu phần; nút Listening mở phiên Listening có 3 video", async () => {
+    const u2 = page.locator("#p-book .bk-unit", { hasText: "Unit 2 · Learning" });
+    assert.equal(await u2.locator(".bk-vids button").count(), 12);
+    assert.deepEqual(await u2.locator(".bk-vgroup-t").allTextContents(),
+      ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
+    await u2.locator(".bk-vids button", { hasText: "Listening 2: practise listening" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 2 · Listening/);
+    const srcs = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(srcs, ["U02-listening-1.mp4", "U02-listening-2.mp4", "U02-listening-3.mp4"]);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("mở phiên, xem trang sách qua đoạn PDF nhỏ", async () => {
     await page.click("#p-book .bk-next .btn-primary");
     await page.click("#p-book .bk-act .btn-primary");

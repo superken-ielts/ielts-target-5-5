@@ -1,0 +1,211 @@
+# Video bài giảng Unit 2 · Exam Practice — Reading (sách in trang 32–33). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-exam-reading.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Answer key không có bài đọc này: đáp án 1–12 suy ra từ bài, mỗi câu
+# kèm câu bằng chứng (1 B, 2 D, 3 A, 4 C, 5 B, 6 D, 7 C, 8 10%, 9 more than 20%, 10 five, 11 three, 12 the long jump).
+id: U02-exam-reading
+activity: U02-exam-practice
+title: "Unit 2 · Learning"
+subtitle: "Exam practice: Reading"
+title_vi: "Luyện đề Reading — 'Are A Levels Just Too Easy?': tìm thông tin ở đoạn nào, trả lời ngắn ≤ 3 từ"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to the Unit 2 Exam Practice: the Reading Module."
+        say: "Welcome to the Unit two Exam Practice: the Reading Module."
+        vi: "Luyện đề Unit 2 — phần Reading."
+      - tom: "Twelve questions in twenty minutes. That sounds hard!"
+      - emma: "Don't worry. We'll use a plan: read the questions, find the right part, and then read carefully."
+        vi: "Có cách làm: đọc câu hỏi, tìm đúng đoạn, rồi mới đọc kỹ."
+
+  - kind: bullets
+    chapter: "Exam tip: bài thi Đọc"
+    heading: "Exam tip · The Reading Module"
+    heading_vi: "Bài thi Đọc General Training"
+    items:
+      - {en: "Three sections: social survival, training survival, general reading", vi: "Ba phần: đời sống, học tập – đào tạo, bài đọc chung"}
+      - {en: "Four to six passages, 40 questions, one hour", vi: "4–6 bài đọc, 40 câu, 60 phút"}
+      - {en: "Write your answers on a separate answer sheet", vi: "Ghi đáp án vào phiếu trả lời riêng"}
+      - {en: "The passages gradually become more difficult", vi: "Bài đọc khó dần"}
+      - {en: "Today: one passage, 12 questions, about 20 minutes", vi: "Hôm nay: 1 bài, 12 câu, khoảng 20 phút"}
+    lines:
+      - emma: "First, the exam tip."
+        vi: "Mẹo thi của sách."
+      - {emma: "In the Reading Module, there are three sections: social survival, training survival, and general reading.", focus: 0}
+      - {emma: "Each section can have more than one passage, so there are between four and six passages. There are forty questions in total, and you have one hour.", focus: 1}
+      - {emma: "You write your answers on a separate answer sheet.", focus: 2}
+      - {emma: "And the passages gradually become more difficult.", focus: 3}
+      - {emma: "Today's passage is at your level. Twelve questions. Try to finish in about twenty minutes.", focus: 4}
+
+  - kind: bullets
+    chapter: "Cách làm"
+    heading: "How to do it"
+    heading_vi: "Đọc lướt trước, đọc kỹ sau"
+    items:
+      - {en: "1  Read the title: Are A Levels Just Too Easy?", vi: "Tiêu đề cho biết chủ đề"}
+      - {en: "2  Skim each part: what is it about?", vi: "Đọc lướt: mỗi đoạn nói về gì"}
+      - {en: "3  Questions 1–7: match the information with part A, B, C or D", vi: "Câu 1–7: thông tin nằm ở đoạn nào"}
+      - {en: "4  Questions 8–12: scan for numbers and names, then read carefully", vi: "Câu 8–12: dò số và tên, rồi đọc kỹ"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Cách làm."
+      - {emma: "Read the title. Are A Levels just too easy? So the text is about an exam, and whether it's too easy.", say: "Read the title. Are eigh levels just too easy? So the text is about an exam, and whether it's too easy.", focus: 0}
+      - {emma: "Skim each part, and decide what it's about.", focus: 1}
+      - {emma: "Questions one to seven: which part has the information?", focus: 2}
+      - {emma: "Questions eight to twelve: look for numbers and names, then read carefully.", focus: 3}
+      - tom: "What are A levels?"
+        say: "What are eigh levels?"
+      - emma: "Good question! Look at the notes under the text. A levels are advanced exams in Britain. Students usually take them when they are seventeen or eighteen."
+        say: "Good question! Look at the notes under the text. Eigh levels are advanced exams in Britain. Students usually take them when they are seventeen or eighteen."
+        vi: "A levels: kỳ thi nâng cao ở Anh, thường thi lúc 17–18 tuổi (chú thích dưới bài)."
+
+  - kind: letter
+    chapter: "Bài đọc"
+    heading: "Are A Levels Just Too Easy? (1/2)"
+    heading_vi: "Emma đọc bài — theo dõi ý chính ở lề phải"
+    words: 304
+    items:
+      - {text: "Are A Levels Just Too Easy?", say: "Are eigh levels just too easy?", note: "Tiêu đề", body: false}
+      - text: "Text A. Students all over Britain are getting very good A level results. They should be happy and their parents should be proud. However, that is not so easy when everyone is telling you that the exam is too easy and that your results do not mean anything."
+        say: "Text eigh. Students all over Britain are getting very good eigh level results. They should be happy, and their parents should be proud. However, that is not so easy when everyone is telling you that the exam is too easy, and that your results do not mean anything."
+        note: "A: học sinh nên vui — nhưng ai cũng nói đề quá dễ"
+      - text: "Text B. The number of passes has increased every year for 21 years, and now more than 20% of students are getting an A grade in the exam. In the 1970s, only 10% got an A grade, while 20% failed the exam with an E grade. Now those percentages are reversed. Important people in education and business say that A level results have no value. They are worried that the exam does not show which students should be going to the top universities."
+        say: "Text B. The number of passes has increased every year for twenty-one years, and now more than twenty percent of students are getting an eigh grade in the exam. In the nineteen seventies, only ten percent got an eigh grade, while twenty percent failed the exam with an E grade. Now those percentages are reversed. Important people in education and business say that eigh level results have no value. They are worried that the exam does not show which students should be going to the top universities."
+        note: "B: con số; người ta lo lắng"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+
+  - kind: letter
+    heading: "Are A Levels Just Too Easy? (2/2)"
+    heading_vi: "Emma đọc bài — theo dõi ý chính ở lề phải"
+    words: 304
+    items:
+      - text: "Text C. Other people say that the number of passes is increasing because students are improving and studying harder. They say that teaching has improved and that teachers know how to train students to pass the exam. Most students study five A level subjects but then only take the exam in the three subjects they are best at. Experts have studied exam questions and exam results, and they say that recent exams are not easier than the exams of twenty years ago."
+        say: "Text C. Other people say that the number of passes is increasing because students are improving and studying harder. They say that teaching has improved, and that teachers know how to train students to pass the exam. Most students study five eigh level subjects, but then only take the exam in the three subjects they are best at. Experts have studied exam questions and exam results, and they say that recent exams are not easier than the exams of twenty years ago."
+        note: "C: lý do — học sinh, giáo viên giỏi hơn"
+      - text: "Text D. It seems that the situation is like that in some sports events. Every year, a record is broken because athletes are becoming faster and stronger. In the long jump, for example, the sandpit was made longer because athletes were jumping out the end of it. Some people in education believe that it is time to make questions in the A level exam more difficult so that questions really test the strongest students. This would provide better information to universities about who should get onto courses and better information to businesses about who should get the best jobs."
+        say: "Text D. It seems that the situation is like that in some sports events. Every year, a record is broken because athletes are becoming faster and stronger. In the long jump, for example, the sandpit was made longer, because athletes were jumping out the end of it. Some people in education believe that it is time to make questions in the eigh level exam more difficult, so that questions really test the strongest students. This would provide better information to universities about who should get onto courses, and better information to businesses about who should get the best jobs."
+        note: "D: so sánh với thể thao; giải pháp"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+
+  - kind: pairs
+    chapter: "Câu 1–7: thông tin ở đoạn nào?"
+    heading: "Questions 1–7 · In which part do you find the following information?"
+    heading_vi: "Ghi chữ A–D; có chữ dùng nhiều lần"
+    items:
+      - {n: 1, q: "Why people are worried about A levels becoming too easy.", answer: B}
+      - {n: 2, q: "What can be done about the problem.", answer: D}
+      - {n: 3, q: "How students should feel when they pass exams.", answer: A}
+      - {n: 4, q: "Some reasons why more students are getting better grades.", answer: C}
+      - {n: 5, q: "Numbers of students who pass or fail the exam.", answer: B}
+      - {n: 6, q: "Comparing exams with sport.", answer: D}
+      - {n: 7, q: "Both students and teachers are doing better.", answer: C}
+    options:
+      - {k: A, text: "Students should be happy and proud"}
+      - {k: B, text: "Passes and percentages; important people are worried"}
+      - {k: C, text: "Students improving, teaching improved"}
+      - {k: D, text: "Sports records; make questions more difficult"}
+    lines:
+      - emma: "Questions one to seven. The passage has four parts. In which part do you find the following information? Use some letters more than once."
+        vi: "Câu 1–7: thông tin ở đoạn A, B, C hay D? Có chữ dùng nhiều lần."
+      - {wait: 10, note: "Pause the video and choose A–D", vi: "Tạm dừng video và chọn A–D."}
+      - {emma: "One: why people are worried about A levels becoming too easy.", say: "One: why people are worried about eigh levels becoming too easy.", focus: 0}
+      - {tom: "B. They are worried that the exam does not show which students should go to the top universities.", reveal: 1}
+      - {emma: "Two: what can be done about the problem.", focus: 1}
+      - {tom: "D. It is time to make questions in the exam more difficult.", reveal: 2}
+      - {emma: "Three: how students should feel when they pass exams.", focus: 2}
+      - {tom: "A. They should be happy, and their parents should be proud.", say: "Eigh. They should be happy, and their parents should be proud.", reveal: 3}
+      - {emma: "Four: some reasons why more students are getting better grades.", focus: 3}
+      - {tom: "C. Students are improving and studying harder, and teaching has improved.", reveal: 4}
+      - {emma: "Five: numbers of students who pass or fail the exam.", focus: 4}
+      - {tom: "B. Twenty percent, ten percent, twenty-one years.", reveal: 5}
+      - {emma: "Six: comparing exams with sport.", focus: 5}
+      - {tom: "D. Sports events, records, and the long jump.", reveal: 6}
+      - {emma: "Seven: both students and teachers are doing better.", focus: 6}
+      - {tom: "C again. Students are improving, and teachers know how to train students.", reveal: 7}
+      - emma: "Notice: B, C and D are used twice. The instructions told us: use some letters more than once."
+        vi: "B, C, D dùng hai lần — đề đã báo trước."
+
+  - kind: blanks
+    chapter: "Câu 8–12: trả lời ngắn"
+    heading: "Questions 8–12 · Answer using no more than three words"
+    heading_vi: "Dò số, tên trong bài rồi đọc kỹ câu đó"
+    items:
+      - {n: 8, q: "What percentage of students got an A level A grade in 1970?  ___", answer: "10%", tip: "Text B: In the 1970s, only 10% got an A grade"}
+      - {n: 9, q: "What percentage of students get an A level A grade now?  ___", answer: "more than 20%", tip: "Text B: now more than 20% of students are getting an A grade"}
+      - {n: 10, q: "How many A level subjects do most students study?  ___", answer: "five", tip: "Text C: Most students study five A level subjects"}
+      - {n: 11, q: "How many A level exams do most students take?  ___", answer: "three", tip: "Text C: … only take the exam in the three subjects they are best at"}
+      - {n: 12, q: "Which sporting event are A level exams compared with?  ___", answer: "the long jump", tip: "Text D: In the long jump, for example, …"}
+    lines:
+      - emma: "Questions eight to twelve. Answer using no more than three words."
+        vi: "Câu 8–12: trả lời không quá ba từ."
+      - {wait: 10, note: "Pause the video and answer", vi: "Tạm dừng video và trả lời."}
+      - {emma: "Eight: what percentage got an A grade in 1970?", say: "Eight: what percentage got an eigh grade in nineteen seventy?", focus: 0}
+      - {tom: "Ten percent. In the 1970s, only ten percent got an A grade.", say: "Ten percent. In the nineteen seventies, only ten percent got an eigh grade.", reveal: 8}
+      - {emma: "Nine: what percentage get an A grade now?", say: "Nine: what percentage get an eigh grade now?", focus: 1}
+      - {tom: "More than twenty percent. Three words: more than twenty.", reveal: 9}
+      - emma: "Careful! Twenty percent alone is not exact. The text says: more than twenty percent."
+        vi: "Chỉ ghi 20% là chưa đúng ý — bài nói 'more than 20%'."
+      - {emma: "Ten: how many subjects do most students study?", focus: 2}
+      - {tom: "Five.", reveal: 10}
+      - {emma: "Eleven: how many exams do most students take?", focus: 3}
+      - {tom: "Three. They study five, but only take three exams.", reveal: 11}
+      - emma: "Questions ten and eleven look similar. Study and take are different. Read carefully!"
+        vi: "Câu 10 và 11: 'study' khác 'take' — đọc kỹ."
+      - {emma: "Twelve: which sporting event?", focus: 4}
+      - {tom: "The long jump.", reveal: 12}
+
+  - kind: vocab
+    chapter: "Từ khóa"
+    heading: "Key words from the passage"
+    heading_vi: "Từ về thi cử và kết quả"
+    items:
+      - {w: "a pass / to pass", pos: "noun / verb", vi: "sự thi đỗ / thi đỗ", ex: "The number of passes has increased every year."}
+      - {w: "a grade", pos: "A is the highest grade", vi: "điểm xếp loại", ex: "She got an A grade in Chemistry."}
+      - {w: "to fail", pos: "verb ↔ pass", vi: "thi trượt", ex: "In the 1970s, 20% failed the exam."}
+      - {w: "a percentage", pos: "10%, 20%…", vi: "tỷ lệ phần trăm", ex: "The percentage of A grades is now higher."}
+      - {w: "reversed", pos: "adjective", vi: "đảo ngược", ex: "Now those percentages are reversed."}
+      - {w: "a record", pos: "noun · break a record", vi: "kỷ lục · phá kỷ lục", ex: "Every year, a record is broken."}
+    lines:
+      - emma: "Here are some key words from the passage."
+        vi: "Một số từ khóa trong bài."
+      - {emma: "A pass, and to pass.", focus: 0}
+      - {tom: "The number of passes has increased every year.", focus: 0}
+      - {emma: "A grade. A is the highest grade.", say: "A grade. Eigh is the highest grade.", focus: 1}
+      - {tom: "She got an A grade in Chemistry.", say: "She got an eigh grade in Chemistry.", focus: 1}
+      - {emma: "To fail. The opposite of pass.", focus: 2}
+      - {tom: "In the 1970s, twenty percent failed the exam.", say: "In the nineteen seventies, twenty percent failed the exam.", focus: 2}
+      - {emma: "A percentage.", focus: 3}
+      - {tom: "The percentage of A grades is now higher.", say: "The percentage of eigh grades is now higher.", focus: 3}
+      - {emma: "Reversed. Turned the other way round.", focus: 4}
+      - {tom: "Now those percentages are reversed.", focus: 4}
+      - {emma: "A record. We break a record.", focus: 5}
+      - {tom: "Every year, a record is broken.", focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Answers and tips"
+    heading_vi: "Đáp án (suy ra từ bài) và mẹo"
+    items:
+      - {en: "1 B · 2 D · 3 A · 4 C · 5 B · 6 D · 7 C", vi: "Câu 1–7"}
+      - {en: "8 10% · 9 more than 20% · 10 five · 11 three · 12 the long jump", vi: "Câu 8–12"}
+      - {en: "Skim the parts first; the questions use different words from the text", vi: "Đọc lướt trước; câu hỏi dùng từ khác bài"}
+      - {en: "Short answers: copy the exact words, no more than three", vi: "Chép đúng từ trong bài, không quá ba từ"}
+      - {en: "Next: Exam practice — Writing", vi: "Tiếp theo: luyện đề Writing"}
+    lines:
+      - emma: "Here are the answers. Count your score out of twelve."
+        vi: "Đáp án — tự chấm trên 12."
+      - {emma: "Questions one to seven: B, D, A, C, B, D, C.", say: "Questions one to seven: B, D, eigh, C, B, D, C.", focus: 0}
+      - {emma: "Eight to twelve: ten percent, more than twenty percent, five, three, the long jump.", focus: 1}
+      - {emma: "Skim first. And remember: the questions use different words.", focus: 2}
+      - {emma: "For short answers, copy the words from the text.", focus: 3}
+      - {tom: "Next: the writing task!", focus: 4}

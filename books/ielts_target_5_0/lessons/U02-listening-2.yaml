@@ -1,0 +1,236 @@
+# Video bài giảng Unit 2 · Listening 1E–M: months, ordinal numbers, dates (sách in trang 24–25). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-listening-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U02-listening-1.yaml (dòng `track`). Đáp án bài L theo Tapescript
+# Track 21 (sách in trang 280); các bài E, H là đáp án chắc chắn (tên tháng, số thứ tự).
+id: U02-listening-2
+activity: U02-listening
+title: "Unit 2 · Learning"
+subtitle: "Listening 1: months, ordinal numbers and dates"
+title_vi: "Tháng, số thứ tự, hai cách đọc ngày tháng — nghe và viết ngày (có file nghe của sách)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back! Last time: numbers. Today: months, ordinal numbers, and dates."
+        vi: "Video trước: số. Hôm nay: tháng, số thứ tự, ngày tháng."
+      - tom: "Dates are everywhere in the Listening test: course dates, birthdays, appointments."
+      - emma: "Exactly. And spelling is important, so we'll write them too."
+        vi: "Chính tả quan trọng — ta sẽ viết ra."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Listening 1, bài E–M"
+    items:
+      - {en: "E–G: the twelve months — spelling and pronunciation (Track 18)", vi: "Mười hai tháng: chính tả, phát âm"}
+      - {en: "H–I: ordinal numbers — first, second, third… (Track 19)", vi: "Số thứ tự"}
+      - {en: "J–K: two ways to say a date (Track 20)", vi: "Hai cách đọc ngày tháng"}
+      - {en: "L: listen and write four dates (Track 21)", vi: "Nghe và viết 4 ngày"}
+      - {en: "M: answer questions with a date", vi: "Trả lời câu hỏi bằng một ngày"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "The twelve months.", focus: 0}
+      - {emma: "Ordinal numbers.", focus: 1}
+      - {emma: "Two ways to say a date.", focus: 2}
+      - {emma: "A short listening test.", focus: 3}
+      - {emma: "And your turn to speak.", focus: 4}
+
+  - kind: blanks
+    chapter: "Bài E: mười hai tháng"
+    heading: "Listening 1E · Unjumble the letters to write the months (1–6)"
+    heading_vi: "Sắp lại chữ cái thành tên tháng — viết hoa chữ đầu"
+    items:
+      - {n: 1, q: "yanurja  →  ___", answer: "January", tip: "January — the example in the book"}
+      - {n: 2, q: "arybruef  →  ___", answer: "February", tip: "Feb-RU-ary: don't forget the r after b"}
+      - {n: 3, q: "amrhc  →  ___", answer: "March"}
+      - {n: 4, q: "prail  →  ___", answer: "April"}
+      - {n: 5, q: "yam  →  ___", answer: "May"}
+      - {n: 6, q: "neuj  →  ___", answer: "June", tip: "June (6) and July (7) — easy to mix up when you listen"}
+    lines:
+      - emma: "Exercise E. Unjumble the letters to write the twelve months of the year. The first one is done for you: January."
+        vi: "Bài E: sắp xếp chữ cái thành tên tháng. Câu 1 là ví dụ."
+        focus: 0
+        reveal: 1
+      - {wait: 8, note: "Pause the video and write", vi: "Tạm dừng video và viết."}
+      - {tom: "February.", focus: 1, reveal: 2}
+      - {tom: "March.", focus: 2, reveal: 3}
+      - {tom: "April.", focus: 3, reveal: 4}
+      - {tom: "May.", focus: 4, reveal: 5}
+      - {tom: "June.", focus: 5, reveal: 6}
+
+  - kind: blanks
+    heading: "Listening 1E · Unjumble the letters to write the months (7–12)"
+    heading_vi: "Tên tháng luôn viết hoa"
+    items:
+      - {n: 7, q: "ujyl  →  ___", answer: "July"}
+      - {n: 8, q: "austgu  →  ___", answer: "August", tip: "August — also starts with Au, like Australia"}
+      - {n: 9, q: "bersetepm  →  ___", answer: "September", tip: "September, October, November, December: all end in -ber"}
+      - {n: 10, q: "oberoct  →  ___", answer: "October"}
+      - {n: 11, q: "vemnoerb  →  ___", answer: "November"}
+      - {n: 12, q: "mdeecerb  →  ___", answer: "December"}
+    lines:
+      - {wait: 8, note: "Pause the video and write", vi: "Tạm dừng video và viết."}
+      - {tom: "July.", focus: 0, reveal: 7}
+      - {tom: "August.", focus: 1, reveal: 8}
+      - {tom: "September.", focus: 2, reveal: 9}
+      - {tom: "October.", focus: 3, reveal: 10}
+      - {tom: "November.", focus: 4, reveal: 11}
+      - {tom: "December.", focus: 5, reveal: 12}
+      - emma: "Exercise F. Now cover Exercise E, and write the twelve months again from memory. Be careful with your spelling."
+        vi: "Bài F: che bài E, viết lại 12 tháng theo trí nhớ."
+      - {wait: 12, note: "Write the twelve months from memory", vi: "Viết lại 12 tháng — chú ý chính tả."}
+
+  - kind: bullets
+    chapter: "Bài G: phát âm tên tháng"
+    heading: "Listening 1G · Listen to the pronunciation of the months"
+    heading_vi: "Track 18 — chữ in hoa là âm nhấn"
+    items:
+      - {en: "JAN-u-ar-y · FEB-ru-ar-y · MARCH · A-pril", vi: "Nhấn âm đầu"}
+      - {en: "MAY · JUNE · ju-LY · AU-gust", vi: "July nhấn âm sau"}
+      - {en: "sep-TEM-ber · oc-TO-ber · no-VEM-ber · de-CEM-ber", vi: "-ber: nhấn âm thứ hai"}
+    lines:
+      - emma: "Exercise G. Listen to the pronunciation of the months. Then practise saying them."
+        vi: "Bài G: nghe phát âm, rồi nhắc lại."
+      - {track: U02-L1G, note: "Track 18 · Listening 1G", vi: "Nghe và nhắc lại tên các tháng."}
+      - {emma: "Most months are stressed on the first syllable.", focus: 0}
+      - {emma: "But July is stressed at the end: ju-LY.", say: "But July is stressed at the end: July.", focus: 1}
+      - {emma: "And September, October, November and December are stressed on the second syllable.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài H–I: số thứ tự"
+    heading: "Listening 1H · Write the ordinal numbers"
+    heading_vi: "Số thứ tự dùng cho ngày: the first, the second… — Track 19"
+    items:
+      - {n: 1, answer: "first", tip: "1st"}
+      - {n: 2, answer: "second", tip: "2nd"}
+      - {n: 3, answer: "third", tip: "3rd"}
+      - {n: 4, answer: "fourth", tip: "4th — with u, like four"}
+      - {n: 5, answer: "fifth", tip: "5th — five → fif"}
+      - {n: 6, answer: "sixth", tip: "6th"}
+      - {n: 7, answer: "seventh", tip: "7th"}
+      - {n: 8, answer: "eighth", tip: "8th — only one t"}
+      - {n: 9, answer: "ninth", tip: "9th — no e"}
+      - {n: 10, answer: "tenth", tip: "10th"}
+      - {n: 12, answer: "twelfth", tip: "12th — twelve → twelf"}
+      - {n: 15, answer: "fifteenth", tip: "15th"}
+      - {n: 20, answer: "twentieth", tip: "20th — y → ie"}
+      - {n: 25, answer: "twenty-fifth", tip: "25th — only the last part changes"}
+      - {n: 30, answer: "thirtieth", tip: "30th — y → ie"}
+    lines:
+      - emma: "Exercise H. Write the ordinal numbers. We use them for dates: the first of May, the twentieth of June."
+        vi: "Bài H: viết số thứ tự."
+      - {wait: 10, note: "Pause the video and write", vi: "Tạm dừng video và viết."}
+      - {tom: "First, second, third. These three are different.", focus: 2, reveal: [1, 2, 3]}
+      - {tom: "Fourth, fifth, sixth, seventh, eighth, ninth, tenth.", focus: 9, reveal: [4, 5, 6, 7, 8, 9, 10]}
+      - {emma: "Careful with fifth, eighth and ninth. Look at the spelling.", focus: 7}
+      - {tom: "Twelfth, fifteenth.", focus: 11, reveal: [12, 15]}
+      - {tom: "Twentieth, twenty-fifth, thirtieth.", focus: 14, reveal: [20, 25, 30]}
+      - emma: "Exercise I. Now listen to the pronunciation, and practise saying them."
+        vi: "Bài I: nghe phát âm số thứ tự, nhắc lại."
+      - {track: U02-L1I, note: "Track 19 · Listening 1I", vi: "Nghe và nhắc lại các số thứ tự."}
+      - emma: "The th at the end is soft. Put your tongue between your teeth: fifth, sixth, twelfth."
+        vi: "Âm 'th' cuối: đặt lưỡi giữa hai hàm răng."
+
+  - kind: compare
+    chapter: "Bài J–K: hai cách đọc ngày"
+    heading: "Listening 1J · Two ways to say a date"
+    heading_vi: "Track 20 — viết 15 December hoặc December 15, đọc có 'the'"
+    items:
+      - title: "the + day + of + month"
+        title_vi: "Kiểu Anh, rất phổ biến"
+        lines: ["December 15 → the fifteenth of December", "January 10 → the tenth of January"]
+      - title: "month + the + day"
+        title_vi: "Cũng đúng"
+        lines: ["December 15 → December the fifteenth", "January 10 → January the tenth"]
+    lines:
+      - emma: "Exercise J. Listen to someone saying this date in two different ways: December 15."
+        say: "Exercise J. Listen to someone saying this date in two different ways."
+        vi: "Bài J: nghe một ngày đọc theo hai cách."
+      - {track: U02-L1J, note: "Track 20 · Listening 1J", vi: "The fifteenth of December · December the fifteenth"}
+      - {tom: "The fifteenth of December.", focus: 0}
+      - {tom: "December the fifteenth.", focus: 1}
+      - emma: "Both are correct. We write fifteen, but we say the fifteenth. And don't forget the word the."
+        vi: "Viết số 15 nhưng đọc là 'the fifteenth' — đừng quên 'the'."
+
+  - kind: practice
+    heading: "Listening 1K · Practise saying these dates in two ways"
+    heading_vi: "Đọc thành tiếng cả hai cách, rồi nghe Tom"
+    items:
+      - {q: "January 10", hint: "the tenth of January · January the tenth"}
+      - {q: "March 20", hint: "the twentieth of March · March the twentieth"}
+      - {q: "April 25", hint: "the twenty-fifth of April · April the twenty-fifth"}
+      - {q: "September 30", hint: "the thirtieth of September · September the thirtieth"}
+    lines:
+      - emma: "Exercise K. Practise saying these dates in two ways."
+        vi: "Bài K: đọc ngày theo hai cách."
+      - {emma: "January 10.", say: "January ten.", focus: 0}
+      - {wait: 5}
+      - {tom: "The tenth of January. January the tenth.", focus: 0}
+      - {emma: "March 20.", say: "March twenty.", focus: 1}
+      - {wait: 5}
+      - {tom: "The twentieth of March. March the twentieth.", focus: 1}
+      - {emma: "April 25.", say: "April twenty-five.", focus: 2}
+      - {wait: 5}
+      - {tom: "The twenty-fifth of April. April the twenty-fifth.", focus: 2}
+      - {emma: "September 30.", say: "September thirty.", focus: 3}
+      - {wait: 5}
+      - {tom: "The thirtieth of September. September the thirtieth.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài L: nghe và viết ngày"
+    heading: "Listening 1L · Listen and write the dates that you hear"
+    heading_vi: "Track 21 — đáp án theo Tapescript"
+    items:
+      - {n: 1, q: "Date 1:  ___", answer: "2 June", tip: "the second of June"}
+      - {n: 2, q: "Date 2:  ___", answer: "21 November", tip: "November the twenty-first"}
+      - {n: 3, q: "Date 3:  ___", answer: "17 July", tip: "the seventeenth of July — not June!"}
+      - {n: 4, q: "Date 4:  ___", answer: "31 August", tip: "August the thirty-first"}
+    lines:
+      - emma: "Exercise L. Listen and write the dates that you hear."
+        vi: "Bài L: nghe và viết ngày."
+      - {track: U02-L1L, note: "Track 21 · Listening 1L", vi: "Viết bốn ngày bạn nghe được."}
+      - {wait: 5, note: "Check your dates", vi: "Xem lại bài của bạn."}
+      - {emma: "Number one.", focus: 0}
+      - {tom: "The second of June. I wrote: 2 June.", say: "The second of June. I wrote: two, June.", reveal: 1}
+      - {emma: "Number two.", focus: 1}
+      - {tom: "November the twenty-first.", reveal: 2}
+      - {emma: "Number three.", focus: 2}
+      - {tom: "The seventeenth of July. Careful: July, not June.", reveal: 3}
+      - {emma: "And number four.", focus: 3}
+      - {tom: "August the thirty-first.", reveal: 4}
+
+  - kind: practice
+    chapter: "Bài M: trả lời bằng ngày"
+    heading: "Listening 1M · Answer these questions with a date"
+    heading_vi: "Nói thành tiếng, mỗi câu 6 giây"
+    items:
+      - {q: "What date is your birthday?", hint: "My birthday is on the… of…"}
+      - {q: "What date is your mother's birthday?", hint: "It's on the… of…"}
+      - {q: "What date is Christmas Day?", hint: "the twenty-fifth of December"}
+      - {q: "What date is New Year's Eve?", hint: "the thirty-first of December"}
+      - {q: "What date is American Independence Day?", hint: "the fourth of July"}
+    lines:
+      - emma: "Exercise M. Answer these questions with a date. Say it out loud."
+        vi: "Bài M: trả lời bằng một ngày."
+      - {emma: "What date is your birthday?", focus: 0}
+      - {wait: 6}
+      - {tom: "My birthday is on the ninth of March.", focus: 0}
+      - {emma: "What date is your mother's birthday?", focus: 1}
+      - {wait: 6}
+      - {emma: "What date is Christmas Day?", focus: 2}
+      - {wait: 6}
+      - {tom: "The twenty-fifth of December.", focus: 2}
+      - {emma: "What date is New Year's Eve?", focus: 3}
+      - {wait: 6}
+      - {tom: "The thirty-first of December.", focus: 3}
+      - {emma: "What date is American Independence Day?", focus: 4}
+      - {wait: 6}
+      - {tom: "The fourth of July.", focus: 4}
+      - emma: "Remember: on for dates. My birthday is on the ninth of March."
+        vi: "Dùng 'on' với ngày: on the ninth of March."

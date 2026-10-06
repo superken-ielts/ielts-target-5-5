@@ -1,0 +1,219 @@
+# Video bài giảng Unit 2 · Reading 1: scanning (sách in trang 26–27). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-reading-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Cảnh `passage` hiện bài đọc kèm phụ đề; `mark` trên dòng thoại tô vàng
+# chỗ chứa đáp án khi dò (scan). Answer key không có Reading 1: đáp án C, D, E suy ra từ bài, kèm câu bằng chứng.
+id: U02-reading-1
+activity: U02-reading
+title: "Unit 2 · Learning"
+subtitle: "Reading 1: scanning"
+title_vi: "Dò tìm thông tin (scanning) — năm trích đoạn về học lái xe ở Anh"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 2 Reading. Today's skill is scanning."
+        say: "Welcome to Unit two Reading. Today's skill is scanning."
+        vi: "Reading Unit 2: kỹ năng dò tìm thông tin (scanning)."
+      - tom: "Scanning? Like a scanner in a shop?"
+      - emma: "A little! A scanner looks for one thing, a price. When you scan a text, you look for one piece of information, very quickly."
+        vi: "Scan = tìm nhanh một thông tin cụ thể, không đọc hết bài."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Exercise A: skim five extracts — what are they about?", vi: "Đọc lướt: năm trích đoạn nói về gì?"}
+      - {en: "Exercise B: talk about learning to drive", vi: "Nói về chuyện học lái xe"}
+      - {en: "Exercise C: scan for five answers, quickly", vi: "Dò nhanh năm câu trả lời"}
+      - {en: "Exercise D: true or false?", vi: "Đúng hay sai?"}
+      - {en: "Exercise E: skimming or scanning?", vi: "Phân biệt đọc lướt và dò tìm"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, we skim five short extracts from a web page.", focus: 0}
+      - {emma: "Then, a little speaking.", focus: 1}
+      - {emma: "Then, we scan for answers. I'll show you how.", focus: 2}
+      - {emma: "True or false.", focus: 3}
+      - {emma: "And finally: what's the difference between skimming and scanning?", focus: 4}
+
+  - kind: passage
+    chapter: "Bài A: đọc lướt"
+    heading: "Reading 1A · Skim the five extracts: what are they all about?"
+    heading_vi: "Năm trích đoạn từ cùng một trang web — đọc lướt, nắm ý chính"
+    items:
+      - {label: "1", text: "In Britain, you have to be 17 before you can start learning to drive. You need a provisional driving licence, which costs £38. You can apply for the licence before your seventeenth birthday but must wait until you are 17 before you take any lessons. All learner drivers must display 'L' plates on the vehicle they are driving."}
+      - {label: "2", text: "It is best to learn with an approved driving instructor. You can practise driving with another qualified driver, but that driver must be over 21 and must have had a full driving licence for at least three years."}
+      - {label: "3", text: "Some people learn to drive more quickly than others, but on average it takes about 40 hours of lessons and about 20 hours of further practice. Most people have one two-hour driving lesson per week, but it is possible to do a more intensive course. You should only take your test when you feel that you are ready."}
+      - {label: "4", text: "The main purpose of the practical driving test is to ensure that you can drive safely. The test lasts about 40 minutes and is designed to test a range of driving skills. More people fail the test than pass it."}
+      - {label: "5", text: "More people fail their practical driving test than pass it, probably because not enough people are really prepared for the test when they take it. The most common fault during the driving test is not observing carefully before moving onto a main road from a smaller road."}
+    lines:
+      - emma: "Exercise A. These five extracts are from the same web page. Skim them quickly, and say what they are all about."
+        say: "Exercise eigh. These five extracts are from the same web page. Skim them quickly, and say what they are all about."
+        vi: "Bài A: đọc lướt năm trích đoạn, nói chúng nói về gì."
+      - {wait: 10, note: "Skim for 30 seconds", vi: "Đọc lướt khoảng 30 giây — đừng đọc từng chữ."}
+      - {emma: "Extract one: the age, and the licence.", focus: 0, mark: ["17", "licence"]}
+      - {emma: "Two: who can teach you.", focus: 1, mark: ["instructor", "driver"]}
+      - {emma: "Three: how many lessons.", focus: 2, mark: ["lessons"]}
+      - {emma: "Four: the driving test.", focus: 3, mark: ["driving test"]}
+      - {emma: "Five: why people fail the test.", focus: 4, mark: ["fail"]}
+      - {tom: "So they're all about learning to drive in Britain: the licence, the lessons, and the test."}
+      - emma: "Exactly. That's skimming: a general idea, in a few seconds."
+        vi: "Đó là đọc lướt (skimming): nắm ý chung trong vài giây."
+
+  - kind: practice
+    chapter: "Bài B: nói về học lái xe"
+    heading: "Reading 1B · Talk with a partner"
+    heading_vi: "Trả lời thành tiếng, mỗi câu 8 giây"
+    items:
+      - {q: "Can you drive?", hint: "Yes, I can. / No, I can't, but I can ride a motorbike."}
+      - {q: "When did you get your licence?", hint: "I got it when I was… / two years ago."}
+      - {q: "How many driving lessons did you have?", hint: "I had about… lessons."}
+      - {q: "Did you pass your test the first time you took it?", hint: "Yes, I did! / No, I failed the first time."}
+    lines:
+      - emma: "Exercise B. Talk with a partner and answer the questions. Answer out loud."
+        vi: "Bài B: trả lời thành tiếng."
+      - {emma: "Can you drive?", focus: 0}
+      - {wait: 8}
+      - {emma: "When did you get your licence?", focus: 1}
+      - {wait: 8}
+      - {emma: "How many driving lessons did you have?", focus: 2}
+      - {wait: 8}
+      - {emma: "Did you pass your test the first time you took it?", focus: 3}
+      - {wait: 8}
+
+  - kind: bullets
+    chapter: "Exam tip: dò tìm"
+    heading: "Exam tip · Scanning saves time"
+    heading_vi: "Tìm câu trả lời cho câu hỏi cụ thể mà không phải đọc lại cả bài"
+    items:
+      - {en: "1  Read the question. What kind of answer? A number, a price, an age, a name?", vi: "Đọc câu hỏi: cần loại thông tin gì?"}
+      - {en: "2  Choose a key word to look for: lesson, licence, test…", vi: "Chọn từ khóa để dò"}
+      - {en: "3  Move your eyes quickly over the text — stop at the key word", vi: "Đưa mắt nhanh, dừng ở từ khóa"}
+      - {en: "4  Read that sentence carefully", vi: "Đọc kỹ đúng câu đó"}
+      - {en: "Question-type tip: the instructions say how many words you can use", vi: "Câu trả lời ngắn: đề cho biết được viết bao nhiêu từ"}
+    lines:
+      - emma: "The exam tip. In the Reading Module, you will save a lot of time if you can find the answers to specific questions quickly, without reading all of the text again."
+        vi: "Mẹo thi: tìm nhanh câu trả lời mà không đọc lại cả bài sẽ tiết kiệm nhiều thời gian."
+      - {emma: "First, read the question. What kind of answer do you need?", focus: 0}
+      - {emma: "Choose a key word to look for.", focus: 1}
+      - {emma: "Move your eyes quickly, and stop at the key word.", focus: 2}
+      - {emma: "Then read that sentence carefully.", focus: 3}
+      - {emma: "And the question-type tip: in the Reading and Listening Modules, you sometimes write short answers. The instructions will say how many words you can use.", focus: 4}
+
+  - kind: passage
+    chapter: "Bài C: dò tìm câu trả lời"
+    heading: "Reading 1C · Scan the extracts and answer as quickly as possible"
+    heading_vi: "Chỗ tô vàng là chỗ mắt cần dừng lại"
+    items:
+      - {label: "1", text: "In Britain, you have to be 17 before you can start learning to drive. You need a provisional driving licence, which costs £38. You can apply for the licence before your seventeenth birthday but must wait until you are 17 before you take any lessons. All learner drivers must display 'L' plates on the vehicle they are driving."}
+      - {label: "2", text: "It is best to learn with an approved driving instructor. You can practise driving with another qualified driver, but that driver must be over 21 and must have had a full driving licence for at least three years."}
+      - {label: "3", text: "Some people learn to drive more quickly than others, but on average it takes about 40 hours of lessons and about 20 hours of further practice. Most people have one two-hour driving lesson per week, but it is possible to do a more intensive course. You should only take your test when you feel that you are ready."}
+      - {label: "4", text: "The main purpose of the practical driving test is to ensure that you can drive safely. The test lasts about 40 minutes and is designed to test a range of driving skills. More people fail the test than pass it."}
+      - {label: "5", text: "More people fail their practical driving test than pass it, probably because not enough people are really prepared for the test when they take it. The most common fault during the driving test is not observing carefully before moving onto a main road from a smaller road."}
+    lines:
+      - emma: "Exercise C. Scan the extracts and answer these questions as quickly as possible."
+        vi: "Bài C: dò nhanh để trả lời năm câu hỏi."
+      - emma: "Question one: how long is the average driving lesson? We need a time. Look for the word lesson."
+        vi: "Câu 1: buổi học lái trung bình dài bao lâu? Dò từ 'lesson'."
+      - {tom: "Extract three: most people have one two-hour driving lesson per week. So, two hours.", focus: 2, mark: ["two-hour driving lesson"]}
+      - emma: "Question two: how old must you be before you can help somebody learn to drive? We need an age."
+        vi: "Câu 2: phải bao nhiêu tuổi mới được kèm người khác tập lái? Dò một con số tuổi."
+      - {tom: "Extract two: that driver must be over 21. So, over twenty-one.", say: "Extract two: that driver must be over twenty-one. So, over twenty-one.", focus: 1, mark: ["over 21"]}
+      - emma: "Question three: how much does a provisional driving licence cost? A price. Look for the pound sign."
+        vi: "Câu 3: bằng lái tạm thời giá bao nhiêu? Dò ký hiệu £."
+      - {tom: "Extract one: thirty-eight pounds.", focus: 0, mark: ["£38"]}
+      - emma: "Question four: how long does the practical driving test last? A time again. Look for the word test."
+        vi: "Câu 4: bài thi thực hành kéo dài bao lâu?"
+      - {tom: "Extract four: the test lasts about forty minutes.", focus: 3, mark: ["40 minutes"]}
+      - emma: "Question five: what must a learner driver have on his or her vehicle?"
+        vi: "Câu 5: người tập lái phải gắn gì trên xe?"
+      - {tom: "Extract one again: L plates.", say: "Extract one again: L plates.", focus: 0, mark: ["'L' plates"]}
+      - emma: "Well done. You didn't read every word. You found the key words, and read only those sentences."
+        vi: "Không đọc từng chữ — chỉ tìm từ khóa và đọc kỹ câu chứa nó."
+
+  - kind: blanks
+    heading: "Reading 1C · Answers"
+    heading_vi: "Đáp án (suy ra từ bài) — câu trả lời ngắn"
+    items:
+      - {n: 1, q: "How long is the average driving lesson?  ___", answer: "two hours", tip: "Extract 3: one two-hour driving lesson per week"}
+      - {n: 2, q: "How old must you be before you can help somebody learn to drive?  ___", answer: "over 21", tip: "Extract 2: that driver must be over 21"}
+      - {n: 3, q: "How much does a provisional driving licence cost?  ___", answer: "£38", tip: "Extract 1: a provisional driving licence, which costs £38"}
+      - {n: 4, q: "How long does the practical driving test last?  ___", answer: "about 40 minutes", tip: "Extract 4: The test lasts about 40 minutes"}
+      - {n: 5, q: "What must a learner driver have on his or her vehicle?  ___", answer: "'L' plates", tip: "Extract 1: must display 'L' plates on the vehicle"}
+    lines:
+      - emma: "Here are the five answers. Check yours."
+        reveal: [1, 2, 3, 4, 5]
+        vi: "Năm đáp án — tự kiểm tra."
+      - {emma: "Notice: short answers. Two hours. Over twenty-one. Thirty-eight pounds. About forty minutes. L plates.", say: "Notice: short answers. Two hours. Over twenty-one. Thirty-eight pounds. About forty minutes. L plates.", focus: 4}
+
+  - kind: blanks
+    chapter: "Bài D: đúng hay sai?"
+    heading: "Reading 1D · Scan again: true (T) or false (F)?"
+    heading_vi: "Dò lại các trích đoạn (đáp án suy ra từ bài)"
+    items:
+      - {n: 1, q: "You must be 17 before you can apply for a provisional driving licence.  ___", answer: "F", tip: "Extract 1: You can apply for the licence before your seventeenth birthday"}
+      - {n: 2, q: "You can help other people learn to drive as soon as you have your licence.  ___", answer: "F", tip: "Extract 2: over 21, and a full licence for at least three years"}
+      - {n: 3, q: "Most people pass their driving test the first time they take it.  ___", answer: "F", tip: "Extracts 4–5: More people fail the test than pass it"}
+      - {n: 4, q: "A lot of people take their test before they are ready for it.  ___", answer: "T", tip: "Extract 5: not enough people are really prepared for the test"}
+    lines:
+      - emma: "Exercise D. Scan again, and decide if these statements are true or false."
+        vi: "Bài D: dò lại, chọn đúng hay sai."
+      - {wait: 10, note: "Pause the video: write T or F", vi: "Tạm dừng video, viết T hoặc F."}
+      - {emma: "One: you must be 17 before you can apply for a provisional licence.", say: "One: you must be seventeen before you can apply for a provisional licence.", focus: 0}
+      - {tom: "False. You can apply before your seventeenth birthday. You must wait until you are 17 for the lessons.", say: "False. You can apply before your seventeenth birthday. You must wait until you are seventeen for the lessons.", reveal: 1}
+      - {emma: "Two: you can help other people learn to drive as soon as you have your licence.", focus: 1}
+      - {tom: "False. You must be over 21, and have a full licence for at least three years.", say: "False. You must be over twenty-one, and have a full licence for at least three years.", reveal: 2}
+      - {emma: "Three: most people pass their driving test the first time.", focus: 2}
+      - {tom: "False. More people fail the test than pass it.", reveal: 3}
+      - {emma: "Four: a lot of people take their test before they are ready for it.", focus: 3}
+      - {tom: "True. Not enough people are really prepared for the test.", reveal: 4}
+      - emma: "Careful with true or false questions. One small word can change the meaning, like before, and as soon as."
+        vi: "Đúng / sai: một từ nhỏ như 'before', 'as soon as' đổi cả nghĩa."
+
+  - kind: mcq
+    chapter: "Bài E: skimming hay scanning?"
+    heading: "Reading 1E · Choose the correct definition"
+    heading_vi: "Định nghĩa đúng của scanning"
+    items:
+      - n: E
+        q: "Scanning is…"
+        keys: [1, 2, 3]
+        options:
+          - "reading a text quickly to get a general idea of what it's about."
+          - "reading a text very carefully to understand every part of it."
+          - "looking for specific information in a text."
+        answer: 3
+    lines:
+      - emma: "Exercise E. Choose the correct definition of scanning."
+        vi: "Bài E: chọn định nghĩa đúng."
+      - {wait: 6, note: "Choose 1, 2 or 3", vi: "Chọn 1, 2 hoặc 3."}
+      - {tom: "Number three. Scanning is looking for specific information in a text.", focus: 0, reveal: E}
+      - emma: "Right. And number one is skimming: a general idea. Number two is careful reading."
+        vi: "Câu 1 là skimming (đọc lướt); câu 2 là đọc kỹ."
+
+  - kind: compare
+    chapter: "Tổng kết"
+    heading: "Skimming and scanning"
+    heading_vi: "Hai cách đọc nhanh — dùng cả hai trong bài thi"
+    items:
+      - title: "Skimming"
+        title_vi: "Đọc lướt: nắm ý chung"
+        lines: ["What is the text about?", "Read the title and first sentences", "Exercise A: learning to drive"]
+      - title: "Scanning"
+        title_vi: "Dò tìm: một thông tin cụ thể"
+        lines: ["Find one number, name or word", "Stop at the key word, read that sentence", "Exercise C: two hours, over 21, £38, 40 minutes, L plates"]
+    lines:
+      - emma: "So, two ways of reading quickly."
+        vi: "Hai cách đọc nhanh."
+      - {emma: "Skimming: what is the text about? You read the title and the first sentences.", focus: 0}
+      - {emma: "Scanning: you look for one piece of information, like a number or a name.", focus: 1}
+      - {tom: "In the exam, I skim first, then I scan for each answer.", focus: 1}
+      - emma: "Perfect. Next, Reading 2: we practise scanning with a web page about swimming."
+        say: "Perfect. Next, Reading two: we practise scanning with a web page about swimming."
+        vi: "Tiếp theo: Reading 2 — luyện dò tìm với trang web về bơi lội."

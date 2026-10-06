@@ -1,0 +1,338 @@
+# Video bài giảng Unit 2 · Vocabulary 1 + Speaking 1 (sách in trang 22–23). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-speaking-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Answer key không có các bài này: chính tả môn học và dạng quá khứ là
+# đáp án chắc chắn; nối tranh (Speaking 1A) là đáp án gợi ý. Pronunciation check theo Tapescript Track 12–13.
+id: U02-speaking-1
+activity: U02-speaking-vocab
+title: "Unit 2 · Learning"
+subtitle: "Vocabulary 1 & Speaking 1: school subjects, looking back"
+title_vi: "Môn học ở trường, kể về thời đi học — chính tả, nối tranh, thì quá khứ đơn, phát âm -ed"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello, and welcome to Unit 2: Learning."
+        say: "Hello, and welcome to Unit two: Learning."
+        vi: "Chào mừng bạn đến với Unit 2: Learning (Học tập)."
+      - tom: "Learning? So we talk about school?"
+      - emma: "Yes! In the Speaking test, the examiner often asks about your school days. So today we learn the names of school subjects, and how to talk about the past."
+        vi: "Giám khảo hay hỏi về thời đi học — hôm nay học tên môn học và cách kể chuyện quá khứ."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Vocabulary 1: spell the school subjects", vi: "Viết đúng chính tả tên môn học"}
+      - {en: "Pronunciation: the ending -ics", vi: "Phát âm đuôi -ics /ɪks/"}
+      - {en: "Speaking 1: match the pictures, talk about your school", vi: "Nối tranh, kể về trường cũ"}
+      - {en: "Grammar check: the past simple and had to", vi: "Thì quá khứ đơn và had to"}
+      - {en: "Pronunciation: -ed = /t/, /d/ or /ɪd/", vi: "Ba cách đọc đuôi -ed"}
+      - {en: "Your turn: answer questions about your school days", vi: "Đến lượt bạn: kể về thời đi học"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, the names of school subjects. Spelling is important!", focus: 0}
+      - {emma: "Then, how to say the ending -ics.", say: "Then, how to say the ending, I, C, S.", focus: 1}
+      - {emma: "Then, six pictures about school.", focus: 2}
+      - {emma: "The grammar: the past simple.", focus: 3}
+      - {emma: "How to say the ending -ed.", say: "How to say the ending, E, D.", focus: 4}
+      - {emma: "And finally, your turn to speak.", focus: 5}
+
+  - kind: blanks
+    chapter: "Vocabulary 1A: chính tả môn học"
+    heading: "Vocabulary 1A · Correct the spelling for the school subjects"
+    heading_vi: "Sửa lỗi chính tả tên các môn học"
+    items:
+      - {n: 1, q: "mathmatics  →  ___", answer: "Mathematics", tip: "math-E-matics: don't forget the e; short form: Maths"}
+      - {n: 2, q: "histery  →  ___", answer: "History", tip: "histORy: the sound is weak, but we write o"}
+      - {n: 3, q: "geografy  →  ___", answer: "Geography", tip: "geo-GRAPH-y: the sound /f/ is written ph"}
+      - {n: 4, q: "siense  →  ___", answer: "Science", tip: "SCience: s + c, like scientist"}
+      - {n: 5, q: "kemistry  →  ___", answer: "Chemistry", tip: "CHemistry: ch sounds like /k/, like school"}
+      - {n: 6, q: "fisics  →  ___", answer: "Physics", tip: "PHysics: ph = /f/, and y = /ɪ/"}
+      - {n: 7, q: "biolagy  →  ___", answer: "Biology", tip: "bi-OLOGY: -ology = the study of"}
+      - {n: 8, q: "economiks  →  ___", answer: "Economics", tip: "economiCS: -ics, like Physics and Mathematics"}
+    lines:
+      - emma: "Vocabulary 1, Exercise A. Correct the spelling of the school subjects."
+        say: "Vocabulary one, Exercise eigh. Correct the spelling of the school subjects."
+        vi: "Bài A: sửa chính tả tên môn học."
+      - {wait: 8, note: "Pause the video and correct the spelling", vi: "Tạm dừng video, viết lại cho đúng."}
+      - {emma: "Number one.", focus: 0}
+      - {tom: "Mathematics. M, A, T, H, E, M, A, T, I, C, S.", say: "Mathematics. em, eigh, tee, aitch, ee, em, eigh, tee, eye, see, ess.", reveal: 1}
+      - {emma: "Number two.", focus: 1}
+      - {tom: "History. H, I, S, T, O, R, Y.", say: "History. aitch, eye, ess, tee, oh, ar, why.", reveal: 2}
+      - {emma: "Number three.", focus: 2}
+      - {tom: "Geography. The /f/ sound is ph.", say: "Geography. The F sound is, P, H.", reveal: 3}
+      - {emma: "Number four.", focus: 3}
+      - {tom: "Science. S, C, I, E, N, C, E.", say: "Science. ess, see, eye, ee, en, see, ee.", reveal: 4}
+      - {emma: "Number five.", focus: 4}
+      - {tom: "Chemistry. It starts with ch.", say: "Chemistry. It starts with, C, H.", reveal: 5}
+      - {emma: "Number six.", focus: 5}
+      - {tom: "Physics. P, H, Y, S, I, C, S.", say: "Physics. pee, aitch, why, ess, eye, see, ess.", reveal: 6}
+      - {emma: "Number seven.", focus: 6}
+      - {tom: "Biology. B, I, O, L, O, G, Y.", say: "Biology. bee, eye, oh, el, oh, gee, why.", reveal: 7}
+      - {emma: "And number eight.", focus: 7}
+      - {tom: "Economics. With -cs at the end.", say: "Economics. With, C, S, at the end.", reveal: 8}
+      - emma: "Remember: names of school subjects are nouns, and we often write them with a capital letter."
+        vi: "Tên môn học là danh từ, thường viết hoa chữ cái đầu."
+
+  - kind: vocab
+    chapter: "Vocabulary 1B: nghĩa các môn"
+    heading: "Vocabulary 1B · What do you study in each subject?"
+    heading_vi: "Hiểu nghĩa từng môn — môn nào bạn đã học?"
+    items:
+      - {w: "Mathematics (Maths)", pos: "numbers, shapes, equations", vi: "Toán", ex: "In Maths, we learned how to solve equations."}
+      - {w: "History", pos: "the past, kings and queens, wars", vi: "Lịch sử", ex: "In History, we studied the kings of Vietnam."}
+      - {w: "Geography", pos: "countries, maps, rivers, weather", vi: "Địa lý", ex: "In Geography, we drew maps of Asia."}
+      - {w: "Science", pos: "Physics + Chemistry + Biology", vi: "Khoa học (tự nhiên)", ex: "We had Science three times a week."}
+      - {w: "Chemistry", pos: "chemicals, experiments in a lab", vi: "Hóa học", ex: "In Chemistry, we did experiments in the lab."}
+      - {w: "Physics", pos: "energy, light, electricity", vi: "Vật lý", ex: "Physics was difficult because of all the formulas."}
+      - {w: "Biology", pos: "plants, animals, the human body", vi: "Sinh học", ex: "In Biology, we learned about the human body."}
+      - {w: "Economics", pos: "money, prices, business", vi: "Kinh tế học", ex: "I studied Economics at university, not at school."}
+    lines:
+      - emma: "Exercise B. Check that you understand each subject, and tick the ones you studied at school."
+        vi: "Bài B: hiểu nghĩa từng môn, đánh dấu môn bạn đã học."
+      - {emma: "Mathematics, or Maths. Numbers and shapes.", focus: 0}
+      - {tom: "In Maths, we learned how to solve equations.", focus: 0}
+      - {emma: "History. The past.", focus: 1}
+      - {tom: "In History, we studied the kings of Vietnam.", focus: 1}
+      - {emma: "Geography. Countries, maps and the weather.", focus: 2}
+      - {tom: "In Geography, we drew maps of Asia.", focus: 2}
+      - {emma: "Science. It includes Physics, Chemistry and Biology.", focus: 3}
+      - {tom: "We had Science three times a week.", focus: 3}
+      - {emma: "Chemistry.", focus: 4}
+      - {tom: "In Chemistry, we did experiments in the lab.", focus: 4}
+      - {emma: "Physics.", focus: 5}
+      - {tom: "Physics was difficult because of all the formulas.", focus: 5}
+      - {emma: "Biology.", focus: 6}
+      - {tom: "In Biology, we learned about the human body.", focus: 6}
+      - {emma: "Economics.", focus: 7}
+      - {tom: "I studied Economics at university, not at school.", focus: 7}
+      - emma: "Notice: Tom uses the past simple. learned, studied, drew, had, was. We'll practise this soon."
+        vi: "Chú ý: Tom dùng thì quá khứ đơn — sẽ luyện ở phần ngữ pháp."
+
+  - kind: bullets
+    chapter: "Phát âm: đuôi -ics"
+    heading: "Pronunciation check · The ending -ics /ɪks/"
+    heading_vi: "Theo Tapescript Track 12 — trọng âm rơi vào âm tiết ngay trước -ics"
+    items:
+      - {en: "PHYS-ics", vi: "Vật lý — nhấn âm đầu"}
+      - {en: "math-e-MAT-ics", vi: "Toán — nhấn âm ngay trước -ics"}
+      - {en: "e-co-NOM-ics  /  ec-o-NOM-ics", vi: "Kinh tế học — hai cách đọc đều đúng"}
+      - {en: "Also: politics, electronics, statistics", vi: "Cũng đuôi -ics: chính trị, điện tử, thống kê"}
+    lines:
+      - emma: "Pronunciation check. Listen to the ending of these subjects: -ics. We say /ɪks/."
+        say: "Pronunciation check. Listen to the ending of these subjects: I, C, S. We say: iks."
+        vi: "Đuôi -ics đọc là /ɪks/, rõ âm /s/ cuối."
+      - {emma: "Physics.", focus: 0}
+      - {tom: "Physics.", focus: 0}
+      - {emma: "Mathematics.", focus: 1}
+      - {tom: "Mathematics.", focus: 1}
+      - {emma: "Economics.", focus: 2}
+      - {tom: "Economics.", focus: 2}
+      - emma: "The stress is on the syllable just before -ics: PHYS-ics, math-e-MAT-ics, e-co-NOM-ics."
+        say: "The stress is on the syllable just before, I, C, S. Physics. Mathematics. Economics."
+        focus: 2
+        vi: "Trọng âm rơi vào âm tiết ngay trước -ics."
+      - {emma: "Other words with this ending: politics, electronics, statistics.", focus: 3}
+
+  - kind: match
+    chapter: "Speaking 1A: nối tranh"
+    heading: "Speaking 1A · Match the pictures a–f with the sentences 1–6"
+    heading_vi: "Nối tranh a–f với câu 1–6 (đáp án gợi ý)"
+    image: {pdf: course-book, page: 23, clip: [58, 336, 532, 578]}
+    items:
+      - {n: 1, q: "My favourite subject at school was Chemistry.", answer: b}
+      - {n: 2, q: "I really enjoyed sports at school.", answer: a}
+      - {n: 3, q: "I wasn't very good at Maths.", answer: d}
+      - {n: 4, q: "The teachers at school were very strict.", answer: f}
+      - {n: 5, q: "We had to wear a school uniform.", answer: c}
+      - {n: 6, q: "I had to do homework every night.", answer: e}
+    lines:
+      - emma: "Speaking 1: looking back. Exercise A. Match the pictures a to f with the sentences one to six."
+        say: "Speaking one: looking back. Exercise eigh. Match the pictures, eigh to F, with the sentences, one to six."
+        vi: "Speaking 1A: nối tranh với câu."
+      - {wait: 8, note: "Pause the video and match", vi: "Tạm dừng video và nối tranh."}
+      - {emma: "Number one: My favourite subject at school was Chemistry.", focus: 0}
+      - {tom: "Picture b. The students are wearing goggles in a lab.", say: "Picture B. The students are wearing goggles in a lab.", reveal: 1}
+      - {emma: "Number two: I really enjoyed sports at school.", focus: 1}
+      - {tom: "Picture a. Two boys are playing football.", say: "Picture eigh. Two boys are playing football.", reveal: 2}
+      - {emma: "Number three: I wasn't very good at Maths.", focus: 2}
+      - {tom: "Picture d. The teacher is explaining something on the board.", say: "Picture D. The teacher is explaining something on the board.", reveal: 3}
+      - {emma: "Number four: The teachers at school were very strict.", focus: 3}
+      - {tom: "Picture f. She looks very strict!", say: "Picture F. She looks very strict!", reveal: 4}
+      - {emma: "Number five: We had to wear a school uniform.", focus: 4}
+      - {tom: "Picture c. The girls are wearing the same red jumpers.", say: "Picture C. The girls are wearing the same red jumpers.", reveal: 5}
+      - {emma: "Number six: I had to do homework every night.", focus: 5}
+      - {tom: "Picture e. A father is helping his daughter with her homework.", say: "Picture E. A father is helping his daughter with her homework.", reveal: 6}
+      - emma: "The answer key doesn't include this exercise, so these are our suggested answers."
+        vi: "Answer key không có bài này — đây là đáp án gợi ý."
+
+  - kind: qa
+    chapter: "Speaking 1B: kể về trường cũ"
+    heading: "Speaking 1B · Talk about what you remember about school"
+    heading_vi: "Dùng tranh để kể về thời đi học — nghe Tom trả lời mẫu"
+    items:
+      - q: "What was your favourite subject at school?"
+        a: "My favourite subject was Chemistry. I loved doing experiments in the lab, and my teacher was very funny."
+        phrases: ["My favourite subject was…", "I loved doing…"]
+        ask: emma
+        by: tom
+      - q: "Did you have to wear a uniform?"
+        a: "Yes, we did. We had to wear a white shirt and blue trousers every day. I didn't like it very much."
+        phrases: ["We had to wear…", "I didn't like it very much."]
+        ask: emma
+        by: tom
+      - q: "Were your teachers strict?"
+        a: "Some of them were very strict. My Maths teacher gave us homework every night, but she was a good teacher."
+        phrases: ["Some of them were…", "gave us homework"]
+        ask: emma
+        by: tom
+    lines:
+      - emma: "Exercise B. Use the pictures to talk about what you remember about school. Tom, let's try."
+        vi: "Bài B: dùng tranh để kể về trường cũ."
+      - {emma: "What was your favourite subject at school?", focus: 0}
+      - {tom: "My favourite subject was Chemistry. I loved doing experiments in the lab, and my teacher was very funny.", reveal: 0}
+      - {emma: "Did you have to wear a uniform?", focus: 1}
+      - {tom: "Yes, we did. We had to wear a white shirt and blue trousers every day. I didn't like it very much.", reveal: 1}
+      - {emma: "Were your teachers strict?", focus: 2}
+      - {tom: "Some of them were very strict. My Maths teacher gave us homework every night, but she was a good teacher.", reveal: 2}
+      - emma: "Good. All your verbs are in the past simple, because school is finished time."
+        vi: "Mọi động từ đều ở thì quá khứ đơn vì thời đi học đã kết thúc."
+
+  - kind: blanks
+    chapter: "Grammar check: quá khứ đơn"
+    heading: "Grammar check · Write the past form of these verbs"
+    heading_vi: "Động từ có quy tắc: thêm -ed, nhưng chú ý quy tắc chính tả"
+    items:
+      - {n: 1, q: "I ___ to swim when I was five years old.", answer: "learned", hint: "learn", tip: "learn → learned (also: learnt)"}
+      - {n: 2, q: "I ___ Medicine at university.", answer: "studied", hint: "study", tip: "consonant + y → -ied: study → studied"}
+      - {n: 3, q: "I ___ to leave university and find a job.", answer: "decided", hint: "decide", tip: "ends in e → just add -d: decide → decided"}
+      - {n: 4, q: "I ___ learning guitar because I was too busy.", answer: "stopped", hint: "stop", tip: "short vowel + one consonant → double it: stop → stopped"}
+    lines:
+      - emma: "Grammar check. We use the past simple to talk about finished time. Regular verbs end in -ed, but there are some spelling rules."
+        say: "Grammar check. We use the past simple to talk about finished time. Regular verbs end in, E, D, but there are some spelling rules."
+        vi: "Quá khứ đơn dùng cho thời gian đã kết thúc; động từ có quy tắc thêm -ed."
+      - emma: "Write the past form of learn, stop, decide and study into the sentences."
+        vi: "Điền dạng quá khứ của learn, stop, decide, study."
+      - {wait: 8, note: "Pause the video and write", vi: "Tạm dừng video và viết."}
+      - {emma: "Number one: I … to swim when I was five years old.", focus: 0}
+      - {tom: "I learned to swim when I was five years old.", reveal: 1}
+      - {emma: "Number two: I … Medicine at university.", focus: 1}
+      - {tom: "I studied Medicine at university. Study becomes studied: y changes to -ied.", say: "I studied Medicine at university. Study becomes studied: Y changes to, I, E, D.", reveal: 2}
+      - {emma: "Number three.", focus: 2}
+      - {tom: "I decided to leave university and find a job. Decide already ends in e, so just add d.", say: "I decided to leave university and find a job. Decide already ends in E, so just add D.", reveal: 3}
+      - {emma: "Number four.", focus: 3}
+      - {tom: "I stopped learning guitar because I was too busy. Stop has a double p.", say: "I stopped learning guitar because I was too busy. Stop has a double P.", reveal: 4}
+
+  - kind: blanks
+    heading: "Grammar check · Irregular verbs"
+    heading_vi: "Động từ bất quy tắc dùng rất nhiều — phải học thuộc"
+    items:
+      - {n: 1, q: "know  →  ___", answer: "knew", tip: "know → knew (k is silent: /njuː/)"}
+      - {n: 2, q: "read  →  ___", answer: "read", tip: "read /riːd/ → read /red/: same spelling, different sound"}
+      - {n: 3, q: "think  →  ___", answer: "thought", tip: "think → thought /θɔːt/"}
+      - {n: 4, q: "teach  →  ___", answer: "taught", tip: "teach → taught /tɔːt/ — sounds like thought"}
+      - {n: 5, q: "choose  →  ___", answer: "chose", tip: "choose /tʃuːz/ → chose /tʃəʊz/"}
+    lines:
+      - emma: "There are a lot of irregular verbs, and some of them are used very often. Write the past form."
+        vi: "Có nhiều động từ bất quy tắc, nhiều từ dùng rất thường xuyên."
+      - {wait: 6, note: "Pause the video and write", vi: "Tạm dừng video và viết."}
+      - {emma: "Know.", focus: 0}
+      - {tom: "Knew.", reveal: 1}
+      - {emma: "Read.", focus: 1}
+      - {tom: "Read. Same spelling, but we say red.", say: "Red. Same spelling, but we say red.", reveal: 2}
+      - {emma: "Think.", focus: 2}
+      - {tom: "Thought.", reveal: 3}
+      - {emma: "Teach.", focus: 3}
+      - {tom: "Taught.", reveal: 4}
+      - {emma: "Choose.", focus: 4}
+      - {tom: "Chose.", reveal: 5}
+
+  - kind: errors
+    chapter: "Watch out! Lỗi hay gặp"
+    heading: "Watch out! · Typical errors"
+    heading_vi: "Phủ định và câu hỏi dùng did + động từ nguyên mẫu; must → had to"
+    items:
+      - {wrong: "I don't liked school when I was little.", right: "I didn't like school when I was little.", note: "Phủ định quá khứ: didn't + nguyên mẫu"}
+      - {wrong: "How went you to school in the morning?", right: "How did you go to school in the morning?", note: "Câu hỏi: did + chủ ngữ + nguyên mẫu"}
+      - {wrong: "I must did homework every night.", right: "I had to do homework every night.", note: "must không có quá khứ → had to + nguyên mẫu"}
+    lines:
+      - emma: "Watch out! Here are three typical errors."
+        vi: "Ba lỗi hay gặp."
+      - {emma: "Number one. In negatives, use did not, or didn't, and the base verb.", focus: 0}
+      - {tom: "I didn't like school when I was little.", focus: 0}
+      - {emma: "Number two. In questions, use did, and the base verb.", focus: 1}
+      - {tom: "How did you go to school in the morning?", focus: 1}
+      - {emma: "Number three. There is no past form of must, so we use had to. Had to is followed by the base verb.", focus: 2}
+      - {tom: "I had to do homework every night. We had to wear a uniform to school.", focus: 2}
+
+  - kind: bullets
+    chapter: "Phát âm: đuôi -ed"
+    heading: "Pronunciation check · -ed = /t/, /d/ or /ɪd/"
+    heading_vi: "Theo Tapescript Track 13"
+    items:
+      - {en: "/t/  I finished my homework late last night.", vi: "Sau âm vô thanh /p k f s ʃ tʃ/: stopped, worked, watched"}
+      - {en: "/d/  I played football after school.", vi: "Sau nguyên âm và âm hữu thanh: learned, studied, enjoyed"}
+      - {en: "/ɪd/  I hated Physics at school.", vi: "Sau /t/ và /d/ — thêm một âm tiết: decided, wanted, needed"}
+    lines:
+      - emma: "Pronunciation check. Listen to the ending of these regular verbs."
+        vi: "Nghe đuôi -ed của động từ có quy tắc."
+      - {emma: "I finished my homework late last night.", focus: 0}
+      - {tom: "Finished. The ending is a /t/ sound.", say: "Finished. The ending is a, T, sound.", focus: 0}
+      - {emma: "I played football after school.", focus: 1}
+      - {tom: "Played. The ending is a /d/ sound.", say: "Played. The ending is a, D, sound.", focus: 1}
+      - {emma: "I hated Physics at school.", focus: 2}
+      - {tom: "Hated. Here we add a syllable: HAT-id.", say: "Hated. Here we add a syllable: hated.", focus: 2}
+      - emma: "Only verbs ending in a /t/ or /d/ sound add the extra syllable: decided, wanted, needed."
+        say: "Only verbs ending in a, T, or, D, sound add the extra syllable: decided, wanted, needed."
+        vi: "Chỉ động từ tận cùng /t/, /d/ mới thêm âm tiết /ɪd/."
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Talk about your school days"
+    heading_vi: "Trả lời thành tiếng — dùng thì quá khứ đơn, mỗi câu 10 giây"
+    items:
+      - {q: "What was your favourite subject at school?", hint: "My favourite subject was… because…"}
+      - {q: "Which subject were you not very good at?", hint: "I wasn't very good at…"}
+      - {q: "Did you have to wear a uniform?", hint: "Yes, we had to wear… / No, we didn't."}
+      - {q: "Were your teachers strict?", hint: "Some of my teachers were…"}
+      - {q: "Did you have a lot of homework?", hint: "I had to do homework every…"}
+    lines:
+      - emma: "Now it's your turn. Answer each question out loud. Use the past simple, and give a reason."
+        vi: "Đến lượt bạn: trả lời thành tiếng, dùng quá khứ đơn và nêu lý do."
+      - {emma: "What was your favourite subject at school?", focus: 0}
+      - {wait: 10}
+      - {emma: "Which subject were you not very good at?", focus: 1}
+      - {wait: 10}
+      - {emma: "Did you have to wear a uniform?", focus: 2}
+      - {wait: 10}
+      - {emma: "Were your teachers strict?", focus: 3}
+      - {wait: 10}
+      - {emma: "Did you have a lot of homework?", focus: 4}
+      - {wait: 10}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Subjects: Maths, History, Geography, Science, Chemistry, Physics, Biology, Economics", vi: "Viết hoa, đúng chính tả: ph, ch, sc"}
+      - {en: "Past simple: learned, studied, decided, stopped · knew, read, thought, taught, chose", vi: "Có quy tắc và bất quy tắc"}
+      - {en: "didn't + base verb · Did you + base verb? · had to + base verb", vi: "Phủ định, câu hỏi, 'phải' trong quá khứ"}
+      - {en: "-ed: /t/ finished · /d/ played · /ɪd/ hated", vi: "Ba cách đọc -ed"}
+      - {en: "Next: Speaking 2 and Vocabulary 2", vi: "Tiếp theo: trả lời câu hỏi về quá khứ, nói về sở thích"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The school subjects. Check your spelling.", focus: 0}
+      - {emma: "The past simple, regular and irregular.", focus: 1}
+      - {emma: "Didn't, did, and had to, all with the base verb.", focus: 2}
+      - {emma: "And three ways to say -ed.", say: "And three ways to say, E, D.", focus: 3}
+      - {tom: "Next, Speaking 2: answering questions about the past.", say: "Next, Speaking two: answering questions about the past.", focus: 4}
+      - {emma: "See you in the next video!", focus: 4}

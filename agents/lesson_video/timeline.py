@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import math
+import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable, Optional
@@ -27,6 +29,8 @@ class Frame:
     vi: str
     countdown: Optional[int] = None
     note: str = ""
+    mark: tuple = ()  # cụm từ tô vàng (cảnh passage)
+    audio: str = ""   # đang phát file nghe của sách (mã file)
     start: float = 0.0
     dur: float = 0.0
 
@@ -57,8 +61,18 @@ def _norm(x: np.ndarray) -> np.ndarray:
     return np.clip(x.astype(np.float32) * (PEAK * 32767 / peak), -32768, 32767).astype(np.int16)
 
 
-def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir: Optional[Path] = None) -> Timeline:
-    """`cache_dir`: lưu tiếng từng câu theo (bộ đọc, giọng, chữ) — dựng lại chỉ đọc những câu đã đổi."""
+def _decode(path: Path, rate: int, start: float, end: Optional[float]) -> np.ndarray:
+    """Đọc một đoạn file nghe (mp3, wav…) thành mono int16 ở tần số `rate` bằng ffmpeg."""
+    cmd = ["ffmpeg", "-v", "error", "-ss", f"{start:.3f}"] + (["-to", f"{end:.3f}"] if end is not None else [])
+    cmd += ["-i", str(path), "-ac", "1", "-ar", str(rate), "-f", "s16le", "-"]
+    out = subprocess.run(cmd, capture_output=True, check=True).stdout
+    return np.frombuffer(out, dtype=np.int16).copy()
+
+
+def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir: Optional[Path] = None,
+          book_dir: Optional[Path] = None) -> Timeline:
+    """`cache_dir`: lưu tiếng từng câu theo (bộ đọc, giọng, chữ) — dựng lại chỉ đọc những câu đã đổi.
+    `book_dir`: thư mục sách, cần khi kịch bản phát file nghe (`track`)."""
     voices: dict[str, str] = {}
     for key, sp in lesson.speakers.items():  # báo lỗi giọng trước khi đọc câu nào
         try:
@@ -110,23 +124,40 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
     spoken = sum(1 for sc in lesson.scenes for ln in sc.lines if ln.speaker)
     done = 0
     for si, sc in enumerate(lesson.scenes):
-        focus, revealed = None, set()
+        focus, revealed, mark = None, set(), ()
         if si and rate:
             add(silence(lesson.scene_gap), None)
         if sc.chapter:
             chapters.append((pos / rate if rate else 0.0, sc.chapter))
         for ln in sc.lines:
             if ln.focus is not None:
+                if ln.focus != focus:
+                    mark = ()
                 focus = ln.focus
+            if ln.mark:
+                mark = tuple(ln.mark)
             revealed |= set(ln.reveal)
-            if ln.speaker:
+            if ln.track:
+                if rate is None:
+                    rate = getattr(engine, "RATE", 16000)
+                    parts.append(silence(LEAD))
+                    pos = len(parts[0])
+                if book_dir is None:
+                    raise TTSError(f"cần thư mục sách để phát {ln.track}")
+                files = json.loads((Path(book_dir) / "book.json").read_text(encoding="utf-8")).get("files", {})
+                if ln.track not in files:
+                    raise TTSError(f"không có file nghe {ln.track} trong book.json")
+                data = _norm(_decode(Path(book_dir) / files[ln.track]["path"], rate, ln.start, ln.end))
+                fr = Frame(si, focus, frozenset(revealed), None, "", ln.vi, note=ln.note, mark=mark, audio=ln.track)
+                add(np.concatenate([data, silence(lesson.gap + ln.pause)]), fr)
+            elif ln.speaker:
                 data, r = synth(ln.spoken, voices[ln.speaker])
                 if rate is None:
                     rate = r
                     parts.append(silence(LEAD))
                     pos = len(parts[0])
                 data = _norm(_resample(data, r, rate))
-                fr = Frame(si, focus, frozenset(revealed), ln.speaker, ln.text, ln.vi)
+                fr = Frame(si, focus, frozenset(revealed), ln.speaker, ln.text, ln.vi, mark=mark)
                 add(np.concatenate([data, silence(lesson.gap + ln.pause)]), fr)
                 done += 1
                 if done % 10 == 0 or done == spoken:
@@ -140,7 +171,7 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
                 k = math.ceil(left)
                 while left > 1e-6:
                     step = left - (k - 1) if k > 1 else left
-                    fr = Frame(si, focus, frozenset(revealed), None, "", ln.vi, countdown=k, note=ln.note)
+                    fr = Frame(si, focus, frozenset(revealed), None, "", ln.vi, countdown=k, note=ln.note, mark=mark)
                     add(silence(step), fr)
                     left -= step
                     k -= 1

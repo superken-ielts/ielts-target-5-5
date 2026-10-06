@@ -1,0 +1,151 @@
+# Video bài giảng Unit 2 · Listening 1A–D: numbers (sách in trang 24). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-listening-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Dòng `track: <mã file>` phát nguyên file nghe của sách (book.json › files);
+# `note` là nhãn hiện trên thanh phụ đề. Đáp án bài C theo Tapescript Track 16 (sách in trang 279).
+id: U02-listening-1
+activity: U02-listening
+title: "Unit 2 · Learning"
+subtitle: "Listening 1: numbers"
+title_vi: "Nghe và nói số — 16 hay 60, số hàng trăm, hàng nghìn (có file nghe của sách)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 2 Listening. Today: numbers."
+        say: "Welcome to Unit two Listening. Today: numbers."
+        vi: "Listening Unit 2: nghe số."
+      - tom: "Numbers are easy!"
+      - emma: "Are they? Sixteen or sixty? In the Listening Module, numbers are in almost every section: prices, dates, phone numbers, room numbers."
+        vi: "Mười sáu hay sáu mươi? Bài thi Nghe có số ở gần như mọi phần."
+      - emma: "Today you'll hear the recordings from the book."
+        vi: "Hôm nay nghe file ghi âm của sách."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Listening 1, bài A–D"
+    items:
+      - {en: "A: say the numbers — 16 or 60?", vi: "Đọc số: -teen hay -ty?"}
+      - {en: "B: listen and check (Track 15)", vi: "Nghe kiểm tra"}
+      - {en: "C: listen and write eight numbers (Track 16)", vi: "Nghe và viết 8 số"}
+      - {en: "D: bigger numbers (Track 17)", vi: "Số hàng nghìn"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, practise saying some numbers.", focus: 0}
+      - {emma: "Then listen and check.", focus: 1}
+      - {emma: "Then a short test: eight numbers.", focus: 2}
+      - {emma: "And bigger numbers: thousands.", focus: 3}
+
+  - kind: compare
+    chapter: "Bài A: 16 hay 60?"
+    heading: "Listening 1A · Practise saying these numbers"
+    heading_vi: "-teen nhấn âm cuối, kéo dài /iːn/ · -ty nhấn âm đầu, /ti/ ngắn"
+    items:
+      - title: "-teen: sixTEEN"
+        title_vi: "Nhấn âm sau, âm 'n' rõ"
+        lines: ["16 = sixteen", "13 thirteen · 14 fourteen · 15 fifteen", "17 seventeen · 18 eighteen · 19 nineteen"]
+      - title: "-ty: SIXty"
+        title_vi: "Nhấn âm đầu, không có 'n'"
+        lines: ["60 = sixty", "30 thirty · 40 forty · 50 fifty", "70 seventy · 80 eighty · 90 ninety"]
+    lines:
+      - emma: "Exercise A. Work with a partner. Practise saying these numbers: 16, 60, 100, 160, 166, 600, 606, 616, 660, 666."
+        say: "Exercise eigh. Work with a partner. Practise saying these numbers."
+        vi: "Bài A: đọc các số 16 60 100 160 166 600 606 616 660 666."
+      - {emma: "The most important difference: sixteen, and sixty.", focus: 0}
+      - {tom: "Sixteen. The stress is at the end, and you can hear the n.", focus: 0}
+      - {tom: "Sixty. The stress is at the start, and it ends with a short t y.", say: "Sixty. The stress is at the start, and it ends with a short tee.", focus: 1}
+      - emma: "Now say them after me. Thirteen, thirty. Fourteen, forty. Fifteen, fifty. Eighteen, eighty."
+        vi: "Nhắc lại theo cặp."
+      - {wait: 6, note: "Say them out loud", vi: "Đọc thành tiếng: 13 30 · 14 40 · 15 50 · 18 80"}
+      - emma: "And in British English, we say 'and' after hundred: a hundred and sixty, six hundred and sixteen."
+        vi: "Tiếng Anh Anh: thêm 'and' sau hundred — a hundred and sixty."
+
+  - kind: blanks
+    chapter: "Bài B: nghe kiểm tra"
+    heading: "Listening 1B · Listen and check. Then practise saying the numbers again"
+    heading_vi: "Track 15 — file nghe của sách"
+    items:
+      - {n: 1, answer: "16", tip: "sixteen"}
+      - {n: 2, answer: "60", tip: "sixty"}
+      - {n: 3, answer: "100", tip: "a hundred / one hundred"}
+      - {n: 4, answer: "160", tip: "a hundred and sixty"}
+      - {n: 5, answer: "166", tip: "a hundred and sixty-six"}
+      - {n: 6, answer: "600", tip: "six hundred"}
+      - {n: 7, answer: "606", tip: "six hundred and six"}
+      - {n: 8, answer: "616", tip: "six hundred and sixteen"}
+      - {n: 9, answer: "660", tip: "six hundred and sixty"}
+      - {n: 10, answer: "666", tip: "six hundred and sixty-six"}
+    lines:
+      - emma: "Exercise B. Listen and check. Then practise saying the numbers again."
+        vi: "Bài B: nghe kiểm tra rồi đọc lại."
+        reveal: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      - {track: U02-L1B, note: "Track 15 · Listening 1B", vi: "Nghe và nhắc lại từng số."}
+      - {tom: "A hundred and sixty-six. Six hundred and sixteen. Six hundred and sixty-six.", focus: 9}
+      - emma: "Good! Remember the 'and' after hundred."
+
+  - kind: blanks
+    chapter: "Bài C: nghe và viết số"
+    heading: "Listening 1C · Listen and write the numbers that you hear"
+    heading_vi: "Track 16 — viết số ra giấy (đáp án theo Tapescript)"
+    items:
+      - {n: 1, answer: "18", tip: "eighTEEN — stress at the end"}
+      - {n: 2, answer: "80", tip: "EIGHty — stress at the start"}
+      - {n: 3, answer: "96", tip: "ninety-six"}
+      - {n: 4, answer: "120", tip: "a hundred and twenty"}
+      - {n: 5, answer: "243", tip: "two hundred and forty-three"}
+      - {n: 6, answer: "531", tip: "five hundred and thirty-one"}
+      - {n: 7, answer: "852", tip: "eight hundred and fifty-two"}
+      - {n: 8, answer: "984", tip: "nine hundred and eighty-four"}
+    lines:
+      - emma: "Exercise C. Listen and write the numbers that you hear. Get a pen and paper ready."
+        vi: "Bài C: chuẩn bị giấy bút, nghe và viết số."
+      - {track: U02-L1C, note: "Track 16 · Listening 1C", vi: "Viết 8 số bạn nghe được."}
+      - {wait: 5, note: "Check your numbers", vi: "Xem lại các số bạn viết."}
+      - {emma: "Let's check. Number one.", focus: 0}
+      - {tom: "Eighteen. One, eight.", reveal: 1}
+      - {emma: "Number two.", focus: 1}
+      - {tom: "Eighty. Eight, zero.", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "Ninety-six.", reveal: 3}
+      - {emma: "Four.", focus: 3}
+      - {tom: "A hundred and twenty.", reveal: 4}
+      - {emma: "Five.", focus: 4}
+      - {tom: "Two hundred and forty-three.", reveal: 5}
+      - {emma: "Six.", focus: 5}
+      - {tom: "Five hundred and thirty-one.", reveal: 6}
+      - {emma: "Seven.", focus: 6}
+      - {tom: "Eight hundred and fifty-two.", reveal: 7}
+      - {emma: "And eight.", focus: 7}
+      - {tom: "Nine hundred and eighty-four.", reveal: 8}
+
+  - kind: bullets
+    chapter: "Bài D: số lớn"
+    heading: "Listening 1D · Listen and practise saying these bigger numbers"
+    heading_vi: "Track 17 — chú ý dấu phẩy và chữ 'and'"
+    items:
+      - {en: "1,000 — a thousand / one thousand", vi: "một nghìn"}
+      - {en: "10,000 — ten thousand", vi: "mười nghìn"}
+      - {en: "100,000 — a hundred thousand", vi: "một trăm nghìn"}
+      - {en: "1,100 — one thousand one hundred (or: eleven hundred)", vi: "một nghìn một trăm"}
+      - {en: "1,500 — one thousand five hundred (or: fifteen hundred)", vi: "một nghìn năm trăm"}
+      - {en: "1,550 · 1,555 — one thousand five hundred and fifty (-five)", vi: "'and' trước hàng chục"}
+    lines:
+      - emma: "Exercise D. Listen and practise saying these bigger numbers."
+        vi: "Bài D: nghe và đọc số lớn."
+      - {track: U02-L1D, note: "Track 17 · Listening 1D", vi: "Nghe rồi nhắc lại."}
+      - {emma: "A thousand, or one thousand.", focus: 0}
+      - {emma: "Ten thousand.", focus: 1}
+      - {emma: "A hundred thousand.", focus: 2}
+      - {emma: "One thousand one hundred. People also say: eleven hundred.", focus: 3}
+      - {emma: "One thousand five hundred.", focus: 4}
+      - {emma: "One thousand five hundred and fifty. One thousand five hundred and fifty-five.", focus: 5}
+      - tom: "And we never say thousands or hundreds with an s after a number: two thousand, not two thousands."
+        vi: "Không thêm 's': two thousand (không phải two thousands)."
+      - emma: "Exactly right. Next video: months, ordinal numbers and dates."
+        vi: "Video tiếp theo: tháng, số thứ tự và ngày tháng."

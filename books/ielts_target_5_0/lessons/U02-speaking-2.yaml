@@ -1,0 +1,286 @@
+# Video bài giảng Unit 2 · Speaking 2 + Vocabulary 2 (sách in trang 23). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-speaking-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Bộ sách không có file nghe Track 14 nên Emma (giám khảo), Tom (Speaker 1)
+# và Mai (Speaker 2) đọc lại đúng Tapescript Track 14 (sách in trang 279) trong cảnh hide_text.
+# Đáp án Speaking 2A (1 Speaker 2, 2 Speaker 1, 3 Speaker 2) và Vocabulary 2A (P/N) là đáp án gợi ý — Answer key không có.
+id: U02-speaking-2
+activity: U02-speaking-vocab
+title: "Unit 2 · Learning"
+subtitle: "Speaking 2 & Vocabulary 2: questions about the past, likes and preferences"
+title_vi: "Trả lời câu hỏi về quá khứ sao cho hay hơn; từ chỉ thích / không thích"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 2: Learning. Today we have a new student. Hello, Mai!"
+        say: "Welcome back to Unit two: Learning. Today we have a new student. Hello, Mai!"
+        vi: "Hôm nay có thêm bạn Mai."
+      - mai: "Hi everyone! I'm Mai. I'm studying for IELTS too."
+        say: "Hi everyone! I'm Mai. I'm studying for eye-elts too."
+      - tom: "Hi, Mai!"
+      - emma: "Today: how to give a better answer about the past, and words to say what you liked and didn't like."
+        vi: "Hôm nay: trả lời câu hỏi về quá khứ cho hay, và từ chỉ thích / không thích."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Speaking 2A: listen to two students — who gives a better answer?", vi: "Nghe hai bạn trả lời — ai trả lời hay hơn?"}
+      - {en: "What makes a good answer", vi: "Thế nào là câu trả lời tốt"}
+      - {en: "Speaking 2B: your turn", vi: "Đến lượt bạn"}
+      - {en: "Vocabulary 2: likes and preferences — positive or negative?", vi: "Từ chỉ thích / không thích — tích cực hay tiêu cực?"}
+      - {en: "A model answer about school subjects", vi: "Bài nói mẫu về các môn học"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, Tom and Mai answer three questions. You decide who gives a better answer.", focus: 0}
+      - {emma: "Then, we look at what makes a good answer.", focus: 1}
+      - {emma: "Your turn to speak.", focus: 2}
+      - {emma: "Then, words for likes and preferences.", focus: 3}
+      - {emma: "And finally, Mai gives a model answer.", focus: 4}
+
+  - kind: mcq
+    chapter: "Speaking 2A: ai trả lời hay hơn?"
+    heading: "Speaking 2A · Tick the speaker who gives a better answer"
+    heading_vi: "Đọc ba câu hỏi trước — rồi nghe hai bạn trả lời"
+    items: &better
+      - {n: 1, q: "Did you enjoy being at school?", keys: ["1", "2"], options: ["Speaker 1", "Speaker 2"], answer: "2"}
+      - {n: 2, q: "What was your favourite subject at school?", keys: ["1", "2"], options: ["Speaker 1", "Speaker 2"], answer: "1"}
+      - {n: 3, q: "Who was your favourite teacher at school?", keys: ["1", "2"], options: ["Speaker 1", "Speaker 2"], answer: "2"}
+    lines:
+      - emma: "Speaking 2, Exercise A. Look at these questions about being at school."
+        say: "Speaking two, Exercise eigh. Look at these questions about being at school."
+        vi: "Speaking 2A: ba câu hỏi về thời đi học."
+      - {emma: "Did you enjoy being at school?", focus: 0}
+      - {emma: "What was your favourite subject at school?", focus: 1}
+      - {emma: "Who was your favourite teacher at school?", focus: 2}
+      - emma: "Now listen. I'm the examiner. Tom is Speaker 1, and Mai is Speaker 2. Tick the speaker who gives a better answer."
+        say: "Now listen. I'm the examiner. Tom is Speaker one, and Mai is Speaker two. Tick the speaker who gives a better answer."
+        vi: "Emma là giám khảo, Tom là Speaker 1, Mai là Speaker 2. Đánh dấu bạn trả lời hay hơn."
+
+  - kind: mcq
+    heading: "Speaking 2A · Tick the speaker who gives a better answer"
+    heading_vi: "Nghe — lời thoại được ẩn"
+    hide_text: true
+    roles: {emma: examiner, tom: "Speaker 1", mai: "Speaker 2"}
+    items: *better
+    lines:
+      - {emma: "Did you enjoy being at school?", focus: 0}
+      - {tom: "No, I didn't.", focus: 0}
+      - {emma: "Did you enjoy being at school?", focus: 0}
+      - {mai: "Well, I enjoyed school when we studied the subjects I was good at, but I didn't really enjoy it when we studied Maths and Physics. I found those lessons very difficult.", focus: 0}
+      - {emma: "What was your favourite subject at school?", focus: 1}
+      - {tom: "History. I was very good at remembering dates, and I loved learning about kings and queens.", focus: 1}
+      - {emma: "What was your favourite subject at school?", focus: 1}
+      - {mai: "Maths. I like my teacher of Maths.", focus: 1}
+      - {emma: "Who was your favourite teacher at school?", focus: 2}
+      - {tom: "Mr Adams. But I also liked Mr Brown.", focus: 2}
+      - {emma: "Who was your favourite teacher at school?", focus: 2}
+      - {mai: "I think it was Mr Lindsey. He was our English teacher. He made the lessons really interesting, and wasn't strict like some of the other teachers.", focus: 2}
+      - {wait: 6, note: "Tick Speaker 1 or Speaker 2", vi: "Chọn Speaker 1 hoặc Speaker 2 cho từng câu."}
+
+  - kind: mcq
+    chapter: "Đáp án 2A"
+    heading: "Speaking 2A · Answers"
+    heading_vi: "Câu trả lời tốt: trả lời đúng câu hỏi + lý do + chi tiết"
+    items: *better
+    lines:
+      - {emma: "Question one: did you enjoy being at school?", focus: 0}
+      - {tom: "I only said: No, I didn't. That's too short.", focus: 0}
+      - {mai: "I said what I enjoyed, what I didn't enjoy, and why.", reveal: 1}
+      - emma: "Right. Speaker 2 is better. A one-line answer gives the examiner nothing to listen to."
+        say: "Right. Speaker two is better. A one-line answer gives the examiner nothing to listen to."
+        vi: "Câu 1: Speaker 2 — trả lời quá ngắn thì giám khảo không có gì để chấm."
+      - {emma: "Question two: what was your favourite subject?", focus: 1}
+      - {tom: "This time I gave two reasons. I was good at remembering dates, and I loved learning about kings and queens.", reveal: 2}
+      - emma: "Yes. Speaker 1 is better. Mai's answer is short, and it has a mistake. We need the past, and we say: my Maths teacher. So: I liked my Maths teacher."
+        say: "Yes. Speaker one is better. Mai's answer is short, and it has a mistake. We need the past, and we say: my Maths teacher. So: I liked my Maths teacher."
+        vi: "Câu 2: Speaker 1. Lỗi của Speaker 2: 'I like my teacher of Maths' → 'I liked my Maths teacher'."
+      - {emma: "Question three: who was your favourite teacher?", focus: 2}
+      - {tom: "I just said two names. No reasons.", focus: 2}
+      - {mai: "I said who he was, and why I liked him.", reveal: 3}
+      - emma: "Exactly. Speaker 2 is better. These answers are suggested; the answer key doesn't include this exercise."
+        say: "Exactly. Speaker two is better. These answers are suggested; the answer key doesn't include this exercise."
+        vi: "Câu 3: Speaker 2. Đáp án gợi ý (Answer key không có bài này)."
+
+  - kind: compare
+    chapter: "Câu trả lời tốt"
+    heading: "What makes a better answer?"
+    heading_vi: "Cùng một câu hỏi: câu trả lời ngắn và câu trả lời mở rộng"
+    items:
+      - title: "Too short"
+        title_vi: "Quá ngắn — không có gì để chấm"
+        lines: ["Did you enjoy being at school?", "No, I didn't.", "Mr Adams. But I also liked Mr Brown."]
+      - title: "Better: answer + reason + detail"
+        title_vi: "Trả lời + lý do + chi tiết"
+        lines: ["No, not really. I didn't enjoy Maths and Physics,", "because I found those lessons very difficult.", "My favourite teacher was Mr Lindsey, because he made the lessons interesting."]
+    lines:
+      - emma: "So, what makes a better answer?"
+        vi: "Vậy thế nào là câu trả lời tốt hơn?"
+      - {emma: "On the left: too short. The examiner can't hear your English.", focus: 0}
+      - {emma: "On the right: answer the question, give a reason with because, and add a detail.", focus: 1}
+      - {tom: "So I can still say no, but then I explain why.", focus: 1}
+      - emma: "Exactly. Two or three sentences are perfect for Part 1. And use the past simple for your school days."
+        say: "Exactly. Two or three sentences are perfect for Part one. And use the past simple for your school days."
+        vi: "Phần 1: hai, ba câu là vừa; dùng quá khứ đơn khi nói về thời đi học."
+
+  - kind: practice
+    chapter: "Speaking 2B: đến lượt bạn"
+    heading: "Speaking 2B · Your turn"
+    heading_vi: "Trả lời câu 1–3 thành tiếng: trả lời + lý do + chi tiết, mỗi câu 12 giây"
+    items:
+      - {q: "Did you enjoy being at school?", hint: "Yes, I did, especially… because… / Not really. I didn't enjoy…"}
+      - {q: "What was your favourite subject at school?", hint: "My favourite subject was… because…"}
+      - {q: "Who was your favourite teacher at school?", hint: "It was… He / She was our … teacher. He / She…"}
+    lines:
+      - emma: "Exercise B. Now you answer the three questions. Remember: answer, reason, detail."
+        vi: "Bài B: bạn trả lời ba câu hỏi — trả lời, lý do, chi tiết."
+      - {emma: "Did you enjoy being at school?", focus: 0}
+      - {wait: 12}
+      - {emma: "What was your favourite subject at school?", focus: 1}
+      - {wait: 12}
+      - {emma: "Who was your favourite teacher at school?", focus: 2}
+      - {wait: 12}
+
+  - kind: blanks
+    chapter: "Vocabulary 2A: tích cực hay tiêu cực?"
+    heading: "Vocabulary 2A · Positive (P) or negative (N)? Sentences 1–5"
+    heading_vi: "Nhìn cụm từ ở khung phải — người nói thích (P) hay không thích (N)?"
+    items:
+      - {n: 1, q: "I really liked learning Mathematics at school.  ___", answer: "P", hint: "really liked", tip: "really liked = liked a lot"}
+      - {n: 2, q: "I didn't like History very much.  ___", answer: "N", hint: "didn't like … very much", tip: "didn't like … very much = a polite way to say: I didn't like it"}
+      - {n: 3, q: "I liked Physics, but I preferred Chemistry.  ___", answer: "P", hint: "preferred", tip: "prefer = like more: I liked both, but Chemistry more"}
+      - {n: 4, q: "My favourite subject was Economics.  ___", answer: "P", hint: "favourite", tip: "favourite = the one you liked best"}
+      - {n: 5, q: "I really hated learning History.  ___", answer: "N", hint: "really hated", tip: "hate = very strong: really didn't like"}
+    lines:
+      - emma: "Vocabulary 2: likes and preferences. Exercise A. Look at the words on the right. Is the speaker positive or negative?"
+        say: "Vocabulary two: likes and preferences. Exercise eigh. Look at the words on the right. Is the speaker positive, or negative?"
+        vi: "Vocabulary 2A: người nói tích cực (P) hay tiêu cực (N)?"
+      - {wait: 8, note: "Pause the video: write P or N", vi: "Tạm dừng video, viết P hoặc N."}
+      - {emma: "One: I really liked learning Mathematics at school.", focus: 0}
+      - {tom: "Positive.", reveal: 1}
+      - {emma: "Two: I didn't like History very much.", focus: 1}
+      - {mai: "Negative. It's a polite way to say I didn't like it.", reveal: 2}
+      - {emma: "Three: I liked Physics, but I preferred Chemistry.", focus: 2}
+      - {tom: "Positive. The speaker liked both subjects, but liked Chemistry more.", reveal: 3}
+      - {emma: "Four: My favourite subject was Economics.", focus: 3}
+      - {mai: "Positive.", reveal: 4}
+      - {emma: "Five: I really hated learning History.", focus: 4}
+      - {tom: "Very negative!", reveal: 5}
+
+  - kind: blanks
+    heading: "Vocabulary 2A · Positive (P) or negative (N)? Sentences 6–10"
+    heading_vi: "Đáp án gợi ý — Answer key không có bài này"
+    items:
+      - {n: 6, q: "I loved learning on computers.  ___", answer: "P", hint: "loved", tip: "love = very strong: really liked"}
+      - {n: 7, q: "I always enjoyed my English classes.  ___", answer: "P", hint: "enjoyed", tip: "enjoy + noun / -ing: I enjoyed learning English"}
+      - {n: 8, q: "I was very keen on sports when I was at school.  ___", answer: "P", hint: "was keen on", tip: "be keen on + noun / -ing = be interested in, like"}
+      - {n: 9, q: "I thought Geography was really boring.  ___", answer: "N", hint: "boring", tip: "boring ↔ interesting; the person is bored, the subject is boring"}
+      - {n: 10, q: "The most interesting subject was Science.  ___", answer: "P", hint: "interesting", tip: "the most interesting = more interesting than all the others"}
+    lines:
+      - {emma: "Six: I loved learning on computers.", focus: 0}
+      - {tom: "Positive.", reveal: 6}
+      - {emma: "Seven: I always enjoyed my English classes.", focus: 1}
+      - {mai: "Positive.", reveal: 7}
+      - {emma: "Eight: I was very keen on sports when I was at school.", focus: 2}
+      - {tom: "Positive. Keen on means I liked it, I was interested in it.", reveal: 8}
+      - {emma: "Nine: I thought Geography was really boring.", focus: 3}
+      - {mai: "Negative.", reveal: 9}
+      - {emma: "Ten: The most interesting subject was Science.", focus: 4}
+      - {tom: "Positive.", reveal: 10}
+      - emma: "Careful with boring and bored. The subject was boring. I was bored."
+        vi: "Môn học 'boring' (chán), người học 'bored' (thấy chán)."
+
+  - kind: vocab
+    chapter: "Cụm từ chỉ thích / không thích"
+    heading: "Useful phrases · Likes and preferences"
+    heading_vi: "Mẫu câu và giới từ đi kèm"
+    items:
+      - {w: "I really enjoyed …", pos: "enjoy + noun / -ing", vi: "Mình rất thích …", ex: "I really enjoyed doing experiments in Chemistry."}
+      - {w: "I was keen on …", pos: "be keen on + noun / -ing", vi: "Mình mê, rất thích …", ex: "I was very keen on football when I was at school."}
+      - {w: "I preferred A to B", pos: "prefer + noun + to + noun", vi: "Mình thích A hơn B", ex: "I preferred Biology to Physics."}
+      - {w: "My favourite subject was …", pos: "favourite (British spelling)", vi: "Môn mình thích nhất là …", ex: "My favourite subject was English, because the lessons were fun."}
+      - {w: "I didn't like … very much", pos: "polite negative", vi: "Mình không thích … lắm", ex: "I didn't like Geography very much."}
+      - {w: "… was really boring", pos: "boring ↔ interesting", vi: "… rất chán", ex: "I thought History was really boring, because we just copied notes."}
+    lines:
+      - emma: "Here are some useful phrases. Notice the words that come after them."
+        vi: "Chú ý từ đi sau mỗi cụm."
+      - {emma: "I really enjoyed. After enjoy, use a noun or an -ing form.", say: "I really enjoyed. After enjoy, use a noun, or an, I, N, G, form.", focus: 0}
+      - {tom: "I really enjoyed doing experiments in Chemistry.", focus: 0}
+      - {emma: "I was keen on.", focus: 1}
+      - {mai: "I was very keen on football when I was at school.", focus: 1}
+      - {emma: "I preferred A to B. Use to, not than.", say: "I preferred eigh to B. Use to, not than.", focus: 2}
+      - {tom: "I preferred Biology to Physics.", focus: 2}
+      - {emma: "My favourite subject was.", focus: 3}
+      - {mai: "My favourite subject was English, because the lessons were fun.", focus: 3}
+      - {emma: "I didn't like it very much. It's softer than I hated it.", focus: 4}
+      - {tom: "I didn't like Geography very much.", focus: 4}
+      - {emma: "And boring, or interesting.", focus: 5}
+      - {mai: "I thought History was really boring, because we just copied notes.", focus: 5}
+
+  - kind: letter
+    chapter: "Bài nói mẫu"
+    heading: "Vocabulary 2B · Mai talks about her school subjects"
+    heading_vi: "Bài nói mẫu dùng các cụm từ ở trên"
+    items:
+      - text: "At school, I studied a lot of subjects, but I really enjoyed the science subjects."
+        note: "really enjoyed"
+      - text: "My favourite subject was Biology, because I loved learning about the human body."
+        note: "favourite … because …"
+      - text: "I liked Physics, but I preferred Chemistry, because the experiments were fun."
+        note: "liked …, but preferred …"
+      - text: "I didn't like History very much. I thought it was really boring, because we had to remember so many dates."
+        note: "didn't like … very much · boring"
+      - text: "However, I was very keen on English, and that's why I'm learning it now!"
+        note: "was keen on"
+    lines:
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Talk about the subjects you studied"
+    heading_vi: "Nói thành tiếng, mỗi câu 15 giây — dùng ít nhất hai cụm từ mới"
+    items:
+      - {q: "Which subjects did you enjoy at school? Why?", hint: "I really enjoyed… because… / I was keen on…"}
+      - {q: "Which subjects didn't you like? Why?", hint: "I didn't like… very much. I thought it was…"}
+      - {q: "Did you prefer science subjects or languages?", hint: "I preferred… to…, because…"}
+    lines:
+      - emma: "Exercise B. Now talk about the subjects you studied. Say why you liked or didn't like them."
+        vi: "Bài B: kể các môn bạn đã học, nói vì sao thích hay không thích."
+      - {emma: "Which subjects did you enjoy at school? Why?", focus: 0}
+      - {wait: 15}
+      - {emma: "Which subjects didn't you like? Why?", focus: 1}
+      - {wait: 15}
+      - {emma: "Did you prefer science subjects or languages?", focus: 2}
+      - {wait: 15}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Speaking 2A: 1 Speaker 2 · 2 Speaker 1 · 3 Speaker 2", vi: "Đáp án gợi ý"}
+      - {en: "A good answer = answer + reason (because…) + detail", vi: "Hai, ba câu cho mỗi câu hỏi Phần 1"}
+      - {en: "Vocabulary 2A: 1 P · 2 N · 3 P · 4 P · 5 N · 6 P · 7 P · 8 P · 9 N · 10 P", vi: "Tích cực / tiêu cực"}
+      - {en: "enjoy + -ing · keen on + -ing · prefer A to B · boring / bored", vi: "Chú ý từ đi kèm"}
+      - {en: "Next: Unit 2 Listening and Writing", vi: "Tiếp theo: Listening và Writing"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Speaking 2A: Speaker 2, Speaker 1, Speaker 2.", say: "Speaking two eigh: Speaker two, Speaker one, Speaker two.", focus: 0}
+      - {emma: "A good answer: answer, reason, detail.", focus: 1}
+      - {emma: "Positive or negative: check your answers.", focus: 2}
+      - {emma: "And remember the words after enjoy, keen on and prefer.", focus: 3}
+      - {mai: "Thanks, Emma! See you next time.", focus: 4}
+      - {tom: "Bye!", focus: 4}
