@@ -272,8 +272,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 4:* bộ đọc `kokoro` (kokoro-onnx, giọng `b*` tách âm kiểu Anh), `--engine auto` (Kokoro nếu có model, không thì Flite), giọng khai theo bộ đọc, bộ nhớ tiếng từng câu; cách đọc trong `say` kiểm tra với cả hai bộ đọc. Model lấy từ gói npm `kokoro-q8-shards` (Hugging Face bị chặn trong môi trường cloud) theo lựa chọn của người dùng.
 - [ ] **P2-33** Video cho các unit và kỹ năng còn lại (viết thêm kịch bản `books/<sách>/lessons/*.yaml`).
   - *Đợt 5:* xong Unit 1 Writing 1 và Writing 2 (P2-34); còn Unit 1 Reading, Listening và các unit khác.
+  - *Đợt 6:* xong Unit 1 Writing 3 (P2-35).
 - [x] **P2-34** Video **Unit 1 · Writing 1** (organizing your writing) và **Writing 2** (types of letter / starting and ending letters), mỗi video kết thúc bằng một **thư mẫu đọc thành tiếng** (Writing 1: thư thân mật 160 từ đi qua đủ 6 bước; Writing 2: thư trang trọng hỏi thông tin 154 từ). Gắn vào hoạt động Unit 1 · Writing (phiên 4 và 5).
   - *Đợt 5:* thêm kiểu cảnh `order` (sắp xếp các bước), `timing` (chia 20 phút), `letter` (thư mẫu cả trang, đoạn đang đọc tô màu, ghi chú lề, đếm từ) và dòng `read`; cảnh `pairs` cho phép hai dòng chữ.
+- [x] **P2-35** Video **Unit 1 · Writing 3** (organizing points in a personal letter): giải bài A (chọn ý), B (đọc thư của Bruno, sắp xếp 9 ý theo thứ tự xuất hiện), C (điền lời chào, lời kết), cách Bruno chia đoạn, **thư mẫu của Lan 156 từ** cùng dạng đề, và cách làm bài viết Workbook trang 6.
+  - *Đợt 6:* Workbook **không có** trong bộ sách đã nhập (`book.yaml › missing: work-book`) nên chưa giải được đề Workbook trang 6; video chỉ hướng dẫn cách làm. Cần ảnh trang 6 hoặc file Workbook để làm video giải đề (P2-36).
+- [ ] **P2-36** Video giải bài tập Workbook (Unit 1 trang 6, …) — chờ người dùng thêm Workbook vào `books/ielts_target_5_0/` (rồi chạy lại agent) hoặc gửi ảnh từng trang.
 
 ### Cổng G2
 

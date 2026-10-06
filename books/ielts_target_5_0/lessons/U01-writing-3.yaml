@@ -1,0 +1,306 @@
+# Video bài giảng Unit 1 · Writing 3 (sách in trang 18). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-writing-3.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. `read: tom` trong cảnh letter = Tom đọc nguyên đoạn thư `focus`.
+# Workbook (trang 6) không có trong bộ sách đã nhập → cuối video chỉ hướng dẫn cách làm bài viết, không giải đề Workbook.
+id: U01-writing-3
+activity: U01-writing
+title: "Unit 1 · Life"
+subtitle: "Writing 3: organizing points in a personal letter"
+title_vi: "Chọn ý và sắp xếp ý trong thư giới thiệu bản thân — giải bài A, B, C, thư mẫu"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 1. This is Writing 3: organizing points in a personal letter."
+        say: "Welcome back to Unit one. This is Writing three: organizing points in a personal letter."
+        vi: "Writing 3 — sắp xếp các ý trong một lá thư cá nhân."
+      - tom: "A personal letter? Like a letter to a friend?"
+      - emma: "Yes, or to people you will meet soon. In this lesson, a student called Bruno writes to a family in Britain. He is going to stay with them."
+        vi: "Bruno viết thư cho một gia đình ở Anh, nơi cậu sắp đến ở."
+      - emma: "We'll decide what to include, see how Bruno organizes his points, and then start and end his letter."
+        vi: "Ta chọn ý, xem Bruno sắp xếp ý ra sao, rồi viết câu mở đầu và câu kết cho thư."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "New words to describe yourself", vi: "Từ mới để tả bản thân"}
+      - {en: "Exercise A: what should you include?", vi: "Bài A: nên viết những ý nào?"}
+      - {en: "Exercise B: Bruno's letter — the order of his points", vi: "Bài B: thư của Bruno — thứ tự các ý"}
+      - {en: "Exercise C: start and end the letter", vi: "Bài C: câu mở đầu và câu kết"}
+      - {en: "Example: Lan's letter, then the Workbook writing task", vi: "Thư mẫu của Lan, rồi bài viết trong Workbook"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "New words to describe yourself.", focus: 0}
+      - {emma: "Exercise A: what should you include in the letter?", say: "Exercise eigh: what should you include in the letter?", focus: 1}
+      - {emma: "Exercise B: Bruno's letter, and the order of his points.", focus: 2}
+      - {emma: "Exercise C: how to start and end it.", focus: 3}
+      - {emma: "And finally, an example letter from a Vietnamese student, and tips for the Workbook writing task.", focus: 4}
+
+  - kind: vocab
+    chapter: "Từ mới"
+    heading: "New words"
+    heading_vi: "Từ mới — nghe và nhắc lại"
+    items:
+      - {w: "host family", pos: "noun", vi: "gia đình bản xứ (cho bạn ở cùng)", ex: "I'm going to stay with a host family in London."}
+      - {w: "introduce yourself", pos: "verb", vi: "giới thiệu bản thân", ex: "In the first paragraph, introduce yourself."}
+      - {w: "appearance", pos: "noun", vi: "ngoại hình", ex: "I'm tall and I have short black hair. That's my appearance."}
+      - {w: "personality", pos: "noun", vi: "tính cách", ex: "She has a friendly personality."}
+      - {w: "outgoing", pos: "adjective", vi: "cởi mở, thích giao tiếp", ex: "He's outgoing and he loves meeting new people."}
+      - {w: "generous", pos: "adjective", vi: "hào phóng, rộng rãi", ex: "My grandmother is very generous. She always gives us presents."}
+      - {w: "stubborn", pos: "adjective", vi: "bướng bỉnh", ex: "I can be stubborn. I like to do things my own way."}
+      - {w: "part-time", pos: "adjective", vi: "bán thời gian", ex: "My mum works part-time at a nursery school."}
+      - {w: "improve", pos: "verb", vi: "cải thiện, nâng cao", ex: "I need to improve my English for my studies."}
+    lines:
+      - emma: "First, some new words. Listen, and repeat after Tom."
+        vi: "Từ mới. Nghe rồi nhắc lại theo Tom."
+      - {emma: "host family", focus: 0}
+      - {tom: "host family"}
+      - {emma: "I'm going to stay with a host family in London."}
+      - {emma: "introduce yourself", focus: 1}
+      - {tom: "introduce yourself"}
+      - {emma: "In the first paragraph, introduce yourself."}
+      - {emma: "appearance", focus: 2}
+      - {tom: "appearance"}
+      - {emma: "I'm tall and I have short black hair. That's my appearance."}
+      - {emma: "personality", focus: 3}
+      - {tom: "personality"}
+      - {emma: "She has a friendly personality."}
+      - {emma: "outgoing", focus: 4}
+      - {tom: "outgoing"}
+      - {emma: "He's outgoing and he loves meeting new people."}
+      - {emma: "generous", focus: 5}
+      - {tom: "generous"}
+      - {emma: "My grandmother is very generous. She always gives us presents."}
+      - {emma: "stubborn", focus: 6}
+      - {tom: "stubborn"}
+      - {emma: "I can be stubborn. I like to do things my own way."}
+      - {emma: "part-time", focus: 7}
+      - {tom: "part-time"}
+      - {emma: "My mum works part-time at a nursery school."}
+      - {emma: "improve", focus: 8}
+      - {tom: "improve"}
+      - {emma: "I need to improve my English for my studies."}
+
+  - kind: compare
+    chapter: "Bài A: nên viết ý nào"
+    heading: "Exercise A · Which information would you include?"
+    heading_vi: "Thư giới thiệu bản thân gửi gia đình ở Anh: chọn ý trong khung"
+    items:
+      - title: "Include"
+        title_vi: "Nên viết — gia đình chủ nhà cần biết"
+        lines: ["your name, your age, where you live", "your family", "your studies or job", "your hobbies and interests", "your personality", "why you're learning English"]
+      - title: "Leave out, or keep it short"
+        title_vi: "Bỏ qua hoặc chỉ một câu"
+        lines: ["your appearance — only if they meet you at the airport", "your favourite food — only if it's important", "your favourite music, your friends — not necessary"]
+    lines:
+      - emma: "Exercise A. You are going to stay with a family in Britain, and you want to write a letter to introduce yourself."
+        say: "Exercise eigh. You are going to stay with a family in Britain, and you want to write a letter to introduce yourself."
+        vi: "Bài A. Bạn sắp ở cùng một gia đình ở Anh và muốn viết thư giới thiệu bản thân."
+      - emma: "Look at the box: your family, your appearance, why you're learning English, your age, your favourite music, your friends, where you live, your studies or job, your favourite food, your name, your hobbies and interests, and your personality. Which would you include?"
+        vi: "Trong 12 ý ở khung, bạn sẽ viết ý nào?"
+      - {wait: 6, note: "Pause the video and choose", vi: "Tạm dừng video, chọn ý rồi xem tiếp."}
+      - emma: "Tom, what does the family need to know?"
+      - tom: "My name, my age and where I live. Then my family, my studies, my hobbies, and my personality."
+        focus: 0
+      - tom: "And why I'm learning English, because that's why I'm going to Britain!"
+        focus: 0
+      - emma: "Good. What about your appearance, your favourite food and music?"
+        focus: 1
+      - tom: "Appearance only if they meet me at the airport. Food only if it's important, for example if I don't eat meat."
+        focus: 1
+        vi: "Ngoại hình chỉ cần nếu họ đón bạn ở sân bay; món ăn chỉ cần nếu quan trọng (ví dụ không ăn thịt)."
+      - emma: "Exactly. Choose the points that help the family to know you. There is no single right answer here."
+        vi: "Chọn ý giúp gia đình hiểu về bạn — bài này không có một đáp án duy nhất."
+
+  - kind: letter
+    chapter: "Bài B: thư của Bruno"
+    heading: "Exercise B · Read Bruno's letter"
+    heading_vi: "Thư của Bruno (sách trang 18) — ý nào xuất hiện trước?"
+    items:
+      - {text: "______ Mr and Mrs Gray,", note: "Lời chào: còn trống (bài C)", body: false}
+      - text: "I'm Bruno and I'm 22. I live in Valencia, which is a big city on the east coast of Spain."
+        note: "Đoạn 1"
+      - text: "I live with my mum and dad and my sister, Lola, but I hope to go to university in Barcelona next year and I want to get a flat with some friends. My dad is a lawyer and my mum works part-time at a nursery school. I've got a brother called Carlos."
+        note: "Đoạn 2"
+      - text: "In my free time I play football and tennis, and I sometimes go rock climbing. I really enjoy most sports and want to study sports psychology next year. I love going out to discos, too, and I especially love rap music."
+        note: "Đoạn 3"
+      - text: "People say I'm very friendly and outgoing, and I like to think I'm generous. I know I can be a bit stubborn sometimes – I like to do things my own way. I need to improve my English for my studies, but I also love travelling, and the best way to meet people is to speak good English."
+        note: "Đoạn 4"
+      - {text: "I am looking forward to meeting you both very soon.", note: "Câu kết"}
+      - {text: "______,\nBruno", note: "Chào cuối: còn trống (bài C)", body: false}
+    lines:
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: tom, focus: 4}
+      - {read: tom, focus: 5}
+
+  - kind: order
+    chapter: "Bài B: thứ tự các ý"
+    heading: "Exercise B · Put the ideas in the order they appear in Bruno's letter"
+    heading_vi: "Sắp xếp các ý theo thứ tự xuất hiện trong thư"
+    items:
+      - {k: a, text: "your family", pos: 4, short: "family: mum, dad, Lola, Carlos"}
+      - {k: b, text: "why you're learning English", pos: 9, short: "why English: studies, travel"}
+      - {k: c, text: "your age", pos: 2, short: "age: 22"}
+      - {k: d, text: "your favourite music", pos: 7, short: "music: rap"}
+      - {k: e, text: "where you live", pos: 3, short: "Valencia, Spain"}
+      - {k: f, text: "your studies or job", pos: 5, short: "university in Barcelona"}
+      - {k: g, text: "your name", pos: 1, short: "name: Bruno"}
+      - {k: h, text: "your hobbies and interests", pos: 6, short: "football, tennis, climbing"}
+      - {k: i, text: "your personality", pos: 8, short: "friendly, outgoing, stubborn"}
+    lines:
+      - emma: "Exercise B. Put the ideas from Exercise A into the order in which they appear in Bruno's letter."
+        vi: "Bài B. Sắp xếp các ý theo thứ tự xuất hiện trong thư của Bruno."
+      - {wait: 6, note: "Pause the video and try", vi: "Tạm dừng video, sắp xếp rồi xem tiếp."}
+      - emma: "Let's check together, Tom."
+      - {tom: "First, his name: I'm Bruno. That's g.", say: "First, his name: I'm Bruno. That's G.", focus: 6, reveal: g}
+      - {tom: "Then his age: I'm twenty-two. That's c.", say: "Then his age: I'm twenty two. That's C.", focus: 2, reveal: c}
+      - {emma: "Third, where he lives: Valencia. That's e.", say: "Third, where he lives: Valencia. That's E.", focus: 4, reveal: e}
+      - {tom: "Fourth, his family: his mum, dad and sister. That's a.", say: "Fourth, his family: his mum, dad and sister. That's eigh.", focus: 0, reveal: a}
+      - {emma: "Fifth, his studies: he hopes to go to university. That's f.", say: "Fifth, his studies: he hopes to go to university. That's F.", focus: 5, reveal: f}
+      - {tom: "Sixth, his hobbies: football, tennis and rock climbing. That's h.", say: "Sixth, his hobbies: football, tennis and rock climbing. That's H.", focus: 7, reveal: h}
+      - {emma: "Seventh, music: he loves rap music. That's d.", say: "Seventh, music: he loves rap music. That's D.", focus: 3, reveal: d}
+      - {tom: "Eighth, his personality: friendly, outgoing, a bit stubborn. That's i.", say: "Eighth, his personality: friendly, outgoing, a bit stubborn. That's I.", focus: 8, reveal: i}
+      - {emma: "And last, why he's learning English: for his studies and for travelling. That's b.", say: "And last, why he's learning English: for his studies and for travelling. That's B.", focus: 1, reveal: b}
+      - emma: "Bruno doesn't write about his appearance or his favourite food, and he mentions friends only when he talks about a flat."
+        vi: "Bruno không nói về ngoại hình hay món ăn; bạn bè chỉ nhắc qua khi nói về căn hộ."
+      - emma: "Does Bruno include the same points that you wanted to include?"
+      - tom: "Almost! He adds his favourite music, but it shows his personality, so that's fine."
+      - emma: "The answer key does not cover this exercise, so this is our suggested order."
+        vi: "Phần đáp án cuối sách không có bài này — đây là thứ tự gợi ý."
+
+  - kind: bullets
+    chapter: "Cách sắp xếp ý"
+    heading: "How Bruno organizes his points"
+    heading_vi: "Mỗi đoạn một nhóm ý gần nhau"
+    items:
+      - {en: "Paragraph 1: the basic facts — name, age, where you live", vi: "Đoạn 1: thông tin cơ bản"}
+      - {en: "Paragraph 2: family and studies", vi: "Đoạn 2: gia đình và việc học"}
+      - {en: "Paragraph 3: free time — hobbies, interests, music", vi: "Đoạn 3: thời gian rảnh"}
+      - {en: "Paragraph 4: personality, and why you're learning English", vi: "Đoạn 4: tính cách và lý do học tiếng Anh"}
+      - {en: "Last line: I am looking forward to meeting you", vi: "Câu kết: mong được gặp"}
+    lines:
+      - emma: "Look how Bruno organizes his points. He puts related ideas together in one paragraph."
+        vi: "Bruno gom các ý liên quan vào cùng một đoạn."
+      - {emma: "Paragraph one: the basic facts. His name, his age, and where he lives.", focus: 0}
+      - {emma: "Paragraph two: his family and his studies.", focus: 1}
+      - {emma: "Paragraph three: his free time.", focus: 2}
+      - {emma: "Paragraph four: his personality, and why he's learning English.", focus: 3}
+      - {emma: "And a friendly last line: I am looking forward to meeting you both very soon.", focus: 4}
+      - tom: "So the reader can follow the letter easily."
+        vi: "Nhờ vậy người đọc dễ theo dõi."
+
+  - kind: compare
+    chapter: "Bài C: mở đầu và kết thư"
+    heading: "Exercise C · Start and end the letter in an appropriate way"
+    heading_vi: "Bruno biết tên gia đình nhưng chưa gặp họ → bán trang trọng"
+    items:
+      - title: "Good choices"
+        title_vi: "Phù hợp"
+        lines: ["Dear Mr and Mrs Gray,", "Best wishes, / Kind regards,", "Yours sincerely, — correct, but quite formal"]
+      - title: "Not right here"
+        title_vi: "Không phù hợp"
+        lines: ["Yours faithfully, — we know their names", "Love, — too familiar: he hasn't met them", "Hi Mr and Mrs Gray, — too informal"]
+    lines:
+      - emma: "Exercise C. Start and end the letter in an appropriate way. Tom, how does the letter start?"
+        vi: "Bài C. Viết câu mở đầu và câu kết phù hợp."
+      - {tom: "Dear Mr and Mrs Gray. We know their names, so we use Dear.", focus: 0}
+      - {emma: "And the ending?", focus: 0}
+      - {tom: "Best wishes, or Kind regards. It's friendly, but polite.", focus: 0}
+      - {emma: "Can he write Yours faithfully?", focus: 1}
+      - {tom: "No, because he knows their names. And Love is too familiar. He hasn't met them yet.", focus: 1}
+      - emma: "Right. Yours sincerely is also correct, but it sounds quite formal for this friendly letter."
+        focus: 0
+        vi: "Yours sincerely cũng đúng nhưng hơi trang trọng với lá thư thân thiện này."
+
+  - kind: letter
+    heading: "Exercise C · Bruno's letter, start and end"
+    heading_vi: "Lời chào và câu kết đã điền"
+    items:
+      - {text: "Dear Mr and Mrs Gray,", note: "Biết tên → Dear Mr and Mrs + họ", body: false}
+      - text: "I'm Bruno and I'm 22. I live in Valencia, which is a big city on the east coast of Spain."
+        note: "Thông tin cơ bản"
+      - text: "I live with my mum and dad and my sister, Lola, but I hope to go to university in Barcelona next year and I want to get a flat with some friends. My dad is a lawyer and my mum works part-time at a nursery school. I've got a brother called Carlos."
+        note: "Gia đình, việc học"
+      - text: "In my free time I play football and tennis, and I sometimes go rock climbing. I really enjoy most sports and want to study sports psychology next year. I love going out to discos, too, and I especially love rap music."
+        note: "Thời gian rảnh"
+      - text: "People say I'm very friendly and outgoing, and I like to think I'm generous. I know I can be a bit stubborn sometimes – I like to do things my own way. I need to improve my English for my studies, but I also love travelling, and the best way to meet people is to speak good English."
+        note: "Tính cách, lý do học tiếng Anh"
+      - {text: "I am looking forward to meeting you both very soon.", note: "Câu kết thân thiện"}
+      - {text: "Best wishes,\nBruno", note: "Bán trang trọng → Best wishes", body: false}
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 5}
+      - {read: tom, focus: 6}
+
+  - kind: bullets
+    chapter: "Thư mẫu: thư của Lan"
+    heading: "Example task"
+    heading_vi: "Đề ví dụ — cùng dạng bài của Writing 3"
+    items:
+      - {en: "You are going to stay with a family in Britain. Write a letter to introduce yourself.", vi: "Bạn sắp ở cùng một gia đình ở Anh. Viết thư giới thiệu bản thân."}
+      - {en: "The family is Mr and Mrs Brown. You have never met them.", vi: "Biết tên, chưa gặp → Dear Mr and Mrs Brown … Best wishes"}
+      - {en: "Write about 150 words, in four short paragraphs, like Bruno.", vi: "Khoảng 150 từ, bốn đoạn ngắn như thư của Bruno"}
+    lines:
+      - emma: "Now, an example. Lan is a student from Vietnam. She is going to stay with Mr and Mrs Brown in Britain."
+        say: "Now, an example. Lahn is a student from Vietnam. She is going to stay with Mr and Mrs Brown in Britain."
+        focus: 0
+        vi: "Ví dụ: Lan, sinh viên Việt Nam, sắp ở cùng gia đình ông bà Brown ở Anh."
+      - {emma: "She has never met them, so she starts with Dear Mr and Mrs Brown, and ends with Best wishes.", focus: 1}
+      - {emma: "She organizes her points just like Bruno. Listen to her letter.", focus: 2}
+
+  - kind: letter
+    heading: "Example letter · Lan introduces herself"
+    heading_vi: "Thư mẫu của Lan"
+    items:
+      - {text: "Dear Mr and Mrs Brown,", note: "Biết tên, chưa gặp", body: false}
+      - text: "My name is Lan and I'm 20 years old. I come from Hue, a quiet city in the centre of Vietnam, famous for its old palaces and its food."
+        say: "My name is Lahn and I'm twenty years old. I come from Whey, a quiet city in the centre of Vietnam, famous for its old palaces and its food."
+        note: "Đoạn 1: tên, tuổi, quê"
+      - text: "I live with my parents and my younger brother, Nam. My father is an engineer and my mother is a nurse. I'm in my second year at university, where I study tourism."
+        note: "Đoạn 2: gia đình, việc học"
+      - text: "In my free time I enjoy cooking and playing badminton with my friends. I also love reading, especially detective stories. I don't eat beef, but I'm happy to try any other British food!"
+        note: "Đoạn 3: sở thích (+ món ăn: điều quan trọng)"
+      - text: "People say I'm friendly and hard-working, but I'm a little shy when I meet new people. I'm learning English because I want to work for an international hotel, and living with a British family is the best way to practise and learn about British life."
+        note: "Đoạn 4: tính cách, lý do học tiếng Anh"
+      - {text: "I've never been abroad before, so I'm really looking forward to meeting you both in July.", note: "Câu kết"}
+      - {text: "Best wishes,\nLan", say: "Best wishes, Lahn", note: "Bán trang trọng", body: false}
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+      - {read: emma, focus: 4}
+      - {read: emma, focus: 5}
+      - {read: emma, focus: 6}
+
+  - kind: bullets
+    chapter: "Workbook trang 6 · Tổng kết"
+    heading: "Workbook page 6 · The writing task"
+    heading_vi: "Sách in ghi: “Go to Workbook page 6 for the writing task” — làm theo 5 bước"
+    items:
+      - {en: "Read the task twice: who is the letter to? How formal is it?", vi: "Đọc đề kỹ: viết cho ai, trang trọng đến đâu"}
+      - {en: "Note down ideas, choose the useful ones (Exercise A)", vi: "Ghi ý, chọn ý cần (bài A)"}
+      - {en: "Group related points into 3–4 paragraphs (like Bruno and Lan)", vi: "Gom ý liên quan thành 3–4 đoạn"}
+      - {en: "Start and end correctly: Dear + name … Best wishes", vi: "Mở đầu, kết thư đúng (bài C, Writing 2)"}
+      - {en: "About 150 words in 20 minutes — then check for errors", vi: "~150 từ trong 20 phút, rồi soát lỗi"}
+    lines:
+      - emma: "Finally, the book says: go to Workbook page 6 for the writing task. Use everything from Writing 1, 2 and 3."
+        say: "Finally, the book says: go to Workbook page six for the writing task. Use everything from Writing one, two and three."
+        vi: "Cuối cùng, sách yêu cầu làm bài viết ở Workbook trang 6 — dùng hết những gì đã học ở Writing 1, 2, 3."
+      - {emma: "Read the task twice. Who is the letter to, and how formal should it be?", focus: 0}
+      - {emma: "Note down ideas, and choose the useful ones, like in Exercise A.", say: "Note down ideas, and choose the useful ones, like in Exercise eigh.", focus: 1}
+      - {emma: "Group related points into three or four paragraphs, like Bruno and Lan.", say: "Group related points into three or four paragraphs, like Bruno and Lahn.", focus: 2}
+      - {emma: "Start and end the letter in the right way.", focus: 3}
+      - {emma: "Write about a hundred and fifty words in twenty minutes, and keep time to check for errors.", focus: 4}
+      - tom: "Thanks, Emma! Now I know how to organize my letter."
+      - emma: "Great! Goodbye, and good luck with your writing!"
