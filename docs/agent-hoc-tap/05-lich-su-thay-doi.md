@@ -5,6 +5,59 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 5 — 06/10/2026: video Unit 1 Writing 1 và Writing 2
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `da67bcb` (đã merge PR #5).
+
+### Yêu cầu
+
+Tạo hai video hướng dẫn cho Writing 1 và Writing 2 của Unit 1 (sách in trang 17–18); hướng dẫn xong thì mỗi video đọc
+luôn một đoạn ví dụ; rồi tạo PR.
+
+### Đã làm
+
+| Video | Nội dung |
+|---|---|
+| **Writing 1: organizing your writing** (7:08, 12 chương, 6,3 MB) | Giới thiệu Task 1 (thư ≥ 150 từ, ~20 phút) · 8 từ mới · Exam tip · Bài A: sắp xếp 6 bước (c → a → e → f → d → b, đáp án gợi ý vì Answer key không có) · Bài B: chia 20 phút (1 + 2 + 1 + 2 phút chuẩn bị, 11 phút viết, 3 phút soát lỗi) · **Ví dụ đi qua đủ 6 bước** với đề "chuyển tới thành phố mới, viết thư cho bạn": đọc đề, ghi ý, chọn ý, dàn ý theo đoạn, **Tom đọc thư mẫu thân mật 160 từ**, soát lỗi · Tổng kết + bài về nhà |
+| **Writing 2: types of letter / starting and ending letters** (7:58, 10 chương, 7,1 MB) | 9 từ mới · Bài A: 6 loại thư ↔ câu mở đầu A–F (1-D, 2-F, 3-E, 4-A, 5-B, 6-C, đáp án gợi ý) · Bài B: 6 cụm từ mở đầu, đếm ngược để viết lại theo trí nhớ · Bài C: cách kết 1–5 ↔ thư A–F (thư F không có cách kết → Yours sincerely) · Bài D: Yours faithfully / Yours sincerely, Best wishes / Regards, các cách kết thân mật · **Emma đọc thư mẫu trang trọng hỏi thông tin 154 từ** (Dear Sir/Madam … Yours faithfully) · Tổng kết + bài về nhà (viết lại cho Ms Taylor → Yours sincerely) |
+| Gắn vào app | Hoạt động `U01-writing` (phiên 4 "Writing: học kỹ năng" và phiên 5 "Writing: chấm, viết lại"); thẻ Unit 1 nay có 4 nút video |
+| Kiểu cảnh mới | `order` (sắp xếp: số thứ tự hiện dần, cột phải dựng thứ tự đúng), `timing` (thanh ngang chia phút, mở dần từng bước), `letter` (cả lá thư trên một trang, đoạn đang đọc tô màu, ghi chú vai trò từng đoạn ở lề, đếm từ, không có thanh phụ đề); dòng `read: <người nói>` đọc nguyên một đoạn thư (lấy cả `say` của đoạn); hàng của `pairs` được xuống hai dòng |
+
+Giọng: Kokoro q8, Emma `af_heart`, Tom `am_michael` như đợt 4; cách đọc trong `say` soát lại với Kokoro
+(Sir/Madam → "Sir or Madam", 150 → "a hundred and fifty", chữ cái A → `eigh`).
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U01-writing-1.yaml`, `U01-writing-2.yaml` | Kịch bản hai video |
+| `books/ielts_target_5_0/lessons/U01-writing-1.mp4`, `U01-writing-2.mp4` | Video 1280×720, H.264 + AAC, có chương, tiếng chuẩn -16 LUFS |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu cảnh `order`, `timing`, `letter`; dòng `read`; kiểm tra `pos` 1…n, `read` chỉ trong cảnh letter kèm `focus`, cảnh letter không có `wait` |
+| `agents/lesson_video/slides.py` | Vẽ ba kiểu cảnh mới; cảnh letter bỏ thanh phụ đề; ô chữ hai dòng cho `pairs`, `order` |
+| `agents/tests/test_lesson_video.py` | +7 test: ba kiểu cảnh mới dựng và vẽ được, dòng `read` lấy đúng chữ và cách đọc, 6 kịch bản sai bị chặn |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm hai mục Writing |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 1 có 4 video; mở video Writing từ thẻ unit vào đúng phiên Writing |
+| `agents/README.md`, `web/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Kiểu cảnh mới; video Writing trong tab Sách; task P2-34; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 38 passed |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | Thời lượng khớp lời thoại, đủ chương; tiếng trung bình ~-18 dB, đỉnh dưới 0 dB; thư mẫu và các cảnh mới hiển thị đúng |
+
+---
+
 ## Đợt 4 — 05/10/2026: giọng Kokoro cho video bài giảng
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `8dd99b8` (đã merge PR #4).
