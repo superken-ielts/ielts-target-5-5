@@ -52,14 +52,25 @@ python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-1.ya
 python -m lesson_video build <kịch bản> --engine silent --out /tmp/xem-thu --work /tmp/khung   # xem bố cục nhanh, không giọng
 ```
 
-Cần `pymupdf pyyaml pydantic pillow numpy` (`pip install -e '.[video]'`), `ffmpeg`, và thư viện **Flite** cho giọng đọc
-(miễn phí, chạy offline; Ubuntu/Debian `sudo apt install libflite1`, macOS `brew install flite`). Giọng dùng:
-`slt` (nữ, Mỹ) cho cô giáo, `rms` (nam, Mỹ) cho học viên; có thêm `awb`, `kal16`.
+Cần `pymupdf pyyaml pydantic pillow numpy` (`pip install -e '.[video]'`) và `ffmpeg`. Giọng đọc (đều miễn phí, offline):
+
+| Bộ đọc | Cài | Giọng trong kịch bản Unit 1 |
+|---|---|---|
+| **Kokoro-82M** (mặc định, Apache-2.0) | `pip install -e '.[kokoro]'`; tải từ Hugging Face `onnx-community/Kokoro-82M-v1.0-ONNX` file `onnx/model_quantized.onnx` (bản nén q8, ~92 MB) và các file giọng `voices/<giọng>.bin` (~0,5 MB mỗi giọng), đặt vào `~/.cache/lesson_video/kokoro/` (giọng trong thư mục `voices/`) hoặc chỉ đường bằng `--model`, `--voices` / biến `KOKORO_MODEL`, `KOKORO_VOICES` | Emma `af_heart` (nữ, Mỹ), Tom `am_michael` (nam, Mỹ) |
+| Flite (dự phòng, nghe máy) | Ubuntu/Debian `sudo apt install libflite1`, macOS `brew install flite` | Emma `slt`, Tom `rms` |
+
+`--engine auto` (mặc định) dùng Kokoro khi tìm thấy model và giọng, không thì Flite. Giọng khai theo bộ đọc:
+`voice: {kokoro: af_heart, flite: slt}`. Giọng Kokoro tiếng Anh: `af_*`, `am_*` (Mỹ), `bf_*`, `bm_*` (Anh); giọng `b*`
+được tách âm kiểu Anh. `--speed 0.9` (mặc định) đọc chậm hơn bình thường 10%. Tiếng từng câu lưu ở
+`~/.cache/lesson_video/tts/` theo (bộ đọc, giọng, chữ), nên sửa vài câu rồi dựng lại chỉ đọc lại những câu đó.
+
+Chữ cái, tên riêng hay bị đọc sai: viết cách đọc vào `say`, kiểm tra được với cả hai bộ đọc — chữ "A" viết `eigh`,
+"IELTS" viết `eye-elts`, Huế `Whey`, Đà Lạt `Dah Lot`, Hồ Chí Minh `Ho Chee Min`.
 
 | Bước | Module | Làm gì |
 |---|---|---|
 | kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match`, `pairs`, `qa`, `compare`, `errors`, `practice`), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói); đối chiếu `activity` với `book.json` |
-| giọng đọc | `tts.py` | Flite qua `ctypes`; `silent` để thử nhanh và để test |
+| giọng đọc | `tts.py` | Kokoro qua `kokoro-onnx`; Flite qua `ctypes`; `silent` để thử nhanh và để test |
 | dòng thời gian | `timeline.py` | Đọc từng câu, chuẩn hóa âm lượng hai giọng, ghép thành một dải tiếng; mỗi câu một khung hình, đếm ngược mỗi giây một khung; chương theo cảnh |
 | slide | `slides.py` | Pillow vẽ 1280×720: thanh đầu, nội dung theo kiểu cảnh (ảnh cắt từ trang sách cho bài nối tranh), phụ đề người nói, thanh tiến độ |
 | video | `video.py` | ffmpeg ghép ảnh + tiếng → H.264/AAC có chương; ghi `books/<sách>/lessons/lessons.json` (id, hoạt động, unit, thời lượng, chương, giọng) |

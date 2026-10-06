@@ -21,7 +21,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
 ## Video bài giảng
 
 - Kịch bản `books/<sách>/lessons/<id>.yaml`; dựng: `cd agents && python -m lesson_video build ../books/<sách>/lessons/<id>.yaml`
-  (cần ffmpeg + Flite `libflite1`), rồi chạy `python3 web/build.py`.
+  rồi chạy `python3 web/build.py`. Cần ffmpeg và giọng Kokoro (model q8 + file giọng ở `~/.cache/lesson_video/kokoro/`,
+  xem `agents/README.md`); không có model thì công cụ dùng Flite (`libflite1`) — đừng commit video Flite đè video Kokoro.
 - Không sửa tay `lessons.json` / `.mp4`. Chữ trên màn hình ở dòng thoại, cách đọc khác (chữ cái, số, tên riêng) ở `say`.
 
 ## Kiểm tra trước khi commit

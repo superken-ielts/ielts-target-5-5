@@ -63,7 +63,9 @@ def encode(lesson: Lesson, tl: Timeline, slides: Slides, out: Path, work: Path,
            "-i", str(work / "voice.wav"), "-i", str(work / "meta.txt"),
            "-map", "0:v", "-map", "1:a", "-map_metadata", "2", "-map_chapters", "2",
            "-r", str(FPS), "-c:v", "libx264", "-preset", "medium", "-tune", "stillimage", "-crf", "26",
-           "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-ar", "44100", "-ac", "1",
+           "-pix_fmt", "yuv420p",
+           # chuẩn độ to lời nói (-16 LUFS) để video nào nghe cũng to ngang nhau trên loa điện thoại
+           "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "64k", "-ar", "44100", "-ac", "1",
            "-movflags", "+faststart", "-shortest", str(out)]
     say(f"  mã hóa {out.name}")
     subprocess.run(cmd, check=True)
@@ -78,7 +80,7 @@ def probe(path: Path) -> float:
     return float(r.stdout.strip() or 0)
 
 
-def manifest_entry(lesson: Lesson, item: dict, tl: Timeline, mp4: Path, voices: dict[str, str]) -> dict:
+def manifest_entry(lesson: Lesson, item: dict, tl: Timeline, mp4: Path, voices: dict[str, str], engine: str) -> dict:
     return {
         "id": lesson.id,
         "activity": lesson.activity,
@@ -90,6 +92,7 @@ def manifest_entry(lesson: Lesson, item: dict, tl: Timeline, mp4: Path, voices: 
         "source": "lessons/" + lesson.id + ".yaml",
         "duration": round(tl.total, 1),
         "bytes": mp4.stat().st_size,
+        "engine": engine,
         "voices": [f"{sp.name} ({sp.role}) — {voices[k]}" if sp.role else f"{sp.name} — {voices[k]}"
                    for k, sp in lesson.speakers.items()],
         "chapters": [{"t": round(t, 1), "title": name} for t, name in tl.chapters],
