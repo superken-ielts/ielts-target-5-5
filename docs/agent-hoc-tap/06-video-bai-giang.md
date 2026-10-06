@@ -46,7 +46,25 @@ phần người dùng yêu cầu). Chưa có video:
 
 ## 2. Unit 2 · Learning — độ phủ video
 
-<!-- coverage:U02 -->
+Bảng in bằng lệnh `coverage` sau đợt 10:
+
+### U02 · Learning — 6/7 phần có video, 12 video, 1:20:22
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 22–23 | `U02-speaking-1` — Vocabulary 1 & Speaking 1: school subjects, looking back | 8:48 | 12 |
+| Speaking & Vocabulary | sách tr. 22–23 | `U02-speaking-2` — Speaking 2 & Vocabulary 2: questions about the past, likes and preferences | 8:02 | 11 |
+| Listening | Listening tr. 24–25 | `U02-listening-1` — Listening 1: numbers | 5:20 | 6 |
+| Listening | Listening tr. 24–25 | `U02-listening-2` — Listening 1: months, ordinal numbers and dates | 8:35 | 8 |
+| Listening | Listening tr. 24–25 | `U02-listening-3` — Listening 2: practise listening for numbers and dates | 7:12 | 8 |
+| Reading | sách tr. 26–28 | `U02-reading-1` — Reading 1: scanning | 5:40 | 9 |
+| Reading | sách tr. 26–28 | `U02-reading-2` — Reading 2: practise scanning | 5:33 | 8 |
+| Writing | sách tr. 29–30 | `U02-writing-1` — Writing 1 & 2: structuring a letter, stating your purpose | 5:48 | 10 |
+| Writing | sách tr. 29–30 | `U02-writing-2` — Writing 3 & 4: the main part of a letter, closing a letter | 6:08 | 9 |
+| Consolidation | sách tr. 31 | `U02-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 6:19 | 10 |
+| Exam practice | sách tr. 32–33 | `U02-exam-reading` — Exam practice: Reading | 6:43 | 8 |
+| Exam practice | sách tr. 32–33 | `U02-exam-writing` — Exam practice: Writing | 6:12 | 10 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
 
 **Kết luận:** Unit 2 có video cho **mọi phần có trang sách** (6/7 phần; phần còn lại là phiên tự ôn). Lần đầu
 video **phát file nghe thật của sách** (Listening: Track 15–22) và có cảnh **bài đọc tô từ khóa** để dạy dò tìm.
@@ -135,7 +153,8 @@ hiện nút ▶ và nhãn). Có thể dùng neo YAML (`items: &notes` … `items
 chung một danh sách câu. Thêm người nói thứ ba chỉ cần khai trong `speakers` (ví dụ Mai `af_bella`).
 
 Mẹo bố cục: thư / bài đọc trên ~170 từ thì chia hai cảnh `letter` (chữ to hơn) và đặt `words`; câu điền từ quá dài
-tự thu nhỏ cho vừa một dòng; đáp án `✓` / `✗` trong cảnh `match` dùng phông có ký hiệu.
+tự thu nhỏ cho vừa một dòng; đáp án `✓` / `✗` trong cảnh `match` dùng phông có ký hiệu; cụm `mark` chỉ được tô
+khi nằm gọn trong một dòng — chọn cụm ngắn (`£38`, `over 21`, `two-hour driving lesson`).
 
 ## 6. Cách đọc (`say`) và những lỗi đã gặp
 
@@ -168,7 +187,7 @@ Những lỗi đã gặp và cách tránh:
 - **Workbook / file nghe thiếu**: ghi rõ trong video và kịch bản; không đoán đề.
 - **Cây git phải sạch** khi kết thúc lượt: dựng video lâu thì commit từng phần.
 - **Dựng nhiều video**: Kokoro dùng hết CPU — xếp hàng từng video một (một khóa `flock`), không chạy song song;
-  12 video Unit 2 mất khoảng 2,5 giờ. Sửa slide sau khi đã dựng chỉ tốn ~1 phút mỗi video nhờ bộ nhớ tiếng.
+  12 video Unit 2 mất khoảng 2 giờ (06:29 → 08:32). Sửa slide sau khi đã dựng chỉ tốn ~1 phút mỗi video nhờ bộ nhớ tiếng.
 - **Bài đọc dài trên một trang**: chữ nhỏ khó đọc → chia hai trang (đợt 10).
 
 ## 7. Kế hoạch Unit 3 · Work (sách in tr. 34–45)

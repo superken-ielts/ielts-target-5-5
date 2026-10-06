@@ -5,6 +5,89 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 10 — 06/10/2026: 12 video Unit 2; phát file nghe của sách trong video
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `a55277e` (đã merge PR #10).
+
+### Yêu cầu
+
+Tiếp tục làm video cho Unit 2, xong thì tạo PR.
+
+### Đã làm
+
+Làm theo hồ sơ [06-video-bai-giang.md](06-video-bai-giang.md) (kế hoạch Unit 2 viết ở đợt 9). Khác kế hoạch: phần
+**Listening** đợt 9 định để sau vì công cụ chưa phát được file nghe của sách — đợt này thêm dòng `track` nên làm luôn
+(3 video); **Reading** tách hai video và dùng cảnh mới `passage` để dạy dò tìm. Unit 2 có video cho **mọi phần có
+trang sách**.
+
+| Phần | Video | Nội dung |
+|---|---|---|
+| Speaking & Vocabulary | `U02-speaking-1` (8:48, 12 chương) | Chính tả 8 môn học (đánh vần từng chữ), nghĩa từng môn, đuôi -ics, nối 6 tranh (gợi ý), kể về trường cũ, Grammar check quá khứ đơn (learned, studied, decided, stopped; knew, read, thought, taught, chose), *Watch out!* (didn't + nguyên mẫu, did you…?, had to), đuôi -ed /t/ /d/ /ɪd/ (Track 13), đến lượt bạn |
+| | `U02-speaking-2` (8:02, 11 chương) | Track 14 không có file nghe → Emma (giám khảo), Tom (Speaker 1), **Mai** (Speaker 2, giọng `af_bella`) đọc lại, phụ đề ẩn; chọn câu trả lời hay hơn (2, 1, 2 — gợi ý) và vì sao; trả lời + lý do + chi tiết; Vocabulary 2 P/N 10 câu; cụm từ enjoy / keen on / prefer A to B / boring; bài nói mẫu của Mai; đến lượt bạn |
+| Listening | `U02-listening-1` (5:20, 6 chương) | -teen / -ty, *and* sau hundred, **phát Track 15, 16, 17** của sách, viết 8 số (18, 80, 96, 120, 243, 531, 852, 984), số hàng nghìn |
+| | `U02-listening-2` (8:35, 8 chương) | Sắp chữ thành 12 tháng, trọng âm tên tháng (**Track 18**), 15 số thứ tự (**Track 19**), hai cách đọc ngày (**Track 20**), đọc ngày theo hai cách, nghe – viết 4 ngày (**Track 21**: 2 June, 21 November, 17 July, 31 August), trả lời bằng ngày |
+| | `U02-listening-3` (7:12, 8 chương) | Đọc trước 12 câu, **phát nguyên Track 22** (cuộc gọi đăng ký khóa nhiếp ảnh), đáp án theo Answer key kèm câu nghe được, bẫy 96/69 và ba khóa học, tự đánh giá, course / class / lesson |
+| Reading | `U02-reading-1` (5:40, 9 chương) | Đọc lướt 5 trích đoạn học lái xe, **dò tìm với từ khóa tô vàng ngay trên bài** (two hours, over 21, £38, about 40 minutes, 'L' plates), đúng / sai F F F T, định nghĩa scanning, skimming ≠ scanning |
+| | `U02-reading-2` (5:33, 8 chương) | Emma đọc trang web "Swimming – safe and fun!" (2 trang), nối tranh (C, A, B — gợi ý), 6 câu trả lời ngắn có tô từ khóa (theo Answer key Reading 2B), Exam tip lấy từ trong bài, 4 danh từ và 4 cặp tính từ – danh từ |
+| Writing | `U02-writing-1` (5:48, 10 chương) | Exam tip phần 1 bài thi Viết, ba phần của thư (mục đích → tình huống → điều muốn), độ dài từng phần, quảng cáo khóa tiếng Anh thương mại cắt từ trang sách với 4 lời hứa ✗, chọn câu mở đầu tốt nhất (câu 2) và vì sao ba câu kia sai, viết câu mở đầu cho 3 tình huống |
+| | `U02-writing-2` (6:08, 9 chương) | Câu chủ đề 4-1-2-3 (Answer key 3A), lời hứa → thực tế, học viên muốn hoàn 50%, xóa 5 từ thừa (to, was, the, that, am — Answer key 4B), **thư phàn nàn hoàn chỉnh 228 từ đọc thành tiếng (2 trang)**, 6 cụm từ cho thư phàn nàn |
+| Consolidation | `U02-consolidation` (6:19, 10 chương) | Từ để hỏi (Track 23), Track 23 đọc lại và cách trả lời, đến lượt bạn, 8 môn học, have / fail / pass / apply / do, *Watch out!* do homework / take a test, trọng âm 7 từ (Track 25), sửa 6 lỗi |
+| Exam practice | `U02-exam-reading` (6:43, 8 chương) | Exam tip bài thi Đọc (3 phần, 4–6 bài, 40 câu, 60 phút), cách làm, Emma đọc "Are A Levels Just Too Easy?" (2 trang), câu 1–7 (B D A C B D C), 8–12 (10%, more than 20%, five, three, the long jump), từ khóa |
+| | `U02-exam-writing` (6:12, 10 chương) | Đúng / sai 8 câu về bài thi Viết phần 1, đề thư gửi Learn Fast Driving School, chia 20 phút (3 + 3 + 11 + 3), dàn ý 5 đoạn, **thư mẫu Terry Black theo Answer key (2 trang)**, từ nối, bảng soát lỗi 3 phút |
+
+Thẻ Unit 2 trong tab Sách: 12 video trong 6 nhóm (Speaking & Vocabulary · Listening · Reading · Writing ·
+Consolidation · Exam practice). Đáp án không có trong Answer key đều ghi "gợi ý" trong video và đầu kịch bản.
+
+### Công cụ `lesson_video`
+
+| Thêm / sửa | Cách làm |
+|---|---|
+| Phát file nghe của sách | Dòng `{track: U02-L2A, note: "Track 22 · Listening 2A", start, end}`: `timeline` cắt đoạn bằng ffmpeg, chuẩn hóa đỉnh như giọng đọc, ghép vào dải tiếng; thanh phụ đề hiện nút ▶ và nhãn; `check` báo mã file sai, thiếu file, `end` vượt độ dài |
+| Cảnh `passage` | Bài đọc trên màn hình (phía trên phụ đề), nhãn đầu đoạn, ghi chú lề; dòng thoại `mark: [cụm từ]` tô vàng cụm từ trong đoạn `focus` (giữ tới khi đổi đoạn); `mark` ngoài cảnh passage bị chặn |
+| Thư chia hai trang | Trường cảnh `words` giữ số từ của cả lá thư khi chia hai cảnh `letter` (chữ to hơn) |
+| Bố cục | Câu điền từ dài tự thu nhỏ cho vừa một dòng; chữ gợi ý (`hint`) co cho vừa ô; đáp án ✓ / ✗ trong cảnh `match` dùng phông có ký hiệu |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U02-*.yaml`, `U02-*.mp4` (12 cặp) | Kịch bản và video Unit 2 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu `passage`; dòng `mark`, `track`, `start`, `end` (một dòng là câu thoại, khoảng lặng hoặc đoạn nghe); trường cảnh `words`; `check` kiểm file nghe |
+| `agents/lesson_video/timeline.py` | `build(…, book_dir)`; `_decode` (ffmpeg); khung hình có `mark`, `audio` |
+| `agents/lesson_video/slides.py` | `_k_passage`; phụ đề khi phát file nghe; `words`; thu nhỏ câu điền từ dài, chữ gợi ý; phông ký hiệu cho ✓/✗ |
+| `agents/lesson_video/cli.py` | Truyền thư mục sách cho `timeline.build` |
+| `agents/tests/test_lesson_video.py` | +9 test: passage / mark / track (file wav tạo trong test), `check` báo file nghe sai, 5 kịch bản sai bị chặn, thư chia trang |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm 12 mục Unit 2 |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 2: 12 video, 6 nhóm theo thứ tự sách; nút Listening mở phiên Listening có 3 video |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ Unit 2, lịch sử 21 video, quy trình có file nghe, kiểu cảnh `passage`, cách đọc mới, **kế hoạch Unit 3** (OCR trang PDF 35–46) |
+| `web/app.template.html` | Mô tả file 06 |
+| `agents/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Kiểu cảnh, dòng `track`; task P2-41; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. Video Unit 1 giữ nguyên.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 56 passed (kể cả hồi quy: 21 kịch bản khớp `lessons.json`, độ phủ Unit 1) |
+| `node --test "tests/web/*.test.mjs"` | 13 passed (Unit 2: 12 video, 6 nhóm đúng thứ tự sách) |
+| `node tests/web/book.e2e.mjs` | 13/13 bước OK (thêm bước Unit 2: 12 video, nút Listening mở phiên có 3 video) |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | Tổng 1:20:22, 109 chương; thời lượng khớp lời thoại; tiếng trung bình −17,5 đến −19,7 dB, đỉnh ≤ −0,1 dB; đoạn phát file nghe của sách (đo ở Listening 1) đỉnh ngang giọng đọc, trung bình thấp hơn 3–4 dB vì bản ghi có khoảng nghỉ để nhắc lại |
+| Xem trước từng cảnh (`--engine silent`) + soát cách đọc bằng phonemizer | Sửa trước khi dựng: chữ gợi ý tràn ô, thư 228 / 218 từ chữ quá nhỏ (chia hai trang), "A levels", "part A", "a.m." đọc sai, ✗ không có trong phông |
+
+### Còn treo
+
+- Unit 1 Listening và Reading chưa có video (công cụ đã sẵn sàng).
+- Workbook vẫn thiếu (P2-36): Unit 1 trang 6, Unit 2 trang 8.
+
+---
+
 ## Đợt 9 — 06/10/2026: video Unit 1 Consolidation và Exam practice; hồ sơ video bài giảng
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `e789ae0` (đã merge PR #9).

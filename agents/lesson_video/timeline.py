@@ -121,6 +121,7 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
             frame.dur = len(samples) / rate
         pos += len(samples)
 
+    files: Optional[dict] = None  # book.json › files, đọc khi gặp đoạn nghe đầu tiên
     spoken = sum(1 for sc in lesson.scenes for ln in sc.lines if ln.speaker)
     done = 0
     for si, sc in enumerate(lesson.scenes):
@@ -144,7 +145,8 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
                     pos = len(parts[0])
                 if book_dir is None:
                     raise TTSError(f"cần thư mục sách để phát {ln.track}")
-                files = json.loads((Path(book_dir) / "book.json").read_text(encoding="utf-8")).get("files", {})
+                if files is None:
+                    files = json.loads((Path(book_dir) / "book.json").read_text(encoding="utf-8")).get("files", {})
                 if ln.track not in files:
                     raise TTSError(f"không có file nghe {ln.track} trong book.json")
                 data = _norm(_decode(Path(book_dir) / files[ln.track]["path"], rate, ln.start, ln.end))
