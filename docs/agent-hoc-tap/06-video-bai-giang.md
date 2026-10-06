@@ -1,8 +1,11 @@
 # 06 — Video bài giảng: hồ sơ Unit 1–2, quy trình và kế hoạch Unit 3
 
-Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9) và Unit 2 (đợt 10): phần nào
-đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những lỗi đã gặp. Dùng file
+Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11) và Unit 2 (đợt 10): phần
+nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những lỗi đã gặp. Dùng file
 này làm căn cứ khi làm **Unit 3** (mục 7) và các unit sau.
+
+**Phạm vi:** chỉ **Course Book** (Student's Book, `IELTS_Target_5.0.pdf`) và các file nghe đi kèm. Bộ sách không có
+Workbook nên **không làm video Workbook** — các chỗ sách ghi "go to Workbook page …" bỏ qua (người dùng chốt ở đợt 11).
 
 Công cụ: `agents/lesson_video` (xem `agents/README.md`). Kịch bản và video: `books/ielts_target_5_0/lessons/`.
 Bảng độ phủ ở mục 1–2 in lại được bất cứ lúc nào:
@@ -15,17 +18,19 @@ cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U0
 
 ## 1. Unit 1 · Life — độ phủ video
 
-Bảng in bằng lệnh `coverage` sau đợt 9 (thời lượng và số chương lấy từ `lessons.json`):
+Bảng in bằng lệnh `coverage` sau đợt 11:
 
-### U01 · Life — 4/7 phần có video, 9 video, 1:05:09
+### U01 · Life — 6/7 phần có video, 13 video, 1:26:43
 
 | Phần | Trang | Video | Dài | Chương |
 |---|---|---|---|---|
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-1` — Speaking 1: talking about personal information | 7:14 | 8 |
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-2` — Speaking 2: exchanging personal information | 6:16 | 9 |
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-vocabulary` — Vocabulary 1–3: family, stages of life, key words | 8:24 | 12 |
-| Listening | Listening tr. 12–13 | **chưa có video** | — | — |
-| Reading | sách tr. 14–16 | **chưa có video** | — | — |
+| Listening | Listening tr. 12–13 | `U01-listening-1` — Listening 1: listening for specific information | 6:32 | 7 |
+| Listening | Listening tr. 12–13 | `U01-listening-2` — Listening 2: practising listening for specific information | 6:36 | 8 |
+| Reading | sách tr. 14–16 | `U01-reading-1` — Reading 1: skimming | 4:34 | 7 |
+| Reading | sách tr. 14–16 | `U01-reading-2` — Reading 2: practise skimming | 3:52 | 7 |
 | Writing | sách tr. 17–18 | `U01-writing-1` — Writing 1: organizing your writing | 7:08 | 12 |
 | Writing | sách tr. 17–18 | `U01-writing-2` — Writing 2: types of letter / starting and ending letters | 7:58 | 10 |
 | Writing | sách tr. 17–18 | `U01-writing-3` — Writing 3: organizing points in a personal letter | 8:30 | 10 |
@@ -34,15 +39,9 @@ Bảng in bằng lệnh `coverage` sau đợt 9 (thời lượng và số chươ
 | Exam practice | sách tr. 20–21 | `U01-exam-reading` — Exam practice: Reading | 5:40 | 8 |
 | Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
 
-**Kết luận:** Unit 1 có video cho 4/7 phần — Speaking & Vocabulary, Writing, Consolidation, Exam practice (đủ các
-phần người dùng yêu cầu). Chưa có video:
-
-| Phần | Vì sao chưa làm | Khi nào làm |
-|---|---|---|
-| **Listening** (Listening tr. 12–13; track U01-L1C, L1D, L2A) | Đợt 9 công cụ chưa chèn được file nghe của sách vào video | Làm được ngay: từ đợt 10 có dòng `track` (phát file MP3 của sách trong video) — làm theo mẫu `U02-listening-*.yaml` |
-| **Reading** (sách tr. 14–16) | Chưa có yêu cầu; bài đọc dài 3 trang | Làm ngay theo mẫu `U02-reading-*.yaml` (cảnh `passage` tô từ khóa, `letter` đọc bài, `mcq`, `pairs`) |
-| **Ôn unit + sổ lỗi** | Không có trang sách — là phiên tự ôn (làm lại câu sai, ghi sổ lỗi) | Không cần video |
-| **Workbook tr. 6** (P2-36) | Workbook **không có** trong bộ sách đã nhập | Khi người dùng thêm Workbook hoặc gửi ảnh trang |
+**Kết luận:** Unit 1 có video cho **mọi phần có trang trong Course Book** (6/7 phần; phần còn lại "Ôn unit + sổ lỗi"
+là phiên tự ôn, không có trang sách, không cần video). Listening và Reading làm ở đợt 11, sau khi công cụ phát được
+file nghe của sách (đợt 10).
 
 ## 2. Unit 2 · Learning — độ phủ video
 
@@ -68,7 +67,7 @@ Bảng in bằng lệnh `coverage` sau đợt 10:
 
 **Kết luận:** Unit 2 có video cho **mọi phần có trang sách** (6/7 phần; phần còn lại là phiên tự ôn). Lần đầu
 video **phát file nghe thật của sách** (Listening: Track 15–22) và có cảnh **bài đọc tô từ khóa** để dạy dò tìm.
-Chưa làm: Workbook trang 8 (chưa có Workbook), Exercise C–D của Listening/Reading chỉ hướng dẫn tự đánh giá.
+Exercise C–D của Listening/Reading (tự đánh giá cách làm bài) chỉ hướng dẫn, không có đáp án.
 
 ## 3. Lịch sử từng video
 
@@ -83,6 +82,10 @@ Chưa làm: Workbook trang 8 (chưa có Workbook), Exercise C–D của Listenin
 | 9 | `U01-consolidation` Consolidation | Speaking A–C (Phần 1 bài thi Nói), Vocabulary A–C (từ gia đình, dạng từ, trọng âm), sửa 8 lỗi | qa, practice, blanks (câu điền từ), bullets, errors | Tapescript Track 8 (trọng âm); còn lại là đáp án gợi ý |
 | 9 | `U01-exam-listening` Exam practice: Listening | Điền ghi chú 1–4, trắc nghiệm 5–7, bản đồ 8–9; Emma (lễ tân) và Tom (khách) **đọc lại Track 9** theo Tapescript, chia 3 đoạn; mẹo nghe từ đồng nghĩa, bẫy | blanks + mcq + match có `hide_text`, `roles` | Tapescript Track 9 |
 | 9 | `U01-exam-reading` Exam practice: Reading | Đọc lướt chọn chủ đề, Emma đọc bài "Perspectives of work…", từ khóa, nối câu 1–5 với đoạn A–E, mẹo dạng bài | mcq (`keys` 1/2/3), letter, vocab, pairs | Suy ra từ bài đọc, có câu bằng chứng |
+| 11 | `U01-listening-1` Listening 1 | Đoán loại thông tin còn thiếu (nối 10 câu với a–j), viết hoa hay viết số, **phát Track 5** một lần rồi **phát lại từng câu** (`start` / `end`) và chữa ngay | pairs, bullets, blanks + `track` | Tapescript Track 5 + suy ra |
+| 11 | `U01-listening-2` Listening 2 | Phiếu nhân viên Esco Engineering của Peter và Jane, **phát Track 7**, đáp án kèm câu nghe được (đánh vần Austin, Moore, Cedar), tự đánh giá, address / age / marital status | bullets, blanks + `track` | Answer key Listening 2A |
+| 11 | `U01-reading-1` Reading 1: skimming | Nối 6 văn bản (ảnh cắt từ trang sách) với nguồn, cách đọc lướt (hình, hình thức, từ khóa), mục đích văn bản, định nghĩa skimming | match (ảnh), bullets, pairs, blanks | Suy ra từ bài |
+| 11 | `U01-reading-2` Reading 2: practise skimming | Sáu nguồn, nối văn bản A–C và D–F (hai ảnh cắt từ hai trang), tự đánh giá, 6 từ trong ngữ cảnh | bullets, match ×2, blanks (`hint` dài) | Answer key Reading 2A + suy ra |
 | 10 | `U02-speaking-1` Vocabulary 1 & Speaking 1 | Chính tả 8 môn học, đuôi -ics, nối tranh, kể về trường cũ, quá khứ đơn (có / bất quy tắc), *Watch out!*, đuôi -ed /t/ /d/ /ɪd/ | blanks, vocab, match, qa, errors, practice | Chắc chắn (chính tả, dạng quá khứ) + gợi ý (nối tranh); Track 12–13 |
 | 10 | `U02-speaking-2` Speaking 2 & Vocabulary 2 | Track 14 đọc lại với **ba giọng** (Emma giám khảo, Tom, Mai `af_bella`), chọn câu trả lời hay hơn, trả lời + lý do + chi tiết, P/N 10 câu, cụm từ thích / không thích, bài nói mẫu của Mai | mcq + `hide_text` + `roles`, compare, blanks, vocab, letter | Tapescript Track 14 + gợi ý |
 | 10 | `U02-listening-1` Listening 1: numbers | -teen / -ty, số hàng trăm có *and*, số hàng nghìn; **phát Track 15–17 của sách** | compare, blanks (lưới), bullets + `track` | Tapescript Track 16 |
@@ -99,7 +102,7 @@ Chưa làm: Workbook trang 8 (chưa có Workbook), Exercise C–D của Listenin
 Đợt 4 dựng lại hai video Speaking bằng Kokoro (trước đó là Flite). Mọi video hiện tại: Kokoro q8, Emma `af_heart`,
 Tom `am_michael` (và Mai `af_bella` trong `U02-speaking-2`), tốc độ 0,9.
 
-## 4. Quy trình làm một video (đã dùng cho cả 21 video)
+## 4. Quy trình làm một video (đã dùng cho cả 25 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -184,7 +187,9 @@ Những lỗi đã gặp và cách tránh:
 - **Lộ đáp án trong bài nghe**: phụ đề hiện lời thoại → đặt `hide_text: true` cho cảnh nghe, tách cảnh đáp án riêng.
 - **Mục lục sai thứ tự**: `lessons.json` xếp theo chữ cái (Consolidation trước Speaking) → app xếp nhóm theo thứ tự
   phần trong `book.json` (đợt 9).
-- **Workbook / file nghe thiếu**: ghi rõ trong video và kịch bản; không đoán đề.
+- **File nghe thiếu** (Track 9, 14, 23…): đọc lại Tapescript bằng các giọng Kokoro, ghi rõ trong kịch bản; không đoán đề.
+- **Phát lại từng câu của một track**: lấy mốc bằng `ffmpeg -i <file> -af silencedetect=noise=-35dB:d=0.8 -f null -`
+  — khoảng lặng dài ngăn cách các câu, mỗi đoạn `start` / `end` lấy từ trước số thứ tự tới sau câu (U01-listening-1).
 - **Cây git phải sạch** khi kết thúc lượt: dựng video lâu thì commit từng phần.
 - **Dựng nhiều video**: Kokoro dùng hết CPU — xếp hàng từng video một (một khóa `flock`), không chạy song song;
   12 video Unit 2 mất khoảng 2 giờ (06:29 → 08:32). Sửa slide sau khi đã dựng chỉ tốn ~1 phút mỗi video nhờ bộ nhớ tiếng.

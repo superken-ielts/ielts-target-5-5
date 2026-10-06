@@ -1,0 +1,177 @@
+# Video bài giảng Unit 1 · Listening 2: practising listening for specific information (sách in trang 12–13). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-listening-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U02-listening-1.yaml (dòng `track`). Phát nguyên Track 7 (U01-L2A).
+# Đáp án theo Answer key (sách in trang 266, "Unit 1, Listening 2A"): 1 Austin, 2 110, 3 47, 4 three children, 5 2003,
+# 6 Moore, 7 Cedar, 8 650396, 9 22, 10 single. Câu bằng chứng theo Tapescript Track 7 (sách in trang 277–278).
+# Key vocabulary in context là đáp án gợi ý (address, age, marital status).
+id: U01-listening-2
+activity: U01-listening
+title: "Unit 1 · Life"
+subtitle: "Listening 2: practising listening for specific information"
+title_vi: "Nghe điền phiếu thông tin nhân viên — tên, địa chỉ, tuổi, số điện thoại (Track 7 của sách)"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening 2. Now we practise listening for specific information in an exam-style task."
+        say: "Welcome to Listening two. Now we practise listening for specific information in an exam-style task."
+        vi: "Listening 2: luyện nghe thông tin cụ thể theo dạng bài thi."
+      - tom: "Is it like section 1 of the exam?"
+        say: "Is it like section one of the exam?"
+      - emma: "Yes! A phone call, and a form to fill in."
+
+  - kind: bullets
+    chapter: "Trước khi nghe"
+    heading: "Exam tip · Section 1 of the Listening Module"
+    heading_vi: "Phần 1 bài thi Nghe thường là điền thông tin còn thiếu"
+    items:
+      - {en: "In section 1, you often fill in missing information", vi: "Phần 1: điền thông tin còn thiếu"}
+      - {en: "In other parts, you also listen for names and dates", vi: "Các phần khác cũng hỏi tên, ngày tháng"}
+      - {en: "Write no more than three words or a number", vi: "Tối đa ba từ hoặc một số"}
+      - {en: "Names are often spelled: listen for the letters", vi: "Tên riêng thường được đánh vần — nghe từng chữ cái"}
+    lines:
+      - emma: "The exam tip. In section 1 of the Listening Module, you often need to fill in missing information. In other parts of the exam, you also need to listen for information such as names and dates."
+        say: "The exam tip. In section one of the Listening Module, you often need to fill in missing information. In other parts of the exam, you also need to listen for information such as names and dates."
+        vi: "Mẹo thi: phần 1 thường là điền thông tin; các phần khác cũng hỏi tên, ngày tháng."
+      - {emma: "Fill in the missing information.", focus: 0}
+      - {emma: "Names and dates are everywhere.", focus: 1}
+      - {emma: "Write no more than three words or a number.", focus: 2}
+      - {emma: "And when a name is spelled, write each letter carefully.", focus: 3}
+
+  - kind: blanks
+    chapter: "Nghe Track 7"
+    heading: "Listening 2A · Complete the notes about two people at Esco Engineering"
+    heading_vi: "Phiếu nhân viên của Peter (1–5) và Jane (6–10) — tối đa ba từ hoặc một số"
+    items:
+      - {n: 1, q: "Peter — Name: Peter ___", answer: "Austin"}
+      - {n: 2, q: "Peter — Address: ___ Argyle Street, Tunbridge Wells", answer: "110"}
+      - {n: 3, q: "Peter — Age: ___", answer: "47"}
+      - {n: 4, q: "Peter — Married (has ___, two boys and a girl)", answer: "three children"}
+      - {n: 5, q: "Peter — Date of joining company: 08 / ___", answer: "2003"}
+      - {n: 6, q: "Jane — Name: Jane ___", answer: "Moore"}
+      - {n: 7, q: "Jane — Address: 72 ___ Road, Crowborough", answer: "Cedar"}
+      - {n: 8, q: "Jane — Tel. no.: 07984 ___", answer: "650396"}
+      - {n: 9, q: "Jane — Age: ___", answer: "22"}
+      - {n: 10, q: "Jane — Marital status: ___", answer: "single"}
+    lines:
+      - emma: "Exercise A. Listen and complete the notes about two people who work at Esco Engineering. Write no more than three words or a number for each answer."
+        say: "Exercise eigh. Listen and complete the notes about two people who work at Esco Engineering. Write no more than three words or a number for each answer."
+        vi: "Bài A: nghe và điền phiếu của hai nhân viên Esco Engineering."
+      - emma: "First, read the notes and predict. Number one: a surname. Number two: a house number. Three: an age. Four: something about his family."
+        vi: "Đoán trước: 1 họ, 2 số nhà, 3 tuổi, 4 thông tin gia đình."
+      - {wait: 12, note: "Read the notes and predict", vi: "Đọc phiếu, đoán loại thông tin cho từng chỗ trống."}
+      - emma: "Now listen. Greg is phoning Maggie to check the staff data."
+        vi: "Greg gọi cho Maggie để kiểm tra dữ liệu nhân viên."
+      - {track: U01-L2A, note: "Track 7 · Listening 2A", vi: "Nghe và điền 10 chỗ trống."}
+      - {wait: 8, note: "Check your answers", vi: "Xem lại: chính tả, chữ hoa, số."}
+
+  - kind: blanks
+    chapter: "Đáp án 1–5: Peter"
+    heading: "Listening 2A · Answers 1–5 (Peter)"
+    heading_vi: "Bài B: so với Answer key — dòng Tip là câu nghe được"
+    items:
+      - {n: 1, q: "Name: Peter ___", answer: "Austin", tip: "It's A-U-S-T-I-N — Austin with an i, not Austen with an e"}
+      - {n: 2, q: "Address: ___ Argyle Street", answer: "110", tip: "a hundred and ten Argyle Street"}
+      - {n: 3, q: "Age: ___", answer: "47", tip: "He's forty-seven."}
+      - {n: 4, q: "Married (has ___, two boys and a girl)", answer: "three children", tip: "He has three children – two boys and a girl. (also: 3 children)"}
+      - {n: 5, q: "Date of joining company: 08 / ___", answer: "2003", tip: "He started with Esco in August two thousand and three."}
+    lines:
+      - emma: "Exercise B. Check the key on page 266. How many did you answer correctly? Let's start with Peter."
+        say: "Exercise B. Check the key on page two hundred and sixty-six. How many did you answer correctly? Let's start with Peter."
+        vi: "Bài B: kiểm tra với Answer key."
+      - {emma: "Number one.", focus: 0}
+      - {tom: "Austin. Greg asks: Austin with an i, or Austen with an e? And Maggie spells it: A, U, S, T, I, N.", say: "Austin. Greg asks: Austin with an eye, or Austen with an ee? And Maggie spells it: eigh, you, ess, tee, eye, en.", reveal: 1}
+      - {emma: "Number two.", focus: 1}
+      - {tom: "A hundred and ten. So, one one zero.", say: "A hundred and ten. So, one, one, zero.", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "Forty-seven.", reveal: 3}
+      - {emma: "Four.", focus: 3}
+      - {tom: "Three children. Two words, so that's fine.", reveal: 4}
+      - {emma: "Five.", focus: 4}
+      - {tom: "Two thousand and three. He started in August, and August is month eight.", reveal: 5}
+
+  - kind: blanks
+    chapter: "Đáp án 6–10: Jane"
+    heading: "Listening 2A · Answers 6–10 (Jane)"
+    heading_vi: "Theo Answer key — chú ý cách đánh vần tên riêng"
+    items:
+      - {n: 6, q: "Name: Jane ___", answer: "Moore", tip: "That's M-O-O-R-E."}
+      - {n: 7, q: "Address: 72 ___ Road", answer: "Cedar", tip: "And how do you spell Cedar? C-E-D-A-R."}
+      - {n: 8, q: "Tel. no.: 07984 ___", answer: "650396", tip: "Her phone number is 07984 650396."}
+      - {n: 9, q: "Age: ___", answer: "22", tip: "She's twenty-two … (also: twenty-two)"}
+      - {n: 10, q: "Marital status: ___", answer: "single", tip: "… and she's single."}
+    lines:
+      - {emma: "Now Jane. Number six.", focus: 0}
+      - {tom: "Moore. M, O, O, R, E. Double o.", say: "Moore. em, oh, oh, ar, ee. Double oh.", reveal: 6}
+      - {emma: "Seven.", focus: 1}
+      - {tom: "Cedar. C, E, D, A, R. Greg asks Maggie to spell it.", say: "Cedar. see, ee, dee, eigh, ar. Greg asks Maggie to spell it.", reveal: 7}
+      - {emma: "Eight.", focus: 2}
+      - {tom: "Six five oh three nine six.", reveal: 8}
+      - emma: "Phone numbers come fast. Write the digits in groups, like this: six five oh, three nine six."
+        vi: "Số điện thoại đọc nhanh — ghi theo từng cụm."
+      - {emma: "Nine.", focus: 3}
+      - {tom: "Twenty-two.", reveal: 9}
+      - {emma: "And ten.", focus: 4}
+      - {tom: "Single. She's not married.", reveal: 10}
+
+  - kind: bullets
+    chapter: "Bài C: nhìn lại"
+    heading: "Listening 2C · Think about how you did the task"
+    heading_vi: "Đánh dấu câu đúng với bạn — lần sau làm tốt hơn"
+    items:
+      - {en: "I read the instructions carefully.", vi: "Đọc kỹ yêu cầu"}
+      - {en: "I read the questions and predicted the type of answer I needed to write.", vi: "Đọc câu hỏi, đoán loại đáp án"}
+      - {en: "I used capital letters when necessary.", vi: "Viết hoa: Austin, Moore, Cedar"}
+      - {en: "I understood all the words on the answer sheet.", vi: "Hiểu các từ trên phiếu: address, marital status…"}
+      - {en: "I spelt all my answers correctly.", vi: "Đúng chính tả"}
+      - {en: "Question-type tip: the instructions often say two or three words", vi: "Đề thường cho phép hai hoặc ba từ"}
+    lines:
+      - emma: "Exercise C. Tick the sentences that are true for you, and think about how you can answer more questions correctly next time."
+        vi: "Bài C: đánh dấu những câu đúng với bạn."
+      - {emma: "Did you read the instructions carefully?", focus: 0}
+      - {emma: "Did you predict the type of answer?", focus: 1}
+      - {emma: "Did you use capital letters for the names?", focus: 2}
+      - {emma: "Did you understand all the words on the form?", focus: 3}
+      - {emma: "And did you spell everything correctly?", focus: 4}
+      - {emma: "The question-type tip: in the Listening and Reading Modules, the instructions will often tell you to write two or three words as your answer.", focus: 5}
+
+  - kind: blanks
+    chapter: "Từ vựng trong ngữ cảnh"
+    heading: "Key vocabulary in context · Fill each space with one word from the staff data file"
+    heading_vi: "Từ trên phiếu thông tin (đáp án gợi ý)"
+    items:
+      - {n: 1, q: "Your ___ is where you live.", answer: "address", tip: "address — double d, double s"}
+      - {n: 2, q: "Your ___ is how old you are.", answer: "age"}
+      - {n: 3, q: "When you fill in a form, ___ is more formal than saying 'Are you married?'", answer: "marital status", tip: "marital status: married, single, divorced…"}
+    lines:
+      - emma: "Key vocabulary in context. Fill each space with one word from the staff data file. Number three needs two words."
+        vi: "Điền từ trên phiếu thông tin — câu 3 cần hai từ."
+      - {wait: 6, note: "Pause the video and fill in", vi: "Tạm dừng video và điền."}
+      - {emma: "One.", focus: 0}
+      - {tom: "Your address is where you live.", reveal: 1}
+      - {emma: "Two.", focus: 1}
+      - {tom: "Your age is how old you are.", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "Marital status. It's more formal than: are you married?", reveal: 3}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 Austin · 2 110 · 3 47 · 4 three children · 5 2003", vi: "Peter"}
+      - {en: "6 Moore · 7 Cedar · 8 650396 · 9 22 · 10 single", vi: "Jane"}
+      - {en: "Listen for spelling: A-U-S-T-I-N, M-O-O-R-E, C-E-D-A-R", vi: "Tên riêng được đánh vần"}
+      - {en: "address · age · marital status", vi: "Từ trên phiếu"}
+    lines:
+      - emma: "Let's review. Peter: Austin, a hundred and ten, forty-seven, three children, two thousand and three."
+        focus: 0
+        vi: "Đáp án phiếu của Peter."
+      - {emma: "Jane: Moore, Cedar, six five oh three nine six, twenty-two, single.", focus: 1}
+      - {emma: "Listen for the spelling of names.", focus: 2}
+      - {tom: "And I know the words on a form: address, age and marital status.", focus: 3}

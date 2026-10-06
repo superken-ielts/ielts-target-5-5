@@ -1,0 +1,176 @@
+# Video bài giảng Unit 1 · Reading 1: skimming (sách in trang 14–15). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-reading-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Ảnh sáu văn bản A–F cắt từ trang PDF 15 để người học nhìn thiết kế mà
+# đoán nguồn. Answer key không có Reading 1: đáp án A (1 E · 2 A · 3 B · 4 F · 5 D · 6 C), C (1 C · 2 A · 3 F · 4 B ·
+# 5 D · 6 E) và D (quickly, general, before, slowly) suy ra từ bài, có giải thích.
+id: U01-reading-1
+activity: U01-reading
+title: "Unit 1 · Life"
+subtitle: "Reading 1: skimming"
+title_vi: "Đọc lướt — nhận ra nguồn và mục đích của sáu văn bản ngắn"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 1 Reading. Today's skill is skimming."
+        say: "Welcome to Unit one Reading. Today's skill is skimming."
+        vi: "Reading Unit 1: kỹ năng đọc lướt (skimming)."
+      - tom: "Skimming? Reading very fast?"
+      - emma: "Reading fast to get the general idea. You don't read every word. You look at the design, the title, and a few key words."
+        vi: "Đọc nhanh để nắm ý chung: nhìn hình thức, tiêu đề, vài từ khóa — không đọc từng chữ."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Reading 1, bài A–D"
+    items:
+      - {en: "Exam tip: know the source of a text", vi: "Biết văn bản lấy từ đâu"}
+      - {en: "A: skim six texts and match them with their sources", vi: "Đọc lướt sáu văn bản, nối với nguồn"}
+      - {en: "B: how did you do it? Pictures, design, key words", vi: "Bạn đã làm thế nào?"}
+      - {en: "C: the purpose of each text", vi: "Mục đích của từng văn bản"}
+      - {en: "D: what is skimming?", vi: "Đọc lướt là gì?"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "The exam tip: it is important to know the source of a text. For example, does it come from a newspaper, a magazine or a journal?", focus: 0}
+      - {emma: "Then we skim six short texts.", focus: 1}
+      - {emma: "We talk about how we did it.", focus: 2}
+      - {emma: "Then the purpose of each text.", focus: 3}
+      - {emma: "And finally, a definition of skimming.", focus: 4}
+
+  - kind: match
+    chapter: "Bài A: nguồn của văn bản"
+    heading: "Reading 1A · Skim the texts A–F and match each with a source 1–6"
+    heading_vi: "Nhìn hình thức trước, rồi mới đọc vài từ khóa"
+    image: {pdf: course-book, page: 15, clip: [48, 312, 542, 736]}
+    items:
+      - {n: 1, q: "information from a box or packet", answer: E}
+      - {n: 2, q: "an e-mail to a friend", answer: A}
+      - {n: 3, q: "an advertisement", answer: B}
+      - {n: 4, q: "a letter about a job interview", answer: F}
+      - {n: 5, q: "part of an article from a science journal", answer: D}
+      - {n: 6, q: "part of a letter written to a newspaper", answer: C}
+    lines:
+      - emma: "Exercise A. Read the sources one to six. Skim the texts a to f, and match each with a source. Number one is done for you: information from a box or packet is E."
+        say: "Exercise eigh. Read the sources, one to six. Skim the texts, eigh to F, and match each with a source. Number one is done for you: information from a box or packet is E."
+        vi: "Bài A: nối văn bản A–F với nguồn 1–6. Câu 1 là ví dụ: E."
+        focus: 0
+        reveal: 1
+      - {wait: 10, note: "Pause the video and match", vi: "Tạm dừng video và nối — đừng đọc từng chữ."}
+      - {emma: "Number two: an e-mail to a friend.", focus: 1}
+      - {tom: "A. It looks like an e-mail program: To, Subject, Send. And it starts with Hi Graham.", say: "Eigh. It looks like an e-mail program: To, Subject, Send. And it starts with Hi Graham.", reveal: 2}
+      - {emma: "Three: an advertisement.", focus: 2}
+      - {tom: "B. Big letters, a question, and a phone number. Do you want to lose weight fast?", reveal: 3}
+      - {emma: "Four: a letter about a job interview.", focus: 3}
+      - {tom: "F. We would like to invite you for an interview. And it's from a Director of Studies.", reveal: 4}
+      - {emma: "Five: part of an article from a science journal.", focus: 4}
+      - {tom: "D. It talks about technology, fertility drugs and embryos. Those are science words.", reveal: 5}
+      - {emma: "And six: part of a letter written to a newspaper.", focus: 5}
+      - {tom: "C. It starts with Dear Sir, and the writer is shocked by teenagers in the city centre.", reveal: 6}
+      - emma: "The answer key doesn't include this exercise, so these are our suggested answers. But the clues are clear!"
+        vi: "Answer key không có bài này — đáp án gợi ý, nhưng dấu hiệu rất rõ."
+
+  - kind: bullets
+    chapter: "Bài B: bạn đã làm thế nào?"
+    heading: "Reading 1B · How did you complete the task?"
+    heading_vi: "Những cách giúp đọc lướt nhanh"
+    items:
+      - {en: "Pictures: the photo of the triplets, the e-mail window", vi: "Hình ảnh"}
+      - {en: "Design: big letters for an advertisement, bullet points for instructions", vi: "Hình thức trình bày"}
+      - {en: "Key words: Dear Sir, Hi Graham, interview, cartridge", vi: "Từ khóa"}
+      - {en: "The first and last lines: Dear… / Yours sincerely / Sorry again", vi: "Dòng đầu, dòng cuối"}
+    lines:
+      - emma: "Exercise B. Talk with a partner. Discuss how you completed the task."
+        vi: "Bài B: bạn đã làm bài như thế nào?"
+      - {emma: "Did pictures help?", focus: 0}
+      - {tom: "Yes. The photo of the babies, and the e-mail window.", focus: 0}
+      - {emma: "Did the design of each text help?", focus: 1}
+      - {tom: "Yes. The advertisement has big letters. The Care and Use text has bullet points.", focus: 1}
+      - {emma: "Did you identify key words?", focus: 2}
+      - {tom: "Dear Sir, Hi Graham, interview, cartridge.", focus: 2}
+      - {emma: "And the first and last lines often tell you a lot.", focus: 3}
+
+  - kind: pairs
+    chapter: "Bài C: mục đích của văn bản"
+    heading: "Reading 1C · Skim the texts again: which text…?"
+    heading_vi: "Exam tip: cần biết mục đích của văn bản — vì sao nó được viết"
+    items:
+      - {n: 1, q: "In which text does somebody complain?", answer: C}
+      - {n: 2, q: "Which text is an apology?", answer: A}
+      - {n: 3, q: "Which text makes an appointment?", answer: F}
+      - {n: 4, q: "Which text wants people to buy something?", answer: B}
+      - {n: 5, q: "Which text explains why something happens?", answer: D}
+      - {n: 6, q: "Which text tells you how to do something?", answer: E}
+    options:
+      - {k: A, text: "e-mail: Hi Graham, Sorry…"}
+      - {k: B, text: "Do you want to lose weight fast?"}
+      - {k: C, text: "Dear Sir, I am writing to say how shocked…"}
+      - {k: D, text: "The birth of triplets…"}
+      - {k: E, text: "Care & Use"}
+      - {k: F, text: "Dear Miss Sulaiman, … an interview"}
+    lines:
+      - emma: "The next exam tip: it is also important that you know the purpose or function of a text: why the text has been written."
+        vi: "Mẹo thi: biết mục đích của văn bản."
+      - emma: "Exercise C. Skim the texts again and answer these questions. You might be able to answer some questions without reading again."
+        vi: "Bài C: đọc lướt lại và trả lời — có câu không cần đọc lại."
+      - {wait: 8, note: "Pause the video and answer", vi: "Tạm dừng video và trả lời."}
+      - {emma: "One: in which text does somebody complain?", focus: 0}
+      - {tom: "C. The writer is shocked by the behaviour of teenagers.", reveal: 1}
+      - {emma: "Two: which text is an apology?", focus: 1}
+      - {tom: "A. Sorry, I won't be able to play golf. And: sorry again.", say: "Eigh. Sorry, I won't be able to play golf. And: sorry again.", reveal: 2}
+      - {emma: "Three: which text makes an appointment?", focus: 2}
+      - {tom: "F. An interview on the twelfth of March at 2 p.m.", say: "F. An interview on the twelfth of March, at two in the afternoon.", reveal: 3}
+      - {emma: "Four: which text wants people to buy something?", focus: 3}
+      - {tom: "B. Try our new product.", reveal: 4}
+      - {emma: "Five: which text explains why something happens?", focus: 4}
+      - {tom: "D. Technology is the main cause of more triplets.", reveal: 5}
+      - {emma: "Six: which text tells you how to do something?", focus: 5}
+      - {tom: "E. Before first use, wash with hot soapy water.", reveal: 6}
+
+  - kind: blanks
+    chapter: "Bài D: đọc lướt là gì?"
+    heading: "Reading 1D · Circle the correct option from each pair"
+    heading_vi: "Đoạn văn về kỹ năng đọc lướt (đáp án suy ra)"
+    items:
+      - {n: 1, q: "Skimming is looking ___ through a text", answer: "quickly", hint: "slowly / quickly", tip: "skim = move your eyes quickly"}
+      - {n: 2, q: "to get a ___ picture of what it is about.", answer: "general", hint: "general / detailed", tip: "the general idea, not the details"}
+      - {n: 3, q: "You often skim ___ you read a text more carefully.", answer: "before", hint: "before / after", tip: "skim first, then read carefully"}
+      - {n: 4, q: "In the IELTS exam, you skim to identify which parts you need to read again more ___.", answer: "slowly", hint: "quickly / slowly", tip: "find the right part, then read it slowly and carefully"}
+    lines:
+      - emma: "Exercise D. Read this short text about reading skills. Circle the correct option from each pair."
+        vi: "Bài D: chọn từ đúng trong mỗi cặp."
+      - {wait: 8, note: "Pause the video and choose", vi: "Tạm dừng video và chọn."}
+      - {emma: "Skimming is looking … through a text.", focus: 0}
+      - {tom: "Quickly.", reveal: 1}
+      - {emma: "To get a … picture of what it is about.", focus: 1}
+      - {tom: "General.", reveal: 2}
+      - emma: "You might skim through a magazine to see which stories are interesting, or skim the first few pages of a book to see if you want to read it."
+        vi: "Ví dụ: lướt tạp chí tìm bài hay, lướt vài trang đầu sách."
+      - {emma: "You often skim … you read a text more carefully.", focus: 2}
+      - {tom: "Before.", reveal: 3}
+      - {emma: "In the IELTS exam, you skim a text to identify which parts you need to read again more …", say: "In the eye-elts exam, you skim a text to identify which parts you need to read again more…", focus: 3}
+      - {tom: "Slowly. First skim, then read the important part slowly.", reveal: 4}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "A: 1 E · 2 A · 3 B · 4 F · 5 D · 6 C", vi: "Nguồn của văn bản"}
+      - {en: "C: 1 C · 2 A · 3 F · 4 B · 5 D · 6 E", vi: "Mục đích của văn bản"}
+      - {en: "Skimming: quickly, a general picture, before careful reading", vi: "Đọc lướt"}
+      - {en: "Use pictures, design, key words, first and last lines", vi: "Dùng hình, hình thức, từ khóa, dòng đầu và cuối"}
+      - {en: "Next: Reading 2 — practise skimming", vi: "Tiếp theo: Reading 2"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Exercise A: E, A, B, F, D, C.", say: "Exercise eigh: E, eigh, B, F, D, C.", focus: 0}
+      - {emma: "Exercise C: C, A, F, B, D, E.", say: "Exercise C: C, eigh, F, B, D, E.", focus: 1}
+      - {emma: "Skimming is quick, and it gives you the general picture.", focus: 2}
+      - {emma: "Use every clue on the page.", focus: 3}
+      - {tom: "Next: Reading 2!", say: "Next: Reading two!", focus: 4}

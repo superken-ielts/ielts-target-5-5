@@ -5,6 +5,77 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 11 — 06/10/2026: video Unit 1 Listening và Reading; bỏ Workbook
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `e973c3f` (đã merge PR #11).
+
+### Yêu cầu
+
+Làm video Unit 1 Listening và Reading; bỏ qua Workbook vì không có sách này — tập trung vào Course Book hiện tại;
+xong thì tạo PR.
+
+### Đã làm
+
+| Video | Nội dung |
+|---|---|
+| `U01-listening-1` Listening 1: listening for specific information (6:32, 7 chương) | **A** đoán loại thông tin còn thiếu — nối 10 câu với a–j (g h e b j i c f a d, suy ra từ chữ quanh chỗ trống) · **B** câu nào viết hoa, câu nào viết số · **C** phát nguyên **Track 5** để kiểm tra dự đoán · **D** phát lại **từng câu** của Track 5 (mốc `start` / `end` lấy bằng ffmpeg silencedetect) rồi chữa ngay: Ocean, 1984, 0207 389 152, Henderson, 320, Green, four, twenty years, Manchester, April 17 (theo Tapescript) · tổng kết |
+| `U01-listening-2` Listening 2: practising listening for specific information (6:36, 8 chương) | Exam tip phần 1 bài thi Nghe · đọc phiếu và đoán · phát nguyên **Track 7** (Greg gọi Maggie kiểm tra dữ liệu nhân viên) · đáp án theo **Answer key**: Austin, 110, 47, three children, 2003, Moore, Cedar, 650396, 22, single — kèm câu nghe được và cách đánh vần tên · tự đánh giá, Question-type tip · address / age / marital status |
+| `U01-reading-1` Reading 1: skimming (4:34, 7 chương) | Exam tip nguồn văn bản · **A** nối 6 văn bản (ảnh cắt từ trang sách) với nguồn: E A B F D C · **B** đọc lướt bằng hình, hình thức, từ khóa, dòng đầu – cuối · Exam tip mục đích · **C** C A F B D E · **D** quickly, general, before, slowly (đáp án suy ra, có giải thích) |
+| `U01-reading-2` Reading 2: practise skimming (3:52, 7 chương) | Đọc sáu nguồn trước · nối văn bản A–C và D–F (hai ảnh cắt từ hai trang) theo **Answer key**: 1 B · 2 D · 3 E · 4 C · 5 A · 6 F · tự đánh giá · 6 từ trong ngữ cảnh (gets better, goes up, how you see things, person, gets married, are hurt) |
+
+Thẻ Unit 1 trong tab Sách: **13 video trong 6 nhóm** (Speaking & Vocabulary · Listening · Reading · Writing ·
+Consolidation · Exam practice). Unit 1 và Unit 2 đủ video cho mọi phần có trang trong Course Book (25 video).
+
+**Workbook:** bỏ hẳn — P2-36 đóng ("bỏ"), hồ sơ [06-video-bai-giang.md](06-video-bai-giang.md) ghi rõ phạm vi chỉ
+Course Book và file nghe đi kèm; các chỗ sách ghi "go to Workbook page …" bỏ qua.
+
+### Công cụ
+
+| Sửa | Cách làm |
+|---|---|
+| Ô gợi ý câu điền từ | Rộng 166 px như cũ, nới tới 420 px khi có gợi ý dài ("what you do at work / how you see things") thay vì thu nhỏ rồi cắt chữ |
+
+Không thêm kiểu cảnh mới: Listening dùng lại dòng `track` (đợt 10) với `start` / `end` để phát lại từng câu.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U01-listening-1.yaml`, `.mp4` | Kịch bản và video Listening 1 |
+| `books/ielts_target_5_0/lessons/U01-listening-2.yaml`, `.mp4` | Kịch bản và video Listening 2 |
+| `books/ielts_target_5_0/lessons/U01-reading-1.yaml`, `.mp4` | Kịch bản và video Reading 1 |
+| `books/ielts_target_5_0/lessons/U01-reading-2.yaml`, `.mp4` | Kịch bản và video Reading 2 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/slides.py` | Ô gợi ý nới rộng theo gợi ý dài nhất |
+| `agents/tests/test_lesson_video.py` | Test độ phủ trên sách thật: Unit 1 và Unit 2 đủ sáu phần có video, phiên ôn unit thì không |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm 4 mục Unit 1 |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 1: 13 video, 6 nhóm theo thứ tự sách |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Phạm vi chỉ Course Book; bảng độ phủ Unit 1 mới; 4 dòng lịch sử; cách lấy mốc phát lại từng câu |
+| `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Task P2-42; P2-36 (Workbook) đóng — bỏ; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. Video cũ giữ nguyên.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 56 passed (hồi quy: 25 kịch bản khớp `lessons.json`; độ phủ Unit 1–2 đủ sáu phần) |
+| `node --test "tests/web/*.test.mjs"` | 13 passed (Unit 1: 13 video, 6 nhóm đúng thứ tự sách) |
+| `node tests/web/book.e2e.mjs` | 13/13 bước OK (thẻ Unit 1 có 13 video, 6 nhóm) |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | 4 video, tổng 21:34, 29 chương; tiếng trung bình −17,4 đến −18,0 dB, đỉnh ≤ −0,7 dB; khung "Track 5 · sentence 3" đúng câu đang phát lại |
+| Xem trước (`--engine silent`) + soát cách đọc | Sửa trước khi dựng: ô gợi ý cắt chữ (nới rộng), chi tiết "a week later" không có trong bài (bỏ) |
+
+### Còn treo
+
+- Unit 3 trở đi (kế hoạch ở file 06 mục 7).
+
+---
+
 ## Đợt 10 — 06/10/2026: 12 video Unit 2; phát file nghe của sách trong video
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `a55277e` (đã merge PR #10).

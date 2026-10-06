@@ -66,10 +66,11 @@ try{
     assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
-  await step("Unit 1 có 9 video bài giảng xếp theo phần như trong sách, mở video từ thẻ unit", async () => {
+  await step("Unit 1 có 13 video bài giảng đủ sáu phần, xếp như trong sách, mở video từ thẻ unit", async () => {
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" });
-    assert.equal(await u1.locator(".bk-vids button").count(), 9);
-    assert.deepEqual(await u1.locator(".bk-vgroup-t").allTextContents(), ["Speaking & Vocabulary", "Writing", "Consolidation", "Exam practice"]);
+    assert.equal(await u1.locator(".bk-vids button").count(), 13);
+    assert.deepEqual(await u1.locator(".bk-vgroup-t").allTextContents(),
+      ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
     assert.match(await u1.locator(".bk-vgroup").last().textContent(), /Exam practice: Listening[\s\S]*Exam practice: Reading/);
     assert.match(await u1.locator(".bk-vgroup").first().textContent(), /Speaking 1[\s\S]*Speaking 2[\s\S]*Vocabulary 1–3/);
     assert.match(await u1.locator(".bk-vids").textContent(), /Writing 1: organizing your writing[\s\S]*Writing 2: types of letter[\s\S]*Writing 3: organizing points/);

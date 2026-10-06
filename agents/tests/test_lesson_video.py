@@ -396,14 +396,14 @@ def test_coverage_lists_parts_with_and_without_video(tmp_path):
 
 
 @pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
-def test_unit1_video_coverage():
-    """Unit 1: mọi phần có trang trong sách đều có video, trừ Listening và Reading (xem docs/agent-hoc-tap/06)."""
+def test_unit1_2_video_coverage():
+    """Unit 1 và 2: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
     from lesson_video import coverage
-    (u1,) = coverage.coverage(REAL, ["U01"])
-    have = {p["activity"]: [v["id"] for v in p["videos"]] for p in u1["parts"]}
-    assert not have["U01-listening"] and not have["U01-reading"] and not have["U01-unit-review"]
-    for act in ("U01-speaking-vocab", "U01-writing", "U01-consolidation", "U01-exam-practice"):
-        assert have[act], act
+    for unit in coverage.coverage(REAL, ["U01", "U02"]):
+        have = {p["activity"].split("-", 1)[1]: [v["id"] for v in p["videos"]] for p in unit["parts"]}
+        assert not have["unit-review"], unit["item"]
+        for part in ("speaking-vocab", "listening", "reading", "writing", "consolidation", "exam-practice"):
+            assert have[part], f"{unit['item']} {part}"
 
 
 def _wav(path: Path, seconds: float, rate: int = 16000):
