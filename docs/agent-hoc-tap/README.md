@@ -31,6 +31,8 @@ phí); hai video Unit 1 Speaking 1 và 2 gắn vào Unit 1 trong tab Sách.
 
 **Đợt 5 (06/10/2026):** thêm hai video Unit 1 Writing 1 và 2, mỗi video có thư mẫu đọc thành tiếng.
 
+**Đợt 6 (06/10/2026):** video Unit 1 Writing 3 (giải bài A, B, C, thư mẫu); Workbook chưa có trong bộ sách nên chưa giải đề Workbook trang 6.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

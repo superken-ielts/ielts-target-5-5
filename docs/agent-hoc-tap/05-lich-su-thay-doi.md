@@ -5,6 +5,54 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 6 — 06/10/2026: video Unit 1 Writing 3; Workbook trang 6
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `1d204cc` (đã merge PR #6).
+
+### Yêu cầu
+
+Tạo video hướng dẫn học và giải bài Writing 3 (sách in trang 18); hướng dẫn tới Workbook trang 6 để giải các bài tập
+Workbook; xong thì tạo PR.
+
+### Đã làm
+
+| Việc | Cách làm |
+|---|---|
+| **Writing 3: organizing points in a personal letter** (8:30, 10 chương, 7,6 MB) | 9 từ mới (host family, appearance, personality, outgoing, generous, stubborn…) · **Bài A**: chọn ý cho thư giới thiệu bản thân gửi gia đình ở Anh (nên viết / bỏ qua hoặc một câu — bài mở, nói rõ không có một đáp án duy nhất) · **Bài B**: Tom đọc thư của Bruno (còn trống lời chào, lời kết), rồi sắp xếp 9 ý theo thứ tự xuất hiện (tên → tuổi → nơi ở → gia đình → việc học → sở thích → âm nhạc → tính cách → lý do học tiếng Anh; Bruno không nói ngoại hình, món ăn) · cách Bruno gom ý thành 4 đoạn · **Bài C**: Dear Mr and Mrs Gray … Best wishes / Kind regards (Yours sincerely đúng nhưng hơi trang trọng; không dùng Yours faithfully, Love, Hi) và đọc lại thư đã điền · **Thư mẫu của Lan** (sinh viên Việt Nam, 156 từ) cùng dạng đề, chia đoạn như Bruno · cách làm bài viết Workbook trang 6 theo 5 bước |
+| Workbook trang 6 | **Chưa giải được**: bộ sách đã nhập không có Workbook (`book.yaml › missing: [work-book, test-books]`). Video chỉ hướng dẫn cách làm bài viết mà sách in yêu cầu ("Go to Workbook page 6 for the writing task"), không đoán nội dung đề. Ghi task P2-36: cần file Workbook hoặc ảnh trang 6 |
+| Gắn vào app | Hoạt động `U01-writing` nay có 3 video; thẻ Unit 1 có 5 nút video |
+
+Đáp án bài A, B, C là gợi ý (Answer key không có Unit 1 Writing). Thư của Bruno là văn bản trong sách (trang 18).
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U01-writing-3.yaml` | Kịch bản video Writing 3 |
+| `books/ielts_target_5_0/lessons/U01-writing-3.mp4` | Video 1280×720, H.264 + AAC, có chương, tiếng chuẩn -16 LUFS |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm mục Writing 3 |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 1 có 5 video; phiên Writing có 3 video |
+| `agents/README.md`, `web/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Ghi chú `body: false`; video Writing 1–3; task P2-35, P2-36; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. Mã `agents/lesson_video` không đổi.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 38 passed (hồi quy: 5 kịch bản khớp `lessons.json`) |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | Thời lượng khớp lời thoại, 10 chương; tiếng trung bình -17,4 dB, đỉnh -0,6 dB |
+
+---
+
 ## Đợt 5 — 06/10/2026: video Unit 1 Writing 1 và Writing 2
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `da67bcb` (đã merge PR #5).
