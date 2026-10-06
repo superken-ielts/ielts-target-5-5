@@ -303,3 +303,26 @@ def test_bad_writing_scripts_are_rejected(patch):
     patch(data)
     with pytest.raises((ValidationError, ValueError)):
         sc.Lesson.model_validate(data)
+
+
+def test_blanks_and_unlabelled_order(tmp_path):
+    data = copy.deepcopy(WRITING)
+    data["scenes"] = [
+        {"kind": "blanks", "chapter": "Dictation",
+         "items": [{"n": i, "answer": w, "tip": "t"} for i, w in enumerate(["father", "mother", "son"], 1)],
+         "lines": [{"a": "Number one: father.", "focus": 0}, {"wait": 2}, {"b": "One: father.", "reveal": 1},
+                   {"b": "Two and three.", "focus": 2, "reveal": [2, 3]}]},
+        {"kind": "order", "items": [{"k": "birth", "label": "", "text": "birth", "pos": 1},
+                                    {"k": "death", "label": "", "text": "death", "pos": 2}],
+         "lines": [{"a": "Birth, then death.", "focus": 0, "reveal": ["birth", "death"]}]},
+    ]
+    lesson = sc.Lesson.model_validate(data)
+    assert lesson.scenes[0].reveal_keys() == {"1", "2", "3"}
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    assert sorted(tl.frames[-2].revealed) == ["1", "2", "3"]
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    for fr in tl.frames:
+        assert slides.render(fr, fr.start / tl.total).size == (W, H)
+    data["scenes"][0]["lines"].append({"a": "x", "reveal": 9})
+    with pytest.raises((ValidationError, ValueError)):
+        sc.Lesson.model_validate(data)

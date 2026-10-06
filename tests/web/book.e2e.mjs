@@ -66,14 +66,16 @@ try{
     assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
-  await step("Unit 1 có 5 video bài giảng (Speaking 1–2, Writing 1–3), mở video từ thẻ unit", async () => {
+  await step("Unit 1 có 6 video bài giảng xếp theo phần (Speaking & Vocabulary, Writing), mở video từ thẻ unit", async () => {
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" });
-    assert.equal(await u1.locator(".bk-vids button").count(), 5);
+    assert.equal(await u1.locator(".bk-vids button").count(), 6);
+    assert.deepEqual(await u1.locator(".bk-vgroup-t").allTextContents(), ["Speaking & Vocabulary", "Writing"]);
+    assert.match(await u1.locator(".bk-vgroup").first().textContent(), /Speaking 1[\s\S]*Speaking 2[\s\S]*Vocabulary 1–3/);
     assert.match(await u1.locator(".bk-vids").textContent(), /Writing 1: organizing your writing[\s\S]*Writing 2: types of letter[\s\S]*Writing 3: organizing points/);
     await u1.locator(".bk-vids button").first().click();
     await page.waitForSelector("#p-book .bk-video");
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Speaking & Vocabulary/);
-    assert.equal(await page.locator("#p-book video").count(), 2);
+    assert.equal(await page.locator("#p-book video").count(), 3);
     const src = await page.locator("#p-book video").first().getAttribute("src");
     assert.match(src, /books\/ielts_target_5_0\/lessons\/U01-speaking-1\.mp4$/);
     const got = await page.evaluate(async u => {
@@ -90,7 +92,7 @@ try{
     await page.click("#p-book .reader-bar button");
     await page.waitForSelector("#p-book .bk-next");
     // video Writing mở đúng phiên Writing của Unit 1
-    await page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" }).locator(".bk-vids button").nth(2).click();
+    await page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" }).locator(".bk-vids button", { hasText: "Writing 1" }).click();
     await page.waitForSelector("#p-book .bk-video");
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Writing/);
     assert.equal(await page.locator("#p-book video").count(), 3);

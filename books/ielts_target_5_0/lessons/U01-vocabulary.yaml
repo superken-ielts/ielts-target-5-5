@@ -1,0 +1,323 @@
+# Video bài giảng Unit 1 · Vocabulary 1–3 (sách in trang 11). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-vocabulary.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Đáp án Vocabulary 1A lấy từ Tapescript, Track 3 (sách in trang 277).
+id: U01-vocabulary
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Vocabulary 1–3: family, stages of life, key words"
+title_vi: "Từ chỉ người trong gia đình, các giai đoạn cuộc đời, từ khóa để nói — đáp án và thêm ví dụ"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 1: Life. This lesson covers Vocabulary 1, 2 and 3."
+        say: "Welcome back to Unit one: Life. This lesson covers Vocabulary one, two and three."
+        vi: "Bài này gồm Vocabulary 1, 2 và 3 của Unit 1."
+      - tom: "Members of the family, stages of life, and key words to speak. Right?"
+      - emma: "Exactly. In IELTS Speaking Part 1, the examiner often asks about your family, so these words are really useful."
+        say: "Exactly. In eye-elts Speaking Part one, the examiner often asks about your family, so these words are really useful."
+        vi: "Phần 1 bài thi Nói thường hỏi về gia đình — các từ này rất cần."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Vocabulary 1A: listen and write ten family words", vi: "Nghe và viết 10 từ chỉ người trong gia đình"}
+      - {en: "Pronunciation check: the sound /ʌ/ in mother, brother, son", vi: "Phát âm: âm /ʌ/"}
+      - {en: "Vocabulary 2: stages of life — label the pictures, then put them in order", vi: "Các giai đoạn cuộc đời"}
+      - {en: "Vocabulary 3: key words to speak — model answers", vi: "Từ khóa để nói — câu trả lời mẫu"}
+      - {en: "More examples: talk about your family", vi: "Thêm ví dụ: nói về gia đình bạn"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, a short dictation: ten family words.", focus: 0}
+      - {emma: "Then, a pronunciation check.", focus: 1}
+      - {emma: "Next, the stages of life.", focus: 2}
+      - {emma: "Then, key words to speak about your family, with model answers.", focus: 3}
+      - {emma: "And finally, more examples, so you can talk about your own family.", focus: 4}
+
+  - kind: blanks
+    chapter: "Vocabulary 1A: nghe và viết"
+    heading: "Vocabulary 1A · Listen and write the words. Focus on your spelling."
+    heading_vi: "Nghe và viết 10 từ — chú ý chính tả"
+    items:
+      - {n: 1, answer: "father", tip: "f-a-t-h-e-r: 'th' like in 'this'"}
+      - {n: 2, answer: "mother", tip: "the letter 'o' sounds like /ʌ/"}
+      - {n: 3, answer: "brother", tip: "b-r-o-t-h-e-r: 'o' sounds like /ʌ/ again"}
+      - {n: 4, answer: "sister", tip: "s-i-s-t-e-r"}
+      - {n: 5, answer: "grandfather", tip: "one word: grand + father"}
+      - {n: 6, answer: "son", tip: "same sound as 'sun', different spelling"}
+      - {n: 7, answer: "daughter", tip: "'gh' is silent: daugh-ter"}
+      - {n: 8, answer: "aunt", tip: "a-u-n-t: the 'u' is silent in British English"}
+      - {n: 9, answer: "uncle", tip: "u-n-c-l-e: ends in '-le'"}
+      - {n: 10, answer: "cousin", tip: "c-o-u-s-i-n: 'ou' sounds like /ʌ/"}
+    lines:
+      - emma: "Vocabulary 1, Exercise A. Listen and write the words. Focus on your spelling. Get a pen and some paper."
+        say: "Vocabulary one, Exercise eigh. Listen and write the words. Focus on your spelling. Get a pen and some paper."
+        vi: "Chuẩn bị giấy bút: nghe và viết từng từ."
+      - {emma: "Number one: father.", focus: 0}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number two: mother.", focus: 1}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number three: brother.", focus: 2}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number four: sister.", focus: 3}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number five: grandfather.", focus: 4}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number six: son.", focus: 5}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number seven: daughter.", focus: 6}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number eight: aunt.", focus: 7}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number nine: uncle.", focus: 8}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - {emma: "Number ten: cousin.", focus: 9}
+      - {wait: 4, note: "Write the word", vi: "Viết từ vừa nghe"}
+      - emma: "Now check your spelling with Tom. These answers are from the tapescript, track three."
+        vi: "Kiểm tra chính tả — đáp án theo Tapescript, Track 3."
+      - {tom: "One: father.", focus: 0, reveal: 1}
+      - {tom: "Two: mother.", focus: 1, reveal: 2}
+      - {tom: "Three: brother.", focus: 2, reveal: 3}
+      - {tom: "Four: sister.", focus: 3, reveal: 4}
+      - {tom: "Five: grandfather. It's one word.", focus: 4, reveal: 5}
+      - {tom: "Six: son. It sounds like sun, but it's spelled s, o, n.", say: "Six: son. It sounds like sun, but it's spelled S, O, N.", focus: 5, reveal: 6}
+      - {tom: "Seven: daughter. The g h is silent.", say: "Seven: daughter. The G, H is silent.", focus: 6, reveal: 7}
+      - {tom: "Eight: aunt.", focus: 7, reveal: 8}
+      - {tom: "Nine: uncle.", focus: 8, reveal: 9}
+      - {tom: "Ten: cousin. Be careful: c, o, u, s, i, n.", say: "Ten: cousin. Be careful: C, O, U, S, I, N.", focus: 9, reveal: 10}
+
+  - kind: bullets
+    chapter: "Phát âm: âm /ʌ/"
+    heading: "Pronunciation check · the sound /ʌ/"
+    heading_vi: "Chữ 'o' trong mother, brother, son đọc là /ʌ/ — âm rất hay gặp trong từ chỉ gia đình"
+    items:
+      - {en: "mother  /ˈmʌðə/", vi: "mẹ"}
+      - {en: "brother  /ˈbrʌðə/", vi: "anh, em trai"}
+      - {en: "son  /sʌn/ — sounds like sun", vi: "con trai — đọc giống 'sun'"}
+      - {en: "uncle  /ˈʌŋkl/ · cousin  /ˈkʌzn/", vi: "chú, bác, cậu · anh chị em họ"}
+      - {en: "husband  /ˈhʌzbənd/ · grandmother · brother-in-law", vi: "chồng · bà · anh/em rể"}
+    lines:
+      - emma: "Pronunciation check. In mother, brother and son, the letter o is pronounced like the short sound in cup."
+        vi: "Chữ 'o' trong mother, brother, son đọc ngắn như âm trong 'cup'."
+      - {emma: "Listen, and repeat after Tom.", focus: 0}
+      - {tom: "mother", focus: 0}
+      - {tom: "brother", focus: 1}
+      - {tom: "son. Son, like the sun in the sky.", focus: 2}
+      - emma: "The same sound is very common in family words."
+        focus: 3
+      - {tom: "uncle, cousin", focus: 3}
+      - {tom: "husband, grandmother, brother-in-law", focus: 4}
+      - {emma: "Practise saying the words: my mother, my brother, my son, my cousin.", focus: 4}
+
+  - kind: match
+    chapter: "Vocabulary 2A: các giai đoạn"
+    heading: "Vocabulary 2A · Label the pictures with the correct words"
+    heading_vi: "Gắn từ với tranh a–f"
+    image: {pdf: course-book, page: 12, clip: [70, 392, 450, 556]}
+    items:
+      - {n: 1, q: "middle age", answer: d}
+      - {n: 2, q: "death", answer: c}
+      - {n: 3, q: "birth", answer: e}
+      - {n: 4, q: "childhood", answer: b}
+      - {n: 5, q: "retirement", answer: a}
+      - {n: 6, q: "adolescence", answer: f}
+    lines:
+      - emma: "Vocabulary 2: stages of life. Exercise A. Label the pictures with the correct words: middle age, death, birth, childhood, retirement and adolescence."
+        say: "Vocabulary two: stages of life. Exercise eigh. Label the pictures with the correct words: middle age, death, birth, childhood, retirement and adolescence."
+        vi: "Gắn 6 từ với 6 bức tranh."
+      - {wait: 6, note: "Pause the video and try", vi: "Tạm dừng video, gắn từ với tranh rồi xem tiếp."}
+      - {emma: "Picture e: a new baby. That's birth.", say: "Picture E: a new baby. That's birth.", focus: 2, reveal: 3}
+      - {emma: "Picture b: young children at school. That's childhood.", say: "Picture B: young children at school. That's childhood.", focus: 3, reveal: 4}
+      - {emma: "Picture f: teenagers with their friends. That's adolescence.", say: "Picture F: teenagers with their friends. That's adolescence.", focus: 5, reveal: 6}
+      - {emma: "Picture d: two men at work, about fifty years old. That's middle age.", say: "Picture D: two men at work, about fifty years old. That's middle age.", focus: 0, reveal: 1}
+      - {emma: "Picture a: an older couple with free time on the beach. That's retirement.", say: "Picture eigh: an older couple with free time on the beach. That's retirement.", focus: 4, reveal: 5}
+      - {emma: "And picture c: a cemetery. That's death.", say: "And picture C: a cemetery. That's death.", focus: 1, reveal: 2}
+      - emma: "The answer key does not cover this exercise, so these are our suggested answers."
+        vi: "Phần đáp án cuối sách không có bài này — đây là đáp án gợi ý."
+
+  - kind: order
+    chapter: "Vocabulary 2B: thứ tự"
+    heading: "Vocabulary 2B · Write the stages in the order they come in life"
+    heading_vi: "Che bài A, viết các giai đoạn theo thứ tự trong cuộc đời"
+    items:
+      - {k: middle-age, label: "", text: "middle age", pos: 4}
+      - {k: death, label: "", text: "death", pos: 6}
+      - {k: birth, label: "", text: "birth", pos: 1}
+      - {k: childhood, label: "", text: "childhood", pos: 2}
+      - {k: retirement, label: "", text: "retirement", pos: 5}
+      - {k: adolescence, label: "", text: "adolescence", pos: 3}
+    lines:
+      - emma: "Exercise B. Cover Exercise A, and write the stages in the order that they come in life. Number one is done for you: birth."
+        focus: 2
+        reveal: birth
+        vi: "Bài B. Che bài A, viết theo thứ tự — số 1 là birth."
+      - {wait: 6, note: "Pause the video and try", vi: "Tạm dừng video, viết thứ tự rồi xem tiếp."}
+      - {tom: "Two: childhood.", focus: 3, reveal: childhood}
+      - {tom: "Three: adolescence. That's when you're a teenager.", focus: 5, reveal: adolescence}
+      - {tom: "Four: middle age.", focus: 0, reveal: middle-age}
+      - {tom: "Five: retirement.", focus: 4, reveal: retirement}
+      - {tom: "And six: death.", focus: 1, reveal: death}
+      - emma: "Well done. Notice: between adolescence and middle age, you are an adult. We call it adulthood."
+        vi: "Giữa tuổi dậy thì và trung niên là tuổi trưởng thành — adulthood."
+
+  - kind: vocab
+    chapter: "Ví dụ: các giai đoạn"
+    heading: "Stages of life · useful word forms and examples"
+    heading_vi: "Dạng từ hay dùng khi nói và ví dụ"
+    items:
+      - {w: "birth", pos: "noun · be born (verb)", vi: "sự ra đời · được sinh ra", ex: "I was born in 2004, in a small village near Hue."}
+      - {w: "childhood", pos: "noun · a child (person)", vi: "thời thơ ấu", ex: "I had a happy childhood in the countryside."}
+      - {w: "adolescence", pos: "noun · a teenager (person)", vi: "tuổi vị thành niên", ex: "Adolescence can be difficult, because teenagers change a lot."}
+      - {w: "adulthood", pos: "noun · an adult (person)", vi: "tuổi trưởng thành", ex: "In Vietnam, you become an adult at eighteen."}
+      - {w: "middle age", pos: "noun · middle-aged (adjective)", vi: "tuổi trung niên", ex: "My parents are in their fifties. They're middle-aged."}
+      - {w: "retirement", pos: "noun · retire (verb) · retired (adjective)", vi: "sự nghỉ hưu · nghỉ hưu · đã nghỉ hưu", ex: "My grandfather retired at sixty. He loves his retirement."}
+      - {w: "death", pos: "noun · die (verb) · dead (adjective)", vi: "cái chết · chết · đã chết", ex: "After my grandmother died, my grandfather moved in with us."}
+    lines:
+      - emma: "Here are more examples. When you speak, you often need a different form of the word."
+        vi: "Khi nói, ta thường dùng dạng khác của từ."
+      - {emma: "Birth. We usually say: be born.", focus: 0}
+      - {tom: "I was born in 2004, in a small village near Hue.", say: "I was born in two thousand and four, in a small village near Whey.", focus: 0}
+      - {emma: "Childhood.", focus: 1}
+      - {tom: "I had a happy childhood in the countryside.", focus: 1}
+      - {emma: "Adolescence. The person is a teenager.", focus: 2}
+      - {tom: "Adolescence can be difficult, because teenagers change a lot.", focus: 2}
+      - {emma: "Adulthood. The person is an adult.", focus: 3}
+      - {tom: "In Vietnam, you become an adult at eighteen.", focus: 3}
+      - {emma: "Middle age. The adjective is middle-aged.", focus: 4}
+      - {tom: "My parents are in their fifties. They're middle-aged.", focus: 4}
+      - {emma: "Retirement. The verb is retire, and the adjective is retired.", focus: 5}
+      - {tom: "My grandfather retired at sixty. He loves his retirement.", focus: 5}
+      - {emma: "Death. The verb is die.", focus: 6}
+      - {tom: "After my grandmother died, my grandfather moved in with us.", focus: 6}
+
+  - kind: bullets
+    chapter: "Vocabulary 3: từ khóa"
+    heading: "Vocabulary 3A · Check the highlighted words"
+    heading_vi: "Sáu từ khóa để nói về gia đình"
+    items:
+      - {en: "parents — your mother and father", vi: "bố mẹ"}
+      - {en: "relatives — aunts, uncles, cousins, grandparents…", vi: "họ hàng"}
+      - {en: "retired — not working any more because of age", vi: "đã nghỉ hưu"}
+      - {en: "teenagers — people aged 13 to 19", vi: "thanh thiếu niên (13–19 tuổi)"}
+      - {en: "children — the plural of child", vi: "con cái, trẻ em (số nhiều của child)"}
+      - {en: "adult — a person who is fully grown", vi: "người trưởng thành"}
+    lines:
+      - emma: "Vocabulary 3: using key words and phrases to speak. Exercise A. Check the highlighted words."
+        say: "Vocabulary three: using key words and phrases to speak. Exercise eigh. Check the highlighted words."
+        vi: "Vocabulary 3. Kiểm tra nghĩa sáu từ được tô màu."
+      - {emma: "Parents: your mother and father.", focus: 0}
+      - {emma: "Relatives: other people in your family, like aunts, uncles and cousins.", focus: 1}
+      - {emma: "Retired: not working any more, because of your age.", focus: 2}
+      - {emma: "Teenagers: people from thirteen to nineteen years old.", focus: 3}
+      - {emma: "Children: the plural of child. Never say childs!", focus: 4}
+      - {emma: "Adult: a person who is fully grown.", focus: 5}
+
+  - kind: qa
+    chapter: "Vocabulary 3: trả lời mẫu"
+    heading: "Vocabulary 3A · Answer the questions with a partner"
+    heading_vi: "Nghe câu trả lời mẫu của Tom, rồi tự trả lời"
+    items:
+      - q: "Were you born in the same place as your parents?"
+        a: "No, I wasn't. I was born in Hanoi, but my parents were both born in a small village near Hue."
+        phrases: ["I was born in…", "my parents were both born…"]
+      - q: "Do any of your other relatives live in the same place?"
+        a: "Yes, a lot of them. My aunt and uncle live in the same street, and my cousins visit us every weekend."
+        phrases: ["a lot of them", "in the same street", "my cousins"]
+      - q: "Are your grandparents retired?"
+        a: "Yes, they are. My grandfather was a teacher, and he retired ten years ago. Now he grows vegetables in his garden."
+        phrases: ["Yes, they are.", "he retired … ago"]
+      - q: "Are any of your friends teenagers?"
+        a: "Not really. Most of my friends are in their twenties, but my younger brother is a teenager. He's fifteen."
+        phrases: ["in their twenties", "a teenager"]
+      - q: "Do you know somebody who has more than five children?"
+        a: "Yes, my great-aunt has seven children! Big families were common in her generation."
+        phrases: ["has seven children", "in her generation"]
+      - q: "When does somebody become an adult in your country?"
+        a: "In Vietnam, you become an adult at eighteen. Then you can vote and get a driving licence."
+        phrases: ["become an adult at…", "vote", "a driving licence"]
+    lines:
+      - emma: "Now answer the questions with a partner. Listen to Tom's answers first."
+        vi: "Trả lời các câu hỏi với bạn học — nghe Tom trả lời mẫu trước."
+      - {emma: "Tom, were you born in the same place as your parents?", focus: 0}
+      - {tom: "No, I wasn't. I was born in Hanoi, but my parents were both born in a small village near Hue.", say: "No, I wasn't. I was born in Ha Noi, but my parents were both born in a small village near Whey.", reveal: 0}
+      - {emma: "Do any of your other relatives live in the same place?", focus: 1}
+      - {tom: "Yes, a lot of them. My aunt and uncle live in the same street, and my cousins visit us every weekend.", reveal: 1}
+      - {emma: "Are your grandparents retired?", focus: 2}
+      - {tom: "Yes, they are. My grandfather was a teacher, and he retired ten years ago. Now he grows vegetables in his garden.", reveal: 2}
+      - {emma: "Are any of your friends teenagers?", focus: 3}
+      - {tom: "Not really. Most of my friends are in their twenties, but my younger brother is a teenager. He's fifteen.", reveal: 3}
+      - {emma: "Do you know somebody who has more than five children?", focus: 4}
+      - {tom: "Yes, my great-aunt has seven children! Big families were common in her generation.", reveal: 4}
+      - {emma: "When does somebody become an adult in your country?", focus: 5}
+      - {tom: "In Vietnam, you become an adult at eighteen. Then you can vote and get a driving licence.", reveal: 5}
+
+  - kind: errors
+    chapter: "Lỗi thường gặp"
+    heading: "Watch out! Typical errors"
+    heading_vi: "Lỗi hay gặp khi dùng các từ này"
+    items:
+      - {wrong: "My brother has three childs.", right: "My brother has three children.", note: "child → children"}
+      - {wrong: "He is teenager.", right: "He is a teenager.", note: "Thêm 'a' trước danh từ số ít"}
+      - {wrong: "Where did you born?", right: "Where were you born?", note: "be born: I was born in…"}
+      - {wrong: "My grandfather is retire.", right: "My grandfather is retired.", note: "retire (động từ) → retired (tính từ)"}
+    lines:
+      - emma: "Watch out for these typical errors."
+        vi: "Chú ý các lỗi hay gặp."
+      - {emma: "Not childs. Say children.", focus: 0}
+      - {tom: "My brother has three children.", focus: 0}
+      - {emma: "Teenager needs the article a.", focus: 1}
+      - {tom: "He is a teenager.", focus: 1}
+      - {emma: "Born uses the verb be.", focus: 2}
+      - {tom: "Where were you born? I was born in Hanoi.", say: "Where were you born? I was born in Ha Noi.", focus: 2}
+      - {emma: "And use the adjective retired after the verb be.", focus: 3}
+      - {tom: "My grandfather is retired.", focus: 3}
+
+  - kind: letter
+    chapter: "Thêm ví dụ: nói về gia đình"
+    heading: "Model answer · Tell me about your family."
+    heading_vi: "Câu trả lời mẫu cho câu hỏi IELTS Speaking Part 1 — dùng từ của cả ba bài"
+    items:
+      - text: "I come from quite a big family. I live with my parents and my younger brother, who is a teenager. He's fifteen and he's still at school."
+        note: "parents · teenager"
+      - text: "My father is a doctor and my mother works part-time in a bank. My grandparents are retired, and they live with us too, so our house is always busy."
+        note: "retired · grandparents"
+      - text: "I also have a lot of relatives in the same city. My aunt and uncle live nearby, and I often play football with my cousins at the weekend."
+        note: "relatives · aunt · uncle · cousins"
+      - text: "I think I had a really happy childhood, because there were always people around me. Now that I'm an adult, I still love family dinners on Sundays."
+        note: "childhood · adult"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember · Your turn"
+    heading_vi: "Ghi nhớ và bài về nhà"
+    items:
+      - {en: "Family: father, mother, brother, sister, grandfather, son, daughter, aunt, uncle, cousin", vi: "10 từ của Vocabulary 1"}
+      - {en: "/ʌ/: mother, brother, son, uncle, cousin", vi: "Âm /ʌ/ trong từ chỉ gia đình"}
+      - {en: "Stages: birth → childhood → adolescence → (adulthood) → middle age → retirement → death", vi: "Các giai đoạn cuộc đời"}
+      - {en: "I was born in… · He is a teenager · She is retired · three children", vi: "Dùng đúng dạng từ"}
+      - {en: "Homework: draw your family tree and say one sentence about each person", vi: "Bài về nhà: vẽ cây gia đình, nói một câu về mỗi người"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Ten family words, and their spelling.", focus: 0}
+      - {emma: "The sound in mother, brother, son, uncle and cousin.", focus: 1}
+      - {emma: "The stages of life, from birth to death.", focus: 2}
+      - {emma: "And the right word forms: I was born, he is a teenager, she is retired, three children.", focus: 3}
+      - emma: "For homework, draw your family tree, and say one sentence about each person. Record yourself!"
+        focus: 4
+        vi: "Bài về nhà: vẽ cây gia đình và ghi âm một câu về mỗi người."
+      - tom: "Thanks, Emma! I'm going to start with my grandparents."
+      - emma: "Great idea. Goodbye, and see you in the next lesson!"
