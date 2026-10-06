@@ -1,0 +1,274 @@
+# Video bài giảng Unit 1 · Consolidation (sách in trang 19). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-consolidation.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Từ cần nhấn trọng âm (Vocabulary C) theo Tapescript Track 8; các đáp án khác là gợi ý.
+id: U01-consolidation
+activity: U01-consolidation
+title: "Unit 1 · Life"
+subtitle: "Consolidation: Speaking, Vocabulary, Errors"
+title_vi: "Ôn tập Unit 1 — Speaking Part 1, từ vựng gia đình, trọng âm, sửa lỗi"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 1. This is the Consolidation page: we review everything from the unit."
+        say: "Welcome back to Unit one. This is the Consolidation page: we review everything from the unit."
+        vi: "Trang Consolidation: ôn lại toàn bộ Unit 1."
+      - tom: "Speaking, vocabulary, and errors. I'm ready!"
+      - emma: "Let's check your answers, and practise a little more."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay ôn gì"
+    items:
+      - {en: "Speaking A: facts about Part 1 of the Speaking Module", vi: "Hiểu Phần 1 bài thi Nói"}
+      - {en: "Speaking B and C: easy and difficult questions — practise answering", vi: "Câu hỏi dễ, khó — luyện trả lời"}
+      - {en: "Vocabulary A and B: family words and word forms", vi: "Từ chỉ gia đình, dạng từ"}
+      - {en: "Vocabulary C: word stress", vi: "Trọng âm của từ"}
+      - {en: "Errors: correct eight sentences", vi: "Sửa lỗi 8 câu"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, the Speaking Module, Part 1.", focus: 0}
+      - {emma: "Then, practice questions.", focus: 1}
+      - {emma: "Family words and word forms.", focus: 2}
+      - {emma: "Word stress.", focus: 3}
+      - {emma: "And finally, eight sentences with errors.", focus: 4}
+
+  - kind: qa
+    chapter: "Speaking A: Phần 1 bài thi Nói"
+    heading: "Speaking A · The first part of the Speaking Module"
+    heading_vi: "Trả lời 3 câu hỏi về Phần 1 bài thi Nói"
+    items:
+      - q: "How long does the first part of the Speaking Module take?"
+        a: "About four to five minutes."
+        ask: tom
+        by: emma
+        phrases: ["4–5 minutes"]
+      - q: "Is it about a third or about half of the total Speaking Module?"
+        a: "About a third. The whole Speaking test takes eleven to fourteen minutes."
+        ask: tom
+        by: emma
+        phrases: ["about a third", "11–14 minutes in total"]
+      - q: "What kind of questions will the examiner ask?"
+        a: "Simple questions about familiar topics: you, your home or hometown, your family, your work or studies, and your free time."
+        ask: tom
+        by: emma
+        phrases: ["familiar topics", "home, family, work, free time"]
+    lines:
+      - emma: "Speaking, Exercise A. Tom, ask me the questions about the first part of the Speaking Module."
+        say: "Speaking, Exercise eigh. Tom, ask me the questions about the first part of the Speaking Module."
+        vi: "Bài A: Tom hỏi, Emma trả lời về Phần 1 bài thi Nói."
+      - {tom: "How long does the first part of the Speaking Module take?", focus: 0}
+      - {emma: "About four to five minutes.", reveal: 0}
+      - {tom: "Is it about a third or about half of the total Speaking Module?", focus: 1}
+      - {emma: "About a third. The whole Speaking test takes eleven to fourteen minutes.", reveal: 1}
+      - {tom: "What kind of questions will the examiner ask?", focus: 2}
+      - {emma: "Simple questions about familiar topics: you, your home or hometown, your family, your work or studies, and your free time.", reveal: 2}
+      - emma: "So Unit 1 is perfect practice for Part 1!"
+        vi: "Unit 1 chính là luyện cho Phần 1."
+
+  - kind: qa
+    chapter: "Speaking B: câu dễ, câu khó"
+    heading: "Speaking B · Tick the easy questions, cross the difficult ones"
+    heading_vi: "Câu nào dễ, câu nào khó? Nghe Tom trả lời mẫu hai câu khó"
+    items:
+      - q: "Which part of the world would you most like to visit?"
+        a: "I'd most like to visit Japan, because I love Japanese food and I'd like to see the cherry blossoms in spring."
+        phrases: ["I'd most like to visit…", "because…"]
+      - q: "Tell me about a famous person that you admire."
+        a: "I admire Nguyen Thi Anh Vien, the swimmer. She trained really hard and won many medals for Vietnam."
+        phrases: ["I admire…", "She trained really hard"]
+      - q: "Who was your favourite teacher at school?"
+        a: "My favourite teacher was Mr Long. He taught us English, and his lessons were always fun."
+        phrases: ["My favourite teacher was…", "His lessons were…"]
+    lines:
+      - emma: "Exercise B. Look at the six questions in the book. Tick them if they are easy to answer, and cross them if they are difficult."
+        vi: "Bài B. Câu dễ đánh dấu ✓, câu khó đánh dấu ✗."
+      - emma: "Questions about your free time, why you're learning English, and your hometown are usually easy. You talk about yourself."
+        vi: "Câu về sở thích, lý do học tiếng Anh, quê nhà thường dễ."
+      - emma: "Questions about other people and places need more thinking. Here are three model answers."
+        vi: "Câu về người khác, nơi khác cần nghĩ nhiều hơn — nghe 3 câu trả lời mẫu."
+      - {emma: "Which part of the world would you most like to visit?", focus: 0}
+      - {tom: "I'd most like to visit Japan, because I love Japanese food and I'd like to see the cherry blossoms in spring.", reveal: 0}
+      - {emma: "Tell me about a famous person that you admire.", focus: 1}
+      - {tom: "I admire Nguyen Thi Anh Vien, the swimmer. She trained really hard and won many medals for Vietnam.", say: "I admire Win Tee Ahn Vee-en, the swimmer. She trained really hard and won many medals for Vietnam.", reveal: 1}
+      - {emma: "Who was your favourite teacher at school?", focus: 2}
+      - {tom: "My favourite teacher was Mr Long. He taught us English, and his lessons were always fun.", reveal: 2}
+      - emma: "Notice: Tom answers, and then gives a reason. Use the past simple for school memories: was, taught, were."
+        vi: "Trả lời + lý do; kỷ niệm thời đi học dùng quá khứ đơn."
+
+  - kind: practice
+    chapter: "Speaking C: đến lượt bạn"
+    heading: "Speaking C · Your turn"
+    heading_vi: "Luyện hỏi – đáp: trả lời thành tiếng mỗi câu 8 giây"
+    items:
+      - {q: "What do you like doing in your free time?", hint: "I like… because…"}
+      - {q: "Which part of the world would you most like to visit?", hint: "I'd most like to visit… because…"}
+      - {q: "Why are you learning English?", hint: "I'm learning English because…"}
+      - {q: "How long have you lived in your hometown?", hint: "I've lived there for / since…"}
+      - {q: "Who was your favourite teacher at school?", hint: "My favourite teacher was…"}
+      - {q: "Tell me about a famous person that you admire.", hint: "I admire… He / She…"}
+    lines:
+      - emma: "Exercise C says: walk around the class and practise with other students. At home, practise with me. Answer each question out loud."
+        vi: "Bài C: luyện hỏi – đáp. Ở nhà thì trả lời theo video."
+      - {emma: "What do you like doing in your free time?", focus: 0}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Which part of the world would you most like to visit?", focus: 1}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Why are you learning English?", focus: 2}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "How long have you lived in your hometown?", focus: 3}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Who was your favourite teacher at school?", focus: 4}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+      - {emma: "Tell me about a famous person that you admire.", focus: 5}
+      - {wait: 8, note: "Your turn — answer out loud", vi: "Đến lượt bạn — trả lời thành tiếng"}
+
+  - kind: blanks
+    chapter: "Vocabulary A: từ chỉ gia đình"
+    heading: "Vocabulary A · Write one word to complete each sentence"
+    heading_vi: "Điền một từ vào mỗi câu"
+    items:
+      - {n: 1, q: "Your mother and father are your ___.", answer: "parents"}
+      - {n: 2, q: "Your father's father is your ___.", answer: "grandfather"}
+      - {n: 3, q: "Your mother or father's brother is your ___.", answer: "uncle"}
+      - {n: 4, q: "Your mother or father's sister is your ___.", answer: "aunt"}
+      - {n: 5, q: "Your son's sister is your ___.", answer: "daughter"}
+      - {n: 6, q: "The children of your uncles and aunts are your ___.", answer: "cousins", tip: "plural: the children → cousins"}
+      - {n: 7, q: "All of the people in your family are your ___.", answer: "relatives", tip: "relatives = all the people in your family (you can also say: family)"}
+    lines:
+      - emma: "Vocabulary, Exercise A. Write one word to complete each sentence."
+        say: "Vocabulary, Exercise eigh. Write one word to complete each sentence."
+        vi: "Bài A. Điền một từ vào mỗi câu."
+      - {wait: 8, note: "Pause the video and try", vi: "Tạm dừng video, điền từ rồi xem tiếp."}
+      - {emma: "Your mother and father are your…", focus: 0}
+      - {tom: "Parents.", reveal: 1}
+      - {emma: "Your father's father is your…", focus: 1}
+      - {tom: "Grandfather.", reveal: 2}
+      - {emma: "Your mother or father's brother is your…", focus: 2}
+      - {tom: "Uncle.", reveal: 3}
+      - {emma: "Your mother or father's sister is your…", focus: 3}
+      - {tom: "Aunt.", reveal: 4}
+      - {emma: "Your son's sister is your…", focus: 4}
+      - {tom: "Daughter.", reveal: 5}
+      - {emma: "The children of your uncles and aunts are your…", focus: 5}
+      - {tom: "Cousins. It's plural.", reveal: 6}
+      - {emma: "All of the people in your family are your…", focus: 6}
+      - {tom: "Relatives.", reveal: 7}
+
+  - kind: blanks
+    chapter: "Vocabulary B: dạng từ"
+    heading: "Vocabulary B · Fill the gaps with a word made from the root word"
+    heading_vi: "Điền từ tạo từ từ gốc trong khung"
+    items:
+      - {n: 1, q: "What do you do for a ___?", answer: "living", hint: "live"}
+      - {n: 2, q: "One of my uncles has got ten ___.", answer: "children", hint: "child", tip: "child → children (irregular plural)"}
+      - {n: 3, q: "I didn't have any brothers and sisters, but I had a very happy ___.", answer: "childhood", hint: "child", tip: "child + -hood → childhood"}
+      - {n: 4, q: "I want to be happily ___ before I'm thirty.", answer: "married", hint: "marry", tip: "marry → married (adjective): be married"}
+      - {n: 5, q: "My father seems to be very happy in his ___.", answer: "retirement", hint: "retire", tip: "retire + -ment → retirement (noun)"}
+    lines:
+      - emma: "Exercise B. Fill the gaps with a word made from the root words in the box. Number one is done for you: living."
+        focus: 0
+        reveal: 1
+        vi: "Bài B. Tạo từ từ từ gốc — câu 1 là ví dụ: living."
+      - {wait: 8, note: "Pause the video and try", vi: "Tạm dừng video, điền từ rồi xem tiếp."}
+      - {emma: "Number two: One of my uncles has got ten…", focus: 1}
+      - {tom: "Children. The plural of child.", reveal: 2}
+      - {emma: "Number three: I had a very happy…", focus: 2}
+      - {tom: "Childhood.", reveal: 3}
+      - {emma: "Number four: I want to be happily…", focus: 3}
+      - {tom: "Married.", reveal: 4}
+      - {emma: "Number five: My father seems to be very happy in his…", focus: 4}
+      - {tom: "Retirement.", reveal: 5}
+
+  - kind: bullets
+    chapter: "Vocabulary C: trọng âm"
+    heading: "Vocabulary C · Mark the main stress"
+    heading_vi: "Âm tiết in hoa là âm nhấn (theo Tapescript, Track 8)"
+    items:
+      - {en: "INterests · FAmily · RElatives", vi: "Nhấn âm đầu"}
+      - {en: "TEENager", vi: "Nhấn âm đầu"}
+      - {en: "reTIREment · imPROVE", vi: "Nhấn âm thứ hai"}
+      - {en: "adoLEScence", vi: "Nhấn âm thứ ba"}
+    lines:
+      - emma: "Exercise C. Mark the main stress on these key words, then practise saying them. Listen, and repeat after Tom."
+        vi: "Bài C. Đánh dấu trọng âm rồi luyện nói — nghe và nhắc lại theo Tom."
+      - {emma: "These words are stressed on the first syllable.", focus: 0}
+      - {tom: "interests. family. relatives.", focus: 0}
+      - {tom: "teenager.", focus: 1}
+      - {emma: "These two are stressed on the second syllable.", focus: 2}
+      - {tom: "retirement. improve.", focus: 2}
+      - {emma: "And adolescence is stressed on the third syllable.", focus: 3}
+      - {tom: "adolescence.", focus: 3}
+      - emma: "Tip: when you speak fast, interests often has only two syllables: IN-trests."
+        say: "Tip: when you speak fast, interests often has only two syllables: interests."
+        vi: "Nói nhanh thì 'interests' thường chỉ còn 2 âm tiết: IN-trests."
+
+  - kind: errors
+    chapter: "Errors: sửa lỗi"
+    heading: "Errors A · Correct the sentences (1–4)"
+    heading_vi: "Mỗi câu có ít nhất một lỗi"
+    items:
+      - {wrong: "He's from new york.", right: "He's from New York.", note: "Tên riêng viết hoa"}
+      - {wrong: "My father's engineer.", right: "My father's an engineer.", note: "Nghề nghiệp cần a / an"}
+      - {wrong: "Have you brothers and sisters?", right: "Have you got any brothers and sisters?", note: "Have you got…? / Do you have…?"}
+      - {wrong: "I have 22 years.", right: "I'm 22. / I'm 22 years old.", note: "Tuổi dùng be, không dùng have"}
+    lines:
+      - emma: "Errors. There are errors in all of these sentences, sometimes more than one. Correct them."
+        vi: "Mỗi câu có lỗi (có câu nhiều hơn một lỗi) — sửa lại."
+      - {wait: 6, note: "Pause the video and try", vi: "Tạm dừng video, sửa lỗi rồi xem tiếp."}
+      - {emma: "Number one: names of places need capital letters.", focus: 0}
+      - {tom: "He's from New York.", focus: 0}
+      - {emma: "Number two: we need the article an before a job.", focus: 1}
+      - {tom: "My father's an engineer.", focus: 1}
+      - {emma: "Number three: in British English, use have got. Or say: do you have.", focus: 2}
+      - {tom: "Have you got any brothers and sisters?", focus: 2}
+      - {emma: "Number four: for age, use the verb be.", focus: 3}
+      - {tom: "I'm twenty-two years old.", say: "I'm twenty two years old.", focus: 3}
+
+  - kind: errors
+    heading: "Errors A · Correct the sentences (5–8)"
+    heading_vi: "Mỗi câu có ít nhất một lỗi"
+    items:
+      - {wrong: "His name's alan murray.", right: "His name's Alan Murray.", note: "Tên người viết hoa"}
+      - {wrong: "I work for a company called friendly products.", right: "… a company called Friendly Products.", note: "Tên công ty viết hoa"}
+      - {wrong: "Where was you born?", right: "Where were you born?", note: "you → were"}
+      - {wrong: "I write to apply for job in yesterday's newspaper.", right: "I am writing to apply for the job …", note: "I am writing to…; the job"}
+    lines:
+      - {emma: "Number five: people's names need capital letters.", focus: 0}
+      - {tom: "His name's Alan Murray.", focus: 0}
+      - {emma: "Number six: the name of a company needs capital letters too.", focus: 1}
+      - {tom: "I work for a company called Friendly Products.", focus: 1}
+      - {emma: "Number seven: with you, we use were.", focus: 2}
+      - {tom: "Where were you born?", focus: 2}
+      - {emma: "Number eight: there are two errors. We say, I am writing to apply, and we need the article the.", focus: 3}
+      - {tom: "I am writing to apply for the job in yesterday's newspaper.", focus: 3}
+      - emma: "The answer key does not cover this page, so these are our suggested answers."
+        vi: "Phần đáp án cuối sách không có trang này — đây là đáp án gợi ý."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Speaking Part 1: 4–5 minutes, about a third of the test, questions about you", vi: "Phần 1 bài thi Nói"}
+      - {en: "Answer + a reason or an example", vi: "Trả lời + lý do / ví dụ"}
+      - {en: "parents, grandfather, uncle, aunt, daughter, cousins, relatives", vi: "Từ chỉ gia đình"}
+      - {en: "child → children, childhood · marry → married · retire → retirement", vi: "Dạng từ"}
+      - {en: "Capital letters for names · a / an before jobs · I'm 22 · Where were you born?", vi: "Lỗi hay gặp"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Speaking Part 1 takes four to five minutes, and the questions are about you.", focus: 0}
+      - {emma: "Always answer, then add a reason or an example.", focus: 1}
+      - {emma: "Use the family words correctly.", focus: 2}
+      - {emma: "Make the right word forms.", focus: 3}
+      - {emma: "And watch out for capital letters, articles, and the verb be.", focus: 4}
+      - tom: "Thanks, Emma! Now the Exam practice."
+      - emma: "Yes! See you in the next video."

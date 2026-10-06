@@ -5,6 +5,70 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 9 — 06/10/2026: video Unit 1 Consolidation và Exam practice; hồ sơ video bài giảng
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `e789ae0` (đã merge PR #9).
+
+### Yêu cầu
+
+Làm video hướng dẫn cho Consolidation và Exam practice để xong Unit 1; đóng gói lịch sử làm video của tất cả các
+phần (phần nào có video, phần nào không) làm căn cứ cho Unit 2; xong thì tạo PR.
+
+### Đã làm
+
+| Việc | Cách làm |
+|---|---|
+| **Consolidation** (6:52, 10 chương, 5,5 MB) | **Speaking A** ba câu hỏi về Phần 1 bài thi Nói (4–5 phút, khoảng một phần ba của 11–14 phút, câu hỏi về chủ đề quen thuộc) · **B** câu dễ / khó, Tom trả lời mẫu ba câu khó (Japan, Nguyễn Thị Ánh Viên, thầy Long) · **C** sáu câu "Đến lượt bạn" có đếm ngược · **Vocabulary A** 7 câu điền từ gia đình · **B** dạng từ từ gốc (living, children, childhood, married, retirement) · **C** trọng âm theo **Tapescript Track 8**, nghe và nhắc lại · **Errors** sửa 8 câu (viết hoa tên riêng, a/an, have got, tuổi, were, I am writing to…) · tổng kết |
+| **Exam practice: Listening** (7:08, 11 chương, 5,4 MB) | Đọc ghi chú trước, đoán loại từ · **Track 9 không có file nghe** trong bộ sách → Emma (lễ tân) và Tom (khách) **đọc lại đúng Tapescript**, chia ba đoạn theo nhóm câu; khi nghe, phụ đề chỉ hiện người nói và "Listen carefully…" · đáp án kèm câu nghe được: 1 Hunt, 2 two, 3 Manchester, 4 104 · 5 b, 6 c, 7 b (từ đồng nghĩa: conference = business, tiny = small; bẫy "football match") · 8 D, 9 B — lần theo lời chỉ đường trên **bản đồ cắt từ trang 20** · Question-type tip và mẹo nghe · bảng tự chấm 9 câu |
+| **Exam practice: Reading** (5:40, 8 chương, 4,8 MB) | **A** đọc lướt một phút chọn chủ đề (1/2/3) → Emma đọc cả bài "Perspectives of work and job satisfaction" (đoạn đang đọc tô màu, từ khóa ở lề) → đáp án 3 và vì sao không phải 1, 2 · 6 từ khóa kèm ví dụ · **B** nối câu 1–5 với đoạn A–E: 1 C, 2 A, 3 E, 4 D, 5 B (mỗi đáp án kèm câu trong bài) · hai Question-type tip của sách + mẹo đọc · tổng kết |
+| Mục lục video | Thẻ Unit 1 có **9 video trong 4 phần**, xếp theo thứ tự trong sách: Speaking & Vocabulary (3) · Writing (3) · Consolidation (1) · Exam practice (Listening, Reading). Trước đây nhóm xếp theo thứ tự chữ cái của `lessons.json` nên Consolidation sẽ đứng đầu |
+| Công cụ | Kiểu cảnh **`mcq`** (thẻ mỗi câu, phương án đúng tô xanh, `keys` để dùng nhãn 1/2/3); **`blanks` dạng câu** (`q` chứa `___`, `hint` = từ gốc ở lề phải, dấu câu dính sát chỗ trống); trường cảnh **`hide_text`** và **`roles`**; ô mẹo và thẻ trắc nghiệm cao vừa nội dung; nhãn người đọc của cảnh `letter` đổi thành "đang đọc thành tiếng" (dùng cho cả bài đọc) |
+| **Hồ sơ video** | [06-video-bai-giang.md](06-video-bai-giang.md): bảng độ phủ Unit 1, phần chưa có video và vì sao (Listening — chưa chèn được audio sách vào video; Reading; Ôn unit; Workbook), lịch sử 9 video, quy trình 9 bước, danh mục 14 kiểu cảnh, bảng cách đọc `say` (đã kiểm bằng phonemizer của Kokoro), lỗi đã gặp, **kế hoạch Unit 2** theo từng phần (tên mục lấy bằng OCR trang PDF 23–34). Lệnh mới `python -m lesson_video coverage` in lại bảng độ phủ |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U01-consolidation.yaml`, `.mp4` | Kịch bản và video Consolidation |
+| `books/ielts_target_5_0/lessons/U01-exam-listening.yaml`, `.mp4` | Kịch bản và video Exam practice: Listening |
+| `books/ielts_target_5_0/lessons/U01-exam-reading.yaml`, `.mp4` | Kịch bản và video Exam practice: Reading |
+| `agents/lesson_video/coverage.py` | Bảng độ phủ video theo unit (book.json + lessons.json + kịch bản chưa dựng) |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Hồ sơ video bài giảng và kế hoạch Unit 2 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu `mcq`, `mcq_keys`; `hide_text`, `roles` (kiểm người nói); mô tả `blanks` dạng câu |
+| `agents/lesson_video/slides.py` | `_k_mcq`, `_blank_sentences`; phụ đề ẩn lời trong cảnh nghe, nhãn vai theo `roles`; ô mẹo / thẻ cao vừa nội dung |
+| `agents/lesson_video/cli.py` | Lệnh `coverage` |
+| `agents/tests/test_lesson_video.py` | +9 test: kiểu cảnh luyện đề dựng và vẽ được, 6 kịch bản sai bị chặn, bảng độ phủ, độ phủ Unit 1 trên sách thật |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm 3 mục |
+| `web/src/book/core.js`, `ui.js` | `groupLessons(lessons, order)`: nhóm video theo thứ tự phần trong `book.json` |
+| `web/app.template.html` | File 06 trong tab Kế hoạch (nhóm "Agent học tập") |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 1 có 9 video, 4 nhóm theo thứ tự sách; nút "Exam practice: Listening" mở phiên Consolidation & Exam practice có 3 video |
+| `agents/README.md`, `web/README.md`, `CLAUDE.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Kiểu cảnh mới, lệnh `coverage`, quy ước làm video; task P2-39, P2-40; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. Sáu video cũ giữ nguyên (bố cục các kiểu cảnh chúng dùng không đổi; nếu dựng lại, nhãn người đọc trong cảnh thư sẽ là "đang đọc thành tiếng").
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 48 passed |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK (Unit 1 có 9 video, 4 nhóm theo thứ tự sách; nút Exam practice mở đúng phiên) |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | Thời lượng khớp lời thoại; chương 10 / 11 / 8; tiếng trung bình -18,0 / -17,4 / -17,4 dB, đỉnh ≤ -0,6 dB |
+| Xem trước từng cảnh bằng `--engine silent` + soát cách đọc bằng phonemizer của Kokoro | Sửa 3 chỗ trước khi dựng thật: câu đáp án quá dài (Errors 8), mẹo "IN-trests", "part A" đọc thành mạo từ |
+
+### Còn treo
+
+- Unit 1 Listening và Reading chưa có video (lý do và cách làm ở file 06, mục 1).
+- Workbook vẫn thiếu (P2-36).
+
+---
+
 ## Đợt 8 — 06/10/2026: sửa nút phóng to / thu nhỏ trang sách
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `79c9392` (đã merge PR #8).

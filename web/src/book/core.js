@@ -196,15 +196,18 @@ const BookCore = (() => {
   function lessonSession(plan, lesson){
     return plan.sessions.find(s => (s.activityIds || []).includes(lesson.activity)) || null;
   }
-  // Gom video theo hoạt động (giữ thứ tự xuất hiện) để thẻ unit hiện thành mục lục: phần → các video
-  function groupLessons(lessons){
+  // Gom video theo hoạt động để thẻ unit hiện thành mục lục: phần → các video.
+  // `order` (mã hoạt động theo thứ tự trong sách) xếp các phần như sách; phần lạ đứng cuối, giữ thứ tự xuất hiện.
+  function groupLessons(lessons, order){
     const out = [];
     (lessons || []).forEach(l => {
       let g = out.find(x => x.activity === l.activity);
       if(!g){ g = {activity: l.activity, lessons: []}; out.push(g); }
       g.lessons.push(l);
     });
-    return out;
+    if(!order) return out;
+    const rank = a => { const i = order.indexOf(a); return i < 0 ? order.length : i; };
+    return out.map((g, i) => [g, i]).sort((x, y) => rank(x[0].activity) - rank(y[0].activity) || x[1] - y[1]).map(x => x[0]);
   }
   function chapterAt(lesson, t){
     let cur = -1;

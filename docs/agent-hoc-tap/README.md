@@ -14,6 +14,7 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 | [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md) | 10 quyết định cần chốt, đường găng theo tuần học, 5 giai đoạn với spike và cổng kiểm tra, chiến lược test, rủi ro |
 | [04-checklist.md](04-checklist.md) | Checklist từng task (P0-01 … P4-07) kèm điều kiện đạt và cổng G0–G4 |
 | [05-lich-su-thay-doi.md](05-lich-su-thay-doi.md) | Lịch sử từng đợt triển khai: file thêm/sửa/xóa, chỗ làm khác plan, kết quả kiểm thử, việc còn treo |
+| [06-video-bai-giang.md](06-video-bai-giang.md) | Video bài giảng: Unit 1 phần nào có / chưa có video, lịch sử từng video, quy trình, kiểu cảnh, cách đọc, kế hoạch Unit 2 |
 
 ## Trạng thái
 
@@ -36,6 +37,9 @@ phí); hai video Unit 1 Speaking 1 và 2 gắn vào Unit 1 trong tab Sách.
 **Đợt 7 (06/10/2026):** video Unit 1 Vocabulary 1–3 (đáp án và thêm ví dụ); thẻ unit hiện mục lục video theo từng phần.
 
 **Đợt 8 (06/10/2026):** sửa nút phóng to / thu nhỏ của trình xem trang sách (50%–300%, nhãn mức phóng, phím tắt).
+
+**Đợt 9 (06/10/2026):** video Unit 1 Consolidation, Exam practice Listening và Reading — Unit 1 có 9 video; hồ sơ
+video bài giảng (file 06) làm căn cứ cho Unit 2.
 
 ## Tóm tắt trong năm dòng
 
