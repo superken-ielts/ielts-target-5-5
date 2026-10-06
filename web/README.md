@@ -103,7 +103,8 @@ File sách (PDF, MP3) thì không nhúng — trang lấy theo thứ tự:
    `python3 web/serve.py` rồi mở `http://localhost:8000/web/index.html`).
 
 Course Book 100 MB được agent cắt thành các đoạn nhỏ theo unit trong `books/<sách>/web/`; trang chỉ tải
-đoạn chứa trang đang xem (vài MB). Trình xem PDF dùng PDF.js 4.10.38 trong `web/vendor/pdfjs/`, tải lười
+đoạn chứa trang đang xem (vài MB). Trình xem phóng to / thu nhỏ từ 50% tới 300% (nút − % +, phím `+` `-` `0`).
+Trình xem PDF dùng PDF.js 4.10.38 trong `web/vendor/pdfjs/`, tải lười
 lúc mở trang sách; không có thì lấy cùng phiên bản trên cdn.jsdelivr.net.
 
 Tiến độ sách lưu riêng, không đụng tiến độ cũ: `localStorage` khóa `ielts-gt-40w-v1:<slug>:book:<id>` và

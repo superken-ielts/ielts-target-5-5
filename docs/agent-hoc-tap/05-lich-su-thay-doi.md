@@ -5,6 +5,55 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 8 — 06/10/2026: sửa nút phóng to / thu nhỏ trang sách
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `79c9392` (đã merge PR #8).
+
+### Yêu cầu
+
+Nút phóng to / thu nhỏ hình trang bài học (trình xem PDF trong phiên học) chưa hoạt động.
+
+### Nguyên nhân (đo trên Chromium thật)
+
+| Màn hình | Trước khi sửa: bề ngang trang sau mỗi lần bấm + | Vì sao |
+|---|---|---|
+| Điện thoại 390 px, dpr 3 | 370 → 555 → 740 → 925 → 1110 px | Chạy, nhưng nút − không xuống dưới 100% |
+| Laptop 1280 px, dpr 2 | 1260 → 1681 → 1681 → 1681 px (kẹt) | Cỡ hiển thị tính từ độ phân giải canvas, mà độ phân giải bị chặn ở ~16 triệu điểm ảnh (trần của Safari iOS) |
+| Mọi màn hình | − ở mức đầu không làm gì | Mức nhỏ nhất là 100% (vừa khung) — không thu nhỏ được để xem trọn trang |
+
+### Đã làm
+
+| Việc | Cách làm |
+|---|---|
+| Mức phóng | 50%, 75%, **100% (vừa bề ngang khung)**, 125%, 150%, 200%, 250%, 300%; nút giữa hiện mức đang dùng ("100%"), bấm để về vừa khung; nút − / + mờ khi tới giới hạn; phím `+` `-` `0` |
+| Cỡ hiển thị tách khỏi độ phân giải | Bề ngang trang = vừa khung × mức phóng (luôn đúng); chỉ độ phân giải canvas có trần 16 triệu điểm ảnh — ở mức rất lớn trên màn hình nét cao ảnh hơi mềm nhưng vẫn phóng được |
+| Mượt hơn | Bấm là đổi cỡ ngay bằng CSS và giữ điểm giữa khung nhìn, rồi vẽ lại trang vào canvas mới và thay vào khi xong (không chớp trắng, không hiện "Đang mở trang…", không nhảy về đầu trang); lật trang vẫn giữ mức phóng |
+
+Sau khi sửa: laptop dpr 2 → 1260 → 1575 → 1890 → 2520 → 3150 px; thu nhỏ 945 px (75%), 630 px (50%, thấy gần trọn trang).
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `web/src/book/ui.js` | `openViewer`: bảng mức phóng, `setZoom`, `paintZoom`, nhãn %, phím tắt; `draw(keepView)` tính cỡ hiển thị theo mức phóng, vẽ vào canvas mới rồi thay |
+| `web/src/book/book.css` | Kiểu nút mức phóng |
+| `tests/web/book.e2e.mjs` | Bước xem trang sách: phóng 150% (bề ngang > 1,45×), thu 50% (< 0,55×, nút − mờ), về vừa khung |
+| `web/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Mô tả phóng to / thu nhỏ; task P2-38; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không thêm, không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 39 passed |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK (có kiểm tra phóng to / thu nhỏ) |
+| Đo tay bằng Playwright ở 390 px dpr 3, 1280 px dpr 2 và dpr 1 | Cỡ trang đổi đúng mọi mức, không lỗi JS |
+
+---
+
 ## Đợt 7 — 06/10/2026: video Unit 1 Vocabulary 1–3; mục lục video theo từng phần
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `dfd0d51` (đã merge PR #7).

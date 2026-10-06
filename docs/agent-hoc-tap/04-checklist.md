@@ -280,6 +280,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 6:* Workbook **không có** trong bộ sách đã nhập (`book.yaml › missing: work-book`) nên chưa giải được đề Workbook trang 6; video chỉ hướng dẫn cách làm. Cần ảnh trang 6 hoặc file Workbook để làm video giải đề (P2-36).
 - [x] **P2-37** Video **Unit 1 · Vocabulary 1–3** (members of your family, stages of life, key words to speak): nghe – chép 10 từ (đáp án theo Tapescript Track 3), phát âm /ʌ/, gắn tranh và sắp xếp các giai đoạn cuộc đời, 6 từ khóa với câu trả lời mẫu, lỗi hay gặp, thêm ví dụ (dạng từ, câu trả lời mẫu "Tell me about your family"). Thẻ unit nay là **mục lục video theo từng phần** (Speaking & Vocabulary: Speaking 1 · Speaking 2 · Vocabulary 1–3; Writing: Writing 1 · 2 · 3).
   - *Đợt 7:* kiểu cảnh `blanks` (nghe – chép, ô trống mở dần, mẹo chính tả), `order` có `label`; `groupLessons` trong `core.js`.
+- [x] **P2-38** Nút **phóng to / thu nhỏ** của trình xem trang sách hoạt động: 8 mức 50%–300% (100% = vừa bề ngang khung), nút giữa hiện mức đang dùng và bấm để về vừa khung, phím `+` `-` `0`; mức phóng giữ khi lật trang.
+  - *Đợt 8:* lỗi cũ: mức nhỏ nhất là 100% nên nút − không làm gì; trên màn hình độ nét cao (dpr 2) nút + kẹt sau một lần vì cỡ hiển thị bị gắn với trần điểm ảnh của canvas. Nay cỡ hiển thị theo mức phóng, chỉ độ phân giải ảnh có trần; đổi cỡ ngay bằng CSS rồi vẽ lại vào canvas mới (không chớp trắng), giữ điểm giữa khung nhìn.
 - [ ] **P2-36** Video giải bài tập Workbook (Unit 1 trang 6, …) — chờ người dùng thêm Workbook vào `books/ielts_target_5_0/` (rồi chạy lại agent) hoặc gửi ảnh từng trang.
 
 ### Cổng G2
