@@ -191,13 +191,18 @@ const BookUI = (() => {
     box.setAttribute("aria-label", title);
     const bar = h("div", "bk-vbar");
     const tt = h("div", "bk-vt", title);
-    const zoomOut = btn("−", "btn-sm", () => { zoom = Math.max(1, zoom - 0.5); draw(); });
-    const zoomIn = btn("+", "btn-sm", () => { zoom = Math.min(3, zoom + 0.5); draw(); });
+    // Mức phóng: 100% = vừa bề ngang khung; thu nhỏ để xem trọn trang, phóng to tới 300%
+    const ZOOMS = [0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3], FIT = 2;
+    let zi = FIT, cssW = 0, cssH = 0;
+    const zoomOut = btn("−", "btn-sm", () => setZoom(zi - 1));
+    const zoomLbl = btn("100%", "btn-sm bk-zoom", () => setZoom(FIT));
+    const zoomIn = btn("+", "btn-sm", () => setZoom(zi + 1));
     zoomOut.setAttribute("aria-label", "Thu nhỏ"); zoomIn.setAttribute("aria-label", "Phóng to");
+    zoomLbl.setAttribute("aria-label", "Vừa khung"); zoomLbl.title = "Vừa khung (phím 0)";
     const close = btn("Đóng", "btn-sm", () => shut());
-    bar.append(tt, zoomOut, zoomIn, close);
+    bar.append(tt, zoomOut, zoomLbl, zoomIn, close);
     const body = h("div", "bk-vbody");
-    const canvas = document.createElement("canvas");
+    let canvas = document.createElement("canvas");
     const status = h("p", "bk-msg", "Đang mở sách…");
     body.append(status, canvas);
     const foot = h("div", "bk-vfoot");
@@ -210,12 +215,39 @@ const BookUI = (() => {
     document.body.style.overflow = "hidden";
 
     const total = book.files[ref.pdf].pages;
-    let ready = false, page = ref.pages[0], zoom = 1, renderTask = null, drawing = 0;
+    let ready = false, page = ref.pages[0], renderTask = null, drawing = 0;
     const onKey = e => {
       if(e.key === "Escape") shut();
       if(e.key === "ArrowRight") go(1);
       if(e.key === "ArrowLeft") go(-1);
+      if(e.key === "+" || e.key === "=") setZoom(zi + 1);
+      if(e.key === "-") setZoom(zi - 1);
+      if(e.key === "0") setZoom(FIT);
     };
+    function paintZoom(){
+      zoomLbl.textContent = Math.round(ZOOMS[zi] * 100) + "%";
+      zoomOut.disabled = zi === 0;
+      zoomIn.disabled = zi === ZOOMS.length - 1;
+    }
+    // Đổi cỡ ngay bằng CSS (thấy liền, giữ điểm giữa khung nhìn), rồi vẽ lại trang cho nét ở cỡ mới
+    function setZoom(i){
+      i = Math.max(0, Math.min(ZOOMS.length - 1, i));
+      if(i === zi) return;
+      const ratio = ZOOMS[i] / ZOOMS[zi];
+      const cx = (body.scrollLeft + body.clientWidth / 2) / Math.max(1, body.scrollWidth);
+      const cy = (body.scrollTop + body.clientHeight / 2) / Math.max(1, body.scrollHeight);
+      zi = i;
+      paintZoom();
+      if(cssW){
+        cssW *= ratio; cssH *= ratio;
+        canvas.style.width = Math.floor(cssW) + "px";
+        canvas.style.height = Math.floor(cssH) + "px";
+        body.scrollLeft = cx * body.scrollWidth - body.clientWidth / 2;
+        body.scrollTop = cy * body.scrollHeight - body.clientHeight / 2;
+      }
+      if(ready) draw(true);
+    }
+    paintZoom();
     document.addEventListener("keydown", onKey);
 
     function shut(){
@@ -229,13 +261,13 @@ const BookUI = (() => {
       page = Math.min(total, Math.max(1, page + d));
       draw();
     }
-    async function draw(){
+    async function draw(keepView){
       const my = ++drawing;
       const inRange = page >= ref.pages[0] && page <= ref.pages[1];
       label.textContent = "Trang " + BookCore.printedPage(book, ref.pdf, page) + " trong sách"
         + (inRange ? " · " + (page - ref.pages[0] + 1) + "/" + (ref.pages[1] - ref.pages[0] + 1) : " · ngoài phần của phiên");
       prev.disabled = page <= 1; next.disabled = page >= total;
-      status.textContent = "Đang mở trang…"; status.hidden = false; status.className = "bk-msg";
+      if(!keepView){ status.textContent = "Đang mở trang…"; status.hidden = false; status.className = "bk-msg"; }
       let src = null;
       try{
         src = await pdfSource(bookId, ref.pdf, page, inRange ? ref.pages : null);
@@ -244,20 +276,28 @@ const BookUI = (() => {
         if(my !== drawing) return;
         const p = await doc.getPage(page - src.first + 1);
         const base = p.getViewport({scale: 1});
-        const width = Math.max(280, body.clientWidth - 20) * zoom;
+        // cỡ hiển thị theo mức phóng; độ phân giải ảnh thì có trần (canvas của Safari iOS tối đa ~16 triệu điểm ảnh)
+        const cssScale = Math.max(280, body.clientWidth - 20) * ZOOMS[zi] / base.width;
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        let scale = width / base.width * dpr;
-        const maxPx = 16e6;    // trần canvas của Safari iOS
+        let scale = cssScale * dpr;
+        const maxPx = 16e6;
         if(base.width * base.height * scale * scale > maxPx) scale = Math.sqrt(maxPx / (base.width * base.height));
         const vp = p.getViewport({scale});
-        canvas.width = Math.floor(vp.width); canvas.height = Math.floor(vp.height);
-        canvas.style.width = Math.floor(vp.width / dpr) + "px";
-        canvas.style.height = Math.floor(vp.height / dpr) + "px";
+        // vẽ vào canvas mới rồi mới thay, để trang không chớp trắng khi phóng to / thu nhỏ
+        const fresh = document.createElement("canvas");
+        fresh.width = Math.floor(vp.width); fresh.height = Math.floor(vp.height);
         if(renderTask) try{ renderTask.cancel(); }catch(e){}
-        renderTask = p.render({canvasContext: canvas.getContext("2d"), viewport: vp});
+        renderTask = p.render({canvasContext: fresh.getContext("2d"), viewport: vp});
         await renderTask.promise;
+        if(my !== drawing) return;
+        cssW = base.width * cssScale; cssH = base.height * cssScale;
+        fresh.style.width = Math.floor(cssW) + "px";
+        fresh.style.height = Math.floor(cssH) + "px";
+        const keep = keepView ? [body.scrollLeft, body.scrollTop] : [0, 0];
+        canvas.replaceWith(fresh);
+        canvas = fresh;
         status.hidden = true;
-        body.scrollTop = 0;
+        body.scrollLeft = keep[0]; body.scrollTop = keep[1];
       }catch(e){
         if(e && e.name === "RenderingCancelledException") return;
         ready = true;

@@ -35,6 +35,8 @@ phí); hai video Unit 1 Speaking 1 và 2 gắn vào Unit 1 trong tab Sách.
 
 **Đợt 7 (06/10/2026):** video Unit 1 Vocabulary 1–3 (đáp án và thêm ví dụ); thẻ unit hiện mục lục video theo từng phần.
 
+**Đợt 8 (06/10/2026):** sửa nút phóng to / thu nhỏ của trình xem trang sách (50%–300%, nhãn mức phóng, phím tắt).
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

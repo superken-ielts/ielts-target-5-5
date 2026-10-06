@@ -113,6 +113,23 @@ try{
     await page.click(".bk-vfoot button:last-child");           // trang sau
     await page.waitForFunction(() => /Trang 11/.test(document.querySelector(".bk-vfoot").textContent));
     assert.ok(pdfBytes < 15e6, "tải quá nhiều PDF: " + pdfBytes);
+    // phóng to / thu nhỏ: cỡ trang đổi theo mức %, thu nhỏ được dưới mức vừa khung, phím 0 về 100%
+    const cw = () => page.evaluate(() => document.querySelector(".bk-viewer canvas").getBoundingClientRect().width);
+    const zl = () => page.textContent(".bk-vbar .bk-zoom");
+    const w0 = await cw();
+    assert.equal(await zl(), "100%");
+    await page.click('.bk-vbar button[aria-label="Phóng to"]');
+    await page.click('.bk-vbar button[aria-label="Phóng to"]');
+    assert.equal(await zl(), "150%");
+    await page.waitForFunction(w => document.querySelector(".bk-viewer canvas").getBoundingClientRect().width > w * 1.45, w0);
+    await page.keyboard.press("0");
+    await page.click('.bk-vbar button[aria-label="Thu nhỏ"]');
+    await page.click('.bk-vbar button[aria-label="Thu nhỏ"]');
+    assert.equal(await zl(), "50%");
+    assert.ok(await page.isDisabled('.bk-vbar button[aria-label="Thu nhỏ"]'));
+    await page.waitForFunction(w => document.querySelector(".bk-viewer canvas").getBoundingClientRect().width < w * 0.55, w0);
+    await page.click('.bk-vbar button[aria-label="Vừa khung"]');
+    await page.waitForFunction(w => Math.abs(document.querySelector(".bk-viewer canvas").getBoundingClientRect().width - w) < 2, w0);
     await page.click(".bk-vbar button:last-child");            // đóng
   });
 
