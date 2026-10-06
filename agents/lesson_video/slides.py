@@ -457,8 +457,10 @@ class Slides:
             k = str(it["k"])
             if fr.focus == i:
                 d.rounded_rectangle((52, y, lx1 + 6, y + rh - 4), 10, fill=C["soft"])
-            d.text((66, y + (rh - 4) / 2), k + ".", font=font("bold", 21), fill=C["red"], anchor="lm")
-            self._cell(d, 98, y, rh, str(it["text"]), lx1 - 160)
+            label = str(it.get("label", k + "."))  # `label: ""` khi mục không có chữ cái riêng
+            if label:
+                d.text((66, y + (rh - 4) / 2), label, font=font("bold", 21), fill=C["red"], anchor="lm")
+            self._cell(d, 98 if label else 70, y, rh, str(it["text"]), lx1 - 160)
             sx = lx1 - 44
             if k in fr.revealed:
                 d.ellipse((sx + 2, y + (rh - 4) / 2 - 18, sx + 38, y + (rh - 4) / 2 + 18), fill=C["red"])
@@ -476,7 +478,8 @@ class Slides:
             d.text((rx0 + 22, y + sh / 2), f"{pos}", font=font("bold", 20), fill=C["muted"], anchor="lm")
             if str(it["k"]) in fr.revealed:
                 label = it.get("short") or it["text"]
-                f, lines = fit(d, f"{it['k']} · {label}", "regular", 18, W - 60 - rx0 - 70, 1, min_size=14)
+                prefix = str(it.get("label", it["k"])).rstrip(".")
+                f, lines = fit(d, f"{prefix} · {label}" if prefix else str(label), "regular", 18, W - 60 - rx0 - 70, 1, min_size=14)
                 d.text((rx0 + 50, y + sh / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
             else:
                 d.line((rx0 + 50, y + sh / 2 + 8, W - 84, y + sh / 2 + 8), fill=C["line"], width=2)
@@ -556,7 +559,7 @@ class Slides:
             cx = px1 - 196
             self._avatar(d, cx, py0 + 26, 18, fr.speaker)
             d.text((cx + 26, py0 + 12), sp.name + " is reading", font=font("bold", 16), fill=sp.color)
-            d.text((cx + 26, py0 + 31), "đang đọc thư mẫu", font=font("italic", 14), fill=C["muted"])
+            d.text((cx + 26, py0 + 31), "đang đọc bài mẫu", font=font("italic", 14), fill=C["muted"])
         for i, (y, rows) in enumerate(boxes):
             note = sc.items[i].get("note")
             if not note:
@@ -567,3 +570,30 @@ class Slides:
                   max_lines=2, lead=1.15, min_size=14)
         words = sum(len(re.findall(r"[A-Za-z0-9']+", str(it["text"]))) for it in sc.items if it.get("body", True))
         d.text((nx, py1 - 6), f"≈ {words} words", font=font("bold", 18), fill=C["muted"], anchor="ld")
+
+    def _k_blanks(self, img, d, sc, fr):
+        """Nghe – chép: các ô trống đánh số (hai hàng như trong sách); mở ra thì hiện chữ đúng và mẹo chính tả."""
+        n = len(sc.items)
+        cols = 5 if n > 6 else n
+        rows = (n + cols - 1) // cols
+        cw = (W - 120) / cols
+        ch = min(150, (BOTTOM - TOP - 70) / rows)
+        for i, it in enumerate(sc.items):
+            r, c = divmod(i, cols)
+            x0, y0 = 60 + c * cw, TOP + r * ch
+            on = fr.focus == i
+            d.rounded_rectangle((x0 + 6, y0 + 6, x0 + cw - 6, y0 + ch - 10), 14,
+                                fill=C["soft"] if on else C["card"], outline=C["red"] if on else C["line"], width=3 if on else 2)
+            d.text((x0 + 22, y0 + 18), f"{it['n']}.", font=font("bold", 22), fill=C["red"])
+            if str(it["n"]) in fr.revealed:
+                f, lines = fit(d, str(it["answer"]), "bold", 30, cw - 50, 1, min_size=18)
+                d.text((x0 + cw / 2, y0 + ch / 2 + 4), lines[0], font=f, fill=C["ink"], anchor="mm")
+            else:
+                d.line((x0 + 30, y0 + ch / 2 + 18, x0 + cw - 30, y0 + ch / 2 + 18), fill=C["dim"], width=2)
+        cur = sc.items[fr.focus] if fr.focus is not None else None
+        if cur is not None and str(cur["n"]) in fr.revealed and cur.get("tip"):
+            ty = TOP + rows * ch + 8
+            d.rounded_rectangle((60, ty, W - 60, BOTTOM - 4), 12, fill=C["card"], outline=C["line"], width=2)
+            d.text((80, ty + (BOTTOM - 4 - ty) / 2), "Spelling tip:", font=font("bold", 19), fill=C["red"], anchor="lm")
+            f, lines = fit(d, str(cur["tip"]), "regular", 21, W - 260, 1, min_size=15)
+            d.text((220, ty + (BOTTOM - 4 - ty) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")

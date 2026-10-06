@@ -15,7 +15,7 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter"]
+               "order", "timing", "letter", "blanks"]
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -31,6 +31,7 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "order": ("k", "text", "pos"),      # sắp xếp: mỗi mục có vị trí đúng `pos`
     "timing": ("label", "minutes"),     # chia thời gian: thanh ngang theo số phút
     "letter": ("text",),                # thư mẫu: mỗi mục một đoạn; `note` ghi chú lề, `body: false` không đếm từ
+    "blanks": ("n", "answer"),          # nghe – chép: ô trống số n, mở ra thì hiện `answer` (và `tip` nếu có)
 }
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
 LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read"}
@@ -146,7 +147,7 @@ class Scene(_M):
         return self
 
     def reveal_keys(self) -> set[str]:
-        if self.kind in ("match", "pairs"):
+        if self.kind in ("match", "pairs", "blanks"):
             return {str(it["n"]) for it in self.items}
         if self.kind == "order":
             return {str(it["k"]) for it in self.items}

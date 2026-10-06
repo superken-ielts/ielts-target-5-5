@@ -55,7 +55,9 @@
 .bk-dots .bk-dot{width:10px; height:10px}
 @media (max-width:400px){ .bk-kv{grid-template-columns:86px 1fr} }
 /* video bài giảng */
-.bk-vids{display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:8px}
+.bk-vids{margin-top:8px}
+.bk-vgroup{display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:6px}
+.bk-vgroup-t{font-size:12px; font-weight:600; color:var(--ink-2); margin-right:2px}
 .bk-vh{margin:14px 0 6px}
 .bk-video{border:1px solid var(--line); border-radius:var(--r-sm); background:var(--sunken); padding:10px; margin-bottom:10px}
 .bk-vid-t{font-weight:600; font-size:14px}

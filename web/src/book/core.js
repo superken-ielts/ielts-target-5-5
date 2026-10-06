@@ -196,6 +196,16 @@ const BookCore = (() => {
   function lessonSession(plan, lesson){
     return plan.sessions.find(s => (s.activityIds || []).includes(lesson.activity)) || null;
   }
+  // Gom video theo hoạt động (giữ thứ tự xuất hiện) để thẻ unit hiện thành mục lục: phần → các video
+  function groupLessons(lessons){
+    const out = [];
+    (lessons || []).forEach(l => {
+      let g = out.find(x => x.activity === l.activity);
+      if(!g){ g = {activity: l.activity, lessons: []}; out.push(g); }
+      g.lessons.push(l);
+    });
+    return out;
+  }
   function chapterAt(lesson, t){
     let cur = -1;
     (lesson.chapters || []).forEach((c, i) => { if(t + 0.05 >= c.t) cur = i; });
@@ -211,7 +221,7 @@ const BookCore = (() => {
     emptyProgress, settingsOf, statusOf, focusOf, nextSession, itemSessions, itemCounts, entrySession, duration, counts, plannedWeek, projectFinishWeek,
     canSkip, setSession, setSettings, mergeProgress, elapsedSec, activitiesOf, itemsOf,
     printedPage, basename, matchFiles, requiredPaths, chunkFor, checklistStats, fmtClock,
-    lessonsOf, lessonSession, chapterAt
+    lessonsOf, lessonSession, chapterAt, groupLessons
   };
 })();
 if(typeof module !== "undefined" && module.exports) module.exports = BookCore;

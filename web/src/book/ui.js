@@ -552,15 +552,23 @@ const BookUI = (() => {
     box.append(top);
     const vids = BookCore.lessonsOf(BOOKS[bookId], {item: item.id});
     if(vids.length){
+      // mục lục video của unit: mỗi phần (hoạt động) một hàng, ví dụ "Speaking & Vocabulary: Speaking 1 · Speaking 2 · Vocabulary 1–3"
       const vr = h("div", "bk-vids");
-      vr.append(h("span", "tiny", "Video bài giảng:"));
-      vids.forEach(l => {
-        const s = BookCore.lessonSession(plan, l);
-        if(!s) return;
-        const b = btn("▶ " + (l.label || l.title) + " · " + BookCore.fmtClock(l.duration), "btn-sm",
-          () => go("session", {bookId, sessionId: s.id, lessonId: l.id}));
-        b.setAttribute("aria-label", "Xem video " + l.title);
-        vr.append(b);
+      vr.append(h("div", "tiny", "Video bài giảng · " + vids.length));
+      const acts = BookCore.activitiesOf(book);
+      BookCore.groupLessons(vids).forEach(g => {
+        const row = h("div", "bk-vgroup");
+        const a = acts[g.activity];
+        row.append(h("span", "bk-vgroup-t", a ? a.title.replace(/^(Unit|Review|Test) \d+ · /, "") : g.activity));
+        g.lessons.forEach(l => {
+          const s = BookCore.lessonSession(plan, l);
+          if(!s) return;
+          const b = btn("▶ " + (l.label || l.title) + " · " + BookCore.fmtClock(l.duration), "btn-sm",
+            () => go("session", {bookId, sessionId: s.id, lessonId: l.id}));
+          b.setAttribute("aria-label", "Xem video " + l.title);
+          row.append(b);
+        });
+        vr.append(row);
       });
       box.append(vr);
     }
