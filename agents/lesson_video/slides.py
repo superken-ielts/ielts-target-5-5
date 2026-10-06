@@ -530,10 +530,15 @@ class Slides:
         width = px1 - px0 - 64
         paras = [str(it["text"]).split("\n") for it in sc.items]
 
+        chip_x = px1 - 196  # nhãn "… is reading" ở góc trên bên phải trang
+
         def layout(size):
             f = font("regular", size)
             step, gap = int(size * 1.32), int(size * 0.55)
-            boxes, y = [], py0 + 24
+            first = (wrap(d, paras[0][0], f, width) or [""])[0] if paras and paras[0] else ""
+            # dòng đầu dài (không phải lời chào ngắn) thì chừa một hàng cho nhãn người đọc
+            top = py0 + 24 if px0 + 32 + d.textlength(first, font=f) < chip_x - 12 else py0 + 56
+            boxes, y = [], top
             for para in paras:
                 rows = [r for part in para for r in (wrap(d, part, f, width) or [""])]
                 boxes.append((y, rows))
@@ -556,7 +561,7 @@ class Slides:
         nx = px1 + 30
         if fr.speaker:  # góc trên bên phải trang thư, ngang dòng lời chào (dòng ngắn)
             sp = self.L.speakers[fr.speaker]
-            cx = px1 - 196
+            cx = chip_x
             self._avatar(d, cx, py0 + 26, 18, fr.speaker)
             d.text((cx + 26, py0 + 12), sp.name + " is reading", font=font("bold", 16), fill=sp.color)
             d.text((cx + 26, py0 + 31), "đang đọc bài mẫu", font=font("italic", 14), fill=C["muted"])

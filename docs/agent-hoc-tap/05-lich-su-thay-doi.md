@@ -5,6 +5,56 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 7 — 06/10/2026: video Unit 1 Vocabulary 1–3; mục lục video theo từng phần
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `dfd0d51` (đã merge PR #7).
+
+### Yêu cầu
+
+Unit 1 thiếu phần Vocabulary 1, 2, 3 (sách in trang 11): làm một video hướng dẫn cả ba bài, đọc đáp án và thêm ví dụ
+theo chủ đề; thêm mục còn thiếu vào menu; xong thì tạo PR.
+
+### Đã làm
+
+| Việc | Cách làm |
+|---|---|
+| **Vocabulary 1–3: family, stages of life, key words** (8:24, 12 chương, 7,0 MB) | **1A** nghe – chép 10 từ (Emma đọc, đếm ngược 4 giây mỗi từ), rồi Tom đọc đáp án và mẹo chính tả: father, mother, brother, sister, grandfather, son, daughter, aunt, uncle, cousin — **đáp án theo Tapescript Track 3** (sách in trang 277) · **Pronunciation check**: âm /ʌ/ trong mother, brother, son, uncle, cousin, husband… · **2A** gắn tranh: a retirement, b childhood, c death, d middle age, e birth, f adolescence (đáp án gợi ý) · **2B** thứ tự: birth → childhood → adolescence → middle age → retirement → death (+ adulthood) · thêm ví dụ dạng từ: be born, a teenager, an adult, middle-aged, retire/retired, die · **3A** sáu từ khóa (parents, relatives, retired, teenagers, children, adult) và 6 câu trả lời mẫu của Tom · Watch out (childs, he is teenager, where did you born, is retire) · **câu trả lời mẫu "Tell me about your family"** dùng từ của cả ba bài · bài về nhà: vẽ cây gia đình |
+| Menu còn thiếu | Thẻ unit trong tab Sách nay là **mục lục video theo từng phần**: "Speaking & Vocabulary: ▶ Speaking 1 · ▶ Speaking 2 · ▶ Vocabulary 1–3", "Writing: ▶ Writing 1 · ▶ Writing 2 · ▶ Writing 3". Video Vocabulary gắn vào hoạt động `U01-speaking-vocab` (phiên 1), nên trong phiên học có 3 video |
+| Công cụ | Kiểu cảnh `blanks` (ô trống đánh số, mở dần, mẹo chính tả); mục của `order` có thể ẩn chữ cái (`label: ""`); cảnh `letter` chừa một hàng cho nhãn người đọc khi dòng đầu dài (bài nói mẫu không có lời chào) |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U01-vocabulary.yaml` | Kịch bản video Vocabulary 1–3 |
+| `books/ielts_target_5_0/lessons/U01-vocabulary.mp4` | Video 1280×720, H.264 + AAC, có chương, tiếng chuẩn -16 LUFS |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py`, `slides.py` | Kiểu cảnh `blanks`; `label` cho `order`; nhãn người đọc trong cảnh `letter` không đè chữ; chữ phụ "đang đọc bài mẫu" |
+| `agents/tests/test_lesson_video.py` | +1 test: `blanks` và `order` không chữ cái dựng, vẽ được, reveal sai bị chặn |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm mục Vocabulary |
+| `web/src/book/core.js` | `groupLessons` (gom video theo hoạt động) |
+| `web/src/book/ui.js`, `book.css` | Thẻ unit: mỗi phần một hàng nhãn + nút video |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | `groupLessons`; Unit 1 có 6 video, hai nhóm "Speaking & Vocabulary", "Writing"; phiên Speaking & Vocabulary có 3 video; mở video Writing theo tên nút |
+| `agents/README.md`, `web/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Kiểu cảnh mới; mục lục video; task P2-37; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. Các video cũ không cần dựng lại (cảnh thư của Writing mở bằng lời chào ngắn nên bố cục không đổi).
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 39 passed |
+| `node --test "tests/web/*.test.mjs"` | 13 passed |
+| `node tests/web/book.e2e.mjs` | 12/12 bước OK |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | Thời lượng khớp lời thoại, 12 chương; tiếng trung bình -18,2 dB, đỉnh -0,8 dB |
+
+---
+
 ## Đợt 6 — 06/10/2026: video Unit 1 Writing 3; Workbook trang 6
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `1d204cc` (đã merge PR #6).
