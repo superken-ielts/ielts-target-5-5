@@ -1,0 +1,182 @@
+# Video bài giảng Unit 1 · Listening 1: listening for specific information (sách in trang 12). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-listening-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U02-listening-1.yaml (dòng `track`). Track 5 (U01-L1C) phát nguyên
+# một lần cho bài C; bài D phát lại từng câu bằng `start` / `end` (mốc lấy bằng ffmpeg silencedetect, mỗi đoạn gồm
+# số thứ tự và câu). Đáp án theo Tapescript Track 5 (sách in trang 277); nối 1A và bài B là đáp án suy ra.
+id: U01-listening-1
+activity: U01-listening
+title: "Unit 1 · Life"
+subtitle: "Listening 1: listening for specific information"
+title_vi: "Nghe thông tin cụ thể — đoán loại thông tin còn thiếu, nghe và điền 10 câu (Track 5 của sách)"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 1 Listening: listening for specific information."
+        say: "Welcome to Unit one Listening: listening for specific information."
+        vi: "Listening Unit 1: nghe thông tin cụ thể."
+      - tom: "Specific information? Like names and numbers?"
+      - emma: "Exactly. Names, numbers, dates, prices. And the secret is: guess what kind of information is missing before you listen."
+        vi: "Bí quyết: đoán loại thông tin còn thiếu trước khi nghe."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Listening 1, bài A–D"
+    items:
+      - {en: "A: what kind of information is missing?", vi: "Đoán loại thông tin còn thiếu"}
+      - {en: "B: capital letters or figures?", vi: "Viết hoa hay viết bằng số?"}
+      - {en: "C: listen and check your ideas (Track 5)", vi: "Nghe kiểm tra dự đoán"}
+      - {en: "D: listen again, sentence by sentence, and fill in the gaps", vi: "Nghe lại từng câu và điền"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, we predict.", focus: 0}
+      - {emma: "Then, we think about how to write the answers.", focus: 1}
+      - {emma: "Then we listen to the recording from the book.", focus: 2}
+      - {emma: "And we listen again, one sentence at a time.", focus: 3}
+
+  - kind: pairs
+    chapter: "Bài A: thông tin gì còn thiếu?"
+    heading: "Listening 1A · What kind of information is missing? Match a–j with a sentence"
+    heading_vi: "Đọc câu 1–10, nhìn chỗ trống — đoán loại thông tin"
+    items:
+      - {n: 1, q: "I'm staying at the ___ Inn on Tenth Avenue.", answer: g}
+      - {n: 2, q: "She died in ___, a year after her husband.", answer: h}
+      - {n: 3, q: "You can contact us on ___.", answer: e}
+      - {n: 4, q: "The best person to talk to is Tom ___.", answer: b}
+      - {n: 5, q: "The whole package costs $ ___.", answer: j}
+      - {n: 6, q: "The host family address is 56 ___ Lane.", answer: i}
+      - {n: 7, q: "He started playing the violin at just ___ years old.", answer: c}
+      - {n: 8, q: "Simon and Rebecca have known each other for ___.", answer: f}
+      - {n: 9, q: "The tour ends in ___ on the fifteenth of July.", answer: a}
+      - {n: 10, q: "The next meeting will be on ___.", answer: d}
+    options:
+      - {k: a, text: "the name of a city"}
+      - {k: b, text: "a person's surname"}
+      - {k: c, text: "somebody's age"}
+      - {k: d, text: "a date"}
+      - {k: e, text: "a phone number"}
+      - {k: f, text: "a period of time"}
+      - {k: g, text: "the name of a hotel"}
+      - {k: h, text: "a year"}
+      - {k: i, text: "the name of a street"}
+      - {k: j, text: "the price of something"}
+    lines:
+      - emma: "Exercise A. Read sentences one to ten and look at the gaps. What kind of information is missing? Match each idea, a to j, with a sentence. Number one is done for you: the name of a hotel."
+        say: "Exercise eigh. Read sentences one to ten, and look at the gaps. What kind of information is missing? Match each idea, eigh to J, with a sentence. Number one is done for you: the name of a hotel."
+        vi: "Bài A: đoán loại thông tin còn thiếu, nối a–j với câu. Câu 1 là ví dụ."
+        focus: 0
+        reveal: 1
+      - {wait: 10, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Two: she died in … a year after her husband.", focus: 1}
+      - {tom: "h, a year. The word year is in the sentence.", say: "H, a year. The word year is in the sentence.", reveal: 2}
+      - {emma: "Three: you can contact us on …", focus: 2}
+      - {tom: "e, a phone number.", say: "E, a phone number.", reveal: 3}
+      - {emma: "Four: the best person to talk to is Tom …", focus: 3}
+      - {tom: "b, a surname. Tom is the first name.", say: "B, a surname. Tom is the first name.", reveal: 4}
+      - {emma: "Five: the whole package costs …", focus: 4}
+      - {tom: "j, a price. There's a dollar sign.", say: "J, a price. There's a dollar sign.", reveal: 5}
+      - {emma: "Six: the host family address is 56 … Lane.", say: "Six: the host family address is fifty-six, blank, Lane.", focus: 5}
+      - {tom: "i, the name of a street. Lane is a kind of street.", say: "Eye, the name of a street. Lane is a kind of street.", reveal: 6}
+      - {emma: "Seven: he started playing the violin at just … years old.", focus: 6}
+      - {tom: "c, somebody's age.", say: "C, somebody's age.", reveal: 7}
+      - {emma: "Eight: Simon and Rebecca have known each other for …", focus: 7}
+      - {tom: "f, a period of time. After for, we need a time, like ten years.", say: "F, a period of time. After for, we need a time, like ten years.", reveal: 8}
+      - {emma: "Nine: the tour ends in … on the fifteenth of July.", focus: 8}
+      - {tom: "a, the name of a city.", say: "Eigh, the name of a city.", reveal: 9}
+      - {emma: "And ten: the next meeting will be on …", focus: 9}
+      - {tom: "d, a date. On, and a meeting: it's a date.", say: "D, a date. On, and a meeting: it's a date.", reveal: 10}
+      - emma: "These answers come from the words around each gap. This is called predicting."
+        vi: "Dựa vào các từ quanh chỗ trống để đoán — kỹ năng dự đoán."
+
+  - kind: bullets
+    chapter: "Bài B: viết hoa hay viết số?"
+    heading: "Listening 1B · Capital letters or figures?"
+    heading_vi: "Đáp án suy ra từ loại thông tin"
+    items:
+      - {en: "Capital letters: 1 hotel · 4 surname · 6 street · 9 city · 10 month", vi: "Tên riêng và tên tháng luôn viết hoa"}
+      - {en: "Figures: 2 a year · 3 a phone number · 5 a price · 7 an age · 8 a period · 10 the day", vi: "Có thể viết bằng số"}
+      - {en: "Spelling counts: a wrong spelling = a wrong answer", vi: "Sai chính tả là mất điểm"}
+    lines:
+      - emma: "Exercise B. In which answers do you need to use capital letters? And in which answers can you write figures?"
+        vi: "Bài B: câu nào phải viết hoa? Câu nào viết được bằng số?"
+      - {tom: "Capital letters for names: the hotel, the surname, the street, the city. And the month in the date.", focus: 0}
+      - {tom: "Figures for the year, the phone number, the price, the age, the period of time, and the day of the date.", focus: 1}
+      - {emma: "Good. And remember: in the exam, spelling counts.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài C: nghe kiểm tra"
+    heading: "Listening 1C · Now listen and check your ideas"
+    heading_vi: "Track 5 — nghe xem bạn đoán đúng loại thông tin chưa"
+    items: &gaps
+      - {n: 1, q: "I'm staying at the ___ Inn on Tenth Avenue.", answer: "Ocean", tip: "the name of a hotel — capital letter"}
+      - {n: 2, q: "She died in ___, a year after her husband.", answer: "1984", tip: "nineteen eighty-four"}
+      - {n: 3, q: "You can contact us on ___.", answer: "0207 389 152", tip: "oh two oh seven, three eight nine, one five two"}
+      - {n: 4, q: "The best person to talk to is Tom ___.", answer: "Henderson", tip: "a surname — capital letter"}
+      - {n: 5, q: "The whole package costs $ ___.", answer: "320", tip: "three hundred and twenty dollars"}
+      - {n: 6, q: "The host family address is 56 ___ Lane.", answer: "Green", tip: "Green Lane — a street name, capital G"}
+      - {n: 7, q: "He started playing the violin at just ___ years old.", answer: "four", tip: "four / 4"}
+      - {n: 8, q: "Simon and Rebecca have known each other for ___.", answer: "twenty years", tip: "twenty years / 20 years"}
+      - {n: 9, q: "The tour ends in ___ on the fifteenth of July.", answer: "Manchester", tip: "a city — capital letter"}
+      - {n: 10, q: "The next meeting will be on ___.", answer: "April 17", tip: "April the seventeenth / 17 April"}
+    lines:
+      - emma: "Exercise C. Now listen, and check your ideas. Is the missing information a name, a number, or a date?"
+        vi: "Bài C: nghe, kiểm tra dự đoán."
+      - {track: U01-L1C, note: "Track 5 · Listening 1C", vi: "Nghe mười câu — đoán đúng loại thông tin chưa?"}
+      - tom: "My ideas were right! But I didn't catch every word."
+      - emma: "That's fine. Now Exercise D: listen again, and fill in the missing information. We'll do it one sentence at a time."
+        vi: "Bài D: nghe lại từng câu và điền thông tin."
+
+  - kind: blanks
+    chapter: "Bài D: nghe lại và điền"
+    heading: "Listening 1D · Listen again and fill in the missing information"
+    heading_vi: "Mỗi câu phát lại một lần — viết đáp án rồi xem"
+    items: *gaps
+    lines:
+      - {track: U01-L1C, start: 8.0, end: 16.9, note: "Track 5 · sentence 1", focus: 0}
+      - {tom: "Ocean. The Ocean Inn.", reveal: 1}
+      - {track: U01-L1C, start: 19.8, end: 25.9, note: "Track 5 · sentence 2", focus: 1}
+      - {tom: "Nineteen eighty-four. I wrote it in figures.", reveal: 2}
+      - {track: U01-L1C, start: 28.4, end: 38.1, note: "Track 5 · sentence 3", focus: 2}
+      - {tom: "Oh two oh seven, three eight nine, one five two.", reveal: 3}
+      - emma: "In phone numbers, zero is often oh. Write the figure zero."
+        vi: "Trong số điện thoại, 0 thường đọc là 'oh' — viết số 0."
+      - {track: U01-L1C, start: 40.7, end: 47.6, note: "Track 5 · sentence 4", focus: 3}
+      - {tom: "Henderson. With a capital H.", reveal: 4}
+      - {track: U01-L1C, start: 50.3, end: 54.9, note: "Track 5 · sentence 5", focus: 4}
+      - {tom: "Three hundred and twenty dollars.", reveal: 5}
+      - {track: U01-L1C, start: 57.9, end: 65.9, note: "Track 5 · sentence 6", focus: 5}
+      - {tom: "Green. Fifty-six Green Lane.", reveal: 6}
+      - {track: U01-L1C, start: 68.5, end: 75.3, note: "Track 5 · sentence 7", focus: 6}
+      - {tom: "Four. Just four years old!", reveal: 7}
+      - {track: U01-L1C, start: 78.0, end: 83.2, note: "Track 5 · sentence 8", focus: 7}
+      - {tom: "Twenty years.", reveal: 8}
+      - {track: U01-L1C, start: 86.5, end: 92.5, note: "Track 5 · sentence 9", focus: 8}
+      - {tom: "Manchester.", reveal: 9}
+      - {track: U01-L1C, start: 95.5, end: 101.9, note: "Track 5 · sentence 10", focus: 9}
+      - {tom: "April the seventeenth.", reveal: 10}
+      - emma: "Check your spelling, and your capital letters. These answers are from the Tapescript, Track 5."
+        vi: "Kiểm tra chính tả, chữ hoa. Đáp án theo Tapescript Track 5."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Before you listen: read the words around each gap and predict", vi: "Trước khi nghe: đoán loại thông tin"}
+      - {en: "Names, streets, cities, months → capital letters", vi: "Tên riêng, tháng → viết hoa"}
+      - {en: "Years, prices, ages, phone numbers → you can write figures", vi: "Năm, giá, tuổi, số điện thoại → viết số"}
+      - {en: "Next: Listening 2 — the Esco Engineering staff data", vi: "Tiếp theo: Listening 2"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Predict before you listen.", focus: 0}
+      - {emma: "Use capital letters for names.", focus: 1}
+      - {emma: "And you can write numbers as figures.", focus: 2}
+      - {tom: "Next: Listening 2!", say: "Next: Listening two!", focus: 3}

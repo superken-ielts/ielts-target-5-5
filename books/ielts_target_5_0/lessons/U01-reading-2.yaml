@@ -1,0 +1,162 @@
+# Video bài giảng Unit 1 · Reading 2: practise skimming (sách in trang 15–16). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-reading-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Ảnh văn bản A–C cắt từ trang PDF 16, D–F từ trang PDF 17. Đáp án bài A
+# theo Answer key (sách in trang 266, "Unit 1, Reading 2A": 1 B, 2 D, 3 E, 4 C, 5 A, 6 F); Key vocabulary in context
+# là đáp án suy ra (gets better, goes up, how you see things, person, gets married, are hurt).
+id: U01-reading-2
+activity: U01-reading
+title: "Unit 1 · Life"
+subtitle: "Reading 2: practise skimming"
+title_vi: "Luyện đọc lướt — nối sáu văn bản với nguồn (theo Answer key), từ vựng trong ngữ cảnh"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Reading 2: practise skimming."
+        say: "Welcome to Reading two: practise skimming."
+        vi: "Reading 2: luyện đọc lướt."
+      - tom: "Six more texts?"
+      - emma: "Yes. And this time, try to be faster. The exam tip: in various parts of the Reading Module, you will need to skim read."
+        vi: "Lần này cố làm nhanh hơn. Mẹo thi: nhiều phần của bài Đọc cần đọc lướt."
+
+  - kind: bullets
+    chapter: "Nguồn của văn bản"
+    heading: "Reading 2A · The six sources"
+    heading_vi: "Đọc sáu nguồn trước — đoán mỗi loại trông thế nào"
+    items:
+      - {en: "1  part of an e-mail to a friend", vi: "Thư điện tử cho bạn: thân mật, kể chuyện"}
+      - {en: "2  a formal invitation", vi: "Thiệp mời trang trọng: You are invited…"}
+      - {en: "3  an advertisement", vi: "Quảng cáo: chữ to, câu hỏi, tên trang web"}
+      - {en: "4  an extract from a biography (a book about the life of a person)", vi: "Tiểu sử: tên người, ngày sinh, gia đình"}
+      - {en: "5  part of a web page that gives advice", vi: "Trang web cho lời khuyên"}
+      - {en: "6  a story from a newspaper", vi: "Tin báo: tiêu đề lớn, chuyện vừa xảy ra"}
+    lines:
+      - emma: "Exercise A. Read the sources one to six first. Think: what does each one look like?"
+        say: "Exercise eigh. Read the sources, one to six, first. Think: what does each one look like?"
+        vi: "Bài A: đọc sáu nguồn trước, hình dung mỗi loại trông thế nào."
+      - {emma: "An e-mail to a friend: informal.", focus: 0}
+      - {emma: "A formal invitation: You are invited.", focus: 1}
+      - {emma: "An advertisement: big letters.", focus: 2}
+      - {emma: "A biography: a book about the life of a person.", focus: 3}
+      - {emma: "A web page that gives advice.", focus: 4}
+      - {emma: "And a story from a newspaper: a big headline.", focus: 5}
+
+  - kind: match
+    chapter: "Bài A: văn bản A–C"
+    heading: "Reading 2A · Skim texts A–C and match each with a source"
+    heading_vi: "Nguồn 1–6 ở cảnh trước — đây là văn bản A, B, C"
+    image: {pdf: course-book, page: 16, clip: [58, 528, 542, 786]}
+    items:
+      - {n: 1, q: "part of an e-mail to a friend", answer: B}
+      - {n: 4, q: "an extract from a biography", answer: C}
+      - {n: 5, q: "part of a web page that gives advice", answer: A}
+    lines:
+      - emma: "Skim texts A, B and C. Which sources are they?"
+        say: "Skim texts eigh, B, and C. Which sources are they?"
+        vi: "Đọc lướt văn bản A, B, C."
+      - {wait: 8, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Text B.", focus: 0}
+      - {tom: "Part of an e-mail to a friend: number one. I'm really enjoying life here in New York. I hope you can come and visit me.", reveal: 1}
+      - {emma: "Text C.", focus: 1}
+      - {tom: "Number four, a biography. Gandhi was born in Porbander, on 2 October, 1869. It's about the life of a person.", say: "Number four, a biography. Gandhi was born in Porbander, on the second of October, eighteen sixty-nine. It's about the life of a person.", reveal: 4}
+      - {emma: "Text A.", focus: 2}
+      - {tom: "Number five, part of a web page that gives advice. Perspectives of work and job satisfaction.", reveal: 5}
+      - emma: "Yes! We read this web page in the Unit 1 Exam Practice."
+        say: "Yes! We read this web page in the Unit one Exam Practice."
+        vi: "Trang web này ta đã đọc ở bài luyện đề Unit 1."
+
+  - kind: match
+    chapter: "Bài A: văn bản D–F"
+    heading: "Reading 2A · Skim texts D–F and match each with a source"
+    heading_vi: "Đáp án theo Answer key: 1 B · 2 D · 3 E · 4 C · 5 A · 6 F"
+    image: {pdf: course-book, page: 17, clip: [50, 55, 542, 405]}
+    items:
+      - {n: 2, q: "a formal invitation", answer: D}
+      - {n: 3, q: "an advertisement", answer: E}
+      - {n: 6, q: "a story from a newspaper", answer: F}
+    lines:
+      - emma: "Now skim texts D, E and F."
+        vi: "Đọc lướt văn bản D, E, F."
+      - {wait: 6, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Text D.", focus: 0}
+      - {tom: "Number two, a formal invitation. You are invited to celebrate the wedding of Susan and Daniel. And R.S.V.P. at the bottom.", say: "Number two, a formal invitation. You are invited to celebrate the wedding of Susan and Daniel. And, R S V P, at the bottom.", reveal: 2}
+      - emma: "R.S.V.P. means: please reply. It's French!"
+        say: "R S V P means: please reply. It's French!"
+        vi: "R.S.V.P. = xin hồi âm (tiếng Pháp)."
+      - {emma: "Text E.", focus: 1}
+      - {tom: "Number three, an advertisement. Recently retired? Check out Make the most dot com now!", reveal: 3}
+      - {emma: "Text F.", focus: 2}
+      - {tom: "Number six, a story from a newspaper. Train driver loses fight for life. A big headline, and a sad story.", reveal: 6}
+      - emma: "Exercise B. Check the key on page 266. The answers are: one B, two D, three E, four C, five A, six F. How many did you get right?"
+        say: "Exercise B. Check the key on page two hundred and sixty-six. The answers are: one, B. Two, D. Three, E. Four, C. Five, eigh. Six, F. How many did you get right?"
+        vi: "Bài B: so với Answer key — 1 B, 2 D, 3 E, 4 C, 5 A, 6 F."
+
+  - kind: bullets
+    chapter: "Bài C: nhìn lại"
+    heading: "Reading 2C · Think about how you did the task"
+    heading_vi: "Đánh dấu câu đúng với bạn — lần sau làm nhanh hơn"
+    items:
+      - {en: "I read the instructions carefully.", vi: "Đọc kỹ yêu cầu"}
+      - {en: "I skimmed the text quickly to do the task.", vi: "Đọc lướt thật nhanh"}
+      - {en: "I looked for key words and phrases to help me match.", vi: "Tìm từ khóa để nối"}
+      - {en: "I didn't worry about all the words that I don't know.", vi: "Không lo về từ chưa biết"}
+      - {en: "I'm pleased with how quickly I did the task.", vi: "Hài lòng với tốc độ làm bài"}
+    lines:
+      - emma: "Exercise C. Tick the sentences about the reading task that are true for you."
+        vi: "Bài C: đánh dấu những câu đúng với bạn."
+      - {emma: "Did you read the instructions carefully?", focus: 0}
+      - {emma: "Did you skim quickly?", focus: 1}
+      - {emma: "Did you look for key words, like wedding, born, and retired?", focus: 2}
+      - {tom: "I didn't know Porbander, but it didn't matter.", focus: 3}
+      - {emma: "Exactly. You don't need every word to skim.", focus: 3}
+      - {emma: "And were you quick? Try to be faster every time.", focus: 4}
+
+  - kind: blanks
+    chapter: "Từ vựng trong ngữ cảnh"
+    heading: "Key vocabulary in context · Circle the correct option"
+    heading_vi: "Nhìn lại từ khóa trong các văn bản (đáp án suy ra)"
+    items:
+      - {n: 1, q: "If something improves, it ___.", answer: "gets better", hint: "gets better / is not so good", tip: "improve = get better"}
+      - {n: 2, q: "An increase means that something ___.", answer: "goes up", hint: "goes up / goes down", tip: "increase ↔ decrease"}
+      - {n: 3, q: "Your perspective is ___.", answer: "how you see things", hint: "what you do at work / how you see things", tip: "perspective = a way of seeing (Text A)"}
+      - {n: 4, q: "An important figure is an important ___.", answer: "person", hint: "person / building", tip: "Gandhi's father was an important figure (Text C)"}
+      - {n: 5, q: "When there is a wedding, somebody ___.", answer: "gets married", hint: "dies / gets married", tip: "the wedding of Susan and Daniel (Text D)"}
+      - {n: 6, q: "If you are injured, you ___.", answer: "are hurt", hint: "die / are hurt", tip: "injured in the train crash … then he died (Text F)"}
+    lines:
+      - emma: "Key vocabulary in context. Look at these sentences, then look again at the key word in the texts. Circle the correct option from each pair."
+        vi: "Từ vựng trong ngữ cảnh: chọn nghĩa đúng của từ in đậm."
+      - {wait: 8, note: "Pause the video and choose", vi: "Tạm dừng video và chọn."}
+      - {emma: "One: improves.", focus: 0}
+      - {tom: "Gets better.", reveal: 1}
+      - {emma: "Two: an increase.", focus: 1}
+      - {tom: "Something goes up.", reveal: 2}
+      - {emma: "Three: your perspective.", focus: 2}
+      - {tom: "How you see things.", reveal: 3}
+      - {emma: "Four: an important figure.", focus: 3}
+      - {tom: "An important person. Gandhi's father was an important figure in Porbander.", reveal: 4}
+      - {emma: "Five: a wedding.", focus: 4}
+      - {tom: "Somebody gets married.", reveal: 5}
+      - {emma: "Six: injured.", focus: 5}
+      - {tom: "You are hurt. The train driver was injured in the crash, and later he died.", reveal: 6}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "A: 1 B · 2 D · 3 E · 4 C · 5 A · 6 F (answer key)", vi: "Nguồn của văn bản"}
+      - {en: "Skim the design and key words: invited, born, retired, headline", vi: "Đọc lướt hình thức và từ khóa"}
+      - {en: "improve · increase · perspective · figure · wedding · injured", vi: "Từ vựng trong ngữ cảnh"}
+      - {en: "Unit 1 Reading is finished!", vi: "Xong phần Reading Unit 1"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The answers: one B, two D, three E, four C, five A, six F.", say: "The answers: one, B. Two, D. Three, E. Four, C. Five, eigh. Six, F.", focus: 0}
+      - {emma: "Skim the design and the key words.", focus: 1}
+      - {emma: "And six useful words.", focus: 2}
+      - {tom: "That's Unit 1 Reading finished!", say: "That's Unit one Reading finished!", focus: 3}

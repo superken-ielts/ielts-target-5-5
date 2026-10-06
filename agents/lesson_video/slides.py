@@ -625,7 +625,9 @@ class Slides:
         cur = sc.items[fr.focus] if fr.focus is not None else None
         show_tip = cur is not None and str(cur["n"]) in fr.revealed and cur.get("tip")
         rh = int(min(56, (BOTTOM - TOP - (58 if show_tip else 0)) / max(n, 1)))
-        hint_x = W - 230
+        # ô gợi ý: rộng 166 px, nới ra (tối đa 420 px) cho gợi ý dài như "gets better / is not so good"
+        need = max((d.textlength(str(it["hint"]), font=font("italic", 19)) for it in sc.items if it.get("hint")), default=0)
+        hint_x = W - 64 - int(min(max(166, need + 28), 420))
         for i, it in enumerate(sc.items):
             y = TOP + i * rh
             mid = y + (rh - 4) / 2
