@@ -115,7 +115,7 @@ và các đoạn trong `books/ielts_target_5_0/web/`). Việc đọc PDF trong b
 của nền tảng — chưa kiểm tra được (spike S0.2 trong `docs/agent-hoc-tap/03`).
 
 **Video bài giảng.** `books/<sách>/lessons/lessons.json` (do `agents/lesson_video` sinh) cũng được nhúng. Thẻ unit có
-nút mở từng video; trong phiên học, hoạt động có video hiện trình phát kèm nút nhảy theo chương. File MP4 (H.264 + AAC)
+mục lục video theo từng phần, xếp theo thứ tự phần trong `book.json` (không theo thứ tự chữ cái của `lessons.json`); trong phiên học, hoạt động có video hiện trình phát kèm nút nhảy theo chương. File MP4 (H.264 + AAC)
 lấy từ máy chủ như PDF (`../books/<sách>/lessons/…`), nên chỉ xem được ở bản tự host; trình duyệt cần phát được
 MP4 H.264 (Chrome, Edge, Safari, Firefox — Chromium trần của Playwright thì không, trang sẽ báo).
 

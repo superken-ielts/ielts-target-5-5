@@ -50,7 +50,10 @@ cd agents
 python -m lesson_video check ../books/ielts_target_5_0/lessons/*.yaml
 python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-1.yaml
 python -m lesson_video build <kịch bản> --engine silent --out /tmp/xem-thu --work /tmp/khung   # xem bố cục nhanh, không giọng
+python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01   # phần nào của unit đã có video, phần nào chưa
 ```
+
+Quy trình đầy đủ, bảng cách đọc `say` và kế hoạch các unit tiếp theo: `docs/agent-hoc-tap/06-video-bai-giang.md`.
 
 Cần `pymupdf pyyaml pydantic pillow numpy` (`pip install -e '.[video]'`) và `ffmpeg`. Giọng đọc (đều miễn phí, offline):
 
@@ -69,7 +72,7 @@ Chữ cái, tên riêng hay bị đọc sai: viết cách đọc vào `say`, ki�
 
 | Bước | Module | Làm gì |
 |---|---|---|
-| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match`, `pairs`, `qa`, `compare`, `errors`, `practice`, `order` = sắp xếp thứ tự (`label: ""` khi mục không có chữ cái), `blanks` = nghe – chép vào ô trống, `timing` = chia thời gian, `letter` = thư mẫu cả trang; mục `body: false` không tính vào số từ), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói, `read: <người nói>` = đọc nguyên một đoạn thư); đối chiếu `activity` với `book.json` |
+| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match`, `pairs`, `qa`, `compare`, `errors`, `practice`, `order` = sắp xếp thứ tự (`label: ""` khi mục không có chữ cái), `blanks` = nghe – chép vào ô trống (mục có `q` chứa `___` thì là câu điền từ, `hint` = từ gốc), `mcq` = trắc nghiệm a/b/c (`keys: [1, 2, 3]` để đổi nhãn), `timing` = chia thời gian, `letter` = thư mẫu cả trang; mục `body: false` không tính vào số từ), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói, `read: <người nói>` = đọc nguyên một đoạn thư); trường cảnh `hide_text: true` (bài nghe: phụ đề chỉ hiện người nói) và `roles` (vai trong cảnh, ví dụ lễ tân / khách); đối chiếu `activity` với `book.json` |
 | giọng đọc | `tts.py` | Kokoro qua `kokoro-onnx`; Flite qua `ctypes`; `silent` để thử nhanh và để test |
 | dòng thời gian | `timeline.py` | Đọc từng câu, chuẩn hóa âm lượng hai giọng, ghép thành một dải tiếng; mỗi câu một khung hình, đếm ngược mỗi giây một khung; chương theo cảnh |
 | slide | `slides.py` | Pillow vẽ 1280×720: thanh đầu, nội dung theo kiểu cảnh (ảnh cắt từ trang sách cho bài nối tranh), phụ đề người nói, thanh tiến độ |

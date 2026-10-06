@@ -274,6 +274,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 5:* xong Unit 1 Writing 1 và Writing 2 (P2-34); còn Unit 1 Reading, Listening và các unit khác.
   - *Đợt 6:* xong Unit 1 Writing 3 (P2-35).
   - *Đợt 7:* xong Unit 1 Vocabulary 1–3 (P2-37); Unit 1 còn Listening, Reading, Consolidation & Exam practice.
+  - *Đợt 9:* xong Unit 1 Consolidation và Exam practice (P2-39). Unit 1 còn Listening (chờ kiểu cảnh phát track của sách) và Reading; kế hoạch Unit 2 ở [06-video-bai-giang.md](06-video-bai-giang.md) mục 6 (P2-40).
 - [x] **P2-34** Video **Unit 1 · Writing 1** (organizing your writing) và **Writing 2** (types of letter / starting and ending letters), mỗi video kết thúc bằng một **thư mẫu đọc thành tiếng** (Writing 1: thư thân mật 160 từ đi qua đủ 6 bước; Writing 2: thư trang trọng hỏi thông tin 154 từ). Gắn vào hoạt động Unit 1 · Writing (phiên 4 và 5).
   - *Đợt 5:* thêm kiểu cảnh `order` (sắp xếp các bước), `timing` (chia 20 phút), `letter` (thư mẫu cả trang, đoạn đang đọc tô màu, ghi chú lề, đếm từ) và dòng `read`; cảnh `pairs` cho phép hai dòng chữ.
 - [x] **P2-35** Video **Unit 1 · Writing 3** (organizing points in a personal letter): giải bài A (chọn ý), B (đọc thư của Bruno, sắp xếp 9 ý theo thứ tự xuất hiện), C (điền lời chào, lời kết), cách Bruno chia đoạn, **thư mẫu của Lan 156 từ** cùng dạng đề, và cách làm bài viết Workbook trang 6.
@@ -282,6 +283,9 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 7:* kiểu cảnh `blanks` (nghe – chép, ô trống mở dần, mẹo chính tả), `order` có `label`; `groupLessons` trong `core.js`.
 - [x] **P2-38** Nút **phóng to / thu nhỏ** của trình xem trang sách hoạt động: 8 mức 50%–300% (100% = vừa bề ngang khung), nút giữa hiện mức đang dùng và bấm để về vừa khung, phím `+` `-` `0`; mức phóng giữ khi lật trang.
   - *Đợt 8:* lỗi cũ: mức nhỏ nhất là 100% nên nút − không làm gì; trên màn hình độ nét cao (dpr 2) nút + kẹt sau một lần vì cỡ hiển thị bị gắn với trần điểm ảnh của canvas. Nay cỡ hiển thị theo mức phóng, chỉ độ phân giải ảnh có trần; đổi cỡ ngay bằng CSS rồi vẽ lại vào canvas mới (không chớp trắng), giữ điểm giữa khung nhìn.
+- [x] **P2-39** Video **Unit 1 · Consolidation** (Speaking A–C về Phần 1 bài thi Nói, Vocabulary A–C: từ gia đình, dạng từ, trọng âm theo Track 8, sửa 8 lỗi) và **Exam practice** tách hai video: **Listening** (điền ghi chú 1–4, trắc nghiệm 5–7, bản đồ 8–9; Emma đóng lễ tân, Tom đóng khách, đọc lại Track 9 theo Tapescript vì bộ sách không có file nghe này) và **Reading** (đọc lướt chọn chủ đề, Emma đọc bài, từ khóa, nối câu với đoạn A–E, mẹo dạng bài). Thẻ Unit 1 có 9 video trong 4 phần, xếp theo thứ tự trong sách.
+  - *Đợt 9:* kiểu cảnh `mcq` (trắc nghiệm, `keys` cho nhãn 1/2/3), `blanks` dạng câu điền từ (`q` chứa `___`, `hint` = từ gốc), trường cảnh `hide_text` (bài nghe không lộ lời thoại) và `roles` (vai trong cảnh); `groupLessons(lessons, order)` xếp phần theo `book.json`.
+- [x] **P2-40** **Hồ sơ video bài giảng** làm căn cứ cho Unit 2: [06-video-bai-giang.md](06-video-bai-giang.md) — bảng độ phủ Unit 1 (phần nào có video, phần nào chưa và vì sao), lịch sử 9 video, quy trình làm một video, danh mục kiểu cảnh, bảng cách đọc `say`, lỗi đã gặp, kế hoạch Unit 2 theo từng phần; lệnh `python -m lesson_video coverage` in lại bảng độ phủ.
 - [ ] **P2-36** Video giải bài tập Workbook (Unit 1 trang 6, …) — chờ người dùng thêm Workbook vào `books/ielts_target_5_0/` (rồi chạy lại agent) hoặc gửi ảnh từng trang.
 
 ### Cổng G2

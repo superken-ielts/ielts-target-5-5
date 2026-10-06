@@ -24,6 +24,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   rồi chạy `python3 web/build.py`. Cần ffmpeg và giọng Kokoro (model q8 + file giọng ở `~/.cache/lesson_video/kokoro/`,
   xem `agents/README.md`); không có model thì công cụ dùng Flite (`libflite1`) — đừng commit video Flite đè video Kokoro.
 - Không sửa tay `lessons.json` / `.mp4`. Chữ trên màn hình ở dòng thoại, cách đọc khác (chữ cái, số, tên riêng) ở `say`.
+- Làm video mới: theo quy trình và bảng độ phủ ở `docs/agent-hoc-tap/06-video-bai-giang.md`; xong thì cập nhật bảng đó
+  (`python -m lesson_video coverage ../books/<sách> --unit U0x`).
 
 ## Kiểm tra trước khi commit
 
