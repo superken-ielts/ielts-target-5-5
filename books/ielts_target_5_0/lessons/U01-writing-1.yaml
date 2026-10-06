@@ -1,0 +1,303 @@
+# Video bài giảng Unit 1 · Writing 1 (sách in trang 17). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-writing-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. `read: tom` trong cảnh letter = Tom đọc nguyên đoạn thư `focus`.
+id: U01-writing-1
+activity: U01-writing
+title: "Unit 1 · Life"
+subtitle: "Writing 1: organizing your writing"
+title_vi: "Sáu bước viết, chia 20 phút cho một lá thư, bài mẫu từng bước"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello again! Welcome to Unit 1: Life. This is Writing 1: organizing your writing."
+        say: "Hello again! Welcome to Unit one: Life. This is Writing one: organizing your writing."
+        vi: "Chào mừng trở lại Unit 1. Đây là Writing 1 — sắp xếp bài viết."
+      - tom: "Writing is hard for me. I never know where to start."
+        vi: "Viết khó quá, mình không biết bắt đầu từ đâu."
+      - emma: "That's why we plan. Today you will learn the six stages of writing, and how to use your time."
+        vi: "Vì vậy cần lên kế hoạch: hôm nay học 6 bước viết và cách chia thời gian."
+      - emma: "In IELTS General Training, Writing Task 1 is a letter of at least 150 words. You should spend about 20 minutes on it."
+        say: "In eye-elts General Training, Writing Task one is a letter of at least a hundred and fifty words. You should spend about twenty minutes on it."
+        vi: "Task 1 của bài thi Viết: một lá thư ít nhất 150 từ, làm trong khoảng 20 phút."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "New words for writing", vi: "Từ mới về cách viết"}
+      - {en: "Exam tip: plan and organize", vi: "Mẹo thi: lên kế hoạch và sắp xếp"}
+      - {en: "Exercise A: put the stages of writing in order", vi: "Bài A: sắp xếp 6 bước viết"}
+      - {en: "Exercise B: how to use 20 minutes", vi: "Bài B: chia 20 phút cho từng bước"}
+      - {en: "Example: Tom plans and writes a letter, stage by stage", vi: "Ví dụ: Tom lập dàn ý và viết thư theo từng bước"}
+    lines:
+      - emma: "Here is our plan for today."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, some new words.", focus: 0}
+      - {emma: "Then, an important exam tip.", focus: 1}
+      - {emma: "In Exercise A, we put the stages of writing in order.", say: "In Exercise eigh, we put the stages of writing in order.", focus: 2}
+      - {emma: "In Exercise B, we decide how to use twenty minutes.", focus: 3}
+      - {emma: "And at the end, Tom writes a letter, and we follow every stage together.", focus: 4}
+
+  - kind: vocab
+    chapter: "Từ mới"
+    heading: "New words"
+    heading_vi: "Từ mới — nghe và nhắc lại"
+    items:
+      - {w: "organize", pos: "verb", vi: "sắp xếp, tổ chức", ex: "Organize your ideas before you start writing."}
+      - {w: "stage", pos: "noun", vi: "bước, giai đoạn", ex: "Planning is an important stage of writing."}
+      - {w: "note down", pos: "phrasal verb", vi: "ghi nhanh", ex: "Note down all your ideas quickly."}
+      - {w: "a rough plan", pos: "noun", vi: "dàn ý sơ bộ", ex: "Make a rough plan before you write the letter."}
+      - {w: "paragraph", pos: "noun", vi: "đoạn văn", ex: "Each paragraph has one main idea."}
+      - {w: "heading", pos: "noun", vi: "tiêu đề (của một đoạn)", ex: "Give each paragraph in your plan a short heading."}
+      - {w: "composition", pos: "noun", vi: "bài viết, bài luận", ex: "A composition is a piece of writing, like an essay."}
+      - {w: "check for errors", pos: "phrase", vi: "soát lỗi", ex: "Always check your letter for errors at the end."}
+    lines:
+      - emma: "First, some new words. Listen, and repeat after Tom."
+        vi: "Từ mới. Nghe rồi nhắc lại theo Tom."
+      - {emma: "organize", focus: 0}
+      - {tom: "organize"}
+      - {emma: "Organize your ideas before you start writing."}
+      - {emma: "stage", focus: 1}
+      - {tom: "stage"}
+      - {emma: "Planning is an important stage of writing."}
+      - {emma: "note down", focus: 2}
+      - {tom: "note down"}
+      - {emma: "Note down all your ideas quickly."}
+      - {emma: "a rough plan", focus: 3}
+      - {tom: "a rough plan"}
+      - {emma: "Make a rough plan before you write the letter."}
+      - {emma: "paragraph", focus: 4}
+      - {tom: "paragraph"}
+      - {emma: "Each paragraph has one main idea."}
+      - {emma: "heading", focus: 5}
+      - {tom: "heading"}
+      - {emma: "Give each paragraph in your plan a short heading."}
+      - {emma: "composition", focus: 6}
+      - {tom: "composition"}
+      - {emma: "A composition is a piece of writing, like an essay."}
+      - {emma: "check for errors", focus: 7}
+      - {tom: "check for errors"}
+      - {emma: "Always check your letter for errors at the end."}
+
+  - kind: bullets
+    chapter: "Mẹo thi"
+    heading: "Exam tip"
+    heading_vi: "Mẹo thi"
+    items:
+      - {en: "To write well, you need to plan and organize.", vi: "Muốn viết tốt, cần lên kế hoạch và sắp xếp ý."}
+      - {en: "You won't spend all the time actually writing.", vi: "Bạn sẽ không dành toàn bộ thời gian để viết."}
+    lines:
+      - {emma: "Here is the exam tip from the book. To write well, you need to plan and organize.", focus: 0}
+      - {emma: "When you do the Writing Module, you won't spend all the time actually writing.", focus: 1}
+      - tom: "So I shouldn't start writing immediately?"
+        vi: "Vậy không nên viết ngay?"
+      - emma: "Exactly. First you think and plan. Then the writing is much easier."
+        vi: "Đúng vậy. Nghĩ và lập dàn ý trước, viết sẽ dễ hơn nhiều."
+
+  - kind: order
+    chapter: "Bài A: sắp xếp các bước"
+    heading: "Exercise A · Put the stages of the writing process into a logical order"
+    heading_vi: "Sắp xếp các bước viết theo thứ tự hợp lý"
+    items:
+      - {k: a, text: "Quickly note down lots of ideas.", pos: 2, short: "Note down ideas"}
+      - {k: b, text: "Read your work and check for errors.", pos: 6, short: "Check for errors"}
+      - {k: c, text: "Read the question and the instructions very carefully.", pos: 1, short: "Read the question"}
+      - {k: d, text: "Write your letter or composition.", pos: 5, short: "Write"}
+      - {k: e, text: "Decide which ideas you are going to include in the composition.", pos: 3, short: "Choose your ideas"}
+      - {k: f, text: "Make a rough plan with paragraph headings.", pos: 4, short: "Make a rough plan"}
+    lines:
+      - emma: "Exercise A. Put these stages of the writing process into a logical order."
+        say: "Exercise eigh. Put these stages of the writing process into a logical order."
+        vi: "Bài A. Sắp xếp các bước viết theo thứ tự hợp lý."
+      - emma: "Pause the video now and try it yourself."
+        vi: "Tạm dừng video và tự làm trước nhé."
+      - wait: 5
+        note: "Pause the video and try"
+        vi: "Tạm dừng video, sắp xếp sáu bước rồi xem tiếp."
+      - emma: "Let's check. Tom, what do you do first?"
+      - {tom: "First, I read the question and the instructions very carefully. That's c.", say: "First, I read the question and the instructions very carefully. That's C.", focus: 2, reveal: c}
+      - {emma: "Yes. Second, quickly note down lots of ideas. That's a.", say: "Yes. Second, quickly note down lots of ideas. That's eigh.", focus: 0, reveal: a}
+      - {tom: "Third, I decide which ideas to include. That's e.", say: "Third, I decide which ideas to include. That's E.", focus: 4, reveal: e}
+      - {emma: "Fourth, make a rough plan with paragraph headings. That's f.", say: "Fourth, make a rough plan with paragraph headings. That's F.", focus: 5, reveal: f}
+      - {tom: "Fifth, I write my letter. That's d.", say: "Fifth, I write my letter. That's D.", focus: 3, reveal: d}
+      - {emma: "And finally, read your work and check for errors. That's b.", say: "And finally, read your work and check for errors. That's B.", focus: 1, reveal: b}
+      - emma: "The answer key does not cover this exercise, so this is our suggested order."
+        vi: "Phần đáp án cuối sách không có bài này — đây là thứ tự gợi ý."
+
+  - kind: timing
+    chapter: "Bài B: chia 20 phút"
+    heading: "Exercise B · 20 minutes for a letter of about 150 words"
+    heading_vi: "Nên dành bao nhiêu phút cho mỗi bước?"
+    items:
+      - {label: "1. Read the question carefully", minutes: 1, vi: "Đọc kỹ đề"}
+      - {label: "2. Note down ideas", minutes: 2, vi: "Ghi nhanh ý"}
+      - {label: "3. Choose your ideas", minutes: 1, vi: "Chọn ý"}
+      - {label: "4. Make a rough plan", minutes: 2, vi: "Lập dàn ý"}
+      - {label: "5. Write the letter", minutes: 11, vi: "Viết thư"}
+      - {label: "6. Check for errors", minutes: 3, vi: "Soát lỗi"}
+    lines:
+      - emma: "Exercise B. You have twenty minutes to write a letter of about 150 words. How long should you spend on each stage?"
+        say: "Exercise B. You have twenty minutes to write a letter of about a hundred and fifty words. How long should you spend on each stage?"
+        vi: "Bài B. Có 20 phút để viết thư khoảng 150 từ — chia thời gian thế nào?"
+      - tom: "Can I spend all twenty minutes writing?"
+      - emma: "No! Here is a good plan. One minute to read the question."
+        focus: 0
+        reveal: 0
+      - {emma: "Two minutes to note down ideas.", focus: 1, reveal: 1}
+      - {emma: "One minute to choose the best ideas.", focus: 2, reveal: 2}
+      - {emma: "Two minutes to make a rough plan.", focus: 3, reveal: 3}
+      - {emma: "Eleven minutes to write.", focus: 4, reveal: 4}
+      - {emma: "And three minutes to check for errors.", focus: 5, reveal: 5}
+      - tom: "So I plan for six minutes, write for eleven, and check for three."
+        vi: "6 phút chuẩn bị, 11 phút viết, 3 phút soát lỗi."
+      - emma: "That's right. Planning saves time, because you don't stop to think in the middle of the letter."
+        vi: "Lập dàn ý giúp tiết kiệm thời gian vì không phải dừng giữa chừng để nghĩ."
+
+  - kind: bullets
+    chapter: "Ví dụ: đề bài"
+    heading: "Example task · Stage 1: read the question carefully"
+    heading_vi: "Đề ví dụ — bước 1: đọc kỹ đề"
+    items:
+      - {en: "You have just moved to a new city for work. Write a letter to a friend.", vi: "Bạn vừa chuyển tới thành phố mới để làm việc. Viết thư cho một người bạn."}
+      - {en: "In your letter: describe your new home", vi: "Ý 1: tả nơi ở mới"}
+      - {en: "say what you like about the city", vi: "Ý 2: nói điều bạn thích ở thành phố"}
+      - {en: "invite your friend to visit you", vi: "Ý 3: mời bạn đến chơi"}
+      - {en: "Write at least 150 words. Begin your letter: Dear …,", vi: "Viết ít nhất 150 từ."}
+    lines:
+      - emma: "Now let's see the six stages in action. Here is an example task."
+        vi: "Giờ xem sáu bước trong một bài cụ thể."
+      - {emma: "You have just moved to a new city for work. Write a letter to a friend.", focus: 0}
+      - {emma: "In your letter, describe your new home,", focus: 1}
+      - {emma: "say what you like about the city,", focus: 2}
+      - {emma: "and invite your friend to visit you.", focus: 3}
+      - {emma: "Write at least 150 words.", say: "Write at least a hundred and fifty words.", focus: 4}
+      - emma: "Stage one: read the question carefully. Tom, who is the letter to?"
+      - tom: "A friend. So my letter is informal."
+        vi: "Gửi một người bạn → thư thân mật."
+      - emma: "And how many points must you write about?"
+      - tom: "Three: my new home, what I like about the city, and an invitation."
+        vi: "Ba ý: nơi ở mới, điều thích ở thành phố, lời mời."
+
+  - kind: compare
+    chapter: "Ví dụ: ghi ý và chọn ý"
+    heading: "Stage 2: note down ideas · Stage 3: choose your ideas"
+    heading_vi: "Bước 2: ghi nhanh thật nhiều ý · Bước 3: chọn ý trả lời đúng đề"
+    items:
+      - title: "Stage 2 · Lots of ideas"
+        title_vi: "Ghi nhanh, chưa cần đúng ngữ pháp"
+        lines: ["small flat on the 10th floor", "sea view from the balcony", "the rent is expensive", "beautiful beaches, fresh seafood", "friendly people, quieter than Hanoi", "a lot of rain in winter", "fireworks festival in June"]
+      - title: "Stage 3 · The ideas I will use"
+        title_vi: "Mỗi ý của đề chọn 2–3 điều"
+        lines: ["Home: small flat, sea view", "City: beaches, seafood, friendly people", "Invitation: fireworks festival, stay in my flat", "Leave out: the rent, the rain"]
+    lines:
+      - emma: "Stage two: quickly note down lots of ideas. Don't worry about grammar yet."
+        focus: 0
+        vi: "Bước 2: ghi thật nhanh nhiều ý, chưa cần lo ngữ pháp."
+      - tom: "Small flat, sea view, expensive rent, beaches, seafood, friendly people, rain, and a festival in June."
+        focus: 0
+      - emma: "Stage three: decide which ideas to include. Choose ideas that answer the three points."
+        focus: 1
+        vi: "Bước 3: chọn những ý trả lời đúng ba ý của đề."
+      - tom: "I won't write about the rent or the rain. They don't answer the question."
+        focus: 1
+        vi: "Bỏ tiền thuê nhà và chuyện mưa vì không trả lời đề."
+
+  - kind: bullets
+    chapter: "Ví dụ: dàn ý"
+    heading: "Stage 4 · A rough plan with paragraph headings"
+    heading_vi: "Bước 4: dàn ý — mỗi đoạn một tiêu đề, mỗi ý của đề một đoạn"
+    items:
+      - {en: "Dear Anna, + opening: sorry I haven't written", vi: "Mở thư: lời chào, lý do lâu không viết"}
+      - {en: "Paragraph 1: my new home", vi: "Đoạn 1: nơi ở mới"}
+      - {en: "Paragraph 2: what I like about Da Nang", vi: "Đoạn 2: điều tôi thích ở Đà Nẵng"}
+      - {en: "Paragraph 3: invitation — the fireworks festival", vi: "Đoạn 3: lời mời"}
+      - {en: "Ending: Write back soon. Love, Tom", vi: "Kết thư thân mật"}
+    lines:
+      - emma: "Stage four: make a rough plan with paragraph headings. One paragraph for each point."
+        vi: "Bước 4: lập dàn ý, mỗi ý của đề là một đoạn."
+      - {tom: "I start with Dear Anna, and say sorry that I haven't written.", focus: 0}
+      - {tom: "Paragraph one: my new home.", focus: 1}
+      - {tom: "Paragraph two: what I like about Da Nang.", say: "Paragraph two: what I like about Dah Nahng.", focus: 2}
+      - {tom: "Paragraph three: the invitation.", focus: 3}
+      - {tom: "And I end with: Write back soon. Love, Tom.", focus: 4}
+      - emma: "Great plan. Now, stage five: write the letter. Listen to Tom's letter, and follow the paragraphs."
+        vi: "Bước 5: viết thư. Nghe thư của Tom và dõi theo từng đoạn."
+
+  - kind: letter
+    chapter: "Thư mẫu"
+    heading: "Stage 5 · Tom's letter"
+    heading_vi: "Bước 5: thư mẫu"
+    items:
+      - {text: "Dear Anna,", note: "Lời chào thân mật", body: false}
+      - text: "I hope you're well. Sorry I haven't written for so long – I've been really busy since I moved to Da Nang for my new job three weeks ago."
+        say: "I hope you're well. Sorry I haven't written for so long. I've been really busy since I moved to Dah Nahng for my new job three weeks ago."
+        note: "Mở thư: hỏi thăm, lý do viết"
+      - text: "My new home is a small flat on the tenth floor of a building near the river. It only has one bedroom, but the living room is bright and I can see the sea from the balcony! The building has a small gym, and my neighbours are very kind."
+        note: "Ý 1: nơi ở mới"
+      - text: "I really like the city. The beaches are beautiful and the food is amazing – I eat fresh seafood almost every day. The people are friendly too, and it's much quieter than Hanoi, so I sleep much better."
+        say: "I really like the city. The beaches are beautiful and the food is amazing. I eat fresh seafood almost every day. The people are friendly too, and it's much quieter than Ha Noi, so I sleep much better."
+        note: "Ý 2: điều thích ở thành phố"
+      - text: "Why don't you come and visit me next month? There's a fireworks festival in June, and you can stay in my flat – the sofa is very comfortable! I'll take you to my favourite café by the beach."
+        note: "Ý 3: lời mời"
+      - {text: "Write back soon and tell me all your news.", note: "Câu kết"}
+      - {text: "Love,\nTom", note: "Chào cuối thân mật", body: false}
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: tom, focus: 4}
+      - {read: tom, focus: 5}
+      - {read: tom, focus: 6}
+
+  - kind: bullets
+    chapter: "Soát lỗi"
+    heading: "Stage 6 · Read your work and check for errors"
+    heading_vi: "Bước 6: đọc lại và soát lỗi"
+    items:
+      - {en: "Did I answer all three points?", vi: "Đủ ba ý của đề chưa?"}
+      - {en: "Is it at least 150 words?", vi: "Đủ ít nhất 150 từ chưa?"}
+      - {en: "Are the opening and the ending right for a friend?", vi: "Lời chào, lời kết hợp với thư cho bạn chưa?"}
+      - {en: "Grammar: verb tenses, plurals, articles", vi: "Ngữ pháp: thì của động từ, số nhiều, mạo từ"}
+      - {en: "Spelling and punctuation", vi: "Chính tả và dấu câu"}
+    lines:
+      - emma: "Stage six: read your work and check for errors. Tom, let's check your letter."
+        vi: "Bước 6: đọc lại và soát lỗi."
+      - {emma: "Did you answer all three points?", focus: 0}
+      - {tom: "Yes: my home, the city, and the invitation.", focus: 0}
+      - {emma: "Is it at least 150 words?", say: "Is it at least a hundred and fifty words?", focus: 1}
+      - {tom: "Yes, it's about a hundred and sixty words.", focus: 1}
+      - {emma: "Are the opening and the ending right for a friend?", focus: 2}
+      - {tom: "Yes. Dear Anna, and Love, Tom. They're informal.", focus: 2}
+      - {emma: "Then check your grammar, and your spelling and punctuation.", focus: 3}
+      - {tom: "I wrote: I've been really busy since I moved. Present perfect with since. That's correct!", focus: 3}
+      - {emma: "Well done. Always keep three minutes for this stage.", focus: 4}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember · Your turn"
+    heading_vi: "Ghi nhớ và bài về nhà"
+    items:
+      - {en: "Six stages: read → note ideas → choose → plan → write → check", vi: "Sáu bước viết"}
+      - {en: "20 minutes: about 6 to plan, 11 to write, 3 to check", vi: "Chia thời gian cho Task 1"}
+      - {en: "One paragraph for each point in the question", vi: "Mỗi ý của đề là một đoạn"}
+      - {en: "Homework: you have joined a new English class. Write to a friend: describe the class, say what you like, invite your friend to join.", vi: "Bài về nhà: làm đủ 6 bước, bấm giờ 20 phút"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Six stages: read the question, note down ideas, choose, plan, write, and check.", focus: 0}
+      - {emma: "In twenty minutes: about six minutes to plan, eleven to write, and three to check.", focus: 1}
+      - {emma: "Write one paragraph for each point in the question.", focus: 2}
+      - emma: "For homework, imagine you have joined a new English class. Write a letter to a friend about it. Use all six stages, and time yourself."
+        focus: 3
+        vi: "Bài về nhà: viết thư cho bạn kể về lớp tiếng Anh mới, làm đủ 6 bước và bấm giờ."
+      - tom: "Thanks, Emma! See you in Writing 2."
+        say: "Thanks, Emma! See you in Writing two."
+      - emma: "Goodbye, and happy writing!"

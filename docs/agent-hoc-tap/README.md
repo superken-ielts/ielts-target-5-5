@@ -29,6 +29,8 @@ phí); hai video Unit 1 Speaking 1 và 2 gắn vào Unit 1 trong tab Sách.
 
 **Đợt 4 (05/10/2026):** video đọc bằng giọng Kokoro-82M (bản q8) — Emma `af_heart`, Tom `am_michael` (giọng Mỹ, người dùng chọn qua video mẫu); Flite giữ làm dự phòng.
 
+**Đợt 5 (06/10/2026):** thêm hai video Unit 1 Writing 1 và 2, mỗi video có thư mẫu đọc thành tiếng.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

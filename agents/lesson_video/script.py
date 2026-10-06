@@ -14,7 +14,8 @@ from typing import Literal, Optional, Union
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
-Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice"]
+Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
+               "order", "timing", "letter"]
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -27,8 +28,12 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "compare": ("title", "lines"),
     "errors": ("wrong", "right"),
     "practice": ("q",),
+    "order": ("k", "text", "pos"),      # sắp xếp: mỗi mục có vị trí đúng `pos`
+    "timing": ("label", "minutes"),     # chia thời gian: thanh ngang theo số phút
+    "letter": ("text",),                # thư mẫu: mỗi mục một đoạn; `note` ghi chú lề, `body: false` không đếm từ
 }
-LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note"}
+# `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
+LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read"}
 
 
 class _M(BaseModel):
@@ -125,6 +130,10 @@ class Scene(_M):
             raise ValueError("cảnh pairs cần `options` (cột đáp án a, b, c…)")
         if self.kind == "match" and not self.image:
             raise ValueError("cảnh match cần `image`")
+        if self.kind == "order" and sorted(int(it["pos"]) for it in self.items) != list(range(1, len(self.items) + 1)):
+            raise ValueError("cảnh order: `pos` phải là 1…n, mỗi số một lần")
+        if self.kind == "letter" and any(ln.wait for ln in self.lines):
+            raise ValueError("cảnh letter không có khoảng lặng `wait` (không có chỗ hiện đếm ngược)")
         if not self.lines:
             raise ValueError("cảnh không có câu thoại nào")
         keys = self.reveal_keys()
@@ -139,6 +148,8 @@ class Scene(_M):
     def reveal_keys(self) -> set[str]:
         if self.kind in ("match", "pairs"):
             return {str(it["n"]) for it in self.items}
+        if self.kind == "order":
+            return {str(it["k"]) for it in self.items}
         return {str(i) for i in range(len(self.items))}
 
 
@@ -173,6 +184,19 @@ class Lesson(_M):
                     raise ValueError(f"dòng thoại phải là bảng khóa–giá trị: {ln!r}")
                 if "speaker" in ln or "text" in ln:  # đã ở dạng chuẩn (ví dụ từ model_dump)
                     out.append(dict(ln))
+                    continue
+                if "read" in ln:  # đọc nguyên một đoạn thư: chữ và cách đọc lấy từ mục `focus`
+                    items = sc.get("items") or []
+                    i = ln.get("focus")
+                    if sc.get("kind") != "letter" or not isinstance(i, int) or not 0 <= i < len(items):
+                        raise ValueError(f"`read` chỉ dùng trong cảnh letter, kèm `focus` là số thứ tự đoạn: {ln!r}")
+                    if ln["read"] not in known:
+                        raise ValueError(f"người nói chưa khai báo trong speakers: {ln['read']}")
+                    row = {k: v for k, v in ln.items() if k in LINE_FIELDS and k != "read"}
+                    row["speaker"], row["text"] = ln["read"], str(items[i]["text"])
+                    if items[i].get("say") and "say" not in row:
+                        row["say"] = str(items[i]["say"])
+                    out.append(row)
                     continue
                 who = [k for k in ln if k not in LINE_FIELDS]
                 if len(who) > 1:

@@ -1,0 +1,311 @@
+# Video bài giảng Unit 1 · Writing 2 (sách in trang 17–18). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-writing-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. `read: emma` trong cảnh letter = Emma đọc nguyên đoạn thư `focus`.
+id: U01-writing-2
+activity: U01-writing
+title: "Unit 1 · Life"
+subtitle: "Writing 2: types of letter / starting and ending letters"
+title_vi: "Các loại thư, câu mở đầu, cách kết thư — thư mẫu trang trọng"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back! This is Writing 2: types of letter, and how to start and end a letter."
+        say: "Welcome back! This is Writing two: types of letter, and how to start and end a letter."
+        vi: "Writing 2: các loại thư, cách mở đầu và kết thúc thư."
+      - tom: "Is it really important how I start and end a letter?"
+        vi: "Mở đầu và kết thư có quan trọng vậy không?"
+      - emma: "Yes! The examiner checks the tone of your letter: formal, semi-formal or informal. The first and last lines show the tone very clearly."
+        vi: "Có! Giám khảo chấm giọng văn: trang trọng, bán trang trọng hay thân mật — câu đầu và câu cuối thể hiện rõ nhất."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "New words for letters", vi: "Từ mới về thư"}
+      - {en: "Exercise A: six types of letter and their opening lines", vi: "Bài A: 6 loại thư và câu mở đầu"}
+      - {en: "Exercise B: useful phrases to open a letter", vi: "Bài B: cụm từ mở đầu thư"}
+      - {en: "Exercises C and D: endings — Yours faithfully, Yours sincerely, Best wishes", vi: "Bài C, D: cách kết thư"}
+      - {en: "Example: a formal letter asking for information", vi: "Ví dụ: thư trang trọng hỏi thông tin"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "New words.", focus: 0}
+      - {emma: "Six types of letter, and how each one begins.", focus: 1}
+      - {emma: "Useful phrases to open a letter.", focus: 2}
+      - {emma: "How to end a letter.", focus: 3}
+      - {emma: "And finally, an example of a complete formal letter.", focus: 4}
+
+  - kind: vocab
+    chapter: "Từ mới"
+    heading: "New words"
+    heading_vi: "Từ mới — nghe và nhắc lại"
+    items:
+      - {w: "formal", pos: "adjective", vi: "trang trọng", ex: "Use formal language in a letter to a company."}
+      - {w: "informal", pos: "adjective", vi: "thân mật", ex: "A letter to a friend is informal."}
+      - {w: "complaint", pos: "noun", vi: "lời phàn nàn, khiếu nại", ex: "I wrote a letter of complaint about the noisy hotel."}
+      - {w: "dissatisfaction", pos: "noun", vi: "sự không hài lòng", ex: "I am writing to express my dissatisfaction with the service."}
+      - {w: "apology", pos: "noun", vi: "lời xin lỗi", ex: "Please accept my apology for the late reply."}
+      - {w: "request", pos: "verb", vi: "yêu cầu, đề nghị", ex: "I am writing to request information about your course."}
+      - {w: "apply for", pos: "verb", vi: "nộp đơn xin (việc, khóa học)", ex: "I would like to apply for the job of receptionist."}
+      - {w: "referee", pos: "noun", vi: "người giới thiệu, xác nhận cho đơn xin việc", ex: "My old manager is one of my referees."}
+      - {w: "look forward to", pos: "phrase", vi: "mong chờ", ex: "I look forward to hearing from you."}
+    lines:
+      - emma: "First, new words. Listen, and repeat after Tom."
+        vi: "Từ mới. Nghe rồi nhắc lại theo Tom."
+      - {emma: "formal", focus: 0}
+      - {tom: "formal"}
+      - {emma: "Use formal language in a letter to a company."}
+      - {emma: "informal", focus: 1}
+      - {tom: "informal"}
+      - {emma: "A letter to a friend is informal."}
+      - {emma: "complaint", focus: 2}
+      - {tom: "complaint"}
+      - {emma: "I wrote a letter of complaint about the noisy hotel."}
+      - {emma: "dissatisfaction", focus: 3}
+      - {tom: "dissatisfaction"}
+      - {emma: "I am writing to express my dissatisfaction with the service."}
+      - {emma: "apology", focus: 4}
+      - {tom: "apology"}
+      - {emma: "Please accept my apology for the late reply."}
+      - {emma: "request", focus: 5}
+      - {tom: "request"}
+      - {emma: "I am writing to request information about your course."}
+      - {emma: "apply for", focus: 6}
+      - {tom: "apply for"}
+      - {emma: "I would like to apply for the job of receptionist."}
+      - {emma: "referee", focus: 7}
+      - {tom: "referee"}
+      - {emma: "My old manager is one of my referees."}
+      - {emma: "look forward to", focus: 8}
+      - {tom: "look forward to"}
+      - {emma: "I look forward to hearing from you."}
+
+  - kind: pairs
+    chapter: "Bài A: các loại thư"
+    heading: "Exercise A · Match each type of letter with an opening line A–F"
+    heading_vi: "Nối loại thư 1–6 với câu mở đầu A–F"
+    items:
+      - {n: 1, q: "a personal letter", answer: D}
+      - {n: 2, q: "a job application", answer: F}
+      - {n: 3, q: "a formal business letter", answer: E}
+      - {n: 4, q: "a letter requesting information", answer: A}
+      - {n: 5, q: "a letter of complaint", answer: B}
+      - {n: 6, q: "a formal letter of apology", answer: C}
+    options:
+      - {k: A, text: "Dear Sir/Madam, I would like to know more about the Sports Science course…"}
+      - {k: B, text: "Dear Sir/Madam, I am writing to express my dissatisfaction at the service…"}
+      - {k: C, text: "Dear Mr Jones, I will not be able to attend the conference… I really am very sorry."}
+      - {k: D, text: "Hi Louis, Thanks for the photos – I got them this morning…"}
+      - {k: E, text: "Dear Mrs Cole, I am a colleague of Martin White… one of his referees…"}
+      - {k: F, text: "Dear Mr Lucas, I am writing to apply for the job advertised in the Daily Argus."}
+    lines:
+      - emma: "Exercise A. These are the types of letter you might need to write in IELTS. Match each type with one of the opening lines, A to F."
+        say: "Exercise eigh. These are the types of letter you might need to write in eye-elts. Match each type with one of the opening lines, eigh to F."
+        vi: "Bài A. Nối 6 loại thư với câu mở đầu A–F."
+      - emma: "Pause the video now and try it yourself."
+        vi: "Tạm dừng video và tự làm trước nhé."
+      - wait: 6
+        note: "Pause the video and try"
+        vi: "Tạm dừng video, nối loại thư với câu mở đầu rồi xem tiếp."
+      - emma: "Let's check. Tom, read the type, and I'll explain the answer."
+      - {tom: "Number one: a personal letter.", focus: 0}
+      - {emma: "That's D. Hi Louis, and thanks for the photos, are friendly and informal.", reveal: 1}
+      - {tom: "Number two: a job application.", focus: 1}
+      - {emma: "That's F. I am writing to apply for the job.", reveal: 2}
+      - {tom: "Number three: a formal business letter.", focus: 2}
+      - {emma: "That's E. A colleague writes to Mrs Cole to support Martin's application.", reveal: 3}
+      - {tom: "Number four: a letter requesting information.", focus: 3}
+      - {emma: "That's A. I would like to know more about the course.", say: "That's eigh. I would like to know more about the course.", reveal: 4}
+      - {tom: "Number five: a letter of complaint.", focus: 4}
+      - {emma: "That's B. I am writing to express my dissatisfaction.", reveal: 5}
+      - {tom: "Number six: a formal letter of apology.", focus: 5}
+      - {emma: "That's C. I will not be able to attend. I really am very sorry.", reveal: 6}
+      - emma: "The answer key does not cover this exercise, so these are our suggested answers."
+        vi: "Phần đáp án cuối sách không có bài này — đây là đáp án gợi ý."
+
+  - kind: bullets
+    chapter: "Bài B: cụm từ mở đầu"
+    heading: "Exercise B · Useful phrases to open a letter"
+    heading_vi: "Cụm từ mở đầu thư — học thuộc để dùng ngay"
+    items:
+      - {en: "I would like to know more about …", vi: "Hỏi thông tin"}
+      - {en: "I am writing to express my dissatisfaction at / with …", vi: "Phàn nàn"}
+      - {en: "I am writing to inform you that …", vi: "Thông báo (kể cả xin lỗi)"}
+      - {en: "I am writing to apply for the job of … advertised in …", vi: "Xin việc"}
+      - {en: "I am writing as one of his referees to support …", vi: "Giới thiệu, xác nhận"}
+      - {en: "Thanks for … / It was great to hear from you.", vi: "Thư thân mật"}
+    lines:
+      - emma: "Exercise B. Here are the useful phrases that open the letters. Listen and repeat after Tom."
+        vi: "Bài B. Các cụm từ mở đầu thư — nghe và nhắc lại."
+      - {tom: "I would like to know more about…", focus: 0}
+      - {tom: "I am writing to express my dissatisfaction with…", focus: 1}
+      - {tom: "I am writing to inform you that…", focus: 2}
+      - {tom: "I am writing to apply for the job of…", focus: 3}
+      - {tom: "I am writing as one of his referees to support…", focus: 4}
+      - {tom: "Thanks for… It was great to hear from you.", focus: 5}
+      - emma: "Notice: formal letters often begin with, I am writing to. Informal letters begin with, Thanks for."
+        vi: "Thư trang trọng hay mở bằng “I am writing to…”, thư thân mật mở bằng “Thanks for…”."
+      - emma: "Now choose one opening line, look at it for thirty seconds, then close your book and write it from memory."
+        vi: "Chọn một câu mở đầu, nhìn 30 giây, gấp sách lại rồi viết lại theo trí nhớ."
+      - {wait: 8, note: "Write one opening line from memory", vi: "Viết lại một câu mở đầu theo trí nhớ."}
+
+  - kind: pairs
+    chapter: "Bài C: cách kết thư"
+    heading: "Exercise C · Which ending is right for each letter A–F?"
+    heading_vi: "Chọn cách kết phù hợp cho từng lá thư"
+    items:
+      - {n: 1, q: "I look forward to hearing from you soon. Yours faithfully, Mark King", answer: A}
+      - {n: 2, q: "Once again, I would like to apologize. Best wishes, Lucy Hayes", answer: C}
+      - {n: 3, q: "Anyway – must get on now. See you at Jake's party next week. Best, Tom", answer: D}
+      - {n: 4, q: "I look forward to receiving your reply. Yours faithfully, Graham Downs", answer: B}
+      - {n: 5, q: "I fully recommend him for the position. Yours sincerely, Simon Fox", answer: E}
+    options:
+      - {k: A, text: "Dear Sir/Madam — asking for information"}
+      - {k: B, text: "Dear Sir/Madam — complaint"}
+      - {k: C, text: "Dear Mr Jones — apology"}
+      - {k: D, text: "Hi Louis — personal letter"}
+      - {k: E, text: "Dear Mrs Cole — reference"}
+      - {k: F, text: "Dear Mr Lucas — job application"}
+    lines:
+      - emma: "Exercise C. Now decide which of these endings is right for each letter, A to F."
+        say: "Exercise C. Now decide which of these endings is right for each letter, eigh to F."
+        vi: "Bài C. Chọn cách kết cho từng lá thư A–F."
+      - {wait: 6, note: "Pause the video and try", vi: "Tạm dừng video, chọn cách kết rồi xem tiếp."}
+      - {tom: "Ending one: I look forward to hearing from you soon. Yours faithfully.", focus: 0}
+      - {emma: "That goes with letter A, the request for information.", say: "That goes with letter eigh, the request for information.", reveal: 1}
+      - {tom: "Ending two: Once again, I would like to apologize. Best wishes.", focus: 1}
+      - {emma: "That's letter C, the apology to Mr Jones.", reveal: 2}
+      - {tom: "Ending three: Anyway, must get on now. Best, Tom.", focus: 2}
+      - {emma: "That's letter D, to Louis. It's chatty and informal.", reveal: 3}
+      - {tom: "Ending four: I look forward to receiving your reply. Yours faithfully.", focus: 3}
+      - {emma: "That's letter B, the complaint. The writer wants an answer.", reveal: 4}
+      - {tom: "Ending five: I fully recommend him for the position. Yours sincerely.", focus: 4}
+      - {emma: "That's letter E, the reference for Martin.", reveal: 5}
+      - emma: "Endings one and four both say Yours faithfully, so they can go with A or B."
+        say: "Endings one and four both say Yours faithfully, so they can go with eigh or B."
+        vi: "Kết 1 và 4 đều dùng Yours faithfully nên hợp với cả thư A và B."
+      - emma: "Which letter has no ending? F, the job application. Tom, how would you end it?"
+      - tom: "I look forward to hearing from you. Yours sincerely, because we know his name: Mr Lucas."
+        vi: "Biết tên người nhận (Mr Lucas) → Yours sincerely."
+
+  - kind: compare
+    chapter: "Bài D: faithfully hay sincerely"
+    heading: "Exercise D · Yours faithfully or Yours sincerely?"
+    heading_vi: "Kết thư trang trọng: tùy bạn có biết tên người nhận không"
+    items:
+      - title: "Yours faithfully,"
+        title_vi: "Không biết tên người nhận"
+        lines: ["Dear Sir/Madam, → Yours faithfully,", "Letters A and B", "To a company, a school, a hotel…"]
+      - title: "Yours sincerely,"
+        title_vi: "Biết tên người nhận"
+        lines: ["Dear Mr Jones, / Dear Mrs Cole, → Yours sincerely,", "Letters E and F", "Mr / Mrs / Ms + family name"]
+    lines:
+      - emma: "Exercise D, question one. When do you close a letter with Yours faithfully, and when with Yours sincerely?"
+        vi: "Khi nào kết bằng Yours faithfully, khi nào bằng Yours sincerely?"
+      - tom: "If I start with Dear Sir or Madam, I don't know the name, so I end with Yours faithfully."
+        focus: 0
+      - tom: "If I start with the person's name, like Dear Mrs Cole, I end with Yours sincerely."
+        focus: 1
+      - emma: "Exactly. And use the family name: Mr, Mrs or Ms, plus the surname. Never write Dear Mrs Anna."
+        focus: 1
+        vi: "Dùng Mr/Mrs/Ms + họ, không viết “Dear Mrs Anna”."
+
+  - kind: bullets
+    heading: "Exercise D · Semi-formal and informal endings"
+    heading_vi: "Kết thư bán trang trọng và thân mật"
+    items:
+      - {en: "Best wishes, / Kind regards, / Regards,", vi: "Bán trang trọng: người bạn biết, đồng nghiệp, thầy cô (thư C)"}
+      - {en: "Love, / Lots of love,", vi: "Rất thân: gia đình, bạn thân"}
+      - {en: "Best, / All the best, / Take care,", vi: "Thân mật: bạn bè (thư D)"}
+      - {en: "See you soon! / Write soon! / Speak soon!", vi: "Câu chào trước chữ ký"}
+    lines:
+      - emma: "Question two. When is it acceptable to use Best wishes, or Regards?"
+        vi: "Khi nào dùng Best wishes hay Regards?"
+      - tom: "When I know the person, but the letter is not very personal. For example, to a teacher or a colleague."
+        focus: 0
+      - emma: "Right. In letter C, Lucy knows Mr Jones, so Best wishes is fine."
+        focus: 0
+      - emma: "Question three. What are some other ways of ending an informal personal letter?"
+        vi: "Còn những cách kết thư thân mật nào khác?"
+      - {tom: "Love, or lots of love, for family and close friends.", focus: 1}
+      - {tom: "Best, all the best, or take care.", focus: 2}
+      - {tom: "And before my name: See you soon, or write soon!", focus: 3}
+
+  - kind: bullets
+    chapter: "Ví dụ: đề bài"
+    heading: "Example task"
+    heading_vi: "Đề ví dụ: thư trang trọng hỏi thông tin"
+    items:
+      - {en: "You want to study English in the evenings. Write a letter to a language school.", vi: "Bạn muốn học tiếng Anh buổi tối. Viết thư cho một trường ngoại ngữ."}
+      - {en: "In your letter: say why you want to study English", vi: "Ý 1: vì sao muốn học"}
+      - {en: "ask about the class times", vi: "Ý 2: hỏi giờ học"}
+      - {en: "ask about the cost of the course", vi: "Ý 3: hỏi học phí"}
+      - {en: "Begin your letter: Dear Sir or Madam,", vi: "Không biết tên người nhận → kết bằng Yours faithfully"}
+    lines:
+      - emma: "Now, an example. Here is the task."
+        vi: "Giờ đến ví dụ. Đây là đề bài."
+      - {emma: "You want to study English in the evenings. Write a letter to a language school.", focus: 0}
+      - {emma: "Say why you want to study English,", focus: 1}
+      - {emma: "ask about the class times,", focus: 2}
+      - {emma: "and ask about the cost of the course.", focus: 3}
+      - {emma: "Begin your letter, Dear Sir or Madam.", focus: 4}
+      - tom: "I don't know the name, so I end with Yours faithfully. And I use formal language."
+        vi: "Không biết tên → Yours faithfully, văn phong trang trọng."
+      - emma: "Perfect. Listen to the example letter, and notice the opening and the ending."
+        vi: "Nghe thư mẫu, chú ý câu mở đầu và câu kết."
+
+  - kind: letter
+    chapter: "Thư mẫu"
+    heading: "Example letter · a formal letter requesting information"
+    heading_vi: "Thư mẫu trang trọng"
+    items:
+      - {text: "Dear Sir/Madam,", say: "Dear Sir or Madam,", note: "Không biết tên → Dear Sir/Madam", body: false}
+      - text: "I am writing to ask for some information about the evening English courses at your school, which I saw advertised on your website."
+        note: "Câu mở đầu: lý do viết"
+      - text: "I work full-time in an office, so I can only study after 6 p.m. I need to improve my English because my company often sends me to meetings abroad, and I find it difficult to understand my colleagues. I studied English at school, but I have forgotten a lot, so I think I need an intermediate class."
+        say: "I work full-time in an office, so I can only study after six p.m. I need to improve my English because my company often sends me to meetings abroad, and I find it difficult to understand my colleagues. I studied English at school, but I have forgotten a lot, so I think I need an intermediate class."
+        note: "Ý 1: vì sao muốn học"
+      - text: "Could you tell me which days the classes are held and how long each lesson lasts? I would also like to know how many students there are in each class, as I prefer small groups."
+        note: "Ý 2: hỏi giờ học (câu hỏi lịch sự)"
+      - text: "In addition, I would be grateful if you could send me details of the course fees. Is there a discount for students who pay for the whole year in advance?"
+        note: "Ý 3: hỏi học phí"
+      - {text: "I look forward to hearing from you.", note: "Câu kết trang trọng"}
+      - {text: "Yours faithfully,\nMai Tran", note: "Dear Sir/Madam → Yours faithfully", body: false}
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+      - {read: emma, focus: 4}
+      - {read: emma, focus: 5}
+      - {read: emma, focus: 6}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember · Your turn"
+    heading_vi: "Ghi nhớ và bài về nhà"
+    items:
+      - {en: "Dear Sir/Madam, → Yours faithfully,", vi: "Không biết tên người nhận"}
+      - {en: "Dear Mr / Mrs / Ms + family name, → Yours sincerely,", vi: "Biết tên người nhận"}
+      - {en: "Best wishes / Regards: people you know, but not close friends", vi: "Bán trang trọng"}
+      - {en: "Hi + first name → Love / Best / See you soon", vi: "Thân mật"}
+      - {en: "Homework: write the same letter to Ms Taylor, the course manager — change the opening and the ending", vi: "Bài về nhà: viết lại thư gửi Ms Taylor, đổi câu chào và câu kết"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Dear Sir or Madam goes with Yours faithfully.", focus: 0}
+      - {emma: "Dear Mr, Mrs or Ms plus the family name goes with Yours sincerely.", focus: 1}
+      - {emma: "Best wishes and Regards are for people you know, but not close friends.", focus: 2}
+      - {emma: "And informal letters start with Hi, and end with Love, Best, or See you soon.", focus: 3}
+      - emma: "For homework, write the same letter to Ms Taylor, the course manager. What changes?"
+        focus: 4
+        vi: "Bài về nhà: viết lại thư gửi Ms Taylor — đổi gì?"
+      - tom: "I start with Dear Ms Taylor, and I end with Yours sincerely!"
+      - emma: "Exactly. Goodbye, and see you in the next lesson!"
