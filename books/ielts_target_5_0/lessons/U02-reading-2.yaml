@@ -1,0 +1,219 @@
+# Video bài giảng Unit 2 · Reading 2: practise scanning (sách in trang 27–28). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-reading-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Đáp án bài B theo Answer key (sách in trang 266, "Unit 2, Reading 2B").
+# Bài A (nối đoạn với tranh) và Key vocabulary in context là đáp án gợi ý. Workbook trang 8 không có trong bộ sách.
+id: U02-reading-2
+activity: U02-reading
+title: "Unit 2 · Learning"
+subtitle: "Reading 2: practise scanning"
+title_vi: "Luyện dò tìm — trang web 'Swimming – safe and fun!', trả lời ngắn ≤ 3 từ, từ vựng trong ngữ cảnh"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Reading 2: practise scanning."
+        say: "Welcome to Reading two: practise scanning."
+        vi: "Reading 2: luyện dò tìm thông tin."
+      - tom: "Can you swim, Emma?"
+      - emma: "Yes, I can! And today's text is a web page about children learning to swim."
+        vi: "Bài đọc hôm nay: trang web về trẻ em học bơi."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Exam tip: luyện dò tìm thường xuyên, mỗi lần cố làm nhanh hơn"
+    items:
+      - {en: "Exercise A: read the web page and match each part with a picture", vi: "Nối từng phần với tranh"}
+      - {en: "Exercise B: scan and answer in no more than three words", vi: "Dò tìm, trả lời ≤ 3 từ"}
+      - {en: "Exercise C–D: check your answers, think about how you read", vi: "Kiểm tra đáp án, nghĩ lại cách đọc"}
+      - {en: "Key vocabulary in context", vi: "Từ vựng trong ngữ cảnh"}
+    lines:
+      - emma: "The exam tip: in various parts of the Reading Module, you need to scan a text for specific information. You should practise scanning, and try to do it more quickly as your English improves."
+        vi: "Mẹo thi: nhiều phần của bài Đọc cần dò tìm thông tin cụ thể — luyện thường xuyên, làm nhanh dần."
+      - {emma: "First, match the parts of the web page with the pictures.", focus: 0}
+      - {emma: "Then, six questions with short answers.", focus: 1}
+      - {emma: "Check your answers, and think about how you read.", focus: 2}
+      - {emma: "And some key vocabulary.", focus: 3}
+
+  - kind: letter
+    chapter: "Bài đọc"
+    heading: "Swimming – safe and fun! (1/2)"
+    heading_vi: "Trang web về học bơi — Emma đọc"
+    words: 218
+    items:
+      - {text: "Swimming – safe and fun!", say: "Swimming: safe and fun!", note: "Tiêu đề", body: false}
+      - text: "There is no special age at which children should learn to swim, but it is an advantage to learn early. Learning to swim can frighten small children, and getting a professional to do the teaching is usually the best option. However, parents can do a lot to make sure that learning to swim is safe and fun."
+        note: "Mở đầu"
+      - text: "A  Prepare well\n> Ask family and friends if they know a good teacher.\n> Find out if your local swimming pool has lessons.\n> Make sure that the teacher is qualified and ask to see a teaching certificate."
+        say: "Part eigh. Prepare well. Ask family and friends if they know a good teacher. Find out if your local swimming pool has lessons. Make sure that the teacher is qualified, and ask to see a teaching certificate."
+        note: "A: chuẩn bị — tìm giáo viên"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+
+  - kind: letter
+    heading: "Swimming – safe and fun! (2/2)"
+    heading_vi: "Trang web về học bơi — Emma đọc"
+    words: 218
+    items:
+      - text: "B  Have the right clothes and equipment\n> Buy comfortable swimwear.\n> Buy goggles to keep water out of your child's eyes.\n> Buy a swim cap to keep long hair out of the way.\n> Buy plastic sandals so that your child does not walk in dirty water with bare feet."
+        say: "Part B. Have the right clothes and equipment. Buy comfortable swimwear. Buy goggles to keep water out of your child's eyes. Buy a swim cap to keep long hair out of the way. Buy plastic sandals, so that your child does not walk in dirty water with bare feet."
+        note: "B: quần áo, dụng cụ"
+      - text: "C  Safety comes first\n> Check how deep the water is before your child enters the pool.\n> Remember that armbands will not always keep your child above the water.\n> Stay with your child if he or she is in deep water."
+        say: "Part C. Safety comes first. Check how deep the water is before your child enters the pool. Remember that armbands will not always keep your child above the water. Stay with your child if he or she is in deep water."
+        note: "C: an toàn"
+      - text: "Swimming is easier for some children than others, and your child needs support. Tell your child that he or she is doing well. Do not push your child to do anything before he or she is ready."
+        note: "Kết: động viên con"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+
+  - kind: match
+    chapter: "Bài A: nối với tranh"
+    heading: "Reading 2A · Match each part of the page with a picture"
+    heading_vi: "Phần A, B hay C? (đáp án gợi ý)"
+    image: {pdf: course-book, page: 28, clip: [58, 622, 532, 742]}
+    items:
+      - {n: 1, q: "Picture 1: a child with armbands", answer: C}
+      - {n: 2, q: "Picture 2: a teacher at the pool", answer: A}
+      - {n: 3, q: "Picture 3: a boy with a swim cap and goggles", answer: B}
+    lines:
+      - emma: "Exercise A. Match each part of the page, A, B or C, with a picture."
+        say: "Exercise eigh. Match each part of the page, eigh, B, or C, with a picture."
+        vi: "Bài A: nối phần A, B, C với tranh."
+      - {wait: 6, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Picture one.", focus: 0}
+      - {tom: "C, safety comes first. The child is wearing armbands.", reveal: 1}
+      - {emma: "Picture two.", focus: 1}
+      - {tom: "A, prepare well. It's a teacher, a professional.", say: "Eigh, prepare well. It's a teacher, a professional.", reveal: 2}
+      - {emma: "Picture three.", focus: 2}
+      - {tom: "B, the right clothes and equipment. He has a swim cap and goggles.", reveal: 3}
+
+  - kind: passage
+    chapter: "Bài B: trả lời ngắn"
+    heading: "Reading 2B · Answer using no more than three words"
+    heading_vi: "Dò từ khóa của câu hỏi — chỗ tô vàng là đáp án"
+    items:
+      - {text: "There is no special age at which children should learn to swim, but it is an advantage to learn early. Learning to swim can frighten small children, and getting a professional to do the teaching is usually the best option."}
+      - {label: "A", text: "Ask family and friends if they know a good teacher. Find out if your local swimming pool has lessons. Make sure that the teacher is qualified and ask to see a teaching certificate."}
+      - {label: "B", text: "Buy comfortable swimwear. Buy goggles to keep water out of your child's eyes. Buy a swim cap to keep long hair out of the way. Buy plastic sandals so that your child does not walk in dirty water with bare feet."}
+      - {label: "C", text: "Check how deep the water is before your child enters the pool. Remember that armbands will not always keep your child above the water. Stay with your child if he or she is in deep water."}
+      - {text: "Swimming is easier for some children than others, and your child needs support. Tell your child that he or she is doing well. Do not push your child to do anything before he or she is ready."}
+    lines:
+      - emma: "Exercise B. Answer these questions about learning to swim, using no more than three words."
+        vi: "Bài B: trả lời không quá ba từ."
+      - {wait: 10, note: "Pause the video and answer", vi: "Tạm dừng video và trả lời."}
+      - emma: "One: who is the best person to teach your child to swim? Look for teach, or teaching."
+        vi: "Câu 1: ai dạy bơi tốt nhất? Dò 'teach / teaching'."
+      - {tom: "Getting a professional to do the teaching is usually the best option. So: a professional.", focus: 0, mark: ["a professional"]}
+      - emma: "Two: who can help you to find a good teacher?"
+        vi: "Câu 2: ai giúp bạn tìm giáo viên giỏi?"
+      - {tom: "Ask family and friends if they know a good teacher. Family and friends.", focus: 1, mark: ["family and friends"]}
+      - emma: "Three: what should you ask the teacher to show you?"
+        vi: "Câu 3: nên đề nghị giáo viên cho xem gì?"
+      - {tom: "Ask to see a teaching certificate. A teaching certificate.", focus: 1, mark: ["a teaching certificate"]}
+      - emma: "Four: what can keep water out of your child's eyes?"
+        vi: "Câu 4: thứ gì giữ nước không vào mắt trẻ?"
+      - {tom: "Goggles.", focus: 2, mark: ["goggles"]}
+      - emma: "Five: what should your child wear on his or her feet?"
+        vi: "Câu 5: trẻ nên đi gì ở chân?"
+      - {tom: "Plastic sandals.", focus: 2, mark: ["plastic sandals"]}
+      - emma: "Six: what do all children need from their parents?"
+        vi: "Câu 6: mọi trẻ cần gì từ bố mẹ?"
+      - {tom: "Support. Your child needs support.", focus: 4, mark: ["support"]}
+
+  - kind: blanks
+    chapter: "Bài C–D: kiểm tra và nhìn lại"
+    heading: "Reading 2B–C · Check the key (Answer key, page 266)"
+    heading_vi: "Bạn đúng mấy câu?"
+    items:
+      - {n: 1, q: "Who is the best person to teach your child to swim?  ___", answer: "a professional", tip: "a professional = someone who does it as a job, for money"}
+      - {n: 2, q: "Who can help you to find a good teacher?  ___", answer: "family and friends", tip: "three words — the limit"}
+      - {n: 3, q: "What should you ask the teacher to show you?  ___", answer: "a teaching certificate", tip: "certificate = an official paper that shows you are qualified"}
+      - {n: 4, q: "What can keep water out of your child's eyes?  ___", answer: "goggles", tip: "goggles — Unit 2 Speaking: students in the Chemistry lab wear them too"}
+      - {n: 5, q: "What should your child wear on his or her feet?  ___", answer: "plastic sandals", tip: "wear sandals → not bare feet"}
+      - {n: 6, q: "What do all children need from their parents?  ___", answer: "support", tip: "Exam tip: you can take a word from the text even if you don't know it"}
+    lines:
+      - emma: "Exercise C. Check your answers with the key on page 266. How many did you answer correctly?"
+        say: "Exercise C. Check your answers with the key on page two hundred and sixty-six. How many did you answer correctly?"
+        reveal: [1, 2, 3, 4, 5, 6]
+        vi: "Bài C: so với Answer key — bạn đúng mấy câu?"
+      - {emma: "The exam tip: sometimes you can answer a short answer question by taking a word from the text, even if you don't know it. Be careful, though. It isn't usually so easy!", focus: 5}
+      - tom: "I didn't know goggles, but I found it, because it keeps water out of your eyes."
+        focus: 3
+      - emma: "Exercise D. Think about how you did the task. Did you read the title and look at the pictures first? Did you know which part to look at for each answer? Next time, try to be a little faster."
+        vi: "Bài D: nghĩ lại cách làm — đọc tiêu đề, xem tranh trước chưa? Biết dò đoạn nào chưa? Lần sau nhanh hơn."
+
+  - kind: blanks
+    chapter: "Từ vựng trong ngữ cảnh"
+    heading: "Key vocabulary in context · safety, support, professional, advantage"
+    heading_vi: "Điền danh từ từ bài đọc vào câu (đáp án gợi ý)"
+    items:
+      - {n: 1, q: "If you play basketball, being tall is a big ___.", answer: "advantage", tip: "advantage = something that helps you ↔ disadvantage"}
+      - {n: 2, q: "When children do something difficult, they need ___ from people around them.", answer: "support", tip: "support = help and encouragement"}
+      - {n: 3, q: "A ___ is a person who does something for money.", answer: "professional", tip: "a professional ↔ an amateur"}
+      - {n: 4, q: "Most parents worry about the ___ of their children.", answer: "safety", tip: "safe (adjective) → safety (noun)"}
+    lines:
+      - emma: "Key vocabulary in context. Use these nouns from the text: safety, support, professional, advantage."
+        vi: "Từ vựng trong ngữ cảnh: điền safety, support, professional, advantage."
+      - {wait: 8, note: "Pause the video and complete", vi: "Tạm dừng video và điền."}
+      - {emma: "One.", focus: 0}
+      - {tom: "If you play basketball, being tall is a big advantage.", reveal: 1}
+      - {emma: "Two.", focus: 1}
+      - {tom: "When children do something difficult, they need support from people around them.", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "A professional is a person who does something for money.", reveal: 3}
+      - {emma: "Four.", focus: 3}
+      - {tom: "Most parents worry about the safety of their children.", reveal: 4}
+
+  - kind: pairs
+    heading: "Key vocabulary · Match the adjectives 1–4 with the nouns a–d"
+    heading_vi: "Che bài đọc, nối tính từ với danh từ, rồi kiểm tra lại trong bài"
+    items:
+      - {n: 1, q: "comfortable", answer: b}
+      - {n: 2, q: "deep / dirty", answer: d}
+      - {n: 3, q: "long", answer: a}
+      - {n: 4, q: "bare", answer: c}
+    options:
+      - {k: a, text: "hair"}
+      - {k: b, text: "swimwear"}
+      - {k: c, text: "feet"}
+      - {k: d, text: "water"}
+    lines:
+      - emma: "Now cover the text, and match the adjectives one to four with the nouns a to d."
+        say: "Now cover the text, and match the adjectives, one to four, with the nouns, eigh to D."
+        vi: "Che bài đọc, nối tính từ với danh từ."
+      - {wait: 6, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {tom: "Comfortable swimwear.", focus: 0, reveal: 1}
+      - {tom: "Deep water, and dirty water.", focus: 1, reveal: 2}
+      - {tom: "Long hair.", focus: 2, reveal: 3}
+      - {tom: "Bare feet. That means no shoes.", focus: 3, reveal: 4}
+      - emma: "Good. These word partners are called collocations. Learn them together."
+        vi: "Các cặp từ hay đi với nhau (collocations) — học cả cụm."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "A: picture 1 C · picture 2 A · picture 3 B", vi: "Nối tranh (gợi ý)"}
+      - {en: "B: a professional · family and friends · a teaching certificate · goggles · plastic sandals · support", vi: "Theo Answer key"}
+      - {en: "advantage · support · professional · safety", vi: "Danh từ trong ngữ cảnh"}
+      - {en: "comfortable swimwear · deep / dirty water · long hair · bare feet", vi: "Cặp từ đi với nhau"}
+      - {en: "Workbook page 8: not in this book set", vi: "Workbook trang 8 chưa có trong bộ sách"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The pictures: C, A, B.", say: "The pictures: C, eigh, B.", focus: 0}
+      - {emma: "The six short answers.", focus: 1}
+      - {emma: "Four nouns.", focus: 2}
+      - {emma: "And four word partners.", focus: 3}
+      - {emma: "The book says: for more reading practice, go to Workbook page 8. We don't have the Workbook yet.", focus: 4}
+      - {tom: "Scanning is fun. Thanks, Emma!"}

@@ -49,7 +49,7 @@ def _build(args) -> int:
             print("\n".join(f"{p}: {m}" for m in problems))
             return 3
         print(f"{lesson.id}: đọc lời thoại ({engine.name})")
-        tl = timeline.build(lesson, engine, cache_dir=cache)
+        tl = timeline.build(lesson, engine, cache_dir=cache, book_dir=bdir)
         voices = {k: engine.describe(s.voice_for(engine.name)) for k, s in lesson.speakers.items()}
         slides = Slides(lesson, bdir, voices)
         out = (Path(args.out).resolve() if args.out else path.parent) / f"{lesson.id}.mp4"

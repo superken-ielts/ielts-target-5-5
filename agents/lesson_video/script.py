@@ -15,7 +15,7 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter", "blanks", "mcq"]
+               "order", "timing", "letter", "blanks", "mcq", "passage"]
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -33,9 +33,10 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "letter": ("text",),                # thư mẫu: mỗi mục một đoạn; `note` ghi chú lề, `body: false` không đếm từ
     "blanks": ("n", "answer"),          # ô trống số n, mở ra thì hiện `answer` (+ `tip`); có `q` chứa ___ thì là câu điền từ, `hint` = từ gốc
     "mcq": ("n", "q", "options", "answer"),  # trắc nghiệm: `options` là danh sách, `answer` là a, b, c… hoặc một nhãn trong `keys`
+    "passage": ("text",),               # bài đọc trên màn hình (có phụ đề): mỗi mục một đoạn, `label` đầu đoạn; dòng thoại `mark` tô từ khóa
 }
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
-LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read"}
+LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read", "mark", "track", "start", "end"}
 
 
 class _M(BaseModel):
@@ -88,8 +89,12 @@ class Line(_M):
     wait: float = Field(0, ge=0, le=60)
     pause: float = Field(0, ge=0, le=10)
     note: str = ""
+    mark: list[str] = []  # cảnh passage: cụm từ tô vàng trong đoạn `focus` (giữ tới khi đổi đoạn)
+    track: str = ""       # phát file nghe của sách (mã file audio trong book.json), từ giây `start` tới `end`
+    start: float = Field(0, ge=0)
+    end: Optional[float] = None
 
-    @field_validator("reveal", mode="before")
+    @field_validator("reveal", "mark", mode="before")
     @classmethod
     def _list(cls, v):
         if v is None:
@@ -98,8 +103,12 @@ class Line(_M):
 
     @model_validator(mode="after")
     def _kind(self):
-        if bool(self.speaker) == bool(self.wait):
-            raise ValueError("mỗi dòng là một câu thoại (khóa = mã người nói) hoặc một khoảng lặng `wait`")
+        if sum(map(bool, (self.speaker, self.wait, self.track))) != 1:
+            raise ValueError("mỗi dòng là một câu thoại (khóa = mã người nói), một khoảng lặng `wait` hoặc một đoạn nghe `track`")
+        if (self.start or self.end is not None) and not self.track:
+            raise ValueError("`start` / `end` chỉ dùng với `track`")
+        if self.end is not None and self.end <= self.start:
+            raise ValueError(f"đoạn nghe {self.track}: `end` phải lớn hơn `start`")
         if self.speaker and not self.text.strip():
             raise ValueError(f"câu thoại của {self.speaker} trống")
         return self
@@ -126,6 +135,7 @@ class Scene(_M):
     image: Optional[ImageRef] = None
     hide_text: bool = False   # bài nghe: thanh phụ đề chỉ hiện người nói, ẩn lời (không lộ đáp án)
     roles: dict[str, str] = {}  # vai trong cảnh này, ví dụ {emma: receptionist} khi đóng bài nghe
+    words: Optional[int] = None  # letter chia hai trang: số từ của cả lá thư (mặc định đếm các đoạn trong cảnh)
     lines: list[Line]
 
     @model_validator(mode="after")
@@ -150,6 +160,8 @@ class Scene(_M):
                     raise ValueError(f"cảnh mcq: câu {it['n']} có {len(it['options'])} phương án nhưng {len(letters)} nhãn `keys`")
                 if str(it["answer"]) not in letters:
                     raise ValueError(f"cảnh mcq: đáp án '{it['answer']}' của câu {it['n']} không thuộc {letters}")
+        if self.kind != "passage" and any(ln.mark for ln in self.lines):
+            raise ValueError("`mark` (tô từ khóa) chỉ dùng trong cảnh passage")
         if self.kind == "letter" and any(ln.wait for ln in self.lines):
             raise ValueError("cảnh letter không có khoảng lặng `wait` (không có chỗ hiện đếm ngược)")
         if not self.lines:
@@ -278,6 +290,16 @@ def check(lesson: Lesson, bdir: Path) -> list[str]:
     if not find_item(book, lesson.activity):
         problems.append(f"hoạt động {lesson.activity} không có trong book.json")
     for i, sc in enumerate(lesson.scenes):
+        for ln in sc.lines:
+            if not ln.track:
+                continue
+            f = book.get("files", {}).get(ln.track)
+            if not f or f.get("kind") != "audio":
+                problems.append(f"cảnh {i}: không có file nghe '{ln.track}' trong book.json")
+            elif not (bdir / f["path"]).exists():
+                problems.append(f"cảnh {i}: thiếu file {f['path']}")
+            elif ln.end is not None and f.get("durationSec") and ln.end > f["durationSec"] + 0.5:
+                problems.append(f"cảnh {i}: {ln.track} chỉ dài {f['durationSec']:.1f} giây (end = {ln.end})")
         if not sc.image:
             continue
         f = book.get("files", {}).get(sc.image.pdf)

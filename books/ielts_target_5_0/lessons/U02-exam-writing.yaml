@@ -1,0 +1,244 @@
+# Video bài giảng Unit 2 · Exam Practice — Writing (sách in trang 33). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-exam-writing.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Thư mẫu bài B theo Answer key (sách in trang 266, "Unit 2, Exam Practice,
+# Writing B", giữ nguyên chữ). Đúng / sai bài A là đáp án gợi ý — Answer key không có.
+id: U02-exam-writing
+activity: U02-exam-practice
+title: "Unit 2 · Learning"
+subtitle: "Exam practice: Writing"
+title_vi: "Luyện đề Writing — đúng / sai về bài thi Viết phần 1, thư phàn nàn gửi trường dạy lái xe (thư mẫu theo Answer key)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to the Unit 2 Exam Practice: the Writing Module."
+        say: "Welcome to the Unit two Exam Practice: the Writing Module."
+        vi: "Luyện đề Unit 2 — phần Writing."
+      - tom: "A real letter of complaint, in twenty minutes!"
+      - emma: "Yes. But first, let's check what you know about the first part of the Writing Module."
+        vi: "Trước tiên, kiểm tra hiểu biết về phần 1 bài thi Viết."
+
+  - kind: bullets
+    chapter: "Hôm nay làm gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay làm gì"
+    items:
+      - {en: "Exercise A: true or false? Facts about the letter task", vi: "Đúng hay sai? Hiểu bài thi Viết phần 1"}
+      - {en: "Exercise B: read the task — the driving school", vi: "Đọc đề: thư gửi trường dạy lái xe"}
+      - {en: "Plan your 20 minutes, and plan your paragraphs", vi: "Chia 20 phút, lập dàn ý"}
+      - {en: "The model letter from the answer key", vi: "Thư mẫu theo Answer key"}
+      - {en: "Linking words, and a checklist", vi: "Từ nối và bảng soát lỗi"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "True or false: facts about the letter task.", focus: 0}
+      - {emma: "Then, the writing task.", focus: 1}
+      - {emma: "How to plan your time, and your paragraphs.", focus: 2}
+      - {emma: "Tom reads the model letter.", focus: 3}
+      - {emma: "And finally, linking words and a checklist.", focus: 4}
+
+  - kind: blanks
+    chapter: "Bài A: đúng hay sai?"
+    heading: "Writing A · True (T) or false (F)? Sentences 1–4"
+    heading_vi: "Về phần 1 bài thi Viết (đáp án gợi ý)"
+    items:
+      - {n: 1, q: "The examiner will look at how your letter is organized.  ___", answer: "T", tip: "Organization is part of the score: paragraphs, order of ideas"}
+      - {n: 2, q: "You can use the same words and phrases in a formal and informal letter.  ___", answer: "F", tip: "Formal: I am writing to… / Yours faithfully · Informal: Hi… / Love,"}
+      - {n: 3, q: "You need to write at least eight paragraphs.  ___", answer: "F", tip: "Four or five paragraphs are enough for 150 words"}
+      - {n: 4, q: "You should start by saying why you are writing.  ___", answer: "T", tip: "The first paragraph states the purpose"}
+    lines:
+      - emma: "Exercise A. Decide if these sentences about the first part of the IELTS Writing Module are true or false."
+        say: "Exercise eigh. Decide if these sentences about the first part of the eye-elts Writing Module are true, or false."
+        vi: "Bài A: đúng hay sai?"
+      - {wait: 10, note: "Pause the video: write T or F", vi: "Tạm dừng video, viết T hoặc F."}
+      - {emma: "One: the examiner will look at how your letter is organized.", focus: 0}
+      - {tom: "True. The paragraphs and the order of ideas are important.", reveal: 1}
+      - {emma: "Two: you can use the same words and phrases in a formal and an informal letter.", focus: 1}
+      - {tom: "False. A formal letter needs formal phrases, like: I am writing to, and Yours faithfully.", reveal: 2}
+      - {emma: "Three: you need to write at least eight paragraphs.", focus: 2}
+      - {tom: "False! Four or five paragraphs are enough.", reveal: 3}
+      - {emma: "Four: you should start by saying why you are writing.", focus: 3}
+      - {tom: "True. State the purpose first.", reveal: 4}
+
+  - kind: blanks
+    heading: "Writing A · True (T) or false (F)? Sentences 5–8"
+    heading_vi: "Answer key không có bài này — đây là đáp án gợi ý"
+    items:
+      - {n: 5, q: "The examiner is not interested in the vocabulary that you use.  ___", answer: "F", tip: "Vocabulary is part of the score: use a range of words"}
+      - {n: 6, q: "You should try to link ideas together into longer sentences if possible.  ___", answer: "T", tip: "Use linking words: so, but, because, firstly, finally…"}
+      - {n: 7, q: "You can use as many words as you like in your letter.  ___", answer: "F", tip: "At least 150 words — and only 20 minutes, so about 150–190 words"}
+      - {n: 8, q: "It does not matter how you end your letter.  ___", answer: "F", tip: "Dear Sir/Madam → Yours faithfully · Dear Mr Lucas → Yours sincerely"}
+    lines:
+      - {emma: "Five: the examiner is not interested in the vocabulary that you use.", focus: 0}
+      - {tom: "False. Vocabulary is very important.", reveal: 5}
+      - {emma: "Six: you should try to link ideas together into longer sentences if possible.", focus: 1}
+      - {tom: "True. Use linking words, like so, but and because.", reveal: 6}
+      - {emma: "Seven: you can use as many words as you like.", focus: 2}
+      - {tom: "False. You need at least 150 words, and you only have twenty minutes.", say: "False. You need at least a hundred and fifty words, and you only have twenty minutes.", reveal: 7}
+      - {emma: "Eight: it does not matter how you end your letter.", focus: 3}
+      - {tom: "False. The ending must match the beginning. Dear Sir or Madam, then Yours faithfully.", reveal: 8}
+
+  - kind: bullets
+    chapter: "Bài B: đọc đề"
+    heading: "Writing B · The task"
+    heading_vi: "Bạn vừa học 6 buổi lái xe, mỗi buổi 1 tiếng, ở Learn Fast Driving School — và không hài lòng"
+    items:
+      - {en: "You had three different instructors.", vi: "Ba thầy dạy khác nhau"}
+      - {en: "The instructors were late and the lessons were under one hour.", vi: "Đến muộn, buổi học không đủ một tiếng"}
+      - {en: "The instructors explained too much and didn't let you practise enough.", vi: "Giải thích quá nhiều, ít cho thực hành"}
+      - {en: "The cars were older than you expected and not clean inside.", vi: "Xe cũ, bên trong không sạch"}
+      - {en: "Write a letter to Learn Fast Driving School. Use at least 150 words.", vi: "Viết thư, ít nhất 150 từ: nêu mục đích, giải thích, nói điều bạn muốn"}
+    lines:
+      - emma: "Exercise B. Here is the task. You recently took six one-hour driving lessons at the Learn Fast Driving School. You are not happy, for these reasons."
+        vi: "Bài B: đọc đề."
+      - {emma: "You had three different instructors.", focus: 0}
+      - {emma: "The instructors were late, and the lessons were under one hour.", focus: 1}
+      - {emma: "The instructors explained too much, and didn't let you practise enough.", focus: 2}
+      - {emma: "The cars were older than you expected, and not clean inside.", focus: 3}
+      - {emma: "Write a letter to Learn Fast Driving School. Use at least 150 words.", say: "Write a letter to Learn Fast Driving School. Use at least a hundred and fifty words.", focus: 4}
+      - tom: "It's like the letter to the language school!"
+      - emma: "Exactly. Remember to state the purpose, explain the situation, and say what you want the driving school to do."
+        vi: "Nhớ: nêu mục đích, giải thích tình huống, nói điều bạn muốn."
+
+  - kind: timing
+    chapter: "Chia 20 phút"
+    heading: "Exam tip · You have 20 minutes"
+    heading_vi: "Dành thời gian nghĩ và sắp xếp ý; để khoảng 3 phút soát lỗi"
+    items:
+      - {label: "Think: what to include", minutes: 3, vi: "Nghĩ nội dung"}
+      - {label: "Organize your ideas", minutes: 3, vi: "Sắp xếp ý, chia đoạn"}
+      - {label: "Write", minutes: 11, vi: "Viết thư"}
+      - {label: "Check for errors", minutes: 3, vi: "Soát lỗi"}
+    lines:
+      - emma: "The exam tip. You have twenty minutes, but you should spend some time thinking about what to include, and then organizing your ideas."
+        vi: "Có 20 phút, nhưng cần thời gian nghĩ và sắp xếp ý."
+      - {emma: "About three minutes to think.", focus: 0, reveal: 0}
+      - {emma: "Three minutes to organize your ideas into paragraphs.", focus: 1, reveal: 1}
+      - {emma: "Eleven minutes to write.", focus: 2, reveal: 2}
+      - {emma: "And leave about three minutes for checking for errors when you have finished.", focus: 3, reveal: 3}
+
+  - kind: bullets
+    chapter: "Dàn ý"
+    heading: "Plan your paragraphs"
+    heading_vi: "Mục đích → bốn vấn đề → điều bạn muốn"
+    items:
+      - {en: "1  Purpose: I am writing to complain about the driving lessons…", vi: "Mục đích"}
+      - {en: "2  Firstly: three instructors · Secondly: late, short lessons", vi: "Vấn đề 1 và 2"}
+      - {en: "3  In my opinion: they explained too much, not enough practice", vi: "Vấn đề 3"}
+      - {en: "4  Finally: old cars, not clean inside", vi: "Vấn đề 4"}
+      - {en: "5  What you want: a refund of 50% · I look forward to hearing from you.", vi: "Điều bạn muốn + câu kết"}
+    lines:
+      - emma: "Now, let's organize the ideas into paragraphs."
+        vi: "Chia ý thành đoạn."
+      - {emma: "Paragraph one: the purpose.", focus: 0}
+      - {emma: "Paragraph two: the first two problems, with firstly and secondly.", focus: 1}
+      - {emma: "Paragraph three: your opinion of the instructors.", focus: 2}
+      - {emma: "Paragraph four: finally, the cars.", focus: 3}
+      - {emma: "And paragraph five: what you want, and a polite closing.", focus: 4}
+      - tom: "What should I ask for?"
+      - emma: "You choose! In the model letter, the writer asks for half the money back."
+        vi: "Tự chọn — thư mẫu xin hoàn lại một nửa tiền."
+
+  - kind: letter
+    chapter: "Thư mẫu"
+    heading: "The model letter (1/2)"
+    heading_vi: "Theo Answer key — Tom đọc"
+    words: 167
+    items:
+      - {text: "Dear Sir/Madam,", say: "Dear Sir or Madam,", note: "Không biết tên người nhận", body: false}
+      - text: "I am writing to complain about the driving lessons that I recently took with your driving school. There are a number of reasons why I am not happy."
+        note: "Mục đích"
+      - text: "Firstly, I had three different instructors, so it was difficult to build any kind of relationship with the person teaching me. Secondly, the lessons were supposed to be for one hour, but the instructors frequently ended lessons five minutes early."
+        note: "Firstly … Secondly …"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+
+  - kind: letter
+    heading: "The model letter (2/2)"
+    heading_vi: "Theo Answer key — Tom đọc"
+    words: 167
+    items:
+      - text: "In my opinion, the instructors were not very good either. They spent most of the time explaining what I should do, and did not give me the time I needed to practice."
+        note: "In my opinion …"
+      - text: "Finally, I was unhappy that your cars were not very modern and sometimes not clean inside. They were not what I expected from a professional driving school."
+        note: "Finally …"
+      - text: "I hope you understand why I am unhappy with the service your school provided. In total I paid 500 euros for the lessons and I would like you to refund 50% of that. I look forward to hearing from you."
+        say: "I hope you understand why I am unhappy with the service your school provided. In total I paid five hundred euros for the lessons, and I would like you to refund fifty percent of that. I look forward to hearing from you."
+        note: "Điều bạn muốn + câu kết"
+      - {text: "Yours faithfully,\nTerry Black", say: "Yours faithfully. Terry Black.", note: "Ký tên đầy đủ", body: false}
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: vocab
+    chapter: "Từ nối"
+    heading: "Linking words and useful phrases"
+    heading_vi: "Lấy từ thư mẫu — dùng lại trong bài của bạn"
+    items:
+      - {w: "There are a number of reasons why …", pos: "after the purpose", vi: "Có một số lý do khiến …", ex: "There are a number of reasons why I am not happy."}
+      - {w: "Firstly, … Secondly, … Finally, …", pos: "list your points", vi: "Thứ nhất … Thứ hai … Cuối cùng …", ex: "Firstly, I had three different instructors."}
+      - {w: "…, so …", pos: "result", vi: "…, vì vậy …", ex: "I had three instructors, so it was difficult to build a relationship."}
+      - {w: "was supposed to …, but …", pos: "expectation vs reality", vi: "lẽ ra phải …, nhưng …", ex: "The lessons were supposed to be for one hour, but they ended early."}
+      - {w: "In my opinion, …", pos: "your view", vi: "Theo tôi, …", ex: "In my opinion, the instructors were not very good."}
+      - {w: "not what I expected", pos: "disappointment", vi: "không như tôi mong đợi", ex: "The cars were not what I expected from a professional school."}
+    lines:
+      - emma: "Look at the linking words in the model letter."
+        vi: "Từ nối trong thư mẫu."
+      - {emma: "After the purpose: there are a number of reasons why.", focus: 0}
+      - {tom: "There are a number of reasons why I am not happy.", focus: 0}
+      - {emma: "To list your points: firstly, secondly, finally.", focus: 1}
+      - {tom: "Firstly, I had three different instructors.", focus: 1}
+      - {emma: "To show a result: so.", focus: 2}
+      - {tom: "I had three instructors, so it was difficult to build a relationship.", focus: 2}
+      - {emma: "Supposed to, but. What should happen, and what really happened.", focus: 3}
+      - {tom: "The lessons were supposed to be for one hour, but they ended early.", focus: 3}
+      - {emma: "In my opinion.", focus: 4}
+      - {tom: "In my opinion, the instructors were not very good.", focus: 4}
+      - {emma: "Not what I expected.", focus: 5}
+      - {tom: "The cars were not what I expected from a professional school.", focus: 5}
+
+  - kind: bullets
+    chapter: "Soát lỗi 3 phút"
+    heading: "Your 3-minute checklist"
+    heading_vi: "Trước khi nộp bài"
+    items:
+      - {en: "At least 150 words?", vi: "Đủ 150 từ chưa?"}
+      - {en: "Purpose in the first paragraph? What you want at the end?", vi: "Có mục đích ở đầu, yêu cầu ở cuối?"}
+      - {en: "Dear Sir/Madam → Yours faithfully", vi: "Mở – kết khớp nhau"}
+      - {en: "Past simple: had, took, paid, spent, gave", vi: "Quá khứ đơn, động từ bất quy tắc"}
+      - {en: "Formal: no short forms (I am, did not)", vi: "Thư trang trọng: không viết tắt"}
+    lines:
+      - emma: "Now it's your turn. Write your own letter in twenty minutes. Then use this checklist."
+        vi: "Đến lượt bạn: viết thư trong 20 phút, rồi soát theo bảng này."
+      - {emma: "At least 150 words?", say: "At least a hundred and fifty words?", focus: 0}
+      - {emma: "The purpose at the start, and what you want at the end?", focus: 1}
+      - {emma: "Dear Sir or Madam, and Yours faithfully?", focus: 2}
+      - {emma: "Past simple verbs, spelled correctly?", focus: 3}
+      - {emma: "And no short forms in a formal letter.", focus: 4}
+      - {wait: 8, note: "Pause the video and write your letter", vi: "Tạm dừng video và viết thư của bạn (20 phút)."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "A: 1 T · 2 F · 3 F · 4 T · 5 F · 6 T · 7 F · 8 F", vi: "Đáp án gợi ý"}
+      - {en: "Plan: purpose → problems (firstly, secondly, finally) → what you want", vi: "Dàn ý"}
+      - {en: "20 minutes: think 3 · organize 3 · write 11 · check 3", vi: "Chia thời gian"}
+      - {en: "Write your own letter, then check it with the model", vi: "Tự viết thư rồi so với thư mẫu"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Exercise A: true, false, false, true, false, true, false, false.", focus: 0}
+      - {emma: "Plan your paragraphs.", focus: 1}
+      - {emma: "And plan your time.", focus: 2}
+      - {tom: "I'll write my letter now, and then compare it with the model. Thanks, Emma!", focus: 3}

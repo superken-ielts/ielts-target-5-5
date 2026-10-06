@@ -171,4 +171,9 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
     [["U01-speaking-vocab", ["U01-speaking-1", "U01-speaking-2", "U01-vocabulary"]], ["U01-writing", ["U01-writing-1", "U01-writing-2", "U01-writing-3"]],
      ["U01-consolidation", ["U01-consolidation"]], ["U01-exam-practice", ["U01-exam-listening", "U01-exam-reading"]]]);
   assert.deepEqual(C.lessonsOf({ lessons }, { activity: "U01-writing" }).map(l => l.id), ["U01-writing-1", "U01-writing-2", "U01-writing-3"]);
+  // Unit 2: đủ sáu phần có trang sách, theo thứ tự trong sách
+  assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U02" }), Object.keys(acts)).map(g => [g.activity, g.lessons.map(l => l.id)]),
+    [["U02-speaking-vocab", ["U02-speaking-1", "U02-speaking-2"]], ["U02-listening", ["U02-listening-1", "U02-listening-2", "U02-listening-3"]],
+     ["U02-reading", ["U02-reading-1", "U02-reading-2"]], ["U02-writing", ["U02-writing-1", "U02-writing-2"]],
+     ["U02-consolidation", ["U02-consolidation"]], ["U02-exam-practice", ["U02-exam-reading", "U02-exam-writing"]]]);
 });

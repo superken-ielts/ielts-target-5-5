@@ -1,0 +1,225 @@
+# Video bài giảng Unit 2 · Writing 3 + Writing 4 (sách in trang 30). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-writing-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Đáp án theo Answer key (sách in trang 266): Writing 3A (thứ tự dòng 4, 1, 2, 3
+# và thư hoàn chỉnh) và Writing 4B (đoạn kết sau khi xóa 5 từ). Lời chào và ký tên của thư là phần thêm cho đủ một lá thư.
+id: U02-writing-2
+activity: U02-writing
+title: "Unit 2 · Learning"
+subtitle: "Writing 3 & 4: the main part of a letter, closing a letter"
+title_vi: "Sắp xếp phần thân thư phàn nàn, đọc thư hoàn chỉnh, viết đoạn kết — theo Answer key"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back! In the last video, we wrote the opening line of a complaint letter to a language school."
+        vi: "Video trước: câu mở đầu thư phàn nàn gửi trường ngôn ngữ."
+      - tom: "And today we write the rest of the letter?"
+      - emma: "Yes. Writing 3: the main part. Writing 4: the closing. And then we read the complete letter."
+        say: "Yes. Writing three: the main part. Writing four: the closing. And then we read the complete letter."
+        vi: "Writing 3: phần thân. Writing 4: phần kết. Rồi đọc cả lá thư."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Writing 3A: put the topic sentences in the right place", vi: "Đặt câu chủ đề vào đầu mỗi đoạn"}
+      - {en: "How each paragraph works: the promise, then the reality", vi: "Mỗi đoạn: lời hứa → thực tế"}
+      - {en: "Writing 4A–B: what does the student want? Delete five words", vi: "Học viên muốn gì? Xóa 5 từ thừa"}
+      - {en: "The complete letter, read aloud", vi: "Đọc trọn lá thư"}
+      - {en: "Useful phrases for complaint letters", vi: "Cụm từ hay dùng trong thư phàn nàn"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, the topic sentences of the main part.", focus: 0}
+      - {emma: "How each paragraph is organized.", focus: 1}
+      - {emma: "Then, the closing, and five unnecessary words.", focus: 2}
+      - {emma: "Then I'll read the complete letter.", focus: 3}
+      - {emma: "And some useful phrases for your own letters.", focus: 4}
+
+  - kind: order
+    chapter: "Writing 3A: câu chủ đề"
+    heading: "Writing 3A · Put lines 1–4 at the beginning of each section"
+    heading_vi: "Mỗi đoạn thân thư cần một câu mở đầu (câu chủ đề) — đáp án theo Answer key"
+    items:
+      - {k: "1", text: "During my stay, there were three different teachers.", pos: 2, short: "three different teachers"}
+      - {k: "2", text: "Your advertisement promises that the Course Book and Workbook are provided,", pos: 3, short: "Course Book and Workbook"}
+      - {k: "3", text: "You claim that your school is modern and in a central location.", pos: 4, short: "modern, central school"}
+      - {k: "4", text: "Your advertisement says that the business English classes are small.", pos: 1, short: "small classes"}
+    lines:
+      - emma: "Writing 3, Exercise A. Here is the main part of the letter to the language school. Put the lines one to four into the correct place, at the beginning of each section."
+        say: "Writing three, Exercise eigh. Here is the main part of the letter to the language school. Put the lines, one to four, into the correct place, at the beginning of each section."
+        vi: "Bài 3A: đặt dòng 1–4 vào đầu mỗi đoạn."
+      - emma: "Tip: look at the second sentence of each section. It tells you the topic."
+        vi: "Mẹo: nhìn câu thứ hai của mỗi đoạn để biết đoạn đó nói về gì."
+      - {wait: 8, note: "Pause the video and match the lines", vi: "Tạm dừng video và đặt câu."}
+      - emma: "Section one continues: I expected to study in a group of between six and eight students, but I was in a large class of sixteen."
+        vi: "Đoạn 1: ... nhóm 6–8 người nhưng lớp có 16 người."
+      - {tom: "So it starts with line four: Your advertisement says that the business English classes are small.", focus: 3, reveal: "4"}
+      - emma: "Section two continues: Nobody explained why, and none of the teachers seemed to have experience in teaching business."
+      - {tom: "Line one: During my stay, there were three different teachers.", focus: 0, reveal: "1"}
+      - emma: "Section three continues: but this was not true. I received my Course Book on the Monday of the second week."
+      - {tom: "Line two: Your advertisement promises that the Course Book and Workbook are provided.", focus: 1, reveal: "2"}
+      - emma: "And section four continues: In fact, the building is old, and the classrooms are not suitable."
+      - {tom: "Line three: You claim that your school is modern and in a central location.", focus: 2, reveal: "3"}
+      - emma: "Correct: four, one, two, three. That's the order in the answer key."
+        vi: "Thứ tự: 4, 1, 2, 3 — đúng Answer key."
+
+  - kind: compare
+    chapter: "Cách viết một đoạn"
+    heading: "How each paragraph works"
+    heading_vi: "Câu chủ đề nêu lời hứa trong quảng cáo → các câu sau nêu thực tế"
+    items:
+      - title: "1 · What they promised"
+        title_vi: "Lời hứa (câu chủ đề)"
+        lines: ["Your advertisement says that…", "Your advertisement promises that…", "You claim that…"]
+      - title: "2 · What really happened"
+        title_vi: "Thực tế (bằng chứng cụ thể)"
+        lines: ["I expected…, but I was in a large class of 16.", "…, but this was not true.", "In fact, the building is old…"]
+    lines:
+      - emma: "Look at how each paragraph works."
+        vi: "Xem cách một đoạn được viết."
+      - {emma: "First, the topic sentence: what the school promised. Your advertisement says that. Your advertisement promises that. You claim that.", focus: 0}
+      - {emma: "Then, what really happened, with details: numbers, days, places. I expected, but. This was not true. In fact.", focus: 1}
+      - tom: "So the details make the complaint strong."
+      - emma: "Exactly. And one problem in each paragraph. That makes the letter easy to read."
+        vi: "Mỗi đoạn một vấn đề — thư dễ đọc."
+
+  - kind: qa
+    chapter: "Writing 4A: học viên muốn gì?"
+    heading: "Writing 4A · What do you think the student wants the school to do?"
+    heading_vi: "Phần kết nói rõ bạn muốn người nhận làm gì"
+    items:
+      - q: "What does the student want the language school to do?"
+        a: "Give some money back. The student paid 1,200 euros, and would like the school to refund 50% of that."
+        phrases: ["refund = give money back", "50% of that"]
+        ask: emma
+        by: tom
+    lines:
+      - emma: "Writing 4: closing a letter. Exercise A. What do you think the student wants the language school to do?"
+        say: "Writing four: closing a letter. Exercise eigh. What do you think the student wants the language school to do?"
+        vi: "Bài 4A: học viên muốn trường làm gì?"
+      - {emma: "What does the student want?", focus: 0}
+      - tom: "Some money back! The student paid 1,200 euros, and would like the school to refund 50% of that."
+        say: "Some money back! The student paid one thousand two hundred euros, and would like the school to refund fifty percent of that."
+        reveal: 0
+      - emma: "Right. Refund means: give money back. The closing paragraph says this clearly and politely."
+        vi: "refund = trả lại tiền. Đoạn kết nói rõ, lịch sự."
+
+  - kind: errors
+    chapter: "Writing 4B: xóa 5 từ thừa"
+    heading: "Writing 4B · Delete five unnecessary words"
+    heading_vi: "Đoạn kết của lá thư — đáp án theo Answer key"
+    items:
+      - {wrong: "I hope you to understand why I am unhappy", right: "I hope you understand why I am unhappy", note: "hope + you + verb (no to)"}
+      - {wrong: "with the service your school was provided.", right: "with the service your school provided.", note: "chủ động: your school provided"}
+      - {wrong: "In total I paid the 1,200 euros for the course", right: "In total I paid 1,200 euros for the course", note: "không dùng 'the' trước số tiền"}
+      - {wrong: "and I would like that you to refund 50% of that.", right: "and I would like you to refund 50% of that.", note: "would like + người + to + động từ"}
+      - {wrong: "I am look forward to hearing from you.", right: "I look forward to hearing from you.", note: "câu kết trang trọng"}
+    lines:
+      - emma: "Exercise B. Here is the final part of the letter. Delete five unnecessary words."
+        vi: "Bài 4B: xóa 5 từ thừa trong đoạn kết."
+      - {wait: 8, note: "Pause the video and find five words", vi: "Tạm dừng video, tìm 5 từ thừa."}
+      - {emma: "Word one.", focus: 0}
+      - {tom: "To. I hope you understand. No to after hope you.", focus: 0}
+      - {emma: "Word two.", focus: 1}
+      - {tom: "Was. Your school provided the service. It's active.", focus: 1}
+      - {emma: "Word three.", focus: 2}
+      - {tom: "The. I paid 1,200 euros. No 'the'.", say: "The. I paid one thousand two hundred euros. No, the.", focus: 2}
+      - {emma: "Word four.", focus: 3}
+      - {tom: "That. I would like you to refund 50%.", say: "That. I would like you to refund fifty percent.", focus: 3}
+      - {emma: "And word five.", focus: 4}
+      - {tom: "Am. I look forward to hearing from you.", focus: 4}
+      - emma: "Excellent. Five words: to, was, the, that, am. Now let's read the complete letter."
+        vi: "Năm từ thừa: to, was, the, that, am."
+
+  - kind: letter
+    chapter: "Thư hoàn chỉnh"
+    heading: "Writing 3B · The complete letter (1/2)"
+    heading_vi: "Thư theo Answer key (sách in trang 266) — Emma đọc"
+    words: 228
+    items:
+      - {text: "Dear Sir/Madam,", say: "Dear Sir or Madam,", note: "Không biết tên người nhận", body: false}
+      - text: "I am writing about a business English course I recently took at your school. I studied on an intensive two-week course, but I learnt very little."
+        note: "Mục đích + tình huống chung"
+      - text: "Your advertisement says that the business English classes are small. I expected to study in a group of between six and eight students, but I was in a large class of 16. It was difficult for the teacher to give time to everyone."
+        say: "Your advertisement says that the business English classes are small. I expected to study in a group of between six and eight students, but I was in a large class of sixteen. It was difficult for the teacher to give time to everyone."
+        note: "Vấn đề 1: lớp đông"
+      - text: "During my stay, there were three different teachers. Nobody explained why, and none of the teachers seemed to have experience in teaching business."
+        note: "Vấn đề 2: giáo viên"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: letter
+    heading: "Writing 3B · The complete letter (2/2)"
+    heading_vi: "Thư theo Answer key (sách in trang 266) — Emma đọc"
+    words: 228
+    items:
+      - text: "Your advertisement promises that the Course Book and Workbook are provided, but this was not true. I received my Course Book on the Monday of the second week so could only use it for a week. I never got the Workbook."
+        note: "Vấn đề 3: tài liệu"
+      - text: "You claim that your school is modern and in a central location. In fact, the building is old and the classrooms are not suitable. The technology is out of date. The building is 5km from the city centre, and I needed to catch a bus to get there from where I was staying."
+        say: "You claim that your school is modern and in a central location. In fact, the building is old, and the classrooms are not suitable. The technology is out of date. The building is five kilometres from the city centre, and I needed to catch a bus to get there from where I was staying."
+        note: "Vấn đề 4: trường lớp"
+      - text: "I hope you understand why I am unhappy with the service your school provided. In total I paid 1,200 euros for the course and I would like you to refund 50% of that. I look forward to hearing from you."
+        say: "I hope you understand why I am unhappy with the service your school provided. In total I paid one thousand two hundred euros for the course, and I would like you to refund fifty percent of that. I look forward to hearing from you."
+        note: "Điều bạn muốn + câu kết"
+      - {text: "Yours faithfully,\n(your full name)", say: "Yours faithfully.", note: "Dear Sir/Madam → Yours faithfully", body: false}
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: vocab
+    chapter: "Cụm từ cho thư phàn nàn"
+    heading: "Useful phrases · Letters of complaint"
+    heading_vi: "Dùng lại trong bài luyện đề (thư gửi trường dạy lái xe)"
+    items:
+      - {w: "I am writing to complain about …", pos: "opening", vi: "Tôi viết thư để phàn nàn về …", ex: "I am writing to complain about the driving lessons I recently took."}
+      - {w: "Your advertisement says / promises that …", pos: "the promise", vi: "Quảng cáo của quý vị nói / hứa rằng …", ex: "Your advertisement promises that all cars are new."}
+      - {w: "…, but this was not true.", pos: "the reality", vi: "…, nhưng điều đó không đúng.", ex: "You said the lessons were one hour, but this was not true."}
+      - {w: "In fact, …", pos: "the reality", vi: "Thực tế thì …", ex: "In fact, the lessons often finished five minutes early."}
+      - {w: "I would like you to refund …", pos: "what you want", vi: "Tôi muốn quý vị hoàn lại …", ex: "I would like you to refund 50% of the cost."}
+      - {w: "I look forward to hearing from you.", pos: "formal closing", vi: "Mong sớm nhận được hồi âm.", ex: "I look forward to hearing from you. Yours faithfully, …"}
+    lines:
+      - emma: "Here are some useful phrases. You'll need them in the exam practice task: a letter to a driving school."
+        vi: "Các cụm từ này dùng cho bài luyện đề: thư gửi trường dạy lái xe."
+      - {emma: "To open the letter.", focus: 0}
+      - {tom: "I am writing to complain about the driving lessons I recently took.", focus: 0}
+      - {emma: "To say what they promised.", focus: 1}
+      - {tom: "Your advertisement promises that all cars are new.", focus: 1}
+      - {emma: "To say what really happened.", focus: 2}
+      - {tom: "You said the lessons were one hour, but this was not true.", focus: 2}
+      - {emma: "Or: in fact.", focus: 3}
+      - {tom: "In fact, the lessons often finished five minutes early.", focus: 3}
+      - {emma: "To say what you want.", focus: 4}
+      - {tom: "I would like you to refund 50% of the cost.", say: "I would like you to refund fifty percent of the cost.", focus: 4}
+      - {emma: "And to finish.", focus: 5}
+      - {tom: "I look forward to hearing from you. Yours faithfully.", focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Writing 3A: 4 · 1 · 2 · 3", vi: "Câu chủ đề theo thứ tự trong thư"}
+      - {en: "One problem per paragraph: the promise → the reality, with details", vi: "Mỗi đoạn một vấn đề, có chi tiết"}
+      - {en: "Writing 4B: delete to · was · the · that · am", vi: "Năm từ thừa"}
+      - {en: "Dear Sir/Madam … Yours faithfully", vi: "Không biết tên người nhận"}
+      - {en: "Next: Exam practice — write your own letter (page 33)", vi: "Tiếp theo: tự viết thư ở bài luyện đề (sách in trang 33)"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Writing 3A: four, one, two, three.", say: "Writing three eigh: four, one, two, three.", focus: 0}
+      - {emma: "One problem per paragraph, with details.", focus: 1}
+      - {emma: "Writing 4B: to, was, the, that, am.", say: "Writing four B: to, was, the, that, am.", focus: 2}
+      - {emma: "Dear Sir or Madam, and Yours faithfully.", focus: 3}
+      - {tom: "And Exercise C: the writing task is in the exam practice. I'll try it!", focus: 4}

@@ -1,0 +1,266 @@
+# Video bài giảng Unit 2 · Consolidation (sách in trang 31). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-consolidation.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Speaking A–C theo Tapescript Track 23 (sách in trang 280); bộ sách không có
+# file nghe nên Emma (giám khảo) và Tom (học viên) đọc lại. Trọng âm Vocabulary C (Track 25) theo từ điển; Vocabulary B và
+# Errors là đáp án gợi ý — Answer key không có trang này.
+id: U02-consolidation
+activity: U02-consolidation
+title: "Unit 2 · Learning"
+subtitle: "Consolidation: Speaking, Vocabulary, Errors"
+title_vi: "Ôn tập Unit 2 — từ để hỏi, trả lời câu hỏi về thời đi học, động từ thi cử, trọng âm, sửa lỗi"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 2. This is the Consolidation page: we review the whole unit."
+        say: "Welcome back to Unit two. This is the Consolidation page: we review the whole unit."
+        vi: "Trang Consolidation: ôn lại toàn bộ Unit 2."
+      - tom: "Questions about school, school subjects, and exams. Let's go!"
+
+  - kind: bullets
+    chapter: "Hôm nay ôn gì"
+    heading: "Today's lesson"
+    heading_vi: "Hôm nay ôn gì"
+    items:
+      - {en: "Speaking A–C: question words, and how to answer", vi: "Từ để hỏi và cách trả lời"}
+      - {en: "Speaking D: your turn", vi: "Đến lượt bạn"}
+      - {en: "Vocabulary A–B: school subjects; have, fail, pass, apply, do", vi: "Môn học; động từ về thi cử"}
+      - {en: "Vocabulary C: word stress", vi: "Trọng âm"}
+      - {en: "Errors: correct six sentences", vi: "Sửa 6 câu sai"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "Question words, and good answers.", focus: 0}
+      - {emma: "Your turn to speak.", focus: 1}
+      - {emma: "School subjects, and verbs about exams.", focus: 2}
+      - {emma: "Word stress.", focus: 3}
+      - {emma: "And six sentences with errors.", focus: 4}
+
+  - kind: blanks
+    chapter: "Speaking A: từ để hỏi"
+    heading: "Speaking A · Complete each question with the correct question word"
+    heading_vi: "What · Who · How · Why · Where · When — đáp án theo Tapescript Track 23"
+    items:
+      - {n: 1, q: "___ was your favourite subject at school?", answer: "What", tip: "What = which thing"}
+      - {n: 2, q: "___ was your best friend at primary school?", answer: "Who", tip: "Who = which person"}
+      - {n: 3, q: "___ did you get to school in the morning – did you walk or take a bus?", answer: "How", tip: "How = in what way: walk, bus, car…"}
+      - {n: 4, q: "___ did you go to college instead of staying at school?", answer: "Why", tip: "Why → answer with because…"}
+      - {n: 5, q: "Do you remember any school trips? ___ did you go?", answer: "Where", tip: "Where = which place"}
+      - {n: 6, q: "Children learn languages from an early age. ___ did you start learning English?", answer: "When", tip: "When = what time, what age"}
+    lines:
+      - emma: "Speaking, Exercise A. Complete each question with the correct question word."
+        say: "Speaking, Exercise eigh. Complete each question with the correct question word."
+        vi: "Bài A: điền từ để hỏi."
+      - {wait: 8, note: "Pause the video and write", vi: "Tạm dừng video và điền."}
+      - {emma: "One.", focus: 0}
+      - {tom: "What was your favourite subject at school?", reveal: 1}
+      - {emma: "Two.", focus: 1}
+      - {tom: "Who was your best friend at primary school?", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "How did you get to school in the morning?", reveal: 3}
+      - {emma: "Four.", focus: 3}
+      - {tom: "Why did you go to college instead of staying at school?", reveal: 4}
+      - {emma: "Five.", focus: 4}
+      - {tom: "Where did you go?", reveal: 5}
+      - {emma: "Six.", focus: 5}
+      - {tom: "When did you start learning English?", reveal: 6}
+
+  - kind: qa
+    chapter: "Speaking B–C: nghe câu trả lời"
+    heading: "Speaking B–C · Listen and check — how does the student answer?"
+    heading_vi: "Theo Tapescript Track 23: Emma là giám khảo, Tom là học viên"
+    items:
+      - {q: "What was your favourite subject at school?", a: "I loved History because I was really good at it.", phrases: ["answer + because"], ask: emma, by: tom}
+      - {q: "Who was your best friend at primary school?", a: "His name was Marcus. He lived next door and we walked to school together.", phrases: ["name + detail"], ask: emma, by: tom}
+      - {q: "How did you get to school in the morning – did you walk or take a bus?", a: "Actually, my dad used to drive me to school.", phrases: ["Actually, …", "used to"], ask: emma, by: tom}
+      - {q: "Why did you go to college instead of staying at school?", a: "Because the college had more subjects to choose from. I wanted to study Philosophy.", phrases: ["Because…", "+ one more detail"], ask: emma, by: tom}
+      - {q: "Do you remember any school trips? Where did you go?", a: "I remember once we went to a museum in London. I think it was the Natural History Museum.", phrases: ["I remember once…", "I think it was…"], ask: emma, by: tom}
+      - {q: "When did you start learning English?", a: "When I was eleven. We didn't do English at primary school.", phrases: ["When I was…", "+ a reason"], ask: emma, by: tom}
+    lines:
+      - emma: "Exercise B. Listen and check. And Exercise C: notice how the student answers each question."
+        vi: "Bài B–C: nghe kiểm tra, chú ý cách trả lời."
+      - {emma: "What was your favourite subject at school?", focus: 0}
+      - {tom: "I loved History because I was really good at it.", reveal: 0}
+      - {emma: "Who was your best friend at primary school?", focus: 1}
+      - {tom: "His name was Marcus. He lived next door and we walked to school together.", reveal: 1}
+      - {emma: "How did you get to school in the morning? Did you walk or take a bus?", focus: 2}
+      - {tom: "Actually, my dad used to drive me to school.", reveal: 2}
+      - {emma: "Why did you go to college instead of staying at school?", focus: 3}
+      - {tom: "Because the college had more subjects to choose from. I wanted to study Philosophy.", reveal: 3}
+      - {emma: "Do you remember any school trips? Where did you go?", focus: 4}
+      - {tom: "I remember once we went to a museum in London. I think it was the Natural History Museum.", reveal: 4}
+      - {emma: "When did you start learning English?", focus: 5}
+      - {tom: "When I was eleven. We didn't do English at primary school.", reveal: 5}
+      - emma: "Notice: every answer gives a little more. A reason, a name, a detail. And for question three, actually: neither walk nor bus."
+        vi: "Mỗi câu trả lời đều thêm lý do / chi tiết; câu 3 dùng 'Actually' khi câu trả lời khác gợi ý."
+
+  - kind: practice
+    chapter: "Speaking D: đến lượt bạn"
+    heading: "Speaking D · Your turn"
+    heading_vi: "Trả lời thành tiếng — thêm lý do hoặc chi tiết, mỗi câu 10 giây"
+    items:
+      - {q: "What was your favourite subject at school?", hint: "I loved… because…"}
+      - {q: "Who was your best friend at primary school?", hint: "His / Her name was… We…"}
+      - {q: "How did you get to school in the morning?", hint: "I usually walked… / My mum used to…"}
+      - {q: "Do you remember any school trips?", hint: "I remember once we went to…"}
+      - {q: "When did you start learning English?", hint: "When I was… years old."}
+    lines:
+      - emma: "Exercise D. Now it's your turn. Answer each question, and add a reason or a detail."
+        vi: "Bài D: đến lượt bạn — thêm lý do hoặc chi tiết."
+      - {emma: "What was your favourite subject at school?", focus: 0}
+      - {wait: 10}
+      - {emma: "Who was your best friend at primary school?", focus: 1}
+      - {wait: 10}
+      - {emma: "How did you get to school in the morning?", focus: 2}
+      - {wait: 10}
+      - {emma: "Do you remember any school trips?", focus: 3}
+      - {wait: 10}
+      - {emma: "When did you start learning English?", focus: 4}
+      - {wait: 10}
+
+  - kind: blanks
+    chapter: "Vocabulary A: tám môn học"
+    heading: "Vocabulary A · Write eight school subjects — focus on your spelling"
+    heading_vi: "Viết tám môn học mà không nhìn lại bài"
+    items:
+      - {n: 1, answer: "Mathematics", tip: "Maths for short"}
+      - {n: 2, answer: "History", tip: "o, not e: histOry"}
+      - {n: 3, answer: "Geography", tip: "ph = /f/: geograPHy"}
+      - {n: 4, answer: "Science", tip: "sc at the start: SCience"}
+      - {n: 5, answer: "Chemistry", tip: "ch = /k/: CHemistry"}
+      - {n: 6, answer: "Physics", tip: "ph = /f/ and y = /ɪ/: PHYsics"}
+      - {n: 7, answer: "Biology", tip: "-ology = the study of"}
+      - {n: 8, answer: "Economics", tip: "-ics, like Physics and Mathematics"}
+    lines:
+      - emma: "Vocabulary, Exercise A. Write eight school subjects without looking back. Focus on your spelling."
+        say: "Vocabulary, Exercise eigh. Write eight school subjects without looking back. Focus on your spelling."
+        vi: "Bài A: viết tám môn học, chú ý chính tả."
+      - {wait: 12, note: "Pause the video: write eight subjects", vi: "Tạm dừng video, viết tám môn học."}
+      - {tom: "Mathematics.", focus: 0, reveal: 1}
+      - {tom: "History.", focus: 1, reveal: 2}
+      - {tom: "Geography.", focus: 2, reveal: 3}
+      - {tom: "Science.", focus: 3, reveal: 4}
+      - {tom: "Chemistry.", focus: 4, reveal: 5}
+      - {tom: "Physics.", focus: 5, reveal: 6}
+      - {tom: "Biology.", focus: 6, reveal: 7}
+      - {tom: "Economics.", focus: 7, reveal: 8}
+      - emma: "Check the difficult letters: ph, ch and sc."
+        say: "Check the difficult letters: P H, C H, and S C."
+        vi: "Chú ý các cặp chữ khó: ph, ch, sc."
+
+  - kind: blanks
+    chapter: "Vocabulary B: have, fail, pass, apply, do"
+    heading: "Vocabulary B · Complete the sentences with have, fail, pass, apply, do"
+    heading_vi: "Chia động từ cho đúng thì (đáp án gợi ý)"
+    items:
+      - {n: 1, q: "I ___ my homework before I went to bed.", answer: "did", tip: "do homework (not make) — past: did"}
+      - {n: "2a", q: "You can ___ for a driving licence before your 17th birthday,", answer: "apply", tip: "apply for + a licence / a job / a course"}
+      - {n: "2b", q: "but you can't ___ lessons until you are seventeen.", answer: "have", tip: "have lessons = take lessons"}
+      - {n: 3, q: "I ___ my driving test the first time I took it. I was very pleased.", answer: "passed", tip: "pass a test = succeed ↔ fail a test"}
+      - {n: 4, q: "Many people ___ their driving test because they are not ready to take it.", answer: "fail", tip: "present simple: a general fact"}
+    lines:
+      - emma: "Exercise B. Complete the sentences with the correct form of the verbs: have, fail, pass, apply and do."
+        vi: "Bài B: điền dạng đúng của have, fail, pass, apply, do."
+      - {wait: 8, note: "Pause the video and complete", vi: "Tạm dừng video và điền."}
+      - {emma: "One.", focus: 0}
+      - {tom: "I did my homework before I went to bed. Past simple of do.", reveal: "1"}
+      - {emma: "Two. There are two gaps.", focus: 1}
+      - {tom: "You can apply for a driving licence before your seventeenth birthday,", reveal: "2a"}
+      - {tom: "but you can't have lessons until you are seventeen.", focus: 2, reveal: "2b"}
+      - {emma: "Three.", focus: 3}
+      - {tom: "I passed my driving test the first time I took it.", reveal: "3"}
+      - {emma: "Four.", focus: 4}
+      - {tom: "Many people fail their driving test because they are not ready to take it.", reveal: "4"}
+
+  - kind: errors
+    heading: "Watch out! · Typical errors"
+    heading_vi: "do homework, take a test — không dùng make"
+    items:
+      - {wrong: "I made my homework.", right: "I did my homework.", note: "do homework"}
+      - {wrong: "I made my driving test.", right: "I took my driving test.", note: "take a test / an exam"}
+    lines:
+      - emma: "Watch out! Two typical errors."
+        vi: "Hai lỗi hay gặp."
+      - {emma: "We don't make homework. We do homework.", focus: 0}
+      - {tom: "I did my homework.", focus: 0}
+      - {emma: "And we take a test, or take an exam.", focus: 1}
+      - {tom: "I took my driving test.", focus: 1}
+
+  - kind: bullets
+    chapter: "Vocabulary C: trọng âm"
+    heading: "Vocabulary C · Mark the main stress (Track 25)"
+    heading_vi: "Âm tiết in hoa là âm nhấn — nghe và nhắc lại"
+    items:
+      - {en: "FA-vour-ite · SAFE-ty · LI-cence", vi: "Nhấn âm đầu"}
+      - {en: "ad-VAN-tage · pro-FES-sion-al · sup-PORT", vi: "Nhấn âm thứ hai"}
+      - {en: "cer-TIF-i-cate", vi: "Nhấn âm thứ hai"}
+      - {en: "licence (noun, British) · license (US)", vi: "Chính tả Anh – Mỹ"}
+    lines:
+      - emma: "Exercise C. Mark the main stress on these words. Listen, and repeat after Tom."
+        vi: "Bài C: đánh dấu trọng âm, nghe và nhắc lại."
+      - {emma: "These are stressed on the first syllable.", focus: 0}
+      - {tom: "favourite. safety. licence.", focus: 0}
+      - {emma: "These are stressed on the second syllable.", focus: 1}
+      - {tom: "advantage. professional. support.", focus: 1}
+      - {emma: "And certificate.", focus: 2}
+      - {tom: "certificate.", focus: 2}
+      - {emma: "Note: in British English, licence is the noun, with -ce.", say: "Note: in British English, licence is the noun, with C, E.", focus: 3}
+
+  - kind: errors
+    chapter: "Errors: sửa lỗi"
+    heading: "Errors A · Correct the mistakes (1–3)"
+    heading_vi: "Sửa phần tô vàng trong sách"
+    items:
+      - {wrong: "Did you make your homework last night?", right: "Did you do your homework last night?", note: "do homework"}
+      - {wrong: "I didn't like school. I must do tests every week.", right: "… I had to do tests every week.", note: "must → had to (quá khứ)"}
+      - {wrong: "My father teached me to swim.", right: "My father taught me to swim.", note: "teach → taught (bất quy tắc)"}
+    lines:
+      - emma: "Errors. Correct the mistakes."
+        vi: "Sửa lỗi."
+      - {emma: "Number one: make your homework.", focus: 0}
+      - {tom: "Did you do your homework last night?", focus: 0}
+      - {emma: "Number two: must, in the past.", focus: 1}
+      - {tom: "I had to do tests every week.", focus: 1}
+      - {emma: "Number three: teached.", focus: 2}
+      - {tom: "My father taught me to swim.", focus: 2}
+
+  - kind: errors
+    heading: "Errors A · Correct the mistakes (4–6)"
+    heading_vi: "Đáp án gợi ý — Answer key không có trang này"
+    items:
+      - {wrong: "I didn't like very much Maths at school.", right: "I didn't like Maths very much at school.", note: "very much đứng sau tân ngữ"}
+      - {wrong: "I was very keen in Geography.", right: "I was very keen on Geography.", note: "keen on"}
+      - {wrong: "I missed my driving test the first time I took it.", right: "I failed my driving test the first time I took it.", note: "fail a test = không đỗ"}
+    lines:
+      - {emma: "Number four: the word order.", focus: 0}
+      - {tom: "I didn't like Maths very much at school. Very much goes after the object.", focus: 0}
+      - {emma: "Number five: keen in.", focus: 1}
+      - {tom: "I was very keen on Geography.", focus: 1}
+      - {emma: "Number six: missed.", focus: 2}
+      - {tom: "I failed my driving test the first time I took it. Missed means I wasn't there.", focus: 2}
+      - emma: "The answer key doesn't include this page, so these are our suggested answers."
+        vi: "Answer key không có trang này — đây là đáp án gợi ý."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "What · Who · How · Why · Where · When", vi: "Từ để hỏi"}
+      - {en: "Good answers: + a reason or a detail; Actually, …; used to", vi: "Trả lời có lý do, chi tiết"}
+      - {en: "do homework · take / pass / fail a test · apply for · have lessons", vi: "Cụm từ về học và thi"}
+      - {en: "FAvourite · adVANtage · proFESsional · SAFEty · LIcence · cerTIFicate · supPORT", vi: "Trọng âm"}
+      - {en: "Next: Exam practice — Reading and Writing", vi: "Tiếp theo: luyện đề"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Six question words.", focus: 0}
+      - {emma: "Give a reason or a detail.", focus: 1}
+      - {emma: "Do homework, take a test, pass or fail, apply for, have lessons.", focus: 2}
+      - {emma: "And the word stress.", focus: 3}
+      - {tom: "Next: the exam practice!", focus: 4}

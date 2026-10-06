@@ -1,0 +1,179 @@
+# Video bài giảng Unit 2 · Listening 2: practise listening for numbers and dates (sách in trang 25). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-listening-3.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U02-listening-1.yaml (dòng `track`). Phát nguyên Track 22 một lần
+# (sách cho nghe ba lần). Đáp án theo Answer key (sách in trang 266, "Unit 2, Listening 2A"): 1 c, 2 c, 3 September 18,
+# 4 12, 5 December 14, 6 96, 7 6, 8 7, 9 Merton, 10 3, 11 109, 12 28. Key vocabulary in context là đáp án gợi ý.
+id: U02-listening-3
+activity: U02-listening
+title: "Unit 2 · Learning"
+subtitle: "Listening 2: practise listening for numbers and dates"
+title_vi: "Nghe cuộc gọi đăng ký khóa học — 12 câu hỏi về số, ngày tháng, tên (Track 22 của sách)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening 2. Now we use numbers and dates in a real listening task."
+        say: "Welcome to Listening two. Now we use numbers and dates in a real listening task."
+        vi: "Listening 2: dùng số và ngày tháng trong một bài nghe thật."
+      - tom: "Twelve questions! I'm ready with my pen."
+
+  - kind: bullets
+    chapter: "Trước khi nghe"
+    heading: "Question-type tip · Before you listen"
+    heading_vi: "Thông tin trong bài nghe luôn theo đúng thứ tự câu hỏi"
+    items:
+      - {en: "You listen for numbers and dates in many parts of the Listening Module", vi: "Số và ngày tháng có ở nhiều phần bài thi Nghe"}
+      - {en: "The information is always in the same order as the questions", vi: "Thông tin theo đúng thứ tự câu hỏi"}
+      - {en: "Read all the questions first and predict: a date? a number? a name?", vi: "Đọc trước, đoán loại đáp án"}
+      - {en: "Notes 3–8: no more than three words or a number", vi: "Câu 3–8: tối đa ba từ hoặc một số"}
+    lines:
+      - emma: "The question-type tip: you will need to listen for numbers and dates in various parts of the Listening Module."
+        vi: "Mẹo dạng câu hỏi: nghe số và ngày tháng có ở nhiều phần."
+      - {emma: "Numbers and dates are everywhere.", focus: 0}
+      - {emma: "And the information will always be in the same order as the questions. So if you miss one answer, move on to the next.", focus: 1}
+      - {emma: "Read all the questions first, and predict the type of answer.", focus: 2}
+      - {emma: "For the notes, write no more than three words or a number.", focus: 3}
+
+  - kind: blanks
+    chapter: "Nghe Track 22"
+    heading: "Listening 2A · A man is telephoning his local college about a course"
+    heading_vi: "Đọc 12 câu trước, rồi nghe cả cuộc gọi (Track 22)"
+    items:
+      - {n: 1, q: "Course in: a Physics · b Geography · c Photography · d Philosophy  ___", answer: "c", tip: "I'm phoning about the photography course"}
+      - {n: 2, q: "Wants to know about: a beginner's · b intermediate · c advanced course  ___", answer: "c", tip: "Perhaps the advanced course would be best."}
+      - {n: 3, q: "Course starts – ___", answer: "September 18", tip: "The advanced course starts on September the eighteenth."}
+      - {n: 4, q: "There are ___ lessons over thirteen weeks.", answer: "12", tip: "you do twelve lessons over thirteen weeks (a week off for half-term)"}
+      - {n: 5, q: "Course finishes ___", answer: "December 14", tip: "It finishes on the fourteenth of December."}
+      - {n: 6, q: "Course costs £ ___ paid in advance. No refund.", answer: "96", tip: "it's ninety-six pounds — not 69!"}
+      - {n: 7, q: "Between ___ and 10 students in the class.", answer: "6", tip: "between six and ten people in a group"}
+      - {n: 8, q: "___ people on last course.", answer: "7", tip: "On the last advanced course, there were seven participants."}
+      - {n: 9, q: "Name: Graham ___", answer: "Merton", tip: "That's M-E-R-T-O-N — listen to the spelling"}
+      - {n: 10, q: "Address: Flat ___ ,", answer: "3", tip: "Flat three, …"}
+      - {n: 11, q: "___ Chelsea Court", answer: "109", tip: "… a hundred and nine Chelsea Court"}
+      - {n: 12, q: "Age: ___", answer: "28", tip: "I'm twenty-eight."}
+    lines:
+      - emma: "Exercise A. A man is telephoning his local college about a course. Read all twelve questions now."
+        say: "Exercise eigh. A man is telephoning his local college about a course. Read all twelve questions now."
+        vi: "Bài A: đọc trước 12 câu hỏi."
+      - {wait: 15, note: "Read the questions", vi: "Đọc 12 câu hỏi, đoán loại đáp án."}
+      - emma: "Now listen, and write your answers."
+        vi: "Nghe và ghi đáp án."
+      - {track: U02-L2A, note: "Track 22 · Listening 2A", vi: "Nghe cả cuộc gọi, ghi 12 đáp án."}
+      - {wait: 8, note: "Check your answers", vi: "Xem lại bài: chính tả, chữ hoa, số."}
+
+  - kind: blanks
+    chapter: "Đáp án 1–6"
+    heading: "Listening 2A · Answers 1–6"
+    heading_vi: "Theo Answer key — câu nghe được ở dòng Tip"
+    items:
+      - {n: 1, q: "Graham wants to do a course in …  ___", answer: "c Photography", tip: "I'm phoning about the photography course that you run."}
+      - {n: 2, q: "Graham wants to know about …  ___", answer: "c the advanced course", tip: "the intermediate course would be a bit easy for me. Perhaps the advanced course…"}
+      - {n: 3, q: "Course starts – ___", answer: "September 18", tip: "The advanced course starts on September the eighteenth."}
+      - {n: 4, q: "There are ___ lessons over thirteen weeks.", answer: "12", tip: "you do twelve lessons over thirteen weeks"}
+      - {n: 5, q: "Course finishes ___", answer: "December 14", tip: "It finishes on the fourteenth of December."}
+      - {n: 6, q: "Course costs £ ___ paid in advance.", answer: "96", tip: "Yes, it's ninety-six pounds."}
+    lines:
+      - emma: "Let's check. Exercise B: check the key on page 266."
+        say: "Let's check. Exercise B: check the key on page two hundred and sixty-six."
+        vi: "Bài B: kiểm tra với Answer key."
+      - {emma: "Number one.", focus: 0}
+      - {tom: "C, photography. He says: I'm phoning about the photography course.", reveal: 1}
+      - {emma: "Number two. There are three courses. Which one does he want to know about?", focus: 1}
+      - {tom: "C, the advanced course. He says the intermediate course would be a bit easy for him.", reveal: 2}
+      - emma: "Notice: you hear all three courses, but only one is the answer. Listen to the end of the turn."
+        vi: "Nghe đủ cả ba khóa nhưng chỉ một là đáp án — nghe hết lượt nói."
+      - {emma: "Three.", focus: 2}
+      - {tom: "September the eighteenth.", reveal: 3}
+      - {emma: "Four.", focus: 3}
+      - {tom: "Twelve. Twelve lessons over thirteen weeks, because there's a week off for half-term.", reveal: 4}
+      - {emma: "Five.", focus: 4}
+      - {tom: "The fourteenth of December.", reveal: 5}
+      - {emma: "Six.", focus: 5}
+      - {tom: "Ninety-six pounds. Ninety-six, not sixty-nine!", reveal: 6}
+
+  - kind: blanks
+    chapter: "Đáp án 7–12"
+    heading: "Listening 2A · Answers 7–12"
+    heading_vi: "Theo Answer key — chú ý cách đánh vần tên"
+    items:
+      - {n: 7, q: "Between ___ and 10 students in the class.", answer: "6", tip: "there are usually between six and ten people in a group"}
+      - {n: 8, q: "___ people on last course.", answer: "7", tip: "On the last advanced course, there were seven participants."}
+      - {n: 9, q: "Name: Graham ___", answer: "Merton", tip: "It's Graham Merton – that's M-E-R-T-O-N."}
+      - {n: 10, q: "Address: Flat ___ ,", answer: "3", tip: "Flat three, …"}
+      - {n: 11, q: "___ Chelsea Court", answer: "109", tip: "… a hundred and nine Chelsea Court. That's in Oxford."}
+      - {n: 12, q: "Age: ___", answer: "28", tip: "I'm twenty-eight."}
+    lines:
+      - {emma: "Seven.", focus: 0}
+      - {tom: "Six. Between six and ten people in a group.", reveal: 7}
+      - {emma: "Eight.", focus: 1}
+      - {tom: "Seven. On the last course, there were seven participants. Participants means people.", reveal: 8}
+      - {emma: "Nine. The name.", focus: 2}
+      - {tom: "Merton. He spells it: M, E, R, T, O, N.", say: "Merton. He spells it: em, ee, ar, tee, oh, en.", reveal: 9}
+      - {emma: "Ten and eleven. The address.", focus: 3}
+      - {tom: "Flat three, a hundred and nine Chelsea Court.", reveal: [10, 11]}
+      - {emma: "And twelve.", focus: 5}
+      - {tom: "Twenty-eight.", reveal: 12}
+      - emma: "How many did you answer correctly? Twelve out of twelve is excellent!"
+        vi: "Bạn đúng mấy câu trên 12?"
+
+  - kind: bullets
+    chapter: "Bài C: nhìn lại"
+    heading: "Listening 2C · Think about how you did the task"
+    heading_vi: "Đánh dấu câu đúng với bạn — lần sau làm tốt hơn"
+    items:
+      - {en: "I read the instructions carefully.", vi: "Đọc kỹ yêu cầu"}
+      - {en: "I read the questions and predicted the type of answer I needed to write.", vi: "Đọc câu hỏi và đoán loại đáp án"}
+      - {en: "I used capital letters when necessary.", vi: "Viết hoa khi cần: Merton, September"}
+      - {en: "I spelt all my answers correctly.", vi: "Đúng chính tả"}
+      - {en: "I know why I got some answers wrong.", vi: "Biết vì sao sai"}
+    lines:
+      - emma: "Exercise C. Tick the sentences about the listening task that are true for you."
+        vi: "Bài C: đánh dấu những câu đúng với bạn."
+      - {emma: "Did you read the instructions carefully?", focus: 0}
+      - {emma: "Did you predict the type of answer?", focus: 1}
+      - {emma: "Capital letters: Merton and September need them.", focus: 2}
+      - {emma: "Spelling.", focus: 3}
+      - {emma: "And do you know why you got some answers wrong? Maybe sixteen and sixty, or June and July.", focus: 4}
+
+  - kind: blanks
+    chapter: "Từ vựng: course, class, lesson"
+    heading: "Key vocabulary in context · course / class / lesson"
+    heading_vi: "Gạch bỏ từ sai (đáp án gợi ý)"
+    items:
+      - {n: 1, q: "My History ___ begins at 9.00 a.m.", answer: "class / lesson", tip: "class or lesson = one period of teaching; not course"}
+      - {n: 2, q: "The ___ lasts for 13 weeks.", answer: "course", tip: "course = a series of lessons over weeks or months"}
+      - {n: 3, q: "It is a small ___. There are only six students.", answer: "class", tip: "class = a group of students who learn together"}
+    lines:
+      - emma: "Key vocabulary in context. Cross out any wrong words in these sentences: course, class or lesson."
+        vi: "Từ vựng: chọn course, class hay lesson."
+      - {wait: 6, note: "Pause the video and choose", vi: "Tạm dừng video và chọn."}
+      - {emma: "One: my History … begins at nine a.m.", say: "One: my History, blank, begins at nine in the morning.", focus: 0}
+      - {tom: "Class or lesson. A course doesn't begin at nine every day.", reveal: 1}
+      - {emma: "Two: the … lasts for thirteen weeks.", say: "Two: the, blank, lasts for thirteen weeks.", focus: 1}
+      - {tom: "Course. A course is many lessons, over weeks.", reveal: 2}
+      - {emma: "Three: it is a small … There are only six students.", say: "Three: it is a small, blank. There are only six students.", focus: 2}
+      - {tom: "Class. A class is a group of students.", reveal: 3}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 c · 2 c · 3 September 18 · 4 12 · 5 December 14 · 6 96", vi: "Đáp án 1–6"}
+      - {en: "7 6 · 8 7 · 9 Merton · 10 3 · 11 109 · 12 28", vi: "Đáp án 7–12"}
+      - {en: "Answers come in the same order as the questions", vi: "Đáp án theo thứ tự câu hỏi"}
+      - {en: "Traps: 16 / 60, 96 / 69, June / July, three courses but one answer", vi: "Bẫy hay gặp"}
+      - {en: "course · class · lesson", vi: "Khóa học · lớp · buổi học"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Answers one to six.", focus: 0}
+      - {emma: "Answers seven to twelve.", focus: 1}
+      - {emma: "The answers come in the same order as the questions.", focus: 2}
+      - {emma: "Watch out for the traps.", focus: 3}
+      - {tom: "And a course has many lessons, and a class is a group of students!", focus: 4}

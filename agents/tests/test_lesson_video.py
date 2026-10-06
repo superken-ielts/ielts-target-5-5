@@ -404,3 +404,95 @@ def test_unit1_video_coverage():
     assert not have["U01-listening"] and not have["U01-reading"] and not have["U01-unit-review"]
     for act in ("U01-speaking-vocab", "U01-writing", "U01-consolidation", "U01-exam-practice"):
         assert have[act], act
+
+
+def _wav(path: Path, seconds: float, rate: int = 16000):
+    import wave
+    import numpy as np
+    t = np.arange(int(seconds * rate)) / rate
+    data = (np.sin(2 * np.pi * 440 * t) * 8000).astype(np.int16)
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(rate)
+        w.writeframes(data.tobytes())
+
+
+READING = {
+    "id": "R-1", "activity": "U01-speaking-vocab", "title": "Unit 2", "subtitle": "Reading 1", "tag": "UNIT 2",
+    "speakers": WRITING["speakers"],
+    "scenes": [
+        {"kind": "passage", "chapter": "Scan",
+         "items": [{"label": "1", "text": "You need a licence, which costs £38."},
+                   {"label": "2", "text": "The test lasts about 40 minutes.", "note": "the test"}],
+         "lines": [{"a": "How much?", "focus": 0, "mark": "£38"}, {"wait": 1}, {"b": "Still the same part."},
+                   {"a": "How long?", "focus": 1, "mark": ["40 minutes"]}, {"b": "Another line, same part.", "focus": 1}]},
+        {"kind": "blanks", "chapter": "Listen",
+         "items": [{"n": 1, "answer": "18"}],
+         "lines": [{"a": "Listen."}, {"track": "T-1", "note": "Track 1", "start": 0.2, "end": 1.0},
+                   {"b": "Eighteen.", "reveal": 1}]},
+    ],
+}
+
+
+def _reading_book(tmp_path: Path) -> Path:
+    bdir = mini_book(tmp_path)
+    _wav(bdir / "t1.wav", 1.5)
+    book = json.loads((bdir / "book.json").read_text(encoding="utf-8"))
+    book["files"]["T-1"] = {"kind": "audio", "path": "t1.wav", "durationSec": 1.5}
+    (bdir / "book.json").write_text(json.dumps(book), encoding="utf-8")
+    return bdir
+
+
+def test_passage_marks_and_book_tracks(tmp_path):
+    bdir = _reading_book(tmp_path)
+    lesson = sc.Lesson.model_validate(copy.deepcopy(READING))
+    assert sc.check(lesson, bdir) == []
+    tl = timeline.build(lesson, tts.Silent(), say=quiet, book_dir=bdir)
+    marks = [f.mark for f in tl.frames if f.scene == 0]
+    assert marks[:3] == [("£38",), ("£38",), ("£38",)]          # giữ qua khoảng lặng và câu không đổi đoạn
+    assert marks[3:] == [("40 minutes",), ("40 minutes",)]       # đổi đoạn thì thay cụm tô vàng
+    audio = [f for f in tl.frames if f.audio]
+    assert [f.audio for f in audio] == ["T-1"] and audio[0].note == "Track 1"
+    assert 0.75 < audio[0].dur - lesson.gap < 0.85                 # chỉ phát đoạn 0,2–1,0 giây
+    slides = Slides(lesson, bdir, {})
+    for fr in tl.frames:
+        assert slides.render(fr, fr.start / tl.total).size == (W, H)
+    with pytest.raises(tts.TTSError):                              # thiếu thư mục sách thì báo rõ
+        timeline.build(lesson, tts.Silent(), say=quiet)
+
+
+def test_check_reports_bad_tracks(tmp_path):
+    bdir = _reading_book(tmp_path)
+    data = copy.deepcopy(READING)
+    data["scenes"][1]["lines"][1].update(track="T-9")
+    assert any("T-9" in p for p in sc.check(sc.Lesson.model_validate(data), bdir))
+    data["scenes"][1]["lines"][1].update(track="T-1", end=9.0)
+    assert any("1.5" in p for p in sc.check(sc.Lesson.model_validate(data), bdir))
+    (bdir / "t1.wav").unlink()
+    data["scenes"][1]["lines"][1].update(end=1.0)
+    assert any("t1.wav" in p for p in sc.check(sc.Lesson.model_validate(data), bdir))
+
+
+@pytest.mark.parametrize("patch", [
+    lambda d: d["scenes"][1]["lines"].append({"a": "x", "mark": "18"}),            # mark ngoài cảnh passage
+    lambda d: d["scenes"][1]["lines"].append({"a": "x", "track": "T-1"}),          # vừa nói vừa phát
+    lambda d: d["scenes"][1]["lines"].append({"track": "T-1", "start": 2, "end": 1}),  # end trước start
+    lambda d: d["scenes"][1]["lines"].append({"b": "x", "start": 1}),              # start không kèm track
+    lambda d: d["scenes"][0]["items"][0].pop("text"),                              # passage thiếu chữ
+])
+def test_bad_reading_scripts_are_rejected(patch):
+    data = copy.deepcopy(READING)
+    patch(data)
+    with pytest.raises((ValidationError, ValueError)):
+        sc.Lesson.model_validate(data)
+
+
+def test_split_letter_keeps_total_word_count(tmp_path):
+    data = copy.deepcopy(WRITING)
+    data["scenes"][2]["words"] = 167
+    lesson = sc.Lesson.model_validate(data)
+    assert lesson.scenes[2].words == 167 and lesson.scenes[0].words is None
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    assert slides.render(tl.frames[-1], 1.0).size == (W, H)
