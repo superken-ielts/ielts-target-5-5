@@ -66,9 +66,10 @@ try{
     assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
-  await step("Unit 1 có 2 video bài giảng, mở video từ thẻ unit", async () => {
+  await step("Unit 1 có 4 video bài giảng (Speaking, Writing), mở video từ thẻ unit", async () => {
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" });
-    assert.equal(await u1.locator(".bk-vids button").count(), 2);
+    assert.equal(await u1.locator(".bk-vids button").count(), 4);
+    assert.match(await u1.locator(".bk-vids").textContent(), /Writing 1: organizing your writing[\s\S]*Writing 2: types of letter/);
     await u1.locator(".bk-vids button").first().click();
     await page.waitForSelector("#p-book .bk-video");
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Speaking & Vocabulary/);
@@ -86,6 +87,14 @@ try{
     const mp4 = await page.evaluate(() => document.createElement("video").canPlayType('video/mp4; codecs="avc1.64001F, mp4a.40.2"'));
     if(!mp4) assert.match(await v1.locator(".bk-msg").textContent(), /không phát được video MP4/);
     else await page.waitForFunction(() => document.querySelector("#p-book video").duration > 60, null, { timeout: 15000 });
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+    // video Writing mở đúng phiên Writing của Unit 1
+    await page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" }).locator(".bk-vids button").nth(2).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Writing/);
+    assert.equal(await page.locator("#p-book video").count(), 2);
+    assert.match(await page.locator("#p-book video").first().getAttribute("src"), /lessons\/U01-writing-1\.mp4$/);
     await page.click("#p-book .reader-bar button");
     await page.waitForSelector("#p-book .bk-next");
   });

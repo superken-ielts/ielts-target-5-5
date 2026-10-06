@@ -69,7 +69,7 @@ Chữ cái, tên riêng hay bị đọc sai: viết cách đọc vào `say`, ki�
 
 | Bước | Module | Làm gì |
 |---|---|---|
-| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match`, `pairs`, `qa`, `compare`, `errors`, `practice`), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói); đối chiếu `activity` với `book.json` |
+| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match`, `pairs`, `qa`, `compare`, `errors`, `practice`, `order` = sắp xếp thứ tự, `timing` = chia thời gian, `letter` = thư mẫu cả trang), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói, `read: <người nói>` = đọc nguyên một đoạn thư); đối chiếu `activity` với `book.json` |
 | giọng đọc | `tts.py` | Kokoro qua `kokoro-onnx`; Flite qua `ctypes`; `silent` để thử nhanh và để test |
 | dòng thời gian | `timeline.py` | Đọc từng câu, chuẩn hóa âm lượng hai giọng, ghép thành một dải tiếng; mỗi câu một khung hình, đếm ngược mỗi giây một khung; chương theo cảnh |
 | slide | `slides.py` | Pillow vẽ 1280×720: thanh đầu, nội dung theo kiểu cảnh (ảnh cắt từ trang sách cho bài nối tranh), phụ đề người nói, thanh tiến độ |

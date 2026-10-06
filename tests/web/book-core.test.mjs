@@ -159,5 +159,6 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
     assert.ok(existsSync(new URL(l.file, BOOK)), l.file);
     assert.ok(l.duration > 60 && l.chapters.length > 0 && l.chapters[0].t === 0);
   }
-  assert.deepEqual(C.lessonsOf({ lessons }, { item: "U01" }).map(l => l.id), ["U01-speaking-1", "U01-speaking-2"]);
+  assert.deepEqual(C.lessonsOf({ lessons }, { item: "U01" }).map(l => l.id), ["U01-speaking-1", "U01-speaking-2", "U01-writing-1", "U01-writing-2"]);
+  assert.deepEqual(C.lessonsOf({ lessons }, { activity: "U01-writing" }).map(l => l.id), ["U01-writing-1", "U01-writing-2"]);
 });

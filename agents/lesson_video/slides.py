@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from functools import lru_cache
 from pathlib import Path
@@ -142,7 +143,8 @@ class Slides:
         if sc.kind != "title":
             self._heading(d, sc)
         getattr(self, "_k_" + sc.kind)(img, d, sc, fr)
-        self._caption(d, fr)
+        if sc.kind != "letter":  # thư mẫu dùng cả chiều cao, chữ đang đọc tô màu ngay trong thư
+            self._caption(d, fr)
         d.rounded_rectangle((40, 711, W - 40, 715), 2, fill=C["line"])
         if progress > 0:
             d.rounded_rectangle((40, 711, 40 + max(4, (W - 80) * min(progress, 1)), 715), 2, fill=C["red"])
@@ -297,9 +299,19 @@ class Slides:
             block(d, (x0 + 78, y + 14), str(it["q"]), "regular", 21, W - 60 - x0 - 90, C["ink"], max_lines=2,
                   lead=1.15, min_size=17)
 
+    def _cell(self, d, x, y, rh, text, width, fill=None):
+        """Chữ trong một hàng: một dòng nếu vừa, hàng đủ cao thì cho xuống hai dòng; canh giữa theo chiều dọc."""
+        f, lines = fit(d, text, "regular", 21, width, 1, min_size=18)
+        if len(wrap(d, text, f, width)) > 1 and rh >= 58:
+            f, lines = fit(d, text, "regular", 19, width, 2, min_size=16)
+        step = int(f.size * 1.15)
+        top = y + (rh - 4 - step * len(lines)) / 2
+        for k, ln in enumerate(lines):
+            d.text((x, top + k * step), ln, font=f, fill=fill or C["ink"])
+
     def _k_pairs(self, img, d, sc, fr):
         n = max(len(sc.items), len(sc.options))
-        rh = self._rows(n, cap=50)
+        rh = self._rows(n, cap=64)
         used = {str(it["answer"]) for it in sc.items if str(it["n"]) in fr.revealed}
         cur = sc.items[fr.focus]["answer"] if fr.focus is not None else None
         lx1, rx0 = 690, 730
@@ -309,8 +321,7 @@ class Slides:
             if on:
                 d.rounded_rectangle((52, y, lx1 + 6, y + rh - 4), 10, fill=C["soft"])
             d.text((66, y + (rh - 4) / 2), f"{it['n']}.", font=font("bold", 21), fill=C["red"], anchor="lm")
-            f, lines = fit(d, str(it["q"]), "regular", 21, lx1 - 160, 1)
-            d.text((98, y + (rh - 4) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+            self._cell(d, 98, y, rh, str(it["q"]), lx1 - 160)
             sx = lx1 - 44
             if str(it["n"]) in fr.revealed:
                 d.rounded_rectangle((sx, y + 6, sx + 40, y + rh - 10), 8, fill=C["red"])
@@ -325,8 +336,7 @@ class Slides:
             elif k in used:
                 d.rounded_rectangle((rx0 - 8, y, W - 52, y + rh - 4), 10, fill=C["oksoft"])
             d.text((rx0 + 6, y + (rh - 4) / 2), k + ".", font=font("bold", 21), fill=C["red"], anchor="lm")
-            f, lines = fit(d, str(op["text"]), "regular", 21, W - 60 - rx0 - 50, 1)
-            d.text((rx0 + 36, y + (rh - 4) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+            self._cell(d, rx0 + 36, y, rh, str(op["text"]), W - 60 - rx0 - 50)
 
     def _k_qa(self, img, d, sc, fr):
         if fr.focus is None:  # danh sách câu hỏi
@@ -436,3 +446,124 @@ class Slides:
             d.text((W / 2, cy), "Listen…", font=font("italic", 30), fill=C["muted"], anchor="mm")
         if it.get("hint"):
             d.text((W / 2, BOTTOM - 4), "Gợi ý: " + str(it["hint"]), font=font("italic", 20), fill=C["muted"], anchor="md")
+
+    def _k_order(self, img, d, sc, fr):
+        """Sắp xếp: cột trái các mục theo chữ cái, ô số thứ tự hiện khi mở; cột phải dựng dần thứ tự đúng."""
+        n = len(sc.items)
+        rh = self._rows(n, cap=64)
+        lx1, rx0 = 760, 800
+        for i, it in enumerate(sc.items):
+            y = TOP + i * rh
+            k = str(it["k"])
+            if fr.focus == i:
+                d.rounded_rectangle((52, y, lx1 + 6, y + rh - 4), 10, fill=C["soft"])
+            d.text((66, y + (rh - 4) / 2), k + ".", font=font("bold", 21), fill=C["red"], anchor="lm")
+            self._cell(d, 98, y, rh, str(it["text"]), lx1 - 160)
+            sx = lx1 - 44
+            if k in fr.revealed:
+                d.ellipse((sx + 2, y + (rh - 4) / 2 - 18, sx + 38, y + (rh - 4) / 2 + 18), fill=C["red"])
+                d.text((sx + 20, y + (rh - 4) / 2), str(it["pos"]), font=font("bold", 20), fill="#FFFFFF", anchor="mm")
+            else:
+                d.ellipse((sx + 2, y + (rh - 4) / 2 - 18, sx + 38, y + (rh - 4) / 2 + 18), outline=C["dim"], width=2)
+        d.rounded_rectangle((rx0, TOP, W - 60, BOTTOM), 16, fill=C["card"], outline=C["line"], width=2)
+        d.text((rx0 + 20, TOP + 14), "Correct order", font=font("bold", 20), fill=C["red"])
+        d.text((rx0 + 20, TOP + 40), "Thứ tự đúng", font=font("italic", 17), fill=C["muted"])
+        by_pos = {int(it["pos"]): it for it in sc.items}
+        sh = (BOTTOM - TOP - 76) / n
+        for pos in range(1, n + 1):
+            y = TOP + 70 + (pos - 1) * sh
+            it = by_pos[pos]
+            d.text((rx0 + 22, y + sh / 2), f"{pos}", font=font("bold", 20), fill=C["muted"], anchor="lm")
+            if str(it["k"]) in fr.revealed:
+                label = it.get("short") or it["text"]
+                f, lines = fit(d, f"{it['k']} · {label}", "regular", 18, W - 60 - rx0 - 70, 1, min_size=14)
+                d.text((rx0 + 50, y + sh / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+            else:
+                d.line((rx0 + 50, y + sh / 2 + 8, W - 84, y + sh / 2 + 8), fill=C["line"], width=2)
+
+    def _k_timing(self, img, d, sc, fr):
+        """Chia thời gian: thanh ngang theo số phút (mở dần nếu cảnh có `reveal`), bảng từng bước bên dưới."""
+        total = sum(float(it["minutes"]) for it in sc.items)
+        progressive = any(ln.reveal for ln in sc.lines)
+        shown = [not progressive or str(i) in fr.revealed for i in range(len(sc.items))]
+        x0, x1, y0, y1 = 60, W - 60, TOP + 6, TOP + 70
+        d.rounded_rectangle((x0, y0, x1, y1), 12, fill=C["card"], outline=C["line"], width=2)
+        shades = [0.95, 0.55, 0.75, 0.4, 0.85, 0.65, 0.5]
+        x = x0
+        for i, it in enumerate(sc.items):
+            w = (x1 - x0) * float(it["minutes"]) / total
+            if shown[i]:
+                col = tint(C["red"], shades[i % len(shades)]) if fr.focus in (None, i) else tint(C["red"], 0.18)
+                d.rectangle((x + 1, y0 + 2, x + w - 1, y1 - 2), fill=col)
+                label = f"{it['minutes']:g}'"
+                if w > 34:
+                    light = fr.focus not in (None, i)
+                    d.text((x + w / 2, (y0 + y1) / 2), label, font=font("bold", 20),
+                           fill=C["red"] if light else "#FFFFFF", anchor="mm")
+            x += w
+        d.text((x1, y1 + 8), f"Total: {total:g} minutes", font=font("bold", 18), fill=C["muted"], anchor="ra")
+        n = len(sc.items)
+        top = y1 + 40
+        rh = int(min(52, (BOTTOM - top) / max(n, 1)))
+        for i, it in enumerate(sc.items):
+            y = top + i * rh
+            if fr.focus == i:
+                d.rounded_rectangle((52, y, W - 52, y + rh - 4), 10, fill=C["soft"])
+            col = tint(C["red"], shades[i % len(shades)])
+            d.rounded_rectangle((66, y + (rh - 4) / 2 - 9, 84, y + (rh - 4) / 2 + 9), 4, fill=col if shown[i] else C["line"])
+            f, lines = fit(d, str(it["label"]), "bold" if fr.focus == i else "regular", 21, 640, 1)
+            d.text((100, y + (rh - 4) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+            if it.get("vi"):
+                f, lines = fit(d, str(it["vi"]), "italic", 17, 330, 1)
+                d.text((760, y + (rh - 4) / 2), lines[0], font=f, fill=C["muted"], anchor="lm")
+            d.text((W - 70, y + (rh - 4) / 2), f"{it['minutes']:g} min" if shown[i] else "? min",
+                   font=font("bold", 21), fill=C["red"] if shown[i] else C["dim"], anchor="rm")
+
+    def _k_letter(self, img, d, sc, fr):
+        """Thư mẫu: cả lá thư trên trang giấy, đoạn đang đọc tô nền; lề phải ghi vai trò từng đoạn và số từ."""
+        px0, px1, py0, py1 = 60, 890, TOP, 702
+        d.rounded_rectangle((px0 + 4, py0 + 4, px1 + 4, py1 + 4), 14, fill=C["line"])
+        d.rounded_rectangle((px0, py0, px1, py1), 14, fill="#FFFDF8", outline=C["line"], width=2)
+        width = px1 - px0 - 64
+        paras = [str(it["text"]).split("\n") for it in sc.items]
+
+        def layout(size):
+            f = font("regular", size)
+            step, gap = int(size * 1.32), int(size * 0.55)
+            boxes, y = [], py0 + 24
+            for para in paras:
+                rows = [r for part in para for r in (wrap(d, part, f, width) or [""])]
+                boxes.append((y, rows))
+                y += step * len(rows) + gap
+            return f, step, boxes, y
+
+        size = 23
+        f, step, boxes, end = layout(size)
+        while end > py1 - 18 and size > 14:
+            size -= 1
+            f, step, boxes, end = layout(size)
+        for i, (y, rows) in enumerate(boxes):
+            on = fr.focus == i
+            if on:
+                d.rounded_rectangle((px0 + 16, y - 5, px1 - 16, y + step * len(rows) + 1), 8, fill=C["soft"])
+                d.rounded_rectangle((px0 + 16, y - 5, px0 + 21, y + step * len(rows) + 1), 2, fill=C["red"])
+            for k, r in enumerate(rows):
+                d.text((px0 + 32, y + k * step), r, font=f, fill=C["ink"] if fr.focus is None or on else "#5F5852")
+        # lề phải: người đang đọc, vai trò từng đoạn, số từ
+        nx = px1 + 30
+        if fr.speaker:  # góc trên bên phải trang thư, ngang dòng lời chào (dòng ngắn)
+            sp = self.L.speakers[fr.speaker]
+            cx = px1 - 196
+            self._avatar(d, cx, py0 + 26, 18, fr.speaker)
+            d.text((cx + 26, py0 + 12), sp.name + " is reading", font=font("bold", 16), fill=sp.color)
+            d.text((cx + 26, py0 + 31), "đang đọc thư mẫu", font=font("italic", 14), fill=C["muted"])
+        for i, (y, rows) in enumerate(boxes):
+            note = sc.items[i].get("note")
+            if not note:
+                continue
+            on = fr.focus == i
+            d.line((px1 + 6, y + 10, nx - 6, y + 10), fill=C["red"] if on else C["line"], width=2)
+            block(d, (nx, y), str(note), "bold" if on else "regular", 17, W - 40 - nx, C["red"] if on else C["muted"],
+                  max_lines=2, lead=1.15, min_size=14)
+        words = sum(len(re.findall(r"[A-Za-z0-9']+", str(it["text"]))) for it in sc.items if it.get("body", True))
+        d.text((nx, py1 - 6), f"≈ {words} words", font=font("bold", 18), fill=C["muted"], anchor="ld")

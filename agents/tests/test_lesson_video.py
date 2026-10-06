@@ -250,3 +250,56 @@ def test_kokoro_reads_english_voices():
     assert rate == 24000 and len(a) > 0.5 * rate and abs(a.astype(int)).max() > 1000
     with pytest.raises(tts.TTSError):
         eng.check("zf_xiaobei")      # không phải giọng tiếng Anh, hoặc không có
+
+
+WRITING = {
+    "id": "W-1", "activity": "U01-speaking-vocab", "title": "Unit 1", "subtitle": "Writing 1", "tag": "UNIT 1",
+    "speakers": {"a": {"name": "Ann", "role": "teacher", "voice": "slt"},
+                 "b": {"name": "Ben", "role": "student", "voice": "rms"}},
+    "scenes": [
+        {"kind": "order", "chapter": "Order",
+         "items": [{"k": "a", "text": "Note down ideas.", "pos": 2}, {"k": "b", "text": "Check.", "pos": 3},
+                   {"k": "c", "text": "Read the question.", "pos": 1}],
+         "lines": [{"a": "Put them in order."}, {"wait": 2}, {"b": "First, c.", "focus": 2, "reveal": "c"},
+                   {"a": "Then a and b.", "reveal": ["a", "b"]}]},
+        {"kind": "timing", "chapter": "Time",
+         "items": [{"label": "Plan", "minutes": 6, "vi": "Lập dàn ý"}, {"label": "Write", "minutes": 11},
+                   {"label": "Check", "minutes": 3}],
+         "lines": [{"a": "Six minutes to plan.", "focus": 0, "reveal": 0}, {"a": "Eleven to write.", "focus": 1, "reveal": 1}]},
+        {"kind": "letter", "chapter": "Letter",
+         "items": [{"text": "Dear Sir/Madam,", "say": "Dear Sir or Madam,", "note": "Opening", "body": False},
+                   {"text": "I am writing to ask about your course.", "note": "Reason"},
+                   {"text": "Yours faithfully,\nMai Tran", "body": False}],
+         "lines": [{"read": "a", "focus": 0}, {"read": "b", "focus": 1}, {"read": "a", "focus": 2}]},
+    ],
+}
+
+
+def test_writing_kinds_validate_and_render(tmp_path):
+    lesson = sc.Lesson.model_validate(copy.deepcopy(WRITING))
+    letter = lesson.scenes[2]
+    assert [(ln.speaker, ln.text) for ln in letter.lines] == [
+        ("a", "Dear Sir/Madam,"), ("b", "I am writing to ask about your course."), ("a", "Yours faithfully,\nMai Tran")]
+    assert letter.lines[0].spoken == "Dear Sir or Madam,"            # `say` của đoạn thư dùng khi đọc
+    assert lesson.scenes[0].reveal_keys() == {"a", "b", "c"}
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    order = [f for f in tl.frames if f.scene == 0]
+    assert sorted(order[-1].revealed) == ["a", "b", "c"]
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    for fr in tl.frames:
+        assert slides.render(fr, fr.start / tl.total).size == (W, H)
+
+
+@pytest.mark.parametrize("patch", [
+    lambda d: d["scenes"][0]["items"][1].update(pos=2),                              # pos trùng
+    lambda d: d["scenes"][1]["lines"].append({"read": "a", "focus": 0}),             # read ngoài cảnh letter
+    lambda d: d["scenes"][2]["lines"].append({"read": "a"}),                         # read thiếu focus
+    lambda d: d["scenes"][2]["lines"].append({"read": "zed", "focus": 1}),           # người đọc lạ
+    lambda d: d["scenes"][2]["lines"].append({"wait": 3}),                           # letter không có đếm ngược
+    lambda d: d["scenes"][1]["items"][0].pop("minutes"),                             # timing thiếu số phút
+])
+def test_bad_writing_scripts_are_rejected(patch):
+    data = copy.deepcopy(WRITING)
+    patch(data)
+    with pytest.raises((ValidationError, ValueError)):
+        sc.Lesson.model_validate(data)

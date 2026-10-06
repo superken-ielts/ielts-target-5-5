@@ -271,6 +271,9 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
 - [x] **P2-32** Giọng đọc tự nhiên hơn: **Kokoro-82M** (Apache-2.0, bản nén q8 ~92 MB, mỗi giọng ~0,5 MB) thay Flite; dựng lại hai video Unit 1 với Emma `af_heart` (nữ) và Tom `am_michael` (nam), đều giọng Mỹ — cặp người dùng chọn từ video mẫu 4 cặp.
   - *Đợt 4:* bộ đọc `kokoro` (kokoro-onnx, giọng `b*` tách âm kiểu Anh), `--engine auto` (Kokoro nếu có model, không thì Flite), giọng khai theo bộ đọc, bộ nhớ tiếng từng câu; cách đọc trong `say` kiểm tra với cả hai bộ đọc. Model lấy từ gói npm `kokoro-q8-shards` (Hugging Face bị chặn trong môi trường cloud) theo lựa chọn của người dùng.
 - [ ] **P2-33** Video cho các unit và kỹ năng còn lại (viết thêm kịch bản `books/<sách>/lessons/*.yaml`).
+  - *Đợt 5:* xong Unit 1 Writing 1 và Writing 2 (P2-34); còn Unit 1 Reading, Listening và các unit khác.
+- [x] **P2-34** Video **Unit 1 · Writing 1** (organizing your writing) và **Writing 2** (types of letter / starting and ending letters), mỗi video kết thúc bằng một **thư mẫu đọc thành tiếng** (Writing 1: thư thân mật 160 từ đi qua đủ 6 bước; Writing 2: thư trang trọng hỏi thông tin 154 từ). Gắn vào hoạt động Unit 1 · Writing (phiên 4 và 5).
+  - *Đợt 5:* thêm kiểu cảnh `order` (sắp xếp các bước), `timing` (chia 20 phút), `letter` (thư mẫu cả trang, đoạn đang đọc tô màu, ghi chú lề, đếm từ) và dòng `read`; cảnh `pairs` cho phép hai dòng chữ.
 
 ### Cổng G2
 
