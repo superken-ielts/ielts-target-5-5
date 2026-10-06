@@ -1,0 +1,207 @@
+# Video bài giảng Unit 1 · Exam Practice — Reading (sách in trang 21). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-exam-reading.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Phần đáp án cuối sách không có trang này: đáp án A = 3, B = 1C 2A 3E 4D 5B
+# suy ra từ bài đọc (mỗi đáp án kèm câu làm bằng chứng).
+id: U01-exam-reading
+activity: U01-exam-practice
+title: "Unit 1 · Life"
+subtitle: "Exam practice: Reading"
+title_vi: "Luyện đề Reading — đọc lướt tìm chủ đề, nối câu với đoạn văn A–E"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to the Unit 1 Exam Practice. Now: the Reading Module."
+        say: "Welcome back to the Unit one Exam Practice. Now: the Reading Module."
+        vi: "Luyện đề Unit 1 — phần Reading."
+      - tom: "One text about work, and two exercises."
+      - emma: "That's right. And you don't need to understand every word. Let's see why."
+        vi: "Không cần hiểu từng chữ — xem vì sao nhé."
+
+  - kind: bullets
+    chapter: "Hôm nay làm gì"
+    heading: "Today's lesson"
+    heading_vi: "Hai kỹ năng đọc quan trọng nhất"
+    items:
+      - {en: "Exercise A: skim the text in one minute — what is it about?", vi: "Đọc lướt một phút, tìm chủ đề"}
+      - {en: "Key words in the text", vi: "Từ khóa trong bài"}
+      - {en: "Exercise B: match five sentences with parts A–E", vi: "Nối 5 câu với 5 đoạn A–E"}
+      - {en: "Question-type tips for the Reading Module", vi: "Mẹo làm hai dạng bài này"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, skimming: read quickly to find the main idea.", focus: 0}
+      - {emma: "Then, some key words from the text.", focus: 1}
+      - {emma: "Then, matching sentences with parts of the text.", focus: 2}
+      - {emma: "And finally, the exam tips.", focus: 3}
+
+  - kind: mcq
+    chapter: "Bài A: đọc lướt"
+    heading: "Reading A · Look at the extract for one minute"
+    heading_vi: "Đọc lướt một phút và chọn chủ đề 1, 2 hoặc 3"
+    items: &subject
+      - n: A
+        q: "Which subject is the web page about?"
+        keys: [1, 2, 3]
+        options: ["how to get a good job", "why most people are unhappy at work", "different ways of thinking about a job"]
+        answer: 3
+    lines:
+      - emma: "Exercise A. Look at this extract from a web page for one minute, and decide which subject it is about."
+        say: "Exercise eigh. Look at this extract from a web page for one minute, and decide which subject it is about."
+        vi: "Bài A: đọc lướt trích đoạn trang web trong một phút, chọn chủ đề."
+      - {emma: "One: how to get a good job. Two: why most people are unhappy at work. Three: different ways of thinking about a job.", focus: 0}
+      - tom: "Only one minute? I can't read it all!"
+      - emma: "You don't have to. This is skimming. Read the title, and the first sentence of each part. Don't stop at new words."
+        vi: "Đọc lướt: đọc tiêu đề và câu đầu mỗi đoạn, gặp từ mới thì bỏ qua."
+      - emma: "Let me read the text to you. Listen, and follow the key words on the right."
+        vi: "Emma đọc bài — theo dõi từ khóa ở lề phải."
+
+  - kind: letter
+    heading: "Perspectives of work and job satisfaction"
+    heading_vi: "Bài đọc — trang web về công việc"
+    items:
+      - {text: "Perspectives of work and job satisfaction", note: "Title: perspectives = ways of seeing", body: false}
+      - text: "A. People often see work from one of three perspectives. All three perspectives are important for job satisfaction, but one is usually the most important."
+        say: "Part eigh. People often see work from one of three perspectives. All three perspectives are important for job satisfaction, but one is usually the most important."
+        note: "A: three ways to see work"
+      - text: "B. It's a job. If you see work as a job and no more, you focus mainly on the financial rewards. In fact, you might have very little interest in the work you do. If a job with more pay comes along, you'll probably take it."
+        say: "Part B. It's a job. If you see work as a job and no more, you focus mainly on the financial rewards. In fact, you might have very little interest in the work you do. If a job with more pay comes along, you'll probably take it."
+        note: "B: a job → money"
+      - text: "C. It's a career. If you see work as a career, you want to advance. You want to climb the career ladder as far as possible or be among the top professionals in your field. You're motivated by the status and power that go with the job."
+        say: "Part C. It's a career. If you see work as a career, you want to advance. You want to climb the career ladder as far as possible, or be among the top professionals in your field. You're motivated by the status and power that go with the job."
+        note: "C: a career → status, power"
+      - text: "D. It's a calling. If you see your job as a calling, you focus on the work itself. You work for the satisfaction and fulfilment the work brings rather than for financial gain or career advancement."
+        say: "Part D. It's a calling. If you see your job as a calling, you focus on the work itself. You work for the satisfaction and fulfilment the work brings, rather than for financial gain or career advancement."
+        note: "D: a calling → the work itself"
+      - text: "E. Do you recognize yourself? One perspective isn't necessarily better than the others. But it's helpful to think about why you work if you're unsatisfied with your job and it's making you unhappy. Think about why you took your current job in the first place and whether that is a factor in your lack of job satisfaction."
+        say: "Part E. Do you recognize yourself? One perspective isn't necessarily better than the others. But it's helpful to think about why you work, if you're unsatisfied with your job and it's making you unhappy. Think about why you took your current job in the first place, and whether that is a factor in your lack of job satisfaction."
+        note: "E: think about why you work"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+      - {read: emma, focus: 4}
+      - {read: emma, focus: 5}
+
+  - kind: mcq
+    chapter: "Đáp án bài A"
+    heading: "Reading A · Answer"
+    heading_vi: "Tiêu đề và câu đầu đoạn A đã cho đáp án"
+    items: *subject
+    lines:
+      - emma: "So, Tom. Which subject is it about?"
+        focus: 0
+      - tom: "Number three: different ways of thinking about a job."
+        reveal: A
+      - tom: "The title says perspectives, and part A says: people often see work from one of three perspectives."
+        say: "The title says perspectives, and part eigh says: people often see work from one of three perspectives."
+      - emma: "Exactly. Perspectives means ways of seeing, or ways of thinking."
+        vi: "perspectives = cách nhìn, cách nghĩ → chủ đề 3."
+      - emma: "Number one is wrong: the text doesn't explain how to get a job."
+      - emma: "And number two is wrong too. Unhappy is in part E, but it's only one small idea, not the subject of the whole text."
+        vi: "'unhappy' chỉ có ở đoạn E — một ý nhỏ, không phải chủ đề cả bài."
+
+  - kind: vocab
+    chapter: "Từ khóa trong bài"
+    heading: "Key words from the text"
+    heading_vi: "Hiểu từ khóa là đủ để làm bài — không cần hiểu từng chữ"
+    items:
+      - {w: "perspective", pos: "noun", vi: "cách nhìn, quan điểm", ex: "People see work from different perspectives."}
+      - {w: "job satisfaction", pos: "noun phrase", vi: "sự hài lòng với công việc", ex: "Good colleagues give me job satisfaction."}
+      - {w: "financial rewards", pos: "noun phrase · = pay, money", vi: "phần thưởng tài chính, tiền lương", ex: "For him, the financial rewards are the most important thing."}
+      - {w: "a career", pos: "noun · advance, climb the career ladder", vi: "sự nghiệp · thăng tiến", ex: "She wants to climb the career ladder and become a manager."}
+      - {w: "status and power", pos: "noun", vi: "địa vị và quyền lực", ex: "A manager has more status and power."}
+      - {w: "a calling", pos: "noun · = work you love", vi: "thiên hướng, nghề mình yêu thích", ex: "Teaching is a calling for my mother."}
+    lines:
+      - emma: "Here are the key words. If you understand these, you can do Exercise B."
+        vi: "Nắm các từ khóa này là làm được bài B."
+      - {emma: "Perspective: a way of seeing something.", focus: 0}
+      - {tom: "People see work from different perspectives.", focus: 0}
+      - {emma: "Job satisfaction: when you are happy with your job.", focus: 1}
+      - {tom: "Good colleagues give me job satisfaction.", focus: 1}
+      - {emma: "Financial rewards: the money you get. Pay.", focus: 2}
+      - {tom: "For him, the financial rewards are the most important thing.", focus: 2}
+      - {emma: "A career. When you advance, you climb the career ladder.", focus: 3}
+      - {tom: "She wants to climb the career ladder and become a manager.", focus: 3}
+      - {emma: "Status and power: being important.", focus: 4}
+      - {tom: "A manager has more status and power.", focus: 4}
+      - {emma: "A calling: work you love, work you feel you must do.", focus: 5}
+      - {tom: "Teaching is a calling for my mother.", focus: 5}
+
+  - kind: pairs
+    chapter: "Bài B: nối câu với đoạn"
+    heading: "Reading B · Match each part A–E with one sentence"
+    heading_vi: "Đọc lướt lại bài, nối câu 1–5 với đoạn A–E"
+    items:
+      - {n: 1, q: "Some people want to be important.", answer: C}
+      - {n: 2, q: "People see work in different ways.", answer: A}
+      - {n: 3, q: "People should think about why they do their job.", answer: E}
+      - {n: 4, q: "For some people, money is not important.", answer: D}
+      - {n: 5, q: "Some people work only for money.", answer: B}
+    options:
+      - {k: A, text: "three perspectives"}
+      - {k: B, text: "It's a job."}
+      - {k: C, text: "It's a career."}
+      - {k: D, text: "It's a calling."}
+      - {k: E, text: "Do you recognize yourself?"}
+    lines:
+      - emma: "Exercise B. The text has five parts, A to E. Skim the text again and match each part with one sentence."
+        say: "Exercise B. The text has five parts, eigh to E. Skim the text again and match each part with one sentence."
+        vi: "Bài B: nối mỗi đoạn A–E với một câu."
+      - emma: "The sentences use different words from the text. Look for the same idea, not the same words."
+        vi: "Câu hỏi dùng từ khác bài đọc — tìm cùng ý, không tìm cùng chữ."
+      - {wait: 10, note: "Pause the video and match", vi: "Tạm dừng video và nối câu."}
+      - {emma: "Number one: some people want to be important.", focus: 0}
+      - {tom: "C, a career. You're motivated by the status and power.", reveal: 1}
+      - {emma: "Yes. Status and power: that means being important.", focus: 0}
+      - {emma: "Number two: people see work in different ways.", focus: 1}
+      - {tom: "A. People often see work from one of three perspectives.", say: "Eigh. People often see work from one of three perspectives.", reveal: 2}
+      - {emma: "Number three: people should think about why they do their job.", focus: 2}
+      - {tom: "E. It's helpful to think about why you work.", reveal: 3}
+      - {emma: "Number four: for some people, money is not important.", focus: 3}
+      - {tom: "D, a calling. They work for satisfaction, rather than for financial gain.", reveal: 4}
+      - {emma: "Number five: some people work only for money.", focus: 4}
+      - {tom: "B, a job. You focus mainly on the financial rewards.", reveal: 5}
+      - emma: "Well done. Notice: only for money in the question, and financial rewards in the text. Same idea, different words."
+        vi: "'only for money' ↔ 'financial rewards': cùng ý, khác chữ."
+
+  - kind: bullets
+    chapter: "Mẹo làm bài"
+    heading: "Question-type tips"
+    heading_vi: "Mẹo của sách cho bài Đọc"
+    items:
+      - {en: "You often have to choose answers from options", vi: "Thường phải chọn đáp án từ các phương án cho sẵn"}
+      - {en: "You often need to match sentences or questions with parts of a text", vi: "Thường phải nối câu hoặc câu hỏi với từng đoạn của bài"}
+      - {en: "Skim first: the title and the first sentence of each part", vi: "Đọc lướt trước: tiêu đề và câu đầu mỗi đoạn"}
+      - {en: "Match ideas, not words: only for money = financial rewards", vi: "Nối theo ý, không theo chữ"}
+      - {en: "Don't stop at new words — guess, and keep reading", vi: "Gặp từ mới: đoán nghĩa rồi đọc tiếp"}
+    lines:
+      - emma: "Two tips from the book."
+        vi: "Hai mẹo trong sách."
+      - {emma: "In the Listening and Reading Modules, you often have to choose answers from options.", focus: 0}
+      - {emma: "And in the Reading Module, you often need to match sentences or questions with parts of a text.", focus: 1}
+      - {emma: "So, skim first. Read the title and the first sentence of each part.", focus: 2}
+      - {emma: "Match ideas, not words.", focus: 3}
+      - {emma: "And don't stop at new words. Guess the meaning, and keep reading.", focus: 4}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Answers and next steps"
+    heading_vi: "Đáp án và việc tiếp theo"
+    items:
+      - {en: "A: 3 — different ways of thinking about a job", vi: "Chủ đề cả bài"}
+      - {en: "B: 1 C · 2 A · 3 E · 4 D · 5 B", vi: "Nối câu với đoạn"}
+      - {en: "Next: Unit 2", vi: "Tiếp theo: Unit 2"}
+    lines:
+      - emma: "Here are the answers. Exercise A: number three."
+        say: "Here are the answers. Exercise eigh: number three."
+        focus: 0
+      - {emma: "Exercise B: one C, two A, three E, four D, five B.", say: "Exercise B: one, C. Two, eigh. Three, E. Four, D. Five, B.", focus: 1}
+      - {tom: "Unit 1 is finished! I'm ready for Unit 2.", say: "Unit one is finished! I'm ready for Unit two.", focus: 2}
+      - {emma: "Great work, Tom. See you in Unit 2!", say: "Great work, Tom. See you in Unit two!", focus: 2}

@@ -1,0 +1,238 @@
+# Video bài giảng Unit 1 · Exam Practice — Listening (sách in trang 20). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-exam-listening.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Bộ sách không kèm file nghe Track 9 nên Emma (lễ tân) và Tom (khách)
+# đọc lại đúng Tapescript Track 9 (sách in trang 278), chia ba đoạn theo nhóm câu hỏi; cảnh nghe đặt hide_text để không lộ đáp án.
+# Đáp án theo Tapescript: 1 Hunt, 2 two, 3 Manchester, 4 104, 5 b, 6 c, 7 b, 8 D, 9 B.
+id: U01-exam-listening
+activity: U01-exam-practice
+title: "Unit 1 · Life"
+subtitle: "Exam practice: Listening"
+title_vi: "Luyện đề Listening — điền ghi chú, trắc nghiệm, điền bản đồ (Track 9 đọc lại theo Tapescript)"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to the Unit 1 Exam Practice. Today: the Listening Module."
+        say: "Welcome to the Unit one Exam Practice. Today: the Listening Module."
+        vi: "Luyện đề Unit 1 — phần Listening."
+      - tom: "A real exam task? I'm a little nervous."
+      - emma: "Don't worry. We'll do it step by step. I'll play the receptionist, and you'll be the hotel guest."
+        vi: "Emma đóng vai lễ tân, Tom đóng vai khách khách sạn."
+
+  - kind: bullets
+    chapter: "Hôm nay làm gì"
+    heading: "Today's lesson"
+    heading_vi: "Một bài nghe, ba dạng câu hỏi"
+    items:
+      - {en: "Questions 1–4: complete the notes", vi: "Điền ghi chú — tối đa ba từ hoặc một số"}
+      - {en: "Questions 5–7: choose the correct answer", vi: "Chọn đáp án a, b hoặc c"}
+      - {en: "Questions 8–9: label the map", vi: "Điền chữ cái A–F vào bản đồ"}
+      - {en: "Tips: read first, predict, listen for synonyms", vi: "Đọc trước, đoán loại từ, nghe từ đồng nghĩa"}
+    lines:
+      - emma: "Here is the plan. One conversation at a hotel reception, and three types of question."
+        vi: "Một đoạn hội thoại ở quầy lễ tân, ba dạng câu hỏi."
+      - {emma: "First, notes. Write no more than three words or a number.", focus: 0}
+      - {emma: "Then, multiple choice: a, b or c.", say: "Then, multiple choice: eigh, B, or C.", focus: 1}
+      - {emma: "Then, a map. You write a letter from A to F.", say: "Then, a map. You write a letter from eigh to F.", focus: 2}
+      - {emma: "And I'll give you some exam tips.", focus: 3}
+      - emma: "In the book, you listen three times. We'll listen in three parts, one part for each group of questions."
+        vi: "Sách cho nghe Track 9 ba lần; video chia hội thoại thành ba đoạn theo từng nhóm câu."
+
+  - kind: bullets
+    chapter: "Trước khi nghe"
+    heading: "Before you listen: questions 1–4"
+    heading_vi: "Đọc ghi chú trước và đoán loại từ cần điền"
+    items:
+      - {en: "1  Name of guest: Charles ___  →  a surname", vi: "Họ của khách — nghe cả cách đánh vần"}
+      - {en: "2  Number of nights: ___  →  a number", vi: "Một con số"}
+      - {en: "3  Home address: 25 North Road, ___, MA2 4CP  →  a town or city", vi: "Tên thành phố — viết hoa"}
+      - {en: "4  Room: ___  →  a number", vi: "Số phòng"}
+    lines:
+      - emma: "Before you listen, read the notes and guess the type of answer."
+        vi: "Trước khi nghe: đọc ghi chú, đoán loại từ cần điền."
+      - {emma: "Number one: Charles is a first name, so we need a surname.", focus: 0}
+      - {emma: "Number two: a number. How many nights?", focus: 1}
+      - {emma: "Number three: between the street and the postcode, we need a town or a city.", focus: 2}
+      - {emma: "And number four: a room number.", focus: 3}
+      - tom: "And I write no more than three words or a number."
+      - emma: "Right. And spelling counts! Now listen to part one and complete notes one to four."
+        vi: "Sai chính tả là mất điểm. Nghe đoạn 1 và điền câu 1–4."
+
+  - kind: blanks
+    chapter: "Nghe đoạn 1: câu 1–4"
+    heading: "Listening · Questions 1–4: complete the notes"
+    heading_vi: "Write no more than three words or a number — nghe đoạn 1"
+    hide_text: true
+    roles: {emma: receptionist, tom: guest}
+    items: &notes
+      - {n: 1, q: "Name of guest: Charles ___", answer: "Hunt", tip: "Hunt — the guest says it twice: in the name of Hunt … That's Charles Hunt."}
+      - {n: 2, q: "Number of nights: ___", answer: "two", tip: "two nights (you can also write 2)"}
+      - {n: 3, q: "Home address: 25 North Road, ___, MA2 4CP", answer: "Manchester", tip: "Oh, you're from Manchester. — a city: use a capital letter"}
+      - {n: 4, q: "Room: ___", answer: "104", tip: "room one-oh-four = 104; say 0 as 'oh' in room and phone numbers"}
+    lines:
+      - emma: "Good evening. How can I help?"
+      - tom: "I have a reservation in the name of Hunt, a reservation for two nights. That's Charles Hunt."
+      - emma: "Yes, Mr Hunt, let me see. Ah, here it is. Yes, two nights. I'll just need to photocopy your passport. Do you have it?"
+      - tom: "Um, yes, of course. There you are."
+      - emma: "Thank you. Could you just write your home address on the form here, while I copy the passport?"
+      - tom: "Yes, of course."
+      - emma: "Thank you. Oh, you're from Manchester. I was there two years ago for a football match. Manchester has a very good team."
+      - tom: "Yes, that's true. I'm actually more interested in rugby myself."
+      - emma: "Here's your key. You're in room one-oh-four. That's on the first floor. It's an interior room, so it should be very quiet. I think you asked for that."
+        say: "Here's your key. You're in room one oh four. That's on the first floor. It's an interior room, so it should be very quiet. I think you asked for that."
+      - {wait: 8, note: "Write your answers 1–4", vi: "Viết đáp án câu 1–4 (tạm dừng video nếu cần)."}
+
+  - kind: blanks
+    chapter: "Đáp án 1–4"
+    heading: "Questions 1–4 · Answers"
+    heading_vi: "Đáp án và câu nghe được trong bài"
+    items: *notes
+    lines:
+      - emma: "Let's check. Tom, number one. What is the guest's name?"
+        focus: 0
+      - tom: "Charles Hunt. He says Hunt twice."
+        reveal: 1
+      - emma: "Good. In the exam, spell it correctly: H, U, N, T."
+        say: "Good. In the exam, spell it correctly: aitch, you, en, tee."
+        vi: "Tên riêng phải đúng chính tả và viết hoa."
+      - {emma: "Number two. How many nights?", focus: 1}
+      - {tom: "Two. A reservation for two nights.", reveal: 2}
+      - emma: "You can write the word two, or the number two."
+        vi: "Viết 'two' hay '2' đều được."
+      - {emma: "Number three. Where is he from?", focus: 2}
+      - {tom: "Manchester. The receptionist says: oh, you're from Manchester.", reveal: 3}
+      - emma: "Yes. Did you hear football? That was the receptionist's trip, not the guest's. Be careful!"
+        vi: "'football match' là chuyến đi của lễ tân — bẫy cho câu 5."
+      - {emma: "Number four. Which room?", focus: 3}
+      - {tom: "One-oh-four. So, one hundred and four.", say: "One oh four. So, one hundred and four.", reveal: 4}
+      - emma: "Right. We often say oh for zero in room numbers and phone numbers."
+        vi: "Số 0 trong số phòng, số điện thoại thường đọc là 'oh'."
+
+  - kind: mcq
+    chapter: "Nghe đoạn 2: câu 5–7"
+    heading: "Listening · Questions 5–7: choose the correct answer"
+    heading_vi: "Đọc câu hỏi trước, gạch chân từ khóa — rồi nghe đoạn 2"
+    items: &mcq
+      - {n: 5, q: "Why is the guest travelling?", options: ["on holiday", "on business", "for a football match"], answer: b}
+      - {n: 6, q: "What was the guest's meal on the plane like?", options: ["big and very good", "small but very good", "small and not very good"], answer: c}
+      - {n: 7, q: "Where is the guest going to eat?", options: ["in the hotel restaurant", "in a restaurant outside the hotel", "in his room"], answer: b}
+    lines:
+      - emma: "Questions five to seven. Read the questions first and find the key words."
+        vi: "Câu 5–7: đọc trước, tìm từ khóa."
+      - {emma: "Why is he travelling?", focus: 0}
+      - {emma: "What was the meal on the plane like?", focus: 1}
+      - {emma: "Where is he going to eat?", focus: 2}
+      - emma: "Now listen to part two."
+        vi: "Nghe đoạn 2."
+
+  - kind: mcq
+    heading: "Listening · Questions 5–7: choose the correct answer"
+    heading_vi: "Nghe đoạn 2"
+    hide_text: true
+    roles: {emma: receptionist, tom: guest}
+    items: *mcq
+    lines:
+      - tom: "Oh yes, thank you. It's very important to sleep well when you have work to do. Can you tell me if the bill is already paid? I'm here for a conference, and my company is paying the bill. Usually they pay it before I travel, but sometimes I have to pay and then claim expenses."
+      - emma: "Let me check. Don't worry, sir, the bill has been paid in full."
+      - tom: "Oh, good, that's one thing I don't need to worry about. Is the restaurant still open? I know it's late, but the meal on the plane was tiny, and not very tasty either."
+      - emma: "I'm sorry, sir. The restaurant closes at nine-thirty, but there are two or three very nice places near the hotel. They will be open for a while."
+      - tom: "Oh, good. I'll have a quick shower and then get something. Which restaurant do you recommend?"
+      - {wait: 8, note: "Choose a, b or c for 5–7", vi: "Chọn đáp án câu 5–7 (tạm dừng video nếu cần)."}
+
+  - kind: mcq
+    chapter: "Đáp án 5–7"
+    heading: "Questions 5–7 · Answers"
+    heading_vi: "Bài nghe dùng từ khác với phương án — nghe ý, không nghe đúng từ"
+    items: *mcq
+    lines:
+      - {emma: "Number five. Why is he travelling?", focus: 0}
+      - {tom: "On business. He says: I'm here for a conference, and my company is paying.", reveal: 5}
+      - emma: "Yes. The word business is not in the recording. A conference, work to do, my company: they all mean business."
+        vi: "Không có chữ 'business' — 'conference', 'work to do', 'my company' cùng nghĩa công việc."
+      - emma: "And football? That was the receptionist, two years ago. So not C."
+      - {emma: "Number six. The meal on the plane?", focus: 1}
+      - {tom: "Small and not very good. He says it was tiny, and not very tasty.", reveal: 6}
+      - emma: "Tiny means very small. Not very tasty means not very good. So the answer is C."
+        vi: "tiny = small, not very tasty = not very good → c."
+      - {emma: "Number seven. Where is he going to eat?", focus: 2}
+      - {tom: "In a restaurant outside the hotel. The hotel restaurant closes at nine-thirty.", reveal: 7}
+      - emma: "Correct. He asks: which restaurant do you recommend? And he takes a shower first, so not in his room."
+        vi: "Nhà hàng khách sạn đã đóng; anh ấy hỏi gợi ý nhà hàng gần đó → b."
+
+  - kind: match
+    chapter: "Nghe đoạn 3: câu 8–9"
+    heading: "Listening · Questions 8–9: label the map"
+    heading_vi: "Nghe đoạn 3 — viết chữ cái A–F"
+    hide_text: true
+    roles: {emma: receptionist, tom: guest}
+    image: {pdf: course-book, page: 21, clip: [78, 606, 516, 774]}
+    items: &map
+      - {n: 8, q: "Mamma Mia's", answer: D}
+      - {n: 9, q: "the bank", answer: B}
+    lines:
+      - emma: "Mamma Mia's is probably best. It's very close to the hotel, and it isn't at all expensive. The food is delicious. When you come out of the hotel, you go right and then take the first left. You'll come into a big square, and you'll see Mamma Mia's on the right."
+      - tom: "That sounds great. Oh, and one more thing, sorry. Is there a cash machine nearby? I didn't have time to get any euros at the airport."
+      - emma: "Yes, the nearest bank is very close, too. Turn left out of the hotel and go down to the harbour. Turn left, and you'll see the bank. There are two cash machines outside."
+      - tom: "Thank you very much."
+      - emma: "Not at all. I hope you enjoy your meal and your stay with us. Goodnight."
+      - {wait: 8, note: "Write a letter A–F for 8 and 9", vi: "Viết chữ cái A–F cho câu 8 và 9."}
+
+  - kind: match
+    chapter: "Đáp án 8–9"
+    heading: "Questions 8–9 · Answers"
+    heading_vi: "Đi theo lời chỉ đường trên bản đồ"
+    image: {pdf: course-book, page: 21, clip: [78, 606, 516, 774]}
+    items: *map
+    lines:
+      - emma: "Let's follow the directions on the map. Start at the hotel, at the bottom."
+        vi: "Bắt đầu từ khách sạn ở cuối bản đồ."
+      - {emma: "Mamma Mia's: come out of the hotel and go right. Take the first left.", focus: 0}
+      - {emma: "You come into a big square. Mamma Mia's is on the right. Which letter, Tom?", focus: 0}
+      - {tom: "D!", say: "Dee!", reveal: 8}
+      - {emma: "Now the bank. Turn left out of the hotel and go down to the harbour, where the boat is.", focus: 1}
+      - {emma: "Turn left, and you'll see the bank.", focus: 1}
+      - {tom: "So it's B. Not C: you pass C before you turn.", reveal: 9}
+      - emma: "Well done. Learn the direction words: go right, turn left, take the first left, on the right."
+        vi: "Từ chỉ đường: go right, turn left, take the first left, on the right."
+
+  - kind: bullets
+    chapter: "Mẹo làm bài"
+    heading: "Question-type tip"
+    heading_vi: "In the Listening and Reading Modules, you often have to choose answers from options."
+    items:
+      - {en: "Read the questions before you listen: underline the key words", vi: "Đọc câu hỏi trước, gạch chân từ khóa"}
+      - {en: "Predict the answer: a name? a number? a place?", vi: "Đoán loại đáp án trước khi nghe"}
+      - {en: "Listen for synonyms: tiny = small, conference = business", vi: "Bài nghe thường dùng từ đồng nghĩa"}
+      - {en: "Watch out for traps: the football match was the receptionist's", vi: "Cẩn thận bẫy: từ có trong bài nhưng sai người, sai ý"}
+      - {en: "Check spelling, capital letters and the word limit", vi: "Kiểm tra chính tả, chữ hoa, số từ cho phép"}
+    lines:
+      - emma: "The book's tip: in the Listening and Reading Modules, you often have to choose answers from options."
+        vi: "Mẹo của sách: bài Nghe và Đọc thường phải chọn đáp án từ các phương án cho sẵn."
+      - {emma: "So, before you listen, read the questions and underline the key words.", focus: 0}
+      - {emma: "Predict the type of answer.", focus: 1}
+      - {emma: "Listen for synonyms. The recording rarely uses the same words as the options.", focus: 2}
+      - {emma: "Watch out for traps.", focus: 3}
+      - {emma: "And finally, check your spelling and the word limit.", focus: 4}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Your score"
+    heading_vi: "Đếm số câu đúng"
+    items:
+      - {en: "1 Hunt · 2 two · 3 Manchester · 4 104", vi: "Điền ghi chú"}
+      - {en: "5 b · 6 c · 7 b", vi: "Trắc nghiệm"}
+      - {en: "8 D · 9 B", vi: "Bản đồ"}
+      - {en: "Next: Exam practice — Reading", vi: "Tiếp theo: video luyện đề Reading"}
+    lines:
+      - emma: "Here are all the answers. Count your score out of nine."
+        vi: "Tổng hợp đáp án — tự chấm trên 9 câu."
+      - {emma: "Notes: Hunt, two, Manchester, one hundred and four.", focus: 0}
+      - {emma: "Multiple choice: b, c, b.", say: "Multiple choice: B, C, B.", focus: 1}
+      - {emma: "The map: D and B.", say: "The map: Dee and B.", focus: 2}
+      - {tom: "Eight out of nine! I spelled Hunt with an a.", say: "Eight out of nine! I spelled Hunt with an eigh.", focus: 2}
+      - {emma: "Good score! Next, the Reading Module. See you in the next video.", focus: 3}

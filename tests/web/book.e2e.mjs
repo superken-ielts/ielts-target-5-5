@@ -66,10 +66,11 @@ try{
     assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
-  await step("Unit 1 có 6 video bài giảng xếp theo phần (Speaking & Vocabulary, Writing), mở video từ thẻ unit", async () => {
+  await step("Unit 1 có 9 video bài giảng xếp theo phần như trong sách, mở video từ thẻ unit", async () => {
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" });
-    assert.equal(await u1.locator(".bk-vids button").count(), 6);
-    assert.deepEqual(await u1.locator(".bk-vgroup-t").allTextContents(), ["Speaking & Vocabulary", "Writing"]);
+    assert.equal(await u1.locator(".bk-vids button").count(), 9);
+    assert.deepEqual(await u1.locator(".bk-vgroup-t").allTextContents(), ["Speaking & Vocabulary", "Writing", "Consolidation", "Exam practice"]);
+    assert.match(await u1.locator(".bk-vgroup").last().textContent(), /Exam practice: Listening[\s\S]*Exam practice: Reading/);
     assert.match(await u1.locator(".bk-vgroup").first().textContent(), /Speaking 1[\s\S]*Speaking 2[\s\S]*Vocabulary 1–3/);
     assert.match(await u1.locator(".bk-vids").textContent(), /Writing 1: organizing your writing[\s\S]*Writing 2: types of letter[\s\S]*Writing 3: organizing points/);
     await u1.locator(".bk-vids button").first().click();
@@ -97,6 +98,14 @@ try{
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Writing/);
     assert.equal(await page.locator("#p-book video").count(), 3);
     assert.match(await page.locator("#p-book video").first().getAttribute("src"), /lessons\/U01-writing-1\.mp4$/);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+    // video luyện đề mở phiên Consolidation & Exam practice: một video ôn tập + hai video luyện đề
+    await page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" }).locator(".bk-vids button", { hasText: "Exam practice: Listening" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Consolidation & Exam practice/);
+    const srcs = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(srcs, ["U01-consolidation.mp4", "U01-exam-listening.mp4", "U01-exam-reading.mp4"]);
     await page.click("#p-book .reader-bar button");
     await page.waitForSelector("#p-book .bk-next");
   });

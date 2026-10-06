@@ -148,6 +148,8 @@ test("video bài giảng: lọc theo hoạt động / unit, tìm phiên chứa v
   const groups = C.groupLessons([{ id: "x", activity: "A" }, { id: "y", activity: "B" }, { id: "z", activity: "A" }]);
   assert.deepEqual(groups.map(g => [g.activity, g.lessons.map(l => l.id)]), [["A", ["x", "z"]], ["B", ["y"]]]);
   assert.deepEqual(C.groupLessons(undefined), []);
+  const ordered = C.groupLessons([{ id: "x", activity: "A" }, { id: "y", activity: "B" }, { id: "w", activity: "Q" }, { id: "z", activity: "A" }], ["B", "A"]);
+  assert.deepEqual(ordered.map(g => g.activity), ["B", "A", "Q"]);
 });
 
 test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt động có thật và có file", { skip: !existsSync(new URL("lessons/lessons.json", BOOK)) }, () => {
@@ -162,8 +164,11 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
     assert.ok(existsSync(new URL(l.file, BOOK)), l.file);
     assert.ok(l.duration > 60 && l.chapters.length > 0 && l.chapters[0].t === 0);
   }
-  assert.deepEqual(C.lessonsOf({ lessons }, { item: "U01" }).map(l => l.id), ["U01-speaking-1", "U01-speaking-2", "U01-vocabulary", "U01-writing-1", "U01-writing-2", "U01-writing-3"]);
-  assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U01" })).map(g => [g.activity, g.lessons.length]),
-    [["U01-speaking-vocab", 3], ["U01-writing", 3]]);
+  assert.deepEqual(C.lessonsOf({ lessons }, { item: "U01" }).map(l => l.id).sort(), ["U01-consolidation", "U01-exam-listening", "U01-exam-reading",
+    "U01-speaking-1", "U01-speaking-2", "U01-vocabulary", "U01-writing-1", "U01-writing-2", "U01-writing-3"]);
+  // mục lục theo thứ tự trong sách, không theo thứ tự chữ cái của lessons.json
+  assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U01" }), Object.keys(acts)).map(g => [g.activity, g.lessons.map(l => l.id)]),
+    [["U01-speaking-vocab", ["U01-speaking-1", "U01-speaking-2", "U01-vocabulary"]], ["U01-writing", ["U01-writing-1", "U01-writing-2", "U01-writing-3"]],
+     ["U01-consolidation", ["U01-consolidation"]], ["U01-exam-practice", ["U01-exam-listening", "U01-exam-reading"]]]);
   assert.deepEqual(C.lessonsOf({ lessons }, { activity: "U01-writing" }).map(l => l.id), ["U01-writing-1", "U01-writing-2", "U01-writing-3"]);
 });

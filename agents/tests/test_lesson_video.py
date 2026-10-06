@@ -326,3 +326,81 @@ def test_blanks_and_unlabelled_order(tmp_path):
     data["scenes"][0]["lines"].append({"a": "x", "reveal": 9})
     with pytest.raises((ValidationError, ValueError)):
         sc.Lesson.model_validate(data)
+
+
+EXAM = {
+    "id": "E-1", "activity": "U01-speaking-vocab", "title": "Unit 1", "subtitle": "Exam practice", "tag": "UNIT 1",
+    "speakers": WRITING["speakers"],
+    "scenes": [
+        {"kind": "blanks", "chapter": "Listen", "hide_text": True, "roles": {"a": "receptionist", "b": "guest"},
+         "items": [{"n": 1, "q": "Name of guest: Charles ___", "answer": "Hunt", "tip": "H-U-N-T"},
+                   {"n": 2, "q": "One of my uncles has got ten ___.", "answer": "children", "hint": "child"}],
+         "lines": [{"a": "Good evening."}, {"b": "That's Charles Hunt."}, {"wait": 2}]},
+        {"kind": "blanks", "chapter": "Answers",
+         "items": [{"n": 1, "q": "Name of guest: Charles ___", "answer": "Hunt", "tip": "H-U-N-T"}],
+         "lines": [{"b": "Hunt.", "focus": 0, "reveal": 1}]},
+        {"kind": "mcq", "chapter": "Choose",
+         "items": [{"n": 5, "q": "Why is the guest travelling?", "options": ["on holiday", "on business"], "answer": "b"},
+                   {"n": "A", "q": "Which subject?", "keys": [1, 2, 3], "options": ["x", "y", "z"], "answer": 3}],
+         "lines": [{"a": "Number five?", "focus": 0}, {"b": "On business.", "reveal": 5}, {"b": "Three.", "focus": 1, "reveal": "A"}]},
+    ],
+}
+
+
+def test_exam_kinds_validate_and_render(tmp_path):
+    lesson = sc.Lesson.model_validate(copy.deepcopy(EXAM))
+    assert lesson.scenes[0].hide_text and lesson.scenes[0].roles == {"a": "receptionist", "b": "guest"}
+    assert lesson.scenes[2].reveal_keys() == {"5", "A"}
+    assert sc.mcq_keys(lesson.scenes[2].items[1]) == ["1", "2", "3"]
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    assert sorted(tl.frames[-1].revealed) == ["5", "A"]
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    for fr in tl.frames:
+        assert slides.render(fr, fr.start / tl.total).size == (W, H)
+
+
+@pytest.mark.parametrize("patch", [
+    lambda d: d["scenes"][2]["items"][0].update(answer="c"),                         # đáp án ngoài a, b
+    lambda d: d["scenes"][2]["items"][1].update(answer="c"),                         # đáp án ngoài keys
+    lambda d: d["scenes"][2]["items"][1].update(keys=[1, 2]),                        # thiếu nhãn
+    lambda d: d["scenes"][2]["items"][0].pop("options"),                             # mcq thiếu phương án
+    lambda d: d["scenes"][0].update(roles={"zed": "guest"}),                         # vai cho người lạ
+    lambda d: d["scenes"][1]["lines"].append({"b": "x", "reveal": 2}),               # mở ô không có
+])
+def test_bad_exam_scripts_are_rejected(patch):
+    data = copy.deepcopy(EXAM)
+    patch(data)
+    with pytest.raises((ValidationError, ValueError)):
+        sc.Lesson.model_validate(data)
+
+
+def test_coverage_lists_parts_with_and_without_video(tmp_path):
+    from lesson_video import coverage
+    bdir = mini_book(tmp_path)
+    book = json.loads((bdir / "book.json").read_text(encoding="utf-8"))
+    book["sections"][0]["items"][0]["activities"].append({"id": "U01-writing", "title": "Unit 1 · Writing", "printedPages": [17, 18]})
+    book["sections"][0]["items"].append({"id": "U02", "activities": [{"id": "U02-reading"}]})
+    (bdir / "book.json").write_text(json.dumps(book), encoding="utf-8")
+    entry = {"id": "T-1", "activity": "U01-speaking-vocab", "label": "Speaking 1", "duration": 75.4, "chapters": [{"t": 0, "title": "a"}]}
+    video.write_manifest(bdir / "lessons", entry)
+    (bdir / "lessons" / "W-1.yaml").write_text("id: W-1\nactivity: U01-writing\n", encoding="utf-8")
+    units = coverage.coverage(bdir, ["U01"])
+    assert [u["item"] for u in units] == ["U01"]
+    parts = units[0]["parts"]
+    assert [p["activity"] for p in parts] == ["U01-speaking-vocab", "U01-writing"]
+    assert [v["id"] for v in parts[0]["videos"]] == ["T-1"] and parts[1]["drafts"] == ["W-1"]
+    md = coverage.to_markdown(units)
+    assert "1/2 phần có video, 1 video, 1:15" in md and "kịch bản chưa dựng: W-1" in md and "sách tr. 17–18" in md
+    assert len(coverage.coverage(bdir)) == 2
+    assert cli.main(["coverage", str(bdir), "--unit", "U02"]) == 0
+
+
+@pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
+def test_unit1_video_coverage():
+    """Unit 1: mọi phần có trang trong sách đều có video, trừ Listening và Reading (xem docs/agent-hoc-tap/06)."""
+    from lesson_video import coverage
+    (u1,) = coverage.coverage(REAL, ["U01"])
+    have = {p["activity"]: [v["id"] for v in p["videos"]] for p in u1["parts"]}
+    assert not have["U01-listening"] and not have["U01-reading"] and not have["U01-unit-review"]
+    for act in ("U01-speaking-vocab", "U01-writing", "U01-consolidation", "U01-exam-practice"):
+        assert have[act], act

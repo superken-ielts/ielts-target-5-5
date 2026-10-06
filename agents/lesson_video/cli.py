@@ -4,6 +4,8 @@
     python -m lesson_video build <kịch bản.yaml>… [--engine auto|kokoro|flite|silent] [--speed 0.9]
                                  [--model F.onnx] [--voices THƯ_MỤC] [--out THƯ_MỤC] [--work THƯ_MỤC] [--no-cache]
 
+    python -m lesson_video coverage <thư mục sách> [--unit U01 …]
+
 `build` ghi <id>.mp4 cạnh kịch bản và cập nhật lessons.json; có `--out` thì chỉ ghi video vào thư mục đó
 (xem thử), không đụng lessons.json. `--work` giữ lại ảnh từng khung hình và file tiếng để soát.
 Tiếng từng câu được lưu ở ~/.cache/lesson_video/tts nên dựng lại chỉ đọc những câu đã đổi.
@@ -16,7 +18,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from . import script as sc, timeline, tts, video
+from . import coverage, script as sc, timeline, tts, video
 from .slides import Slides
 
 
@@ -83,7 +85,13 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--no-cache", action="store_true", help="không dùng bộ nhớ tiếng đã đọc")
     b.add_argument("--out", help="ghi video vào thư mục này, không cập nhật lessons.json")
     b.add_argument("--work", help="giữ khung hình và file tiếng ở thư mục này")
+    v = sub.add_parser("coverage", help="bảng phần nào của unit đã có video, phần nào chưa")
+    v.add_argument("book", help="thư mục sách (có book.json)")
+    v.add_argument("--unit", action="append", help="chỉ in unit này (lặp lại được), ví dụ --unit U01")
     args = ap.parse_args(argv)
+    if args.cmd == "coverage":
+        print(coverage.to_markdown(coverage.coverage(Path(args.book), args.unit)))
+        return 0
     try:
         return _check(args.lessons) if args.cmd == "check" else _build(args)
     except tts.TTSError as e:

@@ -15,7 +15,7 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter", "blanks"]
+               "order", "timing", "letter", "blanks", "mcq"]
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -31,7 +31,8 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "order": ("k", "text", "pos"),      # sắp xếp: mỗi mục có vị trí đúng `pos`
     "timing": ("label", "minutes"),     # chia thời gian: thanh ngang theo số phút
     "letter": ("text",),                # thư mẫu: mỗi mục một đoạn; `note` ghi chú lề, `body: false` không đếm từ
-    "blanks": ("n", "answer"),          # nghe – chép: ô trống số n, mở ra thì hiện `answer` (và `tip` nếu có)
+    "blanks": ("n", "answer"),          # ô trống số n, mở ra thì hiện `answer` (+ `tip`); có `q` chứa ___ thì là câu điền từ, `hint` = từ gốc
+    "mcq": ("n", "q", "options", "answer"),  # trắc nghiệm: `options` là danh sách, `answer` là a, b, c… hoặc một nhãn trong `keys`
 }
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
 LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read"}
@@ -108,6 +109,13 @@ class Line(_M):
         return self.say or self.text
 
 
+def mcq_keys(it: dict) -> list[str]:
+    """Nhãn phương án của một câu trắc nghiệm: `keys` nếu có (ví dụ [1, 2, 3]), không thì a, b, c…"""
+    if it.get("keys"):
+        return [str(k) for k in it["keys"]]
+    return [chr(97 + i) for i in range(len(it["options"]))]
+
+
 class Scene(_M):
     kind: Kind
     chapter: str = ""
@@ -116,6 +124,8 @@ class Scene(_M):
     items: list[dict] = []
     options: list[dict] = []
     image: Optional[ImageRef] = None
+    hide_text: bool = False   # bài nghe: thanh phụ đề chỉ hiện người nói, ẩn lời (không lộ đáp án)
+    roles: dict[str, str] = {}  # vai trong cảnh này, ví dụ {emma: receptionist} khi đóng bài nghe
     lines: list[Line]
 
     @model_validator(mode="after")
@@ -133,6 +143,13 @@ class Scene(_M):
             raise ValueError("cảnh match cần `image`")
         if self.kind == "order" and sorted(int(it["pos"]) for it in self.items) != list(range(1, len(self.items) + 1)):
             raise ValueError("cảnh order: `pos` phải là 1…n, mỗi số một lần")
+        if self.kind == "mcq":
+            for it in self.items:
+                letters = mcq_keys(it)
+                if len(letters) != len(it["options"]):
+                    raise ValueError(f"cảnh mcq: câu {it['n']} có {len(it['options'])} phương án nhưng {len(letters)} nhãn `keys`")
+                if str(it["answer"]) not in letters:
+                    raise ValueError(f"cảnh mcq: đáp án '{it['answer']}' của câu {it['n']} không thuộc {letters}")
         if self.kind == "letter" and any(ln.wait for ln in self.lines):
             raise ValueError("cảnh letter không có khoảng lặng `wait` (không có chỗ hiện đếm ngược)")
         if not self.lines:
@@ -147,7 +164,7 @@ class Scene(_M):
         return self
 
     def reveal_keys(self) -> set[str]:
-        if self.kind in ("match", "pairs", "blanks"):
+        if self.kind in ("match", "pairs", "blanks", "mcq"):
             return {str(it["n"]) for it in self.items}
         if self.kind == "order":
             return {str(it["k"]) for it in self.items}
@@ -217,6 +234,9 @@ class Lesson(_M):
     @model_validator(mode="after")
     def _roles(self):
         for sc in self.scenes:
+            bad = [k for k in sc.roles if k not in self.speakers]
+            if bad:
+                raise ValueError(f"`roles` có người nói chưa khai báo: {', '.join(bad)}")
             for it in sc.items:
                 for k in ("ask", "by"):
                     if k in it and it[k] not in self.speakers:

@@ -10,7 +10,7 @@ from typing import Optional
 
 from PIL import Image, ImageDraw, ImageFont
 
-from .script import Lesson, Scene
+from .script import Lesson, Scene, mcq_keys
 from .timeline import Frame
 
 W, H = 1280, 720
@@ -188,8 +188,14 @@ class Slides:
             sp = self.L.speakers[fr.speaker]
             d.rounded_rectangle((box[0], box[1], box[0] + 8, box[3]), 4, fill=sp.color)
             self._avatar(d, 94, 633, 34, fr.speaker)
-            label = sp.name + (" · " + sp.role if sp.role else "")
+            scene = self.L.scenes[fr.scene]
+            role = scene.roles.get(fr.speaker, sp.role)
+            label = sp.name + (" · " + role if role else "")
             d.text((x0, 576), label, font=font("bold", 17), fill=sp.color)
+            if scene.hide_text:  # bài nghe: không hiện lời thoại
+                d.text((x0, 606), "Listen carefully…", font=font("italic", 27), fill=C["muted"])
+                d.text((x0, 650), "Nghe kỹ — lời thoại được ẩn để bạn tự làm bài", font=font("italic", 19), fill=C["dim"])
+                return
             y = block(d, (x0, 600), fr.text, "regular", 27, width, C["ink"], max_lines=2 if fr.vi else 3, min_size=19)
             if fr.vi:
                 f, lines = fit(d, fr.vi, "italic", 19, width, 1)
@@ -564,7 +570,7 @@ class Slides:
             cx = chip_x
             self._avatar(d, cx, py0 + 26, 18, fr.speaker)
             d.text((cx + 26, py0 + 12), sp.name + " is reading", font=font("bold", 16), fill=sp.color)
-            d.text((cx + 26, py0 + 31), "đang đọc bài mẫu", font=font("italic", 14), fill=C["muted"])
+            d.text((cx + 26, py0 + 31), "đang đọc thành tiếng", font=font("italic", 14), fill=C["muted"])
         for i, (y, rows) in enumerate(boxes):
             note = sc.items[i].get("note")
             if not note:
@@ -577,7 +583,10 @@ class Slides:
         d.text((nx, py1 - 6), f"≈ {words} words", font=font("bold", 18), fill=C["muted"], anchor="ld")
 
     def _k_blanks(self, img, d, sc, fr):
-        """Nghe – chép: các ô trống đánh số (hai hàng như trong sách); mở ra thì hiện chữ đúng và mẹo chính tả."""
+        """Nghe – chép: các ô trống đánh số (hai hàng như trong sách); mở ra thì hiện chữ đúng và mẹo chính tả.
+        Mục có `q` (câu chứa ___) thì vẽ thành danh sách câu điền từ."""
+        if any(it.get("q") for it in sc.items):
+            return self._blank_sentences(d, sc, fr)
         n = len(sc.items)
         cols = 5 if n > 6 else n
         rows = (n + cols - 1) // cols
@@ -602,3 +611,76 @@ class Slides:
             d.text((80, ty + (BOTTOM - 4 - ty) / 2), "Spelling tip:", font=font("bold", 19), fill=C["red"], anchor="lm")
             f, lines = fit(d, str(cur["tip"]), "regular", 21, W - 260, 1, min_size=15)
             d.text((220, ty + (BOTTOM - 4 - ty) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+
+    def _blank_sentences(self, d, sc, fr):
+        n = len(sc.items)
+        cur = sc.items[fr.focus] if fr.focus is not None else None
+        show_tip = cur is not None and str(cur["n"]) in fr.revealed and cur.get("tip")
+        rh = int(min(56, (BOTTOM - TOP - (58 if show_tip else 0)) / max(n, 1)))
+        hint_x = W - 230
+        for i, it in enumerate(sc.items):
+            y = TOP + i * rh
+            mid = y + (rh - 4) / 2
+            on = fr.focus == i
+            if on:
+                d.rounded_rectangle((52, y, W - 52, y + rh - 4), 10, fill=C["soft"])
+            d.text((66, mid), f"{it['n']}.", font=font("bold", 22), fill=C["red"], anchor="lm")
+            q = str(it.get("q") or "___")
+            before, _, after = q.partition("___")
+            f = font("regular", 22)
+            x = 104
+            if before:
+                d.text((x, mid), before, font=f, fill=C["ink"], anchor="lm")
+                x += d.textlength(before, font=f) + 6
+            ans = str(it["answer"])
+            if str(it["n"]) in fr.revealed:
+                fb = font("bold", 22)
+                d.text((x, mid), ans, font=fb, fill=C["red"], anchor="lm")
+                x += d.textlength(ans, font=fb)
+                d.line((x - d.textlength(ans, font=fb), mid + 15, x, mid + 15), fill=C["red"], width=2)
+            else:
+                d.line((x, mid + 13, x + 150, mid + 13), fill=C["dim"], width=2)
+                x += 150
+            if after:  # dấu câu dính sát chỗ trống, chữ thường cách một khoảng
+                d.text((x + (1 if after[0] in ".,?!;:'" else 6), mid), after, font=f, fill=C["ink"], anchor="lm")
+            if it.get("hint"):
+                d.rounded_rectangle((hint_x, y + 8, W - 64, y + rh - 12), 8, fill=C["card"], outline=C["line"])
+                d.text(((hint_x + W - 64) / 2, mid), str(it["hint"]), font=font("italic", 19), fill=C["muted"], anchor="mm")
+        if show_tip:
+            ty = TOP + n * rh + 6
+            by = min(BOTTOM - 4, ty + 54)
+            d.rounded_rectangle((60, ty, W - 60, by), 12, fill=C["card"], outline=C["line"], width=2)
+            d.text((80, (ty + by) / 2), "Tip:", font=font("bold", 19), fill=C["red"], anchor="lm")
+            f, lines = fit(d, str(cur["tip"]), "regular", 21, W - 220, 1, min_size=15)
+            d.text((130, (ty + by) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+
+    def _k_mcq(self, img, d, sc, fr):
+        """Trắc nghiệm a/b/c (hoặc `keys` riêng, ví dụ 1/2/3): mỗi câu một thẻ; mở đáp án thì tô xanh phương án đúng."""
+        n = len(sc.items)
+        gap = 24
+        cw = (W - 120 - gap * (n - 1)) / max(n, 1)
+        oh = 52
+
+        def height(it):  # thẻ cao vừa nội dung, các thẻ cao bằng nhau
+            f, lines = fit(d, f"{it['n']}. {it['q']}", "bold", 23, cw - 44, 3, min_size=17)
+            return 18 + int(f.size * 1.2) * len(lines) + 12 + oh * len(it["options"]) + 6
+
+        bottom = min(BOTTOM, TOP + max(height(it) for it in sc.items))
+        for i, it in enumerate(sc.items):
+            x0 = 60 + i * (cw + gap)
+            on = fr.focus == i
+            d.rounded_rectangle((x0, TOP, x0 + cw, bottom), 16, fill=C["card"],
+                                outline=C["red"] if on else C["line"], width=3 if on else 2)
+            y = block(d, (x0 + 22, TOP + 18), f"{it['n']}. {it['q']}", "bold", 23, cw - 44, C["ink"], max_lines=3, lead=1.2, min_size=17)
+            y += 12
+            done = str(it["n"]) in fr.revealed
+            keys = mcq_keys(it)
+            for k, opt in enumerate(it["options"]):
+                letter = keys[k]
+                right = done and letter == str(it["answer"])
+                if right:
+                    d.rounded_rectangle((x0 + 14, y - 6, x0 + cw - 14, y + oh - 10), 10, fill=C["oksoft"])
+                d.text((x0 + 26, y + (oh - 16) / 2), letter + ".", font=font("bold", 21), fill=C["ok"] if right else C["red"], anchor="lm")
+                f, lines = fit(d, str(opt), "bold" if right else "regular", 21, cw - 90, 1, min_size=15)
+                d.text((x0 + 56, y + (oh - 16) / 2), lines[0], font=f, fill=C["ink"] if not done or right else C["muted"], anchor="lm")
+                y += oh
