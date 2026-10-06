@@ -18,7 +18,26 @@ cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U0
 
 ## 1. Unit 1 · Life — độ phủ video
 
-<!-- coverage:U01 -->
+Bảng in bằng lệnh `coverage` sau đợt 11:
+
+### U01 · Life — 6/7 phần có video, 13 video, 1:26:43
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-1` — Speaking 1: talking about personal information | 7:14 | 8 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-2` — Speaking 2: exchanging personal information | 6:16 | 9 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-vocabulary` — Vocabulary 1–3: family, stages of life, key words | 8:24 | 12 |
+| Listening | Listening tr. 12–13 | `U01-listening-1` — Listening 1: listening for specific information | 6:32 | 7 |
+| Listening | Listening tr. 12–13 | `U01-listening-2` — Listening 2: practising listening for specific information | 6:36 | 8 |
+| Reading | sách tr. 14–16 | `U01-reading-1` — Reading 1: skimming | 4:34 | 7 |
+| Reading | sách tr. 14–16 | `U01-reading-2` — Reading 2: practise skimming | 3:52 | 7 |
+| Writing | sách tr. 17–18 | `U01-writing-1` — Writing 1: organizing your writing | 7:08 | 12 |
+| Writing | sách tr. 17–18 | `U01-writing-2` — Writing 2: types of letter / starting and ending letters | 7:58 | 10 |
+| Writing | sách tr. 17–18 | `U01-writing-3` — Writing 3: organizing points in a personal letter | 8:30 | 10 |
+| Consolidation | sách tr. 19 | `U01-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 6:52 | 10 |
+| Exam practice | sách tr. 20–21 | `U01-exam-listening` — Exam practice: Listening | 7:08 | 11 |
+| Exam practice | sách tr. 20–21 | `U01-exam-reading` — Exam practice: Reading | 5:40 | 8 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
 
 **Kết luận:** Unit 1 có video cho **mọi phần có trang trong Course Book** (6/7 phần; phần còn lại "Ôn unit + sổ lỗi"
 là phiên tự ôn, không có trang sách, không cần video). Listening và Reading làm ở đợt 11, sau khi công cụ phát được
