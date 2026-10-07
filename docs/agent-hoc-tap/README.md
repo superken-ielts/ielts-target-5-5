@@ -50,6 +50,12 @@ mọi phần có trang trong Course Book; bỏ Workbook (bộ sách không có),
 **Đợt 12 (07/10/2026):** 11 video Unit 3 — Unit 1–3 đủ video cho mọi phần có trang trong Course Book (36 video);
 hồ sơ video (file 06) thêm Unit 3 và kế hoạch Unit 4.
 
+**Đợt 13 (07/10/2026):** nghe / xem lặp lại trong tab Sách:
+- lặp một bài hoặc cả danh sách;
+- hẹn giờ dừng;
+- đếm thời gian nghe trong ngày;
+- lặp đoạn A–B và lặp chương trên video.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

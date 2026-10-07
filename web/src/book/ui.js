@@ -309,6 +309,151 @@ const BookUI = (() => {
     draw();
   }
 
+  /* ---------- lặp khi nghe / xem (thanh audio và video bài giảng) ----------
+     Chế độ lặp và hẹn giờ dừng nhớ riêng cho audio / video trong trình duyệt này. Đếm số lượt đã nghe hết,
+     thời gian nghe của lần này và của cả ngày — để nghe đi nghe lại một bài trong thời gian dài. */
+  const REPEAT_MODES = ["off", "one", "all"];
+  const SLEEP_MIN = [0, 15, 30, 45, 60, 90, 120, 180];
+  function readJson(k){ try{ return JSON.parse(localStorage.getItem(k) || "null"); }catch(e){ return null; } }
+  function writeJson(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){ /* hết chỗ hoặc bị chặn */ } }
+  function listenKey(){ return LS + ":" + slug() + ":listen"; }
+  function dayIso(){ try{ return iso(today()); }catch(e){ return new Date().toISOString().slice(0, 10); } }
+  function fmtMin(m){ return m < 60 ? m + " phút" : Math.floor(m / 60) + " giờ" + (m % 60 ? " " + (m % 60) : ""); }
+  let LISTEN = null;             // thời gian nghe trong ngày {d, sec}, dùng chung mọi thanh lặp trên trang
+  const REP_PAINT = new Set();   // vẽ lại các thanh lặp đang hiện khi thời gian nghe trong ngày đổi
+
+  /* kind "audio" | "video"; n bài trong danh sách; go(j) mở và phát bài j (0 ≤ j < n). Gắn từng media bằng attach(). */
+  function repeater(kind, n, unit, go){
+    const key = LS + ":repeat:" + kind;
+    const saved = readJson(key) || {};
+    const st = {mode: REPEAT_MODES.includes(saved.mode) ? saved.mode : "off",
+                sleep: SLEEP_MIN.includes(saved.sleep) ? saved.sleep : 0};
+    let laps = 0, heard = 0, since = null, note = "";
+    LISTEN = readJson(listenKey());
+    const el = h("div", "bk-rep");
+    const seg = h("div", "seg");
+    const cap = unit.charAt(0).toUpperCase() + unit.slice(1);
+    const labels = {off: "Tắt", one: cap + " này", all: "Cả " + n + " " + unit};
+    (n > 1 ? REPEAT_MODES : ["off", "one"]).forEach(m => {
+      const b = h("button", null, labels[m]);
+      b.type = "button"; b.dataset.mode = m;
+      b.onclick = () => { st.mode = m; writeJson(key, st); paintMode(); };
+      seg.append(b);
+    });
+    function paintMode(){
+      const on = st.mode === "all" && n < 2 ? "one" : st.mode;  // một bài thì "lặp cả danh sách" cũng là lặp bài này
+      [...seg.children].forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mode === on)));
+    }
+    const sel = document.createElement("select");
+    sel.className = "inp bk-sleep";
+    sel.setAttribute("aria-label", "Hẹn giờ dừng");
+    SLEEP_MIN.forEach(m => {
+      const o = h("option", null, m ? "Dừng sau " + fmtMin(m) : "Không hẹn giờ");
+      o.value = String(m);
+      sel.append(o);
+    });
+    sel.value = String(st.sleep);
+    sel.onchange = () => {  // đổi hẹn giờ thì tính lại từ lúc này
+      flush(); heard = 0; note = "";
+      st.sleep = Number(sel.value) || 0; writeJson(key, st); paint();
+    };
+    const info = h("div", "tiny bk-rep-info", "");
+    const top = h("div", "bk-rep-row");
+    top.append(h("span", "bk-rep-k", "Lặp lại"), seg);
+    const row = h("div", "bk-rep-row");
+    row.append(sel, info);
+    el.append(top, row);
+
+    const live = () => since == null ? 0 : Math.max(0, nowMs() - since) / 1000;
+    function flush(){  // cộng đoạn vừa nghe vào lần này và vào cả ngày (trần 2 phút, phòng máy ngủ giữa chừng)
+      if(since == null) return;
+      const d = Math.min(live(), 120);
+      since = nowMs(); heard += d;
+      LISTEN = BookCore.addListen(readJson(listenKey()), dayIso(), d);
+      writeJson(listenKey(), LISTEN);
+      REP_PAINT.forEach(r => { if(r.el.isConnected) r.paint(); else REP_PAINT.delete(r); });  // bỏ thanh của màn hình cũ
+    }
+    function paint(){
+      const now = heard + live(), left = BookCore.sleepLeft(st.sleep, now);
+      const daySec = (LISTEN && LISTEN.d === dayIso() ? LISTEN.sec : 0) + live();
+      info.textContent = (note ? note + " · " : "") + (laps ? "Đã nghe hết " + laps + " lượt · " : "")
+        + "Lần này " + BookCore.fmtHms(now) + (left != null && !note ? " (còn " + BookCore.fmtHms(left) + ")" : "")
+        + " · Hôm nay " + BookCore.fmtHms(daySec);
+    }
+    function lap(){ laps++; paint(); }
+
+    /* idx() là số thứ tự bài đang nằm trong media; ab là đoạn lặp A–B của media đó (nếu có). */
+    function attach(media, idx, ab){
+      media.addEventListener("play", () => {
+        if(root) root.querySelectorAll("audio, video").forEach(m => { if(m !== media && !m.paused) m.pause(); });
+        if(since == null) since = nowMs();
+        note = ""; paint();
+        if(n > 1 && "mediaSession" in navigator) try{  // nút bài trước / bài sau trên màn hình khóa theo bài vừa phát
+          navigator.mediaSession.setActionHandler("nexttrack", () => go((idx() + 1) % n));
+          navigator.mediaSession.setActionHandler("previoustrack", () => go((idx() + n - 1) % n));
+        }catch(e){ /* trình duyệt không hỗ trợ */ }
+      });
+      media.addEventListener("pause", () => { flush(); since = null; paint(); });
+      media.addEventListener("timeupdate", () => {
+        // sự kiện pause của bài trước (cùng danh sách) đến sau play của bài này thì đồng hồ đã bị tắt: bật lại
+        if(since == null && !media.paused) since = nowMs();
+        if(ab && ab.jump()) lap();
+        if(since != null && nowMs() - since >= 10000) flush();
+        if(BookCore.sleepLeft(st.sleep, heard + live()) === 0){
+          media.pause(); flush(); heard = 0;
+          note = "Đã dừng theo hẹn giờ " + fmtMin(st.sleep);
+        }
+        paint();
+      });
+      media.addEventListener("ended", () => {
+        if(ab && ab.active()){ media.currentTime = ab.a; media.play().catch(() => {}); lap(); return; }
+        const i = idx(), j = BookCore.nextOnEnd(st.mode, i, n);
+        lap();
+        if(j < 0) return;
+        if(j === i){ media.currentTime = 0; media.play().catch(() => {}); }
+        else go(j);
+      });
+    }
+    REP_PAINT.add({el, paint});
+    paintMode(); paint();
+    return {el, attach};
+  }
+
+  /* Đoạn lặp A–B trên một audio / video: phát tới B thì quay về A. range(t) (nếu có) cho nút "Lặp chương này". */
+  function abLoop(media, range){
+    const ab = {a: null, b: null, byChapter: false};
+    const txt = h("span", "tiny bk-ab", "");
+    const paint = () => {
+      txt.textContent = ab.a == null ? "" : (ab.byChapter ? "Lặp chương " : "Lặp ")
+        + BookCore.fmtClock(ab.a) + (ab.b == null ? " → …" : " → " + BookCore.fmtClock(ab.b));
+    };
+    ab.set = (a, b, byChapter) => { ab.a = a; ab.b = b; ab.byChapter = !!byChapter; paint(); };
+    ab.active = () => ab.a != null && ab.b != null;
+    ab.jump = () => {
+      if(!ab.active() || media.currentTime < ab.b) return false;
+      media.currentTime = ab.a;
+      return true;
+    };
+    const setA = btn("A", "btn-sm", () => ab.set(media.currentTime || 0, null));
+    const setB = btn("B", "btn-sm", () => { if(ab.a != null && media.currentTime > ab.a) ab.set(ab.a, media.currentTime); });
+    const clr = btn("Bỏ lặp A–B", "btn-sm", () => ab.set(null, null));
+    setA.title = "Đặt điểm đầu đoạn lặp"; setB.title = "Đặt điểm cuối đoạn lặp";
+    ab.els = [setA, setB];
+    if(range){
+      ab.chapter = t => {  // lặp chương chứa thời điểm t, nhảy về đầu chương nếu đang ở ngoài
+        const r = range(t);
+        if(!r) return;
+        ab.set(r[0], r[1], true);
+        if(!(media.currentTime >= r[0] && media.currentTime < r[1])) try{ media.currentTime = r[0]; }catch(e){ /* chưa tải xong */ }
+      };
+      const ch = btn("Lặp chương này", "btn-sm", () => ab.chapter(media.currentTime || 0));
+      ch.title = "Lặp đi lặp lại chương đang xem";
+      ab.els.push(ch);
+    }
+    ab.els.push(clr, txt);
+    return ab;
+  }
+
   /* ---------- thanh audio ---------- */
   function audioBar(bookId, trackIds){
     const book = BOOKS[bookId].book;
@@ -318,7 +463,7 @@ const BookUI = (() => {
     audio.controls = true; audio.preload = "metadata";
     const ctl = h("div", "bk-ctl");
     const msgEl = h("p", "bk-msg");
-    let blobUrl = null, cur = null, loopA = null, loopB = null;
+    let blobUrl = null, cur = null;
     const posKey = id => LS + ":audio-pos:" + bookId + ":" + id;
 
     const back = btn("−5s", "btn-sm", () => { audio.currentTime = Math.max(0, audio.currentTime - 5); });
@@ -336,17 +481,15 @@ const BookUI = (() => {
       };
       speed.append(b);
     });
-    const loopTxt = h("span", "tiny", "");
-    const setA = btn("A", "btn-sm", () => { loopA = audio.currentTime; paintLoop(); });
-    const setB = btn("B", "btn-sm", () => { if(loopA != null && audio.currentTime > loopA){ loopB = audio.currentTime; paintLoop(); } });
-    const clr = btn("Bỏ lặp", "btn-sm", () => { loopA = loopB = null; paintLoop(); });
-    setA.title = "Đặt điểm đầu đoạn lặp"; setB.title = "Đặt điểm cuối đoạn lặp";
-    function paintLoop(){
-      loopTxt.textContent = loopA == null ? "" : "Lặp " + BookCore.fmtClock(loopA) + (loopB == null ? " → …" : " → " + BookCore.fmtClock(loopB));
-    }
-    ctl.append(back, fwd, speed, setA, setB, clr, loopTxt);
+    const ab = abLoop(audio);
+    ctl.append(back, fwd, speed);
+    const abRow = h("div", "bk-ctl bk-abrow");
+    abRow.append(...ab.els);
+    // lặp cả danh sách: hết track thì mở track sau từ đầu và phát luôn
+    const advance = j => pick(trackIds[j], list.children[j], true).then(() => audio.play().catch(() => {}));
+    const rep = repeater("audio", trackIds.length, "track", advance);
+    rep.attach(audio, () => trackIds.indexOf(cur), ab);
     audio.addEventListener("timeupdate", () => {
-      if(loopA != null && loopB != null && audio.currentTime >= loopB) audio.currentTime = loopA;
       if(cur && Math.floor(audio.currentTime) % 5 === 0){
         try{ localStorage.setItem(posKey(cur), String(audio.currentTime)); }catch(e){}
       }
@@ -356,15 +499,15 @@ const BookUI = (() => {
       msgEl.textContent = "Không phát được track này. Nếu đang dùng bản trên Claude, nhập file audio ở tab Sách → Quản lý file.";
     });
 
-    async function pick(id, btnEl){
+    async function pick(id, btnEl, fromStart){
       [...list.children].forEach(x => x.setAttribute("aria-pressed", "false"));
       btnEl.setAttribute("aria-pressed", "true");
-      cur = id; loopA = loopB = null; paintLoop();
+      cur = id; ab.set(null, null);
       msgEl.textContent = ""; msgEl.className = "bk-msg";
       if(blobUrl){ URL.revokeObjectURL(blobUrl); blobUrl = null; }
       const src = await source(bookId, id);
       if(src.blob){ blobUrl = URL.createObjectURL(src.blob); audio.src = blobUrl; } else { audio.src = src.url; }
-      const pos = Number(localStorage.getItem(posKey(id)) || 0);
+      const pos = fromStart ? 0 : Number(localStorage.getItem(posKey(id)) || 0);
       audio.addEventListener("loadedmetadata", () => { if(pos > 0 && pos < audio.duration - 2) audio.currentTime = pos; }, {once: true});
       if("mediaSession" in navigator && window.MediaMetadata){
         try{ navigator.mediaSession.metadata = new MediaMetadata({title: id + " · " + book.files[id].title, album: book.title}); }catch(e){}
@@ -387,7 +530,7 @@ const BookUI = (() => {
       list.append(b);
       if(k === 0) setTimeout(() => pick(id, b), 0);
     });
-    wrap.append(h("div", "eyebrow", "Audio · " + trackIds.length + " track"), list, audio, ctl, scriptBtn, msgEl);
+    wrap.append(h("div", "eyebrow", "Audio · " + trackIds.length + " track"), list, audio, ctl, abRow, rep.el, scriptBtn, msgEl);
     return wrap;
   }
 
@@ -815,7 +958,7 @@ const BookUI = (() => {
   }
 
   const MP4 = 'video/mp4; codecs="avc1.64001F, mp4a.40.2"';
-  function videoBox(bookId, l, start){
+  function videoBox(bookId, l, start, rp, i){
     const box = h("div", "bk-video");
     box.id = "lesson-" + l.id;
     box.append(h("div", "bk-vid-t", l.label || l.title));
@@ -831,9 +974,11 @@ const BookUI = (() => {
     v.addEventListener("error", () => {
       if(codecOk) fail("Không tải được video. Bản tự host cần máy chủ thấy thư mục books/ (web/serve.py); bản trên Claude chưa xem được video.");
     });
+    const ab = abLoop(v, t => BookCore.chapterRange(l, BookCore.chapterAt(l, t)));
     const chaps = h("div", "bk-chaps");
     const chapBtns = (l.chapters || []).map(c => {
       const b = btn(BookCore.fmtClock(c.t) + " " + c.title, "btn-sm", () => {
+        if(ab.byChapter) ab.chapter(c.t);  // đang lặp chương thì chuyển sang lặp chương vừa chọn
         try{ v.currentTime = c.t; v.play().catch(() => {}); }catch(e){ /* chưa tải xong */ }
       });
       chaps.append(b);
@@ -846,8 +991,11 @@ const BookUI = (() => {
     v.addEventListener("timeupdate", () => { VPOS[l.id] = v.currentTime; mark(); });
     v.addEventListener("loadedmetadata", () => { if(VPOS[l.id]) v.currentTime = VPOS[l.id]; });
     mark();
+    const loop = h("div", "bk-ctl bk-vloop");
+    loop.append(...ab.els);
+    if(rp) rp.attach(v, () => i, ab);
     const meta = h("p", "tiny", BookCore.fmtClock(l.duration) + " · " + (l.voices || []).join(" · "));
-    box.append(v, chaps, out, meta);
+    box.append(v, chaps, loop, out, meta);
     if(start){  // mở từ nút trên thẻ unit: cuộn tới video và phát một lần (vẽ lại trang thì không tự phát nữa)
       view.lessonId = null;
       setTimeout(() => { box.scrollIntoView({block: "start"}); v.play().catch(() => {}); }, 0);
@@ -914,7 +1062,17 @@ const BookUI = (() => {
       const vids = BookCore.lessonsOf(BOOKS[bookId], {activity: a.id});
       if(vids.length){
         box.append(h("div", "eyebrow bk-vh", "Video bài giảng · " + vids.length));
-        vids.forEach(l => box.append(videoBox(bookId, l, view.lessonId === l.id)));
+        const els = [];
+        const rp = repeater("video", vids.length, "video", j => {  // lặp cả danh sách: cuộn tới video sau và phát từ đầu
+          const v = els[j] && els[j].querySelector("video");
+          if(!v) return;
+          VPOS[vids[j].id] = 0;
+          try{ v.currentTime = 0; }catch(e){ /* chưa tải xong */ }
+          els[j].scrollIntoView({block: "start", behavior: "smooth"});
+          v.play().catch(() => {});
+        });
+        box.append(rp.el);
+        vids.forEach((l, i) => { els[i] = videoBox(bookId, l, view.lessonId === l.id, rp, i); box.append(els[i]); });
       }
       ac.append(box);
     });

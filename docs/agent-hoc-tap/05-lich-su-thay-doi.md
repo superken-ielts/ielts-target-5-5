@@ -5,6 +5,59 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 13 — 07/10/2026: nghe / xem lặp lại
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `b6b1b51` (đã merge PR #13).
+
+### Yêu cầu
+
+Thêm cơ chế lặp khi xem video / nghe file MP3, để học nghe đi nghe lại trong thời gian dài; xong thì tạo PR.
+
+### Đã làm
+
+Tab Sách, trong phiên học: thanh audio và danh sách video của mỗi hoạt động có thêm hàng **Lặp lại**.
+
+| Phần | Cách chạy |
+|---|---|
+| Chế độ lặp | **Tắt** (phát một lần) · **Track này / Video này** (hết bài thì phát lại từ đầu) · **Cả N track / Cả N video** (hết bài thì sang bài sau, hết bài cuối thì quay về bài đầu). Audio chuyển track rồi phát tiếp luôn, kể cả khi màn hình khóa; video cuộn tới video sau rồi phát |
+| Hẹn giờ dừng | Không hẹn giờ, 15 / 30 / 45 phút, 1 giờ, 1 giờ 30, 2 giờ, 3 giờ — đổi hẹn giờ thì tính lại từ lúc đó; hết giờ thì dừng và báo "Đã dừng theo hẹn giờ …" |
+| Dòng trạng thái | Số lượt đã nghe hết (cả lượt quay về A), thời gian nghe lần này (còn bao lâu nếu có hẹn giờ), thời gian nghe **cả ngày** — dùng chung mọi thanh trên trang |
+| Đoạn A–B | Video cũng có A / B (trước chỉ có audio); đặt lại A thì xóa B cũ (trước đây B cũ nằm trước A mới sẽ làm audio nhảy liên tục) |
+| Lặp chương | Nút *Lặp chương này* trên mỗi video: lặp chương đang xem; đang lặp chương mà bấm chương khác thì lặp chương đó |
+| Một bài một lúc | Phát một audio / video thì các bài khác trên trang tự dừng |
+| Màn hình khóa | Nút bài trước / bài sau (Media Session) chuyển bài trong danh sách vừa phát (track audio hoặc video) |
+| Ghi nhớ | Chế độ lặp và hẹn giờ nhớ riêng cho audio / video (`<LS>:repeat:audio`, `<LS>:repeat:video`); thời gian nghe trong ngày ở `<LS>:<slug>:listen`. Mỗi lần cộng tối đa 2 phút, để máy ngủ giữa chừng không làm số vọt lên |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `web/src/book/core.js` | Hàm thuần `nextOnEnd` (bài phát tiếp theo chế độ), `sleepLeft` (hẹn giờ), `addListen` (cộng thời gian nghe theo ngày), `chapterRange` (khoảng của một chương), `fmtHms` (giờ:phút:giây) |
+| `web/src/book/ui.js` | `repeater()` (hàng Lặp lại dùng chung cho audio và video), `abLoop()` (đoạn A–B, lặp chương); thanh audio dùng hai hàm này; nút bài trước / bài sau trên màn hình khóa theo danh sách vừa phát; `videoBox()` có hàng A–B / lặp chương; phiên học tạo một thanh lặp cho danh sách video của mỗi hoạt động |
+| `web/src/book/book.css` | Kiểu cho hàng Lặp lại, ô hẹn giờ, hàng A–B |
+| `tests/web/book-core.test.mjs` | +1 test các hàm lặp |
+| `tests/web/book.e2e.mjs` | +1 bước: lặp track, lặp cả 3 track (quay vòng về track đầu), A–B, hẹn giờ dừng (cho đồng hồ trang chạy nhanh), lặp chương video, nhớ chế độ |
+| `web/README.md` | Mục *Nghe / xem lặp lại*; mô tả tab Sách |
+| `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | Task P2-44; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không thêm, không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `node --test "tests/web/*.test.mjs"` | 14 passed (+1: bài phát tiếp, hẹn giờ, cộng thời gian theo ngày, khoảng chương, giờ:phút:giây) |
+| `node tests/web/book.e2e.mjs` | 15/15 bước OK. Bước mới: Track này phát lại từ đầu (1 lượt); Cả 3 track đi 1 → 2 → 3 → 1 (4 lượt); A–B quay về A; hẹn giờ 15 phút dừng phát; thời gian nghe trong ngày tăng đúng; Lặp chương 0:00 → 0:18, bấm chương khác thì lặp chương đó |
+| `cd agents && python -m pytest -q` | 57 passed (không đổi) |
+| Ảnh chụp bề ngang 390 px và 1100 px | Nhãn ngắn (Tắt / Track này / Cả 3 track) không xuống dòng; A–B nằm hàng riêng |
+
+### Còn treo
+
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+
+---
+
 ## Đợt 12 — 07/10/2026: 11 video Unit 3
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `80e0a4c` (đã merge PR #12).

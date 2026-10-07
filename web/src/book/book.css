@@ -27,6 +27,16 @@
 .bk-tracks button[aria-pressed="true"]{background:var(--accent); color:var(--accent-ink); border-color:var(--accent)}
 .bk-ctl{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
 .bk-ctl .seg button{padding:4px 8px; font-size:12px}
+/* lặp khi nghe / xem */
+.bk-rep{display:grid; gap:6px; margin:8px 0 4px}
+.bk-rep .seg{flex:1; min-width:220px}
+.bk-rep .seg button{padding:5px 6px; font-size:12.5px; white-space:nowrap}
+.bk-rep-row{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.bk-rep-k{font-size:12px; font-weight:600; color:var(--ink-2)}
+.bk-abrow{margin-top:6px}
+.bk-sleep{width:auto; padding:5px 8px; font-size:12.5px}
+.bk-rep-info{flex:1; min-width:160px; font-family:var(--font-num)}
+.bk-vloop{margin-top:6px}
 .bk-viewer{position:fixed; inset:0; z-index:80; background:var(--ground); display:flex; flex-direction:column}
 .bk-vbar{display:flex; align-items:center; gap:6px; padding:8px 10px; border-bottom:1px solid var(--line);
   background:var(--surface); padding-top:max(8px, env(safe-area-inset-top))}

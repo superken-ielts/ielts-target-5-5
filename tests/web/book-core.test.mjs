@@ -152,6 +152,31 @@ test("video bài giảng: lọc theo hoạt động / unit, tìm phiên chứa v
   assert.deepEqual(ordered.map(g => g.activity), ["B", "A", "Q"]);
 });
 
+test("lặp khi nghe / xem: bài tiếp theo, hẹn giờ dừng, thời gian nghe trong ngày, lặp chương", () => {
+  // phát 1 lần: hết thì dừng; lặp bài này: phát lại chính nó; lặp cả danh sách: sang bài sau, hết bài cuối quay về đầu
+  assert.deepEqual([C.nextOnEnd("off", 0, 3), C.nextOnEnd("one", 1, 3), C.nextOnEnd("all", 1, 3), C.nextOnEnd("all", 2, 3)], [-1, 1, 2, 0]);
+  assert.equal(C.nextOnEnd("all", 0, 1), 0);
+  assert.equal(C.nextOnEnd("all", 0, 0), -1);
+  assert.equal(C.nextOnEnd("lạ", 0, 3), -1);
+  // hẹn giờ: null là không hẹn; không bao giờ âm
+  assert.equal(C.sleepLeft(0, 500), null);
+  assert.equal(C.sleepLeft(30, 600), 1200);
+  assert.equal(C.sleepLeft(15, 5000), 0);
+  // cộng dồn trong ngày, sang ngày mới đếm lại
+  let day = C.addListen(null, "2026-10-07", 12.34);
+  day = C.addListen(day, "2026-10-07", 60);
+  assert.deepEqual(day, { d: "2026-10-07", sec: 72.3 });
+  assert.deepEqual(C.addListen(day, "2026-10-08", 5), { d: "2026-10-08", sec: 5 });
+  assert.deepEqual(C.addListen(day, "2026-10-07", -9), day);
+  // lặp chương: chương cuối kéo tới hết video; chương ngoài phạm vi hoặc video không có độ dài thì không lặp được
+  const l = { duration: 120, chapters: [{ t: 0, title: "a" }, { t: 30, title: "b" }, { t: 90, title: "c" }] };
+  assert.deepEqual([C.chapterRange(l, 0), C.chapterRange(l, 1), C.chapterRange(l, 2)], [[0, 30], [30, 90], [90, 120]]);
+  assert.equal(C.chapterRange(l, -1), null);
+  assert.equal(C.chapterRange({ chapters: [{ t: 0 }] }, 0), null);
+  // giờ:phút:giây khi từ một giờ trở lên
+  assert.deepEqual([C.fmtHms(65), C.fmtHms(3725), C.fmtHms(7200), C.fmtHms(-3)], ["1:05", "1:02:05", "2:00:00", "0:00"]);
+});
+
 test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt động có thật và có file", { skip: !existsSync(new URL("lessons/lessons.json", BOOK)) }, () => {
   const book = JSON.parse(readFileSync(new URL("book.json", BOOK), "utf8"));
   const pl = JSON.parse(readFileSync(new URL("plan.json", BOOK), "utf8"));

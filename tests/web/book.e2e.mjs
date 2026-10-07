@@ -201,6 +201,90 @@ try{
     await page.click("#p-book .reader-bar button");
   });
 
+  await step("lặp khi nghe: lặp track, lặp cả danh sách, đoạn A–B, hẹn giờ dừng, lặp chương video", async () => {
+    await page.click("#p-book .bk-next .btn-primary");
+    await page.waitForFunction(() => { const a = document.querySelector("#p-book audio"); return a && a.duration > 0; }, null, { timeout: 15000 });
+    const bar = page.locator("#p-book .bk-audio");
+    assert.deepEqual(await bar.locator(".bk-rep .seg button").allTextContents(), ["Tắt", "Track này", "Cả 3 track"]);
+    assert.equal(await bar.locator('.bk-rep button[aria-pressed="true"]').textContent(), "Tắt");
+    const audio = fn => page.evaluate(fn);
+    const playNearEnd = async () => {
+      await page.waitForFunction(() => document.querySelector("#p-book audio").duration > 1);   // track mới đã tải xong độ dài
+      await audio(() => { const a = document.querySelector("#p-book audio"); a.muted = true; a.currentTime = a.duration - 0.4; return a.play(); });
+    };
+    const playingTrack = i => page.waitForFunction(i => {
+      const a = document.querySelector("#p-book audio"), bs = [...document.querySelectorAll("#p-book .bk-audio .bk-tracks button")];
+      return bs[i].getAttribute("aria-pressed") === "true" && !a.paused && a.currentTime < 5;
+    }, i, { timeout: 15000 });
+    const laps = async () => Number(((await bar.locator(".bk-rep-info").textContent()).match(/Đã nghe hết (\d+) lượt/) || [0, 0])[1]);
+
+    // lặp track này: hết track thì phát lại chính nó từ đầu, đếm một lượt
+    await bar.locator(".bk-rep button", { hasText: "Track này" }).click();
+    await playNearEnd();
+    await playingTrack(0);
+    assert.equal(await laps(), 1);
+
+    // lặp cả danh sách: hết track thì sang track sau, hết track cuối quay về track đầu
+    await bar.locator(".bk-rep button", { hasText: "Cả 3 track" }).click();
+    for(const next of [1, 2, 0]){ await playNearEnd(); await playingTrack(next); }
+    assert.equal(await laps(), 4);
+    const saved = await audio(() => Object.keys(localStorage).filter(k => k.endsWith(":repeat:audio")).map(k => JSON.parse(localStorage.getItem(k))));
+    assert.deepEqual(saved, [{ mode: "all", sleep: 0 }]);
+    const day = await audio(() => Object.keys(localStorage).filter(k => k.endsWith(":listen")).map(k => JSON.parse(localStorage.getItem(k))));
+    assert.equal(day.length, 1);
+    assert.ok(day[0].sec > 0 && /^\d{4}-\d\d-\d\d$/.test(day[0].d));
+    assert.match(await bar.locator(".bk-rep-info").textContent(), /Hôm nay \d+:\d\d/);
+
+    // đoạn A–B: phát tới B thì quay về A
+    await audio(() => { const a = document.querySelector("#p-book audio"); a.pause(); a.currentTime = 1; });
+    await bar.locator(".bk-abrow button", { hasText: /^A$/ }).click();
+    await audio(() => { document.querySelector("#p-book audio").currentTime = 3; });
+    await bar.locator(".bk-abrow button", { hasText: /^B$/ }).click();
+    assert.equal(await bar.locator(".bk-ab").textContent(), "Lặp 0:01 → 0:03");
+    await audio(() => { const a = document.querySelector("#p-book audio"); a.currentTime = 2.5; return a.play(); });
+    await page.waitForFunction(() => /Đã nghe hết 5 lượt/.test(document.querySelector("#p-book .bk-audio .bk-rep-info").textContent), null, { timeout: 10000 });
+    const t = await audio(() => { const a = document.querySelector("#p-book audio"); a.pause(); return a.currentTime; });
+    assert.ok(t >= 1 && t < 3.5, String(t));
+    await bar.locator(".bk-abrow button", { hasText: "Bỏ lặp A–B" }).click();
+    assert.equal(await bar.locator(".bk-ab").textContent(), "");
+
+    // hẹn giờ dừng: tính lại từ lúc chọn, nhớ cùng chế độ lặp
+    await bar.locator("select.bk-sleep").selectOption("15");
+    assert.match(await bar.locator(".bk-rep-info").textContent(), /\(còn 15:00\)/);
+    assert.deepEqual(await audio(() => JSON.parse(localStorage.getItem(Object.keys(localStorage).find(k => k.endsWith(":repeat:audio"))))), { mode: "all", sleep: 15 });
+
+    // hết giờ hẹn thì dừng phát: cho đồng hồ của trang chạy nhanh, mỗi bước 90 giây
+    const before = await audio(() => JSON.parse(localStorage.getItem(Object.keys(localStorage).find(k => k.endsWith(":listen")))).sec);
+    await audio(() => { const a = document.querySelector("#p-book audio"); a.currentTime = 0; window.__realNow = Date.now; window.__skip = 0;
+      Date.now = () => window.__realNow() + window.__skip; return a.play(); });
+    for(let k = 0; k < 15 && !(await audio(() => document.querySelector("#p-book audio").paused)); k++){
+      await audio(() => { window.__skip += 90000; });
+      await page.waitForTimeout(400);
+    }
+    await audio(() => { Date.now = window.__realNow; });
+    assert.ok(await audio(() => document.querySelector("#p-book audio").paused));
+    assert.match(await bar.locator(".bk-rep-info").textContent(), /Đã dừng theo hẹn giờ 15 phút · .*Lần này 0:00 · Hôm nay/);
+    const after = await audio(() => JSON.parse(localStorage.getItem(Object.keys(localStorage).find(k => k.endsWith(":listen")))).sec);
+    assert.ok(after - before >= 900 && after - before < 1100, before + " → " + after);
+
+    // video trong cùng hoạt động: thanh lặp riêng và nút "Lặp chương này"
+    const vrep = page.locator("#p-book .bk-rep", { hasText: "Cả 2 video" });
+    assert.deepEqual(await vrep.locator(".seg button").allTextContents(), ["Tắt", "Video này", "Cả 2 video"]);
+    const v1 = page.locator("#p-book .bk-video").first();
+    await v1.locator(".bk-vloop button", { hasText: "Lặp chương này" }).click();
+    assert.match(await v1.locator(".bk-ab").textContent(), /^Lặp chương 0:00 → 0:\d\d$/);
+    const ch2 = (await v1.locator(".bk-chaps button").nth(2).textContent()).split(" ")[0];
+    await v1.locator(".bk-chaps button").nth(2).click();             // đang lặp chương: chọn chương khác thì lặp chương đó
+    assert.match(await v1.locator(".bk-ab").textContent(), new RegExp("^Lặp chương " + ch2 + " → \\d+:\\d\\d$"));
+    await v1.locator(".bk-vloop button", { hasText: "Bỏ lặp A–B" }).click();
+
+    // trả về mặc định cho các bước sau
+    await bar.locator("select.bk-sleep").selectOption("0");
+    await bar.locator(".bk-rep button", { hasText: "Tắt" }).click();
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("tải lại trang, tiến độ sách vẫn còn", async () => {
     await page.reload();
     await page.click('nav button[data-go="book"]');
