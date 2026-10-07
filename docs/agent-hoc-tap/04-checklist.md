@@ -296,6 +296,16 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
 - [x] **P2-43** Video **Unit 3 · Work** — 11 video, mọi phần có trang sách: Speaking & Vocabulary (Speaking 1 & Vocabulary 1; Speaking 2 — Phần 2 bài thi Nói, bài nói mẫu 2 phút), Listening (gist — phát Track 31–32; Listening 2 — phát Track 33, phát lại từng đoạn), Reading (scanning for paraphrased language; job advertisements), Writing (register; letter of application kèm thư mẫu Answer key), Consolidation, Exam practice (Listening — Track 37 đọc lại bằng bốn giọng; Reading). Thẻ Unit 3 có 11 video trong 6 phần.
   - *Đợt 12:* `image.grid` (dải tranh → lưới 2×2), phương án `mcq` hai dòng, `passage` dài thu gọn đoạn không đang giảng (chữ ≥ 19), `mark` tô qua chỗ ngắt dòng, giọng thứ tư (Jerry `am_liam`).
 - [x] **P2-36** ~~Video giải bài tập Workbook (Unit 1 trang 6, Unit 2 trang 8, …)~~ — **bỏ** (đợt 11): bộ sách không có Workbook; người dùng chốt chỉ làm video cho Course Book.
+- [x] **P2-44** **Nghe / xem lặp lại** trong tab Sách để nghe đi nghe lại một bài trong thời gian dài.
+  - Hàng *Lặp lại* trên thanh audio và trên danh sách video của mỗi hoạt động có ba chế độ: Tắt, lặp bài này, lặp cả danh sách.
+  - Audio sang track sau tự phát tiếp, kể cả khi màn hình khóa.
+  - Hẹn giờ dừng 15 phút – 3 giờ.
+  - Đếm số lượt đã nghe hết, thời gian nghe lần này và cả ngày.
+  - Đoạn A–B cho cả video.
+  - Nút *Lặp chương này* cho video.
+  - Phát một bài thì bài khác dừng.
+  - Nút bài trước / bài sau trên màn hình khóa.
+  - *Đợt 13:* hàm thuần `nextOnEnd`, `sleepLeft`, `addListen`, `chapterRange`, `fmtHms` trong `core.js` kèm test; thêm một bước e2e.
 
 ### Cổng G2
 

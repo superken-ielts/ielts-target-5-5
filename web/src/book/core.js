@@ -215,16 +215,50 @@ const BookCore = (() => {
     return cur;
   }
 
+  /* Khoảng [đầu, cuối] của chương thứ i (chương cuối kéo tới hết video) — cho nút "Lặp chương này". */
+  function chapterRange(lesson, i){
+    const cs = (lesson && lesson.chapters) || [];
+    if(!cs[i]) return null;
+    const end = cs[i + 1] ? cs[i + 1].t : Number(lesson.duration) || null;
+    return end != null && end > cs[i].t ? [cs[i].t, end] : null;
+  }
+
+  /* Lặp khi nghe / xem: bài thứ i (trong n bài) vừa hết thì phát bài nào tiếp, -1 là dừng.
+     mode "off" phát 1 lần, "one" lặp bài này, "all" lặp cả danh sách (hết bài cuối quay về bài đầu). */
+  function nextOnEnd(mode, i, n){
+    if(mode === "one") return i;
+    if(mode === "all" && n > 0) return (i + 1) % n;
+    return -1;
+  }
+
+  /* Hẹn giờ dừng: số giây còn lại sau khi đã nghe heardSec giây (null = không hẹn giờ). */
+  function sleepLeft(limitMin, heardSec){
+    return limitMin > 0 ? Math.max(0, limitMin * 60 - (Number(heardSec) || 0)) : null;
+  }
+
+  /* Thời gian nghe trong ngày {d, sec}: cộng thêm sec giây cho ngày day; sang ngày mới thì đếm lại từ 0. */
+  function addListen(rec, day, sec){
+    const base = rec && rec.d === day ? Number(rec.sec) || 0 : 0;
+    return { d: day, sec: Math.round((base + Math.max(0, Number(sec) || 0)) * 10) / 10 };
+  }
+
   function fmtClock(sec){
     const s = Math.abs(Math.round(sec));
     return (sec < 0 ? "-" : "") + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+
+  /* Như fmtClock nhưng từ 1 giờ trở lên thì có giờ: 1:02:05. */
+  function fmtHms(sec){
+    const s = Math.max(0, Math.round(Number(sec) || 0));
+    if(s < 3600) return fmtClock(s);
+    return Math.floor(s / 3600) + ":" + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
   }
 
   return {
     emptyProgress, settingsOf, statusOf, focusOf, nextSession, itemSessions, itemCounts, entrySession, duration, counts, plannedWeek, projectFinishWeek,
     canSkip, setSession, setSettings, mergeProgress, elapsedSec, activitiesOf, itemsOf,
     printedPage, basename, matchFiles, requiredPaths, chunkFor, checklistStats, fmtClock,
-    lessonsOf, lessonSession, chapterAt, groupLessons
+    lessonsOf, lessonSession, chapterAt, groupLessons, chapterRange, nextOnEnd, sleepLeft, addListen, fmtHms
   };
 })();
 if(typeof module !== "undefined" && module.exports) module.exports = BookCore;
