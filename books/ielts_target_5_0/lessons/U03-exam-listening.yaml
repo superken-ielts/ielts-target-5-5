@@ -1,0 +1,178 @@
+# Video bài giảng Unit 3 · Exam Practice — Listening (sách in trang 44). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-exam-listening.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U01-exam-listening.yaml. Bộ sách không có file nghe Track 37 nên ba giọng đọc
+# lại đúng Tapescript (sách in trang 282): Mai (Female voice), Tom (Simon — Male voice 1), Jerry (Male voice 2, giọng
+# am_liam), chia hai đoạn trong cảnh hide_text. Answer key không có trang này: đáp án 1 b, 2 c, 3–8 A C D E G I suy ra từ
+# Tapescript, mỗi câu kèm câu bằng chứng.
+id: U03-exam-listening
+activity: U03-exam-practice
+title: "Unit 3 · Work"
+subtitle: "Exam practice: Listening"
+title_vi: "Luyện đề Listening — làm việc tại nhà: trắc nghiệm 1–2, chọn sáu ý trong mười (Track 37 đọc lại theo Tapescript)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to the Unit 3 Exam Practice: the Listening Module."
+        say: "Welcome to the Unit three Exam Practice: the Listening Module."
+        vi: "Luyện đề Unit 3 — phần Listening."
+      - emma: "The topic: working from home. Mai, Tom and our guest Jerry will read the conversation for us."
+        vi: "Chủ đề: làm việc tại nhà. Mai, Tom và khách mời Jerry đọc đoạn hội thoại."
+      - {jerry: "Hello! I'm Jerry. I work from home, too."}
+
+  - kind: bullets
+    chapter: "Trước khi nghe"
+    heading: "Listening A · Good things and bad things about working from home"
+    heading_vi: "Bài A: nghĩ trước — rồi đọc kỹ câu hỏi"
+    items:
+      - {en: "Good: no travel, no suit, quiet, flexible hours", vi: "Tốt: không phải đi lại, mặc thoải mái, linh hoạt"}
+      - {en: "Bad: lonely, family, TV, jobs around the house", vi: "Không tốt: cô đơn, gia đình làm phiền, TV, việc nhà"}
+      - {en: "Exam tip: no pictures in the exam — read the questions and predict", vi: "Bài thi không có tranh — đọc câu hỏi để đoán"}
+      - {en: "Question-type tip: choose a number of answers from a larger number of options", vi: "Có bài chọn nhiều đáp án từ danh sách dài"}
+    lines:
+      - emma: "Exercise A. Before you listen, think: what are some of the good things and bad things about working from home?"
+        say: "Exercise eigh. Before you listen, think: what are some of the good things and bad things about working from home?"
+        vi: "Bài A: làm việc tại nhà có gì tốt, gì không tốt?"
+      - {tom: "Good things: no travel, and you can wear what you like.", focus: 0}
+      - {tom: "Bad things: you might feel lonely, and it's easy to watch TV!", focus: 1}
+      - {emma: "The exam tip: in the Listening Module, you will not have a picture, and you will not be able to talk about the situation before you listen. But you will have time to look at the questions, and you should predict as much as you can.", focus: 2}
+      - {emma: "And the question-type tip: sometimes you need to choose a number of answers from a larger number of options.", focus: 3}
+
+  - kind: mcq
+    chapter: "Câu 1–2: đọc trước"
+    heading: "Listening B · Questions 1 and 2: choose the correct answer"
+    heading_vi: "Đọc câu hỏi trước — gạch chân từ khóa"
+    items: &q12
+      - {n: 1, q: "Simon started working from home because…", options: ["he wanted to.", "his company wanted him to.", "his family wanted him to."], answer: b}
+      - {n: 2, q: "Why are Simon's company happy for him to work from home?", options: ["They can pay less money.", "Now they can move to a smaller office.", "The main office is too small."], answer: c}
+    lines:
+      - emma: "Exercise B. Look through the questions carefully. Questions one and two: choose the correct answer a, b or c."
+        say: "Exercise B. Look through the questions carefully. Questions one and two: choose the correct answer, eigh, B, or C."
+        vi: "Bài B: đọc kỹ câu 1–2."
+      - {emma: "Why did Simon start working from home?", focus: 0}
+      - {emma: "Why is his company happy?", focus: 1}
+      - {wait: 6, note: "Read questions 1 and 2", vi: "Đọc kỹ câu 1–2."}
+
+  - kind: mcq
+    chapter: "Nghe phần 1"
+    heading: "Listening B · Questions 1 and 2"
+    heading_vi: "Nghe — lời thoại được ẩn"
+    hide_text: true
+    roles: {mai: "female voice", tom: "Simon", jerry: "male voice 2"}
+    items: *q12
+    lines:
+      - {mai: "So, Simon, I hear you're working from home, too, these days."}
+      - {tom: "Yeah, that's right. Well, I go into the office once a week, but I'm at home most of the time."}
+      - {mai: "Are you enjoying it?"}
+      - {tom: "Well, there's good and bad, you know how it is. I didn't really choose to start working from home, and the rest of the family are not very happy about it. I'm always telling them to be quiet. The company decided that they had to close one of the offices. About twenty people had no office, and there wasn't enough space in the main office for twenty more people. So, they decided some of us would work at home.", focus: 0}
+      - {wait: 5, note: "Choose a, b or c for 1 and 2", vi: "Chọn đáp án câu 1–2."}
+
+  - kind: mcq
+    chapter: "Đáp án 1–2"
+    heading: "Questions 1 and 2 · Answers"
+    heading_vi: "Đáp án suy ra từ Tapescript — kèm câu bằng chứng"
+    items: *q12
+    lines:
+      - {emma: "Number one. Why did Simon start working from home?", focus: 0}
+      - {tom: "b, his company wanted him to. He says: I didn't really choose. The company decided.", say: "B, his company wanted him to. He says: I didn't really choose. The company decided.", reveal: 1}
+      - emma: "Not a: he didn't choose. And not c: the family are not very happy about it."
+        say: "Not eigh: he didn't choose. And not C: the family are not very happy about it."
+        vi: "Không phải a (anh ấy không chọn), không phải c (gia đình không vui)."
+      - {emma: "Number two.", focus: 1}
+      - {tom: "c, the main office is too small. There wasn't enough space in the main office for twenty more people.", say: "C, the main office is too small. There wasn't enough space in the main office for twenty more people.", reveal: 2}
+      - emma: "Money is not mentioned, and they closed an office. They didn't move to a smaller one."
+        vi: "Không nhắc tiền; họ đóng bớt một văn phòng, không chuyển sang văn phòng nhỏ hơn."
+
+  - kind: bullets
+    chapter: "Câu 3–8: đọc trước"
+    heading: "Questions 3–8 · Choose SIX answers from A–J"
+    heading_vi: "Người nói có nhắc đến ý nào khi nói về làm việc tại nhà?"
+    items: &aj
+      - {en: "A  People in the office sometimes stop you working.", vi: "Ở văn phòng hay bị người khác làm gián đoạn"}
+      - {en: "B  You always do more work when you are at home.", vi: "Ở nhà luôn làm được nhiều việc hơn"}
+      - {en: "C  At home, you sometimes start work later than you planned.", vi: "Ở nhà đôi khi bắt đầu làm muộn hơn dự định"}
+      - {en: "D  It's easy to waste time watching TV.", vi: "Dễ mất thời gian xem TV"}
+      - {en: "E  Your family don't always let you do your work.", vi: "Gia đình không phải lúc nào cũng để bạn làm việc"}
+      - {en: "F  Most people wear a suit when they work from home.", vi: "Đa số mặc com-lê khi làm ở nhà"}
+      - {en: "G  You don't need to look smart when you work from home.", vi: "Không cần ăn mặc chỉnh tề"}
+      - {en: "H  There are more technical problems with computers.", vi: "Máy tính hay trục trặc hơn"}
+      - {en: "I  Not seeing other people all day can be difficult.", vi: "Cả ngày không gặp ai thì khó chịu"}
+      - {en: "J  You get a lot of phone calls when you work from home.", vi: "Nhận nhiều cuộc gọi"}
+    lines:
+      - emma: "Questions three to eight. Choose six answers from A to J. Read all ten options first."
+        say: "Questions three to eight. Choose six answers from, eigh, to J. Read all ten options first."
+        vi: "Câu 3–8: chọn sáu ý trong mười — đọc hết trước."
+      - {wait: 15, note: "Read options A–J", vi: "Đọc mười ý A–J."}
+      - emma: "Be careful with words like always and most. They make an option too strong."
+        vi: "Cẩn thận với 'always', 'most' — ý thường bị nói quá."
+
+  - kind: bullets
+    chapter: "Nghe phần 2"
+    heading: "Questions 3–8 · Listen and choose six answers"
+    heading_vi: "Nghe — lời thoại được ẩn"
+    hide_text: true
+    roles: {mai: "female voice", tom: "Simon", jerry: "male voice 2"}
+    items: *aj
+    lines:
+      - {jerry: "So, do you find that you get more work done?"}
+      - {tom: "Well, yes and no. Sometimes, I really get a lot done in a very short time. In the office, there's always someone coming and asking a question, or starting a conversation about something. At home, you don't have that, of course. On the other hand, it's easy to get distracted by jobs around the house. You start cleaning or tidying up or mending something. When you're in the house all day, it's difficult to leave things alone. Sometimes it's midday before I really start work."}
+      - {mai: "Yeah, and I find that I often get distracted by the TV or surfing the net. When everyone's out of the house, I like to make a cup of coffee and watch the TV for ten minutes. I must admit, it's often more like an hour."}
+      - {jerry: "My wife and the children don't really understand that I'm really working when I'm at home. They think I have time to do jobs around the house as well. Jerry, could you fix the tap in the bathroom today? Dad, can you drive me to football club this afternoon? It makes me crazy."}
+      - {mai: "You just have to tell them you're at work. I have a friend who works from home and he puts his suit on in the morning. He says that it makes him feel like he's really at work."}
+      - {tom: "I must say that one thing I do like is not having to get ready for work in the morning. I can just put on a pair of jeans or shorts, and I don't need to shave for three days."}
+      - {mai: "So, has your company set you up with a new computer, or given you a new laptop?"}
+      - {tom: "That's a bit of a problem, actually. They've set me up with a new computer, it's really modern, and the Internet is really fast, but they say that I should only use it for work. They want me to use my own computer for anything that's not connected with the job."}
+      - {jerry: "So, you have two computers?"}
+      - {tom: "Yeah, I don't really understand. So, do you two get a bit lonely working from home? I mean, don't you miss having other people around, discussing things and solving problems together?"}
+      - {mai: "Yeah, I would like to spend more time with people. I had some good friends at work, and I don't really see them much now."}
+      - {jerry: "I'm always really pleased when somebody phones or e-mails me. You know, sometimes you go all day without speaking to anyone. My wife says that in the evening, I never stop talking."}
+      - {mai: "Well, I think more and more people will have to do it. Now that everyone has a computer at home and e-mailing is so fast, there's just no need for everyone to travel to work."}
+      - {wait: 8, note: "Choose six answers from A–J", vi: "Chọn sáu ý A–J."}
+
+  - kind: bullets
+    chapter: "Đáp án 3–8"
+    heading: "Questions 3–8 · Answers: A · C · D · E · G · I"
+    heading_vi: "Đáp án suy ra từ Tapescript (thứ tự nào cũng được)"
+    items:
+      - {en: "A  In the office, there's always someone coming and asking a question", vi: "→ bị làm gián đoạn"}
+      - {en: "C  Sometimes it's midday before I really start work", vi: "→ bắt đầu muộn"}
+      - {en: "D  watch the TV for ten minutes … it's often more like an hour", vi: "→ mất thời gian xem TV"}
+      - {en: "E  Jerry, could you fix the tap … It makes me crazy.", vi: "→ gia đình làm phiền"}
+      - {en: "G  I can just put on a pair of jeans … don't need to shave", vi: "→ không cần chỉnh tề"}
+      - {en: "I  Do you two get a bit lonely? … I would like to spend more time with people", vi: "→ thiếu người để gặp"}
+    lines:
+      - emma: "Let's check. Tom, the first one?"
+      - {tom: "A. In the office, there's always someone coming and asking a question.", say: "Eigh. In the office, there's always someone coming and asking a question.", focus: 0}
+      - {tom: "C. Sometimes it's midday before I really start work.", focus: 1}
+      - {tom: "D. Mai watches TV for ten minutes, but it's often more like an hour.", focus: 2}
+      - {tom: "E. Jerry's family ask him to fix the tap and drive to football club.", focus: 3}
+      - {tom: "G. Jeans or shorts, and no shaving!", focus: 4}
+      - {tom: "I. Do you get a bit lonely? I'd like to spend more time with people.", say: "Eye. Do you get a bit lonely? I'd like to spend more time with people.", focus: 5}
+      - emma: "And why not the others? B says always: Simon says yes and no. F says most people: it's only one friend. H: the problem is two computers, not technical problems. And J: Jerry is pleased when somebody phones, so he doesn't get a lot of calls."
+        vi: "B 'always' — sai; F 'most people' — chỉ một người bạn; H — vấn đề là hai máy, không phải trục trặc; J — ít cuộc gọi."
+      - emma: "The answer key doesn't include this page, so these are our answers from the tapescript."
+        vi: "Answer key không có trang này — đáp án suy ra từ Tapescript."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 b · 2 c · 3–8 A, C, D, E, G, I", vi: "Đáp án"}
+      - {en: "Read all the options first; predict; listen for the idea, not the same words", vi: "Đọc hết phương án, đoán, nghe ý"}
+      - {en: "Strong words make options wrong: always (B), most (F)", vi: "Từ quá mạnh thường là bẫy"}
+      - {en: "Next: Exam practice — Reading", vi: "Tiếp theo: luyện đề Reading"}
+    lines:
+      - emma: "Let's review. One b, two c. And A, C, D, E, G and I."
+        say: "Let's review. One, B. Two, C. And, eigh, C, D, E, G, and eye."
+        focus: 0
+      - {emma: "Read all the options first.", focus: 1}
+      - {emma: "And be careful with strong words like always and most.", focus: 2}
+      - {tom: "Next: the reading!", focus: 3}
