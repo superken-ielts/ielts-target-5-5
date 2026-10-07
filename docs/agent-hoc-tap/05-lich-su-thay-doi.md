@@ -5,6 +5,83 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 12 — 07/10/2026: 11 video Unit 3
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `80e0a4c` (đã merge PR #12).
+
+### Yêu cầu
+
+Tiếp tục làm video cho Unit 3, xong thì tạo PR.
+
+### Đã làm
+
+Làm theo kế hoạch Unit 3 ở [06-video-bai-giang.md](06-video-bai-giang.md) (viết ở đợt 10). Khác kế hoạch: Exam practice
+có Listening và Reading (không có Writing) nên hai video luyện đề là `U03-exam-listening` và `U03-exam-reading`; file
+nghe Track 37 không có trong bộ sách nên đọc lại bằng bốn giọng. Unit 3 có video cho **mọi phần có trang sách** — 11 video, tổng 1:09:08, 95 chương.
+
+| Phần | Video | Nội dung |
+|---|---|---|
+| Speaking & Vocabulary | `U03-speaking-1` (7:22, 11 chương) | Bốn ảnh nghề (xếp lưới 2×2), bài nói mẫu 1 phút về ảnh c dùng cụm trong khung, đến lượt bạn, 8 tên nghề (Track 28 đọc lại) và trọng âm, work as / for / in / with, nói về công việc của bạn, 6 tính từ P/N, *Watch out!* (an engineer, a good job) |
+| | `U03-speaking-2` (7:26, 12 chương) | Ba câu hỏi về nghề, Grammar check would / could, nối âm would you / could you, *Watch out!*, Exam tip Phần 2, hai thẻ đề, chia 1 + 2 phút, ghi chú từ khóa và **bài nói mẫu 172 từ** (thẻ B, mỗi ý một đoạn), đến lượt bạn với thẻ A (1 phút chuẩn bị, 1 phút nói, tạm dừng nếu cần thêm) |
+| Listening | `U03-listening-1` (8:29, 10 chương) | Gist là gì, nhìn tranh, **phát Track 31**, nối 4 đoạn (a 2 · b 4 · c 1 · d 3), cách làm, điền đoạn văn (topic · details · word · skimming), Exam tip đoán trước, đoán từ 4 hình, **phát Track 32**, nối (1 c · 2 a · 3 d · 4 b) |
+| | `U03-listening-2` (10:34, 8 chương) | **Phát Track 33** cho câu 1–4, **phát lại từng đoạn** cho câu 5–12; đáp án theo **Answer key** (b c a d · c b a a c b a b) kèm câu nghe được, bẫy *garden / car park*, *new kitchens*; design / staff / customer / product |
+| Reading | `U03-reading-1` (4:35, 7 chương) | Exam tip phần 2 bài Đọc, bốn nghề (farms, flights, pitch, tips), "The Best Job I Ever Had": tìm nghề, câu E (C B A D) và F (C A D B) với **cụm diễn đạt lại tô vàng** (exhausted = very tired, a fortune = a lot of money…) |
+| | `U03-reading-2` (4:12, 8 chương) | Ba quảng cáo tuyển dụng, nối với mô tả (d b a), câu 4–9 tô cụm từ (C A B C B A — **Answer key**), Exam tip đoán và tìm bằng chứng, 5 từ vựng |
+| Writing | `U03-writing-1` (4:10, 7 chương) | Register là gì, VF / QF / INF cho 7 loại thư, nối 8 cách nói trang trọng – thân mật, dấu hiệu văn phong, cùng một tin viết hai kiểu |
+| | `U03-writing-2` (5:40, 8 chương) | Công ty ở quảng cáo B cần người thế nào, thư nháp của Ahmed, vị trí 5 mẹo, sửa 6 chỗ quá thân mật, **thư hoàn chỉnh theo Answer key** (Writing 2D, 2 trang), 6 cụm từ thư xin việc |
+| Consolidation | `U03-consolidation` (5:40, 7 chương) | Lời khuyên Phần 2 (B B A A A A), thẻ đề, **cách hỏi giám khảo** (Track 34 đọc lại), nói 1 phút, 6 cụm hai từ, trọng âm 10 từ (Track 36), sửa 8 lỗi |
+| Exam practice | `U03-exam-listening` (6:47, 9 chương) | Làm việc tại nhà, Exam tip và Question-type tip, câu 1–2 (b c), chọn 6 trong 10 (A C D E G I) và vì sao loại B F H J — **Track 37 đọc lại bằng bốn giọng** (Mai, Tom = Simon, Jerry `am_liam`), phụ đề ẩn khi nghe |
+| | `U03-exam-reading` (4:13, 8 chương) | "The Worst Job I Ever Had": câu 1–8 (C A D A B D B C) tô cụm diễn đạt lại, câu 9–12 ≤ 2 từ (saved, home, became busier, was late), từ khóa |
+
+Đáp án không có trong Answer key đều ghi "suy ra" / "gợi ý" trong video và đầu kịch bản.
+
+### Công cụ `lesson_video`
+
+| Thêm / sửa | Cách làm |
+|---|---|
+| `image.grid` | Dải `grid` tranh bằng nhau nằm ngang (thường gặp trong sách) được cắt và xếp lại thành 2 hàng — tranh trong video to gấp đôi |
+| Phương án `mcq` dài | Xuống tối đa hai dòng (chữ ≥ 18) thay vì thu nhỏ; số dòng tính theo chữ đậm nên ô không đổi cỡ khi mở đáp án |
+| `passage` dài | Giữ chữ ≥ 19: nếu không vừa thì các đoạn không đang giảng thu gọn còn 2 dòng (hoặc 1) kèm "…", đoạn đang giảng hiện đủ |
+| `mark` | Tô cả cụm bị ngắt sang dòng sau (dò trên cả đoạn rồi chia theo dòng) |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U03-*.yaml`, `U03-*.mp4` (11 cặp) | Kịch bản và video Unit 3 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | `ImageRef.grid` |
+| `agents/lesson_video/slides.py` | Xếp lưới ảnh; `mcq` hai dòng; `passage` thu gọn đoạn, tô cụm qua dòng |
+| `agents/tests/test_lesson_video.py` | +1 test lưới ảnh / mcq dài / passage dài; độ phủ Unit 1–3 trên sách thật |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm 11 mục Unit 3 |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 3: 11 video, 6 nhóm theo thứ tự sách; nút "a letter of application" mở phiên Writing có 2 video |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ Unit 3, 11 dòng lịch sử, mẹo bố cục mới, cách đọc mới, **kế hoạch Unit 4** (OCR trang PDF 47–58) |
+| `web/app.template.html` | Mô tả file 06 |
+| `agents/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | `image.grid`; task P2-43; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào. Video Unit 1–2 giữ nguyên (bố cục các cảnh chúng dùng không đổi đáng kể).
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 57 passed (hồi quy: 36 kịch bản khớp `lessons.json`; độ phủ Unit 1–3 đủ sáu phần; +1 test lưới ảnh / mcq hai dòng / passage thu gọn) |
+| `node --test "tests/web/*.test.mjs"` | 13 passed (Unit 3: 11 video, 6 nhóm đúng thứ tự sách) |
+| `node tests/web/book.e2e.mjs` | 14/14 bước OK (bước mới: thẻ Unit 3 có 11 video, nút Writing 2 mở phiên có `U03-writing-1`, `U03-writing-2`) |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | 11 video, tổng 1:09:08, 95 chương; tiếng trung bình −16,9 đến −19,2 dB, đỉnh ≤ −0,4 dB; khung hình lưới ảnh 2×2, "Track 33 · extract 1", đáp án mcq tô xanh, thư hai trang ≈ 152 từ, bài đọc thu gọn đoạn và tô cụm qua dòng đều đúng |
+| Xem trước (`--engine silent`) + soát cách đọc | Sửa trước khi dựng: phương án mcq bị cắt (hai dòng), chữ bài đọc quá nhỏ (thu gọn đoạn), tranh quá nhỏ (`grid`), "a.s.a.p." / "Unit 3" / chữ cái rời đọc sai (viết lại trong `say`) |
+
+### Còn treo
+
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+
+---
+
 ## Đợt 11 — 06/10/2026: video Unit 1 Listening và Reading; bỏ Workbook
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `e973c3f` (đã merge PR #11).

@@ -1,17 +1,17 @@
-# 06 — Video bài giảng: hồ sơ Unit 1–2, quy trình và kế hoạch Unit 3
+# 06 — Video bài giảng: hồ sơ Unit 1–3, quy trình và kế hoạch Unit 4
 
-Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11) và Unit 2 (đợt 10): phần
-nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những lỗi đã gặp. Dùng file
-này làm căn cứ khi làm **Unit 3** (mục 7) và các unit sau.
+Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11), Unit 2 (đợt 10) và Unit 3
+(đợt 12): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những lỗi đã
+gặp. Dùng file này làm căn cứ khi làm **Unit 4** (mục 8) và các unit sau.
 
 **Phạm vi:** chỉ **Course Book** (Student's Book, `IELTS_Target_5.0.pdf`) và các file nghe đi kèm. Bộ sách không có
 Workbook nên **không làm video Workbook** — các chỗ sách ghi "go to Workbook page …" bỏ qua (người dùng chốt ở đợt 11).
 
 Công cụ: `agents/lesson_video` (xem `agents/README.md`). Kịch bản và video: `books/ielts_target_5_0/lessons/`.
-Bảng độ phủ ở mục 1–2 in lại được bất cứ lúc nào:
+Bảng độ phủ ở mục 1–3 in lại được bất cứ lúc nào:
 
 ```bash
-cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01 --unit U02 --unit U03
+cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01 --unit U02 --unit U03 --unit U04
 ```
 
 ---
@@ -69,7 +69,33 @@ Bảng in bằng lệnh `coverage` sau đợt 10:
 video **phát file nghe thật của sách** (Listening: Track 15–22) và có cảnh **bài đọc tô từ khóa** để dạy dò tìm.
 Exercise C–D của Listening/Reading (tự đánh giá cách làm bài) chỉ hướng dẫn, không có đáp án.
 
-## 3. Lịch sử từng video
+## 3. Unit 3 · Work — độ phủ video
+
+Bảng in bằng lệnh `coverage` sau đợt 12:
+
+### U03 · Work — 6/7 phần có video, 11 video, 1:09:08
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-1` — Speaking 1 & Vocabulary 1: talking about work, jobs | 7:22 | 11 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-2` — Speaking 2: talking about jobs, part 2 of the Speaking Module | 7:26 | 12 |
+| Listening | Listening tr. 36–37 | `U03-listening-1` — Listening 1: listening for gist | 8:29 | 10 |
+| Listening | Listening tr. 36–37 | `U03-listening-2` — Listening 2: practise listening for gist | 10:34 | 8 |
+| Reading | sách tr. 38–40 | `U03-reading-1` — Reading 1: scanning for paraphrased language | 4:35 | 7 |
+| Reading | sách tr. 38–40 | `U03-reading-2` — Reading 2: practise scanning for paraphrased language | 4:12 | 8 |
+| Writing | sách tr. 41–42 | `U03-writing-1` — Writing 1: register | 4:10 | 7 |
+| Writing | sách tr. 41–42 | `U03-writing-2` — Writing 2: a letter of application | 5:40 | 8 |
+| Consolidation | sách tr. 43 | `U03-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 5:40 | 7 |
+| Exam practice | sách tr. 44–45 | `U03-exam-listening` — Exam practice: Listening | 6:47 | 9 |
+| Exam practice | sách tr. 44–45 | `U03-exam-reading` — Exam practice: Reading | 4:13 | 8 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
+
+**Kết luận:** Unit 3 có video cho **mọi phần có trang trong Course Book** (6/7 phần). Track 31, 32, 33 có file nghe
+nên phát thẳng trong video (Listening 2 phát lại từng đoạn cho câu 5–12); Track 28–30, 34, 36, 37 không có file nên các
+giọng đọc lại Tapescript — bài luyện đề Listening dùng **bốn giọng** (Emma, Tom, Mai, Jerry `am_liam`). Answer key
+chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án suy ra, có câu bằng chứng.
+
+## 4. Lịch sử từng video
 
 | Đợt | Video | Nội dung chính | Kiểu cảnh | Nguồn đáp án |
 |---|---|---|---|---|
@@ -86,6 +112,17 @@ Exercise C–D của Listening/Reading (tự đánh giá cách làm bài) chỉ 
 | 11 | `U01-listening-2` Listening 2 | Phiếu nhân viên Esco Engineering của Peter và Jane, **phát Track 7**, đáp án kèm câu nghe được (đánh vần Austin, Moore, Cedar), tự đánh giá, address / age / marital status | bullets, blanks + `track` | Answer key Listening 2A |
 | 11 | `U01-reading-1` Reading 1: skimming | Nối 6 văn bản (ảnh cắt từ trang sách) với nguồn, cách đọc lướt (hình, hình thức, từ khóa), mục đích văn bản, định nghĩa skimming | match (ảnh), bullets, pairs, blanks | Suy ra từ bài |
 | 11 | `U01-reading-2` Reading 2: practise skimming | Sáu nguồn, nối văn bản A–C và D–F (hai ảnh cắt từ hai trang), tự đánh giá, 6 từ trong ngữ cảnh | bullets, match ×2, blanks (`hint` dài) | Answer key Reading 2A + suy ra |
+| 12 | `U03-speaking-1` Speaking 1 & Vocabulary 1 | Bốn ảnh nghề (lưới 2×2), bài nói mẫu 1 phút về ảnh c, 8 tên nghề (Track 28 đọc lại) + trọng âm, work as / for / in / with, 6 tính từ P/N, *Watch out!* | match (`grid`), letter, practice, blanks, bullets, errors | Tapescript Track 28 + suy ra |
+| 12 | `U03-speaking-2` Speaking 2 | Câu hỏi về nghề, would / could (tình huống không có thật), nối âm *would you* /wʊdʒuː/, Exam tip Phần 2, hai thẻ đề, chia 1 + 2 phút, ghi chú và **bài nói mẫu 2 phút** (thẻ B), đến lượt bạn (thẻ A, đếm ngược 60 giây ×2) | qa, compare, bullets, errors, match, timing, letter (`words`), practice | Gợi ý |
+| 12 | `U03-listening-1` Listening 1: gist | Nhìn tranh (lưới 2×2), **phát Track 31**, nối 4 đoạn, gist là gì, Exam tip đoán trước, đoán từ 4 hình, **phát Track 32**, nối | match (`grid`) + `track`, bullets, blanks | Suy ra từ Tapescript |
+| 12 | `U03-listening-2` Listening 2 | **Phát Track 33** cho câu 1–4, **phát lại từng đoạn** cho câu 5–12 (trắc nghiệm, phương án hai dòng), bẫy *garden / new kitchens*, design / staff / customer / product | match (`grid`), mcq + `track` (`start` / `end`), pairs | Answer key Listening 2A |
+| 12 | `U03-reading-1` Reading 1 | Bốn nghề (farms, flights, pitch, tips), "The Best Job I Ever Had", **tô cụm diễn đạt lại** cho E (C B A D) và F (C A D B) | match (`grid`), passage + `mark` (thu gọn đoạn) | Suy ra từ bài |
+| 12 | `U03-reading-2` Reading 2 | Ba quảng cáo tuyển dụng, nối với mô tả (d b a), câu 4–9 tô cụm từ (C A B C B A), Exam tip đoán và tìm bằng chứng, 5 từ vựng | vocab, passage + `mark`, pairs, bullets, blanks | Answer key Reading 2B |
+| 12 | `U03-writing-1` Writing 1: register | Định nghĩa register, VF / QF / INF cho 7 loại thư, nối 8 cách nói trang trọng – thân mật, dấu hiệu văn phong, cùng một tin viết hai kiểu | mcq (`keys` 1–4), blanks, pairs, compare | Suy ra |
+| 12 | `U03-writing-2` Writing 2: letter of application | Quảng cáo B cần người thế nào, **thư nháp của Ahmed** (Emma đọc), vị trí 5 mẹo, sửa 6 chỗ quá thân mật, **thư hoàn chỉnh theo Answer key** (Tom đọc, 2 trang), cụm từ thư xin việc | bullets, letter, order, errors, letter (`words`), vocab | Answer key Writing 2D |
+| 12 | `U03-consolidation` Consolidation | Lời khuyên Phần 2 (B B A A A A), thẻ đề và **cách hỏi giám khảo** (Track 34 đọc lại), nói 1 phút, 6 cụm hai từ, trọng âm 10 từ (Track 36), sửa 8 lỗi | mcq (`keys` A/B), bullets, qa, practice, pairs, errors | Tapescript Track 34, 36 + gợi ý |
+| 12 | `U03-exam-listening` Exam practice: Listening | Làm việc tại nhà — **Track 37 đọc lại bằng bốn giọng** (Mai, Tom = Simon, Jerry), câu 1–2 (b c), chọn 6 trong 10 (A C D E G I) và vì sao loại B F H J | bullets, mcq + `hide_text` + `roles` | Suy ra từ Tapescript |
+| 12 | `U03-exam-reading` Exam practice: Reading | "The Worst Job I Ever Had": câu 1–8 tô cụm diễn đạt lại (C A D A B D B C), câu 9–12 ≤ 2 từ (saved, home, became busier, was late), từ khóa | bullets, passage + `mark`, blanks, vocab | Suy ra từ bài |
 | 10 | `U02-speaking-1` Vocabulary 1 & Speaking 1 | Chính tả 8 môn học, đuôi -ics, nối tranh, kể về trường cũ, quá khứ đơn (có / bất quy tắc), *Watch out!*, đuôi -ed /t/ /d/ /ɪd/ | blanks, vocab, match, qa, errors, practice | Chắc chắn (chính tả, dạng quá khứ) + gợi ý (nối tranh); Track 12–13 |
 | 10 | `U02-speaking-2` Speaking 2 & Vocabulary 2 | Track 14 đọc lại với **ba giọng** (Emma giám khảo, Tom, Mai `af_bella`), chọn câu trả lời hay hơn, trả lời + lý do + chi tiết, P/N 10 câu, cụm từ thích / không thích, bài nói mẫu của Mai | mcq + `hide_text` + `roles`, compare, blanks, vocab, letter | Tapescript Track 14 + gợi ý |
 | 10 | `U02-listening-1` Listening 1: numbers | -teen / -ty, số hàng trăm có *and*, số hàng nghìn; **phát Track 15–17 của sách** | compare, blanks (lưới), bullets + `track` | Tapescript Track 16 |
@@ -100,9 +137,10 @@ Exercise C–D của Listening/Reading (tự đánh giá cách làm bài) chỉ 
 | 10 | `U02-exam-writing` Exam practice: Writing | Đúng / sai 8 câu về bài thi Viết phần 1, đề thư gửi Learn Fast Driving School, chia 20 phút, dàn ý, **thư mẫu Terry Black**, từ nối, bảng soát lỗi 3 phút | blanks, bullets, timing, letter (`words`), vocab | Answer key Exam Practice Writing B + gợi ý |
 
 Đợt 4 dựng lại hai video Speaking bằng Kokoro (trước đó là Flite). Mọi video hiện tại: Kokoro q8, Emma `af_heart`,
-Tom `am_michael` (và Mai `af_bella` trong `U02-speaking-2`), tốc độ 0,9.
+Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening` và Jerry `am_liam` trong
+`U03-exam-listening`), tốc độ 0,9.
 
-## 4. Quy trình làm một video (đã dùng cho cả 25 video)
+## 5. Quy trình làm một video (đã dùng cho cả 36 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -127,14 +165,14 @@ Tom `am_michael` (và Mai `af_bella` trong `U02-speaking-2`), tốc độ 0,9.
 8. `python3 web/build.py` — nhúng `lessons.json` vào app; thẻ unit hiện mục lục video theo thứ tự phần trong sách.
 9. Kiểm tra (mục 7), cập nhật `04-checklist.md`, `05-lich-su-thay-doi.md` và bảng ở mục 1 của file này.
 
-## 5. Kiểu cảnh và khi nào dùng
+## 6. Kiểu cảnh và khi nào dùng
 
 | Kiểu | Khóa mỗi mục | Dùng cho | Ví dụ |
 |---|---|---|---|
 | `title` | — | Mở đầu, giới thiệu hai người | mọi video |
 | `bullets` | `en`, `vi` | Kế hoạch, mẹo, tổng kết | mọi video |
 | `vocab` | `w`, `vi`, `ex` (+ `pos`) | Từ mới kèm câu ví dụ | Speaking 1, Exam reading |
-| `match` | `n`, `q`, `answer` + `image` | Nối với tranh / bản đồ cắt từ trang sách | Speaking 1, Exam listening (bản đồ) |
+| `match` | `n`, `q`, `answer` + `image` (+ `grid`) | Nối với tranh / bản đồ cắt từ trang sách; `grid: 4` xếp dải tranh thành lưới 2×2 | Speaking 1, Exam listening (bản đồ), Unit 3 |
 | `pairs` | `n`, `q`, `answer` + `options` | Nối hai cột | Speaking 2, Exam reading |
 | `qa` | `q`, `a` (+ `ask`, `by`, `phrases`) | Câu hỏi – câu trả lời mẫu | Speaking, Consolidation |
 | `compare` | `title`, `lines` | So sánh hai cách viết / nói | Writing |
@@ -156,10 +194,12 @@ hiện nút ▶ và nhãn). Có thể dùng neo YAML (`items: &notes` … `items
 chung một danh sách câu. Thêm người nói thứ ba chỉ cần khai trong `speakers` (ví dụ Mai `af_bella`).
 
 Mẹo bố cục: thư / bài đọc trên ~170 từ thì chia hai cảnh `letter` (chữ to hơn) và đặt `words`; câu điền từ quá dài
-tự thu nhỏ cho vừa một dòng; đáp án `✓` / `✗` trong cảnh `match` dùng phông có ký hiệu; cụm `mark` chỉ được tô
-khi nằm gọn trong một dòng — chọn cụm ngắn (`£38`, `over 21`, `two-hour driving lesson`).
+tự thu nhỏ cho vừa một dòng; đáp án `✓` / `✗` trong cảnh `match` dùng phông có ký hiệu; cụm `mark` được tô cả khi
+bị ngắt sang dòng sau (đợt 12). Đợt 12 thêm: `image: {…, grid: 4}` — dải 4 tranh nằm ngang trong sách được xếp lại
+thành lưới 2×2 (tranh to gấp đôi); phương án `mcq` dài tự xuống hai dòng; cảnh `passage` có bài dài thì giữ cỡ chữ
+≥ 19 bằng cách thu gọn các đoạn không đang giảng còn 2 dòng ("…"), đoạn đang giảng hiện đủ.
 
-## 6. Cách đọc (`say`) và những lỗi đã gặp
+## 7. Cách đọc (`say`) và những lỗi đã gặp
 
 | Chữ trên màn hình | `say` | Vì sao |
 |---|---|---|
@@ -173,6 +213,9 @@ khi nằm gọn trong một dòng — chọn cụm ngắn (`£38`, `over 21`, `t
 | H-U-N-T (đánh vần) | `aitch, you, en, tee` | Chữ cái rời đọc sai |
 | M-E-R-T-O-N, P-H, I-C-S (đánh vần, cụm chữ) | `em, ee, ar, tee, oh, en` · `P, H` · `I, C, S` | Tách từng chữ bằng dấu phẩy; trên màn hình viết `ph`, `-ics` cho dễ đọc |
 | A levels, an A grade | `eigh levels`, `an eigh grade` | Tên kỳ thi / điểm, không phải mạo từ |
+| would you, could you (nối âm) | `woodjoo`, `could-joo` | Dạy nối âm /wʊdʒuː/ — chữ trên màn hình giữ nguyên |
+| a.s.a.p., ABC | `eigh, ess, eigh, pee`, `eigh, B, C` | Viết tắt đọc từng chữ cái |
+| Khatani | `Kah-tah-nee` | Tên riêng |
 | 1970s, 9.00 a.m. | `nineteen seventies`, `nine in the morning` | Năm, giờ đọc theo kiểu nói |
 | Picture a / b / c | `Picture eigh`, `Picture B` | "Picture a" đọc thành mạo từ |
 | dấu gạch dài `–` giữa câu | thay bằng dấu chấm / phẩy | Kokoro không ngắt hơi ở `–` |
@@ -193,27 +236,31 @@ Những lỗi đã gặp và cách tránh:
 - **Cây git phải sạch** khi kết thúc lượt: dựng video lâu thì commit từng phần.
 - **Dựng nhiều video**: Kokoro dùng hết CPU — xếp hàng từng video một (một khóa `flock`), không chạy song song;
   12 video Unit 2 mất khoảng 2 giờ (06:29 → 08:32). Sửa slide sau khi đã dựng chỉ tốn ~1 phút mỗi video nhờ bộ nhớ tiếng.
-- **Bài đọc dài trên một trang**: chữ nhỏ khó đọc → chia hai trang (đợt 10).
+- **Bài đọc dài trên một trang**: chữ nhỏ khó đọc → chia hai trang (đợt 10); với `passage` (bốn đoạn dài) thì thu
+  gọn đoạn không đang giảng (đợt 12).
+- **Tranh trong sách quá nhỏ**: dải 4 ảnh nằm ngang chỉ cao ~100 px trong video → `grid: 4` (đợt 12).
+- **Tách đoạn trong một track dài** (Track 33, 4 đoạn hội thoại): khoảng lặng ≥ 1,2 giây giữa các đoạn
+  (`silencedetect=noise=-35dB:d=1.2`); kiểm lại bằng Tapescript trước khi dùng mốc.
 
-## 7. Kế hoạch Unit 3 · Work (sách in tr. 34–45)
+## 8. Kế hoạch Unit 4 · Achievements (sách in tr. 46–57)
 
-Tên mục lấy bằng OCR trang PDF 35–46; kiểm lại khi viết kịch bản. Làm theo đúng khuôn Unit 2 (12 video).
+Tên mục lấy bằng OCR trang PDF 47–58; kiểm lại khi viết kịch bản. Làm theo khuôn Unit 3 (11–13 video).
 
 | Phần (`activity`) | Trang in | Mục trong sách | Video đề xuất (mẫu) | Đáp án / nghe |
 |---|---|---|---|---|
-| Speaking & Vocabulary (`U03-speaking-vocab`) | 34–35 | Speaking 1: talking about work (4 ảnh nghề nghiệp, *This picture shows… This is a good job because…*); Vocabulary 1: jobs and saying what you do (nghe – chép tên nghề, giới từ work for / as / in / with); tính từ P/N (interesting, rewarding, challenging…); Speaking 2: talking about jobs (would you / could you, **Part 2 cue card** "Describe a job…", 1 phút chuẩn bị, nói 2 phút) | `U03-speaking-1` (như `U02-speaking-1`), `U03-speaking-2` (thêm cảnh `timing` 1 + 2 phút cho Part 2) | Answer key tr. 266–267; Track 28–30 không có file → đọc lại (`hide_text`) |
-| Listening (`U03-listening`) | 36–37 | Listening 1: listening for gist (4 trích đoạn – tranh, dự đoán); Listening 2: practise listening for gist (4 trích đoạn, câu 5–12 trắc nghiệm); Key vocabulary | `U03-listening-1`, `U03-listening-2` (như `U02-listening-*`, dòng `track`) | Có MP3: U03-L1B, U03-L1F, U03-L2A; Answer key Listening 2A |
-| Reading (`U03-reading`) | 38–40 | Reading 1: scanning for paraphrased language; Reading 2: practise scanning (quảng cáo tuyển dụng); Key vocabulary in context | `U03-reading-1`, `U03-reading-2` (như `U02-reading-*`, `passage` + `mark` cho cụm diễn đạt lại) | Answer key Reading 2B |
-| Writing (`U03-writing`) | 41–42 | Writing 1: register (trang trọng / thân mật); Writing 2: a letter of application | `U03-writing-1`, `U03-writing-2` (thư xin việc mẫu theo Answer key Writing 2D "Dear Mr Lucas") | Answer key Writing 2D |
-| Consolidation (`U03-consolidation`) | 43 | Speaking (hỏi giám khảo về từ không biết, nói 1 phút), Vocabulary (cụm hai phần), Errors | `U03-consolidation` | Gợi ý |
-| Exam practice (`U03-exam-practice`) | 44–45 | Listening (làm việc tại nhà, đúng / sai), Reading | `U03-exam-listening`, `U03-exam-reading` | Tapescript tr. 284; file nghe kiểm trong `book.json` trước |
+| Speaking & Vocabulary (`U04-speaking-vocab`) | 46–47 | Speaking 1: talking about achievements; Vocabulary 1: achievement and success (Grammar check); Vocabulary 2: words that go together (Pronunciation check); Speaking 2: saying who you think is successful; Speaking 3: having a two-way discussion (Phần 3 bài thi Nói) | `U04-speaking-1` (Speaking 1 + Vocabulary 1–2), `U04-speaking-2` (Speaking 2–3, bài nói mẫu Phần 3) | Track 39 (nhân vật nổi tiếng, có tiếng bíp) không có file → đọc lại |
+| Listening (`U04-listening`) | 48–49 | Listening 1: predicting content; Listening 2: listening for paraphrased language; Listening 3: practise predicting and paraphrasing | `U04-listening-1`, `U04-listening-2` (`track` + `start` / `end`) | Có MP3: U04-L2B, U04-L2C, U04-L3B (5:46 — cần tách đoạn); Answer key Listening 3B |
+| Reading (`U04-reading`) | 50–52 | Reading 1: making sure that information is given in the text (T / F / NG); Reading 2: recognizing distracters; Reading 3: practise finding the right information | `U04-reading-1` (T/F/NG), `U04-reading-2` (`passage` + `mark`) | Answer key Reading 1B–D, 3B |
+| Writing (`U04-writing`) | 53–54 | Writing 1: understanding the task; Writing 2: deciding what to say; Writing 3: organizing your points (bài luận — Writing Task 2) | `U04-writing-1`, `U04-writing-2` | Gợi ý; bài luận mẫu ở Exam Practice Writing C |
+| Consolidation (`U04-consolidation`) | 55 | Speaking, Vocabulary, Errors | `U04-consolidation` | Gợi ý |
+| Exam practice (`U04-exam-practice`) | 56–57 | Reading; Writing (bài luận về tài năng và thành công) | `U04-exam-reading`, `U04-exam-writing` (bài luận mẫu Michael Jordan theo Answer key) | Answer key Exam Practice Writing C |
 | Ôn unit + sổ lỗi | — | — | Không cần | — |
 
-## 8. Kiểm tra trước khi commit
+## 9. Kiểm tra trước khi commit
 
 ```bash
 cd agents && python -m lesson_video check ../books/ielts_target_5_0/lessons/*.yaml
-python -m pytest -q                       # kịch bản đã commit khớp lessons.json, video có thật, độ phủ Unit 1–2
+python -m pytest -q                       # kịch bản đã commit khớp lessons.json, video có thật, độ phủ Unit 1–3
 cd .. && python3 web/build.py && git diff --stat
 node --test "tests/web/*.test.mjs"        # mục lục video đúng thứ tự phần trong sách
 node tests/web/book.e2e.mjs               # nút video trên thẻ unit mở đúng phiên

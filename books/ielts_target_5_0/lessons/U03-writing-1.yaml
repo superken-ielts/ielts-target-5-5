@@ -1,0 +1,180 @@
+# Video bài giảng Unit 3 · Writing 1: register (sách in trang 41). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-writing-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Answer key không có Writing 1: định nghĩa (A: 4), mức trang trọng (B:
+# 1 INF · 2 VF · 3 QF · 4 VF · 5 INF · 6 INF · 7 VF) và nối cách nói trang trọng – thân mật (C: 1 F · 2 E · 3 G · 4 B ·
+# 5 C · 6 H · 7 A · 8 D) là đáp án suy ra. Hai thư ngắn ở cuối video do video tự viết làm ví dụ.
+id: U03-writing-1
+activity: U03-writing
+title: "Unit 3 · Work"
+subtitle: "Writing 1: register"
+title_vi: "Văn phong (register) — trang trọng hay thân mật, cùng một ý nói theo hai cách"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 3 Writing. Today's topic is register."
+        say: "Welcome to Unit three Writing. Today's topic is register."
+        vi: "Writing Unit 3: văn phong (register)."
+      - tom: "Register? Like when you register for a course?"
+      - emma: "No, a different meaning! In writing, register is about choosing the right words for the situation: formal or informal."
+        vi: "Trong viết, register là chọn từ phù hợp tình huống: trang trọng hay thân mật."
+
+  - kind: mcq
+    chapter: "Bài A: register là gì?"
+    heading: "Writing 1A · Which definition of register is correct?"
+    heading_vi: "Chọn định nghĩa đúng"
+    items:
+      - n: A
+        q: "Register is…"
+        keys: [1, 2, 3, 4]
+        options:
+          - "planning and organizing your writing."
+          - "spelling words correctly and using punctuation."
+          - "making sure that what you write is grammatically correct."
+          - "using the right words and phrases for the situation — formal or informal."
+        answer: 4
+    lines:
+      - emma: "Exercise A. Which definition of register is correct?"
+        say: "Exercise eigh. Which definition of register is correct?"
+        vi: "Bài A: định nghĩa nào đúng?"
+      - {wait: 6, note: "Choose 1, 2, 3 or 4", vi: "Chọn 1, 2, 3 hoặc 4."}
+      - {tom: "Number four. Using the right words and phrases for the situation: formal or informal.", focus: 0, reveal: A}
+      - emma: "Right. The other three are important too, but they are planning, spelling and grammar."
+        vi: "Ba câu kia là dàn ý, chính tả, ngữ pháp — cũng quan trọng, nhưng không phải register."
+
+  - kind: blanks
+    chapter: "Bài B: trang trọng đến mức nào?"
+    heading: "Writing 1B · Very formal (VF), quite formal (QF) or informal (INF)?"
+    heading_vi: "Viết cho ai, để làm gì → chọn văn phong (đáp án suy ra)"
+    items:
+      - {n: 1, q: "an e-mail to a friend telling him about a party you are having  ___", answer: "INF", tip: "a friend → informal: Hi…, short forms"}
+      - {n: 2, q: "a letter to a tour operator complaining about a holiday  ___", answer: "VF", tip: "a company you don't know → Dear Sir/Madam … Yours faithfully"}
+      - {n: 3, q: "a letter to a family in Britain that you are going to stay with  ___", answer: "QF", tip: "polite but friendly: Dear Mr and Mrs Brown … Best wishes"}
+      - {n: 4, q: "a letter to a college asking for information about a course  ___", answer: "VF"}
+      - {n: 5, q: "a letter to your cousin thanking him for a present  ___", answer: "INF"}
+      - {n: 6, q: "a letter to a friend apologizing because you cannot go to his wedding  ___", answer: "INF"}
+      - {n: 7, q: "a letter that you send with your CV when applying for a job  ___", answer: "VF", tip: "a job application → very formal"}
+    lines:
+      - emma: "Exercise B. Mark the following types of letter very formal, quite formal, or informal."
+        vi: "Bài B: rất trang trọng, khá trang trọng hay thân mật?"
+      - {wait: 10, note: "Pause the video: VF, QF or INF", vi: "Tạm dừng video, viết VF, QF hoặc INF."}
+      - {emma: "One: an e-mail to a friend about a party.", focus: 0}
+      - {tom: "Informal.", reveal: 1}
+      - {emma: "Two: a letter to a tour operator complaining about a holiday.", focus: 1}
+      - {tom: "Very formal. It's a company, and it's a complaint.", reveal: 2}
+      - {emma: "Three: a letter to a family in Britain you are going to stay with.", focus: 2}
+      - {tom: "Quite formal. You don't know them yet, but they will be your family for a while.", reveal: 3}
+      - {emma: "Four: a letter to a college asking for information.", focus: 3}
+      - {tom: "Very formal.", reveal: 4}
+      - {emma: "Five and six: letters to your cousin, and to a friend.", focus: 4}
+      - {tom: "Both informal.", reveal: [5, 6]}
+      - {emma: "Seven: a letter with your CV.", focus: 6}
+      - {tom: "Very formal.", reveal: 7}
+      - emma: "The exam tip: the letter that you write for the first part of the Writing Module will probably be formal. You might have to write a more personal letter, but it will not be very informal."
+        vi: "Mẹo thi: thư phần 1 thường trang trọng; thư cá nhân cũng không quá suồng sã."
+
+  - kind: pairs
+    chapter: "Bài C: trang trọng ↔ thân mật"
+    heading: "Writing 1C · Match the formal expressions 1–8 with the informal expressions A–H"
+    heading_vi: "Cùng một ý, hai cách nói (đáp án suy ra)"
+    items:
+      - {n: 1, q: "Dear Sir / Madam", answer: F}
+      - {n: 2, q: "I am writing to inform you that …", answer: E}
+      - {n: 3, q: "I will not be able to attend the …", answer: G}
+      - {n: 4, q: "Could you send the information to my home address?", answer: B}
+      - {n: 5, q: "I look forward to hearing from you.", answer: C}
+      - {n: 6, q: "Thank you once again for your advice.", answer: H}
+      - {n: 7, q: "I apologize for the inconvenience.", answer: A}
+      - {n: 8, q: "Yours faithfully / sincerely", answer: D}
+    options:
+      - {k: A, text: "Sorry for any trouble I caused."}
+      - {k: B, text: "Let me have all the info a.s.a.p."}
+      - {k: C, text: "Can't wait to hear all about it!"}
+      - {k: D, text: "Best wishes"}
+      - {k: E, text: "I wanted to tell you about …"}
+      - {k: F, text: "Hi Phil, how's it going?"}
+      - {k: G, text: "I can't make it to …"}
+      - {k: H, text: "… and thanks again for all your help."}
+    lines:
+      - emma: "Exercise C. Match the formal expressions, one to eight, with the informal expressions, A to H."
+        say: "Exercise C. Match the formal expressions, one to eight, with the informal expressions, eigh to H."
+        vi: "Bài C: nối cách nói trang trọng với cách nói thân mật."
+      - {wait: 10, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Dear Sir or Madam.", focus: 0}
+      - {tom: "F. Hi Phil, how's it going? Both start a letter.", reveal: 1}
+      - {emma: "I am writing to inform you that.", focus: 1}
+      - {tom: "E. I wanted to tell you about.", reveal: 2}
+      - {emma: "I will not be able to attend.", focus: 2}
+      - {tom: "G. I can't make it to.", reveal: 3}
+      - {emma: "Could you send the information to my home address?", focus: 3}
+      - {tom: "B. Let me have all the info A S A P. That means: as soon as possible.", say: "B. Let me have all the info, eigh, ess, eigh, pee. That means: as soon as possible.", reveal: 4}
+      - {emma: "I look forward to hearing from you.", focus: 4}
+      - {tom: "C. Can't wait to hear all about it!", reveal: 5}
+      - {emma: "Thank you once again for your advice.", focus: 5}
+      - {tom: "H. And thanks again for all your help.", reveal: 6}
+      - {emma: "I apologize for the inconvenience.", focus: 6}
+      - {tom: "A. Sorry for any trouble I caused.", say: "Eigh. Sorry for any trouble I caused.", reveal: 7}
+      - {emma: "And Yours faithfully, or sincerely.", focus: 7}
+      - {tom: "D. Best wishes.", reveal: 8}
+
+  - kind: compare
+    chapter: "Dấu hiệu của văn phong"
+    heading: "How to recognise register"
+    heading_vi: "Thân mật và trang trọng khác nhau ở đâu"
+    items:
+      - title: "Informal"
+        title_vi: "Thân mật"
+        lines: ["short forms: I can't, I'm, it's", "everyday words: info, make it, trouble", "exclamation marks!", "Hi Phil · Best wishes / Love"]
+      - title: "Formal"
+        title_vi: "Trang trọng"
+        lines: ["full forms: I will not, I am", "formal words: information, attend, inconvenience", "no exclamation marks", "Dear Sir / Madam · Yours faithfully"]
+    lines:
+      - emma: "So how do we recognise register? Look at four things."
+        vi: "Nhận ra văn phong qua bốn điều."
+      - {emma: "Informal letters use short forms, everyday words, exclamation marks, and friendly openings and endings.", focus: 0}
+      - {emma: "Formal letters use full forms and formal words, no exclamation marks, and formal openings and endings.", focus: 1}
+      - emma: "The exam tip: almost anything can be expressed formally or informally. You need to learn the most common words and expressions that are used in certain types of composition."
+        vi: "Mẹo thi: hầu như ý nào cũng nói được theo hai cách — học các cụm thường dùng cho từng loại thư."
+
+  - kind: compare
+    chapter: "Cùng một tin, hai lá thư"
+    heading: "The same news, two registers"
+    heading_vi: "Báo không đến được: viết cho bạn và viết cho công ty (ví dụ)"
+    items:
+      - title: "To a friend"
+        title_vi: "Cho bạn — thân mật"
+        lines: ["Hi Phil, how's it going?", "I can't make it to your party on Saturday — I've got to work. Sorry!", "Thanks again for the invite. Can't wait to hear all about it!", "Best wishes, Lan"]
+      - title: "To a company"
+        title_vi: "Cho công ty — trang trọng"
+        lines: ["Dear Sir / Madam,", "I am writing to inform you that I will not be able to attend the training course on Saturday.", "I apologize for the inconvenience. I look forward to hearing from you.", "Yours faithfully, Lan Nguyen"]
+    lines:
+      - emma: "Here is the same news in two registers. Lan can't come on Saturday."
+        say: "Here is the same news in two registers. Lahn can't come on Saturday."
+        vi: "Cùng một tin: Lan không đến được hôm thứ Bảy."
+      - {tom: "To a friend: Hi Phil, how's it going? I can't make it to your party on Saturday. I've got to work. Sorry!", focus: 0}
+      - {emma: "To a company: Dear Sir or Madam, I am writing to inform you that I will not be able to attend the training course on Saturday. I apologize for the inconvenience.", focus: 1}
+      - tom: "The first one is shorter and friendlier."
+      - emma: "Yes. And the second one uses the formal expressions from Exercise C."
+        vi: "Thư thứ hai dùng các cụm trang trọng ở bài C."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Register = the right words for the situation: formal or informal", vi: "Văn phong"}
+      - {en: "Exam letters are usually formal; personal letters are not very informal", vi: "Bài thi: thường trang trọng"}
+      - {en: "C: 1 F · 2 E · 3 G · 4 B · 5 C · 6 H · 7 A · 8 D", vi: "Trang trọng ↔ thân mật"}
+      - {en: "Next: Writing 2 — a letter of application", vi: "Tiếp theo: thư xin việc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Register means the right words for the situation.", focus: 0}
+      - {emma: "In the exam, your letter will usually be formal.", focus: 1}
+      - {emma: "Learn the formal and informal pairs.", focus: 2}
+      - {tom: "Next: a letter of application!", focus: 3}

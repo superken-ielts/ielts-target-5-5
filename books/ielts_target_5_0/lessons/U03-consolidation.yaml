@@ -1,0 +1,226 @@
+# Video bài giảng Unit 3 · Consolidation (sách in trang 43). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-consolidation.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Track 34 (học viên hỏi giám khảo về từ trên thẻ) và Track 36 không có file
+# nghe nên Emma (giám khảo) và Tom (học viên) đọc lại đúng Tapescript (sách in trang 282). Lời khuyên Speaking A, cụm từ
+# Vocabulary A, trọng âm Vocabulary B và Errors là đáp án suy ra / gợi ý — Answer key không có trang này.
+id: U03-consolidation
+activity: U03-consolidation
+title: "Unit 3 · Work"
+subtitle: "Consolidation: Speaking, Vocabulary, Errors"
+title_vi: "Ôn tập Unit 3 — lời khuyên Phần 2 bài thi Nói, hỏi giám khảo từ chưa hiểu, cụm từ công việc, trọng âm, sửa lỗi"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 3. This is the Consolidation page."
+        say: "Welcome back to Unit three. This is the Consolidation page."
+        vi: "Trang Consolidation: ôn lại Unit 3."
+      - tom: "Part 2 of the Speaking test, words about work, and errors."
+        say: "Part two of the Speaking test, words about work, and errors."
+
+  - kind: mcq
+    chapter: "Speaking A: lời khuyên Phần 2"
+    heading: "Speaking A · Advice about part 2 of the Speaking Module: A or B?"
+    heading_vi: "Chọn lời khuyên đúng (đáp án suy ra từ Unit 3)"
+    items:
+      - {n: 1, q: "The examiner will give you…", keys: [A, B], options: ["some pictures to talk about.", "a card to read."], answer: B}
+      - {n: 2, q: "Words you don't understand…", keys: [A, B], options: ["Don't worry about them.", "You can ask the examiner about them."], answer: B}
+      - {n: 3, q: "The points on the card…", keys: [A, B], options: ["Try to talk about each point.", "Talk about whatever you like."], answer: A}
+    lines:
+      - emma: "Speaking, Exercise A. Discuss this advice about the second part of the IELTS Speaking Module. Tick the correct advice, A or B."
+        say: "Speaking, Exercise eigh. Discuss this advice about the second part of the eye-elts Speaking Module. Tick the correct advice, eigh or B."
+        vi: "Bài A: chọn lời khuyên đúng về Phần 2 bài thi Nói."
+      - {wait: 6, note: "Choose A or B", vi: "Chọn A hoặc B."}
+      - {emma: "One.", focus: 0}
+      - {tom: "B. The examiner gives you a card.", reveal: 1}
+      - {emma: "Two.", focus: 1}
+      - {tom: "B. You can ask about words and phrases you don't know.", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "A. Try to talk about each point on the card.", say: "Eigh. Try to talk about each point on the card.", reveal: 3}
+
+  - kind: mcq
+    heading: "Speaking A · Advice about part 2 (4–6)"
+    heading_vi: "Từ vựng, ngữ pháp, phát âm"
+    items:
+      - {n: 4, q: "Vocabulary…", keys: [A, B], options: ["Use a range of words and phrases.", "You must use advanced vocabulary."], answer: A}
+      - {n: 5, q: "Grammar…", keys: [A, B], options: ["The examiner will listen for mistakes.", "Grammar mistakes don't matter."], answer: A}
+      - {n: 6, q: "Pronunciation…", keys: [A, B], options: ["Clear pronunciation gets a higher grade.", "Your pronunciation must be perfect."], answer: A}
+    lines:
+      - {emma: "Four.", focus: 0}
+      - {tom: "A. A range of words. Not only advanced words.", say: "Eigh. A range of words. Not only advanced words.", reveal: 4}
+      - {emma: "Five.", focus: 1}
+      - {tom: "A. The examiner listens for grammatical mistakes.", say: "Eigh. The examiner listens for grammatical mistakes.", reveal: 5}
+      - {emma: "Six.", focus: 2}
+      - {tom: "A. Clear pronunciation. It doesn't have to be perfect.", say: "Eigh. Clear pronunciation. It doesn't have to be perfect.", reveal: 6}
+
+  - kind: bullets
+    chapter: "Speaking B–D: hỏi giám khảo"
+    heading: "Speaking B · What is the best job in the world?"
+    heading_vi: "Thẻ Phần 2 — có từ nào bạn chưa biết?"
+    items:
+      - {en: "Say… what the job is.", vi: "Nghề gì"}
+      - {en: "Say… what personal qualities you need.", vi: "Cần phẩm chất cá nhân gì"}
+      - {en: "Say… what is so appealing about the job.", vi: "Điều gì hấp dẫn ở nghề này"}
+    lines:
+      - emma: "Exercise B. Look at this card for part 2 of the Speaking Module. Are there any words you don't know?"
+        say: "Exercise B. Look at this card for part two of the Speaking Module. Are there any words you don't know?"
+        vi: "Bài B: thẻ đề — có từ nào chưa biết?"
+      - {emma: "What the job is.", focus: 0}
+      - {emma: "What personal qualities you need.", focus: 1}
+      - {emma: "What is so appealing about the job.", focus: 2}
+      - emma: "Exercise C. Listen to a student doing the exam. Which words does he check? I'm the examiner, and Tom is the student."
+        vi: "Bài C: nghe học viên hỏi giám khảo — học viên hỏi từ nào? (Tapescript Track 34)"
+
+  - kind: qa
+    heading: "Speaking C–D · How the student asks, and how the examiner answers"
+    heading_vi: "Tapescript Track 34 — Emma là giám khảo, Tom là học viên"
+    items:
+      - q: "This word 'ideal' — does it mean something like 'perfect'?"
+        a: "Yes, it means more or less the same thing."
+        phrases: ["Does it mean something like …?"]
+        ask: tom
+        by: emma
+      - q: "What about 'personal qualities'? I'm not sure I understand exactly what that means."
+        a: "Your personal qualities are the things about you that make you good for the job — the right person for the job."
+        phrases: ["I'm not sure I understand …"]
+        ask: tom
+        by: emma
+      - q: "Finally, 'appealing'. Does it mean 'what makes me want to do the job'? Is it a bit like 'attractive'?"
+        a: "Yes, that's right. Now, are you ready? You have a minute to plan what you want to say and make notes."
+        phrases: ["Is it a bit like …?"]
+        ask: tom
+        by: emma
+    lines:
+      - {tom: "Can I check a few words on the card before I start to make my notes?"}
+      - {emma: "Yes, please do."}
+      - {tom: "This word, ideal. Does it mean something like perfect?", focus: 0}
+      - {emma: "Yes, it means more or less the same thing.", reveal: 0}
+      - {tom: "OK, and what about personal qualities? I'm not sure I understand exactly what that means.", focus: 1}
+      - {emma: "Your personal qualities are the things about you that make you good for the job. The right person for the job.", reveal: 1}
+      - {tom: "You mean, like if I'm hard-working or lazy?", focus: 1}
+      - {emma: "Yes, those are good examples.", focus: 1}
+      - {tom: "Thank you. Finally, I want to check appealing. Does it mean what makes me want to do the job? Is it a bit like attractive?", focus: 2}
+      - {emma: "Yes, that's right. Now, are you ready? You have a minute to plan what you want to say and make notes.", reveal: 2}
+      - emma: "Exercise D. Notice how the student asked: does it mean something like…? I'm not sure I understand… Is it a bit like…? Polite and clear."
+        vi: "Bài D: chú ý cách hỏi lịch sự, rõ ràng."
+
+  - kind: practice
+    heading: "Speaking E · Practise answering the question"
+    heading_vi: "Nói khoảng một phút — dùng các ý trên thẻ"
+    items:
+      - {q: "What is the best job in the world?", hint: "The best job is … · You need to be … · What's so appealing is …"}
+    lines:
+      - emma: "Exercise E. Practise answering the question. Try to talk for about a minute."
+        vi: "Bài E: nói khoảng một phút."
+      - {emma: "What is the best job in the world?", focus: 0}
+      - {wait: 60, note: "Talk for about a minute", vi: "Nói về nghề, phẩm chất cần có, điều hấp dẫn."}
+
+  - kind: pairs
+    chapter: "Vocabulary A: cụm hai từ"
+    heading: "Vocabulary A · Match a word on the left with a word on the right"
+    heading_vi: "Sáu cụm từ hay gặp trong quảng cáo tuyển dụng (đáp án suy ra)"
+    items:
+      - {n: 1, q: "past", answer: e}
+      - {n: 2, q: "computer", answer: f}
+      - {n: 3, q: "long", answer: d}
+      - {n: 4, q: "personal", answer: b}
+      - {n: 5, q: "successful", answer: a}
+      - {n: 6, q: "chief", answer: c}
+    options:
+      - {k: a, text: "applicant"}
+      - {k: b, text: "qualities"}
+      - {k: c, text: "executive"}
+      - {k: d, text: "hours"}
+      - {k: e, text: "experience"}
+      - {k: f, text: "literate"}
+    lines:
+      - emma: "Vocabulary, Exercise A. Match a word on the left with a word on the right to make six common two-part expressions."
+        say: "Vocabulary, Exercise eigh. Match a word on the left with a word on the right to make six common two-part expressions."
+        vi: "Bài A: ghép thành sáu cụm hai từ."
+      - {wait: 8, note: "Pause the video and match", vi: "Tạm dừng video và ghép."}
+      - {tom: "Past experience.", focus: 0, reveal: 1}
+      - {tom: "Computer literate.", focus: 1, reveal: 2}
+      - {tom: "Long hours.", focus: 2, reveal: 3}
+      - {tom: "Personal qualities.", focus: 3, reveal: 4}
+      - {tom: "Successful applicant.", focus: 4, reveal: 5}
+      - {tom: "Chief executive.", focus: 5, reveal: 6}
+      - emma: "All of these were in the Unit 3 texts. Learn them together."
+        say: "All of these were in the Unit three texts. Learn them together."
+        vi: "Cả sáu cụm đều có trong các bài của Unit 3."
+
+  - kind: bullets
+    chapter: "Vocabulary B: trọng âm"
+    heading: "Vocabulary B · Write these words, then mark the main stress"
+    heading_vi: "Tapescript Track 36 — âm tiết in hoa là âm nhấn"
+    items:
+      - {en: "ex-PE-ri-ence · suc-CESS-ful · ca-REER · CHAL-len-ging", vi: "experience, successful, career, challenging"}
+      - {en: "pro-MO-tion · pro-FES-sion-al · fi-NAN-cial", vi: "promotion, professional, financial"}
+      - {en: "QUAL-i-fied · ad-VER-tise-ment · AP-pli-cant", vi: "qualified, advertisement (Anh), applicant"}
+    lines:
+      - emma: "Exercise B. Listen and write these words from the unit. Check your spelling. Then mark the main stress on each word."
+        vi: "Bài B: nghe, viết, đánh dấu trọng âm."
+      - {tom: "experience. successful. career. challenging.", focus: 0}
+      - {wait: 6}
+      - {tom: "promotion. professional. financial.", focus: 1}
+      - {wait: 5}
+      - {tom: "qualified. advertisement. applicant.", focus: 2}
+      - {wait: 5}
+      - emma: "Careful with career: the stress is at the end. And in British English, we say ad-VER-tise-ment."
+        say: "Careful with career: the stress is at the end. And in British English, we say, advertisement."
+        vi: "career nhấn âm cuối; advertisement (Anh) nhấn âm thứ hai."
+
+  - kind: errors
+    chapter: "Errors: sửa lỗi"
+    heading: "Errors A · Correct the sentences (1–4)"
+    heading_vi: "Có câu nhiều hơn một lỗi (đáp án gợi ý)"
+    items:
+      - {wrong: "I work at an engineer.", right: "I work as an engineer.", note: "work as + nghề"}
+      - {wrong: "I work with the food industry.", right: "I work in the food industry.", note: "work in + ngành"}
+      - {wrong: "I think I have a really good work.", right: "I think I have a really good job.", note: "work không đếm được"}
+      - {wrong: "I get good salary.", right: "I get a good salary.", note: "a + salary"}
+    lines:
+      - emma: "Errors. There are errors in all of these sentences. Sometimes there is more than one. Correct them."
+        vi: "Sửa lỗi — có câu nhiều lỗi."
+      - {wait: 8, note: "Pause the video and correct", vi: "Tạm dừng video và sửa."}
+      - {tom: "I work as an engineer.", focus: 0}
+      - {tom: "I work in the food industry.", focus: 1}
+      - {tom: "I think I have a really good job.", focus: 2}
+      - {tom: "I get a good salary.", focus: 3}
+
+  - kind: errors
+    heading: "Errors A · Correct the sentences (5–8)"
+    heading_vi: "Answer key không có trang này — đây là đáp án gợi ý"
+    items:
+      - {wrong: "Do you like work in another country one day?", right: "Would you like to work in another country one day?", note: "would like + to + verb"}
+      - {wrong: "I will meet the other staffs tomorrow.", right: "I will meet the other staff tomorrow.", note: "staff — không thêm s"}
+      - {wrong: "I saw advertisement in the evening star.", right: "I saw the advertisement in the Evening Star.", note: "the + tên báo viết hoa"}
+      - {wrong: "I might apply to this job.", right: "I might apply for this job.", note: "apply for a job"}
+    lines:
+      - {tom: "Would you like to work in another country one day? Two errors: would, and to.", focus: 0}
+      - {tom: "I will meet the other staff tomorrow.", focus: 1}
+      - {tom: "I saw the advertisement in the Evening Star. The, and capital letters for the newspaper.", focus: 2}
+      - {tom: "I might apply for this job. It looks interesting.", focus: 3}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Part 2: B · B · A · A · A · A — read the card, ask about words, cover every point", vi: "Lời khuyên Phần 2"}
+      - {en: "Does it mean something like…? · I'm not sure I understand… · Is it a bit like…?", vi: "Cách hỏi giám khảo"}
+      - {en: "past experience · computer literate · long hours · personal qualities · successful applicant · chief executive", vi: "Cụm hai từ"}
+      - {en: "work as / in · a good job · a good salary · apply for · the staff", vi: "Lỗi hay gặp"}
+      - {en: "Next: Exam practice — Listening and Reading", vi: "Tiếp theo: luyện đề"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The advice for part 2.", say: "The advice for part two.", focus: 0}
+      - {emma: "Polite questions to the examiner.", focus: 1}
+      - {emma: "Six two-part expressions.", focus: 2}
+      - {emma: "And the typical errors.", focus: 3}
+      - {tom: "Next: the exam practice!", focus: 4}

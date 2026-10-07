@@ -1,0 +1,179 @@
+# Video bài giảng Unit 3 · Listening 2: practise listening for gist (sách in trang 37). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-listening-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U01-listening-1.yaml (phát lại từng đoạn bằng `start` / `end`).
+# Phát nguyên Track 33 (U03-L2A) cho câu 1–4, rồi phát lại từng đoạn cho câu 5–12 (mốc lấy bằng ffmpeg silencedetect).
+# Đáp án theo Answer key (sách in trang 266, "Unit 3, Listening 2A"): 1 b, 2 c, 3 a, 4 d, 5 c, 6 b, 7 a, 8 a, 9 c, 10 b,
+# 11 a, 12 b; câu bằng chứng theo Tapescript Track 33 (trang 281). Key vocabulary in context là đáp án suy ra.
+id: U03-listening-2
+activity: U03-listening
+title: "Unit 3 · Work"
+subtitle: "Listening 2: practise listening for gist"
+title_vi: "Bốn đoạn hội thoại ở nơi làm việc — nối với tranh, 8 câu trắc nghiệm (Track 33 của sách)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening 2: practise listening for gist."
+        say: "Welcome to Listening two: practise listening for gist."
+        vi: "Listening 2: luyện nghe ý chính."
+      - emma: "The exam tip: sometimes you will need to listen for gist rather than for specific information. But remember: understanding gist will help you understand details, too."
+        vi: "Mẹo thi: có lúc chỉ cần nghe ý chính; nhưng hiểu ý chính cũng giúp hiểu chi tiết."
+      - tom: "So first the gist, then the details."
+
+  - kind: match
+    chapter: "Câu 1–4: nghe và nối tranh"
+    heading: "Listening 2A · Questions 1–4: match the extracts with the pictures"
+    heading_vi: "Track 33 — nghe ý chính: ai nói, ở đâu, chuyện gì"
+    image: {pdf: course-book, page: 38, clip: [58, 148, 532, 256], grid: 4}
+    items:
+      - {n: 1, q: "Extract 1", answer: b}
+      - {n: 2, q: "Extract 2", answer: c}
+      - {n: 3, q: "Extract 3", answer: a}
+      - {n: 4, q: "Extract 4", answer: d}
+    lines:
+      - emma: "Exercise A. Look at the pictures first. A woman on the phone. A new member of staff in an office. A man showing plans on a screen. And a salesman with a catalogue."
+        say: "Exercise eigh. Look at the pictures first. A woman on the phone. A new member of staff in an office. A man showing plans on a screen. And a salesman with a catalogue."
+        vi: "Bài A: nhìn tranh trước — đoán bốn tình huống."
+      - emma: "Now listen to the four extracts. Match each extract with a picture."
+        vi: "Nghe bốn đoạn và nối với tranh."
+      - {track: U03-L2A, end: 205.0, note: "Track 33 · Listening 2A", vi: "Nghe bốn đoạn — chỉ cần ý chính."}
+      - {wait: 5, note: "Check your answers", vi: "Xem lại bài."}
+      - {emma: "Extract one.", focus: 0}
+      - {tom: "Picture b. A new person starts in the office.", say: "Picture B. A new person starts in the office.", reveal: 1}
+      - {emma: "Extract two.", focus: 1}
+      - {tom: "Picture c. He's showing the plans for the new offices.", say: "Picture C. He's showing the plans for the new offices.", reveal: 2}
+      - {emma: "Extract three.", focus: 2}
+      - {tom: "Picture a. Debbie is on the phone. She's late.", say: "Picture eigh. Debbie is on the phone. She's late.", reveal: 3}
+      - {emma: "Extract four.", focus: 3}
+      - {tom: "Picture d. A salesman with a catalogue.", say: "Picture D. A salesman with a catalogue.", reveal: 4}
+
+  - kind: mcq
+    chapter: "Câu 5–7: đoạn 1"
+    heading: "Questions 5–7 · Extract 1"
+    heading_vi: "Đọc câu hỏi, rồi nghe lại đoạn 1"
+    items:
+      - {n: 5, q: "Toby has come to the office…", options: ["for an interview.", "to start work.", "to prepare for a new job."], answer: c}
+      - {n: 6, q: "It is Toby's…", options: ["first visit.", "second visit.", "third or fourth visit."], answer: b}
+      - {n: 7, q: "Keith is…", options: ["Julie's boss.", "Julie's assistant.", "an important customer."], answer: a}
+    lines:
+      - emma: "Read through the questions. Then listen to the extracts again, and choose the correct answer a, b or c. Questions five to seven are about extract one."
+        say: "Read through the questions. Then listen to the extracts again, and choose the correct answer: eigh, B, or C. Questions five to seven are about extract one."
+        vi: "Câu 5–12: chọn a, b hoặc c. Câu 5–7: đoạn 1."
+      - {wait: 8, note: "Read questions 5–7", vi: "Đọc câu 5–7."}
+      - {track: U03-L2A, start: 18.0, end: 79.2, note: "Track 33 · extract 1"}
+      - {emma: "Number five. Why has Toby come to the office?", focus: 0}
+      - {tom: "c, to prepare for a new job. Julie says: you're starting with us on Monday, and we like people to meet the staff before they start the job.", say: "C, to prepare for a new job. Julie says: you're starting with us on Monday, and we like people to meet the staff before they start the job.", reveal: 5}
+      - emma: "Not b. He starts work on Monday, not today."
+        vi: "Không phải b — thứ Hai mới bắt đầu làm."
+      - {emma: "Number six.", focus: 1}
+      - {tom: "b, his second visit. I met you when you came for the interview last month.", say: "B, his second visit. I met you when you came for the interview last month.", reveal: 6}
+      - {emma: "Number seven.", focus: 2}
+      - {tom: "a, Julie's boss. She says: I'm Keith's assistant manager.", say: "Eigh, Julie's boss. She says: I'm Keith's assistant manager.", reveal: 7}
+
+  - kind: mcq
+    chapter: "Câu 8–9: đoạn 2"
+    heading: "Questions 8–9 · Extract 2"
+    heading_vi: "Nghe lại đoạn 2"
+    items:
+      - {n: 8, q: "The man is talking about…", options: ["a new building.", "his garden.", "a design for a car."], answer: a}
+      - {n: 9, q: "The man speaking knows that…", options: ["everyone will drive to work.", "everyone will cycle to work.", "some people will drive and others cycle."], answer: c}
+    lines:
+      - {wait: 6, note: "Read questions 8–9", vi: "Đọc câu 8–9."}
+      - {track: U03-L2A, start: 82.0, end: 127.5, note: "Track 33 · extract 2"}
+      - {emma: "Number eight.", focus: 0}
+      - {tom: "a, a new building. The plans for the new city-centre offices.", say: "Eigh, a new building. The plans for the new city-centre offices.", reveal: 8}
+      - emma: "He talks about gardens and a car park, but they are parts of the new building. That's the trap."
+        vi: "Có nhắc vườn và bãi đỗ xe — nhưng đều thuộc tòa nhà mới. Đó là bẫy."
+      - {emma: "Number nine.", focus: 1}
+      - {tom: "c. Some people lock up bicycles, and there are spaces for thirty cars.", say: "C. Some people lock up bicycles, and there are spaces for thirty cars.", reveal: 9}
+
+  - kind: mcq
+    chapter: "Câu 10–12: đoạn 3 và 4"
+    heading: "Questions 10–12 · Extracts 3 and 4"
+    heading_vi: "Nghe lại đoạn 3 và đoạn 4"
+    items:
+      - {n: 10, q: "Debbie is phoning Robert to…", options: ["give him good news.", "tell him there is a problem.", "arrange a meeting."], answer: b}
+      - {n: 11, q: "The man is selling…", options: ["products for the home.", "books.", "new kitchens."], answer: a}
+      - {n: 12, q: "The woman…", options: ["is very interested.", "is not at all interested.", "doesn't understand what the man wants."], answer: b}
+    lines:
+      - {wait: 8, note: "Read questions 10–12", vi: "Đọc câu 10–12."}
+      - {track: U03-L2A, start: 130.4, end: 163.6, note: "Track 33 · extract 3"}
+      - {emma: "Number ten.", focus: 0}
+      - {tom: "b. She's going to be late, because there's trouble with the signals.", say: "B. She's going to be late, because there's trouble with the signals.", reveal: 10}
+      - {track: U03-L2A, start: 166.2, end: 203.5, note: "Track 33 · extract 4"}
+      - {emma: "Number eleven.", focus: 1}
+      - {tom: "a, products for the home. Kitchen and bathroom products.", say: "Eigh, products for the home. Kitchen and bathroom products.", reveal: 11}
+      - emma: "Careful! New kitchens is a trap. He sells kitchen products, not new kitchens."
+        vi: "Bẫy: bán đồ dùng nhà bếp, không phải bếp mới."
+      - {emma: "Number twelve.", focus: 2}
+      - {tom: "b, not at all interested. I don't really need anything like this at the moment.", say: "B, not at all interested. I don't really need anything like this at the moment.", reveal: 12}
+
+  - kind: bullets
+    chapter: "Bài B–C: kiểm tra, nhìn lại"
+    heading: "Listening 2B–C · Check the key and think about how you did the task"
+    heading_vi: "Answer key: 1 b · 2 c · 3 a · 4 d · 5 c · 6 b · 7 a · 8 a · 9 c · 10 b · 11 a · 12 b"
+    items:
+      - {en: "The pictures helped me to make predictions about each topic.", vi: "Tranh giúp đoán chủ đề"}
+      - {en: "It was quite easy to match the pictures to the extracts.", vi: "Nối tranh khá dễ"}
+      - {en: "I didn't understand all the words in the questions.", vi: "Có từ trong câu hỏi chưa hiểu"}
+      - {en: "Understanding the gist helped me to understand detail.", vi: "Hiểu ý chính giúp hiểu chi tiết"}
+      - {en: "I am pleased with how many of questions 5–12 I answered correctly.", vi: "Hài lòng với số câu 5–12 làm đúng"}
+    lines:
+      - emma: "Exercise B. Check the key on page 266. How many did you answer correctly?"
+        say: "Exercise B. Check the key on page two hundred and sixty-six. How many did you answer correctly?"
+        vi: "Bài B: so với Answer key."
+      - emma: "Exercise C. Tick the sentences that are true for you, and think about how you can answer more questions correctly next time."
+        vi: "Bài C: đánh dấu những câu đúng với bạn."
+      - {emma: "Did the pictures help you predict?", focus: 0}
+      - {emma: "Was it easy to match them?", focus: 1}
+      - {emma: "Did you understand all the words in the questions?", focus: 2}
+      - {emma: "Did the gist help you with the details?", focus: 3}
+      - {emma: "And are you pleased with your score?", focus: 4}
+
+  - kind: pairs
+    chapter: "Từ vựng trong ngữ cảnh"
+    heading: "Key vocabulary in context · Match the words with definitions a–d"
+    heading_vi: "Từ trong bài nghe 1–4 (đáp án suy ra)"
+    items:
+      - {n: 1, q: "design", answer: d}
+      - {n: 2, q: "staff", answer: c}
+      - {n: 3, q: "customer", answer: b}
+      - {n: 4, q: "product", answer: a}
+    options:
+      - {k: a, text: "what a company makes to sell"}
+      - {k: b, text: "a person who buys something"}
+      - {k: c, text: "all the people who work for a company"}
+      - {k: d, text: "a drawing that shows what something will look like"}
+    lines:
+      - emma: "Key vocabulary in context. Match the words and phrases from the listening task with the definitions a to d."
+        say: "Key vocabulary in context. Match the words and phrases from the listening task with the definitions, eigh to D."
+        vi: "Nối từ với định nghĩa."
+      - {wait: 6, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {tom: "Design: a drawing that shows what something will look like.", focus: 0, reveal: 1}
+      - {tom: "Staff: all the people who work for a company.", focus: 1, reveal: 2}
+      - {tom: "Customer: a person who buys something.", focus: 2, reveal: 3}
+      - {tom: "Product: what a company makes to sell.", focus: 3, reveal: 4}
+      - emma: "Careful: staff is plural in meaning. We say: the staff, not the staffs."
+        vi: "staff chỉ cả nhóm nhân viên — không thêm s."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 b · 2 c · 3 a · 4 d", vi: "Nối tranh"}
+      - {en: "5 c · 6 b · 7 a · 8 a · 9 c · 10 b · 11 a · 12 b", vi: "Trắc nghiệm"}
+      - {en: "Traps: a garden and a car park (8), new kitchens (11)", vi: "Bẫy: từ có trong bài nhưng không phải ý chính"}
+      - {en: "design · staff · customer · product", vi: "Từ vựng nơi làm việc"}
+    lines:
+      - emma: "Let's review. Questions one to four: b, c, a, d."
+        say: "Let's review. Questions one to four: B, C, eigh, D."
+        focus: 0
+      - {emma: "Questions five to twelve: c, b, a, a, c, b, a, b.", say: "Questions five to twelve: C, B, eigh, eigh, C, B, eigh, B.", focus: 1}
+      - {emma: "Watch out for the traps.", focus: 2}
+      - {tom: "And four useful words for work!", focus: 3}

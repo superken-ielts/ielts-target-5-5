@@ -1,0 +1,156 @@
+# Video bài giảng Unit 3 · Reading 1: scanning for paraphrased language (sách in trang 38–39). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-reading-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U02-reading-1.yaml (cảnh `passage` + `mark`). Ảnh 4 nghề cắt từ trang
+# PDF 39. Answer key không có Reading 1: đáp án B (a 4 · b 3 · c 1 · d 2), D, E (1 C · 2 B · 3 A · 4 D) và F (1 C · 2 A ·
+# 3 D · 4 B) suy ra từ bài "The Best Job I Ever Had", mỗi câu kèm cụm từ diễn đạt lại (paraphrase) được tô vàng.
+id: U03-reading-1
+activity: U03-reading
+title: "Unit 3 · Work"
+subtitle: "Reading 1: scanning for paraphrased language"
+title_vi: "Dò tìm ý được diễn đạt bằng từ khác — bài 'The Best Job I Ever Had'"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 3 Reading: scanning for paraphrased language."
+        say: "Welcome to Unit three Reading: scanning for paraphrased language."
+        vi: "Reading Unit 3: dò tìm ý được diễn đạt bằng từ khác."
+      - tom: "Paraphrased? What does that mean?"
+      - emma: "Paraphrase means: the same idea in different words. In the exam, the question and the text often say the same thing in different ways."
+        vi: "Paraphrase = cùng ý, khác chữ. Câu hỏi và bài đọc thường nói cùng một ý bằng từ khác nhau."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Exam tip: phần 2 bài thi Đọc luôn liên quan đến công việc"
+    items:
+      - {en: "A–B: four photos of jobs and four words", vi: "Bốn ảnh nghề và bốn từ"}
+      - {en: "C–D: read the title, predict, find the job in each text", vi: "Đọc tiêu đề, đoán, tìm nghề trong mỗi đoạn"}
+      - {en: "E: use the highlighted parts — the same idea in different words", vi: "Dùng phần tô vàng: cùng ý, khác chữ"}
+      - {en: "F: scan again and find the paraphrases yourself", vi: "Tự tìm phần diễn đạt lại"}
+    lines:
+      - emma: "The exam tip: in the second part of the Reading Module, the texts will always be related to work. You might read a job application or a page of staff rules, for example."
+        vi: "Mẹo thi: phần 2 bài Đọc luôn liên quan đến công việc — thư xin việc, nội quy nhân viên…"
+      - {emma: "First, four photos.", focus: 0}
+      - {emma: "Then the title and the four texts.", focus: 1}
+      - {emma: "Then the highlighted parts.", focus: 2}
+      - {emma: "And finally, you find the paraphrases.", focus: 3}
+
+  - kind: match
+    chapter: "Bài A–B: bốn nghề"
+    heading: "Reading 1A–B · Match each word with one of the photos"
+    heading_vi: "What is each job? What is good and not so good about it? (đáp án suy ra)"
+    image: {pdf: course-book, page: 39, clip: [58, 278, 532, 405], grid: 4}
+    items:
+      - {n: a, q: "farms", answer: "4"}
+      - {n: b, q: "flights", answer: "3"}
+      - {n: c, q: "pitch", answer: "1"}
+      - {n: d, q: "tips", answer: "2"}
+    lines:
+      - emma: "Exercise A. Look at the photos. What is each job?"
+        say: "Exercise eigh. Look at the photos. What is each job?"
+        vi: "Bài A: mỗi ảnh là nghề gì?"
+      - {tom: "Photo one: a ball boy at a football match. Two: waiters in a restaurant. Three: an air hostess on a plane. Four: picking fruit on a farm."}
+      - emma: "Exercise B. Use a dictionary to check these words, and then match each with one of the photos."
+        vi: "Bài B: tra từ điển, nối mỗi từ với ảnh."
+      - {wait: 6, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Farms.", focus: 0}
+      - {tom: "Photo four. You pick fruit on farms.", reveal: a}
+      - {emma: "Flights.", focus: 1}
+      - {tom: "Photo three. An air hostess works on flights.", reveal: b}
+      - {emma: "Pitch.", focus: 2}
+      - {tom: "Photo one. A football pitch: the grass where they play.", reveal: c}
+      - {emma: "And tips.", focus: 3}
+      - {tom: "Photo two. A tip is extra money that customers give to a waiter.", reveal: d}
+
+  - kind: passage
+    chapter: "Bài C–D: tiêu đề và bốn đoạn"
+    heading: "The Best Job I Ever Had"
+    heading_vi: "C: người viết nói tốt hay xấu về công việc? · D: tìm nghề trong mỗi đoạn thật nhanh"
+    items: &texts
+      - {label: "A", text: "I had the best job in the world for three years and I didn't even get paid for it. From when I was 12 until when I was 15, I was a ball boy at Old Trafford. That's where Manchester United play their home matches. When the ball went off the pitch, I had to get it and give it back to one of the players as quickly as I could. I saw some great football matches and met footballers and football coaches from all round the world."}
+      - {label: "B", text: "People think that being a waitress is boring and repetitive, but it's the best job I ever had. I worked in a very nice restaurant where all the customers had plenty of money. The restaurant didn't pay me very much, but I made a fortune from the huge tips that the customers gave me. I always did my job well because I knew that if the customers weren't happy, they wouldn't give me a tip."}
+      - {label: "C", text: "The job I'm doing now pays very well, but it's quite boring and very stressful. I think I was happiest when I was picking fruit in France. My friends and I were students, and we travelled around France working on farms. We picked grapes and strawberries. We worked very long hours, and at the end of the day I was exhausted, but I was in the sunshine all day and I was working with the people I knew best."}
+      - {label: "D", text: "These days, I stay at home and look after my two children, but for ten years I had the best job in the world. I was an air hostess working on international flights. I flew to Australia and South America. During the flights, I was very busy and the passengers were sometimes quite difficult, but I got three days off before the journey back. The airline put me in the best hotels and I had a great time. I saw some wonderful places in those ten years."}
+    lines:
+      - emma: "Exercise C. Read the title of the passage: The Best Job I Ever Had. Will each person say good things or bad things about the job?"
+        vi: "Bài C: tiêu đề 'The Best Job I Ever Had' — họ sẽ nói tốt hay xấu?"
+      - tom: "Good things! It's the best job they ever had."
+      - emma: "Exactly. The exam tip: always read the heading or title of a passage. It will help you predict what it is about."
+        vi: "Mẹo thi: luôn đọc tiêu đề — giúp đoán nội dung."
+      - emma: "Exercise D. Read the four short texts and find the job in each as quickly as possible."
+        vi: "Bài D: tìm nghề trong mỗi đoạn thật nhanh."
+      - {wait: 8, note: "Find the job in each text", vi: "Tìm nghề trong mỗi đoạn."}
+      - {tom: "Text A: a ball boy.", focus: 0, mark: "a ball boy"}
+      - {tom: "Text B: a waitress.", focus: 1, mark: "a waitress"}
+      - {tom: "Text C: picking fruit.", focus: 2, mark: "picking fruit"}
+      - {tom: "Text D: an air hostess.", focus: 3, mark: "an air hostess"}
+
+  - kind: passage
+    chapter: "Bài E: cùng ý, khác chữ"
+    heading: "Reading 1E · In which text does the writer say that…?"
+    heading_vi: "Câu hỏi và bài đọc dùng chữ khác nhau — dò tìm ý"
+    items: *texts
+    lines:
+      - emma: "Exercise E. Scan the four texts and use the highlighted parts to answer these questions. In which text does the writer say that…"
+        vi: "Bài E: dùng phần tô vàng để trả lời — đoạn nào nói rằng…"
+      - emma: "One: he or she was very tired."
+        vi: "Câu 1: rất mệt."
+      - {tom: "Text C. At the end of the day I was exhausted. Exhausted means very tired.", focus: 2, mark: "at the end of the day I was exhausted"}
+      - emma: "Two: he or she got a lot of money from the job."
+        vi: "Câu 2: kiếm được nhiều tiền."
+      - {tom: "Text B. I made a fortune from the huge tips. A fortune is a lot of money.", focus: 1, mark: "I made a fortune"}
+      - emma: "Three: he or she got no money for doing the job."
+        vi: "Câu 3: không được trả tiền."
+      - {tom: "Text A. I didn't even get paid for it.", focus: 0, mark: "I didn't even get paid for it"}
+      - emma: "Four: he or she had free time to enjoy."
+        vi: "Câu 4: có thời gian rảnh."
+      - {tom: "Text D. I got three days off before the journey back. Days off means free time.", focus: 3, mark: "I got three days off"}
+      - emma: "The exam tip: in some scanning exercises, you need to look quickly for parts of the text that mean the same as the words in the question. You will not find the exact words from the question in the text."
+        vi: "Mẹo thi: tìm phần có cùng nghĩa — bài đọc sẽ không có đúng chữ trong câu hỏi."
+
+  - kind: passage
+    chapter: "Bài F: tự tìm ý diễn đạt lại"
+    heading: "Reading 1F · Scan again: in which text does the writer say that…?"
+    heading_vi: "Tự tìm và tô phần cho đáp án (đáp án suy ra)"
+    items: *texts
+    lines:
+      - emma: "Exercise F. Scan the text again to answer these questions in the same way. Highlight the parts of the text that provide the answer."
+        vi: "Bài F: tự dò và tô phần cho đáp án."
+      - {wait: 10, note: "Pause the video and find four answers", vi: "1 thích làm ngoài trời · 2 gặp người nổi tiếng · 3 giờ không làm nữa · 4 người ta nghĩ việc này không thú vị"}
+      - emma: "One: he or she enjoyed working outside."
+      - {tom: "Text C. I was in the sunshine all day.", focus: 2, mark: "I was in the sunshine all day"}
+      - emma: "Two: he or she met famous people."
+      - {tom: "Text A. I met footballers and football coaches from all round the world.", focus: 0, mark: "met footballers and football coaches"}
+      - emma: "Three: he or she doesn't do the job now."
+      - {tom: "Text D. These days, I stay at home and look after my two children.", focus: 3, mark: "These days, I stay at home"}
+      - emma: "Good. The other writers also don't do their jobs now, but text D says it most clearly: these days."
+        vi: "Các đoạn khác cũng là việc cũ, nhưng đoạn D nói rõ nhất: 'These days'."
+      - emma: "Four: people don't think the job is interesting."
+      - {tom: "Text B. People think that being a waitress is boring and repetitive.", focus: 1, mark: "boring and repetitive"}
+      - emma: "Excellent. Not interesting in the question, boring in the text. Same idea, different words."
+        vi: "'not interesting' ↔ 'boring': cùng ý, khác chữ."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "E: 1 C · 2 B · 3 A · 4 D", vi: "Phần tô vàng có sẵn"}
+      - {en: "F: 1 C · 2 A · 3 D · 4 B", vi: "Tự tìm (gợi ý)"}
+      - {en: "very tired = exhausted · a lot of money = a fortune · free time = days off", vi: "Cùng ý, khác chữ"}
+      - {en: "worked outside = in the sunshine · famous people = footballers · not interesting = boring", vi: "Cùng ý, khác chữ"}
+      - {en: "Next: Reading 2 — job advertisements", vi: "Tiếp theo: quảng cáo tuyển dụng"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Exercise E: C, B, A, D.", say: "Exercise E: C, B, eigh, D.", focus: 0}
+      - {emma: "Exercise F: C, A, D, B.", say: "Exercise F: C, eigh, D, B.", focus: 1}
+      - {emma: "And the paraphrases. The question and the text use different words for the same idea.", focus: 2}
+      - {emma: "Learn them in pairs.", focus: 3}
+      - {tom: "Next: job advertisements!", focus: 4}

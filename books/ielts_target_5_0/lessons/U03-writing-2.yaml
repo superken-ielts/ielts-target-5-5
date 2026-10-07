@@ -1,0 +1,202 @@
+# Video bài giảng Unit 3 · Writing 2: a letter of application (sách in trang 42). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-writing-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Thư nháp của Ahmed lấy từ trang sách; thư hoàn chỉnh theo Answer key (sách in
+# trang 267, "Unit 3, Writing 2D", giữ nguyên chữ). Vị trí các mẹo 1–5 (bài C) là đáp án suy ra theo thứ tự trong thư.
+id: U03-writing-2
+activity: U03-writing
+title: "Unit 3 · Work"
+subtitle: "Writing 2: a letter of application"
+title_vi: "Thư xin việc — năm phần của thư, sửa chữ quá thân mật, đọc thư hoàn chỉnh theo Answer key"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Writing 2: a letter of application."
+        say: "Welcome to Writing two: a letter of application."
+        vi: "Writing 2: thư xin việc."
+      - tom: "A letter to get a job. That's very useful!"
+      - emma: "Yes. Ahmed wants the sales executive job from Reading 2, advert B. Let's help him write a better letter."
+        say: "Yes. Ahmed wants the sales executive job from Reading two, advert B. Let's help him write a better letter."
+        vi: "Ahmed xin vị trí nhân viên kinh doanh (quảng cáo B ở Reading 2) — giúp Ahmed viết thư tốt hơn."
+
+  - kind: bullets
+    chapter: "Bài A: công ty tìm người thế nào?"
+    heading: "Writing 2A · Look again at advert B: what type of person is the company looking for?"
+    heading_vi: "Đọc kỹ quảng cáo trước khi viết — thư phải trả lời đúng yêu cầu"
+    items:
+      - {en: "ambitious", vi: "Có hoài bão, muốn tiến lên"}
+      - {en: "deals face-to-face with people — excellent communication skills", vi: "Giao tiếp trực tiếp tốt"}
+      - {en: "quick to understand new ideas and put them into practice", vi: "Nhanh hiểu ý mới, áp dụng được"}
+      - {en: "part of a busy sales team", vi: "Làm việc nhóm, môi trường bận rộn"}
+    lines:
+      - emma: "Exercise A. Look again at advert B. What type of person is the company looking for?"
+        say: "Exercise eigh. Look again at advert B. What type of person is the company looking for?"
+        vi: "Bài A: công ty muốn tuyển người như thế nào?"
+      - {tom: "Somebody ambitious.", focus: 0}
+      - {tom: "Good with people, face-to-face, with excellent communication skills.", focus: 1}
+      - {tom: "Quick to understand new ideas.", focus: 2}
+      - {tom: "And a team player.", focus: 3}
+      - emma: "Good. A strong letter shows that you are this person."
+        vi: "Thư tốt cho thấy bạn đúng là người đó."
+
+  - kind: letter
+    chapter: "Bài B: thư nháp của Ahmed"
+    heading: "Writing 2B · Ahmed's first letter — would he be suitable?"
+    heading_vi: "Thư nháp trong sách — chỗ gạch chân là từ quá thân mật"
+    items:
+      - {text: "Dear Mr Lucas,", body: false, note: "Biết tên người nhận"}
+      - text: "I am writing to get the position of sales executive that I saw advertised in yesterday's Daily Argus. I want a job in sales, and I am interested in working for your company."
+        note: "get · want a job"
+      - text: "I recently finished a Business Studies degree at York University. I did very well in Economics and Marketing. Part of my degree course was about designing and developing new ideas. I learn quickly and work well with other people."
+        note: "did very well · was about"
+      - text: "My father runs an import and export company, and from the age of 16 I have helped him in his office. I have learnt a lot about business and communicated with clients both on the telephone and face-to-face."
+        say: "My father runs an import and export company, and from the age of sixteen I have helped him in his office. I have learnt a lot about business, and communicated with clients both on the telephone and face-to-face."
+        note: "a lot about business"
+      - text: "I am outgoing and confident and I enjoy a challenge. I think I would be the right person for a position in your company. I can attend an interview at any time and really want to hear from you."
+        note: "really want to hear"
+      - {text: "Yours sincerely,\nAhmed Khatani", say: "Yours sincerely. Ahmed Kah-tah-nee.", body: false, note: "Dear Mr Lucas → Yours sincerely"}
+    lines:
+      - emma: "Exercise B. Read the cover letter that Ahmed sent with his CV. Do you think he would be suitable for the position?"
+        vi: "Bài B: đọc thư Ahmed gửi kèm CV — Ahmed có phù hợp không?"
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+      - {read: emma, focus: 4}
+      - {read: emma, focus: 5}
+
+  - kind: order
+    chapter: "Bài C: năm phần của thư xin việc"
+    heading: "Writing 2C · Where does each tip go in the letter?"
+    heading_vi: "Sắp các mẹo theo thứ tự xuất hiện trong thư (đáp án suy ra)"
+    items:
+      - {k: "1", text: "Say that you are qualified for the job — mention education and experience.", pos: 3, short: "qualified: education, experience"}
+      - {k: "2", text: "Say where you saw the job advertised.", pos: 2, short: "where you saw the advert"}
+      - {k: "3", text: "Say something about your personal qualities.", pos: 4, short: "personal qualities"}
+      - {k: "4", text: "State your purpose for writing.", pos: 1, short: "purpose"}
+      - {k: "5", text: "Close the letter in a polite, positive way.", pos: 5, short: "polite, positive close"}
+    lines:
+      - emma: "Exercise C. Here are some tips on how to organize an application letter. Write the number of each tip in the boxes on the letter."
+        vi: "Bài C: đặt năm mẹo vào đúng chỗ trong thư."
+      - {wait: 8, note: "Pause the video and put the tips in order", vi: "Tạm dừng video và sắp xếp."}
+      - {tom: "First, tip four: state your purpose. I am writing to apply for the position.", focus: 3, reveal: "4"}
+      - {tom: "Tip two: where you saw it. In yesterday's Daily Argus.", focus: 1, reveal: "2"}
+      - {tom: "Tip one: qualified. The degree at York University, and the work in his father's office.", focus: 0, reveal: "1"}
+      - {tom: "Tip three: personal qualities. Outgoing and confident.", focus: 2, reveal: "3"}
+      - {tom: "And tip five: a polite, positive close. I look forward to hearing from you.", focus: 4, reveal: "5"}
+      - emma: "Exactly. Purpose, the advert, qualifications, qualities, and a polite close."
+        vi: "Mục đích → quảng cáo → trình độ → phẩm chất → kết lịch sự."
+
+  - kind: errors
+    chapter: "Bài D: sửa chữ quá thân mật"
+    heading: "Writing 2D · Replace the informal words and phrases"
+    heading_vi: "apply for · hope to work · achieved very high grades · involved · many useful business skills · look forward to hearing"
+    items:
+      - {wrong: "I am writing to get the position", right: "I am writing to apply for the position", note: "get → apply for"}
+      - {wrong: "I want a job in sales", right: "I hope to work in sales", note: "want a job → hope to work"}
+      - {wrong: "I did very well in Economics", right: "I achieved very high grades in Economics", note: "did very well → achieved very high grades"}
+      - {wrong: "Part of my degree course was about designing", right: "Part of my degree course involved designing", note: "was about → involved"}
+      - {wrong: "I have learnt a lot about business", right: "I have learnt many useful business skills", note: "a lot about business → many useful business skills"}
+      - {wrong: "… and really want to hear from you.", right: "… and look forward to hearing from you.", note: "really want to hear → look forward to hearing"}
+    lines:
+      - emma: "Exercise D. Some words and phrases in the letter are underlined because they are too informal. Replace them with the words and phrases in the box."
+        vi: "Bài D: thay sáu chỗ quá thân mật bằng cụm trong khung."
+      - {wait: 10, note: "Pause the video and replace", vi: "Tạm dừng video và thay."}
+      - {emma: "Get the position.", focus: 0}
+      - {tom: "Apply for the position.", focus: 0}
+      - {emma: "I want a job in sales.", focus: 1}
+      - {tom: "I hope to work in sales.", focus: 1}
+      - {emma: "I did very well.", focus: 2}
+      - {tom: "I achieved very high grades.", focus: 2}
+      - {emma: "Was about.", focus: 3}
+      - {tom: "Involved.", focus: 3}
+      - {emma: "A lot about business.", focus: 4}
+      - {tom: "Many useful business skills.", focus: 4}
+      - {emma: "And: really want to hear from you.", focus: 5}
+      - {tom: "Look forward to hearing from you.", focus: 5}
+
+  - kind: letter
+    chapter: "Bài E: thư hoàn chỉnh"
+    heading: "Writing 2E · The complete model letter (1/2)"
+    heading_vi: "Theo Answer key (sách in trang 267) — Tom đọc"
+    words: 152
+    items:
+      - {text: "Dear Mr Lucas,", body: false, note: "Biết tên người nhận"}
+      - text: "I am writing to apply for the position of sales executive that I saw advertised in yesterday's Daily Argus. I hope to work in sales, and I am interested in working for your company."
+        note: "4 purpose · 2 the advert"
+      - text: "I recently finished a Business Studies degree at York University. I achieved very high grades in Economics and Marketing. Part of my degree course involved designing and developing new ideas. I learn quickly and work well with other people."
+        note: "1 qualified: education"
+    lines:
+      - emma: "Exercise E. Read the complete model letter and check your answers. Does it sound better than Ahmed's first letter?"
+        vi: "Bài E: đọc thư hoàn chỉnh — có hay hơn thư nháp không?"
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+
+  - kind: letter
+    heading: "Writing 2E · The complete model letter (2/2)"
+    heading_vi: "Theo Answer key (sách in trang 267) — Tom đọc"
+    words: 152
+    items:
+      - text: "My father runs an import and export company, and from the age of 16 I have helped him in his office. I have learnt many useful business skills and communicated with clients both on the telephone and face-to-face."
+        say: "My father runs an import and export company, and from the age of sixteen I have helped him in his office. I have learnt many useful business skills, and communicated with clients both on the telephone and face-to-face."
+        note: "1 qualified: experience"
+      - text: "I am outgoing and confident and I enjoy a challenge. I think I would be the right person for a position in your company. I can attend an interview at any time and look forward to hearing from you."
+        note: "3 qualities · 5 polite close"
+      - {text: "Yours sincerely,\nAhmed Khatani", say: "Yours sincerely. Ahmed Kah-tah-nee.", body: false, note: "Dear Mr Lucas → Yours sincerely"}
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - tom: "Yes, it sounds much better. More professional."
+      - emma: "And notice: Dear Mr Lucas, so Yours sincerely. When you know the name, use sincerely."
+        vi: "Biết tên người nhận (Dear Mr Lucas) → Yours sincerely."
+
+  - kind: vocab
+    chapter: "Cụm từ cho thư xin việc"
+    heading: "Useful phrases · Letters of application"
+    heading_vi: "Dùng lại khi tự viết thư xin việc"
+    items:
+      - {w: "I am writing to apply for the position of …", pos: "purpose", vi: "Tôi viết thư để ứng tuyển vị trí …", ex: "I am writing to apply for the position of receptionist."}
+      - {w: "… that I saw advertised in …", pos: "the advert", vi: "… mà tôi thấy quảng cáo trên …", ex: "… that I saw advertised on your website."}
+      - {w: "I recently finished a … degree at …", pos: "education", vi: "Tôi vừa tốt nghiệp ngành … tại …", ex: "I recently finished a Hotel Management degree at Hue University."}
+      - {w: "I have … experience of …", pos: "experience", vi: "Tôi có kinh nghiệm …", ex: "I have two years' experience of working with customers."}
+      - {w: "I am outgoing and confident.", pos: "qualities", vi: "Tôi cởi mở và tự tin.", ex: "I am hard-working, and I enjoy a challenge."}
+      - {w: "I can attend an interview at any time.", pos: "polite close", vi: "Tôi có thể đến phỏng vấn bất cứ lúc nào.", ex: "I can attend an interview at any time and look forward to hearing from you."}
+    lines:
+      - emma: "Here are some useful phrases for your own application letters."
+        vi: "Các cụm từ cho thư xin việc của bạn."
+      - {emma: "To state your purpose.", focus: 0}
+      - {tom: "I am writing to apply for the position of receptionist.", focus: 0}
+      - {emma: "To say where you saw the job.", focus: 1}
+      - {tom: "That I saw advertised on your website.", focus: 1}
+      - {emma: "Your education.", focus: 2}
+      - {tom: "I recently finished a Hotel Management degree at Hue University.", say: "I recently finished a Hotel Management degree at Whey University.", focus: 2}
+      - {emma: "Your experience.", focus: 3}
+      - {tom: "I have two years' experience of working with customers.", focus: 3}
+      - {emma: "Your qualities.", focus: 4}
+      - {tom: "I am hard-working, and I enjoy a challenge.", focus: 4}
+      - {emma: "And a polite close.", focus: 5}
+      - {tom: "I can attend an interview at any time, and look forward to hearing from you.", focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Order: purpose → the advert → qualifications → qualities → polite close", vi: "Năm phần của thư xin việc"}
+      - {en: "apply for · hope to work · achieved very high grades · involved · many useful business skills · look forward to hearing", vi: "Cụm trang trọng thay cho cụm thân mật"}
+      - {en: "Dear Mr Lucas → Yours sincerely · Dear Sir/Madam → Yours faithfully", vi: "Mở – kết khớp nhau"}
+      - {en: "Next: Unit 3 Consolidation", vi: "Tiếp theo: ôn tập Unit 3"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Five parts, in this order.", focus: 0}
+      - {emma: "Formal words and phrases.", focus: 1}
+      - {emma: "And match the opening and the ending.", focus: 2}
+      - {tom: "Next: the Consolidation page!", focus: 3}

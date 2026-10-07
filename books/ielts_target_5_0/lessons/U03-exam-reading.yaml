@@ -1,0 +1,167 @@
+# Video bài giảng Unit 3 · Exam Practice — Reading (sách in trang 45). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-exam-reading.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U03-reading-1.yaml (cảnh `passage` + `mark`). Answer key không có trang này:
+# đáp án 1–8 (C A D A B D B C) và 9–12 (saved · home · became busier · was late) suy ra từ bài "The Worst Job I Ever Had",
+# mỗi câu kèm cụm từ diễn đạt lại được tô vàng.
+id: U03-exam-reading
+activity: U03-exam-practice
+title: "Unit 3 · Work"
+subtitle: "Exam practice: Reading"
+title_vi: "Luyện đề Reading — 'The Worst Job I Ever Had': đoạn nào nói gì (1–8), điền ghi chú ≤ 2 từ (9–12)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to the Unit 3 Exam Practice: the Reading Module."
+        say: "Welcome to the Unit three Exam Practice: the Reading Module."
+        vi: "Luyện đề Unit 3 — phần Reading."
+      - tom: "After the best job, now the worst job!"
+      - emma: "Yes. Four people describe the worst job they ever had. And you scan for paraphrases, just like in Reading 1."
+        say: "Yes. Four people describe the worst job they ever had. And you scan for paraphrases, just like in Reading one."
+        vi: "Bốn người kể công việc tệ nhất — dò tìm ý diễn đạt lại như Reading 1."
+
+  - kind: bullets
+    chapter: "Cách làm"
+    heading: "How to do it"
+    heading_vi: "Hai dạng câu hỏi"
+    items:
+      - {en: "Questions 1–8: in which text does the writer say that…? (A–D)", vi: "Câu 1–8: đoạn nào nói điều này?"}
+      - {en: "Questions 9–12: complete the notes — no more than two words or a number", vi: "Câu 9–12: điền ghi chú, tối đa hai từ hoặc một số"}
+      - {en: "Question-type tip: the instructions tell you how many words you can use", vi: "Đề cho biết được viết bao nhiêu từ"}
+      - {en: "Read the title, skim the four texts, then scan for each answer", vi: "Đọc tiêu đề, đọc lướt, rồi dò từng câu"}
+    lines:
+      - emma: "Read the passage and answer the questions. There are two types of question."
+        vi: "Hai dạng câu hỏi."
+      - {emma: "Questions one to eight: write the letter of the text.", focus: 0}
+      - {emma: "Questions nine to twelve: complete the notes with words from the passage. No more than two words or a number.", focus: 1}
+      - {emma: "The question-type tip: in the Reading and Listening Modules, you will sometimes need to complete notes with words from the text. The instructions will tell you how many words you can use.", focus: 2}
+      - {emma: "So: read the title, skim, and then scan.", focus: 3}
+
+  - kind: passage
+    chapter: "Bài đọc"
+    heading: "The Worst Job I Ever Had"
+    heading_vi: "Đọc lướt bốn đoạn — mỗi người làm nghề gì?"
+    items: &texts
+      - {label: "A", text: "I think the worst job I ever had was when I was about 14. I had to deliver newspapers before I went to school. I had to be at the shop by about 6.30 a.m. and then, when the round was finished, I went home for breakfast. I remember icy winter mornings when all I wanted to do was stay in bed. At the beginning of the round, when the bag was full of newspapers, it was really heavy. I did it for about two years and I saved enough money to buy a bicycle."}
+      - {label: "B", text: "When I was at school taking my A levels, I worked all day Saturday on the checkout at the local supermarket. It was really boring and really repetitive, and when I think about it now, not very well paid at all. I remember looking at the clock on the wall and thinking that the hands weren't moving. The customers were mostly friendly, but all I wanted was to finish and go home."}
+      - {label: "C", text: "When I was a student, I washed up in the kitchen of a big restaurant. The heat in the kitchen was terrible, and it was always so noisy. It was definitely the most horrible job I have ever done. At the beginning of the evening, it wasn't too bad, but as the restaurant became busier the work started to pile up. Washing plates and dishes was quite easy, but cleaning the pots and pans that were used to cook in was impossible."}
+      - {label: "D", text: "I was really unhappy when I worked as a secretary for a company in Liverpool. The job itself wasn't so bad, but my boss was really unfriendly and he seemed to enjoy making life difficult for me. He complained if I was two or three minutes late, but always gave me something to do just before it was time to go home. One day, I decided that I had had enough, and I just walked out of the office and never went back."}
+    lines:
+      - emma: "First, skim the four texts. What was each person's worst job?"
+        vi: "Đọc lướt: mỗi người làm nghề gì?"
+      - {wait: 10, note: "Skim the four texts", vi: "Đọc lướt bốn đoạn."}
+      - {tom: "Text A: delivering newspapers.", say: "Text eigh: delivering newspapers.", focus: 0, mark: "deliver newspapers"}
+      - {tom: "Text B: the checkout at a supermarket.", focus: 1, mark: "on the checkout at the local supermarket"}
+      - {tom: "Text C: washing up in a restaurant kitchen.", focus: 2, mark: "washed up in the kitchen"}
+      - {tom: "Text D: a secretary in Liverpool.", focus: 3, mark: "as a secretary"}
+
+  - kind: passage
+    chapter: "Câu 1–4"
+    heading: "Questions 1–4 · In which text does the writer say that…?"
+    heading_vi: "Tìm phần có cùng nghĩa — không có đúng chữ trong câu hỏi"
+    items: *texts
+    lines:
+      - emma: "Questions one to eight. Pause the video and try first."
+        vi: "Câu 1–8: tạm dừng video và làm trước."
+      - {wait: 12, note: "Pause the video: questions 1–8", vi: "1 rất nóng · 2 đôi khi rất lạnh · 3 làm với người không thích · 4 bắt đầu làm rất sớm · 5 ít tiền · 6 bỏ việc đột ngột · 7 thời gian trôi chậm · 8 có phần việc tệ hơn phần khác"}
+      - emma: "One: it was very hot."
+      - {tom: "C. The heat in the kitchen was terrible.", focus: 2, mark: "The heat in the kitchen was terrible"}
+      - emma: "Two: it was sometimes very cold."
+      - {tom: "A. Icy winter mornings.", say: "Eigh. Icy winter mornings.", focus: 0, mark: "icy winter mornings"}
+      - emma: "Three: he or she worked with somebody he or she didn't like."
+      - {tom: "D. My boss was really unfriendly.", focus: 3, mark: "my boss was really unfriendly"}
+      - emma: "Four: he or she started work very early."
+      - {tom: "A again. At the shop by about six thirty a.m.", say: "Eigh, again. At the shop by about six thirty in the morning.", focus: 0, mark: "by about 6.30 a.m."}
+
+  - kind: passage
+    chapter: "Câu 5–8"
+    heading: "Questions 5–8 · In which text does the writer say that…?"
+    heading_vi: "Một chữ cái có thể dùng nhiều lần"
+    items: *texts
+    lines:
+      - emma: "Five: he or she did not get much money for doing the job."
+      - {tom: "B. Not very well paid at all.", focus: 1, mark: "not very well paid at all"}
+      - emma: "Six: he or she left the job suddenly."
+      - {tom: "D. I just walked out of the office and never went back.", focus: 3, mark: "I just walked out of the office"}
+      - emma: "Seven: time went very slowly."
+      - {tom: "B. The hands of the clock weren't moving.", focus: 1, mark: "the hands weren't moving"}
+      - emma: "Eight: some parts of the job were worse than others."
+      - {tom: "C. Washing plates was quite easy, but cleaning the pots and pans was impossible.", focus: 2, mark: "cleaning the pots and pans that were used to cook in was impossible"}
+      - emma: "Good. A, B, C and D are each used twice. Time went slowly means the hands weren't moving. Left suddenly means walked out."
+        say: "Good. Eigh, B, C, and D, are each used twice. Time went slowly means the hands weren't moving. Left suddenly means walked out."
+        vi: "Mỗi chữ dùng hai lần. 'time went slowly' ↔ 'the hands weren't moving'; 'left suddenly' ↔ 'walked out'."
+
+  - kind: blanks
+    chapter: "Câu 9–12: điền ghi chú"
+    heading: "Questions 9–12 · Complete the notes — no more than two words or a number"
+    heading_vi: "Chép đúng từ trong bài (đáp án suy ra)"
+    items:
+      - {n: 9, q: "In text A, the writer bought a bicycle with the money that he or she ___.", answer: "saved", tip: "Text A: I saved enough money to buy a bicycle"}
+      - {n: 10, q: "In text B, the writer spent all day looking forward to going ___.", answer: "home", tip: "Text B: all I wanted was to finish and go home"}
+      - {n: 11, q: "In text C, the writer says that the restaurant ___ as the evening went on.", answer: "became busier", tip: "Text C: as the restaurant became busier — two words"}
+      - {n: 12, q: "In text D, the writer says that if he or she ___, his or her boss complained.", answer: "was late", tip: "Text D: He complained if I was two or three minutes late"}
+    lines:
+      - emma: "Questions nine to twelve. Complete the notes with words from the passage. Write no more than two words or a number."
+        vi: "Câu 9–12: điền ghi chú, tối đa hai từ."
+      - {wait: 10, note: "Pause the video and complete", vi: "Tạm dừng video và điền."}
+      - {emma: "Nine.", focus: 0}
+      - {tom: "Saved. I saved enough money to buy a bicycle.", reveal: 9}
+      - {emma: "Ten.", focus: 1}
+      - {tom: "Home. All I wanted was to finish and go home.", reveal: 10}
+      - {emma: "Eleven.", focus: 2}
+      - {tom: "Became busier. Two words.", reveal: 11}
+      - {emma: "Twelve.", focus: 3}
+      - {tom: "Was late. If I was two or three minutes late. Two words again.", reveal: 12}
+      - emma: "Don't write two or three minutes late. That's five words! Check the word limit."
+        vi: "Không viết 'two or three minutes late' — quá hai từ."
+
+  - kind: vocab
+    chapter: "Từ khóa"
+    heading: "Key words from the passage"
+    heading_vi: "Từ tả công việc và cảm xúc"
+    items:
+      - {w: "deliver", pos: "verb", vi: "giao, phát (báo, hàng)", ex: "I had to deliver newspapers before school."}
+      - {w: "repetitive", pos: "adjective", vi: "lặp đi lặp lại", ex: "Working on the checkout was boring and repetitive."}
+      - {w: "well paid", pos: "adjective ↔ badly paid", vi: "lương cao", ex: "The job was not very well paid at all."}
+      - {w: "pile up", pos: "phrasal verb", vi: "chất đống, dồn lại", ex: "As the restaurant became busier, the work started to pile up."}
+      - {w: "complain", pos: "verb · a complaint (noun)", vi: "phàn nàn", ex: "My boss complained if I was late."}
+      - {w: "I had had enough", pos: "past perfect", vi: "tôi chịu hết nổi rồi", ex: "One day, I decided that I had had enough."}
+    lines:
+      - emma: "Here are some key words from the passage."
+        vi: "Từ khóa trong bài."
+      - {emma: "Deliver.", focus: 0}
+      - {tom: "I had to deliver newspapers before school.", focus: 0}
+      - {emma: "Repetitive.", focus: 1}
+      - {tom: "Working on the checkout was boring and repetitive.", focus: 1}
+      - {emma: "Well paid.", focus: 2}
+      - {tom: "The job was not very well paid at all.", focus: 2}
+      - {emma: "Pile up.", focus: 3}
+      - {tom: "As the restaurant became busier, the work started to pile up.", focus: 3}
+      - {emma: "Complain.", focus: 4}
+      - {tom: "My boss complained if I was late.", focus: 4}
+      - {emma: "I had had enough.", focus: 5}
+      - {tom: "One day, I decided that I had had enough.", focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Answers and tips"
+    heading_vi: "Đáp án (suy ra từ bài) và mẹo"
+    items:
+      - {en: "1 C · 2 A · 3 D · 4 A · 5 B · 6 D · 7 B · 8 C", vi: "Đoạn nào nói gì"}
+      - {en: "9 saved · 10 home · 11 became busier · 12 was late", vi: "Điền ghi chú"}
+      - {en: "very hot = the heat was terrible · left suddenly = walked out · time went slowly = the hands weren't moving", vi: "Cùng ý, khác chữ"}
+      - {en: "Check the word limit: no more than two words", vi: "Kiểm tra giới hạn số từ"}
+      - {en: "Unit 3 is finished! Next: Unit 4", vi: "Xong Unit 3!"}
+    lines:
+      - emma: "Here are the answers. Count your score out of twelve."
+        vi: "Đáp án — tự chấm trên 12."
+      - {emma: "One to eight: C, A, D, A, B, D, B, C.", say: "One to eight: C, eigh, D, eigh, B, D, B, C.", focus: 0}
+      - {emma: "Nine to twelve: saved, home, became busier, was late.", focus: 1}
+      - {emma: "Remember the paraphrases.", focus: 2}
+      - {emma: "And always check the word limit.", focus: 3}
+      - {tom: "Unit 3 is finished! See you in Unit 4.", say: "Unit three is finished! See you in Unit four.", focus: 4}

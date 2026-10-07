@@ -1,0 +1,260 @@
+# Video bài giảng Unit 3 · Speaking 2: talking about jobs (sách in trang 35). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-speaking-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Track 30 (would you / could you) không có file nghe nên Tom đọc lại hai câu
+# của Tapescript. Bài nói mẫu Part 2 (thẻ B) và câu trả lời bài A do video tự viết làm mẫu; ảnh hai thẻ cắt từ trang PDF 36.
+id: U03-speaking-2
+activity: U03-speaking-vocab
+title: "Unit 3 · Work"
+subtitle: "Speaking 2: talking about jobs, part 2 of the Speaking Module"
+title_vi: "would / could cho tình huống không có thật; Phần 2 bài thi Nói — thẻ đề, 1 phút chuẩn bị, nói 2 phút"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back! Today: Speaking 2, talking about jobs."
+        say: "Welcome back! Today: Speaking two, talking about jobs."
+        vi: "Speaking 2: nói về nghề nghiệp."
+      - tom: "And part 2 of the Speaking test. The long turn!"
+        say: "And part two of the Speaking test. The long turn!"
+      - emma: "Yes. You talk for two minutes on your own. Today I'll show you how to prepare."
+        vi: "Phần 2: tự nói 2 phút. Hôm nay học cách chuẩn bị."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Speaking 2, bài A–C"
+    items:
+      - {en: "A: answer questions about jobs", vi: "Trả lời câu hỏi về nghề nghiệp"}
+      - {en: "Grammar check: would and could — situations that are not real", vi: "would / could cho tình huống không có thật"}
+      - {en: "Pronunciation: would you /wʊdʒuː/ · could you /kʊdʒuː/", vi: "Nối âm would you, could you"}
+      - {en: "B–C: part 2 cards — one minute to prepare, two minutes to speak", vi: "Thẻ đề Phần 2: chuẩn bị 1 phút, nói 2 phút"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "Three questions about jobs.", focus: 0}
+      - {emma: "Would and could.", focus: 1}
+      - {emma: "How to say them naturally.", focus: 2}
+      - {emma: "And part 2 of the Speaking Module.", say: "And part two of the Speaking Module.", focus: 3}
+
+  - kind: qa
+    chapter: "Bài A: câu hỏi về nghề"
+    heading: "Speaking 2A · Answer these questions"
+    heading_vi: "Nghe Tom trả lời mẫu — chú ý would"
+    items:
+      - q: "What jobs do the people in your family do?"
+        a: "My father works as an engineer for a construction company, and my mother is a nurse. My sister works in a bank."
+        phrases: ["works as …", "works for …", "works in …"]
+        ask: emma
+        by: tom
+      - q: "Do any of your friends or family have a job you would really like?"
+        a: "Yes, my uncle is a pilot. I would really like his job, because he travels all over the world."
+        phrases: ["I would really like …", "because …"]
+        ask: emma
+        by: tom
+      - q: "Is there a job you would like to do more than any other?"
+        a: "I would most like to be an architect. I love drawing, and I'd like to design buildings for my city."
+        phrases: ["I would most like to be …", "I'd like to …"]
+        ask: emma
+        by: tom
+    lines:
+      - emma: "Exercise A. Answer these questions with a partner. Tom, you're my partner today."
+        say: "Exercise eigh. Answer these questions with a partner. Tom, you're my partner today."
+        vi: "Bài A: trả lời ba câu hỏi."
+      - {emma: "What jobs do the people in your family do?", focus: 0}
+      - {tom: "My father works as an engineer for a construction company, and my mother is a nurse. My sister works in a bank.", reveal: 0}
+      - {emma: "Do any of your friends or family have a job you would really like?", focus: 1}
+      - {tom: "Yes, my uncle is a pilot. I would really like his job, because he travels all over the world.", reveal: 1}
+      - {emma: "Is there a job you would like to do more than any other?", focus: 2}
+      - {tom: "I would most like to be an architect. I love drawing, and I'd like to design buildings for my city.", reveal: 2}
+
+  - kind: compare
+    chapter: "Grammar check: would / could"
+    heading: "Grammar check · would and could"
+    heading_vi: "Dùng would, could khi tình huống không có thật"
+    items:
+      - title: "would — imagine it"
+        title_vi: "Tưởng tượng, mong muốn"
+        lines: ["What job would you most like?", "(the person will not really have this job)", "I would like to be a pilot."]
+      - title: "could — is it possible?"
+        title_vi: "Có khả năng làm được không"
+        lines: ["Do you think you could do his job?", "(the person will not really try to do the job)", "I could do it, but I couldn't do it every day."]
+    lines:
+      - emma: "Grammar check. We use would and could when a situation is not real."
+        vi: "would / could: tình huống không có thật."
+      - {emma: "What job would you most like? The person will not really have this job. We are only imagining.", focus: 0}
+      - {tom: "I would like to be a pilot.", focus: 0}
+      - {emma: "Do you think you could do his job? The person will not really try to do it.", focus: 1}
+      - {tom: "I think I could do it, but I couldn't do it every day.", focus: 1}
+
+  - kind: bullets
+    chapter: "Phát âm: would you / could you"
+    heading: "Pronunciation check · would you /wʊdʒuː/ · could you /kʊdʒuː/"
+    heading_vi: "d + you nối thành /dʒuː/ — theo Tapescript Track 30"
+    items:
+      - {en: "What job would you most like?", vi: "would you → /wʊdʒuː/"}
+      - {en: "Do you think you could do this job?", vi: "could you → /kʊdʒuː/ (in questions: Could you…?)"}
+    lines:
+      - emma: "Pronunciation check. Listen and notice the pronunciation of would you, and could you. The d and the y join together: joo."
+        say: "Pronunciation check. Listen, and notice the pronunciation of would you, and could you. The D and the Y join together: joo."
+        vi: "d + y nối thành âm /dʒ/."
+      - {tom: "What job would you most like?", say: "What job woodjoo most like?", focus: 0}
+      - {tom: "Would you. Would you.", say: "Woodjoo. Woodjoo.", focus: 0}
+      - {tom: "Do you think you could do this job?", focus: 1}
+      - {tom: "Could you help me? Could you.", say: "Could-joo help me? Could-joo.", focus: 1}
+      - {wait: 6, note: "Say the sentences", vi: "Nói lại hai câu, nối âm /dʒuː/."}
+
+  - kind: errors
+    chapter: "Watch out! Lỗi hay gặp"
+    heading: "Watch out! · Typical errors"
+    heading_vi: "Tình huống tưởng tượng: dùng would / could"
+    items:
+      - {wrong: "Do you like to work in another country?", right: "Would you like to work in another country?", note: "hỏi mong muốn trong tương lai: Would you like…?"}
+      - {wrong: "Do you think you can be the president …?", right: "Do you think you could be the president …?", note: "… of your country one day? — khó xảy ra → could"}
+    lines:
+      - emma: "Watch out! Two typical errors."
+        vi: "Hai lỗi hay gặp."
+      - {emma: "Number one. Do you like asks about now, in general. For a wish, we say: would you like.", focus: 0}
+      - {tom: "Would you like to work in another country?", focus: 0}
+      - {emma: "Number two. Being the president is not very likely, so we use could.", focus: 1}
+      - {tom: "Do you think you could be the president of your country one day?", focus: 1}
+
+  - kind: bullets
+    chapter: "Exam tip: Phần 2 bài thi Nói"
+    heading: "Exam tip · Part 2 of the Speaking Module"
+    heading_vi: "Nói về một chủ đề khoảng hai phút"
+    items:
+      - {en: "The examiner gives you a card with the topic and some points", vi: "Giám khảo đưa thẻ có chủ đề và các ý gợi ý"}
+      - {en: "You have one minute to prepare and write notes", vi: "Một phút chuẩn bị, được ghi chú"}
+      - {en: "You talk about the topic for about two minutes", vi: "Nói khoảng hai phút"}
+      - {en: "You can ask the examiner about anything you don't understand", vi: "Được hỏi giám khảo từ nào không hiểu"}
+    lines:
+      - emma: "The exam tip. In the second part of the Speaking Module, you have to talk about a topic for about two minutes."
+        vi: "Mẹo thi: Phần 2 — nói về một chủ đề khoảng hai phút."
+      - {emma: "The examiner will give you a card with the topic and some points to think about.", focus: 0}
+      - {emma: "You have a minute to prepare and write notes.", focus: 1}
+      - {emma: "Then you talk for about two minutes.", focus: 2}
+      - {emma: "And you can ask the examiner about anything that you don't understand.", focus: 3}
+
+  - kind: match
+    chapter: "Bài B: hai thẻ đề"
+    heading: "Speaking 2B · Two typical cards for part 2"
+    heading_vi: "Mỗi ý trên thẻ là một đoạn nhỏ của bài nói"
+    image: {pdf: course-book, page: 36, clip: [75, 568, 530, 682]}
+    items:
+      - {n: 1, q: "Card A: Describe a job you think is really difficult.", answer: A}
+      - {n: 2, q: "Card B: What is the best job in the world?", answer: B}
+    lines:
+      - emma: "Exercise B. Here are two typical cards for part 2. One of you is A, the other is B."
+        say: "Exercise B. Here are two typical cards for part two. One of you is eigh, the other is B."
+        vi: "Bài B: hai thẻ đề — một người thẻ A, một người thẻ B."
+      - {emma: "Card A: describe a job you think is really difficult. Say what the job is, why it is difficult, why some people do it, and why you wouldn't like to do it.", say: "Card eigh: describe a job you think is really difficult. Say what the job is, why it is difficult, why some people do it, and why you wouldn't like to do it.", focus: 0, reveal: 1}
+      - {emma: "Card B: what is the best job in the world? Say what the job is, why it is such a good job, what type of person does it, and if you think you could do it.", focus: 1, reveal: 2}
+      - tom: "Four points on each card. So I can talk for about thirty seconds about each point."
+      - emma: "Exactly. That's a good plan."
+
+  - kind: timing
+    heading: "Part 2 · How to use your time"
+    heading_vi: "1 phút chuẩn bị + 2 phút nói"
+    items:
+      - {label: "Prepare: read the card, write notes", minutes: 1, vi: "Đọc thẻ, ghi từ khóa"}
+      - {label: "Point 1 + point 2", minutes: 1, vi: "Hai ý đầu"}
+      - {label: "Point 3 + point 4", minutes: 1, vi: "Hai ý sau"}
+    lines:
+      - emma: "Here is how to use your three minutes. One minute to prepare. Write key words, not full sentences."
+        focus: 0
+        reveal: 0
+        vi: "Một phút chuẩn bị: ghi từ khóa, không viết câu."
+      - {emma: "Then about one minute for the first two points.", focus: 1, reveal: 1}
+      - {emma: "And about one minute for the last two points.", focus: 2, reveal: 2}
+
+  - kind: bullets
+    chapter: "Ghi chú của Tom"
+    heading: "Tom's notes for card B (one minute)"
+    heading_vi: "Chỉ ghi từ khóa"
+    items:
+      - {en: "job: doctor — hospital, children", vi: "Nghề gì"}
+      - {en: "good: helps people · rewarding · respected", vi: "Vì sao tốt"}
+      - {en: "person: kind, patient, works hard, calm (stress)", vi: "Người thế nào"}
+      - {en: "me? could — study 6 years… maybe a nurse", vi: "Mình có làm được không"}
+    lines:
+      - emma: "Tom, you have card B. Here are your notes."
+        vi: "Tom cầm thẻ B — đây là ghi chú của Tom."
+      - {tom: "The job: a doctor in a children's hospital.", focus: 0}
+      - {tom: "Why it's good: helping people, rewarding, respected.", focus: 1}
+      - {tom: "The type of person: kind, patient, and calm.", focus: 2}
+      - {tom: "And could I do it? Maybe.", focus: 3}
+
+  - kind: letter
+    chapter: "Bài nói mẫu (thẻ B)"
+    heading: "Tom's talk · What is the best job in the world? (1/2)"
+    heading_vi: "Mỗi ý trên thẻ một đoạn; dùng would / could"
+    words: 172
+    items:
+      - text: "I'm going to talk about the job I think is the best in the world: a doctor, especially a doctor in a children's hospital."
+        note: "what the job is"
+      - text: "I think it's such a good job because doctors help people every day. When a sick child gets better and goes home, it must be very rewarding. Doctors are also respected in my country, and people trust them."
+        note: "why it is such a good job"
+      - text: "Of course, it isn't an easy job. Doctors work very long hours, and sometimes they have to work at night."
+        note: "+ một ý trái chiều"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+
+  - kind: letter
+    heading: "Tom's talk · What is the best job in the world? (2/2)"
+    heading_vi: "Mỗi ý trên thẻ một đoạn; dùng would / could"
+    words: 172
+    items:
+      - text: "The type of person who does this job must be kind and patient, because children are often frightened in hospital. A good doctor also has to stay calm when there is an emergency, and work hard all through their career."
+        note: "what type of person does it"
+      - text: "Do I think I could do it? Honestly, I'm not sure. You have to study for six or seven years, and I'm not very good at biology. I think I could be a nurse, though, because I like helping people."
+        note: "if you think you could do it"
+      - text: "So, for me, it's the best job in the world."
+        note: "câu kết"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+
+  - kind: practice
+    chapter: "Bài C: đến lượt bạn"
+    heading: "Speaking 2C · Your turn: card A — describe a job you think is really difficult"
+    heading_vi: "Tạm dừng video để chuẩn bị đủ 1 phút và nói đủ 2 phút"
+    items:
+      - {q: "Prepare: what the job is · why it is difficult · why some people do it · why you wouldn't like to do it", hint: "Write key words only"}
+      - {q: "Now talk for about two minutes", hint: "I'm going to talk about … · It's difficult because … · Some people do it because … · I wouldn't like to do it because …"}
+    lines:
+      - emma: "Exercise C. Now it's your turn. Take card A: describe a job you think is really difficult."
+        say: "Exercise C. Now it's your turn. Take card eigh: describe a job you think is really difficult."
+        vi: "Bài C: đến lượt bạn — thẻ A."
+      - {emma: "You have one minute to prepare. Write some key words.", focus: 0}
+      - {wait: 60, note: "Prepare and write notes", vi: "Chuẩn bị: ghi từ khóa cho bốn ý."}
+      - {emma: "Now please speak for about two minutes. Pause the video if you need more time.", focus: 1}
+      - {wait: 60, note: "Speak for two minutes", vi: "Nói liên tục — tạm dừng video nếu cần thêm thời gian."}
+      - emma: "Thank you. Did you talk about all four points on the card?"
+        vi: "Bạn đã nói đủ bốn ý trên thẻ chưa?"
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "would / could = not real: What job would you most like? Could you do it?", vi: "Tình huống không có thật"}
+      - {en: "would you /wʊdʒuː/ · could you /kʊdʒuː/", vi: "Nối âm"}
+      - {en: "Would you like to…? (not Do you like to…?) · you could be… (not can)", vi: "Lỗi hay gặp"}
+      - {en: "Part 2: 1 minute notes (key words) → 2 minutes, one short section per point", vi: "Phần 2 bài thi Nói"}
+      - {en: "Next: Unit 3 Listening — listening for gist", vi: "Tiếp theo: Listening"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Would and could for situations that are not real.", focus: 0}
+      - {emma: "Would you, could you.", focus: 1}
+      - {emma: "Two typical errors.", focus: 2}
+      - {emma: "And in part 2: key words, then one section for each point.", say: "And in part two: key words, then one section for each point.", focus: 3}
+      - {tom: "Next: listening for gist!", focus: 4}

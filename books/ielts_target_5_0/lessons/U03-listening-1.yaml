@@ -1,0 +1,204 @@
+# Video bài giảng Unit 3 · Listening 1: listening for gist (sách in trang 36). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-listening-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U02-listening-1.yaml (dòng `track`). Phát Track 31 (U03-L1B) và Track 32
+# (U03-L1F) của sách. Answer key không có Listening 1: đáp án 1B (a 2 · b 4 · c 1 · d 3), 1D (topic · details · word ·
+# skimming) và 1F (1 c · 2 a · 3 d · 4 b) suy ra từ Tapescript (sách in trang 280–281), có câu bằng chứng.
+id: U03-listening-1
+activity: U03-listening
+title: "Unit 3 · Work"
+subtitle: "Listening 1: listening for gist"
+title_vi: "Nghe ý chính — đoán trước bằng tranh, nối bốn đoạn hội thoại với tranh (Track 31–32 của sách)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 3 Listening: listening for gist."
+        say: "Welcome to Unit three Listening: listening for gist."
+        vi: "Listening Unit 3: nghe ý chính (gist)."
+      - tom: "Gist? What's that?"
+      - emma: "The gist is the general idea: who is talking, where they are, and what they're talking about. You don't need every word."
+        vi: "Gist = ý chung: ai nói, ở đâu, nói về chuyện gì — không cần từng chữ."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Listening 1, bài A–F"
+    items:
+      - {en: "A–B: look at four pictures, listen and match (Track 31)", vi: "Nhìn tranh, nghe và nối"}
+      - {en: "C–D: how did you do it? What is listening for gist?", vi: "Bạn đã làm thế nào? Nghe ý chính là gì?"}
+      - {en: "Exam tip: predict before you listen", vi: "Đoán trước khi nghe"}
+      - {en: "E–F: predict from four images, listen and match (Track 32)", vi: "Đoán từ hình, nghe và nối"}
+    lines:
+      - emma: "Here is the plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, four pictures and four short extracts.", focus: 0}
+      - {emma: "Then, we think about how we did it.", focus: 1}
+      - {emma: "An important exam tip.", focus: 2}
+      - {emma: "And four more extracts.", focus: 3}
+
+  - kind: match
+    chapter: "Bài A: nhìn tranh"
+    heading: "Listening 1A · Look at the pictures: what is happening in each?"
+    heading_vi: "Nói về từng tranh trước khi nghe"
+    image: {pdf: course-book, page: 37, clip: [58, 240, 532, 340], grid: 4}
+    items: &pics
+      - {n: a, q: "two colleagues looking at something on a laptop", answer: "2"}
+      - {n: b, q: "two men talking on a train", answer: "4"}
+      - {n: c, q: "a job interview in an office", answer: "1"}
+      - {n: d, q: "a man and a woman reading a newspaper together", answer: "3"}
+    lines:
+      - emma: "Exercise A. Look at the pictures. Talk about what is happening in each."
+        say: "Exercise eigh. Look at the pictures. Talk about what is happening in each."
+        vi: "Bài A: tranh nào đang diễn ra chuyện gì?"
+      - {emma: "Picture a.", say: "Picture eigh.", focus: 0}
+      - {tom: "Two colleagues are looking at something on a laptop.", focus: 0}
+      - {emma: "Picture b.", focus: 1}
+      - {tom: "Two men are talking on a train. Maybe they're going to work.", focus: 1}
+      - {emma: "Picture c.", focus: 2}
+      - {tom: "It looks like a job interview in an office.", focus: 2}
+      - {emma: "Picture d.", focus: 3}
+      - {tom: "A man and a woman are reading a newspaper together. Maybe they're looking at the job adverts.", focus: 3}
+      - emma: "Good. Now you have ideas to listen for."
+
+  - kind: match
+    chapter: "Bài B: nghe và nối"
+    heading: "Listening 1B · Listen to the four extracts and match them with the pictures"
+    heading_vi: "Track 31 — viết số của đoạn hội thoại vào ô"
+    image: {pdf: course-book, page: 37, clip: [58, 240, 532, 340], grid: 4}
+    items: *pics
+    lines:
+      - emma: "Exercise B. Listen to the four extracts and match them with the pictures. Write the number of the extract in the box."
+        vi: "Bài B: nghe bốn đoạn, ghi số đoạn vào tranh."
+      - {track: U03-L1B, note: "Track 31 · Listening 1B", vi: "Nghe bốn đoạn — chỉ cần ý chung."}
+      - {wait: 5, note: "Check your answers", vi: "Xem lại bài."}
+      - {emma: "Extract one. Why do you want to leave the job you're doing now?", focus: 2}
+      - {tom: "Picture c. It's a job interview.", say: "Picture C. It's a job interview.", reveal: c}
+      - {emma: "Extract two. It's the design for the new web page.", focus: 0}
+      - {tom: "Picture a. They're looking at the design on the laptop.", say: "Picture eigh. They're looking at the design on the laptop.", reveal: a}
+      - {emma: "Extract three. Steve, have you seen this job?", focus: 3}
+      - {tom: "Picture d. They're reading the job adverts in the paper.", say: "Picture D. They're reading the job adverts in the paper.", reveal: d}
+      - {emma: "Extract four. I'm just going up for the day. Do you do the journey every day?", focus: 1}
+      - {tom: "Picture b. They're on a train.", reveal: b}
+      - emma: "These are our suggested answers; the answer key doesn't include this exercise."
+        vi: "Đáp án gợi ý — Answer key không có bài này."
+
+  - kind: bullets
+    chapter: "Bài C: bạn đã làm thế nào?"
+    heading: "Listening 1C · How did you complete the task?"
+    heading_vi: "Những gì giúp nghe ý chính"
+    items:
+      - {en: "Did you use the pictures to get ideas to listen for?", vi: "Dùng tranh để biết cần nghe gì"}
+      - {en: "Did the speakers' voices (stress and intonation) help?", vi: "Giọng nói: trọng âm, ngữ điệu"}
+      - {en: "Did you hear any key words or phrases that helped?", vi: "Từ khóa: interview, design, this job, journey"}
+    lines:
+      - emma: "Exercise C. With a partner, discuss how you completed the task."
+        vi: "Bài C: bạn đã làm thế nào?"
+      - {emma: "Did you use the pictures to get ideas to listen for?", focus: 0}
+      - {tom: "Yes. I knew to listen for an interview, a train, and a newspaper.", focus: 0}
+      - {emma: "Did the speakers' voices help?", focus: 1}
+      - {tom: "Yes. In extract four, Mike sounds surprised: hey, Mike!", focus: 1}
+      - {emma: "Did you hear any key words or phrases?", focus: 2}
+      - {tom: "Leave the job, the design, have you seen this job, and the journey every day.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài D: nghe ý chính là gì?"
+    heading: "Listening 1D · Fill the gaps: word · details · topic · skimming"
+    heading_vi: "Đoạn văn về kỹ năng nghe ý chính (đáp án suy ra)"
+    items:
+      - {n: 1, q: "When you listen for gist, you listen to understand the general ___ of the dialogue.", answer: "topic", tip: "the topic = the situation and what the people are talking about"}
+      - {n: 2, q: "You are not listening for specific ___", answer: "details", tip: "specific details = names, numbers, dates…"}
+      - {n: 3, q: "and you don't need to understand every ___.", answer: "word"}
+      - {n: 4, q: "Listening for gist is similar to ___ a text when you read.", answer: "skimming", tip: "Unit 1 Reading: skimming = reading quickly for the general idea"}
+    lines:
+      - emma: "Exercise D. Read this short text about listening skills, and fill the gaps with the words in the box."
+        vi: "Bài D: điền word, details, topic, skimming."
+      - {wait: 8, note: "Pause the video and fill the gaps", vi: "Tạm dừng video và điền."}
+      - {emma: "Gap one.", focus: 0}
+      - {tom: "Topic. The general topic: the situation, and what the people are talking about.", reveal: 1}
+      - {emma: "Gap two.", focus: 1}
+      - {tom: "Details. You are not listening for specific details.", reveal: 2}
+      - {emma: "Gap three.", focus: 2}
+      - {tom: "Word. You don't need to understand every word.", reveal: 3}
+      - {emma: "And gap four.", focus: 3}
+      - {tom: "Skimming. Listening for gist is like skimming a text.", reveal: 4}
+      - emma: "And remember: if you understand the gist of a conversation, it will be easier to understand the details."
+        vi: "Hiểu ý chính rồi thì dễ hiểu chi tiết hơn."
+
+  - kind: bullets
+    chapter: "Exam tip: đoán trước"
+    heading: "Exam tip · Predict what you will hear"
+    heading_vi: "Bài thi không có ảnh — nhưng có bản đồ, biểu đồ, bảng và câu hỏi"
+    items:
+      - {en: "When you listen for gist, predicting is very important", vi: "Đoán trước rất quan trọng"}
+      - {en: "In the exam you will not have photos, but a map, a diagram or a table will help you", vi: "Bản đồ, sơ đồ, bảng giúp bạn đoán"}
+      - {en: "Look at the questions and notice key words and phrases", vi: "Đọc câu hỏi, chú ý từ khóa"}
+    lines:
+      - emma: "The exam tip. When you listen for gist, predicting what you will hear is very important."
+        focus: 0
+        vi: "Mẹo thi: nghe ý chính thì đoán trước rất quan trọng."
+      - {emma: "In the exam, you will not have photos, but a map, a diagram or a table will help you predict.", focus: 1}
+      - {emma: "You can also predict by looking at the questions and noticing key words and phrases.", focus: 2}
+
+  - kind: match
+    chapter: "Bài E: đoán từ hình"
+    heading: "Listening 1E · Look at the four images: what can you predict?"
+    heading_vi: "Mỗi hình đi với một đoạn hội thoại ngắn"
+    image: {pdf: course-book, page: 37, clip: [58, 630, 532, 730], grid: 4}
+    items: &imgs
+      - {n: a, q: "a map: someone gives directions", answer: "2"}
+      - {n: b, q: "a graph: numbers, maybe sales", answer: "4"}
+      - {n: c, q: "a job advert in a newspaper", answer: "1"}
+      - {n: d, q: "a diary: meetings and times", answer: "3"}
+    lines:
+      - emma: "Exercise E. Look at the four images. You will hear a short extract for each. What can you predict?"
+        vi: "Bài E: nhìn bốn hình — đoán mỗi đoạn nói về gì."
+      - {emma: "Image a: a map. Somebody will give directions. Listen for left, right, and street names.", say: "Image eigh: a map. Somebody will give directions. Listen for left, right, and street names.", focus: 0}
+      - {emma: "Image b: a graph. Numbers. Maybe sales in different months.", focus: 1}
+      - {emma: "Image c: a newspaper with a job advert. Somebody is looking for a job.", focus: 2}
+      - {emma: "Image d: a diary. Meetings and times.", focus: 3}
+
+  - kind: match
+    chapter: "Bài F: nghe và nối"
+    heading: "Listening 1F · Listen to the four extracts and match them with the images"
+    heading_vi: "Track 32 — đáp án suy ra từ Tapescript"
+    image: {pdf: course-book, page: 37, clip: [58, 630, 532, 730], grid: 4}
+    items: *imgs
+    lines:
+      - emma: "Exercise F. Listen to the four extracts, and match them with the images."
+        vi: "Bài F: nghe và nối bốn đoạn với bốn hình."
+      - {track: U03-L1F, note: "Track 32 · Listening 1F", vi: "Nghe bốn đoạn — dùng điều bạn đã đoán."}
+      - {wait: 5, note: "Check your answers", vi: "Xem lại bài."}
+      - {emma: "Extract one.", focus: 2}
+      - {tom: "c, the job advert. Have you applied for that job you saw in the paper?", say: "C, the job advert. Have you applied for that job you saw in the paper?", reveal: c}
+      - {emma: "Extract two.", focus: 0}
+      - {tom: "a, the map. When you come out of the station, take a left, then a right into Wallingham Road.", say: "Eigh, the map. When you come out of the station, take a left, then a right into Wallingham Road.", reveal: a}
+      - {emma: "Extract three.", focus: 3}
+      - {tom: "d, the diary. A meeting with Doug at nine, and Tim at ABC at eleven.", say: "D, the diary. A meeting with Doug at nine, and Tim at, A, B, C, at eleven.", reveal: d}
+      - {emma: "And extract four.", focus: 1}
+      - {tom: "b, the graph. Sales hit ten thousand in March.", say: "B, the graph. Sales hit ten thousand in March.", reveal: b}
+      - emma: "Did your predictions help? I think they did!"
+        vi: "Đoán trước có giúp ích không?"
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1B: a 2 · b 4 · c 1 · d 3", vi: "Nối tranh (gợi ý)"}
+      - {en: "1D: topic · details · word · skimming", vi: "Nghe ý chính"}
+      - {en: "1F: 1 c · 2 a · 3 d · 4 b", vi: "Nối hình (gợi ý)"}
+      - {en: "Predict from pictures, maps, diagrams, tables and key words", vi: "Đoán trước khi nghe"}
+      - {en: "Next: Listening 2 — practise listening for gist", vi: "Tiếp theo: Listening 2"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Exercise B: a two, b four, c one, d three.", say: "Exercise B: eigh, two. B, four. C, one. D, three.", focus: 0}
+      - {emma: "Gist means the topic, not the details, and not every word.", focus: 1}
+      - {emma: "Exercise F: one c, two a, three d, four b.", say: "Exercise F: one, C. Two, eigh. Three, D. Four, B.", focus: 2}
+      - {emma: "And always predict before you listen.", focus: 3}
+      - {tom: "Next: Listening 2!", say: "Next: Listening two!", focus: 4}

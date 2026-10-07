@@ -396,10 +396,10 @@ def test_coverage_lists_parts_with_and_without_video(tmp_path):
 
 
 @pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
-def test_unit1_2_video_coverage():
-    """Unit 1 và 2: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
+def test_unit1_3_video_coverage():
+    """Unit 1–3: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
     from lesson_video import coverage
-    for unit in coverage.coverage(REAL, ["U01", "U02"]):
+    for unit in coverage.coverage(REAL, ["U01", "U02", "U03"]):
         have = {p["activity"].split("-", 1)[1]: [v["id"] for v in p["videos"]] for p in unit["parts"]}
         assert not have["unit-review"], unit["item"]
         for part in ("speaking-vocab", "listening", "reading", "writing", "consolidation", "exam-practice"):
@@ -496,3 +496,40 @@ def test_split_letter_keeps_total_word_count(tmp_path):
     tl = timeline.build(lesson, tts.Silent(), say=quiet)
     slides = Slides(lesson, mini_book(tmp_path), {})
     assert slides.render(tl.frames[-1], 1.0).size == (W, H)
+
+
+def test_image_grid_mcq_wrap_and_long_passage(tmp_path):
+    """Dải 4 tranh xếp thành lưới 2×2; phương án dài xuống dòng; bài đọc dài thu gọn đoạn khác, tô cụm từ qua dòng."""
+    import pymupdf
+    bdir = mini_book(tmp_path)
+    doc = pymupdf.open()
+    page = doc.new_page(width=400, height=200)
+    for k in range(4):
+        page.draw_rect(pymupdf.Rect(k * 100, 0, k * 100 + 90, 100), color=(0, 0, 0), fill=(k / 4, 0.5, 0.5))
+    doc.save(bdir / "cb.pdf")
+    book = json.loads((bdir / "book.json").read_text(encoding="utf-8"))
+    book["files"]["course-book"] = {"kind": "pdf", "path": "cb.pdf", "pages": 1}
+    (bdir / "book.json").write_text(json.dumps(book), encoding="utf-8")
+    long = " ".join(["Some people think this job is boring and repetitive, but it is the best job I ever had."] * 6)
+    data = copy.deepcopy(WRITING)
+    data["scenes"] = [
+        {"kind": "match", "image": {"pdf": "course-book", "page": 1, "clip": [0, 0, 400, 100], "grid": 4},
+         "items": [{"n": "a", "q": "photo a", "answer": "1"}], "lines": [{"a": "Photo a.", "reveal": "a"}]},
+        {"kind": "mcq", "items": [{"n": 12, "q": "The woman…", "answer": "c",
+                                   "options": ["is very interested.", "is not at all interested.",
+                                               "doesn't understand what the man wants at all, because he talks too fast."]}],
+         "lines": [{"a": "Twelve.", "focus": 0, "reveal": 12}]},
+        {"kind": "passage", "items": [{"label": L, "text": long} for L in "ABCD"],
+         "lines": [{"a": "Text B.", "focus": 1, "mark": "boring and repetitive, but it is the best job I ever had. Some people"}]},
+    ]
+    lesson = sc.Lesson.model_validate(data)
+    assert lesson.scenes[0].image.grid == 4
+    slides = Slides(lesson, bdir, {})
+    pic = slides.images[0]
+    assert pic.height > pic.width * 0.6                  # 4 tranh nằm ngang → lưới 2 hàng, gần vuông
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    for fr in tl.frames:
+        assert slides.render(fr, fr.start / tl.total).size == (W, H)
+    data["scenes"][0]["image"]["grid"] = 9               # tối đa 6 tranh
+    with pytest.raises((ValidationError, ValueError)):
+        sc.Lesson.model_validate(data)
