@@ -1,0 +1,167 @@
+# Video bài giảng Unit 3 · Reading 2: practise scanning for paraphrased language (sách in trang 39–40). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-reading-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml và U03-reading-1.yaml (cảnh `passage` + `mark`). Đáp án bài B theo Answer key
+# (sách in trang 266–267, "Unit 3, Reading 2B": 1 d, 2 b, 3 a, 4 C, 5 A, 6 B, 7 C, 8 B, 9 A); phần tô vàng là chỗ Answer key
+# ghi trong ngoặc. Key vocabulary in context là đáp án suy ra (position, experience, ambitious, provide, success).
+id: U03-reading-2
+activity: U03-reading
+title: "Unit 3 · Work"
+subtitle: "Reading 2: practise scanning for paraphrased language"
+title_vi: "Ba quảng cáo tuyển dụng — nối với mô tả, tìm câu diễn đạt lại (theo Answer key), từ vựng"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Reading 2. Today we read three job advertisements."
+        say: "Welcome to Reading two. Today we read three job advertisements."
+        vi: "Reading 2: ba quảng cáo tuyển dụng."
+      - tom: "Real job adverts! That's useful."
+      - emma: "Yes, and the questions use different words from the adverts. So we scan for paraphrases again."
+        vi: "Câu hỏi dùng từ khác quảng cáo — lại dò tìm ý diễn đạt lại."
+
+  - kind: vocab
+    chapter: "Bài A: tên công việc"
+    heading: "Reading 2A · Look at the job titles and check that you understand them"
+    heading_vi: "Ba vị trí trong quảng cáo"
+    items:
+      - {w: "Accounts Director / Financial Manager", pos: "money · a company's finances", vi: "Giám đốc kế toán / Quản lý tài chính", ex: "She manages the company's money and reports to the boss."}
+      - {w: "Sales Executive", pos: "selling products", vi: "Nhân viên kinh doanh", ex: "He sells products to customers face-to-face."}
+      - {w: "Customer Service Administrator", pos: "helping customers", vi: "Nhân viên chăm sóc khách hàng", ex: "She answers customers' questions on the phone and by e-mail."}
+    lines:
+      - emma: "Exercise A. Look at the job titles in the advertisements, and check that you understand them."
+        say: "Exercise eigh. Look at the job titles in the advertisements, and check that you understand them."
+        vi: "Bài A: hiểu tên ba vị trí."
+      - {emma: "Advert A: Accounts Director, or Financial Manager. A job with money.", say: "Advert eigh: Accounts Director, or Financial Manager. A job with money.", focus: 0}
+      - {emma: "Advert B: Sales Executive. Somebody who sells.", focus: 1}
+      - {emma: "Advert C: Customer Service Administrator. Somebody who helps customers.", focus: 2}
+
+  - kind: passage
+    chapter: "Ba quảng cáo"
+    heading: "Reading 2B · The three job advertisements"
+    heading_vi: "Đọc lướt để trả lời câu 1–3"
+    items: &ads
+      - {label: "A", text: "ACCOUNTS DIRECTOR / FINANCIAL MANAGER. Up to £70,000 a year + company car. A position managing our financial services and working directly with the chief executive. You should be a qualified accountant with experience in management. Closing date for application: 11 March 09. Interviews: April 09."}
+      - {label: "B", text: "Our market is growing and we are looking for a: SALES EXECUTIVE. As part of our busy sales team, you will be ambitious. You will deal face-to-face with people regularly and must have excellent communication skills. You will be quick to understand new ideas and put them into practice. You will receive full training and a good salary. For more information, please call 01456 554796."}
+      - {label: "C", text: "Customer Service Administrator. Lewes, East Sussex. Good salary + benefits. We have more than a million satisfied customers in the UK, and we provide the highest quality service. To continue our success, we are looking for a full-time customer service administrator. The successful applicant must have previous experience and be computer-literate. He or she will need a friendly, professional telephone manner. To apply, please send your CV to Sonya Groves."}
+    lines:
+      - emma: "Exercise B. Read the job advertisements and answer the questions. First, skim the three adverts."
+        vi: "Bài B: đọc lướt ba quảng cáo."
+      - {wait: 10, note: "Skim the three adverts", vi: "Đọc lướt — mỗi quảng cáo tìm việc gì?"}
+
+  - kind: pairs
+    chapter: "Câu 1–3: nối với mô tả"
+    heading: "Questions 1–3 · Match each advertisement with a description a–d"
+    heading_vi: "Có một mô tả không dùng — đáp án theo Answer key"
+    items:
+      - {n: 1, q: "advert A", answer: d}
+      - {n: 2, q: "advert B", answer: b}
+      - {n: 3, q: "advert C", answer: a}
+    options:
+      - {k: a, text: "You will deal with people who want to buy or who have already bought a product."}
+      - {k: b, text: "You will sell something."}
+      - {k: c, text: "You will design something."}
+      - {k: d, text: "You will work with money."}
+    lines:
+      - emma: "For questions one to three, match each job advertisement with a description a to d. There is one description that you do not need."
+        say: "For questions one to three, match each job advertisement with a description, eigh to D. There is one description that you do not need."
+        vi: "Câu 1–3: nối quảng cáo với mô tả — thừa một mô tả."
+      - {wait: 8, note: "Pause the video and match", vi: "Tạm dừng video và nối."}
+      - {emma: "Advert A.", say: "Advert eigh.", focus: 0}
+      - {tom: "d, you will work with money. It's an accounts director.", say: "D, you will work with money. It's an accounts director.", reveal: 1}
+      - {emma: "Advert B.", focus: 1}
+      - {tom: "b, you will sell something. A sales executive.", say: "B, you will sell something. A sales executive.", reveal: 2}
+      - {emma: "Advert C.", focus: 2}
+      - {tom: "a, you will deal with people who want to buy, or have bought a product. That's customer service.", say: "Eigh, you will deal with people who want to buy, or have bought a product. That's customer service.", reveal: 3}
+      - emma: "So c, design something, is the description we don't need."
+        say: "So C, design something, is the description we don't need."
+        vi: "Mô tả c (thiết kế) không dùng."
+
+  - kind: passage
+    chapter: "Câu 4–9: quảng cáo nào nói…?"
+    heading: "Questions 4–9 · Which advertisement says that…?"
+    heading_vi: "Bài C: tô phần cho đáp án — theo Answer key"
+    items: *ads
+    lines:
+      - emma: "For questions four to nine, write the letter of the advertisement. Exercise C: highlight the parts that give the answers."
+        vi: "Câu 4–9: quảng cáo nào? Bài C: tô phần cho đáp án."
+      - {wait: 10, note: "Pause the video and find six answers", vi: "4 biết dùng máy tính · 5 làm cùng người cấp cao · 6 được đào tạo · 7 khách hài lòng · 8 nói chuyện trực tiếp · 9 hạn nộp đơn"}
+      - emma: "Four: you must know how to use a computer."
+      - {tom: "C. Be computer-literate.", focus: 2, mark: "computer-literate"}
+      - emma: "Five: you will work closely with someone in a high position."
+      - {tom: "A. Working directly with the chief executive.", say: "Eigh. Working directly with the chief executive.", focus: 0, mark: "working directly with the chief executive"}
+      - emma: "Six: you will learn how to do the job when you start."
+      - {tom: "B. You will receive full training.", focus: 1, mark: "You will receive full training"}
+      - emma: "Seven: people are happy with the service provided by the company."
+      - {tom: "C. More than a million satisfied customers.", focus: 2, mark: "more than a million satisfied customers"}
+      - emma: "Eight: you will often talk to people directly."
+      - {tom: "B. Deal face-to-face with people regularly.", focus: 1, mark: "deal face-to-face with people regularly"}
+      - emma: "Nine: you need to apply before a certain date."
+      - {tom: "A. Closing date for application.", say: "Eigh. Closing date for application.", focus: 0, mark: "Closing date for application"}
+      - emma: "Look at the pairs. Know how to use a computer: computer-literate. Happy: satisfied. Talk to people directly: face-to-face."
+        vi: "computer-literate = biết dùng máy tính · satisfied = hài lòng · face-to-face = trực tiếp."
+
+  - kind: bullets
+    chapter: "Bài D–E: kiểm tra, nhìn lại"
+    heading: "Reading 2D–E · Check the key and think about the task"
+    heading_vi: "Answer key: 1 d · 2 b · 3 a · 4 C · 5 A · 6 B · 7 C · 8 B · 9 A"
+    items:
+      - {en: "I read the instructions for the questions carefully.", vi: "Đọc kỹ yêu cầu"}
+      - {en: "I skimmed the advertisements to answer questions 1–3.", vi: "Đọc lướt cho câu 1–3"}
+      - {en: "I read more carefully to answer questions 4–9.", vi: "Đọc kỹ hơn cho câu 4–9"}
+      - {en: "It was quite easy to find the information I needed for questions 4–9.", vi: "Dễ tìm thông tin"}
+      - {en: "Exam tip: guessing is sometimes possible, but find the part of the text — you will feel more confident", vi: "Đoán được, nhưng tìm được chỗ trong bài thì chắc chắn hơn"}
+    lines:
+      - emma: "Exercise D. Check the key on page 266. How many did you answer correctly?"
+        say: "Exercise D. Check the key on page two hundred and sixty-six. How many did you answer correctly?"
+        vi: "Bài D: so với Answer key."
+      - emma: "Exercise E. Tick the sentences that are true for you."
+        vi: "Bài E: đánh dấu những câu đúng với bạn."
+      - {emma: "Did you read the instructions carefully?", focus: 0}
+      - {emma: "Did you skim for questions one to three?", focus: 1}
+      - {emma: "And read more carefully for four to nine?", focus: 2}
+      - {emma: "Was it easy to find the information?", focus: 3}
+      - {emma: "The exam tip: when you are doing a reading exercise quickly, you might want to guess answers, and sometimes that's possible. However, you will feel more confident if you find the part of the text that provides the answer.", focus: 4}
+
+  - kind: blanks
+    chapter: "Từ vựng trong ngữ cảnh"
+    heading: "Key vocabulary in context · Circle the correct word"
+    heading_vi: "Từ đúng có trong các quảng cáo (đáp án suy ra)"
+    items:
+      - {n: 1, q: "A more formal word for job is ___.", answer: "position", hint: "position / protection / preparation", tip: "Advert A: A position managing our financial services"}
+      - {n: 2, q: "If you do a job for a long time, you have ___.", answer: "experience", hint: "experiment / experience / expression", tip: "Adverts A and C: experience in management, previous experience"}
+      - {n: 3, q: "If you want to do well in a job, you are ___.", answer: "ambitious", hint: "ambitious / amazing / absent", tip: "Advert B: you will be ambitious"}
+      - {n: 4, q: "Another way to say 'give' a service is ___.", answer: "provide", hint: "prove / produce / provide", tip: "Advert C: we provide the highest quality service"}
+      - {n: 5, q: "If a company is doing well, it has ___.", answer: "success", hint: "surprise / success / support", tip: "Advert C: To continue our success…"}
+    lines:
+      - emma: "Key vocabulary in context. Circle the correct word from the three options. You can find the correct options in the job adverts."
+        vi: "Từ vựng: chọn từ đúng — từ đúng có trong quảng cáo."
+      - {wait: 8, note: "Pause the video and choose", vi: "Tạm dừng video và chọn."}
+      - {tom: "One: position.", focus: 0, reveal: 1}
+      - {tom: "Two: experience.", focus: 1, reveal: 2}
+      - {tom: "Three: ambitious.", focus: 2, reveal: 3}
+      - {tom: "Four: provide.", focus: 3, reveal: 4}
+      - {tom: "Five: success.", focus: 4, reveal: 5}
+      - emma: "Exercise F, and the last exam tip: it is not possible to learn all the new vocabulary from a text. Focus on words and phrases that are useful to you."
+        vi: "Bài F và mẹo thi: không cần học hết từ mới — chọn từ, cụm từ có ích cho bạn."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 d · 2 b · 3 a · 4 C · 5 A · 6 B · 7 C · 8 B · 9 A", vi: "Theo Answer key"}
+      - {en: "computer-literate · chief executive · full training · satisfied customers · face-to-face · closing date", vi: "Cụm từ trong quảng cáo"}
+      - {en: "position · experience · ambitious · provide · success", vi: "Từ vựng hữu ích"}
+      - {en: "Next: Writing — register, and a letter of application", vi: "Tiếp theo: Writing"}
+    lines:
+      - emma: "Let's review. One d, two b, three a. Then C, A, B, C, B, A."
+        say: "Let's review. One, D. Two, B. Three, eigh. Then, C, eigh, B, C, B, eigh."
+        focus: 0
+      - {emma: "Useful phrases from the adverts.", focus: 1}
+      - {emma: "Five useful words.", focus: 2}
+      - {tom: "Next: we write a letter of application!", focus: 3}

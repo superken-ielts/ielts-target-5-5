@@ -1,0 +1,271 @@
+# Video bài giảng Unit 3 · Speaking 1 + Vocabulary 1 (sách in trang 34–35). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-speaking-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Track 28–29 (nghe – chép tên nghề) không có file nghe trong bộ sách nên
+# Emma đọc lại đúng Tapescript Track 28 (sách in trang 281). Giới từ (1C), P/N (1E) và nối ảnh là đáp án suy ra.
+id: U03-speaking-1
+activity: U03-speaking-vocab
+title: "Unit 3 · Work"
+subtitle: "Speaking 1 & Vocabulary 1: talking about work, jobs"
+title_vi: "Nói về công việc qua ảnh, tên nghề (chính tả, trọng âm), giới từ đi với work, tính từ tả công việc"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello, and welcome to Unit 3: Work."
+        say: "Hello, and welcome to Unit three: Work."
+        vi: "Chào mừng bạn đến với Unit 3: Work (Công việc)."
+      - tom: "Work! The examiner always asks: what do you do?"
+      - emma: "Exactly. Today we learn the names of jobs, and different ways to say what you do."
+        vi: "Hôm nay: tên nghề và nhiều cách nói về công việc của bạn."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Today's lesson"
+    heading_vi: "Speaking 1, Vocabulary 1"
+    items:
+      - {en: "Speaking 1: talk about four photos of people at work", vi: "Nói về bốn ảnh người đang làm việc"}
+      - {en: "Vocabulary 1A–B: job names — spelling and word stress", vi: "Tên nghề: chính tả, trọng âm"}
+      - {en: "Vocabulary 1C–D: work as / for / in / with", vi: "Giới từ đi với work"}
+      - {en: "Vocabulary 1E–F: adjectives to describe a job", vi: "Tính từ tả công việc"}
+      - {en: "Watch out! I'm an engineer · a good job", vi: "Lỗi hay gặp"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Kế hoạch hôm nay."
+      - {emma: "First, four photos of people at work.", focus: 0}
+      - {emma: "Then, the names of jobs.", focus: 1}
+      - {emma: "Small words after work: as, for, in, with.", focus: 2}
+      - {emma: "Adjectives: is your job interesting, or boring?", focus: 3}
+      - {emma: "And two typical errors.", focus: 4}
+
+  - kind: match
+    chapter: "Speaking 1A: bốn bức ảnh"
+    heading: "Speaking 1A · Look at the four photos: what kind of work are the people doing?"
+    heading_vi: "Nghĩ một phút về từng ảnh (gợi ý)"
+    image: {pdf: course-book, page: 35, clip: [58, 218, 532, 352], grid: 4}
+    items:
+      - {n: 1, q: "business people in a meeting", answer: a}
+      - {n: 2, q: "workers in a factory", answer: b}
+      - {n: 3, q: "a farmer in a rice field", answer: c}
+      - {n: 4, q: "a camera operator in a TV studio", answer: d}
+    lines:
+      - emma: "Speaking 1, Exercise A. Look at the four photos and think about the kind of work that the people are doing. Think for one minute."
+        say: "Speaking one, Exercise eigh. Look at the four photos, and think about the kind of work that the people are doing. Think for one minute."
+        vi: "Bài A: nhìn bốn ảnh, nghĩ một phút xem họ làm công việc gì."
+      - {wait: 10, note: "Think about each photo", vi: "Nghĩ về từng ảnh."}
+      - {emma: "Business people in a meeting. Which photo?", focus: 0}
+      - {tom: "Photo a. A manager is giving a presentation.", say: "Photo eigh. A manager is giving a presentation.", reveal: 1}
+      - {emma: "Workers in a factory.", focus: 1}
+      - {tom: "Photo b. There are a lot of people working at long tables.", say: "Photo B. There are a lot of people working at long tables.", reveal: 2}
+      - {emma: "A farmer in a rice field.", focus: 2}
+      - {tom: "Photo c. Like the farmers in my village!", say: "Photo C. Like the farmers in my village!", reveal: 3}
+      - {emma: "And a camera operator in a TV studio.", focus: 3}
+      - {tom: "Photo d. He's filming a show.", say: "Photo D. He's filming a show.", reveal: 4}
+
+  - kind: letter
+    chapter: "Speaking 1B: nói về một ảnh"
+    heading: "Speaking 1B · Talk about one photo for about one minute"
+    heading_vi: "Tom nói mẫu về ảnh c — dùng các cụm trong khung"
+    items:
+      - text: "This picture shows a man working in a rice field. He's pumping water onto the field, and he's standing in the mud."
+        note: "This picture shows … -ing"
+      - text: "These people work on farms. In my country, a lot of people work in agriculture, especially in the countryside."
+        note: "These people work on / in …"
+      - text: "This job is difficult because farmers work outside all day, in the hot sun or in the rain. It's also hard physical work."
+        note: "This job is difficult because …"
+      - text: "But I think it's a good job because farmers grow the food that everyone eats."
+        note: "This is a good job because …"
+      - text: "To be honest, I wouldn't like to do this job, because I'm not very strong, and I prefer working with people."
+        note: "I wouldn't like to do this job because …"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: tom, focus: 4}
+
+  - kind: practice
+    heading: "Speaking 1B · Your turn: choose a photo and talk for one minute"
+    heading_vi: "Dùng các cụm từ trong khung — nói thành tiếng 30 giây cho mỗi ảnh"
+    items:
+      - {q: "Photo a: business people in a meeting", hint: "This picture shows people … ing. These people work in / for …"}
+      - {q: "Photo d: a camera operator in a TV studio", hint: "This job is interesting / difficult because … I would / wouldn't like to …"}
+    lines:
+      - emma: "Exercise B. Now it's your turn. Choose a photo and talk about it. Use phrases from the box."
+        vi: "Bài B: đến lượt bạn — chọn một ảnh và nói."
+      - {emma: "Photo a: business people in a meeting.", say: "Photo eigh: business people in a meeting.", focus: 0}
+      - {wait: 30}
+      - {emma: "Photo d: a camera operator in a TV studio.", say: "Photo D: a camera operator in a TV studio.", focus: 1}
+      - {wait: 30}
+
+  - kind: blanks
+    chapter: "Vocabulary 1A: tên nghề"
+    heading: "Vocabulary 1A · Listen and write the job names"
+    heading_vi: "Cẩn thận chính tả — đáp án theo Tapescript Track 28"
+    items:
+      - {n: 1, answer: "accountant", tip: "double c, and -ant at the end"}
+      - {n: 2, answer: "engineer", tip: "-eer at the end, like career"}
+      - {n: 3, answer: "architect", tip: "ch sounds like /k/"}
+      - {n: 4, answer: "lawyer", tip: "law + -yer"}
+      - {n: 5, answer: "mechanic", tip: "ch = /k/ again: meCHanic"}
+      - {n: 6, answer: "electrician", tip: "electric + -ian: c sounds like /ʃ/"}
+      - {n: 7, answer: "manager", tip: "-er, not -or"}
+      - {n: 8, answer: "assistant", tip: "double s, and -ant"}
+    lines:
+      - emma: "Vocabulary 1, Exercise A. Listen and write the job names. Be careful with your spelling. Number one is done for you: accountant."
+        say: "Vocabulary one, Exercise eigh. Listen and write the job names. Be careful with your spelling. Number one is done for you: accountant."
+        vi: "Bài 1A: nghe và viết tên nghề — câu 1 là ví dụ."
+        focus: 0
+        reveal: 1
+      - {emma: "Two. Engineer.", focus: 1}
+      - {wait: 4}
+      - {emma: "Three. Architect.", focus: 2}
+      - {wait: 4}
+      - {emma: "Four. Lawyer.", focus: 3}
+      - {wait: 4}
+      - {emma: "Five. Mechanic.", focus: 4}
+      - {wait: 4}
+      - {emma: "Six. Electrician.", focus: 5}
+      - {wait: 4}
+      - {emma: "Seven. Manager.", focus: 6}
+      - {wait: 4}
+      - {emma: "Eight. Assistant.", focus: 7}
+      - {wait: 4}
+      - {tom: "Let me check. Engineer, architect, lawyer, mechanic.", reveal: [2, 3, 4, 5]}
+      - {tom: "Electrician, manager, assistant.", reveal: [6, 7, 8]}
+      - emma: "Careful with the ch in architect and mechanic. It sounds like /k/."
+        say: "Careful with the, C, H, in architect and mechanic. It sounds like K."
+        vi: "Chữ ch trong architect, mechanic đọc là /k/."
+
+  - kind: bullets
+    chapter: "Vocabulary 1B: trọng âm"
+    heading: "Vocabulary 1B · Mark the main stress on each word"
+    heading_vi: "Âm tiết in hoa là âm nhấn — nghe và nhắc lại theo Tom"
+    items:
+      - {en: "ac-COUN-tant · as-SIS-tant · me-CHAN-ic", vi: "Nhấn âm thứ hai"}
+      - {en: "AR-chi-tect · LAW-yer · MAN-a-ger", vi: "Nhấn âm đầu"}
+      - {en: "en-gi-NEER · e-lec-TRI-cian", vi: "-eer và -ian: nhấn ngay trước / tại đuôi"}
+    lines:
+      - emma: "Exercise B. Listen again and mark the main stress on each word."
+        vi: "Bài 1B: đánh dấu trọng âm."
+      - {emma: "These are stressed on the second syllable.", focus: 0}
+      - {tom: "accountant. assistant. mechanic.", focus: 0}
+      - {emma: "These are stressed on the first syllable.", focus: 1}
+      - {tom: "architect. lawyer. manager.", focus: 1}
+      - {emma: "And these two are different. With -eer, the stress is on the end. With -ian, the stress is just before it.", say: "And these two are different. With, E, E, R, the stress is on the end. With, eye, eigh, en, the stress is just before it.", focus: 2}
+      - {tom: "engineer. electrician.", focus: 2}
+
+  - kind: blanks
+    chapter: "Vocabulary 1C: work as / for / in / with"
+    heading: "Vocabulary 1C · Circle the correct preposition in each sentence"
+    heading_vi: "Mỗi giới từ một nghĩa — câu 1 là ví dụ"
+    items:
+      - {n: 1, q: "I work ___ an architect.", answer: "as", hint: "for / as", tip: "work as + a job"}
+      - {n: 2, q: "I work ___ an oil company.", answer: "for", hint: "for / as", tip: "work for + a company or a person"}
+      - {n: 3, q: "I work ___ the fashion industry.", answer: "in", hint: "at / in", tip: "work in + an industry or a field"}
+      - {n: 4, q: "I work ___ an office.", answer: "in", hint: "in / on", tip: "work in + a place: an office, a bank, a hospital"}
+      - {n: 5, q: "I work ___ computers.", answer: "with", hint: "with / by", tip: "work with + the things or people you use or help"}
+    lines:
+      - emma: "Exercise C. Circle the correct preposition in each sentence. Number one is done for you: I work as an architect."
+        vi: "Bài 1C: chọn giới từ đúng."
+        focus: 0
+        reveal: 1
+      - {wait: 8, note: "Pause the video and choose", vi: "Tạm dừng video và chọn."}
+      - {emma: "Two.", focus: 1}
+      - {tom: "I work for an oil company. For, with a company.", reveal: 2}
+      - {emma: "Three.", focus: 2}
+      - {tom: "I work in the fashion industry.", reveal: 3}
+      - {emma: "Four.", focus: 3}
+      - {tom: "I work in an office.", reveal: 4}
+      - {emma: "Five.", focus: 4}
+      - {tom: "I work with computers.", reveal: 5}
+
+  - kind: letter
+    chapter: "Vocabulary 1D: nói về công việc"
+    heading: "Vocabulary 1D · Talk about your job using the structures in Exercise C"
+    heading_vi: "Exam tip: giám khảo hầu như chắc chắn hỏi về công việc — luyện nói nhiều cách"
+    items:
+      - text: "I'm a student at the moment, but I'd like to work as an engineer."
+        note: "work as + a job"
+      - text: "I hope to work for a big international company, maybe a car company."
+        note: "work for + a company"
+      - text: "I'm interested in working in the energy industry, because it's growing very fast."
+        note: "work in + an industry"
+      - text: "I'd like to work with computers and with people from different countries."
+        note: "work with + things / people"
+    lines:
+      - emma: "Exercise D. Talk about your job, or the job you want to do. The exam tip: the examiner will probably ask you about work. Practise saying in different ways what you do or would like to do."
+        vi: "Bài 1D: nói về công việc của bạn bằng các cấu trúc ở bài C."
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: blanks
+    chapter: "Vocabulary 1E: tính từ tả công việc"
+    heading: "Vocabulary 1E · Positive (P) or negative (N)?"
+    heading_vi: "Nhìn từ ở khung phải (đáp án suy ra) — câu 1 là ví dụ"
+    items:
+      - {n: 1, q: "I think my job is very interesting.  ___", answer: "P", hint: "interesting", tip: "interesting ↔ boring"}
+      - {n: 2, q: "It's a very boring job. It's too easy and I don't meet anyone.  ___", answer: "N", hint: "boring"}
+      - {n: 3, q: "It's very rewarding. I can go home knowing I've really helped somebody.  ___", answer: "P", hint: "rewarding", tip: "rewarding = it makes you feel good, not only money"}
+      - {n: 4, q: "My job is challenging. I have to think quickly sometimes.  ___", answer: "P", hint: "challenging", tip: "challenging = difficult in a good way"}
+      - {n: 5, q: "My job is a bit repetitive. Every day is the same as the day before.  ___", answer: "N", hint: "repetitive", tip: "repetitive = you do the same thing again and again"}
+      - {n: 6, q: "It's too stressful. My doctor told me to find another job soon.  ___", answer: "N", hint: "stressful", tip: "stress (noun) → stressful (adjective)"}
+    lines:
+      - emma: "Exercise E. Check the highlighted words and mark each sentence positive or negative. Number one is done for you: interesting is positive."
+        vi: "Bài 1E: tích cực (P) hay tiêu cực (N)? Câu 1 là ví dụ."
+        focus: 0
+        reveal: 1
+      - {wait: 8, note: "Pause the video: write P or N", vi: "Tạm dừng video, viết P hoặc N."}
+      - {emma: "Two: boring.", focus: 1}
+      - {tom: "Negative. Too easy, and no people.", reveal: 2}
+      - {emma: "Three: rewarding.", focus: 2}
+      - {tom: "Positive. You help somebody, and you feel good.", reveal: 3}
+      - {emma: "Four: challenging.", focus: 3}
+      - {tom: "Positive. It's difficult, but in a good way.", reveal: 4}
+      - {emma: "Five: repetitive.", focus: 4}
+      - {tom: "Negative. Every day is the same.", reveal: 5}
+      - {emma: "Six: stressful.", focus: 5}
+      - {tom: "Very negative! The doctor says: find another job.", reveal: 6}
+      - emma: "Exercise F. Cover Exercise E, and write the six adjectives in your notebook. Check your spelling."
+        vi: "Bài 1F: che bài E, viết lại sáu tính từ — kiểm tra chính tả."
+      - {wait: 10, note: "Write the six adjectives", vi: "interesting · boring · rewarding · challenging · repetitive · stressful"}
+
+  - kind: errors
+    chapter: "Watch out! Lỗi hay gặp"
+    heading: "Watch out! · Typical errors"
+    heading_vi: "a / an trước tên nghề; work không đếm được, job đếm được"
+    items:
+      - {wrong: "I'm engineer.", right: "I'm an engineer.", note: "a / an + tên nghề"}
+      - {wrong: "I have a good work.", right: "I have a good job.", note: "work (không đếm được) · job (đếm được)"}
+    lines:
+      - emma: "Watch out! Two typical errors."
+        vi: "Hai lỗi hay gặp."
+      - {emma: "Number one. We need a or an before a job.", say: "Number one. We need, eigh, or, an, before a job.", focus: 0}
+      - {tom: "I'm an engineer. My sister is a lawyer.", focus: 0}
+      - {emma: "Number two. Work is uncountable, but job is countable. So, a good job.", focus: 1}
+      - {tom: "I have a good job. I have a lot of work today.", focus: 1}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "accountant · engineer · architect · lawyer · mechanic · electrician · manager · assistant", vi: "Tám nghề — chú ý chính tả và trọng âm"}
+      - {en: "work as an architect · for a company · in an industry / an office · with computers", vi: "Giới từ đi với work"}
+      - {en: "P: interesting, rewarding, challenging · N: boring, repetitive, stressful", vi: "Tính từ tả công việc"}
+      - {en: "I'm an engineer · a good job (not a good work)", vi: "Lỗi hay gặp"}
+      - {en: "Next: Speaking 2 — talking about jobs, part 2 of the Speaking Module", vi: "Tiếp theo: Speaking 2, Phần 2 bài thi Nói"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Eight jobs.", focus: 0}
+      - {emma: "Work as, for, in, and with.", focus: 1}
+      - {emma: "Six adjectives.", focus: 2}
+      - {emma: "And two typical errors.", focus: 3}
+      - {tom: "Next: Speaking 2!", say: "Next: Speaking two!", focus: 4}

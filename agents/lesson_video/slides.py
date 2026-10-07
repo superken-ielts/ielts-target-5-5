@@ -132,7 +132,19 @@ class Slides:
             path, page = self.bdir / ch["path"], page - ch["from"] + 1
         with pymupdf.open(path) as doc:
             pix = doc[page - 1].get_pixmap(dpi=200, clip=pymupdf.Rect(*sc.image.clip))
-            return Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+            pic = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+        n = sc.image.grid
+        if n < 2:
+            return pic
+        # cắt dải thành n tranh bằng nhau rồi xếp thành 2 hàng (trên ceil(n/2), dưới phần còn lại)
+        w, h, gap = pic.width / n, pic.height, 16
+        cols = (n + 1) // 2
+        out = Image.new("RGB", (int(cols * w + (cols - 1) * gap), 2 * h + gap), C["bg"])
+        for k in range(n):
+            tile = pic.crop((int(k * w), 0, int((k + 1) * w), h))
+            r, c = divmod(k, cols)
+            out.paste(tile, (int(c * (w + gap)), int(r * (h + gap))))
+        return out
 
     # ---------- khung chung ----------
     def render(self, fr: Frame, progress: float) -> Image.Image:
@@ -684,21 +696,33 @@ class Slides:
         width = x1 - tx - 14
         top, bottom = TOP - 4, BOTTOM + 6
 
-        def layout(size):
+        def layout(size, keep=None):
+            """keep = số dòng giữ lại của các đoạn không đang nói (None = hiện đủ)."""
             f = font("regular", size)
             step, gap = int(size * 1.28), int(size * 0.5)
             boxes, y = [], top + 6
-            for it in sc.items:
+            for i, it in enumerate(sc.items):
                 rows = [r for part in str(it["text"]).split("\n") for r in (wrap(d, part, f, width) or [""])]
+                if keep and i != fr.focus and len(rows) > keep:
+                    rows = rows[:keep - 1] + [rows[keep - 1].rstrip(".,;:") + " …"]
                 boxes.append((y, rows))
                 y += step * len(rows) + gap
             return f, step, boxes, y
 
-        size = 22
+        # bài dài: chữ không nhỏ hơn 19 — thu gọn các đoạn khác còn 2 dòng (hoặc 1), đoạn đang nói hiện đủ
+        size, keep = 22, None
         f, step, boxes, end = layout(size)
-        while end > bottom and size > 13:
+        while end > bottom and size > 19:
             size -= 1
             f, step, boxes, end = layout(size)
+        for k in (2, 1):
+            if end <= bottom:
+                break
+            size = 22
+            f, step, boxes, end = layout(size, k)
+            while end > bottom and size > 15:
+                size -= 1
+                f, step, boxes, end = layout(size, k)
         d.rounded_rectangle((x0, top, x1, bottom), 12, fill="#FFFDF8", outline=C["line"], width=2)
         marks = [m.lower() for m in fr.mark]
         for i, (y, rows) in enumerate(boxes):
@@ -709,18 +733,25 @@ class Slides:
                 d.rounded_rectangle((x0 + 6, y - 4, x0 + 11, y + step * len(rows)), 2, fill=C["red"])
             if it.get("label"):
                 d.text((lx, y), str(it["label"]), font=font("bold", size), fill=C["red"])
+            if on and marks:  # tô cụm từ kể cả khi nó bị ngắt sang dòng sau: dò trên cả đoạn rồi chia theo dòng
+                starts, pos = [], 0
+                for r in rows:
+                    starts.append(pos)
+                    pos += len(r) + 1
+                whole = " ".join(rows).lower()
+                for m in (" ".join(m.split()) for m in marks):
+                    j = whole.find(m)
+                    while j >= 0:
+                        for k, (r, st) in enumerate(zip(rows, starts)):
+                            a0, b0 = max(j, st), min(j + len(m), st + len(r))
+                            if a0 < b0:
+                                ry = y + k * step
+                                a = tx + d.textlength(r[:a0 - st], font=f)
+                                b = tx + d.textlength(r[:b0 - st], font=f)
+                                d.rounded_rectangle((a - 2, ry - 2, b + 2, ry + size + 4), 4, fill="#FFE07A")
+                        j = whole.find(m, j + len(m))
             for k, r in enumerate(rows):
-                ry = y + k * step
-                if on and marks:
-                    low = r.lower()
-                    for m in marks:
-                        j = low.find(m)
-                        while j >= 0:
-                            a = tx + d.textlength(r[:j], font=f)
-                            b = a + d.textlength(r[j:j + len(m)], font=f)
-                            d.rounded_rectangle((a - 2, ry - 2, b + 2, ry + size + 4), 4, fill="#FFE07A")
-                            j = low.find(m, j + len(m))
-                d.text((tx, ry), r, font=f, fill=C["ink"] if fr.focus is None or on else "#5F5852")
+                d.text((tx, y + k * step), r, font=f, fill=C["ink"] if fr.focus is None or on else "#5F5852")
             if it.get("note"):
                 d.line((x1 + 6, y + 10, x1 + 24, y + 10), fill=C["red"] if on else C["line"], width=2)
                 block(d, (x1 + 30, y), str(it["note"]), "bold" if on else "regular", 17, W - 40 - x1 - 30,
@@ -731,11 +762,15 @@ class Slides:
         n = len(sc.items)
         gap = 24
         cw = (W - 120 - gap * (n - 1)) / max(n, 1)
-        oh = 52
+        oh, line2 = 52, 24  # cao một phương án; phương án dài xuống hai dòng thì cao thêm line2
+
+        def opt_lines(opt):
+            return fit(d, str(opt), "bold", 21, cw - 90, 2, min_size=18)
 
         def height(it):  # thẻ cao vừa nội dung, các thẻ cao bằng nhau
             f, lines = fit(d, f"{it['n']}. {it['q']}", "bold", 23, cw - 44, 3, min_size=17)
-            return 18 + int(f.size * 1.2) * len(lines) + 12 + oh * len(it["options"]) + 6
+            opts = sum(oh + line2 * (len(opt_lines(o)[1]) - 1) for o in it["options"])
+            return 18 + int(f.size * 1.2) * len(lines) + 12 + opts + 6
 
         bottom = min(BOTTOM, TOP + max(height(it) for it in sc.items))
         for i, it in enumerate(sc.items):
@@ -750,9 +785,13 @@ class Slides:
             for k, opt in enumerate(it["options"]):
                 letter = keys[k]
                 right = done and letter == str(it["answer"])
+                fb, rows = opt_lines(opt)  # chữ đậm rộng hơn: tính số dòng theo chữ đậm để ô không đổi cỡ khi mở đáp án
+                f = font("bold" if right else "regular", fb.size)
+                h = oh + line2 * (len(rows) - 1)
                 if right:
-                    d.rounded_rectangle((x0 + 14, y - 6, x0 + cw - 14, y + oh - 10), 10, fill=C["oksoft"])
+                    d.rounded_rectangle((x0 + 14, y - 6, x0 + cw - 14, y + h - 10), 10, fill=C["oksoft"])
                 d.text((x0 + 26, y + (oh - 16) / 2), letter + ".", font=font("bold", 21), fill=C["ok"] if right else C["red"], anchor="lm")
-                f, lines = fit(d, str(opt), "bold" if right else "regular", 21, cw - 90, 1, min_size=15)
-                d.text((x0 + 56, y + (oh - 16) / 2), lines[0], font=f, fill=C["ink"] if not done or right else C["muted"], anchor="lm")
-                y += oh
+                for r, row in enumerate(rows):
+                    d.text((x0 + 56, y + (oh - 16) / 2 + r * line2), row, font=f,
+                           fill=C["ink"] if not done or right else C["muted"], anchor="lm")
+                y += h

@@ -77,6 +77,7 @@ class ImageRef(_M):
     pdf: str
     page: int = Field(ge=1)
     clip: tuple[float, float, float, float]
+    grid: int = Field(1, ge=1, le=6)  # dải ảnh nằm ngang gồm `grid` tranh bằng nhau → xếp lại thành 2 hàng cho to hơn
 
 
 class Line(_M):
