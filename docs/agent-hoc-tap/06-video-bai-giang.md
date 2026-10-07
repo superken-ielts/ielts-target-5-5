@@ -71,7 +71,24 @@ Exercise C–D của Listening/Reading (tự đánh giá cách làm bài) chỉ 
 
 ## 3. Unit 3 · Work — độ phủ video
 
-<!-- coverage:U03 -->
+Bảng in bằng lệnh `coverage` sau đợt 12:
+
+### U03 · Work — 6/7 phần có video, 11 video, 1:09:08
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-1` — Speaking 1 & Vocabulary 1: talking about work, jobs | 7:22 | 11 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-2` — Speaking 2: talking about jobs, part 2 of the Speaking Module | 7:26 | 12 |
+| Listening | Listening tr. 36–37 | `U03-listening-1` — Listening 1: listening for gist | 8:29 | 10 |
+| Listening | Listening tr. 36–37 | `U03-listening-2` — Listening 2: practise listening for gist | 10:34 | 8 |
+| Reading | sách tr. 38–40 | `U03-reading-1` — Reading 1: scanning for paraphrased language | 4:35 | 7 |
+| Reading | sách tr. 38–40 | `U03-reading-2` — Reading 2: practise scanning for paraphrased language | 4:12 | 8 |
+| Writing | sách tr. 41–42 | `U03-writing-1` — Writing 1: register | 4:10 | 7 |
+| Writing | sách tr. 41–42 | `U03-writing-2` — Writing 2: a letter of application | 5:40 | 8 |
+| Consolidation | sách tr. 43 | `U03-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 5:40 | 7 |
+| Exam practice | sách tr. 44–45 | `U03-exam-listening` — Exam practice: Listening | 6:47 | 9 |
+| Exam practice | sách tr. 44–45 | `U03-exam-reading` — Exam practice: Reading | 4:13 | 8 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
 
 **Kết luận:** Unit 3 có video cho **mọi phần có trang trong Course Book** (6/7 phần). Track 31, 32, 33 có file nghe
 nên phát thẳng trong video (Listening 2 phát lại từng đoạn cho câu 5–12); Track 28–30, 34, 36, 37 không có file nên các
