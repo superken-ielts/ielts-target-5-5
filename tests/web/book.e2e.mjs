@@ -125,6 +125,20 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
+  await step("Unit 3 có 11 video đủ sáu phần; nút Writing 2 mở phiên Writing", async () => {
+    const u3 = page.locator("#p-book .bk-unit", { hasText: "Unit 3 · Work" });
+    assert.equal(await u3.locator(".bk-vids button").count(), 11);
+    assert.deepEqual(await u3.locator(".bk-vgroup-t").allTextContents(),
+      ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
+    await u3.locator(".bk-vids button", { hasText: "a letter of application" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 3 · Writing/);
+    const srcs = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(srcs, ["U03-writing-1.mp4", "U03-writing-2.mp4"]);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("mở phiên, xem trang sách qua đoạn PDF nhỏ", async () => {
     await page.click("#p-book .bk-next .btn-primary");
     await page.click("#p-book .bk-act .btn-primary");

@@ -178,4 +178,7 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
     [["U02-speaking-vocab", ["U02-speaking-1", "U02-speaking-2"]], ["U02-listening", ["U02-listening-1", "U02-listening-2", "U02-listening-3"]],
      ["U02-reading", ["U02-reading-1", "U02-reading-2"]], ["U02-writing", ["U02-writing-1", "U02-writing-2"]],
      ["U02-consolidation", ["U02-consolidation"]], ["U02-exam-practice", ["U02-exam-reading", "U02-exam-writing"]]]);
+  // Unit 3: 11 video, đủ sáu phần
+  assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U03" }), Object.keys(acts)).map(g => [g.activity, g.lessons.length]),
+    [["U03-speaking-vocab", 2], ["U03-listening", 2], ["U03-reading", 2], ["U03-writing", 2], ["U03-consolidation", 1], ["U03-exam-practice", 2]]);
 });
