@@ -15,7 +15,7 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter", "blanks", "mcq", "passage"]
+               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow"]
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -34,9 +34,11 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "blanks": ("n", "answer"),          # ô trống số n, mở ra thì hiện `answer` (+ `tip`); có `q` chứa ___ thì là câu điền từ, `hint` = từ gốc
     "mcq": ("n", "q", "options", "answer"),  # trắc nghiệm: `options` là danh sách, `answer` là a, b, c… hoặc một nhãn trong `keys`
     "passage": ("text",),               # bài đọc trên màn hình (có phụ đề): mỗi mục một đoạn, `label` đầu đoạn; dòng thoại `mark` tô từ khóa
+    "shadow": ("text",),                # nghe – nhắc lại: mỗi mục một câu mẫu chữ to; `by` người nói (màu), `vi` nghĩa, `tip` mẹo phát âm
 }
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
-LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read", "mark", "track", "start", "end"}
+# `echo: true` (câu thoại): sau câu là khoảng lặng đếm ngược dài theo câu để người học nhắc lại (shadowing)
+LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read", "mark", "track", "start", "end", "echo"}
 
 
 class _M(BaseModel):
@@ -94,6 +96,7 @@ class Line(_M):
     track: str = ""       # phát file nghe của sách (mã file audio trong book.json), từ giây `start` tới `end`
     start: float = Field(0, ge=0)
     end: Optional[float] = None
+    echo: bool = False    # câu thoại: thêm khoảng lặng đếm ngược (dài theo câu) để người học nhắc lại
 
     @field_validator("reveal", "mark", mode="before")
     @classmethod
@@ -112,6 +115,8 @@ class Line(_M):
             raise ValueError(f"đoạn nghe {self.track}: `end` phải lớn hơn `start`")
         if self.speaker and not self.text.strip():
             raise ValueError(f"câu thoại của {self.speaker} trống")
+        if self.echo and not self.speaker:
+            raise ValueError("`echo` (chừa chỗ nhắc lại) chỉ dùng cho câu thoại")
         return self
 
     @property
@@ -163,8 +168,8 @@ class Scene(_M):
                     raise ValueError(f"cảnh mcq: đáp án '{it['answer']}' của câu {it['n']} không thuộc {letters}")
         if self.kind != "passage" and any(ln.mark for ln in self.lines):
             raise ValueError("`mark` (tô từ khóa) chỉ dùng trong cảnh passage")
-        if self.kind == "letter" and any(ln.wait for ln in self.lines):
-            raise ValueError("cảnh letter không có khoảng lặng `wait` (không có chỗ hiện đếm ngược)")
+        if self.kind == "letter" and any(ln.wait or ln.echo for ln in self.lines):
+            raise ValueError("cảnh letter không có khoảng lặng `wait` / `echo` (không có chỗ hiện đếm ngược)")
         if not self.lines:
             raise ValueError("cảnh không có câu thoại nào")
         keys = self.reveal_keys()

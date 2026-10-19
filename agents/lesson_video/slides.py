@@ -589,8 +589,9 @@ class Slides:
             sp = self.L.speakers[fr.speaker]
             cx = chip_x
             self._avatar(d, cx, py0 + 26, 18, fr.speaker)
-            d.text((cx + 26, py0 + 12), sp.name + " is reading", font=font("bold", 16), fill=sp.color)
-            d.text((cx + 26, py0 + 31), "đang đọc thành tiếng", font=font("italic", 14), fill=C["muted"])
+            role = sc.roles.get(fr.speaker)  # bài nói mẫu trong thi thử: "Tom · candidate — đang nói"
+            d.text((cx + 26, py0 + 12), sp.name + (" · " + role if role else " is reading"), font=font("bold", 16), fill=sp.color)
+            d.text((cx + 26, py0 + 31), "đang nói" if role else "đang đọc thành tiếng", font=font("italic", 14), fill=C["muted"])
         for i, (y, rows) in enumerate(boxes):
             note = sc.items[i].get("note")
             if not note:
@@ -795,3 +796,49 @@ class Slides:
                     d.text((x0 + 56, y + (oh - 16) / 2 + r * line2), row, font=f,
                            fill=C["ink"] if not done or right else C["muted"], anchor="lm")
                 y += h
+
+    def _k_shadow(self, img, d, sc, fr):
+        """Nghe – nhắc lại (shadowing): câu mẫu chữ to theo màu người nói, nghĩa và mẹo phát âm;
+        tới lượt người học (khoảng lặng `echo` / `wait`) thì hiện đồng hồ đếm ngược giữa màn hình."""
+        n = len(sc.items)
+        if fr.focus is None:  # danh sách câu sẽ luyện
+            rh = self._rows(n, cap=54)
+            for i, it in enumerate(sc.items):
+                y = TOP + i * rh + rh / 2
+                if it.get("by"):
+                    self._avatar(d, 82, y, 15, it["by"])
+                else:
+                    d.ellipse((67, y - 15, 97, y + 15), fill=C["red"])
+                    d.text((82, y + 1), str(i + 1), font=font("bold", 16), fill="#FFFFFF", anchor="mm")
+                f, lines = fit(d, str(it["text"]), "regular", 23, W - 200, 1)
+                d.text((112, y), lines[0], font=f, fill=C["ink"], anchor="lm")
+            return
+        it = sc.items[fr.focus]
+        sp = self.L.speakers.get(it.get("by") or fr.speaker or "")
+        color = sp.color if sp else C["red"]
+        d.text((60, TOP), f"Sentence {fr.focus + 1} of {n}", font=font("bold", 18), fill=C["red"])
+        if sp:
+            label = sp.name + "'s sentence"
+            d.text((W - 96, TOP + 11), label, font=font("bold", 18), fill=color, anchor="rm")
+            self._avatar(d, W - 74, TOP + 11, 14, it.get("by") or fr.speaker)
+        top, bot = TOP + 34, TOP + 236
+        turn = fr.countdown is not None
+        d.rounded_rectangle((60, top, W - 60, bot), 16, fill=tint(color, 0.07),
+                            outline=C["red"] if turn else tint(color, 0.4), width=4 if turn else 2)
+        d.rounded_rectangle((60, top, 68, bot), 4, fill=color)
+        y = block(d, (96, top + 22), str(it["text"]), "bold", 38, W - 200, C["ink"], max_lines=3, lead=1.2, min_size=24)
+        if it.get("vi"):
+            f, lines = fit(d, str(it["vi"]), "italic", 22, W - 200, 1, min_size=16)
+            d.text((96, max(y + 6, bot - 44)), lines[0], font=f, fill=C["muted"])
+        cy = bot + 66
+        if turn:
+            d.ellipse((W / 2 - 46, cy - 46, W / 2 + 46, cy + 46), outline=C["red"], width=7)
+            d.text((W / 2, cy + 2), str(fr.countdown), font=font("bold", 44), fill=C["red"], anchor="mm")
+            d.text((W / 2 + 70, cy), "Now you!", font=font("bold", 26), fill=C["red"], anchor="lm")
+        else:
+            d.text((W / 2, cy), "Listen…", font=font("italic", 28), fill=C["muted"], anchor="mm")
+        if it.get("tip"):
+            f, lines = fit(d, "Tip: " + str(it["tip"]), "regular", 20, W - 160, 1, min_size=15)
+            tw = d.textlength(lines[0], font=f)
+            d.rounded_rectangle((W / 2 - tw / 2 - 18, BOTTOM - 36, W / 2 + tw / 2 + 18, BOTTOM + 2), 18, fill=C["soft"])
+            d.text((W / 2, BOTTOM - 17), lines[0], font=f, fill=C["ink"], anchor="mm")

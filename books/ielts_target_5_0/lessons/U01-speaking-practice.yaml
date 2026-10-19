@@ -1,0 +1,395 @@
+# Video luyện nói thêm cho Unit 1 · Life (người học yêu cầu, không phải một bài trong sách): Tom và Emma hỏi đáp qua lại,
+# thi thử Speaking Phần 1–3 (Emma là giám khảo, Tom là thí sinh), nghe – nhắc lại từng câu (shadowing), rồi tới lượt người học.
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-practice.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml; `echo: true` = sau câu có khoảng lặng đếm ngược dài theo câu để nhắc lại.
+# Câu trả lời mẫu tự viết bằng từ vựng của Unit 1 (gia đình, quê nhà, việc học, thời gian rảnh, các giai đoạn cuộc đời).
+# Thông tin về Tom khớp các video Unit 1 trước: sinh ở Hà Nội, lớn lên ở Đà Lạt, học kinh doanh năm hai ở TP. Hồ Chí Minh,
+# có chị gái và em trai, ông nội là giáo viên đã nghỉ hưu, trồng rau trong vườn; Emma dạy tiếng Anh, thích nấu ăn và đi bộ đường dài.
+id: U01-speaking-practice
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Speaking: more practice, mock test and shadowing"
+title_vi: "Luyện nói thêm — hỏi đáp qua lại, thi thử Speaking, nói theo Tom và Emma"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 1: Life. Today is an extra speaking lesson."
+        say: "Welcome back to Unit one: Life. Today is an extra speaking lesson."
+        vi: "Bài luyện nói thêm của Unit 1."
+      - tom: "Great! I need more practice before my exam."
+        vi: "Tuyệt! Mình cần luyện thêm trước kỳ thi."
+      - emma: "First, Tom and I ask each other questions about our lives. Then we do a mock speaking test: I'm the examiner, and Tom is the candidate."
+        vi: "Tom và Emma hỏi đáp nhau, rồi thi thử: Emma là giám khảo, Tom là thí sinh."
+      - tom: "And you can shadow both of us. Listen, and say the same words with us."
+        vi: "Bạn hãy nói theo (shadow) cả hai người."
+
+  - kind: bullets
+    chapter: "Cách luyện shadowing"
+    heading: "How to shadow"
+    heading_vi: "Shadowing — nghe và nói đuổi theo người nói mẫu"
+    items:
+      - {en: "Listen once and read the subtitles", vi: "Nghe một lần, đọc phụ đề để hiểu nghĩa"}
+      - {en: "Listen and repeat: say each sentence in the pause", vi: "Nghe rồi nhắc lại từng câu trong khoảng lặng (cuối video)"}
+      - {en: "Shadow: speak at the same time as Tom or Emma", vi: "Nói cùng lúc với người nói mẫu, bắt chước trọng âm và ngữ điệu"}
+      - {en: "Loop one chapter many times in the app", vi: "Trong app: bấm 'Lặp chương này' hoặc A–B để nghe lại nhiều lần"}
+      - {en: "Record yourself and compare", vi: "Ghi âm giọng mình rồi so với Tom và Emma"}
+    lines:
+      - emma: "Here's how to shadow."
+        vi: "Cách luyện shadowing."
+      - {emma: "First, listen once, and read the subtitles.", focus: 0}
+      - {emma: "Next, listen and repeat. Later in this video, there's a pause after each sentence.", focus: 1}
+      - emma: "Then shadow: speak at the same time as us, and copy our stress and intonation."
+        focus: 2
+        vi: "Bắt chước trọng âm và ngữ điệu."
+      - tom: "In the app, you can loop one chapter again and again."
+        focus: 3
+        vi: "Trong app có nút 'Lặp chương này'."
+      - {emma: "Finally, record yourself, and compare your voice with ours.", say: "Finally, re-cord yourself, and compare your voice with ours.", focus: 4}
+
+  - kind: qa
+    chapter: "Hỏi qua lại: gia đình, quê nhà"
+    heading: "Tom and Emma ask each other · Family and hometown"
+    heading_vi: "Hỏi qua lại — nghe trước, rồi nói theo từng câu trả lời"
+    items:
+      - q: "Tom, how many people are there in your family?"
+        a: "There are five of us: my parents, my older sister, my younger brother and me. My grandfather lives with us too, so our house is never quiet!"
+        ask: emma
+        by: tom
+        phrases: ["There are five of us", "lives with us", "never quiet"]
+      - q: "What about you, Emma? Do you have a big family?"
+        a: "Not really. I've got one brother, but I have lots of cousins. When I was a child, we spent every summer together at my grandparents' house."
+        ask: tom
+        by: emma
+        phrases: ["Not really.", "lots of cousins", "When I was a child…"]
+      - q: "Where are you from, Tom?"
+        a: "I was born in Hanoi, but my family moved to Da Lat when I was five, so I grew up there. It's a small city in the mountains, and it's cool all year."
+        ask: emma
+        by: tom
+        phrases: ["I was born in…", "I grew up there", "cool all year"]
+      - q: "And what's your hometown like, Emma?"
+        a: "It's a small town by the sea. It's quiet and friendly, and everybody knows everybody. I go back to visit my parents every summer."
+        ask: tom
+        by: emma
+        phrases: ["by the sea", "everybody knows everybody", "go back to visit"]
+    lines:
+      - emma: "Let's start. Tom and I ask each other about our families and our hometowns."
+        vi: "Hỏi nhau về gia đình và quê nhà."
+      - {emma: "Tom, how many people are there in your family?", focus: 0}
+      - tom: "There are five of us: my parents, my older sister, my younger brother and me. My grandfather lives with us too, so our house is never quiet!"
+        say: "There are five of us: my parents, my older sister, my younger brother and me. My grandfather livz with us too, so our house is never quiet!"
+        reveal: 0
+        vi: "Nhà mình năm người; ông nội cũng sống cùng nên nhà lúc nào cũng rộn ràng."
+      - {tom: "What about you, Emma? Do you have a big family?", focus: 1}
+      - emma: "Not really. I've got one brother, but I have lots of cousins. When I was a child, we spent every summer together at my grandparents' house."
+        reveal: 1
+        vi: "Không đông lắm… Hồi nhỏ, mùa hè nào bọn mình cũng ở nhà ông bà."
+      - {emma: "Where are you from, Tom?", focus: 2}
+      - tom: "I was born in Hanoi, but my family moved to Da Lat when I was five, so I grew up there. It's a small city in the mountains, and it's cool all year."
+        say: "I was born in Ha Noi, but my family moved to Dah Lot when I was five, so I grew up there. It's a small city in the mountains, and it's cool all year."
+        reveal: 2
+        vi: "Sinh ở Hà Nội, năm tuổi chuyển lên Đà Lạt và lớn lên ở đó."
+      - {tom: "And what's your hometown like, Emma?", focus: 3}
+      - emma: "It's a small town by the sea. It's quiet and friendly, and everybody knows everybody. I go back to visit my parents every summer."
+        reveal: 3
+        vi: "Thị trấn nhỏ ven biển, yên tĩnh, thân thiện, ai cũng biết nhau."
+      - emma: "Did you notice? We answer the question, and then we add one or two details."
+        vi: "Trả lời rồi thêm 1–2 chi tiết."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: việc học, sở thích, tương lai"
+    heading: "Tom and Emma ask each other · Studies, free time, the future"
+    heading_vi: "Chú ý thì: hiện tại tiếp diễn, quá khứ đơn, be going to"
+    items:
+      - q: "What are you studying at the moment, Tom?"
+        a: "I'm studying business at a university in Ho Chi Minh City. I'm in my second year, and I'm really enjoying it."
+        ask: emma
+        by: tom
+        phrases: ["I'm studying…", "in my second year", "I'm really enjoying it"]
+      - q: "Emma, what do you like doing in your free time?"
+        a: "I love cooking, especially for my friends. At the weekend, I sometimes go hiking in the hills. It helps me to relax after a busy week."
+        ask: tom
+        by: emma
+        phrases: ["I love…", "especially…", "It helps me to relax"]
+      - q: "Which stage of life do you think is the best?"
+        a: "I think childhood is the best. Children don't have many worries, and they can play all day. I had a really happy childhood in Da Lat."
+        ask: emma
+        by: tom
+        phrases: ["I think… is the best", "many worries", "a happy childhood"]
+      - q: "What do you hope to do in the future, Emma?"
+        a: "I hope to travel more. My parents are going to retire next year, so I'd love to take them on a long holiday. They've worked hard all their lives!"
+        ask: tom
+        by: emma
+        phrases: ["I hope to…", "are going to retire", "I'd love to…"]
+    lines:
+      - emma: "Now, let's talk about studies, free time and the future."
+        vi: "Việc học, thời gian rảnh và tương lai."
+      - {emma: "What are you studying at the moment, Tom?", focus: 0}
+      - tom: "I'm studying business at a university in Ho Chi Minh City. I'm in my second year, and I'm really enjoying it."
+        say: "I'm studying business at a university in Ho Chee Min City. I'm in my second year, and I'm really enjoying it."
+        reveal: 0
+        vi: "Mình học kinh doanh ở TP. Hồ Chí Minh, năm thứ hai, và rất thích."
+      - {tom: "Emma, what do you like doing in your free time?", focus: 1}
+      - emma: "I love cooking, especially for my friends. At the weekend, I sometimes go hiking in the hills. It helps me to relax after a busy week."
+        reveal: 1
+        vi: "Thích nấu ăn, nhất là nấu cho bạn bè; cuối tuần đi bộ đường dài trên đồi."
+      - {emma: "Which stage of life do you think is the best?", focus: 2}
+      - tom: "I think childhood is the best. Children don't have many worries, and they can play all day. I had a really happy childhood in Da Lat."
+        say: "I think childhood is the best. Children don't have many worries, and they can play all day. I had a really happy childhood in Dah Lot."
+        reveal: 2
+        vi: "Tuổi thơ đẹp nhất: trẻ con ít lo nghĩ, được chơi cả ngày."
+      - {tom: "What do you hope to do in the future, Emma?", focus: 3}
+      - emma: "I hope to travel more. My parents are going to retire next year, so I'd love to take them on a long holiday. They've worked hard all their lives!"
+        reveal: 3
+        vi: "Bố mẹ sắp nghỉ hưu, mình muốn đưa họ đi nghỉ thật dài."
+      - emma: "Listen to the tenses. I'm studying is now. I had a happy childhood is the past. My parents are going to retire is the future."
+        vi: "Hiện tại tiếp diễn: bây giờ · quá khứ đơn: đã qua · be going to: dự định."
+
+  - kind: qa
+    chapter: "Thi thử · Phần 1"
+    heading: "Mock test · Part 1 · Introduction and interview"
+    heading_vi: "Thi thử Phần 1 — giám khảo hỏi về bạn (bài thi thật: 4–5 phút)"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Can you tell me your full name, please?"
+        a: "Good morning. My full name is Tran Minh Tuan, but please call me Tom."
+        phrases: ["My full name is…", "please call me…"]
+      - q: "Can I see your identification, please?"
+        a: "Yes, of course. Here you are."
+      - q: "Do you live in a house or a flat?"
+        a: "At the moment, I live in a flat. I share it with two friends from my course. It's quite small, but it's very close to my university."
+        phrases: ["At the moment…", "I share it with…", "very close to…"]
+      - q: "Do you spend a lot of time with your family?"
+        a: "Not as much as I'd like. My family lives in Da Lat, so I only go home in the holidays. But we have a video call every Sunday."
+        phrases: ["Not as much as I'd like.", "in the holidays", "a video call"]
+      - q: "Who are you most similar to in your family?"
+        a: "Probably my father. We're both quite calm and patient, and we both love basketball. People say we look alike, too."
+        phrases: ["Probably…", "We're both…", "look alike"]
+      - q: "Why are you learning English?"
+        a: "Mainly for my career. I want to work for an international company after I graduate, and English is really important for that."
+        phrases: ["Mainly for…", "after I graduate", "really important"]
+    lines:
+      - emma: "Now, the mock test. I'm the examiner, and Tom is the candidate. Part one starts now."
+        focus: 0
+        vi: "Thi thử: Emma là giám khảo, Tom là thí sinh. Bắt đầu Phần 1."
+      - {emma: "Good morning. My name is Emma. Can you tell me your full name, please?", focus: 0}
+      - tom: "Good morning. My full name is Tran Minh Tuan, but please call me Tom."
+        say: "Good morning. My full name is Chan Min Twan, but please call me Tom."
+        reveal: 0
+        vi: "Thí sinh dùng tên tiếng Anh thì nói thêm 'please call me…'."
+      - {emma: "Thank you, Tom. Can I see your identification, please?", focus: 1}
+      - {tom: "Yes, of course. Here you are.", reveal: 1, vi: "Đưa giấy tờ tùy thân."}
+      - emma: "Thank you. Now, in this first part, I'd like to ask you some questions about yourself."
+        vi: "Phần 1: giám khảo hỏi về bản thân bạn."
+      - {emma: "Let's talk about where you live. Do you live in a house or a flat?", focus: 2}
+      - tom: "At the moment, I live in a flat. I share it with two friends from my course. It's quite small, but it's very close to my university."
+        reveal: 2
+        vi: "Ở chung căn hộ nhỏ với hai bạn cùng khóa, rất gần trường."
+      - {emma: "Let's move on to talk about your family. Do you spend a lot of time with your family?", focus: 3}
+      - tom: "Not as much as I'd like. My family lives in Da Lat, so I only go home in the holidays. But we have a video call every Sunday."
+        say: "Not as much as I'd like. My family livz in Dah Lot, so I only go home in the holidays. But we have a video call every Sunday."
+        reveal: 3
+        vi: "Không nhiều như mong muốn; chỉ về nhà dịp nghỉ, Chủ nhật nào cũng gọi video."
+      - {emma: "Who are you most similar to in your family?", focus: 4}
+      - tom: "Probably my father. We're both quite calm and patient, and we both love basketball. People say we look alike, too."
+        reveal: 4
+        vi: "Có lẽ giống bố: đều điềm tĩnh, kiên nhẫn, mê bóng rổ; ai cũng bảo hai bố con trông giống nhau."
+      - {emma: "Now let's talk about learning English. Why are you learning English?", focus: 5}
+      - tom: "Mainly for my career. I want to work for an international company after I graduate, and English is really important for that."
+        reveal: 5
+        vi: "Chủ yếu vì công việc sau này: muốn làm cho công ty quốc tế."
+
+  - kind: bullets
+    chapter: "Thi thử · Phần 2"
+    heading: "Part 2 · Describe an older person in your family who you admire."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: who this person is", vi: "người đó là ai"}
+      - {en: "what he or she is like", vi: "người đó là người thế nào"}
+      - {en: "what you do together", vi: "hai người thường làm gì cùng nhau"}
+      - {en: "and explain why you admire this person", vi: "và giải thích vì sao bạn ngưỡng mộ người đó"}
+    lines:
+      - emma: "Thank you. Now, in part two, I'm going to give you a topic, and I'd like you to talk about it for one to two minutes."
+        vi: "Phần 2: nói 1–2 phút về một chủ đề."
+      - emma: "Before you talk, you'll have one minute to think about what you're going to say. You can make some notes if you wish."
+        vi: "Có 1 phút chuẩn bị và được ghi chú."
+      - emma: "Here's your topic. I'd like you to describe an older person in your family who you admire."
+        vi: "Tả một người lớn tuổi trong gia đình mà bạn ngưỡng mộ."
+      - {emma: "You should say who this person is,", focus: 0}
+      - {emma: "what he or she is like,", focus: 1}
+      - {emma: "what you do together,", focus: 2}
+      - {emma: "and explain why you admire this person.", focus: 3}
+      - wait: 10
+        note: "Thinking time — one minute in the real test"
+        vi: "Thời gian chuẩn bị (thi thật: 1 phút). Muốn tự chuẩn bị thì tạm dừng video."
+
+  - kind: bullets
+    heading: "Tom's notes · one line for each point"
+    heading_vi: "Ghi chú của Tom — chỉ từ khóa, không viết cả câu"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "grandad · 80 · retired maths teacher · lives with us", vi: "ông nội · 80 tuổi · thầy giáo toán đã nghỉ hưu · sống cùng nhà"}
+      - {en: "kind · patient · never angry · funny stories", vi: "tốt bụng · kiên nhẫn · không bao giờ nổi giận · kể chuyện vui"}
+      - {en: "vegetable garden · chess in the evening", vi: "vườn rau · chơi cờ vua buổi tối"}
+      - {en: "poor village → teacher · always positive · hard work", vi: "làng nghèo → thành thầy giáo · luôn lạc quan · chăm chỉ"}
+    lines:
+      - tom: "In one minute, I write short notes, not full sentences. One line for each point on the card."
+        vi: "Trong 1 phút: ghi từ khóa, mỗi ý trên thẻ một dòng."
+      - emma: "All right? Remember, you have one to two minutes, so don't worry if I stop you. Can you start speaking now, please?"
+        vi: "Được chưa? Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu khoảng 1 phút — mỗi ý trên thẻ là một đoạn"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my grandfather. He's eighty years old, and he lives with my family in Da Lat. He was a maths teacher for almost forty years, and he retired about ten years ago."
+        say: "I'd like to talk about my grandfather. He's eighty years old, and he lives with my family in Dah Lot. He was a maths teacher for almost forty years, and he retired about ten years ago."
+        note: "who this person is"
+      - text: "He's a very kind and patient person. He never gets angry, and he tells the funniest stories about his childhood."
+        note: "what he is like"
+      - text: "When I go home, we do lots of things together. In the morning, we work in his vegetable garden, and in the evening, he teaches me to play chess. He usually wins!"
+        note: "what we do together"
+      - text: "I admire him because his life wasn't easy. He grew up in a poor village, but he studied hard and became a teacher. He's always positive, and he taught me that hard work really matters."
+        note: "why I admire him"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử · Phần 3"
+    heading: "Mock test · Part 3 · Discussion"
+    heading_vi: "Phần 3 — câu hỏi chung hơn: trả lời dài hơn, có lý do và ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "In your country, do young people often live with their grandparents?"
+        a: "Yes, quite often, especially in the countryside. Grandparents help to look after the children, and later the children look after them. But in big cities, more young couples live on their own now."
+        phrases: ["especially in…", "look after", "on their own"]
+      - q: "What can young people learn from older people?"
+        a: "I think they can learn a lot. Older people have more life experience, so they can give good advice about work, money and relationships. They can also teach us about our family history."
+        phrases: ["life experience", "give good advice", "family history"]
+    lines:
+      - emma: "Thank you. We've been talking about an older person in your family. Now I'd like to ask you some more general questions about this."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về chủ đề của Phần 2."
+      - {emma: "In your country, do young people often live with their grandparents?", say: "In your country, do young people often liv with their grandparents?", focus: 0}
+      - tom: "Yes, quite often, especially in the countryside. Grandparents help to look after the children, and later the children look after them. But in big cities, more young couples live on their own now."
+        reveal: 0
+        vi: "Khá phổ biến, nhất là ở nông thôn; ở thành phố lớn thì nhiều đôi vợ chồng trẻ sống riêng."
+      - {emma: "What can young people learn from older people?", focus: 1}
+      - tom: "I think they can learn a lot. Older people have more life experience, so they can give good advice about work, money and relationships. They can also teach us about our family history."
+        reveal: 1
+        vi: "Người lớn tuổi nhiều kinh nghiệm sống, cho lời khuyên tốt, kể về lịch sử gia đình."
+      - emma: "Thank you very much, Tom. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - tom: "Thank you, Emma. That was fun!"
+
+  - kind: shadow
+    chapter: "Nghe – nhắc lại: câu của Tom"
+    heading: "Listen and repeat · Tom"
+    heading_vi: "Nghe rồi nhắc lại trong khoảng lặng — chú ý nối âm và trọng âm"
+    items:
+      - text: "There are five of us: my parents, my older sister, my younger brother and me."
+        by: tom
+        vi: "Nhà mình có năm người: bố mẹ, chị gái, em trai và mình."
+        tip: "đọc liền: five of us → /faɪvəvʌs/ · nhấn: PARents, OLDer SISter, YOUNGer BROther"
+      - text: "I was born in Hanoi, but I grew up in Da Lat."
+        by: tom
+        vi: "Mình sinh ra ở Hà Nội nhưng lớn lên ở Đà Lạt."
+        tip: "đọc liền: born in → /bɔːrnɪn/ · grew up → /ɡruːʌp/ · but I → /bʌtaɪ/"
+      - text: "My family lives in Da Lat, so I only go home in the holidays."
+        by: tom
+        vi: "Gia đình mình ở Đà Lạt nên mình chỉ về nhà vào dịp nghỉ."
+        tip: "lives /lɪvz/ = sống (động từ), khác lives /laɪvz/ = cuộc đời · in the → /ɪnðə/"
+      - text: "I want to work for an international company after I graduate."
+        by: tom
+        vi: "Mình muốn làm cho một công ty quốc tế sau khi tốt nghiệp."
+        tip: "want to → /wɑːntə/ · for an → /fərən/ · nhấn: interNAtional, COMpany, GRAduate"
+    lines:
+      - tom: "Now, listen and repeat. I say a sentence, and you say it after me, in the pause."
+        vi: "Mình nói một câu, bạn nhắc lại trong khoảng lặng."
+      - {tom: "There are five of us: my parents, my older sister, my younger brother and me.", focus: 0, echo: true}
+      - {tom: "I was born in Hanoi, but I grew up in Da Lat.", say: "I was born in Ha Noi, but I grew up in Dah Lot.", focus: 1, echo: true}
+      - {tom: "My family lives in Da Lat, so I only go home in the holidays.", say: "My family livz in Dah Lot, so I only go home in the holidays.", focus: 2, echo: true}
+      - {tom: "I want to work for an international company after I graduate.", focus: 3, echo: true}
+
+  - kind: shadow
+    chapter: "Nghe – nhắc lại: câu của Emma"
+    heading: "Listen and repeat · Emma"
+    heading_vi: "Nghe rồi nhắc lại — bắt chước cả ngữ điệu lên xuống"
+    items:
+      - text: "Not really. I've got one brother, but I have lots of cousins."
+        by: emma
+        vi: "Không đông lắm. Mình có một người anh em trai, nhưng có rất nhiều anh chị em họ."
+        tip: "Not really ↘ giọng xuống · lots of → /lɑːtsəv/ · cousins /ˈkʌzənz/"
+      - text: "When I was a child, we spent every summer at my grandparents' house."
+        by: emma
+        vi: "Hồi nhỏ, mùa hè nào bọn mình cũng ở nhà ông bà."
+        tip: "was a child → /wʌzə tʃaɪld/ · nhấn: CHILD, SUMmer, GRANDparents"
+      - text: "It's quiet and friendly, and everybody knows everybody."
+        by: emma
+        vi: "Ở đó yên tĩnh, thân thiện, và ai cũng biết nhau."
+        tip: "quiet /ˈkwaɪət/ (2 âm tiết) khác quite /kwaɪt/ · nhấn: EVerybody"
+      - text: "My parents are going to retire next year, so I'd love to take them on a long holiday."
+        by: emma
+        vi: "Sang năm bố mẹ mình nghỉ hưu, nên mình rất muốn đưa họ đi nghỉ thật dài."
+        tip: "going to → /ˈɡoʊɪŋ tə/ · retire /rɪˈtaɪər/ · I'd love to → /aɪd ˈlʌv tə/"
+    lines:
+      - emma: "Now, my sentences. Repeat after me, and copy my intonation."
+        vi: "Giờ đến câu của Emma: nhắc lại, bắt chước ngữ điệu."
+      - {emma: "Not really. I've got one brother, but I have lots of cousins.", focus: 0, echo: true}
+      - {emma: "When I was a child, we spent every summer at my grandparents' house.", focus: 1, echo: true}
+      - {emma: "It's quiet and friendly, and everybody knows everybody.", focus: 2, echo: true}
+      - {emma: "My parents are going to retire next year, so I'd love to take them on a long holiday.", focus: 3, echo: true}
+
+  - kind: practice
+    chapter: "Đến lượt bạn: thi thử"
+    heading: "Your turn · Mock test Part 1"
+    heading_vi: "Bạn là thí sinh — trả lời thành tiếng, mỗi câu 15 giây"
+    roles: {emma: examiner}
+    items:
+      - {q: "Do you live in a house or a flat?", hint: "At the moment, I live in… I share it with…"}
+      - {q: "Do you spend a lot of time with your family?", hint: "Not as much as I'd like… / Yes, quite a lot, because…"}
+      - {q: "Which stage of life do you think is the best?", hint: "I think… is the best, because…"}
+      - {q: "Why are you learning English?", hint: "Mainly for… I want to…"}
+    lines:
+      - emma: "Now it's your turn. I'm the examiner, and you're the candidate. Answer each question in two or three sentences."
+        vi: "Bạn là thí sinh: trả lời mỗi câu bằng 2–3 câu."
+      - {emma: "Do you live in a house or a flat?", focus: 0}
+      - {wait: 15, note: "Your turn — answer out loud", vi: "Trả lời thành tiếng: câu trả lời + 1–2 chi tiết"}
+      - {emma: "Do you spend a lot of time with your family?", focus: 1}
+      - {wait: 15, note: "Your turn — answer out loud", vi: "Trả lời thành tiếng: câu trả lời + 1–2 chi tiết"}
+      - {emma: "Which stage of life do you think is the best?", focus: 2}
+      - {wait: 15, note: "Your turn — answer out loud", vi: "Trả lời thành tiếng: câu trả lời + 1–2 chi tiết"}
+      - {emma: "Why are you learning English?", focus: 3}
+      - {wait: 15, note: "Your turn — answer out loud", vi: "Trả lời thành tiếng: câu trả lời + 1–2 chi tiết"}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Answer, then add one or two details", vi: "Trả lời rồi thêm lý do, ví dụ hoặc cảm nghĩ"}
+      - {en: "Link your ideas: and, but, so, because, also", vi: "Dùng từ nối để câu dài và mạch lạc"}
+      - {en: "Use the right tense: I'm studying… I grew up… I'm going to…", vi: "Đúng thì: hiện tại, quá khứ, tương lai"}
+      - {en: "Part 2: one short paragraph for each point on the card", vi: "Phần 2: mỗi ý trên thẻ một đoạn ngắn"}
+      - {en: "Shadow ten minutes a day: loop one chapter in the app", vi: "Mỗi ngày shadow 10 phút: lặp một chương trong app"}
+    lines:
+      - emma: "Let's remember the main points."
+        vi: "Cùng nhớ lại các ý chính."
+      - {emma: "Answer the question, then add one or two details.", focus: 0}
+      - {emma: "Link your ideas with and, but, so, because and also.", focus: 1}
+      - {emma: "Use the right tense for now, for the past, and for the future.", say: "Yooz the right tense for now, for the past, and for the future.", focus: 2}
+      - {emma: "In part two, say one short paragraph for each point on the card.", focus: 3}
+      - {tom: "And shadow for ten minutes a day. Loop one chapter, and copy us!", focus: 4}
+      - emma: "Next time, try part two yourself with the same card. Good luck!"
+        vi: "Lần sau: tự nói Phần 2 với thẻ đề này. Chúc bạn may mắn!"

@@ -533,3 +533,54 @@ def test_image_grid_mcq_wrap_and_long_passage(tmp_path):
     data["scenes"][0]["image"]["grid"] = 9               # tối đa 6 tranh
     with pytest.raises((ValidationError, ValueError)):
         sc.Lesson.model_validate(data)
+
+
+SHADOW = {
+    "id": "T-5", "activity": "U01-speaking-vocab", "title": "Unit 1", "subtitle": "More practice",
+    "speakers": LESSON["speakers"],
+    "scenes": [
+        {"kind": "shadow", "chapter": "Repeat", "heading": "Listen and repeat",
+         "items": [{"text": "There are five of us: my parents, my sister and me.", "by": "b", "vi": "Nhà tôi có năm người.",
+                    "tip": "five of us → /faɪvəvʌs/"},
+                   {"text": "My family is big."}],
+         "lines": [{"a": "Repeat after Ben."},
+                   {"b": "There are five of us: my parents, my sister and me.", "focus": 0, "echo": True},
+                   {"a": "My family is big.", "focus": 1, "echo": True, "note": "Say it!"}]},
+        {"kind": "letter", "roles": {"b": "candidate"}, "items": [{"text": "I'd like to talk about my grandfather."}],
+         "lines": [{"read": "b", "focus": 0}]},
+    ],
+}
+
+
+def test_echo_leaves_room_to_repeat_and_shadow_renders(tmp_path):
+    """`echo`: sau câu mẫu là khoảng lặng đếm ngược dài theo câu (≈ 1,3 lần + 1 giây) để người học nhắc lại."""
+    lesson = sc.Lesson.model_validate(copy.deepcopy(SHADOW))
+    assert lesson.scenes[0].lines[1].echo and not lesson.scenes[0].lines[0].echo
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    for a, b in zip(tl.frames, tl.frames[1:]):
+        assert abs(a.start + a.dur - b.start) < 1e-6
+    k = next(i for i, f in enumerate(tl.frames) if f.speaker == "b" and f.scene == 0)
+    said = 0.4 + 0.06 * len(SHADOW["scenes"][0]["items"][0]["text"])        # câu đọc bằng bộ đọc im lặng dài bao nhiêu
+    rest = tl.frames[k + 1:]
+    cd = [f for f in rest[:next(i for i, f in enumerate(rest) if f.countdown is None)]]
+    assert [f.countdown for f in cd] == list(range(timeline.echo_seconds(said), 0, -1))
+    assert timeline.echo_seconds(said) == 6 and timeline.echo_seconds(0.5) == 3     # tối thiểu 3 giây
+    assert abs(sum(f.dur for f in cd) - 6) < 1e-6
+    assert all(f.focus == 0 and f.note == "Your turn — repeat after Ben" and "Ben" in f.vi for f in cd)
+    assert any(f.countdown and f.note == "Say it!" for f in tl.frames)                # ghi chú riêng thay câu mặc định
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    for fr in tl.frames:                                                          # danh sách câu, câu đang luyện, đếm ngược, bài nói có vai
+        assert slides.render(fr, fr.start / tl.total).size == (W, H)
+
+
+@pytest.mark.parametrize("patch", [
+    lambda d: d["scenes"][0]["lines"].append({"wait": 2, "echo": True}),            # echo chỉ cho câu thoại
+    lambda d: d["scenes"][1]["lines"][0].update(echo=True),                          # thư / bài nói không có chỗ đếm ngược
+    lambda d: d["scenes"][0]["items"][1].pop("text"),                                # câu mẫu thiếu chữ
+    lambda d: d["scenes"][0]["items"][0].update(by="zed"),                           # người nói không có thật
+])
+def test_bad_shadow_scripts_are_rejected(patch):
+    data = copy.deepcopy(SHADOW)
+    patch(data)
+    with pytest.raises((ValidationError, ValueError)):
+        sc.Lesson.model_validate(data)

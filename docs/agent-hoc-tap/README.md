@@ -56,6 +56,14 @@ hồ sơ video (file 06) thêm Unit 3 và kế hoạch Unit 4.
 - đếm thời gian nghe trong ngày;
 - lặp đoạn A–B và lặp chương trên video.
 
+**Đợt 14 (19/10/2026):** video luyện nói thêm Unit 1 (`U01-speaking-practice`):
+- Tom và Emma hỏi đáp qua lại;
+- thi thử Speaking Phần 1–3;
+- nghe – nhắc lại để shadowing giọng cả hai người;
+- người học tự thi thử Phần 1.
+
+Công cụ dựng video có thêm cảnh `shadow` và dòng `echo` (khoảng lặng để nhắc lại).
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

@@ -1,8 +1,8 @@
 # 06 — Video bài giảng: hồ sơ Unit 1–3, quy trình và kế hoạch Unit 4
 
-Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11), Unit 2 (đợt 10) và Unit 3
-(đợt 12): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những lỗi đã
-gặp. Dùng file này làm căn cứ khi làm **Unit 4** (mục 8) và các unit sau.
+Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11, 14), Unit 2 (đợt 10) và
+Unit 3 (đợt 12): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những
+lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 4** (mục 8) và các unit sau.
 
 **Phạm vi:** chỉ **Course Book** (Student's Book, `IELTS_Target_5.0.pdf`) và các file nghe đi kèm. Bộ sách không có
 Workbook nên **không làm video Workbook** — các chỗ sách ghi "go to Workbook page …" bỏ qua (người dùng chốt ở đợt 11).
@@ -41,7 +41,9 @@ Bảng in bằng lệnh `coverage` sau đợt 11:
 
 **Kết luận:** Unit 1 có video cho **mọi phần có trang trong Course Book** (6/7 phần; phần còn lại "Ôn unit + sổ lỗi"
 là phiên tự ôn, không có trang sách, không cần video). Listening và Reading làm ở đợt 11, sau khi công cụ phát được
-file nghe của sách (đợt 10).
+file nghe của sách (đợt 10). Đợt 14 thêm `U01-speaking-practice`: video **luyện nói thêm** theo yêu cầu người học, không
+theo trang sách. Video gồm Tom và Emma hỏi đáp qua lại, thi thử Phần 1–3, nghe – nhắc lại (shadowing) và lượt thi thử
+của người học. Video gắn vào phần Speaking & Vocabulary, ngay sau Speaking 2.
 
 ## 2. Unit 2 · Learning — độ phủ video
 
@@ -112,17 +114,7 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 | 11 | `U01-listening-2` Listening 2 | Phiếu nhân viên Esco Engineering của Peter và Jane, **phát Track 7**, đáp án kèm câu nghe được (đánh vần Austin, Moore, Cedar), tự đánh giá, address / age / marital status | bullets, blanks + `track` | Answer key Listening 2A |
 | 11 | `U01-reading-1` Reading 1: skimming | Nối 6 văn bản (ảnh cắt từ trang sách) với nguồn, cách đọc lướt (hình, hình thức, từ khóa), mục đích văn bản, định nghĩa skimming | match (ảnh), bullets, pairs, blanks | Suy ra từ bài |
 | 11 | `U01-reading-2` Reading 2: practise skimming | Sáu nguồn, nối văn bản A–C và D–F (hai ảnh cắt từ hai trang), tự đánh giá, 6 từ trong ngữ cảnh | bullets, match ×2, blanks (`hint` dài) | Answer key Reading 2A + suy ra |
-| 12 | `U03-speaking-1` Speaking 1 & Vocabulary 1 | Bốn ảnh nghề (lưới 2×2), bài nói mẫu 1 phút về ảnh c, 8 tên nghề (Track 28 đọc lại) + trọng âm, work as / for / in / with, 6 tính từ P/N, *Watch out!* | match (`grid`), letter, practice, blanks, bullets, errors | Tapescript Track 28 + suy ra |
-| 12 | `U03-speaking-2` Speaking 2 | Câu hỏi về nghề, would / could (tình huống không có thật), nối âm *would you* /wʊdʒuː/, Exam tip Phần 2, hai thẻ đề, chia 1 + 2 phút, ghi chú và **bài nói mẫu 2 phút** (thẻ B), đến lượt bạn (thẻ A, đếm ngược 60 giây ×2) | qa, compare, bullets, errors, match, timing, letter (`words`), practice | Gợi ý |
-| 12 | `U03-listening-1` Listening 1: gist | Nhìn tranh (lưới 2×2), **phát Track 31**, nối 4 đoạn, gist là gì, Exam tip đoán trước, đoán từ 4 hình, **phát Track 32**, nối | match (`grid`) + `track`, bullets, blanks | Suy ra từ Tapescript |
-| 12 | `U03-listening-2` Listening 2 | **Phát Track 33** cho câu 1–4, **phát lại từng đoạn** cho câu 5–12 (trắc nghiệm, phương án hai dòng), bẫy *garden / new kitchens*, design / staff / customer / product | match (`grid`), mcq + `track` (`start` / `end`), pairs | Answer key Listening 2A |
-| 12 | `U03-reading-1` Reading 1 | Bốn nghề (farms, flights, pitch, tips), "The Best Job I Ever Had", **tô cụm diễn đạt lại** cho E (C B A D) và F (C A D B) | match (`grid`), passage + `mark` (thu gọn đoạn) | Suy ra từ bài |
-| 12 | `U03-reading-2` Reading 2 | Ba quảng cáo tuyển dụng, nối với mô tả (d b a), câu 4–9 tô cụm từ (C A B C B A), Exam tip đoán và tìm bằng chứng, 5 từ vựng | vocab, passage + `mark`, pairs, bullets, blanks | Answer key Reading 2B |
-| 12 | `U03-writing-1` Writing 1: register | Định nghĩa register, VF / QF / INF cho 7 loại thư, nối 8 cách nói trang trọng – thân mật, dấu hiệu văn phong, cùng một tin viết hai kiểu | mcq (`keys` 1–4), blanks, pairs, compare | Suy ra |
-| 12 | `U03-writing-2` Writing 2: letter of application | Quảng cáo B cần người thế nào, **thư nháp của Ahmed** (Emma đọc), vị trí 5 mẹo, sửa 6 chỗ quá thân mật, **thư hoàn chỉnh theo Answer key** (Tom đọc, 2 trang), cụm từ thư xin việc | bullets, letter, order, errors, letter (`words`), vocab | Answer key Writing 2D |
-| 12 | `U03-consolidation` Consolidation | Lời khuyên Phần 2 (B B A A A A), thẻ đề và **cách hỏi giám khảo** (Track 34 đọc lại), nói 1 phút, 6 cụm hai từ, trọng âm 10 từ (Track 36), sửa 8 lỗi | mcq (`keys` A/B), bullets, qa, practice, pairs, errors | Tapescript Track 34, 36 + gợi ý |
-| 12 | `U03-exam-listening` Exam practice: Listening | Làm việc tại nhà — **Track 37 đọc lại bằng bốn giọng** (Mai, Tom = Simon, Jerry), câu 1–2 (b c), chọn 6 trong 10 (A C D E G I) và vì sao loại B F H J | bullets, mcq + `hide_text` + `roles` | Suy ra từ Tapescript |
-| 12 | `U03-exam-reading` Exam practice: Reading | "The Worst Job I Ever Had": câu 1–8 tô cụm diễn đạt lại (C A D A B D B C), câu 9–12 ≤ 2 từ (saved, home, became busier, was late), từ khóa | bullets, passage + `mark`, blanks, vocab | Suy ra từ bài |
+| 14 | `U01-speaking-practice` Speaking: more practice, mock test and shadowing | Luyện nói thêm theo yêu cầu người học (không theo trang sách): Tom và Emma **hỏi đáp qua lại** (gia đình, quê nhà, việc học, sở thích, tương lai), **thi thử Phần 1–3** (Emma giám khảo, Tom thí sinh; thẻ đề Phần 2, ghi chú 1 phút, bài nói mẫu 123 từ), **nghe – nhắc lại** 8 câu của Tom và Emma (khoảng lặng `echo` dài theo câu), đến lượt bạn thi thử Phần 1 | title, bullets, qa + `roles`, letter (nhãn vai), **shadow** + `echo`, practice | Câu trả lời mẫu tự viết bằng từ vựng Unit 1 |
 | 10 | `U02-speaking-1` Vocabulary 1 & Speaking 1 | Chính tả 8 môn học, đuôi -ics, nối tranh, kể về trường cũ, quá khứ đơn (có / bất quy tắc), *Watch out!*, đuôi -ed /t/ /d/ /ɪd/ | blanks, vocab, match, qa, errors, practice | Chắc chắn (chính tả, dạng quá khứ) + gợi ý (nối tranh); Track 12–13 |
 | 10 | `U02-speaking-2` Speaking 2 & Vocabulary 2 | Track 14 đọc lại với **ba giọng** (Emma giám khảo, Tom, Mai `af_bella`), chọn câu trả lời hay hơn, trả lời + lý do + chi tiết, P/N 10 câu, cụm từ thích / không thích, bài nói mẫu của Mai | mcq + `hide_text` + `roles`, compare, blanks, vocab, letter | Tapescript Track 14 + gợi ý |
 | 10 | `U02-listening-1` Listening 1: numbers | -teen / -ty, số hàng trăm có *and*, số hàng nghìn; **phát Track 15–17 của sách** | compare, blanks (lưới), bullets + `track` | Tapescript Track 16 |
@@ -135,12 +127,23 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 | 10 | `U02-consolidation` Consolidation | Từ để hỏi, Track 23 đọc lại, đến lượt bạn, 8 môn học, have / fail / pass / apply / do, trọng âm Track 25, sửa 6 lỗi | blanks, qa, practice, errors, bullets | Tapescript Track 23 + gợi ý |
 | 10 | `U02-exam-reading` Exam practice: Reading | Exam tip bài thi Đọc, cách làm, Emma đọc "Are A Levels Just Too Easy?" (2 trang), câu 1–7 chọn đoạn A–D, 8–12 trả lời ngắn, từ khóa | bullets, letter (`words`), pairs, blanks, vocab | Suy ra từ bài, kèm câu bằng chứng |
 | 10 | `U02-exam-writing` Exam practice: Writing | Đúng / sai 8 câu về bài thi Viết phần 1, đề thư gửi Learn Fast Driving School, chia 20 phút, dàn ý, **thư mẫu Terry Black**, từ nối, bảng soát lỗi 3 phút | blanks, bullets, timing, letter (`words`), vocab | Answer key Exam Practice Writing B + gợi ý |
+| 12 | `U03-speaking-1` Speaking 1 & Vocabulary 1 | Bốn ảnh nghề (lưới 2×2), bài nói mẫu 1 phút về ảnh c, 8 tên nghề (Track 28 đọc lại) + trọng âm, work as / for / in / with, 6 tính từ P/N, *Watch out!* | match (`grid`), letter, practice, blanks, bullets, errors | Tapescript Track 28 + suy ra |
+| 12 | `U03-speaking-2` Speaking 2 | Câu hỏi về nghề, would / could (tình huống không có thật), nối âm *would you* /wʊdʒuː/, Exam tip Phần 2, hai thẻ đề, chia 1 + 2 phút, ghi chú và **bài nói mẫu 2 phút** (thẻ B), đến lượt bạn (thẻ A, đếm ngược 60 giây ×2) | qa, compare, bullets, errors, match, timing, letter (`words`), practice | Gợi ý |
+| 12 | `U03-listening-1` Listening 1: gist | Nhìn tranh (lưới 2×2), **phát Track 31**, nối 4 đoạn, gist là gì, Exam tip đoán trước, đoán từ 4 hình, **phát Track 32**, nối | match (`grid`) + `track`, bullets, blanks | Suy ra từ Tapescript |
+| 12 | `U03-listening-2` Listening 2 | **Phát Track 33** cho câu 1–4, **phát lại từng đoạn** cho câu 5–12 (trắc nghiệm, phương án hai dòng), bẫy *garden / new kitchens*, design / staff / customer / product | match (`grid`), mcq + `track` (`start` / `end`), pairs | Answer key Listening 2A |
+| 12 | `U03-reading-1` Reading 1 | Bốn nghề (farms, flights, pitch, tips), "The Best Job I Ever Had", **tô cụm diễn đạt lại** cho E (C B A D) và F (C A D B) | match (`grid`), passage + `mark` (thu gọn đoạn) | Suy ra từ bài |
+| 12 | `U03-reading-2` Reading 2 | Ba quảng cáo tuyển dụng, nối với mô tả (d b a), câu 4–9 tô cụm từ (C A B C B A), Exam tip đoán và tìm bằng chứng, 5 từ vựng | vocab, passage + `mark`, pairs, bullets, blanks | Answer key Reading 2B |
+| 12 | `U03-writing-1` Writing 1: register | Định nghĩa register, VF / QF / INF cho 7 loại thư, nối 8 cách nói trang trọng – thân mật, dấu hiệu văn phong, cùng một tin viết hai kiểu | mcq (`keys` 1–4), blanks, pairs, compare | Suy ra |
+| 12 | `U03-writing-2` Writing 2: letter of application | Quảng cáo B cần người thế nào, **thư nháp của Ahmed** (Emma đọc), vị trí 5 mẹo, sửa 6 chỗ quá thân mật, **thư hoàn chỉnh theo Answer key** (Tom đọc, 2 trang), cụm từ thư xin việc | bullets, letter, order, errors, letter (`words`), vocab | Answer key Writing 2D |
+| 12 | `U03-consolidation` Consolidation | Lời khuyên Phần 2 (B B A A A A), thẻ đề và **cách hỏi giám khảo** (Track 34 đọc lại), nói 1 phút, 6 cụm hai từ, trọng âm 10 từ (Track 36), sửa 8 lỗi | mcq (`keys` A/B), bullets, qa, practice, pairs, errors | Tapescript Track 34, 36 + gợi ý |
+| 12 | `U03-exam-listening` Exam practice: Listening | Làm việc tại nhà — **Track 37 đọc lại bằng bốn giọng** (Mai, Tom = Simon, Jerry), câu 1–2 (b c), chọn 6 trong 10 (A C D E G I) và vì sao loại B F H J | bullets, mcq + `hide_text` + `roles` | Suy ra từ Tapescript |
+| 12 | `U03-exam-reading` Exam practice: Reading | "The Worst Job I Ever Had": câu 1–8 tô cụm diễn đạt lại (C A D A B D B C), câu 9–12 ≤ 2 từ (saved, home, became busier, was late), từ khóa | bullets, passage + `mark`, blanks, vocab | Suy ra từ bài |
 
 Đợt 4 dựng lại hai video Speaking bằng Kokoro (trước đó là Flite). Mọi video hiện tại: Kokoro q8, Emma `af_heart`,
 Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening` và Jerry `am_liam` trong
 `U03-exam-listening`), tốc độ 0,9.
 
-## 5. Quy trình làm một video (đã dùng cho cả 36 video)
+## 5. Quy trình làm một video (đã dùng cho cả 37 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -184,20 +187,24 @@ Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listeni
 | `blanks` | `n`, `answer` (+ `tip`) | Ô nghe – chép; có `q` chứa `___` (+ `hint`) thì là câu điền từ | Vocabulary, Consolidation, Exam listening |
 | `mcq` | `n`, `q`, `options`, `answer` (+ `keys`) | Trắc nghiệm a/b/c hoặc 1/2/3 | Exam listening, Exam reading |
 | `passage` | `text` (+ `label`, `note`) | Bài đọc trên màn hình **kèm phụ đề**; dòng thoại `mark` tô vàng cụm từ trong đoạn `focus` — dạy dò tìm | Unit 2 Reading 1, 2 |
+| `shadow` | `text` (+ `by`, `vi`, `tip`) | **Nghe – nhắc lại (shadowing)**: câu mẫu chữ to theo màu người nói (`by`), nghĩa, mẹo nối âm / trọng âm; dòng thoại `echo: true` chừa khoảng lặng đếm ngược "Now you!" | Unit 1 Speaking: more practice |
 
 Trường của cảnh: `chapter` (tên chương — nút nhảy trong app), `heading`, `heading_vi`, `hide_text` (bài nghe:
 thanh phụ đề chỉ hiện người nói và "Listen carefully…"), `roles` (vai trong cảnh, ví dụ
 `{emma: receptionist, tom: guest}`), `words` (thư / bài đọc chia hai trang `letter`: số từ của cả bài).
 Trường của dòng thoại: `say`, `vi`, `focus`, `reveal`, `wait` + `note` (đếm ngược), `pause`, `read` (chỉ trong
 `letter`), `mark` (chỉ trong `passage`), `track` + `start` / `end` + `note` (phát file nghe của sách, thanh phụ đề
-hiện nút ▶ và nhãn). Có thể dùng neo YAML (`items: &notes` … `items: *notes`) để cảnh nghe và cảnh đáp án dùng
+hiện nút ▶ và nhãn), `echo: true` (sau câu là khoảng lặng đếm ngược dài ⌈1,3 × độ dài câu + 1⌉ giây, ít nhất 3 giây,
+để người học nhắc lại; `note` thay câu nhắc mặc định "Your turn — repeat after …"; không dùng trong `letter`). Có thể dùng neo YAML (`items: &notes` … `items: *notes`) để cảnh nghe và cảnh đáp án dùng
 chung một danh sách câu. Thêm người nói thứ ba chỉ cần khai trong `speakers` (ví dụ Mai `af_bella`).
 
 Mẹo bố cục: thư / bài đọc trên ~170 từ thì chia hai cảnh `letter` (chữ to hơn) và đặt `words`; câu điền từ quá dài
 tự thu nhỏ cho vừa một dòng; đáp án `✓` / `✗` trong cảnh `match` dùng phông có ký hiệu; cụm `mark` được tô cả khi
 bị ngắt sang dòng sau (đợt 12). Đợt 12 thêm: `image: {…, grid: 4}` — dải 4 tranh nằm ngang trong sách được xếp lại
 thành lưới 2×2 (tranh to gấp đôi); phương án `mcq` dài tự xuống hai dòng; cảnh `passage` có bài dài thì giữ cỡ chữ
-≥ 19 bằng cách thu gọn các đoạn không đang giảng còn 2 dòng ("…"), đoạn đang giảng hiện đủ.
+≥ 19 bằng cách thu gọn các đoạn không đang giảng còn 2 dòng ("…"), đoạn đang giảng hiện đủ. Đợt 14: cảnh `letter`
+có `roles` (ví dụ `{tom: candidate}`) thì nhãn góc trang là "Tom · candidate — đang nói" thay cho "Tom is reading",
+dùng cho bài nói mẫu trong thi thử.
 
 ## 7. Cách đọc (`say`) và những lỗi đã gặp
 
@@ -219,6 +226,8 @@ thành lưới 2×2 (tranh to gấp đôi); phương án `mcq` dài tự xuống
 | 1970s, 9.00 a.m. | `nineteen seventies`, `nine in the morning` | Năm, giờ đọc theo kiểu nói |
 | Picture a / b / c | `Picture eigh`, `Picture B` | "Picture a" đọc thành mạo từ |
 | dấu gạch dài `–` giữa câu | thay bằng dấu chấm / phẩy | Kokoro không ngắt hơi ở `–` |
+| lives, live, record, use (động từ) | `livz`, `liv`, `re-cord`, `Yooz` | Từ đồng tự: Kokoro đọc "My family lives" /laɪvz/ (cuộc đời), "often live" /laɪv/ (trực tiếp), "record yourself" và "Use the …" theo danh từ |
+| Tran Minh Tuan | `Chan Min Twan` | Tên người Việt (Tr- đọc như ch-) |
 
 Những lỗi đã gặp và cách tránh:
 
@@ -241,6 +250,12 @@ Những lỗi đã gặp và cách tránh:
 - **Tranh trong sách quá nhỏ**: dải 4 ảnh nằm ngang chỉ cao ~100 px trong video → `grid: 4` (đợt 12).
 - **Tách đoạn trong một track dài** (Track 33, 4 đoạn hội thoại): khoảng lặng ≥ 1,2 giây giữa các đoạn
   (`silencedetect=noise=-35dB:d=1.2`); kiểm lại bằng Tapescript trước khi dùng mốc.
+- **Từ đồng tự đọc sai** (đợt 14): bộ soát chữ cái / số không bắt được lỗi này. Phiên âm mọi câu có lives, live, record,
+  use, close, minute, read… bằng `k.tokenizer.phonemize`, xem trọng âm và nguyên âm, sai thì viết lại trong `say`
+  (bảng trên).
+- **Mẹo phát âm khớp giọng đọc**: Emma, Tom là giọng Mỹ (`af_heart`, `am_michael`), nên phiên âm trong `tip` của cảnh
+  `shadow` theo kiểu Mỹ (/ˈoʊldər/, /lɑːts/), lấy từ chính phiên âm của Kokoro. Phông Liberation Sans có đủ ký tự IPA
+  nhưng không có dấu nối "‿", nên nối âm viết bằng phiên âm liền (born in → /bɔːrnɪn/).
 
 ## 8. Kế hoạch Unit 4 · Achievements (sách in tr. 46–57)
 

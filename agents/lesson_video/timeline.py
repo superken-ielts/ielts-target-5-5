@@ -17,6 +17,12 @@ from .tts import TTSError
 LEAD = 0.5   # im lặng đầu video
 TAIL = 1.5   # im lặng cuối video
 PEAK = 0.8   # chuẩn hóa đỉnh mỗi câu để hai giọng to ngang nhau
+ECHO_RATIO, ECHO_EXTRA = 1.3, 1.0  # `echo`: người học cần lâu hơn người đọc một chút để nhắc lại cả câu
+
+
+def echo_seconds(spoken: float) -> int:
+    """Khoảng lặng (giây, số nguyên để đếm ngược tròn) cho người học nhắc lại một câu dài `spoken` giây."""
+    return max(3, math.ceil(spoken * ECHO_RATIO + ECHO_EXTRA))
 
 
 @dataclass
@@ -121,6 +127,15 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
             frame.dur = len(samples) / rate
         pos += len(samples)
 
+    def countdown(si, focus, revealed, mark, seconds: float, note: str, vi: str):
+        """Khoảng lặng có đếm ngược: mỗi giây một khung (giây lẻ nằm ở khung đầu)."""
+        left, k = seconds, math.ceil(seconds)
+        while left > 1e-6:
+            step = left - (k - 1) if k > 1 else left
+            add(silence(step), Frame(si, focus, frozenset(revealed), None, "", vi, countdown=k, note=note, mark=mark))
+            left -= step
+            k -= 1
+
     files: Optional[dict] = None  # book.json › files, đọc khi gặp đoạn nghe đầu tiên
     spoken = sum(1 for sc in lesson.scenes for ln in sc.lines if ln.speaker)
     done = 0
@@ -161,6 +176,10 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
                 data = _norm(_resample(data, r, rate))
                 fr = Frame(si, focus, frozenset(revealed), ln.speaker, ln.text, ln.vi, mark=mark)
                 add(np.concatenate([data, silence(lesson.gap + ln.pause)]), fr)
+                if ln.echo:  # chừa chỗ cho người học nhắc lại câu vừa nghe
+                    name = lesson.speakers[ln.speaker].name
+                    countdown(si, focus, revealed, mark, echo_seconds(len(data) / rate),
+                              ln.note or f"Your turn — repeat after {name}", f"Nhắc lại theo {name}: cùng tốc độ, cùng ngữ điệu")
                 done += 1
                 if done % 10 == 0 or done == spoken:
                     say(f"  đọc {done}/{spoken} câu")
@@ -169,14 +188,7 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
                     rate = getattr(engine, "RATE", 16000)
                     parts.append(silence(LEAD))
                     pos = len(parts[0])
-                left = ln.wait
-                k = math.ceil(left)
-                while left > 1e-6:
-                    step = left - (k - 1) if k > 1 else left
-                    fr = Frame(si, focus, frozenset(revealed), None, "", ln.vi, countdown=k, note=ln.note, mark=mark)
-                    add(silence(step), fr)
-                    left -= step
-                    k -= 1
+                countdown(si, focus, revealed, mark, ln.wait, ln.note, ln.vi)
                 if ln.pause:
                     add(silence(ln.pause), None)
     if rate is None:
