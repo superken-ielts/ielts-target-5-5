@@ -5,6 +5,93 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 14 — 19/10/2026: video luyện nói thêm Unit 1 (hỏi đáp, thi thử, shadowing)
+
+Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `930feee` (đã merge PR #14).
+
+### Yêu cầu
+
+Người học đang luyện Speaking Unit 1 (chủ đề Life) và cần một video khoảng 10 phút để luyện thêm:
+- Tom và Emma hỏi đáp qua lại;
+- đóng vai một buổi thi thử phần Speaking;
+- người học shadowing được giọng của cả hai.
+
+Xong thì commit.
+
+### Đã làm
+
+Video `U01-speaking-practice` dài 10:22 với 11 chương. Video gắn vào phần Speaking & Vocabulary của Unit 1, ngay sau
+Speaking 2, nên Unit 1 có 14 video. Câu trả lời mẫu tự viết bằng từ vựng của Unit 1 (gia đình, quê nhà, việc học, thời
+gian rảnh, các giai đoạn cuộc đời). Thông tin về Tom khớp các video Unit 1 trước: sinh ở Hà Nội, lớn lên ở Đà Lạt, học
+kinh doanh năm hai, ông nội là thầy giáo đã nghỉ hưu.
+
+| Chương | Nội dung |
+|---|---|
+| Cách luyện shadowing | Năm bước: nghe đọc phụ đề → nghe – nhắc lại → nói cùng lúc → lặp chương trong app → ghi âm so sánh |
+| Hỏi qua lại (2 chương) | 8 cặp hỏi – đáp, **Tom và Emma đổi vai hỏi nhau**: gia đình, quê nhà, việc học, sở thích, giai đoạn đẹp nhất của đời, dự định; nhắc lại cách trả lời có thêm 1–2 chi tiết và ba thì |
+| Thi thử · Phần 1 | Emma là giám khảo, Tom là thí sinh: hỏi tên, xem giấy tờ, rồi 4 câu về nơi ở, gia đình và lý do học tiếng Anh |
+| Thi thử · Phần 2 | Thẻ đề "Describe an older person in your family who you admire", đếm ngược thời gian chuẩn bị, ghi chú từ khóa của Tom, **bài nói mẫu 123 từ** hiện chữ theo đoạn (mỗi ý trên thẻ một đoạn) |
+| Thi thử · Phần 3 | Hai câu thảo luận: sống cùng ông bà, người trẻ học được gì từ người lớn tuổi |
+| Nghe – nhắc lại (2 chương) | 4 câu của Tom và 4 câu của Emma. Mỗi câu hiện chữ to theo màu người nói, kèm nghĩa và mẹo nối âm / trọng âm theo giọng Mỹ; sau câu có khoảng lặng đếm ngược "Now you!" |
+| Đến lượt bạn: thi thử | Emma hỏi 4 câu Phần 1, mỗi câu chừa 15 giây để trả lời |
+| Tổng kết | Trả lời + chi tiết, từ nối, đúng thì, Phần 2 mỗi ý một đoạn, mỗi ngày shadow 10 phút |
+
+Soát cách đọc bằng phiên âm của Kokoro tìm ra 5 từ đồng tự bị đọc sai, nay viết lại trong `say`:
+- "My family lives", "My grandfather lives" → `livz`;
+- "often live with" → `liv`;
+- "record yourself" → `re-cord`;
+- "Use the right tense" → `Yooz`.
+
+Tên Tran Minh Tuan → `Chan Min Twan`.
+
+### Công cụ `lesson_video`
+
+| Thêm / sửa | Cách làm |
+|---|---|
+| Cảnh `shadow` | Danh sách câu (đầu cảnh), rồi từng câu chữ to trong thẻ màu người nói (`by`), nghĩa `vi`, mẹo `tip` ở đáy; tới lượt người học thì viền đỏ và đồng hồ "Now you!" |
+| Dòng `echo: true` | Sau câu thoại, tự thêm khoảng lặng đếm ngược ⌈1,3 × độ dài câu + 1⌉ giây (ít nhất 3) với lời nhắc "Your turn — repeat after Tom"; `note` thay lời nhắc; chỉ dùng cho câu thoại, không dùng trong `letter` |
+| Đếm ngược | Gom thành một hàm dùng chung cho `wait` và `echo` |
+| Cảnh `letter` có `roles` | Nhãn góc trang "Tom · candidate — đang nói" thay "Tom is reading" (bài nói mẫu trong thi thử); video cũ không đổi vì chưa cảnh `letter` nào có `roles` |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U01-speaking-practice.yaml`, `.mp4` | Kịch bản và video |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu cảnh `shadow`, trường `echo` |
+| `agents/lesson_video/timeline.py` | `echo_seconds()`, hàm đếm ngược dùng chung |
+| `agents/lesson_video/slides.py` | `_k_shadow`; nhãn vai trong cảnh `letter` |
+| `agents/tests/test_lesson_video.py` | +2 test (`echo` + `shadow` dựng và vẽ được; 4 kịch bản sai bị chặn) |
+| `books/ielts_target_5_0/lessons/lessons.json` | Thêm mục `U01-speaking-practice` |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 1: 14 video; phiên Speaking & Vocabulary có 4 video |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ Unit 1; dòng lịch sử; bảng lịch sử xếp lại theo unit (các dòng Unit 3 từng chèn giữa Unit 1 và Unit 2); kiểu cảnh `shadow`, trường `echo`; cách đọc từ đồng tự; mẹo phát âm theo giọng Mỹ |
+| `agents/README.md`, `docs/agent-hoc-tap/04-checklist.md`, `README.md` (thư mục docs) | `shadow`, `echo`; task P2-45; trạng thái |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 62 passed (+5: `echo` chừa khoảng lặng đúng độ dài, cảnh `shadow` và nhãn vai trong `letter` vẽ được, 4 kịch bản sai bị chặn; hồi quy 37 kịch bản khớp `lessons.json`) |
+| `node --test "tests/web/*.test.mjs"` | 14 passed (Unit 1: 14 video, nhóm Speaking & Vocabulary có 4 video) |
+| `node tests/web/book.e2e.mjs` | 15/15 bước OK (thẻ Unit 1 có 14 video; phiên Speaking & Vocabulary có 4 video) |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | 10:22, 11 chương; tiếng trung bình −18,2 dB, đỉnh −0,6 dB (ngang các video khác); đồng hồ "Now you!" đếm từ 9 giây sau câu dài nhất của Tom; nhãn "Tom · candidate — đang nói" trong bài nói Phần 2 |
+| Xem trước + soát cách đọc + dò ký tự | Sửa trước khi dựng: 5 từ đồng tự đọc sai (lives ×2, live, record, use), mẹo phát âm đổi sang phiên âm Mỹ. Sau lần dựng đầu, mũi tên "↘" hiện thành ô vuông (phông thiếu glyph) nên đổi thành chữ rồi dựng lại (1 phút, tiếng lấy từ bộ nhớ) |
+
+### Còn treo
+
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+- Video luyện nói thêm cho Unit 2, 3 nếu người học cần (làm theo mẫu `U01-speaking-practice`).
+
+---
+
 ## Đợt 13 — 07/10/2026: nghe / xem lặp lại
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `b6b1b51` (đã merge PR #13).

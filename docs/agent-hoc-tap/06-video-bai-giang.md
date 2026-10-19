@@ -18,14 +18,15 @@ cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U0
 
 ## 1. Unit 1 · Life — độ phủ video
 
-Bảng in bằng lệnh `coverage` sau đợt 11:
+Bảng in bằng lệnh `coverage` sau đợt 14:
 
-### U01 · Life — 6/7 phần có video, 13 video, 1:26:43
+### U01 · Life — 6/7 phần có video, 14 video, 1:37:05
 
 | Phần | Trang | Video | Dài | Chương |
 |---|---|---|---|---|
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-1` — Speaking 1: talking about personal information | 7:14 | 8 |
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-2` — Speaking 2: exchanging personal information | 6:16 | 9 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-practice` — Speaking: more practice, mock test and shadowing | 10:22 | 11 |
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-vocabulary` — Vocabulary 1–3: family, stages of life, key words | 8:24 | 12 |
 | Listening | Listening tr. 12–13 | `U01-listening-1` — Listening 1: listening for specific information | 6:32 | 7 |
 | Listening | Listening tr. 12–13 | `U01-listening-2` — Listening 2: practising listening for specific information | 6:36 | 8 |
@@ -255,7 +256,9 @@ Những lỗi đã gặp và cách tránh:
   (bảng trên).
 - **Mẹo phát âm khớp giọng đọc**: Emma, Tom là giọng Mỹ (`af_heart`, `am_michael`), nên phiên âm trong `tip` của cảnh
   `shadow` theo kiểu Mỹ (/ˈoʊldər/, /lɑːts/), lấy từ chính phiên âm của Kokoro. Phông Liberation Sans có đủ ký tự IPA
-  nhưng không có dấu nối "‿", nên nối âm viết bằng phiên âm liền (born in → /bɔːrnɪn/).
+  nhưng không có dấu nối "‿" hay mũi tên chéo "↘" (hiện thành ô vuông), nên nối âm viết bằng phiên âm liền
+  (born in → /bɔːrnɪn/) và ngữ điệu viết bằng chữ ("giọng đi xuống"). Trước khi dựng, dò mọi ký tự ngoài ASCII của
+  kịch bản xem phông có glyph không (vẽ thử bằng Pillow, so với ký tự chắc chắn thiếu).
 
 ## 8. Kế hoạch Unit 4 · Achievements (sách in tr. 46–57)
 
