@@ -1,0 +1,434 @@
+# Video luyện nói thêm Unit 1 · Life — 3/4: các giai đoạn cuộc đời, sinh nhật và lễ hội, bạn bè, tương lai + thi thử 3
+# (Phần 2: cả Tom và Emma trả lời cùng một thẻ đề; Phần 3 hỏi hai chiều). Người học tự tạm dừng video, không có
+# khoảng lặng chờ (đợt 14).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-practice-3.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml (giữ khớp ở cả bốn video).
+id: U01-speaking-practice-3
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Speaking practice 3: stages of life, celebrations + mock test"
+title_vi: "Luyện nói 3/4 — các giai đoạn cuộc đời, sinh nhật và lễ Tết, bạn bè, tương lai; thi thử Phần 2–3"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Speaking practice three for Unit 1: Life."
+        say: "Welcome to Speaking practice three for Unit one: Life."
+        vi: "Video luyện nói 3/4 của Unit 1."
+      - tom: "Today: stages of life, birthdays and celebrations, friends, and the future."
+        vi: "Các giai đoạn cuộc đời, sinh nhật và lễ hội, bạn bè, tương lai."
+      - emma: "In the mock test, we both answer the same part two card, so you can hear two different answers."
+        vi: "Thi thử: cả hai cùng trả lời một thẻ đề Phần 2 — nghe hai cách trả lời khác nhau."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: các giai đoạn cuộc đời"
+    heading: "Tom and Emma ask each other · Stages of life"
+    heading_vi: "Các giai đoạn cuộc đời — childhood, teenager, adult, retire"
+    items:
+      - q: "Which stage of life do you think is the best?"
+        a: "I think childhood is the best. Children don't have many worries, and they can play all day. I had a really happy childhood in Da Lat."
+        ask: emma
+        by: tom
+        phrases: ["I think… is the best", "many worries", "a happy childhood"]
+      - q: "Was it difficult being a teenager, Emma?"
+        a: "Yes, sometimes. I worried a lot about how I looked, and about what other people thought of me. But I had good friends, and they helped me through it."
+        ask: tom
+        by: emma
+        phrases: ["Yes, sometimes.", "I worried a lot about…", "helped me through it"]
+      - q: "When does someone become an adult in your country?"
+        a: "Officially at eighteen. Then you can vote and get a driving licence. But I think you really become an adult when you start to pay your own bills!"
+        ask: emma
+        by: tom
+        phrases: ["Officially at eighteen", "get a driving licence", "pay your own bills"]
+      - q: "What do people in your country usually do when they retire?"
+        a: "Many people travel, or they spend more time with their grandchildren. Some people also do voluntary work, or they take up a new hobby, like painting or golf."
+        ask: tom
+        by: emma
+        phrases: ["spend more time with…", "voluntary work", "take up a new hobby"]
+      - q: "Would you like to retire early?"
+        a: "Maybe at sixty. I'd like to have enough time and energy to travel. But I don't want to stop working completely, because I'd get bored."
+        ask: emma
+        by: tom
+        phrases: ["Maybe at sixty", "time and energy", "I'd get bored"]
+      - q: "Is it better to be young or old?"
+        a: "Both have good points. Young people have energy and lots of choices, but older people have experience, and they worry less. I'm happy with my age right now!"
+        ask: tom
+        by: emma
+        phrases: ["Both have good points", "they worry less", "I'm happy with…"]
+      - q: "What are you looking forward to in the next stage of your life?"
+        a: "I'm looking forward to finishing university and getting my first real job. I'd also love to rent my own flat, so I can decorate it the way I like."
+        ask: emma
+        by: tom
+        phrases: ["I'm looking forward to + -ing", "my first real job", "the way I like"]
+      - q: "How do older people spend their free time where you live?"
+        a: "In my neighbourhood, many older people go to the park early in the morning. They walk, do exercises together, and chat. They're much more active than I am!"
+        ask: tom
+        by: emma
+        phrases: ["early in the morning", "do exercises together", "more active than I am"]
+    lines:
+      - {emma: "Which stage of life do you think is the best?", focus: 0}
+      - tom: "I think childhood is the best. Children don't have many worries, and they can play all day. I had a really happy childhood in Da Lat."
+        say: "I think childhood is the best. Children don't have many worries, and they can play all day. I had a really happy childhood in Dah Lot."
+        reveal: 0
+        vi: "Tuổi thơ đẹp nhất: trẻ con ít lo nghĩ, được chơi cả ngày."
+      - {tom: "Was it difficult being a teenager, Emma?", focus: 1}
+      - emma: "Yes, sometimes. I worried a lot about how I looked, and about what other people thought of me. But I had good friends, and they helped me through it."
+        reveal: 1
+        vi: "Đôi khi: hay lo về ngoại hình, về người khác nghĩ gì; bạn tốt giúp vượt qua."
+      - {emma: "When does someone become an adult in your country?", focus: 2}
+      - tom: "Officially at eighteen. Then you can vote and get a driving licence. But I think you really become an adult when you start to pay your own bills!"
+        reveal: 2
+        vi: "Chính thức là 18 tuổi; nhưng thật sự trưởng thành là khi tự trả hóa đơn!"
+      - {tom: "What do people in your country usually do when they retire?", focus: 3}
+      - emma: "Many people travel, or they spend more time with their grandchildren. Some people also do voluntary work, or they take up a new hobby, like painting or golf."
+        reveal: 3
+        vi: "Đi du lịch, ở với cháu, làm tình nguyện, hoặc có sở thích mới như vẽ, chơi golf."
+      - {emma: "Would you like to retire early?", focus: 4}
+      - tom: "Maybe at sixty. I'd like to have enough time and energy to travel. But I don't want to stop working completely, because I'd get bored."
+        reveal: 4
+        vi: "Có lẽ 60 tuổi, còn sức đi du lịch; nhưng không nghỉ hẳn kẻo buồn chán."
+      - {tom: "Is it better to be young or old?", focus: 5}
+      - emma: "Both have good points. Young people have energy and lots of choices, but older people have experience, and they worry less. I'm happy with my age right now!"
+        reveal: 5
+        vi: "Mỗi bên có cái hay: trẻ có sức, nhiều lựa chọn; già có kinh nghiệm, ít lo hơn."
+      - {emma: "What are you looking forward to in the next stage of your life?", focus: 6}
+      - tom: "I'm looking forward to finishing university and getting my first real job. I'd also love to rent my own flat, so I can decorate it the way I like."
+        reveal: 6
+        vi: "Mong tốt nghiệp, có việc làm đầu tiên, thuê căn hộ riêng để trang trí theo ý mình."
+      - {tom: "How do older people spend their free time where you live?", focus: 7}
+      - emma: "In my neighbourhood, many older people go to the park early in the morning. They walk, do exercises together, and chat. They're much more active than I am!"
+        reveal: 7
+        vi: "Người lớn tuổi ra công viên từ sáng sớm: đi bộ, tập thể dục, trò chuyện."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: sinh nhật, lễ hội"
+    heading: "Tom and Emma ask each other · Birthdays and celebrations"
+    heading_vi: "Sinh nhật, Tết, Giáng sinh, đám cưới"
+    items:
+      - q: "How do you usually celebrate your birthday, Tom?"
+        a: "Nothing big. I usually have dinner with a few close friends, and my family calls me from Da Lat. Sometimes my sister sends me a cake!"
+        ask: emma
+        by: tom
+        phrases: ["Nothing big.", "a few close friends", "Sometimes…"]
+      - q: "What was your best birthday, Emma?"
+        a: "My thirtieth. My friends organised a surprise party at a little restaurant by the river. I had no idea, and when I walked in, everybody shouted surprise!"
+        ask: tom
+        by: emma
+        phrases: ["My thirtieth", "a surprise party", "I had no idea"]
+      - q: "Do you like giving presents?"
+        a: "Yes, I do, but choosing presents is difficult for me. I usually give something useful, like a book or a nice cup. My mum prefers flowers, of course!"
+        ask: emma
+        by: tom
+        phrases: ["choosing presents is difficult", "something useful", "of course"]
+      - q: "What's the most important festival in your country?"
+        a: "Probably Christmas. Families get together, give presents and eat a big dinner. In my family, we always sing songs and play silly games after dinner."
+        ask: tom
+        by: emma
+        phrases: ["Probably…", "get together", "silly games"]
+      - q: "What does your family do at Tet?"
+        a: "We clean and decorate the house, and we visit our relatives. My grandfather gives lucky money to all the children. And of course, we eat a lot of traditional food!"
+        ask: emma
+        by: tom
+        phrases: ["clean and decorate", "visit our relatives", "lucky money"]
+      - q: "Do you enjoy weddings?"
+        a: "Yes, I love them, especially the dancing. Weddings in my country are usually smaller than in Vietnam, but they often go on until very late at night."
+        ask: tom
+        by: emma
+        phrases: ["especially the dancing", "smaller than in Vietnam", "go on until…"]
+      - q: "Do you prefer big parties or small get-togethers?"
+        a: "Small get-togethers. At big parties, it's too noisy to talk properly. With a small group, I can relax and have real conversations."
+        ask: emma
+        by: tom
+        phrases: ["get-togethers", "too noisy to…", "real conversations"]
+      - q: "Do people in your country still send birthday cards?"
+        a: "Some older people do, but most young people just send a message on their phone. I still like sending cards, because they feel more personal."
+        ask: tom
+        by: emma
+        phrases: ["Some older people do", "send a message", "more personal"]
+    lines:
+      - {emma: "How do you usually celebrate your birthday, Tom?", focus: 0}
+      - tom: "Nothing big. I usually have dinner with a few close friends, and my family calls me from Da Lat. Sometimes my sister sends me a cake!"
+        say: "Nothing big. I usually have dinner with a few close friends, and my family calls me from Dah Lot. Sometimes my sister sends me a cake!"
+        reveal: 0
+        vi: "Không to tát: ăn tối với vài bạn thân, gia đình gọi điện; đôi khi chị gửi bánh."
+      - {tom: "What was your best birthday, Emma?", focus: 1}
+      - emma: "My thirtieth. My friends organised a surprise party at a little restaurant by the river. I had no idea, and when I walked in, everybody shouted surprise!"
+        reveal: 1
+        vi: "Sinh nhật 30 tuổi: bạn bè tổ chức tiệc bất ngờ ở nhà hàng ven sông."
+      - {emma: "Do you like giving presents?", focus: 2}
+      - tom: "Yes, I do, but choosing presents is difficult for me. I usually give something useful, like a book or a nice cup. My mum prefers flowers, of course!"
+        reveal: 2
+        vi: "Thích, nhưng chọn quà thì khó; thường tặng đồ hữu ích. Mẹ thì thích hoa, tất nhiên!"
+      - {tom: "What's the most important festival in your country?", focus: 3}
+      - emma: "Probably Christmas. Families get together, give presents and eat a big dinner. In my family, we always sing songs and play silly games after dinner."
+        reveal: 3
+        vi: "Có lẽ là Giáng sinh: cả nhà sum họp, tặng quà, ăn tối, hát và chơi trò vui."
+      - {emma: "What does your family do at Tet?", focus: 4}
+      - tom: "We clean and decorate the house, and we visit our relatives. My grandfather gives lucky money to all the children. And of course, we eat a lot of traditional food!"
+        reveal: 4
+        vi: "Dọn dẹp, trang trí nhà, thăm họ hàng; ông lì xì cho trẻ con; ăn nhiều món truyền thống."
+      - {tom: "Do you enjoy weddings?", focus: 5}
+      - emma: "Yes, I love them, especially the dancing. Weddings in my country are usually smaller than in Vietnam, but they often go on until very late at night."
+        reveal: 5
+        vi: "Rất thích, nhất là khiêu vũ; đám cưới ở nước mình nhỏ hơn ở Việt Nam nhưng kéo dài tới khuya."
+      - {emma: "Do you prefer big parties or small get-togethers?", focus: 6}
+      - tom: "Small get-togethers. At big parties, it's too noisy to talk properly. With a small group, I can relax and have real conversations."
+        reveal: 6
+        vi: "Thích họp mặt nhỏ: tiệc lớn ồn quá; nhóm nhỏ thì thoải mái trò chuyện thật sự."
+      - {tom: "Do people in your country still send birthday cards?", focus: 7}
+      - emma: "Some older people do, but most young people just send a message on their phone. I still like sending cards, because they feel more personal."
+        reveal: 7
+        vi: "Người lớn tuổi còn gửi, người trẻ chỉ nhắn tin; mình vẫn thích thiệp vì gần gũi hơn."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: bạn bè"
+    heading: "Tom and Emma ask each other · Friends"
+    heading_vi: "Bạn bè — kể chuyện bằng quá khứ, nói thói quen bằng hiện tại"
+    items:
+      - q: "Do you have a lot of friends, Tom?"
+        a: "I have a lot of friends at university, but only two or three really close friends. One of them is my best friend from primary school in Da Lat."
+        ask: emma
+        by: tom
+        phrases: ["only two or three", "really close friends", "my best friend from…"]
+      - q: "How did you meet your best friend, Emma?"
+        a: "We met at university, many years ago. We were in the same class, and we both always sat at the back. We've been friends ever since."
+        ask: tom
+        by: emma
+        phrases: ["We met at…", "in the same class", "ever since"]
+      - q: "What do you usually do with your friends?"
+        a: "We play basketball, go to the cinema, or just sit in a café and talk for hours. Before exams, we also study together in the library."
+        ask: emma
+        by: tom
+        phrases: ["talk for hours", "Before exams…", "study together"]
+      - q: "Is it easy to make new friends as an adult?"
+        a: "Not as easy as at school. Adults are busy with work and family. I usually make new friends through my hobbies, like my hiking club."
+        ask: tom
+        by: emma
+        phrases: ["Not as easy as…", "busy with work and family", "through my hobbies"]
+      - q: "Do you keep in touch with your old school friends?"
+        a: "Yes, with a few of them. We have a group chat, and we always meet up when I go back to Da Lat for Tet."
+        ask: emma
+        by: tom
+        phrases: ["keep in touch", "a group chat", "meet up"]
+      - q: "What makes a good friend, in your opinion?"
+        a: "A good friend is someone you can trust, and someone who listens to you. They're honest with you, even when the truth is difficult to hear."
+        ask: tom
+        by: emma
+        phrases: ["someone you can trust", "someone who listens", "honest with you"]
+    lines:
+      - {emma: "Do you have a lot of friends, Tom?", focus: 0}
+      - tom: "I have a lot of friends at university, but only two or three really close friends. One of them is my best friend from primary school in Da Lat."
+        say: "I have a lot of friends at university, but only two or three really close friends. One of them is my best friend from primary school in Dah Lot."
+        reveal: 0
+        vi: "Nhiều bạn ở trường nhưng chỉ 2–3 bạn thân, trong đó có bạn thân từ tiểu học."
+      - {tom: "How did you meet your best friend, Emma?", focus: 1}
+      - emma: "We met at university, many years ago. We were in the same class, and we both always sat at the back. We've been friends ever since."
+        reveal: 1
+        vi: "Gặp ở đại học, cùng lớp, luôn ngồi cuối lớp; thân nhau từ đó tới giờ."
+      - {emma: "What do you usually do with your friends?", focus: 2}
+      - tom: "We play basketball, go to the cinema, or just sit in a café and talk for hours. Before exams, we also study together in the library."
+        reveal: 2
+        vi: "Chơi bóng rổ, xem phim, ngồi cà phê nói chuyện hàng giờ; trước kỳ thi học cùng ở thư viện."
+      - {tom: "Is it easy to make new friends as an adult?", focus: 3}
+      - emma: "Not as easy as at school. Adults are busy with work and family. I usually make new friends through my hobbies, like my hiking club."
+        reveal: 3
+        vi: "Không dễ như hồi đi học vì ai cũng bận; thường kết bạn qua sở thích, như câu lạc bộ đi bộ."
+      - {emma: "Do you keep in touch with your old school friends?", focus: 4}
+      - tom: "Yes, with a few of them. We have a group chat, and we always meet up when I go back to Da Lat for Tet."
+        say: "Yes, with a few of them. We have a group chat, and we always meet up when I go back to Dah Lot for Tet."
+        reveal: 4
+        vi: "Có, với vài bạn: có nhóm chat, Tết về Đà Lạt là gặp nhau."
+      - {tom: "What makes a good friend, in your opinion?", focus: 5}
+      - emma: "A good friend is someone you can trust, and someone who listens to you. They're honest with you, even when the truth is difficult to hear."
+        reveal: 5
+        vi: "Bạn tốt là người tin được, biết lắng nghe, thật lòng cả khi sự thật khó nghe."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: tương lai"
+    heading: "Tom and Emma ask each other · The future"
+    heading_vi: "Tương lai — would like to, hope to, I'd love to, maybe"
+    items:
+      - q: "Where would you like to live in ten years?"
+        a: "Maybe in Ho Chi Minh City, because the job opportunities are better there. But one day, I'd like to buy a small house in Da Lat for my parents."
+        ask: emma
+        by: tom
+        phrases: ["Maybe in…", "job opportunities", "one day, I'd like to…"]
+      - q: "What do you hope to do in the future, Emma?"
+        a: "I hope to travel more. My parents are going to retire next year, so I'd love to take them on a long holiday. They've worked hard all their lives!"
+        ask: tom
+        by: emma
+        phrases: ["I hope to…", "are going to retire", "I'd love to…"]
+      - q: "Would you like to have a big family one day?"
+        a: "Not too big. Maybe two children. I grew up with a sister and a brother, and I think it's nice for children to have someone to play with."
+        ask: emma
+        by: tom
+        phrases: ["Not too big.", "Maybe two children", "someone to play with"]
+      - q: "Would you like to live in another country one day?"
+        a: "I already do, in a way! I've lived in Vietnam for three years, and I love it. But one day, I'd like to try living in Japan, because I'm fascinated by the culture."
+        ask: tom
+        by: emma
+        phrases: ["in a way", "I've lived in… for…", "I'm fascinated by…"]
+    lines:
+      - {emma: "Where would you like to live in ten years?", focus: 0}
+      - tom: "Maybe in Ho Chi Minh City, because the job opportunities are better there. But one day, I'd like to buy a small house in Da Lat for my parents."
+        say: "Maybe in Ho Chee Min City, because the job opportunities are better there. But one day, I'd like to buy a small house in Dah Lot for my parents."
+        reveal: 0
+        vi: "Có lẽ ở TP. Hồ Chí Minh vì nhiều việc tốt; một ngày sẽ mua nhà nhỏ ở Đà Lạt cho bố mẹ."
+      - {tom: "What do you hope to do in the future, Emma?", focus: 1}
+      - emma: "I hope to travel more. My parents are going to retire next year, so I'd love to take them on a long holiday. They've worked hard all their lives!"
+        reveal: 1
+        vi: "Bố mẹ sắp nghỉ hưu, mình muốn đưa họ đi nghỉ thật dài."
+      - {emma: "Would you like to have a big family one day?", focus: 2}
+      - tom: "Not too big. Maybe two children. I grew up with a sister and a brother, and I think it's nice for children to have someone to play with."
+        reveal: 2
+        vi: "Không đông quá, có lẽ hai con; trẻ con nên có anh chị em để chơi cùng."
+      - {tom: "Would you like to live in another country one day?", focus: 3}
+      - emma: "I already do, in a way! I've lived in Vietnam for three years, and I love it. But one day, I'd like to try living in Japan, because I'm fascinated by the culture."
+        reveal: 3
+        vi: "Thật ra đang sống ở nước khác rồi! Một ngày muốn thử sống ở Nhật vì mê văn hóa."
+
+  - kind: bullets
+    chapter: "Thi thử 3 · Phần 2 (Tom)"
+    heading: "Part 2 · Describe a family celebration that you enjoyed."
+    heading_vi: "Thẻ đề Phần 2 — Tom trả lời trước, Emma trả lời sau"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what the celebration was", vi: "đó là dịp gì"}
+      - {en: "when and where it happened", vi: "khi nào, ở đâu"}
+      - {en: "what you did", vi: "bạn đã làm gì"}
+      - {en: "and explain why you enjoyed it", vi: "và giải thích vì sao bạn thích dịp đó"}
+    lines:
+      - emma: "Now, the mock test. In part two, I'd like you to talk for one to two minutes. You have one minute to think, and you can make some notes."
+        vi: "Thi thử Phần 2: 1 phút chuẩn bị, nói 1–2 phút — tạm dừng video nếu muốn tự làm trước."
+      - emma: "Here's your topic. I'd like you to describe a family celebration that you enjoyed."
+        vi: "Tả một dịp lễ gia đình mà bạn thích."
+      - {emma: "You should say what the celebration was,", focus: 0}
+      - {emma: "when and where it happened,", focus: 1}
+      - {emma: "what you did,", focus: 2}
+      - {emma: "and explain why you enjoyed it.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · Tet at home"
+    heading_vi: "Ghi chú của Tom — Tết ở nhà"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "Tet last year · home in Da Lat · sister back from Hanoi", vi: "Tết năm ngoái · ở nhà tại Đà Lạt · chị từ Hà Nội về"}
+      - {en: "before Tet: clean · yellow flowers from mum's shop", vi: "trước Tết: dọn nhà · hoa vàng từ cửa hàng của mẹ"}
+      - {en: "New Year's Eve dinner · grandad's stories · lucky money", vi: "bữa tối giao thừa · ông kể chuyện · lì xì"}
+      - {en: "whole family together · feel at home again", vi: "cả nhà sum họp · lại thấy như ở nhà"}
+    lines:
+      - tom: "Here are my notes. I chose Tet, because it's the biggest celebration in my family."
+        vi: "Tom chọn Tết — dịp lớn nhất của gia đình."
+      - emma: "All right? Can you start speaking now, please?"
+        vi: "Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — mỗi ý trên thẻ là một đoạn"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about Tet last year. Tet is the Lunar New Year, and it's the most important festival in Vietnam. We celebrated at home in Da Lat, and my older sister came back from Hanoi, so the whole family was together."
+        say: "I'd like to talk about Tet last year. Tet is the Lunar New Year, and it's the most important festival in Vietnam. We celebrated at home in Dah Lot, and my older sister came back from Ha Noi, so the whole family was together."
+        note: "what · when · where"
+      - text: "Before Tet, we cleaned the house and decorated it with yellow flowers from my mum's shop. On New Year's Eve, we cooked a big dinner together, and my grandfather told us stories about Tet when he was young."
+        note: "what we did (1)"
+      - text: "On the first day, we visited our relatives, and the children got lucky money in red envelopes. My little brother was very happy, because he got the most!"
+        note: "what we did (2)"
+      - text: "I enjoyed it because I don't see my family very often now. It was wonderful to sit at the same table, eat, laugh and feel at home again."
+        note: "why I enjoyed it"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: bullets
+    chapter: "Thi thử 3 · Phần 2 (Emma)"
+    heading: "Part 2 · The same card: Emma's turn"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "grandparents' golden wedding anniversary · 50 years", vi: "kỷ niệm 50 năm ngày cưới của ông bà"}
+      - {en: "six years ago · a hotel near their home by the sea", vi: "sáu năm trước · khách sạn gần nhà ông bà, cạnh biển"}
+      - {en: "60 guests · a short film of old family photos · grandad's speech", vi: "60 khách · phim ngắn từ ảnh cũ · ông phát biểu"}
+      - {en: "whole family · so much love · last big party with grandad", vi: "cả nhà · rất nhiều yêu thương · bữa tiệc lớn cuối cùng có ông"}
+    lines:
+      - tom: "Now it's my turn to be the examiner. Emma, please describe a family celebration that you enjoyed."
+        vi: "Đổi vai: Tom làm giám khảo, Emma trả lời cùng thẻ đề."
+      - emma: "These are my notes. I chose a very special day for my family."
+        vi: "Ghi chú của Emma."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu của Emma — cùng thẻ đề, câu chuyện khác"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my grandparents' golden wedding anniversary. They had been married for fifty years, so it was a really special day. It happened about six years ago, at a hotel near their home by the sea."
+        note: "what · when · where"
+      - text: "More than sixty people came, including cousins from all over the country. My brother and I made a short film with old family photos, and we showed it after dinner."
+        note: "what we did (1)"
+      - text: "When my grandmother saw the photos of her wedding day, she started to cry, but they were happy tears. Then my grandfather stood up and gave a very funny speech."
+        note: "what we did (2)"
+      - text: "I enjoyed it because the whole family was together, and everyone felt so much love. It was also the last big party with my grandfather, so the memory is very precious to me."
+        note: "why I enjoyed it"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 3 · Phần 3"
+    heading: "Mock test 3 · Part 3 · Discussion (Emma asks Tom)"
+    heading_vi: "Phần 3 — lễ hội và gia đình: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Are traditional festivals still important to young people in your country?"
+        a: "Yes, I think so, especially Tet. Even young people who live far away try to go home. But some young people prefer to travel during the holiday, instead of visiting relatives."
+        phrases: ["especially…", "Even young people who…", "instead of + -ing"]
+      - q: "Why do people like celebrating with their families?"
+        a: "Because it makes them feel safe and connected. In daily life, everyone is busy, so celebrations give families a chance to slow down and spend time together."
+        phrases: ["feel safe and connected", "In daily life…", "a chance to…"]
+    lines:
+      - emma: "Thank you. Now, part three. I'd like to ask you some more general questions about celebrations."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về lễ hội."
+      - {emma: "Are traditional festivals still important to young people in your country?", focus: 0}
+      - tom: "Yes, I think so, especially Tet. Even young people who live far away try to go home. But some young people prefer to travel during the holiday, instead of visiting relatives."
+        reveal: 0
+        vi: "Vẫn quan trọng, nhất là Tết; nhưng vài người trẻ thích đi du lịch thay vì thăm họ hàng."
+      - {emma: "Why do people like celebrating with their families?", focus: 1}
+      - tom: "Because it makes them feel safe and connected. In daily life, everyone is busy, so celebrations give families a chance to slow down and spend time together."
+        reveal: 1
+        vi: "Vì thấy an toàn, gắn bó; ngày thường ai cũng bận, dịp lễ là lúc chậm lại bên nhau."
+
+  - kind: qa
+    heading: "Mock test 3 · Part 3 · Discussion (Tom asks Emma)"
+    heading_vi: "Đổi vai — Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "How have family celebrations changed in recent years?"
+        a: "They've become smaller and more modern. Many families celebrate in restaurants now, instead of cooking at home. And people take lots of photos and share them online."
+        phrases: ["They've become…", "instead of + -ing", "share them online"]
+      - q: "Is it better to celebrate at home or in a restaurant?"
+        a: "Both have advantages. A restaurant is easier, because nobody has to cook or clean. But a celebration at home feels warmer and more personal, so I prefer that."
+        phrases: ["Both have advantages", "nobody has to…", "warmer and more personal"]
+    lines:
+      - {tom: "Now let me ask you, Emma. How have family celebrations changed in recent years?", focus: 0}
+      - emma: "They've become smaller and more modern. Many families celebrate in restaurants now, instead of cooking at home. And people take lots of photos and share them online."
+        reveal: 0
+        vi: "Nhỏ hơn, hiện đại hơn: hay ăn ở nhà hàng, chụp ảnh đăng lên mạng."
+      - {tom: "Is it better to celebrate at home or in a restaurant?", focus: 1}
+      - emma: "Both have advantages. A restaurant is easier, because nobody has to cook or clean. But a celebration at home feels warmer and more personal, so I prefer that."
+        reveal: 1
+        vi: "Mỗi cách có cái lợi: nhà hàng tiện; ở nhà thì ấm cúng, gần gũi hơn — mình thích ở nhà."
+      - tom: "Thank you, Emma. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - emma: "See you in Speaking practice four, the last one!"
+        vi: "Hẹn gặp ở video luyện nói 4 — video cuối."

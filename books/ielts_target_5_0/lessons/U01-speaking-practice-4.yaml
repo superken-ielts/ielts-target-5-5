@@ -1,0 +1,339 @@
+# Video luyện nói thêm Unit 1 · Life — 4/4: sinh hoạt hằng ngày, tên gọi, ảnh + thi thử 4 (Phần 2 của Tom về người
+# bạn quen lâu năm, Phần 3 hỏi hai chiều). Người học tự tạm dừng video, không có khoảng lặng chờ (đợt 14).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-practice-4.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml (giữ khớp ở cả bốn video).
+id: U01-speaking-practice-4
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Speaking practice 4: daily life, names, photos + mock test"
+title_vi: "Luyện nói 4/4 — sinh hoạt hằng ngày, tên gọi, ảnh; thi thử Phần 2–3 (người bạn quen lâu năm)"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - tom: "Welcome to Speaking practice four for Unit 1: Life, the last practice video."
+        say: "Welcome to Speaking practice four for Unit one: Life, the last practice video."
+        vi: "Video luyện nói 4/4 của Unit 1."
+      - emma: "Today: daily routines, names and photos. Then a mock test about an old friend. Pause after each question, and answer it yourself first."
+        vi: "Sinh hoạt hằng ngày, tên gọi, ảnh; rồi thi thử. Tạm dừng sau mỗi câu hỏi để tự trả lời."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: sinh hoạt hằng ngày"
+    heading: "Tom and Emma ask each other · Daily routine"
+    heading_vi: "Sinh hoạt hằng ngày — giờ giấc, thói quen, thay đổi"
+    items:
+      - q: "What time do you usually get up, Tom?"
+        a: "On weekdays, I get up at about half past six, because my first class starts at half past seven. At the weekend, I sleep until nine. It's my favourite thing about Saturdays!"
+        ask: emma
+        by: tom
+        phrases: ["On weekdays…", "my first class starts at…", "I sleep until…"]
+      - q: "What's the busiest part of your day, Emma?"
+        a: "The evening, definitely. I teach from six until nine, and then I go home, have dinner and prepare my lessons for the next day. I'm usually in bed around midnight."
+        ask: tom
+        by: emma
+        phrases: ["definitely", "from… until…", "around midnight"]
+      - q: "Do you have the same routine every day?"
+        a: "Not really. My timetable changes every day, so some days I'm free in the morning, and other days I'm busy until late. I like it, because it's never boring."
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "some days… other days…", "never boring"]
+      - q: "What do you usually do on your days off?"
+        a: "I sleep a little later, go to the market, and cook something nice. In the afternoon, I often meet a friend for a walk or a coffee."
+        ask: tom
+        by: emma
+        phrases: ["sleep a little later", "cook something nice", "meet a friend for…"]
+      - q: "What's your favourite time of day?"
+        a: "Early morning in Da Lat. When I'm at home, I like to sit outside with a cup of coffee and watch the fog over the hills. It's so peaceful."
+        ask: emma
+        by: tom
+        phrases: ["When I'm at home…", "a cup of coffee", "so peaceful"]
+      - q: "Do you ever have a nap in the afternoon?"
+        a: "Only at the weekend. A short nap after lunch gives me more energy. But if I sleep for too long, I feel worse, not better!"
+        ask: tom
+        by: emma
+        phrases: ["Only at the weekend", "gives me more energy", "worse, not better"]
+      - q: "How did your routine change when you started university?"
+        a: "It changed a lot. At home, my mum cooked for me and woke me up. Now, I do everything myself: cooking, cleaning and getting up on time. It was hard at first, but I'm used to it now."
+        ask: emma
+        by: tom
+        phrases: ["It changed a lot.", "I do everything myself", "I'm used to it now"]
+      - q: "Do you think it's important to have a routine?"
+        a: "Yes, I do. A routine helps me to sleep well and to finish my work on time. But it's also good to break the routine sometimes, and try something new."
+        ask: tom
+        by: emma
+        phrases: ["helps me to…", "on time", "break the routine"]
+    lines:
+      - {emma: "What time do you usually get up, Tom?", focus: 0}
+      - tom: "On weekdays, I get up at about half past six, because my first class starts at half past seven. At the weekend, I sleep until nine. It's my favourite thing about Saturdays!"
+        reveal: 0
+        vi: "Ngày thường dậy 6 giờ 30 vì 7 giờ 30 vào học; cuối tuần ngủ tới 9 giờ."
+      - {tom: "What's the busiest part of your day, Emma?", focus: 1}
+      - emma: "The evening, definitely. I teach from six until nine, and then I go home, have dinner and prepare my lessons for the next day. I'm usually in bed around midnight."
+        reveal: 1
+        vi: "Buổi tối: dạy từ 6 tới 9 giờ, về ăn tối, soạn bài; khoảng nửa đêm mới ngủ."
+      - {emma: "Do you have the same routine every day?", focus: 2}
+      - tom: "Not really. My timetable changes every day, so some days I'm free in the morning, and other days I'm busy until late. I like it, because it's never boring."
+        reveal: 2
+        vi: "Không hẳn: thời khóa biểu thay đổi mỗi ngày nên không bao giờ nhàm chán."
+      - {tom: "What do you usually do on your days off?", focus: 3}
+      - emma: "I sleep a little later, go to the market, and cook something nice. In the afternoon, I often meet a friend for a walk or a coffee."
+        reveal: 3
+        vi: "Ngủ muộn hơn chút, đi chợ, nấu món ngon; chiều đi dạo hoặc cà phê với bạn."
+      - {emma: "What's your favourite time of day?", focus: 4}
+      - tom: "Early morning in Da Lat. When I'm at home, I like to sit outside with a cup of coffee and watch the fog over the hills. It's so peaceful."
+        say: "Early morning in Dah Lot. When I'm at home, I like to sit outside with a cup of coffee and watch the fog over the hills. It's so peaceful."
+        reveal: 4
+        vi: "Sáng sớm ở Đà Lạt: ngồi ngoài trời uống cà phê, ngắm sương trên đồi."
+      - {tom: "Do you ever have a nap in the afternoon?", focus: 5}
+      - emma: "Only at the weekend. A short nap after lunch gives me more energy. But if I sleep for too long, I feel worse, not better!"
+        reveal: 5
+        vi: "Chỉ cuối tuần: ngủ trưa ngắn thì khỏe; ngủ lâu quá lại mệt hơn."
+      - {emma: "How did your routine change when you started university?", focus: 6}
+      - tom: "It changed a lot. At home, my mum cooked for me and woke me up. Now, I do everything myself: cooking, cleaning and getting up on time. It was hard at first, but I'm used to it now."
+        say: "It changed a lot. At home, my mum cooked for me and woke me up. Now, I do everything myself: cooking, cleaning and getting up on time. It was hard at first, but I'm yoost to it now."
+        reveal: 6
+        vi: "Thay đổi nhiều: giờ tự làm hết mọi việc; lúc đầu khó, giờ đã quen."
+      - {tom: "Do you think it's important to have a routine?", focus: 7}
+      - emma: "Yes, I do. A routine helps me to sleep well and to finish my work on time. But it's also good to break the routine sometimes, and try something new."
+        reveal: 7
+        vi: "Có: nề nếp giúp ngủ ngon, làm xong việc đúng giờ; nhưng đôi khi nên thử điều mới."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: tên gọi"
+    heading: "Tom and Emma ask each other · Names"
+    heading_vi: "Tên gọi — một chủ đề Phần 1 rất hay gặp"
+    items:
+      - q: "Does your name have a special meaning, Tom?"
+        a: "Yes. My real name is Tuan, and it means handsome and talented. My parents had high hopes for me!"
+        ask: emma
+        by: tom
+        phrases: ["My real name is…", "it means…", "high hopes"]
+      - q: "Who chose your name, Emma?"
+        a: "My mum did. Emma was the name of her favourite teacher at school. My dad wanted to call me Sarah, but my mum won!"
+        ask: tom
+        by: emma
+        phrases: ["My mum did.", "was the name of…", "wanted to call me…"]
+      - q: "Why do you use an English name?"
+        a: "Because it's easier for foreign teachers and friends. Some people find Vietnamese names hard to pronounce. But my family and old friends still call me Tuan."
+        ask: emma
+        by: tom
+        phrases: ["easier for…", "hard to pronounce", "still call me…"]
+      - q: "Do you have a nickname?"
+        a: "My Vietnamese friends call me Em, which is funny, because em means little sister in Vietnamese! My students love that."
+        ask: tom
+        by: emma
+        phrases: ["My… friends call me…", "which is funny", "it means…"]
+      - q: "Are there any popular names in Vietnam?"
+        a: "Yes, Nguyen is the most common family name. Almost forty percent of people have it! For first names, Anh and Linh are very popular now."
+        ask: emma
+        by: tom
+        phrases: ["the most common family name", "Almost forty percent", "very popular now"]
+      - q: "Would you like to change your name?"
+        a: "No, I wouldn't. I like my name, because it's short and easy to spell. And it reminds me of my mum's favourite teacher, so it has a nice story."
+        ask: tom
+        by: emma
+        phrases: ["No, I wouldn't.", "easy to spell", "it reminds me of…"]
+    lines:
+      - {emma: "Does your name have a special meaning, Tom?", focus: 0}
+      - tom: "Yes. My real name is Tuan, and it means handsome and talented. My parents had high hopes for me!"
+        say: "Yes. My real name is Twan, and it means handsome and talented. My parents had high hopes for me!"
+        reveal: 0
+        vi: "Tên thật là Tuấn — nghĩa là đẹp trai, tài giỏi; bố mẹ kỳ vọng nhiều!"
+      - {tom: "Who chose your name, Emma?", focus: 1}
+      - emma: "My mum did. Emma was the name of her favourite teacher at school. My dad wanted to call me Sarah, but my mum won!"
+        reveal: 1
+        vi: "Mẹ đặt, theo tên cô giáo mẹ quý nhất; bố muốn tên Sarah nhưng mẹ thắng!"
+      - {emma: "Why do you use an English name?", focus: 2}
+      - tom: "Because it's easier for foreign teachers and friends. Some people find Vietnamese names hard to pronounce. But my family and old friends still call me Tuan."
+        say: "Because it's easier for foreign teachers and friends. Some people find Vietnamese names hard to pronounce. But my family and old friends still call me Twan."
+        reveal: 2
+        vi: "Vì dễ cho thầy cô, bạn bè nước ngoài; gia đình và bạn cũ vẫn gọi là Tuấn."
+      - {tom: "Do you have a nickname?", focus: 3}
+      - emma: "My Vietnamese friends call me Em, which is funny, because em means little sister in Vietnamese! My students love that."
+        reveal: 3
+        vi: "Bạn người Việt gọi là 'Em' — buồn cười vì 'em' nghĩa là em gái!"
+      - {emma: "Are there any popular names in Vietnam?", focus: 4}
+      - tom: "Yes, Nguyen is the most common family name. Almost forty percent of people have it! For first names, Anh and Linh are very popular now."
+        say: "Yes, Win is the most common family name. Almost forty percent of people have it! For first names, Ahn and Lin are very popular now."
+        reveal: 4
+        vi: "Họ Nguyễn phổ biến nhất, gần 40% dân số; tên Anh, Linh đang rất phổ biến."
+      - {tom: "Would you like to change your name?", focus: 5}
+      - emma: "No, I wouldn't. I like my name, because it's short and easy to spell. And it reminds me of my mum's favourite teacher, so it has a nice story."
+        reveal: 5
+        vi: "Không: tên ngắn, dễ đánh vần, lại có câu chuyện hay phía sau."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: ảnh và kỷ niệm"
+    heading: "Tom and Emma ask each other · Photos"
+    heading_vi: "Ảnh — chụp ảnh, album gia đình, ảnh yêu thích"
+    items:
+      - q: "Do you like taking photos, Emma?"
+        a: "Yes, especially when I travel. I take lots of photos of food and street life. My phone is full of pictures of noodle soup!"
+        ask: tom
+        by: emma
+        phrases: ["especially when…", "street life", "My phone is full of…"]
+      - q: "Who takes the photos in your family, Tom?"
+        a: "My sister. She always wants a family photo, especially at Tet. Everybody stands in the same place every year, so we have a photo for every year since I was small."
+        ask: emma
+        by: tom
+        phrases: ["She always wants…", "especially at Tet", "since I was small"]
+      - q: "Do you keep old family photos?"
+        a: "Yes. My grandmother has big albums with photos from the 1960s. When I visit her, we look at them together, and she tells me a story about every picture."
+        ask: tom
+        by: emma
+        phrases: ["big albums", "When I visit her…", "a story about every picture"]
+      - q: "Do you prefer printed photos or photos on your phone?"
+        a: "Printed photos, because they feel more real. I have thousands of photos on my phone, but I never look at them. A printed photo on the wall, I see every day."
+        ask: emma
+        by: tom
+        phrases: ["they feel more real", "thousands of…", "I never look at them"]
+      - q: "What's your favourite photo?"
+        a: "A photo of my grandfather and me on the beach. I was about eight, and we were building a huge sandcastle. We're both laughing in the photo."
+        ask: tom
+        by: emma
+        phrases: ["A photo of…", "I was about eight", "We're both laughing"]
+      - q: "Do you like being in photos?"
+        a: "Not really! I never know what to do with my hands, and I often close my eyes at the wrong moment. I prefer to be behind the camera."
+        ask: emma
+        by: tom
+        phrases: ["Not really!", "at the wrong moment", "behind the camera"]
+    lines:
+      - {tom: "Do you like taking photos, Emma?", focus: 0}
+      - emma: "Yes, especially when I travel. I take lots of photos of food and street life. My phone is full of pictures of noodle soup!"
+        reveal: 0
+        vi: "Thích, nhất là khi đi du lịch: chụp đồ ăn, cảnh phố; điện thoại đầy ảnh phở!"
+      - {emma: "Who takes the photos in your family, Tom?", focus: 1}
+      - tom: "My sister. She always wants a family photo, especially at Tet. Everybody stands in the same place every year, so we have a photo for every year since I was small."
+        reveal: 1
+        vi: "Chị gái: Tết nào cũng chụp ảnh gia đình cùng một chỗ, có ảnh mỗi năm từ hồi mình còn nhỏ."
+      - {tom: "Do you keep old family photos?", focus: 2}
+      - emma: "Yes. My grandmother has big albums with photos from the 1960s. When I visit her, we look at them together, and she tells me a story about every picture."
+        say: "Yes. My grandmother has big albums with photos from the nineteen sixties. When I visit her, we look at them together, and she tells me a story about every picture."
+        reveal: 2
+        vi: "Bà có album ảnh từ thập niên 1960; xem cùng nhau, bà kể chuyện từng tấm."
+      - {emma: "Do you prefer printed photos or photos on your phone?", focus: 3}
+      - tom: "Printed photos, because they feel more real. I have thousands of photos on my phone, but I never look at them. A printed photo on the wall, I see every day."
+        reveal: 3
+        vi: "Ảnh in thật hơn; ảnh trong điện thoại hàng nghìn tấm mà chẳng bao giờ xem."
+      - {tom: "What's your favourite photo?", focus: 4}
+      - emma: "A photo of my grandfather and me on the beach. I was about eight, and we were building a huge sandcastle. We're both laughing in the photo."
+        reveal: 4
+        vi: "Ảnh hai ông cháu trên biển, 8 tuổi, đang xây lâu đài cát, cả hai đều cười."
+      - {emma: "Do you like being in photos?", focus: 5}
+      - tom: "Not really! I never know what to do with my hands, and I often close my eyes at the wrong moment. I prefer to be behind the camera."
+        say: "Not really! I never know what to do with my hands, and I often cloze my eyes at the wrong moment. I prefer to be behind the camera."
+        reveal: 5
+        vi: "Không hẳn: không biết để tay đâu, hay nhắm mắt đúng lúc chụp; thích đứng sau máy ảnh."
+
+  - kind: bullets
+    chapter: "Thi thử 4 · Phần 2"
+    heading: "Part 2 · Describe a friend you have known for a long time."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: who this friend is", vi: "người bạn đó là ai"}
+      - {en: "how and when you met", vi: "gặp nhau thế nào, khi nào"}
+      - {en: "what you do together", vi: "hai người thường làm gì cùng nhau"}
+      - {en: "and explain why your friendship has lasted so long", vi: "và giải thích vì sao tình bạn bền lâu"}
+    lines:
+      - emma: "Now, the mock test. In part two, I'd like you to talk for one to two minutes. You have one minute to think, and you can make some notes."
+        vi: "Thi thử Phần 2 — tạm dừng video nếu muốn tự chuẩn bị trước."
+      - emma: "Here's your topic. I'd like you to describe a friend you have known for a long time."
+        vi: "Tả một người bạn bạn quen đã lâu."
+      - {emma: "You should say who this friend is,", focus: 0}
+      - {emma: "how and when you met,", focus: 1}
+      - {emma: "what you do together,", focus: 2}
+      - {emma: "and explain why your friendship has lasted so long.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · my best friend Khoa"
+    heading_vi: "Ghi chú của Tom — bạn thân Khoa"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "Khoa · best friend · 14 years · now studies medicine in Hanoi", vi: "Khoa · bạn thân · 14 năm · đang học y ở Hà Nội"}
+      - {en: "first day at school · age 6 · same desk · a pencil", vi: "ngày đầu đi học · 6 tuổi · ngồi cùng bàn · cây bút chì"}
+      - {en: "then: football, bikes · now: chat online, coffee at Tet", vi: "ngày xưa: đá bóng, đạp xe · bây giờ: nhắn tin, cà phê dịp Tết"}
+      - {en: "honest · funny · kind · first person I call", vi: "thẳng thắn · vui tính · tốt bụng · người đầu tiên mình gọi"}
+    lines:
+      - tom: "These are my notes. I'm going to talk about my best friend, Khoa."
+        say: "These are my notes. I'm going to talk about my best friend, Kwah."
+        vi: "Tom nói về bạn thân là Khoa."
+      - emma: "All right? Can you start speaking now, please?"
+        vi: "Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu — present perfect: we've known each other for…"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my best friend, Khoa. We've known each other for about fourteen years, since primary school in Da Lat. Now he studies medicine in Hanoi, so we don't see each other very often."
+        say: "I'd like to talk about my best friend, Kwah. We've known each other for about fourteen years, since primary school in Dah Lot. Now he studies medicine in Ha Noi, so we don't see each other very often."
+        note: "who this friend is"
+      - text: "We met on our first day at school. We were both six, and the teacher put us at the same desk. I forgot my pencil, and he gave me one of his. That was the start of our friendship."
+        note: "how and when we met"
+      - text: "When we were children, we played football and rode our bikes around the lake every afternoon. These days, we chat online almost every day, and we always meet for coffee at Tet."
+        note: "what we do together"
+      - text: "I think our friendship has lasted because we're always honest with each other. He's funny and kind, and when I have a problem, he's the first person I call."
+        note: "why it has lasted"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 4 · Phần 3"
+    heading: "Mock test 4 · Part 3 · Discussion (Emma asks Tom)"
+    heading_vi: "Phần 3 — tình bạn: ý kiến + lý do"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Is it easy to keep old friendships when people move to different cities?"
+        a: "It's not always easy, but technology helps a lot. We can send messages and make video calls for free. The important thing is to stay in touch regularly, even with a short message."
+        phrases: ["technology helps a lot", "for free", "stay in touch regularly"]
+      - q: "Are friends more important than family?"
+        a: "I don't think so, but they're important in different ways. Family is always there for you, but friends often understand your daily life better, especially when you're young."
+        phrases: ["I don't think so, but…", "in different ways", "always there for you"]
+    lines:
+      - emma: "Thank you. Now, part three. I'd like to ask you some more general questions about friendship."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về tình bạn."
+      - {emma: "Is it easy to keep old friendships when people move to different cities?", focus: 0}
+      - tom: "It's not always easy, but technology helps a lot. We can send messages and make video calls for free. The important thing is to stay in touch regularly, even with a short message."
+        reveal: 0
+        vi: "Không dễ nhưng công nghệ giúp nhiều; quan trọng là giữ liên lạc đều đặn."
+      - {emma: "Are friends more important than family?", focus: 1}
+      - tom: "I don't think so, but they're important in different ways. Family is always there for you, but friends often understand your daily life better, especially when you're young."
+        reveal: 1
+        vi: "Không hẳn, mỗi bên quan trọng theo cách riêng: gia đình luôn ở bên, bạn bè hiểu cuộc sống thường ngày hơn."
+
+  - kind: qa
+    heading: "Mock test 4 · Part 3 · Discussion (Tom asks Emma)"
+    heading_vi: "Đổi vai — Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Why do some friendships end?"
+        a: "Sometimes people just grow apart. They change jobs, move house or start a family, and they don't have time any more. And sometimes there's an argument, and nobody says sorry."
+        phrases: ["grow apart", "don't have time any more", "nobody says sorry"]
+      - q: "Do you think social media helps people to make real friends?"
+        a: "It helps people to meet, but real friendship needs time together. You can have five hundred friends online, but only a few people who will help you when you're in trouble."
+        phrases: ["It helps people to…", "needs time together", "when you're in trouble"]
+    lines:
+      - {tom: "Now let me ask you, Emma. Why do some friendships end?", focus: 0}
+      - emma: "Sometimes people just grow apart. They change jobs, move house or start a family, and they don't have time any more. And sometimes there's an argument, and nobody says sorry."
+        reveal: 0
+        vi: "Người ta dần xa nhau: đổi việc, chuyển nhà, lập gia đình; hoặc cãi nhau mà không ai xin lỗi."
+      - {tom: "Do you think social media helps people to make real friends?", focus: 1}
+      - emma: "It helps people to meet, but real friendship needs time together. You can have five hundred friends online, but only a few people who will help you when you're in trouble."
+        reveal: 1
+        vi: "Giúp làm quen, nhưng tình bạn thật cần thời gian bên nhau; lúc khó khăn chỉ vài người giúp."
+      - tom: "Thank you, Emma. That's the end of the speaking test, and the end of our four practice videos for Unit 1."
+        say: "Thank you, Emma. That's the end of the speaking test, and the end of our four practice videos for Unit one."
+        vi: "Hết bài thi, hết bốn video luyện nói Unit 1."
+      - emma: "Now go back to practice one, and practise the questions again. Good luck!"
+        vi: "Quay lại video 1 và luyện lại các câu hỏi. Chúc bạn may mắn!"

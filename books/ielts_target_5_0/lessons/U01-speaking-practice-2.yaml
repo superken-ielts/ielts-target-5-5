@@ -1,0 +1,402 @@
+# Video luyện nói thêm Unit 1 · Life — 2/4: tuổi thơ, thời gian rảnh, việc học và công việc + thi thử 2 (đổi vai:
+# Tom giám khảo, Emma thí sinh). Người học tự tạm dừng video để trả lời, không có khoảng lặng chờ (đợt 14).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-practice-2.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml (giữ khớp ở cả bốn video).
+id: U01-speaking-practice-2
+activity: U01-speaking-vocab
+title: "Unit 1 · Life"
+subtitle: "Speaking practice 2: childhood, free time, work + mock test"
+title_vi: "Luyện nói 2/4 — tuổi thơ, thời gian rảnh, việc học; thi thử đổi vai (Tom giám khảo, Emma thí sinh)"
+tag: "UNIT 1 · LIFE"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - tom: "Welcome to Speaking practice two for Unit 1: Life."
+        say: "Welcome to Speaking practice two for Unit one: Life."
+        vi: "Video luyện nói 2/4 của Unit 1."
+      - emma: "Today, we talk about childhood, free time, and studies and work. Remember: pause after each question, and answer it yourself first."
+        vi: "Tuổi thơ, thời gian rảnh, việc học và công việc. Tạm dừng sau mỗi câu hỏi để tự trả lời trước."
+      - tom: "And in today's mock test, we swap roles. I'm the examiner, and Emma is the candidate!"
+        vi: "Thi thử hôm nay đổi vai: Tom làm giám khảo, Emma làm thí sinh."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: tuổi thơ"
+    heading: "Tom and Emma ask each other · Childhood"
+    heading_vi: "Tuổi thơ — kể chuyện quá khứ bằng thì quá khứ đơn"
+    items:
+      - q: "Emma, where did you grow up?"
+        a: "I grew up in a small town by the sea. My parents both worked, so I spent a lot of time with my grandparents. Their house was just five minutes from the beach."
+        ask: tom
+        by: emma
+        phrases: ["I grew up in…", "spent a lot of time with…", "five minutes from…"]
+      - q: "What did you like doing when you were a child, Tom?"
+        a: "I loved playing football in the street with the other kids from my neighbourhood. We played every afternoon until it got dark, and our mums called us home for dinner."
+        ask: emma
+        by: tom
+        phrases: ["I loved playing…", "every afternoon", "until it got dark"]
+      - q: "Who was your best friend when you were a child?"
+        a: "Her name was Lucy, and she lived next door. We did everything together. We even had a secret language that nobody else could understand!"
+        ask: tom
+        by: emma
+        phrases: ["lived next door", "did everything together", "a secret language"]
+      - q: "What was your favourite toy?"
+        a: "A red bicycle. My grandfather gave it to me for my seventh birthday. I rode it everywhere, and I was really sad when it got too small for me."
+        ask: emma
+        by: tom
+        phrases: ["gave it to me for…", "I rode it everywhere", "got too small for me"]
+      - q: "Did you enjoy primary school?"
+        a: "Yes, mostly. I loved reading and art, but I hated maths, because I was always slow at it. My teachers were very kind and patient, though."
+        ask: tom
+        by: emma
+        phrases: ["Yes, mostly.", "I was always slow at…", "…, though."]
+      - q: "Were you a naughty child?"
+        a: "Sometimes! Once, I hid my sister's school bag before an exam, as a joke. She was really angry, and my parents didn't let me watch TV for a week."
+        ask: emma
+        by: tom
+        phrases: ["Sometimes!", "as a joke", "didn't let me…"]
+      - q: "What did you want to be when you were a child?"
+        a: "I wanted to be a vet, because I loved animals. We had two dogs and a cat. But in the end, I chose teaching, and I think it was the right choice."
+        ask: tom
+        by: emma
+        phrases: ["I wanted to be…", "in the end", "the right choice"]
+      - q: "Do you think children today have a better childhood than you did?"
+        a: "In some ways, yes. They have more toys and more information. But they spend a lot of time on screens, and they don't play outside as much as we did."
+        ask: emma
+        by: tom
+        phrases: ["In some ways, yes.", "on screens", "as much as we did"]
+    lines:
+      - {tom: "Emma, where did you grow up?", focus: 0}
+      - emma: "I grew up in a small town by the sea. My parents both worked, so I spent a lot of time with my grandparents. Their house was just five minutes from the beach."
+        reveal: 0
+        vi: "Lớn lên ở thị trấn ven biển; bố mẹ đi làm nên ở nhiều với ông bà, gần biển."
+      - {emma: "What did you like doing when you were a child, Tom?", focus: 1}
+      - tom: "I loved playing football in the street with the other kids from my neighbourhood. We played every afternoon until it got dark, and our mums called us home for dinner."
+        reveal: 1
+        vi: "Mê đá bóng ngoài đường với lũ trẻ hàng xóm tới tối mịt, mẹ gọi về ăn cơm."
+      - {tom: "Who was your best friend when you were a child?", focus: 2}
+      - emma: "Her name was Lucy, and she lived next door. We did everything together. We even had a secret language that nobody else could understand!"
+        reveal: 2
+        vi: "Lucy nhà bên cạnh; làm gì cũng có nhau, còn có 'ngôn ngữ bí mật'."
+      - {emma: "What was your favourite toy?", focus: 3}
+      - tom: "A red bicycle. My grandfather gave it to me for my seventh birthday. I rode it everywhere, and I was really sad when it got too small for me."
+        reveal: 3
+        vi: "Chiếc xe đạp đỏ ông tặng sinh nhật 7 tuổi; đạp khắp nơi, buồn khi xe chật."
+      - {tom: "Did you enjoy primary school?", focus: 4}
+      - emma: "Yes, mostly. I loved reading and art, but I hated maths, because I was always slow at it. My teachers were very kind and patient, though."
+        reveal: 4
+        vi: "Phần lớn là thích: mê đọc và vẽ, ghét toán; thầy cô tốt bụng, kiên nhẫn."
+      - {emma: "Were you a naughty child?", focus: 5}
+      - tom: "Sometimes! Once, I hid my sister's school bag before an exam, as a joke. She was really angry, and my parents didn't let me watch TV for a week."
+        reveal: 5
+        vi: "Đôi khi! Giấu cặp của chị trước giờ thi để đùa — bị cấm xem TV một tuần."
+      - {tom: "What did you want to be when you were a child?", focus: 6}
+      - emma: "I wanted to be a vet, because I loved animals. We had two dogs and a cat. But in the end, I chose teaching, and I think it was the right choice."
+        reveal: 6
+        vi: "Muốn làm bác sĩ thú y vì yêu động vật; cuối cùng chọn dạy học — đúng đắn."
+      - {emma: "Do you think children today have a better childhood than you did?", focus: 7}
+      - tom: "In some ways, yes. They have more toys and more information. But they spend a lot of time on screens, and they don't play outside as much as we did."
+        reveal: 7
+        vi: "Về vài mặt thì có; nhưng trẻ bây giờ dán mắt vào màn hình, ít chơi ngoài trời."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: thời gian rảnh"
+    heading: "Tom and Emma ask each other · Free time and weekends"
+    heading_vi: "Thời gian rảnh — hiện tại đơn cho thói quen: usually, sometimes, every…"
+    items:
+      - q: "What do you like doing in your free time, Tom?"
+        a: "I usually play basketball with my friends. I also love watching films, especially science fiction. On rainy days, I just stay at home and play video games."
+        ask: emma
+        by: tom
+        phrases: ["I usually…", "especially…", "On rainy days…"]
+      - q: "Emma, what do you like doing in your free time?"
+        a: "I love cooking, especially for my friends. At the weekend, I sometimes go hiking in the hills. It helps me to relax after a busy week."
+        ask: tom
+        by: emma
+        phrases: ["I love…", "especially…", "It helps me to relax"]
+      - q: "How do you usually spend your weekends?"
+        a: "On Saturday mornings, I play basketball. In the afternoon, I study, or I meet my friends for coffee. On Sundays, I call my family, and I relax."
+        ask: emma
+        by: tom
+        phrases: ["On Saturday mornings", "meet my friends for coffee", "On Sundays"]
+      - q: "Do you prefer staying at home or going out?"
+        a: "It depends on my mood. After a busy week, I love staying at home with a good book. But if the weather is nice, I prefer going out with friends."
+        ask: tom
+        by: emma
+        phrases: ["It depends on…", "After a busy week", "If the weather is nice…"]
+      - q: "What kind of music do you like?"
+        a: "I like pop music, and some Vietnamese indie bands. I listen to music every day on the bus. It makes the journey feel shorter."
+        ask: emma
+        by: tom
+        phrases: ["I like…", "on the bus", "makes the journey feel shorter"]
+      - q: "Do you read much?"
+        a: "Yes, I read every evening before bed. I like novels, especially detective stories. Reading helps me to relax and switch off after work."
+        ask: tom
+        by: emma
+        phrases: ["every evening before bed", "detective stories", "switch off"]
+      - q: "Do you spend a lot of time on your phone?"
+        a: "Probably too much! I use it for studying, chatting with friends and watching videos. I'm trying to use it less in the evening, so I can sleep better."
+        ask: emma
+        by: tom
+        phrases: ["Probably too much!", "I'm trying to…", "so I can…"]
+      - q: "Is there a new hobby you'd like to try?"
+        a: "Yes, I'd love to learn to play the guitar. My brother plays very well, and I'd like to play songs with him when we meet at Christmas."
+        ask: tom
+        by: emma
+        phrases: ["I'd love to learn to…", "plays very well", "I'd like to…"]
+    lines:
+      - {emma: "What do you like doing in your free time, Tom?", focus: 0}
+      - tom: "I usually play basketball with my friends. I also love watching films, especially science fiction. On rainy days, I just stay at home and play video games."
+        reveal: 0
+        vi: "Thường chơi bóng rổ; mê phim khoa học viễn tưởng; ngày mưa ở nhà chơi game."
+      - {tom: "Emma, what do you like doing in your free time?", focus: 1}
+      - emma: "I love cooking, especially for my friends. At the weekend, I sometimes go hiking in the hills. It helps me to relax after a busy week."
+        reveal: 1
+        vi: "Thích nấu ăn cho bạn bè; cuối tuần đi bộ đường dài trên đồi để thư giãn."
+      - {emma: "How do you usually spend your weekends?", focus: 2}
+      - tom: "On Saturday mornings, I play basketball. In the afternoon, I study, or I meet my friends for coffee. On Sundays, I call my family, and I relax."
+        reveal: 2
+        vi: "Sáng thứ Bảy chơi bóng rổ, chiều học hoặc cà phê; Chủ nhật gọi về nhà, nghỉ ngơi."
+      - {tom: "Do you prefer staying at home or going out?", focus: 3}
+      - emma: "It depends on my mood. After a busy week, I love staying at home with a good book. But if the weather is nice, I prefer going out with friends."
+        reveal: 3
+        vi: "Tùy tâm trạng: tuần bận thì ở nhà đọc sách; trời đẹp thì ra ngoài với bạn."
+      - {emma: "What kind of music do you like?", focus: 4}
+      - tom: "I like pop music, and some Vietnamese indie bands. I listen to music every day on the bus. It makes the journey feel shorter."
+        reveal: 4
+        vi: "Thích nhạc pop và vài ban nhạc indie Việt; nghe trên xe buýt cho đỡ dài."
+      - {tom: "Do you read much?", focus: 5}
+      - emma: "Yes, I read every evening before bed. I like novels, especially detective stories. Reading helps me to relax and switch off after work."
+        reveal: 5
+        vi: "Tối nào cũng đọc trước khi ngủ, thích truyện trinh thám; giúp quên chuyện công việc."
+      - {emma: "Do you spend a lot of time on your phone?", focus: 6}
+      - tom: "Probably too much! I use it for studying, chatting with friends and watching videos. I'm trying to use it less in the evening, so I can sleep better."
+        reveal: 6
+        vi: "Chắc là quá nhiều! Đang cố dùng ít đi buổi tối để ngủ ngon hơn."
+      - {tom: "Is there a new hobby you'd like to try?", focus: 7}
+      - emma: "Yes, I'd love to learn to play the guitar. My brother plays very well, and I'd like to play songs with him when we meet at Christmas."
+        reveal: 7
+        vi: "Muốn học guitar; anh trai chơi giỏi, muốn cùng chơi khi gặp nhau dịp Giáng sinh."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: việc học, công việc"
+    heading: "Tom and Emma ask each other · Studies and work"
+    heading_vi: "Việc học và công việc — nêu lý do bằng because, so"
+    items:
+      - q: "What are you studying at the moment, Tom?"
+        a: "I'm studying business at a university in Ho Chi Minh City. I'm in my second year, and I'm really enjoying it."
+        ask: emma
+        by: tom
+        phrases: ["I'm studying…", "in my second year", "I'm really enjoying it"]
+      - q: "Emma, do you enjoy your job?"
+        a: "Yes, I really do. I teach English to adults, and my students are very motivated. It's great to see them become more confident every week."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I really do.", "very motivated", "become more confident"]
+      - q: "Why did you choose business?"
+        a: "Because I'm interested in how companies work, and there are lots of good jobs in business. My dad works for a coffee company, and he encouraged me too."
+        ask: emma
+        by: tom
+        phrases: ["I'm interested in…", "lots of good jobs", "encouraged me"]
+      - q: "What's the most difficult part of your job?"
+        a: "Probably the long hours. I often prepare lessons in the evening, and I have classes at the weekend. Sometimes I feel tired, but I still love it."
+        ask: tom
+        by: emma
+        phrases: ["Probably…", "prepare lessons", "I still love it"]
+      - q: "What's your favourite subject at university?"
+        a: "Marketing. It's creative, and we do a lot of group projects. Last term, we made an advertising plan for a small coffee shop, and it was really fun."
+        ask: emma
+        by: tom
+        phrases: ["It's creative", "group projects", "Last term, we…"]
+      - q: "What advice would you give to a new English learner?"
+        a: "Listen to English every day, even for ten minutes, and don't be afraid of making mistakes. Everybody makes mistakes, and that's how we learn."
+        ask: tom
+        by: emma
+        phrases: ["even for ten minutes", "don't be afraid of…", "that's how we learn"]
+    lines:
+      - {emma: "What are you studying at the moment, Tom?", focus: 0}
+      - tom: "I'm studying business at a university in Ho Chi Minh City. I'm in my second year, and I'm really enjoying it."
+        say: "I'm studying business at a university in Ho Chee Min City. I'm in my second year, and I'm really enjoying it."
+        reveal: 0
+        vi: "Học kinh doanh ở TP. Hồ Chí Minh, năm thứ hai, và rất thích."
+      - {tom: "Emma, do you enjoy your job?", focus: 1}
+      - emma: "Yes, I really do. I teach English to adults, and my students are very motivated. It's great to see them become more confident every week."
+        reveal: 1
+        vi: "Rất thích: dạy người lớn, học viên có động lực, tự tin hơn mỗi tuần."
+      - {emma: "Why did you choose business?", focus: 2}
+      - tom: "Because I'm interested in how companies work, and there are lots of good jobs in business. My dad works for a coffee company, and he encouraged me too."
+        reveal: 2
+        vi: "Vì thích tìm hiểu doanh nghiệp vận hành ra sao, nhiều việc tốt; bố cũng khuyến khích."
+      - {tom: "What's the most difficult part of your job?", focus: 3}
+      - emma: "Probably the long hours. I often prepare lessons in the evening, and I have classes at the weekend. Sometimes I feel tired, but I still love it."
+        reveal: 3
+        vi: "Có lẽ là làm nhiều giờ: soạn bài buổi tối, dạy cuối tuần; mệt nhưng vẫn yêu nghề."
+      - {emma: "What's your favourite subject at university?", focus: 4}
+      - tom: "Marketing. It's creative, and we do a lot of group projects. Last term, we made an advertising plan for a small coffee shop, and it was really fun."
+        reveal: 4
+        vi: "Marketing: sáng tạo, nhiều dự án nhóm; kỳ trước làm kế hoạch quảng cáo cho quán cà phê."
+      - {tom: "What advice would you give to a new English learner?", focus: 5}
+      - emma: "Listen to English every day, even for ten minutes, and don't be afraid of making mistakes. Everybody makes mistakes, and that's how we learn."
+        reveal: 5
+        vi: "Nghe tiếng Anh mỗi ngày, dù chỉ 10 phút; đừng sợ sai — sai là cách ta học."
+
+  - kind: qa
+    chapter: "Thi thử 2 · Phần 1"
+    heading: "Mock test 2 · Part 1 · Introduction and interview"
+    heading_vi: "Thi thử đổi vai — Tom là giám khảo, Emma là thí sinh"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Can you tell me your full name, please?"
+        a: "Good afternoon. My full name is Emma Louise Clarke, but please call me Emma."
+        phrases: ["My full name is…", "please call me…"]
+      - q: "Can I see your identification, please?"
+        a: "Sure. Here it is."
+      - q: "Are you a morning person?"
+        a: "Not really. I find it hard to get up early, so I always set two alarms! But once I've had a cup of coffee, I feel fine."
+        phrases: ["Not really.", "I find it hard to…", "once I've had…"]
+      - q: "What do you usually have for breakfast?"
+        a: "Usually just toast and coffee, because I'm always in a hurry. At the weekend, I make a big breakfast with eggs and fruit."
+        phrases: ["Usually just…", "in a hurry", "At the weekend…"]
+      - q: "What's your favourite kind of weather?"
+        a: "I like cool, sunny days, like in autumn. Hot weather makes me tired, so I find the summer here quite difficult!"
+        phrases: ["I like…", "makes me tired", "I find… difficult"]
+      - q: "Do you prefer living in the city or in the countryside?"
+        a: "For now, the city, because there's so much to do. But I grew up near the sea, so sometimes I really miss the quiet and the fresh air."
+        phrases: ["For now…", "there's so much to do", "I really miss…"]
+      - q: "How do you usually get to work?"
+        a: "By motorbike taxi, because it's quick and cheap. But when it rains, I take the bus, and it takes much longer because of the traffic."
+        phrases: ["By…", "quick and cheap", "takes much longer"]
+    lines:
+      - tom: "Now it's mock test time, and I'm the examiner! Part one starts now."
+        focus: 0
+        vi: "Thi thử: Tom giám khảo. Bắt đầu Phần 1."
+      - {tom: "Good afternoon. My name is Tom. Can you tell me your full name, please?", focus: 0}
+      - {emma: "Good afternoon. My full name is Emma Louise Clarke, but please call me Emma.", reveal: 0, vi: "Họ tên đầy đủ, rồi tên muốn được gọi."}
+      - {tom: "Thank you. Can I see your identification, please?", focus: 1}
+      - {emma: "Sure. Here it is.", reveal: 1, vi: "Đưa giấy tờ tùy thân."}
+      - tom: "Thank you. Now, in this first part, I'd like to ask you some questions about yourself."
+        vi: "Phần 1: hỏi về bản thân."
+      - {tom: "Let's talk about mornings. Are you a morning person?", focus: 2}
+      - emma: "Not really. I find it hard to get up early, so I always set two alarms! But once I've had a cup of coffee, I feel fine."
+        reveal: 2
+        vi: "Không hẳn: khó dậy sớm, luôn đặt hai báo thức; uống cà phê xong là ổn."
+      - {tom: "What do you usually have for breakfast?", focus: 3}
+      - emma: "Usually just toast and coffee, because I'm always in a hurry. At the weekend, I make a big breakfast with eggs and fruit."
+        reveal: 3
+        vi: "Thường chỉ bánh mì nướng và cà phê vì vội; cuối tuần ăn sáng đầy đủ."
+      - {tom: "Let's move on to talk about the weather. What's your favourite kind of weather?", focus: 4}
+      - emma: "I like cool, sunny days, like in autumn. Hot weather makes me tired, so I find the summer here quite difficult!"
+        reveal: 4
+        vi: "Thích ngày mát có nắng như mùa thu; trời nóng làm mệt, mùa hè ở đây khá khó chịu."
+      - {tom: "Now let's talk about where you live. Do you prefer living in the city or in the countryside?", focus: 5}
+      - emma: "For now, the city, because there's so much to do. But I grew up near the sea, so sometimes I really miss the quiet and the fresh air."
+        reveal: 5
+        vi: "Giờ thì thành phố vì nhiều thứ để làm; nhưng đôi khi nhớ sự yên tĩnh, không khí trong lành."
+      - {tom: "How do you usually get to work?", focus: 6}
+      - emma: "By motorbike taxi, because it's quick and cheap. But when it rains, I take the bus, and it takes much longer because of the traffic."
+        reveal: 6
+        vi: "Đi xe ôm vì nhanh, rẻ; trời mưa đi xe buýt, lâu hơn nhiều vì kẹt xe."
+
+  - kind: bullets
+    chapter: "Thi thử 2 · Phần 2"
+    heading: "Part 2 · Describe a happy memory from your childhood."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "You should say: when it happened", vi: "chuyện xảy ra khi nào"}
+      - {en: "where you were", vi: "bạn ở đâu"}
+      - {en: "who you were with", vi: "bạn ở cùng ai"}
+      - {en: "and explain why it is a happy memory", vi: "và giải thích vì sao đó là kỷ niệm vui"}
+    lines:
+      - tom: "Thank you. Now, in part two, I'm going to give you a topic, and I'd like you to talk about it for one to two minutes."
+        vi: "Phần 2: nói 1–2 phút."
+      - tom: "You'll have one minute to think about what you're going to say. You can make some notes if you wish."
+        vi: "1 phút chuẩn bị, được ghi chú — tạm dừng video nếu muốn tự chuẩn bị."
+      - tom: "Here's your topic. I'd like you to describe a happy memory from your childhood."
+        vi: "Tả một kỷ niệm vui thời thơ ấu."
+      - {tom: "You should say when it happened,", focus: 0}
+      - {tom: "where you were,", focus: 1}
+      - {tom: "who you were with,", focus: 2}
+      - {tom: "and explain why it is a happy memory.", focus: 3}
+
+  - kind: bullets
+    heading: "Emma's notes · one line for each point"
+    heading_vi: "Ghi chú của Emma — chỉ từ khóa"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "age 10 · summer holiday", vi: "10 tuổi · kỳ nghỉ hè"}
+      - {en: "grandparents' house · by the sea", vi: "nhà ông bà · cạnh biển"}
+      - {en: "grandfather · learned to swim · scared → brave", vi: "ông · học bơi · từ sợ → dám bơi"}
+      - {en: "proud · free · grandfather's patience", vi: "tự hào · tự do · sự kiên nhẫn của ông"}
+    lines:
+      - emma: "My notes are very short: a few key words for each point."
+        vi: "Ghi chú rất ngắn: vài từ khóa cho mỗi ý."
+      - tom: "All right? Remember, you have one to two minutes, so don't worry if I stop you. Can you start speaking now, please?"
+        vi: "Được chưa? Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu khoảng 1 phút — kể chuyện bằng thì quá khứ"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about the summer when I was ten years old. My parents were busy at work, so I spent the whole summer holiday at my grandparents' house by the sea."
+        note: "when · where"
+      - text: "Every morning, my grandfather took me to the beach. I couldn't swim, and I was quite scared of the water, but he was very patient with me."
+        note: "who I was with"
+      - text: "We practised for a few weeks, and one day, I suddenly swam all the way to the rocks on my own. My grandfather was clapping and laughing on the beach."
+        note: "what happened"
+      - text: "It's a happy memory because I felt so proud and free. It also reminds me of my grandfather, who passed away a few years ago. I still think of him whenever I swim in the sea."
+        note: "why it is happy"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 2 · Phần 3"
+    heading: "Mock test 2 · Part 3 · Discussion"
+    heading_vi: "Phần 3 — nêu ý kiến, so sánh xưa và nay, đưa lý do"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Do children today play differently from children in the past?"
+        a: "Yes, I think so. In the past, children played outside with simple things, like balls and bikes. Today, many children play games on tablets and phones, and they often play alone."
+        phrases: ["In the past…", "Today…", "they often play alone"]
+      - q: "Is it a good idea for young children to use smartphones?"
+        a: "Only a little, in my opinion. Some apps can help children to learn, but too much screen time is bad for their eyes and their sleep. Parents should set clear rules."
+        phrases: ["in my opinion", "too much screen time", "set clear rules"]
+      - q: "What makes a happy childhood?"
+        a: "I think the most important thing is love and attention from the family. Children also need time to play freely, and friends of the same age to play with."
+        phrases: ["the most important thing is…", "love and attention", "time to play freely"]
+      - q: "Should grandparents help to bring up their grandchildren?"
+        a: "Yes, if they're happy to do it. Grandparents have a lot of experience and patience. But parents shouldn't depend on them too much, because older people also need rest."
+        phrases: ["if they're happy to do it", "experience and patience", "depend on…"]
+    lines:
+      - tom: "Thank you. We've been talking about a happy memory from your childhood. Now I'd like to ask you some more general questions about this."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về tuổi thơ."
+      - {tom: "Do children today play differently from children in the past?", focus: 0}
+      - emma: "Yes, I think so. In the past, children played outside with simple things, like balls and bikes. Today, many children play games on tablets and phones, and they often play alone."
+        reveal: 0
+        vi: "Ngày xưa chơi ngoài trời với bóng, xe đạp; nay chơi trên máy tính bảng, thường một mình."
+      - {tom: "Is it a good idea for young children to use smartphones?", focus: 1}
+      - emma: "Only a little, in my opinion. Some apps can help children to learn, but too much screen time is bad for their eyes and their sleep. Parents should set clear rules."
+        reveal: 1
+        vi: "Chỉ nên ít thôi: vài ứng dụng giúp học, nhưng nhiều quá hại mắt, hại giấc ngủ."
+      - {tom: "What makes a happy childhood?", focus: 2}
+      - emma: "I think the most important thing is love and attention from the family. Children also need time to play freely, and friends of the same age to play with."
+        reveal: 2
+        vi: "Quan trọng nhất là tình yêu, sự quan tâm của gia đình; thời gian chơi và bạn cùng tuổi."
+      - {tom: "Should grandparents help to bring up their grandchildren?", focus: 3}
+      - emma: "Yes, if they're happy to do it. Grandparents have a lot of experience and patience. But parents shouldn't depend on them too much, because older people also need rest."
+        reveal: 3
+        vi: "Nên, nếu ông bà vui lòng; nhưng bố mẹ đừng dựa quá nhiều vì ông bà cũng cần nghỉ."
+      - tom: "Thank you, Emma. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - emma: "Thank you, Tom. You were a very good examiner! See you in Speaking practice three."
+        vi: "Hẹn gặp ở video luyện nói 3."
