@@ -306,14 +306,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Phát một bài thì bài khác dừng.
   - Nút bài trước / bài sau trên màn hình khóa.
   - *Đợt 13:* hàm thuần `nextOnEnd`, `sleepLeft`, `addListen`, `chapterRange`, `fmtHms` trong `core.js` kèm test; thêm một bước e2e.
-- [x] **P2-45** Video **luyện nói thêm Unit 1 · Life** (`U01-speaking-practice`), làm theo yêu cầu người học, không theo trang sách.
-  - Tom và Emma hỏi đáp qua lại.
-  - Thi thử Speaking Phần 1–3: Emma là giám khảo, Tom là thí sinh. Có thẻ đề và ghi chú 1 phút; bài nói mẫu hiện chữ theo đoạn.
-  - Nghe – nhắc lại 8 câu của cả hai người (shadowing).
-  - Người học thi thử Phần 1.
-  - Gắn vào phần Speaking & Vocabulary: Unit 1 có 14 video.
-  - *Đợt 14:* công cụ thêm cảnh `shadow` (câu mẫu chữ to theo màu người nói, nghĩa, mẹo nối âm / trọng âm).
-  - *Đợt 14:* thêm dòng `echo: true` (khoảng lặng đếm ngược dài theo câu để nhắc lại).
+- [x] **P2-45** **4 video luyện nói thêm Unit 1 · Life** (`U01-speaking-practice`, `-2`, `-3`, `-4`), làm theo yêu cầu người học, không theo trang sách.
+  - Tom và Emma hỏi đáp qua lại: gia đình, nơi ở, tuổi thơ, thời gian rảnh, việc học, các giai đoạn cuộc đời, lễ Tết, bạn bè, tương lai, sinh hoạt hằng ngày, tên gọi, ảnh.
+  - 4 buổi thi thử Speaking, Tom và Emma thay nhau làm giám khảo. Có thẻ đề và ghi chú Phần 2, 5 bài nói mẫu hiện chữ theo đoạn, câu hỏi Phần 3.
+  - Không có khoảng lặng chờ: người học tự tạm dừng video để trả lời.
+  - Gắn vào phần Speaking & Vocabulary: Unit 1 có 17 video.
+  - *Đợt 14:* công cụ thêm cảnh `shadow` và dòng `echo: true` (khoảng lặng đếm ngược để nhắc lại). Bản đầu của video dùng hai tính năng này; người học muốn tự tạm dừng nên bản cuối bỏ, công cụ vẫn giữ.
   - *Đợt 14:* cảnh `letter` có `roles` thì nhãn ghi "đang nói".
 
 ### Cổng G2

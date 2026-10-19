@@ -191,10 +191,12 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
   }
   assert.deepEqual(C.lessonsOf({ lessons }, { item: "U01" }).map(l => l.id).sort(), ["U01-consolidation", "U01-exam-listening", "U01-exam-reading",
     "U01-listening-1", "U01-listening-2", "U01-reading-1", "U01-reading-2",
-    "U01-speaking-1", "U01-speaking-2", "U01-speaking-practice", "U01-vocabulary", "U01-writing-1", "U01-writing-2", "U01-writing-3"]);
+    "U01-speaking-1", "U01-speaking-2", "U01-speaking-practice", "U01-speaking-practice-2", "U01-speaking-practice-3", "U01-speaking-practice-4",
+    "U01-vocabulary", "U01-writing-1", "U01-writing-2", "U01-writing-3"]);
   // mục lục theo thứ tự trong sách, không theo thứ tự chữ cái của lessons.json
   assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U01" }), Object.keys(acts)).map(g => [g.activity, g.lessons.map(l => l.id)]),
-    [["U01-speaking-vocab", ["U01-speaking-1", "U01-speaking-2", "U01-speaking-practice", "U01-vocabulary"]], ["U01-listening", ["U01-listening-1", "U01-listening-2"]],
+    [["U01-speaking-vocab", ["U01-speaking-1", "U01-speaking-2", "U01-speaking-practice", "U01-speaking-practice-2", "U01-speaking-practice-3",
+       "U01-speaking-practice-4", "U01-vocabulary"]], ["U01-listening", ["U01-listening-1", "U01-listening-2"]],
      ["U01-reading", ["U01-reading-1", "U01-reading-2"]], ["U01-writing", ["U01-writing-1", "U01-writing-2", "U01-writing-3"]],
      ["U01-consolidation", ["U01-consolidation"]], ["U01-exam-practice", ["U01-exam-listening", "U01-exam-reading"]]]);
   assert.deepEqual(C.lessonsOf({ lessons }, { activity: "U01-writing" }).map(l => l.id), ["U01-writing-1", "U01-writing-2", "U01-writing-3"]);

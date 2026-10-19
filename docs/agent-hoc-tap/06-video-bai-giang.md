@@ -42,9 +42,10 @@ Bảng in bằng lệnh `coverage` sau đợt 14:
 
 **Kết luận:** Unit 1 có video cho **mọi phần có trang trong Course Book** (6/7 phần; phần còn lại "Ôn unit + sổ lỗi"
 là phiên tự ôn, không có trang sách, không cần video). Listening và Reading làm ở đợt 11, sau khi công cụ phát được
-file nghe của sách (đợt 10). Đợt 14 thêm `U01-speaking-practice`: video **luyện nói thêm** theo yêu cầu người học, không
-theo trang sách. Video gồm Tom và Emma hỏi đáp qua lại, thi thử Phần 1–3, nghe – nhắc lại (shadowing) và lượt thi thử
-của người học. Video gắn vào phần Speaking & Vocabulary, ngay sau Speaking 2.
+file nghe của sách (đợt 10). Đợt 14 thêm **4 video luyện nói thêm** (`U01-speaking-practice`, `-2`, `-3`, `-4`) theo yêu
+cầu người học, không theo trang sách. Nội dung là Tom và Emma hỏi đáp qua lại về các chủ đề của Unit 1 và 4 buổi thi
+thử Speaking; Tom và Emma thay nhau làm giám khảo, nên cả hai giọng đều có câu trả lời mẫu. Các video gắn vào phần
+Speaking & Vocabulary, ngay sau Speaking 2.
 
 ## 2. Unit 2 · Learning — độ phủ video
 
@@ -115,7 +116,10 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 | 11 | `U01-listening-2` Listening 2 | Phiếu nhân viên Esco Engineering của Peter và Jane, **phát Track 7**, đáp án kèm câu nghe được (đánh vần Austin, Moore, Cedar), tự đánh giá, address / age / marital status | bullets, blanks + `track` | Answer key Listening 2A |
 | 11 | `U01-reading-1` Reading 1: skimming | Nối 6 văn bản (ảnh cắt từ trang sách) với nguồn, cách đọc lướt (hình, hình thức, từ khóa), mục đích văn bản, định nghĩa skimming | match (ảnh), bullets, pairs, blanks | Suy ra từ bài |
 | 11 | `U01-reading-2` Reading 2: practise skimming | Sáu nguồn, nối văn bản A–C và D–F (hai ảnh cắt từ hai trang), tự đánh giá, 6 từ trong ngữ cảnh | bullets, match ×2, blanks (`hint` dài) | Answer key Reading 2A + suy ra |
-| 14 | `U01-speaking-practice` Speaking: more practice, mock test and shadowing | Luyện nói thêm theo yêu cầu người học (không theo trang sách): Tom và Emma **hỏi đáp qua lại** (gia đình, quê nhà, việc học, sở thích, tương lai), **thi thử Phần 1–3** (Emma giám khảo, Tom thí sinh; thẻ đề Phần 2, ghi chú 1 phút, bài nói mẫu 123 từ), **nghe – nhắc lại** 8 câu của Tom và Emma (khoảng lặng `echo` dài theo câu), đến lượt bạn thi thử Phần 1 | title, bullets, qa + `roles`, letter (nhãn vai), **shadow** + `echo`, practice | Câu trả lời mẫu tự viết bằng từ vựng Unit 1 |
+| 14 | `U01-speaking-practice` Speaking practice 1 | Hỏi qua lại **gia đình** (8 cặp) và **nơi ở, quê nhà** (8); **thi thử 1** (Emma giám khảo, Tom thí sinh): Phần 1 (8 câu), thẻ đề Phần 2 "an older person in your family who you admire" + ghi chú + bài nói mẫu 123 từ, Phần 3 (4 câu) | title, qa + `ask` / `by` / `roles`, bullets, letter (nhãn vai) | Câu trả lời mẫu tự viết bằng từ vựng Unit 1 |
+| 14 | `U01-speaking-practice-2` Speaking practice 2 | Hỏi qua lại **tuổi thơ** (8), **thời gian rảnh** (8), **việc học, công việc** (6); **thi thử 2 đổi vai** (Tom giám khảo, Emma thí sinh): Phần 1 (7 câu), Phần 2 "a happy memory from your childhood" (bài nói của Emma), Phần 3 (4 câu) | title, qa, bullets, letter | Tự viết |
+| 14 | `U01-speaking-practice-3` Speaking practice 3 | Hỏi qua lại **các giai đoạn cuộc đời** (8), **sinh nhật, Tết, lễ hội** (8), **bạn bè** (6), **tương lai** (4); **thi thử 3**: cùng thẻ đề Phần 2 "a family celebration that you enjoyed" — Tom (Tết) và Emma (kỷ niệm 50 năm ngày cưới của ông bà), Phần 3 hỏi hai chiều | title, qa, bullets, letter | Tự viết |
+| 14 | `U01-speaking-practice-4` Speaking practice 4 | Hỏi qua lại **sinh hoạt hằng ngày** (8), **tên gọi** (6), **ảnh** (6); **thi thử 4**: Phần 2 "a friend you have known for a long time" (Tom), Phần 3 hỏi hai chiều | title, qa, bullets, letter | Tự viết |
 | 10 | `U02-speaking-1` Vocabulary 1 & Speaking 1 | Chính tả 8 môn học, đuôi -ics, nối tranh, kể về trường cũ, quá khứ đơn (có / bất quy tắc), *Watch out!*, đuôi -ed /t/ /d/ /ɪd/ | blanks, vocab, match, qa, errors, practice | Chắc chắn (chính tả, dạng quá khứ) + gợi ý (nối tranh); Track 12–13 |
 | 10 | `U02-speaking-2` Speaking 2 & Vocabulary 2 | Track 14 đọc lại với **ba giọng** (Emma giám khảo, Tom, Mai `af_bella`), chọn câu trả lời hay hơn, trả lời + lý do + chi tiết, P/N 10 câu, cụm từ thích / không thích, bài nói mẫu của Mai | mcq + `hide_text` + `roles`, compare, blanks, vocab, letter | Tapescript Track 14 + gợi ý |
 | 10 | `U02-listening-1` Listening 1: numbers | -teen / -ty, số hàng trăm có *and*, số hàng nghìn; **phát Track 15–17 của sách** | compare, blanks (lưới), bullets + `track` | Tapescript Track 16 |
@@ -144,7 +148,7 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening` và Jerry `am_liam` trong
 `U03-exam-listening`), tốc độ 0,9.
 
-## 5. Quy trình làm một video (đã dùng cho cả 37 video)
+## 5. Quy trình làm một video (đã dùng cho cả 40 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -188,7 +192,7 @@ Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listeni
 | `blanks` | `n`, `answer` (+ `tip`) | Ô nghe – chép; có `q` chứa `___` (+ `hint`) thì là câu điền từ | Vocabulary, Consolidation, Exam listening |
 | `mcq` | `n`, `q`, `options`, `answer` (+ `keys`) | Trắc nghiệm a/b/c hoặc 1/2/3 | Exam listening, Exam reading |
 | `passage` | `text` (+ `label`, `note`) | Bài đọc trên màn hình **kèm phụ đề**; dòng thoại `mark` tô vàng cụm từ trong đoạn `focus` — dạy dò tìm | Unit 2 Reading 1, 2 |
-| `shadow` | `text` (+ `by`, `vi`, `tip`) | **Nghe – nhắc lại (shadowing)**: câu mẫu chữ to theo màu người nói (`by`), nghĩa, mẹo nối âm / trọng âm; dòng thoại `echo: true` chừa khoảng lặng đếm ngược "Now you!" | Unit 1 Speaking: more practice |
+| `shadow` | `text` (+ `by`, `vi`, `tip`) | **Nghe – nhắc lại (shadowing)**: câu mẫu chữ to theo màu người nói (`by`), nghĩa, mẹo nối âm / trọng âm; dòng thoại `echo: true` chừa khoảng lặng đếm ngược "Now you!" | Chưa video nào dùng (đợt 14 thử, người học muốn tự tạm dừng) |
 
 Trường của cảnh: `chapter` (tên chương — nút nhảy trong app), `heading`, `heading_vi`, `hide_text` (bài nghe:
 thanh phụ đề chỉ hiện người nói và "Listen carefully…"), `roles` (vai trong cảnh, ví dụ
@@ -228,7 +232,9 @@ dùng cho bài nói mẫu trong thi thử.
 | Picture a / b / c | `Picture eigh`, `Picture B` | "Picture a" đọc thành mạo từ |
 | dấu gạch dài `–` giữa câu | thay bằng dấu chấm / phẩy | Kokoro không ngắt hơi ở `–` |
 | lives, live, record, use (động từ) | `livz`, `liv`, `re-cord`, `Yooz` | Từ đồng tự: Kokoro đọc "My family lives" /laɪvz/ (cuộc đời), "often live" /laɪv/ (trực tiếp), "record yourself" và "Use the …" theo danh từ |
-| Tran Minh Tuan | `Chan Min Twan` | Tên người Việt (Tr- đọc như ch-) |
+| Tran Minh Tuan, Tuan, Khoa, Nguyen, Anh, Linh | `Chan Min Twan`, `Twan`, `Kwah`, `Win`, `Ahn`, `Lin` | Tên người Việt (Tr- đọc như ch-) |
+| I'm used to it (đã quen), close my eyes | `yoost`, `cloze` | Kokoro đọc /juːzd/ và /kloʊs/ (tính từ) |
+| 1960s | `nineteen sixties` | Thập niên đọc theo kiểu nói |
 
 Những lỗi đã gặp và cách tránh:
 
@@ -252,8 +258,12 @@ Những lỗi đã gặp và cách tránh:
 - **Tách đoạn trong một track dài** (Track 33, 4 đoạn hội thoại): khoảng lặng ≥ 1,2 giây giữa các đoạn
   (`silencedetect=noise=-35dB:d=1.2`); kiểm lại bằng Tapescript trước khi dùng mốc.
 - **Từ đồng tự đọc sai** (đợt 14): bộ soát chữ cái / số không bắt được lỗi này. Phiên âm mọi câu có lives, live, record,
-  use, close, minute, read… bằng `k.tokenizer.phonemize`, xem trọng âm và nguyên âm, sai thì viết lại trong `say`
-  (bảng trên).
+  use, used, close, minute, read… bằng `k.tokenizer.phonemize`, xem trọng âm và nguyên âm, sai thì viết lại trong `say`
+  (bảng trên). Cùng một từ có khi đúng, có khi sai tùy câu: "they live quite far" đúng, "young couples live on their own"
+  sai. Vì vậy phải phiên âm cả câu, không chỉ từng từ.
+- **Video luyện nói thêm** (đợt 14): người học tự tạm dừng video để trả lời. Vì vậy video chỉ gồm câu hỏi và câu trả lời
+  mẫu, không có khoảng lặng chờ (`wait`, `echo`). Cảnh `qa` vốn hiện câu hỏi trước ("Think: how would you answer?") rồi
+  mới mở câu trả lời, đúng chỗ để người học tạm dừng.
 - **Mẹo phát âm khớp giọng đọc**: Emma, Tom là giọng Mỹ (`af_heart`, `am_michael`), nên phiên âm trong `tip` của cảnh
   `shadow` theo kiểu Mỹ (/ˈoʊldər/, /lɑːts/), lấy từ chính phiên âm của Kokoro. Phông Liberation Sans có đủ ký tự IPA
   nhưng không có dấu nối "‿" hay mũi tên chéo "↘" (hiện thành ô vuông), nên nối âm viết bằng phiên âm liền

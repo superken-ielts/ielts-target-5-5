@@ -66,18 +66,19 @@ try{
     assert.equal(await page.locator("#p-book .phase-head").count(), 3);
   });
 
-  await step("Unit 1 có 14 video bài giảng đủ sáu phần, xếp như trong sách, mở video từ thẻ unit", async () => {
+  await step("Unit 1 có 17 video bài giảng đủ sáu phần, xếp như trong sách, mở video từ thẻ unit", async () => {
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" });
-    assert.equal(await u1.locator(".bk-vids button").count(), 14);
+    assert.equal(await u1.locator(".bk-vids button").count(), 17);
     assert.deepEqual(await u1.locator(".bk-vgroup-t").allTextContents(),
       ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
     assert.match(await u1.locator(".bk-vgroup").last().textContent(), /Exam practice: Listening[\s\S]*Exam practice: Reading/);
-    assert.match(await u1.locator(".bk-vgroup").first().textContent(), /Speaking 1[\s\S]*Speaking 2[\s\S]*more practice, mock test[\s\S]*Vocabulary 1–3/);
+    assert.match(await u1.locator(".bk-vgroup").first().textContent(),
+      /Speaking 1[\s\S]*Speaking 2[\s\S]*Speaking practice 1[\s\S]*Speaking practice 2[\s\S]*Speaking practice 3[\s\S]*Speaking practice 4[\s\S]*Vocabulary 1–3/);
     assert.match(await u1.locator(".bk-vids").textContent(), /Writing 1: organizing your writing[\s\S]*Writing 2: types of letter[\s\S]*Writing 3: organizing points/);
     await u1.locator(".bk-vids button").first().click();
     await page.waitForSelector("#p-book .bk-video");
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Speaking & Vocabulary/);
-    assert.equal(await page.locator("#p-book video").count(), 4);                 // + video luyện nói thêm, thi thử, shadowing
+    assert.equal(await page.locator("#p-book video").count(), 7);                 // + 4 video luyện nói thêm (hỏi đáp, thi thử)
     const src = await page.locator("#p-book video").first().getAttribute("src");
     assert.match(src, /books\/ielts_target_5_0\/lessons\/U01-speaking-1\.mp4$/);
     const got = await page.evaluate(async u => {
@@ -91,6 +92,20 @@ try{
     const mp4 = await page.evaluate(() => document.createElement("video").canPlayType('video/mp4; codecs="avc1.64001F, mp4a.40.2"'));
     if(!mp4) assert.match(await v1.locator(".bk-msg").textContent(), /không phát được video MP4/);
     else await page.waitForFunction(() => document.querySelector("#p-book video").duration > 60, null, { timeout: 15000 });
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+    // 4 video luyện nói thêm (hỏi đáp qua lại, thi thử) mở từ thẻ unit, trong phiên Speaking & Vocabulary
+    await page.locator("#p-book .bk-unit", { hasText: "Unit 1 · Life" }).locator(".bk-vids button", { hasText: "Speaking practice 4" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 1 · Speaking & Vocabulary/);
+    const practice = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(practice.filter(f => f.includes("practice")),
+      ["U01-speaking-practice.mp4", "U01-speaking-practice-2.mp4", "U01-speaking-practice-3.mp4", "U01-speaking-practice-4.mp4"]);
+    const p4 = page.locator("#lesson-U01-speaking-practice-4");
+    assert.match(await p4.locator(".bk-vid-t").textContent(), /Speaking practice 4: daily life, names, photos/);
+    assert.ok(await p4.locator(".bk-chaps button").count() >= 5);
+    const p4src = await p4.locator("video").getAttribute("src");
+    assert.equal(await page.evaluate(async u => (await fetch(u, { headers: { Range: "bytes=0-99" } })).status, p4src), 206);
     await page.click("#p-book .reader-bar button");
     await page.waitForSelector("#p-book .bk-next");
     // video Writing mở đúng phiên Writing của Unit 1
