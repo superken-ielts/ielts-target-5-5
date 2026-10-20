@@ -22,16 +22,16 @@ theo yêu cầu người học.
 
 Bản đầu (một video 10:22) có các phần: hỏi đáp, thi thử Phần 1–3, nghe – nhắc lại 8 câu (cảnh `shadow`, khoảng lặng
 `echo`) và lượt thi thử chờ 15 giây mỗi câu. Theo góp ý của người học, bản cuối bỏ mọi khoảng lặng chờ và mở rộng thành
-**4 video, @TOTAL@**. Có 115 cặp hỏi – đáp (tính cả câu thi thử Phần 1 và 16 câu Phần 3) và 5 bài nói mẫu Phần 2 hiện chữ theo đoạn. Tom và Emma thay nhau
+**4 video, 35:24, 27 chương**. Có 115 cặp hỏi – đáp (tính cả câu thi thử Phần 1 và 16 câu Phần 3) và 5 bài nói mẫu Phần 2 hiện chữ theo đoạn. Tom và Emma thay nhau
 làm giám khảo, nên cả hai giọng đều có câu trả lời mẫu để shadow. Câu trả lời mẫu tự viết bằng từ vựng Unit 1. Thông tin
 nhân vật giữ khớp ở cả 4 video và các video Unit 1 trước (ghi ở đầu `U01-speaking-practice.yaml`).
 
 | Video | Hỏi qua lại | Thi thử |
 |---|---|---|
-| `U01-speaking-practice` Speaking practice 1 (@D1@) | Gia đình (8 cặp), nơi ở và quê nhà (8) | Emma giám khảo, Tom thí sinh: Phần 1 (8 câu), Phần 2 "an older person in your family who you admire" (thẻ đề, ghi chú, bài nói 123 từ), Phần 3 (4 câu) |
-| `U01-speaking-practice-2` Speaking practice 2 (@D2@) | Tuổi thơ (8), thời gian rảnh (8), việc học và công việc (6) | Đổi vai, Tom giám khảo, Emma thí sinh: Phần 1 (7 câu), Phần 2 "a happy memory from your childhood", Phần 3 (4 câu) |
-| `U01-speaking-practice-3` Speaking practice 3 (@D3@) | Các giai đoạn cuộc đời (8), sinh nhật, Tết, lễ hội (8), bạn bè (6), tương lai (4) | Cùng một thẻ đề Phần 2 "a family celebration that you enjoyed" do hai người trả lời: Tom kể Tết, Emma kể kỷ niệm 50 năm ngày cưới của ông bà. Phần 3 hỏi hai chiều |
-| `U01-speaking-practice-4` Speaking practice 4 (@D4@) | Sinh hoạt hằng ngày (8), tên gọi (6), ảnh (6) | Phần 2 "a friend you have known for a long time" (Tom), Phần 3 hỏi hai chiều |
+| `U01-speaking-practice` Speaking practice 1 (8:45, 6 chương) | Gia đình (8 cặp), nơi ở và quê nhà (8) | Emma giám khảo, Tom thí sinh: Phần 1 (8 câu), Phần 2 "an older person in your family who you admire" (thẻ đề, ghi chú, bài nói 123 từ), Phần 3 (4 câu) |
+| `U01-speaking-practice-2` Speaking practice 2 (9:21, 7 chương) | Tuổi thơ (8), thời gian rảnh (8), việc học và công việc (6) | Đổi vai, Tom giám khảo, Emma thí sinh: Phần 1 (7 câu), Phần 2 "a happy memory from your childhood", Phần 3 (4 câu) |
+| `U01-speaking-practice-3` Speaking practice 3 (9:49, 8 chương) | Các giai đoạn cuộc đời (8), sinh nhật, Tết, lễ hội (8), bạn bè (6), tương lai (4) | Cùng một thẻ đề Phần 2 "a family celebration that you enjoyed" do hai người trả lời: Tom kể Tết, Emma kể kỷ niệm 50 năm ngày cưới của ông bà. Phần 3 hỏi hai chiều |
+| `U01-speaking-practice-4` Speaking practice 4 (7:29, 6 chương) | Sinh hoạt hằng ngày (8), tên gọi (6), ảnh (6) | Phần 2 "a friend you have known for a long time" (Tom), Phần 3 hỏi hai chiều |
 
 Mỗi câu hỏi hiện trước ("Think: how would you answer?") rồi mới mở câu trả lời, kèm cụm từ hay dùng và phụ đề tiếng Việt.
 Đó là chỗ để người học tạm dừng tự trả lời; trong app có thể bấm "Lặp chương này" để luyện một chương nhiều lần.
@@ -56,6 +56,7 @@ Lần dựng đầu, phông thiếu glyph "↘" nên hiện thành ô vuông. Đ
 | Dòng `echo: true` | Sau câu thoại, tự thêm khoảng lặng đếm ngược ⌈1,3 × độ dài câu + 1⌉ giây (ít nhất 3) với lời nhắc "Your turn — repeat after Tom"; `note` thay lời nhắc; chỉ dùng cho câu thoại, không dùng trong `letter` |
 | Đếm ngược | Gom thành một hàm dùng chung cho `wait` và `echo` |
 | Cảnh `letter` có `roles` | Nhãn góc trang "Tom · candidate — đang nói" thay "Tom is reading" (bài nói mẫu trong thi thử); video cũ không đổi vì chưa cảnh `letter` nào có `roles` |
+| Kiểm tra cảnh `qa` | Dòng `reveal` phải do đúng người trả lời ghi trên thẻ (`by`, mặc định người nói cuối). Lỗi này lộ ra ở bản dựng đầu: ba cảnh Tom làm giám khảo ghi "Tom:" cho câu Emma trả lời. Đã thêm `ask` / `by` rồi dựng lại; mọi kịch bản cũ đều qua kiểm tra |
 
 ### File thêm
 
@@ -67,10 +68,10 @@ Lần dựng đầu, phông thiếu glyph "↘" nên hiện thành ô vuông. Đ
 
 | File | Thay đổi |
 |---|---|
-| `agents/lesson_video/script.py` | Kiểu cảnh `shadow`, trường `echo` |
+| `agents/lesson_video/script.py` | Kiểu cảnh `shadow`, trường `echo`; kiểm tra người trả lời trong cảnh `qa` |
 | `agents/lesson_video/timeline.py` | `echo_seconds()`, hàm đếm ngược dùng chung |
 | `agents/lesson_video/slides.py` | `_k_shadow`; nhãn vai trong cảnh `letter` |
-| `agents/tests/test_lesson_video.py` | +5 test (`echo` + `shadow` dựng và vẽ được; 4 kịch bản sai bị chặn) |
+| `agents/tests/test_lesson_video.py` | +6 test (`echo` + `shadow` dựng và vẽ được; 4 kịch bản sai bị chặn; thẻ `qa` ghi sai người trả lời bị chặn) |
 | `books/ielts_target_5_0/lessons/lessons.json` | Thêm 4 mục luyện nói |
 | `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 1: 17 video; phiên Speaking & Vocabulary có 7 video; bước mới: nút "Speaking practice 4" trên thẻ unit mở đúng phiên, đủ 4 video luyện nói theo thứ tự, có nút chương, máy chủ trả MP4 |
 | `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ Unit 1; 4 dòng lịch sử; bảng lịch sử xếp lại theo unit (các dòng Unit 3 từng chèn giữa Unit 1 và Unit 2); `shadow`, `echo`; cách đọc mới; lỗi đã gặp (từ đồng tự theo ngữ cảnh, glyph thiếu, video luyện nói không chờ) |
@@ -83,7 +84,12 @@ Không xóa file nào.
 
 | Lệnh | Kết quả |
 |---|---|
-@TESTS@
+| `cd agents && python -m pytest -q` | 63 passed (+6: `echo` + `shadow`, 4 kịch bản sai bị chặn, thẻ `qa` ghi sai người trả lời bị chặn; hồi quy 40 kịch bản khớp `lessons.json`) |
+| `node --test "tests/web/*.test.mjs"` | 14 passed (Unit 1: 17 video, nhóm Speaking & Vocabulary có 7 video đúng thứ tự) |
+| `node tests/web/book.e2e.mjs` | 15/15 bước OK. Thẻ Unit 1 có 17 video, phiên Speaking & Vocabulary có 7 video. Bước mới: nút "Speaking practice 4" mở đúng phiên, đủ 4 video luyện nói theo thứ tự, có nút chương, máy chủ trả 206 khi tua |
+| Ảnh chụp tab Sách (Playwright, 420 px) | Thẻ Unit 1 hiện "Speaking practice 1–4" kèm thời lượng; phiên học hiện video với các nút chương |
+| `ffprobe` / `volumedetect` / khung hình trích từ MP4 | 4 video, tổng 35:24, 27 chương; tiếng trung bình −17,1 đến −17,4 dB, đỉnh ≤ −0,7 dB. Bản dựng đầu ghi "Tom:" trên thẻ câu trả lời của Emma ở ba cảnh đổi vai; đã sửa (`ask` / `by` + kiểm tra mới), dựng lại và soát lại khung hình |
+| Soát cách đọc, dò ký tự | 7 từ đồng tự và 3 tên riêng viết lại trong `say` (xem trên); mạo từ "A" đầu câu đọc đúng /ɐ/; không còn ký tự thiếu glyph |
 
 ### Còn treo
 

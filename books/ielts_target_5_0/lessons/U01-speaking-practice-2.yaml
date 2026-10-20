@@ -253,23 +253,37 @@ scenes:
     items:
       - q: "Can you tell me your full name, please?"
         a: "Good afternoon. My full name is Emma Louise Clarke, but please call me Emma."
+        ask: tom
+        by: emma
         phrases: ["My full name is…", "please call me…"]
       - q: "Can I see your identification, please?"
         a: "Sure. Here it is."
+        ask: tom
+        by: emma
       - q: "Are you a morning person?"
         a: "Not really. I find it hard to get up early, so I always set two alarms! But once I've had a cup of coffee, I feel fine."
+        ask: tom
+        by: emma
         phrases: ["Not really.", "I find it hard to…", "once I've had…"]
       - q: "What do you usually have for breakfast?"
         a: "Usually just toast and coffee, because I'm always in a hurry. At the weekend, I make a big breakfast with eggs and fruit."
+        ask: tom
+        by: emma
         phrases: ["Usually just…", "in a hurry", "At the weekend…"]
       - q: "What's your favourite kind of weather?"
         a: "I like cool, sunny days, like in autumn. Hot weather makes me tired, so I find the summer here quite difficult!"
+        ask: tom
+        by: emma
         phrases: ["I like…", "makes me tired", "I find… difficult"]
       - q: "Do you prefer living in the city or in the countryside?"
         a: "For now, the city, because there's so much to do. But I grew up near the sea, so sometimes I really miss the quiet and the fresh air."
+        ask: tom
+        by: emma
         phrases: ["For now…", "there's so much to do", "I really miss…"]
       - q: "How do you usually get to work?"
         a: "By motorbike taxi, because it's quick and cheap. But when it rains, I take the bus, and it takes much longer because of the traffic."
+        ask: tom
+        by: emma
         phrases: ["By…", "quick and cheap", "takes much longer"]
     lines:
       - tom: "Now it's mock test time, and I'm the examiner! Part one starts now."
@@ -366,15 +380,23 @@ scenes:
     items:
       - q: "Do children today play differently from children in the past?"
         a: "Yes, I think so. In the past, children played outside with simple things, like balls and bikes. Today, many children play games on tablets and phones, and they often play alone."
+        ask: tom
+        by: emma
         phrases: ["In the past…", "Today…", "they often play alone"]
       - q: "Is it a good idea for young children to use smartphones?"
         a: "Only a little, in my opinion. Some apps can help children to learn, but too much screen time is bad for their eyes and their sleep. Parents should set clear rules."
+        ask: tom
+        by: emma
         phrases: ["in my opinion", "too much screen time", "set clear rules"]
       - q: "What makes a happy childhood?"
         a: "I think the most important thing is love and attention from the family. Children also need time to play freely, and friends of the same age to play with."
+        ask: tom
+        by: emma
         phrases: ["the most important thing is…", "love and attention", "time to play freely"]
       - q: "Should grandparents help to bring up their grandchildren?"
         a: "Yes, if they're happy to do it. Grandparents have a lot of experience and patience. But parents shouldn't depend on them too much, because older people also need rest."
+        ask: tom
+        by: emma
         phrases: ["if they're happy to do it", "experience and patience", "depend on…"]
     lines:
       - tom: "Thank you. We've been talking about a happy memory from your childhood. Now I'd like to ask you some more general questions about this."

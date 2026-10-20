@@ -259,6 +259,14 @@ class Lesson(_M):
                 for k in ("ask", "by"):
                     if k in it and it[k] not in self.speakers:
                         raise ValueError(f"`{k}: {it[k]}` không phải người nói đã khai báo")
+            if sc.kind == "qa":  # thẻ trả lời ghi tên `by` (mặc định người nói cuối trong speakers): phải khớp người đọc
+                last = list(self.speakers)[-1]
+                for ln in sc.lines:
+                    for r in ln.reveal:
+                        by = sc.items[int(r)].get("by") or last
+                        if ln.speaker and ln.speaker != by:
+                            raise ValueError(f"cảnh qa: câu trả lời mục {r} do {ln.speaker} đọc nhưng thẻ ghi {by}"
+                                             f" — thêm `by: {ln.speaker}` (và `ask`) cho mục đó")
         return self
 
     def chapters(self) -> list[tuple[int, str]]:

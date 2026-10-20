@@ -64,6 +64,7 @@ def test_lines_are_normalised():
     lambda d: d["scenes"][1]["lines"].append({"a": "x", "focus": 5}),                 # focus ngoài số mục
     lambda d: d["scenes"][1]["items"][0].pop("answer"),                               # mục thiếu khóa
     lambda d: d["scenes"][2]["items"][0].update(by="zed"),                            # vai không có thật
+    lambda d: d["scenes"][2]["items"][0].pop("by"),                                   # thẻ ghi Ben (mặc định) nhưng Ann trả lời
     lambda d: d["speakers"]["a"].update(color="red"),                                 # màu sai dạng
 ])
 def test_bad_scripts_are_rejected(patch):

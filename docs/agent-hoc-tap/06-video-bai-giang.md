@@ -20,13 +20,16 @@ cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U0
 
 Bảng in bằng lệnh `coverage` sau đợt 14:
 
-### U01 · Life — 6/7 phần có video, 14 video, 1:37:05
+### U01 · Life — 6/7 phần có video, 17 video, 2:02:06
 
 | Phần | Trang | Video | Dài | Chương |
 |---|---|---|---|---|
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-1` — Speaking 1: talking about personal information | 7:14 | 8 |
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-2` — Speaking 2: exchanging personal information | 6:16 | 9 |
-| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-practice` — Speaking: more practice, mock test and shadowing | 10:22 | 11 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-practice` — Speaking practice 1: family and home + mock test | 8:45 | 6 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-practice-2` — Speaking practice 2: childhood, free time, work + mock test | 9:21 | 7 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-practice-3` — Speaking practice 3: stages of life, celebrations + mock test | 9:49 | 8 |
+| Speaking & Vocabulary | sách tr. 10–11 | `U01-speaking-practice-4` — Speaking practice 4: daily life, names, photos + mock test | 7:29 | 6 |
 | Speaking & Vocabulary | sách tr. 10–11 | `U01-vocabulary` — Vocabulary 1–3: family, stages of life, key words | 8:24 | 12 |
 | Listening | Listening tr. 12–13 | `U01-listening-1` — Listening 1: listening for specific information | 6:32 | 7 |
 | Listening | Listening tr. 12–13 | `U01-listening-2` — Listening 2: practising listening for specific information | 6:36 | 8 |
@@ -264,6 +267,9 @@ Những lỗi đã gặp và cách tránh:
 - **Video luyện nói thêm** (đợt 14): người học tự tạm dừng video để trả lời. Vì vậy video chỉ gồm câu hỏi và câu trả lời
   mẫu, không có khoảng lặng chờ (`wait`, `echo`). Cảnh `qa` vốn hiện câu hỏi trước ("Think: how would you answer?") rồi
   mới mở câu trả lời, đúng chỗ để người học tạm dừng.
+- **Thẻ trả lời ghi sai người** (đợt 14): cảnh `qa` mặc định người nói đầu trong `speakers` hỏi, người cuối trả lời.
+  Đổi vai (Tom làm giám khảo) mà quên `ask` / `by` thì thẻ ghi "Tom:" cho câu Emma trả lời. Nay kịch bản bị chặn ngay
+  lúc đọc nếu dòng `reveal` do một người đọc mà thẻ ghi người khác.
 - **Mẹo phát âm khớp giọng đọc**: Emma, Tom là giọng Mỹ (`af_heart`, `am_michael`), nên phiên âm trong `tip` của cảnh
   `shadow` theo kiểu Mỹ (/ˈoʊldər/, /lɑːts/), lấy từ chính phiên âm của Kokoro. Phông Liberation Sans có đủ ký tự IPA
   nhưng không có dấu nối "‿" hay mũi tên chéo "↘" (hiện thành ô vuông), nên nối âm viết bằng phiên âm liền
