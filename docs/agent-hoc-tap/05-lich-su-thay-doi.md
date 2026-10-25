@@ -59,8 +59,15 @@ DURATION_TABLE
   - U03-writing ước 4:20, U03-reading ước 5:12. Thêm nội dung trước khi dựng: thứ tự nét và chính tả; mẹo đọc và đố
     đúng / sai.
   - U02-listening ước 9:45. Bỏ một lần phát lại hội thoại II.
-- Thẻ câu hỏi "Q1 … Q2 …" ngắt dòng ngay sau "Q2.". Thêm vạch ngăn ` / ` giữa các câu hỏi, rồi dựng lại ba video
-  Listening.
+- Soát khung hình video thật thấy thẻ ngắt dòng xấu:
+  - "Q2." hay "5." treo cuối dòng;
+  - cặp オランダ — アムステルダム bị tách;
+  - dòng bắt đầu bằng `/` hay `・`;
+  - "か。" rơi một mình xuống dòng;
+  - chữ Latin xuống dòng sớm một từ.
+
+  Sửa bằng quy tắc ngắt dòng mới trong `jpcard` (file 07 mục 4.3) và vạch ` / ` giữa các câu hỏi, các mục đánh số,
+  rồi dựng lại cả 12 video.
 
 ### File thêm
 
@@ -73,10 +80,10 @@ DURATION_TABLE
 | File | Thay đổi |
 |---|---|
 | `agents/lesson_video/script.py` | Cảnh `jp` nhiều thẻ, `track` trong cảnh `jp`, thẻ `quiz`, kiểm cách đọc theo thẻ |
-| `agents/lesson_video/jpcard.py` | Số thẻ `k/n`, nhãn "BOOK AUDIO" khi phát file nghe của sách |
+| `agents/lesson_video/jpcard.py` | Số thẻ `k/n`, nhãn "BOOK AUDIO" khi phát file nghe của sách. Ngắt dòng: vạch ngăn `\|` `/` `・` trước `—`, số thứ tự đi cùng phần sau, dòng Latin đầy, tránh dòng cuối quá ngắn |
 | `agents/lesson_video/ja.py` | Số khoanh dùng phông CJK, romaji kiểu GENKI, は / へ cuối từ theo cách phát âm |
 | `agents/lesson_video/video.py`, `cli.py` | `prune_manifest`, lệnh `prune` |
-| `agents/tests/test_japanese_video.py` | Cảnh nhiều thẻ + audio sách (vẽ nhãn, số thẻ), kiểm cách đọc theo thẻ, thẻ đề, `focus` ngoài số thẻ, romaji GENKI, こんにちは |
+| `agents/tests/test_japanese_video.py` | Cảnh nhiều thẻ + audio sách (vẽ nhãn, số thẻ), kiểm cách đọc theo thẻ, thẻ đề, `focus` ngoài số thẻ, romaji GENKI, こんにちは, ngắt dòng thẻ, tránh dòng cuối quá ngắn (33 test) |
 | `agents/tests/test_lesson_video.py` | Hồi quy "kịch bản khớp `lessons.json`" chạy cho cả `books/Genki`; test `prune` |
 | `books/Genki/book.yaml`, `book.json` | Lời giới thiệu sách; ghi chú phiên bài 1–3 nói video nào có gì |
 | `books/Genki/lessons/lessons.json` | Thêm 12 video, bỏ 9 tập cũ |

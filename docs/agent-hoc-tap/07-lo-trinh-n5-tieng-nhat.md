@@ -253,9 +253,13 @@ Part C 0.90). Unit 6–12 chưa có video; phiên Hội thoại & từ vựng, �
   - Tầng 3: "NGHĨA TIẾNG VIỆT & GHI CHÚ HÁN-VIỆT".
   - Đoạn văn dài thì tầng 1 cao lên, tầng 2–3 co lại theo chữ.
 - **Xuống dòng.**
-  - Ưu tiên ngắt sau dấu `|` `/` `—` `vs.`, rồi sau dấu cách.
-  - Áp quy tắc kinsoku.
-  - Cụm katakana liền nhau không bị tách.
+  - Ưu tiên ngắt sau vạch ngăn nhóm `|` `/` `・`, rồi mới tới `—` `vs.`. Nhờ vậy cặp "オランダ — アムステルダム"
+    không bị tách khi dòng còn `・`. Sau đó mới tới dấu cách.
+  - Vạch ngăn ở cuối dòng bị bỏ, nên không dòng nào bắt đầu bằng `/` hay `・`.
+  - Số thứ tự `5.` `Q2.` đi cùng phần sau. Danh sách đánh số viết `1. … / 2. …`, không dùng khoảng trắng toàn khổ.
+  - Dòng chữ Latin đầy tới khi từ tiếp theo không vừa.
+  - Dòng cuối chỉ còn vài chữ (dưới 1/4 dòng) thì nhỏ chữ thêm tối đa 6px nếu nhờ đó bớt được một dòng.
+  - Áp quy tắc kinsoku. Cụm katakana liền nhau không bị tách.
 - **Người nói.**
   - `lang: ja` và giọng `jf_*` / `jm_*`.
   - `speed` theo người nói hoặc theo từng dòng (0.5–2.0).
@@ -299,6 +303,10 @@ Part C 0.90). Unit 6–12 chưa có video; phiên Hội thoại & từ vựng, �
   - U03-writing ước 4:20 trước khi dựng. Thêm cảnh thứ tự nét và cảnh chính tả.
   - U03-reading ước 5:12. Thêm mẹo đọc câu không có dấu cách và cảnh đố đúng / sai.
   - U02-listening ước 9:45. Bỏ một lần phát lại hội thoại II.
+- **Ngắt dòng xấu trên thẻ** (thấy khi soát khung hình video thật).
+  - Lỗi: "5." hay "Q2." treo cuối dòng; cặp nước — thủ đô bị tách đôi; dòng bắt đầu bằng `/` hay `・`; "か。" rơi
+    một mình xuống dòng; chữ Latin xuống dòng sớm một từ.
+  - Sửa: viết lại quy tắc ngắt dòng của `jpcard` (mục 4.3), thêm test, rồi dựng lại cả 12 video.
 - **Máy khởi động lại giữa lúc dựng.** Tiếng đã đọc còn trong bộ nhớ đệm, nên dựng lại không phải đọc lại.
 
 ### 4.5 Kế hoạch bài 4–12

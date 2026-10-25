@@ -11,6 +11,7 @@ không để dấu câu Nhật đứng đầu dòng; nhóm furigana `{漢字|か
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import Optional
 
@@ -31,7 +32,9 @@ TIER3 = (40, 557, W - 40, 690)
 X0, TEXT_W = 72, W - 40 - 72 - 30
 NO_START = set("、。，．・：；？！ー）」』】〉》〕］｝)]}?!.,:;…‥～〜ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮ")
 NO_END = set("（「『【〈《〔［｛([{")
-SEPARATORS = ("|", "/", "—", "vs.")
+SEPARATORS = ("|", "/", "—", "vs.", "・")
+STRONG = ("|", "/", "・")                 # vạch ngăn giữa các nhóm: ngắt ở đây trước "—" (nối hai vế một cặp)
+LABEL = re.compile(r"^Q?\d+\.$")         # số thứ tự "5." / "Q2." đi cùng phần sau, không đứng cuối dòng
 
 
 def _kata(ch: str) -> bool:
@@ -118,10 +121,11 @@ def _break(us: list[Unit], limit: float) -> list[list[Unit]]:
     for u in us:
         if cur and w + u.w > limit and not u.space:
             nxt: list[Unit] = []
-            # câu có dấu cách (mẫu câu, câu tách cụm): ngắt ở vạch ngăn | / —, không thì ở dấu cách cuối,
-            # thay vì cắt giữa một từ; đoạn văn Nhật liền chữ thì ngắt ở bất kỳ chữ nào
-            spaces = [k for k, x in enumerate(cur) if x.space and 0 < k < len(cur) - 1]
-            seps = [k for k in spaces if cur[k - 1].base in SEPARATORS]
+            # câu có dấu cách (mẫu câu, câu tách cụm): ngắt ở vạch ngăn | / ・ rồi mới tới —, không thì ở dấu
+            # cách cuối, thay vì cắt giữa một từ; đoạn văn Nhật liền chữ thì ngắt ở bất kỳ chữ nào
+            spaces = [k for k, x in enumerate(cur) if x.space and k and not LABEL.match(cur[k - 1].base)]
+            seps = ([k for k in spaces if cur[k - 1].base in STRONG]
+                    or [k for k in spaces if cur[k - 1].base in SEPARATORS])
             k = (seps or spaces or [None])[-1]
             if k is not None and (seps or sum(x.w for x in cur[k + 1:]) <= 0.5 * limit):
                 nxt, cur = cur[k + 1:], cur[:k]
@@ -183,12 +187,20 @@ def layout(d, text: str, size: int, limit: float, bold: bool = False) -> Block:
 
 
 def fit(d, text: str, sizes: range, limit: float, max_h: float, max_lines: int = 99, bold: bool = False) -> Block:
-    """Cỡ chữ lớn nhất trong `sizes` để đoạn văn vừa chiều cao `max_h` và tối đa `max_lines` dòng."""
+    """Cỡ chữ lớn nhất trong `sizes` để đoạn văn vừa chiều cao `max_h` và tối đa `max_lines` dòng. Dòng cuối chỉ còn
+    vài chữ (dưới 1/4 dòng) thì nhỏ chữ thêm tối đa 6px nếu nhờ đó bớt được một dòng."""
     b = None
     for size in sizes:
         b = layout(d, text, size, limit, bold)
         if b.height <= max_h and len(b.lines) <= max_lines:
-            return b
+            break
+    else:
+        return b
+    if len(b.lines) > 1 and sum(u.w for u in b.lines[-1]) < 0.25 * limit:
+        for size in range(b.size - 1, max(b.size - 7, sizes.stop), -1):
+            c = layout(d, text, size, limit, bold)
+            if len(c.lines) < len(b.lines):
+                return c
     return b
 
 

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from lesson_video import ja, script as sc, timeline, tts
+from lesson_video import ja, jpcard, script as sc, timeline, tts
 from lesson_video.slides import H, W, Slides
 
 JP = {
@@ -109,6 +109,40 @@ def test_jp_scene_renders(tmp_path):
         assert img.getpixel((5, 5)) == (0x0F, 0x25, 0x37)             # nền navy
         assert img.getpixel((W // 2, 112)) == (0xFA, 0xFC, 0xFE)      # thẻ trắng tầng 1
         assert img.getpixel((60, 705)) == (0xF3, 0x9C, 0x12)          # thanh tiến độ màu cam
+
+
+def _wrap(text: str, size: int = 46, limit: float = jpcard.TEXT_W) -> list[str]:
+    from PIL import Image, ImageDraw
+    return ["".join(u.base for u in line) for line in jpcard.layout(ImageDraw.Draw(Image.new("RGB", (8, 8))), text, size, limit).lines]
+
+
+def test_card_line_breaks():
+    # cặp nối bằng — không bị tách khi còn vạch ngăn mạnh hơn (・ / |); vạch ngăn không đứng đầu hay cuối dòng
+    pairs = _wrap("マレーシア — クアラルンプール ・ オランダ — アムステルダム ・ アメリカ — ワシントン{DC|ディーシー}")
+    assert len(pairs) > 1 and all(line.count("—") == line.count("・") + 1 for line in pairs)
+    for text in ("たなか ・ やまもと ・ さくま ・ たかはし ・ もりかわ ・ くまもと ・ おかやま ・ もりおか ・ よこはま",
+                 "メアリー：はじめまして。メアリー・ハートです。 / アリゾナだいがくの がくせいです。にねんせいです。"):
+        lines = _wrap(text, 41)
+        assert len(lines) > 1 and not any(line[0] in "・/" or line[-1] in "・/ " for line in lines)
+    # số thứ tự đi cùng mục của nó
+    lines = _wrap("1. いちこ 2. たんこ 3. さふとん 4. かいこくしん 5. たんほほ 6. かんへき")
+    assert len(lines) == 2 and lines[1].startswith(("4. ", "5. ", "6. "))
+    # chữ Latin ngắt theo từ, mỗi dòng đầy tới khi từ đầu dòng sau không vừa nữa
+    from PIL import Image, ImageDraw
+    d = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    words = "This line is long enough to need a second line at this size, and maybe a third one too".split()
+    lines = _wrap(" ".join(words), 23, 300)
+    assert len(lines) > 2 and " ".join(lines).split() == words
+    assert all(jpcard.width(d, a + " " + b.split()[0], 23) > 300 for a, b in zip(lines, lines[1:]))
+
+
+def test_fit_avoids_a_short_last_line():
+    from PIL import Image, ImageDraw
+    d = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    text = "わたしは にほんじんじゃないです。ベトナムじんです。"
+    assert len(jpcard.layout(d, text, 46, jpcard.TEXT_W).lines) == 2       # ở cỡ 46 chỉ "す。" rơi xuống dòng
+    b = jpcard.fit(d, text, range(46, 21, -1), jpcard.TEXT_W, 200)
+    assert len(b.lines) == 1 and 40 <= b.size < 46
 
 
 needs_misaki_lazy = pytest.mark.skipif(not ja.available(), reason='chưa cài misaki[ja] (pip install "misaki[ja]")')

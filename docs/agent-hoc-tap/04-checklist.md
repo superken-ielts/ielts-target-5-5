@@ -330,6 +330,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Ngữ pháp của Part A giảng trong Speaking và Writing; ghi chú từng phiên của bài 1–3 trong `book.yaml` nói video có gì.
   - Cảnh `jp`: nhiều thẻ chọn bằng `focus` (số `k/n` trên thanh tiêu đề), dòng `track` phát file nghe của sách (nhãn "BOOK AUDIO"), thẻ đề `quiz: true`; lệnh `check` kiểm cách đọc theo từng thẻ.
   - Lệnh `prune`: bỏ khỏi `lessons.json` và xóa `.mp4` của video không còn kịch bản. GENKI còn 18 video.
+  - Ngắt dòng của thẻ: vạch ngăn `|` `/` `・` trước `—` (không tách cặp), số thứ tự đi cùng phần sau, không dòng nào bắt đầu bằng vạch ngăn, dòng Latin đầy, tránh dòng cuối chỉ còn vài chữ.
   - Test: hồi quy "video GENKI khớp `lessons.json`", `prune`, cảnh nhiều thẻ + audio sách, kiểm cách đọc theo thẻ; e2e: Unit 1 có 4 video Listening → Reading dài 5–10 phút, nút Speaking mở phiên Part B.
 
 ### Cổng G2
