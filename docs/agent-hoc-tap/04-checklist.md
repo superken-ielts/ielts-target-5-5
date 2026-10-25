@@ -322,7 +322,15 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Sửa số thứ tự điểm ngữ pháp theo mục lục sách, 日本の本 → 日本語の本, đoạn văn 7 câu, tốc độ Part C 0.90.
   - `lesson_video` đọc tiếng Nhật: cảnh `jp` ba tầng (furigana, romaji, tiếng Anh, tiếng Việt + Hán-Việt), giọng `jf_alpha` qua `misaki[ja]`, tốc độ theo người nói / từng câu; lệnh `check` so cách đọc với furigana và romaji.
   - *Đợt 15:* sửa video dài hơn tiếng khi chỉ có vài khung hình (`loudnorm` chạy ở bước riêng).
-- [ ] **P2-48** Video N5 Unit 6–12 (21 tập) theo kế hoạch ở mục 4.5 file 07: tập 2–4 phút, phát hội thoại gốc bằng dòng `track`, có `echo` để nhại theo, bỏ romaji.
+  - *Đợt 16:* 9 tập của bài 1–3 được thay bằng bốn video kỹ năng mỗi bài (P2-49); còn 6 tập của bài 4–5.
+- [ ] **P2-48** Video N5 bài 4–12 theo khung bốn kỹ năng ở mục 4.5 file 07: mỗi bài Speaking, Writing, Listening, Reading, mỗi video 5–10 phút; bài 4–5 thay ba tập ngắn hiện có.
+  - *Đợt 16:* đổi kế hoạch cũ (tập 2–4 phút, `echo`, bỏ romaji) sang khung bốn kỹ năng đã làm cho bài 1–3 (P2-49).
+- [x] **P2-49** **GENKI bài 1–3: bốn video kỹ năng 5–10 phút mỗi bài** (12 video, TOTAL_TIME), thay 9 tập 30–45 giây của bản thiết kế.
+  - Speaking gắn vào Part B, Writing vào Part C, Listening vào Hội thoại & từ vựng (audio hội thoại gốc K0u-01…04), Reading vào Đọc – viết (bài tập 読み書き với track Y). Làm Speaking và Writing trước theo yêu cầu người học.
+  - Ngữ pháp của Part A giảng trong Speaking và Writing; ghi chú từng phiên của bài 1–3 trong `book.yaml` nói video có gì.
+  - Cảnh `jp`: nhiều thẻ chọn bằng `focus` (số `k/n` trên thanh tiêu đề), dòng `track` phát file nghe của sách (nhãn "BOOK AUDIO"), thẻ đề `quiz: true`; lệnh `check` kiểm cách đọc theo từng thẻ.
+  - Lệnh `prune`: bỏ khỏi `lessons.json` và xóa `.mp4` của video không còn kịch bản. GENKI còn 18 video.
+  - Test: hồi quy "video GENKI khớp `lessons.json`", `prune`, cảnh nhiều thẻ + audio sách, kiểm cách đọc theo thẻ; e2e: Unit 1 có 4 video Listening → Reading dài 5–10 phút, nút Speaking mở phiên Part B.
 
 ### Cổng G2
 

@@ -1,0 +1,311 @@
+# U03 · Reading — GENKI I 読み書き bài 3 まいにちのせいかつ (trang 304–307). Video luyện đọc ~6 phút cho phiên
+# Đọc – viết: 15 chữ Hán trong từ (giờ, tháng, số), I-A đọc giá tiền viết bằng chữ Hán (thẻ đố không có furigana),
+# I-B viết giá bằng chữ Hán, mẹo đọc câu không có dấu cách, II bài đọc まいにちのせいかつ với audio gốc Y03 và điền
+# lịch, rồi đố đúng / sai. Bài đọc chép từ trang 307 (không có dấu cách như sách). Xem ghi chú đầu U01-reading.yaml.
+id: U03-reading
+activity: U03-read-write
+title: "Unit 3 · Daily Life"
+subtitle: "Reading · Number kanji, prices, and the passage まいにちのせいかつ"
+title_vi: "Luyện đọc — chữ Hán số trong từ, giá tiền, bài đọc まいにちのせいかつ (audio gốc)"
+tag: "GENKI L3 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Unit 3 Reading · まいにちのせいかつ (p. 304–307)"
+    items:
+      - jp: "まいにちの せいかつ"
+        romaji: "Mainichi no seekatsu"
+        en: "Today: read the first 15 kanji inside words, read prices written in kanji, then the passage 'Daily Life' with the book's audio, and fill in the schedule."
+        vi: "Hôm nay: đọc 15 chữ Hán đầu tiên trong từ, đọc giá tiền viết bằng chữ Hán, rồi bài đọc \"Sinh hoạt hằng ngày\" kèm audio gốc và điền lịch."
+    lines:
+      - emma: "Welcome to Unit 3 reading practice. Open your textbook at the reading and writing section, Lesson 3, page 304. Today you read the first fifteen kanji inside real words, read prices, and then read a short passage about a student's day."
+      - yuki: "まいにちのせいかつ。"
+        pause: 1
+
+  - kind: jp
+    chapter: "Kanji in words"
+    heading: "Kanji of Lesson 3 · Inside words"
+    items:
+      - jp: "{一時|いちじ} ・ {二時|にじ} ・ {三時|さんじ} ・ {四時|よじ} ・ {五時|ごじ} ・ {六時|ろくじ} ・ {七時|しちじ} ・ {八時|はちじ} ・ {九時|くじ} ・ {十時|じゅうじ}"
+        romaji: "ichiji · niji · sanji · yoji · goji · rokuji · shichiji · hachiji · kuji · juuji"
+        en: "One o'clock to ten o'clock. Careful with 4, 7 and 9."
+        vi: "Từ 1 giờ đến 10 giờ. Chú ý 4, 7, 9 giờ."
+      - jp: "{三月|さんがつ} ・ {四月|しがつ} ・ {七月|しちがつ} ・ {九月|くがつ} ・ {十月|じゅうがつ}"
+        romaji: "sangatsu · shigatsu · shichigatsu · kugatsu · juugatsu"
+        en: "Months: number + 月. March, April (しがつ), July (しちがつ), September (くがつ), October."
+        vi: "Tháng: số + 月. Tháng 3, tháng 4 (しがつ), tháng 7 (しちがつ), tháng 9 (くがつ), tháng 10."
+      - jp: "{一年生|いちねんせい} ・ {十九歳|じゅうきゅうさい} ・ {六百|ろっぴゃく} ・ {八百|はっぴゃく} ・ {三千|さんぜん} ・ {一万|いちまん}"
+        romaji: "ichinensee · juukyuusai · roppyaku · happyaku · sanzen · ichiman"
+        en: "first-year student, nineteen years old, 600, 800, 3,000, 10,000."
+        vi: "sinh viên năm nhất, 19 tuổi, 600, 800, 3.000, 10.000."
+    lines:
+      - emma: "The kanji pages show each character inside real words. Read the times with Yuki."
+      - yuki: "いちじ、にじ、さんじ、よじ、ごじ、ろくじ、しちじ、はちじ、くじ、じゅうじ。"
+        pause: 2.2
+      - emma: "Months are the number plus the kanji for moon. April, July and September use special readings."
+        focus: 1
+      - yuki: "さんがつ、しがつ、しちがつ、くがつ、じゅうがつ。"
+        pause: 2
+      - emma: "And more words from the kanji pages."
+        focus: 2
+      - yuki: "一年生、十九歳、六百、八百、三千、一万。"
+        pause: 2
+
+  - kind: jp
+    chapter: "I-A. Read the prices"
+    heading: "I-A (p. 306) · Read the price in kanji"
+    items:
+      - jp: "ハンカチ ・ 六百五十円"
+        quiz: true
+        en: "A handkerchief. Read the price aloud, then write it in numbers."
+        vi: "Khăn tay. Đọc to giá tiền rồi viết bằng số."
+      - jp: "{六百五十円|ろっぴゃくごじゅうえん} → ¥650"
+        romaji: "roppyaku gojuu en"
+        en: "650 yen."
+        vi: "650 yên."
+      - jp: "せんす ・ 千八百円"
+        quiz: true
+        en: "A folding fan."
+        vi: "Quạt xếp."
+      - jp: "{千八百円|せんはっぴゃくえん} → ¥1,800"
+        romaji: "senhappyaku en"
+        en: "1,800 yen."
+        vi: "1.800 yên."
+      - jp: "きもの ・ 七十一万四千円"
+        quiz: true
+        en: "A kimono. Split it at 万: 七十一万 / 四千."
+        vi: "Kimono. Tách ở chữ 万: 七十一万 / 四千."
+      - jp: "{七十一万四千円|ななじゅういちまんよんせんえん} → ¥714,000"
+        romaji: "nanajuuichiman yonsen en"
+        en: "714,000 yen."
+        vi: "714.000 yên."
+      - jp: "テレビ ・ 十二万三千円"
+        quiz: true
+        en: "A TV."
+        vi: "Ti vi."
+      - jp: "{十二万三千円|じゅうにまんさんぜんえん} → ¥123,000"
+        romaji: "juuniman sanzen en"
+        en: "123,000 yen."
+        vi: "123.000 yên."
+      - jp: "いえ ・ 三千九百万円"
+        quiz: true
+        en: "A house. 三千九百 ten-thousands."
+        vi: "Ngôi nhà. 3.900 vạn."
+      - jp: "{三千九百万円|さんぜんきゅうひゃくまんえん} → ¥39,000,000"
+        romaji: "sanzen kyuuhyakuman en"
+        en: "39 million yen."
+        vi: "39 triệu yên."
+    lines:
+      - emma: "Exercise A. Each item has a price written in kanji. Read it aloud before Yuki does. Big numbers are easier if you split them at the kanji for ten thousand. First, a handkerchief."
+      - emma: "Did you read it? Here is the answer."
+        focus: 1
+      - yuki: "六百五十円。"
+        pause: 1.5
+      - emma: "A folding fan."
+        focus: 2
+        pause: 3
+      - emma: "Answer."
+        focus: 3
+      - yuki: "千八百円。"
+        pause: 1.5
+      - emma: "A kimono. Split it at ten thousand."
+        focus: 4
+        pause: 3
+      - emma: "Answer."
+        focus: 5
+      - yuki: "七十一万四千円。"
+        pause: 1.8
+      - emma: "A TV."
+        focus: 6
+        pause: 3
+      - emma: "Answer."
+        focus: 7
+      - yuki: "十二万三千円。"
+        pause: 1.8
+      - emma: "And a house."
+        focus: 8
+        pause: 3
+      - emma: "Answer."
+        focus: 9
+      - yuki: "三千九百万円。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "I-B. Write the prices"
+    heading: "I-B (p. 306) · Write the price in kanji"
+    items:
+      - jp: "¥140 → {百四十円|ひゃくよんじゅうえん}"
+        romaji: "hyaku yonjuu en"
+        en: "Write 140 yen in kanji. No 一 before 百 or 千: just 百, 千."
+        vi: "Viết 140 yên bằng chữ Hán. Không viết 一 trước 百, 千."
+      - jp: "¥6,070 → {六千七十円|ろくせんななじゅうえん}"
+        romaji: "rokusen nanajuu en"
+        en: "6,070 yen: there is no hundreds, so skip it."
+        vi: "6.070 yên: không có hàng trăm thì bỏ qua."
+      - jp: "¥12,500 → {一万二千五百円|いちまんにせんごひゃくえん}"
+        romaji: "ichiman nisen gohyaku en"
+        en: "12,500 yen: 万 needs 一 before it — 一万."
+        vi: "12.500 yên: 万 phải có 一 phía trước — 一万."
+    lines:
+      - emma: "Exercise B is the other way round: write the price in kanji. Pause the video and write it, then check. One hundred and forty yen."
+      - yuki: "百四十円。"
+        pause: 1.8
+      - emma: "Six thousand and seventy yen. There are no hundreds, so you simply skip them."
+        focus: 1
+      - yuki: "六千七十円。"
+        pause: 1.8
+      - emma: "Twelve thousand five hundred yen. Ten thousand always needs the kanji for one in front of it."
+        focus: 2
+      - yuki: "一万二千五百円。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Reading tip: no spaces"
+    heading: "Reading tip · No spaces? Find the particles"
+    items:
+      - jp: "わたしはまいにち{七時|しちじ}におきます。"
+        romaji: "Watashi wa mainichi shichiji ni okimasu."
+        en: "Japanese texts have no spaces between words — like the passage on page 307."
+        vi: "Văn bản tiếng Nhật không có dấu cách giữa các từ — như bài đọc trang 307."
+      - jp: "わたしは ／ まいにち ／ {七時|しちじ}に ／ おきます。"
+        romaji: "Watashi wa / mainichi / shichiji ni / okimasu."
+        en: "Split after the particles は, に, で, を, へ. Kanji and katakana words stand out, and the verb ～ます ends the sentence."
+        vi: "Tách sau các trợ từ は, に, で, を, へ. Chữ Hán và katakana dễ nhận ra, động từ ～ます đứng cuối câu."
+      - jp: "{四時|よじ}に ／ としょかんで ／ ほんを ／ よみます。"
+        romaji: "Yoji ni / toshokan de / hon o / yomimasu."
+        en: "At four / at the library / books / read."
+        vi: "Lúc 4 giờ / ở thư viện / sách / đọc."
+    lines:
+      - emma: "The passage is written without spaces, like real Japanese. Here is its first sentence."
+      - yuki: "わたしはまいにちしちじに起きます。"
+        pause: 1.5
+      - emma: "To read it, look for the particles, and split the sentence after them. Kanji and katakana words also stand out, and the verb always comes at the end."
+        focus: 1
+      - yuki: "わたしは、まいにち、しちじに、起きます。"
+        pause: 1.5
+      - emma: "Try another sentence from the passage."
+        focus: 2
+      - yuki: "よじに、図書館で、本を、読みます。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "II. まいにちのせいかつ"
+    heading: "II (p. 307) · A student's daily life"
+    items:
+      - jp: "わたしはまいにち{七時|しちじ}におきます。うちであさごはんをたべます。{八時|はちじ}にだいがくへいきます。{九時|くじ}ににほんごをべんきょうします。{十二時半|じゅうにじはん}にだいがくでひるごはんをたべます。ときどきコーヒーをのみます。{四時|よじ}にとしょかんでほんをよみます。{六時|ろくじ}ごろうちへかえります。{十時|じゅうじ}にテレビをみます。{十二時|じゅうにじ}ごろねます。"
+        en: "Fill in the schedule: 7:00 ___ / (  ) go to the university / 9:00 ___ / (  ) eat lunch / 4:00 ___ / 6:00 ___ / (  ) watch TV / (  ) ___"
+        vi: "Điền lịch: 7:00 ___ / (  ) đi đến trường / 9:00 ___ / (  ) ăn trưa / 4:00 ___ / 6:00 ___ / (  ) xem TV / (  ) ___"
+      - jp: "わたしはまいにち{七時|しちじ}におきます。うちであさごはんをたべます。"
+        romaji: "Watashi wa mainichi shichiji ni okimasu. Uchi de asagohan o tabemasu."
+        en: "7:00 — gets up, then eats breakfast at home."
+        vi: "7:00 — dậy, rồi ăn sáng ở nhà."
+      - jp: "{八時|はちじ}にだいがくへいきます。{九時|くじ}ににほんごをべんきょうします。"
+        romaji: "Hachiji ni daigaku e ikimasu. Kuji ni nihongo o benkyoo shimasu."
+        en: "(8:00) goes to the university; 9:00 studies Japanese. へ = to (a destination)."
+        vi: "(8:00) đến trường; 9:00 học tiếng Nhật. へ (đọc \"e\") = đến (nơi đến)."
+      - jp: "{十二時半|じゅうにじはん}にだいがくでひるごはんをたべます。ときどきコーヒーをのみます。"
+        romaji: "Juuniji han ni daigaku de hirugohan o tabemasu. Tokidoki koohii o nomimasu."
+        en: "(12:30) eats lunch at the university; sometimes drinks coffee."
+        vi: "(12:30) ăn trưa ở trường; thỉnh thoảng uống cà phê."
+      - jp: "{四時|よじ}にとしょかんでほんをよみます。{六時|ろくじ}ごろうちへかえります。"
+        romaji: "Yoji ni toshokan de hon o yomimasu. Rokuji goro uchi e kaerimasu."
+        en: "4:00 reads books at the library; 6:00 goes home (at about six)."
+        vi: "4:00 đọc sách ở thư viện; 6:00 về nhà (khoảng 6 giờ)."
+      - jp: "{十時|じゅうじ}にテレビをみます。{十二時|じゅうにじ}ごろねます。"
+        romaji: "Juuji ni terebi o mimasu. Juuniji goro nemasu."
+        en: "(10:00) watches TV; (about 12:00) goes to bed."
+        vi: "(10:00) xem TV; (khoảng 12:00) đi ngủ."
+    lines:
+      - emma: "Reading practice. A student writes about his daily routine. Listen and read along, and fill in the schedule from your book."
+      - track: Y03
+        note: "読み書き II · Y03"
+      - emma: "Let's check, two sentences at a time."
+        focus: 1
+      - yuki: "わたしはまいにちしちじに起きます。うちで朝ご飯を食べます。"
+        pause: 1.8
+      - yuki: "八時に大学へ行きます。くじににほんごを勉強します。"
+        focus: 2
+        pause: 1.8
+      - yuki: "十二時半に大学で昼ご飯を食べます。ときどきコーヒーを飲みます。"
+        focus: 3
+        pause: 1.8
+      - yuki: "よじに図書館で本を読みます。六時ごろうちへ帰ります。"
+        focus: 4
+        pause: 1.8
+      - yuki: "十時にテレビを見ます。十二時ごろ寝ます。"
+        focus: 5
+        pause: 1.8
+      - emma: "Now listen to the whole passage once more and read along. Try to read at the same speed."
+        focus: 0
+      - track: Y03
+        note: "読み書き II · read along"
+
+  - kind: jp
+    chapter: "True or false?"
+    heading: "Check · True (○) or false (×)?"
+    items:
+      - jp: "① うちで あさごはんを たべます。"
+        quiz: true
+        en: "True (○) or false (×)? Find the sentence in the passage."
+        vi: "Đúng (○) hay sai (×)? Tìm câu trong bài đọc."
+      - jp: "○ うちで あさごはんを たべます。"
+        romaji: "Uchi de asagohan o tabemasu."
+        en: "True: the student eats breakfast at home."
+        vi: "Đúng: bạn ấy ăn sáng ở nhà."
+      - jp: "② {九時|くじ}に としょかんで ほんを よみます。"
+        quiz: true
+        en: "True (○) or false (×)?"
+        vi: "Đúng (○) hay sai (×)?"
+      - jp: "× → {九時|くじ}に にほんごを べんきょうします。"
+        romaji: "Kuji ni nihongo o benkyoo shimasu."
+        en: "False: at 9:00 the student studies Japanese. The library is at 4:00."
+        vi: "Sai: 9 giờ bạn ấy học tiếng Nhật. 4 giờ mới đến thư viện."
+      - jp: "③ ときどき コーヒーを のみます。"
+        quiz: true
+        en: "True (○) or false (×)?"
+        vi: "Đúng (○) hay sai (×)?"
+      - jp: "○ ときどき コーヒーを のみます。"
+        romaji: "Tokidoki koohii o nomimasu."
+        en: "True: the student sometimes drinks coffee."
+        vi: "Đúng: thỉnh thoảng bạn ấy uống cà phê."
+      - jp: "④ {六時|ろくじ}ごろ ねます。"
+        quiz: true
+        en: "True (○) or false (×)?"
+        vi: "Đúng (○) hay sai (×)?"
+      - jp: "× → {十二時|じゅうにじ}ごろ ねます。"
+        romaji: "Juuniji goro nemasu."
+        en: "False: at about 6:00 the student goes home, and goes to bed at about 12:00."
+        vi: "Sai: khoảng 6 giờ bạn ấy về nhà, khoảng 12 giờ mới đi ngủ."
+    lines:
+      - emma: "Check your understanding. Read each sentence about the student, and decide: true or false. Pause the video if you need more time. Number one."
+        pause: 3
+      - emma: "True. The student eats breakfast at home."
+        focus: 1
+      - yuki: "うちで朝ご飯を食べます。"
+        pause: 1.5
+      - emma: "Number two."
+        focus: 2
+        pause: 3
+      - emma: "False. At nine, the student studies Japanese. The library comes at four."
+        focus: 3
+      - yuki: "くじににほんごを勉強します。"
+        pause: 1.5
+      - emma: "Number three."
+        focus: 4
+        pause: 3
+      - emma: "True. The student sometimes drinks coffee."
+        focus: 5
+      - yuki: "ときどきコーヒーを飲みます。"
+        pause: 1.5
+      - emma: "Number four."
+        focus: 6
+        pause: 3
+      - emma: "False. At about six, the student goes home, and goes to bed at about twelve."
+        focus: 7
+      - yuki: "十二時ごろ寝ます。"
+        pause: 1.5
+      - emma: "Well done. For exercise three, write about your own daily routine using this passage as a model. The Unit 3 writing video shows you how."

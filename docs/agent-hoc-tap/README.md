@@ -15,7 +15,7 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 | [04-checklist.md](04-checklist.md) | Checklist từng task (P0-01 … P4-07) kèm điều kiện đạt và cổng G0–G4 |
 | [05-lich-su-thay-doi.md](05-lich-su-thay-doi.md) | Lịch sử từng đợt triển khai: file thêm/sửa/xóa, chỗ làm khác plan, kết quả kiểm thử, việc còn treo |
 | [06-video-bai-giang.md](06-video-bai-giang.md) | Video bài giảng (chỉ Course Book): Unit 1–3 phần nào có video, lịch sử từng video, quy trình, kiểu cảnh, cách đọc, kế hoạch Unit 4 |
-| [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, 15 video tiếng Nhật, kế hoạch Unit 6–12 |
+| [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, video tiếng Nhật (bài 1–3: bốn video kỹ năng mỗi bài), kế hoạch bài 4–12 |
 
 ## Trạng thái
 
@@ -68,6 +68,11 @@ Công cụ dựng video có thêm cảnh `shadow` và dòng `echo` (khoảng l�
 - 78 phiên, mỗi phiên mở đúng trang Textbook / Workbook và đúng track audio của phần đó;
 - 15 video bài 1–5, dựng lại từ bản thiết kế "Genki I × IELTS Target 5.0" sau khi đánh giá và sửa nội dung;
 - công cụ dựng video đọc được tiếng Nhật (giọng `jf_alpha`, furigana, tự kiểm tra cách đọc). Chi tiết ở file 07.
+
+**Đợt 16 (25/10/2026):** GENKI bài 1–3 có **12 video 5–10 phút**, mỗi bài bốn video, thay cho 9 tập ngắn cũ:
+- Speaking và Writing làm trước, rồi Listening (phát audio hội thoại gốc của sách) và Reading (bài tập 読み書き);
+- mỗi video gắn vào đúng phiên luyện kỹ năng đó: Hội thoại & từ vựng, Part B, Part C, Đọc – viết;
+- cảnh tiếng Nhật có nhiều thẻ, phát được file nghe của sách và có thẻ đố. Lệnh `prune` bỏ video không còn kịch bản.
 
 ## Tóm tắt trong năm dòng
 

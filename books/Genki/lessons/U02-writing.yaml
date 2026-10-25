@@ -1,0 +1,375 @@
+# U02 · Writing — GENKI I bài 2. Video luyện viết ~6 phút cho phiên Part C (まとめの練習): từ katakana của bài,
+# viết giá tiền, số bằng hiragana (biến âm びゃく / ぴゃく / ぜん / っせん), đoạn văn về đồ dùng của mình (đoạn Part C
+# của bản thiết kế, đã sửa), viết đoạn hội thoại mua hàng, chính tả (かきとり), lỗi hay gặp. Xem ghi chú đầu
+# U01-speaking.yaml và U01-writing.yaml (thẻ × không ai đọc; thẻ quiz không kiểm cách đọc).
+id: U02-writing
+activity: U02-part-c
+title: "Unit 2 · Shopping"
+subtitle: "Writing · Katakana words, prices and your things"
+title_vi: "Luyện viết — từ katakana, giá tiền, đoạn văn tả đồ của mình, hội thoại mua hàng"
+tag: "GENKI L2 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+  takeshi: {name: Takeshi, role: shop staff, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Unit 2 Writing · My things, and a shopping dialogue"
+    items:
+      - jp: "これは わたしの かばんです。"
+        romaji: "Kore wa watashi no kaban desu."
+        en: "Goal: write a short paragraph about things you own, and a four-line shopping dialogue — with katakana words and prices."
+        vi: "Mục tiêu: viết đoạn văn ngắn về đồ dùng của mình và một đoạn hội thoại mua hàng 4 câu — có từ katakana và giá tiền."
+    lines:
+      - emma: "Welcome to Unit 2 writing practice. Today you will write a short paragraph about things you own, and a four-line shopping dialogue. You will also practise katakana words and prices. Have your pen ready."
+      - yuki: "これはわたしのかばんです。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Katakana words"
+    heading: "Katakana words of Unit 2 · Loanwords"
+    items:
+      - jp: "メニュー ・ スマホ ・ ノート ・ ペン"
+        romaji: "menyuu · sumaho · nooto · pen"
+        en: "Words borrowed from other languages are written in katakana: menu, smartphone, notebook, pen."
+        vi: "Từ vay mượn tiếng nước ngoài viết bằng katakana: thực đơn, điện thoại, vở, bút."
+      - jp: "ジーンズ ・ {T|ティー}シャツ ・ コンビニ ・ トイレ"
+        romaji: "jiinzu · tiishatsu · konbini · toire"
+        en: "jeans, T-shirt, convenience store, toilet."
+        vi: "quần jean, áo phông, cửa hàng tiện lợi, nhà vệ sinh."
+      - jp: "コンピューター ・ ビジネス"
+        romaji: "konpyuutaa · bijinesu"
+        en: "computer, business. ー makes the sound before it long; small ュ joins with ピ to make one sound."
+        vi: "máy tính, kinh doanh. ー kéo dài âm trước nó; ュ nhỏ ghép với ピ thành một âm."
+      - jp: "× コンピュタ"
+        en: "Wrong: without the long marks, the word becomes hard to recognise."
+        vi: "Sai: thiếu dấu ー thì người Nhật khó nhận ra từ."
+    lines:
+      - emma: "Unit 2 has many words borrowed from English. They are written in katakana. Copy each one in your notebook."
+      - yuki: "メニュー、スマホ、ノート、ペン。"
+        pause: 2
+      - yuki: "ジーンズ、ティーシャツ、コンビニ、トイレ。"
+        focus: 1
+        pause: 2
+      - emma: "In katakana, the long dash makes the sound before it long. A small letter joins with the letter before it to make one sound. Listen to computer and business."
+        focus: 2
+      - yuki: "コンピューター、ビジネス。"
+        pause: 2
+      - emma: "If you forget the long marks, the word is very hard to recognise. Always check them."
+        focus: 3
+
+  - kind: jp
+    chapter: "Writing prices"
+    heading: "Prices · Hiragana in GENKI, numbers in real life"
+    items:
+      - jp: "さんぜんえん"
+        romaji: "sanzen en"
+        en: "In GENKI Lesson 2, prices are written in hiragana."
+        vi: "Ở bài 2 GENKI, giá tiền viết bằng hiragana."
+      - jp: "{3,000|さんぜん}{円|えん}"
+        romaji: "sanzen en"
+        en: "In shops and on menus, prices use numbers and 円 (yen). Commas every three digits, as in English."
+        vi: "Ở cửa hàng, thực đơn: viết số và chữ 円 (yên). Dấu phẩy mỗi ba chữ số như tiếng Anh. 円 (viên)."
+      - jp: "{1,800|せんはっぴゃく}{円|えん} ・ {12,000|いちまんにせん}{円|えん}"
+        romaji: "senhappyaku en · ichiman nisen en"
+        en: "1,800 yen · 12,000 yen. Read big numbers in units of 10,000: 1万2千."
+        vi: "1.800 yên · 12.000 yên. Đọc số lớn theo vạn: 1万2千."
+    lines:
+      - emma: "Prices. In your textbook, Lesson 2 writes prices in hiragana, because you do not know the characters yet."
+      - yuki: "三千円。"
+        pause: 1.5
+      - emma: "In real shops and on menus, prices are written with numbers and the character for yen. Use commas every three digits, as in English."
+        focus: 1
+      - yuki: "三千円。"
+        pause: 1.5
+      - yuki: "千八百円。一万二千円。"
+        focus: 2
+        pause: 2
+
+  - kind: jp
+    chapter: "Numbers in hiragana"
+    heading: "Spelling numbers · Sound changes: びゃく, ぴゃく, ぜん, っせん"
+    items:
+      - jp: "ひゃく ・ にひゃく ・ さんびゃく ・ よんひゃく"
+        romaji: "hyaku · nihyaku · sanbyaku · yonhyaku"
+        en: "100 · 200 · 300 · 400. After さん, h becomes b: さんびゃく."
+        vi: "100 · 200 · 300 · 400. Sau さん, h thành b: さんびゃく."
+      - jp: "ろっぴゃく ・ はっぴゃく"
+        romaji: "roppyaku · happyaku"
+        en: "600 · 800. A small っ, and h becomes p."
+        vi: "600 · 800. Có っ nhỏ, h thành p."
+      - jp: "せん ・ さんぜん ・ はっせん"
+        romaji: "sen · sanzen · hassen"
+        en: "1,000 · 3,000 · 8,000. After さん, s becomes z; 8,000 has a small っ."
+        vi: "1.000 · 3.000 · 8.000. Sau さん, s thành z; 8.000 có っ nhỏ."
+      - jp: "いちまん ・ にまん ・ じゅうまん"
+        romaji: "ichiman · niman · juuman"
+        en: "10,000 · 20,000 · 100,000. 10,000 always keeps いち: いちまん."
+        vi: "10.000 · 20.000 · 100.000. 10.000 luôn có いち: いちまん (không viết まん)."
+      - jp: "¥4,600 → ？"
+        quiz: true
+        en: "Write the price in hiragana."
+        vi: "Viết giá tiền bằng hiragana."
+      - jp: "よんせんろっぴゃくえん"
+        romaji: "yonsen roppyaku en"
+        en: "4,600 yen."
+        vi: "4.600 yên."
+      - jp: "¥38,000 → ？"
+        quiz: true
+        en: "Write the price in hiragana."
+        vi: "Viết giá tiền bằng hiragana."
+      - jp: "さんまんはっせんえん"
+        romaji: "sanman hassen en"
+        en: "38,000 yen."
+        vi: "38.000 yên."
+    lines:
+      - emma: "To write prices in hiragana, you must spell the sound changes correctly. Look at the hundreds. After three, the h sound becomes b."
+      - yuki: "百、二百、三百、四百。"
+        pause: 2
+      - emma: "Six hundred and eight hundred have a small tsu, and the h becomes p."
+        focus: 1
+      - yuki: "六百、八百。"
+        pause: 1.8
+      - emma: "The thousands. After three, s becomes z. Eight thousand has a small tsu."
+        focus: 2
+      - yuki: "千、三千、八千。"
+        pause: 1.8
+      - emma: "Ten thousands. Ten thousand always keeps the word for one in front."
+        focus: 3
+      - yuki: "一万、二万、十万。"
+        pause: 1.8
+      - emma: "Your turn. Pause the video and write this price in hiragana. Four thousand six hundred yen."
+        focus: 4
+        pause: 2.5
+      - yuki: "四千六百円。"
+        focus: 5
+        pause: 1.5
+      - emma: "One more. Thirty-eight thousand yen."
+        focus: 6
+        pause: 2.5
+      - yuki: "三万八千円。"
+        focus: 7
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Building sentences about your things"
+    heading: "Your things · これ / この, の, も, じゃないです"
+    items:
+      - jp: "これは わたしの かばんです。"
+        romaji: "Kore wa watashi no kaban desu."
+        en: "This is my bag. これは = this (alone); わたしの = my."
+        vi: "Đây là cái túi của tôi. これは = cái này (đứng một mình); わたしの = của tôi."
+      - jp: "この かばんは ベトナムの かばんです。"
+        romaji: "Kono kaban wa betonamu no kaban desu."
+        en: "This bag is a Vietnamese bag. この + noun."
+        vi: "Cái túi này là túi Việt Nam. この + danh từ."
+      - jp: "にほんの かばんじゃないです。"
+        romaji: "Nihon no kaban ja nai desu."
+        en: "It is not a Japanese bag."
+        vi: "Không phải túi Nhật."
+      - jp: "この ペンも ベトナムの ペンです。"
+        romaji: "Kono pen mo betonamu no pen desu."
+        en: "This pen is also a Vietnamese pen. も = also."
+        vi: "Cây bút này cũng là bút Việt Nam. も = cũng."
+      - jp: "あれは わたしの じてんしゃです。"
+        romaji: "Are wa watashi no jitensha desu."
+        en: "That over there is my bicycle."
+        vi: "Kia là xe đạp của tôi. じてんしゃ (自転車 – tự chuyển xa)."
+    lines:
+      - emma: "Now let's build sentences about your own things. Start with this, followed by my, and the thing."
+      - yuki: "これはわたしのかばんです。"
+        pause: 1.8
+      - emma: "Add a detail. Where is it from? Use the second set of pointing words, followed by a noun."
+        focus: 1
+      - yuki: "このかばんはベトナムのかばんです。"
+        pause: 2
+      - emma: "Say what it is not."
+        focus: 2
+      - yuki: "にほんのかばんじゃないです。"
+        pause: 1.8
+      - emma: "Add another thing with also."
+        focus: 3
+      - yuki: "このペンもベトナムのペンです。"
+        pause: 1.8
+      - emma: "And something over there."
+        focus: 4
+      - yuki: "あれはわたしの自転車です。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Model paragraph"
+    heading: "Model paragraph · My things"
+    items:
+      - jp: "これは わたしの かばんです。この パソコンも わたしの パソコンです。にほんの パソコンじゃないです。アメリカの パソコンです。じゅうごまんえんです。この ほんは にほんごの ほんですよ。"
+        romaji: "Kore wa watashi no kaban desu. Kono pasokon mo watashi no pasokon desu. Nihon no pasokon ja nai desu. Amerika no pasokon desu. Juugoman en desu. Kono hon wa nihongo no hon desu yo."
+        en: "This is my bag. This laptop is also mine. It's not a Japanese laptop. It's an American laptop. It's 150,000 yen. This book is in Japanese, you know!"
+        vi: "Đây là túi của tôi. Cái laptop này cũng của tôi. Không phải laptop Nhật, là laptop Mỹ, 150.000 yên. Quyển sách này là sách tiếng Nhật đấy! パソコン = máy tính cá nhân."
+    lines:
+      - emma: "Here is a model paragraph about a student's things. Listen and read along, then copy it once."
+      - yuki: "これはわたしのかばんです。このパソコンもわたしのパソコンです。"
+        pause: 1.5
+      - yuki: "にほんのパソコンじゃないです。アメリカのパソコンです。十五万円です。"
+        pause: 1.5
+      - yuki: "この本はにほんごの本ですよ。"
+        pause: 1.8
+      - emma: "Notice the small word at the very end. It tells the reader something new: this book is in Japanese, you know."
+
+  - kind: jp
+    chapter: "Writing a shopping dialogue"
+    heading: "A shopping dialogue · Four lines"
+    items:
+      - jp: "いらっしゃいませ。"
+        romaji: "Irasshaimase."
+        en: "Shop staff: Welcome!"
+        vi: "Nhân viên: Xin mời quý khách!"
+      - jp: "すみません。この {T|ティー}シャツは いくらですか。"
+        romaji: "Sumimasen. Kono tiishatsu wa ikura desu ka."
+        en: "Customer: Excuse me. How much is this T-shirt?"
+        vi: "Khách: Xin lỗi, cái áo phông này bao nhiêu tiền?"
+      - jp: "にせんえんです。"
+        romaji: "Nisen en desu."
+        en: "Shop staff: It's 2,000 yen."
+        vi: "Nhân viên: 2.000 yên ạ."
+      - jp: "じゃあ、これを ください。"
+        romaji: "Jaa, kore o kudasai."
+        en: "Customer: Then, I'll take this one."
+        vi: "Khách: Vậy cho tôi cái này."
+    lines:
+      - emma: "Now write a short shopping dialogue. Write the speaker's name, then a colon, then the line, just like the dialogues in your textbook. Line one: the shop staff."
+      - takeshi: "いらっしゃいませ。"
+        pause: 1.5
+      - emma: "Line two: the customer asks the price of something, using the pointing word with a noun."
+        focus: 1
+      - yuki: "すみません。このティーシャツはいくらですか。"
+        pause: 1.8
+      - emma: "Line three: the price."
+        focus: 2
+      - takeshi: "二千円です。"
+        pause: 1.5
+      - emma: "Line four: the customer buys it."
+        focus: 3
+      - yuki: "じゃあ、これをください。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Dictation"
+    heading: "かきとり · Dictation: write what you hear"
+    items:
+      - jp: "かきとり ①"
+        quiz: true
+        en: "Dictation 1: write the sentence in hiragana and katakana."
+        vi: "Chính tả 1: viết câu nghe được bằng hiragana và katakana. かきとり (書き取り) = chính tả."
+      - jp: "すみません。その ノートは いくらですか。"
+        romaji: "Sumimasen. Sono nooto wa ikura desu ka."
+        en: "Excuse me. How much is that notebook? The topic particle is written は; ノート has a long mark."
+        vi: "Xin lỗi, quyển vở đó bao nhiêu tiền? Trợ từ đọc wa nhưng viết は; ノート có dấu ー."
+      - jp: "かきとり ②"
+        quiz: true
+        en: "Dictation 2."
+        vi: "Chính tả 2."
+      - jp: "この ジーンズは さんぜんはっぴゃくえんです。"
+        romaji: "Kono jiinzu wa sanzen happyaku en desu."
+        en: "These jeans are 3,800 yen. Check ぜん and っぴゃく."
+        vi: "Cái quần jean này 3.800 yên. Kiểm tra ぜん và っぴゃく."
+      - jp: "かきとり ③"
+        quiz: true
+        en: "Dictation 3."
+        vi: "Chính tả 3."
+      - jp: "これは だれの スマホですか。"
+        romaji: "Kore wa dare no sumaho desu ka."
+        en: "Whose smartphone is this?"
+        vi: "Đây là điện thoại của ai?"
+      - jp: "かきとり ④"
+        quiz: true
+        en: "Dictation 4."
+        vi: "Chính tả 4."
+      - jp: "わたしの かばんじゃないです。"
+        romaji: "Watashi no kaban ja nai desu."
+        en: "It's not my bag."
+        vi: "Không phải túi của tôi."
+    lines:
+      - emma: "Dictation. Yuki says a sentence. Pause the video and write it in hiragana and katakana, then check the answer. Sentence one."
+      - yuki: "すみません。そのノートはいくらですか。"
+        pause: 2.5
+      - yuki: "すみません。そのノートはいくらですか。"
+        focus: 1
+        pause: 1.5
+      - emma: "The topic particle sounds like wa, but you write it with the letter ha. Sentence two."
+        say: "The topic particle sounds like wa, but you write it with the letter, ha. Sentence two."
+        focus: 2
+      - yuki: "このジーンズは三千八百円です。"
+        pause: 2.5
+      - yuki: "このジーンズは三千八百円です。"
+        focus: 3
+        pause: 1.5
+      - emma: "Sentence three."
+        focus: 4
+      - yuki: "これはだれのスマホですか。"
+        pause: 2.5
+      - yuki: "これはだれのスマホですか。"
+        focus: 5
+        pause: 1.5
+      - emma: "Sentence four."
+        focus: 6
+      - yuki: "わたしのかばんじゃないです。"
+        pause: 2.5
+      - yuki: "わたしのかばんじゃないです。"
+        focus: 7
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Common mistakes"
+    heading: "Common mistakes · これ vs この, の, も"
+    items:
+      - jp: "× これ かばんは いくらですか。"
+        en: "Wrong: これ cannot come before a noun."
+        vi: "Sai: これ không đứng trước danh từ."
+      - jp: "○ この かばんは いくらですか。"
+        romaji: "Kono kaban wa ikura desu ka."
+        en: "Right: この + noun. Or just: これは いくらですか。"
+        vi: "Đúng: この + danh từ. Hoặc chỉ: これは いくらですか。"
+      - jp: "× だれ さいふですか。"
+        en: "Wrong: 'whose' needs の."
+        vi: "Sai: \"của ai\" cần の."
+      - jp: "○ だれの さいふですか。"
+        romaji: "Dare no saifu desu ka."
+        en: "Right: Whose wallet is it?"
+        vi: "Đúng: Ví của ai?"
+      - jp: "× わたしは も がくせいです。"
+        en: "Wrong: も replaces は; never use both."
+        vi: "Sai: も thay cho は, không dùng cả hai."
+      - jp: "○ わたしも がくせいです。"
+        romaji: "Watashi mo gakusee desu."
+        en: "Right: I'm a student, too."
+        vi: "Đúng: Tôi cũng là sinh viên."
+    lines:
+      - emma: "Check your writing for three common mistakes. One: the first set of pointing words cannot stand in front of a noun. Use the second set."
+      - yuki: "このかばんはいくらですか。"
+        focus: 1
+        pause: 1.8
+      - emma: "Two: whose needs the linking particle."
+        focus: 2
+      - yuki: "だれの財布ですか。"
+        focus: 3
+        pause: 1.5
+      - emma: "Three: also replaces the topic particle. Never use both together."
+        focus: 4
+      - yuki: "わたしも学生です。"
+        focus: 5
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Your task"
+    heading: "Your task · Paragraph + dialogue"
+    items:
+      - jp: "わたしの もちもの"
+        romaji: "Watashi no mochimono"
+        en: "Task: write 5–6 sentences about three things you own (これ / この, の, も, じゃないです, a price), then a 4-line shopping dialogue. Read both aloud."
+        vi: "Bài tập: viết 5–6 câu về ba đồ vật của bạn (これ / この, の, も, じゃないです, một giá tiền), rồi một đoạn hội thoại mua hàng 4 câu. Đọc to cả hai. もちもの (持ち物 – trì vật) = đồ dùng mang theo."
+    lines:
+      - emma: "Your task. Pause the video and write five or six sentences about three things you own. Use this and this plus a noun, the linking particle, also, is not, and one price. Then write a four-line shopping dialogue, and read everything aloud. My belongings in Japanese is this phrase."
+      - yuki: "わたしの持ち物。"
+        pause: 1.5
+      - emma: "Well done. In Unit 3 you will write about your daily routine."

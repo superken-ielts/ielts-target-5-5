@@ -111,3 +111,22 @@ def write_manifest(lessons_dir: Path, entry: dict) -> Path:
     data = {"schema": "lessons/1", "note": NOTE, "lessons": rows}
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return path
+
+
+def prune_manifest(lessons_dir: Path) -> list[str]:
+    """Bỏ khỏi lessons.json những video không còn kịch bản (file .yaml đã xóa) và xóa luôn file .mp4 của chúng.
+    Trả về id các video đã bỏ."""
+    path = lessons_dir / MANIFEST
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    book_dir = lessons_dir.parent
+    keep, gone = [], []
+    for x in data.get("lessons", []):
+        (keep if (book_dir / x["source"]).exists() else gone).append(x)
+    for x in gone:
+        (book_dir / x["file"]).unlink(missing_ok=True)
+    if gone:
+        data["lessons"] = keep
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return [x["id"] for x in gone]

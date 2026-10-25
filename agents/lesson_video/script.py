@@ -40,7 +40,9 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "mcq": ("n", "q", "options", "answer"),  # trắc nghiệm: `options` là danh sách, `answer` là a, b, c… hoặc một nhãn trong `keys`
     "passage": ("text",),               # bài đọc trên màn hình (có phụ đề): mỗi mục một đoạn, `label` đầu đoạn; dòng thoại `mark` tô từ khóa
     "shadow": ("text",),                # nghe – nhắc lại: mỗi mục một câu mẫu chữ to; `by` người nói (màu), `vi` nghĩa, `tip` mẹo phát âm
-    "jp": ("jp",),                      # thẻ ba tầng (video N5): `jp` chữ Nhật có furigana, `romaji`, `en` giải thích, `vi` nghĩa
+    "jp": ("jp",),                      # thẻ ba tầng (video N5): `jp` chữ Nhật có furigana, `romaji`, `en` giải thích, `vi` nghĩa;
+                                        # nhiều thẻ thì dòng thoại chọn thẻ đang hiện bằng `focus`; `quiz: true` = thẻ đố
+                                        # nghe / đọc (câu Nhật đọc lên nhưng chưa hiện chữ, hoặc chữ Hán chưa có furigana; không đối chiếu)
 }
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
 # `echo: true` (câu thoại): sau câu là khoảng lặng đếm ngược dài theo câu để người học nhắc lại (shadowing)
@@ -184,13 +186,14 @@ class Scene(_M):
         if self.kind == "letter" and any(ln.wait or ln.echo for ln in self.lines):
             raise ValueError("cảnh letter không có khoảng lặng `wait` / `echo` (không có chỗ hiện đếm ngược)")
         if self.kind == "jp":
-            if len(self.items) != 1:
-                raise ValueError("cảnh jp có đúng một mục (một thẻ ba tầng)")
-            if any(ln.wait or ln.echo or ln.track for ln in self.lines):
-                raise ValueError("cảnh jp không có khoảng lặng `wait` / `echo` hay đoạn nghe `track` — dùng `pause`")
-            bad = ja.check_markup(str(self.items[0]["jp"]))
-            if bad:
-                raise ValueError("cảnh jp: " + "; ".join(bad))
+            if any(ln.wait or ln.echo for ln in self.lines):
+                raise ValueError("cảnh jp không có khoảng lặng `wait` / `echo` — dùng `pause`")
+            for k, it in enumerate(self.items):
+                if it.get("quiz"):  # thẻ đố: được để chữ Hán không furigana (bài đọc giá tiền, chữ Hán)
+                    continue
+                bad = ja.check_markup(str(it["jp"]))
+                if bad:
+                    raise ValueError("cảnh jp" + (f", thẻ {k}" if len(self.items) > 1 else "") + ": " + "; ".join(bad))
         if not self.lines:
             raise ValueError("cảnh không có câu thoại nào")
         keys = self.reveal_keys()
@@ -327,18 +330,33 @@ def find_item(book: dict, activity: str) -> Optional[dict]:
 
 
 def check_japanese(lesson: Lesson) -> list[str]:
-    """Cảnh jp có câu thoại tiếng Nhật: bộ đọc phải đọc đúng như furigana, romaji khớp cách đọc (cần misaki)."""
+    """Cảnh jp có câu thoại tiếng Nhật: bộ đọc phải đọc đúng như furigana, romaji khớp cách đọc (cần misaki).
+
+    Mỗi thẻ so với các câu tiếng Nhật đọc lúc thẻ đó đang hiện (`focus`): mỗi câu đọc trọn thẻ (đọc lại nhiều lần
+    cũng được), hoặc các câu ghép lại thành thẻ."""
     problems: list[str] = []
     for i, sc in enumerate(lesson.scenes):
-        lines = [ln for ln in sc.lines if ln.speaker and lesson.speakers[ln.speaker].lang == "ja"]
-        if not lines or sc.kind != "jp":
+        if sc.kind != "jp":
             continue
-        it = sc.items[0]
-        spoken = "".join(ln.spoken for ln in lines)
-        try:
-            problems += [f"cảnh {i}: {m}" for m in ja.check_line(str(it["jp"]), spoken, str(it.get("romaji") or ""))]
-        except ja.JaError as e:
-            return [str(e)]
+        by_card: dict[int, list[str]] = {}
+        focus = 0
+        for ln in sc.lines:
+            if ln.focus is not None:
+                focus = ln.focus
+            if ln.speaker and lesson.speakers[ln.speaker].lang == "ja":
+                by_card.setdefault(focus, []).append(ln.spoken)
+        for k, spoken in by_card.items():
+            it = sc.items[k]
+            if it.get("quiz"):  # thẻ đố nghe: chữ chưa hiện, thẻ đáp án ngay sau đọc lại câu đó và được đối chiếu
+                continue
+            where = f"cảnh {i}" + (f", thẻ {k}" if len(sc.items) > 1 else "")
+            text, romaji = str(it["jp"]), str(it.get("romaji") or "")
+            try:
+                if len(spoken) > 1 and not any(ja.check_line(text, s, romaji) for s in spoken):
+                    continue
+                problems += [f"{where}: {m}" for m in ja.check_line(text, "".join(spoken), romaji)]
+            except ja.JaError as e:
+                return [str(e)]
     return problems
 
 

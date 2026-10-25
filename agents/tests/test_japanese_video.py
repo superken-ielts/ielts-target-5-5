@@ -70,6 +70,9 @@ def test_kana_romaji(kana, romaji):
 def test_romaji_normalisation():
     assert ja.norm_romaji("Nijuu-hassai desu. / Watashi wa ai-tii") == "nijuuhassaidesuwatashiwaaitii"
     assert ja.norm_romaji("shimbun, matcha") == ja.norm_romaji("shinbun, maccha")
+    # GENKI viết romaji theo cách phát âm: gakusee, Soo desu ka, Tookyoo
+    assert ja.norm_romaji("Gakusee desu. Soo desu ka.") == ja.norm_romaji("gakusei desu. sou desu ka.")
+    assert ja.norm_romaji("Tōkyō") == ja.norm_romaji("Tookyoo") == ja.norm_romaji("toukyou")
 
 
 # ---------- cảnh jp ----------
@@ -81,8 +84,11 @@ def test_jp_scene_validates():
 
 
 @pytest.mark.parametrize("patch,msg", [
-    (lambda d: d["scenes"][0]["items"].append({"jp": "です"}), "đúng một mục"),
+    (lambda d: d["scenes"][0]["items"].append({"jp": "何です"}), "thẻ 1: chữ Hán chưa có furigana: 何"),
+    # thẻ đố (quiz) được để chữ Hán không furigana, thẻ thường thì không
+    (lambda d: d["scenes"][0]["items"].extend([{"jp": "六百円", "quiz": True}, {"jp": "何"}]), "thẻ 2: chữ Hán chưa có furigana"),
     (lambda d: d["scenes"][0]["lines"].append({"wait": 2}), "không có khoảng lặng"),
+    (lambda d: d["scenes"][0]["lines"].append({"emma": "Next.", "focus": 1}), "focus 1 ngoài số mục"),
     (lambda d: d["scenes"][1]["items"][0].update(jp="{午前|ごぜん}九時です"), "chưa có furigana: 九 時"),
     (lambda d: d["scenes"][1]["lines"][0].pop("say"), "chữ Latin hoặc chữ số"),
     (lambda d: d["speakers"]["yuki"].update(voice={"kokoro": "af_heart"}), "không phải giọng Nhật"),
@@ -103,6 +109,63 @@ def test_jp_scene_renders(tmp_path):
         assert img.getpixel((5, 5)) == (0x0F, 0x25, 0x37)             # nền navy
         assert img.getpixel((W // 2, 112)) == (0xFA, 0xFC, 0xFE)      # thẻ trắng tầng 1
         assert img.getpixel((60, 705)) == (0xF3, 0x9C, 0x12)          # thanh tiến độ màu cam
+
+
+needs_misaki_lazy = pytest.mark.skipif(not ja.available(), reason='chưa cài misaki[ja] (pip install "misaki[ja]")')
+
+CARDS = {
+    "kind": "jp", "chapter": "Dialogue", "heading": "Dialogue I",
+    "items": [{"jp": "こんにちは。", "romaji": "Konnichiwa.", "en": "Hello."},
+              {"jp": "{学生|がくせい}ですか。", "romaji": "Gakusei desu ka.", "en": "Are you a student?"}],
+    "lines": [{"track": "K01-01", "end": 1.0, "note": "会話 I · Dialogue I"},
+              {"yuki": "こんにちは。", "pause": 0.3},
+              {"yuki": "学生ですか。", "focus": 1},
+              {"yuki": "学生ですか。", "speed": 0.8}],
+}
+
+
+def book_with_track(tmp_path: Path) -> Path:
+    """Thư mục sách tối thiểu có hoạt động U01-part-a và một file nghe K01-01 (2 giây im lặng)."""
+    import wave
+    bdir = tmp_path / "book"
+    (bdir / "audio").mkdir(parents=True)
+    with wave.open(str(bdir / "audio" / "K01_01.wav"), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(8000)
+        w.writeframes(b"\x00\x00" * 16000)
+    book = {"files": {"K01-01": {"kind": "audio", "path": "audio/K01_01.wav", "durationSec": 2.0}},
+            "sections": [{"items": [{"id": "U01", "activities": [{"id": "U01-part-a"}]}]}]}
+    (bdir / "book.json").write_text(json.dumps(book), encoding="utf-8")
+    return bdir
+
+
+def test_jp_scene_with_cards_and_book_audio(tmp_path):
+    les = lesson(lambda d: d["scenes"].append(copy.deepcopy(CARDS)))
+    bdir = book_with_track(tmp_path)
+    tl = timeline.build(les, tts.Silent(), say=quiet, book_dir=bdir)
+    frames = [fr for fr in tl.frames if fr.scene == 2]
+    assert [(fr.audio, fr.speaker, fr.focus) for fr in frames] == [
+        ("K01-01", None, None), ("", "yuki", None), ("", "yuki", 1), ("", "yuki", 1)]
+    assert abs(frames[0].dur - 1.0) < 0.01                             # đoạn nghe cắt tới giây `end`
+    sl = Slides(les, tmp_path)
+    audio, card2 = sl.render(frames[0], 0.5), sl.render(frames[2], 0.5)
+    assert audio.getpixel((70, 103 + 30)) == (0x00, 0xA8, 0xB5)        # nhãn file nghe màu teal ở góc thẻ
+    assert card2.getpixel((70, 103 + 30)) == (0xF3, 0x9C, 0x12)        # nhãn người nói (màu của Yuki)
+    assert audio.tobytes() != card2.tobytes()
+    assert sc.check(les, bdir) == [] if ja.available() else True
+
+
+@needs_misaki_lazy
+def test_reading_check_is_per_card():
+    les = lesson(lambda d: d["scenes"].append(copy.deepcopy(CARDS)))
+    assert sc.check_japanese(les) == []                                # thẻ 1 đọc hai lần: mỗi lần trọn thẻ
+    bad = copy.deepcopy(CARDS)
+    bad["lines"][2]["yuki"] = "先生ですか。"
+    msgs = sc.check_japanese(lesson(lambda d: d["scenes"].append(bad)))
+    assert msgs and all(m.startswith("cảnh 2, thẻ 1:") for m in msgs)
+    bad["items"][1]["quiz"] = True                                     # thẻ đố nghe: không đối chiếu
+    assert sc.check_japanese(lesson(lambda d: d["scenes"].append(bad))) == []
 
 
 class Speedy(tts.Silent):
@@ -154,6 +217,7 @@ def test_reading_check_catches_misreadings():
     assert len(msgs) == 2 and "九(キュウ)" in msgs[0] and "romaji không khớp" in msgs[1]
     assert ja.check_line("{日本語|にほんご}です", "日本語です")
     assert ja.check_line("{日本語|にほんご}です", "にほんごです") == []
+    assert ja.check_line("こんにちは。", "こんにちは。", "Konnichiwa.") == []    # は cuối từ cố định đọc là wa
     # romaji sai (ku-ji ≠ kyuu-ji) cũng bị chặn
     wrong = lesson(lambda d: d["scenes"][1]["items"][0].update(romaji="Ima, gozen kyuu-ji han desu. Watashi wa ai-tii no kaishain desu."))
     assert any("romaji không khớp" in m for m in sc.check_japanese(wrong))

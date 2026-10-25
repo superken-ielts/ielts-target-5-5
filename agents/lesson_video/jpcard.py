@@ -1,7 +1,7 @@
 """Cảnh `jp` — thẻ ba tầng của video N5 (docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md), nền navy:
 
-    thanh đầu: nhãn cam (`tag` của bài) + tiêu đề cảnh (`heading`)
-    tầng 1, thẻ trắng: người đang nói, chữ Nhật (`jp`, có furigana) và `romaji`
+    thanh đầu: nhãn cam (`tag` của bài) + tiêu đề cảnh (`heading`), cảnh nhiều thẻ thì thêm "thẻ k/n"
+    tầng 1, thẻ trắng: người đang nói (hoặc nhãn file nghe của sách đang phát), chữ Nhật (`jp`, có furigana) và `romaji`
     tầng 2, thẻ xanh: giải thích / nghĩa tiếng Anh (`en`)
     tầng 3, thẻ xanh đậm viền cam: nghĩa tiếng Việt, ghi chú Hán-Việt (`vi`)
 
@@ -261,8 +261,14 @@ def render(slides, fr, progress: float) -> Image.Image:
     d.text((53 + tw / 2, 55), tag, font=ft, fill=P["bg"], anchor="mm")
     title = sc.heading or lesson.subtitle or lesson.title
     hx = 53 + tw + 20
+    right = HEADER[2] - 16
+    if len(sc.items) > 1:  # cảnh nhiều thẻ: đang ở thẻ thứ mấy
+        count = f"{(fr.focus or 0) + 1}/{len(sc.items)}"
+        fc = font("bold", 18)
+        d.text((right, 55), count, font=fc, fill=P["muted"], anchor="rm")
+        right -= d.textlength(count, font=fc) + 18
     size = 23
-    while size > 15 and width(d, title, size) > HEADER[2] - 16 - hx:
+    while size > 15 and width(d, title, size) > right - hx:
         size -= 1
     draw_mixed(d, hx, 55 + round(size * 0.36), title, size, P["white"])
 
@@ -271,9 +277,20 @@ def render(slides, fr, progress: float) -> Image.Image:
     x0, y0, x1, y1 = t1
     d.rounded_rectangle(t1, 16, fill=P["card"], outline=P["teal"], width=3)
     sp = lesson.speakers.get(fr.speaker or "")
-    if sp:
+    fb = font("bold", 16)
+    if fr.audio:  # đang phát file nghe của sách: nút ▶ + mã track (nhãn in trong sách) + ghi chú
+        chip = "BOOK AUDIO · " + fr.audio
+        bw = d.textlength(chip, font=fb) + 58
+        d.rounded_rectangle((63, y0 + 17, 63 + bw, y0 + 48), 8, fill=P["teal"])
+        d.polygon([(79, y0 + 24), (79, y0 + 41), (94, y0 + 32.5)], fill="#FFFFFF")
+        d.text((63 + 44, y0 + 33), chip, font=fb, fill="#FFFFFF", anchor="lm")
+        if fr.note:
+            note = fr.note
+            while len(note) > 1 and width(d, note, 18) > x1 - 30 - (63 + bw + 16):
+                note = note[:-2] + "…"
+            draw_mixed(d, 63 + bw + 16, y0 + 40, note, 18, P["ruby"])
+    elif sp:
         chip = ("JP · " if sp.lang == "ja" else "EN · ") + sp.name.upper() + (" — " + sp.role.upper() if sp.role else "")
-        fb = font("bold", 16)
         bw = d.textlength(chip, font=fb) + 28
         d.rounded_rectangle((63, y0 + 17, 63 + bw, y0 + 48), 8, fill=sp.color)
         d.text((63 + 14, y0 + 33), chip, font=fb, fill="#FFFFFF", anchor="lm")

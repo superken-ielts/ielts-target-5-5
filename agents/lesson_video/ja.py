@@ -34,9 +34,10 @@ def is_kana(ch: str) -> bool:
 
 
 def is_cjk(ch: str) -> bool:
-    """Ký tự cần phông Nhật: kana, chữ Hán, dấu câu và chữ toàn khổ của Nhật."""
+    """Ký tự cần phông Nhật: kana, chữ Hán, dấu câu và chữ toàn khổ của Nhật, số trong vòng tròn (①)."""
     o = ord(ch)
-    return is_kana(ch) or is_kanji(ch) or 0x3000 <= o <= 0x303F or 0xFF00 <= o <= 0xFFEF or 0x31F0 <= o <= 0x31FF
+    return (is_kana(ch) or is_kanji(ch) or 0x3000 <= o <= 0x303F or 0xFF00 <= o <= 0xFFEF or 0x31F0 <= o <= 0x31FF
+            or 0x2460 <= o <= 0x24FF)
 
 
 def kata(s: str) -> str:
@@ -138,10 +139,12 @@ def kana_romaji(k: str) -> str:
 
 
 def norm_romaji(s: str) -> str:
-    """So romaji không phân biệt hoa thường, dấu cách, gạch nối; tch = cch, m trước b/p/m = n."""
+    """So romaji không phân biệt hoa thường, dấu cách, gạch nối; tch = cch, m trước b/p/m = n; ei = ee và
+    ou = oo (GENKI viết theo cách phát âm: gakusee, sensee, Soo desu ka)."""
     s = re.sub(r"[^a-z]", "", s.lower().replace("ā", "aa").replace("ī", "ii").replace("ū", "uu")
-               .replace("ē", "ee").replace("ō", "ou"))
-    return re.sub(r"m(?=[bpm])", "n", s.replace("tch", "cch"))
+               .replace("ē", "ee").replace("ō", "oo"))
+    s = s.replace("tch", "cch").replace("ei", "ee").replace("ou", "oo")
+    return re.sub(r"m(?=[bpm])", "n", s)
 
 
 # ---------- misaki (bộ tách âm của Kokoro) ----------
@@ -167,24 +170,34 @@ def phonemes(text: str) -> str:
     return _g2p()(text)
 
 
-def tokens(text: str) -> list[tuple[str, str, str]]:
-    """[(chữ, cách đọc katakana, từ loại)] theo cách misaki tách câu (cùng bước chuẩn hóa với lúc đọc)."""
+def tokens(text: str) -> list[tuple[str, str, str, str]]:
+    """[(chữ, cách đọc katakana, từ loại, cách phát âm)] theo cách misaki tách câu (cùng bước chuẩn hóa với lúc
+    đọc)."""
     g = _g2p()
     out = []
     for w in g.tagger(g._normalize_text(text)):
-        kana = getattr(w.feature, "kana", None) or getattr(w.feature, "pron", None) or w.surface
-        out.append((w.surface, kata(kana), getattr(w.feature, "pos1", "") or ""))
+        pron = getattr(w.feature, "pron", None) or ""
+        kana = getattr(w.feature, "kana", None) or pron or w.surface
+        out.append((w.surface, kata(kana), getattr(w.feature, "pos1", "") or "", kata(pron)))
     return out
 
 
 def spoken_reading(text: str) -> str:
-    return "".join(k for _, k, _ in tokens(text))
+    return "".join(k for _, k, *_ in tokens(text))
+
+
+def _said(kana: str, pron: str) -> str:
+    """は / へ cuối một từ cố định đọc là wa / e (こんにちは, こんばんは): lấy theo cách phát âm."""
+    if kana[-1:] in ("ハ", "ヘ") and pron[-1:] == {"ハ": "ワ", "ヘ": "エ"}[kana[-1]]:
+        return kana[:-1] + pron[-1]
+    return kana
 
 
 def spoken_romaji(text: str) -> str:
     """Romaji của câu thoại theo cách misaki đọc; trợ từ は, へ, を viết wa, e, o. Ghép cả câu rồi mới đổi,
     vì っ có thể bị tách sang từ khác (はっさい → は / っ / さい)."""
-    parts = [PARTICLES[s] if pos == "助詞" and s in PARTICLES else kana for s, kana, pos in tokens(text)]
+    parts = [PARTICLES[s] if pos == "助詞" and s in PARTICLES else _said(kana, pron)
+             for s, kana, pos, pron in tokens(text)]
     return " ".join(kana_romaji(" ".join(kana_only(x) for x in parts if kana_only(x))).split())
 
 
@@ -200,9 +213,9 @@ def check_line(display: str, spoken: str, romaji: str = "") -> list[str]:
     problems = []
     want = kana_only(reading(display))
     toks = tokens(spoken)
-    got = kana_only("".join(k for _, k, _ in toks))
+    got = kana_only("".join(k for _, k, *_ in toks))
     if want != got:
-        detail = " ".join(f"{s}({k})" for s, k, _ in toks if any(is_kanji(c) for c in s))
+        detail = " ".join(f"{s}({k})" for s, k, *_ in toks if any(is_kanji(c) for c in s))
         problems.append(f"bộ đọc không đọc như furigana: {diff(want, got)}"
                         + (f" — misaki đọc chữ Hán: {detail}" if detail else "")
                         + " → viết chỗ đó bằng kana trong `say`")

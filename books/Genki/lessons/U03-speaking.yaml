@@ -1,0 +1,444 @@
+# U03 · Speaking — GENKI I bài 3 デートの約束 (Making a Date). Video luyện nói ~9 phút cho phiên Part B (練習):
+# động từ ～ます / ～ません (ba nhóm), trợ từ を・で・に, giờ với に và từ chỉ thời gian không có に, trạng từ tần suất,
+# lời mời ～ませんか và cách nhận lời / từ chối, hỏi đáp về một ngày, rồi hai đoạn hội thoại của sách (trang 82).
+# Từ bài 3 GENKI viết chữ Hán có furigana trong phần hội thoại, nên thẻ cũng vậy. Xem ghi chú đầu U01-speaking.yaml.
+id: U03-speaking
+activity: U03-part-b
+title: "Unit 3 · Making a Date"
+subtitle: "Speaking · Daily routine, weekends and invitations"
+title_vi: "Luyện nói — sinh hoạt hằng ngày, cuối tuần, mời và nhận lời / từ chối"
+tag: "GENKI L3 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+  takeshi: {name: Takeshi, role: Japanese student, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Unit 3 Speaking · What do you do on weekends?"
+    items:
+      - jp: "{週末|しゅうまつ}は たいてい {何|なに}を しますか。"
+        romaji: "Shuumatsu wa taitee nani o shimasu ka."
+        en: "What do you usually do on weekends? — Today: say what you do and don't do, when and where, how often, and invite a friend."
+        vi: "Cuối tuần bạn thường làm gì? — Hôm nay: nói việc mình làm / không làm, lúc nào, ở đâu, thường xuyên thế nào, và mời bạn đi chơi. しゅうまつ (週末 – chu mạt)."
+    lines:
+      - emma: "Welcome to Unit 3 speaking practice. Today you will talk about your daily life: what you do and don't do, when and where you do it, and how often. At the end you will invite a friend to a movie. This is the first line of the textbook dialogue."
+      - takeshi: "週末はたいていなにをしますか。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Verbs: ～ます and ～ません"
+    heading: "Pattern 1 · Verbs in ～ます / ～ません"
+    items:
+      - jp: "{行|い}きます ・ {行|い}きません"
+        romaji: "ikimasu · ikimasen"
+        en: "go / don't go. The ます form is used for habits and for the future: I go, I will go."
+        vi: "đi / không đi. Thể ます dùng cho thói quen và tương lai: tôi đi, tôi sẽ đi. 行 (hành)."
+      - jp: "{食|た}べます ・ {見|み}ます ・ {起|お}きます ・ {寝|ね}ます"
+        romaji: "tabemasu · mimasu · okimasu · nemasu"
+        en: "Ru-verbs: eat, watch, get up, go to bed. Drop る, add ます (たべる → たべます)."
+        vi: "Động từ nhóm る: ăn, xem, thức dậy, đi ngủ. Bỏ る, thêm ます."
+      - jp: "{飲|の}みます ・ {読|よ}みます ・ {聞|き}きます ・ {話|はな}します ・ {帰|かえ}ります"
+        romaji: "nomimasu · yomimasu · kikimasu · hanashimasu · kaerimasu"
+        en: "U-verbs: drink, read, listen, speak, go home. The last sound changes from u to i, then ます (のむ → のみます)."
+        vi: "Động từ nhóm う: uống, đọc, nghe, nói, về nhà. Âm cuối u đổi thành i rồi thêm ます."
+      - jp: "{来|き}ます ・ します ・ {勉強|べんきょう}します"
+        romaji: "kimasu · shimasu · benkyoo shimasu"
+        en: "Irregular verbs: come (くる → きます), do (する → します), study."
+        vi: "Động từ bất quy tắc: đến (くる → きます), làm (する → します), học. 勉強 (miễn cưỡng → học)."
+      - jp: "{食|た}べません ・ {飲|の}みません ・ しません"
+        romaji: "tabemasen · nomimasen · shimasen"
+        en: "Negative: change ます to ません — don't eat, don't drink, don't do."
+        vi: "Phủ định: đổi ます thành ません — không ăn, không uống, không làm."
+    lines:
+      - emma: "Japanese verbs come at the end of the sentence. The polite form ends in mah-s, and the negative ends in mah-sen. The same form is used for habits and for the future. Listen."
+        say: "Japanese verbs come at the end of the sentence. The polite form ends in mahss, and the negative ends in mah-sen. The same form is used for habits and for the future. Listen."
+      - yuki: "行きます。行きません。"
+        pause: 1.8
+      - emma: "There are three groups of verbs. In the first group, simply drop the last syllable and add the polite ending."
+        focus: 1
+      - yuki: "食べます、見ます、起きます、寝ます。"
+        pause: 2
+      - emma: "In the second group, the last sound changes from u to i before the ending."
+        say: "In the second group, the last sound changes from oo to ee before the ending."
+        focus: 2
+      - yuki: "飲みます、読みます、聞きます、話します、帰ります。"
+        pause: 2.2
+      - emma: "Only two verbs are irregular: come, and do. Do also makes many other verbs, like study."
+        focus: 3
+      - yuki: "来ます、します、勉強します。"
+        pause: 2
+      - emma: "For the negative, change the ending. Say these with Takeshi."
+        focus: 4
+      - takeshi: "食べません、飲みません、しません。"
+        pause: 2
+
+  - kind: jp
+    chapter: "Particles を, で, に"
+    heading: "Pattern 2 · を (object), で (place of action), に (destination)"
+    items:
+      - jp: "コーヒーを {飲|の}みます。"
+        romaji: "Koohii o nomimasu."
+        en: "I drink coffee. を marks the object — the thing you eat, drink, read, watch."
+        vi: "Tôi uống cà phê. を đánh dấu tân ngữ — thứ mình ăn, uống, đọc, xem. を đọc là \"o\"."
+      - jp: "{家|うち}で {本|ほん}を {読|よ}みます。"
+        romaji: "Uchi de hon o yomimasu."
+        en: "I read books at home. で marks the place where you do something."
+        vi: "Tôi đọc sách ở nhà. で = nơi diễn ra hành động."
+      - jp: "{図書館|としょかん}で {勉強|べんきょう}します。"
+        romaji: "Toshokan de benkyoo shimasu."
+        en: "I study at the library."
+        vi: "Tôi học ở thư viện. としょかん (図書館 – đồ thư quán)."
+      - jp: "{学校|がっこう}に {行|い}きます。"
+        romaji: "Gakkoo ni ikimasu."
+        en: "I go to school. に (or へ) marks where you go, come or return."
+        vi: "Tôi đi đến trường. に (hoặc へ) = nơi đi đến, đến, về."
+      - jp: "{家|うち}に {帰|かえ}ります。"
+        romaji: "Uchi ni kaerimasu."
+        en: "I go home."
+        vi: "Tôi về nhà."
+      - jp: "カフェで コーヒーを {飲|の}みます。"
+        romaji: "Kafe de koohii o nomimasu."
+        en: "I drink coffee at a cafe. Place で, then object を, then the verb."
+        vi: "Tôi uống cà phê ở quán. Nơi chốn で → tân ngữ を → động từ."
+    lines:
+      - emma: "Particles tell you the role of each word. The object particle is written with the special hiragana wo, but it is read o."
+        say: "Particles tell you the role of each word. The object particle is written with the special hiragana woh, but it is read oh."
+      - yuki: "コーヒーを飲みます。"
+        pause: 1.8
+      - emma: "The place where an action happens takes the particle de."
+        say: "The place where an action happens takes the particle deh."
+        focus: 1
+      - yuki: "うちで本を読みます。"
+        pause: 1.8
+      - takeshi: "図書館で勉強します。"
+        focus: 2
+        pause: 1.8
+      - emma: "Where you go, come or return takes the particle ni."
+        say: "Where you go, come or return takes the particle nee."
+        focus: 3
+      - yuki: "学校に行きます。"
+        pause: 1.8
+      - takeshi: "うちに帰ります。"
+        focus: 4
+        pause: 1.8
+      - emma: "Put them together: place, then object, then verb."
+        focus: 5
+      - yuki: "カフェでコーヒーを飲みます。"
+        pause: 2
+
+  - kind: jp
+    chapter: "Time: に or no に"
+    heading: "Pattern 3 · Time — 七時に, 土曜日に, but まいにち without に"
+    items:
+      - jp: "{七時|しちじ}に {起|お}きます。"
+        romaji: "Shichiji ni okimasu."
+        en: "I get up at seven. Clock times take に."
+        vi: "Tôi dậy lúc 7 giờ. Giờ cụ thể đi với に."
+      - jp: "{土曜日|どようび}に テニスを します。"
+        romaji: "Doyoobi ni tenisu o shimasu."
+        en: "I play tennis on Saturday. Days of the week take に."
+        vi: "Tôi chơi tennis vào thứ Bảy. Thứ trong tuần đi với に. どようび (土曜日 – thổ diệu nhật)."
+      - jp: "{毎日|まいにち} {日本語|にほんご}を {勉強|べんきょう}します。"
+        romaji: "Mainichi nihongo o benkyoo shimasu."
+        en: "I study Japanese every day. まいにち, きょう, あした, こんばん: no に."
+        vi: "Tôi học tiếng Nhật mỗi ngày. まいにち, きょう, あした, こんばん: không có に."
+      - jp: "{今日|きょう} {京都|きょうと}に {行|い}きます。"
+        romaji: "Kyoo Kyooto ni ikimasu."
+        en: "I'm going to Kyoto today."
+        vi: "Hôm nay tôi đi Kyoto."
+      - jp: "{十一時|じゅういちじ}ごろ {寝|ね}ます。"
+        romaji: "Juuichiji goro nemasu."
+        en: "I go to bed at about eleven. ごろ = at about."
+        vi: "Tôi đi ngủ khoảng 11 giờ. ごろ = khoảng."
+      - jp: "{何時|なんじ}に {起|お}きますか。"
+        romaji: "Nanji ni okimasu ka."
+        en: "What time do you get up?"
+        vi: "Bạn dậy lúc mấy giờ?"
+    lines:
+      - emma: "Time expressions usually come near the beginning of the sentence. Clock times take the particle ni."
+        say: "Time expressions usually come near the beginning of the sentence. Clock times take the particle nee."
+      - yuki: "しちじに起きます。"
+        pause: 1.8
+      - emma: "Days of the week take it too."
+        focus: 1
+      - takeshi: "どようびにテニスをします。"
+        pause: 1.8
+      - emma: "But words like every day, today, tomorrow and tonight never take it."
+        focus: 2
+      - yuki: "毎日にほんごを勉強します。"
+        pause: 2
+      - yuki: "今日京都に行きます。"
+        focus: 3
+        pause: 1.8
+      - emma: "To say at about, add goro after the time."
+        say: "To say at about, add goh-roh after the time."
+        focus: 4
+      - takeshi: "十一時ごろ寝ます。"
+        pause: 1.8
+      - yuki: "なんじに起きますか。"
+        focus: 5
+        pause: 1.8
+
+  - kind: jp
+    chapter: "How often?"
+    heading: "Pattern 4 · よく, ときどき, たいてい, あまり～ません, ぜんぜん～ません"
+    items:
+      - jp: "よく {音楽|おんがく}を {聞|き}きます。"
+        romaji: "Yoku ongaku o kikimasu."
+        en: "I often listen to music. よく = often."
+        vi: "Tôi hay nghe nhạc. よく = thường, hay."
+      - jp: "たいてい {家|うち}で {勉強|べんきょう}します。"
+        romaji: "Taitee uchi de benkyoo shimasu."
+        en: "I usually study at home. たいてい = usually."
+        vi: "Tôi thường học ở nhà. たいてい = thường thì."
+      - jp: "ときどき {映画|えいが}を {見|み}ます。"
+        romaji: "Tokidoki eega o mimasu."
+        en: "I sometimes watch movies. ときどき = sometimes."
+        vi: "Thỉnh thoảng tôi xem phim. ときどき = thỉnh thoảng. えいが (映画 – ánh họa) = phim."
+      - jp: "あまり テレビを {見|み}ません。"
+        romaji: "Amari terebi o mimasen."
+        en: "I don't watch TV much. あまり + negative = not much."
+        vi: "Tôi không hay xem TV. あまり + phủ định = không… lắm."
+      - jp: "ぜんぜん お{酒|さけ}を {飲|の}みません。"
+        romaji: "Zenzen osake o nomimasen."
+        en: "I don't drink alcohol at all. ぜんぜん + negative = not at all."
+        vi: "Tôi hoàn toàn không uống rượu. ぜんぜん + phủ định = hoàn toàn không."
+    lines:
+      - emma: "Now, how often. These words also come before the verb."
+      - yuki: "よく音楽を聞きます。"
+        pause: 1.8
+      - takeshi: "たいていうちで勉強します。"
+        focus: 1
+        pause: 1.8
+      - yuki: "ときどき映画を見ます。"
+        focus: 2
+        pause: 1.8
+      - emma: "Two of these words always go with a negative verb. The first means not much."
+        focus: 3
+      - takeshi: "あまりテレビを見ません。"
+        pause: 1.8
+      - emma: "The second means not at all."
+        focus: 4
+      - yuki: "全然お酒を飲みません。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Invitations ～ませんか"
+    heading: "Pattern 5 · ～ませんか — Won't you…? Accept or refuse"
+    items:
+      - jp: "{土曜日|どようび}に {映画|えいが}を {見|み}ませんか。"
+        romaji: "Doyoobi ni eega o mimasen ka."
+        en: "Would you like to see a movie on Saturday? ～ませんか = a polite invitation."
+        vi: "Thứ Bảy đi xem phim không? ～ませんか = lời mời lịch sự."
+      - jp: "いいですね。"
+        romaji: "Ii desu ne."
+        en: "Sounds good! — accepting."
+        vi: "Hay đấy! — nhận lời."
+      - jp: "{土曜日|どようび}は ちょっと…。"
+        romaji: "Doyoobi wa chotto…"
+        en: "Saturday is a little… — a polite refusal: just stop the sentence."
+        vi: "Thứ Bảy thì hơi… — từ chối lịch sự: bỏ lửng câu."
+      - jp: "じゃあ、{日曜日|にちようび}は どうですか。"
+        romaji: "Jaa, nichiyoobi wa doo desu ka."
+        en: "Then how about Sunday? どうですか = how about…?"
+        vi: "Vậy Chủ nhật thì sao? どうですか = … thì sao?"
+      - jp: "{明日|あした} カフェで コーヒーを {飲|の}みませんか。"
+        romaji: "Ashita kafe de koohii o nomimasen ka."
+        en: "Would you like to have coffee at a cafe tomorrow?"
+        vi: "Mai đi uống cà phê ở quán không?"
+      - jp: "ええ、いいですね。"
+        romaji: "Ee, ii desu ne."
+        en: "Yes, that sounds good. ええ = yes (softer than はい)."
+        vi: "Ừ, hay đấy. ええ = vâng (nhẹ hơn はい)."
+    lines:
+      - emma: "To invite someone, use the negative verb as a question. It sounds polite: won't you…?"
+      - takeshi: "どようびに映画を見ませんか。"
+        pause: 1.5
+      - emma: "To accept, say: that's good."
+        focus: 1
+      - yuki: "いいですね。"
+        pause: 1.5
+      - emma: "To refuse politely, Japanese speakers don't say no. They say the day, then a little, and stop."
+        focus: 2
+      - yuki: "どようびはちょっと……。"
+        pause: 1.5
+      - takeshi: "じゃあ、にちようびはどうですか。"
+        focus: 3
+        pause: 1.5
+      - yuki: "あしたカフェでコーヒーを飲みませんか。"
+        focus: 4
+        pause: 1.5
+      - takeshi: "ええ、いいですね。"
+        focus: 5
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Questions about your day"
+    heading: "Your day · Five questions and answers"
+    items:
+      - jp: "{何時|なんじ}に {起|お}きますか。 — {六時半|ろくじはん}ごろ {起|お}きます。"
+        romaji: "Nanji ni okimasu ka. — Rokuji han goro okimasu."
+        en: "What time do you get up? — At about 6:30."
+        vi: "Bạn dậy lúc mấy giờ? — Khoảng 6 rưỡi."
+      - jp: "{朝|あさ}ごはんを {食|た}べますか。 — いいえ、あまり {食|た}べません。"
+        romaji: "Asagohan o tabemasu ka. — Iie, amari tabemasen."
+        en: "Do you eat breakfast? — No, not much."
+        vi: "Bạn có ăn sáng không? — Không, tôi ít khi ăn."
+      - jp: "{週末|しゅうまつ}は {何|なに}を しますか。 — テニスを します。{映画|えいが}も {見|み}ます。"
+        romaji: "Shuumatsu wa nani o shimasu ka. — Tenisu o shimasu. Eega mo mimasu."
+        en: "What do you do on weekends? — I play tennis. I also watch movies."
+        vi: "Cuối tuần bạn làm gì? — Tôi chơi tennis. Tôi cũng xem phim."
+      - jp: "よく スポーツを しますか。 — ときどき します。"
+        romaji: "Yoku supootsu o shimasu ka. — Tokidoki shimasu."
+        en: "Do you often play sports? — Sometimes."
+        vi: "Bạn có hay chơi thể thao không? — Thỉnh thoảng."
+      - jp: "{何時|なんじ}ごろ {寝|ね}ますか。 — {十二時|じゅうにじ}ごろ {寝|ね}ます。"
+        romaji: "Nanji goro nemasu ka. — Juuniji goro nemasu."
+        en: "At about what time do you go to bed? — At about twelve."
+        vi: "Bạn đi ngủ khoảng mấy giờ? — Khoảng 12 giờ."
+    lines:
+      - emma: "Takeshi asks five questions about your day. Answer about yourself after each question, then listen to Yuki's model answer. Pause the video if you need more time."
+      - takeshi: "なんじに起きますか。"
+        pause: 1.8
+      - yuki: "六時半ごろ起きます。"
+        pause: 1.5
+      - takeshi: "朝ごはんを食べますか。"
+        focus: 1
+        pause: 1.8
+      - yuki: "いいえ、あまり食べません。"
+        pause: 1.5
+      - takeshi: "週末はなにをしますか。"
+        focus: 2
+        pause: 1.8
+      - yuki: "テニスをします。映画も見ます。"
+        pause: 1.5
+      - takeshi: "よくスポーツをしますか。"
+        focus: 3
+        pause: 1.8
+      - yuki: "ときどきします。"
+        pause: 1.5
+      - takeshi: "なんじごろ寝ますか。"
+        focus: 4
+        pause: 1.8
+      - yuki: "十二時ごろ寝ます。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Textbook dialogue I"
+    heading: "Dialogue I (p. 82) · Takeshi invites Mary"
+    items:
+      - jp: "メアリーさん、{週末|しゅうまつ}は たいてい {何|なに}を しますか。"
+        romaji: "Mearii-san, shuumatsu wa taitee nani o shimasu ka."
+        en: "Takeshi: Mary, what do you usually do on the weekend?"
+        vi: "Takeshi: Mary này, cuối tuần bạn thường làm gì?"
+      - jp: "そうですね。たいてい うちで {勉強|べんきょう}します。でも、ときどき {映画|えいが}を {見|み}ます。"
+        romaji: "Soo desu ne. Taitee uchi de benkyoo shimasu. Demo, tokidoki eega o mimasu."
+        en: "Mary: Let's see. I usually study at home. But I sometimes see movies."
+        vi: "Mary: Để xem. Thường thì tôi học ở nhà. Nhưng thỉnh thoảng tôi xem phim. でも = nhưng."
+      - jp: "そうですか…。じゃあ、{土曜日|どようび}に {映画|えいが}を {見|み}ませんか。"
+        romaji: "Soo desu ka… Jaa, doyoobi ni eega o mimasen ka."
+        en: "Takeshi: I see… Then, would you like to see a movie on Saturday?"
+        vi: "Takeshi: Vậy à… Thế thứ Bảy đi xem phim không?"
+      - jp: "{土曜日|どようび}は ちょっと…。"
+        romaji: "Doyoobi wa chotto…"
+        en: "Mary: Saturday is not a good day… (lit. Saturday is a little…)"
+        vi: "Mary: Thứ Bảy thì hơi…"
+      - jp: "じゃあ、{日曜日|にちようび}は どうですか。"
+        romaji: "Jaa, nichiyoobi wa doo desu ka."
+        en: "Takeshi: Then, how about Sunday?"
+        vi: "Takeshi: Vậy Chủ nhật thì sao?"
+      - jp: "いいですね。"
+        romaji: "Ii desu ne."
+        en: "Mary: That's fine."
+        vi: "Mary: Được đấy."
+    lines:
+      - emma: "Now the first dialogue from your textbook, on page 82. Takeshi wants to ask Mary out. Repeat each line."
+      - takeshi: "メアリーさん、週末はたいていなにをしますか。"
+        pause: 2
+      - yuki: "そうですね。たいていうちで勉強します。でも、ときどき映画を見ます。"
+        focus: 1
+        pause: 2.4
+      - takeshi: "そうですか……。じゃあ、どようびに映画を見ませんか。"
+        focus: 2
+        pause: 2.2
+      - yuki: "どようびはちょっと……。"
+        focus: 3
+        pause: 1.8
+      - takeshi: "じゃあ、にちようびはどうですか。"
+        focus: 4
+        pause: 1.8
+      - yuki: "いいですね。"
+        focus: 5
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Textbook dialogue II"
+    heading: "Dialogue II (p. 82) · Sunday morning at the host family's"
+    items:
+      - jp: "おはよう ございます。"
+        romaji: "Ohayoo gozaimasu."
+        en: "Mary: Good morning."
+        vi: "Mary: Chào buổi sáng."
+      - jp: "おはよう。{早|はや}いですね。"
+        romaji: "Ohayoo. Hayai desu ne."
+        en: "Host mother: Good morning. You are early, aren't you?"
+        vi: "Mẹ nuôi: Chào con. Con dậy sớm nhỉ."
+      - jp: "ええ、{今日|きょう}は {京都|きょうと}に {行|い}きます。{京都|きょうと}で {映画|えいが}を {見|み}ます。"
+        romaji: "Ee, kyoo wa Kyooto ni ikimasu. Kyooto de eega o mimasu."
+        en: "Mary: Yes, I'm going to Kyoto today. I will see a movie in Kyoto."
+        vi: "Mary: Vâng, hôm nay con đi Kyoto. Con sẽ xem phim ở Kyoto."
+      - jp: "いいですね。{何時|なんじ}ごろ {帰|かえ}りますか。"
+        romaji: "Ii desu ne. Nanji goro kaerimasu ka."
+        en: "Host mother: Good. Around what time will you come back?"
+        vi: "Mẹ nuôi: Hay nhỉ. Khoảng mấy giờ con về?"
+      - jp: "{九時|くじ}ごろです。"
+        romaji: "Kuji goro desu."
+        en: "Mary: Around nine."
+        vi: "Mary: Khoảng 9 giờ ạ."
+      - jp: "{晩|ばん}ご{飯|はん}は？"
+        romaji: "Bangohan wa?"
+        en: "Host mother: How about dinner?"
+        vi: "Mẹ nuôi: Còn bữa tối thì sao?"
+      - jp: "{食|た}べません。"
+        romaji: "Tabemasen."
+        en: "Mary: I will not eat."
+        vi: "Mary: Con không ăn ạ."
+      - jp: "そうですか。じゃあ、いってらっしゃい。"
+        romaji: "Soo desu ka. Jaa, itterasshai."
+        en: "Host mother: I see. Well, have a nice day."
+        vi: "Mẹ nuôi: Vậy à. Thế đi cẩn thận nhé."
+      - jp: "いってきます。"
+        romaji: "Ittekimasu."
+        en: "Mary: Good-bye. (lit. I'll go and come back.)"
+        vi: "Mary: Con đi đây ạ."
+    lines:
+      - emma: "The second dialogue. On Sunday morning, Mary talks with her host mother. Takeshi reads the host mother's lines today."
+      - yuki: "おはようございます。"
+        pause: 1.5
+      - takeshi: "おはよう。早いですね。"
+        focus: 1
+        pause: 1.8
+      - yuki: "ええ、今日は京都に行きます。京都で映画を見ます。"
+        focus: 2
+        pause: 2.4
+      - takeshi: "いいですね。なんじごろ帰りますか。"
+        focus: 3
+        pause: 1.8
+      - yuki: "くじごろです。"
+        focus: 4
+        pause: 1.5
+      - takeshi: "晩ご飯は？"
+        focus: 5
+        pause: 1.5
+      - yuki: "食べません。"
+        focus: 6
+        pause: 1.5
+      - takeshi: "そうですか。じゃあ、いってらっしゃい。"
+        focus: 7
+        pause: 1.8
+      - yuki: "いってきます。"
+        focus: 8
+        pause: 1.5
+      - emma: "Well done. You can now talk about your day and make plans with friends. Next, practise the exercises in your textbook with the audio, and watch the writing video for Unit 3."

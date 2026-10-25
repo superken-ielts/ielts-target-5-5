@@ -58,6 +58,7 @@ python -m lesson_video check ../books/ielts_target_5_0/lessons/*.yaml
 python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-1.yaml
 python -m lesson_video build <kịch bản> --engine silent --out /tmp/xem-thu --work /tmp/khung   # xem bố cục nhanh, không giọng
 python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01   # phần nào của unit đã có video, phần nào chưa
+python -m lesson_video prune ../books/Genki   # bỏ khỏi lessons.json (và xóa .mp4) những video không còn kịch bản
 ```
 
 Quy trình đầy đủ, bảng cách đọc `say` và kế hoạch các unit tiếp theo: `docs/agent-hoc-tap/06-video-bai-giang.md`.
@@ -94,7 +95,7 @@ Chữ cái, tên riêng hay bị đọc sai: viết cách đọc vào `say`, ki�
 
 | Bước | Module | Làm gì |
 |---|---|---|
-| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match` (`image.grid: 4` xếp dải tranh thành lưới 2×2), `pairs`, `qa`, `compare`, `errors`, `practice`, `jp` = thẻ ba tầng cho câu tiếng Nhật — một mục `jp` (furigana `{漢字|かな}`), `romaji`, `en`, `vi`, `order` = sắp xếp thứ tự (`label: ""` khi mục không có chữ cái), `blanks` = nghe – chép vào ô trống (mục có `q` chứa `___` thì là câu điền từ, `hint` = từ gốc), `mcq` = trắc nghiệm a/b/c (`keys: [1, 2, 3]` để đổi nhãn), `passage` = bài đọc trên màn hình kèm phụ đề (dòng thoại `mark: [cụm từ]` tô vàng chỗ cần dò), `timing` = chia thời gian, `letter` = thư mẫu cả trang; mục `body: false` không tính vào số từ, `shadow` = nghe – nhắc lại: câu mẫu chữ to theo màu người nói `by`, kèm `vi`, `tip`), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói, `echo: true` = sau câu có khoảng lặng đếm ngược dài theo câu để người học nhắc lại (shadowing), `read: <người nói>` = đọc nguyên một đoạn thư); trường cảnh `hide_text: true` (bài nghe: phụ đề chỉ hiện người nói), `roles` (vai trong cảnh, ví dụ lễ tân / khách) và `words` (số từ của thư chia hai trang); dòng `track: <mã file audio trong book.json>` (+ `start`, `end`, `note`) phát file nghe của sách ngay trong video; đối chiếu `activity` với `book.json` |
+| kịch bản | `script.py` | Đọc và kiểm tra YAML: người nói, cảnh (`title`, `bullets`, `vocab`, `match` (`image.grid: 4` xếp dải tranh thành lưới 2×2), `pairs`, `qa`, `compare`, `errors`, `practice`, `jp` = thẻ ba tầng cho câu tiếng Nhật — một hoặc nhiều mục, mỗi mục `jp` (furigana `{漢字|かな}`), `romaji`, `en`, `vi`; dòng thoại chọn mục bằng `focus`, `quiz: true` = thẻ đề không kiểm cách đọc, `order` = sắp xếp thứ tự (`label: ""` khi mục không có chữ cái), `blanks` = nghe – chép vào ô trống (mục có `q` chứa `___` thì là câu điền từ, `hint` = từ gốc), `mcq` = trắc nghiệm a/b/c (`keys: [1, 2, 3]` để đổi nhãn), `passage` = bài đọc trên màn hình kèm phụ đề (dòng thoại `mark: [cụm từ]` tô vàng chỗ cần dò), `timing` = chia thời gian, `letter` = thư mẫu cả trang; mục `body: false` không tính vào số từ, `shadow` = nghe – nhắc lại: câu mẫu chữ to theo màu người nói `by`, kèm `vi`, `tip`), dòng thoại (`say` = cách đọc khác chữ hiển thị, `vi` = phụ đề tiếng Việt, `focus`, `reveal`, `wait` = đếm ngược để người học tự nói, `echo: true` = sau câu có khoảng lặng đếm ngược dài theo câu để người học nhắc lại (shadowing), `read: <người nói>` = đọc nguyên một đoạn thư); trường cảnh `hide_text: true` (bài nghe: phụ đề chỉ hiện người nói), `roles` (vai trong cảnh, ví dụ lễ tân / khách) và `words` (số từ của thư chia hai trang); dòng `track: <mã file audio trong book.json>` (+ `start`, `end`, `note`) phát file nghe của sách ngay trong video; đối chiếu `activity` với `book.json` |
 | giọng đọc | `tts.py` | Kokoro qua `kokoro-onnx`; Flite qua `ctypes`; `silent` để thử nhanh và để test |
 | dòng thời gian | `timeline.py` | Đọc từng câu, chuẩn hóa âm lượng các giọng, ghép thành một dải tiếng; đoạn `track` cắt file nghe của sách bằng ffmpeg rồi ghép vào cùng dải; mỗi câu một khung hình, đếm ngược mỗi giây một khung; chương theo cảnh |
 | độ phủ | `coverage.py` | Bảng phần nào của unit đã có video, phần nào chưa, kịch bản chưa dựng (lệnh `coverage`) |
@@ -104,4 +105,5 @@ Chữ cái, tên riêng hay bị đọc sai: viết cách đọc vào `say`, ki�
 
 Sửa kịch bản `.yaml` rồi chạy lại `build`; không sửa tay `lessons.json` hay file `.mp4`. Thêm video mới: viết
 `books/<sách>/lessons/<id>.yaml` với `activity` là id hoạt động trong `book.json`, chạy `build`, rồi `python3 web/build.py`.
+Bỏ một video: xóa `.yaml`, chạy `prune`, rồi `python3 web/build.py`.
 

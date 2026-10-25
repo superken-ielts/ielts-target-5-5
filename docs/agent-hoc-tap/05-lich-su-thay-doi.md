@@ -5,6 +5,102 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 16 — 25/10/2026: GENKI bài 1–3, bốn video kỹ năng 5–10 phút mỗi bài
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy thẳng lên `main` theo yêu cầu người học.
+
+Người học yêu cầu bốn điều:
+- xem lại mỗi bài nên có bao nhiêu video, trước hết là bài 1–3;
+- mỗi video dài 5–10 phút;
+- làm Speaking và Writing trước, rồi tới Listening và Reading;
+- kiểm tra giao diện rồi commit, đẩy lên `main`.
+
+**Quyết định**
+
+Mỗi bài có bốn video, mỗi kỹ năng một video, gắn vào phiên luyện đúng kỹ năng đó:
+
+| Video | Phiên | Nội dung |
+|---|---|---|
+| Speaking | Part B · Mẫu câu | Điểm ngữ pháp của bài qua câu mẫu (Emma giảng, Yuki / Takeshi đọc), hai đoạn hội thoại của sách, câu hỏi về bản thân |
+| Writing | Part C · Nói & viết | Chữ (hiragana / katakana / chữ Hán của bài), ghép câu, đoạn văn mẫu, hội thoại hoặc tin nhắn, chính tả (bài 2–3), lỗi hay gặp, bài tập |
+| Listening | Hội thoại & từ vựng | Audio gốc K0u-01…04: nghe hai lần tìm đáp án, đáp án, đọc theo, bản có khoảng lặng để nhắc lại; đố nghe |
+| Reading | Đọc – viết | Bài tập 読み書き của sách theo thứ tự, kèm track Y; bài 3 thêm mẹo đọc câu không có dấu cách và đố đúng / sai |
+
+- Part A (ngữ pháp) không có video riêng. Từng điểm ngữ pháp được giảng bằng câu mẫu trong Speaking và Writing; ghi chú
+  phiên Part A nói rõ điều này.
+- Bỏ 9 tập 30–45 giây của bài 1–3, vì nội dung đã nằm trong video mới và tập ngắn trái yêu cầu 5–10 phút. Bài 4–5 giữ
+  6 tập cũ đến khi làm theo khung mới (P2-48).
+- Listening phát nguyên track hội thoại, không cắt từng câu, vì không nghe được để soát ranh giới câu.
+- Không chèn khoảng lặng dài: người học tự dừng video (ý người học ở đợt 14). Phần nhắc lại dùng bản ghi có khoảng
+  lặng của chính sách (K0u-02, K0u-04).
+
+**Kết quả**
+
+DURATION_TABLE
+
+**Công cụ `lesson_video`**
+- Cảnh `jp` có nhiều thẻ. Dòng thoại chọn thẻ bằng `focus`; thanh tiêu đề hiện số thẻ `k/n`.
+- Dòng `track` trong cảnh `jp`: phát file nghe của sách, thay nhãn người nói bằng nhãn teal "BOOK AUDIO · K01-01".
+- Thẻ đề `quiz: true` không bị kiểm cách đọc và được để chữ Hán không furigana, dùng cho đố nghe và bài đọc giá tiền.
+- `check` kiểm cách đọc theo từng thẻ. Một thẻ đạt khi mỗi câu đọc trọn thẻ, hoặc các câu ghép lại thành thẻ.
+- `ja.py`:
+  - romaji kiểu GENKI (`gakusee`, `Soo desu ka`) khớp nhờ chuẩn hóa `ei` = `ee`, `ou` = `oo`;
+  - は / へ cuối từ (こんにちは) lấy theo cách phát âm của unidic;
+  - số khoanh ①–⑦ vẽ bằng phông CJK.
+- Lệnh `prune <sách>` bỏ khỏi `lessons.json` và xóa `.mp4` của video không còn kịch bản.
+
+**Lỗi gặp trong đợt** (chi tiết ở file 07 mục 4.4)
+- misaki đọc sai một số từ: 日本人, アメリカ人, 四時, いま何時, 何を, 土曜日, 明日, 時 đứng một mình. Sửa bằng kana trong câu
+  thoại hoặc `say`.
+- Hiragana さんびゃく bị tách thành さん / び / ゃ / く, nên giọng đọc sai. `check` bắt được vì romaji không khớp. Câu thoại
+  đổi sang 三百.
+- Ba video ra ngoài khung 5–10 phút:
+  - U02-writing dựng lần đầu chỉ 3:56. Thêm cảnh viết số bằng hiragana và cảnh chính tả.
+  - U03-writing ước 4:20, U03-reading ước 5:12. Thêm nội dung trước khi dựng: thứ tự nét và chính tả; mẹo đọc và đố
+    đúng / sai.
+  - U02-listening ước 9:45. Bỏ một lần phát lại hội thoại II.
+- Thẻ câu hỏi "Q1 … Q2 …" ngắt dòng ngay sau "Q2.". Thêm vạch ngăn ` / ` giữa các câu hỏi, rồi dựng lại ba video
+  Listening.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/Genki/lessons/U0u-speaking.yaml`, `U0u-writing.yaml`, `U0u-listening.yaml`, `U0u-reading.yaml` (u = 1–3) + `.mp4` | 12 kịch bản và video |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Cảnh `jp` nhiều thẻ, `track` trong cảnh `jp`, thẻ `quiz`, kiểm cách đọc theo thẻ |
+| `agents/lesson_video/jpcard.py` | Số thẻ `k/n`, nhãn "BOOK AUDIO" khi phát file nghe của sách |
+| `agents/lesson_video/ja.py` | Số khoanh dùng phông CJK, romaji kiểu GENKI, は / へ cuối từ theo cách phát âm |
+| `agents/lesson_video/video.py`, `cli.py` | `prune_manifest`, lệnh `prune` |
+| `agents/tests/test_japanese_video.py` | Cảnh nhiều thẻ + audio sách (vẽ nhãn, số thẻ), kiểm cách đọc theo thẻ, thẻ đề, `focus` ngoài số thẻ, romaji GENKI, こんにちは |
+| `agents/tests/test_lesson_video.py` | Hồi quy "kịch bản khớp `lessons.json`" chạy cho cả `books/Genki`; test `prune` |
+| `books/Genki/book.yaml`, `book.json` | Lời giới thiệu sách; ghi chú phiên bài 1–3 nói video nào có gì |
+| `books/Genki/lessons/lessons.json` | Thêm 12 video, bỏ 9 tập cũ |
+| `books/catalog.json` | Ghi chú lộ trình N5 |
+| `tests/web/book.e2e.mjs` | Thẻ GENKI có 18 video; Unit 1 có 4 video Listening, Speaking, Writing, Reading, mỗi video 5–10 phút; nút Speaking mở phiên Part B |
+| `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` | Mục 4 viết lại: độ phủ, cách làm video, cảnh `jp` nhiều thẻ, lỗi, kế hoạch bài 4–12 theo khung bốn kỹ năng |
+| `docs/agent-hoc-tap/README.md`, `04-checklist.md` (P2-47, P2-48, P2-49), `agents/README.md`, `CLAUDE.md` | Trạng thái đợt 16, lệnh `prune` |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### File xóa
+
+`books/Genki/lessons/EP_01_01` … `EP_03_03` (`.yaml` và `.mp4`, 9 tập).
+
+### Kiểm thử
+
+TEST_RESULTS
+
+### Còn treo
+
+- P2-48: video bài 4–12 theo khung bốn kỹ năng (bài 4–5 thay 6 tập ngắn).
+- Đáp án Workbook: cần GENKI Answer Key.
+
+---
+
 ## Đợt 15 — 25/10/2026: lộ trình tiếng Nhật JLPT N5 với GENKI I, đánh giá bản thiết kế video, 15 video bài 1–5
 
 Nhánh `claude/nifty-darwin-23vvae`. Giữa đợt đã merge `main` tại `99408f5`: người học thêm GENKI I (3rd Edition)
