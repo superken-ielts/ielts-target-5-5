@@ -1,0 +1,233 @@
+# U02 · Listening — GENKI I bài 2. Video luyện nghe ~9 phút cho phiên Hội thoại & từ vựng (trang 56–59):
+# audio gốc K02-01 / K02-03 (hội thoại) và K02-02 / K02-04 (bản có khoảng lặng để nhắc lại), câu hỏi – đáp án,
+# đọc theo, rồi đố nghe giá tiền và "của ai". Lời thoại chép từ trang 56–57. Xem ghi chú đầu U01-listening.yaml.
+id: U02-listening
+activity: U02-words
+title: "Unit 2 · Shopping"
+subtitle: "Listening · At the flea market and the restaurant; prices"
+title_vi: "Luyện nghe — chợ đồ cũ và nhà hàng (audio gốc), nghe giá tiền"
+tag: "GENKI L2 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+  takeshi: {name: Takeshi, role: shop staff, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Unit 2 Listening · Shopping in real Japanese"
+    items:
+      - jp: "かいもの"
+        romaji: "Kaimono"
+        en: "Shopping. Today: listen to the two textbook dialogues (the book's own audio), answer questions, then catch prices."
+        vi: "Mua sắm. Hôm nay: nghe hai đoạn hội thoại của sách (audio gốc), trả lời câu hỏi, rồi nghe giá tiền."
+    lines:
+      - emma: "Welcome to Unit 2 listening practice. You will hear the two dialogues of Lesson 2 from your textbook's audio. Mary goes to a flea market, and then to a restaurant. For each dialogue, listen for the answers first, then read along, then repeat in the pauses. At the end, you will catch prices."
+      - yuki: "買い物。"
+        say: "かいもの。"
+        pause: 1
+
+  - kind: jp
+    chapter: "Dialogue I: listen for the answers"
+    heading: "Dialogue I (p. 56) · Listen twice"
+    items:
+      - jp: "Q1. メアリーさんの とけいは いくらですか。 / Q2. さいふは だれの さいふですか。"
+        en: "Mary goes to a flea market. Q1: How much is the watch that Mary takes? Q2: Whose wallet is it?"
+        vi: "Mary đi chợ đồ cũ. Câu 1: Cái đồng hồ Mary lấy giá bao nhiêu? Câu 2: Cái ví là của ai?"
+    lines:
+      - emma: "Dialogue one. Mary goes to a flea market. She asks about three things. Listen for the price of the watch that she finally takes. At the end, a stranger finds a wallet. Whose wallet is it?"
+      - track: K02-01
+        note: "会話 I · Dialogue I"
+      - emma: "Listen once more. The prices go by quickly."
+      - track: K02-01
+        note: "会話 I · Dialogue I — 2nd time"
+
+  - kind: jp
+    chapter: "Dialogue I: answers"
+    heading: "Dialogue I · Answers"
+    items:
+      - jp: "それは さんぜんえんです。"
+        romaji: "Sore wa sanzen en desu."
+        en: "The first thing: 3,000 yen — too expensive."
+        vi: "Món đầu tiên: 3.000 yên — đắt quá."
+      - jp: "あれは さんぜんごひゃくえんです。"
+        romaji: "Are wa sanzengohyaku en desu."
+        en: "The watch over there: 3,500 yen — also expensive."
+        vi: "Cái đồng hồ đằng kia: 3.500 yên — cũng đắt."
+      - jp: "これは せんはっぴゃくえんですよ。"
+        romaji: "Kore wa senhappyaku en desu yo."
+        en: "Q1: The one Mary takes costs 1,800 yen."
+        vi: "Câu 1: Cái Mary lấy giá 1.800 yên."
+      - jp: "わたしの さいふです。"
+        romaji: "Watashi no saifu desu."
+        en: "Q2: It is Mary's wallet. She says: わたしの さいふです。"
+        vi: "Câu 2: Là ví của Mary."
+    lines:
+      - emma: "Three prices. The first thing Mary asks about."
+      - takeshi: "それは三千円です。"
+        pause: 1.2
+      - emma: "The watch over there."
+        focus: 1
+      - takeshi: "あれは三千五百円です。"
+        pause: 1.2
+      - emma: "And the one Mary takes in the end."
+        focus: 2
+      - takeshi: "これは千八百円ですよ。"
+        pause: 1.5
+      - emma: "And the wallet belongs to Mary."
+        focus: 3
+      - yuki: "わたしの財布です。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Dialogue I: read along, then repeat"
+    heading: "Dialogue I · Read along, then repeat in the pauses"
+    items:
+      - jp: "メアリー：すみません。これは いくらですか。 / みせのひと：それは さんぜんえんです。 / メアリー：たかいですね。じゃあ、あの とけいは いくらですか。 / みせのひと：あれは さんぜんごひゃくえんです。 / メアリー：そうですか。あれも たかいですね。 / みせのひと：これは せんはっぴゃくえんですよ。 / メアリー：じゃあ、その とけいを ください。 / しらないひと：これは だれの さいふですか。 / メアリー：わたしの さいふです。ありがとう ございます。"
+        en: "Mary at the flea market, then a stranger finds a wallet."
+        vi: "みせのひと = người bán; しらないひと = người lạ."
+    lines:
+      - emma: "Now read along while you listen."
+      - track: K02-01
+        note: "会話 I · read along"
+      - emma: "The next recording has pauses. Repeat each line in the pause."
+      - track: K02-02
+        note: "会話 I · repeat in the pauses"
+
+  - kind: jp
+    chapter: "Dialogue II: listen for the answers"
+    heading: "Dialogue II (p. 57) · Listen twice"
+    items:
+      - jp: "Q1. とんかつは さかなですか。 / Q2. トイレは どこですか。"
+        en: "After shopping, Mary goes to a restaurant. Q1: Is tonkatsu fish? Q2: Where is the restroom?"
+        vi: "Sau khi mua sắm, Mary vào nhà hàng. Câu 1: Tonkatsu có phải là cá không? Câu 2: Nhà vệ sinh ở đâu?"
+    lines:
+      - emma: "Dialogue two. After shopping, Mary goes to a restaurant. Listen for two things: what tonkatsu is, and where the restroom is."
+      - track: K02-03
+        note: "会話 II · Dialogue II"
+      - emma: "Once more."
+      - track: K02-03
+        note: "会話 II · Dialogue II — 2nd time"
+
+  - kind: jp
+    chapter: "Dialogue II: answers"
+    heading: "Dialogue II · Answers"
+    items:
+      - jp: "いいえ、さかなじゃないです。にくです。"
+        romaji: "Iie, sakana ja nai desu. Niku desu."
+        en: "Q1: No, it's not fish. It's meat (a pork cutlet)."
+        vi: "Câu 1: Không phải cá, là thịt (thịt heo chiên xù)."
+      - jp: "あそこです。"
+        romaji: "Asoko desu."
+        en: "Q2: It's over there."
+        vi: "Câu 2: Ở đằng kia."
+    lines:
+      - takeshi: "いいえ、魚じゃないです。肉です。"
+        pause: 1.5
+      - emma: "The restaurant attendant also says it is delicious."
+      - takeshi: "あそこです。"
+        focus: 1
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Dialogue II: read along and repeat"
+    heading: "Dialogue II · Read along and repeat in the pauses"
+    items:
+      - jp: "みせのひと：いらっしゃいませ。メニューを どうぞ。 / メアリー：どうも。これは なんですか。 / みせのひと：どれですか。ああ、とんかつです。 / メアリー：とんかつ？ さかなですか。 / みせのひと：いいえ、さかなじゃないです。にくです。おいしいですよ。 / メアリー：じゃあ、これを おねがいします。 / メアリー：すみません。トイレは どこですか。 / みせのひと：あそこです。 / メアリー：ありがとう ございます。"
+        en: "Mary orders tonkatsu, then asks for the restroom."
+        vi: "Mary gọi món tonkatsu rồi hỏi nhà vệ sinh."
+    lines:
+      - emma: "This time, read along and repeat each line in the pauses."
+      - track: K02-04
+        note: "会話 II · read along and repeat in the pauses"
+
+  - kind: jp
+    chapter: "Catch the prices"
+    heading: "Listening quiz · How much is it? Whose is it?"
+    items:
+      - jp: "Q1 ・ いくらですか。"
+        quiz: true
+        en: "Listen and write the price."
+        vi: "Nghe và viết giá."
+      - jp: "これは さんびゃくえんです。 → ¥300"
+        romaji: "Kore wa sanbyaku en desu."
+        en: "This one is 300 yen."
+        vi: "Cái này 300 yên."
+      - jp: "Q2 ・ いくらですか。"
+        quiz: true
+        en: "Listen and write the price."
+        vi: "Nghe và viết giá."
+      - jp: "あの ぼうしは にせんごひゃくえんです。 → ¥2,500"
+        romaji: "Ano booshi wa nisengohyaku en desu."
+        en: "That hat over there is 2,500 yen."
+        vi: "Cái mũ kia 2.500 yên."
+      - jp: "Q3 ・ いくらですか。"
+        quiz: true
+        en: "Listen and write the price."
+        vi: "Nghe và viết giá."
+      - jp: "この とけいは いちまんはっせんえんです。 → ¥18,000"
+        romaji: "Kono tokee wa ichiman hassen en desu."
+        en: "This watch is 18,000 yen."
+        vi: "Cái đồng hồ này 18.000 yên."
+      - jp: "Q4 ・ いくらですか。"
+        quiz: true
+        en: "Listen and write the price."
+        vi: "Nghe và viết giá."
+      - jp: "その じてんしゃは よんまんさんぜんえんです。 → ¥43,000"
+        romaji: "Sono jitensha wa yonman sanzen en desu."
+        en: "That bicycle is 43,000 yen."
+        vi: "Cái xe đạp đó 43.000 yên."
+      - jp: "Q5 ・ だれの ですか。"
+        quiz: true
+        en: "Listen: whose is it, and what is it?"
+        vi: "Nghe: của ai, là cái gì?"
+      - jp: "それは たけしさんの かさです。 → Takeshi's umbrella"
+        romaji: "Sore wa Takeshi-san no kasa desu."
+        en: "That is Takeshi's umbrella."
+        vi: "Đó là ô của anh Takeshi."
+      - jp: "Q6 ・ どこですか。"
+        quiz: true
+        en: "Listen: what is it, and where is it?"
+        vi: "Nghe: cái gì, ở đâu?"
+      - jp: "ぎんこうは あそこです。 → The bank is over there."
+        romaji: "Ginkoo wa asoko desu."
+        en: "The bank is over there."
+        vi: "Ngân hàng ở đằng kia."
+    lines:
+      - emma: "Last part: a listening quiz. Write down the price, the owner, or the place that you hear, then check the answer."
+      - takeshi: "これは三百円です。"
+        pause: 2.5
+      - takeshi: "これは三百円です。"
+        focus: 1
+        pause: 1.2
+      - yuki: "あの帽子は二千五百円です。"
+        focus: 2
+        pause: 2.5
+      - yuki: "あの帽子は二千五百円です。"
+        focus: 3
+        pause: 1.2
+      - takeshi: "この時計は一万八千円です。"
+        focus: 4
+        pause: 2.5
+      - takeshi: "この時計は一万八千円です。"
+        focus: 5
+        pause: 1.2
+      - yuki: "その自転車は四万三千円です。"
+        focus: 6
+        pause: 2.5
+      - yuki: "その自転車は四万三千円です。"
+        focus: 7
+        pause: 1.2
+      - takeshi: "それはたけしさんの傘です。"
+        focus: 8
+        pause: 2.5
+      - takeshi: "それはたけしさんの傘です。"
+        focus: 9
+        pause: 1.2
+      - yuki: "銀行はあそこです。"
+        focus: 10
+        pause: 2.5
+      - yuki: "銀行はあそこです。"
+        focus: 11
+        pause: 1.2
+      - emma: "Well done. Listen to the dialogues again during the week, and repeat them in the pauses until you can say them without looking."

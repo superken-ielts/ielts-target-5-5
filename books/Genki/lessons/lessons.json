@@ -3,293 +3,665 @@
  "note": "Sinh bởi agents/lesson_video từ các file .yaml cùng thư mục — sửa kịch bản rồi chạy lại `python -m lesson_video build`, không sửa tay file này hay file .mp4.",
  "lessons": [
   {
-   "id": "EP_01_01",
-   "activity": "U01-part-a",
+   "id": "U01-speaking",
+   "activity": "U01-part-b",
    "item": "U01",
-   "title": "Unit 1 · New Friends · EP 1.1 · X wa Y desu & Question Sentences with 'ka'",
-   "label": "EP 1.1 · X wa Y desu & Question Sentences with 'ka'",
-   "titleVi": "Phần A — X は Y です và câu hỏi với か",
-   "file": "lessons/EP_01_01.mp4",
-   "source": "lessons/EP_01_01.yaml",
-   "duration": 30.7,
-   "bytes": 400032,
+   "title": "Unit 1 · New Friends · Speaking · Introduce yourself and ask about others",
+   "label": "Speaking · Introduce yourself and ask about others",
+   "titleVi": "Luyện nói — tự giới thiệu; hỏi tên, trường, năm học, chuyên ngành, quốc tịch, tuổi, giờ",
+   "file": "lessons/U01-speaking.mp4",
+   "source": "lessons/U01-speaking.yaml",
+   "duration": 486.7,
+   "bytes": 5586178,
    "engine": "kokoro",
    "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (Japanese student) — Kokoro jm_kumo"
    ],
    "chapters": [
     {
      "t": 0.0,
-     "title": "Core pattern: X は Y です"
+     "title": "Goals: first meeting"
     },
     {
-     "t": 10.1,
-     "title": "Shadowing: student & office worker"
+     "t": 37.0,
+     "title": "X は Y です"
     },
     {
-     "t": 15.8,
-     "title": "Questions with か"
+     "t": 91.0,
+     "title": "Yes / no questions with か"
     },
     {
-     "t": 24.5,
-     "title": "Shadowing: asking about work"
+     "t": 131.3,
+     "title": "Asking what: なん"
+    },
+    {
+     "t": 193.1,
+     "title": "Noun の Noun"
+    },
+    {
+     "t": 250.1,
+     "title": "Time and age"
+    },
+    {
+     "t": 296.4,
+     "title": "Textbook dialogue I"
+    },
+    {
+     "t": 348.0,
+     "title": "Textbook dialogue II"
+    },
+    {
+     "t": 377.7,
+     "title": "Your self-introduction"
+    },
+    {
+     "t": 424.4,
+     "title": "Questions about you"
     }
    ]
   },
   {
-   "id": "EP_01_02",
-   "activity": "U01-part-b",
+   "id": "U01-writing",
+   "activity": "U01-part-c",
    "item": "U01",
-   "title": "Unit 1 · New Friends · EP 1.2 · Connecting Nouns with 'no', Age & Telling Time",
-   "label": "EP 1.2 · Connecting Nouns with 'no', Age & Telling Time",
-   "titleVi": "Phần B — Danh từ の danh từ, tuổi và giờ",
-   "file": "lessons/EP_01_02.mp4",
-   "source": "lessons/EP_01_02.yaml",
-   "duration": 29.6,
-   "bytes": 377687,
+   "title": "Unit 1 · New Friends · Writing · Your self-introduction in hiragana and katakana",
+   "label": "Writing · Your self-introduction in hiragana and katakana",
+   "titleVi": "Luyện viết — đoạn tự giới thiệu bằng hiragana, katakana; viết tên tiếng Việt; lỗi hay gặp",
+   "file": "lessons/U01-writing.mp4",
+   "source": "lessons/U01-writing.yaml",
+   "duration": 330.9,
+   "bytes": 4225544,
    "engine": "kokoro",
    "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha"
    ],
    "chapters": [
     {
      "t": 0.0,
-     "title": "Particle の"
+     "title": "Goals"
     },
     {
-     "t": 10.7,
-     "title": "Shadowing: affiliation with の"
+     "t": 18.6,
+     "title": "Hiragana or katakana?"
     },
     {
-     "t": 14.8,
-     "title": "Telling time & age"
+     "t": 64.8,
+     "title": "Spelling traps"
+    },
+    {
+     "t": 109.2,
+     "title": "Punctuation"
+    },
+    {
+     "t": 145.4,
+     "title": "Build it sentence by sentence"
+    },
+    {
+     "t": 202.2,
+     "title": "Model paragraph"
+    },
+    {
+     "t": 241.3,
+     "title": "Writing about a friend"
+    },
+    {
+     "t": 270.6,
+     "title": "Common mistakes"
+    },
+    {
+     "t": 307.0,
+     "title": "Your task"
+    }
+   ]
+  },
+  {
+   "id": "U01-reading",
+   "activity": "U01-read-write",
+   "item": "U01",
+   "title": "Unit 1 · Hiragana · Reading · Hiragana practice with the textbook audio",
+   "label": "Reading · Hiragana practice with the textbook audio",
+   "titleVi": "Luyện đọc — hiragana: chữ dễ nhầm, dấu ゛゜, âm ghép, trường âm, năm đoạn tự giới thiệu",
+   "file": "lessons/U01-reading.mp4",
+   "source": "lessons/U01-reading.yaml",
+   "duration": 508.9,
+   "bytes": 5288130,
+   "engine": "kokoro",
+   "voices": [
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha"
+   ],
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Goals"
+    },
+    {
+     "t": 19.6,
+     "title": "A. Look-alike letters"
+    },
+    {
+     "t": 94.4,
+     "title": "B. Names"
+    },
+    {
+     "t": 168.0,
+     "title": "C. Voiced sounds ゛ ゜"
+    },
+    {
+     "t": 223.5,
+     "title": "D. Small letters"
+    },
+    {
+     "t": 293.4,
+     "title": "E. Long vowels"
+    },
+    {
+     "t": 363.1,
+     "title": "F. Letter puzzle"
+    },
+    {
+     "t": 377.8,
+     "title": "II. Five self-introductions"
+    },
+    {
+     "t": 478.6,
+     "title": "III. A model to copy"
+    }
+   ]
+  },
+  {
+   "id": "U01-listening",
+   "activity": "U01-words",
+   "item": "U01",
+   "title": "Unit 1 · New Friends · Listening · The textbook dialogues, numbers and time",
+   "label": "Listening · The textbook dialogues, numbers and time",
+   "titleVi": "Luyện nghe — hai đoạn hội thoại của sách (audio gốc), nghe giờ, tuổi, số điện thoại",
+   "file": "lessons/U01-listening.mp4",
+   "source": "lessons/U01-listening.yaml",
+   "duration": 439.7,
+   "bytes": 5503648,
+   "engine": "kokoro",
+   "voices": [
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (Japanese student) — Kokoro jm_kumo"
+   ],
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Goals"
     },
     {
      "t": 22.0,
-     "title": "Shadowing: time & age"
+     "title": "Dialogue I: listen for the answers"
+    },
+    {
+     "t": 101.5,
+     "title": "Dialogue I: answers"
+    },
+    {
+     "t": 123.1,
+     "title": "Dialogue I: read along, then repeat"
+    },
+    {
+     "t": 207.1,
+     "title": "Dialogue II: listen for the answers"
+    },
+    {
+     "t": 266.9,
+     "title": "Dialogue II: answers"
+    },
+    {
+     "t": 292.2,
+     "title": "Dialogue II: read along, then repeat"
+    },
+    {
+     "t": 361.2,
+     "title": "Catch the numbers"
     }
    ]
   },
   {
-   "id": "EP_01_03",
-   "activity": "U01-part-c",
-   "item": "U01",
-   "title": "Unit 1 · New Friends · EP 1.3 · Topic 1: Full Self-Introduction Paragraph",
-   "label": "EP 1.3 · Topic 1: Full Self-Introduction Paragraph",
-   "titleVi": "Phần C — Đoạn văn tự giới thiệu (IELTS Part 1)",
-   "file": "lessons/EP_01_03.mp4",
-   "source": "lessons/EP_01_03.yaml",
-   "duration": 26.9,
-   "bytes": 335325,
-   "engine": "kokoro",
-   "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
-   ],
-   "chapters": [
-    {
-     "t": 0.0,
-     "title": "IELTS topic 1: self-introduction"
-    },
-    {
-     "t": 10.4,
-     "title": "Full paragraph: shadow & write"
-    }
-   ]
-  },
-  {
-   "id": "EP_02_01",
-   "activity": "U02-part-a",
-   "item": "U02",
-   "title": "Unit 2 · Shopping · EP 2.1 · Kore/Sore/Are, Kono/Sono & Asking Prices",
-   "label": "EP 2.1 · Kore/Sore/Are, Kono/Sono & Asking Prices",
-   "titleVi": "Phần A — これ/この, hỏi giá, số tiền lớn và ここ/どこ",
-   "file": "lessons/EP_02_01.mp4",
-   "source": "lessons/EP_02_01.yaml",
-   "duration": 41.3,
-   "bytes": 536078,
-   "engine": "kokoro",
-   "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
-   ],
-   "chapters": [
-    {
-     "t": 0.0,
-     "title": "これ・それ vs この・その"
-    },
-    {
-     "t": 15.8,
-     "title": "Shadowing: asking prices"
-    },
-    {
-     "t": 21.3,
-     "title": "Big numbers & places"
-    },
-    {
-     "t": 32.9,
-     "title": "Shadowing: price & location"
-    }
-   ]
-  },
-  {
-   "id": "EP_02_02",
+   "id": "U02-speaking",
    "activity": "U02-part-b",
    "item": "U02",
-   "title": "Unit 2 · Shopping · EP 2.2 · Particle 'mo', Negative 'janai desu' & Sentence Endings 'ne/yo'",
-   "label": "EP 2.2 · Particle 'mo', Negative 'janai desu' & Sentence Endings 'ne/yo'",
-   "titleVi": "Phần B — だれの, も, じゃないです, ね/よ",
-   "file": "lessons/EP_02_02.mp4",
-   "source": "lessons/EP_02_02.yaml",
-   "duration": 40.7,
-   "bytes": 536764,
+   "title": "Unit 2 · Shopping · Speaking · This and that, prices, shopping and asking the way",
+   "label": "Speaking · This and that, prices, shopping and asking the way",
+   "titleVi": "Luyện nói — cái này / cái đó, hỏi giá, mua hàng, gọi món, hỏi đường",
+   "file": "lessons/U02-speaking.mp4",
+   "source": "lessons/U02-speaking.yaml",
+   "duration": 372.0,
+   "bytes": 4135521,
    "engine": "kokoro",
    "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (shop staff) — Kokoro jm_kumo"
    ],
    "chapters": [
     {
      "t": 0.0,
-     "title": "も (also) & だれの (whose)"
+     "title": "Goals: at the shop"
     },
     {
-     "t": 12.4,
-     "title": "Shadowing: possession & も"
+     "t": 24.3,
+     "title": "これ・それ・あれ・どれ"
     },
     {
-     "t": 18.4,
-     "title": "じゃないです & ね / よ"
+     "t": 73.6,
+     "title": "この・その・あの + noun"
     },
     {
-     "t": 33.1,
-     "title": "Shadowing: じゃないです + よ"
+     "t": 100.6,
+     "title": "Prices and big numbers"
+    },
+    {
+     "t": 148.2,
+     "title": "Buying and ordering"
+    },
+    {
+     "t": 182.4,
+     "title": "Whose? だれの"
+    },
+    {
+     "t": 205.2,
+     "title": "も and じゃないです"
+    },
+    {
+     "t": 239.2,
+     "title": "ね and よ"
+    },
+    {
+     "t": 262.4,
+     "title": "Where? どこ"
+    },
+    {
+     "t": 285.5,
+     "title": "Textbook dialogue I"
+    },
+    {
+     "t": 328.0,
+     "title": "Textbook dialogue II"
     }
    ]
   },
   {
-   "id": "EP_02_03",
+   "id": "U02-writing",
    "activity": "U02-part-c",
    "item": "U02",
-   "title": "Unit 2 · Shopping · EP 2.3 · Topic 2: Describing Personal Items & Work Gear",
-   "label": "EP 2.3 · Topic 2: Describing Personal Items & Work Gear",
-   "titleVi": "Phần C — Mô tả đồ dùng làm việc và học tập",
-   "file": "lessons/EP_02_03.mp4",
-   "source": "lessons/EP_02_03.yaml",
-   "duration": 30.3,
-   "bytes": 437209,
+   "title": "Unit 2 · Shopping · Writing · Katakana words, prices and your things",
+   "label": "Writing · Katakana words, prices and your things",
+   "titleVi": "Luyện viết — từ katakana, giá tiền, đoạn văn tả đồ của mình, hội thoại mua hàng",
+   "file": "lessons/U02-writing.mp4",
+   "source": "lessons/U02-writing.yaml",
+   "duration": 349.3,
+   "bytes": 3988410,
    "engine": "kokoro",
    "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (shop staff) — Kokoro jm_kumo"
    ],
    "chapters": [
     {
      "t": 0.0,
-     "title": "IELTS topic 2: personal belongings"
+     "title": "Goals"
     },
     {
-     "t": 13.4,
-     "title": "Full paragraph: shadow & write"
+     "t": 16.9,
+     "title": "Katakana words"
+    },
+    {
+     "t": 51.7,
+     "title": "Writing prices"
+    },
+    {
+     "t": 78.0,
+     "title": "Numbers in hiragana"
+    },
+    {
+     "t": 136.2,
+     "title": "Building sentences about your things"
+    },
+    {
+     "t": 175.5,
+     "title": "Model paragraph"
+    },
+    {
+     "t": 207.4,
+     "title": "Writing a shopping dialogue"
+    },
+    {
+     "t": 241.8,
+     "title": "Dictation"
+    },
+    {
+     "t": 296.9,
+     "title": "Common mistakes"
+    },
+    {
+     "t": 324.2,
+     "title": "Your task"
     }
    ]
   },
   {
-   "id": "EP_03_01",
-   "activity": "U03-part-a",
-   "item": "U03",
-   "title": "Unit 3 · Making a Date · EP 3.1 · Verb Conjugation: The Polite '-masu' and '-masen' Forms",
-   "label": "EP 3.1 · Verb Conjugation: The Polite '-masu' and '-masen' Forms",
-   "titleVi": "Phần A — Chia động từ ～ます / ～ません và lời mời ～ませんか",
-   "file": "lessons/EP_03_01.mp4",
-   "source": "lessons/EP_03_01.yaml",
-   "duration": 40.4,
-   "bytes": 532237,
+   "id": "U02-reading",
+   "activity": "U02-read-write",
+   "item": "U02",
+   "title": "Unit 2 · Katakana · Reading · Katakana practice with the textbook audio",
+   "label": "Reading · Katakana practice with the textbook audio",
+   "titleVi": "Luyện đọc — katakana: chữ dễ nhầm, món ăn, nước và thủ đô, bốn đoạn văn ngắn, viết tên",
+   "file": "lessons/U02-reading.mp4",
+   "source": "lessons/U02-reading.yaml",
+   "duration": 381.5,
+   "bytes": 3985494,
    "engine": "kokoro",
    "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha"
    ],
    "chapters": [
     {
      "t": 0.0,
-     "title": "Verb groups & ～ます / ～ません"
+     "title": "Goals"
     },
     {
-     "t": 16.4,
-     "title": "Shadowing: core action verbs"
+     "t": 16.6,
+     "title": "A. Look-alike letters"
     },
     {
-     "t": 23.7,
+     "t": 93.1,
+     "title": "B. Food and drinks"
+    },
+    {
+     "t": 189.4,
+     "title": "C. Countries and capitals"
+    },
+    {
+     "t": 228.6,
+     "title": "D. Letter puzzle"
+    },
+    {
+     "t": 240.9,
+     "title": "II. Mary's four things"
+    },
+    {
+     "t": 356.5,
+     "title": "III. Your name tag"
+    }
+   ]
+  },
+  {
+   "id": "U02-listening",
+   "activity": "U02-words",
+   "item": "U02",
+   "title": "Unit 2 · Shopping · Listening · At the flea market and the restaurant; prices",
+   "label": "Listening · At the flea market and the restaurant; prices",
+   "titleVi": "Luyện nghe — chợ đồ cũ và nhà hàng (audio gốc), nghe giá tiền",
+   "file": "lessons/U02-listening.mp4",
+   "source": "lessons/U02-listening.yaml",
+   "duration": 545.1,
+   "bytes": 6944311,
+   "engine": "kokoro",
+   "voices": [
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (shop staff) — Kokoro jm_kumo"
+   ],
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Goals"
+    },
+    {
+     "t": 20.7,
+     "title": "Dialogue I: listen for the answers"
+    },
+    {
+     "t": 135.7,
+     "title": "Dialogue I: answers"
+    },
+    {
+     "t": 160.4,
+     "title": "Dialogue I: read along, then repeat"
+    },
+    {
+     "t": 295.1,
+     "title": "Dialogue II: listen for the answers"
+    },
+    {
+     "t": 385.7,
+     "title": "Dialogue II: answers"
+    },
+    {
+     "t": 397.6,
+     "title": "Dialogue II: read along and repeat"
+    },
+    {
+     "t": 476.9,
+     "title": "Catch the prices"
+    }
+   ]
+  },
+  {
+   "id": "U03-speaking",
+   "activity": "U03-part-b",
+   "item": "U03",
+   "title": "Unit 3 · Making a Date · Speaking · Daily routine, weekends and invitations",
+   "label": "Speaking · Daily routine, weekends and invitations",
+   "titleVi": "Luyện nói — sinh hoạt hằng ngày, cuối tuần, mời và nhận lời / từ chối",
+   "file": "lessons/U03-speaking.mp4",
+   "source": "lessons/U03-speaking.yaml",
+   "duration": 365.5,
+   "bytes": 4224162,
+   "engine": "kokoro",
+   "voices": [
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (Japanese student) — Kokoro jm_kumo"
+   ],
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Goals"
+    },
+    {
+     "t": 19.7,
+     "title": "Verbs: ～ます and ～ません"
+    },
+    {
+     "t": 74.1,
+     "title": "Particles を, で, に"
+    },
+    {
+     "t": 115.2,
+     "title": "Time: に or no に"
+    },
+    {
+     "t": 155.2,
+     "title": "How often?"
+    },
+    {
+     "t": 187.0,
      "title": "Invitations ～ませんか"
     },
     {
-     "t": 33.5,
-     "title": "Shadowing: making a date"
+     "t": 223.3,
+     "title": "Questions about your day"
+    },
+    {
+     "t": 271.9,
+     "title": "Textbook dialogue I"
+    },
+    {
+     "t": 311.2,
+     "title": "Textbook dialogue II"
     }
    ]
   },
   {
-   "id": "EP_03_02",
-   "activity": "U03-part-b",
-   "item": "U03",
-   "title": "Unit 3 · Making a Date · EP 3.2 · The 4 Golden Particles (o, de, ni, e) & Time Expressions",
-   "label": "EP 3.2 · The 4 Golden Particles (o, de, ni, e) & Time Expressions",
-   "titleVi": "Phần B — Trợ từ を・で・に・へ và từ chỉ thời gian",
-   "file": "lessons/EP_03_02.mp4",
-   "source": "lessons/EP_03_02.yaml",
-   "duration": 43.1,
-   "bytes": 552342,
-   "engine": "kokoro",
-   "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
-   ],
-   "chapters": [
-    {
-     "t": 0.0,
-     "title": "を (object) & で (place of action)"
-    },
-    {
-     "t": 13.3,
-     "title": "Shadowing: で + を"
-    },
-    {
-     "t": 19.5,
-     "title": "に / へ (goal) & に (time)"
-    },
-    {
-     "t": 35.1,
-     "title": "Shadowing: time に + goal に"
-    }
-   ]
-  },
-  {
-   "id": "EP_03_03",
+   "id": "U03-writing",
    "activity": "U03-part-c",
    "item": "U03",
-   "title": "Unit 3 · Making a Date · EP 3.3 · Topic 3: Daily Routine & Weekend Habits with Frequency Adverbs",
-   "label": "EP 3.3 · Topic 3: Daily Routine & Weekend Habits with Frequency Adverbs",
-   "titleVi": "Phần C — Trạng từ tần suất và đoạn văn về một ngày của bạn",
-   "file": "lessons/EP_03_03.mp4",
-   "source": "lessons/EP_03_03.yaml",
-   "duration": 35.7,
-   "bytes": 608747,
+   "title": "Unit 3 · Making a Date · Writing · Number kanji and your daily routine",
+   "label": "Writing · Number kanji and your daily routine",
+   "titleVi": "Luyện viết — chữ Hán số, giờ, giá tiền; đoạn văn về một ngày; tin nhắn mời bạn",
+   "file": "lessons/U03-writing.mp4",
+   "source": "lessons/U03-writing.yaml",
+   "duration": 356.1,
+   "bytes": 4209169,
    "engine": "kokoro",
    "voices": [
-    "Emma (grammar & topic guide) — Kokoro bf_emma",
-    "Yuki (Japanese tutor · listen & shadow) — Kokoro jf_alpha"
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha"
    ],
    "chapters": [
     {
      "t": 0.0,
-     "title": "Frequency adverbs & IELTS routine topic"
+     "title": "Goals"
     },
     {
-     "t": 17.6,
-     "title": "Full paragraph: shadow & write"
+     "t": 20.1,
+     "title": "The first 15 kanji"
+    },
+    {
+     "t": 46.6,
+     "title": "Stroke order"
+    },
+    {
+     "t": 87.9,
+     "title": "Readings that change"
+    },
+    {
+     "t": 121.6,
+     "title": "Building sentences"
+    },
+    {
+     "t": 169.4,
+     "title": "How often, and the weekend"
+    },
+    {
+     "t": 189.8,
+     "title": "Model paragraph"
+    },
+    {
+     "t": 223.4,
+     "title": "An invitation message"
+    },
+    {
+     "t": 250.1,
+     "title": "Dictation"
+    },
+    {
+     "t": 302.4,
+     "title": "Common mistakes"
+    },
+    {
+     "t": 335.3,
+     "title": "Your task"
+    }
+   ]
+  },
+  {
+   "id": "U03-reading",
+   "activity": "U03-read-write",
+   "item": "U03",
+   "title": "Unit 3 · Daily Life · Reading · Number kanji, prices, and the passage まいにちのせいかつ",
+   "label": "Reading · Number kanji, prices, and the passage まいにちのせいかつ",
+   "titleVi": "Luyện đọc — chữ Hán số trong từ, giá tiền, bài đọc まいにちのせいかつ (audio gốc)",
+   "file": "lessons/U03-reading.mp4",
+   "source": "lessons/U03-reading.yaml",
+   "duration": 404.8,
+   "bytes": 4551361,
+   "engine": "kokoro",
+   "voices": [
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha"
+   ],
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Goals"
+    },
+    {
+     "t": 20.0,
+     "title": "Kanji in words"
+    },
+    {
+     "t": 54.7,
+     "title": "I-A. Read the prices"
+    },
+    {
+     "t": 112.4,
+     "title": "I-B. Write the prices"
+    },
+    {
+     "t": 142.7,
+     "title": "Reading tip: no spaces"
+    },
+    {
+     "t": 173.9,
+     "title": "II. まいにちのせいかつ"
+    },
+    {
+     "t": 339.6,
+     "title": "True or false?"
+    }
+   ]
+  },
+  {
+   "id": "U03-listening",
+   "activity": "U03-words",
+   "item": "U03",
+   "title": "Unit 3 · Making a Date · Listening · Weekend plans, the host family, a daily schedule",
+   "label": "Listening · Weekend plans, the host family, a daily schedule",
+   "titleVi": "Luyện nghe — rủ đi xem phim, buổi sáng ở nhà host family (audio gốc), nghe lịch một ngày",
+   "file": "lessons/U03-listening.mp4",
+   "source": "lessons/U03-listening.yaml",
+   "duration": 522.1,
+   "bytes": 6717323,
+   "engine": "kokoro",
+   "voices": [
+    "Emma (guide) — Kokoro bf_emma",
+    "Yuki (Japanese tutor) — Kokoro jf_alpha",
+    "Takeshi (Japanese student) — Kokoro jm_kumo"
+   ],
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Goals"
+    },
+    {
+     "t": 19.1,
+     "title": "Dialogue I: listen for the answers"
+    },
+    {
+     "t": 111.9,
+     "title": "Dialogue I: answers"
+    },
+    {
+     "t": 135.4,
+     "title": "Dialogue I: read along, then repeat"
+    },
+    {
+     "t": 245.0,
+     "title": "Dialogue II: listen for the answers"
+    },
+    {
+     "t": 328.8,
+     "title": "Dialogue II: answers"
+    },
+    {
+     "t": 348.9,
+     "title": "Dialogue II: read along, then repeat"
+    },
+    {
+     "t": 452.7,
+     "title": "Takeshi's day"
     }
    ]
   },

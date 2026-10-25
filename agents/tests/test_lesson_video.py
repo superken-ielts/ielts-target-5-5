@@ -7,7 +7,7 @@ import pytest
 import yaml
 from pydantic import ValidationError
 
-from lesson_video import cli, script as sc, timeline, tts, video
+from lesson_video import cli, ja, script as sc, timeline, tts, video
 from lesson_video.slides import H, W, Slides
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -146,24 +146,45 @@ def test_flite_two_voices():
         eng.synth("Hello", "nobody")
 
 
-@pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
-def test_committed_lessons_match_manifest():
+GENKI = ROOT / "books" / "Genki"
+
+
+@pytest.mark.parametrize("bdir", [
+    pytest.param(REAL, marks=pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(),
+                                                reason="chưa có video bài giảng")),
+    pytest.param(GENKI, marks=pytest.mark.skipif(not (GENKI / "lessons" / "lessons.json").exists() or not ja.available(),
+                                                 reason="chưa có video N5 hoặc chưa cài misaki[ja]")),
+], ids=["ielts", "genki"])
+def test_committed_lessons_match_manifest(bdir):
     """Kịch bản đã commit hợp lệ, khớp lessons.json và file video có thật (hồi quy trên sách thật)."""
-    data = json.loads((REAL / "lessons" / "lessons.json").read_text(encoding="utf-8"))
+    data = json.loads((bdir / "lessons" / "lessons.json").read_text(encoding="utf-8"))
     by_id = {x["id"]: x for x in data["lessons"]}
-    scripts = sorted((REAL / "lessons").glob("*.yaml"))
+    scripts = sorted((bdir / "lessons").glob("*.yaml"))
     assert len(scripts) == len(by_id) >= 2
     for path in scripts:
         lesson = sc.load(path)
-        assert sc.check(lesson, REAL) == []
+        assert sc.check(lesson, bdir) == []
         entry = by_id[lesson.id]
         assert entry["activity"] == lesson.activity and entry["source"] == f"lessons/{path.name}"
         assert [c["title"] for c in entry["chapters"]] == [c for _, c in lesson.chapters()]
-        assert (REAL / entry["file"]).stat().st_size == entry["bytes"]
+        assert (bdir / entry["file"]).stat().st_size == entry["bytes"]
         label = {"kokoro": "Kokoro", "flite": "Flite"}[entry["engine"]]
         assert len(entry["voices"]) == len(lesson.speakers) and all(label in v for v in entry["voices"])
         for sp in lesson.speakers.values():   # kịch bản khai giọng cho bộ đọc đã dùng
             sp.voice_for(entry["engine"])
+
+
+def test_prune_drops_videos_without_script(tmp_path):
+    lessons = tmp_path / "book" / "lessons"
+    lessons.mkdir(parents=True)
+    for name in ("keep.yaml", "keep.mp4", "old.mp4"):
+        (lessons / name).write_text("x", encoding="utf-8")
+    rows = [{"id": i, "activity": "U01-a", "source": f"lessons/{i}.yaml", "file": f"lessons/{i}.mp4"} for i in ("keep", "old")]
+    (lessons / "lessons.json").write_text(json.dumps({"schema": "lessons/1", "lessons": rows}), encoding="utf-8")
+    assert video.prune_manifest(lessons) == ["old"]
+    assert [x["id"] for x in json.loads((lessons / "lessons.json").read_text())["lessons"]] == ["keep"]
+    assert (lessons / "keep.mp4").exists() and not (lessons / "old.mp4").exists()
+    assert video.prune_manifest(lessons) == []                         # chạy lại không đổi gì
 
 
 def test_voice_per_engine():

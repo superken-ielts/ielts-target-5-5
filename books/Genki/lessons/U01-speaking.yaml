@@ -1,0 +1,555 @@
+# U01 · Speaking — GENKI I bài 1 あたらしいともだち (New Friends). Video luyện nói ~8 phút cho phiên Part B (練習):
+# chào hỏi, X は Y です, câu hỏi か và なん, Noun の Noun, giờ và tuổi, hai đoạn hội thoại của sách (trang 36–37),
+# rồi đoạn tự giới thiệu của người Việt. Không có khoảng lặng chờ dài: sau mỗi câu Nhật chỉ nghỉ ngắn để nói theo,
+# người học tự tạm dừng khi cần (góp ý của người học ở đợt 14).
+# Chữ Nhật trên thẻ viết như GENKI bài 1–2: kana, có cách giữa các cụm. Câu đọc (`say`) viết bằng chữ Hán để bộ đọc
+# tách từ và ngữ điệu đúng; lệnh check so cách đọc của câu đọc với chữ trên thẻ.
+# Emma không đọc từ Nhật (giọng Anh đọc sai); chỗ cần nhắc tên trợ từ thì viết lại trong `say` (wa → wah, ka → kah).
+id: U01-speaking
+activity: U01-part-b
+title: "Unit 1 · New Friends"
+subtitle: "Speaking · Introduce yourself and ask about others"
+title_vi: "Luyện nói — tự giới thiệu; hỏi tên, trường, năm học, chuyên ngành, quốc tịch, tuổi, giờ"
+tag: "GENKI L1 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+  takeshi: {name: Takeshi, role: Japanese student, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals: first meeting"
+    heading: "Unit 1 Speaking · Meeting someone new"
+    items:
+      - jp: "はじめまして。よろしく おねがいします。"
+        romaji: "Hajimemashite. Yoroshiku onegaishimasu."
+        en: "How do you do? Nice to meet you. — Today: say who you are, and ask people their name, school, year, major, country, age and the time."
+        vi: "Rất vui được gặp lần đầu. Mong được giúp đỡ. — Hôm nay: tự giới thiệu và hỏi tên, trường, năm học, chuyên ngành, quốc tịch, tuổi, giờ."
+    lines:
+      - emma: "Welcome to Unit 1 speaking practice. In this video you will introduce yourself in Japanese, and ask other people simple questions: their name, school, year, major, country, age, and the time. Say every Japanese sentence out loud after Yuki and Takeshi. If you need more time, pause the video."
+      - yuki: "はじめまして。よろしくお願いします。"
+        pause: 1.8
+      - emma: "The first phrase means: how do you do, nice to meet you. The second one means: please be kind to me. You say both when you meet someone for the first time."
+      - takeshi: "はじめまして。よろしくお願いします。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "X は Y です"
+    heading: "Pattern 1 · X は Y です — X is Y"
+    items:
+      - jp: "わたしは メアリー・ハートです。"
+        romaji: "Watashi wa Mearii Haato desu."
+        en: "I am Mary Hart. X は Y です: X is the topic, Y says what it is, です at the end means am / is / are."
+        vi: "Tôi là Mary Hart. X は Y です = X là Y. は viết bằng chữ ha nhưng đọc là \"wa\"."
+      - jp: "わたしは がくせいです。"
+        romaji: "Watashi wa gakusee desu."
+        en: "I am a student."
+        vi: "Tôi là sinh viên. がくせい (学生 – học sinh)."
+      - jp: "わたしは にほんじんです。"
+        romaji: "Watashi wa nihonjin desu."
+        en: "I am Japanese. Country + じん = a person from that country."
+        vi: "Tôi là người Nhật. Tên nước + じん (人 – nhân) = người nước đó."
+      - jp: "わたしは ベトナムじんです。"
+        romaji: "Watashi wa betonamujin desu."
+        en: "I am Vietnamese."
+        vi: "Tôi là người Việt Nam."
+      - jp: "わたしは かいしゃいんです。"
+        romaji: "Watashi wa kaishain desu."
+        en: "I am an office worker."
+        vi: "Tôi là nhân viên công ty. かいしゃいん (会社員 – hội xã viên)."
+      - jp: "がくせいです。"
+        romaji: "Gakusee desu."
+        en: "(I) am a student. When the topic is clear, Japanese leaves it out."
+        vi: "(Tôi) là sinh viên. Khi đã rõ đang nói về ai thì bỏ わたしは."
+    lines:
+      - emma: "The core pattern of Unit 1 has three parts. First the topic. Then a small particle that marks the topic. Then what the topic is, with the word for am, is or are at the very end. Listen."
+      - yuki: "わたしはメアリー・ハートです。"
+        pause: 1.8
+      - emma: "The particle is written with the hiragana letter ha, but it is always read wa. Now a job, or a status."
+        say: "The particle is written with the hiragana letter hah, but it is always read wah. Now a job, or a status."
+      - yuki: "わたしは学生です。"
+        focus: 1
+        pause: 1.8
+      - emma: "To say your nationality, add the word for person after the name of the country."
+        focus: 2
+      - takeshi: "わたしはにほんじんです。"
+        pause: 1.8
+      - yuki: "わたしはベトナムじんです。"
+        focus: 3
+        pause: 1.8
+      - takeshi: "わたしは会社員です。"
+        focus: 4
+        pause: 1.8
+      - emma: "In real conversation, Japanese speakers often drop the topic when it is clear who they mean. So you can simply say this."
+        focus: 5
+      - yuki: "学生です。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Yes / no questions with か"
+    heading: "Pattern 2 · Questions with か — yes and no"
+    items:
+      - jp: "りゅうがくせいですか。"
+        romaji: "Ryuugakusee desu ka."
+        en: "Are you an international student? Add か at the end: no change in word order."
+        vi: "Bạn là du học sinh à? Thêm か cuối câu là thành câu hỏi, không đổi trật tự từ. りゅうがくせい (留学生 – lưu học sinh)."
+      - jp: "はい、りゅうがくせいです。"
+        romaji: "Hai, ryuugakusee desu."
+        en: "Yes, I am an international student."
+        vi: "Vâng, tôi là du học sinh. はい = vâng / có."
+      - jp: "いいえ、にほんじんです。"
+        romaji: "Iie, nihonjin desu."
+        en: "No, I am Japanese. After いいえ, say what is true."
+        vi: "Không, tôi là người Nhật. Sau いいえ thì nói điều đúng."
+      - jp: "がくせいですか。"
+        romaji: "Gakusee desu ka."
+        en: "Are you a student?"
+        vi: "Bạn là sinh viên à?"
+      - jp: "いいえ、かいしゃいんです。"
+        romaji: "Iie, kaishain desu."
+        en: "No, I am an office worker."
+        vi: "Không, tôi là nhân viên công ty."
+      - jp: "はい、そうです。"
+        romaji: "Hai, soo desu."
+        en: "Yes, that's right."
+        vi: "Vâng, đúng vậy."
+    lines:
+      - emma: "To make a question, just add ka at the end of the sentence. The word order does not change. Takeshi asks, and Yuki answers."
+        say: "To make a question, just add kah, at the end of the sentence. The word order does not change. Takeshi asks, and Yuki answers."
+      - takeshi: "留学生ですか。"
+        pause: 1.2
+      - yuki: "はい、留学生です。"
+        focus: 1
+        pause: 1.8
+      - emma: "Yes is hai. No is iie. When the answer is no, say what is true instead."
+        say: "Yes is hi. No is ee-eh. When the answer is no, say what is true instead."
+        focus: 0
+      - takeshi: "留学生ですか。"
+        pause: 1.2
+      - yuki: "いいえ、にほんじんです。"
+        focus: 2
+        pause: 1.8
+      - yuki: "学生ですか。"
+        focus: 3
+        pause: 1.2
+      - takeshi: "いいえ、会社員です。"
+        focus: 4
+        pause: 1.8
+      - emma: "A short and natural way to say yes, that's right, is this."
+        focus: 5
+      - yuki: "はい、そうです。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Asking what: なん"
+    heading: "Pattern 3 · Questions with なん — what"
+    items:
+      - jp: "せんこうは なんですか。"
+        romaji: "Senkoo wa nan desu ka."
+        en: "What is your major? なん = what; the answer goes where なん was."
+        vi: "Chuyên ngành của bạn là gì? なん = cái gì; câu trả lời thay vào chỗ なん. せんこう (専攻 – chuyên công) = chuyên ngành."
+      - jp: "にほんごです。"
+        romaji: "Nihongo desu."
+        en: "It's Japanese (the language). Country + ご = language."
+        vi: "Là tiếng Nhật. Tên nước + ご (語 – ngữ) = tiếng nước đó."
+      - jp: "けいざいです。"
+        romaji: "Keezai desu."
+        en: "It's economics."
+        vi: "Là kinh tế. けいざい (経済 – kinh tế)."
+      - jp: "なんねんせいですか。"
+        romaji: "Nannensee desu ka."
+        en: "What year are you in?"
+        vi: "Bạn là sinh viên năm mấy? ～ねんせい (年生 – niên sinh) = sinh viên năm…"
+      - jp: "よねんせいです。"
+        romaji: "Yonensee desu."
+        en: "I'm a fourth-year student. (4 is よ here.)"
+        vi: "Tôi là sinh viên năm tư. (Số 4 ở đây đọc là よ.)"
+      - jp: "なんさいですか。"
+        romaji: "Nansai desu ka."
+        en: "How old are you?"
+        vi: "Bạn bao nhiêu tuổi? ～さい (歳 – tuế) = … tuổi."
+      - jp: "じゅうきゅうさいです。"
+        romaji: "Juukyuusai desu."
+        en: "I'm nineteen."
+        vi: "Tôi 19 tuổi."
+      - jp: "おしごとは なんですか。"
+        romaji: "Oshigoto wa nan desu ka."
+        en: "What is your job? お in front makes it polite."
+        vi: "Bạn làm nghề gì? お thêm vào cho lịch sự. しごと (仕事 – sĩ sự) = công việc."
+      - jp: "いしゃです。"
+        romaji: "Isha desu."
+        en: "I'm a doctor."
+        vi: "Tôi là bác sĩ. いしゃ (医者 – y giả)."
+      - jp: "なにじんですか。"
+        romaji: "Nanijin desu ka."
+        en: "What nationality are you? なに + じん."
+        vi: "Bạn là người nước nào? なに + じん."
+      - jp: "にほんじんです。"
+        romaji: "Nihonjin desu."
+        en: "I'm Japanese."
+        vi: "Tôi là người Nhật."
+    lines:
+      - emma: "To ask what, use the question word for what, in the place of the answer. Then simply answer with the word, plus the word for is."
+      - takeshi: "専攻はなんですか。"
+        pause: 1.2
+      - yuki: "にほんごです。"
+        focus: 1
+        pause: 1.8
+      - takeshi: "専攻はなんですか。"
+        focus: 0
+        pause: 1.2
+      - yuki: "経済です。"
+        focus: 2
+        pause: 1.8
+      - emma: "Now ask what year someone is in at university."
+        focus: 3
+      - takeshi: "何年生ですか。"
+        pause: 1.2
+      - yuki: "四年生です。"
+        say: "よねんせいです。"
+        focus: 4
+        pause: 1.8
+      - emma: "And ask someone's age."
+        focus: 5
+      - takeshi: "何歳ですか。"
+        pause: 1.2
+      - yuki: "十九歳です。"
+        focus: 6
+        pause: 1.8
+      - emma: "To ask about someone's job, put a polite o in front of the word for job."
+        say: "To ask about someone's job, put a polite oh in front of the word for job."
+        focus: 7
+      - takeshi: "お仕事はなんですか。"
+        pause: 1.2
+      - yuki: "医者です。"
+        focus: 8
+        pause: 1.8
+      - emma: "And to ask someone's nationality, put what in front of the word for person."
+        focus: 9
+      - yuki: "なにじんですか。"
+        pause: 1.2
+      - takeshi: "にほんじんです。"
+        focus: 10
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Noun の Noun"
+    heading: "Pattern 4 · Noun の Noun — linking two nouns"
+    items:
+      - jp: "アリゾナだいがくの がくせいです。"
+        romaji: "Arizona daigaku no gakusee desu."
+        en: "I'm a student at the University of Arizona. の links two nouns: the first one describes the second."
+        vi: "Tôi là sinh viên Đại học Arizona. の nối hai danh từ: danh từ trước bổ nghĩa cho danh từ sau. だいがく (大学 – đại học)."
+      - jp: "ハノイだいがくの がくせいです。"
+        romaji: "Hanoi daigaku no gakusee desu."
+        en: "I'm a student at Hanoi University."
+        vi: "Tôi là sinh viên Đại học Hà Nội."
+      - jp: "にほんごの せんせい"
+        romaji: "nihongo no sensee"
+        en: "a teacher of Japanese (the subject)"
+        vi: "giáo viên dạy tiếng Nhật. せんせい (先生 – tiên sinh) = thầy, cô."
+      - jp: "にほんじんの せんせい"
+        romaji: "nihonjin no sensee"
+        en: "a Japanese teacher (the teacher is Japanese)"
+        vi: "giáo viên người Nhật — khác với にほんごの せんせい."
+      - jp: "たけしさんの でんわばんごう"
+        romaji: "Takeshi-san no denwa bangoo"
+        en: "Takeshi's phone number. さん = Mr. / Ms. — never use it for yourself."
+        vi: "số điện thoại của anh Takeshi. でんわ (電話 – điện thoại), ばんごう (番号 – phiên hiệu). さん dùng cho người khác, không dùng cho mình."
+      - jp: "メアリーさんの せんこうは にほんごです。"
+        romaji: "Mearii-san no senkoo wa nihongo desu."
+        en: "Mary's major is Japanese."
+        vi: "Chuyên ngành của Mary là tiếng Nhật."
+      - jp: "わたしの ともだちは にほんじんです。"
+        romaji: "Watashi no tomodachi wa nihonjin desu."
+        en: "My friend is Japanese. わたしの = my."
+        vi: "Bạn của tôi là người Nhật. わたしの = của tôi; ともだち (友達 – hữu đạt) = bạn."
+    lines:
+      - emma: "The particle no joins two nouns. The first noun describes the second one, a little like an apostrophe s in English, or the word of. Here is a line from Mary's self-introduction."
+      - yuki: "アリゾナ大学の学生です。"
+        pause: 1.8
+      - emma: "Put your own school in the first place."
+        focus: 1
+      - yuki: "ハノイ大学の学生です。"
+        pause: 1.8
+      - emma: "Be careful: these two phrases look similar, but they are different. The first is a teacher of the Japanese language."
+        focus: 2
+      - takeshi: "日本語の先生。"
+        say: "にほんごの先生。"
+        pause: 1.5
+      - emma: "The second is a teacher who is Japanese."
+        focus: 3
+      - takeshi: "にほんじんの先生。"
+        pause: 1.5
+      - emma: "Use the polite title after other people's names, but never after your own name."
+        focus: 4
+      - yuki: "たけしさんの電話番号。"
+        pause: 1.5
+      - yuki: "メアリーさんの専攻はにほんごです。"
+        focus: 5
+        pause: 1.8
+      - takeshi: "わたしの友達はにほんじんです。"
+        focus: 6
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Time and age"
+    heading: "Numbers · What time is it? How old are you?"
+    items:
+      - jp: "いま なんじですか。"
+        romaji: "Ima nanji desu ka."
+        en: "What time is it now?"
+        vi: "Bây giờ là mấy giờ? いま (今 – kim) = bây giờ; ～じ (時 – thời) = … giờ."
+      - jp: "くじです。"
+        romaji: "Kuji desu."
+        en: "It's nine o'clock. Careful: 4 o'clock = よじ, 7 o'clock = しちじ, 9 o'clock = くじ."
+        vi: "9 giờ. Chú ý: 4 giờ = よじ, 7 giờ = しちじ, 9 giờ = くじ."
+      - jp: "ごご よじはんです。"
+        romaji: "Gogo yoji han desu."
+        en: "It's 4:30 p.m. ごぜん = a.m., ごご = p.m., はん = half past."
+        vi: "4 giờ rưỡi chiều. ごぜん (午前 – ngọ tiền) = sáng, ごご (午後 – ngọ hậu) = chiều, はん (半 – bán) = rưỡi."
+      - jp: "ごぜん しちじです。"
+        romaji: "Gozen shichiji desu."
+        en: "It's 7 a.m."
+        vi: "7 giờ sáng."
+      - jp: "じゅうにじはんです。"
+        romaji: "Juuniji han desu."
+        en: "It's 12:30."
+        vi: "12 giờ rưỡi."
+      - jp: "はたちです。"
+        romaji: "Hatachi desu."
+        en: "I'm twenty. Age 20 has its own word: はたち."
+        vi: "Tôi 20 tuổi. 20 tuổi có từ riêng: はたち."
+      - jp: "にじゅういっさいです。"
+        romaji: "Nijuuissai desu."
+        en: "I'm 21. Ages ending in 1, 8 and 10 change their sound: いっさい, はっさい, じゅっさい."
+        vi: "Tôi 21 tuổi. Tuổi tận cùng là 1, 8, 10 đổi âm: いっさい, はっさい, じゅっさい."
+      - jp: "にじゅうはっさいです。"
+        romaji: "Nijuuhassai desu."
+        en: "I'm 28."
+        vi: "Tôi 28 tuổi."
+    lines:
+      - emma: "Next, time. To ask the time, say now, then what o'clock, then the question."
+      - takeshi: "今何時ですか。"
+        say: "今、なんじですか。"
+        pause: 1.2
+      - yuki: "九時です。"
+        say: "くじです。"
+        focus: 1
+        pause: 1.8
+      - emma: "Three hours have special readings: four, seven and nine o'clock. Learn them by heart."
+      - yuki: "午後四時半です。"
+        say: "午後、よじ半です。"
+        focus: 2
+        pause: 1.8
+      - takeshi: "午前七時です。"
+        say: "午前、しちじです。"
+        focus: 3
+        pause: 1.8
+      - yuki: "十二時半です。"
+        focus: 4
+        pause: 1.8
+      - emma: "Now age. Twenty years old has its own special word."
+        focus: 5
+      - yuki: "はたちです。"
+        pause: 1.8
+      - emma: "Ages ending in one, eight and ten change their sound a little. Listen."
+        focus: 6
+      - takeshi: "二十一歳です。"
+        say: "にじゅういっさいです。"
+        pause: 1.8
+      - yuki: "二十八歳です。"
+        say: "二十はっさいです。"
+        focus: 7
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Textbook dialogue I"
+    heading: "Dialogue I (p. 36) · Takeshi and Mary"
+    items:
+      - jp: "こんにちは。きむら たけしです。"
+        romaji: "Konnichiwa. Kimura Takeshi desu."
+        en: "Takeshi: Hello. I am Takeshi Kimura. (Family name first.)"
+        vi: "Takeshi: Xin chào. Tôi là Kimura Takeshi (họ trước, tên sau)."
+      - jp: "メアリー・ハートです。あのう、りゅうがくせいですか。"
+        romaji: "Mearii Haato desu. Anoo, ryuugakusee desu ka."
+        en: "Mary: I am Mary Hart. Um… are you an international student?"
+        vi: "Mary: Tôi là Mary Hart. À… bạn là du học sinh à? あのう = ừm (ngập ngừng cho lịch sự)."
+      - jp: "いいえ、にほんじんです。"
+        romaji: "Iie, nihonjin desu."
+        en: "Takeshi: No, I am Japanese."
+        vi: "Takeshi: Không, tôi là người Nhật."
+      - jp: "そうですか。なんねんせいですか。"
+        romaji: "Soo desu ka. Nannensee desu ka."
+        en: "Mary: I see. What year are you in?"
+        vi: "Mary: Vậy à. Bạn năm mấy? そうですか = vậy à."
+      - jp: "よねんせいです。"
+        romaji: "Yonensee desu."
+        en: "Takeshi: I am a fourth-year student."
+        vi: "Takeshi: Tôi là sinh viên năm tư."
+    lines:
+      - emma: "Now the first dialogue from your textbook, on page 36. Mary meets Takeshi at a school orientation. Takeshi reads his own lines, and Yuki reads Mary's. Repeat each line."
+      - takeshi: "こんにちは。木村たけしです。"
+        pause: 1.8
+      - yuki: "メアリー・ハートです。あのう、留学生ですか。"
+        focus: 1
+        pause: 2.2
+      - takeshi: "いいえ、にほんじんです。"
+        focus: 2
+        pause: 1.8
+      - yuki: "そうですか。何年生ですか。"
+        focus: 3
+        pause: 2
+      - takeshi: "四年生です。"
+        say: "よねんせいです。"
+        focus: 4
+        pause: 1.8
+      - emma: "Once more at natural speed, without stopping. Try to speak together with them."
+        focus: 0
+      - takeshi: "こんにちは。木村たけしです。"
+        speed: 1.0
+      - yuki: "メアリー・ハートです。あのう、留学生ですか。"
+        focus: 1
+        speed: 1.0
+      - takeshi: "いいえ、にほんじんです。"
+        focus: 2
+        speed: 1.0
+      - yuki: "そうですか。何年生ですか。"
+        focus: 3
+        speed: 1.0
+      - takeshi: "四年生です。"
+        say: "よねんせいです。"
+        focus: 4
+        speed: 1.0
+        pause: 1
+
+  - kind: jp
+    chapter: "Textbook dialogue II"
+    heading: "Dialogue II (p. 37) · Mary introduces herself"
+    items:
+      - jp: "はじめまして。メアリー・ハートです。"
+        romaji: "Hajimemashite. Mearii Haato desu."
+        en: "How do you do? I am Mary Hart."
+        vi: "Rất vui được gặp. Tôi là Mary Hart."
+      - jp: "アリゾナだいがくの がくせいです。にねんせいです。"
+        romaji: "Arizona daigaku no gakusee desu. Ninensee desu."
+        en: "I am a student at the University of Arizona. I am a second-year student."
+        vi: "Tôi là sinh viên Đại học Arizona. Tôi là sinh viên năm hai."
+      - jp: "せんこうは にほんごです。じゅうきゅうさいです。"
+        romaji: "Senkoo wa nihongo desu. Juukyuusai desu."
+        en: "My major is Japanese. I am 19 years old."
+        vi: "Chuyên ngành của tôi là tiếng Nhật. Tôi 19 tuổi."
+      - jp: "よろしく おねがいします。"
+        romaji: "Yoroshiku onegaishimasu."
+        en: "Nice to meet you."
+        vi: "Mong được giúp đỡ."
+    lines:
+      - emma: "In the second dialogue, Mary introduces herself to everyone. This is the model for your own self-introduction. Repeat after Yuki."
+      - yuki: "はじめまして。メアリー・ハートです。"
+        pause: 2
+      - yuki: "アリゾナ大学の学生です。二年生です。"
+        focus: 1
+        pause: 2.4
+      - yuki: "専攻はにほんごです。十九歳です。"
+        focus: 2
+        pause: 2.4
+      - yuki: "よろしくお願いします。"
+        focus: 3
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Your self-introduction"
+    heading: "Make it yours · Two Vietnamese self-introductions"
+    items:
+      - jp: "はじめまして。グエン・ミン・アンです。ベトナムじんです。ハノイだいがくの がくせいです。さんねんせいです。せんこうは けいざいです。はたちです。よろしく おねがいします。"
+        romaji: "Hajimemashite. Guen Min An desu. Betonamujin desu. Hanoi daigaku no gakusee desu. Sannensee desu. Senkoo wa keezai desu. Hatachi desu. Yoroshiku onegaishimasu."
+        en: "How do you do? I'm Nguyen Minh Anh. I'm Vietnamese. I'm a student at Hanoi University, in my third year. My major is economics. I'm twenty. Nice to meet you."
+        vi: "Rất vui được gặp. Tôi là Nguyễn Minh Anh, người Việt Nam, sinh viên năm ba Đại học Hà Nội. Chuyên ngành của tôi là kinh tế. Tôi 20 tuổi. Mong được giúp đỡ."
+      - jp: "はじめまして。チャン・バオ・ナムです。ベトナムじんです。かいしゃいんです。にじゅうはっさいです。よろしく おねがいします。"
+        romaji: "Hajimemashite. Chan Bao Namu desu. Betonamujin desu. Kaishain desu. Nijuuhassai desu. Yoroshiku onegaishimasu."
+        en: "How do you do? I'm Tran Bao Nam. I'm Vietnamese. I'm an office worker. I'm 28. Nice to meet you."
+        vi: "Rất vui được gặp. Tôi là Trần Bảo Nam, người Việt Nam, nhân viên công ty, 28 tuổi. Mong được giúp đỡ. Tên Việt viết bằng katakana."
+    lines:
+      - emma: "Now the same pattern for a Vietnamese student. Vietnamese names are written in katakana, the alphabet for foreign words. Listen to Yuki, then say it with your own information."
+      - yuki: "はじめまして。グエン・ミン・アンです。"
+        pause: 1.5
+      - yuki: "ベトナムじんです。ハノイ大学の学生です。"
+        pause: 1.8
+      - yuki: "三年生です。専攻は経済です。"
+        pause: 1.8
+      - yuki: "はたちです。よろしくお願いします。"
+        pause: 1.8
+      - emma: "And an office worker. Takeshi reads it."
+        focus: 1
+      - takeshi: "はじめまして。チャン・バオ・ナムです。ベトナムじんです。"
+        pause: 1.5
+      - takeshi: "会社員です。二十八歳です。よろしくお願いします。"
+        say: "会社員です。二十はっさいです。よろしくお願いします。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Questions about you"
+    heading: "Answer about yourself · Six questions"
+    items:
+      - jp: "おなまえは？"
+        romaji: "Onamae wa?"
+        en: "Your name? A short, polite way to ask."
+        vi: "Tên bạn là gì? Cách hỏi ngắn, lịch sự. なまえ (名前 – danh tiền) = tên."
+      - jp: "グエン・ミン・アンです。"
+        romaji: "Guen Min An desu."
+        en: "I'm Nguyen Minh Anh."
+        vi: "Tôi là Nguyễn Minh Anh."
+      - jp: "なにじんですか。 — ベトナムじんです。"
+        romaji: "Nanijin desu ka. — Betonamujin desu."
+        en: "What nationality are you? — I'm Vietnamese."
+        vi: "Bạn là người nước nào? — Tôi là người Việt Nam."
+      - jp: "がくせいですか。 — はい、そうです。"
+        romaji: "Gakusee desu ka. — Hai, soo desu."
+        en: "Are you a student? — Yes, I am."
+        vi: "Bạn là sinh viên à? — Vâng, đúng vậy."
+      - jp: "なんねんせいですか。 — さんねんせいです。"
+        romaji: "Nannensee desu ka. — Sannensee desu."
+        en: "What year are you in? — I'm in my third year."
+        vi: "Bạn năm mấy? — Tôi năm ba."
+      - jp: "せんこうは なんですか。 — けいざいです。"
+        romaji: "Senkoo wa nan desu ka. — Keezai desu."
+        en: "What is your major? — Economics."
+        vi: "Chuyên ngành của bạn là gì? — Kinh tế."
+      - jp: "なんさいですか。 — はたちです。"
+        romaji: "Nansai desu ka. — Hatachi desu."
+        en: "How old are you? — I'm twenty."
+        vi: "Bạn bao nhiêu tuổi? — 20 tuổi."
+    lines:
+      - emma: "Last part. Takeshi asks you six questions. After each question, answer about yourself, then listen to a model answer from Yuki. Pause the video if you need more time."
+      - takeshi: "お名前は？"
+        pause: 1.5
+      - yuki: "グエン・ミン・アンです。"
+        focus: 1
+        pause: 1.5
+      - takeshi: "なにじんですか。"
+        focus: 2
+        pause: 1.5
+      - yuki: "ベトナムじんです。"
+        pause: 1.5
+      - takeshi: "学生ですか。"
+        focus: 3
+        pause: 1.5
+      - yuki: "はい、そうです。"
+        pause: 1.5
+      - takeshi: "何年生ですか。"
+        focus: 4
+        pause: 1.5
+      - yuki: "三年生です。"
+        pause: 1.5
+      - takeshi: "専攻はなんですか。"
+        focus: 5
+        pause: 1.5
+      - yuki: "経済です。"
+        pause: 1.5
+      - takeshi: "何歳ですか。"
+        focus: 6
+        pause: 1.5
+      - yuki: "はたちです。"
+        pause: 1.5
+      - emma: "Well done. You can now introduce yourself and ask the basic questions of Unit 1. Next, do the practice exercises in your textbook, and watch the writing video to put your self-introduction on paper."
+        focus: 1

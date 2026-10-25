@@ -29,10 +29,10 @@ info:
   summary: >-
     GENKI I gồm 12 bài, phủ ngữ pháp JLPT N5; mỗi bài có phần 会話・文法 (hội thoại, từ vựng, ngữ pháp, luyện tập) và
     phần 読み書き (kana, chữ Hán, bài đọc). Mỗi bài học trong 6 phiên, mỗi phiên mở đúng trang Textbook / Workbook và
-    track audio của phần đó. Theo bản thiết kế "Genki I × IELTS Target 5.0", bài 1–5 có thêm ba video — Part A ngữ
-    pháp cốt lõi, Part B mẫu câu, Part C nói và viết theo một chủ đề IELTS: Emma giảng bằng tiếng Anh, giọng Nhật đọc
-    câu mẫu để nhại theo, màn hình có furigana, romaji, nghĩa tiếng Việt và Hán-Việt. Bài 6–12 học bằng sách, video
-    làm sau.
+    track audio của phần đó. Bài 1–3 có bốn video 5–10 phút mỗi bài: Speaking, Writing, Listening (phát audio gốc
+    của sách) và Reading. Emma giảng bằng tiếng Anh, giọng Nhật đọc câu mẫu để nói theo, màn hình có furigana, romaji,
+    nghĩa tiếng Việt và Hán-Việt. Bài 4–5 còn ba video ngắn theo bản thiết kế "Genki I × IELTS Target 5.0"; bài 6–12
+    học bằng sách, video làm sau.
   start_when: >-
     Không cần biết tiếng Nhật: Unit 0 học hệ chữ và chào hỏi. Lời giảng trong sách và video là tiếng Anh khoảng A2–B1
     (video có phụ đề tiếng Việt trên màn hình), nên hợp nhất khi đã qua giai đoạn 1 của lộ trình IELTS.
@@ -137,12 +137,22 @@ toc:
             read-write: {pages: [296, 299], tracks: "Y01-1..Y01-6, WY-1..WY-8", alt: [{pdf: workbook, pages: [121, 127]}]}
             workbook: {pdf: workbook, pages: [16, 22], tracks: W01-A..W01-D}
           notes:
+            words: >-
+              Xem video Listening: nghe hai đoạn hội thoại bằng audio gốc (K01-01 … K01-04), trả lời câu hỏi, đọc theo,
+              nhắc lại trong khoảng lặng; đố nghe giờ, tuổi, số điện thoại. Rồi học 単語 bằng track J-E / E-J
+              (K01-05 … K01-08) và làm thẻ Anki.
             part-a: >-
-              Xem video EP 1.1 (X は Y です, câu hỏi với か), rồi đọc phần 文法 của bài 1 — điểm 3 (Noun1 の Noun2) là
-              phần của video EP 1.2 — và 表現ノート (あのう, そうですか, số đếm).
+              Đọc phần 文法 của bài 1 (X は Y です, câu hỏi với か, Noun1 の Noun2) và 表現ノート (あのう, そうですか, số
+              đếm). Từng điểm được giảng lại bằng ví dụ trong video Speaking và Writing của bài.
             part-b: >-
-              Xem video EP 1.2 (Noun1 の Noun2, tuổi, giờ), rồi làm 練習 của bài 1 với các track K01-09 … K01-23; nhại
-              theo giọng Nhật bằng nút "Lặp chương này".
+              Xem video Speaking: chào hỏi, X は Y です, câu hỏi か và なん, の, giờ và tuổi, hai đoạn hội thoại của sách,
+              tự giới thiệu. Rồi làm 練習 của bài 1 với các track K01-09 … K01-23.
+            part-c: >-
+              Xem video Writing: hiragana hay katakana, viết tên tiếng Việt bằng katakana, bẫy chính tả, dựng đoạn tự
+              giới thiệu từng câu. Làm まとめの練習, rồi viết đoạn tự giới thiệu 7–8 câu và 3 câu về một người bạn.
+            read-write: >-
+              Xem video Reading: làm các bài 読み書き bài 1 với audio gốc Y01-1 … Y01-6. Viết tay bảng hiragana theo đúng
+              thứ tự nét ở trang Workbook (WY-1 … WY-8 là bài nghe – viết).
         - unit: 2
           title: Shopping · かいもの
           pages: [56, 81]
@@ -159,11 +169,22 @@ toc:
                          alt: [{pdf: workbook, pages: [23, 24]}, {pdf: workbook, pages: [128, 132]}]}
             workbook: {pdf: workbook, pages: [25, 31], tracks: "W02-1, W02-A..W02-C"}
           notes:
+            words: >-
+              Xem video Listening: hai đoạn hội thoại ở chợ đồ cũ và nhà hàng bằng audio gốc (K02-01 … K02-04), câu hỏi,
+              đọc theo, nhắc lại; đố nghe giá tiền. Rồi học 単語 bằng track K02-05 / K02-06 và làm thẻ Anki.
             part-a: >-
-              Xem video EP 2.1 (これ/この/ここ, hỏi giá, số tiền lớn), rồi đọc phần 文法 của bài 2 — điểm 4–7 là phần của
-              video EP 2.2 — và 表現ノート, Culture Notes (tiền Nhật).
+              Đọc phần 文法 của bài 2 (これ/この/ここ, だれの, も, じゃないです, ね/よ), 表現ノート và Culture Notes (tiền
+              Nhật). Từng điểm được giảng lại bằng ví dụ trong video Speaking và Writing của bài.
             part-b: >-
-              Xem video EP 2.2 (だれの, も, じゃないです, ね/よ), rồi làm 練習 của bài 2 với các track K02-07 … K02-15.
+              Xem video Speaking: これ/それ/あれ/どれ, この + danh từ, giá tiền, ください, だれの, も, じゃないです,
+              ね/よ, ここ/どこ, hai đoạn hội thoại của sách. Rồi làm 練習 của bài 2 với các track K02-07 … K02-15.
+            part-c: >-
+              Xem video Writing: từ katakana, giá tiền, viết số bằng hiragana (さんびゃく, はっせん…), đoạn văn về đồ
+              dùng của mình, hội thoại mua hàng, chính tả. Làm まとめの練習, rồi viết 5–6 câu về đồ của bạn và một đoạn
+              hội thoại mua hàng 4 câu.
+            read-write: >-
+              Xem video Reading: làm các bài 読み書き bài 2 (katakana) với audio gốc Y02-1 … Y02-3. Viết tay bảng
+              katakana ở trang Workbook (W-JWS2) và viết thẻ tên của bạn bằng katakana.
         - unit: 3
           title: Making a Date · デートの約束
           pages: [82, 101]
@@ -179,15 +200,24 @@ toc:
             read-write: {pages: [304, 307], tracks: Y03, alt: [{pdf: workbook, pages: [133, 134]}]}
             workbook: {pdf: workbook, pages: [32, 40], tracks: W03-A..W03-D}
           notes:
+            words: >-
+              Xem video Listening: hai đoạn hội thoại (rủ đi xem phim, buổi sáng ở nhà host family) bằng audio gốc
+              (K03-01 … K03-04), câu hỏi, đọc theo, nhắc lại; đố nghe lịch một ngày. Rồi học 単語 bằng track K03-05 /
+              K03-06 và làm thẻ Anki.
             part-a: >-
-              Xem video EP 3.1 (chia động từ, nhóm động từ, lời mời ～ませんか), rồi đọc phần 文法 và 表現ノート của bài 3 —
-              trợ từ và từ chỉ thời gian (điểm 3–4) là phần của video EP 3.2.
+              Đọc phần 文法 và 表現ノート của bài 3 (chia động từ ます / ません, を・で・に・へ, thời gian, ～ませんか, trạng
+              từ tần suất). Từng điểm được giảng lại bằng ví dụ trong video Speaking và Writing của bài.
             part-b: >-
-              Xem video EP 3.2 (trợ từ を・で・に・へ, từ chỉ thời gian), rồi làm 練習 của bài 3 với các track K03-07 …
-              K03-15.
+              Xem video Speaking: ba nhóm động từ, を・で・に, thời gian có và không có に, tần suất, lời mời ～ませんか,
+              hỏi đáp về một ngày, hai đoạn hội thoại của sách. Rồi làm 練習 của bài 3 với các track K03-07 … K03-15.
             part-c: >-
-              Xem video EP 3.3 (trạng từ tần suất + đoạn văn về một ngày của bạn) và nhại theo cả đoạn. Làm まとめの練習,
-              rồi viết đoạn văn 5–6 câu về thói quen của bạn và ghi âm.
+              Xem video Writing: 15 chữ Hán đầu tiên và thứ tự nét, giá tiền và giờ bằng chữ Hán, đoạn văn về một ngày,
+              tin nhắn mời bạn, chính tả. Làm まとめの練習, rồi viết 6–8 câu về một ngày của bạn và một tin nhắn mời
+              bạn.
+            read-write: >-
+              Xem video Reading: chữ Hán số trong từ, đọc giá tiền bằng chữ Hán, mẹo đọc câu không có dấu cách, bài
+              đọc まいにちのせいかつ với audio gốc Y03, điền lịch và đố đúng / sai. Viết tay 15 chữ Hán ở trang Workbook
+              読み書き bài 3.
         - unit: 4
           title: The First Date · はじめてのデート
           pages: [102, 127]

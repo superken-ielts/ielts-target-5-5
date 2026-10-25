@@ -1,7 +1,7 @@
 """Cảnh `jp` — thẻ ba tầng của video N5 (docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md), nền navy:
 
-    thanh đầu: nhãn cam (`tag` của bài) + tiêu đề cảnh (`heading`)
-    tầng 1, thẻ trắng: người đang nói, chữ Nhật (`jp`, có furigana) và `romaji`
+    thanh đầu: nhãn cam (`tag` của bài) + tiêu đề cảnh (`heading`), cảnh nhiều thẻ thì thêm "thẻ k/n"
+    tầng 1, thẻ trắng: người đang nói (hoặc nhãn file nghe của sách đang phát), chữ Nhật (`jp`, có furigana) và `romaji`
     tầng 2, thẻ xanh: giải thích / nghĩa tiếng Anh (`en`)
     tầng 3, thẻ xanh đậm viền cam: nghĩa tiếng Việt, ghi chú Hán-Việt (`vi`)
 
@@ -11,6 +11,7 @@ không để dấu câu Nhật đứng đầu dòng; nhóm furigana `{漢字|か
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import Optional
 
@@ -31,7 +32,9 @@ TIER3 = (40, 557, W - 40, 690)
 X0, TEXT_W = 72, W - 40 - 72 - 30
 NO_START = set("、。，．・：；？！ー）」』】〉》〕］｝)]}?!.,:;…‥～〜ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮ")
 NO_END = set("（「『【〈《〔［｛([{")
-SEPARATORS = ("|", "/", "—", "vs.")
+SEPARATORS = ("|", "/", "—", "vs.", "・")
+STRONG = ("|", "/", "・")                 # vạch ngăn giữa các nhóm: ngắt ở đây trước "—" (nối hai vế một cặp)
+LABEL = re.compile(r"^Q?\d+\.$")         # số thứ tự "5." / "Q2." đi cùng phần sau, không đứng cuối dòng
 
 
 def _kata(ch: str) -> bool:
@@ -118,10 +121,11 @@ def _break(us: list[Unit], limit: float) -> list[list[Unit]]:
     for u in us:
         if cur and w + u.w > limit and not u.space:
             nxt: list[Unit] = []
-            # câu có dấu cách (mẫu câu, câu tách cụm): ngắt ở vạch ngăn | / —, không thì ở dấu cách cuối,
-            # thay vì cắt giữa một từ; đoạn văn Nhật liền chữ thì ngắt ở bất kỳ chữ nào
-            spaces = [k for k, x in enumerate(cur) if x.space and 0 < k < len(cur) - 1]
-            seps = [k for k in spaces if cur[k - 1].base in SEPARATORS]
+            # câu có dấu cách (mẫu câu, câu tách cụm): ngắt ở vạch ngăn | / ・ rồi mới tới —, không thì ở dấu
+            # cách cuối, thay vì cắt giữa một từ; đoạn văn Nhật liền chữ thì ngắt ở bất kỳ chữ nào
+            spaces = [k for k, x in enumerate(cur) if x.space and k and not LABEL.match(cur[k - 1].base)]
+            seps = ([k for k in spaces if cur[k - 1].base in STRONG]
+                    or [k for k in spaces if cur[k - 1].base in SEPARATORS])
             k = (seps or spaces or [None])[-1]
             if k is not None and (seps or sum(x.w for x in cur[k + 1:]) <= 0.5 * limit):
                 nxt, cur = cur[k + 1:], cur[:k]
@@ -183,12 +187,20 @@ def layout(d, text: str, size: int, limit: float, bold: bool = False) -> Block:
 
 
 def fit(d, text: str, sizes: range, limit: float, max_h: float, max_lines: int = 99, bold: bool = False) -> Block:
-    """Cỡ chữ lớn nhất trong `sizes` để đoạn văn vừa chiều cao `max_h` và tối đa `max_lines` dòng."""
+    """Cỡ chữ lớn nhất trong `sizes` để đoạn văn vừa chiều cao `max_h` và tối đa `max_lines` dòng. Dòng cuối chỉ còn
+    vài chữ (dưới 1/4 dòng) thì nhỏ chữ thêm tối đa 6px nếu nhờ đó bớt được một dòng."""
     b = None
     for size in sizes:
         b = layout(d, text, size, limit, bold)
         if b.height <= max_h and len(b.lines) <= max_lines:
-            return b
+            break
+    else:
+        return b
+    if len(b.lines) > 1 and sum(u.w for u in b.lines[-1]) < 0.25 * limit:
+        for size in range(b.size - 1, max(b.size - 7, sizes.stop), -1):
+            c = layout(d, text, size, limit, bold)
+            if len(c.lines) < len(b.lines):
+                return c
     return b
 
 
@@ -261,8 +273,14 @@ def render(slides, fr, progress: float) -> Image.Image:
     d.text((53 + tw / 2, 55), tag, font=ft, fill=P["bg"], anchor="mm")
     title = sc.heading or lesson.subtitle or lesson.title
     hx = 53 + tw + 20
+    right = HEADER[2] - 16
+    if len(sc.items) > 1:  # cảnh nhiều thẻ: đang ở thẻ thứ mấy
+        count = f"{(fr.focus or 0) + 1}/{len(sc.items)}"
+        fc = font("bold", 18)
+        d.text((right, 55), count, font=fc, fill=P["muted"], anchor="rm")
+        right -= d.textlength(count, font=fc) + 18
     size = 23
-    while size > 15 and width(d, title, size) > HEADER[2] - 16 - hx:
+    while size > 15 and width(d, title, size) > right - hx:
         size -= 1
     draw_mixed(d, hx, 55 + round(size * 0.36), title, size, P["white"])
 
@@ -271,9 +289,20 @@ def render(slides, fr, progress: float) -> Image.Image:
     x0, y0, x1, y1 = t1
     d.rounded_rectangle(t1, 16, fill=P["card"], outline=P["teal"], width=3)
     sp = lesson.speakers.get(fr.speaker or "")
-    if sp:
+    fb = font("bold", 16)
+    if fr.audio:  # đang phát file nghe của sách: nút ▶ + mã track (nhãn in trong sách) + ghi chú
+        chip = "BOOK AUDIO · " + fr.audio
+        bw = d.textlength(chip, font=fb) + 58
+        d.rounded_rectangle((63, y0 + 17, 63 + bw, y0 + 48), 8, fill=P["teal"])
+        d.polygon([(79, y0 + 24), (79, y0 + 41), (94, y0 + 32.5)], fill="#FFFFFF")
+        d.text((63 + 44, y0 + 33), chip, font=fb, fill="#FFFFFF", anchor="lm")
+        if fr.note:
+            note = fr.note
+            while len(note) > 1 and width(d, note, 18) > x1 - 30 - (63 + bw + 16):
+                note = note[:-2] + "…"
+            draw_mixed(d, 63 + bw + 16, y0 + 40, note, 18, P["ruby"])
+    elif sp:
         chip = ("JP · " if sp.lang == "ja" else "EN · ") + sp.name.upper() + (" — " + sp.role.upper() if sp.role else "")
-        fb = font("bold", 16)
         bw = d.textlength(chip, font=fb) + 28
         d.rounded_rectangle((63, y0 + 17, 63 + bw, y0 + 48), 8, fill=sp.color)
         d.text((63 + 14, y0 + 33), chip, font=fb, fill="#FFFFFF", anchor="lm")

@@ -1,0 +1,207 @@
+# U02 · Reading — GENKI I 読み書き bài 2 カタカナ (trang 300–303). Video luyện đọc ~7 phút cho phiên Đọc – viết:
+# bài I-A (chọn katakana đúng, Y02-1), I-B (12 món ăn, Y02-2), I-C (nước – thủ đô), I-D (sắp xếp chữ), II (bốn đoạn
+# Mary viết về đồ vật, Y02-3) và III (thẻ tên bằng katakana). Đề và đáp án chép từ sách. Xem ghi chú đầu U01-reading.yaml.
+id: U02-reading
+activity: U02-read-write
+title: "Unit 2 · Katakana"
+subtitle: "Reading · Katakana practice with the textbook audio"
+title_vi: "Luyện đọc — katakana: chữ dễ nhầm, món ăn, nước và thủ đô, bốn đoạn văn ngắn, viết tên"
+tag: "GENKI L2 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Unit 2 Reading · カタカナ (p. 300–303)"
+    items:
+      - jp: "カタカナ"
+        romaji: "katakana"
+        en: "Today: the katakana exercises of your textbook with the book's own audio — look-alike letters, food words, countries and capitals — then Mary's four short texts."
+        vi: "Hôm nay: các bài katakana trong sách, kèm audio gốc — chữ dễ nhầm, món ăn, nước và thủ đô — rồi bốn đoạn văn ngắn của Mary."
+    lines:
+      - emma: "Welcome to Unit 2 reading practice. Open your textbook at the reading and writing section, Lesson 2, page 300. Katakana is used for foreign words and names. Let's do the exercises with the book's audio."
+      - yuki: "カタカナ。"
+        pause: 1
+
+  - kind: jp
+    chapter: "A. Look-alike letters"
+    heading: "I-A (p. 301) · Choose the correct katakana"
+    items:
+      - jp: "1. オ・ア / 2. ヌ・メ / 3. テ・サ / 4. シ・ツ / 5. ワ・ク / 6. マ・ム / 7. レ・ル / 8. モ・ホ / 9. エ・ユ"
+        en: "Listen and choose: 1 o, 2 nu, 3 sa, 4 shi, 5 ku, 6 ma, 7 ru, 8 ho, 9 yu."
+        vi: "Nghe và chọn chữ đúng: 1 o, 2 nu, 3 sa, 4 shi, 5 ku, 6 ma, 7 ru, 8 ho, 9 yu."
+      - jp: "1. オ / 2. ヌ / 3. サ / 4. シ / 5. ク / 6. マ / 7. ル / 8. ホ / 9. ユ"
+        romaji: "o · nu · sa · shi · ku · ma · ru · ho · yu"
+        en: "Answers."
+        vi: "Đáp án."
+      - jp: "シ・ツ / ソ・ン"
+        romaji: "shi · tsu / so · n"
+        en: "The hardest pairs: シ and ン are written from the bottom up, ツ and ソ from the top down. Watch the direction of the last stroke."
+        vi: "Hai cặp khó nhất: シ và ン viết nét cuối từ dưới lên, ツ và ソ viết từ trên xuống. Để ý hướng nét cuối."
+    lines:
+      - emma: "Exercise A. Listen and choose the katakana you hear."
+      - track: Y02-1
+        note: "読み書き I-A · Y02-1"
+      - emma: "Answers. Read them with Yuki."
+        focus: 1
+      - yuki: "オ、ヌ、サ、シ、ク、マ、ル、ホ、ユ。"
+        pause: 2
+      - emma: "Two pairs confuse almost everyone. Look at the direction of the last stroke."
+        focus: 2
+      - yuki: "シ、ツ。ソ、ン。"
+        pause: 2
+
+  - kind: jp
+    chapter: "B. Food and drinks"
+    heading: "I-B (p. 301) · Food words in katakana"
+    items:
+      - jp: "オレンジジュース ・ フライドポテト ・ ケーキ ・ サラダ ・ チョコレートパフェ ・ コーヒー ・ サンドイッチ ・ ステーキ ・ カレー ・ ピザ ・ トースト ・ アイスティー"
+        en: "Listen and match each word with a picture in your book."
+        vi: "Nghe và nối mỗi từ với tranh trong sách."
+      - jp: "オレンジジュース ・ フライドポテト ・ ケーキ ・ サラダ"
+        romaji: "orenji juusu · furaido poteto · keeki · sarada"
+        en: "orange juice, French fries, cake, salad."
+        vi: "nước cam, khoai tây chiên, bánh ngọt, salad."
+      - jp: "チョコレートパフェ ・ コーヒー ・ サンドイッチ ・ ステーキ"
+        romaji: "chokoreeto pafe · koohii · sandoitchi · suteeki"
+        en: "chocolate parfait, coffee, sandwich, steak. Small ッ = a short stop."
+        vi: "kem parfait sô-cô-la, cà phê, bánh sandwich, bít tết. ッ nhỏ = ngắt hơi."
+      - jp: "カレー ・ ピザ ・ トースト ・ アイスティー"
+        romaji: "karee · piza · toosuto · aisutii"
+        en: "curry, pizza, toast, iced tea. Small ィ makes a sound English needs: ティ = 'ti'."
+        vi: "cà ri, pizza, bánh mì nướng, trà đá. ィ nhỏ tạo âm \"ti\" (ティ)."
+    lines:
+      - emma: "Exercise B. Twelve food and drink words. Most of them come from English. Listen and match them with the pictures in your book."
+      - track: Y02-2
+        note: "読み書き I-B · Y02-2"
+      - emma: "Now read them in groups of four with Yuki."
+        focus: 1
+      - yuki: "オレンジジュース、フライドポテト、ケーキ、サラダ。"
+        pause: 2
+      - yuki: "チョコレートパフェ、コーヒー、サンドイッチ、ステーキ。"
+        focus: 2
+        pause: 2
+      - yuki: "カレー、ピザ、トースト、アイスティー。"
+        focus: 3
+        pause: 2
+
+  - kind: jp
+    chapter: "C. Countries and capitals"
+    heading: "I-C (p. 302) · Countries and capital cities"
+    items:
+      - jp: "マレーシア — クアラルンプール ・ オランダ — アムステルダム ・ アメリカ — ワシントン{DC|ディーシー}"
+        romaji: "Mareeshia — Kuararunpuuru · Oranda — Amusuterudamu · Amerika — Washinton Diishii"
+        en: "Malaysia — Kuala Lumpur, the Netherlands — Amsterdam, the USA — Washington DC."
+        vi: "Malaysia — Kuala Lumpur, Hà Lan — Amsterdam, Mỹ — Washington DC."
+      - jp: "エジプト — カイロ ・ オーストラリア — キャンベラ ・ スウェーデン — ストックホルム"
+        romaji: "Ejiputo — Kairo · Oosutoraria — Kyanbera · Suweeden — Sutokkuhorumu"
+        en: "Egypt — Cairo, Australia — Canberra, Sweden — Stockholm."
+        vi: "Ai Cập — Cairo, Úc — Canberra, Thụy Điển — Stockholm."
+      - jp: "インド — ニューデリー ・ アルゼンチン — ブエノスアイレス ・ カナダ — オタワ"
+        romaji: "Indo — Nyuuderii · Aruzenchin — Buenosuairesu · Kanada — Otawa"
+        en: "India — New Delhi, Argentina — Buenos Aires, Canada — Ottawa."
+        vi: "Ấn Độ — New Delhi, Argentina — Buenos Aires, Canada — Ottawa."
+      - jp: "ベトナム — ハノイ"
+        romaji: "Betonamu — Hanoi"
+        en: "And our own: Vietnam — Hanoi."
+        vi: "Và của chúng ta: Việt Nam — Hà Nội."
+    lines:
+      - emma: "Exercise C has no audio. Match each country with its capital city, then check with Yuki. Notice how the long sounds and small letters follow the English pronunciation."
+      - yuki: "マレーシア、クアラルンプール。オランダ、アムステルダム。アメリカ、ワシントン ディーシー。"
+        pause: 1.8
+      - yuki: "エジプト、カイロ。オーストラリア、キャンベラ。スウェーデン、ストックホルム。"
+        focus: 1
+        pause: 1.8
+      - yuki: "インド、ニューデリー。アルゼンチン、ブエノスアイレス。カナダ、オタワ。"
+        focus: 2
+        pause: 1.8
+      - emma: "And one more that is not in the book."
+        focus: 3
+      - yuki: "ベトナム、ハノイ。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "D. Letter puzzle"
+    heading: "I-D (p. 302) · Put the katakana in order"
+    items:
+      - jp: "トノー ・ ンペ ・ ニュメー ・ ンジーズ"
+        en: "Put the katakana in the right order. Example: マホス → スマホ."
+        vi: "Sắp xếp lại các chữ katakana. Ví dụ: マホス → スマホ."
+      - jp: "ノート ・ ペン ・ メニュー ・ ジーンズ"
+        romaji: "nooto · pen · menyuu · jiinzu"
+        en: "notebook, pen, menu, jeans."
+        vi: "vở, bút, thực đơn, quần jean."
+    lines:
+      - emma: "Exercise D. Pause the video and put the letters in order. They are all words from Lesson 2."
+      - emma: "Answers."
+        focus: 1
+      - yuki: "ノート、ペン、メニュー、ジーンズ。"
+        pause: 2
+
+  - kind: jp
+    chapter: "II. Mary's four things"
+    heading: "II Reading Practice (p. 302–303) · Which things did Mary write about?"
+    items:
+      - jp: "1. これは わたしの ぼうしじゃないです。キャシーさんの ぼうしです。ニューヨークヤンキースの ぼうしです。 / 2. これは わたしの じてんしゃです。オーストラリアの じてんしゃです。たかいです。 / 3. これは ミシェルさんの ほんです。スペインごの ほんじゃないです。フランスごの ほんです。 / 4. これは ジャクソンさんの くつです。イタリアの くつじゃないです。アメリカの くつです。"
+        en: "Mary wrote about four of the eight things in the pictures on p. 302. Identify them."
+        vi: "Mary viết về bốn trong tám đồ vật ở tranh trang 302. Đó là những thứ nào?"
+      - jp: "これは わたしの ぼうしじゃないです。キャシーさんの ぼうしです。ニューヨークヤンキースの ぼうしです。"
+        romaji: "Kore wa watashi no booshi ja nai desu. Kyashii-san no booshi desu. Nyuuyooku Yankiisu no booshi desu."
+        en: "1 → (c) the New York Yankees cap. It's not Mary's; it's Cathy's."
+        vi: "1 → (c) mũ New York Yankees, không phải của Mary mà của Cathy."
+      - jp: "これは わたしの じてんしゃです。オーストラリアの じてんしゃです。たかいです。"
+        romaji: "Kore wa watashi no jitensha desu. Oosutoraria no jitensha desu. Takai desu."
+        en: "2 → (e) the ¥50,000 bicycle: it's expensive."
+        vi: "2 → (e) xe đạp 50.000 yên: đắt."
+      - jp: "これは ミシェルさんの ほんです。スペインごの ほんじゃないです。フランスごの ほんです。"
+        romaji: "Kore wa Misheru-san no hon desu. Supeingo no hon ja nai desu. Furansugo no hon desu."
+        en: "3 → (a) the French book, Michelle's."
+        vi: "3 → (a) sách tiếng Pháp của Michelle."
+      - jp: "これは ジャクソンさんの くつです。イタリアの くつじゃないです。アメリカの くつです。"
+        romaji: "Kore wa Jakuson-san no kutsu desu. Itaria no kutsu ja nai desu. Amerika no kutsu desu."
+        en: "4 → (g) the American shoes (sneakers), Jackson's."
+        vi: "4 → (g) giày Mỹ (giày thể thao) của Jackson."
+    lines:
+      - emma: "Reading practice. Mary wrote about four of the eight things in the pictures on page 302. Read along while you listen, and decide which four things she means."
+      - track: Y02-3
+        note: "読み書き II · Y02-3"
+      - emma: "Text one. Whose cap is it?"
+        focus: 1
+      - yuki: "これはわたしの帽子じゃないです。キャシーさんの帽子です。ニューヨークヤンキースの帽子です。"
+        pause: 1.5
+      - emma: "Text two. The key word is expensive, so it's the fifty-thousand-yen bicycle."
+        focus: 2
+      - yuki: "これはわたしの自転車です。オーストラリアの自転車です。高いです。"
+        pause: 1.5
+      - emma: "Text three. Not Spanish, but French."
+        focus: 3
+      - yuki: "これはミシェルさんの本です。スペイン語の本じゃないです。フランス語の本です。"
+        pause: 1.5
+      - emma: "Text four. Not Italian, but American shoes."
+        focus: 4
+      - yuki: "これはジャクソンさんの靴です。イタリアの靴じゃないです。アメリカの靴です。"
+        pause: 1.5
+
+  - kind: jp
+    chapter: "III. Your name tag"
+    heading: "III Writing Practice (p. 303) · Your name in katakana"
+    items:
+      - jp: "メアリー・ハート"
+        romaji: "Mearii Haato"
+        en: "Foreign names keep their own order (Mary first, Hart last); ・ or a space separates the parts."
+        vi: "Tên nước ngoài giữ thứ tự gốc; dấu ・ hoặc dấu cách ngăn họ và tên."
+      - jp: "グエン・ミン・アン"
+        romaji: "Guen Min An"
+        en: "A Vietnamese name: family name first, as in Vietnamese. Now make your own name tag."
+        vi: "Tên Việt: họ trước như tiếng Việt. Giờ hãy làm thẻ tên của bạn."
+    lines:
+      - emma: "Exercise three: make your own name tag. Foreign names are written in katakana, in their own order, with a dot between the parts."
+      - yuki: "メアリー・ハート。"
+        pause: 1.5
+      - emma: "Vietnamese names put the family name first, just like Japanese."
+        focus: 1
+      - yuki: "グエン・ミン・アン。"
+        pause: 1.5
+      - emma: "Well done. Read these pages aloud again this week, and write your name tag in katakana."

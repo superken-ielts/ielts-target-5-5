@@ -1,0 +1,494 @@
+# U02 · Speaking — GENKI I bài 2 かいもの (Shopping). Video luyện nói ~9 phút cho phiên Part B (練習):
+# これ/それ/あれ/どれ, この/その/あの + danh từ, hỏi giá và số tới hàng vạn, ください / おねがいします, だれの,
+# も, じゃないです, ね / よ, ここ/そこ/あそこ/どこ, rồi hai đoạn hội thoại của sách (trang 56–57).
+# Xem ghi chú đầu U01-speaking.yaml (thẻ kana như GENKI, câu đọc viết chữ Hán, nghỉ ngắn sau câu Nhật).
+id: U02-speaking
+activity: U02-part-b
+title: "Unit 2 · Shopping"
+subtitle: "Speaking · This and that, prices, shopping and asking the way"
+title_vi: "Luyện nói — cái này / cái đó, hỏi giá, mua hàng, gọi món, hỏi đường"
+tag: "GENKI L2 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+  takeshi: {name: Takeshi, role: shop staff, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals: at the shop"
+    heading: "Unit 2 Speaking · Shopping in Japanese"
+    items:
+      - jp: "すみません。これは いくらですか。"
+        romaji: "Sumimasen. Kore wa ikura desu ka."
+        en: "Excuse me. How much is this? — Today: point at things, ask what and whose they are, ask prices, buy, order food and ask where places are."
+        vi: "Xin lỗi, cái này bao nhiêu tiền? — Hôm nay: chỉ đồ vật, hỏi cái gì, của ai, hỏi giá, mua hàng, gọi món, hỏi chỗ."
+    lines:
+      - emma: "Welcome to Unit 2 speaking practice. Today you go shopping in Japanese. You will point at things, ask what they are and whose they are, ask prices, buy something, order food, and ask where a place is. Say every Japanese sentence out loud."
+      - yuki: "すみません。これはいくらですか。"
+        pause: 1.8
+      - emma: "Excuse me is the polite way to start. You will hear it in every shop."
+
+  - kind: jp
+    chapter: "これ・それ・あれ・どれ"
+    heading: "Pattern 1 · これ / それ / あれ / どれ — this one, that one"
+    items:
+      - jp: "それは なんですか。"
+        romaji: "Sore wa nan desu ka."
+        en: "What is that? それ = that one, near the person you talk to."
+        vi: "Đó là cái gì? それ = cái đó, gần người nghe."
+      - jp: "これは スマホです。"
+        romaji: "Kore wa sumaho desu."
+        en: "This is my smartphone. これ = this one, near me. A question with それ gets an answer with これ."
+        vi: "Đây là điện thoại. これ = cái này, gần người nói. Hỏi bằng それ thì trả lời bằng これ."
+      - jp: "これは なんですか。"
+        romaji: "Kore wa nan desu ka."
+        en: "What is this (near me)?"
+        vi: "Đây là cái gì (gần tôi)?"
+      - jp: "それは しんぶんです。"
+        romaji: "Sore wa shinbun desu."
+        en: "That (near you) is a newspaper."
+        vi: "Đó là tờ báo. しんぶん (新聞 – tân văn) = báo."
+      - jp: "あれは なんですか。"
+        romaji: "Are wa nan desu ka."
+        en: "What is that over there? あれ = far from both of us."
+        vi: "Kia là cái gì? あれ = ở xa cả hai người."
+      - jp: "あれは ゆうびんきょくです。"
+        romaji: "Are wa yuubinkyoku desu."
+        en: "That over there is the post office."
+        vi: "Kia là bưu điện. ゆうびんきょく (郵便局 – bưu tiện cục)."
+      - jp: "どれですか。"
+        romaji: "Dore desu ka."
+        en: "Which one? どれ = which one (of three or more)."
+        vi: "Cái nào? どれ = cái nào (trong ba thứ trở lên)."
+    lines:
+      - emma: "Japanese has a set of four pointing words. The first one is for things near me. The second is for things near you. The third is for things over there, far from both of us. The fourth asks: which one? Takeshi points at something in Yuki's hand."
+      - takeshi: "それはなんですか。"
+        pause: 1.2
+      - yuki: "これはスマホです。"
+        focus: 1
+        pause: 1.8
+      - emma: "Notice the switch. Takeshi said that one, because it is near Yuki. Yuki answers with this one, because it is near her. Now the other way round."
+      - yuki: "これはなんですか。"
+        focus: 2
+        pause: 1.2
+      - takeshi: "それは新聞です。"
+        focus: 3
+        pause: 1.8
+      - emma: "And something far from both of them."
+        focus: 4
+      - takeshi: "あれはなんですか。"
+        pause: 1.2
+      - yuki: "あれは郵便局です。"
+        focus: 5
+        pause: 1.8
+      - yuki: "どれですか。"
+        focus: 6
+        pause: 1.8
+
+  - kind: jp
+    chapter: "この・その・あの + noun"
+    heading: "Pattern 2 · この / その / あの + noun — this watch, that hat"
+    items:
+      - jp: "この とけいは いくらですか。"
+        romaji: "Kono tokee wa ikura desu ka."
+        en: "How much is this watch? この, その, あの, どの always need a noun after them."
+        vi: "Cái đồng hồ này bao nhiêu tiền? この, その, あの, どの luôn đi kèm danh từ phía sau. とけい (時計 – thời kế)."
+      - jp: "その とけいは さんぜんえんです。"
+        romaji: "Sono tokee wa sanzen en desu."
+        en: "That watch is 3,000 yen."
+        vi: "Cái đồng hồ đó 3.000 yên."
+      - jp: "あの ぼうしは いくらですか。"
+        romaji: "Ano booshi wa ikura desu ka."
+        en: "How much is that hat over there?"
+        vi: "Cái mũ kia bao nhiêu tiền? ぼうし (帽子 – mạo tử)."
+      - jp: "どの かばんですか。"
+        romaji: "Dono kaban desu ka."
+        en: "Which bag?"
+        vi: "Cái túi nào?"
+      - jp: "この かばんです。"
+        romaji: "Kono kaban desu."
+        en: "This bag."
+        vi: "Cái túi này."
+    lines:
+      - emma: "The second set means the same, this, that, that over there, which, but it always needs a noun right after it. You cannot use it alone."
+      - yuki: "この時計はいくらですか。"
+        pause: 1.2
+      - takeshi: "その時計は三千円です。"
+        focus: 1
+        pause: 1.8
+      - yuki: "あの帽子はいくらですか。"
+        focus: 2
+        pause: 1.8
+      - takeshi: "どのかばんですか。"
+        focus: 3
+        pause: 1.2
+      - yuki: "このかばんです。"
+        focus: 4
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Prices and big numbers"
+    heading: "Numbers · Prices in yen"
+    items:
+      - jp: "いくらですか。"
+        romaji: "Ikura desu ka."
+        en: "How much is it?"
+        vi: "Bao nhiêu tiền?"
+      - jp: "ひゃく ・ さんびゃく ・ ろっぴゃく ・ はっぴゃく"
+        romaji: "hyaku · sanbyaku · roppyaku · happyaku"
+        en: "100, 300, 600, 800 — the hundreds change their sound after 3, 6 and 8."
+        vi: "100, 300, 600, 800 — hàng trăm đổi âm sau 3, 6, 8."
+      - jp: "せん ・ さんぜん ・ はっせん ・ いちまん"
+        romaji: "sen · sanzen · hassen · ichiman"
+        en: "1,000, 3,000, 8,000, 10,000. Ten thousand is いちまん — think in units of 10,000."
+        vi: "1.000, 3.000, 8.000, 10.000. Mười nghìn là いちまん — người Nhật đếm theo vạn."
+      - jp: "せんはっぴゃくえんです。"
+        romaji: "Senhappyaku en desu."
+        en: "It's 1,800 yen."
+        vi: "1.800 yên."
+      - jp: "さんぜんごひゃくえんです。"
+        romaji: "Sanzengohyaku en desu."
+        en: "It's 3,500 yen."
+        vi: "3.500 yên."
+      - jp: "いちまんにせんえんです。"
+        romaji: "Ichiman nisen en desu."
+        en: "It's 12,000 yen."
+        vi: "12.000 yên."
+      - jp: "よんまん はっせんえんです。"
+        romaji: "Yonman hassen en desu."
+        en: "It's 48,000 yen."
+        vi: "48.000 yên."
+    lines:
+      - emma: "To ask the price, use the question word for how much."
+      - yuki: "いくらですか。"
+        pause: 1.5
+      - emma: "Hundreds. Listen to the sound changes after three, six and eight."
+        focus: 1
+      - takeshi: "百、三百、六百、八百。"
+        pause: 2
+      - emma: "Thousands. Three thousand and eight thousand change too. Ten thousand has its own word, so Japanese counts big numbers in units of ten thousand."
+        focus: 2
+      - takeshi: "千、三千、八千、一万。"
+        pause: 2
+      - emma: "Now some prices. Say them with Yuki."
+        focus: 3
+      - yuki: "千八百円です。"
+        pause: 1.8
+      - yuki: "三千五百円です。"
+        focus: 4
+        pause: 1.8
+      - yuki: "一万二千円です。"
+        focus: 5
+        pause: 1.8
+      - yuki: "四万八千円です。"
+        focus: 6
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Buying and ordering"
+    heading: "Pattern 3 · ～を ください / ～を おねがいします"
+    items:
+      - jp: "いらっしゃいませ。"
+        romaji: "Irasshaimase."
+        en: "Welcome! — what shop and restaurant staff say when you come in."
+        vi: "Xin mời quý khách! — câu nhân viên nói khi khách bước vào."
+      - jp: "これを ください。"
+        romaji: "Kore o kudasai."
+        en: "I'll take this one, please. Thing + を + ください = please give me…"
+        vi: "Cho tôi cái này. Đồ vật + を + ください = cho tôi…"
+      - jp: "じゃあ、その とけいを ください。"
+        romaji: "Jaa, sono tokee o kudasai."
+        en: "Then, I'll take that watch, please. じゃあ = well then."
+        vi: "Vậy thì cho tôi cái đồng hồ đó. じゃあ = vậy thì."
+      - jp: "メニューを どうぞ。"
+        romaji: "Menyuu o doozo."
+        en: "Here's the menu. どうぞ = here you are, please."
+        vi: "Mời xem thực đơn. どうぞ = xin mời."
+      - jp: "とんかつを おねがいします。"
+        romaji: "Tonkatsu o onegaishimasu."
+        en: "Tonkatsu, please. おねがいします = please (when ordering or asking a favour)."
+        vi: "Cho tôi món tonkatsu. おねがいします = làm ơn (gọi món, nhờ vả)."
+      - jp: "どうも。"
+        romaji: "Doomo."
+        en: "Thanks."
+        vi: "Cảm ơn (ngắn gọn)."
+    lines:
+      - emma: "When you walk into a shop, the staff will greet you like this."
+      - takeshi: "いらっしゃいませ。"
+        pause: 1.5
+      - emma: "To buy something, say the thing, the object particle, and please give me."
+        focus: 1
+      - yuki: "これをください。"
+        pause: 1.8
+      - yuki: "じゃあ、その時計をください。"
+        focus: 2
+        pause: 1.8
+      - emma: "In a restaurant, the staff hand you the menu."
+        focus: 3
+      - takeshi: "メニューをどうぞ。"
+        pause: 1.5
+      - yuki: "どうも。"
+        focus: 5
+        pause: 1.2
+      - emma: "To order, the softer please is more common."
+        focus: 4
+      - yuki: "とんかつをお願いします。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Whose? だれの"
+    heading: "Pattern 4 · だれの + noun — whose?"
+    items:
+      - jp: "これは だれの さいふですか。"
+        romaji: "Kore wa dare no saifu desu ka."
+        en: "Whose wallet is this? だれ = who, だれの = whose."
+        vi: "Đây là ví của ai? だれ = ai, だれの = của ai. さいふ (財布 – tài bố) = cái ví."
+      - jp: "わたしの さいふです。ありがとう ございます。"
+        romaji: "Watashi no saifu desu. Arigatoo gozaimasu."
+        en: "It's my wallet. Thank you very much."
+        vi: "Ví của tôi. Cảm ơn nhiều."
+      - jp: "これは だれの かさですか。"
+        romaji: "Kore wa dare no kasa desu ka."
+        en: "Whose umbrella is this?"
+        vi: "Đây là ô của ai? かさ (傘 – tản) = cái ô."
+      - jp: "たけしさんの かさです。"
+        romaji: "Takeshi-san no kasa desu."
+        en: "It's Takeshi's umbrella."
+        vi: "Ô của anh Takeshi."
+    lines:
+      - emma: "To ask whose something is, use who, followed by the linking particle from Unit 1."
+      - takeshi: "これはだれの財布ですか。"
+        pause: 1.2
+      - yuki: "わたしの財布です。ありがとうございます。"
+        focus: 1
+        pause: 2
+      - yuki: "これはだれの傘ですか。"
+        focus: 2
+        pause: 1.2
+      - takeshi: "たけしさんの傘です。"
+        focus: 3
+        pause: 1.8
+
+  - kind: jp
+    chapter: "も and じゃないです"
+    heading: "Pattern 5 · も (also) and じゃないです (is not)"
+    items:
+      - jp: "あれも たかいですね。"
+        romaji: "Are mo takai desu ne."
+        en: "That one is expensive, too. も replaces は: also, too."
+        vi: "Cái kia cũng đắt nhỉ. も thay cho は: cũng."
+      - jp: "たけしさんは にほんじんです。わたしも にほんじんです。"
+        romaji: "Takeshi-san wa nihonjin desu. Watashi mo nihonjin desu."
+        en: "Takeshi is Japanese. I am Japanese, too."
+        vi: "Anh Takeshi là người Nhật. Tôi cũng là người Nhật."
+      - jp: "さかなじゃないです。にくです。"
+        romaji: "Sakana ja nai desu. Niku desu."
+        en: "It's not fish. It's meat. Noun + じゃないです = is not."
+        vi: "Không phải cá. Là thịt. Danh từ + じゃないです = không phải là."
+      - jp: "わたしは にほんじんじゃないです。ベトナムじんです。"
+        romaji: "Watashi wa nihonjin ja nai desu. Betonamujin desu."
+        en: "I'm not Japanese. I'm Vietnamese."
+        vi: "Tôi không phải người Nhật. Tôi là người Việt Nam."
+      - jp: "これは わたしの かさじゃないです。"
+        romaji: "Kore wa watashi no kasa ja nai desu."
+        en: "This is not my umbrella."
+        vi: "Đây không phải ô của tôi."
+    lines:
+      - emma: "To say also, too, replace the topic particle with mo."
+        say: "To say also, too, replace the topic particle with moh."
+      - yuki: "あれも高いですね。"
+        pause: 1.8
+      - yuki: "たけしさんはにほんじんです。わたしもにほんじんです。"
+        focus: 1
+        pause: 2
+      - emma: "To say is not, change the word for is into ja nai des."
+        say: "To say is not, change the word for is into jah-nye-dess."
+        focus: 2
+      - takeshi: "魚じゃないです。肉です。"
+        pause: 1.8
+      - yuki: "わたしはにほんじんじゃないです。ベトナムじんです。"
+        focus: 3
+        pause: 2
+      - takeshi: "これはわたしの傘じゃないです。"
+        focus: 4
+        pause: 1.8
+
+  - kind: jp
+    chapter: "ね and よ"
+    heading: "Pattern 6 · ね (right?) and よ (you know)"
+    items:
+      - jp: "たかいですね。"
+        romaji: "Takai desu ne."
+        en: "It's expensive, isn't it? ね = you expect the listener to agree."
+        vi: "Đắt nhỉ. ね = mong người nghe đồng ý."
+      - jp: "おいしいですよ。"
+        romaji: "Oishii desu yo."
+        en: "It's delicious, you know! よ = you tell the listener something new."
+        vi: "Ngon lắm đấy! よ = báo cho người nghe điều họ chưa biết."
+      - jp: "これは せんはっぴゃくえんですよ。"
+        romaji: "Kore wa senhappyaku en desu yo."
+        en: "This one is 1,800 yen, you know."
+        vi: "Cái này 1.800 yên thôi đấy."
+      - jp: "そうですね。"
+        romaji: "Soo desu ne."
+        en: "That's right, isn't it. / Well, let me see…"
+        vi: "Đúng vậy nhỉ. / Để xem nào…"
+    lines:
+      - emma: "Two small words at the end of a sentence change the feeling. The first one asks the listener to agree."
+      - yuki: "高いですね。"
+        pause: 1.5
+      - emma: "The second one tells the listener something new."
+        focus: 1
+      - takeshi: "おいしいですよ。"
+        pause: 1.5
+      - takeshi: "これは千八百円ですよ。"
+        focus: 2
+        pause: 1.8
+      - yuki: "そうですね。"
+        focus: 3
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Where? どこ"
+    heading: "Pattern 7 · ここ / そこ / あそこ / どこ — places"
+    items:
+      - jp: "トイレは どこですか。"
+        romaji: "Toire wa doko desu ka."
+        en: "Where is the restroom? ここ = here, そこ = there (near you), あそこ = over there, どこ = where."
+        vi: "Nhà vệ sinh ở đâu? ここ = đây, そこ = đó, あそこ = đằng kia, どこ = ở đâu."
+      - jp: "あそこです。"
+        romaji: "Asoko desu."
+        en: "It's over there."
+        vi: "Ở đằng kia."
+      - jp: "すみません。ぎんこうは どこですか。"
+        romaji: "Sumimasen. Ginkoo wa doko desu ka."
+        en: "Excuse me. Where is the bank?"
+        vi: "Xin lỗi, ngân hàng ở đâu? ぎんこう (銀行 – ngân hàng)."
+      - jp: "ぎんこうは そこです。"
+        romaji: "Ginkoo wa soko desu."
+        en: "The bank is there (near you)."
+        vi: "Ngân hàng ở đó."
+      - jp: "コンビニは ここです。"
+        romaji: "Konbini wa koko desu."
+        en: "The convenience store is here."
+        vi: "Cửa hàng tiện lợi ở đây."
+    lines:
+      - emma: "The same four-way system works for places: here, there, over there, and where."
+      - yuki: "トイレはどこですか。"
+        pause: 1.2
+      - takeshi: "あそこです。"
+        focus: 1
+        pause: 1.5
+      - yuki: "すみません。銀行はどこですか。"
+        focus: 2
+        pause: 1.2
+      - takeshi: "銀行はそこです。"
+        focus: 3
+        pause: 1.5
+      - takeshi: "コンビニはここです。"
+        focus: 4
+        pause: 1.5
+
+  - kind: jp
+    chapter: "Textbook dialogue I"
+    heading: "Dialogue I (p. 56) · Mary at a flea market"
+    items:
+      - jp: "すみません。これは いくらですか。"
+        romaji: "Sumimasen. Kore wa ikura desu ka."
+        en: "Mary: Excuse me. How much is this?"
+        vi: "Mary: Xin lỗi, cái này bao nhiêu tiền?"
+      - jp: "それは さんぜんえんです。"
+        romaji: "Sore wa sanzen en desu."
+        en: "Vendor: It is 3,000 yen."
+        vi: "Người bán: Cái đó 3.000 yên."
+      - jp: "たかいですね。じゃあ、あの とけいは いくらですか。"
+        romaji: "Takai desu ne. Jaa, ano tokee wa ikura desu ka."
+        en: "Mary: It's expensive. Well then, how much is that watch?"
+        vi: "Mary: Đắt nhỉ. Vậy cái đồng hồ kia bao nhiêu?"
+      - jp: "あれは さんぜんごひゃくえんです。"
+        romaji: "Are wa sanzengohyaku en desu."
+        en: "Vendor: That is 3,500 yen."
+        vi: "Người bán: Cái kia 3.500 yên."
+      - jp: "そうですか。あれも たかいですね。"
+        romaji: "Soo desu ka. Are mo takai desu ne."
+        en: "Mary: I see. That is expensive, too."
+        vi: "Mary: Vậy à. Cái kia cũng đắt nhỉ."
+      - jp: "これは せんはっぴゃくえんですよ。"
+        romaji: "Kore wa senhappyaku en desu yo."
+        en: "Vendor: This is 1,800 yen."
+        vi: "Người bán: Cái này 1.800 yên thôi."
+      - jp: "じゃあ、その とけいを ください。"
+        romaji: "Jaa, sono tokee o kudasai."
+        en: "Mary: Then, I'll take that watch."
+        vi: "Mary: Vậy cho tôi cái đồng hồ đó."
+    lines:
+      - emma: "Now the first dialogue from your textbook, on page 56. Mary is shopping at a flea market. Yuki is Mary, and Takeshi is the vendor. Repeat each line."
+      - yuki: "すみません。これはいくらですか。"
+        pause: 1.8
+      - takeshi: "それは三千円です。"
+        focus: 1
+        pause: 1.8
+      - yuki: "高いですね。じゃあ、あの時計はいくらですか。"
+        focus: 2
+        pause: 2.2
+      - takeshi: "あれは三千五百円です。"
+        focus: 3
+        pause: 1.8
+      - yuki: "そうですか。あれも高いですね。"
+        focus: 4
+        pause: 2
+      - takeshi: "これは千八百円ですよ。"
+        focus: 5
+        pause: 1.8
+      - yuki: "じゃあ、その時計をください。"
+        focus: 6
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Textbook dialogue II"
+    heading: "Dialogue II (p. 57) · Mary at a restaurant"
+    items:
+      - jp: "いらっしゃいませ。メニューを どうぞ。"
+        romaji: "Irasshaimase. Menyuu o doozo."
+        en: "Staff: Welcome. Here's the menu."
+        vi: "Nhân viên: Xin mời quý khách. Mời xem thực đơn."
+      - jp: "どうも。これは なんですか。"
+        romaji: "Doomo. Kore wa nan desu ka."
+        en: "Mary: Thank you. What is this?"
+        vi: "Mary: Cảm ơn. Cái này là gì?"
+      - jp: "どれですか。ああ、とんかつです。"
+        romaji: "Dore desu ka. Aa, tonkatsu desu."
+        en: "Staff: Which one? Oh, it is tonkatsu (pork cutlet)."
+        vi: "Nhân viên: Món nào ạ? À, là tonkatsu (thịt heo chiên xù)."
+      - jp: "とんかつ？ さかなですか。"
+        romaji: "Tonkatsu? Sakana desu ka."
+        en: "Mary: Tonkatsu? Is it fish?"
+        vi: "Mary: Tonkatsu? Là cá à?"
+      - jp: "いいえ、さかなじゃないです。にくです。おいしいですよ。"
+        romaji: "Iie, sakana ja nai desu. Niku desu. Oishii desu yo."
+        en: "Staff: No, it is not fish. It is meat. It is delicious."
+        vi: "Nhân viên: Không, không phải cá. Là thịt. Ngon lắm đấy."
+      - jp: "じゃあ、これを おねがいします。"
+        romaji: "Jaa, kore o onegaishimasu."
+        en: "Mary: Then, I'll have this."
+        vi: "Mary: Vậy cho tôi món này."
+    lines:
+      - emma: "The second dialogue, on page 57. After shopping, Mary goes to a restaurant."
+      - takeshi: "いらっしゃいませ。メニューをどうぞ。"
+        pause: 1.8
+      - yuki: "どうも。これはなんですか。"
+        focus: 1
+        pause: 1.8
+      - takeshi: "どれですか。ああ、とんかつです。"
+        focus: 2
+        pause: 1.8
+      - yuki: "とんかつ？魚ですか。"
+        focus: 3
+        pause: 1.8
+      - takeshi: "いいえ、魚じゃないです。肉です。おいしいですよ。"
+        focus: 4
+        pause: 2.2
+      - yuki: "じゃあ、これをお願いします。"
+        focus: 5
+        pause: 1.8
+      - emma: "Well done. You can now shop and order food in Japanese. Next, do the practice exercises in your textbook with the audio, and watch the writing video for Unit 2."

@@ -1,0 +1,251 @@
+# U01 · Listening — GENKI I bài 1. Video luyện nghe ~7 phút cho phiên Hội thoại & từ vựng (trang 36–40):
+# phát audio gốc của sách (K01-01 / K01-03 = hội thoại; K01-02 / K01-04 = bản có khoảng lặng để nhắc lại), nghe hai
+# lần để trả lời câu hỏi, đáp án, đọc theo lời thoại, rồi 6 câu đố nghe giờ, tuổi, số điện thoại (thẻ `quiz`: Yuki đọc
+# trước, thẻ đáp án hiện sau). Lời thoại chép từ trang 36–37. Xem ghi chú đầu U01-speaking.yaml.
+id: U01-listening
+activity: U01-words
+title: "Unit 1 · New Friends"
+subtitle: "Listening · The textbook dialogues, numbers and time"
+title_vi: "Luyện nghe — hai đoạn hội thoại của sách (audio gốc), nghe giờ, tuổi, số điện thoại"
+tag: "GENKI L1 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+  takeshi: {name: Takeshi, role: Japanese student, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Unit 1 Listening · Listen to real Japanese"
+    items:
+      - jp: "あたらしい ともだち"
+        romaji: "Atarashii tomodachi"
+        en: "New Friends. Today: listen to the two textbook dialogues (the book's own audio), answer questions, then catch times, ages and phone numbers."
+        vi: "Những người bạn mới. Hôm nay: nghe hai đoạn hội thoại của sách (audio gốc), trả lời câu hỏi, rồi nghe giờ, tuổi, số điện thoại."
+    lines:
+      - emma: "Welcome to Unit 1 listening practice. You will hear the two dialogues of Lesson 1, recorded by the textbook's native speakers. For each dialogue, first listen for the answers to two or three questions, then read along, then repeat in the pauses. At the end, you will catch times, ages and phone numbers."
+      - yuki: "新しい友達。"
+        pause: 1
+
+  - kind: jp
+    chapter: "Dialogue I: listen for the answers"
+    heading: "Dialogue I (p. 36) · Listen twice"
+    items:
+      - jp: "Q1. たけしさんは りゅうがくせいですか。 / Q2. たけしさんは なんねんせいですか。"
+        en: "Mary meets Takeshi at a school orientation. Q1: Is Takeshi an international student? Q2: What year is he in?"
+        vi: "Mary gặp Takeshi ở buổi định hướng. Câu 1: Takeshi có phải du học sinh không? Câu 2: Anh ấy năm mấy?"
+    lines:
+      - emma: "Dialogue one. Mary, an international student, meets a Japanese student, Takeshi, at a school orientation. Listen for two things. Is Takeshi an international student? And what year is he in?"
+      - track: K01-01
+        note: "会話 I · Dialogue I"
+      - emma: "Did you catch the answers? Listen once more."
+      - track: K01-01
+        note: "会話 I · Dialogue I — 2nd time"
+
+  - kind: jp
+    chapter: "Dialogue I: answers"
+    heading: "Dialogue I · Answers"
+    items:
+      - jp: "たけしさんは りゅうがくせいですか。"
+        romaji: "Takeshi-san wa ryuugakusee desu ka."
+        en: "Q1: Is Takeshi an international student?"
+        vi: "Câu 1: Takeshi có phải du học sinh không?"
+      - jp: "いいえ、にほんじんです。"
+        romaji: "Iie, nihonjin desu."
+        en: "No, he is Japanese. Takeshi says: いいえ、にほんじんです。"
+        vi: "Không, anh ấy là người Nhật."
+      - jp: "たけしさんは なんねんせいですか。"
+        romaji: "Takeshi-san wa nannensee desu ka."
+        en: "Q2: What year is Takeshi in?"
+        vi: "Câu 2: Takeshi năm mấy?"
+      - jp: "よねんせいです。"
+        romaji: "Yonensee desu."
+        en: "He is a fourth-year student."
+        vi: "Anh ấy là sinh viên năm tư."
+    lines:
+      - yuki: "たけしさんは留学生ですか。"
+        pause: 0.8
+      - takeshi: "いいえ、にほんじんです。"
+        focus: 1
+        pause: 1.5
+      - emma: "Mary thought he might be an international student, but he is Japanese."
+      - yuki: "たけしさんは何年生ですか。"
+        focus: 2
+        pause: 0.8
+      - takeshi: "四年生です。"
+        say: "よねんせいです。"
+        focus: 3
+        pause: 1.5
+      - emma: "Four is said yo here, not yon: yo-nensei."
+        say: "Four is said yoh here, not yon: yoh-nen-say."
+
+  - kind: jp
+    chapter: "Dialogue I: read along, then repeat"
+    heading: "Dialogue I · Read along, then repeat in the pauses"
+    items:
+      - jp: "たけし：こんにちは。きむら たけしです。 / メアリー：メアリー・ハートです。あのう、りゅうがくせいですか。 / たけし：いいえ、にほんじんです。 / メアリー：そうですか。なんねんせいですか。 / たけし：よねんせいです。"
+        en: "Hello. I'm Takeshi Kimura. — I'm Mary Hart. Um… are you an international student? — No, I'm Japanese. — I see. What year are you in? — I'm a fourth-year student."
+        vi: "あのう = ừm (ngập ngừng); そうですか = vậy à."
+    lines:
+      - emma: "Now read along while you listen."
+      - track: K01-01
+        note: "会話 I · read along"
+      - emma: "The next recording has pauses after each line. Say each line in the pause, at the same speed."
+      - track: K01-02
+        note: "会話 I · repeat in the pauses"
+
+  - kind: jp
+    chapter: "Dialogue II: listen for the answers"
+    heading: "Dialogue II (p. 37) · Listen twice"
+    items:
+      - jp: "Q1. メアリーさんは なんねんせいですか。 / Q2. せんこうは なんですか。 / Q3. なんさいですか。"
+        en: "Mary introduces herself to everyone. Q1: What year is Mary in? Q2: What is her major? Q3: How old is she?"
+        vi: "Mary tự giới thiệu với mọi người. Câu 1: Mary năm mấy? Câu 2: Chuyên ngành là gì? Câu 3: Bao nhiêu tuổi?"
+    lines:
+      - emma: "Dialogue two. At the orientation, Mary introduces herself to everyone. Listen for three things: her year, her major, and her age."
+      - track: K01-03
+        note: "会話 II · Dialogue II"
+      - emma: "Once more."
+      - track: K01-03
+        note: "会話 II · Dialogue II — 2nd time"
+
+  - kind: jp
+    chapter: "Dialogue II: answers"
+    heading: "Dialogue II · Answers"
+    items:
+      - jp: "メアリーさんは なんねんせいですか。 — にねんせいです。"
+        romaji: "Mearii-san wa nannensee desu ka. — Ninensee desu."
+        en: "What year is Mary in? — She is a second-year student."
+        vi: "Mary năm mấy? — Năm hai."
+      - jp: "せんこうは なんですか。 — にほんごです。"
+        romaji: "Senkoo wa nan desu ka. — Nihongo desu."
+        en: "What is her major? — Japanese."
+        vi: "Chuyên ngành là gì? — Tiếng Nhật."
+      - jp: "なんさいですか。 — じゅうきゅうさいです。"
+        romaji: "Nansai desu ka. — Juukyuusai desu."
+        en: "How old is she? — Nineteen."
+        vi: "Bao nhiêu tuổi? — 19 tuổi."
+    lines:
+      - takeshi: "メアリーさんは何年生ですか。"
+        pause: 0.8
+      - yuki: "二年生です。"
+        pause: 1.5
+      - takeshi: "専攻はなんですか。"
+        focus: 1
+        pause: 0.8
+      - yuki: "にほんごです。"
+        pause: 1.5
+      - takeshi: "何歳ですか。"
+        focus: 2
+        pause: 0.8
+      - yuki: "十九歳です。"
+        pause: 1.5
+      - emma: "She also says she is a student at the University of Arizona. Did you hear the name of the university?"
+
+  - kind: jp
+    chapter: "Dialogue II: read along, then repeat"
+    heading: "Dialogue II · Read along, then repeat in the pauses"
+    items:
+      - jp: "メアリー：はじめまして。メアリー・ハートです。 / アリゾナだいがくの がくせいです。にねんせいです。 / せんこうは にほんごです。じゅうきゅうさいです。 / よろしく おねがいします。"
+        en: "How do you do? I'm Mary Hart. I'm a student at the University of Arizona, in my second year. My major is Japanese. I'm 19. Nice to meet you."
+        vi: "Rất vui được gặp. Tôi là Mary Hart, sinh viên năm hai Đại học Arizona, chuyên ngành tiếng Nhật, 19 tuổi. Mong được giúp đỡ."
+    lines:
+      - emma: "Read along."
+      - track: K01-03
+        note: "会話 II · read along"
+      - emma: "Now repeat in the pauses."
+      - track: K01-04
+        note: "会話 II · repeat in the pauses"
+
+  - kind: jp
+    chapter: "Catch the numbers"
+    heading: "Listening quiz · Times, ages, phone numbers"
+    items:
+      - jp: "Q1 ・ なんじですか。"
+        quiz: true
+        en: "Listen and write the time."
+        vi: "Nghe và viết giờ."
+      - jp: "いま、ごぜん くじです。 → 9:00 a.m."
+        romaji: "Ima, gozen kuji desu."
+        en: "It's nine in the morning."
+        vi: "Bây giờ là 9 giờ sáng."
+      - jp: "Q2 ・ なんじですか。"
+        quiz: true
+        en: "Listen and write the time."
+        vi: "Nghe và viết giờ."
+      - jp: "いま、ごご よじはんです。 → 4:30 p.m."
+        romaji: "Ima, gogo yoji han desu."
+        en: "It's half past four in the afternoon."
+        vi: "Bây giờ là 4 giờ rưỡi chiều."
+      - jp: "Q3 ・ なんさいですか。"
+        quiz: true
+        en: "Listen and write the age."
+        vi: "Nghe và viết tuổi."
+      - jp: "たけしさんは にじゅういっさいです。 → 21"
+        romaji: "Takeshi-san wa nijuuissai desu."
+        en: "Takeshi is 21."
+        vi: "Takeshi 21 tuổi."
+      - jp: "Q4 ・ なんさいですか。"
+        quiz: true
+        en: "Listen and write the age."
+        vi: "Nghe và viết tuổi."
+      - jp: "せんせいは よんじゅうはっさいです。 → 48"
+        romaji: "Sensee wa yonjuuhassai desu."
+        en: "The teacher is 48."
+        vi: "Thầy / cô giáo 48 tuổi."
+      - jp: "Q5 ・ でんわばんごうは？"
+        quiz: true
+        en: "Listen and write the phone number. の separates the groups of digits."
+        vi: "Nghe và viết số điện thoại. の ngăn các nhóm số."
+      - jp: "さんろくななの きゅうはちごいちです。 → 367-9851"
+        romaji: "San roku nana no kyuu hachi go ichi desu."
+        en: "It's 367-9851."
+        vi: "Số 367-9851."
+      - jp: "Q6 ・ でんわばんごうは？"
+        quiz: true
+        en: "Listen and write the phone number. 0 is ゼロ."
+        vi: "Nghe và viết số điện thoại. Số 0 đọc là ゼロ."
+      - jp: "ゼロきゅうゼロの いちにさんよんの ごろくななはちです。 → 090-1234-5678"
+        romaji: "Zero kyuu zero no ichi ni san yon no go roku nana hachi desu."
+        en: "It's 090-1234-5678."
+        vi: "Số 090-1234-5678."
+    lines:
+      - emma: "Last part: a listening quiz. Yuki and Takeshi say a time, an age or a phone number. Write down what you hear, then check the answer."
+      - takeshi: "いま、ごぜんくじです。"
+        pause: 2.5
+      - takeshi: "いま、ごぜんくじです。"
+        focus: 1
+        pause: 1.2
+      - yuki: "いま、午後よじ半です。"
+        focus: 2
+        pause: 2.5
+      - yuki: "いま、午後よじ半です。"
+        focus: 3
+        pause: 1.2
+      - takeshi: "たけしさんはにじゅういっさいです。"
+        focus: 4
+        pause: 2.5
+      - takeshi: "たけしさんはにじゅういっさいです。"
+        focus: 5
+        pause: 1.2
+      - yuki: "先生は四十はっさいです。"
+        focus: 6
+        pause: 2.5
+      - yuki: "先生は四十はっさいです。"
+        focus: 7
+        pause: 1.2
+      - emma: "Phone numbers are read digit by digit, with the particle no between the groups of digits."
+        focus: 8
+      - takeshi: "さんろくななの、きゅうはちごいちです。"
+        pause: 3
+      - takeshi: "さんろくななの、きゅうはちごいちです。"
+        focus: 9
+        pause: 1.2
+      - yuki: "ゼロきゅうゼロの、いちにさんよんの、ごろくななはちです。"
+        focus: 10
+        pause: 3.5
+      - yuki: "ゼロきゅうゼロの、いちにさんよんの、ごろくななはちです。"
+        focus: 11
+        pause: 1.2
+      - emma: "Well done. Listen to the dialogues again every day this week, and repeat them in the pauses until you can say them without looking."
+        focus: 11
