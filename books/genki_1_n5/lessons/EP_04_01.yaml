@@ -1,0 +1,63 @@
+# EP 4.1 — GENKI I bài 4, Part A (bản thiết kế: EP_04_01). Xem ghi chú đầu file EP_01_01.yaml.
+id: EP_04_01
+activity: U04-part-a
+title: "Unit 4 · The First Date"
+subtitle: "EP 4.1 · Existence (Arimasu / Imasu) & Describing Locations"
+title_vi: "Phần A — があります / います và từ chỉ vị trí"
+tag: "TARGET N5 • 5.0"
+gap: 0
+scene_gap: 0
+speakers:
+  emma: {name: Emma, role: grammar & topic guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor · listen & shadow, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Existence: あります / います"
+    heading: "Unit 4.1: Existence [ X が あります / います ]"
+    items:
+      - jp: "[Place] に [Thing] が あります。 / [Person/Animal] が います。"
+        romaji: "Arimasu (Inanimate things) vs. Imasu (People & Animals)"
+        en: "Grammar Point 1: Use particle 'ga' before arimasu (things/places) and imasu (people/pets)."
+        vi: "Điểm ngữ pháp 1: 'ga arimasu' = Có (đồ vật, cây cối, tòa nhà) | 'ga imasu' = Có (người, động vật)."
+    lines:
+      - emma: "Welcome to Unit 4, Part A! In Genki Lesson 4, Grammar Point 1 teaches us how to say 'there is' or 'I have' using the particle 'ga'. Use 'a-ri-mas' for non-living things like cafes or parks, and 'i-mas' for living people and animals!"
+        say: "Welcome to Unit 4, Part A! In Ghen-kee Lesson 4, Grammar Point 1 teaches us how to say 'there is' or 'I have' using the particle 'ga'. Use 'ah-ree-mahss' for non-living things like cafes or parks, and 'ee-mahss' for living people and animals!"
+        pause: 0.6
+
+  - kind: jp
+    chapter: "Shadowing: あります vs います"
+    heading: "Shadowing: Arimasu vs. Imasu"
+    items:
+      - jp: "あそこに コンビニが あります。 / {家|いえ}に {猫|ねこ}が います。"
+        romaji: "Asoko ni konbini ga arimasu. / Ie ni neko ga imasu."
+        en: "There is a convenience store over there. / There is a cat at home."
+        vi: "Ở đằng kia có cửa hàng tiện lợi. / Ở nhà có một con mèo."
+    lines:
+      - yuki: "あそこにコンビニがあります。家に猫がいます。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Location words"
+    heading: "Unit 4.1: Location Words [ X の となり・ちかく・まえ ]"
+    items:
+      - jp: "{駅|えき}の{近|ちか}く / {銀行|ぎんこう}の{隣|となり}"
+        romaji: "Eki no chikaku (Near the station) / Ginkou no tonari (Next to the bank)"
+        en: "Grammar Point 2: [Reference Noun] + no + ue (on), shita (under), mae (front), tonari (next to), chikaku (near)."
+        vi: "Điểm ngữ pháp 2: Từ chỉ vị trí (Tonari = bên cạnh, Chikaku = gần, Mae = phía trước, Naka = bên trong)."
+    lines:
+      - emma: "Grammar Point 2 helps you describe exact locations using 'Noun no' plus a location word: 'u-e' for on top, 'shi-ta' for under, 'to-na-ri' for next to, and 'chi-ka-ku' for near!"
+        say: "Grammar Point 2 helps you describe exact locations using 'Noun no' plus a location word: 'oo-eh' for on top, 'shee-tah' for under, 'toh-nah-ree' for next to, and 'chee-kah-koo' for near!"
+        pause: 0.5
+
+  - kind: jp
+    chapter: "Shadowing: your neighborhood"
+    heading: "Shadowing: Describing Your Neighborhood"
+    items:
+      - jp: "わたしの{家|いえ}の{近|ちか}くに {大|おお}きい{公園|こうえん}が あります。"
+        romaji: "Watashi no ie no chikaku ni ookii kouen ga arimasu."
+        en: "There is a big park near my house."
+        vi: "Ở gần nhà của tôi có một công viên lớn."
+    lines:
+      - yuki: "わたしの家の近くに大きい公園があります。"
+        pause: 2.0

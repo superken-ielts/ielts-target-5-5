@@ -1,0 +1,67 @@
+# EP 4.2 — GENKI I bài 4, Part B (bản thiết kế: EP_04_02). Xem ghi chú đầu file EP_01_01.yaml.
+# Sửa so với bản thiết kế: trong bài 4, ～時間 là điểm ngữ pháp 6 và と là điểm 8 (bản thiết kế ghi と là 5, ～時間 là 6;
+# điểm 5 của sách là も, điểm 7 là たくさん). Bộ đọc đọc 日本語 là にっぽんご, 日曜日 là にちようひ → `say` viết kana.
+id: EP_04_02
+activity: U04-part-b
+title: "Unit 4 · The First Date"
+subtitle: "EP 4.2 · Past Tense (deshita & -mashita), Particle 'to' & Duration '-jikan'"
+title_vi: "Phần B — Quá khứ でした / ～ました, ～時間 và と"
+tag: "TARGET N5 • 5.0"
+gap: 0
+scene_gap: 0
+speakers:
+  emma: {name: Emma, role: grammar & topic guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor · listen & shadow, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Past tense: でした & ～ました"
+    heading: "Unit 4.2: Past Tense [ でした & ～ました ]"
+    items:
+      - jp: "Nouns: でした / じゃなかったです | Verbs: ～ました / ～ませんでした"
+        romaji: "Deshita / Janakatta desu | ~mashita / ~masendeshita"
+        en: "Grammar 3 & 4: Past tense of nouns and polite verbs."
+        vi: "Điểm ngữ pháp 3 & 4: Chia quá khứ của Danh từ (deshita) và Động từ (~mashita / ~masendeshita)."
+    lines:
+      - emma: "Welcome to Unit 4, Part B! Now we unlock the Past Tense in Grammar Points 3 and 4! For nouns, 'des' becomes 'desh-ta', and negative 'ja-nai des' becomes 'ja-na-kat-ta des'. For action verbs, change 'mas' to 'mash-ta', and 'mas-en' to 'mas-en desh-ta'!"
+        say: "Welcome to Unit 4, Part B! Now we unlock the Past Tense in Grammar Points 3 and 4! For nouns, 'des' becomes 'dehsh-tah', and negative 'jah-nye dess' becomes 'jah-nah-kaht-tah dess'. For action verbs, change 'mahss' to 'mahsh-tah', and 'mah-sen' to 'mah-sen dehsh-tah'!"
+        pause: 0.6
+
+  - kind: jp
+    chapter: "Shadowing: past tense of nouns"
+    heading: "Shadowing: Past Tense of Nouns"
+    items:
+      - jp: "きのうは {日曜日|にちようび}でした。{仕事|しごと}じゃなかったです。"
+        romaji: "Kinou wa Nichiyoubi deshita. Shigoto janakatta desu."
+        en: "Yesterday was Sunday. It was not a workday."
+        vi: "Hôm qua là Chủ nhật. Đã không phải là ngày làm việc."
+    lines:
+      - yuki: "きのうは日曜日でした。仕事じゃなかったです。"
+        say: "きのうはにちようびでした。仕事じゃなかったです。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "と (with / and) & ～時間"
+    heading: "Unit 4.2: Particle [ と (With/And) ] & Duration [ ～時間 ]"
+    items:
+      - jp: "{友|とも}だちと (With a friend) / {二時間|にじかん}{勉強|べんきょう}しました。"
+        romaji: "Tomodachi to / Ni-jikan benkyou shimashita."
+        en: "Grammar 6 & 8: '~jikan' = duration of hours (no particle after it). 'to' = and / together with."
+        vi: "Điểm ngữ pháp 6 & 8: '~jikan' = khoảng mấy tiếng đồng hồ (không dùng trợ từ). Trợ từ 'to' = và / cùng với ai đó."
+    lines:
+      - emma: "Also in Lesson 4, Grammar Point 8 introduces the particle 'to', which means 'and' between nouns, or 'together with' a person! And Grammar Point 6 uses 'jee-kan' for duration in hours, like 'ni-jee-kan' for two hours, with NO particle after it!"
+        say: "Also in Lesson 4, Grammar Point 8 introduces the particle 'to', which means 'and' between nouns, or 'together with' a person! And Grammar Point 6 uses 'jee-kahn' for duration in hours, like 'nee-jee-kahn' for two hours, with NO particle after it!"
+        pause: 0.5
+
+  - kind: jp
+    chapter: "Shadowing: past actions + と + duration"
+    heading: "Shadowing: Past Actions + 'to' + Duration"
+    items:
+      - jp: "きのう、{友|とも}だちと {映画|えいが}を{見|み}ました。{家|いえ}で {二時間|にじかん} {日本語|にほんご}を {勉強|べんきょう}しました。"
+        romaji: "Kinou, tomodachi to eiga o mimashita. Ie de ni-jikan nihongo o benkyou shimashita."
+        en: "Yesterday, I watched a movie with a friend. I studied Japanese at home for two hours."
+        vi: "Hôm qua tôi đã xem phim cùng với bạn. Tôi đã học tiếng Nhật ở nhà trong 2 tiếng đồng hồ."
+    lines:
+      - yuki: "きのう、友だちと映画を見ました。家で二時間日本語を勉強しました。"
+        say: "きのう、友だちと映画を見ました。家で二時間にほんごを勉強しました。"
+        pause: 2.0

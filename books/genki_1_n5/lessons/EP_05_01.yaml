@@ -1,0 +1,65 @@
+# EP 5.1 — GENKI I bài 5, Part A (bản thiết kế: EP_05_01). Xem ghi chú đầu file EP_01_01.yaml.
+# Sửa so với bản thiết kế: nhãn "Grammar Point 1a / 1b" trên màn hình đổi thành tên mục (tính từ い, tính từ な và
+# tính từ bổ nghĩa danh từ) — bản thiết kế tự chia nhỏ điểm 1, không khớp cách đánh số của sách.
+id: EP_05_01
+activity: U05-part-a
+title: "Unit 5 · A Trip to Okinawa"
+subtitle: "EP 5.1 · Present Tense of -i and -na Adjectives"
+title_vi: "Phần A — Tính từ い và な ở hiện tại"
+tag: "TARGET N5 • 5.0"
+gap: 0
+scene_gap: 0
+speakers:
+  emma: {name: Emma, role: grammar & topic guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor · listen & shadow, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "い-adjectives: ～いです / ～くないです"
+    heading: "Unit 5.1: -i Adjectives in Present [ ～いです / ～くないです ]"
+    items:
+      - jp: "おもしろいです → おもしろくないです | いいです → よくないです"
+        romaji: "Omoshiroi desu -> Omoshirokunai desu | Ii desu -> Yokunai desu"
+        en: "-i adjectives (present): Drop final '-i' and add '-kunai desu' for negative. Irregular: ii -> yokunai."
+        vi: "Tính từ đuôi -i (hiện tại): khi phủ định bỏ 'i' + 'kunai desu'. Riêng từ 'ii' (tốt) đổi thành 'yokunai'."
+    lines:
+      - emma: "Welcome to Unit 5, Part A! In Genki Lesson 5, Grammar Point 1 introduces the two types of Japanese adjectives: 'ee' adjectives and 'na' adjectives. For 'ee' adjectives, to make them negative, drop the final 'ee' and add 'ku-nai des'. Watch out for 'ee' meaning good, which becomes 'yo-ku-nai des'!"
+        say: "Welcome to Unit 5, Part A! In Ghen-kee Lesson 5, Grammar Point 1 introduces the two types of Japanese adjectives: 'ee' adjectives and 'na' adjectives. For 'ee' adjectives, to make them negative, drop the final 'ee' and add 'koo-nye dess'. Watch out for 'ee' meaning good, which becomes 'yoh-koo-nye dess'!"
+        pause: 0.6
+
+  - kind: jp
+    chapter: "Shadowing: い-adjectives"
+    heading: "Shadowing: -i Adjectives"
+    items:
+      - jp: "この{本|ほん}は とても おもしろいです。 / きょうは {忙|いそが}しくないです。"
+        romaji: "Kono hon wa totemo omoshiroi desu. / Kyou wa isogashikunai desu."
+        en: "This book is very interesting. / Today, I am not busy."
+        vi: "Cuốn sách này rất thú vị (totemo = rất). / Hôm nay tôi không bận."
+    lines:
+      - yuki: "この本はとてもおもしろいです。きょうは忙しくないです。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "な-adjectives & な + noun"
+    heading: "Unit 5.1: -na Adjectives [ ～です / ～じゃないです / ～な + Noun ]"
+    items:
+      - jp: "{静|しず}かです / {静|しず}かじゃないです / {静|しず}かな{町|まち}"
+        romaji: "Shizuka desu / Shizuka janai desu / Shizuka na machi"
+        en: "-na adjectives conjugate like nouns, but keep 'na' before a noun."
+        vi: "Tính từ đuôi -na chia giống hệt Danh từ, nhưng khi đứng trước bổ nghĩa Danh từ phải có 'na'."
+    lines:
+      - emma: "Now for 'na' adjectives like 'shi-zu-ka' for quiet, and 'ki-rei' for beautiful or clean! They conjugate just like nouns using 'des' and 'ja-nai des'. However, when you place a 'na' adjective directly before a noun, you MUST keep the 'na'!"
+        say: "Now for 'na' adjectives like 'shi-zu-ka' for quiet, and 'kee-ray' for beautiful or clean! They conjugate just like nouns using 'des' and 'jah-nye dess'. However, when you place a 'na' adjective directly before a noun, you MUST keep the 'na'!"
+        pause: 0.5
+
+  - kind: jp
+    chapter: "Shadowing: な-adjectives"
+    heading: "Shadowing: -na Adjectives"
+    items:
+      - jp: "ここは とても {静|しず}かな{町|まち}です。{海|うみ}が きれいですね。"
+        romaji: "Koko wa totemo shizuka na machi desu. Umi ga kirei desu ne."
+        en: "This is a very quiet town. The sea is beautiful, isn't it!"
+        vi: "Đây là một thị trấn rất yên tĩnh. Biển đẹp quá nhỉ! (Lưu ý: 'kirei' tận cùng là i nhưng là tính từ đuôi -na)."
+    lines:
+      - yuki: "ここはとても静かな町です。海がきれいですね。"
+        pause: 2.0

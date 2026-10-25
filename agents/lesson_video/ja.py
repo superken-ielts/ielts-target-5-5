@@ -46,7 +46,7 @@ def kata(s: str) -> str:
 
 def kana_only(s: str) -> str:
     """Chỉ giữ kana (đổi sang katakana): bỏ dấu câu, khoảng trắng, chữ Latin để so cách đọc."""
-    return "".join(c for c in kata(s) if 0x30A1 <= ord(c) <= 0x30FC)
+    return "".join(c for c in kata(s) if 0x30A1 <= ord(c) <= 0x30FA or c == "ー")  # bỏ dấu ・ (U+30FB)
 
 
 # ---------- furigana ----------
@@ -60,7 +60,7 @@ def check_markup(text: str) -> list[str]:
         elif any(is_kanji(c) or c.isascii() and c.isalpha() for c in reading):
             problems.append(f"furigana phải viết bằng kana: {m.group(0)}")
     rest = RUBY.sub("", text)
-    if "{" in rest or "}" in rest or "|" in rest:
+    if "{" in rest or "}" in rest:  # "|" đứng riêng là vạch ngăn bình thường (たべる | のむ)
         problems.append(f"furigana viết sai — dạng đúng là {{漢字|かんじ}}: {text}")
     bare = sorted({c for c in rest if is_kanji(c)}, key=rest.index)
     if bare:

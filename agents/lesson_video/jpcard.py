@@ -31,6 +31,11 @@ TIER3 = (40, 557, W - 40, 690)
 X0, TEXT_W = 72, W - 40 - 72 - 30
 NO_START = set("、。，．・：；？！ー）」』】〉》〕］｝)]}?!.,:;…‥～〜ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮ")
 NO_END = set("（「『【〈《〔［｛([{")
+SEPARATORS = ("|", "/", "—", "vs.")
+
+
+def _kata(ch: str) -> bool:
+    return 0x30A1 <= ord(ch) <= 0x30FA or ch == "ー"
 LABEL_EN = "ENGLISH EXPLANATION / MEANING"
 LABEL_VI = "NGHĨA TIẾNG VIỆT & GHI CHÚ HÁN-VIỆT"
 
@@ -87,6 +92,8 @@ def units(d, text: str, size: int, rsize: int, bold: bool) -> list[Unit]:
                 if ch == " ":
                     if out and not out[-1].space:
                         out.append(Unit(" ", space=True))
+                elif _kata(ch) and out and not out[-1].ruby and out[-1].base and _kata(out[-1].base[-1]):
+                    out[-1].base += ch  # từ katakana (カフェ, コーヒー) không bị cắt đôi khi xuống dòng
                 else:
                     out.append(Unit(ch))
             else:
@@ -111,6 +118,20 @@ def _break(us: list[Unit], limit: float) -> list[list[Unit]]:
     for u in us:
         if cur and w + u.w > limit and not u.space:
             nxt: list[Unit] = []
+            # câu có dấu cách (mẫu câu, câu tách cụm): ngắt ở vạch ngăn | / —, không thì ở dấu cách cuối,
+            # thay vì cắt giữa một từ; đoạn văn Nhật liền chữ thì ngắt ở bất kỳ chữ nào
+            spaces = [k for k, x in enumerate(cur) if x.space and 0 < k < len(cur) - 1]
+            seps = [k for k in spaces if cur[k - 1].base in SEPARATORS]
+            k = (seps or spaces or [None])[-1]
+            if k is not None and (seps or sum(x.w for x in cur[k + 1:]) <= 0.5 * limit):
+                nxt, cur = cur[k + 1:], cur[:k]
+                while cur and (cur[-1].space or cur[-1].base in SEPARATORS):  # vạch ngăn cuối dòng là thừa
+                    cur.pop()
+                lines.append(cur)
+                cur, w = nxt, sum(x.w for x in nxt)
+                cur.append(u)
+                w += u.w
+                continue
             # cấm đầu dòng: dấu câu, chữ nhỏ → kéo chữ trước theo xuống dòng sau
             while u.base[0] in NO_START and len(cur) > 1 and not cur[-1].space:
                 nxt.insert(0, cur.pop())
@@ -196,6 +217,34 @@ def _tier(d, box, fill, outline, bar, label, text, ink):
         paint(d, b, X0, y0 + 40, ink, ink)
 
 
+def _tier_height(d, text: str) -> int:
+    """Chiều cao vừa đủ của tầng 2 / 3 (nhãn + đoạn văn), không thấp hơn 96 và không cao hơn bản thiết kế."""
+    b = fit(d, text, range(23, 15, -1), TEXT_W, TIER2[3] - TIER2[1] - 50, 3) if text else None
+    return max(96, min(TIER2[3] - TIER2[1], 40 + (b.height if b else 0) + 12))
+
+
+def tiers(d, it: dict):
+    """Ba tầng theo bản thiết kế; đoạn văn Nhật dài (chữ nhỏ hơn 30px) thì tầng 2, 3 co vừa nội dung để tầng 1
+    cao hơn. Trả về (tầng 1, tầng 2, tầng 3, khối chữ Nhật, khối romaji)."""
+    rom, jp = str(it.get("romaji") or ""), str(it["jp"])
+
+    def blocks(t1):
+        top, bottom = t1[1] + 62, t1[3] - 16
+        rb = fit(d, rom, range(22, 15, -1), TEXT_W, 90, 3) if rom else None
+        room = bottom - top - (rb.height + 12 if rb else 0)
+        return fit(d, jp, range(46, 21, -1), TEXT_W, room), rb
+
+    jb, rb = blocks(TIER1)
+    if jb.size >= 30 or len(jb.lines) < 2:
+        return TIER1, TIER2, TIER3, jb, rb
+    h3, h2 = _tier_height(d, str(it.get("vi") or "")), _tier_height(d, str(it.get("en") or ""))
+    t3 = (TIER3[0], TIER3[3] - h3, TIER3[2], TIER3[3])
+    t2 = (TIER2[0], t3[1] - 20 - h2, TIER2[2], t3[1] - 20)
+    t1 = (TIER1[0], TIER1[1], TIER1[2], t2[1] - 20)
+    jb2, rb2 = blocks(t1)
+    return (t1, t2, t3, jb2, rb2) if jb2.size > jb.size else (TIER1, TIER2, TIER3, jb, rb)
+
+
 def render(slides, fr, progress: float) -> Image.Image:
     lesson = slides.L
     sc = lesson.scenes[fr.scene]
@@ -218,8 +267,9 @@ def render(slides, fr, progress: float) -> Image.Image:
     draw_mixed(d, hx, 55 + round(size * 0.36), title, size, P["white"])
 
     # tầng 1: người đang nói, chữ Nhật có furigana, romaji
-    x0, y0, x1, y1 = TIER1
-    d.rounded_rectangle(TIER1, 16, fill=P["card"], outline=P["teal"], width=3)
+    t1, t2, t3, jb, rb = tiers(d, it)
+    x0, y0, x1, y1 = t1
+    d.rounded_rectangle(t1, 16, fill=P["card"], outline=P["teal"], width=3)
     sp = lesson.speakers.get(fr.speaker or "")
     if sp:
         chip = ("JP · " if sp.lang == "ja" else "EN · ") + sp.name.upper() + (" — " + sp.role.upper() if sp.role else "")
@@ -228,19 +278,16 @@ def render(slides, fr, progress: float) -> Image.Image:
         d.rounded_rectangle((63, y0 + 17, 63 + bw, y0 + 48), 8, fill=sp.color)
         d.text((63 + 14, y0 + 33), chip, font=fb, fill="#FFFFFF", anchor="lm")
     top, bottom = y0 + 62, y1 - 16
-    rom = str(it.get("romaji") or "")
-    rb = fit(d, rom, range(22, 15, -1), TEXT_W, 90, 3) if rom else None
     gap = 12 if rb else 0
     room = bottom - top - (rb.height + gap if rb else 0)
-    jb = fit(d, str(it["jp"]), range(46, 21, -1), TEXT_W, room)
     y = top + max(0, (room - jb.height) / 2)
     y = paint(d, jb, X0, y, P["ink"], P["ruby"])
     if rb:
         paint(d, rb, X0, max(y + gap, bottom - rb.height), P["romaji"], P["romaji"])
 
     # tầng 2, 3: tiếng Anh, tiếng Việt
-    _tier(d, TIER2, P["en"], P["teal"], P["teal"], LABEL_EN, str(it.get("en") or ""), P["white"])
-    _tier(d, TIER3, P["vi"], P["amber"], P["amber"], LABEL_VI, str(it.get("vi") or ""), P["gold"])
+    _tier(d, t2, P["en"], P["teal"], P["teal"], LABEL_EN, str(it.get("en") or ""), P["white"])
+    _tier(d, t3, P["vi"], P["amber"], P["amber"], LABEL_VI, str(it.get("vi") or ""), P["gold"])
 
     # thanh tiến độ
     d.rounded_rectangle((40, 703, W - 40, 707), 2, fill=P["track"])

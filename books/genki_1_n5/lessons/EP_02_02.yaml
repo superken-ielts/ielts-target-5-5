@@ -1,0 +1,66 @@
+# EP 2.2 — GENKI I bài 2, Part B (bản thiết kế: EP_02_02). Xem ghi chú đầu file EP_01_01.yaml.
+# Sửa so với bản thiết kế: câu cuối dùng 日本語の本 (sách viết bằng tiếng Nhật) thay cho 日本の本 (sách của Nhật) —
+# đối với 英語の本 và đúng với nghĩa tiếng Việt "sách tiếng Nhật"; GENKI bài 2 phân biệt hai cách nói này.
+id: EP_02_02
+activity: U02-part-b
+title: "Unit 2 · Shopping"
+subtitle: "EP 2.2 · Particle 'mo', Negative 'janai desu' & Sentence Endings 'ne/yo'"
+title_vi: "Phần B — だれの, も, じゃないです, ね/よ"
+tag: "TARGET N5 • 5.0"
+gap: 0
+scene_gap: 0
+speakers:
+  emma: {name: Emma, role: grammar & topic guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor · listen & shadow, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "も (also) & だれの (whose)"
+    heading: "Unit 2.2: Particle [ も (Also) ] & [ だれの (Whose) ]"
+    items:
+      - jp: "A は X です。 B も X です。"
+        romaji: "A wa X desu. B mo X desu."
+        en: "Grammar 4 & 5: 'Dare no' = Whose. 'Mo' = also/too (replaces 'wa')."
+        vi: "Điểm ngữ pháp 4 & 5: 'Dare no' = Của ai. Trợ từ 'mo' = Cũng (thay thế trực tiếp vào vị trí của 'wa')."
+    lines:
+      - emma: "Welcome to Unit 2, Part B! Grammar Points 4 and 5 cover 'da-re no' meaning 'whose', and the particle 'mo' meaning 'also' or 'too'. Notice how 'mo' directly replaces the topic particle 'wa'!"
+        say: "Welcome to Unit 2, Part B! Grammar Points 4 and 5 cover 'dah-reh noh' meaning 'whose', and the particle 'mo' meaning 'also' or 'too'. Notice how 'mo' directly replaces the topic particle 'wa'!"
+        pause: 0.6
+
+  - kind: jp
+    chapter: "Shadowing: possession & も"
+    heading: "Shadowing: Possession & Particle 'mo'"
+    items:
+      - jp: "このかばんは わたしのです。その{時計|とけい}も わたしのです。"
+        romaji: "Kono kaban wa watashi no desu. Sono tokei mo watashi no desu."
+        en: "This bag is mine. That watch is also mine."
+        vi: "Chiếc cặp này là của tôi. Chiếc đồng hồ đó cũng là của tôi."
+    lines:
+      - yuki: "このかばんはわたしのです。その時計もわたしのです。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "じゃないです & ね / よ"
+    heading: "Unit 2.2: Negation [ じゃないです ] & [ ～ね / ～よ ]"
+    items:
+      - jp: "X は Y じゃないです。 / いいですね！ / おいしいですよ。"
+        romaji: "X wa Y janai desu. / Ii desu ne! / Oishii desu yo."
+        en: "Grammar 6 & 7: 'janai desu' = is not. '~ne' = isn't it? '~yo' = I tell you!"
+        vi: "Điểm ngữ pháp 6 & 7: 'janai desu' = Không phải là. '~ne' = nhỉ (đồng tình), '~yo' = đấy nhé (báo thông tin mới)."
+    lines:
+      - emma: "Grammar Point 6 is noun negation: to say X is NOT Y, replace 'des' with 'ja-nai des'. And Grammar Point 7 adds natural flair at the end of sentences: use 'ne' meaning 'right?' to seek agreement, and 'yo' to assure or inform the listener!"
+        say: "Grammar Point 6 is noun negation: to say X is NOT Y, replace 'des' with 'jah-nye dess'. And Grammar Point 7 adds natural flair at the end of sentences: use 'neh' meaning 'right?' to seek agreement, and 'yo' to assure or inform the listener!"
+        pause: 0.5
+
+  - kind: jp
+    chapter: "Shadowing: じゃないです + よ"
+    heading: "Shadowing: Negation + Emphasis 'yo'"
+    items:
+      - jp: "これは {日本語|にほんご}の{本|ほん}じゃないです。{英語|えいご}の{本|ほん}ですよ。"
+        romaji: "Kore wa Nihongo no hon janai desu. Eigo no hon desu yo."
+        en: "This is not a book in Japanese. It's a book in English, you know!"
+        vi: "Đây không phải là sách tiếng Nhật. Là sách tiếng Anh đấy nhé!"
+    lines:
+      - yuki: "これは日本語の本じゃないです。英語の本ですよ。"
+        say: "これはにほんごの本じゃないです。英語の本ですよ。"
+        pause: 2.0

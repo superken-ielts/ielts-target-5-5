@@ -1,0 +1,65 @@
+# EP 5.2 — GENKI I bài 5, Part B (bản thiết kế: EP_05_02). Xem ghi chú đầu file EP_01_01.yaml.
+# Sửa so với bản thiết kế: 好き / きらい và ～ましょう gọi theo tên mục trong sách thay cho "Grammar Point 2 / 3" (sách
+# đánh số khác); nhãn "Grammar Point 1c" đổi thành "tính từ ở quá khứ". Bộ đọc đọc 日本 là にっぽん → `say` viết にほん.
+id: EP_05_02
+activity: U05-part-b
+title: "Unit 5 · A Trip to Okinawa"
+subtitle: "EP 5.2 · Adjectives in Past Tense & Likes/Dislikes (Suki / Kirai)"
+title_vi: "Phần B — Tính từ ở quá khứ, 好き / きらい và ～ましょう"
+tag: "TARGET N5 • 5.0"
+gap: 0
+scene_gap: 0
+speakers:
+  emma: {name: Emma, role: grammar & topic guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor · listen & shadow, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Past adjectives: ～かったです vs ～でした"
+    heading: "Unit 5.2: Past Adjectives [ ～かったです vs. ～でした ]"
+    items:
+      - jp: "-i Adj: {楽|たの}しかったです / よくなかったです | -na Adj: {暇|ひま}でした"
+        romaji: "Tanoshikatta desu (Was fun) / Yokunakatta desu (Was not good) | Hima deshita (Was free)"
+        en: "Adjectives (past tense): -i adjectives take ~katta / ~kunakatta, -na adjectives take ~deshita."
+        vi: "Tính từ ở quá khứ: đuôi -i (~katta desu / ~kunakatta desu) và đuôi -na (~deshita)."
+    lines:
+      - emma: "Welcome to Unit 5, Part B! To talk about a past trip, you need adjectives in the past tense! For 'ee' adjectives, drop 'ee' and add 'kat-ta des' for affirmative, or 'ku-na-kat-ta des' for negative. For 'na' adjectives, simply use 'desh-ta' and 'ja-na-kat-ta des'!"
+        say: "Welcome to Unit 5, Part B! To talk about a past trip, you need adjectives in the past tense! For 'ee' adjectives, drop 'ee' and add 'kaht-tah dess' for affirmative, or 'koo-nah-kaht-tah dess' for negative. For 'na' adjectives, simply use 'dehsh-tah' and 'jah-nah-kaht-tah dess'!"
+        pause: 0.6
+
+  - kind: jp
+    chapter: "Shadowing: reviewing a past trip"
+    heading: "Shadowing: Reviewing a Past Trip"
+    items:
+      - jp: "{沖縄|おきなわ}の{旅行|りょこう}は とても {楽|たの}しかったです。{天気|てんき}も よかったです。"
+        romaji: "Okinawa no ryokou wa totemo tanoshikatta desu. Tenki mo yokatta desu."
+        en: "The trip to Okinawa was very fun. The weather was also good."
+        vi: "Chuyến du lịch Okinawa đã rất vui. Thời tiết cũng đã rất đẹp ('ii' đổi thành 'yokatta')."
+    lines:
+      - yuki: "沖縄の旅行はとても楽しかったです。天気もよかったです。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "好き / きらい & ～ましょう"
+    heading: "Unit 5.2: Preferences [ X が 好き・嫌いです ] & [ ～ましょう ]"
+    items:
+      - jp: "わたしは {日本|にほん}の{音楽|おんがく}が {大好|だいす}きです。 / {行|い}きましょう！"
+        romaji: "Watashi wa Nihon no ongaku ga daisuki desu. / Ikimashou!"
+        en: "Likes & 'let's': [Noun] ga suki / daisuki / kirai desu. '~mashou' = Let's..."
+        vi: "Thích / ghét và rủ rê: Dùng trợ từ 'ga' trước Suki (thích) / Daisuki (rất thích) / Kirai (ghét). '~mashou' = Cùng làm thôi!"
+    lines:
+      - emma: "Next is Genki's grammar note on likes and dislikes! Use the particle 'ga' before 'su-ki des' for like, 'dai-su-ki des' for love, and 'ki-rai des' for dislike! Also remember the note on 'ma-shou', which means 'Let's do something together!'"
+        say: "Next is Ghen-kee's grammar note on likes and dislikes! Use the particle 'ga' before 'soo-kee dess' for like, 'dye-soo-kee dess' for love, and 'kee-rye dess' for dislike! Also remember the note on 'mah-show', which means 'Let's do something together!'"
+        pause: 0.5
+
+  - kind: jp
+    chapter: "Shadowing: likes & ～ましょう"
+    heading: "Shadowing: Likes & 'Let's...'"
+    items:
+      - jp: "わたしは {海|うみ}が {大好|だいす}きです。また いっしょに {行|い}きましょう。"
+        romaji: "Watashi wa umi ga daisuki desu. Mata issho ni ikimashou."
+        en: "I love the sea. Let's go together again!"
+        vi: "Tôi rất thích biển. Lần tới hãy lại cùng nhau đi nhé!"
+    lines:
+      - yuki: "わたしは海が大好きです。またいっしょに行きましょう。"
+        pause: 2.0
