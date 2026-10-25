@@ -1,4 +1,6 @@
 /* ---------- tab Sách (web/src/book/book.css) ---------- */
+/* .btn đặt display:inline-flex nên đè thuộc tính hidden (nút Tapescript khi track không có tapescript, nút Xóa file) */
+.btn[hidden]{display:none}
 .bk-stat{display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin-bottom:12px}
 .bk-bar{height:6px; border-radius:99px; background:var(--sunken); overflow:hidden; margin:4px 0 10px}
 .bk-bar i{display:block; height:100%; background:var(--accent)}

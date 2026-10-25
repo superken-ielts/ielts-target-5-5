@@ -1,0 +1,360 @@
+# Hồ sơ lộ trình JLPT N5 cho agent book_ingest — mẫu lessons-v1 (agents/book_ingest/lessons.py). Thư mục này có
+# GENKI I (3rd Edition) Textbook + Workbook (PDF) và audio của cả hai cuốn (MP3); cấu trúc lộ trình và chỗ trong sách
+# của từng phiên đều khai ở đây, agent chỉ quét file, cắt PDF thành đoạn theo từng bài rồi dựng book.json / plan.json.
+# Mỗi bước trong `steps` là một phiên học; video bài giảng gắn vào hoạt động U<nn>-<bước> (ví dụ U01-part-a), kịch bản
+# ở lessons/. Thiết kế và cách dò trang: docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md.
+#
+# `pages` trong `refs` là SỐ TRANG IN (trang in = trang PDF − page_offset). Track ghi theo nhãn in cạnh bài tập trong
+# sách: K01_05.mp3 → K01-05, W01_A.mp3 → W01-A, W_JWS1.mp3 → W-JWS1; "A..B" là mọi track từ A tới B. Mỗi track phải
+# thuộc đúng một phiên. Ranh giới các phần của mỗi bài (会話 → 単語 → 文法 → 練習 → まとめの練習 → Useful
+# Expressions) dò bằng OCR trang sách và nhãn track, rồi soát lại bằng mắt ở trang chuyển phần.
+
+book: genki-1-n5
+title: GENKI I (3rd Edition) · lộ trình JLPT N5
+edition: japan-times-2020
+template: lessons-v1
+start_week: 1
+sessions_per_week: 4
+minutes_per_session: 60
+pace: [3, 4, 5]
+
+info:
+  course: ja-n5
+  role: Giáo trình chính · lộ trình N5
+  module: Tiếng Nhật sơ cấp
+  author: Banno Eri, Ikeda Yoko, Ohno Yutaka, Shinagawa Chikako, Tokashiki Kyoko
+  publisher: The Japan Times (3rd Edition, 2020)
+  level: JLPT N5
+  cefr: A1
+  summary: >-
+    GENKI I gồm 12 bài, phủ ngữ pháp JLPT N5; mỗi bài có phần 会話・文法 (hội thoại, từ vựng, ngữ pháp, luyện tập) và
+    phần 読み書き (kana, chữ Hán, bài đọc). Mỗi bài học trong 6 phiên, mỗi phiên mở đúng trang Textbook / Workbook và
+    track audio của phần đó. Theo bản thiết kế "Genki I × IELTS Target 5.0", bài 1–5 có thêm ba video — Part A ngữ
+    pháp cốt lõi, Part B mẫu câu, Part C nói và viết theo một chủ đề IELTS: Emma giảng bằng tiếng Anh, giọng Nhật đọc
+    câu mẫu để nhại theo, màn hình có furigana, romaji, nghĩa tiếng Việt và Hán-Việt. Bài 6–12 học bằng sách, video
+    làm sau.
+  start_when: >-
+    Không cần biết tiếng Nhật: Unit 0 học hệ chữ và chào hỏi. Lời giảng trong sách và video là tiếng Anh khoảng A2–B1
+    (video có phụ đề tiếng Việt trên màn hình), nên hợp nhất khi đã qua giai đoạn 1 của lộ trình IELTS.
+
+files:
+  course-book:
+    kind: pdf
+    label: Textbook
+    path: Genki I 3rd Edition Textbook.pdf
+    page_offset: 8            # trang in 36 = trang PDF 44
+  workbook:
+    kind: pdf
+    label: Workbook
+    path: Genki I 3rd Edition Workbook.pdf
+    page_offset: 4            # trang in 16 = trang PDF 20
+  audio:
+    kind: audio
+    dir: Genki I 3rd Edition Textbook       # JWS (hệ chữ), K00–K12 (会話・文法), Y01–Y12 (読み書き)
+  wb-audio:
+    kind: audio
+    dir: Genki I 3rd Edition Workbook       # W00–W12 (聞く練習), WY (viết hiragana), W-JWS1/2
+
+# Đáp án Workbook và lời các bài nghe Workbook nằm trong sách GENKI Answer Key (bán riêng).
+missing: [answer-key]
+
+steps:
+  - id: words
+    title: Hội thoại & từ vựng
+    skill: vocab
+    note: >-
+      GENKI I bài {no} · 会話 và 単語: nghe hội thoại (track đầu tiên), đọc to theo từng câu; học từ vựng của bài
+      bằng track J-E (Nhật → Anh) rồi E-J (Anh → Nhật) và làm thẻ Anki. Chủ đề: {topic}.
+  - id: part-a
+    title: Part A · Ngữ pháp cốt lõi
+    skill: grammar
+    core: true
+    note: >-
+      Xem video Part A của unit (nếu đã có), rồi đọc phần 文法 (ngữ pháp) và 表現ノート / Culture Notes của bài {no}.
+      Ngữ pháp của bài: {grammar}.
+  - id: part-b
+    title: Part B · Mẫu câu
+    skill: grammar
+    note: >-
+      Xem video Part B (nếu đã có), rồi làm 練習 (luyện tập) của bài {no}: bài nào có nhãn track thì nghe và nói theo;
+      bài Pair Work tự đóng cả hai vai. Dùng nút "Lặp chương này" để nhại theo giọng Nhật trong video.
+  - id: part-c
+    title: Part C · Nói & viết theo chủ đề
+    skill: speaking
+    core: true
+    note: >-
+      Xem video Part C (nếu đã có) và nhại theo cả đoạn văn mẫu. Làm まとめの練習 (ôn tập cuối bài) và đọc Useful
+      Expressions, rồi viết đoạn văn 5–6 câu của riêng bạn về {topic}, chỉ dùng ngữ pháp đã học; ghi âm và nghe lại.
+  - id: read-write
+    title: Đọc – viết
+    skill: reading
+    note: >-
+      GENKI I · 読み書き bài {no}: {kana}. Nghe track của bài, đọc to bài đọc; viết tay từng chữ theo đúng thứ tự nét
+      ở trang Workbook (nút bên dưới).
+  - id: workbook
+    title: Workbook & ôn bài
+    skill: other
+    note: >-
+      Workbook bài {no}: làm các trang ngữ pháp, rồi 聞く練習 (nghe hiểu) bằng các track W của bài. Câu sai ghi vào sổ
+      lỗi, ôn thẻ Anki của bài.
+
+toc:
+  sections:
+    - id: S1
+      title: Giai đoạn 1 · Nền tảng (40%)
+      items:
+        - unit: 0
+          title: Chuẩn bị · hệ chữ, chào hỏi, số đếm
+          pages: [20, 35]
+          steps:
+            - id: kana
+              title: Hệ chữ Nhật & hiragana
+              skill: reading
+              note: >-
+                Đọc phần Japanese Writing System (hiragana, katakana, chữ Hán) và nghe các track JWS. Bắt đầu học bảng
+                hiragana: mỗi ngày 10–15 chữ, đọc to và viết tay ở trang Workbook (W-JWS1). Chưa cần thuộc hết — Unit 1
+                học tiếp.
+            - id: greetings
+              title: Chào hỏi & số đếm
+              skill: speaking
+              note: >-
+                あいさつ (chào hỏi) và すうじ (số đếm): nghe các track K00, nhắc lại từng câu chào; đếm từ 0 đến 100
+                thành tiếng. Làm trang Greetings và Numbers của Workbook (W00).
+          refs:
+            kana: {pages: [20, 27], tracks: "JWS-01..JWS-13, W-JWS1", alt: [{pdf: workbook, pages: [11, 12]}]}
+            greetings: {pages: [30, 35], tracks: "K00-01..K00-05, W00", alt: [{pdf: workbook, pages: [13, 15]}]}
+        - unit: 1
+          title: New Friends · あたらしいともだち
+          pages: [36, 55]
+          topic: giới thiệu bản thân, công việc, giờ giấc (IELTS Speaking Part 1)
+          kana: bảng hiragana đầy đủ — âm đục, âm ghép, âm ngắt, trường âm (WY-1 … WY-8 là bài nghe – viết)
+          grammar: [X は Y です, câu hỏi với か, Noun1 の Noun2]
+          refs:
+            words: {pages: [36, 40], tracks: K01-01..K01-08}
+            part-a: {pages: [41, 45]}
+            part-b: {pages: [46, 53], tracks: K01-09..K01-23}
+            part-c: {pages: [54, 55], tracks: K01-24}
+            read-write: {pages: [296, 299], tracks: "Y01-1..Y01-6, WY-1..WY-8", alt: [{pdf: workbook, pages: [121, 127]}]}
+            workbook: {pdf: workbook, pages: [16, 22], tracks: W01-A..W01-D}
+          notes:
+            part-a: >-
+              Xem video EP 1.1 (X は Y です, câu hỏi với か), rồi đọc phần 文法 của bài 1 — điểm 3 (Noun1 の Noun2) là
+              phần của video EP 1.2 — và 表現ノート (あのう, そうですか, số đếm).
+            part-b: >-
+              Xem video EP 1.2 (Noun1 の Noun2, tuổi, giờ), rồi làm 練習 của bài 1 với các track K01-09 … K01-23; nhại
+              theo giọng Nhật bằng nút "Lặp chương này".
+        - unit: 2
+          title: Shopping · かいもの
+          pages: [56, 81]
+          topic: mua sắm, giá cả, đồ dùng cá nhân
+          kana: bảng katakana (trang Workbook Japanese Writing System—2 đi cùng track W-JWS2)
+          grammar: [これ・それ・あれ・どれ, この・その・あの・どの + danh từ, ここ・そこ・あそこ・どこ, だれの + danh từ,
+                    danh từ + も, danh từ + じゃないです, ～ね / ～よ]
+          refs:
+            words: {pages: [56, 59], tracks: K02-01..K02-06}
+            part-a: {pages: [60, 66]}
+            part-b: {pages: [67, 75], tracks: K02-07..K02-15}
+            part-c: {pages: [76, 81]}
+            read-write: {pages: [300, 303], tracks: "Y02-1..Y02-3, W-JWS2",
+                         alt: [{pdf: workbook, pages: [23, 24]}, {pdf: workbook, pages: [128, 132]}]}
+            workbook: {pdf: workbook, pages: [25, 31], tracks: "W02-1, W02-A..W02-C"}
+          notes:
+            part-a: >-
+              Xem video EP 2.1 (これ/この/ここ, hỏi giá, số tiền lớn), rồi đọc phần 文法 của bài 2 — điểm 4–7 là phần của
+              video EP 2.2 — và 表現ノート, Culture Notes (tiền Nhật).
+            part-b: >-
+              Xem video EP 2.2 (だれの, も, じゃないです, ね/よ), rồi làm 練習 của bài 2 với các track K02-07 … K02-15.
+        - unit: 3
+          title: Making a Date · デートの約束
+          pages: [82, 101]
+          topic: thói quen hằng ngày và hoạt động cuối tuần
+          kana: bài đọc まいにちのせいかつ (Daily Life) và chữ Hán 一 二 三 四 五 六 七 八 九 十 百 千 万 円 時
+          grammar: [chia động từ thể ます / ません và ba nhóm động từ, trợ từ を・で・に・へ, từ chỉ thời gian có và không có に,
+                    lời mời ～ませんか, trạng từ tần suất]
+          refs:
+            words: {pages: [82, 85], tracks: K03-01..K03-06}
+            part-a: {pages: [86, 93]}
+            part-b: {pages: [94, 99], tracks: K03-07..K03-15}
+            part-c: {pages: [100, 101]}
+            read-write: {pages: [304, 307], tracks: Y03, alt: [{pdf: workbook, pages: [133, 134]}]}
+            workbook: {pdf: workbook, pages: [32, 40], tracks: W03-A..W03-D}
+          notes:
+            part-a: >-
+              Xem video EP 3.1 (chia động từ, nhóm động từ, lời mời ～ませんか), rồi đọc phần 文法 và 表現ノート của bài 3 —
+              trợ từ và từ chỉ thời gian (điểm 3–4) là phần của video EP 3.2.
+            part-b: >-
+              Xem video EP 3.2 (trợ từ を・で・に・へ, từ chỉ thời gian), rồi làm 練習 của bài 3 với các track K03-07 …
+              K03-15.
+            part-c: >-
+              Xem video EP 3.3 (trạng từ tần suất + đoạn văn về một ngày của bạn) và nhại theo cả đoạn. Làm まとめの練習,
+              rồi viết đoạn văn 5–6 câu về thói quen của bạn và ghi âm.
+        - unit: 4
+          title: The First Date · はじめてのデート
+          pages: [102, 127]
+          topic: mô tả khu nhà ở và kể lại cuối tuần trước
+          kana: bài đọc メアリーさんのしゅうまつ (Mary's Weekend) và chữ Hán 日 本 人 月 火 水 木 金 土 曜 上 下 中 半
+          grammar: [X があります / います, vị trí với の + うえ・した・まえ・となり…, quá khứ của です, quá khứ của động từ,
+                    も, ～時間, たくさん, と]
+          refs:
+            words: {pages: [102, 106], tracks: K04-01..K04-08}
+            part-a: {pages: [107, 114]}
+            part-b: {pages: [115, 124], tracks: K04-09..K04-19}
+            part-c: {pages: [124, 127]}
+            read-write: {pages: [308, 311], tracks: Y04, alt: [{pdf: workbook, pages: [135, 136]}]}
+            workbook: {pdf: workbook, pages: [41, 49], tracks: W04-A..W04-C}
+          notes:
+            part-a: >-
+              Xem video EP 4.1 (があります/います, từ chỉ vị trí), rồi đọc phần 文法 của bài 4 — quá khứ, も, ～時間, たくさん,
+              と (điểm 3–8) là phần của video EP 4.2 — và Culture Notes (ngày lễ).
+            part-b: >-
+              Xem video EP 4.2 (quá khứ でした / ～ました, ～時間, と), rồi làm 練習 của bài 4 với các track K04-09 …
+              K04-19.
+        - unit: 5
+          title: A Trip to Okinawa · 沖縄旅行
+          pages: [128, 145]
+          topic: kể về một chuyến đi, sở thích và ấn tượng
+          kana: bài đọc りょこう (Travel) và chữ Hán 山 川 元 気 天 私 今 田 女 男 見 行 食 飲
+          grammar: [tính từ い / な ở hiện tại, tính từ ở quá khứ, tính từ bổ nghĩa danh từ, 好き / きらい,
+                    ～ましょう / ～ましょうか (rủ cùng làm), đếm đồ vật ～まい]
+          refs:
+            words: {pages: [128, 131], tracks: K05-01..K05-08}
+            part-a: {pages: [132, 137]}
+            part-b: {pages: [138, 143], tracks: K05-09..K05-16}
+            part-c: {pages: [144, 145]}
+            read-write: {pages: [312, 317], tracks: Y05-1..Y05-2, alt: [{pdf: workbook, pages: [137, 138]}]}
+            workbook: {pdf: workbook, pages: [50, 58], tracks: W05-A..W05-C}
+          notes:
+            part-a: >-
+              Xem video EP 5.1 (tính từ ở hiện tại, tính từ bổ nghĩa danh từ), rồi đọc phần 文法 và 表現ノート của bài 5 —
+              tính từ quá khứ, 好き/きらい, ～ましょう (điểm 2, 4, 5) là phần của video EP 5.2.
+            part-b: >-
+              Xem video EP 5.2 (tính từ quá khứ, 好き/きらい, ～ましょう), rồi làm 練習 của bài 5 với các track K05-09 …
+              K05-16.
+    - id: S2
+      title: Giai đoạn 2 · Mở rộng theo chủ đề (60%)
+      items:
+        - unit: 6
+          title: A Day in Robert's Life · ロバートさんの一日
+          pages: [146, 165]
+          topic: một ngày của bạn, nhờ vả và xin phép
+          kana: bài đọc 私のすきなレストラン (My Favorite Restaurant) và chữ Hán 東 西 南 北 口 出 右 左 分 先 生 大 学 外 国
+          grammar: [thể て, ～てください, nối hai hành động bằng thể て, ～てもいいです, ～てはいけません, ～から (vì),
+                    ～ましょうか (đề nghị giúp)]
+          refs:
+            words: {pages: [146, 149], tracks: K06-01..K06-08}
+            part-a: {pages: [150, 155]}
+            part-b: {pages: [156, 163], tracks: K06-09..K06-15}
+            part-c: {pages: [163, 165]}
+            read-write: {pages: [318, 323], tracks: Y06, alt: [{pdf: workbook, pages: [139, 140]}]}
+            workbook: {pdf: workbook, pages: [59, 68], tracks: W06-A..W06-C}
+        - unit: 7
+          title: Family Picture · 家族の写真
+          pages: [166, 185]
+          topic: gia đình và mô tả người
+          kana: bài đọc メアリーさんのてがみ (Mary's Letter) và chữ Hán 京 子 小 会 社 父 母 高 校 毎 語 文 帰 入
+          grammar: [～ている (đang làm), ～ている (kết quả của một thay đổi), mô tả người (メアリーさんは髪が長いです),
+                    nối câu bằng thể て của tính từ và danh từ, động từ bỏ ます + に行く, đếm người ～人]
+          refs:
+            words: {pages: [166, 169], tracks: K07-01..K07-06}
+            part-a: {pages: [170, 175]}
+            part-b: {pages: [176, 183], tracks: K07-07..K07-14}
+            part-c: {pages: [183, 185]}
+            read-write: {pages: [324, 328], tracks: Y07, alt: [{pdf: workbook, pages: [141, 142]}]}
+            workbook: {pdf: workbook, pages: [69, 77], tracks: W07-A..W07-C}
+        - unit: 8
+          title: Barbecue · バーベキュー
+          pages: [186, 209]
+          topic: nêu ý kiến và kể lại lời người khác
+          kana: bài đọc 日本の会社員 (Japanese Office Workers) và chữ Hán 員 新 聞 作 仕 事 電 車 休 言 読 思 次 何
+          grammar: [thể ngắn (thể thường), thể ngắn trong văn nói thân mật, ～と思います, ～と言っていました, ～ないでください,
+                    động từ + のが好きです / 上手です, trợ từ chủ ngữ が, 何か và 何も]
+          refs:
+            words: {pages: [186, 189], tracks: K08-01..K08-06}
+            part-a: {pages: [190, 197]}
+            part-b: {pages: [198, 205], tracks: K08-07..K08-18}
+            part-c: {pages: [205, 209]}
+            read-write: {pages: [329, 333], tracks: Y08, alt: [{pdf: workbook, pages: [143, 144]}]}
+            workbook: {pdf: workbook, pages: [78, 86], tracks: W08-A..W08-C}
+        - unit: 9
+          title: Kabuki · かぶき
+          pages: [210, 229]
+          topic: kể chuyện đã qua và giải thích lý do
+          kana: bài đọc ソラさんの日記 (Sora's Diary) và chữ Hán 午 後 前 名 白 雨 書 友 間 家 話 少 古 知 来
+          grammar: [quá khứ thể ngắn, quá khứ thể ngắn trong văn nói thân mật, ～と思います (quá khứ),
+                    ～と言っていました (quá khứ), bổ nghĩa danh từ bằng động từ và tính từ, もう～ました và まだ～ていません,
+                    giải thích lý do bằng から]
+          refs:
+            words: {pages: [210, 213], tracks: K09-01..K09-08}
+            part-a: {pages: [214, 218]}
+            part-b: {pages: [219, 226], tracks: K09-09..K09-17}
+            part-c: {pages: [226, 229]}
+            read-write: {pages: [334, 339], tracks: Y09-1..Y09-2, alt: [{pdf: workbook, pages: [145, 146]}]}
+            workbook: {pdf: workbook, pages: [87, 95], tracks: W09-A..W09-C}
+        - unit: 10
+          title: Winter Vacation Plans · 冬休みの予定
+          pages: [230, 253]
+          topic: so sánh và kế hoạch
+          kana: truyện cổ かさじぞう (The Folktale Kasajizo) và chữ Hán 住 正 年 売 買 町 長 道 雪 立 自 夜 朝 持
+          grammar: [so sánh hai vật, so sánh ba vật trở lên, tính từ / danh từ + の, ～つもりだ, tính từ + なる,
+                    どこかに / どこにも, で (phương tiện)]
+          refs:
+            words: {pages: [230, 233], tracks: K10-01..K10-06}
+            part-a: {pages: [234, 238]}
+            part-b: {pages: [239, 248], tracks: K10-07..K10-15}
+            part-c: {pages: [248, 253]}
+            read-write: {pages: [340, 345], tracks: Y10, alt: [{pdf: workbook, pages: [147, 148]}]}
+            workbook: {pdf: workbook, pages: [96, 104], tracks: W10-A..W10-C}
+        - unit: 11
+          title: After the Vacation · 休みのあと
+          pages: [254, 271]
+          topic: mong muốn và trải nghiệm
+          kana: bài đọc 友だち・メンバー募集 (Looking for Friends/Members) và chữ Hán 手 紙 好 近 明 病 院 映 画 歌 市 所 勉 強 有 旅
+          grammar: [～たい, ～たり～たりする, ～ことがある, danh từ A や danh từ B]
+          refs:
+            words: {pages: [254, 257], tracks: K11-01..K11-10}
+            part-a: {pages: [258, 263]}
+            part-b: {pages: [264, 268], tracks: K11-11..K11-14}
+            part-c: {pages: [269, 271]}
+            read-write: {pages: [346, 351], tracks: Y11-1..Y11-2, alt: [{pdf: workbook, pages: [149, 150]}]}
+            workbook: {pdf: workbook, pages: [105, 110], tracks: W11-A..W11-C}
+        - unit: 12
+          title: Feeling Ill · 病気
+          pages: [272, 294]
+          topic: sức khỏe, giải thích và lời khuyên
+          kana: bài đọc 七夕 (Tanabata Festival) và chữ Hán 昔 々 神 早 起 牛 使 働 連 別 度 赤 青 色
+          grammar: [～んです, ～すぎる, ～ほうがいいです, ～ので, ～なければいけません / ～なきゃいけません, ～でしょうか]
+          refs:
+            words: {pages: [272, 275], tracks: K12-01..K12-06}
+            part-a: {pages: [276, 281]}
+            part-b: {pages: [282, 289], tracks: K12-07..K12-14}
+            part-c: {pages: [290, 294]}
+            read-write: {pages: [352, 356], tracks: Y12, alt: [{pdf: workbook, pages: [151, 152]}]}
+            workbook: {pdf: workbook, pages: [111, 118], tracks: W12-A..W12-C}
+        - test: 1
+          title: Ôn thi JLPT N5
+          steps:
+            - id: moji-goi
+              title: 文字・語彙 · chữ và từ vựng
+              skill: vocab
+              note: >-
+                Làm phần 文字・語彙 của đề mẫu N5 chính thức (jlpt.jp, miễn phí), chấm, ôn lại chữ Hán và từ sai bằng
+                Anki; tra lại từ trong Vocabulary Index cuối GENKI I.
+            - id: bunpo-dokkai
+              title: 文法・読解 · ngữ pháp và đọc hiểu
+              skill: reading
+              note: >-
+                Làm phần 文法・読解 của đề mẫu N5; câu sai thì mở lại bài GENKI có điểm ngữ pháp đó (Grammar Index cuối
+                sách) và ghi sổ lỗi.
+            - id: choukai
+              title: 聴解 · nghe hiểu
+              skill: listening
+              note: >-
+                Làm phần 聴解 của đề mẫu N5 bằng file nghe đi kèm; nghe lại câu sai với bản ghi lời.
+            - id: mock
+              title: Thi thử trọn đề
+              skill: other
+              core: true
+              minutes: 120
+              note: >-
+                Thi thử cả ba phần đúng thời gian của kỳ thi N5, không tra cứu. Chấm, ghi sổ lỗi, quyết định ôn thêm
+                phần nào trước ngày thi.

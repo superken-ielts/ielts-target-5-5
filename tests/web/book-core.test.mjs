@@ -224,18 +224,37 @@ test("lộ trình: gom sách theo courses của catalog, trình độ JLPT, nh�
   assert.deepEqual(C.paceOptions({ rules: { paceOptions: [5, 3, 4] } }), [3, 4, 5]);
 });
 
-const GENKI = new URL("../../books/genki_1_n5/", import.meta.url);
-test("lộ trình N5 (GENKI I): không có file sách, mỗi hoạt động một phiên, video trỏ tới phần có thật", { skip: !existsSync(new URL("book.json", GENKI)) }, () => {
+const GENKI = new URL("../../books/Genki/", import.meta.url);
+test("lộ trình N5 (GENKI I): mỗi hoạt động một phiên, trang và track của sách, video trỏ tới phần có thật", { skip: !existsSync(new URL("book.json", GENKI)) }, () => {
   const book = JSON.parse(readFileSync(new URL("book.json", GENKI), "utf8"));
   const pl = JSON.parse(readFileSync(new URL("plan.json", GENKI), "utf8"));
   const acts = C.activitiesOf(book);
-  assert.deepEqual(C.requiredPaths(book), []);
   assert.equal(book.info.course, "ja-n5");
   assert.equal(C.levelText(book.info), "JLPT N5 · CEFR A1");
   assert.deepEqual(pl.sessions.map(s => s.activityIds.length), pl.sessions.map(() => 1));
   assert.equal(new Set(pl.sessions.map(s => s.activityIds[0])).size, Object.keys(acts).length);
   assert.deepEqual(C.paceOptions(pl), [3, 4, 5]);
   assert.equal(C.duration(pl, 4).weeks, 20);
+  // Textbook in = PDF − 8, Workbook in = PDF − 4; phiên mở đúng trang in và đúng track của phần đó
+  const a = acts["U01-part-b"];
+  assert.deepEqual([a.pdf, C.printedPage(book, a.pdf, a.pages[0]), C.printedPage(book, a.pdf, a.pages[1])], ["course-book", 46, 53]);
+  assert.deepEqual([a.tracks[0], a.tracks.at(-1), a.tracks.length], ["K01-09", "K01-23", 15]);
+  const wb = acts["U01-workbook"];
+  assert.deepEqual([wb.pdf, C.printedPage(book, "workbook", wb.pages[0]), wb.tracks.join(" ")], ["workbook", 16, "W01-A W01-B W01-C W01-D"]);
+  assert.deepEqual(acts["U01-read-write"].alt.map(r => r.label), ["Workbook tr. 121–127"]);
+  // mỗi track thuộc đúng một hoạt động; mỗi trang của hoạt động nằm trọn trong một đoạn PDF
+  const tracks = Object.keys(book.files).filter(k => book.files[k].kind === "audio");
+  assert.equal(tracks.length, 286);
+  assert.deepEqual(Object.values(acts).flatMap(x => x.tracks).sort(), [...tracks].sort());
+  for(const x of Object.values(acts)){
+    for(const r of [x, ...(x.alt || [])].filter(r => r.pdf)){
+      const c = C.chunkFor(book.files[r.pdf], r.pages[0], r.pages);
+      assert.ok(c && c.from <= r.pages[0] && r.pages[1] <= c.to, x.id + " " + r.pdf + " " + r.pages);
+    }
+  }
+  const need = C.requiredPaths(book);
+  assert.equal(need.length, book.files["course-book"].chunks.length + book.files.workbook.chunks.length + 286);
+  for(const p of need) assert.ok(existsSync(new URL(p.split("/").map(encodeURIComponent).join("/"), GENKI)), p);
   const lj = new URL("lessons/lessons.json", GENKI);
   if(!existsSync(lj)) return;
   const { lessons } = JSON.parse(readFileSync(lj, "utf8"));

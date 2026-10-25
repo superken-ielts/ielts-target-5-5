@@ -8,6 +8,7 @@ lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 4** (mục 8) v
 Workbook nên **không làm video Workbook** — các chỗ sách ghi "go to Workbook page …" bỏ qua (người dùng chốt ở đợt 11).
 
 Công cụ: `agents/lesson_video` (xem `agents/README.md`). Kịch bản và video: `books/ielts_target_5_0/lessons/`.
+Video tiếng Nhật của lộ trình N5 (GENKI I, cảnh `jp`) ghi riêng ở [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) mục 4.
 Bảng độ phủ ở mục 1–3 in lại được bất cứ lúc nào:
 
 ```bash

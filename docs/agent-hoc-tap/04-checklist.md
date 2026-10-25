@@ -313,6 +313,16 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Gắn vào phần Speaking & Vocabulary: Unit 1 có 17 video.
   - *Đợt 14:* công cụ thêm cảnh `shadow` và dòng `echo: true` (khoảng lặng đếm ngược để nhắc lại). Bản đầu của video dùng hai tính năng này; người học muốn tự tạm dừng nên bản cuối bỏ, công cụ vẫn giữ.
   - *Đợt 14:* cảnh `letter` có `roles` thì nhãn ghi "đang nói".
+- [x] **P2-46** **Lộ trình tiếng Nhật JLPT N5 với GENKI I (3rd Edition)** trong tab Sách: [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md).
+  - `books/catalog.json` có `courses` (`ielts`, `ja-n5`); màn danh sách gom sách theo lộ trình, trình độ "JLPT N5 · CEFR A1", nhịp 3–5 phiên/tuần lấy từ `plan.rules.paceOptions`.
+  - Mẫu `lessons-v1` của agent nhập sách: các bước học, chỗ trong sách của từng bước (`refs`: trang in, khoảng track `K01-09..K01-23`, trang Workbook) khai hết trong `book.yaml`. Agent quét file, cắt PDF thành đoạn theo bài, kiểm tra mỗi track thuộc đúng một phiên.
+  - `books/Genki/`: Unit 0 (hệ chữ, chào hỏi) + 12 bài × 6 phiên (Hội thoại & từ vựng, Part A ngữ pháp, Part B luyện tập, Part C ôn tập & nói – viết, Đọc – viết, Workbook) + 4 phiên ôn thi N5 = 78 phiên, 20 tuần; 286 track, 51 đoạn PDF. Ranh giới từng phần dò bằng OCR + soát bằng mắt.
+  - *Đợt 15:* sửa nút "Tapescript của track" vẫn hiện khi track không có tapescript (`.btn[hidden]`).
+- [x] **P2-47** **Đánh giá bản thiết kế "Genki I × IELTS Target 5.0" và 15 video bài 1–5** (Part A ngữ pháp, Part B mẫu câu, Part C chủ đề IELTS; 9:20).
+  - Sửa số thứ tự điểm ngữ pháp theo mục lục sách, 日本の本 → 日本語の本, đoạn văn 7 câu, tốc độ Part C 0.90.
+  - `lesson_video` đọc tiếng Nhật: cảnh `jp` ba tầng (furigana, romaji, tiếng Anh, tiếng Việt + Hán-Việt), giọng `jf_alpha` qua `misaki[ja]`, tốc độ theo người nói / từng câu; lệnh `check` so cách đọc với furigana và romaji.
+  - *Đợt 15:* sửa video dài hơn tiếng khi chỉ có vài khung hình (`loudnorm` chạy ở bước riêng).
+- [ ] **P2-48** Video N5 Unit 6–12 (21 tập) theo kế hoạch ở mục 4.5 file 07: tập 2–4 phút, phát hội thoại gốc bằng dòng `track`, có `echo` để nhại theo, bỏ romaji.
 
 ### Cổng G2
 

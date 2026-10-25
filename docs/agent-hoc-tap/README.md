@@ -15,6 +15,7 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 | [04-checklist.md](04-checklist.md) | Checklist từng task (P0-01 … P4-07) kèm điều kiện đạt và cổng G0–G4 |
 | [05-lich-su-thay-doi.md](05-lich-su-thay-doi.md) | Lịch sử từng đợt triển khai: file thêm/sửa/xóa, chỗ làm khác plan, kết quả kiểm thử, việc còn treo |
 | [06-video-bai-giang.md](06-video-bai-giang.md) | Video bài giảng (chỉ Course Book): Unit 1–3 phần nào có video, lịch sử từng video, quy trình, kiểu cảnh, cách đọc, kế hoạch Unit 4 |
+| [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, 15 video tiếng Nhật, kế hoạch Unit 6–12 |
 
 ## Trạng thái
 
@@ -62,6 +63,11 @@ hồ sơ video (file 06) thêm Unit 3 và kế hoạch Unit 4.
 - không có khoảng lặng chờ, người học tự tạm dừng video để nói.
 
 Công cụ dựng video có thêm cảnh `shadow` và dòng `echo` (khoảng lặng để nhắc lại).
+
+**Đợt 15 (25/10/2026):** lộ trình **tiếng Nhật JLPT N5** với GENKI I (3rd Edition) trong tab Sách:
+- 78 phiên, mỗi phiên mở đúng trang Textbook / Workbook và đúng track audio của phần đó;
+- 15 video bài 1–5, dựng lại từ bản thiết kế "Genki I × IELTS Target 5.0" sau khi đánh giá và sửa nội dung;
+- công cụ dựng video đọc được tiếng Nhật (giọng `jf_alpha`, furigana, tự kiểm tra cách đọc). Chi tiết ở file 07.
 
 ## Tóm tắt trong năm dòng
 

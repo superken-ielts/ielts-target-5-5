@@ -1,0 +1,283 @@
+# 07 — Lộ trình JLPT N5 (GENKI I) và video bài giảng tiếng Nhật
+
+Tài liệu này gồm bốn phần:
+
+- đánh giá bản thiết kế **"MASTER BLUEPRINT: GENKI I (3rd Ed.) × IELTS Target 5.0 Video Pipeline"** (người học gửi ở
+  đợt 15);
+- những chỗ đã sửa khi chuyển 15 tập của bản thiết kế thành video;
+- lộ trình N5 trong tab Sách, dựng từ GENKI I Textbook, Workbook và audio trong `books/Genki/`;
+- cách làm video tiếng Nhật, độ phủ hiện tại và kế hoạch Unit 6–12.
+
+| Thành phần | Ở đâu |
+|---|---|
+| Sách, audio, hồ sơ lộ trình | `books/Genki/` — `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (đoạn PDF) |
+| Kịch bản và video | `books/Genki/lessons/EP_0u_0p.yaml` + `.mp4`, `lessons.json` |
+| Mẫu lộ trình khai hết trong `book.yaml` | `agents/book_ingest/lessons.py` |
+| Tiếng Nhật trong công cụ dựng video | `agents/lesson_video/ja.py` (furigana, cách đọc, romaji), `jpcard.py` (cảnh `jp`) |
+| Nhóm lộ trình trong tab Sách | `books/catalog.json › courses` (`ielts`, `ja-n5`) |
+
+In lại bảng độ phủ video (mục 4.1):
+
+```bash
+cd agents && python -m lesson_video coverage ../books/Genki --unit U01 --unit U02 --unit U03 --unit U04 --unit U05
+```
+
+---
+
+## 1. Bản thiết kế nói gì
+
+| Mục | Nội dung |
+|---|---|
+| Phạm vi | GENKI I bài 1–5. Mỗi bài 3 tập (15 tập): **Part A** ngữ pháp cốt lõi, **Part B** mẫu câu, **Part C** nói và viết theo một chủ đề IELTS (tự giới thiệu, đồ dùng, thói quen, khu nhà ở, du lịch). Có kế hoạch cho bài 6–12. |
+| Một đoạn (segment) | `speaker`, `voice`, `lang_code`, `speed`, `pause_after_sec`, `audio_text` và `visual {header, jp_main, romaji, sub_en, sub_vi}` |
+| Giọng | Emma `bf_emma` (tiếng Anh giọng Anh, tốc độ 1.0) giảng; `jp_tutor` `jf_alpha` (0.88; Part C 0.90 trong JSON, nhưng phần chữ ghi 0.92) đọc câu tiếng Nhật |
+| Màn hình | 1920×1080, ba tầng: tiếng Nhật + romaji, giải thích tiếng Anh, nghĩa tiếng Việt và ghi chú Hán-Việt. Màu navy / teal / amber, phông macOS (Hiragino) |
+| Công cụ | `render_from_md.py` (Kokoro `KPipeline`) đọc JSON nằm trong khối code của các file Markdown; `build_video_from_md.py` vẽ slide bằng PIL rồi ghép từng đoạn bằng ffmpeg, hứa "zero drift" |
+
+## 2. Đánh giá
+
+### 2.1 Nên giữ
+
+- **Ba tầng chữ** Nhật — Anh — Việt, kèm **Hán-Việt** (留学生 = lưu học sinh, 会社員 = hội xã viên). Đây là lợi thế thật
+  của người Việt khi học chữ Hán; ít giáo trình nào làm.
+- **Nối ngữ pháp với chủ đề IELTS Speaking**: tự giới thiệu (Part 1), thói quen, khu nhà ở, một chuyến đi (Part 2).
+  Người học luyện một chủ đề bằng hai thứ tiếng nên nhớ ý lâu hơn.
+- Giọng Nhật đọc chậm (0.88) để **nhại theo (shadowing)**; đoạn văn mẫu Part C dùng được làm bài viết mẫu.
+- Kịch bản có cấu trúc (người nói, tốc độ, khoảng lặng, chữ trên màn hình) — chuyển sang YAML của `lesson_video` gần
+  như một đối một.
+
+### 2.2 Chỗ sai về nội dung — đã sửa trong kịch bản
+
+Đối chiếu với mục lục và trang ngữ pháp của GENKI I (3rd Edition). Mỗi kịch bản ghi lại chỗ sửa ở đầu file.
+
+| Tập | Bản thiết kế | Đã sửa thành | Căn cứ |
+|---|---|---|---|
+| EP 1.3 | "six-sentence paragraph" | 7 câu ("seven-sentence", "Ghép 7 câu") | Đoạn văn mẫu có 7 câu |
+| EP 2.2 | これは日本の本じゃないです (sách của Nhật) | これは日本語の本じゃないです。英語の本ですよ。 | Đối với 英語の本 và nghĩa tiếng Việt "sách tiếng Nhật"; GENKI bài 2 phân biệt 日本の本 / 日本語の本 |
+| EP 2.3 | câu cuối dịch lệch | "This book is in Japanese, you know!" cho この本は日本語の本ですよ | Khớp câu tiếng Nhật |
+| EP 3.1 | ～ませんか là điểm ngữ pháp 4; "checkGrammar" | điểm **5**; "check Grammar" | Mục lục bài 3 |
+| EP 3.2 | trợ từ là điểm 2a, 2b; từ chỉ thời gian là 3 | trợ từ を・で・に・へ là điểm **3**, từ chỉ thời gian là **4** | Mục lục bài 3 |
+| EP 3.3 | trạng từ tần suất là điểm 5 | điểm **6** | Mục lục bài 3 |
+| EP 4.2 | と là điểm 5, ～時間 là 6 | ～時間 là **6**, と là **8** (điểm 5 là も, điểm 7 là たくさん) | Mục lục bài 4 |
+| EP 5.1 | "Grammar Point 1a / 1b" | điểm **1** (tính từ ở hiện tại), điểm **3** (tính từ bổ nghĩa danh từ) | Mục lục bài 5 |
+| EP 5.2 | tính từ quá khứ "1c", 好き/きらい "2", ～ましょう "3" | điểm **2**, **4**, **5** | Mục lục bài 5 |
+| Part C | tốc độ 0.92 (phần chữ) / 0.90 (JSON) | **0.90** | Lấy theo JSON, nơi thật sự điều khiển giọng |
+
+Những chỗ khác **đã ghi nhận nhưng giữ nguyên**:
+- Danh sách ngữ pháp bài 4 của bản thiết kế thiếu も và たくさん. Lộ trình liệt kê đủ.
+- Bản thiết kế giải nghĩa ～ましょうか của bài 5 thành "đề nghị giúp". Thực ra đó là điểm 7 của bài 6; ở bài 5 nó nghĩa là "ta cùng … nhé?".
+- Câu "ITの会社員" (EP 1.2) hơi gượng; tự nhiên hơn là "IT企業の会社員" hoặc "ITの仕事をしています".
+- Bản thiết kế nói dùng "màu của IELTS Target". Thực tế sách IELTS Target dùng băng tiêu đề đỏ. Bộ video N5 giữ navy / teal / amber làm màu riêng.
+
+### 2.3 Cách đọc — giọng đọc sai, sửa bằng `say`
+
+Chữ trên màn hình giữ đúng như sách. Chỗ nào bộ đọc đọc sai thì ghi cách đọc vào `say`. Lệnh `check` tự so cách đọc
+với furigana (mục 4.3).
+
+| Giọng | Chữ | Bộ đọc đọc | `say` |
+|---|---|---|---|
+| Nhật (misaki) | 九時, 七時 | きゅうじ, ななじ | くじ, しちじ (GENKI dạy hai cách này) |
+| Nhật | 二十八歳 | はちさい | 二十はっさい |
+| Nhật | 日本, 日本語 | にっぽん, にっぽんご | にほん, にほんご |
+| Nhật | ベトナム人, 日曜日 | ベトナムひと, にちようひ | ベトナムじん, にちようび |
+| Nhật | IT (chữ Latin trong câu Nhật) | bỏ qua | chữ IT kèm furigana アイティー, `say` アイティー |
+| Nhật | 午前九時半 | きゅうじ; còn viết `say` toàn kana (ごぜんくじはん) thì は bị đọc như trợ từ "wa" | 午前くじ半 |
+| Anh (bf_emma) | cách viết kiểu bản thiết kế: a-re, chi-ka-ku, Genki, des | ay-ree, kye-kah-koo, jeng-kee… | ah-reh, chee-kah-koo, Ghen-kee, dess, mahss, mah-sen, koh-reh, nee-jee-kahn… |
+| Anh | IELTS | đọc từng chữ cái | eye-elts |
+
+### 2.4 Sư phạm — chỗ yếu và cách bù trong lộ trình
+
+| Chỗ yếu | Hệ quả | Cách bù |
+|---|---|---|
+| Mỗi tập chỉ ~30–45 giây (15 tập ≈ 9 phút cho 5 bài) | Video là phần làm nóng, không thay được bài học | Lộ trình lấy **sách làm trục**: mỗi bài 6 phiên × 60 phút, mỗi phiên mở đúng trang và track (mục 3); video gắn vào phiên Part A/B/C |
+| Bắt đầu ngay bằng ngữ pháp, dựa vào romaji | Không học kana thì không đọc được sách, không thi được N5 | Thêm **Unit 0** (hệ chữ, chào hỏi, số đếm) và phiên **Đọc – viết** mỗi bài (読み書き: hiragana bài 1, katakana bài 2, chữ Hán và bài đọc bài 3–12) |
+| JLPT N5 chỉ thi đọc, nghe, chữ – từ, ngữ pháp; không thi nói, viết | Part C (nói – viết theo chủ đề IELTS) có ích cho IELTS hơn cho N5 | Giữ Part C (hai mục tiêu cùng lúc), thêm khối **Ôn thi JLPT N5** (4 phiên: 文字・語彙, 文法・読解, 聴解, thi thử trọn đề) và phiên Workbook có 聞く練習 |
+| Khoảng lặng 1,8–2,5 giây sau câu Nhật | Ngắn để nhại theo câu dài | Trong app: "Lặp chương này", lặp đoạn A–B, tốc độ 0,75×. Video sau dùng dòng `echo` (khoảng lặng theo độ dài câu) |
+| Lời giảng tiếng Anh khoảng B1 | Nặng với người học IELTS band 3–4 | Phụ đề tiếng Việt ở tầng 3; sách GENKI cũng giảng bằng tiếng Anh, nên đây là luyện đọc hiểu tiếng Anh thêm |
+| Romaji ở mọi tập | Dễ lệ thuộc romaji | Đề xuất bỏ dòng romaji từ Unit 3 (khi đã học xong hai bảng kana), chỉ giữ cho từ mới |
+
+### 2.5 Kỹ thuật — vì sao dựng bằng `lesson_video` thay cho script của bản thiết kế
+
+| Bản thiết kế | Vấn đề | `lesson_video` |
+|---|---|---|
+| `KPipeline` (Kokoro bản PyTorch) | Tải model và giọng từ Hugging Face khi chạy (máy này chặn), nặng | Cùng model Kokoro-82M, bản ONNX q8 (~92 MB) qua `kokoro-onnx`; tiếng Nhật tách âm bằng `misaki[ja]` — đúng bộ tách âm Kokoro dùng khi huấn luyện |
+| Phông macOS (Hiragino) | Không chạy trên Linux / CI | Noto Sans CJK JP (`fonts-noto-cjk`), dự phòng IPAGothic, Hiragino, Yu Gothic |
+| Emoji trong tiêu đề | Ra ô vuông với phông PIL | Bỏ emoji |
+| `textwrap` theo số ký tự | Cắt chữ Nhật / Anh sai chỗ, không có furigana | Đo bề rộng bằng pixel, quy tắc cấm đầu / cuối dòng (kinsoku), furigana trên chữ Hán, tự thu cỡ chữ cho vừa ô |
+| Ghép từng đoạn bằng ffmpeg | Mỗi đoạn AAC có phần đệm, cộng dồn thành lệch tiếng — "zero drift" không đúng | Một dải tiếng liền, thời điểm khung hình tính theo số mẫu; có chương (nút nhảy chương, "Lặp chương này") |
+| 1920×1080, 60 fps cho slide tĩnh | Tốn dung lượng vô ích | 1280×720, 15 fps, H.264: mỗi tập 0,3–0,6 MB |
+| JSON nằm trong khối code Markdown | Sai một dấu phẩy là hỏng cả tập, không kiểm tra được | YAML + `lesson_video check`: furigana, cách đọc so với misaki, romaji, giọng đúng thứ tiếng |
+| Pipeline riêng | Hai bộ công cụ cho cùng việc | Dùng chung `lesson_video`: `lessons.json`, gắn vào phiên học, thẻ unit hiện mục lục video |
+
+### 2.6 Kết luận
+
+Ý tưởng tốt khi dùng làm **lớp bổ trợ**: ba tầng chữ có Hán-Việt, nối với chủ đề IELTS, giọng Nhật để nhại theo. Nhưng
+như bản thiết kế viết thì chưa đủ để học tới N5: tập quá ngắn, thiếu kana, dựa vào romaji, và pipeline có lỗi kỹ thuật.
+Đã làm:
+- dựng lại cả 15 tập bằng `lesson_video`, sửa những chỗ ở mục 2.2–2.3;
+- đặt các tập vào một lộ trình lấy GENKI I làm trục (mục 3).
+
+## 3. Lộ trình N5 trong tab Sách
+
+### 3.1 Dữ liệu
+
+| File | Nội dung |
+|---|---|
+| `Genki I 3rd Edition Textbook.pdf` | 392 trang, **trang in = trang PDF − 8** (trang in 36 = PDF 44) |
+| `Genki I 3rd Edition Workbook.pdf` | 157 trang, **trang in = trang PDF − 4** (trang in 16 = PDF 20) |
+| `Genki I 3rd Edition Textbook/` | 236 MP3, 409 phút: `JWS_01–13` (hệ chữ), `K00_01–05` (chào hỏi, số), `K01–K12` (会話・文法), `Y01–Y12` (読み書き) |
+| `Genki I 3rd Edition Workbook/` | 50 MP3, 52 phút: `W00` (số đếm), `W01_A…W12_C` (聞く練習), `W02_1` (số đếm bài 2), `WY_1–8` (nghe – viết hiragana), `W_JWS1/2` (bảng hiragana / katakana) |
+
+Mã track trong app là **nhãn in cạnh bài tập trong sách**: `K01_05.mp3` → `K01-05`, `W01_A.mp3` → `W01-A`, `W_JWS1.mp3`
+→ `W-JWS1`. Học viên thấy nhãn ◀) K01-05 trong trang sách thì bấm nút cùng tên trên thanh audio.
+
+Agent cắt hai PDF thành **51 đoạn** (Textbook 26, Workbook 25; 70 MB). Mỗi đoạn là phần 会話・文法 hoặc 読み書き của một
+bài, nên mở trang tức thì cả trên điện thoại. Sách không có đáp án Workbook: đáp án nằm ở sách GENKI Answer Key
+(`missing: [answer-key]`).
+
+### 3.2 Một bài = 6 phiên × 60 phút
+
+| Bước | Phiên | Mở trang | Track | Video |
+|---|---|---|---|---|
+| `words` | Hội thoại & từ vựng | 会話 (Dialogue) + 単語 (Vocabulary) | hội thoại, từ vựng J-E / E-J | — |
+| `part-a` (lõi) | Part A · Ngữ pháp cốt lõi | 文法 (Grammar) + 表現ノート / Culture Notes | — | EP u.1 |
+| `part-b` | Part B · Mẫu câu | 練習 (Practice) | các bài luyện có nhãn track | EP u.2 |
+| `part-c` (lõi) | Part C · Nói & viết theo chủ đề | まとめの練習 (Review Exercises) + Pair Work + Useful Expressions | track trong phần ôn (nếu có) | EP u.3 |
+| `read-write` | Đọc – viết | 読み書き của bài (Textbook) + nút trang Workbook 読み書き | `Y…` (+ `WY`, `W-JWS2`) | — |
+| `workbook` | Workbook & ôn bài | Workbook phần 会話・文法 của bài | `W…` (聞く練習) | — |
+
+Unit 0 có hai phiên: **Hệ chữ Nhật & hiragana** (Japanese Writing System, track JWS + W-JWS1, trang Workbook 11–12)
+và **Chào hỏi & số đếm** (あいさつ, すうじ, track K00 + W00, trang Workbook 13–15). Khối **Ôn thi JLPT N5** dùng đề mẫu
+chính thức của JLPT (jlpt.jp), không có trang sách. Tổng: **13 unit + 1 khối ôn thi = 78 phiên ≈ 79 giờ**. Mặc định
+4 phiên/tuần, tức **20 tuần**; chọn được 3–5 phiên/tuần. Học song song, không tính vào 12 giờ/tuần của IELTS.
+
+### 3.3 Trang (số in) và track của từng bài
+
+| Bài | Hội thoại & từ vựng | Part A | Part B | Part C | Đọc – viết (Textbook · Workbook) | Workbook |
+|---|---|---|---|---|---|---|
+| 0 | JWS 20–27 · chào hỏi, số 30–35 | | | | Workbook 11–12, 13–15 | |
+| 1 | 36–40 · K01-01…08 | 41–45 | 46–53 · K01-09…23 | 54–55 · K01-24 | 296–299 · 121–127 · Y01-1…6, WY-1…8 | 16–22 · W01-A…D |
+| 2 | 56–59 · K02-01…06 | 60–66 | 67–75 · K02-07…15 | 76–81 | 300–303 · 23–24, 128–132 · Y02-1…3, W-JWS2 | 25–31 · W02-1, W02-A…C |
+| 3 | 82–85 · K03-01…06 | 86–93 | 94–99 · K03-07…15 | 100–101 | 304–307 · 133–134 · Y03 | 32–40 · W03-A…D |
+| 4 | 102–106 · K04-01…08 | 107–114 | 115–124 · K04-09…19 | 124–127 | 308–311 · 135–136 · Y04 | 41–49 · W04-A…C |
+| 5 | 128–131 · K05-01…08 | 132–137 | 138–143 · K05-09…16 | 144–145 | 312–317 · 137–138 · Y05-1…2 | 50–58 · W05-A…C |
+| 6 | 146–149 · K06-01…08 | 150–155 | 156–163 · K06-09…15 | 163–165 | 318–323 · 139–140 · Y06 | 59–68 · W06-A…C |
+| 7 | 166–169 · K07-01…06 | 170–175 | 176–183 · K07-07…14 | 183–185 | 324–328 · 141–142 · Y07 | 69–77 · W07-A…C |
+| 8 | 186–189 · K08-01…06 | 190–197 | 198–205 · K08-07…18 | 205–209 | 329–333 · 143–144 · Y08 | 78–86 · W08-A…C |
+| 9 | 210–213 · K09-01…08 | 214–218 | 219–226 · K09-09…17 | 226–229 | 334–339 · 145–146 · Y09-1…2 | 87–95 · W09-A…C |
+| 10 | 230–233 · K10-01…06 | 234–238 | 239–248 · K10-07…15 | 248–253 | 340–345 · 147–148 · Y10 | 96–104 · W10-A…C |
+| 11 | 254–257 · K11-01…10 | 258–263 | 264–268 · K11-11…14 | 269–271 | 346–351 · 149–150 · Y11-1…2 | 105–110 · W11-A…C |
+| 12 | 272–275 · K12-01…06 | 276–281 | 282–289 · K12-07…14 | 290–294 | 352–356 · 151–152 · Y12 | 111–118 · W12-A…C |
+
+Hai phiên dùng chung một trang khi まとめの練習 bắt đầu giữa trang (bài 4, 6, 7, 8, 9, 10). Trang 28–29 (nhân vật) không
+thuộc phiên nào. Báo cáo đầy đủ: `books/Genki/report.md`.
+
+### 3.4 Cách dò ranh giới, cách sửa
+
+Agent không đoán cấu trúc GENKI. Ranh giới các phần dò một lần rồi ghi vào `book.yaml › refs`:
+1. Lấy trang đầu mỗi bài từ bookmark của PDF.
+2. OCR trang Textbook PDF 36–302 bằng RapidOCR ở 150 DPI. Tìm nhãn track (`K01-05`, `K05.07(J-E)` …) và đầu mục:
+   chữ "Grammar" cách điệu, dòng "Grammar 1" ở đầu phần 練習, まとめの練習 / Review Exercises, Culture Notes, Useful
+   Expressions.
+3. Soát bằng mắt mọi trang chuyển phần. Nhiều đầu mục OCR không đọc được: 練習 của bài 6, 7; まとめの練習 của bài
+   7–12, vì bài 7–12 không ghi "Review Exercises". Nhãn track bị sót thì suy ra theo thứ tự số.
+4. Với Workbook: dùng mục lục (trang in 5–8), OCR thêm các trang có nhãn track đặc biệt.
+
+Sửa một phiên: đổi `pages` / `tracks` trong `refs` của bài đó rồi chạy lại
+`cd agents && python -m book_ingest ingest ../books/Genki` và `python3 web/build.py`. Agent báo lỗi trong các trường
+hợp: track không có, khoảng track đi ngược, một track gán hai lần, còn track chưa thuộc phiên nào, trang vượt quá file.
+
+## 4. Video bài giảng tiếng Nhật
+
+### 4.1 Độ phủ (đợt 15)
+
+| Bài | Part A | Part B | Part C | Tổng |
+|---|---|---|---|---|
+| 1 New Friends | `EP_01_01` X は Y です, か (0:31) | `EP_01_02` の, tuổi, giờ (0:30) | `EP_01_03` đoạn tự giới thiệu (0:27) | 1:27 |
+| 2 Shopping | `EP_02_01` これ/この/ここ, giá (0:41) | `EP_02_02` だれの, も, じゃないです, ね/よ (0:41) | `EP_02_03` đồ dùng cá nhân (0:30) | 1:52 |
+| 3 Making a Date | `EP_03_01` ～ます/～ません, ～ませんか (0:40) | `EP_03_02` を・で・に・へ, thời gian (0:43) | `EP_03_03` thói quen, tần suất (0:36) | 1:59 |
+| 4 The First Date | `EP_04_01` あります/います, vị trí (0:38) | `EP_04_02` でした/～ました, 時間, と (0:46) | `EP_04_03` khu nhà ở, cuối tuần (0:31) | 1:55 |
+| 5 A Trip to Okinawa | `EP_05_01` tính từ hiện tại, bổ nghĩa (0:46) | `EP_05_02` tính từ quá khứ, 好き, ましょう (0:45) | `EP_05_03` chuyến đi Đà Nẵng (0:36) | 2:07 |
+
+15 video, **9:20**, 2–4 chương mỗi video, Kokoro q8: Emma `bf_emma` (tốc độ 1.0), Yuki `jf_alpha` (0.88; đoạn văn
+Part C 0.90). Unit 6–12 chưa có video; phiên Hội thoại & từ vựng, Đọc – viết, Workbook không có video (theo bản thiết kế).
+
+### 4.2 Làm một video N5
+
+1. Chép một kịch bản cùng dạng (`EP_01_01.yaml` cho Part A/B, `EP_01_03.yaml` cho Part C). `activity` là
+   `U<nn>-part-a|b|c`.
+2. Mỗi cảnh `kind: jp` có đúng một mục: `jp` (chữ Nhật, furigana `{漢字|かな}`), `romaji`, `en`, `vi`. Dòng thoại của
+   Yuki là câu Nhật **viết bằng chữ thường** (lệnh `check` ghép các câu của cảnh rồi so với `jp`). Chỗ bộ đọc sai thì
+   thêm `say` bằng kana.
+3. `python -m lesson_video check <kịch bản>`: lệnh báo
+   - chữ Hán thiếu furigana;
+   - cách đọc misaki khác furigana (kèm cách đọc misaki của từng chữ Hán để biết sửa chỗ nào);
+   - romaji khác cách đọc;
+   - chữ Latin trong câu Nhật;
+   - giọng không phải `jf_*` / `jm_*`.
+4. Lời Emma có từ Nhật thì viết lại trong `say` cho giọng Anh (mục 2.3). Kiểm bằng
+   `k.tokenizer.phonemize(text, "en-gb")`.
+5. Xem trước không tiếng: `--engine silent --out /tmp/x --work /tmp/x/w`, mở `f*.png`.
+6. Dựng: `python -m lesson_video build <kịch bản> --engine kokoro`. Sau đó chạy `python3 web/build.py`. Rồi cập nhật
+   mục 4.1, `04-checklist.md`, `05-lich-su-thay-doi.md`.
+
+### 4.3 Cảnh `jp` và phần tiếng Nhật của công cụ
+
+- **Khung 1280×720, bốn dải.**
+  - Thanh tiêu đề: nhãn amber `tag` + `heading`.
+  - Tầng 1: thẻ trắng. Có nhãn người nói `JP · YUKI — …` hoặc `EN · EMMA — …` theo màu người nói, câu Nhật cỡ
+    46 → 22 px, furigana trên chữ Hán, romaji màu teal.
+  - Tầng 2: "ENGLISH EXPLANATION / MEANING".
+  - Tầng 3: "NGHĨA TIẾNG VIỆT & GHI CHÚ HÁN-VIỆT".
+  - Đoạn văn dài thì tầng 1 cao lên, tầng 2–3 co lại theo chữ.
+- **Xuống dòng.**
+  - Ưu tiên ngắt sau dấu `|` `/` `—` `vs.`, rồi sau dấu cách.
+  - Áp quy tắc kinsoku.
+  - Cụm katakana liền nhau không bị tách.
+- **Người nói.**
+  - `lang: ja` và giọng `jf_*` / `jm_*`.
+  - `speed` theo người nói hoặc theo từng dòng (0.5–2.0).
+  - Tiếng nhớ theo (giọng, chữ, tốc độ).
+- **Cài thêm.**
+  - `misaki[ja]==0.7.4` bằng `uv pip install` (pip thường lỗi khi dựng `unidic-lite` trên Debian).
+  - Phông `fonts-noto-cjk`.
+  - Xem `agents/README.md`.
+
+### 4.4 Lỗi đã gặp
+
+- **Video dài hơn tiếng 3–8 giây** (EP 2.3, 3.3, 4.3 hỏng ở lần dựng đầu).
+  - Nguyên nhân: bộ lọc `loudnorm` giữ lại ~3 giây tiếng, nên `-shortest` của ffmpeg không cắt được video. Lỗi lộ ra
+    khi video chỉ có vài khung hình dài.
+  - Sửa: chuẩn độ to ở một lệnh ffmpeg riêng rồi mới ghép hình (`video.py`). Độ dài video giờ khớp tiếng tới từng
+    khung hình; mọi video, kể cả IELTS, dựng về sau đều theo cách này.
+- **Nút "Tapescript của track" vẫn hiện** khi track không có tapescript, ví dụ track GENKI.
+  - Nguyên nhân: `.btn{display:inline-flex}` đè thuộc tính `hidden`. Sách IELTS không lộ lỗi vì track nào cũng có
+    tapescript.
+  - Sửa: thêm `.btn[hidden]{display:none}` vào `book.css`.
+- **misaki đọc sai chữ Hán**, xem mục 2.3. Kiểm tra tự động bắt được mọi chỗ trong 15 tập.
+
+### 4.5 Kế hoạch Unit 6–12
+
+Giữ khung ba tập mỗi bài, chia điểm ngữ pháp theo mục lục. Mỗi tập nên dài **2–4 phút** thay cho 30–45 giây. Nên làm
+thêm bốn việc:
+- dùng dòng `track: K06-01` để **phát hội thoại gốc của sách** ngay trong video, vì track đã có trong `book.json`;
+- thêm `echo` sau câu mẫu để có khoảng lặng nhại theo;
+- bỏ dòng romaji;
+- thêm 3–5 câu ví dụ lấy từ phần 練習.
+
+| Bài | Part A (điểm ngữ pháp) | Part B | Part C — chủ đề IELTS |
+|---|---|---|---|
+| 6 | thể て, ～てください, nối hai hành động (1–3) | ～てもいいです, ～てはいけません, ～から, ～ましょうか (4–7) | Một ngày của bạn; nội quy nơi làm việc / trường (Part 1: work & study) |
+| 7 | ～ている: đang làm, kết quả (1–2) | mô tả người, thể て nối câu, ～に行く, ～人 (3–6) | Tả một người trong gia đình (Part 2: describe a person) |
+| 8 | thể ngắn, văn nói thân mật (1–2) | ～と思います, ～と言っていました, ～ないでください, のが好き, が, 何か/何も (3–8) | Nêu ý kiến về đồ ăn, nấu ăn (Part 3: opinions) |
+| 9 | quá khứ thể ngắn (1–2) | ～と思いました…, bổ nghĩa danh từ, もう/まだ, から (3–7) | Kể một sự kiện đã xem (Part 2: an event) |
+| 10 | so sánh hai / nhiều vật (1–2) | ～の, ～つもり, ～なる, どこかに/どこにも, で (3–7) | Kế hoạch kỳ nghỉ, so sánh phương tiện (Part 1/3: travel) |
+| 11 | ～たい, ～たり～たりする (1–2) | ～ことがある, や (3–4) | Trải nghiệm và mong muốn: nơi muốn đến (Part 2) |
+| 12 | ～んです, ～すぎる (1–2) | ～ほうがいいです, ～ので, ～なければいけません, ～でしょうか (3–6) | Sức khỏe và lời khuyên (Part 1: health) |
+
+## 5. Việc còn treo
+
+- Video Unit 6–12 (21 tập) theo mục 4.5.
+- Đáp án Workbook: cần sách GENKI Answer Key. Khi có thì khai thêm `files` và trỏ `answer` cho phiên Workbook.
+- Đề mẫu JLPT N5 và file nghe để vào thư mục sách thì khối Ôn thi có trang và track như các bài.
+- Thẻ Anki từ vựng GENKI: chưa có. App có kế hoạch thẻ từ FSRS (P3-04).

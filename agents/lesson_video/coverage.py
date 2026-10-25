@@ -25,7 +25,7 @@ def _pages(a: dict) -> str:
     p = a.get("printedPages")
     if not p:
         return "—"
-    where = "Listening" if a.get("pdf") == "listening" else "sách"
+    where = {"listening": "Listening", "workbook": "Workbook"}.get(a.get("pdf"), "sách")
     return f"{where} tr. {p[0]}" if p[0] == p[1] else f"{where} tr. {p[0]}–{p[1]}"
 
 

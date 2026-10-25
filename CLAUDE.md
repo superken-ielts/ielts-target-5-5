@@ -17,6 +17,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
 - Skill: `.claude/skills/book-ingest/SKILL.md`. Chạy: `cd agents && python -m book_ingest ingest ../books/<sách>`.
 - Không sửa tay `book.json` / `plan.json` / `report.md`: sửa `book.yaml` hoặc quyết định trong `work/review.json`
   rồi chạy lại. Đổi model trong `schemas.py` thì chạy `python -m book_ingest schemas`.
+- Lộ trình N5 (`books/Genki/`, mẫu `lessons-v1`): trang và track của từng phiên khai ở `book.yaml › refs` (trang in,
+  khoảng track `K01-09..K01-23`); mỗi track phải thuộc đúng một phiên. Xem `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md`.
 
 ## Video bài giảng
 
@@ -25,7 +27,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   xem `agents/README.md`); không có model thì công cụ dùng Flite (`libflite1`) — đừng commit video Flite đè video Kokoro.
 - Không sửa tay `lessons.json` / `.mp4`. Chữ trên màn hình ở dòng thoại, cách đọc khác (chữ cái, số, tên riêng) ở `say`.
 - Làm video mới: theo quy trình và bảng độ phủ ở `docs/agent-hoc-tap/06-video-bai-giang.md`; xong thì cập nhật bảng đó
-  (`python -m lesson_video coverage ../books/<sách> --unit U0x`).
+  (`python -m lesson_video coverage ../books/<sách> --unit U0x`). Video tiếng Nhật (GENKI): quy trình và bảng độ phủ ở
+  file 07 mục 4; cần `misaki[ja]` và phông Noto Sans CJK.
 
 ## Kiểm tra trước khi commit
 

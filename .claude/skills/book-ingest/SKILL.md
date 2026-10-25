@@ -51,5 +51,23 @@ Mục `info` không chặn đóng gói. Không tự sửa số liệu trong `boo
 
 ## Mẫu phiên
 
-Chỉ có `target-gt-v1` (IELTS Target 5.0 GT: 7 phiên/unit, 2/review, 3/test). Sách có cấu trúc khác cần
-thêm mẫu trong `agents/book_ingest/templates.py` và luật đếm phiên trong `validate.py`.
+- `target-gt-v1` — IELTS Target 5.0 GT: 7 phiên/unit, 2/review, 3/test. Agent tự tìm cấu trúc (băng tiêu đề, OCR).
+- `lessons-v1` — lộ trình khai hết trong `book.yaml` (mẫu: `books/Genki/book.yaml`, GENKI I · JLPT N5). Dùng cho
+  sách có cấu trúc khác, không muốn viết mẫu mới:
+  1. `steps`: các phiên của mỗi bài (`id`, `title`, `skill`, `core`, `minutes`, `note` với `{no}`, `{topic}`,
+     `{grammar}`, `{kana}`); mục có `steps` riêng thì dùng của mục.
+  2. `files`: PDF (`path`, `page_offset`, `label`) và thư mục audio (`dir`). Id track = tên file bỏ đuôi,
+     `_` → `-`.
+  3. Mỗi bài: `pages` (trang in hiện trên thẻ unit) và `refs: {<bước>: {pdf, pages: [in đầu, in cuối],
+     tracks: "K01-01..K01-08, W00", alt: [{pdf: workbook, pages: [...]}]}}`.
+  4. Dò ranh giới các phần một lần: bookmark PDF, OCR (RapidOCR) tìm nhãn track và đầu mục, rồi soát bằng mắt trang
+     chuyển phần. Cách làm với GENKI ở `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` mục 3.4.
+  5. `ingest` báo lỗi khi:
+     - track không có, hoặc khoảng track đi ngược;
+     - một track gán hai lần, hoặc còn track chưa thuộc phiên nào;
+     - trang vượt quá file.
+
+     Mỗi hoạt động là một phiên; PDF lớn hơn 20 MB được cắt đoạn theo các khoảng trang của từng bài.
+
+Sách có cấu trúc khác hẳn mà muốn agent tự dò thì thêm mẫu trong `agents/book_ingest/templates.py` và luật đếm
+phiên trong `validate.py`.

@@ -333,6 +333,35 @@ try{
     await page.click(".bk-vbar button:last-child");
   });
 
+  await step("lộ trình N5 (GENKI I): phiên Part B mở trang Textbook qua đoạn PDF của bài, đủ track và video", async () => {
+    await page.click('nav button[data-go="book"]');
+    await page.waitForSelector("#p-book .bk-lib");
+    const card = page.locator("#p-book .bk-lib", { hasText: "GENKI I (3rd Edition)" });
+    const text = await card.textContent();
+    assert.match(text, /JLPT N5 · CEFR A1/);
+    assert.match(text, /286 track audio/);
+    assert.match(text, /15 video bài giảng/);
+    await card.locator(".btn-primary").click();
+    await page.waitForSelector("#p-book .bk-next");
+    const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · New Friends" });
+    assert.match(await u1.textContent(), /Trang 36–55 · 6 phiên/);
+    await u1.locator(".bk-vids button", { hasText: "EP 1.2" }).click();              // video Part B → phiên Part B
+    await page.waitForSelector("#p-book .bk-video");
+    const act = page.locator("#p-book .bk-act").first();
+    assert.match(await act.textContent(), /Mở trang 46–53/);
+    const tracks = await act.locator(".bk-tracks button").allTextContents();
+    assert.deepEqual([tracks.length, tracks[0], tracks.at(-1)], [15, "K01-09", "K01-23"]);
+    await page.waitForFunction(() => { const a = document.querySelector("#p-book audio"); return a && a.duration > 0; }, null, { timeout: 15000 });
+    assert.equal(await act.locator(".bk-audio button", { hasText: "Tapescript của track" }).isVisible(), false);   // GENKI không có tapescript
+    const chunk = page.waitForResponse(r => /\/books\/Genki\/web\/course-book-p0044-0063\.pdf$/.test(r.url()) && r.status() < 300);
+    await act.locator(".bk-refs .btn-primary").click();
+    await chunk;
+    await page.waitForFunction(() => /Trang 46/.test(document.querySelector(".bk-vfoot").textContent), null, { timeout: 30000 });
+    await page.click(".bk-vbar button:last-child");
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("xem checklist triển khai ngay trong app", async () => {
     await page.click('nav button[data-go="book"]');
     assert.match(await page.textContent("#p-book"), /Đã xong\s*\d+\/\d+ task/);

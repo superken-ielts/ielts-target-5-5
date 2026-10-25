@@ -5,6 +5,132 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 15 — 25/10/2026: lộ trình tiếng Nhật JLPT N5 với GENKI I, đánh giá bản thiết kế video, 15 video bài 1–5
+
+Nhánh `claude/nifty-darwin-23vvae`. Giữa đợt đã merge `main` tại `99408f5`: người học thêm GENKI I (3rd Edition)
+Textbook, Workbook và audio vào `books/Genki/`.
+
+### Yêu cầu
+
+1. Tích hợp GENKI vào menu Sách và thêm lộ trình N5 tiếng Nhật.
+2. Dựng video theo bản thiết kế "MASTER BLUEPRINT: GENKI I (3rd Ed.) × IELTS Target 5.0 Video Pipeline": 15 tập cho
+   bài 1–5, kèm hai script Python. Đánh giá lại ý tưởng này.
+3. Sau khi người học thêm sách và audio vào `main`: dùng thẳng các file đó. Người học xác nhận bộ sách dùng công khai,
+   không cần lo bản quyền.
+
+### Đã làm
+
+**Đánh giá bản thiết kế** — [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) mục 1–2.
+- Giữ ba tầng chữ Nhật — Anh — Việt kèm Hán-Việt và việc nối ngữ pháp với chủ đề IELTS.
+- Sửa số thứ tự điểm ngữ pháp ở 7 tập cho khớp mục lục sách, cùng vài câu sai nghĩa.
+- Không dùng hai script của bản thiết kế, vì:
+  - tải model từ Hugging Face;
+  - phông chỉ có trên macOS;
+  - cắt chữ theo số ký tự, không có furigana;
+  - ghép từng đoạn nên lệch tiếng;
+  - JSON nằm trong Markdown.
+- Bù chỗ yếu về sư phạm:
+  - tập chỉ 30–45 giây;
+  - không dạy kana;
+  - dựa vào romaji;
+  - N5 không thi nói – viết.
+
+**Lộ trình N5** — file 07 mục 3.
+- `books/catalog.json` có `courses`. Tab Sách gom sách theo lộ trình; trình độ "JLPT N5 · CEFR A1"; nhịp 3–5 phiên/tuần.
+- Mẫu `lessons-v1` của agent nhập sách: các bước học và chỗ trong sách của từng bước khai hết trong `book.yaml`.
+  - `refs: {<bước>: {pdf, pages, tracks, alt}}` — trang là số in.
+  - `tracks` nhận id hoặc khoảng `A..B`.
+  - Id track lấy từ tên file: `K01_05.mp3` → `K01-05`, đúng nhãn in trong sách.
+  - Agent quét file, cắt PDF thành đoạn theo từng bài, kiểm tra mỗi track thuộc đúng một phiên.
+  - Bản đầu của mẫu chưa có file sách: lộ trình chỉ có ghi chú. Khi sách vào `main` thì thêm `files` / `refs`.
+- `books/Genki/book.yaml` có:
+  - Unit 0: hệ chữ, chào hỏi, số đếm;
+  - 12 bài × 6 phiên: Hội thoại & từ vựng, Part A ngữ pháp, Part B luyện tập, Part C ôn tập & nói – viết, Đọc – viết,
+    Workbook;
+  - 4 phiên ôn thi N5.
+
+  Tổng 78 phiên ≈ 79 giờ, 20 tuần ở 4 phiên/tuần. Có 286 track (461 phút), PDF cắt thành 51 đoạn (70 MB).
+- Ranh giới các phần của 12 bài dò bằng OCR (RapidOCR) trang Textbook PDF 36–302: nhãn track và đầu mục Grammar /
+  Practice / まとめの練習 / Culture Notes / Useful Expressions. Mọi trang chuyển phần đã soát bằng mắt. Vị trí W00,
+  W02-1, WY-1…8, W-JWS1/2 lấy từ OCR các trang Workbook liên quan.
+- Ghi chú phiên đổi từ "nghe bằng app OTO Navi" sang "nghe track của bài". Danh sách ngữ pháp bài 6–12 và chữ Hán
+  từng bài lấy theo mục lục sách.
+
+**Video** — file 07 mục 4.
+- `lesson_video` đọc được tiếng Nhật:
+  - cảnh `jp`: thẻ navy ba tầng có furigana `{漢字|かな}`, romaji, tiếng Anh, tiếng Việt;
+  - người nói `lang: ja` dùng giọng Kokoro `jf_alpha`, tách âm bằng `misaki[ja]`;
+  - `speed` theo người nói hoặc từng dòng;
+  - lệnh `check` so cách đọc của bộ đọc với furigana, so romaji, chặn chữ Latin trong câu Nhật.
+- 15 kịch bản `books/Genki/lessons/EP_0u_0p.yaml` giữ lời thoại, chữ, tốc độ, khoảng lặng của bản thiết kế. Đã sửa
+  nội dung, sửa cách đọc tiếng Nhật (九時, 二十八歳, 日本語, 七時, 日曜日, IT…) và cách đọc từ Nhật trong lời Emma.
+- Kết quả: 15 video, 9:20 (27–46 giây mỗi tập), 0,3–0,6 MB mỗi tập.
+- Model Kokoro và giọng `bf_emma`, `jf_alpha` lấy từ bản đăng lại trên npm vì máy dựng chặn Hugging Face (xem
+  `agents/README.md`).
+
+**Hai lỗi sửa trong đợt**
+- **Video dài hơn tiếng.** EP 2.3, 3.3, 4.3 hỏng ở lần dựng đầu: video dài hơn tiếng 3–8 giây vì `loudnorm` giữ
+  ~3 giây tiếng nên `-shortest` không cắt được. Nay chuẩn độ to ở lệnh ffmpeg riêng. Video IELTS dựng về sau cũng
+  theo cách này; các video đã commit không đổi.
+- **Nút "Tapescript của track" vẫn hiện** khi track không có tapescript. Nguyên nhân: `.btn{display:inline-flex}`
+  đè thuộc tính `hidden`. Lỗi có từ trước, sách GENKI làm lộ ra.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `agents/book_ingest/lessons.py` | Mẫu `lessons-v1`: đọc `book.yaml` (bước, `files`, `pages`, `refs`), mở rộng khoảng track, ranh giới đoạn PDF theo mục, dựng `book.json` / `plan.json` / `report.md` |
+| `agents/lesson_video/ja.py` | Furigana, cách đọc kana, romaji (trợ từ は/へ/を), gọi `misaki[ja]`, kiểm tra một câu |
+| `agents/lesson_video/jpcard.py` | Vẽ cảnh `jp` 1280×720: chữ trộn CJK + Latin, furigana, ngắt dòng có kinsoku, tự co chữ |
+| `agents/tests/test_japanese_video.py` | 27 test: furigana, romaji, kiểm tra cảnh `jp`, vẽ, tốc độ, khóa bộ nhớ tiếng, đọc tiếng Nhật bằng Kokoro |
+| `agents/tests/test_lessons_template.py` | 19 test: mẫu không file, mẫu có file (trang in → PDF, khoảng track, đoạn PDF, nhãn trang Workbook), 8 kiểu `refs` sai, hồi quy trên `books/Genki` |
+| `books/Genki/book.yaml`, `book.json`, `plan.json`, `report.md`, `work/scan.json`, `work/chunks.json`, `web/*.pdf` | Lộ trình N5 và 51 đoạn PDF |
+| `books/Genki/lessons/EP_*.yaml`, `EP_*.mp4`, `lessons.json` | 15 kịch bản và video |
+| `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` | Đánh giá bản thiết kế, lộ trình, video tiếng Nhật, kế hoạch Unit 6–12 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/book_ingest/pipeline.py` | Nhánh `lessons-v1`: quét file (nếu có), cắt đoạn PDF, đóng gói, kiểm tra |
+| `agents/book_ingest/validate.py` | `lessons-v1`: mỗi hoạt động đúng một phiên |
+| `agents/book_ingest/schemas.py`, `schemas/book.schema.json` | `BookInfo.course`, `BookInfo.level` (tùy chọn — `book.json` của IELTS không đổi) |
+| `agents/lesson_video/script.py` | Kiểu cảnh `jp`, `lang` và `speed` của người nói, `speed` của dòng, kiểm tra tiếng Nhật |
+| `agents/lesson_video/tts.py`, `timeline.py` | Kokoro đọc tiếng Nhật qua phiên âm misaki; tốc độ riêng từng câu (vào khóa bộ nhớ tiếng) |
+| `agents/lesson_video/slides.py` | Phông `jp` / `jp-bold` (Noto Sans CJK), chuyển cảnh `jp` sang `jpcard` |
+| `agents/lesson_video/video.py` | Chuẩn độ to ở bước riêng (sửa video dài hơn tiếng) |
+| `agents/lesson_video/coverage.py` | Cột trang ghi "Workbook tr." cho hoạt động trên Workbook |
+| `agents/pyproject.toml` | Extra `ja = ["misaki[ja]>=0.7.4"]` |
+| `books/catalog.json` | `courses` (`ielts`, `ja-n5`) và sách `genki-1-n5` |
+| `web/src/book/core.js` | `courseOf`, `groupCourses`, `levelText` (band hoặc JLPT), `paceOptions` |
+| `web/src/book/ui.js` | Danh sách sách theo lộ trình; nội dung sách bỏ số 0, thêm số video; nhịp học, câu "học xong" và cảnh báo chậm theo lộ trình / `plan.rules`; thẻ quản lý file chỉ hiện khi sách có file; giờ học không tự cộng cho lộ trình ngoài IELTS |
+| `web/src/book/book.css` | `.btn[hidden]{display:none}` |
+| `tests/web/book-core.test.mjs` | Gom theo lộ trình, trình độ, nhịp; gói GENKI: trang in, track từng phiên, mỗi track thuộc đúng một hoạt động, mọi trang nằm trong một đoạn, mọi file cần có tồn tại |
+| `tests/web/book.e2e.mjs` | Bước mới: thẻ GENKI (286 track, 15 video), thẻ Unit 1 "Trang 36–55", nút video EP 1.2 mở phiên Part B: "Mở trang 46–53", 15 track K01-09…K01-23, không có nút Tapescript, tải đoạn `course-book-p0044-0063.pdf` |
+| `docs/agent-hoc-tap/README.md`, `04-checklist.md` (P2-46, P2-47, P2-48), `agents/README.md`, `.claude/skills/book-ingest/SKILL.md`, `web/README.md`, `CLAUDE.md` | Lộ trình N5, mẫu `lessons-v1`, video tiếng Nhật |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### File xóa
+
+`books/genki_1_n5/` (bản đầu của lộ trình, chưa có file sách) chuyển vào `books/Genki/` cạnh PDF và audio.
+
+### Kiểm thử
+
+- `python3 web/build.py && git diff --stat`: bản dựng khớp nguồn.
+- `cd agents && python -m pytest -q`: 109 test qua, gồm hồi quy trên sách IELTS thật và trên `books/Genki`.
+- `node --test "tests/web/*.test.mjs"`: qua.
+- `node tests/web/book.e2e.mjs`: E2E OK, có bước GENKI mới.
+- `python -m lesson_video check ../books/Genki/lessons/*.yaml`: 15/15 OK. Độ dài mọi video khớp tiếng: video ngắn hơn
+  tiếng dưới 0,07 giây.
+
+### Còn treo
+
+- P2-48: video Unit 6–12.
+- Đáp án Workbook: cần GENKI Answer Key.
+- Đề mẫu JLPT N5 kèm file nghe để vào sách thì khối ôn thi có trang và track.
+
+---
+
 ## Đợt 14 — 19/10/2026: 4 video luyện nói thêm Unit 1 (hỏi đáp qua lại, thi thử Speaking)
 
 Nhánh `claude/gallant-ramanujan-ym30oy` đặt lại từ `main` tại `930feee` (đã merge PR #14); xong thì đẩy thẳng lên `main`

@@ -2,7 +2,7 @@
 
 Mỗi bước ghi kết quả vào <thư mục sách>/work/, bước sau đọc lại. Gặp mục duyệt còn mở
 thì dừng (mã thoát 2) để người duyệt quyết định, rồi chạy lại là đi tiếp từ chỗ dừng.
-Mẫu lessons-v1 (lộ trình không có file sách, lessons.py) đi thẳng pack → validate.
+Mẫu lessons-v1 (cấu trúc khai hết ở book.yaml, lessons.py) chỉ quét file, cắt đoạn PDF rồi pack → validate.
 """
 from __future__ import annotations
 
@@ -54,14 +54,23 @@ def step_scan(profile: Profile, force: bool = False) -> dict:
     return data
 
 
-def run_lessons(book_dir: Path, res: Result, log) -> Result:
-    """Mẫu lessons-v1: dựng book.json, plan.json thẳng từ book.yaml (không có file sách để quét)."""
+def run_lessons(book_dir: Path, res: Result, log, force: bool = False) -> Result:
+    """Mẫu lessons-v1: cấu trúc và chỗ trong sách khai ở book.yaml — chỉ quét file (nếu có) và cắt đoạn PDF."""
     profile = lessons.load(book_dir)
-    book, plan = lessons.build(profile)
+    data, parts = None, {}
+    if profile.files:
+        data = step_scan(profile, force)
+        log(f"[scan] {len(data['pdfs'])} PDF, {len(data['audio'])} audio, {len(data['duplicates'])} cặp trùng")
+        ranges = lessons.chunk_ranges(profile)
+        for fid, info in data["pdfs"].items():
+            if ck.wanted(profile, fid, info["bytes"]) and ranges.get(fid):
+                parts[fid] = ck.write(profile, fid, info["sha256"], ranges[fid], work_dir(book_dir))
+                log(f"[chunks] {fid}: {len(parts[fid])} đoạn, {sum(c['bytes'] for c in parts[fid]) / 1e6:.0f} MB → web/")
+    book, plan = lessons.build(profile, data, parts)
     _write(book_dir / "book.json", dump(book))
     _write(book_dir / "plan.json", dump(plan))
-    (book_dir / "report.md").write_text(lessons.report(profile, plan), encoding="utf-8")
-    log(f"[pack] book.json, plan.json, report.md → {book_dir} (mẫu {lessons.TEMPLATE}, không cần file sách)")
+    (book_dir / "report.md").write_text(lessons.report(profile, book, plan, data), encoding="utf-8")
+    log(f"[pack] book.json, plan.json, report.md → {book_dir} (mẫu {lessons.TEMPLATE})")
     return finish(book_dir, res, log)
 
 
@@ -84,7 +93,7 @@ def run(book_dir: Path, force: bool = False, allow_ocr: bool = True, say=print) 
     log = lambda m: (res.messages.append(m), say(m))  # noqa: E731
     path = book_dir / "book.yaml"
     if path.exists() and lessons.is_lessons(yaml.safe_load(path.read_text(encoding="utf-8")) or {}):
-        return run_lessons(book_dir, res, log)
+        return run_lessons(book_dir, res, log, force)
     profile = load(book_dir)
     work = work_dir(book_dir)
     review_path = work / "review.json"
