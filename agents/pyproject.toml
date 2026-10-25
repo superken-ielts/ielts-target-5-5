@@ -16,6 +16,7 @@ llm = ["anthropic"]
 review = ["streamlit>=1.30"]
 video = ["pillow>=10.1", "numpy"]
 kokoro = ["kokoro-onnx>=0.6"]
+ja = ["misaki[ja]>=0.7.4"]   # giọng Nhật của Kokoro (jf_*, jm_*): tách âm + đối chiếu furigana
 dev = ["pytest>=8", "jsonschema>=4"]
 
 [project.scripts]

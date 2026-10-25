@@ -209,3 +209,39 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
   assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U03" }), Object.keys(acts)).map(g => [g.activity, g.lessons.length]),
     [["U03-speaking-vocab", 2], ["U03-listening", 2], ["U03-reading", 2], ["U03-writing", 2], ["U03-consolidation", 1], ["U03-exam-practice", 2]]);
 });
+
+test("lộ trình: gom sách theo courses của catalog, trình độ JLPT, nhịp học theo plan", () => {
+  const courses = [{ id: "ielts", title: "IELTS" }, { id: "ja-n5", title: "N5" }];
+  const entries = [{ id: "a" }, { id: "g", course: "ja-n5" }, { id: "b" }, { id: "x" }];
+  const books = { x: { book: { info: { course: "ja-n5" } } } };      // sách chỉ khai lộ trình trong book.json
+  assert.deepEqual(C.groupCourses(entries, courses, books).map(g => [g.id, g.title, g.entries.map(e => e.id)]),
+    [["ielts", "IELTS", ["a", "b"]], ["ja-n5", "N5", ["g", "x"]]]);
+  assert.deepEqual(C.groupCourses([{ id: "z", course: "fr" }, { id: "a" }], courses, {}).map(g => g.id), ["ielts", "fr"]);
+  assert.equal(C.courseOf(null, null), "ielts");
+  assert.equal(C.levelText({ bandFrom: 3.5, bandTo: 5, cefr: "A2–B1" }), "Band 3.5 → 5.0 · CEFR A2–B1");
+  assert.equal(C.levelText({ level: "JLPT N5", cefr: "A1" }), "JLPT N5 · CEFR A1");
+  assert.deepEqual(C.paceOptions({ rules: {} }), [5, 6, 7]);
+  assert.deepEqual(C.paceOptions({ rules: { paceOptions: [5, 3, 4] } }), [3, 4, 5]);
+});
+
+const GENKI = new URL("../../books/genki_1_n5/", import.meta.url);
+test("lộ trình N5 (GENKI I): không có file sách, mỗi hoạt động một phiên, video trỏ tới phần có thật", { skip: !existsSync(new URL("book.json", GENKI)) }, () => {
+  const book = JSON.parse(readFileSync(new URL("book.json", GENKI), "utf8"));
+  const pl = JSON.parse(readFileSync(new URL("plan.json", GENKI), "utf8"));
+  const acts = C.activitiesOf(book);
+  assert.deepEqual(C.requiredPaths(book), []);
+  assert.equal(book.info.course, "ja-n5");
+  assert.equal(C.levelText(book.info), "JLPT N5 · CEFR A1");
+  assert.deepEqual(pl.sessions.map(s => s.activityIds.length), pl.sessions.map(() => 1));
+  assert.equal(new Set(pl.sessions.map(s => s.activityIds[0])).size, Object.keys(acts).length);
+  assert.deepEqual(C.paceOptions(pl), [3, 4, 5]);
+  assert.equal(C.duration(pl, 4).weeks, 20);
+  const lj = new URL("lessons/lessons.json", GENKI);
+  if(!existsSync(lj)) return;
+  const { lessons } = JSON.parse(readFileSync(lj, "utf8"));
+  for(const l of lessons){
+    assert.ok(acts[l.activity], l.activity);
+    assert.ok(C.lessonSession(pl, l), "không phiên nào chứa " + l.activity);
+    assert.ok(existsSync(new URL(l.file, GENKI)), l.file);
+  }
+});

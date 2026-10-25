@@ -2,9 +2,12 @@
 
 - `kokoro` — Kokoro-82M (Apache-2.0) qua thư viện kokoro-onnx: giọng tự nhiên. Cần file model `.onnx`
   (bản nén q8 ~92 MB là đủ) và file giọng `.bin` (~0,5 MB mỗi giọng), tải từ Hugging Face
-  onnx-community/Kokoro-82M-v1.0-ONNX (thư mục onnx/ và voices/). Giọng tiếng Anh: af_*, am_* (Mỹ), bf_*, bm_* (Anh).
+  onnx-community/Kokoro-82M-v1.0-ONNX (thư mục onnx/ và voices/). Giọng tiếng Anh: af_*, am_* (Mỹ), bf_*, bm_* (Anh);
+  giọng tiếng Nhật jf_*, jm_* cần thêm bộ tách âm misaki[ja] (câu Nhật đổi thành âm vị bằng misaki rồi mới đọc).
 - `flite` — CMU Flite qua ctypes (Ubuntu: gói libflite1): nhẹ, có sẵn, nhưng nghe máy. Giọng slt, rms, awb, kal16.
 - `silent` — không đọc gì, chỉ sinh im lặng dài theo số chữ: thử bố cục nhanh và để test.
+
+`synth(text, voice, speed=None)`: `speed` đọc nhanh / chậm riêng câu này (mặc định tốc độ của bộ đọc).
 - `auto` — kokoro nếu tìm thấy model và giọng, không thì flite.
 """
 from __future__ import annotations
@@ -78,7 +81,7 @@ class Flite:
             # cst_voice: {name, features, …} → con trỏ thứ hai là bảng đặc trưng của giọng
             feats = ctypes.cast(v, POINTER(c_void_p))[1]
             self.lib.flite_feat_set_float(feats, b"duration_stretch", self.stretch)
-            self._voices[voice] = (vlib, v)
+            self._voices[voice] = (vlib, v, feats)
         return self._voices[voice][1]
 
     def check(self, voice: str) -> None:
@@ -87,8 +90,16 @@ class Flite:
     def describe(self, voice: str) -> str:
         return f"Flite cmu_us_{voice}"
 
-    def synth(self, text: str, voice: str) -> tuple[np.ndarray, int]:
-        w = self.lib.flite_text_to_wave(text.encode("utf-8"), self._voice(voice))
+    def synth(self, text: str, voice: str, speed: Optional[float] = None) -> tuple[np.ndarray, int]:
+        v = self._voice(voice)
+        feats = self._voices[voice][2]
+        if speed:
+            self.lib.flite_feat_set_float(feats, b"duration_stretch", 1.0 / speed)
+        try:
+            w = self.lib.flite_text_to_wave(text.encode("utf-8"), v)
+        finally:
+            if speed:
+                self.lib.flite_feat_set_float(feats, b"duration_stretch", self.stretch)
         if not w:
             raise TTSError(f"Flite không đọc được: {text!r}")
         wv = w.contents
@@ -158,16 +169,27 @@ class Kokoro:
     def check(self, voice: str) -> None:
         if voice not in self.voices:
             raise TTSError(f"Kokoro không có giọng '{voice}' (có: {', '.join(sorted(self.voices))})")
-        if voice[:1] not in ("a", "b"):
-            raise TTSError(f"Giọng '{voice}' không phải tiếng Anh (cần af_*, am_*, bf_*, bm_*)")
+        if voice[:1] not in ("a", "b", "j"):
+            raise TTSError(f"Giọng '{voice}' không phải tiếng Anh hay tiếng Nhật (cần af_*, am_*, bf_*, bm_*, jf_*, jm_*)")
+        if voice[:1] == "j":
+            from . import ja
+            try:
+                ja.phonemes("あ")
+            except ja.JaError as e:
+                raise TTSError(str(e)) from None
 
     def describe(self, voice: str) -> str:
         return f"Kokoro {voice}"
 
-    def synth(self, text: str, voice: str) -> tuple[np.ndarray, int]:
+    def synth(self, text: str, voice: str, speed: Optional[float] = None) -> tuple[np.ndarray, int]:
         self.check(voice)
-        lang = "en-gb" if voice.startswith("b") else "en-us"
-        audio, rate = self.k.create(text, self.voices[voice], speed=self.speed, lang=lang)
+        speed = speed or self.speed
+        if voice.startswith("j"):  # tiếng Nhật: misaki tách âm (đúng bộ tách âm Kokoro dùng khi huấn luyện)
+            from . import ja
+            audio, rate = self.k.create(ja.phonemes(text), self.voices[voice], speed=speed, is_phonemes=True)
+        else:
+            lang = "en-gb" if voice.startswith("b") else "en-us"
+            audio, rate = self.k.create(text, self.voices[voice], speed=speed, lang=lang)
         return (np.clip(audio, -1, 1) * 32767).astype(np.int16), rate
 
 
@@ -183,8 +205,8 @@ class Silent:
     def describe(self, voice: str) -> str:
         return "silent"
 
-    def synth(self, text: str, voice: str) -> tuple[np.ndarray, int]:
-        sec = 0.4 + 0.06 * len(text)
+    def synth(self, text: str, voice: str, speed: Optional[float] = None) -> tuple[np.ndarray, int]:
+        sec = (0.4 + 0.06 * len(text)) / (speed or 1.0)
         return np.zeros(int(sec * self.RATE), dtype=np.int16), self.RATE
 
 

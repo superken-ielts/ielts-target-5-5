@@ -218,6 +218,18 @@
    "additionalProperties": false,
    "description": "Thông tin giới thiệu sách cho màn hình danh sách sách của app (khai báo ở book.yaml › info).",
    "properties": {
+    "course": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Course"
+    },
     "role": {
      "default": "",
      "title": "Role",
@@ -227,6 +239,18 @@
      "default": "",
      "title": "Module",
      "type": "string"
+    },
+    "level": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Level"
     },
     "author": {
      "default": "",
@@ -534,8 +558,10 @@
   "info": {
    "$ref": "#/$defs/BookInfo",
    "default": {
+    "course": null,
     "role": "",
     "module": "",
+    "level": null,
     "author": "",
     "publisher": "",
     "cefr": "",

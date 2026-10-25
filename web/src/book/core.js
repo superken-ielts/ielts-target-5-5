@@ -51,6 +51,39 @@ const BookCore = (() => {
     return ss.find(s => !DONE.has(statusOf(progress, s.id))) || ss[0] || null;
   }
 
+  /* Lộ trình của một sách trong danh sách: mục catalog → book.json › info.course → "ielts". */
+  function courseOf(entry, book){
+    return (entry && entry.course) || (book && book.info && book.info.course) || "ielts";
+  }
+
+  /* Gom mục catalog theo lộ trình, theo thứ tự `courses` trong catalog; lộ trình chưa khai đứng cuối. */
+  function groupCourses(entries, courses, books){
+    const list = courses || [];
+    const out = [];
+    (entries || []).forEach(e => {
+      const id = courseOf(e, books && books[e.id] && books[e.id].book);
+      let g = out.find(x => x.id === id);
+      if(!g){ g = Object.assign({}, list.find(c => c.id === id) || {}, {id, entries: []}); out.push(g); }
+      g.entries.push(e);
+    });
+    const rank = id => { const i = list.findIndex(c => c.id === id); return i < 0 ? list.length : i; };
+    return out.map((g, i) => [g, i]).sort((x, y) => rank(x[0].id) - rank(y[0].id) || x[1] - y[1]).map(x => x[0]);
+  }
+
+  /* Trình độ: band IELTS nếu có, không thì `level` (ví dụ "JLPT N5"); kèm CEFR. */
+  function levelText(info){
+    if(!info) return "";
+    const band = info.bandFrom != null && info.bandTo != null
+      ? "Band " + Number(info.bandFrom).toFixed(1) + " → " + Number(info.bandTo).toFixed(1) : (info.level || "");
+    return [band, info.cefr ? "CEFR " + info.cefr : ""].filter(Boolean).join(" · ");
+  }
+
+  /* Các nhịp học (phiên/tuần) để chọn: plan.rules.paceOptions, mặc định 5, 6, 7 như sách IELTS. */
+  function paceOptions(plan){
+    const p = plan && plan.rules && plan.rules.paceOptions;
+    return Array.isArray(p) && p.length ? p.map(Number).sort((a, b) => a - b) : [5, 6, 7];
+  }
+
   /* Thời lượng cả sách và số tuần/tháng cần ở một nhịp học. */
   function duration(plan, perWeek){
     const minutes = plan.sessions.reduce((a, s) => a + (Number(s.estMinutes) || plan.minutesPerSession || 75), 0);
@@ -256,6 +289,7 @@ const BookCore = (() => {
 
   return {
     emptyProgress, settingsOf, statusOf, focusOf, nextSession, itemSessions, itemCounts, entrySession, duration, counts, plannedWeek, projectFinishWeek,
+    courseOf, groupCourses, levelText, paceOptions,
     canSkip, setSession, setSettings, mergeProgress, elapsedSec, activitiesOf, itemsOf,
     printedPage, basename, matchFiles, requiredPaths, chunkFor, checklistStats, fmtClock,
     lessonsOf, lessonSession, chapterAt, groupLessons, chapterRange, nextOnEnd, sleepLeft, addListen, fmtHms

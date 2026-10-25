@@ -86,24 +86,26 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
         except ValueError as e:
             raise TTSError(str(e)) from None
         engine.check(voices[key])
-    memo: dict[tuple[str, str], tuple[np.ndarray, int]] = {}
+    memo: dict[tuple, tuple[np.ndarray, int]] = {}
 
-    def synth(text: str, voice: str) -> tuple[np.ndarray, int]:
-        if (voice, text) in memo:
-            return memo[(voice, text)]
+    def synth(text: str, voice: str, speed: Optional[float] = None) -> tuple[np.ndarray, int]:
+        """`speed`: tốc độ riêng của câu hoặc người nói; None = tốc độ của bộ đọc (khóa bộ nhớ như cũ)."""
+        key = (voice, text, speed)
+        if key in memo:
+            return memo[key]
         path = None
         if cache_dir is not None and engine.name != "silent":
-            h = hashlib.sha1(f"{engine.tag}\n{voice}\n{text}".encode("utf-8")).hexdigest()
+            h = hashlib.sha1((f"{engine.tag}\n{voice}\n{text}" + (f"\n{speed}" if speed else "")).encode("utf-8")).hexdigest()
             path = Path(cache_dir) / h[:2] / f"{h}.npz"
             if path.exists():
                 with np.load(path) as z:
-                    memo[(voice, text)] = (z["data"], int(z["rate"]))
-                return memo[(voice, text)]
-        data, r = engine.synth(text, voice)
+                    memo[key] = (z["data"], int(z["rate"]))
+                return memo[key]
+        data, r = engine.synth(text, voice) if speed is None else engine.synth(text, voice, speed=speed)
         if path is not None:
             path.parent.mkdir(parents=True, exist_ok=True)
             np.savez(path, data=data, rate=r)
-        memo[(voice, text)] = (data, r)
+        memo[key] = (data, r)
         return data, r
 
     rate: Optional[int] = None
@@ -168,7 +170,7 @@ def build(lesson: Lesson, engine, say: Callable[[str], None] = print, cache_dir:
                 fr = Frame(si, focus, frozenset(revealed), None, "", ln.vi, note=ln.note, mark=mark, audio=ln.track)
                 add(np.concatenate([data, silence(lesson.gap + ln.pause)]), fr)
             elif ln.speaker:
-                data, r = synth(ln.spoken, voices[ln.speaker])
+                data, r = synth(ln.spoken, voices[ln.speaker], ln.speed or lesson.speakers[ln.speaker].speed)
                 if rate is None:
                     rate = r
                     parts.append(silence(LEAD))

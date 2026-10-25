@@ -1,6 +1,20 @@
 {
  "schema": "catalog/1",
- "note": "Thứ tự sách trong lộ trình 40 tuần (05-tai-lieu-mien-phi.md mục K). Sách đã nhập bằng agent thì tab Sách lấy chi tiết từ books/<thư mục>/book.json; sách chưa nhập chỉ hiện thông tin dưới đây.",
+ "note": "Các lộ trình và thứ tự sách trong tab Sách. Sách thuộc lộ trình `course` (mặc định ielts — lộ trình 40 tuần, 05-tai-lieu-mien-phi.md mục K). Sách đã nhập bằng agent thì tab Sách lấy chi tiết từ books/<thư mục>/book.json; sách chưa nhập chỉ hiện thông tin dưới đây.",
+ "courses": [
+  {
+   "id": "ielts",
+   "title": "IELTS General Training · lộ trình 40 tuần",
+   "note": "Các sách trong lộ trình 40 tuần. Chạm vào một sách để xem toàn bộ section, unit và chọn unit muốn học.",
+   "done": "Tiếp tục với đề Cambridge GT theo lộ trình."
+  },
+  {
+   "id": "ja-n5",
+   "title": "Tiếng Nhật · lộ trình JLPT N5",
+   "note": "Học song song, không tính vào 12 tiếng/tuần của IELTS. GENKI I theo bản thiết kế \"Genki I × IELTS Target 5.0\": mỗi bài ba video (ngữ pháp, mẫu câu, nói – viết theo chủ đề IELTS). Cần sách GENKI I, Workbook và app OTO Navi.",
+   "done": "Thi JLPT N5 (kỳ thi tháng 7 và tháng 12), hoặc học tiếp GENKI II cho N4."
+  }
+ ],
  "books": [
   {
    "id": "ielts-target-5.0",
@@ -55,6 +69,13 @@
    ],
    "goal": "Ổn định band 5.5 trở lên",
    "summary": "Đề General Training chính thức, dùng cùng Cambridge 20 cho giai đoạn luyện đề cuối."
+  },
+  {
+   "id": "genki-1-n5",
+   "course": "ja-n5",
+   "title": "GENKI I (3rd Edition)",
+   "role": "Giáo trình chính · lộ trình N5",
+   "goal": "Đủ ngữ pháp N5, đọc viết hai bảng kana và chữ Hán của 12 bài; thi thử bằng đề mẫu chính thức của JLPT N5"
   }
  ]
 }

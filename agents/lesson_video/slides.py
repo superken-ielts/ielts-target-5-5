@@ -31,9 +31,14 @@ FONT_FILES = {
     # dấu ✓ ✗ không có trong Liberation Sans
     "symbol": ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                "/Library/Fonts/Arial Unicode.ttf", "C:/Windows/Fonts/seguisym.ttf"],
+    # kana, chữ Hán (cảnh jp): Noto Sans CJK JP (Ubuntu: fonts-noto-cjk), IPAGothic, Hiragino (macOS), Yu Gothic (Windows)
+    "jp": ["/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", "/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf",
+           "/System/Library/Fonts/ヒラギノ角ゴシック W4.ttc", "C:/Windows/Fonts/YuGothM.ttc"],
+    "jp-bold": ["/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
+                "C:/Windows/Fonts/YuGothB.ttc", "/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf"],
 }
 FC_NAMES = {"regular": "Liberation Sans", "bold": "Liberation Sans:bold", "italic": "Liberation Sans:italic",
-            "symbol": "DejaVu Sans:bold"}
+            "symbol": "DejaVu Sans:bold", "jp": "Noto Sans CJK JP", "jp-bold": "Noto Sans CJK JP:bold"}
 
 
 @lru_cache(maxsize=None)
@@ -148,6 +153,9 @@ class Slides:
 
     # ---------- khung chung ----------
     def render(self, fr: Frame, progress: float) -> Image.Image:
+        if self.L.scenes[fr.scene].kind == "jp":  # thẻ ba tầng nền navy, vẽ cả khung (jpcard.py)
+            from . import jpcard
+            return jpcard.render(self, fr, progress)
         img = Image.new("RGB", (W, H), C["bg"])
         d = ImageDraw.Draw(img)
         sc = self.L.scenes[fr.scene]

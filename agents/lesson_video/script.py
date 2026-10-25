@@ -3,6 +3,9 @@
 Mỗi cảnh (scene) là một kiểu slide; mỗi dòng trong `lines` là một câu thoại của một người nói
 (khóa là mã người nói, ví dụ `emma: "Hello"`) hoặc một khoảng lặng có đếm ngược (`wait: 8`) để người
 học tự nói. `focus` chọn mục đang nói tới, `reveal` mở dần đáp án; cả hai giữ nguyên tới dòng sau.
+
+Người nói `lang: ja` đọc tiếng Nhật (giọng Kokoro jf_*, jm_*). Chữ Nhật hiển thị viết furigana ngay trong câu:
+`{留学生|りゅうがくせい}` (xem ja.py); `check` so cách bộ đọc đọc câu thoại với furigana.
 """
 from __future__ import annotations
 
@@ -14,8 +17,10 @@ from typing import Literal, Optional, Union
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
+from . import ja
+
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow"]
+               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow", "jp"]
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -35,10 +40,13 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "mcq": ("n", "q", "options", "answer"),  # trắc nghiệm: `options` là danh sách, `answer` là a, b, c… hoặc một nhãn trong `keys`
     "passage": ("text",),               # bài đọc trên màn hình (có phụ đề): mỗi mục một đoạn, `label` đầu đoạn; dòng thoại `mark` tô từ khóa
     "shadow": ("text",),                # nghe – nhắc lại: mỗi mục một câu mẫu chữ to; `by` người nói (màu), `vi` nghĩa, `tip` mẹo phát âm
+    "jp": ("jp",),                      # thẻ ba tầng (video N5): `jp` chữ Nhật có furigana, `romaji`, `en` giải thích, `vi` nghĩa
 }
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
 # `echo: true` (câu thoại): sau câu là khoảng lặng đếm ngược dài theo câu để người học nhắc lại (shadowing)
-LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read", "mark", "track", "start", "end", "echo"}
+# `speed` (câu thoại): tốc độ đọc riêng của câu này (mặc định: `speed` của người nói, rồi tới --speed của lệnh build)
+LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read", "mark", "track", "start", "end", "echo",
+               "speed"}
 
 
 class _M(BaseModel):
@@ -50,6 +58,8 @@ class Speaker(_M):
     role: str = ""
     voice: Union[str, dict[str, str]]   # một giọng, hoặc giọng theo bộ đọc: {kokoro: bf_emma, flite: slt}
     color: str = "#C8102E"
+    lang: Literal["en", "ja"] = "en"    # ja: đọc tiếng Nhật (giọng Kokoro jf_*, jm_*)
+    speed: Optional[float] = Field(None, ge=0.5, le=2.0)  # tốc độ riêng của người nói (mặc định --speed của lệnh build)
 
     @field_validator("voice")
     @classmethod
@@ -97,6 +107,7 @@ class Line(_M):
     start: float = Field(0, ge=0)
     end: Optional[float] = None
     echo: bool = False    # câu thoại: thêm khoảng lặng đếm ngược (dài theo câu) để người học nhắc lại
+    speed: Optional[float] = Field(None, ge=0.5, le=2.0)
 
     @field_validator("reveal", "mark", mode="before")
     @classmethod
@@ -117,6 +128,8 @@ class Line(_M):
             raise ValueError(f"câu thoại của {self.speaker} trống")
         if self.echo and not self.speaker:
             raise ValueError("`echo` (chừa chỗ nhắc lại) chỉ dùng cho câu thoại")
+        if self.speed is not None and not self.speaker:
+            raise ValueError("`speed` chỉ dùng cho câu thoại")
         return self
 
     @property
@@ -170,6 +183,14 @@ class Scene(_M):
             raise ValueError("`mark` (tô từ khóa) chỉ dùng trong cảnh passage")
         if self.kind == "letter" and any(ln.wait or ln.echo for ln in self.lines):
             raise ValueError("cảnh letter không có khoảng lặng `wait` / `echo` (không có chỗ hiện đếm ngược)")
+        if self.kind == "jp":
+            if len(self.items) != 1:
+                raise ValueError("cảnh jp có đúng một mục (một thẻ ba tầng)")
+            if any(ln.wait or ln.echo or ln.track for ln in self.lines):
+                raise ValueError("cảnh jp không có khoảng lặng `wait` / `echo` hay đoạn nghe `track` — dùng `pause`")
+            bad = ja.check_markup(str(self.items[0]["jp"]))
+            if bad:
+                raise ValueError("cảnh jp: " + "; ".join(bad))
         if not self.lines:
             raise ValueError("cảnh không có câu thoại nào")
         keys = self.reveal_keys()
@@ -251,7 +272,18 @@ class Lesson(_M):
 
     @model_validator(mode="after")
     def _roles(self):
+        for key, sp in self.speakers.items():
+            if sp.lang != "ja":
+                continue
+            for v in ([sp.voice] if isinstance(sp.voice, str) else list(sp.voice.values())):
+                if not v.startswith(("jf_", "jm_")):
+                    raise ValueError(f"{sp.name} đọc tiếng Nhật (lang: ja) nhưng giọng '{v}' không phải giọng Nhật jf_*, jm_*")
         for sc in self.scenes:
+            for ln in sc.lines:
+                sp = self.speakers.get(ln.speaker or "")
+                if sp and sp.lang == "ja" and re.search(r"[A-Za-z0-9]", ln.spoken):
+                    raise ValueError(f"câu tiếng Nhật của {sp.name} có chữ Latin hoặc chữ số: {ln.spoken!r}"
+                                     " — viết cách đọc bằng kana (ví dụ IT → アイティー) trong `say`")
             bad = [k for k in sc.roles if k not in self.speakers]
             if bad:
                 raise ValueError(f"`roles` có người nói chưa khai báo: {', '.join(bad)}")
@@ -294,9 +326,26 @@ def find_item(book: dict, activity: str) -> Optional[dict]:
     return None
 
 
-def check(lesson: Lesson, bdir: Path) -> list[str]:
-    """Đối chiếu kịch bản với book.json của sách: hoạt động có thật, trang ảnh nằm trong file."""
+def check_japanese(lesson: Lesson) -> list[str]:
+    """Cảnh jp có câu thoại tiếng Nhật: bộ đọc phải đọc đúng như furigana, romaji khớp cách đọc (cần misaki)."""
     problems: list[str] = []
+    for i, sc in enumerate(lesson.scenes):
+        lines = [ln for ln in sc.lines if ln.speaker and lesson.speakers[ln.speaker].lang == "ja"]
+        if not lines or sc.kind != "jp":
+            continue
+        it = sc.items[0]
+        spoken = "".join(ln.spoken for ln in lines)
+        try:
+            problems += [f"cảnh {i}: {m}" for m in ja.check_line(str(it["jp"]), spoken, str(it.get("romaji") or ""))]
+        except ja.JaError as e:
+            return [str(e)]
+    return problems
+
+
+def check(lesson: Lesson, bdir: Path) -> list[str]:
+    """Đối chiếu kịch bản với book.json của sách: hoạt động có thật, trang ảnh nằm trong file; câu tiếng Nhật
+    đọc đúng furigana."""
+    problems: list[str] = check_japanese(lesson)
     bj = bdir / "book.json"
     if not bj.exists():
         return [f"không thấy {bj} — chạy agent nhập sách trước"]

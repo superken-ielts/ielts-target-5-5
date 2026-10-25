@@ -80,9 +80,14 @@ def validate(book_dir: Path, check_hashes: bool = False) -> list[str]:
             if f.durationSec is not None and not (2 <= f.durationSec <= 20 * 60):
                 problems.append(f"V5 track {fid} dài {f.durationSec}s, ngoài khoảng 2 giây–20 phút")
 
-    # V7 — số phiên đúng mẫu
+    # V7 — số phiên đúng mẫu (lessons-v1: mỗi hoạt động đúng một phiên)
     kinds = [i.kind for s in book.sections for i in s.items]
     rule = EXPECTED_SESSIONS.get(book.template)
+    if book.template == "lessons-v1":
+        used = [aid for s in plan.sessions for aid in s.activityIds]
+        for aid in acts:
+            if used.count(aid) != 1:
+                problems.append(f"V7 hoạt động {aid} nằm trong {used.count(aid)} phiên, mẫu lessons-v1 cần đúng 1")
     if rule:
         want = rule(kinds.count("unit"), kinds.count("review"), kinds.count("test"))
         if len(plan.sessions) != want:

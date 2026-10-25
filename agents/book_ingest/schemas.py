@@ -104,8 +104,10 @@ class AudioFile(_M):
 
 class BookInfo(_M):
     """Thông tin giới thiệu sách cho màn hình danh sách sách của app (khai báo ở book.yaml › info)."""
+    course: Optional[str] = None  # nhóm lộ trình trong tab Sách (books/catalog.json › courses); không có = IELTS
     role: str = ""            # vai trò trong lộ trình, ví dụ "Giáo trình chính"
     module: str = ""          # General Training / Academic
+    level: Optional[str] = None   # trình độ không theo band IELTS, ví dụ "JLPT N5"
     author: str = ""
     publisher: str = ""
     cefr: str = ""            # "A2–B1"

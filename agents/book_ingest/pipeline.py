@@ -2,6 +2,7 @@
 
 Mỗi bước ghi kết quả vào <thư mục sách>/work/, bước sau đọc lại. Gặp mục duyệt còn mở
 thì dừng (mã thoát 2) để người duyệt quyết định, rồi chạy lại là đi tiếp từ chỗ dừng.
+Mẫu lessons-v1 (lộ trình không có file sách, lessons.py) đi thẳng pack → validate.
 """
 from __future__ import annotations
 
@@ -9,7 +10,9 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from . import audio, chunks as ck, review as rv, scan as sc, structure as st, templates, validate as vd
+import yaml
+
+from . import audio, chunks as ck, lessons, review as rv, scan as sc, structure as st, templates, validate as vd
 from .ocr import OcrCache
 from .profile import Profile, load
 from .schemas import dump
@@ -51,10 +54,37 @@ def step_scan(profile: Profile, force: bool = False) -> dict:
     return data
 
 
+def run_lessons(book_dir: Path, res: Result, log) -> Result:
+    """Mẫu lessons-v1: dựng book.json, plan.json thẳng từ book.yaml (không có file sách để quét)."""
+    profile = lessons.load(book_dir)
+    book, plan = lessons.build(profile)
+    _write(book_dir / "book.json", dump(book))
+    _write(book_dir / "plan.json", dump(plan))
+    (book_dir / "report.md").write_text(lessons.report(profile, plan), encoding="utf-8")
+    log(f"[pack] book.json, plan.json, report.md → {book_dir} (mẫu {lessons.TEMPLATE}, không cần file sách)")
+    return finish(book_dir, res, log)
+
+
+def finish(book_dir: Path, res: Result, log) -> Result:
+    problems = vd.validate(book_dir)
+    if problems:
+        for p in problems:
+            log(f"[validate] {p}")
+        res.code = INVALID
+    else:
+        s = vd.summary(book_dir)
+        log(f"[validate] OK — {s['units']} unit, {s['reviews']} review, {s['tests']} test, "
+            f"{s['tracks']} track, {s['sessions']} phiên, tuần {s['weeks'][0]}–{s['weeks'][1]}")
+    return res
+
+
 def run(book_dir: Path, force: bool = False, allow_ocr: bool = True, say=print) -> Result:
     book_dir = Path(book_dir)
     res = Result(OK)
     log = lambda m: (res.messages.append(m), say(m))  # noqa: E731
+    path = book_dir / "book.yaml"
+    if path.exists() and lessons.is_lessons(yaml.safe_load(path.read_text(encoding="utf-8")) or {}):
+        return run_lessons(book_dir, res, log)
     profile = load(book_dir)
     work = work_dir(book_dir)
     review_path = work / "review.json"
@@ -105,17 +135,7 @@ def run(book_dir: Path, force: bool = False, allow_ocr: bool = True, say=print) 
     _write(book_dir / "plan.json", dump(plan))
     (book_dir / "report.md").write_text(report(profile, data, structure, matched, review, plan), encoding="utf-8")
     log(f"[pack] book.json, plan.json, report.md → {book_dir}")
-
-    problems = vd.validate(book_dir)
-    if problems:
-        for p in problems:
-            log(f"[validate] {p}")
-        res.code = INVALID
-    else:
-        s = vd.summary(book_dir)
-        log(f"[validate] OK — {s['units']} unit, {s['reviews']} review, {s['tests']} test, "
-            f"{s['tracks']} track, {s['sessions']} phiên, tuần {s['weeks'][0]}–{s['weeks'][1]}")
-    return res
+    return finish(book_dir, res, log)
 
 
 def report(profile: Profile, data: dict, structure: dict, matched: dict, review, plan) -> str:
