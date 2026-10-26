@@ -1,0 +1,213 @@
+# Unit 3 · Your time — Target activity: Invite someone out (Coursebook tr. 30), phiên U03-target.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U03-target.yaml
+# Nguồn: trang 30; đáp án theo Teacher's Book tr. 41 (2: Rocio mời Blake tới nhà ăn tối — Blake đi được; Léon mời Roberto
+# xem bóng đá Chelsea – Real Madrid — Roberto không đi được vì có hội thảo; 3a: 2 Are, 3 want, 4 like, 5 Yes, 6 sorry).
+# Audio gốc 1.38: phát nguyên hai hội thoại, rồi phát lại sáu câu của bài 3a (cắt theo mốc từng từ) — bài 3b của sách
+# cũng nghe lại chính 1.38. Hội thoại mẫu: Mai mời Tom đi dã ngoại bên sông Hương.
+id: U03-target
+activity: U03-target
+title: "Unit 3 · Your time"
+subtitle: "Speaking · Invite someone out"
+title_vi: "Mời ai đó đi chơi — hỏi có rảnh không, mời, nhận lời hoặc từ chối lịch sự (trang 30, audio 1.38)"
+tag: "EU A2 · UNIT 3"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 3: Your time. This is the Target activity: invite someone out."
+        say: "Welcome to Unit three: Your time. This is the Target activity: invite someone out."
+        vi: "Chào mừng đến với Unit 3: Your time (Thời gian của bạn). Target activity: mời ai đó đi chơi."
+      - emma: "Do you often invite people to your home? Do you invite people to go out? Where do you go?"
+        vi: "Bạn có hay mời người khác đến nhà không? Có rủ đi chơi không? Đi đâu?"
+      - mai: "I sometimes invite friends to cafés."
+        vi: "Thỉnh thoảng mình rủ bạn bè đi cà phê."
+      - tom: "And I invite my friends to football matches!"
+        vi: "Còn mình rủ bạn đi xem bóng đá!"
+
+  - kind: blanks
+    chapter: "Nghe 1.38: hai lời mời"
+    heading: "Task listening 2 · Rocio and Léon invite friends out"
+    heading_vi: "Audio 1.38 — họ mời bạn đi đâu? Người được mời có đi được không?"
+    items:
+      - {n: 1, q: "Rocio invites Blake to ___", answer: "her place for dinner", hint: "conversation 1"}
+      - {n: 2, q: "Can Blake go? ___", answer: "Yes, he can.", hint: "conversation 1"}
+      - {n: 3, q: "Léon invites Roberto to ___", answer: "a football match", hint: "conversation 2"}
+      - {n: 4, q: "Can Roberto go? ___", answer: "No, he has a seminar.", hint: "conversation 2"}
+    lines:
+      - emma: "Listen to Rocio and Léon inviting friends out. Where do they invite them? Can the friends go?"
+        say: "Listen to Rocio and Lay-on inviting friends out. Where do they invite them? Can the friends go?"
+        vi: "Nghe Rocio và Léon mời bạn đi chơi: mời đi đâu? Bạn họ có đi được không?"
+      - {track: "1.38", start: 5.8, end: 29.4, note: "1.38 · Rocio and Blake", focus: 0}
+      - {tom: "Rocio invites Blake to her place for dinner, on Saturday evening. And yes, he can go.", say: "Rocio invites Blake to her place for dinner, on Saturday evening. And yes, he can go.", reveal: [1, 2], vi: "Rocio mời Blake tới nhà ăn tối tối thứ Bảy. Blake đi được."}
+      - {track: "1.38", start: 35.7, end: 58.8, note: "1.38 · Léon and Roberto", focus: 2}
+      - {mai: "Léon invites Roberto to a football match. But Roberto can't go. He has a seminar that weekend.", say: "Lay-on invites Roberto to a football match. But Roberto can't go. He has a seminar that weekend.", reveal: [3, 4], vi: "Léon mời Roberto đi xem bóng đá, nhưng Roberto bận hội thảo cuối tuần đó."}
+
+  - kind: blanks
+    chapter: "Cụm từ: hỏi, mời, trả lời"
+    heading: "Task vocabulary 3 · Invitations"
+    heading_vi: "Điền free, Are, want, like, Yes, sorry — rồi nghe lại từng câu trong 1.38"
+    items:
+      - {n: 1, q: "Are you ___ on Saturday evening?", answer: "free", hint: "checking"}
+      - {n: 2, q: "___ you interested in football, Roberto?", answer: "Are", hint: "checking"}
+      - {n: 3, q: "Do you ___ to come to my place for dinner?", answer: "want", hint: "inviting"}
+      - {n: 4, q: "Would you ___ to come with me?", answer: "like", hint: "inviting"}
+      - {n: 5, q: "___, please. That sounds great.", answer: "Yes", hint: "answering"}
+      - {n: 6, q: "Oh no, I'm ___. I can't.", answer: "sorry", hint: "answering"}
+    lines:
+      - emma: "Exercise 3. Complete the sentences with these words: free, like, yes, want, are, sorry. Then listen again."
+        say: "Exercise three. Complete the sentences with these words: free, like, yes, want, are, sorry. Then listen again."
+        vi: "Bài 3: điền các từ free, like, yes, want, are, sorry rồi nghe lại để kiểm tra."
+        pause: 1.5
+      - {track: "1.38", start: 5.9, end: 8.8, note: "1.38 · checking", focus: 0, reveal: 1}
+      - {track: "1.38", start: 35.8, end: 38.5, note: "1.38 · checking", focus: 1, reveal: 2}
+      - {track: "1.38", start: 14.3, end: 16.8, note: "1.38 · inviting", focus: 2, reveal: 3}
+      - {track: "1.38", start: 46.9, end: 48.6, note: "1.38 · inviting", focus: 3, reveal: 4}
+      - {track: "1.38", start: 17.2, end: 20.0, note: "1.38 · answering", focus: 4, reveal: 5}
+      - {track: "1.38", start: 50.3, end: 52.5, note: "1.38 · answering", focus: 5, reveal: 6}
+
+  - kind: compare
+    chapter: "Mẫu câu mời"
+    heading: "Checking, inviting, answering"
+    heading_vi: "Hỏi trước có rảnh không, mời, rồi nhận lời hoặc từ chối"
+    items:
+      - {title: "Checking", title_vi: "Hỏi trước", lines: ["Are you free on Saturday evening?", "Are you interested in football?"]}
+      - {title: "Inviting", title_vi: "Mời", lines: ["Do you want to come to my place for dinner?", "Would you like to come with me?"]}
+      - {title: "Answering", title_vi: "Trả lời", lines: ["Yes, please. That sounds great.", "Oh no, I'm sorry. I can't. I have a seminar.", "Maybe next time."]}
+    lines:
+      - emma: "First, check: Are you free on Saturday evening? Are you interested in football?"
+        focus: 0
+        vi: "Trước hết hỏi xem người ta có rảnh, có thích không."
+      - emma: "Then invite: Do you want to come to my place for dinner? Would you like to come with me?"
+        focus: 1
+        vi: "Rồi mời: Do you want to …? / Would you like to …?"
+      - emma: "To say yes: Yes, please. That sounds great. To say no: Oh no, I'm sorry. I can't."
+        focus: 2
+        vi: "Nhận lời: Yes, please. That sounds great. Từ chối: Oh no, I'm sorry. I can't."
+      - tom: "Is it OK to just say no?"
+        vi: "Chỉ nói no có được không?"
+      - emma: "It's better to say sorry and give a reason: I'm sorry, I can't. I have a seminar that weekend. And the other person says: Maybe next time."
+        focus: 2
+        vi: "Nên xin lỗi và nói lý do. Người mời đáp: Maybe next time (để lần sau nhé)."
+
+  - kind: compare
+    chapter: "Thích và không thích"
+    heading: "Are you interested in …? · Say what you like and dislike"
+    heading_vi: "Trả lời câu hỏi kiểm tra: nói điều mình thích và không thích (ôn bài 3.1)"
+    items:
+      - {title: "Yes!", title_vi: "Thích", lines: ["Yes, I love football!", "Yes, I'm really interested in music.", "Yes, I like jazz."]}
+      - {title: "Not really", title_vi: "Không thích lắm", lines: ["Not really. I'm not very interested in football.", "I don't like jazz very much.", "I hate horror films!"]}
+    lines:
+      - emma: "Before you invite, you check: Are you interested in football? Your friend can say what they like, or what they don't like."
+        vi: "Trước khi mời, hỏi xem bạn có thích không. Người kia nói mình thích hay không thích."
+      - {tom: "Are you interested in football, Mai?", focus: 1}
+      - {mai: "Not really. I'm not very interested in football. But I love music!", focus: 1, vi: "Không hẳn. Mình không thích bóng đá lắm, nhưng mình rất thích âm nhạc!"}
+      - {tom: "Great! Would you like to come to a concert with me?", focus: 0}
+      - {mai: "Yes, please. That sounds great.", focus: 0}
+      - emma: "Good. Check first, then invite your friend to something they like."
+        vi: "Đúng vậy: hỏi trước, rồi mời bạn đi thứ họ thích."
+
+  - kind: bullets
+    chapter: "Chuẩn bị"
+    heading: "Task 4 · Three things to invite a friend to"
+    heading_vi: "Chọn ba thứ muốn mời bạn đi, rồi quyết định ngày, giờ và chi tiết"
+    items:
+      - {en: "a meal at your home: what kind of food? how many people?", vi: "bữa ăn ở nhà: món gì? mấy người?"}
+      - {en: "a sports event: what sport? which teams?", vi: "trận thể thao: môn gì? đội nào?"}
+      - {en: "a concert: who? where?", vi: "buổi hòa nhạc: ai hát? ở đâu?"}
+      - {en: "a café or restaurant: what restaurant? what kind of food?", vi: "quán cà phê, nhà hàng: quán nào? món gì?"}
+      - {en: "a party: where? what for?", vi: "bữa tiệc: ở đâu? nhân dịp gì?"}
+      - {en: "a picnic: where? what do you need to bring?", vi: "dã ngoại: ở đâu? cần mang gì?"}
+    lines:
+      - emma: "Now the task. Think of three things you'd like to invite a friend to. For example, a meal at your home, a sports event, or a concert."
+        focus: 0
+        vi: "Bài 4: nghĩ ba thứ bạn muốn mời bạn bè đi — bữa ăn ở nhà, trận thể thao, buổi hòa nhạc …"
+      - {emma: "Or a café or restaurant, a party, or a picnic.", focus: 3}
+      - {emma: "Then decide the date, the time and other details. For a picnic: where? What do you need to bring?", focus: 5, vi: "Rồi quyết định ngày, giờ và chi tiết khác."}
+      - mai: "I'd like to invite friends to a picnic by the Perfume River, on Sunday afternoon. Everybody brings some food."
+        focus: 5
+        vi: "Mình muốn rủ bạn đi dã ngoại bên sông Hương chiều Chủ nhật, mỗi người mang một ít đồ ăn."
+
+  - kind: letter
+    chapter: "Hội thoại mẫu"
+    heading: "Mai invites Tom"
+    heading_vi: "Mai mời Tom đi dã ngoại và đi nghe hòa nhạc — nghe rồi đóng vai cùng họ"
+    roles: {emma: teacher, mai: inviting, tom: answering}
+    items:
+      - {text: "MAI: Hi Tom! Are you free on Sunday afternoon?", say: "Hi Tom! Are you free on Sunday afternoon?", note: "checking"}
+      - {text: "TOM: Sunday afternoon? Yes, I am.", say: "Sunday afternoon? Yes, I am."}
+      - {text: "MAI: Would you like to come to a picnic by the Perfume River?", say: "Would you like to come to a picnic by the Perfume River?", note: "inviting"}
+      - {text: "TOM: Yes, please. That sounds great. What time?", say: "Yes, please. That sounds great. What time?", note: "yes"}
+      - {text: "MAI: At three o'clock. Can you bring some fruit?", say: "At three o'clock. Can you bring some fruit?"}
+      - {text: "TOM: Sure, no problem.", say: "Sure, no problem."}
+      - {text: "MAI: And are you interested in music? There's a concert on Friday evening.", say: "And are you interested in music? There's a concert on Friday evening.", note: "checking"}
+      - {text: "TOM: Oh no, I'm sorry. I can't. I work on Friday evenings.", say: "Oh no, I'm sorry. I can't. I work on Friday evenings.", note: "no + a reason"}
+      - {text: "MAI: OK. Maybe next time!", say: "OK. Maybe next time!"}
+    lines:
+      - emma: "Now a model conversation. Mai invites Tom. Listen."
+        vi: "Hội thoại mẫu: Mai mời Tom. Nghe nhé."
+      - {read: mai, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: tom, focus: 5}
+      - {read: mai, focus: 6}
+      - {read: tom, focus: 7}
+      - {read: mai, focus: 8}
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Task 5 · Mai invites you"
+    heading_vi: "Mai mời — bạn tạm dừng video và trả lời (nhận lời hoặc từ chối có lý do), rồi nghe Tom"
+    items:
+      - {q: "Are you free on Saturday evening?", a: "Yes, I am. Why?", ask: mai, by: tom}
+      - {q: "Do you want to come to my place for dinner?", a: "Yes, please. That sounds great.", ask: mai, by: tom}
+      - {q: "Would you like to come to a football match with me on Sunday?", a: "Oh no, I'm sorry, I can't. I have an English class on Sunday.", ask: mai, by: tom}
+    lines:
+      - emma: "Your turn. Mai invites you. Answer her. Say yes, or say sorry and give a reason."
+        vi: "Đến lượt bạn: Mai mời, bạn trả lời — nhận lời, hoặc xin lỗi và nói lý do."
+      - {mai: "Are you free on Saturday evening?", focus: 0, pause: 1.5}
+      - {tom: "Yes, I am. Why?", reveal: 0}
+      - {mai: "Do you want to come to my place for dinner?", focus: 1, pause: 1.5}
+      - {tom: "Yes, please. That sounds great.", reveal: 1}
+      - {mai: "Would you like to come to a football match with me on Sunday?", focus: 2, pause: 1.5}
+      - {tom: "Oh no, I'm sorry, I can't. I have an English class on Sunday.", reveal: 2}
+      - emma: "Now you invite people. Invite different friends to your three places, and find someone to go to each place."
+        vi: "Giờ bạn đi mời: mời những người khác nhau tới ba nơi của bạn, tìm người đi cùng cho mỗi nơi."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc khi mời"
+    items:
+      - {wrong: "Are you free in Saturday?", right: "Are you free on Saturday?", note: "on + thứ trong tuần"}
+      - {wrong: "Do you want come to my place?", right: "Do you want to come to my place?", note: "want + to + động từ"}
+      - {wrong: "Would you like come with me?", right: "Would you like to come with me?", note: "would like + to + động từ"}
+      - {wrong: "No, I can't.", right: "Oh no, I'm sorry, I can't. I have a class.", note: "từ chối: xin lỗi + lý do"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "Are you free on Saturday. On for days.", focus: 0}
+      - {emma: "Do you want to come. Don't forget to.", focus: 1}
+      - {emma: "Would you like to come with me. To again.", focus: 2}
+      - {emma: "And don't just say No, I can't. Say sorry, and give a reason.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Are you free on …? · Are you interested in …?", vi: "Hỏi trước: có rảnh không, có thích không"}
+      - {en: "Do you want to …? · Would you like to …?", vi: "Mời"}
+      - {en: "Yes, please. That sounds great.", vi: "Nhận lời"}
+      - {en: "Oh no, I'm sorry. I can't. I have … — Maybe next time.", vi: "Từ chối lịch sự, có lý do"}
+    lines:
+      - {emma: "Let's remember. First check: Are you free on Saturday?", focus: 0}
+      - {emma: "Then invite: Would you like to come to my place for dinner?", focus: 1}
+      - {emma: "Say yes: Yes, please. That sounds great.", focus: 2}
+      - {emma: "Or say no politely: Oh no, I'm sorry. I can't. I have a class. In the next video, the keyword go, and phone messages.", focus: 3, vi: "Video sau: từ go và nhận tin nhắn điện thoại."}

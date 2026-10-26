@@ -339,7 +339,7 @@ try{
     await page.click(".bk-vbar button:last-child");
   });
 
-  await step("Giai đoạn 0 (English Unlimited A2): video Intro, Unit 1–2; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
+  await step("Giai đoạn 0 (English Unlimited A2): video Intro, Unit 1–3; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
     const card = page.locator("#p-book .bk-lib", { hasText: "English Unlimited A2 Elementary" });
@@ -347,7 +347,7 @@ try{
     assert.match(text, /Elementary · CEFR A1 → A2/);
     assert.match(text, /15 unit · 4 test · 171 track audio/);
     assert.match(text, /79 phiên × 60 phút/);
-    assert.match(text, /(^|\D)11 video bài giảng/);                    // file 08 mục 6.8: Intro 3 video, Unit 1–2 mỗi unit 4 video
+    assert.match(text, /(^|\D)15 video bài giảng/);                    // file 08 mục 6.8: Intro 3 video, Unit 1–3 mỗi unit 4 video
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
     assert.equal(await page.locator("#p-book .bk-unit").count(), 19);   // Intro + 14 unit + 3 Achievement test + mốc A2 Key
@@ -357,6 +357,7 @@ try{
       "Intro · About you": ["Speaking", "Listening", "Grammar"],
       "Unit 1 · People in your life": ["Listening", "Reading", "Speaking", "Explore"],
       "Unit 2 · Away from home": ["Listening", "Reading", "Speaking", "Explore"],
+      "Unit 3 · Your time": ["Reading", "Listening", "Speaking", "Explore"],        // bài 3.1 là bài đọc, 3.2 là bài nghe
     };
     const labels = [];
     for(const [unit, want] of Object.entries(skills)){
