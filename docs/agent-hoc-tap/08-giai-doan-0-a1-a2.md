@@ -148,7 +148,10 @@ chép vào `books/` rồi làm như A2:
 
 ## 5. Việc tiếp theo
 
-- **Video bài giảng cho các unit còn lại** (P2-53): làm theo sổ tay ở mục 6. Đã xong: xem bảng độ phủ ở mục 6.8.
+- **Video bài giảng** (P2-53): đã xong Intro và Unit 1–3, 15 video (bảng 6.8). Unit 4–14 làm theo sổ tay ở mục 6:
+  - Unit 4 dùng tiếp CD1: lời đã chép tới 1.57, track 1.51 thiếu (xử lý như mục 6.5);
+  - từ Unit 5 chép lời CD2 (2.1–2.57) và CD3 (3.1–3.62) trước, ví dụ
+    `python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 2.1 2.57`.
 - **A1 Starter** (P2-52): repo chưa có sách (đã gỡ ngày 26/10).
 - Đề Achievement test và đề mẫu A2 Key: nếu người học đặt file vào thư mục sách, khai thêm vào `files` và `refs` của
   bốn mục test.
@@ -315,5 +318,15 @@ In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_eng
 | Target activity · nhiệm vụ nói | sách tr. 22 | `U02-target` — Speaking · Take care of a guest | 6:06 | 9 |
 | Explore Writing · từ khoá và viết | sách tr. 23–24 | `U02-explore` — Explore Writing · in, an email to ask for something | 6:37 | 13 |
 | Look again · ôn tập và tự đánh giá | sách tr. 25 | không làm video riêng (mục 6.1) | — | — |
+
+#### U03 · Your time — 4/5 phần có video, 4 video, 27:44 (đợt 22)
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 26–27 | `U03-lesson-1` — Reading · Happiness is …: free time, pronouns, don't / doesn't | 6:23 | 13 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 28–29 | `U03-lesson-2` — Listening · Do you like New Year? always / often, do / does questions | 8:40 | 14 |
+| Target activity · nhiệm vụ nói | sách tr. 30 | `U03-target` — Speaking · Invite someone out | 5:06 | 10 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 31–32 | `U03-explore` — Explore Speaking · go, conversation topics, phone messages | 7:35 | 11 |
+| Look again · ôn tập và tự đánh giá | sách tr. 33 | không làm video riêng (mục 6.1) | — | — |
 
 <!-- bảng độ phủ: cập nhật sau mỗi unit -->

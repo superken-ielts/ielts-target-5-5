@@ -5,6 +5,64 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 22 — 26/10/2026: Video Giai đoạn 0 — Unit 3 (4 video)
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Làm theo sổ tay ở file 08 mục 6. Xong đợt này là đủ phần đã hẹn:
+Intro và Unit 1–3 (15 video).
+
+**Bốn video Unit 3 · Your time** (27:44, mỗi video gắn vào một phiên của unit)
+- `U03-lesson-1` — Reading · Happiness is …: free time, pronouns, don't / doesn't (6:23): tám bài đăng "Happiness
+  is …" đọc từng câu (hai cảnh, mỗi cảnh bốn bài cho chữ đủ to); đại từ chủ ngữ và tân ngữ; hoạt động lúc rảnh (1.31,
+  mười hai cụm); sáu câu mẫu "Happiness is …" của Mai; don't / doesn't (1.32, bảy câu; bài 2a); Moira và Sam làm gì lúc
+  rảnh (Tom và Mai kể lại vì thiếu 1.33); Your turn; lỗi hay gặp.
+- `U03-lesson-2` — Listening · Do you like New Year? always / often, do / does questions (8:40): Min và Paul nói về
+  năm mới (1.34, phát nguyên hai bài), bài 3a (phát lại sáu câu), 's và s', trạng từ tần suất (phát lại bốn câu), trọng
+  âm (1.35, chín từ), Tết của Mai, câu hỏi với do / does (câu hỏi phát từ 1.34 vì thiếu 1.36), sắp xếp câu hỏi (1.37,
+  tám câu), Your turn, lỗi hay gặp.
+- `U03-target` — Speaking · Invite someone out (5:06): Rocio và Léon mời bạn (1.38), Task vocabulary (phát lại sáu
+  câu của 1.38), hỏi trước – mời – trả lời, nói điều mình thích và không thích, chuẩn bị ba lời mời, hội thoại mẫu Mai
+  mời Tom, Your turn, lỗi hay gặp.
+- `U03-explore` — Explore Speaking · go, conversation topics, phone messages (7:35): Keyword go (bài 1a, bảng bốn
+  cách dùng, bài 2a), Across cultures (Ruth kể lại vì thiếu 1.39; Amina 1.40), ở Việt Nam thì sao, Rocio gọi tìm
+  Blake (1.41) và tờ ghi tin nhắn, sáu câu điện thoại (1.42), Your turn ghi tin nhắn theo thẻ vai bài 5a.
+
+**Track thiếu của Unit 3** (CD1 thiếu 1.33, 1.36, 1.39): 1.36 thay bằng câu hỏi có sẵn trong 1.34; 1.33 và 1.39 không
+có ở track nào, nên nhân vật kể lại theo đáp án Teacher's Book và màn hình ghi rõ không có audio (sổ tay mục 6.5).
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/U03-*.yaml`, `U03-*.mp4` | Kịch bản và video Unit 3 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | Thêm bốn video Unit 3 (do lệnh `build` ghi) |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 6.8 (độ phủ Unit 3), mục 5 (việc tiếp theo) |
+| `docs/agent-hoc-tap/04-checklist.md` (P2-53) | Đợt 22 |
+| `tests/web/book.e2e.mjs` | Thẻ A2 có 15 video; Unit 3: nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore) |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+- `python3 web/build.py && git diff --stat`: bản dựng khớp nguồn; A2 79 phiên, 15 video.
+- `cd agents && python -m pytest -q`: 127 test qua (hồi quy "video A2 khớp `lessons.json`" chạy trên 15 video).
+- `node --test "tests/web/*.test.mjs"`: 16 test qua.
+- `node tests/web/book.e2e.mjs`: E2E OK; Intro, Unit 1–3 có nút video theo thứ tự phiên, dài 5–10 phút.
+- `python -m lesson_video phonemes` trên bốn kịch bản Unit 3: 0 câu có ⚠.
+- Bốn video: H.264 1280×720 + AAC, có chương, độ lớn trung bình −17 dB.
+- Giao diện ở khổ điện thoại: thẻ Unit 3 hiện "Video bài giảng · 4", mỗi video nằm dưới phiên của nó; phiên Bài 1 mở
+  `U03-lesson-1.mp4`. Không có lỗi JS.
+
+### Còn treo
+
+- P2-53: Unit 4–14 chưa có video. Unit 4 dùng tiếp CD1 (đã chép lời tới 1.57); từ Unit 5 cần chép lời CD2, CD3 trước
+  (`python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 2.1 2.57`).
+
+---
+
 ## Đợt 21 — 26/10/2026: Video Giai đoạn 0 — Unit 2 (4 video)
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Làm theo sổ tay ở file 08 mục 6.

@@ -1,0 +1,310 @@
+# Unit 3 · Your time — Bài 3.2 (Coursebook tr. 28–29): Do you like New Year?, What do you usually do? Phiên U03-lesson-2.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U03-lesson-2.yaml
+# Nguồn: trang 28–29; đáp án theo Teacher's Book tr. 39–40 (2: Min thích năm mới, Paul không; 3a: 1 parents', 2 family
+# games, 3 soup, 4 read, 5 stay up late, 6 loves; 4: 1 sometimes, 2 often, 3 usually; Pronunciation 5a: 1 always,
+# sometimes, never, often · 2 enjoy · 3 usually · 4 important · 5 afternoon · 6 traditional; Grammar 1a: 2 do, don't,
+# 3 do, 4 do, 6 does, doesn't, 7 does, 8 does; 2a: xem 1.37).
+# Audio gốc: 1.34 (Min, Paul — phát nguyên hai bài, rồi phát lại các câu của bài 3a, bài 4 và các câu hỏi của bảng ngữ
+# pháp), 1.35 (từng từ, trọng âm), 1.37 (tám câu hỏi, phát từng câu). Track 1.36 (nghe lại bảng ngữ pháp) THIẾU trong
+# bộ CD1: các câu hỏi của bảng có sẵn trong 1.34 nên phát từ đó; câu trả lời ngắn do Tom đọc.
+id: U03-lesson-2
+activity: U03-lesson-2
+title: "Unit 3 · Your time"
+subtitle: "Listening · Do you like New Year? always / often, do / does questions"
+title_vi: "Nghe Min và Paul nói về năm mới; 's và s'; trạng từ tần suất; trọng âm; câu hỏi với do / does (trang 28–29, audio 1.34–1.37)"
+tag: "EU A2 · UNIT 3"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 3. When do you celebrate New Year? Do you like it? Why, or why not?"
+        say: "Welcome back to Unit three. When do you celebrate New Year? Do you like it? Why, or why not?"
+        vi: "Bạn đón năm mới vào lúc nào? Bạn có thích không? Vì sao?"
+      - mai: "In Vietnam, we celebrate Tết, the Lunar New Year. It's usually in January or February. I love it!"
+        say: "In Vietnam, we celebrate Tet, the Lunar New Year. It's usually in January or February. I love it!"
+        vi: "Ở Việt Nam, chúng mình đón Tết âm lịch, thường vào tháng 1 hoặc tháng 2. Mình rất thích!"
+      - tom: "In the US, it's January the first. I don't really like it. I'm always tired!"
+        vi: "Ở Mỹ là ngày 1 tháng 1. Mình không thích lắm, lúc nào cũng mệt!"
+
+  - kind: blanks
+    chapter: "Nghe 1.34: Min và Paul"
+    heading: "Listening 2 · Do Min and Paul like New Year?"
+    heading_vi: "Audio 1.34 — Min (Hàn Quốc) và Paul (Anh) nói về năm mới: họ có thích không?"
+    items:
+      - {n: 1, q: "Min, from Korea: ___", answer: "Yes. She loves Seollal, the traditional New Year.", hint: "conversation 1"}
+      - {n: 2, q: "Paul, from the UK: ___", answer: "No. For him, it's just a normal day.", hint: "conversation 2"}
+    lines:
+      - emma: "Listen to Min from Korea and Paul from the UK talk about New Year. Do they like it?"
+        vi: "Nghe Min và Paul nói về năm mới. Họ có thích không?"
+      - {track: "1.34", start: 5.5, end: 84.7, note: "1.34 · Min, from Korea", focus: 0}
+      - {mai: "Min loves New Year. In Korea, they have two New Years. Seollal is the traditional New Year, and it's a three day holiday.", say: "Min loves New Year. In Korea, they have two New Years. Sul-lal is the traditional New Year, and it's a three day holiday.", reveal: 1, vi: "Min rất thích năm mới. Hàn Quốc có hai năm mới; Seollal là năm mới truyền thống, nghỉ ba ngày."}
+      - {track: "1.34", start: 89.9, end: 143.2, note: "1.34 · Paul, from the UK", focus: 1}
+      - {tom: "Paul doesn't like New Year. For him, it's just a normal day. But his wife loves it!", reveal: 2, vi: "Paul không thích năm mới — với anh ấy đó chỉ là một ngày bình thường. Nhưng vợ anh ấy thì rất thích!"}
+
+  - kind: blanks
+    chapter: "Bài 3a: chọn từ đúng"
+    heading: "Listening 3 · Circle the correct words"
+    heading_vi: "Chọn từ đúng theo bài nghe — rồi nghe lại từng câu trong 1.34"
+    items:
+      - {n: 1, q: "Min: I usually go to my ___ house.", answer: "parents'", hint: "parents' / brother's"}
+      - {n: 2, q: "Min: We all play ___.", answer: "family games", hint: "family games / football"}
+      - {n: 3, q: "Min: We eat ___ with rice cakes.", answer: "soup", hint: "fish / soup"}
+      - {n: 4, q: "Paul: I stay at home and ___.", answer: "read", hint: "play computer games / read"}
+      - {n: 5, q: "Paul: I usually ___.", answer: "stay up late", hint: "stay up late / go to bed early"}
+      - {n: 6, q: "Paul: My wife ___ parties.", answer: "loves", hint: "loves / doesn't like"}
+    lines:
+      - emma: "Exercise 3. Circle the correct words. Then listen again to check."
+        say: "Exercise three. Circle the correct words. Then listen again to check."
+        vi: "Bài 3: chọn từ đúng rồi nghe lại để kiểm tra."
+        pause: 1.5
+      - {track: "1.34", start: 40.6, end: 43.6, note: "1.34 · Min", focus: 0, reveal: 1}
+      - {track: "1.34", start: 55.5, end: 59.0, note: "1.34 · Min", focus: 1, reveal: 2}
+      - {track: "1.34", start: 65.8, end: 71.0, note: "1.34 · Min", focus: 2, reveal: 3}
+      - {track: "1.34", start: 107.8, end: 112.5, note: "1.34 · Paul", focus: 3, reveal: 4}
+      - {track: "1.34", start: 115.7, end: 121.0, note: "1.34 · Paul", focus: 4, reveal: 5}
+      - {track: "1.34", start: 128.0, end: 131.8, note: "1.34 · Paul", focus: 5, reveal: 6}
+      - emma: "Stay up late means you go to bed late, after midnight."
+        focus: 4
+        vi: "stay up late = thức khuya."
+
+  - kind: compare
+    chapter: "my brother's, my parents'"
+    heading: "Grammar · Possessive 's and s'"
+    heading_vi: "Một người: 's; nhiều người (danh từ số nhiều có s): chỉ thêm dấu '"
+    items:
+      - {title: "singular", title_vi: "một người", lines: ["my brother's house", "Min's family", "my sister's flat"]}
+      - {title: "plural", title_vi: "nhiều người", lines: ["my parents' house", "my grandparents' house", "my friends' homes"]}
+    lines:
+      - emma: "Min says: I usually go to my parents' house. One brother: my brother's house, apostrophe s."
+        focus: 0
+        vi: "Một anh trai: my brother's house — thêm 's."
+      - emma: "But two parents: my parents' house. Parents already ends in s, so we only add the apostrophe. They sound the same."
+        focus: 1
+        vi: "Hai bố mẹ: my parents' house — parents đã có s nên chỉ thêm dấu '. Đọc giống nhau."
+      - mai: "For Tết, I always go to my grandparents' house."
+        say: "For Tet, I always go to my grandparents' house."
+        focus: 1
+        vi: "Tết nào mình cũng về nhà ông bà."
+
+  - kind: blanks
+    chapter: "always, usually, often, sometimes"
+    heading: "Vocabulary 4 · Adverbs of frequency"
+    heading_vi: "Bao lâu một lần? Điền sometimes, often, usually, always — rồi nghe từng câu trong 1.34"
+    items:
+      - {n: 1, q: "My family and I ___ go to the sea.", answer: "sometimes", hint: "Min"}
+      - {n: 2, q: "My brother and his family ___ come too.", answer: "often", hint: "Min"}
+      - {n: 3, q: "She ___ goes out with friends from work.", answer: "usually", hint: "Paul"}
+      - {n: 4, q: "In the afternoon or evening, we ___ see friends.", answer: "always", hint: "Min"}
+    lines:
+      - emma: "Vocabulary. How often do Min and Paul do things? Listen."
+        vi: "Từ vựng: Min và Paul làm những việc đó bao lâu một lần? Nghe nhé."
+      - {track: "1.34", start: 31.7, end: 35.5, note: "1.34 · Min", focus: 0, reveal: 1}
+      - {track: "1.34", start: 43.8, end: 46.9, note: "1.34 · Min", focus: 1, reveal: 2}
+      - {track: "1.34", start: 131.8, end: 133.9, note: "1.34 · Paul", focus: 2, reveal: 3}
+      - {track: "1.34", start: 74.5, end: 78.3, note: "1.34 · Min", focus: 3, reveal: 4}
+
+  - kind: bullets
+    chapter: "Thang tần suất"
+    heading: "Vocabulary 4 · How often?"
+    heading_vi: "Từ 100% xuống 0% — đặt trước động từ chính: I usually go …, we always see …"
+    items:
+      - {en: "always — 100%", vi: "luôn luôn: We always see friends."}
+      - {en: "usually", vi: "thường thường: She usually goes out with friends."}
+      - {en: "often", vi: "hay, thường: My brother often comes too."}
+      - {en: "sometimes", vi: "thỉnh thoảng: We sometimes go to the sea."}
+      - {en: "never — 0%", vi: "không bao giờ: I never stay up late."}
+    lines:
+      - {emma: "Always means one hundred percent: every time.", focus: 0, vi: "always = 100%, lần nào cũng vậy."}
+      - {emma: "Usually means most of the time. Often means a lot.", focus: 1, vi: "usually = phần lớn các lần; often = nhiều lần."}
+      - {emma: "Sometimes means not a lot.", focus: 3, vi: "sometimes = thỉnh thoảng."}
+      - {emma: "And never means zero percent: not one time.", focus: 4, vi: "never = 0%, không lần nào."}
+      - {emma: "Put them before the main verb: I usually go, we always see, she never stays up late.", focus: 1, vi: "Đặt trước động từ chính."}
+      - tom: "I never stay up late. I always go to bed at ten!"
+        focus: 4
+        vi: "Mình không bao giờ thức khuya. Lúc nào cũng đi ngủ lúc 10 giờ!"
+
+  - kind: vocab
+    chapter: "Trọng âm — nghe 1.35"
+    heading: "Pronunciation 5 · Word stress 2"
+    heading_vi: "Mấy âm tiết? Nhấn ở đâu? Nghe 1.35, tạm dừng để nhắc lại"
+    items:
+      - {w: "always", pos: "AL·ways — Oo", vi: "luôn luôn", ex: "We always see friends."}
+      - {w: "sometimes", pos: "SOME·times — Oo", vi: "thỉnh thoảng", ex: "We sometimes go to the sea."}
+      - {w: "never", pos: "NE·ver — Oo", vi: "không bao giờ", ex: "I never stay up late."}
+      - {w: "often", pos: "OF·ten — Oo", vi: "hay, thường", ex: "My brother often comes too."}
+      - {w: "enjoy", pos: "en·JOY — oO", vi: "thích, tận hưởng", ex: "I enjoy New Year."}
+      - {w: "usually", pos: "U·sual·ly — Ooo", vi: "thường thường", ex: "I usually stay at home."}
+      - {w: "important", pos: "im·POR·tant — oOo", vi: "quan trọng", ex: "Seollal is an important holiday."}
+      - {w: "afternoon", pos: "af·ter·NOON — ooO", vi: "buổi chiều", ex: "in the afternoon"}
+      - {w: "traditional", pos: "tra·DI·tion·al — oOoo", vi: "truyền thống", ex: "our traditional New Year"}
+    lines:
+      - emma: "Pronunciation. How many syllables? Where's the stress? Listen and repeat."
+        focus: 0
+        vi: "Phát âm: mấy âm tiết, nhấn ở đâu? Nghe và nhắc lại."
+      - {track: "1.35", start: 4.8, end: 6.0, note: "1.35 · always", focus: 0, pause: 1.2}
+      - {track: "1.35", start: 8.1, end: 9.6, note: "1.35 · sometimes", focus: 1, pause: 1.2}
+      - {track: "1.35", start: 12.0, end: 13.0, note: "1.35 · never", focus: 2, pause: 1.2}
+      - {track: "1.35", start: 15.5, end: 16.4, note: "1.35 · often", focus: 3, pause: 1.2}
+      - {track: "1.35", start: 21.0, end: 22.1, note: "1.35 · enjoy", focus: 4, pause: 1.2}
+      - {track: "1.35", start: 26.7, end: 27.9, note: "1.35 · usually", focus: 5, pause: 1.2}
+      - {track: "1.35", start: 32.0, end: 33.3, note: "1.35 · important", focus: 6, pause: 1.2}
+      - {track: "1.35", start: 37.8, end: 39.1, note: "1.35 · afternoon", focus: 7, pause: 1.2}
+      - {track: "1.35", start: 43.7, end: 44.9, note: "1.35 · traditional", focus: 8, pause: 1.2}
+      - emma: "Usually sounds like you-zhoo-lee. And often has no t sound for many people: off-en."
+        say: "Usually sounds like you, zhoo, lee. And often has no t sound for many people: off, en."
+        focus: 5
+        vi: "usually đọc /ˈjuːʒuəli/; often thường đọc /ˈɒfən/, không có âm t."
+
+  - kind: qa
+    chapter: "Tết của Mai"
+    heading: "Speaking 6 · What do you usually do for New Year?"
+    heading_vi: "Tom hỏi Mai về Tết bằng các câu hỏi trong bài nghe — bạn tạm dừng và trả lời cho bạn"
+    items:
+      - {q: "What do you usually do for Tết?", a: "I usually go to my parents' house. My grandparents often come too.", ask: tom, by: mai}
+      - {q: "Do you eat a special meal?", a: "Yes, we do. We always eat bánh chưng. It's a square rice cake.", ask: tom, by: mai}
+      - {q: "Do the children do anything special?", a: "Yes, they wear new clothes, and they get lucky money in red envelopes.", ask: tom, by: mai}
+      - {q: "Do you go out at all?", a: "Yes, sometimes. We often go to the pagoda on the first morning.", ask: tom, by: mai}
+    lines:
+      - emma: "Speaking. What do you usually do for New Year? Think about food and drink, people and activities. Tom asks Mai the questions from the listening."
+        vi: "Năm mới bạn thường làm gì? Nghĩ về đồ ăn uống, người thân, hoạt động. Tom hỏi Mai bằng các câu trong bài nghe."
+      - {tom: "What do you usually do for Tết?", say: "What do you usually do for Tet?", focus: 0, pause: 1.5}
+      - {mai: "I usually go to my parents' house. My grandparents often come too.", reveal: 0}
+      - {tom: "Do you eat a special meal?", focus: 1, pause: 1.5}
+      - {mai: "Yes, we do. We always eat bánh chưng. It's a square rice cake.", say: "Yes, we do. We always eat bahn chung. It's a square rice cake.", reveal: 1, vi: "Có. Nhà mình luôn ăn bánh chưng — bánh gạo hình vuông."}
+      - {tom: "Do the children do anything special?", focus: 2, pause: 1.5}
+      - {mai: "Yes, they wear new clothes, and they get lucky money in red envelopes.", reveal: 2, vi: "Có, trẻ con mặc quần áo mới và được lì xì trong phong bao đỏ."}
+      - {tom: "Do you go out at all?", focus: 3, pause: 1.5}
+      - {mai: "Yes, sometimes. We often go to the pagoda on the first morning.", reveal: 3, vi: "Thỉnh thoảng. Nhà mình hay đi chùa sáng mùng một."}
+
+  - kind: blanks
+    chapter: "Câu hỏi với do / does"
+    heading: "Grammar 1 · Present simple: questions"
+    heading_vi: "Điền do, don't, does, doesn't — nghe lại các câu hỏi trong 1.34"
+    items:
+      - {n: 1, q: "___ the children do anything special?", answer: "Do", hint: "I, you, we, they"}
+      - {n: 2, q: "Yes, they ___. / No, they don't.", answer: "do", hint: "I, you, we, they"}
+      - {n: 3, q: "What ___ you usually do?", answer: "do", hint: "I, you, we, they"}
+      - {n: 4, q: "What ___ we eat?", answer: "do", hint: "I, you, we, they"}
+      - {n: 5, q: "___ she stay at home with you?", answer: "Does", hint: "he, she, it"}
+      - {n: 6, q: "Yes, she ___. / No, she doesn't.", answer: "does", hint: "he, she, it"}
+      - {n: 7, q: "What ___ your wife do?", answer: "does", hint: "he, she, it"}
+      - {n: 8, q: "What ___ Seollal mean?", answer: "does", hint: "he, she, it"}
+    lines:
+      - emma: "Grammar. Complete the questions and answers with do, don't, does, doesn't. Then listen to the questions in the conversations."
+        vi: "Ngữ pháp: điền do, don't, does, doesn't; rồi nghe lại các câu hỏi trong bài nghe."
+        pause: 1.5
+      - {track: "1.34", start: 49.0, end: 51.6, note: "1.34 · question 1", focus: 0, reveal: 1}
+      - {tom: "Yes, they do. No, they don't.", focus: 1, reveal: 2}
+      - {track: "1.34", start: 28.9, end: 30.5, note: "1.34 · question 3", focus: 2, reveal: 3}
+      - {track: "1.34", start: 63.9, end: 65.3, note: "1.34 · question 4", focus: 3, reveal: 4}
+      - {track: "1.34", start: 126.2, end: 128.0, note: "1.34 · question 5", focus: 4, reveal: 5}
+      - {tom: "Yes, she does. No, she doesn't.", focus: 5, reveal: 6}
+      - {track: "1.34", start: 124.5, end: 126.2, note: "1.34 · question 7", focus: 6, reveal: 7}
+      - {track: "1.34", start: 19.9, end: 21.7, note: "1.34 · question 8", focus: 7, reveal: 8}
+
+  - kind: compare
+    chapter: "Quy tắc: do, does"
+    heading: "Grammar 1 · do and does"
+    heading_vi: "Câu hỏi: do / does + động từ nguyên mẫu; trả lời ngắn lặp lại do / does"
+    items:
+      - {title: "I, you, we, they", title_vi: "do", lines: ["Do you like New Year?", "Yes, I do. · No, I don't.", "What do you usually do?"]}
+      - {title: "he, she, it", title_vi: "does", lines: ["Does she stay at home?", "Yes, she does. · No, she doesn't.", "What does your wife do?"]}
+    lines:
+      - emma: "Questions with I, you, we and they: do plus a verb. Do you like New Year? What do you usually do?"
+        focus: 0
+        vi: "I, you, we, they: do + động từ."
+      - emma: "With he, she and it: does plus a verb, with no s on the verb. Does she stay at home? What does your wife do?"
+        focus: 1
+        vi: "he, she, it: does + động từ nguyên mẫu (không thêm s)."
+      - emma: "Short answers repeat do or does: Yes, I do. No, she doesn't. Don't say: Yes, I like."
+        focus: 0
+        vi: "Trả lời ngắn lặp lại do / does: Yes, I do. No, she doesn't. Không nói: Yes, I like."
+
+  - kind: blanks
+    chapter: "Bài 2: sắp xếp câu hỏi — nghe 1.37"
+    heading: "Grammar 2 · Put the words in order to make questions"
+    heading_vi: "Sắp xếp thành câu hỏi — tạm dừng làm trước, rồi nghe từng câu trong 1.37"
+    items:
+      - {n: 1, q: "birthdays / Do / like / you →  ___", answer: "Do you like birthdays?"}
+      - {n: 2, q: "do / What / in / you / do / the morning →  ___", answer: "What do you do in the morning?"}
+      - {n: 3, q: "Do / work / you / to / go →  ___", answer: "Do you go to work?"}
+      - {n: 4, q: "of food / eat / do / you / What kind →  ___", answer: "What kind of food do you eat?"}
+      - {n: 5, q: "see / you / friends / Do →  ___", answer: "Do you see friends?"}
+      - {n: 6, q: "go out / Do / at night / you →  ___", answer: "Do you go out at night?"}
+      - {n: 7, q: "your husband / like / birthdays / Does →  ___", answer: "Does your husband like birthdays?"}
+      - {n: 8, q: "family / does / do / your / What →  ___", answer: "What does your family do?"}
+    lines:
+      - emma: "Exercise 2. Put the words in order to make questions. Pause the video and try, then listen."
+        say: "Exercise two. Put the words in order to make questions. Pause the video and try, then listen."
+        vi: "Bài 2: sắp xếp từ thành câu hỏi. Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "1.37", start: 5.0, end: 6.7, note: "1.37 · 1", focus: 0, reveal: 1}
+      - {track: "1.37", start: 10.6, end: 12.4, note: "1.37 · 2", focus: 1, reveal: 2}
+      - {track: "1.37", start: 16.9, end: 18.3, note: "1.37 · 3", focus: 2, reveal: 3}
+      - {track: "1.37", start: 22.5, end: 24.5, note: "1.37 · 4", focus: 3, reveal: 4}
+      - {track: "1.37", start: 29.2, end: 30.7, note: "1.37 · 5", focus: 4, reveal: 5}
+      - {track: "1.37", start: 34.8, end: 36.5, note: "1.37 · 6", focus: 5, reveal: 6}
+      - {track: "1.37", start: 41.0, end: 43.1, note: "1.37 · 7", focus: 6, reveal: 7}
+      - {track: "1.37", start: 47.4, end: 49.1, note: "1.37 · 8", focus: 7, reveal: 8}
+
+  - kind: qa
+    chapter: "Đến lượt bạn: một ngày bạn thích"
+    heading: "Speaking 3–4 · A day you enjoy"
+    heading_vi: "Chọn một ngày bạn thích (sinh nhật, ngày lễ, cuối tuần). Tom hỏi — bạn trả lời, rồi nghe Mai"
+    items:
+      - {q: "Do you like birthdays?", a: "Yes, I do. I love them!", ask: tom, by: mai}
+      - {q: "What do you do in the morning?", a: "I usually have a big breakfast with my family.", ask: tom, by: mai}
+      - {q: "Do you go to work?", a: "Yes, I do, but my students often sing for me!", ask: tom, by: mai}
+      - {q: "Do you go out at night?", a: "Yes. My friends and I always go to a restaurant.", ask: tom, by: mai}
+    lines:
+      - emma: "Your turn. Choose a day or a time that you enjoy: your birthday, holidays, weekends. Answer Tom's questions."
+        vi: "Đến lượt bạn: chọn một ngày bạn thích, trả lời câu hỏi của Tom."
+      - {tom: "Do you like birthdays?", focus: 0, pause: 1.5}
+      - {mai: "Yes, I do. I love them!", reveal: 0}
+      - {tom: "What do you do in the morning?", focus: 1, pause: 1.5}
+      - {mai: "I usually have a big breakfast with my family.", reveal: 1}
+      - {tom: "Do you go to work?", focus: 2, pause: 1.5}
+      - {mai: "Yes, I do, but my students often sing for me!", reveal: 2}
+      - {tom: "Do you go out at night?", focus: 3, pause: 1.5}
+      - {mai: "Yes. My friends and I always go to a restaurant.", reveal: 3}
+      - tom: "So, for her birthday, Mai usually has a big breakfast, and she always goes to a restaurant with her friends."
+        vi: "Kể lại cho người khác: dùng he / she, động từ thêm s (has, goes)."
+      - emma: "Good! Now change partners and tell them about your first partner, like Tom."
+        vi: "Đổi bạn và kể về người bạn đầu tiên, như Tom vừa làm."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc với câu hỏi và trạng từ tần suất"
+    items:
+      - {wrong: "Do she like New Year?", right: "Does she like New Year?", note: "he, she, it → does"}
+      - {wrong: "Does he likes parties?", right: "Does he like parties?", note: "does + động từ nguyên mẫu"}
+      - {wrong: "Do you like birthdays? — Yes, I like.", right: "Do you like birthdays? — Yes, I do.", note: "trả lời ngắn lặp lại do / does"}
+      - {wrong: "I go usually to the sea.", right: "I usually go to the sea.", note: "trạng từ tần suất đứng trước động từ chính"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "Does she like New Year? She, so does.", focus: 0}
+      - {emma: "Does he like parties. No s on like.", focus: 1}
+      - {emma: "Yes, I do. Not Yes, I like.", focus: 2}
+      - {emma: "I usually go. Usually comes before the verb.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "always · usually · often · sometimes · never", vi: "Trạng từ tần suất, đặt trước động từ chính"}
+      - {en: "Do you …? — Yes, I do. · No, I don't.", vi: "Câu hỏi với I, you, we, they"}
+      - {en: "Does she …? — Yes, she does. · No, she doesn't.", vi: "Câu hỏi với he, she, it"}
+      - {en: "my brother's house · my parents' house", vi: "'s cho một người, s' cho nhiều người"}
+    lines:
+      - {emma: "Let's remember. Always, usually, often, sometimes, never. I usually go to my parents' house.", focus: 0}
+      - {emma: "Do you like New Year? Yes, I do.", focus: 1}
+      - {emma: "Does your wife stay at home? No, she doesn't.", focus: 2}
+      - {emma: "And my brother's house, my parents' house. In the next video, the Target activity: invite someone out.", focus: 3, vi: "Video sau: Target activity — mời ai đó đi chơi."}

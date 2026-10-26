@@ -1,0 +1,281 @@
+# Unit 3 · Your time — Bài 3.1 (Coursebook tr. 26–27): Happiness, I don't like bad news. Phiên U03-lesson-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U03-lesson-1.yaml
+# Nguồn: trang 26–27 (tám bài đăng "Happiness is …" chép nguyên văn); đáp án theo Teacher's Book tr. 38–39 (đại từ tân
+# ngữ: me, you, him, her, it, us, them; Vocabulary 4a: xem bài đăng; 5a: playing / watching football, learning languages,
+# reading newspapers, going to the cinema, listening to the radio; Grammar 1a: 2 don't read, 3 don't go, 4 don't watch,
+# 6 doesn't like, 7 doesn't make; 2a: 2 doesn't, 3 don't, 4 doesn't, 5 don't, 6 doesn't; Speaking 3: Moira reads books
+# and newspapers, cooks; Sam goes for walks, goes jogging, drives to the sea, plays tennis).
+# Audio gốc: 1.31 (mười hai cụm từ, phát từng cụm), 1.32 (bảy câu phủ định, phát từng câu). Track 1.33 (Moira và Sam)
+# THIẾU trong bộ CD1: Emma, Tom, Mai kể lại theo Teacher's Book. Tranh A–D của bài đọc không đưa vào (nằm rời hai bên
+# trang); bài 1 chỉ đọc các bài đăng.
+id: U03-lesson-1
+activity: U03-lesson-1
+title: "Unit 3 · Your time"
+subtitle: "Reading · Happiness is …: free time, pronouns, don't / doesn't"
+title_vi: "Đọc \"Happiness is …\"; hoạt động lúc rảnh; đại từ chủ ngữ, tân ngữ; hiện tại đơn phủ định (trang 26–27, audio 1.31–1.32)"
+tag: "EU A2 · UNIT 3"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 3: Your time. This lesson is about free time, and about happiness. What is happiness for you?"
+        say: "Welcome to Unit three: Your time. This lesson is about free time, and about happiness. What is happiness for you?"
+        vi: "Unit 3: Your time — thời gian rảnh và hạnh phúc. Với bạn, hạnh phúc là gì?"
+      - tom: "Happiness is watching football with my friends."
+        vi: "Hạnh phúc là xem bóng đá với bạn bè."
+      - mai: "For me, happiness is a big bowl of bun bo Hue on a rainy day!"
+        say: "For me, happiness is a big bowl of Boon baw Whey on a rainy day!"
+        vi: "Với mình, hạnh phúc là một tô bún bò Huế vào ngày mưa!"
+
+  - kind: passage
+    chapter: "Đọc: Happiness is … (1–4)"
+    heading: "Reading 1 · Happiness is … (postings 1–4)"
+    heading_vi: "Tám bài đăng trên trang web: với mỗi người, hạnh phúc là gì? Tìm ba điều bạn cũng thích"
+    items:
+      - {label: "1", text: "What's happiness? Talking to my husband and watching something good on TV with him. We don't go out a lot but we're happy.", note: "Berthe, 88, France"}
+      - {label: "2", text: "Happiness is going fishing on a boat with my friends and a very cold drink. And catching fish, of course.", note: "Juan Carlos, 43, Brazil"}
+      - {label: "3", text: "My work. I'm a photographer and I love taking photos. It's not very well paid, but money doesn't make you happy.", note: "Chin-Mae, 28, Korea"}
+      - {label: "4", text: "Happiness is playing the drums really loud, but my dad doesn't like it!", note: "Jason, 15, USA"}
+    lines:
+      - emma: "Read the web postings about happiness. Listen, and find three things you like."
+        vi: "Đọc các bài đăng về hạnh phúc; nghe và tìm ba điều bạn cũng thích."
+      - {emma: "What's happiness? Talking to my husband and watching something good on TV with him. We don't go out a lot but we're happy.", focus: 0}
+      - {tom: "Happiness is going fishing on a boat with my friends and a very cold drink. And catching fish, of course.", focus: 1}
+      - {tom: "My work. I'm a photographer and I love taking photos. It's not very well paid, but money doesn't make you happy.", focus: 2}
+      - {tom: "Happiness is playing the drums really loud, but my dad doesn't like it!", focus: 3}
+
+  - kind: passage
+    chapter: "Đọc: Happiness is … (5–8)"
+    heading: "Reading 1 · Happiness is … (postings 5–8)"
+    heading_vi: "Tám bài đăng trên trang web: với mỗi người, hạnh phúc là gì? Tìm ba điều bạn cũng thích"
+    items:
+      - {label: "5", text: "My friends … talking to them over a coffee, listening to jazz, going to parties together. And my cat. She doesn't like my boyfriend, but she loves me!", note: "Andrea, 32, Australia"}
+      - {label: "6", text: "Seeing my grandchildren – that's happiness. I love them so much. I also enjoy reading a good book, but I don't read newspapers. I don't like bad news.", note: "Jakub, 67, Poland"}
+      - {label: "7", text: "I like learning new things and meeting new people, so I do a different course every year. This year it's dancing the tango.", note: "Chiara, 38, Italy"}
+      - {label: "8", text: "Chocolate! I love it!", note: "Sally, 21, UK"}
+    lines:
+      - {mai: "My friends. Talking to them over a coffee, listening to jazz, going to parties together.", focus: 0}
+      - {mai: "And my cat. She doesn't like my boyfriend, but she loves me!", focus: 0}
+      - {tom: "Seeing my grandchildren, that's happiness. I love them so much.", focus: 1}
+      - {tom: "I also enjoy reading a good book, but I don't read newspapers. I don't like bad news.", focus: 1}
+      - {mai: "I like learning new things and meeting new people, so I do a different course every year. This year it's dancing the tango.", focus: 2}
+      - {mai: "Chocolate! I love it!", focus: 3}
+      - {emma: "A course is lessons in your free time, like yoga, English or photography.", focus: 2, mark: ["a different course"], vi: "course = khóa học (yoga, tiếng Anh, nhiếp ảnh …) học lúc rảnh."}
+
+  - kind: compare
+    chapter: "Đại từ: I – me, he – him"
+    heading: "Grammar 3 · Pronouns: subject and object"
+    heading_vi: "Đại từ chủ ngữ đứng trước động từ, đại từ tân ngữ đứng sau — tìm các từ tô màu trong bài đăng"
+    items:
+      - {title: "subject", title_vi: "chủ ngữ — trước động từ", lines: ["I · you · he · she", "it · we · they", "I love chocolate."]}
+      - {title: "object", title_vi: "tân ngữ — sau động từ", lines: ["me · you · him · her", "it · us · them", "Mary loves me."]}
+    lines:
+      - emma: "Grammar: pronouns. I love chocolate. I is a subject pronoun. It comes before the verb."
+        focus: 0
+        vi: "I là đại từ chủ ngữ, đứng trước động từ."
+      - emma: "Mary loves me. Me is an object pronoun. It comes after the verb. So: I, me. He, him. She, her. We, us. They, them. You and it don't change."
+        focus: 1
+        vi: "me là đại từ tân ngữ, đứng sau động từ: I → me, he → him, she → her, we → us, they → them; you, it giữ nguyên."
+      - emma: "Find them in the postings: watching TV with him, my dad doesn't like it, she loves me, I love them."
+        focus: 1
+        vi: "Trong bài đăng: with him, doesn't like it, loves me, love them."
+      - mai: "In Vietnamese, we use the same word for I and me. In English, they're different!"
+        vi: "Tiếng Việt dùng cùng một từ cho I và me; tiếng Anh thì khác nhau!"
+
+  - kind: blanks
+    chapter: "Hoạt động lúc rảnh — nghe 1.31"
+    heading: "Vocabulary 4 · Free time activities"
+    heading_vi: "Hoàn thành cụm từ bằng chữ trong bài đăng — rồi nghe từng cụm trong 1.31"
+    items:
+      - {n: 1, q: "talking to ___", answer: "my husband"}
+      - {n: 2, q: "watching something good on ___", answer: "TV"}
+      - {n: 3, q: "going ___", answer: "fishing"}
+      - {n: 4, q: "taking ___", answer: "photos"}
+      - {n: 5, q: "playing ___", answer: "the drums"}
+      - {n: 6, q: "listening to ___", answer: "jazz"}
+      - {n: 7, q: "going to ___", answer: "parties"}
+      - {n: 8, q: "seeing my ___", answer: "grandchildren"}
+      - {n: 9, q: "reading a good ___", answer: "book"}
+      - {n: 10, q: "learning new ___", answer: "things"}
+      - {n: 11, q: "meeting new ___", answer: "people"}
+      - {n: 12, q: "dancing ___", answer: "the tango"}
+    lines:
+      - emma: "Vocabulary: free time activities. Complete the expressions with words from the postings. Pause the video and try, then listen."
+        vi: "Từ vựng: hoạt động lúc rảnh. Tạm dừng video, điền chữ trong bài đăng rồi nghe."
+        pause: 1.5
+      - {track: "1.31", start: 3.5, end: 5.6, note: "1.31 · 1", focus: 0, reveal: 1}
+      - {track: "1.31", start: 8.8, end: 11.3, note: "1.31 · 2", focus: 1, reveal: 2}
+      - {track: "1.31", start: 15.1, end: 16.6, note: "1.31 · 3", focus: 2, reveal: 3}
+      - {track: "1.31", start: 20.2, end: 21.8, note: "1.31 · 4", focus: 3, reveal: 4}
+      - {track: "1.31", start: 25.3, end: 27.0, note: "1.31 · 5", focus: 4, reveal: 5}
+      - {track: "1.31", start: 31.2, end: 32.9, note: "1.31 · 6", focus: 5, reveal: 6}
+      - {track: "1.31", start: 36.2, end: 37.9, note: "1.31 · 7", focus: 6, reveal: 7}
+      - {track: "1.31", start: 41.8, end: 43.8, note: "1.31 · 8", focus: 7, reveal: 8}
+      - {track: "1.31", start: 47.9, end: 49.7, note: "1.31 · 9", focus: 8, reveal: 9}
+      - {track: "1.31", start: 53.6, end: 55.4, note: "1.31 · 10", focus: 9, reveal: 10}
+      - {track: "1.31", start: 59.5, end: 61.3, note: "1.31 · 11", focus: 10, reveal: 11}
+      - {track: "1.31", start: 64.7, end: 66.4, note: "1.31 · 12", focus: 11, reveal: 12}
+      - emma: "We add i n g to a verb when we use it like a noun: eating fruit is good for you. You can also say: playing football, learning languages, reading newspapers, going to the cinema, listening to the radio."
+        say: "We add eye en gee to a verb when we use it like a noun: eating fruit is good for you. You can also say: playing football, learning languages, reading newspapers, going to the cinema, listening to the radio."
+        vi: "Động từ thêm -ing để dùng như danh từ. Thêm: playing football, learning languages, reading newspapers, going to the cinema, listening to the radio."
+
+  - kind: letter
+    chapter: "Viết: Happiness is …"
+    heading: "Writing 6 · What is happiness for you?"
+    heading_vi: "Sáu câu mẫu của Mai: Happiness is …, I like / enjoy …, I love … (+ danh từ hoặc động từ -ing)"
+    roles: {emma: teacher}
+    items:
+      - {text: "Happiness is eating bun bo Hue with my family.", note: "Happiness is + verb-ing"}
+      - {text: "I love listening to the rain at night.", note: "I love + verb-ing"}
+      - {text: "I enjoy reading a good book on Sunday mornings.", note: "I enjoy + verb-ing"}
+      - {text: "I like going for walks by the Perfume River.", note: "I like + verb-ing"}
+      - {text: "I love meeting new people.", note: "I love"}
+      - {text: "I don't like getting up early!", note: "I don't like"}
+    lines:
+      - emma: "Writing. What is happiness for you? Write six sentences with Happiness is, I like, I enjoy, and I love. After them, use a noun, or a verb with i n g. Here are Mai's sentences."
+        say: "Writing. What is happiness for you? Write six sentences with Happiness is, I like, I enjoy, and I love. After them, yooz a noun, or a verb with eye en gee. Here are Mai's sentences."
+        vi: "Viết sáu câu: Happiness is …, I like …, I enjoy …, I love … — theo sau là danh từ hoặc động từ -ing. Đây là bài của Mai."
+      - {read: mai, focus: 0, say: "Happiness is eating Boon baw Whey with my family."}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: mai, focus: 5}
+      - emma: "Love means like very much. Enjoy is for activities, things you do. Now write your six sentences."
+        vi: "love = rất thích; enjoy dùng cho hoạt động. Giờ bạn viết sáu câu của mình."
+
+  - kind: blanks
+    chapter: "don't / doesn't — nghe 1.32"
+    heading: "Grammar 1 · Present simple: negative sentences"
+    heading_vi: "Điền don't go, doesn't like, doesn't make, don't read, don't watch — rồi nghe 1.32"
+    items:
+      - {n: 1, q: "I ___ bad news.", answer: "don't like", hint: "I, you, we, they"}
+      - {n: 2, q: "You ___ newspapers.", answer: "don't read", hint: "I, you, we, they"}
+      - {n: 3, q: "We ___ out a lot.", answer: "don't go", hint: "I, you, we, they"}
+      - {n: 4, q: "They ___ TV.", answer: "don't watch", hint: "I, you, we, they"}
+      - {n: 5, q: "My dad ___ my music.", answer: "doesn't like", hint: "he, she, it"}
+      - {n: 6, q: "She ___ my boyfriend.", answer: "doesn't like", hint: "he, she, it"}
+      - {n: 7, q: "Money ___ you happy.", answer: "doesn't make", hint: "he, she, it"}
+    lines:
+      - emma: "Grammar. Complete the sentences in the table. Pause the video and try, then listen."
+        vi: "Ngữ pháp: điền vào bảng. Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "1.32", start: 2.9, end: 6.6, note: "1.32 · 1", focus: 0, reveal: 1}
+      - {track: "1.32", start: 9.8, end: 13.3, note: "1.32 · 2", focus: 1, reveal: 2}
+      - {track: "1.32", start: 16.8, end: 19.7, note: "1.32 · 3", focus: 2, reveal: 3}
+      - {track: "1.32", start: 23.5, end: 26.6, note: "1.32 · 4", focus: 3, reveal: 4}
+      - {track: "1.32", start: 30.4, end: 33.8, note: "1.32 · 5", focus: 4, reveal: 5}
+      - {track: "1.32", start: 38.6, end: 42.1, note: "1.32 · 6", focus: 5, reveal: 6}
+      - {track: "1.32", start: 46.4, end: 50.4, note: "1.32 · 7", focus: 6, reveal: 7}
+
+  - kind: compare
+    chapter: "Quy tắc: don't, doesn't"
+    heading: "Grammar 1 · don't and doesn't"
+    heading_vi: "I, you, we, they + don't; he, she, it + doesn't — động từ chính không thêm s"
+    items:
+      - {title: "I, you, we, they", title_vi: "don't = do not", lines: ["I don't like bad news.", "We don't go out a lot.", "They don't watch TV."]}
+      - {title: "he, she, it", title_vi: "doesn't = does not", lines: ["My dad doesn't like my music.", "Money doesn't make you happy.", "not: He doesn't likes …"]}
+    lines:
+      - emma: "After I, you, we and they, use don't plus a verb: I don't like bad news."
+        say: "After I, you, we and they, yooz don't plus a verb: I don't like bad news."
+        focus: 0
+        vi: "Sau I, you, we, they: don't + động từ."
+      - emma: "After he, she and it, use doesn't plus a verb: my dad doesn't like my music. The s is on does, not on like. So never say: he doesn't likes."
+        say: "After he, she and it, yooz doesn't plus a verb: my dad doesn't like my music. The s is on does, not on like. So never say: he doesn't likes."
+        focus: 1
+        vi: "Sau he, she, it: doesn't + động từ nguyên mẫu. Đuôi s nằm ở does, không ở like."
+      - tom: "Don't, doesn't. My dad doesn't like my music either!"
+        vi: "Don't, doesn't. Bố mình cũng không thích nhạc mình nghe!"
+
+  - kind: blanks
+    chapter: "Bài 2a: don't hay doesn't?"
+    heading: "Grammar 2 · Circle the correct word"
+    heading_vi: "Chọn don't hay doesn't — Mai đọc đáp án"
+    items:
+      - {n: 1, q: "My daughter ___ like chocolate.", answer: "doesn't", hint: "don't / doesn't"}
+      - {n: 2, q: "My mobile phone ___ take photos.", answer: "doesn't", hint: "don't / doesn't"}
+      - {n: 3, q: "I ___ watch TV in the morning.", answer: "don't", hint: "don't / doesn't"}
+      - {n: 4, q: "My husband ___ speak English.", answer: "doesn't", hint: "don't / doesn't"}
+      - {n: 5, q: "My friends and I ___ usually go out on work days.", answer: "don't", hint: "don't / doesn't"}
+      - {n: 6, q: "My home town ___ have a cinema.", answer: "doesn't", hint: "don't / doesn't"}
+    lines:
+      - emma: "Exercise 2. Don't or doesn't? Pause the video and choose."
+        say: "Exercise two. Don't or doesn't? Pause the video and choose."
+        vi: "Bài 2: chọn don't hay doesn't. Tạm dừng video để làm."
+        pause: 1.5
+      - {mai: "My daughter doesn't like chocolate.", focus: 0, reveal: 1}
+      - {mai: "My mobile phone doesn't take photos.", focus: 1, reveal: 2}
+      - {mai: "I don't watch TV in the morning.", focus: 2, reveal: 3}
+      - {mai: "My husband doesn't speak English.", focus: 3, reveal: 4}
+      - {mai: "My friends and I don't usually go out on work days.", focus: 4, reveal: 5}
+      - {mai: "My home town doesn't have a cinema.", focus: 5, reveal: 6}
+      - emma: "My friends and I is we, so don't. My home town is it, so doesn't."
+        focus: 5
+        vi: "My friends and I = we → don't; my home town = it → doesn't."
+
+  - kind: compare
+    chapter: "Moira và Sam làm gì lúc rảnh?"
+    heading: "Speaking 3 · Moira and Sam's free time"
+    heading_vi: "Bài nghe 1.33 không có trong bộ audio — Tom và Mai kể lại theo Teacher's Book"
+    items:
+      - {title: "Moira", title_vi: "làm / không làm", lines: ["reads books and newspapers", "cooks", "doesn't read magazines", "doesn't watch TV", "doesn't go to restaurants"]}
+      - {title: "Sam", title_vi: "làm / không làm", lines: ["goes for walks · goes jogging", "drives to the sea", "plays tennis", "doesn't go to a gym", "doesn't go shopping at weekends"]}
+    lines:
+      - emma: "Speaking. Moira and Sam talk about their free time. Their recording isn't in our audio files, so Tom and Mai tell you what they do and don't do."
+        vi: "Moira và Sam kể về thời gian rảnh. Không có audio 1.33, nên Tom và Mai kể lại."
+      - {tom: "Moira reads books and newspapers, and she cooks. But she doesn't read magazines, she doesn't watch TV, and she doesn't go to restaurants.", focus: 0}
+      - {mai: "Sam goes for walks and goes jogging. He drives to the sea and plays tennis. But he doesn't go to a gym, and he doesn't go shopping at weekends.", focus: 1}
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Speaking 4 · Things you do and don't do"
+    heading_vi: "Tom hỏi — bạn tạm dừng video và trả lời, rồi nghe Mai"
+    items:
+      - {q: "What do you do in your free time?", a: "I go for walks, I read a lot and I cook for my family.", ask: tom, by: mai}
+      - {q: "And what don't you do?", a: "I don't go to the gym, and I don't play computer games.", ask: tom, by: mai}
+    lines:
+      - emma: "Your turn. Think about things you do and things you don't do in your free time."
+        vi: "Đến lượt bạn: nghĩ những việc bạn làm và không làm lúc rảnh."
+      - {tom: "What do you do in your free time?", focus: 0, pause: 1.5}
+      - {mai: "I go for walks, I read a lot and I cook for my family.", reveal: 0}
+      - {tom: "And what don't you do?", focus: 1, pause: 1.5}
+      - {mai: "I don't go to the gym, and I don't play computer games.", reveal: 1}
+      - emma: "Now talk to other people. Find someone who does the same things as you."
+        vi: "Giờ nói chuyện với người khác, tìm người có cùng sở thích với bạn."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc với don't / doesn't và đại từ"
+    items:
+      - {wrong: "He don't like jazz.", right: "He doesn't like jazz.", note: "he, she, it + doesn't"}
+      - {wrong: "She doesn't likes my boyfriend.", right: "She doesn't like my boyfriend.", note: "doesn't + động từ nguyên mẫu, không thêm s"}
+      - {wrong: "My cat loves I.", right: "My cat loves me.", note: "sau động từ: me, him, her, us, them"}
+      - {wrong: "I enjoy to read.", right: "I enjoy reading.", note: "enjoy + verb-ing"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "He doesn't like jazz. He, she, it: doesn't.", focus: 0}
+      - {emma: "She doesn't like. No s on like.", focus: 1}
+      - {emma: "My cat loves me. After the verb, use me.", say: "My cat loves me. After the verb, yooz me.", focus: 2}
+      - {emma: "I enjoy reading, with i n g.", say: "I enjoy reading, with eye en gee.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Happiness is … · I like / enjoy / love + verb-ing", vi: "Nói điều mình thích"}
+      - {en: "I – me · he – him · she – her · we – us · they – them", vi: "Đại từ chủ ngữ và tân ngữ"}
+      - {en: "I / you / we / they don't … · he / she / it doesn't …", vi: "Hiện tại đơn phủ định"}
+      - {en: "going fishing · playing the drums · listening to jazz · reading a good book", vi: "Hoạt động lúc rảnh"}
+    lines:
+      - {emma: "Let's remember. Happiness is reading a good book. I enjoy dancing.", focus: 0}
+      - {emma: "Pronouns: I love them. They love me.", focus: 1}
+      - {emma: "Negatives: I don't watch TV. My dad doesn't like my music.", focus: 2}
+      - {emma: "And free time activities. In the next video, we listen to two people talking about New Year.", focus: 3, vi: "Video sau: nghe hai người nói về năm mới."}
