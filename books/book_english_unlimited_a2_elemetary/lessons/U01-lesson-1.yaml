@@ -1,0 +1,248 @@
+# Unit 1 · People in your life — bài 1.1 "Nice to meet you" (Coursebook tr. 10–11), phiên U01-lesson-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U01-lesson-1.yaml
+# Nguồn: trang 10–11; đáp án theo Teacher's Book tr. 24–25 (1b: teacher, colleague, mother / father; 3: Isobel's,
+# Maria Teresa's, Isobel's; 5a: this is, what's your name again, please call me, Are you, I'm; be: 'm, 're, 's …).
+# Audio gốc: 1.7 (hai cuộc hội thoại ở tiệc), 1.8 (từng từ — dùng làm mẫu phát âm từ vựng), 1.9 (James, Maite, Isobel),
+# 1.10 (câu khẳng định / phủ định với be), 1.11 (câu hỏi Are / Is). Mốc theo work/transcripts (mốc từng từ).
+# Phần phát âm âm tiết (bài 2) gộp vào phần từ vựng: nghe từng từ của 1.8 và nói rõ từ một hay hai âm tiết.
+id: U01-lesson-1
+activity: U01-lesson-1
+title: "Unit 1 · People in your life"
+subtitle: "Listening · Nice to meet you: people you know, 's, am / is / are"
+title_vi: "Bài 1.1 — người quen, giới thiệu người khác, sở hữu 's, động từ be hiện tại (trang 10–11, audio 1.7–1.11)"
+tag: "EU A2 · UNIT 1"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 1: People in your life. This is lesson 1.1: Nice to meet you."
+        say: "Welcome to Unit one: People in your life. This is lesson one point one: Nice to meet you."
+        vi: "Chào mừng đến với Unit 1. Đây là bài 1.1: Nice to meet you (Rất vui được gặp bạn)."
+      - emma: "It's Rob's birthday party. We learn words for the people in your life, and how to introduce people."
+        vi: "Hôm nay là tiệc sinh nhật của Rob. Ta học từ chỉ những người quanh bạn và cách giới thiệu người khác."
+      - tom: "Great. I love parties!"
+        vi: "Hay quá. Mình thích tiệc tùng!"
+
+  - kind: vocab
+    chapter: "Từ vựng: gia đình"
+    heading: "Vocabulary · People you know · family"
+    heading_vi: "Nghe từng từ (audio 1.8) rồi nhắc lại"
+    items:
+      - {w: "father", pos: "2 syllables: fa-ther", vi: "bố", ex: "James is Rob's father."}
+      - {w: "mother", pos: "2 syllables: mo-ther", vi: "mẹ", ex: "Isobel is Rob's mother."}
+      - {w: "husband", pos: "2 syllables: hus-band", vi: "chồng", ex: "James is Isobel's husband."}
+      - {w: "wife", pos: "1 syllable", vi: "vợ", ex: "Isobel is James's wife."}
+      - {w: "son", pos: "1 syllable", vi: "con trai", ex: "Rob is their son."}
+      - {w: "daughter", pos: "2 syllables: daugh-ter", vi: "con gái", ex: "They have a son, but no daughter."}
+      - {w: "brother", pos: "2 syllables: bro-ther", vi: "anh / em trai", ex: "I have one brother."}
+      - {w: "sister", pos: "2 syllables: sis-ter", vi: "chị / em gái", ex: "My sister is a nurse."}
+    lines:
+      - emma: "First, words for your family. Listen to the recording, and say each word."
+        vi: "Trước tiên là từ chỉ người trong gia đình. Nghe audio và nhắc lại từng từ."
+      - emma: "Listen for the syllables, the parts of a word. Wife has one syllable. Fa-ther has two."
+        vi: "Để ý số âm tiết: wife có 1 âm tiết, fa-ther có 2 âm tiết."
+      - {track: "1.8", start: 19.4, end: 20.6, note: "1.8 · father", focus: 0}
+      - {emma: "James is Rob's father."}
+      - {track: "1.8", start: 22.25, end: 23.4, note: "1.8 · mother", focus: 1}
+      - {emma: "Isobel is Rob's mother."}
+      - {track: "1.8", start: 25.1, end: 26.4, note: "1.8 · husband", focus: 2}
+      - {emma: "James is Isobel's husband."}
+      - {track: "1.8", start: 4.6, end: 5.65, note: "1.8 · wife", focus: 3}
+      - {emma: "Isobel is James's wife."}
+      - {track: "1.8", start: 7.1, end: 8.2, note: "1.8 · son", focus: 4}
+      - {emma: "Rob is their son."}
+      - {track: "1.8", start: 28.3, end: 29.45, note: "1.8 · daughter", focus: 5}
+      - {emma: "They have a son, but no daughter."}
+      - {track: "1.8", start: 31.45, end: 32.5, note: "1.8 · brother", focus: 6}
+      - {track: "1.8", start: 33.9, end: 35.05, note: "1.8 · sister", focus: 7}
+      - {emma: "Brother and sister. Vietnamese has more words for this, but English has just two: brother and sister.", vi: "Tiếng Việt có anh, chị, em; tiếng Anh chỉ có brother (anh / em trai) và sister (chị / em gái)."}
+
+  - kind: vocab
+    chapter: "Từ vựng: người quen"
+    heading: "Vocabulary · People you know · friends and work"
+    heading_vi: "Nghe từng từ (audio 1.8) rồi nhắc lại"
+    items:
+      - {w: "friend", pos: "1 syllable", vi: "bạn", ex: "Krishnan is my friend."}
+      - {w: "boyfriend", pos: "2 syllables: boy-friend", vi: "bạn trai (người yêu)", ex: "Her boyfriend is a student."}
+      - {w: "girlfriend", pos: "2 syllables: girl-friend", vi: "bạn gái (người yêu)", ex: "Sally is Rob's girlfriend."}
+      - {w: "colleague", pos: "2 syllables: col-league", vi: "đồng nghiệp", ex: "Krishnan is Rob's colleague."}
+      - {w: "boss", pos: "1 syllable", vi: "sếp, người quản lý", ex: "My boss is very nice."}
+      - {w: "teacher", pos: "2 syllables: tea-cher", vi: "giáo viên", ex: "Maria Teresa is a Spanish teacher."}
+      - {w: "student", pos: "2 syllables: stu-dent", vi: "học sinh, sinh viên", ex: "Rob is her student."}
+    lines:
+      - emma: "Now friends and people at work."
+        vi: "Giờ đến bạn bè và người ở chỗ làm."
+      - {track: "1.8", start: 13.2, end: 14.4, note: "1.8 · friend", focus: 0}
+      - {track: "1.8", start: 36.75, end: 38.1, note: "1.8 · boyfriend", focus: 1}
+      - {emma: "Her boyfriend is a student."}
+      - {track: "1.8", start: 39.3, end: 40.7, note: "1.8 · girlfriend", focus: 2}
+      - {emma: "Sally is Rob's girlfriend."}
+      - {track: "1.8", start: 48.3, end: 49.5, note: "1.8 · colleague", focus: 3}
+      - {emma: "Colleague. Two syllables: col-league. A colleague is a person you work with.", say: "Colleague. Two syllables: colleague. A colleague is a person you work with.", vi: "colleague (2 âm tiết, nhấn âm đầu): người làm cùng chỗ với bạn."}
+      - {track: "1.8", start: 10.5, end: 11.6, note: "1.8 · boss", focus: 4}
+      - {track: "1.8", start: 42.35, end: 43.5, note: "1.8 · teacher", focus: 5}
+      - {track: "1.8", start: 45.2, end: 46.6, note: "1.8 · student", focus: 6}
+      - {emma: "Maria Teresa is a teacher, and Rob is her student."}
+
+  - kind: blanks
+    chapter: "Nghe 1.7: ai là ai?"
+    heading: "Exercise 1 · Who are the people at Rob's party?"
+    heading_vi: "Audio 1.7 — đoán trước, rồi nghe hai cuộc hội thoại để kiểm tra"
+    items:
+      - {n: 1, q: "Sally is Rob's ___.", answer: "girlfriend"}
+      - {n: 2, q: "Maria Teresa is his ___.", answer: "teacher", tip: "his Spanish teacher — cô giáo dạy tiếng Tây Ban Nha"}
+      - {n: 3, q: "Krishnan is his ___.", answer: "colleague", tip: "a colleague from work"}
+      - {n: 4, q: "Isobel and James are his ___.", answer: "mother and father", tip: "his parents — Mum, Dad"}
+    lines:
+      - emma: "Look at the photos of Rob's party on page 10. Who are the people? Guess first. Then listen to two conversations."
+        say: "Look at the photos of Rob's party on page ten. Who are the people? Guess first. Then listen to two conversations."
+        vi: "Xem ảnh tiệc của Rob ở trang 10. Những người này là ai? Đoán trước, rồi nghe hai cuộc hội thoại."
+      - {emma: "Number one is the example. Sally is Rob's girlfriend.", focus: 0, reveal: 1}
+      - {track: "1.7", start: 2.8, end: 22.7, note: "1.7 · conversation 1", focus: 1}
+      - {tom: "Maria Teresa is his Spanish teacher.", reveal: 2, vi: "Maria Teresa là cô giáo dạy tiếng Tây Ban Nha của anh ấy."}
+      - {emma: "And listen: Nice to meet you. And the answer: It's good to meet you too.", vi: "Nghe: Nice to meet you — và câu đáp: It's good to meet you too."}
+      - {track: "1.7", start: 25.2, end: 44.1, note: "1.7 · conversation 2", focus: 2}
+      - {tom: "Krishnan is a colleague from work.", reveal: 3}
+      - {tom: "And Isobel and James are his mother and father. He says Mum and Dad.", focus: 3, reveal: 4, vi: "Isobel và James là mẹ và bố anh ấy. Anh ấy gọi là Mum và Dad."}
+      - emma: "Did you hear: Mum, Dad, meet Krishnan? And: this is my mother. That's how we introduce people."
+        vi: "Nghe thấy chứ: Mum, Dad, meet Krishnan và this is my mother — đó là cách giới thiệu người khác."
+
+  - kind: blanks
+    chapter: "Sở hữu 's"
+    heading: "Exercise 3 · Possessive 's (singular)"
+    heading_vi: "Rob's girlfriend = bạn gái của Rob — ngược thứ tự với tiếng Việt"
+    items:
+      - {n: 1, q: "Sally is ___ girlfriend.", answer: "Rob's"}
+      - {n: 2, q: "Rob is James and ___ son.", answer: "Isobel's"}
+      - {n: 3, q: "Rob is ___ student.", answer: "Maria Teresa's"}
+      - {n: 4, q: "James is ___ husband.", answer: "Isobel's"}
+    lines:
+      - emma: "Look at the grammar box. Sally is Rob's girlfriend. Rob, apostrophe s, girlfriend."
+        say: "Look at the grammar box. Sally is Rob's girlfriend. Rob, apostrophe ess, girlfriend."
+        focus: 0
+        reveal: 1
+        vi: "Xem khung ngữ pháp: Sally is Rob's girlfriend — Rob + 's + girlfriend."
+      - emma: "In Vietnamese, the order is different. In English, we say the person, apostrophe s, then the thing."
+        say: "In Vietnamese, the order is different. In English, we say the person, apostrophe ess, then the thing."
+        vi: "Tiếng Việt: bạn gái của Rob. Tiếng Anh đảo lại: Rob's girlfriend (người + 's + vật / người)."
+      - {tom: "Rob is James and Isobel's son.", focus: 1, reveal: 2}
+      - {tom: "Rob is Maria Teresa's student.", focus: 2, reveal: 3}
+      - {tom: "James is Isobel's husband.", focus: 3, reveal: 4}
+      - emma: "Now look at the photos and say who the people are. Isobel is Rob's mother. And James is her husband."
+        vi: "Nhìn ảnh và nói những người đó là ai: Isobel is Rob's mother. And James is her husband."
+
+  - kind: blanks
+    chapter: "Nghe 1.9: giới thiệu nhau"
+    heading: "Exercise 5 · Complete the conversation"
+    heading_vi: "Điền: this is · what's your name again · please call me · Are you · I'm — rồi nghe 1.9"
+    items:
+      - {n: 2, q: "JAMES: Nice to meet you. And ___ Isobel, my wife.", answer: "this is"}
+      - {n: 3, q: "ISOBEL: Sorry, ___?", answer: "what's your name again"}
+      - {n: 4, q: "MAITE: It's Maria Teresa. But ___ Maite.", answer: "please call me"}
+      - {n: 5, q: "ISOBEL: Hello, Maite. ___ one of Rob's colleagues?", answer: "Are you"}
+      - {n: 6, q: "MAITE: No, I'm not. ___ his Spanish teacher. And you?", answer: "I'm"}
+    lines:
+      - emma: "Exercise 5. James and Isobel meet Maria Teresa. Complete the conversation with the expressions. Then listen."
+        say: "Exercise five. James and Isobel meet Maria Teresa. Complete the conversation with the expressions. Then listen."
+        vi: "Bài 5: James và Isobel gặp Maria Teresa. Điền các cụm từ vào hội thoại, rồi nghe."
+      - {emma: "Number one is the example. James says: Nice to meet you."}
+      - {track: "1.9", start: 4.2, end: 33.9, note: "1.9 · James, Maite, Isobel"}
+      - {tom: "Nice to meet you. And this is Isobel, my wife.", focus: 0, reveal: 2, vi: "Rất vui được gặp chị. Còn đây là Isobel, vợ tôi."}
+      - {tom: "Sorry, what's your name again?", focus: 1, reveal: 3, vi: "Xin lỗi, chị tên gì nhỉ?"}
+      - {mai: "It's Maria Teresa. But please call me Maite.", say: "It's Maria Teresa. But please call me My-tay.", focus: 2, reveal: 4, vi: "Tên tôi là Maria Teresa, nhưng cứ gọi tôi là Maite."}
+      - {tom: "Hello, Maite. Are you one of Rob's colleagues?", say: "Hello, My-tay. Are you one of Rob's colleagues?", focus: 3, reveal: 5}
+      - {mai: "No, I'm not. I'm his Spanish teacher. And you?", focus: 4, reveal: 6}
+      - emma: "These phrases are very useful at a party: This is … Nice to meet you. Sorry, what's your name again? Please call me …"
+        vi: "Các câu rất hữu ích ở bữa tiệc: This is… / Nice to meet you / Sorry, what's your name again? / Please call me…"
+
+  - kind: blanks
+    chapter: "be: am, is, are"
+    heading: "Grammar · be present: am, is, are"
+    heading_vi: "Audio 1.10 — 'm = am, 's = is, 're = are; isn't = is not, aren't = are not"
+    items:
+      - {n: 1, q: "Hi, I ___ Sally.", answer: "'m"}
+      - {n: 2, q: "You ___ Krishnan.", answer: "'re"}
+      - {n: 3, q: "This is James. He ___ my husband.", answer: "'s"}
+      - {n: 4, q: "We ___ Rob's parents.", answer: "'re"}
+      - {n: 5, q: "They ___ Rob's friends.", answer: "'re"}
+      - {n: 6, q: "I ___ his sister. I'm his girlfriend.", answer: "'m not"}
+      - {n: 7, q: "Sally ___ Rob's colleague.", answer: "isn't"}
+      - {n: 8, q: "Rob and Krishnan ___ brothers.", answer: "aren't"}
+    lines:
+      - emma: "Now the verb be. Complete the sentences, and listen to check."
+        vi: "Giờ đến động từ be (là, thì, ở). Điền vào câu rồi nghe để kiểm tra."
+      - {track: "1.10", start: 2.8, end: 6.95, note: "1.10 · 1", focus: 0, reveal: 1}
+      - {track: "1.10", start: 9.0, end: 12.2, note: "1.10 · 2", focus: 1, reveal: 2}
+      - {track: "1.10", start: 13.7, end: 18.5, note: "1.10 · 3", focus: 2, reveal: 3}
+      - {track: "1.10", start: 19.6, end: 23.3, note: "1.10 · 4", focus: 3, reveal: 4}
+      - {track: "1.10", start: 25.2, end: 29.2, note: "1.10 · 5", focus: 4, reveal: 5}
+      - emma: "I'm, you're, he's, she's, we're, they're. We usually say the short forms."
+        vi: "I'm, you're, he's, she's, we're, they're — khi nói thường dùng dạng rút gọn."
+      - {track: "1.10", start: 31.8, end: 37.2, note: "1.10 · 6", focus: 5, reveal: 6}
+      - {track: "1.10", start: 39.3, end: 43.5, note: "1.10 · 7", focus: 6, reveal: 7}
+      - {track: "1.10", start: 45.3, end: 50.5, note: "1.10 · 8", focus: 7, reveal: 8}
+      - emma: "For the negative: I'm not. Isn't is is not. Aren't is are not. Remember: one word, with an apostrophe."
+        vi: "Phủ định: I'm not; isn't = is not; aren't = are not — viết liền một từ, có dấu nháy."
+
+  - kind: blanks
+    chapter: "Câu hỏi với be"
+    heading: "Exercise 2 · Questions with Are and Is"
+    heading_vi: "Audio 1.11 — câu hỏi lên giọng ở cuối; trả lời ngắn Yes, I am / No, I'm not"
+    items:
+      - {n: 1, q: "___ you Rob's father? — Yes, I am. / No, I'm not.", answer: "Are"}
+      - {n: 2, q: "___ Krishnan your colleague? — Yes, he is. / No, he isn't.", answer: "Is"}
+      - {n: 3, q: "___ they your parents? — Yes, they are. / No, they aren't.", answer: "Are"}
+    lines:
+      - emma: "For questions, put be first: Are you, Is he, Are they. Listen. The voice goes up at the end."
+        vi: "Câu hỏi: đưa be lên đầu — Are you…? Is he…? Are they…? Nghe: cuối câu hỏi lên giọng."
+      - {track: "1.11", start: 3.1, end: 11.9, note: "1.11 · 1", focus: 0, reveal: 1}
+      - {track: "1.11", start: 14.5, end: 24.2, note: "1.11 · 2", focus: 1, reveal: 2}
+      - {track: "1.11", start: 26.4, end: 36.1, note: "1.11 · 3", focus: 2, reveal: 3}
+      - emma: "In short answers, say Yes, I am. Not Yes, I'm. But for no, say No, I'm not."
+        vi: "Trả lời ngắn: Yes, I am (không nói Yes, I'm); còn phủ định thì No, I'm not."
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Exercises 3–4 · Ask and answer about the people you know"
+    heading_vi: "Nghe câu hỏi về những người Mai quen — tạm dừng và trả lời về người bạn quen"
+    items:
+      - {q: "Is Lan your sister?", a: "No, she isn't. She's my friend.", ask: tom, by: mai}
+      - {q: "Are Minh and Hoa your colleagues?", a: "Yes, they are. We're in the same office.", ask: tom, by: mai}
+      - {q: "Is Minh Hoa's husband?", a: "Yes, he is.", ask: tom, by: mai}
+      - {q: "Are you Lan's neighbour?", a: "Yes, I am. And we were classmates at school.", ask: tom, by: mai}
+    lines:
+      - emma: "Exercise 3. Write your name and the names of five people you know. Then your partner asks questions. Listen to Tom and Mai."
+        say: "Exercise three. Write your name and the names of five people you know. Then your partner asks questions. Listen to Tom and Mai."
+        vi: "Bài 3: viết tên bạn và tên năm người bạn quen; bạn cùng học đặt câu hỏi. Nghe Tom và Mai."
+      - {tom: "Is Lan your sister?", say: "Is Lahn your sister?", focus: 0, pause: 1.5}
+      - {mai: "No, she isn't. She's my friend.", reveal: 0}
+      - {tom: "Are Minh and Hoa your colleagues?", say: "Are Min and Hwah your colleagues?", focus: 1, pause: 1.5}
+      - {mai: "Yes, they are. We're in the same office.", reveal: 1}
+      - {tom: "Is Minh Hoa's husband?", say: "Is Min Hwah's husband?", focus: 2, pause: 1.5}
+      - {mai: "Yes, he is.", reveal: 2}
+      - {tom: "Are you Lan's neighbour?", say: "Are you Lahn's neighbour?", focus: 3, pause: 1.5}
+      - {mai: "Yes, I am. And we were classmates at school.", reveal: 3}
+      - emma: "Now write five names, and ask a friend: Is Junko your sister? Are you Simona's friend?"
+        vi: "Giờ viết năm cái tên và hỏi một người bạn: Is … your sister? Are you …'s friend?"
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "father, mother, husband, wife, son, daughter, brother, sister", vi: "Gia đình"}
+      - {en: "friend, boyfriend, girlfriend, colleague, boss, teacher, student", vi: "Bạn bè, công việc"}
+      - {en: "This is … · Nice to meet you · Sorry, what's your name again?", vi: "Giới thiệu người khác"}
+      - {en: "Rob's girlfriend · Isobel's husband", vi: "Sở hữu 's — người + 's + người / vật"}
+      - {en: "I'm · you're · he's · we're · they're · isn't · aren't", vi: "be ở hiện tại"}
+    lines:
+      - {emma: "Let's remember the words for family,", focus: 0}
+      - {emma: "and for friends and people at work.", focus: 1}
+      - {emma: "To introduce people: This is my friend. Nice to meet you.", focus: 2}
+      - {emma: "Rob's girlfriend: the person, apostrophe s, then the person or thing.", say: "Rob's girlfriend: the person, apostrophe ess, then the person or thing.", focus: 3}
+      - {emma: "And the verb be: I'm, you're, he's, we're, they're. See you in lesson 1.2!", say: "And the verb be: I'm, you're, he's, we're, they're. See you in lesson one point two!", focus: 4, vi: "Hẹn gặp lại ở bài 1.2!"}

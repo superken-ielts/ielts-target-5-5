@@ -1,0 +1,289 @@
+# Unit 1 · People in your life — Explore (Coursebook tr. 15–16): Keyword OK, Across cultures: Greetings, Explore Speaking
+# (xin nhắc lại, hỏi lại để kiểm tra thông tin). Phiên U01-explore.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U01-explore.yaml
+# Nguồn: trang 15–16; đáp án theo Teacher's Book tr. 27–28 (1a: A3 B1 C2 D4; tranh chào hỏi: 1 bow, 2 shake hands,
+# 3 say hello, 4 kiss, 5 hug, 6 exchange cards; 3a: page, train, exercise, room; 4: 1e 2a 3d 4c 5b).
+# Audio gốc: 1.17 (Seung-wan, Hàn Quốc), 1.18 (Paul, Anh), 1.19 (Maite và Krishnan — lời in sẵn ở trang 16).
+# Ảnh cắt từ trang 15 (PDF trang 16 của course-book): tranh A–D và sáu tranh chào hỏi.
+id: U01-explore
+activity: U01-explore
+title: "Unit 1 · People in your life"
+subtitle: "Explore Speaking · OK, greetings, Sorry, can you say that again?"
+title_vi: "Từ OK, chào hỏi ở các nước, xin nhắc lại và hỏi lại để kiểm tra thông tin (trang 15–16, audio 1.17–1.19)"
+tag: "EU A2 · UNIT 1"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to the Explore section of Unit 1."
+        say: "Welcome to the Explore section of Unit one."
+        vi: "Chào mừng đến với phần Explore của Unit 1."
+      - emma: "Today: the word OK, how people say hello around the world, and how to ask people to repeat."
+        vi: "Hôm nay: từ OK, cách chào hỏi ở các nước, và cách nhờ người khác nói lại."
+      - tom: "Sorry, can you say that again?"
+        vi: "Xin lỗi, cô nói lại được không?"
+      - emma: "Ha ha. Yes, Tom! That's exactly what we learn today."
+        vi: "Đúng rồi Tom! Đó chính là câu chúng ta học hôm nay."
+
+  - kind: match
+    chapter: "Keyword: OK"
+    heading: "Keyword OK · Match the conversations to pictures A–D"
+    heading_vi: "Nối hội thoại với tranh A–D — OK nghĩa là gì trong mỗi câu?"
+    image: {pdf: course-book, page: 16, clip: [248, 42, 530, 256]}
+    items:
+      - {n: 1, q: "Can I use your mobile phone? — OK. Here it is.", answer: B}
+      - {n: 2, q: "I'm sorry I'm late. — That's OK. Take a seat.", answer: C}
+      - {n: 3, q: "My name's Lesley, with a y. — L-E-S-L-E-Y. OK.", answer: A}
+      - {n: 4, q: "Hi. How are you? — I'm OK, thanks. And you?", answer: D}
+    lines:
+      - emma: "Look at the four pictures. Listen to Tom and Mai. Which picture is it? And what does OK mean?"
+        vi: "Nhìn bốn bức tranh. Nghe Tom và Mai: đó là tranh nào? OK nghĩa là gì?"
+      - {tom: "Can I use your mobile phone?", focus: 0}
+      - {mai: "OK. Here it is."}
+      - {emma: "That's picture B. Here, OK means yes, you can.", say: "That's picture B. Here, OK means yes, you can.", reveal: 1, vi: "Tranh B. OK ở đây = được, bạn cứ dùng."}
+      - {mai: "I'm sorry I'm late.", focus: 1}
+      - {tom: "That's OK. Take a seat."}
+      - {emma: "Picture C. That's OK means no problem.", reveal: 2, vi: "Tranh C. That's OK = không sao đâu."}
+      - {mai: "My name's Lesley, with a y.", say: "My name's Lesley, with a why.", focus: 2}
+      - {tom: "L, E, S, L, E, Y. OK.", say: "el. ee. ess. el. ee. why. OK."}
+      - {emma: "Picture A, at the hotel reception. OK means I understand.", say: "Picture eigh, at the hotel reception. OK means I understand.", reveal: 3, vi: "Tranh A, quầy lễ tân khách sạn. OK = tôi hiểu rồi."}
+      - {tom: "Hi. How are you?", focus: 3}
+      - {mai: "I'm OK, thanks. And you?"}
+      - {emma: "Picture D. I'm OK means I'm all right, I'm good.", reveal: 4, vi: "Tranh D. I'm OK = tôi ổn, khỏe."}
+
+  - kind: qa
+    chapter: "Trả lời bằng OK"
+    heading: "Exercise 3a · Answer with OK"
+    heading_vi: "Nghe câu của Tom, tạm dừng video, trả lời có dùng OK — rồi nghe Mai"
+    items:
+      - {q: "How was your weekend?", a: "It was OK, thanks. What about you?", ask: tom, by: mai}
+      - {q: "Can I use your computer?", a: "Yes, OK.", ask: tom, by: mai}
+      - {q: "Sorry, I can't remember your name.", a: "That's OK. It's Mai.", ask: tom, by: mai}
+      - {q: "Can I open the window, please?", a: "Yes, OK.", ask: tom, by: mai}
+    lines:
+      - emma: "Now you. Tom says something. Pause the video, and answer with OK. Then listen to Mai."
+        vi: "Đến lượt bạn: Tom nói một câu, bạn tạm dừng và trả lời có OK; rồi nghe Mai."
+      - {tom: "How was your weekend?", focus: 0, pause: 1.5}
+      - {mai: "It was OK, thanks. What about you?", reveal: 0, vi: "Cũng ổn, cảm ơn. Còn bạn?"}
+      - {tom: "Can I use your computer?", focus: 1, pause: 1.5}
+      - {mai: "Yes, OK.", reveal: 1}
+      - {tom: "Sorry, I can't remember your name.", focus: 2, pause: 1.5}
+      - {mai: "That's OK. It's Mai.", say: "That's OK. It's My.", reveal: 2}
+      - {tom: "Can I open the window, please?", focus: 3, pause: 1.5}
+      - {mai: "Yes, OK.", reveal: 3}
+
+  - kind: match
+    chapter: "Chào hỏi: từ vựng"
+    heading: "Across cultures · Greetings"
+    heading_vi: "Nối từ với tranh 1–6"
+    image: {pdf: course-book, page: 16, clip: [14, 466, 550, 612]}
+    items:
+      - {n: a, q: "bow — cúi chào", answer: 1}
+      - {n: b, q: "shake hands — bắt tay", answer: 2}
+      - {n: c, q: "say hello / hi — chào", answer: 3}
+      - {n: d, q: "kiss — hôn (má)", answer: 4}
+      - {n: e, q: "hug — ôm", answer: 5}
+      - {n: f, q: "exchange cards — trao danh thiếp", answer: 6}
+    lines:
+      - emma: "Across cultures. How do people say hello in different countries? First, the words. Look at pictures 1 to 6."
+        say: "Across cultures. How do people say hello in different countries? First, the words. Look at pictures one to six."
+        vi: "Across cultures: người các nước chào nhau thế nào? Trước hết là từ vựng — nhìn tranh 1 đến 6."
+      - {emma: "Picture 1. They bow.", say: "Picture one. They bow.", focus: 0, reveal: a}
+      - {emma: "Picture 2. They shake hands.", say: "Picture two. They shake hands.", focus: 1, reveal: b}
+      - {emma: "Picture 3. They say hello, or hi.", say: "Picture three. They say hello, or hi.", focus: 2, reveal: c}
+      - {emma: "Picture 4. They kiss.", say: "Picture four. They kiss.", focus: 3, reveal: d}
+      - {emma: "Picture 5. They hug.", say: "Picture five. They hug.", focus: 4, reveal: e}
+      - {emma: "And picture 6. They exchange cards. Business people often do this.", say: "And picture six. They exchange cards. Business people often do this.", focus: 5, reveal: f, vi: "Tranh 6: trao danh thiếp — người làm kinh doanh hay làm vậy."}
+
+  - kind: blanks
+    chapter: "Nghe 1.17–1.18: Hàn Quốc và Anh"
+    heading: "Exercise 2 · Seung-wan (South Korea) and Paul (England)"
+    heading_vi: "Audio 1.17 và 1.18 — khi gặp nhau, người ta thường (usually) làm gì?"
+    items:
+      - {n: 1, q: "Korea · two male friends usually ___.", answer: "shake hands or say hello"}
+      - {n: 2, q: "Korea · two female friends usually ___.", answer: "hug, but they don't kiss"}
+      - {n: 3, q: "Korea · male and female friends usually ___.", answer: "say hello"}
+      - {n: 4, q: "England · two male friends usually ___.", answer: "say Hi, how are you?"}
+      - {n: 5, q: "England · two female friends usually ___.", answer: "kiss"}
+      - {n: 6, q: "England · male and female friends usually ___.", answer: "kiss"}
+    lines:
+      - emma: "Listen to Seung-wan. He's from South Korea. What do people usually do when they meet?"
+        say: "Listen to Sung-wan. He's from South Korea. What do people usually do when they meet?"
+        vi: "Nghe Seung-wan, người Hàn Quốc: khi gặp nhau, người ta thường làm gì?"
+      - {track: "1.17", start: 2.8, end: 24.7, note: "1.17 · Seung-wan", focus: 0}
+      - {tom: "Two male friends usually shake hands, or just say hello.", reveal: 1}
+      - {tom: "Two female friends usually hug, but they don't kiss.", focus: 1, reveal: 2}
+      - {tom: "And male and female friends just say hello.", focus: 2, reveal: 3}
+      - emma: "Now Paul, from England. How is it different?"
+        vi: "Giờ nghe Paul, người Anh. Có gì khác?"
+      - {track: "1.18", start: 3.2, end: 22.4, note: "1.18 · Paul", focus: 3}
+      - {tom: "Two male friends usually just say: Hi, how are you?", reveal: 4}
+      - {tom: "Two female friends usually kiss.", focus: 4, reveal: 5}
+      - {tom: "And male and female friends usually kiss too.", focus: 5, reveal: 6}
+      - emma: "Notice the word usually. We use it with the present simple: they usually shake hands."
+        vi: "Để ý usually (thường thường), dùng với thì hiện tại đơn: they usually shake hands."
+
+  - kind: qa
+    chapter: "Ở Việt Nam thì sao?"
+    heading: "Exercise 3 · What do people usually do in your country?"
+    heading_vi: "Mai kể về Việt Nam — bạn tạm dừng video và nói về nước bạn"
+    items:
+      - {q: "Two friends at a party?", a: "Friends usually just say hello. Young people sometimes hug."}
+      - {q: "Two colleagues at work?", a: "Colleagues usually say hello, or they shake hands."}
+      - {q: "Two business people meeting?", a: "They usually shake hands and exchange cards."}
+      - {q: "A young and an old person at a friend's home?", a: "The young person says hello first, and sometimes bows a little."}
+    lines:
+      - emma: "Mai, what do people usually do in Vietnam?"
+        vi: "Mai, ở Việt Nam người ta thường làm gì?"
+      - {emma: "Two friends at a party?", focus: 0, pause: 1.0}
+      - {mai: "Friends usually just say hello. Young people sometimes hug.", reveal: 0}
+      - {emma: "Two colleagues at work?", focus: 1, pause: 1.0}
+      - {mai: "Colleagues usually say hello, or they shake hands.", reveal: 1}
+      - {emma: "Two business people meeting?", focus: 2, pause: 1.0}
+      - {mai: "They usually shake hands and exchange cards.", reveal: 2}
+      - {emma: "A young and an old person at a friend's home?", focus: 3, pause: 1.0}
+      - {mai: "The young person says hello first, and sometimes bows a little.", say: "The young person says hello first, and sometimes boughs a little.", reveal: 3}
+      - emma: "Thank you, Mai. Now you: what do you usually do when you meet people?"
+        vi: "Cảm ơn Mai. Còn bạn: bạn thường làm gì khi gặp người khác?"
+
+  - kind: letter
+    chapter: "Nghe 1.19: Maite và Krishnan"
+    heading: "Explore Speaking · Maite and Krishnan at Rob's party"
+    heading_vi: "Audio 1.19 — họ không hiểu điều gì lúc đầu?"
+    roles: {emma: teacher}
+    items:
+      - {text: "MAITE: Hello, I'm Maria Teresa."}
+      - {text: "KRISHNAN: Hi, nice to meet you. I'm Krishnan."}
+      - {text: "MAITE: Sorry, can you say that again?", note: "ask to repeat"}
+      - {text: "KRISHNAN: Krishnan."}
+      - {text: "MAITE: Krishnan?", note: "check"}
+      - {text: "KRISHNAN: Yes, that's right. And what's your name again? Maria …?", note: "ask to repeat"}
+      - {text: "MAITE: Maria Teresa, but you can call me Maite. It's short for Maria Teresa."}
+      - {text: "KRISHNAN: Maite, OK. So, what do you do?"}
+      - {text: "MAITE: I'm a Spanish teacher here in the summer … but in Spain, I'm a historical linguist."}
+      - {text: "KRISHNAN: Sorry, what's that again?", note: "ask to repeat"}
+      - {text: "MAITE: A historical linguist."}
+      - {text: "KRISHNAN: Oh, right. Is that about the history of language?", note: "check information"}
+      - {text: "MAITE: Yes, that's right. And what do you do?"}
+    lines:
+      - emma: "Explore Speaking. Maite and Krishnan meet at Rob's party. Listen. What don't they understand at first?"
+        say: "Explore Speaking. My-tay and Krishnan meet at Rob's party. Listen. What don't they understand at first?"
+        vi: "Maite và Krishnan gặp nhau ở tiệc của Rob. Nghe: lúc đầu họ không hiểu điều gì?"
+      - {track: "1.19", start: 2.9, end: 49.6, note: "1.19 · Maite and Krishnan"}
+      - {emma: "Maite doesn't understand Krishnan's name. So she says: Sorry, can you say that again?", say: "My-tay doesn't understand Krishnan's name. So she says: Sorry, can you say that again?", focus: 2, vi: "Maite không nghe rõ tên Krishnan nên hỏi: Sorry, can you say that again? (Xin lỗi, bạn nói lại được không?)"}
+      - {emma: "Then she checks: Krishnan? With a question in her voice.", focus: 4, vi: "Rồi cô ấy kiểm tra lại: Krishnan? — lên giọng như câu hỏi."}
+      - {emma: "Krishnan doesn't understand her name. He says: What's your name again?", focus: 5, vi: "Krishnan quên tên cô ấy: What's your name again? (Bạn tên gì nhỉ?)"}
+      - {emma: "And he doesn't understand her job: Sorry, what's that again?", focus: 9, vi: "Anh ấy không hiểu nghề của cô: Sorry, what's that again?"}
+      - {emma: "Then he checks the meaning: Is that about the history of language?", focus: 11, vi: "Rồi kiểm tra nghĩa: Is that about the history of language? (Có phải về lịch sử ngôn ngữ không?)"}
+
+  - kind: compare
+    chapter: "Mẫu câu"
+    heading: "Exercise 2 · Ask to repeat, check information"
+    heading_vi: "Hai nhóm câu hỏi"
+    items:
+      - {title: "Ask people to repeat", title_vi: "Nhờ nói lại", lines: ["Sorry, can you say that again?", "What's your name again?", "Sorry, what's that again?", "Sorry?"]}
+      - {title: "Check information", title_vi: "Hỏi lại để kiểm tra", lines: ["Krishnan?", "Is that … ?", "Sorry, which hotel?", "Sorry, what time? where? who? when? how much?"]}
+    lines:
+      - emma: "So we have two groups of questions."
+        vi: "Vậy có hai nhóm câu hỏi."
+      - {emma: "To ask someone to repeat: Sorry, can you say that again? What's your name again? Sorry, what's that again?", focus: 0, vi: "Nhờ nói lại: Sorry, can you say that again? / What's your name again? / Sorry, what's that again?"}
+      - {emma: "To check information: say the word again, like a question. Or ask: Is that …? Sorry, which hotel? Sorry, what time?", focus: 1, vi: "Kiểm tra: nhắc lại từ với giọng hỏi, hoặc Is that…?, Sorry, which hotel?, Sorry, what time?…"}
+
+  - kind: blanks
+    chapter: "Bài 3: Sorry, which …?"
+    heading: "Exercise 3a · Complete the questions"
+    heading_vi: "Tom nói, Mai hỏi lại bằng Sorry, which …?"
+    items:
+      - {n: 1, q: "I'm at the Ellersley House Hotel. — Sorry, which ___?", answer: "hotel"}
+      - {n: 2, q: "OK, page one hundred and three, please. — Sorry, which ___?", answer: "page"}
+      - {n: 3, q: "He's on the 9.47 train. — Sorry, which ___?", answer: "train"}
+      - {n: 4, q: "Look at exercise 3b. — Sorry, which ___?", answer: "exercise"}
+      - {n: 5, q: "We're in room 382. — Sorry, which ___?", answer: "room"}
+    lines:
+      - emma: "Exercise 3. When you don't hear a name or a number, ask: Sorry, which, and then the word."
+        say: "Exercise three. When you don't hear a name or a number, ask: Sorry, which, and then the word."
+        vi: "Bài 3: không nghe rõ tên hay số thì hỏi: Sorry, which + danh từ?"
+      - {tom: "I'm at the Ellersley House Hotel.", focus: 0}
+      - {mai: "Sorry, which hotel?", reveal: 1}
+      - {tom: "OK, page one hundred and three, please.", focus: 1}
+      - {mai: "Sorry, which page?", reveal: 2}
+      - {tom: "He's on the 9.47 train.", say: "He's on the nine forty-seven train.", focus: 2}
+      - {mai: "Sorry, which train?", reveal: 3}
+      - {tom: "Look at exercise 3b.", say: "Look at exercise three bee.", focus: 3}
+      - {mai: "Sorry, which exercise?", reveal: 4}
+      - {tom: "We're in room 382.", say: "We're in room three eight two.", focus: 4}
+      - {mai: "Sorry, which room?", reveal: 5}
+
+  - kind: pairs
+    chapter: "Bài 4: who, where, when …"
+    heading: "Exercise 4 · Match 1–5 with a–e"
+    heading_vi: "Hỏi lại đúng loại thông tin: ai, ở đâu, khi nào, mấy giờ, bao nhiêu tiền"
+    items:
+      - {n: 1, q: "Agata's on the phone.", answer: e}
+      - {n: 2, q: "The bus is at 10.53.", answer: a}
+      - {n: 3, q: "Kevin's in Uppsala.", answer: d}
+      - {n: 4, q: "Your appointment's on Friday, March 17.", answer: c}
+      - {n: 5, q: "That's $45.23, please.", answer: b}
+    options:
+      - {k: a, text: "Sorry, what time?"}
+      - {k: b, text: "Sorry, how much?"}
+      - {k: c, text: "Sorry, when?"}
+      - {k: d, text: "Sorry, where?"}
+      - {k: e, text: "Sorry, who?"}
+    lines:
+      - emma: "Exercise 4. Match the sentences with the questions."
+        say: "Exercise four. Match the sentences with the questions."
+        vi: "Bài 4: nối câu với câu hỏi lại phù hợp."
+      - {tom: "Agata's on the phone.", focus: 0}
+      - {mai: "Sorry, who?", reveal: 1, vi: "Xin lỗi, ai cơ?"}
+      - {tom: "The bus is at 10.53.", say: "The bus is at ten fifty-three.", focus: 1}
+      - {mai: "Sorry, what time?", reveal: 2, vi: "Xin lỗi, mấy giờ?"}
+      - {tom: "Kevin's in Uppsala.", say: "Kevin's in Oop-sah-lah.", focus: 2}
+      - {mai: "Sorry, where?", reveal: 3, vi: "Xin lỗi, ở đâu?"}
+      - {tom: "Your appointment's on Friday, March 17.", say: "Your appointment's on Friday, March the seventeenth.", focus: 3}
+      - {mai: "Sorry, when?", reveal: 4, vi: "Xin lỗi, khi nào?"}
+      - {tom: "That's $45.23, please.", say: "That's forty-five dollars twenty-three, please.", focus: 4}
+      - {mai: "Sorry, how much?", reveal: 5, vi: "Xin lỗi, bao nhiêu tiền?"}
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Exercise 6 · Check the information"
+    heading_vi: "Tom nói một câu — bạn tạm dừng video và hỏi lại; rồi nghe Mai"
+    items:
+      - {q: "My favourite restaurant is Lemongrass.", a: "Sorry, which restaurant?", ask: tom, by: mai}
+      - {q: "My new shoes were $45.95.", a: "Sorry, how much?", ask: tom, by: mai}
+      - {q: "My sister is in Melbourne now.", a: "Sorry, where?", ask: tom, by: mai}
+      - {q: "The film is at 7.30.", a: "Sorry, what time?", ask: tom, by: mai}
+    lines:
+      - emma: "Your turn. Tom says a sentence. Pause the video and check the information. Then listen to Mai."
+        vi: "Đến lượt bạn: Tom nói, bạn tạm dừng và hỏi lại để kiểm tra; rồi nghe Mai."
+      - {tom: "My favourite restaurant is Lemongrass.", focus: 0, pause: 1.5}
+      - {mai: "Sorry, which restaurant?", reveal: 0}
+      - {tom: "My new shoes were $45.95.", say: "My new shoes were forty-five dollars ninety-five.", focus: 1, pause: 1.5}
+      - {mai: "Sorry, how much?", reveal: 1}
+      - {tom: "My sister is in Melbourne now.", focus: 2, pause: 1.5}
+      - {mai: "Sorry, where?", reveal: 2}
+      - {tom: "The film is at 7.30.", say: "The film is at seven thirty.", focus: 3, pause: 1.5}
+      - {mai: "Sorry, what time?", reveal: 3}
+      - emma: "Great. Now write five sentences with a name, a place or a number. Say them to a friend, and your friend checks them."
+        vi: "Viết năm câu có tên, nơi chốn hoặc con số; đọc cho một người bạn nghe, bạn ấy hỏi lại để kiểm tra."
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "OK = yes, you can · no problem · I understand · all right", vi: "Bốn nghĩa của OK"}
+      - {en: "bow · shake hands · say hello · kiss · hug · exchange cards", vi: "Chào hỏi — they usually …"}
+      - {en: "Sorry, can you say that again? · What's your name again?", vi: "Nhờ nói lại"}
+      - {en: "Sorry, which hotel? · Sorry, what time? · Is that …?", vi: "Hỏi lại để kiểm tra thông tin"}
+    lines:
+      - {emma: "Let's remember. OK has four meanings: yes, you can. No problem. I understand. And all right.", focus: 0}
+      - {emma: "Greetings: bow, shake hands, say hello, kiss, hug and exchange cards.", focus: 1}
+      - {emma: "To ask people to repeat: Sorry, can you say that again?", focus: 2}
+      - {emma: "And to check: Sorry, which hotel? Sorry, what time? See you in the next video!", focus: 3, vi: "Hẹn gặp lại ở video sau!"}

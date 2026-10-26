@@ -362,6 +362,9 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - Thanh đầu video ghi tên sách lấy từ `book.json` (trước đây luôn là "IELTS Target 5.0").
     - Sổ tay làm video từng unit: file 08 mục 6 (bộ video mỗi unit, giọng, nguồn, quy trình, quy ước kịch bản, bảng `say`, lỗi đã gặp, độ phủ).
     - Test: tên sách trên thanh đầu, các hàm thuần của `transcribe`; hồi quy "video A2 khớp `lessons.json`"; e2e: unit Intro có ba video 5–10 phút, nút Grammar mở phiên Intro 2.
+  - *Đợt 20:* **Unit 1 — 4 video (26:33)**: `U01-lesson-1` (Listening · Nice to meet you: people you know, 's, am / is / are), `U01-lesson-2` (Reading · Life's work: jobs, was / were), `U01-target` (Speaking · Talk about someone you know well), `U01-explore` (Explore Speaking · OK, greetings, Sorry, can you say that again?); phát audio gốc 1.7–1.19.
+    - Sổ tay file 08 mục 6: thêm cách đọc `lives` / `live` (động từ), năm, ngày tháng, tên riêng Unit 2; lỗi nhãn tranh bị cắt khi dùng `grid`; dựng theo hàng đợi đúng thứ tự.
+    - E2E: thẻ A2 có 7 video; Unit 1 có bốn nút video 5–10 phút theo thứ tự phiên (Listening, Reading, Speaking, Explore).
 
 ### Cổng G2
 

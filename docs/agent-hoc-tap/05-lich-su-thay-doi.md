@@ -5,6 +5,64 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 20 — 26/10/2026: Video Giai đoạn 0 — Unit 1 (4 video)
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Làm theo sổ tay ở file 08 mục 6.
+
+**Bốn video Unit 1 · People in your life** (26:33, mỗi video gắn vào một phiên của unit)
+- `U01-lesson-1` — Listening · Nice to meet you: people you know, 's, am / is / are (6:59): từ chỉ người trong gia
+  đình và người quen (phát từng từ của 1.8), ai là ai ở bữa tiệc của Rob (1.7), sở hữu 's, giới thiệu nhau (1.9),
+  am / is / are (1.10, tám câu), câu hỏi với Are / Is (1.11), Your turn.
+- `U01-lesson-2` — Reading · Life's work: jobs, was / were (6:12): bốn nghề (tranh trang 12), bài phỏng vấn Rob đọc
+  từng câu, xếp các việc của Rob theo thời gian, tính từ tả công việc (từng cặp trái nghĩa của 1.12), was / were
+  (1.13), việc đầu tiên của Sally (1.14), Your turn: việc đầu tiên, tốt nhất, tệ nhất.
+- `U01-target` — Speaking · Talk about someone you know well (5:56): Michel nói về Roberto, Donna nói về Adam (1.15),
+  Task vocabulary (1.16), chuẩn bị ghi chú, bài nói mẫu của Mai về bạn Lan, Your turn, lỗi hay gặp, viết hồ sơ ngắn
+  (bài viết của Look again).
+- `U01-explore` — Explore Speaking · OK, greetings, Sorry, can you say that again? (7:26): Keyword OK (tranh A–D trang
+  15), chào hỏi ở các nước (sáu tranh, 1.17–1.18), ở Việt Nam thì sao, Maite và Krishnan (1.19), Sorry, which …?,
+  hỏi lại để kiểm tra thông tin, Your turn.
+
+**Sổ tay** (file 08 mục 6) thêm điều học được khi viết kịch bản Unit 2 trong lúc chờ dựng:
+- Kokoro đọc `lives` / `live` (động từ) thành /laɪvz/, /laɪv/ sau danh từ, tên riêng ("My mother lives", "Erkan
+  lives") và trong danh sách từ; viết `say` là `livz` / `liv`. Video đã dựng (Intro, Unit 1) không có chỗ nào bị.
+- Ảnh dải tranh `grid` chia đều theo bề ngang nên nhãn A–D bị cắt sang ô bên cạnh: chọn `clip` bắt đầu trước nhãn.
+- Cảnh `bullets` tự đánh số; cảnh `vocab` cần `focus` ở dòng đầu; Emma đọc to cả thư thì không khai `emma: teacher`.
+- Nhiều lệnh dựng cùng chờ một khóa `flock` thì không chạy theo thứ tự gọi: dựng theo một danh sách id trong file.
+- Bảng `say`: năm, ngày tháng, giờ, tên riêng Unit 2, chữ Việt trong câu tiếng Anh.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/U01-*.yaml`, `U01-*.mp4` | Kịch bản và video Unit 1 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | Thêm bốn video Unit 1 (do lệnh `build` ghi) |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 6.4, 6.6, 6.7 (điều mới học được), 6.8 (độ phủ Unit 1) |
+| `docs/agent-hoc-tap/04-checklist.md` (P2-53) | Đợt 20 |
+| `tests/web/book.e2e.mjs` | Thẻ A2 có 7 video; Unit 1 có bốn nút video 5–10 phút theo thứ tự phiên |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+- `python3 web/build.py && git diff --stat`: bản dựng khớp nguồn; A2 79 phiên, 7 video.
+- `cd agents && python -m pytest -q`: 126 test qua (hồi quy "video A2 khớp `lessons.json`" chạy trên 7 video).
+- `node --test "tests/web/*.test.mjs"`: 16 test qua.
+- `node tests/web/book.e2e.mjs`: E2E OK; Unit 1 có bốn nút video Listening, Reading, Speaking, Explore, dài 5–10 phút.
+- Bốn video: H.264 1280×720 + AAC, có chương, độ lớn trung bình −17 dB như các video trước.
+- Giao diện ở khổ điện thoại: thẻ Unit 1 hiện "Video bài giảng · 4", mỗi video nằm dưới phiên của nó; phiên Bài 1 mở
+  `U01-lesson-1.mp4`. Không có lỗi JS.
+
+### Còn treo
+
+- P2-53: Unit 2 và Unit 3 (mỗi unit 4 video), làm tiếp ở các đợt sau.
+
+---
+
 ## Đợt 19 — 26/10/2026: Video Giai đoạn 0 — Intro (3 video) và sổ tay làm video từng unit
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`.

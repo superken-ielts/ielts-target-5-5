@@ -1,0 +1,239 @@
+# Unit 1 · People in your life — bài 1.2 "What was your first job?" (Coursebook tr. 12–13), phiên U01-lesson-2.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U01-lesson-2.yaml
+# Nguồn: trang 12–13 (bài đọc "Life's work" chép nguyên văn); đáp án theo Teacher's Book tr. 25–26 (1: A cook,
+# B office manager, C shop assistant; 3: b d e a c; 4a: c d b e a; was / were: was, were, wasn't, weren't …; 2a: was,
+# was, were, was, weren't, wasn't, wasn't). Audio gốc: 1.12 (cặp tính từ trái nghĩa), 1.13 (was / were), 1.14 (công việc
+# đầu tiên của Sally, cắt theo câu bằng mốc từng từ ở work/transcripts). Ảnh cắt: tranh A–C trang 12 (PDF trang 13).
+id: U01-lesson-2
+activity: U01-lesson-2
+title: "Unit 1 · People in your life"
+subtitle: "Reading · Life's work: jobs, was / were"
+title_vi: "Bài 1.2 — đọc bài phỏng vấn Rob, nghề nghiệp, tính từ tả công việc, was / were (trang 12–13, audio 1.12–1.14)"
+tag: "EU A2 · UNIT 1"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to lesson 1.2: What was your first job?"
+        say: "Welcome to lesson one point two: What was your first job?"
+        vi: "Chào mừng đến với bài 1.2: What was your first job? (Công việc đầu tiên của bạn là gì?)"
+      - emma: "We read about Rob's jobs, we learn words to describe jobs, and we learn was and were, to talk about the past."
+        vi: "Ta đọc về các công việc của Rob, học tính từ tả công việc, và học was / were để nói về quá khứ."
+
+  - kind: match
+    chapter: "Bốn nghề"
+    heading: "Reading 1 · Match pictures A–D with these jobs"
+    heading_vi: "Nối tranh với nghề — tranh D ở cạnh bài đọc (Rob, nhà báo)"
+    image: {pdf: course-book, page: 13, clip: [20, 64, 533, 254]}
+    items:
+      - {n: 1, q: "a journalist — nhà báo", answer: D}
+      - {n: 2, q: "an office manager — quản lý văn phòng", answer: B}
+      - {n: 3, q: "a shop assistant — nhân viên bán hàng", answer: C}
+      - {n: 4, q: "a cook — đầu bếp", answer: A}
+    lines:
+      - emma: "Look at the pictures. Match them with the jobs. A journalist is the example. That's picture D, next to the text."
+        say: "Look at the pictures. Match them with the jobs. A journalist is the example. That's picture D, next to the text."
+        focus: 0
+        reveal: 1
+        vi: "Nối tranh với nghề. A journalist là câu mẫu: tranh D, cạnh bài đọc."
+      - {tom: "Picture A is a cook. He cooks food in a restaurant.", say: "Picture eigh is a cook. He cooks food in a restaurant.", focus: 3, reveal: 4}
+      - {tom: "In picture B, she's an office manager. She works in an office.", focus: 1, reveal: 2}
+      - {tom: "And in picture C, he's a shop assistant. He sells bread.", focus: 2, reveal: 3}
+      - emma: "Remember: we say a or an before a job. A cook. An office manager."
+        vi: "Nhớ: trước nghề nghiệp có a / an: a cook, an office manager (an trước nguyên âm)."
+
+  - kind: passage
+    chapter: "Đọc: Life's work"
+    heading: "Reading 2 · Life's work"
+    heading_vi: "Rob kể về công việc đầu tiên, tốt nhất, tệ nhất — nghe Tom đọc và đọc theo"
+    items:
+      - {label: "First job?", text: "When I was fifteen, I was a shop assistant in a bakery at the weekend. I was at work by 6.00 am every Saturday and Sunday. That was really difficult. I'm not an early morning person!", note: "first job"}
+      - {label: "Best job?", text: "My job now. I'm a journalist. It's well paid and it's different every day. I'm often on planes or trains and in hotels and offices around the world and I meet lots of interesting people. It's a great job, really.", note: "best job"}
+      - {label: "Worst job?", text: "When I was eighteen, I was a cook in a fast food restaurant for a few months. The managers weren't very nice and the job was boring and badly paid. It was very hot in there, too. Terrible!", note: "worst job"}
+      - {label: "A job for life?", text: "Not for me. After university, I was a marketing assistant for four years. It was okay but it wasn't very interesting. Then I was an office manager. That was good, but it was always the same. I think change is good for you.", note: "a job for life?"}
+    lines:
+      - emma: "Now read the interview with Rob Lewis, a business journalist. Which job was his first? His best? His worst? Tom reads it for us."
+        vi: "Đọc bài phỏng vấn Rob Lewis, nhà báo kinh tế: việc đầu tiên, tốt nhất, tệ nhất của anh ấy là gì? Tom đọc cho chúng ta."
+      - {tom: "When I was fifteen, I was a shop assistant in a bakery at the weekend.", focus: 0}
+      - {tom: "I was at work by 6.00 am every Saturday and Sunday.", say: "I was at work by six in the morning every Saturday and Sunday.", focus: 0}
+      - {tom: "That was really difficult.", focus: 0}
+      - {tom: "I'm not an early morning person!", focus: 0}
+      - {emma: "His first job was a shop assistant in a bakery. A bakery is a shop that makes bread.", focus: 0, mark: ["a shop assistant in a bakery"], vi: "Việc đầu tiên: nhân viên bán hàng ở tiệm bánh (bakery = tiệm bánh mì)."}
+      - {tom: "My job now. I'm a journalist.", focus: 1}
+      - {tom: "It's well paid and it's different every day.", focus: 1}
+      - {tom: "I'm often on planes or trains and in hotels and offices around the world and I meet lots of interesting people.", focus: 1}
+      - {tom: "It's a great job, really.", focus: 1}
+      - {emma: "His best job is his job now. He's a journalist.", focus: 1, mark: ["I'm a journalist"], vi: "Việc tốt nhất: công việc hiện tại — nhà báo."}
+      - {tom: "When I was eighteen, I was a cook in a fast food restaurant for a few months.", focus: 2}
+      - {tom: "The managers weren't very nice and the job was boring and badly paid.", focus: 2}
+      - {tom: "It was very hot in there, too. Terrible!", focus: 2}
+      - {emma: "His worst job was a cook in a fast food restaurant. Boring, badly paid, and hot!", focus: 2, mark: ["a cook in a fast food restaurant"], vi: "Việc tệ nhất: đầu bếp ở tiệm đồ ăn nhanh — chán, lương thấp, lại nóng."}
+      - {tom: "Not for me. After university, I was a marketing assistant for four years.", focus: 3}
+      - {tom: "It was okay but it wasn't very interesting.", focus: 3}
+      - {tom: "Then I was an office manager. That was good, but it was always the same.", focus: 3}
+      - {tom: "I think change is good for you.", focus: 3}
+      - {emma: "A job for life means one job for all your life. Rob doesn't want that. He thinks change is good.", focus: 3, mark: ["change is good for you"], vi: "A job for life = làm một nghề cả đời. Rob không thích vậy; anh ấy nghĩ thay đổi là tốt."}
+
+  - kind: order
+    chapter: "Bài 3: thứ tự công việc"
+    heading: "Exercise 3 · Put Rob's jobs in order, from the past to now"
+    heading_vi: "Sắp xếp các công việc của Rob theo thời gian"
+    items:
+      - {k: a, text: "He was an office manager.", pos: 4}
+      - {k: b, text: "He was a shop assistant.", pos: 1}
+      - {k: c, text: "He's a journalist.", pos: 5}
+      - {k: d, text: "He was a cook.", pos: 2}
+      - {k: e, text: "He was a marketing assistant.", pos: 3}
+    lines:
+      - emma: "Exercise 3. Put Rob's jobs in the correct order. Number one is b: he was a shop assistant, at fifteen."
+        say: "Exercise three. Put Rob's jobs in the correct order. Number one is B: he was a shop assistant, at fifteen."
+        reveal: b
+        vi: "Bài 3: xếp theo thứ tự. Số 1 là b — năm 15 tuổi anh ấy bán hàng."
+      - {tom: "Then d. He was a cook, at eighteen.", say: "Then D. He was a cook, at eighteen.", reveal: d}
+      - {tom: "After university, e. He was a marketing assistant.", say: "After university, ee. He was a marketing assistant.", reveal: e}
+      - {tom: "Then a. He was an office manager.", say: "Then eigh. He was an office manager.", reveal: a}
+      - {tom: "And now c. He's a journalist.", say: "And now see. He's a journalist.", reveal: c}
+      - emma: "Notice: he was, for the past jobs. He's, for his job now."
+        vi: "Để ý: he was cho các việc đã qua; he's (he is) cho công việc bây giờ."
+
+  - kind: pairs
+    chapter: "Tính từ tả công việc"
+    heading: "Vocabulary 4 · Talking about jobs · Match the opposites"
+    heading_vi: "Nối cặp trái nghĩa, rồi nghe 1.12 và nói theo"
+    items:
+      - {n: 1, q: "easy — dễ", answer: c}
+      - {n: 2, q: "interesting — thú vị", answer: d}
+      - {n: 3, q: "well paid — lương cao", answer: b}
+      - {n: 4, q: "different every day — mỗi ngày một khác", answer: e}
+      - {n: 5, q: "great — tuyệt", answer: a}
+    options:
+      - {k: a, text: "terrible — tệ"}
+      - {k: b, text: "badly paid — lương thấp"}
+      - {k: c, text: "difficult — khó"}
+      - {k: d, text: "boring — chán"}
+      - {k: e, text: "the same every day — ngày nào cũng như nhau"}
+    lines:
+      - emma: "Exercise 4. Here are words to talk about jobs. Match the opposites, then listen and repeat."
+        say: "Exercise four. Here are words to talk about jobs. Match the opposites, then listen and repeat."
+        vi: "Bài 4: từ để nói về công việc — nối cặp trái nghĩa, rồi nghe và nhắc lại."
+      - {track: "1.12", start: 4.7, end: 7.85, note: "1.12 · easy, difficult", focus: 0, reveal: 1}
+      - {track: "1.12", start: 11.9, end: 15.4, note: "1.12 · interesting, boring", focus: 1, reveal: 2}
+      - {emma: "Interesting. Say it with three syllables: in-tres-ting.", say: "Interesting. Say it with three syllables. Interesting.", vi: "interesting: đọc 3 âm tiết (in-tres-ting), không đọc in-te-res-ting."}
+      - {track: "1.12", start: 19.6, end: 23.8, note: "1.12 · well paid, badly paid", focus: 2, reveal: 3}
+      - {track: "1.12", start: 28.0, end: 33.1, note: "1.12 · different every day", focus: 3, reveal: 4}
+      - {track: "1.12", start: 37.5, end: 40.5, note: "1.12 · great, terrible", focus: 4, reveal: 5}
+      - {emma: "So, a journalist? Well, it's well paid, and it's interesting.", vi: "Vậy nghề nhà báo thì sao? Lương cao và thú vị."}
+
+  - kind: compare
+    chapter: "was / were"
+    heading: "Grammar · be past: was, were"
+    heading_vi: "Quá khứ của be: I / he / she / it → was; you / we / they → were"
+    items:
+      - {title: "Positive", title_vi: "Khẳng định", lines: ["I was fifteen.", "He was an office manager.", "You were in the office.", "We were at the party."]}
+      - {title: "Negative", title_vi: "Phủ định", lines: ["I wasn't there.", "She wasn't at the party.", "They weren't in the office.", "wasn't = was not · weren't = were not"]}
+      - {title: "Questions", title_vi: "Câu hỏi, trả lời ngắn", lines: ["Was it interesting?", "Yes, it was. · No, it wasn't.", "Were they at the party?", "Yes, they were. · No, they weren't."]}
+    lines:
+      - emma: "Now the grammar. Was and were are the past of am, is and are."
+        vi: "Ngữ pháp: was và were là quá khứ của am, is, are."
+      - {emma: "I was, he was, she was, it was. You were, we were, they were.", focus: 0, vi: "I / he / she / it + was; you / we / they + were."}
+      - {emma: "Negative: wasn't and weren't.", focus: 1}
+      - {emma: "Questions: put was or were first. Was it interesting? Yes, it was.", focus: 2}
+
+  - kind: blanks
+    chapter: "Nghe 1.13: was / were"
+    heading: "Exercise 1 · Complete with was, were, wasn't, weren't"
+    heading_vi: "Audio 1.13 — nghe để kiểm tra, rồi nói theo"
+    items:
+      - {n: 1, q: "He ___ an office manager.", answer: "was"}
+      - {n: 2, q: "They ___ at home.", answer: "were"}
+      - {n: 3, q: "She ___ at the party.", answer: "wasn't"}
+      - {n: 4, q: "They ___ in the office.", answer: "weren't"}
+      - {n: 5, q: "___ it interesting?", answer: "Was"}
+      - {n: 6, q: "Yes, it ___.", answer: "was"}
+      - {n: 7, q: "___ they at the party?", answer: "Were"}
+      - {n: 8, q: "No, they ___.", answer: "weren't"}
+    lines:
+      - emma: "Complete the sentences. Then listen to check."
+        vi: "Điền vào câu rồi nghe để kiểm tra."
+      - {track: "1.13", start: 2.9, end: 6.8, note: "1.13 · 1", focus: 0, reveal: 1}
+      - {track: "1.13", start: 9.6, end: 12.6, note: "1.13 · 2", focus: 1, reveal: 2}
+      - {track: "1.13", start: 15.9, end: 19.7, note: "1.13 · 3", focus: 2, reveal: 3}
+      - {track: "1.13", start: 22.9, end: 26.5, note: "1.13 · 4", focus: 3, reveal: 4}
+      - {track: "1.13", start: 29.0, end: 32.0, note: "1.13 · 5", focus: 4, reveal: 5}
+      - {track: "1.13", start: 34.8, end: 37.7, note: "1.13 · 6", focus: 5, reveal: 6}
+      - {track: "1.13", start: 40.6, end: 43.7, note: "1.13 · 7", focus: 6, reveal: 7}
+      - {track: "1.13", start: 46.6, end: 49.3, note: "1.13 · 8", focus: 7, reveal: 8}
+      - emma: "Listen to wasn't and weren't. Say them clearly, so people hear the not."
+        vi: "Đọc rõ wasn't, weren't để người nghe nhận ra nghĩa phủ định."
+
+  - kind: blanks
+    chapter: "Nghe 1.14: việc đầu tiên của Sally"
+    heading: "Exercise 2 · Sally talks about her first job"
+    heading_vi: "Audio 1.14 — điền was, were, wasn't, weren't"
+    items:
+      - {n: 2, q: "When I was at university in 2007, I ___ an assistant in a clothes shop.", answer: "was"}
+      - {n: 3, q: "The shop ___ near the university …", answer: "was"}
+      - {n: 4, q: "… so a lot of our customers ___ students.", answer: "were"}
+      - {n: 5, q: "One of the other assistants ___ a student too, …", answer: "was"}
+      - {n: 6, q: "… but the others ___.", answer: "weren't"}
+      - {n: 7, q: "The job was OK, but it ___ well paid.", answer: "wasn't"}
+      - {n: 8, q: "It was a good first job, but it ___ a job for life for me.", answer: "wasn't"}
+    lines:
+      - emma: "Exercise 2. Sally talks about her first job. Complete the gaps, then listen."
+        say: "Exercise two. Sally talks about her first job. Complete the gaps, then listen."
+        vi: "Bài 2: Sally kể về công việc đầu tiên. Điền chỗ trống rồi nghe."
+      - {track: "1.14", start: 3.4, end: 10.2, note: "1.14 · sentence 1", focus: 0, reveal: 2}
+      - {track: "1.14", start: 10.3, end: 15.4, note: "1.14 · sentence 2", focus: 1, reveal: [3, 4]}
+      - {track: "1.14", start: 15.9, end: 20.7, note: "1.14 · sentence 3", focus: 3, reveal: [5, 6]}
+      - {track: "1.14", start: 21.1, end: 25.2, note: "1.14 · sentence 4", focus: 5, reveal: 7}
+      - {track: "1.14", start: 25.4, end: 29.8, note: "1.14 · sentence 5", focus: 6, reveal: 8}
+      - emma: "Customers were students: more than one, so were. The others weren't: they were not students."
+        vi: "customers (nhiều người) → were; the others weren't = những người khác thì không phải sinh viên."
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Speaking 3 · Your first job, your best job, your worst job"
+    heading_vi: "Nghe câu hỏi, tạm dừng và trả lời về công việc của bạn (hoặc của người bạn biết rõ)"
+    items:
+      - {q: "What was your first job?", a: "I was a waitress in a café in Hue.", ask: tom, by: mai}
+      - {q: "Was it difficult?", a: "Yes, it was. It was difficult and badly paid, but it was interesting.", ask: tom, by: mai}
+      - {q: "What was your best job?", a: "My job now. I'm an English teacher. It's different every day.", ask: tom, by: mai}
+      - {q: "What was your worst job?", a: "When I was a student, I was a shop assistant in a market. It was boring and very hot!", ask: tom, by: mai}
+      - {q: "Is a job for life a good thing?", a: "I think it's a good thing. It's safe.", ask: tom, by: mai}
+    lines:
+      - emma: "Now you. Think about your jobs, or the jobs of someone you know. Tom asks Mai. Pause the video and answer too."
+        vi: "Đến lượt bạn: nghĩ về các công việc của bạn (hoặc của người bạn biết). Tom hỏi Mai — bạn tạm dừng và trả lời."
+      - {tom: "What was your first job?", focus: 0, pause: 1.5}
+      - {mai: "I was a waitress in a café in Hue.", say: "I was a waitress in a café in Whey.", reveal: 0}
+      - {tom: "Was it difficult?", focus: 1, pause: 1.5}
+      - {mai: "Yes, it was. It was difficult and badly paid, but it was interesting.", reveal: 1}
+      - {tom: "What was your best job?", focus: 2, pause: 1.5}
+      - {mai: "My job now. I'm an English teacher. It's different every day.", reveal: 2}
+      - {tom: "What was your worst job?", focus: 3, pause: 1.5}
+      - {mai: "When I was a student, I was a shop assistant in a market. It was boring and very hot!", reveal: 3}
+      - {tom: "Is a job for life a good thing?", focus: 4, pause: 1.5}
+      - {mai: "I think it's a good thing. It's safe.", reveal: 4}
+      - emma: "Good. Rob doesn't agree, but Mai thinks a job for life is safe. What do you think?"
+        vi: "Rob không đồng ý, còn Mai thấy làm một nghề cả đời thì ổn định. Bạn nghĩ sao?"
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "a journalist · an office manager · a shop assistant · a cook", vi: "Nghề nghiệp có a / an"}
+      - {en: "easy / difficult · interesting / boring · well paid / badly paid", vi: "Tả công việc"}
+      - {en: "different every day / the same every day · great / terrible", vi: "Tả công việc"}
+      - {en: "I / he / she / it was · you / we / they were · wasn't · weren't", vi: "be ở quá khứ"}
+      - {en: "What was your first job? · Was it interesting? · Yes, it was.", vi: "Hỏi về công việc trước đây"}
+    lines:
+      - {emma: "Let's remember. Jobs need a or an.", focus: 0}
+      - {emma: "To describe a job: easy or difficult, interesting or boring, well paid or badly paid,", focus: 1}
+      - {emma: "different every day or the same every day, great or terrible.", focus: 2}
+      - {emma: "For the past: was and were. Wasn't and weren't.", focus: 3}
+      - {emma: "And the questions: What was your first job? Was it interesting? Next is the Target activity: talk about someone you know well.", focus: 4, vi: "Tiếp theo là Target activity: nói về một người bạn biết rõ."}

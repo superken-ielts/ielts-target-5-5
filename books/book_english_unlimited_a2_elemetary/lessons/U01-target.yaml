@@ -1,0 +1,215 @@
+# Unit 1 · People in your life — Target activity: Talk about someone you know well (Coursebook tr. 14), phiên U01-target.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U01-target.yaml
+# Nguồn: trang 14; đáp án 2a, 3a theo Teacher's Book tr. 26 (ô 7 của Adam: "married" — Donna nói "he's my husband").
+# Audio gốc: 1.15 (Michel nói về Roberto 3.2–40.3, Donna nói về Adam 42.1–75.7), 1.16 (năm câu Task vocabulary).
+# Phần viết: bài mẫu của Mai và đề "viết hồ sơ ngắn về một người bạn biết rõ" (Look again 1b, trang 17).
+id: U01-target
+activity: U01-target
+title: "Unit 1 · People in your life"
+subtitle: "Speaking · Talk about someone you know well"
+title_vi: "Nói về một người bạn biết rõ — họ là ai, quen nhau thế nào, xưa và nay làm gì (trang 14, audio 1.15–1.16)"
+tag: "EU A2 · UNIT 1"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 1: People in your life. This is the Target activity: talk about someone you know well."
+        say: "Welcome to Unit one: People in your life. This is the Target activity: talk about someone you know well."
+        vi: "Chào mừng đến với Unit 1: People in your life. Đây là Target activity: nói về một người bạn biết rõ."
+      - emma: "You say who the person is, how you know them, and what their job was and is now."
+        vi: "Bạn sẽ nói người đó là ai, hai người quen nhau thế nào, trước đây và bây giờ họ làm nghề gì."
+      - tom: "So I can talk about my best friend?"
+        vi: "Vậy mình nói về bạn thân được không?"
+      - emma: "Yes! A friend, a colleague, a neighbour, your husband or your wife. Someone you know well."
+        vi: "Được! Một người bạn, đồng nghiệp, hàng xóm, chồng hoặc vợ — ai đó bạn biết rõ."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "1.3 Target activity · page 14"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Listen: Michel and Donna talk about people they know (1.15)", vi: "Nghe Michel và Donna nói về người họ quen"}
+      - {en: "Complete two profiles", vi: "Điền hồ sơ của Roberto và Adam"}
+      - {en: "How you know people: We were classmates at school … (1.16)", vi: "Cụm từ nói hai người quen nhau thế nào"}
+      - {en: "Prepare, speak, then write a short profile", vi: "Chuẩn bị, nói, rồi viết một hồ sơ ngắn"}
+    lines:
+      - {emma: "First, we listen to two people. Michel talks about Roberto, and Donna talks about Adam.", focus: 0, say: "First, we listen to two people. Mee-shell talks about Roberto, and Donna talks about Adam."}
+      - {emma: "We complete their profiles.", focus: 1}
+      - {emma: "Then we learn phrases to say how you know someone.", focus: 2}
+      - {emma: "And then you prepare, and talk about your person. At the end, you write a short profile.", focus: 3}
+
+  - kind: blanks
+    chapter: "Nghe 1.15: Roberto"
+    heading: "Exercise 2a · Michel talks about Roberto"
+    heading_vi: "Audio 1.15 (phần 1) — nghe và điền hồ sơ của Roberto"
+    items:
+      - {n: 1, q: "Nationality: ___", answer: "Brazilian", tip: "Brazil (nước) → Brazilian (quốc tịch)"}
+      - {n: 2, q: "How you know the person: We were ___.", answer: "colleagues", tip: "colleagues = đồng nghiệp"}
+      - {n: 3, q: "Relationship now: ___", answer: "good friends"}
+      - {n: 4, q: "Present occupation: mathematics ___", answer: "teacher", tip: "occupation = nghề nghiệp"}
+    lines:
+      - emma: "Exercise 1. Michel talks about his friend Roberto. How do they know each other? Listen, and complete the profile."
+        say: "Exercise one. Mee-shell talks about his friend Roberto. How do they know each other? Listen, and complete the profile."
+        vi: "Michel nói về bạn mình là Roberto. Họ quen nhau thế nào? Nghe và điền hồ sơ."
+      - {track: "1.15", start: 3.2, end: 40.3, note: "1.15 · Michel"}
+      - {tom: "Roberto is Brazilian. He's about fifty-five.", focus: 0, reveal: 1, vi: "Roberto là người Brazil, khoảng 55 tuổi."}
+      - {tom: "They were colleagues, but not in the same office.", focus: 1, reveal: 2, vi: "Họ từng là đồng nghiệp, nhưng không cùng văn phòng."}
+      - {tom: "Now they're good friends. They write emails.", focus: 2, reveal: 3, vi: "Bây giờ họ là bạn tốt, liên lạc qua email."}
+      - {tom: "He was director of a shipping company. Now he's a mathematics teacher.", focus: 3, reveal: 4, vi: "Trước kia ông ấy là giám đốc một công ty vận tải biển; nay là giáo viên toán."}
+      - emma: "Listen to the words was and is. He was a director. That's the past. Now he's a teacher. That's now."
+        vi: "Để ý was và is: He was a director (quá khứ). Now he's a teacher (bây giờ)."
+
+  - kind: blanks
+    chapter: "Nghe 1.15: Adam"
+    heading: "Exercise 2a · Donna talks about Adam"
+    heading_vi: "Audio 1.15 (phần 2) — nghe và điền hồ sơ của Adam"
+    items:
+      - {n: 5, q: "Nationality: ___", answer: "Canadian", tip: "Canada → Canadian"}
+      - {n: 6, q: "How you know the person: We were ___.", answer: "best friends at school"}
+      - {n: 7, q: "Relationship now: ___", answer: "married", tip: "married = đã kết hôn — he's my husband"}
+      - {n: 8, q: "Past occupation: ___ student", answer: "media", tip: "media = truyền thông"}
+      - {n: 9, q: "Present occupation: ___ presenter", answer: "television", tip: "TV presenter = người dẫn chương trình truyền hình"}
+    lines:
+      - emma: "Now Donna talks about Adam. Listen for the end. It's a surprise!"
+        vi: "Giờ Donna nói về Adam. Nghe đến cuối nhé — có bất ngờ!"
+      - {track: "1.15", start: 42.1, end: 75.7, note: "1.15 · Donna"}
+      - {tom: "Adam is Canadian, and he's twenty-six.", focus: 0, reveal: 5}
+      - {tom: "They were best friends at school, and neighbours too.", focus: 1, reveal: 6, vi: "Họ là bạn thân hồi đi học, lại còn là hàng xóm."}
+      - {tom: "And now they're married. He's her husband!", focus: 2, reveal: 7, vi: "Và bây giờ họ đã cưới nhau — anh ấy là chồng cô ấy!"}
+      - {tom: "He was a media student. Now he's a TV presenter.", say: "He was a media student. Now he's a tee vee presenter.", focus: 3, reveal: 8}
+      - {emma: "A TV presenter, or a television presenter. That's someone who speaks on TV.", say: "A tee vee presenter, or a television presenter. That's someone who speaks on tee vee.", focus: 4, reveal: 9, vi: "TV presenter: người dẫn chương trình trên truyền hình."}
+
+  - kind: shadow
+    chapter: "Cụm từ: quen nhau thế nào"
+    heading: "Task vocabulary · How you know people"
+    heading_vi: "Bài 3 — nghe giọng đọc gốc (1.16), rồi nói theo"
+    items:
+      - {text: "We were classmates at school.", vi: "Chúng tôi là bạn cùng lớp hồi đi học."}
+      - {text: "We were at university together.", vi: "Chúng tôi học cùng trường đại học."}
+      - {text: "We were in the same office.", vi: "Chúng tôi làm cùng một văn phòng."}
+      - {text: "We were neighbours in Melbourne.", vi: "Chúng tôi là hàng xóm ở Melbourne."}
+      - {text: "She was my teacher.", vi: "Cô ấy từng là cô giáo của tôi."}
+    lines:
+      - emma: "Exercise 3. Here are five ways to say how you know someone. Listen to the recording, and say each sentence."
+        say: "Exercise three. Here are five ways to say how you know someone. Listen to the recording, and say each sentence."
+        vi: "Bài 3: năm cách nói hai người quen nhau thế nào. Nghe audio và nói theo từng câu."
+      - {track: "1.16", start: 4.75, end: 7.15, note: "1.16 · sentence 1", focus: 0}
+      - {track: "1.16", start: 10.1, end: 13.7, note: "1.16 · sentence 2", focus: 1}
+      - {track: "1.16", start: 16.8, end: 20.4, note: "1.16 · sentence 3", focus: 2}
+      - {track: "1.16", start: 23.5, end: 26.5, note: "1.16 · sentence 4", focus: 3}
+      - {track: "1.16", start: 29.5, end: 32.6, note: "1.16 · sentence 5", focus: 4}
+      - emma: "Notice: we were, for two people. She was, or he was, for one person. You can change the words: we were neighbours in Hanoi, she was my boss."
+        say: "Notice: we were, for two people. She was, or he was, for one person. You can change the words: we were neighbours in Ha Noi, she was my boss."
+        vi: "We were (hai người) — she / he was (một người). Thay từ được: we were neighbours in Hanoi, she was my boss…"
+
+  - kind: compare
+    chapter: "Chuẩn bị"
+    heading: "Exercise 4a · Prepare to talk about a person you know well"
+    heading_vi: "Viết ghi chú ngắn (không viết cả câu) cho ba phần"
+    items:
+      - {title: "The person", title_vi: "Người đó", lines: ["name, nationality, age", "Mai: Lan · Vietnamese · 28"]}
+      - {title: "Past", title_vi: "Quá khứ", lines: ["how you know him or her", "past occupations", "Mai: classmates, neighbours · nursing student"]}
+      - {title: "Present", title_vi: "Bây giờ", lines: ["occupation now", "relationship now", "Mai: nurse in Da Nang · good friends"]}
+    lines:
+      - emma: "Exercise 4. Think of a person you know well. Write short notes for three parts."
+        say: "Exercise four. Think of a person you know well. Write short notes for three parts."
+        vi: "Bài 4: nghĩ về một người bạn biết rõ, ghi chú ngắn cho ba phần."
+      - {emma: "The person: name, nationality and age.", focus: 0, vi: "Người đó: tên, quốc tịch, tuổi."}
+      - {emma: "The past: how you know him or her, and his or her old jobs.", focus: 1, vi: "Quá khứ: quen nhau thế nào, trước đây làm nghề gì."}
+      - {emma: "The present: his or her job now, and your relationship now.", focus: 2, vi: "Bây giờ: làm nghề gì, quan hệ hiện tại."}
+      - mai: "These are my notes. My person is my friend Lan."
+        say: "These are my notes. My person is my friend Lahn."
+        vi: "Đây là ghi chú của mình. Người mình nói là bạn Lan."
+
+  - kind: letter
+    chapter: "Bài nói mẫu của Mai"
+    heading: "Mai talks about her friend Lan"
+    heading_vi: "Nghe bài nói mẫu — để ý was / were và is / are"
+    roles: {mai: speaker}
+    items:
+      - {text: "OK, this is about my friend Lan.", say: "OK, this is about my friend Lahn.", note: "the person"}
+      - {text: "She's Vietnamese, and she's twenty-eight.", note: "nationality, age"}
+      - {text: "We were classmates at school in Hue, and we were also neighbours.", say: "We were classmates at school in Whey, and we were also neighbours.", note: "how you know her"}
+      - {text: "Later we were at university together, but she was a nursing student and I was an English student.", note: "past"}
+      - {text: "Now she's a nurse in Da Nang, and I'm an English teacher.", say: "Now she's a nurse in Dah Nahng, and I'm an English teacher.", note: "present"}
+      - {text: "We're still good friends.", note: "relationship now"}
+    lines:
+      - emma: "Now listen to Mai. She talks about Lan for about one minute."
+        say: "Now listen to Mai. She talks about Lahn for about one minute."
+        vi: "Nghe Mai nói về Lan khoảng một phút."
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: mai, focus: 5}
+      - emma: "Very good, Mai. Notice how she starts: OK, this is about my friend Lan. That's a good way to start."
+        say: "Very good, Mai. Notice how she starts: OK, this is about my friend Lahn. That's a good way to start."
+        vi: "Để ý cách mở đầu: OK, this is about my friend Lan — một cách bắt đầu hay."
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Exercise 4b · Tell someone about your person"
+    heading_vi: "Trả lời từng câu về người bạn chọn — tạm dừng video nếu cần"
+    items:
+      - {q: "Who is your person?", a: "This is about my friend Ben.", by: tom}
+      - {q: "Where is he from? How old is he?", a: "He's American, and he's about thirty.", by: tom}
+      - {q: "How do you know him?", a: "We were neighbours in Boston, and we were at college together.", by: tom}
+      - {q: "What was his job?", a: "He was a waiter in a café.", by: tom}
+      - {q: "What's his job now? And what's your relationship now?", a: "Now he's a cook in a restaurant. We're good friends.", by: tom}
+    lines:
+      - emma: "Your turn. I ask questions about your person. Pause the video and answer. Then listen to Tom. He talks about his friend Ben."
+        vi: "Đến lượt bạn: nghe câu hỏi về người bạn chọn, tạm dừng và trả lời; rồi nghe Tom nói về bạn Ben."
+      - {emma: "Who is your person?", focus: 0, pause: 1.5}
+      - {tom: "This is about my friend Ben.", reveal: 0}
+      - {emma: "Where is he from? How old is he?", focus: 1, pause: 1.5}
+      - {tom: "He's American, and he's about thirty.", reveal: 1}
+      - {emma: "How do you know him?", focus: 2, pause: 1.5}
+      - {tom: "We were neighbours in Boston, and we were at college together.", reveal: 2}
+      - {emma: "What was his job?", focus: 3, pause: 1.5}
+      - {tom: "He was a waiter in a café.", reveal: 3}
+      - {emma: "What's his job now? And what's your relationship now?", focus: 4, pause: 1.5}
+      - {tom: "Now he's a cook in a restaurant. We're good friends.", reveal: 4}
+      - emma: "Now say it all together, for one or two minutes. Record yourself on your phone, listen, and try again."
+        vi: "Giờ nói liền cả bài 1–2 phút. Ghi âm bằng điện thoại, nghe lại rồi nói lần hai tốt hơn."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về người khác"
+    items:
+      - {wrong: "She is teacher.", right: "She's a teacher.", note: "nghề nghiệp có a / an"}
+      - {wrong: "We was neighbours.", right: "We were neighbours.", note: "we / they / you → were"}
+      - {wrong: "He is my friend since school.", right: "We were friends at school.", note: "nói chuyện quá khứ: was / were"}
+      - {wrong: "Her name is Lan. He is a nurse.", right: "Her name is Lan. She's a nurse.", note: "nữ → she / her; nam → he / his"}
+    lines:
+      - emma: "Before you write, here are some common mistakes."
+        vi: "Trước khi viết, xem vài lỗi hay gặp."
+      - {emma: "Say: she's a teacher. With a. Jobs need a or an.", focus: 0}
+      - {emma: "We were, not we was.", focus: 1}
+      - {emma: "For the past, use was and were: we were friends at school.", focus: 2}
+      - {emma: "And be careful with he and she. Lan is a woman, so she's a nurse.", say: "And be careful with he and she. Lahn is a woman, so she's a nurse.", focus: 3}
+
+  - kind: bullets
+    chapter: "Viết và ghi nhớ"
+    heading: "Write a short profile"
+    heading_vi: "Bài viết: 5–6 câu về người bạn chọn (Look again 1b, trang 17)"
+    items:
+      - {en: "This is about my friend … · He's / She's …", vi: "Người đó là ai, quốc tịch, tuổi"}
+      - {en: "We were classmates / neighbours / colleagues …", vi: "Quen nhau thế nào (was / were)"}
+      - {en: "He was a … · Now he's a …", vi: "Nghề nghiệp xưa và nay"}
+      - {en: "We're still good friends. / We're married.", vi: "Quan hệ bây giờ"}
+      - {en: "Check: a / an before jobs · was or were · he or she", vi: "Tự soát lỗi trước khi chép sạch"}
+    lines:
+      - emma: "Now write a short profile of your person, five or six sentences, like Mai's talk. Use these sentences to help you."
+        vi: "Giờ viết một hồ sơ ngắn 5–6 câu về người bạn chọn, giống bài nói của Mai."
+      - {emma: "Say who the person is.", focus: 0}
+      - {emma: "Say how you know them.", focus: 1}
+      - {emma: "Say their old job and their job now.", focus: 2}
+      - {emma: "And your relationship now.", focus: 3}
+      - {emma: "Then check your writing. Well done! In the next video, we explore the word OK, greetings, and how to ask people to repeat.", focus: 4, vi: "Soát lỗi rồi chép sạch. Video sau: từ OK, cách chào hỏi, cách nhờ người khác nhắc lại."}

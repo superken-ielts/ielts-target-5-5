@@ -216,9 +216,11 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
    `kokoro_onnx.tokenizer.Tokenizer().phonemize(câu, "en-us")`. Sai thì viết `say` (bảng 6.6).
 5. Xem trước không tiếng: `build … --engine silent --out <thư mục tạm> --work <thư mục tạm>/w`, rồi ghép vài khung
    hình mỗi cảnh thành một ảnh để soát: chữ tràn, ảnh cắt lệch, chữ quá nhỏ.
-6. Dựng thật lần lượt từng video (Kokoro dùng hết 4 lõi, mỗi video 15–20 phút). Xếp hàng bằng khóa:
-   `flock /tmp/kokoro.lock python -m lesson_video build <kịch bản> --engine kokoro`. Máy khởi động lại giữa chừng
-   thì chạy lại lệnh: tiếng các câu đã đọc nằm trong `~/.cache/lesson_video/tts`, nên chỉ đọc nốt phần còn lại.
+6. Dựng thật lần lượt từng video (Kokoro dùng hết 4 lõi, mỗi video 15–20 phút). Không chạy hai lần dựng cùng lúc:
+   `flock /tmp/kokoro.lock python -m lesson_video build <kịch bản> --engine kokoro`. Nhiều lệnh cùng chờ một khóa
+   thì không chạy theo thứ tự gọi; muốn đúng thứ tự (xong Unit này mới tới Unit sau) thì dùng một vòng lặp đọc danh
+   sách id từ file, dựng từng id rồi ghi lại id đã xong. Máy khởi động lại giữa chừng thì chạy lại lệnh: tiếng các câu
+   đã đọc nằm trong `~/.cache/lesson_video/tts`, nên chỉ đọc nốt phần còn lại.
 7. `python3 web/build.py`. Chạy các kiểm tra ở mục 9 file 06. Mở phiên trong app xem nút video, thêm hàng vào bảng 6.8,
    ghi 04 / 05. Commit, đẩy `main` (xem mục 6.5 cuối).
 
@@ -250,6 +252,10 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 | bows (cúi chào) | `boughs` | Kokoro đọc /boʊz/ (cái nơ) |
 | "the sound ay", "a short e" | viết lại câu, không đánh vần âm | Kokoro đọc ay là /aɪ/, e là /iː/ |
 | page 7, Exercise 3, lesson 1.1 | `page seven`, `Exercise three`, `lesson one point one` | Số đứng riêng đọc chắc hơn khi viết thành chữ |
+| lives, live (động từ) | `livz`, `liv` | Sau danh từ, tên riêng ("My mother lives", "Erkan lives") và trong danh sách từ, Kokoro đọc /laɪvz/, /laɪv/. Sau đại từ (he lives, I live) thì đúng. Quét: phiên âm có `lˈaɪv` |
+| 2009, 1989, 31 July, August 1 and 2, 9am | `two thousand and nine`, `nineteen eighty-nine`, `the thirty-first of July`, `August first and second`, `nine eigh em` | Năm, ngày tháng, giờ |
+| Ju-Yung, Kildare, Sofasurfing.com | `Joo-young`, `Kill-dare`, `Sofa surfing dot com` | Tên riêng Unit 2 |
+| xin chào, bún bò Huế | `sin chow`, `Boon baw Whey` | Chữ Việt trong câu tiếng Anh: viết chữ Việt ở dòng thoại, cách đọc gần đúng ở `say` |
 
 ### 6.7 Lỗi đã gặp
 
@@ -259,6 +265,14 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 - Máy khởi động lại giữa lúc dựng: chạy lại lệnh dựng, các câu đã đọc lấy lại từ bộ nhớ đệm.
 - Lệnh chờ `while pgrep -f <tên>` tự khớp với chính nó và không bao giờ dừng. Kiểm tra bằng
   `ps aux | grep "[t]ên"`.
+- Ảnh dải tranh `grid: 4` chia đều theo bề ngang, nên nhãn tròn A–D ở góc tranh bị cắt sang ô bên cạnh. Chọn `clip`
+  bắt đầu trước nhãn của tranh đầu khoảng 12 px (ảnh 120 dpi) để mỗi ô chứa trọn nhãn của nó. Xem ảnh đã cắt:
+  `Slides(sc.load(p), sc.book_dir(p)).images[<số cảnh>].save("x.png")` (Unit 2, bài 2.1).
+- Cảnh `bullets` tự đánh số, nên `en` không bắt đầu bằng "1 …" (thành "1 1 …").
+- Cảnh `vocab` mà dòng đầu không có `focus` sẽ hiện "Listen and repeat · Nghe và nhắc lại theo bạn Tom". Dòng đầu
+  đặt `focus: 0` khi người đọc mẫu không phải Tom (ví dụ audio gốc).
+- Cảnh `letter` mà Emma đọc to cả thư (thư trả lời của Erkan, Unit 2) thì không khai `emma: teacher`: nhãn ghi "Emma
+  is reading" là đúng. Lời giảng đặt ở cảnh trước hoặc sau.
 
 ### 6.8 Độ phủ video
 
@@ -271,5 +285,15 @@ In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_eng
 | Giới thiệu bản thân · quốc gia, ngôn ngữ, chữ cái và số | sách tr. 7–8 | `U00-introductions` — Speaking · Introduce yourself | 5:51 | 9 |
 | Giới thiệu bản thân · quốc gia, ngôn ngữ, chữ cái và số | sách tr. 7–8 | `U00-letters-numbers` — Listening · Letters, numbers and addresses | 7:14 | 9 |
 | Thông tin cá nhân và can · đăng ký khoá học | sách tr. 9 | `U00-personal-info` — Grammar · Personal information, my / your, can | 6:18 | 10 |
+
+#### U01 · People in your life — 4/5 phần có video, 4 video, 26:33 (đợt 20)
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 10–11 | `U01-lesson-1` — Listening · Nice to meet you: people you know, 's, am / is / are | 6:59 | 10 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 12–13 | `U01-lesson-2` — Reading · Life's work: jobs, was / were | 6:12 | 10 |
+| Target activity · nhiệm vụ nói | sách tr. 14 | `U01-target` — Speaking · Talk about someone you know well | 5:56 | 10 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 15–16 | `U01-explore` — Explore Speaking · OK, greetings, Sorry, can you say that again? | 7:26 | 12 |
+| Look again · ôn tập và tự đánh giá | sách tr. 17 | không làm video riêng (mục 6.1); bài viết hồ sơ ngắn nằm trong `U01-target` | — | — |
 
 <!-- bảng độ phủ: cập nhật sau mỗi unit -->

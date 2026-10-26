@@ -339,7 +339,7 @@ try{
     await page.click(".bk-vbar button:last-child");
   });
 
-  await step("Giai đoạn 0 (English Unlimited A2): video Intro; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
+  await step("Giai đoạn 0 (English Unlimited A2): video Intro và Unit 1; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
     const card = page.locator("#p-book .bk-lib", { hasText: "English Unlimited A2 Elementary" });
@@ -347,16 +347,18 @@ try{
     assert.match(text, /Elementary · CEFR A1 → A2/);
     assert.match(text, /15 unit · 4 test · 171 track audio/);
     assert.match(text, /79 phiên × 60 phút/);
-    assert.match(text, /(^|\D)3 video bài giảng/);                     // file 08 mục 6.8: Intro 3 video
+    assert.match(text, /(^|\D)7 video bài giảng/);                     // file 08 mục 6.8: Intro 3 video, Unit 1 4 video
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
     assert.equal(await page.locator("#p-book .bk-unit").count(), 19);   // Intro + 14 unit + 3 Achievement test + mốc A2 Key
     assert.equal(await page.locator("#p-book .bk-row").count(), 79);
-    // video bài giảng: Intro có ba video 5–10 phút; nút Grammar mở phiên Intro thứ hai
+    // video bài giảng dài 5–10 phút: Intro ba video, mỗi unit bốn video theo thứ tự phiên; nút Grammar mở phiên Intro thứ hai
     const intro = page.locator("#p-book .bk-unit", { hasText: "Intro · About you" });
     const iv = await intro.locator(".bk-vids button").allTextContents();
     assert.deepEqual(iv.map(t => t.replace(/^▶ (\w+).*/, "$1")), ["Speaking", "Listening", "Grammar"]);
-    assert.ok(iv.every(t => { const m = t.match(/· (\d):\d\d$/); return m && +m[1] >= 5; }), "video Intro dài 5–10 phút: " + iv);
+    const u1v = await page.locator("#p-book .bk-unit", { hasText: "Unit 1 · People in your life" }).locator(".bk-vids button").allTextContents();
+    assert.deepEqual(u1v.map(t => t.replace(/^▶ (\w+).*/, "$1")), ["Listening", "Reading", "Speaking", "Explore"]);
+    assert.ok([...iv, ...u1v].every(t => { const m = t.match(/· (\d):\d\d$/); return m && +m[1] >= 5; }), "video dài 5–10 phút: " + iv + u1v);
     await intro.locator(".bk-vids button", { hasText: "Grammar" }).click();
     await page.waitForSelector("#p-book .bk-video");
     const isrc = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
