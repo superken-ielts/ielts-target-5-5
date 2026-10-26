@@ -365,6 +365,10 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 20:* **Unit 1 — 4 video (26:33)**: `U01-lesson-1` (Listening · Nice to meet you: people you know, 's, am / is / are), `U01-lesson-2` (Reading · Life's work: jobs, was / were), `U01-target` (Speaking · Talk about someone you know well), `U01-explore` (Explore Speaking · OK, greetings, Sorry, can you say that again?); phát audio gốc 1.7–1.19.
     - Sổ tay file 08 mục 6: thêm cách đọc `lives` / `live` (động từ), năm, ngày tháng, tên riêng Unit 2; lỗi nhãn tranh bị cắt khi dùng `grid`; dựng theo hàng đợi đúng thứ tự.
     - E2E: thẻ A2 có 7 video; Unit 1 có bốn nút video 5–10 phút theo thứ tự phiên (Listening, Reading, Speaking, Explore).
+  - *Đợt 21:* **Unit 2 — 4 video (27:51)**: `U02-lesson-1` (Listening · I miss my friends: offers, requests, a / an / some), `U02-lesson-2` (Reading · Sofasurfing: present simple, interests and wants), `U02-target` (Speaking · Take care of a guest), `U02-explore` (Explore Writing · in, an email to ask for something); phát audio gốc 1.21–1.26 (1.27 thiếu: cắt câu từ 1.26).
+    - Sổ tay file 08 mục 6.5: cách thay track thiếu; commit trong `git worktree` khi hàng đợi dựng còn chạy.
+    - Lệnh `lesson_video phonemes`: soát cách Kokoro đọc, ⚠ ba lỗi đã gặp (động từ use, live, read). Sửa `use` → `yooz` ở 13 câu; dựng lại `U00-personal-info`, `U01-target`.
+    - E2E: thẻ A2 có 11 video; Intro, Unit 1, Unit 2 có nút video 5–10 phút theo thứ tự phiên.
 
 ### Cổng G2
 

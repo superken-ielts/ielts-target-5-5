@@ -32,7 +32,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
 - Làm video mới: theo quy trình và bảng độ phủ ở `docs/agent-hoc-tap/06-video-bai-giang.md`; xong thì cập nhật bảng đó
   (`python -m lesson_video coverage ../books/<sách> --unit U0x`). Video tiếng Nhật (GENKI): quy trình và bảng độ phủ ở
   file 07 mục 4; cần `misaki[ja]` và phông Noto Sans CJK. Video Giai đoạn 0 (English Unlimited A2): sổ tay từng unit
-  ở file 08 mục 6; lời bài nghe chép sẵn ở `work/transcripts/` (`python -m lesson_video transcribe`).
+  ở file 08 mục 6; lời bài nghe chép sẵn ở `work/transcripts/` (`python -m lesson_video transcribe`). Trước khi dựng,
+  soát cách đọc bằng `python -m lesson_video phonemes <kịch bản>` (⚠ = lỗi đã gặp, sửa bằng `say`).
 
 ## Kiểm tra trước khi commit
 

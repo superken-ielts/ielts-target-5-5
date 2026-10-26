@@ -60,6 +60,7 @@ python -m lesson_video build <kịch bản> --engine silent --out /tmp/xem-thu -
 python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01   # phần nào của unit đã có video, phần nào chưa
 python -m lesson_video prune ../books/Genki   # bỏ khỏi lessons.json (và xóa .mp4) những video không còn kịch bản
 python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 1.7 1.20   # chép lời audio của sách
+python -m lesson_video phonemes ../books/book_english_unlimited_a2_elemetary/lessons/U02-*.yaml   # soát cách Kokoro đọc
 ```
 
 `transcribe` dùng cho sách không in lời bài nghe. Lệnh chép lời từng track bằng Parakeet TDT 0.6B v2 qua sherpa-onnx

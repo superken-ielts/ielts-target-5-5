@@ -1,0 +1,304 @@
+# Unit 2 · Away from home — Explore (Coursebook tr. 23–24): Keyword in, Independent learning (từ loại), Explore Writing
+# (viết email nhờ việc, chữ hoa). Phiên U02-explore.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U02-explore.yaml
+# Nguồn: trang 23–24 (ba email chép nguyên văn); đáp án theo Teacher's Book tr. 34–35 (Keyword 2a: in October, in a small
+# shop, in Athens, in the winter, in a flat, in 1989, in Korean, in the morning; Writing 1: Lebanon, stay with Erkan in
+# Turkey, a gift from Lebanon; 2: greetings Dear Erkan / Hi Ju-Yung / Hi again, goodbyes Thanks and bye / Best wishes /
+# See you soon; 3: 1 on Saturday, on 31 July, next Thursday, tomorrow · 2 shower, computer, washing machine · 3 restaurants,
+# concerts, sports events; 4a: Turkey, Ju-Yung, August). Trang này không có audio. Email mẫu: Mai viết cho Fiona ở Dublin
+# (chủ nhà trên Sofasurfing.com, bài 2.2).
+id: U02-explore
+activity: U02-explore
+title: "Unit 2 · Away from home"
+subtitle: "Explore Writing · in, an email to ask for something"
+title_vi: "Từ khóa in (nơi chốn, thời gian, ngôn ngữ), từ loại; đọc và viết email nhờ việc, viết hoa đúng chỗ (trang 23–24)"
+tag: "EU A2 · UNIT 2"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "This is Explore for Unit 2. First, the keyword in. Then we read three short emails, and you write an email to ask for something."
+        vi: "Phần Explore của Unit 2: trước hết là từ khóa in; rồi đọc ba email ngắn và tự viết một email nhờ việc."
+      - mai: "Good. I write a lot of emails!"
+        vi: "Hay quá. Mình viết email nhiều lắm!"
+
+  - kind: compare
+    chapter: "Keyword: in"
+    heading: "Keyword · in"
+    heading_vi: "in dùng cho nơi chốn, thời gian và ngôn ngữ"
+    items:
+      - {title: "Places", title_vi: "Nơi chốn", lines: ["in Istanbul · in Japan", "in a small house", "in the same street", "in the same office", "in Melbourne · in Germany"]}
+      - {title: "Times", title_vi: "Thời gian", lines: ["in the morning", "in the afternoon", "in the evening", "in 2007 · in March", "in winter"]}
+      - {title: "Languages", title_vi: "Ngôn ngữ", lines: ["in Japanese", "in English", "in German", "in Korean"]}
+    lines:
+      - emma: "Keyword: in. We use in in three ways."
+        vi: "Từ khóa in: có ba cách dùng."
+      - emma: "One: places. I live and work in Japan. I live in a small house. We were in the same office."
+        focus: 0
+        vi: "Một: nơi chốn — in Japan, in a small house, in the same office."
+      - emma: "Two: times. In the morning, in the afternoon, in the evening. In 2007, in March, in winter."
+        say: "Two: times. In the morning, in the afternoon, in the evening. In two thousand and seven, in March, in winter."
+        focus: 1
+        vi: "Hai: thời gian — buổi trong ngày, năm, tháng, mùa."
+      - emma: "Three: languages. Can you do these things in English? Say it in Japanese."
+        focus: 2
+        vi: "Ba: ngôn ngữ — in English, in Japanese (bằng tiếng Anh, bằng tiếng Nhật)."
+      - tom: "What about night? Is it in the night?"
+        vi: "Còn ban đêm thì sao? Có nói in the night không?"
+      - emma: "No, we say at night. And for days, we say on: on Monday, on 31 July."
+        say: "No, we say at night. And for days, we say on: on Monday, on the thirty-first of July."
+        vi: "Không, ta nói at night. Còn ngày thì dùng on: on Monday, on 31 July."
+
+  - kind: blanks
+    chapter: "Bài 2a: thêm in"
+    heading: "Keyword 2a · Add in to these sentences"
+    heading_vi: "Thêm in vào chỗ đúng — tạm dừng video, làm trước rồi nghe Tom"
+    items:
+      - {n: 1, q: "My birthday is ___ October.", answer: "in"}
+      - {n: 2, q: "I work ___ a small shop.", answer: "in"}
+      - {n: 3, q: "I was ___ Athens in the summer of 2009.", answer: "in"}
+      - {n: 4, q: "People often visit my country ___ the winter.", answer: "in"}
+      - {n: 5, q: "I live ___ a flat with my wife and children.", answer: "in"}
+      - {n: 6, q: "My friend and I were in Spain together ___ 1989.", answer: "in"}
+      - {n: 7, q: "I can say 'I love you' ___ Korean.", answer: "in"}
+      - {n: 8, q: "I work ___ the morning.", answer: "in"}
+    lines:
+      - emma: "Exercise 2a. Add in to these sentences. Pause the video and try first."
+        say: "Exercise two A. Add in to these sentences. Pause the video and try first."
+        vi: "Bài 2a: thêm in vào các câu. Tạm dừng video và tự làm trước."
+        pause: 1.5
+      - {tom: "My birthday is in October.", focus: 0, reveal: 1}
+      - {tom: "I work in a small shop.", focus: 1, reveal: 2}
+      - {tom: "I was in Athens in the summer of 2009.", say: "I was in Athens in the summer of two thousand and nine.", focus: 2, reveal: 3}
+      - {tom: "People often visit my country in the winter.", focus: 3, reveal: 4}
+      - {tom: "I live in a flat with my wife and children.", focus: 4, reveal: 5}
+      - {tom: "My friend and I were in Spain together in 1989.", say: "My friend and I were in Spain together in nineteen eighty-nine.", focus: 5, reveal: 6}
+      - {tom: "I can say I love you in Korean.", focus: 6, reveal: 7}
+      - {tom: "I work in the morning.", focus: 7, reveal: 8}
+      - emma: "Now change the sentences so they are true for you. Mai?"
+        vi: "Giờ sửa các câu cho đúng với bạn. Mai thử nhé?"
+      - mai: "My birthday is in March. I work in a school in Hue. I can say hello in Vietnamese: xin chào!"
+        say: "My birthday is in March. I work in a school in Whey. I can say hello in Vietnamese: sin chow!"
+        vi: "Sinh nhật mình vào tháng 3. Mình làm ở một trường học ở Huế. Nói hello bằng tiếng Việt: xin chào!"
+
+  - kind: vocab
+    chapter: "Từ loại trong từ điển"
+    heading: "Independent learning · Kinds of word"
+    heading_vi: "Từ điển ghi từ loại: n, v, adj … — ví dụ trong hồ sơ của Fiona (trang 20)"
+    items:
+      - {w: "pronoun", pos: "pron", vi: "đại từ", ex: "I live in a flat. · He stays with me."}
+      - {w: "verb", pos: "v", vi: "động từ", ex: "I live in a flat. · It has lots of nice cafés."}
+      - {w: "preposition", pos: "prep", vi: "giới từ", ex: "I live in a flat on my own, in Dublin."}
+      - {w: "noun", pos: "n", vi: "danh từ: người, vật, nơi chốn", ex: "a flat · a place · my family · my father"}
+      - {w: "adjective", pos: "adj", vi: "tính từ: nói về danh từ", ex: "a great place · nice cafés"}
+    lines:
+      - emma: "A dictionary tells you the kind of word. Look at this sentence from Fiona's profile: I live in a flat. I is a pronoun. He and it are pronouns too."
+        focus: 0
+        vi: "Từ điển cho biết từ loại. Câu trong hồ sơ của Fiona: I live in a flat — I là đại từ; he, it cũng vậy."
+      - {emma: "Live is a verb. Has, comes and stays are verbs too.", say: "Liv is a verb. Has, comes and stays are verbs too.", focus: 1, vi: "live là động từ; has, comes, stays cũng là động từ."}
+      - {emma: "In is a preposition. On, for and with are prepositions too.", focus: 2, vi: "in là giới từ; on, for, with cũng vậy."}
+      - {emma: "Flat is a noun: a thing, a place or a person. Place, family and father are nouns.", focus: 3, vi: "flat là danh từ (vật, nơi chốn, người); place, family, father cũng vậy."}
+      - {emma: "And great is an adjective. It tells you about a noun: a great place, nice cafés.", focus: 4, vi: "great là tính từ, nói về danh từ: a great place, nice cafés."}
+
+  - kind: letter
+    chapter: "Đọc email của Ju-Yung"
+    heading: "Explore Writing 1 · Ju-Yung's email to Erkan"
+    heading_vi: "Ju-Yung đang ở đâu? Bạn ấy muốn gì? Bạn ấy tặng Erkan gì?"
+    roles: {emma: teacher, tom: Ju-Yung}
+    items:
+      - {text: "Dear Erkan,", note: "greeting"}
+      - {text: "My name's Kim Ju-Yung and I'm from Korea. You can check my profile on Sofasurfing.com.", note: "about me"}
+      - {text: "I'm in Lebanon now and would like to come to Istanbul. Could I stay with you on August 1 and 2?", note: "request 1"}
+      - {text: "A couple of questions: if I stay, can I use your kitchen? Also, could you tell me about museums in Istanbul?", note: "requests 2 and 3"}
+      - {text: "Thanks and bye,", note: "goodbye"}
+      - {text: "Ju-Yung"}
+    lines:
+      - emma: "Now Explore Writing. Ju-Yung wants a place to stay in Istanbul. Read his email. Where is he? What does he want?"
+        say: "Now Explore Writing. Joo-young wants a place to stay in Istanbul. Read his email. Where is he? What does he want?"
+        vi: "Explore Writing: Ju-Yung cần chỗ ở tại Istanbul. Đọc email: bạn ấy đang ở đâu, muốn gì?"
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1, say: "My name's Kim Joo-young and I'm from Korea. You can check my profile on Sofa surfing dot com."}
+      - {read: tom, focus: 2, say: "I'm in Lebanon now and would like to come to Istanbul. Could I stay with you on August first and second?"}
+      - {read: tom, focus: 3}
+      - {read: tom, focus: 4}
+      - {read: tom, focus: 5, say: "Joo-young."}
+      - emma: "Erkan writes back. Then Ju-Yung writes again."
+        say: "Erkan writes back. Then Joo-young writes again."
+        vi: "Erkan trả lời, rồi Ju-Yung viết thêm một email nữa."
+
+  - kind: letter
+    chapter: "Thư trả lời của Erkan"
+    heading: "Explore Writing 1 · Erkan's reply, and Ju-Yung again"
+    heading_vi: "Erkan trả lời từng câu hỏi; Ju-Yung cảm ơn và hỏi thêm"
+    roles: {tom: Ju-Yung}
+    items:
+      - {text: "Hi Ju-Yung,", note: "greeting"}
+      - {text: "August 1–2 is no problem for my sister and me. Of course you can use our kitchen.", note: "answers 1 and 2"}
+      - {text: "I have lots of information about museums. You can read it when you're here.", note: "answer 3"}
+      - {text: "Looking forward to meeting you."}
+      - {text: "Best wishes,", note: "goodbye"}
+      - {text: "Erkan"}
+      - {text: "— Ju-Yung writes again —", body: false}
+      - {text: "Hi again,", note: "greeting"}
+      - {text: "Thanks very much, Erkan. Would you like something from Lebanon?", note: "an offer"}
+      - {text: "See you soon.", note: "goodbye"}
+      - {text: "Ju-Yung"}
+    lines:
+      - {read: emma, focus: 0, say: "Hi Joo-young,"}
+      - {read: emma, focus: 1, say: "August first and second is no problem for my sister and me. Of course you can use our kitchen."}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+      - {read: emma, focus: 4}
+      - {read: emma, focus: 5}
+      - {read: tom, focus: 7}
+      - {read: tom, focus: 8}
+      - {read: tom, focus: 9}
+      - {read: tom, focus: 10, say: "Joo-young."}
+
+  - kind: mcq
+    chapter: "Bài 1: chọn đáp án"
+    heading: "Explore Writing 1 · Circle the correct answer"
+    heading_vi: "Khoanh đáp án đúng theo ba email"
+    items:
+      - {n: 1, q: "Ju-Yung is in …", options: ["Istanbul", "Korea", "Lebanon"], answer: c}
+      - {n: 2, q: "He wants to …", options: ["stay with Erkan in Turkey", "return to Korea", "meet Erkan in Lebanon"], answer: a}
+      - {n: 3, q: "He offers Erkan …", options: ["information about museums", "a gift from Lebanon", "some food"], answer: b}
+    lines:
+      - emma: "Exercise 1. Circle the correct answer."
+        say: "Exercise one. Circle the correct answer."
+        vi: "Bài 1: khoanh đáp án đúng."
+        pause: 1.5
+      - {tom: "He's from Korea, but he's in Lebanon now.", focus: 0, reveal: 1, vi: "Bạn ấy là người Hàn Quốc nhưng đang ở Li-băng."}
+      - {tom: "He wants to stay with Erkan in Turkey.", focus: 1, reveal: 2, vi: "Bạn ấy muốn ở nhờ nhà Erkan ở Thổ Nhĩ Kỳ."}
+      - {tom: "And he offers a gift from Lebanon: Would you like something from Lebanon?", focus: 2, reveal: 3, vi: "Và bạn ấy muốn tặng Erkan một món quà từ Li-băng."}
+
+  - kind: compare
+    chapter: "Mở đầu và kết thư"
+    heading: "Explore Writing 2 · Greetings and goodbyes"
+    heading_vi: "Cụm tô màu trong email: cụm nào để chào, cụm nào để kết thư?"
+    items:
+      - {title: "Greetings", title_vi: "Mở đầu thư", lines: ["Dear Erkan,", "Hi Ju-Yung,", "Hi again,"]}
+      - {title: "Goodbyes", title_vi: "Kết thư", lines: ["Thanks and bye,", "Best wishes,", "See you soon."]}
+    lines:
+      - emma: "Exercise 2. Which expressions are greetings, and which are goodbyes?"
+        say: "Exercise two. Which expressions are greetings, and which are goodbyes?"
+        vi: "Bài 2: cụm nào dùng để chào, cụm nào để kết thư?"
+      - emma: "Greetings: Dear Erkan, Hi Ju-Yung, Hi again. Dear is more formal than Hi, but in emails people use both."
+        say: "Greetings: Dear Erkan, Hi Joo-young, Hi again. Dear is more formal than Hi, but in emails people yooz both."
+        focus: 0
+        vi: "Chào: Dear … trang trọng hơn Hi …, nhưng trong email người ta dùng cả hai."
+      - emma: "Goodbyes: Thanks and bye, Best wishes, See you soon. Best wishes is good for people you don't know well."
+        focus: 1
+        vi: "Kết thư: Best wishes hợp với người chưa quen thân hoặc email công việc."
+
+  - kind: compare
+    chapter: "Lời nhờ trong email"
+    heading: "Explore Writing 3 · Requests"
+    heading_vi: "Ba lời nhờ của Ju-Yung — thêm các từ trong khung vào đúng câu"
+    items:
+      - {title: "Could I stay …?", title_vi: "Xin ở nhờ — khi nào", lines: ["on August 1 and 2", "on Saturday · on 31 July", "next Thursday · tomorrow"]}
+      - {title: "Can I use your …?", title_vi: "Xin dùng đồ", lines: ["kitchen · telephone", "shower · computer", "washing machine"]}
+      - {title: "Could you tell me …?", title_vi: "Nhờ cho biết thông tin", lines: ["about museums", "restaurants · concerts", "sports events … in your city?"]}
+    lines:
+      - emma: "Exercise 3. Ju-Yung makes three requests. Could I stay with you on August 1 and 2? Or on Saturday, on 31 July, next Thursday, tomorrow."
+        say: "Exercise three. Joo-young makes three requests. Could I stay with you on August first and second? Or on Saturday, on the thirty-first of July, next Thursday, tomorrow."
+        focus: 0
+        vi: "Bài 3: Could I stay with you …? + thời gian (on Saturday, next Thursday, tomorrow …)."
+      - emma: "Can I use your kitchen? Or your telephone, shower, computer, washing machine."
+        focus: 1
+        vi: "Can I use your …? + đồ dùng trong nhà."
+      - emma: "Could you tell me about museums in your city? Or restaurants, concerts, sports events."
+        focus: 2
+        vi: "Could you tell me about … in your city? + thứ bạn muốn biết."
+      - tom: "So Could I and Can I are about me, and Could you asks the other person to do something?"
+        vi: "Vậy Could I / Can I là xin cho mình, còn Could you là nhờ người kia làm gì đó?"
+      - emma: "Exactly. And could is a little more polite than can."
+        vi: "Đúng vậy. Và could lịch sự hơn can một chút."
+
+  - kind: errors
+    chapter: "Viết hoa đúng chỗ"
+    heading: "Explore Writing 4 · Capital letters"
+    heading_vi: "Che email lại, viết hoa đúng chỗ cho sáu câu này"
+    items:
+      - {wrong: "my name's kim ju-yung and i'm from korea.", right: "My name's Kim Ju-Yung and I'm from Korea."}
+      - {wrong: "i'm in lebanon now and would like to come to istanbul.", right: "I'm in Lebanon now and would like to come to Istanbul."}
+      - {wrong: "could i stay with you on august 1 and 2?", right: "Could I stay with you on August 1 and 2?"}
+      - {wrong: "thanks very much, erkan.", right: "Thanks very much, Erkan."}
+      - {wrong: "would you like something from lebanon?", right: "Would you like something from Lebanon?"}
+      - {wrong: "see you soon.", right: "See you soon."}
+    lines:
+      - emma: "Exercise 4. Capital letters. In English, use a capital letter for countries and cities, people's names, nationalities and languages."
+        say: "Exercise four. Capital letters. In English, yooz a capital letter for countries and cities, people's names, nationalities and languages."
+        vi: "Bài 4: viết hoa tên nước, thành phố, tên người, quốc tịch và ngôn ngữ …"
+      - emma: "Also for the first word of a sentence, the word I, days and months, and public holidays."
+        vi: "… chữ đầu câu, đại từ I, thứ và tháng, ngày lễ."
+      - {emma: "My at the start, Kim Ju-Yung is a name, I'm, and Korea is a country.", say: "My at the start, Kim Joo-young is a name, I'm, and Korea is a country.", focus: 0, vi: "My đầu câu; Kim Ju-Yung là tên; I'm; Korea là tên nước."}
+      - {emma: "Lebanon is a country, Istanbul is a city.", focus: 1, vi: "Lebanon là nước, Istanbul là thành phố."}
+      - {emma: "Could at the start, I, and August is a month.", focus: 2, vi: "Could đầu câu, I, August là tên tháng."}
+      - {emma: "Thanks at the start, and Erkan is a name.", focus: 3, vi: "Thanks đầu câu; Erkan là tên người."}
+      - {emma: "Would at the start, and Lebanon.", focus: 4, vi: "Would đầu câu; Lebanon là tên nước."}
+      - {emma: "And See at the start of the sentence.", focus: 5, vi: "See đầu câu."}
+      - mai: "I always forget capital letters for days and months. Monday, August!"
+        vi: "Mình hay quên viết hoa thứ và tháng. Monday, August!"
+
+  - kind: letter
+    chapter: "Email mẫu của Mai"
+    heading: "Mai writes to a host on Sofasurfing.com"
+    heading_vi: "Email mẫu: giới thiệu bản thân, hai – ba lời nhờ, chào và kết thư"
+    roles: {emma: teacher}
+    items:
+      - {text: "Dear Fiona,", note: "greeting"}
+      - {text: "My name's Mai and I'm from Vietnam. I'm an English teacher in Hue. You can check my profile on Sofasurfing.com.", note: "about me"}
+      - {text: "I'd like to visit Dublin in October. Could I stay with you on 10 and 11 October?", note: "request 1: Could I …?"}
+      - {text: "A couple of questions: can I use your washing machine? Also, could you tell me about concerts in Dublin?", note: "requests 2 and 3"}
+      - {text: "Thanks and best wishes,", note: "goodbye"}
+      - {text: "Mai"}
+    lines:
+      - emma: "Now, a model email. Mai wants to visit Dublin. She writes to Fiona, a host on Sofasurfing.com."
+        say: "Now, a model email. Mai wants to visit Dublin. She writes to Fiona, a host on Sofa surfing dot com."
+        vi: "Email mẫu: Mai muốn đi Dublin và viết cho Fiona, một chủ nhà trên Sofasurfing.com."
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1, say: "My name's Mai and I'm from Vietnam. I'm an English teacher in Whey. You can check my profile on Sofa surfing dot com."}
+      - {read: mai, focus: 2, say: "I'd like to visit Dublin in October. Could I stay with you on the tenth and eleventh of October?"}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: mai, focus: 5}
+      - emma: "Very good. A greeting, information about you, two or three requests, and a goodbye. And check the capital letters!"
+        vi: "Đủ ý: lời chào, giới thiệu bản thân, 2–3 lời nhờ, lời kết. Và soát chữ hoa!"
+
+  - kind: bullets
+    chapter: "Đến lượt bạn viết"
+    heading: "Explore Writing 5–6 · Your email"
+    heading_vi: "Bạn tìm chỗ ở nhờ trên Sofasurfing.com ở một nước khác — viết email cho chủ nhà"
+    items:
+      - {en: "Give information about yourself.", vi: "Giới thiệu bản thân: tên, quê, công việc"}
+      - {en: "Ask two or three questions: Could I …? Can I …? Could you …?", vi: "Hai – ba lời nhờ lịch sự"}
+      - {en: "Check your email. Are the capital letters correct?", vi: "Soát lại chữ viết hoa"}
+      - {en: "Then be the host: write a reply to Mai, like Erkan.", vi: "Đổi vai: làm chủ nhà, viết thư trả lời Mai như Erkan đã làm"}
+    lines:
+      - emma: "Your turn. You want a place to stay in another country. Write an email to your host."
+        vi: "Đến lượt bạn: bạn cần chỗ ở nhờ ở một nước khác — viết email cho chủ nhà."
+      - {emma: "One. Give information about yourself.", focus: 0}
+      - {emma: "Two. Ask two or three questions: Could I, Can I, Could you.", focus: 1}
+      - {emma: "Three. Check your email. Are the capital letters correct?", focus: 2}
+      - {emma: "Then change roles. You are the host. Write a reply to Mai's email, like Erkan's reply.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "in + places, times, languages: in Hue, in the morning, in English", vi: "nhưng: at night, on Monday"}
+      - {en: "Dear … · Hi …  —  Thanks and bye · Best wishes · See you soon", vi: "Chào mở đầu và kết thư"}
+      - {en: "Could I stay …? · Can I use your …? · Could you tell me about …?", vi: "Lời nhờ trong email"}
+      - {en: "Capital letters: names, places, nationalities, languages, I, days, months", vi: "Viết hoa"}
+    lines:
+      - {emma: "Let's remember. In for places, times and languages: in Hue, in the morning, in English. But at night, and on Monday.", say: "Let's remember. In for places, times and languages: in Whey, in the morning, in English. But at night, and on Monday.", focus: 0}
+      - {emma: "Start an email with Dear or Hi. End it with Thanks and bye, Best wishes, or See you soon.", focus: 1}
+      - {emma: "Make requests: Could I stay? Can I use your kitchen? Could you tell me about museums?", focus: 2}
+      - {emma: "And use capital letters for names, places, nationalities, languages, I, days and months. See you in the next unit!", say: "And yooz capital letters for names, places, nationalities, languages, I, days and months. See you in the next unit!", focus: 3, vi: "Hẹn gặp lại ở unit sau!"}
