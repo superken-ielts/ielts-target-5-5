@@ -230,6 +230,28 @@ và điểm mock sẽ phản ánh sự thiếu hiểu đề nhiều hơn phản 
 Cũng vì thế mà mock đầu tiên nằm ở cuối tuần 26, không sớm hơn. Kỳ vọng 4.5–5.0 tại thời
 điểm đó là bình thường và đúng lịch — nó không có nghĩa là bạn đang trượt.
 
+### Giai đoạn 0 — trước tuần 1, cho người dưới band 3.0
+
+Cả bốn giai đoạn trên tính từ band 3.0. Người học lại từ đầu hoặc chưa tới 3.0 thiếu thứ
+mà sách IELTS không dạy: tiếng Anh tổng quát A1–A2. Đó là vốn từ đời sống, thì hiện tại và
+quá khứ, nghe hội thoại chậm, nói câu đơn về bản thân. Sách luyện thi cho band thấp như
+*Bridge to IELTS* bắt đầu từ khoảng 3.5 và trùng nhiều với IELTS Target 5.0, nên không lấp
+được khoảng này.
+
+Giai đoạn 0 không tính vào 40 tuần:
+
+| Sách | Thời lượng | Ra khỏi giai đoạn khi |
+|---|---|---|
+| English Unlimited A1 Starter — chỉ khi bắt đầu từ con số 0 | 10 unit (chờ Coursebook đầy đủ) | Học xong cả sách |
+| English Unlimited A2 Elementary — tab **Sách** | 79 phiên × 60 phút, khoảng 16 tuần ở nhịp 5 phiên/tuần | Đề mẫu A2 Key đúng khoảng 70% mỗi phần |
+
+- Mỗi unit của English Unlimited là các việc làm được bằng tiếng Anh: giới thiệu người
+  quen, thuê phòng, gọi món, mua vé, khám bệnh, kể một chuyến đi. Đây là chủ đề của General
+  Training và Speaking Part 1.
+- Đề mẫu A2 Key của Cambridge English miễn phí, có đáp án và audio.
+- Đang ở band 3.0 thì làm đề mẫu A2 Key trước. Đạt thì bắt đầu thẳng tuần 1; thiếu ở phần
+  nào thì chỉ học những unit A2 tương ứng.
+
 ## 8. Mốc kiểm tra và phương án khi trượt mốc
 
 Cuối mỗi tháng tự kiểm tra. Nếu không đạt mốc, xử lý theo cột bên phải — không tự động

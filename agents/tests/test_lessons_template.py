@@ -11,6 +11,7 @@ from book_ingest import lessons, pipeline, validate as vd
 from book_ingest.profile import ProfileError
 
 GENKI = Path(__file__).resolve().parents[2] / "books" / "Genki"
+EU_A2 = Path(__file__).resolve().parents[2] / "books" / "book_english_unlimited_a2_elemetary"
 
 PROFILE = """\
 book: mini-course
@@ -37,7 +38,7 @@ toc:
     - id: S2
       title: Phần 2
       items:
-        - {unit: 2, title: Shopping, topic: mua sắm, kana: katakana, grammar: [これ], notes: {b: Riêng unit 2}}
+        - {unit: 2, title: Shopping, topic: mua sắm, kana: katakana, grammar: [これ], read: [p1, p2], notes: {b: "Riêng unit 2: {read}"}}
         - test: 1
           title: Ôn thi
           steps: [{id: mock, title: Thi thử, core: true, minutes: 120}]
@@ -65,7 +66,7 @@ def test_builds_book_and_plan_without_files(tmp_path):
     acts = {a["id"]: a for i in items for a in i["activities"]}
     assert list(acts) == ["U00-kana", "U01-a", "U01-b", "U02-a", "U02-b", "T1-mock"]
     assert acts["U01-a"]["note"] == "Bài 1: X は Y です; か — giới thiệu"     # chỗ thay {no}, {grammar}, {topic}
-    assert acts["U02-b"]["note"] == "Riêng unit 2"                             # `notes` của mục ghi đè
+    assert acts["U02-b"]["note"] == "Riêng unit 2: p1; p2"                     # `notes` của mục ghi đè; {read} là trường của mục
     assert acts["U01-a"]["title"] == "Unit 1 · Part A" and acts["T1-mock"]["title"] == "Ôn thi · Thi thử"
     assert (acts["U00-kana"]["estMinutes"], acts["U01-a"]["estMinutes"], acts["T1-mock"]["estMinutes"]) == (30, 50, 120)
     assert "pdf" not in acts["U01-a"] and acts["U01-b"]["skill"] == "speaking"
@@ -82,7 +83,7 @@ def test_builds_book_and_plan_without_files(tmp_path):
     ("steps:\n  - {id: a", "stepz:\n  - {id: a", "thiếu khóa `steps`"),
     ("skill: speaking, note", "skill: singing, note", "kỹ năng"),
     ("{id: b, title: Part B", "{id: a, title: Part B", "trùng id bước"),
-    ("notes: {b: Riêng unit 2}", "notes: {c: Riêng unit 2}", "bước không tồn tại"),
+    ('notes: {b: "Riêng', 'notes: {c: "Riêng', "bước không tồn tại"),
     ("- {unit: 2, title: Shopping", "- {unit: 1, title: Shopping", "trùng mục U01"),
     ("note: \"Đọc – viết: {kana}\"", "note: \"Đọc – viết: {kanji}\"", "chỗ thay không hợp lệ"),
 ])
@@ -193,6 +194,81 @@ def test_bad_refs_are_rejected(tmp_path, old, new, msg):
         pipeline.run(d, say=lambda m: None)
 
 
+CDS = """\
+book: cd-book
+title: CD Book
+template: lessons-v1
+files:
+  early: {kind: pdf, label: Coursebook, path: book.pdf, page_offset: 1, web_chunks: true}
+  late: {kind: pdf, label: Coursebook, path: book.pdf, page_offset: 2, web_chunks: true}
+  cd1: {kind: audio, dir: CD1, track: "1.{n}"}
+  cd2: {kind: audio, dir: CD2, track: "2.{n}"}
+steps:
+  - {id: a, title: Nghe, skill: listening}
+toc:
+  sections:
+    - id: S1
+      title: Phần 1
+      items:
+        - unit: 1
+          title: Một
+          refs: {a: {pdf: early, pages: [1, 3], tracks: "1.1..1.10"}}
+        - unit: 2
+          title: Hai
+          refs: {a: {pdf: late, pages: [5, 6], tracks: "2.1, 2.2"}}
+"""
+
+
+def make_cds(tmp_path: Path, text: str = CDS) -> Path:
+    d = make(tmp_path, text)
+    doc = pymupdf.open()
+    for i in range(8):
+        doc.new_page().insert_text((72, 72), f"book {i + 1}")
+    doc.save(str(d / "book.pdf"))
+    for cd, names in (("CD1", ["Track No01", "Track No03", "Track No10"]), ("CD2", ["Track No01", "Track No02"])):
+        (d / cd).mkdir()
+        for k, name in enumerate(names):
+            with wave.open(str(d / cd / f"{name}.wav"), "wb") as w:
+                w.setnchannels(1)
+                w.setsampwidth(2)
+                w.setframerate(8000)
+                w.writeframes(bytes([k + 1, 3 + int(cd[-1])]) * 20000)   # 2,5 giây, mỗi file một nội dung
+    return d
+
+
+def test_cd_track_labels_and_pdf_declared_twice(tmp_path):
+    d = make_cds(tmp_path)
+    res = pipeline.run(d, say=lambda m: None)
+    assert res.code == pipeline.OK, res.messages
+    book = json.loads((d / "book.json").read_text())
+    acts = {a["id"]: a for s in book["sections"] for i in s["items"] for a in i["activities"]}
+    # nhãn theo đĩa: Track No10.wav ở CD1 → 1.10; khoảng 1.1..1.10 bỏ qua track thiếu (1.2, 1.4…)
+    assert acts["U01-a"]["tracks"] == ["1.1", "1.3", "1.10"] and acts["U02-a"]["tracks"] == ["2.1", "2.2"]
+    assert {k: f["path"] for k, f in book["files"].items() if f["kind"] == "audio"} == {
+        "1.1": "CD1/Track No01.wav", "1.3": "CD1/Track No03.wav", "1.10": "CD1/Track No10.wav",
+        "2.1": "CD2/Track No01.wav", "2.2": "CD2/Track No02.wav"}
+    # cùng một PDF khai hai lần: trang in 1–3 = PDF 2–4 (lệch 1), trang in 5–6 = PDF 7–8 (lệch 2, một trang quét trùng)
+    assert (acts["U01-a"]["pdf"], acts["U01-a"]["pages"], acts["U02-a"]["pdf"], acts["U02-a"]["pages"]) == (
+        "early", [2, 4], "late", [7, 8])
+    assert [c["path"] for f in ("early", "late") for c in book["files"][f]["chunks"]] == [
+        "web/early-p0002-0004.pdf", "web/late-p0007-0008.pdf"]
+    assert vd.validate(d, check_hashes=True) == []
+
+
+@pytest.mark.parametrize("old,new,msg", [
+    ('track: "1.{n}"}', 'track: "1.x"}', "files.cd1.track"),
+    ('track: "1.{n}"}', 'track: "{n}.{m}"}', "files.cd1.track"),
+    ("page_offset: 2, web_chunks: true}", 'page_offset: 2, web_chunks: true, track: "{n}"}', "files.late.track"),
+    ('  cd1: {kind: audio, dir: CD1, track: "1.{n}"}\n  cd2: {kind: audio, dir: CD2, track: "2.{n}"}',
+     "  cd1: {kind: audio, dir: CD1}\n  cd2: {kind: audio, dir: CD2}", "chưa khai `track`"),
+])
+def test_bad_track_formats_are_rejected(tmp_path, old, new, msg):
+    assert CDS.count(old) == 1
+    d = make_cds(tmp_path, CDS.replace(old, new))
+    with pytest.raises(ProfileError, match=msg):
+        pipeline.run(d, say=lambda m: None)
+
+
 def test_refs_need_files(tmp_path):
     d = make(tmp_path, PROFILE.replace("        - {unit: 1, title: New Friends,",
                                        "        - {unit: 1, refs: {a: {pages: [1, 2]}}, title: New Friends,"))
@@ -200,15 +276,10 @@ def test_refs_need_files(tmp_path):
         lessons.load(d)
 
 
-@pytest.mark.skipif(not (GENKI / "book.json").exists(), reason="chưa có lộ trình N5 trong repo")
-def test_genki_package_is_valid_and_reproducible(tmp_path):
-    assert vd.validate(GENKI) == []
-    s = vd.summary(GENKI)
-    assert (s["units"], s["tests"], s["sessions"], s["tracks"], s["weeks"]) == (13, 1, 78, 286, [1, 20])
-    # chạy lại vào thư mục tạm: file sách được liên kết, không chép; chunks.json để dùng lại đoạn PDF có sẵn
-    work = tmp_path / "genki"
+def rerun_matches(src: Path, work: Path):
+    """Chạy lại vào thư mục tạm: file sách được liên kết, không chép; chunks.json để dùng lại đoạn PDF có sẵn."""
     work.mkdir()
-    for p in GENKI.iterdir():
+    for p in src.iterdir():
         if p.name == "book.yaml":
             shutil.copy(p, work / p.name)
         elif p.name == "work":
@@ -219,4 +290,29 @@ def test_genki_package_is_valid_and_reproducible(tmp_path):
     res = pipeline.run(work, say=lambda m: None)
     assert res.code == pipeline.OK, res.messages
     for name in ("book.json", "plan.json", "report.md"):
-        assert (work / name).read_text() == (GENKI / name).read_text(), name
+        assert (work / name).read_text() == (src / name).read_text(), name
+
+
+@pytest.mark.skipif(not (GENKI / "book.json").exists(), reason="chưa có lộ trình N5 trong repo")
+def test_genki_package_is_valid_and_reproducible(tmp_path):
+    assert vd.validate(GENKI) == []
+    s = vd.summary(GENKI)
+    assert (s["units"], s["tests"], s["sessions"], s["tracks"], s["weeks"]) == (13, 1, 78, 286, [1, 20])
+    rerun_matches(GENKI, tmp_path / "genki")
+
+
+@pytest.mark.skipif(not (EU_A2 / "book.json").exists(), reason="chưa nhập English Unlimited A2")
+def test_english_unlimited_a2_package_is_valid_and_reproducible(tmp_path):
+    assert vd.validate(EU_A2) == []
+    s = vd.summary(EU_A2)
+    assert (s["units"], s["tests"], s["sessions"], s["tracks"], s["weeks"]) == (15, 4, 79, 171, [1, 16])
+    book = json.loads((EU_A2 / "book.json").read_text())
+    acts = {a["id"]: a for sec in book["sections"] for i in sec["items"] for a in i["activities"]}
+    # nhãn track theo đĩa (CD1 thiếu file 27 nên Target activity Unit 2 chỉ còn 1.26); track cuối đĩa là Achievement test
+    assert acts["U02-target"]["tracks"] == ["1.26"] and acts["U01-lesson-1"]["tracks"][-1] == "1.11"
+    assert [acts[f"T{n}-check"]["tracks"] for n in (1, 2, 3)] == [["1.57"], ["2.57"], ["3.62"]]
+    # Part 1 quét trùng trang 49 nên khai hai lần; Part 2 bắt đầu từ trang in 66
+    assert [(acts[a]["pdf"], acts[a]["pages"], acts[a]["printedPages"]) for a in ("U05-look-again", "U06-lesson-1", "U08-lesson-1")] == [
+        ("course-book", [50, 50], [49, 49]), ("course-book-u6", [52, 53], [50, 51]), ("course-book-2", [1, 2], [66, 67])]
+    assert acts["U12-explore"]["module"] == "explore" and acts["U12-explore"]["skill"] == "writing"
+    rerun_matches(EU_A2, tmp_path / "eu-a2")

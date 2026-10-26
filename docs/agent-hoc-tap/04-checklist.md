@@ -337,6 +337,26 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Phiên Chào hỏi & số đếm: Greetings (câu chào theo tình huống, cúi chào, 10 tình huống đố, tự giới thiệu), Numbers (0–100 như cách đếm tiếng Việt, ba bài luyện của sách, nghe – viết số dễ nhầm).
   - Phát audio gốc JWS-01 … JWS-13, K00-01, K00-02 trên thẻ có bảng chữ tương ứng; ghi chú phiên Unit 0 trỏ tới video.
   - `jpcard`: `\n` là xuống dòng bắt buộc, nên bảng chữ hiện mỗi hàng một dòng, hai hoặc ba cột như trong sách.
+- [x] **P2-51** **Giai đoạn 0 · English Unlimited A2 Elementary trong tab Sách** (trước tuần 1, cho người học lại từ đầu hoặc dưới band 3.0): [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md).
+  - 79 phiên, 16 tuần ở nhịp 5 phiên/tuần:
+    - Intro 2 phiên;
+    - 14 unit × 5 phiên: Bài 1, Bài 2, Target activity, Explore Speaking / Writing, Look again;
+    - một phiên ôn Achievement test sau Unit 4, 9, 14;
+    - 4 phiên đề mẫu A2 Key để quyết định sang Giai đoạn 1.
+  - Mỗi phiên mở đúng trang Coursebook, các track của phần đó và trang Teacher's Book có đáp án; 171 track, 32 đoạn PDF.
+  - Track theo nhãn in trong sách (CD1 `Track No07.mp3` → 1.7). Track nào thuộc trang nào dò bằng OCR nhãn cam trên trang Coursebook, đối chiếu với "play recording X.Y" trong Teacher's Book: khớp 171/171.
+  - `books/catalog.json`: thẻ A1 Starter (chờ Coursebook đầy đủ) và A2 đứng trước IELTS Target 5.0 trong nhóm IELTS.
+  - Mẫu `lessons-v1`:
+    - thư mục audio khai `track: "1.{n}"` khi mỗi đĩa đánh số lại từ 1;
+    - một PDF khai hai lần (hai id, khác `page_offset`) khi giữa sách có trang quét trùng;
+    - ghi chú bước dùng được mọi trường của mục;
+    - báo cáo ghi đúng dấu khi độ lệch trang âm.
+  - Test: nhãn track theo đĩa, PDF khai hai lần, định dạng `track` sai; hồi quy gói A2 thật (hợp lệ, chạy lại ra y hệt); e2e: thứ tự thẻ Giai đoạn 0, phiên Unit 6 mở trang in 50 qua đoạn `course-book-u6`, track 2.15–2.18.
+- [ ] **P2-52** English Unlimited A1 Starter cho người bắt đầu từ con số 0: đã có Teacher's Book, 2 CD, Teacher's Pack; chờ Coursebook đầy đủ (file hiện có là bản mẫu Unit 3 và 9), rồi nhập như A2.
+- [ ] **P2-53** Video bài giảng Giai đoạn 0 (A2), làm như GENKI:
+  - giảng tiếng Anh, chữ tiếng Việt trên màn hình, phát audio gốc, mỗi video 5–10 phút;
+  - Intro và Unit 1–3 trước; Speaking và Writing trước, rồi Listening và Reading;
+  - lời bài nghe phải chép lại từ audio (Coursebook thiếu phần Scripts).
 
 ### Cổng G2
 

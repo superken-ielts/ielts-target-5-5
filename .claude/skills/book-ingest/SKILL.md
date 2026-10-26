@@ -54,14 +54,18 @@ Mục `info` không chặn đóng gói. Không tự sửa số liệu trong `boo
 - `target-gt-v1` — IELTS Target 5.0 GT: 7 phiên/unit, 2/review, 3/test. Agent tự tìm cấu trúc (băng tiêu đề, OCR).
 - `lessons-v1` — lộ trình khai hết trong `book.yaml` (mẫu: `books/Genki/book.yaml`, GENKI I · JLPT N5). Dùng cho
   sách có cấu trúc khác, không muốn viết mẫu mới:
-  1. `steps`: các phiên của mỗi bài (`id`, `title`, `skill`, `core`, `minutes`, `note` với `{no}`, `{topic}`,
-     `{grammar}`, `{kana}`); mục có `steps` riêng thì dùng của mục.
+  1. `steps`: các phiên của mỗi bài (`id`, `title`, `skill`, `core`, `minutes`, `note` với `{no}`, `{title}` và mọi
+     trường của mục như `{topic}`, `{grammar}`); mục có `steps` riêng thì dùng của mục. Đừng đặt id `listening` cho
+     bước không có track (luật V4).
   2. `files`: PDF (`path`, `page_offset`, `label`) và thư mục audio (`dir`). Id track = tên file bỏ đuôi,
-     `_` → `-`.
+     `_` → `-`. Mỗi đĩa đánh số lại từ 1 (sách in nhãn "1.7") thì khai `track: "1.{n}"` cho thư mục đó. PDF có trang
+     quét trùng giữa sách thì khai hai lần (hai id, cùng `path`, khác `page_offset`) — mẫu:
+     `books/book_english_unlimited_a2_elemetary/book.yaml`.
   3. Mỗi bài: `pages` (trang in hiện trên thẻ unit) và `refs: {<bước>: {pdf, pages: [in đầu, in cuối],
      tracks: "K01-01..K01-08, W00", alt: [{pdf: workbook, pages: [...]}]}}`.
   4. Dò ranh giới các phần một lần: bookmark PDF, OCR (RapidOCR) tìm nhãn track và đầu mục, rồi soát bằng mắt trang
-     chuyển phần. Cách làm với GENKI ở `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` mục 3.4.
+     chuyển phần. Cách làm với GENKI ở `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` mục 3.4. Sách quét không có
+     lớp chữ: lọc vùng màu của nhãn audio, cắt từng nhãn rồi OCR, đối chiếu với Teacher's Book (file 08 mục 3.2).
   5. `ingest` báo lỗi khi:
      - track không có, hoặc khoảng track đi ngược;
      - một track gán hai lần, hoặc còn track chưa thuộc phiên nào;

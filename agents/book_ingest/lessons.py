@@ -6,20 +6,24 @@ Agent không đoán cấu trúc từ PDF: mục lục, các bước và chỗ tr
     steps                    các bước (phiên) mặc định của mỗi unit; mục có `steps` riêng thì dùng của mục
     step                     {id, title, skill, core, minutes, note}; mục ghi đè ghi chú bằng `notes: {<bước>: …}`
     files                    (tuỳ chọn) PDF và thư mục audio, khai như mẫu sách thường; id track = tên file bỏ
-                             đuôi, `_` đổi thành `-` (K01_05.mp3 → K01-05, đúng nhãn in cạnh bài tập trong sách)
+                             đuôi, `_` đổi thành `-` (K01_05.mp3 → K01-05, đúng nhãn in cạnh bài tập trong sách).
+                             Sách in nhãn theo đĩa (1.7 = CD1 track 7) thì thư mục audio khai `track: "1.{n}"`:
+                             {n} là số cuối trong tên file (Track No07.mp3 → 1.7). Một PDF quét thiếu hoặc trùng
+                             trang giữa sách thì khai hai lần (hai id, cùng `path`, khác `page_offset`)
     item.pages               (tuỳ chọn) trang in của mục trong PDF chính, hiện trên thẻ unit
     item.refs                (tuỳ chọn) chỗ trong sách của từng bước: {<bước>: {pdf, pages: [trang in đầu, cuối],
                              tracks: "K01-01..K01-08, K01-24", alt: [{pdf, pages, label}]}}; `pdf` mặc định là PDF
                              khai đầu tiên trong `files`
 
 Mỗi bước của một mục thành một hoạt động `<mục>-<bước>` (ví dụ U01-part-a) và đúng một phiên học. Ghi chú bước
-dùng được {no}, {title}, {topic}, {grammar}, {kana} lấy từ mục. Có `files` thì mỗi track phải thuộc đúng một bước
+dùng được {no}, {title} và mọi trường khác của mục ({topic}, {grammar}, {kana}… — danh sách thì nối bằng `; `). Có `files` thì mỗi track phải thuộc đúng một bước
 (V4), và PDF lớn được cắt thành đoạn theo các khoảng trang của từng mục (chunks.py). Video bài giảng gắn vào hoạt
 động như sách thường.
 """
 from __future__ import annotations
 
 import hashlib
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
@@ -118,8 +122,14 @@ def is_lessons(raw: dict) -> bool:
     return raw.get("template") == TEMPLATE
 
 
-def track_id(name: str) -> str:
-    return Path(name).stem.replace("_", "-")
+def track_id(name: str, fmt: Optional[str] = None) -> str:
+    stem = Path(name).stem
+    if fmt:
+        nums = re.findall(r"\d+", stem)
+        if not nums:
+            raise ProfileError(f"file audio `{name}` không có số track để ghép vào `{fmt}`")
+        return fmt.format(n=int(nums[-1]))
+    return stem.replace("_", "-")
 
 
 def _steps(rows, where: str) -> list[Step]:
@@ -143,10 +153,21 @@ def _files(raw) -> dict:
     files = dict(raw or {})
     for fid, spec in files.items():
         kind = (spec or {}).get("kind")
-        if kind == "pdf" and spec.get("path") or kind == "audio" and spec.get("dir"):
-            continue
-        raise ProfileError(f"files.{fid}: cần `kind: pdf` + `path` hoặc `kind: audio` + `dir`")
+        if not (kind == "pdf" and spec.get("path") or kind == "audio" and spec.get("dir")):
+            raise ProfileError(f"files.{fid}: cần `kind: pdf` + `path` hoặc `kind: audio` + `dir`")
+        fmt = spec.get("track")
+        if fmt is not None and (kind != "audio" or not isinstance(fmt, str) or "{n}" not in fmt
+                                or not _formats(fmt)):
+            raise ProfileError(f"files.{fid}.track: cần chuỗi có {{n}} (ví dụ \"1.{{n}}\") và chỉ dùng cho thư mục audio")
     return files
+
+
+def _formats(fmt: str) -> bool:
+    try:
+        fmt.format(n=1)
+        return True
+    except (KeyError, IndexError, ValueError):
+        return False
 
 
 def _place(raw, where: str, files: dict, default_pdf: Optional[str]) -> Place:
@@ -275,9 +296,10 @@ def _expand(spec: str, order: list[str], groups: dict[str, str], where: str) -> 
 def build(p: LessonsProfile, data: Optional[dict] = None, parts: Optional[dict] = None) -> tuple[Book, Plan]:
     """`data` là kết quả scan.scan (cần khi book.yaml có `files`), `parts` là các đoạn PDF đã cắt theo file."""
     data, parts = data or {"pdfs": {}, "audio": []}, parts or {}
-    audio = {track_id(a["name"]): a for a in data["audio"]}
+    audio = {track_id(a["name"], p.files[a["group"]].get("track")): a for a in data["audio"]}
     if len(audio) != len(data["audio"]):
-        raise ProfileError("hai file audio trùng id track (tên file chỉ khác `_` / `-` hoặc khác đuôi)")
+        raise ProfileError("hai file audio trùng id track (tên file chỉ khác `_` / `-` hoặc khác đuôi, hoặc hai thư "
+                           "mục audio đánh số lại từ 1 mà chưa khai `track`)")
     order, groups = list(audio), {t: a["group"] for t, a in audio.items()}
     owner: dict[str, Entry] = {}
 
@@ -348,9 +370,9 @@ def _note(e: Entry, st: Step) -> Optional[str]:
     text = str(e.notes.get(st.id, st.note)).strip()
     if not text:
         return None
-    grammar = e.fields.get("grammar") or []
-    values = {"no": e.no, "title": e.title, "topic": e.fields.get("topic", ""), "kana": e.fields.get("kana", ""),
-              "grammar": "; ".join(map(str, grammar)) if isinstance(grammar, list) else str(grammar)}
+    values = {"topic": "", "kana": "", "grammar": ""}
+    values.update({k: "; ".join(map(str, v)) if isinstance(v, list) else str(v) for k, v in e.fields.items()})
+    values.update(no=e.no, title=e.title)
     try:
         return " ".join(text.format(**values).split())
     except (KeyError, IndexError, ValueError) as err:
@@ -371,8 +393,9 @@ def report(p: LessonsProfile, book: Book, plan: Plan, data: Optional[dict] = Non
         rows += ["## File", "", "| File | Trang/độ dài | Cỡ | Đoạn cho app |", "|---|---|---|---|"]
         for fid, f in data["pdfs"].items():
             n = len(book.files[fid].chunks)
-            rows.append(f"| {fid}: `{f['path']}` | {f['pages']} trang, trang in = trang PDF − "
-                        f"{book.files[fid].pageOffset} | {f['bytes'] / 1e6:.1f} MB | {n or '—'} |")
+            off = book.files[fid].pageOffset
+            rows.append(f"| {fid}: `{f['path']}` | {f['pages']} trang, trang in = trang PDF {'−' if off >= 0 else '+'} "
+                        f"{abs(off)} | {f['bytes'] / 1e6:.1f} MB | {n or '—'} |")
         by_group: dict[str, list[dict]] = {}
         for a in data["audio"]:
             by_group.setdefault(a["group"], []).append(a)

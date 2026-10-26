@@ -69,6 +69,16 @@ cùng khối lượng nền tảng đó nay được rải trên quỹ thời gi
 sốt ruột nhất: suốt ba tháng đầu bạn sẽ không thấy một con số band nào. Điều đó là bình
 thường và đã nằm trong thiết kế.
 
+**Chưa tới band 3.0, hoặc bắt đầu từ con số 0?** Học **Giai đoạn 0** trước tuần 1, không
+tính vào 40 tuần. Giáo trình là English Unlimited A2 Elementary (Cambridge), có trong tab
+**Sách** của bản web:
+- 79 phiên, khoảng 16 tuần ở nhịp 5 phiên/tuần;
+- mỗi phiên mở đúng trang sách, track audio và trang đáp án.
+
+Mốc ra là đề mẫu A2 Key, miễn phí. Đang ở band 3.0 thì làm đề mẫu này trước: đạt thì bắt
+đầu thẳng tuần 1. Người chưa biết gì học English Unlimited A1 Starter trước; cuốn này còn
+chờ Coursebook đầy đủ. Chi tiết ở mục 7 file 00.
+
 ## Ba nguyên tắc chi phối cả 40 tuần
 
 **Không luyện đề IELTS trong 12 tuần đầu.** Ở band 3.0, vốn từ khoảng 1.500–2.000 từ và

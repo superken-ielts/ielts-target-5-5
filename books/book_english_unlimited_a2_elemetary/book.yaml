@@ -1,0 +1,445 @@
+# Hồ sơ lộ trình "Giai đoạn 0 · nền tảng A2" cho agent book_ingest — mẫu lessons-v1 (agents/book_ingest/lessons.py).
+# Thư mục này có English Unlimited A2 Elementary: Coursebook (PDF quét, hai phần), Teacher's Book (PDF có chữ), ba CD
+# audio, Teacher's Pack và wordlist. Cấu trúc lộ trình và chỗ trong sách của từng phiên khai hết ở đây; agent chỉ quét
+# file, cắt PDF thành đoạn theo từng unit rồi dựng book.json / plan.json. Thiết kế: docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md.
+#
+# `pages` trong `refs` là SỐ TRANG IN. Coursebook Part 1 bị quét trùng trang 49 (PDF 50 và 51 giống nhau), nên khai hai
+# lần: `course-book` cho trang in 7–49 (trang PDF = trang in + 1) và `course-book-u6` cho trang in 50–65 (+ 2). Part 2
+# bắt đầu từ trang in 66 (= PDF 1) và có hai trang Activities 122–123 (PDF 57–58).
+#
+# Track ghi theo nhãn in cạnh bài tập: CD1 "Track No07.mp3" → 1.7 (`track: "1.{n}"`); track 01 của mỗi đĩa gồm lời giới
+# thiệu đĩa rồi tới bài 1.1. Track cuối mỗi đĩa (1.57, 2.57, 3.62) là phần nghe của Achievement test 1–3. "A..B" là mọi
+# track từ A tới B; CD1 thiếu file 27, 33, 36, 39, 51 nên khoảng tự bỏ qua các track đó. Track nào thuộc trang nào dò
+# bằng nhãn cam trên trang Coursebook (OCR) rồi đối chiếu với "play recording X.Y" trong Teacher's Book (khớp 171/171).
+#
+# Mỗi unit 8 trang, 5 phiên: bài X.1 (2 trang), bài X.2 (2 trang), Target activity (1 trang), Explore (2 trang), Look
+# again (1 trang). Unit lẻ có Explore Speaking, unit chẵn có Explore Writing (`steps` riêng, dùng lại các bước bằng
+# anchor YAML). Mỗi phiên có thêm nút mở Teacher's Book ở đúng trang ghi chú và đáp án của phần đó.
+
+book: english-unlimited-a2
+title: English Unlimited A2 Elementary
+edition: cup-2011
+template: lessons-v1
+start_week: 1
+sessions_per_week: 5
+minutes_per_session: 60
+pace: [4, 5, 6]
+
+info:
+  course: ielts
+  role: Giai đoạn 0 · nền tảng A2
+  module: Tiếng Anh tổng quát · Elementary
+  author: Alex Tilbury, Theresa Clementson, Leslie Anne Hendra, David Rea
+  publisher: Cambridge University Press
+  level: Elementary
+  cefr: A1 → A2
+  summary: >-
+    Giáo trình tiếng Anh tổng quát của Cambridge, xây theo khung CEFR: mỗi unit là các việc làm được bằng tiếng Anh
+    (giới thiệu người quen, nhờ và mời, thuê phòng, gọi món, mua vé, khám bệnh, kể chuyến đi…) — đúng các chủ đề của
+    IELTS General Training và Speaking Part 1. Intro và 14 unit, mỗi unit 5 phiên: hai bài học, Target activity (nhiệm
+    vụ nói), Explore (từ khoá, văn hoá, Explore Speaking hoặc Writing) và Look again (ôn tập, tự đánh giá). Mỗi phiên
+    mở đúng trang Coursebook, track audio của phần đó và trang Teacher's Book có đáp án. Sau Unit 4, 9 và 14 có một
+    phiên ôn với bài nghe Achievement test; cuối chặng làm đề mẫu A2 Key để quyết định sang Giai đoạn 1.
+  start_when: >-
+    Trước tuần 1 của lộ trình 40 tuần, cho người học lại từ đầu hoặc dưới band 3.0 (bắt đầu từ con số 0 thì học cuốn
+    A1 Starter trước). Đang ở band 3.0: làm đề mẫu A2 Key ở phiên cuối sách trước, đạt thì vào thẳng Giai đoạn 1. Tuần
+    ở đây đếm riêng cho cuốn này; học xong thì đặt lại ngày bắt đầu lộ trình cho Giai đoạn 1.
+
+files:
+  course-book:
+    kind: pdf
+    label: Coursebook
+    path: Tilbury A., Clementson T., Hendra L.A., Rea D._English Unlimited A2_2011_Coursebook_Part1.pdf
+    page_offset: 1            # trang in 7 (Intro) = trang PDF 8 … trang in 49 = trang PDF 50
+  course-book-u6:
+    kind: pdf
+    label: Coursebook
+    path: Tilbury A., Clementson T., Hendra L.A., Rea D._English Unlimited A2_2011_Coursebook_Part1.pdf
+    page_offset: 2            # PDF 51 là trang 49 quét trùng: trang in 50 (Unit 6) = trang PDF 52 … 65 = PDF 67
+  course-book-2:
+    kind: pdf
+    label: Coursebook
+    path: Tilbury A., Clementson T., Hendra L.A., Rea D._English Unlimited A2_2011_Coursebook_Part2.pdf
+    page_offset: -65          # trang in 66 (Unit 8) = trang PDF 1; Activities 122–123 = PDF 57–58
+  teachers-book:
+    kind: pdf
+    label: Teacher's Book
+    path: Doff A., Lloyd M._English Unlimited A2_2011_Teacher's Book.pdf
+    page_offset: 0
+  cd1:
+    kind: audio
+    dir: Tilbury A., Clementson T., Hendra L.A., Rea D._English Unlimited A2_2011_CD1    # Intro – Unit 4 + test 1
+    track: "1.{n}"
+  cd2:
+    kind: audio
+    dir: Tilbury A., Clementson T., Hendra L.A., Rea D._English Unlimited A2_2011_CD2    # Unit 5–9 + test 2
+    track: "2.{n}"
+  cd3:
+    kind: audio
+    dir: Tilbury A., Clementson T., Hendra L.A., Rea D._English Unlimited A2_2011_CD3    # Unit 10–14 + test 3
+    track: "3.{n}"
+
+# Không có trong bộ dữ liệu: phần cuối Coursebook (Activities 124–130, Grammar reference and practice 131–142,
+# Vocabulary reference 143–147, Scripts — lời bài nghe — 148–159), Self-study Pack, đề Achievement test (Teacher's
+# DVD-ROM; app có sẵn bài nghe), đề mẫu A2 Key (tải miễn phí ở Cambridge English), 5 file của CD1.
+missing: [grammar-reference, vocabulary-reference, audio-scripts, activities, self-study-pack, test-books, cd1-tracks-27-33-36-39-51]
+
+steps:
+  - &lesson-1
+    id: lesson-1
+    title: Bài 1 · nghe – đọc, từ vựng, ngữ pháp
+    skill: listening
+    note: >-
+      Coursebook bài {no}.1 — {l1}. Làm lần lượt từng bài tập; bài có nhãn audio (ví dụ 1.7) thì mở track cùng tên bên
+      dưới, nghe hai lần rồi mới chữa bằng Teacher's Book. Câu mẫu có biểu tượng P thì nghe và nhại theo. Chép từ mới
+      kèm một câu ví dụ vào Anki.
+  - &lesson-2
+    id: lesson-2
+    title: Bài 2 · nghe – đọc, từ vựng, ngữ pháp
+    skill: reading
+    note: >-
+      Coursebook bài {no}.2 — {l2}. Học như bài 1: làm bài trước, nghe track theo nhãn, chữa bằng Teacher's Book; bài
+      nói theo cặp (In pairs) thì tự đóng cả hai vai và ghi âm.
+  - &target
+    id: target
+    title: Target activity · nhiệm vụ nói
+    skill: speaking
+    core: true
+    minutes: 45
+    note: >-
+      Target activity: {ta}. Nghe hoặc đọc bài mẫu, gạch chân các cụm Task vocabulary; chuẩn bị 2–3 phút bằng ghi chú
+      ngắn (không viết cả câu), nói 1–2 phút và ghi âm, nghe lại rồi nói lần hai tốt hơn.
+  - &explore
+    id: explore
+    title: Explore Speaking · từ khoá và giao tiếp
+    skill: speaking
+    core: true
+    note: >-
+      Explore — {ex}. Keyword: làm bài rồi đặt ba câu của riêng bạn với từ khoá. Explore Speaking: nghe track, nhại các
+      mẫu câu, rồi tự đóng vai cả hai người và ghi âm.
+  - &look-again
+    id: look-again
+    title: Look again · ôn tập và tự đánh giá
+    skill: other
+    minutes: 45
+    note: >-
+      Look again — {la}. Làm phần Review và Extension, rồi tự chấm Self-assessment (1–5) ở cuối trang; mục nào dưới 3
+      thì học lại bài tương ứng trước khi sang unit sau. Câu sai ghi vào sổ lỗi.
+
+# Bước Explore của unit chẵn (Explore Writing); dùng trong `steps` của các unit đó.
+explore-writing: &explore-writing
+  <<: *explore
+  title: Explore Writing · từ khoá và viết
+  skill: writing
+  note: >-
+    Explore — {ex}. Keyword: làm bài rồi đặt ba câu của riêng bạn với từ khoá. Explore Writing: đọc bài mẫu, làm các bài
+    nhỏ trong sách, rồi viết bài theo đề (khoảng 60–100 từ), tự sửa theo bài mẫu và chép lại bản sạch.
+
+toc:
+  sections:
+    - id: S1
+      title: Chặng 1 · Intro – Unit 4 (CD1)
+      items:
+        - unit: 0
+          title: Intro · About you
+          pages: [7, 9]
+          steps:
+            - id: intro-1
+              title: Giới thiệu bản thân · quốc gia, ngôn ngữ, chữ cái và số
+              skill: listening
+              note: >-
+                Coursebook Intro tr. 7–8 (ôn A1): từ vựng countries and languages, introducing yourself, letters,
+                numbers and addresses; nghe Agata enrols on a course. Nghe và nhại theo từng track 1.1–1.5; tự giới
+                thiệu 5–6 câu (tên, quê, nghề, ngôn ngữ, email) và ghi âm. Thấy dễ thì học nhanh, đừng bỏ phần đánh vần.
+            - id: intro-2
+              title: Thông tin cá nhân và can · đăng ký khoá học
+              skill: speaking
+              note: >-
+                Coursebook Intro tr. 9: ngữ pháp subject pronouns, possessive adjectives, can (khả năng); từ vựng
+                personal information. Điền phiếu đăng ký ở trang Activities tr. 122 bằng thông tin của bạn, rồi đóng vai
+                hỏi – đáp để đăng ký một khoá học (track 1.6). Nói 5 việc bạn làm được và chưa làm được với can / can't.
+          refs:
+            intro-1: {pages: [7, 8], tracks: "1.1..1.5", alt: [{pdf: teachers-book, pages: [21, 22]}]}
+            intro-2: {pages: [9, 9], tracks: "1.6", alt: [{pdf: teachers-book, pages: [22, 22]}, {pdf: course-book-2, pages: [122, 122], label: "Activities tr. 122 · phiếu đăng ký (bài 8a)"}]}
+        - unit: 1
+          title: People in your life
+          pages: [10, 17]
+          l1: "nghe Rob's family and friends; ngữ pháp possessive 's, be hiện tại (am / is / are); từ vựng people you know; phát âm syllables; nói: giới thiệu người khác, kể về các mối quan hệ"
+          l2: "đọc Life's work; ngữ pháp be quá khứ (was / were); từ vựng talking about jobs; nói về công việc hiện tại và trước đây"
+          ta: "Talk about someone you know well — kể về một người bạn biết rõ (nghe Michel's and Donna's friends, từ vựng how you know people)"
+          ex: "Keyword OK; Across cultures: Greetings (cách chào hỏi ở các nước); Explore Speaking: xin người khác nhắc lại, hỏi lại để kiểm tra thông tin"
+          la: "ôn be hiện tại và quá khứ, từ vựng people and jobs; Spelling and sounds: vowels and consonants"
+          refs:
+            lesson-1: {pages: [10, 11], tracks: "1.7..1.11", alt: [{pdf: teachers-book, pages: [24, 25]}]}
+            lesson-2: {pages: [12, 13], tracks: "1.12..1.14", alt: [{pdf: teachers-book, pages: [25, 26]}]}
+            target: {pages: [14, 14], tracks: "1.15..1.16", alt: [{pdf: teachers-book, pages: [26, 27]}]}
+            explore: {pages: [15, 16], tracks: "1.17..1.19", alt: [{pdf: teachers-book, pages: [27, 28]}]}
+            look-again: {pages: [17, 17], tracks: "1.20", alt: [{pdf: teachers-book, pages: [28, 29]}]}
+        - unit: 2
+          title: Away from home
+          pages: [18, 25]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "nghe What do you miss? và Carly asks for things; ngữ pháp a, an, some; từ vựng offers and requests; phát âm word stress 1; nói: nhờ, xin một thứ gì đó"
+          l2: "đọc Sofasurfing.com; ngữ pháp present simple câu khẳng định; từ vựng interests and wants; viết hồ sơ giới thiệu bản thân cho một trang web"
+          ta: "Take care of a guest — đón và lo cho một người khách (đọc – nghe Erkan's guest, từ vựng taking care of a guest)"
+          ex: "Keyword in; Independent learning: tự tìm thông tin; Explore Writing: viết thư / email nhờ việc, dùng chữ hoa đúng chỗ"
+          la: "ôn requests, offers, present simple; Spelling and sounds: hai phụ âm đi liền"
+          refs:
+            lesson-1: {pages: [18, 19], tracks: "1.21..1.24", alt: [{pdf: teachers-book, pages: [31, 32]}]}
+            lesson-2: {pages: [20, 21], tracks: "1.25", alt: [{pdf: teachers-book, pages: [32, 33]}]}
+            target: {pages: [22, 22], tracks: "1.26", alt: [{pdf: teachers-book, pages: [33, 34]}]}
+            explore: {pages: [23, 24], alt: [{pdf: teachers-book, pages: [34, 36]}]}
+            look-again: {pages: [25, 25], tracks: "1.28..1.30", alt: [{pdf: teachers-book, pages: [36, 36]}, {pdf: course-book-2, pages: [122, 122], label: "Activities tr. 122 · đáp án quiz bài 3b"}]}
+        - unit: 3
+          title: Your time
+          pages: [26, 33]
+          l1: "đọc Happiness is …; ngữ pháp subject and object pronouns, present simple câu phủ định; từ vựng free time activities; nói về thời gian rảnh; viết For me, happiness is …"
+          l2: "nghe Min's and Paul's New Year; ngữ pháp possessive 's và s', present simple câu hỏi; từ vựng adverbs of frequency; phát âm word stress 2; nói về năm mới và các dịp đặc biệt"
+          ta: "Invite someone out — mời ai đó đi chơi, nhận lời hoặc từ chối (nghe Invitations, từ vựng invitations)"
+          ex: "Keyword go; Across cultures: nên và không nên khi nói chuyện; Explore Speaking: nhận tin nhắn điện thoại, xin nói chậm lại, cho thấy mình hiểu"
+          la: "ôn present simple, adverbs of frequency; Spelling and sounds: ch, tch và sh"
+          refs:
+            lesson-1: {pages: [26, 27], tracks: "1.31..1.32", alt: [{pdf: teachers-book, pages: [38, 39]}]}
+            lesson-2: {pages: [28, 29], tracks: "1.34..1.37", alt: [{pdf: teachers-book, pages: [39, 41]}]}
+            target: {pages: [30, 30], tracks: "1.38", alt: [{pdf: teachers-book, pages: [41, 41]}]}
+            explore: {pages: [31, 32], tracks: "1.40..1.42", alt: [{pdf: teachers-book, pages: [41, 43]}, {pdf: course-book-2, pages: [123, 123], label: "Activities tr. 123 · Student B (bài 5a)"}]}
+            look-again: {pages: [33, 33], tracks: "1.43..1.44", alt: [{pdf: teachers-book, pages: [43, 43]}]}
+        - unit: 4
+          title: Changes
+          pages: [34, 41]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "đọc Three small things that changed the world; ngữ pháp singular, plural và past simple verbs; từ vựng past time expressions; nói: lần đầu bạn dùng một công nghệ"
+          l2: "nghe Sang-mi's business trip; ngữ pháp past simple (câu hỏi, câu phủ định); từ vựng things for a trip; phát âm sentence stress 1; nói: Did you have a good time?"
+          ta: "Talk about an important event — kể một sự kiện quan trọng trong đời (nghe From Nigeria to Scotland, từ vựng good and bad experiences)"
+          ex: "Keyword have; Independent learning: tự học; Explore Writing: viết thư / email kể tin tức, dấu câu"
+          la: "ôn past simple; Spelling and sounds: th"
+          refs:
+            lesson-1: {pages: [34, 35], tracks: "1.45..1.46", alt: [{pdf: teachers-book, pages: [45, 46]}]}
+            lesson-2: {pages: [36, 37], tracks: "1.47..1.52", alt: [{pdf: teachers-book, pages: [46, 47]}]}
+            target: {pages: [38, 38], tracks: "1.53", alt: [{pdf: teachers-book, pages: [47, 48]}]}
+            explore: {pages: [39, 40], alt: [{pdf: teachers-book, pages: [48, 49]}]}
+            look-again: {pages: [41, 41], tracks: "1.54..1.56", alt: [{pdf: teachers-book, pages: [49, 50]}]}
+        - test: 1
+          title: Achievement test 1 (Unit 1–4)
+          steps:
+            - id: check
+              title: Nghe kiểm tra và tự đánh giá
+              skill: listening
+              note: >-
+                Track 1.57 là phần nghe của Achievement test 1 (làm sau Unit 4); đề giấy nằm trong Teacher's
+                DVD-ROM nên chưa có ở đây. Nghe hai lần, ghi lại ai nói với ai, về việc gì, các tên, con số, ngày giờ;
+                nghe lần ba để soát ghi chú. Rồi mở trang Look again của Unit 1–4 (các nút bên dưới), chấm lại
+                Self-assessment; mục nào vẫn dưới 3 thì học lại phiên đó trước khi đi tiếp.
+          refs:
+            check: {tracks: "1.57", alt: [{pages: [17, 17], label: "Unit 1 · Look again"}, {pages: [25, 25], label: "Unit 2 · Look again"}, {pages: [33, 33], label: "Unit 3 · Look again"}, {pages: [41, 41], label: "Unit 4 · Look again"}]}
+    - id: S2
+      title: Chặng 2 · Unit 5–9 (CD2)
+      items:
+        - unit: 5
+          title: Your space
+          pages: [42, 49]
+          l1: "đọc I live here but I work 800 kilometres away; từ vựng places, describing places, prepositions of place; nói: tả nơi bạn sống và những nơi bạn biết"
+          l2: "nghe House-sitting; ngữ pháp there is, there are; từ vựng things in the home; phát âm sentence stress 2; nói về các phòng trong nhà; nói và viết: trông nhà giúp bạn"
+          ta: "Rent a room — tìm và thuê phòng (đọc DublinCapitalRentals.com, nghe Alicja looks for a room, từ vựng adverts for rooms)"
+          ex: "Keyword on; Across cultures: khoảng cách cá nhân; Explore Speaking: tỏ ra quan tâm trong cuộc trò chuyện"
+          la: "ôn there is / there are, giới từ chỉ nơi chốn; Spelling and sounds: e cuối từ"
+          refs:
+            lesson-1: {pages: [42, 43], tracks: "2.1..2.2", alt: [{pdf: teachers-book, pages: [52, 53]}]}
+            lesson-2: {pages: [44, 45], tracks: "2.3..2.6", alt: [{pdf: teachers-book, pages: [53, 54]}]}
+            target: {pages: [46, 46], tracks: "2.7", alt: [{pdf: teachers-book, pages: [54, 55]}]}
+            explore: {pages: [47, 48], tracks: "2.8..2.10", alt: [{pdf: teachers-book, pages: [55, 56]}]}
+            look-again: {pages: [49, 49], tracks: "2.11..2.14", alt: [{pdf: teachers-book, pages: [56, 57]}]}
+        - unit: 6
+          title: "What would you like?"
+          pages: [50, 57]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "nghe và nói về mua sắm; nghe Jon in the shopping centre; từ vựng shops and shopping, buying things; phát âm sentence stress 3; nói: mua đồ trong cửa hàng"
+          l2: "đọc Weird fruit and veg; ngữ pháp countable and uncountable nouns; từ vựng food, nói sở thích và lý do; nói về đồ ăn"
+          ta: "Order a meal — gọi món (nghe At an airport café, từ vựng ordering food)"
+          ex: "Keyword this, that, these, those; Independent learning: dùng từ điển; Explore Writing: viết lời nhờ và lời nhắc ngắn, and / but"
+          la: "ôn danh từ đếm được / không đếm được; Spelling and sounds: ou"
+          refs:
+            lesson-1: {pdf: course-book-u6, pages: [50, 51], tracks: "2.15..2.18", alt: [{pdf: teachers-book, pages: [59, 60]}]}
+            lesson-2: {pdf: course-book-u6, pages: [52, 53], tracks: "2.19", alt: [{pdf: teachers-book, pages: [60, 62]}]}
+            target: {pdf: course-book-u6, pages: [54, 54], tracks: "2.20", alt: [{pdf: teachers-book, pages: [62, 63]}]}
+            explore: {pdf: course-book-u6, pages: [55, 56], alt: [{pdf: teachers-book, pages: [63, 64]}]}
+            look-again: {pdf: course-book-u6, pages: [57, 57], tracks: "2.21..2.22", alt: [{pdf: teachers-book, pages: [64, 65]}]}
+        - unit: 7
+          title: Work-life balance
+          pages: [58, 65]
+          l1: "đọc So what do you do all day?; từ vựng work and studies 1, spend; viết về công việc / việc học của bạn; nói: cân bằng công việc – cuộc sống"
+          l2: "nghe Dean on the phone; ngữ pháp present progressive; từ vựng saying you're busy; phát âm âm schwa 1; nói: bạn đang bận gì, đang làm gì"
+          ta: "Explain what you do — giải thích bạn làm nghề gì / học gì (nghe What do you do?, từ vựng work and studies 2)"
+          ex: "Keyword of; Across cultures: nơi làm việc; Explore Speaking: nói khi không chắc về số liệu, sự việc"
+          la: "ôn present progressive; Spelling and sounds: c"
+          refs:
+            lesson-1: {pdf: course-book-u6, pages: [58, 59], tracks: "2.23..2.25", alt: [{pdf: teachers-book, pages: [67, 68]}]}
+            lesson-2: {pdf: course-book-u6, pages: [60, 61], tracks: "2.26..2.28", alt: [{pdf: teachers-book, pages: [68, 70]}]}
+            target: {pdf: course-book-u6, pages: [62, 62], tracks: "2.29", alt: [{pdf: teachers-book, pages: [70, 71]}]}
+            explore: {pdf: course-book-u6, pages: [63, 64], tracks: "2.30..2.32", alt: [{pdf: teachers-book, pages: [71, 72]}]}
+            look-again: {pdf: course-book-u6, pages: [65, 65], tracks: "2.33..2.34", alt: [{pdf: teachers-book, pages: [72, 73]}]}
+        - unit: 8
+          title: "What's she like?"
+          pages: [66, 73]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "nghe Onyinye's family; đọc How we met; từ vựng family, personality; phát âm âm schwa 2; nói về gia đình và những người quanh bạn"
+          l2: "đọc Changing image; ngữ pháp have got; từ vựng appearance; nói về thời trang, tả người; viết tả một người nổi tiếng"
+          ta: "Describe someone you admire — tả một người bạn ngưỡng mộ (nghe Someone I admire, từ vựng relationships)"
+          ex: "Keyword like; Independent learning: đọc phiên âm 1 — phụ âm; Explore Writing: viết bài đăng nêu ý kiến, so"
+          la: "ôn have got, từ tả người; Spelling and sounds: ee, ea, ie"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [66, 67], tracks: "2.35..2.38", alt: [{pdf: teachers-book, pages: [75, 76]}]}
+            lesson-2: {pdf: course-book-2, pages: [68, 69], tracks: "2.39", alt: [{pdf: teachers-book, pages: [76, 77]}]}
+            target: {pdf: course-book-2, pages: [70, 70], tracks: "2.40..2.41", alt: [{pdf: teachers-book, pages: [77, 78]}]}
+            explore: {pdf: course-book-2, pages: [71, 72], tracks: "2.42..2.44", alt: [{pdf: teachers-book, pages: [78, 79]}]}
+            look-again: {pdf: course-book-2, pages: [73, 73], tracks: "2.45..2.46", alt: [{pdf: teachers-book, pages: [79, 80]}]}
+        - unit: 9
+          title: Getting around
+          pages: [74, 81]
+          l1: "nghe Vijay visits Lucknow; từ vựng using transport, getting information; phát âm sentence stress và /ə/; nói: đi lại trong thành phố, hỏi thông tin"
+          l2: "đọc One-wheeled wonder; ngữ pháp comparatives and superlatives; từ vựng prepositions of movement; nói và viết về một hành trình bạn thích"
+          ta: "Buy a ticket — mua vé tàu xe (nghe Vijay buys a ticket, từ vựng buying a ticket)"
+          ex: "Keyword get; Across cultures: văn hoá giao thông; Explore Speaking: tự sửa và sửa lời người khác, kiểm tra và tóm tắt thông tin"
+          la: "ôn so sánh hơn / nhất; Spelling and sounds: phụ âm đôi"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [74, 75], tracks: "2.47..2.49", alt: [{pdf: teachers-book, pages: [82, 83]}]}
+            lesson-2: {pdf: course-book-2, pages: [76, 77], tracks: "2.50", alt: [{pdf: teachers-book, pages: [83, 84]}]}
+            target: {pdf: course-book-2, pages: [78, 78], tracks: "2.51", alt: [{pdf: teachers-book, pages: [84, 85]}]}
+            explore: {pdf: course-book-2, pages: [79, 80], tracks: "2.52..2.55", alt: [{pdf: teachers-book, pages: [85, 87]}]}
+            look-again: {pdf: course-book-2, pages: [81, 81], tracks: "2.56", alt: [{pdf: teachers-book, pages: [87, 87]}]}
+        - test: 2
+          title: Achievement test 2 (Unit 5–9)
+          steps:
+            - id: check
+              title: Nghe kiểm tra và tự đánh giá
+              skill: listening
+              note: >-
+                Track 2.57 là phần nghe của Achievement test 2 (làm sau Unit 9); đề giấy nằm trong Teacher's
+                DVD-ROM nên chưa có ở đây. Nghe hai lần, ghi lại ai nói với ai, về việc gì, các tên, con số, ngày giờ;
+                nghe lần ba để soát ghi chú. Rồi mở trang Look again của Unit 5–9 (các nút bên dưới), chấm lại
+                Self-assessment; mục nào vẫn dưới 3 thì học lại phiên đó trước khi đi tiếp.
+          refs:
+            check: {tracks: "2.57", alt: [{pages: [49, 49], label: "Unit 5 · Look again"}, {pdf: course-book-u6, pages: [57, 57], label: "Unit 6 · Look again"}, {pdf: course-book-u6, pages: [65, 65], label: "Unit 7 · Look again"}, {pdf: course-book-2, pages: [73, 73], label: "Unit 8 · Look again"}, {pdf: course-book-2, pages: [81, 81], label: "Unit 9 · Look again"}]}
+    - id: S3
+      title: Chặng 3 · Unit 10–14 (CD3) và mốc A2 Key
+      items:
+        - unit: 10
+          title: Getting together
+          pages: [82, 89]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "đọc International Film Week; nghe Jon and Mia choose a film; từ vựng films, suggestions; nói: chọn phim để xem"
+          l2: "đọc Jon and Kimiko's messages, nghe cuộc gọi của hai người; ngữ pháp present progressive cho kế hoạch đã hẹn; phát âm compound nouns; nói: hẹn gặp nhau"
+          ta: "Arrange a film night — sắp xếp một buổi tối xem phim (nghe A film night, từ vựng talking about films)"
+          ex: "Keyword about; Independent learning: đọc phiên âm 2 — nguyên âm; Explore Writing: viết và trả lời lời mời, viết lời cảm ơn, lược từ (ellipsis)"
+          la: "ôn present progressive cho tương lai; Spelling and sounds: g"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [82, 83], tracks: "3.1..3.2", alt: [{pdf: teachers-book, pages: [89, 90]}]}
+            lesson-2: {pdf: course-book-2, pages: [84, 85], tracks: "3.3..3.5", alt: [{pdf: teachers-book, pages: [90, 91]}, {pdf: course-book-2, pages: [123, 123], label: "Activities tr. 123 · Student B (bài 3a)"}]}
+            target: {pdf: course-book-2, pages: [86, 86], tracks: "3.6", alt: [{pdf: teachers-book, pages: [91, 92]}]}
+            explore: {pdf: course-book-2, pages: [87, 88], tracks: "3.7..3.10", alt: [{pdf: teachers-book, pages: [92, 93]}]}
+            look-again: {pdf: course-book-2, pages: [89, 89], tracks: "3.11..3.13", alt: [{pdf: teachers-book, pages: [93, 94]}]}
+        - unit: 11
+          title: Journeys
+          pages: [90, 97]
+          l1: "nghe Belinda at the airport; từ vựng airports; phát âm ngữ điệu lịch sự; nói: làm thủ tục ở sân bay (đóng vai Student A / B)"
+          l2: "đọc Help! A traveller's tale; ngữ pháp articles (a / an / the); từ vựng storytelling expressions; nói: kể một câu chuyện"
+          ta: "Describe a journey — kể về một chuyến đi (nghe Sam's journey, từ vựng talking about a journey)"
+          ex: "Keyword at; Across cultures: nói lời xin lỗi; Explore Speaking: đặt câu hỏi để kéo dài cuộc trò chuyện, chuyển chủ đề"
+          la: "ôn mạo từ, past simple khi kể chuyện; Spelling and sounds: ng"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [90, 91], tracks: "3.14..3.17", alt: [{pdf: teachers-book, pages: [96, 97]}, {pdf: course-book-2, pages: [123, 123], label: "Activities tr. 123 · Student A (bài 5a)"}]}
+            lesson-2: {pdf: course-book-2, pages: [92, 93], tracks: "3.18..3.20", alt: [{pdf: teachers-book, pages: [97, 98]}]}
+            target: {pdf: course-book-2, pages: [94, 94], tracks: "3.21..3.22", alt: [{pdf: teachers-book, pages: [98, 99]}]}
+            explore: {pdf: course-book-2, pages: [95, 96], tracks: "3.23", alt: [{pdf: teachers-book, pages: [99, 100]}]}
+            look-again: {pdf: course-book-2, pages: [97, 97], tracks: "3.24..3.26", alt: [{pdf: teachers-book, pages: [100, 101]}]}
+        - unit: 12
+          title: "Are you OK?"
+          pages: [98, 105]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "nghe và đọc Marc at the pharmacy; từ vựng the body and health; phát âm nối phụ âm với nguyên âm 1; nói: đóng vai mua thuốc ở hiệu thuốc"
+          l2: "đọc Home remedies; ngữ pháp khuyên bằng if; từ vựng giving advice; nói: mẹo chữa cảm lạnh"
+          ta: "Give advice — đưa lời khuyên (đọc Stay healthy in the workplace, từ vựng giving reasons for advice)"
+          ex: "Keyword take; Independent learning: học cụm từ đi liền (collocations); Explore Writing: viết email / lời nhắn xin lỗi"
+          la: "ôn lời khuyên với if; Spelling and sounds: ay, ai"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [98, 99], tracks: "3.27..3.31", alt: [{pdf: teachers-book, pages: [103, 104]}]}
+            lesson-2: {pdf: course-book-2, pages: [100, 101], tracks: "3.32..3.34", alt: [{pdf: teachers-book, pages: [104, 105]}]}
+            target: {pdf: course-book-2, pages: [102, 102], alt: [{pdf: teachers-book, pages: [105, 106]}]}
+            explore: {pdf: course-book-2, pages: [103, 104], tracks: "3.35", alt: [{pdf: teachers-book, pages: [106, 108]}]}
+            look-again: {pdf: course-book-2, pages: [105, 105], tracks: "3.36..3.37", alt: [{pdf: teachers-book, pages: [108, 108]}]}
+        - unit: 13
+          title: Experiences
+          pages: [106, 113]
+          l1: "đọc Happy to say, I've never …; nghe I've always wanted to …; ngữ pháp present perfect verbs; nói: lần cuối bạn làm gì, điều bạn luôn muốn làm; viết về những điều bạn chưa từng làm"
+          l2: "nghe Have you been to …?; đọc The people behind the places; ngữ pháp present perfect; từ vựng sights; phát âm nối phụ âm với nguyên âm 2; nói về những nơi bạn đã đến"
+          ta: "Get information and recommendations — hỏi thông tin và xin gợi ý (nghe Advice about restaurants, từ vựng getting information)"
+          ex: "Keyword thing; Across cultures: trải nghiệm của bạn; Explore Speaking: mở đầu và kết thúc cuộc trò chuyện trong các tình huống"
+          la: "ôn present perfect; Spelling and sounds: wh-"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [106, 107], tracks: "3.38..3.39", alt: [{pdf: teachers-book, pages: [110, 111]}]}
+            lesson-2: {pdf: course-book-2, pages: [108, 109], tracks: "3.40..3.42", alt: [{pdf: teachers-book, pages: [111, 112]}, {pdf: course-book-2, pages: [123, 123], label: "Activities tr. 123 · Student B (bài 4a)"}]}
+            target: {pdf: course-book-2, pages: [110, 110], tracks: "3.43", alt: [{pdf: teachers-book, pages: [112, 113]}]}
+            explore: {pdf: course-book-2, pages: [111, 112], tracks: "3.44..3.46", alt: [{pdf: teachers-book, pages: [113, 115]}]}
+            look-again: {pdf: course-book-2, pages: [113, 113], tracks: "3.47..3.49", alt: [{pdf: teachers-book, pages: [115, 115]}]}
+        - unit: 14
+          title: Choices
+          pages: [114, 121]
+          steps: [*lesson-1, *lesson-2, *target, *explore-writing, *look-again]
+          l1: "đọc Keep your brain in top condition; từ vựng too much, enough, not enough; phát âm ôn tập; nói về lối sống của bạn"
+          l2: "nghe Barry Cox; ngữ pháp be going to, be hoping to, would like to; từ vựng life changes; nói: trò chơi về hy vọng và kế hoạch"
+          ta: "Plan a weekend break — lên kế hoạch cho một kỳ nghỉ cuối tuần (nghe Weekend in La Mauricie, từ vựng planning)"
+          ex: "Keyword really; Independent learning: học ngoại ngữ thế nào?; Explore Writing: viết thư / email cho một người bạn cũ, cụm từ chỉ thời gian"
+          la: "ôn be going to và would like to; Spelling and sounds: phụ âm câm"
+          refs:
+            lesson-1: {pdf: course-book-2, pages: [114, 115], tracks: "3.50..3.51", alt: [{pdf: teachers-book, pages: [117, 118]}]}
+            lesson-2: {pdf: course-book-2, pages: [116, 117], tracks: "3.52..3.54", alt: [{pdf: teachers-book, pages: [118, 119]}]}
+            target: {pdf: course-book-2, pages: [118, 118], tracks: "3.55..3.56", alt: [{pdf: teachers-book, pages: [119, 120]}]}
+            explore: {pdf: course-book-2, pages: [119, 120], tracks: "3.57", alt: [{pdf: teachers-book, pages: [120, 121]}]}
+            look-again: {pdf: course-book-2, pages: [121, 121], tracks: "3.58..3.61", alt: [{pdf: teachers-book, pages: [121, 122]}]}
+        - test: 3
+          title: Achievement test 3 (Unit 10–14)
+          steps:
+            - id: check
+              title: Nghe kiểm tra và tự đánh giá
+              skill: listening
+              note: >-
+                Track 3.62 là phần nghe của Achievement test 3 (làm sau Unit 14); đề giấy nằm trong Teacher's
+                DVD-ROM nên chưa có ở đây. Nghe hai lần, ghi lại ai nói với ai, về việc gì, các tên, con số, ngày giờ;
+                nghe lần ba để soát ghi chú. Rồi mở trang Look again của Unit 10–14 (các nút bên dưới), chấm lại
+                Self-assessment; mục nào vẫn dưới 3 thì học lại phiên đó trước khi đi tiếp.
+          refs:
+            check: {tracks: "3.62", alt: [{pdf: course-book-2, pages: [89, 89], label: "Unit 10 · Look again"}, {pdf: course-book-2, pages: [97, 97], label: "Unit 11 · Look again"}, {pdf: course-book-2, pages: [105, 105], label: "Unit 12 · Look again"}, {pdf: course-book-2, pages: [113, 113], label: "Unit 13 · Look again"}, {pdf: course-book-2, pages: [121, 121], label: "Unit 14 · Look again"}]}
+        - test: 4
+          title: Mốc A2 Key (đề mẫu Cambridge)
+          steps:
+            - id: reading-writing
+              title: Reading & Writing · 60 phút
+              skill: reading
+              minutes: 75
+              note: >-
+                Tải đề mẫu A2 Key (sample test, miễn phí, có đáp án và audio) ở trang chính thức của Cambridge English
+                (cambridgeenglish.org, mục A2 Key → Preparation). Làm phần Reading and Writing đúng 60 phút, không tra
+                từ: 5 phần đọc, rồi viết một email / lời nhắn ngắn (từ 25 từ) và một câu chuyện theo ba bức tranh (từ 35
+                từ). Chấm phần đọc bằng đáp án; phần viết so với bài mẫu trong đề.
+            - id: listening-test          # không đặt id `listening`: bài nghe nằm trong đề tải về, chưa có track trong app
+              title: Listening · khoảng 35 phút
+              skill: listening
+              note: >-
+                Làm phần Listening của đề mẫu (5 phần, 25 câu, mỗi bài nghe hai lần) bằng file audio đi kèm, không dừng
+                băng. Chấm, rồi nghe lại những câu sai với lời bài nghe.
+            - id: speaking
+              title: Speaking · tự luyện hai phần
+              skill: speaking
+              note: >-
+                Phần Speaking thi theo cặp, 8–10 phút: Part 1 trả lời câu hỏi về bản thân (tên, nơi sống, việc học,
+                công việc, sở thích); Part 2 trao đổi về các bức tranh rồi nói bạn thích cái nào và vì sao. Tự trả lời
+                các câu hỏi trong đề mẫu, ghi âm, so với các mẫu câu đã học ở Target activity của Unit 1–14.
+            - id: decide
+              title: Chấm điểm và chọn bước tiếp theo
+              skill: other
+              core: true
+              minutes: 45
+              note: >-
+                Cộng điểm từng phần. Đúng khoảng 70% trở lên ở mỗi phần (mốc tham khảo; kỳ thi thật đạt A2 từ 120 điểm
+                thang Cambridge English Scale) thì sang Giai đoạn 1 của lộ trình 40 tuần (file 01). Phần nào thấp hơn thì
+                ôn lại các unit liên quan 1–2 tuần rồi làm đề mẫu thứ hai.

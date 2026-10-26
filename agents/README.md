@@ -15,7 +15,7 @@ Hai mẫu (`template` trong `book.yaml`):
 | Mẫu | Sách | Cách dựng |
 |---|---|---|
 | `target-gt-v1` | IELTS Target 5.0 (`books/ielts_target_5_0`) | Đủ các bước ở bảng dưới: tìm trang mở đầu module bằng băng đỏ, OCR đáp án / tapescript, ghép audio theo mẫu tên, hộp duyệt |
-| `lessons-v1` | GENKI I · lộ trình JLPT N5 (`books/Genki`) | Không đoán cấu trúc. Các bước học (`steps`) và chỗ trong sách của từng bước (`refs`: trang in, khoảng track `K01-09..K01-23`, trang Workbook `alt`) khai hết trong `book.yaml`. Agent chỉ quét file, cắt PDF thành đoạn theo từng bài, kiểm tra mỗi track thuộc đúng một phiên. Không có `files` thì thành lộ trình chỉ có ghi chú (`agents/book_ingest/lessons.py`, `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` mục 3) |
+| `lessons-v1` | GENKI I · lộ trình JLPT N5 (`books/Genki`) | Không đoán cấu trúc. Các bước học (`steps`) và chỗ trong sách của từng bước (`refs`: trang in, khoảng track `K01-09..K01-23`, trang Workbook `alt`) khai hết trong `book.yaml`. Agent chỉ quét file, cắt PDF thành đoạn theo từng bài, kiểm tra mỗi track thuộc đúng một phiên. Không có `files` thì thành lộ trình chỉ có ghi chú (`agents/book_ingest/lessons.py`, `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` mục 3). English Unlimited A2 (`books/book_english_unlimited_a2_elemetary`, Giai đoạn 0) dùng thêm nhãn track theo đĩa `track: "1.{n}"` và một PDF khai hai lần vì trang quét trùng (file 08) |
 
 ## Chạy
 

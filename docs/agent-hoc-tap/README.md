@@ -16,6 +16,7 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 | [05-lich-su-thay-doi.md](05-lich-su-thay-doi.md) | Lịch sử từng đợt triển khai: file thêm/sửa/xóa, chỗ làm khác plan, kết quả kiểm thử, việc còn treo |
 | [06-video-bai-giang.md](06-video-bai-giang.md) | Video bài giảng (chỉ Course Book): Unit 1–3 phần nào có video, lịch sử từng video, quy trình, kiểu cảnh, cách đọc, kế hoạch Unit 4 |
 | [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, video tiếng Nhật (Unit 0: năm video; bài 1–3: bốn video kỹ năng mỗi bài), kế hoạch bài 4–12 |
+| [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) | Giai đoạn 0 trước lộ trình IELTS: vì sao chọn English Unlimited, 79 phiên của cuốn A2, cách dò trang và track (OCR nhãn cam, đối chiếu Teacher's Book), mốc A2 Key, cuốn A1 đang chờ sách, kế hoạch video |
 
 ## Trạng thái
 
@@ -79,6 +80,13 @@ Công cụ dựng video có thêm cảnh `shadow` và dòng `echo` (khoảng l�
 - phiên Chào hỏi & số đếm: Greetings, Numbers;
 - video có đủ bảng chữ, mẹo phát âm cho người Việt, audio gốc của sách và bài đố có đáp án;
 - thẻ tiếng Nhật xuống dòng được bằng `\n`, nên bảng chữ hiện thành bảng như trong sách.
+
+**Đợt 18 (26/10/2026):** **Giai đoạn 0** cho người học lại từ đầu hoặc dưới band 3.0, đứng trước tuần 1 trong nhóm IELTS:
+- English Unlimited A2 Elementary: 79 phiên (16 tuần), mỗi phiên mở đúng trang Coursebook, track audio và trang đáp án
+  Teacher's Book;
+- sau Unit 4, 9, 14 có một phiên ôn với bài nghe Achievement test; cuối sách là đề mẫu A2 Key để quyết định sang
+  Giai đoạn 1;
+- thẻ A1 Starter đứng trước, chờ Coursebook đầy đủ. Chi tiết ở file 08.
 
 ## Tóm tắt trong năm dòng
 

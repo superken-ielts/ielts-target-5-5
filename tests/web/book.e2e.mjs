@@ -32,6 +32,8 @@ let pdfBytes = 0;
 page.on("response", r => { if(r.url().endsWith(".pdf") && r.status() < 300) pdfBytes += Number(r.headers()["content-length"] || 0); });
 
 const step = async (name, fn) => { process.stdout.write("· " + name + " … "); await fn(); console.log("ok"); };
+// Thẻ IELTS Target 5.0 trong danh sách sách (Giai đoạn 0 đứng trước nó)
+const targetCard = () => page.locator("#p-book .bk-lib", { has: page.locator("h3", { hasText: /^IELTS Target 5\.0$/ }) });
 const URL0 = `http://localhost:${PORT}/web/index.html`;
 
 try{
@@ -55,10 +57,14 @@ try{
     assert.match(lib, /Khoảng 4–5,5 tháng/);
     assert.match(lib, /Cambridge IELTS 20 General Training/);          // sách trong lộ trình chưa nhập
     assert.match(lib, /Chưa nhập vào app/);
+    // Giai đoạn 0 đứng trước IELTS Target 5.0 trong nhóm IELTS: A1 chờ Coursebook đầy đủ, A2 đã nhập
+    const titles = await page.locator("#p-book .bk-lib h3").allTextContents();
+    assert.deepEqual(titles.slice(0, 3), ["English Unlimited A1 Starter", "English Unlimited A2 Elementary", "IELTS Target 5.0"]);
+    assert.match(await page.locator("#p-book .bk-lib").first().textContent(), /Chưa nhập vào app/);
   });
 
   await step("chi tiết sách: đủ section, unit, 120 phiên và phiên kế tiếp", async () => {
-    await page.click("#p-book .bk-lib .btn-primary");
+    await targetCard().locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
     assert.match(await page.textContent("#p-book .bk-next"), /Unit 1 · Speaking & Vocabulary/);
     assert.equal(await page.locator("#p-book .bk-unit").count(), 21);  // 15 unit + 3 review + 3 test
@@ -304,8 +310,8 @@ try{
     await page.reload();
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
-    assert.match(await page.textContent("#p-book .bk-lib"), /Đã xong 1\/120 phiên/);
-    await page.click("#p-book .bk-lib .btn-primary");
+    assert.match(await targetCard().textContent(), /Đã xong 1\/120 phiên/);
+    await targetCard().locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-stat");
     assert.match(await page.textContent("#p-book .bk-stat"), /1\/120/);
   });
@@ -331,6 +337,39 @@ try{
       return c && c.width > 100 && m && m.hidden;
     }, null, { timeout: 30000 });
     await page.click(".bk-vbar button:last-child");
+  });
+
+  await step("Giai đoạn 0 (English Unlimited A2): phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
+    await page.click('nav button[data-go="book"]');
+    await page.waitForSelector("#p-book .bk-lib");
+    const card = page.locator("#p-book .bk-lib", { hasText: "English Unlimited A2 Elementary" });
+    const text = await card.textContent();
+    assert.match(text, /Elementary · CEFR A1 → A2/);
+    assert.match(text, /15 unit · 4 test · 171 track audio/);
+    assert.match(text, /79 phiên × 60 phút/);
+    await card.locator(".btn-primary").click();
+    await page.waitForSelector("#p-book .bk-next");
+    assert.equal(await page.locator("#p-book .bk-unit").count(), 19);   // Intro + 14 unit + 3 Achievement test + mốc A2 Key
+    assert.equal(await page.locator("#p-book .bk-row").count(), 79);
+    const t1 = page.locator("#p-book .bk-unit", { hasText: "Achievement test 1" });
+    assert.match(await t1.textContent(), /chưa có sách Test/);
+    const u6 = page.locator("#p-book .bk-unit", { hasText: "Unit 6 · What would you like?" });
+    assert.match(await u6.textContent(), /Trang 50–57 · 5 phiên/);
+    if(!(await u6.locator("details").evaluate(d => d.open))) await u6.locator("summary").click();
+    await u6.locator(".bk-row").first().click();
+    await page.waitForSelector("#p-book .bk-act");
+    const act = page.locator("#p-book .bk-act").first();
+    assert.deepEqual(await act.locator(".bk-refs button").allTextContents(), ["Mở trang 50–51", "Teacher's Book tr. 59–60"]);
+    assert.deepEqual(await act.locator(".bk-tracks button").allTextContents(), ["2.15", "2.16", "2.17", "2.18"]);
+    await page.waitForFunction(() => { const a = document.querySelector("#p-book audio"); return a && a.duration > 0; }, null, { timeout: 15000 });
+    assert.match(await page.evaluate(() => document.querySelector("#p-book audio").currentSrc), /_CD2\/Track%20No15\.mp3$/);
+    const chunk = page.waitForResponse(r => /\/web\/course-book-u6-p0052-0059\.pdf$/.test(r.url()) && r.status() < 300);
+    await act.locator(".bk-refs .btn-primary").click();       // PDF trang 51 là trang 49 quét trùng: trang in 50 = PDF 52
+    await chunk;
+    await page.waitForFunction(() => /Trang 50 trong sách/.test(document.querySelector(".bk-vfoot").textContent), null, { timeout: 30000 });
+    await page.click(".bk-vbar button:last-child");
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
   });
 
   await step("lộ trình N5 (GENKI I): phiên Part B mở trang Textbook qua đoạn PDF của bài, đủ track và video", async () => {

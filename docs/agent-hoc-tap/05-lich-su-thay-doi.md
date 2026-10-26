@@ -5,6 +5,108 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 18 — 26/10/2026: Giai đoạn 0 — English Unlimited A2 trong tab Sách
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`.
+
+Người học (band 3.0) muốn có một cuốn cho người học khác bắt đầu từ con số 0 tới band 3.5 của IELTS GT. Đề xuất của
+đợt trước là Giai đoạn 0 với English Unlimited A1 Starter và A2 Elementary, mốc ra là đề mẫu A2 Key. Người học đẩy
+hai bộ sách lên `main` (`books/book_english_unlimited_A1_Starter/`, `books/book_english_unlimited_a2_elemetary/`).
+
+**Hai bộ sách nhận được**
+
+- **A2:** đủ để nhập:
+  - Coursebook quét, hai phần, tới trang 121 cùng hai trang Activities;
+  - Teacher's Book có lớp chữ;
+  - 3 CD, 171 track; CD1 thiếu 5 file;
+  - Teacher's Pack và wordlist.
+- **A1:** Teacher's Book, 2 CD đủ, Teacher's Pack. Coursebook chỉ là **bản mẫu** 26 trang (mục lục, Unit 3, một phần
+  Unit 9), chưa dựng được lộ trình. A1 thành thẻ "chưa nhập" và chờ sách đầy đủ.
+
+**Lộ trình A2: 79 phiên, 16 tuần** (file 08 mục 2)
+- Intro: 2 phiên.
+- 14 unit × 5 phiên: Bài 1, Bài 2, Target activity, Explore (Speaking ở unit lẻ, Writing ở unit chẵn), Look again.
+  Target activity và Explore là phiên lõi.
+- Sau Unit 4, 9, 14 (theo Teacher's Book): một phiên ôn với bài nghe Achievement test và các trang Look again của
+  chặng.
+- 4 phiên đề mẫu A2 Key: đúng khoảng 70% mỗi phần thì sang Giai đoạn 1.
+- Mỗi phiên mở đúng trang Coursebook, các track của phần đó, trang Teacher's Book có đáp án; bài nói cặp có thêm
+  trang Activities.
+- Hướng dẫn mỗi phiên bằng tiếng Việt, lấy theo mục lục sách.
+- Thẻ A1 và A2 đứng trước IELTS Target 5.0 trong nhóm IELTS. Tuần của A2 đếm riêng; học xong thì đặt lại ngày bắt
+  đầu lộ trình.
+
+**Dò trang và track** (file 08 mục 3)
+- **Trang quét trùng.** Part 1 có trang 49 quét hai lần, nên khai hai lần: `course-book` lệch 1, `course-book-u6` lệch
+  2. Part 2 lệch −65.
+- **Nhãn track.** Mỗi đĩa đánh số lại từ 1, nên `Track No07.mp3` ở CD1 là bài 1.7. Track 01 của mỗi đĩa gồm lời giới
+  thiệu đĩa rồi tới bài X.1; đã nghe thử bằng nhận dạng giọng nói thô. Track cuối mỗi đĩa là bài nghe Achievement
+  test.
+- **Track thuộc trang nào.** Lớp chữ Coursebook chỉ cho 13/176 nhãn. Thay vào đó:
+  - lọc vùng màu cam của nhãn audio, cắt từng nhãn rồi OCR;
+  - soát bằng mắt khoảng 30 nhãn đọc sai;
+  - đối chiếu với "play recording X.Y" dưới từng tiêu đề phần của Teacher's Book: khớp 171/171.
+
+**Agent nhập sách** (`lessons-v1`)
+- `files.<thư mục audio>.track: "1.{n}"`: id track lấy số cuối trong tên file. Thiếu thì hai đĩa trùng id "Track-No01"
+  và `ingest` báo lỗi, chỉ đúng chỗ cần khai.
+- Một PDF khai hai lần với `page_offset` khác nhau. Không cần sửa app: mỗi id có đoạn PDF riêng.
+- Ghi chú bước dùng được mọi trường của mục. A2 dùng `{l1}`, `{l2}`, `{ta}`, `{ex}`, `{la}`: phần chung nằm ở bước
+  mặc định, phần riêng nằm ở từng unit.
+- `report.md` ghi "trang in = trang PDF + 65" khi độ lệch âm. Trước đó bảng in "− -65".
+
+**Vướng và cách xử lý**
+- Bước nghe của mốc A2 Key không có track, vì audio nằm trong đề tải về. Luật V4 bắt mọi bước id `listening` phải có
+  track, nên bước này đặt id `listening-test`.
+- Unit chẵn cần bước Explore Writing. Dùng anchor YAML (`explore-writing: &explore-writing`, `<<: *explore`) thay vì
+  chép lại cả năm bước.
+- E2E cũ bấm thẻ sách đầu tiên và mặc định đó là IELTS Target 5.0. Nay thẻ đầu là Giai đoạn 0, nên test tìm thẻ theo
+  đúng tiêu đề.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/book.yaml` | Hồ sơ lộ trình A2: trang, track, trang Teacher's Book của 79 phiên |
+| `books/book_english_unlimited_a2_elemetary/book.json`, `plan.json`, `report.md`, `work/scan.json`, `work/chunks.json` | Gói do `ingest` sinh |
+| `books/book_english_unlimited_a2_elemetary/web/*.pdf` | 32 đoạn PDF (Coursebook theo unit, Teacher's Book theo unit, hai trang Activities), 130 MB |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Thiết kế Giai đoạn 0, cách dò trang và track, A1 đang chờ, kế hoạch video |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/book_ingest/lessons.py` | `track: "1.{n}"` cho thư mục audio; ghi chú bước dùng mọi trường của mục; dấu của độ lệch âm trong báo cáo |
+| `agents/tests/test_lessons_template.py` | Test nhãn track theo đĩa và PDF khai hai lần; định dạng `track` sai; hồi quy gói A2 thật |
+| `books/catalog.json` | Thẻ A1 (chưa nhập) và A2 trước IELTS Target 5.0; ghi chú nhóm IELTS |
+| `tests/web/book.e2e.mjs` | Thứ tự thẻ Giai đoạn 0; bước A2: 19 mục, 79 phiên, phiên Unit 6 mở trang in 50 qua đoạn `course-book-u6`, track 2.15–2.18 phát được |
+| `README.md`, `00-tong-quan-va-cam-ket.md` (mục 7), `01-giai-doan-1-nen-tang.md`, `05-tai-lieu-mien-phi.md` (mục K) | Giai đoạn 0 trước tuần 1 |
+| `docs/agent-hoc-tap/README.md`, `04-checklist.md` (P2-51, P2-52, P2-53), `agents/README.md`, `.claude/skills/book-ingest/SKILL.md`, `CLAUDE.md` | Giai đoạn 0, tùy chọn mới của `lessons-v1` |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+- `python3 web/build.py && git diff --stat`: bản dựng khớp nguồn; A2 79 phiên, GENKI 23 video, IELTS 40 video.
+- `cd agents && python -m pytest -q`: 123 test qua (thêm 6), gồm hồi quy gói A2 và GENKI (chạy lại ra `book.json`, `plan.json`,
+  `report.md` y hệt).
+- `node --test "tests/web/*.test.mjs"`: 16 test qua.
+- `node tests/web/book.e2e.mjs`: E2E OK, có bước Giai đoạn 0 mới.
+- Giao diện ở khổ điện thoại:
+  - Thẻ A1 hiện mờ, ghi rõ còn thiếu gì. Thẻ A2 hiện "Elementary · CEFR A1 → A2", 171 track, 79 phiên × 60 phút.
+  - Phiên Unit 1 Bài 1 mở trang 10, track 1.7–1.11 phát được.
+  - Unit 6 mở trang 50 (sau trang quét trùng), Unit 8 mở trang 66 (Part 2).
+  - Activities mở trang 123, Teacher's Book mở trang 90.
+  - Achievement test 1 có track 1.57 và bốn nút Look again; nút Unit 3 mở trang 33.
+  - Không có lỗi JS.
+
+### Còn treo
+
+- P2-52: A1 Starter chờ Coursebook đầy đủ.
+- P2-53: video bài giảng A2, làm Intro và Unit 1–3 trước. Coursebook thiếu phần Scripts, nên lời bài nghe phải chép
+  lại từ audio.
+
+---
+
 ## Đợt 17 — 26/10/2026: GENKI Unit 0, năm video để học không cần mở sách
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`.

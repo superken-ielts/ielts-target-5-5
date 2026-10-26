@@ -19,6 +19,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   rồi chạy lại. Đổi model trong `schemas.py` thì chạy `python -m book_ingest schemas`.
 - Lộ trình N5 (`books/Genki/`, mẫu `lessons-v1`): trang và track của từng phiên khai ở `book.yaml › refs` (trang in,
   khoảng track `K01-09..K01-23`); mỗi track phải thuộc đúng một phiên. Xem `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md`.
+- Giai đoạn 0 (`books/book_english_unlimited_a2_elemetary/`, `lessons-v1`): track theo nhãn đĩa (`track: "1.{n}"`), Part 1
+  khai hai lần vì trang 49 quét trùng. Xem `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md`.
 
 ## Video bài giảng
 

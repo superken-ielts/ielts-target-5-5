@@ -5,6 +5,10 @@
 Xây nền để có thể bắt đầu học IELTS. **Không luyện đề IELTS trong 12 tuần này.** Đề
 IELTS bắt đầu từ tuần 13.
 
+Giai đoạn này giả định bạn đã ở khoảng band 3.0 (A2). Chưa tới mức đó, hoặc bắt đầu từ con
+số 0, thì học Giai đoạn 0 trước. Giáo trình là English Unlimited A2 trong tab Sách; cách
+quyết định bằng đề mẫu A2 Key ở mục 7 file 00.
+
 Lý do vẫn như cũ và không thay đổi vì lộ trình dài ra: ở band 3.0, làm một đề Cambridge
 sẽ cho kết quả khoảng 6–10/40, và bạn không rút ra được gì từ con số đó, vì lỗ hổng nằm
 ở tầng dưới — không đủ từ để hiểu câu hỏi, không đủ ngữ pháp để viết một câu đúng, tai
