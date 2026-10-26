@@ -92,6 +92,14 @@ def test_timeline_is_contiguous_and_keeps_state():
     assert times[0] == 0 and times == sorted(times) and len(times) == 3
 
 
+def test_header_shows_the_book_title(tmp_path):
+    bdir = mini_book(tmp_path)
+    assert Slides(sc.Lesson.model_validate(copy.deepcopy(LESSON)), bdir).book_title == ""
+    book = json.loads((bdir / "book.json").read_text(encoding="utf-8"))
+    (bdir / "book.json").write_text(json.dumps(dict(book, title="English Unlimited A2 Elementary")), encoding="utf-8")
+    assert Slides(sc.Lesson.model_validate(copy.deepcopy(LESSON)), bdir).book_title == "English Unlimited A2 Elementary"
+
+
 def test_slides_render_every_kind(tmp_path):
     bdir = mini_book(tmp_path)
     lesson = sc.Lesson.model_validate(copy.deepcopy(LESSON))
@@ -147,6 +155,7 @@ def test_flite_two_voices():
 
 
 GENKI = ROOT / "books" / "Genki"
+EU_A2 = ROOT / "books" / "book_english_unlimited_a2_elemetary"
 
 
 @pytest.mark.parametrize("bdir", [
@@ -154,7 +163,9 @@ GENKI = ROOT / "books" / "Genki"
                                                 reason="chưa có video bài giảng")),
     pytest.param(GENKI, marks=pytest.mark.skipif(not (GENKI / "lessons" / "lessons.json").exists() or not ja.available(),
                                                  reason="chưa có video N5 hoặc chưa cài misaki[ja]")),
-], ids=["ielts", "genki"])
+    pytest.param(EU_A2, marks=pytest.mark.skipif(not (EU_A2 / "lessons" / "lessons.json").exists(),
+                                                 reason="chưa có video Giai đoạn 0")),
+], ids=["ielts", "genki", "eu-a2"])
 def test_committed_lessons_match_manifest(bdir):
     """Kịch bản đã commit hợp lệ, khớp lessons.json và file video có thật (hồi quy trên sách thật)."""
     data = json.loads((bdir / "lessons" / "lessons.json").read_text(encoding="utf-8"))
@@ -606,3 +617,19 @@ def test_bad_shadow_scripts_are_rejected(patch):
     patch(data)
     with pytest.raises((ValidationError, ValueError)):
         sc.Lesson.model_validate(data)
+
+
+def test_transcribe_segments_and_words():
+    """Chép lời: phần có tiếng nằm giữa các khoảng lặng, gộp thành đoạn ≤ 18 giây; mảnh từ ghép thành từ có mốc."""
+    from lesson_video import transcribe as tr
+    spans = tr.speech_spans([(0.0, 1.3), (2.0, 2.1), (5.0, 7.5)], duration=9.0)
+    assert spans == [[1.3, 2.0], [2.1, 5.0], [7.5, 9.0]]          # mẩu 0,1 giây ở 2.0–2.1 không phải tiếng
+    assert tr.group(spans) == [[1.3, 5.0], [7.5, 9.0]]           # nghỉ 2,5 giây thì tách đoạn
+    assert tr.group([[0, 10], [10.5, 20]], max_len=18) == [[0, 10], [10.5, 20]]
+    assert tr.words(["▁Hello", ",", "▁Agat", "a", "."], [0.0, 0.4, 1.0, 1.3, 1.5], offset=20.0) == [
+        [20.0, "Hello,"], [21.0, "Agata."]]
+    book = {"files": {"cb": {"kind": "pdf"}, "1.1": {"kind": "audio"}, "1.2": {"kind": "audio"}, "1.10": {"kind": "audio"}}}
+    assert tr.track_ids(book, "1.1", "1.10") == ["1.1", "1.2", "1.10"] and tr.track_ids(book, "1.2") == ["1.2"]
+    with pytest.raises(tr.ASRError):
+        tr.track_ids(book, "1.10", "1.1")
+

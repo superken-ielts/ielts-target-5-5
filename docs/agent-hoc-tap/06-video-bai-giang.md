@@ -9,6 +9,7 @@ Workbook nên **không làm video Workbook** — các chỗ sách ghi "go to Wor
 
 Công cụ: `agents/lesson_video` (xem `agents/README.md`). Kịch bản và video: `books/ielts_target_5_0/lessons/`.
 Video tiếng Nhật của lộ trình N5 (GENKI I, cảnh `jp`) ghi riêng ở [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) mục 4.
+Video của Giai đoạn 0 (English Unlimited A2) ghi riêng ở [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) mục 6 (sổ tay từng unit, độ phủ).
 Bảng độ phủ ở mục 1–3 in lại được bất cứ lúc nào:
 
 ```bash

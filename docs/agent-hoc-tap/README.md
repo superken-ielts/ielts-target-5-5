@@ -86,7 +86,7 @@ Công cụ dựng video có thêm cảnh `shadow` và dòng `echo` (khoảng l�
   Teacher's Book;
 - sau Unit 4, 9, 14 có một phiên ôn với bài nghe Achievement test; cuối sách là đề mẫu A2 Key để quyết định sang
   Giai đoạn 1;
-- thẻ A1 Starter đứng trước, chờ Coursebook đầy đủ. Chi tiết ở file 08.
+- thẻ A1 Starter đứng trước, chỉ có mục tiêu: repo chưa có sách này. Chi tiết ở file 08.
 
 ## Tóm tắt trong năm dòng
 

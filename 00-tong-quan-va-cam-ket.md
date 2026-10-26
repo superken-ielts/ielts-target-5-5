@@ -242,7 +242,7 @@ Giai đoạn 0 không tính vào 40 tuần:
 
 | Sách | Thời lượng | Ra khỏi giai đoạn khi |
 |---|---|---|
-| English Unlimited A1 Starter — chỉ khi bắt đầu từ con số 0 | 10 unit (chờ Coursebook đầy đủ) | Học xong cả sách |
+| English Unlimited A1 Starter — chỉ khi bắt đầu từ con số 0 | 10 unit (repo chưa có sách) | Học xong cả sách |
 | English Unlimited A2 Elementary — tab **Sách** | 79 phiên × 60 phút, khoảng 16 tuần ở nhịp 5 phiên/tuần | Đề mẫu A2 Key đúng khoảng 70% mỗi phần |
 
 - Mỗi unit của English Unlimited là các việc làm được bằng tiếng Anh: giới thiệu người

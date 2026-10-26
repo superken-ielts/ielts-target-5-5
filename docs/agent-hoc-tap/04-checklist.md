@@ -352,11 +352,16 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - ghi chú bước dùng được mọi trường của mục;
     - báo cáo ghi đúng dấu khi độ lệch trang âm.
   - Test: nhãn track theo đĩa, PDF khai hai lần, định dạng `track` sai; hồi quy gói A2 thật (hợp lệ, chạy lại ra y hệt); e2e: thứ tự thẻ Giai đoạn 0, phiên Unit 6 mở trang in 50 qua đoạn `course-book-u6`, track 2.15–2.18.
-- [ ] **P2-52** English Unlimited A1 Starter cho người bắt đầu từ con số 0: đã có Teacher's Book, 2 CD, Teacher's Pack; chờ Coursebook đầy đủ (file hiện có là bản mẫu Unit 3 và 9), rồi nhập như A2.
+- [ ] **P2-52** English Unlimited A1 Starter cho người bắt đầu từ con số 0: bộ tài liệu cũ (Teacher's Book, 2 CD, Teacher's Pack, Coursebook bản mẫu Unit 3 và 9) đã gỡ khỏi repo ngày 26/10; có đủ Coursebook, Teacher's Book và audio thì nhập như A2.
 - [ ] **P2-53** Video bài giảng Giai đoạn 0 (A2), làm như GENKI:
   - giảng tiếng Anh, chữ tiếng Việt trên màn hình, phát audio gốc, mỗi video 5–10 phút;
   - Intro và Unit 1–3 trước; Speaking và Writing trước, rồi Listening và Reading;
   - lời bài nghe phải chép lại từ audio (Coursebook thiếu phần Scripts).
+  - *Đợt 19:* **Intro — 3 video (19:24)**: `U00-introductions` (Speaking · Introduce yourself), `U00-letters-numbers` (Listening · Letters, numbers and addresses), `U00-personal-info` (Grammar · Personal information, my / your, can); phát audio gốc 1.1–1.6.
+    - Lệnh `lesson_video transcribe` (Parakeet TDT 0.6B v2 qua sherpa-onnx): chép lời 52 track của CD1 vào `work/transcripts/`, có mốc từng từ để cắt audio theo câu.
+    - Thanh đầu video ghi tên sách lấy từ `book.json` (trước đây luôn là "IELTS Target 5.0").
+    - Sổ tay làm video từng unit: file 08 mục 6 (bộ video mỗi unit, giọng, nguồn, quy trình, quy ước kịch bản, bảng `say`, lỗi đã gặp, độ phủ).
+    - Test: tên sách trên thanh đầu, các hàm thuần của `transcribe`; hồi quy "video A2 khớp `lessons.json`"; e2e: unit Intro có ba video 5–10 phút, nút Grammar mở phiên Intro 2.
 
 ### Cổng G2
 

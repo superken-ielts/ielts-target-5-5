@@ -76,8 +76,8 @@ tính vào 40 tuần. Giáo trình là English Unlimited A2 Elementary (Cambridg
 - mỗi phiên mở đúng trang sách, track audio và trang đáp án.
 
 Mốc ra là đề mẫu A2 Key, miễn phí. Đang ở band 3.0 thì làm đề mẫu này trước: đạt thì bắt
-đầu thẳng tuần 1. Người chưa biết gì học English Unlimited A1 Starter trước; cuốn này còn
-chờ Coursebook đầy đủ. Chi tiết ở mục 7 file 00.
+đầu thẳng tuần 1. Người chưa biết gì học English Unlimited A1 Starter trước; repo chưa có
+sách này. Chi tiết ở mục 7 file 00.
 
 ## Ba nguyên tắc chi phối cả 40 tuần
 

@@ -59,7 +59,13 @@ python -m lesson_video build ../books/ielts_target_5_0/lessons/U01-speaking-1.ya
 python -m lesson_video build <kịch bản> --engine silent --out /tmp/xem-thu --work /tmp/khung   # xem bố cục nhanh, không giọng
 python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01   # phần nào của unit đã có video, phần nào chưa
 python -m lesson_video prune ../books/Genki   # bỏ khỏi lessons.json (và xóa .mp4) những video không còn kịch bản
+python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 1.7 1.20   # chép lời audio của sách
 ```
+
+`transcribe` dùng cho sách không in lời bài nghe. Lệnh chép lời từng track bằng Parakeet TDT 0.6B v2 qua sherpa-onnx
+(`pip install -e '.[asr]'`; model tải từ GitHub releases của k2-fsa/sherpa-onnx, mục asr-models, giải nén vào
+`~/.cache/lesson_video/asr/`). Kết quả ghi vào `books/<sách>/work/transcripts/<track>.txt` và `.json`; file `.json` có mốc
+từng từ, dùng làm `start` / `end` của dòng `track`.
 
 Quy trình đầy đủ, bảng cách đọc `say` và kế hoạch các unit tiếp theo: `docs/agent-hoc-tap/06-video-bai-giang.md`.
 

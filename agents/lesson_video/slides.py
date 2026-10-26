@@ -118,6 +118,8 @@ class Slides:
         self.bdir = Path(bdir)
         self.voice_label = voice_label or {}
         self.order = list(lesson.speakers)
+        bj = self.bdir / "book.json"   # tên sách ở góc phải thanh đầu (IELTS Target 5.0, English Unlimited A2 …)
+        self.book_title = str(json.loads(bj.read_text(encoding="utf-8")).get("title") or "") if bj.exists() else ""
         self.images: dict[int, Image.Image] = {}
         for i, sc in enumerate(lesson.scenes):
             if sc.image:
@@ -178,7 +180,7 @@ class Slides:
         tw = d.textlength(tag, font=ft)
         d.polygon([(0, 0), (tw + 56, 0), (tw + 36, 64), (0, 64)], fill=C["red"])
         d.text((24, 32), tag, font=ft, fill="#FFFFFF", anchor="lm")
-        right = "IELTS Target 5.0"
+        right = self.book_title
         fr = font("regular", 18)
         rw = d.textlength(right, font=fr)
         d.text((W - 28, 32), right, font=fr, fill=C["muted"], anchor="rm")

@@ -57,7 +57,7 @@ try{
     assert.match(lib, /Khoảng 4–5,5 tháng/);
     assert.match(lib, /Cambridge IELTS 20 General Training/);          // sách trong lộ trình chưa nhập
     assert.match(lib, /Chưa nhập vào app/);
-    // Giai đoạn 0 đứng trước IELTS Target 5.0 trong nhóm IELTS: A1 chờ Coursebook đầy đủ, A2 đã nhập
+    // Giai đoạn 0 đứng trước IELTS Target 5.0 trong nhóm IELTS: A1 chưa có sách, A2 đã nhập
     const titles = await page.locator("#p-book .bk-lib h3").allTextContents();
     assert.deepEqual(titles.slice(0, 3), ["English Unlimited A1 Starter", "English Unlimited A2 Elementary", "IELTS Target 5.0"]);
     assert.match(await page.locator("#p-book .bk-lib").first().textContent(), /Chưa nhập vào app/);
@@ -339,7 +339,7 @@ try{
     await page.click(".bk-vbar button:last-child");
   });
 
-  await step("Giai đoạn 0 (English Unlimited A2): phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
+  await step("Giai đoạn 0 (English Unlimited A2): video Intro; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
     const card = page.locator("#p-book .bk-lib", { hasText: "English Unlimited A2 Elementary" });
@@ -347,10 +347,22 @@ try{
     assert.match(text, /Elementary · CEFR A1 → A2/);
     assert.match(text, /15 unit · 4 test · 171 track audio/);
     assert.match(text, /79 phiên × 60 phút/);
+    assert.match(text, /(^|\D)3 video bài giảng/);                     // file 08 mục 6.8: Intro 3 video
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
     assert.equal(await page.locator("#p-book .bk-unit").count(), 19);   // Intro + 14 unit + 3 Achievement test + mốc A2 Key
     assert.equal(await page.locator("#p-book .bk-row").count(), 79);
+    // video bài giảng: Intro có ba video 5–10 phút; nút Grammar mở phiên Intro thứ hai
+    const intro = page.locator("#p-book .bk-unit", { hasText: "Intro · About you" });
+    const iv = await intro.locator(".bk-vids button").allTextContents();
+    assert.deepEqual(iv.map(t => t.replace(/^▶ (\w+).*/, "$1")), ["Speaking", "Listening", "Grammar"]);
+    assert.ok(iv.every(t => { const m = t.match(/· (\d):\d\d$/); return m && +m[1] >= 5; }), "video Intro dài 5–10 phút: " + iv);
+    await intro.locator(".bk-vids button", { hasText: "Grammar" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    const isrc = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(isrc, ["U00-personal-info.mp4"]);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
     const t1 = page.locator("#p-book .bk-unit", { hasText: "Achievement test 1" });
     assert.match(await t1.textContent(), /chưa có sách Test/);
     const u6 = page.locator("#p-book .bk-unit", { hasText: "Unit 6 · What would you like?" });

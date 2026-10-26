@@ -1,0 +1,269 @@
+# Intro · About you — video 3/3: hỏi thông tin cá nhân, my / your / his / her, can (Coursebook tr. 9), phiên U00-intro-2.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U00-personal-info.yaml
+# Nguồn: bài 6–8 và "Can you …?" trang 9; đáp án 6a, 7, 1a theo Teacher's Book tr. 22. Audio gốc 1.6 (can / can't) phát
+# từng câu. Giọng Mỹ đọc can't là /kænt/, sách (Anh) là /kɑːnt/ — để audio gốc làm mẫu và nói rõ cả hai đều đúng.
+# Bảng tính từ sở hữu và lỗi hay gặp của người Việt (can to, cans) là phần thêm vì bản PDF không có Grammar reference.
+id: U00-personal-info
+activity: U00-intro-2
+title: "Intro · About you"
+subtitle: "Grammar · Personal information, my / your, can"
+title_vi: "Hỏi thông tin cá nhân, tính từ sở hữu my / your / his / her, can / can't (trang 9, audio 1.6)"
+tag: "EU A2 · INTRO"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello again! This is the last video of the Intro unit, page 9."
+        say: "Hello again! This is the last video of the Intro unit, page nine."
+        vi: "Chào bạn! Đây là video cuối của phần Intro, trang 9."
+      - emma: "We ask for personal information. We learn my, your, his and her. And we learn can, to say what you can do."
+        vi: "Hôm nay: hỏi thông tin cá nhân; học my, your, his, her; và can — nói điều bạn làm được."
+
+  - kind: pairs
+    chapter: "Bài 6: câu hỏi và câu trả lời"
+    heading: "Exercise 6a · Match Tom's questions with Agata's answers"
+    heading_vi: "Nối câu hỏi của Tom với câu trả lời của Agata"
+    items:
+      - {n: 1, q: "What's your name?", answer: e}
+      - {n: 2, q: "How do you spell that?", answer: d}
+      - {n: 3, q: "What's your address?", answer: a}
+      - {n: 4, q: "What's your phone number?", answer: g}
+      - {n: 5, q: "Do you have an email address?", answer: f}
+      - {n: 6, q: "Where are you from?", answer: c}
+      - {n: 7, q: "What languages do you speak?", answer: b}
+    options:
+      - {k: a, text: "152 Bentley Road, Manchester."}
+      - {k: b, text: "English, Polish and a bit of German."}
+      - {k: c, text: "Poland."}
+      - {k: d, text: "It's K-A-R-O-L-A-K."}
+      - {k: e, text: "It's Agata Karolak."}
+      - {k: f, text: "Yes, it's ak97@kmail.com."}
+      - {k: g, text: "My home number? It's 0161 228 3434."}
+    lines:
+      - emma: "Remember Agata's phone call? Here are Tom's questions, and Agata's answers. Match them."
+        vi: "Nhớ cuộc gọi của Agata chứ? Đây là câu hỏi của Tom và câu trả lời của Agata. Hãy nối chúng."
+      - emma: "Pause the video and try. Then check with us."
+        vi: "Tạm dừng video và tự làm, rồi kiểm tra cùng chúng tôi."
+      - {tom: "What's your name?", focus: 0}
+      - {mai: "It's Agata Karolak. That's e.", say: "It's Agata Karolak. That's ee.", reveal: 1}
+      - {tom: "How do you spell that?", focus: 1}
+      - {mai: "It's K, A, R, O, L, A, K. That's d.", say: "It's kay, eigh, ar, oh, el, eigh, kay. That's dee.", reveal: 2}
+      - {tom: "What's your address?", focus: 2}
+      - {mai: "152 Bentley Road, Manchester. That's a.", say: "A hundred and fifty-two Bentley Road, Manchester. That's eigh.", reveal: 3}
+      - {tom: "What's your phone number?", focus: 3}
+      - {mai: "My home number? It's 0161 228 3434. That's g.", say: "My home number? It's oh one six one, double two eight, three four three four. That's gee.", reveal: 4}
+      - {tom: "Do you have an email address?", focus: 4}
+      - {mai: "Yes, it's ak97 at kmail dot com. That's f.", say: "Yes, it's eigh kay ninety-seven at kay-mail dot com. That's ef.", reveal: 5}
+      - {tom: "Where are you from?", focus: 5}
+      - {mai: "Poland. That's c.", say: "Poland. That's see.", reveal: 6}
+      - {tom: "What languages do you speak?", focus: 6}
+      - {mai: "English, Polish and a bit of German. That's b.", say: "English, Polish and a bit of German. That's bee.", reveal: 7}
+      - emma: "Now cover the questions, look at the answers, and say the questions. That's exercise 6b."
+        say: "Now cover the questions, look at the answers, and say the questions. That's exercise six bee."
+        vi: "Bài 6b: che câu hỏi, nhìn câu trả lời và tự nói lại câu hỏi."
+
+  - kind: vocab
+    chapter: "my, your, his, her"
+    heading: "Possessive adjectives · my, your, his, her …"
+    heading_vi: "Tính từ sở hữu — đứng trước danh từ, chỉ 'của ai'"
+    items:
+      - {w: "I → my", vi: "tôi → của tôi", ex: "I'm Mai. My surname is Nguyen."}
+      - {w: "you → your", vi: "bạn → của bạn", ex: "You're Tom. What's your surname?"}
+      - {w: "he → his", vi: "anh ấy → của anh ấy", ex: "He's English, but his father is from the USA."}
+      - {w: "she → her", vi: "cô ấy → của cô ấy", ex: "She's Agata. Her surname is Karolak."}
+      - {w: "it → its", vi: "nó → của nó", ex: "It's a big college. Its address is 25 Gore Street."}
+      - {w: "we → our", vi: "chúng tôi → của chúng tôi", ex: "We're students. Our teacher is Emma."}
+      - {w: "they → their", vi: "họ → của họ", ex: "They're from Japan. Their home town is Kyoto."}
+    lines:
+      - emma: "Look at the table on page 9. On the left, I, you, he, she. On the right, my, your, his, her."
+        say: "Look at the table on page nine. On the left, I, you, he, she. On the right, my, your, his, her."
+        vi: "Xem bảng trang 9: bên trái là chủ ngữ (I, you, he, she…), bên phải là tính từ sở hữu (my, your, his, her…)."
+      - emma: "We use my, your, his and her before a noun, like my name, or her address."
+        vi: "My, your, his, her đứng trước danh từ: my name (tên của tôi), her address (địa chỉ của cô ấy)."
+      - {emma: "I, my.", focus: 0, say: "I. my."}
+      - {mai: "I'm Mai. My surname is Nguyen.", say: "I'm My. My surname is Win."}
+      - {emma: "You, your.", focus: 1, say: "you. your."}
+      - {mai: "You're Tom. What's your surname?"}
+      - {emma: "He, his.", focus: 2, say: "he. his."}
+      - {tom: "He's English, but his father is from the USA.", say: "He's English, but his father is from the you ess eigh."}
+      - {emma: "She, her.", focus: 3, say: "she. her."}
+      - {tom: "She's Agata. Her surname is Karolak."}
+      - {emma: "It, its. We, our. They, their.", focus: 4, say: "it. its. we. our. they. their."}
+      - {tom: "We're students. Our teacher is Emma.", focus: 5}
+      - {mai: "They're from Japan. Their home town is Kyoto.", say: "They're from Japan. Their home town is Kee-oh-toh.", focus: 6}
+      - emma: "Be careful with his and her. His is for a man. Her is for a woman. In Vietnamese, the words are different."
+        vi: "Cẩn thận: his dùng cho nam (của anh ấy), her dùng cho nữ (của cô ấy) — đừng lẫn hai từ này."
+
+  - kind: blanks
+    chapter: "Bài 7: điền từ"
+    heading: "Exercise 7 · Complete the sentences with the words in brackets"
+    heading_vi: "Điền chủ ngữ hoặc tính từ sở hữu"
+    items:
+      - {n: 1, q: "How do you spell ___ surname?", answer: "your", hint: "you, your"}
+      - {n: 2, q: "What's ___ email address? Sorry, they aren't on the internet.", answer: "their", hint: "they, their"}
+      - {n: 3, q: "Where's ___ from? He's English but his father's from the USA.", answer: "he", hint: "he, his"}
+      - {n: 4, q: "What's her name? Karen. ___'s Jon's sister.", answer: "She", hint: "she, her"}
+    lines:
+      - emma: "Exercise 7. Complete the sentences. Use the words in brackets."
+        say: "Exercise seven. Complete the sentences. Use the words in brackets."
+        vi: "Bài 7: điền vào chỗ trống bằng từ trong ngoặc."
+      - {emma: "Number one is the example: How do you spell your surname?", focus: 0, reveal: 1}
+      - {emma: "Number two.", focus: 1}
+      - {tom: "What's their email address? Sorry, they aren't on the internet.", reveal: 2, vi: "Email của họ là gì? — Xin lỗi, họ không dùng internet."}
+      - {emma: "Number three.", focus: 2}
+      - {tom: "Where's he from? He's English but his father's from the USA.", say: "Where's he from? He's English but his father's from the you ess eigh.", reveal: 3, vi: "Anh ấy đến từ đâu? — Anh ấy là người Anh nhưng bố anh ấy đến từ Mỹ."}
+      - {emma: "Number four.", focus: 3}
+      - {tom: "What's her name? Karen. She's Jon's sister.", reveal: 4, vi: "Cô ấy tên gì? — Karen. Cô ấy là em gái của Jon."}
+      - emma: "Good. Notice Jon's sister: apostrophe s means the sister of Jon."
+        vi: "Để ý Jon's sister: 's nghĩa là 'của Jon' — em gái của Jon."
+
+  - kind: qa
+    chapter: "Bài 8: điền phiếu cho bạn"
+    heading: "Exercise 8a · Ask questions and complete the form for your partner"
+    heading_vi: "Phiếu đăng ký trang 122 — Tom hỏi, Mai trả lời"
+    items:
+      - {q: "What's your first name?", a: "It's Mai.", ask: tom, by: mai}
+      - {q: "What's your surname?", a: "It's Nguyen. N - G - U - Y - E - N.", ask: tom, by: mai}
+      - {q: "What's your address?", a: "It's 12 Le Loi Street, Hue.", ask: tom, by: mai}
+      - {q: "What's your mobile number?", a: "It's 0905 123 456.", ask: tom, by: mai}
+      - {q: "What's your nationality?", a: "I'm Vietnamese.", ask: tom, by: mai}
+      - {q: "What languages do you speak?", a: "Vietnamese, English and a little French.", ask: tom, by: mai}
+    lines:
+      - emma: "Exercise 8. Look at the form on page 122. Ask your partner questions, and fill in the form for them. Listen to Tom and Mai."
+        say: "Exercise eight. Look at the form on page a hundred and twenty-two. Ask your partner questions, and fill in the form for them. Listen to Tom and Mai."
+        vi: "Bài 8: phiếu ở trang 122. Hỏi bạn cùng học rồi điền phiếu cho bạn ấy. Nghe Tom và Mai."
+      - {tom: "What's your first name?", focus: 0}
+      - {mai: "It's Mai.", say: "It's My.", reveal: 0}
+      - {tom: "What's your surname?", focus: 1}
+      - {mai: "It's Nguyen. N, G, U, Y, E, N.", say: "It's Win. en. gee. you. why. ee. en.", reveal: 1}
+      - {tom: "What's your address?", focus: 2}
+      - {mai: "It's 12 Le Loi Street, Hue.", say: "It's twelve Lay Loy Street, Whey.", reveal: 2}
+      - {tom: "What's your mobile number?", focus: 3}
+      - {mai: "It's 0905 123 456.", say: "It's oh nine oh five, one two three, four five six.", reveal: 3}
+      - {tom: "What's your nationality?", focus: 4}
+      - {mai: "I'm Vietnamese.", reveal: 4}
+      - {tom: "What languages do you speak?", focus: 5}
+      - {mai: "Vietnamese, English and a little French.", reveal: 5}
+      - emma: "Nationality is the word for your country: Vietnamese, Japanese, Mexican. Now ask a friend the same questions."
+        vi: "Nationality = quốc tịch: Vietnamese (người Việt), Japanese, Mexican… Giờ hỏi một người bạn các câu này."
+
+  - kind: blanks
+    chapter: "can / can't — nghe 1.6"
+    heading: "Can you …? · Exercise 1 · can or can't?"
+    heading_vi: "Nhớ lại cuộc gọi của Agata — chọn can hay can't, rồi nghe 1.6 để kiểm tra"
+    items:
+      - {n: 1, q: "Tom ___ spell Agata's surname.", answer: "can't", hint: "can / can't"}
+      - {n: 2, q: "Agata ___ remember her mobile number.", answer: "can't", hint: "can / can't"}
+      - {n: 3, q: "She ___ remember her email address.", answer: "can", hint: "can / can't"}
+      - {n: 4, q: "She ___ speak three languages.", answer: "can", hint: "can / can't"}
+    lines:
+      - emma: "Now, can. What can you remember about Agata and Tom? Choose can or can't."
+        vi: "Giờ đến can. Bạn nhớ gì về Agata và Tom? Chọn can (được) hay can't (không được)."
+      - emma: "Can means you are able to do something. Can't means you are not able."
+        vi: "can = có thể, làm được; can't (= cannot) = không thể, không làm được."
+      - {track: "1.6", start: 2.4, end: 7.3, note: "1.6 · sentence 1", focus: 0}
+      - {emma: "Tom can't spell Agata's surname. It's difficult for him.", reveal: 1}
+      - {track: "1.6", start: 9.2, end: 13.75, note: "1.6 · sentence 2", focus: 1}
+      - {emma: "Agata can't remember her mobile number.", reveal: 2}
+      - {track: "1.6", start: 15.6, end: 20.45, note: "1.6 · sentence 3", focus: 2}
+      - {emma: "But she can remember her email address.", reveal: 3}
+      - {track: "1.6", start: 22.9, end: 26.8, note: "1.6 · sentence 4", focus: 3}
+      - {emma: "And she can speak three languages.", reveal: 4}
+      - emma: "Listen to the recording again. Can is short and weak. Can't is long and strong."
+        vi: "Nghe lại: can đọc ngắn, nhẹ (/kən/); can't đọc dài, mạnh."
+      - {track: "1.6", start: 2.4, end: 13.75, note: "1.6 · can't"}
+      - emma: "In British English, like the recording, can't has a long a sound. In American English, like me, it's can't. Both are fine."
+        say: "In British English, like the recording, can't has a long ah sound. In American English, like me, it's can't. Both are fine."
+        vi: "Giọng Anh (audio sách) đọc can't là 'can-t' với âm 'a' dài; giọng Mỹ (Emma) đọc khác một chút. Cả hai đều đúng."
+
+  - kind: compare
+    chapter: "Cách dùng can"
+    heading: "Grammar · can for ability"
+    heading_vi: "can + động từ nguyên mẫu (không có to, không thêm s)"
+    items:
+      - {title: "Sentences", title_vi: "Câu khẳng định, phủ định", lines: ["I can speak French.", "She can swim.", "He can't drive."]}
+      - {title: "Questions", title_vi: "Câu hỏi", lines: ["Can you speak English?", "Can she cook?"]}
+      - {title: "Short answers", title_vi: "Trả lời ngắn", lines: ["Yes, I can.", "No, I can't."]}
+    lines:
+      - emma: "Here's the grammar. Can, then a verb: I can speak French. She can swim. He can't drive."
+        focus: 0
+        vi: "Ngữ pháp: can + động từ: I can speak French. She can swim. He can't drive."
+      - emma: "For a question, put can first: Can you speak English?"
+        focus: 1
+        vi: "Câu hỏi: đưa can lên đầu câu: Can you speak English?"
+      - emma: "And the short answers: Yes, I can. No, I can't."
+        focus: 2
+        vi: "Trả lời ngắn: Yes, I can. / No, I can't."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes with can"
+    heading_vi: "Lỗi người Việt hay mắc với can"
+    items:
+      - {wrong: "I can to speak English.", right: "I can speak English.", note: "can + động từ, không có to"}
+      - {wrong: "She cans swim.", right: "She can swim.", note: "can không thêm s với he / she / it"}
+      - {wrong: "Do you can drive?", right: "Can you drive?", note: "câu hỏi: đưa can lên đầu, không dùng do"}
+      - {wrong: "I no can cook.", right: "I can't cook.", note: "phủ định: can't (= cannot)"}
+    lines:
+      - emma: "Let's look at some common mistakes."
+        vi: "Cùng xem vài lỗi hay gặp."
+      - {emma: "Not, I can to speak. Say: I can speak English. No to after can.", focus: 0, say: "Not: I can to speak. Say: I can speak English. No to, after can."}
+      - {emma: "Not, she cans. Say: She can swim. Can has no s.", focus: 1}
+      - {emma: "Not, do you can. Say: Can you drive?", focus: 2}
+      - {emma: "Not, I no can. Say: I can't cook.", focus: 3}
+
+  - kind: qa
+    chapter: "Đến lượt bạn: Can you …?"
+    heading: "Exercise 2a · Ask and answer the questions"
+    heading_vi: "Nghe câu hỏi, tạm dừng video, trả lời Yes, I can / No, I can't"
+    items:
+      - {q: "Can you speak two languages?", a: "Yes, I can. I can speak Vietnamese and English.", phrases: ["Yes, I can.", "No, I can't."]}
+      - {q: "Can you ask for someone's phone number in English?", a: "Yes, I can. What's your phone number?"}
+      - {q: "Can you say hello in five languages?", a: "Yes, I can! Hello, xin chào, bonjour, hola, konnichiwa."}
+      - {q: "Can you count from 1 to 100 in English?", a: "Yes, I can. One, two, three … one hundred!"}
+      - {q: "Can you understand sign language?", a: "No, I can't."}
+      - {q: "Can you read music?", a: "No, I can't. But I can sing!"}
+    lines:
+      - emma: "Exercise 2. I ask, you answer. Pause the video and say your answer. Then listen to Mai."
+        say: "Exercise two. I ask, you answer. Pause the video and say your answer. Then listen to Mai."
+        vi: "Bài 2: nghe câu hỏi, tạm dừng video và trả lời; rồi nghe Mai."
+      - {emma: "Can you speak two languages?", focus: 0, pause: 1.5}
+      - {mai: "Yes, I can. I can speak Vietnamese and English.", reveal: 0}
+      - {emma: "Can you ask for someone's phone number in English?", focus: 1, pause: 1.5}
+      - {mai: "Yes, I can. What's your phone number?", reveal: 1}
+      - {emma: "Can you say hello in five languages?", focus: 2, pause: 1.5}
+      - {mai: "Yes, I can! Hello, xin chào, bonjour, hola, konnichiwa.", say: "Yes, I can! Hello, sin chow, bon-zhoor, oh-lah, kon-nee-chee-wah.", reveal: 2}
+      - {emma: "Can you count from 1 to 100 in English?", say: "Can you count from one to a hundred in English?", focus: 3, pause: 1.5}
+      - {mai: "Yes, I can. One, two, three … one hundred!", reveal: 3}
+      - {emma: "Can you understand sign language?", focus: 4, pause: 1.5}
+      - {mai: "No, I can't.", reveal: 4}
+      - {emma: "Can you read music?", focus: 5, pause: 1.5}
+      - {mai: "No, I can't. But I can sing!", reveal: 5}
+      - emma: "Sign language is the language of hands, for people who can't hear. Read music means read the notes of a song."
+        vi: "Sign language = ngôn ngữ ký hiệu; read music = đọc nốt nhạc."
+
+  - kind: bullets
+    chapter: "Tự đánh giá"
+    heading: "Self-assessment · Can you do these things in English?"
+    heading_vi: "Khoanh 1–5: 1 = chưa làm được, 5 = làm tốt"
+    items:
+      - {en: "introduce yourself", vi: "tự giới thiệu"}
+      - {en: "ask for and give personal information", vi: "hỏi và cho thông tin cá nhân"}
+      - {en: "fill in a form", vi: "điền một phiếu đăng ký"}
+      - {en: "say what you can do", vi: "nói điều bạn làm được (can)"}
+    lines:
+      - emma: "Now the self-assessment at the end of page 9. For each line, give yourself a number from 1 to 5."
+        say: "Now the self-assessment at the end of page nine. For each line, give yourself a number from one to five."
+        vi: "Tự đánh giá cuối trang 9: mỗi dòng cho mình một điểm từ 1 đến 5."
+      - {emma: "Can you introduce yourself?", focus: 0}
+      - {emma: "Can you ask for and give personal information?", focus: 1}
+      - {emma: "Can you fill in a form?", focus: 2}
+      - {emma: "Can you say what you can do?", focus: 3}
+      - emma: "If a line is 1 or 2, watch the video again. Then you're ready for Unit 1: People in your life. Well done!"
+        say: "If a line is one or two, watch the video again. Then you're ready for Unit one: People in your life. Well done!"
+        vi: "Dòng nào chỉ 1–2 điểm thì xem lại video. Xong là sẵn sàng cho Unit 1: People in your life. Giỏi lắm!"

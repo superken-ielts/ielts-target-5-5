@@ -6,6 +6,7 @@
 
     python -m lesson_video coverage <thư mục sách> [--unit U01 …]
     python -m lesson_video prune <thư mục sách>      # xóa kịch bản .yaml rồi chạy lệnh này để gỡ video khỏi lessons.json
+    python -m lesson_video transcribe <thư mục sách> 1.7 [1.20]   # chép lời audio của sách vào work/transcripts/
 
 `build` ghi <id>.mp4 cạnh kịch bản và cập nhật lessons.json; có `--out` thì chỉ ghi video vào thư mục đó
 (xem thử), không đụng lessons.json. `--work` giữ lại ảnh từng khung hình và file tiếng để soát.
@@ -88,6 +89,11 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--work", help="giữ khung hình và file tiếng ở thư mục này")
     r = sub.add_parser("prune", help="bỏ khỏi lessons.json (và xóa file .mp4) video không còn kịch bản .yaml")
     r.add_argument("book", help="thư mục sách (có lessons/)")
+    t = sub.add_parser("transcribe", help="chép lời audio của sách (Parakeet qua sherpa-onnx) vào work/transcripts/")
+    t.add_argument("book", help="thư mục sách (có book.json)")
+    t.add_argument("first", help="mã track đầu, ví dụ 1.7")
+    t.add_argument("last", nargs="?", help="mã track cuối (bỏ trống = chỉ một track)")
+    t.add_argument("--model", help="thư mục model (mặc định: LESSON_ASR_MODEL hoặc ~/.cache/lesson_video/asr/<model>)")
     v = sub.add_parser("coverage", help="bảng phần nào của unit đã có video, phần nào chưa")
     v.add_argument("book", help="thư mục sách (có book.json)")
     v.add_argument("--unit", action="append", help="chỉ in unit này (lặp lại được), ví dụ --unit U01")
@@ -95,6 +101,14 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "prune":
         gone = video.prune_manifest(Path(args.book) / "lessons")
         print(f"đã bỏ {len(gone)} video không còn kịch bản" + (": " + ", ".join(gone) if gone else ""))
+        return 0
+    if args.cmd == "transcribe":
+        from . import transcribe
+        try:
+            transcribe.run(Path(args.book), args.first, args.last, args.model)
+        except transcribe.ASRError as e:
+            print(e, file=sys.stderr)
+            return 2
         return 0
     if args.cmd == "coverage":
         print(coverage.to_markdown(coverage.coverage(Path(args.book), args.unit)))

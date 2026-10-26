@@ -1,0 +1,262 @@
+# Intro · About you — video 2/3: chữ cái, số, địa chỉ, email (Coursebook tr. 8, "What's your email address?"), phiên U00-intro-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U00-letters-numbers.yaml
+# Nguồn: đề bài trang 8; đáp án 1a (phiếu đăng ký) và 4b theo Teacher's Book tr. 21–22. Audio gốc: 1.3 (Agata gọi điện,
+# phát từng đoạn theo ô cần điền), 1.4 (địa chỉ, mã bưu chính, số điện thoại), 1.5 (email, trang web). Mốc từ bản chép
+# lời có mốc từng từ (docs/agent-hoc-tap/08 mục 6). Giọng Mỹ đọc Z là "zee", tiếng Anh-Anh là "zed": nói rõ trong video.
+id: U00-letters-numbers
+activity: U00-intro-1
+title: "Intro · About you"
+subtitle: "Listening · Letters, numbers and addresses"
+title_vi: "Chữ cái, số điện thoại, địa chỉ, email — nghe và điền phiếu (trang 8, audio 1.3–1.5)"
+tag: "EU A2 · INTRO"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to the Intro unit. This is page 8: What's your email address?"
+        say: "Welcome back to the Intro unit. This is page eight: What's your email address?"
+        vi: "Chào mừng trở lại phần Intro. Đây là trang 8: What's your email address? (Email của bạn là gì?)"
+      - emma: "Today we listen to a phone call, and we practise letters, numbers, addresses and email addresses."
+        vi: "Hôm nay: nghe một cuộc gọi, luyện chữ cái, số, địa chỉ và email."
+      - tom: "Great. I always forget how to say phone numbers in English!"
+        vi: "Hay quá. Mình hay quên cách đọc số điện thoại bằng tiếng Anh!"
+
+  - kind: blanks
+    chapter: "Nghe 1.3: điền phiếu"
+    heading: "Exercise 1a · Listen to Agata's phone call. Complete the form."
+    heading_vi: "Audio 1.3 — Agata gọi đăng ký lớp yoga; nghe từng đoạn và điền phiếu"
+    items:
+      - {n: 1, q: "First name: ___", answer: "Agata"}
+      - {n: 2, q: "Surname: ___", answer: "Karolak", tip: "surname = họ (tên gia đình), đánh vần K-A-R-O-L-A-K"}
+      - {n: 3, q: "Address: ___ Bentley Road, Manchester", answer: "152", tip: "152 = a hundred and fifty-two"}
+      - {n: 4, q: "Postcode: ___", answer: "M20 6RU", tip: "postcode = mã bưu chính: M twenty, six R U"}
+      - {n: 5, q: "Telephone (home): ___", answer: "0161 228 3434", tip: "oh one six one, double two eight, three four three four"}
+      - {n: 6, q: "Email: ___@kmail.com", answer: "ak97", tip: "ak97@kmail.com = A K ninety-seven at kmail dot com"}
+      - {n: 7, q: "Language(s): English, Polish, ___", answer: "German"}
+    lines:
+      - emma: "Look at the pictures on page 8. Agata wants to join a yoga course. She phones a college."
+        say: "Look at the pictures on page eight. Agata wants to join a yoga course. She phones a college."
+        vi: "Xem tranh trang 8. Agata muốn học một lớp yoga. Cô ấy gọi điện cho một trường cao đẳng."
+      - emma: "Listen to each part of the call, and complete the form."
+        vi: "Nghe từng đoạn cuộc gọi và điền vào phiếu."
+      - {track: "1.3", start: 3.2, end: 20.3, note: "1.3 · part 1", focus: 0}
+      - tom: "Her first name is Agata. That's the example."
+        reveal: 1
+        vi: "Tên của cô ấy là Agata. Đây là câu mẫu."
+      - {track: "1.3", start: 20.4, end: 36.1, note: "1.3 · part 2", focus: 1}
+      - tom: "Her surname is Karolak. K, A, R, O, L, A, K."
+        say: "Her surname is Karolak. Kay, eigh, ar, oh, el, eigh, kay."
+        reveal: 2
+        vi: "Họ của cô ấy là Karolak: K-A-R-O-L-A-K."
+      - emma: "Your surname is your family name. Your first name is your own name."
+        vi: "Surname là họ (tên gia đình); first name là tên riêng của bạn."
+      - {track: "1.3", start: 36.1, end: 48.4, note: "1.3 · part 3", focus: 2}
+      - tom: "Her address is 152 Bentley Road."
+        say: "Her address is a hundred and fifty-two Bentley Road."
+        reveal: 3
+        vi: "Địa chỉ: số 152 đường Bentley."
+      - emma: "In British English, we say a hundred and fifty-two, with and."
+        vi: "Tiếng Anh-Anh đọc 152 là 'a hundred AND fifty-two' — có chữ and."
+      - {track: "1.3", start: 48.5, end: 59.5, note: "1.3 · part 4", focus: 3}
+      - tom: "The postcode is M20 6RU."
+        say: "The postcode is em twenty, six, ar, you."
+        reveal: 4
+        vi: "Mã bưu chính là M20 6RU."
+      - {track: "1.3", start: 59.6, end: 81.7, note: "1.3 · part 5", focus: 4}
+      - tom: "Her home number is 0161 228 3434."
+        say: "Her home number is oh one six one, double two eight, three four three four."
+        reveal: 5
+        vi: "Số điện thoại nhà: 0161 228 3434."
+      - emma: "Listen again: for zero, we often say oh. And for two twos, we say double two."
+        vi: "Chú ý: số 0 thường đọc là 'oh'; hai số 2 liền nhau đọc là 'double two'."
+      - {track: "1.3", start: 82.0, end: 101.0, note: "1.3 · part 6", focus: 5}
+      - tom: "She can't remember her mobile number. But her email address is ak97 at kmail dot com."
+        say: "She can't remember her mobile number. But her email address is eigh kay ninety-seven at kay-mail dot com."
+        reveal: 6
+        vi: "Cô ấy không nhớ số di động, nhưng email là ak97@kmail.com."
+      - {track: "1.3", start: 101.0, end: 114.9, note: "1.3 · part 7", focus: 6}
+      - tom: "She's from Poland, and she speaks English, Polish and a bit of German."
+        reveal: 7
+        vi: "Cô ấy đến từ Ba Lan, nói tiếng Anh, tiếng Ba Lan và một chút tiếng Đức."
+      - emma: "Well done. The answers are in the script on page 148 of the book, and in the Teacher's Book."
+        say: "Well done. The answers are in the script on page a hundred and forty-eight of the book, and in the Teacher's Book."
+        vi: "Giỏi lắm! Đáp án theo Teacher's Book (sách in lời bài nghe ở trang 148)."
+
+  - kind: compare
+    chapter: "Chữ cái"
+    heading: "Exercise 2 · How do you say these letters?"
+    heading_vi: "Bảng chữ cái — xếp theo âm đọc"
+    items:
+      - {title: "A  H  J  K", title_vi: "đọc có âm 'ây' (như day)", lines: ["A = eɪ", "H = eɪtʃ", "J = dʒeɪ", "K = keɪ"]}
+      - {title: "B C D E G P T V", title_vi: "đọc có âm 'i' dài (như see)", lines: ["E = iː", "G = dʒiː", "B, C, D, P, T, V"]}
+      - {title: "F L M N S X Z", title_vi: "đọc có âm 'e' (như ten)", lines: ["F = ef, L = el", "M = em, N = en", "S = es, X = eks", "Z = zed (UK), zee (US)"]}
+      - {title: "I Y · O · Q U W · R", title_vi: "các chữ còn lại", lines: ["I = aɪ, Y = waɪ", "O = oʊ", "Q = kjuː, U = juː", "W = double-u", "R = ɑːr"]}
+    lines:
+      - emma: "Now, the alphabet. Some letters are difficult. Let's group them by sound."
+        vi: "Giờ đến bảng chữ cái. Vài chữ khó đọc — ta xếp nhóm theo âm."
+      - emma: "A, H, J, K. They all have the same sound as day."
+        say: "eigh. aitch. jay. kay. They all have the same sound as day."
+        focus: 0
+        vi: "A, H, J, K có âm 'ây' như trong day. H đọc là 'ếch' — không phải 'hát'."
+      - emma: "B, C, D, E, G, P, T, V. They have a long ee sound, like in see."
+        say: "bee. see. dee. ee. gee. pee. tee. vee. They have a long ee sound, like in see."
+        focus: 1
+        vi: "B, C, D, E, G, P, T, V có âm 'i' dài như see. E đọc là 'i', G đọc là 'gi'."
+      - tom: "So E is ee, and G is gee. And J is jay."
+        say: "So E is ee, and G is gee. And J is jay."
+        focus: 1
+        vi: "Vậy E đọc 'i', G đọc 'gi', còn J đọc 'giây'."
+      - emma: "F, L, M, N, S, X, Z. They start with the same sound as ten."
+        say: "ef. el. em. en. ess. ex. zee. They start with the same sound as ten."
+        focus: 2
+        vi: "F, L, M, N, S, X, Z bắt đầu bằng âm 'e' ngắn như ten."
+      - emma: "In British English, Z is zed. In American English, Z is zee."
+        say: "In British English, Z is zed. In American English, Z is zee."
+        focus: 2
+        vi: "Tiếng Anh-Anh đọc Z là 'zed', tiếng Anh-Mỹ đọc là 'zi'."
+      - emma: "And the others: I, Y, O, Q, U, W, R."
+        say: "And the others: eye. why. oh. cue. you. double-you. ar."
+        focus: 3
+        vi: "Các chữ còn lại: I đọc 'ai', Y đọc 'quai', O, Q, U, W đọc 'đắp-bồ-diu', R đọc 'a'."
+      - tom: "I and E are difficult for me. I is eye, and E is ee."
+        say: "eye and ee are difficult for me. eye is eye, and ee is ee."
+        focus: 3
+        vi: "I và E dễ nhầm: I đọc 'ai', E đọc 'i'."
+
+  - kind: shadow
+    chapter: "Đánh vần tên"
+    heading: "Spell your name"
+    heading_vi: "Hỏi và đánh vần tên — nghe rồi nói theo"
+    items:
+      - {text: "What's your surname?", by: tom, vi: "Họ của bạn là gì?"}
+      - {text: "It's Nguyen.", by: mai, vi: "Là Nguyễn."}
+      - {text: "How do you spell that?", by: tom, vi: "Đánh vần thế nào?"}
+      - {text: "N - G - U - Y - E - N.", by: mai, vi: "N - G - U - Y - E - N", tip: "đọc từng chữ: en, gee, you, why, ee, en"}
+    lines:
+      - emma: "Now let's spell a Vietnamese name. Listen to Tom and Mai, and say it with them."
+        vi: "Giờ đánh vần một cái tên Việt Nam. Nghe Tom và Mai rồi nói theo."
+      - {tom: "What's your surname?", focus: 0}
+      - {mai: "It's Nguyen.", say: "It's Win.", focus: 1}
+      - {tom: "How do you spell that?", focus: 2}
+      - {mai: "N, G, U, Y, E, N.", say: "en. gee. you. why. ee. en.", focus: 3}
+      - emma: "Now spell your own name. Pause the video and say it out loud."
+        vi: "Giờ đánh vần tên của bạn. Tạm dừng video và đọc to."
+
+  - kind: shadow
+    chapter: "Số và địa chỉ"
+    heading: "Exercise 3 · Addresses, postcodes, phone numbers"
+    heading_vi: "Audio 1.4 — nghe giọng đọc gốc, rồi nói theo"
+    items:
+      - {text: "25 Gore Street", vi: "twenty-five Gore Street", tip: "số nhà đọc như số thường"}
+      - {text: "113 Station Road", vi: "a hundred and thirteen Station Road", tip: "113 = a hundred and thirteen"}
+      - {text: "84 First Avenue", vi: "eighty-four First Avenue"}
+      - {text: "M1 3AQ", vi: "M one, three A Q — mã bưu chính của Anh"}
+      - {text: "T5S 3X2", vi: "T five S, three X two — mã bưu chính của Canada"}
+      - {text: "CA 90501", vi: "C A, nine oh five oh one — mã bưu chính của Mỹ"}
+      - {text: "0161 264 4600", vi: "oh one six one, two six four, four six double oh", tip: "0 = oh; 00 = double oh"}
+      - {text: "780 452 1111", vi: "seven eight oh, four five two, double one double one", tip: "11 = double one"}
+      - {text: "022 258 6491", vi: "oh double two, two five eight, six four nine one", tip: "22 = double two"}
+    lines:
+      - emma: "Exercise 3. How do you say these addresses, postcodes and phone numbers? Listen to the recording, and say each one."
+        say: "Exercise three. How do you say these addresses, postcodes and phone numbers? Listen to the recording, and say each one."
+        vi: "Bài 3: đọc địa chỉ, mã bưu chính, số điện thoại thế nào? Nghe audio của sách và nói theo từng mục."
+      - {track: "1.4", start: 4.0, end: 6.7, note: "1.4 · address 1", focus: 0}
+      - {track: "1.4", start: 10.5, end: 13.85, note: "1.4 · address 2", focus: 1}
+      - {track: "1.4", start: 18.3, end: 21.0, note: "1.4 · address 3", focus: 2}
+      - {track: "1.4", start: 27.8, end: 30.5, note: "1.4 · postcode 1", focus: 3}
+      - {track: "1.4", start: 34.1, end: 37.8, note: "1.4 · postcode 2", focus: 4}
+      - {track: "1.4", start: 41.2, end: 45.6, note: "1.4 · postcode 3", focus: 5}
+      - emma: "Now the phone numbers. Listen for oh, and double."
+        vi: "Giờ đến số điện thoại. Để ý 'oh' và 'double'."
+      - {track: "1.4", start: 52.25, end: 59.2, note: "1.4 · phone 1", focus: 6}
+      - {track: "1.4", start: 63.55, end: 70.25, note: "1.4 · phone 2", focus: 7}
+      - {track: "1.4", start: 74.75, end: 81.6, note: "1.4 · phone 3", focus: 8}
+      - emma: "We say phone numbers in small groups, with a short stop between the groups."
+        vi: "Đọc số điện thoại theo từng cụm nhỏ, ngắt nhẹ giữa các cụm."
+
+  - kind: vocab
+    chapter: "Email và trang web"
+    heading: "Exercise 4 · Email and website addresses"
+    heading_vi: "Cách đọc các ký hiệu"
+    items:
+      - {w: "@", pos: "at", vi: "a còng — đọc là 'at'", ex: "ak97@kmail.com"}
+      - {w: ".", pos: "dot", vi: "dấu chấm — đọc là 'dot'", ex: "www.bbc.co.uk"}
+      - {w: "www", pos: "double-u double-u double-u", vi: "đọc ba lần 'double-u'", ex: "www.cambridge.org"}
+      - {w: "/", pos: "slash", vi: "dấu gạch chéo — đọc là 'slash'", ex: "www.bbc.co.uk/news"}
+    lines:
+      - emma: "Exercise 4 is about email and website addresses. First, the symbols."
+        say: "Exercise four is about email and website addresses. First, the symbols."
+        vi: "Bài 4: email và địa chỉ trang web. Trước tiên là các ký hiệu."
+      - {emma: "This symbol is at.", focus: 0, vi: "@ đọc là 'at'."}
+      - {emma: "This little point is dot.", focus: 1, vi: "Dấu chấm đọc là 'dot'."}
+      - {emma: "www is double-u, double-u, double-u.", say: "double-you, double-you, double-you, is double-you, double-you, double-you.", focus: 2, vi: "www đọc là 'double-u double-u double-u'."}
+      - {emma: "And this line is slash.", focus: 3, vi: "Dấu / đọc là 'slash'."}
+
+  - kind: blanks
+    chapter: "Nghe 1.5: nước nào?"
+    heading: "Exercise 4b · Listen. Can you guess the countries?"
+    heading_vi: "Audio 1.5 — nghe cách đọc, đoán nước từ phần đuôi địa chỉ"
+    items:
+      - {n: 1, q: "www.bbc.co.uk → ___", answer: "the UK (Britain)", tip: "double-u double-u double-u dot b b c dot co dot u k"}
+      - {n: 2, q: "robsilva@airnet.br → ___", answer: "Brazil", tip: "rob silva at airnet dot b r"}
+      - {n: 3, q: "msuzuki@spaceblue.jp → ___", answer: "Japan", tip: "m suzuki at spaceblue dot j p"}
+      - {n: 4, q: "sport.indiatimes.com → ___", answer: "India", tip: "sport dot indiatimes dot com"}
+      - {n: 5, q: "www.cambridge.org → ___", answer: "England (Britain)", tip: "double-u double-u double-u dot cambridge dot org"}
+    lines:
+      - emma: "Now listen to five addresses. How do you say them? And which country is each one from?"
+        vi: "Nghe năm địa chỉ: đọc thế nào? Mỗi địa chỉ đến từ nước nào?"
+      - {track: "1.5", start: 4.8, end: 10.6, note: "1.5 · address 1", focus: 0}
+      - {tom: "Co dot uk. That's the UK.", say: "Co dot you kay. That's the you kay.", reveal: 1, vi: ".co.uk là nước Anh."}
+      - {track: "1.5", start: 15.2, end: 19.5, note: "1.5 · address 2", focus: 1}
+      - {tom: "Dot br. That's Brazil.", say: "Dot bee ar. That's Brazil.", reveal: 2}
+      - {track: "1.5", start: 25.05, end: 30.15, note: "1.5 · address 3", focus: 2}
+      - {tom: "Dot jp is Japan.", say: "Dot jay pee is Japan.", reveal: 3}
+      - {track: "1.5", start: 35.95, end: 40.2, note: "1.5 · address 4", focus: 3}
+      - {tom: "India Times. That's India.", reveal: 4}
+      - {track: "1.5", start: 45.45, end: 49.95, note: "1.5 · address 5", focus: 4}
+      - {tom: "Cambridge is in England.", reveal: 5}
+      - emma: "Right! The end of an address often shows the country."
+        vi: "Đúng rồi! Phần đuôi địa chỉ thường cho biết nước: .uk, .br, .jp, .vn …"
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Your phone number and email"
+    heading_vi: "Nghe câu hỏi, tạm dừng video và trả lời bằng thông tin của bạn"
+    items:
+      - {q: "What's your phone number?", a: "It's 0905 123 456.", phrases: ["It's …", "oh", "double …"]}
+      - {q: "What's your email address?", a: "It's mai.nguyen@kmail.com.", phrases: ["at", "dot"]}
+      - {q: "How do you spell your surname?", a: "N - G - U - Y - E - N.", phrases: ["It's …"]}
+    lines:
+      - emma: "Your turn. I ask, you answer with your own information. Then listen to Mai."
+        vi: "Đến lượt bạn: nghe câu hỏi, trả lời bằng thông tin của bạn; sau đó nghe Mai."
+      - {emma: "What's your phone number?", focus: 0, pause: 1.5}
+      - {mai: "It's 0905 123 456.", say: "It's oh nine oh five, one two three, four five six.", reveal: 0}
+      - {emma: "What's your email address?", focus: 1, pause: 1.5}
+      - {mai: "It's mai.nguyen@kmail.com.", say: "It's my dot win at kay-mail dot com.", reveal: 1}
+      - {emma: "How do you spell your surname?", focus: 2, pause: 1.5}
+      - {mai: "N, G, U, Y, E, N.", say: "en. gee. you. why. ee. en.", reveal: 2}
+      - emma: "Now work with a friend, like exercise 5: say a name, a number and an address. Your friend writes them down."
+        say: "Now work with a friend, like exercise five: say a name, a number and an address. Your friend writes them down."
+        vi: "Bài 5: làm với bạn — bạn đọc tên, số, địa chỉ; người kia chép lại rồi kiểm tra."
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "first name = tên · surname = họ", vi: "Agata (first name), Karolak (surname)"}
+      - {en: "E = ee · I = eye · G = gee · J = jay · H = aitch", vi: "Những chữ cái dễ nhầm"}
+      - {en: "0 = oh · 22 = double two · 152 = a hundred and fifty-two", vi: "Đọc số"}
+      - {en: "@ = at · . = dot · / = slash", vi: "Đọc email và trang web"}
+      - {en: "Next video: personal information and can (page 9)", vi: "Video sau: hỏi thông tin cá nhân, can (trang 9)"}
+    lines:
+      - {emma: "Let's remember. First name is your own name. Surname is your family name.", focus: 0}
+      - {emma: "Be careful with E and I, G and J, and H.", say: "Be careful with ee and eye, gee and jay, and aitch.", focus: 1}
+      - {emma: "Zero is often oh. Two twos is double two.", focus: 2}
+      - {emma: "In emails, say at and dot.", focus: 3}
+      - {emma: "In the next video, we ask for personal information, and we learn can. See you soon!", focus: 4, vi: "Video sau: hỏi thông tin cá nhân và học can. Hẹn gặp lại!"}

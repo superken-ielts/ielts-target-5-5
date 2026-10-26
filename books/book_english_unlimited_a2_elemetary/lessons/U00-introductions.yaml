@@ -1,0 +1,249 @@
+# Intro · About you — video 1/3: tự giới thiệu (Coursebook tr. 7, "Hi, my name's Anna"), gắn vào phiên U00-intro-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U00-introductions.yaml
+# Nguồn: đề bài và lời sáu người trên trang 7; đáp án 1a, 1b theo Teacher's Book tr. 21. Audio gốc 1.1 (sáu lời giới
+# thiệu) và 1.2 (tên nước, ngôn ngữ) phát từng đoạn; mốc start / end lấy từ mốc từng từ của bản chép lời (Parakeet,
+# docs/agent-hoc-tap/08 mục 6), mỗi đoạn chừa 0,2–0,3 giây hai đầu. Mai là người học Việt Nam (giọng af_bella).
+id: U00-introductions
+activity: U00-intro-1
+title: "Intro · About you"
+subtitle: "Speaking · Introduce yourself"
+title_vi: "Tự giới thiệu — tên, nước, quê, ngôn ngữ (trang 7, audio 1.1–1.2)"
+tag: "EU A2 · INTRO"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello, and welcome to English Unlimited Elementary. This is the Intro unit: About you."
+        vi: "Chào mừng bạn đến với English Unlimited A2 (Elementary). Đây là phần mở đầu: About you — về bản thân bạn."
+      - emma: "I'm Emma, your teacher."
+        vi: "Tôi là Emma, giáo viên của bạn."
+      - tom: "Hi, I'm Tom. I'm a student."
+        vi: "Chào bạn, mình là Tom, cũng là người học."
+      - mai: "Hello! I'm Mai. I'm from Vietnam, and I'm learning English too."
+        say: "Hello! I'm My. I'm from Vietnam, and I'm learning English too."
+        vi: "Xin chào! Mình là Mai, đến từ Việt Nam, cũng đang học tiếng Anh."
+      - emma: "In this video, you learn to introduce yourself: your name, your country, your home town and your languages."
+        vi: "Video này dạy bạn tự giới thiệu: tên, đất nước, quê và các ngôn ngữ bạn nói."
+      - emma: "Please speak out loud with us. If you need more time, pause the video."
+        vi: "Hãy nói thành tiếng cùng chúng tôi. Cần thêm thời gian thì tạm dừng video."
+
+  - kind: bullets
+    chapter: "Hôm nay học gì"
+    heading: "Intro · Hi, my name's Anna (page 7)"
+    heading_vi: "Hôm nay học gì"
+    items:
+      - {en: "Listen: six people introduce themselves (1.1)", vi: "Nghe sáu người tự giới thiệu, đánh số theo thứ tự nghe"}
+      - {en: "Countries and languages (1.2)", vi: "Tên nước và ngôn ngữ — nghe giọng đọc gốc và nhắc lại"}
+      - {en: "I'm … · I'm from … · I speak …", vi: "Mẫu câu tự giới thiệu"}
+      - {en: "Your turn: introduce yourself", vi: "Đến lượt bạn: tự giới thiệu thành tiếng"}
+    lines:
+      - emma: "Here is our plan."
+        vi: "Đây là kế hoạch của bài."
+      - {emma: "First, we listen to six people. They say hello and introduce themselves.", focus: 0, vi: "Trước tiên, nghe sáu người chào và tự giới thiệu."}
+      - {emma: "Then we learn the names of countries and languages.", focus: 1, vi: "Sau đó học tên các nước và ngôn ngữ."}
+      - {emma: "Then the sentences you need to introduce yourself.", focus: 2, vi: "Rồi tới các mẫu câu để tự giới thiệu."}
+      - {emma: "And at the end, it's your turn.", focus: 3, vi: "Cuối cùng là phần của bạn."}
+
+  - kind: blanks
+    chapter: "Nghe 1.1: ai nói?"
+    heading: "Exercise 1a · Listen and number the introductions"
+    heading_vi: "Audio 1.1 — nghe và đánh số theo thứ tự bạn nghe"
+    items:
+      - {n: 1, q: "___ is from Mexico. She speaks Spanish, English, French and a little German.", answer: "Astrid"}
+      - {n: 2, q: "___ is from Wales. He speaks some French, some Japanese and some Hungarian.", answer: "Andrew"}
+      - {n: 3, q: "___ is from the United States. She speaks French and Arabic.", answer: "Anna"}
+      - {n: 4, q: "___ is from Egypt. His home town is Cairo.", answer: "Sameh"}
+      - {n: 5, q: "___ is from Japan. She speaks English and Japanese.", answer: "Anri"}
+      - {n: 6, q: "___ is from Austria. Her home town is Graz.", answer: "Claudia"}
+    lines:
+      - emma: "Look at page 7. Six people say hello. Listen, and number them in the order you hear them."
+        vi: "Trang 7 có sáu người chào hỏi. Nghe và đánh số theo thứ tự bạn nghe thấy."
+      - emma: "Here is number one."
+        vi: "Đây là người số 1."
+      - {track: "1.1", start: 17.5, end: 25.9, note: "1.1 · speaker 1", focus: 0}
+      - tom: "That's Astrid. She's from Mexico."
+        reveal: 1
+        vi: "Đó là Astrid. Cô ấy đến từ Mexico."
+      - emma: "Yes. And she speaks four languages: Spanish, English, French and a little German."
+        vi: "Đúng. Cô ấy nói bốn thứ tiếng: Tây Ban Nha, Anh, Pháp và một chút tiếng Đức."
+      - {track: "1.1", start: 27.5, end: 38.1, note: "1.1 · speaker 2", focus: 1}
+      - tom: "Number two is Andrew. He's from Wales."
+        reveal: 2
+        vi: "Số 2 là Andrew, đến từ xứ Wales."
+      - emma: "Wales is a part of Britain. Andrew speaks some French, some Japanese and some Hungarian."
+        vi: "Wales là một phần của nước Anh (Vương quốc Anh). Andrew nói được một ít tiếng Pháp, Nhật và Hung-ga-ri."
+      - {track: "1.1", start: 40.4, end: 49.0, note: "1.1 · speaker 3", focus: 2}
+      - tom: "Number three is Anna, from San Francisco, in the United States."
+        reveal: 3
+        vi: "Số 3 là Anna, đến từ San Francisco, nước Mỹ."
+      - {track: "1.1", start: 51.2, end: 60.4, note: "1.1 · speaker 4", focus: 3}
+      - tom: "Number four is Sameh. He's from Egypt, and his home town is Cairo."
+        say: "Number four is Sah-meh. He's from Egypt, and his home town is Cairo."
+        reveal: 4
+        vi: "Số 4 là Sameh, đến từ Ai Cập; quê anh ấy là Cairo."
+      - {track: "1.1", start: 62.7, end: 69.9, note: "1.1 · speaker 5", focus: 4}
+      - tom: "Number five is Anri, from Japan."
+        say: "Number five is Ahn-ree, from Japan."
+        reveal: 5
+        vi: "Số 5 là Anri, đến từ Nhật Bản."
+      - {track: "1.1", start: 70.8, end: 86.2, note: "1.1 · speaker 6", focus: 5}
+      - tom: "And number six is Claudia. She's from Austria, and her home town is Graz."
+        say: "And number six is Claudia. She's from Austria, and her home town is Grahts."
+        reveal: 6
+        vi: "Và số 6 là Claudia, đến từ nước Áo; quê cô ấy là Graz."
+      - emma: "Well done! Notice how we talk about other people: he's from, she's from, his home town, her home town."
+        vi: "Giỏi lắm! Để ý cách nói về người khác: he's / she's from…, his / her home town (quê của anh ấy / cô ấy)."
+
+  - kind: vocab
+    chapter: "Tên nước"
+    heading: "Exercise 1b · Six countries"
+    heading_vi: "Nghe giọng đọc gốc (1.2) rồi nhắc lại"
+    items:
+      - {w: "the United States", pos: "country", vi: "nước Mỹ (Hoa Kỳ)", ex: "Anna is from the United States."}
+      - {w: "Mexico", pos: "country", vi: "Mê-hi-cô", ex: "Astrid is from Mexico."}
+      - {w: "Wales", pos: "country", vi: "xứ Wales (thuộc Vương quốc Anh)", ex: "Andrew is from Wales."}
+      - {w: "Austria", pos: "country", vi: "nước Áo", ex: "Claudia is from Austria."}
+      - {w: "Egypt", pos: "country", vi: "Ai Cập — nhấn âm đầu: E-gypt", ex: "Sameh is from Egypt."}
+      - {w: "Japan", pos: "country", vi: "Nhật Bản — nhấn âm sau: ja-PAN", ex: "Anri is from Japan."}
+      - {w: "Vietnam", pos: "country", vi: "Việt Nam", ex: "Mai is from Vietnam."}
+    lines:
+      - emma: "Now the countries. Listen to the recording, and say each word."
+        vi: "Giờ đến tên các nước. Nghe audio của sách và nói theo từng từ."
+      - {track: "1.2", start: 4.55, end: 6.4, note: "1.2 · the United States", focus: 0}
+      - {emma: "Anna is from the United States.", vi: "Anna đến từ nước Mỹ. Nhớ có 'the'."}
+      - {track: "1.2", start: 8.5, end: 9.6, note: "1.2 · Mexico", focus: 1}
+      - {emma: "Astrid is from Mexico."}
+      - {track: "1.2", start: 11.5, end: 12.75, note: "1.2 · Wales", focus: 2}
+      - {emma: "Andrew is from Wales."}
+      - {track: "1.2", start: 14.3, end: 15.35, note: "1.2 · Austria", focus: 3}
+      - {emma: "Claudia is from Austria.", vi: "Austria (nước Áo) — đừng nhầm với Australia (nước Úc)."}
+      - {track: "1.2", start: 17.0, end: 18.1, note: "1.2 · Egypt", focus: 4}
+      - {emma: "Egypt. The stress is at the start: E-gypt.", say: "Egypt. The stress is at the start. Egypt.", vi: "Egypt: nhấn âm đầu (E-gypt)."}
+      - {track: "1.2", start: 19.55, end: 20.65, note: "1.2 · Japan", focus: 5}
+      - {emma: "Japan. The stress is at the end: ja-PAN.", say: "Japan. The stress is at the end. Japan.", vi: "Japan: nhấn âm sau (ja-PAN)."}
+      - {tom: "And one more country: Vietnam.", focus: 6, vi: "Thêm một nước nữa: Việt Nam."}
+      - {mai: "I'm from Vietnam!", vi: "Mình đến từ Việt Nam!"}
+
+  - kind: vocab
+    chapter: "Ngôn ngữ"
+    heading: "Exercise 1b · Eight languages"
+    heading_vi: "Ngôn ngữ — nghe (1.2) và nhắc lại"
+    items:
+      - {w: "French", pos: "language", vi: "tiếng Pháp", ex: "In Switzerland, they speak French and German."}
+      - {w: "Arabic", pos: "language", vi: "tiếng Ả Rập", ex: "Sameh speaks Arabic and English."}
+      - {w: "Spanish", pos: "language", vi: "tiếng Tây Ban Nha", ex: "People in Mexico speak Spanish."}
+      - {w: "English", pos: "language", vi: "tiếng Anh", ex: "I speak a little English."}
+      - {w: "German", pos: "language", vi: "tiếng Đức", ex: "Claudia speaks German, of course."}
+      - {w: "Japanese", pos: "language", vi: "tiếng Nhật", ex: "Anri speaks English and Japanese."}
+      - {w: "Hungarian", pos: "language", vi: "tiếng Hung-ga-ri", ex: "Andrew speaks some Hungarian."}
+      - {w: "Russian", pos: "language", vi: "tiếng Nga", ex: "Claudia speaks a bit of Russian."}
+      - {w: "Vietnamese", pos: "language", vi: "tiếng Việt", ex: "Mai speaks Vietnamese and English."}
+    lines:
+      - emma: "And now the languages."
+        vi: "Và bây giờ là các ngôn ngữ."
+      - {track: "1.2", start: 24.8, end: 25.9, note: "1.2 · French", focus: 0}
+      - {emma: "In Switzerland, they speak French and German.", vi: "Ở Thụy Sĩ, người ta nói tiếng Pháp và tiếng Đức."}
+      - {track: "1.2", start: 27.4, end: 28.4, note: "1.2 · Arabic", focus: 1}
+      - {emma: "Sameh speaks Arabic and English.", say: "Sah-meh speaks Arabic and English."}
+      - {track: "1.2", start: 29.6, end: 30.8, note: "1.2 · Spanish", focus: 2}
+      - {emma: "People in Mexico speak Spanish."}
+      - {track: "1.2", start: 32.35, end: 33.45, note: "1.2 · English", focus: 3}
+      - {track: "1.2", start: 34.8, end: 35.85, note: "1.2 · German", focus: 4}
+      - {track: "1.2", start: 37.05, end: 38.35, note: "1.2 · Japanese", focus: 5}
+      - {emma: "Japan is the country. Japanese is the language.", vi: "Japan là tên nước, Japanese là tiếng Nhật (và người Nhật)."}
+      - {track: "1.2", start: 39.6, end: 40.9, note: "1.2 · Hungarian", focus: 6}
+      - {track: "1.2", start: 41.95, end: 43.05, note: "1.2 · Russian", focus: 7}
+      - {tom: "Vietnamese.", focus: 8, vi: "Tiếng Việt: Vietnamese."}
+      - {mai: "Vietnam is my country, and Vietnamese is my language.", vi: "Việt Nam là đất nước của mình, tiếng Việt là ngôn ngữ của mình."}
+      - emma: "Remember: country and language names always start with a capital letter."
+        vi: "Nhớ: tên nước và tên ngôn ngữ luôn viết hoa chữ cái đầu."
+
+  - kind: compare
+    chapter: "Mẫu câu"
+    heading: "Exercise 2a · Introduce yourself"
+    heading_vi: "Mẫu câu tự giới thiệu"
+    items:
+      - {title: "Name and place", title_vi: "Tên, nơi đến, quê", lines: ["I'm … / My name's …", "I'm from …", "My home town is …"]}
+      - {title: "Languages", title_vi: "Ngôn ngữ bạn nói", lines: ["I speak … and …", "I speak some …", "I speak a little … / a bit of …"]}
+    lines:
+      - emma: "Now, how do we introduce ourselves? Look at these sentences."
+        vi: "Tự giới thiệu thế nào? Xem các mẫu câu này."
+      - emma: "Say I'm, or My name's, and then your name."
+        focus: 0
+        vi: "Nói I'm hoặc My name's rồi tới tên bạn. (My name's = My name is.)"
+      - emma: "Say I'm from, and then your country. And My home town is, and then your town or city."
+        focus: 0
+        vi: "I'm from + đất nước. My home town is + quê của bạn (thị trấn, thành phố)."
+      - emma: "For languages: I speak French and English. I speak some Japanese. I speak a little German, or a bit of German."
+        focus: 1
+        vi: "Ngôn ngữ: I speak … and …; some = một ít; a little / a bit of = một chút."
+      - tom: "So a little and a bit of mean the same?"
+        vi: "Vậy a little và a bit of nghĩa giống nhau à?"
+      - emma: "Yes, the same. You can speak the language, but not very well."
+        vi: "Đúng, như nhau: bạn nói được, nhưng chưa giỏi."
+
+  - kind: shadow
+    chapter: "Nghe và nói theo"
+    heading: "Two introductions"
+    heading_vi: "Nghe Mai và Tom rồi nói theo — tạm dừng video nếu cần"
+    items:
+      - {text: "Hi, I'm Mai. I'm from Vietnam.", by: mai, vi: "Chào bạn, mình là Mai. Mình đến từ Việt Nam."}
+      - {text: "My home town is Hue. It's in the centre of Vietnam.", by: mai, vi: "Quê mình là Huế, ở miền Trung Việt Nam."}
+      - {text: "I speak Vietnamese, English and a little French.", by: mai, vi: "Mình nói tiếng Việt, tiếng Anh và một chút tiếng Pháp."}
+      - {text: "Hello, my name's Tom. I'm from the United States.", by: tom, vi: "Xin chào, mình tên là Tom. Mình đến từ nước Mỹ."}
+      - {text: "My home town is Boston. I speak English and some Spanish.", by: tom, vi: "Quê mình là Boston. Mình nói tiếng Anh và một ít tiếng Tây Ban Nha."}
+    lines:
+      - emma: "Listen to Mai and Tom. After each sentence, say it with them."
+        vi: "Nghe Mai và Tom. Sau mỗi câu, nói theo họ."
+      - {mai: "Hi, I'm Mai. I'm from Vietnam.", say: "Hi, I'm My. I'm from Vietnam.", focus: 0}
+      - {mai: "My home town is Hue. It's in the centre of Vietnam.", say: "My home town is Whey. It's in the centre of Vietnam.", focus: 1}
+      - {mai: "I speak Vietnamese, English and a little French.", focus: 2}
+      - {tom: "Hello, my name's Tom. I'm from the United States.", focus: 3}
+      - {tom: "My home town is Boston. I speak English and some Spanish.", focus: 4}
+      - emma: "Notice: we say the United States, with the. But we say Vietnam, Japan and Mexico, with no the."
+        vi: "Lưu ý: the United States có 'the'; còn Vietnam, Japan, Mexico thì không có 'the'."
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Introduce yourself"
+    heading_vi: "Nghe câu hỏi, tạm dừng video và trả lời thành tiếng"
+    items:
+      - {q: "What's your name?", a: "My name's Mai.", phrases: ["My name's …", "I'm …"]}
+      - {q: "Where are you from?", a: "I'm from Vietnam.", phrases: ["I'm from …"]}
+      - {q: "What's your home town?", a: "My home town is Hue.", phrases: ["My home town is …"]}
+      - {q: "What languages do you speak?", a: "I speak Vietnamese, English and a little French.", phrases: ["I speak … and …", "some", "a little", "a bit of"]}
+    lines:
+      - emma: "Now it's your turn. I ask a question. Pause the video and answer. Then listen to Mai."
+        vi: "Đến lượt bạn: nghe câu hỏi, tạm dừng video và trả lời; sau đó nghe Mai trả lời."
+      - {emma: "What's your name?", focus: 0, pause: 1.5}
+      - {mai: "My name's Mai.", say: "My name's My.", reveal: 0}
+      - {emma: "Where are you from?", focus: 1, pause: 1.5}
+      - {mai: "I'm from Vietnam.", reveal: 1}
+      - {emma: "What's your home town?", focus: 2, pause: 1.5}
+      - {mai: "My home town is Hue.", say: "My home town is Whey.", reveal: 2}
+      - {emma: "What languages do you speak?", focus: 3, pause: 1.5}
+      - {mai: "I speak Vietnamese, English and a little French.", reveal: 3}
+      - emma: "Great. Now write four sentences about you, like exercise 2a, and say them out loud."
+        vi: "Tốt lắm. Giờ viết bốn câu về bạn như bài 2a, rồi đọc to."
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "I'm Mai. / My name's Mai.", vi: "Nói tên"}
+      - {en: "I'm from Vietnam. My home town is Hue.", vi: "Nơi đến và quê"}
+      - {en: "I speak Vietnamese and a little English.", vi: "Ngôn ngữ — some, a little, a bit of"}
+      - {en: "He's from Wales. She's from Japan. His / Her home town is …", vi: "Nói về người khác: he, she, his, her"}
+      - {en: "Next video: letters, numbers and addresses (page 8)", vi: "Video sau: chữ cái, số, địa chỉ (trang 8)"}
+    lines:
+      - {emma: "Let's remember. To say your name: I'm Mai, or My name's Mai.", say: "Let's remember. To say your name: I'm My, or My name's My.", focus: 0}
+      - {emma: "To say where you're from: I'm from Vietnam. My home town is Hue.", say: "To say where you're from: I'm from Vietnam. My home town is Whey.", focus: 1}
+      - {emma: "For languages: I speak Vietnamese and a little English.", focus: 2}
+      - {emma: "For other people: he's from, she's from, his home town, her home town.", focus: 3}
+      - {emma: "In the next video, we learn letters, numbers and addresses. See you soon!", focus: 4, vi: "Video sau: chữ cái, số và địa chỉ. Hẹn gặp lại!"}

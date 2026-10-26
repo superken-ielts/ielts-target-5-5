@@ -5,6 +5,84 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 19 — 26/10/2026: Video Giai đoạn 0 — Intro (3 video) và sổ tay làm video từng unit
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`.
+
+Người học: "bắt đầu luôn, xong unit nào commit push lên main unit đó; làm gì thì note lại để unit sau tham khảo". Video
+làm như GENKI: giảng tiếng Anh, chữ tiếng Việt trên màn hình, phát audio gốc của sách, mỗi video 5–10 phút; Speaking
+và Writing trước, Listening và Reading sau. Đợt này là Intro; Unit 1, 2, 3 mỗi unit một đợt, một commit.
+
+**Ba video Intro** (19:24, giảng: Emma; Tom và Mai làm mẫu)
+- `U00-introductions` — Speaking · Introduce yourself (5:51, phiên `U00-intro-1`): nghe sáu người tự giới thiệu (1.1,
+  phát từng người), tên nước và ngôn ngữ (từng từ của 1.2), mẫu câu, Mai và Tom giới thiệu, Your turn.
+- `U00-letters-numbers` — Listening · Letters, numbers and addresses (7:14, phiên `U00-intro-1`): điền phiếu theo 1.3
+  (bảy đoạn), bảng chữ cái theo nhóm âm, đánh vần tên, số nhà, mã bưu chính và số điện thoại (1.4), email và trang web,
+  nghe địa chỉ đoán nước (1.5).
+- `U00-personal-info` — Grammar · Personal information, my / your, can (6:18, phiên `U00-intro-2`): bài 6–8 trang 9,
+  my / your / his / her, can / can't (nghe 1.6), Your turn, tự đánh giá.
+
+**Chép lời bài nghe** (Coursebook bản quét không có phần Scripts)
+- Lệnh mới `python -m lesson_video transcribe <sách> 1.1 1.57`: Parakeet TDT 0.6B v2 (int8) qua sherpa-onnx, chạy
+  offline. Model tải từ GitHub releases của k2-fsa/sherpa-onnx vì Hugging Face bị chặn.
+- Chia đoạn theo khoảng lặng (ffmpeg `silencedetect`), ghi `work/transcripts/<track>.txt` và `.json` có mốc từng từ.
+  `start` / `end` của dòng `track` lấy từ mốc này.
+- Đã chép 52 track của CD1 (Intro–Unit 4 và Achievement test 1). Tên riêng hay sai, nên đối chiếu với trang sách và Teacher's Book.
+
+**Công cụ video**
+- Thanh đầu video ghi tên sách lấy từ `book.json`. Trước đây luôn là "IELTS Target 5.0".
+
+**Sổ tay** (file 08 mục 6, để làm các unit sau): bộ bốn video mỗi unit, giọng, nguồn nội dung, quy trình, quy ước
+kịch bản, bảng `say` riêng của sách, lỗi đã gặp, bảng độ phủ.
+
+**Vướng và cách xử lý**
+- Kokoro đọc "the sound ay" thành /aɪ/ và "a short e" thành /iː/: viết lại câu ("the same sound as day / ten").
+- Kyoto, bows (cúi chào), tên Việt, chữ cái rời, số điện thoại: viết `say` (bảng 6.6).
+- Bài đọc một dòng dài bị cắt ở thanh phụ đề: tách mỗi câu một dòng.
+- Máy khởi động lại giữa lúc dựng: chạy lại lệnh, tiếng các câu đã đọc lấy từ bộ nhớ đệm.
+
+**Sách A1 đã gỡ khỏi repo.** Người học xoá `books/book_english_unlimited_A1_Starter/` trên `main` (commit `7117894`).
+Thẻ A1 trong tab Sách và các tài liệu nay ghi "repo chưa có sách này" thay cho "thư mục đã có Teacher's Book, 2 CD".
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `agents/lesson_video/transcribe.py` | Lệnh `transcribe`: chép lời audio của sách, có mốc từng từ |
+| `books/book_english_unlimited_a2_elemetary/work/transcripts/*.txt`, `*.json` | Lời 52 track CD1 |
+| `books/book_english_unlimited_a2_elemetary/lessons/U00-*.yaml`, `U00-*.mp4`, `lessons.json` | Kịch bản và video Intro |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/cli.py`, `agents/pyproject.toml` (`.[asr]`) | Lệnh `transcribe` |
+| `agents/lesson_video/slides.py` | Tên sách trên thanh đầu lấy từ `book.json` |
+| `agents/tests/test_lesson_video.py` | Test tên sách, hàm thuần của `transcribe`; hồi quy video A2 khớp `lessons.json` |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 6 (sổ tay video), mục 4 (A1 đã gỡ), bảng đầu |
+| `docs/agent-hoc-tap/04-checklist.md` (P2-52, P2-53), `06-video-bai-giang.md`, `docs/agent-hoc-tap/README.md`, `agents/README.md`, `CLAUDE.md` | Lệnh `transcribe`, chỗ để sổ tay, A1 đã gỡ |
+| `books/catalog.json`, `README.md`, `00-tong-quan-va-cam-ket.md` | Thẻ A1: repo chưa có sách này |
+| `tests/web/book.e2e.mjs` | Bước Giai đoạn 0: thẻ A2 có 3 video; unit Intro có ba nút video 5–10 phút, nút Grammar mở phiên Intro 2 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+- `python3 web/build.py && git diff --stat`: bản dựng khớp nguồn; A2 79 phiên, 3 video.
+- `cd agents && python -m pytest -q`: 126 test qua (thêm 3: tên sách trên thanh đầu, hàm thuần của `transcribe`, hồi
+  quy "video A2 khớp `lessons.json`").
+- `node --test "tests/web/*.test.mjs"`: 16 test qua.
+- `node tests/web/book.e2e.mjs`: E2E OK. Bước Giai đoạn 0 thêm: thẻ A2 có 3 video; unit Intro có ba nút video dài 5–10
+  phút (Speaking, Listening, Grammar); nút Grammar mở phiên Intro 2 với `U00-personal-info.mp4`.
+- Giao diện ở khổ điện thoại: unit Intro hiện "Video bài giảng · 3", chia theo hai phiên; phiên Intro 1 có hai video;
+  thẻ A1 ghi repo chưa có sách. Không có lỗi JS.
+
+### Còn treo
+
+- P2-53: Unit 1–3 (mỗi unit 4 video), làm tiếp ở các đợt sau.
+- P2-52: A1 Starter — repo chưa có sách.
+
+---
+
 ## Đợt 18 — 26/10/2026: Giai đoạn 0 — English Unlimited A2 trong tab Sách
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`.
