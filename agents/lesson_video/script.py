@@ -41,6 +41,7 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "passage": ("text",),               # bài đọc trên màn hình (có phụ đề): mỗi mục một đoạn, `label` đầu đoạn; dòng thoại `mark` tô từ khóa
     "shadow": ("text",),                # nghe – nhắc lại: mỗi mục một câu mẫu chữ to; `by` người nói (màu), `vi` nghĩa, `tip` mẹo phát âm
     "jp": ("jp",),                      # thẻ ba tầng (video N5): `jp` chữ Nhật có furigana, `romaji`, `en` giải thích, `vi` nghĩa;
+                                        # "\n" trong `jp` / `romaji` là xuống dòng bắt buộc (bảng chữ: mỗi hàng một dòng);
                                         # nhiều thẻ thì dòng thoại chọn thẻ đang hiện bằng `focus`; `quiz: true` = thẻ đố
                                         # nghe / đọc (câu Nhật đọc lên nhưng chưa hiện chữ, hoặc chữ Hán chưa có furigana; không đối chiếu)
 }

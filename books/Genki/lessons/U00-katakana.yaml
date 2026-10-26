@@ -1,0 +1,302 @@
+# U00 · Katakana & kanji — GENKI I, Japanese Writing System (trang 24–27). Video ~9 phút cho phiên Hệ chữ Nhật &
+# hiragana: bảng katakana theo hàng, chữ giống hiragana, cả bảng với audio gốc JWS-09, chữ dễ nhầm, dấu ゛゜ và ャュョ
+# (JWS-10, JWS-11), trường âm ー (JWS-12), âm ngoại lai (JWS-13), đọc từ vay mượn, tên tiếng Việt, rồi làm quen chữ Hán
+# (bốn kiểu chữ, âm On / Kun). Cách đọc: フィ đọc rời bị tách thành "fu-i" nên âm ngoại lai để audio gốc đọc; ヘ đọc
+# rời bằng hiragana thành "e" nên `say` viết ヘ katakana.
+id: U00-katakana
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Katakana · Loanwords, foreign sounds, and a first look at kanji"
+title_vi: "Katakana — bảng chữ, chữ dễ nhầm, trường âm ー, âm ngoại lai, từ vay mượn; làm quen chữ Hán"
+tag: "GENKI L0 · N5"
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 1.0}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.88}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "Katakana · The same sounds, straighter shapes"
+    items:
+      - jp: "カタカナ"
+        romaji: "katakana"
+        en: "Katakana has the same sounds as hiragana, written with straighter, sharper strokes. It is used for words from other languages and for foreign names."
+        vi: "Katakana có cùng các âm như hiragana nhưng nét thẳng, góc cạnh hơn. Dùng cho từ vay mượn tiếng nước ngoài và tên người nước ngoài."
+      - jp: "ベトナム ・ ハノイ ・ コーヒー"
+        romaji: "betonamu · hanoi · koohii"
+        en: "Vietnam · Hanoi · coffee — all written in katakana."
+        vi: "Việt Nam · Hà Nội · cà phê — đều viết bằng katakana."
+    lines:
+      - emma: "Welcome back. You can now read hiragana. Today: katakana, the second script. It has exactly the same sounds as hiragana, with straighter, sharper shapes. Japanese uses it for words from other languages, and for foreign names."
+      - yuki: "カタカナ。"
+        pause: 1.2
+      - emma: "For example: Vietnam, Hanoi, and coffee."
+        focus: 1
+      - yuki: "ベトナム、ハノイ、コーヒー。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "The katakana rows"
+    heading: "Katakana row by row · Same order as hiragana"
+    items:
+      - jp: "ア　イ　ウ　エ　オ\nカ　キ　ク　ケ　コ"
+        romaji: "a · i · u · e · o\nka · ki · ku · ke · ko"
+        en: "The same sounds as あいうえお and かきくけこ."
+        vi: "Cùng âm với あいうえお và かきくけこ."
+      - jp: "サ　シ　ス　セ　ソ\nタ　チ　ツ　テ　ト"
+        romaji: "sa · shi · su · se · so\nta · chi · tsu · te · to"
+        en: "シ is shi, チ is chi, ツ is tsu — as in hiragana."
+        vi: "シ là shi, チ là chi, ツ là tsu — giống hiragana."
+      - jp: "ナ　ニ　ヌ　ネ　ノ\nハ　ヒ　フ　ヘ　ホ"
+        romaji: "na · ni · nu · ne · no\nha · hi · fu · he · ho"
+        en: "フ is fu."
+        vi: "フ đọc \"fư\"."
+      - jp: "マ　ミ　ム　メ　モ\nヤ　ユ　ヨ"
+        romaji: "ma · mi · mu · me · mo\nya · yu · yo"
+        en: "ma to yo."
+        vi: "ma đến yo."
+      - jp: "ラ　リ　ル　レ　ロ\nワ　ヲ　ン"
+        romaji: "ra · ri · ru · re · ro\nwa · o · n"
+        en: "ヲ is almost never used in katakana; ン is n."
+        vi: "ヲ hầu như không dùng trong katakana; ン là n."
+    lines:
+      - emma: "Read the rows with Yuki. Two rows at a time."
+      - yuki: "ア、イ、ウ、エ、オ。カ、キ、ク、ケ、コ。"
+        pause: 2
+      - yuki: "サ、シ、ス、セ、ソ。タ、チ、ツ、テ、ト。"
+        focus: 1
+        pause: 2
+      - yuki: "ナ、ニ、ヌ、ネ、ノ。ハ、ヒ、フ、ヘ、ホ。"
+        focus: 2
+        pause: 2
+      - yuki: "マ、ミ、ム、メ、モ。ヤ、ユ、ヨ。"
+        focus: 3
+        pause: 2
+      - yuki: "ラ、リ、ル、レ、ロ。ワ、ヲ、ン。"
+        focus: 4
+        pause: 2
+
+  - kind: jp
+    chapter: "Like hiragana"
+    heading: "Some katakana look like their hiragana"
+    items:
+      - jp: "カ か ・ キ き ・ ヘ へ ・ リ り ・ モ も ・ ヤ や"
+        en: "ka, ki, he, ri, mo, ya: these katakana look almost the same as their hiragana. An easy start!"
+        vi: "ka, ki, he, ri, mo, ya: sáu chữ katakana này gần giống hiragana cùng âm. Học mấy chữ này trước cho dễ!"
+    lines:
+      - emma: "Good news: some katakana look almost the same as their hiragana. Start with these six."
+      - yuki: "カ、か。キ、き。ヘ、へ。リ、り。モ、も。ヤ、や。"
+        say: "カ、か。キ、き。ヘ、ヘ。リ、り。モ、も。ヤ、や。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "The whole chart"
+    heading: "All 46 katakana · Read along with the book's audio"
+    items:
+      - jp: "ア　イ　ウ　エ　オ　　　ハ　ヒ　フ　ヘ　ホ\nカ　キ　ク　ケ　コ　　　マ　ミ　ム　メ　モ\nサ　シ　ス　セ　ソ　　　ヤ　ユ　ヨ\nタ　チ　ツ　テ　ト　　　ラ　リ　ル　レ　ロ\nナ　ニ　ヌ　ネ　ノ　　　ワ　ヲ　ン"
+        en: "The complete basic katakana chart: down the left column, then the right."
+        vi: "Cả bảng katakana cơ bản."
+    lines:
+      - emma: "Now the whole chart, read by the native speaker on your textbook's audio. Point at each letter."
+      - track: JWS-09
+        note: "Japanese Writing System · JWS-09"
+
+  - kind: jp
+    chapter: "Look-alike katakana"
+    heading: "Look-alike katakana · Watch the strokes"
+    items:
+      - jp: "シ ・ ツ / ソ ・ ン"
+        romaji: "shi · tsu / so · n"
+        en: "シ and ン: the long stroke goes up from the bottom. ツ and ソ: it comes down from the top. シ has its dots on the left, ツ on top."
+        vi: "シ và ン: nét dài viết từ dưới hất lên. ツ và ソ: nét dài viết từ trên xuống. シ có chấm bên trái, ツ có chấm phía trên."
+      - jp: "ク ・ ケ ・ タ / ウ ・ ワ ・ フ"
+        romaji: "ku · ke · ta / u · wa · fu"
+        en: "タ is ク with a short stroke inside; in ケ the flat line sticks out to the right. ウ has a dot on top, ワ a short line on the left, フ is one stroke."
+        vi: "タ là ク thêm một nét ngắn bên trong; ở ケ nét ngang chìa sang phải. ウ có chấm trên đầu, ワ có nét ngắn bên trái, フ chỉ một nét."
+      - jp: "ス ・ ヌ / コ ・ ユ"
+        romaji: "su · nu / ko · yu"
+        en: "ヌ is ス with an extra stroke across. ユ's bottom line sticks out to the left."
+        vi: "ヌ là ス thêm một nét cắt ngang. Nét dưới của ユ chìa sang trái."
+      - jp: "チ ・ テ / ア ・ マ"
+        romaji: "chi · te / a · ma"
+        en: "チ starts with a slanted stroke, テ with two flat lines. ア's second stroke falls out of the shape, マ's is a small dot inside."
+        vi: "チ bắt đầu bằng nét xiên, テ bằng hai nét ngang. Nét thứ hai của ア kéo dài ra ngoài, của マ là chấm nhỏ bên trong."
+    lines:
+      - emma: "The famous pairs. Watch the direction of the long stroke."
+      - yuki: "シ、ツ。ソ、ン。"
+        pause: 1.8
+      - emma: "Look for the extra short stroke."
+        focus: 1
+      - yuki: "ク、ケ、タ。ウ、ワ、フ。"
+        pause: 1.8
+      - emma: "Two more pairs."
+        focus: 2
+      - yuki: "ス、ヌ。コ、ユ。"
+        pause: 1.8
+      - emma: "And the last two."
+        focus: 3
+      - yuki: "チ、テ。ア、マ。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "Marks and small letters"
+    heading: "゛ ゜ and small ャ ュ ョ · Exactly as in hiragana"
+    items:
+      - jp: "ガ ・ ザ ・ ダ ・ バ ・ パ / キャ ・ シュ ・ チョ"
+        romaji: "ga · za · da · ba · pa / kya · shu · cho"
+        en: "The marks ゛ ゜ and the small ャ ュ ョ work exactly as in hiragana."
+        vi: "Dấu ゛゜ và ャュョ nhỏ dùng y như hiragana."
+      - jp: "ガ　ギ　グ　ゲ　ゴ\nザ　ジ　ズ　ゼ　ゾ\nダ　ヂ　ヅ　デ　ド\nバ　ビ　ブ　ベ　ボ\nパ　ピ　プ　ペ　ポ"
+        en: "The 25 sounds with marks."
+        vi: "25 âm có dấu."
+      - jp: "キャ　キュ　キョ　　　ヒャ　ヒュ　ヒョ　　　ジャ　ジュ　ジョ\nシャ　シュ　ショ　　　ミャ　ミュ　ミョ　　　ビャ　ビュ　ビョ\nチャ　チュ　チョ　　　リャ　リュ　リョ　　　ピャ　ピュ　ピョ\nニャ　ニュ　ニョ　　　ギャ　ギュ　ギョ"
+        en: "The 33 contracted sounds."
+        vi: "33 âm ghép."
+    lines:
+      - emma: "Marks and small letters work exactly as in hiragana."
+      - yuki: "ガ、ザ、ダ、バ、パ。"
+        pause: 0.5
+      - yuki: "キャ、シュ、チョ。"
+        say: "キャ。シュ。チョ、"
+        pause: 1.5
+      - emma: "Read along with the book's audio: first the sounds with marks."
+        focus: 1
+      - track: JWS-10
+        note: "Japanese Writing System · JWS-10"
+      - emma: "Then the contracted sounds."
+        focus: 2
+      - track: JWS-11
+        note: "Japanese Writing System · JWS-11"
+
+  - kind: jp
+    chapter: "Long vowels ー"
+    heading: "Long vowels in katakana · a dash ー"
+    items:
+      - jp: "カー ・ スキー ・ スーツ ・ ケーキ ・ ボール"
+        romaji: "kaa · sukii · suutsu · keeki · booru"
+        en: "car · ski · suit · cake · ball. In katakana, a long vowel is a dash ー. When you write top to bottom, the dash is vertical too."
+        vi: "ô tô · trượt tuyết · com-lê · bánh ngọt · quả bóng. Trong katakana, trường âm là dấu gạch ー; viết dọc thì gạch cũng dọc."
+    lines:
+      - emma: "In katakana, a long vowel is simply a dash. Car, ski, suit, cake, ball."
+      - yuki: "カー、スキー、スーツ、ケーキ、ボール。"
+        pause: 1.8
+      - emma: "The book's audio."
+      - track: JWS-12
+        note: "Japanese Writing System · JWS-12"
+
+  - kind: jp
+    chapter: "Foreign sounds"
+    heading: "New sounds for foreign words · small ァ ィ ゥ ェ ォ"
+    items:
+      - jp: "ウィ　ウェ　ウォ\nシェ　ジェ　チェ\nファ　フィ　フェ　フォ\nティ　ディ　デュ"
+        en: "Small ァ ィ ゥ ェ ォ make sounds that Japanese did not have: wi, we, wo, she, je, che, fa, fi, fe, fo, ti, di, dyu. ヴ is sometimes used for v."
+        vi: "ァ ィ ゥ ェ ォ nhỏ tạo ra những âm tiếng Nhật vốn không có: wi, we, wo, she, je, che, fa, fi, fe, fo, ti, di, dyu. Đôi khi dùng ヴ cho âm v."
+      - jp: "ハロウィーン ・ ハイウェイ ・ ミネラルウォーター\nシェフ ・ ジェームス ・ チェック\nファッション ・ フィリピン ・ カフェ ・ フォーク\nパーティー ・ ディズニーランド ・ デュエット"
+        en: "Halloween · highway · mineral water · chef · James · check · fashion · Philippines · cafe · fork · party · Disneyland · duet"
+        vi: "Halloween · đường cao tốc · nước khoáng / đầu bếp · James · kiểm tra / thời trang · Philippines · quán cà phê · cái nĩa / bữa tiệc · Disneyland · song ca"
+    lines:
+      - emma: "Katakana has extra combinations with small vowels, for sounds Japanese did not have, such as f, v and t i. Look at the list."
+      - emma: "Here they are in real words. Listen to the book's audio and read along."
+        focus: 1
+      - track: JWS-13
+        note: "Japanese Writing System · JWS-13"
+
+  - kind: jp
+    chapter: "Read loanwords"
+    heading: "Read words from other languages · Then check"
+    items:
+      - jp: "テレビ ・ コーヒー ・ パン ・ ホテル"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "テレビ ・ コーヒー ・ パン ・ ホテル"
+        romaji: "terebi · koohii · pan · hoteru"
+        en: "television · coffee · bread · hotel"
+        vi: "ti vi · cà phê · bánh mì · khách sạn"
+      - jp: "カメラ ・ ベトナム ・ ハノイ ・ ホーチミン"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "カメラ ・ ベトナム ・ ハノイ ・ ホーチミン"
+        romaji: "kamera · betonamu · hanoi · hoochimin"
+        en: "camera · Vietnam · Hanoi · Ho Chi Minh City"
+        vi: "máy ảnh · Việt Nam · Hà Nội · TP. Hồ Chí Minh"
+      - jp: "アイスクリーム ・ レストラン ・ スマホ ・ パソコン"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "アイスクリーム ・ レストラン ・ スマホ ・ パソコン"
+        romaji: "aisukuriimu · resutoran · sumaho · pasokon"
+        en: "ice cream · restaurant · smartphone · computer"
+        vi: "kem · nhà hàng · điện thoại thông minh · máy tính"
+      - jp: "グエン・ミン・アン"
+        romaji: "Guen Min An"
+        en: "Nguyen Minh Anh. Vietnamese names are written in katakana, as they sound. You will write your own name in Unit 1."
+        vi: "Nguyễn Minh Anh. Tên người Việt viết bằng katakana theo cách đọc. Bạn sẽ viết tên mình ở Unit 1."
+    lines:
+      - emma: "Read these words aloud. Most of them come from English."
+        pause: 3
+      - emma: "Check with Yuki."
+        focus: 1
+      - yuki: "テレビ、コーヒー、パン、ホテル。"
+        pause: 2
+      - emma: "Four more, closer to home."
+        focus: 2
+        pause: 3
+      - emma: "Check."
+        focus: 3
+      - yuki: "カメラ、ベトナム、ハノイ、ホーチミン。"
+        pause: 2
+      - emma: "And four you will use every day."
+        focus: 4
+        pause: 3
+      - emma: "Check."
+        focus: 5
+      - yuki: "アイスクリーム、レストラン、スマホ、パソコン。"
+        pause: 2
+      - emma: "Your name is in katakana too. A Vietnamese name is written the way it sounds."
+        focus: 6
+      - yuki: "グエン・ミン・アン。"
+        pause: 1.8
+
+  - kind: jp
+    chapter: "A first look at kanji"
+    heading: "Kanji · Characters with meaning"
+    items:
+      - jp: "{木|き} ・ {日|ひ}"
+        romaji: "ki · hi"
+        en: "Some kanji are pictures: a tree, the sun."
+        vi: "Chữ tượng hình: 木 (mộc) – cây, 日 (nhật) – mặt trời, ngày."
+      - jp: "{三|さん} ・ {上|うえ}"
+        romaji: "san · ue"
+        en: "Some are simple signs: three lines for three, a mark above a line for up."
+        vi: "Chữ chỉ sự: 三 (tam) – ba, 上 (thượng) – trên."
+      - jp: "{日|ひ} ＋ {月|つき} → {明|あか}るい ・ {人|ひと} ＋ {木|き} → {休|やす}む"
+        romaji: "hi + tsuki → akarui · hito + ki → yasumu"
+        en: "Some combine two kanji: sun + moon = bright; a person + a tree = to rest."
+        vi: "Chữ hội ý: 日 + 月 → 明 (minh) – sáng; 人 + 木 → 休 (hưu) – nghỉ, như người tựa gốc cây."
+      - jp: "{日|にち} ・ {日|ひ}"
+        romaji: "nichi · hi"
+        en: "Most kanji have two kinds of reading: on-yomi from Chinese (にち) and kun-yomi, the Japanese word (ひ)."
+        vi: "Mỗi chữ Hán thường có âm On gốc Hán (にち – gần \"nhật\") và âm Kun thuần Nhật (ひ). Biết Hán-Việt là lợi thế lớn khi học chữ Hán."
+      - jp: "{常用漢字|じょうようかんじ} 2,136"
+        en: "Japanese learn 2,136 everyday kanji by the end of high school. GENKI starts kanji in Lesson 3 — fifteen at a time."
+        vi: "Người Nhật học 2.136 chữ Hán thông dụng (常用漢字 – thường dụng Hán tự) đến hết cấp ba. GENKI bắt đầu học chữ Hán từ bài 3, mỗi bài một ít."
+    lines:
+      - emma: "Finally, a first look at kanji, the third script. Kanji carry meaning. Some began as pictures: a tree, and the sun."
+      - yuki: "き、ひ。"
+        pause: 1.5
+      - emma: "Some are simple signs: three, and up."
+        focus: 1
+      - yuki: "さん、うえ。"
+        pause: 1.5
+      - emma: "Some put two kanji together: the sun and the moon make bright, and a person next to a tree means to rest."
+        focus: 2
+      - yuki: "ひ、つき、あかるい。ひと、き、やすむ。"
+        pause: 1.8
+      - emma: "Most kanji have two kinds of reading: one from Chinese, and one Japanese word. If you know Sino-Vietnamese words, the Chinese readings will often feel familiar."
+        focus: 3
+      - yuki: "にち、ひ。"
+        pause: 1.5
+      - emma: "Don't worry about kanji yet. GENKI starts them in Lesson 3, a few at a time. For now, read hiragana and katakana every day. Next: greetings and numbers."
+        focus: 4

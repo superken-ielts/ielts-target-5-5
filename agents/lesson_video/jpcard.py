@@ -181,9 +181,15 @@ class Block:
 
 
 def layout(d, text: str, size: int, limit: float, bold: bool = False) -> Block:
+    """`\n` trong chữ là xuống dòng bắt buộc (bảng chữ cái: mỗi hàng một dòng); mỗi đoạn tự ngắt dòng như thường."""
     rsize = max(13, round(size * 0.48))
-    us = units(d, text, size, rsize, bold)
-    return Block(_break(us, limit), size, rsize, bold, any(u.ruby for u in us))
+    lines: list[list[Unit]] = []
+    ruby = False
+    for para in text.split("\n"):
+        us = units(d, para, size, rsize, bold)
+        lines += _break(us, limit) or [[]]
+        ruby = ruby or any(u.ruby for u in us)
+    return Block(lines, size, rsize, bold, ruby)
 
 
 def fit(d, text: str, sizes: range, limit: float, max_h: float, max_lines: int = 99, bold: bool = False) -> Block:

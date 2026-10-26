@@ -332,6 +332,11 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Lệnh `prune`: bỏ khỏi `lessons.json` và xóa `.mp4` của video không còn kịch bản. GENKI còn 18 video.
   - Ngắt dòng của thẻ: vạch ngăn `|` `/` `・` trước `—` (không tách cặp), số thứ tự đi cùng phần sau, không dòng nào bắt đầu bằng vạch ngăn, dòng Latin đầy, tránh dòng cuối chỉ còn vài chữ.
   - Test: hồi quy "video GENKI khớp `lessons.json`", `prune`, cảnh nhiều thẻ + audio sách, kiểm cách đọc theo thẻ; e2e: Unit 1 có 4 video Listening → Reading dài 5–10 phút, nút Speaking mở phiên Part B.
+- [x] **P2-50** **GENKI Unit 0: năm video để học không cần mở sách** (5 video, 34:09), theo yêu cầu người học chưa biết gì tiếng Nhật.
+  - Phiên Hệ chữ: Hiragana 1 (46 chữ cơ bản, mẹo phát âm cho người Việt, chữ dễ nhầm, chữ in khác chữ viết tay, nghe – viết chữ cái, đọc từ đầu tiên), Hiragana 2 (゛゜, âm ghép ゃゅょ, っ, trường âm, ん, cao độ), Katakana & chữ Hán (bảng chữ, chữ dễ nhầm, ー, âm ngoại lai, từ vay mượn, tên tiếng Việt, bốn kiểu chữ Hán, âm On / Kun).
+  - Phiên Chào hỏi & số đếm: Greetings (câu chào theo tình huống, cúi chào, 10 tình huống đố, tự giới thiệu), Numbers (0–100 như cách đếm tiếng Việt, ba bài luyện của sách, nghe – viết số dễ nhầm).
+  - Phát audio gốc JWS-01 … JWS-13, K00-01, K00-02 trên thẻ có bảng chữ tương ứng; ghi chú phiên Unit 0 trỏ tới video.
+  - `jpcard`: `\n` là xuống dòng bắt buộc, nên bảng chữ hiện mỗi hàng một dòng, hai hoặc ba cột như trong sách.
 
 ### Cổng G2
 

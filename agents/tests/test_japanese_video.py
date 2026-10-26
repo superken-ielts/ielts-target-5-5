@@ -124,6 +124,8 @@ def test_card_line_breaks():
                  "メアリー：はじめまして。メアリー・ハートです。 / アリゾナだいがくの がくせいです。にねんせいです。"):
         lines = _wrap(text, 41)
         assert len(lines) > 1 and not any(line[0] in "・/" or line[-1] in "・/ " for line in lines)
+    # "\n" là xuống dòng bắt buộc: bảng chữ mỗi hàng một dòng, kể cả khi cả bảng vừa một dòng
+    assert _wrap("あ い う え お\nか き く け こ") == ["あ い う え お", "か き く け こ"]
     # số thứ tự đi cùng mục của nó
     lines = _wrap("1. いちこ 2. たんこ 3. さふとん 4. かいこくしん 5. たんほほ 6. かんへき")
     assert len(lines) == 2 and lines[1].startswith(("4. ", "5. ", "6. "))

@@ -340,14 +340,17 @@ try{
     const text = await card.textContent();
     assert.match(text, /JLPT N5 · CEFR A1/);
     assert.match(text, /286 track audio/);
-    assert.match(text, /18 video bài giảng/);                                      // bài 1–3: 4 video kỹ năng, bài 4–5: 3 clip
+    assert.match(text, /23 video bài giảng/);                    // Unit 0: 5 video, bài 1–3: 4 video kỹ năng, bài 4–5: 3 clip
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
+    const u0 = page.locator("#p-book .bk-unit", { hasText: "Unit 0" });             // học hệ chữ, chào hỏi, số đếm không cần mở sách
+    const v0 = await u0.locator(".bk-vids button").allTextContents();
+    assert.deepEqual(v0.map(t => t.replace(/^▶ (\w+).*/, "$1")), ["Hiragana", "Hiragana", "Katakana", "Greetings", "Numbers"]);
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · New Friends" });
     assert.match(await u1.textContent(), /Trang 36–55 · 6 phiên/);
     const vids = await u1.locator(".bk-vids button").allTextContents();
     assert.deepEqual(vids.map(t => t.replace(/^▶ (\w+).*/, "$1")), ["Listening", "Speaking", "Writing", "Reading"]);
-    assert.ok(vids.every(t => { const m = t.match(/· (\d):\d\d$/); return m && +m[1] >= 5; }), "video bài 1 dài 5–10 phút: " + vids);
+    assert.ok([...v0, ...vids].every(t => { const m = t.match(/· (\d):\d\d$/); return m && +m[1] >= 5; }), "video Unit 0, bài 1 dài 5–10 phút: " + v0 + vids);
     await u1.locator(".bk-vids button", { hasText: "Speaking" }).click();            // video Speaking → phiên Part B
     await page.waitForSelector("#p-book .bk-video");
     const act = page.locator("#p-book .bk-act").first();

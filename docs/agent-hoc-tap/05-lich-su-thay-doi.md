@@ -5,6 +5,82 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 17 — 26/10/2026: GENKI Unit 0, năm video để học không cần mở sách
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`.
+
+Người học chưa biết gì tiếng Nhật hỏi có nên bắt đầu từ Unit 1 không. Câu trả lời là bắt đầu từ Unit 0 (trang 20–35).
+Người học muốn có video cho Unit 0 "để học nhanh, không phải mở sách và audio gốc".
+
+**Năm video**
+
+| Phiên | Video | Dài |
+|---|---|---|
+| Hệ chữ Nhật & hiragana | Hiragana 1 · 46 chữ cơ bản | 6:22 |
+| | Hiragana 2 · ゛゜, âm ghép, っ, trường âm | 6:59 |
+| | Katakana · từ vay mượn, âm ngoại lai, làm quen chữ Hán | 7:54 |
+| Chào hỏi & số đếm | Greetings · あいさつ | 7:02 |
+| | Numbers · すうじ 0–100 | 5:52 |
+
+5 video, 34:09, 21 MB. GENKI có 23 video.
+
+- Mỗi video có đủ bảng chữ hoặc câu chào trên màn hình.
+- Audio gốc của sách (JWS-01 … JWS-13, K00-01, K00-02) phát ngay trong video, trên thẻ có đúng bảng chữ đó. Nhãn track
+  lấy từ trang sách.
+- Mẹo phát âm viết cho người Việt: う gần "ư", え như "ê", っ là một nhịp ngắt, hàng chục đếm như tiếng Việt.
+- Bài đố có đáp án: đọc từ, nghe – viết chữ cái và số, 10 tình huống chào hỏi, làm tính.
+- Ghi chú hai phiên Unit 0 và lời giới thiệu sách nói video có gì. Workbook (W-JWS1, W00) vẫn là phần làm thêm nếu có sách.
+
+**Công cụ**
+- `jpcard`: `\n` trong `jp` / `romaji` là xuống dòng bắt buộc, nên bảng chữ hiện mỗi hàng một dòng, hai hoặc ba cột
+  như sách. Trước đó cả bảng hiragana dồn trên ba dòng, các hàng cách nhau bằng `/`.
+
+**Cách đọc tiếng Nhật** (lệnh `check` bắt được hết, chi tiết ở file 07 mục 4.4)
+- は, へ đứng riêng bị đọc như trợ từ → `say` viết ハ, ヘ.
+- Âm ghép đọc rời bị tách thành hai âm (みょ → mi-yo) → mẫu katakana "キャ。キュ。キョ、", mẫu duy nhất đúng cả 11 hàng.
+- フィ đứng riêng thành "fu-i" → để audio gốc đọc các âm ngoại lai.
+
+**Độ dài:** Hiragana 1 ước 5:10 và Numbers ước 4:51 khi viết xong. Thêm phần nghe – viết và phần chữ in khác chữ viết
+tay trước khi dựng.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/Genki/lessons/U00-hiragana-1.yaml`, `U00-hiragana-2.yaml`, `U00-katakana.yaml`, `U00-greetings.yaml`, `U00-numbers.yaml` + `.mp4` | 5 kịch bản và video |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/jpcard.py` | `\n` là xuống dòng bắt buộc |
+| `agents/lesson_video/script.py`, `agents/README.md` | Ghi chú `\n` trong thẻ `jp` |
+| `agents/tests/test_japanese_video.py` | Test xuống dòng bắt buộc |
+| `books/Genki/book.yaml`, `book.json` | Ghi chú hai phiên Unit 0, lời giới thiệu sách |
+| `books/Genki/lessons/lessons.json` | Thêm 5 video |
+| `books/catalog.json` | Ghi chú lộ trình N5 |
+| `tests/web/book.e2e.mjs` | Thẻ GENKI có 23 video; Unit 0 có 5 video Hiragana, Hiragana, Katakana, Greetings, Numbers, mỗi video 5–10 phút |
+| `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md` | Video Unit 0 ở mục 3.2 và 4.1; `\n` ở mục 4.3; lỗi cách đọc ở mục 4.4 |
+| `docs/agent-hoc-tap/README.md`, `04-checklist.md` (P2-50) | Trạng thái đợt 17 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+- `python3 web/build.py && git diff --stat`: bản dựng khớp nguồn; GENKI 23 video, IELTS 40 video.
+- `cd agents && python -m pytest -q`: 117 test qua, gồm hồi quy "kịch bản khớp `lessons.json`" trên `books/Genki`.
+- `node --test "tests/web/*.test.mjs"`: 16 test qua.
+- `node tests/web/book.e2e.mjs`: E2E OK. Bước GENKI có kiểm tra mới: Unit 0 có 5 video, mỗi video dài 5–10 phút.
+- `python -m lesson_video check ../books/Genki/lessons/*.yaml`: 23/23 OK. Độ dài và kích thước 5 file `.mp4` mới khớp
+  `lessons.json`.
+- Giao diện:
+  - Thẻ Unit 0 ở khổ điện thoại có mục lục 5 video, chia theo hai phiên.
+  - Phiên Hệ chữ mở từ nút Hiragana 1 hiện ba video của phiên; bảng chữ hai cột trong video hiện đúng.
+  - Phiên Chào hỏi ở khổ máy tính hiện video Greetings và Numbers.
+  - Không có lỗi JS.
+- Soát khung hình video thật: bảng chữ, thẻ đố, nhãn BOOK AUDIO, furigana trên chữ số.
+
+---
+
 ## Đợt 16 — 25/10/2026: GENKI bài 1–3, bốn video kỹ năng 5–10 phút mỗi bài
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy thẳng lên `main` theo yêu cầu người học.

@@ -6,8 +6,9 @@ Tài liệu này gồm bốn phần:
   đợt 15);
 - những chỗ đã sửa khi chuyển 15 tập của bản thiết kế thành video;
 - lộ trình N5 trong tab Sách, dựng từ GENKI I Textbook, Workbook và audio trong `books/Genki/`;
-- cách làm video tiếng Nhật, độ phủ hiện tại (bài 1–3: bốn video kỹ năng 5–10 phút mỗi bài, đợt 16) và kế hoạch các
-  bài sau.
+- cách làm video tiếng Nhật, độ phủ hiện tại và kế hoạch các bài sau:
+  - Unit 0 có năm video để học không cần mở sách (đợt 17);
+  - bài 1–3 có bốn video kỹ năng 5–10 phút mỗi bài (đợt 16).
 
 | Thành phần | Ở đâu |
 |---|---|
@@ -150,7 +151,14 @@ bài, nên mở trang tức thì cả trên điện thoại. Sách không có đ
 | `workbook` | Workbook & ôn bài | Workbook phần 会話・文法 của bài | `W…` (聞く練習) | — | — |
 
 Unit 0 có hai phiên: **Hệ chữ Nhật & hiragana** (Japanese Writing System, track JWS + W-JWS1, trang Workbook 11–12)
-và **Chào hỏi & số đếm** (あいさつ, すうじ, track K00 + W00, trang Workbook 13–15). Khối **Ôn thi JLPT N5** dùng đề mẫu
+và **Chào hỏi & số đếm** (あいさつ, すうじ, track K00 + W00, trang Workbook 13–15).
+
+Từ đợt 17, mỗi phiên Unit 0 có video. Video có đủ bảng chữ, câu chào, số đếm và phát audio gốc, nên học được không cần
+mở sách:
+- phiên Hệ chữ: Hiragana 1, Hiragana 2, Katakana & chữ Hán;
+- phiên Chào hỏi: Greetings, Numbers.
+
+Khối **Ôn thi JLPT N5** dùng đề mẫu
 chính thức của JLPT (jlpt.jp), không có trang sách. Tổng: **13 unit + 1 khối ôn thi = 78 phiên ≈ 79 giờ**. Mặc định
 4 phiên/tuần, tức **20 tuần**; chọn được 3–5 phiên/tuần. Học song song, không tính vào 12 giờ/tuần của IELTS.
 
@@ -192,7 +200,19 @@ hợp: track không có, khoảng track đi ngược, một track gán hai lần
 
 ## 4. Video bài giảng tiếng Nhật
 
-### 4.1 Độ phủ (đợt 16)
+### 4.1 Độ phủ (đợt 17)
+
+Unit 0 có năm video (đợt 17), học được không cần mở sách:
+
+| Phiên | Video | Nội dung | Dài |
+|---|---|---|---|
+| Hệ chữ Nhật & hiragana | `U00-hiragana-1` | Ba loại chữ; 46 hiragana theo hàng, mẹo phát âm cho người Việt; cả bảng với JWS-01; chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết chữ cái; đọc từ đầu tiên | 6:22 |
+| | `U00-hiragana-2` | ゛゜ (JWS-02); âm ghép ゃゅょ (JWS-03); っ, ん + hàng な (JWS-04, 05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ | 6:59 |
+| | `U00-katakana` | Bảng katakana, chữ giống hiragana, cả bảng với JWS-09; chữ dễ nhầm; ゛゜ và âm ghép (JWS-10, 11); ー (JWS-12); âm ngoại lai (JWS-13); từ vay mượn, tên tiếng Việt; bốn kiểu chữ Hán, âm On / Kun | 7:54 |
+| Chào hỏi & số đếm | `U00-greetings` | Câu chào theo tình huống, Yuki và Takeshi nói qua lại; cúi chào; cả danh sách với K00-01; 10 tình huống đố (bài A); tự giới thiệu (bài B) | 7:02 |
+| | `U00-numbers` | 0–10 và cách đọc thứ hai; 11–19; hàng chục như tiếng Việt; cả bảng với K00-02; bài A, B, C có đáp án; nghe – viết số dễ nhầm | 5:52 |
+
+5 video, **34:09**, 21 MB, 9–12 chương mỗi video.
 
 Bài 1–3 có bốn video mỗi bài, mỗi video gắn vào phiên luyện đúng kỹ năng đó:
 
@@ -213,7 +233,7 @@ Bài 4–5 vẫn là 6 tập ngắn của bản thiết kế (đợt 15):
 | 4 The First Date | `EP_04_01` あります / います, vị trí (0:38) | `EP_04_02` でした / ～ました, 時間, と (0:46) | `EP_04_03` khu nhà ở, cuối tuần (0:31) | 1:55 |
 | 5 A Trip to Okinawa | `EP_05_01` tính từ hiện tại, bổ nghĩa (0:46) | `EP_05_02` tính từ quá khứ, 好き, ましょう (0:45) | `EP_05_03` chuyến đi Đà Nẵng (0:36) | 2:07 |
 
-GENKI có 18 video. Bài 6–12 chưa có video.
+GENKI có 23 video. Bài 6–12 chưa có video.
 
 ### 4.2 Làm một video N5
 
@@ -270,6 +290,8 @@ GENKI có 18 video. Bài 6–12 chưa có video.
   - Dòng chữ Latin đầy tới khi từ tiếp theo không vừa.
   - Dòng cuối chỉ còn vài chữ (dưới 1/4 dòng) thì nhỏ chữ thêm tối đa 6px nếu nhờ đó bớt được một dòng.
   - Áp quy tắc kinsoku. Cụm katakana liền nhau không bị tách.
+  - `\n` trong `jp` / `romaji` là xuống dòng bắt buộc (đợt 17). Bảng chữ viết mỗi hàng một dòng; trong hàng và giữa
+    các cột dùng khoảng trắng toàn khổ `　`. Ví dụ bảng hiragana hai cột, bảng âm ghép ba cột như sách.
 - **Người nói.**
   - `lang: ja` và giọng `jf_*` / `jm_*`.
   - `speed` theo người nói hoặc theo từng dòng (0.5–2.0).
@@ -318,6 +340,17 @@ GENKI có 18 video. Bài 6–12 chưa có video.
     một mình xuống dòng; chữ Latin xuống dòng sớm một từ.
   - Sửa: viết lại quy tắc ngắt dòng của `jpcard` (mục 4.3), thêm test, rồi dựng lại cả 12 video.
 - **Máy khởi động lại giữa lúc dựng.** Tiếng đã đọc còn trong bộ nhớ đệm, nên dựng lại không phải đọc lại.
+- **Chữ đứng một mình bị đọc sai (đợt 17, video Unit 0).**
+  - は và へ đứng riêng bị đọc như trợ từ ("wa", "e"). Sửa: `say` viết katakana ハ, ヘ.
+  - Âm ghép đọc rời bị tách thành hai âm, ví dụ みょ thành "mi-yo" (にゅ, ひゃ, みゃ, りゃ, ぎょ, びゃ, ぴゃ). Chỉ một mẫu
+    đọc đúng cả 11 hàng: katakana "キャ。キュ。キョ、". `check` bắt được mọi chỗ vì romaji không khớp.
+  - フィ đứng riêng thành "fu-i", dù trong フィリピン thì đọc đúng. Các âm ngoại lai để audio gốc JWS-13 đọc, Yuki chỉ
+    đọc từ ví dụ.
+- **Bảng chữ dồn thành dòng dài** (cả bảng hiragana trên ba dòng, các hàng cách nhau bằng `/`). Sửa: thêm `\n` (mục
+  4.3).
+- **Ước tính dưới 5 phút.**
+  - Hiragana 1 ước 5:10. Thêm phần chữ in khác chữ viết tay và phần nghe – viết chữ cái.
+  - Numbers ước 4:51. Thêm phần nghe – viết các cặp số dễ nhầm (14 / 40, 17 / 70, 19 / 90).
 
 ### 4.5 Kế hoạch bài 4–12
 
