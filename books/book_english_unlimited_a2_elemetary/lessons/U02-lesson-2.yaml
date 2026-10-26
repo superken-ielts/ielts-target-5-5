@@ -1,0 +1,290 @@
+# Unit 2 · Away from home — Bài 2.2 (Coursebook tr. 20–21): Sofasurfing, I'm interested in … Phiên U02-lesson-2.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U02-lesson-2.yaml
+# Nguồn: trang 20–21 (lời giới thiệu trang web và hai hồ sơ chép nguyên văn); đáp án theo Teacher's Book tr. 32–33
+# (2: for people who want to travel, don't have a lot of money, want to make new friends; 3: cả hai là nữ, nói tiếng Anh,
+# thích âm nhạc, Fiona người Ireland — Melek muốn tới Ireland, Melek muốn đi Cuba — Fiona muốn học salsa; Grammar 4a:
+# 3 live, 4 lives, 5 have, 6 has, 7 stay, 8 stays; 5: 2 visit, 3 has, 4 enjoy, 5 stay, 6 like, 7 lives, 8 works, 9 says;
+# Vocabulary 1: interested in music M F, cinema M, dance F, football M; would like to go to Cuba M, China F, Sweden F,
+# Ireland M, the USA F; wants to learn salsa F, get a good job F, learn languages M).
+# Audio gốc: 1.25 (tám câu của bài 4a, phát từng câu). Melek là em gái của Erkan trong Target activity của unit.
+id: U02-lesson-2
+activity: U02-lesson-2
+title: "Unit 2 · Away from home"
+subtitle: "Reading · Sofasurfing: present simple, interests and wants"
+title_vi: "Đọc Sofasurfing.com, hồ sơ Melek và Fiona; hiện tại đơn; sở thích, mong muốn; viết hồ sơ (trang 20–21, audio 1.25)"
+tag: "EU A2 · UNIT 2"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 2. When you travel, where do you stay? In hotels? With friends? On campsites?"
+        say: "Welcome back to Unit two. When you travel, where do you stay? In hotels? With friends? On campsites?"
+        vi: "Khi đi du lịch, bạn ở đâu? Khách sạn? Nhà bạn bè? Khu cắm trại?"
+      - tom: "I usually stay in cheap hotels."
+        vi: "Mình thường ở khách sạn rẻ."
+      - mai: "I stay with friends. It's free!"
+        vi: "Mình ở nhà bạn bè. Miễn phí mà!"
+      - emma: "Free? Then you'll like this website. Today we read about Sofasurfing, and we learn the present simple."
+        say: "Free? Then you'll like this website. Today we read about Sofa surfing, and we learn the present simple."
+        vi: "Miễn phí à? Vậy bạn sẽ thích trang web này. Hôm nay đọc về Sofasurfing và học thì hiện tại đơn."
+
+  - kind: passage
+    chapter: "Đọc: Sofasurfing.com"
+    heading: "Reading 2 · Sofasurfing.com"
+    heading_vi: "Đọc lời giới thiệu của trang web: trang này dành cho ai?"
+    items:
+      - {text: "Would you like to meet people from different cultures? Do you want to see different parts of the world?"}
+      - {text: "On Sofasurfing.com you can read people's profiles, email them and go and stay in their homes."}
+      - {text: "You can stay on a sofa or spare bed for one or two nights or weeks and it's free."}
+      - {text: "Join Sofasurfing.com, make friends around the world and start your adventure today!"}
+    lines:
+      - {emma: "Would you like to meet people from different cultures?", focus: 0}
+      - {emma: "Do you want to see different parts of the world?", focus: 0}
+      - {emma: "On Sofasurfing.com you can read people's profiles, email them and go and stay in their homes.", say: "On Sofa surfing dot com you can read people's profiles, email them and go and stay in their homes.", focus: 1}
+      - {emma: "You can stay on a sofa or spare bed for one or two nights or weeks, and it's free.", focus: 2}
+      - {emma: "Join Sofasurfing.com, make friends around the world and start your adventure today!", say: "Join Sofa surfing dot com, make friends around the world and start your adventure today!", focus: 3}
+      - {emma: "A spare bed is a bed that nobody uses. And free means you don't pay.", say: "A spare bed is a bed that nobody yoozes. And free means you don't pay.", focus: 2, mark: ["spare bed", "free"], vi: "spare bed = giường trống, không ai dùng; free = miễn phí."}
+
+  - kind: mcq
+    chapter: "Bài 2: trang web cho ai?"
+    heading: "Reading 2 · Is it for people who …?"
+    heading_vi: "Sofasurfing.com dành cho người …?"
+    items:
+      - {n: 1, q: "It's for people who …", options: ["want to travel", "want to stay at home"], answer: a}
+      - {n: 2, q: "It's for people who …", options: ["have a lot of money", "don't have a lot of money"], answer: b}
+      - {n: 3, q: "It's for people who want to …", options: ["stay with old friends", "make new friends"], answer: b}
+    lines:
+      - emma: "Exercise 2. Is the website for people who want to travel, or stay at home?"
+        say: "Exercise two. Is the website for people who want to travel, or stay at home?"
+        vi: "Bài 2: trang web dành cho người muốn đi du lịch hay ở nhà?"
+        focus: 0
+        pause: 1.0
+      - {tom: "People who want to travel. You can see different parts of the world.", focus: 0, reveal: 1}
+      - {tom: "And people who don't have a lot of money, because it's free.", focus: 1, reveal: 2}
+      - {tom: "And people who want to make new friends around the world.", focus: 2, reveal: 3}
+
+  - kind: passage
+    chapter: "Hồ sơ của Melek"
+    heading: "Reading 3 · Melek's profile"
+    heading_vi: "Melek, 31 tuổi — để ý công việc, ngôn ngữ, sở thích, dự định đi đâu"
+    items:
+      - {label: "Melek, 31", text: "I'm an architect. I'm from Turkey. I speak Turkish, English and a bit of German.", note: "work · from · languages"}
+      - {text: "I'm interested in music, football and cinema. I'd like to go to Cuba and Ireland. I want to learn languages.", note: "interests · travel plans"}
+      - {text: "I live in a small house with my brother, Erkan. We have a nice living room with a big, comfortable sofa.", note: "home"}
+      - {text: "My home town is Istanbul. It's beautiful and it has lots of things to see and do. We live near the centre.", note: "home town"}
+      - {text: "My family is very friendly. Erkan speaks English, too. My mother lives in the same street. She cooks dinner for us at the weekend.", note: "family"}
+      - {text: "No smokers, please. Email me.", note: "rules"}
+    lines:
+      - emma: "Exercise 3. Read the profiles of Melek and Fiona. What do they have in common?"
+        say: "Exercise three. Read the profiles of Melek and Fiona. What do they have in common?"
+        vi: "Bài 3: đọc hồ sơ của Melek và Fiona — họ có gì giống nhau?"
+      - emma: "Think about work, languages, interests and travel plans. First, Melek. Mai reads."
+        vi: "Để ý công việc, ngôn ngữ, sở thích, dự định đi đâu. Trước hết là Melek, Mai đọc."
+      - {mai: "I'm an architect. I'm from Turkey. I speak Turkish, English and a bit of German.", focus: 0}
+      - {mai: "I'm interested in music, football and cinema.", focus: 1}
+      - {mai: "I'd like to go to Cuba and Ireland. I want to learn languages.", focus: 1}
+      - {mai: "I live in a small house with my brother, Erkan. We have a nice living room with a big, comfortable sofa.", focus: 2}
+      - {mai: "My home town is Istanbul. It's beautiful and it has lots of things to see and do.", focus: 3}
+      - {mai: "We live near the centre.", focus: 3}
+      - {mai: "My family is very friendly. Erkan speaks English, too.", focus: 4}
+      - {mai: "My mother lives in the same street. She cooks dinner for us at the weekend.", say: "My mother livz in the same street. She cooks dinner for us at the weekend.", focus: 4}
+      - {mai: "No smokers, please. Email me.", focus: 5}
+      - {emma: "Melek's brother is Erkan. You meet him again in the Target activity of this unit.", focus: 2, mark: ["my brother, Erkan"], vi: "Anh trai của Melek là Erkan — bạn sẽ gặp lại ở Target activity của unit này."}
+
+  - kind: passage
+    chapter: "Hồ sơ của Fiona"
+    heading: "Reading 3 · Fiona's profile"
+    heading_vi: "Fiona, 21 tuổi — so với Melek: giống nhau ở điểm nào?"
+    items:
+      - {label: "Fiona, 21", text: "I'm a music student. I'm from Ireland. I speak English and French.", note: "work · from · languages"}
+      - {text: "I'm interested in music, dance and meeting people from other cultures. I'd like to go to China, Sweden and the USA. I want to get a good job and learn salsa.", note: "interests · travel plans"}
+      - {text: "I live in a flat on my own. It has a spare room with a spare bed, so friends often stay with me.", note: "home"}
+      - {text: "My home town is Dublin. It's a great place and it has lots of nice cafés and clubs.", note: "home town"}
+      - {text: "My family lives in Galway, but my father often comes here for work. He stays with me and takes me to nice restaurants.", note: "family"}
+      - {text: "Phone or email first.", note: "rules"}
+    lines:
+      - {emma: "Now Fiona. She is twenty-one, and she lives in Dublin."}
+      - {emma: "I'm a music student. I'm from Ireland. I speak English and French.", focus: 0}
+      - {emma: "I'm interested in music, dance and meeting people from other cultures.", focus: 1}
+      - {emma: "I'd like to go to China, Sweden and the USA. I want to get a good job and learn salsa.", focus: 1}
+      - {emma: "I live in a flat on my own. It has a spare room with a spare bed, so friends often stay with me.", focus: 2}
+      - {emma: "My home town is Dublin. It's a great place and it has lots of nice cafés and clubs.", focus: 3}
+      - {emma: "My family lives in Galway, but my father often comes here for work.", say: "My family livz in Galway, but my father often comes here for work.", focus: 4}
+      - {emma: "He stays with me and takes me to nice restaurants.", focus: 4}
+      - {emma: "Phone or email first.", focus: 5}
+
+  - kind: bullets
+    chapter: "Họ giống nhau ở đâu?"
+    heading: "Reading 3 · What do Melek and Fiona have in common?"
+    heading_vi: "Điểm chung của Melek và Fiona"
+    items:
+      - {en: "They're both women, and they both speak English.", vi: "Cả hai là nữ, đều nói tiếng Anh"}
+      - {en: "They're both interested in music.", vi: "Đều quan tâm đến âm nhạc"}
+      - {en: "Fiona is from Ireland, and Melek would like to go there.", vi: "Fiona là người Ireland; Melek muốn tới Ireland"}
+      - {en: "Melek would like to go to Cuba, and Fiona wants to learn salsa.", vi: "Cùng thích Mỹ Latinh: Cuba và điệu salsa"}
+    lines:
+      - {emma: "So, what do they have in common?", vi: "Vậy họ có điểm gì chung?"}
+      - {tom: "They're both women, and they both speak English.", focus: 0}
+      - {mai: "They're both interested in music.", focus: 1}
+      - {tom: "Fiona is from Ireland, and Melek would like to go there.", focus: 2}
+      - {emma: "And Melek would like to go to Cuba, and Fiona wants to learn salsa. They both like Latin America.", focus: 3, vi: "Melek muốn đi Cuba, Fiona muốn học salsa — cả hai đều thích Mỹ Latinh."}
+
+  - kind: blanks
+    chapter: "Hiện tại đơn — nghe 1.25"
+    heading: "Grammar 4 · Present simple: positive sentences"
+    heading_vi: "Điền speak / speaks, live / lives, have / has, stay / stays — tạm dừng làm trước, rồi nghe 1.25"
+    items:
+      - {n: 1, q: "I ___ English and French.", answer: "speak", hint: "I, you, we, they"}
+      - {n: 2, q: "Erkan ___ English, too.", answer: "speaks", hint: "he, she, it"}
+      - {n: 3, q: "I ___ in a small house.", answer: "live", hint: "I, you, we, they"}
+      - {n: 4, q: "My mother ___ in the same street.", answer: "lives", hint: "he, she, it"}
+      - {n: 5, q: "We ___ a nice living room.", answer: "have", hint: "I, you, we, they"}
+      - {n: 6, q: "It ___ lots of nice cafés and clubs.", answer: "has", hint: "he, she, it"}
+      - {n: 7, q: "Friends often ___ with me.", answer: "stay", hint: "I, you, we, they"}
+      - {n: 8, q: "He ___ with me.", answer: "stays", hint: "he, she, it"}
+    lines:
+      - emma: "Grammar. Complete the sentences with these verbs: speak, speaks, live, lives, have, has, stay, stays. Pause the video and try, then listen."
+        say: "Grammar. Complete the sentences with these verbs: speak, speaks, liv, livz, have, has, stay, stays. Pause the video and try, then listen."
+        vi: "Ngữ pháp: điền động từ cho đúng. Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "1.25", start: 3.5, end: 7.6, note: "1.25 · 1", focus: 0, reveal: 1}
+      - {track: "1.25", start: 10.6, end: 14.5, note: "1.25 · 2", focus: 1, reveal: 2}
+      - {track: "1.25", start: 18.0, end: 21.4, note: "1.25 · 3", focus: 2, reveal: 3}
+      - {track: "1.25", start: 24.9, end: 28.4, note: "1.25 · 4", focus: 3, reveal: 4}
+      - {track: "1.25", start: 31.6, end: 35.0, note: "1.25 · 5", focus: 4, reveal: 5}
+      - {track: "1.25", start: 38.4, end: 43.0, note: "1.25 · 6", focus: 5, reveal: 6}
+      - {track: "1.25", start: 45.9, end: 49.3, note: "1.25 · 7", focus: 6, reveal: 7}
+      - {track: "1.25", start: 52.6, end: 55.4, note: "1.25 · 8", focus: 7, reveal: 8}
+
+  - kind: compare
+    chapter: "Quy tắc: thêm s"
+    heading: "Grammar 4 · he, she, it + s"
+    heading_vi: "Sau he, she, it (và một người, một vật) động từ thêm s; have → has"
+    items:
+      - {title: "I, you, we, they", title_vi: "tôi, bạn, chúng tôi, họ", lines: ["I speak English.", "We live near the centre.", "We have a nice living room.", "Friends often stay with me."]}
+      - {title: "he, she, it", title_vi: "anh ấy, cô ấy, nó", lines: ["Erkan speaks English, too.", "My mother lives in the same street.", "It has lots of nice cafés.", "He stays with me."]}
+    lines:
+      - emma: "After I, you, we and they, the verb doesn't change: I speak, we live, they stay."
+        focus: 0
+        vi: "Sau I, you, we, they: động từ giữ nguyên."
+      - emma: "After he, she and it, add s: he speaks, she lives, it stays. And have becomes has."
+        focus: 1
+        vi: "Sau he, she, it: thêm s. have đổi thành has."
+      - tom: "So my mother lives, not my mother live?"
+        say: "So my mother livz, not my mother liv?"
+        focus: 1
+        vi: "Vậy là my mother lives chứ không phải my mother live?"
+      - emma: "Yes. My mother is she, so lives. Listen to the s: speaks has an s sound. Lives, has and stays have a z sound."
+        say: "Yes. My mother is she, so livz. Listen to the s: speaks has an s sound. Livz, has and stays have a z sound."
+        focus: 1
+        vi: "Đúng, my mother = she nên dùng lives. Đuôi s đọc /s/ trong speaks, đọc /z/ trong lives, has, stays."
+
+  - kind: blanks
+    chapter: "Bài 5: thư của Fiona"
+    heading: "Grammar 5 · Fiona's reply to Melek"
+    heading_vi: "Chia động từ trong ngoặc cho đúng — Mai đọc thư của Fiona"
+    items:
+      - {n: 1, q: "Yes, Dublin ___ great museums and parks.", answer: "has", hint: "have"}
+      - {n: 2, q: "A lot of tourists ___ the National Museum of Ireland.", answer: "visit", hint: "visit"}
+      - {n: 3, q: "The city also ___ lots of good musicians and bands.", answer: "has", hint: "have"}
+      - {n: 4, q: "Visitors really ___ the music here.", answer: "enjoy", hint: "enjoy"}
+      - {n: 5, q: "My spare room's small, but friends often ___ with me.", answer: "stay", hint: "stay"}
+      - {n: 6, q: "Friends often stay with me and they ___ it.", answer: "like", hint: "like"}
+      - {n: 7, q: "My sister Kathy ___ in Kildare, a city near Dublin.", answer: "lives", hint: "live"}
+      - {n: 8, q: "She lives and ___ in Kildare.", answer: "works", hint: "work"}
+      - {n: 9, q: "She ___ you can stay with her for a few days.", answer: "says", hint: "say"}
+    lines:
+      - emma: "Exercise 5. Melek emails Fiona with some questions. Read Fiona's reply and complete it with the verbs in brackets."
+        say: "Exercise five. Melek emails Fiona with some questions. Read Fiona's reply and complete it with the verbs in brackets."
+        vi: "Bài 5: Melek gửi email hỏi Fiona. Đọc thư trả lời của Fiona, chia động từ trong ngoặc."
+        pause: 1.5
+      - {mai: "Yes, Dublin has great museums and parks.", focus: 0, reveal: 1}
+      - {mai: "A lot of tourists visit the National Museum of Ireland.", focus: 1, reveal: 2}
+      - {mai: "The city also has lots of good musicians and bands.", focus: 2, reveal: 3}
+      - {mai: "Visitors really enjoy the music here.", focus: 3, reveal: 4}
+      - {mai: "My spare room's small, but friends often stay with me and they like it.", focus: 4, reveal: [5, 6]}
+      - {mai: "My sister Kathy lives and works in Kildare, a city near Dublin.", say: "My sister Kathy livz and works in Kill-dare, a city near Dublin.", focus: 6, reveal: [7, 8]}
+      - {mai: "She says you can stay with her for a few days.", focus: 8, reveal: 9}
+      - {emma: "Tourists is they, so visit. Kathy is she, so lives, works and says.", say: "Tourists is they, so visit. Kathy is she, so livz, works and says.", focus: 8, vi: "tourists = they → visit; Kathy = she → lives, works, says."}
+
+  - kind: compare
+    chapter: "Sở thích và mong muốn"
+    heading: "Vocabulary 1 · Interests and wants"
+    heading_vi: "Che hồ sơ lại: Melek và Fiona thích gì, muốn đi đâu, muốn làm gì?"
+    items:
+      - {title: "is interested in", title_vi: "quan tâm, thích", lines: ["Melek: music, cinema, football", "Fiona: music, dance"]}
+      - {title: "would like to go to", title_vi: "muốn đi (một ngày nào đó)", lines: ["Melek: Cuba, Ireland", "Fiona: China, Sweden, the USA"]}
+      - {title: "wants to", title_vi: "muốn, định làm", lines: ["Melek: learn languages", "Fiona: learn salsa, get a good job"]}
+    lines:
+      - emma: "Cover the profiles. What can you remember? Melek is interested in …"
+        focus: 0
+        vi: "Che hồ sơ lại: bạn nhớ được gì?"
+      - {tom: "Melek is interested in music, cinema and football. Fiona is interested in music and dance.", focus: 0}
+      - {mai: "Melek would like to go to Cuba and Ireland. Fiona would like to go to China, Sweden and the USA.", focus: 1}
+      - {tom: "Melek wants to learn languages. Fiona wants to learn salsa and get a good job.", focus: 2}
+      - emma: "I want to means I plan to do it. I'd like to is softer: maybe one day. I'd like to go to Mexico, maybe one day!"
+        focus: 1
+        vi: "I want to = định làm; I'd like to = muốn (có thể một ngày nào đó)."
+
+  - kind: letter
+    chapter: "Hồ sơ mẫu của Mai"
+    heading: "Writing 2 · Mai's profile for Sofasurfing.com"
+    heading_vi: "Hồ sơ mẫu: công việc, quê, ngôn ngữ, sở thích, muốn đi đâu, nhà ở"
+    roles: {emma: teacher}
+    items:
+      - {text: "I'm an English teacher. I'm from Vietnam.", note: "work · from"}
+      - {text: "I speak Vietnamese, English and a bit of French.", note: "languages"}
+      - {text: "I'm interested in music, cooking and old buildings.", note: "interests"}
+      - {text: "I'd like to go to Ireland and Japan. I want to learn the guitar.", note: "travel plans · wants"}
+      - {text: "I live in a flat in Hue with my sister. We have a small spare room.", note: "home"}
+      - {text: "My home town is Hue. It's quiet and beautiful, and it has great food.", note: "home town"}
+      - {text: "Email me!", note: "rules"}
+    lines:
+      - emma: "Writing. Mai writes a profile like Melek's and Fiona's. Listen."
+        vi: "Viết: Mai viết hồ sơ giống của Melek và Fiona. Nghe nhé."
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4, say: "I live in a flat in Whey with my sister. We have a small spare room."}
+      - {read: mai, focus: 5, say: "My home town is Whey. It's quiet and beautiful, and it has great food."}
+      - {read: mai, focus: 6}
+      - emma: "Now you. Think about the things you're interested in, and the things you want to do or would like to do. Then write your profile."
+        vi: "Đến lượt bạn: nghĩ về điều bạn quan tâm, điều bạn muốn làm / muốn đi, rồi viết hồ sơ của mình."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc với hiện tại đơn và sở thích"
+    items:
+      - {wrong: "My sister live in Hanoi.", right: "My sister lives in Hanoi.", note: "he, she, it (my sister = she) + s"}
+      - {wrong: "He haves a big flat.", right: "He has a big flat.", note: "have → has"}
+      - {wrong: "I'd like go to Cuba.", right: "I'd like to go to Cuba.", note: "would like + to + động từ"}
+      - {wrong: "I want learn salsa.", right: "I want to learn salsa.", note: "want + to + động từ"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "My sister lives. My sister is she, so add s.", say: "My sister livz. My sister is she, so add s.", focus: 0}
+      - {emma: "He has, not he haves.", focus: 1}
+      - {emma: "I'd like to go, and I want to learn. Don't forget to.", focus: 2}
+      - {emma: "I want to learn salsa.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "I / you / we / they live · he / she / it lives", vi: "he, she, it: động từ thêm s"}
+      - {en: "have → has", vi: "He has, she has, it has"}
+      - {en: "I'm interested in … · I'd like to go to … · I want to …", vi: "Nói sở thích và mong muốn"}
+      - {en: "I'm a … · I'm from … · I speak … · My home town is …", vi: "Viết hồ sơ giới thiệu bản thân"}
+    lines:
+      - {emma: "Let's remember. I live, you live, but he lives, she lives.", focus: 0}
+      - {emma: "Have becomes has: it has lots of nice cafés.", focus: 1}
+      - {emma: "Say your interests and wants: I'm interested in music. I'd like to go to Ireland. I want to learn languages.", focus: 2}
+      - {emma: "And write a profile about you. In the next video, the Target activity: take care of a guest.", focus: 3, vi: "Video sau: Target activity — tiếp đón khách."}

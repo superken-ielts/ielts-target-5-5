@@ -1,0 +1,212 @@
+# Unit 2 · Away from home — Target activity: Take care of a guest (Coursebook tr. 22), phiên U02-target.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U02-target.yaml
+# Nguồn: trang 22 (thư của Akira chép nguyên văn); đáp án theo Teacher's Book tr. 33–34 (1: Erkan ở Istanbul, Akira và
+# Koji ở Tokyo; 2: a drink, food, things to do, places to go; 3a: 1e 2b 3a 4d 5c). Audio gốc 1.26 (Koji tới nhà Erkan):
+# phát nguyên bài, rồi phát lại năm cặp hỏi – đáp của bài 3 (cắt theo mốc từng từ). Track 1.27 (nghe lại bài 3) THIẾU
+# trong bộ CD1 nên dùng chính các đoạn đó của 1.26. Hội thoại mẫu: Mai làm chủ nhà ở Huế, Tom là khách.
+id: U02-target
+activity: U02-target
+title: "Unit 2 · Away from home"
+subtitle: "Speaking · Take care of a guest"
+title_vi: "Tiếp đón một người khách — mời đồ ăn uống, hỏi sở thích, hỏi khách muốn làm gì (trang 22, audio 1.26)"
+tag: "EU A2 · UNIT 2"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 2: Away from home. This is the Target activity: take care of a guest."
+        say: "Welcome to Unit two: Away from home. This is the Target activity: take care of a guest."
+        vi: "Chào mừng đến với Unit 2: Away from home (Xa nhà). Target activity: tiếp đón một người khách."
+      - emma: "A friend visits your town. You offer food and drink, you ask what they are interested in, and what they would like to do."
+        vi: "Một người bạn đến thăm thành phố của bạn: bạn mời đồ ăn uống, hỏi họ thích gì và muốn làm gì."
+      - mai: "That's easy for me. I love guests!"
+        vi: "Dễ thôi. Mình rất thích có khách!"
+
+  - kind: letter
+    chapter: "Đọc thư của Akira"
+    heading: "Task reading · Akira's email to Erkan"
+    heading_vi: "Đọc thư: Erkan, Akira và Koji sống ở đâu? Họ quen nhau thế nào?"
+    roles: {emma: teacher, tom: Akira}
+    items:
+      - {text: "Hi Erkan"}
+      - {text: "Hope you're OK. I'm fine but I miss Istanbul and everyone in the office.", note: "Akira was in Istanbul"}
+      - {text: "Tokyo is hot and the new job is hard work, but it's interesting.", note: "Akira lives in Tokyo now"}
+      - {text: "One of my colleagues, Koji, is going to Istanbul next month. He doesn't know anyone.", note: "Koji: Akira's colleague"}
+      - {text: "Could you meet him and show him the city one day? He's very nice!", note: "a request"}
+      - {text: "Akira"}
+    lines:
+      - emma: "First, read Akira's email. Where do Erkan, Akira and Koji live? How do they know each other?"
+        say: "First, read Akira's email. Where do Erkan, Akira and Koji liv? How do they know each other?"
+        vi: "Đọc thư của Akira: Erkan, Akira, Koji sống ở đâu? Họ quen nhau thế nào?"
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: tom, focus: 4}
+      - {read: tom, focus: 5, say: "Akira."}
+      - {emma: "So Erkan lives in Istanbul. Akira and Koji live in Tokyo.", say: "So Erkan livz in Istanbul. Akira and Koji live in Tokyo.", focus: 2, vi: "Erkan sống ở Istanbul; Akira và Koji sống ở Tokyo."}
+      - {emma: "Akira and Erkan were colleagues in Istanbul. Now Akira and Koji are colleagues in Tokyo.", focus: 3, vi: "Akira và Erkan từng là đồng nghiệp ở Istanbul; nay Akira và Koji là đồng nghiệp ở Tokyo."}
+      - {emma: "And look: Could you meet him? That's a request.", focus: 4, vi: "Could you meet him? — đó là một lời nhờ (request)."}
+
+  - kind: blanks
+    chapter: "Nghe 1.26: Koji tới Istanbul"
+    heading: "Task listening 2 · Which things does Erkan ask Koji about?"
+    heading_vi: "Audio 1.26 — Koji tới nhà Erkan; Erkan hỏi Koji về những điều nào?"
+    items:
+      - {n: 1, q: "his family: ___", answer: "no"}
+      - {n: 2, q: "a drink: ___", answer: "yes"}
+      - {n: 3, q: "food: ___", answer: "yes"}
+      - {n: 4, q: "things to do: ___", answer: "yes"}
+      - {n: 5, q: "sports: ___", answer: "no"}
+      - {n: 6, q: "places to go: ___", answer: "yes"}
+    lines:
+      - emma: "Now Koji arrives at Erkan's home in Istanbul. Listen. Which things does Erkan ask him about?"
+        vi: "Koji tới nhà Erkan ở Istanbul. Nghe: Erkan hỏi Koji về những điều gì?"
+      - {track: "1.26", start: 11.6, end: 80.6, note: "1.26 · Koji and Erkan"}
+      - {tom: "He asks about a drink, food, things to do and places to go.", reveal: [2, 3, 4, 6], vi: "Anh ấy hỏi về đồ uống, đồ ăn, việc muốn làm và nơi muốn đến."}
+      - {emma: "Right. He doesn't ask about Koji's family, or sports.", reveal: [1, 5], vi: "Đúng. Anh ấy không hỏi về gia đình hay thể thao."}
+
+  - kind: pairs
+    chapter: "Cụm từ: tiếp khách"
+    heading: "Task vocabulary 3 · Taking care of a guest"
+    heading_vi: "Nối câu hỏi với câu trả lời — nghe lại từng cặp trong 1.26"
+    items:
+      - {n: 1, q: "Would you like something to drink?", answer: e}
+      - {n: 2, q: "Do you want something to eat?", answer: b}
+      - {n: 3, q: "Are you interested in seeing some sights?", answer: a}
+      - {n: 4, q: "And would you like to take a boat trip on the Bosphorus?", answer: d}
+      - {n: 5, q: "What else would you like to do?", answer: c}
+    options:
+      - {k: a, text: "Yes, I am. I'm really interested in architecture."}
+      - {k: b, text: "No, I'm fine, thank you. The hotel food is very good."}
+      - {k: c, text: "Well, I'd like to eat some real Turkish food later."}
+      - {k: d, text: "Oh yeah, please. I like boat trips."}
+      - {k: e, text: "Er, just a glass of water, please."}
+    lines:
+      - emma: "Exercise 3. Match the questions and answers. Then listen to each part of the conversation again."
+        say: "Exercise three. Match the questions and answers. Then listen to each part of the conversation again."
+        vi: "Bài 3: nối câu hỏi với câu trả lời, rồi nghe lại từng đoạn hội thoại."
+      - {track: "1.26", start: 22.7, end: 29.0, note: "1.26 · question 1", focus: 0, reveal: 1}
+      - {track: "1.26", start: 30.2, end: 37.6, note: "1.26 · question 2", focus: 1, reveal: 2}
+      - {track: "1.26", start: 42.3, end: 51.6, note: "1.26 · question 3", focus: 2, reveal: 3}
+      - {emma: "Architecture means beautiful old buildings, like the Blue Mosque.", vi: "architecture = kiến trúc, những công trình đẹp như Nhà thờ Xanh (Blue Mosque)."}
+      - {track: "1.26", start: 53.6, end: 60.1, note: "1.26 · question 4", focus: 3, reveal: 4}
+      - {track: "1.26", start: 67.1, end: 72.6, note: "1.26 · question 5", focus: 4, reveal: 5}
+
+  - kind: compare
+    chapter: "Mẫu câu"
+    heading: "The host and the guest"
+    heading_vi: "Chủ nhà hỏi gì, khách trả lời thế nào"
+    items:
+      - {title: "Host: offer", title_vi: "Mời đồ ăn uống", lines: ["Would you like something to drink?", "Do you want something to eat?", "Would you like a cup of tea?"]}
+      - {title: "Host: ask", title_vi: "Hỏi sở thích, mong muốn", lines: ["Are you interested in …?", "Would you like to …?", "What else would you like to do?"]}
+      - {title: "Guest: answer", title_vi: "Trả lời", lines: ["Yes, please. · No, thanks. I'm fine.", "I'm (really) interested in …", "I'd like to … · I'd love to …"]}
+    lines:
+      - emma: "Let's look at the language. The host offers food and drink: Would you like something to drink? Do you want something to eat?"
+        focus: 0
+        vi: "Chủ nhà mời: Would you like something to drink? / Do you want something to eat?"
+      - emma: "Then the host asks: Are you interested in seeing some sights? Would you like to take a boat trip? What else would you like to do?"
+        focus: 1
+        vi: "Rồi hỏi sở thích: Are you interested in…? / Would you like to…? / What else would you like to do?"
+      - emma: "And the guest answers: Yes, please. No, thanks, I'm fine. I'm interested in architecture. I'd like to eat some real food."
+        focus: 2
+        vi: "Khách đáp: Yes, please / No, thanks, I'm fine / I'm interested in… / I'd like to…"
+      - tom: "I'd like is I would like, right?"
+        vi: "I'd like = I would like, đúng không?"
+      - emma: "Yes. It's a polite way to say I want."
+        vi: "Đúng, đó là cách nói lịch sự của I want (tôi muốn)."
+
+  - kind: letter
+    chapter: "Hội thoại mẫu ở Huế"
+    heading: "Mai takes care of Tom in Hue"
+    heading_vi: "Mai là chủ nhà, Tom là khách — nghe rồi đóng vai cùng họ"
+    roles: {emma: teacher, mai: host, tom: guest}
+    items:
+      - {text: "MAI: Hi Tom, welcome to Hue! Come in. Would you like something to drink?", say: "Hi Tom, welcome to Whey! Come in. Would you like something to drink?", note: "offer a drink"}
+      - {text: "TOM: Yes, please. Can I have a glass of water?", say: "Yes, please. Can I have a glass of water?"}
+      - {text: "MAI: Of course. Are you hungry? Do you want something to eat?", say: "Of course. Are you hungry? Do you want something to eat?", note: "offer food"}
+      - {text: "TOM: No, I'm fine, thanks.", say: "No, I'm fine, thanks."}
+      - {text: "MAI: So, what would you like to do in Hue? Are you interested in history?", say: "So, what would you like to do in Whey? Are you interested in history?", note: "ask about interests"}
+      - {text: "TOM: Yes, I am. I'd love to see the old Citadel.", say: "Yes, I am. I'd love to see the old Citadel."}
+      - {text: "MAI: No problem. And would you like to take a boat trip on the Perfume River?", say: "No problem. And would you like to take a boat trip on the Perfume River?", note: "ask what he'd like to do"}
+      - {text: "TOM: Oh yes, please. I like boat trips.", say: "Oh yes, please. I like boat trips."}
+      - {text: "MAI: What else would you like to do?", say: "What else would you like to do?"}
+      - {text: "TOM: I'd like to eat some real Hue food. Bun bo Hue!", say: "I'd like to eat some real Whey food. Boon baw Whey!"}
+      - {text: "MAI: Great. We can go to a restaurant this evening.", say: "Great. We can go to a restaurant this evening."}
+    lines:
+      - emma: "Now a model conversation. Mai lives in Hue, and Tom is her guest. Listen."
+        say: "Now a model conversation. Mai livz in Whey, and Tom is her guest. Listen."
+        vi: "Hội thoại mẫu: Mai sống ở Huế, Tom là khách của cô ấy. Nghe nhé."
+      - {read: mai, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: tom, focus: 5}
+      - {read: mai, focus: 6}
+      - {read: tom, focus: 7}
+      - {read: mai, focus: 8}
+      - {read: tom, focus: 9}
+      - {read: mai, focus: 10}
+      - emma: "Great! Notice that Mai asks about drink, food, interests and things to do. That's the task."
+        vi: "Mai hỏi đủ: đồ uống, đồ ăn, sở thích, việc muốn làm — đúng yêu cầu của bài."
+
+  - kind: qa
+    chapter: "Đến lượt bạn: làm khách"
+    heading: "Task 4 · You are the guest"
+    heading_vi: "Mai hỏi — bạn tạm dừng video và trả lời như một người khách; rồi nghe Tom"
+    items:
+      - {q: "Would you like something to drink?", a: "Yes, please. A cup of tea, please.", ask: mai, by: tom}
+      - {q: "Are you hungry? Do you want something to eat?", a: "No, I'm fine, thank you.", ask: mai, by: tom}
+      - {q: "What are you interested in?", a: "I'm interested in food and old buildings.", ask: mai, by: tom}
+      - {q: "What would you like to do here?", a: "I'd like to see the market, and I'd love to try some street food.", ask: mai, by: tom}
+    lines:
+      - emma: "Your turn. First, you are the guest. Mai asks, you answer. Pause the video if you need time."
+        vi: "Đến lượt bạn: bạn là khách. Mai hỏi, bạn trả lời; cần thì tạm dừng video."
+      - {mai: "Would you like something to drink?", focus: 0, pause: 1.5}
+      - {tom: "Yes, please. A cup of tea, please.", reveal: 0}
+      - {mai: "Are you hungry? Do you want something to eat?", focus: 1, pause: 1.5}
+      - {tom: "No, I'm fine, thank you.", reveal: 1}
+      - {mai: "What are you interested in?", focus: 2, pause: 1.5}
+      - {tom: "I'm interested in food and old buildings.", reveal: 2}
+      - {mai: "What would you like to do here?", focus: 3, pause: 1.5}
+      - {tom: "I'd like to see the market, and I'd love to try some street food.", reveal: 3}
+      - emma: "Now change roles. You are the host. Ask your guest four questions: a drink, food, interests, and things to do."
+        vi: "Đổi vai: bạn là chủ nhà, hỏi khách bốn điều — đồ uống, đồ ăn, sở thích, việc muốn làm."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc khi mời và hỏi"
+    items:
+      - {wrong: "Do you like something to drink?", right: "Would you like something to drink?", note: "mời: would you like; do you like = bạn có thích … (nói chung)"}
+      - {wrong: "I'm interesting in history.", right: "I'm interested in history.", note: "người → interested in; vật → interesting"}
+      - {wrong: "I'd like see the Citadel.", right: "I'd like to see the Citadel.", note: "would like + to + động từ"}
+      - {wrong: "Yes, I like.", right: "Yes, please.", note: "nhận lời mời: Yes, please / No, thanks"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "To offer, say: Would you like something to drink? Do you like means you like it in general.", focus: 0}
+      - {emma: "Say I'm interested in history. History is interesting, but I am interested.", focus: 1}
+      - {emma: "I'd like to see. Don't forget to.", focus: 2}
+      - {emma: "And to say yes to an offer: Yes, please.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Would you like something to drink? · Do you want something to eat?", vi: "Mời đồ uống, đồ ăn"}
+      - {en: "Are you interested in …? · Would you like to …?", vi: "Hỏi sở thích, mong muốn"}
+      - {en: "Yes, please. · No, thanks. I'm fine.", vi: "Nhận / từ chối lời mời"}
+      - {en: "I'm interested in … · I'd like to … · I'd love to …", vi: "Nói điều mình thích, muốn làm"}
+    lines:
+      - {emma: "Let's remember. To offer: Would you like something to drink?", focus: 0}
+      - {emma: "To ask about interests: Are you interested in …? Would you like to …?", focus: 1}
+      - {emma: "To answer: Yes, please, or No, thanks, I'm fine.", focus: 2}
+      - {emma: "And: I'm interested in, I'd like to, I'd love to. In the next video, we explore the word in, and we write an email.", focus: 3, vi: "Video sau: từ in và viết email nhờ việc."}

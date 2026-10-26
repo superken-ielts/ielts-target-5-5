@@ -1,0 +1,312 @@
+# Unit 2 · Away from home — Bài 2.1 (Coursebook tr. 18–19): I miss my friends, Would you like …? Phiên U02-lesson-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U02-lesson-1.yaml
+# Nguồn: trang 18–19; đáp án theo Teacher's Book tr. 31–32 (1a: A snow, B sun, C food, D rabbits; 1b: Carly snow, Paula
+# sun, Khalid food, Angharad rabbits; 3: Carly ở Nhật, Scott ở Canada; 4a: newspapers, magazines, boots, a winter coat,
+# a rucksack; 4b: vui vẻ mang newspapers, (magazines), a rucksack — không muốn mang boots (mua ở Nhật được), winter coat
+# (nặng, vali đầy); Vocabulary 1: offers → Yes, please / No, thanks, requests → OK, All right, No, sorry, Yes, of course,
+# No problem, No, I'm afraid not; Grammar 3a: 3 a, 4 an, 5 some, 6 a, 7 a, 8 an, 9 some, 10 some).
+# Audio gốc: 1.21 (bốn người, phát từng người), 1.22 (Carly và Scott, phát nguyên bài rồi phát lại hai câu), 1.23 (từng
+# cụm a / an / some), 1.24 (từng từ, trọng âm). Mốc lấy từ work/transcripts/*.json.
+# Ảnh: tranh A–D trang 18 (PDF trang 19), dải 4 tranh xếp thành lưới 2×2.
+id: U02-lesson-1
+activity: U02-lesson-1
+title: "Unit 2 · Away from home"
+subtitle: "Listening · I miss my friends: offers, requests, a / an / some"
+title_vi: "Nhớ nhà; nghe Carly và Scott gọi điện; mời và nhờ; a / an / some; trọng âm từ (trang 18–19, audio 1.21–1.24)"
+tag: "EU A2 · UNIT 2"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 2: Away from home. In this lesson, we listen to people who miss things from home, and to a phone call."
+        say: "Welcome to Unit two: Away from home. In this lesson, we listen to people who miss things from home, and to a phone call."
+        vi: "Unit 2: Away from home — Xa nhà. Bài này nghe những người nhớ nhà và một cuộc gọi điện thoại."
+      - emma: "Then we learn to make offers and requests, and a, an and some."
+        vi: "Rồi học cách mời, cách nhờ, và a / an / some."
+      - mai: "Away from home? I know that feeling!"
+        vi: "Xa nhà à? Mình hiểu cảm giác đó!"
+
+  - kind: match
+    chapter: "Bài 1a: tìm trong tranh"
+    heading: "Listening 1a · Find these things in pictures A–D"
+    heading_vi: "Tìm trong tranh A–D: sun (mặt trời), snow (tuyết), rabbits (thỏ), food (đồ ăn)"
+    image: {pdf: course-book, page: 19, clip: [13.2, 226.8, 533.4, 348.6], grid: 4}
+    items:
+      - {n: 1, q: "sun", answer: B}
+      - {n: 2, q: "snow", answer: A}
+      - {n: 3, q: "rabbits", answer: D}
+      - {n: 4, q: "food", answer: C}
+    lines:
+      - emma: "Look at pictures A to D. Find these things: sun, snow, rabbits, food."
+        say: "Look at pictures eigh to dee. Find these things: sun, snow, rabbits, food."
+        vi: "Nhìn tranh A–D và tìm: mặt trời, tuyết, thỏ, đồ ăn."
+      - {tom: "Picture A is snow. Picture B is the sun.", say: "Picture eigh is snow. Picture bee is the sun.", reveal: [2, 1], vi: "Tranh A là tuyết, tranh B là mặt trời."}
+      - {tom: "C is food, and D is rabbits.", say: "See is food, and dee is rabbits.", reveal: [4, 3], vi: "C là đồ ăn, D là thỏ."}
+
+  - kind: blanks
+    chapter: "Nghe 1.21: ai nhớ gì?"
+    heading: "Listening 1b–c · Who misses each thing?"
+    heading_vi: "Đoán chữ còn thiếu (sun, snow, rabbits, food), rồi nghe 1.21 để kiểm tra"
+    items:
+      - {n: 1, q: "When I'm in Japan, away from home, I really miss the ___ in winter.", answer: "snow", hint: "Carly, Canada"}
+      - {n: 2, q: "When I'm not at home, I really miss the ___, I miss my friends.", answer: "sun", hint: "Paula, Argentina"}
+      - {n: 3, q: "I also miss the ___. Sudanese food is really nice.", answer: "food", hint: "Khalid, Sudan"}
+      - {n: 4, q: "When I'm away from home, I really miss my family, my ___ and the food.", answer: "rabbits", hint: "Angharad, Switzerland"}
+    lines:
+      - emma: "Now read the quotes. Who misses each thing? Guess first, then listen to check."
+        vi: "Đọc các câu trích: ai nhớ điều gì? Đoán trước rồi nghe để kiểm tra."
+        pause: 1.5
+      - {track: "1.21", start: 3.3, end: 17.9, note: "1.21 · Carly, from Canada", focus: 0, reveal: 1}
+      - {track: "1.21", start: 20.0, end: 28.2, note: "1.21 · Paula, from Argentina", focus: 1, reveal: 2}
+      - {track: "1.21", start: 30.2, end: 39.9, note: "1.21 · Khalid, from Sudan", focus: 2, reveal: 3}
+      - {track: "1.21", start: 42.1, end: 49.3, note: "1.21 · Angharad, from Switzerland", focus: 3, reveal: 4}
+      - emma: "Miss means you are sad because something is not with you. What do you miss when you're away from home, Mai?"
+        vi: "miss = nhớ (vì không có bên mình). Mai, khi xa nhà bạn nhớ gì?"
+      - mai: "When I'm away from home, I really miss my mum's cooking, and the rain in Hue!"
+        say: "When I'm away from home, I really miss my mum's cooking, and the rain in Whey!"
+        vi: "Khi xa nhà, mình rất nhớ cơm mẹ nấu, và cả mưa Huế!"
+      - emma: "Now you. Say two or three things you miss."
+        vi: "Đến lượt bạn: nói hai, ba điều bạn nhớ khi xa nhà."
+
+  - kind: letter
+    chapter: "Email của Scott"
+    heading: "Reading 3 · Scott's email"
+    heading_vi: "Carly ở đâu? Scott ở đâu?"
+    roles: {emma: teacher, tom: Scott}
+    items:
+      - {text: "Hi Carly,"}
+      - {text: "My flight arrives at Tokyo Narita airport at 9am on Friday.", note: "Scott flies to Japan"}
+      - {text: "Would you like anything from Canada? Phone me!", note: "an offer"}
+      - {text: "Scott"}
+    lines:
+      - emma: "Carly has a brother, Scott. Read his email. Where's Carly? Where's Scott?"
+        vi: "Carly có anh trai là Scott. Đọc email của anh ấy: Carly ở đâu? Scott ở đâu?"
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1, say: "My flight arrives at Tokyo Narita airport at nine eigh em on Friday."}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {emma: "So Carly is in Japan, and Scott is in Canada. He's going to visit her.", focus: 1, vi: "Carly ở Nhật, Scott ở Canada — anh ấy sắp sang thăm em gái."}
+
+  - kind: blanks
+    chapter: "Nghe 1.22: Carly và Scott"
+    heading: "Listening 4a · Tick the things they talk about"
+    heading_vi: "Audio 1.22 — Carly và Scott nói chuyện điện thoại về những thứ nào?"
+    items:
+      - {n: 1, q: "newspapers: ___", answer: "yes"}
+      - {n: 2, q: "magazines: ___", answer: "yes"}
+      - {n: 3, q: "a camera: ___", answer: "no"}
+      - {n: 4, q: "boots: ___", answer: "yes"}
+      - {n: 5, q: "a winter coat: ___", answer: "yes"}
+      - {n: 6, q: "two books: ___", answer: "no"}
+      - {n: 7, q: "a rucksack: ___", answer: "yes"}
+    lines:
+      - emma: "Now listen to Carly and Scott on the phone. Tick the things they talk about. Boots are big shoes for winter. A rucksack is a big bag for your back."
+        vi: "Nghe Carly và Scott gọi điện, đánh dấu những thứ họ nói tới. boots = giày cao cổ; rucksack = ba lô."
+      - {track: "1.22", start: 3.0, end: 80.9, note: "1.22 · Carly and Scott"}
+      - {tom: "They talk about newspapers, magazines, boots, a winter coat and a rucksack.", reveal: [1, 2, 4, 5, 7], vi: "Họ nói về báo, tạp chí, giày cao cổ, áo khoác mùa đông và ba lô."}
+      - {emma: "Right. Not a camera, and not books.", reveal: [3, 6], vi: "Đúng. Không có máy ảnh, không có sách."}
+
+  - kind: compare
+    chapter: "Bài 4b: Scott có vui không?"
+    heading: "Listening 4b · What's Scott happy to bring?"
+    heading_vi: "Scott vui vẻ mang gì? Không muốn mang gì, vì sao?"
+    items:
+      - {title: "Happy to bring", title_vi: "Vui vẻ mang", lines: ["newspapers: Yeah, OK.", "magazines: Would you like some magazines? — No, thanks.", "Carly's old rucksack"]}
+      - {title: "Not happy to bring", title_vi: "Không muốn mang", lines: ["boots: you can buy boots in Japan", "a winter coat: it's really heavy, and his suitcase is full"]}
+    lines:
+      - emma: "What's Scott happy to bring? What's he not happy to bring?"
+        vi: "Scott vui vẻ mang gì, không muốn mang gì?"
+      - {tom: "He's happy to bring newspapers. He offers magazines too, but Carly says no, thanks.", focus: 0, vi: "Anh ấy vui vẻ mang báo, còn mời mang thêm tạp chí nhưng Carly không cần."}
+      - {tom: "He isn't happy to bring the boots, because you can buy boots in Japan.", focus: 1, vi: "Anh ấy không muốn mang giày vì ở Nhật cũng mua được."}
+      - {tom: "And the winter coat is really heavy, and his suitcase is full.", focus: 1, vi: "Áo khoác thì nặng, vali lại đầy."}
+      - {emma: "But in the end he says all right. He brings the coat in Carly's old rucksack.", focus: 0, vi: "Nhưng cuối cùng anh ấy đồng ý, mang áo khoác trong chiếc ba lô cũ của Carly."}
+
+  - kind: compare
+    chapter: "Mời và nhờ"
+    heading: "Vocabulary 1 · Offers and requests"
+    heading_vi: "Mời (offer) và nhờ / xin (request) — trả lời thế nào?"
+    items:
+      - {title: "Offers", title_vi: "Mời", lines: ["Would you like some magazines?", "Would you like anything from home?"]}
+      - {title: "Requests", title_vi: "Nhờ, xin", lines: ["Can I / Could I use your old rucksack?", "Can you / Could you bring my winter coat?"]}
+      - {title: "Answers", title_vi: "Trả lời", lines: ["offer: Yes, please. · No, thanks.", "request: OK. · All right. · Yes, of course. · No problem.", "No, sorry. · No, I'm afraid not."]}
+    lines:
+      - emma: "Let's look at the language. Scott makes an offer: Would you like some magazines? Listen to Carly's answer."
+        focus: 0
+        vi: "Scott mời: Would you like some magazines? Nghe Carly trả lời."
+      - {track: "1.22", start: 16.2, end: 19.6, note: "1.22 · an offer", focus: 0}
+      - emma: "Now a request: Can I use your old rucksack? Listen."
+        focus: 1
+        vi: "Còn đây là lời xin: Can I use your old rucksack?"
+      - {track: "1.22", start: 74.4, end: 78.3, note: "1.22 · a request", focus: 1}
+      - emma: "To answer an offer, say Yes, please, or No, thanks. To answer a request: OK, All right, Yes, of course, No problem. Or No, sorry, or No, I'm afraid not."
+        focus: 2
+        vi: "Đáp lời mời: Yes, please / No, thanks. Đáp lời nhờ: OK, All right, Yes, of course, No problem — hoặc No, sorry / No, I'm afraid not."
+      - tom: "So I don't say Yes, please to a request?"
+        vi: "Vậy với lời nhờ thì không nói Yes, please à?"
+      - emma: "That's right. Can I use your phone? Yes, of course. Not Yes, please."
+        vi: "Đúng. Can I use your phone? — Yes, of course, không phải Yes, please."
+
+  - kind: qa
+    chapter: "Bài 2: mời và nhờ thêm"
+    heading: "Vocabulary 2 · Make more offers and requests"
+    heading_vi: "Nghe câu mời / nhờ, tạm dừng video để trả lời, rồi nghe câu trả lời mẫu"
+    items:
+      - {q: "Would you like something to eat?", a: "Yes, please. I'm really hungry!", ask: tom, by: mai}
+      - {q: "Can I use your dictionary?", a: "Yes, of course. Here you are.", ask: mai, by: tom}
+      - {q: "Could you spell your name, please?", a: "Yes, of course. M-A-I, Mai.", ask: tom, by: mai}
+      - {q: "Could you open the window?", a: "No, I'm afraid not. It's very cold today!", ask: mai, by: tom}
+    lines:
+      - emma: "Exercise 2. Tom and Mai make more offers and requests. Answer first, then listen."
+        say: "Exercise two. Tom and Mai make more offers and requests. Answer first, then listen."
+        vi: "Bài 2: Tom và Mai mời, nhờ nhau. Bạn trả lời trước rồi nghe."
+      - {tom: "Would you like something to eat?", focus: 0, pause: 1.5}
+      - {mai: "Yes, please. I'm really hungry!", reveal: 0}
+      - {mai: "Can I use your dictionary?", focus: 1, pause: 1.5}
+      - {tom: "Yes, of course. Here you are.", reveal: 1}
+      - {tom: "Could you spell your name, please?", focus: 2, pause: 1.5}
+      - {mai: "Yes, of course. M-A-I, Mai.", say: "Yes, of course. em. eigh. eye. My.", reveal: 2}
+      - {mai: "Could you open the window?", focus: 3, pause: 1.5}
+      - {tom: "No, I'm afraid not. It's very cold today!", reveal: 3}
+
+  - kind: blanks
+    chapter: "a, an, some — nghe 1.23"
+    heading: "Grammar 3a · Write a, an or some"
+    heading_vi: "Điền a, an hay some — tạm dừng video làm trước, rồi nghe 1.23"
+    items:
+      - {n: 1, q: "___ cup of coffee", answer: "a"}
+      - {n: 2, q: "___ books", answer: "some"}
+      - {n: 3, q: "___ glass of apple juice", answer: "a"}
+      - {n: 4, q: "___ apple", answer: "an"}
+      - {n: 5, q: "___ magazines", answer: "some"}
+      - {n: 6, q: "___ sandwich", answer: "a"}
+      - {n: 7, q: "___ newspaper", answer: "a"}
+      - {n: 8, q: "___ orange", answer: "an"}
+      - {n: 9, q: "___ oranges", answer: "some"}
+      - {n: 10, q: "___ clothes", answer: "some"}
+    lines:
+      - emma: "Grammar. Write a, an or some. Numbers 1 and 2 are examples. Pause the video and try, then listen."
+        say: "Grammar. Write a, an or some. Numbers one and two are examples. Pause the video and try, then listen."
+        vi: "Ngữ pháp: điền a, an hay some (câu 1, 2 là ví dụ). Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "1.23", start: 3.5, end: 6.9, note: "1.23 · 1", focus: 0, reveal: 1}
+      - {track: "1.23", start: 9.0, end: 11.8, note: "1.23 · 2", focus: 1, reveal: 2}
+      - {track: "1.23", start: 14.4, end: 18.0, note: "1.23 · 3", focus: 2, reveal: 3}
+      - {track: "1.23", start: 20.9, end: 23.2, note: "1.23 · 4", focus: 3, reveal: 4}
+      - {track: "1.23", start: 25.9, end: 28.9, note: "1.23 · 5", focus: 4, reveal: 5}
+      - {track: "1.23", start: 31.6, end: 34.1, note: "1.23 · 6", focus: 5, reveal: 6}
+      - {track: "1.23", start: 37.3, end: 40.0, note: "1.23 · 7", focus: 6, reveal: 7}
+      - {track: "1.23", start: 43.4, end: 45.7, note: "1.23 · 8", focus: 7, reveal: 8}
+      - {track: "1.23", start: 48.5, end: 51.5, note: "1.23 · 9", focus: 8, reveal: 9}
+      - {track: "1.23", start: 54.2, end: 56.6, note: "1.23 · 10", focus: 9, reveal: 10}
+
+  - kind: compare
+    chapter: "Quy tắc a, an, some"
+    heading: "Grammar 3b · a, an and some"
+    heading_vi: "a / an = một; some = hai, ba, bốn …"
+    items:
+      - {title: "a / an = 1", title_vi: "một thứ (số ít)", lines: ["a + consonant: a cup, a sandwich, a newspaper", "an + vowel (a, e, i, o, u): an apple, an orange"]}
+      - {title: "some = 2, 3, 4 …", title_vi: "nhiều thứ (số nhiều)", lines: ["some books · some magazines", "some oranges · some clothes"]}
+    lines:
+      - emma: "The rules. A or an means one. We use an before a vowel: a, e, i, o, u. An apple, an orange."
+        say: "The rules. A or an means one. We use an before a vowel: eigh, ee, eye, oh, you. An apple, an orange."
+        focus: 0
+        vi: "a / an = một. Dùng an trước nguyên âm a, e, i, o, u: an apple, an orange."
+      - {emma: "And a before a consonant, like b, c or d: a cup, a sandwich, a newspaper.", say: "And a before a consonant, like bee, see or dee: a cup, a sandwich, a newspaper.", focus: 0, vi: "Dùng a trước phụ âm: a cup, a sandwich, a newspaper."}
+      - {emma: "Some is for two, three, four or more: some books, some oranges, some clothes.", focus: 1, vi: "some dùng cho số nhiều: some books, some oranges."}
+      - mai: "In Vietnamese, the word doesn't change: one apple, two apple. In English, I must say two apples!"
+        focus: 1
+        vi: "Tiếng Việt không đổi hình thức số nhiều; tiếng Anh thì phải thêm s: two apples!"
+
+  - kind: vocab
+    chapter: "Trọng âm — nghe 1.24"
+    heading: "Pronunciation 4 · Word stress"
+    heading_vi: "Từ có hai hay ba âm tiết? Trọng âm ở đâu? Nghe 1.24, tạm dừng để nhắc lại"
+    items:
+      - {w: "coffee", pos: "COF·fee — 2 syllables", vi: "cà phê", ex: "a cup of coffee"}
+      - {w: "apple", pos: "AP·ple — 2 syllables", vi: "quả táo", ex: "an apple"}
+      - {w: "sandwich", pos: "SAND·wich — 2 syllables", vi: "bánh mì kẹp", ex: "a sandwich"}
+      - {w: "orange", pos: "OR·ange — 2 syllables", vi: "quả cam", ex: "an orange"}
+      - {w: "magazines", pos: "MAG·a·zines — 3 syllables", vi: "tạp chí", ex: "some magazines"}
+      - {w: "newspaper", pos: "NEWS·pa·per — 3 syllables", vi: "tờ báo", ex: "a newspaper"}
+      - {w: "oranges", pos: "OR·an·ges — 3 syllables", vi: "những quả cam", ex: "some oranges"}
+    lines:
+      - emma: "Pronunciation. Coffee has two syllables, and the stress is on the first one. Newspaper has three syllables. Listen and repeat."
+        focus: 0
+        vi: "Phát âm: coffee có hai âm tiết, nhấn âm đầu; newspaper có ba âm tiết. Nghe và nhắc lại."
+      - {track: "1.24", start: 5.5, end: 6.6, note: "1.24 · coffee", focus: 0, pause: 1.2}
+      - {track: "1.24", start: 8.6, end: 9.7, note: "1.24 · apple", focus: 1, pause: 1.2}
+      - {track: "1.24", start: 11.7, end: 12.9, note: "1.24 · sandwich", focus: 2, pause: 1.2}
+      - {track: "1.24", start: 15.1, end: 16.1, note: "1.24 · orange", focus: 3, pause: 1.2}
+      - {track: "1.24", start: 21.0, end: 22.6, note: "1.24 · magazines", focus: 4, pause: 1.2}
+      - {track: "1.24", start: 24.8, end: 26.2, note: "1.24 · newspaper", focus: 5, pause: 1.2}
+      - {track: "1.24", start: 28.6, end: 30.0, note: "1.24 · oranges", focus: 6, pause: 1.2}
+      - emma: "Two more things. In magazines, the stress can also be at the end. And clothes has only one syllable."
+        focus: 4
+        vi: "magazines còn có thể nhấn âm cuối (maga-ZINES). clothes chỉ có một âm tiết, đừng đọc thành hai."
+
+  - kind: letter
+    chapter: "Hội thoại mẫu"
+    heading: "Speaking 5 · Situation 1: a friend visits"
+    heading_vi: "Mai sống ở London; Tom ở Huế, tuần sau sang thăm Mai — Tom hỏi Mai muốn gì từ quê nhà"
+    roles: {emma: teacher, mai: lives in London, tom: visits}
+    items:
+      - {text: "TOM: Hi Mai! I'm coming to London next week. Would you like anything from Hue?", say: "Hi Mai! I'm coming to London next week. Would you like anything from Whey?", note: "an offer"}
+      - {text: "MAI: Oh yes, please! Could you bring some Vietnamese coffee?", say: "Oh yes, please! Could you bring some Vietnamese coffee?", note: "a request"}
+      - {text: "TOM: Of course. Anything else?", say: "Of course. Anything else?"}
+      - {text: "MAI: Can you get some rice paper? I want to make spring rolls.", say: "Can you get some rice paper? I want to make spring rolls.", note: "a request"}
+      - {text: "TOM: No problem.", say: "No problem."}
+      - {text: "MAI: And could you bring my winter coat? It's cold here!", say: "And could you bring my winter coat? It's cold here!", note: "a request"}
+      - {text: "TOM: Sorry, Mai. My suitcase is full!", say: "Sorry, Mai. My suitcase is full!", note: "no"}
+      - {text: "MAI: OK. Thanks a lot, Tom.", say: "OK. Thanks a lot, Tom."}
+    lines:
+      - emma: "Speaking. Situation 1. You're friends. Mai lives in London now. Tom lives in Hue, and he visits Mai next week. Listen."
+        say: "Speaking. Situation one. You're friends. Mai livz in London now. Tom livz in Whey, and he visits Mai next week. Listen."
+        vi: "Tình huống 1: hai người bạn. Mai đang sống ở London, Tom ở Huế và tuần sau sang thăm Mai."
+      - {read: tom, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: tom, focus: 4}
+      - {read: mai, focus: 5}
+      - {read: tom, focus: 6}
+      - {read: mai, focus: 7}
+      - emma: "Now you. Situation 2: you're colleagues, and it's lunchtime. You go to a shop. Ask your colleague what they want."
+        say: "Now you. Situation two: you're colleagues, and it's lunchtime. You go to a shop. Ask your colleague what they want."
+        vi: "Đến lượt bạn — tình huống 2: đồng nghiệp, giờ ăn trưa; bạn ra cửa hàng, hỏi đồng nghiệp muốn mua gì (Would you like …? Could you get me …?)."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc với a / an / some và lời nhờ"
+    items:
+      - {wrong: "Would you like some magazine?", right: "Would you like some magazines?", note: "some + danh từ số nhiều"}
+      - {wrong: "I'd like a apple.", right: "I'd like an apple.", note: "an trước nguyên âm a, e, i, o, u"}
+      - {wrong: "Can I use your rucksack? — Yes, please.", right: "Can I use your rucksack? — Yes, of course.", note: "đáp lời nhờ: Yes, of course / No problem"}
+      - {wrong: "Could you to bring my coat?", right: "Could you bring my coat?", note: "can / could + động từ, không có to"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "Some magazines, with s. Some is for more than one.", focus: 0}
+      - {emma: "An apple. Use an before a vowel.", say: "An apple. Yooz an before a vowel.", focus: 1}
+      - {emma: "Can I use your rucksack? Yes, of course. Yes, please is for offers.", focus: 2}
+      - {emma: "Could you bring. No to after could.", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "When I'm away from home, I really miss …", vi: "Nói điều mình nhớ khi xa nhà"}
+      - {en: "Would you like …? — Yes, please. · No, thanks.", vi: "Mời và đáp lời mời"}
+      - {en: "Can I / Could I …? · Can you / Could you …? — Yes, of course. · No, sorry.", vi: "Nhờ, xin và đáp lời nhờ"}
+      - {en: "a cup · an apple · some books", vi: "a / an = một; some = nhiều"}
+    lines:
+      - {emma: "Let's remember. When I'm away from home, I really miss my family.", focus: 0}
+      - {emma: "To offer: Would you like something to drink? Yes, please, or No, thanks.", focus: 1}
+      - {emma: "To ask: Can I use your phone? Could you bring my coat? Yes, of course, or No, sorry.", focus: 2}
+      - {emma: "And a cup, an apple, some books. In the next video, we read about Sofasurfing.", say: "And a cup, an apple, some books. In the next video, we read about Sofa surfing.", focus: 3, vi: "Video sau: đọc về Sofasurfing."}

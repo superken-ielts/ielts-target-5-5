@@ -212,8 +212,9 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 2. Viết bốn kịch bản `books/book_english_unlimited_a2_elemetary/lessons/Uxx-*.yaml`. Chép phần đầu (speakers, tag)
    từ kịch bản của Unit 1.
 3. `python -m lesson_video check <kịch bản>`.
-4. Soát cách đọc: phiên âm mọi câu có tên riêng, chữ cái, số, từ đồng tự (live, read, bow, close…) bằng
-   `kokoro_onnx.tokenizer.Tokenizer().phonemize(câu, "en-us")`. Sai thì viết `say` (bảng 6.6).
+4. Soát cách đọc: `python -m lesson_video phonemes <kịch bản>` in phiên âm Kokoro của mọi câu có tên riêng, chữ cái,
+   số, từ đồng tự (live, read, use, bow, close…) và đánh dấu ⚠ các lỗi đã gặp. Sai thì viết `say` (bảng 6.6). Từ
+   riêng của unit thì thêm `--watch từ …`; `--all` in mọi câu.
 5. Xem trước không tiếng: `build … --engine silent --out <thư mục tạm> --work <thư mục tạm>/w`, rồi ghép vài khung
    hình mỗi cảnh thành một ảnh để soát: chữ tràn, ảnh cắt lệch, chữ quá nhỏ.
 6. Dựng thật lần lượt từng video (Kokoro dùng hết 4 lõi, mỗi video 15–20 phút). Không chạy hai lần dựng cùng lúc:
@@ -237,8 +238,16 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 - Chữ trên màn hình phải khớp lời đọc. Không viết chữ tiếng Việt vào câu tiếng Anh; nghĩa tiếng Việt để ở `vi`.
 - Cảnh `letter` dùng cho hội thoại có lời in sẵn: Emma giảng trong cảnh này thì khai `roles: {emma: teacher}`, để nhãn
   không ghi "Emma is reading".
+- Track bị thiếu (CD1: 1.27, 1.33, 1.36, 1.39, 1.51):
+  - bài "nghe lại để kiểm tra" (1.27, 1.36) thường là các câu đã có trong bài nghe chính: cắt đúng câu đó từ track
+    chính (1.26, 1.34) theo mốc từng từ;
+  - bài nghe riêng không có ở track nào khác (1.33 Moira và Sam, 1.39 Ruth): nhân vật kể lại theo đáp án Teacher's Book,
+    và nói rõ trên màn hình là không có audio;
+  - ghi track thiếu và cách thay vào đầu kịch bản.
 - Thứ tự commit (mỗi unit một lần): commit trên `origin/main`, `git push origin HEAD:main`, rồi
-  `git merge -s ours origin/claude/<nhánh phiên>` và đẩy nhánh phiên.
+  `git merge -s ours origin/claude/<nhánh phiên>` và đẩy nhánh phiên. Hàng đợi dựng vẫn chạy trong lúc commit thì làm
+  commit trong một `git worktree` riêng ở `origin/main`: chép file của unit sang, chạy `lesson_video prune` để
+  `lessons.json` chỉ còn video đã có kịch bản, rồi dựng web và chạy kiểm tra ngay trong worktree.
 
 ### 6.6 Cách đọc (`say`) riêng của sách này
 
@@ -252,7 +261,8 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 | bows (cúi chào) | `boughs` | Kokoro đọc /boʊz/ (cái nơ) |
 | "the sound ay", "a short e" | viết lại câu, không đánh vần âm | Kokoro đọc ay là /aɪ/, e là /iː/ |
 | page 7, Exercise 3, lesson 1.1 | `page seven`, `Exercise three`, `lesson one point one` | Số đứng riêng đọc chắc hơn khi viết thành chữ |
-| lives, live (động từ) | `livz`, `liv` | Sau danh từ, tên riêng ("My mother lives", "Erkan lives") và trong danh sách từ, Kokoro đọc /laɪvz/, /laɪv/. Sau đại từ (he lives, I live) thì đúng. Quét: phiên âm có `lˈaɪv` |
+| lives, live (động từ) | `livz`, `liv` | Sau danh từ, tên riêng ("My mother lives", "Erkan lives") và trong danh sách từ, Kokoro đọc /laɪvz/, /laɪv/. Sau đại từ (he lives, I live) thì đúng. Lệnh `phonemes` báo ⚠ |
+| use, uses (động từ) | `yooz`, `yoozes` | Câu mệnh lệnh ("Use these phrases", "For the past, use was …") và sau danh từ ("people use both", "nobody uses"), Kokoro đọc /juːs/ như danh từ. "Can I use", "We use" thì đúng. Lệnh `phonemes` báo ⚠ |
 | 2009, 1989, 31 July, August 1 and 2, 9am | `two thousand and nine`, `nineteen eighty-nine`, `the thirty-first of July`, `August first and second`, `nine eigh em` | Năm, ngày tháng, giờ |
 | Ju-Yung, Kildare, Sofasurfing.com | `Joo-young`, `Kill-dare`, `Sofa surfing dot com` | Tên riêng Unit 2 |
 | xin chào, bún bò Huế | `sin chow`, `Boon baw Whey` | Chữ Việt trong câu tiếng Anh: viết chữ Việt ở dòng thoại, cách đọc gần đúng ở `say` |

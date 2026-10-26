@@ -1,0 +1,251 @@
+# Unit 3 · Your time — Explore (Coursebook tr. 31–32): Keyword go, Across cultures (chủ đề nên / không nên nói),
+# Explore Speaking (nhận tin nhắn điện thoại, xin nhắc lại, xin nói chậm, cho thấy mình hiểu). Phiên U03-explore.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U03-explore.yaml
+# Nguồn: trang 31–32; đáp án theo Teacher's Book tr. 41–42 (Keyword 1a: 1 happy, 2 boat, 3 bed, 4 work, 5 meal,
+# 6 Ireland; 1b: go to concerts, parties, Japan · go for a drink, walk · go out with colleagues, family · go shopping,
+# skiing; 2a: 1 d, 2 c, 3 b, 4 e, 5 a; Across cultures 2a Ruth: không nên nói về money, religion, politics, age; 2b Amina:
+# nói được religion, politics, không nói health problems, money problems; Explore Speaking 2a: 1 Gilberto, 2 Friday,
+# 3 944 6532; 3a: 1 Can I talk to Blake, please? 2 Sorry, he isn't here at the moment. 3 Can I take a message?
+# 4 Sorry, can you slow down a bit, please? 5 Sorry, can you say that again? 6 I see. Right. OK.).
+# Audio gốc: 1.40 (Amina), 1.41 (Rocio gọi cho Blake, Paul nghe máy — phát nguyên bài), 1.42 (sáu cụm, phát từng cụm).
+# Track 1.39 (Ruth, người Anh) THIẾU trong bộ CD1: Emma kể lại ý của Ruth theo Teacher's Book.
+# Your turn theo thẻ vai bài 5a (trang 32): John Tredennick gọi tìm Paula, người học ghi tin nhắn.
+id: U03-explore
+activity: U03-explore
+title: "Unit 3 · Your time"
+subtitle: "Explore Speaking · go, conversation topics, phone messages"
+title_vi: "Từ khóa go; chủ đề nên và không nên nói với người mới quen; nhận tin nhắn điện thoại (trang 31–32, audio 1.40–1.42)"
+tag: "EU A2 · UNIT 3"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "This is Explore for Unit 3. First, the keyword go. Then, what can you talk about with new people? And how do you take a phone message?"
+        vi: "Phần Explore của Unit 3: từ khóa go; nói chuyện gì với người mới quen; và cách nhận tin nhắn điện thoại."
+      - tom: "Phone calls are difficult for me. People speak so fast!"
+        vi: "Gọi điện khó với mình lắm. Người ta nói nhanh quá!"
+      - emma: "Don't worry, Tom. Today you learn what to say."
+        vi: "Đừng lo, hôm nay sẽ học cách nói."
+
+  - kind: blanks
+    chapter: "Keyword: go"
+    heading: "Keyword go 1a · Complete the sentences"
+    heading_vi: "Điền Ireland, bed, meal, boat, work, happy — các câu này có trong Unit 2 và Unit 3"
+    items:
+      - {n: 1, q: "We don't go out a lot but we're ___.", answer: "happy"}
+      - {n: 2, q: "Happiness is going fishing on a ___ with my friends.", answer: "boat"}
+      - {n: 3, q: "I guess I go to ___ at one or two.", answer: "bed"}
+      - {n: 4, q: "She usually goes out with friends from ___.", answer: "work"}
+      - {n: 5, q: "We usually go for a ___.", answer: "meal"}
+      - {n: 6, q: "I'd like to go to Cuba and ___.", answer: "Ireland"}
+    lines:
+      - emma: "Keyword: go. Complete the sentences with these words: Ireland, bed, meal, boat, work, happy. Pause the video and try."
+        vi: "Từ khóa go: điền các từ Ireland, bed, meal, boat, work, happy. Tạm dừng video và làm thử."
+        pause: 1.5
+      - {tom: "We don't go out a lot but we're happy.", focus: 0, reveal: 1}
+      - {tom: "Happiness is going fishing on a boat with my friends.", focus: 1, reveal: 2}
+      - {tom: "I guess I go to bed at one or two.", focus: 2, reveal: 3}
+      - {tom: "She usually goes out with friends from work.", focus: 3, reveal: 4}
+      - {tom: "We usually go for a meal.", focus: 4, reveal: 5}
+      - {tom: "I'd like to go to Cuba and Ireland.", focus: 5, reveal: 6}
+
+  - kind: compare
+    chapter: "go to, go for a, go out with, go + -ing"
+    heading: "Keyword go 1b · Four ways to use go"
+    heading_vi: "Xếp concerts, drink, colleagues, family, parties, shopping, walk, skiing, Japan vào bảng"
+    items:
+      - {title: "go to", title_vi: "đi tới (nơi, sự kiện)", lines: ["concerts", "parties", "Japan", "bed · work"]}
+      - {title: "go for a", title_vi: "đi (làm gì đó)", lines: ["drink", "walk", "meal"]}
+      - {title: "go out with", title_vi: "đi chơi cùng", lines: ["colleagues", "family", "friends"]}
+      - {title: "go + -ing", title_vi: "đi + hoạt động", lines: ["shopping", "skiing", "fishing"]}
+    lines:
+      - {emma: "Go to a place or an event: go to concerts, go to parties, go to Japan. And go to bed, go to work.", focus: 0, vi: "go to + nơi chốn, sự kiện: go to concerts, go to Japan, go to bed."}
+      - {emma: "Go for a: go for a drink, go for a walk, go for a meal.", focus: 1, vi: "go for a + drink / walk / meal."}
+      - {emma: "Go out with people: go out with colleagues, go out with family.", focus: 2, vi: "go out with + người: đi chơi cùng ai."}
+      - {emma: "And go plus an i n g verb, with no to: go shopping, go skiing, go fishing.", say: "And go plus an eye en gee verb, with no to: go shopping, go skiing, go fishing.", focus: 3, vi: "go + động từ -ing, không có to: go shopping, go skiing."}
+      - mai: "In Hue, I often go for a walk by the river, and I go shopping at Dong Ba market."
+        say: "In Whey, I often go for a walk by the river, and I go shopping at Dong Bah market."
+        focus: 1
+        vi: "Ở Huế, mình hay đi dạo bờ sông và đi chợ Đông Ba."
+
+  - kind: pairs
+    chapter: "Bài 2a: hỏi và trả lời với go"
+    heading: "Keyword go 2a · Match the questions and answers"
+    heading_vi: "Nối câu hỏi với câu trả lời — nghe Tom hỏi, Mai trả lời"
+    items:
+      - {n: 1, q: "How often do you go for a walk?", answer: d}
+      - {n: 2, q: "Do you ever go to restaurants?", answer: c}
+      - {n: 3, q: "Would you like to go to Cuba?", answer: b}
+      - {n: 4, q: "Where do you go shopping?", answer: e}
+      - {n: 5, q: "Do you like going out with colleagues?", answer: a}
+    options:
+      - {k: a, text: "Yes. We always go for a drink on Friday evenings."}
+      - {k: b, text: "Yes, I'd love to!"}
+      - {k: c, text: "Sometimes, but I like cooking at home."}
+      - {k: d, text: "Not very often. I don't have time."}
+      - {k: e, text: "I go to the supermarket in the town centre."}
+    lines:
+      - emma: "Exercise 2. Match the questions and answers. Listen to Tom and Mai."
+        say: "Exercise two. Match the questions and answers. Listen to Tom and Mai."
+        vi: "Bài 2: nối câu hỏi với câu trả lời."
+      - {tom: "How often do you go for a walk?", focus: 0}
+      - {mai: "Not very often. I don't have time.", reveal: 1}
+      - {tom: "Do you ever go to restaurants?", focus: 1}
+      - {mai: "Sometimes, but I like cooking at home.", reveal: 2}
+      - {tom: "Would you like to go to Cuba?", focus: 2}
+      - {mai: "Yes, I'd love to!", reveal: 3}
+      - {tom: "Where do you go shopping?", focus: 3}
+      - {mai: "I go to the supermarket in the town centre.", reveal: 4}
+      - {tom: "Do you like going out with colleagues?", focus: 4}
+      - {mai: "Yes. We always go for a drink on Friday evenings.", reveal: 5}
+
+  - kind: compare
+    chapter: "Nói chuyện gì với người mới quen?"
+    heading: "Across cultures · Conversation dos and don'ts"
+    heading_vi: "Tám chủ đề: age (tuổi), religion (tôn giáo), money (tiền), work, politics (chính trị), health (sức khỏe), home, family"
+    items:
+      - {title: "Ruth, the UK", title_vi: "với người chưa quen thân thì không nói về", lines: ["money", "religion", "politics", "age"]}
+      - {title: "Amina, Lebanon", title_vi: "nói được / không nói", lines: ["OK: religion, politics", "not OK: health problems", "not OK: money problems"]}
+    lines:
+      - emma: "Across cultures. Which topics are OK to talk about with people you don't know very well? Age, religion, money, work, politics, health, home, family?"
+        vi: "Chủ đề nào nói được với người chưa quen thân?"
+      - emma: "Ruth is from the UK. Her recording isn't in our audio files, so here is what she says: with people you don't know well, don't talk about money, religion, politics or age."
+        focus: 0
+        vi: "Không có audio của Ruth (1.39). Theo Teacher's Book: đừng nói về tiền, tôn giáo, chính trị, tuổi tác."
+      - emma: "Now listen to Amina from Lebanon. What does she say about the topics?"
+        focus: 1
+        vi: "Giờ nghe Amina, người Li-băng."
+      - {track: "1.40", start: 2.6, end: 21.7, note: "1.40 · Amina, from Lebanon", focus: 1}
+      - {tom: "So in Lebanon, religion and politics are OK, but health problems and money problems are not.", focus: 1, vi: "Ở Li-băng, nói về tôn giáo, chính trị thì được; còn chuyện sức khỏe, tiền bạc thì không."}
+
+  - kind: qa
+    chapter: "Ở Việt Nam thì sao?"
+    heading: "Across cultures 3–4 · What about Vietnam?"
+    heading_vi: "Mai kể về Việt Nam — bạn tạm dừng video và trả lời cho nước bạn"
+    items:
+      - {q: "In Vietnam, is it OK to ask someone's age?", a: "Yes, it's OK. We often ask How old are you? because we need to know what to call the person.", ask: emma, by: mai}
+      - {q: "Is it OK to talk about money?", a: "Some people ask how much you earn, but many people don't like that question.", ask: emma, by: mai}
+      - {q: "And family?", a: "Yes, family is a very usual topic. People often ask: Are you married? Do you have children?", ask: emma, by: mai}
+    lines:
+      - emma: "What about Vietnam, Mai? Use these phrases: I usually talk about, it's not polite to discuss, people don't usually like talking about."
+        say: "What about Vietnam, Mai? Yooz these phrases: I usually talk about, it's not polite to discuss, people don't usually like talking about."
+        vi: "Ở Việt Nam thì sao? Dùng: I usually talk about …, It's not polite to discuss …, People don't usually like talking about …"
+      - {emma: "In Vietnam, is it OK to ask someone's age?", focus: 0, pause: 1.5}
+      - {mai: "Yes, it's OK. We often ask How old are you? because we need to know what to call the person.", reveal: 0, vi: "Được. Người Việt hay hỏi tuổi để biết xưng hô (anh, chị, em …)."}
+      - {emma: "Is it OK to talk about money?", focus: 1, pause: 1.5}
+      - {mai: "Some people ask how much you earn, but many people don't like that question.", reveal: 1}
+      - {emma: "And family?", focus: 2, pause: 1.5}
+      - {mai: "Yes, family is a very usual topic. People often ask: Are you married? Do you have children?", reveal: 2}
+      - emma: "Now you. Which topics are OK in your country, and which are not?"
+        vi: "Đến lượt bạn: ở nước bạn, chủ đề nào nói được, chủ đề nào không?"
+
+  - kind: blanks
+    chapter: "Nghe 1.41: tin nhắn cho Blake"
+    heading: "Explore Speaking 2 · Complete Paul's note"
+    heading_vi: "Rocio gọi tìm Blake, Paul nghe máy và ghi tin nhắn — nghe 1.41, điền tờ ghi chú"
+    items:
+      - {n: 1, q: "Message for: ___", answer: "Blake"}
+      - {n: 2, q: "From: Rocio ___", answer: "Gilberto"}
+      - {n: 3, q: "Day / time: ___", answer: "4.15"}
+      - {n: 4, q: "Message: Sorry, can't do dinner tonight. Can you come on ___?", answer: "Friday"}
+      - {n: 5, q: "Phone: 0778 ___", answer: "944 6532"}
+    lines:
+      - emma: "Explore Speaking. Rocio calls Blake, but Blake isn't there. His friend Paul answers the phone and takes a message. Listen and complete Paul's note."
+        vi: "Rocio gọi cho Blake nhưng Blake vắng nhà; Paul nghe máy và ghi tin nhắn. Nghe và điền tờ ghi chú."
+        reveal: [1, 3]
+      - {track: "1.41", start: 6.0, end: 93.6, note: "1.41 · Rocio and Paul"}
+      - {tom: "Her name is Rocio Gilberto. She can't do dinner tonight. Can Blake come on Friday? And her number is 0778 944 6532.", say: "Her name is Rocio Gilberto. She can't do dinner tonight. Can Blake come on Friday? And her number is oh double seven eight, nine double four, six five three two.", reveal: [2, 4, 5], vi: "Tên: Rocio Gilberto; hủy bữa tối nay, hẹn thứ Sáu; số điện thoại 0778 944 6532."}
+
+  - kind: pairs
+    chapter: "Mẫu câu điện thoại — nghe 1.42"
+    heading: "Explore Speaking 3 · Which expressions can you use …?"
+    heading_vi: "Nối tình huống với câu nói — nghe lại từng câu trong 1.42"
+    items:
+      - {n: 1, q: "when you want to talk to someone", answer: c}
+      - {n: 2, q: "when the person isn't there", answer: e}
+      - {n: 3, q: "when you offer to take a message", answer: a}
+      - {n: 4, q: "when someone speaks too fast", answer: f}
+      - {n: 5, q: "when you want someone to repeat", answer: d}
+      - {n: 6, q: "to say you understand", answer: b}
+    options:
+      - {k: a, text: "Can I take a message?"}
+      - {k: b, text: "I see. · Right. · OK."}
+      - {k: c, text: "Can I talk to Blake, please?"}
+      - {k: d, text: "Sorry, can you say that again?"}
+      - {k: e, text: "Sorry, he isn't here at the moment."}
+      - {k: f, text: "Sorry, can you slow down a bit, please?"}
+    lines:
+      - emma: "Exercise 3. Which expressions can you use? Listen to each one."
+        say: "Exercise three. Which expressions can you use? Listen to each one."
+        vi: "Bài 3: câu nào dùng trong tình huống nào? Nghe từng câu."
+      - {track: "1.42", start: 3.2, end: 7.2, note: "1.42 · 1", focus: 0, reveal: 1}
+      - {track: "1.42", start: 9.5, end: 14.1, note: "1.42 · 2", focus: 1, reveal: 2}
+      - {track: "1.42", start: 16.4, end: 20.6, note: "1.42 · 3", focus: 2, reveal: 3}
+      - {track: "1.42", start: 23.0, end: 28.5, note: "1.42 · 4", focus: 3, reveal: 4}
+      - {track: "1.42", start: 31.0, end: 35.4, note: "1.42 · 5", focus: 4, reveal: 5}
+      - {track: "1.42", start: 38.3, end: 46.3, note: "1.42 · 6", focus: 5, reveal: 6}
+      - emma: "Can I talk to, or Can I speak to, are both fine. And to show you understand, say I see, right, or OK."
+        vi: "Can I talk to … / Can I speak to … đều được. Muốn cho biết mình hiểu: I see, Right, OK."
+
+  - kind: blanks
+    chapter: "Đến lượt bạn: ghi tin nhắn"
+    heading: "Explore Speaking 5 · Your turn: take a message"
+    heading_vi: "John gọi tìm Paula, Mai ghi tin nhắn — bạn nghe và tự ghi vào giấy, rồi so với tờ ghi chú"
+    items:
+      - {n: 1, q: "Message for: ___", answer: "Paula"}
+      - {n: 2, q: "From: ___", answer: "John Tredennick"}
+      - {n: 3, q: "Phone: ___", answer: "614 573 1246"}
+      - {n: 4, q: "Message: ___", answer: "meet at Gino's Café at 7.00 on Saturday"}
+    lines:
+      - emma: "Your turn. John calls, and Mai takes a message. Listen, and write the message on a piece of paper."
+        vi: "Đến lượt bạn: John gọi điện, Mai ghi tin nhắn. Bạn nghe và tự ghi ra giấy."
+      - {tom: "Hello. Can I speak to Paula, please?"}
+      - {mai: "Sorry, she isn't here at the moment. Can I take a message?"}
+      - {tom: "Yes, please. It's John Tredennick.", say: "Yes, please. It's John Trih-dennick."}
+      - {mai: "Sorry, can you say that again?"}
+      - {tom: "John Tredennick. T-R-E-D-E-N-N-I-C-K.", say: "John Trih-dennick. tee. ar. ee. dee. ee. en. en. eye. see. kay."}
+      - {mai: "Right. And what's the message?"}
+      - {tom: "Can she meet me at Gino's Café at seven o'clock on Saturday?", say: "Can she meet me at Jee-no's Café at seven o'clock on Saturday?"}
+      - {mai: "OK. And what's your phone number?"}
+      - {tom: "It's 614 573 1246.", say: "It's six one four, five seven three, one two four six."}
+      - {mai: "Sorry, can you slow down a bit, please?"}
+      - {tom: "Six one four, five seven three, one two four six.", speed: 0.7}
+      - {mai: "I see. Thanks. Bye."}
+      - {emma: "Now check your message.", reveal: [1, 2, 3, 4], vi: "So tin nhắn bạn ghi với tờ ghi chú."}
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc với go và khi gọi điện"
+    items:
+      - {wrong: "I go to shopping on Sunday.", right: "I go shopping on Sunday.", note: "go + -ing, không có to"}
+      - {wrong: "Let's go for a drinking.", right: "Let's go for a drink.", note: "go for a + danh từ"}
+      - {wrong: "He isn't here in the moment.", right: "He isn't here at the moment.", note: "at the moment = lúc này"}
+      - {wrong: "Can you repeat again?", right: "Sorry, can you say that again?", note: "repeat đã có nghĩa là nói lại"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "Go shopping. No to before an i n g verb.", say: "Go shopping. No to before an eye en gee verb.", focus: 0}
+      - {emma: "Go for a drink. Not a drinking.", focus: 1}
+      - {emma: "He isn't here at the moment.", focus: 2}
+      - {emma: "And say: Sorry, can you say that again?", focus: 3}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "go to concerts · go for a walk · go out with friends · go shopping", vi: "Bốn cách dùng go"}
+      - {en: "I usually talk about … · It's not polite to discuss …", vi: "Nói về chủ đề nên / không nên"}
+      - {en: "Can I speak to …? · Sorry, she isn't here at the moment. · Can I take a message?", vi: "Gọi và nghe điện thoại"}
+      - {en: "Sorry, can you say that again? · Can you slow down a bit, please? · I see.", vi: "Xin nhắc lại, xin nói chậm, cho thấy mình hiểu"}
+    lines:
+      - {emma: "Let's remember. Go to concerts, go for a walk, go out with friends, go shopping.", focus: 0}
+      - {emma: "Topics: I usually talk about my family. It's not polite to discuss money.", focus: 1}
+      - {emma: "On the phone: Can I speak to Paula? Sorry, she isn't here at the moment. Can I take a message?", focus: 2}
+      - {emma: "And: Sorry, can you say that again? Can you slow down a bit, please? I see. See you in the next video!", focus: 3, vi: "Hẹn gặp ở video sau!"}

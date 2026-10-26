@@ -633,3 +633,23 @@ def test_transcribe_segments_and_words():
     with pytest.raises(tr.ASRError):
         tr.track_ids(book, "1.10", "1.1")
 
+
+
+def test_phoneme_review_flags_known_misreadings():
+    """Soát cách đọc: chọn câu có số, tên riêng, từ đồng tự; cảnh báo lỗi đã gặp (động từ use đọc /juːs/)."""
+    from lesson_video import phonemes as ph
+    data = copy.deepcopy(LESSON)
+    data["scenes"] = [{"kind": "title", "chapter": "Intro", "lines": [
+        {"a": "Use these words."},                                          # use (động từ) bị đọc /juːs/ → ⚠
+        {"a": "Can I use your phone?"},                                     # /juːz/: đúng
+        {"b": "My mother lives in Hue.", "say": "My mother livz in Whey."},  # đã sửa bằng `say`
+        {"b": "Hello there."},                                              # không có gì cần soát
+        {"a": "Room 12, please."},                                          # số
+    ]}]
+    lesson = sc.Lesson.model_validate(data)
+    fake = {"Use these words.": "jˈuːs ðiːz wˈɜːdz.", "Can I use your phone?": "kæn aɪ jˈuːz jʊɹ fˈoʊn?",
+            "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz."}
+    rows = list(ph.review(lesson, lambda text, lang: fake[text]))
+    assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please."]
+    assert [bool(r.warnings) for r in rows] == [True, False, False, False] and "yooz" in rows[0].warnings[0]
+    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 5

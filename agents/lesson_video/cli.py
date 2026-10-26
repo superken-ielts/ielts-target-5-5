@@ -7,6 +7,7 @@
     python -m lesson_video coverage <thư mục sách> [--unit U01 …]
     python -m lesson_video prune <thư mục sách>      # xóa kịch bản .yaml rồi chạy lệnh này để gỡ video khỏi lessons.json
     python -m lesson_video transcribe <thư mục sách> 1.7 [1.20]   # chép lời audio của sách vào work/transcripts/
+    python -m lesson_video phonemes <kịch bản.yaml>… [--all] [--watch từ …]   # soát cách Kokoro đọc trước khi dựng
 
 `build` ghi <id>.mp4 cạnh kịch bản và cập nhật lessons.json; có `--out` thì chỉ ghi video vào thư mục đó
 (xem thử), không đụng lessons.json. `--work` giữ lại ảnh từng khung hình và file tiếng để soát.
@@ -94,6 +95,10 @@ def main(argv: list[str] | None = None) -> int:
     t.add_argument("first", help="mã track đầu, ví dụ 1.7")
     t.add_argument("last", nargs="?", help="mã track cuối (bỏ trống = chỉ một track)")
     t.add_argument("--model", help="thư mục model (mặc định: LESSON_ASR_MODEL hoặc ~/.cache/lesson_video/asr/<model>)")
+    f = sub.add_parser("phonemes", help="phiên âm Kokoro các câu dễ đọc sai (tên riêng, số, từ đồng tự) để soát trước khi dựng")
+    f.add_argument("lessons", nargs="+")
+    f.add_argument("--all", action="store_true", help="in mọi câu tiếng Anh")
+    f.add_argument("--watch", nargs="*", default=[], help="thêm từ cần soát")
     v = sub.add_parser("coverage", help="bảng phần nào của unit đã có video, phần nào chưa")
     v.add_argument("book", help="thư mục sách (có book.json)")
     v.add_argument("--unit", action="append", help="chỉ in unit này (lặp lại được), ví dụ --unit U01")
@@ -110,6 +115,13 @@ def main(argv: list[str] | None = None) -> int:
             print(e, file=sys.stderr)
             return 2
         return 0
+    if args.cmd == "phonemes":
+        from . import phonemes
+        try:
+            return phonemes.run(args.lessons, args.all, args.watch)
+        except ImportError:
+            print("Chưa cài kokoro-onnx: pip install -e '.[kokoro]'", file=sys.stderr)
+            return 2
     if args.cmd == "coverage":
         print(coverage.to_markdown(coverage.coverage(Path(args.book), args.unit)))
         return 0

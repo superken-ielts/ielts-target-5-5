@@ -5,6 +5,72 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 21 — 26/10/2026: Video Giai đoạn 0 — Unit 2 (4 video)
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Làm theo sổ tay ở file 08 mục 6.
+
+**Bốn video Unit 2 · Away from home** (@@TOTAL@@, mỗi video gắn vào một phiên của unit)
+- `U02-lesson-1` — Listening · I miss my friends: offers, requests, a / an / some (@@L1@@): tranh A–D trang 18 (lưới
+  2×2), bốn người nhớ gì khi xa nhà (1.21, phát từng người), email của Scott, Carly và Scott gọi điện (1.22, phát
+  nguyên bài), Scott vui vẻ mang gì; mời và nhờ (phát lại hai câu của 1.22), đáp lời mời và lời nhờ; a / an / some
+  (1.23, mười cụm); trọng âm (1.24); tình huống nói mẫu của Tom và Mai; lỗi hay gặp.
+- `U02-lesson-2` — Reading · Sofasurfing: present simple, interests and wants (@@L2@@): trang Sofasurfing.com, hồ sơ
+  của Melek và Fiona đọc từng câu, điểm chung của hai người; hiện tại đơn (1.25, tám câu), thêm s sau he / she / it;
+  thư trả lời của Fiona (bài 5); sở thích và mong muốn; hồ sơ mẫu của Mai.
+- `U02-target` — Speaking · Take care of a guest (@@TA@@): thư của Akira, Koji tới nhà Erkan (1.26), Task vocabulary
+  (phát lại năm cặp câu của 1.26), mẫu câu của chủ nhà và khách, hội thoại mẫu Mai làm chủ nhà ở Huế, Your turn hai
+  vai, lỗi hay gặp.
+- `U02-explore` — Explore Writing · in, an email to ask for something (@@EX@@): Keyword in (nơi chốn, thời gian, ngôn
+  ngữ; bài 2a), từ loại trong từ điển, ba email của Ju-Yung và Erkan, lời chào và lời kết thư, ba lời nhờ, viết hoa,
+  email mẫu của Mai gửi Fiona, Your turn.
+
+**Soát cách đọc thành lệnh** `python -m lesson_video phonemes <kịch bản>` (`agents/lesson_video/phonemes.py`)
+- In phiên âm Kokoro (cùng bộ tách âm khi đọc) của các câu có tên riêng, chữ cái rời, số, từ đồng tự; đánh dấu ⚠ ba lỗi
+  đã gặp: động từ `use` đọc /juːs/, `live(s)` đọc /laɪv/, `read` hiện tại đọc /rɛd/. Thay cho đoạn script tạm ở
+  bước 4 của sổ tay.
+- Lỗi `use` tìm ra ở đợt này: câu mệnh lệnh ("Use these phrases", "For the past, use was and were") và sau danh từ
+  ("people use both", "nobody uses") bị đọc như danh từ. Sửa `say` (`yooz`, `yoozes`) ở 13 câu của 7 kịch bản; dựng
+  lại `U00-personal-info`, `U01-target` (đã đẩy ở đợt 19, 20), `U02-explore`, `U02-lesson-1`. Video dựng lại chỉ đọc
+  lại các câu đã sửa (bộ nhớ đệm giữ phần còn lại).
+
+**Vướng và cách xử lý** (đã ghi vào sổ tay file 08 mục 6.5–6.7)
+- Track 1.27 (nghe lại Task vocabulary) thiếu trong bộ CD1: năm cặp câu có sẵn trong 1.26, nên cắt từ đó.
+- Kokoro đọc động từ `lives` / `live` thành /laɪvz/ sau danh từ và tên riêng: viết `say` là `livz` / `liv`. Lỗi tìm
+  ra khi soát phiên âm, trước lúc dựng.
+- Nhãn A–D của dải tranh bị cắt sang ô bên cạnh khi chia `grid: 4`: chọn `clip` bắt đầu trước nhãn tranh đầu.
+- Máy khởi động lại khi đang dựng `U02-explore`: chạy lại hàng đợi, các câu đã đọc lấy từ bộ nhớ đệm.
+- Commit làm trong một `git worktree` ở `origin/main` để hàng đợi dựng Unit 3 vẫn chạy.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/U02-*.yaml`, `U02-*.mp4` | Kịch bản và video Unit 2 |
+| `agents/lesson_video/phonemes.py` | Lệnh `phonemes`: soát cách Kokoro đọc, cảnh báo lỗi đã gặp |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | Thêm bốn video Unit 2 (do lệnh `build` ghi) |
+| `books/book_english_unlimited_a2_elemetary/lessons/U00-personal-info.*`, `U01-target.*` | `say` cho động từ `use`; dựng lại |
+| `agents/lesson_video/cli.py`, `agents/tests/test_lesson_video.py` | Lệnh `phonemes`; test chọn câu cần soát và cảnh báo |
+| `agents/README.md`, `CLAUDE.md` | Lệnh `phonemes` |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 6.4 (bước 4 dùng lệnh `phonemes`), 6.5 (track thiếu, commit trong worktree), 6.6 (`use`), 6.8 (độ phủ Unit 2) |
+| `docs/agent-hoc-tap/04-checklist.md` (P2-53) | Đợt 21 |
+| `tests/web/book.e2e.mjs` | Thẻ A2 có 11 video; Intro, Unit 1, Unit 2: nút video theo thứ tự phiên, dài 5–10 phút |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+@@TESTS21@@
+
+### Còn treo
+
+- P2-53: Unit 3 (4 video) ở đợt sau; Unit 4–14 chưa làm.
+
+---
+
 ## Đợt 20 — 26/10/2026: Video Giai đoạn 0 — Unit 1 (4 video)
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Làm theo sổ tay ở file 08 mục 6.
