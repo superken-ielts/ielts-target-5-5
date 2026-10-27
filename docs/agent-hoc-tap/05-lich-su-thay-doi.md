@@ -30,7 +30,7 @@ Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Người học góp ý 
   tách thành hai âm ở mọi cách viết) đưa thẳng âm vị cho Kokoro; `check_line` báo chữ cái hay âm ghép đọc riêng bị đọc
   sai (へ → "e" như trợ từ).
 
-**19 video mới** (`books/Genki/lessons/U00-01-start` … `U00-19-numbers-2`, UNIT0_TOTAL, thay `U00-hiragana-1`,
+**19 video mới** (`books/Genki/lessons/U00-01-start` … `U00-19-numbers-2`, 19 video, 1:10:43, thay `U00-hiragana-1`,
 `U00-hiragana-2`, `U00-katakana`, `U00-greetings`, `U00-numbers`: xóa kịch bản rồi `prune` bỏ khỏi `lessons.json` và
 xóa `.mp4`)
 - Start here: Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1), thứ tự video, cách xem.
@@ -49,7 +49,7 @@ xóa `.mp4`)
 - `books/Genki/book.yaml`: tóm tắt sách và ghi chú hai phiên Unit 0 nói 19 video; chạy lại agent nhập sách
   (`book.json`).
 - Tài liệu: file 07 mục 4.1 (bảng 19 video), 4.2 (lời dịch từng dòng, tô sáng, `step`, `wait` / `echo` trong cảnh
-  `jp`, video Unit 0 3–5 phút), 4.3 (tầng 2–3 theo câu, tô sáng, đọc từng chữ, âm vị âm ghép), 4.4 (lỗi đã gặp), 4.6
+  `jp`, video Unit 0 2,5–5 phút), 4.3 (tầng 2–3 theo câu, tô sáng, đọc từng chữ, âm vị âm ghép), 4.4 (lỗi đã gặp), 4.6
   (mốc thời gian audio JWS / K00 lấy bằng ASR); `agents/README.md`; checklist P2-54.
 - Test (`agents/tests/test_japanese_video.py`): chữ của thẻ, romaji, các phần của câu; `reading_plan`; đọc từng chữ
   (khung, chỗ nghỉ, `echo`); tầng 2–3 theo câu; vẽ tô sáng và đếm ngược; tách file nghe theo khoảng lặng (wav giả ba

@@ -208,27 +208,27 @@ không biết giọng Nhật đang đọc tới đâu. Cách sửa ở mục 4.2
 
 | Phiên | Video | Nội dung | Dài |
 |---|---|---|---|
-| Hệ chữ Nhật & hiragana | `U00-01-start` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 19 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, YOUR TURN); mỗi ngày một video | 2:40 |
+| Hệ chữ Nhật & hiragana | `U00-01-start` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 19 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, YOUR TURN); mỗi ngày một video | 2:37 |
 | | `U00-02-vowels` | Ba loại chữ trong một câu; あいうえお từng chữ một, mẹo phát âm cho người Việt; viết; từ chỉ có nguyên âm | 3:10 |
-| | `U00-03-rows-k-s` | Hàng か, さ (し là shi); đọc từ; ôn 15 chữ | 3:01 |
-| | `U00-04-rows-t-n` | Hàng た (ち, つ), な; đọc từ; ôn 25 chữ | 3:14 |
+| | `U00-03-rows-k-s` | Hàng か, さ (し là shi); đọc từ; ôn 15 chữ | 3:00 |
+| | `U00-04-rows-t-n` | Hàng た (ち, つ), な; đọc từ; ôn 25 chữ | 3:13 |
 | | `U00-05-rows-h-m` | Hàng は (ふ), ま; は / へ làm trợ từ đọc khác; đọc từ; ôn 30 chữ | 3:27 |
-| | `U00-06-rows-y-r-w` | Hàng や, ら, わ và ん; đọc từ; cả bảng 46 chữ với JWS-01 | 4:09 |
-| | `U00-07-hiragana-practice` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…) | DUR07 |
-| | `U00-08-marks` | ゛ ゜ theo từng hàng (か / が…); 25 âm với JWS-02; đọc từ | DUR08 |
-| | `U00-09-small-ya-yu-yo` | や to và ゃ nhỏ (びよういん / びょういん); 33 âm ghép; JWS-03; đọc từ | DUR09 |
-| | `U00-10-small-tsu-long-vowels` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ | DUR10 |
-| | `U00-11-katakana-1` | Katakana dùng khi nào; sáu chữ giống hiragana; hàng ア đến ホ theo nhóm; viết | DUR11 |
-| | `U00-12-katakana-2` | Hàng マ đến ン; cả bảng với JWS-09; chữ dễ nhầm (シ ツ ソ ン…) | DUR12 |
-| | `U00-13-katakana-3` | ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12) | DUR13 |
-| | `U00-14-katakana-4` | Âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | DUR14 |
-| Chào hỏi & số đếm | `U00-15-greetings-1` | Chào theo giờ trong ngày, cảm ơn, xin lỗi, đáp lời; mỗi câu: Emma nói tình huống → Yuki / Takeshi → lượt bạn → K00-01 | DUR15 |
-| | `U00-16-greetings-2` | Tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào | DUR16 |
-| | `U00-17-greetings-3` | Luyện tập: 10 tình huống đố (bài A); tự giới thiệu (bài B) | DUR17 |
-| | `U00-18-numbers-1` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; K00-02; đếm 1–20 | DUR18 |
-| | `U00-19-numbers-2` | Hàng chục và 100; mọi số đến 99; K00-02; bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | DUR19 |
+| | `U00-06-rows-y-r-w` | Hàng や, ら, わ và ん; đọc từ; cả bảng 46 chữ với JWS-01 | 4:10 |
+| | `U00-07-hiragana-practice` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…) | 3:39 |
+| | `U00-08-marks` | ゛ ゜ theo từng hàng (か / が…); 25 âm với JWS-02; đọc từ | 4:06 |
+| | `U00-09-small-ya-yu-yo` | や to và ゃ nhỏ (びよういん / びょういん); 33 âm ghép; JWS-03; đọc từ | 4:41 |
+| | `U00-10-small-tsu-long-vowels` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ | 4:44 |
+| | `U00-11-katakana-1` | Katakana dùng khi nào; sáu chữ giống hiragana; hàng ア đến ホ theo nhóm; viết | 3:21 |
+| | `U00-12-katakana-2` | Hàng マ đến ン; cả bảng với JWS-09; chữ dễ nhầm (シ ツ ソ ン…) | 3:45 |
+| | `U00-13-katakana-3` | ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12) | 3:39 |
+| | `U00-14-katakana-4` | Âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | 3:26 |
+| Chào hỏi & số đếm | `U00-15-greetings-1` | Chào theo giờ trong ngày, cảm ơn, xin lỗi, đáp lời; mỗi câu: Emma nói tình huống → Yuki / Takeshi → lượt bạn → K00-01 | 4:01 |
+| | `U00-16-greetings-2` | Tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào | 3:14 |
+| | `U00-17-greetings-3` | Luyện tập: 10 tình huống đố (bài A); tự giới thiệu (bài B) | 2:34 |
+| | `U00-18-numbers-1` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; K00-02; đếm 1–20 | 5:13 |
+| | `U00-19-numbers-2` | Hàng chục và 100; mọi số đến 99; K00-02; bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | 4:44 |
 
-19 video, **TOTAL**, SIZE MB, 3–8 chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì)
+19 video, **1:10:43**, 42 MB, 3–8 chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì)
 và kết thúc bằng video tiếp theo học gì.
 
 Bài 1–3 có bốn video mỗi bài, mỗi video gắn vào phiên luyện đúng kỹ năng đó:
@@ -305,7 +305,7 @@ GENKI có 37 video. Bài 6–12 chưa có video.
 5. Xem trước không tiếng: `--engine silent --out /tmp/x --work /tmp/x/w`, mở `f*.png`.
 6. Dựng: `python -m lesson_video build <kịch bản> --engine kokoro`.
    - Video bài 1–3 dài **5–10 phút**. Đoạn nghe của sách tính cả vào: hội thoại bài 2 dài 50 và 40 giây, bản có khoảng
-     lặng 77 và 75 giây. Video Unit 0 ngắn hơn, **3–5 phút**, mỗi video một phần nhỏ (đợt 23).
+     lặng 77 và 75 giây. Video Unit 0 ngắn hơn, **2,5–5 phút**, mỗi video một phần nhỏ (đợt 23).
    - Tiếng đã đọc nằm trong `~/.cache/lesson_video/tts`, nên dựng lại chỉ đọc những câu mới.
    - Bỏ một video: xóa `.yaml`, rồi chạy `python -m lesson_video prune ../books/Genki`. Lệnh bỏ mục trong
      `lessons.json` và file `.mp4`.
@@ -416,7 +416,7 @@ GENKI có 37 video. Bài 6–12 chưa có video.
     (không ngắt ở `、`); tốc độ 1.0 / 0.88, nghỉ 0.45 giây.
   - Sửa: tầng 2–3 theo câu đang nói, câu nào cũng có `vi` (và `en` với câu tiếng Nhật); tô sáng chữ đang đọc, đọc từng
     chữ (`step`), file nghe tách theo khoảng lặng; đếm ngược YOUR TURN trong cảnh `jp`; nhịp chậm hơn (mục 4.1); 19 video
-    3–5 phút, mỗi video mở đầu bằng "học gì, để làm gì" và có video mở đầu cả Unit 0.
+    2,5–5 phút, mỗi video mở đầu bằng "học gì, để làm gì" và có video mở đầu cả Unit 0.
 - **Emma đọc romaji kiểu tiếng Anh** (đợt 23, lệnh `phonemes` và soát phiên âm từng câu có romaji): chi thành "kai",
   ji thành "jai", ki thành "kai", ya thành "yuh", nguyên âm a i u e o thành tên chữ cái "ay, eye, you, ee, oh", Takeshi
   thành "Take-shi", Ai Honda thành "A-I Honda", desu thành "di-soo", ng thành "en-gee"; động từ use / uses đọc như danh
