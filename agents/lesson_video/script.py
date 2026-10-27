@@ -210,8 +210,6 @@ class Scene(_M):
         if self.kind == "letter" and any(ln.wait or ln.echo for ln in self.lines):
             raise ValueError("cảnh letter không có khoảng lặng `wait` / `echo` (không có chỗ hiện đếm ngược)")
         if self.kind == "jp":
-            if any(ln.wait or ln.echo for ln in self.lines):
-                raise ValueError("cảnh jp không có khoảng lặng `wait` / `echo` — dùng `pause`")
             for k, it in enumerate(self.items):
                 if it.get("quiz"):  # thẻ đố: được để chữ Hán không furigana (bài đọc giá tiền, chữ Hán)
                     continue
@@ -450,7 +448,9 @@ def check(lesson: Lesson, bdir: Path) -> list[str]:
     if not find_item(book, lesson.activity):
         problems.append(f"hoạt động {lesson.activity} không có trong book.json")
     for i, sc in enumerate(lesson.scenes):
+        focus = 0
         for ln in sc.lines:
+            focus = ln.focus if ln.focus is not None else focus
             if not ln.track:
                 continue
             f = book.get("files", {}).get(ln.track)
@@ -460,6 +460,16 @@ def check(lesson: Lesson, bdir: Path) -> list[str]:
                 problems.append(f"cảnh {i}: thiếu file {f['path']}")
             elif ln.end is not None and f.get("durationSec") and ln.end > f["durationSec"] + 0.5:
                 problems.append(f"cảnh {i}: {ln.track} chỉ dài {f['durationSec']:.1f} giây (end = {ln.end})")
+            elif sc.kind == "jp":
+                seq, _ = reading_plan(lesson, sc, ln, focus)
+                step = ln.step if ln.step is not None else (lesson.step or 0)
+                if step and len(seq) > 1:  # tô từng chữ theo khoảng lặng: số đoạn có tiếng phải bằng số chữ
+                    from .timeline import track_spans
+                    n = len(track_spans(bdir / f["path"], ln.start, ln.end))
+                    if n != len(seq):
+                        problems.append(f"cảnh {i}: {ln.track} ({ln.start}–{ln.end or 'hết'}) có {n} đoạn có tiếng nhưng"
+                                        f" thẻ tô {len(seq)} chữ — chỉnh start / end, `hl`, hoặc đặt `step: 0` để tô"
+                                        " cả thẻ")
         if not sc.image:
             continue
         f = book.get("files", {}).get(sc.image.pdf)
