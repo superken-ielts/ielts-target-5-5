@@ -357,7 +357,7 @@ def test_captions_follow_the_line_being_said():
                                            kw.get("vi", ""), kw.get("note", ""), kw.get("waiting", False))
     assert cap(card, speaker="emma", text="Hi.", vi="Chào.") == (("EMMA SAYS", "Hi."), ("DỊCH LỜI EMMA", "Chào."))
     assert cap(card, speaker="emma", text="Hi.")[1] == (jpcard.LABEL_VI, "Hàng K.")      # thiếu `vi`: chữ của thẻ
-    assert cap(card, speaker="yuki", en="ka", vi="ka") == (("ENGLISH MEANING", "ka"), ("NGHĨA TIẾNG VIỆT", "ka"))
+    assert cap(card, speaker="yuki", en="ka", vi="ca") == (("ENGLISH", "ka"), ("TIẾNG VIỆT", "ca"))
     assert cap(quiz, speaker="yuki") == ((jpcard.LABEL_EN, "Listen and write."), (jpcard.LABEL_VI, "Nghe và viết."))
     assert cap(card, waiting=True, note="Say it.", vi="Nói.") == (("YOUR TURN", "Say it."), ("LƯỢT CỦA BẠN", "Nói."))
 

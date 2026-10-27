@@ -1,0 +1,210 @@
+# U00 · Hiragana 5 — GENKI I, Japanese Writing System (trang 20). Hàng や, ら, わ và ん: từng chữ một (r tiếng Nhật,
+# を chỉ làm trợ từ, ん là một nhịp riêng), đọc từ, rồi cả bảng 46 chữ với audio gốc JWS-01: chữ sáng lên đúng lúc người
+# Nhật đọc (tách theo khoảng lặng, nghỉ giữa hai chữ giãn ra `step` giây).
+# JWS-01: 0.5–11.1 giây là lời giới thiệu (tiếng Anh), 46 chữ bắt đầu ở 13.4 giây → `start: 13.2`. Bảng hai cột nên
+# thứ tự đọc (cột trái rồi cột phải) khác thứ tự chữ trên thẻ: `hl` liệt kê chữ theo thứ tự đọc.
+id: U00-06-rows-y-r-w
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Hiragana 5 · Rows や ら わ, ん, and the whole chart"
+title_vi: "Hiragana 5 — hàng や, ら, わ và ん; đọc cả bảng 46 chữ theo audio gốc của sách"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · The last letters, then all 46"
+    items:
+      - jp: "や ゆ よ\nら り る れ ろ\nわ を ん"
+        romaji: "ya yu yo\nra ri ru re ro\nwa o n"
+        en: "Goals: the last eleven letters, then read the whole chart of 46 letters with the book's audio."
+        vi: "Mục tiêu: mười một chữ cuối cùng, rồi đọc cả bảng 46 chữ theo audio của sách."
+    lines:
+      - emma: "Welcome back. In this video: the last eleven basic letters."
+        vi: "Chào mừng bạn trở lại. Trong video này: mười một chữ cơ bản cuối cùng."
+      - emma: "Then you will read all forty-six letters with a native speaker from your textbook's audio."
+        vi: "Sau đó bạn sẽ đọc cả 46 chữ cùng giọng người Nhật trong audio của sách."
+
+  - kind: jp
+    chapter: "Row や"
+    heading: "Row や · only three letters"
+    items:
+      - jp: "や ゆ よ"
+        romaji: "ya yu yo"
+        en: "y + a, u, o. This row has only three letters."
+        vi: "y + a, u, o. Hàng này chỉ có ba chữ."
+    lines:
+      - emma: "The ya row has only three letters. Say each one after Yuki."
+        vi: "Hàng ya chỉ có ba chữ. Đọc theo Yuki từng chữ."
+      - yuki: "や。"
+        hl: 0
+        en: "ya"
+        vi: "ya — đọc liền “i-a” thành một âm"
+        pause: 1.5
+      - yuki: "ゆ。"
+        hl: 1
+        en: "yu"
+        vi: "yu — đọc liền “i-ư”"
+        pause: 1.5
+      - yuki: "よ。"
+        hl: 2
+        en: "yo"
+        vi: "yo — đọc liền “i-ô”"
+        pause: 1.5
+      - yuki: "や、ゆ、よ。"
+        en: "ya, yu, yo"
+        vi: "ya, yu, yo"
+        echo: true
+
+  - kind: jp
+    chapter: "Row ら"
+    heading: "Row ら · the Japanese r"
+    items:
+      - jp: "ら り る れ ろ"
+        romaji: "ra ri ru re ro"
+        en: "The Japanese r: the tip of your tongue touches the roof of your mouth once, lightly — between an English l and r."
+        vi: "r tiếng Nhật: đầu lưỡi chạm nhẹ lên vòm miệng một lần, nghe gần “l”."
+    lines:
+      - emma: "The ra row. The Japanese r is light: the tip of your tongue touches the roof of your mouth once. It sounds close to l."
+        vi: "Hàng ra. Âm r tiếng Nhật rất nhẹ: đầu lưỡi chạm vòm miệng một lần. Nghe gần giống âm “l”."
+      - yuki: "ら。"
+        hl: 0
+        en: "ra"
+        vi: "ra — gần “la”"
+        pause: 1.5
+      - yuki: "り。"
+        hl: 1
+        en: "ri"
+        vi: "ri — gần “li”"
+        pause: 1.5
+      - yuki: "る。"
+        hl: 2
+        en: "ru"
+        vi: "ru — gần “lư”"
+        pause: 1.5
+      - yuki: "れ。"
+        hl: 3
+        en: "re"
+        vi: "re — gần “lê”"
+        pause: 1.5
+      - yuki: "ろ。"
+        hl: 4
+        en: "ro"
+        vi: "ro — gần “lô”"
+        pause: 1.5
+      - yuki: "ら、り、る、れ、ろ。"
+        en: "ra, ri, ru, re, ro"
+        vi: "la, li, lư, lê, lô (lưỡi chạm nhẹ)"
+        echo: true
+
+  - kind: jp
+    chapter: "わ, を, ん"
+    heading: "わ · を · ん"
+    items:
+      - jp: "わ を ん"
+        romaji: "wa o n"
+        en: "を sounds like o and is only used as a grammar word. ん is n, and it is a full beat on its own."
+        vi: "を đọc “ô”, chỉ dùng làm trợ từ. ん là âm n và tự nó là một nhịp."
+    lines:
+      - emma: "And the last three letters."
+        vi: "Và ba chữ cuối cùng."
+      - yuki: "わ。"
+        hl: 0
+        en: "wa"
+        vi: "wa — như “oa”"
+        pause: 1.5
+      - yuki: "を。"
+        hl: 1
+        en: "o — the same sound as お"
+        vi: "o — đọc giống お (“ô”)"
+        pause: 1.5
+      - emma: "This one sounds just like o. It is only used as a small grammar word, never inside a word."
+        vi: "Chữ này đọc giống hệt “ô”. Nó chỉ dùng làm từ ngữ pháp nhỏ, không bao giờ nằm trong một từ."
+        hl: 1
+      - yuki: "ん。"
+        hl: 2
+        en: "n — one full beat"
+        vi: "n — một nhịp riêng"
+        pause: 1.5
+      - emma: "The last letter is n. It never starts a word, and it takes one full beat, like any other letter."
+        vi: "Chữ cuối là “n”. Nó không bao giờ đứng đầu từ, và chiếm trọn một nhịp như mọi chữ khác."
+        hl: 2
+      - yuki: "わ、を、ん。"
+        en: "wa, o, n"
+        vi: "oa, ô, n"
+        echo: true
+
+  - kind: jp
+    chapter: "Read words"
+    heading: "Read words · Then check"
+    items:
+      - jp: "やま ・ ゆき ・ よる ・ さくら"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "やま ・ ゆき ・ よる ・ さくら"
+        romaji: "yama · yuki · yoru · sakura"
+        en: "mountain · snow · night · cherry blossom"
+        vi: "núi · tuyết · ban đêm · hoa anh đào"
+      - jp: "くるま ・ わたし ・ ほん ・ にほん"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "くるま ・ わたし ・ ほん ・ にほん"
+        romaji: "kuruma · watashi · hon · nihon"
+        en: "car · I · book · Japan"
+        vi: "ô tô · tôi · quyển sách · Nhật Bản"
+    lines:
+      - emma: "Read these four words aloud, then check with Yuki."
+        vi: "Đọc to bốn từ này, rồi kiểm tra cùng Yuki."
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "やま、ゆき、よる、さくら。"
+        focus: 1
+        en: "mountain, snow, night, cherry blossom"
+        vi: "núi, tuyết, ban đêm, hoa anh đào"
+        pause: 1
+      - emma: "Four more. One of them is the word for I."
+        vi: "Thêm bốn từ nữa. Một trong số đó là từ “tôi”."
+        focus: 2
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "くるま、わたし、ほん、にほん。"
+        focus: 3
+        en: "car, I, book, Japan"
+        vi: "ô tô, tôi, quyển sách, Nhật Bản"
+        pause: 1
+
+  - kind: jp
+    chapter: "The whole chart"
+    heading: "All 46 hiragana · Read along with the book's audio"
+    items:
+      - jp: "あ　い　う　え　お　　　は　ひ　ふ　へ　ほ\nか　き　く　け　こ　　　ま　み　む　め　も\nさ　し　す　せ　そ　　　や　ゆ　よ\nた　ち　つ　て　と　　　ら　り　る　れ　ろ\nな　に　ぬ　ね　の　　　わ　を　ん"
+        en: "The 46 basic hiragana: read down the left column, then the right — a, ka, sa, ta, na, ha, ma, ya, ra, wa."
+        vi: "46 chữ hiragana cơ bản: đọc cột trái từ trên xuống, rồi cột phải — a, ka, sa, ta, na, ha, ma, ya, ra, wa."
+    lines:
+      - emma: "You know all forty-six basic letters! Now listen to a native speaker read the whole chart, from your textbook's audio."
+        vi: "Bạn đã biết cả 46 chữ cơ bản! Giờ hãy nghe người Nhật đọc cả bảng, từ audio của sách."
+      - emma: "Follow the orange letter, and say each letter in the pause after it."
+        vi: "Nhìn theo chữ màu cam, và đọc theo từng chữ trong khoảng nghỉ sau nó."
+      - track: JWS-01
+        start: 13.2
+        note: "Japanese Writing System · JWS-01"
+        en: "a i u e o · ka ki ku ke ko · sa … · wa o n"
+        vi: "a i ư ê ô · ca ki cư kê cô · xa … · oa ô n"
+        hl: [0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20, 21, 22, 23, 24, 28, 29, 30, 31, 32, 38, 39, 40, 41, 42,
+             5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 25, 26, 27, 33, 34, 35, 36, 37, 43, 44, 45]
+        step: 1.2
+        pause: 1
+      - emma: "Read the chart aloud once a day this week, from the first letter to the last."
+        vi: "Tuần này, mỗi ngày đọc to cả bảng một lần, từ chữ đầu đến chữ cuối."
+      - emma: "Next video: practice. Letters that look alike, how to write them, and your first listening test."
+        vi: "Video tiếp theo: luyện tập. Những chữ trông giống nhau, cách viết, và bài nghe đầu tiên."

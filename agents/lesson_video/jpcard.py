@@ -58,7 +58,7 @@ def captions(lesson, it: dict, speaker: Optional[str], text: str, en: str, vi: s
     elif sp and sp.lang != "ja":
         a, b = (text, f"{sp.name.upper()} SAYS"), (vi, f"DỊCH LỜI {sp.name.upper()}")
     else:
-        a, b = (en, "ENGLISH MEANING"), (vi, "NGHĨA TIẾNG VIỆT")
+        a, b = (en, "ENGLISH"), (vi, "TIẾNG VIỆT")
     t2 = (a[1], a[0]) if a[0] else (LABEL_EN, str(it.get("en") or ""))
     t3 = (b[1], b[0]) if b[0] else (LABEL_VI, str(it.get("vi") or ""))
     return t2, t3

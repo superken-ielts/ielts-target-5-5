@@ -1,0 +1,194 @@
+# U00 · Hiragana 2 — GENKI I, Japanese Writing System (trang 20). Hàng か và さ: từng chữ một (Yuki đọc, người học
+# nhắc lại, chữ đang đọc sáng lên), mẹo phát âm cho người Việt (し là shi, す gần "xư"), cả hàng, đọc từ chỉ có các
+# chữ đã học, ôn cả ba hàng あ か さ.
+id: U00-03-rows-k-s
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Hiragana 2 · Rows か and さ"
+title_vi: "Hiragana 2 — hàng か và hàng さ (し đọc shi), đọc những từ đầu tiên"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Rows か and さ"
+    items:
+      - jp: "か き く け こ\nさ し す せ そ"
+        romaji: "ka ki ku ke ko\nsa shi su se so"
+        en: "Goals: read and write ten new letters, and read words like すし and あさ."
+        vi: "Mục tiêu: đọc và viết mười chữ mới, đọc được những từ như すし (sushi), あさ (buổi sáng)."
+    lines:
+      - emma: "In this video: ten new letters, the ka row and the sa row."
+        vi: "Trong video này: mười chữ mới, hàng ka và hàng sa."
+      - emma: "Each row is one consonant plus the five vowels you already know: a, i, u, e, o."
+        vi: "Mỗi hàng là một phụ âm cộng với năm nguyên âm bạn đã biết: a, i, u, e, o."
+      - emma: "Why these two rows? With them, you can already read many words, like sushi."
+        vi: "Vì sao học hai hàng này? Có chúng, bạn đã đọc được nhiều từ, như sushi."
+
+  - kind: jp
+    chapter: "Row か"
+    heading: "Row か · k + a i u e o"
+    items:
+      - jp: "か き く け こ"
+        romaji: "ka ki ku ke ko"
+        en: "k + the five vowels."
+        vi: "k + năm nguyên âm: ca, ki, cư, kê, cô."
+    lines:
+      - emma: "The ka row: the sound k, plus a, i, u, e, o. Say each letter after Yuki."
+        vi: "Hàng ka: âm k, cộng a, i, u, e, o. Đọc theo Yuki từng chữ."
+      - yuki: "か。"
+        hl: 0
+        en: "ka"
+        vi: "ka — như “ca”"
+        pause: 1.5
+      - yuki: "き。"
+        hl: 1
+        en: "ki"
+        vi: "ki — như “ki”"
+        pause: 1.5
+      - yuki: "く。"
+        hl: 2
+        en: "ku — lips relaxed, like the vowel u"
+        vi: "ku — như “cư”"
+        pause: 1.5
+      - yuki: "け。"
+        hl: 3
+        en: "ke"
+        vi: "ke — như “kê”"
+        pause: 1.5
+      - yuki: "こ。"
+        hl: 4
+        en: "ko"
+        vi: "ko — như “cô”"
+        pause: 1.5
+      - emma: "The k is light, with only a little air. Now the whole row, then your turn."
+        vi: "Âm k nhẹ, chỉ bật một chút hơi. Giờ cả hàng, rồi đến lượt bạn."
+      - yuki: "か、き、く、け、こ。"
+        en: "ka, ki, ku, ke, ko"
+        vi: "ca, ki, cư, kê, cô"
+        echo: true
+
+  - kind: jp
+    chapter: "Row さ"
+    heading: "Row さ · s + a i u e o · し is shi"
+    items:
+      - jp: "さ し す せ そ"
+        romaji: "sa shi su se so"
+        en: "s + the five vowels. Careful: し is shi, not si."
+        vi: "s + năm nguyên âm. Chú ý: し đọc là “shi”, không phải “si”."
+    lines:
+      - emma: "The sa row. One letter is a little different. Listen."
+        vi: "Hàng sa. Có một chữ hơi khác. Hãy nghe."
+      - yuki: "さ。"
+        hl: 0
+        en: "sa"
+        vi: "sa — như “xa”"
+        pause: 1.5
+      - yuki: "し。"
+        hl: 1
+        en: "shi — like she, not si"
+        vi: "shi — như “she” tiếng Anh, không phải “si”"
+        pause: 1.5
+      - emma: "This one is shi, like the English word she. It is never si."
+        vi: "Chữ này đọc là “shi”, như từ “she” tiếng Anh. Không bao giờ đọc là “si”."
+        hl: 1
+      - yuki: "し。"
+        hl: 1
+        en: "shi"
+        vi: "shi"
+        pause: 1.5
+      - yuki: "す。"
+        hl: 2
+        en: "su"
+        vi: "su — gần “xư”"
+        pause: 1.5
+      - yuki: "せ。"
+        hl: 3
+        en: "se"
+        vi: "se — như “xê”"
+        pause: 1.5
+      - yuki: "そ。"
+        hl: 4
+        en: "so"
+        vi: "so — như “xô”"
+        pause: 1.5
+      - emma: "The whole row, then your turn."
+        vi: "Cả hàng, rồi đến lượt bạn."
+      - yuki: "さ、し、す、せ、そ。"
+        en: "sa, shi, su, se, so"
+        vi: "xa, shi, xư, xê, xô"
+        echo: true
+
+  - kind: jp
+    chapter: "Read words"
+    heading: "Read words · Then check"
+    items:
+      - jp: "かさ ・ すし ・ あさ ・ いす"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "かさ ・ すし ・ あさ ・ いす"
+        romaji: "kasa · sushi · asa · isu"
+        en: "umbrella · sushi · morning · chair"
+        vi: "cái ô · sushi · buổi sáng · cái ghế"
+      - jp: "えき ・ かお ・ あき ・ おかし"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "えき ・ かお ・ あき ・ おかし"
+        romaji: "eki · kao · aki · okashi"
+        en: "station · face · autumn · sweets"
+        vi: "nhà ga · khuôn mặt · mùa thu · bánh kẹo"
+    lines:
+      - emma: "Now read real words. Read these four aloud, then check with Yuki."
+        vi: "Giờ hãy đọc từ thật. Đọc to bốn từ này, rồi kiểm tra cùng Yuki."
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "かさ、すし、あさ、いす。"
+        focus: 1
+        en: "umbrella, sushi, morning, chair"
+        vi: "cái ô, sushi, buổi sáng, cái ghế"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "えき、かお、あき、おかし。"
+        focus: 3
+        en: "station, face, autumn, sweets"
+        vi: "nhà ga, khuôn mặt, mùa thu, bánh kẹo"
+        pause: 1
+
+  - kind: jp
+    chapter: "Review"
+    heading: "Review · Rows あ, か, さ"
+    items:
+      - jp: "あ い う え お\nか き く け こ\nさ し す せ そ"
+        romaji: "a i u e o\nka ki ku ke ko\nsa shi su se so"
+        en: "Fifteen letters so far. Read them every day."
+        vi: "Đã học mười lăm chữ. Mỗi ngày đọc lại một lần."
+    lines:
+      - emma: "Let's review all fifteen letters you know. Follow the orange letter."
+        vi: "Cùng ôn cả mười lăm chữ bạn đã biết. Nhìn theo chữ màu cam."
+      - yuki: "あ、い、う、え、お、か、き、く、け、こ、さ、し、す、せ、そ。"
+        en: "a i u e o · ka ki ku ke ko · sa shi su se so"
+        vi: "a i ư ê ô · ca ki cư kê cô · xa shi xư xê xô"
+        step: 0.6
+        pause: 1
+      - emma: "Now write each new letter five times, and say it as you write. Pause the video while you write."
+        vi: "Giờ hãy viết mỗi chữ mới năm lần, vừa viết vừa đọc. Dừng video trong lúc viết nhé."
+      - wait: 5
+        note: "Write か き く け こ さ し す せ そ — five times each"
+        vi: "Viết か き く け こ さ し す せ そ — mỗi chữ năm lần"
+        hl: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+      - emma: "Next video: the ta row and the na row."
+        vi: "Video tiếp theo: hàng ta và hàng na."

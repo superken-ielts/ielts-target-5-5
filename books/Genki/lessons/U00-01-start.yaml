@@ -1,0 +1,138 @@
+# U00 · Bắt đầu — video mở đầu Unit 0 (GENKI I): Unit 0 học gì và để làm gì (đọc được bài 1), thứ tự 16 video, cách
+# xem (chữ đang đọc sáng màu cam, chữ vừa đọc xanh nhạt, tầng 2–3 là tiếng Anh, tiếng Việt của đúng câu đang nói,
+# YOUR TURN + đếm ngược là đến lượt bạn nói) và cách học mỗi ngày.
+# Nhịp chung của Unit 0 (file 07 mục 4): Emma 0.9, Yuki 0.78, nghỉ 0.8 giây giữa hai câu, `step: 0.9` — câu tiếng
+# Nhật có nhiều phần (か、き、く / はじめまして。ゆきです。) đọc từng phần, phần đang đọc sáng lên.
+id: U00-01-start
+activity: U00-kana
+title: "Unit 0 · Before Lesson 1"
+subtitle: "Start here · What Unit 0 is for"
+title_vi: "Bắt đầu — Unit 0 học gì, để làm gì; thứ tự các video; cách học với video"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Welcome"
+    heading: "Welcome to Japanese · ようこそ"
+    items:
+      - jp: "はじめまして。 ゆきです。"
+        romaji: "Hajimemashite. · Yuki desu."
+        en: "How do you do? I'm Yuki."
+        vi: "Rất vui được gặp bạn. Mình là Yuki."
+    lines:
+      - emma: "Hello, and welcome to Japanese! I'm Emma, your guide."
+        vi: "Xin chào, chào mừng bạn đến với tiếng Nhật! Mình là Emma, người hướng dẫn của bạn."
+      - emma: "This is Yuki. She reads all the Japanese in these videos."
+        vi: "Đây là Yuki. Bạn ấy đọc toàn bộ phần tiếng Nhật trong các video này."
+      - yuki: "はじめまして。ゆきです。"
+        en: "How do you do? I'm Yuki."
+        vi: "Rất vui được gặp bạn. Mình là Yuki."
+        pause: 1
+
+  - kind: jp
+    chapter: "What Unit 0 is for"
+    heading: "Unit 0 · Four things before Lesson 1"
+    items:
+      - jp: "ひらがな ・ カタカナ ・ あいさつ ・ すうじ"
+        romaji: "hiragana · katakana · aisatsu · suuji"
+        en: "Hiragana · katakana · greetings · numbers"
+        vi: "Hiragana · katakana · câu chào hỏi · số đếm"
+    lines:
+      - emma: "Before Lesson 1, Unit 0 gives you four things."
+        vi: "Trước bài 1, Unit 0 cho bạn bốn thứ."
+      - emma: "Hiragana, the first Japanese alphabet. That is videos two to ten."
+        vi: "Hiragana, bảng chữ cái tiếng Nhật thứ nhất. Đó là các video từ 2 đến 10."
+        hl: 0
+      - emma: "Katakana, the second alphabet, for words from other languages. Videos eleven and twelve."
+        vi: "Katakana, bảng chữ cái thứ hai, dùng cho từ mượn tiếng nước ngoài. Video 11 và 12."
+        hl: 1
+      - emma: "Greetings, the words you say every day. Videos thirteen and fourteen."
+        vi: "Câu chào hỏi, những câu bạn nói mỗi ngày. Video 13 và 14."
+        hl: 2
+      - emma: "And numbers, from zero to one hundred. Videos fifteen and sixteen."
+        vi: "Và số đếm, từ 0 đến 100. Video 15 và 16."
+        hl: 3
+      - yuki: "ひらがな、カタカナ、あいさつ、すうじ。"
+        en: "hiragana, katakana, greetings, numbers"
+        vi: "hiragana, katakana, chào hỏi, số đếm"
+        pause: 1
+
+  - kind: jp
+    chapter: "Why start here"
+    heading: "Why? · Lesson 1 is written in Japanese letters"
+    items:
+      - jp: "わたしは がくせいです。"
+        romaji: "Watashi wa gakusee desu."
+        en: "I am a student. A sentence from Lesson 1, written only in hiragana."
+        vi: "Tôi là sinh viên. Một câu của bài 1, viết toàn bằng hiragana."
+    lines:
+      - emma: "Why start here? Because from Lesson 1, the book is written in Japanese letters."
+        vi: "Vì sao bắt đầu từ đây? Vì từ bài 1, sách được viết bằng chữ Nhật."
+      - emma: "Here is a sentence from Lesson 1. Listen."
+        vi: "Đây là một câu trong bài 1. Hãy nghe."
+      - yuki: "わたしはがくせいです。"
+        en: "I am a student."
+        vi: "Tôi là sinh viên."
+        pause: 1
+      - emma: "It means: I am a student. After Unit 0, you will read it by yourself."
+        vi: "Câu này nghĩa là: Tôi là sinh viên. Học xong Unit 0, bạn sẽ tự đọc được."
+      - emma: "Greetings and numbers come right away in Lesson 1: to say hello, your age, and the time."
+        vi: "Chào hỏi và số đếm được dùng ngay ở bài 1: để chào, nói tuổi và nói giờ."
+
+  - kind: jp
+    chapter: "How the videos work"
+    heading: "How to watch · Follow the orange letter"
+    items:
+      - jp: "か き く け こ"
+        romaji: "ka ki ku ke ko"
+        en: "The letter being read turns orange; letters already read turn light blue."
+        vi: "Chữ đang đọc sáng màu cam; chữ vừa đọc xong chuyển xanh nhạt."
+    lines:
+      - emma: "Here is how the videos work. When Yuki reads, the letter she is saying turns orange."
+        vi: "Cách xem video: khi Yuki đọc, chữ bạn ấy đang đọc sẽ sáng màu cam."
+      - emma: "Letters she has just read turn light blue. Watch."
+        vi: "Chữ vừa đọc xong chuyển sang màu xanh nhạt. Hãy xem."
+      - yuki: "か、き、く、け、こ。"
+        en: "ka, ki, ku, ke, ko"
+        vi: "ca, ki, cư, kê, cô"
+        pause: 0.5
+      - emma: "Under the card, the blue box is in English, and the box with the orange edge is in Vietnamese."
+        vi: "Dưới thẻ, ô màu xanh là tiếng Anh, ô viền cam là tiếng Việt."
+      - emma: "When you see Your turn and a countdown, say it aloud before the count reaches zero. Try it now."
+        vi: "Khi thấy chữ Your turn và đồng hồ đếm ngược, hãy đọc to trước khi đếm về 0. Thử ngay nhé."
+      - yuki: "か、き、く、け、こ。"
+        en: "ka, ki, ku, ke, ko"
+        vi: "ca, ki, cư, kê, cô"
+        echo: true
+      - emma: "Good. You can pause the video whenever you need more time."
+        vi: "Tốt lắm. Bạn có thể dừng video bất cứ lúc nào cần thêm thời gian."
+
+  - kind: jp
+    chapter: "How to study"
+    heading: "How to study · A little every day"
+    items:
+      - jp: "まいにち すこしずつ"
+        romaji: "mainichi · sukoshi zutsu"
+        en: "A little every day."
+        vi: "Mỗi ngày một chút."
+    lines:
+      - emma: "How to study Unit 0. One video a day is enough."
+        vi: "Cách học Unit 0: mỗi ngày một video là đủ."
+      - emma: "Say every letter aloud, and write each new letter five times by hand."
+        vi: "Đọc to từng chữ, và viết tay mỗi chữ mới năm lần."
+      - emma: "In about two weeks, you will finish Unit 0 and be ready for Lesson 1."
+        vi: "Khoảng hai tuần là bạn học xong Unit 0 và sẵn sàng cho bài 1."
+      - emma: "Yuki's advice: a little every day."
+        vi: "Lời khuyên của Yuki: mỗi ngày một chút."
+      - yuki: "まいにち、すこしずつ。"
+        en: "A little every day."
+        vi: "Mỗi ngày một chút."
+        pause: 1
+      - emma: "Next video: the three kinds of Japanese letters, and the five vowels."
+        vi: "Video tiếp theo: ba loại chữ tiếng Nhật và năm nguyên âm."
