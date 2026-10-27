@@ -414,6 +414,21 @@ GENKI có 34 video. Bài 6–12 chưa có video.
   - Sửa: tầng 2–3 theo câu đang nói, câu nào cũng có `vi` (và `en` với câu tiếng Nhật); tô sáng chữ đang đọc, đọc từng
     chữ (`step`), file nghe tách theo khoảng lặng; đếm ngược YOUR TURN trong cảnh `jp`; nhịp chậm hơn (mục 4.1); 16 video
     3–5 phút, mỗi video mở đầu bằng "học gì, để làm gì" và có video mở đầu cả Unit 0.
+- **Emma đọc romaji kiểu tiếng Anh** (đợt 23, lệnh `phonemes` và soát phiên âm từng câu có romaji): chi thành "kai",
+  ji thành "jai", ki thành "kai", ya thành "yuh", nguyên âm a i u e o thành tên chữ cái "ay, eye, you, ee, oh", Takeshi
+  thành "Take-shi", Ai Honda thành "A-I Honda", desu thành "di-soo", ng thành "en-gee"; động từ use / uses đọc như danh
+  từ. Màn hình vẫn hiện romaji, `say` viết lại:
+
+  | Chữ | `say` | | Chữ | `say` |
+  |---|---|---|---|---|
+  | chi, cha / chu / cho | chee, chah / choo / cho | | a, i, u, e, o (nguyên âm Nhật) | ah, ee, oo, eh, oh |
+  | ji, zu | jee, zoo | | Takeshi | Tahkehshee |
+  | ki | kee | | Ai (tên) | Eye |
+  | ya, yu, yo | yah, yoo, yoh | | desu | dess |
+  | use / uses (động từ) | yooz / yoozes | | ng | the ng in sing |
+
+  Còn đúng, không cần `say`: ka, sa, ta, na, ha, ma, ra, wa, ba, pa, shi, tsu, fu, Yuki; "read" quá khứ phân từ ("is read
+  wa"). "hiragana" đọc /hɜːrəˈɡɑːnə/, để nguyên như video bài 1–3.
 - **Từ có は đầu từ trong danh sách bị đọc như trợ từ** (đợt 23): はいく đọc "wa iku". `check` bắt được vì romaji
   không khớp. Sửa: `say` viết ハイク.
 - **っ là khoảng lặng giữa từ**, nên tách file nghe theo khoảng lặng thì かった, さっか, チェック, デュエット thành hai đoạn
