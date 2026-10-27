@@ -5,6 +5,57 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 23 — 27/10/2026: GENKI Unit 0 làm lại — 19 video ngắn, chữ sáng theo chỗ đang đọc
+
+Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Người học góp ý về năm video Unit 0 của đợt 17:
+- chữ trên màn hình không khớp lời Emma;
+- giọng Nhật đọc mà không có lời dịch tiếng Anh, tiếng Việt;
+- học quá nhanh, cần chia nhỏ hơn;
+- cả đoạn hiện một lúc nên không biết giọng Nhật đang đọc tới đâu;
+- tất cả cần chậm hơn một nhịp, và cần nói bài học để làm gì.
+
+**Công cụ dựng video (`agents/lesson_video/`)**
+- `jpcard.py`: tầng 2–3 hiện đúng câu đang nói — Emma: "EMMA SAYS" + lời của cô, "DỊCH LỜI EMMA" + `vi`; câu tiếng
+  Nhật, file nghe: "ENGLISH" + `en`, "TIẾNG VIỆT" + `vi`; đếm ngược: "YOUR TURN" + `note`. Dòng thiếu thì hiện `en` /
+  `vi` của thẻ như cũ. Tô sáng: chữ đang đọc nền cam nhạt gạch chân cam, chữ vừa đọc nền xanh nhạt, romaji sáng theo.
+  Đếm ngược có nhãn cam và vòng số ở góc thẻ. Chữ Nhật trên thẻ tới 60 px (thẻ một hàng chữ cái nhìn rõ nét).
+- `timeline.py`: khung hình mang `en`, `hl`, `done`. Câu tiếng Nhật có `step` đọc từng phần (mỗi phần một khung, nghỉ
+  `step` giây); dòng `track` có `step` tách file nghe theo khoảng lặng (`speech_spans`, `track_spans`), mỗi đoạn một
+  chữ, chữ sáng trước tiếng 0.15 giây, chỗ nghỉ giãn ra ≥ `step`. `echo` sau câu đọc từng phần tính cả chỗ nghỉ.
+- `script.py`: dòng thoại có `en`, `hl` (số, danh sách, `all`), `step`; bài có `step`. `reading_plan` (dùng chung cho
+  `check` và lúc dựng) quyết định chữ nào sáng và câu đọc thành mấy phần. Cảnh `jp` nay có `wait` / `echo`. `check` so
+  từng phần của câu đọc từng phần với đúng chữ của nó, báo số phần khác số chữ được tô, và số đoạn có tiếng của file
+  nghe khác số chữ được tô.
+- `ja.py`: `card_tokens`, `romaji_tokens`, `split_parts`, `as_said`; âm ghép đọc riêng (みょ, りょ, ぎょ… — misaki đọc
+  tách thành hai âm ở mọi cách viết) đưa thẳng âm vị cho Kokoro; `check_line` báo chữ cái hay âm ghép đọc riêng bị đọc
+  sai (へ → "e" như trợ từ).
+
+**19 video mới** (`books/Genki/lessons/U00-01-start` … `U00-19-numbers-2`, 19 video, 1:10:43, thay `U00-hiragana-1`,
+`U00-hiragana-2`, `U00-katakana`, `U00-greetings`, `U00-numbers`: xóa kịch bản rồi `prune` bỏ khỏi `lessons.json` và
+xóa `.mp4`)
+- Start here: Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1), thứ tự video, cách xem.
+- Hiragana 1–9: ba loại chữ và nguyên âm; hàng か さ, た な, は ま, や ら わ ん (mỗi chữ Yuki đọc riêng, người học nhắc
+  lại, rồi cả hàng có YOUR TURN; cả bảng với JWS-01); luyện tập (chữ dễ nhầm, chữ viết tay, nghe – viết); ゛゜ (JWS-02);
+  âm ghép (JWS-03); っ, trường âm, nhịp, cao độ (JWS-04…08).
+- Katakana 1–4: hàng ア–ホ; hàng マ–ン, cả bảng, chữ dễ nhầm (JWS-09); dấu, âm ghép, ー (JWS-10…12); âm ngoại lai
+  (JWS-13), từ mượn, tên tiếng Việt, làm quen chữ Hán.
+- Greetings 1–3: mỗi câu chào Emma nói tình huống → Yuki / Takeshi → lượt bạn → audio gốc K00-01 cắt đúng câu đó;
+  video 3 là luyện tập: 10 tình huống đố, tự giới thiệu.
+- Numbers 1–2: 0–20 từng số, cách đọc thứ hai; hàng chục, 100; audio K00-02 tô từng số; bài A, B, C; nghe – viết.
+- Mỗi video mở đầu bằng "In this video" (học gì, để làm gì). Câu nào cũng có lời dịch. Nhịp: Emma 0.9, Yuki / Takeshi
+  0.78, nghỉ 0.8 giây giữa hai câu, 1.5 giây giữa hai cảnh, 0.9 giây giữa hai chữ (audio sách 1.2 giây).
+
+**Sửa khác**
+- `books/Genki/book.yaml`: tóm tắt sách và ghi chú hai phiên Unit 0 nói 19 video; chạy lại agent nhập sách
+  (`book.json`).
+- Tài liệu: file 07 mục 4.1 (bảng 19 video), 4.2 (lời dịch từng dòng, tô sáng, `step`, `wait` / `echo` trong cảnh
+  `jp`, video Unit 0 2,5–5 phút), 4.3 (tầng 2–3 theo câu, tô sáng, đọc từng chữ, âm vị âm ghép), 4.4 (lỗi đã gặp), 4.6
+  (mốc thời gian audio JWS / K00 lấy bằng ASR); `agents/README.md`; checklist P2-54.
+- Test (`agents/tests/test_japanese_video.py`): chữ của thẻ, romaji, các phần của câu; `reading_plan`; đọc từng chữ
+  (khung, chỗ nghỉ, `echo`); tầng 2–3 theo câu; vẽ tô sáng và đếm ngược; tách file nghe theo khoảng lặng (wav giả ba
+  tiếng bíp) và báo lệch số đoạn; kiểm cách đọc từng phần (へ); âm vị âm ghép. E2E: thẻ GENKI có 37 video, Unit 0 có 19
+  nút video theo thứ tự (Start, Hiragana × 9, Katakana × 4, Greetings × 3, Numbers × 2), mỗi video 2–5 phút.
+
 ## Đợt 22 — 26/10/2026: Video Giai đoạn 0 — Unit 3 (4 video)
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Làm theo sổ tay ở file 08 mục 6. Xong đợt này là đủ phần đã hẹn:

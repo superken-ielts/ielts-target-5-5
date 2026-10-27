@@ -1,0 +1,100 @@
+# U00 · Katakana 3 — GENKI I, Japanese Writing System (trang 25–26). Dấu ゛゜ và ャュョ nhỏ y như hiragana (audio gốc
+# JWS-10 từ 5.8 giây, JWS-11 từ 6.0 giây), trường âm ー (JWS-12 từ 12.0 giây).
+id: U00-13-katakana-3
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Katakana 3 · Marks, small letters, long vowels ー"
+title_vi: "Katakana 3 — dấu ゛゜, âm ghép ャュョ, trường âm ー"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Marks, small letters, long vowels"
+    items:
+      - jp: "ガ ・ キャ ・ カー"
+        romaji: "ga · kya · kaa"
+        en: "Goals: the marks ゛ ゜ and small ャ ュ ョ work as in hiragana; long vowels are a new mark, the dash ー."
+        vi: "Mục tiêu: dấu ゛ ゜ và ャ ュ ョ nhỏ dùng như hiragana; trường âm là một dấu mới, gạch ー."
+    lines:
+      - emma: "Welcome back. In this video: marks, small letters, and long vowels in katakana."
+        vi: "Chào mừng bạn trở lại. Trong video này: dấu, chữ nhỏ và trường âm trong katakana."
+      - emma: "Good news: they work almost exactly as in hiragana. Only long vowels look different."
+        vi: "Tin vui: chúng dùng gần y như ở hiragana. Chỉ trường âm là viết khác."
+
+  - kind: jp
+    chapter: "Marks and small letters"
+    heading: "゛ ゜ and small ャ ュ ョ · exactly as in hiragana"
+    items:
+      - jp: "ガ ・ ザ ・ ダ ・ バ ・ パ ・ キャ ・ シュ ・ チョ"
+        romaji: "ga · za · da · ba · pa · kya · shu · cho"
+        en: "The marks ゛ ゜ and the small ャ ュ ョ work exactly as in hiragana."
+        vi: "Dấu ゛゜ và ャュョ nhỏ dùng y như hiragana."
+      - jp: "ガ　ギ　グ　ゲ　ゴ\nザ　ジ　ズ　ゼ　ゾ\nダ　ヂ　ヅ　デ　ド\nバ　ビ　ブ　ベ　ボ\nパ　ピ　プ　ペ　ポ"
+        en: "The 25 sounds with marks."
+        vi: "25 âm có dấu."
+      - jp: "キャ　キュ　キョ　　　ヒャ　ヒュ　ヒョ　　　ジャ　ジュ　ジョ\nシャ　シュ　ショ　　　ミャ　ミュ　ミョ　　　ビャ　ビュ　ビョ\nチャ　チュ　チョ　　　リャ　リュ　リョ　　　ピャ　ピュ　ピョ\nニャ　ニュ　ニョ　　　ギャ　ギュ　ギョ"
+        en: "The 33 contracted sounds: read down each column."
+        vi: "33 âm ghép: đọc từng cột từ trên xuống."
+    lines:
+      - emma: "Good news: the marks and the small letters work exactly as in hiragana."
+        vi: "Tin vui: dấu và chữ nhỏ dùng y như ở hiragana."
+      - yuki: "ガ、ザ、ダ、バ、パ、キャ、シュ、チョ。"
+        en: "ga, za, da, ba, pa, kya, shu, cho"
+        vi: "ga, za, đa, ba, pa, kya, shu, cho"
+        echo: true
+      - emma: "Read along with the book's audio. First, the sounds with marks."
+        vi: "Đọc theo audio của sách. Đầu tiên là các âm có dấu."
+        focus: 1
+      - track: JWS-10
+        start: 5.8
+        note: "Japanese Writing System · JWS-10"
+        en: "ga … go · za … zo · da … do · ba … bo · pa … po"
+        vi: "ga … gô · za … zô · đa … đô · ba … bô · pa … pô"
+        step: 1.2
+        pause: 1
+      - emma: "Then the contracted sounds."
+        vi: "Sau đó là các âm ghép."
+        focus: 2
+      - track: JWS-11
+        start: 6.0
+        note: "Japanese Writing System · JWS-11"
+        en: "kya kyu kyo · sha … · pya pyu pyo"
+        vi: "kya kyu kyo · sha … · pya pyu pyo"
+        hl: [0, 1, 2, 9, 10, 11, 18, 19, 20, 27, 28, 29, 3, 4, 5, 12, 13, 14, 21, 22, 23, 30, 31, 32,
+             6, 7, 8, 15, 16, 17, 24, 25, 26]
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Long vowels ー"
+    heading: "Long vowels in katakana · a dash ー"
+    items:
+      - jp: "カー ・ スキー ・ スーツ ・ ケーキ ・ ボール"
+        romaji: "kaa · sukii · suutsu · keeki · booru"
+        en: "car · ski · suit · cake · ball. In katakana, a long vowel is a dash ー."
+        vi: "ô tô · trượt tuyết · com-lê · bánh ngọt · quả bóng. Trong katakana, trường âm là dấu gạch ー."
+    lines:
+      - emma: "In katakana, a long vowel is simply a dash. Hold it for two beats. Car, ski, suit, cake, ball."
+        vi: "Trong katakana, nguyên âm dài chỉ là một dấu gạch. Kéo dài hai nhịp. Ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng."
+      - yuki: "カー、スキー、スーツ、ケーキ、ボール。"
+        en: "car, ski, suit, cake, ball"
+        vi: "ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng"
+        echo: true
+      - emma: "The book's audio."
+        vi: "Audio của sách."
+      - track: JWS-12
+        start: 12.0
+        note: "Japanese Writing System · JWS-12"
+        en: "car, ski, suit, cake, ball"
+        vi: "ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng"
+        step: 1.2
+        pause: 1
+      - emma: "Next video: sounds for foreign words, everyday loanwords, and a first look at kanji."
+        vi: "Video tiếp theo: âm cho từ nước ngoài, từ mượn hằng ngày, và làm quen với chữ Hán."

@@ -48,8 +48,13 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
 # `read: <người nói>` (chỉ trong cảnh letter): người đó đọc nguyên đoạn `focus` của thư
 # `echo: true` (câu thoại): sau câu là khoảng lặng đếm ngược dài theo câu để người học nhắc lại (shadowing)
 # `speed` (câu thoại): tốc độ đọc riêng của câu này (mặc định: `speed` của người nói, rồi tới --speed của lệnh build)
+# Cảnh jp — hai tầng dưới thẻ hiện đúng câu đang nói: câu tiếng Anh của người nói (`vi` = tiếng Việt của câu đó);
+# câu tiếng Nhật / file nghe thì `en`, `vi` là nghĩa tiếng Anh, tiếng Việt của câu (thiếu thì lấy `en`, `vi` của thẻ).
+# `hl` tô sáng chữ trên thẻ: số thứ tự chữ (xem ja.card_tokens), danh sách số, hoặc `all`. Câu tiếng Nhật, file nghe
+# mặc định tô cả thẻ; `step` (hoặc `step` của bài) > 0 thì câu tiếng Nhật nhiều chữ (か、き、く) đọc từng chữ một, nghỉ
+# `step` giây giữa hai chữ, chữ đang đọc sáng lên; file nghe thì tách theo khoảng lặng và giãn ra như vậy.
 LINE_FIELDS = {"say", "vi", "focus", "reveal", "wait", "pause", "note", "read", "mark", "track", "start", "end", "echo",
-               "speed"}
+               "speed", "en", "hl", "step"}
 
 
 class _M(BaseModel):
@@ -111,6 +116,20 @@ class Line(_M):
     end: Optional[float] = None
     echo: bool = False    # câu thoại: thêm khoảng lặng đếm ngược (dài theo câu) để người học nhắc lại
     speed: Optional[float] = Field(None, ge=0.5, le=2.0)
+    en: str = ""          # cảnh jp: nghĩa tiếng Anh của câu tiếng Nhật / file nghe
+    hl: Union[Literal["all"], list[int], None] = None   # cảnh jp: chữ trên thẻ được tô sáng (số thứ tự, hoặc all)
+    step: Optional[float] = Field(None, ge=0, le=5)     # cảnh jp: nghỉ giữa hai chữ khi đọc từng chữ (0 = đọc liền)
+
+    @field_validator("hl", mode="before")
+    @classmethod
+    def _hl(cls, v):
+        if v is None or v == "all":
+            return v
+        if isinstance(v, int) and not isinstance(v, bool):
+            return [v]
+        if isinstance(v, list) and v and all(isinstance(x, int) and not isinstance(x, bool) and x >= 0 for x in v):
+            return v
+        raise ValueError(f"`hl` là số thứ tự chữ trên thẻ (từ 0), danh sách số, hoặc all: {v!r}")
 
     @field_validator("reveal", "mark", mode="before")
     @classmethod
@@ -133,6 +152,8 @@ class Line(_M):
             raise ValueError("`echo` (chừa chỗ nhắc lại) chỉ dùng cho câu thoại")
         if self.speed is not None and not self.speaker:
             raise ValueError("`speed` chỉ dùng cho câu thoại")
+        if self.step is not None and not (self.speaker or self.track):
+            raise ValueError("`step` chỉ dùng cho câu thoại hoặc file nghe")
         return self
 
     @property
@@ -184,17 +205,25 @@ class Scene(_M):
                     raise ValueError(f"cảnh mcq: đáp án '{it['answer']}' của câu {it['n']} không thuộc {letters}")
         if self.kind != "passage" and any(ln.mark for ln in self.lines):
             raise ValueError("`mark` (tô từ khóa) chỉ dùng trong cảnh passage")
+        if self.kind != "jp" and any(ln.hl is not None or ln.en or ln.step is not None for ln in self.lines):
+            raise ValueError("`hl`, `en`, `step` chỉ dùng trong cảnh jp")
         if self.kind == "letter" and any(ln.wait or ln.echo for ln in self.lines):
             raise ValueError("cảnh letter không có khoảng lặng `wait` / `echo` (không có chỗ hiện đếm ngược)")
         if self.kind == "jp":
-            if any(ln.wait or ln.echo for ln in self.lines):
-                raise ValueError("cảnh jp không có khoảng lặng `wait` / `echo` — dùng `pause`")
             for k, it in enumerate(self.items):
                 if it.get("quiz"):  # thẻ đố: được để chữ Hán không furigana (bài đọc giá tiền, chữ Hán)
                     continue
                 bad = ja.check_markup(str(it["jp"]))
                 if bad:
                     raise ValueError("cảnh jp" + (f", thẻ {k}" if len(self.items) > 1 else "") + ": " + "; ".join(bad))
+            focus = 0
+            for ln in self.lines:
+                if ln.focus is not None and 0 <= ln.focus < len(self.items):
+                    focus = ln.focus
+                if isinstance(ln.hl, list):
+                    n = len(ja.card_tokens(str(self.items[focus]["jp"])))
+                    if max(ln.hl) >= n:
+                        raise ValueError(f"cảnh jp: `hl` {ln.hl} vượt số chữ của thẻ {focus} ({n} chữ, đếm từ 0)")
         if not self.lines:
             raise ValueError("cảnh không có câu thoại nào")
         keys = self.reveal_keys()
@@ -224,6 +253,7 @@ class Lesson(_M):
     speakers: dict[str, Speaker]
     gap: float = Field(0.45, ge=0, le=3)
     scene_gap: float = Field(0.8, ge=0, le=5)
+    step: Optional[float] = Field(None, ge=0, le=5)   # cảnh jp: đọc từng chữ, nghỉ `step` giây giữa hai chữ (câu tự đặt `step` thì theo câu)
     scenes: list[Scene]
 
     @model_validator(mode="before")
@@ -330,6 +360,30 @@ def find_item(book: dict, activity: str) -> Optional[dict]:
     return None
 
 
+def reading_plan(lesson: Lesson, sc: Scene, ln: Line, focus: int) -> tuple[list[int], list[str]]:
+    """Cảnh jp: (số thứ tự các chữ trên thẻ được tô sáng, theo thứ tự đọc; các phần đọc riêng từng chữ).
+
+    Câu tiếng Nhật, file nghe mặc định tô cả thẻ (thẻ đố thì không); câu tiếng Anh chỉ tô khi có `hl`. Có `step`
+    (của câu, không thì của bài) và câu tiếng Nhật chia được thành nhiều phần (か、き、く) thì mỗi phần đọc riêng."""
+    it = sc.items[focus] if sc.items else {}
+    n = len(ja.card_tokens(str(it.get("jp", ""))))
+    sp = lesson.speakers.get(ln.speaker or "")
+    native = bool(ln.track) or bool(sp and sp.lang == "ja")
+    if isinstance(ln.hl, list):
+        seq = list(ln.hl)
+    elif ln.hl == "all" or (native and ln.hl is None and not it.get("quiz")):
+        seq = list(range(n))
+    else:
+        seq = []
+    step = ln.step if ln.step is not None else (lesson.step or 0)
+    parts: list[str] = []
+    if step and sp and sp.lang == "ja" and len(seq) > 1:
+        p = ja.split_parts(ln.spoken)
+        if len(p) > 1:
+            parts = p
+    return seq, parts
+
+
 def check_japanese(lesson: Lesson) -> list[str]:
     """Cảnh jp có câu thoại tiếng Nhật: bộ đọc phải đọc đúng như furigana, romaji khớp cách đọc (cần misaki).
 
@@ -344,8 +398,30 @@ def check_japanese(lesson: Lesson) -> list[str]:
         for ln in sc.lines:
             if ln.focus is not None:
                 focus = ln.focus
-            if ln.speaker and lesson.speakers[ln.speaker].lang == "ja":
-                by_card.setdefault(focus, []).append(ln.spoken)
+            if not (ln.speaker and lesson.speakers[ln.speaker].lang == "ja"):
+                continue
+            it = sc.items[focus]
+            seq, parts = reading_plan(lesson, sc, ln, focus)
+            if not it.get("quiz") and (parts or isinstance(ln.hl, list)):
+                # đọc từng chữ, hoặc vài chữ trên thẻ: mỗi phần so với đúng chữ đó (như lúc dựng: thêm 。 cuối phần)
+                toks = ja.card_tokens(str(it["jp"]), markup=True)
+                roms = ja.romaji_tokens(str(it.get("romaji") or ""))
+                where = f"cảnh {i}" + (f", thẻ {focus}" if len(sc.items) > 1 else "")
+                if parts and len(parts) != len(seq):
+                    problems.append(f"{where}: đọc từng chữ nhưng câu có {len(parts)} phần còn thẻ tô {len(seq)} chữ"
+                                    f" — sửa câu, `hl`, hoặc đặt `step: 0` để đọc liền: {ln.spoken!r}")
+                    continue
+                pairs = list(zip(parts, seq)) if parts else [("".join(ja.split_parts(ln.spoken)) or ln.spoken, None)]
+                for part, j in pairs:
+                    want = toks[j] if j is not None else "".join(toks[k] for k in ln.hl)
+                    idx = [j] if j is not None else ln.hl
+                    romaji = " ".join(roms[k] for k in idx) if len(roms) == len(toks) else ""
+                    try:
+                        problems += [f"{where}, chữ {idx}: {m}" for m in ja.check_line(want, ja.as_said(part), romaji)]
+                    except ja.JaError as e:
+                        return [str(e)]
+                continue
+            by_card.setdefault(focus, []).append(ln.spoken)
         for k, spoken in by_card.items():
             it = sc.items[k]
             if it.get("quiz"):  # thẻ đố nghe: chữ chưa hiện, thẻ đáp án ngay sau đọc lại câu đó và được đối chiếu
@@ -372,7 +448,9 @@ def check(lesson: Lesson, bdir: Path) -> list[str]:
     if not find_item(book, lesson.activity):
         problems.append(f"hoạt động {lesson.activity} không có trong book.json")
     for i, sc in enumerate(lesson.scenes):
+        focus = 0
         for ln in sc.lines:
+            focus = ln.focus if ln.focus is not None else focus
             if not ln.track:
                 continue
             f = book.get("files", {}).get(ln.track)
@@ -382,6 +460,16 @@ def check(lesson: Lesson, bdir: Path) -> list[str]:
                 problems.append(f"cảnh {i}: thiếu file {f['path']}")
             elif ln.end is not None and f.get("durationSec") and ln.end > f["durationSec"] + 0.5:
                 problems.append(f"cảnh {i}: {ln.track} chỉ dài {f['durationSec']:.1f} giây (end = {ln.end})")
+            elif sc.kind == "jp":
+                seq, _ = reading_plan(lesson, sc, ln, focus)
+                step = ln.step if ln.step is not None else (lesson.step or 0)
+                if step and len(seq) > 1:  # tô từng chữ theo khoảng lặng: số đoạn có tiếng phải bằng số chữ
+                    from .timeline import track_spans
+                    n = len(track_spans(bdir / f["path"], ln.start, ln.end))
+                    if n != len(seq):
+                        problems.append(f"cảnh {i}: {ln.track} ({ln.start}–{ln.end or 'hết'}) có {n} đoạn có tiếng nhưng"
+                                        f" thẻ tô {len(seq)} chữ — chỉnh start / end, `hl`, hoặc đặt `step: 0` để tô"
+                                        " cả thẻ")
         if not sc.image:
             continue
         f = book.get("files", {}).get(sc.image.pdf)

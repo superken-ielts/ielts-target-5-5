@@ -87,7 +87,9 @@ def test_jp_scene_validates():
     (lambda d: d["scenes"][0]["items"].append({"jp": "何です"}), "thẻ 1: chữ Hán chưa có furigana: 何"),
     # thẻ đố (quiz) được để chữ Hán không furigana, thẻ thường thì không
     (lambda d: d["scenes"][0]["items"].extend([{"jp": "六百円", "quiz": True}, {"jp": "何"}]), "thẻ 2: chữ Hán chưa có furigana"),
-    (lambda d: d["scenes"][0]["lines"].append({"wait": 2}), "không có khoảng lặng"),
+    (lambda d: d["scenes"][0]["lines"].append({"emma": "This one.", "hl": 4}), r"`hl` \[4\] vượt số chữ của thẻ 0 \(4 chữ"),
+    (lambda d: d["scenes"][0]["lines"].append({"emma": "This one.", "hl": [0, -1]}), "số thứ tự chữ trên thẻ"),
+    (lambda d: d["scenes"][0]["lines"].append({"wait": 2, "step": 0.5}), "chỉ dùng cho câu thoại hoặc file nghe"),
     (lambda d: d["scenes"][0]["lines"].append({"emma": "Next.", "focus": 1}), "focus 1 ngoài số mục"),
     (lambda d: d["scenes"][1]["items"][0].update(jp="{午前|ごぜん}九時です"), "chưa có furigana: 九 時"),
     (lambda d: d["scenes"][1]["lines"][0].pop("say"), "chữ Latin hoặc chữ số"),
@@ -287,3 +289,155 @@ def test_check_reports_japanese_problems_with_book(tmp_path):
         assert probs == []
     else:                                                              # không có misaki thì báo cần cài
         assert len(probs) == 1 and "misaki" in probs[0]
+
+
+# ---------- đọc từng chữ, tô sáng chỗ đang đọc, tầng 2–3 theo câu đang nói ----------
+KROW = {"kind": "jp", "heading": "The K row",
+        "items": [{"jp": "か き く け こ", "romaji": "ka ki ku ke ko", "en": "The K row.", "vi": "Hàng K."},
+                  {"jp": "① ？", "quiz": True, "en": "Listen and write.", "vi": "Nghe và viết."}],
+        "lines": [{"emma": "The first letter is ka.", "vi": "Chữ đầu tiên là ka.", "hl": 0},
+                  {"yuki": "か、き、く、け、こ。", "en": "ka, ki, ku, ke, ko", "step": 0.5, "echo": True},
+                  {"yuki": "かきくけこ。", "step": 0},
+                  {"yuki": "き。", "focus": 1}]}
+
+
+def test_card_tokens_and_parts():
+    assert ja.card_tokens("あ　い　う\nか き") == ["あ", "い", "う", "か", "き"]   # bảng chữ: dấu cách toàn khổ, xuống dòng
+    assert ja.card_tokens("テレビを {見|み}ます。") == ["テレビを", "見ます"]
+    assert ja.card_tokens("テレビを {見|み}ます。", markup=True) == ["テレビを", "{見|み}ます"]
+    assert ja.card_tokens("ぬ ・ め / る ・ ろ") == ["ぬ", "め", "る", "ろ"]
+    assert ja.romaji_tokens("nu · me / ru · ro") == ["nu", "me", "ru", "ro"]
+    assert ja.romaji_tokens("ka ki ku") == ["ka", "ki", "ku"]
+    assert ja.romaji_tokens("a i u\nka ki") == ["a", "i", "u", "ka", "ki"]                # bảng nhiều hàng
+    assert ja.romaji_tokens("Hajimemashite. · Yuki desu.") == ["Hajimemashite.", "Yuki desu."]
+    assert ja.split_parts("か、き、く。") == ["か", "き", "く"]
+    assert ja.split_parts("テレビを 見ます。") == ["テレビを 見ます"]               # dấu cách không chia câu
+    assert ja.as_said("は") == "は。"                                            # は đứng riêng không có 。 bị đọc "wa"
+
+
+def test_reading_plan():
+    les = lesson(lambda d: d["scenes"].append(copy.deepcopy(KROW)))
+    scene = les.scenes[2]
+    plan = [sc.reading_plan(les, scene, ln, f) for ln, f in zip(scene.lines, [0, 0, 0, 1])]
+    assert plan[0] == ([0], [])                                  # người nói tiếng Anh: chỉ tô chữ ghi ở `hl`
+    assert plan[1] == ([0, 1, 2, 3, 4], list("かきくけこ"))       # có `step`: đọc từng chữ
+    assert plan[2] == ([0, 1, 2, 3, 4], [])                      # step: 0 → đọc liền, tô cả thẻ
+    assert plan[3] == ([], [])                                   # thẻ đố: không tô (không lộ đáp án)
+
+
+class Texts(tts.Silent):
+    def __init__(self):
+        self.texts = []
+
+    def synth(self, text, voice, speed=None):
+        self.texts.append(text)
+        return super().synth(text, voice, speed)
+
+
+def test_step_reading_lights_one_letter_at_a_time():
+    les = lesson(lambda d: d["scenes"].append(copy.deepcopy(KROW)))
+    eng = Texts()
+    tl = timeline.build(les, eng, say=quiet)
+    frames = [fr for fr in tl.frames if fr.scene == 2]
+    emma, row = frames[0], frames[1:6]
+    assert (emma.hl, emma.done, emma.text, emma.vi) == ((0,), (), "The first letter is ka.", "Chữ đầu tiên là ka.")
+    assert [(fr.hl, fr.done) for fr in row] == [((k,), tuple(range(k))) for k in range(5)]
+    assert all(fr.en == "ka, ki, ku, ke, ko" for fr in row)
+    assert eng.texts[-6:] == ["か。", "き。", "く。", "け。", "こ。", "かきくけこ。"]   # mỗi chữ đọc riêng, thêm 。
+    part, rate = tts.Silent().synth("か。", "v", speed=0.88)
+    assert abs(row[0].dur - (len(part) / rate + 0.5)) < 0.01          # nghỉ `step` giây sau mỗi chữ
+    echo = [fr for fr in frames if fr.countdown is not None]
+    assert echo and all(fr.hl == (0, 1, 2, 3, 4) for fr in echo)      # lượt nhắc lại: cả hàng vừa đọc sáng lên
+    whole, quiz = frames[len(row) + 1 + len(echo):]
+    assert (whole.hl, whole.done, quiz.hl) == ((0, 1, 2, 3, 4), (), ())
+
+
+def test_captions_follow_the_line_being_said():
+    les = lesson(lambda d: d["scenes"].append(copy.deepcopy(KROW)))
+    card, quiz = les.scenes[2].items
+    cap = lambda it, **kw: jpcard.captions(les, it, kw.get("speaker"), kw.get("text", ""), kw.get("en", ""),
+                                           kw.get("vi", ""), kw.get("note", ""), kw.get("waiting", False))
+    assert cap(card, speaker="emma", text="Hi.", vi="Chào.") == (("EMMA SAYS", "Hi."), ("DỊCH LỜI EMMA", "Chào."))
+    assert cap(card, speaker="emma", text="Hi.")[1] == (jpcard.LABEL_VI, "Hàng K.")      # thiếu `vi`: chữ của thẻ
+    assert cap(card, speaker="yuki", en="ka", vi="ca") == (("ENGLISH", "ka"), ("TIẾNG VIỆT", "ca"))
+    assert cap(quiz, speaker="yuki") == ((jpcard.LABEL_EN, "Listen and write."), (jpcard.LABEL_VI, "Nghe và viết."))
+    assert cap(card, waiting=True, note="Say it.", vi="Nói.") == (("YOUR TURN", "Say it."), ("LƯỢT CỦA BẠN", "Nói."))
+
+
+def test_highlight_and_countdown_render(tmp_path):
+    les = lesson(lambda d: d["scenes"].append(copy.deepcopy(KROW)))
+    tl = timeline.build(les, tts.Silent(), say=quiet)
+    frames = [fr for fr in tl.frames if fr.scene == 2]
+    sl = Slides(les, tmp_path)
+
+    def count(img, hexcolor):
+        import numpy as np
+        rgb = [int(hexcolor[k:k + 2], 16) for k in (1, 3, 5)]
+        return int(np.all(np.asarray(img) == rgb, axis=-1).sum())
+
+    third = sl.render(frames[3], 0.5)                                   # chữ く đang đọc, か き vừa đọc xong
+    plain = sl.render(timeline.Frame(2, 0, frozenset(), "yuki", "", ""), 0.5)
+    assert count(third, jpcard.P["now"]) > 1000 and count(third, jpcard.P["done"]) > 2000
+    assert count(plain, jpcard.P["now"]) == count(plain, jpcard.P["done"]) == 0
+    echo = next(fr for fr in frames if fr.countdown is not None)
+    img = sl.render(echo, 0.5)
+    assert img.getpixel((jpcard.TIER1[2] - 70, jpcard.TIER1[1] + 39)) == (0xF3, 0x9C, 0x12)   # vòng đếm ngược màu cam
+
+
+def book_with_tones(tmp_path: Path, tones: int) -> Path:
+    """Sách tối thiểu có file nghe K01-01 đọc `tones` chữ: mỗi chữ 0,3 giây tiếng, nghỉ 0,4 giây."""
+    import wave
+    import numpy as np
+    bdir = book_with_track(tmp_path)
+    rate = 8000
+    beep = (8000 * np.sin(np.arange(int(0.3 * rate)) * 2 * np.pi * 440 / rate)).astype(np.int16)
+    gap = np.zeros(int(0.4 * rate), dtype=np.int16)
+    data = np.concatenate([np.zeros(int(0.2 * rate), dtype=np.int16)] + [np.concatenate([beep, gap])] * tones)
+    with wave.open(str(bdir / "audio" / "K01_01.wav"), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(rate)
+        w.writeframes(data.tobytes())
+    return bdir
+
+
+def test_book_audio_sweeps_letter_by_letter(tmp_path):
+    bdir = book_with_tones(tmp_path, 3)
+    scene = {"kind": "jp", "heading": "Vowels", "items": [{"jp": "あ い う", "en": "a i u"}],
+             "lines": [{"track": "K01-01", "step": 1.0, "en": "a, i, u", "vi": "a, i, u"}]}
+    les = lesson(lambda d: d["scenes"].append(scene))
+    assert [round(a, 2) for a, _ in timeline.track_spans(bdir / "audio" / "K01_01.wav")] == [0.2, 0.9, 1.6]
+    frames = [fr for fr in timeline.build(les, tts.Silent(), say=quiet, book_dir=bdir).frames if fr.scene == 2]
+    assert [(fr.hl, fr.done, fr.audio, fr.en) for fr in frames] == [
+        ((0,), (), "K01-01", "a, i, u"), ((1,), (0,), "K01-01", "a, i, u"), ((2,), (0, 1), "K01-01", "a, i, u")]
+    # chữ sau sáng lên 0,15 giây trước tiếng; nghỉ 0,4 giây giãn ra thành `step` = 1 giây
+    assert abs(frames[0].dur - (0.75 + 0.6)) < 0.03 and abs(frames[1].dur - (0.7 + 0.6)) < 0.03
+    assert sc.check(les, bdir) == [] if ja.available() else True
+    scene["items"][0]["jp"] = "あ い う え"                              # 4 chữ mà file chỉ có 3 đoạn có tiếng
+    probs = [m for m in sc.check(lesson(lambda d: d["scenes"].append(scene)), bdir) if "đoạn có tiếng" in m]
+    assert len(probs) == 1 and "có 3 đoạn có tiếng nhưng thẻ tô 4 chữ" in probs[0]
+    frames = [fr for fr in timeline.build(lesson(lambda d: d["scenes"].append(scene)), tts.Silent(), say=quiet,
+                                          book_dir=bdir).frames if fr.scene == 2]
+    assert [fr.hl for fr in frames] == [(0, 1, 2, 3)]                  # không khớp thì tô cả thẻ một lượt
+
+
+@needs_misaki_lazy
+def test_step_reading_is_checked_letter_by_letter():
+    row = {"kind": "jp", "heading": "H row", "items": [{"jp": "は ひ ふ へ ほ", "romaji": "ha hi fu he ho"}],
+           "lines": [{"yuki": "は、ひ、ふ、へ、ほ。", "step": 0.8}]}
+    msgs = sc.check_japanese(lesson(lambda d: d["scenes"].append(copy.deepcopy(row))))
+    assert len(msgs) == 1 and "chữ [3]" in msgs[0] and "bị đọc là 'e'" in msgs[0]   # へ đứng riêng bị đọc như trợ từ
+    row["lines"][0]["say"] = "ハ、ヒ、フ、ヘ、ホ。"
+    assert sc.check_japanese(lesson(lambda d: d["scenes"].append(copy.deepcopy(row)))) == []
+    row["lines"][0]["say"] = "ハ、ヒ、フ、ヘ。"                          # thiếu một chữ: số phần ≠ số chữ trên thẻ
+    msgs = sc.check_japanese(lesson(lambda d: d["scenes"].append(copy.deepcopy(row))))
+    assert len(msgs) == 1 and "câu có 4 phần còn thẻ tô 5 chữ" in msgs[0]
+
+
+def test_contracted_sounds_said_alone():
+    # misaki đọc tách みょ → mi-yo dù viết kiểu gì: âm ghép đọc riêng được đưa thẳng âm vị cho Kokoro
+    assert ja.phonemes("みょ。") == "mʲo." and ja.phonemes("リョ") == "ɾʲo" and ja.phonemes("きゃ、") == "kʲa."
+    assert ja.spoken_romaji("ぎょ。") == "gyo"
+    if ja.available():
+        assert ja.check_line("みょ", "みょ。", "myo") == []
+        assert ja.phonemes("みょうじ。") != "mʲo."                       # chỉ khi cả câu là một âm ghép

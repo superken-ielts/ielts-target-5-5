@@ -1,0 +1,226 @@
+# U00 · Hiragana 8 — GENKI I, Japanese Writing System (trang 22). ゃ ゅ ょ nhỏ ghép với chữ cột i thành một nhịp:
+# や to và ゃ nhỏ (きや / きゃ, びよういん / びょういん), 33 âm ghép theo nhóm (mỗi hàng Yuki đọc từng âm, âm đang đọc sáng
+# lên, rồi lượt nhắc lại), cả bảng với audio gốc JWS-03 (giới thiệu tới 4.4 giây → `start: 6.0`; bảng ba cột nên `hl`
+# liệt kê theo thứ tự đọc), đọc từ. Âm ghép đọc riêng: ja.phonemes đưa thẳng âm vị (みょ → mʲo) vì misaki đọc tách đôi.
+id: U00-09-small-ya-yu-yo
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Hiragana 8 · Small ゃ ゅ ょ"
+title_vi: "Hiragana 8 — ゃ ゅ ょ nhỏ: 33 âm ghép một nhịp (きゃ, しゅ, ちょ…), đọc từ"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Small ゃ ゅ ょ"
+    items:
+      - jp: "き + ゃ → きゃ"
+        romaji: "ki + ya → kya"
+        en: "Goals: join two letters into one beat, read the 33 contracted sounds, and read words like おちゃ and でんしゃ."
+        vi: "Mục tiêu: ghép hai chữ thành một nhịp, đọc 33 âm ghép, và đọc những từ như おちゃ (trà), でんしゃ (tàu điện)."
+    lines:
+      - emma: "Welcome back. In this video: small ya, yu and yo."
+        say: "Welcome back. In this video: small yah, yoo and yoh."
+        vi: "Chào mừng bạn trở lại. Trong video này: ya, yu, yo viết nhỏ."
+      - emma: "A small ya joins the letter before it, and the two letters become one beat."
+        say: "A small yah joins the letter before it, and the two letters become one beat."
+        vi: "Chữ ya viết nhỏ ghép với chữ đứng trước, và hai chữ thành một nhịp."
+      - emma: "Many common words use these sounds, like tea, and train."
+        say: "Many common words yooz these sounds, like tea, and train."
+        vi: "Nhiều từ thông dụng có những âm này, như “trà” và “tàu điện”."
+
+  - kind: jp
+    chapter: "Big や, small ゃ"
+    heading: "Big や or small ゃ · two beats or one"
+    items:
+      - jp: "きや ・ きゃ"
+        romaji: "kiya · kya"
+        en: "Big や: two beats, ki-ya. Small ゃ: one beat, kya."
+        vi: "や to: hai nhịp, ki-ya. ゃ nhỏ: một nhịp, kya."
+      - jp: "びよういん ・ びょういん"
+        romaji: "biyooin · byooin"
+        en: "beauty salon · hospital. The size of one letter changes the word!"
+        vi: "thẩm mỹ viện · bệnh viện. Chỉ cỡ của một chữ mà khác hẳn nghĩa!"
+    lines:
+      - emma: "Listen to the difference. First a big ya: two beats. Then a small ya: one beat."
+        say: "Listen to the difference. First a big yah: two beats. Then a small yah: one beat."
+        vi: "Hãy nghe sự khác nhau. Đầu tiên là ya to: hai nhịp. Sau đó là ya nhỏ: một nhịp."
+      - yuki: "きや、きゃ。"
+        en: "ki-ya (two beats), kya (one beat)"
+        vi: "ki-ya (hai nhịp), kya (một nhịp)"
+        pause: 1
+      - emma: "Be careful, because the size can change the word. Beauty salon, and hospital."
+        vi: "Hãy cẩn thận, vì cỡ chữ có thể làm đổi từ. Thẩm mỹ viện, và bệnh viện."
+        focus: 1
+      - yuki: "びよういん、びょういん。"
+        en: "beauty salon, hospital"
+        vi: "thẩm mỹ viện, bệnh viện"
+        pause: 1
+
+  - kind: jp
+    chapter: "きゃ, しゃ, ちゃ"
+    heading: "きゃ · しゃ · ちゃ"
+    items:
+      - jp: "きゃ きゅ きょ\nしゃ しゅ しょ\nちゃ ちゅ ちょ"
+        romaji: "kya kyu kyo\nsha shu sho\ncha chu cho"
+        en: "Small ゃ ゅ ょ follow letters ending in i: き, し, ち…"
+        vi: "ゃ ゅ ょ nhỏ đi sau các chữ có âm i: き, し, ち…"
+    lines:
+      - emma: "Small ya, yu and yo follow letters that end in i, like ki. Read each group with Yuki."
+        say: "Small yah, yoo and yoh follow letters that end in ee, like kee. Read each group with Yuki."
+        vi: "Ya, yu, yo nhỏ đi sau các chữ kết thúc bằng âm i, như ki. Đọc từng nhóm cùng Yuki."
+      - yuki: "きゃ、きゅ、きょ。"
+        hl: [0, 1, 2]
+        en: "kya, kyu, kyo"
+        vi: "kya, kyu, kyo"
+        echo: true
+      - emma: "With shi, you get sha, shu and sho."
+        vi: "Với shi, ta có sha, shu và sho."
+      - yuki: "しゃ、しゅ、しょ。"
+        hl: [3, 4, 5]
+        en: "sha, shu, sho"
+        vi: "sha, shu, sho"
+        echo: true
+      - emma: "With chi, you get cha, chu and cho. Easy for Vietnamese speakers."
+        say: "With chee, you get chah, choo and cho. Easy for Vietnamese speakers."
+        vi: "Với chi, ta có cha, chu và cho. Dễ với người Việt."
+      - yuki: "ちゃ、ちゅ、ちょ。"
+        hl: [6, 7, 8]
+        en: "cha, chu, cho"
+        vi: "cha, chu, cho"
+        echo: true
+
+  - kind: jp
+    chapter: "にゃ, ひゃ, みゃ, りゃ"
+    heading: "にゃ · ひゃ · みゃ · りゃ"
+    items:
+      - jp: "にゃ にゅ にょ\nひゃ ひゅ ひょ\nみゃ みゅ みょ\nりゃ りゅ りょ"
+        romaji: "nya nyu nyo\nhya hyu hyo\nmya myu myo\nrya ryu ryo"
+        en: "Four more groups. Each sound is one beat."
+        vi: "Thêm bốn nhóm. Mỗi âm chỉ một nhịp."
+    lines:
+      - emma: "Four more groups. Keep each sound short: one beat."
+        vi: "Thêm bốn nhóm nữa. Đọc mỗi âm thật gọn: một nhịp."
+      - yuki: "にゃ、にゅ、にょ。"
+        hl: [0, 1, 2]
+        en: "nya, nyu, nyo"
+        vi: "nya, nyu, nyo"
+        echo: true
+      - yuki: "ひゃ、ひゅ、ひょ。"
+        hl: [3, 4, 5]
+        en: "hya, hyu, hyo"
+        vi: "hya, hyu, hyo"
+        echo: true
+      - yuki: "みゃ、みゅ、みょ。"
+        hl: [6, 7, 8]
+        en: "mya, myu, myo"
+        vi: "mya, myu, myo"
+        echo: true
+      - yuki: "りゃ、りゅ、りょ。"
+        hl: [9, 10, 11]
+        en: "rya, ryu, ryo"
+        vi: "rya, ryu, ryo (r nhẹ, gần “l”)"
+        echo: true
+
+  - kind: jp
+    chapter: "ぎゃ, じゃ, びゃ, ぴゃ"
+    heading: "With marks · ぎゃ · じゃ · びゃ · ぴゃ"
+    items:
+      - jp: "ぎゃ ぎゅ ぎょ\nじゃ じゅ じょ\nびゃ びゅ びょ\nぴゃ ぴゅ ぴょ"
+        romaji: "gya gyu gyo\nja ju jo\nbya byu byo\npya pyu pyo"
+        en: "The same with letters that have marks."
+        vi: "Chữ có dấu ゛ ゜ cũng ghép như vậy."
+    lines:
+      - emma: "Letters with marks work the same way."
+        vi: "Chữ có dấu cũng ghép theo cách đó."
+      - yuki: "ぎゃ、ぎゅ、ぎょ。"
+        hl: [0, 1, 2]
+        en: "gya, gyu, gyo"
+        vi: "gya, gyu, gyo"
+        echo: true
+      - yuki: "じゃ、じゅ、じょ。"
+        hl: [3, 4, 5]
+        en: "ja, ju, jo"
+        vi: "ja, ju, jo"
+        echo: true
+      - yuki: "びゃ、びゅ、びょ。"
+        hl: [6, 7, 8]
+        en: "bya, byu, byo"
+        vi: "bya, byu, byo"
+        echo: true
+      - yuki: "ぴゃ、ぴゅ、ぴょ。"
+        hl: [9, 10, 11]
+        en: "pya, pyu, pyo"
+        vi: "pya, pyu, pyo"
+        echo: true
+
+  - kind: jp
+    chapter: "Book audio"
+    heading: "All 33 contracted sounds · Read along with the book's audio"
+    items:
+      - jp: "きゃ　きゅ　きょ　　　ひゃ　ひゅ　ひょ　　　じゃ　じゅ　じょ\nしゃ　しゅ　しょ　　　みゃ　みゅ　みょ　　　びゃ　びゅ　びょ\nちゃ　ちゅ　ちょ　　　りゃ　りゅ　りょ　　　ぴゃ　ぴゅ　ぴょ\nにゃ　にゅ　にょ　　　ぎゃ　ぎゅ　ぎょ"
+        en: "The 33 contracted sounds: read down each column."
+        vi: "33 âm ghép: đọc từng cột từ trên xuống."
+    lines:
+      - emma: "Now the native speaker reads all thirty-three. Follow the orange sound, and say it in the pause."
+        vi: "Giờ người Nhật đọc cả ba mươi ba âm. Nhìn theo âm màu cam, và đọc theo trong khoảng nghỉ."
+      - track: JWS-03
+        start: 6.0
+        note: "Japanese Writing System · JWS-03"
+        en: "kya kyu kyo · sha … · pya pyu pyo"
+        vi: "kya kyu kyo · sha … · pya pyu pyo"
+        hl: [0, 1, 2, 9, 10, 11, 18, 19, 20, 27, 28, 29, 3, 4, 5, 12, 13, 14, 21, 22, 23, 30, 31, 32,
+             6, 7, 8, 15, 16, 17, 24, 25, 26]
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Read words"
+    heading: "Read words · Then check"
+    items:
+      - jp: "おちゃ ・ しゃしん ・ じしょ ・ ひゃく"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "おちゃ ・ しゃしん ・ じしょ ・ ひゃく"
+        romaji: "ocha · shashin · jisho · hyaku"
+        en: "tea · photo · dictionary · hundred"
+        vi: "trà · bức ảnh · từ điển · một trăm"
+      - jp: "でんしゃ ・ かいしゃ ・ としょかん ・ きゃく"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "でんしゃ ・ かいしゃ ・ としょかん ・ きゃく"
+        romaji: "densha · kaisha · toshokan · kyaku"
+        en: "train · company · library · guest"
+        vi: "tàu điện · công ty · thư viện · khách"
+    lines:
+      - emma: "Read these four words aloud, then check with Yuki."
+        vi: "Đọc to bốn từ này, rồi kiểm tra cùng Yuki."
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "おちゃ、しゃしん、じしょ、ひゃく。"
+        focus: 1
+        en: "tea, photo, dictionary, hundred"
+        vi: "trà, bức ảnh, từ điển, một trăm"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "でんしゃ、かいしゃ、としょかん、きゃく。"
+        focus: 3
+        en: "train, company, library, guest"
+        vi: "tàu điện, công ty, thư viện, khách"
+        pause: 1
+      - emma: "Next video: a small tsu, long vowels, and the rhythm of Japanese."
+        vi: "Video tiếp theo: tsu nhỏ, nguyên âm dài, và nhịp điệu của tiếng Nhật."

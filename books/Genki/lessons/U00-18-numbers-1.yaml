@@ -1,0 +1,225 @@
+# U00 · Numbers 1 — GENKI I すうじ (trang 35). 0–10 (từng số một, rồi cả dãy), cách đọc thứ hai của 0, 4, 7, 9, 11–19
+# (mười + số, như tiếng Việt), đếm 1–20. Audio gốc K00-02 đọc từng số, kể cả cách đọc thứ hai, theo thứ tự trên thẻ:
+# 0–10 là đoạn 2.2–33.2 giây (16 cách đọc), 11–19 là 33.6–58.2 giây (12 cách đọc); 0.5–1.3 giây là tiêu đề すうじ.
+# Số trên thẻ có furigana {5|ご}: mỗi số một chữ để tô sáng.
+id: U00-18-numbers-1
+activity: U00-greetings
+title: "Unit 0 · Greetings and Numbers"
+subtitle: "Numbers 1 · 0 to 20"
+title_vi: "Số đếm 1 — 0 đến 10, cách đọc thứ hai của 0, 4, 7, 9; 11 đến 20"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Numbers 0 to 20"
+    items:
+      - jp: "すうじ"
+        romaji: "suuji"
+        en: "Numbers. Lesson 1 uses them for time, age and phone numbers; Lesson 2 for prices."
+        vi: "Số đếm. Bài 1 dùng số để nói giờ, tuổi, số điện thoại; bài 2 để nói giá tiền."
+    lines:
+      - emma: "Welcome back. In this video: numbers from zero to twenty."
+        vi: "Chào mừng bạn trở lại. Trong video này: số đếm từ 0 đến 20."
+      - yuki: "すうじ。"
+        en: "numbers"
+        vi: "số đếm"
+        pause: 1
+      - emma: "Why now? In Lesson 1 you will use numbers for the time, your age, and phone numbers."
+        vi: "Vì sao học ngay? Ở bài 1, bạn sẽ dùng số để nói giờ, tuổi và số điện thoại."
+      - emma: "Good news: Japanese numbers are very regular, and they work just like Vietnamese."
+        vi: "Tin vui: số đếm tiếng Nhật rất có quy luật, và ghép giống hệt tiếng Việt."
+
+  - kind: jp
+    chapter: "0 to 5"
+    heading: "0 to 5"
+    items:
+      - jp: "{0|ゼロ} ・ {1|いち} ・ {2|に} ・ {3|さん} ・ {4|よん} ・ {5|ご}"
+        romaji: "zero · ichi · ni · san · yon · go"
+        en: "Zero to five. ゼロ comes from English zero."
+        vi: "Không đến năm. ゼロ mượn từ “zero” tiếng Anh."
+    lines:
+      - emma: "Zero to five. Say each number after Yuki."
+        vi: "Từ 0 đến 5. Đọc theo Yuki từng số."
+      - yuki: "ゼロ。"
+        hl: 0
+        en: "zero"
+        vi: "không"
+        pause: 1.5
+      - yuki: "いち。"
+        hl: 1
+        en: "one"
+        vi: "một"
+        pause: 1.5
+      - yuki: "に。"
+        hl: 2
+        en: "two"
+        vi: "hai"
+        pause: 1.5
+      - yuki: "さん。"
+        hl: 3
+        en: "three"
+        vi: "ba"
+        pause: 1.5
+      - yuki: "よん。"
+        hl: 4
+        en: "four"
+        vi: "bốn"
+        pause: 1.5
+      - yuki: "ご。"
+        hl: 5
+        en: "five"
+        vi: "năm"
+        pause: 1.5
+      - yuki: "ゼロ、いち、に、さん、よん、ご。"
+        en: "0, 1, 2, 3, 4, 5"
+        vi: "0, 1, 2, 3, 4, 5"
+        echo: true
+
+  - kind: jp
+    chapter: "6 to 10"
+    heading: "6 to 10"
+    items:
+      - jp: "{6|ろく} ・ {7|なな} ・ {8|はち} ・ {9|きゅう} ・ {10|じゅう}"
+        romaji: "roku · nana · hachi · kyuu · juu"
+        en: "Six to ten. Keep きゅう and じゅう long: two beats each."
+        vi: "Sáu đến mười. きゅう và じゅう là trường âm: kéo dài hai nhịp."
+    lines:
+      - emma: "Six to ten. Say each number after Yuki."
+        vi: "Từ 6 đến 10. Đọc theo Yuki từng số."
+      - yuki: "ろく。"
+        hl: 0
+        en: "six"
+        vi: "sáu"
+        pause: 1.5
+      - yuki: "なな。"
+        hl: 1
+        en: "seven"
+        vi: "bảy"
+        pause: 1.5
+      - yuki: "はち。"
+        hl: 2
+        en: "eight"
+        vi: "tám"
+        pause: 1.5
+      - yuki: "きゅう。"
+        hl: 3
+        en: "nine — a long vowel, two beats"
+        vi: "chín — trường âm, hai nhịp"
+        pause: 1.5
+      - yuki: "じゅう。"
+        hl: 4
+        en: "ten — a long vowel, two beats"
+        vi: "mười — trường âm, hai nhịp"
+        pause: 1.5
+      - emma: "Nine and ten have long vowels. Hold them for two beats."
+        vi: "Chín và mười có nguyên âm dài. Hãy kéo dài hai nhịp."
+        hl: [3, 4]
+      - yuki: "ろく、なな、はち、きゅう、じゅう。"
+        en: "6, 7, 8, 9, 10"
+        vi: "6, 7, 8, 9, 10"
+        echo: true
+
+  - kind: jp
+    chapter: "Second readings"
+    heading: "Second readings of 0, 4, 7, 9"
+    items:
+      - jp: "{0|れい} ・ {4|し} ・ {4|よ} ・ {7|しち} ・ {9|く}"
+        romaji: "ree · shi · yo · shichi · ku"
+        en: "Second readings of 0, 4, 7 and 9. You will meet them in clock times: 4 o'clock is よじ, 7 o'clock しちじ, 9 o'clock くじ."
+        vi: "Cách đọc thứ hai của 0, 4, 7, 9. Sẽ gặp khi nói giờ: 4 giờ là よじ, 7 giờ しちじ, 9 giờ くじ (bài 1)."
+    lines:
+      - emma: "Some numbers have a second reading. For now, use the first ones. You will need these for clock times in Lesson 1."
+        say: "Some numbers have a second reading. For now, yooz the first ones. You will need these for clock times in Lesson 1."
+        vi: "Một số con số có cách đọc thứ hai. Bây giờ cứ dùng cách đọc thứ nhất. Bạn sẽ cần những cách này để nói giờ ở bài 1."
+      - yuki: "れい、し、よ、しち、く。"
+        en: "zero, four, four, seven, nine"
+        vi: "không, bốn, bốn, bảy, chín"
+        echo: true
+
+  - kind: jp
+    chapter: "0 to 10: book audio"
+    heading: "0 to 10 · Read along with the book's audio"
+    items:
+      - jp: "{0|ゼロ} {0|れい} {1|いち} {2|に} {3|さん} {4|よん} {4|し} {4|よ}\n{5|ご} {6|ろく} {7|なな} {7|しち} {8|はち} {9|きゅう} {9|く} {10|じゅう}"
+        en: "0 to 10, with the second readings, as in the textbook."
+        vi: "0 đến 10, kèm cách đọc thứ hai, như trong sách."
+    lines:
+      - emma: "Now the native speaker from your textbook's audio. Follow the orange number, and say it in the pause."
+        vi: "Giờ là giọng người Nhật trong audio của sách. Nhìn theo số màu cam, và đọc theo trong khoảng nghỉ."
+      - track: K00-02
+        start: 2.2
+        end: 33.2
+        note: "すうじ · Numbers · K00-02"
+        en: "0 … 10"
+        vi: "0 … 10"
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "11 to 19"
+    heading: "11 to 19 · ten + the number"
+    items:
+      - jp: "{11|じゅういち} ・ {12|じゅうに} ・ {13|じゅうさん} ・ {14|じゅうよん} ・ {15|じゅうご}"
+        romaji: "juuichi · juuni · juusan · juuyon · juugo"
+        en: "Ten plus the number: eleven is ten-one."
+        vi: "Mười + số: 11 là じゅう + いち (mười một) — y như tiếng Việt."
+      - jp: "{16|じゅうろく} ・ {17|じゅうなな} ・ {18|じゅうはち} ・ {19|じゅうきゅう}"
+        romaji: "juuroku · juunana · juuhachi · juukyuu"
+        en: "14, 17 and 19 can also use the second readings: じゅうし, じゅうしち, じゅうく."
+        vi: "14, 17, 19 cũng đọc được theo cách thứ hai: じゅうし, じゅうしち, じゅうく."
+      - jp: "{11|じゅういち} {12|じゅうに} {13|じゅうさん} {14|じゅうよん} {14|じゅうし} {15|じゅうご}\n{16|じゅうろく} {17|じゅうなな} {17|じゅうしち} {18|じゅうはち} {19|じゅうきゅう} {19|じゅうく}"
+        en: "11 to 19, with the second readings, as in the textbook."
+        vi: "11 đến 19, kèm cách đọc thứ hai, như trong sách."
+    lines:
+      - emma: "Eleven to nineteen are easy: ten, then the number, just like Vietnamese. Eleven is ten one."
+        vi: "Từ 11 đến 19 rất dễ: mười, rồi đến số, y như tiếng Việt. Mười một là “mười – một”."
+      - yuki: "じゅういち、じゅうに、じゅうさん、じゅうよん、じゅうご。"
+        en: "11, 12, 13, 14, 15"
+        vi: "11, 12, 13, 14, 15"
+        echo: true
+      - yuki: "じゅうろく、じゅうなな、じゅうはち、じゅうきゅう。"
+        focus: 1
+        en: "16, 17, 18, 19"
+        vi: "16, 17, 18, 19"
+        echo: true
+      - emma: "The book's audio, with the second readings too."
+        vi: "Audio của sách, có cả cách đọc thứ hai."
+        focus: 2
+      - track: K00-02
+        start: 33.6
+        end: 58.2
+        note: "すうじ · Numbers · K00-02"
+        en: "11 … 19"
+        vi: "11 … 19"
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Count to 20"
+    heading: "Count from 1 to 20"
+    items:
+      - jp: "{1|いち} {2|に} {3|さん} {4|よん} {5|ご} {6|ろく} {7|なな} {8|はち} {9|きゅう} {10|じゅう}\n{11|じゅういち} {12|じゅうに} {13|じゅうさん} {14|じゅうよん} {15|じゅうご} {16|じゅうろく} {17|じゅうなな} {18|じゅうはち} {19|じゅうきゅう} {20|にじゅう}"
+        en: "1 to 20. Twenty is two-ten: にじゅう."
+        vi: "1 đến 20. Hai mươi là “hai – mười”: にじゅう."
+    lines:
+      - emma: "Twenty is two ten. Now count from one to twenty with Yuki."
+        vi: "Hai mươi là “hai – mười”. Giờ hãy đếm từ 1 đến 20 cùng Yuki."
+      - yuki: "いち、に、さん、よん、ご、ろく、なな、はち、きゅう、じゅう、じゅういち、じゅうに、じゅうさん、じゅうよん、じゅうご、じゅうろく、じゅうなな、じゅうはち、じゅうきゅう、にじゅう。"
+        en: "1 … 20"
+        vi: "1 … 20"
+        step: 0.6
+        pause: 1
+      - emma: "Now count by yourself, without looking. Do it every day this week."
+        vi: "Giờ hãy tự đếm, không nhìn màn hình. Tuần này đếm mỗi ngày nhé."
+      - wait: 10
+        note: "Count from 1 to 20 aloud"
+        vi: "Đếm to từ 1 đến 20"
+      - emma: "Next video: tens up to one hundred, and number practice."
+        vi: "Video tiếp theo: hàng chục đến 100, và luyện số."

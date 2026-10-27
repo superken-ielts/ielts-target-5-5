@@ -371,6 +371,13 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 22:* **Unit 3 — 4 video (27:44)**: `U03-lesson-1` (Reading · Happiness is …: free time, pronouns, don't / doesn't), `U03-lesson-2` (Listening · Do you like New Year? always / often, do / does questions), `U03-target` (Speaking · Invite someone out), `U03-explore` (Explore Speaking · go, conversation topics, phone messages); phát audio gốc 1.31–1.42 (1.33, 1.36, 1.39 thiếu: xem sổ tay mục 6.5). Xong phần đã hẹn: Intro và Unit 1–3, 15 video.
     - E2E: thẻ A2 có 15 video; Unit 3 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
     - E2E: thẻ A2 có 11 video; Intro, Unit 1, Unit 2 có nút video 5–10 phút theo thứ tự phiên.
+- [x] **P2-54** **GENKI Unit 0 làm lại: 19 video ngắn, chữ sáng theo chỗ đang đọc** (19 video, 1:10:43), theo góp ý của người học: chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, cả đoạn hiện một lúc nên không biết đang đọc tới đâu, không nói bài học để làm gì. Chi tiết: file 07 mục 4.
+  - 19 video 2–5 phút thay 5 video 6–8 phút: Start here (Unit 0 học gì, để làm gì, cách xem video), Hiragana 1–9 (nguyên âm, từng cặp hàng, luyện tập, ゛゜, âm ghép, っ và trường âm), Katakana 1–4 (hàng ア–ホ, hàng マ–ン và cả bảng, dấu và ー, từ mượn và chữ Hán), Greetings 1–3 (câu chào, tạm biệt – ở nhà – bữa ăn – gặp lần đầu, luyện 10 tình huống), Numbers 1–2. Mỗi video mở đầu bằng "học gì, để làm gì".
+  - Cảnh `jp`: tầng 2–3 hiện đúng câu đang nói (lời Emma + bản dịch tiếng Việt; câu tiếng Nhật và audio sách + nghĩa tiếng Anh, tiếng Việt); chữ đang đọc nền cam, chữ vừa đọc nền xanh nhạt, romaji sáng theo; `wait` / `echo` có nhãn YOUR TURN và vòng đếm ngược.
+  - Dòng thoại mới: `en`, `hl`, `step` (và `step` của bài). Câu tiếng Nhật nhiều phần đọc từng phần; audio của sách tách theo khoảng lặng, chỗ nghỉ giãn ra. Mốc thời gian audio JWS / K00 lấy bằng ASR (file 07 mục 4.6).
+  - Nhịp chậm hơn: Emma 0.9, Yuki / Takeshi 0.78, nghỉ 0.8 giây giữa hai câu; mỗi chữ cái Yuki đọc riêng rồi chờ người học nhắc lại.
+  - Đọc đúng: âm ghép đọc riêng (みょ, りょ, ぎょ) đưa thẳng âm vị cho Kokoro; `check` so từng phần của câu đọc từng phần, báo chữ cái đọc riêng bị đọc như trợ từ (へ → "e") và số đoạn audio khác số chữ được tô.
+  - Test: chữ của thẻ / romaji / các phần của câu, `reading_plan`, đọc từng chữ trong `timeline`, tách audio theo khoảng lặng (file wav giả), tầng 2–3 theo câu, vẽ tô sáng và đếm ngược, kiểm cách đọc từng phần, âm vị âm ghép; e2e: thẻ GENKI có 37 video, Unit 0 có 19 nút video 2–5 phút theo thứ tự.
 
 ### Cổng G2
 

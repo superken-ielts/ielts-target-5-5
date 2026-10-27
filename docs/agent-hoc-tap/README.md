@@ -15,7 +15,7 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 | [04-checklist.md](04-checklist.md) | Checklist từng task (P0-01 … P4-07) kèm điều kiện đạt và cổng G0–G4 |
 | [05-lich-su-thay-doi.md](05-lich-su-thay-doi.md) | Lịch sử từng đợt triển khai: file thêm/sửa/xóa, chỗ làm khác plan, kết quả kiểm thử, việc còn treo |
 | [06-video-bai-giang.md](06-video-bai-giang.md) | Video bài giảng (chỉ Course Book): Unit 1–3 phần nào có video, lịch sử từng video, quy trình, kiểu cảnh, cách đọc, kế hoạch Unit 4 |
-| [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, video tiếng Nhật (Unit 0: năm video; bài 1–3: bốn video kỹ năng mỗi bài), kế hoạch bài 4–12 |
+| [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, video tiếng Nhật (Unit 0: 19 video ngắn có tô sáng chữ đang đọc; bài 1–3: bốn video kỹ năng mỗi bài), kế hoạch bài 4–12 |
 | [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) | Giai đoạn 0 trước lộ trình IELTS: vì sao chọn English Unlimited, 79 phiên của cuốn A2, cách dò trang và track (OCR nhãn cam, đối chiếu Teacher's Book), mốc A2 Key, cuốn A1 đang chờ sách, kế hoạch video |
 
 ## Trạng thái

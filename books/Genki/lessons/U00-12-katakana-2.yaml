@@ -1,0 +1,136 @@
+# U00 · Katakana 2 — GENKI I, Japanese Writing System (trang 24–25). Hàng マ, ヤ, ラ, ワ và ン; cả bảng với audio gốc
+# JWS-09 (giới thiệu tới 6.7 giây → `start: 7.6`; bảng hai cột như hiragana nên `hl` theo thứ tự đọc); chữ dễ nhầm
+# (シ ツ ソ ン…).
+id: U00-12-katakana-2
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Katakana 2 · Rows マ to ン, the chart, look-alikes"
+title_vi: "Katakana 2 — hàng マ đến ン, cả bảng 46 chữ với audio gốc, chữ dễ nhầm (シ ツ ソ ン)"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · The last rows, then all 46"
+    items:
+      - jp: "マ ・ ヤ ・ ラ ・ ワ ・ ン"
+        romaji: "ma · ya · ra · wa · n"
+        en: "Goals: the last rows of katakana, the whole chart with the book's audio, and letters that look alike."
+        vi: "Mục tiêu: những hàng katakana cuối, cả bảng chữ với audio của sách, và những chữ trông giống nhau."
+    lines:
+      - emma: "Welcome back. In this video: the last rows of katakana."
+        vi: "Chào mừng bạn trở lại. Trong video này: những hàng katakana cuối cùng."
+      - emma: "Then you will read the whole chart with the book's audio, and learn to tell look-alike letters apart."
+        vi: "Sau đó bạn sẽ đọc cả bảng chữ với audio của sách, và học cách phân biệt những chữ trông giống nhau."
+
+  - kind: jp
+    chapter: "マ to ン"
+    heading: "Rows マ, ヤ, ラ, ワ and ン"
+    items:
+      - jp: "マ ミ ム メ モ\nヤ ユ ヨ\nラ リ ル レ ロ\nワ ヲ ン"
+        romaji: "ma mi mu me mo\nya yu yo\nra ri ru re ro\nwa o n"
+        en: "ヲ is almost never used in katakana; ン is n."
+        vi: "ヲ hầu như không dùng trong katakana; ン là n."
+    lines:
+      - emma: "And the last rows. In katakana, the letter o in the last row is almost never used."
+        vi: "Và những hàng cuối. Trong katakana, chữ “o” ở hàng cuối hầu như không được dùng."
+      - yuki: "マ、ミ、ム、メ、モ。"
+        hl: [0, 1, 2, 3, 4]
+        en: "ma, mi, mu, me, mo"
+        vi: "ma, mi, mư, mê, mô"
+        echo: true
+      - yuki: "ヤ、ユ、ヨ。"
+        hl: [5, 6, 7]
+        en: "ya, yu, yo"
+        vi: "ya, yu, yo"
+        echo: true
+      - yuki: "ラ、リ、ル、レ、ロ。"
+        hl: [8, 9, 10, 11, 12]
+        en: "ra, ri, ru, re, ro"
+        vi: "la, li, lư, lê, lô (lưỡi chạm nhẹ)"
+        echo: true
+      - yuki: "ワ、ヲ、ン。"
+        hl: [13, 14, 15]
+        en: "wa, o, n"
+        vi: "oa, ô, n"
+        echo: true
+
+  - kind: jp
+    chapter: "The whole chart"
+    heading: "All 46 katakana · Read along with the book's audio"
+    items:
+      - jp: "ア　イ　ウ　エ　オ　　　ハ　ヒ　フ　ヘ　ホ\nカ　キ　ク　ケ　コ　　　マ　ミ　ム　メ　モ\nサ　シ　ス　セ　ソ　　　ヤ　ユ　ヨ\nタ　チ　ツ　テ　ト　　　ラ　リ　ル　レ　ロ\nナ　ニ　ヌ　ネ　ノ　　　ワ　ヲ　ン"
+        en: "The 46 basic katakana: down the left column, then the right."
+        vi: "46 chữ katakana cơ bản: cột trái từ trên xuống, rồi cột phải."
+    lines:
+      - emma: "Now the whole chart, read by the native speaker on your textbook's audio. Follow the orange letter, and say it in the pause."
+        vi: "Giờ là cả bảng, do người Nhật trong audio của sách đọc. Nhìn theo chữ màu cam, và đọc theo trong khoảng nghỉ."
+      - track: JWS-09
+        start: 7.6
+        note: "Japanese Writing System · JWS-09"
+        en: "a i u e o · ka … · wa o n"
+        vi: "a i ư ê ô · ca … · oa ô n"
+        hl: [0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20, 21, 22, 23, 24, 28, 29, 30, 31, 32, 38, 39, 40, 41, 42,
+             5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 25, 26, 27, 33, 34, 35, 36, 37, 43, 44, 45]
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Look-alike katakana"
+    heading: "Look-alike katakana · Watch the strokes"
+    items:
+      - jp: "シ ・ ツ ・ ソ ・ ン"
+        romaji: "shi · tsu · so · n"
+        en: "シ and ン: the long stroke goes up from the bottom. ツ and ソ: it comes down from the top."
+        vi: "シ và ン: nét dài viết từ dưới hất lên. ツ và ソ: nét dài viết từ trên xuống."
+      - jp: "ク ・ ケ ・ タ ・ ウ ・ ワ ・ フ"
+        romaji: "ku · ke · ta · u · wa · fu"
+        en: "タ is ク with a short stroke inside. ウ has a dot on top, ワ a short line on the left, フ is one stroke."
+        vi: "タ là ク thêm một nét ngắn bên trong. ウ có chấm trên đầu, ワ có nét ngắn bên trái, フ chỉ một nét."
+      - jp: "ス ・ ヌ ・ コ ・ ユ"
+        romaji: "su · nu · ko · yu"
+        en: "ヌ is ス with an extra stroke across. ユ's bottom line sticks out to the left."
+        vi: "ヌ là ス thêm một nét cắt ngang. Nét dưới của ユ chìa sang trái."
+      - jp: "チ ・ テ ・ ア ・ マ"
+        romaji: "chi · te · a · ma"
+        en: "チ starts with a slanted stroke, テ with two flat lines. ア's second stroke falls outside, マ's is a small dot inside."
+        vi: "チ bắt đầu bằng nét xiên, テ bằng hai nét ngang. Nét thứ hai của ア kéo ra ngoài, của マ là chấm nhỏ bên trong."
+    lines:
+      - emma: "Some katakana look alike. The famous four: watch the direction of the long stroke."
+        vi: "Một số chữ katakana trông giống nhau. Bốn chữ nổi tiếng: hãy nhìn hướng của nét dài."
+      - yuki: "シ、ツ、ソ、ン。"
+        en: "shi, tsu, so, n"
+        vi: "shi, tsu, so, n"
+        pause: 1
+      - emma: "Shi and n: the long stroke goes up from the bottom. Tsu and so: it comes down from the top."
+        vi: "Shi và n: nét dài đi từ dưới lên. Tsu và so: nét dài đi từ trên xuống."
+        hl: [0, 3]
+      - emma: "Next, look for small extra strokes."
+        vi: "Tiếp theo, hãy tìm những nét nhỏ thêm vào."
+        focus: 1
+      - yuki: "ク、ケ、タ、ウ、ワ、フ。"
+        en: "ku, ke, ta, u, wa, fu"
+        vi: "ku, ke, ta, u, wa, fu"
+        pause: 1
+      - emma: "Two more pairs."
+        vi: "Thêm hai cặp nữa."
+        focus: 2
+      - yuki: "ス、ヌ、コ、ユ。"
+        en: "su, nu, ko, yu"
+        vi: "su, nu, ko, yu"
+        pause: 1
+      - emma: "And the last two pairs."
+        vi: "Và hai cặp cuối."
+        focus: 3
+      - yuki: "チ、テ、ア、マ。"
+        en: "chi, te, a, ma"
+        vi: "chi, te, a, ma"
+        pause: 1
+      - emma: "Write each katakana three times, and read the chart once a day. Next video: marks, small letters, and long vowels in katakana."
+        vi: "Viết mỗi chữ katakana ba lần, và mỗi ngày đọc bảng chữ một lần. Video tiếp theo: dấu, chữ nhỏ và trường âm trong katakana."

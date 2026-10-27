@@ -1,0 +1,197 @@
+# U00 · Hiragana 3 — GENKI I, Japanese Writing System (trang 20). Hàng た và な: từng chữ một, hai chữ đặc biệt ち (chi)
+# và つ (tsu), cả hàng, đọc từ, ôn năm hàng đã học.
+id: U00-04-rows-t-n
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Hiragana 3 · Rows た and な"
+title_vi: "Hiragana 3 — hàng た (ち đọc chi, つ đọc tsu) và hàng な, đọc từ"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Rows た and な"
+    items:
+      - jp: "た ち つ て と\nな に ぬ ね の"
+        romaji: "ta chi tsu te to\nna ni nu ne no"
+        en: "Goals: ten new letters, including two special ones, ち and つ; read words like ねこ and いぬ."
+        vi: "Mục tiêu: mười chữ mới, trong đó có hai chữ đặc biệt ち và つ; đọc được những từ như ねこ (con mèo), いぬ (con chó)."
+    lines:
+      - emma: "Welcome back. In this video: the ta row and the na row."
+        vi: "Chào mừng bạn trở lại. Trong video này: hàng ta và hàng na."
+      - emma: "Two letters in the ta row do not follow the pattern. You will learn them carefully."
+        vi: "Có hai chữ trong hàng ta không theo quy luật. Bạn sẽ học kỹ hai chữ này."
+      - emma: "Why? With these rows, you can read words like cat and dog."
+        vi: "Để làm gì? Có hai hàng này, bạn đọc được những từ như con mèo và con chó."
+
+  - kind: jp
+    chapter: "Row た"
+    heading: "Row た · t + a i u e o · ち is chi, つ is tsu"
+    items:
+      - jp: "た ち つ て と"
+        romaji: "ta chi tsu te to"
+        en: "t + the five vowels. Two exceptions: ち is chi, つ is tsu."
+        vi: "t + năm nguyên âm. Hai ngoại lệ: ち đọc “chi”, つ đọc “tsư”."
+    lines:
+      - emma: "The ta row. Say each letter after Yuki."
+        vi: "Hàng ta. Đọc theo Yuki từng chữ."
+      - yuki: "た。"
+        hl: 0
+        en: "ta — a light t"
+        vi: "ta — như “ta”, t nhẹ"
+        pause: 1.5
+      - yuki: "ち。"
+        hl: 1
+        en: "chi — not ti"
+        vi: "chi — như “chi”, không phải “ti”"
+        pause: 1.5
+      - emma: "Not ti, but chi. This one is easy for Vietnamese speakers: it sounds like chi."
+        say: "Not tee, but chee. This one is easy for Vietnamese speakers: it sounds like chee."
+        vi: "Không phải “ti” mà là “chi”. Chữ này dễ với người Việt: đọc như “chi”."
+        hl: 1
+      - yuki: "つ。"
+        hl: 2
+        en: "tsu — like the end of cats"
+        vi: "tsu — “ts” như cuối từ “cats”, rồi “ư”"
+        pause: 1.5
+      - emma: "Not tu, but tsu, like the end of the English word cats. Listen again."
+        vi: "Không phải “tu” mà là “tsư”, giống phần cuối của từ “cats” tiếng Anh. Nghe lại nhé."
+        hl: 2
+      - yuki: "つ。"
+        hl: 2
+        en: "tsu"
+        vi: "tsu"
+        pause: 1.5
+      - yuki: "て。"
+        hl: 3
+        en: "te"
+        vi: "te — như “tê”"
+        pause: 1.5
+      - yuki: "と。"
+        hl: 4
+        en: "to"
+        vi: "to — như “tô”"
+        pause: 1.5
+      - emma: "The whole row, then your turn."
+        vi: "Cả hàng, rồi đến lượt bạn."
+      - yuki: "た、ち、つ、て、と。"
+        en: "ta, chi, tsu, te, to"
+        vi: "ta, chi, tsư, tê, tô"
+        echo: true
+
+  - kind: jp
+    chapter: "Row な"
+    heading: "Row な · n + a i u e o"
+    items:
+      - jp: "な に ぬ ね の"
+        romaji: "na ni nu ne no"
+        en: "n + the five vowels. No surprises."
+        vi: "n + năm nguyên âm: na, ni, nư, nê, nô."
+    lines:
+      - emma: "The na row is regular. Say each letter after Yuki."
+        vi: "Hàng na theo đúng quy luật. Đọc theo Yuki từng chữ."
+      - yuki: "な。"
+        hl: 0
+        en: "na"
+        vi: "na"
+        pause: 1.5
+      - yuki: "に。"
+        hl: 1
+        en: "ni"
+        vi: "ni"
+        pause: 1.5
+      - yuki: "ぬ。"
+        hl: 2
+        en: "nu"
+        vi: "nu — như “nư”"
+        pause: 1.5
+      - yuki: "ね。"
+        hl: 3
+        en: "ne"
+        vi: "ne — như “nê”"
+        pause: 1.5
+      - yuki: "の。"
+        hl: 4
+        en: "no"
+        vi: "no — như “nô”"
+        pause: 1.5
+      - emma: "The whole row, then your turn."
+        vi: "Cả hàng, rồi đến lượt bạn."
+      - yuki: "な、に、ぬ、ね、の。"
+        en: "na, ni, nu, ne, no"
+        vi: "na, ni, nư, nê, nô"
+        echo: true
+
+  - kind: jp
+    chapter: "Read words"
+    heading: "Read words · Then check"
+    items:
+      - jp: "ねこ ・ いぬ ・ くち ・ なつ"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "ねこ ・ いぬ ・ くち ・ なつ"
+        romaji: "neko · inu · kuchi · natsu"
+        en: "cat · dog · mouth · summer"
+        vi: "con mèo · con chó · cái miệng · mùa hè"
+      - jp: "つくえ ・ たこ ・ さかな ・ なに"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "つくえ ・ たこ ・ さかな ・ なに"
+        romaji: "tsukue · tako · sakana · nani"
+        en: "desk · octopus · fish · what"
+        vi: "cái bàn · con bạch tuộc · con cá · cái gì"
+    lines:
+      - emma: "Read these four words aloud, then check with Yuki."
+        vi: "Đọc to bốn từ này, rồi kiểm tra cùng Yuki."
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "ねこ、いぬ、くち、なつ。"
+        focus: 1
+        en: "cat, dog, mouth, summer"
+        vi: "con mèo, con chó, cái miệng, mùa hè"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "つくえ、たこ、さかな、なに。"
+        focus: 3
+        en: "desk, octopus, fish, what"
+        vi: "cái bàn, con bạch tuộc, con cá, cái gì"
+        pause: 1
+
+  - kind: jp
+    chapter: "Review"
+    heading: "Review · Rows あ to な"
+    items:
+      - jp: "あ い う え お\nか き く け こ\nさ し す せ そ\nた ち つ て と\nな に ぬ ね の"
+        romaji: "a i u e o\nka ki ku ke ko\nsa shi su se so\nta chi tsu te to\nna ni nu ne no"
+        en: "Twenty-five letters: more than half of the chart."
+        vi: "Hai mươi lăm chữ: đã hơn nửa bảng chữ cái."
+    lines:
+      - emma: "You now know twenty-five letters, more than half of the chart. Review them with Yuki."
+        vi: "Giờ bạn đã biết hai mươi lăm chữ, hơn nửa bảng chữ cái. Ôn lại cùng Yuki nhé."
+      - yuki: "あ、い、う、え、お、か、き、く、け、こ、さ、し、す、せ、そ、た、ち、つ、て、と、な、に、ぬ、ね、の。"
+        en: "a i u e o · ka ki ku ke ko · sa shi su se so · ta chi tsu te to · na ni nu ne no"
+        vi: "a i ư ê ô · ca ki cư kê cô · xa shi xư xê xô · ta chi tsư tê tô · na ni nư nê nô"
+        step: 0.6
+        pause: 1
+      - emma: "Write the ten new letters five times each. Pause the video while you write."
+        vi: "Viết mười chữ mới, mỗi chữ năm lần. Dừng video trong lúc viết nhé."
+      - wait: 5
+        note: "Write た ち つ て と な に ぬ ね の — five times each"
+        vi: "Viết た ち つ て と な に ぬ ね の — mỗi chữ năm lần"
+        hl: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+      - emma: "Next video: the ha row and the ma row."
+        vi: "Video tiếp theo: hàng ha và hàng ma."

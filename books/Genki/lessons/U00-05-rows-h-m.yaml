@@ -1,0 +1,200 @@
+# U00 · Hiragana 4 — GENKI I, Japanese Writing System (trang 20). Hàng は và ま: từng chữ một, ふ (fu: thổi hơi qua hai
+# môi), ghi chú は / へ làm trợ từ đọc wa / e (gặp ở bài 1), cả hàng, đọc từ, ôn bảy hàng đã học.
+# Cách đọc: へ đọc riêng bị misaki coi là trợ từ (đọc "e"), nên `say` viết ヘ bằng katakana (lệnh check báo nếu quên).
+id: U00-05-rows-h-m
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Hiragana 4 · Rows は and ま"
+title_vi: "Hiragana 4 — hàng は (ふ đọc fu) và hàng ま, đọc từ"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Rows は and ま"
+    items:
+      - jp: "は ひ ふ へ ほ\nま み む め も"
+        romaji: "ha hi fu he ho\nma mi mu me mo"
+        en: "Goals: ten new letters, the special sound of ふ, and words like はな and さしみ."
+        vi: "Mục tiêu: mười chữ mới, cách đọc đặc biệt của ふ, và những từ như はな (hoa), さしみ (sashimi)."
+    lines:
+      - emma: "Welcome back. In this video: the ha row and the ma row."
+        vi: "Chào mừng bạn trở lại. Trong video này: hàng ha và hàng ma."
+      - emma: "One letter has a sound that English and Vietnamese do not have. You will practise it."
+        vi: "Có một chữ mang âm mà tiếng Anh và tiếng Việt đều không có. Bạn sẽ luyện âm đó."
+      - emma: "After this video, you will know thirty-five letters."
+        vi: "Học xong video này, bạn sẽ biết ba mươi lăm chữ."
+
+  - kind: jp
+    chapter: "Row は"
+    heading: "Row は · h + a i u e o · ふ is fu"
+    items:
+      - jp: "は ひ ふ へ ほ"
+        romaji: "ha hi fu he ho"
+        en: "h + the five vowels. ふ is fu: blow gently between your lips."
+        vi: "h + năm nguyên âm. ふ đọc “fư”: thổi hơi nhẹ qua hai môi."
+    lines:
+      - emma: "The ha row. Say each letter after Yuki."
+        vi: "Hàng ha. Đọc theo Yuki từng chữ."
+      - yuki: "は。"
+        hl: 0
+        en: "ha"
+        vi: "ha"
+        pause: 1.5
+      - yuki: "ひ。"
+        hl: 1
+        en: "hi"
+        vi: "hi"
+        pause: 1.5
+      - yuki: "ふ。"
+        hl: 2
+        en: "fu — blow softly through your lips"
+        vi: "fu — thổi hơi nhẹ qua hai môi"
+        pause: 1.5
+      - emma: "Fu is soft. Blow gently through your lips. Your teeth do not touch your lip, as they do in English f."
+        vi: "Âm “fư” rất nhẹ. Thổi hơi nhẹ qua hai môi. Răng không chạm vào môi như âm f tiếng Anh hay “ph” tiếng Việt."
+        hl: 2
+      - yuki: "ふ。"
+        hl: 2
+        en: "fu"
+        vi: "fu"
+        pause: 1.5
+      - yuki: "へ。"
+        say: "ヘ。"
+        hl: 3
+        en: "he"
+        vi: "he — như “hê”"
+        pause: 1.5
+      - yuki: "ほ。"
+        hl: 4
+        en: "ho"
+        vi: "ho — như “hô”"
+        pause: 1.5
+      - emma: "The whole row, then your turn."
+        vi: "Cả hàng, rồi đến lượt bạn."
+      - yuki: "は、ひ、ふ、へ、ほ。"
+        say: "は、ひ、ふ、ヘ、ほ。"
+        en: "ha, hi, fu, he, ho"
+        vi: "ha, hi, fư, hê, hô"
+        echo: true
+      - emma: "Good to know: later, two of these letters are also used as small grammar words, and then they sound different. You will see this in Lesson 1."
+        vi: "Nên biết: sau này, hai chữ trong hàng còn được dùng làm từ ngữ pháp nhỏ, khi đó đọc khác đi. Bạn sẽ gặp ở bài 1."
+        hl: [0, 3]
+
+  - kind: jp
+    chapter: "Row ま"
+    heading: "Row ま · m + a i u e o"
+    items:
+      - jp: "ま み む め も"
+        romaji: "ma mi mu me mo"
+        en: "m + the five vowels."
+        vi: "m + năm nguyên âm: ma, mi, mư, mê, mô."
+    lines:
+      - emma: "The ma row is regular. Say each letter after Yuki."
+        vi: "Hàng ma theo đúng quy luật. Đọc theo Yuki từng chữ."
+      - yuki: "ま。"
+        hl: 0
+        en: "ma"
+        vi: "ma"
+        pause: 1.5
+      - yuki: "み。"
+        hl: 1
+        en: "mi"
+        vi: "mi"
+        pause: 1.5
+      - yuki: "む。"
+        hl: 2
+        en: "mu"
+        vi: "mu — như “mư”"
+        pause: 1.5
+      - yuki: "め。"
+        hl: 3
+        en: "me"
+        vi: "me — như “mê”"
+        pause: 1.5
+      - yuki: "も。"
+        hl: 4
+        en: "mo"
+        vi: "mo — như “mô”"
+        pause: 1.5
+      - emma: "The whole row, then your turn."
+        vi: "Cả hàng, rồi đến lượt bạn."
+      - yuki: "ま、み、む、め、も。"
+        en: "ma, mi, mu, me, mo"
+        vi: "ma, mi, mư, mê, mô"
+        echo: true
+
+  - kind: jp
+    chapter: "Read words"
+    heading: "Read words · Then check"
+    items:
+      - jp: "はな ・ ひと ・ ふね ・ ほし"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "はな ・ ひと ・ ふね ・ ほし"
+        romaji: "hana · hito · fune · hoshi"
+        en: "flower · person · ship · star"
+        vi: "bông hoa · người · con thuyền · ngôi sao"
+      - jp: "みみ ・ むし ・ なまえ ・ さしみ"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "みみ ・ むし ・ なまえ ・ さしみ"
+        romaji: "mimi · mushi · namae · sashimi"
+        en: "ear · insect · name · sashimi"
+        vi: "cái tai · côn trùng · tên · sashimi (cá sống)"
+    lines:
+      - emma: "Read these four words aloud, then check with Yuki."
+        vi: "Đọc to bốn từ này, rồi kiểm tra cùng Yuki."
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "はな、ひと、ふね、ほし。"
+        focus: 1
+        en: "flower, person, ship, star"
+        vi: "bông hoa, người, con thuyền, ngôi sao"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+      - wait: 4
+        note: "Read the four words aloud"
+        vi: "Đọc to bốn từ"
+      - yuki: "みみ、むし、なまえ、さしみ。"
+        focus: 3
+        en: "ear, insect, name, sashimi"
+        vi: "cái tai, côn trùng, tên, sashimi"
+        pause: 1
+
+  - kind: jp
+    chapter: "Review"
+    heading: "Review · Rows か to ま"
+    items:
+      - jp: "か き く け こ\nさ し す せ そ\nた ち つ て と\nな に ぬ ね の\nは ひ ふ へ ほ\nま み む め も"
+        romaji: "ka ki ku ke ko\nsa shi su se so\nta chi tsu te to\nna ni nu ne no\nha hi fu he ho\nma mi mu me mo"
+        en: "Thirty-five letters with the vowels. Only three short rows are left."
+        vi: "Ba mươi lăm chữ kể cả nguyên âm. Chỉ còn ba hàng ngắn nữa."
+    lines:
+      - emma: "Review the six consonant rows you know. Follow the orange letter."
+        vi: "Ôn sáu hàng phụ âm bạn đã biết. Nhìn theo chữ màu cam."
+      - yuki: "か、き、く、け、こ、さ、し、す、せ、そ、た、ち、つ、て、と、な、に、ぬ、ね、の、は、ひ、ふ、へ、ほ、ま、み、む、め、も。"
+        say: "か、き、く、け、こ、さ、し、す、せ、そ、た、ち、つ、て、と、な、に、ぬ、ね、の、は、ひ、ふ、ヘ、ほ、ま、み、む、め、も。"
+        en: "ka … mo: six rows"
+        vi: "ka … mo: sáu hàng"
+        step: 0.6
+        pause: 1
+      - emma: "Write the ten new letters five times each. Pause the video while you write."
+        vi: "Viết mười chữ mới, mỗi chữ năm lần. Dừng video trong lúc viết nhé."
+      - wait: 5
+        note: "Write は ひ ふ へ ほ ま み む め も — five times each"
+        vi: "Viết は ひ ふ へ ほ ま み む め も — mỗi chữ năm lần"
+        hl: [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+      - emma: "Next video: the last three rows, and the whole chart with the book's audio."
+        vi: "Video tiếp theo: ba hàng cuối và cả bảng chữ với audio của sách."
