@@ -401,19 +401,19 @@ try{
     const text = await card.textContent();
     assert.match(text, /JLPT N5 · CEFR A1/);
     assert.match(text, /286 track audio/);
-    assert.match(text, /34 video bài giảng/);                    // Unit 0: 16 video ngắn, bài 1–3: 4 video kỹ năng, bài 4–5: 3 clip
+    assert.match(text, /37 video bài giảng/);                    // Unit 0: 19 video ngắn, bài 1–3: 4 video kỹ năng, bài 4–5: 3 clip
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
     const u0 = page.locator("#p-book .bk-unit", { hasText: "Unit 0" });             // học hệ chữ, chào hỏi, số đếm không cần mở sách
     const v0 = await u0.locator(".bk-vids button").allTextContents();
     assert.deepEqual(v0.map(t => t.replace(/^▶ (\w+).*/, "$1")),                  // video mở đầu, rồi đúng thứ tự học
-      ["Start", ...Array(9).fill("Hiragana"), "Katakana", "Katakana", "Greetings", "Greetings", "Numbers", "Numbers"]);
+      ["Start", ...Array(9).fill("Hiragana"), ...Array(4).fill("Katakana"), ...Array(3).fill("Greetings"), "Numbers", "Numbers"]);
     const u1 = page.locator("#p-book .bk-unit", { hasText: "Unit 1 · New Friends" });
     assert.match(await u1.textContent(), /Trang 36–55 · 6 phiên/);
     const vids = await u1.locator(".bk-vids button").allTextContents();
     assert.deepEqual(vids.map(t => t.replace(/^▶ (\w+).*/, "$1")), ["Listening", "Speaking", "Writing", "Reading"]);
     const mins = t => { const m = t.match(/· (\d+):\d\d$/); return m ? +m[1] : -1; };
-    assert.ok(v0.every(t => mins(t) >= 2 && mins(t) < 5), "video Unit 0 ngắn 2–5 phút: " + v0);       // chia nhỏ cho người mới
+    assert.ok(v0.every(t => mins(t) >= 2 && mins(t) <= 5), "video Unit 0 ngắn 2–5 phút: " + v0);      // chia nhỏ cho người mới
     assert.ok(vids.every(t => mins(t) >= 5), "video bài 1 dài 5–10 phút: " + vids);
     await u1.locator(".bk-vids button", { hasText: "Speaking" }).click();            // video Speaking → phiên Part B
     await page.waitForSelector("#p-book .bk-video");

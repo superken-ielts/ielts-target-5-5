@@ -1,0 +1,127 @@
+# U00 · Katakana 1 — GENKI I, Japanese Writing System (trang 24–25). Katakana là gì, dùng khi nào (từ mượn, tên nước
+# ngoài), sáu chữ giống hiragana, sáu hàng đầu theo nhóm (mỗi hàng Yuki đọc từng chữ, chữ đang đọc sáng lên, rồi lượt
+# nhắc lại), viết tay. Cách đọc: ヘ đọc riêng bằng katakana là "he" (không bị coi là trợ từ như へ).
+id: U00-11-katakana-1
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Katakana 1 · What katakana is for, rows ア to ホ"
+title_vi: "Katakana 1 — katakana dùng khi nào, sáu chữ giống hiragana, hàng ア đến ホ"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Katakana, the second alphabet"
+    items:
+      - jp: "カタカナ"
+        romaji: "katakana"
+        en: "The same sounds as hiragana, with straighter shapes. Used for words from other languages and foreign names."
+        vi: "Cùng các âm như hiragana nhưng nét thẳng, góc cạnh hơn. Dùng cho từ mượn tiếng nước ngoài và tên người nước ngoài."
+      - jp: "ベトナム ・ ハノイ ・ コーヒー"
+        romaji: "betonamu · hanoi · koohii"
+        en: "Vietnam · Hanoi · coffee — all written in katakana."
+        vi: "Việt Nam · Hà Nội · cà phê — đều viết bằng katakana."
+    lines:
+      - emma: "Welcome back. You can read hiragana. Now: katakana, the second alphabet."
+        vi: "Chào mừng bạn trở lại. Bạn đã đọc được hiragana. Giờ là katakana, bảng chữ cái thứ hai."
+      - yuki: "カタカナ。"
+        en: "katakana"
+        vi: "katakana"
+        pause: 1
+      - emma: "Katakana has exactly the same sounds as hiragana, but the shapes are straighter."
+        vi: "Katakana có đúng các âm như hiragana, nhưng nét chữ thẳng hơn."
+      - emma: "Why learn it? Japanese uses katakana for words from other languages, and for foreign names. For example: Vietnam, Hanoi, and coffee."
+        say: "Why learn it? Japanese yoozes katakana for words from other languages, and for foreign names. For example: Vietnam, Hanoi, and coffee."
+        vi: "Học để làm gì? Tiếng Nhật dùng katakana cho từ mượn tiếng nước ngoài và tên người nước ngoài. Ví dụ: Việt Nam, Hà Nội, cà phê."
+        focus: 1
+      - yuki: "ベトナム、ハノイ、コーヒー。"
+        en: "Vietnam, Hanoi, coffee"
+        vi: "Việt Nam, Hà Nội, cà phê"
+        pause: 1
+      - emma: "Your own name will be written in katakana too."
+        vi: "Tên của bạn cũng sẽ được viết bằng katakana."
+
+  - kind: jp
+    chapter: "Like hiragana"
+    heading: "An easy start · six katakana that look like hiragana"
+    items:
+      - jp: "カ か ・ キ き ・ ヘ へ ・ リ り ・ モ も ・ ヤ や"
+        en: "ka, ki, he, ri, mo, ya: these katakana look almost the same as their hiragana."
+        vi: "ka, ki, he, ri, mo, ya: sáu chữ katakana này gần giống hiragana cùng âm."
+    lines:
+      - emma: "Good news: some katakana look almost the same as their hiragana. Start with these six."
+        vi: "Tin vui: một số chữ katakana trông gần giống chữ hiragana cùng âm. Hãy bắt đầu với sáu chữ này."
+      - yuki: "カ、キ、ヘ、リ、モ、ヤ。"
+        hl: [0, 2, 4, 6, 8, 10]
+        en: "ka, ki, he, ri, mo, ya"
+        vi: "ka, ki, he, ri, mo, ya"
+        echo: true
+
+  - kind: jp
+    chapter: "ア to ソ"
+    heading: "Rows ア, カ, サ"
+    items:
+      - jp: "ア イ ウ エ オ\nカ キ ク ケ コ\nサ シ ス セ ソ"
+        romaji: "a i u e o\nka ki ku ke ko\nsa shi su se so"
+        en: "The same sounds as あいうえお, かきくけこ, さしすせそ."
+        vi: "Cùng âm với あいうえお, かきくけこ, さしすせそ."
+    lines:
+      - emma: "Now the chart, row by row. You know the sounds, so look carefully at the new shapes."
+        vi: "Giờ là bảng chữ, từng hàng một. Bạn đã biết các âm, nên hãy nhìn kỹ hình chữ mới."
+      - yuki: "ア、イ、ウ、エ、オ。"
+        hl: [0, 1, 2, 3, 4]
+        en: "a, i, u, e, o"
+        vi: "a, i, ư, ê, ô"
+        echo: true
+      - yuki: "カ、キ、ク、ケ、コ。"
+        hl: [5, 6, 7, 8, 9]
+        en: "ka, ki, ku, ke, ko"
+        vi: "ca, ki, cư, kê, cô"
+        echo: true
+      - yuki: "サ、シ、ス、セ、ソ。"
+        hl: [10, 11, 12, 13, 14]
+        en: "sa, shi, su, se, so"
+        vi: "xa, shi, xư, xê, xô"
+        echo: true
+
+  - kind: jp
+    chapter: "タ to ホ"
+    heading: "Rows タ, ナ, ハ"
+    items:
+      - jp: "タ チ ツ テ ト\nナ ニ ヌ ネ ノ\nハ ヒ フ ヘ ホ"
+        romaji: "ta chi tsu te to\nna ni nu ne no\nha hi fu he ho"
+        en: "チ is chi, ツ is tsu, フ is fu — as in hiragana."
+        vi: "チ là chi, ツ là tsu, フ là fu — giống hiragana."
+    lines:
+      - emma: "The next three rows. Chi, tsu and fu are the same special sounds as in hiragana."
+        say: "The next three rows. Chee, tsoo and foo are the same special sounds as in hiragana."
+        vi: "Ba hàng tiếp theo. Chi, tsu và fu là những âm đặc biệt giống như ở hiragana."
+      - yuki: "タ、チ、ツ、テ、ト。"
+        hl: [0, 1, 2, 3, 4]
+        en: "ta, chi, tsu, te, to"
+        vi: "ta, chi, tsư, tê, tô"
+        echo: true
+      - yuki: "ナ、ニ、ヌ、ネ、ノ。"
+        hl: [5, 6, 7, 8, 9]
+        en: "na, ni, nu, ne, no"
+        vi: "na, ni, nư, nê, nô"
+        echo: true
+      - yuki: "ハ、ヒ、フ、ヘ、ホ。"
+        hl: [10, 11, 12, 13, 14]
+        en: "ha, hi, fu, he, ho"
+        vi: "ha, hi, fư, hê, hô"
+        echo: true
+      - emma: "Write each new katakana three times, and say it as you write. Pause the video while you write."
+        vi: "Viết mỗi chữ katakana mới ba lần, vừa viết vừa đọc. Dừng video trong lúc viết nhé."
+      - wait: 5
+        note: "Write ア … ホ — three times each"
+        vi: "Viết ア … ホ — mỗi chữ ba lần"
+        hl: all
+      - emma: "Next video: the last rows, the whole chart, and letters that look alike."
+        vi: "Video tiếp theo: những hàng cuối, cả bảng chữ, và các chữ trông giống nhau."

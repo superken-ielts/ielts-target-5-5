@@ -1,13 +1,12 @@
-# U00 · Katakana 2 — GENKI I, Japanese Writing System (trang 25–27). Dấu ゛゜ và ャュョ nhỏ y như hiragana (audio gốc
-# JWS-10 từ 5.8 giây, JWS-11 từ 6.0 giây), trường âm ー (JWS-12 từ 12.0 giây), âm ngoại lai với ァィゥェォ nhỏ (JWS-13:
+# U00 · Katakana 4 — GENKI I, Japanese Writing System (trang 26–27). Âm ngoại lai với ァィゥェォ nhỏ (audio gốc JWS-13:
 # mỗi cặp "âm – từ" một dòng `start` / `end`; チェック, デュエット có っ làm khoảng lặng giữa từ nên `step: 0`), đọc từ
 # mượn, tên tiếng Việt bằng katakana, làm quen chữ Hán (bốn kiểu chữ, âm On / Kun).
 # Cách đọc: âm ngoại lai đọc rời bị misaki tách (フィ → fu-i) nên để audio gốc đọc.
-id: U00-12-katakana-words
+id: U00-14-katakana-4
 activity: U00-kana
 title: "Unit 0 · The Japanese Writing System"
-subtitle: "Katakana 2 · Loanwords, foreign sounds, first kanji"
-title_vi: "Katakana 2 — dấu và âm ghép, trường âm ー, âm ngoại lai, đọc từ mượn và tên tiếng Việt; làm quen chữ Hán"
+subtitle: "Katakana 4 · Loanwords, foreign sounds, first kanji"
+title_vi: "Katakana 4 — âm ngoại lai, đọc từ mượn và tên tiếng Việt; làm quen chữ Hán"
 tag: "GENKI L0 · N5"
 gap: 0.8
 scene_gap: 1.5
@@ -23,8 +22,8 @@ scenes:
     items:
       - jp: "テレビ ・ コーヒー ・ パソコン"
         romaji: "terebi · koohii · pasokon"
-        en: "Goals: marks and long vowels in katakana, sounds for foreign words, everyday loanwords, and a first look at kanji."
-        vi: "Mục tiêu: dấu và trường âm trong katakana, âm cho từ nước ngoài, từ mượn hằng ngày, và làm quen chữ Hán."
+        en: "Goals: sounds for foreign words, everyday loanwords, Vietnamese names in katakana, and a first look at kanji."
+        vi: "Mục tiêu: âm cho từ nước ngoài, từ mượn hằng ngày, tên tiếng Việt bằng katakana, và làm quen chữ Hán."
     lines:
       - emma: "Welcome back. In this video, you will read real katakana words: TV, coffee, computer."
         vi: "Chào mừng bạn trở lại. Trong video này, bạn sẽ đọc từ katakana thật: ti vi, cà phê, máy tính."
@@ -34,75 +33,6 @@ scenes:
         pause: 1
       - emma: "Why? Many everyday words in Japanese come from English, and they are written in katakana."
         vi: "Để làm gì? Nhiều từ thường dùng trong tiếng Nhật mượn từ tiếng Anh, và chúng được viết bằng katakana."
-
-  - kind: jp
-    chapter: "Marks and small letters"
-    heading: "゛ ゜ and small ャ ュ ョ · exactly as in hiragana"
-    items:
-      - jp: "ガ ・ ザ ・ ダ ・ バ ・ パ ・ キャ ・ シュ ・ チョ"
-        romaji: "ga · za · da · ba · pa · kya · shu · cho"
-        en: "The marks ゛ ゜ and the small ャ ュ ョ work exactly as in hiragana."
-        vi: "Dấu ゛゜ và ャュョ nhỏ dùng y như hiragana."
-      - jp: "ガ　ギ　グ　ゲ　ゴ\nザ　ジ　ズ　ゼ　ゾ\nダ　ヂ　ヅ　デ　ド\nバ　ビ　ブ　ベ　ボ\nパ　ピ　プ　ペ　ポ"
-        en: "The 25 sounds with marks."
-        vi: "25 âm có dấu."
-      - jp: "キャ　キュ　キョ　　　ヒャ　ヒュ　ヒョ　　　ジャ　ジュ　ジョ\nシャ　シュ　ショ　　　ミャ　ミュ　ミョ　　　ビャ　ビュ　ビョ\nチャ　チュ　チョ　　　リャ　リュ　リョ　　　ピャ　ピュ　ピョ\nニャ　ニュ　ニョ　　　ギャ　ギュ　ギョ"
-        en: "The 33 contracted sounds: read down each column."
-        vi: "33 âm ghép: đọc từng cột từ trên xuống."
-    lines:
-      - emma: "Good news: the marks and the small letters work exactly as in hiragana."
-        vi: "Tin vui: dấu và chữ nhỏ dùng y như ở hiragana."
-      - yuki: "ガ、ザ、ダ、バ、パ、キャ、シュ、チョ。"
-        en: "ga, za, da, ba, pa, kya, shu, cho"
-        vi: "ga, za, đa, ba, pa, kya, shu, cho"
-        echo: true
-      - emma: "Read along with the book's audio. First, the sounds with marks."
-        vi: "Đọc theo audio của sách. Đầu tiên là các âm có dấu."
-        focus: 1
-      - track: JWS-10
-        start: 5.8
-        note: "Japanese Writing System · JWS-10"
-        en: "ga … go · za … zo · da … do · ba … bo · pa … po"
-        vi: "ga … gô · za … zô · đa … đô · ba … bô · pa … pô"
-        step: 1.2
-        pause: 1
-      - emma: "Then the contracted sounds."
-        vi: "Sau đó là các âm ghép."
-        focus: 2
-      - track: JWS-11
-        start: 6.0
-        note: "Japanese Writing System · JWS-11"
-        en: "kya kyu kyo · sha … · pya pyu pyo"
-        vi: "kya kyu kyo · sha … · pya pyu pyo"
-        hl: [0, 1, 2, 9, 10, 11, 18, 19, 20, 27, 28, 29, 3, 4, 5, 12, 13, 14, 21, 22, 23, 30, 31, 32,
-             6, 7, 8, 15, 16, 17, 24, 25, 26]
-        step: 1.2
-        pause: 1
-
-  - kind: jp
-    chapter: "Long vowels ー"
-    heading: "Long vowels in katakana · a dash ー"
-    items:
-      - jp: "カー ・ スキー ・ スーツ ・ ケーキ ・ ボール"
-        romaji: "kaa · sukii · suutsu · keeki · booru"
-        en: "car · ski · suit · cake · ball. In katakana, a long vowel is a dash ー."
-        vi: "ô tô · trượt tuyết · com-lê · bánh ngọt · quả bóng. Trong katakana, trường âm là dấu gạch ー."
-    lines:
-      - emma: "In katakana, a long vowel is simply a dash. Hold it for two beats. Car, ski, suit, cake, ball."
-        vi: "Trong katakana, nguyên âm dài chỉ là một dấu gạch. Kéo dài hai nhịp. Ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng."
-      - yuki: "カー、スキー、スーツ、ケーキ、ボール。"
-        en: "car, ski, suit, cake, ball"
-        vi: "ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng"
-        echo: true
-      - emma: "The book's audio."
-        vi: "Audio của sách."
-      - track: JWS-12
-        start: 12.0
-        note: "Japanese Writing System · JWS-12"
-        en: "car, ski, suit, cake, ball"
-        vi: "ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng"
-        step: 1.2
-        pause: 1
 
   - kind: jp
     chapter: "Foreign sounds"
