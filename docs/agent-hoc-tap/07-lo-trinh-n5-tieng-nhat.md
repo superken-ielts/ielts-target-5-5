@@ -7,13 +7,13 @@ Tài liệu này gồm bốn phần:
 - những chỗ đã sửa khi chuyển 15 tập của bản thiết kế thành video;
 - lộ trình N5 trong tab Sách, dựng từ GENKI I Textbook, Workbook và audio trong `books/Genki/`;
 - cách làm video tiếng Nhật, độ phủ hiện tại và kế hoạch các bài sau:
-  - Unit 0 có năm video để học không cần mở sách (đợt 17);
+  - Unit 0 có 16 video ngắn để học không cần mở sách (đợt 23, thay năm video của đợt 17);
   - bài 1–3 có bốn video kỹ năng 5–10 phút mỗi bài (đợt 16).
 
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, audio, hồ sơ lộ trình | `books/Genki/` — `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (đoạn PDF) |
-| Kịch bản và video | `books/Genki/lessons/U0u-<kỹ năng>.yaml` (bài 1–3), `EP_0u_0p.yaml` (bài 4–5) + `.mp4`, `lessons.json` |
+| Kịch bản và video | `books/Genki/lessons/U00-<nn>-<phần>.yaml` (Unit 0), `U0u-<kỹ năng>.yaml` (bài 1–3), `EP_0u_0p.yaml` (bài 4–5) + `.mp4`, `lessons.json` |
 | Mẫu lộ trình khai hết trong `book.yaml` | `agents/book_ingest/lessons.py` |
 | Tiếng Nhật trong công cụ dựng video | `agents/lesson_video/ja.py` (furigana, cách đọc, romaji), `jpcard.py` (cảnh `jp`) |
 | Nhóm lộ trình trong tab Sách | `books/catalog.json › courses` (`ielts`, `ja-n5`) |
@@ -21,7 +21,7 @@ Tài liệu này gồm bốn phần:
 In lại bảng độ phủ video (mục 4.1):
 
 ```bash
-cd agents && python -m lesson_video coverage ../books/Genki --unit U01 --unit U02 --unit U03 --unit U04 --unit U05
+cd agents && python -m lesson_video coverage ../books/Genki --unit U00 --unit U01 --unit U02 --unit U03 --unit U04 --unit U05
 ```
 
 ---
@@ -200,19 +200,33 @@ hợp: track không có, khoảng track đi ngược, một track gán hai lần
 
 ## 4. Video bài giảng tiếng Nhật
 
-### 4.1 Độ phủ (đợt 17)
+### 4.1 Độ phủ (đợt 23)
 
-Unit 0 có năm video (đợt 17), học được không cần mở sách:
+Unit 0 có 16 video ngắn (đợt 23), học được không cần mở sách. Đợt này thay năm video của đợt 17, vì người học góp ý:
+chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, và cả đoạn hiện một lúc nên
+không biết giọng Nhật đang đọc tới đâu. Cách sửa ở mục 4.2–4.3.
 
 | Phiên | Video | Nội dung | Dài |
 |---|---|---|---|
-| Hệ chữ Nhật & hiragana | `U00-hiragana-1` | Ba loại chữ; 46 hiragana theo hàng, mẹo phát âm cho người Việt; cả bảng với JWS-01; chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết chữ cái; đọc từ đầu tiên | 6:22 |
-| | `U00-hiragana-2` | ゛゜ (JWS-02); âm ghép ゃゅょ (JWS-03); っ, ん + hàng な (JWS-04, 05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ | 6:59 |
-| | `U00-katakana` | Bảng katakana, chữ giống hiragana, cả bảng với JWS-09; chữ dễ nhầm; ゛゜ và âm ghép (JWS-10, 11); ー (JWS-12); âm ngoại lai (JWS-13); từ vay mượn, tên tiếng Việt; bốn kiểu chữ Hán, âm On / Kun | 7:54 |
-| Chào hỏi & số đếm | `U00-greetings` | Câu chào theo tình huống, Yuki và Takeshi nói qua lại; cúi chào; cả danh sách với K00-01; 10 tình huống đố (bài A); tự giới thiệu (bài B) | 7:02 |
-| | `U00-numbers` | 0–10 và cách đọc thứ hai; 11–19; hàng chục như tiếng Việt; cả bảng với K00-02; bài A, B, C có đáp án; nghe – viết số dễ nhầm | 5:52 |
+| Hệ chữ Nhật & hiragana | `U00-01-start` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 16 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, YOUR TURN); mỗi ngày một video | 2:40 |
+| | `U00-02-vowels` | Ba loại chữ trong một câu; あいうえお từng chữ một, mẹo phát âm cho người Việt; viết; từ chỉ có nguyên âm | 3:10 |
+| | `U00-03-rows-k-s` | Hàng か, さ (し là shi); đọc từ; ôn 15 chữ | 3:01 |
+| | `U00-04-rows-t-n` | Hàng た (ち, つ), な; đọc từ; ôn 25 chữ | 3:14 |
+| | `U00-05-rows-h-m` | Hàng は (ふ), ま; は / へ làm trợ từ đọc khác; đọc từ; ôn 30 chữ | 3:27 |
+| | `U00-06-rows-y-r-w` | Hàng や, ら, わ và ん; đọc từ; cả bảng 46 chữ với JWS-01 | 4:09 |
+| | `U00-07-hiragana-practice` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…) | DUR07 |
+| | `U00-08-marks` | ゛ ゜ theo từng hàng (か / が…); 25 âm với JWS-02; đọc từ | DUR08 |
+| | `U00-09-small-ya-yu-yo` | や to và ゃ nhỏ (びよういん / びょういん); 33 âm ghép; JWS-03; đọc từ | DUR09 |
+| | `U00-10-small-tsu-long-vowels` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ | DUR10 |
+| | `U00-11-katakana-chart` | Katakana dùng khi nào; sáu chữ giống hiragana; bảng theo nhóm hàng; cả bảng với JWS-09; chữ dễ nhầm | DUR11 |
+| | `U00-12-katakana-words` | ゛゜ và ャュョ (JWS-10, 11); ー (JWS-12); âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | DUR12 |
+| Chào hỏi & số đếm | `U00-13-greetings-1` | Chào theo giờ trong ngày, cảm ơn, xin lỗi, đáp lời; mỗi câu: Emma nói tình huống → Yuki / Takeshi → lượt bạn → K00-01 | DUR13 |
+| | `U00-14-greetings-2` | Tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào; 10 tình huống đố (bài A); tự giới thiệu (bài B) | DUR14 |
+| | `U00-15-numbers-1` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; K00-02; đếm 1–20 | DUR15 |
+| | `U00-16-numbers-2` | Hàng chục và 100; mọi số đến 99; K00-02; bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | DUR16 |
 
-5 video, **34:09**, 21 MB, 9–12 chương mỗi video.
+16 video, **TOTAL**, SIZE MB, 4–8 chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì)
+và kết thúc bằng video tiếp theo học gì.
 
 Bài 1–3 có bốn video mỗi bài, mỗi video gắn vào phiên luyện đúng kỹ năng đó:
 
@@ -223,7 +237,8 @@ Bài 1–3 có bốn video mỗi bài, mỗi video gắn vào phiên luyện đ�
 | 3 Making a Date | `U03-listening` K03-01…04, đố lịch một ngày (8:42) | `U03-speaking` ます / ません, を・で・に, thời gian, tần suất, ～ませんか (6:06) | `U03-writing` 15 chữ Hán, thứ tự nét, đoạn văn một ngày, tin nhắn mời, chính tả (5:56) | `U03-reading` chữ Hán số, giá tiền, まいにちのせいかつ với Y03, đúng / sai (6:45) | 27:28 |
 
 - 12 video, **1:24:22**, 59 MB, 7–11 chương mỗi video.
-- Giọng Kokoro q8: Emma `bf_emma` (tốc độ 1.0), Yuki `jf_alpha` và Takeshi `jm_kumo` (0.88).
+- Giọng Kokoro q8: Emma `bf_emma` (tốc độ 1.0), Yuki `jf_alpha` và Takeshi `jm_kumo` (0.88). Unit 0 (đợt 23) chậm
+  hơn một nhịp: Emma 0.9, Yuki và Takeshi 0.78, nghỉ 0.8 giây giữa hai câu, 1.5 giây giữa hai cảnh.
 - Part A và Workbook không có video riêng. Ngữ pháp của Part A được giảng trong Speaking và Writing.
 
 Bài 4–5 vẫn là 6 tập ngắn của bản thiết kế (đợt 15):
@@ -233,7 +248,7 @@ Bài 4–5 vẫn là 6 tập ngắn của bản thiết kế (đợt 15):
 | 4 The First Date | `EP_04_01` あります / います, vị trí (0:38) | `EP_04_02` でした / ～ました, 時間, と (0:46) | `EP_04_03` khu nhà ở, cuối tuần (0:31) | 1:55 |
 | 5 A Trip to Okinawa | `EP_05_01` tính từ hiện tại, bổ nghĩa (0:46) | `EP_05_02` tính từ quá khứ, 好き, ましょう (0:45) | `EP_05_03` chuyến đi Đà Nẵng (0:36) | 2:07 |
 
-GENKI có 23 video. Bài 6–12 chưa có video.
+GENKI có 34 video. Bài 6–12 chưa có video.
 
 ### 4.2 Làm một video N5
 
@@ -253,9 +268,30 @@ GENKI có 23 video. Bài 6–12 chưa có video.
    - `quiz: true` là thẻ đề: câu hỏi nghe, giá tiền viết bằng chữ Hán để tự đọc… Thẻ đề không bị kiểm cách đọc và được
      để chữ Hán không furigana. Thẻ đáp án đặt ngay sau.
    - Thẻ `× …` là câu sai: không ai đọc, không có romaji. Thẻ `○ …` ngay sau là câu đúng.
-   - Cảnh `jp` không có `wait` / `echo`, vì người học tự dừng video. Dùng `pause` 1,5–3 giây.
+   - **Mỗi dòng mang lời dịch của chính nó** (đợt 23). Câu của Emma có `vi` (tiếng Việt của đúng câu đó). Câu tiếng
+     Nhật và dòng `track` có `en` + `vi`. Với chữ cái, `en` là cách đọc (`shi — like she`), `vi` là cách đọc gần
+     đúng cho người Việt (`shi — như “she” tiếng Anh, không phải “si”`). Dòng thiếu thì tầng đó hiện `en` / `vi` của
+     thẻ. Câu trên thẻ đố (`quiz`) không ghi `en` / `vi` để khỏi lộ đáp án.
+   - **Câu tiếng Nhật phải nằm trên thẻ đang hiện**: tầng 1 luôn hiện chữ của câu đang đọc. Câu không có trên thẻ thì
+     thêm thẻ và chuyển `focus`.
+   - **Tô sáng chỗ đang đọc** (đợt 23).
+     - Câu tiếng Nhật và dòng `track` mặc định tô cả thẻ (trừ thẻ đố).
+     - `hl` chọn chữ: số thứ tự (đếm từ 0), danh sách, hoặc `all`. Chữ của thẻ ngăn bởi dấu cách, `　`, xuống dòng,
+       `・ / | 、 。 —` (`ja.card_tokens`). Câu Emma có `hl` thì chữ đó sáng lên khi cô nói về nó.
+     - `step` (cả bài, hoặc từng dòng) > 0: câu tiếng Nhật nhiều phần (`か、き、く。`, `はじめまして。ゆきです。`) đọc
+       từng phần, nghỉ `step` giây; phần đang đọc sáng màu cam, phần đã đọc xanh nhạt. Số phần phải bằng số chữ được
+       tô (`hl` theo thứ tự đọc, ví dụ bảng hai cột).
+     - Dòng `track` với `step`: file nghe tách theo khoảng lặng, mỗi đoạn có tiếng một chữ, chỗ nghỉ giãn ra ≥ `step`.
+       Số đoạn phải bằng số chữ được tô — chỉnh `start` / `end` để bỏ lời giới thiệu. File đọc mỗi câu kèm lời dịch
+       (K00-01) hay có っ (khoảng lặng giữa từ) thì cắt mỗi câu một dòng `start` / `end`, `hl` chữ đó và `step: 0`.
+   - Cảnh `jp` có `wait` (đếm ngược để người học nói, viết, đọc thẻ đố) và `echo: true` (sau câu tiếng Nhật, đếm ngược
+     dài theo câu để nhắc lại). Thẻ hiện nhãn cam "YOUR TURN · LƯỢT CỦA BẠN" và vòng đếm ngược; tầng 2–3 hiện `note` và
+     `vi` của dòng. `echo` thì cả câu vừa đọc sáng lên.
 3. Chạy `python -m lesson_video check <kịch bản>`. Lệnh báo các lỗi:
    - chữ Hán thiếu furigana;
+   - câu đọc từng phần mà số phần khác số chữ được tô; dòng `track` mà số đoạn có tiếng khác số chữ được tô;
+   - chữ cái hay âm ghép đọc riêng bị đọc sai (へ đọc "e" như trợ từ; mỗi phần của câu đọc từng phần được so riêng với
+     chữ của nó);
    - cách đọc misaki khác furigana (kèm cách đọc misaki của từng chữ Hán để biết sửa chỗ nào);
    - romaji khác cách đọc (romaji kiểu GENKI được chấp nhận: `ee` = `ei`, `oo` = `ou`);
    - chữ Latin trong câu Nhật, trừ chữ có cách đọc như `{DC|ディーシー}`;
@@ -265,8 +301,8 @@ GENKI có 23 video. Bài 6–12 chưa có video.
    `k.tokenizer.phonemize(text, "en-gb")`.
 5. Xem trước không tiếng: `--engine silent --out /tmp/x --work /tmp/x/w`, mở `f*.png`.
 6. Dựng: `python -m lesson_video build <kịch bản> --engine kokoro`.
-   - Video phải dài **5–10 phút**. Đoạn nghe của sách tính cả vào: hội thoại bài 2 dài 50 và 40 giây, bản có khoảng
-     lặng 77 và 75 giây.
+   - Video bài 1–3 dài **5–10 phút**. Đoạn nghe của sách tính cả vào: hội thoại bài 2 dài 50 và 40 giây, bản có khoảng
+     lặng 77 và 75 giây. Video Unit 0 ngắn hơn, **3–5 phút**, mỗi video một phần nhỏ (đợt 23).
    - Tiếng đã đọc nằm trong `~/.cache/lesson_video/tts`, nên dựng lại chỉ đọc những câu mới.
    - Bỏ một video: xóa `.yaml`, rồi chạy `python -m lesson_video prune ../books/Genki`. Lệnh bỏ mục trong
      `lessons.json` và file `.mp4`.
@@ -278,10 +314,27 @@ GENKI có 23 video. Bài 6–12 chưa có video.
 - **Khung 1280×720, bốn dải.**
   - Thanh tiêu đề: nhãn amber `tag` + `heading`.
   - Tầng 1: thẻ trắng. Có nhãn người nói `JP · YUKI — …` hoặc `EN · EMMA — …` theo màu người nói, câu Nhật cỡ
-    46 → 22 px, furigana trên chữ Hán, romaji màu teal.
-  - Tầng 2: "ENGLISH EXPLANATION / MEANING".
-  - Tầng 3: "NGHĨA TIẾNG VIỆT & GHI CHÚ HÁN-VIỆT".
-  - Đoạn văn dài thì tầng 1 cao lên, tầng 2–3 co lại theo chữ.
+    60 → 22 px (thẻ một hàng chữ cái chữ to để nhìn rõ nét), furigana trên chữ Hán, romaji màu teal.
+  - Tầng 2, 3 hiện **đúng câu đang nói** (đợt 23; trước đó luôn là `en`, `vi` của thẻ nên không khớp lời Emma):
+    - Emma nói: "EMMA SAYS" + chữ của câu, "DỊCH LỜI EMMA" + `vi` của câu.
+    - Câu tiếng Nhật, file nghe: "ENGLISH" + `en`, "TIẾNG VIỆT" + `vi` của dòng.
+    - Đếm ngược: "YOUR TURN" + `note`, "LƯỢT CỦA BẠN" + `vi`.
+    - Dòng thiếu chữ cho tầng nào thì tầng đó hiện `en` / `vi` của thẻ, nhãn cũ "ENGLISH EXPLANATION / MEANING",
+      "NGHĨA TIẾNG VIỆT & GHI CHÚ HÁN-VIỆT".
+  - Đoạn văn dài thì tầng 1 cao lên, tầng 2–3 co lại vừa chữ dài nhất sẽ hiện ở tầng đó trong lúc thẻ còn trên màn
+    hình (không nhảy khung giữa các câu).
+- **Tô sáng, đọc từng chữ** (đợt 23).
+  - Chữ đang đọc: nền cam nhạt, gạch chân cam. Chữ vừa đọc xong trong câu: nền xanh nhạt. Romaji sáng cùng chữ khi
+    chia được đúng bằng số chữ trên thẻ (`ja.romaji_tokens`: ngăn bởi `· / | — ,` nếu có, không thì theo dấu cách;
+    xuống dòng luôn ngăn).
+  - `script.reading_plan` quyết định chữ nào sáng và câu đọc thành mấy phần; `check` và lúc dựng dùng chung hàm này.
+  - Câu đọc từng phần: mỗi phần đọc riêng bằng Kokoro, thêm `。` cuối phần (`ja.as_said`: は đứng riêng không có 。 bị
+    đọc "wa"), mỗi phần một khung hình. Kokoro không ngắt ở `、` (か、き、く、け、こ liền một mạch 1.6 giây), nên không
+    tách được một câu đọc liền — phải đọc từng phần.
+  - File nghe: `timeline.speech_spans` tách theo khung 20 ms (to hơn đỉnh − 35 dB là có tiếng, nghỉ < 0.2 giây không
+    tách chữ, mẩu < 0.08 giây bỏ). Chữ sau sáng lên 0.15 giây trước tiếng. Tách ở 16 kHz cho cả `check` lẫn lúc dựng.
+  - Âm ghép đọc riêng (みょ, りょ, ぎょ…): misaki đọc tách thành hai âm dù viết hiragana hay katakana, nên `ja.phonemes`
+    đưa thẳng âm vị cho Kokoro: phụ âm mềm + nguyên âm (みょ → `mʲo`), đúng dạng misaki dùng cho âm nó đọc đúng.
 - **Xuống dòng.**
   - Ưu tiên ngắt sau vạch ngăn nhóm `|` `/` `・`, rồi mới tới `—` `vs.`. Nhờ vậy cặp "オランダ — アムステルダム"
     không bị tách khi dòng còn `・`. Sau đó mới tới dấu cách.
@@ -343,7 +396,9 @@ GENKI có 23 video. Bài 6–12 chưa có video.
 - **Chữ đứng một mình bị đọc sai (đợt 17, video Unit 0).**
   - は và へ đứng riêng bị đọc như trợ từ ("wa", "e"). Sửa: `say` viết katakana ハ, ヘ.
   - Âm ghép đọc rời bị tách thành hai âm, ví dụ みょ thành "mi-yo" (にゅ, ひゃ, みゃ, りゃ, ぎょ, びゃ, ぴゃ). Chỉ một mẫu
-    đọc đúng cả 11 hàng: katakana "キャ。キュ。キョ、". `check` bắt được mọi chỗ vì romaji không khớp.
+    đọc đúng cả 11 hàng: katakana "キャ。キュ。キョ、". `check` bắt được mọi chỗ vì romaji không khớp. Đợt 23 đọc từng
+    âm riêng nên mẫu này không dùng được nữa (みょ, りょ, ぎょ sai ở mọi cách viết): `ja.phonemes` đưa thẳng âm vị
+    (mục 4.3), `check` so âm ghép đọc riêng với romaji của chính nó.
   - フィ đứng riêng thành "fu-i", dù trong フィリピン thì đọc đúng. Các âm ngoại lai để audio gốc JWS-13 đọc, Yuki chỉ
     đọc từ ví dụ.
 - **Bảng chữ dồn thành dòng dài** (cả bảng hiragana trên ba dòng, các hàng cách nhau bằng `/`). Sửa: thêm `\n` (mục
@@ -351,6 +406,22 @@ GENKI có 23 video. Bài 6–12 chưa có video.
 - **Ước tính dưới 5 phút.**
   - Hiragana 1 ước 5:10. Thêm phần chữ in khác chữ viết tay và phần nghe – viết chữ cái.
   - Numbers ước 4:51. Thêm phần nghe – viết các cặp số dễ nhầm (14 / 40, 17 / 70, 19 / 90).
+- **Video Unit 0 khó theo (đợt 23, góp ý của người học).**
+  - Lỗi: chữ trên màn hình không khớp lời Emma; giọng Nhật đọc mà không có lời dịch; học quá nhanh; cả đoạn hiện một
+    lúc nên không biết giọng Nhật đang đọc tới đâu; không nói bài học để làm gì.
+  - Nguyên nhân: tầng 2–3 luôn là `en` / `vi` của thẻ; một video gói nhiều phần; Kokoro đọc cả hàng chữ liền một mạch
+    (không ngắt ở `、`); tốc độ 1.0 / 0.88, nghỉ 0.45 giây.
+  - Sửa: tầng 2–3 theo câu đang nói, câu nào cũng có `vi` (và `en` với câu tiếng Nhật); tô sáng chữ đang đọc, đọc từng
+    chữ (`step`), file nghe tách theo khoảng lặng; đếm ngược YOUR TURN trong cảnh `jp`; nhịp chậm hơn (mục 4.1); 16 video
+    3–5 phút, mỗi video mở đầu bằng "học gì, để làm gì" và có video mở đầu cả Unit 0.
+- **Từ có は đầu từ trong danh sách bị đọc như trợ từ** (đợt 23): はいく đọc "wa iku". `check` bắt được vì romaji
+  không khớp. Sửa: `say` viết ハイク.
+- **っ là khoảng lặng giữa từ**, nên tách file nghe theo khoảng lặng thì かった, さっか, チェック, デュエット thành hai đoạn
+  (JWS-04, JWS-13). Sửa: mỗi từ một dòng `start` / `end`, `hl` chữ đó; cặp có っ thì `step: 0`.
+- **K00-01 đọc mỗi câu chào bằng tiếng Nhật rồi tiếng Anh** (ASR cho thấy, mục 4.6), nên không tách theo khoảng lặng
+  được. Sửa: mỗi câu chào một dòng `start` / `end`, `step: 0`; câu chào cả hai lời đều sáng, tầng 2 hiện lời dịch.
+- **Romaji nhiều dòng không sáng** (`a i u e o\nka ki …`): xuống dòng bị tính là vạch ngăn kiểu `·`, nên cả dòng là một
+  chữ. Sửa: chỉ `· / | — ,` mới đổi cách chia; xuống dòng luôn ngăn hai chữ.
 
 ### 4.5 Kế hoạch bài 4–12
 
@@ -375,6 +446,29 @@ Bài 4–5 thay ba tập ngắn hiện có. Ngữ pháp ở cột Part A, B đi 
 | 10 | so sánh hai / nhiều vật (1–2) | ～の, ～つもり, ～なる, どこかに/どこにも, で (3–7) | Kế hoạch kỳ nghỉ, so sánh phương tiện (Part 1/3: travel) |
 | 11 | ～たい, ～たり～たりする (1–2) | ～ことがある, や (3–4) | Trải nghiệm và mong muốn: nơi muốn đến (Part 2) |
 | 12 | ～んです, ～すぎる (1–2) | ～ほうがいいです, ～ので, ～なければいけません, ～でしょうか (3–6) | Sức khỏe và lời khuyên (Part 1: health) |
+
+### 4.6 Mốc thời gian audio Unit 0 (đợt 23)
+
+Lời giới thiệu tiếng Anh ở đầu mỗi file JWS và thứ tự chữ lấy bằng ASR (Parakeet, `transcribe.recognizer`, chạy trên
+từng đoạn có tiếng). Dùng khi đặt `start` / `end` cho dòng `track`:
+
+| File | Nội dung | Dòng `track` |
+|---|---|---|
+| JWS-01 | giới thiệu tới 11.1 giây; 46 hiragana từ 13.4 | `start: 13.2`, `hl` theo thứ tự đọc của bảng hai cột |
+| JWS-02 | giới thiệu tới 4.4; 25 âm có dấu | `start: 4.6` |
+| JWS-03 | giới thiệu tới 4.4; 33 âm ghép từ 6.7 (きゃ … ぴょ) | `start: 6.0`, `hl` theo cột của bảng ba cột |
+| JWS-04 | giới thiệu tới 4.0; かった 6.3, かた 8.1, さっか 9.7, はっぱ 11.7, ざっし 13.9 | mỗi từ một dòng |
+| JWS-05 | giới thiệu tới 1.5; さんねん 3.3, あんない 5.4 | `start: 3.0` |
+| JWS-06 | giới thiệu tới 9.1; 9 từ trường âm từ 10.6 | `start: 10.0` |
+| JWS-07 | giới thiệu tới 3.1; すきです 4.9 | `start: 4.5` |
+| JWS-08 | giới thiệu tới 3.8; あさ, なまえ, たかい từ 5.5 | `start: 5.0` |
+| JWS-09 | giới thiệu tới 6.7; 46 katakana | `start: 7.6` |
+| JWS-10 | giới thiệu; 25 âm có dấu từ 6.5 | `start: 5.8` |
+| JWS-11 | giới thiệu tới 4.4; 33 âm ghép từ 6.4 | `start: 6.0` |
+| JWS-12 | giới thiệu tới 10.2; カー, スキー, スーツ, ケーキ, ボール từ 12.6 | `start: 12.0` |
+| JWS-13 | giới thiệu tới 4.0; 13 cặp "âm – từ" từ 6.3 (ウィ ハロウィーン … デュ デュエット) | mỗi cặp một dòng |
+| K00-01 | あいさつ 0.4; 19 câu chào, mỗi câu tiếng Nhật rồi tiếng Anh (すみません có hai lời dịch); câu thứ 18 là ほんだあいです | mỗi câu một dòng, `step: 0` |
+| K00-02 | すうじ 0.5; 0–10 kèm cách đọc thứ hai (ゼロ れい … よん し よ … きゅう く じゅう, 2.2–33.2), 11–19 (12 cách đọc, 33.6–58.2), hàng chục và 100 (từ 58.4) | ba dòng, mỗi số một chữ trên thẻ |
 
 ## 5. Việc còn treo
 

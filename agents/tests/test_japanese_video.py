@@ -432,3 +432,12 @@ def test_step_reading_is_checked_letter_by_letter():
     row["lines"][0]["say"] = "ハ、ヒ、フ、ヘ。"                          # thiếu một chữ: số phần ≠ số chữ trên thẻ
     msgs = sc.check_japanese(lesson(lambda d: d["scenes"].append(copy.deepcopy(row))))
     assert len(msgs) == 1 and "câu có 4 phần còn thẻ tô 5 chữ" in msgs[0]
+
+
+def test_contracted_sounds_said_alone():
+    # misaki đọc tách みょ → mi-yo dù viết kiểu gì: âm ghép đọc riêng được đưa thẳng âm vị cho Kokoro
+    assert ja.phonemes("みょ。") == "mʲo." and ja.phonemes("リョ") == "ɾʲo" and ja.phonemes("きゃ、") == "kʲa."
+    assert ja.spoken_romaji("ぎょ。") == "gyo"
+    if ja.available():
+        assert ja.check_line("みょ", "みょ。", "myo") == []
+        assert ja.phonemes("みょうじ。") != "mʲo."                       # chỉ khi cả câu là một âm ghép
