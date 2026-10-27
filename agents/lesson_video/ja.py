@@ -87,6 +87,65 @@ def plain(text: str) -> str:
     return RUBY.sub(r"\1", text)
 
 
+# ---------- chữ của thẻ (tô sáng chỗ đang đọc) ----------
+SEP = set(" \u3000\n・/|、，,—。．")  # ngăn các chữ / từ trên thẻ: あ ・ い, いぬ、ねこ, bảng chữ cách bằng dấu cách toàn khổ
+PART = re.compile("[、，,・/|。．]+")    # ngăn các phần của câu đọc từng chữ một (か、き、く。) — không tính dấu cách
+ROMAJI_SEP = set("·/|—,\n")
+
+
+def card_tokens(text: str, markup: bool = False) -> list[str]:
+    """Các chữ / từ trên thẻ theo thứ tự hiển thị, ngăn bởi dấu cách, ・, /, 、, 。: dòng `hl` của câu thoại chọn chữ
+    cần tô sáng theo số thứ tự trong danh sách này. `markup`: giữ furigana `{漢字|かんじ}` (để lấy cách đọc)."""
+    out, cur = [], ""
+    for base, ruby in segments(text):
+        if ruby:
+            cur += f"{{{base}|{ruby}}}" if markup else base
+            continue
+        for ch in base:
+            if ch in SEP:
+                if cur:
+                    out.append(cur)
+                cur = ""
+            else:
+                cur += ch
+    if cur:
+        out.append(cur)
+    return out
+
+
+def romaji_seps(romaji: str) -> set[str]:
+    """Romaji của thẻ chia theo chữ ở · / | — , (a · i · u); không có thì theo dấu cách (ka ki ku)."""
+    return ROMAJI_SEP if len([p for p in re.split("[·/|—,\n]", romaji) if p.strip()]) > 1 else set(" \t\n")
+
+
+def romaji_tokens(romaji: str) -> list[str]:
+    """Romaji chia theo chữ (romaji_seps) — khớp từng chữ của thẻ khi số phần bằng nhau."""
+    seps = romaji_seps(romaji)
+    out, cur = [], ""
+    for ch in romaji:
+        if ch in seps:
+            if cur.strip():
+                out.append(cur.strip())
+            cur = ""
+        else:
+            cur += ch
+    if cur.strip():
+        out.append(cur.strip())
+    return out
+
+
+def split_parts(spoken: str) -> list[str]:
+    """Câu đọc từng chữ một (`step`): `か、き、く。` → [か, き, く]; dấu câu cuối câu bỏ đi. Dấu cách không ngăn phần:
+    `テレビを 見ます。` vẫn đọc liền một câu."""
+    return [p for p in (x.strip(" \u3000。．.！!？?") for x in PART.split(spoken.strip())) if p]
+
+
+def as_said(part: str) -> str:
+    """Chữ đọc riêng (một chữ cái, một từ) thêm 。 cho bộ đọc đọc như một câu: は đứng một mình không có 。 bị đọc
+    "wa" như trợ từ."""
+    return part if part[-1:] in "。．！!？?…」" else part + "。"
+
+
 def reading(text: str) -> str:
     """Cách đọc theo furigana: `{留学生|りゅうがくせい}です` → `りゅうがくせいです`."""
     return RUBY.sub(r"\2", text)
@@ -211,6 +270,14 @@ def diff(expected: str, got: str) -> str:
 def check_line(display: str, spoken: str, romaji: str = "") -> list[str]:
     """Câu thoại tiếng Nhật `spoken` có được đọc đúng như furigana của `display` (và khớp `romaji`) không."""
     problems = []
+    letter = kana_only(reading(display))
+    if len(letter) == 1:
+        # một chữ cái đọc riêng: bộ đọc có thể coi へ là trợ từ (đọc "e") dù cách viết kana vẫn khớp
+        a, b = kana_romaji(letter), spoken_romaji(spoken)
+        if norm_romaji(a) != norm_romaji(b):
+            problems.append(f"chữ {plain(display)} đọc riêng bị đọc là '{b}' thay vì '{a}' → viết bằng katakana trong"
+                            f" `say` ({kata(letter)})")
+            romaji = ""  # đã báo ở trên
     want = kana_only(reading(display))
     toks = tokens(spoken)
     got = kana_only("".join(k for _, k, *_ in toks))
