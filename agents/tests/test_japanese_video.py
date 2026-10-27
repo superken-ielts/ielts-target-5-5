@@ -308,6 +308,8 @@ def test_card_tokens_and_parts():
     assert ja.card_tokens("ぬ ・ め / る ・ ろ") == ["ぬ", "め", "る", "ろ"]
     assert ja.romaji_tokens("nu · me / ru · ro") == ["nu", "me", "ru", "ro"]
     assert ja.romaji_tokens("ka ki ku") == ["ka", "ki", "ku"]
+    assert ja.romaji_tokens("a i u\nka ki") == ["a", "i", "u", "ka", "ki"]                # bảng nhiều hàng
+    assert ja.romaji_tokens("Hajimemashite. · Yuki desu.") == ["Hajimemashite.", "Yuki desu."]
     assert ja.split_parts("か、き、く。") == ["か", "き", "く"]
     assert ja.split_parts("テレビを 見ます。") == ["テレビを 見ます"]               # dấu cách không chia câu
     assert ja.as_said("は") == "は。"                                            # は đứng riêng không có 。 bị đọc "wa"

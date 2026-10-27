@@ -114,8 +114,9 @@ def card_tokens(text: str, markup: bool = False) -> list[str]:
 
 
 def romaji_seps(romaji: str) -> set[str]:
-    """Romaji của thẻ chia theo chữ ở · / | — , (a · i · u); không có thì theo dấu cách (ka ki ku)."""
-    return ROMAJI_SEP if len([p for p in re.split("[·/|—,\n]", romaji) if p.strip()]) > 1 else set(" \t\n")
+    """Romaji của thẻ chia theo chữ ở · / | — , (a · i · u); không có thì theo dấu cách (ka ki ku). Xuống dòng
+    luôn ngăn hai chữ."""
+    return ROMAJI_SEP if any(c in ROMAJI_SEP - {"\n"} for c in romaji) else set(" \t\n")
 
 
 def romaji_tokens(romaji: str) -> list[str]:
@@ -224,8 +225,24 @@ def available() -> bool:
         return False
 
 
+# Âm ghép (きゃ, みょ…) đọc riêng: misaki đọc tách nhiều âm thành hai nhịp (みょ → mi-yo) dù viết hiragana hay katakana,
+# nên đưa thẳng âm vị cho Kokoro — phụ âm mềm + nguyên âm, đúng dạng misaki dùng cho những âm nó đọc đúng (きょ → kʲo).
+_SOLO_C = dict(zip("キシチニヒミリギジビピ", ["kʲ", "ɕ", "ʨ", "ɲ", "ç", "mʲ", "ɾʲ", "ɡʲ", "ʥ", "bʲ", "pʲ"]))
+_SOLO_V = {"ャ": "a", "ュ": "ɨ", "ョ": "o"}
+_END = "。．.！!？?、"
+
+
+def _solo(text: str) -> Optional[str]:
+    """Kana của một âm ghép đọc riêng (`みょ。` → ミョ), không thì None."""
+    k = kata(text.strip().rstrip(_END))
+    return k if len(k) == 2 and k[0] in _SOLO_C and k[1] in _SOLO_V else None
+
+
 def phonemes(text: str) -> str:
     """Chuỗi âm vị misaki cho Kokoro (giọng jf_*, jm_*)."""
+    k = _solo(text)
+    if k:
+        return _SOLO_C[k[0]] + _SOLO_V[k[1]] + ("." if text.strip()[-1:] in _END else "")
     return _g2p()(text)
 
 
@@ -255,6 +272,8 @@ def _said(kana: str, pron: str) -> str:
 def spoken_romaji(text: str) -> str:
     """Romaji của câu thoại theo cách misaki đọc; trợ từ は, へ, を viết wa, e, o. Ghép cả câu rồi mới đổi,
     vì っ có thể bị tách sang từ khác (はっさい → は / っ / さい)."""
+    if _solo(text):  # âm ghép đọc riêng: âm vị đưa thẳng cho Kokoro (phonemes)
+        return kana_romaji(_solo(text))
     parts = [PARTICLES[s] if pos == "助詞" and s in PARTICLES else _said(kana, pron)
              for s, kana, pos, pron in tokens(text)]
     return " ".join(kana_romaji(" ".join(kana_only(x) for x in parts if kana_only(x))).split())
@@ -271,8 +290,8 @@ def check_line(display: str, spoken: str, romaji: str = "") -> list[str]:
     """Câu thoại tiếng Nhật `spoken` có được đọc đúng như furigana của `display` (và khớp `romaji`) không."""
     problems = []
     letter = kana_only(reading(display))
-    if len(letter) == 1:
-        # một chữ cái đọc riêng: bộ đọc có thể coi へ là trợ từ (đọc "e") dù cách viết kana vẫn khớp
+    if len(letter) == 1 or len(letter) == 2 and letter[1] in "ャュョ":
+        # một chữ cái (hay âm ghép) đọc riêng: bộ đọc có thể coi へ là trợ từ (đọc "e") dù cách viết kana vẫn khớp
         a, b = kana_romaji(letter), spoken_romaji(spoken)
         if norm_romaji(a) != norm_romaji(b):
             problems.append(f"chữ {plain(display)} đọc riêng bị đọc là '{b}' thay vì '{a}' → viết bằng katakana trong"
