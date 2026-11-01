@@ -462,6 +462,8 @@ class Slides:
                 d.text((110, y + 54), lines[0], font=f, fill=C["muted"])
 
     def _k_practice(self, img, d, sc, fr):
+        if sc.self_paced:
+            return self._practice_list(d, sc, fr)
         if fr.focus is None:
             d.text((W / 2, 300), "Your turn", font=font("bold", 54), fill=C["red"], anchor="mm")
             d.text((W / 2, 362), "Đến lượt bạn: nghe câu hỏi rồi trả lời thành tiếng", font=font("italic", 26),
@@ -482,6 +484,35 @@ class Slides:
             d.text((W / 2, cy), "Listen…", font=font("italic", 30), fill=C["muted"], anchor="mm")
         if it.get("hint"):
             d.text((W / 2, BOTTOM - 4), "Gợi ý: " + str(it["hint"]), font=font("italic", 20), fill=C["muted"], anchor="md")
+
+    def _practice_list(self, d, sc, fr):
+        """"Đến lượt bạn" không đếm ngược: dải nhắc tạm dừng video, rồi cả danh sách câu hỏi kèm gợi ý; câu đang đọc
+        tô nền. Đọc xong thì khung cuối vẫn còn đủ câu hỏi để người học tạm dừng và trả lời."""
+        y0 = TOP
+        d.rounded_rectangle((60, y0, W - 60, y0 + 44), 22, fill=C["soft"])
+        for x in (82, 95):  # biểu tượng tạm dừng (Liberation Sans không có ⏸)
+            d.rounded_rectangle((x, y0 + 11, x + 8, y0 + 33), 2, fill=C["red"])
+        en, f_en = "Pause the video and answer out loud", font("bold", 22)
+        d.text((124, y0 + 22), en, font=f_en, fill=C["ink"], anchor="lm")
+        x = 124 + d.textlength(en, font=f_en) + 16
+        f, lines = fit(d, "Tạm dừng video, trả lời thành tiếng", "italic", 19, W - 84 - x, 1)
+        d.text((x, y0 + 22), lines[0], font=f, fill=C["muted"], anchor="lm")
+        top = y0 + 58
+        n = len(sc.items)
+        rh = self._rows(n, top=top, cap=84)
+        hints = rh >= 58 and any(it.get("hint") for it in sc.items)
+        for i, it in enumerate(sc.items):
+            y = top + i * rh
+            if fr.focus == i:
+                d.rounded_rectangle((52, y, W - 52, y + rh - 6), 12, fill=C["soft"], outline=C["red"], width=2)
+            hint = str(it.get("hint") or "") if hints else ""
+            qy = y + (rh - 6) / 2 - (14 if hint else 0)
+            d.text((76, qy), f"{i + 1}.", font=font("bold", 24), fill=C["red"], anchor="lm")
+            f, lines = fit(d, str(it["q"]), "bold", 26, W - 52 - 112 - 24, 1, min_size=19)
+            d.text((112, qy), lines[0], font=f, fill=C["ink"], anchor="lm")
+            if hint:
+                f, lines = fit(d, "Gợi ý: " + hint, "italic", 19, W - 52 - 112 - 24, 1)
+                d.text((112, qy + 29), lines[0], font=f, fill=C["muted"], anchor="lm")
 
     def _k_order(self, img, d, sc, fr):
         """Sắp xếp: cột trái các mục theo chữ cái, ô số thứ tự hiện khi mở; cột phải dựng dần thứ tự đúng."""

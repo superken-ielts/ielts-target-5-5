@@ -5,6 +5,112 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 24 — 01/11/2026: 4 video luyện nói thêm Unit 2, bỏ đếm ngược ở "Đến lượt bạn"
+
+Nhánh `claude/cool-archimedes-xalg78` từ `main` tại `b642910`.
+
+### Yêu cầu
+
+1. Rà video bài giảng của IELTS Target 5.0: đã có bao nhiêu video. Trước đợt này có 40 video: Unit 1 có 17 (13 theo
+   trang sách + 4 luyện nói thêm), Unit 2 có 12, Unit 3 có 11.
+2. Unit 2 chưa có video luyện nói thêm như Unit 1 → thêm theo đúng khuôn Unit 1. Ghi lại cách đã làm để các unit sau
+   làm tiếp.
+3. Phần "Your turn" của Unit 2 bắt chờ đếm ngược lâu (5–15 giây mỗi câu) → bỏ đếm ngược. Chỉ cần nhắc người học tự
+   tạm dừng video và trả lời, rồi Emma đọc hết các câu hỏi.
+4. Gợi ý sách từ vựng cho IELTS General Training ở trình độ này (trả lời trong hội thoại, không ghi vào repo).
+
+### Đã làm
+
+**4 video luyện nói thêm Unit 2** (31:04, 23 chương). Có 62 cặp hỏi qua lại; thi thử Phần 1 có 15 câu,
+Phần 3 có 16 câu; 5 bài nói mẫu Phần 2 (122–132 từ). Tom và Emma thay nhau làm giám khảo. Câu trả lời mẫu tự viết bằng
+ngữ pháp, từ vựng Unit 2 (quá khứ đơn, had to, really enjoyed / keen on / preferred… to…, câu trả lời = trả lời + lý do
++ chi tiết). Nhiều chi tiết nối với bài trong sách: học lái xe ở Anh (Reading 1), khóa nhiếp ảnh (Listening 2), A
+level (Exam practice Reading). Thông tin nhân vật giữ khớp với các video Unit 1 và với câu trả lời của Tom trong
+`U02-speaking-1`; ghi ở đầu `U02-speaking-practice.yaml` và file 06 mục 9.4.
+
+| Video | Hỏi qua lại | Thi thử |
+|---|---|---|
+| `U02-speaking-practice` Speaking practice 1 (8:43, 6 chương) | Thời đi học (8 cặp), môn học và thầy cô (8) | Emma giám khảo, Tom thí sinh: Phần 1 (8 câu), Phần 2 "a teacher who helped you a lot" (thẻ đề, ghi chú, bài nói về thầy Nam dạy Hóa), Phần 3 (4 câu) |
+| `U02-speaking-practice-2` Speaking practice 2 (8:19, 6 chương) | Học ngoại ngữ (8), kỹ năng mới: lái xe, xe máy, bơi, nấu ăn (8) | Đổi vai, Tom giám khảo, Emma thí sinh: Phần 1 (7 câu), Phần 2 "a useful skill that you learned" (Emma học lái xe năm 17 tuổi, trượt lần đầu), Phần 3 (4 câu) |
+| `U02-speaking-practice-3` Speaking practice 3 (7:39, 6 chương) | Thi cử (8), cách học và trí nhớ (8) | Cùng thẻ đề Phần 2 "an important exam that you took": Tom kể kỳ thi đại học, Emma kể A level; Phần 3 hỏi hai chiều (2 + 2) |
+| `U02-speaking-practice-4` Speaking practice 4 (6:22, 5 chương) | Đại học và khóa học (8), học với công nghệ (6) | Phần 2 "a course that you would like to take in the future" (Tom, khóa nấu ăn), Phần 3 hỏi hai chiều (2 + 2) |
+
+**Bỏ đếm ngược ở 7 cảnh "Đến lượt bạn" của Unit 2.** Trước đây mỗi câu chờ 5–15 giây, tới 50 giây một cảnh. Nay Emma
+nói "Pause the video, and answer these questions out loud" rồi đọc hết các câu hỏi: mỗi câu cách 0,5 giây, câu cuối
+giữ thêm 1,5 giây. Slide hiện cả danh sách câu kèm gợi ý nên tạm dừng lúc nào cũng thấy đủ câu hỏi. Listening 1K, 1M
+vẫn để Tom đọc mẫu ngay sau mỗi câu, người học tự tạm dừng trước khi nghe Tom. Đã dựng lại 5 video:
+
+| Video | Cảnh | Trước → sau |
+|---|---|---|
+| `U02-speaking-1` | Your turn · Talk about your school days (5 câu × 10 giây) | 8:48 → 8:03 |
+| `U02-speaking-2` | Speaking 2B · Your turn (3 × 12 giây); Your turn · Talk about the subjects you studied (3 × 15 giây) | 8:02 → 6:53 |
+| `U02-consolidation` | Speaking D · Your turn (5 × 10 giây) | 6:19 → 5:34 |
+| `U02-reading-1` | Reading 1B · Talk with a partner (4 × 8 giây) | 5:40 → 5:13 |
+| `U02-listening-2` | Listening 1K (4 × 5 giây), 1M (5 × 6 giây) | 8:35 → 7:54 |
+
+Lúc dựng lại, lệnh `phonemes` bắt 8 câu có động từ "use" bị đọc thành /juːs/, đã sửa bằng `say: yooz`. Các khoảng chờ
+"Pause the video and …" một lần cho mỗi bài tập (6–15 giây) giữ nguyên.
+
+Soát cách đọc 4 kịch bản mới:
+- "the teacher just read from the book" (quá khứ) → `red`;
+- "We have to read long articles" → `reed`;
+- "use a smartphone" và các câu "use" khác: phiên âm từng câu, chỉ viết `say` ở câu Kokoro đọc sai ("Should children
+  use computers" → `yooz`);
+- Mr Nam → `Mister Nahm`; A levels, two As → `eigh levels`, `two eighs`; band 5.5 → `five point five`; six a.m. →
+  `six in the morning`.
+
+Máy dựng mới chưa có Kokoro, nên cài từ npm: `kokoro-q8-shards@1.0.0` (sha256 khớp bản Hugging Face) và giọng của
+`kokoro-js@1.2.1`, với `kokoro-onnx` 0.6.1. Dựng từng video một: 9 video mất 1 giờ 12 phút (08:30–09:42).
+
+### Công cụ `lesson_video`
+
+| Thêm / sửa | Cách làm |
+|---|---|
+| `Scene.self_paced` | Cảnh `practice` không có dòng `wait` / `echo` thì người học tự tạm dừng. Kịch bản cũ có `wait` vẫn đếm ngược như trước |
+| Slide `practice` tự tạm dừng | Dải "Pause the video and answer out loud · Tạm dừng video, trả lời thành tiếng" (biểu tượng ⏸ vẽ bằng hai thanh vì phông thiếu glyph); cả danh sách câu hỏi, mỗi câu kèm "Gợi ý:"; câu đang đọc nền hồng viền đỏ |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U02-speaking-practice.yaml`, `-2`, `-3`, `-4` (+ `.mp4`) | Kịch bản và video luyện nói thêm Unit 2 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | `Scene.self_paced`; chú thích kiểu cảnh `practice` |
+| `agents/lesson_video/slides.py` | `_practice_list`: slide "Đến lượt bạn" không đếm ngược |
+| `agents/tests/test_lesson_video.py` | +2 test: cảnh `practice` tự tạm dừng (không khung đếm ngược, `pause` giữ khung lâu hơn, tô đúng hàng); hồi quy trên sách thật: cảnh `practice` của Unit 2 không đếm ngược, Unit 1–2 mỗi unit có 4 video luyện nói không có khoảng lặng chờ |
+| `books/ielts_target_5_0/lessons/U02-speaking-1.yaml`, `U02-speaking-2.yaml`, `U02-consolidation.yaml`, `U02-reading-1.yaml`, `U02-listening-2.yaml` (+ `.mp4`) | Bỏ `wait` ở 7 cảnh `practice`, lời nhắc tạm dừng, `heading_vi` mới, `say: yooz` cho 8 câu; dựng lại |
+| `books/ielts_target_5_0/lessons/lessons.json` | 4 mục mới, 5 mục cập nhật thời lượng / chương |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 2: 16 video; nhóm Speaking & Vocabulary xếp Speaking 1, 2 rồi Speaking practice 1–4; nút "Speaking practice 1" mở phiên Speaking & Vocabulary có 6 video đúng thứ tự |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ Unit 2, kết luận đợt 24; 5 dòng lịch sử; `practice` không đếm ngược; cách đọc mới; lỗi đã gặp (đếm ngược, cài Kokoro trên máy mới); **mục 9 mới**: khuôn 4 video luyện nói, quy ước viết, hồ sơ nhân vật, chủ đề và thẻ đề đã dùng, gợi ý Unit 3–4, các bước; "Kiểm tra trước khi commit" thành mục 10 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-55 (xong), P2-56 (luyện nói Unit 3 trở đi); dòng đợt 24 ở P2-33 |
+| `CLAUDE.md`, `agents/README.md`, `web/README.md`, `docs/agent-hoc-tap/README.md` | Trỏ tới mục 9 file 06; `practice` không có `wait` thì người học tự tạm dừng |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 134 passed, 5 skipped. Thêm 2 test: cảnh `practice` tự tạm dừng; hồi quy "Unit 2 không đếm ngược, Unit 1–2 có 4 video luyện nói". Hồi quy 44 kịch bản IELTS khớp `lessons.json`. 5 test bỏ qua là video tiếng Nhật, cần `misaki[ja]`, không liên quan |
+| `node --test "tests/web/*.test.mjs"` | 16 passed. Nhóm Speaking & Vocabulary của Unit 2 có 6 video đúng thứ tự |
+| `node tests/web/book.e2e.mjs` | 17/17 bước OK. Thẻ Unit 2 có 16 video: Speaking 1, 2 rồi Speaking practice 1–4. Nút "Speaking practice 1" mở phiên Speaking & Vocabulary có 6 video đúng thứ tự, có nút chương |
+| `python -m lesson_video check` / `phonemes` | 9 kịch bản Unit 2 hợp lệ; 0 câu có ⚠ |
+| Khung hình trích từ MP4, `silencedetect` | Cảnh "Đến lượt bạn" của `U02-speaking-1` hiện danh sách câu, tô đúng câu Emma đang đọc. Trong 30 giây sau mốc chương không còn khoảng lặng nào dài hơn 3 giây (trước đây có 5 lần chờ 10 giây) |
+
+### Còn treo
+
+- Video luyện nói thêm cho Unit 3 trở đi (P2-56), theo file 06 mục 9.
+- Unit 1 (Speaking 1, Speaking 2, Consolidation) và Unit 3 (lượt nói 1–2 phút) vẫn đếm ngược ở cảnh "Đến lượt bạn";
+  đổi nếu người học muốn.
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+
+---
+
 ## Đợt 23 — 27/10/2026: GENKI Unit 0 làm lại — 19 video ngắn, chữ sáng theo chỗ đang đọc
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Người học góp ý về năm video Unit 0 của đợt 17:

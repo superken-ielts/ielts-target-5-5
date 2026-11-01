@@ -278,6 +278,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 10:* xong **toàn bộ Unit 2** — 12 video cho 6 phần có trang sách (P2-41). Unit 1 còn Listening và Reading (nay làm được: có dòng `track` và cảnh `passage`); kế hoạch Unit 3 ở [06-video-bai-giang.md](06-video-bai-giang.md) mục 7.
   - *Đợt 11:* xong Unit 1 Listening và Reading (P2-42) — **Unit 1 và Unit 2 đủ video cho mọi phần có trang trong Course Book** (25 video). Còn: Unit 3 trở đi (kế hoạch ở file 06 mục 7).
   - *Đợt 12:* xong **toàn bộ Unit 3** — 11 video (P2-43). Unit 1–3 đủ video cho mọi phần có trang trong Course Book (36 video). Còn: Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+  - *Đợt 24:* thêm 4 video luyện nói Unit 2 (P2-55). IELTS Target 5.0 có 44 video: 36 video theo trang sách và 8 video luyện nói thêm (Unit 1, Unit 2). Từ nay cảnh "Đến lượt bạn" không đếm ngược (file 06 mục 6).
 - [x] **P2-34** Video **Unit 1 · Writing 1** (organizing your writing) và **Writing 2** (types of letter / starting and ending letters), mỗi video kết thúc bằng một **thư mẫu đọc thành tiếng** (Writing 1: thư thân mật 160 từ đi qua đủ 6 bước; Writing 2: thư trang trọng hỏi thông tin 154 từ). Gắn vào hoạt động Unit 1 · Writing (phiên 4 và 5).
   - *Đợt 5:* thêm kiểu cảnh `order` (sắp xếp các bước), `timing` (chia 20 phút), `letter` (thư mẫu cả trang, đoạn đang đọc tô màu, ghi chú lề, đếm từ) và dòng `read`; cảnh `pairs` cho phép hai dòng chữ.
 - [x] **P2-35** Video **Unit 1 · Writing 3** (organizing points in a personal letter): giải bài A (chọn ý), B (đọc thư của Bruno, sắp xếp 9 ý theo thứ tự xuất hiện), C (điền lời chào, lời kết), cách Bruno chia đoạn, **thư mẫu của Lan 156 từ** cùng dạng đề, và cách làm bài viết Workbook trang 6.
@@ -378,6 +379,15 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Nhịp chậm hơn: Emma 0.9, Yuki / Takeshi 0.78, nghỉ 0.8 giây giữa hai câu; mỗi chữ cái Yuki đọc riêng rồi chờ người học nhắc lại.
   - Đọc đúng: âm ghép đọc riêng (みょ, りょ, ぎょ) đưa thẳng âm vị cho Kokoro; `check` so từng phần của câu đọc từng phần, báo chữ cái đọc riêng bị đọc như trợ từ (へ → "e") và số đoạn audio khác số chữ được tô.
   - Test: chữ của thẻ / romaji / các phần của câu, `reading_plan`, đọc từng chữ trong `timeline`, tách audio theo khoảng lặng (file wav giả), tầng 2–3 theo câu, vẽ tô sáng và đếm ngược, kiểm cách đọc từng phần, âm vị âm ghép; e2e: thẻ GENKI có 37 video, Unit 0 có 19 nút video 2–5 phút theo thứ tự.
+- [x] **P2-55** **4 video luyện nói thêm Unit 2 · Learning, bỏ đếm ngược ở "Đến lượt bạn"** (đợt 24), theo yêu cầu người học. Chi tiết và khuôn cho các unit sau: [06-video-bai-giang.md](06-video-bai-giang.md) mục 2 và 9.
+  - Bốn video `U02-speaking-practice`, `-2`, `-3`, `-4` theo khuôn Unit 1 (P2-45). Tom và Emma hỏi đáp qua lại 62 câu về thời đi học, môn học, thầy cô, học ngoại ngữ, kỹ năng mới, thi cử, cách học, đại học, học với công nghệ.
+  - 4 buổi thi thử Speaking, Tom và Emma thay nhau làm giám khảo. Phần 2 có 5 bài nói mẫu: thầy giáo giúp mình, học lái xe, kỳ thi quan trọng (hai người cùng thẻ), khóa học muốn theo.
+  - Không có khoảng lặng chờ. Gắn vào phần Speaking & Vocabulary: Unit 2 có 16 video.
+  - Cả 7 cảnh "Đến lượt bạn" của Unit 2 không còn đếm ngược (trước đây 5–15 giây mỗi câu). Emma nhắc tạm dừng video rồi đọc hết câu hỏi. Đã dựng lại `U02-speaking-1`, `-2`, `U02-consolidation`, `U02-reading-1`, `U02-listening-2`, sửa luôn 8 câu "use" bị đọc thành /juːs/.
+  - Công cụ: cảnh `practice` không có `wait` / `echo` thì vẽ cả danh sách câu hỏi kèm gợi ý, dải "Pause the video and answer out loud", tô câu đang đọc (`Scene.self_paced`).
+  - Hồ sơ cho các unit sau (file 06 mục 9): khuôn 4 video, quy ước viết, hồ sơ nhân vật Tom / Emma, chủ đề và thẻ đề đã dùng, gợi ý Unit 3–4, các bước.
+  - Test: cảnh `practice` tự tạm dừng (không đếm ngược, tô đúng hàng); hồi quy "cảnh practice của Unit 2 không đếm ngược, Unit 1–2 mỗi unit 4 video luyện nói không có khoảng lặng chờ". Node: nhóm Speaking & Vocabulary của Unit 2 có 6 video đúng thứ tự. E2E: Unit 2 có 16 video, nút Speaking practice 1 mở phiên Speaking & Vocabulary với 6 video đúng thứ tự.
+- [ ] **P2-56** Video luyện nói thêm cho Unit 3 trở đi, theo khuôn file 06 mục 9. Muốn thì bỏ thêm đếm ngược ở các cảnh còn lại: "Đến lượt bạn" của Unit 1 (Speaking 1–2, Consolidation) và Unit 3 (lượt nói 1–2 phút).
 
 ### Cổng G2
 

@@ -32,7 +32,8 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "qa": ("q", "a"),
     "compare": ("title", "lines"),
     "errors": ("wrong", "right"),
-    "practice": ("q",),
+    "practice": ("q",),                 # "Đến lượt bạn": có `wait` thì từng câu một kèm đếm ngược; không có `wait` / `echo`
+                                        # thì người học tự tạm dừng: cả danh sách câu (+ `hint`) và dải nhắc "Pause the video"
     "order": ("k", "text", "pos"),      # sắp xếp: mỗi mục có vị trí đúng `pos`
     "timing": ("label", "minutes"),     # chia thời gian: thanh ngang theo số phút
     "letter": ("text",),                # thư mẫu: mỗi mục một đoạn; `note` ghi chú lề, `body: false` không đếm từ
@@ -234,6 +235,12 @@ class Scene(_M):
             if bad:
                 raise ValueError(f"reveal không khớp mục nào: {bad}")
         return self
+
+    @property
+    def self_paced(self) -> bool:
+        """Cảnh practice không có khoảng lặng `wait` / `echo`: người học tự tạm dừng video để trả lời, không bị bắt
+        chờ đếm ngược. Slide hiện cả danh sách câu hỏi và dải nhắc tạm dừng; câu đang đọc được tô (đợt 24)."""
+        return self.kind == "practice" and not any(ln.wait or ln.echo for ln in self.lines)
 
     def reveal_keys(self) -> set[str]:
         if self.kind in ("match", "pairs", "blanks", "mcq"):

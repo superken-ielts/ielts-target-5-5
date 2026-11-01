@@ -439,6 +439,53 @@ def test_unit1_3_video_coverage():
             assert have[part], f"{unit['item']} {part}"
 
 
+@pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
+def test_unit2_your_turn_has_no_countdown_and_units_1_2_have_speaking_practice():
+    """Đợt 24 (người học yêu cầu): "Đến lượt bạn" của Unit 2 không bắt chờ đếm ngược — Emma nhắc tạm dừng video rồi đọc
+    hết câu hỏi; Unit 1 và Unit 2 mỗi unit có 4 video luyện nói thêm, không có khoảng lặng chờ nào (docs/agent-hoc-tap/06)."""
+    for path in sorted((REAL / "lessons").glob("U02-*.yaml")):
+        for scene in sc.load(path).scenes:
+            if scene.kind == "practice":
+                assert scene.self_paced, f"{path.name}: {scene.heading}"
+    built = {x["id"]: x for x in json.loads((REAL / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    for unit in ("U01", "U02"):
+        for vid in [f"{unit}-speaking-practice"] + [f"{unit}-speaking-practice-{k}" for k in (2, 3, 4)]:
+            lesson = sc.load(REAL / "lessons" / f"{vid}.yaml")
+            assert built[vid]["activity"] == lesson.activity == f"{unit}-speaking-vocab"
+            assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), vid
+
+
+SELF_PACED = {
+    "id": "T-6", "activity": "U01-speaking-vocab", "title": "Unit 2", "subtitle": "Speaking 1", "tag": "UNIT 2",
+    "speakers": LESSON["speakers"],
+    "scenes": [
+        {"kind": "practice", "chapter": "Your turn", "heading": "Your turn",
+         "items": [{"q": "What was your favourite subject?", "hint": "My favourite subject was…"},
+                   {"q": "Did you have to wear a uniform?"}],
+         "lines": [{"a": "Pause the video, and answer these questions."},
+                   {"a": "What was your favourite subject?", "focus": 0, "pause": 0.5},
+                   {"a": "Did you have to wear a uniform?", "focus": 1, "pause": 1.5}]},
+    ],
+}
+
+
+def test_practice_without_wait_is_self_paced(tmp_path):
+    """"Đến lượt bạn" không có `wait`: không đếm ngược; slide hiện cả danh sách câu và tô câu đang đọc (đợt 24)."""
+    from lesson_video.slides import C, _hex
+    lesson = sc.Lesson.model_validate(copy.deepcopy(SELF_PACED))
+    assert lesson.scenes[0].self_paced
+    assert not sc.Lesson.model_validate(copy.deepcopy(LESSON)).scenes[3].self_paced    # có `wait` → đếm ngược như cũ
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    assert all(f.countdown is None for f in tl.frames)
+    assert [f.focus for f in tl.frames] == [None, 0, 1]
+    assert tl.frames[2].dur > tl.frames[1].dur > 0                                     # `pause` giữ khung lâu hơn
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    pics = [slides.render(fr, fr.start / tl.total) for fr in tl.frames]
+    assert all(p.size == (W, H) for p in pics)
+    row1 = (W - 70, 216 + 84 + 40)   # giữa hàng thứ hai của danh sách (2 câu → mỗi hàng cao 84)
+    assert pics[2].getpixel(row1) == _hex(C["soft"]) and pics[1].getpixel(row1) == _hex(C["bg"])
+
+
 def _wav(path: Path, seconds: float, rate: int = 16000):
     import wave
     import numpy as np

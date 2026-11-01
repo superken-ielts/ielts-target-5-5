@@ -160,26 +160,23 @@ scenes:
 
   - kind: practice
     heading: "Listening 1K · Practise saying these dates in two ways"
-    heading_vi: "Đọc thành tiếng cả hai cách, rồi nghe Tom"
+    heading_vi: "Đọc cả hai cách, rồi nghe Tom đọc mẫu"
     items:
       - {q: "January 10", hint: "the tenth of January · January the tenth"}
       - {q: "March 20", hint: "the twentieth of March · March the twentieth"}
       - {q: "April 25", hint: "the twenty-fifth of April · April the twenty-fifth"}
       - {q: "September 30", hint: "the thirtieth of September · September the thirtieth"}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng sau mỗi ngày, rồi nghe Tom đọc mẫu.
     lines:
-      - emma: "Exercise K. Practise saying these dates in two ways."
-        vi: "Bài K: đọc ngày theo hai cách."
+      - emma: "Exercise K. Practise saying these dates in two ways. Pause the video after each date, and say it out loud. Then listen to Tom."
+        vi: "Bài K: tạm dừng sau mỗi ngày, đọc theo hai cách, rồi nghe Tom."
       - {emma: "January 10.", say: "January ten.", focus: 0}
-      - {wait: 5}
       - {tom: "The tenth of January. January the tenth.", focus: 0}
       - {emma: "March 20.", say: "March twenty.", focus: 1}
-      - {wait: 5}
       - {tom: "The twentieth of March. March the twentieth.", focus: 1}
       - {emma: "April 25.", say: "April twenty-five.", focus: 2}
-      - {wait: 5}
       - {tom: "The twenty-fifth of April. April the twenty-fifth.", focus: 2}
       - {emma: "September 30.", say: "September thirty.", focus: 3}
-      - {wait: 5}
       - {tom: "The thirtieth of September. September the thirtieth.", focus: 3}
 
   - kind: blanks
@@ -208,29 +205,25 @@ scenes:
   - kind: practice
     chapter: "Bài M: trả lời bằng ngày"
     heading: "Listening 1M · Answer these questions with a date"
-    heading_vi: "Nói thành tiếng, mỗi câu 6 giây"
+    heading_vi: "Trả lời bằng một ngày (on the… of…), rồi nghe Tom"
     items:
       - {q: "What date is your birthday?", hint: "My birthday is on the… of…"}
       - {q: "What date is your mother's birthday?", hint: "It's on the… of…"}
       - {q: "What date is Christmas Day?", hint: "the twenty-fifth of December"}
       - {q: "What date is New Year's Eve?", hint: "the thirty-first of December"}
       - {q: "What date is American Independence Day?", hint: "the fourth of July"}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng sau mỗi câu hỏi, rồi nghe Tom trả lời mẫu.
     lines:
-      - emma: "Exercise M. Answer these questions with a date. Say it out loud."
-        vi: "Bài M: trả lời bằng một ngày."
+      - emma: "Exercise M. Answer these questions with a date. Pause the video after each question, and say your answer out loud."
+        vi: "Bài M: tạm dừng sau mỗi câu hỏi, trả lời thành tiếng bằng một ngày."
       - {emma: "What date is your birthday?", focus: 0}
-      - {wait: 6}
       - {tom: "My birthday is on the ninth of March.", focus: 0}
-      - {emma: "What date is your mother's birthday?", focus: 1}
-      - {wait: 6}
+      - {emma: "What date is your mother's birthday?", focus: 1, pause: 0.5}
       - {emma: "What date is Christmas Day?", focus: 2}
-      - {wait: 6}
       - {tom: "The twenty-fifth of December.", focus: 2}
       - {emma: "What date is New Year's Eve?", focus: 3}
-      - {wait: 6}
       - {tom: "The thirty-first of December.", focus: 3}
       - {emma: "What date is American Independence Day?", focus: 4}
-      - {wait: 6}
       - {tom: "The fourth of July.", focus: 4}
       - emma: "Remember: on for dates. My birthday is on the ninth of March."
         vi: "Dùng 'on' với ngày: on the ninth of March."

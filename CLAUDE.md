@@ -34,6 +34,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   file 07 mục 4; cần `misaki[ja]` và phông Noto Sans CJK. Video Giai đoạn 0 (English Unlimited A2): sổ tay từng unit
   ở file 08 mục 6; lời bài nghe chép sẵn ở `work/transcripts/` (`python -m lesson_video transcribe`). Trước khi dựng,
   soát cách đọc bằng `python -m lesson_video phonemes <kịch bản>` (⚠ = lỗi đã gặp, sửa bằng `say`).
+- IELTS Target 5.0: 4 video luyện nói thêm mỗi unit (Unit 1–2 đã có) theo khuôn, hồ sơ nhân vật Tom / Emma và danh sách
+  chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
 
 ## Kiểm tra trước khi commit
 

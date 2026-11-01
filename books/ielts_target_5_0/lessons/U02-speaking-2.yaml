@@ -128,26 +128,24 @@ scenes:
       - {emma: "On the right: answer the question, give a reason with because, and add a detail.", focus: 1}
       - {tom: "So I can still say no, but then I explain why.", focus: 1}
       - emma: "Exactly. Two or three sentences are perfect for Part 1. And use the past simple for your school days."
-        say: "Exactly. Two or three sentences are perfect for Part one. And use the past simple for your school days."
+        say: "Exactly. Two or three sentences are perfect for Part one. And yooz the past simple for your school days."
         vi: "Phần 1: hai, ba câu là vừa; dùng quá khứ đơn khi nói về thời đi học."
 
   - kind: practice
     chapter: "Speaking 2B: đến lượt bạn"
     heading: "Speaking 2B · Your turn"
-    heading_vi: "Trả lời câu 1–3 thành tiếng: trả lời + lý do + chi tiết, mỗi câu 12 giây"
+    heading_vi: "Câu 1–3: trả lời + lý do + chi tiết"
     items:
       - {q: "Did you enjoy being at school?", hint: "Yes, I did, especially… because… / Not really. I didn't enjoy…"}
       - {q: "What was your favourite subject at school?", hint: "My favourite subject was… because…"}
       - {q: "Who was your favourite teacher at school?", hint: "It was… He / She was our … teacher. He / She…"}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng video, Emma đọc hết các câu hỏi.
     lines:
-      - emma: "Exercise B. Now you answer the three questions. Remember: answer, reason, detail."
-        vi: "Bài B: bạn trả lời ba câu hỏi — trả lời, lý do, chi tiết."
-      - {emma: "Did you enjoy being at school?", focus: 0}
-      - {wait: 12}
-      - {emma: "What was your favourite subject at school?", focus: 1}
-      - {wait: 12}
-      - {emma: "Who was your favourite teacher at school?", focus: 2}
-      - {wait: 12}
+      - emma: "Exercise B. Now it's your turn. Pause the video, and answer the three questions out loud. Remember: answer, reason, detail."
+        vi: "Bài B: tạm dừng video, trả lời ba câu hỏi — trả lời, lý do, chi tiết."
+      - {emma: "Did you enjoy being at school?", focus: 0, pause: 0.5}
+      - {emma: "What was your favourite subject at school?", focus: 1, pause: 0.5}
+      - {emma: "Who was your favourite teacher at school?", focus: 2, pause: 1.5}
 
   - kind: blanks
     chapter: "Vocabulary 2A: tích cực hay tiêu cực?"
@@ -212,11 +210,11 @@ scenes:
     lines:
       - emma: "Here are some useful phrases. Notice the words that come after them."
         vi: "Chú ý từ đi sau mỗi cụm."
-      - {emma: "I really enjoyed. After enjoy, use a noun or an -ing form.", say: "I really enjoyed. After enjoy, use a noun, or an, I, N, G, form.", focus: 0}
+      - {emma: "I really enjoyed. After enjoy, use a noun or an -ing form.", say: "I really enjoyed. After enjoy, yooz a noun, or an, I, N, G, form.", focus: 0}
       - {tom: "I really enjoyed doing experiments in Chemistry.", focus: 0}
       - {emma: "I was keen on.", focus: 1}
       - {mai: "I was very keen on football when I was at school.", focus: 1}
-      - {emma: "I preferred A to B. Use to, not than.", say: "I preferred eigh to B. Use to, not than.", focus: 2}
+      - {emma: "I preferred A to B. Use to, not than.", say: "I preferred eigh to B. Yooz to, not than.", focus: 2}
       - {tom: "I preferred Biology to Physics.", focus: 2}
       - {emma: "My favourite subject was.", focus: 3}
       - {mai: "My favourite subject was English, because the lessons were fun.", focus: 3}
@@ -250,20 +248,18 @@ scenes:
   - kind: practice
     chapter: "Đến lượt bạn"
     heading: "Your turn · Talk about the subjects you studied"
-    heading_vi: "Nói thành tiếng, mỗi câu 15 giây — dùng ít nhất hai cụm từ mới"
+    heading_vi: "Dùng ít nhất hai cụm từ mới: really enjoyed, keen on, preferred… to…"
     items:
       - {q: "Which subjects did you enjoy at school? Why?", hint: "I really enjoyed… because… / I was keen on…"}
       - {q: "Which subjects didn't you like? Why?", hint: "I didn't like… very much. I thought it was…"}
       - {q: "Did you prefer science subjects or languages?", hint: "I preferred… to…, because…"}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng video, Emma đọc hết các câu hỏi.
     lines:
-      - emma: "Exercise B. Now talk about the subjects you studied. Say why you liked or didn't like them."
-        vi: "Bài B: kể các môn bạn đã học, nói vì sao thích hay không thích."
-      - {emma: "Which subjects did you enjoy at school? Why?", focus: 0}
-      - {wait: 15}
-      - {emma: "Which subjects didn't you like? Why?", focus: 1}
-      - {wait: 15}
-      - {emma: "Did you prefer science subjects or languages?", focus: 2}
-      - {wait: 15}
+      - emma: "Exercise B. Now talk about the subjects you studied. Pause the video, answer these questions, and say why you liked or didn't like them."
+        vi: "Bài B: tạm dừng video, kể các môn bạn đã học và vì sao thích hay không thích."
+      - {emma: "Which subjects did you enjoy at school? Why?", focus: 0, pause: 0.5}
+      - {emma: "Which subjects didn't you like? Why?", focus: 1, pause: 0.5}
+      - {emma: "Did you prefer science subjects or languages?", focus: 2, pause: 1.5}
 
   - kind: bullets
     chapter: "Tổng kết"

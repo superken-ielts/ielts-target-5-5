@@ -1,0 +1,376 @@
+# Video luyện nói thêm Unit 2 · Learning — 1/4: thời đi học, môn học và thầy cô + thi thử 1 (Emma giám khảo, Tom thí
+# sinh). Người học yêu cầu, không theo trang sách; làm theo khuôn bốn video luyện nói của Unit 1 (đợt 14) ở đợt 24.
+# Người học tự tạm dừng video để trả lời, nên không có khoảng lặng chờ (`wait`, `echo`).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-speaking-practice.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Câu trả lời mẫu tự viết bằng ngữ pháp, từ vựng của Unit 2 (quá khứ đơn,
+# had to, really enjoyed / keen on / preferred… to… / boring, câu trả lời = trả lời + lý do + chi tiết).
+# Thông tin nhân vật: giữ khớp với đầu file U01-speaking-practice.yaml, thêm phần thời đi học dưới đây (giữ khớp ở cả
+# bốn video Unit 2 và với câu trả lời mẫu của Tom trong U02-speaking-1):
+# - Tom: trường công lớn ở Đà Lạt gần hồ (~2.000 học sinh), đạp xe 15 phút, vào học 7 giờ; đồng phục áo sơ mi trắng,
+#   quần xanh; thích Hóa (thầy Nam, vui tính, dạy lớp 10–12, kèm miễn phí sau giờ học), thấy Lịch sử chán, Lý khó; cô
+#   dạy Toán nghiêm, bài tập mỗi tối; học tiếng Anh từ 8 tuổi; ông nội kèm Toán ôn thi đại học; thi IELTS tháng 12, cần
+#   5.5 để đi trao đổi ở Úc; biết đi xe máy (bố dạy năm 18 tuổi), bơi kém (học năm 12 tuổi), chỉ biết nấu mì và trứng.
+# - Emma: trường nhỏ ở thị trấn ven biển nước Anh (~400 học sinh); bạn thân Lucy (hàng xóm); đồng phục áo len xanh đậm,
+#   sơ mi trắng, cà vạt; thích Anh văn, Mỹ thuật, kém Toán (thi lại Toán năm 15 tuổi); cô Green dạy Anh văn — lý do Emma
+#   đi dạy; học tiếng Pháp 5 năm; thi A level (Anh văn, Pháp, Sử: A, A, B); học Văn học Anh ở đại học; lái xe từ 17 tuổi
+#   (thầy Hughes, trượt lần đầu); học tiếng Việt 3 năm, tuần hai buổi; mẹ dạy nấu ăn, đã học lớp nấu món Việt.
+id: U02-speaking-practice
+activity: U02-speaking-vocab
+title: "Unit 2 · Learning"
+subtitle: "Speaking practice 1: school days, subjects, teachers + mock test"
+title_vi: "Luyện nói 1/4 — Tom và Emma hỏi đáp về thời đi học, môn học, thầy cô; thi thử Speaking (Emma giám khảo)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Speaking practice one for Unit 2: Learning. There are four practice videos, full of questions and answers."
+        say: "Welcome to Speaking practice one for Unit two: Learning. There are four practice videos, full of questions and answers."
+        vi: "Video luyện nói 1/4 của Unit 2 — toàn câu hỏi và câu trả lời mẫu."
+      - tom: "Pause the video after each question, and answer it yourself. Then listen to our answer, and say it with us."
+        vi: "Tạm dừng sau mỗi câu hỏi, tự trả lời, rồi nghe câu mẫu và nói theo."
+      - emma: "Today, Tom and I ask each other about school days, subjects and teachers. Then we do a mock test: I'm the examiner, and Tom is the candidate."
+        vi: "Hôm nay: thời đi học, môn học, thầy cô; rồi thi thử — Emma giám khảo, Tom thí sinh."
+      - tom: "Remember Unit 2: use the past simple for your school days, and give a reason and a detail."
+        say: "Remember Unit two: yooz the past simple for your school days, and give a reason and a detail."
+        vi: "Nhớ bài Unit 2: kể thời đi học bằng quá khứ đơn, thêm lý do và chi tiết."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: thời đi học"
+    heading: "Tom and Emma ask each other · School days"
+    heading_vi: "Thời đi học — kể bằng thì quá khứ đơn, thêm lý do và chi tiết"
+    items:
+      - q: "Tom, where did you go to secondary school?"
+        a: "I went to a big state school in Da Lat, near the lake. It had about two thousand students, so it was always busy and noisy."
+        ask: emma
+        by: tom
+        phrases: ["I went to…", "a big state school", "about two thousand students"]
+      - q: "And what was your school like, Emma?"
+        a: "It was a small school in my hometown, with only about four hundred students. Everybody knew everybody, and the teachers knew all our names."
+        ask: tom
+        by: emma
+        phrases: ["only about…", "Everybody knew everybody", "knew all our names"]
+      - q: "How did you get to school?"
+        a: "I rode my bike. It took about fifteen minutes, but Da Lat is very hilly, so I was always tired when I arrived! When it rained, my dad took me on his motorbike."
+        ask: emma
+        by: tom
+        phrases: ["I rode my bike", "It took about…", "very hilly"]
+      - q: "Did you have to wear a uniform?"
+        a: "Yes, we did. We had to wear a dark blue jumper, a white shirt and a school tie. I hated the tie, because it was really uncomfortable in summer."
+        ask: tom
+        by: emma
+        phrases: ["We had to wear…", "I hated…", "really uncomfortable"]
+      - q: "What time did your school day start?"
+        a: "Very early, at seven o'clock. In winter, Da Lat is really cold in the morning, so it was hard to get out of bed. We finished at half past eleven, and I went home for lunch."
+        ask: emma
+        by: tom
+        phrases: ["Very early, at…", "hard to get out of bed", "half past eleven"]
+      - q: "Who was your best friend at school?"
+        a: "Lucy, my neighbour. We sat next to each other in almost every class, and we walked home together every afternoon. We're still friends now."
+        ask: tom
+        by: emma
+        phrases: ["sat next to each other", "walked home together", "We're still friends"]
+      - q: "Did you have a lot of homework?"
+        a: "Yes, a lot, especially in my last year, before the university entrance exam. I often studied until eleven o'clock at night."
+        ask: emma
+        by: tom
+        phrases: ["especially in my last year", "the university entrance exam", "until eleven o'clock"]
+      - q: "Do you remember any school trips?"
+        a: "Yes! When I was twelve, we went to London for three days. We visited museums and saw a show. It was my first time in a big city, and I loved it."
+        ask: tom
+        by: emma
+        phrases: ["When I was twelve…", "for three days", "my first time in…"]
+    lines:
+      - {emma: "Tom, where did you go to secondary school?", focus: 0}
+      - tom: "I went to a big state school in Da Lat, near the lake. It had about two thousand students, so it was always busy and noisy."
+        say: "I went to a big state school in Dah Lot, near the lake. It had about two thousand students, so it was always busy and noisy."
+        reveal: 0
+        vi: "Trường công lớn ở Đà Lạt, gần hồ, khoảng hai nghìn học sinh nên lúc nào cũng ồn."
+      - {tom: "And what was your school like, Emma?", focus: 1}
+      - emma: "It was a small school in my hometown, with only about four hundred students. Everybody knew everybody, and the teachers knew all our names."
+        reveal: 1
+        vi: "Trường nhỏ ở quê, chừng bốn trăm học sinh; ai cũng biết nhau, thầy cô biết tên từng người."
+      - {emma: "How did you get to school?", focus: 2}
+      - tom: "I rode my bike. It took about fifteen minutes, but Da Lat is very hilly, so I was always tired when I arrived! When it rained, my dad took me on his motorbike."
+        say: "I rode my bike. It took about fifteen minutes, but Dah Lot is very hilly, so I was always tired when I arrived! When it rained, my dad took me on his motorbike."
+        reveal: 2
+        vi: "Đạp xe 15 phút, đường dốc nên đến nơi là mệt; trời mưa thì bố chở bằng xe máy."
+      - {tom: "Did you have to wear a uniform?", focus: 3}
+      - emma: "Yes, we did. We had to wear a dark blue jumper, a white shirt and a school tie. I hated the tie, because it was really uncomfortable in summer."
+        reveal: 3
+        vi: "Phải mặc áo len xanh đậm, sơ mi trắng, cà vạt — ghét cà vạt vì mùa hè rất khó chịu."
+      - {emma: "What time did your school day start?", focus: 4}
+      - tom: "Very early, at seven o'clock. In winter, Da Lat is really cold in the morning, so it was hard to get out of bed. We finished at half past eleven, and I went home for lunch."
+        say: "Very early, at seven o'clock. In winter, Dah Lot is really cold in the morning, so it was hard to get out of bed. We finished at half past eleven, and I went home for lunch."
+        reveal: 4
+        vi: "Vào học lúc 7 giờ; mùa đông Đà Lạt lạnh nên khó dậy; 11 giờ rưỡi tan, về nhà ăn trưa."
+      - {tom: "Who was your best friend at school?", focus: 5}
+      - emma: "Lucy, my neighbour. We sat next to each other in almost every class, and we walked home together every afternoon. We're still friends now."
+        reveal: 5
+        vi: "Lucy, cô bạn hàng xóm: ngồi cạnh nhau, chiều nào cũng cùng đi bộ về; giờ vẫn là bạn."
+      - {emma: "Did you have a lot of homework?", focus: 6}
+      - tom: "Yes, a lot, especially in my last year, before the university entrance exam. I often studied until eleven o'clock at night."
+        reveal: 6
+        vi: "Rất nhiều, nhất là năm cuối trước kỳ thi đại học; thường học tới 11 giờ đêm."
+      - {tom: "Do you remember any school trips?", focus: 7}
+      - emma: "Yes! When I was twelve, we went to London for three days. We visited museums and saw a show. It was my first time in a big city, and I loved it."
+        reveal: 7
+        vi: "Năm 12 tuổi đi London ba ngày: bảo tàng, xem kịch; lần đầu đến thành phố lớn, rất thích."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: môn học, thầy cô"
+    heading: "Tom and Emma ask each other · Subjects and teachers"
+    heading_vi: "Môn học và thầy cô — dùng really enjoyed, keen on, preferred… to…, boring"
+    items:
+      - q: "Emma, what was your favourite subject at school?"
+        a: "English, because I loved reading stories and writing my own. I was also very keen on Art. I spent hours drawing in my free time."
+        ask: tom
+        by: emma
+        phrases: ["I loved + -ing", "I was very keen on…", "I spent hours + -ing"]
+      - q: "What about you, Tom?"
+        a: "Chemistry. I really enjoyed doing experiments in the lab, and my teacher, Mr Nam, made every lesson fun. I preferred practical subjects to theory."
+        ask: emma
+        by: tom
+        phrases: ["I really enjoyed + -ing", "made every lesson fun", "preferred… to…"]
+      - q: "Which subject were you not very good at?"
+        a: "Maths. I was always slow at it, and I didn't really understand algebra. I passed my exam in the end, but only just!"
+        ask: tom
+        by: emma
+        phrases: ["I was always slow at…", "in the end", "only just"]
+      - q: "Did you find any subjects boring?"
+        a: "Yes, History. We had to remember lots of dates, and the teacher just read from the book. Now I find History interesting, but at school I thought it was really boring."
+        ask: emma
+        by: tom
+        phrases: ["We had to remember…", "Now I find… interesting", "really boring"]
+      - q: "Who was your favourite teacher?"
+        a: "Mrs Green, my English teacher. She was kind but strict, and she lent me her own books. She's the reason I became a teacher."
+        ask: tom
+        by: emma
+        phrases: ["kind but strict", "lent me her own books", "She's the reason…"]
+      - q: "Were your teachers strict?"
+        a: "Some of them were very strict. If we came late, we had to stand at the back of the class. But most of them really cared about us."
+        ask: emma
+        by: tom
+        phrases: ["Some of them were…", "we had to…", "really cared about us"]
+      - q: "Did you learn any foreign languages at school?"
+        a: "Yes, French, for five years. I could read it quite well, but I was too shy to speak. Now I've forgotten most of it, which is a shame."
+        ask: tom
+        by: emma
+        phrases: ["for five years", "too shy to speak", "which is a shame"]
+      - q: "Which subject would you like to study again?"
+        a: "Maybe Geography. I didn't like it very much at school, but now I love travelling, and I'd like to know more about other countries."
+        ask: emma
+        by: tom
+        phrases: ["Maybe…", "I didn't like it very much, but…", "I'd like to know more about…"]
+    lines:
+      - {tom: "Emma, what was your favourite subject at school?", focus: 0}
+      - emma: "English, because I loved reading stories and writing my own. I was also very keen on Art. I spent hours drawing in my free time."
+        reveal: 0
+        vi: "Môn Anh văn vì mê đọc truyện, tự viết truyện; cũng rất mê Mỹ thuật, vẽ hàng giờ."
+      - {emma: "What about you, Tom?", focus: 1}
+      - tom: "Chemistry. I really enjoyed doing experiments in the lab, and my teacher, Mr Nam, made every lesson fun. I preferred practical subjects to theory."
+        say: "Chemistry. I really enjoyed doing experiments in the lab, and my teacher, Mister Nahm, made every lesson fun. I preferred practical subjects to theory."
+        reveal: 1
+        vi: "Hóa học: thích làm thí nghiệm, thầy Nam dạy rất vui; thích môn thực hành hơn lý thuyết."
+      - {tom: "Which subject were you not very good at?", focus: 2}
+      - emma: "Maths. I was always slow at it, and I didn't really understand algebra. I passed my exam in the end, but only just!"
+        reveal: 2
+        vi: "Toán: lúc nào cũng chậm, không hiểu đại số; cuối cùng cũng đỗ, nhưng sát nút!"
+      - {emma: "Did you find any subjects boring?", focus: 3}
+      - tom: "Yes, History. We had to remember lots of dates, and the teacher just read from the book. Now I find History interesting, but at school I thought it was really boring."
+        say: "Yes, History. We had to remember lots of dates, and the teacher just red from the book. Now I find History interesting, but at school I thought it was really boring."
+        reveal: 3
+        vi: "Lịch sử: phải nhớ nhiều mốc, thầy chỉ đọc sách; giờ thấy hay, hồi đi học thấy rất chán."
+      - {tom: "Who was your favourite teacher?", focus: 4}
+      - emma: "Mrs Green, my English teacher. She was kind but strict, and she lent me her own books. She's the reason I became a teacher."
+        reveal: 4
+        vi: "Cô Green dạy Anh văn: hiền mà nghiêm, cho mượn sách riêng; cô là lý do Emma thành giáo viên."
+      - {emma: "Were your teachers strict?", focus: 5}
+      - tom: "Some of them were very strict. If we came late, we had to stand at the back of the class. But most of them really cared about us."
+        reveal: 5
+        vi: "Vài thầy cô rất nghiêm: đi muộn phải đứng cuối lớp; nhưng đa số rất quan tâm học sinh."
+      - {tom: "Did you learn any foreign languages at school?", focus: 6}
+      - emma: "Yes, French, for five years. I could read it quite well, but I was too shy to speak. Now I've forgotten most of it, which is a shame."
+        reveal: 6
+        vi: "Tiếng Pháp năm năm: đọc khá nhưng ngại nói; giờ quên gần hết, tiếc thật."
+      - {emma: "Which subject would you like to study again?", focus: 7}
+      - tom: "Maybe Geography. I didn't like it very much at school, but now I love travelling, and I'd like to know more about other countries."
+        reveal: 7
+        vi: "Có lẽ Địa lý: hồi đó không thích lắm, giờ mê du lịch nên muốn biết thêm về các nước."
+
+  - kind: qa
+    chapter: "Thi thử 1 · Phần 1"
+    heading: "Mock test 1 · Part 1 · Introduction and interview"
+    heading_vi: "Thi thử Phần 1 — giám khảo hỏi về bạn (bài thi thật: 4–5 phút)"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Can you tell me your full name, please?"
+        a: "Good afternoon. My full name is Tran Minh Tuan, but please call me Tom."
+        phrases: ["My full name is…", "please call me…"]
+      - q: "Can I see your identification, please?"
+        a: "Sure. Here it is."
+      - q: "Do you work, or are you a student?"
+        a: "I'm a student. I'm in my second year at university in Ho Chi Minh City, and I'm studying business."
+        phrases: ["I'm a student.", "in my second year", "I'm studying…"]
+      - q: "What's the most difficult part of your studies?"
+        a: "Probably the reading. We have to read long articles in English every week, and they're full of new words. But it's really good practice for my IELTS test."
+        phrases: ["Probably…", "We have to…", "really good practice"]
+      - q: "Did you enjoy secondary school?"
+        a: "Yes, mostly. I enjoyed the science subjects, and I had some great friends. But my last year was really stressful, because of the university entrance exam."
+        phrases: ["Yes, mostly.", "I enjoyed…", "really stressful"]
+      - q: "What was the most useful thing you learned at school?"
+        a: "I think it was English, even though our lessons were mostly grammar. It gave me a good base, and now I use it every day at university."
+        phrases: ["I think it was…", "even though…", "a good base"]
+      - q: "Do you think children get too much homework?"
+        a: "In Vietnam, yes, I think so. Many children study at school all day, and then they go to extra classes in the evening. They don't have enough time to play."
+        phrases: ["In Vietnam, yes…", "extra classes", "enough time to play"]
+      - q: "Did your parents help you with your homework?"
+        a: "When I was small, yes. My mum checked my homework every night. Later, my grandfather helped me with Maths, because he was a Maths teacher."
+        phrases: ["When I was small…", "checked my homework", "helped me with…"]
+    lines:
+      - emma: "Now, the mock test. I'm the examiner, and Tom is the candidate. Part one starts now."
+        focus: 0
+        vi: "Thi thử: Emma là giám khảo, Tom là thí sinh. Bắt đầu Phần 1."
+      - {emma: "Good afternoon. My name is Emma. Can you tell me your full name, please?", focus: 0}
+      - tom: "Good afternoon. My full name is Tran Minh Tuan, but please call me Tom."
+        say: "Good afternoon. My full name is Chan Min Twan, but please call me Tom."
+        reveal: 0
+        vi: "Thí sinh có tên tiếng Anh thì nói thêm 'please call me…'."
+      - {emma: "Thank you, Tom. And can I see your identification, please?", focus: 1}
+      - {tom: "Sure. Here it is.", reveal: 1, vi: "Đưa giấy tờ tùy thân."}
+      - emma: "Thank you. Now, in this first part, I'd like to ask you some questions about yourself."
+        vi: "Phần 1: giám khảo hỏi về bản thân bạn."
+      - {emma: "Let's talk about your studies. Do you work, or are you a student?", focus: 2}
+      - tom: "I'm a student. I'm in my second year at university in Ho Chi Minh City, and I'm studying business."
+        say: "I'm a student. I'm in my second year at university in Ho Chee Min City, and I'm studying business."
+        reveal: 2
+        vi: "Sinh viên năm hai ngành kinh doanh ở TP. Hồ Chí Minh."
+      - {emma: "What's the most difficult part of your studies?", focus: 3}
+      - tom: "Probably the reading. We have to read long articles in English every week, and they're full of new words. But it's really good practice for my IELTS test."
+        say: "Probably the reading. We have to reed long articles in English every week, and they're full of new words. But it's really good practice for my eye-elts test."
+        reveal: 3
+        vi: "Có lẽ là phần đọc: tuần nào cũng đọc bài dài bằng tiếng Anh, nhiều từ mới; nhưng là luyện tốt cho IELTS."
+      - {emma: "Let's talk about your school days. Did you enjoy secondary school?", focus: 4}
+      - tom: "Yes, mostly. I enjoyed the science subjects, and I had some great friends. But my last year was really stressful, because of the university entrance exam."
+        reveal: 4
+        vi: "Phần lớn là có: thích các môn khoa học, có bạn tốt; năm cuối rất căng thẳng vì thi đại học."
+      - {emma: "What was the most useful thing you learned at school?", focus: 5}
+      - tom: "I think it was English, even though our lessons were mostly grammar. It gave me a good base, and now I use it every day at university."
+        say: "I think it was English, even though our lessons were mostly grammar. It gave me a good base, and now I yooz it every day at university."
+        reveal: 5
+        vi: "Tiếng Anh, dù chủ yếu học ngữ pháp: cho mình nền tảng, giờ ngày nào cũng dùng ở trường."
+      - {emma: "Now let's talk about homework. Do you think children get too much homework?", focus: 6}
+      - tom: "In Vietnam, yes, I think so. Many children study at school all day, and then they go to extra classes in the evening. They don't have enough time to play."
+        reveal: 6
+        vi: "Ở Việt Nam thì có: học cả ngày, tối lại học thêm, không đủ thời gian chơi."
+      - {emma: "Did your parents help you with your homework?", focus: 7}
+      - tom: "When I was small, yes. My mum checked my homework every night. Later, my grandfather helped me with Maths, because he was a Maths teacher."
+        reveal: 7
+        vi: "Hồi nhỏ mẹ kiểm tra bài mỗi tối; lớn hơn thì ông nội — thầy dạy toán — kèm môn Toán."
+
+  - kind: bullets
+    chapter: "Thi thử 1 · Phần 2"
+    heading: "Part 2 · Describe a teacher who helped you a lot."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: who this teacher was", vi: "thầy / cô đó là ai"}
+      - {en: "what subject he or she taught", vi: "dạy môn gì"}
+      - {en: "what he or she was like", vi: "là người thế nào"}
+      - {en: "and explain how this teacher helped you", vi: "và giải thích thầy / cô đã giúp bạn thế nào"}
+    lines:
+      - emma: "Thank you. Now, in part two, I'm going to give you a topic, and I'd like you to talk about it for one to two minutes."
+        vi: "Phần 2: nói 1–2 phút về một chủ đề."
+      - emma: "Before you talk, you'll have one minute to think about what you're going to say. You can make some notes if you wish."
+        vi: "Có 1 phút chuẩn bị và được ghi chú — muốn tự chuẩn bị thì tạm dừng video."
+      - emma: "Here's your topic. I'd like you to describe a teacher who helped you a lot."
+        vi: "Tả một thầy / cô đã giúp bạn rất nhiều."
+      - {emma: "You should say who this teacher was,", focus: 0}
+      - {emma: "what subject he or she taught,", focus: 1}
+      - {emma: "what he or she was like,", focus: 2}
+      - {emma: "and explain how this teacher helped you.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · one line for each point"
+    heading_vi: "Ghi chú của Tom — chỉ từ khóa, không viết cả câu"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "Mr Nam · Chemistry · grades 10 to 12", vi: "thầy Nam · Hóa học · lớp 10 đến lớp 12"}
+      - {en: "funny · patient · examples from the kitchen", vi: "vui tính · kiên nhẫn · ví dụ từ căn bếp"}
+      - {en: "failed first test → free extra lessons after school", vi: "trượt bài kiểm tra đầu → kèm thêm miễn phí sau giờ học"}
+      - {en: "top mark in the final exam · believe in myself", vi: "điểm cao nhất lớp kỳ thi cuối · tin vào bản thân"}
+    lines:
+      - tom: "I've got one minute, so I just write key words. One line for each point on the card."
+        vi: "Có 1 phút: chỉ ghi từ khóa, mỗi ý trên thẻ một dòng."
+      - emma: "All right? Remember, you have one to two minutes, so don't worry if I stop you. Can you start speaking now, please?"
+        vi: "Được chưa? Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu khoảng 1 phút — mỗi ý trên thẻ là một đoạn"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about Mr Nam, my Chemistry teacher at secondary school in Da Lat. He taught me for three years, from grade ten to grade twelve."
+        say: "I'd like to talk about Mister Nahm, my Chemistry teacher at secondary school in Dah Lot. He taught me for three years, from grade ten to grade twelve."
+        note: "who · what subject"
+      - text: "He was a funny and very patient man. He never made us feel stupid, and he explained difficult ideas with examples from everyday life, like cooking in the kitchen."
+        note: "what he was like"
+      - text: "He helped me a lot in grade ten. I failed my first Chemistry test, and I felt terrible. Mr Nam noticed, and he gave me extra lessons after school every Thursday, for free."
+        say: "He helped me a lot in grade ten. I failed my first Chemistry test, and I felt terrible. Mister Nahm noticed, and he gave me extra lessons after school every Thursday, for free."
+        note: "how he helped me (1)"
+      - text: "Two years later, I got the top mark in my class in the final exam. But more importantly, he taught me to believe in myself. That's why I still remember him today."
+        note: "how he helped me (2)"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 1 · Phần 3"
+    heading: "Mock test 1 · Part 3 · Discussion"
+    heading_vi: "Phần 3 — câu hỏi chung về giáo dục: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "What makes a good teacher?"
+        a: "I think a good teacher is patient, and explains things clearly. But the most important thing is that they care about their students, and make them want to learn."
+        phrases: ["I think…", "explains things clearly", "the most important thing is…"]
+      - q: "Is it better to study in a small class or a big class?"
+        a: "A small class is definitely better. The teacher can give each student more attention, and shy students feel more comfortable asking questions. But small classes cost schools more money."
+        phrases: ["definitely better", "more attention", "feel more comfortable + -ing"]
+      - q: "Should students wear school uniforms?"
+        a: "Yes, I think so. Uniforms make everyone look the same, so rich and poor students feel equal. They also save time in the morning, because you don't have to choose your clothes."
+        phrases: ["Yes, I think so.", "feel equal", "save time"]
+      - q: "Do teachers today have an easier job than in the past?"
+        a: "In some ways, yes, because they can use the internet and videos in class. But in other ways it's harder. Students are often distracted by their phones, so keeping their attention is a real challenge."
+        phrases: ["In some ways…", "distracted by…", "a real challenge"]
+    lines:
+      - emma: "Thank you. We've been talking about a teacher who helped you. Now I'd like to ask you some more general questions about education."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về giáo dục."
+      - {emma: "What makes a good teacher?", focus: 0}
+      - tom: "I think a good teacher is patient, and explains things clearly. But the most important thing is that they care about their students, and make them want to learn."
+        reveal: 0
+        vi: "Kiên nhẫn, giảng dễ hiểu; quan trọng nhất là quan tâm học sinh, khiến các em muốn học."
+      - {emma: "Is it better to study in a small class or a big class?", focus: 1}
+      - tom: "A small class is definitely better. The teacher can give each student more attention, and shy students feel more comfortable asking questions. But small classes cost schools more money."
+        reveal: 1
+        vi: "Lớp nhỏ tốt hơn: thầy cô chú ý từng em, bạn nhút nhát dễ hỏi hơn; nhưng tốn kém hơn."
+      - {emma: "Should students wear school uniforms?", focus: 2}
+      - tom: "Yes, I think so. Uniforms make everyone look the same, so rich and poor students feel equal. They also save time in the morning, because you don't have to choose your clothes."
+        reveal: 2
+        vi: "Nên: ai cũng như nhau, giàu nghèo bình đẳng; sáng không mất thời gian chọn quần áo."
+      - {emma: "Do teachers today have an easier job than in the past?", focus: 3}
+      - tom: "In some ways, yes, because they can use the internet and videos in class. But in other ways it's harder. Students are often distracted by their phones, so keeping their attention is a real challenge."
+        say: "In some ways, yes, because they can yooz the internet and videos in class. But in other ways it's harder. Students are often distracted by their phones, so keeping their attention is a real challenge."
+        reveal: 3
+        vi: "Phần nào dễ hơn nhờ internet, video; nhưng khó hơn vì học sinh mải điện thoại."
+      - emma: "Thank you very much, Tom. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - tom: "Thank you, Emma! See you in Speaking practice two."
+        vi: "Hẹn gặp ở video luyện nói 2."

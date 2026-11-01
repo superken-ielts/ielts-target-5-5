@@ -132,11 +132,23 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
-  await step("Unit 2 có 12 video đủ sáu phần; nút Listening mở phiên Listening có 3 video", async () => {
+  await step("Unit 2 có 16 video đủ sáu phần (+ 4 video luyện nói thêm); nút Listening mở phiên Listening có 3 video", async () => {
     const u2 = page.locator("#p-book .bk-unit", { hasText: "Unit 2 · Learning" });
-    assert.equal(await u2.locator(".bk-vids button").count(), 12);
+    assert.equal(await u2.locator(".bk-vids button").count(), 16);
     assert.deepEqual(await u2.locator(".bk-vgroup-t").allTextContents(),
       ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
+    assert.match(await u2.locator(".bk-vgroup").first().textContent(),
+      /Vocabulary 1 & Speaking 1[\s\S]*Speaking 2 & Vocabulary 2[\s\S]*Speaking practice 1[\s\S]*Speaking practice 2[\s\S]*Speaking practice 3[\s\S]*Speaking practice 4/);
+    // 4 video luyện nói thêm (đợt 24) mở từ thẻ unit, trong phiên Speaking & Vocabulary
+    await u2.locator(".bk-vids button", { hasText: "Speaking practice 1" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 2 · Speaking & Vocabulary/);
+    const sv = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(sv, ["U02-speaking-1.mp4", "U02-speaking-2.mp4", "U02-speaking-practice.mp4",
+      "U02-speaking-practice-2.mp4", "U02-speaking-practice-3.mp4", "U02-speaking-practice-4.mp4"]);
+    assert.ok(await page.locator("#lesson-U02-speaking-practice .bk-chaps button").count() >= 5);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
     await u2.locator(".bk-vids button", { hasText: "Listening 2: practise listening" }).click();
     await page.waitForSelector("#p-book .bk-video");
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 2 · Listening/);
