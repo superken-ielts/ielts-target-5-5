@@ -1,0 +1,365 @@
+# Video luyện nói thêm Unit 3 · Work — 2/4: đồng nghiệp và sếp, xin việc và phỏng vấn + thi thử 2 (đổi vai: Tom giám
+# khảo, Emma thí sinh). Người học tự tạm dừng video để trả lời, không có khoảng lặng chờ (đợt 25).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-speaking-practice-2.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml, U02-speaking-practice.yaml và U03-speaking-practice.yaml.
+# Cụm hai từ của Unit 3 (past experience, personal qualities) dùng trong câu trả lời về phỏng vấn; Phần 2 nối với ảnh
+# người quay phim trong trường quay (Speaking 1) — anh trai Emma là kỹ sư âm thanh ở nhà hát.
+id: U03-speaking-practice-2
+activity: U03-speaking-vocab
+title: "Unit 3 · Work"
+subtitle: "Speaking practice 2: colleagues, job interviews + mock test"
+title_vi: "Luyện nói 2/4 — đồng nghiệp và sếp, xin việc, phỏng vấn; thi thử đổi vai (Tom giám khảo, Emma thí sinh)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - tom: "Welcome to Speaking practice two for Unit 3: Work."
+        say: "Welcome to Speaking practice two for Unit three: Work."
+        vi: "Video luyện nói 2/4 của Unit 3."
+      - emma: "Today, we talk about colleagues and bosses, and about applying for jobs and job interviews. Remember: pause after each question, and answer it yourself first."
+        vi: "Đồng nghiệp và sếp, xin việc và phỏng vấn. Tạm dừng sau mỗi câu hỏi để tự trả lời trước."
+      - tom: "And in today's mock test, we swap roles. I'm the examiner, and Emma is the candidate!"
+        vi: "Thi thử hôm nay đổi vai: Tom làm giám khảo, Emma làm thí sinh."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: đồng nghiệp, sếp"
+    heading: "Tom and Emma ask each other · Colleagues and bosses"
+    heading_vi: "Đồng nghiệp và sếp — tả người, nêu ý kiến; I'd… cho tình huống giả định"
+    items:
+      - q: "Emma, what are your colleagues like?"
+        a: "They're great. There are twelve teachers at my school, from five different countries. We often go for dinner together after our evening classes."
+        ask: tom
+        by: emma
+        phrases: ["They're great.", "from five different countries", "go for dinner together"]
+      - q: "Do you get on well with the people you work with, Tom?"
+        a: "Yes, really well. Most of them are students like me, so we have a lot in common. When it's busy, we help each other."
+        ask: emma
+        by: tom
+        phrases: ["get on well with", "have a lot in common", "help each other"]
+      - q: "What makes a good boss?"
+        a: "A good boss listens to the staff, and gives clear instructions. My director never shouts. When we make a mistake, she helps us to fix it."
+        ask: tom
+        by: emma
+        phrases: ["listens to the staff", "clear instructions", "never shouts"]
+      - q: "What's your manager like?"
+        a: "She's strict but fair. She wants everything to be perfect, but she always says thank you at the end of the evening, and she remembers everyone's birthday."
+        ask: emma
+        by: tom
+        phrases: ["strict but fair", "says thank you", "remembers everyone's birthday"]
+      - q: "Would you prefer to work alone or in a team?"
+        a: "In a team, definitely. I get my best ideas when I talk to other people. Working alone all day would be too quiet for me."
+        ask: tom
+        by: emma
+        phrases: ["…, definitely.", "I get my best ideas when…", "would be too quiet"]
+      - q: "Have you ever had a problem with a colleague?"
+        a: "Once. A colleague always arrived late, so I had to do his work too. In the end, I talked to him politely, and now he's always on time."
+        ask: emma
+        by: tom
+        phrases: ["Once.", "In the end…", "talked to him politely"]
+      - q: "Is it a good idea to be friends with your boss?"
+        a: "It can be difficult. It's nice to have a friendly relationship, but the boss has to make decisions about everyone. Being too close can cause problems."
+        ask: tom
+        by: emma
+        phrases: ["It can be difficult.", "a friendly relationship", "cause problems"]
+      - q: "What would you do if a colleague took your idea?"
+        a: "I'd talk to them first, calmly. If it happened again, I'd speak to my manager. I think it's important to say something, and not just stay angry."
+        ask: emma
+        by: tom
+        phrases: ["I'd talk to them first", "If it happened again, I'd…", "not just stay angry"]
+    lines:
+      - {tom: "Emma, what are your colleagues like?", focus: 0}
+      - emma: "They're great. There are twelve teachers at my school, from five different countries. We often go for dinner together after our evening classes."
+        reveal: 0
+        vi: "Rất tốt: trường có 12 giáo viên từ 5 nước; hay đi ăn tối cùng nhau sau lớp buổi tối."
+      - {emma: "Do you get on well with the people you work with, Tom?", focus: 1}
+      - tom: "Yes, really well. Most of them are students like me, so we have a lot in common. When it's busy, we help each other."
+        reveal: 1
+        vi: "Rất hợp: đa số cũng là sinh viên nên có nhiều điểm chung; lúc đông khách thì giúp nhau."
+      - {tom: "What makes a good boss?", focus: 2}
+      - emma: "A good boss listens to the staff, and gives clear instructions. My director never shouts. When we make a mistake, she helps us to fix it."
+        reveal: 2
+        vi: "Sếp tốt biết lắng nghe, giao việc rõ ràng; giám đốc của Emma không bao giờ quát, giúp sửa khi mình sai."
+      - {emma: "What's your manager like?", focus: 3}
+      - tom: "She's strict but fair. She wants everything to be perfect, but she always says thank you at the end of the evening, and she remembers everyone's birthday."
+        reveal: 3
+        vi: "Nghiêm nhưng công bằng: muốn mọi thứ hoàn hảo, nhưng cuối buổi luôn cảm ơn, nhớ sinh nhật mọi người."
+      - {tom: "Would you prefer to work alone or in a team?", focus: 4}
+      - emma: "In a team, definitely. I get my best ideas when I talk to other people. Working alone all day would be too quiet for me."
+        reveal: 4
+        vi: "Làm nhóm: ý tưởng hay nhất đến khi nói chuyện với người khác; làm một mình cả ngày thì quá yên ắng."
+      - {emma: "Have you ever had a problem with a colleague?", focus: 5}
+      - tom: "Once. A colleague always arrived late, so I had to do his work too. In the end, I talked to him politely, and now he's always on time."
+        reveal: 5
+        vi: "Một lần: bạn đồng nghiệp hay đến muộn nên phải làm thay; nói chuyện lịch sự, giờ bạn ấy luôn đúng giờ."
+      - {tom: "Is it a good idea to be friends with your boss?", focus: 6}
+      - emma: "It can be difficult. It's nice to have a friendly relationship, but the boss has to make decisions about everyone. Being too close can cause problems."
+        reveal: 6
+        vi: "Có thể khó: thân thiện thì tốt, nhưng sếp phải quyết định cho cả nhóm; quá thân dễ gây rắc rối."
+      - {emma: "What would you do if a colleague took your idea?", focus: 7}
+      - tom: "I'd talk to them first, calmly. If it happened again, I'd speak to my manager. I think it's important to say something, and not just stay angry."
+        reveal: 7
+        vi: "Nói chuyện bình tĩnh với người đó trước; nếu lặp lại thì báo quản lý — nên lên tiếng, đừng chỉ giận."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: xin việc, phỏng vấn"
+    heading: "Tom and Emma ask each other · Applying for jobs and interviews"
+    heading_vi: "Xin việc và phỏng vấn — past experience, personal qualities, lời khuyên"
+    items:
+      - q: "Have you ever had a job interview, Emma?"
+        a: "Yes, quite a few. My interview for this school was online, because I was still in England. I was so nervous, because the internet kept stopping!"
+        ask: tom
+        by: emma
+        phrases: ["quite a few", "was online", "kept stopping"]
+      - q: "How do you prepare for a job interview?"
+        a: "I read about the company, and I practise answers to common questions, like: what are your strengths? I also choose my clothes the night before."
+        ask: emma
+        by: tom
+        phrases: ["I read about…", "common questions", "the night before"]
+      - q: "What should you wear to an interview?"
+        a: "Something smart and comfortable. For an office job, a shirt and dark trousers are usually fine. The most important thing is to look clean and tidy."
+        ask: tom
+        by: emma
+        phrases: ["smart and comfortable", "usually fine", "clean and tidy"]
+      - q: "What questions do interviewers usually ask?"
+        a: "They ask about your past experience, your personal qualities, and why you want the job. Sometimes they ask strange questions, like: if you were an animal, what would you be?"
+        ask: emma
+        by: tom
+        phrases: ["past experience", "personal qualities", "if you were…, what would…?"]
+      - q: "What's the most important thing in an interview?"
+        a: "Being yourself. Smile, listen carefully, and give real examples. Interviewers can tell when you're just repeating answers from the internet."
+        ask: tom
+        by: emma
+        phrases: ["Being yourself.", "give real examples", "can tell when…"]
+      - q: "Is the CV or the interview more important?"
+        a: "The interview, I think. A good CV gets you into the room, but in the interview the company sees your personality, and hears your English."
+        ask: emma
+        by: tom
+        phrases: ["…, I think.", "gets you into the room", "your personality"]
+      - q: "Should you ask questions at the end of an interview?"
+        a: "Yes, always. It shows that you're interested. For example, you can ask about training, or what a normal day in the job looks like."
+        ask: tom
+        by: emma
+        phrases: ["Yes, always.", "It shows that…", "what a normal day… looks like"]
+      - q: "How do you feel after an interview?"
+        a: "Usually tired, but relieved. I think about everything I said, and what I could say better next time. Then I try to forget it until they call me."
+        ask: emma
+        by: tom
+        phrases: ["tired, but relieved", "better next time", "until they call me"]
+    lines:
+      - {tom: "Have you ever had a job interview, Emma?", focus: 0}
+      - emma: "Yes, quite a few. My interview for this school was online, because I was still in England. I was so nervous, because the internet kept stopping!"
+        reveal: 0
+        vi: "Khá nhiều lần: phỏng vấn trường hiện tại qua mạng khi còn ở Anh — rất run vì mạng cứ bị ngắt!"
+      - {emma: "How do you prepare for a job interview?", focus: 1}
+      - tom: "I read about the company, and I practise answers to common questions, like: what are your strengths? I also choose my clothes the night before."
+        reveal: 1
+        vi: "Tìm hiểu công ty, luyện trả lời câu hỏi quen thuộc như 'điểm mạnh của bạn?'; chọn quần áo từ tối hôm trước."
+      - {tom: "What should you wear to an interview?", focus: 2}
+      - emma: "Something smart and comfortable. For an office job, a shirt and dark trousers are usually fine. The most important thing is to look clean and tidy."
+        reveal: 2
+        vi: "Lịch sự và thoải mái: việc văn phòng thì sơ mi, quần sẫm màu là được; quan trọng nhất là gọn gàng, sạch sẽ."
+      - {emma: "What questions do interviewers usually ask?", focus: 3}
+      - tom: "They ask about your past experience, your personal qualities, and why you want the job. Sometimes they ask strange questions, like: if you were an animal, what would you be?"
+        reveal: 3
+        vi: "Hỏi kinh nghiệm, phẩm chất, vì sao muốn làm; đôi khi hỏi lạ: 'nếu là con vật, bạn sẽ là con gì?'"
+      - {tom: "What's the most important thing in an interview?", focus: 4}
+      - emma: "Being yourself. Smile, listen carefully, and give real examples. Interviewers can tell when you're just repeating answers from the internet."
+        reveal: 4
+        vi: "Là chính mình: cười, nghe kỹ, đưa ví dụ thật; người phỏng vấn biết ngay khi bạn đọc thuộc câu trên mạng."
+      - {emma: "Is the CV or the interview more important?", focus: 5}
+      - tom: "The interview, I think. A good CV gets you into the room, but in the interview the company sees your personality, and hears your English."
+        reveal: 5
+        vi: "Phỏng vấn: CV tốt giúp bạn được gọi, nhưng phỏng vấn mới cho thấy tính cách và tiếng Anh của bạn."
+      - {tom: "Should you ask questions at the end of an interview?", focus: 6}
+      - emma: "Yes, always. It shows that you're interested. For example, you can ask about training, or what a normal day in the job looks like."
+        reveal: 6
+        vi: "Luôn nên hỏi: cho thấy bạn quan tâm — hỏi về đào tạo, hay một ngày làm việc bình thường ra sao."
+      - {emma: "How do you feel after an interview?", focus: 7}
+      - tom: "Usually tired, but relieved. I think about everything I said, and what I could say better next time. Then I try to forget it until they call me."
+        reveal: 7
+        vi: "Mệt nhưng nhẹ nhõm: nghĩ lại mình đã nói gì, lần sau nói sao cho hay hơn; rồi cố quên cho tới khi họ gọi."
+
+  - kind: qa
+    chapter: "Thi thử 2 · Phần 1"
+    heading: "Mock test 2 · Part 1 · Introduction and interview"
+    heading_vi: "Thi thử Phần 1 — đổi vai: Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Can you tell me your full name, please?"
+        a: "Good evening. My full name is Emma Louise Clarke."
+        ask: tom
+        by: emma
+        phrases: ["My full name is…"]
+      - q: "What do you like most about your job?"
+        a: "My students. Most of them are adults who work all day, and then come to class in the evening. They're tired, but they work so hard. It's really rewarding."
+        ask: tom
+        by: emma
+        phrases: ["Most of them are…", "work so hard", "really rewarding"]
+      - q: "Is there anything you don't like about it?"
+        a: "The hours, sometimes. I teach until nine at night, and on Saturday mornings, so I don't see my friends very often."
+        ask: tom
+        by: emma
+        phrases: ["…, sometimes.", "until nine at night", "not very often"]
+      - q: "Did you do any other jobs before you became a teacher?"
+        a: "Yes. After university, I worked in an office for a year. The job was boring and repetitive, so I did a teacher training course, and I've never looked back."
+        ask: tom
+        by: emma
+        phrases: ["After university…", "boring and repetitive", "I've never looked back"]
+      - q: "What jobs are popular with young people in England?"
+        a: "Jobs in technology and in the media are very popular. A lot of young people also want to work for themselves, for example as designers, or by selling things online."
+        ask: tom
+        by: emma
+        phrases: ["very popular", "work for themselves", "selling things online"]
+      - q: "Which jobs are well respected in your country?"
+        a: "Doctors, nurses and firefighters, because they help people in difficult situations. Teachers are respected too, but I don't think they're paid enough!"
+        ask: tom
+        by: emma
+        phrases: ["in difficult situations", "respected too", "paid enough"]
+      - q: "Would you like to change your job in the future?"
+        a: "Not really. I love teaching. But one day, I'd like to open my own small language school, back in my hometown."
+        ask: tom
+        by: emma
+        phrases: ["Not really.", "But one day…", "my own small…"]
+    lines:
+      - tom: "Now, the mock test. This time, I'm the examiner, and Emma is the candidate. Let's start part one."
+        focus: 0
+        vi: "Thi thử đổi vai: Tom là giám khảo, Emma là thí sinh."
+      - {tom: "Good evening. My name is Tom. Can you tell me your full name, please?", focus: 0}
+      - {emma: "Good evening. My full name is Emma Louise Clarke.", reveal: 0, vi: "Nói đủ họ tên."}
+      - {tom: "Thank you. Let's talk about your work. What do you like most about your job?", focus: 1}
+      - emma: "My students. Most of them are adults who work all day, and then come to class in the evening. They're tired, but they work so hard. It's really rewarding."
+        reveal: 1
+        vi: "Học viên: đa số đi làm cả ngày rồi tối đến lớp; mệt nhưng rất chăm — công việc rất ý nghĩa."
+      - {tom: "Is there anything you don't like about it?", focus: 2}
+      - emma: "The hours, sometimes. I teach until nine at night, and on Saturday mornings, so I don't see my friends very often."
+        reveal: 2
+        vi: "Giờ giấc: dạy tới 9 giờ tối và sáng thứ Bảy nên ít gặp bạn bè."
+      - {tom: "Did you do any other jobs before you became a teacher?", focus: 3}
+      - emma: "Yes. After university, I worked in an office for a year. The job was boring and repetitive, so I did a teacher training course, and I've never looked back."
+        reveal: 3
+        vi: "Có: ra trường làm văn phòng một năm, chán và lặp lại, nên học khóa đào tạo giáo viên — chưa bao giờ hối hận."
+      - {tom: "Let's talk about jobs in your country. What jobs are popular with young people in England?", focus: 4}
+      - emma: "Jobs in technology and in the media are very popular. A lot of young people also want to work for themselves, for example as designers, or by selling things online."
+        reveal: 4
+        vi: "Công nghệ, truyền thông rất chuộng; nhiều bạn trẻ muốn tự làm chủ: thiết kế, bán hàng online."
+      - {tom: "Which jobs are well respected in your country?", focus: 5}
+      - emma: "Doctors, nurses and firefighters, because they help people in difficult situations. Teachers are respected too, but I don't think they're paid enough!"
+        reveal: 5
+        vi: "Bác sĩ, y tá, lính cứu hỏa vì giúp người lúc khó khăn; giáo viên cũng được trọng nhưng lương chưa xứng!"
+      - {tom: "Would you like to change your job in the future?", focus: 6}
+      - emma: "Not really. I love teaching. But one day, I'd like to open my own small language school, back in my hometown."
+        reveal: 6
+        vi: "Không hẳn: rất yêu nghề dạy; nhưng một ngày muốn mở trường ngoại ngữ nhỏ ở quê nhà."
+
+  - kind: bullets
+    chapter: "Thi thử 2 · Phần 2"
+    heading: "Part 2 · Describe a person you know who has an interesting job."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "You should say: who the person is", vi: "người đó là ai"}
+      - {en: "what their job is", vi: "họ làm nghề gì"}
+      - {en: "what they do in a normal day", vi: "một ngày bình thường họ làm gì"}
+      - {en: "and explain why you think the job is interesting", vi: "và giải thích vì sao bạn thấy nghề đó thú vị"}
+    lines:
+      - tom: "Thank you. Now, in part two, I'm going to give you a topic, and I'd like you to talk about it for one to two minutes."
+        vi: "Phần 2: nói 1–2 phút."
+      - tom: "You'll have one minute to think about what you're going to say. You can make some notes if you wish."
+        vi: "1 phút chuẩn bị, được ghi chú — tạm dừng video nếu muốn tự chuẩn bị."
+      - tom: "Here's your topic. I'd like you to describe a person you know who has an interesting job."
+        vi: "Tả một người bạn quen có công việc thú vị."
+      - {tom: "You should say who the person is,", focus: 0}
+      - {tom: "what their job is,", focus: 1}
+      - {tom: "what they do in a normal day,", focus: 2}
+      - {tom: "and explain why you think the job is interesting.", focus: 3}
+
+  - kind: bullets
+    heading: "Emma's notes · one line for each point"
+    heading_vi: "Ghi chú của Emma — chỉ từ khóa"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "my brother Jack · two years older", vi: "anh trai Jack · hơn hai tuổi"}
+      - {en: "sound engineer · big theatre in London", vi: "kỹ sư âm thanh · nhà hát lớn ở London"}
+      - {en: "afternoon: check microphones, speakers · show: control desk at the back", vi: "chiều: kiểm tra micro, loa · lúc diễn: bàn điều khiển cuối nhà hát"}
+      - {en: "music + technology · famous actors · no two nights the same", vi: "âm nhạc + công nghệ · diễn viên nổi tiếng · không đêm nào giống đêm nào"}
+    lines:
+      - emma: "My notes are very short: a few key words for each point."
+        vi: "Ghi chú rất ngắn: vài từ khóa cho mỗi ý."
+      - tom: "All right? Remember, you have one to two minutes, so don't worry if I stop you. Can you start speaking now, please?"
+        vi: "Được chưa? Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu khoảng 1 phút — works as / in, thì hiện tại đơn cho việc hằng ngày"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my brother, Jack. He's two years older than me, and he works as a sound engineer in a big theatre in London."
+        note: "who · what job"
+      - text: "His job is to make sure that the audience can hear everything perfectly: the actors, the music and the special effects."
+        note: "what the job is"
+      - text: "On a normal day, he starts work in the afternoon. He checks all the microphones and speakers, and then, during the show, he sits at a huge control desk at the back of the theatre."
+        note: "a normal day"
+      - text: "I think his job is fascinating, because it mixes music and technology, which are his two passions. He's met lots of famous actors, and he says no two nights are ever the same."
+        note: "why it is interesting"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 2 · Phần 3"
+    heading: "Mock test 2 · Part 3 · Discussion"
+    heading_vi: "Phần 3 — nghề nghiệp nói chung: ý kiến + lý do + ví dụ"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "What makes a job interesting?"
+        a: "Variety, I think. If every day is different, and you keep learning new things, you don't get bored. Working with interesting people helps too."
+        ask: tom
+        by: emma
+        phrases: ["Variety, I think.", "keep learning new things", "helps too"]
+      - q: "Is salary the most important thing when people choose a job?"
+        a: "For many people, yes, especially when they have a family to support. But I think people are happier when they enjoy their work and feel useful."
+        ask: tom
+        by: emma
+        phrases: ["For many people, yes", "a family to support", "feel useful"]
+      - q: "Will robots and computers do many of our jobs in the future?"
+        a: "Some jobs, yes, especially repetitive ones, like work in a factory. But jobs that need creativity or care, like teaching or nursing, will still need real people."
+        ask: tom
+        by: emma
+        phrases: ["Some jobs, yes", "repetitive ones", "will still need…"]
+      - q: "Is it better to stay in one job for a long time, or to change jobs often?"
+        a: "It depends on the person. Staying in one company can lead to promotion, and it feels secure. But changing jobs helps you to learn new skills and meet new people."
+        ask: tom
+        by: emma
+        phrases: ["It depends on the person.", "lead to promotion", "feels secure"]
+    lines:
+      - tom: "Thank you. We've been talking about an interesting job. Now I'd like to ask you some more general questions about jobs."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về nghề nghiệp."
+      - {tom: "What makes a job interesting?", focus: 0}
+      - emma: "Variety, I think. If every day is different, and you keep learning new things, you don't get bored. Working with interesting people helps too."
+        reveal: 0
+        vi: "Sự đa dạng: mỗi ngày một khác, luôn học điều mới thì không chán; đồng nghiệp thú vị cũng giúp."
+      - {tom: "Is salary the most important thing when people choose a job?", focus: 1}
+      - emma: "For many people, yes, especially when they have a family to support. But I think people are happier when they enjoy their work and feel useful."
+        reveal: 1
+        vi: "Với nhiều người là có, nhất là khi phải nuôi gia đình; nhưng người ta vui hơn khi thích việc và thấy mình có ích."
+      - {tom: "Will robots and computers do many of our jobs in the future?", focus: 2}
+      - emma: "Some jobs, yes, especially repetitive ones, like work in a factory. But jobs that need creativity or care, like teaching or nursing, will still need real people."
+        reveal: 2
+        vi: "Một số việc lặp lại như trong nhà máy thì có; việc cần sáng tạo, chăm sóc như dạy học, y tá vẫn cần người thật."
+      - {tom: "Is it better to stay in one job for a long time, or to change jobs often?", focus: 3}
+      - emma: "It depends on the person. Staying in one company can lead to promotion, and it feels secure. But changing jobs helps you to learn new skills and meet new people."
+        reveal: 3
+        vi: "Tùy người: ở lâu một công ty dễ thăng chức, ổn định; đổi việc giúp học kỹ năng mới, gặp người mới."
+      - tom: "Thank you, Emma. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - emma: "Thank you, Tom. See you in Speaking practice three!"
+        vi: "Hẹn gặp ở video luyện nói 3."

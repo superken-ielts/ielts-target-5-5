@@ -102,26 +102,22 @@ scenes:
   - kind: practice
     chapter: "Speaking D: đến lượt bạn"
     heading: "Speaking D · Your turn"
-    heading_vi: "Trả lời thành tiếng — thêm lý do hoặc chi tiết, mỗi câu 10 giây"
+    heading_vi: "Mỗi câu thêm một lý do hoặc một chi tiết"
     items:
       - {q: "What was your favourite subject at school?", hint: "I loved… because…"}
       - {q: "Who was your best friend at primary school?", hint: "His / Her name was… We…"}
       - {q: "How did you get to school in the morning?", hint: "I usually walked… / My mum used to…"}
       - {q: "Do you remember any school trips?", hint: "I remember once we went to…"}
       - {q: "When did you start learning English?", hint: "When I was… years old."}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng video, Emma đọc hết các câu hỏi.
     lines:
-      - emma: "Exercise D. Now it's your turn. Answer each question, and add a reason or a detail."
-        vi: "Bài D: đến lượt bạn — thêm lý do hoặc chi tiết."
-      - {emma: "What was your favourite subject at school?", focus: 0}
-      - {wait: 10}
-      - {emma: "Who was your best friend at primary school?", focus: 1}
-      - {wait: 10}
-      - {emma: "How did you get to school in the morning?", focus: 2}
-      - {wait: 10}
-      - {emma: "Do you remember any school trips?", focus: 3}
-      - {wait: 10}
-      - {emma: "When did you start learning English?", focus: 4}
-      - {wait: 10}
+      - emma: "Exercise D. Now it's your turn. Pause the video, and answer these questions out loud. Add a reason or a detail."
+        vi: "Bài D: tạm dừng video, trả lời thành tiếng — thêm lý do hoặc chi tiết."
+      - {emma: "What was your favourite subject at school?", focus: 0, pause: 0.5}
+      - {emma: "Who was your best friend at primary school?", focus: 1, pause: 0.5}
+      - {emma: "How did you get to school in the morning?", focus: 2, pause: 0.5}
+      - {emma: "Do you remember any school trips?", focus: 3, pause: 0.5}
+      - {emma: "When did you start learning English?", focus: 4, pause: 1.5}
 
   - kind: blanks
     chapter: "Vocabulary A: tám môn học"

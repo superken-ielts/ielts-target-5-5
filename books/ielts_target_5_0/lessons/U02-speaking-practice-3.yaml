@@ -1,0 +1,334 @@
+# Video luyện nói thêm Unit 2 · Learning — 3/4: thi cử, cách học và trí nhớ + thi thử 3 (Phần 2: cả Tom và Emma trả
+# lời cùng một thẻ đề; Phần 3 hỏi hai chiều). Người học tự tạm dừng video, không có khoảng lặng chờ (đợt 24).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-speaking-practice-3.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml và U02-speaking-practice.yaml (giữ khớp ở cả bốn video).
+# A level (bài luyện đề Reading "Are A Levels Just Too Easy?", U02-exam-reading) đọc là "eigh level" — viết trong `say`.
+id: U02-speaking-practice-3
+activity: U02-speaking-vocab
+title: "Unit 2 · Learning"
+subtitle: "Speaking practice 3: exams, studying, memory + mock test"
+title_vi: "Luyện nói 3/4 — thi cử, thói quen học, trí nhớ; thi thử Phần 2–3 (cả hai cùng một thẻ đề)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Speaking practice three for Unit 2: Learning."
+        say: "Welcome to Speaking practice three for Unit two: Learning."
+        vi: "Video luyện nói 3/4 của Unit 2."
+      - tom: "Today: exams and tests, and how we study and remember things."
+        vi: "Thi cử, cách học và cách ghi nhớ."
+      - emma: "In the mock test, we both answer the same part two card, so you can hear two different answers."
+        vi: "Thi thử: cả hai cùng trả lời một thẻ đề Phần 2 — nghe hai cách trả lời khác nhau."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: thi cử"
+    heading: "Tom and Emma ask each other · Exams and tests"
+    heading_vi: "Thi cử — take an exam, pass, fail, get good grades: kể lại và nêu cảm xúc"
+    items:
+      - q: "How do you feel before an exam, Tom?"
+        a: "Very nervous. The night before, I usually can't sleep, and I can't eat breakfast in the morning. But when the exam starts, I feel much calmer."
+        ask: emma
+        by: tom
+        phrases: ["Very nervous.", "The night before…", "much calmer"]
+      - q: "Emma, what was the most important exam you took at school?"
+        a: "My A levels, at eighteen. I took English, French and History, and I needed good grades to get into university. I studied every evening for months."
+        ask: tom
+        by: emma
+        phrases: ["I took…", "I needed good grades", "get into university"]
+      - q: "How did you prepare for your university entrance exam?"
+        a: "I went to extra classes three evenings a week, and I did lots of practice tests. My grandfather also helped me with Maths. He was a Maths teacher, so he was really strict!"
+        ask: emma
+        by: tom
+        phrases: ["extra classes", "practice tests", "helped me with…"]
+      - q: "Have you ever failed an exam?"
+        a: "Yes, a Maths exam when I was fifteen. I didn't study enough, because I thought it was easy. I had to take it again in the summer, and I learned my lesson!"
+        ask: tom
+        by: emma
+        phrases: ["I didn't study enough", "I had to take it again", "I learned my lesson"]
+      - q: "Do you think exams are a good way to test students?"
+        a: "Partly. Exams show what you know, but some students are good at learning and bad at exams. I think projects and presentations should count too."
+        ask: emma
+        by: tom
+        phrases: ["Partly.", "good at… / bad at…", "should count too"]
+      - q: "Did you get good grades at school?"
+        a: "In English and Art, yes. I always got top marks. But my Maths grades were terrible. My parents were never angry, though. They just said: do your best."
+        ask: tom
+        by: emma
+        phrases: ["I always got top marks", "were terrible", "do your best"]
+      - q: "What did you do after your last exam at school?"
+        a: "My friends and I went straight to the beach and had a picnic. We swam, ate ice cream and laughed for hours. It was the best feeling in the world!"
+        ask: tom
+        by: emma
+        phrases: ["went straight to…", "for hours", "the best feeling in the world"]
+      - q: "Are you taking any exams this year, Tom?"
+        a: "Yes, IELTS, in December. I need band 5.5 for an exchange programme in Australia, so I'm practising every day, just like you!"
+        ask: emma
+        by: tom
+        phrases: ["I need band…", "an exchange programme", "just like you!"]
+    lines:
+      - {emma: "How do you feel before an exam, Tom?", focus: 0}
+      - tom: "Very nervous. The night before, I usually can't sleep, and I can't eat breakfast in the morning. But when the exam starts, I feel much calmer."
+        reveal: 0
+        vi: "Rất hồi hộp: đêm trước mất ngủ, sáng không ăn nổi; vào thi rồi lại bình tĩnh hơn nhiều."
+      - {tom: "Emma, what was the most important exam you took at school?", focus: 1}
+      - emma: "My A levels, at eighteen. I took English, French and History, and I needed good grades to get into university. I studied every evening for months."
+        say: "My eigh levels, at eighteen. I took English, French and History, and I needed good grades to get into university. I studied every evening for months."
+        reveal: 1
+        vi: "Kỳ thi A level năm 18 tuổi: Anh văn, tiếng Pháp, Sử; cần điểm tốt để vào đại học."
+      - {emma: "How did you prepare for your university entrance exam?", focus: 2}
+      - tom: "I went to extra classes three evenings a week, and I did lots of practice tests. My grandfather also helped me with Maths. He was a Maths teacher, so he was really strict!"
+        reveal: 2
+        vi: "Học thêm ba buổi tối mỗi tuần, làm nhiều đề luyện; ông nội — thầy dạy toán — kèm Toán rất nghiêm."
+      - {tom: "Have you ever failed an exam?", focus: 3}
+      - emma: "Yes, a Maths exam when I was fifteen. I didn't study enough, because I thought it was easy. I had to take it again in the summer, and I learned my lesson!"
+        reveal: 3
+        vi: "Có, môn Toán năm 15 tuổi: tưởng dễ nên học không đủ, phải thi lại mùa hè — rút ra bài học!"
+      - {emma: "Do you think exams are a good way to test students?", focus: 4}
+      - tom: "Partly. Exams show what you know, but some students are good at learning and bad at exams. I think projects and presentations should count too."
+        reveal: 4
+        vi: "Một phần: thi cho thấy kiến thức, nhưng có bạn học giỏi mà thi kém; nên tính cả dự án, thuyết trình."
+      - {tom: "Did you get good grades at school?", focus: 5}
+      - emma: "In English and Art, yes. I always got top marks. But my Maths grades were terrible. My parents were never angry, though. They just said: do your best."
+        reveal: 5
+        vi: "Anh văn, Mỹ thuật luôn điểm cao; Toán thì tệ; bố mẹ không giận, chỉ bảo: cố hết sức."
+      - {tom: "What did you do after your last exam at school?", focus: 6}
+      - emma: "My friends and I went straight to the beach and had a picnic. We swam, ate ice cream and laughed for hours. It was the best feeling in the world!"
+        reveal: 6
+        vi: "Cả nhóm ra thẳng bãi biển picnic: bơi, ăn kem, cười hàng giờ — cảm giác tuyệt nhất trên đời!"
+      - {emma: "Are you taking any exams this year, Tom?", focus: 7}
+      - tom: "Yes, IELTS, in December. I need band 5.5 for an exchange programme in Australia, so I'm practising every day, just like you!"
+        say: "Yes, eye-elts, in December. I need band five point five for an exchange programme in Australia, so I'm practising every day, just like you!"
+        reveal: 7
+        vi: "Có, thi IELTS tháng 12: cần 5.5 để đi trao đổi ở Úc, nên ngày nào cũng luyện — như bạn vậy!"
+
+  - kind: qa
+    chapter: "Hỏi qua lại: cách học, trí nhớ"
+    heading: "Tom and Emma ask each other · Studying and memory"
+    heading_vi: "Thói quen học và trí nhớ — nói thói quen bằng thì hiện tại đơn, nêu lý do"
+    items:
+      - q: "Where do you prefer to study, Emma?"
+        a: "At a quiet café near my flat. I like a little background noise, and the coffee helps me to concentrate. At home, I always find something else to do!"
+        ask: tom
+        by: emma
+        phrases: ["a little background noise", "helps me to concentrate", "something else to do"]
+      - q: "And where do you usually study, Tom?"
+        a: "In the university library. My flat is too noisy, because my flatmates often play music. In the library, everyone is quiet, so I can focus."
+        ask: emma
+        by: tom
+        phrases: ["too noisy", "my flatmates", "so I can focus"]
+      - q: "Do you prefer to study in the morning or in the evening?"
+        a: "In the morning, definitely. My mind is fresh, and nobody sends me messages at six a.m.! By the evening, I'm too tired to remember anything."
+        ask: tom
+        by: emma
+        phrases: ["…, definitely.", "My mind is fresh", "too tired to…"]
+      - q: "Do you listen to music when you study?"
+        a: "Yes, but only music without words, like piano music. If a song has words, I start singing, and then I stop studying!"
+        ask: emma
+        by: tom
+        phrases: ["only music without words", "If…, I start + -ing"]
+      - q: "How do you remember new information?"
+        a: "I write notes by hand, with lots of colours and little pictures. Then I explain the topic to a friend. If I can explain it, I really understand it."
+        ask: tom
+        by: emma
+        phrases: ["by hand", "explain… to…", "If I can…, I…"]
+      - q: "Are you good at remembering names?"
+        a: "Not really. I never forget a face, but I often forget names. So when I meet someone new, I try to say their name two or three times in the conversation."
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "I never forget a face", "I try to…"]
+      - q: "Do you use your phone when you study?"
+        a: "Only for my dictionary app. I put my phone on silent, and I keep it in another room, because messages are a big distraction."
+        ask: tom
+        by: emma
+        phrases: ["on silent", "in another room", "a big distraction"]
+      - q: "Have you ever studied all night?"
+        a: "Yes, once, before a Statistics exam in my first year. It was a terrible idea. I was so tired that I couldn't think clearly, and I got a low mark. Never again!"
+        ask: emma
+        by: tom
+        phrases: ["It was a terrible idea.", "so tired that…", "Never again!"]
+    lines:
+      - {tom: "Where do you prefer to study, Emma?", focus: 0}
+      - emma: "At a quiet café near my flat. I like a little background noise, and the coffee helps me to concentrate. At home, I always find something else to do!"
+        reveal: 0
+        vi: "Ở quán cà phê yên tĩnh gần nhà: hơi có tiếng động nền, cà phê giúp tập trung; ở nhà toàn bị việc khác kéo đi!"
+      - {emma: "And where do you usually study, Tom?", focus: 1}
+      - tom: "In the university library. My flat is too noisy, because my flatmates often play music. In the library, everyone is quiet, so I can focus."
+        reveal: 1
+        vi: "Thư viện trường: căn hộ ồn vì bạn cùng nhà hay mở nhạc; thư viện yên tĩnh nên tập trung được."
+      - {tom: "Do you prefer to study in the morning or in the evening?", focus: 2}
+      - emma: "In the morning, definitely. My mind is fresh, and nobody sends me messages at six a.m.! By the evening, I'm too tired to remember anything."
+        say: "In the morning, definitely. My mind is fresh, and nobody sends me messages at six in the morning! By the evening, I'm too tired to remember anything."
+        reveal: 2
+        vi: "Buổi sáng: đầu óc minh mẫn, 6 giờ sáng chẳng ai nhắn tin; tối thì mệt, không nhớ nổi gì."
+      - {emma: "Do you listen to music when you study?", focus: 3}
+      - tom: "Yes, but only music without words, like piano music. If a song has words, I start singing, and then I stop studying!"
+        reveal: 3
+        vi: "Có, nhưng chỉ nhạc không lời như piano; bài có lời là mình hát theo rồi bỏ học luôn!"
+      - {tom: "How do you remember new information?", focus: 4}
+      - emma: "I write notes by hand, with lots of colours and little pictures. Then I explain the topic to a friend. If I can explain it, I really understand it."
+        reveal: 4
+        vi: "Ghi chép tay, nhiều màu, hình nhỏ; rồi giảng lại cho bạn — giảng được tức là hiểu thật."
+      - {emma: "Are you good at remembering names?", focus: 5}
+      - tom: "Not really. I never forget a face, but I often forget names. So when I meet someone new, I try to say their name two or three times in the conversation."
+        reveal: 5
+        vi: "Không giỏi: nhớ mặt nhưng hay quên tên; gặp người mới thì cố nhắc tên họ hai, ba lần khi nói chuyện."
+      - {tom: "Do you use your phone when you study?", focus: 6}
+      - emma: "Only for my dictionary app. I put my phone on silent, and I keep it in another room, because messages are a big distraction."
+        reveal: 6
+        vi: "Chỉ dùng từ điển; để điện thoại chế độ im lặng, cất sang phòng khác vì tin nhắn làm sao nhãng."
+      - {emma: "Have you ever studied all night?", focus: 7}
+      - tom: "Yes, once, before a Statistics exam in my first year. It was a terrible idea. I was so tired that I couldn't think clearly, and I got a low mark. Never again!"
+        reveal: 7
+        vi: "Có một lần, trước kỳ thi Thống kê năm nhất: mệt đến không nghĩ nổi, điểm thấp — không bao giờ nữa!"
+
+  - kind: bullets
+    chapter: "Thi thử 3 · Phần 2 (Tom)"
+    heading: "Part 2 · Describe an important exam that you took."
+    heading_vi: "Thẻ đề Phần 2 — Tom trả lời trước, Emma trả lời sau"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what the exam was", vi: "đó là kỳ thi gì"}
+      - {en: "when you took it", vi: "bạn thi khi nào"}
+      - {en: "how you prepared for it", vi: "bạn ôn thi thế nào"}
+      - {en: "and explain why it was important", vi: "và giải thích vì sao kỳ thi đó quan trọng"}
+    lines:
+      - emma: "Now, the mock test. In part two, I'd like you to talk for one to two minutes. You have one minute to think, and you can make some notes."
+        vi: "Thi thử Phần 2: 1 phút chuẩn bị, nói 1–2 phút — tạm dừng video nếu muốn tự làm trước."
+      - emma: "Here's your topic. I'd like you to describe an important exam that you took."
+        vi: "Tả một kỳ thi quan trọng bạn đã tham gia."
+      - {emma: "You should say what the exam was,", focus: 0}
+      - {emma: "when you took it,", focus: 1}
+      - {emma: "how you prepared for it,", focus: 2}
+      - {emma: "and explain why it was important.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · the university entrance exam"
+    heading_vi: "Ghi chú của Tom — kỳ thi vào đại học"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "university entrance exam · June · age 18 · three days · hot room", vi: "thi đại học · tháng 6 · 18 tuổi · ba ngày · phòng thi nóng"}
+      - {en: "almost a year · extra classes · practice test every Sunday", vi: "gần một năm · học thêm · Chủ nhật nào cũng làm đề"}
+      - {en: "grandad: Maths every evening · read twice, don't panic", vi: "ông: kèm Toán mỗi tối · đọc đề hai lần, đừng hoảng"}
+      - {en: "business course in Ho Chi Minh City · parents proud", vi: "ngành kinh doanh ở TP. Hồ Chí Minh · bố mẹ tự hào"}
+    lines:
+      - tom: "Here are my notes. I chose my university entrance exam, because it changed my life."
+        vi: "Tom chọn kỳ thi đại học — kỳ thi thay đổi cuộc đời."
+      - emma: "All right? Can you start speaking now, please?"
+        vi: "Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — mỗi ý trên thẻ là một đoạn"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my university entrance exam. I took it in June, when I was eighteen, at the end of grade twelve. It lasted three days, and the exam room was really hot."
+        note: "what · when"
+      - text: "I prepared for almost a year. I went to extra classes three evenings a week, and I did a practice test every Sunday morning. My grandfather helped me with Maths every evening. He was strict, but very patient."
+        note: "how I prepared"
+      - text: "The Maths exam was the hardest, but I remembered my grandfather's advice: read every question twice, and don't panic. It really worked."
+        note: "how I prepared (2)"
+      - text: "It was important because my score decided my future. I got a place on a business course in Ho Chi Minh City, and my parents were really proud of me. I'll never forget that day."
+        say: "It was important because my score decided my future. I got a place on a business course in Ho Chee Min City, and my parents were really proud of me. I'll never forget that day."
+        note: "why it was important"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: bullets
+    chapter: "Thi thử 3 · Phần 2 (Emma)"
+    heading: "Part 2 · The same card: Emma's turn"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "A levels · age 18 · English, French, History", vi: "kỳ thi A level · 18 tuổi · Anh văn, tiếng Pháp, Sử"}
+      - {en: "town library with Lucy · past papers · test each other", vi: "thư viện thị trấn với Lucy · đề các năm trước · đố nhau"}
+      - {en: "French speaking test · too shy → practised in the mirror", vi: "thi nói tiếng Pháp · quá nhút nhát → tập nói trước gương"}
+      - {en: "two As and a B · English Literature at university", vi: "hai điểm A, một điểm B · vào đại học ngành Văn học Anh"}
+    lines:
+      - tom: "Now it's my turn to be the examiner. Emma, please describe an important exam that you took."
+        vi: "Đổi vai: Tom làm giám khảo, Emma trả lời cùng thẻ đề."
+      - emma: "These are my notes. I chose the most important exams of my school life."
+        vi: "Ghi chú của Emma."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu của Emma — cùng thẻ đề, câu chuyện khác"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my A levels. These are the final exams at school in England, and I took them when I was eighteen. I chose English, French and History."
+        say: "I'd like to talk about my eigh levels. These are the final exams at school in England, and I took them when I was eighteen. I chose English, French and History."
+        note: "what · when"
+      - text: "To prepare, I studied in the town library with my best friend Lucy every evening. We did lots of past papers, and we tested each other on dates and French words."
+        note: "how I prepared"
+      - text: "The hardest part was the French speaking test, because I was very shy. So for weeks, I practised speaking French to myself in the mirror. My family thought I was crazy!"
+        note: "how I prepared (2)"
+      - text: "It was important because I needed two A grades to study English Literature at university. In the end, I got two As and a B, and I got my place. I was over the moon!"
+        say: "It was important because I needed two eigh grades to study English Literature at university. In the end, I got two eighs and a B, and I got my place. I was over the moon!"
+        note: "why it was important"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 3 · Phần 3"
+    heading: "Mock test 3 · Part 3 · Discussion (Emma asks Tom)"
+    heading_vi: "Phần 3 — áp lực thi cử: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Do students today have more pressure than in the past?"
+        a: "I think they do. More students want to go to university, but the best universities still have the same number of places. And parents spend a lot of money on extra classes, so they expect high scores."
+        phrases: ["I think they do.", "the same number of…", "they expect…"]
+      - q: "Should schools have fewer exams?"
+        a: "Yes, I think so. Students need time to understand things, not just to memorise them for the next test. But a few exams are useful, because they show teachers what students still need to learn."
+        phrases: ["Yes, I think so.", "not just to…", "a few exams are useful"]
+    lines:
+      - emma: "Thank you. Now, part three. I'd like to ask you some more general questions about exams."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về thi cử."
+      - {emma: "Do students today have more pressure than in the past?", focus: 0}
+      - tom: "I think they do. More students want to go to university, but the best universities still have the same number of places. And parents spend a lot of money on extra classes, so they expect high scores."
+        reveal: 0
+        vi: "Có: nhiều người muốn vào đại học nhưng trường tốt vẫn ít chỗ; bố mẹ tốn tiền học thêm nên kỳ vọng điểm cao."
+      - {emma: "Should schools have fewer exams?", focus: 1}
+      - tom: "Yes, I think so. Students need time to understand things, not just to memorise them for the next test. But a few exams are useful, because they show teachers what students still need to learn."
+        reveal: 1
+        vi: "Nên: học sinh cần thời gian để hiểu, không chỉ học thuộc để thi; nhưng vài bài thi vẫn có ích cho thầy cô."
+
+  - kind: qa
+    heading: "Mock test 3 · Part 3 · Discussion (Tom asks Emma)"
+    heading_vi: "Đổi vai — Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Is it fair to judge students on one final exam?"
+        a: "Not completely. Anyone can have a bad day, especially when they're nervous. I think schools should look at a student's work over the whole year, not just one exam."
+        ask: tom
+        by: emma
+        phrases: ["Not completely.", "have a bad day", "over the whole year"]
+      - q: "How can parents help their children before an important exam?"
+        a: "They can make sure their children eat well and sleep enough. And they shouldn't add more pressure. Sometimes a hug and a cup of tea help more than another practice test!"
+        ask: tom
+        by: emma
+        phrases: ["make sure…", "add more pressure", "help more than…"]
+    lines:
+      - {tom: "Now let me ask you, Emma. Is it fair to judge students on one final exam?", focus: 0}
+      - emma: "Not completely. Anyone can have a bad day, especially when they're nervous. I think schools should look at a student's work over the whole year, not just one exam."
+        reveal: 0
+        vi: "Không hẳn: ai cũng có ngày xui, nhất là khi run; nên xét bài làm cả năm, không chỉ một kỳ thi."
+      - {tom: "How can parents help their children before an important exam?", focus: 1}
+      - emma: "They can make sure their children eat well and sleep enough. And they shouldn't add more pressure. Sometimes a hug and a cup of tea help more than another practice test!"
+        reveal: 1
+        vi: "Lo cho con ăn ngủ đủ, đừng thêm áp lực; đôi khi một cái ôm và tách trà giúp hơn một đề luyện nữa!"
+      - tom: "Thank you, Emma. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - emma: "See you in Speaking practice four, the last one!"
+        vi: "Hẹn gặp ở video luyện nói 4 — video cuối."

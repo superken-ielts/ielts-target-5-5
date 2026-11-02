@@ -156,6 +156,7 @@ def test_flite_two_voices():
 
 GENKI = ROOT / "books" / "Genki"
 EU_A2 = ROOT / "books" / "book_english_unlimited_a2_elemetary"
+OWS = ROOT / "books" / "book_oxford_word_skills_basic"
 
 
 @pytest.mark.parametrize("bdir", [
@@ -165,7 +166,9 @@ EU_A2 = ROOT / "books" / "book_english_unlimited_a2_elemetary"
                                                  reason="chưa có video N5 hoặc chưa cài misaki[ja]")),
     pytest.param(EU_A2, marks=pytest.mark.skipif(not (EU_A2 / "lessons" / "lessons.json").exists(),
                                                  reason="chưa có video Giai đoạn 0")),
-], ids=["ielts", "genki", "eu-a2"])
+    pytest.param(OWS, marks=pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(),
+                                               reason="chưa có video Oxford Word Skills Basic")),
+], ids=["ielts", "genki", "eu-a2", "ows"])
 def test_committed_lessons_match_manifest(bdir):
     """Kịch bản đã commit hợp lệ, khớp lessons.json và file video có thật (hồi quy trên sách thật)."""
     data = json.loads((bdir / "lessons" / "lessons.json").read_text(encoding="utf-8"))
@@ -439,6 +442,72 @@ def test_unit1_3_video_coverage():
             assert have[part], f"{unit['item']} {part}"
 
 
+@pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
+def test_your_turn_has_no_countdown_and_units_have_speaking_practice():
+    """Người học yêu cầu: "Đến lượt bạn" không bắt chờ đếm ngược — Emma nhắc tạm dừng video rồi đọc hết câu hỏi (Unit 2:
+    đợt 24, Unit 3: đợt 25); Unit 1–3 mỗi unit có 4 video luyện nói thêm, không có khoảng lặng chờ nào
+    (docs/agent-hoc-tap/06 mục 9)."""
+    for path in sorted((REAL / "lessons").glob("U0[23]-*.yaml")):
+        for scene in sc.load(path).scenes:
+            if scene.kind == "practice":
+                assert scene.self_paced, f"{path.name}: {scene.heading}"
+    built = {x["id"]: x for x in json.loads((REAL / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    for unit in ("U01", "U02", "U03"):
+        for vid in [f"{unit}-speaking-practice"] + [f"{unit}-speaking-practice-{k}" for k in (2, 3, 4)]:
+            lesson = sc.load(REAL / "lessons" / f"{vid}.yaml")
+            assert built[vid]["activity"] == lesson.activity == f"{unit}-speaking-vocab"
+            assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), vid
+
+
+@pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")
+def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
+    """Người học yêu cầu (đợt 26): mỗi unit Oxford Word Skills Basic một video 7–10 phút, không đếm ngược (không `wait` /
+    `echo`, người học tự tạm dừng), có 1–2 phần nói theo chủ đề: Tom và Emma hỏi đáp (`qa`) và "Đến lượt bạn"
+    (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5."""
+    built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    scripts = sorted((OWS / "lessons").glob("U*.yaml"))
+    assert [p.name[:3] for p in scripts][:7] == [f"U0{n}" for n in range(1, 8)]     # module Basic English đủ 7 unit
+    for path in scripts:
+        lesson = sc.load(path)
+        assert lesson.activity == f"{lesson.id[:3]}-words", lesson.id
+        assert 7 * 60 <= built[lesson.id]["duration"] <= 10 * 60, (lesson.id, built[lesson.id]["duration"])
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
+        kinds = [s.kind for s in lesson.scenes]
+        assert "qa" in kinds and "practice" in kinds, lesson.id
+        assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), lesson.id
+
+
+SELF_PACED = {
+    "id": "T-6", "activity": "U01-speaking-vocab", "title": "Unit 2", "subtitle": "Speaking 1", "tag": "UNIT 2",
+    "speakers": LESSON["speakers"],
+    "scenes": [
+        {"kind": "practice", "chapter": "Your turn", "heading": "Your turn",
+         "items": [{"q": "What was your favourite subject?", "hint": "My favourite subject was…"},
+                   {"q": "Did you have to wear a uniform?"}],
+         "lines": [{"a": "Pause the video, and answer these questions."},
+                   {"a": "What was your favourite subject?", "focus": 0, "pause": 0.5},
+                   {"a": "Did you have to wear a uniform?", "focus": 1, "pause": 1.5}]},
+    ],
+}
+
+
+def test_practice_without_wait_is_self_paced(tmp_path):
+    """"Đến lượt bạn" không có `wait`: không đếm ngược; slide hiện cả danh sách câu và tô câu đang đọc (đợt 24)."""
+    from lesson_video.slides import C, _hex
+    lesson = sc.Lesson.model_validate(copy.deepcopy(SELF_PACED))
+    assert lesson.scenes[0].self_paced
+    assert not sc.Lesson.model_validate(copy.deepcopy(LESSON)).scenes[3].self_paced    # có `wait` → đếm ngược như cũ
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    assert all(f.countdown is None for f in tl.frames)
+    assert [f.focus for f in tl.frames] == [None, 0, 1]
+    assert tl.frames[2].dur > tl.frames[1].dur > 0                                     # `pause` giữ khung lâu hơn
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    pics = [slides.render(fr, fr.start / tl.total) for fr in tl.frames]
+    assert all(p.size == (W, H) for p in pics)
+    row1 = (W - 70, 216 + 84 + 40)   # giữa hàng thứ hai của danh sách (2 câu → mỗi hàng cao 84)
+    assert pics[2].getpixel(row1) == _hex(C["soft"]) and pics[1].getpixel(row1) == _hex(C["bg"])
+
+
 def _wav(path: Path, seconds: float, rate: int = 16000):
     import wave
     import numpy as np
@@ -645,11 +714,15 @@ def test_phoneme_review_flags_known_misreadings():
         {"b": "My mother lives in Hue.", "say": "My mother livz in Whey."},  # đã sửa bằng `say`
         {"b": "Hello there."},                                              # không có gì cần soát
         {"a": "Room 12, please."},                                          # số
+        {"b": "When do shops close?"},                                      # close (động từ) bị đọc /kloʊs/ → ⚠ (đợt 26)
     ]}]
     lesson = sc.Lesson.model_validate(data)
     fake = {"Use these words.": "jˈuːs ðiːz wˈɜːdz.", "Can I use your phone?": "kæn aɪ jˈuːz jʊɹ fˈoʊn?",
-            "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz."}
+            "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz.",
+            "When do shops close?": "wˌɛn dˈuː ʃˈɑːps klˈoʊs?"}
     rows = list(ph.review(lesson, lambda text, lang: fake[text]))
-    assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please."]
-    assert [bool(r.warnings) for r in rows] == [True, False, False, False] and "yooz" in rows[0].warnings[0]
-    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 5
+    assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please.",
+                                      "When do shops close?"]
+    assert [bool(r.warnings) for r in rows] == [True, False, False, False, True] and "yooz" in rows[0].warnings[0]
+    assert "cloze" in rows[4].warnings[0]
+    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 6

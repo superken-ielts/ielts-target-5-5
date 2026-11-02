@@ -1,0 +1,346 @@
+# Video Oxford Word Skills Basic · Unit 3 — I can say days and dates (sách in tr. 16–17, Answer key tr. 205–206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói).
+# Đáp án bài 2, 5, 6 (lịch tr. 17), 7 theo Answer key; bài 1 làm trong sách. Bài 3 (ABOUT YOU AND YOUR COUNTRY): câu của Emma
+# theo "Answers from a British person" trong Answer key, câu của Tom về Việt Nam (Tết, 30/4, 1/5, 2/9).
+# Nghe và viết: câu ở ngôi thứ nhất do Emma đọc là chuyện của Emma, nên phải khớp hồ sơ (sinh 15/9; đến Việt Nam 4/8/2023,
+# khớp "dạy ở TP. HCM đã ba năm"); các câu khác để trung tính (the party, the hotel).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U03-days-dates.yaml
+id: U03-days-dates
+activity: U03-words
+title: "Unit 3 · Days and dates"
+subtitle: "I can say days and dates"
+title_vi: "Thứ, tháng, mùa, ngày lễ; số thứ tự; đọc và viết ngày tháng, năm kiểu Anh"
+tag: "BASIC ENGLISH · UNIT 3"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 3: days and dates. After this video, you can say the days, the months and the seasons, and say any date in English."
+        say: "Welcome to Unit three: days and dates. After this video, you can say the days, the months and the seasons, and say any date in English."
+        vi: "Unit 3: thứ, tháng, mùa và đọc ngày tháng bất kỳ."
+      - tom: "Remember: no countdown. Pause the video when you want to answer, then listen to us."
+        vi: "Không đếm ngược: muốn trả lời thì tự tạm dừng video."
+
+  - kind: bullets
+    chapter: "Thứ, tháng, mùa"
+    heading: "A · Days, months, and seasons"
+    heading_vi: "Thứ và tháng luôn viết hoa chữ cái đầu: Monday, January — mùa thì không"
+    items:
+      - {en: "Monday · Tuesday · Wednesday · Thursday · Friday · Saturday · Sunday", vi: "các ngày trong tuần — Wednesday đọc /ˈwenzdeɪ/, chữ d không đọc"}
+      - {en: "January · February · March · April · May · June", vi: "tháng 1 – 6"}
+      - {en: "July · August · September · October · November · December", vi: "tháng 7 – 12"}
+      - {en: "spring (March – May) · summer (June – August)", vi: "mùa xuân · mùa hè (ở Anh)"}
+      - {en: "autumn (September – November) · winter (December – February)", vi: "mùa thu · mùa đông (ở Anh)"}
+      - {en: "Christmas Day (25 December) · New Year's Day (1 January) · your birthday", vi: "ngày lễ — birthday là ngày bạn sinh ra"}
+    lines:
+      - {emma: "The days of the week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.", focus: 0}
+      - {tom: "Wednesday is difficult. We write a d, but we don't say it.", say: "Wednesday is difficult. We write a D, but we don't say it.", focus: 0, vi: "Wednesday: chữ d không đọc."}
+      - {emma: "The months of the year. January, February, March, April, May, June.", focus: 1}
+      - {tom: "July, August, September, October, November, December.", focus: 2}
+      - {emma: "Days and months always have a capital letter. Monday, not monday. January, not january.", focus: 2, vi: "Thứ và tháng luôn viết hoa."}
+      - {tom: "The seasons in Britain: spring, from March to May, and summer, from June to August.", focus: 3}
+      - {emma: "Autumn, from September to November, and winter, from December to February.", focus: 4}
+      - {tom: "And special days: Christmas Day, New Year's Day, and your birthday.", focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: ngày, tháng, mùa kế tiếp"
+    heading: "Exercise 2 · Write the next day, month, or season"
+    heading_vi: "May → June · Sunday → Monday — đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "Monday  →  ___", answer: "Tuesday"}
+      - {n: 2, q: "August  →  ___", answer: "September"}
+      - {n: 3, q: "spring  →  ___", answer: "summer"}
+      - {n: 4, q: "November  →  ___", answer: "December"}
+      - {n: 5, q: "Friday  →  ___", answer: "Saturday"}
+      - {n: 6, q: "March  →  ___", answer: "April"}
+      - {n: 7, q: "January  →  ___", answer: "February"}
+      - {n: 8, q: "autumn  →  ___", answer: "winter"}
+      - {n: 9, q: "Wednesday  →  ___", answer: "Thursday"}
+      - {n: 10, q: "July  →  ___", answer: "August"}
+    lines:
+      - emma: "Exercise 2. Write the next day, month, or season. Pause the video and try."
+        say: "Exercise two. Write the next day, month, or season. Pause the video and try."
+        vi: "Bài 2: viết ngày, tháng, mùa kế tiếp — tạm dừng video và làm."
+      - {tom: "Tuesday. September. Summer.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "December. Saturday. April.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "February. Winter. Thursday. August.", reveal: [7, 8, 9, 10], focus: 9}
+
+  - kind: bullets
+    chapter: "Số thứ tự"
+    heading: "B · Ordinal numbers"
+    heading_vi: "Số thứ tự dùng để nói ngày: 1st first, 2nd second, 3rd third, còn lại thêm -th"
+    items:
+      - {en: "1st first · 2nd second · 3rd third · 4th fourth · 5th fifth", vi: "first, second, third: đặc biệt; fifth (không phải fiveth)"}
+      - {en: "6th sixth · 7th seventh · 8th eighth · 9th ninth · 10th tenth", vi: "eighth chỉ một chữ t · ninth không có e"}
+      - {en: "11th eleventh · 12th twelfth · 13th thirteenth … 20th twentieth", vi: "twelfth: ve → f · twentieth: y → ie"}
+      - {en: "21st twenty-first · 22nd twenty-second · 23rd twenty-third · 30th thirtieth · 31st thirty-first", vi: "chỉ số cuối đổi thành số thứ tự"}
+    lines:
+      - emma: "For dates, we need ordinal numbers. First, second, third. Then, most numbers just add t, h."
+        say: "For dates, we need ordinal numbers. First, second, third. Then, most numbers just add, T, H."
+        focus: 0
+        vi: "Ngày tháng dùng số thứ tự: first, second, third, còn lại thêm -th."
+      - {tom: "Fourth, fifth. Fifth, not fiveth.", focus: 0}
+      - {tom: "Sixth, seventh, eighth, ninth, tenth.", focus: 1}
+      - {emma: "Careful with the spelling. Eighth has one t. Ninth has no e.", say: "Careful with the spelling. Eighth has one T. Ninth has no E.", focus: 1, vi: "eighth một chữ t; ninth không có e."}
+      - {tom: "Eleventh, twelfth, thirteenth, twentieth.", focus: 2}
+      - {tom: "Twenty-first, twenty-second, twenty-third, thirtieth, thirty-first.", focus: 3}
+      - {emma: "Only the last number changes: twenty-first, not twentieth-first.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 5: viết số thứ tự"
+    heading: "Exercise 5 · Complete the words"
+    heading_vi: "Điền chữ còn thiếu — ni_th → ninth · đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "th_rd  →  ___", answer: "third"}
+      - {n: 2, q: "twent_eth  →  ___", answer: "twentieth"}
+      - {n: 3, q: "fi_th  →  ___", answer: "fifth"}
+      - {n: 4, q: "f_rst  →  ___", answer: "first"}
+      - {n: 5, q: "eig_th  →  ___", answer: "eighth"}
+      - {n: 6, q: "si_teenth  →  ___", answer: "sixteenth"}
+      - {n: 7, q: "fo_rteenth  →  ___", answer: "fourteenth"}
+      - {n: 8, q: "th_rteenth  →  ___", answer: "thirteenth"}
+      - {n: 9, q: "s_cond  →  ___", answer: "second"}
+    lines:
+      - emma: "Exercise 5. Complete the words. Pause the video and try."
+        say: "Exercise five. Complete the words. Pause the video and try."
+        vi: "Bài 5: điền chữ còn thiếu — tạm dừng video và làm."
+      - {tom: "Third. Twentieth. Fifth.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "First. Eighth. Sixteenth.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Fourteenth. Thirteenth. Second.", reveal: [7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 6: xem lịch"
+    heading: "Exercise 6 · Look at the calendar. When's …?"
+    heading_vi: "Mở lịch tháng 3 và tháng 4 ở tr. 17 trong sách — đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "the second Tuesday in April  →  ___", answer: "April the tenth"}
+      - {n: 2, q: "the second Wednesday in April  →  ___", answer: "April the eleventh"}
+      - {n: 3, q: "the first Sunday in March  →  ___", answer: "March the fourth"}
+      - {n: 4, q: "the first Friday in April  →  ___", answer: "April the sixth"}
+      - {n: 5, q: "the third Tuesday in April  →  ___", answer: "April the seventeenth"}
+      - {n: 6, q: "the fifth Saturday in March  →  ___", answer: "March the thirty-first"}
+      - {n: 7, q: "the third Wednesday in March  →  ___", answer: "March the twenty-first"}
+      - {n: 8, q: "the fourth Monday in April  →  ___", answer: "April the twenty-third"}
+    lines:
+      - emma: "Exercise 6. Look at the calendar on page seventeen, and answer the questions. Write the dates as we say them. Pause the video and try."
+        say: "Exercise six. Look at the calendar on page seventeen, and answer the questions. Write the dates as we say them. Pause the video and try."
+        vi: "Bài 6: xem lịch ở tr. 17, viết ngày theo cách đọc — tạm dừng video và làm."
+      - {emma: "When's the second Tuesday in April?", focus: 0}
+      - {tom: "April the tenth. Or, the tenth of April.", reveal: 1}
+      - {emma: "The second Wednesday in April?", focus: 1}
+      - {tom: "April the eleventh.", reveal: 2}
+      - {emma: "The first Sunday in March?", focus: 2}
+      - {tom: "March the fourth.", reveal: 3}
+      - {emma: "The first Friday in April?", focus: 3}
+      - {tom: "April the sixth.", reveal: 4}
+      - {emma: "The third Tuesday in April?", focus: 4}
+      - {tom: "April the seventeenth.", reveal: 5}
+      - {emma: "The fifth Saturday in March?", focus: 5}
+      - {tom: "March the thirty-first.", reveal: 6}
+      - {emma: "The third Wednesday in March?", focus: 6}
+      - {tom: "March the twenty-first.", reveal: 7}
+      - {emma: "And the fourth Monday in April?", focus: 7}
+      - {tom: "April the twenty-third.", reveal: 8}
+
+  - kind: bullets
+    chapter: "Đọc và viết ngày tháng"
+    heading: "Spotlight · Saying and writing dates"
+    heading_vi: "Kiểu Anh viết ngày trước tháng (giống tiếng Việt): 10.3 = 10 tháng 3; kiểu Mỹ viết tháng trước"
+    items:
+      - {en: "We write: 10 March · 10th March · 10.3.08 · 10/3/08", vi: "viết: ngày trước, tháng sau"}
+      - {en: "We say: the tenth of March · March the tenth", vi: "đọc: thêm the và of — What's the date today? It's …"}
+      - {en: "1980 nineteen eighty · 1995 nineteen ninety-five", vi: "năm trước 2000: đọc thành hai số"}
+      - {en: "2006 two thousand and six · 2020 twenty twenty", vi: "năm sau 2000: two thousand and … hoặc twenty …"}
+    lines:
+      - {emma: "We can write a date like this: ten March, or tenth March, or with numbers: ten, three, oh eight.", focus: 0}
+      - emma: "In Britain, the day comes first, like in Vietnamese. In the United States, the month comes first, so be careful!"
+        focus: 0
+        vi: "Kiểu Anh: ngày trước tháng (giống tiếng Việt); kiểu Mỹ: tháng trước ngày."
+      - {tom: "What's the date today?", focus: 1}
+      - {emma: "It's the tenth of March. Or, it's March the tenth. Don't forget the and of.", focus: 1, vi: "Đọc: the tenth of March hoặc March the tenth — nhớ the, of."}
+      - {tom: "Years. Nineteen eighty. Nineteen ninety-five.", focus: 2}
+      - {tom: "Two thousand and six. Twenty twenty.", focus: 3}
+      - {emma: "After two thousand, you can say two thousand and fifteen, or twenty fifteen. Both are fine.", focus: 3, vi: "Năm 2015: two thousand and fifteen hoặc twenty fifteen."}
+
+  - kind: blanks
+    chapter: "Bài 7: đọc ngày tháng"
+    heading: "Exercise 7 · Write the dates or years as we say them"
+    heading_vi: "6.9 = the sixth of September / September the sixth — đáp án theo Answer key tr. 205–206"
+    items:
+      - {n: 1, q: "3.2  →  ___", answer: "the third of February"}
+      - {n: 2, q: "4.7  →  ___", answer: "the fourth of July"}
+      - {n: 3, q: "10.12  →  ___", answer: "the tenth of December"}
+      - {n: 4, q: "12.8  →  ___", answer: "the twelfth of August"}
+      - {n: 5, q: "15.1  →  ___", answer: "the fifteenth of January"}
+      - {n: 6, q: "1989  →  ___", answer: "nineteen eighty-nine"}
+      - {n: 7, q: "21.5  →  ___", answer: "the twenty-first of May"}
+      - {n: 8, q: "30.11  →  ___", answer: "the thirtieth of November"}
+      - {n: 9, q: "22.4  →  ___", answer: "the twenty-second of April"}
+      - {n: 10, q: "2015  →  ___", answer: "twenty fifteen · two thousand and fifteen"}
+    lines:
+      - emma: "Exercise 7. Write the dates or years as we say them. Remember, the day comes first. Pause the video and try."
+        say: "Exercise seven. Write the dates or years as we say them. Remember, the day comes first. Pause the video and try."
+        vi: "Bài 7: viết ngày, năm theo cách đọc — ngày đứng trước. Tạm dừng video và làm."
+      - {emma: "Three, two.", focus: 0}
+      - {tom: "The third of February.", reveal: 1}
+      - {emma: "Four, seven.", focus: 1}
+      - {tom: "The fourth of July.", reveal: 2}
+      - {emma: "Ten, twelve.", focus: 2}
+      - {tom: "The tenth of December.", reveal: 3}
+      - {emma: "Twelve, eight.", focus: 3}
+      - {tom: "The twelfth of August.", reveal: 4}
+      - {emma: "Fifteen, one.", focus: 4}
+      - {tom: "The fifteenth of January.", reveal: 5}
+      - {emma: "One, nine, eight, nine.", focus: 5}
+      - {tom: "Nineteen eighty-nine.", reveal: 6}
+      - {emma: "Twenty-one, five.", focus: 6}
+      - {tom: "The twenty-first of May.", reveal: 7}
+      - {emma: "Thirty, eleven.", focus: 7}
+      - {tom: "The thirtieth of November.", reveal: 8}
+      - {emma: "Twenty-two, four.", focus: 8}
+      - {tom: "The twenty-second of April.", reveal: 9}
+      - {emma: "Two, oh, one, five.", focus: 9}
+      - {tom: "Twenty fifteen. Or, two thousand and fifteen.", reveal: 10}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write the dates"
+    heading_vi: "Như bài nghe IELTS — tạm dừng sau mỗi câu, viết ngày tháng (ngày trước, tháng sau)"
+    items:
+      - {n: 1, q: "The party is on ___.", answer: "22 June"}
+      - {n: 2, q: "The course starts on ___.", answer: "Monday 3 October"}
+      - {n: 3, q: "The exam is on ___.", answer: "13 May"}
+      - {n: 4, q: "The hotel opened in ___.", answer: "1998"}
+      - {n: 5, q: "I arrived in Vietnam on ___.", answer: "4 August 2023"}
+      - {n: 6, q: "The shop is closed on ___.", answer: "1 January"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the date."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết ngày tháng."
+      - {emma: "Number one. The party is on the twenty-second of June.", focus: 0}
+      - {emma: "Number two. The course starts on Monday, the third of October.", focus: 1}
+      - {emma: "Number three. The exam is on the thirteenth of May.", focus: 2}
+      - {emma: "Number four. The hotel opened in nineteen ninety-eight.", focus: 3}
+      - {emma: "Number five. I arrived in Vietnam on the fourth of August, twenty twenty-three.", focus: 4}
+      - {emma: "Number six. The shop is closed on the first of January.", focus: 5}
+      - {tom: "Twenty-two June. Monday, three October. Thirteen May, not thirty.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Nineteen ninety-eight. Four August, twenty twenty-three. And one January.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: về bạn và đất nước bạn"
+    heading: "Speaking 1 · About you and your country"
+    heading_vi: "Bài 3 trong sách — Emma trả lời theo Answer key (người Anh), Tom nói về Việt Nam"
+    items:
+      - q: "Which month is your birthday, Emma?"
+        a: "September. It's on the fifteenth of September, at the start of autumn."
+        ask: tom
+        by: emma
+        phrases: ["on the fifteenth of September", "at the start of autumn"]
+      - q: "And yours, Tom?"
+        a: "March. My birthday is on the ninth of March."
+        ask: emma
+        by: tom
+        phrases: ["My birthday is on…"]
+      - q: "Which season do you like best? Why?"
+        a: "I like spring, because it's light, and the trees and plants start to grow."
+        ask: tom
+        by: emma
+        phrases: ["I like … best", "because it's light", "start to grow"]
+      - q: "What about you? Does Vietnam have four seasons?"
+        a: "In the north, yes. But in the south, we only have two: the rainy season and the dry season. I like the dry season best, because it's sunny every day."
+        ask: emma
+        by: tom
+        phrases: ["In the north…", "the rainy season", "the dry season"]
+      - q: "Which day of the week do you like best? Why?"
+        a: "Friday, because it's nearly the weekend."
+        ask: tom
+        by: emma
+        phrases: ["…, because…", "nearly the weekend"]
+      - q: "What's your favourite month, Emma?"
+        a: "December. It's dark and cold in England, but the streets are full of lights, and I love Christmas."
+        ask: tom
+        by: emma
+        phrases: ["dark and cold", "full of lights", "I love…"]
+      - q: "What do you usually do on your birthday, Tom?"
+        a: "Nothing big. I have dinner with a few close friends, and my mum always calls me from Da Lat in the morning."
+        ask: emma
+        by: tom
+        phrases: ["Nothing big.", "a few close friends", "always calls me"]
+      - q: "What do you do on New Year's Day?"
+        a: "Our big New Year is Tết, in January or February. On the first day, we visit our relatives, and children get lucky money."
+        ask: emma
+        by: tom
+        phrases: ["in January or February", "On the first day…", "lucky money"]
+      - q: "What are two other special days in your country, and when are they?"
+        a: "The thirtieth of April, Reunification Day, and the second of September, our National Day. People have a holiday, and there are fireworks in the evening."
+        ask: emma
+        by: tom
+        phrases: ["the thirtieth of April", "the second of September", "have a holiday"]
+    lines:
+      - emma: "Speaking. Exercise 3 asks about you and your country. Pause after each question, and answer it yourself first."
+        say: "Speaking. Exercise three asks about you and your country. Pause after each question, and answer it yourself first."
+        vi: "Nói: bài 3 hỏi về bạn và đất nước bạn — tạm dừng để tự trả lời trước."
+      - {tom: "Which month is your birthday, Emma?", focus: 0}
+      - {emma: "September. It's on the fifteenth of September, at the start of autumn.", reveal: 0, vi: "Tháng 9 — ngày 15 tháng 9, đầu mùa thu."}
+      - {emma: "And yours, Tom?", focus: 1}
+      - {tom: "March. My birthday is on the ninth of March.", reveal: 1, vi: "Tháng 3 — ngày 9 tháng 3."}
+      - {tom: "Which season do you like best? Why?", focus: 2}
+      - {emma: "I like spring, because it's light, and the trees and plants start to grow.", reveal: 2, vi: "Thích mùa xuân: trời sáng, cây cối bắt đầu đâm chồi."}
+      - {emma: "What about you? Does Vietnam have four seasons?", focus: 3}
+      - {tom: "In the north, yes. But in the south, we only have two: the rainy season and the dry season. I like the dry season best, because it's sunny every day.", reveal: 3, vi: "Miền Bắc có bốn mùa; miền Nam chỉ có mùa mưa và mùa khô — thích mùa khô vì ngày nào cũng nắng."}
+      - {tom: "Which day of the week do you like best? Why?", focus: 4}
+      - {emma: "Friday, because it's nearly the weekend.", reveal: 4, vi: "Thứ Sáu, vì sắp tới cuối tuần."}
+      - {tom: "What's your favourite month, Emma?", focus: 5}
+      - {emma: "December. It's dark and cold in England, but the streets are full of lights, and I love Christmas.", reveal: 5, vi: "Tháng 12: ở Anh tối và lạnh, nhưng phố xá rực đèn, và rất thích Giáng sinh."}
+      - {emma: "What do you usually do on your birthday, Tom?", focus: 6}
+      # "close friends": tính từ, Kokoro đọc đúng /kloʊs/ — `phonemes` đánh ⚠ nhầm, đừng đổi thành `cloze`
+      - tom: "Nothing big. I have dinner with a few close friends, and my mum always calls me from Da Lat in the morning."
+        say: "Nothing big. I have dinner with a few close friends, and my mum always calls me from Dah Lot in the morning."
+        reveal: 6
+        vi: "Không có gì to tát: ăn tối với vài bạn thân; sáng nào mẹ cũng gọi từ Đà Lạt."
+      - {emma: "What do you do on New Year's Day?", focus: 7}
+      - {tom: "Our big New Year is Tết, in January or February. On the first day, we visit our relatives, and children get lucky money.", say: "Our big New Year is Tet, in January or February. On the first day, we visit our relatives, and children get lucky money.", reveal: 7, vi: "Năm mới lớn nhất là Tết (tháng 1 hoặc 2): mùng 1 đi thăm họ hàng, trẻ con được lì xì."}
+      - {emma: "What are two other special days in your country, and when are they?", focus: 8}
+      - {tom: "The thirtieth of April, Reunification Day, and the second of September, our National Day. People have a holiday, and there are fireworks in the evening.", reveal: 8, vi: "30 tháng 4 (Ngày Thống nhất) và 2 tháng 9 (Quốc khánh): được nghỉ, tối có pháo hoa."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: dates in your life"
+    heading_vi: "Nhớ the … of …: the ninth of March"
+    items:
+      - {q: "What's the date today?", hint: "It's the … of … / It's … the …"}
+      - {q: "When's your birthday?", hint: "It's on the … of …"}
+      - {q: "Which season do you like best? Why?", hint: "I like … because …"}
+      - {q: "When is the next public holiday in your country?", hint: "It's on the … of …"}
+      - {q: "What year did you start learning English?", hint: "In two thousand and … / In twenty …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "What's the date today?", focus: 0, pause: 0.5}
+      - {emma: "When's your birthday?", focus: 1, pause: 0.5}
+      - {emma: "Which season do you like best? Why?", focus: 2, pause: 0.5}
+      - {emma: "When is the next public holiday in your country?", focus: 3, pause: 0.5}
+      - {emma: "What year did you start learning English?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che bảng tr. 16 và nói thứ, tháng, mùa"
+    items:
+      - {en: "Monday … Sunday · January … December", vi: "luôn viết hoa"}
+      - {en: "first, second, third, fourth … twenty-first", vi: "số thứ tự: fifth, eighth, ninth, twelfth"}
+      - {en: "the tenth of March · March the tenth", vi: "đọc ngày: nhớ the, of; viết ngày trước tháng"}
+      - {en: "nineteen eighty-nine · twenty fifteen", vi: "đọc năm"}
+      - {en: "Next: Unit 4 · Countries and nationalities", vi: "Tiếp theo: Unit 4 · quốc gia, quốc tịch"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Days and months, always with a capital letter.", focus: 0}
+      - {tom: "First, second, third, fourth, and twenty-first.", focus: 1}
+      - {emma: "The tenth of March, or March the tenth.", focus: 2}
+      - {tom: "Nineteen eighty-nine. Twenty fifteen.", focus: 3}
+      - {emma: "Now cover the table on page sixteen, and say the days, months and seasons. See you in Unit 4!", say: "Now cover the table on page sixteen, and say the days, months and seasons. See you in Unit four!", focus: 4}

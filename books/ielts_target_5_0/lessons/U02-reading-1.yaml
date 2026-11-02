@@ -69,23 +69,20 @@ scenes:
   - kind: practice
     chapter: "Bài B: nói về học lái xe"
     heading: "Reading 1B · Talk with a partner"
-    heading_vi: "Trả lời thành tiếng, mỗi câu 8 giây"
+    heading_vi: "Có bạn học thì hỏi đáp với nhau"
     items:
       - {q: "Can you drive?", hint: "Yes, I can. / No, I can't, but I can ride a motorbike."}
       - {q: "When did you get your licence?", hint: "I got it when I was… / two years ago."}
       - {q: "How many driving lessons did you have?", hint: "I had about… lessons."}
       - {q: "Did you pass your test the first time you took it?", hint: "Yes, I did! / No, I failed the first time."}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng video, Emma đọc hết các câu hỏi.
     lines:
-      - emma: "Exercise B. Talk with a partner and answer the questions. Answer out loud."
-        vi: "Bài B: trả lời thành tiếng."
-      - {emma: "Can you drive?", focus: 0}
-      - {wait: 8}
-      - {emma: "When did you get your licence?", focus: 1}
-      - {wait: 8}
-      - {emma: "How many driving lessons did you have?", focus: 2}
-      - {wait: 8}
-      - {emma: "Did you pass your test the first time you took it?", focus: 3}
-      - {wait: 8}
+      - emma: "Exercise B. Pause the video, and answer these questions out loud. If you can, talk with a partner."
+        vi: "Bài B: tạm dừng video, trả lời thành tiếng — có bạn học thì hỏi đáp với nhau."
+      - {emma: "Can you drive?", focus: 0, pause: 0.5}
+      - {emma: "When did you get your licence?", focus: 1, pause: 0.5}
+      - {emma: "How many driving lessons did you have?", focus: 2, pause: 0.5}
+      - {emma: "Did you pass your test the first time you took it?", focus: 3, pause: 1.5}
 
   - kind: bullets
     chapter: "Exam tip: dò tìm"

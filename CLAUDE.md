@@ -21,6 +21,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   khoảng track `K01-09..K01-23`); mỗi track phải thuộc đúng một phiên. Xem `docs/agent-hoc-tap/07-lo-trinh-n5-tieng-nhat.md`.
 - Giai đoạn 0 (`books/book_english_unlimited_a2_elemetary/`, `lessons-v1`): track theo nhãn đĩa (`track: "1.{n}"`), Part 1
   khai hai lần vì trang 49 quét trùng. Xem `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md`.
+- Oxford Word Skills Basic (`books/book_oxford_word_skills_basic/`, `lessons-v1`): một PDF quét khai ba lần (`course-book`,
+  `answer-key`, `word-list`) vì thiếu hai trang trắng; tên bước dùng `{title}`. Xem `docs/agent-hoc-tap/09-oxford-word-skills-basic.md`.
 
 ## Video bài giảng
 
@@ -34,6 +36,10 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   file 07 mục 4; cần `misaki[ja]` và phông Noto Sans CJK. Video Giai đoạn 0 (English Unlimited A2): sổ tay từng unit
   ở file 08 mục 6; lời bài nghe chép sẵn ở `work/transcripts/` (`python -m lesson_video transcribe`). Trước khi dựng,
   soát cách đọc bằng `python -m lesson_video phonemes <kịch bản>` (⚠ = lỗi đã gặp, sửa bằng `say`).
+- IELTS Target 5.0: 4 video luyện nói thêm mỗi unit (Unit 1–3 đã có) theo khuôn, hồ sơ nhân vật Tom / Emma và danh sách
+  chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
+- Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
+  và độ phủ ở file 09 mục 5 (Unit 1–7 đã có).
 
 ## Kiểm tra trước khi commit
 

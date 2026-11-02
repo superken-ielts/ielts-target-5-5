@@ -5,6 +5,340 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 26 — 02/11/2026: Oxford Word Skills Basic trong tab Sách, 7 video Unit 1–7
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 25 (`5f8359c`). Người học đã đưa file sách lên `main`
+(`cbfc72c`, chỉ có PDF quét). Xong đợt này đẩy lên nhánh, rồi lên `main` theo yêu cầu người học (như đợt 24–25).
+
+### Yêu cầu
+
+1. Rà cuốn *Oxford Word Skills Basic* vừa thêm.
+2. Đưa vào menu tab Sách.
+3. Học bằng video 7–10 phút, không đếm ngược; mỗi video có 1–2 bài luyện nói theo chủ đề từ vựng.
+
+### Đã làm
+
+**Rà sách** (file 09 mục 1):
+- 80 unit 1–3 trang trong 11 module, mỗi module có một bài Review;
+- Answer key đủ mọi bài, có câu trả lời mẫu cho ABOUT YOU;
+- Word list có phiên âm;
+- không có CD-ROM nên không có audio.
+
+Chủ đề trùng phần lớn IELTS Speaking Part 1 và các tình huống General Training. Kết luận: dùng làm **sách từ vựng học
+song song**, mỗi ngày một unit, không thay giáo trình chính.
+
+**Lộ trình trong tab Sách:** `book.yaml` mẫu `lessons-v1`, sinh từ trang Contents.
+- 92 phiên 30 phút: Starter unit, 80 unit, 11 Review; 19 tuần ở nhịp 5 phiên/tuần.
+- Mỗi phiên mở đúng trang sách, nút thứ hai mở trang Answer key của unit. Starter unit mở thêm Vocabulary building và
+  Word list; Unit 72 mở thêm bảng Common irregular verbs.
+- Bản quét 254 trang thiếu hai trang trắng (tr. in 204, 236), nên cùng một PDF khai ba lần:
+  - `course-book`: trang in + 1;
+  - `answer-key`: bằng trang in;
+  - `word-list`: trang in − 1.
+- Độ lệch dò bằng OCR dải chân trang (`rapidocr-onnxruntime`): đọc được số trang in ở 244/254 trang, soát thêm bằng
+  mắt 11 trang Review và 12 trang đầu unit.
+- Trang Answer key của từng unit dò bằng OCR tiêu đề "Unit N" trên tr. 205–224.
+- Thẻ sách trong `books/catalog.json` đứng sau English Unlimited A2, trước IELTS Target 5.0. Ghi chú nhóm IELTS nói cách
+  học song song.
+
+**Mẫu `lessons-v1`:** tên bước dùng được `{title}`, `{no}`… như ghi chú (hàm chung `_fill`). Nhờ vậy mỗi phiên mang tên
+chủ đề, ví dụ "Unit 1 · Numbers · từ vựng, bài tập, nói" thay vì 80 phiên cùng tên "từ vựng". Các sách cũ không dùng
+chỗ thay trong tên bước nên gói của chúng không đổi.
+
+**7 video Unit 1–7** (module Basic English, 51:08), khuôn ở file 09 mục 5. Mỗi video theo cùng thứ tự:
+1. từ vựng của trang sách;
+2. bài trong sách, đáp án theo Answer key;
+3. phần thêm ngoài sách;
+4. "Nghe và viết";
+5. Nói 1: Tom và Emma hỏi đáp;
+6. Nói 2: đến lượt bạn, tự tạm dừng;
+7. tổng kết.
+
+Không có `wait` / `echo`. Muốn người học làm bài thì Emma nhắc "Pause the video and try".
+
+| Video | Dài | Thêm ngoài sách | Nói 1 |
+|---|---|---|---|
+| `U01-numbers` | 7:26 | -teen / -ty, số lớn, số trong đời sống | Những con số quanh bạn (8 cặp) |
+| `U02-time` | 7:14 | buổi trong ngày, nearly / just after, nói giờ hai cách | Giờ giấc ở nước bạn (10) |
+| `U03-days-dates` | 7:10 | đọc và viết ngày tháng kiểu Anh / Mỹ | Tết, 30/4, 2/9, sinh nhật (9) |
+| `U04-countries` | 7:43 | the British / Italians, Britain và the UK, trọng âm -ese / -ian | Quê hương, ngôn ngữ, đồng nghiệp 5 nước của Emma (8) |
+| `U05-classroom` | 7:10 | a piece of paper, I've got, borrow / lend, đoán đồ vật "It's a thing you use to…" | IELTS Part 1 "Bags", "Pens and writing" (9) |
+| `U06-language-words` | 7:18 | động từ có quy tắc / bất quy tắc, chữ viết tắt trong từ điển, mẹo IELTS đoán loại từ cần điền | Học ngữ pháp và từ (7) |
+| `U07-questions-language` | 7:07 | I don't know / can't remember / not sure, tự đặt câu hỏi, chữ cái dễ nhầm, đánh vần tên | Hỏi về từ ngữ (8) |
+
+Lúc làm video, gặp và đã xử lý:
+- **Answer key in nhầm** Unit 6 bài 2: đảo câu 4↔5 và 8↔9 so với nhãn trong sách. Video đưa đáp án đúng và nhắc người
+  học; file 09 mục 3.3 ghi lại.
+- **Video ngắn:** bản dựng đầu Unit 1 dài 6:36. Ba unit một trang (5, 6, 7) ước lượng chỉ 5:45–6:21. Đã thêm "Nghe và
+  viết" và các cảnh có ích cho IELTS (không kéo dài câu thoại); mọi video giờ dài 7–10 phút.
+- **Câu "Nghe và viết" ở ngôi thứ nhất mâu thuẫn hồ sơ nhân vật**, ví dụ Emma đọc "My birthday is on the
+  twenty-second of June" trong khi cùng video đó Emma sinh 15/9. Đã viết lại thành câu trung tính ở Unit 1–4 rồi dựng
+  lại; quy ước ghi ở file 09 mục 5.3.
+- **Bố cục:**
+  - thẻ `mcq` 9 câu bị cắt chữ → đổi sang `blanks`;
+  - phông không có ✓ ✗;
+  - `notice___` nhìn như hai từ → đáp án ghi cả từ ghép.
+- **Cách đọc** (bảng `say` ở file 09 mục 5.5):
+  - chữ cái khi đánh vần (`eigh`, `yoo`…);
+  - mạo từ khi nói về chính từ đó (`eigh`, `ann`, `thee`);
+  - `eigh-teen`;
+  - tên tiếng Việt có dấu (`kah feh suh dah`, `fuh`, `bahn mee`);
+  - `Checks`.
+- **Lệnh `phonemes` đánh ⚠ động từ "close"** (Kokoro đọc /kloʊs/ như tính từ → `cloze`). Lần soát lại thấy lỗi này trong
+  `U03-exam-listening` của IELTS Target 5.0 ("had to close one of the offices", Track 37): đã sửa và dựng lại (6:47 → 6:46).
+
+- **Hàng đợi dựng bị ngắt:** lệnh chạy nền của agent chỉ chạy 30 phút, nên bị ngắt khi đang dựng Unit 6–7. Đã dựng
+  lại cả hàng bằng một lệnh thời hạn 2 giờ (file 09 mục 5.6).
+
+Chi tiết nhân vật mới ghi ở đầu từng kịch bản và file 09 mục 5.7; file 06 mục 9.4 trỏ sang.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_oxford_word_skills_basic/book.yaml` | Hồ sơ lộ trình (mẫu `lessons-v1`): 12 section, 92 mục, ba lần khai PDF, trang Answer key từng unit |
+| `books/book_oxford_word_skills_basic/book.json`, `plan.json`, `report.md` | Kết quả nhập sách |
+| `books/book_oxford_word_skills_basic/web/` | 122 đoạn PDF cho app (course-book 94, answer-key 27, word-list 1) |
+| `books/book_oxford_word_skills_basic/work/` | `scan.json`, `chunks.json`, `ocr-pages.json`, `ocr-answer-key.json` |
+| `books/book_oxford_word_skills_basic/lessons/U01-numbers.yaml` … `U07-questions-language.yaml` (+ `.mp4`), `lessons.json` | 7 kịch bản và video |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đánh giá sách, lộ trình, dò trang, lỗi Answer key, khuôn video 7–10 phút, bảng `say`, độ phủ, chi tiết nhân vật, kế hoạch module People |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/book_ingest/lessons.py` | Tên bước có chỗ thay (`_fill` dùng chung với ghi chú); lỗi ghi rõ "tên bước" hay "ghi chú" |
+| `agents/lesson_video/phonemes.py` | Bảng ⚠: động từ "close" → `cloze` |
+| `books/catalog.json` | Thẻ Oxford Word Skills Basic; ghi chú nhóm IELTS |
+| `books/ielts_target_5_0/lessons/U03-exam-listening.yaml` (+ `.mp4`), `lessons.json` | "close one of the offices" → `say: cloze`; dựng lại |
+| `agents/tests/test_lessons_template.py` | Tên bước dùng trường của mục; tên bước có chỗ thay sai bị từ chối; gói Oxford Word Skills Basic hợp lệ và chạy lại ra y hệt |
+| `agents/tests/test_lesson_video.py` | `phonemes` bắt "close"; hồi quy "video khớp `lessons.json`" thêm sách này; mỗi video 7–10 phút, không đếm ngược, có `qa` và `practice` tự tạm dừng |
+| `tests/web/book.e2e.mjs` | Thứ tự menu Sách (4 thẻ đầu); bước mới cho Oxford Word Skills Basic |
+| `web/src/book/ui.js` | Thẻ unit một trang ghi "Trang 21" thay vì "Trang 21–21" (sách này có nhiều unit một trang) |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng `say`: động từ "close"; mục 9.4 trỏ sang file 09 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-58 (xong), P2-59 (video Unit 8 trở đi) |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Trỏ tới file 09 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic 92 phiên, 7 video; IELTS Target 5.0 120 phiên, 48 video |
+| `cd agents && python -m pytest -q` | 139 passed, 5 skipped. 5 test bỏ qua là video tiếng Nhật, cần `misaki[ja]`. Test mới: tên bước dùng trường của mục, tên bước có chỗ thay sai, gói sách thật hợp lệ và chạy lại ra y hệt, 7 video khớp `lessons.json`, mỗi video 7–10 phút không đếm ngược và có `qa` + `practice`, `phonemes` bắt "close" |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 18/18 bước OK. Menu Sách: A1, A2, Oxford Word Skills Basic, IELTS Target 5.0. Thẻ sách: 92 phiên × 30 phút, 7 video. Unit 1–7 mỗi unit một nút video 7–10 phút. Thẻ unit một trang ghi "Trang 21". Phiên Unit 6 mở video `U06-language-words`, trang in 21 qua đoạn PDF 22 và nút Answer key tr. 206 |
+| `python -m lesson_video check` / `phonemes` | 7 kịch bản hợp lệ; 1 ⚠ là báo nhầm ("close friends", tính từ), đã ghi chú trong kịch bản |
+
+### Còn treo
+
+- Video Oxford Word Skills Basic từ Unit 8 (P2-59), gợi ý module People ở file 09 mục 5.8.
+- Các mục còn treo của đợt 25 (P2-57: luyện nói IELTS Unit 4 trở đi; đếm ngược ở Unit 1 của IELTS).
+
+---
+
+## Đợt 25 — 02/11/2026: 4 video luyện nói thêm Unit 3, bỏ đếm ngược ở "Đến lượt bạn" của Unit 3
+
+Nhánh `claude/cool-archimedes-xalg78`. Đợt 24 đã đẩy lên `main` tại `f11b46d` trước khi làm đợt này; xong đợt này cũng
+đẩy thẳng lên `main` theo yêu cầu người học.
+
+### Yêu cầu
+
+1. Commit và đẩy đợt 24 lên `main`.
+2. Unit 3: bỏ đếm ngược ở các cảnh "Đến lượt bạn" (như Unit 2), thêm 4 video luyện nói theo khuôn Unit 1–2.
+3. Xong thì commit và đẩy lên `main`.
+
+### Đã làm
+
+**4 video luyện nói thêm Unit 3** (30:32, 23 chương), viết theo khuôn file 06 mục 9. Có 62 cặp hỏi qua lại;
+thi thử Phần 1 có 15 câu, Phần 3 có 16 câu; 5 bài nói mẫu Phần 2 (116–134 từ). Tom và Emma thay nhau làm giám khảo.
+Câu trả lời mẫu dùng ngữ pháp, từ vựng Unit 3: tên nghề, work as / for / in / with, would / could, tính từ tả công việc,
+cụm hai từ (past experience, personal qualities, computer literate). Hồ sơ nhân vật thêm phần công việc, ghi ở đầu
+`U03-speaking-practice.yaml` và file 06 mục 9.4.
+
+| Video | Hỏi qua lại | Thi thử |
+|---|---|---|
+| `U03-speaking-practice` Speaking practice 1 (8:45, 6 chương) | Việc làm thêm (8 cặp), công việc mơ ước (8) | Emma giám khảo, Tom thí sinh: Phần 1 (8 câu), Phần 2 "a part-time job you have or had" (Tom phục vụ quán cà phê), Phần 3 (4 câu) |
+| `U03-speaking-practice-2` Speaking practice 2 (8:11, 6 chương) | Đồng nghiệp và sếp (8), xin việc và phỏng vấn (8) | Đổi vai, Tom giám khảo, Emma thí sinh: Phần 1 (7 câu), Phần 2 "a person you know who has an interesting job" (anh trai Jack, kỹ sư âm thanh), Phần 3 (4 câu) |
+| `U03-speaking-practice-3` Speaking practice 3 (7:20, 6 chương) | Giờ làm và đi làm (8), làm việc ở nhà (8) | Cùng thẻ đề Phần 2 "a job you would like to do in the future": Tom (trưởng phòng marketing), Emma (trường ngoại ngữ ở quê); Phần 3 hỏi hai chiều (2 + 2) |
+| `U03-speaking-practice-4` Speaking practice 4 (6:16, 5 chương) | Kỹ năng và phẩm chất (8), nghề nghiệp ở Việt Nam và ở Anh (6) | Phần 2 "a job interview that you had" (Tom, phỏng vấn thực tập), Phần 3 hỏi hai chiều (2 + 2) |
+
+**Bỏ đếm ngược ở 3 cảnh "Đến lượt bạn" của Unit 3.** Đây là các lượt nói dài, trước đây chờ 30–60 giây. Nay Emma nói
+rõ cần chuẩn bị và nói bao lâu rồi nhắc tạm dừng video; slide hiện cả danh sách việc cần làm. Đã dựng lại 3 video:
+
+| Video | Cảnh | Trước → sau |
+|---|---|---|
+| `U03-speaking-1` | Speaking 1B · chọn ảnh, nói về ảnh (2 × 30 giây) | 7:22 → 6:29 |
+| `U03-speaking-2` | Speaking 2C · thẻ A: chuẩn bị 1 phút, nói 2 phút (2 × 60 giây) | 7:26 → 5:35 |
+| `U03-consolidation` | Speaking E · "What is the best job in the world?" (60 giây) | 5:40 → 4:43 |
+
+Lúc dựng lại, sửa cho khớp hồ sơ nhân vật (hai video này làm ở đợt 12, trước khi có hồ sơ):
+- `U03-speaking-2` bài A: bố Tom làm cho công ty cà phê, mẹ có cửa hàng hoa, chị là y tá ở Hà Nội. Trước đó là kỹ sư,
+  y tá, nhân viên ngân hàng.
+- `U03-speaking-1` bài 1D: Tom là sinh viên kinh doanh, muốn làm trưởng phòng marketing cho công ty cà phê. Trước đó là
+  kỹ sư, ngành năng lượng.
+
+Các câu Tom mơ làm kiến trúc sư và có chú là phi công thì giữ, rồi đưa vào hồ sơ.
+
+Các khoảng chờ khác của Unit 3 giữ nguyên: nghe – chép tên nghề, nghe – viết trọng âm, và "Pause the video and …" một
+lần cho mỗi bài tập.
+
+Soát cách đọc:
+- "I read everything on the website" (quá khứ) → `red`.
+- "so much of our lives": Kokoro đọc đúng /laɪvz/ (danh từ). Lệnh `phonemes` đánh ⚠ nhầm; đã ghi chú trong kịch bản để
+  không ai "sửa" thành `livz`.
+- Khoa → `Kwah`.
+- Các câu có "use", "live", "read", "IT", "CV" khác đã phiên âm và đều đúng, không cần `say`.
+- Ghi chú bài nói không dùng "✓": phông không có glyph này.
+
+Dựng từng video một: 7 video mất 53 phút (23:55–00:48).
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U03-speaking-practice.yaml`, `-2`, `-3`, `-4` (+ `.mp4`) | Kịch bản và video luyện nói thêm Unit 3 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/ielts_target_5_0/lessons/U03-speaking-1.yaml`, `U03-speaking-2.yaml`, `U03-consolidation.yaml` (+ `.mp4`) | Bỏ `wait` ở 3 cảnh `practice`, lời nhắc tạm dừng, `heading_vi` mới; sửa câu trả lời của Tom cho khớp hồ sơ; dựng lại |
+| `books/ielts_target_5_0/lessons/lessons.json` | 4 mục mới, 3 mục cập nhật thời lượng / chương |
+| `agents/tests/test_lesson_video.py` | Hồi quy mở rộng: cảnh `practice` của Unit 2–3 không đếm ngược; Unit 1–3 mỗi unit có 4 video luyện nói không có khoảng lặng chờ |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 3: 15 video; nhóm Speaking & Vocabulary có 6 video đúng thứ tự; nút "Speaking practice 4" mở phiên Speaking & Vocabulary |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ và kết luận Unit 3; 5 dòng lịch sử; `practice` của Unit 3; cách đọc ("read" quá khứ, "lives" danh từ); mục 9: hồ sơ nhân vật (công việc), chủ đề và thẻ đề Unit 3, gợi ý Unit 4–5 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-56 (xong), P2-57 (luyện nói Unit 4 trở đi); dòng đợt 25 ở P2-33 |
+| `CLAUDE.md`, `web/README.md`, `docs/agent-hoc-tap/README.md` | "Unit 1–3 đã có" |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 134 passed, 5 skipped. Hồi quy mở rộng: cảnh `practice` của Unit 2–3 không đếm ngược, Unit 1–3 có 4 video luyện nói. 48 kịch bản IELTS khớp `lessons.json`. 5 test bỏ qua là video tiếng Nhật, cần `misaki[ja]` |
+| `node --test "tests/web/*.test.mjs"` | 16 passed. Nhóm Speaking & Vocabulary của Unit 3 có 6 video đúng thứ tự |
+| `node tests/web/book.e2e.mjs` | 17/17 bước OK. Thẻ Unit 3 có 15 video: Speaking 1, 2 rồi Speaking practice 1–4. Nút "Speaking practice 4" mở phiên Speaking & Vocabulary có 6 video đúng thứ tự, có nút chương |
+| `python -m lesson_video check` / `phonemes` | 15 kịch bản Unit 3 hợp lệ; 1 ⚠ là báo nhầm ("our lives", danh từ) |
+
+### Còn treo
+
+- Video luyện nói thêm cho Unit 4 trở đi (P2-57), theo file 06 mục 9.
+- Unit 1 (Speaking 1, Speaking 2, Consolidation) vẫn đếm ngược ở cảnh "Đến lượt bạn"; đổi nếu người học muốn.
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+
+---
+
+## Đợt 24 — 01/11/2026: 4 video luyện nói thêm Unit 2, bỏ đếm ngược ở "Đến lượt bạn"
+
+Nhánh `claude/cool-archimedes-xalg78` từ `main` tại `b642910`.
+
+### Yêu cầu
+
+1. Rà video bài giảng của IELTS Target 5.0: đã có bao nhiêu video. Trước đợt này có 40 video: Unit 1 có 17 (13 theo
+   trang sách + 4 luyện nói thêm), Unit 2 có 12, Unit 3 có 11.
+2. Unit 2 chưa có video luyện nói thêm như Unit 1 → thêm theo đúng khuôn Unit 1. Ghi lại cách đã làm để các unit sau
+   làm tiếp.
+3. Phần "Your turn" của Unit 2 bắt chờ đếm ngược lâu (5–15 giây mỗi câu) → bỏ đếm ngược. Chỉ cần nhắc người học tự
+   tạm dừng video và trả lời, rồi Emma đọc hết các câu hỏi.
+4. Gợi ý sách từ vựng cho IELTS General Training ở trình độ này (trả lời trong hội thoại, không ghi vào repo).
+
+### Đã làm
+
+**4 video luyện nói thêm Unit 2** (31:04, 23 chương). Có 62 cặp hỏi qua lại; thi thử Phần 1 có 15 câu,
+Phần 3 có 16 câu; 5 bài nói mẫu Phần 2 (122–132 từ). Tom và Emma thay nhau làm giám khảo. Câu trả lời mẫu tự viết bằng
+ngữ pháp, từ vựng Unit 2 (quá khứ đơn, had to, really enjoyed / keen on / preferred… to…, câu trả lời = trả lời + lý do
++ chi tiết). Nhiều chi tiết nối với bài trong sách: học lái xe ở Anh (Reading 1), khóa nhiếp ảnh (Listening 2), A
+level (Exam practice Reading). Thông tin nhân vật giữ khớp với các video Unit 1 và với câu trả lời của Tom trong
+`U02-speaking-1`; ghi ở đầu `U02-speaking-practice.yaml` và file 06 mục 9.4.
+
+| Video | Hỏi qua lại | Thi thử |
+|---|---|---|
+| `U02-speaking-practice` Speaking practice 1 (8:43, 6 chương) | Thời đi học (8 cặp), môn học và thầy cô (8) | Emma giám khảo, Tom thí sinh: Phần 1 (8 câu), Phần 2 "a teacher who helped you a lot" (thẻ đề, ghi chú, bài nói về thầy Nam dạy Hóa), Phần 3 (4 câu) |
+| `U02-speaking-practice-2` Speaking practice 2 (8:19, 6 chương) | Học ngoại ngữ (8), kỹ năng mới: lái xe, xe máy, bơi, nấu ăn (8) | Đổi vai, Tom giám khảo, Emma thí sinh: Phần 1 (7 câu), Phần 2 "a useful skill that you learned" (Emma học lái xe năm 17 tuổi, trượt lần đầu), Phần 3 (4 câu) |
+| `U02-speaking-practice-3` Speaking practice 3 (7:39, 6 chương) | Thi cử (8), cách học và trí nhớ (8) | Cùng thẻ đề Phần 2 "an important exam that you took": Tom kể kỳ thi đại học, Emma kể A level; Phần 3 hỏi hai chiều (2 + 2) |
+| `U02-speaking-practice-4` Speaking practice 4 (6:22, 5 chương) | Đại học và khóa học (8), học với công nghệ (6) | Phần 2 "a course that you would like to take in the future" (Tom, khóa nấu ăn), Phần 3 hỏi hai chiều (2 + 2) |
+
+**Bỏ đếm ngược ở 7 cảnh "Đến lượt bạn" của Unit 2.** Trước đây mỗi câu chờ 5–15 giây, tới 50 giây một cảnh. Nay Emma
+nói "Pause the video, and answer these questions out loud" rồi đọc hết các câu hỏi: mỗi câu cách 0,5 giây, câu cuối
+giữ thêm 1,5 giây. Slide hiện cả danh sách câu kèm gợi ý nên tạm dừng lúc nào cũng thấy đủ câu hỏi. Listening 1K, 1M
+vẫn để Tom đọc mẫu ngay sau mỗi câu, người học tự tạm dừng trước khi nghe Tom. Đã dựng lại 5 video:
+
+| Video | Cảnh | Trước → sau |
+|---|---|---|
+| `U02-speaking-1` | Your turn · Talk about your school days (5 câu × 10 giây) | 8:48 → 8:03 |
+| `U02-speaking-2` | Speaking 2B · Your turn (3 × 12 giây); Your turn · Talk about the subjects you studied (3 × 15 giây) | 8:02 → 6:53 |
+| `U02-consolidation` | Speaking D · Your turn (5 × 10 giây) | 6:19 → 5:34 |
+| `U02-reading-1` | Reading 1B · Talk with a partner (4 × 8 giây) | 5:40 → 5:13 |
+| `U02-listening-2` | Listening 1K (4 × 5 giây), 1M (5 × 6 giây) | 8:35 → 7:54 |
+
+Lúc dựng lại, lệnh `phonemes` bắt 8 câu có động từ "use" bị đọc thành /juːs/, đã sửa bằng `say: yooz`. Các khoảng chờ
+"Pause the video and …" một lần cho mỗi bài tập (6–15 giây) giữ nguyên.
+
+Soát cách đọc 4 kịch bản mới:
+- "the teacher just read from the book" (quá khứ) → `red`;
+- "We have to read long articles" → `reed`;
+- "use a smartphone" và các câu "use" khác: phiên âm từng câu, chỉ viết `say` ở câu Kokoro đọc sai ("Should children
+  use computers" → `yooz`);
+- Mr Nam → `Mister Nahm`; A levels, two As → `eigh levels`, `two eighs`; band 5.5 → `five point five`; six a.m. →
+  `six in the morning`.
+
+Máy dựng mới chưa có Kokoro, nên cài từ npm: `kokoro-q8-shards@1.0.0` (sha256 khớp bản Hugging Face) và giọng của
+`kokoro-js@1.2.1`, với `kokoro-onnx` 0.6.1. Dựng từng video một: 9 video mất 1 giờ 12 phút (08:30–09:42).
+
+### Công cụ `lesson_video`
+
+| Thêm / sửa | Cách làm |
+|---|---|
+| `Scene.self_paced` | Cảnh `practice` không có dòng `wait` / `echo` thì người học tự tạm dừng. Kịch bản cũ có `wait` vẫn đếm ngược như trước |
+| Slide `practice` tự tạm dừng | Dải "Pause the video and answer out loud · Tạm dừng video, trả lời thành tiếng" (biểu tượng ⏸ vẽ bằng hai thanh vì phông thiếu glyph); cả danh sách câu hỏi, mỗi câu kèm "Gợi ý:"; câu đang đọc nền hồng viền đỏ |
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U02-speaking-practice.yaml`, `-2`, `-3`, `-4` (+ `.mp4`) | Kịch bản và video luyện nói thêm Unit 2 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | `Scene.self_paced`; chú thích kiểu cảnh `practice` |
+| `agents/lesson_video/slides.py` | `_practice_list`: slide "Đến lượt bạn" không đếm ngược |
+| `agents/tests/test_lesson_video.py` | +2 test: cảnh `practice` tự tạm dừng (không khung đếm ngược, `pause` giữ khung lâu hơn, tô đúng hàng); hồi quy trên sách thật: cảnh `practice` của Unit 2 không đếm ngược, Unit 1–2 mỗi unit có 4 video luyện nói không có khoảng lặng chờ |
+| `books/ielts_target_5_0/lessons/U02-speaking-1.yaml`, `U02-speaking-2.yaml`, `U02-consolidation.yaml`, `U02-reading-1.yaml`, `U02-listening-2.yaml` (+ `.mp4`) | Bỏ `wait` ở 7 cảnh `practice`, lời nhắc tạm dừng, `heading_vi` mới, `say: yooz` cho 8 câu; dựng lại |
+| `books/ielts_target_5_0/lessons/lessons.json` | 4 mục mới, 5 mục cập nhật thời lượng / chương |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 2: 16 video; nhóm Speaking & Vocabulary xếp Speaking 1, 2 rồi Speaking practice 1–4; nút "Speaking practice 1" mở phiên Speaking & Vocabulary có 6 video đúng thứ tự |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ Unit 2, kết luận đợt 24; 5 dòng lịch sử; `practice` không đếm ngược; cách đọc mới; lỗi đã gặp (đếm ngược, cài Kokoro trên máy mới); **mục 9 mới**: khuôn 4 video luyện nói, quy ước viết, hồ sơ nhân vật, chủ đề và thẻ đề đã dùng, gợi ý Unit 3–4, các bước; "Kiểm tra trước khi commit" thành mục 10 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-55 (xong), P2-56 (luyện nói Unit 3 trở đi); dòng đợt 24 ở P2-33 |
+| `CLAUDE.md`, `agents/README.md`, `web/README.md`, `docs/agent-hoc-tap/README.md` | Trỏ tới mục 9 file 06; `practice` không có `wait` thì người học tự tạm dừng |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 134 passed, 5 skipped. Thêm 2 test: cảnh `practice` tự tạm dừng; hồi quy "Unit 2 không đếm ngược, Unit 1–2 có 4 video luyện nói". Hồi quy 44 kịch bản IELTS khớp `lessons.json`. 5 test bỏ qua là video tiếng Nhật, cần `misaki[ja]`, không liên quan |
+| `node --test "tests/web/*.test.mjs"` | 16 passed. Nhóm Speaking & Vocabulary của Unit 2 có 6 video đúng thứ tự |
+| `node tests/web/book.e2e.mjs` | 17/17 bước OK. Thẻ Unit 2 có 16 video: Speaking 1, 2 rồi Speaking practice 1–4. Nút "Speaking practice 1" mở phiên Speaking & Vocabulary có 6 video đúng thứ tự, có nút chương |
+| `python -m lesson_video check` / `phonemes` | 9 kịch bản Unit 2 hợp lệ; 0 câu có ⚠ |
+| Khung hình trích từ MP4, `silencedetect` | Cảnh "Đến lượt bạn" của `U02-speaking-1` hiện danh sách câu, tô đúng câu Emma đang đọc. Trong 30 giây sau mốc chương không còn khoảng lặng nào dài hơn 3 giây (trước đây có 5 lần chờ 10 giây) |
+
+### Còn treo
+
+- Video luyện nói thêm cho Unit 3 trở đi (P2-56), theo file 06 mục 9.
+- Unit 1 (Speaking 1, Speaking 2, Consolidation) và Unit 3 (lượt nói 1–2 phút) vẫn đếm ngược ở cảnh "Đến lượt bạn";
+  đổi nếu người học muốn.
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+
+---
+
 ## Đợt 23 — 27/10/2026: GENKI Unit 0 làm lại — 19 video ngắn, chữ sáng theo chỗ đang đọc
 
 Nhánh `claude/nifty-darwin-23vvae`, đẩy lên `main`. Người học góp ý về năm video Unit 0 của đợt 17:

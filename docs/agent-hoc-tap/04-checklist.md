@@ -278,6 +278,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 10:* xong **toàn bộ Unit 2** — 12 video cho 6 phần có trang sách (P2-41). Unit 1 còn Listening và Reading (nay làm được: có dòng `track` và cảnh `passage`); kế hoạch Unit 3 ở [06-video-bai-giang.md](06-video-bai-giang.md) mục 7.
   - *Đợt 11:* xong Unit 1 Listening và Reading (P2-42) — **Unit 1 và Unit 2 đủ video cho mọi phần có trang trong Course Book** (25 video). Còn: Unit 3 trở đi (kế hoạch ở file 06 mục 7).
   - *Đợt 12:* xong **toàn bộ Unit 3** — 11 video (P2-43). Unit 1–3 đủ video cho mọi phần có trang trong Course Book (36 video). Còn: Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+  - *Đợt 24:* thêm 4 video luyện nói Unit 2 (P2-55). IELTS Target 5.0 có 44 video: 36 video theo trang sách và 8 video luyện nói thêm (Unit 1, Unit 2). Từ nay cảnh "Đến lượt bạn" không đếm ngược (file 06 mục 6).
+  - *Đợt 25:* thêm 4 video luyện nói Unit 3 (P2-56). IELTS Target 5.0 có 48 video: 36 video theo trang sách và 12 video luyện nói thêm (Unit 1–3).
 - [x] **P2-34** Video **Unit 1 · Writing 1** (organizing your writing) và **Writing 2** (types of letter / starting and ending letters), mỗi video kết thúc bằng một **thư mẫu đọc thành tiếng** (Writing 1: thư thân mật 160 từ đi qua đủ 6 bước; Writing 2: thư trang trọng hỏi thông tin 154 từ). Gắn vào hoạt động Unit 1 · Writing (phiên 4 và 5).
   - *Đợt 5:* thêm kiểu cảnh `order` (sắp xếp các bước), `timing` (chia 20 phút), `letter` (thư mẫu cả trang, đoạn đang đọc tô màu, ghi chú lề, đếm từ) và dòng `read`; cảnh `pairs` cho phép hai dòng chữ.
 - [x] **P2-35** Video **Unit 1 · Writing 3** (organizing points in a personal letter): giải bài A (chọn ý), B (đọc thư của Bruno, sắp xếp 9 ý theo thứ tự xuất hiện), C (điền lời chào, lời kết), cách Bruno chia đoạn, **thư mẫu của Lan 156 từ** cùng dạng đề, và cách làm bài viết Workbook trang 6.
@@ -378,6 +380,53 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Nhịp chậm hơn: Emma 0.9, Yuki / Takeshi 0.78, nghỉ 0.8 giây giữa hai câu; mỗi chữ cái Yuki đọc riêng rồi chờ người học nhắc lại.
   - Đọc đúng: âm ghép đọc riêng (みょ, りょ, ぎょ) đưa thẳng âm vị cho Kokoro; `check` so từng phần của câu đọc từng phần, báo chữ cái đọc riêng bị đọc như trợ từ (へ → "e") và số đoạn audio khác số chữ được tô.
   - Test: chữ của thẻ / romaji / các phần của câu, `reading_plan`, đọc từng chữ trong `timeline`, tách audio theo khoảng lặng (file wav giả), tầng 2–3 theo câu, vẽ tô sáng và đếm ngược, kiểm cách đọc từng phần, âm vị âm ghép; e2e: thẻ GENKI có 37 video, Unit 0 có 19 nút video 2–5 phút theo thứ tự.
+- [x] **P2-55** **4 video luyện nói thêm Unit 2 · Learning, bỏ đếm ngược ở "Đến lượt bạn"** (đợt 24), theo yêu cầu người học. Chi tiết và khuôn cho các unit sau: [06-video-bai-giang.md](06-video-bai-giang.md) mục 2 và 9.
+  - Bốn video `U02-speaking-practice`, `-2`, `-3`, `-4` theo khuôn Unit 1 (P2-45). Tom và Emma hỏi đáp qua lại 62 câu về thời đi học, môn học, thầy cô, học ngoại ngữ, kỹ năng mới, thi cử, cách học, đại học, học với công nghệ.
+  - 4 buổi thi thử Speaking, Tom và Emma thay nhau làm giám khảo. Phần 2 có 5 bài nói mẫu: thầy giáo giúp mình, học lái xe, kỳ thi quan trọng (hai người cùng thẻ), khóa học muốn theo.
+  - Không có khoảng lặng chờ. Gắn vào phần Speaking & Vocabulary: Unit 2 có 16 video.
+  - Cả 7 cảnh "Đến lượt bạn" của Unit 2 không còn đếm ngược (trước đây 5–15 giây mỗi câu). Emma nhắc tạm dừng video rồi đọc hết câu hỏi. Đã dựng lại `U02-speaking-1`, `-2`, `U02-consolidation`, `U02-reading-1`, `U02-listening-2`, sửa luôn 8 câu "use" bị đọc thành /juːs/.
+  - Công cụ: cảnh `practice` không có `wait` / `echo` thì vẽ cả danh sách câu hỏi kèm gợi ý, dải "Pause the video and answer out loud", tô câu đang đọc (`Scene.self_paced`).
+  - Hồ sơ cho các unit sau (file 06 mục 9): khuôn 4 video, quy ước viết, hồ sơ nhân vật Tom / Emma, chủ đề và thẻ đề đã dùng, gợi ý Unit 3–4, các bước.
+  - Test: cảnh `practice` tự tạm dừng (không đếm ngược, tô đúng hàng); hồi quy "cảnh practice của Unit 2 không đếm ngược, Unit 1–2 mỗi unit 4 video luyện nói không có khoảng lặng chờ". Node: nhóm Speaking & Vocabulary của Unit 2 có 6 video đúng thứ tự. E2E: Unit 2 có 16 video, nút Speaking practice 1 mở phiên Speaking & Vocabulary với 6 video đúng thứ tự.
+- [x] **P2-56** **4 video luyện nói thêm Unit 3 · Work, bỏ đếm ngược ở "Đến lượt bạn" của Unit 3** (đợt 25), theo yêu cầu người học. Chi tiết: [06-video-bai-giang.md](06-video-bai-giang.md) mục 3 và 9.
+  - Bốn video `U03-speaking-practice`, `-2`, `-3`, `-4` theo khuôn file 06 mục 9. Tom và Emma hỏi đáp qua lại 62 câu về việc làm thêm, công việc mơ ước, đồng nghiệp và sếp, xin việc và phỏng vấn, giờ làm và đi làm, làm việc ở nhà, kỹ năng và phẩm chất, nghề nghiệp ở Việt Nam và ở Anh.
+  - 4 buổi thi thử Speaking, Tom và Emma thay nhau làm giám khảo. Phần 2 có 5 bài nói mẫu: việc làm thêm, anh trai có nghề thú vị, công việc muốn làm (hai người cùng thẻ), buổi phỏng vấn thực tập.
+  - Không có khoảng lặng chờ. Gắn vào phần Speaking & Vocabulary: Unit 3 có 15 video.
+  - Cả 3 cảnh "Đến lượt bạn" của Unit 3 không còn đếm ngược (trước đây 30–60 giây): Speaking 1B, Speaking 2C, Consolidation E. Emma nói rõ cần chuẩn bị và nói bao lâu rồi để người học tự tạm dừng. Đã dựng lại `U03-speaking-1`, `-2`, `U03-consolidation`.
+  - Sửa cho khớp hồ sơ nhân vật: nghề của bố, mẹ, chị Tom (`U03-speaking-2` bài A) và nghề Tom muốn làm (`U03-speaking-1` bài 1D).
+  - Hồ sơ nhân vật thêm phần công việc; bảng chủ đề, thẻ đề đã dùng thêm Unit 3 (file 06 mục 9.4–9.6).
+  - Test: hồi quy "cảnh practice của Unit 2–3 không đếm ngược, Unit 1–3 mỗi unit 4 video luyện nói". Node: nhóm Speaking & Vocabulary của Unit 3 có 6 video đúng thứ tự. E2E: Unit 3 có 15 video, nút Speaking practice 4 mở phiên Speaking & Vocabulary với 6 video đúng thứ tự.
+- [ ] **P2-57** Video luyện nói thêm cho Unit 4 trở đi, theo khuôn file 06 mục 9 (gợi ý Unit 4 ở mục 9.6). Muốn thì bỏ thêm đếm ngược ở "Đến lượt bạn" của Unit 1 (Speaking 1–2, Consolidation).
+- [x] **P2-58** **Oxford Word Skills Basic trong tab Sách, video Unit 1–7** (đợt 26), theo yêu cầu người học. Đây là sách từ vựng A1–A2 học song song với giáo trình chính; mỗi video 7–10 phút, không đếm ngược, có 1–2 phần luyện nói theo chủ đề của unit. Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md).
+  - **92 phiên 30 phút**, 19 tuần ở nhịp 5 phiên/tuần:
+    - Starter unit;
+    - 80 unit, mỗi unit một phiên;
+    - 11 phiên Review, mỗi module một phiên.
+  - Mỗi phiên mở đúng trang sách và trang Answer key của unit; 122 đoạn PDF.
+  - Bản quét thiếu hai trang trắng (tr. 204, 236), nên một PDF khai ba lần: `course-book`, `answer-key`, `word-list`. Độ lệch dò bằng OCR chân trang (đọc được số ở 244/254 trang). Trang Answer key của từng unit dò bằng OCR tiêu đề "Unit N".
+  - `books/catalog.json`: thẻ đứng sau English Unlimited A2, trước IELTS Target 5.0. Ghi chú nhóm IELTS nói cách học song song.
+  - Mẫu `lessons-v1`: tên bước dùng được `{title}`, `{no}`… như ghi chú, nên mỗi phiên mang tên chủ đề ("Unit 1 · Numbers · từ vựng, bài tập, nói").
+  - **7 video Unit 1–7** (module Basic English), mỗi video:
+    - từ vựng của trang sách, chữa bài theo Answer key;
+    - "Nghe và viết";
+    - Nói 1: Tom và Emma hỏi đáp;
+    - Nói 2: đến lượt bạn, tự tạm dừng;
+    - tổng kết.
+
+    Không có `wait` / `echo`. Phần thêm ngoài sách chọn theo IELTS:
+    - đoán đồ vật qua mô tả, như khi quên từ lúc thi nói;
+    - đoán loại từ cần điền;
+    - nghe đánh vần tên;
+    - chủ đề Part 1 "Bags", "Pens and writing".
+  - Answer key in nhầm Unit 6 bài 2 (đảo 4↔5, 8↔9): video đưa đáp án đúng, file 09 mục 3.3 ghi lại.
+  - Lệnh `phonemes` đánh ⚠ động từ "close" (/kloʊs/ → `cloze`). Đã sửa `U03-exam-listening` của IELTS Target 5.0 (Track 37) và dựng lại.
+  - Test:
+    - gói sách thật hợp lệ, chạy lại ra y hệt (tên phiên có chủ đề, ba lần khai PDF, nút Answer key, Unit 72 có bảng động từ bất quy tắc);
+    - tên bước có chỗ thay sai bị từ chối;
+    - video khớp `lessons.json`; mỗi video 7–10 phút, không `wait` / `echo`, có `qa` và `practice` tự tạm dừng;
+    - `phonemes` bắt "close";
+    - e2e: thứ tự menu Sách, thẻ 92 phiên × 30 phút, Unit 1–7 mỗi unit một video 7–10 phút, thẻ unit một trang ghi "Trang 21" (không phải "21–21"), phiên Unit 6 mở trang in 21 (PDF 22) và Answer key tr. 206.
+- [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5 (gợi ý module People ở mục 5.8). Làm thêm video cho phiên Review nếu người học cần.
 
 ### Cổng G2
 

@@ -1,0 +1,337 @@
+# Video Oxford Word Skills Basic · Unit 1 — I can understand and say numbers (sách in tr. 14, Answer key tr. 205).
+# Khuôn video của sách này: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 — 7–10 phút, không đếm ngược (không
+# dùng `wait` / `echo`; người học tự tạm dừng), 1–2 phần luyện nói theo chủ đề của unit. Đáp án bài 1–3 theo Answer key.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U01-numbers.yaml
+# Tom và Emma: giữ khớp hồ sơ nhân vật ở docs/agent-hoc-tap/06-video-bai-giang.md mục 9.4.
+id: U01-numbers
+activity: U01-words
+title: "Unit 1 · Numbers"
+subtitle: "I can understand and say numbers"
+title_vi: "Số đếm — đọc và nghe hiểu số từ 1 tới 2.000.000: -teen hay -ty, and sau hundred, dấu phẩy, about"
+tag: "BASIC ENGLISH · UNIT 1"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Oxford Word Skills Basic, Unit 1: numbers. After this video, you can understand and say numbers, from one to two million."
+        say: "Welcome to Oxford Word Skills Basic, Unit one: numbers. After this video, you can understand and say numbers, from one to two million."
+        vi: "Unit 1: đọc và nghe hiểu số, từ 1 tới 2 triệu."
+      - tom: "There's no countdown in this video. When Emma asks a question, pause the video, answer out loud, and then listen to us."
+        vi: "Không có đếm ngược: khi Emma hỏi, bạn tự tạm dừng video, trả lời thành tiếng rồi nghe tiếp."
+      - emma: "First the numbers, then three exercises from the book, and then we talk about numbers in your life."
+        vi: "Trước hết là các số, rồi ba bài tập trong sách, rồi luyện nói về những con số quanh bạn."
+
+  - kind: bullets
+    chapter: "Số 1–20"
+    heading: "Numbers 1–20"
+    heading_vi: "Số đếm từ 1 tới 20 — chú ý cách viết twelve, fifteen, eighteen"
+    items:
+      - {en: "1 one · 2 two · 3 three · 4 four · 5 five", vi: "một … năm"}
+      - {en: "6 six · 7 seven · 8 eight · 9 nine · 10 ten", vi: "sáu … mười"}
+      - {en: "11 eleven · 12 twelve · 13 thirteen · 14 fourteen · 15 fifteen", vi: "twelve (không phải twoteen) · fifteen (không phải fiveteen)"}
+      - {en: "16 sixteen · 17 seventeen · 18 eighteen · 19 nineteen · 20 twenty", vi: "eighteen chỉ có một chữ t"}
+    lines:
+      - {emma: "One, two, three, four, five.", focus: 0, vi: "Nghe và đọc theo."}
+      - {tom: "Six, seven, eight, nine, ten.", focus: 1}
+      - {emma: "Eleven, twelve, thirteen, fourteen, fifteen.", focus: 2}
+      - {tom: "Sixteen, seventeen, eighteen, nineteen, twenty.", focus: 3}
+      - emma: "Careful with the spelling. Twelve, not twoteen. Fifteen, not fiveteen. And eighteen has only one t."
+        say: "Careful with the spelling. Twelve, not two-teen. Fifteen, not five-teen. And eighteen has only one T."
+        focus: 3
+        vi: "Chú ý chính tả: twelve, fifteen; eighteen chỉ có một chữ t."
+
+  - kind: compare
+    chapter: "-teen hay -ty?"
+    heading: "thirteen or thirty?"
+    heading_vi: "-teen nhấn âm sau và có âm /n/ cuối; -ty nhấn âm đầu — nghe kỹ kẻo nhầm 13 với 30"
+    items:
+      - title: "-teen: thir-TEEN"
+        title_vi: "nhấn âm sau, nghe rõ /n/ ở cuối"
+        lines: ["13 thirteen", "14 fourteen", "15 fifteen", "16 sixteen", "17 seventeen"]
+      - title: "-ty: THIR-ty"
+        title_vi: "nhấn âm đầu, không có /n/"
+        lines: ["30 thirty", "40 forty", "50 fifty", "60 sixty", "70 seventy"]
+    lines:
+      - emma: "Now listen carefully. Is it thirteen, or thirty? Many learners mix them up."
+        vi: "Nghe kỹ: thirteen hay thirty? Người học hay nhầm hai số này."
+      - {emma: "Thirteen, fourteen, fifteen. The stress is at the end, and you can hear an n.", say: "Thir-teen, four-teen, fif-teen. The stress is at the end, and you can hear an N.", focus: 0}
+      - {tom: "Thirty, forty, fifty. The stress is at the start, and there's no n.", say: "Thirty, forty, fifty. The stress is at the start, and there's no N.", focus: 1}
+      - emma: "Thirteen, thirty. Fourteen, forty. Fifteen, fifty. Sixteen, sixty. Seventeen, seventy."
+        say: "Thir-teen, thirty. Four-teen, forty. Fif-teen, fifty. Six-teen, sixty. Seven-teen, seventy."
+        vi: "Đọc theo từng cặp: 13 – 30, 14 – 40, 15 – 50, 16 – 60, 17 – 70."
+      - {tom: "And don't forget: four has a u, but forty doesn't.", say: "And don't forget: four has a U, but forty doesn't.", focus: 1, vi: "four có chữ u, forty thì không."}
+
+  - kind: bullets
+    chapter: "Số lớn"
+    heading: "Big numbers: hundred, thousand, million"
+    heading_vi: "Tiếng Anh – Anh thêm and sau hundred; hundred, thousand, million không thêm s sau một con số"
+    items:
+      - {en: "21 twenty-one · 45 forty-five · 99 ninety-nine · 100 a / one hundred", vi: "số 21–99 viết có gạch nối"}
+      - {en: "101 a / one hundred and one · 140 a / one hundred and forty", vi: "sau hundred có and"}
+      - {en: "200 two hundred, NOT two hundreds · 1,000 a / one thousand", vi: "hundred, thousand không thêm s"}
+      - {en: "1,050 a thousand and fifty · 1,250 a thousand two hundred and fifty", vi: "and đứng trước hai chữ số cuối"}
+      - {en: "100,000 a hundred thousand · 1,000,000 a million · 2,000,000 two million", vi: "two million, không phải two millions"}
+      - {en: "over 999, write a comma: 11,000 · 3,000,000", vi: "số trên 999 viết dấu phẩy (người Việt thường dùng dấu chấm)"}
+    lines:
+      - {emma: "Twenty-one, forty-five, ninety-nine. We write these numbers with a hyphen.", focus: 0, vi: "Số 21–99 viết có gạch nối."}
+      - {tom: "A hundred and one. A hundred and forty.", focus: 1}
+      - {emma: "In British English, we say and after hundred: a hundred and forty.", focus: 1, vi: "Tiếng Anh – Anh: hundred AND forty."}
+      - {tom: "Two hundred. Not two hundreds.", focus: 2}
+      - {emma: "A thousand and fifty. A thousand, two hundred and fifty.", focus: 3}
+      - {tom: "A hundred thousand. A million. Two million, not two millions.", focus: 4}
+      - emma: "In big numbers, we write a comma between the thousands and the hundreds: eleven thousand. Three million."
+        focus: 5
+        vi: "Số lớn viết dấu phẩy ngăn hàng nghìn, hàng triệu: 11,000 · 3,000,000."
+
+  - kind: bullets
+    chapter: "Số trong đời sống"
+    heading: "Numbers in real life"
+    heading_vi: "Số điện thoại, giá tiền, phần trăm — rất hay gặp trong bài nghe IELTS Phần 1"
+    items:
+      - {en: "phone 0912 556 870: oh nine one two, double five six, eight seven oh", vi: "đọc từng chữ số; 0 thường đọc là oh, 55 đọc là double five"}
+      - {en: "£3.50 three pounds fifty · €12.99 twelve euros ninety-nine", vi: "giá tiền: thường không đọc pence / cents"}
+      - {en: "25% twenty-five per cent · 2.5 two point five", vi: "phần trăm, số thập phân (dấu chấm đọc là point)"}
+    lines:
+      - emma: "Now, some numbers from real life. They are very common in IELTS Listening, part one."
+        say: "Now, some numbers from real life. They are very common in eye-elts Listening, part one."
+        vi: "Số trong đời sống — rất hay gặp trong bài nghe IELTS Phần 1."
+      - {tom: "Phone numbers: we say each number. Oh nine one two, double five six, eight seven oh.", focus: 0}
+      - {emma: "Zero is often oh, and two fives together are double five.", focus: 0, vi: "0 thường đọc là oh; hai số 5 liền nhau là double five."}
+      - {tom: "Prices: three pounds fifty. Twelve euros ninety-nine.", focus: 1}
+      - {emma: "We don't usually say pence or cents.", focus: 1, vi: "Thường không đọc pence / cents."}
+      - {tom: "Twenty-five per cent. Two point five.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 1: sửa lỗi"
+    heading: "Exercise 1 · Correct the mistakes"
+    heading_vi: "Sửa lỗi viết số — đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "two hundreds  →  ___", answer: "two hundred", tip: "no s after a number: two hundred, three thousand"}
+      - {n: 2, q: "three hundred forty  →  ___", answer: "three hundred and forty", tip: "British English: and after hundred"}
+      - {n: 3, q: "twenty two  →  ___", answer: "twenty-two", tip: "21–99: write a hyphen"}
+      - {n: 4, q: "42500  →  ___", answer: "42,500", tip: "over 999: a comma between thousands and hundreds"}
+      - {n: 5, q: "one thousand and two hundred  →  ___", answer: "one thousand two hundred", tip: "and goes before the last two numbers only"}
+      - {n: 6, q: "two thousand three hundred fifty  →  ___", answer: "two thousand three hundred and fifty", tip: "and after hundred"}
+    lines:
+      - emma: "Exercise 1. Correct the mistakes. Pause the video, write your answers, and then listen."
+        say: "Exercise one. Correct the mistakes. Pause the video, write your answers, and then listen."
+        vi: "Bài 1: sửa lỗi — tạm dừng video, viết đáp án, rồi nghe chữa."
+      - {emma: "Number one: two hundreds.", focus: 0}
+      - {tom: "Two hundred. No s.", say: "Two hundred. No S.", reveal: 1}
+      - {emma: "Number two: three hundred forty.", focus: 1}
+      - {tom: "Three hundred and forty. We need and.", reveal: 2}
+      - {emma: "Number three: twenty two.", focus: 2}
+      - {tom: "Twenty-two, with a hyphen.", reveal: 3}
+      - {emma: "Number four: four, two, five, zero, zero.", focus: 3}
+      - {tom: "Forty-two thousand, five hundred. Write a comma after forty-two.", reveal: 4}
+      - {emma: "Number five: one thousand and two hundred.", focus: 4}
+      - {tom: "One thousand two hundred. No and here.", reveal: 5}
+      - {emma: "Number six: two thousand three hundred fifty.", focus: 5}
+      - {tom: "Two thousand three hundred and fifty.", reveal: 6}
+
+  - kind: blanks
+    chapter: "Bài 2: số ở giữa"
+    heading: "Exercise 2 · Write the middle number in words"
+    heading_vi: "Viết bằng chữ con số nằm giữa"
+    items:
+      - {n: 1, q: "7  ·  ___  ·  9", answer: "eight"}
+      - {n: 2, q: "19  ·  ___  ·  21", answer: "twenty"}
+      - {n: 3, q: "66  ·  ___  ·  68", answer: "sixty-seven"}
+      - {n: 4, q: "49  ·  ___  ·  51", answer: "fifty"}
+      - {n: 5, q: "118  ·  ___  ·  120", answer: "a / one hundred and nineteen"}
+      - {n: 6, q: "243  ·  ___  ·  245", answer: "two hundred and forty-four"}
+      - {n: 7, q: "999  ·  ___  ·  1,001", answer: "a / one thousand"}
+      - {n: 8, q: "5,055  ·  ___  ·  5,057", answer: "five thousand and fifty-six"}
+      - {n: 9, q: "11,300  ·  ___  ·  11,302", answer: "eleven thousand three hundred and one"}
+    lines:
+      - emma: "Exercise 2. Write the middle number in words. Pause the video and try."
+        say: "Exercise two. Write the middle number in words. Pause the video and try."
+        vi: "Bài 2: viết bằng chữ số ở giữa — tạm dừng video và làm."
+      - {emma: "Seven, and nine.", focus: 0}
+      - {tom: "Eight.", reveal: 1}
+      - {emma: "Nineteen, and twenty-one.", focus: 1}
+      - {tom: "Twenty.", reveal: 2}
+      - {emma: "Sixty-six, and sixty-eight.", focus: 2}
+      - {tom: "Sixty-seven.", reveal: 3}
+      - {emma: "Forty-nine, and fifty-one.", focus: 3}
+      - {tom: "Fifty.", reveal: 4}
+      - {emma: "A hundred and eighteen, and a hundred and twenty.", focus: 4}
+      - {tom: "A hundred and nineteen.", reveal: 5}
+      - {emma: "Two hundred and forty-three, and two hundred and forty-five.", focus: 5}
+      - {tom: "Two hundred and forty-four.", reveal: 6}
+      - {emma: "Nine hundred and ninety-nine, and a thousand and one.", focus: 6}
+      - {tom: "A thousand.", reveal: 7}
+      - {emma: "Five thousand and fifty-five, and five thousand and fifty-seven.", focus: 7}
+      - {tom: "Five thousand and fifty-six.", reveal: 8}
+      - {emma: "Eleven thousand three hundred, and eleven thousand three hundred and two.", focus: 8}
+      - {tom: "Eleven thousand three hundred and one.", reveal: 9}
+
+  - kind: blanks
+    chapter: "Bài 3: about"
+    heading: "Exercise 3 · Write the number in words using about"
+    heading_vi: "about = khoảng, xấp xỉ — How many students are there? ~ About 20."
+    items:
+      - {n: 1, q: "ninety-seven euros  →  ___", answer: "about a / one hundred euros"}
+      - {n: 2, q: "nine students  →  ___", answer: "about ten students"}
+      - {n: 3, q: "thirty-one years  →  ___", answer: "about thirty years"}
+      - {n: 4, q: "four hundred and ninety  →  ___", answer: "about five hundred"}
+      - {n: 5, q: "one thousand nine hundred and ninety  →  ___", answer: "about two thousand"}
+      - {n: 6, q: "seventy-eight people  →  ___", answer: "about eighty people"}
+      - {n: 7, q: "two hundred and forty-nine thousand  →  ___", answer: "about two hundred and fifty thousand"}
+      - {n: 8, q: "nine hundred and eighty thousand  →  ___", answer: "about a / one million"}
+    lines:
+      - emma: "Exercise 3. About means a bit more, or a bit less. How much is it? It's about a hundred pounds."
+        say: "Exercise three. About means a bit more, or a bit less. How much is it? It's about a hundred pounds."
+        vi: "Bài 3: about = khoảng, hơn hay kém một chút."
+      - emma: "Write each number with about. Pause the video and try."
+        vi: "Viết lại mỗi số với about — tạm dừng video và làm."
+      - {emma: "Ninety-seven euros.", focus: 0}
+      - {tom: "About a hundred euros.", reveal: 1}
+      - {emma: "Nine students.", focus: 1}
+      - {tom: "About ten students.", reveal: 2}
+      - {emma: "Thirty-one years.", focus: 2}
+      - {tom: "About thirty years.", reveal: 3}
+      - {emma: "Four hundred and ninety.", focus: 3}
+      - {tom: "About five hundred.", reveal: 4}
+      - {emma: "One thousand nine hundred and ninety.", focus: 4}
+      - {tom: "About two thousand.", reveal: 5}
+      - {emma: "Seventy-eight people.", focus: 5}
+      - {tom: "About eighty people.", reveal: 6}
+      - {emma: "Two hundred and forty-nine thousand.", focus: 6}
+      - {tom: "About two hundred and fifty thousand.", reveal: 7}
+      - {emma: "Nine hundred and eighty thousand.", focus: 7}
+      - {tom: "About a million.", reveal: 8}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write the numbers"
+    heading_vi: "Như bài nghe IELTS Phần 1 — tạm dừng sau mỗi câu, viết số bằng chữ số"
+    items:
+      - {n: 1, q: "My flat is number ___.", answer: "115"}
+      - {n: 2, q: "The ticket costs ___ euros.", answer: "14", tip: "fourteen, not forty"}
+      - {n: 3, q: "There are ___ rooms in the hotel.", answer: "30", tip: "thirty, not thirteen"}
+      - {n: 4, q: "My phone number is ___.", answer: "0912 466 870"}
+      - {n: 5, q: "It's ___ kilometres from Hanoi to Ho Chi Minh City.", answer: "about 1,700"}
+      - {n: 6, q: "About ___ people live in the city.", answer: "2,000,000"}
+    lines:
+      - emma: "Now, a listening test, like IELTS part one. Pause the video after each sentence, and write the number in figures."
+        say: "Now, a listening test, like eye-elts part one. Pause the video after each sentence, and write the number in figures."
+        vi: "Bài nghe như IELTS Phần 1: tạm dừng sau mỗi câu, viết số bằng chữ số."
+      - {emma: "Number one. My flat is number one hundred and fifteen.", focus: 0}
+      - {emma: "Number two. The ticket costs fourteen euros.", focus: 1}
+      - {emma: "Number three. There are thirty rooms in the hotel.", focus: 2}
+      - {emma: "Number four. My phone number is oh nine one two, four double six, eight seven oh.", focus: 3}
+      - {emma: "Number five. It's about one thousand seven hundred kilometres from Hanoi to Ho Chi Minh City.", say: "Number five. It's about one thousand seven hundred kilometres from Ha Noi to Ho Chee Min City.", focus: 4}
+      - {emma: "Number six. About two million people live in the city.", focus: 5}
+      - {tom: "Here are the answers. One hundred and fifteen. Fourteen, not forty. And thirty, not thirteen.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Oh nine one two, four six six, eight seven oh. About one thousand seven hundred. And two million.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: những con số quanh bạn"
+    heading: "Speaking 1 · Tom and Emma ask each other"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Tom, how many students are there in your IELTS class?"
+        a: "About twenty-five. It isn't a big class, so we can all speak in every lesson."
+        ask: emma
+        by: tom
+        phrases: ["About twenty-five", "It isn't a big class", "in every lesson"]
+      - q: "How many people live in your hometown, Emma?"
+        a: "About fifteen thousand, I think. But in summer, there are many more, because lots of tourists come to the beach."
+        ask: tom
+        by: emma
+        phrases: ["About fifteen thousand", "many more", "lots of tourists"]
+      - q: "How far is your flat from your university?"
+        a: "About one kilometre. I can walk there in fifteen minutes."
+        ask: emma
+        by: tom
+        phrases: ["About one kilometre", "in fifteen minutes"]
+      - q: "How much does a coffee cost where you live?"
+        a: "Here in Ho Chi Minh City, about twenty-five thousand dong. In England, it's about three pounds, so it's much more expensive!"
+        ask: tom
+        by: emma
+        phrases: ["about … thousand dong", "about three pounds", "much more expensive"]
+      - q: "How many hours do you sleep at night?"
+        a: "About seven hours. But before an exam, only five or six."
+        ask: emma
+        by: tom
+        phrases: ["About seven hours", "only five or six"]
+      - q: "What's your favourite number, Tom?"
+        a: "Nine, because my birthday is on the ninth of March. My basketball shirt number is nine, too."
+        ask: emma
+        by: tom
+        phrases: ["…, because…", "on the ninth of March", "…, too"]
+      - q: "Are you good with numbers, Emma?"
+        a: "Not really! I was always slow at maths at school. Now I use the calculator on my phone for everything."
+        ask: tom
+        by: emma
+        phrases: ["Not really!", "slow at maths", "for everything"]
+      - q: "What's the biggest number you use every day?"
+        a: "Probably my bank card number. It has sixteen numbers! Luckily, my phone remembers it for me."
+        ask: tom
+        by: emma
+        phrases: ["Probably…", "sixteen numbers", "Luckily…"]
+    lines:
+      - {emma: "Tom, how many students are there in your IELTS class?", say: "Tom, how many students are there in your eye-elts class?", focus: 0}
+      - {tom: "About twenty-five. It isn't a big class, so we can all speak in every lesson.", reveal: 0, vi: "Khoảng 25 bạn — lớp không đông nên ai cũng được nói."}
+      - {tom: "How many people live in your hometown, Emma?", focus: 1}
+      - {emma: "About fifteen thousand, I think. But in summer, there are many more, because lots of tourists come to the beach.", reveal: 1, vi: "Khoảng 15.000 người; mùa hè đông hơn nhiều vì khách du lịch."}
+      - {emma: "How far is your flat from your university?", focus: 2}
+      - {tom: "About one kilometre. I can walk there in fifteen minutes.", reveal: 2, vi: "Khoảng 1 cây số, đi bộ 15 phút."}
+      - {tom: "How much does a coffee cost where you live?", focus: 3}
+      - emma: "Here in Ho Chi Minh City, about twenty-five thousand dong. In England, it's about three pounds, so it's much more expensive!"
+        say: "Here in Ho Chee Min City, about twenty-five thousand dong. In England, it's about three pounds, so it's much more expensive!"
+        reveal: 3
+        vi: "Ở TP. Hồ Chí Minh khoảng 25.000 đồng; ở Anh khoảng 3 bảng — đắt hơn nhiều!"
+      - {emma: "How many hours do you sleep at night?", focus: 4}
+      - {tom: "About seven hours. But before an exam, only five or six.", reveal: 4, vi: "Khoảng 7 tiếng; trước kỳ thi chỉ 5–6 tiếng."}
+      - {emma: "What's your favourite number, Tom?", focus: 5}
+      - {tom: "Nine, because my birthday is on the ninth of March. My basketball shirt number is nine, too.", reveal: 5, vi: "Số 9: sinh nhật ngày 9 tháng 3, áo bóng rổ cũng số 9."}
+      - {tom: "Are you good with numbers, Emma?", focus: 6}
+      - {emma: "Not really! I was always slow at maths at school. Now I use the calculator on my phone for everything.", reveal: 6, vi: "Không giỏi lắm: hồi đi học luôn chậm môn Toán; giờ cái gì cũng bấm máy tính trên điện thoại."}
+      - {tom: "What's the biggest number you use every day?", focus: 7}
+      - {emma: "Probably my bank card number. It has sixteen numbers! Luckily, my phone remembers it for me.", reveal: 7, vi: "Có lẽ là số thẻ ngân hàng — 16 chữ số! May mà điện thoại nhớ giúp."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: numbers about you"
+    heading_vi: "Dùng about khi không chắc con số"
+    items:
+      - {q: "How old are you?", hint: "I'm … years old."}
+      - {q: "How many people are there in your family?", hint: "There are … of us."}
+      - {q: "How many students are there in your class?", hint: "About …"}
+      - {q: "How much is a bowl of phở in your town?", hint: "About … thousand dong."}
+      - {q: "How many people live in your city?", hint: "About … million / thousand people."}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud. Use about when you aren't sure."
+        say: "Now it's your turn. Pause the video, and answer these questions out loud. Yooz about when you aren't sure."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng; không chắc thì dùng about."
+      - {emma: "How old are you?", focus: 0, pause: 0.5}
+      - {emma: "How many people are there in your family?", focus: 1, pause: 0.5}
+      - {emma: "How many students are there in your class?", focus: 2, pause: 0.5}
+      - {emma: "How much is a bowl of pho in your town?", say: "How much is a bowl of fuh in your town?", focus: 3, pause: 0.5}
+      - {emma: "How many people live in your city?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che bảng số tr. 14 và đọc lại"
+    items:
+      - {en: "thirteen ≠ thirty · fourteen ≠ forty", vi: "-teen nhấn âm sau, -ty nhấn âm đầu"}
+      - {en: "a hundred AND forty · two hundred (no s)", vi: "and sau hundred; hundred, thousand, million không thêm s"}
+      - {en: "twenty-two · 42,500", vi: "gạch nối cho 21–99, dấu phẩy cho số trên 999"}
+      - {en: "about = a bit more or a bit less", vi: "About twenty. It's about a hundred pounds."}
+      - {en: "Next: Unit 2 · The time", vi: "Tiếp theo: Unit 2 · giờ giấc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Thirteen, thirty. Listen for the stress.", say: "Thir-teen, thirty. Listen for the stress.", focus: 0}
+      - {tom: "A hundred and forty. Two hundred, with no s.", say: "A hundred and forty. Two hundred, with no S.", focus: 1}
+      - {emma: "A hyphen for twenty-two, and a comma for big numbers.", focus: 2}
+      - {tom: "And about, when you aren't sure.", focus: 3}
+      - {emma: "Now cover the table on page fourteen, and say the numbers. See you in Unit 2!", say: "Now cover the table on page fourteen, and say the numbers. See you in Unit two!", focus: 4}

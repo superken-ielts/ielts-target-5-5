@@ -1,0 +1,323 @@
+# Video Oxford Word Skills Basic · Unit 5 — I can use classroom vocabulary (sách in tr. 20, Answer key tr. 206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1–3 theo Answer key; bài 3 (ABOUT YOU) đọc câu mẫu "Answers from an Argentinian person" rồi Tom tự trả lời.
+# Thêm ngoài sách: rubber = eraser (Anh – Mỹ), a piece of paper, mượn đồ (borrow / lend), đoán đồ vật qua mô tả
+# ("It's a thing you use to…" — mẹo khi quên từ lúc thi nói), chủ đề nói IELTS Part 1
+# "Bags" và "Pens / handwriting". Chi tiết nhân vật mới: Tom đeo ba lô, gõ bài giảng trên laptop nhưng luyện viết IELTS
+# bằng tay, tra từ bằng app rồi chép vào Anki, lớp hồi phổ thông khoảng 40 học sinh có bảng đen; Emma ghi từ tiếng Việt
+# bằng bút chì (hay sai dấu), hồi đi học có từ điển tiếng Pháp bằng giấy, lớp hiện tại nhỏ, có màn hình lớn và 12 ghế.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U05-classroom.yaml
+id: U05-classroom
+activity: U05-words
+title: "Unit 5 · Classroom vocabulary"
+subtitle: "I can use classroom vocabulary"
+title_vi: "Đồ dùng trong lớp học; từ ghép (notebook, board pen); I've got; mượn đồ; nói về túi xách và việc viết"
+tag: "BASIC ENGLISH · UNIT 5"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 5: classroom vocabulary. After this video, you can name the things in a classroom, and talk about what's in your bag."
+        say: "Welcome to Unit five: classroom vocabulary. After this video, you can name the things in a classroom, and talk about what's in your bag."
+        vi: "Unit 5: gọi tên đồ vật trong lớp và nói về những thứ trong túi của bạn."
+      - tom: "There's no countdown in this video. Just pause it when you want to answer."
+        vi: "Video không đếm ngược: muốn trả lời thì tự tạm dừng."
+
+  - kind: bullets
+    chapter: "Trong lớp học"
+    heading: "In the classroom"
+    heading_vi: "Xem tranh tr. 20 — đồ vật số 1–6, 16–18"
+    items:
+      - {en: "a board · a board pen · a noticeboard", vi: "bảng · bút viết bảng · bảng thông báo (ghim giấy)"}
+      - {en: "a desk · a table · a chair", vi: "bàn học · cái bàn · cái ghế"}
+      - {en: "a CD player and a CD · a cassette player", vi: "máy CD và đĩa CD · máy cát-xét"}
+      - {en: "a bag", vi: "cặp, túi xách"}
+    lines:
+      - emma: "Look at the picture on page twenty. Let's start with the big things in the room."
+        vi: "Xem tranh tr. 20 — bắt đầu với các đồ vật lớn."
+      - {emma: "A board. A board pen. A noticeboard.", focus: 0}
+      - {tom: "The teacher writes on the board with a board pen. And we put information on the noticeboard.", focus: 0, vi: "Thầy cô viết lên bảng bằng bút viết bảng; thông tin thì ghim lên bảng thông báo."}
+      - {emma: "A desk. A table. A chair.", focus: 1}
+      - {tom: "A CD player and a CD. And a cassette player. That's very old now!", focus: 2, vi: "Máy cát-xét giờ đã rất cũ!"}
+      - {emma: "And a bag.", focus: 3}
+
+  - kind: bullets
+    chapter: "Đồ dùng học tập"
+    heading: "Things for writing and learning"
+    heading_vi: "Đồ vật số 7–15 trong tranh"
+    items:
+      - {en: "a pen · a pencil · a pencil sharpener", vi: "bút mực · bút chì · cái gọt bút chì"}
+      - {en: "a rubber · a ruler", vi: "cục tẩy · thước kẻ"}
+      - {en: "a piece of paper · a folder · a notebook", vi: "tờ giấy · bìa kẹp tài liệu · quyển vở"}
+      - {en: "a dictionary", vi: "từ điển"}
+      - {en: "rubber (British English) = eraser (American English)", vi: "IELTS chấp nhận cả từ Anh lẫn từ Mỹ — miễn là dùng đúng"}
+    lines:
+      - {emma: "Now the small things. A pen. A pencil. A pencil sharpener.", focus: 0}
+      - {tom: "A rubber. A ruler.", focus: 1}
+      - {emma: "A piece of paper. A folder. A notebook.", focus: 2}
+      - {tom: "And a dictionary.", focus: 3}
+      - emma: "In American English, a rubber is an eraser. In the IELTS test, British and American words are both fine."
+        focus: 4
+        vi: "Rubber (Anh) = eraser (Mỹ). Trong IELTS, từ Anh hay Mỹ đều được."
+
+  - kind: blanks
+    chapter: "Bài 1: cho vào túi được không?"
+    heading: "Exercise 1 · Can you put it in a bag?"
+    heading_vi: "Sách đánh dấu tick hoặc cross — ở đây trả lời Yes / No (đáp án theo Answer key tr. 206)"
+    items:
+      - {n: 1, q: "a desk  →  ___", answer: "No"}
+      - {n: 2, q: "a piece of paper  →  ___", answer: "Yes"}
+      - {n: 3, q: "a chair  →  ___", answer: "No"}
+      - {n: 4, q: "a rubber  →  ___", answer: "Yes"}
+      - {n: 5, q: "a board pen  →  ___", answer: "Yes"}
+      - {n: 6, q: "a CD  →  ___", answer: "Yes"}
+      - {n: 7, q: "a dictionary  →  ___", answer: "Yes"}
+      - {n: 8, q: "a ruler  →  ___", answer: "Yes"}
+      - {n: 9, q: "a noticeboard  →  ___", answer: "No"}
+      - {n: 10, q: "a pencil  →  ___", answer: "Yes"}
+      - {n: 11, q: "a table  →  ___", answer: "No"}
+      - {n: 12, q: "a pencil sharpener  →  ___", answer: "Yes"}
+    lines:
+      - emma: "Exercise 1. Which things can you put in a bag? Pause the video, and answer yes or no."
+        say: "Exercise one. Which things can you put in a bag? Pause the video, and answer yes or no."
+        vi: "Bài 1: thứ nào cho vào túi được? Tạm dừng video, trả lời yes / no."
+      - {tom: "A desk? No, it's too big! A piece of paper, yes. A chair, no.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "A rubber, a board pen, a CD: yes, yes, yes.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "A dictionary, yes. A ruler, yes. A noticeboard? No, it's on the wall.", reveal: [7, 8, 9], focus: 8}
+      - {tom: "A pencil, yes. A table, no. And a pencil sharpener, yes.", reveal: [10, 11, 12], focus: 11}
+
+  - kind: blanks
+    chapter: "Bài 2: từ ghép"
+    heading: "Exercise 2 · Add another word"
+    heading_vi: "note + book = notebook — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "board  →  ___", answer: "board pen"}
+      - {n: 2, q: "cassette  →  ___", answer: "cassette player"}
+      - {n: 3, q: "notice  →  ___", answer: "noticeboard"}
+      - {n: 4, q: "pencil  →  ___", answer: "pencil sharpener"}
+      - {n: 5, q: "piece of  →  ___", answer: "piece of paper"}
+      - {n: 6, q: "CD  →  ___", answer: "CD player"}
+    lines:
+      - emma: "Exercise 2. Add another word to make a longer word or phrase. For example: note, notebook. Pause the video and try."
+        say: "Exercise two. Add another word to make a longer word or phrase. For example: note, notebook. Pause the video and try."
+        vi: "Bài 2: thêm một từ để thành từ ghép hoặc cụm từ, ví dụ note → notebook."
+      - {tom: "Board pen. Cassette player. Noticeboard.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Pencil sharpener. Piece of paper. CD player.", say: "Pencil sharpener. Piece of paper. C D player.", reveal: [4, 5, 6], focus: 5}
+      - emma: "Notice: notebook and noticeboard are one word, but board pen and pencil sharpener are two words."
+        vi: "notebook, noticeboard viết liền; board pen, pencil sharpener viết rời."
+
+  - kind: bullets
+    chapter: "a piece of paper · I've got"
+    heading: "Spotlight · a piece of paper, I've got"
+    heading_vi: "paper là danh từ không đếm được; I've got = I have (có)"
+    items:
+      - {en: "a pen, a ruler · an English dictionary", vi: "a / an trước một đồ vật"}
+      - {en: "a piece of paper · some paper — NOT a paper", vi: "a paper thường là một tờ báo hoặc một bài thi"}
+      - {en: "I've got a dictionary. · I haven't got a ruler.", vi: "có · không có (Anh – Anh)"}
+      - {en: "Have you got a rubber? — Yes, I have. / No, I haven't.", vi: "câu hỏi và trả lời ngắn"}
+      - {en: "I have a dictionary. · I don't have a ruler.", vi: "cũng đúng (hay gặp trong tiếng Anh – Mỹ)"}
+    lines:
+      - {emma: "We say a pen, a ruler, and an English dictionary.", focus: 0}
+      - {tom: "But paper is different. We say a piece of paper, or some paper. Not a paper.", focus: 1, vi: "Nói a piece of paper hoặc some paper, không nói a paper."}
+      - {emma: "A paper is usually a newspaper, or an exam paper.", focus: 1}
+      - {tom: "To talk about things you have, say: I've got a dictionary. I haven't got a ruler.", focus: 2}
+      - {emma: "Have you got a rubber? Yes, I have. Or: no, I haven't.", focus: 3}
+      - {tom: "I have, and I don't have, are correct too.", focus: 4, vi: "I have / I don't have cũng đúng."}
+
+  - kind: bullets
+    chapter: "Mượn đồ"
+    heading: "Classroom language · Can I borrow …?"
+    heading_vi: "borrow = mượn (của ai) · lend = cho (ai) mượn"
+    items:
+      - {en: "Can I borrow your dictionary? — Sure. Here you are.", vi: "Mình mượn từ điển của bạn được không? — Được, đây này."}
+      - {en: "Could you lend me a pen? — Yes, of course.", vi: "Bạn cho mình mượn cây bút được không? — Được chứ."}
+      - {en: "Have you got a pencil sharpener? — Sorry, I haven't.", vi: "Bạn có gọt bút chì không? — Tiếc quá, không có."}
+      - {en: "I borrow from you. · You lend to me.", vi: "borrow (mượn) ≠ lend (cho mượn)"}
+    lines:
+      - {tom: "Emma, can I borrow your dictionary?", focus: 0}
+      - {emma: "Sure. Here you are.", focus: 0}
+      - {tom: "And could you lend me a pen? Mine doesn't work.", focus: 1, vi: "Cho mình mượn cây bút nhé? Bút của mình hỏng rồi."}
+      - {emma: "Yes, of course.", focus: 1}
+      - {tom: "Have you got a pencil sharpener too?", focus: 2}
+      - {emma: "Sorry, I haven't. Remember: you borrow something from a person, and a person lends something to you.", focus: 3, vi: "Nhớ: borrow là mượn của ai; lend là cho ai mượn."}
+
+  - kind: bullets
+    chapter: "Bài 3: bạn có gì ở nhà?"
+    heading: "Exercise 3 · ABOUT YOU: four things you've got at home, four you haven't got"
+    heading_vi: "Câu mẫu của một người Argentina (Answer key tr. 206), rồi câu trả lời của Tom"
+    items:
+      - {en: "I've got a rubber, a desk, a table and a chair.", vi: "người Argentina: có"}
+      - {en: "I haven't got a noticeboard, a ruler, a board or a cassette player.", vi: "người Argentina: không có"}
+      - {en: "Tom: I've got a desk, a chair, a laptop and a noticeboard.", vi: "Tom: có bàn, ghế, laptop, bảng ghim kế hoạch học"}
+      - {en: "Tom: I haven't got a printer, a ruler, a CD player or a paper dictionary.", vi: "Tom: không có máy in, thước, máy CD, từ điển giấy"}
+    lines:
+      - emma: "Exercise 3 is about you. Write four things you've got at home, and four things you haven't got. Pause the video and write."
+        say: "Exercise three is about you. Write four things you've got at home, and four things you haven't got. Pause the video and write."
+        vi: "Bài 3: viết 4 thứ bạn có ở nhà và 4 thứ bạn không có — tạm dừng video và viết."
+      - {emma: "Here's an answer from a person in Argentina. I've got a rubber, a desk, a table and a chair.", focus: 0}
+      - {emma: "I haven't got a noticeboard, a ruler, a board or a cassette player.", focus: 1}
+      - {tom: "Here's mine. I've got a desk, a chair, a laptop, and a noticeboard with my study plan on it.", focus: 2, vi: "Tom có bàn, ghế, laptop và bảng ghim kế hoạch học."}
+      - {tom: "I haven't got a printer, a ruler, a CD player, or a paper dictionary. I use an app.", say: "I haven't got a printer, a ruler, a C D player, or a paper dictionary. I yooz an app.", focus: 3, vi: "Tom không có máy in, thước, máy CD, từ điển giấy — Tom dùng app."}
+
+  - kind: blanks
+    chapter: "Đoán đồ vật"
+    heading: "What is it? · It's a thing you use to …"
+    heading_vi: "Nghe mô tả, đoán đồ vật — quên từ khi nói IELTS thì mô tả như thế này"
+    items:
+      - {n: 1, q: "You use it to make a pencil sharp.  →  ___", answer: "a pencil sharpener"}
+      - {n: 2, q: "You use it to draw a straight line.  →  ___", answer: "a ruler"}
+      - {n: 3, q: "You use it to find the meaning of a word.  →  ___", answer: "a dictionary"}
+      - {n: 4, q: "You keep pieces of paper in it.  →  ___", answer: "a folder"}
+      - {n: 5, q: "It's on the wall. You put information on it.  →  ___", answer: "a noticeboard"}
+      - {n: 6, q: "You use it when you make a mistake in pencil.  →  ___", answer: "a rubber"}
+    lines:
+      - emma: "Let's play a game. I describe a thing, and you say what it is. Pause the video after each one."
+        vi: "Trò chơi: Emma mô tả, bạn đoán đồ vật — tạm dừng sau mỗi câu."
+      - {emma: "Number one. You use it to make a pencil sharp.", say: "Number one. You yooz it to make a pencil sharp.", focus: 0}
+      - {emma: "Number two. You use it to draw a straight line.", say: "Number two. You yooz it to draw a straight line.", focus: 1}
+      - {emma: "Number three. You use it to find the meaning of a word.", say: "Number three. You yooz it to find the meaning of a word.", focus: 2}
+      - {tom: "A pencil sharpener. A ruler. A dictionary.", reveal: [1, 2, 3], focus: 2}
+      - {emma: "Number four. You keep pieces of paper in it.", focus: 3}
+      - {emma: "Number five. It's on the wall, and you put information on it.", focus: 4}
+      - {emma: "Number six. You use it when you make a mistake in pencil.", say: "Number six. You yooz it when you make a mistake in pencil.", focus: 5}
+      - {tom: "A folder. A noticeboard. A rubber.", reveal: [4, 5, 6], focus: 5}
+      - emma: "Here's a tip for the speaking test. If you forget a word, don't stop. Describe it: it's a thing you use to make a pencil sharp."
+        say: "Here's a tip for the speaking test. If you forget a word, don't stop. Describe it: it's a thing you yooz to make a pencil sharp."
+        focus: 0
+        vi: "Mẹo thi nói: quên từ thì đừng dừng lại — mô tả nó: it's a thing you use to…"
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · classroom words"
+    heading_vi: "Tạm dừng sau mỗi câu, viết từ còn thiếu — chú ý viết liền hay viết rời"
+    items:
+      - {n: 1, q: "Write the new words in your ___.", answer: "notebook"}
+      - {n: 2, q: "Can I borrow your ___?", answer: "rubber"}
+      - {n: 3, q: "Put your homework in the blue ___.", answer: "folder"}
+      - {n: 4, q: "There's a ___ next to the door.", answer: "noticeboard"}
+      - {n: 5, q: "I need a ___ and a pencil.", answer: "ruler"}
+      - {n: 6, q: "Look the word up in your ___.", answer: "dictionary"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Write the new words in your notebook.", focus: 0}
+      - {emma: "Number two. Can I borrow your rubber?", focus: 1}
+      - {emma: "Number three. Put your homework in the blue folder.", focus: 2}
+      - {emma: "Number four. There's a noticeboard next to the door.", focus: 3}
+      - {emma: "Number five. I need a ruler and a pencil.", focus: 4}
+      - {emma: "Number six. Look the word up in your dictionary.", focus: 5}
+      - {tom: "Notebook, one word. Rubber, with double b. Folder.", say: "Notebook, one word. Rubber, with double B. Folder.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Noticeboard, one word. Ruler. And dictionary: D, I, C, T, I, O, N, A, R, Y.", say: "Noticeboard, one word. Ruler. And dictionary: dee, eye, see, tee, eye, oh, en, eigh, ar, why.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: túi xách và việc viết"
+    heading: "Speaking 1 · IELTS Part 1 topics: bags, pens and writing"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you usually carry a bag?"
+        a: "Yes, always. I carry a backpack to university every day. It's very heavy!"
+        ask: emma
+        by: tom
+        phrases: ["Yes, always.", "I carry…", "every day"]
+      - q: "What do you usually keep in your bag?"
+        a: "Lots of things! Board pens, a folder with worksheets, my laptop, a bottle of water, and a small notebook for new Vietnamese words."
+        ask: tom
+        by: emma
+        phrases: ["Lots of things!", "a folder with…", "a notebook for…"]
+      - q: "What's in your bag today?"
+        a: "My laptop, a notebook, two pens, my phone and a water bottle. Oh, and my IELTS book, of course!"
+        ask: emma
+        by: tom
+        phrases: ["two pens", "a water bottle", "…, of course"]
+      - q: "Do you prefer writing with a pen or a pencil?"
+        a: "A pen, usually. But I write new Vietnamese words in pencil, because I often make mistakes with the accents!"
+        ask: tom
+        by: emma
+        phrases: ["…, usually", "in pencil", "make mistakes"]
+      - q: "Do you write by hand, or do you type?"
+        a: "In lectures I type on my laptop, because it's faster. But I practise IELTS writing by hand. It's slower, but I remember more."
+        ask: emma
+        by: tom
+        phrases: ["because it's faster", "by hand", "It's slower, but…"]
+      - q: "Do you use a dictionary?"
+        a: "Yes, an app on my phone. At school I had a big paper French dictionary. It was really heavy!"
+        ask: tom
+        by: emma
+        phrases: ["an app on my phone", "At school I had…", "really heavy"]
+      - q: "What do you do with new words?"
+        a: "I look them up in a dictionary app, write them in my notebook, and then I put them in Anki. I review them every evening."
+        ask: emma
+        by: tom
+        phrases: ["look them up", "write them in…", "review them"]
+      - q: "What was your classroom like at school?"
+        a: "It was big, with about forty students. We had a blackboard, and the teachers wrote on it with chalk. There was a noticeboard at the back."
+        ask: emma
+        by: tom
+        phrases: ["It was big", "We had…", "There was…"]
+      - q: "And what's your classroom like now?"
+        a: "It's small and bright, with a whiteboard, a big screen for videos and twelve chairs. And lots of board pens, of course!"
+        ask: tom
+        by: emma
+        phrases: ["small and bright", "with a…", "lots of…"]
+    lines:
+      - {emma: "Let's talk about bags and writing. These are real IELTS Speaking Part 1 topics. Do you usually carry a bag, Tom?", focus: 0, vi: "Túi xách và việc viết là các chủ đề có thật trong IELTS Speaking Part 1."}
+      - {tom: "Yes, always. I carry a backpack to university every day. It's very heavy!", reveal: 0, vi: "Có, ngày nào cũng đeo ba lô đi học. Nặng lắm!"}
+      - {tom: "What do you usually keep in your bag?", focus: 1}
+      - {emma: "Lots of things! Board pens, a folder with worksheets, my laptop, a bottle of water, and a small notebook for new Vietnamese words.", reveal: 1, vi: "Đủ thứ: bút viết bảng, bìa đựng phiếu bài tập, laptop, chai nước và một cuốn sổ nhỏ ghi từ tiếng Việt mới."}
+      - {emma: "What's in your bag today?", focus: 2}
+      - {tom: "My laptop, a notebook, two pens, my phone and a water bottle. Oh, and my IELTS book, of course!", say: "My laptop, a notebook, two pens, my phone and a water bottle. Oh, and my eye-elts book, of course!", reveal: 2, vi: "Laptop, vở, hai cây bút, điện thoại, chai nước — và tất nhiên là sách IELTS!"}
+      - {tom: "Do you prefer writing with a pen or a pencil?", focus: 3}
+      - {emma: "A pen, usually. But I write new Vietnamese words in pencil, because I often make mistakes with the accents!", reveal: 3, vi: "Thường là bút mực; nhưng từ tiếng Việt mới thì viết bút chì, vì hay sai dấu!"}
+      - {emma: "Do you write by hand, or do you type?", focus: 4}
+      - {tom: "In lectures I type on my laptop, because it's faster. But I practise IELTS writing by hand. It's slower, but I remember more.", say: "In lectures I type on my laptop, because it's faster. But I practise eye-elts writing by hand. It's slower, but I remember more.", reveal: 4, vi: "Nghe giảng thì gõ laptop cho nhanh; luyện viết IELTS thì viết tay — chậm hơn nhưng nhớ lâu hơn."}
+      - {tom: "Do you use a dictionary?", focus: 5}
+      - {emma: "Yes, an app on my phone. At school I had a big paper French dictionary. It was really heavy!", reveal: 5, vi: "Có, app trên điện thoại. Hồi đi học có cuốn từ điển tiếng Pháp bằng giấy, nặng lắm!"}
+      - {emma: "What do you do with new words?", focus: 6}
+      - {tom: "I look them up in a dictionary app, write them in my notebook, and then I put them in Anki. I review them every evening.", reveal: 6, vi: "Tra từ bằng app, chép vào vở, rồi đưa vào Anki; tối nào cũng ôn."}
+      - {emma: "What was your classroom like at school?", focus: 7}
+      - {tom: "It was big, with about forty students. We had a blackboard, and the teachers wrote on it with chalk. There was a noticeboard at the back.", reveal: 7, vi: "Lớp rộng, khoảng 40 học sinh; có bảng đen, thầy cô viết bằng phấn; cuối lớp có bảng thông báo."}
+      - {tom: "And what's your classroom like now?", focus: 8}
+      - {emma: "It's small and bright, with a whiteboard, a big screen for videos and twelve chairs. And lots of board pens, of course!", reveal: 8, vi: "Nhỏ và sáng sủa: có bảng trắng, màn hình lớn để chiếu video, mười hai cái ghế — và tất nhiên là rất nhiều bút viết bảng!"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: bags, pens and writing"
+    heading_vi: "Trả lời 2–3 câu, dùng từ trong bài"
+    items:
+      - {q: "Do you usually carry a bag? What's in it today?", hint: "Yes, I always carry … · In my bag there's …"}
+      - {q: "Do you prefer writing with a pen or a pencil? Why?", hint: "I prefer … because …"}
+      - {q: "Do you write by hand, or do you type more?", hint: "I usually … because it's faster / easier"}
+      - {q: "Have you got a dictionary? How often do you use it?", hint: "I've got … · I use it every day / sometimes"}
+      - {q: "What was your classroom like at school?", hint: "It was … · We had a … · There was a …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Do you usually carry a bag? What's in it today?", focus: 0, pause: 0.5}
+      - {emma: "Do you prefer writing with a pen or a pencil? Why?", focus: 1, pause: 0.5}
+      - {emma: "Do you write by hand, or do you type more?", focus: 2, pause: 0.5}
+      - {emma: "Have you got a dictionary? How often do you use it?", say: "Have you got a dictionary? How often do you yooz it?", focus: 3, pause: 0.5}
+      - {emma: "What was your classroom like at school?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che danh sách từ ở tr. 20, gọi tên đồ vật trong tranh"
+    items:
+      - {en: "board, noticeboard, desk, table, chair · pen, pencil, rubber, ruler, folder", vi: "đồ vật trong lớp"}
+      - {en: "notebook, noticeboard · board pen, pencil sharpener, CD player", vi: "từ ghép: viết liền hoặc viết rời"}
+      - {en: "a piece of paper · I've got … / I haven't got …", vi: "không nói a paper; có / không có"}
+      - {en: "Can I borrow your …? · It's a thing you use to …", vi: "mượn đồ; quên từ thì mô tả"}
+      - {en: "Next: Unit 6 · English language words", vi: "Tiếp theo: Unit 6 · từ chỉ ngữ pháp (noun, verb…)"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Board, noticeboard, desk, table, chair. Pen, pencil, rubber, ruler, folder.", focus: 0}
+      - {tom: "Notebook and noticeboard are one word. Board pen and pencil sharpener are two.", focus: 1}
+      - {emma: "A piece of paper. I've got a dictionary, but I haven't got a ruler.", focus: 2}
+      - {tom: "Can I borrow your rubber? And if you forget a word: it's a thing you use to rub out a mistake.", say: "Can I borrow your rubber? And if you forget a word: it's a thing you yooz to rub out a mistake.", focus: 3}
+      - {emma: "Now cover the words on page twenty, and name the things in the picture. See you in Unit 6!", say: "Now cover the words on page twenty, and name the things in the picture. See you in Unit six!", focus: 4}

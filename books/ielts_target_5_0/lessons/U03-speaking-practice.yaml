@@ -1,0 +1,369 @@
+# Video luyện nói thêm Unit 3 · Work — 1/4: việc làm thêm, công việc mơ ước + thi thử 1 (Emma giám khảo, Tom thí sinh).
+# Người học yêu cầu, không theo trang sách; làm theo khuôn ở docs/agent-hoc-tap/06-video-bai-giang.md mục 9 (đợt 25).
+# Người học tự tạm dừng video để trả lời, nên không có khoảng lặng chờ (`wait`, `echo`).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-speaking-practice.yaml
+# Câu trả lời mẫu tự viết bằng ngữ pháp, từ vựng của Unit 3: tên nghề, work as / for / in / with, would / could (tình
+# huống không có thật), tính từ tả công việc (rewarding, challenging, repetitive, stressful), cụm hai từ (past experience,
+# personal qualities, long hours, computer literate).
+# Thông tin nhân vật: giữ khớp với đầu file U01-speaking-practice.yaml, U02-speaking-practice.yaml và câu trả lời của Tom
+# trong U03-speaking-2 (chú là phi công; hồi bé mơ làm kiến trúc sư vì thích vẽ). Thêm phần công việc dưới đây (giữ khớp ở
+# cả bốn video Unit 3):
+# - Tom: làm thêm phục vụ ở quán cà phê gần trường từ tháng 9, tối thứ Ba và thứ Năm 6–10 giờ, đi bộ 10 phút; quản lý
+#   (nữ) nghiêm nhưng công bằng; hè vừa rồi thực tập 2 tháng ở bộ phận marketing của một công ty cà phê ở Đà Lạt (phỏng
+#   vấn tháng 5, ba người phỏng vấn, có người hướng dẫn); muốn làm trưởng phòng marketing cho công ty cà phê quốc tế, một
+#   ngày có thương hiệu cà phê Đà Lạt của riêng mình; điểm mạnh: chăm chỉ, giỏi giải quyết vấn đề, biết lắng nghe.
+# - Emma: hồi đại học làm ở hiệu sách sáng thứ Bảy; việc tệ nhất: rửa bát trong bếp khách sạn một mùa hè (bỏ sau ba
+#   tuần); lương đầu tiên → đi Tây Ban Nha với Lucy; hồi bé mơ làm phi hành gia; ra trường làm văn phòng một năm (chán,
+#   lặp lại) rồi học khóa đào tạo giáo viên; phỏng vấn trường hiện tại qua mạng từ Anh; trường có 12 giáo viên từ 5
+#   nước; dạy khoảng 25 giờ/tuần; anh trai Jack là kỹ sư âm thanh ở một nhà hát lớn tại London; mơ mở một trường ngoại
+#   ngữ nhỏ có quán cà phê ở quê ven biển.
+id: U03-speaking-practice
+activity: U03-speaking-vocab
+title: "Unit 3 · Work"
+subtitle: "Speaking practice 1: part-time jobs, dream jobs + mock test"
+title_vi: "Luyện nói 1/4 — Tom và Emma hỏi đáp về việc làm thêm, công việc mơ ước; thi thử Speaking (Emma giám khảo)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Speaking practice one for Unit 3: Work. There are four practice videos, full of questions and answers."
+        say: "Welcome to Speaking practice one for Unit three: Work. There are four practice videos, full of questions and answers."
+        vi: "Video luyện nói 1/4 của Unit 3 — toàn câu hỏi và câu trả lời mẫu."
+      - tom: "Pause the video after each question, and answer it yourself. Then listen to our answer, and say it with us."
+        vi: "Tạm dừng sau mỗi câu hỏi, tự trả lời, rồi nghe câu mẫu và nói theo."
+      - emma: "Today, Tom and I ask each other about part-time jobs and dream jobs. Then we do a mock test: I'm the examiner, and Tom is the candidate."
+        vi: "Hôm nay: việc làm thêm, công việc mơ ước; rồi thi thử — Emma giám khảo, Tom thí sinh."
+      - tom: "Remember Unit 3: work as, work for, work in, and would or could for things that aren't real."
+        say: "Remember Unit three: work as, work for, work in, and would or could for things that aren't real."
+        vi: "Nhớ bài Unit 3: work as / for / in, và would / could cho điều không có thật."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: việc làm thêm"
+    heading: "Tom and Emma ask each other · Part-time jobs"
+    heading_vi: "Việc làm thêm — kể bằng quá khứ đơn, nói hiện tại bằng work as / in / for"
+    items:
+      - q: "Emma, did you have a part-time job when you were a student?"
+        a: "Yes, I worked in a bookshop on Saturdays. It wasn't well paid, but I could borrow books for free, so for me it was the perfect job!"
+        ask: tom
+        by: emma
+        phrases: ["I worked in…", "It wasn't well paid", "the perfect job"]
+      - q: "And do you work at the moment, Tom?"
+        a: "Yes, I work as a waiter in a coffee shop near my university, two evenings a week. I started in September."
+        ask: emma
+        by: tom
+        phrases: ["I work as…", "two evenings a week", "I started in…"]
+      - q: "What was the worst job you ever had?"
+        a: "Washing dishes in a hotel kitchen, one summer. It was hot, noisy and really repetitive, and the chef shouted at everyone all day. I left after three weeks!"
+        ask: tom
+        by: emma
+        phrases: ["the worst job I ever had", "really repetitive", "I left after…"]
+      - q: "How did you find your job?"
+        a: "I saw an advertisement on the door of the coffee shop. I went in, talked to the manager for ten minutes, and she asked me to start the next week."
+        ask: emma
+        by: tom
+        phrases: ["I saw an advertisement", "talked to the manager", "start the next week"]
+      - q: "What's the best way to find a part-time job?"
+        a: "Ask people you know. Friends and neighbours often hear about jobs first. Job websites are useful too, but there are hundreds of applicants for every job."
+        ask: tom
+        by: emma
+        phrases: ["Ask people you know.", "hear about jobs first", "hundreds of applicants"]
+      - q: "Is it difficult to study and work at the same time?"
+        a: "Sometimes, especially before exams. I have to plan my week carefully, and I don't have much free time. But I'm learning to manage my time better."
+        ask: emma
+        by: tom
+        phrases: ["at the same time", "plan my week carefully", "manage my time"]
+      - q: "What did you spend your first salary on?"
+        a: "A plane ticket! I saved my money from the bookshop for six months, and then I went to Spain with Lucy for a week. It was my first trip abroad."
+        ask: tom
+        by: emma
+        phrases: ["I saved my money", "for six months", "my first trip abroad"]
+      - q: "Do many students in Vietnam have part-time jobs?"
+        a: "Yes, quite a lot, especially in big cities. Some work in cafés or shops, and many teach children as private tutors. It helps them to pay for their rent and food."
+        ask: emma
+        by: tom
+        phrases: ["especially in big cities", "private tutors", "pay for…"]
+    lines:
+      - {tom: "Emma, did you have a part-time job when you were a student?", focus: 0}
+      - emma: "Yes, I worked in a bookshop on Saturdays. It wasn't well paid, but I could borrow books for free, so for me it was the perfect job!"
+        reveal: 0
+        vi: "Có, làm ở hiệu sách sáng thứ Bảy: lương thấp nhưng được mượn sách miễn phí — việc hoàn hảo!"
+      - {emma: "And do you work at the moment, Tom?", focus: 1}
+      - tom: "Yes, I work as a waiter in a coffee shop near my university, two evenings a week. I started in September."
+        reveal: 1
+        vi: "Có, làm phục vụ ở quán cà phê gần trường, hai tối mỗi tuần, bắt đầu từ tháng 9."
+      - {tom: "What was the worst job you ever had?", focus: 2}
+      - emma: "Washing dishes in a hotel kitchen, one summer. It was hot, noisy and really repetitive, and the chef shouted at everyone all day. I left after three weeks!"
+        reveal: 2
+        vi: "Rửa bát trong bếp khách sạn một mùa hè: nóng, ồn, lặp đi lặp lại, bếp trưởng quát cả ngày — bỏ sau ba tuần!"
+      - {emma: "How did you find your job?", focus: 3}
+      - tom: "I saw an advertisement on the door of the coffee shop. I went in, talked to the manager for ten minutes, and she asked me to start the next week."
+        reveal: 3
+        vi: "Thấy tờ tuyển người dán ở cửa quán; vào nói chuyện mười phút, quản lý bảo tuần sau đi làm."
+      - {tom: "What's the best way to find a part-time job?", focus: 4}
+      - emma: "Ask people you know. Friends and neighbours often hear about jobs first. Job websites are useful too, but there are hundreds of applicants for every job."
+        reveal: 4
+        vi: "Hỏi người quen: bạn bè, hàng xóm hay biết việc trước; trang tuyển dụng cũng tốt nhưng rất đông người nộp."
+      - {emma: "Is it difficult to study and work at the same time?", focus: 5}
+      - tom: "Sometimes, especially before exams. I have to plan my week carefully, and I don't have much free time. But I'm learning to manage my time better."
+        reveal: 5
+        vi: "Đôi khi, nhất là trước kỳ thi: phải lên kế hoạch tuần cẩn thận; đang học cách quản lý thời gian."
+      - {tom: "What did you spend your first salary on?", focus: 6}
+      - emma: "A plane ticket! I saved my money from the bookshop for six months, and then I went to Spain with Lucy for a week. It was my first trip abroad."
+        reveal: 6
+        vi: "Vé máy bay! Để dành lương hiệu sách sáu tháng rồi đi Tây Ban Nha với Lucy — chuyến đi nước ngoài đầu tiên."
+      - {emma: "Do many students in Vietnam have part-time jobs?", focus: 7}
+      - tom: "Yes, quite a lot, especially in big cities. Some work in cafés or shops, and many teach children as private tutors. It helps them to pay for their rent and food."
+        reveal: 7
+        vi: "Khá nhiều, nhất là ở thành phố lớn: làm quán cà phê, cửa hàng, gia sư — để trả tiền nhà, tiền ăn."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: công việc mơ ước"
+    heading: "Tom and Emma ask each other · Dream jobs"
+    heading_vi: "Công việc mơ ước — would / could cho điều không có thật"
+    items:
+      - q: "When you were a child, what did you want to be?"
+        a: "An astronaut! I had posters of planets on my bedroom wall. Then I found out that you need to be very good at maths, so I changed my mind."
+        ask: tom
+        by: emma
+        phrases: ["I had posters of…", "I found out that…", "I changed my mind"]
+      - q: "What about you, Tom?"
+        a: "An architect. I loved drawing houses, and I still do. I'm studying business now, but I'd still love to design my own house one day."
+        ask: emma
+        by: tom
+        phrases: ["I loved + -ing", "and I still do", "I'd still love to…"]
+      - q: "If you could do any job in the world, what would it be?"
+        a: "I'd be a travel writer. I could visit amazing places, eat local food, and write about it. It sounds like the perfect job, but I think it's harder than it looks."
+        ask: tom
+        by: emma
+        phrases: ["I'd be…", "It sounds like…", "harder than it looks"]
+      - q: "Which job would you never want to do?"
+        a: "I would never want to be a dentist. I couldn't spend all day looking inside people's mouths! And most patients are scared of dentists."
+        ask: emma
+        by: tom
+        phrases: ["I would never want to…", "I couldn't + verb", "scared of…"]
+      - q: "Do you think you could be a good manager?"
+        a: "Maybe, because I'm organised, and I'm good at listening. But I'm not very good at saying no, and a manager has to make difficult decisions."
+        ask: tom
+        by: emma
+        phrases: ["Maybe, because…", "I'm good at + -ing", "make difficult decisions"]
+      - q: "Would you like to have your own business one day?"
+        a: "Yes, I'd love to. Maybe a small coffee brand from Da Lat. My dad knows a lot about coffee, so he could help me."
+        ask: emma
+        by: tom
+        phrases: ["I'd love to.", "Maybe…", "he could help me"]
+      - q: "Which job is the most rewarding, in your opinion?"
+        a: "Teaching, of course! But seriously, I think nurses have one of the most rewarding jobs. They help people when they're scared and in pain."
+        ask: tom
+        by: emma
+        phrases: ["…, of course!", "one of the most rewarding jobs", "when they're scared"]
+      - q: "Would you prefer a job with a high salary, or a job with lots of holidays?"
+        a: "A high salary, at least while I'm young. I want to save money and help my parents. But later, I'd like more time for my family."
+        ask: emma
+        by: tom
+        phrases: ["at least while I'm young", "save money", "But later…"]
+    lines:
+      - {tom: "When you were a child, what did you want to be?", focus: 0}
+      - emma: "An astronaut! I had posters of planets on my bedroom wall. Then I found out that you need to be very good at maths, so I changed my mind."
+        reveal: 0
+        vi: "Phi hành gia! Dán đầy ảnh các hành tinh; rồi biết phải giỏi toán nên đổi ý."
+      - {emma: "What about you, Tom?", focus: 1}
+      - tom: "An architect. I loved drawing houses, and I still do. I'm studying business now, but I'd still love to design my own house one day."
+        reveal: 1
+        vi: "Kiến trúc sư: thích vẽ nhà, giờ vẫn thích; đang học kinh doanh nhưng vẫn muốn tự thiết kế nhà mình."
+      - {tom: "If you could do any job in the world, what would it be?", focus: 2}
+      - emma: "I'd be a travel writer. I could visit amazing places, eat local food, and write about it. It sounds like the perfect job, but I think it's harder than it looks."
+        reveal: 2
+        vi: "Nhà văn du lịch: đi khắp nơi, ăn món địa phương, viết lại — nghe hoàn hảo nhưng chắc khó hơn vẻ ngoài."
+      - {emma: "Which job would you never want to do?", focus: 3}
+      - tom: "I would never want to be a dentist. I couldn't spend all day looking inside people's mouths! And most patients are scared of dentists."
+        reveal: 3
+        vi: "Không bao giờ làm nha sĩ: không thể nhìn vào miệng người ta cả ngày! Bệnh nhân lại sợ nha sĩ."
+      - {tom: "Do you think you could be a good manager?", focus: 4}
+      - emma: "Maybe, because I'm organised, and I'm good at listening. But I'm not very good at saying no, and a manager has to make difficult decisions."
+        reveal: 4
+        vi: "Có thể: ngăn nắp, biết lắng nghe; nhưng khó nói 'không', mà quản lý phải ra quyết định khó."
+      - {emma: "Would you like to have your own business one day?", focus: 5}
+      - tom: "Yes, I'd love to. Maybe a small coffee brand from Da Lat. My dad knows a lot about coffee, so he could help me."
+        say: "Yes, I'd love to. Maybe a small coffee brand from Dah Lot. My dad knows a lot about coffee, so he could help me."
+        reveal: 5
+        vi: "Rất muốn: có lẽ một thương hiệu cà phê Đà Lạt nhỏ; bố rành cà phê nên có thể giúp."
+      - {tom: "Which job is the most rewarding, in your opinion?", focus: 6}
+      - emma: "Teaching, of course! But seriously, I think nurses have one of the most rewarding jobs. They help people when they're scared and in pain."
+        reveal: 6
+        vi: "Dạy học, tất nhiên! Nói thật thì y tá: họ giúp người bệnh lúc sợ hãi, đau đớn."
+      - {emma: "Would you prefer a job with a high salary, or a job with lots of holidays?", focus: 7}
+      - tom: "A high salary, at least while I'm young. I want to save money and help my parents. But later, I'd like more time for my family."
+        reveal: 7
+        vi: "Lương cao, ít nhất khi còn trẻ: để dành tiền, giúp bố mẹ; sau này muốn có thời gian cho gia đình."
+
+  - kind: qa
+    chapter: "Thi thử 1 · Phần 1"
+    heading: "Mock test 1 · Part 1 · Introduction and interview"
+    heading_vi: "Thi thử Phần 1 — giám khảo hỏi về bạn (bài thi thật: 4–5 phút)"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Can you tell me your full name, please?"
+        a: "Good morning. My full name is Tran Minh Tuan, but please call me Tom."
+        phrases: ["My full name is…", "please call me…"]
+      - q: "Can I see your identification, please?"
+        a: "Of course. Here you are."
+      - q: "Do you have a job at the moment?"
+        a: "Yes, a part-time one. I'm a business student, but I also work as a waiter in a coffee shop, two evenings a week."
+        phrases: ["a part-time one", "I'm a… student, but…", "I also work as…"]
+      - q: "Why did you choose that job?"
+        a: "Mainly for the money, to be honest, because my rent is quite expensive. But I also wanted some real work experience. And I love coffee!"
+        phrases: ["Mainly for…", "to be honest", "real work experience"]
+      - q: "What do you like about it?"
+        a: "I like meeting different people every day. Some of our customers are foreigners, so I can practise my English with them too."
+        phrases: ["I like meeting…", "every day", "practise my English"]
+      - q: "What job would you like to have in ten years?"
+        a: "I'd like to be a marketing manager for an international company. I'd love to travel for work, like my uncle. He's a pilot."
+        phrases: ["I'd like to be…", "I'd love to…", "like my uncle"]
+      - q: "Is it easy to find a good job in your country?"
+        a: "It depends on your skills. In big cities, there are lots of jobs in business and IT, but the competition is strong, so you need good English and some experience."
+        phrases: ["It depends on…", "the competition is strong", "you need…"]
+      - q: "Would you like to work abroad one day?"
+        a: "Yes, for a few years. I'd like to work in Australia or Singapore, to get international experience. But I'd come back to Vietnam later, because my family is here."
+        phrases: ["for a few years", "international experience", "I'd come back…"]
+    lines:
+      - emma: "Now, the mock test. I'm the examiner, and Tom is the candidate. Part one starts now."
+        focus: 0
+        vi: "Thi thử: Emma là giám khảo, Tom là thí sinh. Bắt đầu Phần 1."
+      - {emma: "Good morning. My name is Emma. Can you tell me your full name, please?", focus: 0}
+      - tom: "Good morning. My full name is Tran Minh Tuan, but please call me Tom."
+        say: "Good morning. My full name is Chan Min Twan, but please call me Tom."
+        reveal: 0
+        vi: "Thí sinh có tên tiếng Anh thì nói thêm 'please call me…'."
+      - {emma: "Thank you, Tom. Can I see your identification, please?", focus: 1}
+      - {tom: "Of course. Here you are.", reveal: 1, vi: "Đưa giấy tờ tùy thân."}
+      - emma: "Thank you. Now, in this first part, I'd like to ask you some questions about yourself."
+        vi: "Phần 1: giám khảo hỏi về bản thân bạn."
+      - {emma: "Let's talk about work. Do you have a job at the moment?", focus: 2}
+      - tom: "Yes, a part-time one. I'm a business student, but I also work as a waiter in a coffee shop, two evenings a week."
+        reveal: 2
+        vi: "Có, việc làm thêm: là sinh viên kinh doanh, tối làm phục vụ quán cà phê hai buổi mỗi tuần."
+      - {emma: "Why did you choose that job?", focus: 3}
+      - tom: "Mainly for the money, to be honest, because my rent is quite expensive. But I also wanted some real work experience. And I love coffee!"
+        reveal: 3
+        vi: "Nói thật là chủ yếu vì tiền, tiền nhà khá đắt; nhưng cũng muốn có kinh nghiệm làm việc thật."
+      - {emma: "What do you like about it?", focus: 4}
+      - tom: "I like meeting different people every day. Some of our customers are foreigners, so I can practise my English with them too."
+        reveal: 4
+        vi: "Thích gặp nhiều người mỗi ngày; có khách nước ngoài nên luyện được tiếng Anh."
+      - {emma: "Let's talk about your future. What job would you like to have in ten years?", focus: 5}
+      - tom: "I'd like to be a marketing manager for an international company. I'd love to travel for work, like my uncle. He's a pilot."
+        reveal: 5
+        vi: "Trưởng phòng marketing cho một công ty quốc tế; muốn đi công tác nhiều như chú — chú là phi công."
+      - {emma: "Is it easy to find a good job in your country?", focus: 6}
+      - tom: "It depends on your skills. In big cities, there are lots of jobs in business and IT, but the competition is strong, so you need good English and some experience."
+        reveal: 6
+        vi: "Tùy kỹ năng: thành phố lớn nhiều việc kinh doanh, công nghệ, nhưng cạnh tranh — cần tiếng Anh tốt, kinh nghiệm."
+      - {emma: "Would you like to work abroad one day?", focus: 7}
+      - tom: "Yes, for a few years. I'd like to work in Australia or Singapore, to get international experience. But I'd come back to Vietnam later, because my family is here."
+        reveal: 7
+        vi: "Muốn làm ở Úc hoặc Singapore vài năm lấy kinh nghiệm quốc tế, rồi về Việt Nam vì gia đình ở đây."
+
+  - kind: bullets
+    chapter: "Thi thử 1 · Phần 2"
+    heading: "Part 2 · Describe a part-time job you have or had."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what the job is", vi: "đó là việc gì"}
+      - {en: "when and where you do it", vi: "làm khi nào, ở đâu"}
+      - {en: "what you do in the job", vi: "bạn làm những gì"}
+      - {en: "and explain whether you like it or not", vi: "và giải thích bạn có thích việc đó không"}
+    lines:
+      - emma: "Thank you. Now, in part two, I'm going to give you a topic, and I'd like you to talk about it for one to two minutes."
+        vi: "Phần 2: nói 1–2 phút về một chủ đề."
+      - emma: "Before you talk, you'll have one minute to think about what you're going to say. You can make some notes if you wish."
+        vi: "Có 1 phút chuẩn bị và được ghi chú — muốn tự chuẩn bị thì tạm dừng video."
+      - emma: "Here's your topic. I'd like you to describe a part-time job you have or had."
+        vi: "Tả một việc làm thêm bạn đang làm hoặc đã làm."
+      - {emma: "You should say what the job is,", focus: 0}
+      - {emma: "when and where you do it,", focus: 1}
+      - {emma: "what you do in the job,", focus: 2}
+      - {emma: "and explain whether you like it or not.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · one line for each point"
+    heading_vi: "Ghi chú của Tom — chỉ từ khóa, không viết cả câu"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "waiter · small coffee shop near university · since September", vi: "phục vụ · quán cà phê nhỏ gần trường · từ tháng 9"}
+      - {en: "Tuesday and Thursday evenings · 6 to 10 · busiest time", vi: "tối thứ Ba và thứ Năm · 6–10 giờ · lúc đông nhất"}
+      - {en: "take orders · make simple drinks · clean tables · four cups!", vi: "ghi món · pha đồ uống đơn giản · dọn bàn · bưng bốn ly!"}
+      - {en: "like it: friendly team, English with customers · tired in the morning", vi: "thích: đồng nghiệp vui, nói tiếng Anh với khách · sáng hay mệt"}
+    lines:
+      - tom: "I've got one minute, so I just write key words. One line for each point on the card."
+        vi: "Có 1 phút: chỉ ghi từ khóa, mỗi ý trên thẻ một dòng."
+      - emma: "All right? Remember, you have one to two minutes, so don't worry if I stop you. Can you start speaking now, please?"
+        vi: "Được chưa? Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu khoảng 1 phút — mỗi ý trên thẻ là một đoạn"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my part-time job. I work as a waiter in a small coffee shop near my university. I started in September, so I've been there for about two months."
+        note: "what the job is"
+      - text: "I work two evenings a week, on Tuesdays and Thursdays, from six to ten. Evenings are the busiest time, because lots of students come to study there."
+        note: "when and where"
+      - text: "My job is to take orders, make simple drinks and clean the tables. At first I was very slow, but now I can carry four cups at once without dropping them!"
+        note: "what I do"
+      - text: "On the whole, I really like it. My colleagues are friendly, and I can practise my English with foreign customers. The only problem is that I'm often tired in my morning classes."
+        note: "do I like it?"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 1 · Phần 3"
+    heading: "Mock test 1 · Part 3 · Discussion"
+    heading_vi: "Phần 3 — câu hỏi chung về việc làm: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Should students have part-time jobs?"
+        a: "I think so, but not for too many hours. A part-time job teaches you to manage your time and your money. But if students work more than fifteen hours a week, their studies can suffer."
+        phrases: ["I think so, but…", "manage your time", "can suffer"]
+      - q: "What can young people learn from a part-time job?"
+        a: "They learn how to work in a team, and how to talk to customers politely, even when the customers are angry. These skills are really useful later, in any career."
+        phrases: ["work in a team", "even when…", "in any career"]
+      - q: "Is it better to have a well-paid job or an interesting job?"
+        a: "For me, an interesting job is more important, as long as the salary is enough to live on. If you're bored at work every day, the money won't make you happy."
+        phrases: ["as long as…", "enough to live on", "won't make you happy"]
+      - q: "Why do some people work very long hours?"
+        a: "Sometimes they have no choice, because they need the money. Others want a promotion, so they stay late to impress their boss. But working too much is bad for your health."
+        phrases: ["have no choice", "a promotion", "bad for your health"]
+    lines:
+      - emma: "Thank you. We've been talking about a part-time job. Now I'd like to ask you some more general questions about work."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về việc làm."
+      - {emma: "Should students have part-time jobs?", focus: 0}
+      - tom: "I think so, but not for too many hours. A part-time job teaches you to manage your time and your money. But if students work more than fifteen hours a week, their studies can suffer."
+        reveal: 0
+        vi: "Nên, nhưng đừng quá nhiều giờ: học cách quản lý thời gian, tiền bạc; làm trên 15 giờ/tuần thì việc học bị ảnh hưởng."
+      - {emma: "What can young people learn from a part-time job?", focus: 1}
+      - tom: "They learn how to work in a team, and how to talk to customers politely, even when the customers are angry. These skills are really useful later, in any career."
+        reveal: 1
+        vi: "Học làm việc nhóm, lịch sự với khách kể cả khi khách giận — kỹ năng hữu ích cho mọi nghề."
+      - {emma: "Is it better to have a well-paid job or an interesting job?", focus: 2}
+      - tom: "For me, an interesting job is more important, as long as the salary is enough to live on. If you're bored at work every day, the money won't make you happy."
+        reveal: 2
+        vi: "Việc thú vị quan trọng hơn, miễn lương đủ sống; ngày nào cũng chán thì tiền không làm mình vui."
+      - {emma: "Why do some people work very long hours?", focus: 3}
+      - tom: "Sometimes they have no choice, because they need the money. Others want a promotion, so they stay late to impress their boss. But working too much is bad for your health."
+        reveal: 3
+        vi: "Có người không có lựa chọn vì cần tiền; người khác muốn thăng chức nên ở lại muộn — làm quá nhiều hại sức khỏe."
+      - emma: "Thank you very much, Tom. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - tom: "Thank you, Emma! See you in Speaking practice two."
+        vi: "Hẹn gặp ở video luyện nói 2."

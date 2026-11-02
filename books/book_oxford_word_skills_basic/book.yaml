@@ -1,0 +1,759 @@
+# Hồ sơ lộ trình "Oxford Word Skills Basic" cho agent book_ingest — mẫu lessons-v1 (agents/book_ingest/lessons.py).
+# Sách từ vựng A1–A2 của Oxford (Ruth Gairns, Stuart Redman, 2008): 80 unit 1–3 trang, gom thành 11 module theo chủ
+# đề, mỗi module có một bài Review; cuối sách có Answer key (mọi bài tập, kể cả câu trả lời mẫu cho phần ABOUT YOU) và
+# Word list có phiên âm. Bộ dữ liệu chỉ có PDF quét (không có CD-ROM nên không có audio). Thiết kế, cách học bằng video
+# 7–10 phút và sổ tay làm video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md.
+#
+# Sinh từ trang Contents (tr. in 3–6) và OCR tiêu đề "Unit N" của Answer key; sửa tay ở đây rồi chạy lại ingest.
+# `pages` là SỐ TRANG IN. File PDF quét thiếu hai trang trắng (tr. in 204 sau trang tựa Answer key, tr. in 236 trước Word
+# list) nên khai ba lần: `course-book` (tr. in 1–203 = PDF + 1), `answer-key` (tr. in 205–235 = PDF), `word-list`
+# (tr. in 237–254 = PDF − 1). Đã soát: số trang in ở chân 244 trang, 11 trang Review và 12 trang đầu unit.
+#
+# Mỗi unit một phiên khoảng 30 phút: xem video 7–10 phút (không đếm ngược), làm bài trong sách, chữa bằng Answer key, nói
+# phần ABOUT YOU. Cuối mỗi module một phiên Review (bài ôn trong sách + Answer key to review units).
+
+book: oxford-word-skills-basic
+title: Oxford Word Skills Basic
+edition: oup-2008
+template: lessons-v1
+start_week: 1
+sessions_per_week: 5
+minutes_per_session: 30
+pace: [3, 5, 7]
+
+info:
+  course: ielts
+  role: Từ vựng nền tảng A1–A2 · học song song
+  module: Từ vựng · Elementary – Pre-intermediate
+  author: Ruth Gairns, Stuart Redman
+  publisher: Oxford University Press
+  level: Elementary – Pre-intermediate
+  cefr: A1 → A2
+  summary: >-
+    Sách từ vựng của Oxford cho trình độ A1–A2: hơn 2.000 từ và cụm từ thông dụng trong 80 unit ngắn (1–3 trang), gom
+    thành 11 module theo chủ đề — số, giờ, ngày tháng; con người; đời sống hằng ngày; ăn uống; đi lại; nơi chốn; học tập
+    và công việc; sở thích; kỳ nghỉ; giao tiếp xã hội; ngữ pháp từ vựng (giới từ, cụm động từ, từ nối). Bộ ba cuốn Oxford
+    Word Skills gần như phủ trọn Oxford 3000; cuốn Basic là phần thông dụng nhất, đúng các chủ đề của IELTS Speaking Part 1
+    và General Training. Mỗi unit một phiên khoảng 30 phút: unit đã có video thì xem trước
+    (7–10 phút: dạy từ, chữa bài trong sách, 1–2 phần luyện nói theo chủ đề, không đếm ngược — muốn trả lời thì tự tạm
+    dừng video), rồi làm bài, chữa bằng Answer key, nói phần ABOUT YOU. Cuối mỗi module có một phiên Review.
+  start_when: >-
+    Học song song với Giai đoạn 0 (English Unlimited A2) hoặc Giai đoạn 1, không thay giáo trình chính: mỗi ngày một unit,
+    5 phiên/tuần là khoảng 19 tuần. Đã chắc A2 thì đi nhanh hai module đầu (Basic English, People) và dồn sức từ module
+    Everyday life. Tuần ở đây đếm riêng cho cuốn này.
+
+files:
+  course-book:
+    kind: pdf
+    label: Oxford Word Skills Basic
+    path: Oxford_Word_Skills_Bas.pdf
+    page_offset: 1            # trang in 14 (Unit 1) = trang PDF 15 … trang in 203 (tựa Answer key) = PDF 204
+  answer-key:
+    kind: pdf
+    label: Answer key
+    path: Oxford_Word_Skills_Bas.pdf
+    page_offset: 0            # bản quét thiếu trang in 204 (trắng): trang in 205 = PDF 205 … 235 = PDF 235
+  word-list:
+    kind: pdf
+    label: Word list
+    path: Oxford_Word_Skills_Bas.pdf
+    page_offset: -1           # bản quét thiếu trang in 236 (trắng): trang in 237 = PDF 236 … 254 = PDF 253
+
+# Không có trong bộ dữ liệu: CD-ROM (phát âm mẫu từng từ, bài luyện thêm, bài nghe).
+missing: [cd-rom]
+
+steps:
+  - id: words
+    title: "{title} · từ vựng, bài tập, nói"
+    skill: vocab
+    core: true
+    minutes: 30
+    note: >-
+      Unit {no} — {can} ({vi}). Có video thì xem trước (7–10 phút, không đếm ngược: khi Emma hỏi thì tạm dừng video, trả
+      lời thành tiếng rồi xem tiếp). Rồi làm các bài trong sách, chữa bằng Answer key (nút bên dưới); phần ABOUT YOU trả
+      lời thành tiếng, so với câu mẫu trong Answer key. Chép 5–8 từ mới kèm một câu ví dụ vào Anki, rồi làm Test yourself:
+      che bảng từ và nói lại.
+
+review-step: &review
+  - id: review
+    title: ôn tập cả module
+    skill: vocab
+    core: true
+    minutes: 45
+    note: >-
+      Review — module {title}. Làm hết các bài ôn (mỗi bài ứng với một unit, tiêu đề ghi số unit), chữa bằng Answer key
+      to review units. Unit nào sai từ 2 câu trở lên thì xem lại video và trang sách của unit đó; câu sai ghi vào sổ lỗi.
+
+toc:
+  sections:
+    - id: M00
+      title: Bắt đầu · Introduction, Starter unit
+      items:
+        - unit: 0
+          title: Starter unit
+          can: How to learn new words
+          vi: cách học với sách
+          pages: [8, 13]
+          steps:
+            - id: start
+              title: cách học với sách
+              skill: other
+              minutes: 30
+              note: >-
+                Introduction (tr. 8–9) và Starter unit (tr. 10–13): cách học một unit, cách ghi và ôn từ mới, các dạng bài
+                tập, ký hiệu viết tắt. Chuẩn bị một bộ thẻ Anki (mặt trước: từ + câu ví dụ, mặt sau: nghĩa tiếng Việt).
+                Word list cuối sách có phiên âm từng từ; Vocabulary building tables (tr. 199–201) gom các dạng của từ.
+          refs:
+            start:
+              pages: [8, 13]
+              alt:
+                - {pdf: course-book, pages: [199, 201], label: "Vocabulary building tables tr. 199–201"}
+                - {pdf: word-list, pages: [237, 254], label: "Word list / Index tr. 237–254"}
+    - id: M01
+      title: "Basic English · tiếng Anh cơ bản (Unit 1–7)"
+      items:
+        - unit: 1
+          title: "Numbers"
+          can: "I can understand and say numbers"
+          vi: "số đếm"
+          pages: [14, 14]
+          refs:
+            words: {pages: [14, 14], alt: [{pdf: answer-key, pages: [205, 205], label: "Answer key tr. 205"}]}
+        - unit: 2
+          title: "The time"
+          can: "I can tell the time"
+          vi: "giờ giấc"
+          pages: [15, 15]
+          refs:
+            words: {pages: [15, 15], alt: [{pdf: answer-key, pages: [205, 205], label: "Answer key tr. 205"}]}
+        - unit: 3
+          title: "Days and dates"
+          can: "I can say days and dates"
+          vi: "thứ, tháng, mùa, ngày tháng"
+          pages: [16, 17]
+          refs:
+            words: {pages: [16, 17], alt: [{pdf: answer-key, pages: [205, 206], label: "Answer key tr. 205–206"}]}
+        - unit: 4
+          title: "Countries and nationalities"
+          can: "I can say countries and nationalities"
+          vi: "quốc gia, quốc tịch, ngôn ngữ"
+          pages: [18, 19]
+          refs:
+            words: {pages: [18, 19], alt: [{pdf: answer-key, pages: [206, 206], label: "Answer key tr. 206"}]}
+        - unit: 5
+          title: "Classroom vocabulary"
+          can: "I can use classroom vocabulary"
+          vi: "đồ vật trong lớp học"
+          pages: [20, 20]
+          refs:
+            words: {pages: [20, 20], alt: [{pdf: answer-key, pages: [206, 206], label: "Answer key tr. 206"}]}
+        - unit: 6
+          title: "English language words"
+          can: "I can use English language words"
+          vi: "từ loại và thuật ngữ ngữ pháp"
+          pages: [21, 21]
+          refs:
+            words: {pages: [21, 21], alt: [{pdf: answer-key, pages: [206, 206], label: "Answer key tr. 206"}]}
+        - unit: 7
+          title: "Questions about language"
+          can: "I can ask and answer questions about language"
+          vi: "hỏi đáp về từ ngữ"
+          pages: [22, 22]
+          refs:
+            words: {pages: [22, 22], alt: [{pdf: answer-key, pages: [206, 206], label: "Answer key tr. 206"}]}
+        - test: 1
+          title: "Review · Basic English"
+          steps: *review
+          refs:
+            review: {pages: [23, 25], alt: [{pdf: answer-key, pages: [225, 225], label: "Answer key to review units tr. 225"}]}
+    - id: M02
+      title: "People · con người (Unit 8–16)"
+      items:
+        - unit: 8
+          title: "Personal information"
+          can: "I can give personal information"
+          vi: "thông tin cá nhân"
+          pages: [26, 26]
+          refs:
+            words: {pages: [26, 26], alt: [{pdf: answer-key, pages: [206, 206], label: "Answer key tr. 206"}]}
+        - unit: 9
+          title: "Filling in a form"
+          can: "I can fill in a form"
+          vi: "điền phiếu, biểu mẫu"
+          pages: [27, 27]
+          refs:
+            words: {pages: [27, 27], alt: [{pdf: answer-key, pages: [206, 206], label: "Answer key tr. 206"}]}
+        - unit: 10
+          title: "My family"
+          can: "I can talk about my family"
+          vi: "gia đình"
+          pages: [28, 29]
+          refs:
+            words: {pages: [28, 29], alt: [{pdf: answer-key, pages: [206, 207], label: "Answer key tr. 206–207"}]}
+        - unit: 11
+          title: "Physical actions"
+          can: "I can describe physical actions"
+          vi: "hành động cơ thể"
+          pages: [30, 31]
+          refs:
+            words: {pages: [30, 31], alt: [{pdf: answer-key, pages: [207, 207], label: "Answer key tr. 207"}]}
+        - unit: 12
+          title: "Parts of the body"
+          can: "I can name parts of the body"
+          vi: "bộ phận cơ thể"
+          pages: [32, 32]
+          refs:
+            words: {pages: [32, 32], alt: [{pdf: answer-key, pages: [207, 207], label: "Answer key tr. 207"}]}
+        - unit: 13
+          title: "Describing people"
+          can: "I can describe people"
+          vi: "tả ngoại hình"
+          pages: [33, 35]
+          refs:
+            words: {pages: [33, 35], alt: [{pdf: answer-key, pages: [207, 207], label: "Answer key tr. 207"}]}
+        - unit: 14
+          title: "Character"
+          can: "I can talk about character"
+          vi: "tính cách"
+          pages: [36, 37]
+          refs:
+            words: {pages: [36, 37], alt: [{pdf: answer-key, pages: [207, 208], label: "Answer key tr. 207–208"}]}
+        - unit: 15
+          title: "Relationships"
+          can: "I can describe relationships"
+          vi: "các mối quan hệ"
+          pages: [38, 39]
+          refs:
+            words: {pages: [38, 39], alt: [{pdf: answer-key, pages: [208, 208], label: "Answer key tr. 208"}]}
+        - unit: 16
+          title: "Feelings"
+          can: "I can say how I feel"
+          vi: "cảm xúc"
+          pages: [40, 41]
+          refs:
+            words: {pages: [40, 41], alt: [{pdf: answer-key, pages: [208, 208], label: "Answer key tr. 208"}]}
+        - test: 2
+          title: "Review · People"
+          steps: *review
+          refs:
+            review: {pages: [42, 45], alt: [{pdf: answer-key, pages: [225, 226], label: "Answer key to review units tr. 225–226"}]}
+    - id: M03
+      title: "Everyday life · đời sống hằng ngày (Unit 17–23)"
+      items:
+        - unit: 17
+          title: "My routine"
+          can: "I can describe my routine"
+          vi: "sinh hoạt hằng ngày"
+          pages: [46, 48]
+          refs:
+            words: {pages: [46, 48], alt: [{pdf: answer-key, pages: [208, 209], label: "Answer key tr. 208–209"}]}
+        - unit: 18
+          title: "Clothes"
+          can: "I can talk about clothes"
+          vi: "quần áo"
+          pages: [49, 50]
+          refs:
+            words: {pages: [49, 50], alt: [{pdf: answer-key, pages: [209, 209], label: "Answer key tr. 209"}]}
+        - unit: 19
+          title: "Buying clothes"
+          can: "I can buy clothes"
+          vi: "mua quần áo"
+          pages: [51, 53]
+          refs:
+            words: {pages: [51, 53], alt: [{pdf: answer-key, pages: [209, 209], label: "Answer key tr. 209"}]}
+        - unit: 20
+          title: "Money"
+          can: "I can talk about money"
+          vi: "tiền bạc"
+          pages: [54, 55]
+          refs:
+            words: {pages: [54, 55], alt: [{pdf: answer-key, pages: [209, 209], label: "Answer key tr. 209"}]}
+        - unit: 21
+          title: "The weather"
+          can: "I can talk about the weather"
+          vi: "thời tiết"
+          pages: [56, 57]
+          refs:
+            words: {pages: [56, 57], alt: [{pdf: answer-key, pages: [209, 210], label: "Answer key tr. 209–210"}]}
+        - unit: 22
+          title: "Illness"
+          can: "I can talk about illness"
+          vi: "ốm đau, bệnh"
+          pages: [58, 59]
+          refs:
+            words: {pages: [58, 59], alt: [{pdf: answer-key, pages: [210, 210], label: "Answer key tr. 210"}]}
+        - unit: 23
+          title: "At the chemist's"
+          can: "I can get help at the chemist's"
+          vi: "ở hiệu thuốc"
+          pages: [60, 60]
+          refs:
+            words: {pages: [60, 60], alt: [{pdf: answer-key, pages: [210, 210], label: "Answer key tr. 210"}]}
+        - test: 3
+          title: "Review · Everyday life"
+          steps: *review
+          refs:
+            review: {pages: [61, 64], alt: [{pdf: answer-key, pages: [227, 227], label: "Answer key to review units tr. 227"}]}
+    - id: M04
+      title: "Food and drink · ăn uống (Unit 24–28)"
+      items:
+        - unit: 24
+          title: "Meat and fish"
+          can: "I can name meat and fish"
+          vi: "thịt và cá"
+          pages: [65, 65]
+          refs:
+            words: {pages: [65, 65], alt: [{pdf: answer-key, pages: [210, 210], label: "Answer key tr. 210"}]}
+        - unit: 25
+          title: "Fruit and vegetables"
+          can: "I can name fruit and vegetables"
+          vi: "trái cây và rau"
+          pages: [66, 67]
+          refs:
+            words: {pages: [66, 67], alt: [{pdf: answer-key, pages: [210, 210], label: "Answer key tr. 210"}]}
+        - unit: 26
+          title: "Buying food"
+          can: "I can buy food in a shop"
+          vi: "mua thực phẩm"
+          pages: [68, 70]
+          refs:
+            words: {pages: [68, 70], alt: [{pdf: answer-key, pages: [210, 211], label: "Answer key tr. 210–211"}]}
+        - unit: 27
+          title: "In a café"
+          can: "I can order in a café"
+          vi: "gọi món ở quán cà phê"
+          pages: [71, 71]
+          refs:
+            words: {pages: [71, 71], alt: [{pdf: answer-key, pages: [211, 211], label: "Answer key tr. 211"}]}
+        - unit: 28
+          title: "In a restaurant"
+          can: "I can order in a restaurant"
+          vi: "gọi món ở nhà hàng"
+          pages: [72, 74]
+          refs:
+            words: {pages: [72, 74], alt: [{pdf: answer-key, pages: [211, 211], label: "Answer key tr. 211"}]}
+        - test: 4
+          title: "Review · Food and drink"
+          steps: *review
+          refs:
+            review: {pages: [75, 77], alt: [{pdf: answer-key, pages: [228, 228], label: "Answer key to review units tr. 228"}]}
+    - id: M05
+      title: "Getting around · đi lại (Unit 29–33)"
+      items:
+        - unit: 29
+          title: "Buses"
+          can: "I can get around on buses"
+          vi: "đi xe buýt"
+          pages: [78, 79]
+          refs:
+            words: {pages: [78, 79], alt: [{pdf: answer-key, pages: [211, 211], label: "Answer key tr. 211"}]}
+        - unit: 30
+          title: "Trains"
+          can: "I can get around on trains"
+          vi: "đi tàu"
+          pages: [80, 81]
+          refs:
+            words: {pages: [80, 81], alt: [{pdf: answer-key, pages: [211, 212], label: "Answer key tr. 211–212"}]}
+        - unit: 31
+          title: "Directions"
+          can: "I can ask for and give directions"
+          vi: "hỏi và chỉ đường"
+          pages: [82, 83]
+          refs:
+            words: {pages: [82, 83], alt: [{pdf: answer-key, pages: [212, 212], label: "Answer key tr. 212"}]}
+        - unit: 32
+          title: "Roads and traffic"
+          can: "I can talk about roads and traffic"
+          vi: "đường sá, giao thông"
+          pages: [84, 85]
+          refs:
+            words: {pages: [84, 85], alt: [{pdf: answer-key, pages: [212, 212], label: "Answer key tr. 212"}]}
+        - unit: 33
+          title: "Signs and notices"
+          can: "I can understand signs and notices"
+          vi: "biển báo, thông báo"
+          pages: [86, 86]
+          refs:
+            words: {pages: [86, 86], alt: [{pdf: answer-key, pages: [212, 212], label: "Answer key tr. 212"}]}
+        - test: 5
+          title: "Review · Getting around"
+          steps: *review
+          refs:
+            review: {pages: [87, 89], alt: [{pdf: answer-key, pages: [228, 229], label: "Answer key to review units tr. 228–229"}]}
+    - id: M06
+      title: "Places · nơi chốn (Unit 34–41)"
+      items:
+        - unit: 34
+          title: "My country"
+          can: "I can talk about my country"
+          vi: "đất nước tôi"
+          pages: [90, 90]
+          refs:
+            words: {pages: [90, 90], alt: [{pdf: answer-key, pages: [212, 212], label: "Answer key tr. 212"}]}
+        - unit: 35
+          title: "My town"
+          can: "I can talk about my town"
+          vi: "thành phố, thị trấn của tôi"
+          pages: [91, 93]
+          refs:
+            words: {pages: [91, 93], alt: [{pdf: answer-key, pages: [212, 213], label: "Answer key tr. 212–213"}]}
+        - unit: 36
+          title: "The countryside"
+          can: "I can describe the countryside"
+          vi: "nông thôn"
+          pages: [94, 95]
+          refs:
+            words: {pages: [94, 95], alt: [{pdf: answer-key, pages: [213, 213], label: "Answer key tr. 213"}]}
+        - unit: 37
+          title: "Shops"
+          can: "I can talk about shops"
+          vi: "cửa hàng"
+          pages: [96, 97]
+          refs:
+            words: {pages: [96, 97], alt: [{pdf: answer-key, pages: [213, 214], label: "Answer key tr. 213–214"}]}
+        - unit: 38
+          title: "My home"
+          can: "I can talk about my home"
+          vi: "nhà tôi"
+          pages: [98, 99]
+          refs:
+            words: {pages: [98, 99], alt: [{pdf: answer-key, pages: [214, 214], label: "Answer key tr. 214"}]}
+        - unit: 39
+          title: "The kitchen"
+          can: "I can describe a kitchen"
+          vi: "nhà bếp"
+          pages: [100, 101]
+          refs:
+            words: {pages: [100, 101], alt: [{pdf: answer-key, pages: [214, 214], label: "Answer key tr. 214"}]}
+        - unit: 40
+          title: "Bedroom and bathroom"
+          can: "I can describe a bedroom and bathroom"
+          vi: "phòng ngủ, phòng tắm"
+          pages: [102, 103]
+          refs:
+            words: {pages: [102, 103], alt: [{pdf: answer-key, pages: [214, 214], label: "Answer key tr. 214"}]}
+        - unit: 41
+          title: "The living room"
+          can: "I can describe a living room"
+          vi: "phòng khách"
+          pages: [104, 104]
+          refs:
+            words: {pages: [104, 104], alt: [{pdf: answer-key, pages: [214, 214], label: "Answer key tr. 214"}]}
+        - test: 6
+          title: "Review · Places"
+          steps: *review
+          refs:
+            review: {pages: [105, 108], alt: [{pdf: answer-key, pages: [229, 230], label: "Answer key to review units tr. 229–230"}]}
+    - id: M07
+      title: "Study and work · học tập và công việc (Unit 42–47)"
+      items:
+        - unit: 42
+          title: "My school"
+          can: "I can talk about my school"
+          vi: "trường học"
+          pages: [109, 111]
+          refs:
+            words: {pages: [109, 111], alt: [{pdf: answer-key, pages: [214, 215], label: "Answer key tr. 214–215"}]}
+        - unit: 43
+          title: "University"
+          can: "I can talk about university"
+          vi: "đại học"
+          pages: [112, 113]
+          refs:
+            words: {pages: [112, 113], alt: [{pdf: answer-key, pages: [215, 215], label: "Answer key tr. 215"}]}
+        - unit: 44
+          title: "Jobs"
+          can: "I can name jobs"
+          vi: "nghề nghiệp"
+          pages: [114, 115]
+          refs:
+            words: {pages: [114, 115], alt: [{pdf: answer-key, pages: [215, 215], label: "Answer key tr. 215"}]}
+        - unit: 45
+          title: "Describing a job"
+          can: "I can describe a job"
+          vi: "mô tả công việc"
+          pages: [116, 117]
+          refs:
+            words: {pages: [116, 117], alt: [{pdf: answer-key, pages: [215, 216], label: "Answer key tr. 215–216"}]}
+        - unit: 46
+          title: "Using a computer"
+          can: "I can talk about using a computer"
+          vi: "dùng máy tính"
+          pages: [118, 119]
+          refs:
+            words: {pages: [118, 119], alt: [{pdf: answer-key, pages: [216, 216], label: "Answer key tr. 216"}]}
+        - unit: 47
+          title: "Email and the internet"
+          can: "I can use email and the internet"
+          vi: "email và internet"
+          pages: [120, 121]
+          refs:
+            words: {pages: [120, 121], alt: [{pdf: answer-key, pages: [216, 216], label: "Answer key tr. 216"}]}
+        - test: 7
+          title: "Review · Study and work"
+          steps: *review
+          refs:
+            review: {pages: [122, 125], alt: [{pdf: answer-key, pages: [230, 230], label: "Answer key to review units tr. 230"}]}
+    - id: M08
+      title: "Hobbies and interests · sở thích (Unit 48–53)"
+      items:
+        - unit: 48
+          title: "Likes and dislikes"
+          can: "I can say what I like"
+          vi: "thích và không thích"
+          pages: [126, 127]
+          refs:
+            words: {pages: [126, 127], alt: [{pdf: answer-key, pages: [216, 217], label: "Answer key tr. 216–217"}]}
+        - unit: 49
+          title: "Sport"
+          can: "I can talk about sport"
+          vi: "thể thao"
+          pages: [128, 129]
+          refs:
+            words: {pages: [128, 129], alt: [{pdf: answer-key, pages: [217, 217], label: "Answer key tr. 217"}]}
+        - unit: 50
+          title: "Free time"
+          can: "I can talk about my free time"
+          vi: "thời gian rảnh"
+          pages: [130, 131]
+          refs:
+            words: {pages: [130, 131], alt: [{pdf: answer-key, pages: [217, 217], label: "Answer key tr. 217"}]}
+        - unit: 51
+          title: "Music"
+          can: "I can talk about music"
+          vi: "âm nhạc"
+          pages: [132, 133]
+          refs:
+            words: {pages: [132, 133], alt: [{pdf: answer-key, pages: [217, 217], label: "Answer key tr. 217"}]}
+        - unit: 52
+          title: "Films"
+          can: "I can talk about films"
+          vi: "phim ảnh"
+          pages: [134, 135]
+          refs:
+            words: {pages: [134, 135], alt: [{pdf: answer-key, pages: [217, 218], label: "Answer key tr. 217–218"}]}
+        - unit: 53
+          title: "The media"
+          can: "I can talk about the media"
+          vi: "báo đài, truyền thông"
+          pages: [136, 137]
+          refs:
+            words: {pages: [136, 137], alt: [{pdf: answer-key, pages: [218, 218], label: "Answer key tr. 218"}]}
+        - test: 8
+          title: "Review · Hobbies and interests"
+          steps: *review
+          refs:
+            review: {pages: [138, 140], alt: [{pdf: answer-key, pages: [230, 231], label: "Answer key to review units tr. 230–231"}]}
+    - id: M09
+      title: "Holidays · kỳ nghỉ (Unit 54–59)"
+      items:
+        - unit: 54
+          title: "Arranging a holiday"
+          can: "I can arrange a holiday"
+          vi: "lên kế hoạch kỳ nghỉ"
+          pages: [141, 141]
+          refs:
+            words: {pages: [141, 141], alt: [{pdf: answer-key, pages: [218, 218], label: "Answer key tr. 218"}]}
+        - unit: 55
+          title: "Booking a hotel room"
+          can: "I can book a hotel room"
+          vi: "đặt phòng khách sạn"
+          pages: [142, 143]
+          refs:
+            words: {pages: [142, 143], alt: [{pdf: answer-key, pages: [218, 218], label: "Answer key tr. 218"}]}
+        - unit: 56
+          title: "At the airport"
+          can: "I can communicate in an airport"
+          vi: "ở sân bay"
+          pages: [144, 145]
+          refs:
+            words: {pages: [144, 145], alt: [{pdf: answer-key, pages: [218, 219], label: "Answer key tr. 218–219"}]}
+        - unit: 57
+          title: "Beach holidays"
+          can: "I can describe a beach holiday"
+          vi: "kỳ nghỉ biển"
+          pages: [146, 146]
+          refs:
+            words: {pages: [146, 146], alt: [{pdf: answer-key, pages: [219, 219], label: "Answer key tr. 219"}]}
+        - unit: 58
+          title: "Sightseeing holidays"
+          can: "I can describe a sightseeing holiday"
+          vi: "đi tham quan"
+          pages: [147, 147]
+          refs:
+            words: {pages: [147, 147], alt: [{pdf: answer-key, pages: [219, 219], label: "Answer key tr. 219"}]}
+        - unit: 59
+          title: "The bank and post office"
+          can: "I can use the bank and post office"
+          vi: "ngân hàng, bưu điện"
+          pages: [148, 149]
+          refs:
+            words: {pages: [148, 149], alt: [{pdf: answer-key, pages: [219, 219], label: "Answer key tr. 219"}]}
+        - test: 9
+          title: "Review · Holidays"
+          steps: *review
+          refs:
+            review: {pages: [150, 152], alt: [{pdf: answer-key, pages: [231, 232], label: "Answer key to review units tr. 231–232"}]}
+    - id: M10
+      title: "Social English · giao tiếp xã hội (Unit 60–69)"
+      items:
+        - unit: 60
+          title: "Meeting people"
+          can: "I can meet and greet people"
+          vi: "gặp gỡ, chào hỏi"
+          pages: [153, 154]
+          refs:
+            words: {pages: [153, 154], alt: [{pdf: answer-key, pages: [219, 219], label: "Answer key tr. 219"}]}
+        - unit: 61
+          title: "Special greetings"
+          can: "I can use special greetings"
+          vi: "lời chúc dịp đặc biệt"
+          pages: [155, 155]
+          refs:
+            words: {pages: [155, 155], alt: [{pdf: answer-key, pages: [219, 219], label: "Answer key tr. 219"}]}
+        - unit: 62
+          title: "Asking for information"
+          can: "I can ask for information"
+          vi: "hỏi thông tin"
+          pages: [156, 157]
+          refs:
+            words: {pages: [156, 157], alt: [{pdf: answer-key, pages: [219, 220], label: "Answer key tr. 219–220"}]}
+        - unit: 63
+          title: "Asking for things"
+          can: "I can ask for things"
+          vi: "xin, nhờ"
+          pages: [158, 159]
+          refs:
+            words: {pages: [158, 159], alt: [{pdf: answer-key, pages: [220, 220], label: "Answer key tr. 220"}]}
+        - unit: 64
+          title: "Invitations"
+          can: "I can invite people"
+          vi: "mời"
+          pages: [160, 160]
+          refs:
+            words: {pages: [160, 160], alt: [{pdf: answer-key, pages: [220, 220], label: "Answer key tr. 220"}]}
+        - unit: 65
+          title: "Suggestions"
+          can: "I can make suggestions"
+          vi: "gợi ý, rủ rê"
+          pages: [161, 161]
+          refs:
+            words: {pages: [161, 161], alt: [{pdf: answer-key, pages: [220, 220], label: "Answer key tr. 220"}]}
+        - unit: 66
+          title: "Offers"
+          can: "I can offer, accept, and refuse"
+          vi: "mời, nhận lời, từ chối"
+          pages: [162, 163]
+          refs:
+            words: {pages: [162, 163], alt: [{pdf: answer-key, pages: [220, 221], label: "Answer key tr. 220–221"}]}
+        - unit: 67
+          title: "Saying sorry"
+          can: "I can say sorry and respond"
+          vi: "xin lỗi và đáp lời"
+          pages: [164, 164]
+          refs:
+            words: {pages: [164, 164], alt: [{pdf: answer-key, pages: [221, 221], label: "Answer key tr. 221"}]}
+        - unit: 68
+          title: "Opinions"
+          can: "I can express my opinion"
+          vi: "nêu ý kiến"
+          pages: [165, 165]
+          refs:
+            words: {pages: [165, 165], alt: [{pdf: answer-key, pages: [221, 221], label: "Answer key tr. 221"}]}
+        - unit: 69
+          title: "Using the phone"
+          can: "I can use the phone"
+          vi: "gọi điện thoại"
+          pages: [166, 167]
+          refs:
+            words: {pages: [166, 167], alt: [{pdf: answer-key, pages: [221, 221], label: "Answer key tr. 221"}]}
+        - test: 10
+          title: "Review · Social English"
+          steps: *review
+          refs:
+            review: {pages: [168, 171], alt: [{pdf: answer-key, pages: [232, 233], label: "Answer key to review units tr. 232–233"}]}
+    - id: M11
+      title: "Language · ngôn ngữ (Unit 70–80)"
+      items:
+        - unit: 70
+          title: "Common adjectives"
+          can: "I can use common adjectives"
+          vi: "tính từ thông dụng"
+          pages: [172, 173]
+          refs:
+            words: {pages: [172, 173], alt: [{pdf: answer-key, pages: [221, 221], label: "Answer key tr. 221"}]}
+        - unit: 71
+          title: "Common adverbs"
+          can: "I can use common adverbs"
+          vi: "trạng từ thông dụng"
+          pages: [174, 175]
+          refs:
+            words: {pages: [174, 175], alt: [{pdf: answer-key, pages: [221, 222], label: "Answer key tr. 221–222"}]}
+        - unit: 72
+          title: "Irregular verbs"
+          can: "I can use irregular verbs"
+          vi: "động từ bất quy tắc"
+          pages: [176, 177]
+          refs:
+            words: {pages: [176, 177], alt: [{pdf: answer-key, pages: [222, 222], label: "Answer key tr. 222"}, {pdf: course-book, pages: [202, 202], label: "Common irregular verbs tr. 202"}]}
+        - unit: 73
+          title: "Phrasal verbs"
+          can: "I can use phrasal verbs"
+          vi: "cụm động từ"
+          pages: [178, 179]
+          refs:
+            words: {pages: [178, 179], alt: [{pdf: answer-key, pages: [222, 222], label: "Answer key tr. 222"}]}
+        - unit: 74
+          title: "Prepositions of time"
+          can: "I can use prepositions of time"
+          vi: "giới từ chỉ thời gian"
+          pages: [180, 180]
+          refs:
+            words: {pages: [180, 180], alt: [{pdf: answer-key, pages: [222, 222], label: "Answer key tr. 222"}]}
+        - unit: 75
+          title: "Time words and phrases"
+          can: "I can use time words and phrases"
+          vi: "từ và cụm từ chỉ thời gian"
+          pages: [181, 182]
+          refs:
+            words: {pages: [181, 182], alt: [{pdf: answer-key, pages: [222, 223], label: "Answer key tr. 222–223"}]}
+        - unit: 76
+          title: "Prepositions of place and movement"
+          can: "I can use prepositions of place and movement"
+          vi: "giới từ chỉ nơi chốn, chuyển động"
+          pages: [183, 185]
+          refs:
+            words: {pages: [183, 185], alt: [{pdf: answer-key, pages: [223, 223], label: "Answer key tr. 223"}]}
+        - unit: 77
+          title: "Link words (1)"
+          can: "I can use link words (1)"
+          vi: "từ nối (1)"
+          pages: [186, 187]
+          refs:
+            words: {pages: [186, 187], alt: [{pdf: answer-key, pages: [223, 223], label: "Answer key tr. 223"}]}
+        - unit: 78
+          title: "Link words (2)"
+          can: "I can use link words (2)"
+          vi: "từ nối (2)"
+          pages: [188, 189]
+          refs:
+            words: {pages: [188, 189], alt: [{pdf: answer-key, pages: [223, 224], label: "Answer key tr. 223–224"}]}
+        - unit: 79
+          title: "'have' and 'have got'"
+          can: "I can use 'have' and 'have got'"
+          vi: "have và have got"
+          pages: [190, 191]
+          refs:
+            words: {pages: [190, 191], alt: [{pdf: answer-key, pages: [224, 224], label: "Answer key tr. 224"}]}
+        - unit: 80
+          title: "'get'"
+          can: "I can use 'get'"
+          vi: "các nghĩa của get"
+          pages: [192, 192]
+          refs:
+            words: {pages: [192, 192], alt: [{pdf: answer-key, pages: [224, 224], label: "Answer key tr. 224"}]}
+        - test: 11
+          title: "Review · Language"
+          steps: *review
+          refs:
+            review: {pages: [193, 198], alt: [{pdf: answer-key, pages: [233, 234], label: "Answer key to review units tr. 233–234"}]}

@@ -12,6 +12,7 @@ from book_ingest.profile import ProfileError
 
 GENKI = Path(__file__).resolve().parents[2] / "books" / "Genki"
 EU_A2 = Path(__file__).resolve().parents[2] / "books" / "book_english_unlimited_a2_elemetary"
+OWS = Path(__file__).resolve().parents[2] / "books" / "book_oxford_word_skills_basic"
 
 PROFILE = """\
 book: mini-course
@@ -79,6 +80,16 @@ def test_builds_book_and_plan_without_files(tmp_path):
     assert "6 phiên" in (d / "report.md").read_text() and not (d / "work").exists()
 
 
+def test_step_title_can_use_item_fields(tmp_path):
+    """Tên bước dùng được chỗ thay như ghi chú: mỗi phiên mang tên riêng của mục (Oxford Word Skills: một phiên/unit)."""
+    d = make(tmp_path, PROFILE.replace("{id: kana, title: Hiragana,", "{id: kana, title: \"{title} ({no}) · Hiragana\","))
+    book, plan = lessons.build(lessons.load(d))
+    acts = {a.id: a for s in book.sections for i in s.items for a in i.activities}
+    assert acts["U00-kana"].title == "Unit 0 · Chuẩn bị (0) · Hiragana"
+    assert acts["U01-a"].title == "Unit 1 · Part A"                                  # không có chỗ thay: như cũ
+    assert plan.sessions[0].title == "Unit 0 · Chuẩn bị (0) · Hiragana"
+
+
 @pytest.mark.parametrize("old,new,msg", [
     ("steps:\n  - {id: a", "stepz:\n  - {id: a", "thiếu khóa `steps`"),
     ("skill: speaking, note", "skill: singing, note", "kỹ năng"),
@@ -86,6 +97,7 @@ def test_builds_book_and_plan_without_files(tmp_path):
     ('notes: {b: "Riêng', 'notes: {c: "Riêng', "bước không tồn tại"),
     ("- {unit: 2, title: Shopping", "- {unit: 1, title: Shopping", "trùng mục U01"),
     ("note: \"Đọc – viết: {kana}\"", "note: \"Đọc – viết: {kanji}\"", "chỗ thay không hợp lệ"),
+    ("title: Part B, skill", "title: \"Part {bogus}\", skill", "tên bước có chỗ thay không hợp lệ"),
 ])
 def test_bad_profiles_are_rejected(tmp_path, old, new, msg):
     assert PROFILE.count(old) == 1
@@ -316,3 +328,24 @@ def test_english_unlimited_a2_package_is_valid_and_reproducible(tmp_path):
         ("course-book", [50, 50], [49, 49]), ("course-book-u6", [52, 53], [50, 51]), ("course-book-2", [1, 2], [66, 67])]
     assert acts["U12-explore"]["module"] == "explore" and acts["U12-explore"]["skill"] == "writing"
     rerun_matches(EU_A2, tmp_path / "eu-a2")
+
+
+@pytest.mark.skipif(not (OWS / "book.json").exists(), reason="chưa nhập Oxford Word Skills Basic")
+def test_oxford_word_skills_basic_package_is_valid_and_reproducible(tmp_path):
+    assert vd.validate(OWS) == []
+    s = vd.summary(OWS)
+    assert (s["units"], s["tests"], s["sessions"], s["tracks"], s["weeks"]) == (81, 11, 92, 0, [1, 19])
+    book = json.loads((OWS / "book.json").read_text())
+    acts = {a["id"]: a for sec in book["sections"] for i in sec["items"] for a in i["activities"]}
+    # tên phiên mang chủ đề của unit: tên bước có chỗ thay {title} (đợt 26)
+    assert acts["U01-words"]["title"] == "Unit 1 · Numbers · từ vựng, bài tập, nói"
+    assert acts["T1-review"]["title"] == "Review · Basic English · ôn tập cả module"
+    # một PDF quét khai ba lần vì thiếu trang trắng 204 và 236: trang in 14 = PDF 15, 205 = 205, 237 = 236
+    assert (acts["U01-words"]["pdf"], acts["U01-words"]["pages"], acts["U01-words"]["printedPages"]) == (
+        "course-book", [15, 15], [14, 14])
+    assert [(a["pdf"], a["pages"], a["label"]) for a in acts["U01-words"]["alt"]] == [("answer-key", [205, 205], "Answer key tr. 205")]
+    assert [(a["pdf"], a["pages"]) for a in acts["U00-start"]["alt"]] == [("course-book", [200, 202]), ("word-list", [236, 253])]
+    # Unit 72 (Irregular verbs) mở thêm bảng Common irregular verbs tr. 202
+    assert [a["label"] for a in acts["U72-words"]["alt"]] == ["Answer key tr. 222", "Common irregular verbs tr. 202"]
+    assert all(a["tracks"] == [] for a in acts.values())         # sách không kèm audio (thiếu CD-ROM)
+    rerun_matches(OWS, tmp_path / "ows")

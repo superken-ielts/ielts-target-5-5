@@ -1,0 +1,330 @@
+# Video luyện nói thêm Unit 3 · Work — 3/4: giờ làm và đi làm, làm việc ở nhà + thi thử 3 (Phần 2: cả Tom và Emma trả
+# lời cùng một thẻ đề; Phần 3 hỏi hai chiều). Người học tự tạm dừng video, không có khoảng lặng chờ (đợt 25).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-speaking-practice-3.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml, U02-speaking-practice.yaml và U03-speaking-practice.yaml.
+# Làm việc ở nhà nối với bài luyện đề Listening (Simon làm việc tại nhà, U03-exam-listening).
+id: U03-speaking-practice-3
+activity: U03-speaking-vocab
+title: "Unit 3 · Work"
+subtitle: "Speaking practice 3: working hours, working from home + mock test"
+title_vi: "Luyện nói 3/4 — giờ làm, đi làm, làm việc ở nhà; thi thử Phần 2–3 (cả hai cùng một thẻ đề)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Speaking practice three for Unit 3: Work."
+        say: "Welcome to Speaking practice three for Unit three: Work."
+        vi: "Video luyện nói 3/4 của Unit 3."
+      - tom: "Today: working hours and getting to work, and working from home."
+        vi: "Giờ làm, đường đi làm, làm việc ở nhà."
+      - emma: "In the mock test, we both answer the same part two card, so you can hear two different answers."
+        vi: "Thi thử: cả hai cùng trả lời một thẻ đề Phần 2 — nghe hai cách trả lời khác nhau."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: giờ làm, đi làm"
+    heading: "Tom and Emma ask each other · Working hours and getting to work"
+    heading_vi: "Giờ làm và đi làm — thói quen dùng hiện tại đơn, giờ giấc, thời gian"
+    items:
+      - q: "Tom, how do you get to work?"
+        a: "On foot. The coffee shop is only ten minutes from my flat, so I walk there after my classes. It's great, because I don't have to worry about the traffic."
+        ask: emma
+        by: tom
+        phrases: ["On foot.", "only ten minutes from…", "worry about the traffic"]
+      - q: "And how do you get to your school, Emma?"
+        a: "Usually by motorbike taxi. It takes about twenty minutes. In the rainy season, I take the bus, and then it can take an hour!"
+        ask: tom
+        by: emma
+        phrases: ["Usually by…", "It takes about…", "it can take an hour"]
+      - q: "What time do you usually start and finish work?"
+        a: "I start at six in the evening, and I finish at ten. Then I have to clean the tables, so I'm usually home by half past ten."
+        ask: emma
+        by: tom
+        phrases: ["I start at…", "I finish at…", "home by half past ten"]
+      - q: "Do you think you work too many hours?"
+        a: "Sometimes, yes. I teach about twenty-five hours a week, but I also prepare lessons and mark homework at home. So it's more like forty hours in total."
+        ask: tom
+        by: emma
+        phrases: ["Sometimes, yes.", "mark homework", "in total"]
+      - q: "Do you prefer working in the morning or in the evening?"
+        a: "In the evening, because my classes are in the morning. And to be honest, I'm not a morning person! I need two coffees before I can talk to anyone."
+        ask: emma
+        by: tom
+        phrases: ["to be honest", "not a morning person", "before I can…"]
+      - q: "How do you relax after a long day at work?"
+        a: "I cook a simple dinner, and then I read a detective story in bed. After ten pages, I'm usually asleep!"
+        ask: tom
+        by: emma
+        phrases: ["a simple dinner", "a detective story", "I'm usually asleep"]
+      - q: "Is it important to have a good work-life balance?"
+        a: "Yes, very. If you work all the time, you get tired and stressed, and you can't do your job well. Everyone needs time for family, friends and sport."
+        ask: emma
+        by: tom
+        phrases: ["Yes, very.", "tired and stressed", "Everyone needs time for…"]
+      - q: "Do people in England usually work long hours?"
+        a: "Some do, especially in big cities like London. But most people finish work at five or six, and they have about four weeks of holiday a year."
+        ask: tom
+        by: emma
+        phrases: ["Some do", "especially in…", "four weeks of holiday"]
+    lines:
+      - {emma: "Tom, how do you get to work?", focus: 0}
+      - tom: "On foot. The coffee shop is only ten minutes from my flat, so I walk there after my classes. It's great, because I don't have to worry about the traffic."
+        reveal: 0
+        vi: "Đi bộ: quán chỉ cách căn hộ mười phút, tan học là đi; khỏi lo kẹt xe."
+      - {tom: "And how do you get to your school, Emma?", focus: 1}
+      - emma: "Usually by motorbike taxi. It takes about twenty minutes. In the rainy season, I take the bus, and then it can take an hour!"
+        reveal: 1
+        vi: "Thường đi xe ôm, khoảng 20 phút; mùa mưa đi xe buýt thì có khi mất cả tiếng!"
+      - {emma: "What time do you usually start and finish work?", focus: 2}
+      - tom: "I start at six in the evening, and I finish at ten. Then I have to clean the tables, so I'm usually home by half past ten."
+        reveal: 2
+        vi: "Làm từ 6 giờ tối tới 10 giờ; dọn bàn xong thì khoảng 10 rưỡi về tới nhà."
+      - {tom: "Do you think you work too many hours?", focus: 3}
+      - emma: "Sometimes, yes. I teach about twenty-five hours a week, but I also prepare lessons and mark homework at home. So it's more like forty hours in total."
+        reveal: 3
+        vi: "Đôi khi: dạy 25 giờ/tuần, còn soạn bài, chấm bài ở nhà — tổng cộng gần 40 giờ."
+      - {emma: "Do you prefer working in the morning or in the evening?", focus: 4}
+      - tom: "In the evening, because my classes are in the morning. And to be honest, I'm not a morning person! I need two coffees before I can talk to anyone."
+        reveal: 4
+        vi: "Buổi tối, vì sáng đi học; nói thật là không phải người dậy sớm — cần hai ly cà phê mới nói chuyện được!"
+      - {tom: "How do you relax after a long day at work?", focus: 5}
+      - emma: "I cook a simple dinner, and then I read a detective story in bed. After ten pages, I'm usually asleep!"
+        reveal: 5
+        vi: "Nấu bữa tối đơn giản rồi đọc truyện trinh thám trên giường; mười trang là ngủ!"
+      - {emma: "Is it important to have a good work-life balance?", focus: 6}
+      - tom: "Yes, very. If you work all the time, you get tired and stressed, and you can't do your job well. Everyone needs time for family, friends and sport."
+        reveal: 6
+        vi: "Rất quan trọng: làm suốt thì mệt, căng thẳng, làm không tốt; ai cũng cần thời gian cho gia đình, bạn bè, thể thao."
+      - {tom: "Do people in England usually work long hours?", focus: 7}
+      - emma: "Some do, especially in big cities like London. But most people finish work at five or six, and they have about four weeks of holiday a year."
+        reveal: 7
+        vi: "Một số người, nhất là ở London; nhưng đa số tan làm lúc 5–6 giờ, được nghỉ khoảng bốn tuần mỗi năm."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: làm việc ở nhà"
+    heading: "Tom and Emma ask each other · Working from home"
+    heading_vi: "Làm việc ở nhà — ưu và nhược; could / would cho điều giả định"
+    items:
+      - q: "Emma, have you ever worked from home?"
+        a: "Yes, I taught online for a few months, when my school was closed for repairs. It was convenient, but I missed seeing my students in person."
+        ask: tom
+        by: emma
+        phrases: ["for a few months", "It was convenient, but…", "in person"]
+      - q: "Would you like to work from home in the future, Tom?"
+        a: "Maybe two days a week. I could save time and money on travel. But I'd go crazy if I stayed at home every day, because I like being around people."
+        ask: emma
+        by: tom
+        phrases: ["Maybe two days a week", "save time and money", "I'd go crazy if…"]
+      - q: "What are the advantages of working from home?"
+        a: "You don't have to travel, so you save a lot of time. You can also wear comfortable clothes, and make your own lunch!"
+        ask: tom
+        by: emma
+        phrases: ["You don't have to…", "save a lot of time", "make your own lunch"]
+      - q: "And what are the disadvantages?"
+        a: "It's easy to feel lonely, and it's hard to stop working at the end of the day, because your office is also your home."
+        ask: emma
+        by: tom
+        phrases: ["easy to feel lonely", "hard to stop + -ing", "your office is also your home"]
+      - q: "What do you need to work well at home?"
+        a: "A quiet room, a comfortable chair and a fast internet connection. And a lot of self-discipline, because the sofa is always calling you!"
+        ask: tom
+        by: emma
+        phrases: ["a fast internet connection", "self-discipline", "is always calling you"]
+      - q: "Do many people in Vietnam work from home?"
+        a: "More than before, especially in technology and design. But most companies still prefer people to come to the office, so they can work together face to face."
+        ask: emma
+        by: tom
+        phrases: ["More than before", "especially in…", "face to face"]
+      - q: "Could you teach online all the time?"
+        a: "I could, but I wouldn't enjoy it. A lot of teaching happens in small moments, like a joke or a smile, and that's harder on a screen."
+        ask: tom
+        by: emma
+        phrases: ["I could, but I wouldn't…", "small moments", "harder on a screen"]
+      - q: "How do you stay focused when you study at home?"
+        a: "I don't, really! That's why I study in the library. At home, there's always something more fun to do."
+        ask: emma
+        by: tom
+        phrases: ["I don't, really!", "That's why…", "something more fun to do"]
+    lines:
+      - {tom: "Emma, have you ever worked from home?", focus: 0}
+      - emma: "Yes, I taught online for a few months, when my school was closed for repairs. It was convenient, but I missed seeing my students in person."
+        reveal: 0
+        vi: "Có, dạy online vài tháng khi trường đóng cửa sửa chữa: tiện, nhưng nhớ gặp học viên trực tiếp."
+      - {emma: "Would you like to work from home in the future, Tom?", focus: 1}
+      - tom: "Maybe two days a week. I could save time and money on travel. But I'd go crazy if I stayed at home every day, because I like being around people."
+        reveal: 1
+        vi: "Có lẽ hai ngày một tuần để đỡ tốn thời gian, tiền đi lại; ở nhà cả tuần thì phát điên vì thích có người xung quanh."
+      - {tom: "What are the advantages of working from home?", focus: 2}
+      - emma: "You don't have to travel, so you save a lot of time. You can also wear comfortable clothes, and make your own lunch!"
+        reveal: 2
+        vi: "Không phải đi lại nên đỡ nhiều thời gian; mặc đồ thoải mái, tự nấu bữa trưa!"
+      - {emma: "And what are the disadvantages?", focus: 3}
+      - tom: "It's easy to feel lonely, and it's hard to stop working at the end of the day, because your office is also your home."
+        reveal: 3
+        vi: "Dễ thấy cô đơn, cuối ngày khó dừng việc vì văn phòng cũng chính là nhà."
+      - {tom: "What do you need to work well at home?", focus: 4}
+      - emma: "A quiet room, a comfortable chair and a fast internet connection. And a lot of self-discipline, because the sofa is always calling you!"
+        reveal: 4
+        vi: "Phòng yên tĩnh, ghế êm, mạng nhanh; và rất nhiều kỷ luật, vì ghế sofa lúc nào cũng gọi mời!"
+      - {emma: "Do many people in Vietnam work from home?", focus: 5}
+      - tom: "More than before, especially in technology and design. But most companies still prefer people to come to the office, so they can work together face to face."
+        reveal: 5
+        vi: "Nhiều hơn trước, nhất là công nghệ, thiết kế; nhưng đa số công ty vẫn muốn nhân viên lên văn phòng để làm việc trực tiếp."
+      - {tom: "Could you teach online all the time?", focus: 6}
+      - emma: "I could, but I wouldn't enjoy it. A lot of teaching happens in small moments, like a joke or a smile, and that's harder on a screen."
+        reveal: 6
+        vi: "Làm được nhưng không thích: dạy học nằm ở những khoảnh khắc nhỏ như câu đùa, nụ cười — qua màn hình khó hơn."
+      - {emma: "How do you stay focused when you study at home?", focus: 7}
+      - tom: "I don't, really! That's why I study in the library. At home, there's always something more fun to do."
+        reveal: 7
+        vi: "Thật ra không tập trung nổi! Vì vậy mới học ở thư viện; ở nhà luôn có việc vui hơn để làm."
+
+  - kind: bullets
+    chapter: "Thi thử 3 · Phần 2 (Tom)"
+    heading: "Part 2 · Describe a job you would like to do in the future."
+    heading_vi: "Thẻ đề Phần 2 — Tom trả lời trước, Emma trả lời sau"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what the job is", vi: "đó là công việc gì"}
+      - {en: "what you would need to do it", vi: "bạn cần gì để làm được"}
+      - {en: "what the job would involve", vi: "công việc đó gồm những gì"}
+      - {en: "and explain why you would like to do it", vi: "và giải thích vì sao bạn muốn làm"}
+    lines:
+      - emma: "Now, the mock test. In part two, I'd like you to talk for one to two minutes. You have one minute to think, and you can make some notes."
+        vi: "Thi thử Phần 2: 1 phút chuẩn bị, nói 1–2 phút — tạm dừng video nếu muốn tự làm trước."
+      - emma: "Here's your topic. I'd like you to describe a job you would like to do in the future."
+        vi: "Tả một công việc bạn muốn làm trong tương lai."
+      - {emma: "You should say what the job is,", focus: 0}
+      - {emma: "what you would need to do it,", focus: 1}
+      - {emma: "what the job would involve,", focus: 2}
+      - {emma: "and explain why you would like to do it.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · marketing manager"
+    heading_vi: "Ghi chú của Tom — trưởng phòng marketing"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "marketing manager · international coffee company", vi: "trưởng phòng marketing · công ty cà phê quốc tế"}
+      - {en: "business degree · very good English (IELTS!) · internship last summer", vi: "bằng kinh doanh · tiếng Anh rất tốt (IELTS!) · thực tập hè vừa rồi"}
+      - {en: "advertising campaigns · new products · travel to meet customers", vi: "chiến dịch quảng cáo · sản phẩm mới · đi gặp khách hàng"}
+      - {en: "creative · teamwork · Da Lat coffee famous all over the world", vi: "sáng tạo · làm nhóm · cà phê Đà Lạt nổi tiếng khắp thế giới"}
+    lines:
+      - tom: "Here are my notes. I chose the job I really want to do after I graduate."
+        vi: "Tom chọn công việc thật sự muốn làm sau khi tốt nghiệp."
+      - emma: "All right? Can you start speaking now, please?"
+        vi: "Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — would, I'd need, I'd like to"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about the job I want to do after I graduate. I'd like to be a marketing manager for an international coffee company."
+        note: "what the job is"
+      - text: "To do this job, I'd need my business degree, and very good English, of course. That's why I'm working so hard for IELTS! Experience is important too, so I'm glad I did an internship last summer."
+        say: "To do this job, I'd need my business degree, and very good English, of course. That's why I'm working so hard for eye-elts! Experience is important too, so I'm glad I did an internship last summer."
+        note: "what I'd need"
+      - text: "In this job, I would plan advertising campaigns, help to design new products, and maybe travel to meet customers in other countries."
+        note: "what it would involve"
+      - text: "I'd like to do it because it's creative, and I enjoy working in a team. Also, my dad has worked with coffee all his life, and it would be wonderful to help coffee from Da Lat become famous all over the world."
+        say: "I'd like to do it because it's creative, and I enjoy working in a team. Also, my dad has worked with coffee all his life, and it would be wonderful to help coffee from Dah Lot become famous all over the world."
+        note: "why I'd like to do it"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: bullets
+    chapter: "Thi thử 3 · Phần 2 (Emma)"
+    heading: "Part 2 · The same card: Emma's turn"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "my own small language school · hometown by the sea", vi: "trường ngoại ngữ nhỏ của riêng mình · quê ven biển"}
+      - {en: "already have teaching experience · a short business course · save money!", vi: "đã có kinh nghiệm dạy · học khóa kinh doanh ngắn · để dành tiền!"}
+      - {en: "teach some classes · train new teachers · a café inside the school", vi: "dạy vài lớp · đào tạo giáo viên mới · quán cà phê trong trường"}
+      - {en: "my own ideas · people learn better when relaxed · near my family", vi: "ý tưởng của mình · thoải mái thì học tốt hơn · gần gia đình"}
+    lines:
+      - tom: "Now it's my turn to be the examiner. Emma, please describe a job you would like to do in the future."
+        vi: "Đổi vai: Tom làm giám khảo, Emma trả lời cùng thẻ đề."
+      - emma: "These are my notes. I already have a job I love, so I chose my dream for the future."
+        vi: "Ghi chú của Emma — đã có việc mình yêu nên chọn ước mơ tương lai."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu của Emma — cùng thẻ đề, câu chuyện khác"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my dream for the future. One day, I'd like to open my own small language school, in my hometown by the sea."
+        note: "what the job is"
+      - text: "I already have the teaching experience, but I'd need to learn how to run a business. I'd probably do a short business course, and of course, I'd need to save a lot of money first!"
+        note: "what I'd need"
+      - text: "In this job, I would still teach some classes, but I'd also train new teachers. I'd like to have a little café inside the school, where students could practise speaking over a cup of coffee."
+        note: "what it would involve"
+      - text: "I'd like to do it because I could try my own ideas about teaching. I believe people learn better when they're relaxed. And after many years abroad, it would be lovely to live near my family again."
+        note: "why I'd like to do it"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 3 · Phần 3"
+    heading: "Mock test 3 · Part 3 · Discussion (Emma asks Tom)"
+    heading_vi: "Phần 3 — công ty và tự kinh doanh: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Is it better to work for a big company or a small one?"
+        a: "Both have advantages. A big company usually pays more, and it offers training and promotion. But in a small company, you do many different things, so you learn faster."
+        phrases: ["Both have advantages.", "offers training and promotion", "you learn faster"]
+      - q: "Why do some people want to start their own business?"
+        a: "Mainly because they want to be their own boss. They can make their own decisions, and keep the profits. But it's risky, and they often work much longer hours."
+        phrases: ["Mainly because…", "be their own boss", "it's risky"]
+    lines:
+      - emma: "Thank you. Now, part three. I'd like to ask you some more general questions about jobs and careers."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về việc làm và nghề nghiệp."
+      - {emma: "Is it better to work for a big company or a small one?", focus: 0}
+      - tom: "Both have advantages. A big company usually pays more, and it offers training and promotion. But in a small company, you do many different things, so you learn faster."
+        reveal: 0
+        vi: "Mỗi bên có cái lợi: công ty lớn lương cao, có đào tạo, thăng chức; công ty nhỏ làm nhiều việc nên học nhanh hơn."
+      - {emma: "Why do some people want to start their own business?", focus: 1}
+      - tom: "Mainly because they want to be their own boss. They can make their own decisions, and keep the profits. But it's risky, and they often work much longer hours."
+        reveal: 1
+        vi: "Chủ yếu muốn làm chủ: tự quyết định, giữ lợi nhuận; nhưng rủi ro và thường làm việc lâu hơn nhiều."
+
+  - kind: qa
+    heading: "Mock test 3 · Part 3 · Discussion (Tom asks Emma)"
+    heading_vi: "Đổi vai — Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Do young people change jobs more often than in the past?"
+        a: "Yes, much more often. My grandparents had the same job for forty years. Today, young people often change jobs every two or three years, to get a better salary or new experience."
+        ask: tom
+        by: emma
+        phrases: ["Yes, much more often.", "for forty years", "every two or three years"]
+      - q: "Which jobs will be important in the future?"
+        a: "Jobs in technology, of course, and in healthcare, because people are living longer. I also think teachers will always be important, even with computers in every classroom."
+        ask: tom
+        by: emma
+        phrases: ["…, of course", "people are living longer", "will always be important"]
+    lines:
+      - {tom: "Now let me ask you, Emma. Do young people change jobs more often than in the past?", focus: 0}
+      - emma: "Yes, much more often. My grandparents had the same job for forty years. Today, young people often change jobs every two or three years, to get a better salary or new experience."
+        reveal: 0
+        vi: "Đổi nhiều hơn: ông bà làm một việc bốn mươi năm; giờ người trẻ hai, ba năm lại đổi để có lương tốt hơn, trải nghiệm mới."
+      - {tom: "Which jobs will be important in the future?", focus: 1}
+      - emma: "Jobs in technology, of course, and in healthcare, because people are living longer. I also think teachers will always be important, even with computers in every classroom."
+        reveal: 1
+        vi: "Công nghệ, y tế vì người ta sống lâu hơn; giáo viên vẫn luôn quan trọng, dù lớp nào cũng có máy tính."
+      - tom: "Thank you, Emma. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - emma: "See you in Speaking practice four, the last one!"
+        vi: "Hẹn gặp ở video luyện nói 4 — video cuối."

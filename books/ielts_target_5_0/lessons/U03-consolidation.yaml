@@ -114,11 +114,11 @@ scenes:
     heading_vi: "Nói khoảng một phút — dùng các ý trên thẻ"
     items:
       - {q: "What is the best job in the world?", hint: "The best job is … · You need to be … · What's so appealing is …"}
+    # Không đếm ngược (đợt 25): người học tự tạm dừng video và nói.
     lines:
-      - emma: "Exercise E. Practise answering the question. Try to talk for about a minute."
-        vi: "Bài E: nói khoảng một phút."
-      - {emma: "What is the best job in the world?", focus: 0}
-      - {wait: 60, note: "Talk for about a minute", vi: "Nói về nghề, phẩm chất cần có, điều hấp dẫn."}
+      - emma: "Exercise E. Practise answering the question. Pause the video, and try to talk for about a minute."
+        vi: "Bài E: tạm dừng video và nói khoảng một phút."
+      - {emma: "What is the best job in the world?", focus: 0, pause: 1.5, vi: "Nói về nghề, phẩm chất cần có, điều hấp dẫn."}
 
   - kind: pairs
     chapter: "Vocabulary A: cụm hai từ"

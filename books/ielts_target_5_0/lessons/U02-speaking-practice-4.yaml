@@ -1,0 +1,274 @@
+# Video luyện nói thêm Unit 2 · Learning — 4/4: đại học và khóa học, học với công nghệ + thi thử 4 (Phần 2 của Tom về
+# khóa học muốn theo, Phần 3 hỏi hai chiều). Người học tự tạm dừng video, không có khoảng lặng chờ (đợt 24).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-speaking-practice-4.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml và U02-speaking-practice.yaml (giữ khớp ở cả bốn video).
+id: U02-speaking-practice-4
+activity: U02-speaking-vocab
+title: "Unit 2 · Learning"
+subtitle: "Speaking practice 4: university, courses, technology + mock test"
+title_vi: "Luyện nói 4/4 — đại học, khóa học, học với công nghệ; thi thử Phần 2–3 (khóa học bạn muốn theo)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - tom: "Welcome to Speaking practice four for Unit 2: Learning, the last practice video."
+        say: "Welcome to Speaking practice four for Unit two: Learning, the last practice video."
+        vi: "Video luyện nói 4/4 của Unit 2."
+      - emma: "Today: university and courses, and learning with technology. Then a mock test about a course you'd like to take. Pause after each question, and answer it yourself first."
+        vi: "Đại học, khóa học, học với công nghệ; rồi thi thử. Tạm dừng sau mỗi câu hỏi để tự trả lời."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: đại học, khóa học"
+    heading: "Tom and Emma ask each other · University and courses"
+    heading_vi: "Đại học và khóa học — kể lại (quá khứ đơn) và nói dự định (I'd like to…, I want to…)"
+    items:
+      - q: "Emma, what did you study at university?"
+        a: "English Literature. I spent three years reading novels and writing essays about them. It was hard work, but it was the perfect subject for me."
+        ask: tom
+        by: emma
+        phrases: ["I spent three years + -ing", "It was hard work, but…", "the perfect subject"]
+      - q: "What do you like most about university life, Tom?"
+        a: "The freedom. At school, the teachers told us what to do all day. At university, I plan my own time, and I can join clubs, like the basketball team."
+        ask: emma
+        by: tom
+        phrases: ["The freedom.", "told us what to do", "I plan my own time"]
+      - q: "Was it difficult to live away from home?"
+        a: "A little, at first. I missed my mum's cooking, and I didn't know how to manage my money. But I made great friends in the first week, and that helped a lot."
+        ask: tom
+        by: emma
+        phrases: ["A little, at first.", "I missed…", "that helped a lot"]
+      - q: "Would you like to do a master's degree one day?"
+        a: "Yes, I'd like to study abroad, maybe in Australia. But first, I want to work for a few years and get some real experience."
+        ask: emma
+        by: tom
+        phrases: ["I'd like to study abroad", "But first…", "real experience"]
+      - q: "Have you taken any courses since you came to Vietnam?"
+        a: "Yes, a Vietnamese cooking class. It was only four Saturday mornings, but I learned to make spring rolls and dipping sauce. Now my friends ask me to cook for every party!"
+        ask: tom
+        by: emma
+        phrases: ["It was only…", "I learned to make…", "for every party"]
+      - q: "Do you go to the library often?"
+        a: "Yes, almost every day. Our library is new, and it has comfortable chairs and fast internet. I go there to study with my friends, especially before exams."
+        ask: emma
+        by: tom
+        phrases: ["almost every day", "comfortable chairs", "especially before exams"]
+      - q: "Is there a course you'd like to take in the future?"
+        a: "Yes, a guitar course. I've wanted to play for years, and my brother says he'll teach me some songs if I learn the basics first."
+        ask: tom
+        by: emma
+        phrases: ["I've wanted to… for years", "the basics", "if I learn…"]
+      - q: "Do you think everyone should go to university?"
+        a: "No, I don't think so. University is great for some jobs, but many people learn better by doing. A good chef or mechanic can earn more than some graduates."
+        ask: emma
+        by: tom
+        phrases: ["No, I don't think so.", "learn better by doing", "earn more than…"]
+    lines:
+      - {tom: "Emma, what did you study at university?", focus: 0}
+      - emma: "English Literature. I spent three years reading novels and writing essays about them. It was hard work, but it was the perfect subject for me."
+        reveal: 0
+        vi: "Văn học Anh: ba năm đọc tiểu thuyết, viết tiểu luận; vất vả nhưng rất hợp với mình."
+      - {emma: "What do you like most about university life, Tom?", focus: 1}
+      - tom: "The freedom. At school, the teachers told us what to do all day. At university, I plan my own time, and I can join clubs, like the basketball team."
+        reveal: 1
+        vi: "Sự tự do: ở phổ thông thầy cô bảo gì làm nấy; đại học tự sắp xếp thời gian, vào câu lạc bộ bóng rổ."
+      - {tom: "Was it difficult to live away from home?", focus: 2}
+      - emma: "A little, at first. I missed my mum's cooking, and I didn't know how to manage my money. But I made great friends in the first week, and that helped a lot."
+        reveal: 2
+        vi: "Lúc đầu hơi khó: nhớ cơm mẹ nấu, không biết quản lý tiền; nhưng tuần đầu đã có bạn tốt."
+      - {emma: "Would you like to do a master's degree one day?", focus: 3}
+      - tom: "Yes, I'd like to study abroad, maybe in Australia. But first, I want to work for a few years and get some real experience."
+        reveal: 3
+        vi: "Muốn học thạc sĩ ở nước ngoài, có lẽ ở Úc; nhưng trước hết đi làm vài năm lấy kinh nghiệm thật."
+      - {tom: "Have you taken any courses since you came to Vietnam?", focus: 4}
+      - emma: "Yes, a Vietnamese cooking class. It was only four Saturday mornings, but I learned to make spring rolls and dipping sauce. Now my friends ask me to cook for every party!"
+        reveal: 4
+        vi: "Lớp nấu món Việt bốn sáng thứ Bảy: học làm chả giò, nước chấm; giờ tiệc nào bạn bè cũng nhờ nấu!"
+      - {emma: "Do you go to the library often?", focus: 5}
+      - tom: "Yes, almost every day. Our library is new, and it has comfortable chairs and fast internet. I go there to study with my friends, especially before exams."
+        reveal: 5
+        vi: "Gần như ngày nào cũng đi: thư viện mới, ghế êm, mạng nhanh; học cùng bạn, nhất là trước kỳ thi."
+      - {tom: "Is there a course you'd like to take in the future?", focus: 6}
+      - emma: "Yes, a guitar course. I've wanted to play for years, and my brother says he'll teach me some songs if I learn the basics first."
+        reveal: 6
+        vi: "Khóa guitar: muốn chơi từ lâu; anh trai hứa dạy vài bài nếu mình học căn bản trước."
+      - {emma: "Do you think everyone should go to university?", focus: 7}
+      - tom: "No, I don't think so. University is great for some jobs, but many people learn better by doing. A good chef or mechanic can earn more than some graduates."
+        reveal: 7
+        vi: "Không: đại học hợp một số nghề; nhiều người học tốt hơn khi làm thật — đầu bếp, thợ máy giỏi có thể kiếm hơn cử nhân."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: học với công nghệ"
+    heading: "Tom and Emma ask each other · Learning with technology"
+    heading_vi: "Học với công nghệ — ứng dụng, video, học trực tuyến: so sánh, nêu ưu và nhược"
+    items:
+      - q: "Do you use any apps to learn languages, Emma?"
+        a: "Yes, I use a flashcard app for Vietnamese words. I do ten minutes every morning with my coffee. It's short, but it really helps."
+        ask: tom
+        by: emma
+        phrases: ["a flashcard app", "ten minutes every morning", "it really helps"]
+      - q: "Do you watch videos to learn things?"
+        a: "All the time! Last month, I learned to fix my bike from a video. And I watch short videos about English grammar before I go to sleep."
+        ask: emma
+        by: tom
+        phrases: ["All the time!", "I learned to… from…", "before I go to sleep"]
+      - q: "Do you prefer paper books or e-books?"
+        a: "Paper books, definitely. I love the smell of a new book, and I like writing notes in the margins. But e-books are great for travelling, because they're so light."
+        ask: tom
+        by: emma
+        phrases: ["…, definitely.", "writing notes in…", "great for travelling"]
+      - q: "Have you ever studied online?"
+        a: "Yes, in my first year, some of our classes were online. It was convenient, but it was hard to concentrate at home, and I missed my classmates."
+        ask: emma
+        by: tom
+        phrases: ["It was convenient, but…", "hard to concentrate", "I missed…"]
+      - q: "Should children use computers at primary school?"
+        a: "Yes, but only a little. Children need to learn basic computer skills. But they also need to learn handwriting, and to play and talk with real people."
+        ask: tom
+        by: emma
+        phrases: ["Yes, but only a little.", "basic computer skills", "real people"]
+      - q: "Do you think technology makes students lazy?"
+        a: "Sometimes. It's easy to copy answers from the internet. But if you use it well, technology can make learning faster and more interesting."
+        ask: emma
+        by: tom
+        phrases: ["Sometimes.", "copy answers from…", "if you use it well"]
+    lines:
+      - {tom: "Do you use any apps to learn languages, Emma?", focus: 0}
+      - emma: "Yes, I use a flashcard app for Vietnamese words. I do ten minutes every morning with my coffee. It's short, but it really helps."
+        reveal: 0
+        vi: "Có, dùng ứng dụng thẻ từ học từ tiếng Việt: mười phút mỗi sáng bên ly cà phê — ngắn mà hiệu quả."
+      - {emma: "Do you watch videos to learn things?", focus: 1}
+      - tom: "All the time! Last month, I learned to fix my bike from a video. And I watch short videos about English grammar before I go to sleep."
+        reveal: 1
+        vi: "Suốt! Tháng trước học sửa xe đạp qua video; tối trước khi ngủ xem video ngắn về ngữ pháp tiếng Anh."
+      - {tom: "Do you prefer paper books or e-books?", focus: 2}
+      - emma: "Paper books, definitely. I love the smell of a new book, and I like writing notes in the margins. But e-books are great for travelling, because they're so light."
+        reveal: 2
+        vi: "Sách giấy: thích mùi sách mới, ghi chú bên lề; nhưng sách điện tử tiện khi đi xa vì rất nhẹ."
+      - {emma: "Have you ever studied online?", focus: 3}
+      - tom: "Yes, in my first year, some of our classes were online. It was convenient, but it was hard to concentrate at home, and I missed my classmates."
+        reveal: 3
+        vi: "Có, năm nhất học online vài môn: tiện, nhưng ở nhà khó tập trung và nhớ bạn cùng lớp."
+      - {tom: "Should children use computers at primary school?", say: "Should children yooz computers at primary school?", focus: 4}
+      - emma: "Yes, but only a little. Children need to learn basic computer skills. But they also need to learn handwriting, and to play and talk with real people."
+        reveal: 4
+        vi: "Nên, nhưng ít thôi: cần kỹ năng máy tính cơ bản, nhưng cũng cần tập viết, chơi và nói chuyện với người thật."
+      - {emma: "Do you think technology makes students lazy?", focus: 5}
+      - tom: "Sometimes. It's easy to copy answers from the internet. But if you use it well, technology can make learning faster and more interesting."
+        reveal: 5
+        vi: "Đôi khi: dễ chép đáp án trên mạng; nhưng dùng đúng cách thì công nghệ giúp học nhanh và thú vị hơn."
+
+  - kind: bullets
+    chapter: "Thi thử 4 · Phần 2"
+    heading: "Part 2 · Describe a course that you would like to take in the future."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what the course is", vi: "đó là khóa học gì"}
+      - {en: "where you would take it", vi: "bạn sẽ học ở đâu"}
+      - {en: "how long it would take", vi: "khóa học kéo dài bao lâu"}
+      - {en: "and explain why you would like to take it", vi: "và giải thích vì sao bạn muốn học khóa đó"}
+    lines:
+      - emma: "Now, the mock test. In part two, I'd like you to talk for one to two minutes. You have one minute to think, and you can make some notes."
+        vi: "Thi thử Phần 2: 1 phút chuẩn bị, nói 1–2 phút — tạm dừng video nếu muốn tự làm trước."
+      - emma: "Here's your topic. I'd like you to describe a course that you would like to take in the future."
+        vi: "Tả một khóa học bạn muốn theo trong tương lai."
+      - {emma: "You should say what the course is,", focus: 0}
+      - {emma: "where you would take it,", focus: 1}
+      - {emma: "how long it would take,", focus: 2}
+      - {emma: "and explain why you would like to take it.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · a cooking course"
+    heading_vi: "Ghi chú của Tom — khóa nấu ăn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "Vietnamese home cooking · only noodles and eggs now", vi: "nấu món Việt gia đình · giờ chỉ biết mì và trứng"}
+      - {en: "small cooking school near my flat", vi: "trường dạy nấu ăn nhỏ gần căn hộ"}
+      - {en: "two months · Saturday mornings · fish soup, spring rolls", vi: "hai tháng · sáng thứ Bảy · canh cá, chả giò"}
+      - {en: "healthy · cheap · cook for new friends abroad", vi: "lành mạnh · rẻ · nấu cho bạn mới khi ra nước ngoài"}
+    lines:
+      - tom: "Here are my notes. I chose a cooking course, because I really need one!"
+        vi: "Tom chọn khóa nấu ăn — vì thật sự cần!"
+      - emma: "All right? Remember, you have one to two minutes. Can you start speaking now, please?"
+        vi: "Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — nói về tương lai: would, I'd like to, I'll"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about a cooking course. At the moment, I can only cook noodles and eggs, so I'd really like to take a course in Vietnamese home cooking."
+        note: "what the course is"
+      - text: "There's a small cooking school near my flat in Ho Chi Minh City. The course takes two months, with classes every Saturday morning, so it wouldn't stop me from studying."
+        say: "There's a small cooking school near my flat in Ho Chee Min City. The course takes two months, with classes every Saturday morning, so it wouldn't stop me from studying."
+        note: "where · how long"
+      - text: "I'd like to learn traditional dishes, like fish soup and spring rolls. My mum makes them perfectly, but when I ask for her recipe, she just says: a little of this, and a little of that!"
+        note: "what I'd learn"
+      - text: "I'd like to take this course for three reasons. Home cooking is healthier and cheaper than eating out. And if I study abroad one day, I'll be able to cook Vietnamese food for my new friends."
+        note: "why I'd like to take it"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 4 · Phần 3"
+    heading: "Mock test 4 · Part 3 · Discussion (Emma asks Tom)"
+    heading_vi: "Phần 3 — học suốt đời: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "Why do many adults go back to studying?"
+        a: "Some adults need new skills for their jobs, because technology changes so quickly. Others just want to learn something they enjoy, like painting or a new language."
+        phrases: ["Some…, Others…", "changes so quickly", "something they enjoy"]
+      - q: "Is it ever too late to learn something new?"
+        a: "No, I don't think so. My grandfather learned to use a smartphone at seventy-five, and now he sends me messages every day! It just takes more time and patience."
+        phrases: ["No, I don't think so.", "learned to… at…", "It just takes…"]
+    lines:
+      - emma: "Thank you. Now, part three. I'd like to ask you some more general questions about learning as an adult."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về việc học khi trưởng thành."
+      - {emma: "Why do many adults go back to studying?", focus: 0}
+      - tom: "Some adults need new skills for their jobs, because technology changes so quickly. Others just want to learn something they enjoy, like painting or a new language."
+        reveal: 0
+        vi: "Có người cần kỹ năng mới cho công việc vì công nghệ đổi nhanh; người khác muốn học điều mình thích."
+      - {emma: "Is it ever too late to learn something new?", focus: 1}
+      - tom: "No, I don't think so. My grandfather learned to use a smartphone at seventy-five, and now he sends me messages every day! It just takes more time and patience."
+        reveal: 1
+        vi: "Không bao giờ muộn: ông nội 75 tuổi học dùng điện thoại thông minh, giờ ngày nào cũng nhắn tin!"
+
+  - kind: qa
+    heading: "Mock test 4 · Part 3 · Discussion (Tom asks Emma)"
+    heading_vi: "Đổi vai — Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Will online learning replace teachers in the future?"
+        a: "I hope not! Online courses are useful, but a good teacher does more than explain facts. They notice when you're confused or worried, and they encourage you to keep going."
+        ask: tom
+        by: emma
+        phrases: ["I hope not!", "does more than…", "encourage you to keep going"]
+      - q: "Should university education be free?"
+        a: "In an ideal world, yes, because education helps the whole country. But someone has to pay for it. Maybe the government could pay for students from poor families, and others could pay a small fee."
+        ask: tom
+        by: emma
+        phrases: ["In an ideal world…", "someone has to pay for it", "Maybe… could…"]
+    lines:
+      - {tom: "Now let me ask you, Emma. Will online learning replace teachers in the future?", focus: 0}
+      - emma: "I hope not! Online courses are useful, but a good teacher does more than explain facts. They notice when you're confused or worried, and they encourage you to keep going."
+        reveal: 0
+        vi: "Mong là không: học online có ích, nhưng thầy giỏi còn nhận ra khi bạn bối rối, lo lắng và động viên bạn."
+      - {tom: "Should university education be free?", focus: 1}
+      - emma: "In an ideal world, yes, because education helps the whole country. But someone has to pay for it. Maybe the government could pay for students from poor families, and others could pay a small fee."
+        reveal: 1
+        vi: "Lý tưởng thì nên vì giáo dục giúp cả nước; nhưng phải có người trả: nhà nước lo cho sinh viên nghèo, người khác đóng ít."
+      - tom: "Thank you, Emma. That's the end of the speaking test, and the end of our four practice videos for Unit 2."
+        say: "Thank you, Emma. That's the end of the speaking test, and the end of our four practice videos for Unit two."
+        vi: "Hết bài thi, hết bốn video luyện nói Unit 2."
+      - emma: "Now go back to practice one, and try all the questions again, without looking at our answers. Good luck!"
+        vi: "Quay lại video 1, trả lời lại mọi câu hỏi mà không nhìn câu mẫu. Chúc bạn may mắn!"

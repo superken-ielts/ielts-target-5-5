@@ -1,0 +1,367 @@
+# Video luyện nói thêm Unit 2 · Learning — 2/4: học tiếng Anh, học kỹ năng mới (lái xe, bơi, nấu ăn) + thi thử 2 (đổi
+# vai: Tom giám khảo, Emma thí sinh). Người học tự tạm dừng video để trả lời, không có khoảng lặng chờ (đợt 24).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U02-speaking-practice-2.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml và U02-speaking-practice.yaml (giữ khớp ở cả bốn video).
+# Phần 2 của Emma (học lái xe ở Anh năm 17 tuổi, trượt lần đầu) nối với bài đọc học lái xe ở Anh (Reading 1, U02-reading-1);
+# khóa nhiếp ảnh trực tuyến nối với bài nghe đăng ký khóa nhiếp ảnh (Listening 2, U02-listening-3).
+id: U02-speaking-practice-2
+activity: U02-speaking-vocab
+title: "Unit 2 · Learning"
+subtitle: "Speaking practice 2: learning English, new skills + mock test"
+title_vi: "Luyện nói 2/4 — học tiếng Anh, học kỹ năng mới; thi thử đổi vai (Tom giám khảo, Emma thí sinh)"
+tag: "UNIT 2 · LEARNING"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - tom: "Welcome to Speaking practice two for Unit 2: Learning."
+        say: "Welcome to Speaking practice two for Unit two: Learning."
+        vi: "Video luyện nói 2/4 của Unit 2."
+      - emma: "Today, we talk about learning English, and learning new skills, like swimming, driving and cooking. Remember: pause after each question, and answer it yourself first."
+        vi: "Học tiếng Anh, học kỹ năng mới: bơi, lái xe, nấu ăn. Tạm dừng sau mỗi câu hỏi để tự trả lời trước."
+      - tom: "And in today's mock test, we swap roles. I'm the examiner, and Emma is the candidate!"
+        vi: "Thi thử hôm nay đổi vai: Tom làm giám khảo, Emma làm thí sinh."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: học tiếng Anh"
+    heading: "Tom and Emma ask each other · Learning languages"
+    heading_vi: "Học ngoại ngữ — kinh nghiệm, cái khó, cách luyện"
+    items:
+      - q: "Tom, when did you start learning English?"
+        a: "When I was eight, at primary school. We learned lots of grammar rules and word lists, but we didn't speak much in class."
+        ask: emma
+        by: tom
+        phrases: ["When I was eight…", "grammar rules", "we didn't speak much"]
+      - q: "Emma, are you learning Vietnamese?"
+        a: "Yes, I am. I started when I arrived here three years ago, and I have a class twice a week. I can order food and chat with my neighbours, but it's still hard."
+        ask: tom
+        by: emma
+        phrases: ["I started when…", "twice a week", "it's still hard"]
+      - q: "What's the most difficult thing about English for you?"
+        a: "Listening. Native speakers talk very fast, and they join their words together. In films, I often understand the pictures better than the words!"
+        ask: emma
+        by: tom
+        phrases: ["Native speakers…", "join their words together", "better than…"]
+      - q: "And what's the hardest thing about Vietnamese?"
+        a: "The tones, definitely. One word can have six different meanings, so people often look confused when I speak. Luckily, everyone is very patient with me."
+        ask: tom
+        by: emma
+        phrases: ["…, definitely.", "six different meanings", "Luckily…"]
+      - q: "How do you practise English outside class?"
+        a: "I listen to podcasts on the bus, and I watch films with English subtitles. I also meet a student from Australia every Friday. We practise English and Vietnamese together."
+        ask: emma
+        by: tom
+        phrases: ["I listen to…", "with English subtitles", "every Friday"]
+      - q: "What's the best way to learn new words?"
+        a: "Write each new word in a notebook, with an example sentence. Then use the word in a conversation the same day. If you use it, you remember it."
+        ask: tom
+        by: emma
+        phrases: ["an example sentence", "the same day", "If you use it, you remember it."]
+      - q: "Do you prefer studying alone or in a group?"
+        a: "It depends. I prefer studying alone for grammar and vocabulary, because I can concentrate better. But for speaking, a group is much more fun."
+        ask: emma
+        by: tom
+        phrases: ["It depends.", "I prefer… for…", "much more fun"]
+      - q: "Would you like to learn another language?"
+        a: "Yes, Japanese. I'm fascinated by the culture, and I'd love to visit Japan one day. But first, I want to speak better Vietnamese!"
+        ask: tom
+        by: emma
+        phrases: ["I'm fascinated by…", "I'd love to…", "But first…"]
+    lines:
+      - {emma: "Tom, when did you start learning English?", focus: 0}
+      - tom: "When I was eight, at primary school. We learned lots of grammar rules and word lists, but we didn't speak much in class."
+        reveal: 0
+        vi: "Từ năm 8 tuổi ở tiểu học: học nhiều ngữ pháp, danh sách từ, nhưng ít nói trên lớp."
+      - {tom: "Emma, are you learning Vietnamese?", focus: 1}
+      - emma: "Yes, I am. I started when I arrived here three years ago, and I have a class twice a week. I can order food and chat with my neighbours, but it's still hard."
+        reveal: 1
+        vi: "Có, học từ khi sang đây ba năm trước, tuần hai buổi; gọi món, nói chuyện với hàng xóm được."
+      - {emma: "What's the most difficult thing about English for you?", focus: 2}
+      - tom: "Listening. Native speakers talk very fast, and they join their words together. In films, I often understand the pictures better than the words!"
+        reveal: 2
+        vi: "Nghe: người bản xứ nói nhanh, nối âm; xem phim thường hiểu hình hơn hiểu lời!"
+      - {tom: "And what's the hardest thing about Vietnamese?", focus: 3}
+      - emma: "The tones, definitely. One word can have six different meanings, so people often look confused when I speak. Luckily, everyone is very patient with me."
+        reveal: 3
+        vi: "Thanh điệu: một từ có sáu nghĩa nên người nghe hay bối rối; may mà ai cũng kiên nhẫn."
+      - {emma: "How do you practise English outside class?", focus: 4}
+      - tom: "I listen to podcasts on the bus, and I watch films with English subtitles. I also meet a student from Australia every Friday. We practise English and Vietnamese together."
+        reveal: 4
+        vi: "Nghe podcast trên xe buýt, xem phim phụ đề Anh; thứ Sáu gặp bạn người Úc, luyện cả Anh lẫn Việt."
+      - {tom: "What's the best way to learn new words?", focus: 5}
+      - emma: "Write each new word in a notebook, with an example sentence. Then use the word in a conversation the same day. If you use it, you remember it."
+        say: "Write each new word in a notebook, with an example sentence. Then yooz the word in a conversation the same day. If you yooz it, you remember it."
+        reveal: 5
+        vi: "Ghi từ mới vào sổ kèm câu ví dụ, dùng ngay trong ngày — có dùng mới nhớ."
+      - {emma: "Do you prefer studying alone or in a group?", focus: 6}
+      - tom: "It depends. I prefer studying alone for grammar and vocabulary, because I can concentrate better. But for speaking, a group is much more fun."
+        reveal: 6
+        vi: "Tùy: ngữ pháp, từ vựng thì học một mình cho tập trung; luyện nói thì học nhóm vui hơn."
+      - {tom: "Would you like to learn another language?", focus: 7}
+      - emma: "Yes, Japanese. I'm fascinated by the culture, and I'd love to visit Japan one day. But first, I want to speak better Vietnamese!"
+        reveal: 7
+        vi: "Tiếng Nhật: mê văn hóa Nhật, muốn đến Nhật; nhưng trước hết phải nói tiếng Việt tốt hơn!"
+
+  - kind: qa
+    chapter: "Hỏi qua lại: kỹ năng mới"
+    heading: "Tom and Emma ask each other · Learning new skills"
+    heading_vi: "Kỹ năng mới — kể chuyện đã học (quá khứ đơn), nói điều muốn học (I'd like to…)"
+    items:
+      - q: "Emma, can you drive?"
+        a: "Yes, I can. In Britain, you can start learning at seventeen, so I had lessons with an instructor for six months. But here in Vietnam, I don't drive. The traffic scares me!"
+        ask: tom
+        by: emma
+        phrases: ["you can start learning at…", "I had lessons with…", "… scares me!"]
+      - q: "Can you ride a motorbike, Tom?"
+        a: "Yes, almost everyone can in Vietnam! I learned when I was eighteen. My dad taught me in an empty car park on Sunday mornings, and I passed my test the first time."
+        ask: emma
+        by: tom
+        phrases: ["almost everyone can", "taught me in…", "the first time"]
+      - q: "Can you swim?"
+        a: "Yes, but not very well. I learned at a swimming pool when I was twelve. I can swim about fifty metres, and then I need a long rest!"
+        ask: emma
+        by: tom
+        phrases: ["not very well", "I learned at…", "then I need a long rest"]
+      - q: "Who taught you to cook, Emma?"
+        a: "My mum. Every Sunday, we baked bread or a cake together. Now I'm learning to cook Vietnamese food, and my spring rolls are getting better!"
+        ask: tom
+        by: emma
+        phrases: ["Every Sunday, we…", "I'm learning to…", "are getting better"]
+      - q: "What new skill would you like to learn?"
+        a: "Cooking! I share a flat with two friends, and we only cook noodles and eggs. I'd love to learn my mum's recipes, especially her fish soup."
+        ask: emma
+        by: tom
+        phrases: ["I'd love to learn…", "we only cook…", "especially…"]
+      - q: "Is it better to learn a skill from a teacher, or from videos online?"
+        a: "Videos are free and flexible, so they're great for simple things. But a teacher can see your mistakes and correct them. For difficult skills, like driving, you really need a teacher."
+        ask: tom
+        by: emma
+        phrases: ["free and flexible", "correct them", "you really need…"]
+      - q: "What's the most useful skill you've learned?"
+        a: "Probably typing with ten fingers. I learned it in a free online course, and now I can write my essays twice as fast."
+        ask: emma
+        by: tom
+        phrases: ["Probably…", "a free online course", "twice as fast"]
+      - q: "Is it easier to learn new things when you're young?"
+        a: "In some ways, yes. Children have more free time, and they aren't afraid of making mistakes. But adults are often more motivated, because they know why they're learning."
+        ask: tom
+        by: emma
+        phrases: ["In some ways, yes.", "aren't afraid of + -ing", "more motivated"]
+    lines:
+      - {tom: "Emma, can you drive?", focus: 0}
+      - emma: "Yes, I can. In Britain, you can start learning at seventeen, so I had lessons with an instructor for six months. But here in Vietnam, I don't drive. The traffic scares me!"
+        reveal: 0
+        vi: "Biết: ở Anh 17 tuổi được học, học với thầy sáu tháng; ở Việt Nam thì không lái — giao thông đáng sợ!"
+      - {emma: "Can you ride a motorbike, Tom?", focus: 1}
+      - tom: "Yes, almost everyone can in Vietnam! I learned when I was eighteen. My dad taught me in an empty car park on Sunday mornings, and I passed my test the first time."
+        reveal: 1
+        vi: "Biết, ở Việt Nam ai cũng biết! 18 tuổi bố dạy ở bãi xe vắng sáng Chủ nhật; thi lần đầu là đỗ."
+      - {emma: "Can you swim?", focus: 2}
+      - tom: "Yes, but not very well. I learned at a swimming pool when I was twelve. I can swim about fifty metres, and then I need a long rest!"
+        reveal: 2
+        vi: "Biết nhưng không giỏi: học ở bể bơi năm 12 tuổi; bơi được 50 mét là phải nghỉ lâu!"
+      - {tom: "Who taught you to cook, Emma?", focus: 3}
+      - emma: "My mum. Every Sunday, we baked bread or a cake together. Now I'm learning to cook Vietnamese food, and my spring rolls are getting better!"
+        reveal: 3
+        vi: "Mẹ dạy: Chủ nhật nào cũng nướng bánh mì, bánh ngọt; giờ đang học nấu món Việt, chả giò ngày càng ngon."
+      - {emma: "What new skill would you like to learn?", focus: 4}
+      - tom: "Cooking! I share a flat with two friends, and we only cook noodles and eggs. I'd love to learn my mum's recipes, especially her fish soup."
+        reveal: 4
+        vi: "Nấu ăn: ở chung với hai bạn, chỉ biết nấu mì và trứng; muốn học công thức của mẹ, nhất là canh cá."
+      - {tom: "Is it better to learn a skill from a teacher, or from videos online?", focus: 5}
+      - emma: "Videos are free and flexible, so they're great for simple things. But a teacher can see your mistakes and correct them. For difficult skills, like driving, you really need a teacher."
+        reveal: 5
+        vi: "Video miễn phí, linh hoạt; nhưng thầy thấy lỗi và sửa cho bạn — kỹ năng khó như lái xe thì cần thầy."
+      - {emma: "What's the most useful skill you've learned?", focus: 6}
+      - tom: "Probably typing with ten fingers. I learned it in a free online course, and now I can write my essays twice as fast."
+        reveal: 6
+        vi: "Có lẽ là gõ mười ngón: học khóa online miễn phí, giờ viết bài nhanh gấp đôi."
+      - {tom: "Is it easier to learn new things when you're young?", focus: 7}
+      - emma: "In some ways, yes. Children have more free time, and they aren't afraid of making mistakes. But adults are often more motivated, because they know why they're learning."
+        reveal: 7
+        vi: "Phần nào đúng: trẻ con rảnh hơn, không sợ sai; nhưng người lớn có động lực hơn vì biết học để làm gì."
+
+  - kind: qa
+    chapter: "Thi thử 2 · Phần 1"
+    heading: "Mock test 2 · Part 1 · Introduction and interview"
+    heading_vi: "Thi thử Phần 1 — đổi vai: Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Can you tell me your full name, please?"
+        a: "Good morning. My full name is Emma Louise Clarke."
+        ask: tom
+        by: emma
+        phrases: ["My full name is…"]
+      - q: "Where are you from?"
+        a: "I'm from a small town by the sea in England, but I've lived in Ho Chi Minh City for three years now."
+        ask: tom
+        by: emma
+        phrases: ["I'm from…", "but I've lived in… for…"]
+      - q: "What do you do?"
+        a: "I'm an English teacher. I teach adults at a language school, mostly in the evenings and at the weekend."
+        ask: tom
+        by: emma
+        phrases: ["I teach…", "mostly in the evenings"]
+      - q: "Why did you decide to become a teacher?"
+        a: "Because of my English teacher at school, Mrs Green. She made me love books, and I wanted to help people in the same way."
+        ask: tom
+        by: emma
+        phrases: ["Because of…", "She made me…", "in the same way"]
+      - q: "Did you read a lot when you were a child?"
+        a: "Yes, I did. Every Saturday, my dad took me to the library in our town, and I borrowed five books at a time. I usually finished them all in a week!"
+        ask: tom
+        by: emma
+        phrases: ["Every Saturday…", "five books at a time", "in a week"]
+      - q: "Do people in your country read less than in the past?"
+        a: "I think so. Many people read on their phones now, but mostly short articles and messages, not books. Still, crime novels are very popular, and I'm a big fan!"
+        ask: tom
+        by: emma
+        phrases: ["I think so.", "mostly…, not…", "I'm a big fan"]
+      - q: "Have you ever taken a course online?"
+        a: "Yes. Last year, I took a short photography course online. It was cheap and flexible, but I missed having a real teacher to answer my questions."
+        ask: tom
+        by: emma
+        phrases: ["Last year, I took…", "cheap and flexible", "I missed having…"]
+    lines:
+      - tom: "Now, the mock test. This time, I'm the examiner, and Emma is the candidate. Let's start part one."
+        focus: 0
+        vi: "Thi thử đổi vai: Tom là giám khảo, Emma là thí sinh."
+      - {tom: "Good morning. My name is Tom. Can you tell me your full name, please?", focus: 0}
+      - {emma: "Good morning. My full name is Emma Louise Clarke.", reveal: 0, vi: "Nói đủ họ tên."}
+      - {tom: "And where are you from?", focus: 1}
+      - emma: "I'm from a small town by the sea in England, but I've lived in Ho Chi Minh City for three years now."
+        say: "I'm from a small town by the sea in England, but I've lived in Ho Chee Min City for three years now."
+        reveal: 1
+        vi: "Từ một thị trấn ven biển ở Anh; đã sống ở TP. Hồ Chí Minh ba năm."
+      - {tom: "Let's talk about your work. What do you do?", focus: 2}
+      - emma: "I'm an English teacher. I teach adults at a language school, mostly in the evenings and at the weekend."
+        reveal: 2
+        vi: "Giáo viên tiếng Anh, dạy người lớn ở trung tâm ngoại ngữ, chủ yếu buổi tối và cuối tuần."
+      - {tom: "Why did you decide to become a teacher?", focus: 3}
+      - emma: "Because of my English teacher at school, Mrs Green. She made me love books, and I wanted to help people in the same way."
+        reveal: 3
+        vi: "Vì cô Green dạy Anh văn: cô làm Emma yêu sách, Emma muốn giúp người khác như vậy."
+      - {tom: "Now let's talk about reading. Did you read a lot when you were a child?", focus: 4}
+      - emma: "Yes, I did. Every Saturday, my dad took me to the library in our town, and I borrowed five books at a time. I usually finished them all in a week!"
+        reveal: 4
+        vi: "Có: thứ Bảy nào bố cũng đưa đi thư viện, mượn năm cuốn một lần, thường đọc hết trong tuần!"
+      - {tom: "Do people in your country read less than in the past?", focus: 5}
+      - emma: "I think so. Many people read on their phones now, but mostly short articles and messages, not books. Still, crime novels are very popular, and I'm a big fan!"
+        reveal: 5
+        vi: "Có lẽ vậy: đọc trên điện thoại, chủ yếu bài ngắn, tin nhắn; nhưng truyện trinh thám vẫn rất chuộng."
+      - {tom: "Let's talk about learning online. Have you ever taken a course online?", focus: 6}
+      - emma: "Yes. Last year, I took a short photography course online. It was cheap and flexible, but I missed having a real teacher to answer my questions."
+        reveal: 6
+        vi: "Năm ngoái học khóa nhiếp ảnh online: rẻ, linh hoạt, nhưng thiếu thầy thật để hỏi."
+
+  - kind: bullets
+    chapter: "Thi thử 2 · Phần 2"
+    heading: "Part 2 · Describe a useful skill that you learned."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "You should say: what the skill is", vi: "đó là kỹ năng gì"}
+      - {en: "when and how you learned it", vi: "học khi nào, học thế nào"}
+      - {en: "who helped you", vi: "ai đã giúp bạn"}
+      - {en: "and explain why it is useful", vi: "và giải thích vì sao kỹ năng đó hữu ích"}
+    lines:
+      - tom: "Thank you. Now, in part two, I'm going to give you a topic, and I'd like you to talk about it for one to two minutes."
+        vi: "Phần 2: nói 1–2 phút."
+      - tom: "You'll have one minute to think about what you're going to say. You can make some notes if you wish."
+        vi: "1 phút chuẩn bị, được ghi chú — tạm dừng video nếu muốn tự chuẩn bị."
+      - tom: "Here's your topic. I'd like you to describe a useful skill that you learned."
+        vi: "Tả một kỹ năng hữu ích bạn đã học."
+      - {tom: "You should say what the skill is,", focus: 0}
+      - {tom: "when and how you learned it,", focus: 1}
+      - {tom: "who helped you,", focus: 2}
+      - {tom: "and explain why it is useful.", focus: 3}
+
+  - kind: bullets
+    heading: "Emma's notes · one line for each point"
+    heading_vi: "Ghi chú của Emma — chỉ từ khóa"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "driving · age 17 · in England", vi: "lái xe · 17 tuổi · ở Anh"}
+      - {en: "30 lessons · instructor Mr Hughes · very calm · dad at weekends", vi: "30 buổi · thầy Hughes · rất điềm tĩnh · bố kèm cuối tuần"}
+      - {en: "first test: nervous, forgot the mirror → failed · second test: passed", vi: "lần đầu: run, quên nhìn gương → trượt · lần hai: đỗ"}
+      - {en: "freedom · few buses · part-time job · grandparents to the doctor", vi: "tự do · ít xe buýt · đi làm thêm · đưa ông bà đi khám"}
+    lines:
+      - emma: "My notes are very short: a few key words for each point."
+        vi: "Ghi chú rất ngắn: vài từ khóa cho mỗi ý."
+      - tom: "All right? Remember, you have one to two minutes, so don't worry if I stop you. Can you start speaking now, please?"
+        vi: "Được chưa? Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu khoảng 1 phút — kể chuyện bằng thì quá khứ"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about driving. In Britain, you can start learning at seventeen, so I booked my first lesson for the week of my seventeenth birthday."
+        note: "what · when"
+      - text: "I had about thirty lessons with an instructor called Mr Hughes. He was very calm, even when I made terrible mistakes. My dad also took me out to practise at the weekends."
+        note: "how · who helped me"
+      - text: "I failed my first test, because I was so nervous that I forgot to look in the mirror. I was really upset, but I took the test again a month later, and I passed."
+        note: "how I learned it"
+      - text: "It's a useful skill because it gave me freedom. In my small town, the buses weren't very frequent, so I could drive to my part-time job, and take my grandparents to the doctor."
+        note: "why it is useful"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 2 · Phần 3"
+    heading: "Mock test 2 · Part 3 · Discussion"
+    heading_vi: "Phần 3 — kỹ năng và cách học: ý kiến + lý do + ví dụ"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "At what age should young people learn to drive?"
+        a: "I think eighteen is about right. Younger drivers often take more risks. But in the countryside, young people may need to drive earlier, to get to school or work."
+        ask: tom
+        by: emma
+        phrases: ["I think… is about right", "take more risks", "may need to…"]
+      - q: "Which skills should schools teach that they don't teach now?"
+        a: "Practical skills, like cooking, managing money and first aid. Every adult needs them, but many young people leave school without knowing how to cook a simple meal."
+        ask: tom
+        by: emma
+        phrases: ["Practical skills, like…", "Every adult needs them", "without knowing how to…"]
+      - q: "Is it better to learn a skill from a family member or from a professional teacher?"
+        a: "It depends on the skill. Family members are patient, and they're free, which is great for cooking or swimming. But for a test, like driving, a professional knows exactly what the examiners want."
+        ask: tom
+        by: emma
+        phrases: ["It depends on…", "which is great for…", "knows exactly what…"]
+      - q: "Do adults learn differently from children?"
+        a: "Yes, I think they do. Children learn by playing and copying, and they remember things quickly. Adults like to understand the rules first, and they need to see why something is useful."
+        ask: tom
+        by: emma
+        phrases: ["learn by + -ing", "remember things quickly", "need to see why…"]
+    lines:
+      - tom: "Thank you. We've been talking about a useful skill. Now I'd like to ask you some more general questions about learning skills."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về học kỹ năng."
+      - {tom: "At what age should young people learn to drive?", focus: 0}
+      - emma: "I think eighteen is about right. Younger drivers often take more risks. But in the countryside, young people may need to drive earlier, to get to school or work."
+        reveal: 0
+        vi: "18 tuổi là vừa: tài xế trẻ hơn hay liều; nhưng ở nông thôn có khi cần lái sớm để đi học, đi làm."
+      - {tom: "Which skills should schools teach that they don't teach now?", focus: 1}
+      - emma: "Practical skills, like cooking, managing money and first aid. Every adult needs them, but many young people leave school without knowing how to cook a simple meal."
+        reveal: 1
+        vi: "Kỹ năng thực tế: nấu ăn, quản lý tiền, sơ cứu — ai cũng cần, nhưng nhiều bạn ra trường không biết nấu bữa đơn giản."
+      - {tom: "Is it better to learn a skill from a family member or from a professional teacher?", focus: 2}
+      - emma: "It depends on the skill. Family members are patient, and they're free, which is great for cooking or swimming. But for a test, like driving, a professional knows exactly what the examiners want."
+        reveal: 2
+        vi: "Tùy kỹ năng: người nhà kiên nhẫn, miễn phí — hợp nấu ăn, bơi; thi lái xe thì thầy chuyên nghiệp biết giám khảo cần gì."
+      - {tom: "Do adults learn differently from children?", focus: 3}
+      - emma: "Yes, I think they do. Children learn by playing and copying, and they remember things quickly. Adults like to understand the rules first, and they need to see why something is useful."
+        reveal: 3
+        vi: "Có: trẻ học qua chơi, bắt chước, nhớ nhanh; người lớn muốn hiểu quy tắc trước và thấy cái đó có ích."
+      - tom: "Thank you, Emma. That is the end of the speaking test."
+        vi: "Hết bài thi Nói."
+      - emma: "Thank you, Tom. See you in Speaking practice three!"
+        vi: "Hẹn gặp ở video luyện nói 3."

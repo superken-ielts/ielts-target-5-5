@@ -15,8 +15,9 @@ Agent không đoán cấu trúc từ PDF: mục lục, các bước và chỗ tr
                              tracks: "K01-01..K01-08, K01-24", alt: [{pdf, pages, label}]}}; `pdf` mặc định là PDF
                              khai đầu tiên trong `files`
 
-Mỗi bước của một mục thành một hoạt động `<mục>-<bước>` (ví dụ U01-part-a) và đúng một phiên học. Ghi chú bước
-dùng được {no}, {title} và mọi trường khác của mục ({topic}, {grammar}, {kana}… — danh sách thì nối bằng `; `). Có `files` thì mỗi track phải thuộc đúng một bước
+Mỗi bước của một mục thành một hoạt động `<mục>-<bước>` (ví dụ U01-part-a) và đúng một phiên học. Ghi chú và tên
+bước dùng được {no}, {title} và mọi trường khác của mục ({topic}, {grammar}, {kana}… — danh sách thì nối bằng `; `);
+tên bước có chỗ thay thì mỗi phiên mang tên riêng (ví dụ `title: "{title} · từ vựng"` → "Unit 1 · Numbers · từ vựng"). Có `files` thì mỗi track phải thuộc đúng một bước
 (V4), và PDF lớn được cắt thành đoạn theo các khoảng trang của từng mục (chunks.py). Video bài giảng gắn vào hoạt
 động như sách thường.
 """
@@ -322,7 +323,7 @@ def build(p: LessonsProfile, data: Optional[dict] = None, parts: Optional[dict] 
                         tracks.append(t)
                 owner.update({t: e for t in tracks})
                 acts.append(Activity(
-                    id=f"{e.id}-{st.id}", module=st.id, skill=st.skill, title=f"{e.label} · {st.title}",
+                    id=f"{e.id}-{st.id}", module=st.id, skill=st.skill, title=f"{e.label} · {_fill(e, st, st.title, 'tên bước')}",
                     pdf=r.main.pdf if r.main else None, pages=p.pdf_range(r.main) if r.main else None,
                     printedPages=list(r.main.pages) if r.main else None, tracks=tracks, note=_note(e, st), estMinutes=st.minutes or p.minutes,
                     alt=[ref(a, a.label or _alt_label(p, a)) for a in r.alt]))
@@ -370,13 +371,18 @@ def _note(e: Entry, st: Step) -> Optional[str]:
     text = str(e.notes.get(st.id, st.note)).strip()
     if not text:
         return None
+    return _fill(e, st, text, "ghi chú")
+
+
+def _fill(e: Entry, st: Step, text: str, what: str) -> str:
+    """Thay {no}, {title} và các trường của mục vào ghi chú / tên bước."""
     values = {"topic": "", "kana": "", "grammar": ""}
     values.update({k: "; ".join(map(str, v)) if isinstance(v, list) else str(v) for k, v in e.fields.items()})
     values.update(no=e.no, title=e.title)
     try:
         return " ".join(text.format(**values).split())
     except (KeyError, IndexError, ValueError) as err:
-        raise ProfileError(f"{e.id}/{st.id}: ghi chú có chỗ thay không hợp lệ ({err}): {text}") from None
+        raise ProfileError(f"{e.id}/{st.id}: {what} có chỗ thay không hợp lệ ({err}): {text}") from None
 
 
 def _tracks_text(ids: list[str]) -> str:

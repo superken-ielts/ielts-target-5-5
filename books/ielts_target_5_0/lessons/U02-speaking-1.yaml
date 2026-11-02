@@ -114,6 +114,7 @@ scenes:
       - {emma: "Economics.", focus: 7}
       - {tom: "I studied Economics at university, not at school.", focus: 7}
       - emma: "Notice: Tom uses the past simple. learned, studied, drew, had, was. We'll practise this soon."
+        say: "Notice: Tom yoozes the past simple. learned, studied, drew, had, was. We'll practise this soon."
         vi: "Chú ý: Tom dùng thì quá khứ đơn — sẽ luyện ở phần ngữ pháp."
 
   - kind: bullets
@@ -195,6 +196,7 @@ scenes:
         by: tom
     lines:
       - emma: "Exercise B. Use the pictures to talk about what you remember about school. Tom, let's try."
+        say: "Exercise B. Yooz the pictures to talk about what you remember about school. Tom, let's try."
         vi: "Bài B: dùng tranh để kể về trường cũ."
       - {emma: "What was your favourite subject at school?", focus: 0}
       - {tom: "My favourite subject was Chemistry. I loved doing experiments in the lab, and my teacher was very funny.", reveal: 0}
@@ -265,9 +267,9 @@ scenes:
     lines:
       - emma: "Watch out! Here are three typical errors."
         vi: "Ba lỗi hay gặp."
-      - {emma: "Number one. In negatives, use did not, or didn't, and the base verb.", focus: 0}
+      - {emma: "Number one. In negatives, use did not, or didn't, and the base verb.", say: "Number one. In negatives, yooz did not, or didn't, and the base verb.", focus: 0}
       - {tom: "I didn't like school when I was little.", focus: 0}
-      - {emma: "Number two. In questions, use did, and the base verb.", focus: 1}
+      - {emma: "Number two. In questions, use did, and the base verb.", say: "Number two. In questions, yooz did, and the base verb.", focus: 1}
       - {tom: "How did you go to school in the morning?", focus: 1}
       - {emma: "Number three. There is no past form of must, so we use had to. Had to is followed by the base verb.", focus: 2}
       - {tom: "I had to do homework every night. We had to wear a uniform to school.", focus: 2}
@@ -296,26 +298,23 @@ scenes:
   - kind: practice
     chapter: "Đến lượt bạn"
     heading: "Your turn · Talk about your school days"
-    heading_vi: "Trả lời thành tiếng — dùng thì quá khứ đơn, mỗi câu 10 giây"
+    heading_vi: "Dùng thì quá khứ đơn và nêu lý do (because…)"
     items:
       - {q: "What was your favourite subject at school?", hint: "My favourite subject was… because…"}
       - {q: "Which subject were you not very good at?", hint: "I wasn't very good at…"}
       - {q: "Did you have to wear a uniform?", hint: "Yes, we had to wear… / No, we didn't."}
       - {q: "Were your teachers strict?", hint: "Some of my teachers were…"}
       - {q: "Did you have a lot of homework?", hint: "I had to do homework every…"}
+    # Không đếm ngược (đợt 24): người học tự tạm dừng video, Emma đọc hết các câu hỏi.
     lines:
-      - emma: "Now it's your turn. Answer each question out loud. Use the past simple, and give a reason."
-        vi: "Đến lượt bạn: trả lời thành tiếng, dùng quá khứ đơn và nêu lý do."
-      - {emma: "What was your favourite subject at school?", focus: 0}
-      - {wait: 10}
-      - {emma: "Which subject were you not very good at?", focus: 1}
-      - {wait: 10}
-      - {emma: "Did you have to wear a uniform?", focus: 2}
-      - {wait: 10}
-      - {emma: "Were your teachers strict?", focus: 3}
-      - {wait: 10}
-      - {emma: "Did you have a lot of homework?", focus: 4}
-      - {wait: 10}
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud. Use the past simple, and give a reason."
+        say: "Now it's your turn. Pause the video, and answer these questions out loud. Yooz the past simple, and give a reason."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng — dùng quá khứ đơn và nêu lý do."
+      - {emma: "What was your favourite subject at school?", focus: 0, pause: 0.5}
+      - {emma: "Which subject were you not very good at?", focus: 1, pause: 0.5}
+      - {emma: "Did you have to wear a uniform?", focus: 2, pause: 0.5}
+      - {emma: "Were your teachers strict?", focus: 3, pause: 0.5}
+      - {emma: "Did you have a lot of homework?", focus: 4, pause: 1.5}
 
   - kind: bullets
     chapter: "Tổng kết"

@@ -1,0 +1,338 @@
+# Video Oxford Word Skills Basic · Unit 4 — I can say countries and nationalities (sách in tr. 18–19, Answer key tr. 206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1–4 theo Answer key (bài 1 câu 6 "The Chinese speak Chinese" là F vì bảng trong sách ghi Mandarin, Cantonese).
+# Bài 1 có 9 câu nên dùng cảnh blanks (thẻ mcq 9 câu quá hẹp, chữ bị cắt).
+# Bài 3 (bản đồ) làm theo chữ cái đầu như trong sách, xem bản đồ ở tr. 19.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U04-countries.yaml
+id: U04-countries
+activity: U04-words
+title: "Unit 4 · Countries and nationalities"
+subtitle: "I can say countries and nationalities"
+title_vi: "Quốc gia, quốc tịch, ngôn ngữ; người của một nước (the British, Italians); Britain và the UK"
+tag: "BASIC ENGLISH · UNIT 4"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 4: countries and nationalities. After this video, you can say where people come from, and what languages they speak."
+        say: "Welcome to Unit four: countries and nationalities. After this video, you can say where people come from, and what languages they speak."
+        vi: "Unit 4: nói người ta đến từ đâu, nói tiếng gì."
+      - tom: "As always, no countdown. Pause the video when you want to answer."
+        vi: "Như mọi khi, không đếm ngược: muốn trả lời thì tự tạm dừng video."
+
+  - kind: bullets
+    chapter: "Bạn từ đâu đến?"
+    heading: "Where are you from?"
+    heading_vi: "Hỏi và trả lời về quê hương, quốc tịch, ngôn ngữ"
+    items:
+      - {en: "Where are you from? · Where do you come from?", vi: "Bạn từ đâu đến?"}
+      - {en: "I come from Vietnam. · I'm from Vietnam.", vi: "Tôi đến từ Việt Nam (tên nước)"}
+      - {en: "I'm Vietnamese. I speak Vietnamese.", vi: "Tôi là người Việt (quốc tịch), nói tiếng Việt (ngôn ngữ)"}
+    lines:
+      - {emma: "Where are you from? Or: where do you come from?", focus: 0}
+      - {tom: "I come from Vietnam. Or: I'm from Vietnam.", focus: 1, vi: "Sau from là tên nước."}
+      - {tom: "I'm Vietnamese, and I speak Vietnamese.", focus: 2, vi: "Quốc tịch và ngôn ngữ."}
+      - {emma: "So: the country is Vietnam, the nationality is Vietnamese, and the language is Vietnamese too.", focus: 2}
+
+  - kind: bullets
+    chapter: "Châu Âu"
+    heading: "Europe · country — nationality (language)"
+    heading_vi: "Tên nước, quốc tịch, ngôn ngữ — đều viết hoa"
+    items:
+      - {en: "the Czech Republic — Czech · France — French · Germany — German", vi: "Séc · Pháp · Đức"}
+      - {en: "Greece — Greek · Hungary — Hungarian · Italy — Italian", vi: "Hy Lạp · Hungary · Ý"}
+      - {en: "Poland — Polish · Portugal — Portuguese · Russia — Russian", vi: "Ba Lan · Bồ Đào Nha · Nga"}
+      - {en: "Spain — Spanish · Turkey — Turkish", vi: "Tây Ban Nha · Thổ Nhĩ Kỳ"}
+      - {en: "Switzerland — Swiss (they speak German, French, Italian)", vi: "Thụy Sĩ: người Thụy Sĩ nói tiếng Đức, Pháp, Ý"}
+    lines:
+      - emma: "Let's start with Europe. I say the country, and Tom says the nationality."
+        vi: "Châu Âu: Emma nói tên nước, Tom nói quốc tịch."
+      - {emma: "The Czech Republic. France. Germany.", focus: 0}
+      - {tom: "Czech. French. German.", focus: 0}
+      - {emma: "Greece. Hungary. Italy.", focus: 1}
+      - {tom: "Greek. Hungarian. Italian.", focus: 1}
+      - {emma: "Poland. Portugal. Russia.", focus: 2}
+      - {tom: "Polish. Portuguese. Russian.", focus: 2}
+      - {emma: "Spain. Turkey.", focus: 3}
+      - {tom: "Spanish. Turkish.", focus: 3}
+      - {emma: "Switzerland. The people are Swiss, and they speak German, French, or Italian.", focus: 4, vi: "Người Thụy Sĩ nói tiếng Đức, Pháp hoặc Ý."}
+
+  - kind: bullets
+    chapter: "Các châu lục khác"
+    heading: "Asia, the Americas, the Middle East, Africa, Australasia"
+    heading_vi: "Quốc tịch và tiếng nói không phải lúc nào cũng trùng tên"
+    items:
+      - {en: "India — Indian (Hindi) · China — Chinese (Mandarin, Cantonese)", vi: "Ấn Độ · Trung Quốc"}
+      - {en: "Japan — Japanese · South Korea — Korean · Thailand — Thai · Vietnam — Vietnamese", vi: "Nhật · Hàn Quốc · Thái Lan · Việt Nam"}
+      - {en: "Canada — Canadian (English, French) · the United States — American (English)", vi: "Canada · Mỹ"}
+      - {en: "Mexico — Mexican (Spanish) · Argentina — Argentinian (Spanish) · Brazil — Brazilian (Portuguese)", vi: "Mexico · Argentina · Brazil"}
+      - {en: "Saudi Arabia — Saudi (Arabic) · Egypt — Egyptian (Arabic) · Australia — Australian (English)", vi: "Ả Rập Xê Út · Ai Cập · Úc"}
+    lines:
+      - {emma: "Asia. India, Indian. They speak Hindi. China, Chinese. They speak Mandarin or Cantonese.", focus: 0}
+      - {tom: "Japan, Japanese. South Korea, Korean. Thailand, Thai. And Vietnam, Vietnamese.", focus: 1}
+      - {emma: "North America. Canada, Canadian. The United States, American.", focus: 2}
+      - {tom: "Mexico, Mexican. Argentina, Argentinian. Brazil, Brazilian.", focus: 3}
+      - {emma: "But be careful. Mexicans speak Spanish, not Mexican. And Brazilians speak Portuguese.", focus: 3, vi: "Người Mexico nói tiếng Tây Ban Nha; người Brazil nói tiếng Bồ Đào Nha."}
+      - {tom: "Saudi Arabia, Saudi. Egypt, Egyptian. They both speak Arabic. And Australia, Australian.", focus: 4}
+      - emma: "Countries, nationalities and languages always begin with a capital letter. Japan, not japan."
+        focus: 4
+        vi: "Tên nước, quốc tịch, ngôn ngữ luôn viết hoa chữ cái đầu."
+
+  - kind: bullets
+    chapter: "Người của một nước"
+    heading: "Spotlight · People from a country"
+    heading_vi: "Thường thêm s: Italians, Brazilians, Thais, Greeks — vài trường hợp dùng the + quốc tịch"
+    items:
+      - {en: "Italians · Brazilians · Thais · Greeks · Americans · Vietnamese", vi: "thêm s (Vietnamese giữ nguyên)"}
+      - {en: "the British · the English · the French · the Spanish", vi: "đuôi -sh, -ch: the + quốc tịch, không thêm s"}
+      - {en: "the Chinese · the Japanese · the Swiss", vi: "đuôi -ese, -ss: the + quốc tịch"}
+      - {en: "Great Britain = England, Wales, Scotland · the UK = + Northern Ireland", vi: "Vương quốc Anh (the UK) gồm thêm Bắc Ireland"}
+      - {en: "English = from England · British = from England, Wales, Scotland or Northern Ireland", vi: "người Scotland, xứ Wales là British, không phải English"}
+    lines:
+      - {emma: "To talk about the people from a country, we often add s. Italians, Brazilians, Thais, Greeks.", focus: 0}
+      - {tom: "But some are different. The British, the English, the French, the Spanish.", focus: 1}
+      - {tom: "The Chinese, the Japanese, the Swiss.", focus: 2}
+      - {emma: "And Britain. Great Britain is England, Wales and Scotland. The United Kingdom, or the UK, adds Northern Ireland.", say: "And Britain. Great Britain is England, Wales and Scotland. The United Kingdom, or the U K, adds Northern Ireland.", focus: 3}
+      - {emma: "Only people from England are English. People from Scotland or Wales are British, but not English. So don't call a Scottish person English!", focus: 4, vi: "Chỉ người England là English; người Scotland, Wales là British."}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · True or false? Write T or F"
+    heading_vi: "Câu sai thì sửa lại: người nước đó nói tiếng gì? — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "Saudis speak Arabic.  →  ___", answer: "T"}
+      - {n: 2, q: "Mexicans speak Spanish.  →  ___", answer: "T"}
+      - {n: 3, q: "Thais speak Japanese.  →  ___", answer: "F (Thai)"}
+      - {n: 4, q: "Hungarians speak Hungarian.  →  ___", answer: "T"}
+      - {n: 5, q: "Australians speak Australian.  →  ___", answer: "F (English)"}
+      - {n: 6, q: "The Chinese speak Chinese.  →  ___", answer: "F (Mandarin, Cantonese)"}
+      - {n: 7, q: "Brazilians speak Portuguese.  →  ___", answer: "T"}
+      - {n: 8, q: "Americans speak English.  →  ___", answer: "T"}
+      - {n: 9, q: "Czechs speak Polish.  →  ___", answer: "F (Czech)"}
+    lines:
+      - emma: "Exercise 1. True or false? Pause the video, and write T or F."
+        say: "Exercise one. True or false? Pause the video, and write T, or F."
+        vi: "Bài 1: đúng (T) hay sai (F)? Tạm dừng video và làm."
+      - {tom: "One, true. Saudis speak Arabic. Two, true.", reveal: [1, 2], focus: 1}
+      - {tom: "Three, false. Thais speak Thai. Four, true.", reveal: [3, 4], focus: 3}
+      - {tom: "Five, false. Australians speak English.", reveal: 5, focus: 4}
+      - {emma: "Six is interesting. The answer key says false, because the book says the Chinese speak Mandarin or Cantonese.", reveal: 6, focus: 5, vi: "Câu 6 sai theo sách: người Trung Quốc nói tiếng Quan thoại hoặc Quảng Đông."}
+      - {tom: "Seven, true. Eight, true. Nine, false. Czechs speak Czech.", say: "Seven, true. Eight, true. Nine, false. Checks speak Czech.", reveal: [7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 2: ở khu vực nào?"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "China is in the Far East — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "Scotland is in Great ___.", answer: "Britain"}
+      - {n: 2, q: "Hungary is in ___.", answer: "Europe"}
+      - {n: 3, q: "Mexico is in ___ America.", answer: "Central"}
+      - {n: 4, q: "Thailand is in the ___ East.", answer: "Far"}
+      - {n: 5, q: "Argentina is in ___ America.", answer: "South"}
+      - {n: 6, q: "Egypt is in ___.", answer: "Africa"}
+      - {n: 7, q: "Saudi Arabia is in ___.", answer: "the Middle East"}
+      - {n: 8, q: "India is in ___.", answer: "Asia"}
+      - {n: 9, q: "Australia is in ___.", answer: "Australasia"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. Pause the video and try."
+        say: "Exercise two. Complete the sentences. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu — tạm dừng video và làm."
+      - {tom: "Scotland is in Great Britain. Hungary is in Europe. Mexico is in Central America.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Thailand is in the Far East. Argentina is in South America. Egypt is in Africa.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Saudi Arabia is in the Middle East. India is in Asia. And Australia is in Australasia.", reveal: [7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 3: bản đồ châu Âu"
+    heading: "Exercise 3 · Write the names of the countries and languages"
+    heading_vi: "Xem bản đồ tr. 19 — mỗi nước cho sẵn chữ cái đầu (đáp án theo Answer key)"
+    items:
+      - {n: 1, q: "F…  →  ___", answer: "France, French"}
+      - {n: 2, q: "G…  →  ___", answer: "Germany, German"}
+      - {n: 3, q: "S…  →  ___", answer: "Spain, Spanish"}
+      - {n: 4, q: "P…  →  ___", answer: "Portugal, Portuguese"}
+      - {n: 5, q: "I…  →  ___", answer: "Italy, Italian"}
+      - {n: 6, q: "The C…  →  ___", answer: "the Czech Republic, Czech"}
+      - {n: 7, q: "P…  →  ___", answer: "Poland, Polish"}
+      - {n: 8, q: "H…  →  ___", answer: "Hungary, Hungarian"}
+      - {n: 9, q: "R…  →  ___", answer: "Russia, Russian"}
+      - {n: 10, q: "G…  →  ___", answer: "Greece, Greek"}
+      - {n: 11, q: "T…  →  ___", answer: "Turkey, Turkish"}
+    lines:
+      - emma: "Exercise 3. Look at the map on page nineteen. Write the countries and the languages. Pause the video and try."
+        say: "Exercise three. Look at the map on page nineteen. Write the countries and the languages. Pause the video and try."
+        vi: "Bài 3: xem bản đồ tr. 19, viết tên nước và ngôn ngữ."
+      - {tom: "One, France, French. Two, Germany, German. Three, Spain, Spanish.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four, Portugal, Portuguese. Five, Italy, Italian. Six, the Czech Republic, Czech.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven, Poland, Polish. Eight, Hungary, Hungarian. Nine, Russia, Russian.", reveal: [7, 8, 9], focus: 8}
+      - {tom: "Ten, Greece, Greek. And eleven, Turkey, Turkish.", reveal: [10, 11], focus: 10}
+
+  - kind: bullets
+    chapter: "Bài 4: đuôi quốc tịch"
+    heading: "Exercise 4 · Nationalities ending in -ian, -ish, -an"
+    heading_vi: "Đáp án theo Answer key tr. 206 (Italian là ví dụ có sẵn trong sách)"
+    items:
+      - {en: "-ian: Italian, Russian, Egyptian, Hungarian, Brazilian, Argentinian, Indian, Canadian, Australian", vi: "đuôi -ian"}
+      - {en: "-ish: British, Spanish, Turkish, Polish, English", vi: "đuôi -ish"}
+      - {en: "-an: American, German, Korean, Mexican", vi: "đuôi -an"}
+    lines:
+      - emma: "Exercise 4. Put the nationalities into three groups: i, a, n. i, s, h. And a, n. Pause the video and try."
+        say: "Exercise four. Put the nationalities into three groups: I, A, N. I, S, H. And A, N. Pause the video and try."
+        vi: "Bài 4: xếp quốc tịch theo đuôi -ian, -ish, -an."
+      - {tom: "Ending in i, a, n: Italian, Russian, Egyptian, Hungarian, Brazilian, Argentinian, Indian, Canadian, Australian.", say: "Ending in I, A, N: Italian, Russian, Egyptian, Hungarian, Brazilian, Argentinian, Indian, Canadian, Australian.", focus: 0}
+      - {tom: "Ending in i, s, h: British, Spanish, Turkish, Polish, English.", say: "Ending in I, S, H: British, Spanish, Turkish, Polish, English.", focus: 1}
+      - {tom: "And ending in a, n: American, German, Korean, Mexican.", say: "And ending in A, N: American, German, Korean, Mexican.", focus: 2}
+
+  - kind: compare
+    chapter: "Trọng âm"
+    heading: "Word stress · China → Chinese, Italy → Italian"
+    heading_vi: "Đuôi -ese nhấn âm cuối; với -ian, trọng âm thường dời sang âm ngay trước -ian"
+    items:
+      - title: "-ese: ChiNESE"
+        title_vi: "nhấn âm cuối"
+        lines: ["China → Chinese", "Japan → Japanese", "Vietnam → Vietnamese", "Portugal → Portuguese"]
+      - title: "-ian: iTALian"
+        title_vi: "trọng âm dời chỗ"
+        lines: ["Italy → Italian", "Canada → Canadian", "Egypt → Egyptian", "Hungary → Hungarian"]
+    lines:
+      - emma: "Now, word stress. Listen for the strong part of each word."
+        vi: "Trọng âm: nghe phần đọc mạnh của mỗi từ."
+      - emma: "China, Chinese. Japan, Japanese. Vietnam, Vietnamese. Portugal, Portuguese. The stress is at the end."
+        focus: 0
+        vi: "Quốc tịch đuôi -ese nhấn âm cuối."
+      - tom: "Italy, Italian. Canada, Canadian. Egypt, Egyptian. Hungary, Hungarian. Here the stress moves."
+        focus: 1
+        vi: "Với -ian, trọng âm dời chỗ: I-ta-ly nhưng i-TAL-ian."
+      - emma: "Listen again, and say them with me. Chinese, Japanese, Vietnamese. Italian, Canadian, Egyptian."
+        vi: "Nghe lại và nói theo."
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · spelling countries and nationalities"
+    heading_vi: "Như bài nghe IELTS — tạm dừng sau mỗi câu, viết đúng chính tả và viết hoa"
+    items:
+      - {n: 1, q: "The football coach is ___.", answer: "Portuguese"}
+      - {n: 2, q: "The watch was made in ___.", answer: "Switzerland"}
+      - {n: 3, q: "The new neighbours are ___.", answer: "Brazilian"}
+      - {n: 4, q: "The pyramids are in ___.", answer: "Egypt"}
+      - {n: 5, q: "We have two ___ students.", answer: "Korean"}
+      - {n: 6, q: "Sydney is in ___.", answer: "Australia"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the word. Spelling is important!"
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ — chính tả rất quan trọng."
+      - {emma: "Number one. The football coach is Portuguese.", focus: 0}
+      - {emma: "Number two. The watch was made in Switzerland.", focus: 1}
+      - {emma: "Number three. The new neighbours are Brazilian.", focus: 2}
+      - {emma: "Number four. The pyramids are in Egypt.", focus: 3}
+      - {emma: "Number five. We have two Korean students.", focus: 4}
+      - {emma: "Number six. Sydney is in Australia.", focus: 5}
+      - {tom: "Portuguese: P, o, r, t, u, g, u, e, s, e. Switzerland. Brazilian, with a capital B.", say: "Portuguese: pee, oh, ar, tee, you, gee, you, ee, ess, ee. Switzerland. Brazilian, with a capital B.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Egypt. Korean. Australia.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: quê hương và ngôn ngữ"
+    heading: "Speaking 1 · Tom and Emma ask each other"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Where are you from, Tom?"
+        a: "I'm from Vietnam. I was born in Hanoi, but I grew up in Da Lat, a city in the mountains."
+        ask: emma
+        by: tom
+        phrases: ["I'm from…", "I was born in…", "I grew up in…"]
+      - q: "And where do you come from, Emma?"
+        a: "I come from England, from a small town by the sea. So I'm English, and of course I'm British too."
+        ask: tom
+        by: emma
+        phrases: ["I come from…", "I'm English", "British too"]
+      - q: "What languages do you speak?"
+        a: "Vietnamese, of course, and English. My English isn't perfect yet, but it's getting better every day."
+        ask: emma
+        by: tom
+        phrases: ["…, of course", "isn't perfect yet", "getting better"]
+      - q: "How many languages do you speak, Emma?"
+        a: "Three: English, French, and a little Vietnamese. My French was good at school, but I've forgotten a lot. I'd like to learn Japanese too."
+        ask: tom
+        by: emma
+        phrases: ["a little…", "I've forgotten a lot", "I'd like to learn…"]
+      - q: "Which country would you like to visit? Why?"
+        a: "Australia. I hope to go on an exchange programme there next year, so I need a good IELTS score!"
+        ask: emma
+        by: tom
+        phrases: ["I hope to…", "an exchange programme", "I need…"]
+      - q: "Which nationalities are your students?"
+        a: "Most of them are Vietnamese, but this year I also have two Korean students and one Japanese student."
+        ask: tom
+        by: emma
+        phrases: ["Most of them are…", "this year", "two Korean students"]
+      - q: "And the teachers at your school? Where are they from?"
+        a: "We're twelve teachers from five countries. Three of us are British: two are English, and one is Scottish. The others are Irish, American, Australian and Vietnamese."
+        ask: tom
+        by: emma
+        phrases: ["from five countries", "Three of us are…", "The others are…"]
+      - q: "Are there many tourists in Da Lat? Where are they from?"
+        a: "Yes, lots. Most of them are Vietnamese, but there are also Koreans, Chinese, Australians and Americans."
+        ask: emma
+        by: tom
+        phrases: ["Most of them are…", "there are also…", "Koreans, Americans"]
+    lines:
+      - {emma: "Where are you from, Tom?", focus: 0}
+      - tom: "I'm from Vietnam. I was born in Hanoi, but I grew up in Da Lat, a city in the mountains."
+        say: "I'm from Vietnam. I was born in Ha Noi, but I grew up in Dah Lot, a city in the mountains."
+        reveal: 0
+        vi: "Từ Việt Nam: sinh ở Hà Nội, lớn lên ở Đà Lạt, thành phố trên núi."
+      - {tom: "And where do you come from, Emma?", focus: 1}
+      - {emma: "I come from England, from a small town by the sea. So I'm English, and of course I'm British too.", reveal: 1, vi: "Từ Anh, một thị trấn ven biển — là người English, và tất nhiên là British."}
+      - {emma: "What languages do you speak?", focus: 2}
+      - {tom: "Vietnamese, of course, and English. My English isn't perfect yet, but it's getting better every day.", reveal: 2, vi: "Tiếng Việt và tiếng Anh — tiếng Anh chưa giỏi nhưng ngày càng khá."}
+      - {tom: "How many languages do you speak, Emma?", focus: 3}
+      - {emma: "Three: English, French, and a little Vietnamese. My French was good at school, but I've forgotten a lot. I'd like to learn Japanese too.", reveal: 3, vi: "Ba thứ tiếng: Anh, Pháp, chút tiếng Việt; tiếng Pháp quên nhiều rồi. Muốn học thêm tiếng Nhật."}
+      - {emma: "Which country would you like to visit? Why?", focus: 4}
+      - {tom: "Australia. I hope to go on an exchange programme there next year, so I need a good IELTS score!", say: "Australia. I hope to go on an exchange programme there next year, so I need a good eye-elts score!", reveal: 4, vi: "Úc: hy vọng năm sau đi trao đổi ở đó, nên cần điểm IELTS tốt!"}
+      - {tom: "Which nationalities are your students?", focus: 5}
+      - {emma: "Most of them are Vietnamese, but this year I also have two Korean students and one Japanese student.", reveal: 5, vi: "Đa số là người Việt; năm nay có thêm hai học viên Hàn, một học viên Nhật."}
+      - {tom: "And the teachers at your school? Where are they from?", focus: 6}
+      - {emma: "We're twelve teachers from five countries. Three of us are British: two are English, and one is Scottish. The others are Irish, American, Australian and Vietnamese.", reveal: 6, vi: "12 giáo viên từ 5 nước: 3 người là British (2 người Anh, 1 người Scotland); còn lại là người Ireland, Mỹ, Úc, Việt Nam."}
+      - {emma: "Are there many tourists in Da Lat? Where are they from?", say: "Are there many tourists in Dah Lot? Where are they from?", focus: 7}
+      - {tom: "Yes, lots. Most of them are Vietnamese, but there are also Koreans, Chinese, Australians and Americans.", reveal: 7, vi: "Rất nhiều: đa số là người Việt, còn có người Hàn, Trung Quốc, Úc, Mỹ."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: you and the world"
+    heading_vi: "Dùng đúng tên nước / quốc tịch / ngôn ngữ"
+    items:
+      - {q: "Where are you from?", hint: "I'm from … / I come from …"}
+      - {q: "What nationality are you? What languages do you speak?", hint: "I'm … I speak …"}
+      - {q: "Which countries are near your country?", hint: "… is next to … / … and … are near …"}
+      - {q: "Which country would you like to visit? Why?", hint: "I'd like to visit … because …"}
+      - {q: "Where do most tourists in your town come from?", hint: "Most of them are … / There are also …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Where are you from?", focus: 0, pause: 0.5}
+      - {emma: "What nationality are you? What languages do you speak?", focus: 1, pause: 0.5}
+      - {emma: "Which countries are near your country?", focus: 2, pause: 0.5}
+      - {emma: "Which country would you like to visit? Why?", focus: 3, pause: 0.5}
+      - {emma: "Where do most tourists in your town come from?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che cột quốc tịch, ngôn ngữ ở tr. 18 và nói lại"
+    items:
+      - {en: "Where are you from? — I'm from Vietnam. I'm Vietnamese.", vi: "tên nước sau from; quốc tịch sau I'm"}
+      - {en: "Mexicans speak Spanish · Brazilians speak Portuguese", vi: "quốc tịch và ngôn ngữ có khi khác nhau"}
+      - {en: "Italians, Thais · the British, the French, the Japanese", vi: "người của một nước"}
+      - {en: "-ian · -ish · -an · always a capital letter", vi: "đuôi quốc tịch; luôn viết hoa"}
+      - {en: "Next: Unit 5 · Classroom vocabulary", vi: "Tiếp theo: Unit 5 · đồ vật trong lớp học"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Where are you from? I'm from Vietnam. I'm Vietnamese.", focus: 0}
+      - {tom: "Mexicans speak Spanish, and Brazilians speak Portuguese.", focus: 1}
+      - {emma: "Italians and Thais, but the British, the French and the Japanese.", focus: 2}
+      - {tom: "And always a capital letter.", focus: 3}
+      - {emma: "Now cover the nationalities on page eighteen, look at the countries, and say them. See you in Unit 5!", say: "Now cover the nationalities on page eigh-teen, look at the countries, and say them. See you in Unit five!", focus: 4}

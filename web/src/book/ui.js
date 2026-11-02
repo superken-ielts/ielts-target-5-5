@@ -731,7 +731,7 @@ const BookUI = (() => {
     mid.append(h("div", "bk-unit-t", name));
     const pr = item.pages ? [BookCore.printedPage(book, "course-book", item.pages[0]), BookCore.printedPage(book, "course-book", item.pages[1])] : null;
     const note = item.kind === "test" && (book.missing || []).includes("test-books") ? " · chưa có sách Test" : "";
-    mid.append(h("div", "tiny", (pr ? "Trang " + pr[0] + "–" + pr[1] + " · " : "") + sess.length + " phiên · đã xong " + cnt.done + "/" + cnt.total + note));
+    mid.append(h("div", "tiny", (pr ? "Trang " + pr[0] + (pr[1] !== pr[0] ? "–" + pr[1] : "") + " · " : "") + sess.length + " phiên · đã xong " + cnt.done + "/" + cnt.total + note));
     const dots = h("div", "bk-dots");
     sess.forEach(s => {
       const st = BookCore.statusOf(p, s.id);
