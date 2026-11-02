@@ -11,7 +11,7 @@ Nhánh `claude/nifty-darwin-23vvae` (gộp `main` tới đợt 26), đẩy lên 
 phút, bỏ phần "Your turn" luyện nói có đếm ngược, làm Unit 0 trước. Theo cùng quy ước với IELTS đợt 24–25 và Oxford
 đợt 26: không `wait` / `echo`, người học tự tạm dừng video.
 
-**Bảy video mới** (`books/Genki/lessons/U00-01-hiragana-1` … `U00-07-numbers`, UNIT0_TOTAL) thay 19 video của đợt 23
+**Bảy video mới** (`books/Genki/lessons/U00-01-hiragana-1` … `U00-07-numbers`, 7 video, 1:00:10) thay 19 video của đợt 23
 (xóa kịch bản rồi `prune` bỏ khỏi `lessons.json` và xóa `.mp4`):
 - Hiragana 1: Unit 0 học gì, để làm gì, thứ tự video, cách xem; ba loại chữ; あいうえお; hàng か, さ.
 - Hiragana 2: hàng た, な, は, ま, や, ら, わ, ん; cả bảng với JWS-01.

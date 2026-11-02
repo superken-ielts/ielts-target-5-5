@@ -211,15 +211,15 @@ TURN". Đợt 27, người học muốn mỗi video 7–10 phút và không đ�
 
 | Phiên | Video | Nội dung | Dài |
 |---|---|---|---|
-| Hệ chữ Nhật & hiragana | `U00-01-hiragana-1` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 7 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, tự tạm dừng); ba loại chữ; あいうえお và hàng か, さ từng chữ một (し là shi); đọc từ; viết | DUR01 |
-| | `U00-02-hiragana-2` | Hàng た (ち, つ), な, は (ふ; は / へ làm trợ từ đọc khác), ま, や, ら, わ và ん; đọc từ; ôn; cả bảng 46 chữ với JWS-01 | DUR02 |
-| | `U00-03-hiragana-3` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…); ゛ ゜ theo từng hàng, 25 âm với JWS-02; や to và ゃ nhỏ (びよういん / びょういん), 33 âm ghép với JWS-03 | DUR03 |
-| | `U00-04-hiragana-katakana` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); katakana dùng khi nào, sáu chữ giống hiragana, các hàng, cả bảng với JWS-09 | DUR04 |
-| | `U00-05-katakana` | Chữ dễ nhầm (シ ツ ソ ン…); ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12); âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | DUR05 |
-| Chào hỏi & số đếm | `U00-06-greetings` | Chào theo giờ, cảm ơn, xin lỗi, đáp lời; tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào — mỗi câu: Emma nói tình huống → Yuki / Takeshi → K00-01; 10 tình huống đố (bài A); tự giới thiệu (bài B) | DUR06 |
-| | `U00-07-numbers` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; đếm 1–20; hàng chục, 100, mọi số đến 99 (K00-02); bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | DUR07 |
+| Hệ chữ Nhật & hiragana | `U00-01-hiragana-1` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 7 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, tự tạm dừng); ba loại chữ; あいうえお và hàng か, さ từng chữ một (し là shi); đọc từ; viết | 7:41 |
+| | `U00-02-hiragana-2` | Hàng た (ち, つ), な, は (ふ; は / へ làm trợ từ đọc khác), ま, や, ら, わ và ん; đọc từ; ôn; cả bảng 46 chữ với JWS-01 | 9:46 |
+| | `U00-03-hiragana-3` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…); ゛ ゜ theo từng hàng, 25 âm với JWS-02; や to và ゃ nhỏ (びよういん / びょういん), 33 âm ghép với JWS-03 | 9:35 |
+| | `U00-04-hiragana-katakana` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); katakana dùng khi nào, sáu chữ giống hiragana, các hàng, cả bảng với JWS-09 | 9:05 |
+| | `U00-05-katakana` | Chữ dễ nhầm (シ ツ ソ ン…); ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12); âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | 7:37 |
+| Chào hỏi & số đếm | `U00-06-greetings` | Chào theo giờ, cảm ơn, xin lỗi, đáp lời; tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào — mỗi câu: Emma nói tình huống → Yuki / Takeshi → K00-01; 10 tình huống đố (bài A); tự giới thiệu (bài B) | 8:21 |
+| | `U00-07-numbers` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; đếm 1–20; hàng chục, 100, mọi số đến 99 (K00-02); bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | 8:04 |
 
-7 video, **TOTAL**, SIZE MB, CHAP chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì);
+7 video, **1:00:10**, 38 MB, 8–17 chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì);
 giữa video, mỗi phần mở bằng một câu dẫn ("Next: …"), cuối video nói video sau học gì.
 
 Bài 1–3 có bốn video mỗi bài, mỗi video gắn vào phiên luyện đúng kỹ năng đó:
