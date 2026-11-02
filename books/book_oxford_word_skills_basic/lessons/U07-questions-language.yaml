@@ -1,0 +1,316 @@
+# Video Oxford Word Skills Basic · Unit 7 — I can ask and answer questions about language (sách in tr. 22, Answer key tr. 206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1–2 theo Answer key (bài 1: 1f 2g 3a 4d 5b 6e; bài 2: called, pronounce, How do, between, right/correct,
+# opposite, does, explain).
+# Thêm ngoài sách: I don't know / I can't remember / I'm not sure; tomato kiểu Anh – Mỹ; tự đặt câu hỏi theo tình huống;
+# chữ cái dễ nhầm (A/E/I, G/J, H, R, W, Y, double, capital); nghe và viết tên được đánh vần
+# (như IELTS Listening Section 1, dùng tên trong hồ sơ nhân vật: Clarke, Tuan, Hughes, Green); mẹo xin nhắc lại câu hỏi
+# khi thi nói. Chi tiết nhân vật mới: Tom vừa chơi bóng rổ xong thì "exhausted", thích cà phê sữa đá; họ Trần là một trong
+# những họ phổ biến nhất ở Việt Nam.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U07-questions-language.yaml
+id: U07-questions-language
+activity: U07-words
+title: "Unit 7 · Questions about language"
+subtitle: "I can ask and answer questions about language"
+title_vi: "Hỏi nghĩa, cách nói, cách phát âm, cách đánh vần một từ; trả lời khi chưa biết; đánh vần tên"
+tag: "BASIC ENGLISH · UNIT 7"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 7: questions about language. When you learn English, you need to ask about words. What does it mean? How do you say it? Today you learn how."
+        say: "Welcome to Unit seven: questions about language. When you learn English, you need to ask about words. What does it mean? How do you say it? Today you learn how."
+        vi: "Unit 7: hỏi về từ ngữ — nghĩa là gì, nói thế nào."
+      - tom: "As always, there's no countdown. Pause the video when you want to answer."
+        vi: "Như mọi khi, không đếm ngược: muốn trả lời thì tự tạm dừng video."
+
+  - kind: bullets
+    chapter: "Hỏi nghĩa của từ"
+    heading: "Asking about meaning"
+    heading_vi: "Chú ý trật tự từ: What does … mean? (không nói What means …?)"
+    items:
+      - {en: "What does 'dreadful' mean? — It means 'terrible'.", vi: "… nghĩa là gì? — NOT What means 'dreadful'?"}
+      - {en: "What's this called in English? — It's a stamp.", vi: "Cái này tiếng Anh gọi là gì?"}
+      - {en: "How do you say 'pasaporte' in English? — Passport.", vi: "… tiếng Anh nói thế nào?"}
+      - {en: "Could you explain 'No vacancies'? — It means the hotel is full.", vi: "Giải thích giúp … — NOT Could you explain me …?"}
+    lines:
+      - {tom: "Emma, what does dreadful mean?", focus: 0}
+      - {emma: "It means terrible. And notice the question: what does dreadful mean? Not: what means dreadful.", focus: 0, vi: "Hỏi What does … mean?, không hỏi What means …?"}
+      - {tom: "What's this called in English?", focus: 1}
+      - {emma: "It's a stamp. You put it on a letter.", focus: 1}
+      - {tom: "How do you say pasaporte in English?", say: "How do you say pah-sah-por-tay in English?", focus: 2}
+      - {emma: "Passport.", focus: 2}
+      - {tom: "Could you explain No vacancies?", focus: 3}
+      - {emma: "Yes. You see it in a hotel window. It means the hotel is full. There are no free rooms. And remember: could you explain this word. Not: could you explain me.", focus: 3, vi: "Nói Could you explain …?, không nói Could you explain me …?"}
+
+  - kind: bullets
+    chapter: "Hỏi cách dùng, phát âm"
+    heading: "Difference, opposite, pronunciation, spelling"
+    heading_vi: "Khác nhau thế nào · từ trái nghĩa · phát âm · đánh vần"
+    items:
+      - {en: "What's the difference between 'hello' and 'hi'? — The meaning is the same, but 'hi' is informal.", vi: "Khác nhau giữa … và …?"}
+      - {en: "What's the opposite of 'large'? — Small.", vi: "Từ trái nghĩa của … là gì?"}
+      - {en: "How do you pronounce 'May'? — /meɪ/, like 'day'.", vi: "Phát âm … thế nào?"}
+      - {en: "'Eight' is pronounced /aɪt/. Is that right? — No, that's wrong. It's /eɪt/.", vi: "Như vậy đúng không? — Sai rồi"}
+      - {en: "How do you spell 'apple'? — A-double P-L-E.", vi: "Đánh vần … thế nào? — double P = hai chữ P"}
+    lines:
+      - {tom: "What's the difference between hello and hi?", focus: 0}
+      - {emma: "The meaning is the same, but hi is informal. You say it to friends.", focus: 0, vi: "Nghĩa như nhau, nhưng hi thân mật hơn."}
+      - {tom: "What's the opposite of large?", focus: 1}
+      - {emma: "Small.", focus: 1}
+      - {tom: "How do you pronounce this month: M, A, Y?", say: "How do you pronounce this month: em, eigh, why?", focus: 2}
+      - {emma: "May. Like day.", focus: 2}
+      - {tom: "Eight is pronounced /aɪt/. Is that right?", say: "Eight is pronounced ite. Is that right?", focus: 3}
+      - {emma: "No, that's wrong. It's pronounced eight, like late.", focus: 3}
+      - {tom: "How do you spell apple?", focus: 4}
+      - {emma: "A, double P, L, E. Double P means two Ps.", say: "Eigh, double pee, el, ee. Double pee means two pees.", focus: 4, vi: "double P = hai chữ P."}
+
+  - kind: bullets
+    chapter: "Khi chưa biết"
+    heading: "When you don't know"
+    heading_vi: "Ba câu trả lời khác nhau — dùng đúng câu"
+    items:
+      - {en: "I don't know.", vi: "= It's a new word for me. (từ mới với tôi)"}
+      - {en: "I can't remember.", vi: "= I knew the word yesterday, but I don't know it today. (biết rồi mà quên)"}
+      - {en: "I'm not sure. Is it one 'p' or two?", vi: "chưa chắc, hỏi lại"}
+      - {en: "Sorry, could you repeat the question, please?", vi: "thi nói IELTS: nghe chưa rõ thì xin nhắc lại, đừng im lặng"}
+    lines:
+      - {emma: "Sometimes you don't know the answer. That's OK! Say: I don't know. It means: it's a new word for me.", focus: 0}
+      - {tom: "I can't remember. I knew the word yesterday, but I don't know it today. That happens to me a lot!", focus: 1, vi: "Biết hôm qua mà hôm nay quên — Tom hay bị vậy!"}
+      - {emma: "I'm not sure. Is it one p or two?", say: "I'm not sure. Is it one pee or two?", focus: 2}
+      - emma: "And in the IELTS speaking test, if you don't understand a question, don't say nothing. Say: Sorry, could you repeat the question, please?"
+        say: "And in the eye-elts speaking test, if you don't understand a question, don't say nothing. Say: Sorry, could you repeat the question, please?"
+        focus: 3
+        vi: "Thi nói IELTS: chưa hiểu câu hỏi thì xin nhắc lại, đừng im lặng."
+
+  - kind: blanks
+    chapter: "Bài 1: ghép câu hỏi – trả lời"
+    heading: "Exercise 1 · Match 1–6 with a–g"
+    heading_vi: "a It means 'very small'. · b It's what you say when you meet a friend. · c D-E-double N-I-S. · d /ˈtaɪni/ · e No, it's wrong. · f I don't know. · g Open."
+    items:
+      - {n: 1, q: "How do you say 'cup' in German?  →  ___", answer: "f · I don't know."}
+      - {n: 2, q: "What's the opposite of 'closed'?  →  ___", answer: "g · Open."}
+      - {n: 3, q: "What does 'tiny' mean?  →  ___", answer: "a · It means 'very small'."}
+      - {n: 4, q: "How do you pronounce 'tiny'?  →  ___", answer: "d · /ˈtaɪni/"}
+      - {n: 5, q: "Could you explain 'How are you?'  →  ___", answer: "b · It's what you say when you meet a friend."}
+      - {n: 6, q: "'Question' and 'answer' mean the same. Is that right?  →  ___", answer: "e · No, it's wrong."}
+    lines:
+      - emma: "Exercise 1. Match the questions with the answers. Pause the video and try."
+        say: "Exercise one. Match the questions with the answers. Pause the video and try."
+        vi: "Bài 1: ghép câu hỏi 1–6 với câu trả lời a–g — tạm dừng video và làm."
+      - {tom: "How do you say cup in German? F. I don't know!", say: "How do you say cup in German? Ef. I don't know!", reveal: 1, focus: 0}
+      - {tom: "What's the opposite of closed? G. Open.", say: "What's the opposite of closed? Gee. Open.", reveal: 2, focus: 1}
+      - {tom: "What does tiny mean? A. It means very small.", say: "What does tiny mean? Eigh. It means very small.", reveal: 3, focus: 2}
+      - {tom: "How do you pronounce tiny? D. Tiny.", say: "How do you pronounce tiny? Dee. Tiny.", reveal: 4, focus: 3}
+      - {tom: "Could you explain How are you? B. It's what you say when you meet a friend.", say: "Could you explain, How are you? Bee. It's what you say when you meet a friend.", reveal: 5, focus: 4}
+      - {tom: "Question and answer mean the same. Is that right? E. No, it's wrong. They're opposites!", say: "Question and answer mean the same. Is that right? Ee. No, it's wrong. They're opposites!", reveal: 6, focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu hỏi"
+    heading: "Exercise 2 · Complete the questions"
+    heading_vi: "Đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "What's this ___ in English? — It's a frying pan.", answer: "called"}
+      - {n: 2, q: "How do you ___ 'tomato'? — /təˈmɑːtəʊ/", answer: "pronounce"}
+      - {n: 3, q: "___ you spell 'eye'? — I'm not sure. I think it's E-Y-E.", answer: "How do"}
+      - {n: 4, q: "What's the difference ___ 'bye' and 'goodbye'? — 'Bye' is more informal.", answer: "between"}
+      - {n: 5, q: "'Pen' is the same as 'pencil'. Is that ___? — No, that's wrong.", answer: "right / correct"}
+      - {n: 6, q: "What's the ___ of 'interesting'? — Boring.", answer: "opposite"}
+      - {n: 7, q: "What ___ 'enormous' mean? — It means 'very big'.", answer: "does"}
+      - {n: 8, q: "Could you ___ 'EXIT'? — You see it on a door. You can go out there.", answer: "explain"}
+    lines:
+      - emma: "Exercise 2. Complete the questions. Pause the video and try."
+        say: "Exercise two. Complete the questions. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu hỏi — tạm dừng video và làm."
+      - {tom: "One. What's this called in English?", reveal: 1, focus: 0}
+      - {emma: "It's a frying pan.", focus: 0}
+      - {tom: "Two. How do you pronounce tomato?", reveal: 2, focus: 1}
+      - {emma: "In British English, we say tomahto. Americans say tomayto. Both are fine.", focus: 1, vi: "Anh – Anh đọc /təˈmɑːtəʊ/, Anh – Mỹ đọc /təˈmeɪtoʊ/ — đều đúng."}
+      - {tom: "Three. How do you spell eye?", reveal: 3, focus: 2}
+      - {emma: "I'm not sure. I think it's E, Y, E.", say: "I'm not sure. I think it's ee, why, ee.", focus: 2}
+      - {tom: "Four. What's the difference between bye and goodbye?", reveal: 4, focus: 3}
+      - {emma: "Bye is more informal.", focus: 3}
+      - {tom: "Five. Pen is the same as pencil. Is that right? Or: is that correct?", reveal: 5, focus: 4}
+      - {emma: "No, that's wrong.", focus: 4}
+      - {tom: "Six. What's the opposite of interesting?", reveal: 6, focus: 5}
+      - {emma: "Boring.", focus: 5}
+      - {tom: "Seven. What does enormous mean?", reveal: 7, focus: 6}
+      - {emma: "It means very big.", focus: 6}
+      - {tom: "Eight. Could you explain EXIT?", say: "Eight. Could you explain, exit?", reveal: 8, focus: 7}
+      - {emma: "You see it on a door. It means that you can go out there.", focus: 7}
+
+  - kind: blanks
+    chapter: "Tự đặt câu hỏi"
+    heading: "Make the question"
+    heading_vi: "Bạn chưa biết từ — hãy đặt câu hỏi bằng tiếng Anh (tạm dừng video, nói to câu hỏi)"
+    items:
+      - {n: 1, q: "You don't know the meaning of 'huge'.  →  ___", answer: "What does 'huge' mean?"}
+      - {n: 2, q: "You want the English word for 'cái ô'.  →  ___", answer: "How do you say 'cái ô' in English?"}
+      - {n: 3, q: "You can't say 'Wednesday'.  →  ___", answer: "How do you pronounce 'Wednesday'?"}
+      - {n: 4, q: "You see a sign: 'Out of order'.  →  ___", answer: "Could you explain 'Out of order'?"}
+      - {n: 5, q: "You want a word that means 'not fast'.  →  ___", answer: "What's the opposite of 'fast'?"}
+      - {n: 6, q: "You can't write 'necessary'.  →  ___", answer: "How do you spell 'necessary'?"}
+    lines:
+      - emma: "Now you make the questions. Read each situation, pause the video, and say the question out loud."
+        vi: "Đến lượt bạn đặt câu hỏi: đọc tình huống, tạm dừng video, nói to câu hỏi."
+      - {tom: "One. What does huge mean?", reveal: 1, focus: 0}
+      - {emma: "It means very big, like enormous.", focus: 0}
+      - {tom: "Two. How do you say cái ô in English?", say: "Two. How do you say, kai oh, in English?", reveal: 2, focus: 1}
+      - {emma: "An umbrella. You need one in the rainy season!", focus: 1, vi: "Cái ô = an umbrella — mùa mưa thì cần!"}
+      - {tom: "Three. How do you pronounce Wednesday?", say: "Three. How do you pronounce Wed-nes-day?", reveal: 3, focus: 2}
+      - {emma: "Wednesday. The first d is silent. Wednesday.", say: "Wednesday. The first dee is silent. Wednesday.", focus: 2, vi: "Wednesday: chữ d đầu câm, đọc /ˈwenzdeɪ/."}
+      - {tom: "Four. Could you explain Out of order?", reveal: 4, focus: 3}
+      - {emma: "You see it on a machine. It means it doesn't work.", focus: 3, vi: "Out of order: (máy) hỏng, không dùng được."}
+      - {tom: "Five. What's the opposite of fast?", reveal: 5, focus: 4}
+      - {emma: "Slow.", focus: 4}
+      - {tom: "Six. How do you spell necessary?", reveal: 6, focus: 5}
+      - {emma: "N, E, C, E, double S, A, R, Y. One c, and double s.", say: "En, ee, see, ee, double ess, eigh, ar, why. One see, and double ess.", focus: 5, vi: "necessary: một chữ c, hai chữ s."}
+
+  - kind: bullets
+    chapter: "Chữ cái dễ nhầm"
+    heading: "The alphabet · letters that are easy to mix up"
+    heading_vi: "Nghe đánh vần trong IELTS Listening — người Việt hay nhầm các chữ này"
+    items:
+      - {en: "A /eɪ/ · E /iː/ · I /aɪ/", vi: "A đọc 'ây', E đọc 'i', I đọc 'ai'"}
+      - {en: "G /dʒiː/ · J /dʒeɪ/", vi: "G và J khác nhau ở nguyên âm: /iː/ và /eɪ/"}
+      - {en: "H /eɪtʃ/ · R /ɑː/ · W /ˈdʌbəl juː/ · Y /waɪ/", vi: "H 'êch', R 'a', W 'đấp-bồ-diu', Y 'oai'"}
+      - {en: "PP = double P · C = a capital C", vi: "hai chữ giống nhau: double · chữ hoa: capital"}
+    lines:
+      - emma: "Before the spelling test, let's practise some letters. Many learners mix up A, E and I."
+        say: "Before the spelling test, let's practise some letters. Many learners mix up eigh, ee, and eye."
+        focus: 0
+        vi: "Nhiều người học nhầm A, E và I."
+      - {tom: "A, E, I. A, E, I.", say: "Eigh, ee, eye. Eigh, ee, eye.", focus: 0}
+      - {emma: "G and J are difficult too. G, J. G, J.", say: "Gee and jay are difficult too. Gee, jay. Gee, jay.", focus: 1}
+      - {tom: "H, R, W, Y.", say: "Aitch, ar, double you, why.", focus: 2}
+      - {emma: "For two letters the same, say double: apple is A, double P, L, E. For a big letter, say capital: Clarke, with a capital C.", say: "For two letters the same, say double: apple is eigh, double pee, el, ee. For a big letter, say capital: Clarke, with a capital see.", focus: 3, vi: "Hai chữ giống nhau: double; chữ hoa: capital."}
+
+  - kind: blanks
+    chapter: "Nghe và viết: đánh vần"
+    heading: "Listen and write · How do you spell it?"
+    heading_vi: "Như IELTS Listening phần 1: nghe đánh vần, viết đúng từng chữ — chú ý double, G / J, A / E / I"
+    items:
+      - {n: 1, q: "Emma's family name: ___", answer: "Clarke"}
+      - {n: 2, q: "Tom's Vietnamese name: ___", answer: "Tuan"}
+      - {n: 3, q: "Emma's driving teacher: Mr ___", answer: "Hughes"}
+      - {n: 4, q: "Emma's English teacher at school: Mrs ___", answer: "Green"}
+      - {n: 5, q: "Where you live: your ___", answer: "address"}
+      - {n: 6, q: "A boy's name: ___", answer: "Dennis"}
+    lines:
+      - emma: "Now, a spelling test. In the IELTS listening test, people often spell names and addresses. Pause the video after each one, and write it."
+        say: "Now, a spelling test. In the eye-elts listening test, people often spell names and addresses. Pause the video after each one, and write it."
+        vi: "Bài nghe đánh vần: IELTS Listening hay đánh vần tên, địa chỉ. Tạm dừng sau mỗi từ và viết."
+      - {emma: "Number one. My family name is Clarke. C, L, A, R, K, E.", say: "Number one. My family name is Clarke. See, el, eigh, ar, kay, ee.", focus: 0}
+      - {tom: "Number two. My Vietnamese name is Tuan. T, U, A, N.", say: "Number two. My Vietnamese name is Twan. Tee, yoo, eigh, en.", focus: 1}
+      - {emma: "Number three. My driving teacher was Mr Hughes. H, U, G, H, E, S.", say: "Number three. My driving teacher was Mister Hughes. Aitch, yoo, gee, aitch, ee, ess.", focus: 2}
+      - {emma: "Number four. My English teacher was Mrs Green. G, R, double E, N.", say: "Number four. My English teacher was Missiz Green. Gee, ar, double ee, en.", focus: 3}
+      - {tom: "Number five. Address. A, double D, R, E, double S.", say: "Number five. Address. Eigh, double dee, ar, ee, double ess.", focus: 4}
+      - {tom: "Number six. Dennis. D, E, double N, I, S.", say: "Number six. Dennis. Dee, ee, double en, eye, ess.", focus: 5}
+      - {emma: "Clarke, with an e at the end. Tuan. Hughes.", say: "Clarke, with an ee at the end. Twan. Hughes.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Green, with double e. Address, with double d and double s. And Dennis.", say: "Green, with double ee. Address, with double dee and double ess. And Dennis.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: hỏi về từ ngữ"
+    heading: "Speaking 1 · Tom and Emma ask about words"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What does 'exhausted' mean?"
+        a: "It means very, very tired. After two hours of basketball, you're exhausted!"
+        ask: tom
+        by: emma
+        phrases: ["It means…", "very, very tired", "After…"]
+      - q: "How do you say 'cà phê sữa đá' in English?"
+        a: "Iced coffee with milk. It's my favourite drink. My dad works for a coffee company, so I drink a lot of it!"
+        ask: emma
+        by: tom
+        phrases: ["Iced coffee with milk", "my favourite drink", "so I…"]
+      - q: "How do you pronounce this word: c-o-m-f-o-r-t-a-b-l-e?"
+        a: "Comfortable. It has three syllables, not four: COMF-ta-ble."
+        ask: tom
+        by: emma
+        phrases: ["It has three syllables", "not four"]
+      - q: "What's the opposite of 'cheap'?"
+        a: "Expensive. Like the coffee in big hotels!"
+        ask: emma
+        by: tom
+        phrases: ["Expensive.", "Like…"]
+      - q: "What's the difference between 'look' and 'see'?"
+        a: "You look at something because you want to. You see things with your eyes, even when you don't try."
+        ask: tom
+        by: emma
+        phrases: ["You look at…", "You see…", "even when…"]
+      - q: "How do you spell your family name?"
+        a: "Tran. T-R-A-N. It's one of the most common family names in Vietnam."
+        ask: emma
+        by: tom
+        phrases: ["T-R-A-N", "one of the most common…"]
+      - q: "'Island' is pronounced is-land. Is that right?"
+        a: "No, that's not right. The s is silent. It's island."
+        ask: tom
+        by: emma
+        phrases: ["That's not right.", "The s is silent."]
+      - q: "Could you explain 'phở' to an English person?"
+        a: "Yes. It's a Vietnamese soup with rice noodles and beef or chicken. People often eat it for breakfast."
+        ask: emma
+        by: tom
+        phrases: ["It's a … soup with…", "People often…", "for breakfast"]
+    lines:
+      - {tom: "Emma, what does exhausted mean?", focus: 0}
+      - {emma: "It means very, very tired. After two hours of basketball, you're exhausted!", reveal: 0, vi: "Rất, rất mệt — chơi bóng rổ hai tiếng xong là exhausted!"}
+      - {emma: "How do you say cà phê sữa đá in English?", say: "How do you say, kah feh suh dah, in English?", focus: 1}
+      - {tom: "Iced coffee with milk. It's my favourite drink. My dad works for a coffee company, so I drink a lot of it!", reveal: 1, vi: "Cà phê sữa đá — món Tom thích nhất; bố làm cho công ty cà phê nên Tom uống rất nhiều!"}
+      - {tom: "How do you pronounce this word: c, o, m, f, o, r, t, a, b, l, e?", say: "How do you pronounce this word: see, oh, em, ef, oh, ar, tee, eigh, bee, el, ee?", focus: 2}
+      - {emma: "Comfortable. It has three syllables, not four: comf, ta, ble.", say: "Comfortable. It has three syllables, not four. Comfortable.", reveal: 2, vi: "Comfortable chỉ có ba âm tiết, đừng đọc com-for-ta-ble."}
+      - {emma: "What's the opposite of cheap?", focus: 3}
+      - {tom: "Expensive. Like the coffee in big hotels!", reveal: 3, vi: "Đắt — như cà phê ở khách sạn lớn!"}
+      - {tom: "What's the difference between look and see?", focus: 4}
+      - {emma: "You look at something because you want to. You see things with your eyes, even when you don't try.", reveal: 4, vi: "look (at): chủ động nhìn; see: thấy, kể cả khi không cố ý."}
+      - {emma: "How do you spell your family name?", focus: 5}
+      - {tom: "Tran. T, R, A, N. It's one of the most common family names in Vietnam.", say: "Chan. Tee, ar, eigh, en. It's one of the most common family names in Vietnam.", reveal: 5, vi: "Trần — một trong những họ phổ biến nhất ở Việt Nam."}
+      - {tom: "Island is pronounced is-land. Is that right?", say: "Island is pronounced iz-land. Is that right?", focus: 6}
+      - {emma: "No, that's not right. The s is silent. It's island.", say: "No, that's not right. The ess is silent. It's island.", reveal: 6, vi: "Sai rồi: chữ s câm, đọc /ˈaɪlənd/."}
+      - {emma: "Could you explain phở to an English person?", say: "Could you explain fuh to an English person?", focus: 7}
+      - {tom: "Yes. It's a Vietnamese soup with rice noodles and beef or chicken. People often eat it for breakfast.", reveal: 7, vi: "Phở: món súp Việt Nam với bánh phở và thịt bò hoặc gà; người ta hay ăn vào bữa sáng."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: explain and spell"
+    heading_vi: "Trả lời 2–3 câu; giải thích như đang nói với một người bạn nước ngoài"
+    items:
+      - {q: "Could you explain 'bánh mì' to an English friend?", hint: "It's a … with … People eat it …"}
+      - {q: "What's the opposite of 'hot', 'old' and 'easy'?", hint: "The opposite of … is …"}
+      - {q: "How do you spell your full name?", hint: "My name is … That's …"}
+      - {q: "Which English word is difficult for you to pronounce? Why?", hint: "… is difficult for me because …"}
+      - {q: "What do you say when you don't know a word in class?", hint: "I say: What does … mean? / How do you say … in English?"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Could you explain bánh mì to an English friend?", say: "Could you explain bahn mee to an English friend?", focus: 0, pause: 0.5}
+      - {emma: "What's the opposite of hot, old and easy?", focus: 1, pause: 0.5}
+      - {emma: "How do you spell your full name?", focus: 2, pause: 0.5}
+      - {emma: "Which English word is difficult for you to pronounce? Why?", focus: 3, pause: 0.5}
+      - {emma: "What do you say when you don't know a word in class?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — lần sau gặp từ mới, hãy hỏi bằng tiếng Anh!"
+    items:
+      - {en: "What does … mean? · What's this called in English?", vi: "hỏi nghĩa · hỏi tên đồ vật"}
+      - {en: "How do you say … in English? · Could you explain …?", vi: "hỏi cách nói · nhờ giải thích"}
+      - {en: "How do you pronounce …? · How do you spell …?", vi: "hỏi phát âm · đánh vần"}
+      - {en: "I don't know. · I can't remember. · I'm not sure.", vi: "khi chưa biết câu trả lời"}
+      - {en: "Next: Review · Basic English (pages 23–25)", vi: "Tiếp theo: ôn tập module Basic English, tr. 23–25"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "What does it mean? What's this called in English?", focus: 0}
+      - {tom: "How do you say it in English? Could you explain it?", focus: 1}
+      - {emma: "How do you pronounce it? How do you spell it?", focus: 2}
+      - {tom: "And if you don't know: I don't know, I can't remember, or I'm not sure.", focus: 3}
+      - {emma: "Next time, it's the review of the Basic English module, on pages twenty-three to twenty-five. Well done, and see you there!", focus: 4, vi: "Lần tới: ôn tập module Basic English, tr. 23–25."}

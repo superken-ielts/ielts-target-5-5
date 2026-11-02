@@ -1,0 +1,309 @@
+# Video Oxford Word Skills Basic · Unit 6 — I can use English language words (sách in tr. 21, Answer key tr. 206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1 theo Answer key. Bài 2: Answer key in đảo câu 4↔5 và 8↔9 (ghi 4 a, 5 from/in, 8 asked, 9 spoke) trong khi
+# nhãn trong sách là 4 a preposition, 5 an indefinite article, 8 an irregular past simple, 9 a regular past simple —
+# video đưa đáp án đúng theo nhãn và nhắc người học chỗ in nhầm.
+# Thêm ngoài sách: bảng động từ có quy tắc / bất quy tắc (sách có danh sách ở tr. 202), chữ viết tắt trong từ điển
+# (n, v, adj…), mẹo IELTS đoán loại từ cần điền, nghe và viết tên loại từ,
+# phần nói về học ngữ pháp (IELTS Part 1 "Learning English"). Chi tiết nhân vật mới: Tom thấy mạo từ khó nhất (tiếng Việt
+# không có a / an / the), học động từ bất quy tắc theo nhóm và bằng Anki, có sách ngữ pháp kèm đáp án; Emma thấy thanh điệu
+# tiếng Việt khó, hồi học tiếng Pháp phải học thuộc danh sách động từ mỗi tuần; từ yêu thích: Emma "cosy", Tom "delicious".
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U06-language-words.yaml
+id: U06-language-words
+activity: U06-words
+title: "Unit 6 · English language words"
+subtitle: "I can use English language words"
+title_vi: "Tên các loại từ: noun, verb, adjective, adverb, preposition, pronoun, article; động từ có quy tắc và bất quy tắc"
+tag: "BASIC ENGLISH · UNIT 6"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 6: English language words. Words like noun, verb and adjective. They help you understand your dictionary, and your teacher!"
+        say: "Welcome to Unit six: English language words. Words like noun, verb and adjective. They help you understand your dictionary, and your teacher!"
+        vi: "Unit 6: tên các loại từ — giúp bạn hiểu từ điển và hiểu thầy cô."
+      - tom: "No countdown again. Pause the video whenever you need to."
+        vi: "Vẫn không đếm ngược: cần thì tự tạm dừng video."
+
+  - kind: bullets
+    chapter: "Câu 1: các loại từ"
+    heading: "An old man walked slowly down the hill."
+    heading_vi: "Một câu (a sentence) có 8 từ (words) — mỗi từ có tên loại từ"
+    items:
+      - {en: "man, hill — nouns", vi: "danh từ: người, vật, nơi chốn"}
+      - {en: "old — an adjective", vi: "tính từ: tả danh từ (an old man)"}
+      - {en: "walked — a verb", vi: "động từ: hành động"}
+      - {en: "slowly — an adverb", vi: "trạng từ: thế nào, khi nào (walked slowly)"}
+      - {en: "down — a preposition · an, the — articles", vi: "giới từ (down, up, in, from) · mạo từ"}
+    lines:
+      - emma: "Look at the picture on page twenty-one. An old man walked slowly down the hill. This is a sentence, with eight words."
+        vi: "Xem tranh tr. 21. Đây là một câu, gồm tám từ."
+      - {tom: "Man and hill are nouns. A noun is a person, a thing, or a place.", focus: 0}
+      - {emma: "Old is an adjective. It tells us more about the man.", focus: 1}
+      - {tom: "Walked is a verb. It's an action.", focus: 2}
+      - {emma: "Slowly is an adverb. How did he walk? Slowly.", focus: 3}
+      - {tom: "Down is a preposition, like up, in and from. And an and the are articles.", say: "Down is a preposition, like up, in and from. And ann and thee are articles.", focus: 4}
+
+  - kind: bullets
+    chapter: "Câu 2: các loại từ"
+    heading: "He spoke to a little girl and two boys. 'Good morning,' he said."
+    heading_vi: "13 từ — đại từ, danh từ số ít / số nhiều, mạo từ, cụm từ"
+    items:
+      - {en: "He — a pronoun", vi: "đại từ, thay cho danh từ: I, you, he, she, it, we, they"}
+      - {en: "a girl — a singular noun (one) · two boys — a plural noun (more than one)", vi: "danh từ số ít · số nhiều"}
+      - {en: "a, an — indefinite articles · the — the definite article", vi: "mạo từ không xác định · mạo từ xác định"}
+      - {en: "'Good morning' — a phrase", vi: "cụm từ: một nhóm từ đi với nhau"}
+    lines:
+      - emma: "Now the second sentence. He spoke to a little girl and two boys. Good morning, he said. That's thirteen words."
+        say: "Now the second sentence. He spoke to a little girl and two boys. Good morning, he said. That's thir-teen words."
+        vi: "Câu thứ hai: mười ba từ."
+      - {tom: "He is a pronoun. We use it in place of a noun: he, the old man.", say: "He is a pronoun. We yooz it in place of a noun: he, the old man.", focus: 0, vi: "He thay cho the old man."}
+      - {emma: "Girl is a singular noun: one girl. Boys is a plural noun: more than one.", focus: 1}
+      - {tom: "A and an are indefinite articles. The is the definite article.", say: "Eigh and ann are indefinite articles. Thee is the definite article.", focus: 2}
+      - {emma: "And Good morning is a phrase: a small group of words.", focus: 3}
+
+  - kind: compare
+    chapter: "Động từ có quy tắc / bất quy tắc"
+    heading: "Regular and irregular verbs"
+    heading_vi: "Past simple (quá khứ đơn) và past participle (quá khứ phân từ, dùng cho thì hiện tại hoàn thành) — danh sách ở tr. 202"
+    items:
+      - title: "Regular: walk → walked"
+        title_vi: "thêm -ed"
+        lines: ["walk → walked → walked", "ask → asked → asked", "play → played → played", "study → studied → studied"]
+      - title: "Irregular: speak → spoke → spoken"
+        title_vi: "phải học thuộc"
+        lines: ["speak → spoke → spoken", "go → went → gone", "write → wrote → written", "have → had → had"]
+    lines:
+      - emma: "Walk is a regular verb. The past simple is walked. Ask, asked. Play, played. Study, studied."
+        focus: 0
+        vi: "Động từ có quy tắc: thêm -ed."
+      - tom: "Speak is an irregular verb. The past simple is spoke, and the past participle is spoken."
+        focus: 1
+        vi: "Động từ bất quy tắc: speak, spoke, spoken."
+      - {emma: "We use the past participle for the present perfect. I have spoken to him.", say: "We yooz the past participle for the present perfect. I have spoken to him.", focus: 1, vi: "Quá khứ phân từ dùng cho thì hiện tại hoàn thành: I have spoken…"}
+      - {tom: "Go, went, gone. Write, wrote, written. Have, had, had.", focus: 1}
+      - {emma: "There's a list of common irregular verbs on page two hundred and two of your book.", focus: 1, vi: "Danh sách động từ bất quy tắc thường gặp ở tr. 202."}
+
+  - kind: bullets
+    chapter: "Từ điển ghi gì?"
+    heading: "In a dictionary · n, v, adj, adv, prep, pron"
+    heading_vi: "Từ điển viết tắt tên loại từ — tra từ mới thì xem nó là loại từ gì"
+    items:
+      - {en: "teacher (n) · child (n), plural children", vi: "n = noun; từ điển ghi cả số nhiều bất quy tắc"}
+      - {en: "speak (v) spoke, spoken", vi: "v = verb; từ điển ghi cả dạng quá khứ bất quy tắc"}
+      - {en: "happy (adj) · quickly (adv)", vi: "adj = adjective · adv = adverb"}
+      - {en: "under (prep) · they (pron)", vi: "prep = preposition · pron = pronoun"}
+    lines:
+      - emma: "Dictionaries use short forms for these words. For example, n means noun, v means verb, and adj means adjective."
+        say: "Dictionaries yooz short forms for these words. For example, en means noun, vee means verb, and eigh dee jay means adjective."
+        focus: 0
+        vi: "Từ điển dùng chữ viết tắt: n = noun, v = verb, adj = adjective."
+      - {tom: "Teacher is a noun. Child is a noun too, and the dictionary shows the plural: children.", focus: 0}
+      - {emma: "Speak is a verb, and the dictionary shows the irregular forms: spoke, spoken.", focus: 1}
+      - {tom: "Happy is an adjective, and quickly is an adverb. Under is a preposition, and they is a pronoun.", focus: 3}
+      - {emma: "So when you look up a new word, check what kind of word it is. Then you know how to use it.", say: "So when you look up a new word, check what kind of word it is. Then you know how to yooz it.", focus: 3, vi: "Tra từ mới thì xem loại từ — biết loại từ mới biết cách dùng."}
+
+  - kind: blanks
+    chapter: "Bài 1: chọn đáp án"
+    heading: "Exercise 1 · Circle the correct answer"
+    heading_vi: "Chọn một trong hai từ trong ngoặc — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "A and an are ___ articles.  (definite / indefinite)", answer: "indefinite"}
+      - {n: 2, q: "Woman is a ___.  (noun / sentence)", answer: "noun"}
+      - {n: 3, q: "Up is a ___.  (preposition / pronoun)", answer: "preposition"}
+      - {n: 4, q: "Speak is ___ verb.  (a regular / an irregular)", answer: "an irregular"}
+      - {n: 5, q: "Spoken is the ___ of speak.  (past simple / past participle)", answer: "past participle"}
+      - {n: 6, q: "Books is ___.  (singular / plural)", answer: "plural"}
+      - {n: 7, q: "Go and do are ___.  (verbs / past simple forms)", answer: "verbs"}
+      - {n: 8, q: "Slowly and quickly are ___.  (adverbs / phrases)", answer: "adverbs"}
+    lines:
+      - emma: "Exercise 1. Choose the correct answer. Pause the video and try."
+        say: "Exercise one. Choose the correct answer. Pause the video and try."
+        vi: "Bài 1: chọn đáp án đúng — tạm dừng video và làm."
+      - {tom: "One. A and an are indefinite articles. Two. Woman is a noun.", say: "One. Eigh and ann are indefinite articles. Two. Woman is a noun.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Up is a preposition. Four. Speak is an irregular verb.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. Spoken is the past participle of speak. Six. Books is plural.", reveal: [5, 6], focus: 5}
+      - {tom: "Seven. Go and do are verbs. Eight. Slowly and quickly are adverbs.", reveal: [7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: tìm từ (câu A, B)"
+    heading: "Exercise 2 · Find the answers for each sentence (1)"
+    heading_vi: "Lưu ý: Answer key tr. 206 in đảo câu 4 ↔ 5 — đáp án đúng theo nhãn trong sách như dưới đây"
+    items:
+      - {n: 1, q: "I have three English lessons every week.  →  a pronoun: ___", answer: "I"}
+      - {n: 2, q: "I have three English lessons every week.  →  a plural noun: ___", answer: "lessons"}
+      - {n: 3, q: "There's a young man from Rome in the class.  →  an adjective: ___", answer: "young"}
+      - {n: 4, q: "There's a young man from Rome in the class.  →  a preposition: ___", answer: "from / in"}
+      - {n: 5, q: "There's a young man from Rome in the class.  →  an indefinite article: ___", answer: "a"}
+      - {n: 6, q: "There's a young man from Rome in the class.  →  a definite article: ___", answer: "the"}
+    lines:
+      - emma: "Exercise 2. Find the words in each sentence. The first sentence is: I have three English lessons every week. Have is the verb. Now find a pronoun, and a plural noun."
+        vi: "Bài 2: tìm từ trong từng câu. Câu đầu: have là động từ; tìm đại từ và danh từ số nhiều."
+      - {tom: "The pronoun is I, and the plural noun is lessons.", reveal: [1, 2], focus: 1}
+      - emma: "The next sentence is: There's a young man from Rome in the class. Find an adjective, a preposition, and two articles. Pause the video and try."
+        focus: 2
+        vi: "Câu tiếp: tìm tính từ, giới từ và hai mạo từ — tạm dừng video và làm."
+      - {tom: "The adjective is young. The prepositions are from and in.", reveal: [3, 4], focus: 3}
+      - {tom: "The indefinite article is a, and the definite article is the.", say: "The indefinite article is eigh, and the definite article is thee.", reveal: [5, 6], focus: 5}
+      - {emma: "Be careful. In the answer key, answers four and five are in the wrong order.", focus: 4, vi: "Cẩn thận: Answer key in đảo đáp án câu 4 và 5."}
+
+  - kind: blanks
+    chapter: "Bài 2: tìm từ (câu C, D)"
+    heading: "Exercise 2 · Find the answers for each sentence (2)"
+    heading_vi: "Lưu ý: Answer key in đảo câu 8 ↔ 9 — spoke là bất quy tắc, asked là có quy tắc"
+    items:
+      - {n: 7, q: "Today, he asked a question, and he spoke quickly.  →  an adverb: ___", answer: "Today / quickly"}
+      - {n: 8, q: "Today, he asked a question, and he spoke quickly.  →  an irregular past simple: ___", answer: "spoke"}
+      - {n: 9, q: "Today, he asked a question, and he spoke quickly.  →  a regular past simple: ___", answer: "asked"}
+      - {n: 10, q: "I think he's in the wrong class.  →  a singular noun: ___", answer: "class"}
+      - {n: 11, q: "I think he's in the wrong class.  →  a sentence: ___", answer: "I think he's in the wrong class."}
+    lines:
+      - emma: "The third sentence is: Today, he asked a question, and he spoke quickly. Find an adverb, an irregular past simple, and a regular past simple."
+        focus: 0
+        vi: "Câu thứ ba: tìm trạng từ, một quá khứ bất quy tắc và một quá khứ có quy tắc."
+      - {tom: "Today and quickly are adverbs. Spoke is irregular, and asked is regular.", reveal: [7, 8, 9], focus: 2}
+      - {emma: "Again, the answer key has eight and nine in the wrong order. Spoke is the irregular one.", focus: 1, vi: "Answer key in đảo câu 8 và 9: spoke mới là bất quy tắc."}
+      - emma: "The last sentence is: I think he's in the wrong class. Find a singular noun, and a sentence."
+        focus: 3
+      - {tom: "Class is a singular noun. And the sentence is all of it: I think he's in the wrong class.", reveal: [10, 11], focus: 4}
+
+  - kind: blanks
+    chapter: "Mẹo IELTS: đoán loại từ"
+    heading: "IELTS tip · What kind of word do you need?"
+    heading_vi: "Bài điền từ trong Listening / Reading: đọc câu trước, đoán loại từ cần điền rồi mới nghe / đọc"
+    items:
+      - {n: 1, q: "The museum opens at nine in the ___.", answer: "a noun (morning)"}
+      - {n: 2, q: "It was a very ___ day.", answer: "an adjective (hot, busy…)"}
+      - {n: 3, q: "Please write your name ___.", answer: "an adverb (clearly)"}
+      - {n: 4, q: "We usually ___ to the beach in summer.", answer: "a verb (go, drive…)"}
+      - {n: 5, q: "The keys are ___ the table.", answer: "a preposition (on, under…)"}
+    lines:
+      - emma: "Here's an IELTS tip. In the listening and reading tests, you often fill in gaps. Before you listen, ask: what kind of word do I need? Pause the video, and decide for each gap."
+        say: "Here's an eye-elts tip. In the listening and reading tests, you often fill in gaps. Before you listen, ask: what kind of word do I need? Pause the video, and decide for each gap."
+        vi: "Mẹo IELTS: trước khi nghe, đoán chỗ trống cần loại từ gì — tạm dừng video và đoán từng câu."
+      - {tom: "One. In the morning: we need a noun. Two. A very hot day: an adjective.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Write your name clearly: an adverb. Four. We usually go: a verb.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. On the table, or under the table: a preposition.", reveal: 5, focus: 4}
+      - {emma: "When you know the kind of word, it's much easier to hear the answer.", focus: 4, vi: "Biết trước loại từ thì nghe ra đáp án dễ hơn nhiều."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · What kind of word is it?"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả tên loại từ"
+    items:
+      - {n: 1, q: "Happy is an ___.", answer: "adjective"}
+      - {n: 2, q: "Quickly is an ___.", answer: "adverb"}
+      - {n: 3, q: "Under is a ___.", answer: "preposition"}
+      - {n: 4, q: "They is a ___.", answer: "pronoun"}
+      - {n: 5, q: "Children is a ___ noun.", answer: "plural"}
+      - {n: 6, q: "Went is the past ___ of go.", answer: "simple"}
+    lines:
+      - emma: "Now, listen and write. What kind of word is it? Pause the video after each sentence, and write the missing word."
+        vi: "Nghe và viết: từ này thuộc loại từ gì? Tạm dừng sau mỗi câu và viết."
+      - {emma: "Number one. Happy is an adjective.", focus: 0}
+      - {emma: "Number two. Quickly is an adverb.", focus: 1}
+      - {emma: "Number three. Under is a preposition.", focus: 2}
+      - {emma: "Number four. They is a pronoun.", focus: 3}
+      - {emma: "Number five. Children is a plural noun. One child, two children.", focus: 4}
+      - {emma: "Number six. Went is the past simple of go.", focus: 5}
+      - {tom: "Adjective: A, D, J, E, C, T, I, V, E. Adverb. Preposition.", say: "Adjective: eigh, dee, jay, ee, see, tee, eye, vee, ee. Adverb. Preposition.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Pronoun. Plural. And simple.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: học ngữ pháp"
+    heading: "Speaking 1 · Learning English: grammar and words"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Is English grammar difficult for you?"
+        a: "Some parts are. Verbs are OK, but articles are really difficult, because we don't have a, an or the in Vietnamese."
+        ask: emma
+        by: tom
+        phrases: ["Some parts are.", "really difficult", "because we don't have…"]
+      - q: "What's difficult about Vietnamese for you?"
+        a: "The tones! One word can have six different meanings. But Vietnamese verbs are easy. They never change!"
+        ask: tom
+        by: emma
+        phrases: ["The tones!", "different meanings", "They never change"]
+      - q: "How do you learn irregular verbs?"
+        a: "I say them out loud in groups: go, went, gone; do, did, done. And I test myself with Anki every evening."
+        ask: emma
+        by: tom
+        phrases: ["out loud", "in groups", "I test myself"]
+      - q: "Did you like grammar lessons at school?"
+        a: "Not really. My French teacher gave us a long list of verbs every week. But now I'm a teacher, I think grammar is interesting!"
+        ask: tom
+        by: emma
+        phrases: ["Not really.", "a long list of…", "But now…"]
+      - q: "Have you got a grammar book?"
+        a: "Yes, I've got one with the answers at the back, so I can check my work. It's like this book!"
+        ask: emma
+        by: tom
+        phrases: ["I've got one", "at the back", "check my work"]
+      - q: "What's your favourite English word?"
+        a: "Cosy. It's an adjective. It means warm and comfortable, like a small café on a rainy day."
+        ask: tom
+        by: emma
+        phrases: ["It's an adjective.", "It means…", "like…"]
+      - q: "And yours, Tom?"
+        a: "Delicious! It's an adjective too. I use it every time I talk about Vietnamese food."
+        ask: emma
+        by: tom
+        phrases: ["…too", "every time", "talk about…"]
+    lines:
+      - {emma: "Let's talk about learning English. Is English grammar difficult for you, Tom?", focus: 0}
+      - {tom: "Some parts are. Verbs are OK, but articles are really difficult, because we don't have a, an or the in Vietnamese.", say: "Some parts are. Verbs are OK, but articles are really difficult, because we don't have eigh, ann, or thee, in Vietnamese.", reveal: 0, vi: "Có phần khó: động từ thì ổn, mạo từ thì rất khó vì tiếng Việt không có a, an, the."}
+      - {tom: "What's difficult about Vietnamese for you?", focus: 1}
+      - {emma: "The tones! One word can have six different meanings. But Vietnamese verbs are easy. They never change!", reveal: 1, vi: "Thanh điệu! Một từ có thể có sáu nghĩa khác nhau. Nhưng động từ tiếng Việt dễ: không bao giờ đổi dạng!"}
+      - {emma: "How do you learn irregular verbs?", focus: 2}
+      - {tom: "I say them out loud in groups: go, went, gone; do, did, done. And I test myself with Anki every evening.", reveal: 2, vi: "Đọc to theo nhóm: go – went – gone; do – did – done. Và tự kiểm tra bằng Anki mỗi tối."}
+      - {tom: "Did you like grammar lessons at school?", focus: 3}
+      - {emma: "Not really. My French teacher gave us a long list of verbs every week. But now I'm a teacher, I think grammar is interesting!", reveal: 3, vi: "Không hẳn: thầy dạy tiếng Pháp tuần nào cũng giao một danh sách động từ dài. Giờ làm giáo viên lại thấy ngữ pháp thú vị!"}
+      - {emma: "Have you got a grammar book?", focus: 4}
+      - {tom: "Yes, I've got one with the answers at the back, so I can check my work. It's like this book!", reveal: 4, vi: "Có, cuốn có đáp án ở cuối sách để tự chấm — giống cuốn này!"}
+      - {tom: "What's your favourite English word?", focus: 5}
+      - {emma: "Cosy. It's an adjective. It means warm and comfortable, like a small café on a rainy day.", reveal: 5, vi: "Cosy — tính từ: ấm cúng, dễ chịu, như một quán cà phê nhỏ ngày mưa."}
+      - {emma: "And yours, Tom?", focus: 6}
+      - {tom: "Delicious! It's an adjective too. I use it every time I talk about Vietnamese food.", say: "Delicious! It's an adjective too. I yooz it every time I talk about Vietnamese food.", reveal: 6, vi: "Delicious (ngon) — cũng là tính từ; lần nào nói về món Việt cũng dùng."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: you and English"
+    heading_vi: "Trả lời 2–3 câu; câu 3 dùng ba động từ ở quá khứ đơn"
+    items:
+      - {q: "Is English grammar difficult for you? Which part?", hint: "… is difficult / easy for me because …"}
+      - {q: "How do you learn new words and irregular verbs?", hint: "I say them out loud · I write them in … · I test myself"}
+      - {q: "What did you do this morning? Use three verbs in the past simple.", hint: "I got up at … · I had … · I went …"}
+      - {q: "What's your favourite English word? What kind of word is it?", hint: "My favourite word is … It's a noun / an adjective …"}
+      - {q: "Did you like grammar lessons at school? Why or why not?", hint: "Yes, I did, because … / Not really, because …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Is English grammar difficult for you? Which part?", focus: 0, pause: 0.5}
+      - {emma: "How do you learn new words and irregular verbs?", focus: 1, pause: 0.5}
+      - {emma: "What did you do this morning? Use three verbs in the past simple.", say: "What did you do this morning? Yooz three verbs in the past simple.", focus: 2, pause: 0.5}
+      - {emma: "What's your favourite English word? What kind of word is it?", focus: 3, pause: 0.5}
+      - {emma: "Did you like grammar lessons at school? Why or why not?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi lấy một câu bất kỳ trong sách, gọi tên loại của từng từ"
+    items:
+      - {en: "noun · verb · adjective · adverb · preposition · pronoun", vi: "danh từ · động từ · tính từ · trạng từ · giới từ · đại từ"}
+      - {en: "a, an — indefinite articles · the — the definite article", vi: "mạo từ"}
+      - {en: "singular (one) · plural (more than one) · a phrase · a sentence", vi: "số ít · số nhiều · cụm từ · câu"}
+      - {en: "regular: walk → walked · irregular: speak → spoke → spoken", vi: "có quy tắc · bất quy tắc (tr. 202)"}
+      - {en: "Next: Unit 7 · Questions about language", vi: "Tiếp theo: Unit 7 · hỏi về từ ngữ (What does … mean?)"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Noun, verb, adjective, adverb, preposition, pronoun.", focus: 0}
+      - {tom: "A and an are indefinite articles, and the is the definite article.", say: "Eigh and ann are indefinite articles, and thee is the definite article.", focus: 1}
+      - {emma: "Singular means one, and plural means more than one.", focus: 2}
+      - {tom: "Walk, walked is regular. Speak, spoke, spoken is irregular.", focus: 3}
+      - {emma: "Now take any sentence in your book, and say what kind of word each word is. See you in Unit 7!", say: "Now take any sentence in your book, and say what kind of word each word is. See you in Unit seven!", focus: 4}

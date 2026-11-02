@@ -5,6 +5,140 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 26 — 02/11/2026: Oxford Word Skills Basic trong tab Sách, 7 video Unit 1–7
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 25 (`5f8359c`). Người học đã đưa file sách lên `main`
+(`cbfc72c`, chỉ có PDF quét). Đợt này đẩy lên nhánh; lên `main` khi người học đồng ý (đợt 24–25 có yêu cầu riêng).
+
+### Yêu cầu
+
+1. Rà cuốn *Oxford Word Skills Basic* vừa thêm.
+2. Đưa vào menu tab Sách.
+3. Học bằng video 7–10 phút, không đếm ngược; mỗi video có 1–2 bài luyện nói theo chủ đề từ vựng.
+
+### Đã làm
+
+**Rà sách** (file 09 mục 1):
+- 80 unit 1–3 trang trong 11 module, mỗi module có một bài Review;
+- Answer key đủ mọi bài, có câu trả lời mẫu cho ABOUT YOU;
+- Word list có phiên âm;
+- không có CD-ROM nên không có audio.
+
+Chủ đề trùng phần lớn IELTS Speaking Part 1 và các tình huống General Training. Kết luận: dùng làm **sách từ vựng học
+song song**, mỗi ngày một unit, không thay giáo trình chính.
+
+**Lộ trình trong tab Sách:** `book.yaml` mẫu `lessons-v1`, sinh từ trang Contents.
+- 92 phiên 30 phút: Starter unit, 80 unit, 11 Review; 19 tuần ở nhịp 5 phiên/tuần.
+- Mỗi phiên mở đúng trang sách, nút thứ hai mở trang Answer key của unit. Starter unit mở thêm Vocabulary building và
+  Word list; Unit 72 mở thêm bảng Common irregular verbs.
+- Bản quét 254 trang thiếu hai trang trắng (tr. in 204, 236), nên cùng một PDF khai ba lần:
+  - `course-book`: trang in + 1;
+  - `answer-key`: bằng trang in;
+  - `word-list`: trang in − 1.
+- Độ lệch dò bằng OCR dải chân trang (`rapidocr-onnxruntime`): đọc được số trang in ở 244/254 trang, soát thêm bằng
+  mắt 11 trang Review và 12 trang đầu unit.
+- Trang Answer key của từng unit dò bằng OCR tiêu đề "Unit N" trên tr. 205–224.
+- Thẻ sách trong `books/catalog.json` đứng sau English Unlimited A2, trước IELTS Target 5.0. Ghi chú nhóm IELTS nói cách
+  học song song.
+
+**Mẫu `lessons-v1`:** tên bước dùng được `{title}`, `{no}`… như ghi chú (hàm chung `_fill`). Nhờ vậy mỗi phiên mang tên
+chủ đề, ví dụ "Unit 1 · Numbers · từ vựng, bài tập, nói" thay vì 80 phiên cùng tên "từ vựng". Các sách cũ không dùng
+chỗ thay trong tên bước nên gói của chúng không đổi.
+
+**7 video Unit 1–7** (module Basic English, 51:08), khuôn ở file 09 mục 5. Mỗi video theo cùng thứ tự:
+1. từ vựng của trang sách;
+2. bài trong sách, đáp án theo Answer key;
+3. phần thêm ngoài sách;
+4. "Nghe và viết";
+5. Nói 1: Tom và Emma hỏi đáp;
+6. Nói 2: đến lượt bạn, tự tạm dừng;
+7. tổng kết.
+
+Không có `wait` / `echo`. Muốn người học làm bài thì Emma nhắc "Pause the video and try".
+
+| Video | Dài | Thêm ngoài sách | Nói 1 |
+|---|---|---|---|
+| `U01-numbers` | 7:26 | -teen / -ty, số lớn, số trong đời sống | Những con số quanh bạn (8 cặp) |
+| `U02-time` | 7:14 | buổi trong ngày, nearly / just after, nói giờ hai cách | Giờ giấc ở nước bạn (10) |
+| `U03-days-dates` | 7:10 | đọc và viết ngày tháng kiểu Anh / Mỹ | Tết, 30/4, 2/9, sinh nhật (9) |
+| `U04-countries` | 7:43 | the British / Italians, Britain và the UK, trọng âm -ese / -ian | Quê hương, ngôn ngữ, đồng nghiệp 5 nước của Emma (8) |
+| `U05-classroom` | 7:10 | a piece of paper, I've got, borrow / lend, đoán đồ vật "It's a thing you use to…" | IELTS Part 1 "Bags", "Pens and writing" (9) |
+| `U06-language-words` | 7:18 | động từ có quy tắc / bất quy tắc, chữ viết tắt trong từ điển, mẹo IELTS đoán loại từ cần điền | Học ngữ pháp và từ (7) |
+| `U07-questions-language` | 7:07 | I don't know / can't remember / not sure, tự đặt câu hỏi, chữ cái dễ nhầm, đánh vần tên | Hỏi về từ ngữ (8) |
+
+Lúc làm video, gặp và đã xử lý:
+- **Answer key in nhầm** Unit 6 bài 2: đảo câu 4↔5 và 8↔9 so với nhãn trong sách. Video đưa đáp án đúng và nhắc người
+  học; file 09 mục 3.3 ghi lại.
+- **Video ngắn:** bản dựng đầu Unit 1 dài 6:36. Ba unit một trang (5, 6, 7) ước lượng chỉ 5:45–6:21. Đã thêm "Nghe và
+  viết" và các cảnh có ích cho IELTS (không kéo dài câu thoại); mọi video giờ dài 7–10 phút.
+- **Câu "Nghe và viết" ở ngôi thứ nhất mâu thuẫn hồ sơ nhân vật**, ví dụ Emma đọc "My birthday is on the
+  twenty-second of June" trong khi cùng video đó Emma sinh 15/9. Đã viết lại thành câu trung tính ở Unit 1–4 rồi dựng
+  lại; quy ước ghi ở file 09 mục 5.3.
+- **Bố cục:**
+  - thẻ `mcq` 9 câu bị cắt chữ → đổi sang `blanks`;
+  - phông không có ✓ ✗;
+  - `notice___` nhìn như hai từ → đáp án ghi cả từ ghép.
+- **Cách đọc** (bảng `say` ở file 09 mục 5.5):
+  - chữ cái khi đánh vần (`eigh`, `yoo`…);
+  - mạo từ khi nói về chính từ đó (`eigh`, `ann`, `thee`);
+  - `eigh-teen`;
+  - tên tiếng Việt có dấu (`kah feh suh dah`, `fuh`, `bahn mee`);
+  - `Checks`.
+- **Lệnh `phonemes` đánh ⚠ động từ "close"** (Kokoro đọc /kloʊs/ như tính từ → `cloze`). Lần soát lại thấy lỗi này trong
+  `U03-exam-listening` của IELTS Target 5.0 ("had to close one of the offices", Track 37): đã sửa và dựng lại (6:47 → 6:46).
+
+- **Hàng đợi dựng bị ngắt:** lệnh chạy nền của agent chỉ chạy 30 phút, nên bị ngắt khi đang dựng Unit 6–7. Đã dựng
+  lại cả hàng bằng một lệnh thời hạn 2 giờ (file 09 mục 5.6).
+
+Chi tiết nhân vật mới ghi ở đầu từng kịch bản và file 09 mục 5.7; file 06 mục 9.4 trỏ sang.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_oxford_word_skills_basic/book.yaml` | Hồ sơ lộ trình (mẫu `lessons-v1`): 12 section, 92 mục, ba lần khai PDF, trang Answer key từng unit |
+| `books/book_oxford_word_skills_basic/book.json`, `plan.json`, `report.md` | Kết quả nhập sách |
+| `books/book_oxford_word_skills_basic/web/` | 122 đoạn PDF cho app (course-book 94, answer-key 27, word-list 1) |
+| `books/book_oxford_word_skills_basic/work/` | `scan.json`, `chunks.json`, `ocr-pages.json`, `ocr-answer-key.json` |
+| `books/book_oxford_word_skills_basic/lessons/U01-numbers.yaml` … `U07-questions-language.yaml` (+ `.mp4`), `lessons.json` | 7 kịch bản và video |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đánh giá sách, lộ trình, dò trang, lỗi Answer key, khuôn video 7–10 phút, bảng `say`, độ phủ, chi tiết nhân vật, kế hoạch module People |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/book_ingest/lessons.py` | Tên bước có chỗ thay (`_fill` dùng chung với ghi chú); lỗi ghi rõ "tên bước" hay "ghi chú" |
+| `agents/lesson_video/phonemes.py` | Bảng ⚠: động từ "close" → `cloze` |
+| `books/catalog.json` | Thẻ Oxford Word Skills Basic; ghi chú nhóm IELTS |
+| `books/ielts_target_5_0/lessons/U03-exam-listening.yaml` (+ `.mp4`), `lessons.json` | "close one of the offices" → `say: cloze`; dựng lại |
+| `agents/tests/test_lessons_template.py` | Tên bước dùng trường của mục; tên bước có chỗ thay sai bị từ chối; gói Oxford Word Skills Basic hợp lệ và chạy lại ra y hệt |
+| `agents/tests/test_lesson_video.py` | `phonemes` bắt "close"; hồi quy "video khớp `lessons.json`" thêm sách này; mỗi video 7–10 phút, không đếm ngược, có `qa` và `practice` tự tạm dừng |
+| `tests/web/book.e2e.mjs` | Thứ tự menu Sách (4 thẻ đầu); bước mới cho Oxford Word Skills Basic |
+| `web/src/book/ui.js` | Thẻ unit một trang ghi "Trang 21" thay vì "Trang 21–21" (sách này có nhiều unit một trang) |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng `say`: động từ "close"; mục 9.4 trỏ sang file 09 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-58 (xong), P2-59 (video Unit 8 trở đi) |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Trỏ tới file 09 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic 92 phiên, 7 video; IELTS Target 5.0 120 phiên, 48 video |
+| `cd agents && python -m pytest -q` | 139 passed, 5 skipped. 5 test bỏ qua là video tiếng Nhật, cần `misaki[ja]`. Test mới: tên bước dùng trường của mục, tên bước có chỗ thay sai, gói sách thật hợp lệ và chạy lại ra y hệt, 7 video khớp `lessons.json`, mỗi video 7–10 phút không đếm ngược và có `qa` + `practice`, `phonemes` bắt "close" |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 18/18 bước OK. Menu Sách: A1, A2, Oxford Word Skills Basic, IELTS Target 5.0. Thẻ sách: 92 phiên × 30 phút, 7 video. Unit 1–7 mỗi unit một nút video 7–10 phút. Thẻ unit một trang ghi "Trang 21". Phiên Unit 6 mở video `U06-language-words`, trang in 21 qua đoạn PDF 22 và nút Answer key tr. 206 |
+| `python -m lesson_video check` / `phonemes` | 7 kịch bản hợp lệ; 1 ⚠ là báo nhầm ("close friends", tính từ), đã ghi chú trong kịch bản |
+
+### Còn treo
+
+- Video Oxford Word Skills Basic từ Unit 8 (P2-59), gợi ý module People ở file 09 mục 5.8.
+- Các mục còn treo của đợt 25 (P2-57: luyện nói IELTS Unit 4 trở đi; đếm ngược ở Unit 1 của IELTS).
+
+---
+
 ## Đợt 25 — 02/11/2026: 4 video luyện nói thêm Unit 3, bỏ đếm ngược ở "Đến lượt bạn" của Unit 3
 
 Nhánh `claude/cool-archimedes-xalg78`. Đợt 24 đã đẩy lên `main` tại `f11b46d` trước khi làm đợt này; xong đợt này cũng

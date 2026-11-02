@@ -119,7 +119,7 @@ Bảng in bằng lệnh `coverage` sau đợt 25:
 | Writing | sách tr. 41–42 | `U03-writing-1` — Writing 1: register | 4:10 | 7 |
 | Writing | sách tr. 41–42 | `U03-writing-2` — Writing 2: a letter of application | 5:40 | 8 |
 | Consolidation | sách tr. 43 | `U03-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 4:43 | 7 |
-| Exam practice | sách tr. 44–45 | `U03-exam-listening` — Exam practice: Listening | 6:47 | 9 |
+| Exam practice | sách tr. 44–45 | `U03-exam-listening` — Exam practice: Listening | 6:46 | 9 |
 | Exam practice | sách tr. 44–45 | `U03-exam-reading` — Exam practice: Reading | 4:13 | 8 |
 | Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
 
@@ -295,6 +295,7 @@ dùng cho bài nói mẫu trong thi thử.
 | band 5.5, six a.m. | `band five point five`, `six in the morning` | Số và giờ đọc theo kiểu nói |
 | "I read everything on the website" (quá khứ) | `red` | Như dòng "read (quá khứ)" ở trên (đợt 25) |
 | lives (danh từ: "so much of our lives") | **không** viết `say` | Kokoro đọc đúng /laɪvz/; lệnh `phonemes` vẫn đánh ⚠ vì không phân biệt danh từ với động từ — ghi chú trong kịch bản để người sau không "sửa" thành `livz` |
+| close (động từ: "they had to close one of the offices") | `cloze` | Kokoro đọc /kloʊs/ như tính từ. Từ đợt 26 lệnh `phonemes` đánh ⚠ (bảng KNOWN); đã sửa `U03-exam-listening` (Track 37) và dựng lại. Tính từ ("close friends") đọc đúng, bỏ qua ⚠ |
 
 Những lỗi đã gặp và cách tránh:
 
@@ -448,6 +449,10 @@ cà phê, mẹ có cửa hàng hoa, chị là y tá ở Hà Nội — trước l
 1D (sinh viên kinh doanh, muốn làm marketing — trước là kỹ sư).
 
 Thêm chi tiết mới thì ghi vào đầu kịch bản video 1 của unit đó và cập nhật danh sách này.
+
+Tom và Emma cũng dẫn các video *Oxford Word Skills Basic* (đợt 26). Chi tiết mới trong các video đó (số yêu thích,
+sinh nhật, túi xách, cách học từ, đồng nghiệp của Emma…) ghi ở [file 09](09-oxford-word-skills-basic.md) mục 5.7; làm video
+mới ở cả hai sách thì soát cả hai danh sách.
 
 ### 9.5 Chủ đề và thẻ đề đã dùng (tránh lặp)
 

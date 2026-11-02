@@ -156,6 +156,7 @@ def test_flite_two_voices():
 
 GENKI = ROOT / "books" / "Genki"
 EU_A2 = ROOT / "books" / "book_english_unlimited_a2_elemetary"
+OWS = ROOT / "books" / "book_oxford_word_skills_basic"
 
 
 @pytest.mark.parametrize("bdir", [
@@ -165,7 +166,9 @@ EU_A2 = ROOT / "books" / "book_english_unlimited_a2_elemetary"
                                                  reason="chưa có video N5 hoặc chưa cài misaki[ja]")),
     pytest.param(EU_A2, marks=pytest.mark.skipif(not (EU_A2 / "lessons" / "lessons.json").exists(),
                                                  reason="chưa có video Giai đoạn 0")),
-], ids=["ielts", "genki", "eu-a2"])
+    pytest.param(OWS, marks=pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(),
+                                               reason="chưa có video Oxford Word Skills Basic")),
+], ids=["ielts", "genki", "eu-a2", "ows"])
 def test_committed_lessons_match_manifest(bdir):
     """Kịch bản đã commit hợp lệ, khớp lessons.json và file video có thật (hồi quy trên sách thật)."""
     data = json.loads((bdir / "lessons" / "lessons.json").read_text(encoding="utf-8"))
@@ -456,6 +459,24 @@ def test_your_turn_has_no_countdown_and_units_have_speaking_practice():
             assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), vid
 
 
+@pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")
+def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
+    """Người học yêu cầu (đợt 26): mỗi unit Oxford Word Skills Basic một video 7–10 phút, không đếm ngược (không `wait` /
+    `echo`, người học tự tạm dừng), có 1–2 phần nói theo chủ đề: Tom và Emma hỏi đáp (`qa`) và "Đến lượt bạn"
+    (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5."""
+    built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    scripts = sorted((OWS / "lessons").glob("U*.yaml"))
+    assert [p.name[:3] for p in scripts][:7] == [f"U0{n}" for n in range(1, 8)]     # module Basic English đủ 7 unit
+    for path in scripts:
+        lesson = sc.load(path)
+        assert lesson.activity == f"{lesson.id[:3]}-words", lesson.id
+        assert 7 * 60 <= built[lesson.id]["duration"] <= 10 * 60, (lesson.id, built[lesson.id]["duration"])
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
+        kinds = [s.kind for s in lesson.scenes]
+        assert "qa" in kinds and "practice" in kinds, lesson.id
+        assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), lesson.id
+
+
 SELF_PACED = {
     "id": "T-6", "activity": "U01-speaking-vocab", "title": "Unit 2", "subtitle": "Speaking 1", "tag": "UNIT 2",
     "speakers": LESSON["speakers"],
@@ -693,11 +714,15 @@ def test_phoneme_review_flags_known_misreadings():
         {"b": "My mother lives in Hue.", "say": "My mother livz in Whey."},  # đã sửa bằng `say`
         {"b": "Hello there."},                                              # không có gì cần soát
         {"a": "Room 12, please."},                                          # số
+        {"b": "When do shops close?"},                                      # close (động từ) bị đọc /kloʊs/ → ⚠ (đợt 26)
     ]}]
     lesson = sc.Lesson.model_validate(data)
     fake = {"Use these words.": "jˈuːs ðiːz wˈɜːdz.", "Can I use your phone?": "kæn aɪ jˈuːz jʊɹ fˈoʊn?",
-            "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz."}
+            "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz.",
+            "When do shops close?": "wˌɛn dˈuː ʃˈɑːps klˈoʊs?"}
     rows = list(ph.review(lesson, lambda text, lang: fake[text]))
-    assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please."]
-    assert [bool(r.warnings) for r in rows] == [True, False, False, False] and "yooz" in rows[0].warnings[0]
-    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 5
+    assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please.",
+                                      "When do shops close?"]
+    assert [bool(r.warnings) for r in rows] == [True, False, False, False, True] and "yooz" in rows[0].warnings[0]
+    assert "cloze" in rows[4].warnings[0]
+    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 6

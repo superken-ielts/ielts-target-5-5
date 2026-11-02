@@ -19,6 +19,7 @@ KNOWN = [
     (re.compile(r"\buses?\b", re.I), "jˈuːs", "use (động từ) đọc /juːs/ như danh từ → say: yooz, yoozes"),
     (re.compile(r"\blives?\b", re.I), "lˈaɪv", "live, lives (động từ) đọc /laɪv/ → say: liv, livz"),
     (re.compile(r"\breads?\b", re.I), "ɹˈɛd", "read (hiện tại) đọc /rɛd/ như quá khứ → say: reed"),
+    (re.compile(r"\bcloses?\b", re.I), "klˈoʊs", "close (động từ: đóng cửa) đọc /kloʊs/ như tính từ → say: cloze, clozes"),
 ]
 HOMOGRAPHS = {"live", "lives", "read", "use", "uses", "close", "record", "present", "minute", "wind", "tear", "lead",
               "object", "content", "desert", "row", "bow", "bows", "wound"}

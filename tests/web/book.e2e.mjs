@@ -57,9 +57,10 @@ try{
     assert.match(lib, /Khoảng 4–5,5 tháng/);
     assert.match(lib, /Cambridge IELTS 20 General Training/);          // sách trong lộ trình chưa nhập
     assert.match(lib, /Chưa nhập vào app/);
-    // Giai đoạn 0 đứng trước IELTS Target 5.0 trong nhóm IELTS: A1 chưa có sách, A2 đã nhập
+    // Giai đoạn 0 đứng trước IELTS Target 5.0 trong nhóm IELTS: A1 chưa có sách, A2 đã nhập; sách từ vựng học song song
+    // (Oxford Word Skills Basic, đợt 26) đứng ngay trước IELTS Target 5.0
     const titles = await page.locator("#p-book .bk-lib h3").allTextContents();
-    assert.deepEqual(titles.slice(0, 3), ["English Unlimited A1 Starter", "English Unlimited A2 Elementary", "IELTS Target 5.0"]);
+    assert.deepEqual(titles.slice(0, 4), ["English Unlimited A1 Starter", "English Unlimited A2 Elementary", "Oxford Word Skills Basic", "IELTS Target 5.0"]);
     assert.match(await page.locator("#p-book .bk-lib").first().textContent(), /Chưa nhập vào app/);
   });
 
@@ -413,6 +414,48 @@ try{
     await act.locator(".bk-refs .btn-primary").click();       // PDF trang 51 là trang 49 quét trùng: trang in 50 = PDF 52
     await chunk;
     await page.waitForFunction(() => /Trang 50 trong sách/.test(document.querySelector(".bk-vfoot").textContent), null, { timeout: 30000 });
+    await page.click(".bk-vbar button:last-child");
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
+  await step("Oxford Word Skills Basic: 92 phiên 30 phút; Unit 1–7 mỗi unit một video 7–10 phút; phiên Unit 6 mở trang sách và Answer key", async () => {
+    await page.click('nav button[data-go="book"]');
+    await page.waitForSelector("#p-book .bk-lib");
+    const card = page.locator("#p-book .bk-lib", { hasText: "Oxford Word Skills Basic" });
+    const text = await card.textContent();
+    assert.match(text, /Elementary – Pre-intermediate · CEFR A1 → A2/);
+    assert.match(text, /81 unit · 11 test · 7 video bài giảng/);        // sách không kèm audio (thiếu CD-ROM)
+    assert.match(text, /92 phiên × 30 phút/);
+    await card.locator(".btn-primary").click();
+    await page.waitForSelector("#p-book .bk-next");
+    assert.equal(await page.locator("#p-book .bk-unit").count(), 92);   // Starter unit + 80 unit + 11 Review
+    assert.equal(await page.locator("#p-book .bk-row").count(), 92);
+    // file 09 mục 5: mỗi unit một video 7–10 phút (không đếm ngược, có phần nói), gắn vào phiên duy nhất của unit
+    const units = ["Unit 1 · Numbers", "Unit 2 · The time", "Unit 3 · Days and dates", "Unit 4 · Countries and nationalities",
+                   "Unit 5 · Classroom vocabulary", "Unit 6 · English language words", "Unit 7 · Questions about language"];
+    for(const unit of units){
+      const got = await page.locator("#p-book .bk-unit", { hasText: unit }).locator(".bk-vids button").allTextContents();
+      assert.equal(got.length, 1, unit);
+      const m = got[0].match(/^▶ I can .* · (\d+):\d\d$/);
+      assert.ok(m && +m[1] >= 7 && +m[1] <= 10, unit + ": " + got[0]);
+    }
+    const u6 = page.locator("#p-book .bk-unit", { hasText: "Unit 6 · English language words" });
+    assert.match(await u6.textContent(), /Trang 21 · 1 phiên/);         // unit một trang: không ghi "Trang 21–21"
+    assert.match(await page.locator("#p-book .bk-unit", { hasText: "Unit 4 · Countries" }).textContent(), /Trang 18–19 · 1 phiên/);
+    await u6.locator(".bk-vids button").click();
+    await page.waitForSelector("#p-book .bk-video");
+    const vsrc = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(vsrc, ["U06-language-words.mp4"]);
+    const act = page.locator("#p-book .bk-act").first();
+    assert.match(await act.textContent(), /English language words · từ vựng, bài tập, nói/);   // tên phiên mang chủ đề unit
+    assert.match(await act.textContent(), /không đếm ngược/);
+    assert.deepEqual(await act.locator(".bk-refs button").allTextContents(), ["Mở trang 21", "Answer key tr. 206"]);
+    assert.equal(await act.locator(".bk-tracks button").count(), 0);
+    const chunk = page.waitForResponse(r => /\/web\/course-book-p0022-0022\.pdf$/.test(r.url()) && r.status() < 300);
+    await act.locator(".bk-refs .btn-primary").click();       // bản quét thiếu trang trắng: trang in 21 = PDF 22
+    await chunk;
+    await page.waitForFunction(() => /Trang 21 trong sách/.test(document.querySelector(".bk-vfoot").textContent), null, { timeout: 30000 });
     await page.click(".bk-vbar button:last-child");
     await page.click("#p-book .reader-bar button");
     await page.waitForSelector("#p-book .bk-next");

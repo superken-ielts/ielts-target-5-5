@@ -71,7 +71,9 @@ scenes:
       - {mai: "So, Simon, I hear you're working from home, too, these days."}
       - {tom: "Yeah, that's right. Well, I go into the office once a week, but I'm at home most of the time."}
       - {mai: "Are you enjoying it?"}
-      - {tom: "Well, there's good and bad, you know how it is. I didn't really choose to start working from home, and the rest of the family are not very happy about it. I'm always telling them to be quiet. The company decided that they had to close one of the offices. About twenty people had no office, and there wasn't enough space in the main office for twenty more people. So, they decided some of us would work at home.", focus: 0}
+      - tom: "Well, there's good and bad, you know how it is. I didn't really choose to start working from home, and the rest of the family are not very happy about it. I'm always telling them to be quiet. The company decided that they had to close one of the offices. About twenty people had no office, and there wasn't enough space in the main office for twenty more people. So, they decided some of us would work at home."
+        say: "Well, there's good and bad, you know how it is. I didn't really choose to start working from home, and the rest of the family are not very happy about it. I'm always telling them to be quiet. The company decided that they had to cloze one of the offices. About twenty people had no office, and there wasn't enough space in the main office for twenty more people. So, they decided some of us would work at home."
+        focus: 0
       - {wait: 5, note: "Choose a, b or c for 1 and 2", vi: "Chọn đáp án câu 1–2."}
 
   - kind: mcq

@@ -1,0 +1,325 @@
+# Video Oxford Word Skills Basic · Unit 2 — I can tell the time (sách in tr. 15, Answer key tr. 205).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói).
+# Đáp án bài 1, 2, 4 theo Answer key; bài 5 (ABOUT YOUR COUNTRY): câu của Emma theo "Answers from a British person"
+# trong Answer key, câu của Tom tự viết về Việt Nam (giờ ngân hàng, cửa hàng, quán cà phê nói chung, có "about").
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U02-time.yaml
+id: U02-time
+activity: U02-words
+title: "Unit 2 · The time"
+subtitle: "I can tell the time"
+title_vi: "Giờ giấc — hỏi và nói giờ, past / to, quarter / half, a.m. / p.m., in the morning, midday, nearly, just after"
+tag: "BASIC ENGLISH · UNIT 2"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 2: the time. After this video, you can ask the time, and tell the time in two different ways."
+        say: "Welcome to Unit two: the time. After this video, you can ask the time, and tell the time in two different ways."
+        vi: "Unit 2: hỏi giờ và nói giờ theo hai cách."
+      - tom: "No countdown again. When Emma asks you something, pause the video and answer. Then listen to us."
+        vi: "Không có đếm ngược: Emma hỏi thì tự tạm dừng video và trả lời, rồi nghe tiếp."
+
+  - kind: bullets
+    chapter: "Hỏi giờ, nói giờ"
+    heading: "A · Telling the time"
+    heading_vi: "What's the time? / What time is it? — hai cách nói giờ: past / to, hoặc đọc số như đồng hồ điện tử"
+    items:
+      - {en: "4.00  It's four o'clock.", vi: "o'clock chỉ dùng cho giờ đúng"}
+      - {en: "4.15  It's quarter past four. · It's four fifteen.", vi: "past = hơn; quarter = 15 phút"}
+      - {en: "4.30  It's half past four. · It's four thirty.", vi: "half past = rưỡi"}
+      - {en: "4.45  It's quarter to five. · It's four forty-five.", vi: "to = kém: năm giờ kém mười lăm"}
+      - {en: "6.20  It's twenty past six. · 6.40  It's twenty to seven.", vi: "past cho 1–30 phút, to cho 31–59 phút"}
+      - {en: "6.57  It's three minutes to seven, NOT three to seven", vi: "số phút không phải 5, 10, 15, 20, 25 thì thêm minutes"}
+    lines:
+      - emma: "To ask the time, we say: what's the time? Or: what time is it?"
+        vi: "Hỏi giờ: What's the time? hoặc What time is it?"
+      - {tom: "It's four o'clock.", focus: 0}
+      - {emma: "We only use o'clock for the exact hour.", focus: 0, vi: "o'clock chỉ dùng cho giờ đúng."}
+      - {tom: "It's quarter past four. Or, it's four fifteen.", focus: 1}
+      - {tom: "It's half past four. Or, four thirty.", focus: 2}
+      - {tom: "It's quarter to five. Or, four forty-five.", focus: 3}
+      - {emma: "Past is for the first thirty minutes. After that, we say to the next hour: twenty past six, twenty to seven.", focus: 4, vi: "1–30 phút dùng past; sau đó dùng to (kém) giờ kế tiếp."}
+      - {tom: "It's three minutes to seven. Not three to seven.", focus: 5}
+      - emma: "Right. When the number of minutes is not five, ten, fifteen, twenty or twenty-five, we say minutes."
+        focus: 5
+        vi: "Số phút lẻ (không phải 5, 10, 15, 20, 25) thì phải nói minutes."
+
+  - kind: bullets
+    chapter: "Buổi trong ngày"
+    heading: "B · Giving more information"
+    heading_vi: "a.m. = sáng (trước 12 giờ trưa), p.m. = chiều tối; nearly / almost = gần; just after = vừa quá"
+    items:
+      - {en: "9 a.m. = nine o'clock in the morning · 12.00 p.m. = midday", vi: "buổi sáng · giữa trưa"}
+      - {en: "5 p.m. = five o'clock in the afternoon · 7 p.m. = seven o'clock in the evening", vi: "buổi chiều · buổi tối"}
+      - {en: "11.30 p.m. = eleven thirty at night · 12.00 a.m. = midnight", vi: "ban đêm (at night) · nửa đêm"}
+      - {en: "7.57 = nearly / almost eight o'clock · 8.02 = just after eight", vi: "gần tám giờ · tám giờ hơn một chút"}
+    lines:
+      - emma: "Sometimes we need more information. Is it nine in the morning, or nine at night?"
+        vi: "Đôi khi cần nói rõ sáng hay tối."
+      - {tom: "Nine a.m. is nine o'clock in the morning. Twelve p.m. is midday.", focus: 0}
+      - {tom: "Five p.m. is five o'clock in the afternoon. Seven p.m. is seven o'clock in the evening.", focus: 1}
+      - {tom: "Eleven thirty at night. And twelve a.m. is midnight.", focus: 2}
+      - {emma: "Notice: in the morning, in the afternoon, in the evening, but at night.", focus: 2, vi: "in the morning / afternoon / evening, nhưng at night."}
+      - {tom: "Seven fifty-seven is nearly eight o'clock, or almost eight. Eight oh two is just after eight.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: viết giờ bằng chữ"
+    heading: "Exercise 1 · Write the times in words"
+    heading_vi: "Đọc như đồng hồ điện tử: 3.10 = three ten — đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "9.15  →  ___", answer: "nine fifteen"}
+      - {n: 2, q: "10.25  →  ___", answer: "ten twenty-five"}
+      - {n: 3, q: "3.35  →  ___", answer: "three thirty-five"}
+      - {n: 4, q: "11.45  →  ___", answer: "eleven forty-five"}
+      - {n: 5, q: "3.45  →  ___", answer: "three forty-five"}
+      - {n: 6, q: "7.20  →  ___", answer: "seven twenty"}
+      - {n: 7, q: "2.30  →  ___", answer: "two thirty"}
+      - {n: 8, q: "4.40  →  ___", answer: "four forty"}
+    lines:
+      - emma: "Exercise 1. Write the times in words, like a digital clock: three ten. Pause the video and try."
+        say: "Exercise one. Write the times in words, like a digital clock: three ten. Pause the video and try."
+        vi: "Bài 1: viết giờ bằng chữ kiểu đồng hồ điện tử — tạm dừng video và làm."
+      - {tom: "Nine fifteen. Ten twenty-five.", reveal: [1, 2], focus: 1}
+      - {tom: "Three thirty-five. Eleven forty-five.", reveal: [3, 4], focus: 3}
+      - {tom: "Three forty-five. Seven twenty.", reveal: [5, 6], focus: 5}
+      - {tom: "Two thirty. Four forty.", reveal: [7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: past và to"
+    heading: "Exercise 2 · Write the times in words. Use past and to"
+    heading_vi: "12.30 = half past twelve — đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "7.15  →  ___", answer: "quarter past seven"}
+      - {n: 2, q: "9.30  →  ___", answer: "half past nine"}
+      - {n: 3, q: "11.35  →  ___", answer: "twenty-five to twelve"}
+      - {n: 4, q: "3.50  →  ___", answer: "ten to four"}
+      - {n: 5, q: "8.25  →  ___", answer: "twenty-five past eight"}
+      - {n: 6, q: "1.03  →  ___", answer: "three minutes past one", tip: "three minutes, not three past one"}
+      - {n: 7, q: "2.45  →  ___", answer: "quarter to three"}
+      - {n: 8, q: "4.17  →  ___", answer: "seventeen minutes past four"}
+    lines:
+      - emma: "Exercise 2. Now write the times with past and to. Pause the video and try."
+        say: "Exercise two. Now write the times with past and to. Pause the video and try."
+        vi: "Bài 2: viết giờ dùng past và to — tạm dừng video và làm."
+      - {emma: "Seven fifteen.", focus: 0}
+      - {tom: "Quarter past seven.", reveal: 1}
+      - {emma: "Nine thirty.", focus: 1}
+      - {tom: "Half past nine.", reveal: 2}
+      - {emma: "Eleven thirty-five.", focus: 2}
+      - {tom: "Twenty-five to twelve.", reveal: 3}
+      - {emma: "Three fifty.", focus: 3}
+      - {tom: "Ten to four.", reveal: 4}
+      - {emma: "Eight twenty-five.", focus: 4}
+      - {tom: "Twenty-five past eight.", reveal: 5}
+      - {emma: "One oh three.", focus: 5}
+      - {tom: "Three minutes past one. Don't forget minutes.", reveal: 6}
+      - {emma: "Two forty-five.", focus: 6}
+      - {tom: "Quarter to three.", reveal: 7}
+      - {emma: "Four seventeen.", focus: 7}
+      - {tom: "Seventeen minutes past four.", reveal: 8}
+
+  - kind: mcq
+    chapter: "Bài 4: giống hay khác?"
+    heading: "Exercise 4 · Same or different? Write S or D"
+    heading_vi: "Hai cách nói chỉ cùng một giờ (S) hay khác giờ (D) — đáp án theo Answer key tr. 205"
+    items:
+      - {n: 1, q: "12.00 at night  ·  midnight", keys: [S, D], options: ["same", "different"], answer: S}
+      - {n: 2, q: "4.00 a.m.  ·  4.00 in the afternoon", keys: [S, D], options: ["same", "different"], answer: D}
+      - {n: 3, q: "6.32  ·  nearly 6.30", keys: [S, D], options: ["same", "different"], answer: D}
+      - {n: 4, q: "11.45 p.m.  ·  11.45 at night", keys: [S, D], options: ["same", "different"], answer: S}
+      - {n: 5, q: "8.43  ·  nearly quarter to nine", keys: [S, D], options: ["same", "different"], answer: S}
+      - {n: 6, q: "2.17  ·  quarter past two", keys: [S, D], options: ["same", "different"], answer: D}
+      - {n: 7, q: "12.03 p.m.  ·  just after midday", keys: [S, D], options: ["same", "different"], answer: S}
+      - {n: 8, q: "3.00 a.m.  ·  three o'clock", keys: [S, D], options: ["same", "different"], answer: S}
+    lines:
+      - emma: "Exercise 4. Same or different? Pause the video, and write S or D."
+        say: "Exercise four. Same or different? Pause the video, and write S, or D."
+        vi: "Bài 4: giống (S) hay khác (D)? Tạm dừng video và làm."
+      - {emma: "Twelve at night, and midnight.", focus: 0}
+      - {tom: "The same.", reveal: 1}
+      - {emma: "Four a.m., and four in the afternoon.", focus: 1}
+      - {tom: "Different. Four a.m. is in the morning.", reveal: 2}
+      - {emma: "Six thirty-two, and nearly six thirty.", focus: 2}
+      - {tom: "Different. Six thirty-two is just after six thirty, not nearly.", reveal: 3}
+      - {emma: "Eleven forty-five p.m., and eleven forty-five at night.", focus: 3}
+      - {tom: "The same.", reveal: 4}
+      - {emma: "Eight forty-three, and nearly quarter to nine.", focus: 4}
+      - {tom: "The same.", reveal: 5}
+      - {emma: "Two seventeen, and quarter past two.", focus: 5}
+      - {tom: "Different. Quarter past two is two fifteen.", reveal: 6}
+      - {emma: "Twelve oh three p.m., and just after midday.", focus: 6}
+      - {tom: "The same.", reveal: 7}
+      - {emma: "Three a.m., and three o'clock.", focus: 7}
+      - {tom: "The same, if we know it's night.", reveal: 8}
+
+  - kind: blanks
+    chapter: "Test yourself: nói giờ hai cách"
+    heading: "Test yourself · Say each time in two ways"
+    heading_vi: "Tạm dừng video, nói mỗi giờ theo hai cách, rồi nghe Tom"
+    items:
+      - {n: 1, q: "2.10  →  ___", answer: "ten past two · two ten"}
+      - {n: 2, q: "5.50  →  ___", answer: "ten to six · five fifty"}
+      - {n: 3, q: "8.05  →  ___", answer: "five past eight · eight oh five"}
+      - {n: 4, q: "12.40  →  ___", answer: "twenty to one · twelve forty"}
+      - {n: 5, q: "6.15  →  ___", answer: "quarter past six · six fifteen"}
+      - {n: 6, q: "9.58  →  ___", answer: "nearly ten o'clock · nine fifty-eight"}
+    lines:
+      - emma: "Test yourself. Say each time in two ways. Pause the video, say them out loud, and then listen to Tom."
+        vi: "Tự kiểm tra: nói mỗi giờ theo hai cách — tạm dừng video, nói thành tiếng, rồi nghe Tom."
+      - {tom: "Ten past two, or two ten.", reveal: 1, focus: 0}
+      - {tom: "Ten to six, or five fifty.", reveal: 2, focus: 1}
+      - {tom: "Five past eight, or eight oh five.", reveal: 3, focus: 2}
+      - {tom: "Twenty to one, or twelve forty.", reveal: 4, focus: 3}
+      - {tom: "Quarter past six, or six fifteen.", reveal: 5, focus: 4}
+      - {tom: "Nearly ten o'clock, or nine fifty-eight.", reveal: 6, focus: 5}
+      - emma: "In IELTS Listening, you often hear times like these. Write them as numbers: seven thirty, or seven thirty p.m."
+        say: "In eye-elts Listening, you often hear times like these. Write them as numbers: seven thirty, or seven thirty p.m."
+        vi: "Trong bài nghe IELTS hay gặp giờ — ghi bằng số: 7.30, 7.30 p.m."
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write the times"
+    heading_vi: "Như bài nghe IELTS — tạm dừng sau mỗi câu, viết giờ bằng số"
+    items:
+      - {n: 1, q: "The bank opens at ___.", answer: "9.30"}
+      - {n: 2, q: "The film starts at ___.", answer: "7.45 p.m."}
+      - {n: 3, q: "The train leaves at ___.", answer: "6.10 a.m."}
+      - {n: 4, q: "The shop closes at ___.", answer: "5.40"}
+      - {n: 5, q: "Lunch is at ___.", answer: "12.00 (midday)"}
+      - {n: 6, q: "The bus comes at ___.", answer: "4.07"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the time in numbers."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết giờ bằng số."
+      - {emma: "Number one. The bank opens at half past nine.", focus: 0}
+      - {emma: "Number two. The film starts at quarter to eight in the evening.", focus: 1}
+      - {emma: "Number three. The train leaves at ten past six in the morning.", focus: 2}
+      - {emma: "Number four. The shop closes at twenty to six.", say: "Number four. The shop clozes at twenty to six.", focus: 3}
+      - {emma: "Number five. Lunch is at midday.", focus: 4}
+      - {emma: "Number six. The bus comes at seven minutes past four.", focus: 5}
+      - {tom: "Nine thirty. Seven forty-five p.m. Six ten a.m.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Five forty. Twelve o'clock. And four oh seven.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: giờ giấc ở nước bạn"
+    heading: "Speaking 1 · About your country: opening times"
+    heading_vi: "Bài 5 trong sách — Emma trả lời theo Answer key (người Anh), Tom nói về Việt Nam"
+    items:
+      - q: "Emma, when do banks open in England?"
+        a: "At nine a.m. And they don't close at midday, so you can go at lunchtime."
+        ask: tom
+        by: emma
+        phrases: ["At nine a.m.", "close at midday", "at lunchtime"]
+      - q: "And in Vietnam, Tom?"
+        a: "Most banks open at about eight in the morning. Many of them close for lunch at about half past eleven, and open again at one."
+        ask: emma
+        by: tom
+        phrases: ["at about eight in the morning", "close for lunch", "open again at one"]
+      - q: "What time do shops close in England?"
+        a: "Usually at half past five in the afternoon. On Thursdays, some shops stay open until seven p.m."
+        ask: tom
+        by: emma
+        phrases: ["half past five in the afternoon", "stay open until…"]
+      - q: "What about shops in Ho Chi Minh City?"
+        a: "They close much later. Many small shops close at ten or eleven at night, and some are open twenty-four hours."
+        ask: emma
+        by: tom
+        phrases: ["much later", "ten or eleven at night", "open twenty-four hours"]
+      - q: "When do post offices open and close?"
+        a: "They open at nine a.m., and close at half past five in the afternoon."
+        ask: tom
+        by: emma
+        phrases: ["They open at…", "close at…"]
+      - q: "What time do people have dinner in England?"
+        a: "Quite early, at about six or seven in the evening. Young children often eat at about half past five."
+        ask: tom
+        by: emma
+        phrases: ["Quite early", "at about six or seven", "in the evening"]
+      - q: "And in Vietnam?"
+        a: "Families usually have dinner at about seven. At the weekend, we sometimes eat later, at nearly nine."
+        ask: emma
+        by: tom
+        phrases: ["usually", "at about seven", "at nearly nine"]
+      - q: "Are you a morning person, Tom?"
+        a: "Not really! I need two coffees before I can talk to anyone. My best time is in the evening."
+        ask: emma
+        by: tom
+        phrases: ["Not really!", "before I can…", "in the evening"]
+      - q: "What about you, Emma?"
+        a: "Yes, I am. I get up at six, and I study Vietnamese for half an hour before breakfast."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I am.", "at six", "before breakfast"]
+      - q: "What time do cafés open in Vietnam?"
+        a: "Very early, at about six in the morning. Lots of people have coffee before work, so cafés are busy just after six."
+        ask: emma
+        by: tom
+        phrases: ["Very early", "before work", "just after six"]
+    lines:
+      - emma: "Speaking. Exercise 5 in the book asks about opening times in your country. Pause after each question, and answer for your country."
+        say: "Speaking. Exercise five in the book asks about opening times in your country. Pause after each question, and answer for your country."
+        vi: "Nói: bài 5 hỏi giờ mở cửa ở nước bạn — tạm dừng sau mỗi câu để tự trả lời."
+      - {tom: "Emma, when do banks open in England?", focus: 0}
+      - {emma: "At nine a.m. And they don't close at midday, so you can go at lunchtime.", reveal: 0, vi: "9 giờ sáng, trưa không nghỉ nên đi giờ ăn trưa được."}
+      - {emma: "And in Vietnam, Tom?", focus: 1}
+      - {tom: "Most banks open at about eight in the morning. Many of them close for lunch at about half past eleven, and open again at one.", say: "Most banks open at about eight in the morning. Many of them cloze for lunch at about half past eleven, and open again at one.", reveal: 1, vi: "Khoảng 8 giờ sáng; nhiều nơi nghỉ trưa từ khoảng 11 rưỡi tới 1 giờ."}
+      - {tom: "What time do shops close in England?", say: "What time do shops cloze in England?", focus: 2}
+      - {emma: "Usually at half past five in the afternoon. On Thursdays, some shops stay open until seven p.m.", reveal: 2, vi: "Thường 5 rưỡi chiều; thứ Năm một số cửa hàng mở tới 7 giờ tối."}
+      - {emma: "What about shops in Ho Chi Minh City?", say: "What about shops in Ho Chee Min City?", focus: 3}
+      - {tom: "They close much later. Many small shops close at ten or eleven at night, and some are open twenty-four hours.", say: "They cloze much later. Many small shops cloze at ten or eleven at night, and some are open twenty-four hours.", reveal: 3, vi: "Muộn hơn nhiều: nhiều cửa hàng nhỏ đóng lúc 10–11 giờ đêm, có nơi mở 24 giờ."}
+      - {tom: "When do post offices open and close?", say: "When do post offices open and cloze?", focus: 4}
+      - {emma: "They open at nine a.m., and close at half past five in the afternoon.", say: "They open at nine a.m., and cloze at half past five in the afternoon.", reveal: 4, vi: "Mở 9 giờ sáng, đóng 5 rưỡi chiều."}
+      - {tom: "What time do people have dinner in England?", focus: 5}
+      - {emma: "Quite early, at about six or seven in the evening. Young children often eat at about half past five.", reveal: 5, vi: "Khá sớm, khoảng 6–7 giờ tối; trẻ nhỏ thường ăn lúc 5 rưỡi."}
+      - {emma: "And in Vietnam?", focus: 6}
+      - {tom: "Families usually have dinner at about seven. At the weekend, we sometimes eat later, at nearly nine.", reveal: 6, vi: "Thường ăn tối khoảng 7 giờ; cuối tuần có khi ăn muộn, gần 9 giờ."}
+      - {emma: "Are you a morning person, Tom?", focus: 7}
+      - {tom: "Not really! I need two coffees before I can talk to anyone. My best time is in the evening.", reveal: 7, vi: "Không hẳn! Cần hai ly cà phê mới nói chuyện nổi; buổi tối mới là lúc tỉnh táo nhất."}
+      - {tom: "What about you, Emma?", focus: 8}
+      - {emma: "Yes, I am. I get up at six, and I study Vietnamese for half an hour before breakfast.", reveal: 8, vi: "Có: dậy lúc 6 giờ, học tiếng Việt nửa tiếng trước bữa sáng."}
+      - {emma: "What time do cafés open in Vietnam?", focus: 9}
+      - {tom: "Very early, at about six in the morning. Lots of people have coffee before work, so cafés are busy just after six.", reveal: 9, vi: "Rất sớm, khoảng 6 giờ sáng — nhiều người uống cà phê trước giờ làm."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: times in your day"
+    heading_vi: "Dùng at, about, nearly, just after, in the morning / at night"
+    items:
+      - {q: "What time do you usually get up?", hint: "At about … / just after …"}
+      - {q: "What time do you have lunch?", hint: "At midday / at half past twelve"}
+      - {q: "What time does your English class start and finish?", hint: "It starts at … and finishes at …"}
+      - {q: "When do shops close in your town?", hint: "At … in the evening / at night"}
+      - {q: "What time do you go to bed?", hint: "At about … / nearly midnight"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions about your day."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời các câu hỏi về một ngày của bạn."
+      - {emma: "What time do you usually get up?", focus: 0, pause: 0.5}
+      - {emma: "What time do you have lunch?", focus: 1, pause: 0.5}
+      - {emma: "What time does your English class start and finish?", focus: 2, pause: 0.5}
+      - {emma: "When do shops close in your town?", say: "When do shops cloze in your town?", focus: 3, pause: 0.5}
+      - {emma: "What time do you go to bed?", focus: 4, pause: 1.5}
+      - tom: "Here's my answer to the first one. I usually get up at about half past six, but on Sundays, just after nine!"
+        vi: "Câu mẫu: thường dậy khoảng 6 rưỡi, Chủ nhật thì hơn 9 giờ một chút."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: nhìn đồng hồ ở tr. 15, che chữ và nói giờ"
+    items:
+      - {en: "What's the time? / What time is it? — It's …", vi: "hỏi và nói giờ"}
+      - {en: "quarter past four = four fifteen · twenty to seven = six forty", vi: "hai cách nói giờ"}
+      - {en: "three minutes past one, NOT three past one", vi: "số phút lẻ phải có minutes"}
+      - {en: "in the morning · in the afternoon · in the evening · at night", vi: "buổi trong ngày; midday, midnight"}
+      - {en: "Next: Unit 3 · Days and dates", vi: "Tiếp theo: Unit 3 · thứ, tháng, ngày tháng"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "What's the time? What time is it?", focus: 0}
+      - {tom: "Quarter past four, or four fifteen. Twenty to seven, or six forty.", focus: 1}
+      - {emma: "Three minutes past one. Remember minutes.", focus: 2}
+      - {tom: "In the morning, in the afternoon, in the evening, but at night.", focus: 3}
+      - {emma: "Now look at the clocks on page fifteen, cover the words, and say the times. See you in Unit 3!", say: "Now look at the clocks on page fifteen, cover the words, and say the times. See you in Unit three!", focus: 4}

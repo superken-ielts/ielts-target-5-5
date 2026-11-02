@@ -397,6 +397,36 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Hồ sơ nhân vật thêm phần công việc; bảng chủ đề, thẻ đề đã dùng thêm Unit 3 (file 06 mục 9.4–9.6).
   - Test: hồi quy "cảnh practice của Unit 2–3 không đếm ngược, Unit 1–3 mỗi unit 4 video luyện nói". Node: nhóm Speaking & Vocabulary của Unit 3 có 6 video đúng thứ tự. E2E: Unit 3 có 15 video, nút Speaking practice 4 mở phiên Speaking & Vocabulary với 6 video đúng thứ tự.
 - [ ] **P2-57** Video luyện nói thêm cho Unit 4 trở đi, theo khuôn file 06 mục 9 (gợi ý Unit 4 ở mục 9.6). Muốn thì bỏ thêm đếm ngược ở "Đến lượt bạn" của Unit 1 (Speaking 1–2, Consolidation).
+- [x] **P2-58** **Oxford Word Skills Basic trong tab Sách, video Unit 1–7** (đợt 26), theo yêu cầu người học. Đây là sách từ vựng A1–A2 học song song với giáo trình chính; mỗi video 7–10 phút, không đếm ngược, có 1–2 phần luyện nói theo chủ đề của unit. Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md).
+  - **92 phiên 30 phút**, 19 tuần ở nhịp 5 phiên/tuần:
+    - Starter unit;
+    - 80 unit, mỗi unit một phiên;
+    - 11 phiên Review, mỗi module một phiên.
+  - Mỗi phiên mở đúng trang sách và trang Answer key của unit; 122 đoạn PDF.
+  - Bản quét thiếu hai trang trắng (tr. 204, 236), nên một PDF khai ba lần: `course-book`, `answer-key`, `word-list`. Độ lệch dò bằng OCR chân trang (đọc được số ở 244/254 trang). Trang Answer key của từng unit dò bằng OCR tiêu đề "Unit N".
+  - `books/catalog.json`: thẻ đứng sau English Unlimited A2, trước IELTS Target 5.0. Ghi chú nhóm IELTS nói cách học song song.
+  - Mẫu `lessons-v1`: tên bước dùng được `{title}`, `{no}`… như ghi chú, nên mỗi phiên mang tên chủ đề ("Unit 1 · Numbers · từ vựng, bài tập, nói").
+  - **7 video Unit 1–7** (module Basic English), mỗi video:
+    - từ vựng của trang sách, chữa bài theo Answer key;
+    - "Nghe và viết";
+    - Nói 1: Tom và Emma hỏi đáp;
+    - Nói 2: đến lượt bạn, tự tạm dừng;
+    - tổng kết.
+
+    Không có `wait` / `echo`. Phần thêm ngoài sách chọn theo IELTS:
+    - đoán đồ vật qua mô tả, như khi quên từ lúc thi nói;
+    - đoán loại từ cần điền;
+    - nghe đánh vần tên;
+    - chủ đề Part 1 "Bags", "Pens and writing".
+  - Answer key in nhầm Unit 6 bài 2 (đảo 4↔5, 8↔9): video đưa đáp án đúng, file 09 mục 3.3 ghi lại.
+  - Lệnh `phonemes` đánh ⚠ động từ "close" (/kloʊs/ → `cloze`). Đã sửa `U03-exam-listening` của IELTS Target 5.0 (Track 37) và dựng lại.
+  - Test:
+    - gói sách thật hợp lệ, chạy lại ra y hệt (tên phiên có chủ đề, ba lần khai PDF, nút Answer key, Unit 72 có bảng động từ bất quy tắc);
+    - tên bước có chỗ thay sai bị từ chối;
+    - video khớp `lessons.json`; mỗi video 7–10 phút, không `wait` / `echo`, có `qa` và `practice` tự tạm dừng;
+    - `phonemes` bắt "close";
+    - e2e: thứ tự menu Sách, thẻ 92 phiên × 30 phút, Unit 1–7 mỗi unit một video 7–10 phút, thẻ unit một trang ghi "Trang 21" (không phải "21–21"), phiên Unit 6 mở trang in 21 (PDF 22) và Answer key tr. 206.
+- [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5 (gợi ý module People ở mục 5.8). Làm thêm video cho phiên Review nếu người học cần.
 
 ### Cổng G2
 
