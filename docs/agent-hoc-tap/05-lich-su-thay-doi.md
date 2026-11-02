@@ -5,6 +5,100 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 25 — 02/11/2026: 4 video luyện nói thêm Unit 3, bỏ đếm ngược ở "Đến lượt bạn" của Unit 3
+
+Nhánh `claude/cool-archimedes-xalg78`. Đợt 24 đã đẩy lên `main` tại `f11b46d` trước khi làm đợt này; xong đợt này cũng
+đẩy thẳng lên `main` theo yêu cầu người học.
+
+### Yêu cầu
+
+1. Commit và đẩy đợt 24 lên `main`.
+2. Unit 3: bỏ đếm ngược ở các cảnh "Đến lượt bạn" (như Unit 2), thêm 4 video luyện nói theo khuôn Unit 1–2.
+3. Xong thì commit và đẩy lên `main`.
+
+### Đã làm
+
+**4 video luyện nói thêm Unit 3** (30:32, 23 chương), viết theo khuôn file 06 mục 9. Có 62 cặp hỏi qua lại;
+thi thử Phần 1 có 15 câu, Phần 3 có 16 câu; 5 bài nói mẫu Phần 2 (116–134 từ). Tom và Emma thay nhau làm giám khảo.
+Câu trả lời mẫu dùng ngữ pháp, từ vựng Unit 3: tên nghề, work as / for / in / with, would / could, tính từ tả công việc,
+cụm hai từ (past experience, personal qualities, computer literate). Hồ sơ nhân vật thêm phần công việc, ghi ở đầu
+`U03-speaking-practice.yaml` và file 06 mục 9.4.
+
+| Video | Hỏi qua lại | Thi thử |
+|---|---|---|
+| `U03-speaking-practice` Speaking practice 1 (8:45, 6 chương) | Việc làm thêm (8 cặp), công việc mơ ước (8) | Emma giám khảo, Tom thí sinh: Phần 1 (8 câu), Phần 2 "a part-time job you have or had" (Tom phục vụ quán cà phê), Phần 3 (4 câu) |
+| `U03-speaking-practice-2` Speaking practice 2 (8:11, 6 chương) | Đồng nghiệp và sếp (8), xin việc và phỏng vấn (8) | Đổi vai, Tom giám khảo, Emma thí sinh: Phần 1 (7 câu), Phần 2 "a person you know who has an interesting job" (anh trai Jack, kỹ sư âm thanh), Phần 3 (4 câu) |
+| `U03-speaking-practice-3` Speaking practice 3 (7:20, 6 chương) | Giờ làm và đi làm (8), làm việc ở nhà (8) | Cùng thẻ đề Phần 2 "a job you would like to do in the future": Tom (trưởng phòng marketing), Emma (trường ngoại ngữ ở quê); Phần 3 hỏi hai chiều (2 + 2) |
+| `U03-speaking-practice-4` Speaking practice 4 (6:16, 5 chương) | Kỹ năng và phẩm chất (8), nghề nghiệp ở Việt Nam và ở Anh (6) | Phần 2 "a job interview that you had" (Tom, phỏng vấn thực tập), Phần 3 hỏi hai chiều (2 + 2) |
+
+**Bỏ đếm ngược ở 3 cảnh "Đến lượt bạn" của Unit 3.** Đây là các lượt nói dài, trước đây chờ 30–60 giây. Nay Emma nói
+rõ cần chuẩn bị và nói bao lâu rồi nhắc tạm dừng video; slide hiện cả danh sách việc cần làm. Đã dựng lại 3 video:
+
+| Video | Cảnh | Trước → sau |
+|---|---|---|
+| `U03-speaking-1` | Speaking 1B · chọn ảnh, nói về ảnh (2 × 30 giây) | 7:22 → 6:29 |
+| `U03-speaking-2` | Speaking 2C · thẻ A: chuẩn bị 1 phút, nói 2 phút (2 × 60 giây) | 7:26 → 5:35 |
+| `U03-consolidation` | Speaking E · "What is the best job in the world?" (60 giây) | 5:40 → 4:43 |
+
+Lúc dựng lại, sửa cho khớp hồ sơ nhân vật (hai video này làm ở đợt 12, trước khi có hồ sơ):
+- `U03-speaking-2` bài A: bố Tom làm cho công ty cà phê, mẹ có cửa hàng hoa, chị là y tá ở Hà Nội. Trước đó là kỹ sư,
+  y tá, nhân viên ngân hàng.
+- `U03-speaking-1` bài 1D: Tom là sinh viên kinh doanh, muốn làm trưởng phòng marketing cho công ty cà phê. Trước đó là
+  kỹ sư, ngành năng lượng.
+
+Các câu Tom mơ làm kiến trúc sư và có chú là phi công thì giữ, rồi đưa vào hồ sơ.
+
+Các khoảng chờ khác của Unit 3 giữ nguyên: nghe – chép tên nghề, nghe – viết trọng âm, và "Pause the video and …" một
+lần cho mỗi bài tập.
+
+Soát cách đọc:
+- "I read everything on the website" (quá khứ) → `red`.
+- "so much of our lives": Kokoro đọc đúng /laɪvz/ (danh từ). Lệnh `phonemes` đánh ⚠ nhầm; đã ghi chú trong kịch bản để
+  không ai "sửa" thành `livz`.
+- Khoa → `Kwah`.
+- Các câu có "use", "live", "read", "IT", "CV" khác đã phiên âm và đều đúng, không cần `say`.
+- Ghi chú bài nói không dùng "✓": phông không có glyph này.
+
+Dựng từng video một: 7 video mất 53 phút (23:55–00:48).
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U03-speaking-practice.yaml`, `-2`, `-3`, `-4` (+ `.mp4`) | Kịch bản và video luyện nói thêm Unit 3 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/ielts_target_5_0/lessons/U03-speaking-1.yaml`, `U03-speaking-2.yaml`, `U03-consolidation.yaml` (+ `.mp4`) | Bỏ `wait` ở 3 cảnh `practice`, lời nhắc tạm dừng, `heading_vi` mới; sửa câu trả lời của Tom cho khớp hồ sơ; dựng lại |
+| `books/ielts_target_5_0/lessons/lessons.json` | 4 mục mới, 3 mục cập nhật thời lượng / chương |
+| `agents/tests/test_lesson_video.py` | Hồi quy mở rộng: cảnh `practice` của Unit 2–3 không đếm ngược; Unit 1–3 mỗi unit có 4 video luyện nói không có khoảng lặng chờ |
+| `tests/web/book-core.test.mjs`, `tests/web/book.e2e.mjs` | Unit 3: 15 video; nhóm Speaking & Vocabulary có 6 video đúng thứ tự; nút "Speaking practice 4" mở phiên Speaking & Vocabulary |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng độ phủ và kết luận Unit 3; 5 dòng lịch sử; `practice` của Unit 3; cách đọc ("read" quá khứ, "lives" danh từ); mục 9: hồ sơ nhân vật (công việc), chủ đề và thẻ đề Unit 3, gợi ý Unit 4–5 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-56 (xong), P2-57 (luyện nói Unit 4 trở đi); dòng đợt 25 ở P2-33 |
+| `CLAUDE.md`, `web/README.md`, `docs/agent-hoc-tap/README.md` | "Unit 1–3 đã có" |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `cd agents && python -m pytest -q` | 134 passed, 5 skipped. Hồi quy mở rộng: cảnh `practice` của Unit 2–3 không đếm ngược, Unit 1–3 có 4 video luyện nói. 48 kịch bản IELTS khớp `lessons.json`. 5 test bỏ qua là video tiếng Nhật, cần `misaki[ja]` |
+| `node --test "tests/web/*.test.mjs"` | 16 passed. Nhóm Speaking & Vocabulary của Unit 3 có 6 video đúng thứ tự |
+| `node tests/web/book.e2e.mjs` | 17/17 bước OK. Thẻ Unit 3 có 15 video: Speaking 1, 2 rồi Speaking practice 1–4. Nút "Speaking practice 4" mở phiên Speaking & Vocabulary có 6 video đúng thứ tự, có nút chương |
+| `python -m lesson_video check` / `phonemes` | 15 kịch bản Unit 3 hợp lệ; 1 ⚠ là báo nhầm ("our lives", danh từ) |
+
+### Còn treo
+
+- Video luyện nói thêm cho Unit 4 trở đi (P2-57), theo file 06 mục 9.
+- Unit 1 (Speaking 1, Speaking 2, Consolidation) vẫn đếm ngược ở cảnh "Đến lượt bạn"; đổi nếu người học muốn.
+- Unit 4 trở đi (kế hoạch ở file 06 mục 8).
+
+---
+
 ## Đợt 24 — 01/11/2026: 4 video luyện nói thêm Unit 2, bỏ đếm ngược ở "Đến lượt bạn"
 
 Nhánh `claude/cool-archimedes-xalg78` từ `main` tại `b642910`.

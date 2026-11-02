@@ -206,9 +206,11 @@ test("video bài giảng của IELTS Target 5.0: mỗi video trỏ tới hoạt 
        "U02-speaking-practice-3", "U02-speaking-practice-4"]], ["U02-listening", ["U02-listening-1", "U02-listening-2", "U02-listening-3"]],
      ["U02-reading", ["U02-reading-1", "U02-reading-2"]], ["U02-writing", ["U02-writing-1", "U02-writing-2"]],
      ["U02-consolidation", ["U02-consolidation"]], ["U02-exam-practice", ["U02-exam-reading", "U02-exam-writing"]]]);
-  // Unit 3: 11 video, đủ sáu phần
+  // Unit 3: 15 video, đủ sáu phần; + 4 video luyện nói thêm sau Speaking 2 (đợt 25)
   assert.deepEqual(C.groupLessons(C.lessonsOf({ lessons }, { item: "U03" }), Object.keys(acts)).map(g => [g.activity, g.lessons.length]),
-    [["U03-speaking-vocab", 2], ["U03-listening", 2], ["U03-reading", 2], ["U03-writing", 2], ["U03-consolidation", 1], ["U03-exam-practice", 2]]);
+    [["U03-speaking-vocab", 6], ["U03-listening", 2], ["U03-reading", 2], ["U03-writing", 2], ["U03-consolidation", 1], ["U03-exam-practice", 2]]);
+  assert.deepEqual(C.lessonsOf({ lessons }, { activity: "U03-speaking-vocab" }).map(l => l.id), ["U03-speaking-1", "U03-speaking-2",
+    "U03-speaking-practice", "U03-speaking-practice-2", "U03-speaking-practice-3", "U03-speaking-practice-4"]);
 });
 
 test("lộ trình: gom sách theo courses của catalog, trình độ JLPT, nhịp học theo plan", () => {

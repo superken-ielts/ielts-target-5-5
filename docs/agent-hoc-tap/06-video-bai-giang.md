@@ -1,11 +1,11 @@
 # 06 — Video bài giảng: hồ sơ Unit 1–3, quy trình và kế hoạch Unit 4
 
 Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11, 14), Unit 2 (đợt 10, 24) và
-Unit 3 (đợt 12): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những
+Unit 3 (đợt 12, 25): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những
 lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 4** (mục 8) và các unit sau. **Video luyện nói thêm** (4 video mỗi
-unit, Unit 1–2 đã có) làm tiếp theo khuôn, hồ sơ nhân vật và danh sách chủ đề ở **mục 9**.
+unit, Unit 1–3 đã có) làm tiếp theo khuôn, hồ sơ nhân vật và danh sách chủ đề ở **mục 9**.
 
-**Đến lượt bạn không đếm ngược (đợt 24):** cảnh `practice` mới không dùng `wait` — Emma nhắc "Pause the video, and
+**Đến lượt bạn không đếm ngược (Unit 2: đợt 24, Unit 3: đợt 25):** cảnh `practice` không dùng `wait` — Emma nhắc "Pause the video, and
 answer these questions out loud", rồi đọc hết các câu hỏi; slide hiện cả danh sách câu hỏi kèm gợi ý (mục 6).
 
 **Phạm vi:** chỉ **Course Book** (Student's Book, `IELTS_Target_5.0.pdf`) và các file nghe đi kèm. Bộ sách không có
@@ -95,26 +95,30 @@ Exercise C–D của Listening/Reading (tự đánh giá cách làm bài) chỉ 
   dựng lại 5 video đó. Listening 1K, 1M vẫn để Tom đọc mẫu ngay sau mỗi câu.
 - Lúc dựng lại, sửa luôn 8 câu có động từ "use" bị đọc thành /juːs/ (`say: yooz`).
 - **Chưa đổi:** các khoảng chờ "Pause the video and …" một lần cho mỗi bài tập (6–15 giây). Ở Unit 1, cảnh "Đến lượt
-  bạn" của Speaking 1, Speaking 2 và Consolidation vẫn đếm ngược 8–10 giây mỗi câu. Ở Unit 3, các lượt nói 1–2 phút
-  của Phần 2 vẫn đếm ngược 30–60 giây. Muốn đổi thì làm như trên.
+  bạn" của Speaking 1, Speaking 2 và Consolidation vẫn đếm ngược 8–10 giây mỗi câu. Unit 3 đã đổi ở đợt 25 (mục 3).
+  Muốn đổi Unit 1 thì làm như trên.
 
 ## 3. Unit 3 · Work — độ phủ video
 
-Bảng in bằng lệnh `coverage` sau đợt 12:
+Bảng in bằng lệnh `coverage` sau đợt 25:
 
-### U03 · Work — 6/7 phần có video, 11 video, 1:09:08
+### U03 · Work — 6/7 phần có video, 15 video, 1:35:59
 
 | Phần | Trang | Video | Dài | Chương |
 |---|---|---|---|---|
-| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-1` — Speaking 1 & Vocabulary 1: talking about work, jobs | 7:22 | 11 |
-| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-2` — Speaking 2: talking about jobs, part 2 of the Speaking Module | 7:26 | 12 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-1` — Speaking 1 & Vocabulary 1: talking about work, jobs | 6:29 | 11 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-2` — Speaking 2: talking about jobs, part 2 of the Speaking Module | 5:35 | 12 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-practice` — Speaking practice 1: part-time jobs, dream jobs + mock test | 8:45 | 6 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-practice-2` — Speaking practice 2: colleagues, job interviews + mock test | 8:11 | 6 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-practice-3` — Speaking practice 3: working hours, working from home + mock test | 7:20 | 6 |
+| Speaking & Vocabulary | sách tr. 34–35 | `U03-speaking-practice-4` — Speaking practice 4: skills, qualities, jobs in your country + mock test | 6:16 | 5 |
 | Listening | Listening tr. 36–37 | `U03-listening-1` — Listening 1: listening for gist | 8:29 | 10 |
 | Listening | Listening tr. 36–37 | `U03-listening-2` — Listening 2: practise listening for gist | 10:34 | 8 |
 | Reading | sách tr. 38–40 | `U03-reading-1` — Reading 1: scanning for paraphrased language | 4:35 | 7 |
 | Reading | sách tr. 38–40 | `U03-reading-2` — Reading 2: practise scanning for paraphrased language | 4:12 | 8 |
 | Writing | sách tr. 41–42 | `U03-writing-1` — Writing 1: register | 4:10 | 7 |
 | Writing | sách tr. 41–42 | `U03-writing-2` — Writing 2: a letter of application | 5:40 | 8 |
-| Consolidation | sách tr. 43 | `U03-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 5:40 | 7 |
+| Consolidation | sách tr. 43 | `U03-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 4:43 | 7 |
 | Exam practice | sách tr. 44–45 | `U03-exam-listening` — Exam practice: Listening | 6:47 | 9 |
 | Exam practice | sách tr. 44–45 | `U03-exam-reading` — Exam practice: Reading | 4:13 | 8 |
 | Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
@@ -123,6 +127,18 @@ Bảng in bằng lệnh `coverage` sau đợt 12:
 nên phát thẳng trong video (Listening 2 phát lại từng đoạn cho câu 5–12); Track 28–30, 34, 36, 37 không có file nên các
 giọng đọc lại Tapescript — bài luyện đề Listening dùng **bốn giọng** (Emma, Tom, Mai, Jerry `am_liam`). Answer key
 chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án suy ra, có câu bằng chứng.
+
+**Đợt 25** (người học yêu cầu):
+- Thêm **4 video luyện nói thêm** (`U03-speaking-practice`, `-2`, `-3`, `-4`) theo khuôn mục 9, gắn ngay sau Speaking 2.
+  Nội dung: việc làm thêm, công việc mơ ước, đồng nghiệp và sếp, xin việc và phỏng vấn, giờ làm, làm việc ở nhà, kỹ
+  năng và phẩm chất, nghề nghiệp ở Việt Nam và ở Anh, và 4 buổi thi thử.
+- **Bỏ đếm ngược** ở 3 cảnh "Đến lượt bạn" của Unit 3. Đây là các lượt nói dài: Speaking 1B (2 × 30 giây), Speaking 2C
+  (thẻ A, 2 × 60 giây), Consolidation E (60 giây). Emma nói rõ chuẩn bị, nói bao lâu rồi nhắc tạm dừng video. Đã dựng
+  lại 3 video đó.
+- Sửa câu trả lời của Tom trong `U03-speaking-2` bài A (nghề của bố, mẹ, chị) và `U03-speaking-1` bài 1D (nghề muốn làm)
+  cho khớp hồ sơ nhân vật (mục 9.4).
+- **Chưa đổi:** nghe – chép tên nghề (7 × 4 giây), nghe – viết trọng âm và các khoảng chờ "Pause the video and …" một
+  lần cho mỗi bài tập.
 
 ## 4. Lịch sử từng video
 
@@ -173,13 +189,18 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 | 12 | `U03-consolidation` Consolidation | Lời khuyên Phần 2 (B B A A A A), thẻ đề và **cách hỏi giám khảo** (Track 34 đọc lại), nói 1 phút, 6 cụm hai từ, trọng âm 10 từ (Track 36), sửa 8 lỗi | mcq (`keys` A/B), bullets, qa, practice, pairs, errors | Tapescript Track 34, 36 + gợi ý |
 | 12 | `U03-exam-listening` Exam practice: Listening | Làm việc tại nhà — **Track 37 đọc lại bằng bốn giọng** (Mai, Tom = Simon, Jerry), câu 1–2 (b c), chọn 6 trong 10 (A C D E G I) và vì sao loại B F H J | bullets, mcq + `hide_text` + `roles` | Suy ra từ Tapescript |
 | 12 | `U03-exam-reading` Exam practice: Reading | "The Worst Job I Ever Had": câu 1–8 tô cụm diễn đạt lại (C A D A B D B C), câu 9–12 ≤ 2 từ (saved, home, became busier, was late), từ khóa | bullets, passage + `mark`, blanks, vocab | Suy ra từ bài |
+| 25 | `U03-speaking-practice` Speaking practice 1 | Hỏi qua lại **việc làm thêm** (8 cặp) và **công việc mơ ước** (8, would / could); **thi thử 1** (Emma giám khảo, Tom thí sinh): Phần 1 (8 câu), thẻ đề Phần 2 "a part-time job you have or had" + ghi chú + bài nói 123 từ (Tom phục vụ quán cà phê), Phần 3 (4 câu: sinh viên làm thêm, học được gì, lương hay việc thú vị, làm thêm giờ) | title, qa + `ask` / `by` / `roles`, bullets, letter | Tự viết bằng ngữ pháp, từ vựng Unit 3 |
+| 25 | `U03-speaking-practice-2` Speaking practice 2 | Hỏi qua lại **đồng nghiệp, sếp** (8) và **xin việc, phỏng vấn** (8: past experience, personal qualities); **thi thử 2 đổi vai** (Tom giám khảo, Emma thí sinh): Phần 1 (7 câu), Phần 2 "a person you know who has an interesting job" (anh trai Jack, kỹ sư âm thanh ở nhà hát), Phần 3 (4 câu) | title, qa, bullets, letter | Tự viết |
+| 25 | `U03-speaking-practice-3` Speaking practice 3 | Hỏi qua lại **giờ làm, đi làm** (8) và **làm việc ở nhà** (8, nối với Exam practice Listening); **thi thử 3**: cùng thẻ đề Phần 2 "a job you would like to do in the future" — Tom (trưởng phòng marketing công ty cà phê) và Emma (trường ngoại ngữ có quán cà phê ở quê), Phần 3 hỏi hai chiều (2 + 2) | title, qa, bullets, letter | Tự viết |
+| 25 | `U03-speaking-practice-4` Speaking practice 4 | Hỏi qua lại **kỹ năng, phẩm chất** (8: computer literate, past experience) và **nghề nghiệp ở Việt Nam và ở Anh** (6); **thi thử 4**: Phần 2 "a job interview that you had" (Tom phỏng vấn thực tập), Phần 3 hỏi hai chiều (2 + 2), lời kết | title, qa, bullets, letter | Tự viết |
+| 25 | Dựng lại `U03-speaking-1`, `U03-speaking-2`, `U03-consolidation` | Bỏ đếm ngược ở 3 cảnh "Đến lượt bạn" (lượt nói 30–60 giây): Emma nói rõ chuẩn bị, nói bao lâu rồi nhắc tạm dừng video. Sửa câu trả lời của Tom cho khớp hồ sơ nhân vật (nghề của bố, mẹ, chị; nghề muốn làm) | practice (không `wait`), qa, letter | — |
 
 Đợt 4 dựng lại hai video Speaking bằng Kokoro (trước đó là Flite). Mọi video hiện tại: Kokoro q8, Emma `af_heart`,
 Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening` và Jerry `am_liam` trong
 `U03-exam-listening`), tốc độ 0,9. Đợt 24 cài lại Kokoro trên máy mới từ npm (`kokoro-q8-shards@1.0.0`, sha256 khớp
 bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 
-## 5. Quy trình làm một video (đã dùng cho cả 44 video)
+## 5. Quy trình làm một video (đã dùng cho cả 48 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -216,7 +237,7 @@ bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 | `qa` | `q`, `a` (+ `ask`, `by`, `phrases`) | Câu hỏi – câu trả lời mẫu | Speaking, Consolidation |
 | `compare` | `title`, `lines` | So sánh hai cách viết / nói | Writing |
 | `errors` | `wrong`, `right` (+ `note`) | Sửa lỗi | Speaking 2, Consolidation |
-| `practice` | `q` (+ `hint`) | "Đến lượt bạn". **Không có `wait` / `echo` (mặc định từ đợt 24):** người học tự tạm dừng — slide hiện dải "Pause the video and answer out loud", cả danh sách câu kèm gợi ý, câu đang đọc được tô; dòng đầu là lời nhắc tạm dừng, rồi đọc từng câu (`focus`, `pause: 0.5`, câu cuối `pause: 1.5`). Có `wait` thì từng câu một kèm vòng đếm ngược (Unit 1, Unit 3) | Unit 2 Speaking 1–2, Consolidation, Reading 1B, Listening 1K, 1M |
+| `practice` | `q` (+ `hint`) | "Đến lượt bạn". **Không có `wait` / `echo` (mặc định từ đợt 24):** người học tự tạm dừng — slide hiện dải "Pause the video and answer out loud", cả danh sách câu kèm gợi ý, câu đang đọc được tô; dòng đầu là lời nhắc tạm dừng, rồi đọc từng câu (`focus`, `pause: 0.5`, câu cuối `pause: 1.5`). Có `wait` thì từng câu một kèm vòng đếm ngược (còn ở Unit 1). Lượt nói dài (Phần 2): Emma nói rõ "chuẩn bị 1 phút, nói 2 phút" rồi để người học tự tạm dừng | Unit 2 Speaking 1–2, Consolidation, Reading 1B, Listening 1K, 1M; Unit 3 Speaking 1B, 2C, Consolidation E |
 | `order` | `k`, `text`, `pos` (+ `label`, `short`) | Sắp xếp thứ tự | Writing 1, 3, Vocabulary |
 | `timing` | `label`, `minutes` | Chia thời gian làm bài | Writing 1 |
 | `letter` | `text` (+ `note`, `say`, `body`) | Đọc nguyên một lá thư / bài đọc, ghi chú lề | Writing, Exam reading |
@@ -272,6 +293,8 @@ dùng cho bài nói mẫu trong thi thử.
 | Mr Nam | `Mister Nahm` | Tên thầy giáo người Việt |
 | A levels, two A grades, two As | `eigh levels`, `two eigh grades`, `two eighs` | Tên kỳ thi / điểm (như dòng A levels ở trên) |
 | band 5.5, six a.m. | `band five point five`, `six in the morning` | Số và giờ đọc theo kiểu nói |
+| "I read everything on the website" (quá khứ) | `red` | Như dòng "read (quá khứ)" ở trên (đợt 25) |
+| lives (danh từ: "so much of our lives") | **không** viết `say` | Kokoro đọc đúng /laɪvz/; lệnh `phonemes` vẫn đánh ⚠ vì không phân biệt danh từ với động từ — ghi chú trong kịch bản để người sau không "sửa" thành `livz` |
 
 Những lỗi đã gặp và cách tránh:
 
@@ -334,10 +357,10 @@ Tên mục lấy bằng OCR trang PDF 47–58; kiểm lại khi viết kịch b�
 | Exam practice (`U04-exam-practice`) | 56–57 | Reading; Writing (bài luận về tài năng và thành công) | `U04-exam-reading`, `U04-exam-writing` (bài luận mẫu Michael Jordan theo Answer key) | Answer key Exam Practice Writing C |
 | Ôn unit + sổ lỗi | — | — | Không cần | — |
 
-## 9. Video luyện nói thêm — khuôn 4 video mỗi unit (Unit 1: đợt 14, Unit 2: đợt 24)
+## 9. Video luyện nói thêm — khuôn 4 video mỗi unit (Unit 1: đợt 14, Unit 2: đợt 24, Unit 3: đợt 25)
 
 Người học yêu cầu mỗi unit có thêm video luyện nói, không theo trang sách: Tom và Emma hỏi đáp qua lại về chủ đề của
-unit, rồi thi thử Speaking đủ ba phần. Unit 1 và Unit 2 đã có. **Unit 3 trở đi làm tiếp theo mục này.**
+unit, rồi thi thử Speaking đủ ba phần. Unit 1–3 đã có. **Unit 4 trở đi làm tiếp theo mục này.**
 
 ### 9.1 Bộ video và chỗ trong app
 
@@ -382,8 +405,9 @@ nghe và nói theo), hôm nay học gì, ai làm giám khảo. Video 1 thêm m�
 
 ### 9.4 Hồ sơ nhân vật — giữ khớp ở mọi video
 
-Người học xem liền nhiều video, nên Tom và Emma phải nói khớp nhau. Hồ sơ chi tiết nằm ở đầu hai kịch bản:
-`U01-speaking-practice.yaml` (gia đình, nơi ở, sở thích) và `U02-speaking-practice.yaml` (thời đi học, việc học).
+Người học xem liền nhiều video, nên Tom và Emma phải nói khớp nhau. Hồ sơ chi tiết nằm ở đầu ba kịch bản:
+`U01-speaking-practice.yaml` (gia đình, nơi ở, sở thích), `U02-speaking-practice.yaml` (thời đi học, việc học) và
+`U03-speaking-practice.yaml` (công việc).
 
 **Tom** — Trần Minh Tuấn, `say: Chan Min Twan`.
 - Gia đình, nơi ở: sinh ở Hà Nội, lớn lên ở Đà Lạt. Đang học năm hai ngành kinh doanh ở TP. Hồ Chí Minh, thích môn
@@ -394,6 +418,13 @@ Người học xem liền nhiều video, nên Tom và Emma phải nói khớp nh
   thấy Sử chán, Lý khó, cô dạy Toán nghiêm. Thi đại học năm 18 tuổi, ông kèm Toán.
 - Học tập: học tiếng Anh từ 8 tuổi, khó nhất là nghe. Thi IELTS tháng 12, cần 5.5 để đi trao đổi ở Úc.
 - Kỹ năng: đi xe máy (bố dạy), bơi kém, chỉ biết nấu mì và trứng, muốn học nấu ăn.
+- Công việc (Unit 3):
+  - từ tháng 9 làm thêm phục vụ ở quán cà phê gần trường, tối thứ Ba và thứ Năm 6–10 giờ, đi bộ 10 phút; quản lý (nữ)
+    nghiêm nhưng công bằng;
+  - hè vừa rồi thực tập 2 tháng ở bộ phận marketing một công ty cà phê ở Đà Lạt (phỏng vấn tháng 5, ba người phỏng vấn,
+    có người hướng dẫn);
+  - muốn làm trưởng phòng marketing cho công ty cà phê quốc tế, một ngày có thương hiệu cà phê Đà Lạt riêng;
+  - hồi bé mơ làm kiến trúc sư vì thích vẽ; chú là phi công; điểm mạnh: chăm chỉ, giỏi giải quyết vấn đề, biết lắng nghe.
 
 **Emma** — Emma Louise Clarke, người Anh.
 - Gia đình, nơi ở: lớn lên ở thị trấn nhỏ ven biển; dạy tiếng Anh cho người lớn ở TP. Hồ Chí Minh đã ba năm. Có một
@@ -404,6 +435,17 @@ Người học xem liền nhiều video, nên Tom và Emma phải nói khớp nh
 - Thi cử, đại học: A level Anh văn – Pháp – Sử (A, A, B), học Văn học Anh ở đại học.
 - Kỹ năng: học lái xe năm 17 tuổi (thầy Hughes, trượt lần đầu); học tiếng Việt tuần hai buổi; đã học một lớp nấu món
   Việt.
+- Công việc (Unit 3):
+  - hồi đại học làm ở hiệu sách sáng thứ Bảy; việc tệ nhất là rửa bát trong bếp khách sạn một mùa hè (bỏ sau ba tuần);
+    lương đầu tiên dùng để đi Tây Ban Nha với Lucy;
+  - hồi bé mơ làm phi hành gia; ra trường làm văn phòng một năm (chán, lặp lại) rồi học khóa đào tạo giáo viên;
+  - phỏng vấn trường hiện tại qua mạng khi còn ở Anh; trường có 12 giáo viên từ 5 nước; dạy khoảng 25 giờ một tuần;
+  - anh trai Jack là kỹ sư âm thanh ở một nhà hát lớn tại London; một ngày muốn mở trường ngoại ngữ nhỏ có quán cà phê
+    ở quê ven biển.
+
+Đợt 25 sửa hai chỗ trong video Unit 3 cũ (làm trước khi có hồ sơ) cho khớp: `U03-speaking-2` bài A (bố làm cho công ty
+cà phê, mẹ có cửa hàng hoa, chị là y tá ở Hà Nội — trước là kỹ sư, y tá, nhân viên ngân hàng) và `U03-speaking-1` bài
+1D (sinh viên kinh doanh, muốn làm marketing — trước là kỹ sư).
 
 Thêm chi tiết mới thì ghi vào đầu kịch bản video 1 của unit đó và cập nhật danh sách này.
 
@@ -413,16 +455,17 @@ Thêm chi tiết mới thì ghi vào đầu kịch bản video 1 của unit đó
 |---|---|---|---|
 | 1 · Life | gia đình; nơi ở, quê nhà; tuổi thơ; thời gian rảnh; việc học, công việc; các giai đoạn cuộc đời; sinh nhật, lễ Tết; bạn bè; tương lai; sinh hoạt hằng ngày; tên gọi; ảnh | an older person in your family who you admire (Tom); a happy memory from your childhood (Emma); a family celebration that you enjoyed (Tom, Emma); a friend you have known for a long time (Tom) | sống cùng ông bà, người già; tuổi thơ xưa và nay; lễ hội; tình bạn |
 | 2 · Learning | thời đi học; môn học, thầy cô; học ngoại ngữ; kỹ năng mới; thi cử; cách học, trí nhớ; đại học, khóa học; học với công nghệ | a teacher who helped you a lot (Tom); a useful skill that you learned (Emma); an important exam that you took (Tom, Emma); a course that you would like to take in the future (Tom) | thầy giỏi, lớp nhỏ, đồng phục; kỹ năng nên dạy ở trường; áp lực thi cử; học khi đã lớn, học online, học phí đại học |
+| 3 · Work | việc làm thêm; công việc mơ ước; đồng nghiệp, sếp; xin việc, phỏng vấn; giờ làm, đi làm; làm việc ở nhà; kỹ năng, phẩm chất; nghề nghiệp ở Việt Nam và ở Anh | a part-time job you have or had (Tom); a person you know who has an interesting job (Emma); a job you would like to do in the future (Tom, Emma); a job interview that you had (Tom) | sinh viên làm thêm, lương hay đam mê, làm thêm giờ; điều làm nên việc thú vị, robot, đổi việc; công ty lớn hay nhỏ, tự kinh doanh, người trẻ đổi việc, nghề tương lai; giúp người mới, yêu nghề, làm ở nước ngoài, bạn bè làm chung |
 
 ### 9.6 Gợi ý cho unit sau
 
 | Unit | Hỏi qua lại | Thẻ đề Phần 2 | Phần 3 |
 |---|---|---|---|
-| 3 · Work | việc làm thêm; công việc mơ ước; đồng nghiệp, sếp; phỏng vấn xin việc; giờ làm, đi làm; làm việc ở nhà | a job you would like to do in the future; a person who has an interesting job; a part-time job you had; a day at work or university that you remember | lương và hạnh phúc; làm việc tại nhà; nghề của tương lai; học sinh có nên đi làm thêm |
 | 4 · Achievements | mục tiêu, thành công; điều tự hào; người nổi tiếng; thi đấu, giải thưởng | an achievement you are proud of; a successful person you know; a goal you want to achieve | thành công là gì; tài năng hay chăm chỉ; nổi tiếng có tốt không |
 
-Unit 3: dùng từ vựng, ngữ pháp của `U03-speaking-1`, `-2` (tên nghề, work as / for / in / with, would / could). Tom chưa
-đi làm chính thức; Emma có thể kể việc làm thêm hồi đại học.
+Unit 4: đọc trang Speaking & Vocabulary (sách in tr. 46–47, mục 8) để lấy từ vựng, ngữ pháp của unit trước khi viết.
+Chi tiết có sẵn để dùng: thực tập của Tom, IELTS 5.5 của Tom, trường ngoại ngữ Emma muốn mở. Unit 5 (Thoughts) trở đi
+chưa có gợi ý: đọc trang sách của unit rồi chọn 6–8 chủ đề Phần 1 và 4 thẻ đề Phần 2 không trùng bảng 9.5.
 
 ### 9.7 Các bước
 
@@ -442,7 +485,7 @@ Unit 3: dùng từ vựng, ngữ pháp của `U03-speaking-1`, `-2` (tên nghề
 
 ```bash
 cd agents && python -m lesson_video check ../books/ielts_target_5_0/lessons/*.yaml
-python -m pytest -q                       # kịch bản đã commit khớp lessons.json, video có thật, độ phủ Unit 1–3, Unit 2 không đếm ngược, luyện nói thêm Unit 1–2
+python -m pytest -q                       # kịch bản đã commit khớp lessons.json, video có thật, độ phủ Unit 1–3, Unit 2–3 không đếm ngược, luyện nói thêm Unit 1–3
 cd .. && python3 web/build.py && git diff --stat
 node --test "tests/web/*.test.mjs"        # mục lục video đúng thứ tự phần trong sách
 node tests/web/book.e2e.mjs               # nút video trên thẻ unit mở đúng phiên

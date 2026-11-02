@@ -158,11 +158,23 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
-  await step("Unit 3 có 11 video đủ sáu phần; nút Writing 2 mở phiên Writing", async () => {
+  await step("Unit 3 có 15 video đủ sáu phần (+ 4 video luyện nói thêm); nút Writing 2 mở phiên Writing", async () => {
     const u3 = page.locator("#p-book .bk-unit", { hasText: "Unit 3 · Work" });
-    assert.equal(await u3.locator(".bk-vids button").count(), 11);
+    assert.equal(await u3.locator(".bk-vids button").count(), 15);
     assert.deepEqual(await u3.locator(".bk-vgroup-t").allTextContents(),
       ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
+    assert.match(await u3.locator(".bk-vgroup").first().textContent(),
+      /Speaking 1 & Vocabulary 1[\s\S]*Speaking 2[\s\S]*Speaking practice 1[\s\S]*Speaking practice 2[\s\S]*Speaking practice 3[\s\S]*Speaking practice 4/);
+    // 4 video luyện nói thêm (đợt 25) mở từ thẻ unit, trong phiên Speaking & Vocabulary
+    await u3.locator(".bk-vids button", { hasText: "Speaking practice 4" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 3 · Speaking & Vocabulary/);
+    const sv = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(sv, ["U03-speaking-1.mp4", "U03-speaking-2.mp4", "U03-speaking-practice.mp4",
+      "U03-speaking-practice-2.mp4", "U03-speaking-practice-3.mp4", "U03-speaking-practice-4.mp4"]);
+    assert.ok(await page.locator("#lesson-U03-speaking-practice-4 .bk-chaps button").count() >= 5);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
     await u3.locator(".bk-vids button", { hasText: "a letter of application" }).click();
     await page.waitForSelector("#p-book .bk-video");
     assert.match(await page.textContent("#p-book .reader-title"), /Unit 3 · Writing/);

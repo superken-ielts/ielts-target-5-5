@@ -440,15 +440,16 @@ def test_unit1_3_video_coverage():
 
 
 @pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
-def test_unit2_your_turn_has_no_countdown_and_units_1_2_have_speaking_practice():
-    """Đợt 24 (người học yêu cầu): "Đến lượt bạn" của Unit 2 không bắt chờ đếm ngược — Emma nhắc tạm dừng video rồi đọc
-    hết câu hỏi; Unit 1 và Unit 2 mỗi unit có 4 video luyện nói thêm, không có khoảng lặng chờ nào (docs/agent-hoc-tap/06)."""
-    for path in sorted((REAL / "lessons").glob("U02-*.yaml")):
+def test_your_turn_has_no_countdown_and_units_have_speaking_practice():
+    """Người học yêu cầu: "Đến lượt bạn" không bắt chờ đếm ngược — Emma nhắc tạm dừng video rồi đọc hết câu hỏi (Unit 2:
+    đợt 24, Unit 3: đợt 25); Unit 1–3 mỗi unit có 4 video luyện nói thêm, không có khoảng lặng chờ nào
+    (docs/agent-hoc-tap/06 mục 9)."""
+    for path in sorted((REAL / "lessons").glob("U0[23]-*.yaml")):
         for scene in sc.load(path).scenes:
             if scene.kind == "practice":
                 assert scene.self_paced, f"{path.name}: {scene.heading}"
     built = {x["id"]: x for x in json.loads((REAL / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
-    for unit in ("U01", "U02"):
+    for unit in ("U01", "U02", "U03"):
         for vid in [f"{unit}-speaking-practice"] + [f"{unit}-speaking-practice-{k}" for k in (2, 3, 4)]:
             lesson = sc.load(REAL / "lessons" / f"{vid}.yaml")
             assert built[vid]["activity"] == lesson.activity == f"{unit}-speaking-vocab"

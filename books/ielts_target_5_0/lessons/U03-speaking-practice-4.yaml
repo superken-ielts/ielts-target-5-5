@@ -1,0 +1,277 @@
+# Video luyện nói thêm Unit 3 · Work — 4/4: kỹ năng và phẩm chất, nghề nghiệp ở Việt Nam và ở Anh + thi thử 4 (Phần 2
+# của Tom về buổi phỏng vấn thực tập, Phần 3 hỏi hai chiều). Người học tự tạm dừng video, không có khoảng lặng chờ (đợt 25).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U03-speaking-practice-4.yaml
+# Thông tin nhân vật: xem đầu file U01-speaking-practice.yaml, U02-speaking-practice.yaml và U03-speaking-practice.yaml.
+# Cụm hai từ của Unit 3 Consolidation (personal qualities, past experience, computer literate) dùng trong câu hỏi, câu trả lời.
+id: U03-speaking-practice-4
+activity: U03-speaking-vocab
+title: "Unit 3 · Work"
+subtitle: "Speaking practice 4: skills, qualities, jobs in your country + mock test"
+title_vi: "Luyện nói 4/4 — kỹ năng, phẩm chất, nghề nghiệp ở Việt Nam và ở Anh; thi thử Phần 2–3 (buổi phỏng vấn)"
+tag: "UNIT 3 · WORK"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - tom: "Welcome to Speaking practice four for Unit 3: Work, the last practice video."
+        say: "Welcome to Speaking practice four for Unit three: Work, the last practice video."
+        vi: "Video luyện nói 4/4 của Unit 3."
+      - emma: "Today: skills and personal qualities, and jobs in Vietnam and in England. Then a mock test about a job interview. Pause after each question, and answer it yourself first."
+        vi: "Kỹ năng và phẩm chất, nghề nghiệp ở Việt Nam và ở Anh; rồi thi thử. Tạm dừng sau mỗi câu hỏi để tự trả lời."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: kỹ năng, phẩm chất"
+    heading: "Tom and Emma ask each other · Skills and personal qualities"
+    heading_vi: "Kỹ năng và phẩm chất — tự đánh giá, đưa ví dụ, cho lời khuyên"
+    items:
+      - q: "Tom, what are your strengths?"
+        a: "I'm hard-working, and quite good at solving problems. My friends say I'm a good listener, too. But I need to be more patient!"
+        ask: emma
+        by: tom
+        phrases: ["I'm hard-working", "good at solving problems", "a good listener"]
+      - q: "What personal qualities does a teacher need, Emma?"
+        a: "Patience, first of all. You also need energy, a sense of humour, and the ability to explain things in a simple way."
+        ask: tom
+        by: emma
+        phrases: ["…, first of all.", "a sense of humour", "the ability to…"]
+      - q: "Are you computer literate?"
+        a: "Yes, I'd say so. I can use all the usual office programs, and I'm learning to make simple websites in my marketing course."
+        ask: emma
+        by: tom
+        phrases: ["Yes, I'd say so.", "the usual office programs", "I'm learning to…"]
+      - q: "Which skills are the most useful at work?"
+        a: "Communication skills, definitely. Whatever your job is, you need to explain your ideas clearly and listen to other people. Teamwork is important too."
+        ask: tom
+        by: emma
+        phrases: ["Communication skills", "Whatever your job is…", "Teamwork"]
+      - q: "Is past experience more important than qualifications?"
+        a: "For many jobs, yes. A degree shows that you can learn, but experience shows that you can actually do the job. That's why I wanted an internship."
+        ask: emma
+        by: tom
+        phrases: ["For many jobs, yes.", "you can actually do the job", "That's why…"]
+      - q: "How do you deal with stress at work?"
+        a: "I make a list of everything I have to do, and I do the most important things first. And at the weekend, I go for a long walk. It always helps."
+        ask: tom
+        by: emma
+        phrases: ["make a list of…", "most important things first", "It always helps."]
+      - q: "Do you want to get a promotion quickly?"
+        a: "Of course! But first, I want to learn as much as I can. A promotion comes with more responsibility, so you need to be ready for it."
+        ask: emma
+        by: tom
+        phrases: ["Of course!", "as much as I can", "more responsibility"]
+      - q: "What advice would you give to someone who's looking for their first job?"
+        a: "Don't wait for the perfect job. Take a job where you can learn, work hard, and be kind to people. A good reference from your first boss is worth a lot."
+        ask: tom
+        by: emma
+        phrases: ["Don't wait for…", "where you can learn", "is worth a lot"]
+    lines:
+      - {emma: "Tom, what are your strengths?", focus: 0}
+      - tom: "I'm hard-working, and quite good at solving problems. My friends say I'm a good listener, too. But I need to be more patient!"
+        reveal: 0
+        vi: "Chăm chỉ, khá giỏi giải quyết vấn đề; bạn bè bảo biết lắng nghe — nhưng cần kiên nhẫn hơn!"
+      - {tom: "What personal qualities does a teacher need, Emma?", focus: 1}
+      - emma: "Patience, first of all. You also need energy, a sense of humour, and the ability to explain things in a simple way."
+        reveal: 1
+        vi: "Trước hết là kiên nhẫn; rồi năng lượng, óc hài hước và khả năng giải thích đơn giản."
+      - {emma: "Are you computer literate?", focus: 2}
+      - tom: "Yes, I'd say so. I can use all the usual office programs, and I'm learning to make simple websites in my marketing course."
+        reveal: 2
+        vi: "Có thể nói vậy: dùng thạo các phần mềm văn phòng, đang học làm trang web đơn giản ở môn marketing."
+      - {tom: "Which skills are the most useful at work?", focus: 3}
+      - emma: "Communication skills, definitely. Whatever your job is, you need to explain your ideas clearly and listen to other people. Teamwork is important too."
+        reveal: 3
+        vi: "Kỹ năng giao tiếp: làm nghề gì cũng phải trình bày rõ ý và lắng nghe người khác; làm nhóm cũng quan trọng."
+      - {emma: "Is past experience more important than qualifications?", focus: 4}
+      - tom: "For many jobs, yes. A degree shows that you can learn, but experience shows that you can actually do the job. That's why I wanted an internship."
+        reveal: 4
+        vi: "Với nhiều việc là có: bằng cấp cho thấy bạn học được, kinh nghiệm cho thấy bạn làm được — vì thế mới đi thực tập."
+      - {tom: "How do you deal with stress at work?", focus: 5}
+      - emma: "I make a list of everything I have to do, and I do the most important things first. And at the weekend, I go for a long walk. It always helps."
+        reveal: 5
+        vi: "Liệt kê mọi việc, làm việc quan trọng nhất trước; cuối tuần đi bộ đường dài — lần nào cũng đỡ."
+      - {emma: "Do you want to get a promotion quickly?", focus: 6}
+      - tom: "Of course! But first, I want to learn as much as I can. A promotion comes with more responsibility, so you need to be ready for it."
+        reveal: 6
+        vi: "Tất nhiên! Nhưng trước hết muốn học thật nhiều; thăng chức là thêm trách nhiệm, phải sẵn sàng."
+      - {tom: "What advice would you give to someone who's looking for their first job?", focus: 7}
+      - emma: "Don't wait for the perfect job. Take a job where you can learn, work hard, and be kind to people. A good reference from your first boss is worth a lot."
+        reveal: 7
+        vi: "Đừng chờ việc hoàn hảo: chọn việc học được nhiều, làm chăm, tử tế; lời giới thiệu tốt của sếp đầu tiên rất quý."
+
+  - kind: qa
+    chapter: "Hỏi qua lại: nghề nghiệp ở Việt Nam và ở Anh"
+    heading: "Tom and Emma ask each other · Jobs in Vietnam and in England"
+    heading_vi: "Nghề nghiệp ở hai nước — so sánh, nêu lý do"
+    items:
+      - q: "What are the most popular jobs in Vietnam, Tom?"
+        a: "Jobs in technology and banking are very popular, because the salaries are good. A lot of young people also want to work for foreign companies, or start online businesses."
+        ask: emma
+        by: tom
+        phrases: ["very popular", "the salaries are good", "foreign companies"]
+      - q: "What jobs do people do in your hometown, Emma?"
+        a: "Mostly fishing, and jobs in tourism. In summer, the town is full of visitors, so there are lots of jobs in hotels, cafés and shops. In winter, it's very quiet."
+        ask: tom
+        by: emma
+        phrases: ["jobs in tourism", "full of visitors", "very quiet"]
+      - q: "Do people in Vietnam often do the same job as their parents?"
+        a: "Not as much as before. My grandfather was a teacher, and my dad works with coffee, but I chose business. Parents still give a lot of advice, though!"
+        ask: emma
+        by: tom
+        phrases: ["Not as much as before.", "I chose…", "…, though!"]
+      - q: "Is it easy for foreigners to find work in Vietnam?"
+        a: "For English teachers, yes, quite easy. You need a degree and a teaching certificate. For other jobs, it's harder, because you usually need to speak Vietnamese."
+        ask: tom
+        by: emma
+        phrases: ["quite easy", "a teaching certificate", "it's harder, because…"]
+      - q: "Which jobs are badly paid, in your opinion?"
+        a: "Farmers and cleaners, I think. They work very hard, and their work is really important, but their salaries are often very low."
+        ask: emma
+        by: tom
+        phrases: ["…, I think.", "really important", "very low"]
+      - q: "Would you like to work in Vietnam forever?"
+        a: "I'm not sure about forever! I love my life here, but my family is in England, and I'd like to open my own school there one day. Maybe I'll do both."
+        ask: tom
+        by: emma
+        phrases: ["I'm not sure about…", "I love my life here", "Maybe I'll do both."]
+    lines:
+      - {emma: "What are the most popular jobs in Vietnam, Tom?", focus: 0}
+      - tom: "Jobs in technology and banking are very popular, because the salaries are good. A lot of young people also want to work for foreign companies, or start online businesses."
+        reveal: 0
+        vi: "Công nghệ, ngân hàng rất chuộng vì lương tốt; nhiều bạn trẻ muốn làm cho công ty nước ngoài hoặc kinh doanh online."
+      - {tom: "What jobs do people do in your hometown, Emma?", focus: 1}
+      - emma: "Mostly fishing, and jobs in tourism. In summer, the town is full of visitors, so there are lots of jobs in hotels, cafés and shops. In winter, it's very quiet."
+        reveal: 1
+        vi: "Chủ yếu đánh cá và du lịch: mùa hè đông khách, nhiều việc ở khách sạn, quán, cửa hàng; mùa đông rất vắng."
+      - {emma: "Do people in Vietnam often do the same job as their parents?", focus: 2}
+      - tom: "Not as much as before. My grandfather was a teacher, and my dad works with coffee, but I chose business. Parents still give a lot of advice, though!"
+        reveal: 2
+        vi: "Không như trước: ông là thầy giáo, bố làm cà phê, mình chọn kinh doanh; nhưng bố mẹ vẫn khuyên rất nhiều!"
+      - {tom: "Is it easy for foreigners to find work in Vietnam?", focus: 3}
+      - emma: "For English teachers, yes, quite easy. You need a degree and a teaching certificate. For other jobs, it's harder, because you usually need to speak Vietnamese."
+        reveal: 3
+        vi: "Giáo viên tiếng Anh thì khá dễ: cần bằng đại học và chứng chỉ dạy; việc khác khó hơn vì thường phải biết tiếng Việt."
+      - {emma: "Which jobs are badly paid, in your opinion?", focus: 4}
+      - tom: "Farmers and cleaners, I think. They work very hard, and their work is really important, but their salaries are often very low."
+        reveal: 4
+        vi: "Nông dân và lao công: làm rất vất vả, công việc rất quan trọng nhưng lương thường rất thấp."
+      - {tom: "Would you like to work in Vietnam forever?", focus: 5}
+      - emma: "I'm not sure about forever! I love my life here, but my family is in England, and I'd like to open my own school there one day. Maybe I'll do both."
+        reveal: 5
+        vi: "Mãi mãi thì chưa chắc! Rất thích cuộc sống ở đây, nhưng gia đình ở Anh, lại muốn mở trường ở đó; có khi làm cả hai."
+
+  - kind: bullets
+    chapter: "Thi thử 4 · Phần 2"
+    heading: "Part 2 · Describe a job interview that you had."
+    heading_vi: "Thẻ đề Phần 2 — 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what the job was", vi: "đó là công việc gì"}
+      - {en: "how you prepared for the interview", vi: "bạn chuẩn bị thế nào"}
+      - {en: "what happened in the interview", vi: "buổi phỏng vấn diễn ra thế nào"}
+      - {en: "and explain how you felt about it", vi: "và giải thích bạn cảm thấy thế nào"}
+    lines:
+      - emma: "Now, the mock test. In part two, I'd like you to talk for one to two minutes. You have one minute to think, and you can make some notes."
+        vi: "Thi thử Phần 2: 1 phút chuẩn bị, nói 1–2 phút — tạm dừng video nếu muốn tự làm trước."
+      - emma: "Here's your topic. I'd like you to describe a job interview that you had."
+        vi: "Tả một buổi phỏng vấn xin việc bạn đã trải qua."
+      - {emma: "You should say what the job was,", focus: 0}
+      - {emma: "how you prepared for the interview,", focus: 1}
+      - {emma: "what happened in the interview,", focus: 2}
+      - {emma: "and explain how you felt about it.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · my internship interview"
+    heading_vi: "Ghi chú của Tom — buổi phỏng vấn thực tập"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "summer internship · coffee company in Da Lat · marketing · last May", vi: "thực tập hè · công ty cà phê ở Đà Lạt · marketing · tháng 5 vừa rồi"}
+      - {en: "company website · practised with Khoa · a new shirt", vi: "đọc trang web công ty · luyện với Khoa · áo sơ mi mới"}
+      - {en: "three interviewers · why marketing? strengths? · forgot a name! · asked about training", vi: "ba người phỏng vấn · vì sao marketing? điểm mạnh? · quên một cái tên! · hỏi về đào tạo"}
+      - {en: "nervous → proud · offered the place · first real office job", vi: "hồi hộp → tự hào · được nhận · việc văn phòng thật đầu tiên"}
+    lines:
+      - tom: "Here are my notes. I chose my interview for my summer internship, because it was my first real interview."
+        vi: "Tom chọn buổi phỏng vấn thực tập hè — buổi phỏng vấn thật đầu tiên."
+      - emma: "All right? Remember, you have one to two minutes. Can you start speaking now, please?"
+        vi: "Bắt đầu nói nhé."
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — kể chuyện bằng quá khứ đơn, cảm xúc ở đoạn cuối"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my interview for a summer internship. It was last May, at a coffee company in Da Lat, and the job was in the marketing department."
+        say: "I'd like to talk about my interview for a summer internship. It was last May, at a coffee company in Dah Lot, and the job was in the marketing department."
+        note: "what the job was"
+      - text: "To prepare, I read everything on the company's website, and I practised answering questions with my best friend Khoa. I even bought a new shirt!"
+        say: "To prepare, I red everything on the company's website, and I practised answering questions with my best friend Kwah. I even bought a new shirt!"
+        note: "how I prepared"
+      - text: "There were three interviewers. They asked me why I wanted to work in marketing, and what my strengths were. I was so nervous that I forgot one of their names! At the end, I asked about training, and they looked pleased."
+        note: "what happened"
+      - text: "I felt really proud when they called me the next day and offered me the place. It was my first real office job, and I learned a lot that summer."
+        note: "how I felt"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: qa
+    chapter: "Thi thử 4 · Phần 3"
+    heading: "Mock test 4 · Part 3 · Discussion (Emma asks Tom)"
+    heading_vi: "Phần 3 — người mới đi làm: ý kiến + lý do + ví dụ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - q: "What can companies do to help new workers?"
+        a: "They can give them a mentor, an experienced colleague who answers their questions. In my internship, I had a mentor, and she made the first week much easier."
+        phrases: ["give them a mentor", "an experienced colleague", "much easier"]
+      - q: "Is it important to enjoy your job?"
+        a: "Yes, very important, because we spend so much of our lives at work. If you hate your job, it affects your health and your family life."
+        phrases: ["Yes, very important", "so much of our lives", "it affects…"]
+    lines:
+      - emma: "Thank you. Now, part three. I'd like to ask you some more general questions about starting work."
+        focus: 0
+        vi: "Phần 3: câu hỏi chung hơn về việc bắt đầu đi làm."
+      - {emma: "What can companies do to help new workers?", focus: 0}
+      - tom: "They can give them a mentor, an experienced colleague who answers their questions. In my internship, I had a mentor, and she made the first week much easier."
+        reveal: 0
+        vi: "Cử một đồng nghiệp giàu kinh nghiệm hướng dẫn; lúc thực tập có người kèm nên tuần đầu dễ hơn nhiều."
+      - {emma: "Is it important to enjoy your job?", focus: 1}
+      # "our lives" là danh từ (số nhiều của life, /laɪvz/): ⚠ của lệnh phonemes ở câu này là báo nhầm — đừng viết `livz`.
+      - tom: "Yes, very important, because we spend so much of our lives at work. If you hate your job, it affects your health and your family life."
+        reveal: 1
+        vi: "Rất quan trọng vì đời người dành nhiều thời gian ở chỗ làm; ghét việc thì ảnh hưởng sức khỏe và gia đình."
+
+  - kind: qa
+    heading: "Mock test 4 · Part 3 · Discussion (Tom asks Emma)"
+    heading_vi: "Đổi vai — Tom hỏi, Emma trả lời"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - q: "Why do some people choose to work abroad?"
+        a: "Some want a better salary, and others want adventure. In my case, I wanted to learn about a new culture, and teaching English was a way to do that."
+        ask: tom
+        by: emma
+        phrases: ["Some…, and others…", "In my case…", "a way to…"]
+      - q: "Is it a good idea for friends to work together?"
+        a: "It can be great, because you trust each other. But if there's a problem at work, it can damage the friendship. So you need to be honest from the start."
+        ask: tom
+        by: emma
+        phrases: ["It can be great", "damage the friendship", "from the start"]
+    lines:
+      - {tom: "Now let me ask you, Emma. Why do some people choose to work abroad?", focus: 0}
+      - emma: "Some want a better salary, and others want adventure. In my case, I wanted to learn about a new culture, and teaching English was a way to do that."
+        reveal: 0
+        vi: "Có người muốn lương cao, có người muốn phiêu lưu; Emma muốn tìm hiểu văn hóa mới, dạy tiếng Anh là một cách."
+      - {tom: "Is it a good idea for friends to work together?", focus: 1}
+      - emma: "It can be great, because you trust each other. But if there's a problem at work, it can damage the friendship. So you need to be honest from the start."
+        reveal: 1
+        vi: "Có thể rất tốt vì tin nhau; nhưng có chuyện ở chỗ làm thì dễ mất tình bạn — phải thẳng thắn từ đầu."
+      - tom: "Thank you, Emma. That's the end of the speaking test, and the end of our four practice videos for Unit 3."
+        say: "Thank you, Emma. That's the end of the speaking test, and the end of our four practice videos for Unit three."
+        vi: "Hết bài thi, hết bốn video luyện nói Unit 3."
+      - emma: "Now go back to practice one, and try all the questions again, without looking at our answers. Good luck!"
+        vi: "Quay lại video 1, trả lời lại mọi câu hỏi mà không nhìn câu mẫu. Chúc bạn may mắn!"

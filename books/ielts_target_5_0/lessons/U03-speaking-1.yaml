@@ -90,17 +90,17 @@ scenes:
 
   - kind: practice
     heading: "Speaking 1B · Your turn: choose a photo and talk for one minute"
-    heading_vi: "Dùng các cụm từ trong khung — nói thành tiếng 30 giây cho mỗi ảnh"
+    heading_vi: "Dùng các cụm từ trong khung — nói khoảng 30 giây cho mỗi ảnh"
     items:
       - {q: "Photo a: business people in a meeting", hint: "This picture shows people … ing. These people work in / for …"}
       - {q: "Photo d: a camera operator in a TV studio", hint: "This job is interesting / difficult because … I would / wouldn't like to …"}
+    # Không đếm ngược (đợt 25): người học tự tạm dừng video, Emma đọc hết các ảnh để chọn.
     lines:
-      - emma: "Exercise B. Now it's your turn. Choose a photo and talk about it. Use phrases from the box."
-        vi: "Bài B: đến lượt bạn — chọn một ảnh và nói."
-      - {emma: "Photo a: business people in a meeting.", say: "Photo eigh: business people in a meeting.", focus: 0}
-      - {wait: 30}
-      - {emma: "Photo d: a camera operator in a TV studio.", say: "Photo D: a camera operator in a TV studio.", focus: 1}
-      - {wait: 30}
+      - emma: "Exercise B. Now it's your turn. Pause the video, choose a photo, and talk about it for about thirty seconds. Use phrases from the box."
+        say: "Exercise B. Now it's your turn. Pause the video, choose a photo, and talk about it for about thirty seconds. Yooz phrases from the box."
+        vi: "Bài B: tạm dừng video, chọn một ảnh và nói khoảng 30 giây."
+      - {emma: "Photo a: business people in a meeting.", say: "Photo eigh: business people in a meeting.", focus: 0, pause: 0.5}
+      - {emma: "Photo d: a camera operator in a TV studio.", say: "Photo D: a camera operator in a TV studio.", focus: 1, pause: 1.5}
 
   - kind: blanks
     chapter: "Vocabulary 1A: tên nghề"
@@ -189,11 +189,11 @@ scenes:
     heading: "Vocabulary 1D · Talk about your job using the structures in Exercise C"
     heading_vi: "Exam tip: giám khảo hầu như chắc chắn hỏi về công việc — luyện nói nhiều cách"
     items:
-      - text: "I'm a student at the moment, but I'd like to work as an engineer."
+      - text: "I'm a business student at the moment, but I'd like to work as a marketing manager."
         note: "work as + a job"
-      - text: "I hope to work for a big international company, maybe a car company."
+      - text: "I hope to work for a big international company, maybe a coffee company, like my dad."
         note: "work for + a company"
-      - text: "I'm interested in working in the energy industry, because it's growing very fast."
+      - text: "I'm interested in working in the coffee industry, because it's growing very fast."
         note: "work in + an industry"
       - text: "I'd like to work with computers and with people from different countries."
         note: "work with + things / people"

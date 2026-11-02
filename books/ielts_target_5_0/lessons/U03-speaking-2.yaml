@@ -47,7 +47,7 @@ scenes:
     heading_vi: "Nghe Tom trả lời mẫu — chú ý would"
     items:
       - q: "What jobs do the people in your family do?"
-        a: "My father works as an engineer for a construction company, and my mother is a nurse. My sister works in a bank."
+        a: "My father works for a coffee company, and my mother works in her own flower shop. My older sister works as a nurse in Hanoi."
         phrases: ["works as …", "works for …", "works in …"]
         ask: emma
         by: tom
@@ -66,7 +66,9 @@ scenes:
         say: "Exercise eigh. Answer these questions with a partner. Tom, you're my partner today."
         vi: "Bài A: trả lời ba câu hỏi."
       - {emma: "What jobs do the people in your family do?", focus: 0}
-      - {tom: "My father works as an engineer for a construction company, and my mother is a nurse. My sister works in a bank.", reveal: 0}
+      - tom: "My father works for a coffee company, and my mother works in her own flower shop. My older sister works as a nurse in Hanoi."
+        say: "My father works for a coffee company, and my mother works in her own flower shop. My older sister works as a nurse in Ha Noi."
+        reveal: 0
       - {emma: "Do any of your friends or family have a job you would really like?", focus: 1}
       - {tom: "Yes, my uncle is a pilot. I would really like his job, because he travels all over the world.", reveal: 1}
       - {emma: "Is there a job you would like to do more than any other?", focus: 2}
@@ -225,20 +227,23 @@ scenes:
   - kind: practice
     chapter: "Bài C: đến lượt bạn"
     heading: "Speaking 2C · Your turn: card A — describe a job you think is really difficult"
-    heading_vi: "Tạm dừng video để chuẩn bị đủ 1 phút và nói đủ 2 phút"
+    heading_vi: "Chuẩn bị 1 phút, rồi nói khoảng 2 phút — đủ bốn ý trên thẻ"
     items:
       - {q: "Prepare: what the job is · why it is difficult · why some people do it · why you wouldn't like to do it", hint: "Write key words only"}
-      - {q: "Now talk for about two minutes", hint: "I'm going to talk about … · It's difficult because … · Some people do it because … · I wouldn't like to do it because …"}
+      - {q: "Now talk for about two minutes", hint: "I'm going to talk about … · It's difficult because … · Some people do it because …"}
+    # Không đếm ngược (đợt 25): người học tự tạm dừng video để chuẩn bị và nói.
     lines:
-      - emma: "Exercise C. Now it's your turn. Take card A: describe a job you think is really difficult."
-        say: "Exercise C. Now it's your turn. Take card eigh: describe a job you think is really difficult."
-        vi: "Bài C: đến lượt bạn — thẻ A."
-      - {emma: "You have one minute to prepare. Write some key words.", focus: 0}
-      - {wait: 60, note: "Prepare and write notes", vi: "Chuẩn bị: ghi từ khóa cho bốn ý."}
-      - {emma: "Now please speak for about two minutes. Pause the video if you need more time.", focus: 1}
-      - {wait: 60, note: "Speak for two minutes", vi: "Nói liên tục — tạm dừng video nếu cần thêm thời gian."}
-      - emma: "Thank you. Did you talk about all four points on the card?"
-        vi: "Bạn đã nói đủ bốn ý trên thẻ chưa?"
+      - emma: "Exercise C. Now it's your turn. Take card A: describe a job you think is really difficult. Pause the video when I finish."
+        say: "Exercise C. Now it's your turn. Take card eigh: describe a job you think is really difficult. Pause the video when I finish."
+        vi: "Bài C: đến lượt bạn — thẻ A. Nghe hướng dẫn rồi tạm dừng video."
+      - emma: "First, prepare for one minute. Write key words for the four points: what the job is, why it is difficult, why some people do it, and why you wouldn't like to do it."
+        focus: 0
+        pause: 0.5
+        vi: "Chuẩn bị 1 phút: ghi từ khóa cho bốn ý trên thẻ."
+      - emma: "Then talk for about two minutes. Check that you talk about all four points on the card."
+        focus: 1
+        pause: 1.5
+        vi: "Rồi nói khoảng 2 phút, nhớ nói đủ bốn ý."
 
   - kind: bullets
     chapter: "Tổng kết"
