@@ -15,9 +15,9 @@ phút, bỏ phần "Your turn" luyện nói có đếm ngược, làm Unit 0 tr�
 (xóa kịch bản rồi `prune` bỏ khỏi `lessons.json` và xóa `.mp4`):
 - Hiragana 1: Unit 0 học gì, để làm gì, thứ tự video, cách xem; ba loại chữ; あいうえお; hàng か, さ.
 - Hiragana 2: hàng た, な, は, ま, や, ら, わ, ん; cả bảng với JWS-01.
-- Hiragana 3: luyện tập (chữ dễ nhầm, chữ viết tay, nghe – viết, đọc từ đã biết); ゛゜ (JWS-02); ゃゅょ (JWS-03).
-- Hiragana 4 & Katakana 1: っ, ん đôi, trường âm, nhịp, cao độ (JWS-04…08); katakana dùng khi nào, các hàng, cả bảng
-  (JWS-09).
+- Hiragana 3: luyện tập (chữ dễ nhầm, chữ viết tay, nghe – viết); ゛゜ (JWS-02); ゃゅょ (JWS-03).
+- Hiragana 4 & Katakana 1: っ, ん đôi, trường âm, nhịp, cao độ (JWS-04…08); đọc từ đã biết và từ có mọi âm; katakana
+  dùng khi nào, các hàng, cả bảng (JWS-09).
 - Katakana 2: chữ dễ nhầm; ゛゜, ャュョ, ー (JWS-10…12); âm ngoại lai (JWS-13); từ mượn, tên tiếng Việt; chữ Hán.
 - Greetings: câu chào theo tình huống với K00-01; 10 tình huống đố; tự giới thiệu.
 - Numbers: 0–100 với K00-02; bài A, B, C; nghe – viết; tổng kết Unit 0.
@@ -29,6 +29,8 @@ phút, bỏ phần "Your turn" luyện nói có đếm ngược, làm Unit 0 tr�
   video: …" giữa video thành "Next: …"; câu "then your turn" thành "Say it with Yuki"; câu đố đầu mỗi cảnh thêm "Pause
   the video if you need more time". Phần "How the videos work" bỏ đoạn giới thiệu đếm ngược.
 - Lộ trình trong phần mở đầu: hiragana video 1–4, katakana 4–5, chào hỏi 6, số đếm 7.
+- Cân độ dài: Hiragana 3 dựng lần đầu 10:44 → chuyển cảnh "Words you know" sang video 4, bỏ cảnh đọc từ của ゃゅょ
+  (trùng phần đọc từ có mọi âm) → 9:35. Chương của từng phần không còn trùng tên "Goals" / "Read words" / "Review".
 
 **Sửa khác**
 - `books/Genki/book.yaml`: tóm tắt sách và ghi chú hai phiên Unit 0 nói bảy video 7–10 phút, không đếm ngược; chạy lại

@@ -213,8 +213,8 @@ TURN". Đợt 27, người học muốn mỗi video 7–10 phút và không đ�
 |---|---|---|---|
 | Hệ chữ Nhật & hiragana | `U00-01-hiragana-1` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 7 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, tự tạm dừng); ba loại chữ; あいうえお và hàng か, さ từng chữ một (し là shi); đọc từ; viết | 7:41 |
 | | `U00-02-hiragana-2` | Hàng た (ち, つ), な, は (ふ; は / へ làm trợ từ đọc khác), ま, や, ら, わ và ん; đọc từ; ôn; cả bảng 46 chữ với JWS-01 | 9:46 |
-| | `U00-03-hiragana-3` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…); ゛ ゜ theo từng hàng, 25 âm với JWS-02; や to và ゃ nhỏ (びよういん / びょういん), 33 âm ghép với JWS-03 | 9:35 |
-| | `U00-04-hiragana-katakana` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); katakana dùng khi nào, sáu chữ giống hiragana, các hàng, cả bảng với JWS-09 | 9:05 |
+| | `U00-03-hiragana-3` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; ゛ ゜ theo từng hàng, 25 âm với JWS-02; や to và ゃ nhỏ (びよういん / びょういん), 33 âm ghép với JWS-03 | 9:35 |
+| | `U00-04-hiragana-katakana` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ đã biết (からて, すもう…) và từ có mọi âm; katakana dùng khi nào, sáu chữ giống hiragana, các hàng, cả bảng với JWS-09 | 9:05 |
 | | `U00-05-katakana` | Chữ dễ nhầm (シ ツ ソ ン…); ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12); âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | 7:37 |
 | Chào hỏi & số đếm | `U00-06-greetings` | Chào theo giờ, cảm ơn, xin lỗi, đáp lời; tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào — mỗi câu: Emma nói tình huống → Yuki / Takeshi → K00-01; 10 tình huống đố (bài A); tự giới thiệu (bài B) | 8:21 |
 | | `U00-07-numbers` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; đếm 1–20; hàng chục, 100, mọi số đến 99 (K00-02); bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | 8:04 |
@@ -413,7 +413,10 @@ GENKI có 25 video. Bài 6–12 chưa có video.
 - **Video Unit 0 vụn và có đếm ngược** (đợt 27, người học yêu cầu): 19 video 2,5–5 phút, mỗi hàng chữ có đếm ngược
   YOUR TURN. Sửa: gom thành bảy video 7–10 phút bằng một script (bỏ `echo`, câu đó nghỉ 1 giây; bỏ `wait`, câu đố nghỉ
   3 giây, nghe – viết 2,5 giây; câu Emma "then your turn" thành "Say it with Yuki", câu dẫn "Next video: …" giữa video
-  thành "Next: …"); test "Unit 0 7–10 phút, không `wait` / `echo`".
+  thành "Next: …"); test "Unit 0 7–10 phút, không `wait` / `echo`". Lần dựng đầu Hiragana 3 dài 10:44: chuyển cảnh
+  "Words you know" sang video 4 (trước phần đọc từ có mọi âm), bỏ cảnh đọc từ của ゃゅょ (おちゃ, しゃしん có lại ở video
+  4) → 9:35. Mỗi phần giữa video có cảnh mở đầu nên chương "Goals" bị trùng: chương mang tên phần, chương trùng tên
+  ("Read words", "Review", "Book audio") ghi thêm phần (`Read words · た な`).
 - **Emma đọc romaji kiểu tiếng Anh** (đợt 23, lệnh `phonemes` và soát phiên âm từng câu có romaji): chi thành "kai",
   ji thành "jai", ki thành "kai", ya thành "yuh", nguyên âm a i u e o thành tên chữ cái "ay, eye, you, ee, oh", Takeshi
   thành "Take-shi", Ai Honda thành "A-I Honda", desu thành "di-soo", ng thành "en-gee"; động từ use / uses đọc như danh
