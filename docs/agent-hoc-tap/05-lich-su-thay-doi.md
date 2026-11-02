@@ -8,7 +8,7 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 ## Đợt 26 — 02/11/2026: Oxford Word Skills Basic trong tab Sách, 7 video Unit 1–7
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 25 (`5f8359c`). Người học đã đưa file sách lên `main`
-(`cbfc72c`, chỉ có PDF quét). Đợt này đẩy lên nhánh; lên `main` khi người học đồng ý (đợt 24–25 có yêu cầu riêng).
+(`cbfc72c`, chỉ có PDF quét). Xong đợt này đẩy lên nhánh, rồi lên `main` theo yêu cầu người học (như đợt 24–25).
 
 ### Yêu cầu
 
