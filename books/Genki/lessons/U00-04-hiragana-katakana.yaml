@@ -243,6 +243,46 @@ scenes:
         pause: 1
 
   - kind: jp
+    chapter: "Words you know"
+    heading: "Read words you already know · Then check"
+    items:
+      - jp: "からて ・ きもの ・ つなみ ・ すもう"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "からて ・ きもの ・ つなみ ・ すもう"
+        romaji: "karate · kimono · tsunami · sumoo"
+        en: "karate · kimono · tsunami · sumo"
+        vi: "karate · kimono · sóng thần · sumo"
+      - jp: "さむらい ・ はいく ・ すきやき ・ さしみ"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "さむらい ・ はいく ・ すきやき ・ さしみ"
+        romaji: "samurai · haiku · sukiyaki · sashimi"
+        en: "samurai · haiku · sukiyaki · sashimi"
+        vi: "samurai · thơ haiku · lẩu sukiyaki · sashimi"
+    lines:
+      - emma: "You already know many Japanese words. Here they are in hiragana. Read them aloud. Pause the video if you need more time."
+        vi: "Bạn đã biết nhiều từ tiếng Nhật rồi. Đây là chúng khi viết bằng hiragana. Hãy đọc to. Cần thêm thời gian thì tạm dừng video."
+        pause: 3
+      - yuki: "からて、きもの、つなみ、すもう。"
+        focus: 1
+        en: "karate, kimono, tsunami, sumo"
+        vi: "karate, kimono, sóng thần, sumo"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+        pause: 3
+      - yuki: "さむらい、はいく、すきやき、さしみ。"
+        say: "さむらい、ハイク、すきやき、さしみ。"
+        focus: 3
+        en: "samurai, haiku, sukiyaki, sashimi"
+        vi: "samurai, thơ haiku, lẩu sukiyaki, sashimi"
+        pause: 1
+
+  - kind: jp
     chapter: "Read words"
     heading: "Read words with every sound · Then check"
     items:
@@ -284,7 +324,7 @@ scenes:
         vi: "Giỏi lắm! Bạn đã đọc được mọi âm trong hiragana. Tiếp theo: katakana, bảng chữ cái thứ hai."
 
   - kind: jp
-    chapter: "Goals"
+    chapter: "Katakana, the second alphabet"
     heading: "Katakana, the second alphabet"
     items:
       - jp: "カタカナ"

@@ -29,8 +29,8 @@ scenes:
         vi: "Chào mừng bạn trở lại. Bạn đã biết cả 46 chữ. Video này bắt đầu bằng phần luyện tập."
       - emma: "Some letters look alike, so you will learn how to tell them apart."
         vi: "Có những chữ trông giống nhau, nên bạn sẽ học cách phân biệt chúng."
-      - emma: "Then you will write letters you hear, and read words you already know. After that: two small marks that change the sound of a letter, and small letters that join two sounds into one."
-        vi: "Sau đó bạn sẽ viết những chữ nghe được, và đọc những từ đã biết. Rồi đến hai dấu nhỏ làm đổi âm của chữ, và những chữ nhỏ ghép hai âm thành một."
+      - emma: "Then you will write letters you hear. After that: two small marks that change the sound of a letter, and small letters that join two sounds into one."
+        vi: "Sau đó bạn sẽ viết những chữ nghe được. Rồi đến hai dấu nhỏ làm đổi âm của chữ, và những chữ nhỏ ghép hai âm thành một."
 
   - kind: jp
     chapter: "Look-alike letters"
@@ -252,51 +252,11 @@ scenes:
         pause: 0.5
       - emma: "How many did you get right? If you missed some, watch the row videos again."
         vi: "Bạn đúng được mấy câu? Nếu sai vài câu, hãy xem lại video của các hàng đó."
-
-  - kind: jp
-    chapter: "Words you know"
-    heading: "Read words you already know · Then check"
-    items:
-      - jp: "からて ・ きもの ・ つなみ ・ すもう"
-        quiz: true
-        en: "Read the four words aloud, then check."
-        vi: "Đọc to bốn từ, rồi xem đáp án."
-      - jp: "からて ・ きもの ・ つなみ ・ すもう"
-        romaji: "karate · kimono · tsunami · sumoo"
-        en: "karate · kimono · tsunami · sumo"
-        vi: "karate · kimono · sóng thần · sumo"
-      - jp: "さむらい ・ はいく ・ すきやき ・ さしみ"
-        quiz: true
-        en: "Read the four words aloud, then check."
-        vi: "Đọc to bốn từ, rồi xem đáp án."
-      - jp: "さむらい ・ はいく ・ すきやき ・ さしみ"
-        romaji: "samurai · haiku · sukiyaki · sashimi"
-        en: "samurai · haiku · sukiyaki · sashimi"
-        vi: "samurai · thơ haiku · lẩu sukiyaki · sashimi"
-    lines:
-      - emma: "You already know many Japanese words. Here they are in hiragana. Read them aloud. Pause the video if you need more time."
-        vi: "Bạn đã biết nhiều từ tiếng Nhật rồi. Đây là chúng khi viết bằng hiragana. Hãy đọc to. Cần thêm thời gian thì tạm dừng video."
-        pause: 3
-      - yuki: "からて、きもの、つなみ、すもう。"
-        focus: 1
-        en: "karate, kimono, tsunami, sumo"
-        vi: "karate, kimono, sóng thần, sumo"
-        pause: 1
-      - emma: "Four more."
-        vi: "Thêm bốn từ nữa."
-        focus: 2
-        pause: 3
-      - yuki: "さむらい、はいく、すきやき、さしみ。"
-        say: "さむらい、ハイク、すきやき、さしみ。"
-        focus: 3
-        en: "samurai, haiku, sukiyaki, sashimi"
-        vi: "samurai, thơ haiku, lẩu sukiyaki, sashimi"
-        pause: 1
       - emma: "Next: two small marks that change the sound of a letter."
         vi: "Tiếp theo: hai dấu nhỏ làm thay đổi âm của một chữ."
 
   - kind: jp
-    chapter: "Goals"
+    chapter: "Two small marks ゛ ゜"
     heading: "Two small marks ゛ ゜"
     items:
       - jp: "か → が ・ は → ぱ"
@@ -408,7 +368,7 @@ scenes:
         pause: 1
 
   - kind: jp
-    chapter: "Book audio"
+    chapter: "Book audio · ゛ ゜"
     heading: "All 25 sounds · Read along with the book's audio"
     items:
       - jp: "が　ぎ　ぐ　げ　ご\nざ　じ　ず　ぜ　ぞ\nだ　ぢ　づ　で　ど\nば　び　ぶ　べ　ぼ\nぱ　ぴ　ぷ　ぺ　ぽ"
@@ -467,7 +427,7 @@ scenes:
         vi: "Tiếp theo: những chữ nhỏ ghép hai âm thành một."
 
   - kind: jp
-    chapter: "Goals"
+    chapter: "Small ゃ ゅ ょ"
     heading: "Small ゃ ゅ ょ"
     items:
       - jp: "き + ゃ → きゃ"
@@ -611,7 +571,7 @@ scenes:
         pause: 1
 
   - kind: jp
-    chapter: "Book audio"
+    chapter: "Book audio · ゃ ゅ ょ"
     heading: "All 33 contracted sounds · Read along with the book's audio"
     items:
       - jp: "きゃ　きゅ　きょ　　　ひゃ　ひゅ　ひょ　　　じゃ　じゅ　じょ\nしゃ　しゅ　しょ　　　みゃ　みゅ　みょ　　　びゃ　びゅ　びょ\nちゃ　ちゅ　ちょ　　　りゃ　りゅ　りょ　　　ぴゃ　ぴゅ　ぴょ\nにゃ　にゅ　にょ　　　ぎゃ　ぎゅ　ぎょ"
@@ -628,45 +588,6 @@ scenes:
         hl: [0, 1, 2, 9, 10, 11, 18, 19, 20, 27, 28, 29, 3, 4, 5, 12, 13, 14, 21, 22, 23, 30, 31, 32, 6, 7, 8, 15, 16,
              17, 24, 25, 26]
         step: 1.2
-        pause: 1
-
-  - kind: jp
-    chapter: "Read words"
-    heading: "Read words · Then check"
-    items:
-      - jp: "おちゃ ・ しゃしん ・ じしょ ・ ひゃく"
-        quiz: true
-        en: "Read the four words aloud, then check."
-        vi: "Đọc to bốn từ, rồi xem đáp án."
-      - jp: "おちゃ ・ しゃしん ・ じしょ ・ ひゃく"
-        romaji: "ocha · shashin · jisho · hyaku"
-        en: "tea · photo · dictionary · hundred"
-        vi: "trà · bức ảnh · từ điển · một trăm"
-      - jp: "でんしゃ ・ かいしゃ ・ としょかん ・ きゃく"
-        quiz: true
-        en: "Read the four words aloud, then check."
-        vi: "Đọc to bốn từ, rồi xem đáp án."
-      - jp: "でんしゃ ・ かいしゃ ・ としょかん ・ きゃく"
-        romaji: "densha · kaisha · toshokan · kyaku"
-        en: "train · company · library · guest"
-        vi: "tàu điện · công ty · thư viện · khách"
-    lines:
-      - emma: "Read these four words aloud, then check with Yuki. Pause the video if you need more time."
-        vi: "Đọc to bốn từ này, rồi kiểm tra cùng Yuki. Cần thêm thời gian thì tạm dừng video."
-        pause: 3
-      - yuki: "おちゃ、しゃしん、じしょ、ひゃく。"
-        focus: 1
-        en: "tea, photo, dictionary, hundred"
-        vi: "trà, bức ảnh, từ điển, một trăm"
-        pause: 1
-      - emma: "Four more."
-        vi: "Thêm bốn từ nữa."
-        focus: 2
-        pause: 3
-      - yuki: "でんしゃ、かいしゃ、としょかん、きゃく。"
-        focus: 3
-        en: "train, company, library, guest"
-        vi: "tàu điện, công ty, thư viện, khách"
         pause: 1
       - emma: "Next video: a small tsu, long vowels, and the rhythm of Japanese."
         vi: "Video tiếp theo: tsu nhỏ, nguyên âm dài, và nhịp điệu của tiếng Nhật."
