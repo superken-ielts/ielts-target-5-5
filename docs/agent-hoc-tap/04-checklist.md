@@ -433,6 +433,10 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Giữ nguyên tô sáng chữ đang đọc, lời dịch từng câu, nhịp chậm, audio gốc; mỗi video mở đầu bằng "học gì, để làm gì", mỗi phần mở bằng câu dẫn "Next: …".
   - Test: Unit 0 có 7 video 7–10 phút, không `wait` / `echo`; e2e: thẻ GENKI có 25 video, Unit 0 có 7 nút theo thứ tự (Hiragana × 4, Katakana, Greetings, Numbers), mỗi video 7–10 phút.
 - [ ] **P2-61** Video GENKI bài 1–5 theo kiểu Unit 0 (tầng 2–3 theo câu đang nói, tô sáng chỗ đang đọc, 7–10 phút, không đếm ngược) nếu người học cần; bài 6–12 làm theo kế hoạch ở file 07 mục 4.5.
+- [x] **P2-62** **Giao diện trải hết bề ngang trên màn hình rộng** (đợt 28), theo yêu cầu người học: trước đây nội dung chỉ nằm trong cột 700px ở giữa, bên phải bỏ trống.
+  - Từ 900px trở lên (menu nằm dọc bên trái): header và nội dung trải hết bề ngang bên phải menu, lề hai bên 28px. Dưới 900px (điện thoại) giữ nguyên.
+  - Video bài giảng rộng bằng khung nhưng không cao quá màn hình (`width: min(100%, (100vh − 190px) × 16/9)`), căn giữa.
+  - E2E: ở khung 1440×900, `main` bắt đầu ngay sau menu và chạm mép phải, header rộng hơn 1100px, video Unit 6 (Oxford Word Skills Basic) rộng hơn 900px mà vẫn thấp hơn màn hình.
 
 ### Cổng G2
 

@@ -5,6 +5,47 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 28 — 02/11/2026: giao diện trải hết bề ngang trên màn hình rộng
+
+Nhánh `claude/cool-archimedes-xalg78`, đẩy lên nhánh và `main` theo yêu cầu người học. Làm trong `git worktree` sạch từ
+`main` (`2f441fe`, sau đợt 27 của phiên làm GENKI), vì hàng đợi dựng video module People của Oxford Word Skills Basic đang
+chạy và ghi `lessons.json` ở thư mục chính (cách làm ở file 08 mục 6.5).
+
+### Yêu cầu
+
+Người học gửi ảnh chụp màn hình rộng: nội dung chỉ nằm trong cột hẹp ở giữa, bên phải bỏ trống. Yêu cầu: "cập nhật thêm
+ui full hết bên phải ở đây", xong thì commit và đẩy lên `main`.
+
+### Đã làm
+
+- Từ 900px trở lên (menu nằm dọc bên trái), `.wrap` bỏ giới hạn 700px. Header và nội dung trải hết bề ngang bên phải
+  menu, lề hai bên 28px. Dưới 900px (điện thoại) giữ nguyên.
+- Video bài giảng rộng bằng khung nhưng không cao quá màn hình: `width: min(100%, (100vh − 190px) × 16/9)`, căn giữa. Ở
+  khung 1600×1000, video khoảng 1260×710 thay vì 668×376 như trước.
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `web/app.template.html` | `@media (min-width:900px)`: `.wrap{max-width:none; padding:0 28px}` (trước là `max-width:700px`) |
+| `web/src/book/book.css` | `.bk-video video`: rộng tối đa bằng khung, cao không quá màn hình, căn giữa |
+| `tests/web/book.e2e.mjs` | Bước mới "màn hình rộng" ở khung 1440×900 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-62 (xong) |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không thêm, không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn |
+| `cd agents && python -m pytest -q` | 140 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 19/19 bước OK. Bước mới: ở khung 1440×900, `main` bắt đầu ngay sau menu (210px) và chạm mép phải, header rộng hơn 1100px, video Unit 6 rộng hơn 900px mà vẫn thấp hơn màn hình |
+
+---
+
 ## Đợt 27 — 02/11/2026: GENKI Unit 0 gom thành bảy video 7–10 phút, bỏ đếm ngược
 
 Nhánh `claude/nifty-darwin-23vvae` (gộp `main` tới đợt 26), đẩy lên `main`. Người học yêu cầu: gom video thành 7–10

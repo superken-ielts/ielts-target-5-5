@@ -499,6 +499,26 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
+  await step("màn hình rộng: nội dung trải hết bề ngang bên phải menu, video to nhưng vừa màn hình", async () => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.click('nav button[data-go="book"]');
+    await page.waitForSelector("#p-book .bk-lib");
+    const navW = (await page.locator("nav").boundingBox()).width;          // menu dọc bên trái (210px)
+    const main = await page.locator("main.wrap").boundingBox();
+    assert.ok(Math.abs(main.x - navW) < 2 && main.x + main.width > 1440 - 20, "main: " + JSON.stringify(main));
+    assert.ok((await page.locator("header .wrap").boundingBox()).width > 1100);
+    const card = page.locator("#p-book .bk-lib", { hasText: "Oxford Word Skills Basic" });
+    await card.locator(".btn-primary").click();
+    await page.waitForSelector("#p-book .bk-next");
+    await page.locator("#p-book .bk-unit", { hasText: "Unit 6 · English language words" }).locator(".bk-vids button").click();
+    await page.waitForSelector("#p-book .bk-video video");
+    const v = await page.locator("#p-book .bk-video video").boundingBox();
+    assert.ok(v.width > 900 && v.height < 900 - 150, "video: " + JSON.stringify(v));   // to hơn hẳn cột 700px cũ, vẫn nằm trọn trong màn hình
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+    await page.setViewportSize({ width: 390, height: 844 });
+  });
+
   await step("xem checklist triển khai ngay trong app", async () => {
     await page.click('nav button[data-go="book"]');
     assert.match(await page.textContent("#p-book"), /Đã xong\s*\d+\/\d+ task/);
