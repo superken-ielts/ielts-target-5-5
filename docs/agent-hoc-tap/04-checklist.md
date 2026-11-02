@@ -427,6 +427,10 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - `phonemes` bắt "close";
     - e2e: thứ tự menu Sách, thẻ 92 phiên × 30 phút, Unit 1–7 mỗi unit một video 7–10 phút, thẻ unit một trang ghi "Trang 21" (không phải "21–21"), phiên Unit 6 mở trang in 21 (PDF 22) và Answer key tr. 206.
 - [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5 (gợi ý module People ở mục 5.8). Làm thêm video cho phiên Review nếu người học cần.
+- [x] **P2-60** **Giao diện trải hết bề ngang trên màn hình rộng** (đợt 27), theo yêu cầu người học: trước đây nội dung chỉ nằm trong cột 700px ở giữa, bên phải bỏ trống.
+  - Từ 900px trở lên (menu nằm dọc bên trái): header và nội dung trải hết bề ngang bên phải menu, lề hai bên 28px. Dưới 900px (điện thoại) giữ nguyên.
+  - Video bài giảng rộng bằng khung nhưng không cao quá màn hình (`width: min(100%, (100vh − 190px) × 16/9)`), căn giữa.
+  - E2E: ở khung 1440×900, `main` bắt đầu ngay sau menu và chạm mép phải, header rộng hơn 1100px, video Unit 6 (Oxford Word Skills Basic) rộng hơn 900px mà vẫn thấp hơn màn hình.
 
 ### Cổng G2
 
