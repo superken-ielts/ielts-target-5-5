@@ -1,0 +1,655 @@
+# U00 · Greetings — GENKI I あいさつ (trang 30–34). Video 7–10 phút, không đếm ngược (đợt 27): chào theo giờ trong
+# ngày, cảm ơn, xin lỗi, đáp lời; tạm biệt, ở nhà, bữa ăn, gặp lần đầu và cúi chào; mỗi câu chào Emma nói tình huống →
+# Yuki / Takeshi → audio gốc K00-01 (mỗi câu tiếng Nhật rồi lời dịch tiếng Anh, nên mỗi câu một dòng `start` / `end`,
+# `step: 0`). Cuối video: 10 tình huống của bài luyện A dạng đố (Emma nói tình huống, nghỉ 3 giây, thẻ đáp án), tự
+# giới thiệu (bài B).
+id: U00-06-greetings
+activity: U00-greetings
+title: "Unit 0 · Greetings and Numbers"
+subtitle: "Greetings · Every day, at home, meeting people, ten situations"
+title_vi: "Chào hỏi — câu chào theo giờ, cảm ơn, xin lỗi, tạm biệt, ở nhà, bữa ăn, gặp lần đầu; luyện 10 tình huống, tự giới thiệu"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+  takeshi: {name: Takeshi, role: Japanese student, lang: ja, voice: {kokoro: jm_kumo}, color: "#8E5BD0", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Everyday greetings"
+    items:
+      - jp: "あいさつ"
+        romaji: "aisatsu"
+        en: "Greetings: the Japanese you use every day. Each greeting belongs to a situation."
+        vi: "Câu chào hỏi: tiếng Nhật bạn dùng hằng ngày. Mỗi câu chào gắn với một tình huống."
+    lines:
+      - emma: "Welcome back. Now that you can read Japanese, it is time to speak. This video is about greetings."
+        vi: "Chào mừng bạn trở lại. Giờ bạn đã đọc được tiếng Nhật, đến lúc nói rồi. Video này nói về câu chào hỏi."
+      - yuki: "あいさつ。"
+        en: "greetings"
+        vi: "chào hỏi"
+        pause: 1
+      - emma: "In Japanese, each greeting belongs to a situation, so we will learn them by situation."
+        vi: "Trong tiếng Nhật, mỗi câu chào gắn với một tình huống, nên ta sẽ học theo tình huống."
+      - emma: "Why now? You will use them from your first day, and Lesson 1 begins with greetings. At the end, you will practise them in ten situations, and introduce yourself."
+        vi: "Vì sao học ngay? Bạn sẽ dùng chúng từ ngày đầu tiên, và bài 1 mở đầu bằng câu chào hỏi. Cuối video, bạn sẽ luyện trong mười tình huống, và tự giới thiệu."
+
+  - kind: jp
+    chapter: "Good morning"
+    heading: "Good morning · short or polite"
+    items:
+      - jp: "おはよう。\nおはよう ございます。"
+        romaji: "Ohayoo.\nOhayoo gozaimasu."
+        en: "Good morning. The short form for friends and family; add ございます for teachers, colleagues and people you don't know well."
+        vi: "Chào buổi sáng. Dạng ngắn với bạn bè, gia đình; thêm ございます với thầy cô, đồng nghiệp, người không thân."
+    lines:
+      - emma: "In the morning, friends and family say the short form."
+        vi: "Buổi sáng, bạn bè và người trong nhà nói dạng ngắn."
+      - yuki: "おはよう。"
+        hl: 0
+        en: "Good morning. (to friends)"
+        vi: "Chào buổi sáng. (với bạn bè)"
+        pause: 1
+      - emma: "To your teacher, or to anyone you don't know well, add the polite ending. Here is Takeshi, greeting his teacher."
+        say: "To your teacher, or to anyone you don't know well, add the polite ending. Here is Tahkehshee, greeting his teacher."
+        vi: "Với thầy cô, hay với người không thân, hãy thêm đuôi lịch sự. Đây là Takeshi đang chào thầy giáo."
+      - takeshi: "おはようございます。"
+        hl: [1, 2]
+        en: "Good morning. (polite)"
+        vi: "Chào buổi sáng. (lịch sự)"
+        pause: 1
+      - emma: "Now the native speakers from your textbook."
+        vi: "Giờ là giọng người Nhật trong audio của sách."
+      - track: "K00-01"
+        start: 2.5
+        end: 6.4
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Good morning."
+        vi: "Chào buổi sáng."
+      - track: "K00-01"
+        start: 7.2
+        end: 11.7
+        hl: [1, 2]
+        step: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Good morning. (polite)"
+        vi: "Chào buổi sáng. (lịch sự)"
+        pause: 1
+
+  - kind: jp
+    chapter: "Hello, good evening"
+    heading: "Hello · Good evening"
+    items:
+      - jp: "こんにちは。\nこんばんは。"
+        romaji: "Konnichiwa.\nKonbanwa."
+        en: "Hello, good afternoon — from late morning. Good evening. The last letter is written は but read wa."
+        vi: "Xin chào (ban ngày, từ cuối buổi sáng). Chào buổi tối. Chữ cuối viết は nhưng đọc là “wa”."
+    lines:
+      - emma: "From late morning, say hello, or good afternoon. The last letter is written ha, but you say wa."
+        vi: "Từ cuối buổi sáng, hãy nói “xin chào”. Chữ cuối viết là “ha” nhưng đọc là “wa”."
+      - yuki: "こんにちは。"
+        hl: 0
+        en: "Hello. Good afternoon."
+        vi: "Xin chào."
+        pause: 1
+      - emma: "In the evening: good evening. Again, the last letter is read wa."
+        vi: "Buổi tối: chào buổi tối. Chữ cuối cũng đọc là “wa”."
+      - takeshi: "こんばんは。"
+        hl: 1
+        en: "Good evening."
+        vi: "Chào buổi tối."
+        pause: 1
+      - track: "K00-01"
+        start: 12.6
+        end: 17.0
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Good afternoon."
+        vi: "Xin chào."
+      - track: "K00-01"
+        start: 17.8
+        end: 21.9
+        hl: 1
+        note: "あいさつ · Greetings · K00-01"
+        en: "Good evening."
+        vi: "Chào buổi tối."
+        pause: 1
+
+  - kind: jp
+    chapter: "Good night"
+    heading: "Good night · when someone goes to bed"
+    items:
+      - jp: "おやすみ(なさい)。"
+        romaji: "Oyasumi (nasai)."
+        en: "Good night — when someone goes to bed. なさい makes it more polite."
+        vi: "Chúc ngủ ngon — khi đi ngủ. Thêm なさい thì lịch sự hơn."
+    lines:
+      - emma: "Before bed, say good night. The longer form is more polite."
+        vi: "Trước khi đi ngủ, hãy chúc ngủ ngon. Dạng dài thì lịch sự hơn."
+      - yuki: "おやすみなさい。"
+        en: "Good night."
+        vi: "Chúc ngủ ngon."
+        pause: 1
+      - track: "K00-01"
+        start: 27.5
+        end: 31.6
+        note: "あいさつ · Greetings · K00-01"
+        en: "Good night."
+        vi: "Chúc ngủ ngon."
+        pause: 1
+
+  - kind: jp
+    chapter: "Thank you"
+    heading: "Thank you · short or polite"
+    items:
+      - jp: "ありがとう。\nありがとう ございます。"
+        romaji: "Arigatoo.\nArigatoo gozaimasu."
+        en: "Thank you. The same rule: short with friends, long with everyone else."
+        vi: "Cảm ơn. Cùng quy tắc: dạng ngắn với bạn bè, dạng dài với người khác."
+    lines:
+      - emma: "Thank you. The same rule: the short form with friends."
+        vi: "Cảm ơn. Cùng một quy tắc: dạng ngắn với bạn bè."
+      - yuki: "ありがとう。"
+        hl: 0
+        en: "Thank you. (to friends)"
+        vi: "Cảm ơn. (với bạn bè)"
+        pause: 1
+      - emma: "And the polite form with everyone else."
+        vi: "Và dạng lịch sự với mọi người khác."
+      - takeshi: "ありがとうございます。"
+        hl: [1, 2]
+        en: "Thank you. (polite)"
+        vi: "Cảm ơn. (lịch sự)"
+        pause: 1
+      - track: "K00-01"
+        start: 32.4
+        end: 36.3
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Thank you."
+        vi: "Cảm ơn."
+      - track: "K00-01"
+        start: 37.1
+        end: 41.7
+        hl: [1, 2]
+        step: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Thank you. (polite)"
+        vi: "Cảm ơn. (lịch sự)"
+        pause: 1
+
+  - kind: jp
+    chapter: "Excuse me, not at all"
+    heading: "Excuse me, I'm sorry · Not at all"
+    items:
+      - jp: "すみません。"
+        romaji: "Sumimasen."
+        en: "Three uses: excuse me (to get attention), I'm sorry, and thank you — when someone took trouble for you."
+        vi: "Ba nghĩa: xin lỗi cho tôi hỏi (gọi ai đó), tôi xin lỗi, và cảm ơn — khi ai đó đã mất công vì bạn."
+      - jp: "いいえ。"
+        romaji: "Iie."
+        en: "No. After thanks or an apology it means not at all, you're welcome."
+        vi: "Không. Đáp lại lời cảm ơn, xin lỗi thì nghĩa là không có gì."
+      - jp: "すみません。 ・ いいえ。"
+        romaji: "Sumimasen. · Iie."
+        en: "I'm sorry. — Not at all."
+        vi: "Xin lỗi. — Không sao đâu."
+    lines:
+      - emma: "This word is very useful. It means excuse me, and I'm sorry. It can also mean thank you, when someone took trouble for you."
+        vi: "Từ này rất hữu ích. Nó nghĩa là “xin lỗi cho hỏi” và “tôi xin lỗi”. Nó cũng có thể nghĩa là “cảm ơn”, khi ai đó đã mất công vì bạn."
+      - yuki: "すみません。"
+        en: "Excuse me. / I'm sorry."
+        vi: "Xin lỗi."
+        pause: 1
+      - track: "K00-01"
+        start: 42.3
+        end: 48.5
+        note: "あいさつ · Greetings · K00-01"
+        en: "Excuse me. I'm sorry."
+        vi: "Xin lỗi cho tôi hỏi. Tôi xin lỗi."
+        pause: 1
+      - emma: "No. After thanks or an apology, it means not at all."
+        vi: "Không. Đáp lại lời cảm ơn hay xin lỗi, nó nghĩa là “không có gì”."
+        focus: 1
+      - takeshi: "いいえ。"
+        en: "No. / Not at all."
+        vi: "Không. / Không có gì."
+        pause: 1
+      - track: "K00-01"
+        start: 49.3
+        end: 53.6
+        note: "あいさつ · Greetings · K00-01"
+        en: "No, not at all."
+        vi: "Không, không có gì."
+        pause: 1
+      - emma: "Together: Yuki says sorry, and Takeshi answers."
+        say: "Together: Yuki says sorry, and Tahkehshee answers."
+        vi: "Cả hai câu: Yuki xin lỗi, và Takeshi đáp lời."
+        focus: 2
+      - yuki: "すみません。"
+        hl: 0
+        en: "I'm sorry."
+        vi: "Xin lỗi."
+      - takeshi: "いいえ。"
+        hl: 1
+        en: "Not at all."
+        vi: "Không sao đâu."
+        pause: 1
+
+  - kind: jp
+    chapter: "Review"
+    heading: "Review · Say each greeting"
+    items:
+      - jp: "おはようございます ・ こんにちは ・ こんばんは ・ おやすみなさい ・ ありがとうございます ・ すみません ・ いいえ"
+        romaji: "ohayoo gozaimasu · konnichiwa · konbanwa · oyasumi nasai · arigatoo gozaimasu · sumimasen · iie"
+        en: "Good morning · hello · good evening · good night · thank you · excuse me, sorry · not at all"
+        vi: "Chào buổi sáng · xin chào · chào buổi tối · chúc ngủ ngon · cảm ơn · xin lỗi · không có gì"
+    lines:
+      - emma: "Review. Say each greeting with Yuki, then on your own."
+        vi: "Ôn tập. Nói từng câu chào cùng Yuki, rồi tự nói một mình."
+      - yuki: "おはようございます、こんにちは、こんばんは、おやすみなさい、ありがとうございます、すみません、いいえ。"
+        step: 1.2
+        en: "Good morning, hello, good evening, good night, thank you, sorry, not at all"
+        vi: "Chào buổi sáng, xin chào, chào buổi tối, chúc ngủ ngon, cảm ơn, xin lỗi, không có gì"
+        pause: 1
+      - emma: "Next: goodbye, at home, meals, and meeting someone for the first time."
+        vi: "Tiếp theo: chào tạm biệt, ở nhà, bữa ăn, và gặp ai đó lần đầu."
+
+  - kind: jp
+    chapter: "Goodbye"
+    heading: "Goodbye · three ways"
+    items:
+      - jp: "さようなら。"
+        romaji: "Sayoonara."
+        en: "Goodbye. It sounds final and formal; in daily life it is mostly children saying goodbye to their teacher."
+        vi: "Tạm biệt. Nghe trang trọng, như lâu nữa mới gặp lại; hằng ngày chủ yếu học sinh chào thầy cô."
+      - jp: "じゃあ、また。"
+        romaji: "Jaa, mata."
+        en: "See you — between friends who will meet again soon."
+        vi: "Gặp lại sau nhé — giữa bạn bè sắp gặp lại."
+      - jp: "しつれいします。"
+        romaji: "Shitsuree shimasu."
+        en: "Excuse me for leaving — when you leave a teacher's or a boss's office."
+        vi: "Xin phép (tôi đi) — khi rời phòng thầy cô hay sếp."
+    lines:
+      - emma: "This famous goodbye sounds quite final and formal. In daily life, it is mostly children saying goodbye to their teacher."
+        vi: "Câu tạm biệt nổi tiếng này nghe khá trang trọng, như lâu nữa mới gặp. Hằng ngày, chủ yếu học sinh dùng để chào thầy cô."
+      - yuki: "さようなら。"
+        en: "Goodbye."
+        vi: "Tạm biệt."
+        pause: 1
+      - track: "K00-01"
+        start: 22.8
+        end: 26.7
+        note: "あいさつ · Greetings · K00-01"
+        en: "Goodbye."
+        vi: "Tạm biệt."
+        pause: 1
+      - emma: "Between friends, say: see you."
+        vi: "Giữa bạn bè, hãy nói: gặp lại sau nhé."
+        focus: 1
+      - takeshi: "じゃあ、また。"
+        en: "See you."
+        vi: "Gặp lại sau nhé."
+        pause: 1
+      - emma: "And when you leave a teacher's office, say this."
+        vi: "Còn khi rời phòng thầy cô, hãy nói câu này."
+        focus: 2
+      - yuki: "しつれいします。"
+        en: "Excuse me (for leaving)."
+        vi: "Em xin phép ạ."
+        pause: 1
+
+  - kind: jp
+    chapter: "At home"
+    heading: "Leaving home and coming home"
+    items:
+      - jp: "いってきます。 ・ いってらっしゃい。"
+        romaji: "Itte kimasu. · Itterasshai."
+        en: "Leaving home: \"I'll go and come back.\" — \"Please go and come back.\""
+        vi: "Rời nhà: “Con đi đây (rồi về).” — “Đi nhé (rồi về).”"
+      - jp: "ただいま。 ・ おかえり(なさい)。"
+        romaji: "Tadaima. · Okaeri (nasai)."
+        en: "Coming home: \"I'm home.\" — \"Welcome home.\""
+        vi: "Về nhà: “Con về rồi.” — “Về rồi à.”"
+    lines:
+      - emma: "At home, Japanese families use two pairs every day. Takeshi is leaving home, and Yuki answers."
+        say: "At home, Japanese families yooz two pairs every day. Tahkehshee is leaving home, and Yuki answers."
+        vi: "Ở nhà, các gia đình Nhật dùng hai cặp câu mỗi ngày. Takeshi ra khỏi nhà, và Yuki đáp lời."
+      - takeshi: "いってきます。"
+        hl: 0
+        en: "I'll go and come back."
+        vi: "Con đi đây."
+      - yuki: "いってらっしゃい。"
+        hl: 1
+        en: "Please go and come back."
+        vi: "Đi nhé."
+        pause: 1
+      - track: "K00-01"
+        start: 54.4
+        end: 59.1
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "I'll go and come back."
+        vi: "Con đi đây."
+      - track: "K00-01"
+        start: 59.9
+        end: 64.8
+        hl: 1
+        note: "あいさつ · Greetings · K00-01"
+        en: "Please go and come back."
+        vi: "Đi nhé."
+        pause: 1
+      - emma: "Now he comes back home."
+        vi: "Giờ cậu ấy về nhà."
+        focus: 1
+      - takeshi: "ただいま。"
+        hl: 0
+        en: "I'm home."
+        vi: "Con về rồi."
+      - yuki: "おかえりなさい。"
+        hl: 1
+        en: "Welcome home."
+        vi: "Về rồi à."
+        pause: 1
+      - track: "K00-01"
+        start: 65.6
+        end: 69.6
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "I'm home."
+        vi: "Con về rồi."
+      - track: "K00-01"
+        start: 70.4
+        end: 75.0
+        hl: 1
+        note: "あいさつ · Greetings · K00-01"
+        en: "Welcome home."
+        vi: "Về rồi à."
+        pause: 1
+
+  - kind: jp
+    chapter: "Meals"
+    heading: "Before and after eating"
+    items:
+      - jp: "いただきます。 ・ ごちそうさま(でした)。"
+        romaji: "Itadakimasu. · Gochisoosama (deshita)."
+        en: "Before eating: \"I humbly receive.\" After eating: \"Thank you for the meal.\""
+        vi: "Trước khi ăn: “Xin phép ăn ạ.” Sau khi ăn: “Cảm ơn vì bữa ăn.”"
+    lines:
+      - emma: "Before eating, say this. Many people put their hands together."
+        vi: "Trước khi ăn, hãy nói câu này. Nhiều người chắp hai tay lại."
+      - yuki: "いただきます。"
+        hl: 0
+        en: "I humbly receive. (before eating)"
+        vi: "Xin phép ăn ạ. (trước khi ăn)"
+        pause: 1
+      - emma: "After eating, say thank you for the meal. You can also say it to the cook, or to the restaurant staff."
+        vi: "Ăn xong, hãy cảm ơn vì bữa ăn. Bạn cũng có thể nói với người nấu, hay nhân viên nhà hàng."
+      - takeshi: "ごちそうさまでした。"
+        hl: 1
+        en: "Thank you for the meal."
+        vi: "Cảm ơn vì bữa ăn."
+        pause: 1
+      - track: "K00-01"
+        start: 75.8
+        end: 80.5
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Thank you for the meal. (before eating)"
+        vi: "Xin phép ăn ạ."
+      - track: "K00-01"
+        start: 81.3
+        end: 86.4
+        hl: 1
+        note: "あいさつ · Greetings · K00-01"
+        en: "Thank you for the meal. (after eating)"
+        vi: "Cảm ơn vì bữa ăn."
+        pause: 1
+
+  - kind: jp
+    chapter: "Meeting someone"
+    heading: "Meeting someone for the first time"
+    items:
+      - jp: "はじめまして。 ・ ほんだ あいです。 ・ よろしく おねがいします。"
+        romaji: "Hajimemashite. · Honda Ai desu. · Yoroshiku onegai shimasu."
+        en: "How do you do? · I'm Ai Honda. · Nice to meet you."
+        vi: "Rất vui được gặp. · Tôi là Honda Ai. · Rất mong được giúp đỡ."
+    lines:
+      - emma: "When you meet someone for the first time, say this. You only say it once, at the first meeting."
+        vi: "Khi gặp ai đó lần đầu, hãy nói câu này. Chỉ nói một lần, khi gặp lần đầu."
+      - yuki: "はじめまして。"
+        hl: 0
+        en: "How do you do?"
+        vi: "Rất vui được gặp bạn."
+        pause: 1
+      - emma: "Then your name, and desu, which means am."
+        say: "Then your name, and dess, which means am."
+        vi: "Rồi đến tên của bạn, và “desu”, nghĩa là “là”."
+      - emma: "Finish with this phrase. It means nice to meet you, and please be kind to me."
+        vi: "Kết thúc bằng câu này. Nó nghĩa là “rất vui được gặp”, và “mong được giúp đỡ”."
+        hl: [3, 4]
+      - yuki: "よろしくおねがいします。"
+        hl: [3, 4]
+        en: "Nice to meet you."
+        vi: "Rất mong được giúp đỡ."
+        pause: 1
+      - emma: "Here is Ai Honda introducing herself, from your textbook's audio."
+        say: "Here is Eye Honda introducing herself, from your textbook's audio."
+        vi: "Đây là Honda Ai tự giới thiệu, trong audio của sách."
+      - track: "K00-01"
+        start: 87.2
+        end: 91.6
+        hl: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "How do you do?"
+        vi: "Rất vui được gặp."
+      - track: "K00-01"
+        start: 92.4
+        end: 97.3
+        hl: [1, 2]
+        step: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "I am Ai Honda."
+        vi: "Tôi là Honda Ai."
+      - track: "K00-01"
+        start: 98.1
+        end: 103.1
+        hl: [3, 4]
+        step: 0
+        note: "あいさつ · Greetings · K00-01"
+        en: "Nice to meet you."
+        vi: "Rất mong được giúp đỡ."
+        pause: 1
+      - emma: "In Japan, people greet each other with a bow. A deeper, longer bow is more polite."
+        vi: "Ở Nhật, mọi người chào nhau bằng cách cúi người. Cúi càng sâu, càng lâu thì càng lịch sự."
+      - emma: "Now, practice. Choose the right greeting in ten situations, and introduce yourself."
+        vi: "Giờ là luyện tập. Chọn đúng câu chào trong mười tình huống, và tự giới thiệu."
+
+  - kind: jp
+    chapter: "What do you say?"
+    heading: "What do you say? · Ten situations"
+    items:
+      - jp: "① なんと いいますか。"
+        quiz: true
+        en: "1 p.m. You see your neighbour, Mr. Yamada."
+        vi: "1 giờ chiều. Bạn gặp hàng xóm, ông Yamada."
+      - jp: "こんにちは。"
+        romaji: "Konnichiwa."
+        en: "Good afternoon."
+        vi: "Xin chào."
+      - jp: "② なんと いいますか。"
+        quiz: true
+        en: "Morning class: greet your teacher."
+        vi: "Buổi sáng ở lớp: chào thầy cô."
+      - jp: "おはよう ございます。"
+        romaji: "Ohayoo gozaimasu."
+        en: "Good morning. (polite, to the teacher)"
+        vi: "Chào buổi sáng. (lịch sự, với thầy cô)"
+      - jp: "③ なんと いいますか。"
+        quiz: true
+        en: "On a crowded train, you step on someone's foot."
+        vi: "Trên tàu đông người, bạn giẫm phải chân ai đó."
+      - jp: "すみません。"
+        romaji: "Sumimasen."
+        en: "I'm sorry."
+        vi: "Xin lỗi."
+      - jp: "④ なんと いいますか。"
+        quiz: true
+        en: "You drop your book. Someone picks it up for you."
+        vi: "Bạn làm rơi sách, có người nhặt giúp."
+      - jp: "ありがとう ございます。"
+        romaji: "Arigatoo gozaimasu."
+        en: "Thank you. すみません is also possible."
+        vi: "Cảm ơn. Nói すみません cũng được."
+      - jp: "⑤ なんと いいますか。"
+        quiz: true
+        en: "8 p.m. You meet your teacher at a convenience store."
+        vi: "8 giờ tối. Bạn gặp thầy cô ở cửa hàng tiện lợi."
+      - jp: "こんばんは。"
+        romaji: "Konbanwa."
+        en: "Good evening."
+        vi: "Chào buổi tối."
+      - jp: "⑥ なんと いいますか。"
+        quiz: true
+        en: "You are watching TV with your host family. It is time to go to bed."
+        vi: "Bạn đang xem TV với gia đình người Nhật. Đến giờ đi ngủ."
+      - jp: "おやすみなさい。"
+        romaji: "Oyasumi nasai."
+        en: "Good night."
+        vi: "Chúc ngủ ngon."
+      - jp: "⑦ なんと いいますか。"
+        quiz: true
+        en: "You are leaving home."
+        vi: "Bạn ra khỏi nhà."
+      - jp: "いってきます。"
+        romaji: "Itte kimasu."
+        en: "I'll go and come back."
+        vi: "Con đi đây."
+      - jp: "⑧ なんと いいますか。"
+        quiz: true
+        en: "You come back home."
+        vi: "Bạn về đến nhà."
+      - jp: "ただいま。"
+        romaji: "Tadaima."
+        en: "I'm home."
+        vi: "Con về rồi."
+      - jp: "⑨ なんと いいますか。"
+        quiz: true
+        en: "You are going to start eating."
+        vi: "Bạn chuẩn bị ăn."
+      - jp: "いただきます。"
+        romaji: "Itadakimasu."
+        en: "Before eating."
+        vi: "Xin phép ăn ạ."
+      - jp: "⑩ なんと いいますか。"
+        quiz: true
+        en: "You have finished eating."
+        vi: "Bạn ăn xong."
+      - jp: "ごちそうさまでした。"
+        romaji: "Gochisoosama deshita."
+        en: "Thank you for the meal."
+        vi: "Cảm ơn vì bữa ăn."
+    lines:
+      - emma: "Your turn. In each situation, say the right greeting before Yuki does. Pause the video if you need more time."
+        vi: "Đến lượt bạn. Trong mỗi tình huống, hãy nói câu chào đúng trước khi Yuki nói. Cần thêm thời gian thì tạm dừng video."
+      - emma: "One: it is one in the afternoon, and you see your neighbour."
+        vi: "Một: một giờ chiều, bạn gặp người hàng xóm."
+        pause: 3
+      - yuki: "こんにちは。"
+        focus: 1
+        pause: 1
+      - emma: "Two: you come to class in the morning, and greet your teacher."
+        vi: "Hai: buổi sáng bạn đến lớp, và chào thầy cô."
+        focus: 2
+        pause: 3
+      - takeshi: "おはようございます。"
+        focus: 3
+        pause: 1
+      - emma: "Three: on a crowded train, you step on someone's foot."
+        vi: "Ba: trên tàu đông người, bạn giẫm phải chân ai đó."
+        focus: 4
+        pause: 3
+      - yuki: "すみません。"
+        focus: 5
+        pause: 1
+      - emma: "Four: you drop your book, and someone picks it up for you."
+        vi: "Bốn: bạn làm rơi sách, và có người nhặt giúp."
+        focus: 6
+        pause: 3
+      - takeshi: "ありがとうございます。"
+        focus: 7
+        pause: 1
+      - emma: "Five: it is eight in the evening. You meet your teacher at a convenience store."
+        vi: "Năm: tám giờ tối. Bạn gặp thầy cô ở cửa hàng tiện lợi."
+        focus: 8
+        pause: 3
+      - yuki: "こんばんは。"
+        focus: 9
+        pause: 1
+      - emma: "Six: you are watching TV with your host family, and it is time to go to bed."
+        vi: "Sáu: bạn đang xem TV với gia đình người Nhật, và đến giờ đi ngủ."
+        focus: 10
+        pause: 3
+      - yuki: "おやすみなさい。"
+        focus: 11
+        pause: 1
+      - emma: "Seven: you are leaving home."
+        vi: "Bảy: bạn ra khỏi nhà."
+        focus: 12
+        pause: 3
+      - takeshi: "いってきます。"
+        focus: 13
+        pause: 1
+      - emma: "Eight: you come back home."
+        vi: "Tám: bạn về đến nhà."
+        focus: 14
+        pause: 3
+      - takeshi: "ただいま。"
+        focus: 15
+        pause: 1
+      - emma: "Nine: you are going to start eating."
+        vi: "Chín: bạn chuẩn bị ăn."
+        focus: 16
+        pause: 3
+      - yuki: "いただきます。"
+        focus: 17
+        pause: 1
+      - emma: "Ten: you have finished eating."
+        vi: "Mười: bạn ăn xong."
+        focus: 18
+        pause: 3
+      - takeshi: "ごちそうさまでした。"
+        focus: 19
+        pause: 1
+
+  - kind: jp
+    chapter: "Introduce yourself"
+    heading: "Introduce yourself · and bow a little"
+    items:
+      - jp: "はじめまして。 ・ たけしです。 ・ よろしくおねがいします。"
+        romaji: "Hajimemashite. · Takeshi desu. · Yoroshiku onegai shimasu."
+        en: "How do you do? I'm Takeshi. Nice to meet you."
+        vi: "Rất vui được gặp. Mình là Takeshi. Rất mong được giúp đỡ."
+      - jp: "はじめまして。 ・ 〔なまえ〕です。 ・ よろしくおねがいします。"
+        romaji: "Hajimemashite. · (your name) desu. · Yoroshiku onegai shimasu."
+        en: "Your turn: say it with your own name, then bow a little."
+        vi: "Đến lượt bạn: nói với tên của mình, rồi cúi chào nhẹ."
+    lines:
+      - emma: "Finally, Takeshi introduces himself. Listen."
+        say: "Finally, Tahkehshee introduces himself. Listen."
+        vi: "Cuối cùng, Takeshi tự giới thiệu. Hãy nghe."
+      - takeshi: "はじめまして。たけしです。よろしくおねがいします。"
+        en: "How do you do? I'm Takeshi. Nice to meet you."
+        vi: "Rất vui được gặp. Mình là Takeshi. Rất mong được giúp đỡ."
+        pause: 1
+      - emma: "Now you. Pause the video, introduce yourself with your own name, and bow a little at the end."
+        vi: "Giờ đến bạn. Tạm dừng video, tự giới thiệu với tên của mình, và cúi chào nhẹ ở cuối."
+        focus: 1
+      - emma: "Next video: numbers, from zero to one hundred."
+        vi: "Video tiếp theo: số đếm, từ 0 đến 100."

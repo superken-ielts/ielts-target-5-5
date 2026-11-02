@@ -427,6 +427,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - `phonemes` bắt "close";
     - e2e: thứ tự menu Sách, thẻ 92 phiên × 30 phút, Unit 1–7 mỗi unit một video 7–10 phút, thẻ unit một trang ghi "Trang 21" (không phải "21–21"), phiên Unit 6 mở trang in 21 (PDF 22) và Answer key tr. 206.
 - [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5 (gợi ý module People ở mục 5.8). Làm thêm video cho phiên Review nếu người học cần.
+- [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
+  - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
+  - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
+  - Giữ nguyên tô sáng chữ đang đọc, lời dịch từng câu, nhịp chậm, audio gốc; mỗi video mở đầu bằng "học gì, để làm gì", mỗi phần mở bằng câu dẫn "Next: …".
+  - Test: Unit 0 có 7 video 7–10 phút, không `wait` / `echo`; e2e: thẻ GENKI có 25 video, Unit 0 có 7 nút theo thứ tự (Hiragana × 4, Katakana, Greetings, Numbers), mỗi video 7–10 phút.
+- [ ] **P2-61** Video GENKI bài 1–5 theo kiểu Unit 0 (tầng 2–3 theo câu đang nói, tô sáng chỗ đang đọc, 7–10 phút, không đếm ngược) nếu người học cần; bài 6–12 làm theo kế hoạch ở file 07 mục 4.5.
 
 ### Cổng G2
 

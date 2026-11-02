@@ -1,0 +1,485 @@
+# U00 · Hiragana 4 & Katakana 1 — GENKI I, Japanese Writing System (trang 22–25). Video 7–10 phút, không đếm ngược
+# (đợt 27): っ nhỏ với audio gốc JWS-04 (mỗi từ một dòng `start` / `end`: っ là khoảng lặng giữa từ), ん + hàng な
+# (JWS-05), trường âm (JWS-06 từ 10.0 giây), ん đọc n / m / ng, nguyên âm bị nuốt (JWS-07), cao độ (JWS-08), đọc từ;
+# rồi katakana: dùng khi nào, sáu chữ giống hiragana, các hàng theo nhóm, cả bảng với JWS-09 (`start: 7.6`).
+# Cách đọc: ヘ đọc riêng bằng katakana là "he" (không bị coi là trợ từ như へ).
+id: U00-04-hiragana-katakana
+activity: U00-kana
+title: "Unit 0 · The Japanese Writing System"
+subtitle: "Hiragana 4 & Katakana 1 · Small っ, long vowels, the katakana chart"
+title_vi: "Hiragana 4 & Katakana 1 — っ nhỏ, trường âm, nhịp và cao độ; katakana: sáu chữ giống hiragana, bảng 46 chữ"
+tag: "GENKI L0 · N5"
+gap: 0.8
+scene_gap: 1.5
+step: 0.9
+speakers:
+  emma: {name: Emma, role: guide, voice: {kokoro: bf_emma}, color: "#00A8B5", speed: 0.9}
+  yuki: {name: Yuki, role: Japanese tutor, lang: ja, voice: {kokoro: jf_alpha}, color: "#F39C12", speed: 0.78}
+
+scenes:
+  - kind: jp
+    chapter: "Goals"
+    heading: "In this video · Length, then katakana"
+    items:
+      - jp: "おばさん ・ おばあさん"
+        romaji: "obasan · obaasan"
+        en: "aunt · grandmother. Goals: the small っ, long vowels, and the even rhythm of Japanese."
+        vi: "cô, dì · bà. Mục tiêu: っ nhỏ, nguyên âm dài, và nhịp đều của tiếng Nhật."
+    lines:
+      - emma: "Welcome back. This video has two parts. First, the last hiragana lesson. It is about length."
+        vi: "Chào mừng bạn trở lại. Video này có hai phần. Phần đầu là bài hiragana cuối cùng, về độ dài."
+      - emma: "In Japanese, every beat has the same length, and one extra beat can change the word. Listen: aunt, and grandmother."
+        vi: "Trong tiếng Nhật, mọi nhịp đều dài bằng nhau, và chỉ thêm một nhịp là đổi từ. Hãy nghe: cô, và bà."
+      - yuki: "おばさん、おばあさん。"
+        en: "aunt, grandmother"
+        vi: "cô / dì, bà"
+        pause: 1
+      - emma: "After this part, you can read every sound in hiragana. Then you will start katakana, the second alphabet."
+        vi: "Học xong phần này, bạn đọc được mọi âm trong hiragana. Sau đó bạn sẽ bắt đầu katakana, bảng chữ cái thứ hai."
+
+  - kind: jp
+    chapter: "Small っ"
+    heading: "Small っ · a one-beat stop"
+    items:
+      - jp: "かった ・ かた"
+        romaji: "katta · kata"
+        en: "won · shoulder. The small っ is a short stop, one beat long, before the next consonant: kat-ta."
+        vi: "thắng · vai. っ nhỏ là một nhịp ngắt trước phụ âm sau: kát-ta. Thiếu っ là thành từ khác."
+      - jp: "さっか ・ はっぱ ・ ざっし"
+        romaji: "sakka · happa · zasshi"
+        en: "writer · leaf · magazine"
+        vi: "nhà văn · lá cây · tạp chí"
+      - jp: "かった ・ かた ・ さっか ・ はっぱ ・ ざっし"
+        romaji: "katta · kata · sakka · happa · zasshi"
+        en: "Listen to the native speaker: feel the short stop before the double consonant."
+        vi: "Nghe người Nhật đọc, chú ý nhịp ngắt trước phụ âm đôi."
+    lines:
+      - emma: "A small tsu is not read tsu. It is a short stop, one beat long, before the next sound. Compare: won, and shoulder."
+        vi: "Chữ tsu nhỏ không đọc là “tsu”. Nó là một nhịp ngắt ngắn trước âm sau. So sánh: thắng, và vai."
+      - yuki: "かった、かた。"
+        en: "won (kat-ta), shoulder (ka-ta)"
+        vi: "thắng (kát-ta), vai (ka-ta)"
+        pause: 1
+      - emma: "Three more: writer, leaf, and magazine."
+        vi: "Thêm ba từ: nhà văn, lá cây, và tạp chí."
+        focus: 1
+      - yuki: "さっか、はっぱ、ざっし。"
+        en: "writer, leaf, magazine"
+        vi: "nhà văn, lá cây, tạp chí"
+        pause: 1
+      - emma: "Now the native speaker from your book. Repeat each word in the pause."
+        vi: "Giờ là người Nhật trong audio của sách. Đọc theo từng từ trong khoảng nghỉ."
+        focus: 2
+      - track: "JWS-04"
+        start: 6.0
+        end: 7.5
+        hl: 0
+        note: "Japanese Writing System · JWS-04"
+        en: "won"
+        vi: "thắng"
+        pause: 1.2
+      - track: "JWS-04"
+        start: 7.8
+        end: 9.1
+        hl: 1
+        note: "Japanese Writing System · JWS-04"
+        en: "shoulder"
+        vi: "vai"
+        pause: 1.2
+      - track: "JWS-04"
+        start: 9.4
+        end: 11.0
+        hl: 2
+        note: "Japanese Writing System · JWS-04"
+        en: "writer"
+        vi: "nhà văn"
+        pause: 1.2
+      - track: "JWS-04"
+        start: 11.4
+        end: 13.0
+        hl: 3
+        note: "Japanese Writing System · JWS-04"
+        en: "leaf"
+        vi: "lá cây"
+        pause: 1.2
+      - track: "JWS-04"
+        start: 13.6
+        hl: 4
+        note: "Japanese Writing System · JWS-04"
+        en: "magazine"
+        vi: "tạp chí"
+        pause: 1.2
+
+  - kind: jp
+    chapter: "Double n"
+    heading: "Double n · ん + a letter from the な row"
+    items:
+      - jp: "さんねん ・ あんない"
+        romaji: "sannen · annai"
+        en: "three years · guide. A double n is written ん + a letter from the な row."
+        vi: "ba năm · hướng dẫn. Âm n đôi viết bằng ん + một chữ hàng な."
+    lines:
+      - emma: "A double n is different. You write the letter n, then a letter from the na row. Three years, and guide."
+        vi: "Âm n đôi thì khác. Bạn viết chữ n, rồi một chữ hàng na. Ba năm, và hướng dẫn."
+      - track: "JWS-05"
+        start: 3.0
+        note: "Japanese Writing System · JWS-05"
+        en: "three years, guide"
+        vi: "ba năm, hướng dẫn"
+        step: 1.2
+        pause: 1
+      - yuki: "さんねん、あんない。"
+        en: "three years, guide"
+        vi: "ba năm, hướng dẫn"
+        pause: 1
+
+  - kind: jp
+    chapter: "Long vowels"
+    heading: "Long vowels · hold for two beats"
+    items:
+      - jp: "おばあさん ・ おばさん"
+        romaji: "obaasan · obasan"
+        en: "grandmother · aunt. Hold a long vowel for two beats."
+        vi: "bà · cô / dì. Trường âm kéo dài hai nhịp; sai độ dài là sai nghĩa."
+      - jp: "おじいさん ・ おじさん"
+        romaji: "ojiisan · ojisan"
+        en: "grandfather · uncle"
+        vi: "ông · chú / bác"
+      - jp: "すうじ ・ えいが ・ おねえさん"
+        romaji: "suuji · eega · oneesan"
+        en: "number · movie · big sister. A long e is usually written えい (said ee), sometimes ええ."
+        vi: "con số · phim · chị gái. e dài thường viết えい (đọc “ê-ê”), đôi khi ええ."
+      - jp: "ほうりつ ・ とお"
+        romaji: "hooritsu · too"
+        en: "law · ten. A long o is usually written おう, sometimes おお."
+        vi: "luật · mười. o dài thường viết おう, đôi khi おお."
+      - jp: "おばあさん ・ おばさん\nおじいさん ・ おじさん\nすうじ\nえいが ・ おねえさん\nほうりつ ・ とお"
+        en: "Listen to the native speaker and copy the length of each vowel."
+        vi: "Nghe người Nhật đọc và bắt chước đúng độ dài từng nguyên âm."
+    lines:
+      - emma: "A long vowel is the same vowel held for two beats. Grandmother, and aunt."
+        vi: "Nguyên âm dài là cùng một nguyên âm kéo dài hai nhịp. Bà, và cô."
+      - yuki: "おばあさん、おばさん。"
+        en: "grandmother, aunt"
+        vi: "bà, cô / dì"
+        pause: 1
+      - emma: "Grandfather, and uncle."
+        vi: "Ông, và chú."
+        focus: 1
+      - yuki: "おじいさん、おじさん。"
+        en: "grandfather, uncle"
+        vi: "ông, chú / bác"
+        pause: 1
+      - emma: "A long u is written with u. A long e is usually written with i, but you say a long e. Number, movie, big sister."
+        say: "A long oo is written with oo. A long eh is usually written with ee, but you say a long eh. Number, movie, big sister."
+        vi: "U dài viết thêm う. E dài thường viết thêm い, nhưng đọc là “ê” kéo dài. Con số, phim, chị gái."
+        focus: 2
+      - yuki: "すうじ、えいが、おねえさん。"
+        en: "number, movie, big sister"
+        vi: "con số, phim, chị gái"
+        pause: 1
+      - emma: "A long o is usually written with u. Law, and ten."
+        say: "A long oh is usually written with oo. Law, and ten."
+        vi: "O dài thường viết thêm う. Luật, và mười."
+        focus: 3
+      - yuki: "ほうりつ、とお。"
+        en: "law, ten"
+        vi: "luật, mười"
+        pause: 1
+      - emma: "Now the book's audio. Copy the length of each vowel."
+        vi: "Giờ là audio của sách. Bắt chước đúng độ dài từng nguyên âm."
+        focus: 4
+      - track: "JWS-06"
+        start: 10.0
+        note: "Japanese Writing System · JWS-06"
+        en: "grandmother · aunt · grandfather · uncle · number · movie · big sister · law · ten"
+        vi: "bà · cô · ông · chú · con số · phim · chị gái · luật · mười"
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Rhythm and pitch"
+    heading: "ん, whispered vowels, and pitch"
+    items:
+      - jp: "おんな ・ さんぽ ・ まんが"
+        romaji: "onna · sanpo · manga"
+        en: "woman · walk · comics. ん changes with the next sound: n, m or ng."
+        vi: "phụ nữ · đi dạo · truyện tranh. ん đổi theo âm sau: “n” trước n, t, d…; “m” trước m, p, b; “ng” trước k, g."
+      - jp: "すきです。"
+        romaji: "Suki desu."
+        en: "I like it. Between voiceless sounds, i and u are often whispered: it sounds like 'ski-des'."
+        vi: "Tôi thích. i và u nằm giữa các âm vô thanh thường bị nuốt: nghe như “x-ki-đê-x”."
+      - jp: "あさ ・ なまえ ・ たかい"
+        romaji: "asa · namae · takai"
+        en: "morning · name · high. Japanese has high and low pitch, not stress. Every beat has the same length."
+        vi: "buổi sáng · tên · cao. Tiếng Nhật có cao – thấp, không có thanh điệu như tiếng Việt hay trọng âm như tiếng Anh; mỗi nhịp dài bằng nhau."
+    lines:
+      - emma: "Three last points about sound. First, the letter n changes a little with the next sound: n, m, or ng, as in sing."
+        say: "Three last points about sound. First, the letter n changes a little with the next sound: n, m, or the ng in sing."
+        vi: "Ba điểm cuối về âm. Thứ nhất, chữ n đổi một chút theo âm đứng sau: n, m, hoặc ng như trong “sing”."
+      - yuki: "おんな、さんぽ、まんが。"
+        en: "woman, walk, comics"
+        vi: "phụ nữ, đi dạo, truyện tranh"
+        pause: 1
+      - emma: "Second, i and u are often whispered between sounds like s and k. Listen to the book: I like it."
+        say: "Second, ee and oo are often whispered between sounds like s and k. Listen to the book: I like it."
+        vi: "Thứ hai, i và u thường bị nuốt khi nằm giữa các âm như s và k. Nghe sách đọc: Tôi thích."
+        focus: 1
+      - track: "JWS-07"
+        start: 4.5
+        note: "Japanese Writing System · JWS-07"
+        en: "I like it."
+        vi: "Tôi thích."
+        pause: 1.2
+      - emma: "Third, pitch. Japanese has no tones like Vietnamese, but each beat is high or low. Listen: morning, name, high."
+        vi: "Thứ ba, cao độ. Tiếng Nhật không có thanh điệu như tiếng Việt, nhưng mỗi nhịp có cao hoặc thấp. Hãy nghe: buổi sáng, tên, cao."
+        focus: 2
+      - track: "JWS-08"
+        start: 5.0
+        note: "Japanese Writing System · JWS-08"
+        en: "morning, name, high"
+        vi: "buổi sáng, tên, cao"
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Words you know"
+    heading: "Read words you already know · Then check"
+    items:
+      - jp: "からて ・ きもの ・ つなみ ・ すもう"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "からて ・ きもの ・ つなみ ・ すもう"
+        romaji: "karate · kimono · tsunami · sumoo"
+        en: "karate · kimono · tsunami · sumo"
+        vi: "karate · kimono · sóng thần · sumo"
+      - jp: "さむらい ・ はいく ・ すきやき ・ さしみ"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "さむらい ・ はいく ・ すきやき ・ さしみ"
+        romaji: "samurai · haiku · sukiyaki · sashimi"
+        en: "samurai · haiku · sukiyaki · sashimi"
+        vi: "samurai · thơ haiku · lẩu sukiyaki · sashimi"
+    lines:
+      - emma: "You already know many Japanese words. Here they are in hiragana. Read them aloud. Pause the video if you need more time."
+        vi: "Bạn đã biết nhiều từ tiếng Nhật rồi. Đây là chúng khi viết bằng hiragana. Hãy đọc to. Cần thêm thời gian thì tạm dừng video."
+        pause: 3
+      - yuki: "からて、きもの、つなみ、すもう。"
+        focus: 1
+        en: "karate, kimono, tsunami, sumo"
+        vi: "karate, kimono, sóng thần, sumo"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+        pause: 3
+      - yuki: "さむらい、はいく、すきやき、さしみ。"
+        say: "さむらい、ハイク、すきやき、さしみ。"
+        focus: 3
+        en: "samurai, haiku, sukiyaki, sashimi"
+        vi: "samurai, thơ haiku, lẩu sukiyaki, sashimi"
+        pause: 1
+
+  - kind: jp
+    chapter: "Read words"
+    heading: "Read words with every sound · Then check"
+    items:
+      - jp: "がくせい ・ でんわ ・ きって ・ しゃしん"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "がくせい ・ でんわ ・ きって ・ しゃしん"
+        romaji: "gakusee · denwa · kitte · shashin"
+        en: "student · telephone · stamp · photo"
+        vi: "sinh viên · điện thoại · tem · ảnh"
+      - jp: "おちゃ ・ じてんしゃ ・ ぎゅうにゅう ・ りょこう"
+        quiz: true
+        en: "Read the four words aloud, then check."
+        vi: "Đọc to bốn từ, rồi xem đáp án."
+      - jp: "おちゃ ・ じてんしゃ ・ ぎゅうにゅう ・ りょこう"
+        romaji: "ocha · jitensha · gyuunyuu · ryokoo"
+        en: "tea · bicycle · milk · travel"
+        vi: "trà · xe đạp · sữa · du lịch"
+    lines:
+      - emma: "Read these words aloud. They use every kind of sound you have learned. Pause the video if you need more time."
+        vi: "Đọc to những từ này. Chúng có đủ mọi loại âm bạn đã học. Cần thêm thời gian thì tạm dừng video."
+        pause: 3
+      - yuki: "がくせい、でんわ、きって、しゃしん。"
+        focus: 1
+        en: "student, telephone, stamp, photo"
+        vi: "sinh viên, điện thoại, tem, ảnh"
+        pause: 1
+      - emma: "Four more."
+        vi: "Thêm bốn từ nữa."
+        focus: 2
+        pause: 3
+      - yuki: "おちゃ、じてんしゃ、ぎゅうにゅう、りょこう。"
+        focus: 3
+        en: "tea, bicycle, milk, travel"
+        vi: "trà, xe đạp, sữa, du lịch"
+        pause: 1
+      - emma: "Well done! You can read every sound in hiragana. Next: katakana, the second alphabet."
+        vi: "Giỏi lắm! Bạn đã đọc được mọi âm trong hiragana. Tiếp theo: katakana, bảng chữ cái thứ hai."
+
+  - kind: jp
+    chapter: "Katakana, the second alphabet"
+    heading: "Katakana, the second alphabet"
+    items:
+      - jp: "カタカナ"
+        romaji: "katakana"
+        en: "The same sounds as hiragana, with straighter shapes. Used for words from other languages and foreign names."
+        vi: "Cùng các âm như hiragana nhưng nét thẳng, góc cạnh hơn. Dùng cho từ mượn tiếng nước ngoài và tên người nước ngoài."
+      - jp: "ベトナム ・ ハノイ ・ コーヒー"
+        romaji: "betonamu · hanoi · koohii"
+        en: "Vietnam · Hanoi · coffee — all written in katakana."
+        vi: "Việt Nam · Hà Nội · cà phê — đều viết bằng katakana."
+    lines:
+      - emma: "You can read hiragana. Now: katakana, the second alphabet."
+        vi: "Bạn đã đọc được hiragana. Giờ là katakana, bảng chữ cái thứ hai."
+      - yuki: "カタカナ。"
+        en: "katakana"
+        vi: "katakana"
+        pause: 1
+      - emma: "Katakana has exactly the same sounds as hiragana, but the shapes are straighter."
+        vi: "Katakana có đúng các âm như hiragana, nhưng nét chữ thẳng hơn."
+      - emma: "Why learn it? Japanese uses katakana for words from other languages, and for foreign names. For example: Vietnam, Hanoi, and coffee."
+        say: "Why learn it? Japanese yoozes katakana for words from other languages, and for foreign names. For example: Vietnam, Hanoi, and coffee."
+        vi: "Học để làm gì? Tiếng Nhật dùng katakana cho từ mượn tiếng nước ngoài và tên người nước ngoài. Ví dụ: Việt Nam, Hà Nội, cà phê."
+        focus: 1
+      - yuki: "ベトナム、ハノイ、コーヒー。"
+        en: "Vietnam, Hanoi, coffee"
+        vi: "Việt Nam, Hà Nội, cà phê"
+        pause: 1
+      - emma: "Your own name will be written in katakana too."
+        vi: "Tên của bạn cũng sẽ được viết bằng katakana."
+
+  - kind: jp
+    chapter: "Like hiragana"
+    heading: "An easy start · six katakana that look like hiragana"
+    items:
+      - jp: "カ か ・ キ き ・ ヘ へ ・ リ り ・ モ も ・ ヤ や"
+        en: "ka, ki, he, ri, mo, ya: these katakana look almost the same as their hiragana."
+        vi: "ka, ki, he, ri, mo, ya: sáu chữ katakana này gần giống hiragana cùng âm."
+    lines:
+      - emma: "Good news: some katakana look almost the same as their hiragana. Start with these six."
+        vi: "Tin vui: một số chữ katakana trông gần giống chữ hiragana cùng âm. Hãy bắt đầu với sáu chữ này."
+      - yuki: "カ、キ、ヘ、リ、モ、ヤ。"
+        hl: [0, 2, 4, 6, 8, 10]
+        en: "ka, ki, he, ri, mo, ya"
+        vi: "ka, ki, he, ri, mo, ya"
+        pause: 1
+
+  - kind: jp
+    chapter: "ア to ソ"
+    heading: "Rows ア, カ, サ"
+    items:
+      - jp: "ア イ ウ エ オ\nカ キ ク ケ コ\nサ シ ス セ ソ"
+        romaji: "a i u e o\nka ki ku ke ko\nsa shi su se so"
+        en: "The same sounds as あいうえお, かきくけこ, さしすせそ."
+        vi: "Cùng âm với あいうえお, かきくけこ, さしすせそ."
+    lines:
+      - emma: "Now the chart, row by row. You know the sounds, so look carefully at the new shapes."
+        vi: "Giờ là bảng chữ, từng hàng một. Bạn đã biết các âm, nên hãy nhìn kỹ hình chữ mới."
+      - yuki: "ア、イ、ウ、エ、オ。"
+        hl: [0, 1, 2, 3, 4]
+        en: "a, i, u, e, o"
+        vi: "a, i, ư, ê, ô"
+        pause: 1
+      - yuki: "カ、キ、ク、ケ、コ。"
+        hl: [5, 6, 7, 8, 9]
+        en: "ka, ki, ku, ke, ko"
+        vi: "ca, ki, cư, kê, cô"
+        pause: 1
+      - yuki: "サ、シ、ス、セ、ソ。"
+        hl: [10, 11, 12, 13, 14]
+        en: "sa, shi, su, se, so"
+        vi: "xa, shi, xư, xê, xô"
+        pause: 1
+
+  - kind: jp
+    chapter: "タ to ホ"
+    heading: "Rows タ, ナ, ハ"
+    items:
+      - jp: "タ チ ツ テ ト\nナ ニ ヌ ネ ノ\nハ ヒ フ ヘ ホ"
+        romaji: "ta chi tsu te to\nna ni nu ne no\nha hi fu he ho"
+        en: "チ is chi, ツ is tsu, フ is fu — as in hiragana."
+        vi: "チ là chi, ツ là tsu, フ là fu — giống hiragana."
+    lines:
+      - emma: "The next three rows. Chi, tsu and fu are the same special sounds as in hiragana."
+        say: "The next three rows. Chee, tsoo and foo are the same special sounds as in hiragana."
+        vi: "Ba hàng tiếp theo. Chi, tsu và fu là những âm đặc biệt giống như ở hiragana."
+      - yuki: "タ、チ、ツ、テ、ト。"
+        hl: [0, 1, 2, 3, 4]
+        en: "ta, chi, tsu, te, to"
+        vi: "ta, chi, tsư, tê, tô"
+        pause: 1
+      - yuki: "ナ、ニ、ヌ、ネ、ノ。"
+        hl: [5, 6, 7, 8, 9]
+        en: "na, ni, nu, ne, no"
+        vi: "na, ni, nư, nê, nô"
+        pause: 1
+      - yuki: "ハ、ヒ、フ、ヘ、ホ。"
+        hl: [10, 11, 12, 13, 14]
+        en: "ha, hi, fu, he, ho"
+        vi: "ha, hi, fư, hê, hô"
+        pause: 1
+      - emma: "Write each new katakana three times, and say it as you write. Pause the video while you write."
+        vi: "Viết mỗi chữ katakana mới ba lần, vừa viết vừa đọc. Dừng video trong lúc viết nhé."
+      - emma: "Next: the last rows, and the whole chart."
+        vi: "Tiếp theo: những hàng cuối và cả bảng chữ."
+
+  - kind: jp
+    chapter: "マ to ン"
+    heading: "Rows マ, ヤ, ラ, ワ and ン"
+    items:
+      - jp: "マ ミ ム メ モ\nヤ ユ ヨ\nラ リ ル レ ロ\nワ ヲ ン"
+        romaji: "ma mi mu me mo\nya yu yo\nra ri ru re ro\nwa o n"
+        en: "ヲ is almost never used in katakana; ン is n."
+        vi: "ヲ hầu như không dùng trong katakana; ン là n."
+    lines:
+      - emma: "And the last rows. In katakana, the letter o in the last row is almost never used."
+        vi: "Và những hàng cuối. Trong katakana, chữ “o” ở hàng cuối hầu như không được dùng."
+      - yuki: "マ、ミ、ム、メ、モ。"
+        hl: [0, 1, 2, 3, 4]
+        en: "ma, mi, mu, me, mo"
+        vi: "ma, mi, mư, mê, mô"
+        pause: 1
+      - yuki: "ヤ、ユ、ヨ。"
+        hl: [5, 6, 7]
+        en: "ya, yu, yo"
+        vi: "ya, yu, yo"
+        pause: 1
+      - yuki: "ラ、リ、ル、レ、ロ。"
+        hl: [8, 9, 10, 11, 12]
+        en: "ra, ri, ru, re, ro"
+        vi: "la, li, lư, lê, lô (lưỡi chạm nhẹ)"
+        pause: 1
+      - yuki: "ワ、ヲ、ン。"
+        hl: [13, 14, 15]
+        en: "wa, o, n"
+        vi: "oa, ô, n"
+        pause: 1
+
+  - kind: jp
+    chapter: "The whole chart"
+    heading: "All 46 katakana · Read along with the book's audio"
+    items:
+      - jp: "ア　イ　ウ　エ　オ　　　ハ　ヒ　フ　ヘ　ホ\nカ　キ　ク　ケ　コ　　　マ　ミ　ム　メ　モ\nサ　シ　ス　セ　ソ　　　ヤ　ユ　ヨ\nタ　チ　ツ　テ　ト　　　ラ　リ　ル　レ　ロ\nナ　ニ　ヌ　ネ　ノ　　　ワ　ヲ　ン"
+        en: "The 46 basic katakana: down the left column, then the right."
+        vi: "46 chữ katakana cơ bản: cột trái từ trên xuống, rồi cột phải."
+    lines:
+      - emma: "Now the whole chart, read by the native speaker on your textbook's audio. Follow the orange letter, and say it in the pause."
+        vi: "Giờ là cả bảng, do người Nhật trong audio của sách đọc. Nhìn theo chữ màu cam, và đọc theo trong khoảng nghỉ."
+      - track: "JWS-09"
+        start: 7.6
+        note: "Japanese Writing System · JWS-09"
+        en: "a i u e o · ka … · wa o n"
+        vi: "a i ư ê ô · ca … · oa ô n"
+        hl: [0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20, 21, 22, 23, 24, 28, 29, 30, 31, 32, 38, 39, 40, 41, 42, 5, 6, 7,
+             8, 9, 15, 16, 17, 18, 19, 25, 26, 27, 33, 34, 35, 36, 37, 43, 44, 45]
+        step: 1.2
+        pause: 1
+      - emma: "Read the katakana chart aloud once a day. Next video: katakana letters that look alike, marks and small letters, and real katakana words."
+        vi: "Mỗi ngày đọc to bảng katakana một lần. Video tiếp theo: những chữ katakana trông giống nhau, dấu và chữ nhỏ, và từ katakana thật."

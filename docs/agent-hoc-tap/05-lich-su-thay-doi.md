@@ -5,6 +5,41 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 27 — 02/11/2026: GENKI Unit 0 gom thành bảy video 7–10 phút, bỏ đếm ngược
+
+Nhánh `claude/nifty-darwin-23vvae` (gộp `main` tới đợt 26), đẩy lên `main`. Người học yêu cầu: gom video thành 7–10
+phút, bỏ phần "Your turn" luyện nói có đếm ngược, làm Unit 0 trước. Theo cùng quy ước với IELTS đợt 24–25 và Oxford
+đợt 26: không `wait` / `echo`, người học tự tạm dừng video.
+
+**Bảy video mới** (`books/Genki/lessons/U00-01-hiragana-1` … `U00-07-numbers`, 7 video, 1:00:10) thay 19 video của đợt 23
+(xóa kịch bản rồi `prune` bỏ khỏi `lessons.json` và xóa `.mp4`):
+- Hiragana 1: Unit 0 học gì, để làm gì, thứ tự video, cách xem; ba loại chữ; あいうえお; hàng か, さ.
+- Hiragana 2: hàng た, な, は, ま, や, ら, わ, ん; cả bảng với JWS-01.
+- Hiragana 3: luyện tập (chữ dễ nhầm, chữ viết tay, nghe – viết); ゛゜ (JWS-02); ゃゅょ (JWS-03).
+- Hiragana 4 & Katakana 1: っ, ん đôi, trường âm, nhịp, cao độ (JWS-04…08); đọc từ đã biết và từ có mọi âm; katakana
+  dùng khi nào, các hàng, cả bảng (JWS-09).
+- Katakana 2: chữ dễ nhầm; ゛゜, ャュョ, ー (JWS-10…12); âm ngoại lai (JWS-13); từ mượn, tên tiếng Việt; chữ Hán.
+- Greetings: câu chào theo tình huống với K00-01; 10 tình huống đố; tự giới thiệu.
+- Numbers: 0–100 với K00-02; bài A, B, C; nghe – viết; tổng kết Unit 0.
+
+**Cách gom** (script trong phiên, ghi lại ở file 07 mục 4.4): giữ nguyên cảnh của 19 kịch bản, theo thứ tự.
+- Bỏ đếm ngược: `echo` bỏ, câu đó nghỉ 1 giây. `wait` bỏ: câu đố đọc / nói nghỉ 3 giây, nghe – viết 2,5 giây; viết tay,
+  tự giới thiệu, đếm 1–20 thì Emma nhắc tạm dừng video.
+- Câu dẫn: cảnh "In this video" của phần giữa thành câu dẫn ("Two small marks change the sound of a letter."); "Next
+  video: …" giữa video thành "Next: …"; câu "then your turn" thành "Say it with Yuki"; câu đố đầu mỗi cảnh thêm "Pause
+  the video if you need more time". Phần "How the videos work" bỏ đoạn giới thiệu đếm ngược.
+- Lộ trình trong phần mở đầu: hiragana video 1–4, katakana 4–5, chào hỏi 6, số đếm 7.
+- Cân độ dài: Hiragana 3 dựng lần đầu 10:44 → chuyển cảnh "Words you know" sang video 4, bỏ cảnh đọc từ của ゃゅょ
+  (trùng phần đọc từ có mọi âm) → 9:35. Chương của từng phần không còn trùng tên "Goals" / "Read words" / "Review".
+
+**Sửa khác**
+- `books/Genki/book.yaml`: tóm tắt sách và ghi chú hai phiên Unit 0 nói bảy video 7–10 phút, không đếm ngược; chạy lại
+  agent nhập sách (`book.json`).
+- Tài liệu: file 07 mục 4.1 (bảng bảy video), 4.2 (không đếm ngược, video 7–10 phút), 4.4 (lỗi đã gặp); checklist
+  P2-60, P2-61 (bài 1–5 theo kiểu Unit 0, nếu người học cần).
+- Test: `test_genki_unit0_videos_are_7_to_10_minutes_without_countdown`; e2e: thẻ GENKI có 25 video, Unit 0 có bảy nút
+  (Hiragana × 4, Katakana, Greetings, Numbers), mỗi video 7–10 phút.
+
 ## Đợt 26 — 02/11/2026: Oxford Word Skills Basic trong tab Sách, 7 video Unit 1–7
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 25 (`5f8359c`). Người học đã đưa file sách lên `main`
