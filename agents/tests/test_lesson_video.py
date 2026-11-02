@@ -477,6 +477,18 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
         assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), lesson.id
 
 
+@pytest.mark.skipif(not (GENKI / "lessons" / "lessons.json").exists(), reason="chưa có video N5")
+def test_genki_unit0_videos_are_7_to_10_minutes_without_countdown():
+    """Người học yêu cầu (đợt 27): Unit 0 của GENKI gom thành 7 video 7–10 phút, không đếm ngược (không `wait` / `echo`:
+    Emma nhắc tạm dừng video khi cần) — docs/agent-hoc-tap/07 mục 4."""
+    built = {x["id"]: x for x in json.loads((GENKI / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    lessons = [sc.load(p) for p in sorted((GENKI / "lessons").glob("U00-*.yaml"))]
+    assert [x.activity for x in lessons] == ["U00-kana"] * 5 + ["U00-greetings"] * 2
+    for lesson in lessons:
+        assert 7 * 60 <= built[lesson.id]["duration"] <= 10 * 60, (lesson.id, built[lesson.id]["duration"])
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
+
+
 SELF_PACED = {
     "id": "T-6", "activity": "U01-speaking-vocab", "title": "Unit 2", "subtitle": "Speaking 1", "tag": "UNIT 2",
     "speakers": LESSON["speakers"],

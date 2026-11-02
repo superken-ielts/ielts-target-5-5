@@ -7,7 +7,8 @@ Tài liệu này gồm bốn phần:
 - những chỗ đã sửa khi chuyển 15 tập của bản thiết kế thành video;
 - lộ trình N5 trong tab Sách, dựng từ GENKI I Textbook, Workbook và audio trong `books/Genki/`;
 - cách làm video tiếng Nhật, độ phủ hiện tại và kế hoạch các bài sau:
-  - Unit 0 có 19 video ngắn để học không cần mở sách (đợt 23, thay năm video của đợt 17);
+  - Unit 0 có bảy video 7–10 phút, không đếm ngược, để học không cần mở sách (đợt 27; đợt 23 là 19 video ngắn,
+    đợt 17 là năm video);
   - bài 1–3 có bốn video kỹ năng 5–10 phút mỗi bài (đợt 16).
 
 | Thành phần | Ở đâu |
@@ -200,36 +201,26 @@ hợp: track không có, khoảng track đi ngược, một track gán hai lần
 
 ## 4. Video bài giảng tiếng Nhật
 
-### 4.1 Độ phủ (đợt 23)
+### 4.1 Độ phủ (đợt 27)
 
-Unit 0 có 19 video ngắn (đợt 23), học được không cần mở sách. Đợt này thay năm video của đợt 17, vì người học góp ý:
-chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, và cả đoạn hiện một lúc nên
-không biết giọng Nhật đang đọc tới đâu. Cách sửa ở mục 4.2–4.3.
+Unit 0 có bảy video 7–10 phút, học được không cần mở sách. Đợt 23 làm lại năm video của đợt 17 theo góp ý của người
+học: chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, cả đoạn hiện một lúc
+nên không biết giọng Nhật đang đọc tới đâu (cách sửa ở mục 4.2–4.3), và chia thành 19 video ngắn có đếm ngược "YOUR
+TURN". Đợt 27, người học muốn mỗi video 7–10 phút và không đếm ngược: gom 19 video thành bảy video, bỏ mọi `wait` /
+`echo` (như IELTS đợt 24–25 và Oxford đợt 26). Nội dung, cách đọc, tô sáng, lời dịch giữ nguyên.
 
 | Phiên | Video | Nội dung | Dài |
 |---|---|---|---|
-| Hệ chữ Nhật & hiragana | `U00-01-start` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 19 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, YOUR TURN); mỗi ngày một video | 2:37 |
-| | `U00-02-vowels` | Ba loại chữ trong một câu; あいうえお từng chữ một, mẹo phát âm cho người Việt; viết; từ chỉ có nguyên âm | 3:10 |
-| | `U00-03-rows-k-s` | Hàng か, さ (し là shi); đọc từ; ôn 15 chữ | 3:00 |
-| | `U00-04-rows-t-n` | Hàng た (ち, つ), な; đọc từ; ôn 25 chữ | 3:13 |
-| | `U00-05-rows-h-m` | Hàng は (ふ), ま; は / へ làm trợ từ đọc khác; đọc từ; ôn 30 chữ | 3:27 |
-| | `U00-06-rows-y-r-w` | Hàng や, ら, わ và ん; đọc từ; cả bảng 46 chữ với JWS-01 | 4:10 |
-| | `U00-07-hiragana-practice` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…) | 3:39 |
-| | `U00-08-marks` | ゛ ゜ theo từng hàng (か / が…); 25 âm với JWS-02; đọc từ | 4:06 |
-| | `U00-09-small-ya-yu-yo` | や to và ゃ nhỏ (びよういん / びょういん); 33 âm ghép; JWS-03; đọc từ | 4:41 |
-| | `U00-10-small-tsu-long-vowels` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); đọc từ | 4:44 |
-| | `U00-11-katakana-1` | Katakana dùng khi nào; sáu chữ giống hiragana; hàng ア đến ホ theo nhóm; viết | 3:21 |
-| | `U00-12-katakana-2` | Hàng マ đến ン; cả bảng với JWS-09; chữ dễ nhầm (シ ツ ソ ン…) | 3:45 |
-| | `U00-13-katakana-3` | ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12) | 3:39 |
-| | `U00-14-katakana-4` | Âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | 3:26 |
-| Chào hỏi & số đếm | `U00-15-greetings-1` | Chào theo giờ trong ngày, cảm ơn, xin lỗi, đáp lời; mỗi câu: Emma nói tình huống → Yuki / Takeshi → lượt bạn → K00-01 | 4:01 |
-| | `U00-16-greetings-2` | Tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào | 3:14 |
-| | `U00-17-greetings-3` | Luyện tập: 10 tình huống đố (bài A); tự giới thiệu (bài B) | 2:34 |
-| | `U00-18-numbers-1` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; K00-02; đếm 1–20 | 5:13 |
-| | `U00-19-numbers-2` | Hàng chục và 100; mọi số đến 99; K00-02; bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | 4:44 |
+| Hệ chữ Nhật & hiragana | `U00-01-hiragana-1` | Unit 0 học gì, để làm gì (đọc được bài 1, chào hỏi và số dùng ngay ở bài 1); thứ tự 7 video; cách xem (chữ sáng màu cam, tầng Anh – Việt, tự tạm dừng); ba loại chữ; あいうえお và hàng か, さ từng chữ một (し là shi); đọc từ; viết | DUR01 |
+| | `U00-02-hiragana-2` | Hàng た (ち, つ), な, は (ふ; は / へ làm trợ từ đọc khác), ま, や, ら, わ và ん; đọc từ; ôn; cả bảng 46 chữ với JWS-01 | DUR02 |
+| | `U00-03-hiragana-3` | Chữ dễ nhầm; chữ in khác chữ viết tay; nghe – viết 8 chữ; đọc từ đã biết (からて, すもう…); ゛ ゜ theo từng hàng, 25 âm với JWS-02; や to và ゃ nhỏ (びよういん / びょういん), 33 âm ghép với JWS-03 | DUR03 |
+| | `U00-04-hiragana-katakana` | っ (JWS-04 từng từ); ん + hàng な (JWS-05); trường âm (JWS-06); ん đọc n / m / ng, nguyên âm bị nuốt, cao độ (JWS-07, 08); katakana dùng khi nào, sáu chữ giống hiragana, các hàng, cả bảng với JWS-09 | DUR04 |
+| | `U00-05-katakana` | Chữ dễ nhầm (シ ツ ソ ン…); ゛゜ và ャュョ (JWS-10, 11); trường âm ー (JWS-12); âm ngoại lai (JWS-13 từng cặp); từ mượn, tên tiếng Việt; làm quen chữ Hán | DUR05 |
+| Chào hỏi & số đếm | `U00-06-greetings` | Chào theo giờ, cảm ơn, xin lỗi, đáp lời; tạm biệt, ở nhà, bữa ăn, gặp lần đầu, cúi chào — mỗi câu: Emma nói tình huống → Yuki / Takeshi → K00-01; 10 tình huống đố (bài A); tự giới thiệu (bài B) | DUR06 |
+| | `U00-07-numbers` | 0–10 từng số; cách đọc thứ hai của 0, 4, 7, 9; 11–19; đếm 1–20; hàng chục, 100, mọi số đến 99 (K00-02); bài A, B, C; nghe – viết số dễ nhầm; tổng kết Unit 0 | DUR07 |
 
-19 video, **1:10:43**, 42 MB, 3–8 chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì)
-và kết thúc bằng video tiếp theo học gì.
+7 video, **TOTAL**, SIZE MB, CHAP chương mỗi video. Mỗi video bắt đầu bằng cảnh "In this video" (học gì, để làm gì);
+giữa video, mỗi phần mở bằng một câu dẫn ("Next: …"), cuối video nói video sau học gì.
 
 Bài 1–3 có bốn video mỗi bài, mỗi video gắn vào phiên luyện đúng kỹ năng đó:
 
@@ -251,7 +242,7 @@ Bài 4–5 vẫn là 6 tập ngắn của bản thiết kế (đợt 15):
 | 4 The First Date | `EP_04_01` あります / います, vị trí (0:38) | `EP_04_02` でした / ～ました, 時間, と (0:46) | `EP_04_03` khu nhà ở, cuối tuần (0:31) | 1:55 |
 | 5 A Trip to Okinawa | `EP_05_01` tính từ hiện tại, bổ nghĩa (0:46) | `EP_05_02` tính từ quá khứ, 好き, ましょう (0:45) | `EP_05_03` chuyến đi Đà Nẵng (0:36) | 2:07 |
 
-GENKI có 37 video. Bài 6–12 chưa có video.
+GENKI có 25 video. Bài 6–12 chưa có video.
 
 ### 4.2 Làm một video N5
 
@@ -287,9 +278,11 @@ GENKI có 37 video. Bài 6–12 chưa có video.
      - Dòng `track` với `step`: file nghe tách theo khoảng lặng, mỗi đoạn có tiếng một chữ, chỗ nghỉ giãn ra ≥ `step`.
        Số đoạn phải bằng số chữ được tô — chỉnh `start` / `end` để bỏ lời giới thiệu. File đọc mỗi câu kèm lời dịch
        (K00-01) hay có っ (khoảng lặng giữa từ) thì cắt mỗi câu một dòng `start` / `end`, `hl` chữ đó và `step: 0`.
-   - Cảnh `jp` có `wait` (đếm ngược để người học nói, viết, đọc thẻ đố) và `echo: true` (sau câu tiếng Nhật, đếm ngược
-     dài theo câu để nhắc lại). Thẻ hiện nhãn cam "YOUR TURN · LƯỢT CỦA BẠN" và vòng đếm ngược; tầng 2–3 hiện `note` và
-     `vi` của dòng. `echo` thì cả câu vừa đọc sáng lên.
+   - **Không đếm ngược** (đợt 27, như IELTS đợt 24–25 và Oxford đợt 26): video N5 không dùng `wait` / `echo`. Người
+     học nhắc lại trong khoảng nghỉ sau mỗi chữ (`pause: 1.5`) hoặc đọc cùng Yuki cả hàng; thẻ đố đọc / nói thì câu dẫn
+     của Emma có "Pause the video if you need more time" và nghỉ 3 giây rồi tới đáp án; nghe – viết nghỉ 2,5 giây; viết
+     tay, tự giới thiệu, đếm 1–20 thì Emma nhắc tạm dừng video. Công cụ vẫn hỗ trợ `wait` / `echo` trong cảnh `jp` (nhãn
+     cam "YOUR TURN · LƯỢT CỦA BẠN" và vòng đếm ngược, tầng 2–3 hiện `note` và `vi`), test chặn chúng ở Unit 0.
 3. Chạy `python -m lesson_video check <kịch bản>`. Lệnh báo các lỗi:
    - chữ Hán thiếu furigana;
    - câu đọc từng phần mà số phần khác số chữ được tô; dòng `track` mà số đoạn có tiếng khác số chữ được tô;
@@ -305,7 +298,7 @@ GENKI có 37 video. Bài 6–12 chưa có video.
 5. Xem trước không tiếng: `--engine silent --out /tmp/x --work /tmp/x/w`, mở `f*.png`.
 6. Dựng: `python -m lesson_video build <kịch bản> --engine kokoro`.
    - Video bài 1–3 dài **5–10 phút**. Đoạn nghe của sách tính cả vào: hội thoại bài 2 dài 50 và 40 giây, bản có khoảng
-     lặng 77 và 75 giây. Video Unit 0 ngắn hơn, **2,5–5 phút**, mỗi video một phần nhỏ (đợt 23).
+     lặng 77 và 75 giây. Video Unit 0 cũng **7–10 phút** (đợt 27; đợt 23 thử 19 video 2,5–5 phút).
    - Tiếng đã đọc nằm trong `~/.cache/lesson_video/tts`, nên dựng lại chỉ đọc những câu mới.
    - Bỏ một video: xóa `.yaml`, rồi chạy `python -m lesson_video prune ../books/Genki`. Lệnh bỏ mục trong
      `lessons.json` và file `.mp4`.
@@ -417,6 +410,10 @@ GENKI có 37 video. Bài 6–12 chưa có video.
   - Sửa: tầng 2–3 theo câu đang nói, câu nào cũng có `vi` (và `en` với câu tiếng Nhật); tô sáng chữ đang đọc, đọc từng
     chữ (`step`), file nghe tách theo khoảng lặng; đếm ngược YOUR TURN trong cảnh `jp`; nhịp chậm hơn (mục 4.1); 19 video
     2,5–5 phút, mỗi video mở đầu bằng "học gì, để làm gì" và có video mở đầu cả Unit 0.
+- **Video Unit 0 vụn và có đếm ngược** (đợt 27, người học yêu cầu): 19 video 2,5–5 phút, mỗi hàng chữ có đếm ngược
+  YOUR TURN. Sửa: gom thành bảy video 7–10 phút bằng một script (bỏ `echo`, câu đó nghỉ 1 giây; bỏ `wait`, câu đố nghỉ
+  3 giây, nghe – viết 2,5 giây; câu Emma "then your turn" thành "Say it with Yuki", câu dẫn "Next video: …" giữa video
+  thành "Next: …"); test "Unit 0 7–10 phút, không `wait` / `echo`".
 - **Emma đọc romaji kiểu tiếng Anh** (đợt 23, lệnh `phonemes` và soát phiên âm từng câu có romaji): chi thành "kai",
   ji thành "jai", ki thành "kai", ya thành "yuh", nguyên âm a i u e o thành tên chữ cái "ay, eye, you, ee, oh", Takeshi
   thành "Take-shi", Ai Honda thành "A-I Honda", desu thành "di-soo", ng thành "en-gee"; động từ use / uses đọc như danh

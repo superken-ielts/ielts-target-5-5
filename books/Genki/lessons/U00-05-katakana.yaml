@@ -1,12 +1,13 @@
-# U00 · Katakana 4 — GENKI I, Japanese Writing System (trang 26–27). Âm ngoại lai với ァィゥェォ nhỏ (audio gốc JWS-13:
-# mỗi cặp "âm – từ" một dòng `start` / `end`; チェック, デュエット có っ làm khoảng lặng giữa từ nên `step: 0`), đọc từ
-# mượn, tên tiếng Việt bằng katakana, làm quen chữ Hán (bốn kiểu chữ, âm On / Kun).
+# U00 · Katakana 2 — GENKI I, Japanese Writing System (trang 25–27). Video 7–10 phút, không đếm ngược (đợt 27):
+# chữ dễ nhầm (シ ツ ソ ン…); dấu ゛゜ và ャュョ nhỏ (audio gốc JWS-10 từ 5.8 giây, JWS-11 từ 6.0 giây), trường âm ー
+# (JWS-12 từ 12.0 giây); âm ngoại lai (JWS-13: mỗi cặp "âm – từ" một dòng `start` / `end`; チェック, デュエット có っ
+# làm khoảng lặng giữa từ nên `step: 0`), đọc từ mượn, tên tiếng Việt, làm quen chữ Hán (âm On / Kun).
 # Cách đọc: âm ngoại lai đọc rời bị misaki tách (フィ → fu-i) nên để audio gốc đọc.
-id: U00-14-katakana-4
+id: U00-05-katakana
 activity: U00-kana
 title: "Unit 0 · The Japanese Writing System"
-subtitle: "Katakana 4 · Loanwords, foreign sounds, first kanji"
-title_vi: "Katakana 4 — âm ngoại lai, đọc từ mượn và tên tiếng Việt; làm quen chữ Hán"
+subtitle: "Katakana 2 · Look-alikes, marks, loanwords, first kanji"
+title_vi: "Katakana 2 — chữ dễ nhầm, dấu và trường âm ー, âm ngoại lai, từ mượn, tên tiếng Việt; làm quen chữ Hán"
 tag: "GENKI L0 · N5"
 gap: 0.8
 scene_gap: 1.5
@@ -22,17 +23,156 @@ scenes:
     items:
       - jp: "テレビ ・ コーヒー ・ パソコン"
         romaji: "terebi · koohii · pasokon"
-        en: "Goals: sounds for foreign words, everyday loanwords, Vietnamese names in katakana, and a first look at kanji."
-        vi: "Mục tiêu: âm cho từ nước ngoài, từ mượn hằng ngày, tên tiếng Việt bằng katakana, và làm quen chữ Hán."
+        en: "Goals: tell look-alike katakana apart, use marks and long vowels, read loanwords and Vietnamese names, and take a first look at kanji."
+        vi: "Mục tiêu: phân biệt chữ katakana dễ nhầm, dùng dấu và trường âm, đọc từ mượn và tên tiếng Việt, và làm quen chữ Hán."
     lines:
-      - emma: "Welcome back. In this video, you will read real katakana words: TV, coffee, computer."
-        vi: "Chào mừng bạn trở lại. Trong video này, bạn sẽ đọc từ katakana thật: ti vi, cà phê, máy tính."
+      - emma: "Welcome back. In this video: katakana letters that look alike, marks and long vowels, and then real katakana words: TV, coffee, computer."
+        vi: "Chào mừng bạn trở lại. Trong video này: những chữ katakana trông giống nhau, dấu và trường âm, rồi đến từ katakana thật: ti vi, cà phê, máy tính."
       - yuki: "テレビ、コーヒー、パソコン。"
         en: "TV, coffee, computer"
         vi: "ti vi, cà phê, máy tính"
         pause: 1
       - emma: "Why? Many everyday words in Japanese come from English, and they are written in katakana."
         vi: "Để làm gì? Nhiều từ thường dùng trong tiếng Nhật mượn từ tiếng Anh, và chúng được viết bằng katakana."
+
+  - kind: jp
+    chapter: "Look-alike katakana"
+    heading: "Look-alike katakana · Watch the strokes"
+    items:
+      - jp: "シ ・ ツ ・ ソ ・ ン"
+        romaji: "shi · tsu · so · n"
+        en: "シ and ン: the long stroke goes up from the bottom. ツ and ソ: it comes down from the top."
+        vi: "シ và ン: nét dài viết từ dưới hất lên. ツ và ソ: nét dài viết từ trên xuống."
+      - jp: "ク ・ ケ ・ タ ・ ウ ・ ワ ・ フ"
+        romaji: "ku · ke · ta · u · wa · fu"
+        en: "タ is ク with a short stroke inside. ウ has a dot on top, ワ a short line on the left, フ is one stroke."
+        vi: "タ là ク thêm một nét ngắn bên trong. ウ có chấm trên đầu, ワ có nét ngắn bên trái, フ chỉ một nét."
+      - jp: "ス ・ ヌ ・ コ ・ ユ"
+        romaji: "su · nu · ko · yu"
+        en: "ヌ is ス with an extra stroke across. ユ's bottom line sticks out to the left."
+        vi: "ヌ là ス thêm một nét cắt ngang. Nét dưới của ユ chìa sang trái."
+      - jp: "チ ・ テ ・ ア ・ マ"
+        romaji: "chi · te · a · ma"
+        en: "チ starts with a slanted stroke, テ with two flat lines. ア's second stroke falls outside, マ's is a small dot inside."
+        vi: "チ bắt đầu bằng nét xiên, テ bằng hai nét ngang. Nét thứ hai của ア kéo ra ngoài, của マ là chấm nhỏ bên trong."
+    lines:
+      - emma: "Some katakana look alike. The famous four: watch the direction of the long stroke."
+        vi: "Một số chữ katakana trông giống nhau. Bốn chữ nổi tiếng: hãy nhìn hướng của nét dài."
+      - yuki: "シ、ツ、ソ、ン。"
+        en: "shi, tsu, so, n"
+        vi: "shi, tsu, so, n"
+        pause: 1
+      - emma: "Shi and n: the long stroke goes up from the bottom. Tsu and so: it comes down from the top."
+        vi: "Shi và n: nét dài đi từ dưới lên. Tsu và so: nét dài đi từ trên xuống."
+        hl: [0, 3]
+      - emma: "Next, look for small extra strokes."
+        vi: "Tiếp theo, hãy tìm những nét nhỏ thêm vào."
+        focus: 1
+      - yuki: "ク、ケ、タ、ウ、ワ、フ。"
+        en: "ku, ke, ta, u, wa, fu"
+        vi: "ku, ke, ta, u, wa, fu"
+        pause: 1
+      - emma: "Two more pairs."
+        vi: "Thêm hai cặp nữa."
+        focus: 2
+      - yuki: "ス、ヌ、コ、ユ。"
+        en: "su, nu, ko, yu"
+        vi: "su, nu, ko, yu"
+        pause: 1
+      - emma: "And the last two pairs."
+        vi: "Và hai cặp cuối."
+        focus: 3
+      - yuki: "チ、テ、ア、マ。"
+        en: "chi, te, a, ma"
+        vi: "chi, te, a, ma"
+        pause: 1
+      - emma: "Write each katakana three times. Next: marks, small letters, and long vowels in katakana."
+        vi: "Viết mỗi chữ katakana ba lần. Tiếp theo: dấu, chữ nhỏ và trường âm trong katakana."
+
+  - kind: jp
+    chapter: "Goals"
+    heading: "Marks, small letters, long vowels"
+    items:
+      - jp: "ガ ・ キャ ・ カー"
+        romaji: "ga · kya · kaa"
+        en: "Goals: the marks ゛ ゜ and small ャ ュ ョ work as in hiragana; long vowels are a new mark, the dash ー."
+        vi: "Mục tiêu: dấu ゛ ゜ và ャ ュ ョ nhỏ dùng như hiragana; trường âm là một dấu mới, gạch ー."
+    lines:
+      - emma: "Now: marks, small letters, and long vowels in katakana."
+        vi: "Giờ là dấu, chữ nhỏ và trường âm trong katakana."
+      - emma: "Good news: they work almost exactly as in hiragana. Only long vowels look different."
+        vi: "Tin vui: chúng dùng gần y như ở hiragana. Chỉ trường âm là viết khác."
+
+  - kind: jp
+    chapter: "Marks and small letters"
+    heading: "゛ ゜ and small ャ ュ ョ · exactly as in hiragana"
+    items:
+      - jp: "ガ ・ ザ ・ ダ ・ バ ・ パ ・ キャ ・ シュ ・ チョ"
+        romaji: "ga · za · da · ba · pa · kya · shu · cho"
+        en: "The marks ゛ ゜ and the small ャ ュ ョ work exactly as in hiragana."
+        vi: "Dấu ゛゜ và ャュョ nhỏ dùng y như hiragana."
+      - jp: "ガ　ギ　グ　ゲ　ゴ\nザ　ジ　ズ　ゼ　ゾ\nダ　ヂ　ヅ　デ　ド\nバ　ビ　ブ　ベ　ボ\nパ　ピ　プ　ペ　ポ"
+        en: "The 25 sounds with marks."
+        vi: "25 âm có dấu."
+      - jp: "キャ　キュ　キョ　　　ヒャ　ヒュ　ヒョ　　　ジャ　ジュ　ジョ\nシャ　シュ　ショ　　　ミャ　ミュ　ミョ　　　ビャ　ビュ　ビョ\nチャ　チュ　チョ　　　リャ　リュ　リョ　　　ピャ　ピュ　ピョ\nニャ　ニュ　ニョ　　　ギャ　ギュ　ギョ"
+        en: "The 33 contracted sounds: read down each column."
+        vi: "33 âm ghép: đọc từng cột từ trên xuống."
+    lines:
+      - emma: "Good news: the marks and the small letters work exactly as in hiragana."
+        vi: "Tin vui: dấu và chữ nhỏ dùng y như ở hiragana."
+      - yuki: "ガ、ザ、ダ、バ、パ、キャ、シュ、チョ。"
+        en: "ga, za, da, ba, pa, kya, shu, cho"
+        vi: "ga, za, đa, ba, pa, kya, shu, cho"
+        pause: 1
+      - emma: "Read along with the book's audio. First, the sounds with marks."
+        vi: "Đọc theo audio của sách. Đầu tiên là các âm có dấu."
+        focus: 1
+      - track: "JWS-10"
+        start: 5.8
+        note: "Japanese Writing System · JWS-10"
+        en: "ga … go · za … zo · da … do · ba … bo · pa … po"
+        vi: "ga … gô · za … zô · đa … đô · ba … bô · pa … pô"
+        step: 1.2
+        pause: 1
+      - emma: "Then the contracted sounds."
+        vi: "Sau đó là các âm ghép."
+        focus: 2
+      - track: "JWS-11"
+        start: 6.0
+        note: "Japanese Writing System · JWS-11"
+        en: "kya kyu kyo · sha … · pya pyu pyo"
+        vi: "kya kyu kyo · sha … · pya pyu pyo"
+        hl: [0, 1, 2, 9, 10, 11, 18, 19, 20, 27, 28, 29, 3, 4, 5, 12, 13, 14, 21, 22, 23, 30, 31, 32, 6, 7, 8, 15, 16,
+             17, 24, 25, 26]
+        step: 1.2
+        pause: 1
+
+  - kind: jp
+    chapter: "Long vowels ー"
+    heading: "Long vowels in katakana · a dash ー"
+    items:
+      - jp: "カー ・ スキー ・ スーツ ・ ケーキ ・ ボール"
+        romaji: "kaa · sukii · suutsu · keeki · booru"
+        en: "car · ski · suit · cake · ball. In katakana, a long vowel is a dash ー."
+        vi: "ô tô · trượt tuyết · com-lê · bánh ngọt · quả bóng. Trong katakana, trường âm là dấu gạch ー."
+    lines:
+      - emma: "In katakana, a long vowel is simply a dash. Hold it for two beats. Car, ski, suit, cake, ball."
+        vi: "Trong katakana, nguyên âm dài chỉ là một dấu gạch. Kéo dài hai nhịp. Ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng."
+      - yuki: "カー、スキー、スーツ、ケーキ、ボール。"
+        en: "car, ski, suit, cake, ball"
+        vi: "ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng"
+        pause: 1
+      - emma: "The book's audio."
+        vi: "Audio của sách."
+      - track: "JWS-12"
+        start: 12.0
+        note: "Japanese Writing System · JWS-12"
+        en: "car, ski, suit, cake, ball"
+        vi: "ô tô, trượt tuyết, com-lê, bánh ngọt, quả bóng"
+        step: 1.2
+        pause: 1
+      - emma: "Next: sounds for foreign words, everyday loanwords, and a first look at kanji."
+        vi: "Tiếp theo: âm cho từ nước ngoài, từ mượn hằng ngày, và làm quen với chữ Hán."
 
   - kind: jp
     chapter: "Foreign sounds"
@@ -53,28 +193,28 @@ scenes:
     lines:
       - emma: "Japanese did not have some foreign sounds, so katakana adds small vowels to make them. Listen to each sound, then a word with it."
         vi: "Tiếng Nhật vốn không có một số âm nước ngoài, nên katakana thêm nguyên âm nhỏ để tạo ra chúng. Hãy nghe từng âm, rồi một từ có âm đó."
-      - track: JWS-13
+      - track: "JWS-13"
         start: 6.0
         end: 10.2
         hl: [0, 1]
         note: "Japanese Writing System · JWS-13"
         en: "wi · Halloween"
         vi: "wi · Halloween"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 10.6
         end: 14.6
         hl: [2, 3]
         note: "Japanese Writing System · JWS-13"
         en: "we · highway"
         vi: "we · đường cao tốc"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 15.4
         end: 19.9
         hl: [4, 5]
         note: "Japanese Writing System · JWS-13"
         en: "wo · mineral water"
         vi: "wo · nước khoáng"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 20.5
         end: 24.4
         hl: [0, 1]
@@ -82,14 +222,14 @@ scenes:
         note: "Japanese Writing System · JWS-13"
         en: "she · chef"
         vi: "she · đầu bếp"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 25.2
         end: 29.2
         hl: [2, 3]
         note: "Japanese Writing System · JWS-13"
         en: "je · James"
         vi: "je · James"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 29.7
         end: 33.5
         hl: [4, 5]
@@ -97,7 +237,7 @@ scenes:
         note: "Japanese Writing System · JWS-13"
         en: "che · check"
         vi: "che · kiểm tra"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 34.0
         end: 37.9
         hl: [0, 1]
@@ -105,28 +245,28 @@ scenes:
         note: "Japanese Writing System · JWS-13"
         en: "fa · fashion"
         vi: "fa · thời trang"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 38.5
         end: 42.4
         hl: [2, 3]
         note: "Japanese Writing System · JWS-13"
         en: "fi · the Philippines"
         vi: "fi · Philippines"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 42.9
         end: 46.6
         hl: [4, 5]
         note: "Japanese Writing System · JWS-13"
         en: "fe · cafe"
         vi: "fe · quán cà phê"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 47.4
         end: 51.3
         hl: [6, 7]
         note: "Japanese Writing System · JWS-13"
         en: "fo · fork"
         vi: "fo · cái nĩa"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 52.0
         end: 56.2
         hl: [0, 1]
@@ -134,14 +274,14 @@ scenes:
         note: "Japanese Writing System · JWS-13"
         en: "ti · party"
         vi: "ti · bữa tiệc"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 56.9
         end: 61.5
         hl: [2, 3]
         note: "Japanese Writing System · JWS-13"
         en: "di · Disneyland"
         vi: "di · Disneyland"
-      - track: JWS-13
+      - track: "JWS-13"
         start: 62.2
         hl: [4, 5]
         step: 0
@@ -183,11 +323,9 @@ scenes:
         en: "Nguyen Minh Anh. Vietnamese names are written in katakana, as they sound."
         vi: "Nguyễn Minh Anh. Tên người Việt viết bằng katakana theo cách đọc. Bạn sẽ viết tên mình ở bài 1."
     lines:
-      - emma: "Read these words aloud. Most of them come from English."
-        vi: "Đọc to những từ này. Hầu hết mượn từ tiếng Anh."
-      - wait: 4
-        note: "Read the four words aloud"
-        vi: "Đọc to bốn từ"
+      - emma: "Read these words aloud. Most of them come from English. Pause the video if you need more time."
+        vi: "Đọc to những từ này. Hầu hết mượn từ tiếng Anh. Cần thêm thời gian thì tạm dừng video."
+        pause: 3
       - yuki: "テレビ、コーヒー、パン、ホテル。"
         focus: 1
         en: "television, coffee, bread, hotel"
@@ -196,9 +334,7 @@ scenes:
       - emma: "Four more, closer to home."
         vi: "Thêm bốn từ nữa, gần gũi với bạn hơn."
         focus: 2
-      - wait: 4
-        note: "Read the four words aloud"
-        vi: "Đọc to bốn từ"
+        pause: 3
       - yuki: "カメラ、ベトナム、ハノイ、ホーチミン。"
         focus: 3
         en: "camera, Vietnam, Hanoi, Ho Chi Minh City"
@@ -207,9 +343,7 @@ scenes:
       - emma: "And four you will use every day."
         vi: "Và bốn từ bạn sẽ dùng hằng ngày."
         focus: 4
-      - wait: 4
-        note: "Read the four words aloud"
-        vi: "Đọc to bốn từ"
+        pause: 3
       - yuki: "アイスクリーム、レストラン、スマホ、パソコン。"
         focus: 5
         en: "ice cream, restaurant, smartphone, computer"
