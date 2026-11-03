@@ -168,7 +168,8 @@ lại ra y hệt).
   hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings.
   Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
 - **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
-  khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Module People dùng hình ở mọi unit.
+  khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Mọi unit đều có ít nhất một cảnh có hình (test kiểm): module People
+  từ đợt 29, Unit 1–7 thêm ở đợt 30.
 
 ### 5.2 Bộ cảnh của một video
 
@@ -209,15 +210,15 @@ lượng dưới 7:00 thì thêm cảnh ở hàng 4 (có ích cho IELTS) chứ k
 - Từ ghép viết liền thì đưa cả từ vào đáp án (`notice → noticeboard`). Không tách thành `notice___`, vì ô trống có
   khoảng cách nên nhìn như hai từ.
 
-### 5.3a Hình trong sách (đợt 29)
+### 5.3a Hình trong sách (đợt 29–30)
 
 Người học góp ý nên đưa hình trong sách vào video. Công cụ dựng video (`lesson_video`) có:
 
 | Cảnh | Cách hiện hình | Dùng cho |
 |---|---|---|
-| `figure` (mới) | Hình lớn cắt từ trang sách giữa khung; mỗi mục `items` có `box` (vùng trên hình) và `label` (nhãn, không bắt buộc). Dòng thoại `focus` vào mục nào thì vùng đó có khung đỏ | Tranh nhiều người / vật (sơ đồ gia đình, tranh động từ, tranh cảm xúc), bảng từ (phiếu mẫu Unit 9, bảng tính từ Unit 14) — khung theo từng dòng |
-| `bullets` + `image` | Hình bên trái, danh sách từ bên phải; mục có `box` thì khung đỏ trên hình theo dòng đang học | Đoạn văn (lời kể của Gemma, Sophie, Max) với danh sách từ trong Glossary; tranh mặt và cơ thể Unit 12; khung Spotlight |
-| `blanks` câu điền từ + `image` | Hình bên trái, câu điền từ bên phải | Bài tập cần nhìn tranh |
+| `figure` (mới) | Hình lớn cắt từ trang sách giữa khung; mỗi mục `items` có `box` (vùng trên hình) và `label` (nhãn, không bắt buộc). Dòng thoại `focus` vào mục nào thì vùng đó có khung đỏ | Tranh nhiều người / vật (sơ đồ gia đình, tranh động từ, tranh cảm xúc), bảng từ (bảng số Unit 1, bảng ngày – tháng Unit 3, bảng quốc tịch Unit 4, bảng câu hỏi Unit 7, phiếu mẫu Unit 9, bảng tính từ Unit 14) — khung theo từng dòng; câu có nhãn loại từ (Unit 6) — khung theo từ |
+| `bullets` + `image` | Hình bên trái, danh sách từ bên phải; mục có `box` thì khung đỏ trên hình theo dòng đang học | Đồng hồ và bảng giờ trong ngày (Unit 2), ảnh bốn mùa (Unit 3), bản đồ Anh và Ireland (Unit 4), tranh lớp học (Unit 5), tranh mặt và cơ thể (Unit 12); đoạn văn (lời kể của Gemma, Sophie, Max) với danh sách từ trong Glossary; khung Spotlight |
+| `blanks` câu điền từ + `image` | Hình bên trái, câu điền từ bên phải | Bài tập cần nhìn tranh (bản đồ châu Âu, Unit 4 bài 3) |
 | `match` (đã có) | Hình bên trái, cột đáp án bên phải | Như các sách khác |
 
 Cách khai:
@@ -237,7 +238,10 @@ Cách khai:
   `check` báo lỗi.
 - Bảng đã ghi sẵn chữ thì bỏ `label`, để khung đỏ tự nói. Tranh không có chữ thì ghi `label` ngắn.
 - Hình rộng mà thấp (hàng tranh, dải bảng) thì cắt thành nhiều cảnh nhỏ cho chữ đủ to: bảng tóc và mắt Unit 13 tách
-  hai cảnh, 10 tranh cảm xúc Unit 16 tách ba cảnh.
+  hai cảnh, 10 tranh cảm xúc Unit 16 tách ba cảnh. Trang có hai hình khác nhau thì mỗi hình một cảnh: Unit 3 tách bảng
+  ngày – tháng (`figure`) và ảnh bốn mùa (`bullets` + `image`).
+- Có hình bên trái thì danh sách chỉ còn khoảng nửa bề ngang: viết mục ngắn (`9 a.m. = in the morning`,
+  `English = from England · British = from the UK`), không thì chữ bị thu nhỏ.
 
 ### 5.4 Quy trình một unit
 
@@ -311,21 +315,25 @@ Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `
   thành nhiều cảnh `figure`, mỗi cảnh một dải (mục 5.3a).
 - **Sửa kịch bản khi video đang dựng:** bản dựng đọc kịch bản lúc bắt đầu, nên sửa sau đó thì video vẫn là bản cũ (Unit 14,
   câu về Khoa). Xếp dựng lại unit đó.
+- **Chữ bên cạnh hình bị thu nhỏ** (đợt 30: Unit 2 "Buổi trong ngày", Unit 4 "Người của một nước"): mục dài như câu đầy đủ
+  không vừa nửa khung còn lại nên bị thu nhỏ. Rút gọn mục (mục 5.3a).
+- **Mép vùng cắt lộ nửa dòng chữ** của phần liền trên (đợt 30: bảng thứ hai Unit 7). Xem trước khung hình rồi nhích `clip`
+  vài điểm.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
-Module Basic English đủ 7/7 unit, tổng 51:08 (đợt 26). Module People đủ 9/9 unit, tổng 1:22:54 (đợt 29). Cả sách: 16
-video, 2:14:02. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
+(đợt 29). Cả sách: 16 video, 2:14:06, 48 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
-| Unit | Video | Dài | Chương | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
-|---|---|---|---|---|---|---|---|
-| 1 Numbers | `U01-numbers` | 7:26 | 12 | 1–3 | Những con số quanh bạn (8 cặp) | 5 câu | -teen / -ty, số lớn, số trong đời sống (điện thoại, giá, %) |
-| 2 The time | `U02-time` | 7:14 | 11 | 1, 2, 4, Test yourself | Giờ giấc ở nước bạn (10) | 5 câu | buổi trong ngày, nearly / just after |
-| 3 Days and dates | `U03-days-dates` | 7:10 | 12 | 2, 5, 6, 7 | Về bạn và đất nước bạn (9: Tết, 30/4, 2/9, sinh nhật) | 5 câu | đọc và viết ngày tháng kiểu Anh / Mỹ |
-| 4 Countries and nationalities | `U04-countries` | 7:43 | 14 | 1–4 | Quê hương và ngôn ngữ (8) | 5 câu | the British / Italians, Britain và the UK, trọng âm -ese / -ian |
-| 5 Classroom vocabulary | `U05-classroom` | 7:10 | 13 | 1–3 | IELTS Part 1 "Bags", "Pens and writing" (9) | 5 câu | a piece of paper, I've got, borrow / lend, đoán đồ vật "It's a thing you use to…" |
-| 6 English language words | `U06-language-words` | 7:18 | 13 | 1, 2 (sửa lỗi Answer key) | Học ngữ pháp và từ (7) | 5 câu | động từ có quy tắc / bất quy tắc, chữ viết tắt trong từ điển, mẹo IELTS đoán loại từ cần điền |
-| 7 Questions about language | `U07-questions-language` | 7:07 | 12 | 1, 2 | Hỏi về từ ngữ (8: exhausted, cà phê sữa đá, phở…) | 5 câu | I don't know / can't remember / not sure, tự đặt câu hỏi, chữ cái dễ nhầm, đánh vần tên |
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| 1 Numbers | `U01-numbers` | 7:26 | 12 | 2 | 1–3 | Những con số quanh bạn (8 cặp) | 5 câu | -teen / -ty, số lớn, số trong đời sống (điện thoại, giá, %) |
+| 2 The time | `U02-time` | 7:14 | 11 | 2 | 1, 2, 4, Test yourself | Giờ giấc ở nước bạn (10) | 5 câu | buổi trong ngày, nearly / just after |
+| 3 Days and dates | `U03-days-dates` | 7:14 | 12 | 2 | 2, 5, 6, 7 | Về bạn và đất nước bạn (9: Tết, 30/4, 2/9, sinh nhật) | 5 câu | đọc và viết ngày tháng kiểu Anh / Mỹ |
+| 4 Countries and nationalities | `U04-countries` | 7:43 | 14 | 4 | 1–4 | Quê hương và ngôn ngữ (8) | 5 câu | the British / Italians, Britain và the UK, trọng âm -ese / -ian |
+| 5 Classroom vocabulary | `U05-classroom` | 7:10 | 13 | 2 | 1–3 | IELTS Part 1 "Bags", "Pens and writing" (9) | 5 câu | a piece of paper, I've got, borrow / lend, đoán đồ vật "It's a thing you use to…" |
+| 6 English language words | `U06-language-words` | 7:18 | 13 | 2 | 1, 2 (sửa lỗi Answer key) | Học ngữ pháp và từ (7) | 5 câu | động từ có quy tắc / bất quy tắc, chữ viết tắt trong từ điển, mẹo IELTS đoán loại từ cần điền |
+| 7 Questions about language | `U07-questions-language` | 7:07 | 12 | 2 | 1, 2 | Hỏi về từ ngữ (8: exhausted, cà phê sữa đá, phở…) | 5 câu | I don't know / can't remember / not sure, tự đặt câu hỏi, chữ cái dễ nhầm, đánh vần tên |
 
 Module People (đợt 29) — **unit khó** in đậm, video dài hơn vì có ôn tập và luyện nói chung (mục 5.1):
 

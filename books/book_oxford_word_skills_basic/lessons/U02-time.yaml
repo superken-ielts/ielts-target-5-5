@@ -1,5 +1,6 @@
 # Video Oxford Word Skills Basic · Unit 2 — I can tell the time (sách in tr. 15, Answer key tr. 205).
 # Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói).
+# Hình trong sách (đợt 30): đồng hồ phần A và bảng giờ phần B tr. 15 bên trái danh sách, khung đỏ theo dòng đang học.
 # Đáp án bài 1, 2, 4 theo Answer key; bài 5 (ABOUT YOUR COUNTRY): câu của Emma theo "Answers from a British person"
 # trong Answer key, câu của Tom tự viết về Việt Nam (giờ ngân hàng, cửa hàng, quán cà phê nói chung, có "about").
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U02-time.yaml
@@ -27,14 +28,15 @@ scenes:
   - kind: bullets
     chapter: "Hỏi giờ, nói giờ"
     heading: "A · Telling the time"
-    heading_vi: "What's the time? / What time is it? — hai cách nói giờ: past / to, hoặc đọc số như đồng hồ điện tử"
+    heading_vi: "Đồng hồ trong sách tr. 15 — hai cách nói giờ: past / to, hoặc đọc số như đồng hồ điện tử"
+    image: {pdf: course-book, page: 16, clip: [10, 134, 256, 254]}
     items:
-      - {en: "4.00  It's four o'clock.", vi: "o'clock chỉ dùng cho giờ đúng"}
-      - {en: "4.15  It's quarter past four. · It's four fifteen.", vi: "past = hơn; quarter = 15 phút"}
-      - {en: "4.30  It's half past four. · It's four thirty.", vi: "half past = rưỡi"}
-      - {en: "4.45  It's quarter to five. · It's four forty-five.", vi: "to = kém: năm giờ kém mười lăm"}
-      - {en: "6.20  It's twenty past six. · 6.40  It's twenty to seven.", vi: "past cho 1–30 phút, to cho 31–59 phút"}
-      - {en: "6.57  It's three minutes to seven, NOT three to seven", vi: "số phút không phải 5, 10, 15, 20, 25 thì thêm minutes"}
+      - {en: "4.00  It's four o'clock.", vi: "o'clock chỉ dùng cho giờ đúng", box: [12, 136, 134, 160]}
+      - {en: "4.15  It's quarter past four. · It's four fifteen.", vi: "past = hơn; quarter = 15 phút", box: [12, 160, 134, 186]}
+      - {en: "4.30  It's half past four. · It's four thirty.", vi: "half past = rưỡi", box: [12, 186, 134, 213]}
+      - {en: "4.45  It's quarter to five. · It's four forty-five.", vi: "to = kém: năm giờ kém mười lăm", box: [12, 213, 134, 244]}
+      - {en: "6.20  It's twenty past six. · 6.40  It's twenty to seven.", vi: "past cho 1–30 phút, to cho 31–59 phút", box: [134, 160, 254, 213]}
+      - {en: "6.57  It's three minutes to seven, NOT three to seven", vi: "số phút không phải 5, 10, 15, 20, 25 thì thêm minutes", box: [134, 213, 254, 252]}
     lines:
       - emma: "To ask the time, we say: what's the time? Or: what time is it?"
         vi: "Hỏi giờ: What's the time? hoặc What time is it?"
@@ -52,12 +54,13 @@ scenes:
   - kind: bullets
     chapter: "Buổi trong ngày"
     heading: "B · Giving more information"
-    heading_vi: "a.m. = sáng (trước 12 giờ trưa), p.m. = chiều tối; nearly / almost = gần; just after = vừa quá"
+    heading_vi: "Phần B trong sách tr. 15 — a.m. = sáng, p.m. = chiều tối; nearly / almost = gần; just after = vừa quá"
+    image: {pdf: course-book, page: 16, clip: [258, 92, 486, 278]}
     items:
-      - {en: "9 a.m. = nine o'clock in the morning · 12.00 p.m. = midday", vi: "buổi sáng · giữa trưa"}
-      - {en: "5 p.m. = five o'clock in the afternoon · 7 p.m. = seven o'clock in the evening", vi: "buổi chiều · buổi tối"}
-      - {en: "11.30 p.m. = eleven thirty at night · 12.00 a.m. = midnight", vi: "ban đêm (at night) · nửa đêm"}
-      - {en: "7.57 = nearly / almost eight o'clock · 8.02 = just after eight", vi: "gần tám giờ · tám giờ hơn một chút"}
+      - {en: "9 a.m. = in the morning · 12.00 p.m. = midday", vi: "buổi sáng · giữa trưa", box: [260, 94, 486, 140]}
+      - {en: "5 p.m. = in the afternoon · 7 p.m. = in the evening", vi: "buổi chiều · buổi tối", box: [260, 140, 486, 182]}
+      - {en: "11.30 p.m. = at night · 12.00 a.m. = midnight", vi: "ban đêm (at night) · nửa đêm", box: [260, 228, 486, 276]}
+      - {en: "7.57 = nearly eight · 8.02 = just after eight", vi: "gần (nearly / almost) tám giờ · tám giờ hơn một chút", box: [260, 182, 486, 228]}
     lines:
       - emma: "Sometimes we need more information. Is it nine in the morning, or nine at night?"
         vi: "Đôi khi cần nói rõ sáng hay tối."

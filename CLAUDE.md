@@ -40,7 +40,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
 - Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
   và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
-  nói chung. Hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks` có `image` — file 09 mục 5.3a.
+  nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`
+  có `image` — file 09 mục 5.3a.
 
 ## Kiểm tra trước khi commit
 

@@ -1,5 +1,6 @@
 # Video Oxford Word Skills Basic · Unit 3 — I can say days and dates (sách in tr. 16–17, Answer key tr. 205–206).
 # Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói).
+# Hình trong sách (đợt 30): bảng thứ, tháng, ngày lễ và ảnh bốn mùa tr. 16, khung đỏ theo dòng / mùa đang học.
 # Đáp án bài 2, 5, 6 (lịch tr. 17), 7 theo Answer key; bài 1 làm trong sách. Bài 3 (ABOUT YOU AND YOUR COUNTRY): câu của Emma
 # theo "Answers from a British person" trong Answer key, câu của Tom về Việt Nam (Tết, 30/4, 1/5, 2/9).
 # Nghe và viết: câu ở ngôi thứ nhất do Emma đọc là chuyện của Emma, nên phải khớp hồ sơ (sinh 15/9; đến Việt Nam 4/8/2023,
@@ -26,26 +27,37 @@ scenes:
       - tom: "Remember: no countdown. Pause the video when you want to answer, then listen to us."
         vi: "Không đếm ngược: muốn trả lời thì tự tạm dừng video."
 
-  - kind: bullets
+  - kind: figure
     chapter: "Thứ, tháng, mùa"
-    heading: "A · Days, months, and seasons"
-    heading_vi: "Thứ và tháng luôn viết hoa chữ cái đầu: Monday, January — mùa thì không"
+    heading: "A · Days and months"
+    heading_vi: "Bảng trong sách tr. 16 — thứ và tháng luôn viết hoa chữ cái đầu: Monday, January"
+    image: {pdf: course-book, page: 17, clip: [24, 94, 300, 256]}
     items:
-      - {en: "Monday · Tuesday · Wednesday · Thursday · Friday · Saturday · Sunday", vi: "các ngày trong tuần — Wednesday đọc /ˈwenzdeɪ/, chữ d không đọc"}
-      - {en: "January · February · March · April · May · June", vi: "tháng 1 – 6"}
-      - {en: "July · August · September · October · November · December", vi: "tháng 7 – 12"}
-      - {en: "spring (March – May) · summer (June – August)", vi: "mùa xuân · mùa hè (ở Anh)"}
-      - {en: "autumn (September – November) · winter (December – February)", vi: "mùa thu · mùa đông (ở Anh)"}
-      - {en: "Christmas Day (25 December) · New Year's Day (1 January) · your birthday", vi: "ngày lễ — birthday là ngày bạn sinh ra"}
+      - {box: [26, 96, 298, 124]}
+      - {box: [26, 124, 298, 166]}
+      - {box: [26, 215, 298, 254]}
     lines:
-      - {emma: "The days of the week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.", focus: 0}
+      - {emma: "The days of the week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.", focus: 0, vi: "các ngày trong tuần"}
       - {tom: "Wednesday is difficult. We write a d, but we don't say it.", say: "Wednesday is difficult. We write a D, but we don't say it.", focus: 0, vi: "Wednesday: chữ d không đọc."}
-      - {emma: "The months of the year. January, February, March, April, May, June.", focus: 1}
-      - {tom: "July, August, September, October, November, December.", focus: 2}
-      - {emma: "Days and months always have a capital letter. Monday, not monday. January, not january.", focus: 2, vi: "Thứ và tháng luôn viết hoa."}
-      - {tom: "The seasons in Britain: spring, from March to May, and summer, from June to August.", focus: 3}
-      - {emma: "Autumn, from September to November, and winter, from December to February.", focus: 4}
-      - {tom: "And special days: Christmas Day, New Year's Day, and your birthday.", focus: 5}
+      - {emma: "The months of the year. January, February, March, April, May, June.", focus: 1, vi: "các tháng trong năm"}
+      - {tom: "July, August, September, October, November, December.", focus: 1}
+      - {emma: "Days and months always have a capital letter. Monday, not monday. January, not january.", focus: 1, vi: "Thứ và tháng luôn viết hoa."}
+      - {tom: "And special days: Christmas Day, New Year's Day, and your birthday.", focus: 2, vi: "ngày lễ — birthday là ngày bạn sinh ra"}
+
+  - kind: bullets
+    heading: "A · Seasons in Britain"
+    heading_vi: "Ảnh bốn mùa trong sách tr. 16 — tên mùa không viết hoa"
+    image: {pdf: course-book, page: 17, clip: [300, 72, 486, 328]}
+    items:
+      - {en: "spring (March – May)", vi: "mùa xuân", box: [302, 74, 406, 172]}
+      - {en: "summer (June – August)", vi: "mùa hè", box: [380, 118, 484, 198]}
+      - {en: "autumn (September – November)", vi: "mùa thu", box: [302, 180, 434, 272]}
+      - {en: "winter (December – February)", vi: "mùa đông", box: [362, 238, 484, 326]}
+    lines:
+      - {tom: "The seasons in Britain. Spring, from March to May.", focus: 0}
+      - {tom: "Summer, from June to August.", focus: 1}
+      - {emma: "Autumn, from September to November.", focus: 2}
+      - {emma: "And winter, from December to February. Seasons don't need a capital letter.", focus: 3, vi: "Tên mùa không viết hoa: spring, winter."}
 
   - kind: blanks
     chapter: "Bài 2: ngày, tháng, mùa kế tiếp"

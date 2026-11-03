@@ -464,8 +464,8 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     """Người học yêu cầu (đợt 26): mỗi unit Oxford Word Skills Basic một video 7–10 phút, không đếm ngược (không `wait` /
     `echo`, người học tự tạm dừng), có 1–2 phần nói theo chủ đề: Tom và Emma hỏi đáp (`qa`) và "Đến lượt bạn"
     (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5. Đợt 29: unit khó (đầu kịch bản ghi "UNIT KHÓ") được dài
-    tới 15 phút để ôn tập và luyện nói chung (có bài nói mẫu Part 2 — cảnh `letter`); module People (Unit 8–16) dùng
-    hình trong sách (cảnh có `image`) ở mọi unit."""
+    tới 15 phút để ôn tập và luyện nói chung (có bài nói mẫu Part 2 — cảnh `letter`). Hình trong sách (cảnh có `image`):
+    module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có."""
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
     scripts = sorted((OWS / "lessons").glob("U*.yaml"))
     assert [p.name[:3] for p in scripts][:16] == [f"U{n:02d}" for n in range(1, 17)]   # Basic English và People đủ 16 unit
@@ -483,8 +483,7 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
         assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), lesson.id
         if is_hard:
             assert built[lesson.id]["duration"] > 10 * 60 and "letter" in kinds, lesson.id   # ôn tập + Part 2 mẫu
-        if 8 <= int(lesson.id[1:3]) <= 16:
-            assert any(s.image for s in lesson.scenes), lesson.id
+        assert any(s.image for s in lesson.scenes), lesson.id                                # hình trong sách
     assert hard == ["U10", "U13", "U14", "U16"]
 
 

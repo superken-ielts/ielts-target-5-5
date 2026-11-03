@@ -5,9 +5,82 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 30 — 03/11/2026: hình trong sách cho Unit 1–7 của Oxford Word Skills Basic
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 29 (`5ba75fe`, đã lên `main`). Đẩy lên nhánh và `main` theo yêu cầu
+người học.
+
+### Yêu cầu
+
+Ở đợt 29 người học góp ý đưa hình trong sách vào bài giảng ("đem hình trong sách ánh xạ vào video"). Đợt đó mới làm cho
+module People (Unit 8–16). Người học bảo làm xong thì commit lên `main`. Đợt này làm nốt Unit 1–7, tức mục "Còn treo" của
+đợt 29.
+
+### Đã làm
+
+Thêm 16 cảnh có hình vào 7 kịch bản, rồi dựng lại 7 video. Giọng đọc lấy từ bộ nhớ đệm nên mỗi video chỉ mất khoảng 40
+giây.
+
+| Video | Dài | Hình | Hình gì (trang in) |
+|---|---|---|---|
+| `U01-numbers` | 7:26 | 2 | bảng số tr. 14: số 1–20 theo từng nhóm năm số, rồi số lớn và dòng về dấu phẩy |
+| `U02-time` | 7:14 | 2 | đồng hồ phần A và bảng giờ phần B tr. 15, đặt bên trái danh sách |
+| `U03-days-dates` | 7:14 | 2 | bảng thứ – tháng – ngày lễ (`figure`) và ảnh bốn mùa (`bullets` + `image`) tr. 16 |
+| `U04-countries` | 7:43 | 4 | bảng quốc tịch tr. 18 (hai phần), bản đồ Anh và Ireland bên cạnh Spotlight, bản đồ châu Âu ở bài 3 (tr. 19) |
+| `U05-classroom` | 7:10 | 2 | tranh lớp học tr. 20 bên trái hai danh sách từ, khung đỏ chỉ đồ vật đang học |
+| `U06-language-words` | 7:18 | 2 | hai câu có nhãn loại từ tr. 21, khung đỏ theo từ |
+| `U07-questions-language` | 7:07 | 2 | bảng hỏi – đáp về từ tr. 22 (hai dải), khung đỏ theo dòng |
+
+Tổng thời lượng Basic English là 51:11 (trước đây 51:08), cả sách 2:14:06. Nay cả 16 video đều có hình (48 cảnh).
+
+Nội dung bài giảng giữ nguyên, chỉ đổi cách hiện:
+- Trang sách có sẵn bảng (Unit 1, 3, 4, 6, 7) thì cảnh danh sách từ đổi thành `figure`. Cảnh `figure` không có danh sách
+  chữ, nên nghĩa tiếng Việt chuyển sang dòng `vi` của câu thoại.
+- Unit 3: cảnh "Thứ, tháng, mùa" tách thành bảng ngày – tháng và ảnh bốn mùa. Câu về bốn mùa chia thành bốn câu, mỗi câu
+  một khung, nên video dài thêm 4 giây.
+- Mục danh sách bên cạnh hình viết gọn (Unit 2 phần B, Unit 4 Spotlight) để chữ không bị thu nhỏ.
+- Unit 1: câu "Careful with the spelling…" (twelve, fifteen, eighteen) khung cả cột 11–20.
+- Unit 7: nhích mép trên vùng cắt của bảng thứ hai, vì vùng cắt cũ lộ nửa dòng chữ của bảng trên.
+- Mỗi kịch bản có thêm dòng đầu `# Hình trong sách (đợt 30): …`.
+
+Trước khi dựng, `check` báo hợp lệ cả 7 kịch bản. `phonemes` không có ⚠ mới; Unit 3 vẫn có ⚠ báo nhầm ở "close friends",
+đã ghi trong kịch bản và ở file 09 mục 5.5. Sau khi dựng, trích khung hình từ video thật ở mỗi chương có hình để soát khung đỏ.
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U01-numbers.yaml` … `U07-questions-language.yaml` (+ `.mp4`) | 16 cảnh có hình; dựng lại |
+| `books/book_oxford_word_skills_basic/lessons/lessons.json` | Dung lượng mới; Unit 3 dài 7:14 |
+| `agents/tests/test_lesson_video.py` | Test video Oxford: unit nào (1–16) cũng phải có cảnh có hình |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Mục 5.1, 5.3a (ví dụ Unit 1–7, mỗi hình một cảnh, viết gọn mục bên cạnh hình), 5.6 (hai lỗi mới), 5.7 (cột Hình cho Unit 1–7, tổng thời lượng) |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-64 (xong); dòng đợt 30 ở P2-59 |
+| `docs/agent-hoc-tap/05-lich-su-thay-doi.md` | Đợt 30; đợt 29 ghi đã lên `main`, mục còn treo đã làm |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Mỗi unit có ít nhất một cảnh dùng hình; dòng trạng thái đợt 30 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không thêm, không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic 92 phiên, 16 video |
+| `cd agents && python -m pytest -q` | 141 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 19/19 bước OK; Unit 1–16 mỗi unit một nút video đúng độ dài |
+| `python -m lesson_video check` / `phonemes` | 7 kịch bản hợp lệ, không có ⚠ mới |
+
+### Còn treo
+
+- Video Oxford Word Skills Basic từ Unit 17 (P2-59), kế hoạch module Everyday life ở file 09 mục 5.8.
+
+---
+
 ## Đợt 29 — 03/11/2026: Oxford Word Skills Basic module People (Unit 8–16), hình trong sách, unit khó tới 15 phút
 
-Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 28 (`c94dae3`). Đẩy lên nhánh; lên `main` khi người học đồng ý.
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 28 (`c94dae3`). Đẩy lên nhánh, rồi lên `main` (`5ba75fe`) theo yêu cầu
+người học.
 
 ### Yêu cầu
 
@@ -99,7 +172,7 @@ Không xóa file nào.
 ### Còn treo
 
 - Video Oxford Word Skills Basic từ Unit 17 (P2-59), kế hoạch module Everyday life ở file 09 mục 5.8.
-- Unit 1–7 (đợt 26) chưa có hình trong sách.
+- Unit 1–7 (đợt 26) chưa có hình trong sách — đã làm ở đợt 30.
 
 ---
 

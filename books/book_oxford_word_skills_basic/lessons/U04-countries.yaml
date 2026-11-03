@@ -2,7 +2,8 @@
 # Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
 # Đáp án bài 1–4 theo Answer key (bài 1 câu 6 "The Chinese speak Chinese" là F vì bảng trong sách ghi Mandarin, Cantonese).
 # Bài 1 có 9 câu nên dùng cảnh blanks (thẻ mcq 9 câu quá hẹp, chữ bị cắt).
-# Bài 3 (bản đồ) làm theo chữ cái đầu như trong sách, xem bản đồ ở tr. 19.
+# Bài 3 (bản đồ) làm theo chữ cái đầu như trong sách, bản đồ tr. 19 hiện bên trái câu điền từ.
+# Hình trong sách (đợt 30): bảng quốc tịch tr. 18 (hai phần), bản đồ Anh và Ireland tr. 18, bản đồ châu Âu tr. 19.
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U04-countries.yaml
 id: U04-countries
 activity: U04-words
@@ -39,16 +40,17 @@ scenes:
       - {tom: "I'm Vietnamese, and I speak Vietnamese.", focus: 2, vi: "Quốc tịch và ngôn ngữ."}
       - {emma: "So: the country is Vietnam, the nationality is Vietnamese, and the language is Vietnamese too.", focus: 2}
 
-  - kind: bullets
+  - kind: figure
     chapter: "Châu Âu"
     heading: "Europe · country — nationality (language)"
-    heading_vi: "Tên nước, quốc tịch, ngôn ngữ — đều viết hoa"
+    heading_vi: "Bảng trong sách tr. 18 — tên nước, quốc tịch, ngôn ngữ đều viết hoa"
+    image: {pdf: course-book, page: 19, clip: [26, 100, 450, 266]}
     items:
-      - {en: "the Czech Republic — Czech · France — French · Germany — German", vi: "Séc · Pháp · Đức"}
-      - {en: "Greece — Greek · Hungary — Hungarian · Italy — Italian", vi: "Hy Lạp · Hungary · Ý"}
-      - {en: "Poland — Polish · Portugal — Portuguese · Russia — Russian", vi: "Ba Lan · Bồ Đào Nha · Nga"}
-      - {en: "Spain — Spanish · Turkey — Turkish", vi: "Tây Ban Nha · Thổ Nhĩ Kỳ"}
-      - {en: "Switzerland — Swiss (they speak German, French, Italian)", vi: "Thụy Sĩ: người Thụy Sĩ nói tiếng Đức, Pháp, Ý"}
+      - {box: [28, 126, 448, 161]}
+      - {box: [28, 161, 448, 196]}
+      - {box: [28, 196, 448, 231]}
+      - {box: [28, 231, 448, 266]}
+      - {box: [28, 242, 448, 254]}
     lines:
       - emma: "Let's start with Europe. I say the country, and Tom says the nationality."
         vi: "Châu Âu: Emma nói tên nước, Tom nói quốc tịch."
@@ -62,20 +64,21 @@ scenes:
       - {tom: "Spanish. Turkish.", focus: 3}
       - {emma: "Switzerland. The people are Swiss, and they speak German, French, or Italian.", focus: 4, vi: "Người Thụy Sĩ nói tiếng Đức, Pháp hoặc Ý."}
 
-  - kind: bullets
+  - kind: figure
     chapter: "Các châu lục khác"
     heading: "Asia, the Americas, the Middle East, Africa, Australasia"
-    heading_vi: "Quốc tịch và tiếng nói không phải lúc nào cũng trùng tên"
+    heading_vi: "Bảng trong sách tr. 18 — quốc tịch và tiếng nói không phải lúc nào cũng trùng tên"
+    image: {pdf: course-book, page: 19, clip: [26, 264, 486, 412]}
     items:
-      - {en: "India — Indian (Hindi) · China — Chinese (Mandarin, Cantonese)", vi: "Ấn Độ · Trung Quốc"}
-      - {en: "Japan — Japanese · South Korea — Korean · Thailand — Thai · Vietnam — Vietnamese", vi: "Nhật · Hàn Quốc · Thái Lan · Việt Nam"}
-      - {en: "Canada — Canadian (English, French) · the United States — American (English)", vi: "Canada · Mỹ"}
-      - {en: "Mexico — Mexican (Spanish) · Argentina — Argentinian (Spanish) · Brazil — Brazilian (Portuguese)", vi: "Mexico · Argentina · Brazil"}
-      - {en: "Saudi Arabia — Saudi (Arabic) · Egypt — Egyptian (Arabic) · Australia — Australian (English)", vi: "Ả Rập Xê Út · Ai Cập · Úc"}
+      - {box: [28, 266, 484, 294]}
+      - {box: [28, 288, 484, 322]}
+      - {box: [28, 322, 484, 345]}
+      - {box: [28, 345, 484, 378]}
+      - {box: [28, 378, 484, 412]}
     lines:
-      - {emma: "Asia. India, Indian. They speak Hindi. China, Chinese. They speak Mandarin or Cantonese.", focus: 0}
-      - {tom: "Japan, Japanese. South Korea, Korean. Thailand, Thai. And Vietnam, Vietnamese.", focus: 1}
-      - {emma: "North America. Canada, Canadian. The United States, American.", focus: 2}
+      - {emma: "Asia. India, Indian. They speak Hindi. China, Chinese. They speak Mandarin or Cantonese.", focus: 0, vi: "Ấn Độ · Trung Quốc"}
+      - {tom: "Japan, Japanese. South Korea, Korean. Thailand, Thai. And Vietnam, Vietnamese.", focus: 1, vi: "Nhật · Hàn Quốc · Thái Lan · Việt Nam (Việt Nam không có trong bảng của sách)"}
+      - {emma: "North America. Canada, Canadian. The United States, American.", focus: 2, vi: "Canada · Mỹ"}
       - {tom: "Mexico, Mexican. Argentina, Argentinian. Brazil, Brazilian.", focus: 3}
       - {emma: "But be careful. Mexicans speak Spanish, not Mexican. And Brazilians speak Portuguese.", focus: 3, vi: "Người Mexico nói tiếng Tây Ban Nha; người Brazil nói tiếng Bồ Đào Nha."}
       - {tom: "Saudi Arabia, Saudi. Egypt, Egyptian. They both speak Arabic. And Australia, Australian.", focus: 4}
@@ -86,13 +89,14 @@ scenes:
   - kind: bullets
     chapter: "Người của một nước"
     heading: "Spotlight · People from a country"
-    heading_vi: "Thường thêm s: Italians, Brazilians, Thais, Greeks — vài trường hợp dùng the + quốc tịch"
+    heading_vi: "Bản đồ trong sách tr. 18 — thường thêm s: Italians, Thais; vài trường hợp dùng the + quốc tịch"
+    image: {pdf: course-book, page: 19, clip: [44, 472, 244, 676]}
     items:
       - {en: "Italians · Brazilians · Thais · Greeks · Americans · Vietnamese", vi: "thêm s (Vietnamese giữ nguyên)"}
       - {en: "the British · the English · the French · the Spanish", vi: "đuôi -sh, -ch: the + quốc tịch, không thêm s"}
       - {en: "the Chinese · the Japanese · the Swiss", vi: "đuôi -ese, -ss: the + quốc tịch"}
-      - {en: "Great Britain = England, Wales, Scotland · the UK = + Northern Ireland", vi: "Vương quốc Anh (the UK) gồm thêm Bắc Ireland"}
-      - {en: "English = from England · British = from England, Wales, Scotland or Northern Ireland", vi: "người Scotland, xứ Wales là British, không phải English"}
+      - {en: "Great Britain · the United Kingdom (the UK)", vi: "Great Britain = England, Wales, Scotland; the UK = Great Britain + Bắc Ireland", box: [104, 476, 232, 672]}
+      - {en: "English = from England · British = from the UK", vi: "người Scotland, xứ Wales là British, không phải English", box: [138, 576, 230, 664]}
     lines:
       - {emma: "To talk about the people from a country, we often add s. Italians, Brazilians, Thais, Greeks.", focus: 0}
       - {tom: "But some are different. The British, the English, the French, the Spanish.", focus: 1}
@@ -149,7 +153,8 @@ scenes:
   - kind: blanks
     chapter: "Bài 3: bản đồ châu Âu"
     heading: "Exercise 3 · Write the names of the countries and languages"
-    heading_vi: "Xem bản đồ tr. 19 — mỗi nước cho sẵn chữ cái đầu (đáp án theo Answer key)"
+    heading_vi: "Bản đồ trong sách tr. 19 — mỗi nước cho sẵn chữ cái đầu (đáp án theo Answer key)"
+    image: {pdf: course-book, page: 20, clip: [54, 250, 402, 438]}
     items:
       - {n: 1, q: "F…  →  ___", answer: "France, French"}
       - {n: 2, q: "G…  →  ___", answer: "Germany, German"}

@@ -104,6 +104,9 @@ màn hình.
 - **hình trong sách** hiện ngay trong video (sơ đồ gia đình, tranh động từ, phiếu mẫu, bảng từ, tranh cảm xúc…), khung đỏ
   chỉ đúng chỗ đang giảng. Chi tiết ở file 09 mục 5.
 
+**Đợt 30 (03/11/2026):** Unit 1–7 của Oxford Word Skills Basic cũng có hình trong sách (bảng số, đồng hồ, bảng ngày –
+tháng, ảnh bốn mùa, bảng quốc tịch, bản đồ, tranh lớp học, bảng hỏi – đáp về từ…). Nay cả 16 video đều có hình.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

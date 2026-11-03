@@ -1,4 +1,5 @@
 # Video Oxford Word Skills Basic · Unit 1 — I can understand and say numbers (sách in tr. 14, Answer key tr. 205).
+# Hình trong sách (đợt 30): bảng số tr. 14 ở cảnh "Số 1–20" và "Số lớn", khung đỏ theo nhóm số đang đọc.
 # Khuôn video của sách này: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 — 7–10 phút, không đếm ngược (không
 # dùng `wait` / `echo`; người học tự tạm dừng), 1–2 phần luyện nói theo chủ đề của unit. Đáp án bài 1–3 theo Answer key.
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U01-numbers.yaml
@@ -26,15 +27,17 @@ scenes:
       - emma: "First the numbers, then three exercises from the book, and then we talk about numbers in your life."
         vi: "Trước hết là các số, rồi ba bài tập trong sách, rồi luyện nói về những con số quanh bạn."
 
-  - kind: bullets
+  - kind: figure
     chapter: "Số 1–20"
     heading: "Numbers 1–20"
-    heading_vi: "Số đếm từ 1 tới 20 — chú ý cách viết twelve, fifteen, eighteen"
+    heading_vi: "Bảng số trong sách tr. 14 — chú ý cách viết twelve, fifteen, eighteen"
+    image: {pdf: course-book, page: 15, clip: [28, 70, 486, 218]}
     items:
-      - {en: "1 one · 2 two · 3 three · 4 four · 5 five", vi: "một … năm"}
-      - {en: "6 six · 7 seven · 8 eight · 9 nine · 10 ten", vi: "sáu … mười"}
-      - {en: "11 eleven · 12 twelve · 13 thirteen · 14 fourteen · 15 fifteen", vi: "twelve (không phải twoteen) · fifteen (không phải fiveteen)"}
-      - {en: "16 sixteen · 17 seventeen · 18 eighteen · 19 nineteen · 20 twenty", vi: "eighteen chỉ có một chữ t"}
+      - {box: [30, 73, 82, 131]}
+      - {box: [30, 131, 82, 191]}
+      - {box: [82, 73, 158, 131]}
+      - {box: [82, 131, 158, 191]}
+      - {box: [82, 73, 158, 191]}
     lines:
       - {emma: "One, two, three, four, five.", focus: 0, vi: "Nghe và đọc theo."}
       - {tom: "Six, seven, eight, nine, ten.", focus: 1}
@@ -42,7 +45,7 @@ scenes:
       - {tom: "Sixteen, seventeen, eighteen, nineteen, twenty.", focus: 3}
       - emma: "Careful with the spelling. Twelve, not twoteen. Fifteen, not fiveteen. And eighteen has only one t."
         say: "Careful with the spelling. Twelve, not two-teen. Fifteen, not five-teen. And eighteen has only one T."
-        focus: 3
+        focus: 4
         vi: "Chú ý chính tả: twelve, fifteen; eighteen chỉ có một chữ t."
 
   - kind: compare
@@ -66,24 +69,25 @@ scenes:
         vi: "Đọc theo từng cặp: 13 – 30, 14 – 40, 15 – 50, 16 – 60, 17 – 70."
       - {tom: "And don't forget: four has a u, but forty doesn't.", say: "And don't forget: four has a U, but forty doesn't.", focus: 1, vi: "four có chữ u, forty thì không."}
 
-  - kind: bullets
+  - kind: figure
     chapter: "Số lớn"
     heading: "Big numbers: hundred, thousand, million"
-    heading_vi: "Tiếng Anh – Anh thêm and sau hundred; hundred, thousand, million không thêm s sau một con số"
+    heading_vi: "Bảng số trong sách tr. 14 — tiếng Anh – Anh thêm and sau hundred; hundred, thousand, million không thêm s"
+    image: {pdf: course-book, page: 15, clip: [28, 70, 486, 218]}
     items:
-      - {en: "21 twenty-one · 45 forty-five · 99 ninety-nine · 100 a / one hundred", vi: "số 21–99 viết có gạch nối"}
-      - {en: "101 a / one hundred and one · 140 a / one hundred and forty", vi: "sau hundred có and"}
-      - {en: "200 two hundred, NOT two hundreds · 1,000 a / one thousand", vi: "hundred, thousand không thêm s"}
-      - {en: "1,050 a thousand and fifty · 1,250 a thousand two hundred and fifty", vi: "and đứng trước hai chữ số cuối"}
-      - {en: "100,000 a hundred thousand · 1,000,000 a million · 2,000,000 two million", vi: "two million, không phải two millions"}
-      - {en: "over 999, write a comma: 11,000 · 3,000,000", vi: "số trên 999 viết dấu phẩy (người Việt thường dùng dấu chấm)"}
+      - {box: [158, 73, 256, 191]}
+      - {box: [256, 73, 484, 98]}
+      - {box: [256, 98, 484, 121]}
+      - {box: [256, 121, 484, 144]}
+      - {box: [256, 144, 484, 191]}
+      - {box: [28, 195, 470, 218]}
     lines:
       - {emma: "Twenty-one, forty-five, ninety-nine. We write these numbers with a hyphen.", focus: 0, vi: "Số 21–99 viết có gạch nối."}
       - {tom: "A hundred and one. A hundred and forty.", focus: 1}
       - {emma: "In British English, we say and after hundred: a hundred and forty.", focus: 1, vi: "Tiếng Anh – Anh: hundred AND forty."}
-      - {tom: "Two hundred. Not two hundreds.", focus: 2}
-      - {emma: "A thousand and fifty. A thousand, two hundred and fifty.", focus: 3}
-      - {tom: "A hundred thousand. A million. Two million, not two millions.", focus: 4}
+      - {tom: "Two hundred. Not two hundreds.", focus: 2, vi: "hundred, thousand, million không thêm s sau một con số."}
+      - {emma: "A thousand and fifty. A thousand, two hundred and fifty.", focus: 3, vi: "and đứng trước hai chữ số cuối."}
+      - {tom: "A hundred thousand. A million. Two million, not two millions.", focus: 4, vi: "two million, không phải two millions."}
       - emma: "In big numbers, we write a comma between the thousands and the hundreds: eleven thousand. Three million."
         focus: 5
         vi: "Số lớn viết dấu phẩy ngăn hàng nghìn, hàng triệu: 11,000 · 3,000,000."

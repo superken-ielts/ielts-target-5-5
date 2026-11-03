@@ -428,6 +428,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - e2e: thứ tự menu Sách, thẻ 92 phiên × 30 phút, Unit 1–7 mỗi unit một video 7–10 phút, thẻ unit một trang ghi "Trang 21" (không phải "21–21"), phiên Unit 6 mở trang in 21 (PDF 22) và Answer key tr. 206.
 - [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5. Làm thêm video cho phiên Review nếu người học cần.
   - *Đợt 29:* xong module People, Unit 8–16 (P2-63). Còn Unit 17 trở đi; kế hoạch module Everyday life ở file 09 mục 5.8.
+  - *Đợt 30:* Unit 1–7 thêm hình trong sách (P2-64); Unit 17 trở đi cũng phải có ít nhất một cảnh có hình (test kiểm).
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -444,6 +445,10 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Hình dùng ở cả 9 unit (32 cảnh): hội thoại lễ tân, phiếu mẫu, sơ đồ gia đình, 24 tranh động từ, tranh mặt và cơ thể, bảng tóc – mắt, bảng tuổi, bảng tính từ, đoạn văn có Glossary, tranh cảm xúc, khung Spotlight.
   - Hồ sơ nhân vật thêm gia đình, ngoại hình, tính cách của Tom và Emma (file 09 mục 5.7); sửa cho khớp video IELTS cũ (Khoa học y ở Hà Nội).
   - Test: `figure` và hình bên trái vẽ khung đỏ đúng vùng của mục đang nói (soát điểm ảnh), `image` / `box` sai bị từ chối; mỗi video Oxford 7–10 phút, unit khó (đánh dấu `UNIT KHÓ`) tới 15 phút và có bài nói mẫu, Unit 8–16 có hình; e2e: thẻ sách 16 video, Unit 1–16 mỗi unit một nút video đúng độ dài.
+- [x] **P2-64** **Hình trong sách cho Unit 1–7 của Oxford Word Skills Basic** (đợt 30), nối tiếp P2-63: nay cả 16 video đều có hình. Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.3a, 5.7.
+  - 16 cảnh có hình, khung đỏ theo chỗ đang giảng: bảng số, đồng hồ, bảng giờ trong ngày, bảng ngày – tháng, ảnh bốn mùa, bảng quốc tịch, bản đồ Anh và Ireland, bản đồ châu Âu (bài 3 Unit 4), tranh lớp học, câu có nhãn loại từ, bảng hỏi – đáp về từ.
+  - Nội dung bài giảng giữ nguyên. Unit 3 tách cảnh "Thứ, tháng, mùa" thành bảng và ảnh bốn mùa; câu ở cảnh `figure` thêm nghĩa tiếng Việt (`vi`) vì cảnh này không còn danh sách từ.
+  - Dựng lại 7 video, vẫn 7–8 phút. Test: mọi unit Oxford (1–16) có ít nhất một cảnh có hình.
 
 ### Cổng G2
 
