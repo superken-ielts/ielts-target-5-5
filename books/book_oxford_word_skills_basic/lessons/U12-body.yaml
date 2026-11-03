@@ -1,0 +1,378 @@
+# Video Oxford Word Skills Basic · Unit 12 — I can name parts of the body (sách in tr. 32, Answer key tr. 207).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1–3 theo Answer key (bài 1: 1F 2T 3T 4F 5T 6T 7F 8T 9T 10T 11T 12F 13T 14F; bài 2: wrist, stomach, neck,
+# finger, shoulder, eyes, bottom; bài 3: chin, stomach, chest, tooth/teeth, back, face, nose, bottom, waist).
+# Hình trong sách (đợt 29): tranh mặt, miệng, cơ thể tr. 32 bên trái danh sách từ, khung đỏ theo nhóm từ đang học.
+# Thêm ngoài sách: chữ câm (knee, wrist, thumb) và stomach /ˈstʌmək/; số nhiều bất quy tắc teeth, feet; my + bộ phận cơ thể
+# (I hurt my hand); làm theo Emma (Touch your nose!); câu đố cơ thể; cử chỉ (nod, shake your head, cross your fingers;
+# ngoắc một ngón tay là bất lịch sự ở Việt Nam); đi khám: headache, sore throat, my … hurts; chào hỏi ở Anh và ở Việt Nam.
+# Chi tiết nhân vật mới: Tom gãy cổ tay năm 12 tuổi (ngã xe đạp trên dốc ở Đà Lạt), ngồi laptop lâu thì đau lưng, đau cổ,
+# viết tay phải, năm ngoái trước kỳ thi đau bụng vì căng thẳng, ông của Tom trời mưa thì đau đầu gối; Emma dạy cả ngày nên dùng giọng và tay nhiều nhất, đi bộ đường dài về
+# thì ngâm chân nước nóng.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U12-body.yaml
+id: U12-body
+activity: U12-words
+title: "Unit 12 · Parts of the body"
+subtitle: "I can name parts of the body"
+title_vi: "Bộ phận cơ thể: đầu, mặt, thân, tay, chân — chữ câm, số nhiều bất quy tắc (teeth, feet)"
+tag: "PEOPLE · UNIT 12"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 12: parts of the body. After this video, you can name the parts of your body, and say when something hurts."
+        say: "Welcome to Unit twelve: parts of the body. After this video, you can name the parts of your body, and say when something hurts."
+        vi: "Unit 12: gọi tên bộ phận cơ thể và nói chỗ nào đau."
+      - tom: "As always, no countdown. Pause the video when you want to answer."
+        vi: "Như mọi khi, không đếm ngược: tự tạm dừng video."
+
+  - kind: bullets
+    chapter: "Đầu và mặt"
+    heading: "The head and face · words 1–13"
+    heading_vi: "Tranh trong sách tr. 32 — khung đỏ chỉ chỗ đang học"
+    image: {pdf: course-book, page: 33, clip: [24, 68, 296, 336]}
+    items:
+      - {en: "head · face · hair", vi: "đầu · mặt · tóc", box: [116, 70, 292, 206]}
+      - {en: "eye · ear · nose · cheek · chin", vi: "mắt · tai · mũi · má · cằm", box: [158, 112, 262, 184]}
+      - {en: "mouth · lip · tooth (plural teeth)", vi: "miệng · môi · răng", box: [148, 274, 246, 334]}
+      - {en: "neck · shoulder", vi: "cổ · vai", box: [116, 176, 292, 234]}
+    lines:
+      - emma: "Look at the pictures on page thirty-two. Let's start at the top. Head, face, hair."
+        focus: 0
+        vi: "Bắt đầu từ trên xuống."
+      - {tom: "Eye, ear, nose, cheek, chin.", focus: 1}
+      - {emma: "Mouth, lip, tooth. One tooth, two teeth.", focus: 2}
+      - {tom: "Neck, and shoulder.", focus: 3}
+
+  - kind: bullets
+    chapter: "Thân, tay, chân"
+    heading: "The body, arms and legs · words 14–28"
+    heading_vi: "Tranh trong sách tr. 32 — foot → feet: số nhiều bất quy tắc"
+    image: {pdf: course-book, page: 33, clip: [292, 70, 490, 394]}
+    items:
+      - {en: "chest · stomach · waist · back · bottom", vi: "ngực · bụng · eo · lưng · mông", box: [306, 112, 380, 262]}
+      - {en: "arm · wrist · hand · thumb · fingers", vi: "cánh tay · cổ tay · bàn tay · ngón cái · ngón tay", box: [332, 118, 382, 268]}
+      - {en: "leg · knee · ankle", vi: "chân · đầu gối · mắt cá chân", box: [316, 258, 382, 378]}
+      - {en: "foot (plural feet) · toes", vi: "bàn chân · ngón chân", box: [316, 362, 394, 392]}
+    lines:
+      - {emma: "Chest, stomach, waist, back, bottom.", focus: 0}
+      - {tom: "Arm, wrist, hand, thumb, fingers.", focus: 1}
+      - {emma: "Leg, knee, ankle.", focus: 2}
+      - {tom: "Foot. One foot, two feet. And toes.", focus: 3}
+
+  - kind: compare
+    chapter: "Chữ câm"
+    heading: "Silent letters · don't say every letter"
+    heading_vi: "Bốn từ người học hay đọc sai"
+    items:
+      - title: "Silent letter"
+        title_vi: "chữ câm"
+        lines: ["knee — the k is silent", "wrist — the w is silent", "thumb — the b is silent"]
+      - title: "Different sound"
+        title_vi: "đọc khác chữ viết"
+        lines: ["stomach — ch sounds like k", "tooth → teeth, foot → feet"]
+    lines:
+      - emma: "Some of these words have silent letters. Knee. The k is silent. Wrist. The w is silent. Thumb. The b is silent."
+        say: "Some of these words have silent letters. Knee. The kay is silent. Wrist. The double you is silent. Thumb. The bee is silent."
+        focus: 0
+        vi: "knee: k câm · wrist: w câm · thumb: b câm."
+      - tom: "And stomach. The c, h sounds like k: stomach. Not stom-atch."
+        say: "And stomach. The see aitch sounds like kay: stomach. Not stom-atch."
+        focus: 1
+        vi: "stomach đọc /ˈstʌmək/."
+      - {emma: "Say them with me. Knee. Wrist. Thumb. Stomach.", focus: 0}
+
+  - kind: bullets
+    chapter: "my + bộ phận cơ thể"
+    heading: "Spotlight · my hand, his knee"
+    heading_vi: "Tiếng Anh dùng my / your / his / her trước bộ phận cơ thể — tiếng Việt thì không"
+    items:
+      - {en: "I hurt my hand. — NOT I hurt hand. / I hurt the hand.", vi: "Tôi bị đau tay."}
+      - {en: "She broke her wrist. · He's got a pain in his back.", vi: "gãy cổ tay · đau lưng"}
+      - {en: "Wash your hands. · Brush your teeth.", vi: "rửa tay · đánh răng"}
+      - {en: "My hair is long. — NOT My hairs are long.", vi: "hair (tóc trên đầu) không đếm được"}
+    lines:
+      - {emma: "In English, we say my, your, his or her before parts of the body. I hurt my hand. Not: I hurt hand.", focus: 0, vi: "Luôn có my / your / his / her."}
+      - {tom: "She broke her wrist. He's got a pain in his back.", focus: 1}
+      - {emma: "Wash your hands. Brush your teeth.", focus: 2}
+      - {tom: "And hair is uncountable. My hair is long. Not: my hairs are long.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: tôi có hai…"
+    heading: "Exercise 1 · True or false? I've got two …"
+    heading_vi: "Ví dụ: eyes → T · necks → F — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "noses  →  ___", answer: "F"}
+      - {n: 2, q: "lips  →  ___", answer: "T"}
+      - {n: 3, q: "ears  →  ___", answer: "T"}
+      - {n: 4, q: "waists  →  ___", answer: "F"}
+      - {n: 5, q: "knees  →  ___", answer: "T"}
+      - {n: 6, q: "shoulders  →  ___", answer: "T"}
+      - {n: 7, q: "backs  →  ___", answer: "F"}
+      - {n: 8, q: "thumbs  →  ___", answer: "T"}
+      - {n: 9, q: "hands  →  ___", answer: "T"}
+      - {n: 10, q: "wrists  →  ___", answer: "T"}
+      - {n: 11, q: "ankles  →  ___", answer: "T"}
+      - {n: 12, q: "heads  →  ___", answer: "F"}
+      - {n: 13, q: "arms  →  ___", answer: "T"}
+      - {n: 14, q: "mouths  →  ___", answer: "F"}
+    lines:
+      - emma: "Exercise 1. I've got two … True or false? Pause the video and decide."
+        say: "Exercise one. I've got two … True or false? Pause the video and decide."
+        vi: "Bài 1: Tôi có hai … — đúng hay sai?"
+      - {tom: "Two noses? False! Two lips, true. Two ears, true. Two waists? False.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Knees, shoulders: true. Two backs, false. Thumbs, hands, wrists: true.", reveal: [5, 6, 7, 8, 9, 10], focus: 9}
+      - {tom: "Ankles, true. Two heads, false! Arms, true. And two mouths, false.", reveal: [11, 12, 13, 14], focus: 13}
+
+  - kind: blanks
+    chapter: "Bài 2: từ nào khác?"
+    heading: "Exercise 2 · Which one is different?"
+    heading_vi: "Ví dụ: finger, thumb, waist, hand → waist — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "foot · wrist · toe · ankle  →  ___", answer: "wrist"}
+      - {n: 2, q: "arm · hand · wrist · stomach  →  ___", answer: "stomach"}
+      - {n: 3, q: "neck · ears · nose · lips  →  ___", answer: "neck"}
+      - {n: 4, q: "cheeks · finger · chin · hair  →  ___", answer: "finger"}
+      - {n: 5, q: "mouth · teeth · lips · shoulder  →  ___", answer: "shoulder"}
+      - {n: 6, q: "eyes · legs · knees · ankle  →  ___", answer: "eyes"}
+      - {n: 7, q: "shoulder · chest · neck · bottom  →  ___", answer: "bottom"}
+    lines:
+      - emma: "Exercise 2. Which one is different? Pause the video and choose."
+        say: "Exercise two. Which one is different? Pause the video and choose."
+        vi: "Bài 2: từ nào khác nhóm?"
+      - {tom: "One, wrist. The others are parts of the leg. Two, stomach. The others are parts of the arm.", reveal: [1, 2], focus: 1}
+      - {tom: "Three, neck. The others are on your head. Four, finger. The others are on your head too.", reveal: [3, 4], focus: 3}
+      - {tom: "Five, shoulder. The others are parts of the mouth. Six, eyes. Seven, bottom. The others are in the top half of your body.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 3: hoàn thành từ"
+    heading: "Exercise 3 · Complete the words"
+    heading_vi: "Ví dụ: h _ _ r → hair — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "c _ n  →  ___", answer: "chin"}
+      - {n: 2, q: "s _ _ _ _ _ h  →  ___", answer: "stomach"}
+      - {n: 3, q: "c _ _ _ t  →  ___", answer: "chest"}
+      - {n: 4, q: "t _ _ _ h  →  ___", answer: "tooth / teeth"}
+      - {n: 5, q: "b _ _ k  →  ___", answer: "back"}
+      - {n: 6, q: "f _ _ e  →  ___", answer: "face"}
+      - {n: 7, q: "n _ _ e  →  ___", answer: "nose"}
+      - {n: 8, q: "b _ _ _ _ m  →  ___", answer: "bottom"}
+      - {n: 9, q: "wa _ _ t  →  ___", answer: "waist"}
+    lines:
+      - emma: "Exercise 3. Complete the words. Pause the video and try."
+        say: "Exercise three. Complete the words. Pause the video and try."
+        vi: "Bài 3: điền chữ còn thiếu."
+      - {tom: "Chin. Stomach. Chest. Tooth, or teeth.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Back. Face. Nose. Bottom. And waist.", reveal: [5, 6, 7, 8, 9], focus: 8}
+
+  - kind: bullets
+    chapter: "Làm theo Emma"
+    heading: "Touch your nose! · Follow Emma"
+    heading_vi: "Nghe và chạm vào đúng chỗ — không nhìn chữ"
+    items:
+      - {en: "Touch your nose! · your chin! · your left ear!", vi: "chạm mũi · cằm · tai trái"}
+      - {en: "Touch your shoulders! · your knees! · your toes!", vi: "vai · đầu gối · ngón chân"}
+      - {en: "Hold your right wrist! · Put your hands on your head!", vi: "nắm cổ tay phải · đặt tay lên đầu"}
+    lines:
+      - emma: "Let's play a game. Listen and touch. Don't look at the words! Touch your nose. Touch your chin. Touch your left ear."
+        focus: 0
+        vi: "Nghe và chạm — đừng nhìn chữ!"
+      - {emma: "Touch your shoulders. Touch your knees. Touch your toes!", focus: 1}
+      - {emma: "Hold your right wrist. And put your hands on your head. Well done!", focus: 2}
+
+  - kind: blanks
+    chapter: "Câu đố cơ thể"
+    heading: "Body quiz · What is it?"
+    heading_vi: "Nghe mô tả, nói bộ phận cơ thể — tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "You see with them.  →  ___", answer: "your eyes"}
+      - {n: 2, q: "You hear with them.  →  ___", answer: "your ears"}
+      - {n: 3, q: "You walk on them.  →  ___", answer: "your feet"}
+      - {n: 4, q: "It's in the middle of your leg.  →  ___", answer: "your knee"}
+      - {n: 5, q: "It joins your hand to your arm.  →  ___", answer: "your wrist"}
+      - {n: 6, q: "You eat with them, and the dentist checks them.  →  ___", answer: "your teeth"}
+    lines:
+      - emma: "A quick quiz. I describe a part of the body, and you say it. Pause the video after each one."
+        vi: "Câu đố: Emma mô tả, bạn nói tên bộ phận."
+      - {emma: "Number one. You see with them.", focus: 0}
+      - {tom: "Your eyes.", reveal: 1, focus: 0}
+      - {emma: "Number two. You hear with them.", focus: 1}
+      - {tom: "Your ears.", reveal: 2, focus: 1}
+      - {emma: "Number three. You walk on them.", focus: 2}
+      - {tom: "Your feet.", reveal: 3, focus: 2}
+      - {emma: "Number four. It's in the middle of your leg.", focus: 3}
+      - {tom: "Your knee.", reveal: 4, focus: 3}
+      - {emma: "Number five. It joins your hand to your arm.", focus: 4}
+      - {tom: "Your wrist.", reveal: 5, focus: 4}
+      - {emma: "Number six. You eat with them, and the dentist checks them.", focus: 5}
+      - {tom: "Your teeth.", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Cử chỉ"
+    heading: "Gestures · using your body to say something"
+    heading_vi: "Cụm từ với bộ phận cơ thể — hay gặp khi tả người hay kể chuyện"
+    items:
+      - {en: "shake hands · nod your head (= yes) · shake your head (= no)", vi: "bắt tay · gật đầu · lắc đầu"}
+      - {en: "wave your hand · point with your finger", vi: "vẫy tay · chỉ bằng ngón tay"}
+      - {en: "fold your arms · cross your fingers (= hope for good luck)", vi: "khoanh tay · bắt chéo ngón tay (cầu may)"}
+      - {en: "In Vietnam, calling someone with one finger is rude. Use your whole hand.", vi: "ở Việt Nam ngoắc một ngón tay gọi người là bất lịch sự"}
+    lines:
+      - {emma: "We also use our body to say things. Shake hands. Nod your head: that means yes. Shake your head: that means no.", say: "We also yooz our body to say things. Shake hands. Nod your head: that means yes. Shake your head: that means no.", focus: 0}
+      - {tom: "Wave your hand to say hello or goodbye. Point with your finger.", focus: 1}
+      - {emma: "Fold your arms. And cross your fingers: we do this to hope for good luck. Cross your fingers for your IELTS test!", say: "Fold your arms. And cross your fingers: we do this to hope for good luck. Cross your fingers for your eye-elts test!", focus: 2}
+      - {tom: "Be careful in Vietnam. Calling someone with one finger is rude. We use the whole hand, with the palm down.", focus: 3, vi: "Gọi người: dùng cả bàn tay, úp lòng bàn tay xuống."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · parts of the body"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả — chú ý chữ câm"
+    items:
+      - {n: 1, q: "He's got a pain in his ___.", answer: "stomach"}
+      - {n: 2, q: "She fell over and broke her ___.", answer: "wrist"}
+      - {n: 3, q: "My grandfather's ___ hurts when it rains.", answer: "knee"}
+      - {n: 4, q: "Brush your ___ twice a day.", answer: "teeth"}
+      - {n: 5, q: "His ___ were cold after the walk.", answer: "feet"}
+      - {n: 6, q: "She carried the bag on her ___.", answer: "shoulder"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. He's got a pain in his stomach.", focus: 0}
+      - {emma: "Number two. She fell over and broke her wrist.", focus: 1}
+      - {tom: "Number three. My grandfather's knee hurts when it rains.", focus: 2}
+      - {emma: "Number four. Brush your teeth twice a day.", focus: 3}
+      - {emma: "Number five. His feet were cold after the walk.", focus: 4}
+      - {emma: "Number six. She carried the bag on her shoulder.", focus: 5}
+      - {tom: "Stomach: S, T, O, M, A, C, H. Wrist, with a silent W. Knee, with a silent K.", say: "Stomach: ess, tee, oh, em, eigh, see, aitch. Wrist, with a silent double you. Knee, with a silent kay.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Teeth: T, double E, T, H. Feet. And shoulder.", say: "Teeth: tee, double ee, tee, aitch. Feet. And shoulder.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Đi khám: chỗ nào đau?"
+    heading: "At the doctor's · What's the matter?"
+    heading_vi: "Nói chỗ đau — dùng khi đi khám, gọi điện xin nghỉ, viết thư (IELTS GT)"
+    items:
+      - {en: "a headache · a stomach ache · a backache · toothache · earache", vi: "đau đầu · đau bụng · đau lưng · đau răng · đau tai"}
+      - {en: "My knee hurts. · My feet hurt.", vi: "… đau (hurt / hurts theo số ít, số nhiều)"}
+      - {en: "I've got a pain in my chest.", vi: "tôi bị đau ở ngực"}
+      - {en: "I've got a sore throat. · My eyes are sore.", vi: "đau họng · mắt đau, rát"}
+    lines:
+      - emma: "Now, at the doctor's. I'm the doctor. Good morning, Tom. What's the matter?"
+        vi: "Ở phòng khám: Emma là bác sĩ."
+      - {tom: "I've got a terrible headache, and a sore throat.", focus: 0}
+      - {emma: "We say a headache, a stomach ache, a backache. With teeth and ears, we usually say toothache and earache.", focus: 0, vi: "-ache: đau âm ỉ ở một chỗ."}
+      - {emma: "Anything else? Does your stomach hurt?", focus: 1}
+      - {tom: "No, but my eyes are sore, and my back hurts when I sit at my laptop.", focus: 3}
+      - {emma: "Then close your laptop, lie down, and drink a lot of water. And no IELTS homework today!", say: "Then cloze your laptop, lie down, and drink a lot of water. And no eye-elts homework today!", focus: 2, vi: "Gập laptop, nằm nghỉ, uống nhiều nước — hôm nay khỏi làm bài IELTS!"}
+      - {tom: "That's the best advice I've heard all week!", focus: 2}
+
+  - kind: qa
+    chapter: "Nói 1: cơ thể và sức khỏe"
+    heading: "Speaking 1 · Tom and Emma talk about their bodies"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Have you ever broken a bone?"
+        a: "Yes, my wrist, when I was twelve. I fell off my bike on a hill in Da Lat. I couldn't write for six weeks!"
+        ask: emma
+        by: tom
+        phrases: ["Yes, my wrist…", "I fell off my bike", "I couldn't … for six weeks"]
+      - q: "Which part of your body do you use most at work?"
+        a: "My voice! And my hands, because I write on the board all day."
+        ask: tom
+        by: emma
+        phrases: ["My voice!", "because I…", "all day"]
+      - q: "Do you get backache when you study?"
+        a: "Yes, sometimes. I sit at my laptop for hours, so my back and my neck hurt in the evening."
+        ask: emma
+        by: tom
+        phrases: ["Yes, sometimes.", "for hours", "my back and my neck hurt"]
+      - q: "What do you do when your feet hurt after hiking?"
+        a: "I put them in hot water, and then I lie down on the sofa with a good book!"
+        ask: tom
+        by: emma
+        phrases: ["I put them in…", "and then I…", "lie down"]
+      - q: "Which hand do you write with?"
+        a: "My right hand. But I can play basketball with both hands!"
+        ask: emma
+        by: tom
+        phrases: ["My right hand.", "with both hands"]
+      - q: "When did you last go to the doctor? What was the matter?"
+        a: "Last year, before an exam. I had a terrible stomach ache, but the doctor said it was just stress."
+        ask: emma
+        by: tom
+        phrases: ["Last year…", "I had a terrible…", "it was just stress"]
+      - q: "Do you cross your fingers for good luck?"
+        a: "All the time! Especially before my Vietnamese tests. My teacher says I need practice, not luck."
+        ask: tom
+        by: emma
+        phrases: ["All the time!", "Especially before…", "not luck"]
+      - q: "How do people greet each other in England?"
+        a: "Friends often hug, or kiss on the cheek. But at work, people usually just shake hands."
+        ask: tom
+        by: emma
+        phrases: ["Friends often…", "kiss on the cheek", "shake hands"]
+      - q: "And in Vietnam?"
+        a: "We usually shake hands, or we just smile and nod our heads. Hugging is less common, especially with older people."
+        ask: emma
+        by: tom
+        phrases: ["We usually…", "nod our heads", "less common"]
+    lines:
+      - {emma: "Have you ever broken a bone, Tom?", focus: 0}
+      - {tom: "Yes, my wrist, when I was twelve. I fell off my bike on a hill in Da Lat. I couldn't write for six weeks!", say: "Yes, my wrist, when I was twelve. I fell off my bike on a hill in Dah Lot. I couldn't write for six weeks!", reveal: 0, vi: "Có, gãy cổ tay năm 12 tuổi: ngã xe đạp trên dốc ở Đà Lạt, sáu tuần không viết được!"}
+      - {tom: "Which part of your body do you use most at work?", focus: 1}
+      - {emma: "My voice! And my hands, because I write on the board all day.", reveal: 1, vi: "Giọng nói! Và tay, vì viết bảng cả ngày."}
+      - {emma: "Do you get backache when you study?", focus: 2}
+      - {tom: "Yes, sometimes. I sit at my laptop for hours, so my back and my neck hurt in the evening.", reveal: 2, vi: "Thỉnh thoảng: ngồi laptop hàng giờ nên tối đau lưng, đau cổ."}
+      - {tom: "What do you do when your feet hurt after hiking?", focus: 3}
+      - {emma: "I put them in hot water, and then I lie down on the sofa with a good book!", reveal: 3, vi: "Ngâm chân nước nóng rồi nằm sofa đọc sách!"}
+      - {emma: "Which hand do you write with?", focus: 4}
+      - {tom: "My right hand. But I can play basketball with both hands!", reveal: 4}
+      - {emma: "When did you last go to the doctor? What was the matter?", focus: 5}
+      - {tom: "Last year, before an exam. I had a terrible stomach ache, but the doctor said it was just stress.", reveal: 5, vi: "Năm ngoái, trước kỳ thi: đau bụng dữ dội, bác sĩ bảo chỉ do căng thẳng."}
+      - {tom: "Do you cross your fingers for good luck?", focus: 6}
+      - {emma: "All the time! Especially before my Vietnamese tests. My teacher says I need practice, not luck.", reveal: 6, vi: "Lúc nào cũng vậy, nhất là trước bài kiểm tra tiếng Việt — cô giáo bảo cần luyện tập chứ không cần may mắn."}
+      - {tom: "How do people greet each other in England?", focus: 7}
+      - {emma: "Friends often hug, or kiss on the cheek. But at work, people usually just shake hands.", reveal: 7, vi: "Bạn bè hay ôm hoặc hôn má; nơi làm việc thường chỉ bắt tay."}
+      - {emma: "And in Vietnam?", focus: 8}
+      - {tom: "We usually shake hands, or we just smile and nod our heads. Hugging is less common, especially with older people.", reveal: 8, vi: "Thường bắt tay, hoặc cười và gật đầu; ít ôm, nhất là với người lớn tuổi."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: your body and health"
+    heading_vi: "Trả lời 2–3 câu, dùng my / his / her trước bộ phận cơ thể"
+    items:
+      - {q: "Have you ever hurt your arm, leg or back? What happened?", hint: "Yes, I hurt my … when I … / No, never."}
+      - {q: "Which hand do you write with? Can you use both hands?", hint: "My right / left hand …"}
+      - {q: "Do you get backache or neck ache? When?", hint: "Yes, when I … for a long time."}
+      - {q: "How do people greet each other in your country?", hint: "We usually shake hands / nod / smile …"}
+      - {q: "What do you do when you're very tired after a long day?", hint: "I lie down / put my feet up / …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Have you ever hurt your arm, leg or back? What happened?", focus: 0, pause: 0.5}
+      - {emma: "Which hand do you write with? Can you use both hands?", focus: 1, pause: 0.5}
+      - {emma: "Do you get backache or neck ache? When?", focus: 2, pause: 0.5}
+      - {emma: "How do people greet each other in your country?", focus: 3, pause: 0.5}
+      - {emma: "What do you do when you're very tired after a long day?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 32, nhìn tranh và gọi tên"
+    items:
+      - {en: "head, face, hair · eye, ear, nose, cheek, chin · mouth, lip, tooth", vi: "đầu và mặt"}
+      - {en: "neck, shoulder · chest, stomach, waist, back · arm, wrist, hand, thumb, fingers", vi: "thân và tay"}
+      - {en: "leg, knee, ankle, foot, toes · tooth → teeth, foot → feet", vi: "chân · số nhiều bất quy tắc"}
+      - {en: "knee, wrist, thumb: silent letters · I hurt my hand", vi: "chữ câm · my + bộ phận"}
+      - {en: "Next: Unit 13 · Describing people", vi: "Tiếp theo: Unit 13 · tả người"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Head, face, hair. Eye, ear, nose, cheek, chin. Mouth, lip, tooth.", focus: 0}
+      - {tom: "Neck, shoulder. Chest, stomach, waist, back. Arm, wrist, hand, thumb, fingers.", focus: 1}
+      - {emma: "Leg, knee, ankle, foot and toes. One tooth, two teeth. One foot, two feet.", focus: 2}
+      - {tom: "Silent letters in knee, wrist and thumb. And always my: I hurt my hand.", focus: 3}
+      - {emma: "Now cover the words on page thirty-two, look at the pictures, and name the parts of the body. See you in Unit 13!", say: "Now cover the words on page thirty-two, look at the pictures, and name the parts of the body. See you in Unit thir-teen!", focus: 4}

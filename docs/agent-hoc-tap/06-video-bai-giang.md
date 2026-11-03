@@ -230,9 +230,10 @@ bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 | Kiểu | Khóa mỗi mục | Dùng cho | Ví dụ |
 |---|---|---|---|
 | `title` | — | Mở đầu, giới thiệu hai người | mọi video |
-| `bullets` | `en`, `vi` | Kế hoạch, mẹo, tổng kết | mọi video |
+| `bullets` | `en`, `vi` (+ `box`) | Kế hoạch, mẹo, tổng kết. Có `image` (đợt 29) thì hình trong sách bên trái, danh sách bên phải; mục có `box` đóng khung đỏ vùng đó trên hình khi đang nói | mọi video; Oxford Word Skills Basic Unit 12, 14, 15 (đoạn văn, Spotlight) |
 | `vocab` | `w`, `vi`, `ex` (+ `pos`) | Từ mới kèm câu ví dụ | Speaking 1, Exam reading |
 | `match` | `n`, `q`, `answer` + `image` (+ `grid`) | Nối với tranh / bản đồ cắt từ trang sách; `grid: 4` xếp dải tranh thành lưới 2×2 | Speaking 1, Exam listening (bản đồ), Unit 3 |
+| `figure` | (+ `box`, `label`) + `image` | **Hình lớn cắt từ trang sách** (đợt 29): tranh, bảng, đoạn văn. Mục có `box` [x0, y0, x1, y1] (điểm PDF, cùng hệ với `clip`) thì dòng thoại `focus` vào mục đó đóng khung đỏ đúng vùng ấy, kèm nhãn `label` | Oxford Word Skills Basic Unit 8–16 (sơ đồ gia đình, tranh động từ, phiếu mẫu, bảng tính từ, tranh cảm xúc); cách lấy toạ độ ở file 09 mục 5.3a |
 | `pairs` | `n`, `q`, `answer` + `options` | Nối hai cột | Speaking 2, Exam reading |
 | `qa` | `q`, `a` (+ `ask`, `by`, `phrases`) | Câu hỏi – câu trả lời mẫu | Speaking, Consolidation |
 | `compare` | `title`, `lines` | So sánh hai cách viết / nói | Writing |
@@ -241,7 +242,7 @@ bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 | `order` | `k`, `text`, `pos` (+ `label`, `short`) | Sắp xếp thứ tự | Writing 1, 3, Vocabulary |
 | `timing` | `label`, `minutes` | Chia thời gian làm bài | Writing 1 |
 | `letter` | `text` (+ `note`, `say`, `body`) | Đọc nguyên một lá thư / bài đọc, ghi chú lề | Writing, Exam reading |
-| `blanks` | `n`, `answer` (+ `tip`) | Ô nghe – chép; có `q` chứa `___` (+ `hint`) thì là câu điền từ | Vocabulary, Consolidation, Exam listening |
+| `blanks` | `n`, `answer` (+ `tip`) | Ô nghe – chép; có `q` chứa `___` (+ `hint`) thì là câu điền từ. **Mỗi câu chỉ một `___`** (chỉ chỗ trống đầu được vẽ): câu hai chỗ trống thì tách thành hai mục `8a`, `8b`. Câu điền từ có `image` thì hình bên trái | Vocabulary, Consolidation, Exam listening |
 | `mcq` | `n`, `q`, `options`, `answer` (+ `keys`) | Trắc nghiệm a/b/c hoặc 1/2/3 | Exam listening, Exam reading |
 | `passage` | `text` (+ `label`, `note`) | Bài đọc trên màn hình **kèm phụ đề**; dòng thoại `mark` tô vàng cụm từ trong đoạn `focus` — dạy dò tìm | Unit 2 Reading 1, 2 |
 | `shadow` | `text` (+ `by`, `vi`, `tip`) | **Nghe – nhắc lại (shadowing)**: câu mẫu chữ to theo màu người nói (`by`), nghĩa, mẹo nối âm / trọng âm; dòng thoại `echo: true` chừa khoảng lặng đếm ngược "Now you!" | Chưa video nào dùng (đợt 14 thử, người học muốn tự tạm dừng) |

@@ -20,7 +20,11 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_valida
 from . import ja
 
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow", "jp"]
+               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow", "jp", "figure"]
+
+# Cảnh có hình cắt từ trang sách (`image`): match (hình + cột đáp án), figure (hình lớn), bullets và blanks câu điền từ
+# (hình bên trái, nội dung bên phải)
+IMAGE_KINDS = ("match", "figure", "bullets", "blanks")
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -41,6 +45,8 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
     "mcq": ("n", "q", "options", "answer"),  # trắc nghiệm: `options` là danh sách, `answer` là a, b, c… hoặc một nhãn trong `keys`
     "passage": ("text",),               # bài đọc trên màn hình (có phụ đề): mỗi mục một đoạn, `label` đầu đoạn; dòng thoại `mark` tô từ khóa
     "shadow": ("text",),                # nghe – nhắc lại: mỗi mục một câu mẫu chữ to; `by` người nói (màu), `vi` nghĩa, `tip` mẹo phát âm
+    "figure": (),                       # hình lớn cắt từ trang sách (`image`); mục (nếu có) mang `box` [x0, y0, x1, y1] = vùng
+                                        # trên hình (điểm PDF như `clip`) đóng khung đỏ khi dòng thoại `focus` vào, `label` = nhãn
     "jp": ("jp",),                      # thẻ ba tầng (video N5): `jp` chữ Nhật có furigana, `romaji`, `en` giải thích, `vi` nghĩa;
                                         # "\n" trong `jp` / `romaji` là xuống dòng bắt buộc (bảng chữ: mỗi hàng một dòng);
                                         # nhiều thẻ thì dòng thoại chọn thẻ đang hiện bằng `focus`; `quiz: true` = thẻ đố
@@ -193,8 +199,21 @@ class Scene(_M):
             raise ValueError(f"cảnh {self.kind} cần `items`")
         if self.kind == "pairs" and not self.options:
             raise ValueError("cảnh pairs cần `options` (cột đáp án a, b, c…)")
-        if self.kind == "match" and not self.image:
-            raise ValueError("cảnh match cần `image`")
+        if self.kind in ("match", "figure") and not self.image:
+            raise ValueError(f"cảnh {self.kind} cần `image`")
+        if self.image and self.kind not in IMAGE_KINDS:
+            raise ValueError(f"`image` chỉ dùng trong cảnh {', '.join(IMAGE_KINDS)} (không dùng trong {self.kind})")
+        if self.kind == "blanks" and self.image and not any(it.get("q") for it in self.items):
+            raise ValueError("cảnh blanks có `image` phải là câu điền từ (mục có `q`)")
+        for it in self.items:
+            if "box" not in it:
+                continue
+            b = it["box"]
+            if not self.image or self.image.grid > 1:
+                raise ValueError("`box` (khung trên hình) cần `image` một tranh (grid 1)")
+            if not (isinstance(b, (list, tuple)) and len(b) == 4 and all(isinstance(v, (int, float)) for v in b)
+                    and b[0] < b[2] and b[1] < b[3]):
+                raise ValueError(f"`box` phải là [x0, y0, x1, y1] (điểm PDF như `clip`): {b}")
         if self.kind == "order" and sorted(int(it["pos"]) for it in self.items) != list(range(1, len(self.items) + 1)):
             raise ValueError("cảnh order: `pos` phải là 1…n, mỗi số một lần")
         if self.kind == "mcq":

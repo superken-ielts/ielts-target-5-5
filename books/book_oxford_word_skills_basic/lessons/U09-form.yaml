@@ -1,0 +1,326 @@
+# Video Oxford Word Skills Basic · Unit 9 — I can fill in a form (sách in tr. 27, Answer key tr. 206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1 theo Answer key (1F 2T 3T 4F 5T 6F 7F 8T 9F 10F 11F 12T); câu 5 "tick = ✓" viết bằng chữ vì phông không có
+# glyph ✓. Bài 2 (ABOUT YOU) là phần nói 2.
+# Hình trong sách (đợt 29): phiếu mẫu của Maria tr. 27, hiện từng dải và đóng khung từng dòng đang học.
+# Thêm ngoài sách: Test yourself làm thành câu đố; mẹo IELTS điền form; chỉ dẫn trên form (BLOCK CAPITALS, tick the box,
+# delete as appropriate, N/A); ngày sinh kiểu Anh và kiểu
+# Mỹ; tên người Việt (họ đứng trước) trên form tiếng Anh; nghe và điền form như IELTS Listening phần 1 (email dùng tên miền
+# example.com dành cho ví dụ). Chi tiết nhân vật mới: Tom sinh 9/3/2006 (khớp sinh nhật 9/3 và 20 tuổi), lần đầu điền form
+# visa thì viết nhầm tên vào ô họ, tháng trước điền form chương trình trao đổi; Emma sinh 15/9/1998 (khớp 28 tuổi), dùng Ms.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U09-form.yaml
+id: U09-form
+activity: U09-words
+title: "Unit 9 · Filling in a form"
+subtitle: "I can fill in a form"
+title_vi: "Từ trên phiếu đăng ký: Mr / Mrs / Miss / Ms, surname, forename, date of birth, occupation, signature…"
+tag: "PEOPLE · UNIT 9"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 9: filling in a form. Forms are everywhere: at a hotel, a bank, a language school. And they're in part one of the IELTS listening test."
+        say: "Welcome to Unit nine: filling in a form. Forms are everywhere: at a hotel, a bank, a language school. And they're in part one of the eye-elts listening test."
+        vi: "Unit 9: điền phiếu — ở khách sạn, ngân hàng, trường ngôn ngữ, và trong phần 1 bài nghe IELTS."
+      - tom: "There's no countdown. Pause the video when you want to answer or write."
+        vi: "Không đếm ngược: tự tạm dừng video khi cần trả lời hay viết."
+
+  - kind: figure
+    chapter: "Mr, Mrs, Miss, Ms"
+    heading: "Titles · Mr, Mrs, Miss, Ms"
+    heading_vi: "Phiếu mẫu trong sách tr. 27 — cột Meaning (nghĩa), Word (từ), Example (ví dụ của Maria)"
+    image: {pdf: course-book, page: 28, clip: [28, 72, 486, 146]}
+    items:
+      - {box: [30, 91, 484, 104]}
+      - {box: [30, 104, 484, 116]}
+      - {box: [30, 116, 484, 128]}
+      - {box: [30, 128, 484, 145]}
+    lines:
+      - emma: "Look at the form on page twenty-seven. Most forms start with your title."
+        vi: "Form thường bắt đầu bằng danh xưng."
+      - {emma: "Mr is for a man, single or married.", say: "Mister is for a man, single or married.", focus: 0, vi: "ông / anh — đọc /ˈmɪstə/"}
+      - {tom: "Mrs is for a married woman.", say: "Missiz is for a married woman.", focus: 1, vi: "bà, phụ nữ đã kết hôn — đọc /ˈmɪsɪz/"}
+      - {emma: "Miss is for a single woman. Maria is single, so she wrote Miss.", focus: 2, vi: "cô, phụ nữ chưa kết hôn"}
+      - {tom: "And Ms is for any woman, single or married.", say: "And Mizz is for any woman, single or married.", focus: 3, vi: "dùng cho mọi phụ nữ — đọc /mɪz/"}
+      - {emma: "I use Ms. It's very common on forms today.", say: "I use Mizz. It's very common on forms today.", focus: 3, vi: "Emma dùng Ms — ngày nay rất phổ biến."}
+
+  - kind: figure
+    chapter: "Tên, ngày sinh, ngôn ngữ"
+    heading: "Names, date of birth, language"
+    heading_vi: "Phiếu mẫu tr. 27: Maria Helena Rodriguez, người Argentina"
+    image: {pdf: course-book, page: 28, clip: [28, 146, 486, 248]}
+    items:
+      - {box: [30, 147, 484, 163]}
+      - {box: [30, 163, 484, 180]}
+      - {box: [30, 180, 484, 210]}
+      - {box: [30, 210, 484, 228]}
+      - {box: [30, 228, 484, 247]}
+    lines:
+      - {emma: "Surname means family name. Her surname is Rodriguez.", focus: 0, vi: "họ"}
+      - {tom: "Forename means first name. Her forenames are Maria Helena.", focus: 1, vi: "tên (có thể nhiều tên)"}
+      - {emma: "Date of birth: the day, month and year you were born. The twelfth of June, nineteen eighty-five.", focus: 2, vi: "ngày tháng năm sinh"}
+      - {tom: "Nationality: Argentinian.", focus: 3, vi: "quốc tịch"}
+      - {tom: "Mother tongue means first language. Hers is Spanish.", focus: 4, vi: "tiếng mẹ đẻ"}
+      - {emma: "Careful: mother tongue is not your mother's name!", focus: 4}
+
+  - kind: figure
+    chapter: "Liên lạc, công việc, chữ ký"
+    heading: "Address, phone, email, job, signature"
+    heading_vi: "Phiếu mẫu tr. 27 — no = number · email address, không nói email number"
+    image: {pdf: course-book, page: 28, clip: [28, 246, 486, 476]}
+    items:
+      - {box: [30, 247, 484, 318]}
+      - {box: [30, 318, 484, 356]}
+      - {box: [30, 356, 484, 374]}
+      - {box: [30, 374, 484, 392]}
+      - {box: [30, 392, 484, 474]}
+    lines:
+      - {emma: "Home address, and daytime tel. That's your phone number during the day.", focus: 0, vi: "địa chỉ nhà · số điện thoại ban ngày"}
+      - {tom: "Mobile no. N, O means number. And email address. Not email number!", say: "Mobile number. En, oh means number. And email address. Not email number!", focus: 1, vi: "no = number; nói email address."}
+      - {emma: "Marital status means: are you married or single? Maria is single.", focus: 2, vi: "tình trạng hôn nhân"}
+      - {tom: "Occupation means job. She's a sports teacher.", focus: 3, vi: "nghề nghiệp"}
+      - {emma: "Level of English: please tick the box, elementary, intermediate or advanced. And at the end, your signature: your name, written by you.", focus: 4, vi: "Đánh dấu tick vào ô trình độ; cuối form là chữ ký."}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · True or false? Write T or F"
+    heading_vi: "Câu sai thì sửa lại — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "occupation = married or single  →  ___", answer: "F (job)"}
+      - {n: 2, q: "Mrs = married woman  →  ___", answer: "T"}
+      - {n: 3, q: "Mr = single or married man  →  ___", answer: "T"}
+      - {n: 4, q: "surname = first name  →  ___", answer: "F (family name)"}
+      - {n: 5, q: "tick = the mark you put in a box  →  ___", answer: "T"}
+      - {n: 6, q: "forename = family name  →  ___", answer: "F (first name)"}
+      - {n: 7, q: "level = write your name  →  ___", answer: "F (elementary, intermediate…)"}
+      - {n: 8, q: "marital status = married or single  →  ___", answer: "T"}
+      - {n: 9, q: "mother tongue = mother's name  →  ___", answer: "F (first language)"}
+      - {n: 10, q: "email address = where you live  →  ___", answer: "F (home address)"}
+      - {n: 11, q: "date of birth = today's date  →  ___", answer: "F (the day you were born)"}
+      - {n: 12, q: "daytime tel = phone number during the day  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 1. True or false? Pause the video, and write T or F."
+        say: "Exercise one. True or false? Pause the video, and write T, or F."
+        vi: "Bài 1: đúng hay sai — tạm dừng video và làm."
+      - {tom: "One, false. Occupation means job. Two, true. Three, true.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four, false. Surname is your family name. Five, true. Six, false. Forename is your first name.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven, false. Eight, true. Nine, false. Mother tongue is your first language.", reveal: [7, 8, 9], focus: 8}
+      - {tom: "Ten, false. That's your home address. Eleven, false. And twelve, true.", reveal: [10, 11, 12], focus: 11}
+
+  - kind: blanks
+    chapter: "Test yourself"
+    heading: "Test yourself · Look at the meaning. Say the word."
+    heading_vi: "Bài 3 trong sách: che cột Word, nhìn nghĩa và nói từ — tạm dừng video trước khi Tom trả lời"
+    items:
+      - {n: 1, q: "family name  →  ___", answer: "surname"}
+      - {n: 2, q: "first language  →  ___", answer: "mother tongue"}
+      - {n: 3, q: "job  →  ___", answer: "occupation"}
+      - {n: 4, q: "married or single?  →  ___", answer: "marital status"}
+      - {n: 5, q: "your written name  →  ___", answer: "signature"}
+      - {n: 6, q: "phone number during the day  →  ___", answer: "daytime tel"}
+    lines:
+      - emma: "Test yourself. I say the meaning, and you say the word. Pause the video after each one."
+        vi: "Emma đọc nghĩa, bạn nói từ — tạm dừng video sau mỗi câu."
+      - {emma: "Family name.", focus: 0}
+      - {tom: "Surname.", reveal: 1, focus: 0}
+      - {emma: "First language.", focus: 1}
+      - {tom: "Mother tongue.", reveal: 2, focus: 1}
+      - {emma: "Job.", focus: 2}
+      - {tom: "Occupation.", reveal: 3, focus: 2}
+      - {emma: "Married or single?", focus: 3}
+      - {tom: "Marital status.", reveal: 4, focus: 3}
+      - {emma: "Your written name.", focus: 4}
+      - {tom: "Signature.", reveal: 5, focus: 4}
+      - {emma: "Your phone number during the day.", focus: 5}
+      - {tom: "Daytime tel.", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Chỉ dẫn trên form"
+    heading: "Form instructions"
+    heading_vi: "Những dòng chỉ dẫn hay gặp trên form tiếng Anh"
+    items:
+      - {en: "Please write in BLOCK CAPITALS. · PRINT NAME (next to the signature)", vi: "viết chữ in hoa: TRAN MINH TUAN · ghi rõ họ tên bằng chữ in"}
+      - {en: "Please tick the box. · Delete as appropriate: Mr / Mrs / Miss / Ms", vi: "đánh dấu tick vào ô · gạch bỏ những cái không đúng"}
+      - {en: "N/A = not applicable", vi: "không áp dụng — ví dụ ô 'children' khi bạn chưa có con"}
+      - {en: "Date of birth: 09/03/2006 (British: day / month / year)", vi: "kiểu Anh: ngày trước, tháng sau = 9 tháng 3"}
+      - {en: "American forms: month / day / year → 03/09/2006", vi: "kiểu Mỹ: tháng trước — đọc kỹ ô DD/MM hay MM/DD"}
+    lines:
+      - {emma: "Forms have instructions too. Please write in block capitals means: use big letters, like T, R, A, N.", say: "Forms have instructions too. Please write in block capitals means: yooz big letters, like tee, ar, eigh, en.", focus: 0}
+      - {emma: "And next to your signature, you often see print name. That means: write your name again, clearly, in capitals.", focus: 0, vi: "PRINT NAME: ghi lại họ tên bằng chữ in, rõ ràng."}
+      - {tom: "Please tick the box. And delete as appropriate means: cross out the words that aren't true for you.", focus: 1, vi: "Delete as appropriate: gạch bỏ những lựa chọn không đúng với bạn."}
+      - {emma: "N/A means not applicable. For example, children? N/A, if you haven't got any.", say: "N A means not applicable. For example, children? N A, if you haven't got any.", focus: 2}
+      - {tom: "And dates. On a British form, my date of birth is oh nine, oh three, two thousand and six. Day first.", focus: 3}
+      - {emma: "But on an American form, the month comes first. So check: is it D D slash M M, or M M slash D D?", focus: 4, vi: "Form Mỹ ghi tháng trước — xem kỹ ô DD/MM hay MM/DD."}
+
+  - kind: blanks
+    chapter: "Nghe và điền form"
+    heading: "Listen and complete the form · City Sports Club"
+    heading_vi: "Như phần 1 bài nghe IELTS: tạm dừng sau mỗi câu trả lời của Tom và viết — đáp án ở cuối"
+    items:
+      - {n: 1, q: "Title: ___", answer: "Mr"}
+      - {n: 2, q: "Surname: ___", answer: "TRAN"}
+      - {n: 3, q: "Forenames: ___", answer: "MINH TUAN"}
+      - {n: 4, q: "Date of birth: ___", answer: "09/03/2006"}
+      - {n: 5, q: "Nationality: ___", answer: "Vietnamese"}
+      - {n: 6, q: "Email address: ___", answer: "tuan.tran@example.com"}
+      - {n: 7, q: "Occupation: ___", answer: "student"}
+      - {n: 8, q: "Level of English: ___", answer: "intermediate"}
+    lines:
+      - emma: "Now, a listening test. Tom is joining a sports club, and I'm the receptionist. Listen, pause the video after each answer, and complete the form. The answers are at the end."
+        vi: "Tom đăng ký câu lạc bộ thể thao, Emma là lễ tân. Tạm dừng sau mỗi câu trả lời và điền form; đáp án ở cuối."
+      - {emma: "Number one. Your title: Mr, Mrs, Miss or Ms?", say: "Number one. Your title: Mister, Missiz, Miss or Mizz?", focus: 0}
+      - {tom: "Mr, please.", say: "Mister, please.", focus: 0}
+      - {emma: "Number two. And your surname?", focus: 1}
+      - {tom: "Tran. That's T, R, A, N.", say: "Chan. That's tee, ar, eigh, en.", focus: 1}
+      - {emma: "Number three. Your forenames?", focus: 2}
+      - {tom: "Minh Tuan. That's two names. M, I, N, H, and then T, U, A, N.", say: "Min Twan. That's two names. Em, eye, en, aitch, and then tee, yoo, eigh, en.", focus: 2}
+      - {emma: "Number four. What's your date of birth?", focus: 3}
+      - {tom: "The ninth of March, two thousand and six.", focus: 3}
+      - {emma: "Number five. Nationality?", focus: 4}
+      - {tom: "Vietnamese.", focus: 4}
+      - {emma: "Number six. Can I have your email address?", focus: 5}
+      - {tom: "Yes. It's tuan dot tran, at example dot com. Tuan, T, U, A, N.", say: "Yes. It's twan dot chan, at example dot com. Twan, tee, yoo, eigh, en.", focus: 5}
+      - {emma: "Number seven. And your occupation?", focus: 6}
+      - {tom: "I'm a student.", focus: 6}
+      - {emma: "Number eight. Your level of English: elementary, intermediate or advanced?", focus: 7}
+      - {tom: "Intermediate, I think.", focus: 7}
+      - {emma: "Now check. Mr. Tran, and Minh Tuan, in block capitals. Oh nine, oh three, two thousand and six.", say: "Now check. Mister. Chan, and Min Twan, in block capitals. Oh nine, oh three, two thousand and six.", reveal: [1, 2, 3, 4], focus: 3}
+      - {emma: "Vietnamese, with a capital V. Tuan dot tran at example dot com. Student. And intermediate.", say: "Vietnamese, with a capital V. Twan dot chan at example dot com. Student. And intermediate.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: bullets
+    chapter: "Mẹo IELTS: điền form"
+    heading: "IELTS Listening tip · form completion"
+    heading_vi: "Phần 1 bài nghe IELTS thường là điền form như thế này"
+    items:
+      - {en: "Read the form before you listen: what kind of answer is it?", vi: "đọc form trước: cần tên, số, ngày hay email?"}
+      - {en: "Check the word limit: NO MORE THAN TWO WORDS AND/OR A NUMBER", vi: "viết quá số từ cho phép là mất điểm"}
+      - {en: "Spelling counts: T, R, A, N · double letters · at, dot", vi: "sai chính tả là sai — nghe kỹ phần đánh vần"}
+      - {en: "People often change their answer: Tuesday… no, sorry, Wednesday", vi: "người nói hay sửa lại — ghi đáp án sau cùng"}
+    lines:
+      - emma: "Here are four tips for part one of the IELTS listening test. First, read the form before you listen. Do you need a name, a number, a date, or an email?"
+        say: "Here are four tips for part one of the eye-elts listening test. First, read the form before you listen. Do you need a name, a number, a date, or an email?"
+        focus: 0
+        vi: "Mẹo 1: đọc form trước khi nghe — cần tên, số, ngày hay email?"
+      - {tom: "Second, check the word limit. If it says no more than two words, three words is wrong.", focus: 1, vi: "Mẹo 2: đúng giới hạn số từ."}
+      - {emma: "Third, spelling counts. Listen carefully when people spell names, and listen for at and dot in email addresses.", focus: 2}
+      - {tom: "And fourth, people often change their answer. Is it Tuesday? No, sorry, it's Wednesday. So write the last answer.", focus: 3, vi: "Mẹo 4: người nói hay đổi ý — ghi đáp án cuối cùng."}
+
+  - kind: qa
+    chapter: "Nói 1: form và tên người Việt"
+    heading: "Speaking 1 · Tom and Emma talk about forms"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "When do you fill in forms?"
+        a: "At the bank, at the doctor's, and when I apply for a course. Last month I filled in a very long form for my exchange programme."
+        ask: emma
+        by: tom
+        phrases: ["At the bank…", "when I apply for…", "I filled in a form"]
+      - q: "Do you prefer paper forms or online forms?"
+        a: "Online forms. They're faster, and nobody has to read my handwriting!"
+        ask: tom
+        by: emma
+        phrases: ["I prefer…", "They're faster", "nobody has to…"]
+      - q: "Have you ever made a mistake on a form?"
+        a: "Yes! On my first visa form, I wrote my first name in the surname box. In Vietnamese names, the family name comes first."
+        ask: emma
+        by: tom
+        phrases: ["Yes!", "I wrote … in the … box", "the family name comes first"]
+      - q: "So what's your name on an English form?"
+        a: "Surname: Tran. Forenames: Minh Tuan. Some people think Minh is my middle name, and that's fine too."
+        ask: emma
+        by: tom
+        phrases: ["Surname:", "Forenames:", "middle name"]
+      - q: "How do you write your date of birth, Emma?"
+        a: "Fifteen, oh nine, ninety-eight. In England we write the day first. Americans write the month first, so be careful!"
+        ask: tom
+        by: emma
+        phrases: ["we write the day first", "the month first", "be careful"]
+      - q: "What's your mother tongue?"
+        a: "Vietnamese. And my second language is English, of course."
+        ask: emma
+        by: tom
+        phrases: ["My mother tongue is…", "my second language"]
+      - q: "What forms did you fill in when you came to Vietnam?"
+        a: "A visa form, a form at the bank, and a form at my school. The visa form was the longest, with ten pages!"
+        ask: tom
+        by: emma
+        phrases: ["A visa form…", "The … form was the longest", "with ten pages"]
+      - q: "What do you write for occupation, Tom?"
+        a: "Student, for now. But one day, I hope to write marketing manager!"
+        ask: emma
+        by: tom
+        phrases: ["…, for now.", "But one day…", "I hope to…"]
+      - q: "Do you know your passport number?"
+        a: "No way! It's too long. I keep a photo of my passport on my phone, so I can copy it."
+        ask: emma
+        by: tom
+        phrases: ["No way!", "It's too long.", "so I can…"]
+      - q: "Which words were difficult for you at first?"
+        a: "Surname, forename and occupation. They look very formal. Now they're easy: family name, first name and job."
+        ask: emma
+        by: tom
+        phrases: ["… were difficult at first", "They look very formal", "Now they're easy"]
+    lines:
+      - {emma: "When do you fill in forms, Tom?", focus: 0}
+      - {tom: "At the bank, at the doctor's, and when I apply for a course. Last month I filled in a very long form for my exchange programme.", reveal: 0, vi: "Ở ngân hàng, phòng khám, khi đăng ký khóa học; tháng trước điền một form rất dài cho chương trình trao đổi."}
+      - {tom: "Do you prefer paper forms or online forms?", focus: 1}
+      - {emma: "Online forms. They're faster, and nobody has to read my handwriting!", say: "Online forms. They're faster, and nobody has to reed my handwriting!", reveal: 1, vi: "Form trên mạng: nhanh hơn, và chẳng ai phải đọc chữ viết tay của Emma!"}
+      - {emma: "Have you ever made a mistake on a form?", focus: 2}
+      - {tom: "Yes! On my first visa form, I wrote my first name in the surname box. In Vietnamese names, the family name comes first.", reveal: 2, vi: "Có! Form visa đầu tiên, Tom viết tên vào ô họ — tên người Việt có họ đứng trước."}
+      - {emma: "So what's your name on an English form?", focus: 3}
+      - {tom: "Surname: Tran. Forenames: Minh Tuan. Some people think Minh is my middle name, and that's fine too.", say: "Surname: Chan. Forenames: Min Twan. Some people think Min is my middle name, and that's fine too.", reveal: 3, vi: "Họ: Trần. Tên: Minh Tuấn — có người tưởng Minh là tên đệm, cũng không sao."}
+      - {tom: "How do you write your date of birth, Emma?", focus: 4}
+      - {emma: "Fifteen, oh nine, ninety-eight. In England we write the day first. Americans write the month first, so be careful!", reveal: 4, vi: "15/09/98 — ở Anh viết ngày trước; người Mỹ viết tháng trước, cẩn thận!"}
+      - {emma: "What's your mother tongue?", focus: 5}
+      - {tom: "Vietnamese. And my second language is English, of course.", reveal: 5}
+      - {tom: "What forms did you fill in when you came to Vietnam?", focus: 6}
+      - {emma: "A visa form, a form at the bank, and a form at my school. The visa form was the longest, with ten pages!", reveal: 6, vi: "Form visa, form ở ngân hàng, form ở trường — form visa dài nhất, mười trang!"}
+      - {emma: "What do you write for occupation, Tom?", focus: 7}
+      - {tom: "Student, for now. But one day, I hope to write marketing manager!", reveal: 7, vi: "Giờ là sinh viên; mong một ngày ghi trưởng phòng marketing!"}
+      - {emma: "Do you know your passport number?", focus: 8}
+      - {tom: "No way! It's too long. I keep a photo of my passport on my phone, so I can copy it.", reveal: 8, vi: "Không đời nào! Dài lắm — Tom lưu ảnh hộ chiếu trong điện thoại để chép lại."}
+      - {emma: "Which words were difficult for you at first?", focus: 9}
+      - {tom: "Surname, forename and occupation. They look very formal. Now they're easy: family name, first name and job.", reveal: 9, vi: "Surname, forename, occupation — trông rất trang trọng; giờ thì dễ rồi."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: fill in the form out loud"
+    heading_vi: "Bài 2 trong sách (ABOUT YOU): nói to thông tin của bạn, đánh vần họ tên"
+    items:
+      - {q: "What's your surname? How do you spell it?", hint: "My surname is … That's …"}
+      - {q: "What are your forenames?", hint: "My first names are …"}
+      - {q: "What's your date of birth?", hint: "The … of …, two thousand and … / nineteen …"}
+      - {q: "What's your nationality? What's your mother tongue?", hint: "I'm … · My mother tongue is …"}
+      - {q: "What's your occupation? What's your level of English?", hint: "I'm a … · I think I'm elementary / intermediate"}
+    lines:
+      - emma: "Now it's your turn. Imagine you're filling in a form. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tưởng tượng đang điền form — tạm dừng video, trả lời thành tiếng."
+      - {emma: "What's your surname? How do you spell it?", focus: 0, pause: 0.5}
+      - {emma: "What are your forenames?", focus: 1, pause: 0.5}
+      - {emma: "What's your date of birth?", focus: 2, pause: 0.5}
+      - {emma: "What's your nationality? What's your mother tongue?", focus: 3, pause: 0.5}
+      - {emma: "What's your occupation? What's your level of English?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che cột Word ở tr. 27, nhìn cột Meaning và nói lại từ"
+    items:
+      - {en: "Mr · Mrs · Miss · Ms", vi: "danh xưng"}
+      - {en: "surname · forename · date of birth · nationality · mother tongue", vi: "họ, tên, ngày sinh, quốc tịch, tiếng mẹ đẻ"}
+      - {en: "home address · mobile no · email address · marital status · occupation", vi: "địa chỉ, số di động, email, hôn nhân, nghề"}
+      - {en: "BLOCK CAPITALS · tick the box · signature", vi: "chữ in hoa, đánh dấu, chữ ký"}
+      - {en: "Next: Unit 10 · My family", vi: "Tiếp theo: Unit 10 · gia đình"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Mr, Mrs, Miss, and Ms.", say: "Mister, Missiz, Miss, and Mizz.", focus: 0}
+      - {tom: "Surname, forename, date of birth, nationality and mother tongue.", focus: 1}
+      - {emma: "Home address, mobile number, email address, marital status and occupation.", focus: 2}
+      - {tom: "Block capitals, tick the box, and your signature at the end.", focus: 3}
+      - {emma: "Now cover the words on page twenty-seven, look at the meanings, and say the words. See you in Unit 10!", say: "Now cover the words on page twenty-seven, look at the meanings, and say the words. See you in Unit ten!", focus: 4}

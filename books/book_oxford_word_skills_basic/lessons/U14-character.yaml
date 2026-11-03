@@ -1,0 +1,484 @@
+# Video Oxford Word Skills Basic · Unit 14 — I can talk about character (sách in tr. 36–37, Answer key tr. 207–208).
+# UNIT KHÓ (đợt 29): tính từ chỉ tính cách trừu tượng, lại là nền cho IELTS Part 2 "describe a person" — video dài khoảng
+# 12 phút: phần sách, rồi ÔN TẬP (lỗi hay gặp, cặp trái nghĩa) và LUYỆN NÓI CHUNG (Part 2 "a person you know who is very
+# kind", hai bài mẫu Tom và Emma; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`.
+# Hình trong sách: bảng tính từ tr. 36 (hai dải, khung theo dòng đang học), khung Spotlight "What's … like?" tr. 36 và
+# "really" tr. 37, đoạn văn của Gemma tr. 37 (khung theo câu có từ trong Glossary).
+# Đáp án bài 1, 2, 3, 5 theo Answer key; bài 4 (really + tính từ) làm cùng Spotlight; bài 6 (ABOUT YOU): câu mẫu "Answers
+# from a British person" rồi Tom và Emma tự trả lời trong phần nói.
+# Chi tiết nhân vật (khớp hồ sơ file 06 mục 9.4 và file 09 mục 5.7): Tom hơi trầm lúc mới quen, chăm chỉ, biết lắng nghe
+# (hồ sơ: điểm mạnh), bàn học gọn nhưng phòng bừa; Khoa vui tính, tốt bụng, chăm chỉ, học y ở Hà Nội (khớp
+# U01-speaking-practice-4); thầy Nam dạy Hóa tốt bụng,
+# vui, nghiêm khắc chuyện bài tập; ông Tom (thầy Toán về hưu) kiên nhẫn, tốt bụng — bài nói Part 2 của Tom.
+# Emma hòa đồng, khá thoải mái, ở nhà không gọn gàng (bếp bừa sau khi nấu); Lucy rất hòa đồng, ngăn nắp — hai người trái
+# ngược; cô Green thông minh, tốt bụng, làm tiếng Anh thành niềm vui; bà Emma tốt bụng (đan áo cho cả nhà, luôn có bánh) —
+# bài nói Part 2 của Emma; Emma hồi thiếu niên rất nhút nhát, đi dạy giúp tự tin hơn.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U14-character.yaml
+id: U14-character
+activity: U14-words
+title: "Unit 14 · Character"
+subtitle: "I can talk about character"
+title_vi: "Tính từ chỉ tính cách: friendly, kind, funny, relaxed, shy, sociable…; What's he like? — kèm ôn tập và luyện nói tả người"
+tag: "PEOPLE · UNIT 14"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 14: character. In Unit 13, we talked about what people look like. Today we talk about what people are like: friendly, funny, shy, lazy… It's a difficult topic, so this video is longer, with a review and speaking practice at the end."
+        say: "Welcome to Unit fourteen: character. In Unit thir-teen, we talked about what people look like. Today we talk about what people are like: friendly, funny, shy, lazy… It's a difficult topic, so this video is longer, with a review and speaking practice at the end."
+        vi: "Unit 14: tính cách. Video dài hơn: học sách, ôn tập, luyện nói."
+      - tom: "As always, there's no countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Tính cách (1)"
+    heading: "A · What's he / she like? (1)"
+    heading_vi: "Bảng trong sách tr. 36: Word (từ) · Example (ví dụ) · Meaning (nghĩa)"
+    image: {pdf: course-book, page: 37, clip: [28, 94, 486, 262]}
+    items:
+      - {box: [30, 108, 484, 138]}
+      - {box: [30, 138, 484, 167]}
+      - {box: [30, 166, 484, 197]}
+      - {box: [30, 197, 484, 211]}
+      - {box: [30, 210, 484, 261]}
+    lines:
+      - emma: "Look at the table on page thirty-six. Friendly. The students in my class are all really friendly. It means happy to meet and talk to other people. The opposite is unfriendly."
+        focus: 0
+        vi: "friendly: thân thiện, thích gặp gỡ trò chuyện — trái nghĩa: unfriendly"
+      - {tom: "Kind. He visited me a lot in hospital, which was really kind. Warm, friendly, and always wanting to help other people.", focus: 1, vi: "kind: tốt bụng, luôn muốn giúp người khác"}
+      - {emma: "Nice. I met Colin on holiday, and he's a really nice guy. Kind and friendly. It's a very important word in spoken English.", focus: 2, vi: "nice: dễ mến — từ rất hay dùng khi nói; đồng nghĩa: pleasant, trái nghĩa: horrible"}
+      - {tom: "Fun. I love Karen; she's great fun. Someone who makes you happy.", focus: 3, vi: "fun: vui, ở cạnh thấy vui"}
+      - {emma: "And funny. John makes me laugh. He's a really funny man. Funny means making you laugh.", focus: 4, vi: "funny: buồn cười, hài hước — fun ≠ funny"}
+
+  - kind: figure
+    chapter: "Tính cách (2)"
+    heading: "A · What's he / she like? (2)"
+    heading_vi: "Bảng trong sách tr. 36"
+    image: {pdf: course-book, page: 37, clip: [28, 258, 486, 362]}
+    items:
+      - {box: [30, 258, 484, 288]}
+      - {box: [30, 287, 484, 316]}
+      - {box: [30, 315, 484, 331]}
+      - {box: [30, 330, 484, 360]}
+    lines:
+      - {tom: "Relaxed. My parents are very relaxed: they don't get angry if I'm late. It means calm.", focus: 0, vi: "relaxed: thoải mái, bình thản"}
+      - {emma: "Clever. Tom is very clever. The best student in our class!", focus: 1, vi: "clever: thông minh — đồng nghĩa intelligent, trái nghĩa stupid"}
+      - {tom: "Ha! That's in the book, not about me. Clever means able to learn and understand very quickly.", focus: 1}
+      - {emma: "Quiet. She's quiet, but she can be funny. Someone who is quiet doesn't say very much.", focus: 2, vi: "quiet: ít nói, trầm"}
+      - {tom: "And serious. I like our teacher, but she's very serious. Someone who thinks a lot, and doesn't laugh very much.", focus: 3, vi: "serious: nghiêm túc, ít cười"}
+
+  - kind: bullets
+    chapter: "What's he like?"
+    heading: "Spotlight · What's he like?"
+    heading_vi: "Khung Spotlight tr. 36 — hỏi tính cách khác hỏi ngoại hình (Unit 13)"
+    image: {pdf: course-book, page: 37, clip: [286, 374, 484, 468]}
+    items:
+      - {en: "What's Jack like? — He's very nice.", vi: "Jack là người thế nào? (tính cách)"}
+      - {en: "NOT He's like very nice.", vi: "câu trả lời không có like"}
+      - {en: "What was the film like? — Great!", vi: "hỏi về sự vật: bộ phim thế nào?"}
+      - {en: "What does he look like? — He's tall, with dark hair.", vi: "hỏi ngoại hình (Unit 13) — có look"}
+    lines:
+      - {emma: "We use the question: what's he like? to find out more about someone. What's Jack like? He's very nice.", focus: 0}
+      - {tom: "Be careful. The answer has no like. He's very nice. Not: he's like very nice.", focus: 1, vi: "Không nói He's like very nice."}
+      - {emma: "We use it for things too. What was the film like? Great!", focus: 2}
+      - {tom: "And don't mix it up with: what does he look like? That's about his appearance, from Unit 13.", say: "And don't mix it up with: what does he look like? That's about his appearance, from Unit thir-teen.", focus: 3, vi: "What does he look like? = trông thế nào (ngoại hình)."}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành từ"
+    heading: "Exercise 1 · Complete the words"
+    heading_vi: "Ví dụ: f _ n → fun — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "f _ _ _ y  →  ___", answer: "funny"}
+      - {n: 2, q: "q _ _ _ t  →  ___", answer: "quiet"}
+      - {n: 3, q: "r _ l _ x _ d  →  ___", answer: "relaxed"}
+      - {n: 4, q: "n _ _ e  →  ___", answer: "nice"}
+      - {n: 5, q: "c _ _ _ r  →  ___", answer: "clever"}
+      - {n: 6, q: "f _ _ _ _ _ _ y  →  ___", answer: "friendly"}
+      - {n: 7, q: "la _ _ h  →  ___", answer: "laugh"}
+    lines:
+      - emma: "Exercise 1. Complete the words. Pause the video and try."
+        say: "Exercise one. Complete the words. Pause the video and try."
+        vi: "Bài 1: điền chữ còn thiếu."
+      - {tom: "Funny. Quiet. Relaxed. Nice.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Clever. Friendly. And laugh.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 2: đồng nghĩa, trái nghĩa"
+    heading: "Exercise 2 · Answer the questions"
+    heading_vi: "Ví dụ: a synonym for nice → pleasant · someone who likes meeting people → friendly (Answer key tr. 207)"
+    items:
+      - {n: 1, q: "the opposite of friendly?  →  ___", answer: "unfriendly"}
+      - {n: 2, q: "a synonym for clever?  →  ___", answer: "intelligent"}
+      - {n: 3, q: "the opposite of nice?  →  ___", answer: "horrible"}
+      - {n: 4, q: "the opposite of clever?  →  ___", answer: "stupid"}
+      - {n: 5, q: "someone who makes you laugh?  →  ___", answer: "funny"}
+      - {n: 6, q: "someone who thinks a lot and doesn't laugh a lot?  →  ___", answer: "serious"}
+      - {n: 7, q: "someone who is usually calm?  →  ___", answer: "relaxed"}
+      - {n: 8, q: "someone who always wants to help others?  →  ___", answer: "kind"}
+    lines:
+      - emma: "Exercise 2. Synonyms and opposites. A synonym means the same. Pause the video and answer."
+        say: "Exercise two. Synonyms and opposites. A synonym means the same. Pause the video and answer."
+        vi: "Bài 2: synonym = từ đồng nghĩa, opposite = từ trái nghĩa."
+      - {tom: "One, unfriendly. Two, intelligent. Three, horrible. Four, stupid.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five, funny. Six, serious. Seven, relaxed. And eight, kind.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 3: hoàn thành hội thoại"
+    heading: "Exercise 3 · Complete the conversations"
+    heading_vi: "Đáp án theo Answer key tr. 208"
+    items:
+      - {n: "1", q: "What's Alex like? — He's nice, but he's very ___. He doesn't laugh much.", answer: "serious"}
+      - {n: "2a", q: "What ___ Ana's parents like?", answer: "are"}
+      - {n: "2b", q: "— Well, her mother's great ___; I like her very much.", answer: "fun"}
+      - {n: "2c", q: "But her father doesn't like people very much — he's really ___.", answer: "horrible / unfriendly"}
+      - {n: "3a", q: "___ was your grandmother like?", answer: "What"}
+      - {n: "3b", q: "— She was very ___ — she always helped everyone.", answer: "kind"}
+      - {n: "3c", q: "And she was ___ too. She went to university.", answer: "clever / intelligent"}
+    lines:
+      - emma: "Exercise 3. Complete the conversations. Pause the video and try."
+        say: "Exercise three. Complete the conversations. Pause the video and try."
+        vi: "Bài 3: hoàn thành hội thoại."
+      - {tom: "One. What's Alex like? He's nice, but he's very serious. He doesn't laugh much.", reveal: ["1"], focus: 0}
+      - {tom: "Two. What are Ana's parents like? Well, her mother's great fun. But her father is really horrible, or unfriendly.", reveal: ["2a", "2b", "2c"], focus: 3}
+      - {tom: "Three. What was your grandmother like? She was very kind. And she was clever, or intelligent, too.", reveal: ["3a", "3b", "3c"], focus: 6}
+
+  - kind: bullets
+    chapter: "Đọc: Gemma và Sophie"
+    heading: "B · We like each other · Gemma's story"
+    heading_vi: "Đoạn văn trong sách tr. 37 — khung đỏ chỉ câu có từ trong Glossary"
+    image: {pdf: course-book, page: 38, clip: [40, 244, 258, 372]}
+    items:
+      - {en: "on my own = alone", vi: "một mình", box: [44, 255, 254, 268]}
+      - {en: "complete opposites = very different", vi: "trái ngược hoàn toàn", box: [44, 279, 254, 291]}
+      - {en: "shy ≠ sociable", vi: "nhút nhát ≠ hòa đồng", box: [44, 290, 254, 314]}
+      - {en: "sporty = likes sport, good at it", vi: "mê và giỏi thể thao", box: [44, 302, 254, 314]}
+      - {en: "share a flat = live in the same flat", vi: "ở chung căn hộ", box: [44, 325, 254, 337]}
+      - {en: "organized · tidy ≠ untidy", vi: "ngăn nắp, có kế hoạch · gọn gàng ≠ bừa bộn", box: [44, 325, 254, 360]}
+      - {en: "lazy ≠ hardworking", vi: "lười ≠ chăm chỉ", box: [44, 348, 254, 360]}
+    lines:
+      - emma: "Now read Gemma's story on page thirty-seven. Gemma met Sophie at university. I was on my own: that means alone."
+        focus: 0
+        vi: "Gemma gặp Sophie ở đại học; lúc đó Gemma đang một mình."
+      - {tom: "What's interesting is that we're complete opposites. That means very different.", focus: 1}
+      - {emma: "She's very happy to meet new people, but I'm really shy. She's very sociable. A shy person can't talk easily to people they don't know.", focus: 2}
+      - {tom: "She's sporty, and I'm not. Sporty means she likes sport, and she's good at it.", focus: 3}
+      - {emma: "We became friends, and shared a flat for two years. They lived in the same flat.", focus: 4}
+      - {tom: "I'm very organized, and did most of the housework. Sophie's not very tidy. An organized person plans things well, and a tidy person likes everything to be in the right place.", focus: 5}
+      - {emma: "And she can be lazy around the house. The opposite of lazy is hardworking. But she's a great cook, and a really nice person!", focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 5: đúng hay sai?"
+    heading: "Exercise 5 · Read the text again. True or false?"
+    heading_vi: "Ví dụ: Sophie likes sport. → T — đáp án theo Answer key tr. 208"
+    items:
+      - {n: 1, q: "Gemma was alone when she met Sophie.  →  ___", answer: "T"}
+      - {n: 2, q: "Gemma and Sophie are very different.  →  ___", answer: "T"}
+      - {n: 3, q: "Sophie likes meeting new people.  →  ___", answer: "T"}
+      - {n: 4, q: "They lived together at university.  →  ___", answer: "T"}
+      - {n: 5, q: "Gemma's sociable.  →  ___", answer: "F (shy)"}
+      - {n: 6, q: "Sophie's very unfriendly.  →  ___", answer: "F (sociable)"}
+      - {n: 7, q: "Sophie's untidy.  →  ___", answer: "T"}
+      - {n: 8, q: "Gemma doesn't plan things.  →  ___", answer: "F (organized)"}
+    lines:
+      - emma: "Exercise 5. True or false? Pause the video and decide."
+        say: "Exercise five. True or false? Pause the video and decide."
+        vi: "Bài 5: đúng hay sai?"
+      - {tom: "One, true: she was on her own. Two, true: they're complete opposites. Three, true. Four, true: they shared a flat.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five, false. Gemma is shy. Six, false. Sophie is sociable. Seven, true. Eight, false. Gemma is very organized.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: bullets
+    chapter: "really + tính từ"
+    heading: "Spotlight · really"
+    heading_vi: "Khung Spotlight tr. 37 — bài 4: tìm really + tính từ ở tr. 36"
+    image: {pdf: course-book, page: 38, clip: [282, 268, 486, 362]}
+    items:
+      - {en: "really = very: I'm in a really nice class.", vi: "really đứng trước hầu hết tính từ, rất hay dùng khi nói"}
+      - {en: "She was really horrible to me.", vi: "cô ấy thật tệ với tôi"}
+      - {en: "really friendly · really kind · really nice · really funny", vi: "bài 4: các ví dụ really + tính từ ở tr. 36"}
+    lines:
+      - {emma: "Really is very important in spoken English. It means very, and you can use it before most adjectives. I'm in a really nice class.", say: "Really is very important in spoken English. It means very, and you can yooz it before most adjectives. I'm in a really nice class.", focus: 0}
+      - {tom: "She was really horrible to me.", focus: 1}
+      - {emma: "Exercise 4. Find examples of really with an adjective on page thirty-six. Pause the video and look.", say: "Exercise four. Find examples of really with an adjective on page thirty-six. Pause the video and look.", focus: 2}
+      - {tom: "Really friendly, really kind, really nice, and really funny.", focus: 2}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · character"
+    heading_vi: "Tạm dừng sau mỗi câu, viết tính từ còn thiếu"
+    items:
+      - {n: 1, q: "My brother is very ___. He never tidies his room.", answer: "lazy"}
+      - {n: 2, q: "She's really ___. She talks to everyone at parties.", answer: "sociable"}
+      - {n: 3, q: "He's a bit ___. He doesn't talk to people he doesn't know.", answer: "shy"}
+      - {n: 4, q: "Our teacher is very ___. She never gets angry.", answer: "relaxed"}
+      - {n: 5, q: "My neighbour is very ___. He always helps me.", answer: "kind"}
+      - {n: 6, q: "She plans everything. She's very ___.", answer: "organized"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing adjective."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết tính từ."
+      - {emma: "Number one. My brother is very lazy. He never tidies his room.", focus: 0}
+      - {emma: "Number two. She's really sociable. She talks to everyone at parties.", focus: 1}
+      - {emma: "Number three. He's a bit shy. He doesn't talk to people he doesn't know.", focus: 2}
+      - {emma: "Number four. Our teacher is very relaxed. She never gets angry.", focus: 3}
+      - {emma: "Number five. My neighbour is very kind. He always helps me.", focus: 4}
+      - {emma: "Number six. She plans everything. She's very organized.", focus: 5}
+      - {tom: "Lazy. Sociable: S, O, C, I, A, B, L, E. Shy.", say: "Lazy. Sociable: ess, oh, see, eye, eigh, bee, el, ee. Shy.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Relaxed. Kind. And organized, with a z.", say: "Relaxed. Kind. And organized, with a zed.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: bạn là người thế nào?"
+    heading: "Speaking 1 · What are you like?"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What are you like, Tom?"
+        a: "I'm quite quiet when I meet new people, but I'm friendly when I know them. My friends say I'm hardworking, and a good listener."
+        ask: emma
+        by: tom
+        phrases: ["quite quiet", "but I'm friendly when…", "a good listener"]
+      - q: "And you, Emma?"
+        a: "I'm sociable and quite relaxed. But I'm not very tidy at home. My kitchen is always a mess after I cook!"
+        ask: tom
+        by: emma
+        phrases: ["I'm sociable", "not very tidy", "always a mess"]
+      - q: "What's your best friend like?"
+        a: "Khoa? He's really funny and kind. He's always smiling, and he makes everyone laugh. And he's very hardworking. He studies medicine in Hanoi."
+        ask: emma
+        by: tom
+        phrases: ["really funny and kind", "makes everyone laugh", "very hardworking"]
+      - q: "What's Lucy like?"
+        a: "She's really sociable. She talks to everyone! And she's very organized, but I'm not. We're complete opposites in some ways."
+        ask: tom
+        by: emma
+        phrases: ["really sociable", "very organized", "complete opposites"]
+      - q: "Are you tidy or untidy?"
+        a: "Both! My desk is tidy, because I study there. But my flatmates say my room is very untidy."
+        ask: emma
+        by: tom
+        phrases: ["Both!", "My desk is tidy", "very untidy"]
+      - q: "What was your favourite teacher like?"
+        a: "Mr Nam, my chemistry teacher. He was kind and really funny, but he was very serious about homework!"
+        ask: emma
+        by: tom
+        phrases: ["kind and really funny", "very serious about…"]
+      - q: "And yours, Emma?"
+        a: "Mrs Green, my English teacher. She was clever and kind, and she made English fun. She's the reason I became a teacher."
+        ask: tom
+        by: emma
+        phrases: ["clever and kind", "made English fun", "the reason I…"]
+      - q: "Are you sporty?"
+        a: "Yes. I play basketball twice a week, and I like swimming too, but I'm not very good at it."
+        ask: emma
+        by: tom
+        phrases: ["Yes.", "twice a week", "not very good at it"]
+      - q: "What kind of people do you like?"
+        a: "Friendly, relaxed people. And I don't like people who are horrible to waiters. That tells you a lot about someone!"
+        ask: tom
+        by: emma
+        phrases: ["Friendly, relaxed people", "I don't like people who…", "tells you a lot"]
+    lines:
+      - {emma: "What are you like, Tom?", focus: 0}
+      - {tom: "I'm quite quiet when I meet new people, but I'm friendly when I know them. My friends say I'm hardworking, and a good listener.", reveal: 0, vi: "Hơi trầm khi mới gặp, nhưng thân thiện khi đã quen; bạn bè bảo Tom chăm chỉ và biết lắng nghe."}
+      - {tom: "And you, Emma?", focus: 1}
+      - {emma: "I'm sociable and quite relaxed. But I'm not very tidy at home. My kitchen is always a mess after I cook!", reveal: 1, vi: "Hòa đồng, khá thoải mái; nhưng ở nhà không gọn gàng — nấu xong là bếp bừa!"}
+      - {emma: "What's your best friend like?", focus: 2}
+      - {tom: "Khoa? He's really funny and kind. He's always smiling, and he makes everyone laugh. And he's very hardworking. He studies medicine in Hanoi.", say: "Kwah? He's really funny and kind. He's always smiling, and he makes everyone laugh. And he's very hardworking. He studies medicine in Ha Noi.", reveal: 2, vi: "Khoa vui tính, tốt bụng, lúc nào cũng cười; lại rất chăm chỉ — đang học y ở Hà Nội."}
+      - {tom: "What's Lucy like?", focus: 3}
+      - {emma: "She's really sociable. She talks to everyone! And she's very organized, but I'm not. We're complete opposites in some ways.", reveal: 3, vi: "Lucy rất hòa đồng, rất ngăn nắp — Emma thì không; hai người trái ngược ở vài điểm."}
+      - {emma: "Are you tidy or untidy?", focus: 4}
+      - {tom: "Both! My desk is tidy, because I study there. But my flatmates say my room is very untidy.", reveal: 4, vi: "Cả hai! Bàn học gọn, nhưng bạn cùng phòng bảo phòng Tom rất bừa."}
+      - {emma: "What was your favourite teacher like?", focus: 5}
+      - {tom: "Mr Nam, my chemistry teacher. He was kind and really funny, but he was very serious about homework!", say: "Mister Nahm, my chemistry teacher. He was kind and really funny, but he was very serious about homework!", reveal: 5, vi: "Thầy Nam dạy Hóa: tốt bụng, rất vui, nhưng rất nghiêm chuyện bài tập!"}
+      - {tom: "And yours, Emma?", focus: 6}
+      - {emma: "Mrs Green, my English teacher. She was clever and kind, and she made English fun. She's the reason I became a teacher.", say: "Missiz Green, my English teacher. She was clever and kind, and she made English fun. She's the reason I became a teacher.", reveal: 6, vi: "Cô Green dạy tiếng Anh: thông minh, tốt bụng, làm tiếng Anh thành niềm vui — lý do Emma đi dạy."}
+      - {emma: "Are you sporty?", focus: 7}
+      - {tom: "Yes. I play basketball twice a week, and I like swimming too, but I'm not very good at it.", reveal: 7, vi: "Có: bóng rổ hai buổi một tuần, cũng thích bơi nhưng bơi kém."}
+      - {tom: "What kind of people do you like?", focus: 8}
+      - {emma: "Friendly, relaxed people. And I don't like people who are horrible to waiters. That tells you a lot about someone!", reveal: 8, vi: "Người thân thiện, thoải mái. Không thích người cư xử tệ với nhân viên phục vụ — điều đó nói lên nhiều về một người!"}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người học hay mắc khi nói về tính cách — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "What's Jack like? — He's like very nice.  →  ___", answer: "He's very nice."}
+      - {n: 2, q: "How is your teacher like?  →  ___", answer: "What is your teacher like?"}
+      - {n: 3, q: "She is very friend.  →  ___", answer: "She's very friendly."}
+      - {n: 4, q: "He's very funny. He makes me laughing.  →  ___", answer: "He makes me laugh."}
+      - {n: 5, q: "I'm very shy, so I love meeting new people.  →  ___", answer: "I'm very sociable, so …"}
+      - {n: 6, q: "She's very clever. She learns very slowly.  →  ___", answer: "She learns very quickly."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. He's very nice. No like in the answer. Two. What is your teacher like? Not how.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. She's very friendly. Friend is a noun, friendly is the adjective. Four. He makes me laugh. No ing.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I'm very sociable, so I love meeting new people. Six. Clever people learn very quickly.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Ôn tập: từ trái nghĩa"
+    heading: "Review · Say the opposite"
+    heading_vi: "Emma nói một tính từ, bạn nói từ trái nghĩa — tạm dừng video sau mỗi từ"
+    items:
+      - {n: 1, q: "friendly  →  ___", answer: "unfriendly"}
+      - {n: 2, q: "clever  →  ___", answer: "stupid"}
+      - {n: 3, q: "nice  →  ___", answer: "horrible"}
+      - {n: 4, q: "tidy  →  ___", answer: "untidy"}
+      - {n: 5, q: "lazy  →  ___", answer: "hardworking"}
+      - {n: 6, q: "shy  →  ___", answer: "sociable"}
+    lines:
+      - emma: "Now, opposites. I say an adjective, and you say the opposite. Pause the video after each one."
+        vi: "Emma nói tính từ, bạn nói từ trái nghĩa."
+      - {emma: "Friendly.", focus: 0}
+      - {tom: "Unfriendly.", reveal: 1, focus: 0}
+      - {emma: "Clever.", focus: 1}
+      - {tom: "Stupid. But it isn't polite to say it to someone!", reveal: 2, focus: 1}
+      - {emma: "Nice.", focus: 2}
+      - {tom: "Horrible.", reveal: 3, focus: 2}
+      - {emma: "Tidy.", focus: 3}
+      - {tom: "Untidy.", reveal: 4, focus: 3}
+      - {emma: "Lazy.", focus: 4}
+      - {tom: "Hardworking.", reveal: 5, focus: 4}
+      - {emma: "Shy.", focus: 5}
+      - {tom: "Sociable.", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a person you know who is very kind"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: who this person is", vi: "người đó là ai"}
+      - {en: "how you know this person", vi: "bạn quen người đó thế nào"}
+      - {en: "what he or she is like", vi: "người đó tính cách ra sao"}
+      - {en: "and explain why you think this person is so kind", vi: "và giải thích vì sao bạn thấy người đó rất tốt bụng"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a person you know who is very kind."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a person you know who is very kind."
+        vi: "Luyện nói chung kiểu Part 2: tả một người bạn biết rất tốt bụng."
+      - {emma: "You should say who this person is,", focus: 0}
+      - {emma: "how you know this person,", focus: 1}
+      - {emma: "what he or she is like,", focus: 2}
+      - {emma: "and explain why you think this person is so kind.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · my grandfather"
+    heading_vi: "Ghi chú của Tom trong 1 phút chuẩn bị"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "grandfather · 78 · retired maths teacher · lives with my family", vi: "ông · 78 tuổi · thầy Toán về hưu · sống cùng nhà"}
+      - {en: "known him all my life · vegetable garden · stories at Tet", vi: "quen cả đời · vườn rau · kể chuyện ngày Tết"}
+      - {en: "patient · relaxed · clever · quiet but funny", vi: "kiên nhẫn · điềm tĩnh · thông minh · ít nói mà vui"}
+      - {en: "helped me with maths every evening · gives vegetables to neighbours", vi: "kèm Toán mỗi tối · biếu rau hàng xóm"}
+    lines:
+      - tom: "Here are my notes. I chose my grandfather."
+        vi: "Tom chọn ông nội."
+      - emma: "All right? Can you start speaking now, please?"
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — mỗi ý trên thẻ là một đoạn, dùng tính từ của unit"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my grandfather. He's seventy-eight, and he's a retired maths teacher. He lives with my family in Da Lat."
+        say: "I'd like to talk about my grandfather. He's seventy-eight, and he's a retired maths teacher. He livz with my family in Dah Lot."
+        note: "who"
+      - text: "So I've known him all my life. Every morning he works in his vegetable garden, and at Tet he tells us stories about his life."
+        note: "how I know him"
+      - text: "He's quiet, but he's really funny when you know him. He's very patient and relaxed. I never saw him angry, even when I was a lazy student!"
+        note: "what he's like"
+      - text: "I think he's so kind because he always helps other people. Before my university exam, he helped me with maths every evening. And he gives vegetables from his garden to all our neighbours."
+        note: "why he's kind"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my grandmother. She's in her eighties, and she lives in my home town, near my parents."
+        say: "I'd like to talk about my grandmother. She's in her eighties, and she livz in my home town, near my parents."
+        note: "who"
+      - text: "I've known her all my life, of course. When I was a child, I spent every summer at her house by the sea."
+        note: "how I know her"
+      - text: "She's very sociable and fun. Everyone in the town knows her. She's also very organized: she remembers everyone's birthday!"
+        note: "what she's like"
+      - text: "I think she's kind because she always thinks about other people. She makes jumpers for the whole family, and there's always cake when you visit. Even now, she sends me letters in Vietnam."
+        note: "why she's kind"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a person you know who is very kind.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a person you know who is very kind"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Who is this person?", hint: "I'd like to talk about my … He's / She's …"}
+      - {q: "How do you know this person?", hint: "I've known him / her for … · We met …"}
+      - {q: "What is he or she like?", hint: "He's / She's really … but also …"}
+      - {q: "Why do you think this person is so kind?", hint: "because he / she always … · For example, …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the four points on the card."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the four points on the card."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Who is this person?", focus: 0, pause: 0.5}
+      - {emma: "How do you know this person?", focus: 1, pause: 0.5}
+      - {emma: "What is he or she like?", focus: 2, pause: 0.5}
+      - {emma: "Why do you think this person is so kind?", focus: 3, pause: 1.5}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · character"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Is it better to have friends who are like you, or different from you?"
+        a: "Different, I think. Lucy and I are complete opposites in some ways, but we never get bored. She helps me to be more organized, and I help her to relax."
+        ask: tom
+        by: emma
+        phrases: ["Different, I think.", "complete opposites", "She helps me to…"]
+      - q: "What's more important in a job: being clever, or being hardworking?"
+        a: "Being hardworking. Clever people who are lazy don't get very far. My grandfather always says: work hard, and the results will come."
+        ask: emma
+        by: tom
+        phrases: ["Being hardworking.", "don't get very far", "always says…"]
+      - q: "Can people change their character?"
+        a: "A little, yes. I was very shy as a teenager, but teaching made me much more confident. Now I can talk to a room of twenty people!"
+        ask: tom
+        by: emma
+        phrases: ["A little, yes.", "I was very shy as…", "made me more confident"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Is it better to have friends who are like you, or different from you?", focus: 0}
+      - {emma: "Different, I think. Lucy and I are complete opposites in some ways, but we never get bored. She helps me to be more organized, and I help her to relax.", reveal: 0, vi: "Khác mình thì hơn: Emma và Lucy trái ngược nhưng không bao giờ chán — Lucy giúp Emma ngăn nắp hơn, Emma giúp Lucy thư giãn."}
+      - {emma: "What's more important in a job: being clever, or being hardworking?", focus: 1}
+      - {tom: "Being hardworking. Clever people who are lazy don't get very far. My grandfather always says: work hard, and the results will come.", reveal: 1, vi: "Chăm chỉ quan trọng hơn: người thông minh mà lười thì không tiến xa. Ông Tom hay nói: chăm chỉ thì kết quả sẽ đến."}
+      - {tom: "Can people change their character?", focus: 2}
+      - {emma: "A little, yes. I was very shy as a teenager, but teaching made me much more confident. Now I can talk to a room of twenty people!", reveal: 2, vi: "Có thể, một chút: hồi thiếu niên Emma rất nhút nhát, đi dạy giúp tự tin hơn nhiều."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi che cột Word ở tr. 36, nhìn ví dụ và nghĩa, nói lại tính từ"
+    items:
+      - {en: "friendly, kind, nice, fun, funny, relaxed, clever, quiet, serious", vi: "tính từ tr. 36"}
+      - {en: "shy ≠ sociable · sporty · organized · tidy ≠ untidy · lazy ≠ hardworking", vi: "từ trong đoạn văn tr. 37"}
+      - {en: "What's he like? — He's really nice. (NOT He's like…)", vi: "hỏi tính cách"}
+      - {en: "really + adjective: a really nice class", vi: "really = very"}
+      - {en: "Next: Unit 15 · Relationships", vi: "Tiếp theo: Unit 15 · các mối quan hệ"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Friendly, kind, nice, fun, funny, relaxed, clever, quiet, and serious.", focus: 0}
+      - {tom: "Shy and sociable. Sporty. Organized. Tidy and untidy. Lazy and hardworking.", focus: 1}
+      - {emma: "What's he like? He's really nice.", focus: 2}
+      - {tom: "And really before adjectives: a really nice class.", focus: 3}
+      - {emma: "Now cover the words on page thirty-six, look at the examples and meanings, and say the adjectives. See you in Unit 15!", say: "Now cover the words on page thirty-six, look at the examples and meanings, and say the adjectives. See you in Unit fifteen!", focus: 4}

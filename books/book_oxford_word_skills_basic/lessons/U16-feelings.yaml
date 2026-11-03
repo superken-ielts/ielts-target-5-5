@@ -1,0 +1,478 @@
+# Video Oxford Word Skills Basic · Unit 16 — I can say how I feel (sách in tr. 40–41, Answer key tr. 208).
+# UNIT KHÓ (đợt 29): 20 từ chỉ cảm giác, cảm xúc, nhiều cặp dễ nhầm (sad / upset, frightened / scared, ill / not well) —
+# video dài khoảng 12 phút: phần sách, rồi ÔN TẬP (lỗi hay gặp, đoán cảm xúc theo tình huống) và LUYỆN NÓI CHUNG
+# (Part 2 "a time when you felt very nervous", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2.
+# Không `wait` / `echo`.
+# Hình trong sách: bảng cảm giác cơ thể tr. 40 (hai dải, khung theo dòng), 10 tranh cảm xúc và khung Spotlight
+# "get + adjective" tr. 41 (khung theo tranh đang nói).
+# Đáp án bài 1, 2, 4, 5 theo Answer key tr. 208.
+# Chi tiết nhân vật (khớp hồ sơ file 06 mục 9.4 và file 09 mục 5.7): Tom làm thêm ở quán cà phê gần trường tối thứ Ba,
+# thứ Năm từ tháng 9 (hồ sơ U03), quản lý nghiêm nhưng công bằng — ngày đầu làm rơi khay cà phê sữa đá, vỡ hai ly (bài nói
+# Part 2); tuần trước lại làm rơi khay đồ uống; trước kỳ thi không ăn sáng được; lo lắng thì gọi Khoa hoặc chị Hoa. Emma sợ nhện và
+# hơi sợ giao thông; giận người đến muộn không nhắn và xe máy chạy trên vỉa hè; nhớ nhà nhất dịp Giáng sinh thì gọi mẹ;
+# sinh nhật năm ngoái học viên làm bánh có tên Emma bằng tiếng Việt; buổi dạy đầu tiên ở Việt Nam ba năm trước, lớp 20
+# người lớn, chào "Chào buổi sáng" sai thanh (bài nói Part 2).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U16-feelings.yaml
+id: U16-feelings
+activity: U16-words
+title: "Unit 16 · Feelings"
+subtitle: "I can say how I feel"
+title_vi: "Cảm giác cơ thể (tired, hungry, boiling, ill) và cảm xúc (happy, worried, embarrassed, upset…) — kèm ôn tập và luyện nói"
+tag: "PEOPLE · UNIT 16"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 16, the last unit in the People module: feelings. How do you feel? Tired? Hungry? Nervous? Excited? There are a lot of words, so this video is longer, with a review and speaking practice at the end."
+        say: "Welcome to Unit sixteen, the last unit in the People module: feelings. How do you feel? Tired? Hungry? Nervous? Excited? There are a lot of words, so this video is longer, with a review and speaking practice at the end."
+        vi: "Unit 16, unit cuối module People: cảm giác, cảm xúc. Video dài hơn: học sách, ôn tập, luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Cảm giác cơ thể (1)"
+    heading: "A · Physical feelings (1)"
+    heading_vi: "Bảng trong sách tr. 40: Word / phrase · Example · Meaning"
+    image: {pdf: course-book, page: 41, clip: [28, 98, 486, 236]}
+    items:
+      - {box: [30, 115, 484, 148]}
+      - {box: [30, 148, 484, 171]}
+      - {box: [30, 170, 484, 187]}
+      - {box: [30, 186, 484, 201]}
+      - {box: [30, 201, 484, 218]}
+      - {box: [30, 217, 484, 234]}
+    lines:
+      - emma: "Look at the table on page forty. What's the matter? It means: what's the problem? And the answer can be: nothing."
+        focus: 0
+        vi: "What's the matter? = có chuyện gì vậy?"
+      - {tom: "Be, or feel, tired. I feel tired. I'm going to bed. Tired means you want to rest or sleep.", focus: 1, vi: "mệt, buồn ngủ"}
+      - {emma: "Hungry. I'm hungry. Is there anything to eat? You want something to eat.", focus: 2, vi: "đói"}
+      - {tom: "Thirsty. I'm thirsty. Can I have a juice? You want something to drink.", focus: 3, vi: "khát"}
+      - {emma: "Boiling means very, very hot. I'm boiling. Can we open a window?", focus: 4, vi: "nóng như lửa đốt"}
+      - {tom: "And freezing means very, very cold. Where's my coat? I'm freezing!", focus: 5, vi: "lạnh cóng"}
+
+  - kind: figure
+    chapter: "Cảm giác cơ thể (2)"
+    heading: "A · Physical feelings (2)"
+    heading_vi: "Bảng trong sách tr. 40 — feel ill = not feel well"
+    image: {pdf: course-book, page: 41, clip: [28, 232, 486, 376]}
+    items:
+      - {box: [30, 234, 484, 300]}
+      - {box: [30, 300, 484, 346]}
+      - {box: [30, 345, 484, 374]}
+    lines:
+      - {emma: "Nervous. Did you feel nervous before the exam? Yes, I did, but it was OK.", focus: 0, vi: "hồi hộp, lo lắng (trước việc gì đó)"}
+      - {tom: "Ill. He felt ill after the meal. I think he had too much to eat.", focus: 1, vi: "ốm, mệt trong người"}
+      - {emma: "And not feel well. He doesn't feel well, so I told him to go to bed.", focus: 2, vi: "thấy không khỏe"}
+      - {tom: "So, I feel ill, and I don't feel well, mean the same.", focus: 2, vi: "feel ill = not feel well"}
+
+  - kind: blanks
+    chapter: "Bài 1: bạn thấy thế nào?"
+    heading: "Exercise 1 · How do you feel? Write your answers."
+    heading_vi: "Ví dụ: You're outside. It's −10 degrees. → I'm freezing. (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "It's the end of a working day.  →  ___", answer: "I'm tired."}
+      - {n: 2, q: "It's minutes before an important exam.  →  ___", answer: "I'm nervous."}
+      - {n: 3, q: "You've had nothing to drink for hours.  →  ___", answer: "I'm thirsty."}
+      - {n: 4, q: "You've had nothing to eat for hours.  →  ___", answer: "I'm hungry."}
+      - {n: 5, q: "You're working. It's 35 degrees.  →  ___", answer: "I'm boiling."}
+      - {n: 6, q: "Your body temperature is 39.5 degrees.  →  ___", answer: "I'm ill. / I don't feel well."}
+    lines:
+      - emma: "Exercise 1. How do you feel? Pause the video, and say your answer."
+        say: "Exercise one. How do you feel? Pause the video, and say your answer."
+        vi: "Bài 1: bạn cảm thấy thế nào?"
+      - {tom: "One. I'm tired. Two. I'm nervous. Three. I'm thirsty.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. I'm hungry. Five. I'm boiling! Six. I'm ill. Or: I feel ill. Or: I don't feel well.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hội thoại"
+    heading: "Exercise 2 · Complete the dialogues"
+    heading_vi: "Ví dụ: When's lunch? — I don't know. Are you hungry? (Answer key tr. 208)"
+    items:
+      - {n: "1a", q: "What's the ___?", answer: "matter"}
+      - {n: "1b", q: "— I ___ ill.", answer: "feel / 'm"}
+      - {n: "2", q: "Are you ___? — Yes, I'm going to bed.", answer: "tired"}
+      - {n: "3a", q: "What's the ___?", answer: "matter"}
+      - {n: "3b", q: "— I'm ___. I need a coat.", answer: "freezing"}
+      - {n: "4", q: "It's very hot in here. — Yes, I know. I'm ___.", answer: "boiling"}
+      - {n: "5", q: "Is it your driving test tomorrow? — Yes, and I'm feeling a bit ___.", answer: "nervous"}
+      - {n: "6a", q: "___ the matter?", answer: "What's"}
+      - {n: "6b", q: "— I don't feel ___.", answer: "well"}
+    lines:
+      - emma: "Exercise 2. Complete the dialogues. Pause the video and try."
+        say: "Exercise two. Complete the dialogues. Pause the video and try."
+        vi: "Bài 2: hoàn thành hội thoại."
+      - {tom: "One. What's the matter? I feel ill. Or: I'm ill. Two. Are you tired? Yes, I'm going to bed.", reveal: ["1a", "1b", "2"], focus: 2}
+      - {tom: "Three. What's the matter? I'm freezing. I need a coat. Four. I know. I'm boiling.", reveal: ["3a", "3b", "4"], focus: 5}
+      - {tom: "Five. I'm feeling a bit nervous. Six. What's the matter? I don't feel well.", reveal: ["5", "6a", "6b"], focus: 8}
+
+  - kind: figure
+    chapter: "Cảm xúc (1)"
+    heading: "B · Emotions (1)"
+    heading_vi: "Tranh trong sách tr. 41 — SYN = đồng nghĩa"
+    image: {pdf: course-book, page: 42, clip: [44, 66, 486, 178]}
+    items:
+      - {box: [48, 68, 152, 166]}
+      - {box: [158, 68, 262, 177]}
+      - {box: [270, 68, 372, 166]}
+      - {box: [378, 68, 482, 166]}
+    lines:
+      - emma: "Now emotions. Look at the pictures on page forty-one. He's happy."
+        focus: 0
+        vi: "vui"
+      - {tom: "She's sad. Or: she's unhappy.", focus: 1, vi: "buồn"}
+      - {emma: "He's excited. He's going to a football match!", focus: 2, vi: "háo hức, phấn khích"}
+      - {tom: "She's worried. Maybe it's a bad letter.", focus: 3, vi: "lo lắng"}
+
+  - kind: figure
+    heading: "B · Emotions (2)"
+    heading_vi: "Tranh trong sách tr. 41"
+    image: {pdf: course-book, page: 42, clip: [44, 174, 486, 284]}
+    items:
+      - {box: [48, 176, 152, 272]}
+      - {box: [158, 176, 262, 283]}
+      - {box: [270, 176, 374, 272]}
+      - {box: [378, 176, 482, 272]}
+    lines:
+      - {emma: "He's angry.", focus: 0, vi: "tức giận"}
+      - {tom: "She's frightened, or scared. Look at that spider!", focus: 1, vi: "sợ hãi"}
+      - {emma: "He's embarrassed. Maybe he got a very bad mark.", focus: 2, vi: "xấu hổ, ngượng"}
+      - {tom: "And she's surprised!", focus: 3, vi: "ngạc nhiên"}
+
+  - kind: figure
+    heading: "B · Emotions (3)"
+    heading_vi: "Tranh và khung Spotlight trong sách tr. 41 — get + tính từ = trở nên"
+    image: {pdf: course-book, page: 42, clip: [44, 282, 486, 384]}
+    items:
+      - {box: [48, 284, 152, 382], label: "in love"}
+      - {box: [158, 284, 262, 382], label: "upset"}
+      - {box: [270, 284, 458, 357], label: "get = become"}
+    lines:
+      - {emma: "He's in love.", focus: 0, vi: "đang yêu"}
+      - {tom: "And she's upset. Something bad happened, and she's unhappy and a little angry.", focus: 1, vi: "buồn bực, khó chịu"}
+      - {emma: "Look at the spotlight. Get can mean become, or start to be. My wife gets worried if I'm late. The children got very excited at the party.", focus: 2, vi: "get + tính từ: trở nên — gets worried, got excited"}
+
+  - kind: blanks
+    chapter: "Bài 4: hoàn thành từ"
+    heading: "Exercise 4 · Complete the words"
+    heading_vi: "Ví dụ: ha _ _ _ → happy — đáp án theo Answer key tr. 208"
+    items:
+      - {n: 1, q: "ang _ _  →  ___", answer: "angry"}
+      - {n: 2, q: "wor _ _ _ _  →  ___", answer: "worried"}
+      - {n: 3, q: "up _ _ _  →  ___", answer: "upset"}
+      - {n: 4, q: "sca _ _ _  →  ___", answer: "scared"}
+      - {n: 5, q: "sur _ _ _ _ _ _  →  ___", answer: "surprised"}
+      - {n: 6, q: "fri _ _ _ _ _ _ _  →  ___", answer: "frightened"}
+      - {n: 7, q: "unh _ _ _ _  →  ___", answer: "unhappy"}
+      - {n: 8, q: "emb _ _ _ _ _ _ _ _  →  ___", answer: "embarrassed"}
+      - {n: 9, q: "ex _ _ _ _ _  →  ___", answer: "excited"}
+    lines:
+      - emma: "Exercise 4. Complete the words. Pause the video and try."
+        say: "Exercise four. Complete the words. Pause the video and try."
+        vi: "Bài 4: điền chữ còn thiếu."
+      - {tom: "Angry. Worried. Upset. Scared.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Surprised. Frightened. Unhappy. Embarrassed, with double r and double s. And excited.", say: "Surprised. Frightened. Unhappy. Embarrassed, with double ar and double ess. And excited.", reveal: [5, 6, 7, 8, 9], focus: 8, vi: "embarrassed: hai chữ r, hai chữ s."}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Ví dụ: I was sad when I heard that her mother was very ill. (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "The teacher got ___ because the children were running round the classroom.", answer: "angry"}
+      - {n: 2, q: "I got 100% in my English exam. I was very happy but also very ___.", answer: "surprised"}
+      - {n: 3, q: "I got very ___ yesterday because I couldn't find my credit card.", answer: "worried"}
+      - {n: 4, q: "My brothers get very ___ when they're watching football on TV.", answer: "excited"}
+      - {n: 5, q: "I made a stupid mistake and everyone laughed. I felt very ___.", answer: "embarrassed"}
+      - {n: 6, q: "My sister and Joe are getting married. My parents are ___ because they like him.", answer: "happy"}
+      - {n: 7, q: "I was very ___ when my boyfriend found a new girlfriend.", answer: "upset / sad / unhappy"}
+      - {n: 8, q: "My aunt never travels by plane. She's ___ of flying.", answer: "frightened / scared"}
+      - {n: 9, q: "They met on holiday. I think they're in ___.", answer: "love"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. Pause the video and try."
+        say: "Exercise five. Complete the sentences. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. The teacher got angry. Two. Very surprised. Three. I got very worried.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. They get very excited. Five. I felt very embarrassed. Six. My parents are happy.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven. Upset, sad or unhappy. Eight. She's frightened, or scared, of flying. And nine. They're in love.", reveal: [7, 8, 9], focus: 8, vi: "frightened of / scared of: sợ cái gì."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · feelings"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả — chú ý chữ đôi"
+    items:
+      - {n: 1, q: "I'm really ___ about my holiday.", answer: "excited"}
+      - {n: 2, q: "She's ___ of dogs.", answer: "frightened"}
+      - {n: 3, q: "He was very ___ when he forgot her name.", answer: "embarrassed"}
+      - {n: 4, q: "My mum gets ___ when I'm late.", answer: "worried"}
+      - {n: 5, q: "Can I have some water? I'm really ___.", answer: "thirsty"}
+      - {n: 6, q: "Close the window, please. I'm ___!", answer: "freezing"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. I'm really excited about my holiday.", focus: 0}
+      - {emma: "Number two. She's frightened of dogs.", focus: 1}
+      - {emma: "Number three. He was very embarrassed when he forgot her name.", focus: 2}
+      - {emma: "Number four. My mum gets worried when I'm late.", focus: 3}
+      - {emma: "Number five. Can I have some water? I'm really thirsty.", focus: 4}
+      - {emma: "Number six. Close the window, please. I'm freezing!", say: "Number six. Cloze the window, please. I'm freezing!", focus: 5}
+      - {tom: "Excited: E, X, C, I, T, E, D. Frightened, with g, h. Embarrassed, with double r and double s.", say: "Excited: ee, ex, see, eye, tee, ee, dee. Frightened, with gee aitch. Embarrassed, with double ar and double ess.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Worried, with double r. Thirsty. And freezing.", say: "Worried, with double ar. Thirsty. And freezing.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: cảm xúc của bạn"
+    heading: "Speaking 1 · How do you feel?"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How do you feel before an exam?"
+        a: "Very nervous. I can't eat breakfast, and my hands get cold. But when the exam starts, I feel OK."
+        ask: emma
+        by: tom
+        phrases: ["Very nervous.", "I can't…", "my hands get cold"]
+      - q: "What makes you angry, Emma?"
+        a: "People who are late, and don't send a message. Oh, and motorbikes on the pavement!"
+        ask: tom
+        by: emma
+        phrases: ["People who…", "don't send a message", "Oh, and…"]
+      - q: "When did you last feel embarrassed?"
+        a: "Last week, at the café. I dropped a tray of drinks in front of everyone. All the customers looked at me!"
+        ask: emma
+        by: tom
+        phrases: ["Last week…", "I dropped…", "in front of everyone"]
+      - q: "Are you frightened of anything?"
+        a: "Spiders! I can't even look at them. And I'm a little scared of the traffic here."
+        ask: tom
+        by: emma
+        phrases: ["I can't even…", "a little scared of…"]
+      - q: "What makes you happy?"
+        a: "Basketball with my friends, and a hot bowl of phở on a cold morning in Da Lat."
+        ask: emma
+        by: tom
+        phrases: ["… with my friends", "a hot bowl of…", "on a cold morning"]
+      - q: "Do you ever feel homesick?"
+        a: "Sometimes, especially at Christmas. Then I call my mum, and I feel much better."
+        ask: tom
+        by: emma
+        phrases: ["Sometimes, especially at…", "Then I…", "I feel much better"]
+      - q: "What do you do when you're worried?"
+        a: "I call Khoa, or my sister Hoa. They always know what to say, and they never get angry with me."
+        ask: emma
+        by: tom
+        phrases: ["I call…", "always know what to say", "never get angry"]
+      - q: "Are you boiling or freezing today?"
+        a: "Boiling! It's thirty-five degrees in Ho Chi Minh City. In Da Lat, I was often freezing at night."
+        ask: emma
+        by: tom
+        phrases: ["Boiling!", "It's … degrees", "I was often freezing"]
+      - q: "When were you last really surprised?"
+        a: "On my birthday last year. My students made me a cake with my name on it, in Vietnamese!"
+        ask: tom
+        by: emma
+        phrases: ["On my birthday…", "made me a cake", "in Vietnamese"]
+    lines:
+      - {emma: "How do you feel before an exam, Tom?", focus: 0}
+      - {tom: "Very nervous. I can't eat breakfast, and my hands get cold. But when the exam starts, I feel OK.", reveal: 0, vi: "Rất hồi hộp: không ăn sáng nổi, tay lạnh ngắt; nhưng vào thi thì ổn."}
+      - {tom: "What makes you angry, Emma?", focus: 1}
+      - {emma: "People who are late, and don't send a message. Oh, and motorbikes on the pavement!", reveal: 1, vi: "Người đến muộn mà không nhắn tin; à, và xe máy chạy trên vỉa hè!"}
+      - {emma: "When did you last feel embarrassed?", focus: 2}
+      - {tom: "Last week, at the café. I dropped a tray of drinks in front of everyone. All the customers looked at me!", reveal: 2, vi: "Tuần trước ở quán: làm rơi khay đồ uống trước mặt mọi người — khách nhìn hết!"}
+      - {tom: "Are you frightened of anything?", focus: 3}
+      - {emma: "Spiders! I can't even look at them. And I'm a little scared of the traffic here.", reveal: 3, vi: "Nhện! Nhìn còn không dám. Và hơi sợ giao thông ở đây."}
+      - {emma: "What makes you happy?", focus: 4}
+      - {tom: "Basketball with my friends, and a hot bowl of phở on a cold morning in Da Lat.", say: "Basketball with my friends, and a hot bowl of fuh on a cold morning in Dah Lot.", reveal: 4, vi: "Chơi bóng rổ với bạn, và bát phở nóng sáng lạnh ở Đà Lạt."}
+      - {tom: "Do you ever feel homesick?", focus: 5}
+      - {emma: "Sometimes, especially at Christmas. Then I call my mum, and I feel much better.", reveal: 5, vi: "Thỉnh thoảng, nhất là dịp Giáng sinh; gọi cho mẹ là thấy đỡ hơn nhiều."}
+      - {emma: "What do you do when you're worried?", focus: 6}
+      - {tom: "I call Khoa, or my sister Hoa. They always know what to say, and they never get angry with me.", say: "I call Kwah, or my sister Whah. They always know what to say, and they never get angry with me.", reveal: 6, vi: "Gọi Khoa hoặc chị Hoa: họ luôn biết nói gì, và không bao giờ giận Tom."}
+      - {emma: "Are you boiling or freezing today?", focus: 7}
+      - {tom: "Boiling! It's thirty-five degrees in Ho Chi Minh City. In Da Lat, I was often freezing at night.", say: "Boiling! It's thirty-five degrees in Ho Chee Min City. In Dah Lot, I was often freezing at night.", reveal: 7, vi: "Nóng chảy mỡ! TP. HCM 35 độ. Hồi ở Đà Lạt tối thường lạnh cóng."}
+      - {tom: "When were you last really surprised?", focus: 8}
+      - {emma: "On my birthday last year. My students made me a cake with my name on it, in Vietnamese!", reveal: 8, vi: "Sinh nhật năm ngoái: học viên làm bánh có tên Emma bằng tiếng Việt!"}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói cảm xúc — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I have hungry.  →  ___", answer: "I'm hungry."}
+      - {n: 2, q: "I'm very boring in this class.  →  ___", answer: "I'm very bored in this class."}
+      - {n: 3, q: "I'm exciting about my holiday.  →  ___", answer: "I'm excited about my holiday."}
+      - {n: 4, q: "She's frightened from spiders.  →  ___", answer: "She's frightened of spiders."}
+      - {n: 5, q: "What's the matter? — I'm not feel well.  →  ___", answer: "I don't feel well."}
+      - {n: 6, q: "I'm very worry about my exam.  →  ___", answer: "I'm very worried about my exam."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I'm hungry. We use be, not have. Two. I'm very bored in this class. Bored is how you feel. Boring is the class!", reveal: [1, 2], focus: 1, vi: "bored: (người) chán · boring: (việc) gây chán."}
+      - {tom: "Three. I'm excited about my holiday. Four. She's frightened of spiders. Frightened of, scared of.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I don't feel well. Six. I'm very worried about my exam. Worried is the adjective.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Ôn tập: bạn thấy thế nào?"
+    heading: "Review · How do you feel?"
+    heading_vi: "Nghe tình huống, nói cảm xúc — tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "Your best friend forgets your birthday.  →  ___", answer: "upset / sad"}
+      - {n: 2, q: "There's a big spider in your bed.  →  ___", answer: "frightened / scared"}
+      - {n: 3, q: "You fall over in front of the whole class.  →  ___", answer: "embarrassed"}
+      - {n: 4, q: "Tomorrow you're flying to Australia.  →  ___", answer: "excited"}
+      - {n: 5, q: "You can't find your phone.  →  ___", answer: "worried"}
+      - {n: 6, q: "Someone takes your seat on the bus.  →  ___", answer: "angry"}
+    lines:
+      - emma: "Now, a quiz. I describe a situation, and you say how you feel. Pause the video after each one."
+        vi: "Câu đố: nghe tình huống, nói cảm xúc."
+      - {emma: "Number one. Your best friend forgets your birthday.", focus: 0}
+      - {tom: "I'm upset. Or sad.", reveal: 1, focus: 0}
+      - {emma: "Number two. There's a big spider in your bed.", focus: 1}
+      - {tom: "Frightened, or scared. That's Emma's worst nightmare!", reveal: 2, focus: 1}
+      - {emma: "Number three. You fall over in front of the whole class.", focus: 2}
+      - {tom: "Embarrassed.", reveal: 3, focus: 2}
+      - {emma: "Number four. Tomorrow you're flying to Australia.", focus: 3}
+      - {tom: "Excited! I hope that's me next year.", reveal: 4, focus: 3}
+      - {emma: "Number five. You can't find your phone.", focus: 4}
+      - {tom: "Worried.", reveal: 5, focus: 4}
+      - {emma: "Number six. Someone takes your seat on the bus.", focus: 5}
+      - {tom: "Angry. Well, a little angry!", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a time when you felt very nervous"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể chuyện quá khứ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: when it was", vi: "khi nào"}
+      - {en: "where you were", vi: "ở đâu"}
+      - {en: "what happened", vi: "chuyện gì đã xảy ra"}
+      - {en: "and explain why you felt nervous", vi: "và giải thích vì sao bạn hồi hộp"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a time when you felt very nervous."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a time when you felt very nervous."
+        vi: "Luyện nói chung kiểu Part 2: kể lần bạn rất hồi hộp."
+      - {emma: "You should say when it was,", focus: 0}
+      - {emma: "where you were,", focus: 1}
+      - {emma: "what happened,", focus: 2}
+      - {emma: "and explain why you felt nervous.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · my first day at work"
+    heading_vi: "Ghi chú của Tom trong 1 phút chuẩn bị"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "first day · part-time job · café near uni · last September", vi: "ngày đầu đi làm thêm · quán cà phê gần trường · tháng 9 năm ngoái"}
+      - {en: "manager strict but fair · café full · cold hands", vi: "quản lý nghiêm nhưng công bằng · quán đông · tay lạnh"}
+      - {en: "dropped a tray of iced coffees · two glasses broke · embarrassed", vi: "làm rơi khay cà phê sữa đá · vỡ hai ly · ngượng"}
+      - {en: "first job · no mistakes · now relaxed", vi: "việc đầu tiên · sợ mắc lỗi · giờ thoải mái"}
+    lines:
+      - tom: "Here are my notes. I chose my first day at my part-time job."
+        vi: "Tom kể ngày đầu đi làm thêm."
+      - emma: "All right? Can you start speaking now, please?"
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — kể ở quá khứ, dùng từ chỉ cảm xúc"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my first day at my part-time job. It was last September, at a café near my university. I work there on Tuesday and Thursday evenings."
+        note: "when · where"
+      - text: "Before I started, I felt really nervous. The manager is strict but fair, and the café was full of customers. My hands were cold, and I couldn't remember the names of the drinks."
+        note: "before"
+      - text: "Then, after an hour, I dropped a tray of iced coffees, and two glasses broke. I was so embarrassed! But my manager just smiled and said: everybody does it once."
+        note: "what happened"
+      - text: "I felt nervous because it was my first job, and I didn't want to make mistakes. Now I know everyone, and I feel relaxed at work. Well, most of the time!"
+        note: "why I felt nervous"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my first lesson here in Vietnam, three years ago. It was at my school in Ho Chi Minh City, with a class of twenty adults."
+        say: "I'd like to talk about my first lesson here in Vietnam, three years ago. It was at my school in Ho Chee Min City, with a class of twenty adults."
+        note: "when · where"
+      - text: "I was very nervous before the lesson. I didn't know anyone, and the traffic was so bad that I was nearly late. I arrived with no time to relax."
+        note: "before"
+      - text: "When I said good morning in Vietnamese, everyone laughed, because I used the wrong tone. I was embarrassed, but then everyone started to help me, and the lesson was really fun."
+        say: "When I said good morning in Vietnamese, everyone laughed, because I yoozd the wrong tone. I was embarrassed, but then everyone started to help me, and the lesson was really fun."
+        note: "what happened"
+      - text: "I felt nervous because it was a new country and a new job. But that class was so kind and friendly. Some of them are still my friends today."
+        note: "why I felt nervous"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a time when you felt very nervous.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a time when you felt very nervous"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "When was it?", hint: "I'd like to talk about … It was last year / when I was …"}
+      - {q: "Where were you?", hint: "I was at … / in …"}
+      - {q: "What happened?", hint: "First, … Then … · I was so embarrassed / surprised …"}
+      - {q: "Why did you feel nervous?", hint: "I felt nervous because … · Now I feel …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple, and the feelings words from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple, and the feelings words from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút — dùng quá khứ đơn và từ chỉ cảm xúc."
+      - {emma: "When was it?", focus: 0, pause: 0.5}
+      - {emma: "Where were you?", focus: 1, pause: 0.5}
+      - {emma: "What happened?", focus: 2, pause: 0.5}
+      - {emma: "Why did you feel nervous?", focus: 3, pause: 1.5}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · feelings"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do people feel nervous before exams?"
+        a: "Because they're worried about the results. A little nervousness is good, because it helps you to concentrate. But too much is a problem."
+        ask: tom
+        by: emma
+        phrases: ["Because they're worried about…", "A little … is good", "But too much…"]
+      - q: "Do people in Vietnam show their feelings in public?"
+        a: "Not very much. People often smile, even when they're embarrassed or upset. But at a football match, everyone shows their feelings!"
+        ask: emma
+        by: tom
+        phrases: ["Not very much.", "even when…", "But at…"]
+      - q: "What makes people happy: money, or relationships?"
+        a: "Relationships, I think. Money helps, of course, but happy people usually have good friends and family around them."
+        ask: tom
+        by: emma
+        phrases: ["…, I think.", "Money helps, of course, but…", "around them"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Why do people feel nervous before exams?", focus: 0}
+      - {emma: "Because they're worried about the results. A little nervousness is good, because it helps you to concentrate. But too much is a problem.", reveal: 0, vi: "Vì lo về kết quả. Hồi hộp một chút là tốt, giúp tập trung; quá nhiều thì có vấn đề."}
+      - {emma: "Do people in Vietnam show their feelings in public?", focus: 1}
+      - {tom: "Not very much. People often smile, even when they're embarrassed or upset. But at a football match, everyone shows their feelings!", reveal: 1, vi: "Không nhiều: người Việt hay cười cả khi ngượng hay buồn bực. Nhưng ở trận bóng đá thì ai cũng bộc lộ cảm xúc!"}
+      - {tom: "What makes people happy: money, or relationships?", focus: 2}
+      - {emma: "Relationships, I think. Money helps, of course, but happy people usually have good friends and family around them.", reveal: 2, vi: "Các mối quan hệ: tiền giúp được, nhưng người hạnh phúc thường có bạn bè, gia đình bên cạnh."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 40–41, nhìn tranh và nghĩa, nói lại từ"
+    items:
+      - {en: "What's the matter? · tired, hungry, thirsty, boiling, freezing, nervous, ill", vi: "cảm giác cơ thể"}
+      - {en: "I feel ill. = I don't feel well.", vi: "thấy không khỏe"}
+      - {en: "happy, sad, excited, worried, angry, frightened, embarrassed, surprised, in love, upset", vi: "cảm xúc"}
+      - {en: "get + adjective: get worried, get excited · frightened of", vi: "trở nên … · sợ cái gì"}
+      - {en: "Next: Review · People (pages 42–45)", vi: "Tiếp theo: ôn tập module People, tr. 42–45"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "What's the matter? Tired, hungry, thirsty, boiling, freezing, nervous, and ill.", focus: 0}
+      - {tom: "I feel ill means I don't feel well.", focus: 1}
+      - {emma: "Happy, sad, excited, worried, angry, frightened, embarrassed, surprised, in love, and upset.", focus: 2}
+      - {tom: "Get worried, get excited. And frightened of.", focus: 3}
+      - {emma: "That's the end of the People module. Next time, it's the review on pages forty-two to forty-five. Well done!", focus: 4}

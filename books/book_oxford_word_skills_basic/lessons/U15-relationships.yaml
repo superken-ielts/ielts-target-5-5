@@ -1,0 +1,322 @@
+# Video Oxford Word Skills Basic · Unit 15 — I can describe relationships (sách in tr. 38–39, Answer key tr. 208).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Hình trong sách (đợt 29): lời kể về Max tr. 38 và lời kể của Sophie tr. 39 bên trái danh sách từ, khung đỏ theo câu có
+# từ trong Glossary; khung Spotlight "relationship" tr. 38 và "each other" tr. 39.
+# Đáp án bài 1–3 theo Answer key; bài 4 (ABOUT YOU): câu mẫu "Answers from a Hungarian person" rồi Tom và Emma trả lời.
+# Chi tiết nhân vật (khớp hồ sơ): Tom và Khoa là bạn thân từ tiểu học (quen khoảng 14 năm, ngồi cạnh nhau năm lớp 1), Khoa
+# học y ở Hà Nội nên chỉ gặp dịp Tết, nhắn tin gần như mỗi ngày, có chuyện thì Tom gọi Khoa đầu tiên (khớp
+# U01-speaking-practice-4); chuyện gia đình hỏi chị Hoa; bố mẹ Tom cưới năm 1998 (đã 28 năm); Tom ở chung căn
+# hộ với hai bạn, hòa thuận. Emma và Lucy quen từ năm 5 tuổi (hàng xóm), Lucy giờ sống ở Bristol, gọi video mỗi tháng;
+# bố mẹ Emma quen nhau ở đám cưới một người bạn năm 27 tuổi, bên nhau 35 năm. Tom và Emma đều độc thân (U08).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U15-relationships.yaml
+id: U15-relationships
+activity: U15-words
+title: "Unit 15 · Relationships"
+subtitle: "I can describe relationships"
+title_vi: "Quan hệ tình cảm (partner, go out with, get married, split up) và bạn bè (get on well with, flatmate, closest friend)"
+tag: "PEOPLE · UNIT 15"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 15: relationships. After this video, you can talk about partners, getting married, and friends. Friends is a common IELTS speaking topic."
+        say: "Welcome to Unit fifteen: relationships. After this video, you can talk about partners, getting married, and friends. Friends is a common eye-elts speaking topic."
+        vi: "Unit 15: quan hệ tình cảm và bạn bè — chủ đề Friends hay gặp trong IELTS Speaking."
+      - tom: "No countdown, as always. Pause the video when you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: bullets
+    chapter: "Quan hệ tình cảm"
+    heading: "A · Romantic relationships · Max is my partner"
+    heading_vi: "Lời kể trong sách tr. 38 — khung đỏ chỉ câu có từ trong Glossary"
+    image: {pdf: course-book, page: 39, clip: [30, 96, 262, 222]}
+    items:
+      - {en: "partner · a good relationship", vi: "người yêu, bạn đời · mối quan hệ tốt", box: [34, 100, 258, 124]}
+      - {en: "be together · go out with someone", vi: "đang yêu nhau · hẹn hò với ai", box: [34, 112, 258, 135]}
+      - {en: "ex-boyfriend · get to know someone", vi: "bạn trai cũ · làm quen, hiểu ai", box: [34, 135, 258, 170]}
+      - {en: "get married · have a baby", vi: "kết hôn · sinh con", box: [34, 158, 258, 181]}
+      - {en: "a couple · split up · divorced", vi: "một cặp · chia tay · đã ly hôn", box: [34, 193, 258, 216]}
+    lines:
+      - emma: "Read the speech bubble on page thirty-eight. Max is my partner, and we have a very good relationship. A partner is a boyfriend, a girlfriend, a wife or a husband."
+        focus: 0
+        vi: "partner: người mình có quan hệ tình cảm (bạn trai, bạn gái, vợ, chồng)."
+      - {tom: "We've been together for about two years. I started to go out with him after I came to London. Go out with someone means have a romantic relationship.", focus: 1, vi: "be together · go out with someone: hẹn hò, yêu nhau"}
+      - {emma: "We met at my ex-boyfriend's house. That's a boyfriend in the past. And it was easy for us to get to know each other.", focus: 2, vi: "ex-boyfriend: bạn trai cũ · get to know: làm quen dần"}
+      - {tom: "Now Max wants us to get married and have a baby, but I'm not sure.", focus: 3, vi: "get married: cưới · have a baby: sinh con"}
+      - {emma: "I know married couples who have split up, and are now divorced. Split up means stop the relationship. Divorced means married in the past, but not now.", focus: 4, vi: "couple: cặp đôi · split up: chia tay · divorced: đã ly hôn"}
+
+  - kind: bullets
+    chapter: "relationship"
+    heading: "Spotlight · relationship"
+    heading_vi: "Khung Spotlight tr. 38"
+    image: {pdf: course-book, page: 39, clip: [346, 234, 486, 390]}
+    items:
+      - {en: "You have a relationship with someone. It can be good or bad.", vi: "quan hệ với ai đó — có thể tốt hay xấu"}
+      - {en: "I have a good relationship with my flatmate.", vi: "tôi hòa thuận với bạn cùng phòng"}
+      - {en: "He has a difficult relationship with his father.", vi: "anh ấy khó hòa hợp với bố"}
+      - {en: "We often use it for romantic relationships.", vi: "thường nói về quan hệ yêu đương"}
+    lines:
+      - {emma: "You have a relationship with someone. It can be good or bad.", focus: 0}
+      - {tom: "I have a good relationship with my flatmates. We share the cooking, so we're always happy!", focus: 1}
+      - {emma: "He has a difficult relationship with his father.", focus: 2}
+      - {tom: "And we often use it for romantic relationships, with wives, boyfriends, and so on.", say: "And we often yooz it for romantic relationships, with wives, boyfriends, and so on.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: sắp xếp câu"
+    heading: "Exercise 1 · Write the words in correct sentences"
+    heading_vi: "Ví dụ: get / to / they / married / want → They want to get married. (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "baby / last / had / a / year / they  →  ___", answer: "They had a baby last year."}
+      - {n: 2, q: "split up / January / they / in  →  ___", answer: "They split up in January."}
+      - {n: 3, q: "have / good / a / very / relationship / we  →  ___", answer: "We have a very good relationship."}
+      - {n: 4, q: "you / how / her / get to know / did / ?  →  ___", answer: "How did you get to know her?"}
+      - {n: 5, q: "three / together / for / they / years / were  →  ___", answer: "They were together for three years."}
+      - {n: 6, q: "with / six / went / him / months / I / for / out  →  ___", answer: "I went out with him for six months."}
+    lines:
+      - emma: "Exercise 1. Put the words in the right order. Pause the video and try."
+        say: "Exercise one. Put the words in the right order. Pause the video and try."
+        vi: "Bài 1: sắp xếp từ thành câu."
+      - {tom: "One. They had a baby last year. Two. They split up in January.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. We have a very good relationship. Four. How did you get to know her?", reveal: [3, 4], focus: 3}
+      - {tom: "Five. They were together for three years. Six. I went out with him for six months.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "Ví dụ: They have a very good relationship. — đáp án theo Answer key tr. 208"
+    items:
+      - {n: "1", q: "When did they ___ a baby?", answer: "have"}
+      - {n: "2", q: "My boyfriend and I have been ___ for two months.", answer: "together"}
+      - {n: "3", q: "I know Phil and Sue very well. They're a lovely ___.", answer: "couple"}
+      - {n: "4a", q: "She went ___ with him last year,", answer: "out"}
+      - {n: "4b", q: "but they split ___ in January.", answer: "up"}
+      - {n: "5", q: "Sonia is his ___ girlfriend, but they still talk to each other.", answer: "ex-"}
+      - {n: "6a", q: "My parents were married for twenty years, but now they're ___.", answer: "divorced"}
+      - {n: "6b", q: "My father has a new ___,", answer: "partner / girlfriend"}
+      - {n: "6c", q: "but I don't think they're going to ___ married.", answer: "get"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. Pause the video and try."
+        say: "Exercise two. Complete the sentences. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu."
+      - {tom: "One. When did they have a baby? Two. We've been together for two months. Three. They're a lovely couple.", reveal: ["1", "2", "3"], focus: 2}
+      - {tom: "Four. She went out with him last year, but they split up in January. Five. Sonia is his ex-girlfriend.", reveal: ["4a", "4b", "5"], focus: 5}
+      - {tom: "Six. Now they're divorced. My father has a new partner, or girlfriend, but I don't think they're going to get married.", reveal: ["6a", "6b", "6c"], focus: 8}
+
+  - kind: bullets
+    chapter: "Bạn bè"
+    heading: "B · Friends · Sophie's story"
+    heading_vi: "Lời kể trong sách tr. 39 — khung đỏ chỉ câu có từ trong Glossary"
+    image: {pdf: course-book, page: 40, clip: [46, 250, 270, 376]}
+    items:
+      - {en: "get on (well) with someone", vi: "hợp, hòa thuận với ai", box: [48, 257, 268, 269]}
+      - {en: "meet (PT met) · become flatmates / friends", vi: "gặp lần đầu · thành bạn cùng phòng / thành bạn", box: [48, 281, 268, 305]}
+      - {en: "advice: give someone advice", vi: "lời khuyên (không đếm được)", box: [48, 304, 268, 328]}
+      - {en: "see each other", vi: "gặp nhau", box: [48, 327, 268, 339]}
+      - {en: "know someone · closest friend = best friend", vi: "quen ai · bạn thân nhất", box: [48, 350, 268, 374]}
+    lines:
+      - emma: "Now read Sophie's story on page thirty-nine. Remember Gemma and Sophie from Unit 14? I get on very well with Gemma. Get on well with someone means have a good relationship."
+        say: "Now read Sophie's story on page thirty-nine. Remember Gemma and Sophie from Unit fourteen? I get on very well with Gemma. Get on well with someone means have a good relationship."
+        focus: 0
+        vi: "get on well with: hợp nhau, quan hệ tốt."
+      - {tom: "We first met at university, and then we became flatmates. A flatmate is a person you live with, but not in a romantic relationship.", focus: 1, vi: "met: quá khứ của meet · flatmate: bạn ở chung căn hộ"}
+      - {emma: "If I have a problem, Gemma is the first person I ask for advice. Advice is uncountable: some advice, not an advice.", focus: 2, vi: "advice không đếm được: give advice / give someone advice"}
+      - {tom: "We don't see each other very often now, because we live in different parts of the country.", say: "We don't see each other very often now, because we liv in different parts of the country.", focus: 3, vi: "see each other: gặp nhau"}
+      - {emma: "I've known her for a long time, and she will always be my closest friend. That means my best friend.", focus: 4, vi: "closest friend = best friend: bạn thân nhất"}
+
+  - kind: bullets
+    chapter: "each other"
+    heading: "Spotlight · each other"
+    heading_vi: "Khung Spotlight tr. 39 — A làm với B và B làm với A"
+    image: {pdf: course-book, page: 40, clip: [302, 302, 486, 392]}
+    items:
+      - {en: "Pam and Mike really loved each other.", vi: "Pam yêu Mike và Mike yêu Pam"}
+      - {en: "The two girls never listen to each other.", vi: "hai cô gái chẳng bao giờ nghe nhau"}
+      - {en: "We send each other messages every day.", vi: "ngày nào cũng nhắn tin cho nhau"}
+    lines:
+      - {emma: "Pam and Mike really loved each other. That means Pam loved Mike, and Mike loved Pam.", focus: 0}
+      - {tom: "The two girls never listen to each other.", focus: 1}
+      - {emma: "Khoa and I send each other messages every day.", say: "Kwah and I send each other messages every day.", focus: 2}
+      - {tom: "Hey, that's my line! But it's true.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 3: giống hay khác?"
+    heading: "Exercise 3 · Same or different? Write S or D"
+    heading_vi: "Ví dụ: We met last year. / I have known her for a year. → S (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "We live near each other. / We are flatmates.  →  ___", answer: "D"}
+      - {n: 2, q: "We don't get on very well. / We have a very good relationship.  →  ___", answer: "D"}
+      - {n: 3, q: "I see her every Saturday. / I meet her every Saturday.  →  ___", answer: "S"}
+      - {n: 4, q: "She's my best friend. / She's my closest friend.  →  ___", answer: "S"}
+      - {n: 5, q: "We became friends. / We stopped being friends.  →  ___", answer: "D"}
+      - {n: 6, q: "She gives me advice. / She helps me with my problems.  →  ___", answer: "S"}
+    lines:
+      - emma: "Exercise 3. Do the two sentences mean the same, or something different? Pause the video and decide."
+        say: "Exercise three. Do the two sentences mean the same, or something different? Pause the video and decide."
+        vi: "Bài 3: hai câu cùng nghĩa (S) hay khác nghĩa (D)?"
+      - {tom: "One, different. Living near someone isn't the same as sharing a flat. Two, different.", reveal: [1, 2], focus: 1}
+      - {tom: "Three, the same. Four, the same. Best friend and closest friend.", reveal: [3, 4], focus: 3}
+      - {tom: "Five, different. They're opposites! Six, the same.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Test yourself"
+    heading: "Test yourself · Listen to the meaning. Say the word."
+    heading_vi: "Như phần Glossary — Emma đọc nghĩa, bạn nói từ; tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "someone you have a romantic relationship with  →  ___", answer: "a partner"}
+      - {n: 2, q: "become husband and wife  →  ___", answer: "get married"}
+      - {n: 3, q: "stop having a romantic relationship  →  ___", answer: "split up"}
+      - {n: 4, q: "married in the past, but not now  →  ___", answer: "divorced"}
+      - {n: 5, q: "a person you live with, but not in a romantic relationship  →  ___", answer: "a flatmate"}
+      - {n: 6, q: "your most important friend  →  ___", answer: "your closest / best friend"}
+    lines:
+      - emma: "Test yourself. I say the meaning, and you say the word. Pause the video after each one."
+        vi: "Emma đọc nghĩa, bạn nói từ."
+      - {emma: "Someone you have a romantic relationship with.", focus: 0}
+      - {tom: "A partner.", reveal: 1, focus: 0}
+      - {emma: "Become husband and wife.", focus: 1}
+      - {tom: "Get married.", reveal: 2, focus: 1}
+      - {emma: "Stop having a romantic relationship.", focus: 2}
+      - {tom: "Split up.", reveal: 3, focus: 2}
+      - {emma: "Married in the past, but not now.", focus: 3}
+      - {tom: "Divorced.", reveal: 4, focus: 3}
+      - {emma: "A person you live with, but not in a romantic relationship.", say: "A person you liv with, but not in a romantic relationship.", focus: 4}
+      - {tom: "A flatmate. Like my two flatmates!", reveal: 5, focus: 4}
+      - {emma: "Your most important friend.", focus: 5}
+      - {tom: "Your closest friend, or your best friend.", reveal: 6, focus: 5}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · relationships"
+    heading_vi: "Tạm dừng sau mỗi câu, viết từ còn thiếu"
+    items:
+      - {n: 1, q: "They've been ___ for five years.", answer: "together"}
+      - {n: 2, q: "She's going to get ___ in June.", answer: "married"}
+      - {n: 3, q: "They split ___ last month.", answer: "up"}
+      - {n: 4, q: "I get on very well with my ___.", answer: "flatmates"}
+      - {n: 5, q: "She always gives me good ___.", answer: "advice"}
+      - {n: 6, q: "We've ___ each other since we were five.", answer: "known"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. They've been together for five years.", focus: 0}
+      - {emma: "Number two. She's going to get married in June.", focus: 1}
+      - {emma: "Number three. They split up last month.", focus: 2}
+      - {emma: "Number four. I get on very well with my flatmates.", focus: 3}
+      - {emma: "Number five. She always gives me good advice.", focus: 4}
+      - {emma: "Number six. Lucy and I have known each other since we were five.", focus: 5}
+      - {tom: "Together. Married, with double r. Up.", say: "Together. Married, with double ar. Up.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Flatmates, one word. Advice, with a c: it's a noun. And known, with a silent k.", say: "Flatmates, one word. Advice, with a see: it's a noun. And known, with a silent kay.", reveal: [4, 5, 6], focus: 5, vi: "advice (danh từ, chữ c) khác advise (động từ, chữ s)."}
+
+  - kind: qa
+    chapter: "Nói 1: bạn thân"
+    heading: "Speaking 1 · IELTS Part 1 topic: friends"
+    heading_vi: "Bài 4 trong sách (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Who is your closest friend?"
+        a: "Khoa. We've been friends since primary school."
+        ask: emma
+        by: tom
+        phrases: ["We've been friends since…"]
+      - q: "How long have you known him?"
+        a: "About fourteen years. We sat next to each other in our first year at school!"
+        ask: emma
+        by: tom
+        phrases: ["About … years", "sat next to each other"]
+      - q: "How often do you see each other?"
+        a: "Not very often now. He studies medicine in Hanoi, so we only see each other at Tet. But we chat online almost every day."
+        ask: emma
+        by: tom
+        phrases: ["Not very often now.", "only see each other at…", "almost every day"]
+      - q: "Why do you get on well with him?"
+        a: "Because he's funny and kind, and he always listens. We're always honest with each other, and when I have a problem, he's the first person I call."
+        ask: emma
+        by: tom
+        phrases: ["Because he's…", "honest with each other", "the first person I call"]
+      - q: "And your closest friend, Emma?"
+        a: "Lucy. We were neighbours, and we've known each other since we were five. She lives in Bristol now, so we have a video call once a month."
+        ask: tom
+        by: emma
+        phrases: ["We were neighbours", "since we were five", "once a month"]
+      - q: "Do you get on well with your flatmates?"
+        a: "Yes, very well. We share the cooking and the cleaning, so there are no problems. Well, not many!"
+        ask: emma
+        by: tom
+        phrases: ["Yes, very well.", "We share…", "not many"]
+      - q: "How did your parents meet, Emma?"
+        a: "At a friend's wedding, when they were twenty-seven. They got to know each other on the dance floor, and they've been together for thirty-five years."
+        ask: tom
+        by: emma
+        phrases: ["At a friend's wedding", "got to know each other", "they've been together for…"]
+      - q: "Who do you ask for advice?"
+        a: "Khoa, usually. But for family problems, I ask my sister Hoa. She always gives me good advice."
+        ask: emma
+        by: tom
+        phrases: ["…, usually.", "for family problems", "gives me good advice"]
+      - q: "How long have your parents been married, Tom?"
+        a: "Twenty-eight years. They got married in nineteen ninety-eight, and they still get on really well."
+        ask: emma
+        by: tom
+        phrases: ["… years", "They got married in…", "still get on"]
+    lines:
+      - {emma: "Here are the answers from a person in Hungary to the questions in Exercise 4. My wife. Seven years. At a friend's Christmas party. We have mutual friends. We live together. Because we love each other.", say: "Here are the answers from a person in Hungary to the questions in Exercise four. My wife. Seven years. At a friend's Christmas party. We have mutual friends. We liv together. Because we love each other.", vi: "Câu mẫu của người Hungary: vợ tôi · bảy năm · ở tiệc Giáng sinh của một người bạn · có bạn chung · sống cùng nhau · vì yêu nhau."}
+      - {emma: "Now Tom. Who is your closest friend?", focus: 0}
+      - {tom: "Khoa. We've been friends since primary school.", say: "Kwah. We've been friends since primary school.", reveal: 0, vi: "Khoa — bạn từ tiểu học."}
+      - {emma: "How long have you known him?", focus: 1}
+      - {tom: "About fourteen years. We sat next to each other in our first year at school!", reveal: 1, vi: "Khoảng 14 năm: ngồi cạnh nhau từ năm lớp 1!"}
+      - {emma: "How often do you see each other?", focus: 2}
+      - {tom: "Not very often now. He studies medicine in Hanoi, so we only see each other at Tet. But we chat online almost every day.", say: "Not very often now. He studies medicine in Ha Noi, so we only see each other at Tet. But we chat online almost every day.", reveal: 2, vi: "Giờ ít gặp: Khoa học y ở Hà Nội, chỉ gặp dịp Tết; nhưng gần như ngày nào cũng nhắn tin."}
+      - {emma: "Why do you get on well with him?", focus: 3}
+      - {tom: "Because he's funny and kind, and he always listens. We're always honest with each other, and when I have a problem, he's the first person I call.", reveal: 3, vi: "Vì Khoa vui tính, tốt bụng, biết lắng nghe; hai người luôn thật lòng với nhau, có chuyện là Tom gọi Khoa đầu tiên."}
+      - {tom: "And your closest friend, Emma?", focus: 4}
+      - {emma: "Lucy. We were neighbours, and we've known each other since we were five. She lives in Bristol now, so we have a video call once a month.", say: "Lucy. We were neighbours, and we've known each other since we were five. She livz in Bristol now, so we have a video call once a month.", reveal: 4, vi: "Lucy: hàng xóm, quen từ năm 5 tuổi; giờ Lucy sống ở Bristol, mỗi tháng gọi video một lần."}
+      - {emma: "Do you get on well with your flatmates?", focus: 5}
+      - {tom: "Yes, very well. We share the cooking and the cleaning, so there are no problems. Well, not many!", reveal: 5, vi: "Rất hợp: chia nhau nấu ăn, dọn dẹp nên không có vấn đề gì — à, không nhiều!"}
+      - {tom: "How did your parents meet, Emma?", focus: 6}
+      - {emma: "At a friend's wedding, when they were twenty-seven. They got to know each other on the dance floor, and they've been together for thirty-five years.", reveal: 6, vi: "Ở đám cưới một người bạn, năm 27 tuổi: quen nhau trên sàn nhảy, đã bên nhau 35 năm."}
+      - {emma: "Who do you ask for advice?", focus: 7}
+      - {tom: "Khoa, usually. But for family problems, I ask my sister Hoa. She always gives me good advice.", say: "Kwah, usually. But for family problems, I ask my sister Whah. She always gives me good advice.", reveal: 7, vi: "Thường là Khoa; chuyện gia đình thì hỏi chị Hoa — chị luôn khuyên đúng."}
+      - {emma: "How long have your parents been married, Tom?", focus: 8}
+      - {tom: "Twenty-eight years. They got married in nineteen ninety-eight, and they still get on really well.", reveal: 8, vi: "28 năm: cưới năm 1998, đến giờ vẫn rất hòa thuận."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: your closest friend"
+    heading_vi: "Bài 4 trong sách (ABOUT YOU): trả lời 2–3 câu"
+    items:
+      - {q: "Who is your closest friend?", hint: "My closest friend is … We've been friends since …"}
+      - {q: "How long have you known him or her?", hint: "For … years. · Since we were …"}
+      - {q: "Where did you meet? How did you get to know each other?", hint: "We met at … · We sat next to each other / shared …"}
+      - {q: "How often do you see each other?", hint: "Every … · Not very often, because …"}
+      - {q: "Why do you get on well with him or her?", hint: "Because he's / she's … · We both like …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Who is your closest friend?", focus: 0, pause: 0.5}
+      - {emma: "How long have you known him or her?", focus: 1, pause: 0.5}
+      - {emma: "Where did you meet? How did you get to know each other?", focus: 2, pause: 0.5}
+      - {emma: "How often do you see each other?", focus: 3, pause: 0.5}
+      - {emma: "Why do you get on well with him or her?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi che Glossary tr. 38–39, đọc lại hai lời kể và giải thích từ in đậm"
+    items:
+      - {en: "partner · be together · go out with · get to know · ex-boyfriend", vi: "hẹn hò, yêu nhau"}
+      - {en: "get married · have a baby · a couple · split up · divorced", vi: "cưới, sinh con, chia tay, ly hôn"}
+      - {en: "get on well with · meet (met) · flatmate · see each other", vi: "bạn bè"}
+      - {en: "give advice (uncountable) · closest friend = best friend", vi: "lời khuyên · bạn thân nhất"}
+      - {en: "Next: Unit 16 · Feelings", vi: "Tiếp theo: Unit 16 · cảm giác, cảm xúc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Partner, be together, go out with someone, get to know someone, and an ex-boyfriend.", focus: 0}
+      - {tom: "Get married, have a baby, a couple, split up, and divorced.", focus: 1}
+      - {emma: "Get on well with someone, meet, a flatmate, and see each other.", focus: 2}
+      - {tom: "Give advice, and your closest friend.", focus: 3}
+      - {emma: "Now cover the glossaries on pages thirty-eight and thirty-nine, read the two stories again, and explain the words in bold. See you in Unit 16!", say: "Now cover the glossaries on pages thirty-eight and thirty-nine, read the two stories again, and explain the words in bold. See you in Unit sixteen!", focus: 4}

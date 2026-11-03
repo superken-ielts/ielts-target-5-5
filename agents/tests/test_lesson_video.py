@@ -463,18 +463,29 @@ def test_your_turn_has_no_countdown_and_units_have_speaking_practice():
 def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     """Người học yêu cầu (đợt 26): mỗi unit Oxford Word Skills Basic một video 7–10 phút, không đếm ngược (không `wait` /
     `echo`, người học tự tạm dừng), có 1–2 phần nói theo chủ đề: Tom và Emma hỏi đáp (`qa`) và "Đến lượt bạn"
-    (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5."""
+    (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5. Đợt 29: unit khó (đầu kịch bản ghi "UNIT KHÓ") được dài
+    tới 15 phút để ôn tập và luyện nói chung (có bài nói mẫu Part 2 — cảnh `letter`); module People (Unit 8–16) dùng
+    hình trong sách (cảnh có `image`) ở mọi unit."""
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
     scripts = sorted((OWS / "lessons").glob("U*.yaml"))
-    assert [p.name[:3] for p in scripts][:7] == [f"U0{n}" for n in range(1, 8)]     # module Basic English đủ 7 unit
+    assert [p.name[:3] for p in scripts][:16] == [f"U{n:02d}" for n in range(1, 17)]   # Basic English và People đủ 16 unit
+    hard = []
     for path in scripts:
         lesson = sc.load(path)
+        is_hard = "UNIT KHÓ" in path.read_text(encoding="utf-8").split("\nid:")[0]
+        hard += [lesson.id[:3]] if is_hard else []
         assert lesson.activity == f"{lesson.id[:3]}-words", lesson.id
-        assert 7 * 60 <= built[lesson.id]["duration"] <= 10 * 60, (lesson.id, built[lesson.id]["duration"])
+        top = 15 if is_hard else 10
+        assert 7 * 60 <= built[lesson.id]["duration"] <= top * 60, (lesson.id, built[lesson.id]["duration"])
         assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
         kinds = [s.kind for s in lesson.scenes]
         assert "qa" in kinds and "practice" in kinds, lesson.id
         assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), lesson.id
+        if is_hard:
+            assert built[lesson.id]["duration"] > 10 * 60 and "letter" in kinds, lesson.id   # ôn tập + Part 2 mẫu
+        if 8 <= int(lesson.id[1:3]) <= 16:
+            assert any(s.image for s in lesson.scenes), lesson.id
+    assert hard == ["U10", "U13", "U14", "U16"]
 
 
 @pytest.mark.skipif(not (GENKI / "lessons" / "lessons.json").exists(), reason="chưa có video N5")
@@ -648,6 +659,58 @@ def test_image_grid_mcq_wrap_and_long_passage(tmp_path):
     with pytest.raises((ValidationError, ValueError)):
         sc.Lesson.model_validate(data)
 
+
+
+def test_figure_and_side_pictures_frame_the_focused_box(tmp_path):
+    """Hình trong sách (đợt 29): cảnh figure vẽ hình lớn, bullets / câu điền từ đặt hình bên trái; mục đang nói có `box`
+    thì đóng khung đỏ đúng vùng đó trên hình (điểm PDF như `clip`)."""
+    import pymupdf
+    from lesson_video.slides import BOTTOM, C, TOP, _hex
+    bdir = mini_book(tmp_path)
+    doc = pymupdf.open()
+    page = doc.new_page(width=400, height=300)
+    page.draw_rect(pymupdf.Rect(50, 50, 150, 150), color=(0, 0, 1), fill=(0, 0, 1))
+    page.draw_rect(pymupdf.Rect(250, 150, 350, 250), color=(0, 0.6, 0), fill=(0, 0.6, 0))
+    doc.save(bdir / "cb.pdf")
+    book = json.loads((bdir / "book.json").read_text(encoding="utf-8"))
+    book["files"]["course-book"] = {"kind": "pdf", "path": "cb.pdf", "pages": 1}
+    (bdir / "book.json").write_text(json.dumps(book), encoding="utf-8")
+    img = {"pdf": "course-book", "page": 1, "clip": [0, 0, 400, 300]}
+    data = copy.deepcopy(WRITING)
+    data["scenes"] = [
+        {"kind": "figure", "heading": "Family tree", "image": img,
+         "items": [{"box": [50, 50, 150, 150], "label": "uncle"}, {"box": [250, 150, 350, 250]}],
+         "lines": [{"a": "This is Paul.", "focus": 0}, {"a": "And Jane.", "focus": 1}]},
+        {"kind": "bullets", "image": img, "items": [{"en": "uncle", "vi": "chú, bác, cậu", "box": [50, 50, 150, 150]}],
+         "lines": [{"a": "Uncle.", "focus": 0}]},
+        {"kind": "blanks", "image": img, "items": [{"n": 1, "q": "Paul is Luke's ___.", "answer": "uncle"}],
+         "lines": [{"a": "Paul is Luke's uncle.", "focus": 0, "reveal": 1}]},
+    ]
+    lesson = sc.Lesson.model_validate(data)
+    slides = Slides(lesson, bdir, {})
+    assert set(slides.images) == {0, 1, 2}
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    shot = {(fr.scene, fr.focus): slides.render(fr, fr.start / tl.total) for fr in tl.frames if fr.speaker}
+    assert all(im.size == (W, H) for im in shot.values())
+    pic, red = slides.images[0], _hex(C["red"])
+    s = min((W - 120) / pic.width, (BOTTOM - 4 - TOP) / pic.height)
+    w, h = int(pic.width * s), int(pic.height * s)
+    px, py, k = int(60 + (W - 120 - w) / 2), int(TOP + (BOTTOM - 4 - TOP - h) / 2), 200 / 72 * s
+    box0 = [int(px + 50 * k) - 3, int(py + 50 * k) - 3, int(px + 150 * k) + 3, int(py + 150 * k) + 3]
+
+    def reds(im):
+        return sum(im.getpixel((x, y)) == red for x in range(box0[0], box0[2]) for y in range(box0[1], box0[3]))
+    assert reds(shot[(0, 0)]) > 300 and reds(shot[(0, 1)]) == 0          # khung chỉ hiện khi đang nói tới mục đó
+    L = 52 + int(pic.width * min(560 / pic.width, (BOTTOM - 4 - TOP) / pic.height)) + 22
+    assert shot[(1, 0)].getpixel((L + 30, TOP + 26)) == red                # số thứ tự của danh sách nằm bên phải hình
+    for bad in ({"kind": "figure", "items": [], "lines": [{"a": "x"}]},                       # figure cần image
+                {"kind": "qa", "image": img, "items": [{"q": "a", "a": "b"}], "lines": [{"a": "x"}]},
+                {"kind": "blanks", "image": img, "items": [{"n": 1, "answer": "uncle"}], "lines": [{"a": "x"}]},
+                {"kind": "figure", "image": {**img, "grid": 2}, "items": [{"box": [0, 0, 10, 10]}], "lines": [{"a": "x"}]},
+                {"kind": "figure", "image": img, "items": [{"box": [50, 50, 10, 10]}], "lines": [{"a": "x"}]}):
+        data["scenes"] = [bad]
+        with pytest.raises((ValidationError, ValueError)):
+            sc.Lesson.model_validate(data)
 
 SHADOW = {
     "id": "T-5", "activity": "U01-speaking-vocab", "title": "Unit 1", "subtitle": "More practice",

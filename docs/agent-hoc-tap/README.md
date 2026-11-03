@@ -17,7 +17,7 @@ Thư mục này là tài liệu kỹ thuật. Từ đợt 2, `web/build.py` nhú
 | [06-video-bai-giang.md](06-video-bai-giang.md) | Video bài giảng (chỉ Course Book): Unit 1–3 phần nào có video, lịch sử từng video, quy trình, kiểu cảnh, cách đọc, kế hoạch Unit 4; video luyện nói thêm (khuôn 4 video mỗi unit, hồ sơ nhân vật Tom / Emma, chủ đề đã dùng — Unit 1–3 đã có); "Đến lượt bạn" không đếm ngược |
 | [07-lo-trinh-n5-tieng-nhat.md](07-lo-trinh-n5-tieng-nhat.md) | Lộ trình JLPT N5 với GENKI I: đánh giá bản thiết kế "Genki I × IELTS Target 5.0", chỗ đã sửa, 78 phiên với trang và track của từng phần, video tiếng Nhật (Unit 0: bảy video 7–10 phút có tô sáng chữ đang đọc, không đếm ngược; bài 1–3: bốn video kỹ năng mỗi bài), kế hoạch bài 4–12 |
 | [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) | Giai đoạn 0 trước lộ trình IELTS: vì sao chọn English Unlimited, 79 phiên của cuốn A2, cách dò trang và track (OCR nhãn cam, đối chiếu Teacher's Book), mốc A2 Key, cuốn A1 đang chờ sách, kế hoạch video |
-| [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) | Sách từ vựng A1–A2 học song song: đánh giá sách, 92 phiên (80 unit, 11 module, mỗi phiên 30 phút), dò trang bản quét thiếu hai trang, Answer key in nhầm, khuôn video 7–10 phút không đếm ngược có 1–2 phần nói (Unit 1–7 đã có), kế hoạch module People |
+| [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) | Sách từ vựng A1–A2 học song song: đánh giá sách, 92 phiên (80 unit, 11 module, mỗi phiên 30 phút), dò trang bản quét thiếu hai trang, Answer key in nhầm, khuôn video 7–10 phút không đếm ngược có 1–2 phần nói, unit khó tới 15 phút có ôn tập và luyện nói chung, hình trong sách có khung đỏ (Unit 1–16 đã có), kế hoạch module Everyday life |
 
 ## Trạng thái
 
@@ -93,6 +93,16 @@ Công cụ dựng video có thêm cảnh `shadow` và dòng `echo` (khoảng l�
 - 92 phiên 30 phút (80 unit, 11 phiên Review, Starter unit); mỗi phiên mở đúng trang sách và trang Answer key của unit;
 - 7 video Unit 1–7 (module Basic English), mỗi video 7–10 phút, không đếm ngược, có 1–2 phần luyện nói theo chủ đề và
   phần "Nghe và viết". Chi tiết ở file 09.
+
+**Đợt 27 (02/11/2026):** GENKI Unit 0 gom 19 video ngắn thành 7 video 7–10 phút, bỏ đếm ngược. Chi tiết ở file 07.
+
+**Đợt 28 (02/11/2026):** trên màn hình rộng, nội dung trải hết bề ngang bên phải menu; video bài giảng to hơn nhưng vừa
+màn hình.
+
+**Đợt 29 (03/11/2026):** Oxford Word Skills Basic module People, **9 video Unit 8–16** (1:22:54):
+- unit khó (gia đình, tả người, tính cách, cảm xúc) dài tới 15 phút: thêm ôn tập và luyện nói chung với bài nói mẫu Part 2;
+- **hình trong sách** hiện ngay trong video (sơ đồ gia đình, tranh động từ, phiếu mẫu, bảng từ, tranh cảm xúc…), khung đỏ
+  chỉ đúng chỗ đang giảng. Chi tiết ở file 09 mục 5.
 
 ## Tóm tắt trong năm dòng
 

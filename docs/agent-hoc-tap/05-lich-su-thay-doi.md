@@ -5,6 +5,104 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 29 — 03/11/2026: Oxford Word Skills Basic module People (Unit 8–16), hình trong sách, unit khó tới 15 phút
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 28 (`c94dae3`). Đẩy lên nhánh; lên `main` khi người học đồng ý.
+
+### Yêu cầu
+
+1. Làm tiếp video Unit 8–16 (module People). Topic nào khó thì kéo video tới 15 phút để ôn tập và luyện nói chung, vẫn
+   một video theo chủ đề của unit đó.
+2. (Góp ý trong lúc làm) Nếu được, đưa hình trong sách vào video, như chụp hình trang sách, để bài giảng dễ hiểu hơn.
+
+### Đã làm
+
+**9 video Unit 8–16** (1:22:54), theo khuôn file 09 mục 5:
+
+| Video | Dài | Hình | Ghi chú |
+|---|---|---|---|
+| `U08-personal-info` | 7:15 | 2 | hội thoại lễ tân, Spotlight "information"; mở đầu bài thi Nói IELTS |
+| `U09-form` | 7:39 | 3 | phiếu mẫu (3 dải, khung theo dòng); nghe và điền form như Listening phần 1 |
+| `U10-family` (khó) | 11:57 | 1 | sơ đồ gia đình; Part 2 "a family member you spend a lot of time with" |
+| `U11-actions` | 8:12 | 3 | 24 tranh động từ; làm theo Emma; luyện quá khứ bất quy tắc |
+| `U12-body` | 7:10 | 2 | tranh mặt và cơ thể bên trái danh sách từ; cử chỉ; đi khám |
+| `U13-describing-people` (khó) | 11:47 | 7 | tranh chiều cao – cân nặng, bảng tóc – mắt, bảng tuổi, tranh X / Y; Part 2 "someone in your family who looks like you" |
+| `U14-character` (khó) | 11:20 | 5 | bảng tính từ, đoạn văn của Gemma, hai Spotlight; Part 2 "a person you know who is very kind" |
+| `U15-relationships` | 7:24 | 4 | lời kể của Max và của Sophie, hai Spotlight |
+| `U16-feelings` (khó) | 10:10 | 5 | bảng cảm giác cơ thể, 10 tranh cảm xúc; Part 2 "a time when you felt very nervous" |
+
+**Unit khó.** Chọn theo độ khó của từ (trừu tượng, nhiều cặp dễ nhầm) và độ quan trọng với IELTS: My family, Describing
+people, Character, Feelings. Sau phần sách, video có thêm:
+- ôn tập: 6 câu sửa lỗi người Việt hay mắc (We are five, black eyes, He's like very nice, I'm boring…) và một câu đố ôn
+  từ;
+- luyện nói chung: thẻ đề Part 2, ghi chú 1 phút của Tom, bài nói mẫu của Tom rồi của Emma (đổi vai giám khảo), người học
+  tự tạm dừng và nói theo bốn ý trên thẻ, 3–4 câu thảo luận kiểu Part 3.
+
+Không có `wait` / `echo` ở mọi video. Đầu kịch bản ghi `# UNIT KHÓ (đợt 29)` để test cho phép tới 15 phút.
+
+**Hình trong sách** (`lesson_video`):
+- cảnh mới `figure`: hình lớn cắt từ trang sách (`image`: trang PDF và `clip`). Mỗi mục có `box` (vùng trên hình, điểm
+  PDF) và `label`; dòng thoại `focus` vào mục nào thì vùng đó có khung đỏ, kèm nhãn;
+- `bullets` và câu điền từ `blanks` nhận `image`: hình bên trái, nội dung dời sang phải; mục `bullets` có `box` cũng
+  đóng khung trên hình;
+- `check` báo lỗi khi `figure` thiếu `image`, `image` dùng trong cảnh khác, `box` sai dạng hay đi với `grid` > 1.
+
+Toạ độ lấy bằng cách vẽ trang kèm lưới 25 điểm rồi soát khung hình trước khi dựng (file 09 mục 5.3a). Bản dựng đầu chưa có
+hình của Unit 8–13 được dựng lại sau khi thêm hình; giọng đọc lấy từ bộ nhớ đệm nên mỗi video chỉ mất khoảng một phút.
+
+Lúc làm video, gặp và đã xử lý:
+- **Câu điền từ hai chỗ trống chỉ hiện chỗ đầu** (Unit 11, 13, 14, 15, 16): tách thành mục `8a`, `8b`, hoặc viết lại
+  thành một chỗ trống.
+- **Chi tiết nhân vật mâu thuẫn:** bản nháp Unit 14–16 viết Khoa học ở Đà Lạt và chuyện lớn Tom hỏi chị Hoa. Video IELTS
+  `U01-speaking-practice-4` đã nói Khoa học y ở Hà Nội và là người Tom gọi đầu tiên khi có chuyện. Đã sửa cho khớp, rồi
+  dựng lại Unit 14 (bản dựng đầu bắt đầu trước khi sửa).
+- **Hình quá nhỏ** (bảng tóc – mắt, 10 tranh cảm xúc): tách thành nhiều cảnh, mỗi cảnh một dải.
+- **Cách đọc mới** (file 09 mục 5.5): Hoa → `Whah`, Hạnh → `Hahn`, Mr / Mrs / Ms → `Mister` / `Missiz` / `Mizz`,
+  CB2 4TX, N/A, Kovács, Zsuzsa, Langbiang; động từ live → `liv`.
+
+Hồ sơ nhân vật: gia đình, ngoại hình, tính cách của Tom và Emma lần đầu được nói rõ, ghi ở file 09 mục 5.7 (file 06 mục
+9.4 trỏ sang).
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U08-personal-info.yaml` … `U16-feelings.yaml` (+ `.mp4`) | 9 kịch bản và video module People |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu cảnh `figure`; `IMAGE_KINDS`; kiểm tra `image`, `box` |
+| `agents/lesson_video/slides.py` | `_picture` (hình vừa khung, khung đỏ theo `box`, nhãn); `_k_figure`; hình bên trái cho `bullets` và câu điền từ |
+| `agents/tests/test_lesson_video.py` | Test mới: `figure` và hình bên trái (soát điểm ảnh khung đỏ), khai sai bị từ chối. Test video Oxford: Unit 1–16, unit khó tới 15 phút và có bài nói mẫu, Unit 8–16 có hình |
+| `books/book_oxford_word_skills_basic/lessons/lessons.json` | 9 mục mới |
+| `tests/web/book.e2e.mjs` | Thẻ sách 16 video; Unit 1–16 mỗi unit một nút video đúng độ dài (unit khó 10–15 phút) |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Unit khó, hình trong sách (mục 5.3a), bảng `say`, lỗi đã gặp, độ phủ Unit 8–16, hồ sơ nhân vật, kế hoạch module Everyday life |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Danh mục kiểu cảnh: `figure`, `image` trong `bullets` / `blanks`, mỗi câu điền từ một chỗ trống |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-63 (xong); P2-59 ghi tiến độ |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Unit 1–16 đã có, unit khó, hình trong sách; dòng trạng thái đợt 27–29 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic 92 phiên, 16 video |
+| `cd agents && python -m pytest -q` | 141 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 19/19 bước OK. Thẻ Oxford Word Skills Basic có 16 video; Unit 1–16 mỗi unit một nút video, unit thường 7–9 phút, unit khó (10, 13, 14, 16) 10–11 phút |
+| `python -m lesson_video check` / `phonemes` | 9 kịch bản mới hợp lệ, 0 ⚠ |
+
+### Còn treo
+
+- Video Oxford Word Skills Basic từ Unit 17 (P2-59), kế hoạch module Everyday life ở file 09 mục 5.8.
+- Unit 1–7 (đợt 26) chưa có hình trong sách.
+
+---
+
 ## Đợt 28 — 02/11/2026: giao diện trải hết bề ngang trên màn hình rộng
 
 Nhánh `claude/cool-archimedes-xalg78`, đẩy lên nhánh và `main` theo yêu cầu người học. Làm trong `git worktree` sạch từ

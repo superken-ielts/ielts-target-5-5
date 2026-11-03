@@ -1,0 +1,521 @@
+# Video Oxford Word Skills Basic · Unit 10 — I can talk about my family (sách in tr. 28–29, Answer key tr. 206–207).
+# UNIT KHÓ (đợt 29): video dài tới khoảng 15 phút — sau phần sách có ÔN TẬP (lỗi hay gặp, câu đố "ai là ai") và LUYỆN NÓI
+# CHUNG theo chủ đề (Part 2 "a family member you spend a lot of time with" + vài câu kiểu Part 3). Khuôn: docs/agent-hoc-tap/
+# 09-oxford-word-skills-basic.md mục 5.2 (unit khó). Không đếm ngược: không `wait` / `echo`.
+# Đáp án bài 1, 2, 5, 6 theo Answer key; bài 7 (ABOUT YOU) là phần nói. Đoạn "Family history" của Damon kể lại ngắn gọn.
+# Thêm ngoài sách: một từ tiếng Anh ứng với nhiều cách xưng hô tiếng Việt (uncle, aunt, cousin, nephew, niece…).
+# Hình trong sách (đợt 29): sơ đồ gia đình Damon tr. 28 (cảnh figure, khung đỏ theo người đang nói tới).
+# Part 2 có hai bài mẫu cùng thẻ đề: Tom kể về chị Hoa, Emma kể về anh Jack (khớp U01-speaking-practice: hơn hai tuổi,
+# cùng óc hài hước, gửi video vui cho nhau).
+# Chi tiết nhân vật mới (giữ khớp file 06 mục 9.4 và file 09 mục 5.7): nhà Tom 6 người (ông 78 tuổi, bố mẹ cưới năm 1998,
+# chị Hoa 26 tuổi — y tá ở Hà Nội, em Bao 15 tuổi mê bóng đá, Tom); Tom gọi điện cho chị Hoa gần như mỗi tối; nhà Emma 4 người
+# (bố mẹ 62 tuổi, sang năm nghỉ hưu; anh Jack 30 tuổi), Emma gọi video cho mẹ mỗi Chủ nhật, nhắn tin với Jack gần như mỗi
+# ngày, Giáng sinh về nhà đi bộ ven biển cùng Jack; bà Emma sống gần bố mẹ Emma.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U10-family.yaml
+id: U10-family
+activity: U10-words
+title: "Unit 10 · My family"
+subtitle: "I can talk about my family"
+title_vi: "Gia đình và họ hàng (uncle, cousin, nephew, in-law…); được sinh ra, kết hôn; ai lớn tuổi hơn — kèm ôn tập và luyện nói chủ đề gia đình"
+tag: "PEOPLE · UNIT 10"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 10: my family. Family is the most common topic in part one of the IELTS speaking test. So this video is longer: after the book, we review the words, and then we practise speaking about your family."
+        say: "Welcome to Unit ten: my family. Family is the most common topic in part one of the eye-elts speaking test. So this video is longer: after the book, we review the words, and then we practise speaking about your family."
+        vi: "Unit 10: gia đình — chủ đề hay gặp nhất ở Part 1. Video dài hơn: học sách, ôn tập, rồi luyện nói."
+      - tom: "And there's no countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng video khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Sơ đồ gia đình"
+    heading: "A · Damon's family tree"
+    heading_vi: "Hình trong sách tr. 28 — mọi người ở đây là họ hàng (relatives) của Damon"
+    image: {pdf: course-book, page: 29, clip: [20, 68, 448, 296]}
+    items:
+      - {box: [150, 70, 400, 136], label: "grandmother · grandfather"}
+      - {box: [24, 133, 192, 208], label: "father · mother = parents"}
+      - {box: [24, 207, 258, 292], label: "brother · Damon · sister"}
+      - {box: [276, 133, 444, 208], label: "uncle · aunt"}
+      - {box: [300, 207, 444, 292], label: "cousins"}
+    lines:
+      - emma: "Look at the family tree on page twenty-eight. This is Damon's family. All these people are Damon's relatives."
+        vi: "Sơ đồ gia đình Damon; tất cả là họ hàng của Damon."
+      - {emma: "Elsie is his grandmother, and Alf is his grandfather.", focus: 0, vi: "bà và ông (bên ngoại)"}
+      - {tom: "Dave is his father, and Maggie is his mother. Together, they're his parents.", focus: 1, vi: "bố, mẹ = bố mẹ"}
+      - {emma: "Luke is his brother, and Karen is his sister.", focus: 2, vi: "anh trai Luke, em gái Karen"}
+      - {tom: "Paul is his uncle, and Jane is his aunt.", focus: 3, vi: "cậu Paul (anh trai của mẹ) và mợ Jane"}
+      - {emma: "And James and Jessica are his cousins: Paul and Jane's children.", focus: 4, vi: "anh chị em họ: con của cậu mợ"}
+
+  - kind: bullets
+    chapter: "Con, vợ chồng, cháu, in-law"
+    heading: "Son, wife, nephew, sister-in-law…"
+    heading_vi: "Đọc chậm từng câu, nhìn sơ đồ để hiểu quan hệ"
+    items:
+      - {en: "Luke is Dave and Maggie's son. Karen is their daughter.", vi: "con trai · con gái"}
+      - {en: "Maggie is Dave's wife. Dave is Maggie's husband.", vi: "vợ · chồng"}
+      - {en: "Dave is Paul's brother-in-law. Jane is Maggie's sister-in-law.", vi: "anh / em rể, anh / em vợ… · chị / em dâu, chị / em chồng…"}
+      - {en: "James is Maggie's nephew. Karen is Paul's niece.", vi: "cháu trai · cháu gái (con của anh chị em mình)"}
+      - {en: "Luke is Elsie's grandson. Jessica is her granddaughter.", vi: "cháu nội / ngoại trai · cháu nội / ngoại gái"}
+    lines:
+      - {emma: "Luke is Dave and Maggie's son, and Karen is their daughter.", focus: 0}
+      - {tom: "Maggie is Dave's wife, and Dave is Maggie's husband.", focus: 1}
+      - {emma: "Dave married Paul's sister, so Dave is Paul's brother-in-law. And Jane is Maggie's sister-in-law.", focus: 2, vi: "In-law: họ hàng qua hôn nhân."}
+      - {tom: "James is Maggie's nephew, and Karen is Paul's niece.", focus: 3, vi: "Nephew / niece: con của anh chị em mình."}
+      - {emma: "And Luke is Elsie's grandson. Jessica is her granddaughter.", focus: 4}
+
+  - kind: compare
+    chapter: "Một từ, nhiều cách gọi"
+    heading: "One English word, many Vietnamese words"
+    heading_vi: "Tiếng Anh không phân biệt bên nội, bên ngoại, lớn hơn hay nhỏ hơn bố mẹ"
+    items:
+      - title: "English"
+        title_vi: "một từ"
+        lines: ["uncle", "aunt", "cousin", "nephew · niece", "grandson · granddaughter", "brother-in-law · sister-in-law"]
+      - title: "Tiếng Việt"
+        title_vi: "nhiều từ"
+        lines: ["chú, bác, cậu, dượng", "cô, dì, bác, thím, mợ", "anh họ, chị họ, em họ", "cháu (con của anh chị em)", "cháu nội, cháu ngoại", "anh rể, em rể, chị dâu, em dâu…"]
+    lines:
+      - emma: "Vietnamese has many words for family. English is much simpler. Uncle is your parents' brother, or your aunt's husband, on either side of the family."
+        focus: 0
+        vi: "Uncle = chú, bác, cậu, dượng — cả bên nội lẫn bên ngoại."
+      - tom: "So my mum's brother and my dad's brother are both my uncle. And all the children of my uncles and aunts are my cousins."
+        focus: 1
+        vi: "Con của cô dì chú bác đều là cousin."
+      - emma: "Don't say cousin brother or cousin sister. Just say cousin. And older or younger if you need it."
+        focus: 0
+        vi: "Không nói cousin brother — chỉ cần cousin."
+
+  - kind: blanks
+    chapter: "Bài 1: gia đình Damon"
+    heading: "Exercise 1 · Complete the sentences about Damon's family"
+    heading_vi: "Ví dụ: Paul is Elsie and Alf's son. — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "Maggie is Elsie's ___.", answer: "daughter"}
+      - {n: 2, q: "Luke is Paul's ___.", answer: "nephew"}
+      - {n: 3, q: "Jessica is Maggie's ___.", answer: "niece"}
+      - {n: 4, q: "Maggie is Jane's ___.", answer: "sister-in-law"}
+      - {n: 5, q: "Karen is Jessica's ___.", answer: "cousin"}
+      - {n: 6, q: "Paul is Jane's ___.", answer: "husband"}
+      - {n: 7, q: "Elsie is Jessica's ___.", answer: "grandmother"}
+      - {n: 8, q: "Paul is Luke's ___.", answer: "uncle"}
+      - {n: 9, q: "Maggie is Jessica's ___.", answer: "aunt"}
+      - {n: 10, q: "James, Maggie, and Alf are Damon's ___.", answer: "relatives"}
+    lines:
+      - emma: "Exercise 1. Look at the family tree again, and complete the sentences. Pause the video and try."
+        say: "Exercise one. Look at the family tree again, and complete the sentences. Pause the video and try."
+        vi: "Bài 1: nhìn sơ đồ, hoàn thành câu — tạm dừng video và làm."
+      - {tom: "One. Maggie is Elsie's daughter. Two. Luke is Paul's nephew. Three. Jessica is Maggie's niece.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Maggie is Jane's sister-in-law. Five. Karen is Jessica's cousin. Six. Paul is Jane's husband.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven. Elsie is Jessica's grandmother. Eight. Paul is Luke's uncle. Nine. Maggie is Jessica's aunt.", reveal: [7, 8, 9], focus: 8}
+      - {tom: "And ten. James, Maggie and Alf are Damon's relatives.", reveal: 10, focus: 9}
+
+  - kind: blanks
+    chapter: "Bài 2: nam và nữ"
+    heading: "Exercise 2 · Complete the table: male → female"
+    heading_vi: "Ví dụ: father → mother — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "brother  →  ___", answer: "sister"}
+      - {n: 2, q: "husband  →  ___", answer: "wife"}
+      - {n: 3, q: "nephew  →  ___", answer: "niece"}
+      - {n: 4, q: "relative  →  ___", answer: "relative"}
+      - {n: 5, q: "son  →  ___", answer: "daughter"}
+      - {n: 6, q: "brother-in-law  →  ___", answer: "sister-in-law"}
+      - {n: 7, q: "grandfather  →  ___", answer: "grandmother"}
+      - {n: 8, q: "grandson  →  ___", answer: "granddaughter"}
+      - {n: 9, q: "cousin  →  ___", answer: "cousin"}
+      - {n: 10, q: "parent  →  ___", answer: "parent"}
+      - {n: 11, q: "uncle  →  ___", answer: "aunt"}
+    lines:
+      - emma: "Exercise 2. Write the female word. Pause the video and try."
+        say: "Exercise two. Write the female word. Pause the video and try."
+        vi: "Bài 2: viết từ chỉ nữ — tạm dừng video và làm."
+      - {tom: "Brother, sister. Husband, wife. Nephew, niece. Relative is the same.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Son, daughter. Brother-in-law, sister-in-law. Grandfather, grandmother. Grandson, granddaughter.", reveal: [5, 6, 7, 8], focus: 7}
+      - {tom: "Cousin and parent are the same for men and women. And uncle, aunt.", reveal: [9, 10, 11], focus: 10}
+      - {emma: "Test yourself. Cover the male words, look at the female words, and say the male words.", focus: 10, vi: "Bài 3 trong sách: che cột nam, nhìn cột nữ và nói lại."}
+
+  - kind: bullets
+    chapter: "Chuyện gia đình Damon"
+    heading: "B · Family history"
+    heading_vi: "Đọc đoạn Damon kể ở tr. 29 — những từ cần nhớ"
+    items:
+      - {en: "My parents got married 25 years ago. · get divorced", vi: "kết hôn · ly hôn"}
+      - {en: "My brother was born two years later. I was born a year after that.", vi: "be born: được sinh ra — luôn dùng was / were born"}
+      - {en: "There are five of us in my family. — NOT We are five.", vi: "nhà có năm người"}
+      - {en: "Luke's got a girlfriend, Sue. · boyfriend", vi: "bạn gái · bạn trai"}
+      - {en: "I live with my mum and dad. We spend a lot of time together.", vi: "mum, dad (thân mật) · dành nhiều thời gian bên nhau"}
+    lines:
+      - emma: "Now read Damon's family history on page twenty-nine. His parents got married twenty-five years ago."
+        focus: 0
+        vi: "Bố mẹ Damon cưới nhau 25 năm trước."
+      - {tom: "His brother Luke was born two years later, and Damon was born a year after that. We always say was born, or were born.", focus: 1, vi: "Luôn nói was born: I was born in 2006."}
+      - {emma: "His sister Karen is two years younger than him, so there are five of them. Damon says: there are five of us in my family. Not: we are five.", focus: 2}
+      - {tom: "Luke's got a girlfriend, Sue, and they live in a small flat.", focus: 3}
+      - {emma: "Karen and Damon still live with their mum and dad, and they spend a lot of time together.", focus: 4}
+
+  - kind: bullets
+    chapter: "Bao nhiêu tuổi? Ai lớn hơn?"
+    heading: "Spotlight · How old are you?"
+    heading_vi: "Tuổi dùng be, không dùng have; older / younger than; the oldest / the youngest"
+    items:
+      - {en: "Damon is 22 (years old). — NOT He has 22 years.", vi: "nói tuổi bằng be"}
+      - {en: "His brother is older than him. He's 23.", vi: "lớn tuổi hơn"}
+      - {en: "His sister is younger than him. She's 20.", vi: "nhỏ tuổi hơn"}
+      - {en: "Alf's the oldest in the family. Karen's the youngest.", vi: "lớn nhất · nhỏ nhất"}
+    lines:
+      - {emma: "Damon is twenty-two, or twenty-two years old. Not: he has twenty-two years.", focus: 0}
+      - {tom: "His brother is older than him. He's twenty-three.", focus: 1}
+      - {emma: "His sister is younger than him. She's twenty.", focus: 2}
+      - {tom: "Alf is the oldest in the family, and Karen is the youngest.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 5: đúng hay sai?"
+    heading: "Exercise 5 · True or false?"
+    heading_vi: "Ví dụ: Damon is Luke's older brother. → F — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "Damon's parents are divorced.  →  ___", answer: "F"}
+      - {n: 2, q: "Damon was born after Luke.  →  ___", answer: "T"}
+      - {n: 3, q: "Luke is younger than Karen.  →  ___", answer: "F (older)"}
+      - {n: 4, q: "Luke and Sue live together.  →  ___", answer: "T"}
+      - {n: 5, q: "Luke's mum has two sons.  →  ___", answer: "T"}
+      - {n: 6, q: "Damon is Sue's boyfriend.  →  ___", answer: "F (Luke is)"}
+      - {n: 7, q: "There are four in Damon's family.  →  ___", answer: "F (five)"}
+      - {n: 8, q: "Karen is the youngest in the family.  →  ___", answer: "T"}
+      - {n: 9, q: "Damon and Karen are often together.  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 5. True or false? Pause the video and decide."
+        say: "Exercise five. True or false? Pause the video and decide."
+        vi: "Bài 5: đúng hay sai — tạm dừng video và làm."
+      - {tom: "One, false. They're married. Two, true. Three, false. Luke is older.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four, true. Five, true: Luke and Damon. Six, false. Sue is Luke's girlfriend.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven, false. There are five of them. Eight, true. Nine, true.", reveal: [7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 6: sắp xếp câu"
+    heading: "Exercise 6 · Write the words in correct sentences"
+    heading_vi: "Ví dụ: his / divorced / are / parents → His parents are divorced."
+    items:
+      - {n: 1, q: "born / I / 1989 / in / was  →  ___", answer: "I was born in 1989."}
+      - {n: 2, q: "spend / of / together / we / lot / time / a  →  ___", answer: "We spend a lot of time together."}
+      - {n: 3, q: "older / my / than / girlfriend / me / is  →  ___", answer: "My girlfriend is older than me."}
+      - {n: 4, q: "in / six / my / of / are / family / there / us  →  ___", answer: "There are six of us in my family."}
+      - {n: 5, q: "the / family / I / youngest / in / my / am  →  ___", answer: "I am the youngest in my family."}
+      - {n: 6, q: "brother / younger / 've got / sister / an / older / and / a / I  →  ___", answer: "I've got an older brother and a younger sister."}
+    lines:
+      - emma: "Exercise 6. Put the words in the right order. Pause the video and try."
+        say: "Exercise six. Put the words in the right order. Pause the video and try."
+        vi: "Bài 6: sắp xếp từ thành câu — tạm dừng video và làm."
+      - {tom: "One. I was born in nineteen eighty-nine. Two. We spend a lot of time together.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. My girlfriend is older than me. Four. There are six of us in my family.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I am the youngest in my family. Six. I've got an older brother and a younger sister. Or: an older sister and a younger brother.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · Tom's family"
+    heading_vi: "Tom kể về gia đình — tạm dừng sau mỗi câu, viết từ còn thiếu"
+    items:
+      - {n: 1, q: "There are six ___ in my family.", answer: "of us"}
+      - {n: 2, q: "My ___ lives with my parents in Da Lat.", answer: "grandfather"}
+      - {n: 3, q: "My parents got married in ___.", answer: "1998"}
+      - {n: 4, q: "My older sister is a ___ in Hanoi.", answer: "nurse"}
+      - {n: 5, q: "My younger brother is ___.", answer: "fifteen"}
+      - {n: 6, q: "My ___ is a pilot.", answer: "uncle"}
+    lines:
+      - emma: "Now, a listening test. Tom talks about his family. Pause the video after each sentence, and write the missing words."
+        vi: "Tom kể về gia đình — tạm dừng sau mỗi câu và viết."
+      - {tom: "Number one. There are six of us in my family.", focus: 0}
+      - {tom: "Number two. My grandfather lives with my parents in Da Lat.", say: "Number two. My grandfather livz with my parents in Dah Lot.", focus: 1}
+      - {tom: "Number three. My parents got married in nineteen ninety-eight.", focus: 2}
+      - {tom: "Number four. My older sister is a nurse in Hanoi.", say: "Number four. My older sister is a nurse in Ha Noi.", focus: 3}
+      - {tom: "Number five. My younger brother is fifteen.", focus: 4}
+      - {tom: "Number six. My uncle is a pilot.", focus: 5}
+      - {emma: "Six of us. Grandfather, with a d in the middle. Nineteen ninety-eight.", say: "Six of us. Grandfather, with a dee in the middle. Nineteen ninety-eight.", reveal: [1, 2, 3], focus: 2}
+      - {emma: "Nurse: N, U, R, S, E. Fifteen. And uncle.", say: "Nurse: en, yoo, ar, ess, ee. Fifteen. And uncle.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: gia đình bạn"
+    heading: "Speaking 1 · IELTS Part 1 topic: family"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How many people are there in your family?"
+        a: "There are six of us: my grandfather, my parents, my older sister, my younger brother and me."
+        ask: emma
+        by: tom
+        phrases: ["There are six of us:", "my older sister", "my younger brother"]
+      - q: "And in your family, Emma?"
+        a: "There are four of us: my mum, my dad, my brother Jack and me. But I've got lots of cousins!"
+        ask: tom
+        by: emma
+        phrases: ["There are four of us", "lots of cousins"]
+      - q: "When were you born?"
+        a: "In two thousand and six, on the ninth of March."
+        ask: emma
+        by: tom
+        phrases: ["I was born in…", "on the ninth of March"]
+      - q: "Is your brother older or younger than you?"
+        a: "He's two years older than me. He's thirty, and he's a sound engineer in London."
+        ask: tom
+        by: emma
+        phrases: ["two years older than me", "He's thirty"]
+      - q: "Who's the oldest in your family?"
+        a: "My grandfather. He's seventy-eight, and he still works in his vegetable garden every morning."
+        ask: emma
+        by: tom
+        phrases: ["the oldest in my family", "He's seventy-eight", "still"]
+      - q: "Do you all live together?"
+        a: "Not now. My family lives in Da Lat, my sister lives in Hanoi, and I share a flat here in Ho Chi Minh City."
+        ask: emma
+        by: tom
+        phrases: ["Not now.", "My family lives in…", "I share a flat"]
+      - q: "Who do you spend a lot of time with, Emma?"
+        a: "My mum, on video calls! We talk every Sunday. And at Christmas, the whole family meets at my grandmother's house."
+        ask: tom
+        by: emma
+        phrases: ["on video calls", "every Sunday", "the whole family"]
+      - q: "Are your parents still working?"
+        a: "Yes, but not for long. They're both sixty-two, and they're going to retire next year."
+        ask: tom
+        by: emma
+        phrases: ["not for long", "They're both…", "going to retire"]
+      - q: "Are you closer to your sister or your brother?"
+        a: "My sister, Hoa. We talk on the phone almost every evening. My brother only wants to talk about football!"
+        ask: emma
+        by: tom
+        phrases: ["closer to…", "almost every evening", "only wants to…"]
+    lines:
+      - {emma: "How many people are there in your family, Tom?", focus: 0}
+      - {tom: "There are six of us: my grandfather, my parents, my older sister, my younger brother and me.", reveal: 0, vi: "Nhà Tom có sáu người: ông, bố mẹ, chị gái, em trai và Tom."}
+      - {tom: "And in your family, Emma?", focus: 1}
+      - {emma: "There are four of us: my mum, my dad, my brother Jack and me. But I've got lots of cousins!", reveal: 1, vi: "Nhà Emma bốn người: bố, mẹ, anh Jack và Emma — nhưng có rất nhiều anh chị em họ!"}
+      - {emma: "When were you born?", focus: 2}
+      - {tom: "In two thousand and six, on the ninth of March.", reveal: 2}
+      - {tom: "Is your brother older or younger than you?", focus: 3}
+      - {emma: "He's two years older than me. He's thirty, and he's a sound engineer in London.", reveal: 3, vi: "Anh Jack hơn Emma hai tuổi, 30 tuổi, kỹ sư âm thanh ở London."}
+      - {emma: "Who's the oldest in your family?", focus: 4}
+      - {tom: "My grandfather. He's seventy-eight, and he still works in his vegetable garden every morning.", reveal: 4, vi: "Ông, 78 tuổi, sáng nào cũng vẫn làm vườn rau."}
+      - {emma: "Do you all live together?", say: "Do you all liv together?", focus: 5}
+      - {tom: "Not now. My family lives in Da Lat, my sister lives in Hanoi, and I share a flat here in Ho Chi Minh City.", say: "Not now. My family livz in Dah Lot, my sister livz in Ha Noi, and I share a flat here in Ho Chee Min City.", reveal: 5, vi: "Bây giờ thì không: gia đình ở Đà Lạt, chị ở Hà Nội, Tom ở chung căn hộ tại TP. HCM."}
+      - {tom: "Who do you spend a lot of time with, Emma?", focus: 6}
+      - {emma: "My mum, on video calls! We talk every Sunday. And at Christmas, the whole family meets at my grandmother's house.", reveal: 6, vi: "Với mẹ, qua gọi video mỗi Chủ nhật; Giáng sinh cả nhà họp mặt ở nhà bà."}
+      - {tom: "Are your parents still working?", focus: 7}
+      - {emma: "Yes, but not for long. They're both sixty-two, and they're going to retire next year.", reveal: 7, vi: "Còn, nhưng không lâu nữa: cả hai 62 tuổi, sang năm nghỉ hưu."}
+      - {emma: "Are you closer to your sister or your brother?", focus: 8}
+      - {tom: "My sister, Hoa. We talk on the phone almost every evening. My brother only wants to talk about football!", say: "My sister, Whah. We talk on the phone almost every evening. My brother only wants to talk about football!", reveal: 8, vi: "Thân với chị Hoa hơn: gần như tối nào cũng gọi điện. Em trai thì chỉ muốn nói chuyện bóng đá!"}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về gia đình — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "We are five in my family.  →  ___", answer: "There are five of us in my family."}
+      - {n: 2, q: "My brother has 15 years.  →  ___", answer: "My brother is 15 (years old)."}
+      - {n: 3, q: "My cousin brother lives in Hanoi.  →  ___", answer: "My cousin lives in Hanoi."}
+      - {n: 4, q: "I was born on 2006.  →  ___", answer: "I was born in 2006."}
+      - {n: 5, q: "My sister is more old than me.  →  ___", answer: "My sister is older than me."}
+      - {n: 6, q: "My uncle's son is my nephew.  →  ___", answer: "My uncle's son is my cousin."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video, and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. There are five of us in my family. Two. My brother is fifteen. Or: fifteen years old.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. My cousin lives in Hanoi. Just cousin. Four. I was born in two thousand and six. In for a year, on for a date.", say: "Three. My cousin livz in Ha Noi. Just cousin. Four. I was born in two thousand and six. In for a year, on for a date.", reveal: [3, 4], focus: 3, vi: "in + năm; on + ngày cụ thể (on the ninth of March)."}
+      - {tom: "Five. My sister is older than me. Six. My uncle's son is my cousin. Your nephew is your brother's or sister's son.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Ôn tập: ai là ai?"
+    heading: "Review · Who is it?"
+    heading_vi: "Câu đố họ hàng — tạm dừng video sau mỗi câu, nói to đáp án"
+    items:
+      - {n: 1, q: "My mother's brother is my ___.", answer: "uncle"}
+      - {n: 2, q: "My father's sister is my ___.", answer: "aunt"}
+      - {n: 3, q: "My sister's son is my ___.", answer: "nephew"}
+      - {n: 4, q: "My brother's daughter is my ___.", answer: "niece"}
+      - {n: 5, q: "My aunt's children are my ___.", answer: "cousins"}
+      - {n: 6, q: "My sister's husband is my ___.", answer: "brother-in-law"}
+      - {n: 7, q: "My son's daughter is my ___.", answer: "granddaughter"}
+    lines:
+      - emma: "Now a quiz. Who is it? Pause the video after each one, and say the answer."
+        vi: "Câu đố: đó là ai? Tạm dừng và nói đáp án."
+      - {emma: "Number one. My mother's brother is my…", focus: 0}
+      - {tom: "Uncle.", reveal: 1, focus: 0}
+      - {emma: "Number two. My father's sister is my…", focus: 1}
+      - {tom: "Aunt.", reveal: 2, focus: 1}
+      - {emma: "Number three. My sister's son is my…", focus: 2}
+      - {tom: "Nephew.", reveal: 3, focus: 2}
+      - {emma: "Number four. My brother's daughter is my…", focus: 3}
+      - {tom: "Niece.", reveal: 4, focus: 3}
+      - {emma: "Number five. My aunt's children are my…", focus: 4}
+      - {tom: "Cousins.", reveal: 5, focus: 4}
+      - {emma: "Number six. My sister's husband is my…", focus: 5}
+      - {tom: "Brother-in-law. My sister Hoa isn't married yet, so I haven't got one!", say: "Brother-in-law. My sister Whah isn't married yet, so I haven't got one!", reveal: 6, focus: 5}
+      - {emma: "Number seven. My son's daughter is my…", focus: 6}
+      - {tom: "Granddaughter.", reveal: 7, focus: 6}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a family member you spend a lot of time with"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: who this person is", vi: "người đó là ai"}
+      - {en: "how often you see or talk to each other", vi: "bao lâu gặp hoặc nói chuyện một lần"}
+      - {en: "what you do together", vi: "hai người làm gì cùng nhau"}
+      - {en: "and explain why you spend a lot of time with this person", vi: "và giải thích vì sao bạn dành nhiều thời gian bên người đó"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. You get a card, one minute to prepare, and then you talk for one to two minutes. Here's the card."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. You get a card, one minute to prepare, and then you talk for one to two minutes. Here's the card."
+        vi: "Luyện nói chung kiểu Part 2: nhận thẻ đề, 1 phút chuẩn bị, nói 1–2 phút."
+      - {emma: "Describe a family member you spend a lot of time with. You should say who this person is,", focus: 0}
+      - {emma: "how often you see or talk to each other,", focus: 1}
+      - {emma: "what you do together,", focus: 2}
+      - {emma: "and explain why you spend a lot of time with this person.", focus: 3}
+
+  - kind: bullets
+    heading: "Tom's notes · my sister Hoa"
+    heading_vi: "Ghi chú của Tom trong 1 phút chuẩn bị — chỉ từ khóa, không viết câu"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "older sister Hoa · 26 · nurse in Hanoi · looked after me", vi: "chị Hoa · 26 tuổi · y tá ở Hà Nội · hồi bé chăm Tom"}
+      - {en: "phone almost every evening · patients · uni · IELTS", vi: "gọi điện gần như mỗi tối"}
+      - {en: "Tet in Da Lat · cook with mum · lake with Bao · coffee", vi: "Tết ở Đà Lạt · nấu ăn với mẹ · ra hồ với em Bao"}
+      - {en: "listens · good advice · best friend in the family", vi: "biết lắng nghe · lời khuyên tốt · bạn thân nhất trong nhà"}
+    lines:
+      - tom: "Here are my notes. Just key words, not sentences. I chose my older sister, Hoa."
+        say: "Here are my notes. Just key words, not sentences. I chose my older sister, Whah."
+        vi: "Ghi chú chỉ là từ khóa. Tom chọn chị Hoa."
+      - emma: "All right? Can you start speaking now, please?"
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — mỗi ý trên thẻ là một đoạn, dùng từ của unit"
+    roles: {tom: candidate}
+    items:
+      - text: "I'd like to talk about my older sister, Hoa. She's twenty-six, six years older than me, and she's a nurse at a big hospital in Hanoi. When I was small, she looked after me a lot."
+        say: "I'd like to talk about my older sister, Whah. She's twenty-six, six years older than me, and she's a nurse at a big hospital in Ha Noi. When I was small, she looked after me a lot."
+        note: "who · how old · job"
+      - text: "We don't live in the same city now, but we talk on the phone almost every evening. She tells me about her patients, and I tell her about university and my IELTS lessons."
+        say: "We don't liv in the same city now, but we talk on the phone almost every evening. She tells me about her patients, and I tell her about university and my eye-elts lessons."
+        note: "how often"
+      - text: "At Tet, she comes home to Da Lat, and we spend a lot of time together. We cook with our mum, we take our younger brother to the lake, and we drink coffee and talk for hours."
+        say: "At Tet, she comes home to Dah Lot, and we spend a lot of time together. We cook with our mum, we take our younger brother to the lake, and we drink coffee and talk for hours."
+        note: "what we do"
+      - text: "I spend a lot of time with her because she always listens, and she gives me good advice. She isn't just my sister. She's my best friend in the family."
+        note: "why"
+    lines:
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: bullets
+    heading: "Emma's notes · my brother Jack"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {tom: examiner, emma: candidate}
+    items:
+      - {en: "brother Jack · 30 · sound engineer · London theatre · guitar", vi: "anh Jack · 30 tuổi · kỹ sư âm thanh ở nhà hát London · chơi guitar"}
+      - {en: "messages almost every day · video call every two weeks", vi: "nhắn tin gần như mỗi ngày · gọi video hai tuần một lần"}
+      - {en: "Christmas at home · hiking by the sea · cook · sing", vi: "Giáng sinh ở nhà · đi bộ ven biển · nấu ăn · hát"}
+      - {en: "same sense of humour · makes me laugh · first person I call", vi: "cùng óc hài hước · làm Emma cười · người đầu tiên Emma gọi"}
+    lines:
+      - tom: "Now it's my turn to be the examiner. Emma, please describe a family member you spend a lot of time with."
+        vi: "Đổi vai: Tom làm giám khảo, Emma trả lời cùng thẻ đề."
+      - emma: "Here are my notes. I chose my brother, Jack."
+        vi: "Emma chọn anh Jack."
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Bài nói mẫu của Emma — cùng thẻ đề, câu chuyện khác"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my brother, Jack. He's thirty, two years older than me, and he's a sound engineer at a big theatre in London. He also plays the guitar, and he's very funny."
+        note: "who · how old · job"
+      - text: "Because I live in Vietnam now, we don't see each other very often. But we send each other messages almost every day, and we have a long video call every two weeks."
+        say: "Because I liv in Vietnam now, we don't see each other very often. But we send each other messages almost every day, and we have a long video call every two weeks."
+        note: "how often"
+      - text: "When I go home for Christmas, we spend a lot of time together. We go hiking by the sea, we cook for the whole family, and in the evening he plays the guitar and we all sing."
+        note: "what we do"
+      - text: "I spend a lot of time with him because we have the same sense of humour, and he always makes me laugh. When I feel homesick, he's the first person I call."
+        note: "why"
+    lines:
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a family member you spend a lot of time with"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý trên thẻ"
+    items:
+      - {q: "Who is this person?", hint: "I'd like to talk about my … He's / She's … years old, and he's / she's a …"}
+      - {q: "How often do you see or talk to each other?", hint: "We see each other every … / We talk on the phone …"}
+      - {q: "What do you do together?", hint: "We often … · Last month, we …"}
+      - {q: "Why do you spend a lot of time with this person?", hint: "because he / she … · He's / She's my …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes about a family member. Use the four points on the card."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes about a family member. Yooz the four points on the card."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý."
+      - {emma: "Who is this person?", focus: 0, pause: 0.5}
+      - {emma: "How often do you see or talk to each other?", focus: 1, pause: 0.5}
+      - {emma: "What do you do together?", focus: 2, pause: 0.5}
+      - {emma: "Why do you spend a lot of time with this person?", focus: 3, pause: 1.5}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · families in Vietnam and in England"
+    heading_vi: "Câu hỏi kiểu Part 3: trả lời bằng ý kiến + lý do + ví dụ"
+    items:
+      - q: "Do families in Vietnam usually live together?"
+        a: "Many do. In my family, three generations live in the same house: my grandfather, my parents and my brother. It's normal in Vietnam."
+        ask: emma
+        by: tom
+        phrases: ["Many do.", "three generations", "It's normal in…"]
+      - q: "Is it the same in England?"
+        a: "Not usually. Young people often leave home at about eighteen, to go to university or to work, and older people often live on their own."
+        ask: tom
+        by: emma
+        phrases: ["Not usually.", "leave home", "live on their own"]
+      - q: "Who should look after older people: the family or the government?"
+        a: "Both, I think. The family should help as much as possible, but the government should help too, with nurses and care homes. My grandmother lives near my parents, so they visit her every day."
+        ask: tom
+        by: emma
+        phrases: ["Both, I think.", "should help as much as possible", "so they…"]
+      - q: "Which is better, do you think?"
+        a: "Both have good points. A big family home is never lonely, but a small home gives you more freedom. For me, the best thing is to live near your family."
+        ask: emma
+        by: tom
+        phrases: ["Both have good points.", "…, but…", "For me, the best thing is…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Do families in Vietnam usually live together?", say: "Let's finish with some discussion questions. Do families in Vietnam usually liv together?", focus: 0}
+      - {tom: "Many do. In my family, three generations live in the same house: my grandfather, my parents and my brother. It's normal in Vietnam.", say: "Many do. In my family, three generations liv in the same house: my grandfather, my parents and my brother. It's normal in Vietnam.", reveal: 0, vi: "Nhiều nhà vậy: nhà Tom ba thế hệ sống chung — ở Việt Nam là bình thường."}
+      - {tom: "Is it the same in England?", focus: 1}
+      - {emma: "Not usually. Young people often leave home at about eighteen, to go to university or to work, and older people often live on their own.", say: "Not usually. Young people often leave home at about eighteen, to go to university or to work, and older people often liv on their own.", reveal: 1, vi: "Thường thì không: khoảng 18 tuổi người trẻ ra ở riêng, người già hay sống một mình."}
+      - {tom: "Who should look after older people: the family or the government?", focus: 2}
+      - {emma: "Both, I think. The family should help as much as possible, but the government should help too, with nurses and care homes. My grandmother lives near my parents, so they visit her every day.", say: "Both, I think. The family should help as much as possible, but the government should help too, with nurses and care homes. My grandmother livz near my parents, so they visit her every day.", reveal: 2, vi: "Cả hai: gia đình giúp hết sức, nhà nước cũng cần giúp (y tá, viện dưỡng lão). Bà Emma sống gần bố mẹ Emma nên ngày nào họ cũng sang thăm."}
+      - {emma: "Which is better, do you think?", focus: 3}
+      - {tom: "Both have good points. A big family home is never lonely, but a small home gives you more freedom. For me, the best thing is to live near your family.", say: "Both have good points. A big family home is never lonely, but a small home gives you more freedom. For me, the best thing is to liv near your family.", reveal: 3, vi: "Cách nào cũng có điểm hay: nhà đông không cô đơn, ở riêng thì tự do; tốt nhất là ở gần gia đình."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi vẽ sơ đồ gia đình bạn (bài 4 trong sách) và nói về từng người"
+    items:
+      - {en: "parents · son, daughter · wife, husband · grandmother, grandson", vi: "gia đình"}
+      - {en: "uncle, aunt · cousin · nephew, niece · brother-in-law · relatives", vi: "họ hàng"}
+      - {en: "There are six of us. · I was born in 2006. · I'm 20.", vi: "nhà có… người · sinh năm · tuổi"}
+      - {en: "older / younger than me · the oldest, the youngest", vi: "so sánh tuổi"}
+      - {en: "Next: Unit 11 · Physical actions", vi: "Tiếp theo: Unit 11 · hành động của cơ thể"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Parents. Son and daughter. Wife and husband. Grandmother and grandson.", focus: 0}
+      - {tom: "Uncle and aunt. Cousin. Nephew and niece. Brother-in-law. And all of them are relatives.", focus: 1}
+      - {emma: "There are six of us. I was born in two thousand and six. I'm twenty.", focus: 2}
+      - {tom: "Older than me, younger than me. The oldest and the youngest.", focus: 3}
+      - {emma: "Now draw your family tree, like Exercise 4 in the book, and talk about each person. See you in Unit 11!", say: "Now draw your family tree, like Exercise four in the book, and talk about each person. See you in Unit eleven!", focus: 4}

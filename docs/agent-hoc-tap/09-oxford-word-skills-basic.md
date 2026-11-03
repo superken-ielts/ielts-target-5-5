@@ -12,7 +12,7 @@
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5 |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–16 đã có (mục 5.7) |
 
 ---
 
@@ -153,7 +153,7 @@ bước, nên danh sách phiên không cho biết unit nào học gì.
 Các sách cũ không dùng chỗ thay trong tên bước, nên `book.json` / `plan.json` của chúng không đổi (test hồi quy chạy
 lại ra y hệt).
 
-## 5. Video bài giảng — khuôn 7–10 phút
+## 5. Video bài giảng — khuôn 7–10 phút (unit khó tới 15 phút)
 
 ### 5.1 Yêu cầu
 
@@ -163,6 +163,12 @@ lại ra y hệt).
 - **1–2 phần luyện nói** theo chủ đề từ vựng của unit:
   - Nói 1 (`qa`): Tom và Emma hỏi đáp qua lại;
   - Nói 2 (`practice` không có `wait`): người học tự tạm dừng và trả lời.
+- **Unit khó** (đợt 29): video dài tới khoảng 15 phút. Sau phần sách thêm **ôn tập** và **luyện nói chung** theo chủ đề,
+  vẫn trong cùng một video (mục 5.2, hàng 9–10). Unit khó là unit nhiều từ, từ trừu tượng, nhiều cặp dễ nhầm, hay chủ đề
+  hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings.
+  Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
+- **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
+  khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Module People dùng hình ở mọi unit.
 
 ### 5.2 Bộ cảnh của một video
 
@@ -176,6 +182,11 @@ lại ra y hệt).
 | 6 | Nói 1 | `qa` | 7–10 cặp hỏi đáp về chủ đề: ABOUT YOU của sách (Emma dùng câu mẫu Answer key nếu có), chủ đề IELTS Part 1 gần nhất |
 | 7 | Nói 2 · đến lượt bạn | `practice` (self-paced) | 5 câu hỏi có gợi ý. Emma đọc hết, `pause: 0.5`, câu cuối `pause: 1.5` |
 | 8 | Tổng kết | `bullets` | 4 điều cần nhớ, Test yourself của sách, unit tiếp theo |
+| 9 | Ôn tập (unit khó) | `blanks` | Lỗi người Việt hay mắc (6 câu sửa lỗi) và một câu đố ôn từ (từ trái nghĩa, "ai là ai", đoán cảm xúc theo tình huống) |
+| 10 | Luyện nói chung (unit khó) | `bullets` (thẻ đề) → `bullets` (ghi chú) → `letter` → `practice` → `qa` | Thẻ đề Part 2 theo chủ đề; ghi chú 1 phút của Tom; bài nói mẫu của Tom và của Emma (đổi vai giám khảo); người học tự nói theo bốn ý trên thẻ; 3 câu thảo luận kiểu Part 3 |
+
+Hàng 9–10 nằm giữa hàng 7 và hàng 8 (tổng kết vẫn ở cuối). Hàng 2 và 3 dùng hình trong sách khi trang có tranh, bảng hay
+đoạn văn (mục 5.3a).
 
 Ước lượng thời lượng: dựng thử bằng bộ đọc im lặng. Video thật lệch ước lượng từ −10 đến +27 giây (mục 5.6). Ước
 lượng dưới 7:00 thì thêm cảnh ở hàng 4 (có ích cho IELTS) chứ không kéo dài câu thoại.
@@ -198,11 +209,41 @@ lượng dưới 7:00 thì thêm cảnh ở hàng 4 (có ích cho IELTS) chứ k
 - Từ ghép viết liền thì đưa cả từ vào đáp án (`notice → noticeboard`). Không tách thành `notice___`, vì ô trống có
   khoảng cách nên nhìn như hai từ.
 
+### 5.3a Hình trong sách (đợt 29)
+
+Người học góp ý nên đưa hình trong sách vào video. Công cụ dựng video (`lesson_video`) có:
+
+| Cảnh | Cách hiện hình | Dùng cho |
+|---|---|---|
+| `figure` (mới) | Hình lớn cắt từ trang sách giữa khung; mỗi mục `items` có `box` (vùng trên hình) và `label` (nhãn, không bắt buộc). Dòng thoại `focus` vào mục nào thì vùng đó có khung đỏ | Tranh nhiều người / vật (sơ đồ gia đình, tranh động từ, tranh cảm xúc), bảng từ (phiếu mẫu Unit 9, bảng tính từ Unit 14) — khung theo từng dòng |
+| `bullets` + `image` | Hình bên trái, danh sách từ bên phải; mục có `box` thì khung đỏ trên hình theo dòng đang học | Đoạn văn (lời kể của Gemma, Sophie, Max) với danh sách từ trong Glossary; tranh mặt và cơ thể Unit 12; khung Spotlight |
+| `blanks` câu điền từ + `image` | Hình bên trái, câu điền từ bên phải | Bài tập cần nhìn tranh |
+| `match` (đã có) | Hình bên trái, cột đáp án bên phải | Như các sách khác |
+
+Cách khai:
+```yaml
+- kind: figure
+  image: {pdf: course-book, page: 29, clip: [20, 68, 448, 296]}   # trang PDF, vùng cắt (điểm PDF)
+  items:
+    - {box: [24, 133, 192, 208], label: "father · mother = parents"} # cùng hệ toạ độ với clip
+  lines:
+    - {tom: "Dave is his father, and Maggie is his mother.", focus: 0}
+```
+
+- `page` là **trang PDF** (sách này: trang in + 1), `clip` và `box` tính bằng điểm PDF (trang 496 × 737).
+- Lấy toạ độ: vẽ trang kèm lưới 25 điểm (đợt 29 dùng `grid.py` trong scratchpad: `pymupdf`, vạch đỏ theo x, xanh theo y,
+  số mỗi 50 điểm), đọc vùng cần cắt, rồi xem trước khung hình (mục 5.4 bước 4).
+- `box` không dùng với `grid` > 1. Hình chỉ dùng trong `match`, `figure`, `bullets`, `blanks` câu điền từ; khai sai thì
+  `check` báo lỗi.
+- Bảng đã ghi sẵn chữ thì bỏ `label`, để khung đỏ tự nói. Tranh không có chữ thì ghi `label` ngắn.
+- Hình rộng mà thấp (hàng tranh, dải bảng) thì cắt thành nhiều cảnh nhỏ cho chữ đủ to: bảng tóc và mắt Unit 13 tách
+  hai cảnh, 10 tranh cảm xúc Unit 16 tách ba cảnh.
+
 ### 5.4 Quy trình một unit
 
 1. Xem trang sách (`pdftoppm -f <trang PDF> -r 110`) và trang Answer key (độ phân giải cao hơn nếu chữ nhỏ). Ghi đáp
    án, đối chiếu nhãn câu hỏi với Answer key (mục 3.3).
-2. Viết kịch bản theo mục 5.2–5.3, rồi chạy:
+2. Viết kịch bản theo mục 5.2–5.3a, rồi chạy:
    ```bash
    cd agents && python -m lesson_video check ../books/book_oxford_word_skills_basic/lessons/<id>.yaml
    ```
@@ -231,6 +272,13 @@ lượng dưới 7:00 thì thêm cảnh ở hàng 4 (có ích cho IELTS) chứ k
 | pasaporte | `pah-sah-por-tay` | Từ tiếng Tây Ban Nha |
 | Wednesday đọc sai kiểu người học (cố ý) | `Wed-nes-day` | Để Emma chữa |
 | CD player, the UK | `C D player`, `the U K` | Chữ viết tắt phải đọc từng chữ cái |
+| Hoa, Hạnh, Khoa | `Whah`, `Hahn`, `Kwah` | Tên người Việt (đợt 29: chị Hoa, mẹ Hạnh của Tom). `Hoa` đọc thành /hoʊə/, `Hwa` đọc từng chữ |
+| Mr, Mrs, Ms; Mrs Green | `Mister`, `Missiz`, `Mizz`; `Missiz Green` | Danh xưng đứng riêng (Unit 9) đọc sai hoặc đọc từng chữ |
+| CB2 4TX, N/A | `C B two, four T X`, `N A` | Mã bưu điện, chữ viết tắt trên form |
+| Kovács, Zsuzsa | `Kovach`, `Zhoozha` | Tên Hungary trong bài 2 Unit 8 |
+| Langbiang | `Lang Bee-ang` | Núi ở Đà Lạt (Unit 11) |
+| live, lives (động từ) | `liv`, `livz` | Đọc /laɪv/ (⚠ của `phonemes`); "lived" đọc đúng, không cần `say` |
+| used (động từ, quá khứ) | `yoozd` | Như `yooz` |
 
 Từ thường đúng, không cần `say`: Anki, Mandarin, Cantonese, Australasia, Portuguese, Egypt, comfortable, island,
 Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `tomahto`).
@@ -253,10 +301,21 @@ Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `
   - Unit 4: "My teacher is Portuguese", trong khi cùng video có danh sách giáo viên 5 nước.
 
   Đã viết lại thành câu trung tính (quy ước ở mục 5.3) và dựng lại Unit 1–4.
+- **Câu điền từ hai chỗ trống chỉ hiện chỗ đầu** (đợt 29: Unit 11 bài 2, Unit 13 bài 5, Unit 14 bài 3, Unit 15 bài 2,
+  Unit 16 bài 2): cảnh `blanks` chỉ vẽ một `___` mỗi câu. Tách thành mục `8a`, `8b`… (`reveal: ["8a", "8b"]`) hoặc viết lại
+  câu thành một chỗ trống kèm gợi ý trong ngoặc. Tìm nhanh: `grep -n 'q: "[^"]*___[^"]*___' books/*/lessons/*.yaml`.
+- **Chi tiết nhân vật mâu thuẫn với video cũ:** bản nháp Unit 15 viết Khoa học đại học ở Đà Lạt, trong khi
+  `U01-speaking-practice-4` (IELTS) nói Khoa học y ở Hà Nội. Trước khi viết chi tiết mới về một người, `grep` tên người
+  đó trong `books/*/lessons/*.yaml`.
+- **Hình quá nhỏ:** bảng tóc – mắt (Unit 13) và 10 tranh cảm xúc (Unit 16) thu cả trang vào khung thì chữ khó đọc. Tách
+  thành nhiều cảnh `figure`, mỗi cảnh một dải (mục 5.3a).
+- **Sửa kịch bản khi video đang dựng:** bản dựng đọc kịch bản lúc bắt đầu, nên sửa sau đó thì video vẫn là bản cũ (Unit 14,
+  câu về Khoa). Xếp dựng lại unit đó.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
-Module Basic English đủ 7/7 unit, tổng 51:08.
+Module Basic English đủ 7/7 unit, tổng 51:08 (đợt 26). Module People đủ 9/9 unit, tổng 1:22:54 (đợt 29). Cả sách: 16
+video, 2:14:02. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|
@@ -268,7 +327,23 @@ Module Basic English đủ 7/7 unit, tổng 51:08.
 | 6 English language words | `U06-language-words` | 7:18 | 13 | 1, 2 (sửa lỗi Answer key) | Học ngữ pháp và từ (7) | 5 câu | động từ có quy tắc / bất quy tắc, chữ viết tắt trong từ điển, mẹo IELTS đoán loại từ cần điền |
 | 7 Questions about language | `U07-questions-language` | 7:07 | 12 | 1, 2 | Hỏi về từ ngữ (8: exhausted, cà phê sữa đá, phở…) | 5 câu | I don't know / can't remember / not sure, tự đặt câu hỏi, chữ cái dễ nhầm, đánh vần tên |
 
-Chi tiết nhân vật mới trong các video này đều khớp file 06 mục 9.4:
+Module People (đợt 29) — **unit khó** in đậm, video dài hơn vì có ôn tập và luyện nói chung (mục 5.1):
+
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| 8 Personal information | `U08-personal-info` | 7:15 | 12 | 2 | 1–3 | Thông tin về bạn (9) | đến lượt bạn (5 câu) | hội thoại lễ tân và Spotlight trong sách; What do you do? ≠ What are you doing?; đặt câu hỏi từ câu trả lời; mở đầu bài thi Nói IELTS |
+| 9 Filling in a form | `U09-form` | 7:39 | 12 | 3 | 1, 2 (nói), Test yourself | Form và tên người Việt (10) | điền form thành tiếng (5) | phiếu mẫu trong sách (3 dải); chỉ dẫn trên form; ngày sinh kiểu Anh / Mỹ; nghe và điền form như Listening phần 1; mẹo IELTS điền form |
+| **10 My family** | `U10-family` | 11:57 | 18 | 1 | 1, 2, 5, 6 | Gia đình (9) | Part 2 "a family member you spend a lot of time with" (Tom: chị Hoa, Emma: anh Jack); thảo luận (4) | sơ đồ gia đình Damon; một từ tiếng Anh ứng với nhiều cách gọi tiếng Việt; ôn tập: lỗi hay gặp, "ai là ai" |
+| 11 Physical actions | `U11-actions` | 8:12 | 14 | 3 | 1, 2, 4, 5 | Đi bộ, đạp xe, leo núi, nhảy (11) | đến lượt bạn (5) | 24 tranh động từ trong sách; làm theo Emma; luyện nhanh quá khứ bất quy tắc; chuyện thứ Bảy của Tom |
+| 12 Parts of the body | `U12-body` | 7:10 | 16 | 2 | 1–3 | Cơ thể và sức khỏe (9) | đến lượt bạn (5) | tranh mặt, miệng, cơ thể bên trái danh sách từ; chữ câm; my + bộ phận cơ thể; câu đố; cử chỉ; đi khám (headache, sore throat) |
+| **13 Describing people** | `U13-describing-people` | 11:47 | 20 | 7 | 1, 2, 4, 5, 7, 10, 11 | Trông bạn thế nào? (9) | Part 2 "someone in your family who looks like you" (Tom và Emma: mẹ); thảo luận (3) | tranh chiều cao – cân nặng, bảng tóc – mắt, bảng tuổi, tranh X / Y; thứ tự tính từ tả tóc; dark brown eyes ≠ a black eye; ôn tập: lỗi hay gặp, "ai đây?" |
+| **14 Character** | `U14-character` | 11:20 | 18 | 5 | 1–5 | Bạn là người thế nào? (9) | Part 2 "a person you know who is very kind" (Tom: ông, Emma: bà); thảo luận (3) | bảng tính từ, đoạn văn của Gemma, hai khung Spotlight; What's he like? ≠ What does he look like?; ôn tập: lỗi hay gặp, từ trái nghĩa |
+| 15 Relationships | `U15-relationships` | 7:24 | 13 | 4 | 1–3, 4 (nói) | Bạn thân (9, kèm câu mẫu người Hungary) | đến lượt bạn (5) | lời kể về Max và của Sophie, hai khung Spotlight; Test yourself thành câu đố; advice không đếm được |
+| **16 Feelings** | `U16-feelings` | 10:10 | 16 | 5 | 1, 2, 4, 5 | Cảm xúc của bạn (9) | Part 2 "a time when you felt very nervous" (Tom: ngày đầu đi làm thêm, Emma: buổi dạy đầu tiên ở Việt Nam); thảo luận (3) | bảng cảm giác cơ thể, 10 tranh cảm xúc, Spotlight "get + adjective"; ôn tập: lỗi (bored / boring, frightened of), đoán cảm xúc theo tình huống |
+
+Chi tiết nhân vật mới trong các video này đều khớp file 06 mục 9.4.
+
+Module Basic English (đợt 26):
 - **Tom:**
   - số yêu thích 9 (sinh 9/3, áo bóng rổ số 9); không phải người dậy sớm;
   - căn hộ cách trường khoảng 1 km; lớp IELTS khoảng 25 người;
@@ -289,21 +364,55 @@ Chi tiết nhân vật mới trong các video này đều khớp file 06 mục 9
   - hồi đi học có từ điển tiếng Pháp bằng giấy; thầy dạy tiếng Pháp giao danh sách động từ mỗi tuần;
   - lớp hiện tại nhỏ, sáng, có màn hình lớn; thấy thanh điệu tiếng Việt khó; từ yêu thích "cosy".
 
-### 5.8 Module tiếp theo: People (Unit 8–16, Review tr. 42–45)
+Module People (đợt 29) — gia đình, ngoại hình, tính cách lần đầu được nói rõ:
+- **Tom** (Trần Minh Tuấn):
+  - 20 tuổi, sinh 9/3/2006, độc thân; tên tiếng Anh Tom vì ngắn và cùng chữ T với Tuấn; trên form: Surname TRAN,
+    Forenames MINH TUAN; lần đầu điền form visa viết nhầm tên vào ô họ;
+  - nhà 6 người: ông 78 tuổi (thầy Toán về hưu, làm vườn rau mỗi sáng, kiên nhẫn, trời mưa đau đầu gối); bố mẹ cưới năm
+    1998; mẹ tên Hạnh, 50 tuổi, thấp (1m55), tóc đen ngắn hơi gợn sóng; chị Hoa 26 tuổi, y tá ở Hà Nội, gọi điện gần như
+    mỗi tối, khuyên chuyện gia đình; em Bao 15 tuổi, mê bóng đá;
+  - khoảng 1m75, tóc đen ngắn thẳng, mắt nâu sẫm, sáng nào cũng cạo râu; giống mẹ (mắt, nụ cười), chị Hoa cũng vậy; các dì
+    bảo Tom gầy quá;
+  - hơi trầm khi mới gặp, thân thiện khi đã quen, chăm chỉ, biết lắng nghe; bàn học gọn nhưng phòng bừa;
+  - gãy cổ tay năm 12 tuổi (ngã xe đạp trên dốc ở Đà Lạt); ngồi laptop lâu thì đau lưng, đau cổ; trước kỳ thi không ăn
+    sáng được, năm ngoái đau bụng vì căng thẳng; lo lắng thì gọi Khoa hoặc chị Hoa;
+  - bóng rổ hai buổi một tuần; đã leo núi Langbiang; xe buýt đông thì đứng suốt; học từ mới thì đi quanh phòng đọc to;
+  - ngày đầu làm thêm ở quán cà phê (tháng 9, khớp hồ sơ) làm rơi khay cà phê sữa đá, vỡ hai ly; tuần trước lại làm rơi
+    khay đồ uống;
+  - Khoa (khớp `U01-speaking-practice-4`): học y ở Hà Nội; cao trung bình, tóc đen ngắn, đeo kính, lúc nào cũng cười;
+    vui tính, tốt bụng, chăm chỉ; quen 14 năm, ngồi cùng bàn từ lớp 1; gặp dịp Tết, nhắn tin gần như mỗi ngày; có chuyện
+    là Tom gọi Khoa đầu tiên.
+- **Emma** (Emma Louise Clarke):
+  - 28 tuổi, sinh 15/9/1998, độc thân (bà hỏi chuyện này mỗi Giáng sinh); quê miền nam nước Anh; dùng Ms trên form;
+  - nhà 4 người: bố mẹ 62 tuổi, sang năm nghỉ hưu, quen nhau ở đám cưới một người bạn năm 27 tuổi, bên nhau 35 năm; mẹ đeo
+    kính, tóc nay đã bạc; anh Jack 30 tuổi, giống bố (cao, tóc sẫm, có râu), nhắn tin gần như mỗi ngày, gọi video hai tuần
+    một lần; bà sống gần bố mẹ Emma, đan áo cho cả nhà, gửi thư sang Việt Nam;
+  - cao trung bình (1m65), mảnh mai, tóc dài gợn sóng nâu sáng, mắt xanh, giống mẹ;
+  - hòa đồng, khá thoải mái, ở nhà không gọn gàng; hồi thiếu niên rất nhút nhát, đi dạy giúp tự tin hơn;
+  - gọi video cho mẹ mỗi Chủ nhật, nhớ nhà nhất dịp Giáng sinh; sợ nhện, hơi sợ giao thông, không đi xe máy ở TP. HCM (đi
+    bộ hoặc gọi xe ôm qua ứng dụng); nhảy dở; năm 12 tuổi làm vỡ guitar của Jack; tháng trước trượt ngã trên đường ướt;
+  - giận người đến muộn mà không nhắn, và xe máy chạy trên vỉa hè; sinh nhật năm ngoái học viên làm bánh có tên Emma bằng
+    tiếng Việt; buổi dạy đầu tiên ở Việt Nam (lớp 20 người lớn) chào "Chào buổi sáng" sai thanh;
+  - Lucy: hàng xóm, quen từ năm 5 tuổi, nay sống ở Bristol, gọi video mỗi tháng; cao, mảnh mai, tóc đỏ ngắn xoăn; rất hòa
+    đồng, rất ngăn nắp.
 
-| Unit | Gợi ý phần nói | Ghi chú |
-|---|---|---|
-| 8 Personal information | IELTS Part 1 "Hometown", "Work or study" | Answer key có câu mẫu "Answers from a Greek person" |
-| 9 Filling in a form | Điền phiếu như IELTS GT Listening phần 1 | Rất sát đề GT: dùng "Nghe và viết" dạng điền phiếu (tên, địa chỉ, ngày sinh, mã bưu điện) |
-| 10 My family | Part 1 "Family" | Gia đình Tom và Emma đã có trong hồ sơ: bố mẹ, chị, em trai, ông |
-| 11–12 Physical actions, Parts of the body | Câu đố hành động; đi khám (GT) | Unit 12 nối với Unit 22 Illness |
-| 13–14 Describing people, Character | Part 2 "Describe a person you know" | Dùng bạn thân Khoa, Lucy trong hồ sơ |
-| 15–16 Relationships, Feelings | Part 1 "Friends"; cảm xúc | |
+### 5.8 Module tiếp theo: Everyday life (Unit 17–23, Review tr. 61–64)
 
+| Unit | Trang | Có thể khó (tới 15 phút) | Gợi ý phần nói | Hình trong sách (đã xem trang) |
+|---|---|---|---|---|
+| 17 My routine | 46–48 | Có: 3 trang, nhiều cụm động từ và trạng từ tần suất | Part 1 "Daily routine", "Weekends"; Part 2 "a typical day" | 12 tranh việc trong ngày (tr. 46); bài "What do you do at the weekend?" kèm Glossary (tr. 47); thang always → never và Spotlight every / all (tr. 48) |
+| 18 Clothes | 49–50 | | Part 1 "Clothes", "Colours" | tranh quần áo, bảng màu (tr. 49); tranh phụ kiện (tr. 50) |
+| 19 Buying clothes | 51–53 | Có: 3 trang, hội thoại cửa hàng | đóng vai mua đồ, hỏi cỡ, trả tiền (GT) | tranh tả quần áo long / tight / loose… (tr. 51); bảng cỡ và ảnh cửa hàng (tr. 52); hội thoại trong cửa hàng (tr. 53) |
+| 20 Money | 54–55 | | Part 1 "Money", "Shopping" | tranh tiền, thẻ, hóa đơn và hội thoại (tr. 54); quảng cáo kèm Glossary (tr. 55) |
+| 21 The weather | 56–57 | | Part 1 "Weather", "Seasons" | bảng ký hiệu thời tiết sunny / cloudy / windy… (tr. 56); ảnh bão và bài đọc (tr. 57) |
+| 22 Illness | 58–59 | Có: nhiều triệu chứng, lời khuyên với should; chủ đề GT | đi khám, gọi xin nghỉ (GT); nối với Unit 12, 16 | 12 tranh triệu chứng (tr. 58); tranh người ốm với lời khuyên (tr. 59) |
+| 23 At the chemist's | 60 | | hỏi mua thuốc (GT) | hội thoại ở hiệu thuốc và tranh đồ bán ở hiệu thuốc |
+
+Nhân vật đã có nhiều chi tiết về giờ giấc (Unit 2), quán cà phê (Unit 16), đi khám (Unit 12) — soát mục 5.7 trước khi viết.
 Phiên Review của module chưa có video. Nếu làm thì dùng cảnh `blanks` ôn từ của cả module, không đếm ngược.
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 8 trở đi theo mục 5 (checklist P2-59).
+1. Video Unit 17 trở đi theo mục 5 (checklist P2-59), kế hoạch module Everyday life ở mục 5.8.
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

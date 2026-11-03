@@ -1,0 +1,436 @@
+# Video Oxford Word Skills Basic · Unit 11 — I can describe physical actions (sách in tr. 30–31, Answer key tr. 207).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1, 2, 4, 5 theo Answer key. Bài 4 (đảo chữ) và bài 5 (một tay hay hai tay) làm thành câu đố.
+# Hình trong sách (đợt 29): tranh động từ tr. 30–31 (cảnh figure, khung đỏ theo động từ đang nói).
+# Thêm ngoài sách: làm theo lời Emma (Stand up! Pick up your pen!…); luyện nhanh quá khứ bất quy tắc; chuyện thứ Bảy của
+# Tom (nghe, đếm động từ quá khứ); chủ đề nói IELTS Part 1 đi bộ, đạp xe, leo núi, nhảy.
+# Chi tiết nhân vật (khớp hồ sơ): Tom đạp xe đi học ở Đà Lạt nhiều dốc, trời mưa thì bố chở bằng xe máy; đi bộ 15 phút đến
+# trường; chơi bóng rổ. Mới: Tom chơi bóng rổ hai buổi một tuần, đã leo núi Langbiang (ba tiếng); Emma không dám đi xe
+# máy ở TP. HCM (đi bộ hoặc xe ôm công nghệ), nhảy rất tệ, tháng trước trượt ngã trên đường ướt, làm rơi túi; thứ Bảy vừa
+# rồi Tom ngã trên xe buýt, thắng trận bóng rổ, làm rơi trứng nên ăn tối bằng món trứng tráng (Tom chỉ biết nấu mì và trứng);
+# Tom đi xe buýt đông thì đứng suốt, học từ mới thì vừa đi vừa đọc to; Emma năm 12 tuổi làm vỡ guitar của anh Jack.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U11-actions.yaml
+id: U11-actions
+activity: U11-words
+title: "Unit 11 · Physical actions"
+subtitle: "I can describe physical actions"
+title_vi: "Động từ chỉ hành động của cơ thể và đôi tay: sit down, climb, fall over, pick up, drop… và dạng quá khứ bất quy tắc"
+tag: "PEOPLE · UNIT 11"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 11: physical actions. These are verbs for using your body and your hands. Many of them are irregular, so we'll practise the past simple too."
+        say: "Welcome to Unit eleven: physical actions. These are verbs for using your body and your hands. Many of them are irregular, so we'll practise the past simple too."
+        vi: "Unit 11: động từ chỉ hành động của cơ thể và đôi tay; nhiều động từ bất quy tắc."
+      - tom: "No countdown in this video. Pause it whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Dùng cơ thể"
+    heading: "A · Using your body"
+    heading_vi: "Tranh trong sách tr. 30 — PT = past tense (quá khứ đơn)"
+    image: {pdf: course-book, page: 31, clip: [20, 85, 486, 334]}
+    items:
+      - {box: [24, 128, 96, 232], label: "sit down · sat down"}
+      - {box: [98, 84, 152, 232], label: "stand up · stood up"}
+      - {box: [155, 104, 216, 222], label: "ride · rode"}
+      - {box: [220, 96, 304, 196], label: "jump · jumped"}
+      - {box: [304, 82, 390, 198], label: "dance · danced"}
+      - {box: [382, 82, 468, 198], label: "climb · climbed"}
+      - {box: [24, 232, 146, 332], label: "fall over · fell over"}
+      - {box: [96, 234, 218, 314], label: "lie down · lay down"}
+      - {box: [220, 198, 278, 332], label: "run · ran"}
+      - {box: [280, 198, 334, 332], label: "walk · walked"}
+      - {box: [358, 200, 432, 332], label: "get on · got on"}
+      - {box: [424, 200, 484, 332], label: "get off · got off"}
+    lines:
+      - emma: "Look at the pictures on page thirty. I say the verb, and Tom says the past simple."
+        vi: "Emma nói động từ, Tom nói dạng quá khứ."
+      - {emma: "Sit down.", focus: 0, vi: "ngồi xuống"}
+      - {tom: "Sat down.", focus: 0}
+      - {emma: "Stand up.", focus: 1, vi: "đứng lên"}
+      - {tom: "Stood up.", focus: 1}
+      - {emma: "Ride a bike.", focus: 2, vi: "đi xe đạp"}
+      - {tom: "Rode.", focus: 2}
+      - {emma: "Jump.", focus: 3, vi: "nhảy (bật lên)"}
+      - {tom: "Jumped. That one's regular.", focus: 3}
+      - {emma: "Dance.", focus: 4, vi: "nhảy múa"}
+      - {tom: "Danced.", focus: 4}
+      - {emma: "Climb. In climb, the b is silent.", say: "Climb. In climb, the bee is silent.", focus: 5, vi: "leo, trèo — chữ b câm"}
+      - {tom: "Climbed.", focus: 5}
+      - {emma: "Fall over.", focus: 6, vi: "ngã"}
+      - {tom: "Fell over.", focus: 6}
+      - {emma: "Lie down.", focus: 7, vi: "nằm xuống"}
+      - {tom: "Lay down.", focus: 7}
+      - {emma: "Run.", focus: 8, vi: "chạy"}
+      - {tom: "Ran.", focus: 8}
+      - {emma: "Walk.", focus: 9, vi: "đi bộ"}
+      - {tom: "Walked.", focus: 9}
+      - {emma: "Get on the train.", focus: 10, vi: "lên tàu, lên xe"}
+      - {tom: "Got on.", focus: 10}
+      - {emma: "And the opposite: get off.", focus: 11, vi: "xuống tàu, xuống xe"}
+      - {tom: "Got off.", focus: 11}
+
+  - kind: figure
+    chapter: "Dùng tay"
+    heading: "B · Using your hands (1)"
+    heading_vi: "Tranh trong sách tr. 31"
+    image: {pdf: course-book, page: 32, clip: [22, 58, 486, 271]}
+    items:
+      - {box: [26, 60, 154, 156], label: "push"}
+      - {box: [176, 64, 238, 156], label: "hold · held"}
+      - {box: [280, 62, 410, 170], label: "put something down · put"}
+      - {box: [434, 62, 486, 198], label: "touch"}
+      - {box: [54, 158, 142, 250], label: "pull"}
+      - {box: [188, 154, 264, 256], label: "carry"}
+      - {box: [288, 174, 384, 270], label: "pick something up"}
+      - {box: [408, 200, 486, 248], label: "turn on · turn off"}
+    lines:
+      - emma: "Now your hands. Look at the pictures on page thirty-one."
+        vi: "Giờ đến đôi tay — tranh tr. 31."
+      - {emma: "Push.", focus: 0, vi: "đẩy"}
+      - {tom: "Pushed. He's pushing a car.", focus: 0}
+      - {emma: "Hold.", focus: 1, vi: "cầm, bế"}
+      - {tom: "Held. She's holding a baby.", focus: 1}
+      - {emma: "Put something down.", focus: 2, vi: "đặt xuống"}
+      - {tom: "The past is the same: put.", focus: 2}
+      - {emma: "Touch.", focus: 3, vi: "chạm"}
+      - {tom: "Touched. Don't touch a cactus!", focus: 3}
+      - {emma: "Pull.", focus: 4, vi: "kéo"}
+      - {tom: "Pulled. He's pulling a rope.", focus: 4}
+      - {emma: "Carry.", focus: 5, vi: "mang, xách"}
+      - {tom: "Carried. He's carrying a bag.", focus: 5}
+      - {emma: "Pick something up.", focus: 6, vi: "nhặt lên, bế lên"}
+      - {tom: "Picked up.", focus: 6}
+      - {emma: "Turn on the light.", focus: 7, vi: "bật"}
+      - {tom: "Turned on. And the opposite is turn off.", focus: 7, vi: "tắt"}
+
+  - kind: figure
+    heading: "B · Using your hands (2)"
+    heading_vi: "Tranh trong sách tr. 31"
+    image: {pdf: course-book, page: 32, clip: [22, 250, 486, 414]}
+    items:
+      - {box: [38, 266, 126, 386], label: "give · gave"}
+      - {box: [146, 250, 226, 400], label: "drop"}
+      - {box: [252, 280, 350, 386], label: "break · broke"}
+      - {box: [388, 266, 486, 412], label: "close / shut · shut — OPP open"}
+    lines:
+      - {emma: "Give.", focus: 0, vi: "đưa, cho"}
+      - {tom: "Gave. He's giving her something.", focus: 0}
+      - {emma: "Drop.", focus: 1, vi: "đánh rơi"}
+      - {tom: "Dropped. Oh no, he dropped the vase!", focus: 1}
+      - {emma: "Break.", focus: 2, vi: "làm vỡ, bẻ gãy"}
+      - {tom: "Broke. I dropped a glass, and it broke!", focus: 2}
+      - {emma: "Close, or shut the window.", say: "Cloze, or shut the window.", focus: 3, vi: "đóng"}
+      - {tom: "Closed, or shut. The past of shut is shut. And the opposite is open.", focus: 3, vi: "quá khứ của shut vẫn là shut; ngược nghĩa: open"}
+
+  - kind: bullets
+    chapter: "Làm theo Emma"
+    heading: "Do it! · Follow Emma"
+    heading_vi: "Đứng dậy và làm theo — học động từ bằng cơ thể nhớ lâu hơn"
+    items:
+      - {en: "Stand up! · Sit down!", vi: "đứng lên · ngồi xuống"}
+      - {en: "Pick up your pen! · Hold it up! · Put it down!", vi: "nhặt bút lên · giơ lên · đặt xuống"}
+      - {en: "Touch the table! · Push your chair!", vi: "chạm vào bàn · đẩy ghế"}
+      - {en: "Open your book! · Close your book!", vi: "mở sách · gấp sách"}
+    lines:
+      - emma: "Let's move! Do what I say. Stand up!"
+        focus: 0
+        vi: "Làm theo Emma nhé!"
+      - {emma: "Sit down!", focus: 0}
+      - {emma: "Pick up your pen! Hold it up! Now put it down!", focus: 1}
+      - {emma: "Touch the table! Push your chair! Now pull it back!", focus: 2}
+      - {emma: "Open your book! Close your book! Now stand up again, jump, and sit down. Very good.", say: "Open your book! Cloze your book! Now stand up again, jump, and sit down. Very good.", focus: 3}
+      - {tom: "That was fun. My body remembers the words now!", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: dạng hiện tại"
+    heading: "Exercise 1 · Write the present form of the verbs"
+    heading_vi: "Ví dụ: walked → walk — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "lay down  →  ___", answer: "lie down"}
+      - {n: 2, q: "fell over  →  ___", answer: "fall over"}
+      - {n: 3, q: "rode  →  ___", answer: "ride"}
+      - {n: 4, q: "climbed  →  ___", answer: "climb"}
+      - {n: 5, q: "sat down  →  ___", answer: "sit down"}
+      - {n: 6, q: "got on  →  ___", answer: "get on"}
+      - {n: 7, q: "ran  →  ___", answer: "run"}
+      - {n: 8, q: "stood up  →  ___", answer: "stand up"}
+    lines:
+      - emma: "Exercise 1. Write the present form of the verbs. Pause the video and try."
+        say: "Exercise one. Write the present form of the verbs. Pause the video and try."
+        vi: "Bài 1: viết dạng hiện tại — tạm dừng video và làm."
+      - {tom: "Lay down, lie down. Fell over, fall over. Rode, ride. Climbed, climb.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Sat down, sit down. Got on, get on. Ran, run. Stood up, stand up.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences (past simple in 6–9)"
+    heading_vi: "Ví dụ: I sat down at my desk and worked for two hours. — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "The children have to ___ up when the teacher comes in.", answer: "stand"}
+      - {n: 2, q: "I often ___ to work in the summer — it's only twenty minutes on foot.", answer: "walk"}
+      - {n: 3, q: "I want to ___ Mount Kilimanjaro next year.", answer: "climb"}
+      - {n: 4, q: "Do you often ___ when you go to nightclubs?", answer: "dance"}
+      - {n: 5, q: "The doctor asked me to ___ down on the bed.", answer: "lie"}
+      - {n: 6, q: "The boys ___ into the swimming pool.", answer: "jumped"}
+      - {n: 7, q: "She ___ her bike to school this morning.", answer: "rode"}
+      - {n: "8a", q: "I was late, so I ___ to the bus stop,", answer: "ran"}
+      - {n: "8b", q: "but I ___ over.", answer: "fell"}
+      - {n: "9a", q: "She ___ off the bus, went into the station", answer: "got"}
+      - {n: "9b", q: "and ___ on a train.", answer: "got"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. You need the past simple in sentences six to nine. Pause the video and try."
+        say: "Exercise two. Complete the sentences. You need the past simple in sentences six to nine. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu; câu 6–9 dùng quá khứ — tạm dừng video và làm."
+      - {tom: "One, stand up. Two, walk. Three, climb. Four, dance. Five, lie down.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six, jumped. Seven, rode.", reveal: [6, 7], focus: 6}
+      - {tom: "Eight. I ran to the bus stop, but I fell over. Nine. She got off the bus, and got on a train.", reveal: ["8a", "8b", "9a", "9b"], focus: 10}
+
+  - kind: blanks
+    chapter: "Bài 4: đảo chữ"
+    heading: "Exercise 4 · Make words from the letters"
+    heading_vi: "Ví dụ: ivge → give — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "rrcay  →  ___", answer: "carry"}
+      - {n: 2, q: "nurt fof  →  ___", answer: "turn off"}
+      - {n: 3, q: "tpu wond  →  ___", answer: "put down"}
+      - {n: 4, q: "seloc  →  ___", answer: "close"}
+      - {n: 5, q: "thuco  →  ___", answer: "touch"}
+      - {n: 6, q: "pord  →  ___", answer: "drop"}
+      - {n: 7, q: "kipc pu  →  ___", answer: "pick up"}
+      - {n: 8, q: "kabre  →  ___", answer: "break"}
+      - {n: 9, q: "dloh  →  ___", answer: "hold"}
+      - {n: 10, q: "uphs  →  ___", answer: "push"}
+      - {n: 11, q: "thsu  →  ___", answer: "shut"}
+      - {n: 12, q: "pnoe  →  ___", answer: "open"}
+    lines:
+      - emma: "Exercise 4. The letters are mixed up. Make the words. Pause the video and try."
+        say: "Exercise four. The letters are mixed up. Make the words. Pause the video and try."
+        vi: "Bài 4: chữ bị đảo lộn — sắp xếp thành từ."
+      - {tom: "Carry. Turn off. Put down. Close.", say: "Carry. Turn off. Put down. Cloze.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Touch. Drop. Pick up. Break.", reveal: [5, 6, 7, 8], focus: 7}
+      - {tom: "Hold. Push. Shut. And open.", reveal: [9, 10, 11, 12], focus: 11}
+
+  - kind: blanks
+    chapter: "Bài 5: một tay hay hai tay?"
+    heading: "Exercise 5 · One hand or two? Write 1 or 2"
+    heading_vi: "Ví dụ: shut a dictionary → 1 · give someone five dictionaries → 2 — đáp án theo Answer key tr. 207"
+    items:
+      - {n: 1, q: "touch a bicycle · push a bicycle  →  ___", answer: "1 · 2"}
+      - {n: 2, q: "pick up a TV · turn on a TV  →  ___", answer: "2 · 1"}
+      - {n: 3, q: "break a bottle · open a bottle  →  ___", answer: "1 · 2"}
+      - {n: 4, q: "pull your hair · touch your hair  →  ___", answer: "1 · 1"}
+      - {n: 5, q: "turn off a radio · hold a radio  →  ___", answer: "1 · 1"}
+      - {n: 6, q: "drop a ruler · break a ruler  →  ___", answer: "1 · 2"}
+      - {n: 7, q: "carry a door · close a door  →  ___", answer: "2 · 1"}
+      - {n: 8, q: "pick up a baby · hold a baby  →  ___", answer: "2 · 2"}
+    lines:
+      - emma: "Exercise 5. Can you do these things with one hand, or do you need two? Pause the video, and write one or two."
+        say: "Exercise five. Can you do these things with one hand, or do you need two? Pause the video, and write one or two."
+        vi: "Bài 5: làm bằng một tay hay hai tay? Viết 1 hoặc 2."
+      - {tom: "Touch a bicycle, one. But push a bicycle, two. Pick up a TV, two. It's heavy! Turn on a TV, one.", reveal: [1, 2], focus: 1}
+      - {tom: "Break a bottle, one. Open a bottle, two. Pull your hair, one. Touch your hair, one.", reveal: [3, 4], focus: 3}
+      - {tom: "Turn off a radio, one. Hold a radio, one. Drop a ruler, one. Break a ruler, two.", reveal: [5, 6], focus: 5}
+      - {tom: "Carry a door, two. Close a door, one. And a baby: always two hands!", say: "Carry a door, two. Cloze a door, one. And a baby: always two hands!", reveal: [7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Luyện quá khứ bất quy tắc"
+    heading: "Quick drill · Say the past simple"
+    heading_vi: "Emma đọc động từ, bạn nói dạng quá khứ — tạm dừng nếu cần thêm thời gian"
+    items:
+      - {n: 1, q: "sit  →  ___", answer: "sat"}
+      - {n: 2, q: "stand  →  ___", answer: "stood"}
+      - {n: 3, q: "run  →  ___", answer: "ran"}
+      - {n: 4, q: "ride  →  ___", answer: "rode"}
+      - {n: 5, q: "fall  →  ___", answer: "fell"}
+      - {n: 6, q: "lie  →  ___", answer: "lay"}
+      - {n: 7, q: "get  →  ___", answer: "got"}
+      - {n: 8, q: "hold  →  ___", answer: "held"}
+      - {n: 9, q: "give  →  ___", answer: "gave"}
+      - {n: 10, q: "break  →  ___", answer: "broke"}
+      - {n: 11, q: "put  →  ___", answer: "put"}
+      - {n: 12, q: "shut  →  ___", answer: "shut"}
+    lines:
+      - emma: "Quick drill. I say the verb, and you say the past simple. Pause the video if you need more time."
+        vi: "Luyện nhanh: Emma nói động từ, bạn nói dạng quá khứ."
+      - {emma: "Sit. Stand. Run.", focus: 1}
+      - {tom: "Sat. Stood. Ran.", reveal: [1, 2, 3], focus: 2}
+      - {emma: "Ride. Fall. Lie.", focus: 4}
+      - {tom: "Rode. Fell. Lay.", reveal: [4, 5, 6], focus: 5}
+      - {emma: "Get. Hold. Give.", focus: 7}
+      - {tom: "Got. Held. Gave.", reveal: [7, 8, 9], focus: 8}
+      - {emma: "Break. Put. Shut.", focus: 10}
+      - {tom: "Broke. And put and shut don't change: put, shut.", reveal: [10, 11, 12], focus: 11, vi: "put, shut: quá khứ giữ nguyên."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · past simple"
+    heading_vi: "Tạm dừng sau mỗi câu, viết động từ ở quá khứ — nhiều động từ bất quy tắc"
+    items:
+      - {n: 1, q: "He ___ over in the street.", answer: "fell"}
+      - {n: 2, q: "She ___ her bike to work.", answer: "rode"}
+      - {n: 3, q: "We ___ off the bus at the station.", answer: "got"}
+      - {n: 4, q: "He ___ the baby in his arms.", answer: "held"}
+      - {n: 5, q: "She dropped her phone and ___ it.", answer: "broke"}
+      - {n: 6, q: "The children ___ up when the teacher came in.", answer: "stood"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the verb."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết động từ."
+      - {emma: "Number one. He fell over in the street.", focus: 0}
+      - {emma: "Number two. She rode her bike to work.", focus: 1}
+      - {emma: "Number three. We got off the bus at the station.", focus: 2}
+      - {emma: "Number four. He held the baby in his arms.", focus: 3}
+      - {emma: "Number five. She dropped her phone and broke it.", focus: 4}
+      - {emma: "Number six. The children stood up when the teacher came in.", focus: 5}
+      - {tom: "Fell, with double l. Rode: R, O, D, E. Got.", say: "Fell, with double el. Rode: ar, oh, dee, ee. Got.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Held. Broke. And stood: S, T, double O, D.", say: "Held. Broke. And stood: ess, tee, double oh, dee.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Chuyện thứ Bảy của Tom"
+    heading: "Tom's busy Saturday"
+    heading_vi: "Nghe Tom kể — đếm xem có bao nhiêu động từ quá khứ"
+    roles: {tom: student}
+    items:
+      - text: "Last Saturday was a busy day. I got up late, so I ran to the bus stop. I got on the bus just in time, but when it started, I fell over! Everyone looked at me."
+        note: "morning"
+      - text: "In the afternoon, I played basketball with my friends. I jumped, I ran, and I fell over again, but I wasn't hurt. And we won the game!"
+        note: "afternoon"
+      - text: "In the evening, I carried my shopping home, and I dropped a bag of eggs. Two eggs broke. So I made a very big omelette for dinner!"
+        note: "evening"
+    lines:
+      - emma: "Now listen to Tom's story. How many verbs in the past simple can you hear?"
+        vi: "Nghe Tom kể; đếm động từ quá khứ."
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {emma: "Poor Tom! Got up, ran, got on, fell over, played, jumped, won, carried, dropped, broke, made. Lots of irregular verbs!", focus: 2, vi: "Rất nhiều động từ bất quy tắc: got, ran, fell, won, broke, made…"}
+      - {tom: "And the omelette was delicious!", focus: 2}
+
+  - kind: qa
+    chapter: "Nói 1: đi bộ, đạp xe, leo núi"
+    heading: "Speaking 1 · IELTS Part 1 topics: walking, cycling, climbing, dancing"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you walk a lot?"
+        a: "Yes, I walk to university every day. It's about fifteen minutes, and it's good exercise."
+        ask: emma
+        by: tom
+        phrases: ["I walk to…", "every day", "good exercise"]
+      - q: "Did you ride a bike to school?"
+        a: "Yes. Da Lat is very hilly, so I was always tired when I arrived! When it rained, my dad took me on his motorbike."
+        ask: emma
+        by: tom
+        phrases: ["very hilly", "always tired", "When it rained…"]
+      - q: "Do you ride a motorbike here, Emma?"
+        a: "No, I'm too scared of the traffic! I walk, or I take a motorbike taxi with an app."
+        ask: tom
+        by: emma
+        phrases: ["I'm too scared of…", "I walk, or…", "a motorbike taxi"]
+      - q: "Have you ever climbed a mountain?"
+        a: "Yes, Langbiang Mountain, near Da Lat. It took three hours to climb, but the view from the top was amazing."
+        ask: emma
+        by: tom
+        phrases: ["Yes, …", "It took three hours", "the view was amazing"]
+      - q: "Do you like dancing?"
+        a: "I love it, but I'm a terrible dancer! I only dance at weddings, and everyone laughs at me."
+        ask: tom
+        by: emma
+        phrases: ["I love it, but…", "a terrible dancer", "everyone laughs"]
+      - q: "How often do you run?"
+        a: "Not often, really. But I play basketball twice a week, so I run a lot in the games."
+        ask: emma
+        by: tom
+        phrases: ["Not often, really.", "twice a week", "so I…"]
+      - q: "Do you take the bus in Ho Chi Minh City?"
+        a: "Sometimes. But it's always full, so I stand up for the whole trip. I never get a seat!"
+        ask: emma
+        by: tom
+        phrases: ["Sometimes.", "it's always full", "I stand up for…"]
+      - q: "Have you ever broken something expensive, Emma?"
+        a: "Yes, my brother's guitar, when I was twelve! I dropped it on the floor, and it broke. He wasn't happy."
+        ask: tom
+        by: emma
+        phrases: ["Yes, …", "I dropped it", "He wasn't happy."]
+      - q: "Who taught you to swim, Emma?"
+        a: "My grandfather, when I was ten. He held me in the water until I could swim on my own."
+        ask: tom
+        by: emma
+        phrases: ["My grandfather, when I was…", "He held me", "on my own"]
+      - q: "Do you sit or walk when you study?"
+        a: "I usually sit at my desk. But when I learn new words, I walk around my room and say them out loud."
+        ask: emma
+        by: tom
+        phrases: ["I usually sit…", "But when I…", "I walk around"]
+      - q: "When did you last fall over?"
+        a: "Last month, on a wet street in the rain. I wasn't hurt, but I dropped my bag, and everything fell out!"
+        ask: tom
+        by: emma
+        phrases: ["Last month…", "I wasn't hurt", "everything fell out"]
+    lines:
+      - {emma: "Let's talk about moving. Do you walk a lot, Tom?", focus: 0}
+      - {tom: "Yes, I walk to university every day. It's about fifteen minutes, and it's good exercise.", reveal: 0, vi: "Có, ngày nào cũng đi bộ đến trường, khoảng 15 phút — vận động tốt."}
+      - {emma: "Did you ride a bike to school?", focus: 1}
+      - {tom: "Yes. Da Lat is very hilly, so I was always tired when I arrived! When it rained, my dad took me on his motorbike.", say: "Yes. Dah Lot is very hilly, so I was always tired when I arrived! When it rained, my dad took me on his motorbike.", reveal: 1, vi: "Có. Đà Lạt nhiều dốc, đến lớp lúc nào cũng mệt! Trời mưa thì bố chở bằng xe máy."}
+      - {tom: "Do you ride a motorbike here, Emma?", focus: 2}
+      - {emma: "No, I'm too scared of the traffic! I walk, or I take a motorbike taxi with an app.", reveal: 2, vi: "Không, sợ giao thông lắm! Emma đi bộ hoặc gọi xe ôm qua ứng dụng."}
+      - {emma: "Have you ever climbed a mountain?", focus: 3}
+      - {tom: "Yes, Langbiang Mountain, near Da Lat. It took three hours to climb, but the view from the top was amazing.", say: "Yes, Lang Bee-ang Mountain, near Dah Lot. It took three hours to climb, but the view from the top was amazing.", reveal: 3, vi: "Có, núi Langbiang gần Đà Lạt: leo ba tiếng, nhưng cảnh trên đỉnh tuyệt đẹp."}
+      - {tom: "Do you like dancing?", focus: 4}
+      - {emma: "I love it, but I'm a terrible dancer! I only dance at weddings, and everyone laughs at me.", reveal: 4, vi: "Thích lắm nhưng nhảy dở tệ! Chỉ nhảy ở đám cưới, và ai cũng cười."}
+      - {emma: "How often do you run?", focus: 5}
+      - {tom: "Not often, really. But I play basketball twice a week, so I run a lot in the games.", reveal: 5, vi: "Ít thôi. Nhưng tuần chơi bóng rổ hai buổi nên chạy nhiều."}
+      - {emma: "Do you take the bus in Ho Chi Minh City?", say: "Do you take the bus in Ho Chee Min City?", focus: 6}
+      - {tom: "Sometimes. But it's always full, so I stand up for the whole trip. I never get a seat!", reveal: 6, vi: "Thỉnh thoảng; xe lúc nào cũng đông nên đứng suốt — chẳng bao giờ có ghế!"}
+      - {tom: "Have you ever broken something expensive, Emma?", focus: 7}
+      - {emma: "Yes, my brother's guitar, when I was twelve! I dropped it on the floor, and it broke. He wasn't happy.", reveal: 7, vi: "Có, cây guitar của anh trai hồi 12 tuổi! Làm rơi xuống sàn, vỡ luôn. Anh ấy chẳng vui gì."}
+      - {tom: "Who taught you to swim, Emma?", focus: 8}
+      - {emma: "My grandfather, when I was ten. He held me in the water until I could swim on my own.", reveal: 8, vi: "Ông dạy Emma bơi năm 10 tuổi: ông đỡ Emma dưới nước cho đến khi tự bơi được."}
+      - {emma: "Do you sit or walk when you study?", focus: 9}
+      - {tom: "I usually sit at my desk. But when I learn new words, I walk around my room and say them out loud.", reveal: 9, vi: "Thường ngồi ở bàn; nhưng học từ mới thì vừa đi quanh phòng vừa đọc to."}
+      - {tom: "When did you last fall over?", focus: 10}
+      - {emma: "Last month, on a wet street in the rain. I wasn't hurt, but I dropped my bag, and everything fell out!", reveal: 10, vi: "Tháng trước, trên đường ướt mưa: không đau, nhưng rơi túi, đồ văng ra hết!"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: moving and using your body"
+    heading_vi: "Trả lời 2–3 câu; câu hỏi về quá khứ thì dùng quá khứ đơn"
+    items:
+      - {q: "Do you walk or ride to school or work?", hint: "I usually walk / ride / take … · It takes …"}
+      - {q: "Can you ride a bike or a motorbike? Who taught you?", hint: "Yes, my … taught me when I was …"}
+      - {q: "Do you like dancing? When did you last dance?", hint: "I love / don't like … · I last danced at …"}
+      - {q: "Have you ever climbed a mountain or a hill?", hint: "Yes, I climbed … · It took …"}
+      - {q: "When did you last fall over or drop something?", hint: "Last week, I dropped / fell over …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Do you walk or ride to school or work?", focus: 0, pause: 0.5}
+      - {emma: "Can you ride a bike or a motorbike? Who taught you?", focus: 1, pause: 0.5}
+      - {emma: "Do you like dancing? When did you last dance?", focus: 2, pause: 0.5}
+      - {emma: "Have you ever climbed a mountain or a hill?", focus: 3, pause: 0.5}
+      - {emma: "When did you last fall over or drop something?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 30–31, nhìn tranh và nói động từ"
+    items:
+      - {en: "sit down, stand up · walk, run, jump · dance, climb · fall over, lie down", vi: "dùng cơ thể"}
+      - {en: "push, pull · hold, carry · pick up, put down · drop, break", vi: "dùng tay"}
+      - {en: "sat, stood, ran, rode, fell, lay, got, held, gave, broke, shut", vi: "quá khứ bất quy tắc (danh sách đủ ở tr. 202)"}
+      - {en: "get on ≠ get off · turn on ≠ turn off · open ≠ close", vi: "cặp ngược nghĩa"}
+      - {en: "Next: Unit 12 · Parts of the body", vi: "Tiếp theo: Unit 12 · bộ phận cơ thể"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Sit down, stand up. Walk, run, jump. Dance, climb. Fall over, lie down.", focus: 0}
+      - {tom: "Push, pull. Hold, carry. Pick up, put down. Drop, break.", focus: 1}
+      - {emma: "Sat, stood, ran, rode, fell, lay, got, held, gave, broke, shut.", focus: 2}
+      - {tom: "Get on, get off. Turn on, turn off. Open, close.", say: "Get on, get off. Turn on, turn off. Open, cloze.", focus: 3}
+      - {emma: "Now cover the words on pages thirty and thirty-one, look at the pictures, and say the verbs. See you in Unit 12!", say: "Now cover the words on pages thirty and thirty-one, look at the pictures, and say the verbs. See you in Unit twelve!", focus: 4}

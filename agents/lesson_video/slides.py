@@ -153,6 +153,36 @@ class Slides:
             out.paste(tile, (int(c * (w + gap)), int(r * (h + gap))))
         return out
 
+    def _picture(self, img, d, sc, fr, area, align="center") -> int:
+        """Hình cắt từ trang sách, vừa khung `area` (x0, y0, x1, y1), canh giữa hoặc sát trái. Mục đang nói có `box` (điểm
+        PDF như `clip`) thì đóng khung đỏ đúng vùng đó trên hình, kèm `label` nếu có. Trả về mép phải của hình."""
+        pic = self.images[fr.scene]
+        x0, y0, x1, y1 = area
+        s = min((x1 - x0) / pic.width, (y1 - y0) / pic.height)
+        w, h = max(1, int(pic.width * s)), max(1, int(pic.height * s))
+        px = int(x0 if align == "left" else x0 + (x1 - x0 - w) / 2)
+        py = int(y0 + (y1 - y0 - h) / 2)
+        img.paste(pic.resize((w, h), Image.LANCZOS), (px, py))
+        d.rectangle((px - 1, py - 1, px + w, py + h), outline=C["line"], width=1)
+        it = sc.items[fr.focus] if fr.focus is not None and fr.focus < len(sc.items) else None
+        if it and it.get("box"):
+            k = 200 / 72 * s           # pixmap 200 dpi (px / điểm PDF) × tỉ lệ thu phóng
+            cx, cy = sc.image.clip[0], sc.image.clip[1]
+            b = it["box"]
+            r = (max(px, px + (b[0] - cx) * k), max(py, py + (b[1] - cy) * k),
+                 min(px + w, px + (b[2] - cx) * k), min(py + h, py + (b[3] - cy) * k))
+            d.rounded_rectangle(r, 8, outline=C["red"], width=5)
+            if it.get("label"):
+                f = font("bold", 20)
+                tw = d.textlength(str(it["label"]), font=f)
+                tx, ty = r[0], max(py, r[1] - 34)
+                d.rounded_rectangle((tx, ty, tx + tw + 20, ty + 30), 8, fill=C["red"])
+                d.text((tx + 10, ty + 15), str(it["label"]), font=f, fill="#FFFFFF", anchor="lm")
+        return px + w
+
+    def _k_figure(self, img, d, sc, fr):
+        self._picture(img, d, sc, fr, (60, TOP, W - 60, BOTTOM - 4))
+
     # ---------- khung chung ----------
     def render(self, fr: Frame, progress: float) -> Image.Image:
         if self.L.scenes[fr.scene].kind == "jp":  # thẻ ba tầng nền navy, vẽ cả khung (jpcard.py)
@@ -263,21 +293,24 @@ class Slides:
     def _k_bullets(self, img, d, sc, fr):
         n = len(sc.items)
         rh = self._rows(n)
+        L = 52   # mép trái danh sách; có hình từ sách thì hình bên trái, danh sách dời sang phải
+        if fr.scene in self.images:
+            L = self._picture(img, d, sc, fr, (52, TOP, 52 + 560, BOTTOM - 4), align="left") + 22
         for i, it in enumerate(sc.items):
             y = TOP + i * rh
             on = fr.focus == i
             if on:
-                d.rounded_rectangle((52, y + 2, W - 52, y + rh - 4), 12, fill=C["soft"])
-                d.rounded_rectangle((52, y + 2, 58, y + rh - 4), 3, fill=C["red"])
+                d.rounded_rectangle((L, y + 2, W - 52, y + rh - 4), 12, fill=C["soft"])
+                d.rounded_rectangle((L, y + 2, L + 6, y + rh - 4), 3, fill=C["red"])
             faded = fr.focus is not None and not on
-            d.ellipse((76, y + 10, 108, y + 42), fill=C["red"] if not faded else C["dim"])
-            d.text((92, y + 26), str(i + 1), font=font("bold", 18), fill="#FFFFFF", anchor="mm")
+            d.ellipse((L + 24, y + 10, L + 56, y + 42), fill=C["red"] if not faded else C["dim"])
+            d.text((L + 40, y + 26), str(i + 1), font=font("bold", 18), fill="#FFFFFF", anchor="mm")
             en_y = y + 10 if it.get("vi") else y + 14
-            f, lines = fit(d, str(it["en"]), "bold", 25, W - 190, 1)
-            d.text((126, en_y), lines[0], font=f, fill=C["muted"] if faded else C["ink"])
+            f, lines = fit(d, str(it["en"]), "bold", 25, W - L - 138, 1)
+            d.text((L + 74, en_y), lines[0], font=f, fill=C["muted"] if faded else C["ink"])
             if it.get("vi") and rh >= 56:
-                f, lines = fit(d, str(it["vi"]), "italic", 19, W - 190, 1)
-                d.text((126, en_y + 32), lines[0], font=f, fill=C["dim"] if faded else C["muted"])
+                f, lines = fit(d, str(it["vi"]), "italic", 19, W - L - 138, 1)
+                d.text((L + 74, en_y + 32), lines[0], font=f, fill=C["dim"] if faded else C["muted"])
 
     def _k_vocab(self, img, d, sc, fr):
         n = len(sc.items)
@@ -648,7 +681,7 @@ class Slides:
         """Nghe – chép: các ô trống đánh số (hai hàng như trong sách); mở ra thì hiện chữ đúng và mẹo chính tả.
         Mục có `q` (câu chứa ___) thì vẽ thành danh sách câu điền từ."""
         if any(it.get("q") for it in sc.items):
-            return self._blank_sentences(d, sc, fr)
+            return self._blank_sentences(d, sc, fr, img)
         n = len(sc.items)
         cols = 5 if n > 6 else n
         rows = (n + cols - 1) // cols
@@ -674,8 +707,11 @@ class Slides:
             f, lines = fit(d, str(cur["tip"]), "regular", 21, W - 260, 1, min_size=15)
             d.text((220, ty + (BOTTOM - 4 - ty) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
 
-    def _blank_sentences(self, d, sc, fr):
+    def _blank_sentences(self, d, sc, fr, img=None):
         n = len(sc.items)
+        L = 52   # mép trái các câu; có hình từ sách thì hình bên trái
+        if img is not None and fr.scene in self.images:
+            L = self._picture(img, d, sc, fr, (52, TOP, 52 + 520, BOTTOM - 4), align="left") + 20
         cur = sc.items[fr.focus] if fr.focus is not None else None
         show_tip = cur is not None and str(cur["n"]) in fr.revealed and cur.get("tip")
         rh = int(min(56, (BOTTOM - TOP - (58 if show_tip else 0)) / max(n, 1)))
@@ -687,12 +723,12 @@ class Slides:
             mid = y + (rh - 4) / 2
             on = fr.focus == i
             if on:
-                d.rounded_rectangle((52, y, W - 52, y + rh - 4), 10, fill=C["soft"])
-            d.text((66, mid), f"{it['n']}.", font=font("bold", 22), fill=C["red"], anchor="lm")
+                d.rounded_rectangle((L, y, W - 52, y + rh - 4), 10, fill=C["soft"])
+            d.text((L + 14, mid), f"{it['n']}.", font=font("bold", 22), fill=C["red"], anchor="lm")
             q = str(it.get("q") or "___")
             before, _, after = q.partition("___")
             ans = str(it["answer"])
-            room = (hint_x - 16 if it.get("hint") else W - 64) - 104
+            room = (hint_x - 16 if it.get("hint") else W - 64) - (L + 52)
             size = 22
             while size > 15:  # câu dài thì thu nhỏ chữ cho vừa một dòng
                 f, fb = font("regular", size), font("bold", size)
@@ -701,7 +737,7 @@ class Slides:
                     break
                 size -= 1
             f = font("regular", size)
-            x = 104
+            x = L + 52
             if before:
                 d.text((x, mid), before, font=f, fill=C["ink"], anchor="lm")
                 x += d.textlength(before, font=f) + 6
@@ -722,10 +758,10 @@ class Slides:
         if show_tip:
             ty = TOP + n * rh + 6
             by = min(BOTTOM - 4, ty + 54)
-            d.rounded_rectangle((60, ty, W - 60, by), 12, fill=C["card"], outline=C["line"], width=2)
-            d.text((80, (ty + by) / 2), "Tip:", font=font("bold", 19), fill=C["red"], anchor="lm")
-            f, lines = fit(d, str(cur["tip"]), "regular", 21, W - 220, 1, min_size=15)
-            d.text((130, (ty + by) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
+            d.rounded_rectangle((L + 8, ty, W - 60, by), 12, fill=C["card"], outline=C["line"], width=2)
+            d.text((L + 28, (ty + by) / 2), "Tip:", font=font("bold", 19), fill=C["red"], anchor="lm")
+            f, lines = fit(d, str(cur["tip"]), "regular", 21, W - L - 168, 1, min_size=15)
+            d.text((L + 78, (ty + by) / 2), lines[0], font=f, fill=C["ink"], anchor="lm")
 
     def _k_passage(self, img, d, sc, fr):
         """Bài đọc trên màn hình (phần trên phụ đề): đoạn đang nói tô nền, cụm từ `mark` của dòng thoại tô vàng.

@@ -426,7 +426,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - video khớp `lessons.json`; mỗi video 7–10 phút, không `wait` / `echo`, có `qa` và `practice` tự tạm dừng;
     - `phonemes` bắt "close";
     - e2e: thứ tự menu Sách, thẻ 92 phiên × 30 phút, Unit 1–7 mỗi unit một video 7–10 phút, thẻ unit một trang ghi "Trang 21" (không phải "21–21"), phiên Unit 6 mở trang in 21 (PDF 22) và Answer key tr. 206.
-- [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5 (gợi ý module People ở mục 5.8). Làm thêm video cho phiên Review nếu người học cần.
+- [ ] **P2-59** Video Oxford Word Skills Basic từ Unit 8 (module People) trở đi, theo khuôn file 09 mục 5. Làm thêm video cho phiên Review nếu người học cần.
+  - *Đợt 29:* xong module People, Unit 8–16 (P2-63). Còn Unit 17 trở đi; kế hoạch module Everyday life ở file 09 mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -437,6 +438,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Từ 900px trở lên (menu nằm dọc bên trái): header và nội dung trải hết bề ngang bên phải menu, lề hai bên 28px. Dưới 900px (điện thoại) giữ nguyên.
   - Video bài giảng rộng bằng khung nhưng không cao quá màn hình (`width: min(100%, (100vh − 190px) × 16/9)`), căn giữa.
   - E2E: ở khung 1440×900, `main` bắt đầu ngay sau menu và chạm mép phải, header rộng hơn 1100px, video Unit 6 (Oxford Word Skills Basic) rộng hơn 900px mà vẫn thấp hơn màn hình.
+- [x] **P2-63** **Oxford Word Skills Basic module People: 9 video Unit 8–16, hình trong sách, unit khó tới 15 phút** (đợt 29, 1:22:54), theo yêu cầu người học: làm tiếp Unit 8–16; topic nào khó thì kéo video tới 15 phút để ôn tập và luyện nói chung; đưa hình trong sách vào bài giảng. Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.
+  - 5 unit thường 7:10–8:12; 4 unit khó (My family, Describing people, Character, Feelings) 10:10–11:57: sau phần sách có ôn tập (sửa lỗi người Việt hay mắc, câu đố) và luyện nói chung (thẻ đề Part 2, bài nói mẫu của Tom và của Emma, người học tự nói, 3–4 câu thảo luận kiểu Part 3).
+  - Cảnh `figure` mới: hình lớn cắt từ trang sách, mỗi mục có `box` (vùng trên hình) và `label`; dòng thoại `focus` vào mục nào thì khung đỏ hiện đúng vùng đó. `bullets` và câu điền từ `blanks` cũng nhận `image` (hình bên trái). `check` báo lỗi khi `image` / `box` khai sai.
+  - Hình dùng ở cả 9 unit (32 cảnh): hội thoại lễ tân, phiếu mẫu, sơ đồ gia đình, 24 tranh động từ, tranh mặt và cơ thể, bảng tóc – mắt, bảng tuổi, bảng tính từ, đoạn văn có Glossary, tranh cảm xúc, khung Spotlight.
+  - Hồ sơ nhân vật thêm gia đình, ngoại hình, tính cách của Tom và Emma (file 09 mục 5.7); sửa cho khớp video IELTS cũ (Khoa học y ở Hà Nội).
+  - Test: `figure` và hình bên trái vẽ khung đỏ đúng vùng của mục đang nói (soát điểm ảnh), `image` / `box` sai bị từ chối; mỗi video Oxford 7–10 phút, unit khó (đánh dấu `UNIT KHÓ`) tới 15 phút và có bài nói mẫu, Unit 8–16 có hình; e2e: thẻ sách 16 video, Unit 1–16 mỗi unit một nút video đúng độ dài.
 
 ### Cổng G2
 

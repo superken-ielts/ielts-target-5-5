@@ -1,0 +1,327 @@
+# Video Oxford Word Skills Basic · Unit 8 — I can give personal information (sách in tr. 26, Answer key tr. 206).
+# Khuôn video: docs/agent-hoc-tap/09-oxford-word-skills-basic.md mục 5 (7–10 phút, không đếm ngược, 1–2 phần nói, nghe và viết).
+# Đáp án bài 1–2 theo Answer key; bài 3 (ABOUT YOU): câu mẫu "Answers from a Greek person" rồi Tom tự trả lời.
+# Hình trong sách (đợt 29): hội thoại lễ tân và khung Spotlight tr. 26, đóng khung từng cặp hỏi – đáp đang học.
+# Thêm ngoài sách: What do you do? ≠ What are you doing?; đặt câu hỏi từ câu trả lời; giám khảo IELTS mở đầu bài thi
+# Nói thế nào; hỏi tuổi ở Việt Nam
+# và ở Anh. Module People mở đầu: chị và em trai của Tom có tên từ video này — chị Hoa (say: Whah, y tá ở Hà Nội), em Bao.
+# Chi tiết nhân vật mới: Tom 20 tuổi, độc thân, tên tiếng Anh "Tom" ngắn và cùng chữ T với Tuấn; Emma 28 tuổi, độc thân,
+# tên đệm Louise, quê ở miền nam nước Anh; ở Anh hỏi tuổi có khi bị coi là bất lịch sự, bà Emma hỏi chuyện chồng con mỗi
+# dịp Giáng sinh.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U08-personal-info.yaml
+id: U08-personal-info
+activity: U08-words
+title: "Unit 8 · Personal information"
+subtitle: "I can give personal information"
+title_vi: "Hỏi và trả lời thông tin cá nhân: họ tên, địa chỉ, quê, nghề, gia đình — như ở quầy lễ tân và phần mở đầu bài thi Nói"
+tag: "PEOPLE · UNIT 8"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 8, and to a new module: People. After this video, you can ask for and give personal information, at a reception desk, or at the start of the IELTS speaking test."
+        say: "Welcome to Unit eight, and to a new module: People. After this video, you can ask for and give personal information, at a reception desk, or at the start of the eye-elts speaking test."
+        vi: "Unit 8, mở đầu module People: hỏi – đáp thông tin cá nhân, ở quầy lễ tân hay lúc bắt đầu bài thi Nói IELTS."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: muốn trả lời thì tự tạm dừng video."
+
+  - kind: figure
+    chapter: "Ở quầy lễ tân"
+    heading: "At the reception desk · Sandro is studying English in Cambridge"
+    heading_vi: "Hội thoại trong sách tr. 26 — Emma đóng vai lễ tân, Tom đóng vai Sandro"
+    image: {pdf: course-book, page: 27, clip: [22, 84, 336, 226]}
+    items:
+      - {box: [24, 98, 334, 126]}
+      - {box: [24, 126, 334, 153]}
+      - {box: [24, 173, 334, 198]}
+      - {box: [24, 198, 334, 224]}
+    lines:
+      - emma: "Sandro is studying English in Cambridge. The receptionist needs some information. I'm the receptionist, and Tom is Sandro."
+        vi: "Sandro học tiếng Anh ở Cambridge; lễ tân cần vài thông tin."
+      - {emma: "What's your family name?", focus: 0, vi: "Họ của bạn là gì?"}
+      - {tom: "Bertoli.", focus: 0}
+      - {emma: "And your first name?", focus: 0, vi: "Còn tên?"}
+      - {tom: "Sandro.", focus: 0}
+      - {emma: "Could I have your address?", focus: 1, vi: "Cho tôi xin địa chỉ."}
+      - {tom: "Forty-five Alfred Road.", focus: 1}
+      - {emma: "And the postcode?", focus: 1, vi: "Còn mã bưu điện?"}
+      - {tom: "CB2 4TX.", say: "C B two, four T X.", focus: 1}
+      - {emma: "So, Sandro, where are you from?", focus: 2, vi: "Bạn từ đâu đến? (hoặc Where do you come from?)"}
+      - {tom: "Italy.", focus: 2}
+      - {emma: "Whereabouts in Italy?", focus: 3, vi: "Whereabouts = chỗ nào, nơi nào (hoặc Where in Italy exactly?)."}
+      - {tom: "Pisa.", focus: 3}
+
+  - kind: figure
+    chapter: "Công việc, gia đình"
+    heading: "Job, marital status, children"
+    heading_vi: "Hội thoại và khung Spotlight trong sách tr. 26 — information không đếm được"
+    image: {pdf: course-book, page: 27, clip: [22, 86, 490, 296]}
+    items:
+      - {box: [24, 224, 348, 250]}
+      - {box: [24, 250, 348, 265]}
+      - {box: [24, 264, 348, 279]}
+      - {box: [24, 279, 348, 295]}
+      - {box: [336, 87, 488, 177], label: "information: uncountable"}
+    lines:
+      - {emma: "What do you do in Pisa?", focus: 0, vi: "Bạn làm nghề gì? (hoặc What's your job?)"}
+      - {tom: "I'm a doctor.", focus: 0}
+      - {emma: "Be careful. What do you do means: what's your job? What are you doing means: what are you doing now?", focus: 0, vi: "What do you do? hỏi nghề; What are you doing? hỏi việc đang làm lúc này."}
+      - {emma: "And are you married or single?", focus: 1, vi: "Đã kết hôn hay độc thân?"}
+      - {tom: "I'm married.", focus: 1}
+      - {emma: "Have you got any children?", focus: 2, vi: "Có con chưa?"}
+      - {tom: "Yes. A boy and a girl.", focus: 2}
+      - {emma: "How old are they?", focus: 3, vi: "Các cháu bao nhiêu tuổi?"}
+      - {tom: "The boy's six and the girl's two.", focus: 3}
+      - {emma: "Thank you. That's all the information I need. Information, not informations!", focus: 4, vi: "Information không đếm được: some information, không nói an information / informations."}
+
+  - kind: blanks
+    chapter: "Bài 1: một từ sai chỗ"
+    heading: "Exercise 1 · One word is in the wrong place. Correct it."
+    heading_vi: "Ví dụ: Are married you? → Are you married? — đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "What do do you in your country?  →  ___", answer: "What do you do in your country?"}
+      - {n: 2, q: "Where do come from you?  →  ___", answer: "Where do you come from?"}
+      - {n: 3, q: "Could I your address have?  →  ___", answer: "Could I have your address?"}
+      - {n: 4, q: "What's your name family?  →  ___", answer: "What's your family name?"}
+      - {n: 5, q: "What's postcode your?  →  ___", answer: "What's your postcode?"}
+      - {n: 6, q: "How are old your children?  →  ___", answer: "How old are your children?"}
+      - {n: 7, q: "Have you any children got?  →  ___", answer: "Have you got any children?"}
+      - {n: 8, q: "What's your name first?  →  ___", answer: "What's your first name?"}
+    lines:
+      - emma: "Exercise 1. In each question, one word is in the wrong place. Pause the video, and correct the questions."
+        say: "Exercise one. In each question, one word is in the wrong place. Pause the video, and correct the questions."
+        vi: "Bài 1: mỗi câu hỏi có một từ sai chỗ — tạm dừng video và sửa."
+      - {tom: "One. What do you do in your country? Two. Where do you come from?", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Could I have your address? Four. What's your family name?", reveal: [3, 4], focus: 3}
+      - {tom: "Five. What's your postcode? Six. How old are your children?", reveal: [5, 6], focus: 5}
+      - {tom: "Seven. Have you got any children? Eight. What's your first name?", reveal: [7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu hỏi"
+    heading: "Exercise 2 · Complete the questions"
+    heading_vi: "Đáp án theo Answer key tr. 206"
+    items:
+      - {n: 1, q: "What's your ___ name? — Kovács.", answer: "family"}
+      - {n: 2, q: "And your ___ name? — Zsuzsa.", answer: "first"}
+      - {n: 3, q: "Where are you ___? — Hungary.", answer: "from"}
+      - {n: 4, q: "___? — The capital, Budapest.", answer: "Whereabouts / Where exactly"}
+      - {n: 5, q: "And ___ I have your address? — Tarcali utca 27.", answer: "could / can"}
+      - {n: 6, q: "And the ___? — 1113.", answer: "postcode"}
+      - {n: 7, q: "And what ___ you do? — I'm an engineer.", answer: "do"}
+      - {n: 8, q: "Are you ___? — No, I'm still single.", answer: "married"}
+      - {n: 9, q: "How ___ are you? — I'm 27.", answer: "old"}
+    lines:
+      - emma: "Exercise 2. Complete the questions. Pause the video and try."
+        say: "Exercise two. Complete the questions. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu hỏi — tạm dừng video và làm."
+      - {tom: "What's your family name? Kovács. And your first name? Zsuzsa.", say: "What's your family name? Kovach. And your first name? Zhoozha.", reveal: [1, 2], focus: 1}
+      - {tom: "Where are you from? Hungary. Whereabouts? The capital, Budapest.", reveal: [3, 4], focus: 3}
+      - {tom: "And could I have your address? And the postcode? One one one three.", reveal: [5, 6], focus: 5}
+      - {tom: "And what do you do? Are you married? No, I'm still single. How old are you? Twenty-seven.", reveal: [7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Đặt câu hỏi"
+    heading: "Make the question · Here's the answer. What's the question?"
+    heading_vi: "Tạm dừng video, nói to câu hỏi — luyện hỏi để dùng ở quầy lễ tân hay khi làm quen"
+    items:
+      - {n: 1, q: "— Tran.  →  ___", answer: "What's your family name?"}
+      - {n: 2, q: "— Da Lat, in Vietnam.  →  ___", answer: "Where are you from? / Whereabouts?"}
+      - {n: 3, q: "— I'm a nurse.  →  ___", answer: "What do you do?"}
+      - {n: 4, q: "— No, I'm single.  →  ___", answer: "Are you married?"}
+      - {n: 5, q: "— Yes, two boys.  →  ___", answer: "Have you got any children?"}
+      - {n: 6, q: "— They're eight and five.  →  ___", answer: "How old are they?"}
+    lines:
+      - emma: "Now you ask the questions. I give the answer, and you say the question. Pause the video after each one."
+        vi: "Emma đọc câu trả lời, bạn nói câu hỏi — tạm dừng video sau mỗi câu."
+      - {emma: "Number one. Tran.", say: "Number one. Chan.", focus: 0}
+      - {tom: "What's your family name?", reveal: 1, focus: 0}
+      - {emma: "Number two. Da Lat, in Vietnam.", say: "Number two. Dah Lot, in Vietnam.", focus: 1}
+      - {tom: "Where are you from? Or, if you know the country: whereabouts in Vietnam?", reveal: 2, focus: 1}
+      - {emma: "Number three. I'm a nurse.", focus: 2}
+      - {tom: "What do you do?", reveal: 3, focus: 2}
+      - {emma: "Number four. No, I'm single.", focus: 3}
+      - {tom: "Are you married?", reveal: 4, focus: 3}
+      - {emma: "Number five. Yes, two boys.", focus: 4}
+      - {tom: "Have you got any children?", reveal: 5, focus: 4}
+      - {emma: "Number six. They're eight and five.", focus: 5}
+      - {tom: "How old are they?", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Mở đầu bài thi Nói"
+    heading: "IELTS Speaking · how the test starts"
+    heading_vi: "Giám khảo thường mở đầu bằng những câu này — trả lời ngắn, rõ, rồi vào Part 1"
+    items:
+      - {en: "Can you tell me your full name, please? — My full name is Tran Minh Tuan.", vi: "họ tên đầy đủ"}
+      - {en: "And what can I call you? — Please call me Tom.", vi: "gọi bạn là gì"}
+      - {en: "Can you tell me where you're from? — I'm from Da Lat, in Vietnam.", vi: "quê ở đâu — thêm một chi tiết"}
+      - {en: "Can I see your identification, please? — Yes. Here you are.", vi: "xem giấy tờ tùy thân — đưa và nói Here you are"}
+      - {en: "Do you work, or are you a student? — I'm a student. I study business.", vi: "câu Part 1 đầu tiên thường gặp"}
+    lines:
+      - emma: "Now, the IELTS speaking test. It starts with personal information too. Let's practise. I'm the examiner. Good morning. My name's Emma. Can you tell me your full name, please?"
+        say: "Now, the eye-elts speaking test. It starts with personal information too. Let's practise. I'm the examiner. Good morning. My name's Emma. Can you tell me your full name, please?"
+        focus: 0
+        vi: "Bài thi Nói cũng mở đầu bằng thông tin cá nhân. Emma làm giám khảo."
+      - {tom: "My full name is Tran Minh Tuan.", say: "My full name is Chan Min Twan.", focus: 0}
+      - {emma: "And what can I call you?", focus: 1}
+      - {tom: "Please call me Tom. It's my English name. It's short, and it starts with T, like Tuan.", say: "Please call me Tom. It's my English name. It's short, and it starts with T, like Twan.", focus: 1, vi: "Tên tiếng Anh: ngắn, cùng chữ T với Tuấn."}
+      - {emma: "Can you tell me where you're from?", focus: 2}
+      - {tom: "I'm from Da Lat, a city in the Central Highlands of Vietnam. It's famous for flowers and coffee.", say: "I'm from Dah Lot, a city in the Central Highlands of Vietnam. It's famous for flowers and coffee.", focus: 2, vi: "Đà Lạt ở Tây Nguyên, nổi tiếng về hoa và cà phê."}
+      - {emma: "Can I see your identification, please?", focus: 3}
+      - {tom: "Yes. Here you are.", focus: 3}
+      - {emma: "Thank you. Now, in the first part, I'd like to ask you some questions about yourself. Do you work, or are you a student?", focus: 4}
+      - {tom: "I'm a student. I'm in my second year at university, and I study business.", focus: 4}
+
+  - kind: bullets
+    chapter: "Bài 3: về bạn"
+    heading: "Exercise 3 · ABOUT YOU: answer the questions in Exercise 2"
+    heading_vi: "Câu mẫu của một người Hy Lạp (Answer key tr. 206), rồi câu trả lời của Tom"
+    items:
+      - {en: "Anna · Greece · Athens · 1 Kipseli, 11363 Athens", vi: "người Hy Lạp: tên, nước, thành phố, địa chỉ"}
+      - {en: "I'm a teacher. · No, I'm single. · I'm 30.", vi: "người Hy Lạp: nghề, hôn nhân, tuổi"}
+      - {en: "Tom: Tran · Tuan · Vietnam · Da Lat, in the Central Highlands", vi: "Tom: họ, tên, nước, quê"}
+      - {en: "Tom: I'm a student. · No, I'm still single. · I'm 20.", vi: "Tom: nghề, hôn nhân, tuổi"}
+    lines:
+      - emma: "Exercise 3. Now answer the questions in Exercise 2 about you. Pause the video and write, or say your answers out loud."
+        say: "Exercise three. Now answer the questions in Exercise two about you. Pause the video and write, or say your answers out loud."
+        vi: "Bài 3: trả lời các câu hỏi ở bài 2 về chính bạn — tạm dừng video và viết hoặc nói."
+      - {emma: "Here are the answers from a person in Greece. Anna. Greece. Athens. One Kipseli, one one three six three, Athens.", say: "Here are the answers from a person in Greece. Anna. Greece. Athens. One Kipseli, one one three six three, Athens.", focus: 0}
+      - {emma: "I'm a teacher. No, I'm single. I'm thirty.", focus: 1}
+      - {tom: "Here are mine. My family name is Tran, and my first name is Tuan. I'm from Vietnam, from Da Lat, in the Central Highlands.", say: "Here are mine. My family name is Chan, and my first name is Twan. I'm from Vietnam, from Dah Lot, in the Central Highlands.", focus: 2, vi: "Tom: họ Trần, tên Tuấn, quê Đà Lạt ở Tây Nguyên."}
+      - {tom: "I'm a student. No, I'm still single. And I'm twenty.", focus: 3}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · personal information"
+    heading_vi: "Như phần 1 bài nghe IELTS: tạm dừng sau mỗi câu, viết đúng tên, số, mã bưu điện"
+    items:
+      - {n: 1, q: "His family name is ___.", answer: "Bertoli"}
+      - {n: 2, q: "The address is ___.", answer: "45 Alfred Road"}
+      - {n: 3, q: "The postcode is ___.", answer: "CB2 4TX"}
+      - {n: 4, q: "She comes from ___, in Hungary.", answer: "Budapest"}
+      - {n: 5, q: "His job? He's an ___.", answer: "engineer"}
+      - {n: 6, q: "Their children are ___.", answer: "six and two"}
+    lines:
+      - emma: "Now, a listening test, like part one of the IELTS listening test. Pause the video after each sentence, and write the missing information."
+        say: "Now, a listening test, like part one of the eye-elts listening test. Pause the video after each sentence, and write the missing information."
+        vi: "Bài nghe như phần 1 IELTS Listening: tạm dừng sau mỗi câu, viết thông tin còn thiếu."
+      - {emma: "Number one. His family name is Bertoli. That's B, E, R, T, O, L, I.", say: "Number one. His family name is Bertoli. That's bee, ee, ar, tee, oh, el, eye.", focus: 0}
+      - {emma: "Number two. The address is forty-five Alfred Road.", focus: 1}
+      - {emma: "Number three. The postcode is CB2 4TX.", say: "Number three. The postcode is C B two, four T X.", focus: 2}
+      - {emma: "Number four. She comes from Budapest, in Hungary.", focus: 3}
+      - {emma: "Number five. His job? He's an engineer.", focus: 4}
+      - {emma: "Number six. Their children are six and two.", focus: 5}
+      - {tom: "Bertoli. Forty-five Alfred Road, with a capital A and a capital R. C, B, two, four, T, X.", say: "Bertoli. Forty-five Alfred Road, with a capital eigh and a capital ar. See, bee, two, four, tee, ex.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Budapest. Engineer: E, N, G, I, N, E, E, R. And six and two.", say: "Budapest. Engineer: ee, en, gee, eye, en, ee, ee, ar. And six and two.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: thông tin về bạn"
+    heading: "Speaking 1 · Tom and Emma ask each other"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What's your full name, Emma?"
+        a: "Emma Louise Clarke. Emma is my first name, Louise is my middle name, and Clarke is my family name."
+        ask: tom
+        by: emma
+        phrases: ["… is my first name", "middle name", "family name"]
+      - q: "Whereabouts in England are you from?"
+        a: "From the south, from a small town by the sea. Only about fifteen thousand people live there."
+        ask: tom
+        by: emma
+        phrases: ["From the south", "a small town by the sea", "Only about…"]
+      - q: "What do you do, Tom?"
+        a: "I'm a student. I'm in my second year at university, and I study business here in Ho Chi Minh City."
+        ask: emma
+        by: tom
+        phrases: ["I'm a student.", "in my second year", "I study…"]
+      - q: "Where do you live now?"
+        a: "I share a small flat with two friends. It's about one kilometre from my university, so I walk there."
+        ask: emma
+        by: tom
+        phrases: ["I share a flat with…", "about one kilometre from…", "so I walk"]
+      - q: "Are you married, Tom?"
+        a: "No, I'm still single. I'm only twenty!"
+        ask: emma
+        by: tom
+        phrases: ["No, I'm still single.", "I'm only…"]
+      - q: "And you, Emma? Married or single?"
+        a: "Single. And my grandmother asks me about it every Christmas!"
+        ask: tom
+        by: emma
+        phrases: ["Single.", "asks me about it", "every Christmas"]
+      - q: "Have you got any brothers or sisters?"
+        a: "Yes, an older sister and a younger brother. My sister, Hoa, is a nurse in Hanoi, and my brother, Bao, is fifteen."
+        ask: emma
+        by: tom
+        phrases: ["an older sister", "a younger brother", "… is a nurse"]
+      - q: "How long have you lived in Vietnam?"
+        a: "For three years. I arrived in August twenty twenty-three, and I still love it here."
+        ask: tom
+        by: emma
+        phrases: ["For three years.", "I arrived in…", "I still love it"]
+      - q: "Can I ask how old you are, Emma?"
+        a: "Of course. I'm twenty-eight. In England, some people think it's a bit rude to ask, but here in Vietnam people ask all the time!"
+        ask: tom
+        by: emma
+        phrases: ["Of course.", "it's a bit rude to…", "all the time"]
+    lines:
+      - {tom: "What's your full name, Emma?", focus: 0}
+      - {emma: "Emma Louise Clarke. Emma is my first name, Louise is my middle name, and Clarke is my family name.", reveal: 0, vi: "Emma Louise Clarke: Emma là tên, Louise là tên đệm, Clarke là họ."}
+      - {tom: "Whereabouts in England are you from?", focus: 1}
+      - {emma: "From the south, from a small town by the sea. Only about fifteen thousand people live there.", say: "From the south, from a small town by the sea. Only about fifteen thousand people liv there.", reveal: 1, vi: "Miền nam nước Anh, một thị trấn nhỏ ven biển, chỉ khoảng 15.000 dân."}
+      - {emma: "What do you do, Tom?", focus: 2}
+      - {tom: "I'm a student. I'm in my second year at university, and I study business here in Ho Chi Minh City.", say: "I'm a student. I'm in my second year at university, and I study business here in Ho Chee Min City.", reveal: 2, vi: "Sinh viên năm hai ngành kinh doanh ở TP. Hồ Chí Minh."}
+      - {emma: "Where do you live now?", focus: 3}
+      - {tom: "I share a small flat with two friends. It's about one kilometre from my university, so I walk there.", reveal: 3, vi: "Ở chung căn hộ nhỏ với hai bạn, cách trường khoảng 1 km, đi bộ đến trường."}
+      - {emma: "Are you married, Tom?", focus: 4}
+      - {tom: "No, I'm still single. I'm only twenty!", reveal: 4, vi: "Chưa, vẫn độc thân — mới 20 tuổi mà!"}
+      - {tom: "And you, Emma? Married or single?", focus: 5}
+      - {emma: "Single. And my grandmother asks me about it every Christmas!", reveal: 5, vi: "Độc thân — Giáng sinh nào bà cũng hỏi chuyện này!"}
+      - {emma: "Have you got any brothers or sisters?", focus: 6}
+      - {tom: "Yes, an older sister and a younger brother. My sister, Hoa, is a nurse in Hanoi, and my brother, Bao, is fifteen.", say: "Yes, an older sister and a younger brother. My sister, Whah, is a nurse in Ha Noi, and my brother, Bao, is fifteen.", reveal: 6, vi: "Có chị gái và em trai: chị Hoa là y tá ở Hà Nội, em Bao 15 tuổi."}
+      - {tom: "How long have you lived in Vietnam?", focus: 7}
+      - {emma: "For three years. I arrived in August twenty twenty-three, and I still love it here.", reveal: 7, vi: "Ba năm rồi: đến tháng 8 năm 2023, đến giờ vẫn rất thích ở đây."}
+      - {tom: "Can I ask how old you are, Emma?", focus: 8}
+      - {emma: "Of course. I'm twenty-eight. In England, some people think it's a bit rude to ask, but here in Vietnam people ask all the time!", reveal: 8, vi: "Được chứ, 28 tuổi. Ở Anh có người cho là hỏi tuổi hơi bất lịch sự, còn ở Việt Nam ai cũng hỏi!"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Speaking 2 · Your turn: about you"
+    heading_vi: "Trả lời đầy đủ một câu, thêm một chi tiết"
+    items:
+      - {q: "Can you tell me your full name, please? What can I call you?", hint: "My full name is … · Please call me …"}
+      - {q: "Where are you from? Whereabouts exactly?", hint: "I'm from … · It's in the north / south of …"}
+      - {q: "Do you work, or are you a student?", hint: "I'm a … · I work for / at … · I study …"}
+      - {q: "Where do you live now? Who do you live with?", hint: "I live in … · I share a flat with … / I live with my …"}
+      - {q: "Have you got any brothers or sisters?", hint: "Yes, an older … / No, I'm an only child."}
+    lines:
+      - emma: "Now it's your turn. Pause the video, and answer these questions out loud."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Can you tell me your full name, please? What can I call you?", focus: 0, pause: 0.5}
+      - {emma: "Where are you from? Whereabouts exactly?", focus: 1, pause: 0.5}
+      - {emma: "Do you work, or are you a student?", focus: 2, pause: 0.5}
+      - {emma: "Where do you live now? Who do you live with?", focus: 3, pause: 0.5}
+      - {emma: "Have you got any brothers or sisters?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi che cột câu trả lời ở tr. 26, nhìn câu hỏi và tự trả lời"
+    items:
+      - {en: "What's your family name / first name? · Could I have your address?", vi: "họ, tên, địa chỉ"}
+      - {en: "Where are you from? · Whereabouts? · What do you do?", vi: "quê, chỗ cụ thể, nghề"}
+      - {en: "Are you married or single? · Have you got any children?", vi: "hôn nhân, con cái"}
+      - {en: "some information — NOT an information", vi: "không đếm được"}
+      - {en: "Next: Unit 9 · Filling in a form", vi: "Tiếp theo: Unit 9 · điền phiếu"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "What's your family name? What's your first name? Could I have your address?", focus: 0}
+      - {tom: "Where are you from? Whereabouts? What do you do?", focus: 1}
+      - {emma: "Are you married or single? Have you got any children?", focus: 2}
+      - {tom: "And remember: some information, not an information.", focus: 3}
+      - {emma: "Now cover the answers on page twenty-six, look at the questions, and answer them. See you in Unit 9!", say: "Now cover the answers on page twenty-six, look at the questions, and answer them. See you in Unit nine!", focus: 4}
