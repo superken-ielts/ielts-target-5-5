@@ -1,0 +1,229 @@
+# Video bài giảng Unit 4 · Reading 1–2: making sure that information is given in the text, recognizing distracters
+# (sách in trang 50–51). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-reading-1.yaml
+# Cách viết: xem đầu file U02-reading-1.yaml. Đáp án theo Answer key (sách in trang 267, "Unit 4, Reading 1B, C and D"):
+# 1 T, 2 T, 3 NG, 4 F, 5 F, 6 T, 7 NG, 8 F; 1D: học viên đúng ở câu 1, 2, 4, 6, 8, sai ở 3, 5, 7.
+# Hình trong sách (đợt 31): ảnh Ainan và tám câu 1B (khung đỏ theo câu), bài báo "Prodigy Ready for University?" cắt hai
+# nửa (khung đỏ theo đoạn khi đọc, rồi theo câu bằng chứng, nhãn là đáp án), lời bình của học viên 1D, Exam tip và câu 4 của
+# Reading 2. Không đếm ngược.
+id: U04-reading-1
+activity: U04-reading
+title: "Unit 4 · Achievements"
+subtitle: "Reading 1: true, false or not given"
+title_vi: "Đúng / Sai / Không có thông tin (T / F / NG) — tìm bằng chứng trong bài, không đoán theo hiểu biết riêng; nhận ra câu đánh lừa"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Reading 1 for Unit 4. Today: true, false or not given, a very common question type in the IELTS Reading test."
+        say: "Welcome to Reading one for Unit four. Today: true, false, or not given, a very common question type in the eye-elts Reading test."
+        vi: "Hôm nay: dạng câu True / False / Not Given — rất hay gặp trong bài thi Đọc IELTS."
+      - tom: "Not given is the difficult one for me."
+        vi: "Not given là phần khó nhất với mình."
+      - emma: "For many people. Let's practise with a text about the child prodigy from the photos."
+        vi: "Với nhiều người cũng vậy. Cùng luyện với bài báo về cậu bé thần đồng trong ảnh nhé."
+
+  - kind: figure
+    chapter: "Reading 1A: Ainan là ai?"
+    heading: "Reading 1A · Look at the picture of Ainan Celeste Cawley"
+    heading_vi: "Ảnh tr. 50 — bạn nhớ gì về Ainan từ đoạn nghe? Bạn muốn biết thêm gì?"
+    image: {pdf: course-book, page: 51, clip: [58, 186, 535, 282]}
+    items:
+      - {box: [366, 188, 532, 280], label: "Ainan"}
+    lines:
+      - emma: "Exercise A. Look at the picture of Ainan Celeste Cawley. What do you remember about Ainan from the short listening extract?"
+        say: "Exercise eigh. Look at the picture of Eye-nan Seh-lest Caw-lee. What do you remember about Eye-nan from the short listening extract?"
+        focus: 0
+        vi: "Bài A: bạn nhớ gì về Ainan từ đoạn nghe ở Speaking 1?"
+      - tom: "He's a child prodigy from Singapore. He's about six, and he's already passed exams in Chemistry."
+        focus: 0
+        vi: "Cậu là thần đồng người Singapore, khoảng sáu tuổi, đã thi đỗ môn Hóa."
+      - emma: "Good. And what else would you like to know about him?"
+        vi: "Bạn còn muốn biết gì thêm về cậu bé?"
+      - tom: "Does he go to school with other children? And does he have friends?"
+        vi: "Cậu có đi học cùng các bạn khác không? Có bạn bè không?"
+
+  - kind: figure
+    chapter: "Reading 1B: đoán đúng hay sai"
+    heading: "Reading 1B · Guess whether the sentences are (T) true or (F) false"
+    heading_vi: "Tám câu tr. 50 — đoán trước khi đọc"
+    image: {pdf: course-book, page: 51, clip: [58, 282, 312, 392]}
+    items:
+      - {box: [62, 285, 310, 298], label: "1"}
+      - {box: [62, 298, 310, 311], label: "2"}
+      - {box: [62, 311, 310, 324], label: "3"}
+      - {box: [62, 324, 310, 337], label: "4"}
+      - {box: [62, 337, 310, 350], label: "5"}
+      - {box: [62, 351, 310, 364], label: "6"}
+      - {box: [62, 364, 310, 377], label: "7"}
+      - {box: [62, 377, 310, 390], label: "8"}
+    lines:
+      - emma: "Exercise B. Look at these sentences about Ainan and guess whether they are true or false. Pause the video and guess."
+        say: "Exercise B. Look at these sentences about Eye-nan and guess whether they are true or false. Pause the video and guess."
+        vi: "Bài B: đoán các câu về Ainan là đúng hay sai. Tạm dừng video và đoán."
+        pause: 1.5
+      - {emma: "One: he is a very unusual child.", focus: 0}
+      - {emma: "Two: his parents want him to go to university.", focus: 1}
+      - {emma: "Three: he is the cleverest child in Singapore.", focus: 2}
+      - {emma: "Four: he has already passed Chemistry A level.", focus: 3}
+      - {emma: "Five: everyone thinks he is ready for university.", focus: 4}
+      - {emma: "Six: even as a baby, he was very advanced.", focus: 5}
+      - {emma: "Seven: he watches a lot of TV.", focus: 6}
+      - {emma: "Eight: his father taught him all about Chemistry.", focus: 7}
+      - emma: "Exercise C. Now read the article and check. This time there are three answers: T, true. F, false. Or NG, not given."
+        say: "Exercise C. Now read the article and check. This time there are three answers: tee, true. ef, false. Or en gee, not given."
+        vi: "Bài C: đọc bài và kiểm tra — lần này có ba lựa chọn: T, F hoặc NG."
+
+  - kind: figure
+    chapter: "Đọc bài: đoạn 1–2"
+    heading: "Reading 1C · Prodigy Ready for University? (paragraphs 1–2)"
+    heading_vi: "Bài báo tr. 50 — Tom đọc, khung đỏ theo đoạn"
+    image: {pdf: course-book, page: 51, clip: [78, 436, 482, 556]}
+    items:
+      - {box: [92, 455, 480, 496]}
+      - {box: [92, 499, 480, 554]}
+    lines:
+      - {tom: "Seven-year-old Ainan Celeste Cawley is a child prodigy, and his parents are searching for a university that will take him at such a young age.", say: "Seven-year-old Eye-nan Seh-lest Caw-lee is a child prodigy, and his parents are searching for a university that will take him at such a young age.", focus: 0}
+      - {tom: "His father says that a brilliant mind could be lost if he is not given a place.", focus: 0}
+      - {tom: "Ainan's mother is from Singapore and his father from Britain. He has already passed his O level Chemistry, and he is studying to take his A level,", say: "Eye-nan's mother is from Singapore and his father from Britain. He has already passed his oh level Chemistry, and he is studying to take his eigh level,", focus: 1}
+      - {tom: "but some experts believe that not having a normal childhood can do long-lasting damage and do not believe he should go to university just yet.", focus: 1}
+      - emma: "An O level is an exam that students in some countries take when they are 16. An A level is an exam that students take when they are 18."
+        say: "An oh level is an exam that students in some countries take when they are sixteen. An eigh level is an exam that students take when they are eighteen."
+        focus: 1
+        vi: "O level: kỳ thi ở tuổi 16; A level: kỳ thi ở tuổi 18 (cuối phổ thông)."
+
+  - kind: figure
+    chapter: "Đọc bài: đoạn 3–4"
+    heading: "Reading 1C · Prodigy Ready for University? (paragraphs 3–4)"
+    heading_vi: "Bài báo tr. 50 — Tom đọc tiếp"
+    image: {pdf: course-book, page: 51, clip: [78, 555, 482, 688]}
+    items:
+      - {box: [92, 557, 480, 611]}
+      - {box: [92, 618, 480, 660]}
+    lines:
+      - {tom: "Ainan's father says that Ainan was always a special child. He could walk when he was only six months and talk in long sentences when he was one.", say: "Eye-nan's father says that Eye-nan was always a special child. He could walk when he was only six months and talk in long sentences when he was one.", focus: 0}
+      - {tom: "As a very small child, he enjoyed reading science books and could understand difficult scientific texts.", focus: 0}
+      - {tom: "His parents think that he is like other children in many ways. He draws and paints and he loves watching Mr Bean on TV.", say: "His parents think that he is like other children in many ways. He draws and paints and he loves watching Mister Bean on TV.", focus: 0}
+      - {tom: "His father first realized that Ainan was very interested in chemistry when, at six years old, he picked up a Chemistry O level paper and answered all the questions.", say: "His father first realized that Eye-nan was very interested in chemistry when, at six years old, he picked up a Chemistry oh level paper and answered all the questions.", focus: 1}
+      - {tom: "It was then discovered that he had learnt all about the subject by surfing the Internet.", focus: 1}
+      - emma: "Now mark the sentences true, false or not given. Pause the video and try."
+        vi: "Giờ đánh dấu T / F / NG. Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: figure
+    chapter: "Đáp án 1–5"
+    heading: "Answers 1–5 · 1 T · 2 T · 3 NG · 4 F · 5 F"
+    heading_vi: "Khung đỏ là câu bằng chứng trong bài"
+    image: {pdf: course-book, page: 51, clip: [78, 436, 482, 556]}
+    items:
+      - {box: [92, 455, 480, 469], label: "1 T · child prodigy"}
+      - {box: [92, 455, 480, 483], label: "2 T · searching for a university"}
+      - {box: [92, 499, 480, 513], label: "3 NG · only: his mother is from Singapore"}
+      - {box: [92, 499, 480, 527], label: "4 F · O level, not A level"}
+      - {box: [92, 513, 480, 554], label: "5 F · some experts do not believe"}
+    lines:
+      - {tom: "One: true. The text says he is a child prodigy, and later, a special child.", focus: 0}
+      - {tom: "Two: true. His parents are searching for a university.", focus: 1}
+      - emma: "Three: not given. The text says his mother is from Singapore, but it doesn't compare him with other children in Singapore. Don't make assumptions."
+        focus: 2
+        vi: "3 NG: bài chỉ nói mẹ cậu là người Singapore, không so sánh với trẻ khác — đừng tự suy diễn."
+      - tom: "Four: false. He has passed his O level. He's studying for his A level now."
+        say: "Four: false. He has passed his oh level. He's studying for his eigh level now."
+        focus: 3
+        vi: "4 F: mới đỗ O level, đang học để thi A level."
+      - emma: "Five: false, not not given. Some experts believe a normal childhood is important, and do not believe he should go to university yet. So not everyone thinks he is ready."
+        focus: 4
+        vi: "5 F (không phải NG): có chuyên gia cho rằng cậu chưa nên vào đại học — vậy không phải ai cũng nghĩ cậu đã sẵn sàng."
+
+  - kind: figure
+    chapter: "Đáp án 6–8"
+    heading: "Answers 6–8 · 6 T · 7 NG · 8 F"
+    heading_vi: "Khung đỏ là câu bằng chứng trong bài"
+    image: {pdf: course-book, page: 51, clip: [78, 555, 482, 688]}
+    items:
+      - {box: [92, 557, 480, 584], label: "6 T · walk at six months"}
+      - {box: [92, 597, 480, 611], label: "7 NG · only one programme"}
+      - {box: [92, 632, 480, 660], label: "8 F · surfing the Internet"}
+    lines:
+      - {tom: "Six: true. He could walk when he was only six months, and talk in long sentences when he was one.", focus: 0}
+      - emma: "Seven: not given. The text mentions one programme, Mr Bean. It doesn't say how much TV he watches."
+        say: "Seven: not given. The text mentions one programme, Mister Bean. It doesn't say how much TV he watches."
+        focus: 1
+        vi: "7 NG: chỉ nói cậu thích xem Mr Bean, không nói xem nhiều hay ít."
+      - tom: "Eight: false. He learnt all about the subject by surfing the Internet, not from his father."
+        focus: 2
+        vi: "8 F: cậu tự học qua Internet, không phải bố dạy."
+
+  - kind: figure
+    chapter: "Reading 1D–E: học viên đúng câu nào?"
+    heading: "Reading 1D · Which questions does the student answer correctly?"
+    heading_vi: "Lời bình của một học viên tr. 51 — đúng: 1, 2, 4, 6, 8 · sai: 3, 5, 7"
+    image: {pdf: course-book, page: 52, clip: [58, 60, 445, 236]}
+    items:
+      - {box: [62, 112, 440, 139], label: "3 wrong · an assumption"}
+      - {box: [62, 152, 440, 179], label: "5 wrong · experts don't agree"}
+      - {box: [62, 192, 440, 205], label: "7 wrong · not given"}
+    lines:
+      - emma: "Exercise D. A student made these comments. Which questions does the student answer correctly? The student is right about 1, 2, 4, 6 and 8."
+        say: "Exercise D. A student made these comments. Which questions does the student answer correctly? The student is right about one, two, four, six and eight."
+        vi: "Bài D: học viên trả lời đúng câu 1, 2, 4, 6, 8."
+      - emma: "Three is wrong. The student says: nobody in Singapore is cleverer than him. That's an assumption. The text doesn't give that information."
+        focus: 0
+        vi: "Câu 3 sai: đó là suy diễn, bài không cho thông tin này."
+      - emma: "Five is wrong. The text doesn't only say what his parents think. Some experts don't believe he should go to university. So the answer is false."
+        focus: 1
+        vi: "Câu 5 sai: bài có ý kiến chuyên gia — đáp án là F."
+      - emma: "And seven is wrong. One programme doesn't tell us he doesn't watch others. So it's not given, not false."
+        focus: 2
+        vi: "Câu 7 sai: chỉ nhắc một chương trình không có nghĩa là không xem chương trình khác — NG, không phải F."
+      - tom: "So false means the text says the opposite. Not given means the text doesn't tell us."
+        vi: "Vậy F = bài nói điều ngược lại; NG = bài không nói đến."
+      - emma: "Exactly. And the exam tip: don't use your own knowledge of the topic, or assume that an answer is obvious. You must find the answer in the text."
+        vi: "Mẹo thi: đừng dùng hiểu biết riêng hay cho rằng đáp án là hiển nhiên — phải tìm thấy trong bài."
+
+  - kind: figure
+    chapter: "Reading 2: câu đánh lừa"
+    heading: "Reading 2 · Recognizing distracters"
+    heading_vi: "Exam tip và câu 4 tr. 51 — vì sao đọc nhanh dễ sai?"
+    image: {pdf: course-book, page: 52, clip: [58, 270, 445, 384]}
+    items:
+      - {box: [62, 298, 442, 321], label: "Exam tip"}
+      - {box: [62, 362, 302, 380], label: "4 · F"}
+    lines:
+      - emma: "Reading 2: recognizing distracters. Exam tip: the questions will sometimes try to trick you. The question will include words from the text that make you think an answer is true when it is not."
+        say: "Reading two: recognizing distracters. Exam tip: the questions will sometimes try to trick you. The question will include words from the text that make you think an answer is true when it is not."
+        focus: 0
+        vi: "Reading 2: câu hỏi đôi khi đánh lừa bằng cách dùng lại từ trong bài để bạn tưởng là đúng."
+      - emma: "Look at question 4 again: he has already passed Chemistry A level. Why could you make a mistake if you read too quickly?"
+        say: "Look at question four again: he has already passed Chemistry eigh level. Why could you make a mistake if you read too quickly?"
+        focus: 1
+        vi: "Câu 4: vì sao đọc nhanh dễ sai?"
+      - tom: "Because the words already passed, Chemistry and A level are all in the text. But he passed his O level. He's only studying for the A level."
+        say: "Because the words already passed, Chemistry and eigh level are all in the text. But he passed his oh level. He's only studying for the eigh level."
+        focus: 1
+        vi: "Vì already passed, Chemistry, A level đều có trong bài — nhưng cậu mới đỗ O level, A level thì đang học."
+      - emma: "That's a distracter. The same words, but the information is different. Always read the whole sentence carefully."
+        focus: 1
+        vi: "Đó là câu đánh lừa: cùng từ nhưng khác thông tin. Luôn đọc kỹ cả câu."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 T · 2 T · 3 NG · 4 F · 5 F · 6 T · 7 NG · 8 F", vi: "Đáp án Reading 1"}
+      - {en: "False: the text says the opposite", vi: "F = bài nói điều ngược lại"}
+      - {en: "Not given: the text doesn't tell us", vi: "NG = bài không nói đến"}
+      - {en: "Don't use your own knowledge or make assumptions", vi: "Không dùng hiểu biết riêng, không suy diễn"}
+      - {en: "Distracters: the same words, different information", vi: "Câu đánh lừa: cùng từ, khác thông tin"}
+    lines:
+      - {emma: "Let's review. The answers: true, true, not given, false, false, true, not given, false.", focus: 0}
+      - {emma: "False means the text says the opposite.", focus: 1}
+      - {emma: "Not given means the text doesn't tell us.", focus: 2}
+      - {emma: "Don't use your own knowledge, and don't make assumptions.", focus: 3}
+      - {tom: "And watch out for distracters: the same words, but different information!", focus: 4}

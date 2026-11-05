@@ -1,0 +1,188 @@
+# Video bài giảng Unit 4 · Writing 2D–F, Writing 3: the model composition, organizing your points (sách in trang 54).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-writing-2.yaml
+# Cách viết: xem đầu file U02-writing-2.yaml. Bài luận mẫu (viết tay, tr. 54) chép nguyên văn; Jerry đọc (người viết là nam
+# sinh viên ở bài 2C — video U04-writing-1). Answer key không có trang này: 2D (bài có hầu hết các ý, trừ Paris Hilton, Bill
+# Gates và chuyện nghệ sĩ, nhà khoa học không hạnh phúc), 2F (câu 1) và thứ tự các bước 3A (5, 4, 6, 1, 3, 2 theo thứ tự in
+# trong sách) là đáp án suy ra từ bài luận.
+# Hình trong sách (đợt 31): bài luận cắt hai nửa (khung đỏ theo đoạn khi đọc, rồi theo câu chứa ý của bài 2C, nhãn là ý),
+# ba lựa chọn 2F, sáu bước 3A và Exam tip. Không đếm ngược.
+id: U04-writing-2
+activity: U04-writing
+title: "Unit 4 · Achievements"
+subtitle: "Writing 2: a composition, organizing your points"
+title_vi: "Đọc bài luận mẫu về thành công và của cải, tìm các ý trong bài, sắp xếp bố cục bài luận theo sáu bước"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Writing 2 for Unit 4. In the last video, two British students brainstormed ideas about success and wealth. Now we read the composition that one of them wrote."
+        say: "Welcome to Writing two for Unit four. In the last video, two British students brainstormed ideas about success and wealth. Now we read the composition that one of them wrote."
+        vi: "Video trước: hai sinh viên Anh bàn ý về thành công và của cải. Giờ đọc bài luận một trong hai người viết."
+      - emma: "Remember the statement: in today's world, success and achievement are too often measured by wealth and the material possessions that a person has acquired. Do you agree?"
+        vi: "Nhắc lại đề: ngày nay, thành công quá thường bị đo bằng của cải và tài sản vật chất. Bạn có đồng ý không?"
+      - tom: "And the question for us: does the composition include all the points they discussed?"
+        vi: "Câu hỏi cho chúng ta: bài luận có đủ các ý họ đã bàn không?"
+
+  - kind: figure
+    chapter: "Writing 2D: đọc bài luận (1)"
+    heading: "Writing 2D · The composition (paragraphs 1–2)"
+    heading_vi: "Bài luận viết tay tr. 54 — Jerry đọc, khung đỏ theo đoạn"
+    image: {pdf: course-book, page: 55, clip: [58, 148, 528, 290]}
+    roles: {jerry: writer}
+    items:
+      - {box: [60, 150, 524, 220]}
+      - {box: [60, 220, 524, 288]}
+    lines:
+      - {jerry: "There are different ways to measure success and achievement.", focus: 0}
+      - {jerry: "Being best at a sport, discovering or inventing something, helping people and even saving a life are all important achievements.", focus: 0}
+      - {jerry: "Just looking after your family and making them happy is an achievement.", focus: 0}
+      - {jerry: "However, I think it is true that now too many people believe that success and achievement is about wealth and having things like a big house and a fast car.", focus: 0}
+      - {jerry: "People think wealth is so important because they see images on TV and in magazines. They want to be like a film star or famous footballer, and they think everyone else does too.", focus: 1}
+      - {jerry: "Most people can name hundreds of actors or rock stars, but they do not know the names of doctors or scientists.", focus: 1}
+      - {jerry: "People know teachers and nurses are important, but they do not think they are really successful.", focus: 1}
+      - {jerry: "People who work in advertising make money, and so people consider them successful.", focus: 1}
+
+  - kind: figure
+    chapter: "Writing 2D: đọc bài luận (2)"
+    heading: "Writing 2D · The composition (paragraphs 3–4)"
+    heading_vi: "Bài luận viết tay tr. 54 — Jerry đọc tiếp"
+    image: {pdf: course-book, page: 55, clip: [58, 286, 528, 400]}
+    roles: {jerry: writer}
+    items:
+      - {box: [60, 288, 524, 342]}
+      - {box: [60, 342, 524, 398]}
+    lines:
+      - {jerry: "Of course, there are times when people recognize other kinds of achievement.", focus: 0}
+      - {jerry: "During the Olympics, for example, athletes are very popular because they win medals, not because they are wealthy.", focus: 0}
+      - {jerry: "However, people do not remember those athletes for long. They are more interested in footballers, and I think that is because footballers are so rich.", focus: 0}
+      - {jerry: "The world will be better if more people realize that real success and achievement means being happy and doing things because you want to.", focus: 1}
+      - {jerry: "I think, though, that the more young people watch TV, read magazines and surf the Internet, the more they will measure success and achievement by wealth and by the material possessions that a person has acquired.", focus: 1}
+
+  - kind: figure
+    chapter: "Writing 2D–E: các ý trong bài"
+    heading: "Writing 2D–E · Highlight the points in the composition"
+    heading_vi: "Khung đỏ là ý của bài 2C có trong bài luận (đáp án gợi ý)"
+    image: {pdf: course-book, page: 55, clip: [58, 148, 528, 290]}
+    items:
+      - {box: [60, 151, 524, 179], label: "saving a life"}
+      - {box: [60, 178, 524, 192], label: "a happy family"}
+      - {box: [60, 220, 524, 234], label: "images on TV and in magazines"}
+      - {box: [60, 247, 524, 261], label: "actors, not scientists"}
+      - {box: [60, 261, 524, 275], label: "teachers and nurses"}
+      - {box: [60, 274, 524, 288], label: "advertising"}
+    lines:
+      - emma: "Exercise D. Does the composition include all the points that he and his partner discussed? Exercise E: highlight the points in the composition. Pause the video and try first."
+        say: "Exercise D. Does the composition include all the points that he and his partner discussed? Exercise ee: highlight the points in the composition. Pause the video and try first."
+        vi: "Bài D: bài luận có đủ các ý đã bàn không? Bài E: tô các ý đó trong bài. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Paragraph 1: helping people and even saving a life are important achievements.", focus: 0}
+      - {tom: "And looking after your family and making them happy. That's her point about being happy.", focus: 1}
+      - {tom: "Paragraph 2: people see images on TV and in magazines.", focus: 2}
+      - {tom: "They can name hundreds of actors, but not scientists.", focus: 3}
+      - {tom: "Teachers and nurses are important, but people don't think they are successful.", focus: 4}
+      - {tom: "And people who work in advertising are considered successful.", focus: 5}
+
+  - kind: figure
+    heading: "Writing 2D–E · Highlight the points in the composition"
+    heading_vi: "Khung đỏ là ý của bài 2C có trong bài luận (đáp án gợi ý)"
+    image: {pdf: course-book, page: 55, clip: [58, 286, 528, 400]}
+    items:
+      - {box: [60, 302, 524, 330], label: "Olympic athletes"}
+      - {box: [60, 315, 524, 342], label: "footballers are rich"}
+      - {box: [60, 342, 524, 370], label: "being happy"}
+    lines:
+      - {tom: "Paragraph 3: Olympic athletes win medals, not money.", focus: 0}
+      - {tom: "But footballers are more famous because they are so rich.", focus: 1}
+      - {tom: "And paragraph 4: real success means being happy.", focus: 2}
+      - emma: "So he uses most of the points. He leaves out a few examples: Paris Hilton, Bill Gates, and the idea that artists and scientists are sometimes unhappy. That's fine. You don't need every idea. Choose the best ones."
+        vi: "Bài dùng hầu hết các ý, bỏ vài ví dụ (Paris Hilton, Bill Gates, nghệ sĩ và nhà khoa học không hạnh phúc). Không cần dùng hết ý — chọn ý tốt nhất."
+
+  - kind: figure
+    chapter: "Writing 2F: đồng ý hay không?"
+    heading: "Writing 2F · Choose one option about the answer the student has given"
+    heading_vi: "Ba lựa chọn tr. 54 — người viết đồng ý, phản đối hay cân bằng hai phía?"
+    image: {pdf: course-book, page: 55, clip: [58, 466, 445, 548]}
+    items:
+      - {box: [62, 486, 442, 500], label: "1 · correct"}
+      - {box: [62, 500, 442, 527], label: "2"}
+      - {box: [62, 527, 442, 547], label: "3"}
+    lines:
+      - emma: "Exercise F. Choose one option about the answer the student has given."
+        say: "Exercise F. Choose one option about the answer the student has given."
+        vi: "Bài F: chọn một câu đúng về cách người viết trả lời."
+      - {emma: "One: he has agreed with the statement and given evidence to say why.", focus: 0}
+      - {emma: "Two: he has disagreed with the statement and given examples of why he thinks it is not true.", focus: 1}
+      - {emma: "Three: he has balanced his arguments and has neither agreed nor disagreed with the statement.", focus: 2}
+      - tom: "Number one. He says: I think it is true that too many people believe success is about wealth. Then he gives evidence: TV, magazines, actors, advertising."
+        focus: 0
+        vi: "Câu 1: người viết đồng ý và đưa ra bằng chứng (TV, tạp chí, diễn viên, quảng cáo)."
+      - emma: "Right. He gives an example of the other side in paragraph 3, the Olympics, but his answer is clear: he agrees."
+        focus: 0
+        vi: "Đúng. Đoạn 3 có nêu ví dụ phía bên kia (Olympic), nhưng quan điểm vẫn rõ ràng: đồng ý."
+
+  - kind: order
+    chapter: "Writing 3A: bố cục sáu bước"
+    heading: "Writing 3A · Put the stages into the order in which they appear in the composition"
+    heading_vi: "Sáu bước tr. 54 — sắp theo thứ tự trong bài luận (đáp án suy ra)"
+    items:
+      - {k: "a", text: "Give plenty of evidence that shows why you agree with the statement.", pos: 3, short: "evidence"}
+      - {k: "b", text: "Begin the summarizing paragraph with a strongly expressed opinion.", pos: 5, short: "strong opinion"}
+      - {k: "c", text: "Repeat the main idea of the statement and say again that you agree with it.", pos: 6, short: "repeat and agree again"}
+      - {k: "d", text: "Say that you agree with the statement.", pos: 2, short: "agree"}
+      - {k: "e", text: "Show that you understand the statement – define key words in the statement.", pos: 1, short: "define key words"}
+      - {k: "f", text: "Give an example of why some people might not agree with the statement.", pos: 4, short: "the other side"}
+    lines:
+      - emma: "Writing 3: organizing your points. Exercise A. Put the stages into the order in which they appear in the composition. Pause the video and try."
+        say: "Writing three: organizing your points. Exercise eigh. Put the stages into the order in which they appear in the composition. Pause the video and try."
+        vi: "Writing 3: sắp sáu bước theo thứ tự xuất hiện trong bài luận. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "First: show that you understand the statement. There are different ways to measure success and achievement.", focus: 4, reveal: "e"}
+      - {tom: "Second: say that you agree. However, I think it is true that now too many people believe success is about wealth.", focus: 3, reveal: "d"}
+      - {tom: "Third: give plenty of evidence. The whole of paragraph 2.", say: "Third: give plenty of evidence. The whole of paragraph two.", focus: 0, reveal: "a"}
+      - {tom: "Fourth: an example of why some people might not agree. The Olympics, in paragraph 3.", say: "Fourth: an example of why some people might not agree. The Olympics, in paragraph three.", focus: 5, reveal: "f"}
+      - {tom: "Fifth: begin the summary with a strong opinion. The world will be better if more people realize that real success means being happy.", focus: 1, reveal: "b"}
+      - {tom: "And last: repeat the main idea, and agree again. The more young people watch TV, the more they will measure success by wealth.", focus: 2, reveal: "c"}
+      - emma: "Exam tip: however you answer the question, you must organize points logically. The examiner must be able to read your composition easily."
+        vi: "Mẹo thi: dù trả lời thế nào cũng phải sắp xếp ý hợp lý để giám khảo đọc dễ dàng."
+
+  - kind: compare
+    chapter: "Dàn bài cho bài luận của bạn"
+    heading: "A plan for your composition · four paragraphs"
+    heading_vi: "Dùng lại bố cục này cho bài luận ở Exam practice (tr. 57)"
+    items:
+      - {title: "Paragraphs 1–2", title_vi: "Mở bài, thân bài 1", lines: ["1: define key words + agree", "2: plenty of evidence", "useful: However, I think it is true that …"]}
+      - {title: "Paragraphs 3–4", title_vi: "Thân bài 2, kết bài", lines: ["3: the other side (Of course, …)", "4: a strong opinion + agree again", "useful: I think, though, that …"]}
+    lines:
+      - emma: "So here is a plan for your own compositions. Paragraph 1: define the key words, and say that you agree. Paragraph 2: plenty of evidence."
+        say: "So here is a plan for your own compositions. Paragraph one: define the key words, and say that you agree. Paragraph two: plenty of evidence."
+        focus: 0
+        vi: "Dàn bài: đoạn 1 định nghĩa từ khóa và nêu quan điểm; đoạn 2 đưa nhiều bằng chứng."
+      - emma: "Paragraph 3: the other side. Start with: of course. Paragraph 4: a strong opinion, and agree again."
+        say: "Paragraph three: the other side. Start with: of course. Paragraph four: a strong opinion, and agree again."
+        focus: 1
+        vi: "Đoạn 3 nêu phía bên kia (Of course, …); đoạn 4 khẳng định mạnh và nhắc lại quan điểm."
+      - tom: "Exercise B says: look at the exam practice section on page 57. That's our next writing video!"
+        say: "Exercise B says: look at the exam practice section on page fifty-seven. That's our next writing video!"
+        vi: "Bài B: xem phần Exam practice trang 57 — video Viết tiếp theo!"
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "You don't need every idea from your brainstorm — choose the best", vi: "Không cần dùng hết ý — chọn ý tốt nhất"}
+      - {en: "2F: he agreed and gave evidence", vi: "Người viết đồng ý và đưa bằng chứng"}
+      - {en: "define → agree → evidence → the other side → strong opinion → agree again", vi: "Sáu bước bố cục"}
+      - {en: "Organize your points logically", vi: "Sắp xếp ý hợp lý"}
+    lines:
+      - {emma: "Let's review. Choose the best ideas from your brainstorm.", focus: 0}
+      - {emma: "The writer agreed with the statement, and gave evidence.", focus: 1}
+      - {emma: "The six stages: define, agree, evidence, the other side, a strong opinion, and agree again.", focus: 2}
+      - {tom: "And organize my points logically, so the examiner can read it easily!", focus: 3}

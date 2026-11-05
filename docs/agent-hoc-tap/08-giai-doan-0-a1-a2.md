@@ -148,8 +148,9 @@ chép vào `books/` rồi làm như A2:
 
 ## 5. Việc tiếp theo
 
-- **Video bài giảng** (P2-53): đã xong Intro và Unit 1–3, 15 video (bảng 6.8). Unit 4–14 làm theo sổ tay ở mục 6:
-  - Unit 4 dùng tiếp CD1: lời đã chép tới 1.57, track 1.51 thiếu (xử lý như mục 6.5);
+- **Video bài giảng** (P2-53): đã xong Intro và Unit 1–4, 19 video (bảng 6.8). Unit 5–14 làm theo sổ tay ở mục 6:
+  - Unit 4 (đợt 31) là unit đầu tiên có hình trong sách ở mọi video; track 1.51 thiếu, Emma đọc năm câu và người học xem
+    chấm trọng âm trên hình trang sách;
   - từ Unit 5 chép lời CD2 (2.1–2.57) và CD3 (3.1–3.62) trước, ví dụ
     `python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 2.1 2.57`.
 - **A1 Starter** (P2-52): repo chưa có sách (đã gỡ ngày 26/10).
@@ -160,6 +161,10 @@ chép vào `books/` rồi làm như A2:
 
 Người học yêu cầu ở đợt 19: "làm luôn, xong unit nào commit push lên main unit đó; làm gì thì ghi lại để unit sau
 tham khảo". Mục này là bản ghi đó. Mỗi unit làm xong thì thêm một hàng vào bảng 6.8 và ghi điều mới vào 6.6–6.7.
+
+**Hình trong sách (từ Unit 4, đợt 31):** người học muốn video có hình trang sách như sách Oxford Word Skills Basic. Mỗi
+video có ít nhất một cảnh dùng hình (test kiểm): tranh, bảng, bài đọc, email cắt từ trang Coursebook, khung đỏ chỉ chỗ
+đang giảng. Cách khai và lấy toạ độ ở mục 6.3 và [file 09](09-oxford-word-skills-basic.md) mục 5.3a.
 
 ### 6.1 Bộ video của mỗi unit
 
@@ -200,7 +205,8 @@ Mỗi video gắn vào đúng một phiên, id video trùng id hoạt động. M
 | Đáp án, ý của bài | Teacher's Book (lớp chữ sạch): `fitz.open(...)[trang - 1].get_text()`, trang theo bảng mục 3.1 |
 | Lời bài nghe | `work/transcripts/<track>.txt` và `.json` (chép tự động, có mốc từng từ). Tên riêng hay sai, nên đối chiếu với trang sách và Teacher's Book |
 | Mốc `start` / `end` để phát một câu | Lấy từ `words` trong `.json`: bắt đầu trước từ đầu 0,2–0,3 giây, kết thúc sau từ cuối 0,3 giây |
-| Ảnh minh hoạ | `image: {pdf: course-book, page: <trang PDF>, clip: [x0, y0, x1, y1]}`, đơn vị điểm PDF. Lấy toạ độ từ ảnh 120 dpi nhân 0,6 |
+| Ảnh minh hoạ | `image: {pdf: course-book, page: <trang PDF>, clip: [x0, y0, x1, y1]}`, đơn vị điểm PDF (trang Part 1 rộng 562 × 828). Lấy toạ độ từ ảnh 120 dpi nhân 0,6 |
+| Hình trong sách có khung đỏ (đợt 31) | Cảnh `figure` (hình lớn), `bullets` / câu điền từ `blanks` có `image` (hình bên trái); mỗi mục có `box` [x0, y0, x1, y1] cùng hệ toạ độ với `clip`, thêm `label` (nhãn đỏ, ví dụ đáp án). Lấy toạ độ bằng ảnh trang kèm lưới điểm PDF (file 09 mục 5.3a); chữ nhỏ thì đo vị trí từng từ bằng điểm ảnh (cột có mực) |
 
 Chép lời một đĩa (một lần cho cả sách; kết quả đã commit ở `work/transcripts/`):
 
@@ -269,6 +275,10 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 | 2009, 1989, 31 July, August 1 and 2, 9am | `two thousand and nine`, `nineteen eighty-nine`, `the thirty-first of July`, `August first and second`, `nine eigh em` | Năm, ngày tháng, giờ |
 | Ju-Yung, Kildare, Sofasurfing.com | `Joo-young`, `Kill-dare`, `Sofa surfing dot com` | Tên riêng Unit 2 |
 | xin chào, bún bò Huế | `sin chow`, `Boon baw Whey` | Chữ Việt trong câu tiếng Anh: viết chữ Việt ở dòng thoại, cách đọc gần đúng ở `say` |
+| Sang-mi, Onyinye, Mari, Miki | `Sahng-mee`, `Oh-neen-yeh`, `Mah-ree`, `Mee-kee` | Tên riêng Unit 4 (đợt 31). Kokoro đọc Onyinye /ˈɑːnɪɪnaɪ/, Mari /mæɹi/ |
+| Moggridge, Andreas Pavel, Stereobelt, DynaTAC 8000X | `Mog-rij`, `Ahn-dray-as Pah-vel`, `Stereo-belt`, `Dye-na-tack eight thousand ex` | Bài đọc Unit 4 |
+| AT&T, NASA, $3,995, 1970s | `eigh tee and tee`, `Nasa`, `three thousand, nine hundred and ninety-five dollars`, `the nineteen seventies` | Chữ viết tắt, giá tiền, thập niên |
+| Da Lat, Da Nang, pho | `Dah Lot`, `Dah Nahng`, `fuh` | Địa danh, món ăn trong câu trả lời mẫu của Tom và Mai |
 
 ### 6.7 Lỗi đã gặp
 
@@ -286,6 +296,15 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
   đặt `focus: 0` khi người đọc mẫu không phải Tom (ví dụ audio gốc).
 - Cảnh `letter` mà Emma đọc to cả thư (thư trả lời của Erkan, Unit 2) thì không khai `emma: teacher`: nhãn ghi "Emma
   is reading" là đúng. Lời giảng đặt ở cảnh trước hoặc sau.
+- Đợt 31 (hình trong sách, Unit 4):
+  - Một câu chứa hai chỗ cần khung đỏ (Grammar 2: "cost … bought") thì cắt câu thành hai dòng thoại, mỗi dòng một `focus`.
+    Đừng đọc lặp lại cả câu.
+  - Hình rộng mà nhiều chữ (bài báo cả trang, hai email cạnh nhau) thu vào khung thì chữ quá nhỏ. Cắt thành dải, mỗi dải
+    một cảnh: bài báo ba dải, mỗi email hai dải.
+  - Khung đỏ lệch một từ: chữ in nhỏ khó đọc trên lưới 25 điểm. Vẽ lưới 10 điểm ở độ phóng 3–4, hoặc đo vị trí từng từ
+    bằng cột điểm ảnh có mực (PyMuPDF + numpy), rồi xem lại khung hình bằng bộ đọc im lặng.
+  - Ước lượng im lặng bài 4.1 là 11:09, quá 10 phút: gộp hai cảnh đoán đúng / sai vào cảnh câu hỏi và cảnh đọc bài, phát
+    bài nghe 1.46 một lần rồi chữa sáu câu bằng hai dòng thoại. Bản dựng thật 9:59.
 
 ### 6.8 Độ phủ video
 
@@ -328,5 +347,23 @@ In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_eng
 | Target activity · nhiệm vụ nói | sách tr. 30 | `U03-target` — Speaking · Invite someone out | 5:06 | 10 |
 | Explore Speaking · từ khoá và giao tiếp | sách tr. 31–32 | `U03-explore` — Explore Speaking · go, conversation topics, phone messages | 7:35 | 11 |
 | Look again · ôn tập và tự đánh giá | sách tr. 33 | không làm video riêng (mục 6.1) | — | — |
+
+#### U04 · Changes — 4/5 phần có video, 4 video, 32:45 (đợt 31, có hình trong sách)
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 34–35 | `U04-lesson-1` — Reading · Technology firsts: past simple verbs, last / in / ago | 9:59 | 14 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 36–37 | `U04-lesson-2` — Listening · Sang-mi's business trip: things for a trip, did / didn't | 9:11 | 13 |
+| Target activity · nhiệm vụ nói | sách tr. 38 | `U04-target` — Speaking · Talk about an important event | 6:22 | 10 |
+| Explore Writing · từ khoá và viết | sách tr. 39–40 | `U04-explore` — Explore Writing · have, an email giving news | 7:13 | 13 |
+| Look again · ôn tập và tự đánh giá | sách tr. 41 | không làm video riêng (mục 6.1) | — | — |
+
+Hình trong sách của Unit 4 (khung đỏ theo chỗ đang giảng):
+- `U04-lesson-1`: ảnh điện thoại, laptop, máy nghe nhạc; bài báo cắt ba dải (nhãn inventor / year / name / price); ba tờ ghi
+  chú bài 3 (nhãn là đáp án); bảng singular / plural; hai đoạn Grammar 2 (nhãn là động từ quá khứ cần điền); ảnh Sang-mi.
+- `U04-lesson-2`: tranh 12 đồ dùng đi công tác (nhãn là từ); ba tranh bài nghe; năm câu có chấm trọng âm; ảnh Sang-mi và
+  ông Donovan.
+- `U04-target`: ảnh Nigeria, Scotland, người tuyết; ảnh Onyinye; bảng Task vocabulary (nhãn good / bad / both).
+- `U04-explore`: bảng Keyword have; sáu tài liệu tự học A–F; hai email của Judy và Mari, mỗi email hai dải.
 
 <!-- bảng độ phủ: cập nhật sau mỗi unit -->

@@ -1,0 +1,244 @@
+# Unit 4 · Changes — Target activity: Talk about an important event (Coursebook tr. 38), phiên U04-target.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U04-target.yaml
+# Nguồn: trang 38; đáp án theo Teacher's Book tr. 47–48 (Task listening 2: 1 five 2 different 3 remembers 4 enjoyed;
+# Task vocabulary 3: good — exciting, a great time, a lovely time, lots of fun · bad — boring, a terrible time, a very bad
+# time · both — interesting, strange, difficult; từ cần dạy: remember, memory / memories, grew up in, moved to).
+# Audio gốc 1.53 (Onyinye): phát nguyên bài một lần, rồi chữa bốn câu.
+# Hình trong sách (đợt 31): ảnh Scotland mùa tuyết, người tuyết, Nigeria (tr. 38, khung đỏ kèm nhãn); ảnh Onyinye và lời
+# giới thiệu bên trái bài khoanh từ; bảng Task vocabulary (khung đỏ từng cụm, nhãn good / bad / both).
+# Bài nói mẫu: Mai — nhận việc giáo viên tiếng Anh ở Huế cách đây năm năm (khớp Unit 1: trước đó làm phục vụ quán cà phê,
+# nay là giáo viên); Tom — chuyển vào TP. Hồ Chí Minh học đại học khoảng hai năm trước, ở căn hộ nhỏ gần trường với hai
+# bạn (khớp hồ sơ file 06 mục 9.4).
+id: U04-target
+activity: U04-target
+title: "Unit 4 · Changes"
+subtitle: "Speaking · Talk about an important event"
+title_vi: "Kể một sự kiện quan trọng trong đời — khi nào, ở đâu, chuyện gì xảy ra, cảm thấy thế nào (trang 38, audio 1.53)"
+tag: "EU A2 · UNIT 4"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 4: Changes. This is the Target activity: talk about an important event in your life."
+        say: "Welcome back to Unit four: Changes. This is the Target activity: talk about an important event in your life."
+        vi: "Target activity của Unit 4: kể về một sự kiện quan trọng trong đời bạn."
+      - mai: "An important event? Like my first day at work?"
+        vi: "Sự kiện quan trọng à? Như ngày đầu đi làm của mình?"
+      - emma: "Yes, exactly. First, we listen to Onyinye. Then you prepare and tell your story."
+        say: "Yes, exactly. First, we listen to Oh-neen-yeh. Then you prepare and tell your story."
+        vi: "Đúng vậy. Trước hết nghe Onyinye kể, rồi bạn chuẩn bị và kể chuyện của mình."
+
+  - kind: figure
+    chapter: "Nigeria và Scotland"
+    heading: "Task listening 1 · Nigeria and Scotland"
+    heading_vi: "Ảnh tr. 38 — Onyinye sẽ nói về những điểm khác nhau nào giữa Nigeria và Scotland?"
+    image: {pdf: course-book, page: 39, clip: [0, 82, 545, 322]}
+    items:
+      - {box: [300, 82, 543, 262], label: "Nigeria"}
+      - {box: [0, 92, 165, 320], label: "Scotland"}
+      - {box: [165, 136, 300, 316], label: "a snowman"}
+    lines:
+      - emma: "Look at the photos. Onyinye was born in Nigeria, but she grew up in the UK. She talks about her memories of moving to Scotland when she was a child."
+        say: "Look at the photos. Oh-neen-yeh was born in Nigeria, but she grew up in the UK. She talks about her memories of moving to Scotland when she was a child."
+        focus: 0
+        vi: "Onyinye sinh ra ở Nigeria nhưng lớn lên ở Anh. Cô ấy kể kỷ niệm chuyển tới Scotland hồi nhỏ."
+      - emma: "Grew up in means lived there as a child. Moved to means went to live in a new place. And a memory is something you remember."
+        focus: 1
+        vi: "grew up in = lớn lên ở; moved to = chuyển tới sống ở; a memory = kỷ niệm, điều mình nhớ."
+      - emma: "What differences between Nigeria and Scotland do you think she will talk about? Pause the video and think."
+        vi: "Bạn nghĩ cô ấy sẽ nói về những điểm khác nhau nào? Tạm dừng video và suy nghĩ."
+        pause: 1.5
+      - mai: "The weather! Nigeria is hot and sunny, and Scotland is cold. And look, there's snow!"
+        focus: 2
+        vi: "Thời tiết! Nigeria nóng và nắng, Scotland lạnh. Kìa, có tuyết nữa!"
+      - tom: "Maybe the houses and the food are different too."
+        focus: 1
+        vi: "Có lẽ nhà cửa và đồ ăn cũng khác."
+
+  - kind: blanks
+    chapter: "Nghe 1.53: Onyinye"
+    heading: "Task listening 2 · Listen to Onyinye and circle the right words"
+    heading_vi: "Ảnh Onyinye tr. 38 — đọc bốn câu trước, nghe rồi chọn từ đúng"
+    image: {pdf: course-book, page: 39, clip: [406, 248, 545, 462]}
+    items:
+      - {n: 1, q: "Onyinye moved when she was five / fifteen years old. → ___", answer: "five"}
+      - {n: 2, q: "She says everything was difficult / different. → ___", answer: "different"}
+      - {n: 3, q: "She remembers / doesn't remember the first time she saw snow. → ___", answer: "remembers"}
+      - {n: 4, q: "She enjoyed / didn't enjoy playing in the snow. → ___", answer: "enjoyed"}
+    lines:
+      - emma: "Listen to Onyinye and circle the right words. Read the sentences first. Pause the video if you need more time."
+        say: "Listen to Oh-neen-yeh and circle the right words. Read the sentences first. Pause the video if you need more time."
+        vi: "Nghe Onyinye và chọn từ đúng. Đọc bốn câu trước; cần thêm thời gian thì tạm dừng video."
+        pause: 1.5
+      - {track: "1.53", start: 3.35, end: 67.6, note: "1.53 · Onyinye"}
+      - tom: "One: five. She was only five years old."
+        reveal: 1
+        vi: "1: five — lúc đó cô ấy mới năm tuổi."
+      - mai: "Two: different. The trees were different, the houses were different. Everything was different."
+        reveal: 2
+        vi: "2: different — cây cối, nhà cửa, mọi thứ đều khác."
+      - tom: "Three: she remembers. She saw snow for the first time, and it was a shock."
+        reveal: 3
+        vi: "3: remembers — lần đầu thấy tuyết, cô ấy rất bất ngờ."
+      - mai: "Four: she enjoyed it. They built a snowman and had lots of fun."
+        reveal: 4
+        vi: "4: enjoyed — họ đắp người tuyết và chơi rất vui."
+
+  - kind: figure
+    chapter: "Trải nghiệm tốt, xấu"
+    heading: "Task vocabulary 3 · Good and bad experiences"
+    heading_vi: "Bảng tr. 38 — cụm nào nói về trải nghiệm tốt (good), xấu (bad), hay cả hai (both)?"
+    image: {pdf: course-book, page: 39, clip: [168, 506, 438, 578]}
+    items:
+      - {box: [248, 512, 289, 530], label: "good"}
+      - {box: [291, 512, 343, 530], label: "both"}
+      - {box: [344, 512, 389, 530], label: "both"}
+      - {box: [248, 527, 283, 543], label: "bad"}
+      - {box: [286, 527, 325, 543], label: "both"}
+      - {box: [248, 543, 308, 560], label: "good"}
+      - {box: [309, 543, 362, 560], label: "good"}
+      - {box: [363, 543, 430, 560], label: "bad"}
+      - {box: [248, 557, 308, 574], label: "good"}
+      - {box: [309, 557, 383, 574], label: "bad"}
+    lines:
+      - emma: "Task vocabulary. Which expressions are about good experiences? Which are about bad experiences? Which can be about both? Pause the video and think."
+        vi: "Cụm nào nói về trải nghiệm tốt, cụm nào xấu, cụm nào cả hai? Tạm dừng video và suy nghĩ."
+        pause: 1.5
+      - {emma: "It was really exciting. That's good.", focus: 0}
+      - {emma: "It was very interesting. Usually good, but a hard day can be interesting too.", focus: 1, vi: "interesting: thường là tốt, nhưng một ngày vất vả cũng có thể thú vị."}
+      - {emma: "It was really difficult. That can be good or bad.", focus: 2}
+      - {tom: "It was boring. That's bad.", focus: 3}
+      - {tom: "It was very strange. Good or bad. Snow was strange for Onyinye!", say: "It was very strange. Good or bad. Snow was strange for Oh-neen-yeh!", focus: 4}
+      - {mai: "I had a great time. Good!", focus: 5}
+      - {mai: "I had lots of fun. Good!", focus: 6}
+      - {tom: "I had a terrible time. Bad.", focus: 7}
+      - {mai: "I had a lovely time. Good!", focus: 8}
+      - {tom: "I had a very bad time. Bad.", focus: 9}
+
+  - kind: bullets
+    chapter: "Chọn sự kiện"
+    heading: "Task 4a · Write down one or two important events in your life"
+    heading_vi: "Ví dụ: khi bạn …"
+    items:
+      - {en: "got married · had a baby", vi: "kết hôn · có con"}
+      - {en: "moved into a new house or flat", vi: "chuyển đến nhà mới"}
+      - {en: "went on a trip", vi: "đi một chuyến đi"}
+      - {en: "got a new job", vi: "có việc làm mới"}
+      - {en: "met an important new person", vi: "gặp một người quan trọng"}
+      - {en: "started school / university / a new course", vi: "bắt đầu đi học, vào đại học, học khóa mới"}
+    lines:
+      - emma: "Now the task. Write down one or two important events in your life. For example, when you got married, or moved into a new house or flat."
+        focus: 1
+        vi: "Viết ra một hai sự kiện quan trọng trong đời bạn, ví dụ khi bạn kết hôn, chuyển nhà …"
+      - {emma: "When you went on a trip, got a new job, or met an important new person.", focus: 4, vi: "… đi một chuyến đi, có việc làm mới, gặp một người quan trọng."}
+      - {emma: "Or when you started school, university or a new course.", focus: 5, vi: "… hoặc bắt đầu đi học, vào đại học, học khóa mới."}
+      - mai: "My event is: I got a new job. I became an English teacher."
+        focus: 3
+        vi: "Sự kiện của mình: mình có việc mới, trở thành giáo viên tiếng Anh."
+      - tom: "And mine is: I moved to Ho Chi Minh City for university."
+        say: "And mine is: I moved to Ho Chi Minh City for university."
+        focus: 5
+        vi: "Còn mình: chuyển vào TP. Hồ Chí Minh học đại học."
+
+  - kind: bullets
+    chapter: "Ghi chú: khi nào, ở đâu …"
+    heading: "Task 4b · Think about each event"
+    heading_vi: "Ghi chú ngắn cho bốn câu hỏi — không viết cả câu. Nghe ghi chú của Mai"
+    items:
+      - {en: "When did it happen? — last month, many years ago …", vi: "Khi nào?"}
+      - {en: "Where did it happen? — at work, in Tokyo, in a club …", vi: "Ở đâu?"}
+      - {en: "What happened? — We got married, We met …", vi: "Chuyện gì đã xảy ra?"}
+      - {en: "How was it? — It was exciting, I had a terrible time …", vi: "Như thế nào? Bạn cảm thấy ra sao?"}
+    lines:
+      - emma: "Think about each event. Make short notes for these four questions. Don't write sentences. Here are Mai's notes."
+        vi: "Ghi chú ngắn cho bốn câu hỏi, không viết cả câu. Đây là ghi chú của Mai."
+      - {mai: "When? Five years ago, in September.", focus: 0, vi: "Khi nào? Năm năm trước, vào tháng Chín."}
+      - {mai: "Where? A small school in Hue.", say: "Where? A small school in Whey.", focus: 1, vi: "Ở đâu? Một trường nhỏ ở Huế."}
+      - {mai: "What happened? My first class. Thirty students, I forgot their names!", focus: 2, vi: "Chuyện gì? Lớp đầu tiên, ba mươi học sinh, quên hết tên!"}
+      - {mai: "How was it? Difficult, but really exciting. A great time.", focus: 3, vi: "Như thế nào? Khó, nhưng rất hào hứng. Rất vui."}
+
+  - kind: letter
+    chapter: "Bài nói mẫu của Mai"
+    heading: "Mai's important event: my first job as a teacher"
+    heading_vi: "Mai kể từ ghi chú: khi nào, ở đâu, chuyện gì, cảm thấy thế nào"
+    roles: {emma: teacher, mai: speaking}
+    items:
+      - {text: "I want to tell you about an important event in my life.", note: "start"}
+      - {text: "Five years ago, I got a job as an English teacher. Before that, I was a waitress in a café.", note: "when? what?"}
+      - {text: "The school was small, and it was in Hue, my home town.", note: "where?"}
+      - {text: "On my first day, I had a class of thirty students. I was very nervous, and I forgot all their names!", note: "what happened?"}
+      - {text: "But the students were really nice, and they helped me.", note: "what happened?"}
+      - {text: "It was difficult, but it was really exciting. I had a great time, and now I love my job.", note: "how was it?"}
+    lines:
+      - emma: "Now listen to Mai. She talks about her event from her notes."
+        vi: "Nghe Mai kể sự kiện của mình dựa trên ghi chú."
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2, say: "The school was small, and it was in Whey, my home town."}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: mai, focus: 5}
+      - emma: "Good. She uses the past simple: I got a job, I was nervous, I forgot their names. And task vocabulary: it was really exciting, I had a great time."
+        vi: "Mai dùng quá khứ đơn (got, was, forgot) và cụm từ của bài (really exciting, a great time)."
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Task 5 · Ask and answer about each other's events"
+    heading_vi: "Mai hỏi — bạn tạm dừng video và kể sự kiện của mình, rồi nghe Tom"
+    items:
+      - {q: "So, what's an important event in your life?", a: "I moved to Ho Chi Minh City for university.", ask: mai, by: tom}
+      - {q: "When did you move?", a: "About two years ago, in August.", ask: mai, by: tom}
+      - {q: "And where did you live?", a: "In a small flat near the university, with two friends.", ask: mai, by: tom}
+      - {q: "How was it?", a: "It was strange at first. It's very different from Da Lat, and very hot! But I had a great time.", ask: mai, by: tom}
+    lines:
+      - emma: "Your turn. Mai asks about your important event. Pause the video after each question and answer. Then listen to Tom."
+        vi: "Đến lượt bạn: Mai hỏi về sự kiện của bạn. Tạm dừng video sau mỗi câu hỏi để trả lời, rồi nghe Tom."
+      - {mai: "So, what's an important event in your life?", focus: 0, pause: 1.5}
+      - {tom: "I moved to Ho Chi Minh City for university.", reveal: 0}
+      - {mai: "When did you move?", focus: 1, pause: 1.5}
+      - {tom: "About two years ago, in August.", reveal: 1}
+      - {mai: "And where did you live?", focus: 2, pause: 1.5}
+      - {tom: "In a small flat near the university, with two friends.", reveal: 2}
+      - {mai: "How was it?", focus: 3, pause: 1.5}
+      - {tom: "It was strange at first. It's very different from Da Lat, and very hot! But I had a great time.", say: "It was strange at first. It's very different from Dah Lot, and very hot! But I had a great time.", reveal: 3}
+      - emma: "Now ask a friend about their events. Try to talk without reading your notes."
+        vi: "Giờ hỏi một người bạn về sự kiện của họ. Cố nói mà không nhìn ghi chú."
+
+  - kind: errors
+    chapter: "Lỗi hay gặp"
+    heading: "Common mistakes"
+    heading_vi: "Lỗi người Việt hay mắc khi kể chuyện quá khứ"
+    items:
+      - {wrong: "I was very exciting.", right: "It was very exciting.", note: "exciting nói về sự việc: It was exciting"}
+      - {wrong: "When did you got married?", right: "When did you get married?", note: "did + động từ nguyên mẫu"}
+      - {wrong: "I moved in Hue.", right: "I moved to Hue.", note: "move to + nơi chốn"}
+      - {wrong: "It was three years before.", right: "It was three years ago.", note: "khoảng thời gian + ago"}
+      - {wrong: "I had a lot of funs.", right: "I had lots of fun.", note: "fun không đếm được"}
+    lines:
+      - emma: "Here are some common mistakes."
+        vi: "Vài lỗi hay gặp."
+      - {emma: "It was very exciting. The event was exciting.", focus: 0}
+      - {emma: "When did you get married? Did, then the verb with no change.", focus: 1}
+      - {emma: "I moved to Hue. Move to a place.", say: "I moved to Whey. Move to a place.", focus: 2}
+      - {emma: "It was three years ago. Not before.", focus: 3}
+      - {emma: "And I had lots of fun. Fun has no s.", say: "And I had lots of fun. Fun has no ess.", focus: 4}
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "I moved to … · I got a new job · I met …", vi: "Kể sự kiện bằng quá khứ đơn"}
+      - {en: "five years ago · last month · in 2020", vi: "Khi nào"}
+      - {en: "It was really exciting · It was very strange", vi: "Nó như thế nào"}
+      - {en: "I had a great time · I had a terrible time", vi: "Bạn cảm thấy thế nào"}
+    lines:
+      - {emma: "Let's remember. To talk about an important event, use the past simple: I moved to Scotland. I got a new job.", say: "Let's remember. To talk about an important event, yooz the past simple: I moved to Scotland. I got a new job.", focus: 0}
+      - {emma: "Say when: five years ago, last month, in 2020.", say: "Say when: five years ago, last month, in twenty twenty.", focus: 1}
+      - {emma: "Say how it was: it was really exciting, it was very strange.", focus: 2}
+      - {emma: "And how you felt: I had a great time. In the next video, the keyword have, and an email with your news.", focus: 3, vi: "Video sau: từ khóa have và viết email kể tin tức."}

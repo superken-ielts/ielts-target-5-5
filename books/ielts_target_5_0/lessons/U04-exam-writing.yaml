@@ -1,0 +1,209 @@
+# Video bài giảng Unit 4 · Exam practice: Writing (sách in trang 57; bài luận mẫu ở Answer key trang 267, "Unit 4, Exam
+# Practice, Writing C"). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-exam-writing.yaml
+# Cách viết: xem đầu file U02-exam-writing.yaml. Bài luận mẫu (Michael Jordan) chép nguyên văn Answer key; từ khóa của đề,
+# dàn ý và ghi chú của Tom là gợi ý. Chia thời gian 40 phút theo bài thi thật (phần 2 bài Viết: ít nhất 250 từ); sách
+# chỉ yêu cầu khoảng 200 từ.
+# Hình trong sách (đợt 31): đề bài tr. 57 (khung đỏ theo từ khóa, nhãn là nghĩa), bài luận mẫu cắt từ trang Answer key
+# thành ba dải (khung đỏ theo đoạn khi đọc, rồi nhãn là vai trò của đoạn). Không đếm ngược.
+id: U04-exam-writing
+activity: U04-exam-practice
+title: "Unit 4 · Achievements"
+subtitle: "Exam practice: Writing"
+title_vi: "Bài luận \"You cannot achieve great things with talent alone\" — hiểu đề, nghĩ ý, dàn ý, bài mẫu Michael Jordan, chia 40 phút"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Exam practice: Writing for Unit 4. Now you write your own composition, using the stages from the unit."
+        say: "Welcome to Exam practice: Writing for Unit four. Now you write your own composition, using the stages from the unit."
+        vi: "Luyện đề Viết: tự viết bài luận theo các bước đã học trong unit."
+      - tom: "Understand the task, brainstorm, organize my points. I remember!"
+        vi: "Hiểu đề, nghĩ ý, sắp xếp ý. Mình nhớ rồi!"
+
+  - kind: figure
+    chapter: "Bài A: đọc kỹ đề, gạch từ khóa"
+    heading: "Writing A · Look carefully at the instructions for this writing task"
+    heading_vi: "Đề tr. 57 — gạch từ khóa, tra từ điển, chắc chắn hiểu mình phải làm gì"
+    image: {pdf: course-book, page: 58, clip: [60, 628, 520, 784]}
+    items:
+      - {box: [87, 664, 358, 691], label: "the statement"}
+      - {box: [134, 665, 212, 678], label: "do something very important"}
+      - {box: [230, 665, 278, 678], label: "only natural ability"}
+      - {box: [317, 665, 357, 678], label: "make a big effort"}
+      - {box: [105, 677, 258, 690], label: "help from family, friends, teachers"}
+      - {box: [88, 691, 219, 704], label: "your opinion"}
+      - {box: [62, 716, 400, 740], label: "B · brainstorm"}
+      - {box: [62, 750, 400, 783], label: "C · about 200 words"}
+    lines:
+      - emma: "Exercise A. Look carefully at the instructions. You cannot achieve great things with talent alone. You must work hard and have the support of people around you. Do you agree with the statement?"
+        focus: 0
+        vi: "Đề: Chỉ có tài năng thì không làm nên việc lớn; bạn phải chăm chỉ và có sự ủng hộ của những người xung quanh. Bạn có đồng ý không?"
+      - emma: "Highlight the key words, check them in a dictionary, and make sure you understand what you have to do. Pause the video and try."
+        vi: "Gạch từ khóa, tra từ điển. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Achieve great things: do something very important or special.", focus: 1}
+      - {tom: "Talent alone: only natural ability. Alone here means only.", focus: 2, vi: "talent alone = chỉ có năng khiếu"}
+      - {tom: "Work hard: make a big effort.", focus: 3}
+      - {tom: "The support of people around you: help and encouragement from your family, friends and teachers.", focus: 4, vi: "support = sự giúp đỡ, động viên"}
+      - {tom: "And the question: do you agree? So I must give my opinion.", focus: 5}
+      - emma: "Exercise B. Work with a partner, and brainstorm points. Make notes in your own language if you want to. Exercise C. Write the composition. Try to use about 200 words, and follow the stages in Writing 3A."
+        say: "Exercise B. Work with a partner, and brainstorm points. Make notes in your own language if you want to. Exercise C. Write the composition. Try to use about two hundred words, and follow the stages in Writing three A."
+        focus: 7
+        vi: "Bài B: nghĩ ý (ghi chú bằng tiếng Việt cũng được). Bài C: viết khoảng 200 từ theo các bước ở Writing 3A."
+      - emma: "In the real exam, part 2 of the Writing Module needs at least 250 words, in about 40 minutes."
+        say: "In the real exam, part two of the Writing Module needs at least two hundred and fifty words, in about forty minutes."
+        focus: 7
+        vi: "Bài thi thật: phần 2 bài Viết cần ít nhất 250 từ, khoảng 40 phút."
+
+  - kind: compare
+    chapter: "Bài B: nghĩ ý"
+    heading: "Writing B · Tom's brainstorm"
+    heading_vi: "Ý ủng hộ nhận định và ý phía bên kia — kèm ví dụ cụ thể"
+    items:
+      - {title: "I agree", title_vi: "Đồng ý", lines: ["talented people must still practise", "athletes train every day", "parents and teachers push you", "my mum: hard work, help from my dad"]}
+      - {title: "The other side", title_vi: "Phía bên kia", lines: ["some people are born with a gift", "Ainan, the child prodigy", "but he had his parents' support too"]}
+    lines:
+      - emma: "Exercise B. Here is Tom's brainstorm."
+        vi: "Bài B: các ý Tom nghĩ ra."
+      - tom: "I agree with the statement. Talented people must still practise. Athletes train every day. Parents and teachers push you to do well."
+        focus: 0
+        vi: "Mình đồng ý: người có tài vẫn phải luyện tập; vận động viên tập mỗi ngày; bố mẹ, thầy cô thúc đẩy bạn."
+      - tom: "And my mum built her flower shop with hard work, and with help from my dad."
+        focus: 0
+        vi: "Mẹ mình gây dựng cửa hàng hoa nhờ chăm chỉ, và có bố giúp đỡ."
+      - tom: "The other side: some people are born with a gift, like Ainan, the child prodigy. But his parents supported him too."
+        say: "The other side: some people are born with a gift, like Eye-nan, the child prodigy. But his parents supported him too."
+        focus: 1
+        vi: "Phía bên kia: có người sinh ra đã có tài, như Ainan — nhưng cậu bé cũng được bố mẹ hỗ trợ."
+      - emma: "Good. Real examples from the unit make your composition stronger."
+        vi: "Ví dụ thật từ trong unit làm bài luận thuyết phục hơn."
+
+  - kind: figure
+    chapter: "Bài luận mẫu (1)"
+    heading: "Model composition · Answer key, Exam Practice Writing C (1/3)"
+    heading_vi: "Bài mẫu trong Answer key tr. 267 — Emma đọc, khung đỏ theo đoạn"
+    image: {pdf: course-book, page: 268, clip: [298, 229, 536, 368]}
+    items:
+      - {box: [300, 230, 533, 307]}
+      - {box: [300, 306, 533, 367]}
+      - {box: [300, 230, 533, 307], label: "1 · what some people think"}
+      - {box: [300, 306, 533, 367], label: "2 · my opinion"}
+    lines:
+      - emma: "Now look at the model composition in the answer key. Listen, and notice how it is organized."
+        vi: "Bài luận mẫu trong Answer key — nghe và chú ý cách sắp xếp."
+      - {emma: "Some people think that having great talent is enough to succeed in life. They see actors and artists and great sportsmen and think they are successful because they were born with talent.", focus: 0}
+      - {emma: "They forget that these people also worked very hard to get where they are.", focus: 0}
+      - {emma: "In my opinion, talent can only take you so far. To reach the top you also need the desire to be the best and the discipline to work hard to be the best.", focus: 1}
+      - {emma: "You must also get the right advice and listen to it. You need the support of the people around you – your friends and family.", focus: 1}
+      - tom: "Paragraph 1 says what some people think. Paragraph 2 gives the writer's opinion: talent is not enough."
+        say: "Paragraph one says what some people think. Paragraph two gives the writer's opinion: talent is not enough."
+        focus: 2
+        vi: "Đoạn 1: điều một số người nghĩ. Đoạn 2: quan điểm của người viết — tài năng là chưa đủ."
+      - emma: "Yes. And notice: talent can only take you so far. That means talent helps, but it isn't enough to reach the top."
+        focus: 3
+        vi: "talent can only take you so far = tài năng chỉ đưa bạn đi được đến một mức nào đó."
+
+  - kind: figure
+    chapter: "Bài luận mẫu (2)"
+    heading: "Model composition · Answer key, Exam Practice Writing C (2/3)"
+    heading_vi: "Bằng chứng và một ví dụ nổi tiếng"
+    image: {pdf: course-book, page: 268, clip: [298, 368, 536, 512]}
+    items:
+      - {box: [300, 368, 533, 449]}
+      - {box: [300, 449, 533, 511]}
+      - {box: [300, 368, 533, 449], label: "3 · evidence"}
+      - {box: [300, 449, 533, 511], label: "4 · an example"}
+    lines:
+      - {emma: "I think there are many talented people who are not successful because they are lazy. Some don't succeed because their parents or their teachers don't push them to do well.", focus: 0}
+      - {emma: "Some talented people are quite unusual and their friends and family don't take them seriously. Then they don't have the confidence to succeed.", focus: 0}
+      - {emma: "My hero is the basketball player Michael Jordan. He had incredible natural talent, but he was the first player to arrive for training every day and the last player to leave.", focus: 1}
+      - {emma: "This desire to work hard and to practise is what made him the best.", focus: 1}
+      - tom: "Paragraph 3 is the evidence: talented people who are lazy, or don't get support. And paragraph 4 is one strong example."
+        say: "Paragraph three is the evidence: talented people who are lazy, or don't get support. And paragraph four is one strong example."
+        focus: 2
+        vi: "Đoạn 3: bằng chứng. Đoạn 4: một ví dụ mạnh — Michael Jordan."
+      - emma: "Exactly. A famous example is easy to remember, and the examiner understands it immediately."
+        focus: 3
+        vi: "Ví dụ nổi tiếng thì dễ nhớ, giám khảo hiểu ngay."
+
+  - kind: figure
+    chapter: "Bài luận mẫu (3)"
+    heading: "Model composition · Answer key, Exam Practice Writing C (3/3)"
+    heading_vi: "Đoạn kết: nhắc lại quan điểm"
+    image: {pdf: course-book, page: 268, clip: [298, 512, 536, 577]}
+    items:
+      - {box: [300, 514, 533, 576]}
+      - {box: [300, 514, 533, 576], label: "5 · To sum up"}
+    lines:
+      - {emma: "To sum up, I want to say that talent, hard work and support from others must go together if somebody is successful.", focus: 0}
+      - {emma: "There are many people in top positions who have less natural talent than another person who has not achieved very much at all.", focus: 0}
+      - tom: "And the last paragraph starts with: to sum up. The writer says again: talent, hard work and support must go together."
+        focus: 1
+        vi: "Đoạn kết mở bằng To sum up, nhắc lại: tài năng, chăm chỉ và sự hỗ trợ phải đi cùng nhau."
+      - emma: "It's about 250 words. That's the length you need in the real exam."
+        say: "It's about two hundred and fifty words. That's the length you need in the real exam."
+        vi: "Bài mẫu khoảng 250 từ — đúng độ dài cần cho bài thi thật."
+
+  - kind: vocab
+    chapter: "Cụm từ hay trong bài mẫu"
+    heading: "Useful language from the model composition"
+    heading_vi: "Học thuộc và dùng lại trong bài của bạn"
+    items:
+      - {w: "In my opinion, …", pos: "phr", vi: "theo tôi", ex: "In my opinion, talent can only take you so far."}
+      - {w: "reach the top", pos: "phr", vi: "lên tới đỉnh cao", ex: "To reach the top you also need the desire to be the best."}
+      - {w: "the discipline to work hard", pos: "phr", vi: "tính kỷ luật để chăm chỉ làm việc", ex: "the discipline to work hard to be the best"}
+      - {w: "take somebody seriously", pos: "phr", vi: "coi trọng ai đó", ex: "Their friends and family don't take them seriously."}
+      - {w: "push somebody to do well", pos: "phr", vi: "thúc đẩy ai cố gắng", ex: "Their teachers don't push them to do well."}
+      - {w: "To sum up, …", pos: "phr", vi: "tóm lại", ex: "To sum up, talent, hard work and support must go together."}
+    lines:
+      - {emma: "Some useful language. In my opinion.", focus: 0}
+      - {emma: "Reach the top.", focus: 1}
+      - {emma: "The discipline to work hard.", focus: 2}
+      - {emma: "Take somebody seriously.", focus: 3}
+      - {emma: "Push somebody to do well.", focus: 4}
+      - {emma: "And to finish: to sum up.", focus: 5}
+
+  - kind: timing
+    chapter: "Chia 40 phút"
+    heading: "Your turn · 40 minutes for at least 250 words"
+    heading_vi: "Gợi ý chia thời gian khi viết bài luận — tự bấm giờ, không đếm ngược trong video"
+    items:
+      - {label: "1. Read the task, highlight key words", minutes: 3, vi: "Đọc đề, gạch từ khóa"}
+      - {label: "2. Brainstorm points and examples", minutes: 5, vi: "Nghĩ ý và ví dụ"}
+      - {label: "3. Plan: four or five paragraphs", minutes: 4, vi: "Lập dàn ý 4–5 đoạn"}
+      - {label: "4. Write the composition", minutes: 23, vi: "Viết bài"}
+      - {label: "5. Check grammar, spelling, word count", minutes: 5, vi: "Soát ngữ pháp, chính tả, số từ"}
+    lines:
+      - emma: "Now it's your turn. Write your composition. Here's a plan for your time. Three minutes to read the task, five to brainstorm, four to plan."
+        vi: "Đến lượt bạn viết bài. Chia thời gian: 3 phút đọc đề, 5 phút nghĩ ý, 4 phút lập dàn ý."
+        focus: 2
+      - emma: "Twenty-three minutes to write, and five minutes to check. Pause the video, set a timer, and write."
+        vi: "23 phút viết, 5 phút soát lỗi. Tạm dừng video, tự bấm giờ và viết."
+        focus: 4
+        pause: 1.5
+      - tom: "Can I use the model composition?"
+        vi: "Mình dùng lại bài mẫu được không?"
+      - emma: "Use the structure and the useful phrases, but use your own ideas and your own examples. Then compare your composition with the model."
+        say: "Yooz the structure and the useful phrases, but yooz your own ideas and your own examples. Then compare your composition with the model."
+        vi: "Dùng bố cục và cụm từ hay, nhưng ý và ví dụ phải là của bạn. Viết xong thì so với bài mẫu."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Highlight the key words: talent alone, work hard, support", vi: "Gạch từ khóa của đề"}
+      - {en: "Plan: what some people think → my opinion → evidence → an example → To sum up", vi: "Dàn ý theo bài mẫu"}
+      - {en: "Use real examples: Michael Jordan, the child prodigy, your family", vi: "Dùng ví dụ thật"}
+      - {en: "At least 250 words in about 40 minutes in the real exam", vi: "Bài thi thật: ít nhất 250 từ, khoảng 40 phút"}
+    lines:
+      - {emma: "Let's review. Highlight the key words in the task.", focus: 0}
+      - {emma: "Plan your paragraphs: what some people think, your opinion, evidence, an example, and to sum up.", focus: 1}
+      - {emma: "Use real examples.", say: "Yooz real examples.", focus: 2}
+      - {tom: "And in the real exam: at least 250 words in about 40 minutes. Time to write!", say: "And in the real exam: at least two hundred and fifty words in about forty minutes. Time to write!", focus: 3}

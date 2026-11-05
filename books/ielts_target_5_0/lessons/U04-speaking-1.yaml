@@ -1,0 +1,240 @@
+# Video bài giảng Unit 4 · Speaking 1 + Vocabulary 1 (sách in trang 46). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-speaking-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Track 39 (sáu đoạn nói về người nổi tiếng, tên bị che bằng tiếng bíp) không
+# có file nghe: Mai, Jerry, Tom đọc lại đúng Tapescript (sách in trang 283), "beep" thay cho [BLEEP]. Answer key không có
+# Speaking 1C và Vocabulary 1A: đáp án suy ra từ Tapescript — 1C: 1 e, 2 d, 3 a, 4 b, 5 f, 6 c; 1A: powerful a, mental and
+# physical strength f, child prodigy c, courage f, creating something d, wealth a, overcome a difficulty b, had a big
+# influence e. Ghi chú thời sự (đợt 31): sách viết khi Margaret Thatcher (mất 2013) và Sheikh Khalifa (mất 2022) còn sống —
+# Emma dùng chuyện này để dạy present perfect / past simple ở Grammar check.
+# Hình trong sách (đợt 31): sáu ảnh tr. 46 (khung đỏ theo ảnh, nhãn là tên), danh sách từ Vocabulary 1A (khung đỏ theo từ,
+# nhãn là ảnh), khung Grammar check và Watch out. Không đếm ngược: Emma nhắc tạm dừng video.
+id: U04-speaking-1
+activity: U04-speaking-vocab
+title: "Unit 4 · Achievements"
+subtitle: "Speaking 1 & Vocabulary 1: talking about achievements"
+title_vi: "Nói về thành tựu qua sáu bức ảnh, từ vựng achievement và success, present perfect hay past simple"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello, and welcome to Unit 4: Achievements."
+        say: "Hello, and welcome to Unit four: Achievements."
+        vi: "Chào mừng bạn đến với Unit 4: Achievements (Thành tựu)."
+      - tom: "Achievements. Like getting five point five in IELTS!"
+        say: "Achievements. Like getting five point five in eye-elts!"
+        vi: "Thành tựu — như đạt 5.5 IELTS chẳng hạn!"
+      - emma: "Exactly. Today we talk about six famous people, learn words for achievement and success, and see when to use the present perfect and when to use the past simple."
+        vi: "Hôm nay: sáu người nổi tiếng, từ vựng về thành tựu, và khi nào dùng present perfect hay past simple."
+
+  - kind: figure
+    chapter: "Speaking 1A: sáu bức ảnh"
+    heading: "Speaking 1A · Think about achievement and success"
+    heading_vi: "Sáu ảnh tr. 46 — mỗi người đạt được điều gì? Nghĩ một phút về từng ảnh"
+    image: {pdf: course-book, page: 47, clip: [55, 215, 535, 490]}
+    items:
+      - {box: [57, 217, 208, 352], label: "a"}
+      - {box: [221, 217, 368, 352], label: "b"}
+      - {box: [381, 217, 531, 352], label: "c"}
+      - {box: [57, 356, 208, 488], label: "d"}
+      - {box: [221, 356, 368, 488], label: "e"}
+      - {box: [381, 356, 531, 488], label: "f"}
+    lines:
+      - emma: "Speaking 1, Exercise A. Look at the photos and think about achievement and success. What do you want to say about each photo? Pause the video and think for one minute."
+        say: "Speaking one, Exercise eigh. Look at the photos and think about achievement and success. What do you want to say about each photo? Pause the video and think for one minute."
+        vi: "Bài A: nhìn sáu ảnh, nghĩ về thành tựu và thành công. Tạm dừng video, nghĩ một phút."
+        pause: 1.5
+      - {emma: "Photo a: Sheikh Khalifa bin Zayed Al Nahyan.", say: "Photo eigh: Shake Kha-lee-fa bin Zay-ed al Nah-yahn.", focus: 0}
+      - {emma: "Photo b: Tanni Grey-Thompson, in a wheelchair race.", say: "Photo B: Tanny Grey-Tomson, in a wheelchair race.", focus: 1}
+      - {emma: "Photo c: a young boy, Ainan Celeste Cawley.", say: "Photo C: a young boy, Eye-nan Seh-lest Caw-lee.", focus: 2}
+      - {emma: "Photo d: Norman Foster.", say: "Photo D: Norman Foster.", focus: 3}
+      - {emma: "Photo e: Margaret Thatcher.", say: "Photo ee: Margaret Thatcher.", focus: 4}
+      - {emma: "And photo f: Roald Amundsen, with his dogs, in the snow.", say: "And photo F: Roo-al Ah-mun-sen, with his dogs, in the snow.", focus: 5}
+      - tom: "I know photo e. She was a famous politician in Britain. But I don't know the others."
+        focus: 4
+        vi: "Mình biết ảnh e — một chính trị gia nổi tiếng ở Anh. Những người khác thì mình chưa biết."
+      - emma: "That's fine. In the exam, you can talk about a photo without knowing the person. Look for clues: a wheelchair, a blackboard, a flag."
+        focus: 1
+        vi: "Không sao — trong bài thi, bạn có thể nói về ảnh mà không cần biết người đó. Hãy tìm manh mối: xe lăn, bảng đen, lá cờ."
+
+  - kind: match
+    chapter: "Speaking 1C: nghe và nối ảnh"
+    heading: "Speaking 1C · Listen and match each extract with a photo"
+    heading_vi: "Track 39 không có file — Mai, Jerry và Tom đọc lại; tên người bị che bằng tiếng \"beep\""
+    image: {pdf: course-book, page: 47, clip: [55, 215, 535, 490]}
+    hide_text: true
+    roles: {mai: "speaker", jerry: "speaker", tom: "speaker"}
+    items:
+      - {n: 1, q: "Extract 1", answer: e}
+      - {n: 2, q: "Extract 2", answer: d}
+      - {n: 3, q: "Extract 3", answer: a}
+      - {n: 4, q: "Extract 4", answer: b}
+      - {n: 5, q: "Extract 5", answer: f}
+      - {n: 6, q: "Extract 6", answer: c}
+    lines:
+      - emma: "Exercise C. Listen to some people talking. The recording isn't in our audio files, so Mai, Jerry and Tom read it for you. The names are hidden with a beep. Match each extract with one of the photos."
+        say: "Exercise C. Listen to some people talking. The recording isn't in our audio files, so My, Jerry and Tom read it for you. The names are hidden with a beep. Match each extract with one of the photos."
+        vi: "Bài C: Mai, Jerry và Tom đọc lại sáu đoạn (tên bị che). Nối mỗi đoạn với một ảnh."
+      - {mai: "Extract one. I want to talk about beep. I don't like everything about her, but to become the Prime Minister of Britain at that time was incredible.", focus: 0}
+      - {mai: "Not only was she the first woman to become the Prime Minister, but she was from a normal background. You know, she didn't come from a rich family or anything like that. She had a very big influence on the twenty-first century, certainly in Britain.", focus: 0}
+      - {jerry: "Extract two. Real achievement means creating something, leaving something for people to see in the future. Writers, artists and film-makers are important, but I think architects are special.", focus: 1}
+      - {jerry: "They leave something real, something that everyone can look at and use. Beep is probably the most important architect in the world at the moment. More people should know about him.", say: "They leave something real, something that everyone can look at and yooz. Beep is probably the most important architect in the world at the moment. More people should know about him.", focus: 1}
+      - {tom: "Extract three. Beep is the ruler of Abu Dhabi. He's one of the most powerful men in the Middle East and one of the richest in the world.", say: "Extract three. Beep is the ruler of Abu Dah-bee. He's one of the most powerful men in the Middle East and one of the richest in the world.", focus: 2}
+      - {tom: "He uses his wealth to help his country. He pays the best designers and architects to turn Abu Dhabi into a very important country.", say: "He yoozes his wealth to help his country. He pays the best designers and architects to turn Abu Dah-bee into a very important country.", focus: 2}
+      - {mai: "Extract four. Well, here's someone who has really overcome difficulties to succeed. Her name's beep.", focus: 3}
+      - {mai: "It's difficult for fully able people to succeed in sport. To do it when you have a physical disability like hers is just amazing. She's a superwoman.", focus: 3}
+      - {jerry: "Extract five. I'd like to say something about beep. He's the only one who's no longer alive. I think he died in the nineteen-twenties.", focus: 4}
+      - {jerry: "I think that what he achieved shows true courage. He had the mental strength to achieve his dream and the physical strength to succeed in terrible conditions.", focus: 4}
+      - {tom: "Extract six. This is a picture of the child prodigy, beep, from Singapore. I think he's only about six years old, but he's already passed exams.", focus: 5}
+      - {tom: "Now, he's studying Chemistry at a college. Achieving something like this at such a young age is just fantastic. What will he achieve by the time he's forty or fifty?", focus: 5}
+      - emma: "Which photo is each extract about? Pause the video and write your answers."
+        vi: "Mỗi đoạn nói về ảnh nào? Tạm dừng video và ghi đáp án."
+        pause: 1.5
+
+  - kind: figure
+    chapter: "Đáp án 1C và manh mối"
+    heading: "Speaking 1C · Answers: 1 e · 2 d · 3 a · 4 b · 5 f · 6 c"
+    heading_vi: "Manh mối trong từng đoạn — nghe từ khóa, không cần nghe tên"
+    image: {pdf: course-book, page: 47, clip: [55, 215, 535, 490]}
+    items:
+      - {box: [221, 356, 368, 488], label: "1 · Prime Minister"}
+      - {box: [57, 356, 208, 488], label: "2 · architect"}
+      - {box: [57, 217, 208, 352], label: "3 · ruler of Abu Dhabi"}
+      - {box: [221, 217, 368, 352], label: "4 · sport, disability"}
+      - {box: [381, 356, 531, 488], label: "5 · died in the 1920s"}
+      - {box: [381, 217, 531, 352], label: "6 · child prodigy"}
+    lines:
+      - {tom: "Extract one is photo e, Margaret Thatcher. The clue is: the first woman to become the Prime Minister of Britain.", say: "Extract one is photo ee, Margaret Thatcher. The clue is: the first woman to become the Prime Minister of Britain.", focus: 0}
+      - {tom: "Extract two is photo d, Norman Foster. He's an architect.", say: "Extract two is photo D, Norman Foster. He's an architect.", focus: 1}
+      - {tom: "Extract three is photo a. The ruler of Abu Dhabi.", say: "Extract three is photo eigh. The ruler of Abu Dah-bee.", focus: 2}
+      - {tom: "Extract four is photo b, Tanni Grey-Thompson. Sport, and a physical disability.", say: "Extract four is photo B, Tanny Grey-Tomson. Sport, and a physical disability.", focus: 3}
+      - {tom: "Extract five is photo f, Roald Amundsen. He died in the nineteen-twenties, and he succeeded in terrible conditions: the cold and the snow.", say: "Extract five is photo F, Roo-al Ah-mun-sen. He died in the nineteen-twenties, and he succeeded in terrible conditions: the cold and the snow.", focus: 4}
+      - {tom: "And extract six is photo c, Ainan. A child prodigy from Singapore.", say: "And extract six is photo C, Eye-nan. A child prodigy from Singapore.", focus: 5}
+      - emma: "Amundsen was an explorer. His team was the first to reach the South Pole, in 1911. And a child prodigy is a child who is very, very good at something, like Ainan with Chemistry."
+        say: "Ah-mun-sen was an explorer. His team was the first to reach the South Pole, in nineteen eleven. And a child prodigy is a child who is very, very good at something, like Eye-nan with Chemistry."
+        focus: 5
+        vi: "Amundsen là nhà thám hiểm, đội của ông đến Nam Cực đầu tiên năm 1911. child prodigy = thần đồng."
+
+  - kind: figure
+    chapter: "Vocabulary 1A: từ và ảnh"
+    heading: "Vocabulary 1A · Write the letter of the photo when you hear these words"
+    heading_vi: "Danh sách từ tr. 46 — nhãn đỏ là ảnh và câu trong Tapescript"
+    image: {pdf: course-book, page: 47, clip: [60, 609, 500, 657]}
+    items:
+      - {box: [68, 614, 142, 629], label: "a"}
+      - {box: [226, 614, 372, 629], label: "f"}
+      - {box: [396, 614, 492, 629], label: "c"}
+      - {box: [68, 628, 132, 642], label: "f"}
+      - {box: [226, 628, 348, 642], label: "d"}
+      - {box: [396, 628, 458, 642], label: "a"}
+      - {box: [68, 641, 202, 656], label: "b"}
+      - {box: [226, 641, 348, 656], label: "e"}
+    lines:
+      - emma: "Vocabulary 1, Exercise A. Look at these words and phrases. Which photo do they go with? Pause the video and try."
+        say: "Vocabulary one, Exercise eigh. Look at these words and phrases. Which photo do they go with? Pause the video and try."
+        vi: "Bài A: các từ này đi với ảnh nào? Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Powerful: photo a. He's one of the most powerful men in the Middle East.", say: "Powerful: photo eigh. He's one of the most powerful men in the Middle East.", focus: 0, vi: "powerful = quyền lực"}
+      - {tom: "Mental and physical strength: photo f, Amundsen.", say: "Mental and physical strength: photo F, Ah-mun-sen.", focus: 1, vi: "mental and physical strength = sức mạnh tinh thần và thể chất"}
+      - {tom: "Child prodigy: photo c, Ainan.", say: "Child prodigy: photo C, Eye-nan.", focus: 2, vi: "child prodigy = thần đồng"}
+      - {tom: "Courage: f again. What he achieved shows true courage.", say: "Courage: F again. What he achieved shows true courage.", focus: 3, vi: "courage = lòng dũng cảm"}
+      - {tom: "Creating something: photo d, the architect.", say: "Creating something: photo D, the architect.", focus: 4, vi: "creating something = tạo ra cái gì đó"}
+      - {tom: "Wealth: photo a. He uses his wealth to help his country.", say: "Wealth: photo eigh. He yoozes his wealth to help his country.", focus: 5, vi: "wealth = sự giàu có"}
+      - {tom: "Overcome a difficulty: photo b, Tanni Grey-Thompson.", say: "Overcome a difficulty: photo B, Tanny Grey-Tomson.", focus: 6, vi: "overcome a difficulty = vượt qua khó khăn"}
+      - {tom: "And had a big influence: photo e. She had a very big influence on the twenty-first century.", say: "And had a big influence: photo ee. She had a very big influence on the twenty-first century.", focus: 7, vi: "have an influence on = có ảnh hưởng đến"}
+      - emma: "Exercise B. Look at the tapescript on page 283 and see how these words are used. Notice: an influence on something, overcome difficulties to succeed."
+        say: "Exercise B. Look at the tapescript on page two hundred and eighty-three and see how these words are used. Notice: an influence on something, overcome difficulties to succeed."
+        focus: 7
+        vi: "Bài B: xem Tapescript trang 283 — chú ý influence on, overcome difficulties to succeed."
+
+  - kind: figure
+    chapter: "Grammar check: have achieved hay achieved?"
+    heading: "Grammar check · Present perfect or past simple?"
+    heading_vi: "Khung Grammar check và Watch out tr. 46"
+    image: {pdf: course-book, page: 47, clip: [60, 694, 553, 788]}
+    items:
+      - {box: [62, 698, 445, 757], label: "present perfect"}
+      - {box: [62, 756, 445, 786], label: "past simple"}
+      - {box: [408, 694, 551, 757], label: "typical errors"}
+    lines:
+      - emma: "Grammar check. We use the present perfect to talk about achievement if the person is still alive, or still achieving. He is only 30, but he has achieved a lot."
+        say: "Grammar check. We yooz the present perfect to talk about achievement if the person is still alive, or still achieving. He is only thirty, but he has achieved a lot."
+        focus: 0
+        vi: "Present perfect (has / have achieved): người đó còn sống hoặc vẫn đang đạt thêm thành tựu."
+      - {tom: "And about me: I haven't really achieved what I want yet.", focus: 0, vi: "Về mình: mình chưa thật sự đạt được điều mình muốn."}
+      - emma: "We use the past simple if the person is dead, or has stopped achieving. Gandhi achieved great things in his life. Pele achieved a great deal during his career."
+        say: "We yooz the past simple if the person is dead, or has stopped achieving. Gandhi achieved great things in his life. Pelay achieved a great deal during his career."
+        focus: 1
+        vi: "Past simple (achieved): người đã mất hoặc đã thôi sự nghiệp."
+      - emma: "Here's an interesting example. When this book was written, Margaret Thatcher and Sheikh Khalifa were alive. Thatcher died in 2013, and Sheikh Khalifa in 2022."
+        say: "Here's an interesting example. When this book was written, Margaret Thatcher and Shake Kha-lee-fa were alive. Thatcher died in twenty thirteen, and Shake Kha-lee-fa in twenty twenty-two."
+        focus: 1
+        vi: "Khi sách được viết, Thatcher và Sheikh Khalifa còn sống; bà Thatcher mất năm 2013, Sheikh Khalifa mất năm 2022."
+      - tom: "So now we use the past simple for them. Margaret Thatcher achieved a lot in her life."
+        focus: 1
+        vi: "Vậy giờ dùng past simple: Margaret Thatcher achieved a lot in her life."
+      - emma: "Exactly. And watch out for two typical errors. Not: I don't achieve what I want yet. And not: I don't have achieved. Say: I haven't achieved what I want yet."
+        focus: 2
+        vi: "Lỗi hay gặp: không nói I don't achieve / I don't have achieved — nói I haven't achieved what I want yet."
+
+  - kind: letter
+    chapter: "Speaking 1B: nói về một ảnh"
+    heading: "Speaking 1B · Tom talks about photo b"
+    heading_vi: "Bài nói mẫu khoảng một phút — dùng từ của Vocabulary 1"
+    roles: {tom: candidate}
+    items:
+      - {text: "I'd like to talk about photo b. This woman is Tanni Grey-Thompson, a wheelchair racer from Britain.", note: "who"}
+      - {text: "She has a physical disability, but she has overcome a lot of difficulties to succeed in sport.", note: "overcome difficulties"}
+      - {text: "I think she has great mental and physical strength, and a lot of courage.", note: "strength, courage"}
+      - {text: "She has won many races, and she has had a big influence on other disabled people. She shows them that they can achieve their dreams too.", note: "present perfect"}
+    lines:
+      - emma: "Exercise B. Take turns to choose a photo and talk about it. Here's Tom."
+        say: "Exercise B. Take turns to choose a photo and talk about it. Here's Tom."
+        vi: "Bài B: lần lượt chọn một ảnh và nói về nó. Nghe Tom."
+      - {read: tom, focus: 0, say: "I'd like to talk about photo B. This woman is Tanny Grey-Tomson, a wheelchair racer from Britain."}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - emma: "Good. Tom uses the present perfect, has overcome, has won, has had, because she's still alive. And he uses the new words: overcome difficulties, strength, courage, influence."
+        say: "Good. Tom yoozes the present perfect, has overcome, has won, has had, because she's still alive. And he yoozes the new words: overcome difficulties, strength, courage, influence."
+        vi: "Tom dùng present perfect (người còn sống) và từ mới của bài."
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Choose a photo and talk for one minute"
+    heading_vi: "Tạm dừng video, nói khoảng một phút về một ảnh — dùng gợi ý"
+    items:
+      - {q: "Photo a or e: who is this person, and why are they powerful?", hint: "powerful · wealth · had a big influence on …"}
+      - {q: "Photo c: what has Ainan achieved?", hint: "child prodigy · has already passed exams"}
+      - {q: "Photo d: why are architects special?", hint: "creating something · leave something for people"}
+      - {q: "Photo f: what did Amundsen achieve?", hint: "courage · mental and physical strength · achieved"}
+    lines:
+      - emma: "Your turn. Choose one photo and talk about it for about one minute. Pause the video, and talk out loud. Here are some ideas."
+        vi: "Đến lượt bạn: chọn một ảnh, nói khoảng một phút. Tạm dừng video và nói thành tiếng."
+      - {emma: "Photo a or e: who is this person, and why are they powerful?", focus: 0, pause: 0.5}
+      - {emma: "Photo c: what has Ainan achieved?", say: "Photo C: what has Eye-nan achieved?", focus: 1, pause: 0.5}
+      - {emma: "Photo d: why are architects special?", say: "Photo D: why are architects special?", focus: 2, pause: 0.5}
+      - {emma: "Photo f: what did Amundsen achieve?", say: "Photo F: what did Ah-mun-sen achieve?", focus: 3, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1C: 1 e · 2 d · 3 a · 4 b · 5 f · 6 c", vi: "Nghe manh mối, không cần nghe tên"}
+      - {en: "powerful · wealth · courage · strength · child prodigy", vi: "Từ vựng thành tựu"}
+      - {en: "overcome a difficulty · have an influence on · create something", vi: "Cụm từ đi cùng"}
+      - {en: "She has achieved a lot. (alive) · He achieved a lot. (dead)", vi: "Present perfect hay past simple"}
+      - {en: "I haven't achieved what I want yet.", vi: "Không nói: I don't have achieved"}
+    lines:
+      - {emma: "Let's review. In Exercise C, listen for clues, not names.", focus: 0}
+      - {emma: "New words: powerful, wealth, courage, strength, child prodigy.", focus: 1}
+      - {emma: "Phrases: overcome a difficulty, have an influence on something.", focus: 2}
+      - {emma: "Present perfect for people who are alive, past simple for people who are dead.", focus: 3}
+      - {tom: "And: I haven't achieved what I want yet. But I will!", focus: 4}

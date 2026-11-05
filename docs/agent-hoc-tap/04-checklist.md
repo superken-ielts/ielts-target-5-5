@@ -372,6 +372,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - Lệnh `lesson_video phonemes`: soát cách Kokoro đọc, ⚠ ba lỗi đã gặp (động từ use, live, read). Sửa `use` → `yooz` ở 13 câu; dựng lại `U00-personal-info`, `U01-target`.
   - *Đợt 22:* **Unit 3 — 4 video (27:44)**: `U03-lesson-1` (Reading · Happiness is …: free time, pronouns, don't / doesn't), `U03-lesson-2` (Listening · Do you like New Year? always / often, do / does questions), `U03-target` (Speaking · Invite someone out), `U03-explore` (Explore Speaking · go, conversation topics, phone messages); phát audio gốc 1.31–1.42 (1.33, 1.36, 1.39 thiếu: xem sổ tay mục 6.5). Xong phần đã hẹn: Intro và Unit 1–3, 15 video.
     - E2E: thẻ A2 có 15 video; Unit 3 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
+  - *Đợt 31:* **Unit 4 — 4 video (32:45), có hình trong sách** (P2-65): `U04-lesson-1` (Reading · Technology firsts), `U04-lesson-2` (Listening · Sang-mi's business trip), `U04-target` (Speaking · Talk about an important event), `U04-explore` (Explore Writing · have, an email giving news); phát audio gốc 1.45–1.53 (1.51 thiếu: Emma đọc, chấm trọng âm xem trên hình).
+    - E2E: thẻ A2 có 19 video; Unit 4 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
     - E2E: thẻ A2 có 11 video; Intro, Unit 1, Unit 2 có nút video 5–10 phút theo thứ tự phiên.
 - [x] **P2-54** **GENKI Unit 0 làm lại: 19 video ngắn, chữ sáng theo chỗ đang đọc** (19 video, 1:10:43), theo góp ý của người học: chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, cả đoạn hiện một lúc nên không biết đang đọc tới đâu, không nói bài học để làm gì. Chi tiết: file 07 mục 4.
   - 19 video 2–5 phút thay 5 video 6–8 phút: Start here (Unit 0 học gì, để làm gì, cách xem video), Hiragana 1–9 (nguyên âm, từng cặp hàng, luyện tập, ゛゜, âm ghép, っ và trường âm), Katakana 1–4 (hàng ア–ホ, hàng マ–ン và cả bảng, dấu và ー, từ mượn và chữ Hán), Greetings 1–3 (câu chào, tạm biệt – ở nhà – bữa ăn – gặp lần đầu, luyện 10 tình huống), Numbers 1–2. Mỗi video mở đầu bằng "học gì, để làm gì".
@@ -397,6 +399,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Hồ sơ nhân vật thêm phần công việc; bảng chủ đề, thẻ đề đã dùng thêm Unit 3 (file 06 mục 9.4–9.6).
   - Test: hồi quy "cảnh practice của Unit 2–3 không đếm ngược, Unit 1–3 mỗi unit 4 video luyện nói". Node: nhóm Speaking & Vocabulary của Unit 3 có 6 video đúng thứ tự. E2E: Unit 3 có 15 video, nút Speaking practice 4 mở phiên Speaking & Vocabulary với 6 video đúng thứ tự.
 - [ ] **P2-57** Video luyện nói thêm cho Unit 4 trở đi, theo khuôn file 06 mục 9 (gợi ý Unit 4 ở mục 9.6). Muốn thì bỏ thêm đếm ngược ở "Đến lượt bạn" của Unit 1 (Speaking 1–2, Consolidation).
+  - *Đợt 31:* video sách Unit 4 đã đủ (P2-65); 4 video luyện nói thêm Unit 4 vẫn chưa làm.
 - [x] **P2-58** **Oxford Word Skills Basic trong tab Sách, video Unit 1–7** (đợt 26), theo yêu cầu người học. Đây là sách từ vựng A1–A2 học song song với giáo trình chính; mỗi video 7–10 phút, không đếm ngược, có 1–2 phần luyện nói theo chủ đề của unit. Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md).
   - **92 phiên 30 phút**, 19 tuần ở nhịp 5 phiên/tuần:
     - Starter unit;
@@ -449,6 +452,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - 16 cảnh có hình, khung đỏ theo chỗ đang giảng: bảng số, đồng hồ, bảng giờ trong ngày, bảng ngày – tháng, ảnh bốn mùa, bảng quốc tịch, bản đồ Anh và Ireland, bản đồ châu Âu (bài 3 Unit 4), tranh lớp học, câu có nhãn loại từ, bảng hỏi – đáp về từ.
   - Nội dung bài giảng giữ nguyên. Unit 3 tách cảnh "Thứ, tháng, mùa" thành bảng và ảnh bốn mùa; câu ở cảnh `figure` thêm nghĩa tiếng Việt (`vi`) vì cảnh này không còn danh sách từ.
   - Dựng lại 7 video, vẫn 7–8 phút. Test: mọi unit Oxford (1–16) có ít nhất một cảnh có hình.
+- [x] **P2-65** **Video Unit 4 có hình trong sách: IELTS Target 5.0 (11 video) và Giai đoạn 0 · English Unlimited A2 (4 video)** (đợt 31), theo yêu cầu người học: "apply giống cho unit tiếp theo của sách IELTS Target 5.0 và sách A2". Chi tiết: [06-video-bai-giang.md](06-video-bai-giang.md) mục 3a, 4, 8; [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) mục 6.
+  - IELTS Unit 4 · Achievements: đủ sáu phần có trang trong Course Book (Speaking & Vocabulary 2, Listening 2, Reading 2, Writing 2, Consolidation, Exam practice 2). Phát Track 41, 43 (mốc theo lời chép bằng `transcribe`); Track 39, 40, 44, 46 không có file nên các giọng đọc lại Tapescript.
+  - A2 Unit 4 · Changes: bài 4.1, 4.2, Target activity, Explore, như Unit 1–3.
+  - Mọi video có hình cắt từ trang sách (ảnh, bài đọc, Tapescript, Answer key, email), khung đỏ theo chỗ đang giảng, nhãn đỏ thường là đáp án. Trang nhiều chữ cắt thành dải cho chữ đủ to.
+  - Test: video Unit 4 của hai sách có cảnh hình với `box`, không `wait` / `echo`; độ phủ Unit 1–4 của IELTS; e2e: Unit 4 IELTS có 11 nút video và nút Exam practice mở đúng phiên, thẻ A2 có 19 video.
+  - Còn: 4 video luyện nói thêm Unit 4 (P2-57).
 
 ### Cổng G2
 

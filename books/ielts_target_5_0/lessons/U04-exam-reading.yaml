@@ -1,0 +1,196 @@
+# Video bài giảng Unit 4 · Exam practice: Reading (sách in trang 56–57). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-exam-reading.yaml
+# Cách viết: xem đầu file U03-exam-reading.yaml. Answer key không có trang này — đáp án suy ra từ quảng cáo, kèm câu bằng
+# chứng: 1 D, 2 B, 3 C; 4 B, 5 E, 6 A, 7 C; 8 T, 9 NG, 10 T, 11 F, 12 NG (bài chỉ nói "fight a round", "try to return a few
+# serves", không nói thắng), 13 F, 14 T.
+# Hình trong sách (đợt 31): ba ảnh tr. 56 (khung đỏ theo ảnh, nhãn là mục), quảng cáo "London History Museum" tr. 57 cắt
+# ba phần (khung đỏ theo mục A–E khi đọc, rồi theo câu bằng chứng), câu 4–7 và 8–14 tr. 56. Không đếm ngược.
+id: U04-exam-reading
+activity: U04-exam-practice
+title: "Unit 4 · Achievements"
+subtitle: "Exam practice: Reading"
+title_vi: "Quảng cáo triển lãm về thành tựu của con người — nối ảnh với mục, tìm mục chứa thông tin, 7 câu T / F / NG"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Exam practice: Reading for Unit 4. You'll read an advertisement for an exhibition in London, and answer fourteen questions."
+        say: "Welcome to Exam practice: Reading for Unit four. You'll read an advertisement for an exhibition in London, and answer fourteen questions."
+        vi: "Luyện đề Đọc: một quảng cáo triển lãm ở London, 14 câu hỏi."
+      - emma: "Three kinds of question: matching pictures, finding the section with the information, and true, false or not given."
+        vi: "Ba dạng: nối ảnh, tìm mục chứa thông tin, và T / F / NG."
+      - tom: "Section letters this time, not paragraphs. OK!"
+        vi: "Lần này là các mục A–E. Được rồi!"
+
+  - kind: figure
+    chapter: "Đọc quảng cáo: mục A–B"
+    heading: "London History Museum · Human Achievement on Film (A–B)"
+    heading_vi: "Quảng cáo tr. 57 — đọc lướt: mỗi mục nói về gì?"
+    image: {pdf: course-book, page: 58, clip: [60, 160, 520, 316]}
+    items:
+      - {box: [64, 178, 516, 242], label: "A"}
+      - {box: [64, 244, 516, 314], label: "B · World leaders"}
+    lines:
+      - emma: "Read the advertisement first. Skim it: what is each section about? Section A."
+        focus: 0
+        vi: "Đọc lướt quảng cáo: mỗi mục nói về điều gì? Mục A."
+      - {tom: "Human Achievement on Film is an exhibition you cannot miss. See photographs and film of Man's greatest achievements.", focus: 0}
+      - {tom: "From the earliest film of the nineteenth century to the wonders of digital photography, satellite TV and virtual reality, you will be taken on a tour of the events that have changed our world.", focus: 0}
+      - {tom: "You can experience for yourself amazing and terrifying moments of success and failure. You will be part of history.", focus: 0}
+      - {emma: "Section B: World leaders.", focus: 1}
+      - {tom: "See thousands of the best-loved photographs of the people who have steered us through history. Relive the events that have put us where we are now.", focus: 1}
+      - {tom: "Watch previously unseen film of Queen Victoria, Martin Luther King and Lenin, and learn about the techniques that great speakers use to inspire us.", say: "Watch previously unseen film of Queen Victoria, Martin Luther King and Lenin, and learn about the techniques that great speakers yooz to inspire us.", focus: 1}
+      - {tom: "Then step into a virtual world and make a speech to an audience of millions!", focus: 1}
+
+  - kind: figure
+    chapter: "Đọc quảng cáo: mục C–E"
+    heading: "London History Museum · Human Achievement on Film (C–D)"
+    heading_vi: "Quảng cáo tr. 57 — Science and invention, Sport"
+    image: {pdf: course-book, page: 58, clip: [60, 316, 520, 446]}
+    items:
+      - {box: [64, 318, 516, 379], label: "C · Science and invention"}
+      - {box: [64, 382, 516, 444], label: "D · Sport"}
+    lines:
+      - {emma: "Section C: Science and invention.", focus: 0}
+      - {tom: "Enjoy a journey through 120 years of scientific achievement. See photographic collections from Alaska to Australia! Enjoy some wonderful moments captured on film.", say: "Enjoy a journey through a hundred and twenty years of scientific achievement. See photographic collections from Alaska to Australia! Enjoy some wonderful moments captured on film.", focus: 0}
+      - {tom: "Watch the earliest clips of Man's attempts to fly, and then experience failure for yourself as you crash one of the first gliders! Then take those first legendary steps on the Moon in your very own spacesuit!", focus: 0}
+      - {emma: "Section D: Sport.", focus: 1}
+      - {tom: "See the photographs and film that inspire every hopeful athlete. Wonder at the earliest Olympic images and celebrate the goals from the World Cups of yesterday.", focus: 1}
+      - {tom: "Experience the joy of winning and the heartbreak of losing. Climb into the ring and fight a round with Muhammad Ali, or grab a racket and try to return a few of Roger Federer's serves!", say: "Experience the joy of winning and the heartbreak of losing. Climb into the ring and fight a round with Mohammed Ali, or grab a racket and try to return a few of Roger Federer's serves!", focus: 1}
+
+  - kind: figure
+    heading: "London History Museum · Human Achievement on Film (E, prices)"
+    heading_vi: "Quảng cáo tr. 57 — And more, giờ mở cửa và giá vé"
+    image: {pdf: course-book, page: 58, clip: [60, 444, 520, 562]}
+    items:
+      - {box: [64, 447, 516, 496], label: "E · And more"}
+      - {box: [64, 546, 516, 560], label: "prices"}
+    lines:
+      - {emma: "Section E: And more.", focus: 0}
+      - {tom: "Enjoy images and exhibits celebrating every area of human achievement. Exploration, discovery, architecture, engineering, medicine, art and literature and much more. It's all here.", focus: 0}
+      - {tom: "Museum open daily from 9 a.m. to 6 p.m. Adults £6.50. Children £3.00. Under-fives free.", say: "Museum open daily from nine eigh em to six pee em. Adults six pounds fifty. Children three pounds. Under-fives free.", focus: 1}
+
+  - kind: figure
+    chapter: "Câu 1–3: nối ảnh với mục"
+    heading: "Questions 1–3 · Match the pictures to the sections · 1 D · 2 B · 3 C"
+    heading_vi: "Ba ảnh tr. 56 — ảnh a, b, c thuộc mục nào của quảng cáo?"
+    image: {pdf: course-book, page: 57, clip: [58, 254, 532, 370]}
+    items:
+      - {box: [60, 256, 208, 368], label: "1 · D Sport"}
+      - {box: [222, 256, 368, 368], label: "2 · B World leaders"}
+      - {box: [382, 256, 530, 368], label: "3 · C Science and invention"}
+    lines:
+      - emma: "For questions 1 to 3, match the pictures to the appropriate section of the text. Pause the video and try."
+        say: "For questions one to three, match the pictures to the appropriate section of the text. Pause the video and try."
+        vi: "Câu 1–3: nối ảnh với mục phù hợp. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Picture a: athletes with medals. The earliest Olympic images. That's section D, Sport.", say: "Picture eigh: athletes with medals. The earliest Olympic images. That's section dee, Sport.", focus: 0}
+      - {tom: "Picture b: a politician making a speech. Section B, World leaders: the techniques that great speakers use.", say: "Picture B: a politician making a speech. Section B, World leaders: the techniques that great speakers yooz.", focus: 1}
+      - {tom: "Picture c: a man on the Moon. Section C, Science and invention: the first legendary steps on the Moon.", say: "Picture C: a man on the Moon. Section C, Science and invention: the first legendary steps on the Moon.", focus: 2}
+
+  - kind: figure
+    chapter: "Câu 4–7: mục nào?"
+    heading: "Questions 4–7 · Which section contains the information? · 4 B · 5 E · 6 A · 7 C"
+    heading_vi: "Bốn câu tr. 56 — thông tin được diễn đạt bằng từ khác (paraphrase)"
+    image: {pdf: course-book, page: 57, clip: [58, 380, 470, 462]}
+    items:
+      - {box: [62, 407, 420, 420], label: "B · previously unseen film"}
+      - {box: [62, 420, 420, 433], label: "E · every area of human achievement"}
+      - {box: [62, 433, 420, 447], label: "A · earliest film … virtual reality"}
+      - {box: [62, 447, 420, 460], label: "C · from Alaska to Australia"}
+    lines:
+      - emma: "For questions 4 to 7, identify which section contains the following information. Pause the video and try."
+        say: "For questions four to seven, identify which section contains the following information. Pause the video and try."
+        vi: "Câu 4–7: thông tin nằm ở mục nào? Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Four: people have not seen some of the film ever before. B: previously unseen film of Queen Victoria.", focus: 0, vi: "previously unseen = chưa từng được xem"}
+      - {tom: "Five: many different types of achievement. E: every area of human achievement.", focus: 1}
+      - {tom: "Six: very old and very modern technology. A: from the earliest film of the nineteenth century to virtual reality.", focus: 2}
+      - {tom: "Seven: things from all over the world. C: photographic collections from Alaska to Australia.", focus: 3}
+      - emma: "Notice: the questions never use the same words as the text. Have not seen ever before means previously unseen. All over the world means from Alaska to Australia."
+        focus: 3
+        vi: "Câu hỏi luôn dùng từ khác với bài: have not seen ever before = previously unseen; all over the world = from Alaska to Australia."
+
+  - kind: figure
+    chapter: "Câu 8–14: T / F / NG"
+    heading: "Questions 8–14 · Write (T) true, (F) false or (NG) not given"
+    heading_vi: "Bảy câu tr. 56 — nhãn đỏ là đáp án (suy ra)"
+    image: {pdf: course-book, page: 57, clip: [58, 508, 470, 606]}
+    items:
+      - {box: [62, 510, 420, 523], label: "8 T"}
+      - {box: [62, 524, 420, 538], label: "9 NG"}
+      - {box: [62, 538, 420, 551], label: "10 T"}
+      - {box: [62, 551, 420, 565], label: "11 F"}
+      - {box: [62, 565, 420, 578], label: "12 NG"}
+      - {box: [62, 578, 420, 592], label: "13 F"}
+      - {box: [62, 592, 420, 605], label: "14 T"}
+    lines:
+      - emma: "For questions 8 to 14, decide if the information agrees with the advertisement. Write T, F or NG. Pause the video and try."
+        say: "For questions eight to fourteen, decide if the information agrees with the advertisement. Write tee, ef, or en gee. Pause the video and try."
+        vi: "Câu 8–14: T / F / NG. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Eight: you can relive both positive and negative experiences. True. Amazing and terrifying moments of success and failure.", focus: 0}
+      - emma: "Nine: some famous world leaders have been to the exhibition. Not given. You can watch film of world leaders, but the text doesn't say they visited."
+        focus: 1
+        vi: "9 NG: có phim về các nhà lãnh đạo, nhưng không nói họ đến xem triển lãm."
+      - {tom: "Ten: you can experience walking on the Moon. True. Take those first legendary steps on the Moon in your very own spacesuit.", focus: 2}
+      - {tom: "Eleven: the World Cup goals have all been filmed recently. False. The goals from the World Cups of yesterday.", focus: 3, vi: "of yesterday = của ngày xưa → không phải mới quay."}
+      - emma: "Twelve: you can beat a famous boxer and a famous tennis player. Careful! You can fight a round with Muhammad Ali, and try to return Federer's serves. But the text doesn't say you can beat them. Not given."
+        say: "Twelve: you can beat a famous boxer and a famous tennis player. Careful! You can fight a round with Mohammed Ali, and try to return Federer's serves. But the text doesn't say you can beat them. Not given."
+        focus: 4
+        vi: "12 NG: được đấu một hiệp với Ali, thử đỡ giao bóng của Federer — nhưng không nói bạn thắng được."
+      - {tom: "Thirteen: there is nothing for people who like painting and books. False. Section E: art and literature.", focus: 5}
+      - {tom: "Fourteen: there is no need to pay for small children. True. Under-fives free.", focus: 6}
+
+  - kind: figure
+    chapter: "Câu bằng chứng"
+    heading: "Evidence for questions 10–12"
+    heading_vi: "Khung đỏ là câu bằng chứng trong quảng cáo"
+    image: {pdf: course-book, page: 58, clip: [60, 316, 520, 450]}
+    items:
+      - {box: [64, 362, 516, 379], label: "10 T · steps on the Moon"}
+      - {box: [64, 393, 516, 418], label: "11 F · World Cups of yesterday"}
+      - {box: [64, 418, 516, 444], label: "12 NG · fight a round, try to return"}
+    lines:
+      - {emma: "Let's check the evidence. Question 10: take those first legendary steps on the Moon in your very own spacesuit.", say: "Let's check the evidence. Question ten: take those first legendary steps on the Moon in your very own spacesuit.", focus: 0}
+      - {emma: "Question 11: the goals from the World Cups of yesterday. Yesterday here means the past, not recently.", say: "Question eleven: the goals from the World Cups of yesterday. Yesterday here means the past, not recently.", focus: 1}
+      - {emma: "Question 12: fight a round, try to return a few serves. Trying is not winning.", say: "Question twelve: fight a round, try to return a few serves. Trying is not winning.", focus: 2}
+
+  - kind: vocab
+    chapter: "Từ vựng trong quảng cáo"
+    heading: "Useful words from the advertisement"
+    heading_vi: "Từ trong bài đọc — dùng được khi nói và viết về thành tựu"
+    items:
+      - {w: "an exhibition", pos: "n", vi: "cuộc triển lãm", ex: "Human Achievement on Film is an exhibition you cannot miss."}
+      - {w: "relive", pos: "v", vi: "sống lại, trải nghiệm lại", ex: "Relive the events that have put us where we are now."}
+      - {w: "previously unseen", pos: "adj", vi: "chưa từng được công bố, chưa ai xem", ex: "Watch previously unseen film of Queen Victoria."}
+      - {w: "inspire", pos: "v", vi: "truyền cảm hứng", ex: "the techniques that great speakers use to inspire us"}
+      - {w: "legendary", pos: "adj", vi: "huyền thoại, nổi tiếng", ex: "those first legendary steps on the Moon"}
+      - {w: "unmissable", pos: "adj", vi: "không thể bỏ lỡ", ex: "An unmissable experience!"}
+    lines:
+      - {emma: "Some useful words from the text. An exhibition.", focus: 0}
+      - {emma: "Relive: experience something again.", focus: 1}
+      - {emma: "Previously unseen: nobody has seen it before.", focus: 2}
+      - {emma: "Inspire: make people want to do something great.", focus: 3}
+      - {emma: "Legendary: very famous.", focus: 4}
+      - {emma: "And unmissable: you must not miss it.", focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 D · 2 B · 3 C · 4 B · 5 E · 6 A · 7 C", vi: "Nối ảnh, tìm mục"}
+      - {en: "8 T · 9 NG · 10 T · 11 F · 12 NG · 13 F · 14 T", vi: "T / F / NG"}
+      - {en: "Skim the sections first, then scan for the details", vi: "Đọc lướt các mục trước, rồi dò chi tiết"}
+      - {en: "try to ≠ beat · of yesterday ≠ recently", vi: "Chú ý nghĩa chính xác"}
+    lines:
+      - {emma: "Let's review. Pictures and sections: D, B, C, then B, E, A, C.", say: "Let's review. Pictures and sections: dee, B, C, then B, ee, eigh, C.", focus: 0}
+      - {emma: "True, not given, true, false, not given, false, true.", focus: 1}
+      - {emma: "Skim the sections first, then scan for the details.", focus: 2}
+      - {tom: "And read exactly: trying is not winning!", focus: 3}

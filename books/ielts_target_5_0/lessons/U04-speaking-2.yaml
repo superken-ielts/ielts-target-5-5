@@ -1,0 +1,262 @@
+# Video bài giảng Unit 4 · Vocabulary 2 + Speaking 2–3 (sách in trang 47). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-speaking-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml. Track 40 (Pronunciation check) không có file: Emma đọc bảy câu theo
+# Tapescript (sách in trang 284). Answer key không có trang này: Vocabulary 2A gạch an achievement (have), a difficulty
+# (achieve), an ambition (overcome) — suy ra theo từ điển; Speaking 3A tùy người học.
+# Bài nói mẫu Phần 2 ("Who do you know who has achieved something special?"): Tom kể về mẹ — mở cửa hàng hoa ở Đà Lạt từ
+# hơn hai mươi năm trước (khớp hồ sơ file 06 mục 9.4: mẹ có cửa hàng hoa; mẹ tên Hạnh, 50 tuổi — file 09 mục 5.7). Chi
+# tiết mới: bắt đầu bằng một sạp nhỏ ở chợ Đà Lạt, nay có ba nhân viên và gửi hoa vào TP. Hồ Chí Minh.
+# Hình trong sách (đợt 31): danh sách collocation 2A (khung đỏ theo dòng, nhãn là từ cần gạch), khung Pronunciation check
+# (khung đỏ theo câu), thẻ đề Phần 2 (khung đỏ theo ý), Exam tip và câu hỏi Speaking 3A. Không đếm ngược.
+id: U04-speaking-2
+activity: U04-speaking-vocab
+title: "Unit 4 · Achievements"
+subtitle: "Speaking 2: saying who you think is successful, part 3 discussion"
+title_vi: "Collocation với have / achieve / overcome, đọc rút gọn haven't / has he, thẻ đề Phần 2 và thảo luận Phần 3"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 4. In this video: words that go together, how we say haven't and has he in natural speech, and then parts 2 and 3 of the Speaking test."
+        say: "Welcome back to Unit four. In this video: words that go together, how we say haven't and has he in natural speech, and then parts two and three of the Speaking test."
+        vi: "Video này: từ đi cùng nhau (collocation), cách đọc rút gọn, rồi Phần 2 và Phần 3 bài thi Nói."
+      - tom: "Part 3 is the difficult part for me. The questions are very general."
+        say: "Part three is the difficult part for me. The questions are very general."
+        vi: "Phần 3 là phần khó với mình — câu hỏi rất chung chung."
+
+  - kind: figure
+    chapter: "Vocabulary 2A: gạch từ sai"
+    heading: "Vocabulary 2A · In each list, one option is wrong. Cross it out"
+    heading_vi: "Danh sách tr. 47 — nhãn đỏ là cụm KHÔNG đi với động từ đó"
+    image: {pdf: course-book, page: 48, clip: [58, 97, 450, 141]}
+    items:
+      - {box: [62, 100, 448, 114], label: "not: have an achievement"}
+      - {box: [62, 111, 448, 125], label: "not: achieve a difficulty"}
+      - {box: [62, 125, 448, 139], label: "not: overcome an ambition"}
+    lines:
+      - emma: "Vocabulary 2. In each list of collocations, one option is wrong. Use a dictionary and cross it out. Pause the video and try."
+        say: "Vocabulary two. In each list of collocations, one option is wrong. Yooz a dictionary and cross it out. Pause the video and try."
+        vi: "Mỗi dòng có một cụm sai. Tra từ điển và gạch đi. Tạm dừng video và làm."
+        pause: 1.5
+      - tom: "One: have. We can say have success, have an influence on something, and have a few difficulties. But not have an achievement."
+        focus: 0
+        vi: "have success, have an influence on, have a few difficulties — nhưng không nói have an achievement."
+      - emma: "Right. We make an achievement, or we achieve something."
+        focus: 0
+        vi: "Đúng — ta nói make an achievement hoặc achieve something."
+      - tom: "Two: achieve. Achieve an ambition, achieve a lot in life, achieve a great deal. But not achieve a difficulty."
+        focus: 1
+        vi: "achieve an ambition / a lot in life / a great deal — không nói achieve a difficulty."
+      - tom: "Three: overcome. Overcome a difficulty, an obstacle, a disability. But not overcome an ambition."
+        focus: 2
+        vi: "overcome a difficulty / an obstacle / a disability — không nói overcome an ambition."
+      - emma: "Good. An ambition is something you want to achieve. A difficulty or an obstacle is something you overcome. So there are nine good expressions. Exercise B: close the book and write five of them in your notebook."
+        say: "Good. An ambition is something you want to achieve. A difficulty or an obstacle is something you overcome. So there are nine good expressions. Exercise B: cloze the book and write five of them in your notebook."
+        vi: "ambition = hoài bão (để achieve); difficulty, obstacle = trở ngại (để overcome). Còn 9 cụm đúng — bài B: gấp sách, viết lại 5 cụm."
+
+  - kind: figure
+    chapter: "Pronunciation check: haven't, has he"
+    heading: "Pronunciation check · Contractions and weak forms"
+    heading_vi: "Khung tr. 47 — Track 40 không có file, Emma đọc. Nghe cách nói rút gọn trong câu tự nhiên"
+    image: {pdf: course-book, page: 48, clip: [58, 190, 445, 322]}
+    items:
+      - {box: [62, 209, 214, 223], label: "I've"}
+      - {box: [214, 209, 378, 223], label: "He's"}
+      - {box: [62, 244, 244, 258], label: "haven't /hævnt/"}
+      - {box: [244, 244, 402, 258], label: "hasn't /hæznt/"}
+      - {box: [62, 280, 250, 294], label: "have you /hævjuː/"}
+      - {box: [250, 280, 434, 294], label: "has he /hæz iː/"}
+      - {box: [62, 291, 190, 305], label: "has she /hæz ʃiː/"}
+    lines:
+      - emma: "Pronunciation check. The recording isn't in our audio files, so listen to me. First, contractions."
+        vi: "Không có audio Track 40 — Emma đọc. Trước hết là dạng rút gọn."
+      - {emma: "I've achieved a lot this year.", focus: 0, vi: "I've = I have"}
+      - {emma: "He's overcome many difficulties.", focus: 1, vi: "He's = He has (không phải He is!)"}
+      - emma: "Careful: here he's means he has, not he is. He has overcome."
+        focus: 1
+        vi: "Chú ý: He's ở đây = He has."
+      - {emma: "Now the negative forms, haven't and hasn't. I haven't achieved what I wanted to.", focus: 2}
+      - {emma: "She hasn't done everything yet.", focus: 3}
+      - {emma: "Now listen to have you, has he and has she in questions. Have you achieved all that you hoped?", focus: 4}
+      - {emma: "Has he done what he wanted to do?", focus: 5}
+      - {emma: "Has she been successful?", focus: 6}
+      - emma: "In fast speech, have you sounds like havyou, and the h in he almost disappears: has he sounds like hazee. Pause the video and practise saying all the sentences."
+        say: "In fast speech, have you sounds like havyou, and the H in he almost disappears: has he sounds like hazee. Pause the video and practise saying all the sentences."
+        focus: 5
+        vi: "Nói nhanh: have you nghe như /hævjuː/, has he nghe như /hæziː/ (âm h gần như mất). Tạm dừng video, luyện đọc cả bảy câu."
+        pause: 1.5
+
+  - kind: figure
+    chapter: "Speaking 2A: thẻ đề Phần 2"
+    heading: "Speaking 2A · Look at the card for part 2"
+    heading_vi: "Thẻ đề tr. 47 — có một phút để nghĩ và ghi chú"
+    image: {pdf: course-book, page: 48, clip: [70, 395, 292, 512]}
+    items:
+      - {box: [76, 398, 272, 432], label: "the question"}
+      - {box: [96, 441, 228, 455], label: "1"}
+      - {box: [96, 452, 242, 466], label: "2"}
+      - {box: [96, 463, 264, 478], label: "3"}
+      - {box: [96, 475, 282, 502], label: "4"}
+    lines:
+      - emma: "Speaking 2. Look at the card for part 2 of the Speaking Module. Who do you know who has achieved something special?"
+        say: "Speaking two. Look at the card for part two of the Speaking Module. Who do you know who has achieved something special?"
+        focus: 0
+        vi: "Thẻ đề Phần 2: Bạn biết ai đã đạt được điều gì đặc biệt?"
+      - {emma: "Say who the person is,", focus: 1, vi: "Người đó là ai,"}
+      - {emma: "what they have achieved,", focus: 2, vi: "họ đã đạt được gì,"}
+      - {emma: "why the achievement is special,", focus: 3, vi: "vì sao thành tựu đó đặc biệt,"}
+      - {emma: "and how the achievement has influenced other people.", focus: 4, vi: "và nó đã ảnh hưởng đến người khác thế nào."}
+      - emma: "You have one minute to think about what you want to say and make notes. Pause the video now and make your notes."
+        vi: "Bạn có một phút để nghĩ và ghi chú. Tạm dừng video và ghi chú ngay."
+        pause: 1.5
+      - tom: "It doesn't have to be a famous person, right?"
+        vi: "Không nhất thiết phải là người nổi tiếng, đúng không?"
+      - emma: "No. A person in your family, a teacher or a friend is fine. Notice the card uses the present perfect: has achieved, has influenced."
+        say: "No. A person in your family, a teacher or a friend is fine. Notice the card yoozes the present perfect: has achieved, has influenced."
+        vi: "Không cần. Người nhà, thầy cô hay bạn bè đều được. Chú ý thẻ dùng present perfect."
+
+  - kind: bullets
+    chapter: "Ghi chú của Tom"
+    heading: "Tom's notes · one minute"
+    heading_vi: "Mỗi ý trên thẻ một dòng từ khóa — không viết cả câu"
+    items:
+      - {en: "who: my mum — flower shop, Da Lat", vi: "mẹ — cửa hàng hoa ở Đà Lạt"}
+      - {en: "achieved: own business, 20+ years, 3 staff", vi: "tự kinh doanh hơn 20 năm, 3 nhân viên"}
+      - {en: "special: no money, small table at the market", vi: "đi lên từ một sạp nhỏ ở chợ, không có vốn"}
+      - {en: "influence: me (work hard), staff, other women", vi: "ảnh hưởng: mình, nhân viên, những phụ nữ khác"}
+    lines:
+      - {emma: "Here are Tom's notes. One line for each point on the card.", vi: "Ghi chú của Tom: mỗi ý một dòng."}
+      - {tom: "Who: my mum. She has a flower shop in Da Lat.", say: "Who: my mum. She has a flower shop in Dah Lot.", focus: 0}
+      - {tom: "What she's achieved: her own business, for more than twenty years.", focus: 1}
+      - {tom: "Why it's special: she started with no money, just a small table at the market.", focus: 2}
+      - {tom: "And the influence: on me, on her staff, and on other women in our neighbourhood.", focus: 3}
+
+  - kind: letter
+    chapter: "Bài nói mẫu Phần 2"
+    heading: "Tom's talk · Who do you know who has achieved something special?"
+    heading_vi: "Mỗi ý trên thẻ một đoạn — present perfect cho thành tựu vẫn còn, past simple cho chuyện đã qua"
+    roles: {tom: candidate}
+    words: 168
+    items:
+      - text: "I'd like to talk about my mother. She has a small flower shop in Da Lat, the city where I grew up."
+        note: "who the person is"
+      - text: "She has run her own business for more than twenty years. Now she has three members of staff, and she sends flowers to shops in Ho Chi Minh City."
+        note: "what she has achieved"
+      - text: "I think this is special because she started with almost nothing. She had no money, so she sold flowers from a small table at the market. She worked from five in the morning, and she overcame a lot of difficulties."
+        note: "why it is special"
+      - text: "Her achievement has had a big influence on me. She has taught me to work hard and never give up. She has also helped other women in our neighbourhood to start their own small businesses."
+        note: "how it has influenced other people"
+    lines:
+      - emma: "Now listen to Tom's talk. He talks for about one and a half minutes."
+        vi: "Nghe bài nói của Tom, khoảng một phút rưỡi."
+      - {read: tom, focus: 0, say: "I'd like to talk about my mother. She has a small flower shop in Dah Lot, the city where I grew up."}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - emma: "Very good. Tom uses the present perfect for things that are still true: she has run her business for twenty years. And the past simple for the start: she started with nothing, she overcame difficulties."
+        say: "Very good. Tom yoozes the present perfect for things that are still true: she has run her business for twenty years. And the past simple for the start: she started with nothing, she overcame difficulties."
+        vi: "Present perfect cho điều vẫn còn đúng (has run, has taught); past simple cho chuyện đã qua (started, overcame)."
+
+  - kind: figure
+    chapter: "Speaking 3: thảo luận hai chiều"
+    heading: "Speaking 3A · Mark the questions (E) easy or (D) difficult to answer"
+    heading_vi: "Exam tip và bốn câu hỏi tr. 47 — Phần 3 hỏi ý kiến, chủ đề trừu tượng hơn Phần 2"
+    image: {pdf: course-book, page: 48, clip: [58, 566, 448, 690]}
+    items:
+      - {box: [62, 568, 445, 606], label: "Exam tip"}
+      - {box: [62, 631, 400, 644], label: "1"}
+      - {box: [62, 644, 400, 658], label: "2"}
+      - {box: [62, 658, 410, 672], label: "3"}
+      - {box: [62, 672, 400, 686], label: "4"}
+    lines:
+      - emma: "Speaking 3: having a two-way discussion. Exam tip: in the third part of the Speaking Module, the examiner will expand the topic in part 2, and ask you to express your opinion on related topics."
+        say: "Speaking three: having a two-way discussion. Exam tip: in the third part of the Speaking Module, the examiner will expand the topic in part two, and ask you to express your opinion on related topics."
+        focus: 0
+        vi: "Mẹo thi: Phần 3, giám khảo mở rộng chủ đề Phần 2 và hỏi ý kiến bạn."
+      - emma: "The topics will be more abstract, less personal than in part 2. Exercise A: mark these questions E, easy to answer, or D, difficult to answer. Pause the video and try."
+        say: "The topics will be more abstract, less personal than in part two. Exercise eigh: mark these questions ee, easy to answer, or dee, difficult to answer. Pause the video and try."
+        focus: 0
+        vi: "Chủ đề trừu tượng hơn. Bài A: đánh dấu E (dễ) hay D (khó). Tạm dừng video."
+        pause: 1.5
+      - {emma: "Are people born to achieve, or do they learn to achieve?", focus: 1}
+      - {emma: "Why are some people better achievers than others?", focus: 2}
+      - {emma: "Is it easier for people to achieve if they have a good education?", focus: 3}
+      - {emma: "Do you have to make money to be successful?", focus: 4}
+      - tom: "Number two is difficult for me. Number four is easier, because I can say yes or no, and give a reason."
+        focus: 4
+        vi: "Câu 2 khó với mình. Câu 4 dễ hơn vì có thể trả lời có/không rồi nêu lý do."
+
+  - kind: qa
+    chapter: "Speaking 3B: trả lời mẫu"
+    heading: "Speaking 3B · Answer the questions"
+    heading_vi: "Emma hỏi, Tom trả lời: ý kiến + lý do + ví dụ — tạm dừng video và tự trả lời trước"
+    items:
+      - q: "Are people born to achieve, or do they learn to achieve?"
+        a: "I think it's a bit of both. Some people are born with a talent, but they still need to learn and practise. For example, a talented footballer has to train every day."
+        phrases: ["a bit of both", "are born with a talent"]
+        vi: "Cả hai: có năng khiếu bẩm sinh nhưng vẫn phải học, luyện tập."
+      - q: "Why are some people better achievers than others?"
+        a: "In my opinion, it's mostly about attitude. Good achievers set clear goals, and they don't give up when they have difficulties."
+        phrases: ["In my opinion", "set clear goals", "don't give up"]
+        vi: "Chủ yếu do thái độ: đặt mục tiêu rõ ràng và không bỏ cuộc."
+      - q: "Is it easier for people to achieve if they have a good education?"
+        a: "In some ways, yes. A good education gives you more choices and more knowledge. But my mother left school at sixteen, and she has achieved a lot."
+        phrases: ["In some ways", "gives you more choices"]
+        vi: "Ở một mức độ nào đó thì đúng, nhưng mẹ mình bỏ học năm 16 tuổi mà vẫn thành công."
+      - q: "Do you have to make money to be successful?"
+        a: "I don't think so. Nurses and teachers don't earn much, but they help a lot of people. For me, that's real success."
+        phrases: ["I don't think so", "real success"]
+        vi: "Không: y tá, giáo viên không kiếm nhiều tiền nhưng giúp được nhiều người — đó mới là thành công thật."
+    lines:
+      - emma: "Exercise B. Let's talk. I'll ask, and Tom will answer. Pause after each question and try to answer first."
+        say: "Exercise B. Let's talk. I'll ask, and Tom will answer. Pause after each question and try to answer first."
+        vi: "Bài B: Emma hỏi, Tom trả lời. Tạm dừng sau mỗi câu hỏi và tự trả lời trước."
+      - {emma: "Are people born to achieve, or do they learn to achieve?", focus: 0, pause: 1.5}
+      - {tom: "I think it's a bit of both. Some people are born with a talent, but they still need to learn and practise. For example, a talented footballer has to train every day.", reveal: 0}
+      - {emma: "Why are some people better achievers than others?", focus: 1, pause: 1.5}
+      - {tom: "In my opinion, it's mostly about attitude. Good achievers set clear goals, and they don't give up when they have difficulties.", reveal: 1}
+      - {emma: "Is it easier for people to achieve if they have a good education?", focus: 2, pause: 1.5}
+      - {tom: "In some ways, yes. A good education gives you more choices and more knowledge. But my mother left school at sixteen, and she has achieved a lot.", reveal: 2}
+      - {emma: "Do you have to make money to be successful?", focus: 3, pause: 1.5}
+      - {tom: "I don't think so. Nurses and teachers don't earn much, but they help a lot of people. For me, that's real success.", reveal: 3}
+      - emma: "Notice how Tom starts: I think, in my opinion, in some ways, I don't think so. Then he gives a reason and an example. That's a full answer in part 3."
+        say: "Notice how Tom starts: I think, in my opinion, in some ways, I don't think so. Then he gives a reason and an example. That's a full answer in part three."
+        vi: "Mở đầu bằng ý kiến, rồi lý do và ví dụ — đó là câu trả lời đầy đủ ở Phần 3."
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Part 2 and part 3"
+    heading_vi: "Tạm dừng video: nói 1–2 phút theo thẻ đề, rồi trả lời các câu Phần 3"
+    items:
+      - {q: "Part 2: Who do you know who has achieved something special?", hint: "who · what · why special · influence (one minute to prepare)"}
+      - {q: "Is it easier to achieve if you have a good education?", hint: "In some ways … · But …"}
+      - {q: "Do you have to make money to be successful?", hint: "I don't think so … · For me, real success is …"}
+      - {q: "Why are some people better achievers than others?", hint: "In my opinion … · For example …"}
+    lines:
+      - emma: "Your turn. First, part 2. Prepare for one minute, then talk for one to two minutes. Pause the video and talk out loud. Then answer the part 3 questions."
+        say: "Your turn. First, part two. Prepare for one minute, then talk for one to two minutes. Pause the video and talk out loud. Then answer the part three questions."
+        vi: "Đến lượt bạn: chuẩn bị một phút, nói 1–2 phút theo thẻ đề; rồi trả lời các câu Phần 3. Tạm dừng video và nói thành tiếng."
+      - {emma: "Who do you know who has achieved something special?", focus: 0, pause: 0.5}
+      - {emma: "Is it easier to achieve if you have a good education?", focus: 1, pause: 0.5}
+      - {emma: "Do you have to make money to be successful?", focus: 2, pause: 0.5}
+      - {emma: "Why are some people better achievers than others?", focus: 3, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "have success · achieve an ambition · overcome an obstacle", vi: "Collocation"}
+      - {en: "I've · He's (= he has) · haven't · has he /hæziː/", vi: "Đọc rút gọn"}
+      - {en: "Part 2: one point of the card = one paragraph", vi: "Mỗi ý trên thẻ một đoạn"}
+      - {en: "Part 3: opinion + reason + example", vi: "Ý kiến + lý do + ví dụ"}
+    lines:
+      - {emma: "Let's review. Collocations: have success, achieve an ambition, overcome an obstacle.", focus: 0}
+      - {emma: "Contractions: I've achieved. He's overcome. Has he done it?", focus: 1}
+      - {emma: "In part 2, talk about each point on the card.", say: "In part two, talk about each point on the card.", focus: 2}
+      - {tom: "And in part 3: my opinion, a reason, and an example!", say: "And in part three: my opinion, a reason, and an example!", focus: 3}

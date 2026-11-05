@@ -1,0 +1,208 @@
+# Video bài giảng Unit 4 · Writing 1–2A/B: understanding the task, deciding what to say (sách in trang 53). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-writing-1.yaml
+# Cách viết: xem đầu file U01-writing-1.yaml. Track 44 (Writing 2C, hai sinh viên Anh bàn ý) không có file: Mai và Jerry đọc lại
+# Tapescript (sách in trang 285) trong cảnh hide_text; bảy ý cần ghi là đáp án gợi ý. Đây là bài luận (Writing Task 2, lần đầu trong sách). Answer key không có
+# trang này: ý chung của bốn ảnh (các kiểu thành công khác nhau) và dàn ý của Tom là đáp án gợi ý; nghĩa các từ gạch chân
+# lấy từ ghi chú của học viên trong sách (bài D).
+# Hình trong sách (đợt 31): bốn ảnh tr. 53 (khung đỏ theo ảnh, nhãn là kiểu thành công), đề bài B, ghi chú bài D (khung đỏ
+# theo từ khóa tô vàng, nhãn là nghĩa), Writing 2A và Exam tip. Không đếm ngược.
+id: U04-writing-1
+activity: U04-writing
+title: "Unit 4 · Achievements"
+subtitle: "Writing 1: understanding the task"
+title_vi: "Bài luận (Writing Task 2): hiểu đề, gạch từ khóa, tra nghĩa, rồi nghĩ ý để viết — đồng ý hay không với một nhận định"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Writing 1 for Unit 4. This is our first composition: part 2 of the Writing Module. You read a statement, and you say if you agree with it."
+        say: "Welcome to Writing one for Unit four. This is our first composition: part two of the Writing Module. You read a statement, and you say if you agree with it."
+        vi: "Writing 1: bài luận đầu tiên — phần 2 bài thi Viết. Đọc một nhận định và nói bạn có đồng ý không."
+      - tom: "A composition? That sounds difficult."
+        vi: "Bài luận à? Nghe có vẻ khó."
+      - emma: "Step by step, it's fine. Today we learn the first two steps: understand the task, and decide what to say."
+        vi: "Từng bước sẽ ổn thôi. Hôm nay học hai bước đầu: hiểu đề và quyết định viết gì."
+
+  - kind: figure
+    chapter: "Writing 1A: bốn bức ảnh"
+    heading: "Writing 1A · Look at the photos and answer the questions"
+    heading_vi: "Bốn ảnh tr. 53 — chúng có điểm gì chung? Mỗi ảnh cho thấy một kiểu thành công nào?"
+    image: {pdf: course-book, page: 54, clip: [58, 208, 535, 306]}
+    items:
+      - {box: [60, 210, 172, 304], label: "a · winning in sport"}
+      - {box: [178, 210, 290, 304], label: "b · money and business"}
+      - {box: [294, 210, 410, 304], label: "c · a happy family"}
+      - {box: [414, 210, 532, 304], label: "d · helping people"}
+    lines:
+      - emma: "Writing 1, Exercise A. Look at the photos. What do the images have in common?"
+        say: "Writing one, Exercise eigh. Look at the photos. What do the images have in common?"
+        vi: "Bài A: bốn ảnh có điểm gì chung?"
+      - tom: "They all show success. But a different kind of success in each photo."
+        vi: "Ảnh nào cũng nói về thành công, nhưng mỗi ảnh một kiểu khác nhau."
+      - emma: "Good. What different ideas of success and achievement do the photos show?"
+        vi: "Các ảnh cho thấy những quan niệm khác nhau nào về thành công?"
+      - {tom: "Photo a: a football team. They've won a trophy. That's success in sport.", say: "Photo eigh: a football team. They've won a trophy. That's success in sport.", focus: 0}
+      - {tom: "Photo b: a businessman with an expensive car. That's success with money.", say: "Photo B: a businessman with an expensive car. That's success with money.", focus: 1}
+      - {tom: "Photo c: a happy family. For many people, that's the most important success.", say: "Photo C: a happy family. For many people, that's the most important success.", focus: 2}
+      - {tom: "And photo d: a Red Cross worker helping people. That's an achievement too.", say: "And photo D: a Red Cross worker helping people. That's an achievement too.", focus: 3}
+
+  - kind: figure
+    chapter: "Writing 1B–C: đề bài"
+    heading: "Writing 1B · Look at the instructions for a typical writing task"
+    heading_vi: "Đề tr. 53 — một nhận định và một câu hỏi: Do you agree with the statement?"
+    image: {pdf: course-book, page: 54, clip: [58, 352, 445, 422]}
+    items:
+      - {box: [80, 372, 425, 400], label: "the statement"}
+      - {box: [80, 400, 260, 414], label: "the question"}
+    lines:
+      - emma: "Exercise B. Look at the instructions for a typical writing task. In today's world, success and achievement are too often measured by wealth and the material possessions that a person has acquired."
+        focus: 0
+        vi: "Đề: Ngày nay, thành công và thành tựu quá thường bị đo bằng của cải và tài sản vật chất mà một người có được."
+      - {emma: "Do you agree with the statement?", focus: 1, vi: "Bạn có đồng ý với nhận định này không?"}
+      - emma: "Exercise C. Be honest. Do you understand all the words in the statement? Can you answer the question?"
+        vi: "Bài C: thành thật nhé — bạn hiểu hết các từ chưa? Bạn trả lời được câu hỏi không?"
+      - tom: "I don't know some words. Acquired, and material possessions."
+        focus: 0
+        vi: "Mình chưa biết vài từ: acquired, material possessions."
+      - emma: "That's normal. If you don't understand the statement, you can't answer the question. So the first step is: understand the key words."
+        vi: "Bình thường thôi. Không hiểu nhận định thì không trả lời được — bước đầu là hiểu từ khóa."
+
+  - kind: figure
+    chapter: "Writing 1D: từ khóa"
+    heading: "Writing 1D · Look at the notes that a student has made"
+    heading_vi: "Ghi chú tr. 53 — học viên tô vàng từ khóa và ghi nghĩa bằng lời của mình"
+    image: {pdf: course-book, page: 54, clip: [70, 528, 500, 600]}
+    items:
+      - {box: [314, 551, 350, 565], label: "measured"}
+      - {box: [365, 551, 395, 565], label: "wealth"}
+      - {box: [98, 562, 181, 576], label: "material possessions"}
+      - {box: [248, 562, 288, 576], label: "acquired"}
+    lines:
+      - emma: "Exercise D. Look at the instructions again, and the notes that a student has made."
+        say: "Exercise D. Look at the instructions again, and the notes that a student has made."
+        vi: "Bài D: ghi chú của một học viên trên đề bài."
+      - {emma: "Measured. If you measure something, you say how big it is.", focus: 0, vi: "measured = được đo, đánh giá"}
+      - {emma: "Wealth: how much money somebody has.", focus: 1, vi: "wealth = sự giàu có"}
+      - {emma: "Material possessions: things people have, like big houses and cars.", focus: 2, vi: "material possessions = của cải vật chất"}
+      - {emma: "Acquired: managed to get.", focus: 3, vi: "acquired = có được, giành được"}
+      - tom: "So the statement means: today, people think you are successful if you have a lot of money, and a big house and a car."
+        vi: "Vậy nhận định nghĩa là: ngày nay người ta cho rằng bạn thành công nếu có nhiều tiền, nhà to, xe đẹp."
+      - emma: "Exactly. Now you can answer the question."
+        vi: "Chính xác. Giờ bạn trả lời được câu hỏi rồi."
+
+  - kind: figure
+    chapter: "Writing 2A: bạn có gì để nói?"
+    heading: "Writing 2A · Tick the comments that are true for you"
+    heading_vi: "Ba lời nhận xét và Exam tip tr. 53 — không cần là chuyên gia, nhưng phải có ý để nói"
+    image: {pdf: course-book, page: 54, clip: [58, 650, 445, 792]}
+    items:
+      - {box: [62, 679, 442, 705], label: "1"}
+      - {box: [62, 706, 442, 720], label: "2"}
+      - {box: [62, 720, 442, 733], label: "3"}
+      - {box: [62, 738, 442, 790], label: "Exam tip"}
+    lines:
+      - emma: "Writing 2: deciding what to say. Exercise A. Tick the comments that are true for you."
+        say: "Writing two: deciding what to say. Exercise eigh. Tick the comments that are true for you."
+        vi: "Writing 2: quyết định viết gì. Bài A: đánh dấu câu đúng với bạn."
+      - {emma: "One: I don't know what to say about this topic. I could not write about it even in my own language.", focus: 0}
+      - {emma: "Two: I know what I want to say, but it's very difficult to say in English.", focus: 1}
+      - {emma: "Three: I can say what I want to say about this topic quite easily in English.", focus: 2}
+      - tom: "For me, number two. I have ideas in Vietnamese, but English is difficult."
+        focus: 1
+        vi: "Mình là câu 2: có ý bằng tiếng Việt nhưng nói bằng tiếng Anh thì khó."
+      - emma: "Read the exam tip. In the second part of the Writing Module, you need to express your views on a topic like this one."
+        focus: 3
+        vi: "Mẹo thi: phần 2 bài Viết yêu cầu nêu quan điểm về một chủ đề như thế này."
+      - emma: "You do not need to be an expert, but you must have something to say. Think about how you would answer the question in your own language first."
+        focus: 3
+        vi: "Không cần là chuyên gia nhưng phải có ý để nói — nghĩ câu trả lời bằng tiếng Việt trước."
+
+  - kind: compare
+    chapter: "Writing 2B: nghĩ ý"
+    heading: "Writing 2B · Brainstorm some points that you could make"
+    heading_vi: "Tom nghĩ ý bằng tiếng Việt trước, rồi ghi bằng tiếng Anh đơn giản"
+    items:
+      - {title: "Yes, I agree", title_vi: "Đồng ý", lines: ["TV and social media show rich people", "advertisements: big houses, fast cars", "famous footballers and singers are rich"]}
+      - {title: "But …", title_vi: "Nhưng …", lines: ["nurses and teachers help people", "a happy family is a success too", "Olympic athletes win medals, not money"]}
+    lines:
+      - emma: "Exercise B. Brainstorm some points that you could make. Write short notes. Here are Tom's notes."
+        say: "Exercise B. Brainstorm some points that you could make. Write short notes. Here are Tom's notes."
+        vi: "Bài B: nghĩ ra các ý có thể viết. Ghi chú ngắn. Đây là ghi chú của Tom."
+      - tom: "I agree with the statement. On TV and social media, we see rich people all the time. Advertisements show big houses and fast cars. And the most famous footballers and singers are very rich."
+        focus: 0
+        vi: "Mình đồng ý: TV, mạng xã hội luôn chiếu người giàu; quảng cáo toàn nhà to, xe đẹp; cầu thủ, ca sĩ nổi tiếng nhất đều rất giàu."
+      - tom: "But there are other kinds of success. Nurses and teachers help people. A happy family is a success too. And Olympic athletes win medals, not money."
+        focus: 1
+        vi: "Nhưng còn những kiểu thành công khác: y tá, giáo viên giúp người; gia đình hạnh phúc; vận động viên Olympic giành huy chương chứ không phải tiền."
+      - emma: "Very good. Some points agree, and some points show the other side."
+        vi: "Tốt lắm: có ý đồng ý và có ý nhìn từ phía bên kia."
+
+  - kind: blanks
+    chapter: "Writing 2C: nghe hai sinh viên bàn ý"
+    heading: "Writing 2C · Listen and note down the points they make"
+    heading_vi: "Track 44 không có file — Mai và Jerry đọc lại. Đọc trước bảy ý, nghe rồi điền"
+    hide_text: true
+    roles: {mai: "female student", jerry: "male student"}
+    items:
+      - {n: 1, q: "For her, being happy is ___.", answer: "an achievement"}
+      - {n: 2, q: "Artists and scientists achieve great things, but ___.", answer: "they aren't always happy"}
+      - {n: 3, q: "People can name hundreds of ___, but only one or two scientists.", answer: "actors or footballers"}
+      - {n: 4, q: "Some people are famous just because ___.", answer: "they are rich"}
+      - {n: 5, q: "Everyone likes Olympic athletes because ___.", answer: "they do something special"}
+      - {n: 6, q: "Most people don't think that ___ are real achievers.", answer: "nurses and teachers"}
+      - {n: 7, q: "Real achievement is helping people, even ___.", answer: "saving somebody's life"}
+    lines:
+      - emma: "Exercise C. Two British students are brainstorming ideas before they do this writing task. The recording isn't in our audio files, so Mai and Jerry read it for you. Read the notes first, then listen and complete them."
+        vi: "Bài C: hai sinh viên Anh bàn ý trước khi viết. Không có audio Track 44 — Mai và Jerry đọc lại. Đọc trước bảy ý rồi nghe và điền."
+        pause: 1.5
+      - {jerry: "So, first of all, do you agree with the statement?"}
+      - {mai: "Yes, I do. Too many people think that if you make a lot of money, you are successful. I don't think making money means that you are happy, and for me, being happy is the most important thing. Being happy is an achievement."}
+      - {jerry: "Yes, I suppose so, but I don't think that you must be happy to say that you have achieved something. People like artists and scientists achieve great things, but that doesn't mean they are happy. Sometimes people like that are quite unhappy."}
+      - {mai: "Yes, that's true, but the important thing is that the people you mention, artists and scientists, achieve great things, but not only for the money. People should see that."}
+      - {jerry: "Don't you think that people do recognize the achievements of people like that?"}
+      - {mai: "No, not really. If you ask people to name a modern-day scientist, they will know one or two, but if you ask them to name actors or footballers, they will know hundreds. I think they know those people because they are rich and famous."}
+      - {jerry: "Yes, I guess some people are even famous just because they are rich, like Paris Hilton."}
+      - {mai: "And I'm sure most people know Bill Gates because he was the richest man in the world, not because he was so brilliant."}
+      - {jerry: "You mentioned footballers before. Don't you think that people in sport are considered successful because they win medals and prizes? They don't all make lots of money. Everyone likes Olympic athletes because they do something special."}
+      - {mai: "Yes, I agree, but most sportsmen are very rich, especially footballers, and they are the most famous. It seems that more and more of them are doing it for the money."}
+      - {jerry: "OK, but what about ordinary people? Do you think that people who do important jobs, like nurses and teachers, think that they have achieved something?"}
+      - {mai: "Maybe, but I'm not sure that most people think that nurses and teachers are real achievers. Images on TV and in magazines make people think that they should make big money and live in beautiful houses and drive expensive cars. That's what they understand by success."}
+      - {jerry: "Yes, people who work in advertising, for example, are considered successful, even though other people do more useful jobs. Perhaps we should think that real achievement is helping people and doing good for people, even saving somebody's life."}
+      - {jerry: "If somebody goes to Africa to save children, people respect them, but I'm not sure that they really think that that person is successful."}
+      - {mai: "Yes, that's a very good point. Doing good for other people is an achievement, but I still think that being happy is the real aim of life. If you are happy and your family is happy, then you have really achieved something."}
+      - emma: "Pause the video and finish your notes. Then check with Tom."
+        vi: "Tạm dừng video, hoàn thành ghi chú rồi kiểm tra cùng Tom."
+        pause: 1.5
+      - {tom: "One: being happy is an achievement.", reveal: 1}
+      - {tom: "Two: artists and scientists achieve great things, but they aren't always happy.", reveal: 2}
+      - {tom: "Three: people can name hundreds of actors or footballers.", reveal: 3}
+      - {tom: "Four: some people are famous just because they are rich, like Paris Hilton.", reveal: 4}
+      - {tom: "Five: everyone likes Olympic athletes because they do something special.", reveal: 5}
+      - {tom: "Six: most people don't think that nurses and teachers are real achievers.", reveal: 6}
+      - {tom: "And seven: real achievement is helping people, even saving somebody's life.", reveal: 7}
+      - emma: "Good. They had lots of points, and many of them are like Tom's. In the next video, we read the composition that one of these students wrote."
+        vi: "Họ có rất nhiều ý, nhiều ý giống của Tom. Video sau: đọc bài luận mà một trong hai sinh viên này viết."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Part 2 of the Writing Module: give your views on a statement", vi: "Phần 2 bài Viết: nêu quan điểm về một nhận định"}
+      - {en: "Step 1: understand the task — highlight and check the key words", vi: "Bước 1: hiểu đề — tô và tra từ khóa"}
+      - {en: "measured · wealth · material possessions · acquired", vi: "Từ khóa của đề bài"}
+      - {en: "Step 2: brainstorm points — first in your own language", vi: "Bước 2: nghĩ ý — trước tiên bằng tiếng Việt"}
+      - {en: "Points for and against: happiness, fame, sport, useful jobs", vi: "Ý ủng hộ và ý phản bác"}
+    lines:
+      - {emma: "Let's review. In part 2 of the Writing Module, you give your views on a statement.", say: "Let's review. In part two of the Writing Module, you give your views on a statement.", focus: 0}
+      - {emma: "First, understand the task. Highlight the key words and check them in a dictionary.", focus: 1}
+      - {emma: "Measured, wealth, material possessions, acquired.", focus: 2}
+      - {tom: "Then brainstorm points. I can think in Vietnamese first!", focus: 3}
+      - {emma: "And find points on both sides: happiness, fame, sport, and useful jobs.", focus: 4}

@@ -1,0 +1,216 @@
+# Video bài giảng Unit 4 · Listening 1–2: predicting content, listening for paraphrased language (sách in trang 48–49).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-listening-1.yaml
+# Cách viết: xem đầu file U01-listening-1.yaml. Phát Track 41 (U04-L2B, đoạn nói từ 16,5 s — trước đó là lời dẫn) cho 2B,
+# rồi phát lại từng cụm cho 2C (mốc theo bản chép lời work/transcripts/U04-L2B.json). U04-L2C chỉ là lời dẫn (không có
+# đoạn nghe) nên không phát. Answer key không có trang này: 1D chủ đề 2 (start your own business), 2A câu 2, 2B a — suy
+# ra từ Tapescript Track 41 (sách in trang 284), câu bằng chứng tô khung đỏ trên hình Tapescript.
+# Hình trong sách (đợt 31): đề Listening 1A–B, 1C–E, 2A (khung đỏ theo câu đang giảng); Tapescript Track 41 (khung đỏ
+# theo cụm cho đáp án và cụm loại phương án sai). Không đếm ngược.
+id: U04-listening-1
+activity: U04-listening
+title: "Unit 4 · Achievements"
+subtitle: "Listening 1: predicting content, paraphrased language"
+title_vi: "Đoán trước nội dung bài nghe từ lời dẫn, nhận ra cách nói khác (paraphrase) trong câu trắc nghiệm (Track 41)"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening 1 and 2 for Unit 4. Two important skills: predicting what you will hear, and listening for paraphrased language."
+        say: "Welcome to Listening one and two for Unit four. Two important skills: predicting what you will hear, and listening for paraphrased language."
+        vi: "Hai kỹ năng: đoán trước nội dung sẽ nghe, và nghe cách diễn đạt khác (paraphrase)."
+      - tom: "Predicting? Before I listen?"
+        vi: "Đoán trước? Trước khi nghe à?"
+      - emma: "Yes. You always get a little information before the recording starts. Let's use it."
+        say: "Yes. You always get a little information before the recording starts. Let's yooz it."
+        vi: "Đúng. Trước khi nghe luôn có một chút thông tin — hãy tận dụng nó."
+
+  - kind: figure
+    chapter: "Listening 1A–B: đoán từ lời dẫn"
+    heading: "Listening 1A–B · Look at the first line of the instructions"
+    heading_vi: "Đề tr. 48 — lời dẫn cho biết chủ đề; hãy đoán lý do và từ khóa sẽ nghe"
+    image: {pdf: course-book, page: 49, clip: [58, 188, 445, 384]}
+    items:
+      - {box: [80, 218, 434, 238], label: "the first line"}
+      - {box: [62, 246, 428, 259], label: "1"}
+      - {box: [62, 259, 408, 272], label: "2"}
+      - {box: [62, 300, 378, 313], label: "B1"}
+      - {box: [62, 313, 378, 326], label: "B2"}
+      - {box: [62, 334, 442, 382], label: "Exam tip"}
+    lines:
+      - emma: "Exercise A. Look at the first line of some instructions for a listening task. Listen to somebody giving a talk about why some children achieve more at school than others."
+        say: "Exercise eigh. Look at the first line of some instructions for a listening task. Listen to somebody giving a talk about why some children achieve more at school than others."
+        focus: 0
+        vi: "Bài A: dòng đầu của lời dẫn — nghe một bài nói về việc vì sao có trẻ học giỏi hơn những trẻ khác."
+      - {emma: "Question one. Does it help you to listen to a talk if you are told what the talk is about first?", focus: 1}
+      - tom: "Yes, of course. If I know the topic, I can think about it before I listen."
+        focus: 1
+        vi: "Có chứ. Biết chủ đề thì mình suy nghĩ trước được."
+      - {emma: "Question two. What sort of predictions can you make about the talk before you listen?", focus: 2}
+      - tom: "I can predict the ideas, the reasons, and some of the words I will hear."
+        focus: 2
+        vi: "Đoán được ý, lý do và một số từ sẽ nghe."
+      - emma: "Exactly. Exercise B. Predict some of the reasons that the speaker will give, and some key words. Pause the video and try."
+        focus: 3
+        vi: "Bài B: đoán vài lý do người nói đưa ra và một số từ khóa. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Exam tip. In the second part of the Listening Module, you will hear a speaker giving a talk. Before you listen, you are told the topic. Try to make predictions about content and key vocabulary."
+        say: "Exam tip. In the second part of the Listening Module, you will hear a speaker giving a talk. Before you listen, you are told the topic. Try to make predictions about content and key vocabulary."
+        focus: 5
+        vi: "Mẹo thi: phần 2 của bài Nghe là một bài nói; bạn được biết chủ đề trước — hãy đoán nội dung và từ khóa."
+
+  - kind: compare
+    chapter: "Tom đoán gì?"
+    heading: "Listening 1B · Tom's predictions"
+    heading_vi: "Vì sao có trẻ học giỏi hơn? — lý do và từ khóa có thể nghe"
+    items:
+      - {title: "Reasons", title_vi: "Lý do", lines: ["support from parents", "good teachers and schools", "hard work and motivation", "enough sleep and a good diet"]}
+      - {title: "Key words", title_vi: "Từ khóa", lines: ["encourage · support · praise", "motivated · confident", "homework · concentrate", "intelligent · talented"]}
+    lines:
+      - tom: "My reasons: some children get more support from their parents. Some have better teachers, or go to better schools."
+        focus: 0
+        vi: "Lý do: được bố mẹ hỗ trợ nhiều hơn; thầy cô, trường tốt hơn."
+      - tom: "Some children work harder, or they are more motivated. And sleep and food are important too."
+        focus: 0
+        vi: "Chăm chỉ hơn, có động lực hơn; ngủ đủ, ăn uống tốt cũng quan trọng."
+      - tom: "Key words: encourage, support, motivated, confident, homework, concentrate, intelligent."
+        focus: 1
+        vi: "Từ khóa: encourage, support, motivated, confident, homework, concentrate, intelligent."
+      - emma: "Very good. When you hear one of your words, you know you're in the right place, and you're ready for the answer."
+        focus: 1
+        vi: "Khi nghe thấy một từ mình đã đoán, bạn biết mình đang theo đúng chỗ và sẵn sàng nghe đáp án."
+
+  - kind: figure
+    chapter: "Listening 1C–E: câu hỏi thuộc chủ đề nào?"
+    heading: "Listening 1C–E · Which topic does the question refer to?"
+    heading_vi: "Ba lời dẫn và một câu hỏi trắc nghiệm tr. 48 — câu hỏi khớp với lời dẫn nào?"
+    image: {pdf: course-book, page: 49, clip: [58, 403, 445, 604]}
+    items:
+      - {box: [62, 414, 382, 427], label: "1"}
+      - {box: [62, 427, 402, 440], label: "2 · business"}
+      - {box: [62, 440, 412, 453], label: "3"}
+      - {box: [62, 507, 312, 519], label: "a"}
+      - {box: [62, 520, 322, 532], label: "b"}
+      - {box: [62, 533, 367, 545], label: "c"}
+      - {box: [62, 578, 442, 602], label: "Exam tip"}
+    lines:
+      - emma: "Exercise C. Look at these first lines from a Listening Module. One: the life of a brilliant scientist. Two: how to start your own business. Three: how older people can continue to learn."
+        focus: 0
+        vi: "Bài C: ba lời dẫn — đời một nhà khoa học; cách khởi nghiệp; người lớn tuổi tiếp tục học."
+      - emma: "Exercise D. Now look at this typical question. The speaker says that you need to: a, find out about competition in the local area. b, only provide a service that nobody else is providing. c, charge less than other companies. Which topic does it refer to?"
+        say: "Exercise D. Now look at this typical question. The speaker says that you need to: eigh, find out about competition in the local area. B, only provide a service that nobody else is providing. C, charge less than other companies. Which topic does it refer to?"
+        focus: 4
+        vi: "Bài D: câu hỏi này thuộc lời dẫn nào?"
+      - tom: "Topic two, how to start your own business. Competition, a service, charge less: these are business words."
+        focus: 1
+        vi: "Chủ đề 2: khởi nghiệp — competition, service, charge less đều là từ về kinh doanh."
+      - emma: "Right. Exercise E. Can you guess which answer is correct, without listening?"
+        say: "Right. Exercise ee. Can you guess which answer is correct, without listening?"
+        focus: 3
+        vi: "Bài E: bạn đoán được đáp án đúng mà không cần nghe không?"
+      - tom: "I think a. Every new business needs to know about the competition. Only providing a new service sounds too difficult."
+        focus: 3
+        say: "I think eigh. Every new business needs to know about the competition. Only providing a new service sounds too difficult."
+        vi: "Mình đoán a — doanh nghiệp mới nào cũng cần biết đối thủ."
+      - emma: "Good guess. But read the exam tip: it is sometimes possible to guess answers from what you know about a topic, but it is better if you actually hear the speaker provide the answer."
+        focus: 6
+        vi: "Mẹo thi: đôi khi đoán được nhờ hiểu biết, nhưng tốt hơn là nghe chính người nói đưa ra đáp án."
+
+  - kind: figure
+    chapter: "Listening 2A: trắc nghiệm có dễ không?"
+    heading: "Listening 2A · Tick the advice that is correct"
+    heading_vi: "Hai lời khuyên tr. 48 — và Exam tip về paraphrase"
+    image: {pdf: course-book, page: 49, clip: [58, 638, 445, 754]}
+    items:
+      - {box: [62, 657, 445, 671], label: "1"}
+      - {box: [62, 671, 442, 697], label: "2 · correct"}
+      - {box: [62, 704, 442, 752], label: "Exam tip"}
+    lines:
+      - emma: "Listening 2. Exercise A. Tick the advice that is correct. One: multiple choice is easy. You look at the words in the questions and then listen for them."
+        say: "Listening two. Exercise eigh. Tick the advice that is correct. One: multiple choice is easy. You look at the words in the questions and then listen for them."
+        focus: 0
+        vi: "Bài A: lời khuyên nào đúng? 1: trắc nghiệm dễ, chỉ cần nghe đúng những từ trong câu hỏi."
+      - emma: "Two: multiple choice is not so easy, because the words in the questions are not the same as the words that you hear."
+        focus: 1
+        vi: "2: trắc nghiệm không dễ vì từ trong câu hỏi khác với từ bạn nghe."
+      - tom: "Number two is correct. The speaker uses different words, so I need to listen for the meaning."
+        say: "Number two is correct. The speaker yoozes different words, so I need to listen for the meaning."
+        focus: 1
+        vi: "Câu 2 đúng: người nói dùng từ khác, nên phải nghe ý."
+      - emma: "Yes. Exam tip: you need to hear words and phrases that mean the same as those in the question. We call this paraphrased language."
+        focus: 2
+        vi: "Mẹo thi: nghe những từ, cụm từ cùng nghĩa với từ trong câu hỏi — đó là paraphrase."
+
+  - kind: mcq
+    chapter: "Listening 2B: nghe và chọn"
+    heading: "Listening 2B · The speaker says that you need to …"
+    heading_vi: "Track 41 — nghe đoạn trích, chọn a, b hoặc c (câu hỏi ở Listening 1D)"
+    items:
+      - n: 1
+        q: "The speaker says that you need to …"
+        options: ["find out about competition in the local area.", "only provide a service that nobody else is providing.", "charge less than other companies that provide a similar service."]
+        answer: a
+    lines:
+      - emma: "Exercise B. Listen to this extract. It provides an answer to the question in Listening 1D. Choose a, b or c."
+        say: "Exercise B. Listen to this extract. It provides an answer to the question in Listening one D. Choose eigh, B, or C."
+        focus: 0
+        vi: "Bài B: nghe đoạn trích và chọn a, b hoặc c."
+      - {track: U04-L2B, start: 16.5, end: 48.2, note: "Track 41 · Listening 2B", focus: 0}
+      - {emma: "Pause the video and choose. Then listen to Tom.", focus: 0, vi: "Tạm dừng video và chọn, rồi nghe Tom.", pause: 1.5}
+      - tom: "The answer is a. Find out about competition in the local area."
+        say: "The answer is eigh. Find out about competition in the local area."
+        reveal: 1
+        vi: "Đáp án a."
+      - emma: "Right. Your guess was correct, Tom. But the speaker never says the words find out about competition. Let's see how he says it."
+        vi: "Đúng. Nhưng người nói không hề dùng cụm find out about competition — xem anh ấy nói thế nào."
+
+  - kind: figure
+    chapter: "Listening 2C: cụm từ cho đáp án"
+    heading: "Listening 2C · Which words give the answer? Which words tell you the other options are wrong?"
+    heading_vi: "Tapescript Track 41 (tr. 284) — khung đỏ là cụm cho đáp án và cụm loại b, c"
+    image: {pdf: course-book, page: 285, clip: [58, 474, 296, 648]}
+    items:
+      - {box: [61, 537, 292, 561], label: "a · find out about competition"}
+      - {box: [61, 556, 292, 596], label: "not b"}
+      - {box: [61, 609, 292, 647], label: "not c"}
+    lines:
+      - emma: "Exercise C. Listen again and identify the words and phrases that provide the answer."
+        vi: "Bài C: nghe lại và tìm cụm từ cho đáp án."
+      - {track: U04-L2B, start: 16.5, end: 24.6, note: "Track 41 · answer a", focus: 0}
+      - tom: "Do your homework. Look through local directories, or take a tour of the town. That means: find out about competition in the local area."
+        focus: 0
+        vi: "Do your homework, look through local directories, take a tour of the town = tìm hiểu đối thủ trong vùng."
+      - {track: U04-L2B, start: 24.6, end: 35.4, note: "Track 41 · not b", focus: 1}
+      - tom: "Not b. He says: offer something a bit different, and you must expect competition. He doesn't say: a service that nobody else is providing."
+        say: "Not B. He says: offer something a bit different, and you must expect competition. He doesn't say: a service that nobody else is providing."
+        focus: 1
+        vi: "Không phải b: chỉ cần khác một chút, và phải chấp nhận cạnh tranh."
+      - {track: U04-L2B, start: 39.9, end: 48.2, note: "Track 41 · not c", focus: 2}
+      - tom: "And not c. Don't just put your prices down. Customers are not always attracted to the provider who charges less."
+        say: "And not C. Don't just put your prices down. Customers are not always attracted to the provider who charges less."
+        focus: 2
+        vi: "Không phải c: đừng chỉ hạ giá — khách không phải lúc nào cũng chọn nơi rẻ nhất."
+      - emma: "Notice the trap: charges less is in the recording, and charge less is in option c. The same words, but the opposite meaning!"
+        say: "Notice the trap: charges less is in the recording, and charge less is in option C. The same words, but the opposite meaning!"
+        focus: 2
+        vi: "Bẫy: cụm charge less có trong bài nghe và trong phương án c — cùng từ nhưng ý ngược lại!"
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Read the first line: the topic helps you predict ideas and words", vi: "Lời dẫn → đoán ý và từ khóa"}
+      - {en: "1D: topic 2, starting a business · 2B: a", vi: "Đáp án"}
+      - {en: "The answer is often paraphrased: do your homework = find out about competition", vi: "Đáp án thường được nói bằng từ khác"}
+      - {en: "Same words in the option and the recording can be a trap", vi: "Cùng từ có thể là bẫy"}
+    lines:
+      - {emma: "Let's review. Read the first line of the instructions, and predict ideas and key words.", focus: 0}
+      - {emma: "The question was about starting a business, and the answer was a.", say: "The question was about starting a business, and the answer was eigh.", focus: 1}
+      - {emma: "Listen for paraphrased language: the answer uses different words.", say: "Listen for paraphrased language: the answer yoozes different words.", focus: 2}
+      - {tom: "And be careful when I hear the same words as in the option!", focus: 3}

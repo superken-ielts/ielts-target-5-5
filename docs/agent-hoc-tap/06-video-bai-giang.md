@@ -1,9 +1,15 @@
-# 06 — Video bài giảng: hồ sơ Unit 1–3, quy trình và kế hoạch Unit 4
+# 06 — Video bài giảng: hồ sơ Unit 1–4, quy trình và kế hoạch Unit 5
 
-Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11, 14), Unit 2 (đợt 10, 24) và
-Unit 3 (đợt 12, 25): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc gắn vào app, những
-lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 4** (mục 8) và các unit sau. **Video luyện nói thêm** (4 video mỗi
-unit, Unit 1–3 đã có) làm tiếp theo khuôn, hồ sơ nhân vật và danh sách chủ đề ở **mục 9**.
+Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11, 14), Unit 2 (đợt 10, 24),
+Unit 3 (đợt 12, 25) và Unit 4 (đợt 31): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc
+gắn vào app, những lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 5** (mục 8) và các unit sau. **Video luyện nói
+thêm** (4 video mỗi unit, Unit 1–3 đã có, Unit 4 chưa làm) làm tiếp theo khuôn, hồ sơ nhân vật và danh sách chủ đề ở
+**mục 9**.
+
+**Hình trong sách (từ Unit 4, đợt 31):** người học muốn mọi video có hình trang sách như sách Oxford Word Skills Basic.
+Mỗi video Unit 4 có ít nhất một cảnh dùng hình (ảnh, bài đọc, Tapescript, Answer key cắt từ PDF), khung đỏ chỉ chỗ đang
+giảng và nhãn đỏ là đáp án (cảnh `figure`, `bullets` / `blanks` có `image`, mục có `box` — mục 6; cách lấy toạ độ ở
+[file 09](09-oxford-word-skills-basic.md) mục 5.3a). Test kiểm cả video Unit 4 của sách A2 (file 08).
 
 **Đến lượt bạn không đếm ngược (Unit 2: đợt 24, Unit 3: đợt 25):** cảnh `practice` không dùng `wait` — Emma nhắc "Pause the video, and
 answer these questions out loud", rồi đọc hết các câu hỏi; slide hiện cả danh sách câu hỏi kèm gợi ý (mục 6).
@@ -140,6 +146,31 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 - **Chưa đổi:** nghe – chép tên nghề (7 × 4 giây), nghe – viết trọng âm và các khoảng chờ "Pause the video and …" một
   lần cho mỗi bài tập.
 
+## 3a. Unit 4 · Achievements — độ phủ video
+
+Bảng in bằng lệnh `coverage` sau đợt 31:
+
+### U04 · Achievements — 6/7 phần có video, 11 video, 1:16:46
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 46–47 | `U04-speaking-1` — Speaking 1 & Vocabulary 1: talking about achievements | 8:07 | 9 |
+| Speaking & Vocabulary | sách tr. 46–47 | `U04-speaking-2` — Speaking 2: saying who you think is successful, part 3 discussion | 7:04 | 10 |
+| Listening | Listening tr. 48–49 | `U04-listening-1` — Listening 1: predicting content, paraphrased language | 6:01 | 8 |
+| Listening | Listening tr. 48–49 | `U04-listening-2` — Listening 2: practise predicting and paraphrasing | 9:36 | 8 |
+| Reading | sách tr. 50–52 | `U04-reading-1` — Reading 1: true, false or not given | 6:08 | 10 |
+| Reading | sách tr. 50–52 | `U04-reading-2` — Reading 2: practise finding the right information | 7:36 | 9 |
+| Writing | sách tr. 53–54 | `U04-writing-1` — Writing 1: understanding the task | 7:49 | 8 |
+| Writing | sách tr. 53–54 | `U04-writing-2` — Writing 2: a composition, organizing your points | 5:59 | 8 |
+| Consolidation | sách tr. 55 | `U04-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 6:25 | 9 |
+| Exam practice | sách tr. 56–57 | `U04-exam-reading` — Exam practice: Reading | 6:39 | 9 |
+| Exam practice | sách tr. 56–57 | `U04-exam-writing` — Exam practice: Writing | 5:23 | 9 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
+
+**Kết luận:** Unit 4 có video cho mọi phần có trang trong Course Book (6/7 phần), 11 video, mọi video có hình trong sách
+(phần đầu file). Track 41 và 43 có file nên phát thẳng; Track 39, 40, 44, 46 các giọng đọc lại Tapescript. Chưa có 4
+video luyện nói thêm (mục 9, P2-57).
+
 ## 4. Lịch sử từng video
 
 | Đợt | Video | Nội dung chính | Kiểu cảnh | Nguồn đáp án |
@@ -194,13 +225,25 @@ chỉ có Listening 2A, Reading 2B, Writing 2D; các bài khác là đáp án su
 | 25 | `U03-speaking-practice-3` Speaking practice 3 | Hỏi qua lại **giờ làm, đi làm** (8) và **làm việc ở nhà** (8, nối với Exam practice Listening); **thi thử 3**: cùng thẻ đề Phần 2 "a job you would like to do in the future" — Tom (trưởng phòng marketing công ty cà phê) và Emma (trường ngoại ngữ có quán cà phê ở quê), Phần 3 hỏi hai chiều (2 + 2) | title, qa, bullets, letter | Tự viết |
 | 25 | `U03-speaking-practice-4` Speaking practice 4 | Hỏi qua lại **kỹ năng, phẩm chất** (8: computer literate, past experience) và **nghề nghiệp ở Việt Nam và ở Anh** (6); **thi thử 4**: Phần 2 "a job interview that you had" (Tom phỏng vấn thực tập), Phần 3 hỏi hai chiều (2 + 2), lời kết | title, qa, bullets, letter | Tự viết |
 | 25 | Dựng lại `U03-speaking-1`, `U03-speaking-2`, `U03-consolidation` | Bỏ đếm ngược ở 3 cảnh "Đến lượt bạn" (lượt nói 30–60 giây): Emma nói rõ chuẩn bị, nói bao lâu rồi nhắc tạm dừng video. Sửa câu trả lời của Tom cho khớp hồ sơ nhân vật (nghề của bố, mẹ, chị; nghề muốn làm) | practice (không `wait`), qa, letter | — |
+| 31 | `U04-speaking-1` Speaking 1 & Vocabulary 1 | Sáu ảnh thành tựu (khung đỏ, nhãn tên), **Track 39 đọc lại bằng ba giọng** (Mai, Jerry, Tom; tên bị che bằng "beep"), nối đoạn – ảnh và manh mối, từ vựng 1A (nhãn là ảnh), Grammar check present perfect / past simple (Thatcher mất 2013, Sheikh Khalifa mất 2022), bài nói mẫu về ảnh b, đến lượt bạn | figure, match + `hide_text`, letter, practice | Suy ra từ Tapescript Track 39 |
+| 31 | `U04-speaking-2` Vocabulary 2 & Speaking 2–3 | Collocation have / achieve / overcome (nhãn là cụm sai), Pronunciation check (Track 40: Emma đọc), thẻ đề Phần 2 "someone who has achieved something special", ghi chú và bài nói mẫu của Tom (mẹ mở cửa hàng hoa ở Đà Lạt), Exam tip Phần 3, 4 câu thảo luận | figure, bullets, letter, qa, practice | Suy ra; Tapescript Track 40 |
+| 31 | `U04-listening-1` Listening 1–2 | Đoán nội dung từ lời dẫn, dự đoán của Tom, câu hỏi thuộc chủ đề nào, paraphrase, **phát Track 41** rồi phát lại ba cụm (đáp án a, loại b, loại c) có khung đỏ trên hình Tapescript | figure, compare, mcq + `track` | Suy ra từ Tapescript Track 41 |
+| 31 | `U04-listening-2` Listening 3 | Đọc trước câu hỏi, **phát Track 43** ba đoạn (câu 1–4, 5–9, 10), đáp án có nhãn trên hình, bẫy (business / athletes, married, ý trước "but"), tự đánh giá, 6 từ của bài nói | figure + `track`, vocab | Answer key Listening 3B |
+| 31 | `U04-reading-1` Reading 1–2 | Ảnh Ainan, đoán T / F, bài báo "Prodigy Ready for University?" hai dải, T / F / NG có khung câu bằng chứng, lời bình của học viên 1D, câu đánh lừa | figure | Answer key Reading 1B–D |
+| 31 | `U04-reading-2` Reading 3 | "Who Needs a Degree to Succeed in Business?" (mở đầu, bốn người chia hai dải), nối tiêu đề, 8 câu T / F / NG, câu bằng chứng, từ vựng L / W | figure | Answer key Reading 3B + suy ra |
+| 31 | `U04-writing-1` Writing 1–2 | Bốn ảnh về thành công, đề bài luận đầu tiên, ghi chú từ khóa của học viên, Writing 2A và Exam tip, ý của Tom, **Track 44 đọc lại** (Mai, Jerry) và điền 7 ý | figure, compare, blanks + `hide_text` | Gợi ý; Tapescript Track 44 |
+| 31 | `U04-writing-2` Writing 2D–F, 3 | Bài luận mẫu viết tay (Jerry đọc, hai dải), tìm ý của bài 2C trong bài, 2F, sáu bước bố cục, dàn bài bốn đoạn | figure, order, compare | Suy ra từ bài luận |
+| 31 | `U04-consolidation` Consolidation | Tám câu về Phần 3 (nhãn T / F), **Track 46 đọc lại bằng bốn giọng**, người nói nào trả lời tốt, trả lời mẫu, tạo từ, collocation với have, sửa 4 lỗi | figure, bullets + `hide_text`, qa | Suy ra; Tapescript Track 46 |
+| 31 | `U04-exam-reading` Exam practice: Reading | Quảng cáo "London History Museum" ba dải, nối ảnh – mục, tìm mục chứa thông tin, 7 câu T / F / NG, câu bằng chứng, 6 từ | figure, vocab | Suy ra, kèm câu bằng chứng |
+| 31 | `U04-exam-writing` Exam practice: Writing | Đề "talent alone" (nhãn là nghĩa từ khóa), ý của Tom, bài luận mẫu Michael Jordan (cắt từ Answer key, ba dải, nhãn vai trò từng đoạn), cụm từ hay, chia 40 phút | figure, compare, vocab, timing | Answer key Exam Practice Writing C |
 
 Đợt 4 dựng lại hai video Speaking bằng Kokoro (trước đó là Flite). Mọi video hiện tại: Kokoro q8, Emma `af_heart`,
-Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening` và Jerry `am_liam` trong
-`U03-exam-listening`), tốc độ 0,9. Đợt 24 cài lại Kokoro trên máy mới từ npm (`kokoro-q8-shards@1.0.0`, sha256 khớp
+Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening`, `U04-speaking-1`, `U04-writing-1`,
+`U04-consolidation` và Jerry `am_liam` trong `U03-exam-listening`, `U04-speaking-1`, `U04-writing-1`, `U04-writing-2`,
+`U04-consolidation`), tốc độ 0,9. Đợt 24 cài lại Kokoro trên máy mới từ npm (`kokoro-q8-shards@1.0.0`, sha256 khớp
 bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 
-## 5. Quy trình làm một video (đã dùng cho cả 48 video)
+## 5. Quy trình làm một video (đã dùng cho cả 59 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -233,7 +276,7 @@ bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 | `bullets` | `en`, `vi` (+ `box`) | Kế hoạch, mẹo, tổng kết. Có `image` (đợt 29) thì hình trong sách bên trái, danh sách bên phải; mục có `box` đóng khung đỏ vùng đó trên hình khi đang nói | mọi video; Oxford Word Skills Basic Unit 12, 14, 15 (đoạn văn, Spotlight) |
 | `vocab` | `w`, `vi`, `ex` (+ `pos`) | Từ mới kèm câu ví dụ | Speaking 1, Exam reading |
 | `match` | `n`, `q`, `answer` + `image` (+ `grid`) | Nối với tranh / bản đồ cắt từ trang sách; `grid: 4` xếp dải tranh thành lưới 2×2 | Speaking 1, Exam listening (bản đồ), Unit 3 |
-| `figure` | (+ `box`, `label`) + `image` | **Hình lớn cắt từ trang sách** (đợt 29): tranh, bảng, đoạn văn. Mục có `box` [x0, y0, x1, y1] (điểm PDF, cùng hệ với `clip`) thì dòng thoại `focus` vào mục đó đóng khung đỏ đúng vùng ấy, kèm nhãn `label` | Oxford Word Skills Basic Unit 8–16 (sơ đồ gia đình, tranh động từ, phiếu mẫu, bảng tính từ, tranh cảm xúc); cách lấy toạ độ ở file 09 mục 5.3a |
+| `figure` | (+ `box`, `label`) + `image` | **Hình lớn cắt từ trang sách** (đợt 29): tranh, bảng, đoạn văn. Mục có `box` [x0, y0, x1, y1] (điểm PDF, cùng hệ với `clip`) thì dòng thoại `focus` vào mục đó đóng khung đỏ đúng vùng ấy, kèm nhãn `label` | Oxford Word Skills Basic Unit 1–16 (sơ đồ gia đình, tranh động từ, phiếu mẫu, bảng tính từ, tranh cảm xúc); IELTS Target 5.0 Unit 4 (sáu ảnh thành tựu, bài đọc, Tapescript, bài luận mẫu, nhãn là đáp án); cách lấy toạ độ ở file 09 mục 5.3a |
 | `pairs` | `n`, `q`, `answer` + `options` | Nối hai cột | Speaking 2, Exam reading |
 | `qa` | `q`, `a` (+ `ask`, `by`, `phrases`) | Câu hỏi – câu trả lời mẫu | Speaking, Consolidation |
 | `compare` | `title`, `lines` | So sánh hai cách viết / nói | Writing |
@@ -297,6 +340,11 @@ dùng cho bài nói mẫu trong thi thử.
 | "I read everything on the website" (quá khứ) | `red` | Như dòng "read (quá khứ)" ở trên (đợt 25) |
 | lives (danh từ: "so much of our lives") | **không** viết `say` | Kokoro đọc đúng /laɪvz/; lệnh `phonemes` vẫn đánh ⚠ vì không phân biệt danh từ với động từ — ghi chú trong kịch bản để người sau không "sửa" thành `livz` |
 | close (động từ: "they had to close one of the offices") | `cloze` | Kokoro đọc /kloʊs/ như tính từ. Từ đợt 26 lệnh `phonemes` đánh ⚠ (bảng KNOWN); đã sửa `U03-exam-listening` (Track 37) và dựng lại. Tính từ ("close friends") đọc đúng, bỏ qua ⚠ |
+| Sheikh Khalifa bin Zayed Al Nahyan, Abu Dhabi | `Shake Kha-lee-fa bin Zay-ed al Nah-yahn`, `Abu Dah-bee` | Tên riêng Unit 4 (đợt 31) |
+| Tanni Grey-Thompson, Ainan Celeste Cawley, Roald Amundsen | `Tanny Grey-Tomson`, `Eye-nan Seh-lest Caw-lee`, `Roo-al Ah-mun-sen` | Tên riêng Unit 4 |
+| Coco Chanel, Chanel No. 5, Muhammad Ali, Pelé | `Coco Shah-nel`, `Shah-nel Number Five`, `Mohammed Ali`, `Pelay` | Kokoro đọc Chanel /ʃeɪnəl/ khi đứng sau Coco |
+| O level, A level (kỳ thi) | `oh level`, `eigh level` | Như dòng A levels ở trên |
+| £6.50, 9 a.m. to 6 p.m. | `six pounds fifty`, `nine eigh em to six pee em` | Giá tiền, giờ mở cửa |
 
 Những lỗi đã gặp và cách tránh:
 
@@ -308,6 +356,11 @@ Những lỗi đã gặp và cách tránh:
 - **Lộ đáp án trong bài nghe**: phụ đề hiện lời thoại → đặt `hide_text: true` cho cảnh nghe, tách cảnh đáp án riêng.
 - **Mục lục sai thứ tự**: `lessons.json` xếp theo chữ cái (Consolidation trước Speaking) → app xếp nhóm theo thứ tự
   phần trong `book.json` (đợt 9).
+- **Hình trong sách chữ nhỏ (đợt 31)**: trang sách nhiều chữ thu vào khung 1160 × 386 px thì chữ chỉ còn 9–12 px → cắt
+  thành dải, mỗi dải một cảnh (quảng cáo Exam practice Reading: A–B, C–D, E và giá vé; bài luận mẫu: ba dải). Một dải
+  cao khoảng 120–160 điểm PDF thì chữ in thường to khoảng 20 px.
+- **Khung đỏ lệch (đợt 31)**: đọc toạ độ từng từ trên lưới 25 điểm dễ lệch một từ → vẽ lưới 10 điểm ở độ phóng 3–4, hoặc
+  đo cột điểm ảnh có mực của dòng chữ (PyMuPDF + numpy) để lấy x0, x1 của từng từ.
 - **File nghe thiếu** (Track 9, 14, 23…): đọc lại Tapescript bằng các giọng Kokoro, ghi rõ trong kịch bản; không đoán đề.
 - **Phát lại từng câu của một track**: lấy mốc bằng `ffmpeg -i <file> -af silencedetect=noise=-35dB:d=0.8 -f null -`
   — khoảng lặng dài ngăn cách các câu, mỗi đoạn `start` / `end` lấy từ trước số thứ tự tới sau câu (U01-listening-1).
@@ -345,9 +398,9 @@ Những lỗi đã gặp và cách tránh:
   (born in → /bɔːrnɪn/) và ngữ điệu viết bằng chữ ("giọng đi xuống"). Trước khi dựng, dò mọi ký tự ngoài ASCII của
   kịch bản xem phông có glyph không (vẽ thử bằng Pillow, so với ký tự chắc chắn thiếu).
 
-## 8. Kế hoạch Unit 4 · Achievements (sách in tr. 46–57)
+## 8. Unit 4 · Achievements (sách in tr. 46–57): kế hoạch và cách đã làm (đợt 31)
 
-Tên mục lấy bằng OCR trang PDF 47–58; kiểm lại khi viết kịch bản. Làm theo khuôn Unit 3 (11–13 video).
+Kế hoạch dưới đây đã làm xong ở đợt 31: 11 video (bảng độ phủ ở mục 3a, lịch sử ở mục 4). Unit 5 làm theo mục 8.1.
 
 | Phần (`activity`) | Trang in | Mục trong sách | Video đề xuất (mẫu) | Đáp án / nghe |
 |---|---|---|---|---|
@@ -358,6 +411,23 @@ Tên mục lấy bằng OCR trang PDF 47–58; kiểm lại khi viết kịch b�
 | Consolidation (`U04-consolidation`) | 55 | Speaking, Vocabulary, Errors | `U04-consolidation` | Gợi ý |
 | Exam practice (`U04-exam-practice`) | 56–57 | Reading; Writing (bài luận về tài năng và thành công) | `U04-exam-reading`, `U04-exam-writing` (bài luận mẫu Michael Jordan theo Answer key) | Answer key Exam Practice Writing C |
 | Ôn unit + sổ lỗi | — | — | Không cần | — |
+
+Cách đã làm ở đợt 31:
+- **Bài nghe có file** (U04-L2B = Track 41, U04-L3B = Track 43): chép lời bằng `python -m lesson_video transcribe
+  ../books/ielts_target_5_0 U04-L2B U04-L3B` (kết quả ở `work/transcripts/`) để lấy mốc `start` / `end` theo từng câu.
+  U04-L2C chỉ có lời dẫn, không có đoạn nghe, nên không phát.
+- **Bài nghe không có file** (Track 39, 40, 44, 46): các giọng đọc lại đúng Tapescript trong cảnh `hide_text` (Mai
+  `af_bella`, Jerry `am_liam` là người nói thứ ba, thứ tư), lỗi ngữ pháp của người nói giữ nguyên khi bài tập cần.
+- **Answer key** chỉ có Listening 3B, Reading 1B–D, Reading 3B và bài luận mẫu Exam Practice Writing C; đáp án khác suy
+  ra, ghi ở đầu kịch bản, có câu bằng chứng (khung đỏ trên hình).
+- **Hình trong sách** ở mọi video (xem phần đầu file). Nhãn đỏ thường là đáp án, nên cảnh hình đặt sau lời nhắc "Pause the
+  video and try".
+
+### 8.1 Kế hoạch Unit 5 · Thoughts (sách in tr. 58–69, trang PDF 59–70)
+
+Làm theo khuôn Unit 4 (11 video, có hình trong sách ở mọi video). Đọc trang PDF 59–70 và trang Answer key của Unit 5 (sách in
+tr. 267–268) trước khi viết. Bài nghe có file: tìm mã `U05-L…` trong `book.json › files`, chép lời bằng lệnh `transcribe`
+như trên. Sau đó làm 4 video luyện nói thêm Unit 4 và Unit 5 theo mục 9.
 
 ## 9. Video luyện nói thêm — khuôn 4 video mỗi unit (Unit 1: đợt 14, Unit 2: đợt 24, Unit 3: đợt 25)
 
@@ -449,6 +519,10 @@ Người học xem liền nhiều video, nên Tom và Emma phải nói khớp nh
 cà phê, mẹ có cửa hàng hoa, chị là y tá ở Hà Nội — trước là kỹ sư, y tá, nhân viên ngân hàng) và `U03-speaking-1` bài
 1D (sinh viên kinh doanh, muốn làm marketing — trước là kỹ sư).
 
+Đợt 31 (video sách Unit 4) thêm: mẹ của Tom bỏ học năm 16 tuổi; hơn hai mươi năm trước bắt đầu bán hoa ở một sạp nhỏ
+ngoài chợ Đà Lạt, nay cửa hàng có ba nhân viên và gửi hoa vào TP. Hồ Chí Minh (bài nói mẫu `U04-speaking-2`); Tom chuyển
+vào TP. Hồ Chí Minh học đại học khoảng hai năm trước, tháng 8 (video A2 `U04-target`).
+
 Thêm chi tiết mới thì ghi vào đầu kịch bản video 1 của unit đó và cập nhật danh sách này.
 
 Tom và Emma cũng dẫn các video *Oxford Word Skills Basic* (đợt 26). Chi tiết mới trong các video đó (số yêu thích,
@@ -491,7 +565,7 @@ chưa có gợi ý: đọc trang sách của unit rồi chọn 6–8 chủ đề
 
 ```bash
 cd agents && python -m lesson_video check ../books/ielts_target_5_0/lessons/*.yaml
-python -m pytest -q                       # kịch bản đã commit khớp lessons.json, video có thật, độ phủ Unit 1–3, Unit 2–3 không đếm ngược, luyện nói thêm Unit 1–3
+python -m pytest -q                       # kịch bản đã commit khớp lessons.json, video có thật, độ phủ Unit 1–4, Unit 2–4 không đếm ngược, luyện nói thêm Unit 1–3, Unit 4 có hình trong sách
 cd .. && python3 web/build.py && git diff --stat
 node --test "tests/web/*.test.mjs"        # mục lục video đúng thứ tự phần trong sách
 node tests/web/book.e2e.mjs               # nút video trên thẻ unit mở đúng phiên

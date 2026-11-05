@@ -38,6 +38,8 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   soát cách đọc bằng `python -m lesson_video phonemes <kịch bản>` (⚠ = lỗi đã gặp, sửa bằng `say`).
 - IELTS Target 5.0: 4 video luyện nói thêm mỗi unit (Unit 1–3 đã có) theo khuôn, hồ sơ nhân vật Tom / Emma và danh sách
   chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
+- Từ Unit 4 (đợt 31), video sách IELTS Target 5.0 và Giai đoạn 0 có hình trong sách ở mọi video, như Oxford Word Skills
+  Basic: cảnh `figure` / `image` kèm `box` (khung đỏ), trang nhiều chữ cắt thành dải — file 06 mục 8, file 09 mục 5.3a.
 - Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
   và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
   nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`

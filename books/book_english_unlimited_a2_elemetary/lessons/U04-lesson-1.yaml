@@ -1,0 +1,416 @@
+# Unit 4 · Changes — Bài 4.1 (Coursebook tr. 34–35): Technology firsts, Talking about the past. Phiên U04-lesson-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U04-lesson-1.yaml
+# Nguồn: trang 34–35 (bài báo "Three small things that changed the world" chép nguyên văn); đáp án theo Teacher's Book
+# tr. 45–46 (Reading 2b: cả ba là phát minh thập niên 1970 — 1973, 1979, 1972; điện thoại và laptop rất đắt — $3,995,
+# $9,000; máy nghe nhạc: không biết vì Pavel không bán; 3: Martin Cooper, 1973 · GRID Compass, William Moggridge, 1979,
+# $9,000, GRID Systems Corporation · Stereobelt, Andreas Pavel, 1972; Grammar 1a: 2 worked 3 liked 4 wanted 5 listened
+# 6 loved 8 went 9 cost 10 had 11 bought 12 met 13 said 14 sold; 2: A 1 worked 2 cost 3 bought 4 used · B 5 made 6 went
+# 7 met 8 listened 9 had 10 wanted; Vocabulary 3a: Sang-mi không giỏi công nghệ; 3b: 1 in 1998 2 six or seven years ago
+# 3 about 25 years ago 4 in 1993 5 last year 6 in 2003).
+# Audio gốc: 1.45 (14 động từ, phát từng từ), 1.46 (Sang-mi: phát cả bài, rồi từng câu trả lời).
+# Hình trong sách (đợt 31): ảnh máy nghe nhạc, điện thoại, laptop (tr. 34) bên trái câu hỏi; bài báo cắt thành ba dải,
+# khung đỏ theo thông tin cần ghi; ba tờ ghi chú bài 3 (khung đỏ, nhãn là đáp án); bảng singular / plural; ảnh NASA và
+# hai đoạn Grammar 2 (khung đỏ theo chỗ trống, nhãn là đáp án); ảnh Sang-mi bên trái câu hỏi Vocabulary 3.
+# Mai: giáo viên tiếng Anh ở Huế (khớp video Unit 1–3); Tom: sinh viên, dùng laptop để học (khớp hồ sơ file 06 mục 9.4).
+id: U04-lesson-1
+activity: U04-lesson-1
+title: "Unit 4 · Changes"
+subtitle: "Reading · Technology firsts: past simple verbs, last / in / ago"
+title_vi: "Đọc \"Three small things that changed the world\"; danh từ số ít, số nhiều; quá khứ đơn; last, in, ago (trang 34–35, audio 1.45–1.46)"
+tag: "EU A2 · UNIT 4"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 4: Changes. In this lesson, we read about three small things that changed the world. And we learn to talk about the past."
+        say: "Welcome to Unit four: Changes. In this lesson, we read about three small things that changed the world. And we learn to talk about the past."
+        vi: "Unit 4: Changes (Thay đổi). Bài này đọc về ba vật nhỏ đã thay đổi thế giới và học cách nói về quá khứ."
+      - mai: "Three small things? Let me guess. A mobile phone?"
+        vi: "Ba vật nhỏ à? Để mình đoán: điện thoại di động?"
+      - tom: "And a laptop! I use mine every day."
+        vi: "Và laptop! Ngày nào mình cũng dùng."
+
+  - kind: bullets
+    chapter: "Nói: điện thoại, laptop, máy nghe nhạc"
+    heading: "Reading 1 · Talk about the questions"
+    heading_vi: "Ảnh trong sách tr. 34 — máy nghe nhạc, điện thoại, laptop ngày nay"
+    image: {pdf: course-book, page: 35, clip: [0, 192, 150, 506]}
+    items:
+      - {en: "Do you have a mobile? What do you use it for?", vi: "Bạn có điện thoại di động không? Dùng để làm gì?", box: [44, 270, 136, 410]}
+      - {en: "Do you use a laptop? How big is it?", vi: "Bạn có dùng laptop không? Nó to cỡ nào?", box: [0, 400, 150, 506]}
+      - {en: "Do you have a personal music player? Where do you use it?", vi: "Bạn có máy nghe nhạc cá nhân không? Dùng ở đâu?", box: [16, 196, 108, 268]}
+    lines:
+      - emma: "Look at the pictures: a mobile, a laptop, and a personal music player. Do you have a mobile? What do you use it for?"
+        focus: 0
+        vi: "Nhìn ảnh: điện thoại, laptop, máy nghe nhạc. Bạn có điện thoại không? Dùng để làm gì?"
+      - mai: "Yes, I do. I use it for calls, text messages and photos. And for my dictionary!"
+        focus: 0
+        vi: "Có. Mình dùng để gọi điện, nhắn tin, chụp ảnh. Và tra từ điển nữa!"
+      - {emma: "Do you use a laptop? How big is it?", focus: 1, vi: "Bạn có dùng laptop không? Nó to cỡ nào?"}
+      - tom: "Yes, I use a laptop for my homework. It's quite small and light."
+        focus: 1
+        vi: "Có, mình dùng laptop làm bài tập. Nó khá nhỏ và nhẹ."
+      - {emma: "Do you have a personal music player? Where do you use it?", focus: 2, vi: "Bạn có máy nghe nhạc cá nhân không? Dùng ở đâu?"}
+      - mai: "Not now. I listen to music on my phone, on the bus and in the kitchen."
+        focus: 2
+        vi: "Giờ thì không. Mình nghe nhạc bằng điện thoại, trên xe buýt và trong bếp."
+      - emma: "The article shows the first mobile, laptop and music player. Were they inventions of the 1970s? Were they very expensive? Guess, then read and check."
+        say: "The article shows the first mobile, laptop and music player. Were they inventions of the nineteen seventies? Were they very expensive? Guess, then read and check."
+        vi: "Bài báo nói về chiếc điện thoại, laptop, máy nghe nhạc đầu tiên. Chúng ra đời thập niên 1970? Rất đắt? Đoán trước rồi đọc để kiểm tra."
+
+  - kind: figure
+    chapter: "Đọc: chiếc điện thoại đầu tiên"
+    heading: "Reading 2b · The first mobile phone"
+    heading_vi: "Bài báo tr. 34 — ai làm ra, năm nào, tên máy, giá bao nhiêu?"
+    image: {pdf: course-book, page: 35, clip: [146, 310, 562, 432]}
+    items:
+      - {box: [157, 366, 217, 380], label: "inventor"}
+      - {box: [157, 378, 190, 391], label: "year"}
+      - {box: [385, 401, 442, 415], label: "name"}
+      - {box: [298, 413, 334, 427], label: "price"}
+    lines:
+      - emma: "Three small things that changed the world. Tom reads the first part: the first mobile phone."
+        vi: "Ba vật nhỏ đã thay đổi thế giới. Tom đọc phần đầu: chiếc điện thoại di động đầu tiên."
+      - tom: "Martin Cooper, who worked for Motorola in the USA, made the first mobile phone in 1973."
+        say: "Martin Cooper, who worked for Motorola in the U S A, made the first mobile phone in nineteen seventy-three."
+        focus: 0
+        vi: "Martin Cooper, làm cho hãng Motorola ở Mỹ, làm ra chiếc điện thoại di động đầu tiên năm 1973."
+      - tom: "On April 3, he went for a walk in New York and used the new phone to call another communications company, AT&T."
+        say: "On April third, he went for a walk in New York and yoozd the new phone to call another communications company, eigh tee and tee."
+        vi: "Ngày 3 tháng 4, ông đi dạo ở New York và dùng chiếc điện thoại mới gọi cho một công ty viễn thông khác, AT&T."
+      - {tom: "This was the first mobile phone call.", vi: "Đó là cuộc gọi di động đầu tiên."}
+      - tom: "Ten years later, in 1983, people could buy the mobile in shops – the DynaTAC 8000X."
+        say: "Ten years later, in nineteen eighty-three, people could buy the mobile in shops. The Dye-na-tack eight thousand ex."
+        focus: 2
+        vi: "Mười năm sau, năm 1983, người ta mua được điện thoại này ở cửa hàng: chiếc DynaTAC 8000X."
+      - tom: "It was more than 30cm long and it cost $3,995."
+        say: "It was more than thirty centimetres long and it cost three thousand, nine hundred and ninety-five dollars."
+        focus: 3
+        vi: "Nó dài hơn 30 cm và giá 3.995 đô la."
+      - emma: "So, the inventor was Martin Cooper, and the year was 1973. Remember them for Exercise 3."
+        say: "So, the inventor was Martin Cooper, and the year was nineteen seventy-three. Remember them for Exercise three."
+        focus: 1
+        vi: "Người phát minh: Martin Cooper; năm: 1973. Nhớ để làm bài 3."
+
+  - kind: figure
+    chapter: "Đọc: chiếc laptop đầu tiên"
+    heading: "Reading 2b · The first laptop"
+    heading_vi: "Bài báo tr. 34 — tên máy, người làm ra, năm, giá, công ty"
+    image: {pdf: course-book, page: 35, clip: [146, 436, 534, 534]}
+    items:
+      - {box: [403, 458, 451, 472], label: "name"}
+      - {box: [304, 469, 340, 483], label: "inventor"}
+      - {box: [372, 469, 398, 483], label: "year"}
+      - {box: [410, 469, 510, 483], label: "company"}
+      - {box: [304, 494, 334, 508], label: "price"}
+    lines:
+      - {emma: "Mai reads the second part: the first laptop.", vi: "Mai đọc phần hai: chiếc laptop đầu tiên."}
+      - {mai: "The first real laptop was the GRID Compass.", say: "The first real laptop was the Grid Compass.", focus: 0, vi: "Chiếc laptop thật sự đầu tiên là GRID Compass."}
+      - mai: "A British man, William Moggridge, made it in 1979 for GRID Systems Corporation."
+        say: "A British man, William Mog-rij, made it in nineteen seventy-nine for Grid Systems Corporation."
+        focus: 1
+        vi: "Một người Anh, William Moggridge, làm ra nó năm 1979 cho công ty GRID Systems."
+      - mai: "It was 5 kg and had a 340 kilobyte memory."
+        say: "It was five kilos and had a three hundred and forty kilobyte memory."
+        vi: "Nó nặng 5 kg và có bộ nhớ 340 kilobyte."
+      - mai: "It was very expensive, about $9,000, but the US government liked the small computer and bought a lot of them."
+        say: "It was very expensive, about nine thousand dollars, but the U S government liked the small computer and bought a lot of them."
+        focus: 4
+        vi: "Nó rất đắt, khoảng 9.000 đô la, nhưng chính phủ Mỹ thích chiếc máy tính nhỏ này và mua rất nhiều."
+      - mai: "NASA used a GRID Compass on the Space Shuttle in the early 1980s."
+        say: "Nasa yoozd a Grid Compass on the Space Shuttle in the early nineteen eighties."
+        vi: "NASA dùng GRID Compass trên tàu con thoi đầu thập niên 1980."
+      - emma: "Five kilos! So: GRID Compass, William Moggridge, made in 1979."
+        say: "Five kilos! So: Grid Compass, William Mog-rij, made in nineteen seventy-nine."
+        focus: 2
+        vi: "Nặng 5 kg! Ghi lại: GRID Compass, William Moggridge, năm 1979."
+      - emma: "Nine thousand dollars, and the company was GRID Systems Corporation."
+        say: "Nine thousand dollars, and the company was Grid Systems Corporation."
+        focus: 3
+        vi: "Giá 9.000 đô la; công ty GRID Systems Corporation."
+
+  - kind: figure
+    chapter: "Đọc: máy nghe nhạc đầu tiên"
+    heading: "Reading 2b · The first personal music player"
+    heading_vi: "Bài báo tr. 34 — tên máy, người làm ra, năm; vì sao ông ấy không bán được?"
+    image: {pdf: course-book, page: 35, clip: [146, 544, 545, 642]}
+    items:
+      - {box: [225, 561, 284, 575], label: "inventor"}
+      - {box: [317, 561, 369, 575], label: "name"}
+      - {box: [366, 561, 402, 575], label: "year"}
+      - {box: [146, 593, 428, 618]}
+      - {box: [168, 620, 231, 634]}
+    lines:
+      - {emma: "And Tom reads the last part: the first personal music player.", vi: "Tom đọc phần cuối: máy nghe nhạc cá nhân đầu tiên."}
+      - tom: "A German-Brazilian, Andreas Pavel, made the Stereobelt in 1972."
+        say: "A German-Brazilian, Ahn-dray-as Pah-vel, made the Stereo-belt in nineteen seventy-two."
+        focus: 0
+        vi: "Một người Đức gốc Brazil, Andreas Pavel, làm ra Stereobelt năm 1972."
+      - tom: "It had headphones and used cassettes."
+        say: "It had headphones and yoozd cassettes."
+        focus: 1
+        vi: "Nó có tai nghe và dùng băng cát-xét."
+      - {tom: "Pavel wanted people to have music everywhere they went.", say: "Pah-vel wanted people to have music everywhere they went.", vi: "Pavel muốn mọi người có nhạc nghe ở bất cứ nơi đâu."}
+      - tom: "He met directors of electronics companies and they listened to the Stereobelt but said,"
+        say: "He met directors of electronics companies and they listened to the Stereo-belt but said,"
+        vi: "Ông gặp giám đốc các hãng điện tử; họ nghe thử Stereobelt nhưng nói:"
+      - tom: "\"People don't want to wear headphones and listen to music in public.\""
+        focus: 3
+        vi: "\"Mọi người không muốn đeo tai nghe và nghe nhạc nơi công cộng.\""
+      - tom: "So Pavel never sold his idea, but his personal music player was the first."
+        say: "So Pah-vel never sold his idea, but his personal music player was the first."
+        vi: "Vì vậy Pavel không bao giờ bán được ý tưởng, nhưng máy của ông là chiếc đầu tiên."
+      - {tom: "Sony's Walkman was the second, and people loved it.", focus: 4, vi: "Walkman của Sony là chiếc thứ hai, và mọi người rất thích nó."}
+      - emma: "A cassette is a small tape for music, before CDs. Stereobelt, Andreas Pavel, 1972."
+        say: "A cassette is a small tape for music, before C Ds. Stereo-belt, Ahn-dray-as Pah-vel, nineteen seventy-two."
+        focus: 2
+        vi: "cassette = băng cát-xét (có trước đĩa CD). Ghi lại: Stereobelt, Andreas Pavel, 1972."
+      - emma: "So, were your guesses right? All three were inventions of the 1970s. The phone and the laptop were very expensive. Pavel never sold his player, so we don't know its price."
+        say: "So, were your guesses right? All three were inventions of the nineteen seventies. The phone and the laptop were very expensive. Pah-vel never sold his player, so we don't know its price."
+        vi: "Cả ba ra đời thập niên 1970; điện thoại và laptop rất đắt; máy của Pavel không bán nên không biết giá."
+
+  - kind: figure
+    chapter: "Bài 3: ghi chú"
+    heading: "Reading 3 · Complete the notes"
+    heading_vi: "Ba tờ ghi chú tr. 34 — tạm dừng video, ghi chú từ bài báo, rồi xem đáp án trên nhãn đỏ"
+    image: {pdf: course-book, page: 35, clip: [84, 672, 520, 800]}
+    items:
+      - {box: [96, 722, 205, 754], label: "Martin Cooper · 1973"}
+      - {box: [243, 707, 368, 739], label: "GRID Compass · William Moggridge"}
+      - {box: [240, 739, 368, 786], label: "1979 · $9,000 · GRID Systems Corporation"}
+      - {box: [382, 728, 512, 778], label: "Stereobelt · Andreas Pavel · 1972"}
+    lines:
+      - emma: "Exercise 3. Read the article again and complete the notes. Pause the video and try."
+        say: "Exercise three. Read the article again and complete the notes. Pause the video and try."
+        vi: "Bài 3: đọc lại bài báo, ghi chú vào ba tờ giấy. Tạm dừng video và làm."
+        pause: 1.5
+      - tom: "The first mobile phone. Inventor: Martin Cooper. Year: 1973."
+        say: "The first mobile phone. Inventor: Martin Cooper. Year: nineteen seventy-three."
+        focus: 0
+      - mai: "The first laptop. Name: GRID Compass. Inventor: William Moggridge."
+        say: "The first laptop. Name: Grid Compass. Inventor: William Mog-rij."
+        focus: 1
+      - mai: "Year: 1979. Price: $9,000. Company: GRID Systems Corporation."
+        say: "Year: nineteen seventy-nine. Price: nine thousand dollars. Company: Grid Systems Corporation."
+        focus: 2
+      - tom: "The first personal music player. Name: the Stereobelt. Inventor: Andreas Pavel. Year: 1972."
+        say: "The first personal music player. Name: the Stereo-belt. Inventor: Ahn-dray-as Pah-vel. Year: nineteen seventy-two."
+        focus: 3
+      - emma: "Mobiles, laptops and music players are very different now. What other things are different from twenty or thirty years ago?"
+        vi: "Ngày nay những thứ này đã khác hẳn. Còn thứ gì khác so với 20, 30 năm trước?"
+      - mai: "Cameras! They're very small now, and they're in our phones."
+        vi: "Máy ảnh! Giờ rất nhỏ, và nằm luôn trong điện thoại."
+
+  - kind: figure
+    chapter: "Số ít, số nhiều"
+    heading: "Grammar · Singular and plural nouns"
+    heading_vi: "Bảng trong sách tr. 34 — thêm s; y → ies; person → people"
+    image: {pdf: course-book, page: 35, clip: [12, 507, 132, 621]}
+    items:
+      - {box: [14, 531, 130, 571], label: "+ s"}
+      - {box: [14, 572, 130, 600], label: "y → ies"}
+      - {box: [14, 601, 130, 619], label: "irregular"}
+    lines:
+      - emma: "Grammar: singular and plural nouns. Usually, we add s: thing, things. Year, years. Cassette, cassettes."
+        focus: 0
+        vi: "Danh từ số nhiều: thường thêm s — things, years, cassettes."
+      - emma: "A word ending in a consonant and y changes to i e s: university, universities. Company, companies."
+        say: "A word ending in a consonant and why changes to eye ee ess: university, universities. Company, companies."
+        focus: 1
+        vi: "Phụ âm + y → ies: universities, companies. Tương tự: family → families, city → cities, baby → babies."
+      - emma: "And some plurals are different. One person, two people."
+        focus: 2
+        vi: "Một số danh từ số nhiều bất quy tắc: person → people."
+      - mai: "In Vietnamese, the word doesn't change. One person, two person. I need to remember people!"
+        focus: 2
+        vi: "Tiếng Việt danh từ không đổi. Mình phải nhớ: two people!"
+
+  - kind: blanks
+    chapter: "Động từ có quy tắc — nghe 1.45"
+    heading: "Grammar 1a · Past simple verbs: regular (-ed)"
+    heading_vi: "Tìm dạng quá khứ trong bài báo — rồi nghe 1.45 để kiểm tra"
+    items:
+      - {n: 1, q: "use → ___", answer: "used"}
+      - {n: 2, q: "work → ___", answer: "worked"}
+      - {n: 3, q: "like → ___", answer: "liked"}
+      - {n: 4, q: "want → ___", answer: "wanted"}
+      - {n: 5, q: "listen → ___", answer: "listened"}
+      - {n: 6, q: "love → ___", answer: "loved"}
+    lines:
+      - emma: "Grammar: past simple verbs. Find the past forms of these verbs in the article. Pause the video and try, then listen."
+        vi: "Quá khứ đơn: tìm dạng quá khứ của các động từ trong bài báo. Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "1.45", start: 5.5, end: 8.2, note: "1.45 · 1", focus: 0, reveal: 1}
+      - {track: "1.45", start: 11.5, end: 14.2, note: "1.45 · 2", focus: 1, reveal: 2}
+      - {track: "1.45", start: 17.7, end: 20.1, note: "1.45 · 3", focus: 2, reveal: 3}
+      - {track: "1.45", start: 24.0, end: 26.5, note: "1.45 · 4", focus: 3, reveal: 4}
+      - {track: "1.45", start: 30.6, end: 33.1, note: "1.45 · 5", focus: 4, reveal: 5}
+      - {track: "1.45", start: 37.0, end: 39.3, note: "1.45 · 6", focus: 5, reveal: 6}
+      - emma: "Regular verbs add e d. If the verb ends in e, just add d: liked, loved."
+        say: "Regular verbs add ee dee. If the verb ends in ee, just add dee: liked, loved."
+        focus: 5
+        vi: "Động từ có quy tắc thêm -ed; tận cùng bằng e thì chỉ thêm -d: liked, loved."
+
+  - kind: blanks
+    chapter: "Động từ bất quy tắc — nghe 1.45"
+    heading: "Grammar 1a · Past simple verbs: irregular"
+    heading_vi: "Động từ bất quy tắc phải học thuộc — danh sách đầy đủ ở sách tr. 160"
+    items:
+      - {n: 7, q: "make → ___", answer: "made"}
+      - {n: 8, q: "go → ___", answer: "went"}
+      - {n: 9, q: "cost → ___", answer: "cost"}
+      - {n: 10, q: "have → ___", answer: "had"}
+      - {n: 11, q: "buy → ___", answer: "bought"}
+      - {n: 12, q: "meet → ___", answer: "met"}
+      - {n: 13, q: "say → ___", answer: "said"}
+      - {n: 14, q: "sell → ___", answer: "sold"}
+    lines:
+      - emma: "Now the irregular verbs. Pause the video and find them in the article."
+        vi: "Giờ đến động từ bất quy tắc. Tạm dừng video, tìm trong bài báo."
+        pause: 1.5
+      - {track: "1.45", start: 43.8, end: 48.0, note: "1.45 · 7", focus: 0, reveal: 7}
+      - {track: "1.45", start: 51.2, end: 53.4, note: "1.45 · 8", focus: 1, reveal: 8}
+      - {track: "1.45", start: 56.9, end: 59.3, note: "1.45 · 9", focus: 2, reveal: 9}
+      - {track: "1.45", start: 63.1, end: 65.4, note: "1.45 · 10", focus: 3, reveal: 10}
+      - {track: "1.45", start: 68.7, end: 71.1, note: "1.45 · 11", focus: 4, reveal: 11}
+      - {track: "1.45", start: 74.6, end: 76.8, note: "1.45 · 12", focus: 5, reveal: 12}
+      - {track: "1.45", start: 80.4, end: 82.9, note: "1.45 · 13", focus: 6, reveal: 13}
+      - {track: "1.45", start: 86.4, end: 89.0, note: "1.45 · 14", focus: 7, reveal: 14}
+      - emma: "Cost doesn't change: cost, cost. And said has a short sound. It rhymes with red."
+        focus: 6
+        vi: "cost giữ nguyên ở quá khứ. said đọc ngắn /sed/, vần với red."
+
+  - kind: figure
+    chapter: "Bài 2: điền động từ quá khứ"
+    heading: "Grammar 2 · Complete the paragraphs"
+    heading_vi: "Hai đoạn văn tr. 35 — điền dạng quá khứ của use, work, want, listen, go, cost, have, make, buy, meet"
+    image: {pdf: course-book, page: 36, clip: [222, 338, 526, 476]}
+    items:
+      - {box: [283, 349, 317, 364], label: "1 worked"}
+      - {box: [492, 349, 524, 364], label: "2 cost"}
+      - {box: [420, 361, 458, 376], label: "3 bought"}
+      - {box: [234, 374, 271, 388], label: "4 used"}
+      - {box: [267, 421, 306, 436], label: "5 made"}
+      - {box: [410, 421, 448, 436], label: "6 went"}
+      - {box: [322, 434, 358, 449], label: "7 met"}
+      - {box: [434, 434, 473, 449], label: "8 listened"}
+      - {box: [422, 446, 460, 461], label: "9 had"}
+      - {box: [292, 458, 334, 473], label: "10 wanted"}
+    lines:
+      - emma: "Exercise 2. Complete the paragraphs with the past forms of the verbs in the box. Pause the video and try."
+        say: "Exercise two. Complete the paragraphs with the past forms of the verbs in the box. Pause the video and try."
+        vi: "Bài 2: điền dạng quá khứ của các động từ trong khung vào hai đoạn văn. Tạm dừng video và làm."
+        pause: 1.5
+      - tom: "Moggridge worked for GRID Systems Corporation."
+        say: "Mog-rij worked for Grid Systems Corporation."
+        focus: 0
+      - {tom: "His laptops cost about $9,000", say: "His laptops cost about nine thousand dollars", focus: 1}
+      - {tom: "but the American government bought them", focus: 2}
+      - {tom: "and used them on the Space Shuttle.", say: "and yoozd them on the Space Shuttle.", focus: 3}
+      - mai: "Pavel made the Stereobelt in 1972."
+        say: "Pah-vel made the Stereo-belt in nineteen seventy-two."
+        focus: 4
+      - {mai: "He went to some electronics companies", focus: 5}
+      - {mai: "and he met the directors.", focus: 6}
+      - {mai: "They listened to the personal stereo", focus: 7}
+      - {mai: "but said it was a bad idea because it had headphones.", focus: 8}
+      - {mai: "They said no one wanted to listen to music with headphones.", focus: 9}
+
+  - kind: blanks
+    chapter: "Sang-mi và công nghệ — nghe 1.46"
+    heading: "Vocabulary 3 · When was the first time Sang-mi …?"
+    heading_vi: "Ảnh Sang-mi tr. 35 — trả lời bằng cụm từ chỉ thời gian: in 1998, last year, six months ago …"
+    image: {pdf: course-book, page: 36, clip: [360, 602, 536, 796]}
+    items:
+      - {n: 1, q: "had a mobile phone? → ___", answer: "in 1998"}
+      - {n: 2, q: "sent a text message? → ___", answer: "six or seven years ago"}
+      - {n: 3, q: "used a computer? → ___", answer: "about 25 years ago"}
+      - {n: 4, q: "bought a CD? → ___", answer: "in 1993"}
+      - {n: 5, q: "bought music online? → ___", answer: "last year"}
+      - {n: 6, q: "used a digital camera? → ___", answer: "in 2003"}
+    lines:
+      - emma: "Vocabulary: past time expressions. Listen to Sang-mi from South Korea. Is she good with new technology?"
+        say: "Vocabulary: past time expressions. Listen to Sahng-mee from South Korea. Is she good with new technology?"
+        vi: "Từ vựng: cụm từ chỉ thời gian trong quá khứ. Nghe Sang-mi (Hàn Quốc): cô ấy có giỏi công nghệ mới không?"
+      - {track: "1.46", start: 2.6, end: 62.2, note: "1.46 · Sang-mi"}
+      - tom: "No, she isn't. She says: I'm not very good with technology."
+        vi: "Không. Cô ấy nói: Tôi không giỏi công nghệ lắm."
+      - emma: "When was the first time Sang-mi did these things? Pause the video and answer. Play the audio again if you need to."
+        say: "When was the first time Sahng-mee did these things? Pause the video and answer. Play the audio again if you need to."
+        vi: "Lần đầu Sang-mi làm những việc này là khi nào? Tạm dừng video để trả lời; cần thì nghe lại đoạn audio."
+        pause: 1.5
+      - mai: "One: in 1998. Two: six or seven years ago. Three: about twenty-five years ago, at school."
+        say: "One: in nineteen ninety-eight. Two: six or seven years ago. Three: about twenty-five years ago, at school."
+        reveal: [1, 2, 3]
+        vi: "1: năm 1998. 2: cách đây sáu, bảy năm. 3: cách đây khoảng 25 năm, ở trường."
+      - tom: "Four: in 1993. Five: last year. And six: in 2003. Her boyfriend gave her the camera."
+        say: "Four: in nineteen ninety-three. Five: last year. And six: in two thousand and three. Her boyfriend gave her the camera."
+        reveal: [4, 5, 6]
+        vi: "4: năm 1993. 5: năm ngoái. 6: năm 2003 — bạn trai tặng cô ấy máy ảnh."
+
+  - kind: compare
+    chapter: "last, in, ago"
+    heading: "Vocabulary 3 · Past time expressions"
+    heading_vi: "last + tuần / tháng / năm; in + năm; khoảng thời gian + ago"
+    items:
+      - {title: "last", title_vi: "… trước (gần nhất)", lines: ["last week", "last month", "last year"]}
+      - {title: "in", title_vi: "in + năm", lines: ["in 1993", "in 1998", "in 2003"]}
+      - {title: "ago", title_vi: "cách đây …", lines: ["six months ago", "six or seven years ago", "about 25 years ago"]}
+    lines:
+      - emma: "Last week, last month, last year. No in before last: I bought a phone last year."
+        focus: 0
+        vi: "last week / month / year — không có in phía trước: I bought a phone last year."
+      - emma: "In with a year: in 1993, in 1998, in 2003."
+        say: "In with a year: in nineteen ninety-three, in nineteen ninety-eight, in two thousand and three."
+        focus: 1
+        vi: "in + năm."
+      - emma: "And ago comes after the time: six months ago, about twenty-five years ago."
+        focus: 2
+        vi: "ago đứng sau khoảng thời gian: six months ago = cách đây sáu tháng."
+      - tom: "In Vietnamese, we say six months before. So can I say before six months?"
+        focus: 2
+        vi: "Tiếng Việt nói \"sáu tháng trước\". Vậy mình nói before six months được không?"
+      - emma: "No, that's a common mistake. Say six months ago. Not before six months, and not for six months ago."
+        focus: 2
+        vi: "Không, đó là lỗi hay gặp. Nói six months ago — không nói before six months hay for six months ago."
+
+  - kind: qa
+    chapter: "Đến lượt bạn"
+    heading: "Speaking 4 · When was the first time you …?"
+    heading_vi: "Hỏi và trả lời bằng in, last, ago — tạm dừng video và trả lời trước, rồi nghe câu mẫu"
+    items:
+      - {q: "When was the first time you had a mobile phone?", a: "In 2012. That was about fourteen years ago. It was small and cheap, but I loved it.", ask: tom, by: mai}
+      - {q: "When was the first time you sent a text message?", a: "I think it was about ten years ago. I sent it to my mum.", ask: mai, by: tom}
+      - {q: "Are you good with new technology?", a: "Yes, I am. I use my phone and my laptop every day for my studies.", ask: mai, by: tom}
+    lines:
+      - emma: "Your turn. Think about the first time you did these things. Use in, last and ago."
+        say: "Your turn. Think about the first time you did these things. Yooz in, last and ago."
+        vi: "Đến lượt bạn: nghĩ về lần đầu bạn làm những việc này; dùng in, last, ago."
+      - {tom: "When was the first time you had a mobile phone?", focus: 0, pause: 1.5}
+      - {mai: "In 2012. That was about fourteen years ago. It was small and cheap, but I loved it.", say: "In twenty twelve. That was about fourteen years ago. It was small and cheap, but I loved it.", reveal: 0}
+      - {mai: "When was the first time you sent a text message?", focus: 1, pause: 1.5}
+      - {tom: "I think it was about ten years ago. I sent it to my mum.", reveal: 1}
+      - {mai: "Are you good with new technology?", focus: 2, pause: 1.5}
+      - {tom: "Yes, I am. I use my phone and my laptop every day for my studies.", reveal: 2}
+      - emma: "Now ask a friend. Do you use the same technology now?"
+        vi: "Giờ hỏi một người bạn. Bạn còn dùng công nghệ đó không?"
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "thing → things · university → universities · person → people", vi: "Danh từ số ít, số nhiều"}
+      - {en: "work → worked · like → liked · go → went · buy → bought", vi: "Quá khứ đơn: có quy tắc (-ed) và bất quy tắc"}
+      - {en: "in 1998 · last year · six months ago", vi: "Cụm từ chỉ thời gian trong quá khứ"}
+      - {en: "When was the first time you …?", vi: "Hỏi về lần đầu tiên"}
+    lines:
+      - {emma: "Let's remember. One thing, two things. One university, two universities. One person, two people.", focus: 0}
+      - {emma: "Past simple: Martin Cooper worked for Motorola. Pavel went to some electronics companies.", say: "Past simple: Martin Cooper worked for Motorola. Pah-vel went to some electronics companies.", focus: 1}
+      - {emma: "Past time expressions: in 1998, last year, six months ago.", say: "Past time expressions: in nineteen ninety-eight, last year, six months ago.", focus: 2}
+      - {emma: "And questions about first times. In the next video, Sang-mi goes on a business trip.", say: "And questions about first times. In the next video, Sahng-mee goes on a business trip.", focus: 3, vi: "Video sau: Sang-mi đi công tác."}

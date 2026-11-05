@@ -5,6 +5,105 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 31 — 05/11/2026: video Unit 4 có hình trong sách cho IELTS Target 5.0 và Giai đoạn 0 (English Unlimited A2)
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 30 (`eb68df0`, đã lên `main`). Đẩy lên nhánh và `main` theo yêu cầu
+người học ("xong rồi thì commit push main luôn").
+
+### Yêu cầu
+
+Sau khi Oxford Word Skills Basic có hình trong sách ở mọi video (đợt 29–30), người học hỏi: "apply giống cho unit tiếp
+theo của sách IELTS Target 5.0 và sách A2 được không?". Unit tiếp theo của cả hai sách là Unit 4.
+
+### Đã làm
+
+**15 video mới, 1:49:31, 83 cảnh có hình trong sách**, không đếm ngược. Mỗi video có ảnh, bài đọc, Tapescript, Answer key
+hoặc email cắt từ trang PDF. Khung đỏ chỉ chỗ đang giảng, nhãn đỏ thường là đáp án.
+
+IELTS Target 5.0 · Unit 4 Achievements — 11 video, 1:16:46, đủ sáu phần có trang trong Course Book (file 06 mục 3a):
+
+| Video | Dài | Hình | Ghi chú |
+|---|---|---|---|
+| `U04-speaking-1` | 8:07 | 5 | sáu ảnh thành tựu; Track 39 không có file: Mai, Jerry, Tom đọc lại, tên che bằng "beep"; Grammar check present perfect / past simple |
+| `U04-speaking-2` | 7:04 | 4 | collocation have / achieve / overcome; Pronunciation check (Track 40: Emma đọc); thẻ đề Phần 2 và bài nói mẫu của Tom; Phần 3 |
+| `U04-listening-1` | 6:01 | 4 | đoán nội dung từ lời dẫn; phát Track 41 rồi phát lại ba cụm, khung đỏ trên hình Tapescript |
+| `U04-listening-2` | 9:36 | 5 | phát Track 43 ba đoạn; đáp án theo Answer key, nhãn trên hình câu hỏi; bẫy |
+| `U04-reading-1` | 6:08 | 8 | T / F / NG với bài báo về Ainan; câu bằng chứng; câu đánh lừa |
+| `U04-reading-2` | 7:36 | 9 | "Who Needs a Degree to Succeed in Business?"; nối tiêu đề; T / F / NG; từ vựng L / W |
+| `U04-writing-1` | 7:49 | 4 | bài luận đầu tiên: hiểu đề, từ khóa; Track 44 đọc lại (Mai, Jerry) và điền 7 ý |
+| `U04-writing-2` | 5:59 | 5 | bài luận mẫu viết tay (Jerry đọc); sáu bước bố cục; dàn bài bốn đoạn |
+| `U04-consolidation` | 6:25 | 5 | mẹo Phần 3; Track 46 đọc lại bằng bốn giọng; tạo từ; sửa lỗi |
+| `U04-exam-reading` | 6:39 | 7 | quảng cáo "London History Museum" ba dải; 14 câu; câu bằng chứng |
+| `U04-exam-writing` | 5:23 | 4 | đề "talent alone"; bài luận mẫu Michael Jordan cắt từ Answer key; chia 40 phút |
+
+Giai đoạn 0 · English Unlimited A2 · Unit 4 Changes — 4 video, 32:45 (file 08 mục 6.8):
+
+| Video | Dài | Hình | Ghi chú |
+|---|---|---|---|
+| `U04-lesson-1` | 9:59 | 8 | bài báo "Three small things that changed the world" ba dải; ghi chú bài 3 (nhãn đáp án); quá khứ đơn (1.45); last / in / ago (1.46) |
+| `U04-lesson-2` | 9:11 | 6 | tranh 12 đồ dùng đi công tác (1.47); ba bài nghe Sang-mi (1.48–1.50); trọng âm câu (1.51 thiếu: Emma đọc); did / didn't (1.52) |
+| `U04-target` | 6:22 | 3 | Onyinye kể chuyện chuyển từ Nigeria sang Scotland (1.53); bảng good / bad / both; bài nói mẫu của Mai |
+| `U04-explore` | 7:13 | 6 | Keyword have; tài liệu tự học; hai email của Judy và Mari (mỗi email hai dải); email mẫu của Mai |
+
+Cách làm, để unit sau làm theo:
+- Bài nghe có file của IELTS (Track 41, 43) chép lời bằng `lesson_video transcribe` để lấy mốc từng câu (`work/transcripts/`
+  của sách IELTS, lần đầu dùng cho sách này). Máy mới cần cài `sherpa-onnx` và model Parakeet (đầu file `transcribe.py`).
+- Trang nhiều chữ cắt thành dải, mỗi dải một cảnh, để chữ đủ to.
+- Khung đỏ lệch một từ khi đọc lưới 25 điểm. Đổi sang lưới 10 điểm phóng to, hoặc đo cột điểm ảnh có mực của dòng chữ.
+- Câu có hai chỗ cần khung thì cắt thành hai dòng thoại, không đọc lặp.
+- Answer key của IELTS Unit 4 chỉ có Listening 3B, Reading 1B–D, Reading 3B và bài luận mẫu. Đáp án khác ghi rõ "suy ra" ở
+  đầu kịch bản và có câu bằng chứng trên hình. Đáp án Listening 3B, Reading 1B–D, Reading 3B trong video đã đối chiếu với
+  Answer key: khớp.
+- Chi tiết nhân vật mới (khớp file 06 mục 9.4 và file 09 mục 5.7; đã ghi vào mục 9.4):
+  - mẹ của Tom bỏ học năm 16 tuổi; hơn hai mươi năm trước bắt đầu bán hoa ở một sạp nhỏ ngoài chợ Đà Lạt; nay cửa hàng
+    có ba nhân viên và gửi hoa vào TP. Hồ Chí Minh;
+  - Tom chuyển vào TP. Hồ Chí Minh học đại học khoảng hai năm trước (tháng 8);
+  - Mai (video A2) nhận việc giáo viên tiếng Anh ở Huế năm năm trước (khớp video A2 Unit 1: trước đó làm phục vụ quán cà
+    phê), có hai anh / em trai.
+
+Trong lúc dựng, máy làm việc của phiên khởi động lại một lần. Hàng đợi dựng đã chạy xong trước đó nên không mất video nào.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `books/ielts_target_5_0/lessons/U04-*.yaml` (+ `.mp4`) | 11 kịch bản và video Unit 4 |
+| `books/ielts_target_5_0/work/transcripts/U04-L2B`, `U04-L2C`, `U04-L3B` (`.json`, `.txt`) | Lời chép Track 41–43 có mốc từng từ |
+| `books/book_english_unlimited_a2_elemetary/lessons/U04-*.yaml` (+ `.mp4`) | 4 kịch bản và video Unit 4 |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/ielts_target_5_0/lessons/lessons.json`, `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | 11 và 4 mục mới |
+| `agents/tests/test_lesson_video.py` | Độ phủ Unit 1–4 của IELTS; test mới: video Unit 4 của hai sách có cảnh hình với `box`, không `wait` / `echo` |
+| `tests/web/book.e2e.mjs` | Bước mới cho Unit 4 IELTS (11 nút video, nút Exam practice mở phiên Consolidation & Exam practice); thẻ A2 có 19 video, Unit 4 bốn nút |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Phần đầu (hình trong sách từ Unit 4), mục 3a (độ phủ Unit 4), mục 4 (11 video), bảng `say`, lỗi đã gặp, mục 8 (cách đã làm, kế hoạch Unit 5) |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 5, 6 (hình trong sách), 6.3, 6.6, 6.7, 6.8 (độ phủ Unit 4) |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-65 (xong); dòng đợt 31 ở P2-53, P2-57 |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Hình trong sách từ Unit 4; dòng trạng thái đợt 31 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: IELTS Target 5.0 có 59 video, English Unlimited A2 có 19 video |
+| `cd agents && python -m pytest -q` | 142 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 20/20 bước OK, có bước mới cho Unit 4 IELTS; thẻ A2 có 19 video, Unit 4 bốn nút 6–9 phút |
+| `python -m lesson_video check` / `phonemes` | 15 kịch bản hợp lệ; ⚠ đã sửa bằng `say` (use, close) |
+
+### Còn treo
+
+- 4 video luyện nói thêm Unit 4 của IELTS Target 5.0 (P2-57), rồi Unit 5 theo file 06 mục 8.1.
+- Giai đoạn 0 Unit 5 trở đi: chép lời CD2 trước (file 08 mục 5).
+- Video Oxford Word Skills Basic từ Unit 17 (P2-59).
+
+---
+
 ## Đợt 30 — 03/11/2026: hình trong sách cho Unit 1–7 của Oxford Word Skills Basic
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 29 (`5ba75fe`, đã lên `main`). Đẩy lên nhánh và `main` theo yêu cầu

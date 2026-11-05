@@ -1,0 +1,209 @@
+# Video bài giảng Unit 4 · Listening 3: practise predicting and paraphrasing (sách in trang 49). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-listening-2.yaml
+# Cách viết: xem đầu file U03-listening-2.yaml. Track 43 (U04-L3B, 5:46) có file: phát phần nói cho câu 1–4 (21,0–192,3 s),
+# câu 5–9 (192,3–284,4 s), câu 10 (285,3–307,4 s) — mốc theo bản chép lời work/transcripts/U04-L3B.json.
+# Đáp án theo Answer key (sách in trang 267, "Unit 4, Listening 3B"): 1 c, 2 b, 3 a, 4 b, 5–9 A B E G H, 10 c; câu bằng
+# chứng theo Tapescript Track 43 (trang 284–285).
+# Hình trong sách (đợt 31): câu 1–4 và câu 5–10 tr. 49 (khung đỏ theo câu đang đọc, rồi theo đáp án đúng, nhãn là đáp án),
+# bảng tự đánh giá 3D. Không đếm ngược.
+id: U04-listening-2
+activity: U04-listening
+title: "Unit 4 · Achievements"
+subtitle: "Listening 2: practise predicting and paraphrasing"
+title_vi: "Bài nói về đặt mục tiêu — trắc nghiệm, chọn 5 trong 8, bẫy từ giống nhau (Track 43 của sách)"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening 3: practise predicting and paraphrasing. You'll hear a talk about how setting goals can help you achieve more."
+        say: "Welcome to Listening three: practise predicting and paraphrasing. You'll hear a talk about how setting goals can help you achieve more."
+        vi: "Listening 3: nghe một bài nói về việc đặt mục tiêu giúp bạn đạt được nhiều hơn."
+      - emma: "Exercise A. Set goals: to decide what you want to achieve. For example, my goal is to run five kilometres by June."
+        say: "Exercise eigh. Set goals: to decide what you want to achieve. For example, my goal is to run five kilometres by June."
+        vi: "set goals = đặt mục tiêu, quyết định điều mình muốn đạt được."
+      - tom: "I've set a goal too: five point five in IELTS, in December!"
+        say: "I've set a goal too: five point five in eye-elts, in December!"
+        vi: "Mình cũng đặt mục tiêu rồi: 5.5 IELTS vào tháng 12!"
+
+  - kind: figure
+    chapter: "Câu 1–4: đọc trước, đoán trước"
+    heading: "Listening 3B · Questions 1–4: read and predict"
+    heading_vi: "Câu hỏi tr. 49 — đọc trước, gạch từ khóa, đoán ý người nói"
+    image: {pdf: course-book, page: 50, clip: [58, 210, 445, 402]}
+    items:
+      - {box: [62, 228, 300, 282], label: "1"}
+      - {box: [62, 282, 440, 309], label: "2"}
+      - {box: [62, 308, 340, 362], label: "3"}
+      - {box: [62, 362, 370, 402], label: "4"}
+    lines:
+      - emma: "Exercise B. For questions 1 to 4, choose the correct letter a, b or c. First, read the questions. Pause the video and underline the key words."
+        say: "Exercise B. For questions one to four, choose the correct letter: eigh, B, or C. First, read the questions. Pause the video and underline the key words."
+        vi: "Bài B, câu 1–4: chọn a, b hoặc c. Đọc câu hỏi trước, gạch từ khóa. Tạm dừng video."
+        pause: 1.5
+      - {emma: "One: achievement means making money, the same thing to everyone, or getting what you want.", focus: 0}
+      - {emma: "Two: to achieve something, you must really want it, believe that getting it is possible, or talk about it a lot.", focus: 1}
+      - {emma: "Three: setting goals will help you understand what is really important to you, stop you worrying, or help you do well in business or sport.", focus: 2}
+      - {emma: "Four: the big picture means setting short-term goals, planning a long way ahead, or one important area of your life.", focus: 3}
+      - {emma: "Now listen to the first part of the talk.", vi: "Giờ nghe phần đầu bài nói."}
+      - {track: U04-L3B, start: 21.0, end: 192.3, note: "Track 43 · questions 1–4"}
+
+  - kind: figure
+    chapter: "Đáp án 1–4"
+    heading: "Listening 3B · Answers 1–4: 1 c · 2 b · 3 a · 4 b"
+    heading_vi: "Khung đỏ là đáp án đúng — nghe lời giải thích và câu bằng chứng"
+    image: {pdf: course-book, page: 50, clip: [58, 210, 445, 402]}
+    items:
+      - {box: [92, 269, 212, 282], label: "1 c"}
+      - {box: [232, 296, 337, 309], label: "2 b"}
+      - {box: [92, 322, 332, 335], label: "3 a"}
+      - {box: [232, 376, 365, 389], label: "4 b"}
+    lines:
+      - {emma: "Pause the video and check your answers. Then listen to Tom.", vi: "Tạm dừng video, xem lại đáp án rồi nghe Tom.", pause: 1.5}
+      - tom: "One is c, getting what you want. He says: achievement is simply accomplishing goals that you set for yourself, doing what you planned to do."
+        say: "One is C, getting what you want. He says: achievement is simply accomplishing goals that you set for yourself, doing what you planned to do."
+        focus: 0
+        vi: "1 c: thành tựu là hoàn thành mục tiêu mình tự đặt ra."
+      - emma: "And not a: he says achievement certainly doesn't have to mean making money."
+        say: "And not eigh: he says achievement certainly doesn't have to mean making money."
+        focus: 0
+        vi: "Không phải a: thành tựu không nhất thiết là kiếm tiền."
+      - tom: "Two is b. To achieve, you must have belief, belief that you can do whatever it is you want to do."
+        say: "Two is B. To achieve, you must have belief, belief that you can do whatever it is you want to do."
+        focus: 1
+        vi: "2 b: phải có niềm tin rằng mình làm được."
+      - emma: "Not a: he says there is more to achievement than simply wanting to do something."
+        say: "Not eigh: he says there is more to achievement than simply wanting to do something."
+        focus: 1
+        vi: "Không phải a: chỉ muốn thôi thì chưa đủ."
+      - tom: "Three is a. Setting goals helps you to be clear about what you really want, and to see what's important."
+        say: "Three is eigh. Setting goals helps you to be clear about what you really want, and to see what's important."
+        focus: 2
+        vi: "3 a: giúp bạn hiểu rõ điều thật sự quan trọng."
+      - emma: "Option c is a trap. Business and athletes are in the talk: all achievers set goals, high-flyers in business or successful athletes. But that's not what goals will do for you."
+        say: "Option C is a trap. Business and athletes are in the talk: all achievers set goals, high-flyers in business or successful athletes. But that's not what goals will do for you."
+        focus: 2
+        vi: "c là bẫy: có nhắc business và athletes, nhưng không nói mục tiêu giúp bạn thành công trong kinh doanh."
+      - tom: "Four is b, planning a long way ahead. Think about what you want in the next fifteen or twenty years."
+        say: "Four is B, planning a long way ahead. Think about what you want in the next fifteen or twenty years."
+        focus: 3
+        vi: "4 b: nghĩ về 15–20 năm tới = lên kế hoạch dài hạn."
+
+  - kind: figure
+    chapter: "Câu 5–10: các lĩnh vực trong đời"
+    heading: "Listening 3B · Questions 5–9: choose five answers from A–H · Question 10"
+    heading_vi: "Tr. 49 — người nói nhắc đến năm lĩnh vực nào? Đọc trước tám phương án"
+    image: {pdf: course-book, page: 50, clip: [58, 425, 445, 610]}
+    items:
+      - {box: [78, 443, 420, 496], label: "A–H"}
+      - {box: [62, 553, 300, 608], label: "10"}
+    lines:
+      - emma: "For questions 5 to 9, choose five answers from A to H. When the speaker talks about different areas of life, which of these does he mention? Read the options first."
+        say: "For questions five to nine, choose five answers from eigh to aitch. When the speaker talks about different areas of life, which of these does he mention? Read the options first."
+        focus: 0
+        vi: "Câu 5–9: chọn 5 trong 8 lĩnh vực người nói có nhắc đến. Đọc trước các phương án."
+      - emma: "Remember: he will not use the same words. Listen for paraphrases: the job you do could be career. Money could be income, or wealth."
+        focus: 0
+        vi: "Người nói sẽ dùng từ khác: the job you do ↔ career; money ↔ income, wealth."
+      - {track: U04-L3B, start: 192.3, end: 284.4, note: "Track 43 · questions 5–9", focus: 0}
+      - emma: "Question 10. The speaker says that making other people happy is very important, you must forget about other people completely, or you must think about yourself first. Listen."
+        say: "Question ten. The speaker says that making other people happy is very important, you must forget about other people completely, or you must think about yourself first. Listen."
+        focus: 1
+        vi: "Câu 10: nghe tiếp."
+      - {track: U04-L3B, start: 285.3, end: 307.4, note: "Track 43 · question 10", focus: 1}
+
+  - kind: figure
+    chapter: "Đáp án 5–10"
+    heading: "Listening 3B · Answers: 5–9 A, B, E, G, H · 10 c"
+    heading_vi: "Khung đỏ là năm lĩnh vực được nhắc đến — không có C, D, F"
+    image: {pdf: course-book, page: 50, clip: [58, 425, 445, 610]}
+    items:
+      - {box: [78, 443, 162, 456], label: "A · career"}
+      - {box: [298, 443, 344, 456], label: "B · income, wealth"}
+      - {box: [78, 469, 158, 482], label: "E · married, children"}
+      - {box: [78, 482, 282, 496], label: "G · not good for your health"}
+      - {box: [298, 482, 364, 496], label: "H · free time"}
+      - {box: [298, 456, 420, 469], label: "D · a trap"}
+      - {box: [92, 594, 242, 607], label: "10 c"}
+    lines:
+      - {emma: "Pause the video and check your answers.", vi: "Tạm dừng video và xem lại đáp án.", pause: 1.5}
+      - {tom: "A, the job you do. He says: first, think about your career.", say: "Eigh, the job you do. He says: first, think about your career.", focus: 0}
+      - {tom: "B, money. The financial side of your life. What sort of income do you want? Is wealth important to you?", say: "B, money. The financial side of your life. What sort of income do you want? Is wealth important to you?", focus: 1}
+      - {tom: "E, having a family. Long-term relationships. Do you want to have children?", say: "Ee, having a family. Long-term relationships. Do you want to have children?", focus: 2}
+      - {tom: "G. Do you do anything that is not good for your health?", say: "Gee. Do you do anything that is not good for your health?", focus: 3}
+      - {tom: "And H, leisure time: your free time, your hobbies and interests.", say: "And aitch, leisure time: your free time, your hobbies and interests.", focus: 4}
+      - emma: "D is the trap. He asks: at what age do you hope to be married? But he doesn't talk about marrying the right person."
+        say: "Dee is the trap. He asks: at what age do you hope to be married? But he doesn't talk about marrying the right person."
+        focus: 5
+        vi: "D là bẫy: chỉ hỏi bao nhiêu tuổi muốn kết hôn, không nói về chọn đúng người."
+      - tom: "Ten is c. It is important to make the people around you happy, but you must focus on what you want."
+        say: "Ten is C. It is important to make the people around you happy, but you must focus on what you want."
+        focus: 6
+        vi: "10 c: làm người xung quanh vui là quan trọng, nhưng phải tập trung vào điều mình muốn."
+      - emma: "Listen for the word but. The idea after but is the speaker's main point. That's why the answer is c, not a."
+        say: "Listen for the word but. The idea after but is the speaker's main point. That's why the answer is C, not eigh."
+        focus: 6
+        vi: "Chú ý chữ but: ý sau but mới là ý chính — nên đáp án là c, không phải a."
+
+  - kind: figure
+    chapter: "Bài C–D: tự đánh giá"
+    heading: "Listening 3C–D · Check the key and think about how you did the task"
+    heading_vi: "Bảng tự đánh giá tr. 49 — câu nào đúng với bạn?"
+    image: {pdf: course-book, page: 50, clip: [58, 615, 445, 737]}
+    items:
+      - {box: [62, 669, 442, 682], label: "1"}
+      - {box: [62, 682, 442, 695], label: "2"}
+      - {box: [62, 696, 442, 709], label: "3"}
+      - {box: [62, 709, 442, 722], label: "4"}
+      - {box: [62, 722, 442, 735], label: "5"}
+    lines:
+      - emma: "Exercise C. Check the key on page 267. How many questions did you answer correctly? Exercise D. Tick the sentences that are true for you."
+        say: "Exercise C. Check the key on page two hundred and sixty-seven. How many questions did you answer correctly? Exercise D. Tick the sentences that are true for you."
+        vi: "Bài C: so với Answer key tr. 267. Bài D: đánh dấu những câu đúng với bạn."
+      - {emma: "Did it help to know the topic before you listened?", focus: 0}
+      - {emma: "Did you look through the questions and make predictions?", focus: 1}
+      - {emma: "Did you guess some answers correctly before you listened?", focus: 2}
+      - {emma: "Did you listen for paraphrased language?", focus: 3}
+      - {emma: "And are you happy with your score?", focus: 4}
+      - tom: "I got eight. Question 3 and question 10 were difficult. I chose the trap!"
+        say: "I got eight. Question three and question ten were difficult. I chose the trap!"
+        focus: 4
+        vi: "Mình đúng 8 câu. Câu 3 và 10 khó — mình chọn trúng bẫy!"
+
+  - kind: vocab
+    chapter: "Từ vựng trong bài nói"
+    heading: "Useful words from the talk"
+    heading_vi: "Từ trong Tapescript Track 43 — dùng được khi nói và viết về thành tựu"
+    items:
+      - {w: "set a goal", pos: "phr", vi: "đặt mục tiêu", ex: "Goal setting is something that all achievers do."}
+      - {w: "belief", pos: "n", vi: "niềm tin", ex: "To achieve, you must have belief."}
+      - {w: "the big picture", pos: "phr", vi: "bức tranh toàn cảnh, kế hoạch lớn", ex: "First, you need to see the big picture."}
+      - {w: "break something down", pos: "v", vi: "chia nhỏ", ex: "Break this down into a number of smaller goals."}
+      - {w: "a high-flyer", pos: "n", vi: "người rất thành đạt", ex: "high-flyers in business"}
+      - {w: "focus on", pos: "v", vi: "tập trung vào", ex: "You must focus on what you want."}
+    lines:
+      - {emma: "Some useful words from the talk. Set a goal.", focus: 0}
+      - {emma: "Belief. To achieve, you must have belief.", focus: 1}
+      - {emma: "The big picture: what you want from life.", focus: 2}
+      - {emma: "Break something down into smaller goals.", focus: 3}
+      - {emma: "A high-flyer: a very successful person.", focus: 4}
+      - {emma: "And focus on: you must focus on what you want.", focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 c · 2 b · 3 a · 4 b · 5–9 A B E G H · 10 c", vi: "Đáp án"}
+      - {en: "Read the questions first and predict", vi: "Đọc câu hỏi trước, đoán trước"}
+      - {en: "career = the job you do · income, wealth = money", vi: "Paraphrase"}
+      - {en: "Traps: business and athletes (3), married (D), the idea before but (10)", vi: "Bẫy"}
+    lines:
+      - {emma: "Let's review. The answers: c, b, a, b; A, B, E, G and H; and c.", say: "Let's review. The answers: C, B, eigh, B; eigh, B, ee, gee and aitch; and C.", focus: 0}
+      - {emma: "Read the questions first, and predict.", focus: 1}
+      - {emma: "Listen for paraphrases: career, income, wealth.", focus: 2}
+      - {tom: "And watch out for the traps, especially before the word but!", focus: 3}

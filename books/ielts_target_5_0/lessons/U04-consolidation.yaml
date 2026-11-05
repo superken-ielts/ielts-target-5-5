@@ -1,0 +1,229 @@
+# Video bài giảng Unit 4 · Consolidation (sách in trang 55). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-consolidation.yaml
+# Cách viết: xem đầu file U03-consolidation.yaml. Track 46 (bốn học viên trả lời câu hỏi Phần 3) không có file: Emma (giám
+# khảo), Tom, Mai, Jerry đọc lại Tapescript (sách in trang 285–286), giữ nguyên lỗi ngữ pháp của người nói 2 và 3. Answer key
+# không có trang này — đáp án suy ra: Speaking A: 1 F, 2 T, 3 F, 4 T, 5 T, 6 F, 7 T, 8 F; C: 1 NG, 2 NG, 3 G, 4 G; D: a 3,
+# b 2, c 1, d 4; Vocabulary A: successful, difficulties, ambitious, strength, powerful, education; B: gạch h (have a
+# failure); Errors: had a lot of success, haven't achieved, was taught, an influence on.
+# Hình trong sách (đợt 31): Speaking A, C–D, Vocabulary A–B, Errors tr. 55 (khung đỏ theo câu đang chữa, nhãn là đáp án).
+# Không đếm ngược.
+id: U04-consolidation
+activity: U04-consolidation
+title: "Unit 4 · Achievements"
+subtitle: "Consolidation: Speaking, Vocabulary, Errors"
+title_vi: "Ôn Unit 4: mẹo Phần 3 bài thi Nói, câu trả lời tốt và chưa tốt, tạo từ (success → successful), collocation với have, sửa lỗi"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Consolidation for Unit 4. Let's review speaking in part 3, vocabulary for achievement, and some common errors."
+        say: "Welcome to Consolidation for Unit four. Let's review speaking in part three, vocabulary for achievement, and some common errors."
+        vi: "Ôn tập Unit 4: Phần 3 bài thi Nói, từ vựng về thành tựu và các lỗi hay gặp."
+
+  - kind: figure
+    chapter: "Speaking A: mẹo Phần 3"
+    heading: "Speaking A · Mark these sentences (T) true or (F) false"
+    heading_vi: "Tám câu tr. 55 về Phần 3 bài thi Nói — nhãn đỏ là đáp án (suy ra)"
+    image: {pdf: course-book, page: 56, clip: [58, 100, 445, 242]}
+    items:
+      - {box: [62, 136, 442, 149], label: "F"}
+      - {box: [62, 149, 442, 162], label: "T"}
+      - {box: [62, 162, 442, 175], label: "F"}
+      - {box: [62, 176, 442, 189], label: "T"}
+      - {box: [62, 189, 442, 202], label: "T"}
+      - {box: [62, 202, 442, 216], label: "F"}
+      - {box: [62, 216, 442, 229], label: "T"}
+      - {box: [62, 229, 442, 242], label: "F"}
+    lines:
+      - emma: "Speaking, Exercise A. In the third part of the Speaking Module, you need to express your opinions. Mark these sentences true or false. Pause the video and try."
+        say: "Speaking, Exercise eigh. In the third part of the Speaking Module, you need to express your opinions. Mark these sentences true or false. Pause the video and try."
+        vi: "Bài A: đúng hay sai về Phần 3 bài thi Nói? Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "One: if you don't know what to say, you can ask for another question. False. You can't change the question.", focus: 0, vi: "1 sai: không được đổi câu hỏi."}
+      - {tom: "Two: you must try to answer the questions that the examiner asks. True.", focus: 1}
+      - {tom: "Three: you must show that you know a lot about the topic. False. It's about your opinion, not your knowledge.", focus: 2, vi: "3 sai: cần nêu ý kiến, không cần kiến thức chuyên môn."}
+      - {tom: "Four: you should think for a moment before you answer. True. A short pause is fine.", focus: 3, vi: "4 đúng: dừng một chút để nghĩ là bình thường."}
+      - {tom: "Five: you can ask the examiner to explain a word that you don't understand. True.", focus: 4}
+      - {tom: "Six: you must say something that the examiner will agree with. False. The examiner wants your opinion.", focus: 5, vi: "6 sai: giám khảo muốn nghe ý kiến của bạn, không cần đồng ý với họ."}
+      - {tom: "Seven: you should speak clearly and fairly slowly. True.", focus: 6}
+      - {tom: "Eight: your language must always be grammatically correct. False. Small mistakes are normal. A full answer is more important.", focus: 7, vi: "8 sai: lỗi nhỏ là bình thường; trả lời đầy đủ quan trọng hơn."}
+
+  - kind: bullets
+    chapter: "Speaking B–C: bốn câu trả lời"
+    heading: "Speaking C · Mark each speaker (G) good answer or (NG) not a good answer"
+    heading_vi: "Track 46 không có file — Emma hỏi, Tom, Mai, Jerry trả lời (giữ nguyên lỗi của người nói)"
+    hide_text: true
+    roles: {emma: examiner, tom: "speaker 1", mai: "speaker 2", jerry: "speaker 4"}
+    items:
+      - {en: "Speaker 1 · ___", vi: "G hay NG?"}
+      - {en: "Speaker 2 · ___", vi: "G hay NG?"}
+      - {en: "Speaker 3 · ___", vi: "G hay NG?"}
+      - {en: "Speaker 4 · ___", vi: "G hay NG?"}
+    lines:
+      - emma: "Exercise B. Look again at this question from the unit: are people born to achieve, or do they learn to achieve? Can you remember how you answered it?"
+        say: "Exercise B. Look again at this question from the unit: are people born to achieve, or do they learn to achieve? Can you remember how you answered it?"
+        vi: "Bài B: nhớ lại câu hỏi — con người sinh ra đã thành công hay học để thành công?"
+      - emma: "Exercise C. Listen to some students answering the question. The recording isn't in our audio files, so we read it for you. Mark each speaker G, good answer, or NG, not a good answer."
+        say: "Exercise C. Listen to some students answering the question. The recording isn't in our audio files, so we read it for you. Mark each speaker gee, good answer, or en gee, not a good answer."
+        vi: "Bài C: nghe bốn học viên trả lời, đánh dấu G (tốt) hoặc NG (chưa tốt)."
+      - {emma: "And do you think people are born to achieve, or do they learn to achieve?", focus: 0}
+      - {tom: "Yes, I think so.", focus: 0}
+      - {emma: "And do you think people are born to achieve, or do they learn to achieve?", focus: 1}
+      - {mai: "I don't know. Maybe are born with this ability.", focus: 1}
+      - {emma: "And do you think people are born to achieve, or do they learn to achieve?", focus: 2}
+      - {mai: "Mm, I didn't think about it before. Some people is born very clever, so maybe can achieve a lot. Other people is not so clever, but try and try. Maybe that is learn to achieve.", focus: 2}
+      - {emma: "And do you think people are born to achieve, or do they learn to achieve?", focus: 3}
+      - {jerry: "Mm, it's a good question. I guess some people are born to achieve. You know, like a genius or someone with an incredible talent, but some people learn to achieve. Maybe their parents teach them good things, or they learn by mistakes.", focus: 3}
+
+  - kind: figure
+    chapter: "Speaking C–D: đáp án"
+    heading: "Speaking C–D · Answers: 1 NG · 2 NG · 3 G · 4 G"
+    heading_vi: "Bài D tr. 55 — người nói nào làm gì? Nhãn đỏ là người nói (đáp án suy ra)"
+    image: {pdf: course-book, page: 56, clip: [58, 319, 556, 418]}
+    items:
+      - {box: [62, 364, 553, 377], label: "speaker 3"}
+      - {box: [62, 377, 553, 390], label: "speaker 2"}
+      - {box: [62, 390, 553, 403], label: "speaker 1"}
+      - {box: [62, 404, 553, 417], label: "speaker 4"}
+    lines:
+      - emma: "Exercise D. Which speaker in Exercise C makes grammatical mistakes and uses simple vocabulary, but gives a good answer?"
+        say: "Exercise D. Which speaker in Exercise C makes grammatical mistakes and yoozes simple vocabulary, but gives a good answer?"
+        focus: 0
+        vi: "Ai mắc lỗi ngữ pháp, dùng từ đơn giản nhưng trả lời tốt?"
+      - tom: "Speaker 3. Some people is born very clever is a mistake. It should be: some people are. But the answer is good: some people are clever, other people try and try."
+        say: "Speaker three. Some people is born very clever is a mistake. It should be: some people are. But the answer is good: some people are clever, other people try and try."
+        focus: 0
+        vi: "Người 3: sai ngữ pháp (people is) nhưng ý trả lời tốt."
+      - {emma: "Who understands the question but doesn't give a full answer?", focus: 1}
+      - tom: "Speaker 2. Maybe are born with this ability. There's no reason and no example."
+        say: "Speaker two. Maybe are born with this ability. There's no reason and no example."
+        focus: 1
+        vi: "Người 2: hiểu câu hỏi nhưng trả lời quá ngắn, không lý do, không ví dụ."
+      - {emma: "Who doesn't understand the question, and should ask to hear it again?", focus: 2}
+      - tom: "Speaker 1. Yes, I think so. But it's an or question! You can't answer it with yes."
+        say: "Speaker one. Yes, I think so. But it's an or question! You can't answer it with yes."
+        focus: 2
+        vi: "Người 1: không hiểu câu hỏi — câu hỏi lựa chọn thì không trả lời yes được. Nên xin nghe lại."
+      - {emma: "And who uses correct language and a range of vocabulary to give a very full answer?", focus: 3}
+      - tom: "Speaker 4. A genius, incredible talent, learn by mistakes. Both sides, with examples."
+        say: "Speaker four. A genius, incredible talent, learn by mistakes. Both sides, with examples."
+        focus: 3
+        vi: "Người 4: đúng ngữ pháp, từ vựng phong phú, nói cả hai phía có ví dụ."
+      - emma: "Good. If you don't understand, say: Sorry, could you repeat the question, please?"
+        vi: "Không hiểu thì nói: Sorry, could you repeat the question, please?"
+
+  - kind: qa
+    chapter: "Speaking E: đến lượt bạn"
+    heading: "Speaking E · Answer these two questions"
+    heading_vi: "Tạm dừng video và trả lời trước, rồi nghe Tom — ý kiến + lý do + ví dụ"
+    items:
+      - q: "Does being successful mean doing better than other people?"
+        a: "Not always. For me, success means doing better than I did before. For example, if I get 5.5 in IELTS, that's a success for me, even if my friend gets 6.5."
+        vi: "Không hẳn: thành công là giỏi hơn chính mình trước đây."
+        phrases: ["Not always", "better than I did before"]
+        ask: emma
+        by: tom
+      - q: "Can you only enjoy success if other people know about it?"
+        a: "I don't think so. Some achievements are private, like learning to swim. But it's nice when your family is proud of you."
+        vi: "Không: có thành công rất riêng tư; nhưng gia đình tự hào thì cũng vui."
+        phrases: ["I don't think so", "proud of you"]
+        ask: emma
+        by: tom
+    lines:
+      - emma: "Exercise E. Answer these two questions. Pause after each question and answer out loud first."
+        say: "Exercise ee. Answer these two questions. Pause after each question and answer out loud first."
+        vi: "Bài E: trả lời hai câu hỏi. Tạm dừng sau mỗi câu và nói thành tiếng trước."
+      - {emma: "Does being successful mean doing better than other people?", focus: 0, pause: 1.5}
+      - {tom: "Not always. For me, success means doing better than I did before. For example, if I get 5.5 in IELTS, that's a success for me, even if my friend gets 6.5.", say: "Not always. For me, success means doing better than I did before. For example, if I get five point five in eye-elts, that's a success for me, even if my friend gets six point five.", reveal: 0}
+      - {emma: "Can you only enjoy success if other people know about it?", focus: 1, pause: 1.5}
+      - {tom: "I don't think so. Some achievements are private, like learning to swim. But it's nice when your family is proud of you.", reveal: 1}
+
+  - kind: figure
+    chapter: "Vocabulary A: tạo từ"
+    heading: "Vocabulary A · Fill the gaps with a word made from the root words in the box"
+    heading_vi: "Sáu câu và khung từ gốc tr. 55 — nhãn đỏ là từ cần điền"
+    image: {pdf: course-book, page: 56, clip: [58, 504, 518, 612]}
+    items:
+      - {box: [62, 527, 420, 540], label: "successful"}
+      - {box: [62, 540, 420, 553], label: "difficulties"}
+      - {box: [62, 553, 420, 566], label: "ambitious"}
+      - {box: [62, 566, 420, 580], label: "strength"}
+      - {box: [62, 580, 420, 593], label: "powerful"}
+      - {box: [62, 593, 420, 607], label: "education"}
+    lines:
+      - emma: "Vocabulary, Exercise A. Fill the gaps with a word made from the root words in the box. Pause the video and try."
+        say: "Vocabulary, Exercise eigh. Fill the gaps with a word made from the root words in the box. Pause the video and try."
+        vi: "Bài A: điền từ tạo từ các từ gốc trong khung. Tạm dừng video và làm."
+        pause: 1.5
+      - {mai: "I think Mustafa will have a very successful career.", focus: 0, vi: "success → successful (tính từ)"}
+      - {mai: "She had to overcome a number of early difficulties.", focus: 1, vi: "difficult → difficulties (danh từ số nhiều)"}
+      - {mai: "My brother works hard, but he isn't very ambitious.", focus: 2, vi: "ambition → ambitious (tính từ)"}
+      - {mai: "You need great mental strength to be a real achiever.", focus: 3, vi: "strong → strength (danh từ)"}
+      - {mai: "Martin's father is a very powerful man.", focus: 4, vi: "power → powerful (tính từ)"}
+      - {mai: "Most people think that a good education is very important.", focus: 5, vi: "educate → education (danh từ)"}
+      - emma: "Look at the word before the gap. After very, we need an adjective: successful, ambitious, powerful. After a number of, a plural noun: difficulties."
+        vi: "Nhìn từ đứng trước chỗ trống: sau very cần tính từ; sau a number of cần danh từ số nhiều."
+
+  - kind: figure
+    chapter: "Vocabulary B: collocation với have"
+    heading: "Vocabulary B · Which one phrase does not collocate with have?"
+    heading_vi: "Chín cụm tr. 55 — gạch cụm sai, rồi đặt câu với các cụm còn lại"
+    image: {pdf: course-book, page: 56, clip: [58, 614, 445, 686]}
+    items:
+      - {box: [200, 672, 292, 686], label: "not: have a failure"}
+      - {box: [100, 646, 192, 660], label: "have ambition"}
+      - {box: [292, 659, 366, 673], label: "have an effect"}
+    lines:
+      - emma: "Exercise B. Which one phrase in the list does not collocate with have? Cross it out. Pause the video and try."
+        say: "Exercise B. Which one phrase in the list does not collocate with have? Cross it out. Pause the video and try."
+        vi: "Bài B: cụm nào không đi với have? Tạm dừng video và tìm."
+        pause: 1.5
+      - tom: "h, have a failure. We say: be a failure, or fail. But we can say have success."
+        say: "Aitch, have a failure. We say: be a failure, or fail. But we can say have success."
+        focus: 0
+        vi: "h: không nói have a failure — nói be a failure / fail; nhưng có have success."
+      - emma: "Now write sentences with the other words. Here are two from Tom."
+        vi: "Giờ đặt câu với các cụm còn lại. Đây là hai câu của Tom."
+      - {tom: "I have the ambition to study in Australia next year.", focus: 1}
+      - {tom: "Living in a new city has had a big effect on me.", focus: 2}
+
+  - kind: figure
+    chapter: "Errors: sửa lỗi"
+    heading: "Errors A · Correct the sentences"
+    heading_vi: "Bốn câu sai tr. 55 — có câu sai nhiều hơn một chỗ"
+    image: {pdf: course-book, page: 56, clip: [58, 700, 518, 768]}
+    items:
+      - {box: [62, 740, 312, 754], label: "has had a lot of success"}
+      - {box: [312, 740, 514, 754], label: "I haven't achieved"}
+      - {box: [62, 754, 312, 768], label: "was taught"}
+      - {box: [312, 754, 514, 768], label: "an influence on"}
+    lines:
+      - emma: "Errors. There are errors in all of these sentences, sometimes more than one. Correct them. Pause the video and try."
+        vi: "Sửa lỗi trong bốn câu (có câu nhiều hơn một lỗi). Tạm dừng video và làm."
+        pause: 1.5
+      - {emma: "One: James has made a lot of success in business. Correct: James has had a lot of success in business. We have success, not make success.", focus: 0, vi: "have success, không nói make success."}
+      - {emma: "Two: I don't have achieved what I want yet. Correct: I haven't achieved what I want yet.", focus: 1, vi: "Present perfect phủ định: haven't + achieved."}
+      - {emma: "Three: he was teached Chemistry at school. Correct: he was taught Chemistry. Teach, taught, taught.", focus: 2, vi: "teach là động từ bất quy tắc: taught."}
+      - {emma: "Four: my father had an influence in my decision. Correct: an influence on my decision.", focus: 3, vi: "influence on something."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Part 3: answer the question, give your opinion, mistakes are OK", vi: "Phần 3: trả lời đúng câu hỏi, nêu ý kiến; lỗi nhỏ không sao"}
+      - {en: "Sorry, could you repeat the question, please?", vi: "Không hiểu thì xin nghe lại"}
+      - {en: "successful · difficulties · ambitious · strength · powerful · education", vi: "Tạo từ"}
+      - {en: "have success · haven't achieved · was taught · an influence on", vi: "Sửa lỗi"}
+    lines:
+      - {emma: "Let's review. In part 3, answer the question and give your opinion. Small mistakes are OK.", say: "Let's review. In part three, answer the question and give your opinion. Small mistakes are OK.", focus: 0}
+      - {emma: "If you don't understand, ask the examiner to repeat the question.", focus: 1}
+      - {emma: "Word forms: successful, difficulties, ambitious, strength, powerful, education.", focus: 2}
+      - {tom: "And: I have success, and I haven't achieved everything yet!", focus: 3}

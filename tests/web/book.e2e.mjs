@@ -185,6 +185,21 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
+  await step("Unit 4 có 11 video đủ sáu phần (đợt 31, có hình trong sách); nút Exam practice: Writing mở phiên Consolidation & Exam practice", async () => {
+    const u4 = page.locator("#p-book .bk-unit", { hasText: "Unit 4 · Achievements" });
+    assert.equal(await u4.locator(".bk-vids button").count(), 11);
+    assert.deepEqual(await u4.locator(".bk-vgroup-t").allTextContents(),
+      ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
+    await u4.locator(".bk-vids button", { hasText: "Exam practice: Writing" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 4 · Consolidation & Exam practice/);
+    const srcs = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(srcs, ["U04-consolidation.mp4", "U04-exam-reading.mp4", "U04-exam-writing.mp4"]);
+    assert.ok(await page.locator("#lesson-U04-exam-writing .bk-chaps button").count() >= 5);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("mở phiên, xem trang sách qua đoạn PDF nhỏ", async () => {
     await page.click("#p-book .bk-next .btn-primary");
     await page.click("#p-book .bk-act .btn-primary");
@@ -364,7 +379,7 @@ try{
     await page.click(".bk-vbar button:last-child");
   });
 
-  await step("Giai đoạn 0 (English Unlimited A2): video Intro, Unit 1–3; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
+  await step("Giai đoạn 0 (English Unlimited A2): video Intro, Unit 1–4; phiên Unit 6 mở đúng trang in sau chỗ quét trùng, track theo nhãn CD", async () => {
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
     const card = page.locator("#p-book .bk-lib", { hasText: "English Unlimited A2 Elementary" });
@@ -372,7 +387,7 @@ try{
     assert.match(text, /Elementary · CEFR A1 → A2/);
     assert.match(text, /15 unit · 4 test · 171 track audio/);
     assert.match(text, /79 phiên × 60 phút/);
-    assert.match(text, /(^|\D)15 video bài giảng/);                    // file 08 mục 6.8: Intro 3 video, Unit 1–3 mỗi unit 4 video
+    assert.match(text, /(^|\D)19 video bài giảng/);                    // file 08 mục 6.8: Intro 3 video, Unit 1–4 mỗi unit 4 video
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
     assert.equal(await page.locator("#p-book .bk-unit").count(), 19);   // Intro + 14 unit + 3 Achievement test + mốc A2 Key
@@ -383,6 +398,7 @@ try{
       "Unit 1 · People in your life": ["Listening", "Reading", "Speaking", "Explore"],
       "Unit 2 · Away from home": ["Listening", "Reading", "Speaking", "Explore"],
       "Unit 3 · Your time": ["Reading", "Listening", "Speaking", "Explore"],        // bài 3.1 là bài đọc, 3.2 là bài nghe
+      "Unit 4 · Changes": ["Reading", "Listening", "Speaking", "Explore"],          // đợt 31: có hình trong sách
     };
     const labels = [];
     for(const [unit, want] of Object.entries(skills)){

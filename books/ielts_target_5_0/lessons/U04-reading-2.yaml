@@ -1,0 +1,241 @@
+# Video bài giảng Unit 4 · Reading 3: practise finding the right information (sách in trang 51–52). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U04-reading-2.yaml
+# Cách viết: xem đầu file U03-reading-2.yaml. Đáp án theo Answer key (sách in trang 267, "Unit 4, Reading 3B"): 1 d, 2 e,
+# 3 b, 4 a, 5 T, 6 NG, 7 F, 8 F, 9 NG, 10 NG, 11 T, 12 F. Key vocabulary in context (L / W) không có trong Answer key:
+# suy ra — L: degree, education, best grades, graduates, college dropout; W: career, entrepreneur, business venture,
+# apprentice.
+# Hình trong sách (đợt 31): bài "Who Needs a Degree to Succeed in Business?" (phần mở đầu tr. 51, bốn đoạn về bốn người và
+# đoạn kết tr. 52 — khung đỏ theo đoạn và theo câu bằng chứng), năm tiêu đề a–e, câu 5–12, Key vocabulary in context.
+# Không đếm ngược.
+id: U04-reading-2
+activity: U04-reading
+title: "Unit 4 · Achievements"
+subtitle: "Reading 2: practise finding the right information"
+title_vi: "Bài đọc về người thành công không cần bằng đại học — nối tiêu đề với tên, 8 câu T / F / NG, từ vựng học tập và công việc"
+tag: "UNIT 4 · ACHIEVEMENTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Reading 3: practise finding the right information. The text is about successful business people who don't have a degree."
+        say: "Welcome to Reading three: practise finding the right information. The text is about successful business people who don't have a degree."
+        vi: "Reading 3: luyện tìm đúng thông tin — bài đọc về những người kinh doanh thành công dù không có bằng đại học."
+      - tom: "Interesting. My parents say a degree is very important!"
+        vi: "Thú vị đấy. Bố mẹ mình bảo bằng đại học rất quan trọng!"
+
+  - kind: figure
+    chapter: "Reading 3A–B: bốn cái tên, năm tiêu đề"
+    heading: "Reading 3A–B · Questions 1–4: match the headings with the names"
+    heading_vi: "Tr. 51 — có một tiêu đề thừa; đọc lướt để biết mỗi người nổi tiếng vì điều gì"
+    image: {pdf: course-book, page: 52, clip: [58, 418, 470, 600]}
+    items:
+      - {box: [62, 425, 442, 437], label: "A"}
+      - {box: [62, 500, 228, 576], label: "a–e"}
+      - {box: [62, 579, 470, 597], label: "1–4"}
+    lines:
+      - emma: "Exercise A. Look only at the four names in the text. What is each person famous for? Richard Branson, Coco Chanel, Henry Ford, Bill Gates."
+        say: "Exercise eigh. Look only at the four names in the text. What is each person famous for? Richard Branson, Coco Shah-nel, Henry Ford, Bill Gates."
+        focus: 0
+        vi: "Bài A: chỉ nhìn bốn cái tên — mỗi người nổi tiếng vì điều gì?"
+      - tom: "Bill Gates: Microsoft, computers. Henry Ford: cars. Coco Chanel: fashion and perfume. And Richard Branson: Virgin, airlines."
+        say: "Bill Gates: Microsoft, computers. Henry Ford: cars. Coco Shah-nel: fashion and perfume. And Richard Branson: Virgin, airlines."
+        focus: 0
+        vi: "Bill Gates: máy tính; Henry Ford: xe hơi; Coco Chanel: thời trang, nước hoa; Richard Branson: Virgin, hàng không."
+      - emma: "Exercise B. For questions 1 to 4, match the headings a to e with the names. There is one more heading than you need."
+        say: "Exercise B. For questions one to four, match the headings eigh to ee with the names. There is one more heading than you need."
+        focus: 1
+        vi: "Bài B, câu 1–4: nối tiêu đề a–e với bốn cái tên — có một tiêu đề thừa."
+      - {emma: "a, not what others wanted. b, changing a whole industry. c, regrets about leaving university. d, so many different ideas. e, a difficult early life.", say: "Eigh, not what others wanted. B, changing a whole industry. C, regrets about leaving university. D, so many different ideas. Ee, a difficult early life.", focus: 1}
+      - emma: "Skim the paragraphs first, then match. Pause the video when you need time."
+        focus: 2
+        vi: "Đọc lướt các đoạn rồi nối; cần thời gian thì tạm dừng video."
+
+  - kind: figure
+    chapter: "Đọc: phần mở đầu"
+    heading: "Who Needs a Degree to Succeed in Business? (introduction)"
+    heading_vi: "Bài đọc tr. 51 — Emma đọc"
+    image: {pdf: course-book, page: 52, clip: [70, 632, 470, 778]}
+    items:
+      - {box: [76, 690, 468, 736]}
+      - {box: [76, 738, 468, 778]}
+    lines:
+      - {emma: "Most people assume that working hard in high school and going to the right college or university is the best way to end up with a successful career.", focus: 0}
+      - {emma: "Parents and teachers spend much of their time emphasizing the need for a good education and warning the young about what will happen if they don't get the best grades.", focus: 0}
+      - {emma: "But is a degree really so important? There are many graduates who never find the well-paid job they think they deserve.", focus: 1}
+      - {emma: "On the other hand, there are plenty of entrepreneurs and high-fliers who dropped out of school and became millionaires. Here are just a few.", focus: 1}
+
+  - kind: figure
+    chapter: "Đọc: bốn người thành công"
+    heading: "Who Needs a Degree to Succeed in Business? (Branson, Chanel)"
+    heading_vi: "Bài đọc tr. 52 — Tom đọc, khung đỏ theo đoạn"
+    image: {pdf: course-book, page: 53, clip: [60, 80, 480, 188]}
+    items:
+      - {box: [64, 82, 476, 133]}
+      - {box: [64, 135, 476, 186]}
+    lines:
+      - {tom: "Richard Branson is best known for his sense of adventure. He dropped out of school at the age of 16 and started his first successful business venture, a magazine called Student.", focus: 0}
+      - {tom: "He is the owner of the Virgin brand that has 360 companies, ranging from record labels and music stores to airlines, banking and Internet services.", say: "He is the owner of the Virgin brand that has three hundred and sixty companies, ranging from record labels and music stores to airlines, banking and Internet services.", focus: 0}
+      - {tom: "When Coco Chanel was 12 years old, her mother died and her father ran away. She spent six years in an orphanage.", say: "When Coco Shah-nel was twelve years old, her mother died and her father ran away. She spent six years in an orphanage.", focus: 1}
+      - {tom: "At 18, she started work as an assistant to a tailor. Later she became one of the world's best-loved fashion designers. The perfume that carries her name, Chanel No. 5, ensures that she is still famous today.", say: "At eighteen, she started work as an assistant to a tailor. Later she became one of the world's best-loved fashion designers. The perfume that carries her name, Shah-nel Number Five, ensures that she is still famous today.", focus: 1}
+
+  - kind: figure
+    heading: "Who Needs a Degree to Succeed in Business? (Ford, Gates)"
+    heading_vi: "Bài đọc tr. 52 — Tom đọc tiếp"
+    image: {pdf: course-book, page: 53, clip: [60, 186, 480, 302]}
+    items:
+      - {box: [64, 188, 476, 227]}
+      - {box: [64, 228, 476, 267]}
+      - {box: [64, 268, 476, 300]}
+    lines:
+      - {tom: "At 16, Henry Ford left home to become an apprentice to a machinist. He soon became an engineer and later started the Ford Motor Company.", say: "At sixteen, Henry Ford left home to become an apprentice to a machinist. He soon became an engineer and later started the Ford Motor Company.", focus: 0}
+      - {tom: "His first major success, the Model T, allowed him to open a large factory and start the assembly-line production that revolutionized the way cars were manufactured.", say: "His first major success, the Model tee, allowed him to open a large factory and start the assembly-line production that revolutionized the way cars were manufactured.", focus: 0}
+      - {tom: "Between 1995 and 2006, Bill Gates was the world's richest person, but he was a college dropout.", say: "Between nineteen ninety-five and two thousand and six, Bill Gates was the world's richest person, but he was a college dropout.", focus: 1}
+      - {tom: "His parents hoped he would be a lawyer, but he left Harvard College in 1975 to set up his own computer software company and become a pioneer of technological advance.", say: "His parents hoped he would be a lawyer, but he left Harvard College in nineteen seventy-five to set up his own computer software company and become a pioneer of technological advance.", focus: 1}
+      - {tom: "Of course, just because these people are or were hugely successful doesn't mean that everyone can get to the top in business without a college or university degree.", focus: 2}
+      - {tom: "However, if you really do have an entrepreneurial spirit, a degree may just be an extra!", focus: 2}
+
+  - kind: figure
+    chapter: "Đáp án 1–4"
+    heading: "Answers 1–4 · 1 d · 2 e"
+    heading_vi: "Khung đỏ là cụm từ cho đáp án"
+    image: {pdf: course-book, page: 53, clip: [60, 80, 480, 188]}
+    items:
+      - {box: [64, 104, 476, 133], label: "1 d · 360 companies"}
+      - {box: [64, 135, 476, 161], label: "2 e · mother died, orphanage"}
+    lines:
+      - {emma: "Pause the video and check your answers.", vi: "Tạm dừng video và xem lại đáp án.", pause: 1.5}
+      - tom: "One, Richard Branson: d, so many different ideas. Record labels, music stores, airlines, banking, Internet services."
+        say: "One, Richard Branson: dee, so many different ideas. Record labels, music stores, airlines, banking, Internet services."
+        focus: 0
+        vi: "1 d: rất nhiều ý tưởng kinh doanh khác nhau."
+      - tom: "Two, Coco Chanel: e, a difficult early life. Her mother died, her father ran away, and she spent six years in an orphanage."
+        say: "Two, Coco Shah-nel: ee, a difficult early life. Her mother died, her father ran away, and she spent six years in an orphanage."
+        focus: 1
+        vi: "2 e: tuổi thơ khó khăn."
+
+  - kind: figure
+    heading: "Answers 1–4 · 3 b · 4 a (c is extra)"
+    heading_vi: "Khung đỏ là cụm từ cho đáp án — c (regrets about leaving university) là tiêu đề thừa"
+    image: {pdf: course-book, page: 53, clip: [60, 186, 480, 302]}
+    items:
+      - {box: [64, 199, 476, 227], label: "3 b · revolutionized the way cars were made"}
+      - {box: [64, 239, 476, 267], label: "4 a · his parents hoped he would be a lawyer"}
+    lines:
+      - tom: "Three, Henry Ford: b, changing a whole industry. He revolutionized the way cars were manufactured."
+        say: "Three, Henry Ford: B, changing a whole industry. He revolutionized the way cars were manufactured."
+        focus: 0
+        vi: "3 b: thay đổi cả một ngành công nghiệp."
+      - tom: "Four, Bill Gates: a, not what others wanted. His parents hoped he would be a lawyer."
+        say: "Four, Bill Gates: eigh, not what others wanted. His parents hoped he would be a lawyer."
+        focus: 1
+        vi: "4 a: không như người khác mong muốn."
+      - emma: "And c, regrets about leaving university, is the extra heading. Bill Gates left college, but the text doesn't say he has any regrets."
+        say: "And C, regrets about leaving university, is the extra heading. Bill Gates left college, but the text doesn't say he has any regrets."
+        focus: 1
+        vi: "c là tiêu đề thừa: bài không nói Bill Gates hối tiếc."
+
+
+  - kind: figure
+    chapter: "Câu 5–12: T / F / NG"
+    heading: "Questions 5–12 · Write (T) true, (F) false or (NG) not given"
+    heading_vi: "Tám câu tr. 52 — tìm bằng chứng trong bài trước khi trả lời"
+    image: {pdf: course-book, page: 53, clip: [60, 334, 480, 472]}
+    items:
+      - {box: [62, 362, 476, 375], label: "5 T"}
+      - {box: [62, 375, 476, 388], label: "6 NG"}
+      - {box: [62, 388, 476, 402], label: "7 F"}
+      - {box: [62, 402, 476, 415], label: "8 F"}
+      - {box: [62, 415, 476, 428], label: "9 NG"}
+      - {box: [62, 429, 476, 442], label: "10 NG"}
+      - {box: [62, 442, 476, 455], label: "11 T"}
+      - {box: [62, 455, 476, 469], label: "12 F"}
+    lines:
+      - emma: "For questions 5 to 12, decide if the information agrees with the passage. Write T, true, F, false, or NG, not given. Exercise C: highlight the parts of the text that provide the answers. Pause the video and try."
+        say: "For questions five to twelve, decide if the information agrees with the passage. Write tee, true, ef, false, or en gee, not given. Exercise C: highlight the parts of the text that provide the answers. Pause the video and try."
+        vi: "Câu 5–12: T / F / NG. Bài C: tô phần bài đọc cho đáp án. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Five: true. Parents and teachers spend much of their time emphasizing the need for a good education.", focus: 0}
+      - emma: "Six: not given. The text says many graduates never find the well-paid job they think they deserve. But many is not most, and well-paid is not the job they really want."
+        focus: 1
+        vi: "6 NG: many ≠ most; well-paid job ≠ the job they really want."
+      - {tom: "Seven: false. There are plenty of entrepreneurs and high-fliers who dropped out of school.", focus: 2}
+      - {tom: "Eight: false. He dropped out of school, and then started his magazine, Student. He wasn't a student then.", focus: 3}
+      - emma: "Nine: not given. The text talks about her perfume and her designs, but it doesn't say which one she liked more."
+        focus: 4
+        vi: "9 NG: bài không nói bà thích làm nước hoa hơn hay thiết kế quần áo hơn."
+      - emma: "Ten: not given. He became an engineer and started a car company, but we don't know if he always wanted to make cars."
+        focus: 5
+        vi: "10 NG: không biết ông có luôn muốn làm xe hơi không."
+      - {tom: "Eleven: true. He left Harvard College in 1975 to set up his own computer software company.", say: "Eleven: true. He left Harvard College in nineteen seventy-five to set up his own computer software company.", focus: 6}
+      - emma: "Twelve: false. Just because these people were successful doesn't mean that everyone can get to the top without a degree."
+        focus: 7
+        vi: "12 F: bài nói không phải ai cũng thành công mà không cần bằng cấp."
+
+  - kind: figure
+    chapter: "Câu bằng chứng"
+    heading: "Exercise C · Highlight the parts of the text that provide the answers"
+    heading_vi: "Khung đỏ là câu bằng chứng của câu T và F"
+    image: {pdf: course-book, page: 52, clip: [70, 690, 470, 778]}
+    items:
+      - {box: [76, 704, 468, 724], label: "5 T"}
+      - {box: [76, 752, 468, 778], label: "7 F"}
+    lines:
+      - {emma: "Question 5: emphasizing the need for a good education means telling young people they should study hard.", say: "Question five: emphasizing the need for a good education means telling young people they should study hard.", focus: 0, vi: "Câu 5: emphasizing the need for a good education = khuyên người trẻ chăm học."}
+      - {emma: "Question 7: plenty of entrepreneurs and high-fliers dropped out of school. So not all successful people have been to university.", say: "Question seven: plenty of entrepreneurs and high-fliers dropped out of school. So not all successful people have been to university.", focus: 1, vi: "Câu 7: nhiều doanh nhân bỏ học — không phải ai thành công cũng học đại học."}
+      - emma: "Exercise D. Check the key on page 267. Exercise E: think about your reading. Did you skim the passage for questions 1 to 4, and read more slowly and carefully for questions 5 to 12?"
+        say: "Exercise D. Check the key on page two hundred and sixty-seven. Exercise ee: think about your reading. Did you skim the passage for questions one to four, and read more slowly and carefully for questions five to twelve?"
+        vi: "Bài D: so với Answer key tr. 267. Bài E: câu 1–4 đọc lướt, câu 5–12 đọc chậm và kỹ — bạn đã làm vậy chưa?"
+
+  - kind: figure
+    chapter: "Từ vựng: học tập hay công việc?"
+    heading: "Key vocabulary in context · (L) learning or (W) work?"
+    heading_vi: "Khung từ vựng tr. 52 — nhãn đỏ là L hoặc W"
+    image: {pdf: course-book, page: 53, clip: [60, 640, 440, 740]}
+    items:
+      - {box: [62, 698, 182, 711], label: "L"}
+      - {box: [183, 698, 312, 711], label: "W"}
+      - {box: [313, 698, 438, 711], label: "L"}
+      - {box: [62, 711, 182, 724], label: "L"}
+      - {box: [183, 711, 312, 724], label: "L"}
+      - {box: [313, 711, 438, 724], label: "W"}
+      - {box: [62, 724, 182, 738], label: "W"}
+      - {box: [183, 724, 312, 738], label: "W"}
+      - {box: [313, 724, 438, 738], label: "L"}
+    lines:
+      - emma: "Key vocabulary in context. Mark these words and phrases L if they are more related to learning, and W if they are more related to work. Pause the video and try."
+        say: "Key vocabulary in context. Mark these words and phrases el if they are more related to learning, and double-you if they are more related to work. Pause the video and try."
+        vi: "Từ vựng: L (học tập) hay W (công việc)? Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "Degree: learning.", focus: 0, vi: "degree = bằng đại học"}
+      - {tom: "Career: work.", focus: 1, vi: "career = sự nghiệp"}
+      - {tom: "Education: learning.", focus: 2, vi: "education = giáo dục"}
+      - {tom: "Best grades: learning.", focus: 3, vi: "best grades = điểm cao nhất"}
+      - {tom: "Graduates: learning. People who have finished university.", focus: 4, vi: "graduates = người đã tốt nghiệp"}
+      - {tom: "Entrepreneur: work. A person who starts a business.", focus: 5, vi: "entrepreneur = doanh nhân, người khởi nghiệp"}
+      - {tom: "Business venture: work.", focus: 6, vi: "business venture = dự án kinh doanh"}
+      - {tom: "Apprentice: work. Someone who learns a job by working with a skilled person.", focus: 7, vi: "apprentice = người học việc"}
+      - {tom: "And college dropout: learning. Someone who leaves college before finishing.", focus: 8, vi: "college dropout = người bỏ học đại học"}
+      - emma: "Good. Apprentice is about learning too, but you learn at work. So it's more related to work."
+        focus: 7
+        vi: "apprentice cũng là học, nhưng học tại nơi làm việc — nên gần với W hơn."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 d · 2 e · 3 b · 4 a (c is extra)", vi: "Nối tiêu đề"}
+      - {en: "5 T · 6 NG · 7 F · 8 F · 9 NG · 10 NG · 11 T · 12 F", vi: "T / F / NG"}
+      - {en: "Skim for headings; read slowly and carefully for T / F / NG", vi: "Đọc lướt để nối tiêu đề, đọc kỹ cho T / F / NG"}
+      - {en: "many ≠ most · well-paid ≠ the job you want", vi: "Chú ý từ gần nghĩa nhưng khác ý"}
+      - {en: "graduate · entrepreneur · business venture · apprentice · dropout", vi: "Từ vựng"}
+    lines:
+      - {emma: "Let's review. Headings: d, e, b, a.", say: "Let's review. Headings: dee, ee, B, eigh.", focus: 0}
+      - {emma: "True, not given, false, false, not given, not given, true, false.", focus: 1}
+      - {emma: "Skim for the headings, and read carefully for true, false, not given.", focus: 2}
+      - {emma: "Many is not most. A well-paid job is not always the job you want.", focus: 3}
+      - {tom: "And new words: graduate, entrepreneur, business venture, apprentice, dropout.", focus: 4}

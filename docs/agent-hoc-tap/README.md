@@ -107,6 +107,10 @@ màn hình.
 **Đợt 30 (03/11/2026):** Unit 1–7 của Oxford Word Skills Basic cũng có hình trong sách (bảng số, đồng hồ, bảng ngày –
 tháng, ảnh bốn mùa, bảng quốc tịch, bản đồ, tranh lớp học, bảng hỏi – đáp về từ…). Nay cả 16 video đều có hình.
 
+**Đợt 31 (05/11/2026):** Unit 4 có video, mọi video có hình trong sách và khung đỏ như Oxford Word Skills Basic:
+- IELTS Target 5.0 Unit 4 · Achievements: 11 video (1:16:46), đủ sáu phần của Course Book; chưa có 4 video luyện nói thêm;
+- Giai đoạn 0 (English Unlimited A2) Unit 4 · Changes: 4 video (32:45). Chi tiết ở file 06 và file 08.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

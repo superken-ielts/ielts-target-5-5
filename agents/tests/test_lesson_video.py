@@ -432,10 +432,10 @@ def test_coverage_lists_parts_with_and_without_video(tmp_path):
 
 
 @pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
-def test_unit1_3_video_coverage():
-    """Unit 1–3: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
+def test_unit1_4_video_coverage():
+    """Unit 1–4: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
     from lesson_video import coverage
-    for unit in coverage.coverage(REAL, ["U01", "U02", "U03"]):
+    for unit in coverage.coverage(REAL, ["U01", "U02", "U03", "U04"]):
         have = {p["activity"].split("-", 1)[1]: [v["id"] for v in p["videos"]] for p in unit["parts"]}
         assert not have["unit-review"], unit["item"]
         for part in ("speaking-vocab", "listening", "reading", "writing", "consolidation", "exam-practice"):
@@ -457,6 +457,22 @@ def test_your_turn_has_no_countdown_and_units_have_speaking_practice():
             lesson = sc.load(REAL / "lessons" / f"{vid}.yaml")
             assert built[vid]["activity"] == lesson.activity == f"{unit}-speaking-vocab"
             assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), vid
+
+
+@pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists() or not (EU_A2 / "lessons" / "lessons.json").exists(),
+                    reason="chưa có video bài giảng")
+def test_unit4_videos_use_book_pictures_without_countdown():
+    """Người học yêu cầu (đợt 31): làm unit tiếp theo của IELTS Target 5.0 và Giai đoạn 0 (English Unlimited A2) giống sách
+    Oxford Word Skills Basic — mỗi video có hình cắt từ trang sách và khung đỏ chỉ chỗ đang giảng (cảnh có `image`, mục có
+    `box`), không đếm ngược (không `wait` / `echo`) — docs/agent-hoc-tap/06 mục 8, 08 mục 6."""
+    ielts = [p for p in sorted((REAL / "lessons").glob("U04-*.yaml")) if "speaking-practice" not in p.stem]
+    a2 = sorted((EU_A2 / "lessons").glob("U04-*.yaml"))
+    assert len(ielts) == 11 and [p.stem for p in a2] == ["U04-explore", "U04-lesson-1", "U04-lesson-2", "U04-target"]
+    for path in ielts + a2:
+        lesson = sc.load(path)
+        assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), path.name
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), path.name
+        assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), path.name
 
 
 @pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")

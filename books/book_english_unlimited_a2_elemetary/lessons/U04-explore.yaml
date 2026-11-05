@@ -1,0 +1,334 @@
+# Unit 4 · Changes — Explore (Coursebook tr. 39–40): Keyword have, Independent learning (tự học), Explore Writing (thư /
+# email kể tin tức, dấu câu). Phiên U04-explore.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U04-explore.yaml
+# Nguồn: trang 39–40 (hai email chép nguyên văn); đáp án theo Teacher's Book tr. 48–49 (Keyword 1: Possessions a cat, a
+# digital camera, a nice flat · Activities a bath, a break, a shower, a meeting, a lesson, a conversation · Food and drink
+# lunch, a meal, something to eat, a sandwich, a drink, a coffee · Relationships two brothers, a lot of friends;
+# Independent learning 2a: 1 B 2 A 3 D 4 C 5 F 6 E; Writing 1: Thailand — went swimming, went on a boat trip, visited the
+# Rose Garden · Miki moved to France, got a job in a bank · bought a new car, started French lessons; 2a: 1d 2e 3f 4a 5b
+# 6c; 2c: mở đầu 1–4, kết thư 5–6; 3a: was, were, had, went, moved, got, bought, started; 3c: second / third trip …).
+# Trang này không có audio. Thư mẫu: Mai viết cho Tom kể tin tức (đi Đà Nẵng với gia đình, học guitar).
+# Hình trong sách (đợt 31): khung từ và bảng Keyword have (khung đỏ theo cột, nhãn là nghĩa); sáu tài liệu tự học A–F
+# bên trái danh sách; hai email của Judy và Mari (khung đỏ theo phần thư: mở đầu, tin tức, câu hỏi, kết thư).
+id: U04-explore
+activity: U04-explore
+title: "Unit 4 · Changes"
+subtitle: "Explore Writing · have, an email giving news"
+title_vi: "Từ khóa have (sở hữu, hoạt động, ăn uống, quan hệ); tài liệu tự học; đọc và viết email kể tin tức, dấu câu (trang 39–40)"
+tag: "EU A2 · UNIT 4"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "This is Explore for Unit 4. First, the keyword have. Then some ideas for self-study. And then we read two emails, and you write an email with your news."
+        say: "This is Explore for Unit four. First, the keyword have. Then some ideas for self-study. And then we read two emails, and you write an email with your news."
+        vi: "Explore của Unit 4: từ khóa have, cách tự học, rồi đọc hai email và tự viết email kể tin tức."
+      - mai: "Good. I have lots of news!"
+        vi: "Hay quá. Mình có nhiều tin để kể lắm!"
+
+  - kind: figure
+    chapter: "Keyword: have"
+    heading: "Keyword 1 · Put the words in the correct group"
+    heading_vi: "Khung từ và bảng tr. 39 — have dùng cho bốn nhóm nghĩa; xếp các từ vào đúng cột"
+    image: {pdf: course-book, page: 40, clip: [45, 90, 478, 198]}
+    items:
+      - {box: [49, 141, 152, 196], label: "sở hữu"}
+      - {box: [151, 141, 253, 196], label: "hoạt động"}
+      - {box: [252, 141, 363, 196], label: "ăn uống"}
+      - {box: [362, 141, 474, 196], label: "quan hệ"}
+    lines:
+      - emma: "Keyword: have. We use have in a lot of common expressions. Look at the four groups."
+        vi: "Từ khóa have: dùng trong rất nhiều cụm từ thông dụng. Nhìn bốn nhóm."
+      - emma: "Possessions are things that are yours: I have a new car."
+        focus: 0
+        vi: "Possessions = đồ mình sở hữu: have a new car."
+      - emma: "Activities are things you do: we have a party."
+        focus: 1
+        vi: "Activities = việc mình làm: have a party."
+      - emma: "Food and drink: have dinner, have breakfast."
+        focus: 2
+        vi: "Food and drink = ăn uống: have dinner, have breakfast."
+      - emma: "Relationships are family and friends: I have a big family."
+        focus: 3
+        vi: "Relationships = gia đình, bạn bè: have a big family."
+      - emma: "Put the words from the box in the correct group. Pause the video and try."
+        vi: "Xếp các từ trong khung vào đúng nhóm. Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: compare
+    chapter: "have: bốn nhóm"
+    heading: "Keyword 1 · Answers"
+    heading_vi: "have + …"
+    items:
+      - {title: "Possessions", title_vi: "sở hữu", lines: ["a cat", "a digital camera", "a nice flat"]}
+      - {title: "Activities", title_vi: "hoạt động", lines: ["a bath · a shower", "a break", "a meeting · a lesson", "a conversation"]}
+      - {title: "Food and drink", title_vi: "ăn uống", lines: ["lunch · a meal", "something to eat", "a sandwich", "a drink · a coffee"]}
+      - {title: "Relationships", title_vi: "quan hệ", lines: ["two brothers", "a lot of friends"]}
+    lines:
+      - {tom: "Possessions: have a cat, have a digital camera, have a nice flat.", focus: 0}
+      - {mai: "Activities: have a bath, a shower, a break, a meeting, a lesson and a conversation.", focus: 1}
+      - emma: "Have a break means stop work for a short time."
+        focus: 1
+        vi: "have a break = nghỉ giải lao một lúc."
+      - {tom: "Food and drink: have lunch, a meal, something to eat, a sandwich, a drink and a coffee.", focus: 2}
+      - {mai: "And relationships: have two brothers, have a lot of friends.", focus: 3}
+      - mai: "In Vietnamese, we say eat breakfast. In English, have breakfast is more usual."
+        focus: 2
+        vi: "Tiếng Việt nói \"ăn sáng\", tiếng Anh thường nói have breakfast."
+
+  - kind: qa
+    chapter: "Nói với have"
+    heading: "Keyword 2–3 · Questions with have"
+    heading_vi: "Tạm dừng video và trả lời trước, rồi nghe Tom và Mai"
+    items:
+      - {q: "Do you have a big family?", a: "Yes, I do. I have two brothers and a lot of cousins.", ask: tom, by: mai}
+      - {q: "What time do you have breakfast?", a: "At about seven. But at the weekend, I have breakfast after ten!", ask: mai, by: tom}
+      - {q: "When was the last time you had a bad morning?", a: "I had a terrible morning on Monday. I missed the bus, and I was late for class.", ask: mai, by: tom}
+      - {q: "When was the last time you had a nice meal in a restaurant?", a: "Last Saturday. I had dinner with my family at a seafood restaurant. It was lovely.", ask: tom, by: mai}
+    lines:
+      - emma: "Now talk with have. Find someone who has a big family, or has breakfast after ten in the morning. Pause after each question and answer."
+        vi: "Nói với have: tìm người có gia đình đông, ăn sáng sau 10 giờ … Tạm dừng sau mỗi câu hỏi để trả lời."
+      - {tom: "Do you have a big family?", focus: 0, pause: 1.5}
+      - {mai: "Yes, I do. I have two brothers and a lot of cousins.", reveal: 0}
+      - {mai: "What time do you have breakfast?", focus: 1, pause: 1.5}
+      - {tom: "At about seven. But at the weekend, I have breakfast after ten!", reveal: 1}
+      - emma: "In the past, have becomes had. When was the last time you had a bad morning?"
+        vi: "Ở quá khứ, have → had."
+      - {mai: "When was the last time you had a bad morning?", focus: 2, pause: 1.5}
+      - {tom: "I had a terrible morning on Monday. I missed the bus, and I was late for class.", reveal: 2}
+      - {tom: "When was the last time you had a nice meal in a restaurant?", focus: 3, pause: 1.5}
+      - {mai: "Last Saturday. I had dinner with my family at a seafood restaurant. It was lovely.", reveal: 3}
+
+  - kind: bullets
+    chapter: "Tự học: tài liệu"
+    heading: "Independent learning 2 · Self-study materials"
+    heading_vi: "Tranh A–F tr. 39 — nối tài liệu tự học với tranh"
+    image: {pdf: course-book, page: 40, clip: [250, 446, 562, 806]}
+    items:
+      - {en: "a dictionary → B", vi: "từ điển", box: [424, 448, 508, 564]}
+      - {en: "the English Unlimited e-Portfolio → A", vi: "hồ sơ học tập điện tử kèm sách", box: [276, 500, 416, 612]}
+      - {en: "the English Unlimited Self-study Pack → D", vi: "sách tự học kèm đĩa", box: [434, 550, 546, 702]}
+      - {en: "the Internet → C", vi: "Internet", box: [292, 620, 420, 702]}
+      - {en: "books → F", vi: "sách", box: [390, 708, 560, 804]}
+      - {en: "magazines in English → E", vi: "tạp chí tiếng Anh", box: [250, 704, 386, 804]}
+    lines:
+      - emma: "Independent learning: self-study. Which do you like working on: reading, writing, speaking, listening, pronunciation, vocabulary or grammar?"
+        vi: "Tự học: bạn thích luyện gì — đọc, viết, nói, nghe, phát âm, từ vựng hay ngữ pháp?"
+      - mai: "I like working on speaking. I don't like grammar very much, but it's important."
+        vi: "Mình thích luyện nói. Không thích ngữ pháp lắm, nhưng nó quan trọng."
+      - emma: "Now match these self-study materials with pictures A to F. Pause the video and try."
+        say: "Now match these self-study materials with pictures eigh to ef. Pause the video and try."
+        vi: "Nối tài liệu tự học với tranh A–F. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "One, a dictionary: that's B.", say: "One, a dictionary: that's bee.", focus: 0}
+      - {tom: "Two, the English Unlimited e-Portfolio: A.", say: "Two, the English Unlimited ee-Portfolio: eigh.", focus: 1}
+      - {tom: "Three, the Self-study Pack: D.", say: "Three, the Self-study Pack: dee.", focus: 2}
+      - {mai: "Four, the Internet: C.", say: "Four, the Internet: see.", focus: 3}
+      - {mai: "Five, books: F.", say: "Five, books: ef.", focus: 4}
+      - {mai: "And six, magazines in English: E.", say: "And six, magazines in English: ee.", focus: 5}
+      - tom: "I use the Internet and a dictionary app every day. I'd like to try magazines in English."
+        focus: 5
+        vi: "Mình dùng Internet và app từ điển hằng ngày. Mình muốn thử đọc tạp chí tiếng Anh."
+
+  - kind: figure
+    chapter: "Đọc email của Judy"
+    heading: "Explore Writing 1 · Judy's email"
+    heading_vi: "Email tr. 40 — Judy đi đâu? Cô ấy làm ba việc gì ở đó?"
+    image: {pdf: course-book, page: 41, clip: [60, 186, 272, 312]}
+    roles: {mai: Judy}
+    items:
+      - {box: [66, 214, 250, 243], label: "start"}
+      - {box: [66, 244, 262, 311], label: "news"}
+    lines:
+      - emma: "Explore Writing. Read the emails between two friends, Judy and Mari. Where did Judy go? What three things did she do there?"
+        say: "Explore Writing. Read the emails between two friends, Judy and Mah-ree. Where did Judy go? What three things did she do there?"
+        vi: "Đọc email giữa hai người bạn Judy và Mari. Judy đi đâu? Cô ấy làm ba việc gì?"
+      - {mai: "Hi Mari, How are you? I hope you're well. We're fine.", say: "Hi Mah-ree, How are you? I hope you're well. We're fine.", focus: 0}
+      - {mai: "I enjoyed Thailand. It was my first trip so it was really exciting.", focus: 1}
+      - {mai: "The hotel and the food were wonderful. We had some bad weather but we went swimming in the sea most days.", focus: 1}
+      - {mai: "We also went on a boat trip and visited the Rose Garden. We had a lovely time.", focus: 1}
+
+  - kind: figure
+    heading: "Explore Writing 1 · Judy's email"
+    heading_vi: "Email tr. 40 — kế hoạch, một câu hỏi, rồi kết thư"
+    image: {pdf: course-book, page: 41, clip: [60, 310, 272, 366]}
+    roles: {mai: Judy}
+    items:
+      - {box: [66, 311, 255, 348], label: "plans + a question"}
+      - {box: [66, 348, 122, 363], label: "finish"}
+    lines:
+      - {mai: "We plan to visit my sister in Melbourne in September. What about you? Do you have any travel plans?", focus: 0}
+      - {mai: "Love, Judy", focus: 1}
+
+  - kind: figure
+    chapter: "Thư trả lời của Mari"
+    heading: "Explore Writing 1 · Mari's reply"
+    heading_vi: "Email tr. 40 — Mari trả lời câu hỏi của Judy"
+    image: {pdf: course-book, page: 41, clip: [282, 344, 535, 408]}
+    roles: {emma: Mari}
+    items:
+      - {box: [288, 348, 513, 406], label: "start + answers"}
+    lines:
+      - {emma: "Judy, Hi. It's good to hear from you. Glad you enjoyed your trip to Thailand.", focus: 0}
+      - {emma: "No, we have no travel plans. Maybe in the autumn.", focus: 0}
+
+  - kind: figure
+    heading: "Explore Writing 1 · Mari's reply"
+    heading_vi: "Email tr. 40 — con gái Mari làm gì? Mari có tin gì khác?"
+    image: {pdf: course-book, page: 41, clip: [282, 404, 535, 532]}
+    roles: {emma: Mari}
+    items:
+      - {box: [288, 408, 520, 491], label: "news"}
+      - {box: [288, 495, 488, 530], label: "finish"}
+    lines:
+      - {emma: "Our news: Life is busy, as usual. My daughter Miki moved to France last month.", say: "Our news: Life is busy, as usual. My daughter Mee-kee moved to France last month.", focus: 0}
+      - {emma: "She got a job in a bank there and likes it. We bought a new car – a silver Toyota. It's great.", focus: 0}
+      - {emma: "I started French lessons two weeks ago. It's very difficult but the teacher and the other students are really nice.", focus: 0}
+      - {emma: "That's all for now. Hope to hear from you soon. Best wishes, Mari", say: "That's all for now. Hope to hear from you soon. Best wishes, Mah-ree", focus: 1}
+
+  - kind: blanks
+    chapter: "Bài 1: trả lời câu hỏi"
+    heading: "Explore Writing 1 · Answer the questions"
+    heading_vi: "Trả lời theo hai email — Tom và Mai chữa"
+    items:
+      - {n: 1, q: "Where did Judy go? → ___", answer: "Thailand"}
+      - {n: 2, q: "What three things did she do there? → ___", answer: "went swimming, went on a boat trip, visited the Rose Garden"}
+      - {n: 3, q: "What did Mari's daughter do? → ___", answer: "moved to France, got a job in a bank"}
+      - {n: 4, q: "What's Mari's other news? → ___", answer: "a new car, French lessons"}
+    lines:
+      - {emma: "Answer the questions. Pause the video and try.", vi: "Trả lời câu hỏi. Tạm dừng video và làm.", pause: 1.5}
+      - {tom: "Judy went to Thailand. She went swimming in the sea, went on a boat trip and visited the Rose Garden.", reveal: [1, 2]}
+      - {mai: "Mari's daughter Miki moved to France and got a job in a bank.", say: "Mah-ree's daughter Mee-kee moved to France and got a job in a bank.", reveal: 3}
+      - {mai: "And Mari's other news: they bought a new car, and she started French lessons.", say: "And Mah-ree's other news: they bought a new car, and she started French lessons.", reveal: 4}
+
+  - kind: pairs
+    chapter: "Bài 2: mở đầu và kết thư"
+    heading: "Explore Writing 2 · Make sentences"
+    heading_vi: "Nối hai nửa câu — câu nào mở đầu email, câu nào kết thư?"
+    items:
+      - {n: 1, q: "How", answer: d}
+      - {n: 2, q: "I hope", answer: e}
+      - {n: 3, q: "We're", answer: f}
+      - {n: 4, q: "It's good to hear", answer: a}
+      - {n: 5, q: "That's all", answer: b}
+      - {n: 6, q: "Hope to hear", answer: c}
+    options:
+      - {k: a, text: "from you."}
+      - {k: b, text: "for now."}
+      - {k: c, text: "from you soon."}
+      - {k: d, text: "are you?"}
+      - {k: e, text: "you're well."}
+      - {k: f, text: "fine."}
+    lines:
+      - emma: "Exercise 2. Cover the emails and make sentences. Pause the video and try."
+        say: "Exercise two. Cover the emails and make sentences. Pause the video and try."
+        vi: "Bài 2: che email lại và nối thành câu. Tạm dừng video và làm."
+        pause: 1.5
+      - {tom: "How are you?", reveal: 1}
+      - {tom: "I hope you're well.", reveal: 2}
+      - {tom: "We're fine.", reveal: 3}
+      - {mai: "It's good to hear from you.", reveal: 4}
+      - {mai: "That's all for now.", reveal: 5}
+      - {mai: "Hope to hear from you soon.", reveal: 6}
+      - emma: "Sentences 1 to 4 start an email. It's good to hear from you is a nice way to reply to a friend. Sentences 5 and 6 finish an email."
+        say: "Sentences one to four start an email. It's good to hear from you is a nice way to reply to a friend. Sentences five and six finish an email."
+        vi: "Câu 1–4 dùng để mở đầu (It's good to hear from you hợp khi trả lời thư bạn); câu 5–6 để kết thư."
+
+  - kind: blanks
+    chapter: "Bài 3: động từ quá khứ"
+    heading: "Explore Writing 3 · Can you remember the past verbs?"
+    heading_vi: "Che email lại, điền động từ quá khứ — rồi đổi từ gạch chân thành từ khác cho đúng với bạn"
+    items:
+      - {n: 1, q: "It ___ my first trip.", answer: "was"}
+      - {n: 2, q: "The hotel and the food ___ wonderful.", answer: "were"}
+      - {n: 3, q: "We ___ some bad weather.", answer: "had"}
+      - {n: 4, q: "We ___ swimming.", answer: "went"}
+      - {n: 5, q: "My daughter ___ to France.", answer: "moved"}
+      - {n: 6, q: "She ___ a job in a bank.", answer: "got"}
+      - {n: 7, q: "We ___ a new car.", answer: "bought"}
+      - {n: 8, q: "I ___ French lessons.", answer: "started"}
+    lines:
+      - emma: "Exercise 3. Can you remember the past verbs? Pause the video and try."
+        say: "Exercise three. Can you remember the past verbs? Pause the video and try."
+        vi: "Bài 3: nhớ lại động từ quá khứ. Tạm dừng video và làm."
+        pause: 1.5
+      - {mai: "It was my first trip.", reveal: 1}
+      - {mai: "The hotel and the food were wonderful.", reveal: 2}
+      - {mai: "We had some bad weather.", reveal: 3}
+      - {mai: "We went swimming.", reveal: 4}
+      - {tom: "My daughter moved to France.", reveal: 5}
+      - {tom: "She got a job in a bank.", reveal: 6}
+      - {tom: "We bought a new car.", reveal: 7}
+      - {tom: "I started French lessons.", reveal: 8}
+      - emma: "You can change the other words: it was my second trip. The apartment and the weather were wonderful. I started guitar lessons."
+        vi: "Đổi từ khác cho đúng với bạn: my second trip, the apartment and the weather, guitar lessons …"
+
+  - kind: errors
+    chapter: "Dấu câu và chữ hoa"
+    heading: "Explore Writing 4 · Punctuation"
+    heading_vi: "Che email, thêm dấu chấm, dấu hỏi và chữ hoa — kiểm tra lại với email của Judy"
+    items:
+      - {wrong: "we also went on a boat trip and visited the rose garden", right: "We also went on a boat trip and visited the Rose Garden."}
+      - {wrong: "we had a lovely time", right: "We had a lovely time."}
+      - {wrong: "we plan to visit my sister in melbourne in september", right: "We plan to visit my sister in Melbourne in September."}
+      - {wrong: "what about you do you have any travel plans", right: "What about you? Do you have any travel plans?"}
+    lines:
+      - emma: "Exercise 4. Punctuation. Add full stops, question marks and capital letters to these sentences. Pause the video and try."
+        say: "Exercise four. Punctuation. Add full stops, question marks and capital letters to these sentences. Pause the video and try."
+        vi: "Bài 4: thêm dấu chấm, dấu hỏi và chữ hoa. Tạm dừng video và làm."
+        pause: 1.5
+      - {emma: "A capital letter starts a sentence, and names: the Rose Garden. A full stop finishes it.", focus: 0, vi: "Chữ hoa ở đầu câu và tên riêng (the Rose Garden); dấu chấm cuối câu."}
+      - {emma: "We had a lovely time. Full stop.", focus: 1}
+      - {emma: "Names of places and months have capital letters: Melbourne, September.", focus: 2, vi: "Tên nơi chốn, tháng viết hoa: Melbourne, September."}
+      - {emma: "And a question mark after each question: What about you? Do you have any travel plans?", focus: 3, vi: "Câu hỏi có dấu hỏi chấm."}
+
+  - kind: letter
+    chapter: "Email mẫu của Mai"
+    heading: "Explore Writing 5–6 · Mai's email to Tom"
+    heading_vi: "Lập danh sách việc mới làm gần đây, rồi viết email kể tin tức — đây là bài của Mai"
+    roles: {emma: teacher}
+    items:
+      - {text: "Hi Tom,", note: "start"}
+      - {text: "How are you? I hope you're well. We're fine.", note: "start"}
+      - {text: "Our news: last weekend, my family and I went to Da Nang. We stayed in a small hotel near the beach, and we ate lots of seafood. We had a lovely time.", note: "news"}
+      - {text: "I started guitar lessons last month. It's very difficult, but my teacher is really nice.", note: "news"}
+      - {text: "What about you? Did you have a good weekend?", note: "a question"}
+      - {text: "That's all for now. Hope to hear from you soon.", note: "finish"}
+      - {text: "Best wishes,"}
+      - {text: "Mai"}
+    lines:
+      - emma: "Now plan an email to another student. Make a list of things you did recently. Then write the email and give your news. Here's Mai's email to Tom."
+        vi: "Lên danh sách những việc bạn mới làm, rồi viết email kể tin tức cho một bạn cùng lớp. Đây là email Mai gửi Tom."
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2, say: "Our news: last weekend, my family and I went to Dah Nahng. We stayed in a small hotel near the beach, and we ate lots of seafood. We had a lovely time."}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: mai, focus: 5}
+      - {read: mai, focus: 6}
+      - {read: mai, focus: 7, say: "My."}
+      - tom: "Oh, you went to Da Nang! Which beach did you go to?"
+        say: "Oh, you went to Dah Nahng! Which beach did you go to?"
+        vi: "Ồ, bạn đi Đà Nẵng à! Bạn đi bãi biển nào?"
+      - emma: "Good! Read each other's emails, and ask questions to find out more."
+        vi: "Đọc email của nhau và đặt câu hỏi để biết thêm."
+
+  - kind: bullets
+    chapter: "Ghi nhớ"
+    heading: "Remember"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "have a cat · have a break · have lunch · have two brothers", vi: "have: sở hữu, hoạt động, ăn uống, quan hệ"}
+      - {en: "How are you? · I hope you're well. · It's good to hear from you.", vi: "Mở đầu email"}
+      - {en: "That's all for now. · Hope to hear from you soon.", vi: "Kết thư"}
+      - {en: "Capital letters, full stops (.) and question marks (?)", vi: "Chữ hoa, dấu chấm, dấu hỏi"}
+    lines:
+      - {emma: "Let's remember. Have: I have a cat. I have a break. I have lunch. I have two brothers.", focus: 0}
+      - {emma: "To start an email: How are you? I hope you're well. It's good to hear from you.", focus: 1}
+      - {emma: "To finish: That's all for now. Hope to hear from you soon.", focus: 2}
+      - {emma: "And check your capital letters, full stops and question marks. Well done! That's the end of Unit 4.", say: "And check your capital letters, full stops and question marks. Well done! That's the end of Unit four.", focus: 3, vi: "Kiểm tra chữ hoa, dấu chấm, dấu hỏi. Hết Unit 4!"}
