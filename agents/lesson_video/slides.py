@@ -183,6 +183,33 @@ class Slides:
     def _k_figure(self, img, d, sc, fr):
         self._picture(img, d, sc, fr, (60, TOP, W - 60, BOTTOM - 4))
 
+    def _k_words(self, img, d, sc, fr):
+        """Bảng từ cuối video (đợt 32): lưới tối đa 3 cột × 6 hàng, đọc theo cột từ trên xuống. Mỗi ô: từ (đậm), từ loại
+        (nghiêng, nhỏ), nghĩa tiếng Việt; từ đang đọc (`focus`) có nền hồng và viền đỏ, các từ khác vẫn rõ để người học đọc."""
+        n = len(sc.items)
+        cols = 3 if n > 8 else 2 if n > 3 else 1
+        rows = (n + cols - 1) // cols
+        gap = 14
+        cw = (W - 120 - gap * (cols - 1)) / cols
+        rh = min(78, (BOTTOM - TOP + gap) / max(rows, 1))
+        for i, it in enumerate(sc.items):
+            c, r = divmod(i, rows)
+            x0, y0 = 60 + c * (cw + gap), TOP + r * rh
+            x1, y1 = x0 + cw, y0 + rh - gap
+            on = fr.focus == i
+            d.rounded_rectangle((x0, y0, x1, y1), 10, fill=C["soft"] if on else C["card"],
+                                outline=C["red"] if on else C["line"], width=3 if on else 2)
+            pos = str(it.get("pos") or "")
+            pf = font("italic", 16)
+            pw = d.textlength(pos, font=pf) + 10 if pos else 0
+            wf, wl = fit(d, str(it["w"]), "bold", 22, cw - 32 - pw, 1, min_size=15)
+            ty = y0 + (y1 - y0) * 0.34
+            d.text((x0 + 16, ty), wl[0], font=wf, fill=C["red"] if on else C["ink"], anchor="lm")
+            if pos:
+                d.text((x0 + 16 + d.textlength(wl[0], font=wf) + 8, ty + 1), pos, font=pf, fill=C["muted"], anchor="lm")
+            vf, vl = fit(d, str(it["vi"]), "regular", 17, cw - 32, 1, min_size=12)
+            d.text((x0 + 16, y0 + (y1 - y0) * 0.74), vl[0], font=vf, fill=C["ink"] if on else C["muted"], anchor="lm")
+
     # ---------- khung chung ----------
     def render(self, fr: Frame, progress: float) -> Image.Image:
         if self.L.scenes[fr.scene].kind == "jp":  # thẻ ba tầng nền navy, vẽ cả khung (jpcard.py)

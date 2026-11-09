@@ -40,6 +40,10 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
 - Từ Unit 4 (đợt 31), video sách IELTS Target 5.0 và Giai đoạn 0 có hình trong sách ở mọi video, như Oxford Word Skills
   Basic: cảnh `figure` / `image` kèm `box` (khung đỏ), trang nhiều chữ cắt thành dải — file 06 mục 8, file 09 mục 5.3a.
+- Giai đoạn 0 từ Unit 5 (đợt 32): đáp án hiện tất cả một lần sau khi đọc / nghe xong (dòng `reveal` đầu tiên mở mọi
+  đáp án, đứng sau `track`); cuối mỗi video là cảnh `words` — từ A2 của bài theo bảng từ English Profile của sách
+  (`python -m lesson_video wordlist ../books/<sách> --unit U0x`; lần đầu cần xlrd), bốn video của unit cùng nhau đủ mọi
+  từ (test kiểm) — file 08 mục 6.9.
 - Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
   và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
   nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`

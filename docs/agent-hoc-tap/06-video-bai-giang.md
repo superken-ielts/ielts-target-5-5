@@ -288,6 +288,7 @@ bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 | `blanks` | `n`, `answer` (+ `tip`) | Ô nghe – chép; có `q` chứa `___` (+ `hint`) thì là câu điền từ. **Mỗi câu chỉ một `___`** (chỉ chỗ trống đầu được vẽ): câu hai chỗ trống thì tách thành hai mục `8a`, `8b`. Câu điền từ có `image` thì hình bên trái | Vocabulary, Consolidation, Exam listening |
 | `mcq` | `n`, `q`, `options`, `answer` (+ `keys`) | Trắc nghiệm a/b/c hoặc 1/2/3 | Exam listening, Exam reading |
 | `passage` | `text` (+ `label`, `note`) | Bài đọc trên màn hình **kèm phụ đề**; dòng thoại `mark` tô vàng cụm từ trong đoạn `focus` — dạy dò tìm | Unit 2 Reading 1, 2 |
+| `words` | `w`, `vi` (+ `pos`) | **Bảng từ cuối video** (đợt 32): lưới tối đa 18 ô (3 cột × 6 hàng; ít từ thì 1–2 cột), mỗi ô một từ (đậm), từ loại viết tắt (nghiêng), nghĩa tiếng Việt; dòng thoại `focus` vào từ đang đọc thì ô có nền hồng, viền đỏ. Lấy từ bằng lệnh `lesson_video wordlist` (bảng từ English Profile của sách) | Giai đoạn 0 từ Unit 5 — file 08 mục 6.9 |
 | `shadow` | `text` (+ `by`, `vi`, `tip`) | **Nghe – nhắc lại (shadowing)**: câu mẫu chữ to theo màu người nói (`by`), nghĩa, mẹo nối âm / trọng âm; dòng thoại `echo: true` chừa khoảng lặng đếm ngược "Now you!" | Chưa video nào dùng (đợt 14 thử, người học muốn tự tạm dừng) |
 
 Trường của cảnh: `chapter` (tên chương — nút nhảy trong app), `heading`, `heading_vi`, `hide_text` (bài nghe:

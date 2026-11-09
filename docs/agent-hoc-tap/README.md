@@ -111,6 +111,10 @@ tháng, ảnh bốn mùa, bảng quốc tịch, bản đồ, tranh lớp học, 
 - IELTS Target 5.0 Unit 4 · Achievements: 11 video (1:16:46), đủ sáu phần của Course Book; chưa có 4 video luyện nói thêm;
 - Giai đoạn 0 (English Unlimited A2) Unit 4 · Changes: 4 video (32:45). Chi tiết ở file 06 và file 08.
 
+**Đợt 32 (09/11/2026):** Giai đoạn 0 Unit 5 · Your space có 4 video (33:05). Từ unit này đáp án hiện tất cả một lần sau
+khi đọc / nghe xong, và cuối mỗi video có bảng từ A2 của bài lấy từ bảng từ English Profile của sách (lệnh `lesson_video
+wordlist`). Chi tiết ở file 08 mục 6.9.
+
 ## Tóm tắt trong năm dòng
 
 1. **Sửa trước khi xây:** tầng đồng bộ hiện tại có lỗi trộn dữ liệu giữa người chưa đặt tên và

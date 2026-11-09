@@ -18,6 +18,7 @@ video = ["pillow>=10.1", "numpy"]
 kokoro = ["kokoro-onnx>=0.6"]
 ja = ["misaki[ja]>=0.7.4"]   # giọng Nhật của Kokoro (jf_*, jm_*): tách âm + đối chiếu furigana
 asr = ["sherpa-onnx>=1.10", "numpy"]   # lesson_video transcribe: chép lời audio của sách (model Parakeet tải riêng)
+wordlist = ["xlrd>=2"]   # lesson_video wordlist: đọc bảng từ English Profile (.xls) lần đầu, sau đó dùng work/wordlist.json
 dev = ["pytest>=8", "jsonschema>=4"]
 
 [project.scripts]

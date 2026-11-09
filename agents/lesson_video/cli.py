@@ -8,6 +8,7 @@
     python -m lesson_video prune <thư mục sách>      # xóa kịch bản .yaml rồi chạy lệnh này để gỡ video khỏi lessons.json
     python -m lesson_video transcribe <thư mục sách> 1.7 [1.20]   # chép lời audio của sách vào work/transcripts/
     python -m lesson_video phonemes <kịch bản.yaml>… [--all] [--watch từ …]   # soát cách Kokoro đọc trước khi dựng
+    python -m lesson_video wordlist <thư mục sách> --unit U05 [--level A2]   # từ A2 của unit (bảng từ English Profile)
 
 `build` ghi <id>.mp4 cạnh kịch bản và cập nhật lessons.json; có `--out` thì chỉ ghi video vào thư mục đó
 (xem thử), không đụng lessons.json. `--work` giữ lại ảnh từng khung hình và file tiếng để soát.
@@ -99,6 +100,10 @@ def main(argv: list[str] | None = None) -> int:
     f.add_argument("lessons", nargs="+")
     f.add_argument("--all", action="store_true", help="in mọi câu tiếng Anh")
     f.add_argument("--watch", nargs="*", default=[], help="thêm từ cần soát")
+    w = sub.add_parser("wordlist", help="từ của unit theo cấp độ English Profile (bảng từ của sách), từ nào chưa hiện ở cảnh words")
+    w.add_argument("book", help="thư mục sách (có bảng từ *Wordlist.xls hoặc work/wordlist.json)")
+    w.add_argument("--unit", required=True, help="unit, ví dụ U05 (Intro = U00)")
+    w.add_argument("--level", default="A2", help="cấp độ English Profile: A1, A2, B1… (mặc định A2)")
     v = sub.add_parser("coverage", help="bảng phần nào của unit đã có video, phần nào chưa")
     v.add_argument("book", help="thư mục sách (có book.json)")
     v.add_argument("--unit", action="append", help="chỉ in unit này (lặp lại được), ví dụ --unit U01")
@@ -121,6 +126,13 @@ def main(argv: list[str] | None = None) -> int:
             return phonemes.run(args.lessons, args.all, args.watch)
         except ImportError:
             print("Chưa cài kokoro-onnx: pip install -e '.[kokoro]'", file=sys.stderr)
+            return 2
+    if args.cmd == "wordlist":
+        from . import wordlist
+        try:
+            return wordlist.run(Path(args.book), args.unit, args.level)
+        except wordlist.WordlistError as e:
+            print(e, file=sys.stderr)
             return 2
     if args.cmd == "coverage":
         print(coverage.to_markdown(coverage.coverage(Path(args.book), args.unit)))

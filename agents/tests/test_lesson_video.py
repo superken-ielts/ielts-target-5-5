@@ -475,6 +475,79 @@ def test_unit4_videos_use_book_pictures_without_countdown():
         assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), path.name
 
 
+@pytest.mark.skipif(not (EU_A2 / "lessons" / "lessons.json").exists(), reason="chưa có video Giai đoạn 0")
+def test_a2_unit5_answers_after_reading_and_a2_words_at_end():
+    """Người học yêu cầu (đợt 32), Giai đoạn 0 từ Unit 5: đáp án hiện tất cả một lần sau khi đọc / nghe xong (dòng `reveal`
+    đầu tiên của cảnh bài tập mở mọi đáp án và đứng sau mọi `track` của cảnh), cuối mỗi video là cảnh `words` — bốn video của
+    unit cùng nhau hiện hết từ A2 của unit trong bảng từ English Profile của sách — docs/agent-hoc-tap/08 mục 6.9."""
+    from lesson_video import wordlist
+    built = {x["id"]: x for x in json.loads((EU_A2 / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    paths = sorted((EU_A2 / "lessons").glob("U05-*.yaml"))
+    assert [p.stem for p in paths] == ["U05-explore", "U05-lesson-1", "U05-lesson-2", "U05-target"]
+    for path in paths:
+        lesson = sc.load(path)
+        kinds = [s.kind for s in lesson.scenes]
+        assert "words" in kinds and set(kinds[kinds.index("words"):]) == {"words"}, lesson.id   # bảng từ ở cuối
+        for s in lesson.scenes:
+            if s.kind not in ("blanks", "match", "pairs", "mcq"):
+                continue
+            shown = [i for i, ln in enumerate(s.lines) if ln.reveal]
+            if not shown:
+                continue   # câu hỏi đọc trước, đáp án ở cảnh sau bài đọc (U05-target, U05-explore)
+            assert {str(k) for k in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
+            assert shown[0] > max((i for i, ln in enumerate(s.lines) if ln.track), default=-1), (lesson.id, s.heading)
+        assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), lesson.id
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
+        assert built[lesson.id]["duration"] < 10 * 60, lesson.id   # nhãn "· m:ss" của thẻ video (book.e2e.mjs)
+    assert len(wordlist.unit_words(wordlist.load(EU_A2), "U05")) == 59
+    assert wordlist.missing(EU_A2, "U05") == []
+
+
+def test_words_scene_and_wordlist(tmp_path):
+    """Bảng từ cuối video (đợt 32): cảnh `words` tối đa 18 ô, ô đang đọc có viền đỏ; lệnh `wordlist` gộp các nghĩa của một
+    từ thành một ô và báo từ của unit chưa có trong cảnh `words` nào."""
+    from lesson_video import wordlist
+    from lesson_video.slides import BOTTOM, C, TOP, _hex
+    data = copy.deepcopy(WRITING)
+    data["scenes"] = [{"kind": "words", "items": [{"w": "ceiling", "pos": "n", "vi": "trần nhà"},
+                                                  {"w": "Oh no!", "pos": "phr", "vi": "Ôi không!"},
+                                                  {"w": "on", "pos": "prep", "vi": "trên; vào"}],
+                       "lines": [{"a": "ceiling", "focus": 0}, {"a": "Oh no!", "focus": 1}]}]
+    lesson = sc.Lesson.model_validate(data)
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    shot = {fr.focus: slides.render(fr, fr.start / tl.total) for fr in tl.frames if fr.speaker}
+    red, rh = _hex(C["red"]), min(78, (BOTTOM - TOP + 14) / 3)   # ba từ: một cột, mỗi ô cao rh − 14
+
+    def reds(im, i):
+        y0 = int(TOP + i * rh)
+        return sum(im.getpixel((x, y)) == red for x in range(56, W - 56, 2) for y in range(y0 - 2, int(y0 + rh - 12)))
+    assert reds(shot[0], 0) > 100 and reds(shot[0], 1) == 0 and reds(shot[1], 1) > 100 and reds(shot[1], 2) == 0
+    for bad in ([{"w": "x", "vi": "y"}] * (sc.WORDS_MAX + 1), [{"w": "x"}]):   # quá 18 ô; thiếu nghĩa
+        data["scenes"] = [{"kind": "words", "items": bad, "lines": [{"a": "x"}]}]
+        with pytest.raises((ValidationError, ValueError)):
+            sc.Lesson.model_validate(data)
+
+    bdir = tmp_path / "wl"
+    (bdir / "work").mkdir(parents=True)
+    rows = [("U05", "on", "preposition", "A2"), ("U05", "on", "preposition", "A2"), ("U05", "on", "adverb", "A2"),
+            ("U05", "Oh no!", "phrase", "A2"), ("U05", "quiet", "adjective", "A1"), ("U04", "lake", "noun", "A2")]
+    entries = [{"unit": u, "w": w, "pos": p, "level": lv, "def": "", "ex": ""} for u, w, p, lv in rows]
+    (bdir / wordlist.CACHE).write_text(json.dumps({"source": "x.xls", "entries": entries}), encoding="utf-8")
+    got = wordlist.unit_words(wordlist.load(bdir), "U05")
+    assert [(w["w"], w["pos"]) for w in got] == [("on", "prep, adv"), ("Oh no!", "phr")]
+    (bdir / "lessons").mkdir()
+    (bdir / "lessons" / "U05-a.yaml").write_text(yaml.safe_dump(
+        {"id": "U05-a", "scenes": [{"kind": "words", "items": [{"w": "oh no", "vi": "x"}]}]}), encoding="utf-8")
+    assert wordlist.missing(bdir, "U05") == ["on"]
+    out = []
+    assert wordlist.run(bdir, "U05", say=out.append) == 0 and out[-1] == "chưa hiện: 1 — on"
+    assert cli.main(["wordlist", str(bdir), "--unit", "U05"]) == 0
+    assert [wordlist.unit_code(x) for x in ("Unit 05", "unit 12", "Intro unit")] == ["U05", "U12", "U00"]
+    with pytest.raises(wordlist.WordlistError):
+        wordlist.load(tmp_path / "no-book")
+
+
 @pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")
 def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     """Người học yêu cầu (đợt 26): mỗi unit Oxford Word Skills Basic một video 7–10 phút, không đếm ngược (không `wait` /

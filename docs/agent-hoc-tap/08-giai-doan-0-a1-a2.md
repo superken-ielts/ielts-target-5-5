@@ -148,11 +148,13 @@ chép vào `books/` rồi làm như A2:
 
 ## 5. Việc tiếp theo
 
-- **Video bài giảng** (P2-53): đã xong Intro và Unit 1–4, 19 video (bảng 6.8). Unit 5–14 làm theo sổ tay ở mục 6:
+- **Video bài giảng** (P2-53): đã xong Intro và Unit 1–5, 23 video (bảng 6.8). Unit 6–14 làm theo sổ tay ở mục 6:
   - Unit 4 (đợt 31) là unit đầu tiên có hình trong sách ở mọi video; track 1.51 thiếu, Emma đọc năm câu và người học xem
     chấm trọng âm trên hình trang sách;
-  - từ Unit 5 chép lời CD2 (2.1–2.57) và CD3 (3.1–3.62) trước, ví dụ
-    `python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 2.1 2.57`.
+  - Unit 5 (đợt 32) là unit đầu tiên hiện đáp án một lần sau khi đọc / nghe xong và có bảng từ A2 cuối mỗi video (mục 6.9);
+  - CD2 đã chép 2.1–2.14 (Unit 5). Unit 6 trở đi chép tiếp CD2 (2.15–2.57) và CD3 (3.1–3.62) trước, ví dụ
+    `python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 2.15 2.57`;
+  - Intro và Unit 1–4 chưa có bảng từ và vẫn mở đáp án theo từng câu: làm lại theo mục 6.9 nếu người học muốn.
 - **A1 Starter** (P2-52): repo chưa có sách (đã gỡ ngày 26/10).
 - Đề Achievement test và đề mẫu A2 Key: nếu người học đặt file vào thư mục sách, khai thêm vào `files` và `refs` của
   bốn mục test.
@@ -165,6 +167,9 @@ tham khảo". Mục này là bản ghi đó. Mỗi unit làm xong thì thêm m�
 **Hình trong sách (từ Unit 4, đợt 31):** người học muốn video có hình trang sách như sách Oxford Word Skills Basic. Mỗi
 video có ít nhất một cảnh dùng hình (test kiểm): tranh, bảng, bài đọc, email cắt từ trang Coursebook, khung đỏ chỉ chỗ
 đang giảng. Cách khai và lấy toạ độ ở mục 6.3 và [file 09](09-oxford-word-skills-basic.md) mục 5.3a.
+
+**Đáp án sau khi đọc, bảng từ A2 cuối video (từ Unit 5, đợt 32):** người học thấy đáp án hiện ngay trong lúc đọc / nghe,
+nên muốn đáp án hiện tất cả một lần sau khi đọc xong, và cuối mỗi video có hết từ vựng A2 mà sách dùng. Cách làm ở mục 6.9.
 
 ### 6.1 Bộ video của mỗi unit
 
@@ -219,7 +224,9 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 
 1. Đọc trang của unit (8 trang) và Teacher's Book của unit. Ghi đáp án vào đầu kịch bản.
 2. Viết bốn kịch bản `books/book_english_unlimited_a2_elemetary/lessons/Uxx-*.yaml`. Chép phần đầu (speakers, tag)
-   từ kịch bản của Unit 1.
+   từ kịch bản của Unit 1. Đáp án theo mục 6.9; cuối mỗi kịch bản là cảnh `words`:
+   `python -m lesson_video wordlist ../books/book_english_unlimited_a2_elemetary --unit Uxx` in sẵn dòng YAML của các
+   từ A2 của unit, chạy lại tới khi báo `chưa hiện: 0`.
 3. `python -m lesson_video check <kịch bản>`.
 4. Soát cách đọc: `python -m lesson_video phonemes <kịch bản>` in phiên âm Kokoro của mọi câu có tên riêng, chữ cái,
    số, từ đồng tự (live, read, use, bow, close…) và đánh dấu ⚠ các lỗi đã gặp. Sai thì viết `say` (bảng 6.6). Từ
@@ -238,8 +245,9 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 
 - `track: "1.7"` phải có ngoặc kép, vì YAML đọc `1.20` thành số 1.2. Bỏ câu đọc số track ở đầu file ("Track 7"):
   `start` bắt đầu sau nó.
-- Bài nghe dài có lời in sẵn trong sách thì phát nguyên bài một lần. Bài điền từ thì phát từng câu, mỗi câu một dòng
-  `track` kèm `focus`; `reveal` đặt ở dòng nói đáp án ngay sau.
+- Bài nghe dài có lời in sẵn trong sách thì phát nguyên bài một lần. Tới Unit 4, bài điền từ phát từng câu, mỗi câu
+  một dòng `track` kèm `focus`, `reveal` ở dòng nói đáp án ngay sau. Từ Unit 5: phát cả bài (hoặc cả đoạn) rồi mở mọi
+  đáp án một lần (mục 6.9).
 - Bài đọc (`passage`): người đọc đọc từng câu, mỗi câu một dòng. Một dòng dài cả đoạn sẽ bị cắt ở thanh phụ đề.
   Emma chỉ ý chính bằng `mark`.
 - Your turn dùng cảnh `qa`: câu hỏi kèm `pause: 1.5` (không dùng `wait` — người học tự tạm dừng, theo ý ở đợt 14),
@@ -279,6 +287,10 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 | Moggridge, Andreas Pavel, Stereobelt, DynaTAC 8000X | `Mog-rij`, `Ahn-dray-as Pah-vel`, `Stereo-belt`, `Dye-na-tack eight thousand ex` | Bài đọc Unit 4 |
 | AT&T, NASA, $3,995, 1970s | `eigh tee and tee`, `Nasa`, `three thousand, nine hundred and ninety-five dollars`, `the nineteen seventies` | Chữ viết tắt, giá tiền, thập niên |
 | Da Lat, Da Nang, pho | `Dah Lot`, `Dah Nahng`, `fuh` | Địa danh, món ăn trong câu trả lời mẫu của Tom và Mai |
+| José Luis Garcia, San Luis, Chorrillos, Paceville | `Ho-say Loo-ees Gar-see-a`, `San Loo-ees`, `Cho-ree-yos`, `Pah-cheh-ville` | Bài đọc Unit 5 (5.1) |
+| Estrella, Alicja, Kafé Kontakt, Seollal | `Ess-trella`, `Ah-leets-ya`, `Kafay Kontakt`, `Sol-lahl` | Tên riêng Unit 5 (5.2, Target, Explore) |
+| Mai's, DVDs, 3-bed, 8th February | `My's`, `D V Ds`, `three-bed`, `the eighth of February` | Sở hữu cách của tên Việt, chữ viết tắt số nhiều, quảng cáo phòng |
+| close (động từ: đóng cửa) | `cloze`, `clozes` | Bảng từ Unit 5. Tính từ close (gần: close to, too close) Kokoro đọc đúng /kloʊs/ nhưng `phonemes` vẫn báo ⚠ — để nguyên, ghi ở đầu kịch bản |
 
 ### 6.7 Lỗi đã gặp
 
@@ -305,10 +317,23 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
     bằng cột điểm ảnh có mực (PyMuPDF + numpy), rồi xem lại khung hình bằng bộ đọc im lặng.
   - Ước lượng im lặng bài 4.1 là 11:09, quá 10 phút: gộp hai cảnh đoán đúng / sai vào cảnh câu hỏi và cảnh đọc bài, phát
     bài nghe 1.46 một lần rồi chữa sáu câu bằng hai dòng thoại. Bản dựng thật 9:59.
+- Đợt 32 (đáp án sau khi đọc, bảng từ, Unit 5):
+  - Bài 5.2 ước lượng 10:58: e2e chỉ nhận nhãn "· m:ss" dưới 10 phút. Bỏ bài nghe 2.6 (bài 5, đáp án vẫn hiện đủ) và vài
+    câu giảng: 9:31. Thêm cảnh `words` làm video dài thêm 30–60 giây, nên tính trước khi viết.
+  - Câu điền từ có `n: a` mà `q: "a ___"` thì hiện "a. a ___": để `q: "___"`.
+  - Cắt bài báo thành cột / dải bằng mắt hay cắt ngang dòng chữ: đo dải dòng bằng hàng điểm ảnh có mực rồi cắt ở khe
+    giữa hai dòng.
+  - Chữ màu (cụm tô xanh trong lời thoại, nhãn "Unit 5" đỏ) nhạt hơn ngưỡng mực xám nên không có trong dải đo được: đo
+    riêng theo màu (kênh R / G / B), hoặc suy ra từ khoảng cách đều giữa các dòng.
+  - Hình rộng hai cột (câu hỏi bài 2a Keyword) đặt bên trái câu điền từ (khung 520 px) thì chữ quá nhỏ: bỏ hình ở cảnh
+    đó, hình trang sách đã có ở cảnh trước.
+  - `box` của mục chỉ hiện khi có dòng thoại `focus` vào mục đó. Cảnh chỉ có dòng `reveal` thì đừng khai `box`.
+  - Part 2 PDF chỉ có 58 trang: không có trang in 124, 128, 143 (Personal space quiz, Vocabulary reference). Kịch bản
+    không dẫn người học tới các trang đó.
 
 ### 6.8 Độ phủ video
 
-In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_english_unlimited_a2_elemetary --unit U00 --unit U01`
+In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_english_unlimited_a2_elemetary --unit U00 --unit U05`
 
 #### U00 · Intro · About you — 2/2 phần có video, 3 video, 19:24 (đợt 19)
 
@@ -366,4 +391,56 @@ Hình trong sách của Unit 4 (khung đỏ theo chỗ đang giảng):
 - `U04-target`: ảnh Nigeria, Scotland, người tuyết; ảnh Onyinye; bảng Task vocabulary (nhãn good / bad / both).
 - `U04-explore`: bảng Keyword have; sáu tài liệu tự học A–F; hai email của Judy và Mari, mỗi email hai dải.
 
+
+#### U05 · Your space — 4/5 phần có video, 4 video, 33:05 (đợt 32, đáp án sau khi đọc, bảng từ A2)
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 42–43 | `U05-lesson-1` — Reading · I live here but I work 800 km away: places, describing places, in / on | 8:38 | 16 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 44–45 | `U05-lesson-2` — Listening · House-sitting: things in the home, there is / there are | 9:31 | 13 |
+| Target activity · nhiệm vụ nói | sách tr. 46 | `U05-target` — Speaking · Rent a room: adverts, questions about a room | 6:42 | 9 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 47–48 | `U05-explore` — Explore Speaking · on, personal space, showing interest | 8:15 | 15 |
+| Look again · ôn tập và tự đánh giá | sách tr. 49 | không làm video riêng (mục 6.1) | — | — |
+
+Hình trong sách và bảng từ của Unit 5 (mục 6.9):
+- `U05-lesson-1` (13 cảnh có hình, 28 từ A2 ở hai cảnh `words`): khung Places; tranh nơi chốn A–D (2.1, đáp án sau khi
+  nghe); bài báo "I live here but I work 800 km away" (tiêu đề và sáu khối theo cột, khung đỏ theo câu); câu hỏi bài 4;
+  tính từ trái nghĩa (2.2); bảng giới từ, in / on.
+- `U05-lesson-2` (7 cảnh, 16 từ): bốn phòng; đồ trong bếp a–q (2.3); căn bếp của Carole (2.4); ảnh căn hộ (2.5); bảng
+  Grammar there is / there are. Bỏ bài nghe 2.6 để video dưới 10 phút; đáp án bài 5 vẫn hiện đủ.
+- `U05-target` (4 cảnh, 8 từ): ba quảng cáo phòng A–C (câu hỏi trước, đọc từng quảng cáo, rồi mới hiện đáp án và câu bằng
+  chứng); cuộc gọi của Alicja (2.7).
+- `U05-explore` (8 cảnh, 7 từ): tám câu và bảng Keyword on; tranh khoảng cách cá nhân; bài báo Personal space (khung đỏ theo
+  câu); ảnh ngôi nhà ở Barcelona và vết nứt trên trần (2.8, 2.9); câu hỏi bài 3 (2.10); hội thoại bài 4a.
+
 <!-- bảng độ phủ: cập nhật sau mỗi unit -->
+
+### 6.9 Đáp án sau khi đọc, bảng từ A2 cuối video (từ Unit 5, đợt 32)
+
+Người học yêu cầu ở đợt 32: "cần improve hiển thị đáp án tất cả sau khi đọc xong bài nếu có, hiện tại đa số hiển thị đáp
+án chung ngay lúc đọc" và "cuối mỗi video cần hiển thị hết từ vựng cho level A2 được sách sử dụng". Test
+`test_a2_unit5_answers_after_reading_and_a2_words_at_end` kiểm cả hai cho Unit 5; unit sau thêm vào test đó.
+
+**Đáp án hiện một lần, sau khi đọc / nghe xong.** Cảnh bài tập (`blanks`, `match`, `pairs`, `mcq`) không mở đáp án theo
+từng câu trong lúc phát bài nghe hay đọc bài. Dòng `reveal` đầu tiên của cảnh mở mọi đáp án và đứng sau mọi dòng `track`.
+
+| Loại bài | Trình tự |
+|---|---|
+| Bài nghe | Emma đọc yêu cầu (`pause: 1`, người học đọc câu hỏi) → dòng `track` phát cả bài hoặc cả đoạn → "Here are all the answers." với `reveal` mọi mục → (tuỳ) vài dòng `focus` giảng câu khó. Bài nghe hai phần thì mỗi phần một cảnh |
+| Bài đọc | Cảnh câu hỏi (neo `items: &q1`, không `reveal`: "Read the questions. Then read the article…") → cảnh `figure` đọc bài, khung đỏ theo câu → cảnh đáp án (`items: *q1`): "Pause the video and answer." `pause: 1.5` → "Here are all the answers." `reveal` mọi mục |
+| Bài làm không cần nghe / đọc (nối, điền, xếp bảng) | "Pause the video and try." `pause: 1.5` → "Here are all the answers." `reveal` mọi mục. Bảng xếp nhóm thì dùng cảnh `compare` hiện đủ một lần, Emma đọc từng cột (`focus`) |
+| Hỏi – đáp mẫu (`qa`) | Như cũ: câu hỏi, `pause: 1.5`, câu trả lời mẫu (`reveal` từng câu). Đây là lời mẫu, không phải đáp án bài tập |
+
+**Bảng từ A2 cuối video.** Nguồn là bảng từ đi kèm sách, "Elementary Wordlist with English Profile"
+(`English Unlimited A2_Bilingual Wordlists/…Wordlist.xls`, trang "Unit order": từ, từ loại, cấp độ A1–B2, nghĩa, ví dụ,
+unit). Unit 5 có 59 từ A2 (63 mục: một từ nhiều nghĩa như on, quiet, rent gộp một ô).
+
+1. `cd agents && python -m lesson_video wordlist ../books/book_english_unlimited_a2_elemetary --unit U05`: in mỗi từ một
+   dòng YAML `{w, pos, vi: ""}` kèm định nghĩa tiếng Anh và video đã có từ đó. Lần đầu cần `pip install -e '.[wordlist]'`
+   (xlrd đọc file .xls) và lệnh ghi `work/wordlist.json`; từ đó lệnh và test chỉ đọc file JSON (đã commit).
+2. Chia từ cho bốn video theo bài có từ đó trong sách. Unit 5: bài 5.1 có 28 từ, 5.2 có 16, Target 8, Explore 7.
+3. Cảnh `words` cuối mỗi video: tối đa 18 ô (3 cột × 6 hàng), nhiều hơn thì hai cảnh liên tiếp. Mỗi ô `w`, `pos` (n, v, adj,
+   adv, prep, phr, excl…), `vi` là nghĩa ngắn; từ đồng tự ghi thêm (close v "đóng" ≠ close /s/ "gần").
+4. Lời Emma: "Finally, the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to
+   copy them." rồi đọc từng từ (`focus`); từ đọc khác viết `say` (close → `cloze`). Câu cuối: "Well done!…".
+5. Chạy lại lệnh ở bước 1 tới khi báo `chưa hiện: 0`.

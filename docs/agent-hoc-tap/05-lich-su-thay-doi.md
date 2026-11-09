@@ -5,6 +5,97 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 32 — 09/11/2026: Giai đoạn 0 Unit 5, đáp án hiện sau khi đọc xong, bảng từ A2 cuối mỗi video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 31 (`d9abc9c`, đã lên `main`). Đẩy lên nhánh và `main` như sổ tay
+file 08 mục 6 ("xong unit nào commit push lên main unit đó").
+
+### Yêu cầu
+
+Người học: "tiếp tục unit tiếp theo cho sách A2 nhưng cần improve hiển thị đáp án tất cả sau khi đọc xong bài nếu có,
+hiện tại đa số hiển thị đáp án chung ngay lúc đọc" và "cuối mỗi video cần hiển thị hết từ vựng cho level A2 được sách sử
+dụng nữa". Unit tiếp theo của Giai đoạn 0 (English Unlimited A2) là Unit 5 · Your space.
+
+### Đã làm
+
+**4 video mới, 33:05, 32 cảnh có hình trong sách, 59 từ A2 ở bảng từ cuối video** (file 08 mục 6.8, 6.9):
+
+| Video | Dài | Hình | Từ A2 | Ghi chú |
+|---|---|---|---|---|
+| `U05-lesson-1` | 8:38 | 13 | 28 | tranh nơi chốn A–D (2.1); bài báo "I live here but I work 800 km away" cắt sáu khối theo cột; tính từ trái nghĩa (2.2); in / on / next to |
+| `U05-lesson-2` | 9:31 | 7 | 16 | bốn phòng và đồ trong nhà (2.3); Carole và Estrella (2.4, 2.5); there is / there are; ghi chú cho người trông nhà của Mai |
+| `U05-target` | 6:42 | 4 | 8 | ba quảng cáo phòng A–C (đọc câu hỏi trước, đáp án sau khi đọc); Alicja gọi hỏi phòng (2.7); đóng vai hỏi thuê phòng |
+| `U05-explore` | 8:15 | 8 | 7 | Keyword on (tám câu, bảng bốn nhóm); bài báo Personal space (câu hỏi trước, đáp án sau); câu chuyện của Estrella (2.8, 2.9); tỏ ra quan tâm (2.10); hội thoại Simon – Ana |
+
+Đáp án hiện một lần sau khi đọc / nghe xong:
+- bài nghe: đọc câu hỏi → phát cả bài → "Here are all the answers." mở mọi đáp án → giảng vài câu khó;
+- bài đọc: cảnh câu hỏi (neo `&q1`) → cảnh `figure` đọc bài, khung đỏ theo câu → cảnh đáp án (`*q1`) mở mọi đáp án;
+- bài làm không cần nghe / đọc: "Pause the video and try." → mở mọi đáp án; bảng xếp nhóm (Keyword on) hiện đủ một lần.
+
+Bảng từ A2 cuối video:
+- Nguồn là bảng từ đi kèm sách, "Elementary Wordlist with English Profile" (file .xls trong
+  `English Unlimited A2_Bilingual Wordlists/`): Unit 5 có 63 mục A2, 59 từ (on, quiet, rent nhiều nghĩa, gộp một ô).
+- Lệnh mới `python -m lesson_video wordlist <sách> --unit U05 [--level A2]` in mỗi từ một dòng YAML cho cảnh `words` và báo
+  từ chưa có trong video nào. Lần đầu đọc file .xls (cần xlrd, extra `wordlist` trong `pyproject.toml`) và ghi
+  `work/wordlist.json`; về sau lệnh và test chỉ đọc file JSON.
+- Cảnh mới `words`: lưới tối đa 18 ô (3 cột × 6 hàng), mỗi ô từ, từ loại, nghĩa tiếng Việt; Emma đọc từng từ, ô đang đọc
+  nền hồng viền đỏ. Bài 5.1 có 28 từ nên hai cảnh.
+
+Chép lời CD2 track 2.1–2.14 bằng `lesson_video transcribe` (mốc từng từ cho `start` / `end`).
+
+Cách làm, để unit sau làm theo (file 08 mục 6.7, 6.9):
+- Tính trước thời lượng: bảng từ thêm 30–60 giây mỗi video. Bài 5.2 ước lượng 10:58 nên bỏ bài nghe 2.6 (bài 5 vẫn hiện
+  đủ đáp án) và vài câu giảng: 9:31.
+- Cắt bài báo theo dải dòng đo bằng điểm ảnh có mực; chữ màu (cụm tô xanh, nhãn đỏ) đo riêng theo màu.
+- Hình rộng hai cột đặt bên trái câu điền từ thì chữ quá nhỏ: bỏ hình ở cảnh đó.
+- `close` trong bảng từ là động từ (đóng cửa): `say: cloze`. Tính từ close (gần) đọc đúng dù `phonemes` báo ⚠.
+
+### File thêm
+
+| File | Vai trò |
+|---|---|
+| `agents/lesson_video/wordlist.py` | Đọc bảng từ English Profile của sách, lọc từ theo unit và cấp độ, báo từ chưa có trong cảnh `words`; lệnh `wordlist` |
+| `books/book_english_unlimited_a2_elemetary/lessons/U05-*.yaml` (+ `.mp4`) | 4 kịch bản và video Unit 5 |
+| `books/book_english_unlimited_a2_elemetary/work/transcripts/2.1`–`2.14` (`.json`, `.txt`) | Lời chép CD2 track 2.1–2.14, có mốc từng từ |
+| `books/book_english_unlimited_a2_elemetary/work/wordlist.json` | Bảng từ của sách (1 332 mục, mọi unit) chuyển từ .xls, dùng cho lệnh `wordlist` và test |
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py`, `slides.py` | Cảnh `words` (khóa `w`, `vi`, + `pos`; tối đa 18 ô); vẽ lưới 1–3 cột, ô đang đọc viền đỏ |
+| `agents/lesson_video/cli.py` | Lệnh `wordlist` |
+| `agents/pyproject.toml`, `agents/README.md` | Extra `wordlist` (xlrd); cách dùng lệnh `wordlist` |
+| `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | 4 mục mới |
+| `agents/tests/test_lesson_video.py` | Test mới: cảnh `words` và `wordlist`; hồi quy Unit 5 A2 (đáp án mở một lần sau `track`, bảng từ ở cuối, đủ 59 từ) |
+| `tests/web/book.e2e.mjs` | Thẻ A2 có 23 video; Unit 5 bốn nút (Reading, Listening, Speaking, Explore) |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 5, 6, 6.4–6.8 (độ phủ Unit 5), mục mới 6.9 (đáp án sau khi đọc, bảng từ A2) |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Bảng kiểu cảnh: thêm `words` |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-66 (xong); dòng đợt 32 ở P2-53 |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Quy ước Giai đoạn 0 từ Unit 5; dòng trạng thái đợt 32 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không xóa file nào.
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: English Unlimited A2 có 23 video |
+| `cd agents && python -m pytest -q` | 144 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | 20/20 bước OK; thẻ A2 có 23 video, Unit 5 bốn nút 6–9 phút |
+| `python -m lesson_video check` / `phonemes` / `wordlist --unit U05` | 4 kịch bản hợp lệ; ⚠ còn lại là tính từ close (đọc đúng); `chưa hiện: 0` |
+
+### Còn treo
+
+- Intro và Unit 1–4 của Giai đoạn 0 (19 video) chưa có bảng từ và vẫn mở đáp án theo từng câu: làm lại theo file 08 mục
+  6.9 nếu người học muốn.
+- Giai đoạn 0 Unit 6 trở đi: chép lời CD2 2.15–2.57 trước (file 08 mục 5).
+- 4 video luyện nói thêm Unit 4 của IELTS Target 5.0 (P2-57); video Oxford Word Skills Basic từ Unit 17 (P2-59).
+
+---
+
 ## Đợt 31 — 05/11/2026: video Unit 4 có hình trong sách cho IELTS Target 5.0 và Giai đoạn 0 (English Unlimited A2)
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 30 (`eb68df0`, đã lên `main`). Đẩy lên nhánh và `main` theo yêu cầu

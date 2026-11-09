@@ -1,0 +1,424 @@
+# Unit 5 · Your space — Bài 5.1 (Coursebook tr. 42–43): Place to place, Where I live. Phiên U05-lesson-1.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U05-lesson-1.yaml
+# Nguồn: trang 42–43 (bài báo "I live here but I work 800 kilometres away" chép nguyên văn); đáp án theo Teacher's Book
+# tr. 52–53 (1a: A mountains, a forest · B a market · C the sea, a beach · D a bridge, a river — audio 2.1 đọc sáu từ, không
+# có "a forest"; 3: José Luis sống ở một làng nhỏ ở San Luis, làm ở Buenos Aires · Lawrence sống ở Malta, làm ở London;
+# 4: 1 JL 14 giờ, L 3–4 giờ · 2 cả hai: hai lần · 3 JL tối thứ Sáu và Chủ nhật, L sáng thứ Hai, tối thứ Năm · 4 JL sông,
+# núi; L biển, trường học, sân bay · 5 vợ và các con · 6 JL làng an toàn, yên tĩnh, rẻ hơn; L nhà rộng hơn, nơi sống đẹp
+# hơn; 6a: safe/dangerous, noisy/quiet, expensive/cheap, ugly/beautiful, polluted/clean; Prepositions 1a: 1 in 2 on, near
+# 3 next to 4 from — TB in ra "on, in" ở câu 2, bài báo viết "on the Chorrillos river, near the mountains" nên theo bài báo;
+# 2: 1 in 2 in 3 on 4 in 5 on).
+# Audio gốc: 2.1 (tên sáu nơi trong ảnh, sau phần giới thiệu CD2), 2.2 (12 tính từ).
+# Đợt 32 — người học yêu cầu: (1) đáp án hiện tất cả một lần SAU khi đọc / nghe xong (không hiện lúc đang đọc): mỗi bài
+# làm trước (tạm dừng), nghe / đọc không có đáp án, rồi một dòng `reveal` mở hết; (2) cuối video hiện hết từ A2 của bài
+# theo bảng từ English Profile của sách (`python -m lesson_video wordlist ../books/book_english_unlimited_a2_elemetary
+# --unit U05`): 28 từ nơi chốn, tả nơi chốn, phương hướng. Bảng từ xếp vào Unit 5 cả từ không có trên trang bài học
+# (castle, desert, field, hill, island, petrol station, theatre); sách dẫn tới Vocabulary reference "Places, p143" mà bản
+# quét không có. 59 từ A2 của Unit 5 chia cho bốn video theo nội dung (file 08 mục 6.9).
+# Hình trong sách: bốn ảnh A–D, khung từ Places, bài báo (mỗi cột một cảnh, khung đỏ theo đoạn), câu hỏi bài 4, khung tính từ
+# 6a, sơ đồ giới từ, bảng in / on.
+# `phonemes` đánh ⚠ "close" ở "close to" (gần): tính từ, Kokoro đọc đúng /kloʊs/ — đừng đổi thành `cloze`.
+# Mai: giáo viên tiếng Anh ở Huế (video Unit 1–4); Tom: sinh viên ở TP. Hồ Chí Minh, gia đình ở Đà Lạt (hồ sơ file 06 mục 9.4).
+id: U05-lesson-1
+activity: U05-lesson-1
+title: "Unit 5 · Your space"
+subtitle: "Reading · I live here but I work 800 km away: places, describing places, in / on"
+title_vi: "Đọc bài báo về hai người sống xa nơi làm việc; từ chỉ nơi chốn, tính từ tả nơi chốn, giới từ in / on / next to / from (trang 42–43, audio 2.1–2.2)"
+tag: "EU A2 · UNIT 5"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 5: Your space. In this lesson, we talk about cities and neighbourhoods: places, and what they are like."
+        say: "Welcome to Unit five: Your space. In this lesson, we talk about cities and neighbourhoods: places, and what they are like."
+        vi: "Unit 5: Your space. Bài này nói về thành phố, khu phố: các nơi chốn và chúng như thế nào."
+      - emma: "A change in this unit: do each exercise first. You see all the answers together at the end of the exercise."
+        vi: "Thay đổi từ unit này: bạn làm bài trước; đáp án hiện cùng lúc ở cuối mỗi bài."
+      - mai: "Good! Then I can try first."
+        vi: "Hay quá! Vậy mình được tự làm trước."
+
+  - kind: figure
+    chapter: "Bài 1a: từ chỉ nơi chốn"
+    heading: "Vocabulary 1a · Places"
+    heading_vi: "Khung từ tr. 42 — tìm sáu nơi trong bốn ảnh A–D"
+    image: {pdf: course-book, page: 43, clip: [170, 366, 380, 478]}
+    items:
+      - {box: [174, 391, 376, 406]}
+      - {box: [174, 406, 376, 421]}
+      - {box: [174, 423, 376, 438]}
+      - {box: [174, 439, 376, 454]}
+    lines:
+      - emma: "Vocabulary: places. Here are fifteen places: an airport, a beach, a bridge, a bus stop,"
+        focus: 0
+        vi: "Mười lăm nơi chốn: sân bay, bãi biển, cây cầu, trạm xe buýt,"
+      - {emma: "a farm, a forest, a hospital, a lake,", focus: 1, vi: "nông trại, rừng, bệnh viện, hồ,"}
+      - {emma: "a market, a motorway, mountains,", focus: 2, vi: "chợ, đường cao tốc, núi,"}
+      - {emma: "a river, a school, the sea, a train station.", focus: 3, vi: "sông, trường học, biển, ga tàu."}
+
+  - kind: blanks
+    chapter: "Bài 1a–b: tìm trong ảnh — nghe 2.1"
+    heading: "Vocabulary 1a–b · Find six of these things in pictures A–D"
+    heading_vi: "Ảnh tr. 42 — tạm dừng video và tìm; rồi nghe 2.1. Đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 43, clip: [0, 122, 563, 528]}
+    items:
+      - {n: A, q: "Province of San Luis: ___", answer: "mountains", box: [1, 175, 183, 359]}
+      - {n: B, q: "Buenos Aires: ___", answer: "a market", box: [185, 175, 383, 359]}
+      - {n: C, q: "Paceville, Malta: ___", answer: "the sea, a beach", box: [386, 124, 562, 293]}
+      - {n: D, q: "London: ___", answer: "a bridge, a river", box: [386, 295, 562, 526]}
+    lines:
+      - emma: "Find six of these things in pictures A to D. Pause the video and try. Then listen."
+        say: "Find six of these things in pictures eigh to dee. Pause the video and try. Then listen."
+        vi: "Tìm sáu nơi trong bốn ảnh. Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "2.1", start: 17.4, end: 46.9, note: "2.1 · places in the pictures"}
+      - emma: "Here are all the answers."
+        reveal: [A, B, C, D]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "Picture A: mountains. You can see a forest too.", say: "Picture eigh: mountains. You can see a forest too.", focus: 0, vi: "Ảnh A: núi; còn thấy cả rừng nữa."}
+      - {tom: "B: a market. C: the sea and a beach.", say: "Bee: a market. See: the sea and a beach.", focus: 2}
+      - {tom: "And D: a bridge and a river.", say: "And dee: a bridge and a river.", focus: 3}
+
+  - kind: qa
+    chapter: "Bài 2: xa hay gần?"
+    heading: "Vocabulary 2 · How far are the things in 1a from where you are now?"
+    heading_vi: "close to (gần) · far from (xa) · ten minutes away (cách mười phút) — tạm dừng video và trả lời trước"
+    items:
+      - {q: "Is there a market near your home?", a: "Yes, there's a big market close to my house. It's five minutes away.", ask: tom, by: mai}
+      - {q: "How far is the airport from your home?", a: "It's far from my flat. It's about forty minutes away by bus.", ask: mai, by: tom}
+    lines:
+      - emma: "How far are these places from where you are now? Use close to, far from, and away: ten minutes away, two kilometres away."
+        say: "How far are these places from where you are now? Yooz close to, far from, and away: ten minutes away, two kilometres away."
+        vi: "Các nơi này cách chỗ bạn bao xa? Dùng close to, far from, away."
+      - {tom: "Is there a market near your home?", focus: 0, pause: 1.5}
+      - {mai: "Yes, there's a big market close to my house. It's five minutes away.", reveal: 0}
+      - {mai: "How far is the airport from your home?", focus: 1, pause: 1.5}
+      - {tom: "It's far from my flat. It's about forty minutes away by bus.", reveal: 1}
+
+  - kind: practice
+    chapter: "Bài 3: trước khi đọc"
+    heading: "Reading 3 · Read the article. Where do José Luis and Lawrence live and work?"
+    heading_vi: "Đọc câu hỏi trước, rồi nghe và đọc bài báo — đáp án hiện sau khi đọc xong"
+    items:
+      - {q: "Where does José Luis live? Where does he work?", hint: "He lives in … He works in …"}
+      - {q: "Where does Lawrence live? Where does he work?", hint: "He lives in … He works in …"}
+    lines:
+      - emma: "Now read the article: I live here but I work 800 kilometres away. Think about these questions while you read."
+        say: "Now read the article: I live here but I work eight hundred kilometres away. Think about these questions while you read."
+        vi: "Đọc bài báo \"Tôi sống ở đây nhưng làm việc cách 800 km\". Vừa đọc vừa nghĩ về hai câu hỏi."
+      - {emma: "Where does José Luis live? Where does he work?", say: "Where does Ho-say Loo-ees liv? Where does he work?", focus: 0, pause: 0.5}
+      - {emma: "Where does Lawrence live? Where does he work?", say: "Where does Lawrence liv? Where does he work?", focus: 1, pause: 1.5}
+
+  - kind: figure
+    chapter: "Đọc: José Luis"
+    heading: "Reading · I live here but I work 800 kilometres away"
+    heading_vi: "Bài báo tr. 42 — ba cột; Tom đọc lần lượt từng cột, khung đỏ theo đoạn"
+    image: {pdf: course-book, page: 43, clip: [30, 586, 548, 798]}
+    items:
+      - {box: [33, 588, 510, 624]}
+    lines:
+      - {tom: "I live here but I work 800 kilometres away.", say: "I live here but I work eight hundred kilometres away.", focus: 0}
+
+  - kind: figure
+    heading: "Reading · column 1 (1/2)"
+    heading_vi: "Bài báo tr. 42 — José Luis"
+    image: {pdf: course-book, page: 43, clip: [30, 627, 200, 720]}
+    items:
+      - {box: [32, 628, 198, 680]}
+      - {box: [32, 682, 198, 719]}
+    lines:
+      - {tom: "José Luis Garcia, a father of four from Argentina, lives in a small village in the province of San Luis but works in Buenos Aires, 800 kilometres away.", say: "Ho-say Loo-ees Gar-see-a, a father of four from Argentina, livz in a small village in the province of San Loo-ees but works in Buenos Aires, eight hundred kilometres away.", focus: 0}
+      - {tom: "\"I grew up in my village and I love it here but the good jobs are in Buenos Aires,\" he says.", focus: 1}
+
+  - kind: figure
+    heading: "Reading · column 1 (2/2)"
+    heading_vi: "Bài báo tr. 42 — José Luis"
+    image: {pdf: course-book, page: 43, clip: [30, 707, 200, 797]}
+    items:
+      - {box: [32, 709, 198, 795]}
+    lines:
+      - {tom: "\"I have to travel for fourteen hours on the bus on Friday and Sunday nights but it's OK.\"", focus: 0}
+      - {tom: "\"I don't want to live in Buenos Aires. It's an exciting place but it's quite polluted and parts of it can be dangerous.\"", focus: 0}
+      - {tom: "\"The village is on the Chorrillos river, near\"", say: "The village is on the Cho-ree-yos river, near", focus: 0}
+
+  - kind: figure
+    chapter: "Đọc: Lawrence"
+    heading: "Reading · column 2 (1/2)"
+    heading_vi: "Bài báo tr. 42 — Tom đọc tiếp"
+    image: {pdf: course-book, page: 43, clip: [203, 627, 374, 722]}
+    items:
+      - {box: [205, 630, 372, 657]}
+      - {box: [205, 659, 372, 720]}
+    lines:
+      - {tom: "\"the mountains. It's safe and quiet – a great place for my wife and kids.\"", focus: 0}
+      - {tom: "There are more and more people like José Luis all over the world.", say: "There are more and more people like Ho-say Loo-ees all over the world.", focus: 1}
+      - {tom: "Many people now live and work in very different places as cities become more expensive.", focus: 1}
+
+  - kind: figure
+    heading: "Reading · column 2 (2/2)"
+    heading_vi: "Bài báo tr. 42 — Lawrence"
+    image: {pdf: course-book, page: 43, clip: [203, 720, 374, 798]}
+    items:
+      - {box: [205, 723, 372, 797]}
+    lines:
+      - {tom: "Lawrence Wood, an English businessman, works in London but lives in another country.", say: "Lawrence Wood, an English businessman, works in London but livz in another country.", focus: 0}
+      - {tom: "He flies to London on Monday mornings and flies back to Malta on Thursday evenings, where his wife Samantha", focus: 0}
+
+  - kind: figure
+    heading: "Reading · column 3 (1/2)"
+    heading_vi: "Bài báo tr. 42 — Lawrence"
+    image: {pdf: course-book, page: 43, clip: [377, 630, 546, 698]}
+    items:
+      - {box: [379, 632, 544, 658]}
+      - {box: [379, 660, 544, 697]}
+    lines:
+      - {tom: "and two young children live in a family apartment in Paceville.", say: "and two young children live in a family apartment in Pah-cheh-ville.", focus: 0}
+      - {tom: "\"Our new place in Malta is next to the sea, and bigger than our house in London,\" says Lawrence.", focus: 1}
+
+  - kind: figure
+    heading: "Reading · column 3 (2/2)"
+    heading_vi: "Bài báo tr. 42 — hết bài"
+    image: {pdf: course-book, page: 43, clip: [377, 697, 546, 760]}
+    items:
+      - {box: [379, 698, 544, 758]}
+    lines:
+      - {tom: "\"We have a beautiful view of the Mediterranean, it's five minutes from the kids' school and seven kilometres from the airport.\"", focus: 0}
+      - {tom: "\"The flying's OK. It's three or four hours but I only do it twice a week.\"", focus: 0}
+
+  - kind: compare
+    chapter: "Bài 3: đáp án"
+    heading: "Reading 3 · Answers: where do they live and work?"
+    heading_vi: "Đáp án hiện sau khi đọc xong"
+    items:
+      - {title: "José Luis", title_vi: "Argentina", lines: ["lives: a small village in San Luis", "works: Buenos Aires, 800 km away"]}
+      - {title: "Lawrence", title_vi: "Anh, sống ở Malta", lines: ["lives: Paceville, Malta", "works: London"]}
+    lines:
+      - emma: "Here are the answers. José Luis lives in a small village in San Luis, and works in Buenos Aires."
+        say: "Here are the answers. Ho-say Loo-ees livz in a small village in San Loo-ees, and works in Buenos Aires."
+        vi: "José Luis sống ở một làng nhỏ ở San Luis, làm việc ở Buenos Aires."
+      - emma: "Lawrence lives in Malta, in Paceville, and works in London."
+        say: "Lawrence livz in Malta, in Pah-cheh-ville, and works in London."
+        vi: "Lawrence sống ở Paceville, Malta, làm việc ở London."
+
+  - kind: figure
+    chapter: "Bài 4: đọc lại, trả lời"
+    heading: "Reading 4 · Read again. Answer the questions about José Luis and Lawrence"
+    heading_vi: "Sáu câu hỏi tr. 43 — tạm dừng video, đọc lại bài và trả lời cho cả hai người"
+    image: {pdf: course-book, page: 44, clip: [150, 44, 470, 136]}
+    items:
+      - {box: [153, 63, 452, 75]}
+      - {box: [153, 75, 452, 87]}
+      - {box: [153, 87, 452, 99]}
+      - {box: [153, 99, 452, 111]}
+      - {box: [153, 111, 452, 123]}
+      - {box: [153, 123, 452, 135]}
+    lines:
+      - {emma: "Read again. How long are their journeys?", focus: 0}
+      - {emma: "How many times a week do they travel?", focus: 1}
+      - {emma: "When do they travel?", focus: 2}
+      - {emma: "What do they have near their homes?", focus: 3}
+      - {emma: "Who do they live with?", focus: 4}
+      - emma: "And why do they live and work in different places? Pause the video, and answer for José Luis and for Lawrence."
+        say: "And why do they live and work in different places? Pause the video, and answer for Ho-say Loo-ees and for Lawrence."
+        focus: 5
+        vi: "Vì sao họ sống và làm việc ở hai nơi khác nhau? Tạm dừng video, trả lời cho cả hai người."
+        pause: 1.5
+
+  - kind: compare
+    chapter: "Bài 4: đáp án"
+    heading: "Reading 4 · Answers 1–6"
+    heading_vi: "Tất cả đáp án — so với câu trả lời của bạn"
+    items:
+      - {title: "José Luis", title_vi: "làng ở San Luis ↔ Buenos Aires", lines: ["1 14 hours", "2 twice a week", "3 Friday and Sunday nights", "4 a river, the mountains", "5 his wife and children", "6 safe, quiet, cheaper"]}
+      - {title: "Lawrence", title_vi: "Malta ↔ London", lines: ["1 3–4 hours", "2 twice a week", "3 Monday morning, Thursday evening", "4 the sea, a school, an airport", "5 his wife and children", "6 a bigger house, a nicer place"]}
+    lines:
+      - emma: "Here are all the answers. Check yours."
+        vi: "Đây là toàn bộ đáp án. Bạn so lại nhé."
+      - mai: "Both of them travel twice a week, and both live with their wife and children."
+        say: "Both of them travel twice a week, and both liv with their wife and children."
+        focus: 0
+        vi: "Cả hai đều đi hai lần một tuần và đều sống với vợ con."
+      - tom: "And why? José Luis's village is safe, quiet and cheaper. Lawrence has a bigger house, next to the sea."
+        say: "And why? Ho-say Loo-ees's village is safe, quiet and cheaper. Lawrence has a bigger house, next to the sea."
+        focus: 1
+        vi: "Vì sao? Làng của José Luis an toàn, yên tĩnh, rẻ hơn; Lawrence có nhà rộng hơn, cạnh biển."
+
+  - kind: blanks
+    chapter: "Bài 6: tính từ trái nghĩa — nghe 2.2"
+    heading: "Vocabulary 6 · Describing places: find the opposites in the article"
+    heading_vi: "Khung tính từ tr. 43 — tạm dừng video và tìm; nghe 2.2; đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 44, clip: [152, 192, 368, 258]}
+    items:
+      - {n: 1, q: "___ / cheap", answer: "expensive"}
+      - {n: 2, q: "___ / dangerous", answer: "safe"}
+      - {n: 3, q: "ugly / ___", answer: "beautiful"}
+      - {n: 4, q: "noisy / ___", answer: "quiet"}
+      - {n: 5, q: "___ / clean", answer: "polluted"}
+    lines:
+      - emma: "Vocabulary: describing places. Find the opposites of these adjectives in the article. The first one is done for you: boring, exciting. Pause the video and try."
+        vi: "Tìm tính từ trái nghĩa trong bài báo; câu đầu đã làm sẵn: boring / exciting. Tạm dừng video và làm."
+        pause: 1.5
+      - {emma: "Now listen and check.", vi: "Giờ nghe để kiểm tra."}
+      - {track: "2.2", start: 2.8, end: 44.4, note: "2.2 · twelve adjectives"}
+      - emma: "Here are all the answers."
+        reveal: [1, 2, 3, 4, 5]
+        vi: "Đây là toàn bộ đáp án."
+      - mai: "Polluted is a new word for me. The air is dirty, not clean."
+        focus: 4
+        vi: "polluted là từ mới với mình: không khí bẩn, không sạch."
+
+  - kind: qa
+    chapter: "Bài 7: nơi bạn thích, không thích"
+    heading: "Speaking 7 · Five places you really like or don't like"
+    heading_vi: "Nói nơi bạn thích hay không thích và vì sao — dùng tính từ ở bài 6; tạm dừng video và nói trước"
+    items:
+      - {q: "Tell me about a place you really like.", a: "I really like Hue. It's quiet and beautiful, and it's not expensive.", ask: tom, by: mai}
+      - {q: "And a place you don't like?", a: "I don't like the big roads in the city centre. They're noisy, and they can be dangerous.", ask: mai, by: tom}
+    lines:
+      - emma: "Speaking. Think of five places you really like or don't like. Why? Use the words from Exercise 6."
+        say: "Speaking. Think of five places you really like or don't like. Why? Yooz the words from Exercise six."
+        vi: "Nghĩ năm nơi bạn rất thích hoặc không thích, và vì sao."
+      - {tom: "Tell me about a place you really like.", focus: 0, pause: 1.5}
+      - {mai: "I really like Hue. It's quiet and beautiful, and it's not expensive.", say: "I really like Whey. It's quiet and beautiful, and it's not expensive.", reveal: 0}
+      - {mai: "And a place you don't like?", focus: 1, pause: 1.5}
+      - {tom: "I don't like the big roads in the city centre. They're noisy, and they can be dangerous.", reveal: 1}
+
+  - kind: blanks
+    chapter: "Giới từ: in, on, next to, from"
+    heading: "Prepositions of place 1 · Complete the sentences with the prepositions"
+    heading_vi: "Sơ đồ tr. 43 — tạm dừng video và điền; đáp án hiện cùng lúc, rồi xem lại bài báo"
+    image: {pdf: course-book, page: 44, clip: [140, 362, 515, 512]}
+    items:
+      - {n: 1, q: "José Luis Garcia … lives ___ a small village.", answer: "in", box: [158, 459, 505, 472]}
+      - {n: 2a, q: "The village is ___ the Chorrillos river,", answer: "on", box: [158, 472, 505, 484]}
+      - {n: 2b, q: "… ___ the mountains.", answer: "near", box: [158, 472, 505, 484]}
+      - {n: 3, q: "Our new place in Malta is ___ the sea.", answer: "next to", box: [158, 484, 505, 496]}
+      - {n: 4, q: "It's five minutes ___ the kids' school.", answer: "from", box: [158, 496, 505, 508]}
+    lines:
+      - emma: "Where I live. Complete the sentences with the prepositions: in, on, from, next to, near. Pause the video and try."
+        vi: "Điền giới từ in, on, from, next to, near. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers. They're in the article."
+        reveal: ["1", "2a", "2b", "3", "4"]
+        vi: "Đây là toàn bộ đáp án — đều có trong bài báo."
+      - {emma: "In a village. On a river: the village is next to the river.", focus: 1, vi: "in + làng; on + sông (làng nằm bên sông)."}
+      - {emma: "Five minutes from the school: from tells us the distance.", focus: 4, vi: "from chỉ khoảng cách: cách trường năm phút."}
+
+  - kind: blanks
+    chapter: "in hay on?"
+    heading: "Prepositions of place 2 · Which groups of expressions go with in? Which go with on?"
+    heading_vi: "Bảng tr. 43 — tạm dừng video và chọn in / on cho mỗi dòng; đáp án hiện cùng lúc"
+    image: {pdf: course-book, page: 44, clip: [150, 540, 545, 668]}
+    items:
+      - {n: 1, q: "___ a village / a city / the city centre", answer: "in", box: [220, 556, 532, 572]}
+      - {n: 2, q: "___ the north of Argentina / the east of the city", answer: "in", box: [220, 579, 532, 595]}
+      - {n: 3, q: "___ the road to Mendoza / a river", answer: "on", box: [220, 603, 532, 618]}
+      - {n: 4, q: "___ a flat / an apartment / a house", answer: "in", box: [220, 627, 532, 641]}
+      - {n: 5, q: "___ the ground floor / the tenth floor", answer: "on", box: [220, 650, 532, 664]}
+    lines:
+      - emma: "Which groups go with in, and which go with on? Pause the video and try."
+        vi: "Nhóm nào đi với in, nhóm nào đi với on? Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "In for areas and buildings: in a city, in the north, in a flat.", focus: 0, vi: "in: khu vực, thành phố, căn hộ, nhà."}
+      - {emma: "On for lines and floors: on a river, on the metro line, on the tenth floor.", focus: 4, vi: "on: đường, sông, tuyến tàu, tầng nhà."}
+      - mai: "In Vietnamese, we say tầng mười. In English: on the tenth floor."
+        focus: 4
+        vi: "Tiếng Việt nói \"tầng mười\", tiếng Anh: on the tenth floor."
+
+  - kind: qa
+    chapter: "Bài 4: nơi bạn sống"
+    heading: "Speaking 4 · Where do you live? Do you like it?"
+    heading_vi: "Mai hỏi — bạn tạm dừng video và trả lời trước, rồi nghe Tom"
+    items:
+      - {q: "Where do you live? Do you like it?", a: "I live in a small flat in Ho Chi Minh City, near my university. It's on the fourth floor. I like it, but it's quite noisy.", ask: mai, by: tom}
+      - {q: "Where's your family?", a: "They live in Da Lat, in the south of Vietnam. It's about three hundred kilometres away.", ask: mai, by: tom}
+      - {q: "Where would you like to live?", a: "I'd like to live next to the sea, in a quiet town.", ask: mai, by: tom}
+    lines:
+      - emma: "Your turn. Mai asks the questions. Pause the video and answer, then listen to Tom."
+        vi: "Đến lượt bạn: Mai hỏi, bạn tạm dừng video và trả lời, rồi nghe Tom."
+      - {mai: "Where do you live? Do you like it?", focus: 0, pause: 1.5}
+      - {tom: "I live in a small flat in Ho Chi Minh City, near my university. It's on the fourth floor. I like it, but it's quite noisy.", reveal: 0}
+      - {mai: "Where's your family?", focus: 1, pause: 1.5}
+      - {tom: "They live in Da Lat, in the south of Vietnam. It's about three hundred kilometres away.", say: "They live in Dah Lot, in the south of Vietnam. It's about three hundred kilometres away.", reveal: 1}
+      - {mai: "Where would you like to live?", focus: 2, pause: 1.5}
+      - {tom: "I'd like to live next to the sea, in a quiet town.", reveal: 2}
+
+  - kind: words
+    chapter: "Từ vựng A2 của bài"
+    heading: "A2 words in this lesson (1/2)"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của bài 5.1 — nghe, đọc theo, tạm dừng để chép"
+    items:
+      - {w: "airport", pos: "n", vi: "sân bay"}
+      - {w: "apartment", pos: "n", vi: "căn hộ"}
+      - {w: "away", pos: "adv", vi: "cách (xa) — 800 km away"}
+      - {w: "bridge", pos: "n", vi: "cây cầu"}
+      - {w: "bus stop", pos: "n", vi: "trạm xe buýt"}
+      - {w: "castle", pos: "n", vi: "lâu đài"}
+      - {w: "centre", pos: "n", vi: "trung tâm (the city centre)"}
+      - {w: "dangerous", pos: "adj", vi: "nguy hiểm"}
+      - {w: "desert", pos: "n", vi: "sa mạc"}
+      - {w: "east", pos: "n", vi: "phía đông"}
+      - {w: "field", pos: "n", vi: "cánh đồng"}
+      - {w: "floor", pos: "n", vi: "tầng (nhà) — on the tenth floor"}
+      - {w: "forest", pos: "n", vi: "rừng"}
+      - {w: "hill", pos: "n", vi: "ngọn đồi"}
+    lines:
+      - emma: "Finally, here are the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to copy them."
+        vi: "Cuối bài: các từ A2 của bài theo bảng từ của sách. Nghe, đọc theo; tạm dừng video để chép."
+      - {emma: "airport", focus: 0}
+      - {emma: "apartment", focus: 1}
+      - {emma: "away", focus: 2}
+      - {emma: "bridge", focus: 3}
+      - {emma: "bus stop", focus: 4}
+      - {emma: "castle", focus: 5}
+      - {emma: "centre", focus: 6}
+      - {emma: "dangerous", focus: 7}
+      - {emma: "desert", say: "dezz-ert", focus: 8}
+      - {emma: "east", focus: 9}
+      - {emma: "field", focus: 10}
+      - {emma: "floor", focus: 11}
+      - {emma: "forest", focus: 12}
+      - {emma: "hill", focus: 13}
+
+  - kind: words
+    heading: "A2 words in this lesson (2/2)"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của bài 5.1 — kể cả từ ở Vocabulary reference tr. 143"
+    items:
+      - {w: "island", pos: "n", vi: "hòn đảo"}
+      - {w: "lake", pos: "n", vi: "hồ"}
+      - {w: "market", pos: "n", vi: "chợ"}
+      - {w: "motorway", pos: "n", vi: "đường cao tốc"}
+      - {w: "mountain", pos: "n", vi: "núi"}
+      - {w: "next to", pos: "phr", vi: "bên cạnh"}
+      - {w: "noisy", pos: "adj", vi: "ồn ào"}
+      - {w: "north", pos: "phr", vi: "phía bắc — in the north of"}
+      - {w: "petrol station", pos: "n", vi: "cây xăng"}
+      - {w: "quiet", pos: "adj", vi: "yên tĩnh"}
+      - {w: "safe", pos: "adj", vi: "an toàn"}
+      - {w: "south", pos: "n", vi: "phía nam"}
+      - {w: "theatre", pos: "n", vi: "nhà hát"}
+      - {w: "west", pos: "phr", vi: "phía tây"}
+    lines:
+      - {emma: "island", say: "eye-land", focus: 0}
+      - {emma: "lake", focus: 1}
+      - {emma: "market", focus: 2}
+      - {emma: "motorway", focus: 3}
+      - {emma: "mountain", focus: 4}
+      - {emma: "next to", focus: 5}
+      - {emma: "noisy", focus: 6}
+      - {emma: "north", focus: 7}
+      - {emma: "petrol station", focus: 8}
+      - {emma: "quiet", focus: 9}
+      - {emma: "safe", focus: 10}
+      - {emma: "south", focus: 11}
+      - {emma: "theatre", focus: 12}
+      - {emma: "west", focus: 13}
+      - emma: "Well done! In the next video, we look at Carole's flat, and things in the home."
+        vi: "Giỏi lắm! Video sau: căn hộ của Carole và đồ dùng trong nhà."

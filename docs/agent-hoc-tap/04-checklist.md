@@ -374,6 +374,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     - E2E: thẻ A2 có 15 video; Unit 3 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
   - *Đợt 31:* **Unit 4 — 4 video (32:45), có hình trong sách** (P2-65): `U04-lesson-1` (Reading · Technology firsts), `U04-lesson-2` (Listening · Sang-mi's business trip), `U04-target` (Speaking · Talk about an important event), `U04-explore` (Explore Writing · have, an email giving news); phát audio gốc 1.45–1.53 (1.51 thiếu: Emma đọc, chấm trọng âm xem trên hình).
     - E2E: thẻ A2 có 19 video; Unit 4 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
+  - *Đợt 32:* **Unit 5 — 4 video (33:05), đáp án hiện sau khi đọc / nghe xong, bảng từ A2 cuối mỗi video** (P2-66): `U05-lesson-1` (Reading · I live here but I work 800 km away), `U05-lesson-2` (Listening · House-sitting), `U05-target` (Speaking · Rent a room), `U05-explore` (Explore Speaking · on, personal space, showing interest); phát audio gốc 2.1–2.10 (CD2 chép lời 2.1–2.14).
+    - E2E: thẻ A2 có 23 video; Unit 5 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
     - E2E: thẻ A2 có 11 video; Intro, Unit 1, Unit 2 có nút video 5–10 phút theo thứ tự phiên.
 - [x] **P2-54** **GENKI Unit 0 làm lại: 19 video ngắn, chữ sáng theo chỗ đang đọc** (19 video, 1:10:43), theo góp ý của người học: chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, cả đoạn hiện một lúc nên không biết đang đọc tới đâu, không nói bài học để làm gì. Chi tiết: file 07 mục 4.
   - 19 video 2–5 phút thay 5 video 6–8 phút: Start here (Unit 0 học gì, để làm gì, cách xem video), Hiragana 1–9 (nguyên âm, từng cặp hàng, luyện tập, ゛゜, âm ghép, っ và trường âm), Katakana 1–4 (hàng ア–ホ, hàng マ–ン và cả bảng, dấu và ー, từ mượn và chữ Hán), Greetings 1–3 (câu chào, tạm biệt – ở nhà – bữa ăn – gặp lần đầu, luyện 10 tình huống), Numbers 1–2. Mỗi video mở đầu bằng "học gì, để làm gì".
@@ -458,6 +460,11 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Mọi video có hình cắt từ trang sách (ảnh, bài đọc, Tapescript, Answer key, email), khung đỏ theo chỗ đang giảng, nhãn đỏ thường là đáp án. Trang nhiều chữ cắt thành dải cho chữ đủ to.
   - Test: video Unit 4 của hai sách có cảnh hình với `box`, không `wait` / `echo`; độ phủ Unit 1–4 của IELTS; e2e: Unit 4 IELTS có 11 nút video và nút Exam practice mở đúng phiên, thẻ A2 có 19 video.
   - Còn: 4 video luyện nói thêm Unit 4 (P2-57).
+- [x] **P2-66** **Giai đoạn 0 Unit 5: đáp án hiện một lần sau khi đọc / nghe xong, bảng từ A2 cuối mỗi video** (đợt 32, 4 video, 33:05), theo yêu cầu người học: "tiếp tục unit tiếp theo cho sách A2 nhưng cần improve hiển thị đáp án tất cả sau khi đọc xong bài nếu có, hiện tại đa số hiển thị đáp án chung ngay lúc đọc" và "cuối mỗi video cần hiển thị hết từ vựng cho level A2 được sách sử dụng". Chi tiết: [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) mục 6.8, 6.9.
+  - Unit 5 · Your space: bài 5.1, 5.2, Target activity, Explore, có hình trong sách như Unit 4. Câu hỏi hiện trước, phát bài nghe / đọc bài xong mới hiện tất cả đáp án một lần ("Here are all the answers.").
+  - Cảnh mới `words`: lưới tối đa 18 ô (từ, từ loại, nghĩa tiếng Việt), ô đang đọc viền đỏ. Lệnh mới `lesson_video wordlist`: đọc bảng từ English Profile của sách (`*Wordlist.xls` → `work/wordlist.json`), in từ A2 của unit và báo từ chưa có trong cảnh `words`. Bốn video Unit 5 hiện đủ 59 từ A2 (28 + 16 + 8 + 7).
+  - Test: cảnh `words` (tối đa 18 ô, thiếu nghĩa bị từ chối, viền đỏ theo từ đang đọc); `wordlist` (gộp nghĩa, báo từ còn thiếu, lệnh CLI); hồi quy Unit 5 (đáp án mở một lần sau mọi `track`, bảng từ ở cuối, đủ 59 từ, có hình với `box`, không `wait` / `echo`, dưới 10 phút); e2e thẻ A2 có 23 video, Unit 5 bốn nút.
+  - Còn: Intro và Unit 1–4 (19 video) chưa có bảng từ và vẫn mở đáp án theo từng câu; làm lại nếu người học muốn.
 
 ### Cổng G2
 

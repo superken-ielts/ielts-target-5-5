@@ -1,0 +1,332 @@
+# Unit 5 · Your space — Explore (Coursebook tr. 47–48): Keyword on, Across cultures (personal space), Explore Speaking
+# (tỏ ra quan tâm khi trò chuyện). Phiên U05-explore.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U05-explore.yaml
+# Nguồn: trang 47–48 (tám câu Keyword, bài báo về khoảng cách cá nhân, câu hỏi bài 1–4 chép nguyên văn); đáp án theo
+# Teacher's Book tr. 55–56 (Keyword 1: places — on the shelf, on the left, on a sofa · days, dates — on January 1st,
+# on Friday · transport — on planes or trains · media and communication — on TV, on Sofasurfing.com; 2a: 2 on the internet
+# 3 on TV 4 on the radio 5 on a plane 6 on Mondays; Across cultures 1: 1 about a metre 2 50–90 cm 3 less than 50 cm
+# 4 30 cm or less; 2: feel uncomfortable / feel comfortable, too far away / too close, crowded / empty; Explore Speaking 1b:
+# 1 in her bedroom 2 she didn't think it was dangerous 3 a couple of years 4 a friend; 2b: the bedroom ceiling fell down;
+# 3: 1 OK, Right, Yeah 2 Really? Oh no! 3 That's great, That's wonderful 4 That's terrible, That's awful; 4a: gợi ý).
+# Audio gốc: 2.8 (phần đầu câu chuyện), 2.9 (phần sau, bỏ đoạn đầu lặp lại 2.8), 2.10 (các câu tỏ ra quan tâm). Bản ghi
+# 2.10 đọc "Oh no!" trong nhóm 4 (chuyện không vui), Teacher's Book xếp vào nhóm 2 (ngạc nhiên): video hiện cả hai.
+# Đợt 32: đáp án hiện tất cả một lần SAU khi đọc / nghe xong (câu hỏi Across cultures hiện trước bài báo, đáp án sau bài báo,
+# như U05-target); cuối video là 7 từ A2 của bài theo bảng từ English Profile của sách (ceiling, close, crowded, Oh no!, on,
+# Really?, yeah). "close" trong bảng từ là động từ (đóng cửa) nên đọc `say: cloze`; hai câu có close tính từ (đứng gần)
+# để nguyên, phonemes báo ⚠ nhưng đọc đúng /kloʊs/.
+# Hình trong sách: tám câu và bảng Keyword on (khung đỏ theo câu), tranh khoảng cách cá nhân, bài báo Personal space (khung
+# đỏ theo câu), ảnh ngôi nhà ở Barcelona và vết nứt trên trần, câu hỏi bài 3, đoạn hội thoại bài 4a.
+id: U05-explore
+activity: U05-explore
+title: "Unit 5 · Your space"
+subtitle: "Explore Speaking · on, personal space, showing interest"
+title_vi: "Từ khóa on (nơi chốn, ngày tháng, phương tiện, truyền thông); khoảng cách cá nhân ở các nền văn hóa; tỏ ra quan tâm khi nghe người khác kể chuyện (trang 47–48, audio 2.8–2.10)"
+tag: "EU A2 · UNIT 5"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "This is Explore for Unit 5. First, the keyword on. Then personal space in different cultures. And then a story about a flat in Barcelona, and how to show interest when someone tells you a story."
+        say: "This is Explore for Unit five. First, the keyword on. Then personal space in different cultures. And then a story about a flat in Barcelona, and how to show interest when someone tells you a story."
+        vi: "Explore của Unit 5: từ khóa on; khoảng cách cá nhân ở các nền văn hóa; câu chuyện về căn hộ ở Barcelona và cách tỏ ra quan tâm khi nghe."
+
+  - kind: figure
+    chapter: "Keyword: on"
+    heading: "Keyword 1 · Add the highlighted expressions to the table"
+    heading_vi: "Tám câu tr. 47 (từ Unit 1–5) — nghe đọc, rồi xếp cụm tô màu vào bốn cột của bảng"
+    image: {pdf: course-book, page: 48, clip: [40, 96, 535, 232]}
+    items:
+      - {box: [46, 100.5, 314, 111]}
+      - {box: [46, 111.5, 247, 121]}
+      - {box: [46, 121, 377, 132]}
+      - {box: [46, 131, 441, 141.5]}
+      - {box: [46, 141, 202, 150]}
+      - {box: [46, 150.5, 500, 162]}
+      - {box: [46, 161, 345, 170.5]}
+      - {box: [46, 170.5, 411, 181]}
+      - {box: [42, 192, 527, 230]}
+    lines:
+      - {emma: "Keyword: on. Here are eight sentences from Units 1 to 5. Listen. Plates and mugs and stuff are up here on the shelf.", say: "Keyword: on. Here are eight sentences from Units one to five. Listen. Plates and mugs and stuff are up here on the shelf.", focus: 0, vi: "Tám câu từ Unit 1–5. Nghe nhé."}
+      - {emma: "Please use the wardrobe on the left.", say: "Please yooz the wardrobe on the left.", focus: 1}
+      - {emma: "Talking to my husband and watching something good on TV with him.", focus: 2}
+      - {emma: "We have two New Years, one on January 1st and Seollal, in January or February.", say: "We have two New Years, one on January first and Sol-lahl, in January or February.", focus: 3}
+      - {emma: "And can he come on Friday?", focus: 4}
+      - {emma: "On Sofasurfing.com you can read people's profiles, email them and go and stay in their homes.", say: "On Sofa surfing dot com you can read people's profiles, email them and go and stay in their homes.", focus: 5}
+      - {emma: "You can stay on a sofa or spare bed for one or two nights.", focus: 6}
+      - {emma: "I'm often on planes or trains and in hotels and offices around the world.", focus: 7}
+      - emma: "Now add the highlighted expressions to the table: places, days and dates, transport, and media and communication. Pause the video and try."
+        focus: 8
+        vi: "Xếp các cụm tô màu vào bảng: nơi chốn, ngày tháng, phương tiện, truyền thông. Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: compare
+    chapter: "on: đáp án"
+    heading: "Keyword 1 · Answers"
+    heading_vi: "Tất cả đáp án — on + nơi chốn, ngày, phương tiện, truyền thông"
+    items:
+      - {title: "places", title_vi: "nơi chốn", lines: ["on the second floor", "on the shelf", "on the left", "on a sofa"]}
+      - {title: "days, dates", title_vi: "ngày, ngày tháng", lines: ["on March 25th", "on January 1st", "on Friday"]}
+      - {title: "transport", title_vi: "phương tiện", lines: ["on the bus", "on planes or trains"]}
+      - {title: "media", title_vi: "truyền thông", lines: ["on the phone", "on TV", "on Sofasurfing.com"]}
+    lines:
+      - emma: "Here are all the answers. Places: on the shelf, on the left, on a sofa."
+        focus: 0
+        vi: "Nơi chốn: on the shelf, on the left, on a sofa."
+      - {emma: "Days and dates: on January 1st, on Friday.", say: "Days and dates: on January first, on Friday.", focus: 1}
+      - {emma: "Transport: on planes or trains.", focus: 2}
+      - {emma: "And media and communication: on TV, on Sofasurfing.com.", say: "And media and communication: on TV, on Sofa surfing dot com.", focus: 3}
+      - mai: "In Vietnamese, we use the same word for on the shelf, on TV and on the bus. But for days, we use a different word."
+        vi: "Tiếng Việt nói \"trên\": trên kệ, trên TV, trên xe buýt; nhưng ngày thì dùng \"vào\": vào thứ Sáu."
+
+  - kind: blanks
+    chapter: "Bài 2a: thêm on"
+    heading: "Keyword 2a · Add on to the questions"
+    heading_vi: "Tạm dừng video và thêm on vào đúng chỗ; đáp án hiện cùng lúc"
+    items:
+      - {n: 1, q: "What did you do ___?", answer: "on Friday evening", hint: "Friday evening"}
+      - {n: 2, q: "How often do you go ___?", answer: "on the internet", hint: "the internet"}
+      - {n: 3, q: "What's your favourite programme ___?", answer: "on TV", hint: "TV"}
+      - {n: 4, q: "What do you listen to ___?", answer: "on the radio", hint: "the radio"}
+      - {n: 5, q: "When was your first trip ___?", answer: "on a plane", hint: "a plane"}
+      - {n: 6, q: "Do you always work ___?", answer: "on Mondays", hint: "Mondays"}
+    lines:
+      - emma: "Exercise 2a. Add on to the questions. The first one: What did you do on Friday evening? Pause the video and try."
+        say: "Exercise two eigh. Add on to the questions. The first one: What did you do on Friday evening? Pause the video and try."
+        vi: "Bài 2a: thêm on vào câu hỏi. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+
+  - kind: qa
+    chapter: "Bài 2c: hỏi và trả lời"
+    heading: "Keyword 2c · Ask and answer the questions"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời trước, rồi nghe câu mẫu"
+    items:
+      - {q: "What's your favourite programme on TV?", a: "I don't watch TV a lot, but I love cooking programmes on Sunday evenings.", ask: tom, by: mai}
+      - {q: "What do you listen to on the radio?", a: "I don't listen to the radio. I listen to music on my phone, on the bus.", ask: mai, by: tom}
+      - {q: "When was your first trip on a plane?", a: "Two years ago. I flew from Da Lat to Ho Chi Minh City.", ask: mai, by: tom}
+    lines:
+      - {tom: "What's your favourite programme on TV?", focus: 0, pause: 1.5}
+      - {mai: "I don't watch TV a lot, but I love cooking programmes on Sunday evenings.", reveal: 0}
+      - {mai: "What do you listen to on the radio?", focus: 1, pause: 1.5}
+      - {tom: "I don't listen to the radio. I listen to music on my phone, on the bus.", reveal: 1}
+      - {mai: "When was your first trip on a plane?", focus: 2, pause: 1.5}
+      - {tom: "Two years ago. I flew from Da Lat to Ho Chi Minh City.", say: "Two years ago. I flew from Dah Lot to Ho Chi Minh City.", reveal: 2}
+
+  - kind: blanks
+    chapter: "Khoảng cách cá nhân: câu hỏi"
+    heading: "Across cultures 1 · How much personal space does it say people prefer:"
+    heading_vi: "Tranh tr. 47 — đọc câu hỏi trước, rồi nghe bài báo; đáp án hiện sau khi đọc xong"
+    image: {pdf: course-book, page: 48, clip: [352, 440, 528, 708]}
+    items: &ac1
+      - {n: 1, q: "in East Asia? → ___", answer: "about a metre"}
+      - {n: 2, q: "in North America and northern Europe? → ___", answer: "50–90 cm"}
+      - {n: 3, q: "in South America and southern Europe? → ___", answer: "less than 50 cm"}
+      - {n: 4, q: "in Arab countries? → ___", answer: "30 cm or less"}
+    lines:
+      - emma: "Across cultures: personal space. When you talk to someone, how close do you stand? Read the questions. Then read the article and find the answers."
+        vi: "Khoảng cách cá nhân: nói chuyện thì đứng cách nhau bao xa? Đọc câu hỏi, rồi đọc bài báo để tìm đáp án."
+        pause: 1
+
+  - kind: figure
+    chapter: "Bài báo Personal space"
+    heading: "Across cultures · Personal space"
+    heading_vi: "Bài báo tr. 47 — Emma đọc, khung đỏ theo câu"
+    image: {pdf: course-book, page: 48, clip: [10, 520, 316, 641]}
+    items:
+      - {box: [13, 524, 313, 547]}
+      - {box: [13, 535.5, 313, 558.5]}
+      - {box: [13, 547.5, 313, 581.5]}
+      - {box: [13, 570.5, 313, 594]}
+      - {box: [13, 582, 313, 605]}
+      - {box: [13, 593.5, 313, 617.5]}
+      - {box: [13, 605, 313, 638.5]}
+    lines:
+      - {emma: "Edward T. Hall wrote that different cultures have different ideas of personal space.", say: "Edward tee Hall wrote that different cultures have different ideas of personal space.", focus: 0, vi: "Mỗi nền văn hóa có quan niệm khác nhau về khoảng cách cá nhân."}
+      - {emma: "For example, colleagues having a conversation in East Asia can feel uncomfortable if someone stands closer than about a metre.", focus: 1}
+      - {emma: "However, in North America and northern Europe, most people feel that a metre is too far away: a distance of 50 to 90 cm is normal.", say: "However, in North America and northern Europe, most people feel that a metre is too far away: a distance of fifty to ninety centimetres is normal.", focus: 2}
+      - {emma: "In the south of Europe and South America, people often prefer to stand closer than this.", focus: 3}
+      - {emma: "In Arab countries, personal distance can be 30 cm or less.", say: "In Arab countries, personal distance can be thirty centimetres or less.", focus: 4}
+      - {emma: "Of course, people sometimes need to stand very close together, for example on crowded trains and buses.", focus: 5}
+      - {emma: "When this happens, some people listen to music or read a newspaper to make a different kind of personal space.", focus: 6}
+
+  - kind: blanks
+    chapter: "Khoảng cách cá nhân: đáp án"
+    heading: "Across cultures 1 · How much personal space does it say people prefer:"
+    heading_vi: "Tạm dừng video và trả lời; đáp án hiện cùng lúc"
+    image: {pdf: course-book, page: 48, clip: [352, 440, 528, 708]}
+    items: *ac1
+    lines:
+      - {emma: "Now pause the video and answer the questions.", vi: "Tạm dừng video và trả lời.", pause: 1.5}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "In South America and the south of Europe, people stand closer than 50 cm. Closer means less far.", say: "In South America and the south of Europe, people stand closer than fifty centimetres. Closer means less far.", focus: 2, vi: "closer = gần hơn."}
+
+  - kind: pairs
+    chapter: "Bài 2: từ trái nghĩa"
+    heading: "Across cultures 2 · Match the highlighted expressions with their opposites"
+    heading_vi: "Tạm dừng video và nối; đáp án hiện cùng lúc"
+    items:
+      - {n: 1, q: "feel uncomfortable", answer: b}
+      - {n: 2, q: "too far away", answer: c}
+      - {n: 3, q: "crowded", answer: a}
+    options:
+      - {k: a, text: "empty"}
+      - {k: b, text: "feel comfortable"}
+      - {k: c, text: "too close"}
+    lines:
+      - {emma: "Match the highlighted expressions with their opposites. Pause the video and try.", vi: "Nối với từ trái nghĩa. Tạm dừng video và làm.", pause: 1.5}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
+      - tom: "In Vietnam, buses can be very crowded. When someone stands too close, I feel uncomfortable!"
+        vi: "Ở Việt Nam xe buýt có thể rất đông. Ai đứng quá gần là mình thấy khó chịu!"
+
+  - kind: blanks
+    chapter: "Nghe 2.8: căn hộ ở Barcelona"
+    heading: "Explore Speaking 1 · Listen to the first part of Estrella's story"
+    heading_vi: "Ảnh tr. 48 — ngôi nhà Estrella từng ở và vết nứt trên trần; nghe 2.8, đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 49, clip: [30, 46, 286, 352]}
+    items:
+      - {n: 1, q: "Where was the crack in the ceiling? → ___", answer: "in her bedroom", box: [134, 250, 284, 351]}
+      - {n: 2, q: "What did Estrella think about it? → ___", answer: "It wasn't dangerous."}
+      - {n: 3, q: "How long did she live in the flat? → ___", answer: "a couple of years", box: [36, 48, 284, 248]}
+      - {n: 4, q: "Who went to live in the flat after her? → ___", answer: "a friend"}
+    lines:
+      - emma: "Explore Speaking. Estrella tells her friend Mike about her old flat in Barcelona. There was this really big crack in the ceiling. Read the questions, then listen to the first part of her story."
+        say: "Explore Speaking. Ess-trella tells her friend Mike about her old flat in Barcelona. There was this really big crack in the ceiling. Read the questions, then listen to the first part of her story."
+        vi: "Estrella kể cho Mike nghe về căn hộ cũ ở Barcelona: trên trần có một vết nứt rất to. Đọc câu hỏi rồi nghe phần đầu."
+        pause: 1
+      - {track: "2.8", start: 2.8, end: 38.6, note: "2.8 · Estrella and Mike, part 1"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - {mai: "The crack was in her bedroom, but she didn't think it was dangerous.", focus: 0}
+      - {mai: "She lived there for a couple of years, and then a friend went to live there.", say: "She livd there for a couple of years, and then a friend went to live there.", focus: 2}
+
+  - kind: blanks
+    chapter: "Nghe 2.9: chuyện gì xảy ra?"
+    heading: "Explore Speaking 2 · What do you think happened next?"
+    heading_vi: "Đoán trước, rồi nghe phần sau của câu chuyện; đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 49, clip: [133, 249, 286, 351]}
+    items:
+      - {n: 1, q: "What happened? → ___", answer: "The bedroom ceiling fell down!", box: [135, 251, 284, 349]}
+      - {n: 2, q: "Was her friend OK? → ___", answer: "Yes. She was in the kitchen."}
+    lines:
+      - emma: "What do you think happened next? Pause the video and guess."
+        vi: "Bạn đoán chuyện gì xảy ra tiếp theo? Tạm dừng video và đoán."
+        pause: 1.5
+      - {tom: "Maybe the ceiling fell down?", vi: "Có lẽ trần nhà sập?"}
+      - {emma: "Let's listen to the rest of the story.", vi: "Nghe phần còn lại của câu chuyện."}
+      - {track: "2.9", start: 11.8, end: 54.6, note: "2.9 · Estrella and Mike, part 2"}
+      - emma: "Here are the answers."
+        reveal: ["1", "2"]
+        vi: "Đây là đáp án."
+      - {tom: "I was right! The bedroom ceiling fell down, on the bed. Luckily, her friend was in the kitchen.", focus: 0, vi: "Mình đoán đúng! Trần phòng ngủ sập xuống giường. May mà bạn cô ấy đang ở trong bếp."}
+
+  - kind: blanks
+    chapter: "Tỏ ra quan tâm — nghe 2.10"
+    heading: "Explore Speaking 3 · Which expressions does Mike use …"
+    heading_vi: "Tìm trong lời Mike, rồi thêm Oh no!, That's wonderful, That's awful, Yeah; nghe 2.10; đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 49, clip: [33, 531, 286, 698]}
+    items:
+      - {n: 1, q: "to say he understands: ___", answer: "OK · Right · Yeah", box: [57, 561, 212, 574.5]}
+      - {n: 2, q: "to show he's surprised: ___", answer: "Really? · Oh no!", box: [57, 573.5, 186, 586.5]}
+      - {n: 3, q: "good news: ___", answer: "That's great · That's wonderful", box: [57, 585.5, 258, 611.5]}
+      - {n: 4, q: "bad news: ___", answer: "That's terrible · That's awful · Oh no!", box: [57, 609, 258, 635]}
+    lines:
+      - emma: "Mike listens and shows interest. Which of his expressions do we use to say we understand? To show we're surprised? When the news is good? When it's bad?"
+        vi: "Mike tỏ ra quan tâm khi nghe. Câu nào để nói mình hiểu, ngạc nhiên, chuyện vui, chuyện buồn?"
+      - emma: "Then add these expressions to the groups: Oh no! That's wonderful. That's awful. Yeah. Pause the video and try. Then listen."
+        vi: "Thêm Oh no!, That's wonderful, That's awful, Yeah vào các nhóm. Tạm dừng video làm thử rồi nghe."
+        pause: 1.5
+      - {track: "2.10", start: 2.4, end: 44.2, note: "2.10 · showing interest"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - emma: "Oh no! shows surprise, and the news is bad. The recording puts it with That's terrible, so you can use it in both groups."
+        focus: 3
+        vi: "Oh no! = ngạc nhiên trước chuyện không vui; bản ghi âm xếp nó cùng That's terrible, nên dùng được ở cả hai nhóm."
+
+  - kind: blanks
+    chapter: "Bài 4a: điền hội thoại"
+    heading: "Explore Speaking 4a · Complete the conversation with expressions from 3"
+    heading_vi: "Đoạn hội thoại tr. 48 — tạm dừng video và điền; đáp án gợi ý hiện cùng lúc"
+    image: {pdf: course-book, page: 49, clip: [316, 513, 532, 648]}
+    items:
+      - {n: 1, q: "___", answer: "That's wonderful! / That's great!"}
+      - {n: 2, q: "___ What happened?", answer: "Really?"}
+      - {n: 3, q: "___ What did you do?", answer: "Oh no!"}
+      - {n: 4, q: "___ How long did you stay?", answer: "That's awful! / That's terrible!"}
+    lines:
+      - emma: "Exercise 4a. Simon and Ana talk about a festival. Complete the conversation with expressions from Exercise 3. Pause the video and try."
+        say: "Exercise four eigh. Simon and Ana talk about a festival. Complete the conversation with expressions from Exercise three. Pause the video and try."
+        vi: "Bài 4a: Simon và Ana nói về một lễ hội. Điền các câu ở bài 3 vào hội thoại. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers. Other answers are possible too."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án (gợi ý — có thể có câu khác đúng)."
+
+  - kind: letter
+    chapter: "Bài 4b: đóng vai"
+    heading: "Explore Speaking 4b · Simon and Ana"
+    heading_vi: "Hội thoại đã điền — Tom là Simon, Mai là Ana; nghe rồi luyện cùng bạn"
+    roles: {tom: Simon, mai: Ana}
+    items:
+      - {text: "SIMON: Hi, Ana. How was the festival?", say: "Hi, Ana. How was the festival?"}
+      - {text: "ANA: Well, the music was great.", say: "Well, the music was great."}
+      - {text: "SIMON: That's wonderful!", say: "That's wonderful!", note: "1 · good news"}
+      - {text: "ANA: But we didn't have a very good time.", say: "But we didn't have a very good time."}
+      - {text: "SIMON: Really? What happened?", say: "Really? What happened?", note: "2 · surprised"}
+      - {text: "ANA: It rained the whole time.", say: "It rained the whole time."}
+      - {text: "SIMON: Oh no! What did you do?", say: "Oh no! What did you do?", note: "3 · bad news"}
+      - {text: "ANA: Well, we couldn't camp, so we slept in the car. All four of us!", say: "Well, we couldn't camp, so we slept in the car. All four of us!"}
+      - {text: "SIMON: That's awful! How long did you stay?", say: "That's awful! How long did you stay?", note: "4 · bad news"}
+      - {text: "ANA: Not long. We left after one night!", say: "Not long. We left after one night!"}
+    lines:
+      - emma: "Exercise 4b. Listen to the conversation, then practise it with a friend."
+        say: "Exercise four bee. Listen to the conversation, then practise it with a friend."
+        vi: "Bài 4b: nghe hội thoại rồi luyện cùng bạn."
+      - {read: tom, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: tom, focus: 4}
+      - {read: mai, focus: 5}
+      - {read: tom, focus: 6}
+      - {read: mai, focus: 7}
+      - {read: tom, focus: 8}
+      - {read: mai, focus: 9}
+
+  - kind: words
+    chapter: "Từ vựng A2 của bài"
+    heading: "A2 words in this lesson"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của Explore — nghe, đọc theo, tạm dừng để chép"
+    items:
+      - {w: "ceiling", pos: "n", vi: "trần nhà"}
+      - {w: "close", pos: "v", vi: "đóng (cửa) — The shop closes at 9. ≠ close /s/: gần"}
+      - {w: "crowded", pos: "adj", vi: "đông đúc, chật chội"}
+      - {w: "Oh no!", pos: "phr", vi: "Ôi không! (chuyện không vui)"}
+      - {w: "on", pos: "prep", vi: "trên; vào (on Friday); on the bus, on TV"}
+      - {w: "Really?", pos: "phr", vi: "Thật à? (ngạc nhiên)"}
+      - {w: "yeah", pos: "excl", vi: "ừ, vâng (= yes, thân mật)"}
+    lines:
+      - emma: "Finally, the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to copy them."
+        vi: "Cuối bài: các từ A2 của bài theo bảng từ của sách. Nghe, đọc theo; tạm dừng video để chép."
+      - {emma: "ceiling", focus: 0}
+      - {emma: "close. The shop closes at 9.", say: "cloze. The shop clozes at nine.", focus: 1}
+      - {emma: "crowded", focus: 2}
+      - {emma: "Oh no!", focus: 3}
+      - {emma: "on", focus: 4}
+      - {emma: "Really?", focus: 5}
+      - {emma: "yeah", focus: 6}
+      - emma: "Well done! That's the end of Unit 5."
+        say: "Well done! That's the end of Unit five."
+        vi: "Giỏi lắm! Hết Unit 5."

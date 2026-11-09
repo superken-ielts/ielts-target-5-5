@@ -1,0 +1,237 @@
+# Unit 5 · Your space — Target activity: Rent a room (Coursebook tr. 46), phiên U05-target.
+# Dựng: cd agents && python -m lesson_video build ../books/book_english_unlimited_a2_elemetary/lessons/U05-target.yaml
+# Nguồn: trang 46 (ba quảng cáo trên DublinCapitalRentals.com chép nguyên văn, bỏ số điện thoại); đáp án theo Teacher's Book
+# tr. 54–55 (Task reading 1: 1 B — non smoking, parking included, 4.3 km from city centre · 2 A — single apartment, quiet
+# house, on main bus route · 3 C — furnished; Task vocabulary 2: 1 rent 2 single 3 central heating 4 males / females
+# 5 available 6 immediately 7 furnished 8 own 9 shared; Task listening 3: B; 4a: 1c 2d 3a 4e 5b).
+# Audio gốc 2.7 (Alicja gọi hỏi phòng): phát nguyên bài cho bài 3, rồi phát lại đoạn hỏi – đáp (20,3–75,3 s) cho bài 4b.
+# Đợt 32: đáp án hiện tất cả một lần SAU khi đọc / nghe xong — ba quảng cáo được đọc to trước, rồi mới hiện đáp án bài 1
+# và khung đỏ chỉ câu bằng chứng; cuối video là 8 từ A2 của bài theo bảng từ English Profile của sách.
+# Task 5 (đóng vai, thông tin ở tr. 124 không có trong bản quét): Mai hỏi về căn hộ A, Tom đóng vai Max trả lời theo đúng
+# quảng cáo A (giờ xem phòng là chi tiết thêm).
+# Hình trong sách: ba quảng cáo A, B, C (mỗi quảng cáo một cảnh, khung đỏ theo dòng), dải ba quảng cáo với khung đỏ ở câu
+# bằng chứng của bài 1.
+id: U05-target
+activity: U05-target
+title: "Unit 5 · Your space"
+subtitle: "Speaking · Rent a room: adverts, questions about a room"
+title_vi: "Đọc quảng cáo cho thuê phòng ở Dublin, nghe Alicja gọi hỏi phòng, hỏi về phòng muốn thuê (trang 46, audio 2.7)"
+tag: "EU A2 · UNIT 5"
+speakers:
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: learner from Vietnam, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 5. This is the Target activity: rent a room. We read three adverts for rooms in Dublin, and listen to a phone call."
+        say: "Welcome back to Unit five. This is the Target activity: rent a room. We read three adverts for rooms in Dublin, and listen to a phone call."
+        vi: "Target activity: thuê phòng. Đọc ba quảng cáo cho thuê phòng ở Dublin và nghe một cuộc gọi."
+      - mai: "When I was a student, I rented a small room in Hue with two friends."
+        say: "When I was a student, I rented a small room in Whey with two friends."
+        vi: "Hồi sinh viên, mình thuê một phòng nhỏ ở Huế với hai người bạn."
+
+  - kind: blanks
+    chapter: "Bài 1: đọc quảng cáo"
+    heading: "Task reading 1 · Read the adverts. Which place is best for someone who …"
+    heading_vi: "Đọc ba câu hỏi trước, rồi nghe đọc ba quảng cáo — đáp án hiện sau khi đọc xong"
+    items: &q1
+      - {n: 1, q: "doesn't smoke and has a car? → advert ___", answer: "B"}
+      - {n: 2, q: "doesn't like noisy places and doesn't have a car? → advert ___", answer: "A"}
+      - {n: 3, q: "doesn't have furniture? → advert ___", answer: "C"}
+    lines:
+      - emma: "Task reading. Read the adverts. Which place is best for someone who doesn't smoke and has a car?"
+        focus: 0
+        vi: "Quảng cáo nào hợp nhất với người không hút thuốc và có xe hơi?"
+      - {emma: "For someone who doesn't like noisy places, and doesn't have a car?", focus: 1, vi: "… người không thích chỗ ồn ào và không có xe?"}
+      - {emma: "And for someone who doesn't have furniture? Listen to the adverts first.", focus: 2, vi: "… người không có đồ đạc? Trước hết nghe đọc ba quảng cáo."}
+
+  - kind: figure
+    chapter: "Quảng cáo A, B, C"
+    heading: "DublinCapitalRentals.com · advert A"
+    heading_vi: "Quảng cáo A tr. 46 — Tom đọc"
+    image: {pdf: course-book, page: 47, clip: [26, 218, 204, 350]}
+    items:
+      - {box: [29, 222, 200, 253]}
+      - {box: [29, 260, 200, 270]}
+      - {box: [29, 277, 200, 320]}
+      - {box: [29, 326, 200, 348]}
+    lines:
+      - {tom: "Oxmantown Road, Dublin 7, North Dublin City.", say: "Oxmantown Road, Dublin seven, North Dublin City.", focus: 0}
+      - {tom: "Apartment to let: 135 euros weekly.", say: "Apartment to let: a hundred and thirty-five euros weekly.", focus: 1}
+      - {tom: "Single studio apartment with toilet and shower. Quiet house. Near Phoenix Park, on main bus route. Rent includes central heating.", focus: 2}
+      - {tom: "Available from the 8th of February. Contact: Max.", say: "Available from the eighth of February. Contact: Max.", focus: 3}
+
+  - kind: figure
+    heading: "DublinCapitalRentals.com · advert B"
+    heading_vi: "Quảng cáo B tr. 46 — Mai đọc"
+    image: {pdf: course-book, page: 47, clip: [202, 218, 377, 350]}
+    items:
+      - {box: [204, 222, 374, 253]}
+      - {box: [204, 260, 374, 270]}
+      - {box: [204, 277, 374, 320]}
+      - {box: [204, 326, 374, 348]}
+    lines:
+      - {mai: "Collins Avenue West, Dublin 9, North Dublin City.", say: "Collins Avenue West, Dublin nine, North Dublin City.", focus: 0}
+      - {mai: "Single bedroom to let: 100 euros weekly.", say: "Single bedroom to let: a hundred euros weekly.", focus: 1}
+      - {mai: "Share 3-bed house with two women. Looking for males or females. Modern, non smoking. Parking included. 4.3 km from city centre.", say: "Share three-bed house with two women. Looking for males or females. Modern, non smoking. Parking included. Four point three kilometres from city centre.", focus: 2}
+      - {mai: "Available immediately. Contact: C. Kerrigan.", say: "Available immediately. Contact: see, Kerrigan.", focus: 3}
+
+  - kind: figure
+    heading: "DublinCapitalRentals.com · advert C"
+    heading_vi: "Quảng cáo C tr. 46 — Emma đọc"
+    image: {pdf: course-book, page: 47, clip: [377, 218, 548, 350]}
+    items:
+      - {box: [378, 222, 546, 253]}
+      - {box: [378, 260, 546, 270]}
+      - {box: [378, 277, 546, 320]}
+      - {box: [378, 326, 546, 348]}
+    lines:
+      - {emma: "Hazelwood, Dublin 9, North Dublin City.", say: "Hazelwood, Dublin nine, North Dublin City.", focus: 0}
+      - {emma: "Room to let: 600 euros monthly.", say: "Room to let: six hundred euros monthly.", focus: 1}
+      - {emma: "Students only! Furnished single room on 10th floor. Own bathroom. Shared living room and kitchen. Near Dublin City University.", say: "Students only! Furnished single room on tenth floor. Own bathroom. Shared living room and kitchen. Near Dublin City University.", focus: 2}
+      - {emma: "Available immediately. Contact: Jess Keyes.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: đáp án"
+    heading: "Task reading 1 · Which place is best?"
+    heading_vi: "Tạm dừng video và chọn A, B hoặc C; đáp án hiện cùng lúc"
+    items: *q1
+    lines:
+      - {emma: "Now pause the video and choose: A, B or C.", say: "Now pause the video and choose: eigh, bee or see.", vi: "Tạm dừng video và chọn A, B hoặc C.", pause: 1.5}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
+
+  - kind: figure
+    heading: "Task reading 1 · Why?"
+    heading_vi: "Khung đỏ là câu bằng chứng trong quảng cáo"
+    image: {pdf: course-book, page: 47, clip: [22, 218, 548, 350]}
+    items:
+      - {box: [204, 299, 364, 319], label: "1 → B"}
+      - {box: [29, 288, 200, 308], label: "2 → A"}
+      - {box: [378, 277, 546, 288], label: "3 → C"}
+    lines:
+      - {tom: "One is B: modern, non smoking, and parking included.", say: "One is bee: modern, non smoking, and parking included.", focus: 0}
+      - {tom: "Two is A: a quiet house, on the main bus route.", say: "Two is eigh: a quiet house, on the main bus route.", focus: 1}
+      - {tom: "And three is C: it's furnished. It has a bed, a wardrobe and chairs.", say: "And three is see: it's furnished. It has a bed, a wardrobe and chairs.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 2: từ trong quảng cáo"
+    heading: "Task vocabulary 2 · Find words or expressions in adverts A–C which mean:"
+    heading_vi: "Tạm dừng video, tìm trong ba quảng cáo; đáp án hiện cùng lúc"
+    items:
+      - {n: 1, q: "money you pay to live somewhere → ___", answer: "rent", hint: "A · r…"}
+      - {n: 2, q: "for one person → ___", answer: "single", hint: "A · s…"}
+      - {n: 3, q: "system for making a place warm → ___", answer: "central heating", hint: "A · c… h…"}
+      - {n: 4, q: "men / women → ___", answer: "males / females", hint: "B · m… / f…"}
+      - {n: 5, q: "ready to live in → ___", answer: "available", hint: "B · a…"}
+      - {n: 6, q: "now, without waiting → ___", answer: "immediately", hint: "B · i…"}
+      - {n: 7, q: "with bed, wardrobe, chairs etc. → ___", answer: "furnished", hint: "C · f…"}
+      - {n: 8, q: "only for you → ___", answer: "own", hint: "C · o…"}
+      - {n: 9, q: "for you and other people → ___", answer: "shared", hint: "C · s…"}
+    lines:
+      - emma: "Task vocabulary. Find words or expressions in the adverts which mean these things. The first one is: money you pay to live somewhere. Pause the video and try."
+        vi: "Tìm trong quảng cáo các từ có nghĩa như sau; câu 1: tiền trả để ở một nơi. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "We usually say my own, your own: I have my own room.", focus: 7, vi: "own thường đi với my, your, its: my own room = phòng riêng của tôi."}
+      - {emma: "Shared comes from the verb share: I share the kitchen with two other people.", focus: 8, vi: "shared (dùng chung) từ động từ share: I share the kitchen."}
+
+  - kind: blanks
+    chapter: "Nghe 2.7: Alicja gọi hỏi phòng"
+    heading: "Task listening 3 · Listen to Alicja calling about one of the rooms"
+    heading_vi: "Cô ấy quan tâm đến phòng nào: A, B hay C? Nghe cả cuộc gọi, đáp án hiện sau"
+    items:
+      - {n: 1, q: "Alicja is interested in advert ___", answer: "B"}
+    lines:
+      - emma: "Listen to Alicja calling about one of the rooms. Which one is she interested in?"
+        say: "Listen to Ah-leets-ya calling about one of the rooms. Which one is she interested in?"
+        vi: "Nghe Alicja gọi hỏi một trong ba phòng. Cô ấy quan tâm đến phòng nào?"
+      - {track: "2.7", start: 2.6, end: 91.9, note: "2.7 · Alicja calls"}
+      - emma: "Here's the answer."
+        reveal: ["1"]
+        vi: "Đây là đáp án."
+      - tom: "B. She'll share the kitchen with two other women, and it's a hundred euros a week. It's five minutes from the bus stop."
+        say: "Bee. She'll share the kitchen with two other women, and it's a hundred euros a week. It's five minutes from the bus stop."
+        vi: "B: dùng chung bếp với hai phụ nữ khác, 100 euro một tuần, cách trạm xe buýt năm phút."
+
+  - kind: pairs
+    chapter: "Bài 4: câu hỏi và câu trả lời"
+    heading: "Task listening 4 · Match the questions and answers"
+    heading_vi: "Tạm dừng video và nối; nghe lại đoạn hỏi – đáp; đáp án hiện sau khi nghe xong"
+    items:
+      - {n: 1, q: "Does the room have its own bathroom and kitchen?", answer: c}
+      - {n: 2, q: "Is there a washing machine?", answer: d}
+      - {n: 3, q: "Is it near a bus stop for the city centre?", answer: a}
+      - {n: 4, q: "Is heating included in the rent?", answer: e}
+      - {n: 5, q: "Can I see the room this evening?", answer: b}
+    options:
+      - {k: a, text: "Yes, it's five minutes from the bus stop."}
+      - {k: b, text: "Yes, any time after six."}
+      - {k: c, text: "It has a bathroom with a shower, but you'll share the kitchen."}
+      - {k: d, text: "Yes, it's in the kitchen, and there's a dishwasher."}
+      - {k: e, text: "Yes, it's a hundred euros a week for everything, except the telephone."}
+    lines:
+      - emma: "Exercise 4. Match the questions and answers. Pause the video and try. Then listen again to check."
+        say: "Exercise four. Match the questions and answers. Pause the video and try. Then listen again to check."
+        vi: "Bài 4: nối câu hỏi với câu trả lời. Tạm dừng video làm thử rồi nghe lại để kiểm tra."
+        pause: 1.5
+      - {track: "2.7", start: 20.3, end: 75.4, note: "2.7 · questions and answers"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Is heating included in the rent? Included means it isn't extra. You don't pay more for it.", focus: 3, vi: "included = đã tính trong giá, không phải trả thêm."}
+
+  - kind: qa
+    chapter: "Bài 5: đến lượt bạn"
+    heading: "Task 5 · You're interested in the apartment on Oxmantown Road"
+    heading_vi: "Mai gọi hỏi căn hộ A, Tom đóng vai Max — tạm dừng video sau mỗi câu hỏi và tự trả lời trước"
+    roles: {tom: Max}
+    items:
+      - {q: "Hello, I'm interested in the apartment on Oxmantown Road. Is it still available?", a: "Yes, it is. It's available from the 8th of February.", ask: mai, by: tom}
+      - {q: "Is heating included in the rent?", a: "Yes, central heating is included. It's 135 euros a week.", ask: mai, by: tom}
+      - {q: "Is it near a bus stop?", a: "Yes, it's on the main bus route, near Phoenix Park.", ask: mai, by: tom}
+      - {q: "Can I see the apartment this weekend?", a: "Of course. Any time on Saturday morning.", ask: mai, by: tom}
+    lines:
+      - emma: "Your turn. Think of four questions to ask about the apartment on Oxmantown Road. Here's Mai. Tom is Max. Pause after each question and answer for Max."
+        vi: "Đến lượt bạn: nghĩ bốn câu hỏi về căn hộ A. Mai hỏi, Tom đóng vai Max. Tạm dừng sau mỗi câu hỏi và tự trả lời thay Max."
+      - {mai: "Hello, I'm interested in the apartment on Oxmantown Road. Is it still available?", focus: 0, pause: 1.5}
+      - {tom: "Yes, it is. It's available from the 8th of February.", say: "Yes, it is. It's available from the eighth of February.", reveal: 0}
+      - {mai: "Is heating included in the rent?", focus: 1, pause: 1.5}
+      - {tom: "Yes, central heating is included. It's 135 euros a week.", say: "Yes, central heating is included. It's a hundred and thirty-five euros a week.", reveal: 1}
+      - {mai: "Is it near a bus stop?", focus: 2, pause: 1.5}
+      - {tom: "Yes, it's on the main bus route, near Phoenix Park.", reveal: 2}
+      - {mai: "Can I see the apartment this weekend?", focus: 3, pause: 1.5}
+      - {tom: "Of course. Any time on Saturday morning.", reveal: 3}
+
+  - kind: words
+    chapter: "Từ vựng A2 của bài"
+    heading: "A2 words in this lesson"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của Target activity — nghe, đọc theo, tạm dừng để chép"
+    items:
+      - {w: "available", pos: "adj", vi: "còn trống, có sẵn (để thuê)"}
+      - {w: "furniture", pos: "n", vi: "đồ đạc (bàn ghế, giường, tủ)"}
+      - {w: "immediately", pos: "adv", vi: "ngay lập tức"}
+      - {w: "included", pos: "adj", vi: "đã bao gồm, đã tính trong giá"}
+      - {w: "own", pos: "adj", vi: "riêng — its own bathroom"}
+      - {w: "rent", pos: "v, n", vi: "thuê; tiền thuê nhà"}
+      - {w: "shared", pos: "adj", vi: "dùng chung"}
+      - {w: "single", pos: "adj", vi: "đơn, cho một người"}
+    lines:
+      - emma: "Finally, the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to copy them."
+        vi: "Cuối bài: các từ A2 của bài theo bảng từ của sách. Nghe, đọc theo; tạm dừng video để chép."
+      - {emma: "available", focus: 0}
+      - {emma: "furniture", focus: 1}
+      - {emma: "immediately", focus: 2}
+      - {emma: "included", focus: 3}
+      - {emma: "own", focus: 4}
+      - {emma: "rent", focus: 5}
+      - {emma: "shared", focus: 6}
+      - {emma: "single", focus: 7}
+      - emma: "Well done! In the next video, the keyword on, personal space, and how to show interest in a conversation."
+        vi: "Giỏi lắm! Video sau: từ khóa on, khoảng cách cá nhân và cách tỏ ra quan tâm khi trò chuyện."

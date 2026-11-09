@@ -61,12 +61,18 @@ python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01   # phần 
 python -m lesson_video prune ../books/Genki   # bỏ khỏi lessons.json (và xóa .mp4) những video không còn kịch bản
 python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 1.7 1.20   # chép lời audio của sách
 python -m lesson_video phonemes ../books/book_english_unlimited_a2_elemetary/lessons/U02-*.yaml   # soát cách Kokoro đọc
+python -m lesson_video wordlist ../books/book_english_unlimited_a2_elemetary --unit U05   # từ A2 của unit cho cảnh `words`
 ```
 
 `transcribe` dùng cho sách không in lời bài nghe. Lệnh chép lời từng track bằng Parakeet TDT 0.6B v2 qua sherpa-onnx
 (`pip install -e '.[asr]'`; model tải từ GitHub releases của k2-fsa/sherpa-onnx, mục asr-models, giải nén vào
 `~/.cache/lesson_video/asr/`). Kết quả ghi vào `books/<sách>/work/transcripts/<track>.txt` và `.json`; file `.json` có mốc
 từng từ, dùng làm `start` / `end` của dòng `track`.
+
+`wordlist` đọc bảng từ English Profile đi kèm sách (`*Wordlist.xls`: từ, từ loại, cấp độ A1–B2, nghĩa, unit), in các từ
+của unit ở cấp độ chọn (`--level`, mặc định A2) thành dòng YAML để chép vào cảnh `words` cuối video, và báo từ nào chưa
+có trong cảnh `words` của các kịch bản `lessons/<unit>-*.yaml`. Lần đầu cần `pip install -e '.[wordlist]'` (xlrd đọc
+file .xls); kết quả lưu ở `books/<sách>/work/wordlist.json`, từ đó lệnh và test chỉ đọc file JSON.
 
 Quy trình đầy đủ, bảng cách đọc `say` và kế hoạch các unit tiếp theo: `docs/agent-hoc-tap/06-video-bai-giang.md`.
 
