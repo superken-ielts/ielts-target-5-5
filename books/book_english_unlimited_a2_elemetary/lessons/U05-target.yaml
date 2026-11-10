@@ -4,11 +4,12 @@
 # tr. 54–55 (Task reading 1: 1 B — non smoking, parking included, 4.3 km from city centre · 2 A — single apartment, quiet
 # house, on main bus route · 3 C — furnished; Task vocabulary 2: 1 rent 2 single 3 central heating 4 males / females
 # 5 available 6 immediately 7 furnished 8 own 9 shared; Task listening 3: B; 4a: 1c 2d 3a 4e 5b).
-# Audio gốc 2.7 (Alicja gọi hỏi phòng): phát nguyên bài cho bài 3, rồi phát lại đoạn hỏi – đáp (20,3–75,3 s) cho bài 4b.
+# Audio gốc 2.7 (Alicja gọi hỏi phòng): phát nguyên bài cho bài 3, rồi phát lại đoạn hỏi – đáp (20,9–75,4 s) cho bài 4b.
 # Đợt 32: đáp án hiện tất cả một lần SAU khi đọc / nghe xong — ba quảng cáo được đọc to trước, rồi mới hiện đáp án bài 1
 # và khung đỏ chỉ câu bằng chứng; cuối video là 8 từ A2 của bài theo bảng từ English Profile của sách.
-# Task 5 (đóng vai, thông tin ở tr. 124 không có trong bản quét): Mai hỏi về căn hộ A, Tom đóng vai Max trả lời theo đúng
-# quảng cáo A (giờ xem phòng là chi tiết thêm).
+# Task 5 (đóng vai, thông tin ở tr. 124 và 128 không có trong bản quét): Mai hỏi về căn hộ A, Tom đóng vai Max trả lời theo
+# đúng quảng cáo A (giờ xem phòng là chi tiết thêm); 5c đổi vai: Tom hỏi về phòng ở Hazelwood, Mai đóng vai Jess trả lời theo
+# quảng cáo C (thêm ở đợt 33 — người học: video chưa đủ bài trong sách thì làm dài hơn 10 phút).
 # Hình trong sách: ba quảng cáo A, B, C (mỗi quảng cáo một cảnh, khung đỏ theo dòng), dải ba quảng cáo với khung đỏ ở câu
 # bằng chứng của bài 1.
 id: U05-target
@@ -181,7 +182,7 @@ scenes:
         say: "Exercise four. Match the questions and answers. Pause the video and try. Then listen again to check."
         vi: "Bài 4: nối câu hỏi với câu trả lời. Tạm dừng video làm thử rồi nghe lại để kiểm tra."
         pause: 1.5
-      - {track: "2.7", start: 20.3, end: 75.4, note: "2.7 · questions and answers"}
+      - {track: "2.7", start: 20.88, end: 75.4, note: "2.7 · questions and answers"}
       - emma: "Here are all the answers."
         reveal: ["1", "2", "3", "4", "5"]
         vi: "Đây là toàn bộ đáp án."
@@ -208,6 +209,32 @@ scenes:
       - {tom: "Yes, it's on the main bus route, near Phoenix Park.", reveal: 2}
       - {mai: "Can I see the apartment this weekend?", focus: 3, pause: 1.5}
       - {tom: "Of course. Any time on Saturday morning.", reveal: 3}
+
+  - kind: qa
+    chapter: "Bài 5c: đổi vai"
+    heading: "Task 5c · Change roles: you're interested in the room in Hazelwood"
+    heading_vi: "Tom gọi hỏi phòng C, Mai đóng vai Jess trả lời theo quảng cáo — tạm dừng video sau mỗi câu hỏi và trả lời thay Jess"
+    roles: {mai: Jess}
+    items:
+      - {q: "Hello, I'm calling about the room in Hazelwood. Is it still available?", a: "Yes, it is. It's available immediately.", ask: tom, by: mai}
+      - {q: "Is the room furnished?", a: "Yes, it's a furnished single room, on the tenth floor.", ask: tom, by: mai}
+      - {q: "Does it have its own bathroom?", a: "Yes, it does. But you share the living room and kitchen.", ask: tom, by: mai}
+      - {q: "How much is the rent?", a: "It's six hundred euros a month.", ask: tom, by: mai}
+      - {q: "Is it near the university?", a: "Yes, it's near Dublin City University. It's for students only.", ask: tom, by: mai}
+    lines:
+      - emma: "Now change roles. Tom is interested in the room in Hazelwood, and Mai is Jess. Pause after each question and answer for Jess. Look at advert C."
+        say: "Now change roles. Tom is interested in the room in Hazelwood, and Mai is Jess. Pause after each question and answer for Jess. Look at advert see."
+        vi: "Đổi vai: Tom hỏi phòng ở Hazelwood, Mai đóng vai Jess. Tạm dừng sau mỗi câu hỏi và trả lời thay Jess, nhìn quảng cáo C."
+      - {tom: "Hello, I'm calling about the room in Hazelwood. Is it still available?", focus: 0, pause: 1.5}
+      - {mai: "Yes, it is. It's available immediately.", reveal: 0}
+      - {tom: "Is the room furnished?", focus: 1, pause: 1.5}
+      - {mai: "Yes, it's a furnished single room, on the tenth floor.", reveal: 1}
+      - {tom: "Does it have its own bathroom?", focus: 2, pause: 1.5}
+      - {mai: "Yes, it does. But you share the living room and kitchen.", reveal: 2}
+      - {tom: "How much is the rent?", focus: 3, pause: 1.5}
+      - {mai: "It's six hundred euros a month.", reveal: 3}
+      - {tom: "Is it near the university?", focus: 4, pause: 1.5}
+      - {mai: "Yes, it's near Dublin City University. It's for students only.", reveal: 4}
 
   - kind: words
     chapter: "Từ vựng A2 của bài"

@@ -19,6 +19,8 @@
 # 6a, sơ đồ giới từ, bảng in / on.
 # `phonemes` đánh ⚠ "close" ở "close to" (gần): tính từ, Kokoro đọc đúng /kloʊs/ — đừng đổi thành `cloze`.
 # Mai: giáo viên tiếng Anh ở Huế (video Unit 1–4); Tom: sinh viên ở TP. Hồ Chí Minh, gia đình ở Đà Lạt (hồ sơ file 06 mục 9.4).
+# Đợt 33 — người học: video dưới 10 phút mà chưa đủ bài trong sách thì làm dài hơn. Thêm Reading 5 (hỏi – đáp) và Writing 3
+# (năm, sáu câu của Mai về nơi sống và làm việc, dùng in / on / near / next to / from) mà bản đợt 32 chưa có.
 id: U05-lesson-1
 activity: U05-lesson-1
 title: "Unit 5 · Your space"
@@ -247,6 +249,23 @@ scenes:
         focus: 1
         vi: "Vì sao? Làng của José Luis an toàn, yên tĩnh, rẻ hơn; Lawrence có nhà rộng hơn, cạnh biển."
 
+  - kind: qa
+    chapter: "Bài 5: bạn thì sao?"
+    heading: "Reading 5 · Do you know anyone like José Luis or Lawrence?"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời, rồi nghe Mai và Tom"
+    items:
+      - {q: "Do you know anyone like José Luis or Lawrence?", a: "Yes, my uncle. He lives in Hue, but he works in Da Nang. He goes there on Monday mornings and comes home on Friday evenings.", ask: emma, by: mai}
+      - {q: "Do you live near the place where you work or study?", a: "Yes, I do. My university is only ten minutes from my flat.", ask: emma, by: tom}
+    lines:
+      - emma: "Exercise 5. Do you know anyone like José Luis or Lawrence? Pause the video and answer."
+        say: "Exercise five. Do you know anyone like Ho-say Loo-ees or Lawrence? Pause the video and answer."
+        focus: 0
+        vi: "Bài 5: bạn có biết ai giống José Luis hoặc Lawrence không? Tạm dừng video và trả lời."
+        pause: 1.5
+      - {mai: "Yes, my uncle. He lives in Hue, but he works in Da Nang. He goes there on Monday mornings and comes home on Friday evenings.", say: "Yes, my uncle. He lives in Whey, but he works in Dah Nahng. He goes there on Monday mornings and comes home on Friday evenings.", reveal: 0, vi: "Có, chú của mình: sống ở Huế, làm ở Đà Nẵng; sáng thứ Hai đi, tối thứ Sáu về."}
+      - {emma: "Do you live near the place where you work or study?", focus: 1, pause: 1.5, vi: "Bạn có sống gần nơi làm việc / học không?"}
+      - {tom: "Yes, I do. My university is only ten minutes from my flat.", reveal: 1}
+
   - kind: blanks
     chapter: "Bài 6: tính từ trái nghĩa — nghe 2.2"
     heading: "Vocabulary 6 · Describing places: find the opposites in the article"
@@ -332,6 +351,31 @@ scenes:
         focus: 4
         vi: "Tiếng Việt nói \"tầng mười\", tiếng Anh: on the tenth floor."
 
+  - kind: letter
+    chapter: "Bài 3: viết về nơi bạn sống"
+    heading: "Writing 3 · Write five or six sentences about where you live, work or study"
+    heading_vi: "Sáu câu của Mai về nơi cô ấy sống và làm việc — chú ý in / on / near / next to / from"
+    roles: {emma: teacher}
+    items:
+      - {text: "I live in Hue, in the centre of Vietnam.", say: "I live in Whey, in the centre of Vietnam.", note: "in + city, area"}
+      - {text: "My flat is on the second floor of an old house.", note: "on + floor"}
+      - {text: "It's on a quiet street, near the Perfume River.", note: "on + street · near"}
+      - {text: "There's a market next to the bus stop, five minutes from my flat.", note: "next to · from"}
+      - {text: "I work in a language school in the city centre.", note: "in + building, area"}
+      - {text: "It's ten minutes from my home by bike.", note: "from"}
+    lines:
+      - emma: "Exercise 3. Write five or six sentences about where you live, work or study. Use in, on, near, next to and from. Here are Mai's sentences."
+        say: "Exercise three. Write five or six sentences about where you live, work or study. Yooz in, on, near, next to and from. Here are My's sentences."
+        vi: "Bài 3: viết năm, sáu câu về nơi bạn sống, làm việc hoặc học. Dùng in, on, near, next to, from. Đây là các câu của Mai."
+      - {read: mai, focus: 0}
+      - {read: mai, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: mai, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: mai, focus: 5}
+      - emma: "Now pause the video and write your sentences."
+        vi: "Giờ tạm dừng video và viết các câu của bạn."
+
   - kind: qa
     chapter: "Bài 4: nơi bạn sống"
     heading: "Speaking 4 · Where do you live? Do you like it?"
@@ -344,7 +388,7 @@ scenes:
       - emma: "Your turn. Mai asks the questions. Pause the video and answer, then listen to Tom."
         vi: "Đến lượt bạn: Mai hỏi, bạn tạm dừng video và trả lời, rồi nghe Tom."
       - {mai: "Where do you live? Do you like it?", focus: 0, pause: 1.5}
-      - {tom: "I live in a small flat in Ho Chi Minh City, near my university. It's on the fourth floor. I like it, but it's quite noisy.", reveal: 0}
+      - {tom: "I live in a small flat in Ho Chi Minh City, near my university. It's on the fourth floor. I like it, but it's quite noisy.", say: "I live in a small flat in Ho Chee Min City, near my university. It's on the fourth floor. I like it, but it's quite noisy.", reveal: 0}
       - {mai: "Where's your family?", focus: 1, pause: 1.5}
       - {tom: "They live in Da Lat, in the south of Vietnam. It's about three hundred kilometres away.", say: "They live in Dah Lot, in the south of Vietnam. It's about three hundred kilometres away.", reveal: 1}
       - {mai: "Where would you like to live?", focus: 2, pause: 1.5}
