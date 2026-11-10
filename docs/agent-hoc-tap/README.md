@@ -116,7 +116,7 @@ khi đọc / nghe xong, và cuối mỗi video có bảng từ A2 của bài l�
 wordlist`). Chi tiết ở file 08 mục 6.9.
 
 **Đợt 33 (10/11/2026):** người học muốn video đủ mọi bài trong sách, dài hơn 10 phút nếu cần. Unit 5 làm lại: thêm các bài đã
-bỏ (bài 5.2 có thêm phần trọng âm câu với audio 2.6, đóng vai trông nhà…), 4 video @DTOT. Từ nay không bỏ bài để giữ dưới 10
+bỏ (bài 5.2 có thêm phần trọng âm câu với audio 2.6, đóng vai trông nhà…), 4 video 45:30. Từ nay không bỏ bài để giữ dưới 10
 phút (file 08 mục 6.1).
 
 ## Tóm tắt trong năm dòng

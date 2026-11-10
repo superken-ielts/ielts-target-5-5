@@ -403,9 +403,15 @@ Hình trong sách của Unit 4 (khung đỏ theo chỗ đang giảng):
 - `U04-explore`: bảng Keyword have; sáu tài liệu tự học A–F; hai email của Judy và Mari, mỗi email hai dải.
 
 
-#### U05 · Your space — 4/5 phần có video, 4 video, @DTOT (đợt 32–33: đáp án sau khi đọc, bảng từ A2, đủ mọi bài)
+#### U05 · Your space — 4/5 phần có video, 4 video, 45:30 (đợt 32–33: đáp án sau khi đọc, bảng từ A2, đủ mọi bài)
 
-@TABLE
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 42–43 | `U05-lesson-1` — Reading · I live here but I work 800 km away: places, describing places, in / on | 9:40 | 18 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 44–45 | `U05-lesson-2` — Listening · House-sitting: things in the home, there is / there are | 16:35 | 22 |
+| Target activity · nhiệm vụ nói | sách tr. 46 | `U05-target` — Speaking · Rent a room: adverts, questions about a room | 7:33 | 10 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 47–48 | `U05-explore` — Explore Speaking · on, personal space, showing interest | 11:43 | 22 |
+| Look again · ôn tập và tự đánh giá | sách tr. 49 | không làm video riêng (mục 6.1) | — | — |
 
 Hình trong sách và bảng từ của Unit 5 (mục 6.9); đợt 33 thêm mọi bài còn thiếu (mục 6.1):
 - `U05-lesson-1` (13 cảnh có hình, 28 từ A2 ở hai cảnh `words`): khung Places; tranh nơi chốn A–D (2.1, đáp án sau khi

@@ -17,15 +17,15 @@ trong sách thì tăng thêm cho đủ".
 
 ### Đã làm
 
-Soát từng bài tập trên các trang 42–48 với bốn kịch bản Unit 5, thêm mọi bài còn thiếu. Bốn video nay dài @DTOT (đợt 32:
+Soát từng bài tập trên các trang 42–48 với bốn kịch bản Unit 5, thêm mọi bài còn thiếu. Bốn video nay dài 45:30 (đợt 32:
 33:05):
 
 | Video | Dài (đợt 32 → 33) | Thêm |
 |---|---|---|
-| `U05-lesson-1` | 8:38 → @D1 | Reading 5 (Do you know anyone like José Luis or Lawrence?), Writing 3 (sáu câu của Mai về nơi sống và làm việc, dùng in / on / near / next to / from) |
-| `U05-lesson-2` | 9:31 → @D2 | Vocabulary 2c (đố nhau trên tranh: What's this? / What are these?), Speaking 4, câu hỏi Listening 1, bài 3b nghe lại bốn đoạn 2.5 có đáp án, Pronunciation 6a–c (hình bài 6; tám câu bài 5; phát 2.6 cả bài, đáp án là từ viết HOA, rồi phát từng câu để luyện nói theo), Writing 7a (chín cụm với in, hai cụm với on), đóng vai 8 (Tom trông nhà cho Mai) và 8b–c (đến lượt bạn) |
-| `U05-target` | 6:42 → @DT | Task 5c đổi vai: Tom hỏi phòng ở Hazelwood, Mai đóng vai Jess trả lời theo quảng cáo C |
-| `U05-explore` | 8:15 → @DE | Keyword 2b (bốn câu hỏi mới với on), Across cultures 3 (thảo luận), Explore Speaking 1a (ảnh ngôi nhà), 2c (lời thoại tr. 48 cắt ba dải, khung đỏ ở các câu tô xanh của Mike), 5a (câu chuyện "a really bad day" của Mai, Tom tỏ ra quan tâm), 5b (đến lượt bạn) |
+| `U05-lesson-1` | 8:38 → 9:40 | Reading 5 (Do you know anyone like José Luis or Lawrence?), Writing 3 (sáu câu của Mai về nơi sống và làm việc, dùng in / on / near / next to / from) |
+| `U05-lesson-2` | 9:31 → 16:35 | Vocabulary 2c (đố nhau trên tranh: What's this? / What are these?), Speaking 4, câu hỏi Listening 1, bài 3b nghe lại bốn đoạn 2.5 có đáp án, Pronunciation 6a–c (hình bài 6; tám câu bài 5; phát 2.6 cả bài, đáp án là từ viết HOA, rồi phát từng câu để luyện nói theo), Writing 7a (chín cụm với in, hai cụm với on), đóng vai 8 (Tom trông nhà cho Mai) và 8b–c (đến lượt bạn) |
+| `U05-target` | 6:42 → 7:33 | Task 5c đổi vai: Tom hỏi phòng ở Hazelwood, Mai đóng vai Jess trả lời theo quảng cáo C |
+| `U05-explore` | 8:15 → 11:43 | Keyword 2b (bốn câu hỏi mới với on), Across cultures 3 (thảo luận), Explore Speaking 1a (ảnh ngôi nhà), 2c (lời thoại tr. 48 cắt ba dải, khung đỏ ở các câu tô xanh của Mike), 5a (câu chuyện "a really bad day" của Mai, Tom tỏ ra quan tâm), 5b (đến lượt bạn) |
 
 Không làm được, vì bản quét thiếu trang: Speaking 3b của bài 5.2 (đọc lời bài nghe tr. 151) và Across cultures 4 (câu đố
 tr. 124). Đã ghi ở đầu kịch bản. Look again (tr. 49) vẫn không có video riêng (file 08 mục 6.1).
@@ -35,8 +35,8 @@ từ mang thông tin) và câu trả lời ngắn (Yes / No, trợ động từ 
 
 Sửa thêm:
 - Kokoro đọc "Ho Chi Minh City" thành "Ho Kai Min City". Lệnh `phonemes` nay báo ⚠. Sửa `say: Ho Chee Min City` ở
-  `U04-target` (A2), `U05-lesson-1`, `U05-explore` và IELTS `U04-speaking-2`. Dựng lại `U04-target` (@D4T) và IELTS
-  `U04-speaking-2` (@DIS).
+  `U04-target` (A2), `U05-lesson-1`, `U05-explore` và IELTS `U04-speaking-2`. Dựng lại `U04-target` (6:22) và IELTS
+  `U04-speaking-2` (7:04).
 - Đoạn cắt từ bài nghe phải bắt đầu và kết thúc ở khoảng lặng. Đo mức âm ở hai đầu (cửa sổ 50 ms), dời đoạn 2.5 của bài 3b và
   đoạn 2.7 của bài 4 Target (đợt 32 bắt đầu giữa chữ "Sure") vào khoảng lặng gần nhất.
 - Hai cảnh hội thoại (`letter`) của Explore khai `emma: teacher` để lời dẫn của Emma không hiện "Emma is reading".
@@ -64,7 +64,14 @@ Không thêm, không xóa file nào.
 
 ### Kiểm thử
 
-KIEMTHU_33
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: English Unlimited A2 có 23 video, IELTS Target 5.0 có 59 video |
+| `cd agents && python -m pytest -q` | 144 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; Unit 5 có video 16:35, nhãn từ 10 phút trở lên |
+| `python -m lesson_video check` / `phonemes` / `wordlist --unit U05` | 6 kịch bản hợp lệ; hết ⚠ Ho Chi Minh, ⚠ còn lại là tính từ close (đọc đúng); `chưa hiện: 0` |
+| Mức âm ở hai đầu đoạn cắt (cửa sổ 50 ms) | Mọi đoạn mới của 2.5, 2.6 và đoạn 2.7 đã sửa bắt đầu, kết thúc ở khoảng lặng (≤ 41 dB, lời nói ~71 dB) |
 
 ### Còn treo
 
