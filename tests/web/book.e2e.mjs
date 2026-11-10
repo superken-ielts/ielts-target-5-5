@@ -397,8 +397,8 @@ try{
       "Intro · About you": ["Speaking", "Listening", "Grammar"],
       "Unit 1 · People in your life": ["Listening", "Reading", "Speaking", "Explore"],
       "Unit 2 · Away from home": ["Listening", "Reading", "Speaking", "Explore"],
-      "Unit 3 · Your time": ["Reading", "Listening", "Speaking", "Explore"],        // bài 3.1 là bài đọc, 3.2 là bài nghe
-      "Unit 4 · Changes": ["Reading", "Listening", "Speaking", "Explore"],          // đợt 31: có hình trong sách
+      "Unit 3 · Your time": ["Reading", "Listening", "Speaking", "Explore"],        // bài 3.1 là bài đọc, 3.2 là bài nghe; đợt 34: làm lại như Unit 5
+      "Unit 4 · Changes": ["Reading", "Listening", "Speaking", "Explore"],          // đợt 31: có hình trong sách; đợt 34: làm lại như Unit 5
       "Unit 5 · Your space": ["Reading", "Listening", "Speaking", "Explore"],       // đợt 32: đáp án sau bài đọc, bảng từ A2 cuối video
     };
     const labels = [];

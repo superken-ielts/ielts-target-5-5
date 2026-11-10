@@ -4,9 +4,15 @@
 # games, 3 soup, 4 read, 5 stay up late, 6 loves; 4: 1 sometimes, 2 often, 3 usually; Pronunciation 5a: 1 always,
 # sometimes, never, often · 2 enjoy · 3 usually · 4 important · 5 afternoon · 6 traditional; Grammar 1a: 2 do, don't,
 # 3 do, 4 do, 6 does, doesn't, 7 does, 8 does; 2a: xem 1.37).
-# Audio gốc: 1.34 (Min, Paul — phát nguyên hai bài, rồi phát lại các câu của bài 3a, bài 4 và các câu hỏi của bảng ngữ
-# pháp), 1.35 (từng từ, trọng âm), 1.37 (tám câu hỏi, phát từng câu). Track 1.36 (nghe lại bảng ngữ pháp) THIẾU trong
-# bộ CD1: các câu hỏi của bảng có sẵn trong 1.34 nên phát từ đó; câu trả lời ngắn do Tom đọc.
+# Audio gốc: 1.34 (Min, Paul — phát nguyên hai bài; bài 3b phát lại sáu đoạn có đáp án; bảng ngữ pháp phát các câu hỏi),
+# 1.35 (chín từ theo sáu nhóm trọng âm: phát cả bài để kiểm tra, rồi từng từ để nhắc lại), 1.37 (tám câu hỏi, phát cả bài).
+# Track 1.36 (nghe lại bảng ngữ pháp) THIẾU trong bộ CD1: các câu hỏi của bảng có sẵn trong 1.34 nên phát từ đó; câu trả
+# lời ngắn do Tom đọc.
+# Đợt 34 — người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị ra sau nhé". Mọi bài: làm trước
+# (tạm dừng), nghe xong mới hiện tất cả đáp án một lần. Bài 4 làm đúng như sách (điền thang tần suất 1–3); Pronunciation 5a
+# thành bài tập (xếp chín từ vào bảng) trước khi nghe 1.35 — bản cũ hiện sẵn mẫu trọng âm lúc phát audio. Cuối video là
+# 2 từ A2 của bài theo bảng từ English Profile của sách (going to, shut). Tom là người Việt (gia đình ở Đà Lạt): bỏ câu
+# "In the US" của bản cũ. Hình trong sách: ảnh Min và Paul, thang tần suất, bảng trọng âm, bảng câu hỏi do / does.
 id: U03-lesson-2
 activity: U03-lesson-2
 title: "Unit 3 · Your time"
@@ -22,34 +28,44 @@ scenes:
   - kind: title
     chapter: "Giới thiệu"
     lines:
-      - emma: "Welcome back to Unit 3. When do you celebrate New Year? Do you like it? Why, or why not?"
-        say: "Welcome back to Unit three. When do you celebrate New Year? Do you like it? Why, or why not?"
-        vi: "Bạn đón năm mới vào lúc nào? Bạn có thích không? Vì sao?"
+      - emma: "Welcome back to Unit 3. Listening, exercise 1. When do you celebrate New Year? Do you like it? Why, or why not? Pause the video and think."
+        say: "Welcome back to Unit three. Listening, exercise one. When do you celebrate New Year? Do you like it? Why, or why not? Pause the video and think."
+        vi: "Bài 1: bạn đón năm mới vào lúc nào? Bạn có thích không? Vì sao? Tạm dừng video và nghĩ."
+        pause: 1.5
       - mai: "In Vietnam, we celebrate Tết, the Lunar New Year. It's usually in January or February. I love it!"
         say: "In Vietnam, we celebrate Tet, the Lunar New Year. It's usually in January or February. I love it!"
         vi: "Ở Việt Nam, chúng mình đón Tết âm lịch, thường vào tháng 1 hoặc tháng 2. Mình rất thích!"
-      - tom: "In the US, it's January the first. I don't really like it. I'm always tired!"
-        vi: "Ở Mỹ là ngày 1 tháng 1. Mình không thích lắm, lúc nào cũng mệt!"
+      - tom: "I love Tết too. But I don't really like January the first. I'm always tired the next day!"
+        say: "I love Tet too. But I don't really like January the first. I'm always tired the next day!"
+        vi: "Mình cũng thích Tết. Nhưng mình không thích ngày 1 tháng 1 lắm — hôm sau lúc nào cũng mệt!"
+      - emma: "Remember: try each exercise first. All the answers come at the end of the exercise."
+        vi: "Nhớ nhé: làm từng bài trước; đáp án hiện cùng lúc ở cuối bài."
 
   - kind: blanks
     chapter: "Nghe 1.34: Min và Paul"
     heading: "Listening 2 · Do Min and Paul like New Year?"
-    heading_vi: "Audio 1.34 — Min (Hàn Quốc) và Paul (Anh) nói về năm mới: họ có thích không?"
+    heading_vi: "Ảnh tr. 28 — Min (Hàn Quốc) và Paul (Anh). Nghe cả hai bài 1.34; đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 29, clip: [55, 85, 540, 530]}
     items:
-      - {n: 1, q: "Min, from Korea: ___", answer: "Yes. She loves Seollal, the traditional New Year.", hint: "conversation 1"}
-      - {n: 2, q: "Paul, from the UK: ___", answer: "No. For him, it's just a normal day.", hint: "conversation 2"}
+      - {n: 1, q: "Min, from Korea: ___", answer: "Yes. She loves Seollal.", box: [333, 91, 497, 258]}
+      - {n: 2, q: "Paul, from the UK: ___", answer: "No. It's just a normal day.", box: [64, 360, 231, 527]}
     lines:
-      - emma: "Listen to Min from Korea and Paul from the UK talk about New Year. Do they like it?"
-        vi: "Nghe Min và Paul nói về năm mới. Họ có thích không?"
-      - {track: "1.34", start: 5.5, end: 84.7, note: "1.34 · Min, from Korea", focus: 0}
-      - {mai: "Min loves New Year. In Korea, they have two New Years. Seollal is the traditional New Year, and it's a three day holiday.", say: "Min loves New Year. In Korea, they have two New Years. Sul-lal is the traditional New Year, and it's a three day holiday.", reveal: 1, vi: "Min rất thích năm mới. Hàn Quốc có hai năm mới; Seollal là năm mới truyền thống, nghỉ ba ngày."}
-      - {track: "1.34", start: 89.9, end: 143.2, note: "1.34 · Paul, from the UK", focus: 1}
-      - {tom: "Paul doesn't like New Year. For him, it's just a normal day. But his wife loves it!", reveal: 2, vi: "Paul không thích năm mới — với anh ấy đó chỉ là một ngày bình thường. Nhưng vợ anh ấy thì rất thích!"}
+      - emma: "Exercise 2. Listen to Min from Korea and Paul from the UK talk about New Year. Do they like it?"
+        say: "Exercise two. Listen to Min from Korea and Paul from the UK talk about New Year. Do they like it?"
+        vi: "Bài 2: nghe Min và Paul nói về năm mới. Họ có thích không?"
+        pause: 1
+      - {track: "1.34", start: 5.3, end: 84.9, note: "1.34 · Min, from Korea"}
+      - {track: "1.34", start: 89.7, end: 143.4, note: "1.34 · Paul, from the UK"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2"]
+        vi: "Đây là toàn bộ đáp án."
+      - {mai: "Min loves New Year. In Korea, they have two New Years. Seollal is the traditional New Year, and it's a three day holiday.", say: "Min loves New Year. In Korea, they have two New Years. Sul-lal is the traditional New Year, and it's a three day holiday.", focus: 0, vi: "Min rất thích năm mới. Hàn Quốc có hai năm mới; Seollal là năm mới truyền thống, nghỉ ba ngày."}
+      - {tom: "Paul doesn't like New Year. For him, it's just a normal day. But his wife loves it!", focus: 1, vi: "Paul không thích năm mới — với anh ấy đó chỉ là một ngày bình thường. Nhưng vợ anh ấy thì rất thích!"}
 
   - kind: blanks
-    chapter: "Bài 3a: chọn từ đúng"
-    heading: "Listening 3 · Circle the correct words"
-    heading_vi: "Chọn từ đúng theo bài nghe — rồi nghe lại từng câu trong 1.34"
+    chapter: "Bài 3: chọn từ đúng"
+    heading: "Listening 3a · Circle the correct words from the conversations"
+    heading_vi: "Tạm dừng video và chọn, rồi nghe lại sáu đoạn trong 1.34 (bài 3b); đáp án hiện sau khi nghe xong"
     items:
       - {n: 1, q: "Min: I usually go to my ___ house.", answer: "parents'", hint: "parents' / brother's"}
       - {n: 2, q: "Min: We all play ___.", answer: "family games", hint: "family games / football"}
@@ -58,16 +74,19 @@ scenes:
       - {n: 5, q: "Paul: I usually ___.", answer: "stay up late", hint: "stay up late / go to bed early"}
       - {n: 6, q: "Paul: My wife ___ parties.", answer: "loves", hint: "loves / doesn't like"}
     lines:
-      - emma: "Exercise 3. Circle the correct words. Then listen again to check."
-        say: "Exercise three. Circle the correct words. Then listen again to check."
-        vi: "Bài 3: chọn từ đúng rồi nghe lại để kiểm tra."
+      - emma: "Exercise 3a. Circle the correct words from the conversations. Pause the video and try. Then listen again to check."
+        say: "Exercise three eigh. Circle the correct words from the conversations. Pause the video and try. Then listen again to check."
+        vi: "Bài 3a: chọn từ đúng. Tạm dừng video làm thử, rồi nghe lại để kiểm tra."
         pause: 1.5
-      - {track: "1.34", start: 40.6, end: 43.6, note: "1.34 · Min", focus: 0, reveal: 1}
-      - {track: "1.34", start: 55.5, end: 59.0, note: "1.34 · Min", focus: 1, reveal: 2}
-      - {track: "1.34", start: 65.8, end: 71.0, note: "1.34 · Min", focus: 2, reveal: 3}
-      - {track: "1.34", start: 107.8, end: 112.5, note: "1.34 · Paul", focus: 3, reveal: 4}
-      - {track: "1.34", start: 115.7, end: 121.0, note: "1.34 · Paul", focus: 4, reveal: 5}
-      - {track: "1.34", start: 128.0, end: 131.8, note: "1.34 · Paul", focus: 5, reveal: 6}
+      - {track: "1.34", start: 40.6, end: 43.6, note: "1.34 · Min", focus: 0}
+      - {track: "1.34", start: 55.86, end: 59.4, note: "1.34 · Min", focus: 1}
+      - {track: "1.34", start: 65.4, end: 71.0, note: "1.34 · Min", focus: 2}
+      - {track: "1.34", start: 107.8, end: 112.5, note: "1.34 · Paul", focus: 3}
+      - {track: "1.34", start: 114.9, end: 121.0, note: "1.34 · Paul", focus: 4}
+      - {track: "1.34", start: 128.0, end: 131.8, note: "1.34 · Paul", focus: 5}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
       - emma: "Stay up late means you go to bed late, after midnight."
         focus: 4
         vi: "stay up late = thức khuya."
@@ -91,22 +110,29 @@ scenes:
         focus: 1
         vi: "Tết nào mình cũng về nhà ông bà."
 
-  - kind: blanks
-    chapter: "always, usually, often, sometimes"
-    heading: "Vocabulary 4 · Adverbs of frequency"
-    heading_vi: "Bao lâu một lần? Điền sometimes, often, usually, always — rồi nghe từng câu trong 1.34"
-    items:
-      - {n: 1, q: "My family and I ___ go to the sea.", answer: "sometimes", hint: "Min"}
-      - {n: 2, q: "My brother and his family ___ come too.", answer: "often", hint: "Min"}
-      - {n: 3, q: "She ___ goes out with friends from work.", answer: "usually", hint: "Paul"}
-      - {n: 4, q: "In the afternoon or evening, we ___ see friends.", answer: "always", hint: "Min"}
+  - kind: figure
+    chapter: "Bài 4: bao lâu một lần?"
+    heading: "Vocabulary 4 · Read how often Min and Paul do things. Complete 1–3 with the highlighted words"
+    heading_vi: "Bốn câu và thang tần suất tr. 28 — tạm dừng video và làm"
+    image: {pdf: course-book, page: 29, clip: [125, 678, 562, 795]}
     lines:
-      - emma: "Vocabulary. How often do Min and Paul do things? Listen."
-        vi: "Từ vựng: Min và Paul làm những việc đó bao lâu một lần? Nghe nhé."
-      - {track: "1.34", start: 31.7, end: 35.5, note: "1.34 · Min", focus: 0, reveal: 1}
-      - {track: "1.34", start: 43.8, end: 46.9, note: "1.34 · Min", focus: 1, reveal: 2}
-      - {track: "1.34", start: 131.8, end: 133.9, note: "1.34 · Paul", focus: 2, reveal: 3}
-      - {track: "1.34", start: 74.5, end: 78.3, note: "1.34 · Min", focus: 3, reveal: 4}
+      - emma: "Vocabulary: adverbs of frequency. Read how often Min and Paul do things. Complete 1 to 3 with the highlighted words: sometimes, always, often, usually. Pause the video and try."
+        say: "Vocabulary: adverbs of frequency. Read how often Min and Paul do things. Complete one to three with the highlighted words: sometimes, always, often, usually. Pause the video and try."
+        vi: "Từ vựng: trạng từ tần suất. Điền các từ tô màu vào thang 1–3. Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Bài 4: đáp án"
+    heading: "Vocabulary 4 · How often? Answers"
+    heading_vi: "Thang tần suất: never 0% → always 100% — đáp án hiện cùng lúc"
+    items:
+      - {n: 1, q: "never 0% → 1 ___", answer: "sometimes"}
+      - {n: 2, q: "2 ___", answer: "often"}
+      - {n: 3, q: "3 ___ → 4 always 100%", answer: "usually"}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
 
   - kind: bullets
     chapter: "Thang tần suất"
@@ -128,10 +154,43 @@ scenes:
         focus: 4
         vi: "Mình không bao giờ thức khuya. Lúc nào cũng đi ngủ lúc 10 giờ!"
 
+  - kind: figure
+    chapter: "Bài 5a: trọng âm"
+    heading: "Pronunciation 5a · How many syllables? Where's the stress? Put the words in the table"
+    heading_vi: "Bảng tr. 29 — chấm to là âm tiết được nhấn; tạm dừng video và xếp chín từ vào sáu cột"
+    image: {pdf: course-book, page: 30, clip: [150, 60, 540, 142]}
+    lines:
+      - emma: "Pronunciation: word stress. How many syllables are in these words? Where's the stress? Put them in the table. Pause the video and try. Then listen to check."
+        vi: "Phát âm: mấy âm tiết, nhấn ở đâu? Xếp từ vào bảng. Tạm dừng video làm thử, rồi nghe để kiểm tra."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Bài 5a: nghe 1.35"
+    heading: "Pronunciation 5a · Listen to check"
+    heading_vi: "O = âm tiết được nhấn. Nghe 1.35; đáp án hiện sau khi nghe xong"
+    items:
+      - {n: 1, q: "Oo: always, ___", answer: "sometimes, never, often"}
+      - {n: 2, q: "oO: ___", answer: "enjoy"}
+      - {n: 3, q: "Ooo: ___", answer: "usually"}
+      - {n: 4, q: "oOo: ___", answer: "important"}
+      - {n: 5, q: "ooO: ___", answer: "afternoon"}
+      - {n: 6, q: "oOoo: ___", answer: "traditional"}
+    lines:
+      - {track: "1.35", start: 2.9, end: 45.1, note: "1.35 · six groups"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Two syllables, stress on the first: always, sometimes, never, often.", focus: 0, vi: "Hai âm tiết, nhấn âm đầu."}
+      - {emma: "Two syllables, stress on the second: enjoy.", focus: 1, vi: "Hai âm tiết, nhấn âm thứ hai."}
+      - {emma: "Three syllables, stress on the first: usually.", focus: 2, vi: "Ba âm tiết, nhấn âm đầu."}
+      - {emma: "Three syllables, stress in the middle: important.", focus: 3, vi: "Ba âm tiết, nhấn âm giữa."}
+      - {emma: "Three syllables, stress at the end: afternoon.", focus: 4, vi: "Ba âm tiết, nhấn âm cuối."}
+      - {emma: "Four syllables, stress on the second: traditional.", focus: 5, vi: "Bốn âm tiết, nhấn âm thứ hai."}
+
   - kind: vocab
-    chapter: "Trọng âm — nghe 1.35"
-    heading: "Pronunciation 5 · Word stress 2"
-    heading_vi: "Mấy âm tiết? Nhấn ở đâu? Nghe 1.35, tạm dừng để nhắc lại"
+    chapter: "Bài 5b: luyện trọng âm"
+    heading: "Pronunciation 5b · Practise saying the words with the correct stress"
+    heading_vi: "Nghe từng từ trong 1.35, tạm dừng video và nhắc lại"
     items:
       - {w: "always", pos: "AL·ways — Oo", vi: "luôn luôn", ex: "We always see friends."}
       - {w: "sometimes", pos: "SOME·times — Oo", vi: "thỉnh thoảng", ex: "We sometimes go to the sea."}
@@ -143,9 +202,9 @@ scenes:
       - {w: "afternoon", pos: "af·ter·NOON — ooO", vi: "buổi chiều", ex: "in the afternoon"}
       - {w: "traditional", pos: "tra·DI·tion·al — oOoo", vi: "truyền thống", ex: "our traditional New Year"}
     lines:
-      - emma: "Pronunciation. How many syllables? Where's the stress? Listen and repeat."
+      - emma: "Now practise saying the words with the correct stress. Listen and repeat."
         focus: 0
-        vi: "Phát âm: mấy âm tiết, nhấn ở đâu? Nghe và nhắc lại."
+        vi: "Luyện nói với trọng âm đúng: nghe và nhắc lại."
       - {track: "1.35", start: 4.8, end: 6.0, note: "1.35 · always", focus: 0, pause: 1.2}
       - {track: "1.35", start: 8.1, end: 9.6, note: "1.35 · sometimes", focus: 1, pause: 1.2}
       - {track: "1.35", start: 12.0, end: 13.0, note: "1.35 · never", focus: 2, pause: 1.2}
@@ -161,17 +220,18 @@ scenes:
         vi: "usually đọc /ˈjuːʒuəli/; often thường đọc /ˈɒfən/, không có âm t."
 
   - kind: qa
-    chapter: "Tết của Mai"
+    chapter: "Bài 6: Tết của Mai"
     heading: "Speaking 6 · What do you usually do for New Year?"
-    heading_vi: "Tom hỏi Mai về Tết bằng các câu hỏi trong bài nghe — bạn tạm dừng và trả lời cho bạn"
+    heading_vi: "Nghĩ về đồ ăn uống, người thân, hoạt động. Tom hỏi Mai — bạn tạm dừng và trả lời cho bạn"
     items:
       - {q: "What do you usually do for Tết?", a: "I usually go to my parents' house. My grandparents often come too.", ask: tom, by: mai}
       - {q: "Do you eat a special meal?", a: "Yes, we do. We always eat bánh chưng. It's a square rice cake.", ask: tom, by: mai}
       - {q: "Do the children do anything special?", a: "Yes, they wear new clothes, and they get lucky money in red envelopes.", ask: tom, by: mai}
       - {q: "Do you go out at all?", a: "Yes, sometimes. We often go to the pagoda on the first morning.", ask: tom, by: mai}
     lines:
-      - emma: "Speaking. What do you usually do for New Year? Think about food and drink, people and activities. Tom asks Mai the questions from the listening."
-        vi: "Năm mới bạn thường làm gì? Nghĩ về đồ ăn uống, người thân, hoạt động. Tom hỏi Mai bằng các câu trong bài nghe."
+      - emma: "Speaking, exercise 6. What do you usually do for New Year? Think about food and drink, people and activities. Tom asks Mai."
+        say: "Speaking, exercise six. What do you usually do for New Year? Think about food and drink, people and activities. Tom asks Mai."
+        vi: "Bài 6: năm mới bạn thường làm gì? Nghĩ về đồ ăn uống, người thân, hoạt động. Tom hỏi Mai."
       - {tom: "What do you usually do for Tết?", say: "What do you usually do for Tet?", focus: 0, pause: 1.5}
       - {mai: "I usually go to my parents' house. My grandparents often come too.", reveal: 0}
       - {tom: "Do you eat a special meal?", focus: 1, pause: 1.5}
@@ -181,31 +241,44 @@ scenes:
       - {tom: "Do you go out at all?", focus: 3, pause: 1.5}
       - {mai: "Yes, sometimes. We often go to the pagoda on the first morning.", reveal: 3, vi: "Thỉnh thoảng. Nhà mình hay đi chùa sáng mùng một."}
 
+  - kind: figure
+    chapter: "Bài 1: câu hỏi với do / does"
+    heading: "Grammar 1 · Complete the questions and answers in the table with do, don't, does, doesn't"
+    heading_vi: "Bảng tr. 29 — tạm dừng video và điền"
+    image: {pdf: course-book, page: 30, clip: [155, 318, 530, 400]}
+    lines:
+      - emma: "Grammar: present simple questions. Complete the questions and answers in the table with do, don't, does and doesn't. Pause the video and try. Then listen to the questions from the conversations."
+        vi: "Ngữ pháp: câu hỏi hiện tại đơn. Điền do, don't, does, doesn't. Tạm dừng video làm thử, rồi nghe các câu hỏi trong bài nghe."
+        pause: 1.5
+
   - kind: blanks
-    chapter: "Câu hỏi với do / does"
-    heading: "Grammar 1 · Present simple: questions"
-    heading_vi: "Điền do, don't, does, doesn't — nghe lại các câu hỏi trong 1.34"
+    chapter: "Bài 1: nghe kiểm tra"
+    heading: "Grammar 1 · Questions and short answers"
+    heading_vi: "Nghe các câu hỏi trong 1.34 (bài 1b: 1.36 không có trong bộ audio, Tom đọc câu trả lời ngắn); đáp án hiện sau khi nghe xong"
     items:
       - {n: 1, q: "___ the children do anything special?", answer: "Do", hint: "I, you, we, they"}
-      - {n: 2, q: "Yes, they ___. / No, they don't.", answer: "do", hint: "I, you, we, they"}
+      - {n: 2a, q: "Yes, they ___.", answer: "do", hint: "I, you, we, they"}
+      - {n: 2b, q: "No, they ___.", answer: "don't", hint: "I, you, we, they"}
       - {n: 3, q: "What ___ you usually do?", answer: "do", hint: "I, you, we, they"}
       - {n: 4, q: "What ___ we eat?", answer: "do", hint: "I, you, we, they"}
       - {n: 5, q: "___ she stay at home with you?", answer: "Does", hint: "he, she, it"}
-      - {n: 6, q: "Yes, she ___. / No, she doesn't.", answer: "does", hint: "he, she, it"}
+      - {n: 6a, q: "Yes, she ___.", answer: "does", hint: "he, she, it"}
+      - {n: 6b, q: "No, she ___.", answer: "doesn't", hint: "he, she, it"}
       - {n: 7, q: "What ___ your wife do?", answer: "does", hint: "he, she, it"}
       - {n: 8, q: "What ___ Seollal mean?", answer: "does", hint: "he, she, it"}
     lines:
-      - emma: "Grammar. Complete the questions and answers with do, don't, does, doesn't. Then listen to the questions in the conversations."
-        vi: "Ngữ pháp: điền do, don't, does, doesn't; rồi nghe lại các câu hỏi trong bài nghe."
-        pause: 1.5
-      - {track: "1.34", start: 49.0, end: 51.6, note: "1.34 · question 1", focus: 0, reveal: 1}
-      - {tom: "Yes, they do. No, they don't.", focus: 1, reveal: 2}
-      - {track: "1.34", start: 28.9, end: 30.5, note: "1.34 · question 3", focus: 2, reveal: 3}
-      - {track: "1.34", start: 63.9, end: 65.3, note: "1.34 · question 4", focus: 3, reveal: 4}
-      - {track: "1.34", start: 126.2, end: 128.0, note: "1.34 · question 5", focus: 4, reveal: 5}
-      - {tom: "Yes, she does. No, she doesn't.", focus: 5, reveal: 6}
-      - {track: "1.34", start: 124.5, end: 126.2, note: "1.34 · question 7", focus: 6, reveal: 7}
-      - {track: "1.34", start: 19.9, end: 21.7, note: "1.34 · question 8", focus: 7, reveal: 8}
+      - {track: "1.34", start: 49.0, end: 51.6, note: "1.34 · question 1", focus: 0}
+      - {tom: "Yes, they do. No, they don't.", focus: 1}
+      - {track: "1.34", start: 28.9, end: 30.5, note: "1.34 · question 3", focus: 3}
+      - {track: "1.34", start: 63.9, end: 65.3, note: "1.34 · question 4", focus: 4}
+      - {track: "1.34", start: 126.3, end: 128.0, note: "1.34 · question 5", focus: 5}
+      - {tom: "Yes, she does. No, she doesn't.", focus: 6}
+      - {track: "1.34", start: 124.5, end: 126.3, note: "1.34 · question 7", focus: 8}
+      - {track: "1.34", start: 19.9, end: 21.7, note: "1.34 · question 8", focus: 9}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2a", "2b", "3", "4", "5", "6a", "6b", "7", "8"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Pause the video and check your answers.", pause: 2.5, vi: "Tạm dừng video và đối chiếu đáp án."}
 
   - kind: compare
     chapter: "Quy tắc: do, does"
@@ -228,7 +301,7 @@ scenes:
   - kind: blanks
     chapter: "Bài 2: sắp xếp câu hỏi — nghe 1.37"
     heading: "Grammar 2 · Put the words in order to make questions"
-    heading_vi: "Sắp xếp thành câu hỏi — tạm dừng làm trước, rồi nghe từng câu trong 1.37"
+    heading_vi: "Sắp xếp thành câu hỏi — tạm dừng video làm trước, rồi nghe cả bài 1.37; đáp án hiện sau khi nghe xong"
     items:
       - {n: 1, q: "birthdays / Do / like / you →  ___", answer: "Do you like birthdays?"}
       - {n: 2, q: "do / What / in / you / do / the morning →  ___", answer: "What do you do in the morning?"}
@@ -239,21 +312,25 @@ scenes:
       - {n: 7, q: "your husband / like / birthdays / Does →  ___", answer: "Does your husband like birthdays?"}
       - {n: 8, q: "family / does / do / your / What →  ___", answer: "What does your family do?"}
     lines:
-      - emma: "Exercise 2. Put the words in order to make questions. Pause the video and try, then listen."
-        say: "Exercise two. Put the words in order to make questions. Pause the video and try, then listen."
-        vi: "Bài 2: sắp xếp từ thành câu hỏi. Tạm dừng video làm thử rồi nghe."
+      - emma: "Exercise 2. Put the words in order to make questions. Pause the video and try. Then listen to check."
+        say: "Exercise two. Put the words in order to make questions. Pause the video and try. Then listen to check."
+        vi: "Bài 2: sắp xếp từ thành câu hỏi. Tạm dừng video làm thử, rồi nghe để kiểm tra."
         pause: 1.5
-      - {track: "1.37", start: 5.0, end: 6.7, note: "1.37 · 1", focus: 0, reveal: 1}
-      - {track: "1.37", start: 10.6, end: 12.4, note: "1.37 · 2", focus: 1, reveal: 2}
-      - {track: "1.37", start: 16.9, end: 18.3, note: "1.37 · 3", focus: 2, reveal: 3}
-      - {track: "1.37", start: 22.5, end: 24.5, note: "1.37 · 4", focus: 3, reveal: 4}
-      - {track: "1.37", start: 29.2, end: 30.7, note: "1.37 · 5", focus: 4, reveal: 5}
-      - {track: "1.37", start: 34.8, end: 36.5, note: "1.37 · 6", focus: 5, reveal: 6}
-      - {track: "1.37", start: 41.0, end: 43.1, note: "1.37 · 7", focus: 6, reveal: 7}
-      - {track: "1.37", start: 47.4, end: 49.1, note: "1.37 · 8", focus: 7, reveal: 8}
+      - {track: "1.37", start: 4.8, end: 49.3, note: "1.37 · eight questions"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6", "7", "8"]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "Do you like birthdays?", focus: 0}
+      - {mai: "What do you do in the morning?", focus: 1}
+      - {tom: "Do you go to work?", focus: 2}
+      - {mai: "What kind of food do you eat?", focus: 3}
+      - {tom: "Do you see friends?", focus: 4}
+      - {mai: "Do you go out at night?", focus: 5}
+      - {tom: "Does your husband like birthdays?", focus: 6}
+      - {mai: "What does your family do?", focus: 7}
 
   - kind: qa
-    chapter: "Đến lượt bạn: một ngày bạn thích"
+    chapter: "Bài 3–4: một ngày bạn thích"
     heading: "Speaking 3–4 · A day you enjoy"
     heading_vi: "Chọn một ngày bạn thích (sinh nhật, ngày lễ, cuối tuần). Tom hỏi — bạn trả lời, rồi nghe Mai"
     items:
@@ -262,8 +339,9 @@ scenes:
       - {q: "Do you go to work?", a: "Yes, I do, but my students often sing for me!", ask: tom, by: mai}
       - {q: "Do you go out at night?", a: "Yes. My friends and I always go to a restaurant.", ask: tom, by: mai}
     lines:
-      - emma: "Your turn. Choose a day or a time that you enjoy: your birthday, holidays, weekends. Answer Tom's questions."
-        vi: "Đến lượt bạn: chọn một ngày bạn thích, trả lời câu hỏi của Tom."
+      - emma: "Speaking, exercise 3. Choose a day or a time that you enjoy: your birthday, your name day, your wedding anniversary, holidays, weekends. Answer Tom's questions from Exercise 2."
+        say: "Speaking, exercise three. Choose a day or a time that you enjoy: your birthday, your name day, your wedding anniversary, holidays, weekends. Answer Tom's questions from Exercise two."
+        vi: "Bài 3: chọn một ngày bạn thích, trả lời câu hỏi của Tom (câu hỏi ở bài 2)."
       - {tom: "Do you like birthdays?", focus: 0, pause: 1.5}
       - {mai: "Yes, I do. I love them!", reveal: 0}
       - {tom: "What do you do in the morning?", focus: 1, pause: 1.5}
@@ -272,10 +350,11 @@ scenes:
       - {mai: "Yes, I do, but my students often sing for me!", reveal: 2}
       - {tom: "Do you go out at night?", focus: 3, pause: 1.5}
       - {mai: "Yes. My friends and I always go to a restaurant.", reveal: 3}
+      - emma: "Exercise 4. Change partners and tell them about your first partner."
+        say: "Exercise four. Change partners and tell them about your first partner."
+        vi: "Bài 4: đổi bạn và kể về người bạn đầu tiên."
       - tom: "So, for her birthday, Mai usually has a big breakfast, and she always goes to a restaurant with her friends."
         vi: "Kể lại cho người khác: dùng he / she, động từ thêm s (has, goes)."
-      - emma: "Good! Now change partners and tell them about your first partner, like Tom."
-        vi: "Đổi bạn và kể về người bạn đầu tiên, như Tom vừa làm."
 
   - kind: errors
     chapter: "Lỗi hay gặp"
@@ -307,4 +386,19 @@ scenes:
       - {emma: "Let's remember. Always, usually, often, sometimes, never. I usually go to my parents' house.", focus: 0}
       - {emma: "Do you like New Year? Yes, I do.", focus: 1}
       - {emma: "Does your wife stay at home? No, she doesn't.", focus: 2}
-      - {emma: "And my brother's house, my parents' house. In the next video, the Target activity: invite someone out.", focus: 3, vi: "Video sau: Target activity — mời ai đó đi chơi."}
+      - {emma: "And my brother's house, my parents' house.", focus: 3}
+
+  - kind: words
+    chapter: "Từ vựng A2 của bài"
+    heading: "A2 words in this lesson"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của bài 3.2 — nghe, đọc theo, tạm dừng để chép"
+    items:
+      - {w: "going to", pos: "phr", vi: "sẽ, định (kế hoạch) — I'm going to visit my parents for Tết."}
+      - {w: "shut", pos: "v", vi: "đóng cửa (cửa hàng) — The shops shut on New Year's Day."}
+    lines:
+      - emma: "Finally, the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to copy them."
+        vi: "Cuối bài: các từ A2 của bài theo bảng từ của sách. Nghe, đọc theo; tạm dừng video để chép."
+      - {emma: "going to. I'm going to visit my parents for Tết.", say: "going to. I'm going to visit my parents for Tet.", focus: 0}
+      - {emma: "shut. The shops shut on New Year's Day.", focus: 1}
+      - emma: "Well done! In the next video, the Target activity: invite someone out."
+        vi: "Giỏi lắm! Video sau: Target activity — mời ai đó đi chơi."

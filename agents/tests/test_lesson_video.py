@@ -475,38 +475,56 @@ def test_unit4_videos_use_book_pictures_without_countdown():
         assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), path.name
 
 
+# Giai đoạn 0, unit làm theo khuôn "đáp án hiện sau" → (audio của bốn bài học, số từ A2 của unit trong bảng từ của sách).
+# Bộ CD thiếu 1.33, 1.36, 1.39, 1.51 (book.json › missing); 1.43–1.44, 1.54–1.56, 2.11–2.14 thuộc Look again.
+A2_ANSWERS_AFTER = {
+    "U03": ({"1.31", "1.32", "1.34", "1.35", "1.37", "1.38", "1.40", "1.41", "1.42"}, 11),
+    "U04": ({"1.45", "1.46", "1.47", "1.48", "1.49", "1.50", "1.52", "1.53"}, 31),
+    "U05": ({f"2.{n}" for n in range(1, 11)}, 59),
+}
+
+
 @pytest.mark.skipif(not (EU_A2 / "lessons" / "lessons.json").exists(), reason="chưa có video Giai đoạn 0")
-def test_a2_unit5_answers_after_reading_and_a2_words_at_end():
+@pytest.mark.parametrize("unit", sorted(A2_ANSWERS_AFTER))
+def test_a2_answers_after_reading_and_a2_words_at_end(unit):
     """Người học yêu cầu (đợt 32), Giai đoạn 0 từ Unit 5: đáp án hiện tất cả một lần sau khi đọc / nghe xong (dòng `reveal`
-    đầu tiên của cảnh bài tập mở mọi đáp án và đứng sau mọi `track` của cảnh), cuối mỗi video là cảnh `words` — bốn video của
-    unit cùng nhau hiện hết từ A2 của unit trong bảng từ English Profile của sách — docs/agent-hoc-tap/08 mục 6.9.
-    Đợt 33: không bỏ bài để giữ dưới 10 phút — video dài hơn khi bài cần (bài 5.2 hơn 15 phút), mọi audio của bốn bài học
-    (2.1–2.10) đều được phát; 2.11–2.14 thuộc Look again."""
+    đầu tiên của cảnh bài tập mở mọi đáp án; mọi bài nghe để làm / kiểm tra đứng trước nó — sau đó audio chỉ phát lại từng
+    câu để nhắc lại, tức dòng `track` có `focus`), cuối mỗi video là cảnh `words` — bốn video của unit cùng nhau hiện hết
+    từ A2 của unit trong bảng từ English Profile của sách — docs/agent-hoc-tap/08 mục 6.9.
+    Đợt 33: không bỏ bài để giữ dưới 10 phút — video dài hơn khi bài cần (bài 5.2 hơn 15 phút), mọi audio có trong bộ CD
+    của bốn bài học đều được phát. Đợt 34 (người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị
+    ra sau nhé"): Unit 3–4 làm lại theo cùng khuôn; đáp án không chỉ lướt qua vài giây ở cuối cảnh."""
     from lesson_video import wordlist
     built = {x["id"]: x for x in json.loads((EU_A2 / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
-    paths = sorted((EU_A2 / "lessons").glob("U05-*.yaml"))
-    assert [p.stem for p in paths] == ["U05-explore", "U05-lesson-1", "U05-lesson-2", "U05-target"]
+    paths = sorted((EU_A2 / "lessons").glob(f"{unit}-*.yaml"))
+    assert [p.stem for p in paths] == [f"{unit}-{part}" for part in ("explore", "lesson-1", "lesson-2", "target")]
     tracks = set()
     for path in paths:
         lesson = sc.load(path)
         kinds = [s.kind for s in lesson.scenes]
         assert "words" in kinds and set(kinds[kinds.index("words"):]) == {"words"}, lesson.id   # bảng từ ở cuối
-        for s in lesson.scenes:
+        for k, s in enumerate(lesson.scenes):
             if s.kind not in ("blanks", "match", "pairs", "mcq"):
                 continue
             shown = [i for i, ln in enumerate(s.lines) if ln.reveal]
             if not shown:
-                continue   # câu hỏi đọc trước, đáp án ở cảnh sau bài đọc (U05-target, U05-explore)
-            assert {str(k) for k in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
-            assert shown[0] > max((i for i, ln in enumerate(s.lines) if ln.track), default=-1), (lesson.id, s.heading)
+                continue   # câu hỏi đọc trước, đáp án ở cảnh sau bài đọc (bài đọc của Target, Explore)
+            assert {str(x) for x in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
+            assert all(ln.focus is not None for ln in s.lines[shown[0]:] if ln.track), (lesson.id, s.heading)
+            # đáp án không lướt qua (đợt 34): sau "Here are all the answers." còn dòng đọc lại / nhắc tạm dừng, hoặc cảnh
+            # kế tiếp hiện lại đủ đáp án (bảng compare, hội thoại, hình giải thích)
+            nxt = lesson.scenes[k + 1].kind if k + 1 < len(lesson.scenes) else ""
+            assert len(s.lines) > shown[0] + 1 or nxt in ("compare", "letter", "figure", "bullets", "vocab"), (lesson.id, s.heading)
         assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), lesson.id
         assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
         assert built[lesson.id]["duration"] >= 5 * 60, lesson.id   # không giới hạn trên (đợt 33)
         tracks |= {ln.track for s in lesson.scenes for ln in s.lines if ln.track}
-    assert tracks == {f"2.{n}" for n in range(1, 11)}                     # đủ audio của bài 5.1, 5.2, Target, Explore
-    assert built["U05-lesson-2"]["duration"] > 10 * 60                     # bài 5.2 không bị cắt cho vừa 10 phút
-    assert len(wordlist.unit_words(wordlist.load(EU_A2), "U05")) == 59
-    assert wordlist.missing(EU_A2, "U05") == []
+    want_tracks, n_words = A2_ANSWERS_AFTER[unit]
+    assert tracks == want_tracks                                          # đủ audio của bốn bài học
+    assert len(wordlist.unit_words(wordlist.load(EU_A2), unit)) == n_words
+    assert wordlist.missing(EU_A2, unit) == []
+    if unit == "U05":
+        assert built["U05-lesson-2"]["duration"] > 10 * 60                 # bài 5.2 không bị cắt cho vừa 10 phút
 
 
 def test_words_scene_and_wordlist(tmp_path):
@@ -874,7 +892,8 @@ def test_transcribe_segments_and_words():
 
 
 def test_phoneme_review_flags_known_misreadings():
-    """Soát cách đọc: chọn câu có số, tên riêng, từ đồng tự; cảnh báo lỗi đã gặp (động từ use đọc /juːs/)."""
+    """Soát cách đọc: chọn câu có số, tên riêng, từ đồng tự; cảnh báo lỗi đã gặp (động từ use đọc /juːs/, Ho Chi Minh,
+    chữ Việt có dấu bị đánh vần từng chữ cái)."""
     from lesson_video import phonemes as ph
     data = copy.deepcopy(LESSON)
     data["scenes"] = [{"kind": "title", "chapter": "Intro", "lines": [
@@ -885,14 +904,17 @@ def test_phoneme_review_flags_known_misreadings():
         {"a": "Room 12, please."},                                          # số
         {"b": "When do shops close?"},                                      # close (động từ) bị đọc /kloʊs/ → ⚠ (đợt 26)
         {"a": "I live in Ho Chi Minh City."},                               # Chi đọc /kaɪ/ → ⚠ (đợt 33)
+        {"b": "We say tầng mười."},                                         # chữ Việt có dấu bị đánh vần → ⚠ (đợt 34)
+        {"b": "We love Tết.", "say": "We love Tet."},                         # đã sửa bằng `say`: soát (tên riêng), không ⚠
     ]}]
     lesson = sc.Lesson.model_validate(data)
     fake = {"Use these words.": "jˈuːs ðiːz wˈɜːdz.", "Can I use your phone?": "kæn aɪ jˈuːz jʊɹ fˈoʊn?",
             "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz.",
-            "When do shops close?": "wˌɛn dˈuː ʃˈɑːps klˈoʊs?", "I live in Ho Chi Minh City.": "aɪ lˈɪv ɪn hˈoʊ kˈaɪ mˈɪn sˈɪɾi."}
+            "When do shops close?": "wˌɛn dˈuː ʃˈɑːps klˈoʊs?", "I live in Ho Chi Minh City.": "aɪ lˈɪv ɪn hˈoʊ kˈaɪ mˈɪn sˈɪɾi.",
+            "We say tầng mười.": "wiː sˈeɪ tˌiːlˌɛɾɚwˌʌnˈiː.", "We love Tet.": "wiː lˈʌv tˈɛt."}
     rows = list(ph.review(lesson, lambda text, lang: fake[text]))
     assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please.",
-                                      "When do shops close?", "I live in Ho Chi Minh City."]
-    assert [bool(r.warnings) for r in rows] == [True, False, False, False, True, True] and "yooz" in rows[0].warnings[0]
-    assert "cloze" in rows[4].warnings[0] and "Ho Chee Min" in rows[5].warnings[0]
-    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 7
+                                      "When do shops close?", "I live in Ho Chi Minh City.", "We say tầng mười.", "We love Tet."]
+    assert [bool(r.warnings) for r in rows] == [True, False, False, False, True, True, True, False] and "yooz" in rows[0].warnings[0]
+    assert "cloze" in rows[4].warnings[0] and "Ho Chee Min" in rows[5].warnings[0] and "chữ Việt" in rows[6].warnings[0]
+    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 9
