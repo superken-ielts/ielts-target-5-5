@@ -119,7 +119,7 @@ wordlist`). Chi tiết ở file 08 mục 6.9.
 bỏ (bài 5.2 có thêm phần trọng âm câu với audio 2.6, đóng vai trông nhà…), 4 video 45:30. Từ nay không bỏ bài để giữ dưới 10
 phút (file 08 mục 6.1).
 
-**Đợt 34 (10/11/2026):** Giai đoạn 0 Unit 3–4 làm lại theo khuôn của Unit 5 (8 video, @ALLTOT): đủ mọi bài trong sách, làm
+**Đợt 34 (10/11/2026):** Giai đoạn 0 Unit 3–4 làm lại theo khuôn của Unit 5 (8 video, 1:26:13): đủ mọi bài trong sách, làm
 trước rồi mới hiện tất cả đáp án một lần, không còn nhãn đáp án trên hình lúc đang đọc, bảng từ A2 cuối mỗi video. Intro và
 Unit 1–2 chưa làm lại (file 08 mục 5).
 

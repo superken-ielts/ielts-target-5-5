@@ -408,9 +408,15 @@ In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_eng
 | Explore Writing · từ khoá và viết | sách tr. 23–24 | `U02-explore` — Explore Writing · in, an email to ask for something | 6:37 | 13 |
 | Look again · ôn tập và tự đánh giá | sách tr. 25 | không làm video riêng (mục 6.1) | — | — |
 
-#### U03 · Your time — 4/5 phần có video, 4 video, @U3TOT (đợt 22; đợt 34: đủ mọi bài, đáp án hiện sau, bảng từ A2)
+#### U03 · Your time — 4/5 phần có video, 4 video, 43:22 (đợt 22; đợt 34: đủ mọi bài, đáp án hiện sau, bảng từ A2)
 
-@TAB3
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 26–27 | `U03-lesson-1` — Reading · Happiness is …: free time, pronouns, don't / doesn't | 10:57 | 23 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 28–29 | `U03-lesson-2` — Listening · Do you like New Year? always / often, do / does questions | 11:42 | 19 |
+| Target activity · nhiệm vụ nói | sách tr. 30 | `U03-target` — Speaking · Invite someone out | 5:47 | 11 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 31–32 | `U03-explore` — Explore Speaking · go, conversation topics, phone messages | 14:57 | 23 |
+| Look again · ôn tập và tự đánh giá | sách tr. 33 | không làm video riêng (mục 6.1) | — | — |
 
 Đợt 34 làm lại cả bốn video (mục 6.7, 6.9). Bản đợt 22 dài 27:44 và chưa có hình trong sách:
 - `U03-lesson-1` (6 cảnh có hình, 4 từ A2): tranh A–D và trang web "Happiness is …" (đọc tám bài đăng rồi mới nối tranh);
@@ -426,9 +432,15 @@ In lại bằng: `cd agents && python -m lesson_video coverage ../books/book_eng
   tra, rồi nhắc theo từng câu); ba hội thoại 4a–c (mới); thẻ vai B tr. 123 (5a hội thoại 2, mới). Thêm Keyword 1b–c, 2b–c.
 - Không làm được: Speaking 3b của bài 3.1 (lời bài nghe tr. 149, bản quét thiếu trang).
 
-#### U04 · Changes — 4/5 phần có video, 4 video, @U4TOT (đợt 31: hình trong sách; đợt 34: đủ mọi bài, đáp án hiện sau, bảng từ A2)
+#### U04 · Changes — 4/5 phần có video, 4 video, 42:50 (đợt 31: hình trong sách; đợt 34: đủ mọi bài, đáp án hiện sau, bảng từ A2)
 
-@TAB4
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 34–35 | `U04-lesson-1` — Reading · Technology firsts: past simple verbs, last / in / ago | 13:18 | 20 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 36–37 | `U04-lesson-2` — Listening · Sang-mi's business trip: things for a trip, did / didn't | 13:56 | 16 |
+| Target activity · nhiệm vụ nói | sách tr. 38 | `U04-target` — Speaking · Talk about an important event | 6:32 | 12 |
+| Explore Writing · từ khoá và viết | sách tr. 39–40 | `U04-explore` — Explore Writing · have, an email giving news | 9:04 | 17 |
+| Look again · ôn tập và tự đánh giá | sách tr. 41 | không làm video riêng (mục 6.1) | — | — |
 
 Hình trong sách của Unit 4, khung đỏ theo chỗ đang giảng. Đợt 34 bỏ mọi nhãn đáp án hiện lúc đang đọc (mục 6.7) và thêm các
 bài còn thiếu; bản đợt 31 dài 32:45:
@@ -446,14 +458,14 @@ bài còn thiếu; bản đợt 31 dài 32:45:
   hai email của Judy và Mari (mỗi email hai dải, không nhãn start / news / finish), rồi mới hiện đáp án; 2c, 3c thành câu
   hỏi; bài 4a dấu câu làm trên hình trang sách rồi mới hiện câu đúng (bản cũ hiện sẵn).
 
-#### U05 · Your space — 4/5 phần có video, 4 video, 45:30 (đợt 32–33: đáp án sau khi đọc, bảng từ A2, đủ mọi bài)
+#### U05 · Your space — 4/5 phần có video, 4 video, 45:41 (đợt 32–33: đáp án sau khi đọc, bảng từ A2, đủ mọi bài)
 
 | Phần | Trang | Video | Dài | Chương |
 |---|---|---|---|---|
-| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 42–43 | `U05-lesson-1` — Reading · I live here but I work 800 km away: places, describing places, in / on | 9:40 | 18 |
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 42–43 | `U05-lesson-1` — Reading · I live here but I work 800 km away: places, describing places, in / on | 9:35 | 18 |
 | Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 44–45 | `U05-lesson-2` — Listening · House-sitting: things in the home, there is / there are | 16:35 | 22 |
 | Target activity · nhiệm vụ nói | sách tr. 46 | `U05-target` — Speaking · Rent a room: adverts, questions about a room | 7:33 | 10 |
-| Explore Speaking · từ khoá và giao tiếp | sách tr. 47–48 | `U05-explore` — Explore Speaking · on, personal space, showing interest | 11:43 | 22 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 47–48 | `U05-explore` — Explore Speaking · on, personal space, showing interest | 11:59 | 22 |
 | Look again · ôn tập và tự đánh giá | sách tr. 49 | không làm video riêng (mục 6.1) | — | — |
 
 Hình trong sách và bảng từ của Unit 5 (mục 6.9); đợt 33 thêm mọi bài còn thiếu (mục 6.1):
