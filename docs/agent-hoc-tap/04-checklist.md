@@ -370,6 +370,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 21:* **Unit 2 — 4 video (27:51)**: `U02-lesson-1` (Listening · I miss my friends: offers, requests, a / an / some), `U02-lesson-2` (Reading · Sofasurfing: present simple, interests and wants), `U02-target` (Speaking · Take care of a guest), `U02-explore` (Explore Writing · in, an email to ask for something); phát audio gốc 1.21–1.26 (1.27 thiếu: cắt câu từ 1.26).
     - Sổ tay file 08 mục 6.5: cách thay track thiếu; commit trong `git worktree` khi hàng đợi dựng còn chạy.
     - Lệnh `lesson_video phonemes`: soát cách Kokoro đọc, ⚠ ba lỗi đã gặp (động từ use, live, read). Sửa `use` → `yooz` ở 13 câu; dựng lại `U00-personal-info`, `U01-target`.
+    - E2E: thẻ A2 có 11 video; Intro, Unit 1, Unit 2 có nút video 5–10 phút theo thứ tự phiên.
   - *Đợt 22:* **Unit 3 — 4 video (27:44)**: `U03-lesson-1` (Reading · Happiness is …: free time, pronouns, don't / doesn't), `U03-lesson-2` (Listening · Do you like New Year? always / often, do / does questions), `U03-target` (Speaking · Invite someone out), `U03-explore` (Explore Speaking · go, conversation topics, phone messages); phát audio gốc 1.31–1.42 (1.33, 1.36, 1.39 thiếu: xem sổ tay mục 6.5). Xong phần đã hẹn: Intro và Unit 1–3, 15 video.
     - E2E: thẻ A2 có 15 video; Unit 3 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
   - *Đợt 31:* **Unit 4 — 4 video (32:45), có hình trong sách** (P2-65): `U04-lesson-1` (Reading · Technology firsts), `U04-lesson-2` (Listening · Sang-mi's business trip), `U04-target` (Speaking · Talk about an important event), `U04-explore` (Explore Writing · have, an email giving news); phát audio gốc 1.45–1.53 (1.51 thiếu: Emma đọc, chấm trọng âm xem trên hình).
@@ -377,7 +378,9 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 32:* **Unit 5 — 4 video (33:05), đáp án hiện sau khi đọc / nghe xong, bảng từ A2 cuối mỗi video** (P2-66): `U05-lesson-1` (Reading · I live here but I work 800 km away), `U05-lesson-2` (Listening · House-sitting), `U05-target` (Speaking · Rent a room), `U05-explore` (Explore Speaking · on, personal space, showing interest); phát audio gốc 2.1–2.10 (CD2 chép lời 2.1–2.14).
     - E2E: thẻ A2 có 23 video; Unit 5 có bốn nút video theo thứ tự phiên (Reading, Listening, Speaking, Explore).
   - *Đợt 33:* **Unit 5 làm đủ mọi bài trong sách — 4 video (45:30)** (P2-67): `U05-lesson-1` 9:40, `U05-lesson-2` 16:35 (thêm audio 2.6 và bảy bài đã bỏ để giữ dưới 10 phút), `U05-target` 7:33, `U05-explore` 11:43; sửa cách đọc "Ho Chi Minh City" ở `U04-target`.
-    - E2E: thẻ A2 có 11 video; Intro, Unit 1, Unit 2 có nút video 5–10 phút theo thứ tự phiên.
+    - E2E: nhãn video từ 10 phút trở lên; Unit 5 có video 16:35.
+  - *Đợt 34:* **Unit 3–4 làm lại — 8 video (@ALLTOT), đủ mọi bài, đáp án hiện sau, bảng từ A2** (P2-68): Unit 3 @U3TOT (`U03-lesson-1` @U3L1, `U03-lesson-2` @U3L2, `U03-target` @U3T, `U03-explore` @U3E), Unit 4 @U4TOT (`U04-lesson-1` @U4L1, `U04-lesson-2` @U4L2, `U04-target` @U4T, `U04-explore` @U4E); phát mọi audio có trong bộ CD của bốn bài (1.33, 1.36, 1.39, 1.51 không có file).
+    - E2E: thẻ A2 vẫn có 23 video; Unit 3, Unit 4 mỗi unit bốn nút video theo thứ tự phiên, nhãn từ 5 phút trở lên.
 - [x] **P2-54** **GENKI Unit 0 làm lại: 19 video ngắn, chữ sáng theo chỗ đang đọc** (19 video, 1:10:43), theo góp ý của người học: chữ trên màn hình không khớp lời Emma, giọng Nhật đọc mà không có lời dịch, học quá nhanh, cả đoạn hiện một lúc nên không biết đang đọc tới đâu, không nói bài học để làm gì. Chi tiết: file 07 mục 4.
   - 19 video 2–5 phút thay 5 video 6–8 phút: Start here (Unit 0 học gì, để làm gì, cách xem video), Hiragana 1–9 (nguyên âm, từng cặp hàng, luyện tập, ゛゜, âm ghép, っ và trường âm), Katakana 1–4 (hàng ア–ホ, hàng マ–ン và cả bảng, dấu và ー, từ mượn và chữ Hán), Greetings 1–3 (câu chào, tạm biệt – ở nhà – bữa ăn – gặp lần đầu, luyện 10 tình huống), Numbers 1–2. Mỗi video mở đầu bằng "học gì, để làm gì".
   - Cảnh `jp`: tầng 2–3 hiện đúng câu đang nói (lời Emma + bản dịch tiếng Việt; câu tiếng Nhật và audio sách + nghĩa tiếng Anh, tiếng Việt); chữ đang đọc nền cam, chữ vừa đọc nền xanh nhạt, romaji sáng theo; `wait` / `echo` có nhãn YOUR TURN và vòng đếm ngược.
@@ -473,6 +476,14 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Đoạn cắt từ bài nghe: đo mức âm ở điểm đầu / cuối và dời vào khoảng lặng (2.5 bài 3b; 2.7 bài 4 của Target bắt đầu giữa chữ "Sure").
   - Test: hồi quy Unit 5 phát đủ audio 2.1–2.10 và bài 5.2 dài hơn 10 phút; `phonemes` báo Ho Chi Minh; e2e nhận nhãn video từ 10 phút trở lên.
   - Còn: Intro và Unit 1–4 của Giai đoạn 0 chưa soát bài nào bị bỏ để giữ dưới 10 phút.
+- [x] **P2-68** **Giai đoạn 0 Unit 3–4 làm lại: đủ mọi bài trong sách, đáp án hiện sau, bảng từ A2** (đợt 34, 8 video, @ALLTOT), theo yêu cầu người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị ra sau nhé". Chi tiết: [08-giai-doan-0-a1-a2.md](08-giai-doan-0-a1-a2.md) mục 6.7–6.9.
+  - Soát từng bài tập trang 26–32 (Unit 3) và 34–40 (Unit 4) với tám kịch bản: viết lại sáu, sửa `U03-target` và `U04-target`. Thêm các bài còn thiếu. Unit 3: Reading 1 (nối tranh A–D), Reading 2, Vocabulary 5a–b, Writing 6b, Grammar 2b, Keyword 1b–c, 2b–c, Across cultures 1, Explore Speaking 1, 2b, 4a–c, hội thoại 2 của bài 5a. Unit 4: Reading 4, Grammar 1b, Pronunciation 7c, câu hỏi Speaking 4a, Keyword 2a, 3, Independent learning 1, Explore Writing 2c, 3c. Không làm được: Speaking 3b của bài 3.1 (lời bài nghe tr. 149, bản quét thiếu trang).
+  - Đáp án: làm trước (tạm dừng video), đọc / nghe xong mới hiện tất cả một lần. Bỏ nhãn đáp án dán trên bài báo, tranh, email lúc đang đọc (bản đợt 31). Các bài trước đây mở đáp án từng câu nay mở một lần. Bài thêm dấu câu làm trên hình trang sách rồi mới hiện câu đúng.
+  - Bảng từ A2 cuối mỗi video: Unit 3 có 11 từ (4 + 2 + 3 + 2), Unit 4 có 31 (9 + 9 + 6 + 7). Unit 3 nay có hình trong sách ở cả bốn video.
+  - Dựng lại 8 video: Unit 3 27:44 → @U3TOT, Unit 4 32:45 → @U4TOT.
+  - Lệnh `phonemes` báo ⚠ chữ Việt có dấu trong câu tiếng Anh (Kokoro đánh vần từng chữ cái): sửa câu "tầng mười" ở `U05-lesson-1`, dựng lại (@U5L1). Đoạn cắt 1.34, 1.38 dời vào khoảng lặng; tên Chin-Mae đọc `Chin-May`.
+  - Test: hồi quy A2 thành test tham số cho Unit 3, 4, 5. Mỗi unit kiểm: đáp án mở một lần; bài nghe để làm / kiểm tra đứng trước, sau đó chỉ nghe lại từng câu để nhắc; bảng từ ở cuối; đủ từ A2 của unit; có hình với `box`; không `wait` / `echo`; video từ 5 phút; đủ audio có trong bộ CD. `phonemes` báo chữ Việt có dấu.
+  - Còn: Intro và Unit 1–2 (11 video) chưa làm theo khuôn này.
 
 ### Cổng G2
 

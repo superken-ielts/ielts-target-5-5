@@ -5,6 +5,79 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 34 — 10/11/2026: Giai đoạn 0 Unit 3–4 làm lại — đủ mọi bài, đáp án hiện sau, bảng từ A2
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 33 (`a2ebf8f`, đã lên `main`). Đẩy lên nhánh và `main` như sổ tay file 08
+mục 6.
+
+### Yêu cầu
+
+Người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị ra sau nhé". Unit 3 (đợt 22) và Unit 4 (đợt 31)
+làm trước khuôn của Unit 5. Hai unit này còn bỏ bài, mở đáp án từng câu hoặc hiện đáp án ngay trên hình lúc đang đọc, và chưa
+có bảng từ A2.
+
+### Đã làm
+
+Soát từng bài tập trên các trang 26–32 và 34–40 với tám kịch bản. Viết lại sáu kịch bản, sửa hai (`U03-target`,
+`U04-target`). Mọi bài: làm trước (tạm dừng video), đọc / nghe xong mới hiện tất cả đáp án một lần ("Here are all the
+answers."). Cuối mỗi video là bảng từ A2 của bài. Tám video nay dài @ALLTOT (trước 1:00:29):
+
+| Video | Dài (cũ → đợt 34) | Thay đổi |
+|---|---|---|
+| `U03-lesson-1` | 6:23 → @U3L1 | Thêm Reading 1 (đọc tám bài đăng rồi mới nối tranh A–D), Reading 2, Pronouns 3 thành bài tập, Vocabulary 5a–b, Writing 6b, Grammar 2b. 1.31, 1.32 phát trọn rồi mới hiện đáp án. Moira – Sam (1.33 không có file): đánh dấu trên bảng của sách rồi mới hiện đáp án. 4 từ A2 |
+| `U03-lesson-2` | 8:40 → @U3L2 | Bài 4 điền thang tần suất 1–3 như sách. Pronunciation 5a xếp chín từ vào bảng trước khi nghe 1.35 (bản cũ hiện sẵn mẫu trọng âm). 1.34, 1.37 nghe xong mới hiện đáp án. Tom không còn nói "In the US" (Tom là người Việt). 2 từ A2 |
+| `U03-target` | 5:06 → @U3T | Bài 2 phát cả hai hội thoại 1.38 rồi mới hiện đáp án; bài 3b phát lại sáu câu liền nhau rồi mới hiện đáp án (bản cũ mở từng câu). 3 từ A2 |
+| `U03-explore` | 7:35 → @U3E | Thêm Keyword 1b (bài tập), 1c, 2b–c; Across cultures 1 (nối tám tranh A–H); Explore Speaking 1 (ảnh), 2b (đọc lời thoại trên trang sách), 4a–c (ba hội thoại), hội thoại 2 của bài 5a (thẻ B tr. 123). 1.42 nghe kiểm tra rồi mới nhắc theo từng câu. 2 từ A2 |
+| `U04-lesson-1` | 9:59 → @U4L1 | Bỏ nhãn inventor / year / name / price trên bài báo lúc đọc. Đoán đúng / sai (2a) trước khi đọc, đọc xong mới hiện đáp án. Bài 3, Grammar 2 làm trên hình rồi hiện tất cả đáp án. Grammar 1 (1.45), Vocabulary 3 (1.46) nghe xong mới hiện đáp án. Thêm Reading 4, Grammar 1b (nhắc theo từng động từ). 9 từ A2 |
+| `U04-lesson-2` | 9:11 → @U4L2 | Bỏ nhãn tên đồ vật trên tranh lúc phát 1.47. Bài nghe 1.48–1.50, 1.52 và Grammar 1–3 hiện đáp án một lần. Bài 5b nghe lại 1.48 như sách. Pronunciation 7b hỏi trước rồi mới nói đáp án, thêm 7c. Speaking 4a thêm ba câu hỏi. 9 từ A2 |
+| `U04-target` | 6:22 → @U4T | Bài 2 (1.53) nghe xong mới hiện đáp án. Task vocabulary 3 làm trên bảng của sách rồi hiện good / bad / both một lần (bản cũ dán nhãn từng cụm). 6 từ A2 |
+| `U04-explore` | 7:13 → @U4E | Independent learning 1 (mới), 2a nối trên tranh A–F (bản cũ ghi sẵn đáp án). Câu hỏi bài 1 đọc trước hai email; email không còn nhãn start / news / finish. Bài 1–3 hiện đáp án một lần; 2c, 3c thành câu hỏi. Bài 4a dấu câu làm trên hình rồi mới hiện câu đúng (bản cũ hiện sẵn). Thêm câu hỏi Keyword 2a, 3. 7 từ A2 |
+
+Không làm được, vì bản quét thiếu trang: Speaking 3b của bài 3.1 (đọc lời bài nghe tr. 149). Track không có file trong bộ CD
+(1.33, 1.36, 1.39, 1.51): làm như mục 6.7 của file 08. Look again (tr. 33, 41) vẫn không có video riêng.
+
+Quy tắc kiểm (test và file 08 mục 6.9): dòng `reveal` đầu tiên của cảnh bài tập mở mọi đáp án. Mọi bài nghe để làm hay kiểm
+tra đứng trước dòng đó. Sau đó audio chỉ phát lại từng câu để nhắc theo (`track` có `focus`), như 1.42, 1.45, 1.47.
+
+Sửa thêm:
+- Kokoro đánh vần từng chữ cái khi câu tiếng Anh có chữ Việt có dấu mà không có `say`. Câu "In Vietnamese, we say tầng
+  mười" của Mai ở `U05-lesson-1` (đợt 32–33) bị lỗi này: thêm `say: … tung moo-ee …`, dựng lại (9:40 → @U5L1). Lệnh
+  `phonemes` nay báo ⚠ mọi chữ riêng của tiếng Việt; quét lại mọi kịch bản của ba sách tiếng Anh, chỉ có câu này.
+- Đo mức âm ở hai đầu mọi đoạn cắt audio của Unit 3–4: tám đoạn của 1.34 (`U03-lesson-2`) và 1.38 (`U03-target`) bắt đầu
+  hoặc kết thúc giữa chữ, đã dời vào khoảng lặng.
+- Tên Chin-Mae (bài đăng 3, `U03-lesson-1`): Kokoro đọc "Chin-mee", thêm `say: Chin-May`.
+- Dòng E2E của đợt 21 ("thẻ A2 có 11 video") bị đẩy xuống cuối khối P2-53 của checklist, trông như dòng của đợt 33. Đã dời
+  về đúng chỗ.
+
+### File sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_english_unlimited_a2_elemetary/lessons/U03-*.yaml`, `U04-*.yaml` (+ `.mp4`) | Viết lại sáu, sửa hai; dựng lại tám video |
+| `books/book_english_unlimited_a2_elemetary/lessons/U05-lesson-1.yaml` (+ `.mp4`) | `say` cho "tầng mười"; dựng lại |
+| `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | Thời lượng, chương mới |
+| `agents/lesson_video/phonemes.py` | ⚠ chữ Việt có dấu trong câu tiếng Anh |
+| `tests/web/book.e2e.mjs` | Chú thích đợt 34 ở Unit 3, Unit 4 (phần kiểm không đổi: thẻ A2 23 video, nhãn video từ 5 phút) |
+| `agents/tests/test_lesson_video.py` | Hồi quy A2 thành test tham số cho Unit 3, 4, 5 (bảng `A2_ANSWERS_AFTER`: audio của bốn bài, số từ A2); sau `reveal` đầu tiên chỉ còn nghe lại từng câu (`track` có `focus`); `phonemes` báo chữ Việt có dấu |
+| `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 5, mở đầu mục 6, 6.2 (hồ sơ Mai, Tom), 6.6 (chữ Việt có dấu, tên Unit 3), 6.7, 6.8 (độ phủ Unit 3–4), 6.9 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-68 (xong); dòng đợt 34 ở P2-53; dời dòng E2E của đợt 21 |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Quy tắc đáp án hiện sau áp dụng từ Unit 3; dòng trạng thái đợt 34 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+Không thêm, không xóa file nào.
+
+### Kiểm thử
+
+@TESTS
+
+### Còn treo
+
+- Intro và Unit 1–2 của Giai đoạn 0 (11 video): chưa soát bài nào bị bỏ, chưa có bảng từ A2, còn mở đáp án theo từng câu.
+- Look again (tr. 33, 41, 49) chưa có video.
+- 4 video luyện nói thêm Unit 4 của IELTS Target 5.0 (P2-57); video Oxford Word Skills Basic từ Unit 17 (P2-59).
+
+---
+
 ## Đợt 33 — 10/11/2026: video đủ mọi bài trong sách, dài hơn 10 phút khi cần (Giai đoạn 0 Unit 5)
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 32 (`7ab97e9`, đã lên `main`). Đẩy lên nhánh và `main` như sổ tay file 08
