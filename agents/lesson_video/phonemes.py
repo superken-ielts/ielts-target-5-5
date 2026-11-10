@@ -21,6 +21,10 @@ KNOWN = [
     (re.compile(r"\breads?\b", re.I), "ɹˈɛd", "read (hiện tại) đọc /rɛd/ như quá khứ → say: reed"),
     (re.compile(r"\bcloses?\b", re.I), "klˈoʊs", "close (động từ: đóng cửa) đọc /kloʊs/ như tính từ → say: cloze, clozes"),
     (re.compile(r"\bChi Minh\b"), "kˈaɪ", "Ho Chi Minh: Chi đọc /kaɪ/ như chữ Hy Lạp → say: Ho Chee Min (đợt 33)"),
+    # Chữ Việt có dấu trong câu tiếng Anh (Tết, tầng mười): Kokoro đánh vần từng chữ cái, mọi lần ("" luôn khớp).
+    # Chỉ các chữ riêng của tiếng Việt, để José, Léon, café không bị báo.
+    (re.compile("[ăâđêôơưảãạẻẽẹỉĩịỏõọủũụỳỷỹỵấầẩẫậắằẳẵặếềểễệốồổỗộớờởỡợứừửữự]", re.I), "",
+     "chữ Việt có dấu: Kokoro đánh vần từng chữ cái → viết cách đọc ở say: Tet, tung moo-ee (đợt 34)"),
 ]
 HOMOGRAPHS = {"live", "lives", "read", "use", "uses", "close", "record", "present", "minute", "wind", "tear", "lead",
               "object", "content", "desert", "row", "bow", "bows", "wound"}

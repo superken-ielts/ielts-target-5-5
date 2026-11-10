@@ -8,11 +8,14 @@
 # weekend? · What did you do at the weekend? · Where did you go on Saturday? · Did you go out last night? · What time did
 # you get up this morning? · Did you watch TV this morning? · What did you have for breakfast? · What time did you go to
 # bed last night?).
-# Audio gốc: 1.47 (12 từ, phát từng từ), 1.48, 1.49, 1.50 (phát nguyên bài), 1.52 (bảng did / didn't, phát từng câu).
-# Track 1.51 (Pronunciation 7a) THIẾU trong bộ CD1: Emma đọc năm câu, chấm trọng âm xem trên hình trang sách.
-# Hình trong sách (đợt 31): tranh 12 đồ dùng đi công tác kèm danh sách "Remember …" (khung đỏ, nhãn là từ); ba tranh bài
-# nghe (Sang-mi với Mick, với Mr Donovan, gọi điện về nhà) bên trái câu hỏi; năm câu có chấm trọng âm (tr. 37); ảnh
-# Sang-mi và Mr Donovan bên trái bảng did / didn't.
+# Audio gốc: 1.47 (12 từ: phát cả bài để kiểm tra, rồi từng từ để nói theo), 1.48 (phát hai lần: bài 5a, 5b), 1.49, 1.50
+# (phát nguyên bài), 1.52 (bảng did / didn't: câu ví dụ, rồi bốn câu liền nhau). Track 1.51 (Pronunciation 7a) THIẾU trong
+# bộ CD1: Emma đọc năm câu, chấm trọng âm xem trên hình trang sách.
+# Đợt 34 — người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị ra sau nhé". Bản đợt 31 hiện nhãn
+# đáp án trên tranh lúc phát 1.47 và mở đáp án các bài nghe, Grammar 1–3 từng câu. Nay: làm trước, nghe xong mới hiện tất
+# cả đáp án một lần; bài 5b nghe lại 1.48 đúng như sách; Pronunciation 7b hỏi trước rồi mới nói đáp án, thêm 7c luyện nói;
+# Speaking 4a thêm ba câu hỏi. Cuối video là 9 từ A2 của bài theo bảng từ English Profile của sách. Hình trong sách: tranh
+# 12 đồ dùng và danh sách "Remember …", ba tranh bài nghe, năm câu có chấm trọng âm và bài 7b, ảnh Sang-mi và Mr Donovan.
 # Chồng của Sang-mi tên Tom (trong bài nghe 1.50) — không phải Tom của video; Emma nói rõ.
 id: U04-lesson-2
 activity: U04-lesson-2
@@ -32,52 +35,72 @@ scenes:
       - emma: "Welcome back to Unit 4: Changes. This is lesson 4.2: Going away. We learn words for a trip, and we listen to Sang-mi on a business trip."
         say: "Welcome back to Unit four: Changes. This is lesson four point two: Going away. We learn words for a trip, and we listen to Sahng-mee on a business trip."
         vi: "Bài 4.2: Going away (Đi xa). Học từ về đồ dùng khi đi xa và nghe Sang-mi đi công tác."
-      - emma: "First, some questions. How often do you travel? Do you like flying?"
-        vi: "Bạn có hay đi xa không? Bạn có thích đi máy bay không?"
-      - tom: "I travel home to Da Lat two or three times a year. I usually take the bus."
-        say: "I travel home to Dah Lot two or three times a year. I usually take the bus."
-        vi: "Mình về Đà Lạt hai, ba lần một năm, thường đi xe buýt."
-      - mai: "I don't go on business trips, but I love flying! I went to Hanoi by plane last year."
-        say: "I don't go on business trips, but I love flying! I went to Ha Noi by plane last year."
-        vi: "Mình không đi công tác, nhưng rất thích đi máy bay! Năm ngoái mình bay ra Hà Nội."
+      - emma: "Remember: try each exercise first. All the answers come at the end of the exercise."
+        vi: "Nhớ nhé: làm từng bài trước; đáp án hiện cùng lúc ở cuối bài."
+
+  - kind: qa
+    chapter: "Bài 1: bạn có hay đi xa?"
+    heading: "Vocabulary 1 · Ask and answer the questions"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời trước, rồi nghe Tom và Mai"
+    items:
+      - {q: "How often do you travel?", a: "I travel home to Da Lat two or three times a year.", ask: emma, by: tom}
+      - {q: "Do you go on business trips? Other trips?", a: "I don't go on business trips, but I sometimes go on trips with my students.", ask: emma, by: mai}
+      - {q: "Do you like flying? Driving? Taking the train?", a: "I love flying! I went to Hanoi by plane last year. But I don't like long bus journeys.", ask: emma, by: mai}
+    lines:
+      - {emma: "Vocabulary, exercise 1. How often do you travel?", say: "Vocabulary, exercise one. How often do you travel?", focus: 0, pause: 1.5, vi: "Bạn có hay đi xa không?"}
+      - {tom: "I travel home to Da Lat two or three times a year.", say: "I travel home to Dah Lot two or three times a year.", reveal: 0, vi: "Mình về Đà Lạt hai, ba lần một năm."}
+      - {emma: "Do you go on business trips? Other trips?", focus: 1, pause: 1.5, vi: "Bạn có đi công tác không? Các chuyến đi khác?"}
+      - {mai: "I don't go on business trips, but I sometimes go on trips with my students.", reveal: 1}
+      - {emma: "Do you like flying? Driving? Taking the train?", focus: 2, pause: 1.5, vi: "Bạn có thích đi máy bay? lái xe? đi tàu?"}
+      - {mai: "I love flying! I went to Hanoi by plane last year. But I don't like long bus journeys.", say: "I love flying! I went to Ha Noi by plane last year. But I don't like long bus journeys.", reveal: 2}
       - emma: "Travel is a verb. A trip and a journey are nouns. We go on a trip, or go on a journey."
         vi: "travel là động từ; trip, journey là danh từ (chuyến đi): go on a trip / a journey."
 
   - kind: figure
-    chapter: "Đồ dùng khi đi xa — nghe 1.47"
-    heading: "Vocabulary 2 · Things for a trip"
-    heading_vi: "Tranh và danh sách \"Remember …\" tr. 36 — nối từ trong danh sách với số 1–12 trên tranh, rồi nghe 1.47"
+    chapter: "Bài 2: đồ dùng khi đi xa"
+    heading: "Vocabulary 2a · Match the things on the list with 1–12 in the picture"
+    heading_vi: "Tranh và danh sách \"Remember …\" tr. 36 — tạm dừng video và nối, rồi nghe 1.47 (bài 2b)"
     image: {pdf: course-book, page: 37, clip: [0, 157, 525, 437]}
-    items:
-      - {box: [0, 288, 42, 326], label: "1 keys"}
-      - {box: [0, 330, 68, 405], label: "2 address book"}
-      - {box: [38, 310, 128, 336], label: "3 toothbrush"}
-      - {box: [138, 322, 224, 402], label: "4 passport"}
-      - {box: [55, 354, 140, 392], label: "5 comb"}
-      - {box: [215, 160, 314, 252], label: "6 mobile"}
-      - {box: [225, 233, 295, 284], label: "7 map and directions"}
-      - {box: [125, 392, 238, 437], label: "8 tickets"}
-      - {box: [0, 368, 58, 402], label: "9 pen"}
-      - {box: [198, 300, 284, 352], label: "10 sunglasses"}
-      - {box: [103, 200, 237, 282], label: "11 money"}
-      - {box: [240, 343, 332, 392], label: "12 driving licence"}
     lines:
-      - emma: "Vocabulary: things for a trip. Match the things on the list with numbers 1 to 12 in the picture. Pause the video and try. Then listen."
-        say: "Vocabulary: things for a trip. Match the things on the list with numbers one to twelve in the picture. Pause the video and try. Then listen."
-        vi: "Nối các thứ trong danh sách với số 1–12 trên tranh. Tạm dừng video làm thử rồi nghe."
+      - emma: "Exercise 2a. Things for a trip. Match the things on the list with numbers 1 to 12 in the picture. Pause the video and try. Then listen to check."
+        say: "Exercise two eigh. Things for a trip. Match the things on the list with numbers one to twelve in the picture. Pause the video and try. Then listen to check."
+        vi: "Bài 2a: nối các thứ trong danh sách với số 1–12 trên tranh. Tạm dừng video làm thử, rồi nghe để kiểm tra."
         pause: 1.5
-      - {track: "1.47", start: 2.9, end: 5.3, note: "1.47 · 1", focus: 0}
-      - {track: "1.47", start: 9.0, end: 11.6, note: "1.47 · 2", focus: 1}
-      - {track: "1.47", start: 14.7, end: 17.4, note: "1.47 · 3", focus: 2}
-      - {track: "1.47", start: 21.0, end: 23.3, note: "1.47 · 4", focus: 3}
-      - {track: "1.47", start: 26.5, end: 28.7, note: "1.47 · 5", focus: 4}
-      - {track: "1.47", start: 32.4, end: 34.9, note: "1.47 · 6", focus: 5}
-      - {track: "1.47", start: 38.4, end: 42.0, note: "1.47 · 7", focus: 6}
-      - {track: "1.47", start: 45.3, end: 47.6, note: "1.47 · 8", focus: 7}
-      - {track: "1.47", start: 51.0, end: 53.0, note: "1.47 · 9", focus: 8}
-      - {track: "1.47", start: 56.0, end: 58.7, note: "1.47 · 10", focus: 9}
-      - {track: "1.47", start: 61.5, end: 63.8, note: "1.47 · 11", focus: 10}
-      - {track: "1.47", start: 66.4, end: 69.2, note: "1.47 · 12", focus: 11}
+      - {track: "1.47", start: 2.7, end: 69.5, note: "1.47 · twelve things"}
+
+  - kind: blanks
+    chapter: "Bài 2: đáp án và luyện nói"
+    heading: "Vocabulary 2b · Answers — practise saying the words"
+    heading_vi: "Tất cả đáp án hiện cùng lúc; rồi nghe lại từng từ trong 1.47 và nói theo"
+    items:
+      - {n: 1, q: "___", answer: "keys"}
+      - {n: 2, q: "___", answer: "address book"}
+      - {n: 3, q: "___", answer: "toothbrush"}
+      - {n: 4, q: "___", answer: "passport"}
+      - {n: 5, q: "___", answer: "comb"}
+      - {n: 6, q: "___", answer: "mobile"}
+      - {n: 7, q: "___", answer: "map and directions"}
+      - {n: 8, q: "___", answer: "tickets"}
+      - {n: 9, q: "___", answer: "pen"}
+      - {n: 10, q: "___", answer: "sunglasses"}
+      - {n: 11, q: "___", answer: "money"}
+      - {n: 12, q: "___", answer: "driving licence"}
+    lines:
+      - emma: "Here are all the answers. Now listen again and repeat each word."
+        reveal: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+        vi: "Đây là toàn bộ đáp án. Giờ nghe lại và nói theo từng từ."
+      - {track: "1.47", start: 2.9, end: 5.3, note: "1.47 · 1", focus: 0, pause: 1}
+      - {track: "1.47", start: 9.0, end: 11.6, note: "1.47 · 2", focus: 1, pause: 1}
+      - {track: "1.47", start: 14.7, end: 17.4, note: "1.47 · 3", focus: 2, pause: 1}
+      - {track: "1.47", start: 21.0, end: 23.3, note: "1.47 · 4", focus: 3, pause: 1}
+      - {track: "1.47", start: 26.5, end: 28.7, note: "1.47 · 5", focus: 4, pause: 1}
+      - {track: "1.47", start: 32.4, end: 34.9, note: "1.47 · 6", focus: 5, pause: 1}
+      - {track: "1.47", start: 38.4, end: 42.0, note: "1.47 · 7", focus: 6, pause: 1}
+      - {track: "1.47", start: 45.3, end: 47.6, note: "1.47 · 8", focus: 7, pause: 1}
+      - {track: "1.47", start: 51.0, end: 53.0, note: "1.47 · 9", focus: 8, pause: 1}
+      - {track: "1.47", start: 56.0, end: 58.7, note: "1.47 · 10", focus: 9, pause: 1}
+      - {track: "1.47", start: 61.5, end: 63.8, note: "1.47 · 11", focus: 10, pause: 1}
+      - {track: "1.47", start: 66.4, end: 69.2, note: "1.47 · 12", focus: 11, pause: 1}
       - emma: "Sunglasses is always plural: my sunglasses are in my bag. Money is always singular: the money is in the packet."
         focus: 9
         vi: "sunglasses luôn ở số nhiều (are); money luôn ở số ít (is)."
@@ -87,48 +110,57 @@ scenes:
         vi: "comb /kəʊm/: chữ b cuối không đọc."
 
   - kind: qa
-    chapter: "Mang gì, hay quên gì?"
+    chapter: "Bài 3–4: mang gì, hay quên gì?"
     heading: "Vocabulary 3–4 · What do you take? What do you forget?"
-    heading_vi: "Tạm dừng video và tự trả lời trước, rồi nghe Tom và Mai"
+    heading_vi: "3a lập danh sách đồ mang theo; 3b so sánh; 4 bạn hay quên gì — tạm dừng video và tự trả lời trước, rồi nghe Tom và Mai"
     items:
       - {q: "What do you take when you go out for an evening with friends?", a: "My mobile, some money and my keys. That's all!", ask: tom, by: mai}
+      - {q: "What do you take when you go to work, school or university?", a: "My laptop, my books and a pen. And my student card.", ask: mai, by: tom}
       - {q: "What do you take when you go away for a week?", a: "Clothes, my toothbrush, my laptop, my mobile and some money.", ask: mai, by: tom}
-      - {q: "What things do you sometimes forget when you travel?", a: "I sometimes forget my sunglasses. And last month, I forgot my toothbrush!", ask: tom, by: mai}
+      - {q: "What things do you sometimes forget when you go out or travel?", a: "I sometimes forget my sunglasses. And last month, I forgot my toothbrush!", ask: tom, by: mai}
     lines:
-      - emma: "Now make a list. What do you take with you? Pause after each question and answer."
-        vi: "Lập danh sách: bạn mang theo những gì? Tạm dừng sau mỗi câu hỏi và trả lời."
+      - emma: "Exercise 3a. Make a list of things you take with you. Then 3b: compare with a partner. Pause after each question and answer."
+        say: "Exercise three eigh. Make a list of things you take with you. Then three bee: compare with a partner. Pause after each question and answer."
+        vi: "Bài 3a: lập danh sách đồ bạn mang theo; 3b: so sánh với bạn. Tạm dừng sau mỗi câu hỏi và trả lời."
       - {tom: "What do you take when you go out for an evening with friends?", focus: 0, pause: 1.5}
       - {mai: "My mobile, some money and my keys. That's all!", reveal: 0}
-      - {mai: "What do you take when you go away for a week?", focus: 1, pause: 1.5}
-      - {tom: "Clothes, my toothbrush, my laptop, my mobile and some money.", reveal: 1}
-      - {tom: "What things do you sometimes forget when you travel?", focus: 2, pause: 1.5}
-      - {mai: "I sometimes forget my sunglasses. And last month, I forgot my toothbrush!", reveal: 2}
+      - {mai: "What do you take when you go to work, school or university?", focus: 1, pause: 1.5}
+      - {tom: "My laptop, my books and a pen. And my student card.", reveal: 1}
+      - {mai: "What do you take when you go away for a week?", focus: 2, pause: 1.5}
+      - {tom: "Clothes, my toothbrush, my laptop, my mobile and some money.", reveal: 2}
+      - {emma: "Exercise 4. What things do you sometimes forget when you go out or travel?", say: "Exercise four. What things do you sometimes forget when you go out or travel?", focus: 3, pause: 1.5}
+      - {mai: "I sometimes forget my sunglasses. And last month, I forgot my toothbrush!", reveal: 3}
 
   - kind: blanks
     chapter: "Nghe 1.48: Sang-mi và Mick"
-    heading: "Listening 5 · Sang-mi talks to Mick, her assistant"
-    heading_vi: "Tranh tr. 36 — Sang-mi định đi đâu? Ngày nào về? Mick đưa cô ấy ba thứ gì?"
+    heading: "Listening 5 · Sang-mi talks to Mick, her assistant, about a business trip"
+    heading_vi: "Tranh tr. 36 — 5a nghe: định đi đâu, ngày nào về? 5b nghe lại: Mick đưa ba thứ gì? Đáp án hiện sau khi nghe xong"
     image: {pdf: course-book, page: 37, clip: [14, 588, 168, 734]}
     items:
-      - {n: 1, q: "Where does she plan to go? → ___", answer: "Seattle"}
-      - {n: 2, q: "What day does she plan to come back? → ___", answer: "next Thursday"}
-      - {n: 3, q: "Three things Mick gives her → ___", answer: "money, tickets, directions"}
+      - {n: 1, q: "5a · Where does she plan to go? → ___", answer: "Seattle"}
+      - {n: 2, q: "5a · What day does she plan to come back? → ___", answer: "next Thursday"}
+      - {n: 3, q: "5b · Three things Mick gives her → ___", answer: "money, tickets, directions"}
     lines:
-      - emma: "Sang-mi works for an engineering company in Seoul, Korea. She travels a lot in her job. Listen to Sang-mi talking to Mick, her assistant, about a business trip."
-        say: "Sahng-mee works for an engineering company in Seoul, Korea. She travels a lot in her job. Listen to Sahng-mee talking to Mick, her assistant, about a business trip."
-        vi: "Sang-mi làm cho một công ty kỹ thuật ở Seoul, hay phải đi công tác. Nghe cô ấy nói chuyện với Mick, trợ lý của cô."
+      - emma: "Listening. Sang-mi works for an engineering company in Seoul, Korea. She travels a lot in her job. Exercise 5a. Listen to Sang-mi talking to Mick, her assistant. Where does she plan to go? What day does she plan to come back?"
+        say: "Listening. Sahng-mee works for an engineering company in Seoul, Korea. She travels a lot in her job. Exercise five eigh. Listen to Sahng-mee talking to Mick, her assistant. Where does she plan to go? What day does she plan to come back?"
+        vi: "Sang-mi làm cho một công ty kỹ thuật ở Seoul, hay đi công tác. Bài 5a: nghe cô ấy nói với Mick: định đi đâu, ngày nào về?"
+        pause: 1
       - {track: "1.48", start: 5.0, end: 46.2, note: "1.48 · Sang-mi and Mick"}
-      - tom: "She plans to go to Seattle. She says: I'll see you next Thursday. So she comes back next Thursday."
-        reveal: [1, 2]
-        vi: "Cô ấy định đi Seattle và về vào thứ Năm tuần sau."
-      - mai: "And Mick gives her money, her tickets and the directions to Mr Donovan's office."
-        reveal: 3
-        vi: "Mick đưa cô ấy tiền, vé và bản chỉ đường tới văn phòng ông Donovan."
+      - emma: "Exercise 5b. Listen again. Write down three things Mick gives Sang-mi for her trip."
+        say: "Exercise five bee. Listen again. Write down three things Mick gives Sahng-mee for her trip."
+        vi: "Bài 5b: nghe lại, ghi ba thứ Mick đưa cho Sang-mi."
+        pause: 1
+      - {track: "1.48", start: 5.0, end: 46.2, note: "1.48 · Sang-mi and Mick, again"}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "She plans to go to Seattle. She says: I'll see you next Thursday. So she comes back next Thursday.", focus: 0, vi: "Cô ấy định đi Seattle và về vào thứ Năm tuần sau."}
+      - {mai: "And Mick gives her money, her tickets and the directions to Mr Donovan's office.", say: "And Mick gives her money, her tickets and the directions to Mister Donovan's office.", focus: 2, vi: "Mick đưa cô ấy tiền, vé và bản chỉ đường tới văn phòng ông Donovan."}
 
   - kind: blanks
     chapter: "Nghe 1.49: Sang-mi và Mr Donovan"
     heading: "Listening 6a · Sang-mi talks to Mr Donovan in Seattle · T or F?"
-    heading_vi: "Tranh tr. 36 — nghe rồi ghi T (đúng) hoặc F (sai) theo lời Sang-mi nói với ông Donovan"
+    heading_vi: "Tranh tr. 36 — đọc bốn câu, nghe rồi ghi T (đúng) hoặc F (sai); đáp án hiện sau khi nghe xong"
     image: {pdf: course-book, page: 37, clip: [180, 578, 344, 736]}
     items:
       - {n: 1, q: "Sang-mi's flight was very comfortable. → ___", answer: "T"}
@@ -136,22 +168,20 @@ scenes:
       - {n: 3, q: "Mr Donovan's directions weren't very good. → ___", answer: "F"}
       - {n: 4, q: "Sang-mi enjoyed the meal in the restaurant. → ___", answer: "T"}
     lines:
-      - emma: "Now Sang-mi is in Seattle. Listen to her talking to Mr Donovan. Write T for true or F for false next to each sentence."
-        say: "Now Sahng-mee is in Seattle. Listen to her talking to Mister Donovan. Write tee for true or ef for false next to each sentence."
-        vi: "Sang-mi đã tới Seattle. Nghe cô ấy nói chuyện với ông Donovan, ghi T (đúng) hoặc F (sai)."
+      - emma: "Exercise 6a. Now Sang-mi is in Seattle. Listen to her talking to Mr Donovan. Write T for true or F for false next to each sentence."
+        say: "Exercise six eigh. Now Sahng-mee is in Seattle. Listen to her talking to Mister Donovan. Write tee for true or ef for false next to each sentence."
+        vi: "Bài 6a: Sang-mi đã tới Seattle. Nghe cô ấy nói chuyện với ông Donovan, ghi T (đúng) hoặc F (sai)."
         pause: 1
       - {track: "1.49", start: 4.4, end: 40.6, note: "1.49 · Sang-mi and Mr Donovan"}
-      - tom: "One: true. She says: very comfortable. Two: false. She found the office OK."
-        reveal: [1, 2]
-        vi: "1 đúng: chuyến bay rất thoải mái. 2 sai: cô ấy tìm văn phòng không khó."
-      - tom: "Three: false. She says: your directions were very good. Four: true. We had a lovely meal."
-        reveal: [3, 4]
-        vi: "3 sai: chỉ đường rất rõ. 4 đúng: bữa ăn rất ngon."
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "She tells Mr Donovan: the flight was very comfortable, the office was easy to find, your directions were very good, and we had a lovely meal.", say: "She tells Mister Donovan: the flight was very comfortable, the office was easy to find, your directions were very good, and we had a lovely meal.", vi: "Cô ấy nói với ông Donovan: chuyến bay rất thoải mái, dễ tìm văn phòng, chỉ đường rất rõ, bữa ăn rất ngon."}
 
   - kind: blanks
     chapter: "Nghe 1.50: Sang-mi gọi về nhà"
-    heading: "Listening 6b · Sang-mi talks to her husband · T or F?"
-    heading_vi: "Tranh tr. 36 — cùng bốn câu, nhưng lần này Sang-mi nói thật với chồng"
+    heading: "Listening 6b · Sang-mi's conversation with Tom, her husband · answer 1–4 again"
+    heading_vi: "Tranh tr. 36 — cùng bốn câu, lần này Sang-mi nói thật với chồng; đáp án hiện sau khi nghe xong"
     image: {pdf: course-book, page: 37, clip: [352, 578, 517, 737]}
     items:
       - {n: 1, q: "Sang-mi's flight was very comfortable. → ___", answer: "F: she hates flying"}
@@ -159,19 +189,18 @@ scenes:
       - {n: 3, q: "Mr Donovan's directions weren't very good. → ___", answer: "T: she didn't understand them"}
       - {n: 4, q: "Sang-mi enjoyed the meal in the restaurant. → ___", answer: "F: she didn't like it"}
     lines:
-      - emma: "Now listen to Sang-mi's conversation with her husband. His name is Tom!"
-        say: "Now listen to Sahng-mee's conversation with her husband. His name is Tom!"
-        vi: "Giờ nghe Sang-mi nói chuyện với chồng. Chồng cô ấy cũng tên Tom!"
+      - emma: "Exercise 6b. Now listen to Sang-mi's conversation with her husband. His name is Tom!"
+        say: "Exercise six bee. Now listen to Sahng-mee's conversation with her husband. His name is Tom!"
+        vi: "Bài 6b: nghe Sang-mi nói chuyện với chồng. Chồng cô ấy cũng tên Tom!"
       - tom: "That's not me!"
         vi: "Không phải mình đâu nhé!"
       - {emma: "Answer questions 1 to 4 again.", say: "Answer questions one to four again.", vi: "Trả lời lại câu 1–4.", pause: 1}
       - {track: "1.50", start: 3.5, end: 54.2, note: "1.50 · Sang-mi and her husband"}
-      - mai: "One: false. She says: I hate flying. Two: true. She couldn't find the office."
-        reveal: [1, 2]
-        vi: "1 sai: cô ấy ghét đi máy bay. 2 đúng: cô ấy không tìm được văn phòng."
-      - mai: "Three: true. She didn't understand his directions. Four: false. She didn't really like the restaurant."
-        reveal: [3, 4]
-        vi: "3 đúng: cô ấy không hiểu bản chỉ đường. 4 sai: cô ấy không thích nhà hàng."
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - mai: "She tells her husband the truth. She hates flying, she couldn't find the office, she didn't understand the directions, and she didn't really like the restaurant."
+        vi: "Với chồng, cô ấy nói thật: ghét đi máy bay, không tìm được văn phòng, không hiểu chỉ đường, không thích nhà hàng."
       - emma: "So why did she give different answers to Mr Donovan?"
         say: "So why did she give different answers to Mister Donovan?"
         vi: "Vậy sao cô ấy trả lời ông Donovan khác đi?"
@@ -179,34 +208,51 @@ scenes:
         vi: "Cô ấy muốn lịch sự. Ông ấy là khách hàng mới mà!"
 
   - kind: figure
-    chapter: "Trọng âm câu"
+    chapter: "Bài 7: trọng âm câu"
     heading: "Pronunciation 7 · Sentence stress"
-    heading_vi: "Năm câu tr. 37 — chấm đỏ là từ được nhấn. Audio 1.51 không có, Emma đọc"
-    image: {pdf: course-book, page: 38, clip: [155, 178, 392, 264]}
+    heading_vi: "Năm câu tr. 37 — chấm đỏ là từ được nhấn. Audio 1.51 không có trong bộ audio: Emma đọc"
+    image: {pdf: course-book, page: 38, clip: [145, 163, 560, 328]}
     items:
-      - {box: [157, 180, 270, 197]}
-      - {box: [157, 197, 390, 214]}
-      - {box: [157, 213, 322, 230]}
-      - {box: [157, 229, 376, 246]}
-      - {box: [157, 245, 272, 263]}
+      - {box: [157, 179, 270, 196]}
+      - {box: [157, 197, 390, 212]}
+      - {box: [157, 212, 322, 228]}
+      - {box: [157, 228, 380, 244]}
+      - {box: [157, 244, 272, 260]}
+      - {box: [150, 266, 362, 279]}
+      - {box: [155, 284, 530, 297]}
+      - {box: [150, 313, 410, 327]}
     lines:
-      - emma: "Pronunciation: sentence stress. The recording for this exercise isn't in our audio files, so I'll read the sentences. The dots show the stressed words."
-        vi: "Trọng âm câu. Không có audio 1.51 nên Emma đọc; chấm đỏ là từ được nhấn mạnh."
-      - {emma: "Here's your ticket.", focus: 0, vi: "Nhấn: Here's, ticket."}
-      - {emma: "Yes, the money's in the packet with the tickets.", focus: 1, vi: "Nhấn: Yes, money's, packet, tickets."}
-      - {emma: "Your directions were very good.", focus: 2, vi: "Nhấn: directions, very, good."}
-      - {emma: "It was great, thank you. We had a lovely meal.", focus: 3, vi: "Nhấn: great, thank, had, lovely, meal."}
-      - {emma: "I have a new client!", focus: 4, vi: "Nhấn: have, new, client."}
-      - emma: "Which words do we usually stress? Information words: nouns like ticket, verbs like travel, and adjectives like good. Not grammar words like and, the and in."
-        vi: "Ta nhấn từ mang thông tin (danh từ, động từ chính, tính từ), không nhấn từ ngữ pháp (and, the, in)."
-      - mai: "And was and were are small words too. We don't stress them."
-        focus: 2
-        vi: "was, were cũng là từ nhỏ, không nhấn."
+      - emma: "Pronunciation: sentence stress. Exercise 7a: read and listen. The recording isn't in our audio files, so I'll read the sentences. The dots show the stressed words."
+        say: "Pronunciation: sentence stress. Exercise seven eigh: read and listen. The recording isn't in our audio files, so I'll read the sentences. The dots show the stressed words."
+        vi: "Bài 7a: đọc và nghe. Không có audio 1.51 nên Emma đọc; chấm đỏ là từ được nhấn mạnh."
+      - {emma: "Here's your ticket.", focus: 0}
+      - {emma: "Yes, the money's in the packet with the tickets.", focus: 1}
+      - {emma: "Your directions were very good.", focus: 2}
+      - {emma: "It was great, thank you. We had a lovely meal.", focus: 3}
+      - {emma: "I have a new client!", focus: 4}
+      - emma: "Exercise 7b. Which words do we usually stress, A or B? A: information words. B: grammar words. Pause the video and think."
+        say: "Exercise seven bee. Which words do we usually stress, eigh or bee? Eigh: information words. Bee: grammar words. Pause the video and think."
+        focus: 5
+        vi: "Bài 7b: ta thường nhấn từ nào, A hay B? Tạm dừng video và nghĩ."
+        pause: 1.5
+      - emma: "The answer is A. We stress information words: nouns like ticket, verbs like travel, and adjectives like good. Not grammar words like and, the and in."
+        say: "The answer is eigh. We stress information words: nouns like ticket, verbs like travel, and adjectives like good. Not grammar words like and, the and in."
+        focus: 6
+        vi: "Đáp án A: nhấn từ mang thông tin (danh từ, động từ chính, tính từ), không nhấn từ ngữ pháp (and, the, in)."
+      - emma: "Exercise 7c. Practise saying the sentences with the correct stress. Listen and repeat. Pause the video if you need more time."
+        say: "Exercise seven see. Practise saying the sentences with the correct stress. Listen and repeat. Pause the video if you need more time."
+        focus: 7
+        vi: "Bài 7c: luyện nói với trọng âm đúng. Nghe và nhắc lại; cần thì tạm dừng video."
+      - {emma: "Here's your ticket.", focus: 0, pause: 1}
+      - {emma: "Yes, the money's in the packet with the tickets.", focus: 1, pause: 1}
+      - {emma: "Your directions were very good.", focus: 2, pause: 1}
+      - {emma: "It was great, thank you. We had a lovely meal.", focus: 3, pause: 1}
+      - {emma: "I have a new client!", focus: 4, pause: 1}
 
   - kind: pairs
-    chapter: "Câu hỏi và câu trả lời"
-    heading: "Grammar 1 · Match the questions and answers"
-    heading_vi: "Câu hỏi và câu trả lời trong hai cuộc nói chuyện của Sang-mi"
+    chapter: "Bài 1: câu hỏi và câu trả lời"
+    heading: "Grammar 1 · Match the questions and answers from Sang-mi's conversations"
+    heading_vi: "Tạm dừng video và nối; đáp án hiện cùng lúc, rồi nghe Tom hỏi, Mai trả lời"
     items:
       - {n: 1, q: "What did you do last night?", answer: c}
       - {n: 2, q: "What did you think of the restaurant?", answer: d}
@@ -218,23 +264,26 @@ scenes:
       - {k: c, text: "I went out for dinner."}
       - {k: d, text: "It was great, thank you. We had a lovely meal."}
     lines:
-      - emma: "Grammar: past simple questions. Match the questions and answers from Sang-mi's conversations. Pause the video and try."
-        say: "Grammar: past simple questions. Match the questions and answers from Sahng-mee's conversations. Pause the video and try."
-        vi: "Nối câu hỏi với câu trả lời trong các cuộc nói chuyện của Sang-mi. Tạm dừng video và làm."
+      - emma: "Grammar: past simple. Exercise 1. Match the questions and answers from Sang-mi's conversations. Pause the video and try."
+        say: "Grammar: past simple. Exercise one. Match the questions and answers from Sahng-mee's conversations. Pause the video and try."
+        vi: "Bài 1: nối câu hỏi với câu trả lời trong các cuộc nói chuyện của Sang-mi. Tạm dừng video và làm."
         pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
       - {tom: "What did you do last night?", focus: 0}
-      - {mai: "I went out for dinner. That's c.", say: "I went out for dinner. That's see.", reveal: 1}
+      - {mai: "I went out for dinner.", focus: 0}
       - {tom: "What did you think of the restaurant?", focus: 1}
-      - {mai: "It was great, thank you. We had a lovely meal. That's d.", say: "It was great, thank you. We had a lovely meal. That's dee.", reveal: 2}
+      - {mai: "It was great, thank you. We had a lovely meal.", focus: 1}
       - {tom: "Did you have a good journey?", focus: 2}
-      - {mai: "No, I didn't. You know I hate flying. That's a.", say: "No, I didn't. You know I hate flying. That's eigh.", reveal: 3}
+      - {mai: "No, I didn't. You know I hate flying.", focus: 2}
       - {tom: "Did you find the office OK?", focus: 3}
-      - {mai: "Yes, thanks. Your directions were very good. That's b.", say: "Yes, thanks. Your directions were very good. That's bee.", reveal: 4}
+      - {mai: "Yes, thanks. Your directions were very good.", focus: 3}
 
   - kind: blanks
-    chapter: "did, didn't — nghe 1.52"
-    heading: "Grammar 2 · Complete with did and didn't"
-    heading_vi: "Ảnh Sang-mi và ông Donovan tr. 37 — điền did hoặc didn't, rồi nghe 1.52"
+    chapter: "Bài 2: did, didn't — nghe 1.52"
+    heading: "Grammar 2a · Complete the questions and answers with did and didn't"
+    heading_vi: "Ảnh Sang-mi và ông Donovan tr. 37 — nghe câu ví dụ, tạm dừng video và điền, rồi nghe 1.52 (bài 2b); đáp án hiện sau khi nghe xong"
     image: {pdf: course-book, page: 38, clip: [0, 410, 126, 548]}
     items:
       - {n: 1, q: "___ you have a good time?", answer: "Did"}
@@ -242,14 +291,18 @@ scenes:
       - {n: 3, q: "___ you have a good journey?", answer: "Did"}
       - {n: 4, q: "Yes, I ___. / No, I didn't.", answer: "did"}
     lines:
-      - emma: "Complete the questions and answers with did and didn't. Here's the example."
-        vi: "Điền did hoặc didn't. Đây là câu ví dụ."
+      - emma: "Exercise 2a. Complete the questions and answers in the table with did and didn't. Here's the example."
+        say: "Exercise two eigh. Complete the questions and answers in the table with did and didn't. Here's the example."
+        vi: "Bài 2a: điền did hoặc didn't. Đây là câu ví dụ."
       - {track: "1.52", start: 3.3, end: 10.0, note: "1.52 · example"}
-      - {emma: "Pause the video and try. Then listen.", vi: "Tạm dừng video làm thử rồi nghe.", pause: 1.5}
-      - {track: "1.52", start: 12.6, end: 14.6, note: "1.52 · 1", focus: 0, reveal: 1}
-      - {track: "1.52", start: 16.8, end: 19.6, note: "1.52 · 2", focus: 1, reveal: 2}
-      - {track: "1.52", start: 21.8, end: 23.7, note: "1.52 · 3", focus: 2, reveal: 3}
-      - {track: "1.52", start: 24.6, end: 29.4, note: "1.52 · 4", focus: 3, reveal: 4}
+      - {emma: "Pause the video and try. Then listen to check.", vi: "Tạm dừng video làm thử, rồi nghe để kiểm tra.", pause: 1.5}
+      - {track: "1.52", start: 12.6, end: 14.6, note: "1.52 · 1", focus: 0}
+      - {track: "1.52", start: 16.8, end: 19.6, note: "1.52 · 2", focus: 1}
+      - {track: "1.52", start: 21.8, end: 23.7, note: "1.52 · 3", focus: 2}
+      - {track: "1.52", start: 24.6, end: 29.4, note: "1.52 · 4", focus: 3}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
 
   - kind: compare
     chapter: "Quy tắc: did, didn't"
@@ -277,7 +330,7 @@ scenes:
   - kind: blanks
     chapter: "Bài 3: sắp xếp câu hỏi"
     heading: "Grammar 3 · Put the words in order to make questions"
-    heading_vi: "Sắp xếp từ thành câu hỏi — tạm dừng video, làm trước rồi nghe Mai và Tom"
+    heading_vi: "Sắp xếp từ thành câu hỏi — tạm dừng video và làm; đáp án hiện cùng lúc"
     items:
       - {n: 1, q: "have / good / a / you / weekend / Did → ___", answer: "Did you have a good weekend?"}
       - {n: 2, q: "did / What / do / you / at the weekend → ___", answer: "What did you do at the weekend?"}
@@ -292,34 +345,37 @@ scenes:
         say: "Exercise three. Put the words in order to make questions. Pause the video and try."
         vi: "Bài 3: sắp xếp từ thành câu hỏi. Tạm dừng video và làm."
         pause: 1.5
-      - {mai: "Did you have a good weekend?", reveal: 1}
-      - {mai: "What did you do at the weekend?", reveal: 2}
-      - {mai: "Where did you go on Saturday?", reveal: 3}
-      - {mai: "Did you go out last night?", reveal: 4}
-      - {tom: "What time did you get up this morning?", reveal: 5}
-      - {tom: "Did you watch TV this morning?", reveal: 6}
-      - {tom: "What did you have for breakfast?", reveal: 7}
-      - {tom: "What time did you go to bed last night?", reveal: 8}
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6", "7", "8"]
+        vi: "Đây là toàn bộ đáp án."
 
   - kind: qa
-    chapter: "Đến lượt bạn"
-    heading: "Speaking 4 · Did you have a good weekend?"
-    heading_vi: "Mai hỏi — bạn tạm dừng video và trả lời trước, rồi nghe Tom"
+    chapter: "Bài 4: đến lượt bạn"
+    heading: "Speaking 4 · Ask and answer all the questions"
+    heading_vi: "4a ba câu hỏi ở bài 3 và ba câu hỏi mới của Mai; 4b hỏi – đáp — tạm dừng video và trả lời trước, rồi nghe Tom"
     items:
       - {q: "Did you have a good weekend?", a: "Yes, I did. It was very nice. I played basketball with my friends.", ask: mai, by: tom}
       - {q: "What did you have for breakfast?", a: "I had a bowl of pho and a coffee.", ask: mai, by: tom}
       - {q: "What time did you go to bed last night?", a: "Quite late. I went to bed at midnight. I didn't finish my homework early!", ask: mai, by: tom}
+      - {q: "Where did you have lunch yesterday?", a: "In the university canteen, with my classmates.", ask: mai, by: tom}
+      - {q: "Did you go shopping last week?", a: "No, I didn't. I didn't have time.", ask: mai, by: tom}
+      - {q: "What did you do on your last holiday?", a: "I went home to Da Lat and saw my family. It was lovely.", ask: mai, by: tom}
     lines:
-      - emma: "Your turn. Mai asks the questions. Pause the video and answer. Then listen to Tom."
-        vi: "Đến lượt bạn: Mai hỏi, bạn tạm dừng video và trả lời, rồi nghe Tom."
+      - emma: "Speaking, exercise 4a. Look at the questions in 3 and think of three more questions. Then 4b: ask and answer all the questions. Mai asks. Pause the video and answer first, then listen to Tom."
+        say: "Speaking, exercise four eigh. Look at the questions in three and think of three more questions. Then four bee: ask and answer all the questions. Mai asks. Pause the video and answer first, then listen to Tom."
+        vi: "Bài 4a: nhìn câu hỏi ở bài 3, nghĩ thêm ba câu; 4b: hỏi – đáp tất cả. Mai hỏi, bạn tạm dừng và trả lời trước, rồi nghe Tom."
       - {mai: "Did you have a good weekend?", focus: 0, pause: 1.5}
       - {tom: "Yes, I did. It was very nice. I played basketball with my friends.", reveal: 0}
       - {mai: "What did you have for breakfast?", focus: 1, pause: 1.5}
       - {tom: "I had a bowl of pho and a coffee.", say: "I had a bowl of fuh and a coffee.", reveal: 1}
       - {mai: "What time did you go to bed last night?", focus: 2, pause: 1.5}
       - {tom: "Quite late. I went to bed at midnight. I didn't finish my homework early!", reveal: 2}
-      - emma: "Now write three more questions, and ask a friend."
-        vi: "Giờ viết thêm ba câu hỏi và hỏi một người bạn."
+      - {mai: "Now three more questions. Where did you have lunch yesterday?", focus: 3, pause: 1.5}
+      - {tom: "In the university canteen, with my classmates.", reveal: 3}
+      - {mai: "Did you go shopping last week?", focus: 4, pause: 1.5}
+      - {tom: "No, I didn't. I didn't have time.", reveal: 4}
+      - {mai: "What did you do on your last holiday?", focus: 5, pause: 1.5}
+      - {tom: "I went home to Da Lat and saw my family. It was lovely.", say: "I went home to Dah Lot and saw my family. It was lovely.", reveal: 5}
 
   - kind: bullets
     chapter: "Ghi nhớ"
@@ -334,4 +390,34 @@ scenes:
       - {emma: "Let's remember. Things for a trip: keys, passport, tickets, sunglasses, money, driving licence.", focus: 0}
       - {emma: "Past questions with did: Did you have a good time? What did you do last night?", focus: 1}
       - {emma: "Negatives with didn't: I didn't like the restaurant.", focus: 2}
-      - {emma: "And short answers: Yes, I did. No, I didn't. In the next video, Onyinye talks about an important event in her life.", say: "And short answers: Yes, I did. No, I didn't. In the next video, Oh-neen-yeh talks about an important event in her life.", focus: 3, vi: "Video sau: Onyinye kể một sự kiện quan trọng trong đời."}
+      - {emma: "And short answers: Yes, I did. No, I didn't.", focus: 3}
+
+  - kind: words
+    chapter: "Từ vựng A2 của bài"
+    heading: "A2 words in this lesson"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của bài 4.2 — nghe, đọc theo, tạm dừng để chép"
+    items:
+      - {w: "comb", pos: "n", vi: "cái lược (b không đọc)"}
+      - {w: "directions", pos: "n", vi: "bản chỉ đường"}
+      - {w: "driving licence", pos: "n", vi: "bằng lái xe"}
+      - {w: "journey", pos: "n", vi: "chuyến đi — Did you have a good journey?"}
+      - {w: "lovely", pos: "adj", vi: "rất đẹp, rất ngon — a lovely meal"}
+      - {w: "passport", pos: "n", vi: "hộ chiếu"}
+      - {w: "sunglasses", pos: "n", vi: "kính râm (luôn số nhiều)"}
+      - {w: "toothbrush", pos: "n", vi: "bàn chải đánh răng"}
+      - {w: "trip", pos: "n", vi: "chuyến đi — a business trip"}
+    lines:
+      - emma: "Finally, the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to copy them."
+        vi: "Cuối bài: các từ A2 của bài theo bảng từ của sách. Nghe, đọc theo; tạm dừng video để chép."
+      - {emma: "comb", focus: 0}
+      - {emma: "directions", focus: 1}
+      - {emma: "driving licence", focus: 2}
+      - {emma: "journey. Did you have a good journey?", focus: 3}
+      - {emma: "lovely. A lovely meal.", focus: 4}
+      - {emma: "passport", focus: 5}
+      - {emma: "sunglasses", focus: 6}
+      - {emma: "toothbrush", focus: 7}
+      - {emma: "trip. A business trip.", focus: 8}
+      - emma: "Well done! In the next video, Onyinye talks about an important event in her life."
+        say: "Well done! In the next video, Oh-neen-yeh talks about an important event in her life."
+        vi: "Giỏi lắm! Video sau: Onyinye kể một sự kiện quan trọng trong đời."

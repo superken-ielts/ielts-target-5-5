@@ -40,10 +40,12 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
 - Từ Unit 4 (đợt 31), video sách IELTS Target 5.0 và Giai đoạn 0 có hình trong sách ở mọi video, như Oxford Word Skills
   Basic: cảnh `figure` / `image` kèm `box` (khung đỏ), trang nhiều chữ cắt thành dải — file 06 mục 8, file 09 mục 5.3a.
-- Giai đoạn 0 từ Unit 5 (đợt 32): đáp án hiện tất cả một lần sau khi đọc / nghe xong (dòng `reveal` đầu tiên mở mọi
-  đáp án, đứng sau `track`); cuối mỗi video là cảnh `words` — từ A2 của bài theo bảng từ English Profile của sách
+- Giai đoạn 0 từ Unit 3 (Unit 5 đợt 32; Unit 3–4 làm lại đợt 34, người học: "ko bỏ bài và đáp án hiển thị ra sau"): đáp
+  án hiện tất cả một lần sau khi làm / đọc / nghe xong (dòng `reveal` đầu tiên mở mọi đáp án, đứng sau `track` để làm hay
+  kiểm tra; sau đó chỉ nghe lại từng câu để nhắc, `track` có `focus`); không dán nhãn đáp án lên hình lúc đang đọc; cuối
+  mỗi video là cảnh `words` — từ A2 của bài theo bảng từ English Profile của sách
   (`python -m lesson_video wordlist ../books/<sách> --unit U0x`; lần đầu cần xlrd), bốn video của unit cùng nhau đủ mọi
-  từ (test kiểm) — file 08 mục 6.9.
+  từ (test kiểm, thêm unit mới vào `A2_ANSWERS_AFTER`) — file 08 mục 6.7, 6.9.
 - Video sách phải đủ mọi bài tập trên trang của phiên (đợt 33, người học: "nếu video dưới 10 phút không đủ cover bài trong
   sách thì tăng thêm cho đủ"): 5–10 phút là mức thường, bài cần dài hơn thì video dài hơn; không bỏ bài tập, bài nghe,
   luyện phát âm hay đóng vai để ép dưới 10 phút. Chỉ bỏ bài cần trang không có trong bản quét, ghi ở đầu kịch bản.

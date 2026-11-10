@@ -9,6 +9,9 @@
 # Bài nói mẫu: Mai — nhận việc giáo viên tiếng Anh ở Huế cách đây năm năm (khớp Unit 1: trước đó làm phục vụ quán cà phê,
 # nay là giáo viên); Tom — chuyển vào TP. Hồ Chí Minh học đại học khoảng hai năm trước, ở căn hộ nhỏ gần trường với hai
 # bạn (khớp hồ sơ file 06 mục 9.4).
+# Đợt 34 — người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị ra sau nhé". Bài 2: nghe xong mới
+# hiện tất cả đáp án (bản cũ mở từng câu); Task vocabulary 3: làm trên bảng của sách, rồi hiện tất cả đáp án good / bad /
+# both một lần (bản cũ hiện nhãn từng cụm). Cuối video là 6 từ A2 của bài theo bảng từ English Profile của sách.
 id: U04-target
 activity: U04-target
 title: "Unit 4 · Changes"
@@ -29,9 +32,9 @@ scenes:
         vi: "Target activity của Unit 4: kể về một sự kiện quan trọng trong đời bạn."
       - mai: "An important event? Like my first day at work?"
         vi: "Sự kiện quan trọng à? Như ngày đầu đi làm của mình?"
-      - emma: "Yes, exactly. First, we listen to Onyinye. Then you prepare and tell your story."
-        say: "Yes, exactly. First, we listen to Oh-neen-yeh. Then you prepare and tell your story."
-        vi: "Đúng vậy. Trước hết nghe Onyinye kể, rồi bạn chuẩn bị và kể chuyện của mình."
+      - emma: "Yes, exactly. First, we listen to Onyinye. Then you prepare and tell your story. And remember: try each exercise first. All the answers come at the end of the exercise."
+        say: "Yes, exactly. First, we listen to Oh-neen-yeh. Then you prepare and tell your story. And remember: try each exercise first. All the answers come at the end of the exercise."
+        vi: "Đúng vậy. Trước hết nghe Onyinye kể, rồi bạn chuẩn bị và kể chuyện của mình. Nhớ nhé: làm từng bài trước; đáp án hiện cùng lúc ở cuối bài."
 
   - kind: figure
     chapter: "Nigeria và Scotland"
@@ -63,7 +66,7 @@ scenes:
   - kind: blanks
     chapter: "Nghe 1.53: Onyinye"
     heading: "Task listening 2 · Listen to Onyinye and circle the right words"
-    heading_vi: "Ảnh Onyinye tr. 38 — đọc bốn câu trước, nghe rồi chọn từ đúng"
+    heading_vi: "Ảnh Onyinye tr. 38 — đọc bốn câu trước, nghe rồi chọn từ đúng; đáp án hiện sau khi nghe xong"
     image: {pdf: course-book, page: 39, clip: [406, 248, 545, 462]}
     items:
       - {n: 1, q: "Onyinye moved when she was five / fifteen years old. → ___", answer: "five"}
@@ -71,54 +74,51 @@ scenes:
       - {n: 3, q: "She remembers / doesn't remember the first time she saw snow. → ___", answer: "remembers"}
       - {n: 4, q: "She enjoyed / didn't enjoy playing in the snow. → ___", answer: "enjoyed"}
     lines:
-      - emma: "Listen to Onyinye and circle the right words. Read the sentences first. Pause the video if you need more time."
-        say: "Listen to Oh-neen-yeh and circle the right words. Read the sentences first. Pause the video if you need more time."
-        vi: "Nghe Onyinye và chọn từ đúng. Đọc bốn câu trước; cần thêm thời gian thì tạm dừng video."
+      - emma: "Exercise 2. Listen to Onyinye and circle the right words. Read the sentences first. Pause the video if you need more time."
+        say: "Exercise two. Listen to Oh-neen-yeh and circle the right words. Read the sentences first. Pause the video if you need more time."
+        vi: "Bài 2: nghe Onyinye và chọn từ đúng. Đọc bốn câu trước; cần thêm thời gian thì tạm dừng video."
         pause: 1.5
       - {track: "1.53", start: 3.35, end: 67.6, note: "1.53 · Onyinye"}
-      - tom: "One: five. She was only five years old."
-        reveal: 1
-        vi: "1: five — lúc đó cô ấy mới năm tuổi."
-      - mai: "Two: different. The trees were different, the houses were different. Everything was different."
-        reveal: 2
-        vi: "2: different — cây cối, nhà cửa, mọi thứ đều khác."
-      - tom: "Three: she remembers. She saw snow for the first time, and it was a shock."
-        reveal: 3
-        vi: "3: remembers — lần đầu thấy tuyết, cô ấy rất bất ngờ."
-      - mai: "Four: she enjoyed it. They built a snowman and had lots of fun."
-        reveal: 4
-        vi: "4: enjoyed — họ đắp người tuyết và chơi rất vui."
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "She was only five years old.", focus: 0, vi: "1: five — lúc đó cô ấy mới năm tuổi."}
+      - {mai: "The trees were different, the houses were different. Everything was different.", focus: 1, vi: "2: different — cây cối, nhà cửa, mọi thứ đều khác."}
+      - {tom: "She saw snow for the first time, and it was a shock. She remembers it.", focus: 2, vi: "3: remembers — lần đầu thấy tuyết, cô ấy rất bất ngờ."}
+      - {mai: "And she enjoyed it. They built a snowman and had lots of fun.", focus: 3, vi: "4: enjoyed — họ đắp người tuyết và chơi rất vui."}
 
   - kind: figure
-    chapter: "Trải nghiệm tốt, xấu"
-    heading: "Task vocabulary 3 · Good and bad experiences"
-    heading_vi: "Bảng tr. 38 — cụm nào nói về trải nghiệm tốt (good), xấu (bad), hay cả hai (both)?"
+    chapter: "Bài 3: trải nghiệm tốt, xấu"
+    heading: "Task vocabulary 3 · Which expressions are about good experiences? Bad? Both?"
+    heading_vi: "Bảng tr. 38 — tạm dừng video và xếp từng cụm: good (tốt), bad (xấu), both (cả hai)"
     image: {pdf: course-book, page: 39, clip: [168, 506, 438, 578]}
-    items:
-      - {box: [248, 512, 289, 530], label: "good"}
-      - {box: [291, 512, 343, 530], label: "both"}
-      - {box: [344, 512, 389, 530], label: "both"}
-      - {box: [248, 527, 283, 543], label: "bad"}
-      - {box: [286, 527, 325, 543], label: "both"}
-      - {box: [248, 543, 308, 560], label: "good"}
-      - {box: [309, 543, 362, 560], label: "good"}
-      - {box: [363, 543, 430, 560], label: "bad"}
-      - {box: [248, 557, 308, 574], label: "good"}
-      - {box: [309, 557, 383, 574], label: "bad"}
     lines:
-      - emma: "Task vocabulary. Which expressions are about good experiences? Which are about bad experiences? Which can be about both? Pause the video and think."
-        vi: "Cụm nào nói về trải nghiệm tốt, cụm nào xấu, cụm nào cả hai? Tạm dừng video và suy nghĩ."
+      - emma: "Task vocabulary, exercise 3. Which expressions are about good experiences? Which are about bad experiences? Which can be about both? Pause the video and try."
+        say: "Task vocabulary, exercise three. Which expressions are about good experiences? Which are about bad experiences? Which can be about both? Pause the video and try."
+        vi: "Bài 3: cụm nào nói về trải nghiệm tốt, cụm nào xấu, cụm nào cả hai? Tạm dừng video và làm."
         pause: 1.5
-      - {emma: "It was really exciting. That's good.", focus: 0}
-      - {emma: "It was very interesting. Usually good, but a hard day can be interesting too.", focus: 1, vi: "interesting: thường là tốt, nhưng một ngày vất vả cũng có thể thú vị."}
-      - {emma: "It was really difficult. That can be good or bad.", focus: 2}
-      - {tom: "It was boring. That's bad.", focus: 3}
-      - {tom: "It was very strange. Good or bad. Snow was strange for Onyinye!", say: "It was very strange. Good or bad. Snow was strange for Oh-neen-yeh!", focus: 4}
-      - {mai: "I had a great time. Good!", focus: 5}
-      - {mai: "I had lots of fun. Good!", focus: 6}
-      - {tom: "I had a terrible time. Bad.", focus: 7}
-      - {mai: "I had a lovely time. Good!", focus: 8}
-      - {tom: "I had a very bad time. Bad.", focus: 9}
+
+  - kind: blanks
+    chapter: "Bài 3: đáp án"
+    heading: "Task vocabulary 3 · Good, bad or both? Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc"
+    items:
+      - {n: 1, q: "It was really exciting. → ___", answer: "good"}
+      - {n: 2, q: "It was very interesting. → ___", answer: "both"}
+      - {n: 3, q: "It was really difficult. → ___", answer: "both"}
+      - {n: 4, q: "It was very boring. → ___", answer: "bad"}
+      - {n: 5, q: "It was very strange. → ___", answer: "both"}
+      - {n: 6, q: "I had a great time. → ___", answer: "good"}
+      - {n: 7, q: "I had lots of fun. → ___", answer: "good"}
+      - {n: 8, q: "I had a terrible time. → ___", answer: "bad"}
+      - {n: 9, q: "I had a lovely time. → ___", answer: "good"}
+      - {n: 10, q: "I had a very bad time. → ___", answer: "bad"}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Interesting is usually good, but a hard day can be interesting too.", focus: 1, vi: "interesting: thường là tốt, nhưng một ngày vất vả cũng có thể thú vị."}
+      - {tom: "And strange can be good or bad. Snow was strange for Onyinye!", say: "And strange can be good or bad. Snow was strange for Oh-neen-yeh!", focus: 4, vi: "strange: lạ — tốt hay xấu đều được. Tuyết rất lạ với Onyinye!"}
 
   - kind: bullets
     chapter: "Chọn sự kiện"
@@ -241,4 +241,27 @@ scenes:
       - {emma: "Let's remember. To talk about an important event, use the past simple: I moved to Scotland. I got a new job.", say: "Let's remember. To talk about an important event, yooz the past simple: I moved to Scotland. I got a new job.", focus: 0}
       - {emma: "Say when: five years ago, last month, in 2020.", say: "Say when: five years ago, last month, in twenty twenty.", focus: 1}
       - {emma: "Say how it was: it was really exciting, it was very strange.", focus: 2}
-      - {emma: "And how you felt: I had a great time. In the next video, the keyword have, and an email with your news.", focus: 3, vi: "Video sau: từ khóa have và viết email kể tin tức."}
+      - {emma: "And how you felt: I had a great time.", focus: 3}
+
+  - kind: words
+    chapter: "Từ vựng A2 của bài"
+    heading: "A2 words in this lesson"
+    heading_vi: "Bảng từ của sách (English Profile): từ cấp độ A2 của Target activity — nghe, đọc theo, tạm dừng để chép"
+    items:
+      - {w: "big", pos: "adj", vi: "lớn, quan trọng — a big day"}
+      - {w: "get married", pos: "v", vi: "kết hôn"}
+      - {w: "happen", pos: "v", vi: "xảy ra — When did it happen?"}
+      - {w: "have a baby", pos: "phr", vi: "sinh con"}
+      - {w: "strange", pos: "adj", vi: "lạ — It was very strange."}
+      - {w: "time", pos: "n", vi: "khoảng thời gian — I had a great time."}
+    lines:
+      - emma: "Finally, the A2 words from this lesson, from the book's word list. Listen and repeat. Pause the video to copy them."
+        vi: "Cuối bài: các từ A2 của bài theo bảng từ của sách. Nghe, đọc theo; tạm dừng video để chép."
+      - {emma: "big. A big day.", focus: 0}
+      - {emma: "get married", focus: 1}
+      - {emma: "happen. When did it happen?", focus: 2}
+      - {emma: "have a baby", focus: 3}
+      - {emma: "strange. It was very strange.", focus: 4}
+      - {emma: "time. I had a great time.", focus: 5}
+      - emma: "Well done! In the next video, the keyword have, and an email with your news."
+        vi: "Giỏi lắm! Video sau: từ khóa have và viết email kể tin tức."
