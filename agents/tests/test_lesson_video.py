@@ -493,7 +493,7 @@ def test_a2_answers_after_reading_and_a2_words_at_end(unit):
     từ A2 của unit trong bảng từ English Profile của sách — docs/agent-hoc-tap/08 mục 6.9.
     Đợt 33: không bỏ bài để giữ dưới 10 phút — video dài hơn khi bài cần (bài 5.2 hơn 15 phút), mọi audio có trong bộ CD
     của bốn bài học đều được phát. Đợt 34 (người học: "fix lại cho unit 3 và unit 4 luôn nhé ko bỏ bài và đáp án hiển thị
-    ra sau nhé"): Unit 3–4 làm lại theo cùng khuôn."""
+    ra sau nhé"): Unit 3–4 làm lại theo cùng khuôn; đáp án không chỉ lướt qua vài giây ở cuối cảnh."""
     from lesson_video import wordlist
     built = {x["id"]: x for x in json.loads((EU_A2 / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
     paths = sorted((EU_A2 / "lessons").glob(f"{unit}-*.yaml"))
@@ -503,14 +503,18 @@ def test_a2_answers_after_reading_and_a2_words_at_end(unit):
         lesson = sc.load(path)
         kinds = [s.kind for s in lesson.scenes]
         assert "words" in kinds and set(kinds[kinds.index("words"):]) == {"words"}, lesson.id   # bảng từ ở cuối
-        for s in lesson.scenes:
+        for k, s in enumerate(lesson.scenes):
             if s.kind not in ("blanks", "match", "pairs", "mcq"):
                 continue
             shown = [i for i, ln in enumerate(s.lines) if ln.reveal]
             if not shown:
                 continue   # câu hỏi đọc trước, đáp án ở cảnh sau bài đọc (bài đọc của Target, Explore)
-            assert {str(k) for k in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
+            assert {str(x) for x in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
             assert all(ln.focus is not None for ln in s.lines[shown[0]:] if ln.track), (lesson.id, s.heading)
+            # đáp án không lướt qua (đợt 34): sau "Here are all the answers." còn dòng đọc lại / nhắc tạm dừng, hoặc cảnh
+            # kế tiếp hiện lại đủ đáp án (bảng compare, hội thoại, hình giải thích)
+            nxt = lesson.scenes[k + 1].kind if k + 1 < len(lesson.scenes) else ""
+            assert len(s.lines) > shown[0] + 1 or nxt in ("compare", "letter", "figure", "bullets", "vocab"), (lesson.id, s.heading)
         assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), lesson.id
         assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
         assert built[lesson.id]["duration"] >= 5 * 60, lesson.id   # không giới hạn trên (đợt 33)

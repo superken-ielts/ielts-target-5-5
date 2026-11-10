@@ -40,6 +40,10 @@ Quy tắc kiểm (test và file 08 mục 6.9): dòng `reveal` đầu tiên của
 tra đứng trước dòng đó. Sau đó audio chỉ phát lại từng câu để nhắc theo (`track` có `focus`), như 1.42, 1.45, 1.47.
 
 Sửa thêm:
+- Soát bản dựng thấy 11 cảnh đáp án chỉ có câu "Here are all the answers." rồi chuyển cảnh: đáp án hiện chưa tới 3 giây
+  (bài 3 của `U04-lesson-1`: mười đáp án trong 2,7 giây). Nay Tom và Mai đọc lại từng đáp án, khung đỏ theo mục; bài đã nghe
+  từng câu thì Emma nhắc tạm dừng để đối chiếu. Gồm cả bài Keyword 2a của `U05-explore` (đợt 32): dựng lại (11:43 → @U5E).
+  Test kiểm: sau dòng `reveal` còn dòng thoại, hoặc cảnh ngay sau hiện lại đáp án.
 - Kokoro đánh vần từng chữ cái khi câu tiếng Anh có chữ Việt có dấu mà không có `say`. Câu "In Vietnamese, we say tầng
   mười" của Mai ở `U05-lesson-1` (đợt 32–33) bị lỗi này: thêm `say: … tung moo-ee …`, dựng lại (9:40 → @U5L1). Lệnh
   `phonemes` nay báo ⚠ mọi chữ riêng của tiếng Việt; quét lại mọi kịch bản của ba sách tiếng Anh, chỉ có câu này.
@@ -55,10 +59,11 @@ Sửa thêm:
 |---|---|
 | `books/book_english_unlimited_a2_elemetary/lessons/U03-*.yaml`, `U04-*.yaml` (+ `.mp4`) | Viết lại sáu, sửa hai; dựng lại tám video |
 | `books/book_english_unlimited_a2_elemetary/lessons/U05-lesson-1.yaml` (+ `.mp4`) | `say` cho "tầng mười"; dựng lại |
+| `books/book_english_unlimited_a2_elemetary/lessons/U05-explore.yaml` (+ `.mp4`) | Đọc lại đáp án bài Keyword 2a; dựng lại |
 | `books/book_english_unlimited_a2_elemetary/lessons/lessons.json` | Thời lượng, chương mới |
 | `agents/lesson_video/phonemes.py` | ⚠ chữ Việt có dấu trong câu tiếng Anh |
 | `tests/web/book.e2e.mjs` | Chú thích đợt 34 ở Unit 3, Unit 4 (phần kiểm không đổi: thẻ A2 23 video, nhãn video từ 5 phút) |
-| `agents/tests/test_lesson_video.py` | Hồi quy A2 thành test tham số cho Unit 3, 4, 5 (bảng `A2_ANSWERS_AFTER`: audio của bốn bài, số từ A2); sau `reveal` đầu tiên chỉ còn nghe lại từng câu (`track` có `focus`); `phonemes` báo chữ Việt có dấu |
+| `agents/tests/test_lesson_video.py` | Hồi quy A2 thành test tham số cho Unit 3, 4, 5 (bảng `A2_ANSWERS_AFTER`: audio của bốn bài, số từ A2); sau `reveal` đầu tiên chỉ còn nghe lại từng câu (`track` có `focus`); đáp án không chỉ lướt qua; `phonemes` báo chữ Việt có dấu |
 | `docs/agent-hoc-tap/08-giai-doan-0-a1-a2.md` | Mục 5, mở đầu mục 6, 6.2 (hồ sơ Mai, Tom), 6.6 (chữ Việt có dấu, tên Unit 3), 6.7, 6.8 (độ phủ Unit 3–4), 6.9 |
 | `docs/agent-hoc-tap/04-checklist.md` | P2-68 (xong); dòng đợt 34 ở P2-53; dời dòng E2E của đợt 21 |
 | `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Quy tắc đáp án hiện sau áp dụng từ Unit 3; dòng trạng thái đợt 34 |

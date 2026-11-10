@@ -368,6 +368,9 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
   - Đo mức âm ở hai đầu đoạn cắt (cửa sổ 50 ms) sau khi viết kịch bản: tám đoạn của 1.34, 1.38 bắt đầu hoặc kết thúc giữa
     chữ, đã dời vào khoảng lặng (tìm bằng mốc từng từ trong `work/transcripts/` và mức âm 20 ms). Hội thoại 1 của 1.38 có
     tiếng ồn quán cà phê (~52 dB, lời nói ~74 dB): ở đó đầu / cuối đoạn đo được 50–54 dB vẫn là khoảng giữa hai chữ.
+  - Cảnh đáp án chỉ có một câu "Here are all the answers." rồi hết: đáp án hiện chưa tới 3 giây đã sang cảnh khác (đo trên
+    bản dựng: bài 3 của `U04-lesson-1` 2,7 giây cho mười đáp án). Tìm bằng bộ đọc im lặng (thời gian từ lúc mở mọi đáp án tới
+    hết cảnh). Đã thêm phần đọc lại đáp án ở 11 cảnh của Unit 3–5 (cả `U05-explore` bài Keyword 2a), dựng lại các video đó.
   - Chữ Việt có dấu trong câu tiếng Anh (Tết, tầng mười) mà không có `say` thì Kokoro đánh vần từng chữ cái. Câu "tầng
     mười" của Mai ở `U05-lesson-1` (đợt 32) bị lỗi này: đã thêm `say`, dựng lại. Lệnh `phonemes` nay báo ⚠ mọi chữ riêng của
     tiếng Việt (ă, â, đ, ê, ô, ơ, ư và chữ có dấu thanh); é trong José, Léon không bị báo.
@@ -480,13 +483,15 @@ audio của bốn bài, số từ A2). Làm xong unit mới thì thêm unit đó
 **Đáp án hiện một lần, sau khi đọc / nghe xong.** Cảnh bài tập (`blanks`, `match`, `pairs`, `mcq`) không mở đáp án theo
 từng câu trong lúc phát bài nghe hay đọc bài. Dòng `reveal` đầu tiên của cảnh mở mọi đáp án. Mọi bài nghe để làm hay để
 kiểm tra đứng trước dòng đó. Sau dòng đó audio chỉ phát lại từng câu để nhắc theo: mỗi dòng `track` một đoạn, có `focus`.
-Nhãn đỏ trên hình không phải chỗ để hiện đáp án (mục 6.7, đợt 34).
+Nhãn đỏ trên hình không phải chỗ để hiện đáp án (mục 6.7, đợt 34). Đáp án cũng không được chỉ lướt qua: sau "Here are all
+the answers." phải có dòng đọc lại đáp án (hoặc ít nhất "Pause the video and check your answers." có `pause`), trừ khi cảnh
+ngay sau hiện lại đủ đáp án (`compare`, hội thoại `letter`, hình giải thích `figure`). Test kiểm cả hai điều.
 
 | Loại bài | Trình tự |
 |---|---|
-| Bài nghe | Emma đọc yêu cầu (`pause: 1`, người học đọc câu hỏi) → dòng `track` phát cả bài hoặc cả đoạn → "Here are all the answers." với `reveal` mọi mục → (tuỳ) vài dòng `focus` giảng câu khó. Bài nghe hai phần thì mỗi phần một cảnh |
+| Bài nghe | Emma đọc yêu cầu (`pause: 1`, người học đọc câu hỏi) → dòng `track` phát cả bài hoặc cả đoạn → "Here are all the answers." với `reveal` mọi mục → đọc lại đáp án (dòng `focus` theo mục) hoặc giảng câu khó. Bài nghe hai phần thì mỗi phần một cảnh |
 | Bài đọc | Cảnh câu hỏi (neo `items: &q1`, không `reveal`: "Read the questions. Then read the article…") → cảnh `figure` đọc bài, khung đỏ theo câu → cảnh đáp án (`items: *q1`): "Pause the video and answer." `pause: 1.5` → "Here are all the answers." `reveal` mọi mục |
-| Bài làm không cần nghe / đọc (nối, điền, xếp bảng) | "Pause the video and try." `pause: 1.5` → "Here are all the answers." `reveal` mọi mục. Bảng xếp nhóm thì dùng cảnh `compare` hiện đủ một lần, Emma đọc từng cột (`focus`) |
+| Bài làm không cần nghe / đọc (nối, điền, xếp bảng) | "Pause the video and try." `pause: 1.5` → "Here are all the answers." `reveal` mọi mục → Tom và Mai đọc lại từng câu đúng (mỗi mục một dòng `focus`). Bảng xếp nhóm thì dùng cảnh `compare` hiện đủ một lần, Emma đọc từng cột (`focus`) |
 | Bài làm trên hình trang sách (bảng nhỏ, đoạn văn có chỗ trống, ghi chú, câu cần thêm dấu) | Cảnh `figure` cả bề ngang, không nhãn: "Pause the video and try." `pause: 1.5` → cảnh `blanks` không hình: "Here are all the answers." `reveal` mọi mục |
 | Nghe kiểm tra rồi nhắc theo (từ, động từ quá khứ, mẫu câu) | Làm thử → `track` cả bài → "Here are all the answers. Now listen again and repeat." `reveal` mọi mục → từng câu một dòng `track` có `focus` và `pause` |
 | Hỏi – đáp mẫu (`qa`) | Như cũ: câu hỏi, `pause: 1.5`, câu trả lời mẫu (`reveal` từng câu). Đây là lời mẫu, không phải đáp án bài tập |

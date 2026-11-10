@@ -481,8 +481,9 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Đáp án: làm trước (tạm dừng video), đọc / nghe xong mới hiện tất cả một lần. Bỏ nhãn đáp án dán trên bài báo, tranh, email lúc đang đọc (bản đợt 31). Các bài trước đây mở đáp án từng câu nay mở một lần. Bài thêm dấu câu làm trên hình trang sách rồi mới hiện câu đúng.
   - Bảng từ A2 cuối mỗi video: Unit 3 có 11 từ (4 + 2 + 3 + 2), Unit 4 có 31 (9 + 9 + 6 + 7). Unit 3 nay có hình trong sách ở cả bốn video.
   - Dựng lại 8 video: Unit 3 27:44 → @U3TOT, Unit 4 32:45 → @U4TOT.
+  - Đáp án không lướt qua: 11 cảnh chỉ có "Here are all the answers." (đáp án hiện chưa tới 3 giây) nay đọc lại từng đáp án, khung đỏ theo mục; gồm cả `U05-explore` (Keyword 2a), dựng lại (@U5E).
   - Lệnh `phonemes` báo ⚠ chữ Việt có dấu trong câu tiếng Anh (Kokoro đánh vần từng chữ cái): sửa câu "tầng mười" ở `U05-lesson-1`, dựng lại (@U5L1). Đoạn cắt 1.34, 1.38 dời vào khoảng lặng; tên Chin-Mae đọc `Chin-May`.
-  - Test: hồi quy A2 thành test tham số cho Unit 3, 4, 5. Mỗi unit kiểm: đáp án mở một lần; bài nghe để làm / kiểm tra đứng trước, sau đó chỉ nghe lại từng câu để nhắc; bảng từ ở cuối; đủ từ A2 của unit; có hình với `box`; không `wait` / `echo`; video từ 5 phút; đủ audio có trong bộ CD. `phonemes` báo chữ Việt có dấu.
+  - Test: hồi quy A2 thành test tham số cho Unit 3, 4, 5. Mỗi unit kiểm: đáp án mở một lần; bài nghe để làm / kiểm tra đứng trước, sau đó chỉ nghe lại từng câu để nhắc; bảng từ ở cuối; đủ từ A2 của unit; có hình với `box`; không `wait` / `echo`; video từ 5 phút; đủ audio có trong bộ CD; đáp án không chỉ lướt qua ở cuối cảnh. `phonemes` báo chữ Việt có dấu.
   - Còn: Intro và Unit 1–2 (11 video) chưa làm theo khuôn này.
 
 ### Cổng G2
