@@ -479,11 +479,14 @@ def test_unit4_videos_use_book_pictures_without_countdown():
 def test_a2_unit5_answers_after_reading_and_a2_words_at_end():
     """Người học yêu cầu (đợt 32), Giai đoạn 0 từ Unit 5: đáp án hiện tất cả một lần sau khi đọc / nghe xong (dòng `reveal`
     đầu tiên của cảnh bài tập mở mọi đáp án và đứng sau mọi `track` của cảnh), cuối mỗi video là cảnh `words` — bốn video của
-    unit cùng nhau hiện hết từ A2 của unit trong bảng từ English Profile của sách — docs/agent-hoc-tap/08 mục 6.9."""
+    unit cùng nhau hiện hết từ A2 của unit trong bảng từ English Profile của sách — docs/agent-hoc-tap/08 mục 6.9.
+    Đợt 33: không bỏ bài để giữ dưới 10 phút — video dài hơn khi bài cần (bài 5.2 hơn 15 phút), mọi audio của bốn bài học
+    (2.1–2.10) đều được phát; 2.11–2.14 thuộc Look again."""
     from lesson_video import wordlist
     built = {x["id"]: x for x in json.loads((EU_A2 / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
     paths = sorted((EU_A2 / "lessons").glob("U05-*.yaml"))
     assert [p.stem for p in paths] == ["U05-explore", "U05-lesson-1", "U05-lesson-2", "U05-target"]
+    tracks = set()
     for path in paths:
         lesson = sc.load(path)
         kinds = [s.kind for s in lesson.scenes]
@@ -498,7 +501,10 @@ def test_a2_unit5_answers_after_reading_and_a2_words_at_end():
             assert shown[0] > max((i for i, ln in enumerate(s.lines) if ln.track), default=-1), (lesson.id, s.heading)
         assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), lesson.id
         assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
-        assert built[lesson.id]["duration"] < 10 * 60, lesson.id   # nhãn "· m:ss" của thẻ video (book.e2e.mjs)
+        assert built[lesson.id]["duration"] >= 5 * 60, lesson.id   # không giới hạn trên (đợt 33)
+        tracks |= {ln.track for s in lesson.scenes for ln in s.lines if ln.track}
+    assert tracks == {f"2.{n}" for n in range(1, 11)}                     # đủ audio của bài 5.1, 5.2, Target, Explore
+    assert built["U05-lesson-2"]["duration"] > 10 * 60                     # bài 5.2 không bị cắt cho vừa 10 phút
     assert len(wordlist.unit_words(wordlist.load(EU_A2), "U05")) == 59
     assert wordlist.missing(EU_A2, "U05") == []
 
@@ -878,14 +884,15 @@ def test_phoneme_review_flags_known_misreadings():
         {"b": "Hello there."},                                              # không có gì cần soát
         {"a": "Room 12, please."},                                          # số
         {"b": "When do shops close?"},                                      # close (động từ) bị đọc /kloʊs/ → ⚠ (đợt 26)
+        {"a": "I live in Ho Chi Minh City."},                               # Chi đọc /kaɪ/ → ⚠ (đợt 33)
     ]}]
     lesson = sc.Lesson.model_validate(data)
     fake = {"Use these words.": "jˈuːs ðiːz wˈɜːdz.", "Can I use your phone?": "kæn aɪ jˈuːz jʊɹ fˈoʊn?",
             "My mother livz in Whey.": "maɪ mˈʌðɚ lˈɪvz ɪn wˈeɪ.", "Room 12, please.": "ɹˈuːm twˈɛlv, plˈiːz.",
-            "When do shops close?": "wˌɛn dˈuː ʃˈɑːps klˈoʊs?"}
+            "When do shops close?": "wˌɛn dˈuː ʃˈɑːps klˈoʊs?", "I live in Ho Chi Minh City.": "aɪ lˈɪv ɪn hˈoʊ kˈaɪ mˈɪn sˈɪɾi."}
     rows = list(ph.review(lesson, lambda text, lang: fake[text]))
     assert [r.text for r in rows] == ["Use these words.", "Can I use your phone?", "My mother livz in Whey.", "Room 12, please.",
-                                      "When do shops close?"]
-    assert [bool(r.warnings) for r in rows] == [True, False, False, False, True] and "yooz" in rows[0].warnings[0]
-    assert "cloze" in rows[4].warnings[0]
-    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 6
+                                      "When do shops close?", "I live in Ho Chi Minh City."]
+    assert [bool(r.warnings) for r in rows] == [True, False, False, False, True, True] and "yooz" in rows[0].warnings[0]
+    assert "cloze" in rows[4].warnings[0] and "Ho Chee Min" in rows[5].warnings[0]
+    assert len(list(ph.review(lesson, lambda text, lang: fake.get(text, ""), every=True))) == 7

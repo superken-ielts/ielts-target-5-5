@@ -392,7 +392,7 @@ try{
     await page.waitForSelector("#p-book .bk-next");
     assert.equal(await page.locator("#p-book .bk-unit").count(), 19);   // Intro + 14 unit + 3 Achievement test + mốc A2 Key
     assert.equal(await page.locator("#p-book .bk-row").count(), 79);
-    // video bài giảng dài 5–10 phút, xếp theo thứ tự phiên (Bài 1, Bài 2, Target, Explore); nút Grammar mở phiên Intro thứ hai
+    // video bài giảng từ 5 phút (bài dài thì hơn 10 phút, đợt 33), xếp theo thứ tự phiên (Bài 1, Bài 2, Target, Explore); nút Grammar mở phiên Intro thứ hai
     const skills = {
       "Intro · About you": ["Speaking", "Listening", "Grammar"],
       "Unit 1 · People in your life": ["Listening", "Reading", "Speaking", "Explore"],
@@ -407,7 +407,9 @@ try{
       assert.deepEqual(got.map(t => t.replace(/^▶ (\w+).*/, "$1")), want, unit);
       labels.push(...got);
     }
-    assert.ok(labels.every(t => { const m = t.match(/· (\d):\d\d$/); return m && +m[1] >= 5; }), "video dài 5–10 phút: " + labels);
+    assert.ok(labels.every(t => { const m = t.match(/· (\d+):\d\d$/); return m && +m[1] >= 5; }), "video dài từ 5 phút: " + labels);
+    const u5 = await page.locator("#p-book .bk-unit", { hasText: "Unit 5 · Your space" }).locator(".bk-vids button").allTextContents();
+    assert.ok(u5.some(t => +t.match(/· (\d+):\d\d$/)[1] >= 10), "bài 5.2 dài hơn 10 phút, không cắt bài (đợt 33): " + u5);
     const intro = page.locator("#p-book .bk-unit", { hasText: "Intro · About you" });
     await intro.locator(".bk-vids button", { hasText: "Grammar" }).click();
     await page.waitForSelector("#p-book .bk-video");

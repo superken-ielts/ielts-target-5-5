@@ -44,6 +44,10 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   đáp án, đứng sau `track`); cuối mỗi video là cảnh `words` — từ A2 của bài theo bảng từ English Profile của sách
   (`python -m lesson_video wordlist ../books/<sách> --unit U0x`; lần đầu cần xlrd), bốn video của unit cùng nhau đủ mọi
   từ (test kiểm) — file 08 mục 6.9.
+- Video sách phải đủ mọi bài tập trên trang của phiên (đợt 33, người học: "nếu video dưới 10 phút không đủ cover bài trong
+  sách thì tăng thêm cho đủ"): 5–10 phút là mức thường, bài cần dài hơn thì video dài hơn; không bỏ bài tập, bài nghe,
+  luyện phát âm hay đóng vai để ép dưới 10 phút. Chỉ bỏ bài cần trang không có trong bản quét, ghi ở đầu kịch bản.
+  Trước khi dựng, đối chiếu danh sách bài tập của trang sách với kịch bản (file 08 mục 6.1, 6.4).
 - Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
   và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
   nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`

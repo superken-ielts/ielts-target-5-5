@@ -12,8 +12,12 @@
 # 2.10 đọc "Oh no!" trong nhóm 4 (chuyện không vui), Teacher's Book xếp vào nhóm 2 (ngạc nhiên): video hiện cả hai.
 # Đợt 32: đáp án hiện tất cả một lần SAU khi đọc / nghe xong (câu hỏi Across cultures hiện trước bài báo, đáp án sau bài báo,
 # như U05-target); cuối video là 7 từ A2 của bài theo bảng từ English Profile của sách (ceiling, close, crowded, Oh no!, on,
-# Really?, yeah). "close" trong bảng từ là động từ (đóng cửa) nên đọc `say: cloze`; hai câu có close tính từ (đứng gần)
+# Really?, yeah). "close" trong bảng từ là động từ (đóng cửa) nên đọc `say: cloze`; các câu có close tính từ (đứng gần)
 # để nguyên, phonemes báo ⚠ nhưng đọc đúng /kloʊs/.
+# Đợt 33 — người học: video dưới 10 phút mà chưa đủ bài trong sách thì làm dài hơn. Thêm Keyword 2b (bốn câu hỏi mới với
+# on), Across cultures 3 (thảo luận), Explore Speaking 1a (ảnh ngôi nhà), 2c (đọc lời thoại tr. 48, khung đỏ ở các câu tô
+# xanh của Mike), 5a–b (câu chuyện mẫu của Mai, Tom tỏ ra quan tâm; đến lượt bạn). Across cultures 4 (câu đố tr. 124)
+# không làm được: bản quét không có trang 124.
 # Hình trong sách: tám câu và bảng Keyword on (khung đỏ theo câu), tranh khoảng cách cá nhân, bài báo Personal space (khung
 # đỏ theo câu), ảnh ngôi nhà ở Barcelona và vết nứt trên trần, câu hỏi bài 3, đoạn hội thoại bài 4a.
 id: U05-explore
@@ -104,20 +108,35 @@ scenes:
         vi: "Đây là toàn bộ đáp án."
 
   - kind: qa
-    chapter: "Bài 2c: hỏi và trả lời"
-    heading: "Keyword 2c · Ask and answer the questions"
-    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời trước, rồi nghe câu mẫu"
+    chapter: "Bài 2b–c: hỏi và trả lời"
+    heading: "Keyword 2b–c · Four more questions with on — ask and answer all the questions"
+    heading_vi: "Bốn câu hỏi mới của Tom và Mai (2b); tạm dừng video sau mỗi câu hỏi và trả lời trước, rồi nghe câu mẫu (2c)"
     items:
       - {q: "What's your favourite programme on TV?", a: "I don't watch TV a lot, but I love cooking programmes on Sunday evenings.", ask: tom, by: mai}
       - {q: "What do you listen to on the radio?", a: "I don't listen to the radio. I listen to music on my phone, on the bus.", ask: mai, by: tom}
       - {q: "When was your first trip on a plane?", a: "Two years ago. I flew from Da Lat to Ho Chi Minh City.", ask: mai, by: tom}
+      - {q: "What do you usually do on Sunday mornings?", a: "I sleep late! Then I play football with my friends.", ask: mai, by: tom}
+      - {q: "Do you read the news on your phone?", a: "Yes, every morning, before work.", ask: tom, by: mai}
+      - {q: "Is there a good film on TV this week?", a: "I don't know. I usually watch films on my laptop.", ask: mai, by: tom}
+      - {q: "Do you like travelling on trains?", a: "Yes, I love it. The train from Hue to Da Nang is really beautiful.", ask: tom, by: mai}
     lines:
+      - emma: "Exercise 2b. Write four more questions with on. Tom and Mai wrote questions with on Sunday mornings, on your phone, on TV and on trains. Then 2c: ask and answer all the questions. Pause after each question and answer first."
+        say: "Exercise two bee. Write four more questions with on. Tom and Mai wrote questions with on Sunday mornings, on your phone, on TV and on trains. Then two see: ask and answer all the questions. Pause after each question and answer first."
+        vi: "Bài 2b: viết thêm bốn câu hỏi với on. Bài 2c: hỏi và trả lời tất cả các câu. Tạm dừng sau mỗi câu hỏi và trả lời trước."
       - {tom: "What's your favourite programme on TV?", focus: 0, pause: 1.5}
       - {mai: "I don't watch TV a lot, but I love cooking programmes on Sunday evenings.", reveal: 0}
       - {mai: "What do you listen to on the radio?", focus: 1, pause: 1.5}
       - {tom: "I don't listen to the radio. I listen to music on my phone, on the bus.", reveal: 1}
       - {mai: "When was your first trip on a plane?", focus: 2, pause: 1.5}
-      - {tom: "Two years ago. I flew from Da Lat to Ho Chi Minh City.", say: "Two years ago. I flew from Dah Lot to Ho Chi Minh City.", reveal: 2}
+      - {tom: "Two years ago. I flew from Da Lat to Ho Chi Minh City.", say: "Two years ago. I flew from Dah Lot to Ho Chee Min City.", reveal: 2}
+      - {mai: "What do you usually do on Sunday mornings?", focus: 3, pause: 1.5}
+      - {tom: "I sleep late! Then I play football with my friends.", reveal: 3}
+      - {tom: "Do you read the news on your phone?", focus: 4, pause: 1.5}
+      - {mai: "Yes, every morning, before work.", reveal: 4}
+      - {mai: "Is there a good film on TV this week?", focus: 5, pause: 1.5}
+      - {tom: "I don't know. I usually watch films on my laptop.", reveal: 5}
+      - {tom: "Do you like travelling on trains?", focus: 6, pause: 1.5}
+      - {mai: "Yes, I love it. The train from Hue to Da Nang is really beautiful.", say: "Yes, I love it. The train from Whey to Dah Nahng is really beautiful.", reveal: 6}
 
   - kind: blanks
     chapter: "Khoảng cách cá nhân: câu hỏi"
@@ -189,6 +208,39 @@ scenes:
       - tom: "In Vietnam, buses can be very crowded. When someone stands too close, I feel uncomfortable!"
         vi: "Ở Việt Nam xe buýt có thể rất đông. Ai đứng quá gần là mình thấy khó chịu!"
 
+  - kind: qa
+    chapter: "Bài 3: thảo luận"
+    heading: "Across cultures 3 · Think about the questions. Then discuss your ideas"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và nói ý của bạn, rồi nghe Tom và Mai (bài 4 là câu đố ở tr. 124 — bản quét không có trang này)"
+    items:
+      - {q: "Do you think the information in the article is correct?", a: "I think it's partly correct. But every person is different, too.", ask: emma, by: tom}
+      - {q: "In your culture, how close do people stand when they talk to friends? Colleagues? Strangers?", a: "With friends and family, we stand quite close. With colleagues, a bit further away. And with strangers, about a metre, I think.", ask: emma, by: mai}
+      - {q: "Do you know any places where people have different ideas about personal space?", a: "Big cities and small towns are different. In Ho Chi Minh City, people stand close on buses and in markets. In Da Lat, people have more space.", ask: emma, by: tom}
+    lines:
+      - emma: "Exercise 3. Think about the questions, then discuss your ideas. Do you think the information in the article is correct?"
+        say: "Exercise three. Think about the questions, then discuss your ideas. Do you think the information in the article is correct?"
+        focus: 0
+        vi: "Bài 3: nghĩ rồi thảo luận. Bạn có nghĩ thông tin trong bài báo là đúng không?"
+        pause: 1.5
+      - {tom: "I think it's partly correct. But every person is different, too.", reveal: 0}
+      - {emma: "In your culture, how close do people stand when they talk to friends? Colleagues? Strangers?", focus: 1, pause: 1.5, vi: "Ở nước bạn, người ta đứng cách nhau bao xa khi nói chuyện với bạn bè? đồng nghiệp? người lạ?"}
+      - {mai: "With friends and family, we stand quite close. With colleagues, a bit further away. And with strangers, about a metre, I think.", reveal: 1}
+      - {emma: "Do you know any places where people have different ideas about personal space?", focus: 2, pause: 1.5, vi: "Bạn có biết nơi nào người ta có quan niệm khác về khoảng cách cá nhân không?"}
+      - {tom: "Big cities and small towns are different. In Ho Chi Minh City, people stand close on buses and in markets. In Da Lat, people have more space.", say: "Big cities and small towns are different. In Ho Chee Min City, people stand close on buses and in markets. In Dah Lot, people have more space.", reveal: 2}
+
+  - kind: figure
+    chapter: "Explore Speaking 1a: ngôi nhà ở Barcelona"
+    heading: "Explore Speaking 1a · Would you like to live there?"
+    heading_vi: "Ảnh tr. 48 — ngôi nhà Estrella từng sống ở Barcelona; tạm dừng video và trả lời"
+    image: {pdf: course-book, page: 49, clip: [34, 46, 286, 250]}
+    lines:
+      - emma: "Explore Speaking. Look at the photos of the building where Estrella lived in Barcelona. Would you like to live there? Pause the video and think."
+        say: "Explore Speaking. Look at the photos of the building where Ess-trella lived in Barcelona. Would you like to live there? Pause the video and think."
+        vi: "Nhìn ảnh ngôi nhà Estrella từng sống ở Barcelona. Bạn có muốn sống ở đó không? Tạm dừng video và nghĩ."
+        pause: 1.5
+      - mai: "Yes, I would! It's old and beautiful, and I love the balconies."
+        vi: "Có! Nhà cổ, đẹp, và mình rất thích mấy cái ban công."
+
   - kind: blanks
     chapter: "Nghe 2.8: căn hộ ở Barcelona"
     heading: "Explore Speaking 1 · Listen to the first part of Estrella's story"
@@ -200,8 +252,8 @@ scenes:
       - {n: 3, q: "How long did she live in the flat? → ___", answer: "a couple of years", box: [36, 48, 284, 248]}
       - {n: 4, q: "Who went to live in the flat after her? → ___", answer: "a friend"}
     lines:
-      - emma: "Explore Speaking. Estrella tells her friend Mike about her old flat in Barcelona. There was this really big crack in the ceiling. Read the questions, then listen to the first part of her story."
-        say: "Explore Speaking. Ess-trella tells her friend Mike about her old flat in Barcelona. There was this really big crack in the ceiling. Read the questions, then listen to the first part of her story."
+      - emma: "Estrella tells her friend Mike about her old flat in Barcelona. There was this really big crack in the ceiling. Read the questions, then listen to the first part of her story."
+        say: "Ess-trella tells her friend Mike about her old flat in Barcelona. There was this really big crack in the ceiling. Read the questions, then listen to the first part of her story."
         vi: "Estrella kể cho Mike nghe về căn hộ cũ ở Barcelona: trên trần có một vết nứt rất to. Đọc câu hỏi rồi nghe phần đầu."
         pause: 1
       - {track: "2.8", start: 2.8, end: 38.6, note: "2.8 · Estrella and Mike, part 1"}
@@ -230,6 +282,51 @@ scenes:
         reveal: ["1", "2"]
         vi: "Đây là đáp án."
       - {tom: "I was right! The bedroom ceiling fell down, on the bed. Luckily, her friend was in the kitchen.", focus: 0, vi: "Mình đoán đúng! Trần phòng ngủ sập xuống giường. May mà bạn cô ấy đang ở trong bếp."}
+
+  - kind: figure
+    chapter: "Bài 2c: đọc lời thoại"
+    heading: "Explore Speaking 2c · Read the script to check (1/3)"
+    heading_vi: "Lời Estrella và Mike tr. 48 — tạm dừng video để đọc; khung đỏ ở các câu tô xanh của Mike (Tom đọc vai Mike)"
+    roles: {tom: Mike, mai: Estrella}
+    image: {pdf: course-book, page: 49, clip: [292, 76, 545, 203]}
+    items:
+      - {box: [347, 118.5, 399, 129.5]}
+      - {box: [347, 166.5, 376, 179]}
+    lines:
+      - emma: "Exercise 2c. Read the script to check. Pause the video if you need more time. Look at Mike's words in green: he uses them to show interest."
+        say: "Exercise two see. Read the script to check. Pause the video if you need more time. Look at Mike's words in green: he uses them to show interest."
+        vi: "Bài 2c: đọc lời thoại để kiểm tra (tạm dừng video nếu cần). Chú ý các câu tô xanh của Mike: anh ấy tỏ ra quan tâm."
+        pause: 1
+      - {tom: "That's great.", focus: 0}
+      - {tom: "Right.", focus: 1}
+
+  - kind: figure
+    chapter: "Bài 2c: đọc lời thoại (2)"
+    heading: "Explore Speaking 2c · Read the script to check (2/3)"
+    heading_vi: "Tạm dừng video để đọc; khung đỏ ở các câu tô xanh của Mike"
+    roles: {tom: Mike, mai: Estrella}
+    image: {pdf: course-book, page: 49, clip: [292, 201, 545, 322]}
+    items:
+      - {box: [347, 202.5, 371, 213]}
+      - {box: [347, 250, 376, 260]}
+      - {box: [347, 310.5, 376, 320.5]}
+    lines:
+      - {tom: "OK.", focus: 0, pause: 0.5}
+      - {tom: "Right.", focus: 1, pause: 0.5}
+      - {tom: "Really? It was the bedroom, yeah?", focus: 2}
+
+  - kind: figure
+    chapter: "Bài 2c: đọc lời thoại (3)"
+    heading: "Explore Speaking 2c · Read the script to check (3/3)"
+    heading_vi: "Đáp án bài 2 trong lời thoại: trần phòng ngủ sập xuống giường"
+    roles: {tom: Mike, mai: Estrella}
+    image: {pdf: course-book, page: 49, clip: [292, 321, 545, 470]}
+    items:
+      - {box: [348, 322.5, 540, 346]}
+      - {box: [347, 346.5, 406, 358]}
+    lines:
+      - {mai: "Yeah, the bedroom ceiling fell down. On the bed.", focus: 0, vi: "Đáp án bài 2: trần phòng ngủ sập xuống giường."}
+      - {tom: "That's terrible. Was she OK?", focus: 1}
 
   - kind: blanks
     chapter: "Tỏ ra quan tâm — nghe 2.10"
@@ -278,7 +375,7 @@ scenes:
     chapter: "Bài 4b: đóng vai"
     heading: "Explore Speaking 4b · Simon and Ana"
     heading_vi: "Hội thoại đã điền — Tom là Simon, Mai là Ana; nghe rồi luyện cùng bạn"
-    roles: {tom: Simon, mai: Ana}
+    roles: {emma: teacher, tom: Simon, mai: Ana}
     items:
       - {text: "SIMON: Hi, Ana. How was the festival?", say: "Hi, Ana. How was the festival?"}
       - {text: "ANA: Well, the music was great.", say: "Well, the music was great."}
@@ -304,6 +401,52 @@ scenes:
       - {read: mai, focus: 7}
       - {read: tom, focus: 8}
       - {read: mai, focus: 9}
+
+  - kind: letter
+    chapter: "Bài 5a: câu chuyện của Mai"
+    heading: "Explore Speaking 5a · Mai's story: a really bad day"
+    heading_vi: "Mai kể, Tom tỏ ra quan tâm bằng các câu ở bài 3 — nghe rồi chuẩn bị chuyện của bạn"
+    roles: {emma: teacher, mai: storyteller, tom: listener}
+    items:
+      - {text: "MAI: Last Monday was a really bad day.", say: "Last Monday was a really bad day."}
+      - {text: "TOM: Oh no! What happened?", say: "Oh no! What happened?", note: "bad news"}
+      - {text: "MAI: Well, there was no bus, so I was late for work.", say: "Well, there was no bus, so I was late for work."}
+      - {text: "TOM: Right.", say: "Right.", note: "I understand"}
+      - {text: "MAI: Then it started to rain, and I didn't have an umbrella.", say: "Then it started to rain, and I didn't have an umbrella."}
+      - {text: "TOM: That's terrible!", say: "That's terrible!", note: "bad news"}
+      - {text: "MAI: But in the evening, my students gave me a cake for my birthday!", say: "But in the evening, my students gave me a cake for my birthday!"}
+      - {text: "TOM: Really? That's wonderful!", say: "Really? That's wonderful!", note: "surprised · good news"}
+      - {text: "MAI: Yeah, it was a lovely surprise.", say: "Yeah, it was a lovely surprise."}
+    lines:
+      - emma: "Exercise 5. Think of a topic you want to talk about, and plan what to say: what you did last weekend, someone you met, a surprising event, or a really good or bad day. Here's Mai's story. Listen to how Tom shows interest."
+        say: "Exercise five. Think of a topic you want to talk about, and plan what to say: what you did last weekend, someone you met, a surprising event, or a really good or bad day. Here's My's story. Listen to how Tom shows interest."
+        vi: "Bài 5: chọn chủ đề và chuẩn bị: cuối tuần trước, một người bạn gặp, chuyện bất ngờ, một ngày rất vui / rất tệ. Nghe chuyện của Mai và cách Tom tỏ ra quan tâm."
+      - {read: mai, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: mai, focus: 2}
+      - {read: tom, focus: 3}
+      - {read: mai, focus: 4}
+      - {read: tom, focus: 5}
+      - {read: mai, focus: 6}
+      - {read: tom, focus: 7}
+      - {read: mai, focus: 8}
+
+  - kind: practice
+    chapter: "Bài 5b: đến lượt bạn"
+    heading: "Explore Speaking 5b · Talk about your topics together"
+    heading_vi: "Kể cho một người bạn; người nghe tỏ ra quan tâm: Right. Really? Oh no! That's great! Rồi đổi vai"
+    items:
+      - {q: "What did you do last weekend?", hint: "Last weekend I …"}
+      - {q: "Tell me about someone you met.", hint: "I met … at …"}
+      - {q: "Tell me about a surprising event.", hint: "Something surprising happened …"}
+      - {q: "Tell me about a really good or bad day.", hint: "Last … was a really good / bad day."}
+    lines:
+      - emma: "Your turn. Choose a topic and tell a friend. Your friend listens and shows interest: Right. Really? Oh no! That's great! Then change roles. Pause the video and practise."
+        vi: "Đến lượt bạn: chọn một chủ đề và kể cho bạn mình; người nghe dùng Right. Really? Oh no! That's great! Rồi đổi vai. Tạm dừng video và luyện."
+      - {emma: "What did you do last weekend?", focus: 0, pause: 0.5}
+      - {emma: "Tell me about someone you met.", focus: 1, pause: 0.5}
+      - {emma: "Tell me about a surprising event.", focus: 2, pause: 0.5}
+      - {emma: "Tell me about a really good or bad day.", focus: 3, pause: 1.5}
 
   - kind: words
     chapter: "Từ vựng A2 của bài"

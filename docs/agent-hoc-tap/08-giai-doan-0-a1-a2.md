@@ -154,7 +154,10 @@ chép vào `books/` rồi làm như A2:
   - Unit 5 (đợt 32) là unit đầu tiên hiện đáp án một lần sau khi đọc / nghe xong và có bảng từ A2 cuối mỗi video (mục 6.9);
   - CD2 đã chép 2.1–2.14 (Unit 5). Unit 6 trở đi chép tiếp CD2 (2.15–2.57) và CD3 (3.1–3.62) trước, ví dụ
     `python -m lesson_video transcribe ../books/book_english_unlimited_a2_elemetary 2.15 2.57`;
-  - Intro và Unit 1–4 chưa có bảng từ và vẫn mở đáp án theo từng câu: làm lại theo mục 6.9 nếu người học muốn.
+  - đợt 33: người học yêu cầu không bỏ bài để giữ video dưới 10 phút. Unit 5 làm lại cho đủ mọi bài tập của trang sách
+    (bài 5.2 dài hơn 15 phút); unit sau làm theo mục 6.1 và bước 1 của mục 6.4;
+  - Intro và Unit 1–4 chưa có bảng từ, vẫn mở đáp án theo từng câu và chưa soát bài nào bị bỏ để giữ dưới 10 phút: làm lại
+    theo mục 6.1, 6.9 nếu người học muốn.
 - **A1 Starter** (P2-52): repo chưa có sách (đã gỡ ngày 26/10).
 - Đề Achievement test và đề mẫu A2 Key: nếu người học đặt file vào thư mục sách, khai thêm vào `files` và `refs` của
   bốn mục test.
@@ -173,8 +176,13 @@ nên muốn đáp án hiện tất cả một lần sau khi đọc xong, và cu�
 
 ### 6.1 Bộ video của mỗi unit
 
-Mỗi video gắn vào đúng một phiên, id video trùng id hoạt động. Mỗi video dài 5–10 phút. Nhãn trên thẻ unit là
-`subtitle`, bắt đầu bằng kỹ năng chính.
+Mỗi video gắn vào đúng một phiên, id video trùng id hoạt động. Nhãn trên thẻ unit là `subtitle`, bắt đầu bằng kỹ năng
+chính.
+
+**Độ dài (đợt 33):** video thường dài 5–10 phút, nhưng phải đủ mọi bài tập trên trang sách của phiên. Người học: "nếu video
+dưới 10 phút không đủ cover bài trong sách thì tăng thêm cho đủ". Không bỏ bài tập, bài nghe hay phần luyện nói để giữ dưới
+10 phút; bài nhiều nội dung thì video dài hơn (bài 5.2: hơn 15 phút). Chỉ bỏ bài cần trang không có trong bản quét (ví dụ
+lời bài nghe tr. 151, câu đố tr. 124), và ghi lại ở đầu kịch bản.
 
 | Video (= hoạt động) | Nhãn (`subtitle`) | Nội dung | Làm thứ |
 |---|---|---|---|
@@ -222,7 +230,9 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 
 ### 6.4 Quy trình một unit
 
-1. Đọc trang của unit (8 trang) và Teacher's Book của unit. Ghi đáp án vào đầu kịch bản.
+1. Đọc trang của unit (8 trang) và Teacher's Book của unit. Ghi đáp án vào đầu kịch bản. Lập danh sách mọi bài tập của
+   từng trang (1a, 1b, 2, 3a…) và đối chiếu với kịch bản trước khi dựng: mỗi bài có cảnh của nó, kể cả bài nói, bài viết,
+   "listen again", luyện phát âm và đóng vai. Bài nào không làm được (trang không có trong bản quét) thì ghi ở đầu kịch bản.
 2. Viết bốn kịch bản `books/book_english_unlimited_a2_elemetary/lessons/Uxx-*.yaml`. Chép phần đầu (speakers, tag)
    từ kịch bản của Unit 1. Đáp án theo mục 6.9; cuối mỗi kịch bản là cảnh `words`:
    `python -m lesson_video wordlist ../books/book_english_unlimited_a2_elemetary --unit Uxx` in sẵn dòng YAML của các
@@ -287,6 +297,7 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
 | Moggridge, Andreas Pavel, Stereobelt, DynaTAC 8000X | `Mog-rij`, `Ahn-dray-as Pah-vel`, `Stereo-belt`, `Dye-na-tack eight thousand ex` | Bài đọc Unit 4 |
 | AT&T, NASA, $3,995, 1970s | `eigh tee and tee`, `Nasa`, `three thousand, nine hundred and ninety-five dollars`, `the nineteen seventies` | Chữ viết tắt, giá tiền, thập niên |
 | Da Lat, Da Nang, pho | `Dah Lot`, `Dah Nahng`, `fuh` | Địa danh, món ăn trong câu trả lời mẫu của Tom và Mai |
+| Ho Chi Minh City | `Ho Chee Min City` | Kokoro đọc Chi là /kaɪ/ (chữ Hy Lạp). `phonemes` báo ⚠ từ đợt 33; đã sửa ở U04-target, U05 và IELTS U04-speaking-2 |
 | José Luis Garcia, San Luis, Chorrillos, Paceville | `Ho-say Loo-ees Gar-see-a`, `San Loo-ees`, `Cho-ree-yos`, `Pah-cheh-ville` | Bài đọc Unit 5 (5.1) |
 | Estrella, Alicja, Kafé Kontakt, Seollal | `Ess-trella`, `Ah-leets-ya`, `Kafay Kontakt`, `Sol-lahl` | Tên riêng Unit 5 (5.2, Target, Explore) |
 | Mai's, DVDs, 3-bed, 8th February | `My's`, `D V Ds`, `three-bed`, `the eighth of February` | Sở hữu cách của tên Việt, chữ viết tắt số nhiều, quảng cáo phòng |
@@ -318,8 +329,8 @@ cd agents && python -m lesson_video transcribe ../books/book_english_unlimited_a
   - Ước lượng im lặng bài 4.1 là 11:09, quá 10 phút: gộp hai cảnh đoán đúng / sai vào cảnh câu hỏi và cảnh đọc bài, phát
     bài nghe 1.46 một lần rồi chữa sáu câu bằng hai dòng thoại. Bản dựng thật 9:59.
 - Đợt 32 (đáp án sau khi đọc, bảng từ, Unit 5):
-  - Bài 5.2 ước lượng 10:58: e2e chỉ nhận nhãn "· m:ss" dưới 10 phút. Bỏ bài nghe 2.6 (bài 5, đáp án vẫn hiện đủ) và vài
-    câu giảng: 9:31. Thêm cảnh `words` làm video dài thêm 30–60 giây, nên tính trước khi viết.
+  - Bài 5.2 ước lượng 10:58, nên bản đợt 32 bỏ phần trọng âm câu (bài nghe 2.6) và sáu bài khác để giữ dưới 10 phút.
+    Đợt 33 người học yêu cầu làm đủ: video dài hơn 10 phút cũng được, e2e nhận nhãn "· m:ss" từ 10 phút trở lên (mục 6.1).
   - Câu điền từ có `n: a` mà `q: "a ___"` thì hiện "a. a ___": để `q: "___"`.
   - Cắt bài báo thành cột / dải bằng mắt hay cắt ngang dòng chữ: đo dải dòng bằng hàng điểm ảnh có mực rồi cắt ở khe
     giữa hai dòng.
@@ -392,26 +403,29 @@ Hình trong sách của Unit 4 (khung đỏ theo chỗ đang giảng):
 - `U04-explore`: bảng Keyword have; sáu tài liệu tự học A–F; hai email của Judy và Mari, mỗi email hai dải.
 
 
-#### U05 · Your space — 4/5 phần có video, 4 video, 33:05 (đợt 32, đáp án sau khi đọc, bảng từ A2)
+#### U05 · Your space — 4/5 phần có video, 4 video, 45:30 (đợt 32–33: đáp án sau khi đọc, bảng từ A2, đủ mọi bài)
 
 | Phần | Trang | Video | Dài | Chương |
 |---|---|---|---|---|
-| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 42–43 | `U05-lesson-1` — Reading · I live here but I work 800 km away: places, describing places, in / on | 8:38 | 16 |
-| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 44–45 | `U05-lesson-2` — Listening · House-sitting: things in the home, there is / there are | 9:31 | 13 |
-| Target activity · nhiệm vụ nói | sách tr. 46 | `U05-target` — Speaking · Rent a room: adverts, questions about a room | 6:42 | 9 |
-| Explore Speaking · từ khoá và giao tiếp | sách tr. 47–48 | `U05-explore` — Explore Speaking · on, personal space, showing interest | 8:15 | 15 |
+| Bài 1 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 42–43 | `U05-lesson-1` — Reading · I live here but I work 800 km away: places, describing places, in / on | 9:40 | 18 |
+| Bài 2 · nghe – đọc, từ vựng, ngữ pháp | sách tr. 44–45 | `U05-lesson-2` — Listening · House-sitting: things in the home, there is / there are | 16:35 | 22 |
+| Target activity · nhiệm vụ nói | sách tr. 46 | `U05-target` — Speaking · Rent a room: adverts, questions about a room | 7:33 | 10 |
+| Explore Speaking · từ khoá và giao tiếp | sách tr. 47–48 | `U05-explore` — Explore Speaking · on, personal space, showing interest | 11:43 | 22 |
 | Look again · ôn tập và tự đánh giá | sách tr. 49 | không làm video riêng (mục 6.1) | — | — |
 
-Hình trong sách và bảng từ của Unit 5 (mục 6.9):
+Hình trong sách và bảng từ của Unit 5 (mục 6.9); đợt 33 thêm mọi bài còn thiếu (mục 6.1):
 - `U05-lesson-1` (13 cảnh có hình, 28 từ A2 ở hai cảnh `words`): khung Places; tranh nơi chốn A–D (2.1, đáp án sau khi
   nghe); bài báo "I live here but I work 800 km away" (tiêu đề và sáu khối theo cột, khung đỏ theo câu); câu hỏi bài 4;
-  tính từ trái nghĩa (2.2); bảng giới từ, in / on.
-- `U05-lesson-2` (7 cảnh, 16 từ): bốn phòng; đồ trong bếp a–q (2.3); căn bếp của Carole (2.4); ảnh căn hộ (2.5); bảng
-  Grammar there is / there are. Bỏ bài nghe 2.6 để video dưới 10 phút; đáp án bài 5 vẫn hiện đủ.
+  tính từ trái nghĩa (2.2); bảng giới từ, in / on. Đợt 33: Reading 5, Writing 3 (sáu câu của Mai).
+- `U05-lesson-2` (9 cảnh, 16 từ): bốn phòng; đồ trong bếp a–q (2.3); đố nhau trên tranh (2c); căn bếp của Carole (2.4);
+  ảnh căn hộ (2.5, rồi nghe lại bốn đoạn có đáp án); bảng Grammar there is / there are; hình bài 6 trọng âm câu, tám câu bài 5
+  (2.6 cả bài, đáp án viết HOA, rồi từng câu để nói theo). Đợt 33 thêm 2c, Speaking 4, Listening 1, 3b, 6a–c, 7a, đóng vai 8.
 - `U05-target` (4 cảnh, 8 từ): ba quảng cáo phòng A–C (câu hỏi trước, đọc từng quảng cáo, rồi mới hiện đáp án và câu bằng
-  chứng); cuộc gọi của Alicja (2.7).
-- `U05-explore` (8 cảnh, 7 từ): tám câu và bảng Keyword on; tranh khoảng cách cá nhân; bài báo Personal space (khung đỏ theo
-  câu); ảnh ngôi nhà ở Barcelona và vết nứt trên trần (2.8, 2.9); câu hỏi bài 3 (2.10); hội thoại bài 4a.
+  chứng); cuộc gọi của Alicja (2.7); đóng vai hỏi phòng A, rồi đổi vai hỏi phòng C (5c, đợt 33).
+- `U05-explore` (12 cảnh, 7 từ): tám câu và bảng Keyword on; tranh khoảng cách cá nhân; bài báo Personal space (khung đỏ theo
+  câu); ảnh ngôi nhà ở Barcelona (1a) và vết nứt trên trần (2.8, 2.9); lời thoại tr. 48 ba dải, khung đỏ ở câu tô xanh của
+  Mike (2c); câu hỏi bài 3 (2.10); hội thoại bài 4a; câu chuyện mẫu của Mai (5a) và đến lượt bạn (5b).
+- Không làm được (bản quét thiếu trang): Speaking 3b của bài 5.2 (lời bài nghe tr. 151), Across cultures 4 (câu đố tr. 124).
 
 <!-- bảng độ phủ: cập nhật sau mỗi unit -->
 

@@ -141,7 +141,7 @@ scenes:
         focus: 3
         vi: "Sự kiện của mình: mình có việc mới, trở thành giáo viên tiếng Anh."
       - tom: "And mine is: I moved to Ho Chi Minh City for university."
-        say: "And mine is: I moved to Ho Chi Minh City for university."
+        say: "And mine is: I moved to Ho Chee Min City for university."
         focus: 5
         vi: "Còn mình: chuyển vào TP. Hồ Chí Minh học đại học."
 
@@ -199,7 +199,7 @@ scenes:
       - emma: "Your turn. Mai asks about your important event. Pause the video after each question and answer. Then listen to Tom."
         vi: "Đến lượt bạn: Mai hỏi về sự kiện của bạn. Tạm dừng video sau mỗi câu hỏi để trả lời, rồi nghe Tom."
       - {mai: "So, what's an important event in your life?", focus: 0, pause: 1.5}
-      - {tom: "I moved to Ho Chi Minh City for university.", reveal: 0}
+      - {tom: "I moved to Ho Chi Minh City for university.", say: "I moved to Ho Chee Min City for university.", reveal: 0}
       - {mai: "When did you move?", focus: 1, pause: 1.5}
       - {tom: "About two years ago, in August.", reveal: 1}
       - {mai: "And where did you live?", focus: 2, pause: 1.5}

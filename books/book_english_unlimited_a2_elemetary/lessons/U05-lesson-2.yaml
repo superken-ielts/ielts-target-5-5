@@ -8,9 +8,14 @@
 # or four times a week 5 no — đi bộ vào trung tâm 10 phút 6 yes, Kafé Kontakt cạnh trạm xe buýt; Grammar 4: 1 yoghurts
 # 2 DVDs 3 microwave 4 shops; 5: 1 a couple of radios 2 a lot of eggs 3 a microwave 4 a lot of plates 5 a couple of towels
 # 6 no 7 Are, aren't 8 Is, is).
-# Audio gốc: 2.3 (17 đồ vật, phát hai phần: nhà bếp a–i, rồi j–q), 2.4 (Carole), 2.5 (Carole và Estrella, phát nguyên bài
-# một lần cho cả bài 2 và bài 3). Không phát 2.6 (tám câu bài 5) và không đưa Speaking 4, Pronunciation 6, role play 8
-# vào video để giữ dưới 10 phút (bản đầu ước 10:58); có mấy câu ghi chú cho người trông nhà của Mai (Writing 7b).
+# Audio gốc: 2.3 (17 đồ vật, phát hai phần: nhà bếp a–i, rồi j–q), 2.4 (Carole), 2.5 (Carole và Estrella: phát nguyên bài
+# cho bài 2, rồi bài 3b nghe lại bốn đoạn có đáp án), 2.6 (tám câu bài 5: phát cả bài để kiểm tra trọng âm, rồi từng câu để
+# luyện nói theo).
+# Đợt 33 — người học: "nếu video dưới 10 phút không đủ cover bài trong sách thì tăng thêm cho đủ". Bản đợt 32 bỏ 2.6,
+# Vocabulary 2c, Speaking 4, câu hỏi Listening 1, nghe lại 3b, Pronunciation 6, bài 7a, role play 8 để giữ dưới 10 phút;
+# nay đủ cả. Speaking 3b (đọc lời bài nghe tr. 151) không làm được: bản quét không có trang 151. Trọng âm bài 6b: sách và
+# Teacher's Book không in đáp án (lời bài nghe tr. 151) — video đánh dấu theo quy tắc của bài 6a (từ mang thông tin: danh
+# từ, động từ, tính từ) và câu trả lời ngắn (Yes / No và trợ động từ cuối câu).
 # Đợt 32: đáp án hiện tất cả một lần SAU khi nghe / đọc xong (mỗi bài: làm trước, nghe audio không có đáp án, rồi một dòng
 # `reveal` mở hết); cuối video là 16 từ A2 của bài theo bảng từ English Profile của sách (đồ đạc, phòng, house-sitting —
 # kể cả armchair, bookcase, curtain, lamp, upstairs, downstairs, dirty mà trang bài học không có).
@@ -110,6 +115,33 @@ scenes:
       - {emma: "A wardrobe is a cupboard for clothes.", focus: 6, vi: "wardrobe = tủ quần áo."}
       - {emma: "And bedclothes are the sheets and covers on a bed.", focus: 7, vi: "bedclothes = chăn ga gối đệm."}
 
+  - kind: figure
+    chapter: "Bài 2c: đố nhau"
+    heading: "Vocabulary 2c · Look at the pictures and test each other"
+    heading_vi: "What's this? (một thứ) — What are these? (hai thứ trở lên). Tạm dừng video và trả lời trước, rồi nghe Mai"
+    image: {pdf: course-book, page: 45, clip: [22, 62, 536, 423]}
+    items:
+      - {box: [78, 124, 114, 148]}
+      - {box: [170, 300, 210, 330]}
+      - {box: [64, 170, 102, 198]}
+      - {box: [498, 132, 534, 180]}
+      - {box: [336, 316, 406, 350]}
+    lines:
+      - emma: "Exercise 2c. Look at the pictures and test each other. Tom asks, and Mai answers. Pause the video and answer first."
+        vi: "Bài 2c: nhìn tranh và đố nhau. Tom hỏi, Mai trả lời. Bạn tạm dừng video và trả lời trước."
+      - {tom: "What's this?", focus: 0, pause: 1.5}
+      - {mai: "It's a toaster.", focus: 0}
+      - {tom: "What are these?", focus: 1, pause: 1.5}
+      - {mai: "They're towels.", focus: 1}
+      - {tom: "What's this?", focus: 2, pause: 1.5}
+      - {mai: "It's a drawer.", focus: 2}
+      - {tom: "And this?", focus: 3, pause: 1.5}
+      - {mai: "It's a plant.", focus: 3}
+      - {tom: "What are these?", focus: 4, pause: 1.5}
+      - {mai: "They're bedclothes.", focus: 4}
+      - emma: "One thing: What's this? It's a toaster. Two or more things: What are these? They're towels."
+        vi: "Một thứ: What's this? — It's a … Hai thứ trở lên: What are these? — They're …"
+
   - kind: blanks
     chapter: "Phòng Carole thích nhất — nghe 2.4"
     heading: "Speaking 3a · Listen to Carole. What's her favourite room? What does she do there?"
@@ -127,6 +159,28 @@ scenes:
       - mai: "The kitchen! She has breakfast and dinner there, she reads there, and she loves cooking for other people."
         vi: "Nhà bếp! Cô ấy ăn sáng, ăn tối, đọc sách ở đó, và rất thích nấu ăn cho người khác."
 
+  - kind: qa
+    chapter: "Bài 4: nhà của bạn"
+    heading: "Speaking 4 · Ask and answer the questions"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời về nhà bạn, rồi nghe Mai và Tom"
+    items:
+      - {q: "What rooms do you have in your home?", a: "I have a small flat in Hue: a kitchen, a living room, a bedroom and a bathroom. There's no dining room.", ask: tom, by: mai}
+      - {q: "What's your favourite room? Why?", a: "The living room, because it has a balcony with a lot of plants. I read there in the evening.", ask: tom, by: mai}
+      - {q: "And you? What rooms do you have?", a: "My flat is very small: a bedroom, a kitchen and a bathroom. There's no living room!", ask: mai, by: tom}
+      - {q: "What's your favourite room? Why?", a: "My bedroom. It's quite noisy, but I can study and relax there.", ask: mai, by: tom}
+    lines:
+      - emma: "Exercise 4. Ask and answer the questions. Pause the video after each question and answer about your home."
+        say: "Exercise four. Ask and answer the questions. Pause the video after each question and answer about your home."
+        vi: "Bài 4: hỏi và trả lời. Tạm dừng sau mỗi câu hỏi và trả lời về nhà bạn."
+      - {tom: "What rooms do you have in your home?", focus: 0, pause: 1.5}
+      - {mai: "I have a small flat in Hue: a kitchen, a living room, a bedroom and a bathroom. There's no dining room.", say: "I have a small flat in Whey: a kitchen, a living room, a bedroom and a bathroom. There's no dining room.", reveal: 0}
+      - {tom: "What's your favourite room? Why?", focus: 1, pause: 1.5}
+      - {mai: "The living room, because it has a balcony with a lot of plants. I read there in the evening.", reveal: 1}
+      - {mai: "And you? What rooms do you have?", focus: 2, pause: 1.5}
+      - {tom: "My flat is very small: a bedroom, a kitchen and a bathroom. There's no living room!", reveal: 2}
+      - {mai: "What's your favourite room? Why?", focus: 3, pause: 1.5}
+      - {tom: "My bedroom. It's quite noisy, but I can study and relax there.", reveal: 3}
+
   - kind: figure
     chapter: "House-sitting là gì?"
     heading: "Listening 1 · house-sit"
@@ -138,6 +192,19 @@ scenes:
       - emma: "House-sit: to stay in someone's home when they are away, to keep it safe. My friend always house-sits for me when I'm on holiday."
         focus: 0
         vi: "house-sit = ở lại nhà ai đó khi họ đi vắng để trông nhà."
+
+  - kind: qa
+    chapter: "Bài 1: trông nhà giúp?"
+    heading: "Listening 1 · Look at the definition and answer the questions"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời, rồi nghe Mai và Tom"
+    items:
+      - {q: "Do you ever house-sit for friends or family? Do they house-sit for you?", a: "Yes. When my sister goes on holiday, I house-sit for her. I water her plants and feed her cat.", ask: emma, by: mai}
+      - {q: "Do you think house-sitting is a good idea? Why? Why not?", a: "Yes, I think it's a good idea. Your home is safe, and your friend has a free place to stay.", ask: emma, by: tom}
+    lines:
+      - {emma: "Do you ever house-sit for friends or family? Do they house-sit for you?", focus: 0, pause: 1.5, vi: "Bạn có bao giờ trông nhà giúp bạn bè, người thân không? Họ có trông nhà giúp bạn không?"}
+      - {mai: "Yes. When my sister goes on holiday, I house-sit for her. I water her plants and feed her cat.", reveal: 0}
+      - {emma: "Do you think house-sitting is a good idea? Why? Why not?", focus: 1, pause: 1.5, vi: "Bạn có nghĩ trông nhà giúp là ý hay không? Vì sao?"}
+      - {tom: "Yes, I think it's a good idea. Your home is safe, and your friend has a free place to stay.", reveal: 1}
 
   - kind: blanks
     chapter: "Nghe 2.5: trông nhà"
@@ -166,7 +233,7 @@ scenes:
   - kind: blanks
     chapter: "Bài 3: bạn nhớ được gì?"
     heading: "Listening 3 · Can you remember the answers to these questions?"
-    heading_vi: "Tạm dừng video và trả lời theo những gì vừa nghe; đáp án hiện cùng lúc"
+    heading_vi: "Tạm dừng video và trả lời theo những gì vừa nghe, rồi nghe lại (3b); đáp án hiện cùng lúc sau khi nghe"
     items:
       - {n: 1, q: "What's in the fridge? → ___", answer: "a couple of yoghurts"}
       - {n: 2, q: "Where are the extra bedclothes? → ___", answer: "in the wardrobe"}
@@ -179,6 +246,12 @@ scenes:
         say: "Exercise three. Can you remember the answers to these questions? Pause the video and try."
         vi: "Bài 3: bạn có nhớ câu trả lời không? Tạm dừng video và làm."
         pause: 1.5
+      - emma: "Now listen again to check. Here are the parts of the conversation with the answers."
+        vi: "Bài 3b: nghe lại để kiểm tra — các đoạn có câu trả lời."
+      - {track: "2.5", start: 40.0, end: 44.95, focus: 0, note: "2.5 · the fridge"}
+      - {track: "2.5", start: 59.98, end: 65.13, focus: 1, note: "2.5 · the bedroom"}
+      - {track: "2.5", start: 92.96, end: 108.3, focus: 2, note: "2.5 · the living room"}
+      - {track: "2.5", start: 117.1, end: 141.3, focus: 4, note: "2.5 · things near the flat"}
       - emma: "Here are all the answers."
         reveal: ["1", "2", "3", "4", "5", "6"]
         vi: "Đây là toàn bộ đáp án."
@@ -225,9 +298,9 @@ scenes:
         vi: "Câu hỏi: Is there …? / Are there any …? Trả lời ngắn: Yes, there is. / No, there aren't."
 
   - kind: blanks
-    chapter: "Bài 5: chọn từ đúng — nghe 2.6"
+    chapter: "Bài 5: chọn từ đúng"
     heading: "Grammar 5 · Circle the correct words"
-    heading_vi: "Tám câu tr. 45 — tạm dừng video và chọn; đáp án hiện cùng lúc (audio 2.6 đọc tám câu này: nghe lại trong phiên học)"
+    heading_vi: "Tám câu tr. 45 — tạm dừng video và chọn; đáp án hiện cùng lúc (audio 2.6 đọc tám câu này ở phần Pronunciation ngay sau)"
     items:
       - {n: 1, q: "There are ___ in the house. One's in Cheryl's room.", answer: "a couple of radios", hint: "no radios / a couple of radios"}
       - {n: 2, q: "There are ___ in the fridge, so please use them.", answer: "a lot of eggs", hint: "a lot of eggs / no eggs"}
@@ -252,6 +325,104 @@ scenes:
         focus: 4
         vi: "Với a couple of, a lot of có thể dùng there's hoặc there are."
 
+  - kind: figure
+    chapter: "Phát âm: trọng âm câu"
+    heading: "Pronunciation 6a · Which words are usually stressed in sentences, 1 or 2?"
+    heading_vi: "Trọng âm câu tr. 45 — tạm dừng video và nghĩ trước, rồi nghe đáp án"
+    image: {pdf: course-book, page: 46, clip: [130, 525, 545, 627]}
+    items:
+      - {box: [133, 527.5, 500, 541.5]}
+      - {box: [163, 545, 462, 558.5]}
+      - {box: [163, 557.5, 374, 571]}
+      - {box: [133, 574.5, 382, 605.5]}
+      - {box: [133, 610.5, 537, 625.5]}
+    lines:
+      - emma: "Pronunciation: sentence stress. Can you remember which words are usually stressed in sentences? 1, information words, or 2, grammar words? Pause the video and think."
+        say: "Pronunciation: sentence stress. Can you remember which words are usually stressed in sentences? One, information words, or two, grammar words? Pause the video and think."
+        focus: 0
+        vi: "Từ nào thường mang trọng âm trong câu: 1 từ mang thông tin hay 2 từ ngữ pháp? Tạm dừng video và nghĩ."
+        pause: 1.5
+      - emma: "The answer is 1. We stress information words: nouns like bed, verbs like walk, and adjectives like big."
+        say: "The answer is one. We stress information words: nouns like bed, verbs like walk, and adjectives like big."
+        focus: 1
+        vi: "Đáp án: 1 — nhấn từ mang thông tin: danh từ, động từ, tính từ."
+      - emma: "Grammar words like there, is, are, in, on and the are usually not stressed."
+        focus: 2
+        vi: "Từ ngữ pháp (there, is, are, in, on, the…) thường không nhấn."
+      - emma: "For example: There are a couple of radios in the house. Couple, radios, house."
+        focus: 3
+        vi: "Ví dụ: nhấn couple, radios, house."
+
+  - kind: bullets
+    chapter: "Bài 6b–c: đoán rồi nghe 2.6"
+    heading: "Pronunciation 6b · Guess the stressed words in the sentences in 5"
+    heading_vi: "Tám câu bài 5 — tạm dừng video và đoán từ được nhấn, rồi nghe 2.6; đáp án hiện sau khi nghe xong"
+    items:
+      - {en: "There are a couple of radios in the house. One's in Cheryl's room."}
+      - {en: "There are a lot of eggs in the fridge, so please use them."}
+      - {en: "There's a microwave in the kitchen. It's a bit old, but it's OK."}
+      - {en: "There are a lot of plates in this cupboard, on the top shelf."}
+      - {en: "There's a couple of towels in the wardrobe. They're for you."}
+      - {en: "There's no computer in the flat, but there's an internet café on the corner."}
+      - {en: "Are there any pens in that drawer? — No, there aren't."}
+      - {en: "Is there a washing machine in here? — Yes, there is."}
+    lines:
+      - emma: "Exercise 6b. Here are the sentences from Exercise 5. Guess the stressed words. Pause the video and try. Then listen to check."
+        say: "Exercise six bee. Here are the sentences from Exercise five. Guess the stressed words. Pause the video and try. Then listen to check."
+        vi: "Bài 6b: đoán từ được nhấn trong tám câu. Tạm dừng video và làm, rồi nghe để kiểm tra."
+        pause: 1.5
+      - {track: "2.6", start: 2.7, end: 64.4, note: "2.6 · eight sentences"}
+
+  - kind: bullets
+    chapter: "Trọng âm: đáp án và luyện nói"
+    heading: "Pronunciation 6c · Stressed words — practise saying the sentences"
+    heading_vi: "Từ viết HOA là từ được nhấn. Nghe từng câu, tạm dừng video và nói theo"
+    items:
+      - {en: "There are a COUPLE of RADIOS in the HOUSE. ONE's in CHERYL's ROOM."}
+      - {en: "There are a LOT of EGGS in the FRIDGE, so please USE them."}
+      - {en: "There's a MICROWAVE in the KITCHEN. It's a bit OLD, but it's OK."}
+      - {en: "There are a LOT of PLATES in this CUPBOARD, on the TOP SHELF."}
+      - {en: "There's a COUPLE of TOWELS in the WARDROBE. They're for YOU."}
+      - {en: "There's NO COMPUTER in the FLAT, but there's an INTERNET CAFÉ on the CORNER."}
+      - {en: "Are there any PENS in that DRAWER? — NO, there AREN'T."}
+      - {en: "Is there a WASHING MACHINE in HERE? — YES, there IS."}
+    lines:
+      - emma: "Here are all the stressed words, in capital letters. They're information words. In short answers, we also stress yes and no, and the last word: No, there aren't. Yes, there is."
+        vi: "Đáp án: từ viết HOA. Câu trả lời ngắn nhấn cả Yes / No và từ cuối: No, there AREN'T. Yes, there IS."
+      - emma: "Now practise saying the sentences. Listen to each sentence, then pause the video and say it."
+        vi: "Luyện nói: nghe từng câu, tạm dừng video và nói theo."
+      - {track: "2.6", start: 4.0, end: 7.7, focus: 0, note: "2.6 · sentence 1"}
+      - {track: "2.6", start: 12.1, end: 15.6, focus: 1, note: "2.6 · sentence 2"}
+      - {track: "2.6", start: 18.9, end: 22.9, focus: 2, note: "2.6 · sentence 3"}
+      - {track: "2.6", start: 27.4, end: 31.1, focus: 3, note: "2.6 · sentence 4"}
+      - {track: "2.6", start: 35.8, end: 39.1, focus: 4, note: "2.6 · sentence 5"}
+      - {track: "2.6", start: 44.2, end: 48.8, focus: 5, note: "2.6 · sentence 6"}
+      - {track: "2.6", start: 53.3, end: 57.0, focus: 6, note: "2.6 · sentence 7"}
+      - {track: "2.6", start: 60.9, end: 64.3, focus: 7, note: "2.6 · sentence 8"}
+      - emma: "Exercise 7a. In these sentences, find nine expressions with in, and two expressions with on. Pause the video and try."
+        say: "Exercise seven eigh. In these sentences, find nine expressions with in, and two expressions with on. Pause the video and try."
+        vi: "Bài 7a: tìm chín cụm với in và hai cụm với on trong tám câu. Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: compare
+    chapter: "Bài 7a: in và on"
+    heading: "Writing and speaking 7a · Expressions with in and on"
+    heading_vi: "Tất cả đáp án — in: bên trong (phòng, đồ đạc, nhà); on: trên bề mặt, ở góc phố"
+    items:
+      - {title: "in · rooms, homes", title_vi: "in + phòng, nhà (5)", lines: ["in the house", "in Cheryl's room", "in the kitchen", "in the flat", "in here"]}
+      - {title: "in · furniture", title_vi: "in + đồ đạc (4)", lines: ["in the fridge", "in this cupboard", "in the wardrobe", "in that drawer"]}
+      - {title: "on (2)", title_vi: "hai cụm với on", lines: ["on the top shelf", "on the corner"]}
+    lines:
+      - emma: "Here are all the answers. Nine expressions with in. Rooms and homes: in the house, in Cheryl's room, in the kitchen, in the flat, and in here."
+        focus: 0
+        vi: "Chín cụm với in — phòng, nhà: năm cụm."
+      - emma: "Furniture: in the fridge, in this cupboard, in the wardrobe, and in that drawer."
+        focus: 1
+        vi: "Đồ đạc: bốn cụm."
+      - emma: "And two with on: on the top shelf, and on the corner."
+        focus: 2
+        vi: "Hai cụm với on: on the top shelf (trên kệ trên cùng), on the corner (ở góc phố)."
+
   - kind: letter
     chapter: "Viết: dặn người trông nhà"
     heading: "Writing 7b · Mai's notes for a house-sitter"
@@ -272,8 +443,49 @@ scenes:
       - {read: mai, focus: 2}
       - {read: mai, focus: 3}
       - {read: mai, focus: 4}
-      - emma: "Now write your five sentences. Then ask a friend: Is there a washing machine? Where are the towels?"
-        vi: "Giờ bạn viết năm câu, rồi hỏi một người bạn: Is there a washing machine? Where are the towels?"
+      - emma: "Now write your five sentences about your home."
+        vi: "Giờ bạn viết năm câu về nhà mình."
+
+  - kind: qa
+    chapter: "Bài 8: đóng vai trông nhà"
+    heading: "Writing and speaking 8 · You're going to house-sit for a friend"
+    heading_vi: "Tom trông nhà giúp Mai và hỏi về căn hộ của cô ấy — tạm dừng video sau mỗi câu hỏi và trả lời trước"
+    items:
+      - {q: "Is there a washing machine?", a: "Yes, there is. It's in the bathroom.", ask: tom, by: mai}
+      - {q: "Are there any shops near here?", a: "Yes, there's a market five minutes away, next to the bus stop.", ask: tom, by: mai}
+      - {q: "Where are the extra towels?", a: "They're in the wardrobe, with the bedclothes.", ask: tom, by: mai}
+      - {q: "Can I use your computer?", a: "Of course. And please water the plants on the balcony!", ask: tom, by: mai}
+    lines:
+      - emma: "Exercise 8. You're going to house-sit for a friend. What questions do you want to ask? Is there a…? Are there any…? Where's…? Where are…? Can I…? Here, Tom is house-sitting for Mai. Pause after each question and answer first."
+        say: "Exercise eight. You're going to house-sit for a friend. What questions do you want to ask? Is there a? Are there any? Where's? Where are? Can I? Here, Tom is house-sitting for Mai. Pause after each question and answer first."
+        vi: "Bài 8: bạn sắp trông nhà giúp một người bạn. Bạn muốn hỏi gì? Tom trông nhà cho Mai. Tạm dừng sau mỗi câu hỏi và trả lời trước."
+      - {tom: "Is there a washing machine?", focus: 0, pause: 1.5}
+      - {mai: "Yes, there is. It's in the bathroom.", reveal: 0}
+      - {tom: "Are there any shops near here?", focus: 1, pause: 1.5}
+      - {mai: "Yes, there's a market five minutes away, next to the bus stop.", reveal: 1}
+      - {tom: "Where are the extra towels?", focus: 2, pause: 1.5}
+      - {mai: "They're in the wardrobe, with the bedclothes.", reveal: 2}
+      - {tom: "Can I use your computer?", say: "Can I yooz your computer?", focus: 3, pause: 1.5}
+      - {mai: "Of course. And please water the plants on the balcony!", reveal: 3}
+
+  - kind: practice
+    chapter: "Bài 8b–c: đến lượt bạn"
+    heading: "Writing and speaking 8b–c · Your turn: talk in A/B pairs, then change roles"
+    heading_vi: "B trông nhà cho A và hỏi; rồi đổi vai. Tạm dừng video và luyện với một người bạn"
+    items:
+      - {q: "Is there a microwave?", hint: "Is there a … ?"}
+      - {q: "Are there any shops near here?", hint: "Are there any … ?"}
+      - {q: "Where's the washing machine?", hint: "Where's … ?"}
+      - {q: "Where are the towels?", hint: "Where are … ?"}
+      - {q: "Can I use the computer?", hint: "Can I … ?"}
+    lines:
+      - emma: "Your turn. You're both in A's home, and B is the house-sitter. B asks, and A answers. Then change roles and talk again. Pause the video and practise."
+        vi: "Đến lượt bạn: cả hai ở nhà A, B là người trông nhà. B hỏi, A trả lời; rồi đổi vai. Tạm dừng video và luyện."
+      - {emma: "Is there a microwave?", focus: 0, pause: 0.5}
+      - {emma: "Are there any shops near here?", focus: 1, pause: 0.5}
+      - {emma: "Where's the washing machine?", focus: 2, pause: 0.5}
+      - {emma: "Where are the towels?", focus: 3, pause: 0.5}
+      - {emma: "Can I use the computer?", say: "Can I yooz the computer?", focus: 4, pause: 1.5}
 
   - kind: words
     chapter: "Từ vựng A2 của bài"

@@ -20,6 +20,7 @@ KNOWN = [
     (re.compile(r"\blives?\b", re.I), "lˈaɪv", "live, lives (động từ) đọc /laɪv/ → say: liv, livz"),
     (re.compile(r"\breads?\b", re.I), "ɹˈɛd", "read (hiện tại) đọc /rɛd/ như quá khứ → say: reed"),
     (re.compile(r"\bcloses?\b", re.I), "klˈoʊs", "close (động từ: đóng cửa) đọc /kloʊs/ như tính từ → say: cloze, clozes"),
+    (re.compile(r"\bChi Minh\b"), "kˈaɪ", "Ho Chi Minh: Chi đọc /kaɪ/ như chữ Hy Lạp → say: Ho Chee Min (đợt 33)"),
 ]
 HOMOGRAPHS = {"live", "lives", "read", "use", "uses", "close", "record", "present", "minute", "wind", "tear", "lead",
               "object", "content", "desert", "row", "bow", "bows", "wound"}
