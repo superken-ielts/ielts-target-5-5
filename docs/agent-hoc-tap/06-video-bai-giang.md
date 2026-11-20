@@ -1,10 +1,13 @@
-# 06 — Video bài giảng: hồ sơ Unit 1–4, quy trình và kế hoạch Unit 5
+# 06 — Video bài giảng: hồ sơ Unit 1–5, quy trình và kế hoạch Unit 6
 
 Gom lại toàn bộ việc làm video bài giảng cho **IELTS Target 5.0** — Unit 1 (đợt 3–9, 11, 14), Unit 2 (đợt 10, 24),
-Unit 3 (đợt 12, 25) và Unit 4 (đợt 31): phần nào đã có video, phần nào chưa và vì sao, cách làm một video từ đầu tới lúc
-gắn vào app, những lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 5** (mục 8) và các unit sau. **Video luyện nói
-thêm** (4 video mỗi unit, Unit 1–3 đã có, Unit 4 chưa làm) làm tiếp theo khuôn, hồ sơ nhân vật và danh sách chủ đề ở
-**mục 9**.
+Unit 3 (đợt 12, 25), Unit 4 (đợt 31) và Unit 5 (đợt 35): phần nào đã có video, phần nào chưa và vì sao, cách làm một video
+từ đầu tới lúc gắn vào app, những lỗi đã gặp. Dùng file này làm căn cứ khi làm **Unit 6** (mục 8.2) và các unit sau. **Video
+luyện nói thêm** (4 video mỗi unit, Unit 1–3 đã có, Unit 4–5 chưa làm) làm tiếp theo khuôn, hồ sơ nhân vật và danh sách chủ
+đề ở **mục 9**.
+
+**Đáp án hiện sau (từ Unit 5, đợt 35):** như Giai đoạn 0 (file 08 mục 6.9) — làm trước (tạm dừng video), nghe / đọc xong mới
+hiện tất cả đáp án một lần, rồi đọc lại từng đáp án; không dán nhãn đáp án lên hình lúc đang đọc. Test kiểm (mục 8.1).
 
 **Hình trong sách (từ Unit 4, đợt 31):** người học muốn mọi video có hình trang sách như sách Oxford Word Skills Basic.
 Mỗi video Unit 4 có ít nhất một cảnh dùng hình (ảnh, bài đọc, Tapescript, Answer key cắt từ PDF), khung đỏ chỉ chỗ đang
@@ -23,7 +26,7 @@ Video của Giai đoạn 0 (English Unlimited A2) ghi riêng ở [08-giai-doan-0
 Bảng độ phủ ở mục 1–3 in lại được bất cứ lúc nào:
 
 ```bash
-cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01 --unit U02 --unit U03 --unit U04
+cd agents && python -m lesson_video coverage ../books/ielts_target_5_0 --unit U01 --unit U02 --unit U03 --unit U04 --unit U05
 ```
 
 ---
@@ -171,6 +174,31 @@ Bảng in bằng lệnh `coverage` sau đợt 31:
 (phần đầu file). Track 41 và 43 có file nên phát thẳng; Track 39, 40, 44, 46 các giọng đọc lại Tapescript. Chưa có 4
 video luyện nói thêm (mục 9, P2-57).
 
+## 3b. Unit 5 · Thoughts — độ phủ video
+
+Bảng in bằng lệnh `coverage` sau đợt 35:
+
+### U05 · Thoughts — 6/7 phần có video, 11 video, 1:16:34
+
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 58–59 | `U05-speaking-1` — Vocabulary 1: thought processes, state verbs | 5:10 | 10 |
+| Speaking & Vocabulary | sách tr. 58–59 | `U05-speaking-2` — Speaking 1–2: how people think, expressing opinions | 7:18 | 11 |
+| Listening | Listening tr. 60–61 | `U05-listening-1` — Listening 1: understanding diagrams | 9:26 | 8 |
+| Listening | Listening tr. 60–61 | `U05-listening-2` — Listening 2: practice with diagrams | 8:57 | 9 |
+| Reading | sách tr. 62–64 | `U05-reading-1` — Reading 1–2: guessing new words in context | 7:47 | 12 |
+| Reading | sách tr. 62–64 | `U05-reading-2` — Reading 2: practise with unknown words, true / false / not given | 6:33 | 9 |
+| Writing | sách tr. 65–66 | `U05-writing-1` — Writing 1: understanding instructions, planning both sides | 5:34 | 12 |
+| Writing | sách tr. 65–66 | `U05-writing-2` — Writing 2: a balanced composition, examiner's comments | 6:55 | 9 |
+| Consolidation | sách tr. 67 | `U05-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 5:48 | 11 |
+| Exam practice | sách tr. 68–69 | `U05-exam-listening` — Exam practice: Listening — a talk about mind-mapping | 7:38 | 8 |
+| Exam practice | sách tr. 68–69 | `U05-exam-reading` — Exam practice: Reading — What is Mensa? | 5:27 | 10 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
+
+**Kết luận:** Unit 5 có video cho mọi phần có trang trong Course Book (6/7 phần), 11 video, mọi video có hình trong sách và
+theo khuôn đáp án hiện sau (phần đầu file, mục 8.1). Track 52–54 có file nên phát thẳng; Track 48–51, 55, 56 không có file
+nên các giọng đọc lại Tapescript. Chưa có 4 video luyện nói thêm Unit 4–5 (mục 9, P2-57).
+
 ## 4. Lịch sử từng video
 
 | Đợt | Video | Nội dung chính | Kiểu cảnh | Nguồn đáp án |
@@ -236,14 +264,25 @@ video luyện nói thêm (mục 9, P2-57).
 | 31 | `U04-consolidation` Consolidation | Tám câu về Phần 3 (nhãn T / F), **Track 46 đọc lại bằng bốn giọng**, người nói nào trả lời tốt, trả lời mẫu, tạo từ, collocation với have, sửa 4 lỗi | figure, bullets + `hide_text`, qa | Suy ra; Tapescript Track 46 |
 | 31 | `U04-exam-reading` Exam practice: Reading | Quảng cáo "London History Museum" ba dải, nối ảnh – mục, tìm mục chứa thông tin, 7 câu T / F / NG, câu bằng chứng, 6 từ | figure, vocab | Suy ra, kèm câu bằng chứng |
 | 31 | `U04-exam-writing` Exam practice: Writing | Đề "talent alone" (nhãn là nghĩa từ khóa), ý của Tom, bài luận mẫu Michael Jordan (cắt từ Answer key, ba dải, nhãn vai trò từng đoạn), cụm từ hay, chia 40 phút | figure, compare, vocab, timing | Answer key Exam Practice Writing C |
+| 35 | `U05-speaking-1` Vocabulary 1, Grammar check, Pronunciation check | Sáu ảnh (hai dải), điền động từ rồi **Track 48 đọc lại** (Jerry, Tom, Mai) mới hiện đáp án, have / make / use, động từ trạng thái, Watch out (sửa sau khi tạm dừng), /t/ của don't, can't (Track 49: Tom đọc), luyện nói theo | figure, blanks, errors, practice | Tapescript Track 48; suy ra |
+| 35 | `U05-speaking-2` Speaking 1–2 | Bốn ảnh nghề, câu hỏi 1B, Exam tip Phần 1, **Track 50–51 đọc lại** (Emma giám khảo, Jerry Speaker A, Mai Speaker B), người trả lời tốt hơn, cụm nêu ý kiến, câu trả lời mẫu của Tom, đến lượt bạn | figure, qa, blanks, practice | Suy ra từ Tapescript |
+| 35 | `U05-listening-1` Listening 1 | Năm sơ đồ (ba hình), đoán nội dung, **phát Track 52** rồi nối đoạn – sơ đồ, chỗ trống trên sơ đồ (Track 53 + bốn đoạn của Track 52), đúng / sai về cách điền sơ đồ, Exam tip | figure, match, blanks | Tapescript; 1D gợi ý |
+| 35 | `U05-listening-2` Listening 2 | Sơ đồ bộ não, **Track 54 chia hai phần** (câu 1–6 nối, 7–14 một từ), đáp án kèm câu nghe được và paraphrase, tự đánh giá, Key vocabulary | figure, match, blanks | Answer key |
+| 35 | `U05-reading-1` Reading 1–2 | Đoán nghĩa capacity, sieve (tranh a–d), tune in, alert, judgement, brainy … in two minds trong ngữ cảnh, câu của Tom và Mai | figure, mcq, blanks, qa | Suy ra |
+| 35 | `U05-reading-2` Reading 3 | Câu hỏi trước, quảng cáo **Memory Enhancer** ba dải (Mai đọc), 6 câu T / F / NG, 6 câu ≤ 3 từ, nghĩa mười từ tô vàng, remember / recall / memorize | blanks, figure, bullets | Answer key |
+| 35 | `U05-writing-1` Writing 1, 2A–B | Hai ảnh lớp học, đề bài viết, ghi chú trên đề, bảng bốn cột, xếp 8 ý rồi bảng đầy đủ, thêm ý của bạn | figure, qa, blanks, compare | Suy ra |
+| 35 | `U05-writing-2` Writing 2C–D | Bài A (Mai đọc) và bài B ba dải (Tom đọc), chọn bài trước, **nhận xét của giám khảo** cắt từ Answer key, dàn bài năm đoạn, đến lượt bạn viết | figure, qa, compare, bullets, practice | Answer key |
+| 35 | `U05-consolidation` Consolidation | Lời khuyên từ vựng, câu trả lời tốt hơn, câu trả lời của Tom, chính tả, trọng âm (Track 55: Emma đọc), họ từ, sửa 5 lỗi | mcq, figure, blanks, qa, practice | Suy ra |
+| 35 | `U05-exam-listening` Exam practice: Listening | Bài nói về mind-mapping — **Track 56 đọc lại bằng giọng giảng viên** (`bf_isabella`), câu 1–6 ghi chú, 7–14 nhãn sơ đồ tư duy (không theo thứ tự số) | blanks, figure | Suy ra theo Tapescript |
+| 35 | `U05-exam-reading` Exam practice: Reading | Trang **What is Mensa?** ba dải (Mai đọc), câu 1–2 a/b/c, 3–5 chọn ba trong sáu, 6–10 T / F / NG, câu bằng chứng | figure, mcq, blanks | Suy ra |
 
 Đợt 4 dựng lại hai video Speaking bằng Kokoro (trước đó là Flite). Mọi video hiện tại: Kokoro q8, Emma `af_heart`,
 Tom `am_michael` (thêm Mai `af_bella` trong `U02-speaking-2`, `U03-exam-listening`, `U04-speaking-1`, `U04-writing-1`,
 `U04-consolidation` và Jerry `am_liam` trong `U03-exam-listening`, `U04-speaking-1`, `U04-writing-1`, `U04-writing-2`,
-`U04-consolidation`), tốc độ 0,9. Đợt 24 cài lại Kokoro trên máy mới từ npm (`kokoro-q8-shards@1.0.0`, sha256 khớp
+`U04-consolidation`, giảng viên `bf_isabella` trong `U05-exam-listening`), tốc độ 0,9. Đợt 24 cài lại Kokoro trên máy mới từ npm (`kokoro-q8-shards@1.0.0`, sha256 khớp
 bản Hugging Face; `kokoro-onnx` 0.6.1), giọng và tốc độ như cũ.
 
-## 5. Quy trình làm một video (đã dùng cho cả 59 video)
+## 5. Quy trình làm một video (đã dùng cho cả 70 video)
 
 1. **Đọc trang sách**: mở trang trong app (tab Sách → phiên học) hoặc kết xuất ảnh trang bằng PyMuPDF; ghi lại số
    trang PDF (`page` trong kịch bản là trang PDF, không phải số in). PDF là bản quét — không có lớp chữ, chép tay
@@ -346,6 +385,9 @@ dùng cho bài nói mẫu trong thi thử.
 | Coco Chanel, Chanel No. 5, Muhammad Ali, Pelé | `Coco Shah-nel`, `Shah-nel Number Five`, `Mohammed Ali`, `Pelay` | Kokoro đọc Chanel /ʃeɪnəl/ khi đứng sau Coco |
 | O level, A level (kỳ thi) | `oh level`, `eigh level` | Như dòng A levels ở trên |
 | £6.50, 9 a.m. to 6 p.m. | `six pounds fifty`, `nine eigh em to six pee em` | Giá tiền, giờ mở cửa |
+| IQ, Tariq, Da Lat | `eye cue`, `Tah-rik`, `Dah Lot` | Kokoro đọc IQ là /ɪk/ (đợt 35) |
+| don't think, can't concentrate (âm /t/ bị nuốt) | không viết `say` | Viết `don'` thì Kokoro đọc /dɑːn/, `can'` thành /kæn/ (nghĩa ngược lại). Để nguyên, Emma giải thích (đợt 35) |
+| the uses of intelligence, their lives (danh từ) | không viết `say` | `phonemes` đánh ⚠ nhưng Kokoro đọc đúng; ghi chú ở đầu kịch bản |
 
 Những lỗi đã gặp và cách tránh:
 
@@ -424,11 +466,46 @@ Cách đã làm ở đợt 31:
 - **Hình trong sách** ở mọi video (xem phần đầu file). Nhãn đỏ thường là đáp án, nên cảnh hình đặt sau lời nhắc "Pause the
   video and try".
 
-### 8.1 Kế hoạch Unit 5 · Thoughts (sách in tr. 58–69, trang PDF 59–70)
+### 8.1 Unit 5 · Thoughts (sách in tr. 58–69, trang PDF 59–70): cách đã làm (đợt 35)
 
-Làm theo khuôn Unit 4 (11 video, có hình trong sách ở mọi video). Đọc trang PDF 59–70 và trang Answer key của Unit 5 (sách in
-tr. 267–268) trước khi viết. Bài nghe có file: tìm mã `U05-L…` trong `book.json › files`, chép lời bằng lệnh `transcribe`
-như trên. Sau đó làm 4 video luyện nói thêm Unit 4 và Unit 5 theo mục 9.
+Người học: "ielts làm tiếp unit 5". 11 video theo khuôn Unit 4 (bảng độ phủ ở mục 3b, lịch sử ở mục 4):
+
+| Phần (`activity`) | Trang in | Video | Đáp án / nghe |
+|---|---|---|---|
+| Speaking & Vocabulary (`U05-speaking-vocab`) | 58–59 | `U05-speaking-1` (Vocabulary 1, Grammar check, Pronunciation check), `U05-speaking-2` (Speaking 1–2) | Track 48–51 không có file → đọc lại; Answer key không có, suy ra từ Tapescript |
+| Listening (`U05-listening`) | 60–61 | `U05-listening-1` (sơ đồ, Track 52–53), `U05-listening-2` (bài giảng về bộ não, Track 54) | Answer key Listening 2A; 1B–C theo Tapescript, 1D gợi ý |
+| Reading (`U05-reading`) | 62–64 | `U05-reading-1` (Reading 1–2: đoán nghĩa từ), `U05-reading-2` (Reading 3: Memory Enhancer) | Answer key Reading 3B; còn lại suy ra |
+| Writing (`U05-writing`) | 65–66 | `U05-writing-1` (Writing 1, 2A–B), `U05-writing-2` (2C–D, nhận xét của giám khảo) | Answer key Writing 2D (bài luận Workbook không dùng) |
+| Consolidation (`U05-consolidation`) | 67 | `U05-consolidation` | Track 55 đọc lại; suy ra |
+| Exam practice (`U05-exam-practice`) | 68–69 | `U05-exam-listening` (mind-mapping, Track 56 đọc lại), `U05-exam-reading` (Mensa) | Suy ra theo Tapescript và bài đọc |
+
+Cách đã làm ở đợt 35:
+- **Đáp án hiện sau** (khuôn của Giai đoạn 0, file 08 mục 6.9): cảnh bài tập hỏi "Pause the video and try", nghe / đọc xong
+  mới hiện tất cả đáp án một lần ("Here are all the answers."), rồi Emma, Tom, Mai đọc lại từng đáp án kèm câu bằng chứng.
+  Bài đọc: câu hỏi trước (neo `items: &q`), cảnh hình đọc bài (khung đỏ theo câu, không nhãn), cảnh đáp án (`items: *q`).
+  Bài nghe do các giọng đọc lại thì cảnh nghe đặt `hide_text: true`, cảnh đáp án tách riêng. Test
+  `test_ielts_unit5_videos_book_pictures_and_answers_after` kiểm (dùng chung `_check_answers_after` với test của sách A2).
+- **Bài nghe có file** (U05-L1B = Track 52, U05-L1C = Track 53 chỉ là lời dẫn, U05-L2A = Track 54): chép lời bằng
+  `python -m lesson_video transcribe ../books/ielts_target_5_0 U05-L1B U05-L2A` (khoảng mã, gồm cả L1C) để có mốc từng từ;
+  đầu / cuối mỗi đoạn cắt ở khoảng lặng. Track 54 chia hai phần cho hai nhóm câu (1–6, 7–14) thay vì phát hai lần cả bài;
+  bài 1C phát lại bốn đoạn của Track 52 có chỗ trống.
+- **Bài nghe không có file** (Track 48–51, 55, 56): đọc lại đúng Tapescript — Jerry `am_liam`, Mai `af_bella` cho người nói,
+  Emma cho giám khảo; bài nói Exam practice dùng giọng giảng viên `bf_isabella` để không lẫn với Emma.
+- **Hình trong sách** ở mọi video: ảnh, sơ đồ (Listening 1 chia ba hình cho chữ đủ to), bài đọc và bài luận viết tay cắt dải
+  120–150 điểm PDF, nhận xét của giám khảo cắt từ Answer key, sơ đồ tư duy Exam practice. Toạ độ dòng chữ đo bằng hàng điểm
+  ảnh có mực; chữ màu đỏ (trang Mensa) đo theo kênh màu.
+- **Độ dài**: video dưới 5 phút thì thêm phần luyện gắn với bài (Writing 1: thêm một ý cho mỗi cột).
+- **Lỗi đã gặp**: cảnh `blanks` có `image` mà hình là dải rộng (bốn tranh sieve, khung Vocabulary C, Errors, Key vocabulary
+  của Reading 3) thì hình bên trái chỉ cao ~60 px, không đọc được, còn chữ của danh sách nhỏ đi — dùng cảnh `figure` cả bề
+  ngang để làm bài, cảnh đáp án thì không đặt hình. Cảnh `mcq` năm câu xếp năm cột làm cụt phương án — dùng `blanks` với
+  phương án trong ngoặc. Khung cắt sơ đồ sát mép làm cụt nhãn (PARIETAL LOBES): đo lại mép bằng lưới phóng to rồi nới
+  khung. Chép câu đề đúng nguyên văn: soát lại bằng ảnh trang phóng to trước khi dựng.
+
+### 8.2 Kế hoạch Unit 6 · Place (sách in tr. 74–85, trang PDF 75–86)
+
+Làm theo khuôn Unit 5 (mục 8.1): 11 video, hình trong sách, đáp án hiện sau. Answer key trang PDF 269–270. Bài nghe có file:
+U06-L1A, L1B, L1C, L1D, L2A, L3A — chép lời trước bằng `transcribe ../books/ielts_target_5_0 U06-L1A U06-L3A`. Sau đó làm
+4 video luyện nói thêm cho Unit 4–6 theo mục 9.
 
 ## 9. Video luyện nói thêm — khuôn 4 video mỗi unit (Unit 1: đợt 14, Unit 2: đợt 24, Unit 3: đợt 25)
 

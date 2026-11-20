@@ -1,0 +1,243 @@
+# Video bài giảng Unit 5 · Reading 3: practice with unknown words and phrases, Key vocabulary in context (sách in trang 63–64).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-reading-2.yaml
+# Cách viết: xem đầu file U02-reading-1.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): đọc câu hỏi trước, đọc bài
+# quảng cáo (Mai đọc, khung đỏ theo câu), rồi mới hiện tất cả đáp án kèm câu bằng chứng. Đáp án theo Answer key (sách in trang
+# 267–268): 1 T, 2 NG, 3 T, 4 F, 5 F, 6 NG, 7 ten / 10, 8 gains, 9 forget, 10 retrieve, 11 focus on detail, 12 In minutes.
+# Nghĩa mười từ tô vàng (3A) và Key vocabulary in context (remember / recall, remember, memorize) suy ra.
+# Hình trong sách: bài quảng cáo Memory Enhancer cắt ba dải (khung đỏ theo câu), các câu tự đánh giá 3D tr. 64 (khung Key
+# vocabulary không đặt bên trái danh sách câu: chữ quá nhỏ). Không đếm ngược. `phonemes` đánh ⚠ "their lives" (danh từ,
+# Kokoro đọc đúng /laɪvz/) — đừng sửa thành livz.
+id: U05-reading-2
+activity: U05-reading
+title: "Unit 5 · Thoughts"
+subtitle: "Reading 2: practise with unknown words, true / false / not given"
+title_vi: "Đọc quảng cáo khóa học Memory Enhancer: đúng / sai / không có thông tin, điền không quá ba từ, đoán nghĩa từ mới; remember, recall, memorize"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Reading for Unit 5. Now we practise with an exam-style text: an advertisement for a course that improves your memory."
+        say: "Welcome back to Reading for Unit five. Now we practise with an exam-style text: an advertisement for a course that improves your memory."
+        vi: "Luyện với bài đọc kiểu thi: quảng cáo một khóa học cải thiện trí nhớ."
+      - tom: "A memory course? I need that!"
+        vi: "Khóa học trí nhớ à? Mình cần lắm!"
+      - emma: "Then read carefully. Questions first, then the text. All the answers come after the reading."
+        vi: "Vậy đọc kỹ nhé: câu hỏi trước, bài đọc sau; đáp án hiện sau khi đọc xong."
+
+  - kind: blanks
+    chapter: "Reading 3A–B: câu hỏi 1–6"
+    heading: "Reading 3B · Questions 1–6: true (T), false (F) or not given (NG)?"
+    heading_vi: "Đọc câu hỏi trước — chưa trả lời; đáp án hiện sau khi đọc bài quảng cáo"
+    items: &r3
+      - {n: 1, q: "The course will show you new ways to remember names and faces. → ___", answer: "T"}
+      - {n: 2, q: "Most successful people have met a world leader. → ___", answer: "NG"}
+      - {n: 3, q: "People who are very successful in business have a good memory. → ___", answer: "T"}
+      - {n: 4, q: "None of the Memory Enhancer techniques have been tested. → ___", answer: "F"}
+      - {n: 5, q: "Doing the course will make you more like other people. → ___", answer: "F"}
+      - {n: 6, q: "Claire and David did the course in order to get better jobs. → ___", answer: "NG"}
+    lines:
+      - emma: "Reading 3: practice with unknown words and phrases. Exercise A. Look at the highlighted words and phrases in the advertisement, but don't check them in a dictionary. You will need to guess their meanings to answer the questions."
+        say: "Reading three: practice with unknown words and phrases. Exercise eigh. Look at the highlighted words and phrases in the advertisement, but don't check them in a dictionary. You will need to guess their meanings to answer the questions."
+        vi: "Bài A: nhìn các từ tô vàng nhưng đừng tra từ điển — phải đoán nghĩa để trả lời."
+      - emma: "Exercise B. Read the advertisement for a course that improves your memory. For questions 1 to 6, decide if the information agrees with the advertisement. Write T for true, F for false or NG for not given. First, read the questions. Pause the video."
+        say: "Exercise B. Read the advertisement for a course that improves your memory. For questions one to six, decide if the information agrees with the advertisement. Write tee for true, ef for false or en gee for not given. First, read the questions. Pause the video."
+        vi: "Bài B: câu 1–6 — đúng (T), sai (F) hay không có thông tin (NG)? Đọc câu hỏi trước, tạm dừng video."
+        pause: 1.5
+
+  - kind: figure
+    chapter: "Đọc quảng cáo Memory Enhancer"
+    heading: "Reading 3B · Memory Enhancer (1/3)"
+    heading_vi: "Bài quảng cáo tr. 64 — Mai đọc, khung đỏ theo câu; để ý các từ tô vàng"
+    image: {pdf: course-book, page: 65, clip: [62, 188, 528, 290]}
+    items:
+      - {box: [66, 192, 455, 239]}
+      - {box: [70, 245, 458, 267]}
+      - {box: [70, 267, 458, 289]}
+    lines:
+      - {mai: "Memory Enhancer. A course you'll never forget! Learn the techniques that will help you memorize names, faces and so much more.", focus: 0}
+      - {mai: "Successful people have very good memories! If you don't believe us, ask anyone who's met a world leader or a business tycoon. The people who really make things happen don't forget.", focus: 1}
+      - {mai: "Now you, too, can recall names and numbers in seconds. Using scientifically proven techniques, Memory Enhancer is a course that will put you ahead of the rest.", focus: 2}
+
+  - kind: figure
+    heading: "Reading 3B · Memory Enhancer (2/3)"
+    heading_vi: "Bài quảng cáo tr. 64"
+    image: {pdf: course-book, page: 65, clip: [62, 288, 528, 356]}
+    items:
+      - {box: [70, 290, 300, 316]}
+      - {box: [70, 317, 400, 340]}
+      - {box: [70, 341, 400, 354]}
+    lines:
+      - {mai: "'Memory Enhancer changed my life!' Claire Brown. 'I've said goodbye to my diary!' David Stone.", focus: 0}
+      - {mai: "These are just two of the satisfied customers who signed up for Memory Enhancer and, in ten easy lessons, improved their lives forever.", focus: 1}
+      - {mai: "Here are just a few of the gains you can achieve when you register right now.", focus: 2}
+
+  - kind: figure
+    heading: "Reading 3B · Memory Enhancer (3/3)"
+    heading_vi: "Bài quảng cáo tr. 64"
+    image: {pdf: course-book, page: 65, clip: [62, 352, 528, 456]}
+    items:
+      - {box: [70, 355, 400, 377]}
+      - {box: [70, 377, 400, 398]}
+      - {box: [70, 398, 400, 409]}
+      - {box: [70, 409, 400, 419]}
+      - {box: [70, 419, 400, 430]}
+      - {box: [70, 430, 400, 440]}
+      - {box: [70, 440, 400, 451]}
+    lines:
+      - {mai: "Memorize the names and faces of everyone you meet and never forget them. Impress people you've recently met by remembering them when they've forgotten you.", focus: 0}
+      - {mai: "Easily retrieve essential data. Have phone numbers, addresses, pin numbers and other bank details stored in your memory.", focus: 1}
+      - {mai: "Store dates and figures for tests and exams. Never fail another test in your life.", focus: 2}
+      - {mai: "Develop clearer concentration and extend the time you can focus on detail.", focus: 3}
+      - {mai: "Be more alert when you drive or operate machines.", focus: 4}
+      - {mai: "Memorize long speeches and presentations in minutes. Feel your confidence grow.", focus: 5}
+      - {mai: "Achieve more at work, make more money and be happier!", focus: 6}
+
+  - kind: blanks
+    chapter: "Câu 1–6: đáp án"
+    heading: "Reading 3B–C · Questions 1–6: answers"
+    heading_vi: "Tạm dừng video và trả lời; tất cả đáp án hiện cùng lúc, rồi câu bằng chứng"
+    items: *r3
+    lines:
+      - emma: "Now answer questions 1 to 6. Pause the video and try."
+        say: "Now answer questions one to six. Pause the video and try."
+        vi: "Trả lời câu 1–6. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: true. Learn the techniques that will help you memorize names, faces and so much more.", focus: 0}
+      - {emma: "Two: not given. It says ask anyone who's met a world leader. It doesn't say most successful people have met one.", focus: 1, vi: "Bài chỉ nói hỏi ai từng gặp lãnh đạo — không nói đa số người thành công đã gặp."}
+      - {emma: "Three: true. The people who really make things happen don't forget.", focus: 2}
+      - {emma: "Four: false. The course uses scientifically proven techniques. Proven means tested and shown to work.", say: "Four: false. The course yoozes scientifically proven techniques. Proven means tested and shown to work.", focus: 3, vi: "scientifically proven = đã được khoa học kiểm chứng → sai."}
+      - {emma: "Five: false. The course will put you ahead of the rest. That means better than other people, not like them.", focus: 4, vi: "ahead of the rest = vượt lên người khác → sai."}
+      - {emma: "Six: not given. Claire and David say the course changed their lives, but we don't know why they did it.", focus: 5}
+      - emma: "Exercise C. Check your answers. How many did you answer correctly?"
+        vi: "Bài C: bạn đúng mấy câu?"
+
+  - kind: blanks
+    chapter: "Câu 7–12: điền từ"
+    heading: "Reading 3B · Questions 7–12: no more than three words"
+    heading_vi: "Lấy từ trong bài quảng cáo — tạm dừng video và làm; đáp án hiện sau"
+    items:
+      - {n: 7, q: "The Memory Enhancer course consists of ___ lessons.", answer: "ten / 10"}
+      - {n: 8, q: "You can achieve a number of ___ by registering for the course.", answer: "gains"}
+      - {n: 9, q: "Even if people ___ you, you will remember them.", answer: "forget"}
+      - {n: 10, q: "Phone numbers and addresses will be stored in your memory and you will be able to easily ___ them.", answer: "retrieve"}
+      - {n: 11, q: "You will be able to concentrate more clearly and ___ for longer.", answer: "focus on detail"}
+      - {n: 12, q: "___, you can learn how to give long talks and become more confident.", answer: "In minutes"}
+    lines:
+      - emma: "For questions 7 to 12, complete the sentences with words taken from the passage. Write no more than three words for each answer. Pause the video and try."
+        say: "For questions seven to twelve, complete the sentences with words taken from the passage. Write no more than three words for each answer. Pause the video and try."
+        vi: "Câu 7–12: điền từ lấy trong bài, không quá ba từ. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["7", "8", "9", "10", "11", "12"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Seven: ten. In ten easy lessons.", focus: 0}
+      - {emma: "Eight: gains. Here are just a few of the gains you can achieve. Gains are good things you get.", focus: 1, vi: "gains = lợi ích, cái thu được"}
+      - {emma: "Nine: forget. Remember them when they've forgotten you.", focus: 2}
+      - {emma: "Ten: retrieve. Easily retrieve essential data. Retrieve means get back.", focus: 3, vi: "retrieve = lấy lại, truy xuất"}
+      - {emma: "Eleven: focus on detail. Extend the time you can focus on detail.", focus: 4}
+      - {emma: "Twelve: in minutes. Memorize long speeches and presentations in minutes.", focus: 5}
+
+  - kind: bullets
+    chapter: "Từ tô vàng: đoán nghĩa"
+    heading: "Reading 3A · The highlighted words (1)"
+    heading_vi: "Đoán nghĩa qua ngữ cảnh — đọc lại câu trong bài"
+    items:
+      - {en: "techniques — ways of doing something", vi: "kỹ thuật, phương pháp"}
+      - {en: "memorize — learn something so you remember it exactly", vi: "ghi nhớ, học thuộc"}
+      - {en: "tycoon — a very rich and powerful business person", vi: "ông trùm kinh doanh"}
+      - {en: "recall — remember", vi: "nhớ lại"}
+      - {en: "scientifically proven — shown by science to work", vi: "được khoa học chứng minh"}
+    lines:
+      - emma: "Now let's check the highlighted words. Did you guess them from the context?"
+        vi: "Kiểm tra các từ tô vàng: bạn đoán được qua ngữ cảnh không?"
+      - {emma: "Techniques: ways of doing something. Learn the techniques that will help you.", focus: 0}
+      - {emma: "Memorize: learn something so you remember it exactly.", focus: 1}
+      - {emma: "Tycoon: a very rich and powerful business person. A world leader or a business tycoon.", focus: 2}
+      - {emma: "Recall: remember. Recall names and numbers in seconds.", focus: 3}
+      - {emma: "Scientifically proven: science shows that it works.", focus: 4}
+
+  - kind: bullets
+    heading: "Reading 3A · The highlighted words (2)"
+    heading_vi: "Đoán nghĩa qua ngữ cảnh"
+    items:
+      - {en: "ahead of the rest — better than other people", vi: "vượt lên người khác"}
+      - {en: "gains — good things that you get", vi: "lợi ích"}
+      - {en: "retrieve — get back", vi: "lấy lại, truy xuất"}
+      - {en: "stored — kept for later", vi: "được lưu trữ"}
+      - {en: "extend — make longer", vi: "kéo dài"}
+    lines:
+      - {emma: "Ahead of the rest: better than other people.", focus: 0}
+      - {emma: "Gains: good things that you get.", focus: 1}
+      - {emma: "Retrieve: get back. Stored: kept for later. They're used about computers and memory.", focus: 2}
+      - {emma: "Extend: make longer. Extend the time you can focus.", focus: 4}
+
+  - kind: figure
+    chapter: "Reading 3D: tự đánh giá"
+    heading: "Reading 3D · Tick the sentences that are true for you"
+    heading_vi: "Bốn câu tr. 64 — câu nào đúng với bạn? Lần sau làm thế nào để đúng nhiều hơn?"
+    image: {pdf: course-book, page: 65, clip: [62, 532, 445, 618]}
+    items:
+      - {box: [66, 533, 440, 559]}
+      - {box: [78, 564, 370, 576]}
+      - {box: [78, 578, 418, 590]}
+      - {box: [78, 591, 382, 603]}
+      - {box: [78, 605, 346, 617]}
+    lines:
+      - emma: "Exercise D. Tick the sentences about the reading task that are true for you, and think about how you can answer more questions correctly next time. Pause the video and tick."
+        focus: 0
+        vi: "Bài D: đánh dấu câu đúng với bạn. Tạm dừng video."
+        pause: 1.5
+      - {tom: "Number one is true for me. I could guess most of the highlighted words.", focus: 1}
+      - {emma: "Good. And guessing the words helped you with questions 4 and 5: proven, and ahead of the rest.", say: "Good. And guessing the words helped you with questions four and five: proven, and ahead of the rest.", focus: 2}
+      - {tom: "But number three is not true. I was slow. I read every word.", focus: 3}
+      - {emma: "Next time, read the questions first. Then look for the key words in the text, like world leader or ten lessons.", focus: 4, vi: "Lần sau: đọc câu hỏi trước, rồi tìm từ khóa trong bài."}
+
+  - kind: blanks
+    chapter: "Key vocabulary: remember, recall, memorize"
+    heading: "Key vocabulary in context · remember, recall, memorize"
+    heading_vi: "Khung từ tr. 64: remember · recall · memorize — tạm dừng video và làm; đáp án hiện sau"
+    items:
+      - {n: 1a, q: "I met an interesting man at the meeting, but I can't ___ his name.", answer: "remember"}
+      - {n: 1b, q: "… but I can't remember / ___ his name.", answer: "recall"}
+      - {n: 2, q: "Now, you must ___ to lock the door when you leave.", answer: "remember"}
+      - {n: 3, q: "The best way to learn irregular verbs is to write them down and ___ them.", answer: "memorize"}
+    lines:
+      - emma: "Key vocabulary in context. Complete the sentences with remember, recall and memorize. Sentence 1 has two possible answers. Pause the video and try."
+        say: "Key vocabulary in context. Complete the sentences with remember, recall and memorize. Sentence one has two possible answers. Pause the video and try."
+        vi: "Điền remember, recall, memorize; câu 1 có hai đáp án. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: [1a, 1b, "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: I can't remember his name, or I can't recall his name. Recall is a little more formal.", focus: 0, vi: "remember = recall (recall trang trọng hơn)"}
+      - {emma: "Two: remember to lock the door. Remember to do something means don't forget to do it.", focus: 2, vi: "remember to do = nhớ làm (đừng quên)"}
+      - {emma: "Three: memorize them. Memorize means learn something so you can say it exactly.", focus: 3, vi: "memorize = học thuộc"}
+      - tom: "So I memorize irregular verbs, and I remember to do my homework."
+        focus: 3
+        vi: "Vậy học thuộc động từ bất quy tắc (memorize), và nhớ làm bài tập (remember to)."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Read the questions first, then find the key words in the text.", vi: "Câu hỏi trước, bài đọc sau"}
+      - {en: "NG: the text doesn't say. F: the text says the opposite.", vi: "Not given khác False"}
+      - {en: "1 T · 2 NG · 3 T · 4 F · 5 F · 6 NG", vi: "Câu 1–6"}
+      - {en: "7 ten · 8 gains · 9 forget · 10 retrieve · 11 focus on detail · 12 In minutes", vi: "Câu 7–12, không quá ba từ"}
+      - {en: "remember / recall his name · remember to lock · memorize verbs", vi: "remember, recall, memorize"}
+    lines:
+      - {emma: "Let's review. Read the questions first, then look for the key words.", focus: 0}
+      - {emma: "Not given means the text doesn't say. False means the text says the opposite.", focus: 1}
+      - {emma: "Guess new words from the context: proven, ahead of the rest, retrieve.", focus: 3}
+      - {tom: "And: I can't recall his name, I remember to lock the door, and I memorize my verbs!", focus: 4}

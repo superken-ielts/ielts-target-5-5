@@ -280,6 +280,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 12:* xong **toàn bộ Unit 3** — 11 video (P2-43). Unit 1–3 đủ video cho mọi phần có trang trong Course Book (36 video). Còn: Unit 4 trở đi (kế hoạch ở file 06 mục 8).
   - *Đợt 24:* thêm 4 video luyện nói Unit 2 (P2-55). IELTS Target 5.0 có 44 video: 36 video theo trang sách và 8 video luyện nói thêm (Unit 1, Unit 2). Từ nay cảnh "Đến lượt bạn" không đếm ngược (file 06 mục 6).
   - *Đợt 25:* thêm 4 video luyện nói Unit 3 (P2-56). IELTS Target 5.0 có 48 video: 36 video theo trang sách và 12 video luyện nói thêm (Unit 1–3).
+  - *Đợt 31:* xong **toàn bộ Unit 4** — 11 video có hình trong sách (P2-65). IELTS Target 5.0 có 59 video.
+  - *Đợt 35:* xong **toàn bộ Unit 5** — 11 video (1:16:34), có hình trong sách, đáp án hiện sau (P2-69). IELTS Target 5.0 có 70 video: 58 video theo trang sách và 12 video luyện nói thêm (Unit 1–3). Còn: Unit 6 trở đi (kế hoạch ở file 06 mục 8.2), 4 video luyện nói thêm mỗi unit từ Unit 4 (P2-57).
 - [x] **P2-34** Video **Unit 1 · Writing 1** (organizing your writing) và **Writing 2** (types of letter / starting and ending letters), mỗi video kết thúc bằng một **thư mẫu đọc thành tiếng** (Writing 1: thư thân mật 160 từ đi qua đủ 6 bước; Writing 2: thư trang trọng hỏi thông tin 154 từ). Gắn vào hoạt động Unit 1 · Writing (phiên 4 và 5).
   - *Đợt 5:* thêm kiểu cảnh `order` (sắp xếp các bước), `timing` (chia 20 phút), `letter` (thư mẫu cả trang, đoạn đang đọc tô màu, ghi chú lề, đếm từ) và dòng `read`; cảnh `pairs` cho phép hai dòng chữ.
 - [x] **P2-35** Video **Unit 1 · Writing 3** (organizing points in a personal letter): giải bài A (chọn ý), B (đọc thư của Bruno, sắp xếp 9 ý theo thứ tự xuất hiện), C (điền lời chào, lời kết), cách Bruno chia đoạn, **thư mẫu của Lan 156 từ** cùng dạng đề, và cách làm bài viết Workbook trang 6.
@@ -485,6 +487,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Lệnh `phonemes` báo ⚠ chữ Việt có dấu trong câu tiếng Anh (Kokoro đánh vần từng chữ cái): sửa câu "tầng mười" ở `U05-lesson-1`, dựng lại (9:35). Đoạn cắt 1.34, 1.38 dời vào khoảng lặng; tên Chin-Mae đọc `Chin-May`.
   - Test: hồi quy A2 thành test tham số cho Unit 3, 4, 5. Mỗi unit kiểm: đáp án mở một lần; bài nghe để làm / kiểm tra đứng trước, sau đó chỉ nghe lại từng câu để nhắc; bảng từ ở cuối; đủ từ A2 của unit; có hình với `box`; không `wait` / `echo`; video từ 5 phút; đủ audio có trong bộ CD; đáp án không chỉ lướt qua ở cuối cảnh. `phonemes` báo chữ Việt có dấu.
   - Còn: Intro và Unit 1–2 (11 video) chưa làm theo khuôn này.
+- [x] **P2-69** **IELTS Target 5.0 Unit 5 · Thoughts: 11 video, hình trong sách, đáp án hiện sau** (đợt 35, 1:16:34), theo yêu cầu người học: "ielts làm tiếp unit 5 xong rồi commit push lên main". Chi tiết: [06-video-bai-giang.md](06-video-bai-giang.md) mục 3b, 4, 8.1.
+  - Đủ sáu phần có trang trong Course Book (sách in tr. 58–69), mọi bài tập trên trang: Speaking & Vocabulary 2, Listening 2, Reading 2, Writing 2, Consolidation, Exam practice 2 (Listening, Reading).
+  - Khuôn của Giai đoạn 0: làm trước (tạm dừng video), nghe / đọc xong mới hiện tất cả đáp án một lần, rồi đọc lại từng đáp án; không dán nhãn đáp án lên hình lúc đọc. Mọi video có hình cắt từ trang sách (ảnh, sơ đồ, bài đọc, bài luận viết tay, nhận xét của giám khảo, sơ đồ tư duy), khung đỏ theo chỗ đang giảng.
+  - Phát Track 52–54 (mốc theo lời chép bằng `transcribe`, cắt ở khoảng lặng; Track 54 chia hai phần cho câu 1–6 và 7–14). Track 48–51, 55, 56 không có file: các giọng đọc lại Tapescript; bài nói Exam practice dùng giọng giảng viên `bf_isabella`.
+  - Test: video Unit 5 đủ 11, có hình với `box`, không `wait` / `echo`, từ 5 phút, đáp án hiện sau (dùng chung `_check_answers_after` với test A2), phát đủ ba file nghe; độ phủ Unit 1–5; e2e: Unit 5 có 11 nút video sáu nhóm, từ 5 phút, nút Exam practice: Listening mở đúng phiên.
+  - Còn: 4 video luyện nói thêm Unit 4–5 (P2-57); Unit 6 trở đi (file 06 mục 8.2).
 
 ### Cổng G2
 

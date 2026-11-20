@@ -1,0 +1,198 @@
+# Video bài giảng Unit 5 · Exam practice: Reading (sách in trang 68–69).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-exam-reading.yaml
+# Cách viết: xem đầu file U01-exam-reading.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): đọc câu hỏi trước, đọc trang
+# What is Mensa? (Mai đọc, khung đỏ theo đoạn), rồi mới hiện tất cả đáp án kèm câu bằng chứng. Answer key không có trang này:
+# đáp án suy ra — 1 b, 2 c, 3–5 a, c, f (thứ tự nào cũng được), 6 NG, 7 F, 8 T, 9 T, 10 F.
+# Hình trong sách: Exam tip tr. 68, các phương án câu 3–5, trang What is Mensa? cắt ba dải tr. 69. Không đếm ngược.
+# `phonemes` đánh ⚠ "uses of intelligence" (danh từ, Kokoro đọc đúng /juːsᵻz/) — đừng sửa thành yoozes.
+id: U05-exam-reading
+activity: U05-exam-practice
+title: "Unit 5 · Thoughts"
+subtitle: "Exam practice: Reading — What is Mensa?"
+title_vi: "Thi thử phần Đọc: trang thông tin về Mensa — trắc nghiệm, chọn ba đáp án, đúng / sai / không có thông tin"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Exam practice: Reading, for Unit 5. Today's text is an information page about an organization called Mensa."
+        say: "Welcome to Exam practice: Reading, for Unit five. Today's text is an information page about an organization called Mensa."
+        vi: "Thi thử phần Đọc: trang thông tin về tổ chức Mensa."
+      - tom: "Mensa? I've never heard of it."
+        vi: "Mensa? Mình chưa nghe bao giờ."
+      - emma: "That's fine. Everything you need is in the text. Read the questions first. The answers come after the reading."
+        vi: "Không sao — mọi thông tin đều có trong bài. Đọc câu hỏi trước; đáp án hiện sau khi đọc."
+
+  - kind: figure
+    chapter: "Exam tip"
+    heading: "Exam tip · An authentic text"
+    heading_vi: "Exam tip tr. 68"
+    image: {pdf: course-book, page: 69, clip: [56, 640, 445, 694]}
+    lines:
+      - emma: "Exam tip. In this exam practice task, the text is authentic, real and not made easier for students, and so quite challenging. The questions, however, are a little easier."
+        vi: "Mẹo thi: bài đọc là văn bản thật, không được làm dễ đi, nên khá khó; câu hỏi thì dễ hơn một chút."
+      - emma: "You should identify the key words and phrases that provide answers, and guess their meanings from the context."
+        vi: "Hãy tìm từ, cụm từ khóa cho đáp án và đoán nghĩa qua ngữ cảnh."
+
+  - kind: mcq
+    chapter: "Câu hỏi 1–2"
+    heading: "Reading A · Questions 1–2: choose the correct letter a, b or c"
+    heading_vi: "Đọc câu hỏi trước — chưa trả lời"
+    items: &m12
+      - {n: 1, q: "You can only be a member of Mensa if you are …", keys: [a, b, c], options: ["a scientist or a doctor.", "very intelligent.", "very tall."], answer: b}
+      - {n: 2, q: "Mensa …", keys: [a, b, c], options: ["is a political organization.", "only accepts people from some countries and religions.", "is not concerned with where its members are from or what they believe."], answer: c}
+    lines:
+      - emma: "Exercise A. Read this information page about an organization called Mensa. For questions 1 and 2, choose the correct letter a, b or c. First, read the questions."
+        say: "Exercise eigh. Read this information page about an organization called Mensa. For questions one and two, choose the correct letter eigh, B or C. First, read the questions."
+        vi: "Câu 1–2: chọn a, b hoặc c. Đọc câu hỏi trước."
+        pause: 1.0
+
+  - kind: figure
+    chapter: "Câu hỏi 3–5"
+    heading: "Reading A · Questions 3–5: choose three letters a–f"
+    heading_vi: "Mục tiêu của Mensa là gì? — sáu phương án tr. 69"
+    image: {pdf: course-book, page: 70, clip: [64, 106, 445, 238]}
+    items:
+      - {box: [76, 108, 280, 138]}
+      - {box: [94, 140, 442, 220]}
+    lines:
+      - emma: "For questions 3 to 5, choose three letters a to f. What are Mensa's objectives?"
+        say: "For questions three to five, choose three letters eigh to F. What are Mensa's objectives?"
+        focus: 0
+        vi: "Câu 3–5: chọn ba trong sáu phương án — mục tiêu của Mensa."
+      - emma: "Read the six options. Only three of them are in the text."
+        focus: 1
+        vi: "Đọc sáu phương án; chỉ ba ý có trong bài."
+        pause: 1.0
+
+  - kind: blanks
+    chapter: "Câu hỏi 6–10"
+    heading: "Reading A · Questions 6–10: true (T), false (F) or not given (NG)?"
+    heading_vi: "Đọc câu hỏi trước — chưa trả lời"
+    items: &tfng
+      - {n: 6, q: "Most members of Mensa know each other. → ___", answer: "NG"}
+      - {n: 7, q: "Members of Mensa all work in similar professions. → ___", answer: "F"}
+      - {n: 8, q: "Mensa has some very young and some very old members. → ___", answer: "T"}
+      - {n: 9, q: "Intelligent people enjoy communicating with other intelligent people. → ___", answer: "T"}
+      - {n: 10, q: "Mensa is a very serious organization for very serious people. → ___", answer: "F"}
+    lines:
+      - emma: "For questions 6 to 10, decide if the information agrees with the information page. Write T for true, F for false, or NG for not given. Read the questions, and then read the text."
+        say: "For questions six to ten, decide if the information agrees with the information page. Write tee for true, ef for false, or en gee for not given. Read the questions, and then read the text."
+        vi: "Câu 6–10: đúng, sai hay không có thông tin? Đọc câu hỏi, rồi đọc bài."
+        pause: 1.5
+
+  - kind: figure
+    chapter: "Đọc: What is Mensa?"
+    heading: "What is Mensa? (1/3)"
+    heading_vi: "Trang thông tin tr. 69 — Mai đọc, khung đỏ theo đoạn"
+    image: {pdf: course-book, page: 70, clip: [92, 386, 482, 532]}
+    items:
+      - {box: [96, 389, 292, 414]}
+      - {box: [96, 425, 478, 473]}
+      - {box: [96, 477, 478, 531]}
+    lines:
+      - {mai: "What is Mensa?", focus: 0}
+      - {mai: "Mensa was founded in England in 1946 by Roland Berrill, a barrister, and Dr Lance Ware, a scientist and lawyer.", say: "Mensa was founded in England in nineteen forty-six by Roland Berrill, a barrister, and Doctor Lance Ware, a scientist and lawyer.", focus: 1}
+      - {mai: "They had the idea of forming a society for bright people, the only qualification for membership of which was a high IQ.", say: "They had the idea of forming a society for bright people, the only qualification for membership of which was a high eye cue.", focus: 1}
+      - {mai: "The original aims were, as they are today, to create a society that is non-political and free from all racial or religious distinctions.", focus: 1}
+      - {mai: "The society's official objectives are: to identify and foster human intelligence for the benefit of humanity; to encourage research in the nature, characteristics and uses of intelligence; and to provide a stimulating intellectual and social environment for its members.", focus: 2}
+
+  - kind: figure
+    heading: "What is Mensa? (2/3)"
+    heading_vi: "Trang thông tin tr. 69"
+    image: {pdf: course-book, page: 70, clip: [92, 532, 482, 631]}
+    items:
+      - {box: [96, 535, 478, 569]}
+      - {box: [96, 575, 478, 600]}
+      - {box: [96, 604, 478, 629]}
+    lines:
+      - {mai: "The society welcomes people from every walk of life whose IQ is in the top two per cent of the population, with the objective of enjoying each other's company and participating in a wide range of social and cultural activities.", say: "The society welcomes people from every walk of life whose eye cue is in the top two per cent of the population, with the objective of enjoying each other's company and participating in a wide range of social and cultural activities.", focus: 0}
+      - {mai: "Mensa members come from all walks of life and almost every job and profession. Every age group is represented, from pre-school children to members in their eighties, nineties and beyond!", focus: 1}
+      - {mai: "What almost all Mensans have in common is the desire to make contact with other lively minds, in person, in print or online, and enjoy being both entertained and informed.", focus: 2}
+
+  - kind: figure
+    heading: "What is Mensa? (3/3)"
+    heading_vi: "Trang thông tin tr. 69"
+    image: {pdf: course-book, page: 70, clip: [92, 631, 482, 703]}
+    items:
+      - {box: [96, 633, 478, 658]}
+      - {box: [96, 662, 478, 687]}
+    lines:
+      - {mai: "The essence of Mensa membership is fun and stimulation for the individual. Mensa members read voraciously and enjoy the widest range of interests, leisure pursuits and hobbies.", focus: 0}
+      - {mai: "The atmosphere at all Mensa meetings is welcoming and convivial. Most Mensans are friendly and sensitive people who welcome the chance to make new friends and expand their horizons.", focus: 1}
+      - emma: "Now answer all the questions. Pause the video and try."
+        vi: "Giờ trả lời mọi câu hỏi. Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: mcq
+    chapter: "Câu 1–2: đáp án"
+    heading: "Reading A · Questions 1–2: answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi câu bằng chứng"
+    items: *m12
+    lines:
+      - emma: "Here are the answers to questions 1 and 2."
+        say: "Here are the answers to questions one and two."
+        reveal: ["1", "2"]
+        vi: "Đáp án câu 1–2."
+      - {emma: "One: b. The only qualification for membership is a high IQ, in the top two per cent. High IQ means very intelligent.", say: "One: B. The only qualification for membership is a high eye cue, in the top two per cent. High eye cue means very intelligent.", focus: 0, vi: "IQ cao = rất thông minh"}
+      - {emma: "Two: c. Non-political and free from all racial or religious distinctions. So it doesn't matter where you are from, or what you believe.", say: "Two: C. Non-political and free from all racial or religious distinctions. So it doesn't matter where you are from, or what you believe.", focus: 1}
+
+  - kind: blanks
+    chapter: "Câu 3–5: đáp án"
+    heading: "Reading A · Questions 3–5: answers (in any order)"
+    heading_vi: "Ba mục tiêu chính thức của Mensa — thứ tự nào cũng được"
+    image: {pdf: course-book, page: 70, clip: [64, 106, 445, 238]}
+    items:
+      - {n: 3, q: "to know who is very intelligent and to help those people use their intelligence well → ___", answer: "a"}
+      - {n: 4, q: "for people to understand more about intelligence → ___", answer: "c"}
+      - {n: 5, q: "for members to enjoy being part of the organization → ___", answer: "f"}
+    lines:
+      - emma: "Here are the answers to questions 3 to 5: a, c and f, in any order."
+        say: "Here are the answers to questions three to five: eigh, C and F, in any order."
+        reveal: ["3", "4", "5"]
+        vi: "Đáp án câu 3–5: a, c, f — thứ tự nào cũng được."
+      - {emma: "a: to identify and foster human intelligence. Identify means find out who, and foster means help it grow.", say: "eigh: to identify and foster human intelligence. Identify means find out who, and foster means help it grow.", focus: 0, vi: "identify and foster = tìm ra và nuôi dưỡng"}
+      - {emma: "c: to encourage research in the nature and uses of intelligence. Research helps people understand more.", say: "C: to encourage research in the nature and uses of intelligence. Research helps people understand more.", focus: 1}
+      - {emma: "f: a stimulating intellectual and social environment for its members.", say: "F: a stimulating intellectual and social environment for its members.", focus: 2}
+      - emma: "Better jobs, helping people who are not intelligent, and a safer world are not in the text."
+        vi: "b, d, e không có trong bài."
+
+  - kind: blanks
+    chapter: "Câu 6–10: đáp án"
+    heading: "Reading A · Questions 6–10: answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi câu bằng chứng"
+    items: *tfng
+    lines:
+      - emma: "Here are the answers to questions 6 to 10."
+        say: "Here are the answers to questions six to ten."
+        reveal: ["6", "7", "8", "9", "10"]
+        vi: "Đáp án câu 6–10."
+      - {emma: "Six: not given. The text says members enjoy each other's company, but not that most of them know each other.", focus: 0}
+      - {emma: "Seven: false. Members come from almost every job and profession.", focus: 1}
+      - {emma: "Eight: true. From pre-school children to members in their eighties, nineties and beyond.", focus: 2}
+      - {emma: "Nine: true. The desire to make contact with other lively minds. A lively mind is an intelligent person.", focus: 3, vi: "lively minds = những bộ óc nhanh nhạy"}
+      - {emma: "Ten: false. The essence of Mensa is fun, and the meetings are welcoming and convivial. Convivial means friendly and fun.", focus: 4, vi: "convivial = vui vẻ, thân thiện"}
+      - tom: "I got eight right. The not given questions are the hardest."
+        vi: "Mình đúng 8 câu. Câu not given khó nhất."
+      - emma: "Yes. Remember: not given means the text doesn't say it. False means the text says the opposite."
+        vi: "Not given: bài không nói tới. False: bài nói ngược lại."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Read the questions first, then find the key words in the text.", vi: "Câu hỏi trước, bài đọc sau"}
+      - {en: "1 b · 2 c · 3–5 a, c, f", vi: "Trắc nghiệm, chọn ba đáp án"}
+      - {en: "6 NG · 7 F · 8 T · 9 T · 10 F", vi: "Đúng, sai, không có thông tin"}
+      - {en: "high IQ · identify and foster · lively minds · convivial", vi: "Đoán nghĩa qua ngữ cảnh"}
+    lines:
+      - {emma: "Let's review. Read the questions first, then find the key words in the text.", focus: 0}
+      - {emma: "Guess the meaning of new words from the context: lively minds, convivial.", focus: 3}
+      - {tom: "And I want to take a Mensa test now!", focus: 3}

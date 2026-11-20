@@ -1,0 +1,198 @@
+# Video bài giảng Unit 5 · Exam practice: Listening (sách in trang 68).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-exam-listening.yaml
+# Cách viết: xem đầu file U01-exam-listening.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): đọc câu hỏi trước, nghe xong
+# mới hiện tất cả đáp án kèm câu trong bài nghe. Track 56 (bài nói về mind-mapping) không có file nghe: giảng viên (giọng
+# bf_isabella, khác giọng Emma) đọc lại đúng Tapescript (sách in trang 287–288) trong cảnh `hide_text`, chia hai phần cho câu
+# 1–6 và câu 7–14 (sách ghi "[Play track 56 again]" cho câu 7–14). Answer key không có trang này: đáp án theo Tapescript —
+# 1 more clearly, 2 problems, 3 fit together, 4 note-taking, 5 important, 6 review, 7 other people, 8 getting up earlier,
+# 9 (a) diary, 10 performance, 11 effectively, 12 wasting, 13 most important, 14 setting goals.
+# Hình trong sách: sơ đồ tư duy Time Management tr. 68, khung đỏ ở chỗ trống 7–14 (không nhãn). Không đếm ngược.
+id: U05-exam-listening
+activity: U05-exam-practice
+title: "Unit 5 · Thoughts"
+subtitle: "Exam practice: Listening — a talk about mind-mapping"
+title_vi: "Thi thử phần Nghe: bài nói về sơ đồ tư duy — điền ghi chú (câu 1–6) và điền nhãn sơ đồ (câu 7–14), không quá ba từ"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  lecturer: {name: Lecturer, role: speaker, color: "#8A5A00", voice: {kokoro: bf_isabella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Exam practice for Unit 5. First, the listening. You will hear a talk about mind-mapping, and how it can help you think more clearly."
+        say: "Welcome to Exam practice for Unit five. First, the listening. You will hear a talk about mind-mapping, and how it can help you think more clearly."
+        vi: "Thi thử phần Nghe: một bài nói về sơ đồ tư duy (mind-mapping)."
+      - tom: "Mind-mapping? Is that like drawing a map of your brain?"
+        vi: "Mind-mapping? Kiểu vẽ bản đồ bộ não à?"
+      - emma: "Not exactly. It's a way of writing notes. You'll see. The recording isn't in our audio files, so a lecturer reads it for you. Read the questions first. The answers come after the listening."
+        vi: "Không hẳn — đó là một cách ghi chép. Track 56 không có file nên giảng viên đọc lại. Đọc câu hỏi trước; đáp án hiện sau khi nghe."
+
+  - kind: blanks
+    chapter: "Câu 1–6: đọc câu hỏi"
+    heading: "Listening A · Questions 1–6: complete the notes"
+    heading_vi: "Không quá ba từ hoặc một con số — đọc câu trước khi nghe"
+    items: &q16
+      - {n: 1, q: "You can think ___ if you use mind maps.", answer: "more clearly"}
+      - {n: 2, q: "Mind-mapping helps you to solve ___ in a creative way.", answer: "problems"}
+      - {n: 3, q: "Drawing a mind map will help you see how parts of a topic or subject ___.", answer: "fit together"}
+      - {n: 4, q: "Mind-mapping is quite different from conventional ___.", answer: "note-taking"}
+      - {n: 5, q: "By seeing the 'shape' of a topic, you will know which individual points within it are ___.", answer: "important"}
+      - {n: 6, q: "Mind maps are compact, so it is easier to ___ what you have written down.", answer: "review"}
+    lines:
+      - emma: "Exercise A. You will hear someone giving a talk about how mind-mapping can help you think more clearly. For questions 1 to 6, listen and complete the notes. Write no more than three words or a number for each answer."
+        say: "Exercise eigh. You will hear someone giving a talk about how mind-mapping can help you think more clearly. For questions one to six, listen and complete the notes. Write no more than three words or a number for each answer."
+        vi: "Câu 1–6: nghe và hoàn thành ghi chú, không quá ba từ hoặc một con số."
+      - emma: "Pause the video and read the questions first. Think about the kind of word you need."
+        vi: "Tạm dừng video, đọc câu hỏi trước, nghĩ xem cần loại từ nào."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Câu 1–6: nghe"
+    heading: "Listening A · Questions 1–6: listen"
+    heading_vi: "Nghe phần đầu bài nói — viết đáp án khi nghe"
+    hide_text: true
+    items: *q16
+    lines:
+      - {lecturer: "Good morning. I'm really pleased that so many of you are here. I know you are all busy."}
+      - {lecturer: "In some ways, that is what I'm going to talk about today. Managing time, so that you feel more is getting done, that you are achieving more."}
+      - {lecturer: "I'm sure you have all heard something about mind-mapping, but most people I meet don't really know much about it."}
+      - {lecturer: "Mind-mapping is really a technique that helps you to think more clearly.", focus: 0}
+      - {lecturer: "It improves the way you solve problems, and encourages you to solve problems creatively.", focus: 1}
+      - {lecturer: "Mind maps help you to understand the various parts of a topic or subject, and to then see how those parts fit together.", focus: 2}
+      - {lecturer: "The way you write down your ideas on a mind map means that information is easy to retrieve and to review.", focus: 2}
+      - {lecturer: "So, how is mind-mapping different from conventional note-taking? By conventional note-taking, I mean simply listing points on a page, as you probably do now.", focus: 3}
+      - {lecturer: "Well, mind maps are more two-dimensional. They allow you to see the shape of a topic, and make it easier to see what's important.", focus: 4}
+      - {lecturer: "Mind maps generally fit on a single side of paper. They are more compact, and that also helps you to go back and review.", focus: 5}
+      - emma: "Pause the video and complete your answers."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Câu 1–6: đáp án"
+    heading: "Listening A · Questions 1–6: answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi câu trong bài nói"
+    items: *q16
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: more clearly. A technique that helps you to think more clearly.", focus: 0}
+      - {emma: "Two: problems. It encourages you to solve problems creatively. In a creative way means creatively.", focus: 1, vi: "creatively = in a creative way (cách nói khác)"}
+      - {emma: "Three: fit together. See how those parts fit together.", focus: 2}
+      - {emma: "Four: note-taking. Conventional note-taking means listing points on a page.", focus: 3}
+      - {emma: "Five: important. It's easier to see what's important.", focus: 4}
+      - {emma: "Six: review. They are more compact, and that helps you to go back and review. Go back and review is four words, so write review.", focus: 5, vi: "go back and review là bốn từ — chỉ viết review."}
+
+  - kind: figure
+    chapter: "Câu 7–14: sơ đồ tư duy"
+    heading: "Listening A · Questions 7–14: label the time management mind map"
+    heading_vi: "Sơ đồ tr. 68 — xem các chỗ trống trước khi nghe; không quá ba từ hoặc một con số"
+    image: {pdf: course-book, page: 69, clip: [70, 392, 522, 600]}
+    items:
+      - {box: [74, 396, 200, 428]}
+      - {box: [270, 439, 346, 457]}
+      - {box: [362, 454, 476, 472]}
+      - {box: [76, 518, 194, 537]}
+      - {box: [345, 519, 496, 537]}
+      - {box: [76, 545, 175, 565]}
+      - {box: [282, 579, 430, 599]}
+      - {box: [440, 579, 520, 599]}
+    lines:
+      - emma: "For questions 7 to 14, label the time management mind map. Write no more than three words or a number for each answer. Look at the mind map first. The topic is in the middle: time management."
+        say: "For questions seven to fourteen, label the time management mind map. Write no more than three words or a number for each answer. Look at the mind map first. The topic is in the middle: time management."
+        vi: "Câu 7–14: điền nhãn cho sơ đồ tư duy Quản lý thời gian. Xem sơ đồ trước: chủ đề ở giữa."
+      - {emma: "Number 7: getting something to do more at the office.", say: "Number seven: getting something to do more at the office.", focus: 0}
+      - {emma: "Numbers 8 and 9: ideas near having more time, and keeping something.", say: "Numbers eight and nine: ideas near having more time, and keeping something.", focus: 1}
+      - {emma: "Numbers 10 and 12, on the left: personal something, and something time.", say: "Numbers ten and twelve, on the left: personal something, and something time.", focus: 3}
+      - {emma: "Number 11: using time more something. And at the bottom, 13 and 14.", say: "Number eleven: using time more something. And at the bottom, thirteen and fourteen.", focus: 4}
+      - emma: "The answers are not in number order on the map, so follow the speaker carefully. Pause the video and look at the map."
+        vi: "Đáp án không theo thứ tự số trên sơ đồ — theo sát lời người nói. Tạm dừng video, xem sơ đồ."
+        pause: 1.5
+
+  - kind: figure
+    chapter: "Câu 7–14: nghe"
+    heading: "Listening A · Questions 7–14: listen"
+    heading_vi: "Nghe phần sau bài nói — khung đỏ theo chỗ người nói đang giảng"
+    image: {pdf: course-book, page: 69, clip: [70, 392, 522, 600]}
+    hide_text: true
+    items:
+      - {box: [74, 396, 200, 428]}
+      - {box: [270, 439, 346, 457]}
+      - {box: [362, 454, 476, 472]}
+      - {box: [76, 518, 194, 537]}
+      - {box: [345, 519, 496, 537]}
+      - {box: [76, 545, 175, 565]}
+      - {box: [282, 579, 430, 599]}
+      - {box: [440, 579, 520, 599]}
+      - {box: [76, 494, 142, 508]}
+      - {box: [204, 512, 316, 539]}
+    lines:
+      - {lecturer: "So, now I'm going to show an example of a mind map, and I hope it will make clear what I've been saying. Let me just switch on the projector. OK, here we are."}
+      - {lecturer: "Now, this is a mind map for time management. A mind map designed to help you manage your time better, and see where you are wasting time and where you could save time. Remember, this is only a very simple example. Your mind maps can be bigger.", focus: 9}
+      - {lecturer: "Now, first, you need to write the topic in large letters in the middle of your page. In this case, time management. Put a circle or a box around it, if you like.", focus: 9}
+      - {lecturer: "Then, draw lines out to the main subheadings, the main points that you want to consider as parts of the topic. In this case, the major subheadings are red. Put general ideas on the left."}
+      - {lecturer: "In this case, there are three general points that the author wants to keep in mind. Assessing time: how much time he has.", focus: 8}
+      - {lecturer: "Personal performance. By personal performance, he means how well he thinks he uses his time.", focus: 3}
+      - {lecturer: "And wasting time: how much of his time he thinks he uses badly, how much of his time is wasted.", focus: 5}
+      - {lecturer: "Above the main heading, the author thinks about having more time, and how perhaps he could have more time. His mind map has branched out, and he puts examples of having more time in another colour. In this case, blue."}
+      - {lecturer: "He thinks about two ways that he could have more time. Firstly, delegating, and secondly, getting up earlier. Of course, if you get up earlier, the day is longer and you have more time!", focus: 1}
+      - {lecturer: "Above delegating, he gives an example of how he could delegate. He makes this another subheading and uses another colour, this time green.", say: "Above delegating, he gives an example of how he could delegate. He makes this another subheading and yoozes another colour, this time green.", focus: 0}
+      - {lecturer: "When he looks back at his mind map, he will see that one way that he could delegate is to get other people to do more around the office. Perhaps he does too much himself at the moment.", focus: 0}
+      - {lecturer: "Now, on the right, the author thinks about how he can use time more effectively. Note again that this is one of his main subheadings, so it is written in red. As subheadings of that, he gives examples of how he could use time more effectively.", say: "Now, on the right, the author thinks about how he can yooz time more effectively. Note again that this is one of his main subheadings, so it is written in red. As subheadings of that, he gives examples of how he could yooz time more effectively.", focus: 4}
+      - {lecturer: "At the bottom, he thinks about prioritizing, and then he gives two examples of how he wants to prioritize. Firstly, he explains what he means by prioritize. He must decide what is most important.", focus: 6}
+      - {lecturer: "Then, he notes how he can prioritize: by setting goals. The mind map will help him to remember that he must always have a clear idea of what is important, and that by setting goals, he can achieve more.", focus: 7}
+      - {lecturer: "Finally, he decides that planning is important, and that is another subheading. He notes that keeping a diary is a good way to plan ahead, and so use time more effectively.", say: "Finally, he decides that planning is important, and that is another subheading. He notes that keeping a diary is a good way to plan ahead, and so yooz time more effectively.", focus: 2}
+      - {lecturer: "Perhaps he doesn't keep one at the moment, but he will start keeping one now he has his mind map.", focus: 2}
+      - {lecturer: "Now, as I say, the author will probably add more ideas. Each time you review a mind map, you can add points or delete them. Of course, time management is only one area in which mind-mapping can be a help."}
+      - emma: "Pause the video and complete your answers."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Câu 7–14: đáp án"
+    heading: "Listening A · Questions 7–14: answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi câu trong bài nói"
+    image: {pdf: course-book, page: 69, clip: [70, 392, 522, 600]}
+    items:
+      - {n: 7, q: "getting ___ to do more at the office", answer: "other people", box: [74, 396, 200, 428]}
+      - {n: 8, q: "having more time: ___", answer: "getting up earlier", box: [270, 439, 346, 457]}
+      - {n: 9, q: "keeping ___", answer: "(a) diary", box: [362, 454, 476, 472]}
+      - {n: 10, q: "personal ___", answer: "performance", box: [76, 518, 194, 537]}
+      - {n: 11, q: "using time more ___", answer: "effectively", box: [345, 519, 496, 537]}
+      - {n: 12, q: "___ time", answer: "wasting", box: [76, 545, 175, 565]}
+      - {n: 13, q: "deciding what is ___", answer: "most important", box: [282, 579, 430, 599]}
+      - {n: 14, q: "prioritizing: ___", answer: "setting goals", box: [440, 579, 520, 599]}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["7", "8", "9", "10", "11", "12", "13", "14"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Seven: other people. Get other people to do more around the office.", focus: 0}
+      - {emma: "Eight: getting up earlier. The second way to have more time.", focus: 1}
+      - {emma: "Nine: a diary. Keeping a diary is a good way to plan ahead. Diary, without a, is also correct.", focus: 2}
+      - {emma: "Ten: performance. Personal performance: how well he uses his time.", focus: 3}
+      - {emma: "Eleven: effectively. Use time more effectively.", say: "Eleven: effectively. Yooz time more effectively.", focus: 4}
+      - {emma: "Twelve: wasting. Wasting time: how much of his time is wasted.", focus: 5}
+      - {emma: "Thirteen: most important. He must decide what is most important.", focus: 6}
+      - {emma: "Fourteen: setting goals. He can prioritize by setting goals.", focus: 7}
+      - tom: "The order was strange. Ten and twelve came before seven and eight!"
+        vi: "Thứ tự lạ thật: câu 10, 12 đến trước câu 7, 8!"
+      - emma: "Yes. In a mind map, the speaker moves around the picture. Follow the speaker, not the numbers. How many did you get right?"
+        vi: "Đúng: với sơ đồ, người nói đi vòng quanh hình — hãy theo người nói, không theo số. Bạn đúng mấy câu?"
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Read the questions first, and think about the kind of word you need.", vi: "Đọc câu hỏi trước"}
+      - {en: "1 more clearly · 2 problems · 3 fit together · 4 note-taking · 5 important · 6 review", vi: "Câu 1–6"}
+      - {en: "7 other people · 8 getting up earlier · 9 (a) diary · 10 performance", vi: "Câu 7–10"}
+      - {en: "11 effectively · 12 wasting · 13 most important · 14 setting goals", vi: "Câu 11–14"}
+      - {en: "No more than three words: go back and review → review", vi: "Đếm số từ"}
+    lines:
+      - {emma: "Let's review. Read the questions first.", focus: 0}
+      - {emma: "For a diagram or a mind map, follow the speaker around the picture.", focus: 2}
+      - {emma: "And count your words. No more than three words means review, not go back and review.", focus: 4}
+      - {tom: "Maybe I'll make a mind map for my IELTS study!", say: "Maybe I'll make a mind map for my eye-elts study!", focus: 4}

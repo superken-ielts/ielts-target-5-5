@@ -1,0 +1,233 @@
+# Video bài giảng Unit 5 · Writing 1: understanding instructions, Writing 2A–B: organizing points for a balanced argument
+# (sách in trang 65–66). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-writing-1.yaml
+# Cách viết: xem đầu file U01-writing-1.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): làm trước (tạm dừng video),
+# rồi mới hiện tất cả đáp án và bảng bốn cột. Answer key không có Writing 1, 2B: câu trả lời 1A là gợi ý; 2B suy ra (1 one-to-one
+# +, 2 group −, 3 one-to-one −, 4 group +, 5 one-to-one −, 6 group −, 7 one-to-one +, 8 one-to-one −). Không làm Workbook.
+# Hình trong sách: hai ảnh lớp học, đề bài viết, ghi chú của học viên trên đề (khung đỏ theo từ tô vàng), Exam tip, bảng
+# trong sổ tr. 65, Exam tip tr. 66. Không đếm ngược.
+id: U05-writing-1
+activity: U05-writing
+title: "Unit 5 · Thoughts"
+subtitle: "Writing 1: understanding instructions, planning both sides"
+title_vi: "Hiểu đề bài viết (assignment, give reasons, relevant examples), xếp ý ủng hộ và phản đối cho bài luận cân bằng"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Writing for Unit 5. Before you write, you must understand the instructions. Then you plan your ideas, for and against."
+        say: "Welcome to Writing for Unit five. Before you write, you must understand the instructions. Then you plan your ideas, for and against."
+        vi: "Trước khi viết phải hiểu đề, rồi lên ý ủng hộ và phản đối."
+      - tom: "I usually start writing straight away."
+        vi: "Mình thường viết luôn."
+      - emma: "Then this lesson is for you! Try each exercise first. The answers come after."
+        vi: "Vậy bài này dành cho bạn! Làm từng bài trước, đáp án hiện sau."
+
+  - kind: figure
+    chapter: "Writing 1A: hai kiểu lớp học"
+    heading: "Writing 1A · Look at the pictures"
+    heading_vi: "Hai ảnh tr. 65 — một lớp đông người và một buổi học một thầy một trò"
+    image: {pdf: course-book, page: 66, clip: [396, 162, 532, 376]}
+    items:
+      - {box: [399, 166, 530, 264]}
+      - {box: [399, 273, 530, 373]}
+    lines:
+      - emma: "Writing 1: understanding instructions. Exercise A. Look at the pictures. In the first one, a teacher is talking to a big group of students."
+        say: "Writing one: understanding instructions. Exercise eigh. Look at the pictures. In the first one, a teacher is talking to a big group of students."
+        focus: 0
+        vi: "Ảnh 1: thầy giáo giảng cho một lớp đông."
+      - emma: "In the second one, a teacher and one student are working together."
+        focus: 1
+        vi: "Ảnh 2: cô giáo và một học viên học riêng."
+
+  - kind: qa
+    chapter: "Writing 1A: hỏi và trả lời"
+    heading: "Writing 1A · Answer the questions with a partner"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời trước, rồi nghe Tom và Mai"
+    items:
+      - {q: "What do the photos have in common?", a: "They both show people learning. There's a teacher in both photos.", ask: emma, by: tom}
+      - {q: "What is the difference between the two types of lesson?", a: "The first one is a group lesson with a lot of students. The second one is a private one-to-one lesson.", ask: emma, by: mai}
+      - {q: "What are the advantages of learning a language in a group?", a: "You can practise speaking with other students, and it's cheaper.", ask: emma, by: tom}
+      - {q: "What are the advantages of having a one-to-one lesson?", a: "The teacher can give you all their attention, and you can learn more quickly.", ask: emma, by: mai}
+    lines:
+      - emma: "Answer the questions with a partner. Pause the video after each question."
+        vi: "Trả lời các câu hỏi; tạm dừng sau mỗi câu."
+      - {emma: "One. What do the photos have in common?", focus: 0, pause: 1.5}
+      - {tom: "They both show people learning. There's a teacher in both photos.", reveal: 0}
+      - {emma: "Two. What is the difference between the two types of lesson?", focus: 1, pause: 1.5}
+      - {mai: "The first one is a group lesson with a lot of students. The second one is a private one-to-one lesson.", reveal: 1}
+      - {emma: "Three. What are the advantages of learning a language in a group?", focus: 2, pause: 1.5}
+      - {tom: "You can practise speaking with other students, and it's cheaper.", reveal: 2}
+      - {emma: "Four. What are the advantages of having a one-to-one lesson?", focus: 3, pause: 1.5}
+      - {mai: "The teacher can give you all their attention, and you can learn more quickly.", reveal: 3}
+
+  - kind: figure
+    chapter: "Writing 1B: đọc đề"
+    heading: "Writing 1B · Look at the instructions for a typical writing task"
+    heading_vi: "Đề bài viết tr. 65 — bạn có hiểu phải làm gì không? Có từ nào chưa biết?"
+    image: {pdf: course-book, page: 66, clip: [60, 266, 400, 393]}
+    items:
+      - {box: [66, 268, 395, 295]}
+      - {box: [72, 306, 384, 389]}
+    lines:
+      - emma: "Exercise B. Look at the instructions for a typical writing task. Answer the question that follows with a partner."
+        focus: 0
+        vi: "Bài B: đọc đề bài viết và trả lời câu hỏi bên dưới."
+      - {emma: "As part of a class assignment, you have been asked to write about the following topic.", focus: 1}
+      - {emma: "Do you think it is better to learn a language in a group with other students, or is it better to have private one-to-one lessons?", focus: 1}
+      - {emma: "Give reasons for your answer and include any relevant examples from your experience. Write at least 250 words.", say: "Give reasons for your answer and include any relevant examples from your experience. Write at least two hundred and fifty words.", focus: 1}
+      - emma: "Do you understand what you have to do, or are there words in the instructions that you don't know? Pause the video and think."
+        focus: 1
+        vi: "Bạn có hiểu phải làm gì không, có từ nào chưa biết? Tạm dừng video và nghĩ."
+        pause: 1.5
+      - tom: "I understand the question, but some words are difficult. What's an assignment? And relevant?"
+        focus: 1
+        vi: "Mình hiểu câu hỏi, nhưng vài từ khó: assignment? relevant?"
+
+  - kind: figure
+    chapter: "Writing 1C: ghi chú trên đề"
+    heading: "Writing 1C · Look at the notes a student has made on the instructions"
+    heading_vi: "Ghi chú tr. 65 — đề bài rõ hơn chưa?"
+    image: {pdf: course-book, page: 66, clip: [60, 440, 535, 556]}
+    items:
+      - {box: [66, 441, 440, 455]}
+      - {box: [118, 459, 262, 487]}
+      - {box: [76, 511, 200, 553]}
+      - {box: [200, 511, 342, 553]}
+      - {box: [270, 511, 510, 553]}
+      - {box: [76, 525, 192, 540]}
+    lines:
+      - emma: "Exercise C. Look at the notes a student has made on the instructions. Is the task clearer now?"
+        focus: 0
+        vi: "Bài C: ghi chú của một học viên trên đề — đề rõ hơn chưa?"
+      - {emma: "Assignment: something you write for your teacher.", focus: 1, vi: "assignment = bài tập được giao"}
+      - {emma: "Give reasons: I must say why I think something.", focus: 2, vi: "give reasons = nêu lý do vì sao mình nghĩ vậy"}
+      - {emma: "Include examples from your experience: mention things that I know from what has happened in my life.", focus: 3, vi: "include examples from your experience = kể ví dụ từ trải nghiệm của mình"}
+      - {emma: "Relevant means say only things connected with the topic.", focus: 4, vi: "relevant = liên quan đến chủ đề"}
+      - {emma: "And write at least 250 words. Not 200. At least means 250 or more.", say: "And write at least two hundred and fifty words. Not two hundred. At least means two hundred and fifty or more.", focus: 5, vi: "at least 250 words = ít nhất 250 từ"}
+      - tom: "Yes, it's much clearer now."
+        vi: "Rõ hơn nhiều rồi."
+
+  - kind: figure
+    chapter: "Exam tip"
+    heading: "Exam tip · Writing Task 2 instructions"
+    heading_vi: "Exam tip tr. 65"
+    image: {pdf: course-book, page: 66, clip: [56, 571, 445, 603]}
+    lines:
+      - emma: "Exam tip. In the second part of the Writing Module, the instructions will be like this or very similar. Make sure you know what the highlighted words and phrases mean."
+        vi: "Mẹo thi: đề Writing Task 2 sẽ giống hoặc gần giống thế này — hãy chắc chắn bạn hiểu các từ tô vàng."
+
+  - kind: figure
+    chapter: "Writing 2A: bảng trong sổ"
+    heading: "Writing 2A · How has he organized his points?"
+    heading_vi: "Trang sổ của một học viên tr. 65 — bốn cột: ưu và nhược của học nhóm, học một thầy một trò"
+    image: {pdf: course-book, page: 66, clip: [60, 608, 535, 765]}
+    items:
+      - {box: [66, 636, 420, 662]}
+      - {box: [80, 674, 184, 744]}
+      - {box: [186, 674, 294, 744]}
+      - {box: [296, 674, 409, 744]}
+      - {box: [411, 674, 531, 744]}
+    lines:
+      - emma: "Writing 2: presenting a balanced argument. Exercise A. Look at this page from a student's notebook. Notice how he has organized points to help him plan his composition."
+        say: "Writing two: presenting a balanced argument. Exercise eigh. Look at this page from a student's notebook. Notice how he has organized points to help him plan his composition."
+        focus: 0
+        vi: "Bài A: trang sổ của một học viên — xem cách sắp xếp ý để lên dàn bài."
+      - {emma: "Group lesson, plus: you can practise with other students.", focus: 1, vi: "Học nhóm, ưu điểm"}
+      - {emma: "Group lesson, minus: there is a lot of noise.", focus: 2, vi: "Học nhóm, nhược điểm"}
+      - {emma: "One-to-one, plus: the teacher can give all his or her attention to you.", focus: 3, vi: "Một thầy một trò, ưu điểm"}
+      - {emma: "One-to-one, minus: it is very intensive.", focus: 4, vi: "Một thầy một trò, nhược điểm: rất căng (intensive)"}
+
+  - kind: blanks
+    chapter: "Writing 2B: xếp ý vào cột"
+    heading: "Writing 2B · Add these points to the correct column"
+    heading_vi: "group + · group − · one-to-one + · one-to-one − — tạm dừng video và làm; đáp án hiện sau"
+    items:
+      - {n: 1, q: "The teacher can deal immediately with any difficulties you have. → ___", answer: "one-to-one +"}
+      - {n: 2, q: "You have to listen to other students making a lot of mistakes. → ___", answer: "group −"}
+      - {n: 3, q: "You only have one other person's opinion in a discussion. → ___", answer: "one-to-one −"}
+      - {n: 4, q: "You meet new people and make new friends, sometimes from other cultures. → ___", answer: "group +"}
+      - {n: 5, q: "One-to-one lessons are very expensive. → ___", answer: "one-to-one −"}
+      - {n: 6, q: "If you talk in pairs, the teacher can't always hear what you are saying. → ___", answer: "group −"}
+      - {n: 7, q: "The teacher can go through your written work with you and explain the things you don't understand. → ___", answer: "one-to-one +"}
+      - {n: 8, q: "You feel nervous because the teacher watches you when you read or do an exercise. → ___", answer: "one-to-one −"}
+    lines:
+      - emma: "Exercise B. Copy the table into your notebook. Then add these points to the correct column. Pause the video and try."
+        vi: "Bài B: chép bảng vào vở, xếp tám ý vào đúng cột. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6", "7", "8"]
+        vi: "Đây là toàn bộ đáp án."
+      - emma: "Pause the video and check your answers. Then let's see the complete table."
+        vi: "Tạm dừng video, đối chiếu đáp án. Rồi xem cả bảng."
+        pause: 2.0
+
+  - kind: compare
+    chapter: "Bảng đầy đủ"
+    heading: "Writing 2B · The complete table"
+    heading_vi: "Ý của bài 2A và 2B xếp vào bốn cột"
+    items:
+      - {title: "group lesson +", title_vi: "học nhóm: ưu", lines: ["practise with other students", "meet new people, make new friends"]}
+      - {title: "group lesson −", title_vi: "học nhóm: nhược", lines: ["a lot of noise", "listen to other students' mistakes", "the teacher can't always hear you"]}
+      - {title: "one-to-one +", title_vi: "một thầy một trò: ưu", lines: ["all the teacher's attention", "deal with difficulties immediately", "go through your written work"]}
+      - {title: "one-to-one −", title_vi: "một thầy một trò: nhược", lines: ["very intensive", "only one other opinion", "very expensive", "you feel nervous"]}
+    lines:
+      - {emma: "Group lesson, plus: point 4. You meet new people and make new friends.", say: "Group lesson, plus: point four. You meet new people and make new friends.", focus: 0}
+      - {emma: "Group lesson, minus: points 2 and 6. Other students' mistakes, and the teacher can't always hear you.", say: "Group lesson, minus: points two and six. Other students' mistakes, and the teacher can't always hear you.", focus: 1}
+      - {emma: "One-to-one, plus: points 1 and 7. The teacher deals with your difficulties immediately and goes through your written work.", say: "One-to-one, plus: points one and seven. The teacher deals with your difficulties immediately and goes through your written work.", focus: 2}
+      - {emma: "One-to-one, minus: points 3, 5 and 8. Only one opinion, it's expensive, and you feel nervous.", say: "One-to-one, minus: points three, five and eight. Only one opinion, it's expensive, and you feel nervous.", focus: 3}
+      - tom: "Now I have ideas for both sides. That's my plan!"
+        vi: "Giờ mình có ý cho cả hai phía — đó là dàn bài!"
+
+  - kind: qa
+    chapter: "Thêm ý của bạn"
+    heading: "Your turn · Add one more point to each column"
+    heading_vi: "Tạm dừng video, tự nghĩ một ý cho mỗi cột, rồi nghe ý của Tom và Mai"
+    items:
+      - {q: "Group lesson, plus?", a: "It's more fun. You can play games and share ideas with other people.", ask: emma, by: mai}
+      - {q: "Group lesson, minus?", a: "You can't choose what to study. You must do what the other students choose.", ask: emma, by: tom}
+      - {q: "One-to-one, plus?", a: "You can tell the teacher what you want to learn, and ask to revise something.", ask: emma, by: mai}
+      - {q: "One-to-one, minus?", a: "You don't meet other learners, so it's difficult to make new friends.", ask: emma, by: tom}
+    lines:
+      - emma: "Your turn. Can you add one more point to each column? Pause the video after each question and think of a point."
+        vi: "Đến lượt bạn: thêm một ý cho mỗi cột. Tạm dừng sau mỗi câu hỏi."
+      - {emma: "Group lesson, plus?", focus: 0, pause: 1.5}
+      - {mai: "It's more fun. You can play games and share ideas with other people.", reveal: 0}
+      - {emma: "Group lesson, minus?", focus: 1, pause: 1.5}
+      - {tom: "You can't choose what to study. You must do what the other students choose.", reveal: 1}
+      - {emma: "One-to-one, plus?", focus: 2, pause: 1.5}
+      - {mai: "You can tell the teacher what you want to learn, and ask to revise something.", reveal: 2}
+      - {emma: "One-to-one, minus?", focus: 3, pause: 1.5}
+      - {tom: "You don't meet other learners, so it's difficult to make new friends.", reveal: 3}
+      - emma: "Good. Keep your table. You will need it for your own composition."
+        vi: "Tốt lắm — giữ bảng này để viết bài luận của bạn."
+
+  - kind: figure
+    chapter: "Exam tip: bài luận cân bằng"
+    heading: "Exam tip · Write a balanced composition"
+    heading_vi: "Exam tip tr. 66"
+    image: {pdf: course-book, page: 67, clip: [56, 200, 445, 246]}
+    lines:
+      - emma: "Exam tip. If you do not have a strong opinion about a topic, or you see both sides of an argument, you should write a balanced composition. Brainstorm points that support both sides of an argument, and then organize them."
+        vi: "Mẹo thi: nếu không có ý kiến mạnh, hoặc thấy cả hai mặt, hãy viết bài cân bằng: liệt kê ý cho cả hai phía rồi sắp xếp."
+      - emma: "In the next video, we read two compositions and see which one is better organized."
+        vi: "Video sau: đọc hai bài luận và xem bài nào sắp xếp tốt hơn."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "assignment · give reasons · relevant examples from your experience · at least 250 words", vi: "Từ quan trọng trong đề"}
+      - {en: "Make a table: group + / group − / one-to-one + / one-to-one −", vi: "Xếp ý cho cả hai phía"}
+      - {en: "No strong opinion? Write a balanced composition.", vi: "Bài luận cân bằng"}
+    lines:
+      - {emma: "Let's review. Understand the key words in the instructions: assignment, give reasons, relevant examples, at least 250 words.", say: "Let's review. Understand the key words in the instructions: assignment, give reasons, relevant examples, at least two hundred and fifty words.", focus: 0}
+      - {emma: "Make a table of points for both sides.", focus: 1}
+      - {tom: "And if I see both sides, I write a balanced composition.", focus: 2}

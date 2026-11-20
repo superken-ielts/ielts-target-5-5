@@ -1,0 +1,256 @@
+# Video bài giảng Unit 5 · Consolidation: Speaking, Vocabulary, Errors (sách in trang 67).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-consolidation.yaml
+# Cách viết: xem đầu file U01-consolidation.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): làm trước (tạm dừng video),
+# rồi mới hiện tất cả đáp án và đọc lại. Track 55 (Vocabulary B, trọng âm) không có file nghe: Emma đọc sáu từ. Answer key
+# không có trang này: đáp án suy ra — Speaking A 2; C 1 B, 2 B, 3 A; Vocabulary A consider, prediction, imagination,
+# concentrate, decision, memory; B conSIDer, preDICtion, imagiNAtion, CONcentrate, deCIsion, MEmory; C concentration,
+# imagination, judgement, creative, creatively; Errors: made a decision, I don't / can't remember, I don't think I'll pass,
+# remembered to close, looking forward to. Câu trả lời của Tom ở Speaking D theo hồ sơ file 06 mục 9.4.
+# Hình trong sách: câu hỏi Speaking B, câu trả lời của học viên Speaking C tr. 67. Vocabulary C và Errors không đặt hình bên
+# trái: dải trang rộng thu vào khung 520 px thì không đọc được và làm chữ của danh sách nhỏ đi.
+id: U05-consolidation
+activity: U05-consolidation
+title: "Unit 5 · Thoughts"
+subtitle: "Consolidation: Speaking, Vocabulary, Errors"
+title_vi: "Ôn Unit 5: chọn từ đúng khi trả lời bài thi Nói, chính tả và trọng âm, họ từ (concentration, judgement, creative), sửa lỗi"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Consolidation for Unit 5. Let's review: speaking, vocabulary, and some common errors."
+        say: "Welcome to Consolidation for Unit five. Let's review: speaking, vocabulary, and some common errors."
+        vi: "Ôn tập Unit 5: nói, từ vựng và các lỗi hay gặp."
+      - tom: "I'm ready. I've used my brain a lot this week!"
+        vi: "Mình sẵn sàng rồi — tuần này dùng não nhiều lắm!"
+      - emma: "Good. Remember: try first. All the answers come at the end of each exercise."
+        vi: "Tốt. Nhớ: làm trước, đáp án hiện cuối mỗi bài."
+
+  - kind: mcq
+    chapter: "Speaking A: lời khuyên"
+    heading: "Speaking A · Tick the advice that you think is best"
+    heading_vi: "Lời khuyên về từ vựng trong bài thi Nói — tạm dừng video và chọn"
+    items:
+      - n: A
+        q: "Vocabulary in the IELTS Speaking Module"
+        keys: [1, 2, 3]
+        options: ["You must use advanced vocabulary to impress the examiner.", "You shouldn't try to use vocabulary that you don't know properly, but you should try to use the right words and phrases for the situation.", "The examiner doesn't listen to the vocabulary you use, so you can say whatever you like."]
+        answer: 2
+    lines:
+      - emma: "Speaking. Exercise A. Look at this advice about the IELTS Speaking Module. Tick the advice that you think is best. Pause the video and choose."
+        say: "Speaking. Exercise eigh. Look at this advice about the eye-elts Speaking Module. Tick the advice that you think is best. Pause the video and choose."
+        vi: "Bài A: chọn lời khuyên đúng nhất về từ vựng khi thi Nói. Tạm dừng video và chọn."
+        pause: 1.5
+      - emma: "Here's the answer: number 2."
+        say: "Here's the answer: number two."
+        reveal: [A]
+        vi: "Đáp án: câu 2."
+      - emma: "Don't use difficult words that you don't know well. Use the right words for the situation. And the examiner does listen to your vocabulary. It's part of your score."
+        say: "Don't yooz difficult words that you don't know well. Yooz the right words for the situation. And the examiner does listen to your vocabulary. It's part of your score."
+        focus: 0
+        vi: "Đừng dùng từ khó mà mình chưa nắm chắc; hãy dùng đúng từ cho tình huống. Giám khảo có chấm từ vựng."
+
+  - kind: figure
+    chapter: "Speaking B–C: câu trả lời tốt hơn"
+    heading: "Speaking B · Think about how you could answer these questions"
+    heading_vi: "Ba câu hỏi tr. 67 — tạm dừng video và nghĩ câu trả lời"
+    image: {pdf: course-book, page: 68, clip: [74, 198, 452, 258]}
+    items:
+      - {box: [96, 217, 236, 230]}
+      - {box: [96, 231, 348, 244]}
+      - {box: [96, 244, 346, 257]}
+    lines:
+      - emma: "Exercise B. Look at these questions and think about how you could answer them."
+        vi: "Bài B: nghĩ cách trả lời ba câu hỏi."
+      - {emma: "One. Is your job ever challenging?", focus: 0}
+      - {emma: "Two. Do you have to think creatively in your work or studies?", focus: 1}
+      - {emma: "Three. Do you have any hobbies that involve a lot of thinking?", focus: 2, pause: 1.5}
+
+  - kind: figure
+    heading: "Speaking C · Tick the answer that you think is better"
+    heading_vi: "Câu trả lời của hai học viên tr. 67 — Tom đọc Student A, Mai đọc Student B"
+    image: {pdf: course-book, page: 68, clip: [74, 265, 520, 418]}
+    items:
+      - {box: [96, 297, 400, 336]}
+      - {box: [96, 337, 400, 377]}
+      - {box: [96, 378, 450, 417]}
+    lines:
+      - emma: "Exercise C. Look at the answers that some students give to the questions in Exercise B. For each, tick the answer that you think is better."
+        vi: "Bài C: chọn câu trả lời tốt hơn cho mỗi câu hỏi."
+      - {tom: "Student A: Yes, I must think very much about what to do.", focus: 0}
+      - {mai: "Student B: Yes, I have to make important decisions every day.", focus: 0}
+      - {tom: "Student A: Yes, I must think hard to make things in my mind.", focus: 1}
+      - {mai: "Student B: Yes, I have to use my imagination all the time.", say: "Student B: Yes, I have to yooz my imagination all the time.", focus: 1}
+      - {tom: "Student A: Well, I play golf, and to play well you really have to concentrate.", focus: 2}
+      - {mai: "Student B: Well, I play golf, and I must think very hard all the time.", focus: 2}
+      - emma: "Which answer is better each time? Pause the video and tick."
+        vi: "Câu nào tốt hơn? Tạm dừng video và chọn."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Speaking C: đáp án"
+    heading: "Speaking C · Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc — câu tốt hơn dùng đúng từ của bài"
+    items:
+      - {n: 1, q: "Is your job ever challenging? → Student ___", answer: "B"}
+      - {n: 2, q: "Do you have to think creatively in your work or studies? → Student ___", answer: "B"}
+      - {n: 3, q: "Do you have any hobbies that involve a lot of thinking? → Student ___", answer: "A"}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: Student B. Make important decisions is the right expression. I must think very much is not natural.", focus: 0, vi: "make decisions — đúng cụm; I must think very much không tự nhiên."}
+      - {emma: "Two: Student B. Use my imagination. Think hard to make things in my mind is not natural.", say: "Two: Student B. Yooz my imagination. Think hard to make things in my mind is not natural.", focus: 1, vi: "use my imagination — đúng cụm."}
+      - {emma: "Three: Student A. You really have to concentrate. Think very hard all the time is too general.", say: "Three: Student eigh. You really have to concentrate. Think very hard all the time is too general.", focus: 2, vi: "have to concentrate — chính xác hơn think very hard."}
+
+  - kind: qa
+    chapter: "Speaking D: Tom trả lời"
+    heading: "Speaking D · Ask and answer the questions. Choose your vocabulary carefully"
+    heading_vi: "Câu trả lời mẫu của Tom — dùng từ của Unit 5"
+    items:
+      - {q: "Is your job ever challenging?", a: "Yes, sometimes. When the café is very busy, I have to concentrate and remember all the orders.", ask: emma, by: tom}
+      - {q: "Do you have to think creatively in your work or studies?", a: "Yes, in my marketing classes. We have to use our imagination to create new ideas for adverts.", ask: emma, by: tom}
+      - {q: "Do you have any hobbies that involve a lot of thinking?", a: "I play chess with my grandfather. You have to predict what the other player will do.", ask: emma, by: tom}
+    lines:
+      - emma: "Exercise D. Ask and answer the questions with a partner. Choose your vocabulary carefully. First, listen to Tom."
+        vi: "Bài D: hỏi và trả lời, chọn từ cẩn thận. Nghe Tom trước."
+      - {emma: "Is your job ever challenging?", focus: 0, pause: 1.0}
+      - {tom: "Yes, sometimes. When the café is very busy, I have to concentrate and remember all the orders.", reveal: 0}
+      - {emma: "Do you have to think creatively in your work or studies?", focus: 1, pause: 1.0}
+      - {tom: "Yes, in my marketing classes. We have to use our imagination to create new ideas for adverts.", say: "Yes, in my marketing classes. We have to yooz our imagination to create new ideas for adverts.", reveal: 1}
+      - {emma: "Do you have any hobbies that involve a lot of thinking?", focus: 2, pause: 1.0}
+      - {tom: "I play chess with my grandfather. You have to predict what the other player will do.", reveal: 2}
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Answer the questions"
+    heading_vi: "Tạm dừng video, trả lời thành tiếng — dùng từ của Unit 5"
+    items:
+      - {q: "Is your job ever challenging?", hint: "make decisions · concentrate · consider"}
+      - {q: "Do you have to think creatively in your work or studies?", hint: "use my imagination · have ideas"}
+      - {q: "Do you have any hobbies that involve a lot of thinking?", hint: "concentrate · predict · calculate"}
+    lines:
+      - emma: "Your turn. Pause the video, and answer these questions out loud. Choose your vocabulary carefully."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng."
+      - {emma: "Is your job ever challenging?", focus: 0, pause: 0.5}
+      - {emma: "Do you have to think creatively in your work or studies?", focus: 1, pause: 0.5}
+      - {emma: "Do you have any hobbies that involve a lot of thinking?", focus: 2, pause: 1.5}
+
+  - kind: blanks
+    chapter: "Vocabulary A: chính tả"
+    heading: "Vocabulary A · Correct the spelling mistakes in these words"
+    heading_vi: "Tạm dừng video và sửa; đáp án hiện sau"
+    items: &vocab
+      - {n: 1, q: "concider → ___", answer: "consider"}
+      - {n: 2, q: "pridiction → ___", answer: "prediction"}
+      - {n: 3, q: "immagination → ___", answer: "imagination"}
+      - {n: 4, q: "consentrate → ___", answer: "concentrate"}
+      - {n: 5, q: "disision → ___", answer: "decision"}
+      - {n: 6, q: "memary → ___", answer: "memory"}
+    lines:
+      - emma: "Vocabulary. Exercise A. Correct the spelling mistakes in these words. Pause the video and try."
+        say: "Vocabulary. Exercise eigh. Correct the spelling mistakes in these words. Pause the video and try."
+        vi: "Bài A: sửa lỗi chính tả. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Consider, with an s. Prediction, with an e after the r.", say: "Consider, with an ess. Prediction, with an ee after the ar.", focus: 0}
+      - {emma: "Imagination, with one m. Concentrate, with a c.", say: "Imagination, with one em. Concentrate, with a see.", focus: 2}
+      - {emma: "Decision: d, e, c, i, s, i, o, n. And memory, with an o.", say: "Decision: dee. ee. see. eye. ess. eye. oh. en. And memory, with an oh.", focus: 4}
+
+  - kind: blanks
+    chapter: "Vocabulary B: trọng âm"
+    heading: "Vocabulary B · Listen and mark the main stress"
+    heading_vi: "Track 55 không có file — Emma đọc sáu từ; đánh dấu âm tiết được nhấn, đáp án hiện sau"
+    items: &stress
+      - {n: 1, q: "consider → ___", answer: "con-SI-der"}
+      - {n: 2, q: "prediction → ___", answer: "pre-DIC-tion"}
+      - {n: 3, q: "imagination → ___", answer: "i-ma-gi-NA-tion"}
+      - {n: 4, q: "concentrate → ___", answer: "CON-cen-trate"}
+      - {n: 5, q: "decision → ___", answer: "de-CI-sion"}
+      - {n: 6, q: "memory → ___", answer: "ME-mo-ry"}
+    lines:
+      - emma: "Exercise B. Listen and mark the main stress on the words in Exercise A. The recording isn't in our audio files, so I'll say the words."
+        vi: "Bài B: nghe và đánh dấu trọng âm chính. Track 55 không có file nên Emma đọc."
+      - {emma: "Consider.", focus: 0, pause: 0.5}
+      - {emma: "Prediction.", focus: 1, pause: 0.5}
+      - {emma: "Imagination.", focus: 2, pause: 0.5}
+      - {emma: "Concentrate.", focus: 3, pause: 0.5}
+      - {emma: "Decision.", focus: 4, pause: 0.5}
+      - {emma: "Memory.", focus: 5, pause: 0.5}
+      - emma: "Pause the video and mark the stress."
+        vi: "Tạm dừng video và đánh dấu trọng âm."
+        pause: 1.5
+      - emma: "Here are all the answers. The capital letters show the stress."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án — chữ in hoa là âm tiết được nhấn."
+      - {emma: "Consider, prediction, decision: stress on the second syllable.", focus: 0, vi: "Nhấn âm thứ hai."}
+      - {emma: "Imagination: stress on a, the fourth syllable. Words with tion are stressed just before tion.", say: "Imagination: stress on nay, the fourth syllable. Words with shun are stressed just before shun.", focus: 2, vi: "Từ có -tion: nhấn âm ngay trước -tion."}
+      - {emma: "Concentrate and memory: stress on the first syllable.", focus: 3, vi: "Nhấn âm đầu."}
+
+  - kind: blanks
+    chapter: "Vocabulary C: họ từ"
+    heading: "Vocabulary C · Fill the gaps with a word made from the root words"
+    heading_vi: "concentrate · imagine · judge · create · create — tạm dừng video và làm; đáp án hiện sau"
+    items:
+      - {n: 1, q: "All this noise is affecting my ___.", answer: "concentration"}
+      - {n: 2, q: "Come on – use your ___.", answer: "imagination"}
+      - {n: 3, q: "I don't really know enough to make a ___.", answer: "judgement"}
+      - {n: 4, q: "I need to be very ___ in my job.", answer: "creative"}
+      - {n: 5, q: "Mind-mapping helps you to think ___.", answer: "creatively"}
+    lines:
+      - emma: "Exercise C. Fill the gaps with a word made from the root words in the box: concentrate, imagine, judge, create, create. Pause the video and try."
+        vi: "Bài C: điền từ phái sinh từ các từ gốc trong khung. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: concentration, a noun. My concentration.", focus: 0, vi: "concentration (danh từ) = sự tập trung"}
+      - {emma: "Two: imagination, a noun. Use your imagination.", say: "Two: imagination, a noun. Yooz your imagination.", focus: 1, vi: "imagination = trí tưởng tượng"}
+      - {emma: "Three: judgement. Make a judgement means decide what you think about something.", focus: 2, vi: "make a judgement = đưa ra nhận định"}
+      - {emma: "Four: creative, an adjective after be. Five: creatively, an adverb after think.", focus: 3, vi: "be creative (tính từ) · think creatively (trạng từ)"}
+
+  - kind: blanks
+    chapter: "Errors: sửa lỗi"
+    heading: "Errors · Correct the sentences"
+    heading_vi: "Mỗi câu có ít nhất một lỗi — tạm dừng video và sửa; đáp án hiện sau"
+    items:
+      - {n: 1, q: "I'm sorry. I haven't done a decision yet. → ___", answer: "I haven't made a decision yet."}
+      - {n: 2, q: "Sorry, I'm not remembering your name. → ___", answer: "Sorry, I don't remember your name."}
+      - {n: 3, q: "I think I won't pass this test. → ___", answer: "I don't think I'll pass this test."}
+      - {n: 4, q: "Are you sure you recalled to close all the windows? → ___", answer: "… you remembered to close …"}
+      - {n: 5, q: "I'm looking forward at the weekend. → ___", answer: "I'm looking forward to the weekend."}
+    lines:
+      - emma: "Errors. There are errors in all of these sentences, sometimes more than one. Correct them. Pause the video and try."
+        vi: "Sửa lỗi: câu nào cũng có lỗi, có câu nhiều hơn một. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: make a decision, not do a decision.", focus: 0, vi: "make a decision"}
+      - {emma: "Two: remember is a state verb. I don't remember, or I can't remember, your name.", focus: 1, vi: "remember không dùng -ing"}
+      - {emma: "Three: I don't think, plus an affirmative verb. I don't think I'll pass this test.", focus: 2, vi: "I don't think + câu khẳng định"}
+      - {emma: "Four: remember to do something. Are you sure you remembered to close all the windows?", say: "Four: remember to do something. Are you sure you remembered to cloze all the windows?", focus: 3, vi: "remember to do (nhớ làm), không dùng recall"}
+      - {emma: "Five: look forward to. I'm looking forward to the weekend.", focus: 4, vi: "look forward to"}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Use the right words: make decisions, use my imagination, concentrate.", vi: "Chọn đúng từ khi thi Nói"}
+      - {en: "conSIDer · preDICtion · imagiNAtion · CONcentrate · deCIsion · MEmory", vi: "Chính tả và trọng âm"}
+      - {en: "concentration · imagination · judgement · creative · creatively", vi: "Họ từ"}
+      - {en: "I haven't made a decision. · I don't think I'll pass. · I'm looking forward to it.", vi: "Lỗi hay gặp"}
+    lines:
+      - {emma: "Let's review. Choose the right words for the situation.", focus: 0}
+      - {emma: "Learn the spelling and the stress of the new words.", focus: 1}
+      - {emma: "Use word families: concentration, judgement, creatively.", say: "Yooz word families: concentration, judgement, creatively.", focus: 2}
+      - {tom: "And: I haven't made a decision yet, but I'm looking forward to Unit 6!", say: "And: I haven't made a decision yet, but I'm looking forward to Unit six!", focus: 3}

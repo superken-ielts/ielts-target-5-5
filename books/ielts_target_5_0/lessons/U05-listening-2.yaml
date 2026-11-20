@@ -1,0 +1,201 @@
+# Video bài giảng Unit 5 · Listening 2: practice with diagrams (sách in trang 61).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-listening-2.yaml
+# Cách viết: xem đầu file U01-listening-1.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): đọc đề trước, nghe xong mới
+# hiện tất cả đáp án, rồi đọc lại kèm câu bằng chứng. Phát Track 54 (U05-L2A) thành hai phần, mỗi phần cho một nhóm câu:
+# 26,5–110,4 s (vị trí các phần của não, câu 1–6) và 110,4–269,9 s (chức năng, câu 7–14). Bỏ lời dẫn đầu file và câu cuối
+# bị cắt dở; mọi điểm cắt ở khoảng lặng (work/transcripts/U05-L2A.json). Sách ghi "[Play track 54 again]" cho câu 7–14:
+# người học muốn nghe lại cả bài thì tua lại. Đáp án theo Answer key (sách in trang 267): 1 f, 2 e, 3 d, 4 b, 5 a, 6 c,
+# 7 two, 8 movement, 9 space, 10 sleep, 11 messages, 12 heart, 13 connects, 14 grow. Key vocabulary in context suy ra
+# (processes, function, controls, balance).
+# Hình trong sách: đề 2A, câu 1–6 và sơ đồ bộ não a–f, các câu tự đánh giá 2C, Exam tip, khung Key vocabulary tr. 61.
+id: U05-listening-2
+activity: U05-listening
+title: "Unit 5 · Thoughts"
+subtitle: "Listening 2: practice with diagrams"
+title_vi: "Nghe bài giảng về bộ não: nối các phần của não với sơ đồ, điền mô tả một từ (Track 54); từ function, control, balance, process"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening 2. Now we practise with a real exam task: a lecture about the human brain."
+        say: "Welcome to Listening two. Now we practise with a real exam task: a lecture about the human brain."
+        vi: "Listening 2: luyện với một bài thi thật — bài giảng về bộ não người."
+      - tom: "The brain? I don't know any of those words!"
+        vi: "Bộ não à? Mình không biết từ nào về nó cả!"
+      - emma: "Don't worry. The lecturer explains them, and the diagram helps you. Read the questions first. All the answers come after the listening."
+        vi: "Đừng lo: giảng viên sẽ giải thích, sơ đồ sẽ giúp bạn. Đọc câu hỏi trước; đáp án hiện sau khi nghe."
+
+  - kind: figure
+    chapter: "Listening 2A: xem sơ đồ trước khi nghe"
+    heading: "Listening 2A · Look at the diagram before you listen"
+    heading_vi: "Đề và sơ đồ tr. 61 — nối sáu phần của não (1–6) với các vị trí a–f"
+    image: {pdf: course-book, page: 62, clip: [60, 79, 445, 214]}
+    items:
+      - {box: [66, 81, 440, 118]}
+      - {box: [214, 117, 416, 212]}
+      - {box: [78, 121, 180, 203]}
+    lines:
+      - emma: "Listening 2: practice with diagrams. Exercise A. Listen to the continuation of the lecture about the human brain. For questions 1 to 6, match the parts of the brain 1 to 6 with the parts a to f in the diagram."
+        say: "Listening two: practice with diagrams. Exercise eigh. Listen to the continuation of the lecture about the human brain. For questions one to six, match the parts of the brain one to six with the parts eigh to F in the diagram."
+        focus: 0
+        vi: "Bài A: nghe tiếp bài giảng về bộ não. Câu 1–6: nối sáu phần của não với vị trí a–f trên sơ đồ."
+      - emma: "Look at the diagram before you listen. The brain is big and round at the top. In the middle, there are some small parts. At the bottom, there's a long part going down."
+        focus: 1
+        vi: "Xem sơ đồ trước khi nghe: phần lớn tròn ở trên, vài phần nhỏ ở giữa, một phần dài đi xuống dưới."
+      - emma: "Now read the six parts: spinal cord, cerebellum, pituitary gland, brain stem, cerebrum, thalamus. Pause the video and think. Where could they be?"
+        say: "Now read the six parts: spinal cord, cerebellum, pituitary gland, brain stem, cerebrum, thalamus. Pause the video and think. Where could they be?"
+        focus: 2
+        vi: "Đọc sáu tên: tủy sống, tiểu não, tuyến yên, thân não, đại não, đồi thị. Tạm dừng video và đoán vị trí."
+        pause: 1.5
+
+  - kind: match
+    chapter: "Câu 1–6: nghe và nối"
+    heading: "Listening 2A · Questions 1–6: match the parts of the brain with a–f"
+    heading_vi: "Nghe phần đầu của Track 54 — đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 62, clip: [212, 116, 418, 213]}
+    items:
+      - {n: 1, q: "spinal cord", answer: f}
+      - {n: 2, q: "cerebellum", answer: e}
+      - {n: 3, q: "pituitary gland", answer: d}
+      - {n: 4, q: "brain stem", answer: b}
+      - {n: 5, q: "cerebrum", answer: a}
+      - {n: 6, q: "thalamus", answer: c}
+    lines:
+      - emma: "Listen to the first part of the lecture, and write the letters."
+        vi: "Nghe phần đầu bài giảng và ghi chữ cái."
+      - {track: U05-L2A, start: 26.5, end: 110.4, note: "Track 54 · part 1"}
+      - emma: "Pause the video and check your letters."
+        vi: "Tạm dừng video và kiểm tra lại."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: the spinal cord is f, at the bottom of the diagram.", say: "One: the spinal cord is F, at the bottom of the diagram.", focus: 0, vi: "spinal cord = tủy sống"}
+      - {emma: "Two: the cerebellum is e. The lobe below, coloured yellow.", say: "Two: the cerebellum is ee. The lobe below, coloured yellow.", focus: 1, vi: "cerebellum = tiểu não"}
+      - {emma: "Three: the pituitary gland is d. It looks like a little tail.", say: "Three: the pituitary gland is D. It looks like a little tail.", focus: 2, vi: "pituitary gland = tuyến yên"}
+      - {emma: "Four: the brain stem is b, running down from the centre of the brain.", say: "Four: the brain stem is B, running down from the centre of the brain.", focus: 3, vi: "brain stem = thân não"}
+      - {emma: "Five: the cerebrum is a, by far the largest part of the brain.", say: "Five: the cerebrum is eigh, by far the largest part of the brain.", focus: 4, vi: "cerebrum = đại não"}
+      - {emma: "And six: the thalamus is c, right in the centre of the brain.", say: "And six: the thalamus is C, right in the centre of the brain.", focus: 5, vi: "thalamus = đồi thị"}
+
+  - kind: blanks
+    chapter: "Câu 7–14: nghe và điền"
+    heading: "Listening 2A · Questions 7–14: complete the descriptions (one word only)"
+    heading_vi: "Đọc câu trước, rồi nghe phần sau của Track 54 — đáp án hiện sau khi nghe xong"
+    items: &l2
+      - {n: 7, q: "The cerebrum has ___ hemispheres.", answer: "two"}
+      - {n: 8, q: "The cerebrum controls voluntary ___.", answer: "movement"}
+      - {n: 9, q: "The cerebellum helps us with balance and our understanding of ___.", answer: "space"}
+      - {n: 10, q: "The hypothalamus tells us when we are hungry or thirsty or when we need to ___.", answer: "sleep"}
+      - {n: 11, q: "The midbrain sends ___ from the brain to other parts of the nervous system.", answer: "messages"}
+      - {n: 12, q: "The medulla oblongata regulates how quickly or slowly our ___ beats.", answer: "heart"}
+      - {n: 13, q: "The spinal cord ___ the brain to the rest of our body.", answer: "connects"}
+      - {n: 14, q: "Hormones from the pituitary gland regulate how quickly we ___ and how quickly we age.", answer: "grow"}
+    lines:
+      - emma: "For questions 7 to 14, complete the descriptions. Use one word only for each answer. Pause the video and read the sentences first."
+        say: "For questions seven to fourteen, complete the descriptions. Yooz one word only for each answer. Pause the video and read the sentences first."
+        vi: "Câu 7–14: hoàn thành mô tả, mỗi chỗ một từ. Tạm dừng video, đọc câu trước."
+        pause: 1.5
+      - emma: "Now listen to the second part of the lecture."
+        vi: "Giờ nghe phần sau của bài giảng."
+      - {track: U05-L2A, start: 110.4, end: 269.9, note: "Track 54 · part 2"}
+      - emma: "Pause the video and write your answers."
+        vi: "Tạm dừng video và viết đáp án."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Câu 7–14: đáp án"
+    heading: "Listening 2A–B · Questions 7–14: answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi câu trong bài nghe — để ý cách nói khác (paraphrase)"
+    items: *l2
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["7", "8", "9", "10", "11", "12", "13", "14"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Seven: two. The cerebrum has two halves, or hemispheres.", focus: 0}
+      - {emma: "Eight: movement. It controls voluntary movement.", focus: 1}
+      - {emma: "Nine: space. It helps us understand where we are in relation to space around us.", focus: 2}
+      - {emma: "Ten: sleep. It tells us when we need sleep.", focus: 3}
+      - {emma: "Eleven: messages. The midbrain sends messages to other parts of the nervous system.", focus: 4}
+      - {emma: "Twelve: heart. The lecturer says the rate of our heartbeat. The question says how quickly our heart beats.", focus: 5, vi: "Câu hỏi nói cách khác: the rate of our heartbeat → how quickly our heart beats."}
+      - {emma: "Thirteen: connects. It connects the brain to nerves that go to the rest of the body.", focus: 6}
+      - {emma: "And fourteen: grow. How quickly we grow, and the size we grow to.", focus: 7}
+      - emma: "Exercise B. Check your answers. How many questions did you answer correctly? Twelve or more is very good."
+        vi: "Bài B: bạn đúng bao nhiêu câu? Từ 12 câu trở lên là rất tốt."
+
+  - kind: figure
+    chapter: "Listening 2C: tự đánh giá"
+    heading: "Listening 2C · Tick the sentences that are true for you"
+    heading_vi: "Sáu câu tr. 61 — câu nào đúng với bạn? Lần sau làm thế nào để đúng nhiều hơn?"
+    image: {pdf: course-book, page: 62, clip: [60, 410, 445, 553]}
+    items:
+      - {box: [66, 411, 440, 437]}
+      - {box: [78, 443, 402, 468]}
+      - {box: [78, 471, 390, 483]}
+      - {box: [78, 485, 326, 497]}
+      - {box: [78, 498, 412, 523]}
+      - {box: [78, 526, 236, 538]}
+      - {box: [78, 539, 345, 552]}
+    lines:
+      - emma: "Exercise C. Tick the sentences about the listening task that are true for you, and think about how you can answer more questions correctly next time. Pause the video and tick."
+        focus: 0
+        vi: "Bài C: đánh dấu câu đúng với bạn, nghĩ cách làm tốt hơn lần sau. Tạm dừng video."
+        pause: 1.5
+      - {emma: "One. Looking at the diagram and reading the questions helped me to predict content. That's the most important step.", focus: 1}
+      - {emma: "Two. The task was difficult because I didn't know anything about the topic. But you don't need to know about the brain. The lecture explains it.", focus: 2}
+      - {emma: "Three and four. Specialist vocabulary. Notice that the answers were easy words: two, movement, space, sleep.", focus: 3}
+      - {tom: "That's true. I didn't use the difficult words in my answers.", focus: 4}
+      - {emma: "Five. Most of my spelling was correct. Always check your spelling.", focus: 5}
+      - {emma: "Six. I am happy with how many questions I answered correctly. If not, listen again and read the tapescript on page 287.", say: "Six. I am happy with how many questions I answered correctly. If not, listen again and read the tapescript on page two hundred and eighty-seven.", focus: 6}
+
+  - kind: figure
+    chapter: "Exam tip"
+    heading: "Exam tip · Don't worry about difficult words"
+    heading_vi: "Exam tip tr. 61"
+    image: {pdf: course-book, page: 62, clip: [56, 556, 445, 600]}
+    lines:
+      - emma: "Exam tip. Don't worry if you don't know a word you need to label a diagram. You will hear it explained on the recording. Sometimes you need to copy the words onto your answer sheet, but usually you only need to match them with a letter."
+        vi: "Mẹo thi: đừng lo nếu không biết từ trên sơ đồ — bài nghe sẽ giải thích; thường chỉ cần nối với chữ cái."
+
+  - kind: blanks
+    chapter: "Key vocabulary in context"
+    heading: "Key vocabulary in context · function, control, balance, process"
+    heading_vi: "Dùng đúng dạng của bốn động từ trong bài nghe — tạm dừng video và làm"
+    image: {pdf: course-book, page: 62, clip: [60, 608, 445, 746]}
+    items:
+      - {n: 1, q: "The liver ___ the food and liquid that goes through our system.", answer: "processes"}
+      - {n: 2, q: "An engine doesn't ___ without petrol.", answer: "function"}
+      - {n: 3, q: "This switch ___ the temperature in the room.", answer: "controls"}
+      - {n: 4, q: "It is difficult to ___ on one leg if you close your eyes.", answer: "balance"}
+    lines:
+      - emma: "Key vocabulary in context. Use the correct form of these verbs from the listening: function, control, balance, process. Pause the video and try."
+        say: "Key vocabulary in context. Yooz the correct form of these verbs from the listening: function, control, balance, process. Pause the video and try."
+        vi: "Từ vựng trong ngữ cảnh: dùng đúng dạng của function, control, balance, process. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "The liver processes the food and liquid that goes through our system.", focus: 0, vi: "process = xử lý (the liver: số ít → processes)"}
+      - {tom: "An engine doesn't function without petrol.", focus: 1, vi: "function = hoạt động"}
+      - {tom: "This switch controls the temperature in the room.", focus: 2, vi: "control = điều khiển"}
+      - {tom: "It is difficult to balance on one leg if you close your eyes.", say: "It is difficult to balance on one leg if you cloze your eyes.", focus: 3, vi: "balance = giữ thăng bằng"}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "1 f · 2 e · 3 d · 4 b · 5 a · 6 c", vi: "Nối phần não với sơ đồ"}
+      - {en: "7 two · 8 movement · 9 space · 10 sleep · 11 messages · 12 heart · 13 connects · 14 grow", vi: "Mỗi chỗ một từ"}
+      - {en: "the rate of our heartbeat → how quickly our heart beats", vi: "Câu hỏi nói cách khác bài nghe"}
+      - {en: "process · function · control · balance", vi: "Từ vựng trong ngữ cảnh"}
+    lines:
+      - {emma: "Let's review. Look at the diagram first, then follow it while you listen.", focus: 0}
+      - {emma: "For one-word answers, the words are usually easy. Check your spelling.", focus: 1}
+      - {emma: "Listen for paraphrases: the rate of our heartbeat means how quickly our heart beats.", focus: 2}
+      - {tom: "And four new verbs: process, function, control, balance. My brain is processing them now!", focus: 3}

@@ -1,0 +1,296 @@
+# Video bài giảng Unit 5 · Reading 1: guessing unknown words and phrases in context, Reading 2: understanding new words and
+# phrases (sách in trang 62–63). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-reading-1.yaml
+# Cách viết: xem đầu file U02-reading-1.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): đọc / làm trước (tạm dừng
+# video), rồi mới hiện tất cả đáp án và đọc lại kèm manh mối trong câu. Answer key không có Reading 1–2: đáp án suy ra từ ngữ
+# cảnh — 1C capacity b, sieve tranh d; 1D tune in a, alert a, judgement c; 2B very clever, very stupid, not concentrating,
+# don't understand it at all, can't make a decision. Câu của Tom và Mai ở 2C theo hồ sơ file 06 mục 9.4.
+# Hình trong sách: đoạn trích có từ tô vàng (1A–B), bốn tranh 1C, Exam tip, ba đoạn 1D, khung từ 2A, năm câu 2B tr. 62–63.
+id: U05-reading-1
+activity: U05-reading
+title: "Unit 5 · Thoughts"
+subtitle: "Reading 1–2: guessing new words in context"
+title_vi: "Đoán nghĩa từ mới qua ngữ cảnh: capacity, a memory like a sieve, tune in, alert, judgement, brainy, in two minds …"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Reading for Unit 5. Today: what to do when you meet a word you don't know."
+        say: "Welcome to Reading for Unit five. Today: what to do when you meet a word you don't know."
+        vi: "Reading Unit 5: làm gì khi gặp từ không biết."
+      - tom: "Easy. I look it up in my dictionary."
+        vi: "Dễ mà, mình tra từ điển."
+      - emma: "Not in the exam! There's no dictionary. So you learn to guess the meaning from the words around it. Try each exercise first. The answers come after."
+        vi: "Trong phòng thi không có từ điển — phải đoán nghĩa từ các từ xung quanh. Làm từng bài trước, đáp án hiện sau."
+
+  - kind: figure
+    chapter: "Reading 1A–B: capacity, sieve"
+    heading: "Reading 1A–B · Look at the highlighted word and phrase"
+    heading_vi: "Đoạn trích tr. 62 — bạn biết capacity, a memory like a sieve không? Đọc cả đoạn rồi thử giải thích"
+    image: {pdf: course-book, page: 63, clip: [64, 186, 445, 310]}
+    items:
+      - {box: [66, 188, 440, 217]}
+      - {box: [130, 232, 167, 245]}
+      - {box: [87, 258, 172, 271]}
+      - {box: [78, 218, 440, 271]}
+      - {box: [66, 283, 420, 308]}
+    lines:
+      - emma: "Reading 1: guessing unknown words and phrases in context. Exercise A. Look only at the highlighted word and phrase in the extract. Do you know either of them?"
+        say: "Reading one: guessing unknown words and phrases in context. Exercise eigh. Look only at the highlighted word and phrase in the extract. Do you know either of them?"
+        focus: 0
+        vi: "Bài A: chỉ nhìn từ và cụm được tô vàng. Bạn biết từ nào không?"
+      - {emma: "The word: capacity.", focus: 1}
+      - {emma: "And the phrase: a memory like a sieve.", focus: 2}
+      - tom: "Capacity? I'm not sure. And a sieve? No idea."
+        focus: 2
+        vi: "capacity? Không chắc. Còn sieve? Chịu."
+      - emma: "Exercise B. Now read the whole extract. Then try to explain the highlighted words. Listen to Mai."
+        focus: 4
+        vi: "Bài B: đọc cả đoạn, rồi thử giải thích các từ tô vàng. Nghe Mai đọc."
+      - {mai: "Having a good memory is certainly an advantage. My brother seems to have a brain with a huge capacity for new information.", focus: 3}
+      - {mai: "He remembers everything he sees or hears and has a very successful career.", focus: 3}
+      - {mai: "My brain seems to work differently. In fact, I have a memory like a sieve. Information goes straight in and straight back out.", focus: 3}
+      - emma: "Pause the video, and try to explain the two words with a partner."
+        vi: "Tạm dừng video, thử giải thích hai từ."
+        pause: 1.5
+
+  - kind: mcq
+    chapter: "Reading 1C: capacity"
+    heading: "Reading 1C · 1 Tick the correct definition for capacity"
+    heading_vi: "Tạm dừng video và chọn a, b hoặc c; đáp án hiện sau"
+    items:
+      - n: 1
+        q: "capacity"
+        keys: [a, b, c]
+        options: ["how long something is", "how much something can hold", "how fast something travels"]
+        answer: b
+    lines:
+      - emma: "Exercise C. Answer the questions about the highlighted word and phrase. One. Tick the correct definition for capacity. Pause the video and choose."
+        vi: "Bài C1: chọn nghĩa đúng của capacity. Tạm dừng video và chọn."
+        pause: 1.5
+      - emma: "Here's the answer: b. How much something can hold."
+        reveal: ["1"]
+        vi: "Đáp án: b — sức chứa, khả năng chứa."
+      - emma: "The clue: he remembers everything. So his brain can hold a lot of new information. It has a huge capacity."
+        focus: 0
+        vi: "Manh mối: anh ấy nhớ mọi thứ → não chứa được rất nhiều thông tin."
+
+  - kind: figure
+    chapter: "Reading 1C: a sieve"
+    heading: "Reading 1C · 2 Tick the correct picture of a sieve"
+    heading_vi: "Bốn tranh tr. 62 — tạm dừng video và chọn; đáp án hiện sau"
+    image: {pdf: course-book, page: 63, clip: [58, 378, 532, 478]}
+    items:
+      - {box: [60, 397, 173, 477]}
+      - {box: [179, 397, 292, 477]}
+      - {box: [298, 397, 411, 477]}
+      - {box: [417, 397, 530, 477]}
+    lines:
+      - emma: "Two. Tick the correct picture of a sieve: a, b, c or d. Use the clue in the extract: information goes straight in and straight back out. Pause the video and choose."
+        say: "Two. Tick the correct picture of a sieve: eigh, B, C or D. Yooz the clue in the extract: information goes straight in and straight back out. Pause the video and choose."
+        vi: "C2: tranh nào là cái sieve? Manh mối: thông tin vào thẳng rồi ra thẳng. Tạm dừng video và chọn."
+        pause: 1.5
+      - emma: "Here's the answer: picture d. Not a, a hammer. Not b, a bowl. Not c, a sponge."
+        say: "Here's the answer: picture D. Not eigh, a hammer. Not B, a bowl. Not C, a sponge."
+        focus: 3
+        vi: "Đáp án: tranh d. Không phải a (búa), b (bát), c (miếng bọt biển)."
+      - emma: "A sieve is a kitchen tool with lots of very small holes. Water goes through, and the food stays in."
+        focus: 3
+        vi: "sieve = cái rây, cái lọc: nước chảy qua, thức ăn ở lại."
+      - mai: "So a memory like a sieve is a very bad memory. Things go in, and then they go straight out again!"
+        focus: 3
+        vi: "a memory like a sieve = trí nhớ rất kém, như cái rây."
+
+  - kind: figure
+    chapter: "Exam tip"
+    heading: "Exam tip · Guess meanings in context"
+    heading_vi: "Exam tip tr. 62"
+    image: {pdf: course-book, page: 63, clip: [56, 480, 445, 545]}
+    lines:
+      - emma: "Exam tip. When you are reading, you don't want to worry about the meaning of every word. However, some words are vital to understand the text or to answer a question correctly."
+        vi: "Mẹo thi: không cần lo nghĩa của mọi từ, nhưng có những từ quan trọng để hiểu bài hoặc trả lời câu hỏi."
+      - emma: "You will not have a dictionary in the exam, so it is important that you learn to guess the meanings of words in context, from the other words around the word that you don't know."
+        vi: "Phòng thi không có từ điển — hãy tập đoán nghĩa qua các từ xung quanh."
+
+  - kind: figure
+    chapter: "Reading 1D: ba đoạn trích"
+    heading: "Reading 1D · Extract 1: tune in"
+    heading_vi: "Đoạn 1 tr. 62 — đọc rồi chọn nghĩa đúng của từ tô vàng; tạm dừng video"
+    image: {pdf: course-book, page: 63, clip: [64, 548, 445, 662]}
+    items:
+      - {box: [66, 550, 440, 577]}
+      - {box: [94, 582, 440, 633]}
+      - {box: [94, 635, 440, 661]}
+    lines:
+      - emma: "Exercise D. Look only at the highlighted words in these extracts. Then read the extracts and tick the correct definition of the highlighted word."
+        focus: 0
+        vi: "Bài D: nhìn từ tô vàng, đọc đoạn trích, chọn nghĩa đúng."
+      - {mai: "It is difficult to understand even the gist of a conversation or talk if you have no idea of the topic before you listen.", focus: 1}
+      - {mai: "Knowing what the topic is helps you to tune in. You can then listen for key words and make more sense of the information you hear.", focus: 1}
+      - emma: "Tune in means: a, start to understand. b, be an expert on a subject. c, do something better than other people. Pause the video and choose."
+        say: "Tune in means: eigh, start to understand. B, be an expert on a subject. C, do something better than other people. Pause the video and choose."
+        focus: 2
+        vi: "tune in nghĩa là gì? Tạm dừng video và chọn."
+        pause: 1.5
+
+  - kind: figure
+    heading: "Reading 1D · Extract 2: alert"
+    heading_vi: "Đoạn 2 tr. 62"
+    image: {pdf: course-book, page: 63, clip: [64, 664, 445, 735]}
+    items:
+      - {box: [94, 666, 440, 705]}
+      - {box: [94, 706, 440, 733]}
+    lines:
+      - {mai: "As people grow older, they need to exercise both their bodies and their minds.", focus: 0}
+      - {mai: "Jogging or playing golf can keep people physically healthy, while reading and playing games can help them to stay alert.", focus: 0}
+      - emma: "Alert means: a, quick and ready to react. b, slower than usual. c, big and strong. Pause the video and choose."
+        say: "Alert means: eigh, quick and ready to react. B, slower than usual. C, big and strong. Pause the video and choose."
+        focus: 1
+        vi: "alert nghĩa là gì? Tạm dừng video và chọn."
+        pause: 1.5
+
+  - kind: figure
+    heading: "Reading 1D · Extract 3: judgement"
+    heading_vi: "Đoạn 3 tr. 63"
+    image: {pdf: course-book, page: 64, clip: [64, 58, 445, 138]}
+    items:
+      - {box: [78, 59, 440, 99]}
+      - {box: [94, 100, 440, 137]}
+    lines:
+      - {mai: "It was very late and I had been driving for several hours. The fact that I was so tired affected my judgement.", focus: 0}
+      - {mai: "I didn't slow down and hit the back of another car that was waiting at the traffic lights.", focus: 0}
+      - emma: "Judgement is: a, the need to drive carefully. b, a lot of cars in the same place. c, the ability to understand a situation. Pause the video and choose."
+        say: "Judgement is: eigh, the need to drive carefully. B, a lot of cars in the same place. C, the ability to understand a situation. Pause the video and choose."
+        focus: 1
+        vi: "judgement là gì? Tạm dừng video và chọn."
+        pause: 1.5
+
+  - kind: mcq
+    chapter: "Reading 1D: đáp án"
+    heading: "Reading 1D · Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi manh mối trong từng đoạn"
+    items:
+      - {n: 1, q: "Tune in means …", keys: [a, b, c], options: ["start to understand", "be an expert on a subject", "do something better than other people"], answer: a}
+      - {n: 2, q: "Alert means …", keys: [a, b, c], options: ["quick and ready to react", "slower than usual", "big and strong"], answer: a}
+      - {n: 3, q: "Judgement is …", keys: [a, b, c], options: ["the need to drive carefully", "a lot of cars in the same place", "the ability to understand a situation"], answer: c}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: a. If you know the topic, you start to understand, and then you make more sense of what you hear.", say: "One: eigh. If you know the topic, you start to understand, and then you make more sense of what you hear.", focus: 0, vi: "tune in = bắt nhịp, bắt đầu hiểu"}
+      - {emma: "Two: a. Reading and games keep your mind quick and ready to react, the opposite of slow.", say: "Two: eigh. Reading and games keep your mind quick and ready to react, the opposite of slow.", focus: 1, vi: "alert = tỉnh táo, nhanh nhạy"}
+      - {emma: "Three: c. The driver was tired, so he didn't understand the situation and didn't slow down.", focus: 2, vi: "judgement = khả năng phán đoán"}
+
+  - kind: figure
+    chapter: "Reading 2A: đoán nghĩa"
+    heading: "Reading 2A · Look at these words and phrases and guess what they mean"
+    heading_vi: "Exam tip và khung từ tr. 63 — từ đã biết có thể là một phần của từ mới"
+    image: {pdf: course-book, page: 64, clip: [58, 148, 445, 258]}
+    items:
+      - {box: [58, 170, 440, 210]}
+      - {box: [66, 218, 440, 257]}
+    lines:
+      - emma: "Reading 2: understanding new words and phrases. Exam tip. You will read more quickly if you can guess new words from words that you already know. The word you know can be part of a new word, or part of a new phrase or expression."
+        say: "Reading two: understanding new words and phrases. Exam tip. You will read more quickly if you can guess new words from words that you already know. The word you know can be part of a new word, or part of a new phrase or expression."
+        focus: 0
+        vi: "Mẹo thi: đoán từ mới qua từ đã biết nằm bên trong nó."
+      - emma: "Exercise A. Look at these words and phrases and guess what they mean: brainy, brainless, daydream, over my head, in two minds. Pause the video and guess."
+        say: "Exercise eigh. Look at these words and phrases and guess what they mean: brainy, brainless, daydream, over my head, in two minds. Pause the video and guess."
+        focus: 1
+        vi: "Bài A: đoán nghĩa các từ trong khung. Tạm dừng video và đoán."
+        pause: 1.5
+      - tom: "Brainy and brainless both have the word brain. Daydream has day and dream. I can guess, but I'm not sure."
+        focus: 1
+        vi: "brainy, brainless có chữ brain; daydream có day và dream — đoán được nhưng chưa chắc."
+
+  - kind: figure
+    chapter: "Reading 2B: đọc trong ngữ cảnh"
+    heading: "Reading 2B · Circle the correct option (1–3)"
+    heading_vi: "Câu 1–3 tr. 63 — đọc câu, rồi khoanh phương án đúng; tạm dừng video"
+    image: {pdf: course-book, page: 64, clip: [64, 260, 460, 411]}
+    items:
+      - {box: [66, 261, 440, 285]}
+      - {box: [78, 292, 440, 317]}
+      - {box: [78, 319, 440, 370]}
+      - {box: [78, 372, 440, 410]}
+    lines:
+      - emma: "Exercise B. Now look at the highlighted words and phrases in context, and circle the correct option in the definition that follows."
+        focus: 0
+        vi: "Bài B: xem từ trong câu, khoanh phương án đúng."
+      - {mai: "One. James is the brainy one in the class. If you need help with a question, ask him.", focus: 1}
+      - {mai: "Two. When I went on holiday last year, I left the bathroom window open. Somebody climbed in and stole my TV and DVD recorder. I can't believe I did something so brainless.", say: "Two. When I went on holiday last year, I left the bathroom window open. Somebody climbed in and stole my TV and D V D recorder. I can't believe I did something so brainless.", focus: 2}
+      - {mai: "Three. I was daydreaming and I walked right past my office. I had to turn round and walk back.", focus: 3}
+
+  - kind: figure
+    heading: "Reading 2B · Circle the correct option (4–5)"
+    heading_vi: "Câu 4–5 tr. 63"
+    image: {pdf: course-book, page: 64, clip: [64, 411, 460, 492]}
+    items:
+      - {box: [78, 412, 456, 451]}
+      - {box: [78, 452, 456, 491]}
+    lines:
+      - {mai: "Four. Tariq was sick and missed a few lectures. When his friends were talking and comparing notes, it all went over Tariq's head.", say: "Four. Tah-rik was sick and missed a few lectures. When his friends were talking and comparing notes, it all went over Tah-rik's head.", focus: 0}
+      - {mai: "Five. I'm in two minds about taking this job. It's very well paid, but it's very challenging. I'd have lots of money, but I'd have to work around sixty hours a week.", focus: 1}
+      - emma: "Now pause the video and circle the correct option for each one."
+        vi: "Tạm dừng video và khoanh phương án đúng cho từng câu."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Reading 2B: đáp án"
+    heading: "Reading 2B · Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi manh mối trong câu"
+    items:
+      - {n: 1, q: "Brainy means ___ (not busy / very clever)", answer: "very clever"}
+      - {n: 2, q: "Brainless means very ___ (stupid / unkind)", answer: "stupid"}
+      - {n: 3, q: "Daydreaming means ___ (not concentrating / thinking about important things)", answer: "not concentrating"}
+      - {n: 4, q: "If something goes over your head, you ___ (listen very carefully / don't understand it at all)", answer: "don't understand it at all"}
+      - {n: 5, q: "If you are in two minds about something, you ___ (can't make a decision / really want it)", answer: "can't make a decision"}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: brainy means very clever. If you need help, ask him.", focus: 0, vi: "brainy = thông minh"}
+      - {emma: "Two: brainless means very stupid. Leaving the window open was a stupid thing to do.", focus: 1, vi: "brainless = ngớ ngẩn"}
+      - {emma: "Three: daydreaming means not concentrating. He walked right past his office.", focus: 2, vi: "daydream = mơ màng, không tập trung"}
+      - {emma: "Four: if something goes over your head, you don't understand it at all. Tariq missed the lectures.", say: "Four: if something goes over your head, you don't understand it at all. Tah-rik missed the lectures.", focus: 3, vi: "go over your head = không hiểu gì"}
+      - {emma: "Five: in two minds means you can't make a decision. Good money, but sixty hours a week.", focus: 4, vi: "in two minds = phân vân"}
+
+  - kind: qa
+    chapter: "Reading 2C: câu của bạn"
+    heading: "Reading 2C · Complete these sentences so that they are true for you"
+    heading_vi: "Câu mẫu của Tom và Mai — tạm dừng video, tự hoàn thành câu trước"
+    items:
+      - {q: "… is the brainy one in my family.", a: "My sister is the brainy one in my family. She's a nurse, and she knows everything about medicine.", ask: emma, by: tom}
+      - {q: "I was in two minds about …", a: "I was in two minds about studying abroad. I wanted to go, but I didn't want to leave my family.", ask: emma, by: mai}
+      - {q: "Once I was daydreaming and I …", a: "Once I was daydreaming and I missed my bus stop. I had to walk back for twenty minutes!", ask: emma, by: tom}
+      - {q: "… is the one in my family with a memory like a sieve.", a: "My dad is the one in my family with a memory like a sieve. He always forgets where he put his keys.", ask: emma, by: mai}
+    lines:
+      - emma: "Exercise C. Complete these sentences so that they are true for you. Then compare with a partner. Pause the video after each one."
+        vi: "Bài C: hoàn thành câu cho đúng với bạn. Tạm dừng sau mỗi câu."
+      - {emma: "Who is the brainy one in your family?", focus: 0, pause: 1.5}
+      - {tom: "My sister is the brainy one in my family. She's a nurse, and she knows everything about medicine.", reveal: 0}
+      - {emma: "What were you in two minds about?", focus: 1, pause: 1.5}
+      - {mai: "I was in two minds about studying abroad. I wanted to go, but I didn't want to leave my family.", reveal: 1}
+      - {emma: "What happened when you were daydreaming?", focus: 2, pause: 1.5}
+      - {tom: "Once I was daydreaming and I missed my bus stop. I had to walk back for twenty minutes!", reveal: 2}
+      - {emma: "Who has a memory like a sieve?", focus: 3, pause: 1.5}
+      - {mai: "My dad is the one in my family with a memory like a sieve. He always forgets where he put his keys.", reveal: 3}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Guess from the words around the new word.", vi: "Đoán nghĩa qua ngữ cảnh"}
+      - {en: "capacity · a memory like a sieve · tune in · alert · judgement", vi: "Reading 1"}
+      - {en: "brainy · brainless · daydream · go over your head · in two minds", vi: "Reading 2: từ mới chứa từ đã biết"}
+    lines:
+      - {emma: "Let's review. When you meet a new word, look at the words around it.", focus: 0}
+      - {emma: "Capacity, a memory like a sieve, tune in, alert, judgement.", focus: 1}
+      - {tom: "And brainy, brainless, daydream, over my head, in two minds. I'm not in two minds about this lesson. It was great!", focus: 2}

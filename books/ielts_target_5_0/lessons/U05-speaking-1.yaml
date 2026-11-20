@@ -1,0 +1,241 @@
+# Video bài giảng Unit 5 · Vocabulary 1: thought processes, Grammar check, Pronunciation check (sách in trang 58–59).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-speaking-1.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml; khuôn Unit 4 (đợt 31) và cách hiện đáp án của đợt 34: làm trước (tạm dừng
+# video), nghe / đọc xong mới hiện tất cả đáp án một lần, rồi đọc lại từng đáp án.
+# Track 48 (Vocabulary 1B) và Track 49 (Pronunciation check) không có file nghe: Jerry, Tom, Mai đọc lại đúng Tapescript
+# (sách in trang 286). Answer key không có Vocabulary 1A, 1C: 1A theo Tapescript Track 48 (1 calculate, 2 predict,
+# 3 concentrate, 4 imagine, 5 decide, 6 consider); 1C suy ra (have an idea / a thought; make a decision / a prediction;
+# use your brain / your imagination — mỗi động từ hai cụm, thứ tự nào cũng được).
+# Hình trong sách: khung động từ và sáu ảnh 1–6 kèm chú thích (hai dải), khung Grammar check và Watch out, khung
+# Pronunciation check tr. 59. Không đếm ngược.
+id: U05-speaking-1
+activity: U05-speaking-vocab
+title: "Unit 5 · Thoughts"
+subtitle: "Vocabulary 1: thought processes, state verbs"
+title_vi: "Động từ chỉ cách suy nghĩ (predict, concentrate, imagine …), cụm have / make / use, động từ trạng thái, I don't think"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Hello, and welcome to Unit 5: Thoughts."
+        say: "Hello, and welcome to Unit five: Thoughts."
+        vi: "Chào mừng bạn đến với Unit 5: Thoughts (Suy nghĩ)."
+      - tom: "Thoughts? So this unit is about thinking?"
+        vi: "Suy nghĩ? Vậy unit này nói về việc suy nghĩ à?"
+      - emma: "Yes. In this lesson, we learn verbs for different ways of thinking, some common expressions, and a grammar point: state verbs. Remember: try each exercise first. All the answers come at the end of the exercise."
+        vi: "Bài này: động từ chỉ các cách suy nghĩ, vài cụm từ thông dụng và động từ trạng thái. Nhớ: làm từng bài trước, đáp án hiện cùng lúc ở cuối bài."
+
+  - kind: figure
+    chapter: "Vocabulary 1A: sáu bức ảnh"
+    heading: "Vocabulary 1A · Complete the captions with a verb (1–3)"
+    heading_vi: "Khung động từ và ảnh 1–3 tr. 58 — mỗi người đang suy nghĩ theo một cách khác nhau"
+    image: {pdf: course-book, page: 59, clip: [58, 216, 532, 383]}
+    items:
+      - {box: [78, 219, 424, 239]}
+      - {box: [60, 245, 215, 381]}
+      - {box: [217, 245, 373, 381]}
+      - {box: [374, 245, 530, 381]}
+    lines:
+      - emma: "Vocabulary 1: thought processes. Exercise A. The pictures show people thinking in different ways. Complete the captions with a verb from the box: predict, concentrate, imagine, consider, decide, calculate."
+        say: "Vocabulary one: thought processes. Exercise eigh. The pictures show people thinking in different ways. Complete the captions with a verb from the box: predict, concentrate, imagine, consider, decide, calculate."
+        focus: 0
+        vi: "Bài A: các ảnh cho thấy người ta suy nghĩ theo nhiều cách. Điền động từ trong khung vào chú thích."
+      - {emma: "Picture 1. A teacher looks at a very long equation on the board.", say: "Picture one. A teacher looks at a very long equation on the board.", focus: 1, vi: "Ảnh 1: một thầy giáo nhìn phương trình rất dài trên bảng."}
+      - {emma: "Picture 2. A man is looking at numbers and graphs on a computer screen.", say: "Picture two. A man is looking at numbers and graphs on a computer screen.", focus: 2, vi: "Ảnh 2: một người đàn ông xem số liệu, biểu đồ trên máy tính."}
+      - {emma: "Picture 3. A father is trying to read the newspaper, but the children are playing.", say: "Picture three. A father is trying to read the newspaper, but the children are playing.", focus: 3, vi: "Ảnh 3: người bố cố đọc báo nhưng bọn trẻ đang chơi đùa."}
+
+  - kind: figure
+    heading: "Vocabulary 1A · Complete the captions with a verb (4–6)"
+    heading_vi: "Ảnh 4–6 tr. 58"
+    image: {pdf: course-book, page: 59, clip: [58, 380, 532, 516]}
+    items:
+      - {box: [60, 382, 215, 514]}
+      - {box: [217, 382, 373, 514]}
+      - {box: [374, 382, 530, 514]}
+    lines:
+      - {emma: "Picture 4. A couple are looking at a big house.", say: "Picture four. A couple are looking at a big house.", focus: 0, vi: "Ảnh 4: một cặp đôi đang ngắm một ngôi nhà lớn."}
+      - {emma: "Picture 5. Two children are at an ice cream stand. There are a lot of flavours.", say: "Picture five. Two children are at an ice cream stand. There are a lot of flavours.", focus: 1, vi: "Ảnh 5: hai đứa trẻ ở quầy kem, có rất nhiều vị."}
+      - {emma: "And picture 6. Two businessmen are shaking hands after a meeting.", say: "And picture six. Two businessmen are shaking hands after a meeting.", focus: 2, vi: "Ảnh 6: hai doanh nhân bắt tay sau cuộc họp."}
+
+  - kind: blanks
+    chapter: "Vocabulary 1B: nghe kiểm tra"
+    heading: "Vocabulary 1A–B · Complete the captions. Then listen and check"
+    heading_vi: "predict · concentrate · imagine · consider · decide · calculate — tạm dừng video và làm, rồi nghe Track 48"
+    hide_text: true
+    roles: {jerry: speaker, tom: speaker, mai: speaker}
+    items: &v1
+      - {n: 1, q: "'This is very difficult to ___.'", answer: "calculate"}
+      - {n: 2, q: "'I ___ a fall in the price of oil.'", answer: "predict"}
+      - {n: 3, q: "'Can you be quiet? I can't ___.'", answer: "concentrate"}
+      - {n: 4, q: "'Can you ___ living somewhere like that?'", answer: "imagine"}
+      - {n: 5, q: "'Mm, I can't ___ which one I want.'", answer: "decide"}
+      - {n: 6, q: "'I'll ___ your offer and call you in a few days.'", answer: "consider"}
+    lines:
+      - emma: "Pause the video and complete the captions."
+        vi: "Tạm dừng video và điền chú thích."
+        pause: 1.5
+      - emma: "Exercise B. Listen and check your answers. The recording isn't in our audio files, so Jerry, Tom and Mai read it for you."
+        say: "Exercise B. Listen and check your answers. The recording isn't in our audio files, so Jerry, Tom and My read it for you."
+        vi: "Bài B: nghe và kiểm tra. Track 48 không có file nên Jerry, Tom và Mai đọc lại."
+      - {jerry: "This is very difficult to calculate.", focus: 0}
+      - {tom: "I predict a fall in the price of oil.", focus: 1}
+      - {mai: "Can you be quiet? I can't concentrate.", focus: 2}
+      - {mai: "Can you imagine living somewhere like that?", focus: 3}
+      - {mai: "Mm, I can't decide which one I want.", focus: 4}
+      - {tom: "I'll consider your offer and call you in a few days.", focus: 5}
+
+  - kind: blanks
+    chapter: "Vocabulary 1A: đáp án"
+    heading: "Vocabulary 1A–B · Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi nghĩa từng động từ"
+    items: *v1
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Calculate: work out numbers. This is very difficult to calculate.", focus: 0, vi: "calculate = tính toán"}
+      - {emma: "Predict: say what will happen in the future. I predict a fall in the price of oil.", focus: 1, vi: "predict = dự đoán"}
+      - {emma: "Concentrate: think carefully about one thing. I can't concentrate.", focus: 2, vi: "concentrate = tập trung"}
+      - {emma: "Imagine: make a picture in your mind. Can you imagine living somewhere like that?", focus: 3, vi: "imagine = tưởng tượng"}
+      - {emma: "Decide: choose. I can't decide which one I want.", focus: 4, vi: "decide = quyết định"}
+      - {emma: "Consider: think about something carefully before you decide. I'll consider your offer.", focus: 5, vi: "consider = cân nhắc"}
+
+  - kind: blanks
+    chapter: "Vocabulary 1C: have, make, use"
+    heading: "Vocabulary 1C · Put the words in the spaces to make common expressions"
+    heading_vi: "a decision · your brain · an idea · a thought · your imagination · a prediction — mỗi động từ hai cụm"
+    items:
+      - {n: 1a, q: "have ___", answer: "an idea"}
+      - {n: 1b, q: "have ___", answer: "a thought"}
+      - {n: 2a, q: "make ___", answer: "a decision"}
+      - {n: 2b, q: "make ___", answer: "a prediction"}
+      - {n: 3a, q: "use ___", answer: "your brain"}
+      - {n: 3b, q: "use ___", answer: "your imagination"}
+    lines:
+      - emma: "Exercise C. Put the words in the spaces to make common expressions: a decision, your brain, an idea, a thought, your imagination, a prediction. Each verb goes with two of them. Pause the video and try."
+        say: "Exercise C. Put the words in the spaces to make common expressions: a decision, your brain, an idea, a thought, your imagination, a prediction. Each verb goes with two of them. Pause the video and try."
+        vi: "Bài C: ghép các cụm với have, make, use — mỗi động từ hai cụm. Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers. The order of the two expressions doesn't matter."
+        reveal: ["1a", "1b", "2a", "2b", "3a", "3b"]
+        vi: "Đây là toàn bộ đáp án. Hai cụm của mỗi động từ viết theo thứ tự nào cũng được."
+      - {tom: "Have an idea. Have a thought.", focus: 0}
+      - {mai: "Make a decision. Make a prediction.", focus: 2}
+      - {tom: "Use your brain. Use your imagination.", say: "Yooz your brain. Yooz your imagination.", focus: 4}
+      - emma: "Be careful. We make a decision. We don't do a decision."
+        focus: 2
+        vi: "Lưu ý: make a decision, không nói do a decision."
+
+  - kind: figure
+    chapter: "Grammar check: động từ trạng thái"
+    heading: "Grammar check · State verbs, I don't think"
+    heading_vi: "Khung Grammar check và Watch out tr. 58"
+    image: {pdf: course-book, page: 59, clip: [62, 640, 552, 768]}
+    items:
+      - {box: [76, 645, 406, 681]}
+      - {box: [76, 685, 406, 712]}
+      - {box: [76, 712, 406, 737]}
+      - {box: [76, 739, 406, 765]}
+      - {box: [408, 660, 549, 737]}
+    lines:
+      - emma: "Grammar check. Many of the verbs in this lesson are state verbs, so they are not used in a continuous form."
+        focus: 0
+        vi: "Nhiều động từ trong bài là động từ trạng thái (state verbs) nên không dùng ở dạng tiếp diễn (-ing)."
+      - emma: "I think his new film is very good. Not: I'm thinking his new film is very good."
+        focus: 1
+        vi: "Nói I think (tôi nghĩ là), không nói I'm thinking khi nêu ý kiến."
+      - emma: "We say I don't think, plus an affirmative verb clause. Not I think, plus a negative verb clause."
+        focus: 2
+        vi: "Nói I don't think + mệnh đề khẳng định, không nói I think + mệnh đề phủ định."
+      - emma: "So: I don't think he's listening. Not: I think he isn't listening."
+        focus: 3
+        vi: "I don't think he's listening — không nói I think he isn't listening."
+      - emma: "Watch out for three typical errors. Can you correct them? Pause the video and try."
+        focus: 4
+        vi: "Ba lỗi hay gặp: bạn sửa được không? Tạm dừng video và làm."
+        pause: 1.5
+
+  - kind: errors
+    chapter: "Watch out: lỗi hay gặp"
+    heading: "Watch out · Typical errors"
+    heading_vi: "Câu sai — câu đúng"
+    items:
+      - {wrong: "I'm thinking it will rain.", right: "I think it will rain.", note: "think = có ý kiến: không dùng -ing"}
+      - {wrong: "Sorry, I'm not understanding.", right: "Sorry, I don't understand.", note: "understand: động từ trạng thái"}
+      - {wrong: "I think Peter will not come to the party.", right: "I don't think Peter will come to the party.", note: "I don't think + câu khẳng định"}
+    lines:
+      - {emma: "Not: I'm thinking it will rain. Say: I think it will rain.", focus: 0}
+      - {emma: "Not: Sorry, I'm not understanding. Say: Sorry, I don't understand.", focus: 1}
+      - {emma: "And not: I think Peter will not come to the party. Say: I don't think Peter will come to the party.", focus: 2}
+      - tom: "So when I'm thinking about a problem, the continuous is OK?"
+        focus: 0
+        vi: "Vậy khi đang suy nghĩ về một vấn đề thì dùng -ing được à?"
+      - emma: "Good question. Yes. I'm thinking about my holiday means it's in my mind now. That's a process, not an opinion. But for an opinion, say I think."
+        focus: 0
+        vi: "Đúng: I'm thinking about … là đang nghĩ về điều gì đó (quá trình). Còn nêu ý kiến thì nói I think."
+
+  - kind: figure
+    chapter: "Pronunciation check: don't, can't"
+    heading: "Pronunciation check · /t/ at the end of don't and can't"
+    heading_vi: "Khung Pronunciation check tr. 59 — Track 49 không có file, Tom đọc lại"
+    image: {pdf: course-book, page: 60, clip: [70, 56, 446, 128]}
+    items:
+      - {box: [76, 73, 441, 100]}
+      - {box: [78, 99, 441, 110]}
+      - {box: [78, 111, 222, 124]}
+    lines:
+      - emma: "Pronunciation check. Listen and notice how the t at the end of don't and can't is not pronounced clearly in fast natural speech, especially when the next verb begins with a consonant sound."
+        focus: 0
+        vi: "Âm /t/ cuối don't, can't gần như không nghe rõ khi nói nhanh, nhất là khi động từ sau bắt đầu bằng phụ âm."
+      - emma: "The recording isn't in our audio files, so Tom reads the sentences."
+        focus: 1
+        vi: "Track 49 không có file nên Tom đọc."
+      - {tom: "One. I don't think so.", focus: 1}
+      - {tom: "Two. I can't concentrate.", focus: 1}
+      - {tom: "Three. I don't know.", focus: 1}
+      - {tom: "Four. I can't decide.", focus: 1}
+      - emma: "The t is very short, almost silent. But be careful with can't. The vowel is long, so people still hear the difference from can."
+        focus: 1
+        vi: "/t/ rất ngắn, gần như câm. Nhưng nguyên âm của can't dài hơn can, nên người nghe vẫn phân biệt được."
+
+  - kind: practice
+    chapter: "Luyện nói theo"
+    heading: "Pronunciation check · Practise saying all the sentences"
+    heading_vi: "Tạm dừng video sau mỗi câu và nói theo"
+    items:
+      - {q: "I don't think so.", hint: "don't + th: /t/ gần như câm"}
+      - {q: "I can't concentrate.", hint: "can't + c: nguyên âm dài /æ/"}
+      - {q: "I don't know.", hint: "don't + n"}
+      - {q: "I can't decide.", hint: "can't + d"}
+    lines:
+      - emma: "Practise saying all the sentences. Pause the video after each one, and say it out loud."
+        vi: "Luyện nói cả bốn câu. Tạm dừng video sau mỗi câu và nói thành tiếng."
+      - {tom: "I don't think so.", focus: 0, pause: 1.0}
+      - {tom: "I can't concentrate.", focus: 1, pause: 1.0}
+      - {tom: "I don't know.", focus: 2, pause: 1.0}
+      - {tom: "I can't decide.", focus: 3, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "predict · concentrate · imagine · consider · decide · calculate", vi: "Động từ chỉ cách suy nghĩ"}
+      - {en: "have an idea / a thought · make a decision / a prediction · use your brain / your imagination", vi: "Cụm từ thông dụng"}
+      - {en: "I think it will rain. (not I'm thinking …)", vi: "Động từ trạng thái không dùng -ing"}
+      - {en: "I don't think Peter will come.", vi: "I don't think + câu khẳng định"}
+      - {en: "I don't think so. · I can't decide.", vi: "/t/ cuối don't, can't rất nhẹ"}
+    lines:
+      - {emma: "Let's review. Six verbs for thinking: predict, concentrate, imagine, consider, decide, calculate.", focus: 0}
+      - {emma: "Expressions: have an idea, make a decision, use your imagination.", say: "Expressions: have an idea, make a decision, yooz your imagination.", focus: 1}
+      - {emma: "State verbs like think and understand are not continuous when they mean an opinion.", focus: 2}
+      - {emma: "Say: I don't think Peter will come.", focus: 3}
+      - {tom: "And: I don't think so. I can't decide. Now I can't stop thinking!", focus: 4}
