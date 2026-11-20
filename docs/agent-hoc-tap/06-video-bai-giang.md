@@ -481,9 +481,12 @@ Cách đã làm ở đợt 35:
 - **Hình trong sách** ở mọi video: ảnh, sơ đồ (Listening 1 chia ba hình cho chữ đủ to), bài đọc và bài luận viết tay cắt dải
   120–150 điểm PDF, nhận xét của giám khảo cắt từ Answer key, sơ đồ tư duy Exam practice. Toạ độ dòng chữ đo bằng hàng điểm
   ảnh có mực; chữ màu đỏ (trang Mensa) đo theo kênh màu.
-- **Độ dài**: video dưới 5 phút thì thêm phần luyện gắn với bài (Writing 1: thêm một ý cho mỗi cột). Lỗi đã gặp: cảnh
-  `blanks` có `image` mà hình rộng (bốn tranh sieve) thì hình quá nhỏ — dùng cảnh `figure` rồi nói đáp án; cảnh `mcq` năm
-  câu xếp năm cột làm cụt phương án — dùng `blanks` với phương án trong ngoặc.
+- **Độ dài**: video dưới 5 phút thì thêm phần luyện gắn với bài (Writing 1: thêm một ý cho mỗi cột).
+- **Lỗi đã gặp**: cảnh `blanks` có `image` mà hình là dải rộng (bốn tranh sieve, khung Vocabulary C, Errors, Key vocabulary
+  của Reading 3) thì hình bên trái chỉ cao ~60 px, không đọc được, còn chữ của danh sách nhỏ đi — dùng cảnh `figure` cả bề
+  ngang để làm bài, cảnh đáp án thì không đặt hình. Cảnh `mcq` năm câu xếp năm cột làm cụt phương án — dùng `blanks` với
+  phương án trong ngoặc. Khung cắt sơ đồ sát mép làm cụt nhãn (PARIETAL LOBES): đo lại mép bằng lưới phóng to rồi nới
+  khung. Chép câu đề đúng nguyên văn: soát lại bằng ảnh trang phóng to trước khi dựng.
 
 ### 8.2 Kế hoạch Unit 6 · Place (sách in tr. 74–85, trang PDF 75–86)
 
