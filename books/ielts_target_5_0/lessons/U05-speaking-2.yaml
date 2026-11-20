@@ -1,0 +1,274 @@
+# Video bài giảng Unit 5 · Speaking 1: how people think, Speaking 2: expressing opinions (sách in trang 59).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-speaking-2.yaml
+# Cách viết: xem đầu file U01-speaking-1.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): làm trước, nghe xong mới hiện
+# tất cả đáp án, rồi đọc lại. Track 50 (Speaking 2B) và Track 51 (2C, phát lại Track 50) không có file nghe: Emma đọc vai
+# giám khảo, Jerry là Speaker A, Mai là Speaker B, đúng Tapescript (sách in trang 286). Answer key không có trang này:
+# 2B suy ra — câu trả lời tốt hơn là câu nêu ý kiến hoặc nói thêm (1 B, 2 B, 3 A, 4 B, 5 A); 2C theo Tapescript (forward,
+# mind, enjoy, keen). Câu trả lời mẫu của Tom theo hồ sơ file 06 mục 9.4 (sinh viên năm hai ở TP. Hồ Chí Minh, lớn lên ở Đà
+# Lạt, làm thêm ở quán cà phê, chơi bóng rổ).
+# Hình trong sách: bốn ảnh Speaking 1A (khung đỏ theo ảnh), Exam tip và năm câu hỏi Speaking 2A tr. 59. Không đếm ngược.
+id: U05-speaking-2
+activity: U05-speaking-vocab
+title: "Unit 5 · Thoughts"
+subtitle: "Speaking 1–2: how people think, expressing opinions"
+title_vi: "Nói về cách mỗi nghề phải suy nghĩ; trả lời Phần 1 bài thi Nói có nêu ý kiến (Track 50–51)"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+  jerry: {name: Jerry, role: guest, color: "#6A4C93", voice: {kokoro: am_liam, flite: awb}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Unit 5. In this lesson, we use the new words to talk about how people think. Then we practise an important exam skill: expressing an opinion."
+        say: "Welcome back to Unit five. In this lesson, we yooz the new words to talk about how people think. Then we practise an important exam skill: expressing an opinion."
+        vi: "Bài này: dùng từ mới để nói về cách mọi người suy nghĩ, rồi luyện kỹ năng nêu ý kiến trong bài thi Nói."
+      - tom: "Expressing an opinion. Like: I think this lesson is great?"
+        vi: "Nêu ý kiến — kiểu như: I think this lesson is great?"
+      - emma: "Exactly like that."
+        vi: "Đúng vậy."
+
+  - kind: figure
+    chapter: "Speaking 1A: mỗi người phải suy nghĩ thế nào?"
+    heading: "Speaking 1A · Talk about how each person has to think"
+    heading_vi: "Bốn ảnh tr. 59 — bác sĩ, nhà thiết kế thời trang, người khảo sát đo đạc, doanh nhân"
+    image: {pdf: course-book, page: 60, clip: [58, 168, 540, 366]}
+    items:
+      - {box: [60, 188, 176, 346]}
+      - {box: [180, 188, 297, 346]}
+      - {box: [301, 188, 418, 346]}
+      - {box: [421, 188, 538, 346]}
+      - {box: [60, 350, 406, 364]}
+    lines:
+      - emma: "Speaking 1: how people think. Exercise A. Look at the pictures. With a partner, talk about how each person has to think. Here's the example."
+        say: "Speaking one: how people think. Exercise eigh. Look at the pictures. With a partner, talk about how each person has to think. Here's the example."
+        focus: 4
+        vi: "Bài A: nhìn ảnh, nói xem mỗi người phải suy nghĩ thế nào. Đây là câu mẫu."
+      - {emma: "The businessmen have to calculate, consider options and make decisions.", focus: 3, vi: "Các doanh nhân phải tính toán, cân nhắc các phương án và ra quyết định."}
+      - emma: "Now pause the video and talk about the doctor, the clothes designer and the surveyor. Use the verbs from Vocabulary 1."
+        say: "Now pause the video and talk about the doctor, the clothes designer and the surveyor. Yooz the verbs from Vocabulary one."
+        vi: "Tạm dừng video, nói về bác sĩ, nhà thiết kế và người khảo sát — dùng động từ ở Vocabulary 1."
+        pause: 1.5
+      - tom: "A doctor has to concentrate and consider all the facts. Then he has to make quick decisions about the best treatment."
+        focus: 0
+        vi: "Bác sĩ phải tập trung, cân nhắc mọi dữ kiện, rồi quyết định nhanh cách điều trị tốt nhất."
+      - mai: "A clothes designer has to use her imagination. She also has to predict what people will want to wear next year."
+        say: "A clothes designer has to yooz her imagination. She also has to predict what people will want to wear next year."
+        focus: 1
+        vi: "Nhà thiết kế phải dùng trí tưởng tượng, và dự đoán năm sau mọi người muốn mặc gì."
+      - tom: "A surveyor measures land. He has to calculate distances and angles, and he has to concentrate, because a small mistake can be a big problem."
+        focus: 2
+        vi: "Người khảo sát đo đạc đất: phải tính khoảng cách, góc, và tập trung — sai một chút là thành chuyện lớn."
+      - emma: "Very good. You used have to, plus the verbs: concentrate, consider, decide, imagine, predict and calculate."
+        focus: 3
+        vi: "Tốt lắm: have to + các động từ chỉ cách suy nghĩ."
+
+  - kind: qa
+    chapter: "Speaking 1B: hỏi và trả lời"
+    heading: "Speaking 1B · Answer these questions with a partner"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi và trả lời trước, rồi nghe Tom và Mai"
+    items:
+      - {q: "Are you good at making decisions?", a: "Not really. It takes me ages to decide what to order in a restaurant!", ask: emma, by: mai}
+      - {q: "Are you good at making predictions?", a: "Quite good. I usually predict the football results correctly, but not the weather!", ask: emma, by: tom}
+      - {q: "Are you good at calculating figures?", a: "Yes, I am. I can calculate the bill in my head very quickly.", ask: emma, by: mai}
+      - {q: "When do you find it difficult to concentrate?", a: "When my flatmates are watching TV. I can't concentrate on my homework, so I go to the library.", ask: emma, by: tom}
+      - {q: "Do you have a good imagination?", a: "I think so. When I was a child, I imagined long stories about my toys.", ask: emma, by: mai}
+    lines:
+      - emma: "Exercise B. Answer these questions with a partner. Pause the video after each question and answer it first."
+        say: "Exercise B. Answer these questions with a partner. Pause the video after each question and answer it first."
+        vi: "Bài B: trả lời các câu hỏi. Tạm dừng sau mỗi câu và trả lời trước."
+      - {emma: "Are you good at making decisions?", focus: 0, pause: 1.5}
+      - {mai: "Not really. It takes me ages to decide what to order in a restaurant!", reveal: 0}
+      - {emma: "Are you good at making predictions?", focus: 1, pause: 1.5}
+      - {tom: "Quite good. I usually predict the football results correctly, but not the weather!", reveal: 1}
+      - {emma: "Are you good at calculating figures?", focus: 2, pause: 1.5}
+      - {mai: "Yes, I am. I can calculate the bill in my head very quickly.", reveal: 2}
+      - {emma: "When do you find it difficult to concentrate?", focus: 3, pause: 1.5}
+      - {tom: "When my flatmates are watching TV. I can't concentrate on my homework, so I go to the library.", reveal: 3}
+      - {emma: "Do you have a good imagination?", focus: 4, pause: 1.5}
+      - {mai: "I think so. When I was a child, I imagined long stories about my toys.", reveal: 4}
+
+  - kind: figure
+    chapter: "Speaking 2A: câu hỏi Phần 1"
+    heading: "Speaking 2A · How could you express an opinion in your answer?"
+    heading_vi: "Exam tip và năm câu hỏi tr. 59 — Phần 1 bài thi Nói: giám khảo hỏi về cuộc sống của bạn"
+    image: {pdf: course-book, page: 60, clip: [56, 440, 452, 600]}
+    items:
+      - {box: [58, 462, 446, 497]}
+      - {box: [66, 499, 432, 527]}
+      - {box: [79, 531, 274, 544]}
+      - {box: [79, 545, 242, 558]}
+      - {box: [79, 558, 180, 571]}
+      - {box: [79, 571, 226, 583]}
+      - {box: [79, 585, 243, 598]}
+    lines:
+      - emma: "Speaking 2: expressing opinions. Exam tip. In the first part of the Speaking Module, the examiner will ask about your life. He or she will expect you to express an opinion."
+        say: "Speaking two: expressing opinions. Exam tip. In the first part of the Speaking Module, the examiner will ask about your life. He or she will expect you to express an opinion."
+        focus: 0
+        vi: "Mẹo thi: Phần 1, giám khảo hỏi về cuộc sống của bạn và chờ bạn nêu ý kiến."
+      - emma: "Exercise A. Look at these questions and think about how you could express an opinion in your answer."
+        say: "Exercise eigh. Look at these questions and think about how you could express an opinion in your answer."
+        focus: 1
+        vi: "Bài A: đọc câu hỏi, nghĩ cách nêu ý kiến trong câu trả lời."
+      - {emma: "One. So, are you going to university next year?", focus: 2}
+      - {emma: "Two. Tell me something about your job.", focus: 3}
+      - {emma: "Three. Do you work hard?", focus: 4}
+      - {emma: "Four. Tell me about your hometown.", focus: 5}
+      - {emma: "Five. What do you do in your free time?", focus: 6}
+      - emma: "Pause the video and think about your answers."
+        vi: "Tạm dừng video và nghĩ câu trả lời."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Speaking 2B: nghe hai học viên"
+    heading: "Speaking 2B · Tick the speaker who gives the better answer"
+    heading_vi: "Track 50 không có file — Emma (giám khảo), Jerry (Speaker A), Mai (Speaker B) đọc lại"
+    hide_text: true
+    roles: {emma: examiner, jerry: "Speaker A", mai: "Speaker B"}
+    items: &s2b
+      - {n: 1, q: "So, are you going to university next year? → Speaker ___", answer: "B"}
+      - {n: 2, q: "Tell me something about your job. → Speaker ___", answer: "B"}
+      - {n: 3, q: "Do you work hard? → Speaker ___", answer: "A"}
+      - {n: 4, q: "Tell me about your hometown. → Speaker ___", answer: "B"}
+      - {n: 5, q: "What do you do in your free time? → Speaker ___", answer: "A"}
+    lines:
+      - emma: "Exercise B. Listen to some students answering the questions. For each question, tick the speaker who gives the better answer: Speaker A or Speaker B. The recording isn't in our audio files, so I'm the examiner, Jerry is Speaker A and Mai is Speaker B."
+        say: "Exercise B. Listen to some students answering the questions. For each question, tick the speaker who gives the better answer: Speaker eigh or Speaker B. The recording isn't in our audio files, so I'm the examiner, Jerry is Speaker eigh and My is Speaker B."
+        vi: "Bài B: nghe học viên trả lời; mỗi câu chọn người trả lời tốt hơn (A hay B). Track 50 không có file nên đọc lại."
+      - {emma: "So, are you going to university next year?", focus: 0}
+      - {jerry: "Yes, I am.", focus: 0}
+      - {emma: "So, are you going to university next year?", focus: 0}
+      - {mai: "Yes, I'm really looking forward to it.", focus: 0}
+      - {emma: "Tell me something about your job.", focus: 1}
+      - {jerry: "I'm a lawyer.", focus: 1}
+      - {emma: "Tell me something about your job.", focus: 1}
+      - {mai: "I'm a lawyer. It's quite challenging, but I really enjoy it.", focus: 1}
+      - {emma: "Do you work hard?", focus: 2}
+      - {jerry: "Yes, but I don't mind. It's always interesting.", focus: 2}
+      - {emma: "Do you work hard?", focus: 2}
+      - {mai: "Yes, very hard.", focus: 2}
+      - {emma: "Tell me about your hometown.", focus: 3}
+      - {jerry: "It's a very big town.", focus: 3}
+      - {emma: "Tell me about your hometown.", focus: 3}
+      - {mai: "Well, it's very big, but not too big. I really enjoy living there.", focus: 3}
+      - {emma: "What do you do in your free time?", focus: 4}
+      - {jerry: "I'm very keen on basketball. I think it's the most exciting sport.", focus: 4}
+      - {emma: "What do you do in your free time?", focus: 4}
+      - {mai: "I play basketball on Fridays.", focus: 4}
+      - emma: "Which speaker gives the better answer each time? Pause the video and decide."
+        vi: "Mỗi câu, ai trả lời tốt hơn? Tạm dừng video và chọn."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Speaking 2B: đáp án"
+    heading: "Speaking 2B · Answers — the better answer gives an opinion"
+    heading_vi: "Tất cả đáp án hiện cùng lúc; câu trả lời tốt hơn nêu ý kiến hoặc nói thêm"
+    items: *s2b
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One: Speaker B. Not just yes, I am, but: I'm really looking forward to it.", say: "One: Speaker B. Not just yes, I am, but: I'm really looking forward to it.", focus: 0, vi: "B nêu cảm xúc: rất mong chờ."}
+      - {emma: "Two: Speaker B. It's quite challenging, but I really enjoy it. That's an opinion about the job.", focus: 1}
+      - {emma: "Three: Speaker A. Yes, but I don't mind. It's always interesting.", say: "Three: Speaker eigh. Yes, but I don't mind. It's always interesting.", focus: 2}
+      - {emma: "Four: Speaker B. It's very big, but not too big. I really enjoy living there.", focus: 3}
+      - {emma: "Five: Speaker A. I'm very keen on basketball. I think it's the most exciting sport.", say: "Five: Speaker eigh. I'm very keen on basketball. I think it's the most exciting sport.", focus: 4}
+      - emma: "The short answers are not wrong, but they don't show the examiner what you can do. Add an opinion, or a reason."
+        vi: "Trả lời ngắn không sai, nhưng không cho giám khảo thấy khả năng của bạn — hãy thêm ý kiến hoặc lý do."
+
+  - kind: blanks
+    chapter: "Speaking 2C: cụm nêu ý kiến"
+    heading: "Speaking 2C · Listen again and complete the phrases"
+    heading_vi: "Tạm dừng video và điền trước, rồi nghe lại bốn câu (Track 51 = Track 50)"
+    hide_text: true
+    roles: {jerry: "Speaker A", mai: "Speaker B"}
+    items: &s2c
+      - {n: 1, q: "I'm really looking ___ to it.", answer: "forward"}
+      - {n: 2, q: "Yes, but I don't ___.", answer: "mind"}
+      - {n: 3, q: "I really ___ living there.", answer: "enjoy"}
+      - {n: 4, q: "I'm very ___ on basketball.", answer: "keen"}
+    lines:
+      - emma: "Exercise C. Listen again and complete the phrases. Pause the video and try first."
+        vi: "Bài C: nghe lại và hoàn thành các cụm. Tạm dừng video, làm trước."
+        pause: 1.5
+      - {mai: "Yes, I'm really looking forward to it.", focus: 0}
+      - {jerry: "Yes, but I don't mind. It's always interesting.", focus: 1}
+      - {mai: "Well, it's very big, but not too big. I really enjoy living there.", focus: 2}
+      - {jerry: "I'm very keen on basketball. I think it's the most exciting sport.", focus: 3}
+
+  - kind: blanks
+    chapter: "Speaking 2C: đáp án"
+    heading: "Speaking 2C · Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc, rồi cách dùng từng cụm"
+    items: *s2c
+    lines:
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "Look forward to something: wait for it with pleasure. I'm really looking forward to it.", focus: 0, vi: "look forward to = mong chờ (sau to là danh từ hoặc V-ing)"}
+      - {emma: "I don't mind: it's not a problem for me.", focus: 1, vi: "I don't mind = tôi không thấy phiền"}
+      - {emma: "Enjoy plus the ing form: I really enjoy living there.", focus: 2, vi: "enjoy + V-ing"}
+      - {emma: "Be keen on: like something very much. I'm very keen on basketball.", focus: 3, vi: "be keen on = rất thích"}
+
+  - kind: qa
+    chapter: "Speaking 2D: Tom trả lời"
+    heading: "Speaking 2D · Ask and answer the questions in Exercise A"
+    heading_vi: "Câu trả lời mẫu của Tom — mỗi câu có một ý kiến"
+    items:
+      - {q: "So, are you going to university next year?", a: "Actually, I'm already at university. I'm in my second year, and I'm really enjoying it.", ask: emma, by: tom}
+      - {q: "Tell me something about your job.", a: "I work part-time in a café near my university. It's quite tiring, but I really enjoy it, because I meet a lot of people.", ask: emma, by: tom}
+      - {q: "Do you work hard?", a: "Yes, but I don't mind. I want to do well in my exams.", ask: emma, by: tom}
+      - {q: "Tell me about your hometown.", a: "I grew up in Da Lat. It's not very big, but I think it's the most beautiful city in Vietnam.", ask: emma, by: tom}
+      - {q: "What do you do in your free time?", a: "I'm very keen on basketball. I play with my friends every weekend. It's a great way to relax.", ask: emma, by: tom}
+    lines:
+      - emma: "Exercise D. Ask and answer the questions in Exercise A. First, listen to Tom. Every answer has an opinion."
+        say: "Exercise D. Ask and answer the questions in Exercise eigh. First, listen to Tom. Every answer has an opinion."
+        vi: "Bài D: hỏi và trả lời các câu ở bài A. Nghe Tom trước — câu nào cũng có ý kiến."
+      - {emma: "So, are you going to university next year?", focus: 0, pause: 1.0}
+      - {tom: "Actually, I'm already at university. I'm in my second year, and I'm really enjoying it.", reveal: 0}
+      - {emma: "Tell me something about your job.", focus: 1, pause: 1.0}
+      - {tom: "I work part-time in a café near my university. It's quite tiring, but I really enjoy it, because I meet a lot of people.", reveal: 1}
+      - {emma: "Do you work hard?", focus: 2, pause: 1.0}
+      - {tom: "Yes, but I don't mind. I want to do well in my exams.", reveal: 2}
+      - {emma: "Tell me about your hometown.", focus: 3, pause: 1.0}
+      - {tom: "I grew up in Da Lat. It's not very big, but I think it's the most beautiful city in Vietnam.", say: "I grew up in Dah Lot. It's not very big, but I think it's the most beautiful city in Vietnam.", reveal: 3}
+      - {emma: "What do you do in your free time?", focus: 4, pause: 1.0}
+      - {tom: "I'm very keen on basketball. I play with my friends every weekend. It's a great way to relax.", reveal: 4}
+
+  - kind: practice
+    chapter: "Đến lượt bạn"
+    heading: "Your turn · Answer the questions with an opinion"
+    heading_vi: "Tạm dừng video, trả lời từng câu thành tiếng — thêm ý kiến hoặc lý do"
+    items:
+      - {q: "So, are you going to university next year?", hint: "I'm really looking forward to it. · I'm a bit nervous about it."}
+      - {q: "Tell me something about your job.", hint: "It's quite challenging, but I really enjoy it."}
+      - {q: "Do you work hard?", hint: "Yes, but I don't mind. · I think …"}
+      - {q: "Tell me about your hometown.", hint: "It's …, but … · I really enjoy living there."}
+      - {q: "What do you do in your free time?", hint: "I'm very keen on … · I think it's the most … "}
+    lines:
+      - emma: "Your turn. Pause the video, and answer these questions out loud. Remember to add an opinion."
+        vi: "Đến lượt bạn: tạm dừng video, trả lời thành tiếng, nhớ thêm ý kiến."
+      - {emma: "So, are you going to university next year?", focus: 0, pause: 0.5}
+      - {emma: "Tell me something about your job.", focus: 1, pause: 0.5}
+      - {emma: "Do you work hard?", focus: 2, pause: 0.5}
+      - {emma: "Tell me about your hometown.", focus: 3, pause: 0.5}
+      - {emma: "What do you do in your free time?", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Doctors have to concentrate and make quick decisions.", vi: "have to + động từ chỉ cách suy nghĩ"}
+      - {en: "2B: 1 B · 2 B · 3 A · 4 B · 5 A", vi: "Câu trả lời tốt hơn nêu ý kiến"}
+      - {en: "I'm really looking forward to it. · I don't mind.", vi: "Cụm nêu cảm xúc, ý kiến"}
+      - {en: "I really enjoy living there. · I'm very keen on basketball.", vi: "enjoy + V-ing · be keen on"}
+    lines:
+      - {emma: "Let's review. Talk about how people think: doctors have to concentrate and make quick decisions.", focus: 0}
+      - {emma: "In Part 1, give an opinion, not just yes or no.", say: "In Part one, give an opinion, not just yes or no.", focus: 1}
+      - {emma: "Useful phrases: I'm really looking forward to it. I don't mind.", focus: 2}
+      - {tom: "And: I really enjoy living there. I'm very keen on basketball. That's me!", focus: 3}

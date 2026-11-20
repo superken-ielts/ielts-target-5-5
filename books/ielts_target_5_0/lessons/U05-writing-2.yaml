@@ -1,0 +1,204 @@
+# Video bài giảng Unit 5 · Writing 2C–D: two compositions, examiner's comments, presenting a balanced argument (sách in trang 66,
+# Answer key trang 268). Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-writing-2.yaml
+# Cách viết: xem đầu file U01-writing-1.yaml; khuôn Unit 4 (đợt 31). Mai đọc bài A, Tom đọc bài B (chép nguyên văn, khung đỏ
+# theo đoạn); người học chọn bài mình thích trước, rồi mới xem nhận xét của giám khảo (Answer key, Unit 5 Writing 2D). Bài luận
+# mẫu Workbook (Answer key "Workbook Unit 5, Writing B") không dùng vì bộ sách không có Workbook.
+# Hình trong sách: bài A một dải, bài B ba dải, nhận xét của giám khảo hai dải. Không đếm ngược.
+id: U05-writing-2
+activity: U05-writing
+title: "Unit 5 · Thoughts"
+subtitle: "Writing 2: a balanced composition, examiner's comments"
+title_vi: "So sánh hai bài luận cân bằng về học nhóm và học một thầy một trò, nhận xét của giám khảo, dàn bài và từ nối"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome back to Writing for Unit 5. Today we read two compositions on the same topic. Is it better to learn a language in a group, or with one-to-one lessons?"
+        say: "Welcome back to Writing for Unit five. Today we read two compositions on the same topic. Is it better to learn a language in a group, or with one-to-one lessons?"
+        vi: "Đọc hai bài luận cùng đề: học ngoại ngữ theo nhóm hay học một thầy một trò?"
+      - tom: "And then we decide which one is better?"
+        vi: "Rồi mình chọn bài nào tốt hơn à?"
+      - emma: "Yes. First you decide, then we look at the examiner's comments."
+        vi: "Đúng: bạn chọn trước, rồi mới xem nhận xét của giám khảo."
+
+  - kind: figure
+    chapter: "Writing 2C: bài A"
+    heading: "Writing 2C · Composition A"
+    heading_vi: "Bài A tr. 66 — Mai đọc"
+    image: {pdf: course-book, page: 67, clip: [84, 268, 530, 416]}
+    roles: {mai: writer}
+    items:
+      - {box: [86, 272, 525, 311]}
+      - {box: [86, 311, 525, 361]}
+      - {box: [86, 349, 525, 413]}
+    lines:
+      - emma: "Exercise C. Look at these two compositions. Which one do you prefer? Here's composition A."
+        vi: "Bài C: đọc hai bài luận — bạn thích bài nào hơn? Đây là bài A."
+      - {mai: "People want to learn one-to-one because the teacher can give them all his attention. In a group, the teacher must give his attention to all the students, and it takes too long.", focus: 0}
+      - {mai: "If you have a one-to-one lesson, you can tell the teacher what you want to study, but if you study in a group, you must do what other students choose to do.", focus: 0}
+      - {mai: "In a group, you must also listen to mistakes other students make, and in a one-to-one, you don't have to. If you have a one-to-one class, the teacher can listen to everything you say and correct your pronunciation and the mistakes you make.", focus: 1}
+      - {mai: "In a bigger class, the teacher cannot listen to everything that everyone says and so does not hear mistakes.", focus: 1}
+      - {mai: "If you study in a group, you can meet lots of people and make new friends, but in a one-to-one you will not meet anyone but the teacher.", focus: 2}
+      - {mai: "In a bigger class, you can play games and lessons are more fun, but in a one-to-one class, lessons are boring and intensive. Learning in a group is better for some students and learning in a one-to-one class is better for others.", focus: 2}
+
+  - kind: figure
+    chapter: "Writing 2C: bài B"
+    heading: "Writing 2C · Composition B (1/3)"
+    heading_vi: "Bài B tr. 66 — Tom đọc"
+    image: {pdf: course-book, page: 67, clip: [84, 443, 530, 526]}
+    roles: {tom: writer}
+    items:
+      - {box: [86, 446, 525, 488]}
+      - {box: [86, 487, 525, 527]}
+    lines:
+      - emma: "And here's composition B."
+        vi: "Còn đây là bài B."
+      - {tom: "These days, it is a big advantage to speak another language, and English is probably the most useful. Students at university are learning English, and children are learning English earlier at school. Companies want people who work for them to speak good English.", focus: 0}
+      - {tom: "Most students learn English in a group. There is one teacher and anything from ten to thirty students. However, some people think you learn more quickly and make better progress if you have a one-to-one class and the teacher gives you all of his or her attention.", focus: 1}
+
+  - kind: figure
+    heading: "Writing 2C · Composition B (2/3)"
+    heading_vi: "Bài B tr. 66"
+    image: {pdf: course-book, page: 67, clip: [84, 524, 530, 607]}
+    roles: {tom: writer}
+    items:
+      - {box: [86, 526, 525, 605]}
+    lines:
+      - {tom: "Of course, if there is only you and the teacher, you will get all the attention, and the teacher can deal with your difficulties immediately. The teacher can listen to everything you say and correct the mistakes you make.", focus: 0}
+      - {tom: "He or she can look at your written work with you and explain what you do not understand. Most importantly, you can tell the teacher what you want to learn in the lesson and ask to revise something. You don't have to do what other students choose, and you don't have to listen to their mistakes.", focus: 0}
+
+  - kind: figure
+    heading: "Writing 2C · Composition B (3/3)"
+    heading_vi: "Bài B tr. 66"
+    image: {pdf: course-book, page: 67, clip: [84, 603, 530, 701]}
+    roles: {tom: writer}
+    items:
+      - {box: [86, 605, 525, 658]}
+      - {box: [86, 657, 525, 699]}
+    lines:
+      - {tom: "On the other hand, learning one-to-one is intensive, and in a discussion you only have the opinion of one other person. In a group, there are more people to share ideas with. You can play games and have fun in class.", focus: 0}
+      - {tom: "When I was studying in London, I met interesting people from many other countries. I learnt about other cultures and made new friends.", focus: 0}
+      - {tom: "If you have plenty of time to learn a language, it might be more enjoyable in a group. If, however, you need to learn quickly, one-to-one lessons might be best. Remember, though, that one-to-one lessons are very expensive!", focus: 1}
+
+  - kind: qa
+    chapter: "Bạn thích bài nào?"
+    heading: "Writing 2C–D · Which one do you prefer? What do you like and not like?"
+    heading_vi: "Tạm dừng video, chọn bài bạn thích và nêu lý do, rồi nghe Tom và Mai"
+    items:
+      - {q: "Which composition do you prefer?", a: "I prefer composition B. It's easier to read, and it has paragraphs.", ask: emma, by: tom}
+      - {q: "What do you like about composition A?", a: "The points are good, and it talks about both sides. But it's one long paragraph, and it says if you have a one-to-one again and again.", ask: emma, by: mai}
+    lines:
+      - emma: "Which one do you prefer? Pause the video and decide. Then discuss what you like and don't like about the two compositions."
+        vi: "Bạn thích bài nào? Tạm dừng video và quyết định, rồi nêu điều thích và chưa thích ở mỗi bài."
+      - {emma: "Which composition do you prefer?", focus: 0, pause: 1.5}
+      - {tom: "I prefer composition B. It's easier to read, and it has paragraphs.", reveal: 0}
+      - {emma: "What do you like about composition A?", focus: 1, pause: 1.5}
+      - {mai: "The points are good, and it talks about both sides. But it's one long paragraph, and it says if you have a one-to-one again and again.", reveal: 1}
+
+  - kind: figure
+    chapter: "Writing 2D: nhận xét của giám khảo"
+    heading: "Writing 2D · Examiner's comments: first composition"
+    heading_vi: "Answer key tr. 268 — nhận xét bài A"
+    image: {pdf: course-book, page: 269, clip: [60, 168, 295, 307]}
+    items:
+      - {box: [64, 186, 290, 209]}
+      - {box: [64, 208, 290, 233]}
+      - {box: [64, 232, 290, 257]}
+      - {box: [64, 256, 290, 282]}
+      - {box: [64, 281, 290, 306]}
+    lines:
+      - emma: "Exercise D. Now look at the examiner's comments on page 268. First composition: points are relevant and well balanced. There are arguments that support both points of view."
+        say: "Exercise D. Now look at the examiner's comments on page two hundred and sixty-eight. First composition: points are relevant and well balanced. There are arguments that support both points of view."
+        focus: 0
+        vi: "Bài A: ý liên quan, cân bằng hai phía."
+      - {emma: "But the points are not planned or organized. It seems like the writer is making points as he or she thinks of them.", focus: 1, vi: "Nhưng ý không được lên kế hoạch, sắp xếp."}
+      - {emma: "It's not organized into paragraphs, so it's not easy to follow. And there's no introduction. The writer goes straight into the argument.", focus: 2, vi: "Không chia đoạn, không có mở bài."}
+      - {emma: "Some points are made in a repetitive way, and the ideas are not linked with typical linking words or phrases.", focus: 3, vi: "Lặp ý; không dùng từ nối."}
+      - {emma: "The vocabulary is used properly, but it's quite simple.", focus: 4, vi: "Từ vựng dùng đúng nhưng đơn giản."}
+
+  - kind: figure
+    heading: "Writing 2D · Examiner's comments: second composition"
+    heading_vi: "Answer key tr. 268 — nhận xét bài B"
+    image: {pdf: course-book, page: 269, clip: [60, 305, 295, 393]}
+    items:
+      - {box: [64, 307, 290, 330]}
+      - {box: [64, 329, 290, 354]}
+      - {box: [64, 353, 290, 379]}
+      - {box: [64, 378, 290, 392]}
+    lines:
+      - {emma: "Second composition: all points are relevant and the argument is well balanced. There's a very good introduction. It shows he or she understands the question.", focus: 0, vi: "Bài B: ý liên quan, cân bằng; mở bài rất tốt."}
+      - {emma: "It's very easy to follow, because it's organized into paragraphs.", focus: 1, vi: "Dễ theo dõi nhờ chia đoạn."}
+      - {emma: "The points are planned and organized, and linked together with linking words and phrases.", focus: 2, vi: "Ý có kế hoạch, sắp xếp, nối bằng từ nối."}
+      - {emma: "And there's a good range of vocabulary, used to make the points more interesting to read.", focus: 3, vi: "Từ vựng phong phú."}
+      - tom: "So I was right. Composition B is better!"
+        vi: "Vậy mình đúng: bài B tốt hơn!"
+
+  - kind: compare
+    chapter: "So sánh A và B"
+    heading: "Composition A or B?"
+    heading_vi: "Cùng ý, khác cách trình bày"
+    items:
+      - {title: "Composition A", title_vi: "bài A", lines: ["relevant, balanced points", "no introduction", "one long paragraph", "repeats if you have …", "no linking words", "simple vocabulary"]}
+      - {title: "Composition B", title_vi: "bài B", lines: ["relevant, balanced points", "a good introduction", "five clear paragraphs", "points planned and organized", "However · Of course · On the other hand", "a good range of vocabulary"]}
+    lines:
+      - {emma: "Both compositions have good, balanced points. The difference is the organization.", focus: 0, vi: "Hai bài đều có ý tốt, cân bằng — khác nhau ở cách tổ chức."}
+      - {emma: "Composition B has an introduction, clear paragraphs, linking words and a conclusion.", focus: 1, vi: "Bài B có mở bài, đoạn rõ ràng, từ nối và kết luận."}
+
+  - kind: bullets
+    chapter: "Dàn bài của bài B"
+    heading: "How composition B is organized"
+    heading_vi: "Năm đoạn và từ nối"
+    items:
+      - {en: "1 Introduction: English is useful for everyone.", vi: "Mở bài: dẫn vào chủ đề"}
+      - {en: "2 The question: most people learn in a group. However, some think one-to-one is faster.", vi: "Nêu vấn đề — However"}
+      - {en: "3 One-to-one: plus points. Of course … Most importantly …", vi: "Một phía"}
+      - {en: "4 One-to-one: minus points, group: plus points. On the other hand …", vi: "Phía còn lại, ví dụ từ trải nghiệm (London)"}
+      - {en: "5 Conclusion: If you have time … If, however, … Remember, though, …", vi: "Kết luận cân bằng"}
+    lines:
+      - {emma: "Paragraph one is the introduction. It shows the writer understands the topic.", focus: 0}
+      - {emma: "Paragraph two introduces the question: most students learn in a group. However, some people think one-to-one is faster.", focus: 1}
+      - {emma: "Paragraph three gives the plus points of one-to-one lessons, with of course, and most importantly.", focus: 2}
+      - {emma: "Paragraph four gives the other side, with on the other hand. And it includes a relevant example from the writer's experience: studying in London.", focus: 3}
+      - {emma: "Paragraph five is a balanced conclusion: if you have time, a group. If, however, you need to learn quickly, one-to-one.", focus: 4}
+
+  - kind: practice
+    chapter: "Đến lượt bạn: viết bài"
+    heading: "Your turn · Write your composition (at least 250 words)"
+    heading_vi: "Đề ở Writing 1B — tạm dừng video và viết; dùng bảng bốn cột của bài trước"
+    items:
+      - {q: "Introduction: why is learning a language important?", hint: "These days, …"}
+      - {q: "Paragraph 2: how do most people learn? What do some people think?", hint: "Most students … However, some people think …"}
+      - {q: "Paragraph 3: one side, with an example from your experience", hint: "Of course, … · Most importantly, …"}
+      - {q: "Paragraph 4: the other side", hint: "On the other hand, … · When I was …"}
+      - {q: "Conclusion: a balanced answer", hint: "If …, it might be … If, however, …"}
+    lines:
+      - emma: "Your turn. Write your own composition on the same topic. Write at least 250 words. Use your table from the last lesson, and follow this plan. Pause the video and write."
+        say: "Your turn. Write your own composition on the same topic. Write at least two hundred and fifty words. Yooz your table from the last lesson, and follow this plan. Pause the video and write."
+        vi: "Đến lượt bạn: viết bài luận cùng đề, ít nhất 250 từ, theo dàn bài này. Tạm dừng video và viết."
+      - {emma: "Introduction: why is learning a language important?", focus: 0, pause: 0.5}
+      - {emma: "Paragraph 2: how do most people learn? What do some people think?", say: "Paragraph two: how do most people learn? What do some people think?", focus: 1, pause: 0.5}
+      - {emma: "Paragraph 3: one side, with an example from your experience.", say: "Paragraph three: one side, with an example from your experience.", focus: 2, pause: 0.5}
+      - {emma: "Paragraph 4: the other side.", say: "Paragraph four: the other side.", focus: 3, pause: 0.5}
+      - {emma: "And a balanced conclusion.", focus: 4, pause: 1.5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Plan and organize your points before you write.", vi: "Lên dàn bài trước"}
+      - {en: "Introduction · paragraphs · conclusion", vi: "Bố cục rõ ràng"}
+      - {en: "However · Of course · Most importantly · On the other hand", vi: "Từ nối"}
+      - {en: "Include a relevant example from your experience.", vi: "Ví dụ từ trải nghiệm"}
+    lines:
+      - {emma: "Let's review. Good points are not enough. Plan and organize them.", focus: 0}
+      - {emma: "Write an introduction, clear paragraphs and a conclusion.", focus: 1}
+      - {emma: "Link your ideas: however, of course, most importantly, on the other hand.", focus: 2}
+      - {tom: "And give an example from my own life. I can write about my English class!", focus: 3}

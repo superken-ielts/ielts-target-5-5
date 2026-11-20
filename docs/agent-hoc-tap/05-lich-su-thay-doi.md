@@ -5,6 +5,67 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 35 — 20/11/2026: IELTS Target 5.0 Unit 5 · Thoughts — 11 video, hình trong sách, đáp án hiện sau
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 34 (`3297a9d`, đã lên `main`). Đẩy lên nhánh và `main` thành một commit
+như các đợt trước.
+
+### Yêu cầu
+
+Người học hỏi ba sách tiếng Anh đang làm tới đâu, rồi chọn: "ielts làm tiếp unit 5 xong rồi commit push lên main".
+
+### Đã làm
+
+Đọc trang PDF 59–70 (sách in tr. 58–69), Answer key (tr. 267–268) và Tapescript (tr. 286–288), lập danh sách mọi bài tập
+của sáu phần, viết 11 kịch bản theo khuôn Unit 4 (đợt 31) và cách hiện đáp án của Giai đoạn 0 (đợt 32–34). 11 video dài
+@I5TOT:
+
+| Video | Dài | Nội dung |
+|---|---|---|
+| `U05-speaking-1` | @SP1 | Vocabulary 1 (sáu ảnh, Track 48 đọc lại, have / make / use), Grammar check (động từ trạng thái, I don't think), Watch out, Pronunciation check (Track 49) |
+| `U05-speaking-2` | @SP2 | Speaking 1 (bốn nghề, câu hỏi 1B), Speaking 2 (Exam tip Phần 1, Track 50–51 đọc lại, câu trả lời tốt hơn, cụm nêu ý kiến, câu trả lời của Tom, đến lượt bạn) |
+| `U05-listening-1` | @LI1 | Năm sơ đồ, đoán nội dung, Track 52 (nối đoạn – sơ đồ), Track 53 + bốn đoạn của Track 52 (chỗ trống), đúng / sai về cách điền sơ đồ, Exam tip |
+| `U05-listening-2` | @LI2 | Sơ đồ bộ não, Track 54 hai phần (câu 1–6, 7–14), tự đánh giá, Exam tip, Key vocabulary (process, function, control, balance) |
+| `U05-reading-1` | @RE1 | Reading 1 (capacity, sieve, tune in, alert, judgement), Reading 2 (brainy … in two minds, câu của Tom và Mai) |
+| `U05-reading-2` | @RE2 | Reading 3: quảng cáo Memory Enhancer ba dải, 12 câu, mười từ tô vàng, tự đánh giá, remember / recall / memorize |
+| `U05-writing-1` | @WR1 | Writing 1 (hai ảnh, đề bài, ghi chú trên đề), Writing 2A–B (bảng bốn cột, xếp 8 ý, thêm ý của bạn) |
+| `U05-writing-2` | @WR2 | Writing 2C–D: bài A và B, nhận xét của giám khảo (Answer key), dàn bài năm đoạn, đến lượt bạn viết |
+| `U05-consolidation` | @CON | Speaking A–D, Vocabulary A–C (Track 55: Emma đọc), Errors |
+| `U05-exam-listening` | @EXL | Bài nói về mind-mapping (Track 56 đọc lại bằng giọng giảng viên `bf_isabella`), câu 1–6, sơ đồ tư duy 7–14 |
+| `U05-exam-reading` | @EXR | What is Mensa? ba dải, câu 1–2, 3–5 (chọn ba), 6–10 T / F / NG |
+
+Cách hiện đáp án (từ Unit 5 của IELTS): làm trước (tạm dừng video), nghe / đọc xong mới hiện tất cả đáp án một lần, rồi đọc
+lại từng đáp án kèm câu bằng chứng; cảnh đọc / nghe không có nhãn đáp án. Answer key chỉ có Listening 2A, Reading 3B và
+Writing 2D; đáp án khác suy ra từ Tapescript và bài đọc, ghi ở đầu kịch bản (1D của Listening 1 là đáp án gợi ý).
+
+Không làm: bài viết ở Workbook (bộ sách không có Workbook, như các unit trước); 4 video luyện nói thêm (P2-57).
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/ielts_target_5_0/lessons/U05-*.yaml` (+ `.mp4`) | Thêm 11 kịch bản và video |
+| `books/ielts_target_5_0/lessons/lessons.json` | 11 video mới |
+| `books/ielts_target_5_0/work/transcripts/U05-L1B.*`, `U05-L1C.*`, `U05-L2A.*` | Lời chép tự động có mốc từng từ |
+| `agents/tests/test_lesson_video.py` | Test video Unit 5 (hình, không đếm ngược, từ 5 phút, đáp án hiện sau, đủ ba file nghe); hàm dùng chung `_check_answers_after`; độ phủ Unit 1–5 |
+| `tests/web/book.e2e.mjs` | Unit 5 có 11 nút video sáu nhóm, từ 5 phút, Exam practice: Listening mở đúng phiên |
+| `docs/agent-hoc-tap/06-video-bai-giang.md` | Phần đầu, mục 3b (độ phủ Unit 5), 4, 7 (`say`), 8.1, 8.2 (kế hoạch Unit 6) |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-69 (xong); dòng đợt 31, 35 ở P2-33 |
+| `CLAUDE.md`, `docs/agent-hoc-tap/README.md` | Khuôn đáp án hiện sau cho IELTS từ Unit 5; dòng trạng thái đợt 35 |
+| `web/index.html`, `web/ielts-companion.html` | Bản dựng lại |
+
+### Kiểm thử
+
+@TESTS35
+
+### Còn treo
+
+- 4 video luyện nói thêm Unit 4–5 của IELTS Target 5.0 (P2-57); Unit 6 trở đi (file 06 mục 8.2).
+- Giai đoạn 0: Intro và Unit 1–2 chưa làm theo khuôn mới; Unit 6–14 chưa có video.
+- Oxford Word Skills Basic từ Unit 17 (P2-59).
+
+---
+
 ## Đợt 34 — 10/11/2026: Giai đoạn 0 Unit 3–4 làm lại — đủ mọi bài, đáp án hiện sau, bảng từ A2
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 33 (`a2ebf8f`, đã lên `main`). Đẩy lên nhánh và `main` như sổ tay file 08

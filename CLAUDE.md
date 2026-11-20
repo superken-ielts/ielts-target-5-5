@@ -37,7 +37,9 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   ở file 08 mục 6; lời bài nghe chép sẵn ở `work/transcripts/` (`python -m lesson_video transcribe`). Trước khi dựng,
   soát cách đọc bằng `python -m lesson_video phonemes <kịch bản>` (⚠ = lỗi đã gặp, sửa bằng `say`).
 - IELTS Target 5.0: 4 video luyện nói thêm mỗi unit (Unit 1–3 đã có) theo khuôn, hồ sơ nhân vật Tom / Emma và danh sách
-  chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video.
+  chủ đề ở file 06 mục 9. Cảnh "Đến lượt bạn" (`practice`) không dùng `wait`: người học tự tạm dừng video. Từ Unit 5 (đợt
+  35), video sách IELTS cũng theo khuôn đáp án hiện sau của Giai đoạn 0 (làm trước, rồi hiện tất cả đáp án và đọc lại;
+  test kiểm bằng `_check_answers_after`) — file 06 mục 8.1; kế hoạch Unit 6 ở mục 8.2.
 - Từ Unit 4 (đợt 31), video sách IELTS Target 5.0 và Giai đoạn 0 có hình trong sách ở mọi video, như Oxford Word Skills
   Basic: cảnh `figure` / `image` kèm `box` (khung đỏ), trang nhiều chữ cắt thành dải — file 06 mục 8, file 09 mục 5.3a.
 - Giai đoạn 0 từ Unit 3 (Unit 5 đợt 32; Unit 3–4 làm lại đợt 34, người học: "ko bỏ bài và đáp án hiển thị ra sau"): đáp

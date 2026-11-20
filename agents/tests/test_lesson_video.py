@@ -432,10 +432,10 @@ def test_coverage_lists_parts_with_and_without_video(tmp_path):
 
 
 @pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
-def test_unit1_4_video_coverage():
-    """Unit 1–4: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
+def test_unit1_5_video_coverage():
+    """Unit 1–5: mọi phần có trang trong Course Book đều có video; phiên ôn unit thì không (docs/agent-hoc-tap/06)."""
     from lesson_video import coverage
-    for unit in coverage.coverage(REAL, ["U01", "U02", "U03", "U04"]):
+    for unit in coverage.coverage(REAL, ["U01", "U02", "U03", "U04", "U05"]):
         have = {p["activity"].split("-", 1)[1]: [v["id"] for v in p["videos"]] for p in unit["parts"]}
         assert not have["unit-review"], unit["item"]
         for part in ("speaking-vocab", "listening", "reading", "writing", "consolidation", "exam-practice"):
@@ -475,6 +475,45 @@ def test_unit4_videos_use_book_pictures_without_countdown():
         assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), path.name
 
 
+@pytest.mark.skipif(not (REAL / "lessons" / "lessons.json").exists(), reason="chưa có video bài giảng")
+def test_ielts_unit5_videos_book_pictures_and_answers_after():
+    """Người học yêu cầu (đợt 35): "ielts làm tiếp unit 5". 11 video cho sáu phần có trang trong Course Book (như Unit 4), mọi
+    video có hình trong sách với khung đỏ, không đếm ngược; theo khuôn đáp án hiện sau của Giai đoạn 0 (đợt 32–34): làm trước,
+    nghe / đọc xong mới hiện tất cả đáp án một lần rồi đọc lại; phát đủ ba file nghe có trong bộ (Track 52–54); video từ
+    5 phút — docs/agent-hoc-tap/06 mục 3b, 8.1."""
+    built = {x["id"]: x for x in json.loads((REAL / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    paths = sorted((REAL / "lessons").glob("U05-*.yaml"))
+    assert [p.stem for p in paths] == ["U05-consolidation", "U05-exam-listening", "U05-exam-reading", "U05-listening-1",
+                                       "U05-listening-2", "U05-reading-1", "U05-reading-2", "U05-speaking-1", "U05-speaking-2",
+                                       "U05-writing-1", "U05-writing-2"]
+    tracks = set()
+    for path in paths:
+        lesson = sc.load(path)
+        assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), lesson.id
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
+        assert all(s.self_paced for s in lesson.scenes if s.kind == "practice"), lesson.id
+        assert built[lesson.id]["duration"] >= 5 * 60, lesson.id
+        _check_answers_after(lesson)
+        tracks |= {ln.track for s in lesson.scenes for ln in s.lines if ln.track}
+    assert tracks == {"U05-L1B", "U05-L1C", "U05-L2A"}
+
+
+def _check_answers_after(lesson):
+    """Khuôn "đáp án hiện sau" (đợt 32–35): dòng `reveal` đầu tiên của cảnh bài tập mở mọi đáp án; sau đó audio chỉ phát lại
+    từng câu để nhắc (`track` có `focus`); đáp án không lướt qua — sau "Here are all the answers." còn dòng đọc lại / nhắc tạm
+    dừng, hoặc cảnh kế tiếp hiện lại đủ đáp án (bảng compare, hội thoại, hình giải thích)."""
+    for k, s in enumerate(lesson.scenes):
+        if s.kind not in ("blanks", "match", "pairs", "mcq"):
+            continue
+        shown = [i for i, ln in enumerate(s.lines) if ln.reveal]
+        if not shown:
+            continue   # câu hỏi đọc trước, đáp án ở cảnh sau bài đọc / bài nghe
+        assert {str(x) for x in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
+        assert all(ln.focus is not None for ln in s.lines[shown[0]:] if ln.track), (lesson.id, s.heading)
+        nxt = lesson.scenes[k + 1].kind if k + 1 < len(lesson.scenes) else ""
+        assert len(s.lines) > shown[0] + 1 or nxt in ("compare", "letter", "figure", "bullets", "vocab"), (lesson.id, s.heading)
+
+
 # Giai đoạn 0, unit làm theo khuôn "đáp án hiện sau" → (audio của bốn bài học, số từ A2 của unit trong bảng từ của sách).
 # Bộ CD thiếu 1.33, 1.36, 1.39, 1.51 (book.json › missing); 1.43–1.44, 1.54–1.56, 2.11–2.14 thuộc Look again.
 A2_ANSWERS_AFTER = {
@@ -503,18 +542,7 @@ def test_a2_answers_after_reading_and_a2_words_at_end(unit):
         lesson = sc.load(path)
         kinds = [s.kind for s in lesson.scenes]
         assert "words" in kinds and set(kinds[kinds.index("words"):]) == {"words"}, lesson.id   # bảng từ ở cuối
-        for k, s in enumerate(lesson.scenes):
-            if s.kind not in ("blanks", "match", "pairs", "mcq"):
-                continue
-            shown = [i for i, ln in enumerate(s.lines) if ln.reveal]
-            if not shown:
-                continue   # câu hỏi đọc trước, đáp án ở cảnh sau bài đọc (bài đọc của Target, Explore)
-            assert {str(x) for x in s.lines[shown[0]].reveal} == s.reveal_keys(), (lesson.id, s.heading)
-            assert all(ln.focus is not None for ln in s.lines[shown[0]:] if ln.track), (lesson.id, s.heading)
-            # đáp án không lướt qua (đợt 34): sau "Here are all the answers." còn dòng đọc lại / nhắc tạm dừng, hoặc cảnh
-            # kế tiếp hiện lại đủ đáp án (bảng compare, hội thoại, hình giải thích)
-            nxt = lesson.scenes[k + 1].kind if k + 1 < len(lesson.scenes) else ""
-            assert len(s.lines) > shown[0] + 1 or nxt in ("compare", "letter", "figure", "bullets", "vocab"), (lesson.id, s.heading)
+        _check_answers_after(lesson)
         assert any(it.get("box") for s in lesson.scenes if s.image for it in s.items), lesson.id
         assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), lesson.id
         assert built[lesson.id]["duration"] >= 5 * 60, lesson.id   # không giới hạn trên (đợt 33)

@@ -1,0 +1,216 @@
+# Video bài giảng Unit 5 · Listening 1: understanding diagrams (sách in trang 60).
+# Dựng: cd agents && python -m lesson_video build ../books/ielts_target_5_0/lessons/U05-listening-1.yaml
+# Cách viết: xem đầu file U01-listening-1.yaml; khuôn Unit 4 (đợt 31), đáp án hiện sau (đợt 34): làm trước, nghe xong mới hiện
+# tất cả đáp án, rồi đọc lại. Phát Track 52 (U05-L1B, từ 13 s — trước đó là lời dẫn) cho 1B; 1C phát U05-L1C (Track 53, chỉ
+# là lời dẫn) rồi phát lại bốn đoạn của Track 52 có chỗ trống (đoạn 2 về bộ não không có chỗ trống). Mốc theo bản chép lời
+# work/transcripts/U05-L1B.json, đầu / cuối đoạn ở khoảng lặng. Answer key không có trang này: 1B, 1C theo Tapescript
+# Track 52 (sách in trang 286–287): 1B 1 c, 2 b, 3 d, 4 e, 5 a; 1C a aerial, c entrance hall, d Charles Clifton, e pedals.
+# 1D là đáp án gợi ý theo cách làm bài điền sơ đồ của IELTS (1 F, 2 T, 3 T, 4 F, 5 T, 6 F).
+# Hình trong sách: năm sơ đồ a–e tr. 60 (ba hình), chỗ trống trên sơ đồ (khung đỏ, không nhãn), Exam tip. Không đếm ngược.
+id: U05-listening-1
+activity: U05-listening
+title: "Unit 5 · Thoughts"
+subtitle: "Listening 1: understanding diagrams"
+title_vi: "Đọc sơ đồ trước khi nghe, nối đoạn nghe với sơ đồ, điền chỗ trống trên sơ đồ không quá hai từ (Track 52–53)"
+tag: "UNIT 5 · THOUGHTS"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+  mai: {name: Mai, role: student, color: "#2E7D32", voice: {kokoro: af_bella, flite: slt}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Listening for Unit 5. Today's skill: understanding diagrams. In the exam, you sometimes label a diagram while you listen."
+        say: "Welcome to Listening for Unit five. Today's skill: understanding diagrams. In the exam, you sometimes label a diagram while you listen."
+        vi: "Kỹ năng hôm nay: hiểu sơ đồ. Trong bài thi, đôi khi bạn vừa nghe vừa điền nhãn cho sơ đồ."
+      - tom: "Diagrams? I thought diagrams were for maths."
+        vi: "Sơ đồ? Mình tưởng sơ đồ chỉ có trong môn Toán."
+      - emma: "Not only maths. A plan of a house, a family tree, a machine. Remember: try first, and all the answers come after the listening."
+        vi: "Không chỉ Toán: sơ đồ nhà, cây gia phả, máy móc. Nhớ: làm trước, đáp án hiện sau khi nghe."
+
+  - kind: figure
+    chapter: "Listening 1A: đọc sơ đồ, đoán nội dung"
+    heading: "Listening 1A · What does each diagram show? (a, b)"
+    heading_vi: "Sơ đồ a và b tr. 60 — mỗi sơ đồ cho thấy gì? Bạn đoán sẽ nghe gì?"
+    image: {pdf: course-book, page: 61, clip: [56, 236, 374, 364]}
+    items:
+      - {box: [58, 238, 201, 361]}
+      - {box: [222, 238, 372, 361]}
+    lines:
+      - emma: "Listening 1: understanding diagrams. Exercise A. Look at the diagrams and answer the questions with a partner. One: what does each diagram show? Two: what can you predict about what you will hear? Pause the video and think."
+        say: "Listening one: understanding diagrams. Exercise eigh. Look at the diagrams and answer the questions with a partner. One: what does each diagram show? Two: what can you predict about what you will hear? Pause the video and think."
+        vi: "Bài A: mỗi sơ đồ cho thấy gì? Bạn đoán sẽ nghe những gì? Tạm dừng video và nghĩ."
+        pause: 1.5
+      - tom: "Diagram a looks like a machine. There's a screen on the right, so maybe it's an old television. I predict someone explains how it works."
+        say: "Diagram eigh looks like a machine. There's a screen on the right, so maybe it's an old television. I predict someone explains how it works."
+        focus: 0
+        vi: "Sơ đồ a giống một cái máy, có màn hình — có lẽ là tivi đời cũ; chắc ai đó giải thích cách nó hoạt động."
+      - mai: "Diagram b is the human brain. I think it's from a lecture, maybe about biology."
+        focus: 1
+        vi: "Sơ đồ b là bộ não người — chắc là bài giảng sinh học."
+
+  - kind: figure
+    heading: "Listening 1A · What does each diagram show? (c)"
+    heading_vi: "Sơ đồ c tr. 60"
+    image: {pdf: course-book, page: 61, clip: [376, 236, 536, 503]}
+    items:
+      - {box: [378, 238, 533, 501]}
+    lines:
+      - tom: "Diagram c is a plan of a house: a kitchen, a living room, a dining room and a garden. Maybe someone is showing people around the house."
+        focus: 0
+        vi: "Sơ đồ c là mặt bằng một ngôi nhà; có lẽ ai đó đang dẫn khách đi xem nhà."
+
+  - kind: figure
+    heading: "Listening 1A · What does each diagram show? (d, e)"
+    heading_vi: "Sơ đồ d và e tr. 60"
+    image: {pdf: course-book, page: 61, clip: [56, 369, 374, 503]}
+    items:
+      - {box: [58, 371, 201, 501]}
+      - {box: [222, 371, 372, 501]}
+    lines:
+      - mai: "Diagram d is a family tree, the family of Margaret Clifton. Maybe a guide is talking about a famous family."
+        focus: 0
+        vi: "Sơ đồ d là cây gia phả nhà Margaret Clifton — có lẽ một hướng dẫn viên kể về một gia đình nổi tiếng."
+      - tom: "And diagram e is a piano. The labels show the parts: the action, the strings, the frame and the case."
+        focus: 1
+        vi: "Sơ đồ e là đàn piano, nhãn chỉ các bộ phận."
+      - emma: "Great predictions. Now you know the topics, so it's easier to listen."
+        vi: "Đoán tốt lắm — biết chủ đề trước thì nghe dễ hơn."
+
+  - kind: match
+    chapter: "Listening 1B: nối đoạn nghe với sơ đồ"
+    heading: "Listening 1B · Match each extract with one of the diagrams"
+    heading_vi: "Nghe Track 52: năm đoạn trích của năm bài nghe khác nhau — đáp án hiện sau khi nghe xong"
+    image: {pdf: course-book, page: 61, clip: [56, 236, 536, 503]}
+    items:
+      - {n: 1, q: "Extract 1", answer: c}
+      - {n: 2, q: "Extract 2", answer: b}
+      - {n: 3, q: "Extract 3", answer: d}
+      - {n: 4, q: "Extract 4", answer: e}
+      - {n: 5, q: "Extract 5", answer: a}
+    lines:
+      - emma: "Exercise B. Listen to these extracts from five listening tasks. Match each with one of the diagrams in Exercise A. Here is extract one."
+        say: "Exercise B. Listen to these extracts from five listening tasks. Match each with one of the diagrams in Exercise eigh. Here is extract one."
+        vi: "Bài B: nghe năm đoạn trích, nối mỗi đoạn với một sơ đồ."
+      - {track: U05-L1B, start: 13.0, end: 169.9, note: "Track 52 · five extracts"}
+      - emma: "Which diagram is each extract about? Pause the video and decide."
+        vi: "Mỗi đoạn nói về sơ đồ nào? Tạm dừng video và chọn."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5"]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "Extract one is c, the house. The owners, the key, and a large entrance hall.", focus: 0, vi: "Đoạn 1: c — chủ nhà, chìa khóa, sảnh vào."}
+      - {mai: "Extract two is b. The human brain and the frontal lobes.", focus: 1, vi: "Đoạn 2: b — bộ não, thùy trán."}
+      - {tom: "Extract three is d. The Clifton family tree.", focus: 2, vi: "Đoạn 3: d — cây gia phả nhà Clifton."}
+      - {mai: "Extract four is e. Most pianos have two or three pedals.", focus: 3, vi: "Đoạn 4: e — bàn đạp của đàn piano."}
+      - {tom: "And extract five is a. An old-style cathode-ray tube TV set.", say: "And extract five is eigh. An old-style cathode ray tube TV set.", focus: 4, vi: "Đoạn 5: a — tivi đèn hình kiểu cũ."}
+
+  - kind: figure
+    chapter: "Listening 1C: điền chỗ trống"
+    heading: "Listening 1C · Fill in the missing information on each diagram"
+    heading_vi: "Bốn chỗ trống trên sơ đồ (khung đỏ) — không quá hai từ; tạm dừng video, đọc trước, rồi nghe lại"
+    image: {pdf: course-book, page: 61, clip: [56, 236, 536, 503]}
+    items:
+      - {box: [94, 255, 170, 273]}
+      - {box: [390, 281, 504, 298]}
+      - {box: [140, 400, 202, 416]}
+      - {box: [234, 467, 336, 486]}
+    lines:
+      - emma: "Exercise C. Listen again and fill in the missing information on each diagram. Use no more than two words for each. First, find the gaps."
+        say: "Exercise C. Listen again and fill in the missing information on each diagram. Yooz no more than two words for each. First, find the gaps."
+        vi: "Bài C: nghe lại và điền thông tin còn thiếu, không quá hai từ. Trước hết, tìm các chỗ trống."
+      - {emma: "Diagram a: a word at the top.", say: "Diagram eigh: a word at the top.", focus: 0, vi: "Sơ đồ a: một từ ở phía trên."}
+      - {emma: "Diagram c: the room at the top of the plan.", focus: 1, vi: "Sơ đồ c: căn phòng ở đầu mặt bằng."}
+      - {emma: "Diagram d: a name next to Margaret.", focus: 2, vi: "Sơ đồ d: một cái tên cạnh Margaret."}
+      - {emma: "Diagram e: a part at the bottom of the piano. Diagram b has no gap. Pause the video and guess first.", focus: 3, vi: "Sơ đồ e: một bộ phận ở dưới đàn. Sơ đồ b không có chỗ trống. Tạm dừng video, đoán trước."}
+      - {emma: "Now listen again.", pause: 1.0}
+      - {track: U05-L1C, start: 0.3, end: 14.0, note: "Track 53 · Listen again"}
+      - {track: U05-L1B, start: 15.4, end: 42.5, note: "Track 52 · extract 1", focus: 1}
+      - {track: U05-L1B, start: 92.5, end: 121.5, note: "Track 52 · extract 3", focus: 2}
+      - {track: U05-L1B, start: 124.2, end: 141.5, note: "Track 52 · extract 4", focus: 3}
+      - {track: U05-L1B, start: 143.9, end: 169.9, note: "Track 52 · extract 5", focus: 0}
+      - emma: "Pause the video and write your answers."
+        vi: "Tạm dừng video và viết đáp án."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Listening 1C: đáp án"
+    heading: "Listening 1C · Answers"
+    heading_vi: "Tất cả đáp án hiện cùng lúc — chú ý chính tả, không quá hai từ"
+    items:
+      - {n: a, q: "Diagram a, at the top: ___", answer: "aerial"}
+      - {n: c, q: "Diagram c, the room at the top: ___", answer: "entrance hall"}
+      - {n: d, q: "Diagram d, next to Margaret: ___", answer: "Charles Clifton"}
+      - {n: e, q: "Diagram e, at the bottom: ___", answer: "pedals"}
+    lines:
+      - emma: "Here are all the answers."
+        reveal: [a, c, d, e]
+        vi: "Đây là toàn bộ đáp án."
+      - {tom: "Diagram a: aerial. The aerial on the roof of the house picks up waves.", say: "Diagram eigh: aerial. The aerial on the roof of the house picks up waves.", focus: 0, vi: "aerial = ăng-ten"}
+      - {emma: "Aerial is spelled a, e, r, i, a, l.", say: "Aerial is spelled eigh. ee. ar. eye. eigh. el.", focus: 0}
+      - {mai: "Diagram c: entrance hall. We're in a fairly large entrance hall.", focus: 1, vi: "entrance hall = sảnh vào"}
+      - {tom: "Diagram d: Charles Clifton, the original owner, and his wife, Margaret.", focus: 2, vi: "Charles Clifton — chồng của Margaret"}
+      - {mai: "Diagram e: pedals. Most pianos have two or three pedals.", focus: 3, vi: "pedals = bàn đạp"}
+      - emma: "Entrance hall and Charles Clifton are two words, so they are OK. Pause the video and check your spelling."
+        vi: "entrance hall, Charles Clifton là hai từ — vẫn đúng yêu cầu. Tạm dừng video, soát chính tả."
+        pause: 1.5
+
+  - kind: blanks
+    chapter: "Listening 1D: đúng hay sai?"
+    heading: "Listening 1D · Mark these statements about completing diagrams (T) true or (F) false"
+    heading_vi: "Đáp án gợi ý — tạm dừng video và làm trước"
+    items:
+      - {n: 1, q: "You can only complete the diagram if you know a lot about the topic. → ___", answer: "F"}
+      - {n: 2, q: "The labels are in the same order as the information that you hear. → ___", answer: "T"}
+      - {n: 3, q: "You should look at the diagram carefully before you listen. → ___", answer: "T"}
+      - {n: 4, q: "You don't need to look at the diagram while you are listening. → ___", answer: "F"}
+      - {n: 5, q: "The answers are always the exact words that you hear. → ___", answer: "T"}
+      - {n: 6, q: "You need to think about using an article (a / an / the) with your answers. → ___", answer: "F"}
+    lines:
+      - emma: "Exercise D. Mark these statements about completing diagrams true or false. Pause the video and try."
+        vi: "Bài D: đánh dấu đúng (T) hay sai (F). Tạm dừng video và làm."
+        pause: 1.5
+      - emma: "Here are all the answers."
+        reveal: ["1", "2", "3", "4", "5", "6"]
+        vi: "Đây là toàn bộ đáp án."
+      - {emma: "One is false. You didn't need to know about pianos or brains. The recording explains everything.", focus: 0, vi: "1 sai: không cần biết nhiều về chủ đề — bài nghe giải thích hết."}
+      - {emma: "Two is true. The labels usually follow the order of the recording.", focus: 1, vi: "2 đúng: thứ tự nhãn theo thứ tự bài nghe."}
+      - {emma: "Three is true. Look carefully before you listen, and predict.", focus: 2, vi: "3 đúng: xem kỹ sơ đồ trước khi nghe."}
+      - {emma: "Four is false. Follow the diagram all the time, so you know where the speaker is.", focus: 3, vi: "4 sai: luôn nhìn sơ đồ để biết người nói đang ở đâu."}
+      - {emma: "Five is true. For a label, write the words you hear: aerial, pedals. Just spell them correctly.", focus: 4, vi: "5 đúng: viết đúng từ nghe được, chú ý chính tả."}
+      - {emma: "And six is false. Labels don't usually need a, an or the. Pedals, not the pedals. An extra word can also break the word limit.", focus: 5, vi: "6 sai: nhãn thường không cần mạo từ; thêm từ có thể vượt giới hạn số từ."}
+
+  - kind: figure
+    chapter: "Exam tip"
+    heading: "Exam tip · Labelling diagrams"
+    heading_vi: "Exam tip tr. 60"
+    image: {pdf: course-book, page: 61, clip: [56, 714, 446, 768]}
+    items:
+      - {box: [58, 716, 444, 744]}
+      - {box: [58, 742, 444, 766]}
+    lines:
+      - emma: "Exam tip. You might need to label a diagram for some questions in the Listening Module. The fourth part is often an academic lecture given by one speaker, and labelling diagrams is common."
+        focus: 0
+        vi: "Mẹo thi: phần 4 bài Nghe thường là bài giảng của một người; điền nhãn sơ đồ là dạng hay gặp."
+      - emma: "Sometimes you write words onto a diagram, and sometimes you match labels to parts of a diagram. We practise that in Listening 2."
+        say: "Sometimes you write words onto a diagram, and sometimes you match labels to parts of a diagram. We practise that in Listening two."
+        focus: 1
+        vi: "Có khi viết từ lên sơ đồ, có khi nối nhãn với các phần của sơ đồ — luyện ở Listening 2."
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ"
+    items:
+      - {en: "Look at the diagram first: what does it show? What will you hear?", vi: "Xem sơ đồ, đoán nội dung"}
+      - {en: "1B: 1 c · 2 b · 3 d · 4 e · 5 a", vi: "Nghe từ khóa: key, brain, family tree, pedals, TV set"}
+      - {en: "1C: aerial · entrance hall · Charles Clifton · pedals", vi: "Không quá hai từ, đúng chính tả"}
+      - {en: "Follow the diagram while you listen; no articles in labels.", vi: "Theo dõi sơ đồ khi nghe"}
+    lines:
+      - {emma: "Let's review. Look at the diagram first, and predict.", focus: 0}
+      - {emma: "Listen for key words to match the extracts.", focus: 1}
+      - {emma: "Write no more than two words, and check your spelling.", focus: 2}
+      - {tom: "And follow the diagram while I listen. Got it!", focus: 3}

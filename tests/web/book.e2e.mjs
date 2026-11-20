@@ -200,6 +200,22 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
+  await step("Unit 5 có 11 video đủ sáu phần (đợt 35: hình trong sách, đáp án hiện sau), từ 5 phút; nút Exam practice: Listening mở phiên Consolidation & Exam practice", async () => {
+    const u5 = page.locator("#p-book .bk-unit", { hasText: "Unit 5 · Thoughts" });
+    assert.equal(await u5.locator(".bk-vids button").count(), 11);
+    assert.deepEqual(await u5.locator(".bk-vgroup-t").allTextContents(),
+      ["Speaking & Vocabulary", "Listening", "Reading", "Writing", "Consolidation", "Exam practice"]);
+    const labels = await u5.locator(".bk-vids button").allTextContents();
+    assert.ok(labels.every(t => { const m = t.match(/· (\d+):\d\d$/); return m && +m[1] >= 5; }), "video Unit 5 từ 5 phút: " + labels);
+    await u5.locator(".bk-vids button", { hasText: "Exam practice: Listening" }).click();
+    await page.waitForSelector("#p-book .bk-video");
+    assert.match(await page.textContent("#p-book .reader-title"), /Unit 5 · Consolidation & Exam practice/);
+    const srcs = await page.locator("#p-book video").evaluateAll(vs => vs.map(v => v.getAttribute("src").replace(/^.*\//, "")));
+    assert.deepEqual(srcs, ["U05-consolidation.mp4", "U05-exam-listening.mp4", "U05-exam-reading.mp4"]);
+    await page.click("#p-book .reader-bar button");
+    await page.waitForSelector("#p-book .bk-next");
+  });
+
   await step("mở phiên, xem trang sách qua đoạn PDF nhỏ", async () => {
     await page.click("#p-book .bk-next .btn-primary");
     await page.click("#p-book .bk-act .btn-primary");
