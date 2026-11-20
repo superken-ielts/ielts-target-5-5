@@ -18,21 +18,21 @@ Người học hỏi ba sách tiếng Anh đang làm tới đâu, rồi chọn: 
 
 Đọc trang PDF 59–70 (sách in tr. 58–69), Answer key (tr. 267–268) và Tapescript (tr. 286–288), lập danh sách mọi bài tập
 của sáu phần, viết 11 kịch bản theo khuôn Unit 4 (đợt 31) và cách hiện đáp án của Giai đoạn 0 (đợt 32–34). 11 video dài
-@I5TOT:
+1:16:34:
 
 | Video | Dài | Nội dung |
 |---|---|---|
-| `U05-speaking-1` | @SP1 | Vocabulary 1 (sáu ảnh, Track 48 đọc lại, have / make / use), Grammar check (động từ trạng thái, I don't think), Watch out, Pronunciation check (Track 49) |
-| `U05-speaking-2` | @SP2 | Speaking 1 (bốn nghề, câu hỏi 1B), Speaking 2 (Exam tip Phần 1, Track 50–51 đọc lại, câu trả lời tốt hơn, cụm nêu ý kiến, câu trả lời của Tom, đến lượt bạn) |
-| `U05-listening-1` | @LI1 | Năm sơ đồ, đoán nội dung, Track 52 (nối đoạn – sơ đồ), Track 53 + bốn đoạn của Track 52 (chỗ trống), đúng / sai về cách điền sơ đồ, Exam tip |
-| `U05-listening-2` | @LI2 | Sơ đồ bộ não, Track 54 hai phần (câu 1–6, 7–14), tự đánh giá, Exam tip, Key vocabulary (process, function, control, balance) |
-| `U05-reading-1` | @RE1 | Reading 1 (capacity, sieve, tune in, alert, judgement), Reading 2 (brainy … in two minds, câu của Tom và Mai) |
-| `U05-reading-2` | @RE2 | Reading 3: quảng cáo Memory Enhancer ba dải, 12 câu, mười từ tô vàng, tự đánh giá, remember / recall / memorize |
-| `U05-writing-1` | @WR1 | Writing 1 (hai ảnh, đề bài, ghi chú trên đề), Writing 2A–B (bảng bốn cột, xếp 8 ý, thêm ý của bạn) |
-| `U05-writing-2` | @WR2 | Writing 2C–D: bài A và B, nhận xét của giám khảo (Answer key), dàn bài năm đoạn, đến lượt bạn viết |
-| `U05-consolidation` | @CON | Speaking A–D, Vocabulary A–C (Track 55: Emma đọc), Errors |
-| `U05-exam-listening` | @EXL | Bài nói về mind-mapping (Track 56 đọc lại bằng giọng giảng viên `bf_isabella`), câu 1–6, sơ đồ tư duy 7–14 |
-| `U05-exam-reading` | @EXR | What is Mensa? ba dải, câu 1–2, 3–5 (chọn ba), 6–10 T / F / NG |
+| `U05-speaking-1` | 5:10 | Vocabulary 1 (sáu ảnh, Track 48 đọc lại, have / make / use), Grammar check (động từ trạng thái, I don't think), Watch out, Pronunciation check (Track 49) |
+| `U05-speaking-2` | 7:18 | Speaking 1 (bốn nghề, câu hỏi 1B), Speaking 2 (Exam tip Phần 1, Track 50–51 đọc lại, câu trả lời tốt hơn, cụm nêu ý kiến, câu trả lời của Tom, đến lượt bạn) |
+| `U05-listening-1` | 9:26 | Năm sơ đồ, đoán nội dung, Track 52 (nối đoạn – sơ đồ), Track 53 + bốn đoạn của Track 52 (chỗ trống), đúng / sai về cách điền sơ đồ, Exam tip |
+| `U05-listening-2` | 8:57 | Sơ đồ bộ não, Track 54 hai phần (câu 1–6, 7–14), tự đánh giá, Exam tip, Key vocabulary (process, function, control, balance) |
+| `U05-reading-1` | 7:47 | Reading 1 (capacity, sieve, tune in, alert, judgement), Reading 2 (brainy … in two minds, câu của Tom và Mai) |
+| `U05-reading-2` | 6:33 | Reading 3: quảng cáo Memory Enhancer ba dải, 12 câu, mười từ tô vàng, tự đánh giá, remember / recall / memorize |
+| `U05-writing-1` | 5:34 | Writing 1 (hai ảnh, đề bài, ghi chú trên đề), Writing 2A–B (bảng bốn cột, xếp 8 ý, thêm ý của bạn) |
+| `U05-writing-2` | 6:55 | Writing 2C–D: bài A và B, nhận xét của giám khảo (Answer key), dàn bài năm đoạn, đến lượt bạn viết |
+| `U05-consolidation` | 5:48 | Speaking A–D, Vocabulary A–C (Track 55: Emma đọc), Errors |
+| `U05-exam-listening` | 7:38 | Bài nói về mind-mapping (Track 56 đọc lại bằng giọng giảng viên `bf_isabella`), câu 1–6, sơ đồ tư duy 7–14 |
+| `U05-exam-reading` | 5:27 | What is Mensa? ba dải, câu 1–2, 3–5 (chọn ba), 6–10 T / F / NG |
 
 Cách hiện đáp án (từ Unit 5 của IELTS): làm trước (tạm dừng video), nghe / đọc xong mới hiện tất cả đáp án một lần, rồi đọc
 lại từng đáp án kèm câu bằng chứng; cảnh đọc / nghe không có nhãn đáp án. Answer key chỉ có Listening 2A, Reading 3B và
@@ -56,7 +56,16 @@ Không làm: bài viết ở Workbook (bộ sách không có Workbook, như các
 
 ### Kiểm thử
 
-@TESTS35
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: IELTS Target 5.0 có 70 video, English Unlimited A2 có 23 video |
+| `cd agents && python -m pytest -q` | 147 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; Unit 5 có 11 nút video sáu nhóm, từ 5 phút, Exam practice: Listening mở đúng phiên |
+| `python -m lesson_video check` / `phonemes` (11 kịch bản Unit 5) | Hợp lệ; 4 ⚠ còn lại là danh từ đọc đúng (the uses of intelligence, their lives), ghi ở đầu kịch bản |
+| Mức âm ở hai đầu đoạn cắt (cửa sổ 50 ms, 8 đoạn của Track 52–54) | Mọi đoạn bắt đầu, kết thúc ở khoảng lặng |
+| Đối chiếu chữ trong kịch bản với ảnh trang sách phóng to | Câu hỏi Speaking 1B, cụm 2C, Vocabulary 1C, Listening 1D, Reading 3B–D, Key vocabulary, Writing 1A, 2A–B khớp nguyên văn (đã sửa 1D câu 2, Writing 2B ý 7) |
+| Ảnh chụp từng chương của 11 video đã dựng | Đúng thứ tự bài; đáp án hiện sau khi làm / nghe / đọc rồi được đọc lại; hình trong sách đọc được. Dựng lại `U05-listening-1` vì khung cắt sơ đồ làm cụt nhãn PARIETAL LOBES |
 
 ### Còn treo
 

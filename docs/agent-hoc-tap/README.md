@@ -123,7 +123,7 @@ phút (file 08 mục 6.1).
 trước rồi mới hiện tất cả đáp án một lần, không còn nhãn đáp án trên hình lúc đang đọc, bảng từ A2 cuối mỗi video. Intro và
 Unit 1–2 chưa làm lại (file 08 mục 5).
 
-**Đợt 35 (20/11/2026):** IELTS Target 5.0 Unit 5 · Thoughts có 11 video (@I5TOT) cho đủ sáu phần của Course Book, có hình
+**Đợt 35 (20/11/2026):** IELTS Target 5.0 Unit 5 · Thoughts có 11 video (1:16:34) cho đủ sáu phần của Course Book, có hình
 trong sách. Từ unit này video IELTS cũng làm trước rồi mới hiện tất cả đáp án như Giai đoạn 0 (file 06 mục 8.1). IELTS Target
 5.0 nay có 70 video.
 

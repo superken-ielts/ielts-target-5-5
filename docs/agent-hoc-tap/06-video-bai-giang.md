@@ -178,9 +178,22 @@ video luyện nói thêm (mục 9, P2-57).
 
 Bảng in bằng lệnh `coverage` sau đợt 35:
 
-### U05 · Thoughts — 6/7 phần có video, 11 video, @I5TOT
+### U05 · Thoughts — 6/7 phần có video, 11 video, 1:16:34
 
-@TABI5
+| Phần | Trang | Video | Dài | Chương |
+|---|---|---|---|---|
+| Speaking & Vocabulary | sách tr. 58–59 | `U05-speaking-1` — Vocabulary 1: thought processes, state verbs | 5:10 | 10 |
+| Speaking & Vocabulary | sách tr. 58–59 | `U05-speaking-2` — Speaking 1–2: how people think, expressing opinions | 7:18 | 11 |
+| Listening | Listening tr. 60–61 | `U05-listening-1` — Listening 1: understanding diagrams | 9:26 | 8 |
+| Listening | Listening tr. 60–61 | `U05-listening-2` — Listening 2: practice with diagrams | 8:57 | 9 |
+| Reading | sách tr. 62–64 | `U05-reading-1` — Reading 1–2: guessing new words in context | 7:47 | 12 |
+| Reading | sách tr. 62–64 | `U05-reading-2` — Reading 2: practise with unknown words, true / false / not given | 6:33 | 9 |
+| Writing | sách tr. 65–66 | `U05-writing-1` — Writing 1: understanding instructions, planning both sides | 5:34 | 12 |
+| Writing | sách tr. 65–66 | `U05-writing-2` — Writing 2: a balanced composition, examiner's comments | 6:55 | 9 |
+| Consolidation | sách tr. 67 | `U05-consolidation` — Consolidation: Speaking, Vocabulary, Errors | 5:48 | 11 |
+| Exam practice | sách tr. 68–69 | `U05-exam-listening` — Exam practice: Listening — a talk about mind-mapping | 7:38 | 8 |
+| Exam practice | sách tr. 68–69 | `U05-exam-reading` — Exam practice: Reading — What is Mensa? | 5:27 | 10 |
+| Ôn unit + sổ lỗi | — | **chưa có video** | — | — |
 
 **Kết luận:** Unit 5 có video cho mọi phần có trang trong Course Book (6/7 phần), 11 video, mọi video có hình trong sách và
 theo khuôn đáp án hiện sau (phần đầu file, mục 8.1). Track 52–54 có file nên phát thẳng; Track 48–51, 55, 56 không có file
