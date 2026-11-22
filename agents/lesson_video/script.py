@@ -20,12 +20,13 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_valida
 from . import ja
 
 Kind = Literal["title", "bullets", "vocab", "match", "pairs", "qa", "compare", "errors", "practice",
-               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow", "jp", "figure", "words"]
+               "order", "timing", "letter", "blanks", "mcq", "passage", "shadow", "jp", "figure", "words", "dictation"]
 
 # Cảnh có hình cắt từ trang sách (`image`): match (hình + cột đáp án), figure (hình lớn), bullets và blanks câu điền từ
 # (hình bên trái, nội dung bên phải)
 IMAGE_KINDS = ("match", "figure", "bullets", "blanks")
 WORDS_MAX = 18   # cảnh words: 3 cột × 6 hàng
+DICT_MAX = 6     # cảnh dictation: 6 dòng
 
 # Khóa bắt buộc của từng mục theo kiểu cảnh
 ITEM_KEYS: dict[str, tuple[str, ...]] = {
@@ -50,6 +51,10 @@ ITEM_KEYS: dict[str, tuple[str, ...]] = {
                                         # trên hình (điểm PDF như `clip`) đóng khung đỏ khi dòng thoại `focus` vào, `label` = nhãn
     "words": ("w", "vi"),               # bảng từ cuối video (đợt 32): lưới 3 cột, mỗi ô một từ `w`, từ loại `pos`, nghĩa `vi`;
                                         # dòng thoại `focus` vào từ đang đọc; tối đa WORDS_MAX từ một cảnh
+    "dictation": ("n", "answer"),       # nghe – viết liền mạch (đợt 36): mỗi dòng một mục số `n`, ẩn tới khi `reveal`, rồi hiện
+                                        # `answer` (từ / cụm / câu), `pos`, nghĩa `vi`, câu ví dụ `ex`; `w` = mục của Word list
+                                        # (chuỗi hoặc danh sách) mà dòng này phủ — lệnh wordlist dùng để soát đủ từ của unit;
+                                        # phụ đề luôn ẩn lời (không lộ chữ trước khi người học viết); tối đa DICT_MAX dòng
     "jp": ("jp",),                      # thẻ ba tầng (video N5): `jp` chữ Nhật có furigana, `romaji`, `en` giải thích, `vi` nghĩa;
                                         # "\n" trong `jp` / `romaji` là xuống dòng bắt buộc (bảng chữ: mỗi hàng một dòng);
                                         # nhiều thẻ thì dòng thoại chọn thẻ đang hiện bằng `focus`; `quiz: true` = thẻ đố
@@ -217,6 +222,12 @@ class Scene(_M):
             if not (isinstance(b, (list, tuple)) and len(b) == 4 and all(isinstance(v, (int, float)) for v in b)
                     and b[0] < b[2] and b[1] < b[3]):
                 raise ValueError(f"`box` phải là [x0, y0, x1, y1] (điểm PDF như `clip`): {b}")
+        if self.kind == "dictation":
+            if len(self.items) > DICT_MAX:
+                raise ValueError(f"cảnh dictation: tối đa {DICT_MAX} mục một cảnh, có {len(self.items)} — chia thành nhiều cảnh")
+            nums = [str(it["n"]) for it in self.items]
+            if len(set(nums)) != len(nums):
+                raise ValueError(f"cảnh dictation: số `n` bị trùng ({', '.join(nums)})")
         if self.kind == "words" and len(self.items) > WORDS_MAX:
             raise ValueError(f"cảnh words: tối đa {WORDS_MAX} từ một cảnh (3 cột × 6 hàng), có {len(self.items)} — chia thành nhiều cảnh")
         if self.kind == "order" and sorted(int(it["pos"]) for it in self.items) != list(range(1, len(self.items) + 1)):
@@ -267,7 +278,7 @@ class Scene(_M):
         return self.kind == "practice" and not any(ln.wait or ln.echo for ln in self.lines)
 
     def reveal_keys(self) -> set[str]:
-        if self.kind in ("match", "pairs", "blanks", "mcq"):
+        if self.kind in ("match", "pairs", "blanks", "mcq", "dictation"):
             return {str(it["n"]) for it in self.items}
         if self.kind == "order":
             return {str(it["k"]) for it in self.items}

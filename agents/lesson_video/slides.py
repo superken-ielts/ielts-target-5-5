@@ -210,6 +210,50 @@ class Slides:
             vf, vl = fit(d, str(it["vi"]), "regular", 17, cw - 32, 1, min_size=12)
             d.text((x0 + 16, y0 + (y1 - y0) * 0.74), vl[0], font=vf, fill=C["ink"] if on else C["muted"], anchor="lm")
 
+    def _k_dictation(self, img, d, sc, fr):
+        """Nghe – viết liền mạch (đợt 36): mỗi mục một dòng có số. Chưa `reveal` thì chỉ có số và một vạch kẻ để người học
+        tự viết; mở ra thì hiện từ / câu (đậm), từ loại, nghĩa tiếng Việt và câu ví dụ. Dòng đang đọc (`focus`) nền hồng."""
+        n = len(sc.items)
+        gap = 10
+        rh = min(86, (BOTTOM - TOP + gap) / max(n, 1))
+        for i, it in enumerate(sc.items):
+            y0 = TOP + i * rh
+            y1 = y0 + rh - gap
+            on = fr.focus == i
+            d.rounded_rectangle((60, y0, W - 60, y1), 10, fill=C["soft"] if on else C["card"],
+                                outline=C["red"] if on else C["line"], width=3 if on else 2)
+            r = min(19, (y1 - y0) / 2 - 7)
+            cx, cy = 60 + 34, (y0 + y1) / 2
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=C["red"] if on else C["muted"])
+            d.text((cx, cy + 1), str(it["n"]), font=font("bold", int(r * 1.05)), fill="#FFFFFF", anchor="mm")
+            x, right = 60 + 72, W - 60 - 22
+            if str(it["n"]) not in fr.revealed:
+                for xx in range(int(x), int(right - 200), 16):  # chỗ trống để viết: vạch đứt
+                    d.line((xx, cy + 10, xx + 9, cy + 10), fill=C["dim"], width=2)
+                continue
+            ex, vi, pos = str(it.get("ex") or ""), str(it.get("vi") or ""), str(it.get("pos") or "")
+            two = bool(ex or vi)
+            y_top = y0 + (y1 - y0) * (0.33 if two else 0.5)
+            pf = font("italic", 17)
+            pw = d.textlength(pos, font=pf) + 10 if pos else 0
+            tail = vi if ex else ""   # có câu ví dụ thì nghĩa đi cùng dòng với từ, câu ví dụ ở dòng dưới
+            tf = font("italic", 19)
+            tw = min(d.textlength("— " + tail, font=tf) + 14, (right - x) * 0.45) if tail else 0
+            af, al = fit(d, str(it["answer"]), "bold", 26, right - x - pw - tw, 1, min_size=15)
+            d.text((x, y_top), al[0], font=af, fill=C["red"] if on else C["ink"], anchor="lm")
+            ax = x + d.textlength(al[0], font=af)
+            if pos:
+                d.text((ax + 8, y_top + 1), pos, font=pf, fill=C["muted"], anchor="lm")
+                ax += pw
+            if tail:
+                vf, vl = fit(d, "— " + tail, "italic", 19, right - ax - 14, 1, min_size=13)
+                d.text((ax + 14, y_top + 1), vl[0], font=vf, fill=C["muted"], anchor="lm")
+            if two:
+                second = ex if ex else vi
+                kind = "regular" if ex else "italic"
+                sf, sl = fit(d, second, kind, 19, right - x, 1, min_size=13)
+                d.text((x, y0 + (y1 - y0) * 0.74), sl[0], font=sf, fill=C["ink"] if ex else C["muted"], anchor="lm")
+
     # ---------- khung chung ----------
     def render(self, fr: Frame, progress: float) -> Image.Image:
         if self.L.scenes[fr.scene].kind == "jp":  # thẻ ba tầng nền navy, vẽ cả khung (jpcard.py)
@@ -271,6 +315,11 @@ class Slides:
             role = scene.roles.get(fr.speaker, sp.role)
             label = sp.name + (" · " + role if role else "")
             d.text((x0, 576), label, font=font("bold", 17), fill=sp.color)
+            if scene.kind == "dictation":  # nghe – viết: không bao giờ hiện chữ đang đọc
+                d.text((x0, 606), "Listen and write…", font=font("italic", 27), fill=C["muted"])
+                d.text((x0, 650), "Nghe rồi viết — tạm dừng video khi cần; đáp án hiện khi sang câu sau",
+                       font=font("italic", 19), fill=C["dim"])
+                return
             if scene.hide_text:  # bài nghe: không hiện lời thoại
                 d.text((x0, 606), "Listen carefully…", font=font("italic", 27), fill=C["muted"])
                 d.text((x0, 650), "Nghe kỹ — lời thoại được ẩn để bạn tự làm bài", font=font("italic", 19), fill=C["dim"])

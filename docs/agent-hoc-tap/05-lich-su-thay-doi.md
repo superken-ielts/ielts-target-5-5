@@ -5,6 +5,81 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 36 — 22/11/2026: Oxford Word Skills Basic — mỗi unit thêm một video nghe – viết 10 phút
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 35 (`3b8fefd`, đã lên `main`). Đẩy lên nhánh và `main` thành một commit
+như các đợt trước.
+
+### Yêu cầu
+
+Người học: "tiếp tục sách oxford mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ
+vựng câu theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao
+tiếp", rồi "xong rồi commit push lên main".
+
+### Đã làm
+
+- **Word list cuối sách** (tr. 237–254 = PDF 236–253):
+  - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai
+    lề 8 điểm thì đọc "11" thành "1l", mất break, run của Unit 11.
+  - Lấy hợp của hai lần rồi soát tay theo ảnh trang: tách từ dính liền, bỏ dòng lạc unit ("United States of America" nằm
+    nhầm ở Unit 3).
+  - Kết quả `work/wordlist.json`: 433 mục của Unit 1–16 (Unit 4 có 79 mục, Unit 1 chỉ có 4).
+  - Word list không có từ cơ bản trên trang (số ở Unit 1, thứ và tháng ở Unit 3), nên phần 1 của video thêm các từ đó.
+- **Cảnh `dictation`** (`agents/lesson_video`):
+  - tối đa 6 dòng có số; dòng chưa mở chỉ có vạch kẻ để viết;
+  - mở ra thì hiện từ / câu (đậm), nghĩa tiếng Việt, câu ví dụ;
+  - phụ đề luôn ghi "Listen and write…", không lộ lời đang đọc;
+  - `w` = mục Word list mà dòng phủ.
+- **Lệnh `wordlist`:** thêm `--level all` cho sách không chia cấp độ; tính cả mục `w` của cảnh `dictation`.
+- **Bộ sinh kịch bản** `books/book_oxford_word_skills_basic/work/dictation/gen_dictation.py`:
+  - dữ liệu từng unit ở `units_01_04.py`, `units_05_09.py`, `units_10_16.py`;
+  - mỗi mục gồm từ, nghĩa, câu ví dụ, mục Word list và cách đọc;
+  - kịch bản .yaml là bản sinh ra, không sửa tay.
+- **16 video nghe – viết** ({TOTAL36}), id `<id video unit>-dictation`, cùng phiên với video bài giảng:
+  - phần 1 — từ trong sách (Emma): mỗi từ đọc hai lần rồi một câu ví dụ;
+  - phần 2 — từ thêm theo chủ đề (Tom);
+  - phần 3 — câu giao tiếp (hai người đọc xen kẽ, mỗi câu hai lần);
+  - đáp án hiện khi sang mục sau; nghỉ 1,5 giây sau mỗi từ, 2 giây sau mỗi câu.
+
+{TABLE36}
+
+Thử và sửa trong lúc làm:
+- **Thời lượng:** bản thử Unit 2 ước 8:29. Tăng khoảng nghỉ (1 → 1,5 giây, câu 1,4 → 2 giây), thêm từ và câu, thì ước 10:05,
+  dựng thật 10:15. Unit 5–16 lần đầu ước 7:13–9:05, đều thêm từ và câu cho tới khoảng 10 phút.
+- **Cách đọc:**
+  - `use` (động từ) → `yooz`, `live` / `lives` → `liv` / `livz`, `close` → `cloze`;
+  - chữ Việt (Tết, Đà Lạt, Hà Nội, Khoa, Hoa, cái ô, cà phê sữa đá) và Ho Chi Minh City sửa bằng `say`;
+  - `a.m.` / `p.m.` Kokoro đọc đúng, bỏ `say` thử lúc đầu.
+- **Cặp hỏi – đáp:** năm chỗ một người tự hỏi tự trả lời hoặc câu hỏi không có câu đáp (Unit 1, 8, 14, 15, 16). Đã sửa;
+  Unit 1 dựng lại.
+- **Chữ trên thẻ:** soát mọi mục, không có chữ bị cắt.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu cảnh `dictation`, `DICT_MAX = 6`, từ chối trùng số, `reveal_keys` |
+| `agents/lesson_video/slides.py` | `_k_dictation`; phụ đề cảnh `dictation` chỉ ghi "Listen and write…" |
+| `agents/lesson_video/wordlist.py`, `cli.py` | `--level all`; đếm mục `w` của cảnh `dictation` |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 1–16 (433 mục) |
+| `books/book_oxford_word_skills_basic/work/dictation/` | Bộ sinh kịch bản và dữ liệu 16 unit |
+| `books/book_oxford_word_skills_basic/lessons/U*-dictation.yaml` (+ `.mp4`), `lessons.json` | 16 kịch bản và video mới |
+| `agents/tests/test_lesson_video.py` | Test cảnh `dictation` và `wordlist --level all`; hồi quy 16 video nghe – viết; test 7–10 phút cũ bỏ qua video nghe – viết |
+| `tests/web/book.e2e.mjs` | Thẻ sách 32 video; mỗi unit hai nút (bài giảng, nghe – viết 9–10 phút); phiên Unit 6 có hai video |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Mục 5.9 (khuôn, Word list, quy trình, bảng 16 video), đầu file, mục 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-70 (xong); dòng đợt 36 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 36; quy tắc video nghe – viết |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+{TESTS36}
+
+### Còn treo
+
+- Unit 17 trở đi chưa có video (P2-59): mỗi unit hai video, bài giảng và nghe – viết.
+- Sách không kèm CD-ROM nên video không có giọng phát âm gốc của sách.
+
 ## Đợt 35 — 20/11/2026: IELTS Target 5.0 Unit 5 · Thoughts — 11 video, hình trong sách, đáp án hiện sau
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 34 (`3297a9d`, đã lên `main`). Đẩy lên nhánh và `main` thành một commit

@@ -8,6 +8,10 @@ cấp độ A1–B2, định nghĩa, ví dụ, unit). Lần đầu lệnh đọc
 
 Lệnh in các từ của unit ở cấp độ đã chọn (mỗi từ một dòng, từ loại viết tắt như trên màn hình) và cho biết từ nào chưa
 có trong cảnh `words` của các kịch bản `lessons/<unit>-*.yaml`. Một từ nhiều nghĩa (on, quiet, rent) gộp thành một ô.
+
+Sách không có cấp độ (Oxford Word Skills Basic, đợt 36): `work/wordlist.json` chép tay từ Word list cuối sách (OCR rồi soát),
+`level` rỗng; dùng `--level all`. Cảnh `dictation` (nghe – viết) cũng được tính: mục có `w` (một từ hoặc danh sách từ của
+Word list mà dòng đó phủ), không có `w` thì lấy `answer`.
 """
 from __future__ import annotations
 
@@ -79,11 +83,12 @@ def load(bdir: Path) -> list[dict]:
     return entries
 
 
-def unit_words(entries: list[dict], unit: str, level: str = "A2") -> list[dict]:
-    """Từ của unit ở cấp độ `level`, mỗi từ một mục (nghĩa khác nhau gộp lại: từ loại nối bằng dấu phẩy)."""
+def unit_words(entries: list[dict], unit: str, level: Optional[str] = "A2") -> list[dict]:
+    """Từ của unit ở cấp độ `level` (None hoặc "all" = mọi cấp độ), mỗi từ một mục (nghĩa khác nhau gộp lại: từ loại nối
+    bằng dấu phẩy)."""
     out: dict[str, dict] = {}
     for e in entries:
-        if e["unit"] != unit or e["level"] != level:
+        if e["unit"] != unit or (level not in (None, "all") and e["level"] != level):
             continue
         k = key(e["w"])
         if k not in out:
@@ -94,30 +99,39 @@ def unit_words(entries: list[dict], unit: str, level: str = "A2") -> list[dict]:
     return [dict(v, pos=", ".join(v["pos"])) for v in out.values()]
 
 
+def _item_keys(kind: str, it: dict) -> list[str]:
+    if kind == "words":
+        return [key(str(it.get("w", "")))]
+    if kind == "dictation":   # `w`: mục Word list mà dòng phủ (một hoặc nhiều); không có thì chính `answer`
+        w = it.get("w", it.get("answer", ""))
+        return [key(str(x)) for x in (w if isinstance(w, list) else [w])]
+    return []
+
+
 def shown(bdir: Path, unit: str) -> dict[str, list[str]]:
-    """Từ đã có trong cảnh `words` của các kịch bản unit: khóa từ → các id video."""
+    """Từ đã có trong cảnh `words` / `dictation` của các kịch bản unit: khóa từ → các id video."""
     got: dict[str, list[str]] = {}
     for path in sorted((bdir / "lessons").glob(f"{unit}-*.yaml")):
         raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         for sc in raw.get("scenes", []):
-            if sc.get("kind") == "words":
-                for it in sc.get("items", []):
-                    got.setdefault(key(str(it.get("w", ""))), []).append(str(raw.get("id", path.stem)))
+            for it in sc.get("items", []):
+                for k in _item_keys(sc.get("kind", ""), it):
+                    got.setdefault(k, []).append(str(raw.get("id", path.stem)))
     return got
 
 
-def missing(bdir: Path, unit: str, level: str = "A2") -> list[str]:
-    """Từ cấp độ `level` của unit chưa hiện ở cảnh `words` nào của unit."""
+def missing(bdir: Path, unit: str, level: Optional[str] = "A2") -> list[str]:
+    """Từ cấp độ `level` (None / "all" = mọi cấp độ) của unit chưa hiện ở cảnh `words` / `dictation` nào của unit."""
     have = shown(bdir, unit)
     return [w["w"] for w in unit_words(load(bdir), unit, level) if key(w["w"]) not in have]
 
 
-def run(bdir: Path, unit: str, level: str = "A2", say: Callable[[str], None] = print) -> int:
+def run(bdir: Path, unit: str, level: Optional[str] = "A2", say: Callable[[str], None] = print) -> int:
     words = unit_words(load(bdir), unit, level)
     have = shown(bdir, unit)
-    say(f"{unit} · {level}: {len(words)} từ (bảng từ English Profile của sách)")
+    say(f"{unit} · {level or 'all'}: {len(words)} từ (bảng từ của sách)")
     for w in words:
-        where = ", ".join(have.get(key(w["w"]), [])) or "chưa có trong cảnh words"
+        where = ", ".join(have.get(key(w["w"]), [])) or "chưa có trong cảnh words / dictation"
         say(f"  - {{w: {json.dumps(w['w'], ensure_ascii=False)}, pos: {json.dumps(w['pos'])}, vi: \"\"}}"
             f"   # {w['def'][:60]} | {where}")
     miss = [w["w"] for w in words if key(w["w"]) not in have]

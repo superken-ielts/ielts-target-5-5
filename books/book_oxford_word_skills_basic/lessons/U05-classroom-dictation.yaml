@@ -1,0 +1,290 @@
+# Video nghe – viết (dictation) Unit 5 · Classroom vocabulary — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U05-classroom-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
+# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
+# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U05 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U05-classroom-dictation
+activity: U05-words
+title: "Unit 5 · Classroom vocabulary"
+subtitle: "Dictation · listen and write: things in the classroom"
+title_vi: "Nghe – viết 10 phút: đồ vật trong lớp học — từ trong sách, từ thêm, câu giao tiếp"
+tag: "BASIC ENGLISH · UNIT 5"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 5: Classroom vocabulary. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit five: Classroom vocabulary. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 5: đồ vật trong lớp học. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 24 words from the book. You hear each word twice, then a sentence. Then 23 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, twenty-four words from the book. You hear each word twice, then a sentence. Then twenty-three more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 24 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 23 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "bag", "vi": "cặp, túi", "ex": "Put your books in your bag.", "w": ["bag"]}
+      - {"n": 2, "answer": "board", "vi": "bảng", "ex": "The teacher writes on the board.", "w": ["board"]}
+      - {"n": 3, "answer": "board pen", "vi": "bút viết bảng", "ex": "This board pen doesn't work.", "w": ["board pen"]}
+      - {"n": 4, "answer": "noticeboard", "vi": "bảng thông báo (ghim giấy)", "ex": "The timetable is on the noticeboard.", "w": ["noticeboard"]}
+      - {"n": 5, "answer": "desk", "vi": "bàn học", "ex": "Her desk is next to the window.", "w": ["desk"]}
+      - {"n": 6, "answer": "table", "vi": "cái bàn", "ex": "There's a big table in the middle of the room.", "w": ["table"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. bag. bag. Put your books in your bag.", "focus": 0, "pause": 1.5}
+      - {"emma": "Two. board. board. The teacher writes on the board.", "focus": 1, "reveal": [1], "pause": 1.5}
+      - {"emma": "Three. board pen. board pen. This board pen doesn't work.", "focus": 2, "reveal": [2], "pause": 1.5}
+      - {"emma": "Four. noticeboard. noticeboard. The timetable is on the noticeboard.", "focus": 3, "reveal": [3], "pause": 1.5}
+      - {"emma": "Five. desk. desk. Her desk is next to the window.", "focus": 4, "reveal": [4], "pause": 1.5}
+      - {"emma": "Six. table. table. There's a big table in the middle of the room.", "focus": 5, "reveal": [5], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "chair", "vi": "cái ghế", "ex": "Sit on the chair, please.", "w": ["chair"]}
+      - {"n": 8, "answer": "CD", "vi": "đĩa CD", "ex": "Put the CD in the player.", "w": ["CD"]}
+      - {"n": 9, "answer": "CD player", "vi": "máy CD", "ex": "The CD player is on the table.", "w": ["CD player", "player"]}
+      - {"n": 10, "answer": "cassette player", "vi": "máy cát-xét", "ex": "Nobody uses a cassette player now.", "w": ["cassette player"]}
+      - {"n": 11, "answer": "pen", "vi": "bút mực", "ex": "Can I borrow your pen?", "w": ["pen"]}
+      - {"n": 12, "answer": "pencil", "vi": "bút chì", "ex": "Write your name in pencil.", "w": ["pencil"]}
+    lines:
+      - {"emma": "Seven. chair. chair. Sit on the chair, please.", "focus": 0, "pause": 1.5}
+      - {"emma": "Eight. CD. CD. Put the CD in the player.", "say": "Eight. C D. C D. Put the C D in the player.", "focus": 1, "reveal": [7], "pause": 1.5}
+      - {"emma": "Nine. CD player. CD player. The CD player is on the table.", "say": "Nine. C D player. C D player. The C D player is on the table.", "focus": 2, "reveal": [8], "pause": 1.5}
+      - {"emma": "Ten. cassette player. cassette player. Nobody uses a cassette player now.", "say": "Ten. cassette player. cassette player. Nobody yoozes a cassette player now.", "focus": 3, "reveal": [9], "pause": 1.5}
+      - {"emma": "Eleven. pen. pen. Can I borrow your pen?", "focus": 4, "reveal": [10], "pause": 1.5}
+      - {"emma": "Twelve. pencil. pencil. Write your name in pencil.", "focus": 5, "reveal": [11], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "pencil sharpener", "vi": "cái gọt bút chì", "ex": "Has anyone got a pencil sharpener?", "w": ["pencil sharpener", "sharpener"]}
+      - {"n": 14, "answer": "rubber", "vi": "cục tẩy (Mỹ: eraser)", "ex": "Use a rubber to correct your mistakes.", "w": ["rubber"]}
+      - {"n": 15, "answer": "ruler", "vi": "thước kẻ", "ex": "Draw a line with a ruler.", "w": ["ruler"]}
+      - {"n": 16, "answer": "a piece of paper", "vi": "một tờ giấy (không nói a paper)", "ex": "Write your answers on a piece of paper.", "w": ["piece", "paper"]}
+      - {"n": 17, "answer": "folder", "vi": "bìa kẹp tài liệu", "ex": "Keep your worksheets in a folder.", "w": ["folder"]}
+      - {"n": 18, "answer": "notebook", "vi": "quyển vở", "ex": "Write the new words in your notebook.", "w": ["notebook"]}
+    lines:
+      - {"emma": "Thirteen. pencil sharpener. pencil sharpener. Has anyone got a pencil sharpener?", "focus": 0, "pause": 1.5}
+      - {"emma": "Fourteen. rubber. rubber. Use a rubber to correct your mistakes.", "say": "Fourteen. rubber. rubber. Yooz a rubber to correct your mistakes.", "focus": 1, "reveal": [13], "pause": 1.5}
+      - {"emma": "Fifteen. ruler. ruler. Draw a line with a ruler.", "focus": 2, "reveal": [14], "pause": 1.5}
+      - {"emma": "Sixteen. a piece of paper. a piece of paper. Write your answers on a piece of paper.", "focus": 3, "reveal": [15], "pause": 1.5}
+      - {"emma": "Seventeen. folder. folder. Keep your worksheets in a folder.", "focus": 4, "reveal": [16], "pause": 1.5}
+      - {"emma": "Eighteen. notebook. notebook. Write the new words in your notebook.", "focus": 5, "reveal": [17], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "dictionary", "vi": "từ điển", "ex": "Look up the word in your dictionary.", "w": ["dictionary"]}
+      - {"n": 20, "answer": "I've got", "vi": "tôi có", "ex": "I've got a dictionary."}
+      - {"n": 21, "answer": "I haven't got", "vi": "tôi không có", "ex": "Sorry, I haven't got a ruler."}
+      - {"n": 22, "answer": "borrow", "vi": "mượn", "ex": "Can I borrow your dictionary?"}
+      - {"n": 23, "answer": "lend", "vi": "cho mượn", "ex": "Could you lend me a pen?"}
+      - {"n": 24, "answer": "Here you are.", "vi": "Đây này (khi đưa đồ)", "ex": "Sure. Here you are."}
+    lines:
+      - {"emma": "Nineteen. dictionary. dictionary. Look up the word in your dictionary.", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty. I've got. I've got. I've got a dictionary.", "focus": 1, "reveal": [19], "pause": 1.5}
+      - {"emma": "Twenty-one. I haven't got. I haven't got. Sorry, I haven't got a ruler.", "focus": 2, "reveal": [20], "pause": 1.5}
+      - {"emma": "Twenty-two. borrow. borrow. Can I borrow your dictionary?", "focus": 3, "reveal": [21], "pause": 1.5}
+      - {"emma": "Twenty-three. lend. lend. Could you lend me a pen?", "focus": 4, "reveal": [22], "pause": 1.5}
+      - {"emma": "Twenty-four. Here you are.. Here you are.. Sure. Here you are.", "focus": 5, "reveal": [23], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (25–30)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 25, "answer": "classroom", "vi": "lớp học", "ex": "Our classroom is on the second floor."}
+      - {"n": 26, "answer": "whiteboard", "vi": "bảng trắng", "ex": "The teacher wrote the date on the whiteboard."}
+      - {"n": 27, "answer": "screen", "vi": "màn hình", "ex": "Look at the screen, please."}
+      - {"n": 28, "answer": "projector", "vi": "máy chiếu", "ex": "The projector isn't working today."}
+      - {"n": 29, "answer": "laptop", "vi": "máy tính xách tay", "ex": "She takes her laptop to class."}
+      - {"n": 30, "answer": "textbook", "vi": "sách giáo khoa", "ex": "Open your textbook at page ten."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-five. classroom. classroom. Our classroom is on the second floor.", "focus": 0, "pause": 1.5}
+      - {"tom": "Twenty-six. whiteboard. whiteboard. The teacher wrote the date on the whiteboard.", "focus": 1, "reveal": [25], "pause": 1.5}
+      - {"tom": "Twenty-seven. screen. screen. Look at the screen, please.", "focus": 2, "reveal": [26], "pause": 1.5}
+      - {"tom": "Twenty-eight. projector. projector. The projector isn't working today.", "focus": 3, "reveal": [27], "pause": 1.5}
+      - {"tom": "Twenty-nine. laptop. laptop. She takes her laptop to class.", "focus": 4, "reveal": [28], "pause": 1.5}
+      - {"tom": "Thirty. textbook. textbook. Open your textbook at page ten.", "focus": 5, "reveal": [29], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (31–36)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 31, "answer": "worksheet", "vi": "phiếu bài tập", "ex": "Here's a worksheet for you."}
+      - {"n": 32, "answer": "homework", "vi": "bài tập về nhà", "ex": "We have a lot of homework tonight."}
+      - {"n": 33, "answer": "exercise", "vi": "bài tập", "ex": "Do exercise three on page twelve."}
+      - {"n": 34, "answer": "page", "vi": "trang", "ex": "Turn to page forty."}
+      - {"n": 35, "answer": "highlighter", "vi": "bút dạ quang", "ex": "Use a highlighter for the new words."}
+      - {"n": 36, "answer": "scissors", "vi": "cái kéo", "ex": "Can I borrow your scissors?"}
+    lines:
+      - {"tom": "Thirty-one. worksheet. worksheet. Here's a worksheet for you.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-two. homework. homework. We have a lot of homework tonight.", "focus": 1, "reveal": [31], "pause": 1.5}
+      - {"tom": "Thirty-three. exercise. exercise. Do exercise three on page twelve.", "focus": 2, "reveal": [32], "pause": 1.5}
+      - {"tom": "Thirty-four. page. page. Turn to page forty.", "focus": 3, "reveal": [33], "pause": 1.5}
+      - {"tom": "Thirty-five. highlighter. highlighter. Use a highlighter for the new words.", "say": "Thirty-five. highlighter. highlighter. Yooz a highlighter for the new words.", "focus": 4, "reveal": [34], "pause": 1.5}
+      - {"tom": "Thirty-six. scissors. scissors. Can I borrow your scissors?", "focus": 5, "reveal": [35], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (37–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "glue", "vi": "keo dán", "ex": "Stick the picture in with glue."}
+      - {"n": 38, "answer": "stapler", "vi": "cái dập ghim", "ex": "There's a stapler on the teacher's desk."}
+      - {"n": 39, "answer": "calculator", "vi": "máy tính bỏ túi", "ex": "You can't use a calculator in the test."}
+      - {"n": 40, "answer": "shelf", "vi": "giá sách", "ex": "The dictionaries are on the shelf."}
+      - {"n": 41, "answer": "bin", "vi": "thùng rác", "ex": "Put the old paper in the bin."}
+      - {"n": 42, "answer": "cupboard", "vi": "tủ", "ex": "The board pens are in the cupboard."}
+    lines:
+      - {"tom": "Thirty-seven. glue. glue. Stick the picture in with glue.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-eight. stapler. stapler. There's a stapler on the teacher's desk.", "focus": 1, "reveal": [37], "pause": 1.5}
+      - {"tom": "Thirty-nine. calculator. calculator. You can't use a calculator in the test.", "say": "Thirty-nine. calculator. calculator. You can't yooz a calculator in the test.", "focus": 2, "reveal": [38], "pause": 1.5}
+      - {"tom": "Forty. shelf. shelf. The dictionaries are on the shelf.", "focus": 3, "reveal": [39], "pause": 1.5}
+      - {"tom": "Forty-one. bin. bin. Put the old paper in the bin.", "focus": 4, "reveal": [40], "pause": 1.5}
+      - {"tom": "Forty-two. cupboard. cupboard. The board pens are in the cupboard.", "focus": 5, "reveal": [41], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "break", "vi": "giờ giải lao", "ex": "We have a ten-minute break at ten o'clock."}
+      - {"n": 44, "answer": "headphones", "vi": "tai nghe", "ex": "Put on your headphones for the listening."}
+      - {"n": 45, "answer": "eraser", "vi": "cục tẩy (Anh – Mỹ)", "ex": "In American English, a rubber is an eraser."}
+      - {"n": 46, "answer": "pencil case", "vi": "hộp bút", "ex": "My pencil case is in my bag."}
+      - {"n": 47, "answer": "mistake", "vi": "lỗi sai", "ex": "Don't worry about small mistakes."}
+    lines:
+      - {"tom": "Forty-three. break. break. We have a ten-minute break at ten o'clock.", "focus": 0, "pause": 1.5}
+      - {"tom": "Forty-four. headphones. headphones. Put on your headphones for the listening.", "focus": 1, "reveal": [43], "pause": 1.5}
+      - {"tom": "Forty-five. eraser. eraser. In American English, a rubber is an eraser.", "focus": 2, "reveal": [44], "pause": 1.5}
+      - {"tom": "Forty-six. pencil case. pencil case. My pencil case is in my bag.", "focus": 3, "reveal": [45], "pause": 1.5}
+      - {"tom": "Forty-seven. mistake. mistake. Don't worry about small mistakes.", "focus": 4, "reveal": [46], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [47], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 48, "answer": "Open your books at page twenty.", "vi": "Mở sách trang hai mươi."}
+      - {"n": 49, "answer": "Work with a partner.", "vi": "Làm việc theo cặp."}
+      - {"n": 50, "answer": "Can I borrow your pen?", "vi": "Mình mượn bút của bạn được không?"}
+      - {"n": 51, "answer": "Sure. Here you are.", "vi": "Được chứ. Đây này."}
+      - {"n": 52, "answer": "Could you lend me a ruler?", "vi": "Bạn cho mình mượn thước được không?"}
+      - {"n": 53, "answer": "Sorry, I haven't got one.", "vi": "Xin lỗi, mình không có."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-eight. Open your books at page twenty. Open your books at page twenty.", "focus": 0, "pause": 2.0}
+      - {"emma": "Forty-nine. Work with a partner. Work with a partner.", "focus": 1, "reveal": [48], "pause": 2.0}
+      - {"tom": "Fifty. Can I borrow your pen? Can I borrow your pen?", "focus": 2, "reveal": [49], "pause": 2.0}
+      - {"emma": "Fifty-one. Sure. Here you are. Sure. Here you are.", "focus": 3, "reveal": [50], "pause": 2.0}
+      - {"tom": "Fifty-two. Could you lend me a ruler? Could you lend me a ruler?", "focus": 4, "reveal": [51], "pause": 2.0}
+      - {"emma": "Fifty-three. Sorry, I haven't got one. Sorry, I haven't got one.", "focus": 5, "reveal": [52], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "Have you got a rubber?", "vi": "Bạn có cục tẩy không?"}
+      - {"n": 55, "answer": "Yes, I have. Here you are.", "vi": "Có. Đây này."}
+      - {"n": 56, "answer": "Sorry I'm late. Can I come in?", "vi": "Xin lỗi em đến muộn. Em vào được không ạ?"}
+      - {"n": 57, "answer": "Yes, come in and sit down.", "vi": "Được, vào ngồi đi."}
+      - {"n": 58, "answer": "What page are we on?", "vi": "Mình đang ở trang nào?"}
+      - {"n": 59, "answer": "We're on page thirty-two.", "vi": "Trang ba mươi hai."}
+    lines:
+      - {"emma": "Fifty-four. Have you got a rubber? Have you got a rubber?", "focus": 0, "pause": 2.0}
+      - {"tom": "Fifty-five. Yes, I have. Here you are. Yes, I have. Here you are.", "focus": 1, "reveal": [54], "pause": 2.0}
+      - {"tom": "Fifty-six. Sorry I'm late. Can I come in? Sorry I'm late. Can I come in?", "focus": 2, "reveal": [55], "pause": 2.0}
+      - {"emma": "Fifty-seven. Yes, come in and sit down. Yes, come in and sit down.", "focus": 3, "reveal": [56], "pause": 2.0}
+      - {"tom": "Fifty-eight. What page are we on? What page are we on?", "focus": 4, "reveal": [57], "pause": 2.0}
+      - {"emma": "Fifty-nine. We're on page thirty-two. We're on page thirty-two.", "focus": 5, "reveal": [58], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "Could you speak more slowly, please?", "vi": "Cô nói chậm hơn được không ạ?"}
+      - {"n": 61, "answer": "Can you write it on the board, please?", "vi": "Cô viết lên bảng được không ạ?"}
+      - {"n": 62, "answer": "Listen and repeat.", "vi": "Nghe và nhắc lại."}
+      - {"n": 63, "answer": "Close your books, please.", "vi": "Gấp sách lại nào."}
+      - {"n": 64, "answer": "Check your answers with a partner.", "vi": "Kiểm tra đáp án với bạn bên cạnh."}
+      - {"n": 65, "answer": "Have you finished?", "vi": "Bạn làm xong chưa?"}
+    lines:
+      - {"tom": "Sixty. Could you speak more slowly, please? Could you speak more slowly, please?", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-one. Can you write it on the board, please? Can you write it on the board, please?", "focus": 1, "reveal": [60], "pause": 2.0}
+      - {"emma": "Sixty-two. Listen and repeat. Listen and repeat.", "focus": 2, "reveal": [61], "pause": 2.0}
+      - {"emma": "Sixty-three. Close your books, please. Close your books, please.", "say": "Sixty-three. Cloze your books, please. Cloze your books, please.", "focus": 3, "reveal": [62], "pause": 2.0}
+      - {"emma": "Sixty-four. Check your answers with a partner. Check your answers with a partner.", "focus": 4, "reveal": [63], "pause": 2.0}
+      - {"emma": "Sixty-five. Have you finished? Have you finished?", "focus": 5, "reveal": [64], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "Not yet. I need two more minutes.", "vi": "Chưa. Em cần thêm hai phút."}
+      - {"n": 67, "answer": "Is this right?", "vi": "Thế này đúng chưa ạ?"}
+      - {"n": 68, "answer": "Yes, well done!", "vi": "Đúng rồi, giỏi lắm!"}
+      - {"n": 69, "answer": "Put your hand up if you know the answer.", "vi": "Ai biết đáp án thì giơ tay."}
+      - {"n": 70, "answer": "Please turn off your phones.", "vi": "Vui lòng tắt điện thoại."}
+      - {"n": 71, "answer": "Hand in your homework on Friday.", "vi": "Nộp bài tập về nhà vào thứ Sáu."}
+    lines:
+      - {"tom": "Sixty-six. Not yet. I need two more minutes. Not yet. I need two more minutes.", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-seven. Is this right? Is this right?", "focus": 1, "reveal": [66], "pause": 2.0}
+      - {"emma": "Sixty-eight. Yes, well done! Yes, well done!", "focus": 2, "reveal": [67], "pause": 2.0}
+      - {"emma": "Sixty-nine. Put your hand up if you know the answer. Put your hand up if you know the answer.", "focus": 3, "reveal": [68], "pause": 2.0}
+      - {"emma": "Seventy. Please turn off your phones. Please turn off your phones.", "focus": 4, "reveal": [69], "pause": 2.0}
+      - {"emma": "Seventy-one. Hand in your homework on Friday. Hand in your homework on Friday.", "focus": 5, "reveal": [70], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Can I go to the toilet, please?", "vi": "Em đi vệ sinh được không ạ?"}
+      - {"n": 73, "answer": "Can I borrow a piece of paper?", "vi": "Em mượn một tờ giấy được không ạ?"}
+      - {"n": 74, "answer": "Of course. How many do you need?", "vi": "Được chứ. Em cần mấy tờ?"}
+      - {"n": 75, "answer": "Don't forget your homework.", "vi": "Đừng quên bài tập về nhà nhé."}
+    lines:
+      - {"tom": "Seventy-two. Can I go to the toilet, please? Can I go to the toilet, please?", "focus": 0, "pause": 2.0}
+      - {"tom": "Seventy-three. Can I borrow a piece of paper? Can I borrow a piece of paper?", "focus": 1, "reveal": [72], "pause": 2.0}
+      - {"emma": "Seventy-four. Of course. How many do you need? Of course. How many do you need?", "focus": 2, "reveal": [73], "pause": 2.0}
+      - {"emma": "Seventy-five. Don't forget your homework. Don't forget your homework.", "focus": 3, "reveal": [74], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [75], "pause": 2.0}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 6.", "say": "Well done! See you in Unit six.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 6."}
+

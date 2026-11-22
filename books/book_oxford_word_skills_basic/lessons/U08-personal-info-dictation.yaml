@@ -1,0 +1,301 @@
+# Video nghe – viết (dictation) Unit 8 · Personal information — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U08-personal-info-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
+# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
+# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U08 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U08-personal-info-dictation
+activity: U08-words
+title: "Unit 8 · Personal information"
+subtitle: "Dictation · listen and write: asking about you"
+title_vi: "Nghe – viết 10 phút: thông tin cá nhân — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PEOPLE · UNIT 8"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 8: Personal information. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit eight: Personal information. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 8: thông tin cá nhân. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 21 words from the book. You hear each word twice, then a sentence. Then 24 more useful words, and 32 useful sentences for conversation.", "say": "There are three parts. First, twenty-one words from the book. You hear each word twice, then a sentence. Then twenty-four more useful words, and thirty-two useful sentences for conversation.", "vi": "Ba phần: 21 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 24 từ thêm, 32 câu giao tiếp."}
+      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "information", "vi": "thông tin", "ex": "Please check your personal information.", "w": ["information"]}
+      - {"n": 2, "answer": "name", "vi": "tên", "ex": "What's your name?", "w": ["name"]}
+      - {"n": 3, "answer": "first name", "vi": "tên (gọi)", "ex": "My first name is Emma.", "w": ["first", "name"]}
+      - {"n": 4, "answer": "family name", "vi": "họ", "ex": "My family name is Clarke.", "w": ["family name"]}
+      - {"n": 5, "answer": "address", "vi": "địa chỉ", "ex": "Could I have your address?", "w": ["address"]}
+      - {"n": 6, "answer": "postcode", "vi": "mã bưu điện", "ex": "What's your postcode?", "w": ["postcode"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. information. information. Please check your personal information.", "focus": 0, "pause": 1.5}
+      - {"emma": "Two. name. name. What's your name?", "focus": 1, "reveal": [1], "pause": 1.5}
+      - {"emma": "Three. first name. first name. My first name is Emma.", "focus": 2, "reveal": [2], "pause": 1.5}
+      - {"emma": "Four. family name. family name. My family name is Clarke.", "focus": 3, "reveal": [3], "pause": 1.5}
+      - {"emma": "Five. address. address. Could I have your address?", "focus": 4, "reveal": [4], "pause": 1.5}
+      - {"emma": "Six. postcode. postcode. What's your postcode?", "focus": 5, "reveal": [5], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "come from", "vi": "đến từ", "ex": "Where do you come from?", "w": ["come from"]}
+      - {"n": 8, "answer": "whereabouts", "vi": "chỗ nào (hỏi rõ hơn)", "ex": "Whereabouts in Vietnam are you from?", "w": ["whereabouts"]}
+      - {"n": 9, "answer": "exactly", "vi": "chính xác", "ex": "Where exactly do you live?", "w": ["exactly"]}
+      - {"n": 10, "answer": "job", "vi": "công việc", "ex": "What's your job?", "w": ["job"]}
+      - {"n": 11, "answer": "What do you do?", "vi": "Bạn làm nghề gì?", "ex": "What do you do? I'm an engineer.", "w": ["do"]}
+      - {"n": 12, "answer": "married", "vi": "đã kết hôn", "ex": "Are you married?", "w": ["married"]}
+    lines:
+      - {"emma": "Seven. come from. come from. Where do you come from?", "focus": 0, "pause": 1.5}
+      - {"emma": "Eight. whereabouts. whereabouts. Whereabouts in Vietnam are you from?", "focus": 1, "reveal": [7], "pause": 1.5}
+      - {"emma": "Nine. exactly. exactly. Where exactly do you live?", "say": "Nine. exactly. exactly. Where exactly do you liv?", "focus": 2, "reveal": [8], "pause": 1.5}
+      - {"emma": "Ten. job. job. What's your job?", "focus": 3, "reveal": [9], "pause": 1.5}
+      - {"emma": "Eleven. What do you do?. What do you do?. What do you do? I'm an engineer.", "focus": 4, "reveal": [10], "pause": 1.5}
+      - {"emma": "Twelve. married. married. Are you married?", "focus": 5, "reveal": [11], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "single", "vi": "độc thân", "ex": "No, I'm still single.", "w": ["single"]}
+      - {"n": 14, "answer": "children", "vi": "con cái", "ex": "Have you got any children?", "w": ["children"]}
+      - {"n": 15, "answer": "how old", "vi": "bao nhiêu tuổi", "ex": "How old are your children?", "w": ["how old", "old"]}
+      - {"n": 16, "answer": "engineer", "vi": "kỹ sư", "ex": "Her husband is an engineer."}
+      - {"n": 17, "answer": "nurse", "vi": "y tá", "ex": "My sister is a nurse."}
+      - {"n": 18, "answer": "full name", "vi": "họ tên đầy đủ", "ex": "Can you tell me your full name, please?"}
+    lines:
+      - {"emma": "Thirteen. single. single. No, I'm still single.", "focus": 0, "pause": 1.5}
+      - {"emma": "Fourteen. children. children. Have you got any children?", "focus": 1, "reveal": [13], "pause": 1.5}
+      - {"emma": "Fifteen. how old. how old. How old are your children?", "focus": 2, "reveal": [14], "pause": 1.5}
+      - {"emma": "Sixteen. engineer. engineer. Her husband is an engineer.", "focus": 3, "reveal": [15], "pause": 1.5}
+      - {"emma": "Seventeen. nurse. nurse. My sister is a nurse.", "say": "Seventeen. nurse. nurse. His sister is a nurse.", "focus": 4, "reveal": [16], "pause": 1.5}
+      - {"emma": "Eighteen. full name. full name. Can you tell me your full name, please?", "focus": 5, "reveal": [17], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–21)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "identification", "vi": "giấy tờ tùy thân", "ex": "Can I see your identification, please?"}
+      - {"n": 20, "answer": "reception desk", "vi": "quầy lễ tân", "ex": "Please ask at the reception desk."}
+      - {"n": 21, "answer": "student", "vi": "sinh viên, học viên", "ex": "Are you a student?"}
+    lines:
+      - {"emma": "Nineteen. identification. identification. Can I see your identification, please?", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty. reception desk. reception desk. Please ask at the reception desk.", "focus": 1, "reveal": [19], "pause": 1.5}
+      - {"emma": "Twenty-one. student. student. Are you a student?", "focus": 2, "reveal": [20], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [21], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (22–27)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 22, "answer": "home town", "vi": "quê nhà", "ex": "Her home town is very small."}
+      - {"n": 23, "answer": "live", "vi": "sống", "ex": "Where do you live?"}
+      - {"n": 24, "answer": "flat", "vi": "căn hộ (Mỹ: apartment)", "ex": "They live in a flat in the city centre."}
+      - {"n": 25, "answer": "street", "vi": "đường phố", "ex": "What's the name of your street?"}
+      - {"n": 26, "answer": "city", "vi": "thành phố", "ex": "She lives in a big city."}
+      - {"n": 27, "answer": "village", "vi": "làng", "ex": "His grandparents live in a village."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-two. home town. home town. Her home town is very small.", "focus": 0, "pause": 1.5}
+      - {"tom": "Twenty-three. live. live. Where do you live?", "say": "Twenty-three. liv. liv. Where do you liv?", "focus": 1, "reveal": [22], "pause": 1.5}
+      - {"tom": "Twenty-four. flat. flat. They live in a flat in the city centre.", "say": "Twenty-four. flat. flat. They liv in a flat in the city centre.", "focus": 2, "reveal": [23], "pause": 1.5}
+      - {"tom": "Twenty-five. street. street. What's the name of your street?", "focus": 3, "reveal": [24], "pause": 1.5}
+      - {"tom": "Twenty-six. city. city. She lives in a big city.", "say": "Twenty-six. city. city. She livz in a big city.", "focus": 4, "reveal": [25], "pause": 1.5}
+      - {"tom": "Twenty-seven. village. village. His grandparents live in a village.", "say": "Twenty-seven. village. village. His grandparents liv in a village.", "focus": 5, "reveal": [26], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [27], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (28–33)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 28, "answer": "neighbour", "vi": "hàng xóm", "ex": "Our neighbours are very friendly."}
+      - {"n": 29, "answer": "nickname", "vi": "biệt danh", "ex": "His nickname is Tom."}
+      - {"n": 30, "answer": "middle name", "vi": "tên đệm", "ex": "Minh is his middle name."}
+      - {"n": 31, "answer": "ID card", "vi": "chứng minh thư, thẻ căn cước", "ex": "Bring your ID card to the exam."}
+      - {"n": 32, "answer": "passport", "vi": "hộ chiếu", "ex": "Can I see your passport, please?"}
+      - {"n": 33, "answer": "retired", "vi": "đã nghỉ hưu", "ex": "Her grandfather is retired."}
+    lines:
+      - {"tom": "Twenty-eight. neighbour. neighbour. Our neighbours are very friendly.", "focus": 0, "pause": 1.5}
+      - {"tom": "Twenty-nine. nickname. nickname. His nickname is Tom.", "focus": 1, "reveal": [28], "pause": 1.5}
+      - {"tom": "Thirty. middle name. middle name. Minh is his middle name.", "focus": 2, "reveal": [29], "pause": 1.5}
+      - {"tom": "Thirty-one. ID card. ID card. Bring your ID card to the exam.", "say": "Thirty-one. ID card. ID card. Bring your I D card to the exam.", "focus": 3, "reveal": [30], "pause": 1.5}
+      - {"tom": "Thirty-two. passport. passport. Can I see your passport, please?", "focus": 4, "reveal": [31], "pause": 1.5}
+      - {"tom": "Thirty-three. retired. retired. Her grandfather is retired.", "focus": 5, "reveal": [32], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (34–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 34, "answer": "part-time job", "vi": "việc làm thêm", "ex": "He has a part-time job in a café."}
+      - {"n": 35, "answer": "company", "vi": "công ty", "ex": "She works for a big company."}
+      - {"n": 36, "answer": "colleague", "vi": "đồng nghiệp", "ex": "My colleagues are very kind."}
+      - {"n": 37, "answer": "classmate", "vi": "bạn cùng lớp", "ex": "He's my classmate."}
+      - {"n": 38, "answer": "hobby", "vi": "sở thích", "ex": "What are your hobbies?"}
+      - {"n": 39, "answer": "doctor", "vi": "bác sĩ", "ex": "Her mother is a doctor."}
+    lines:
+      - {"tom": "Thirty-four. part-time job. part-time job. He has a part-time job in a café.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-five. company. company. She works for a big company.", "focus": 1, "reveal": [34], "pause": 1.5}
+      - {"tom": "Thirty-six. colleague. colleague. My colleagues are very kind.", "focus": 2, "reveal": [35], "pause": 1.5}
+      - {"tom": "Thirty-seven. classmate. classmate. He's my classmate.", "focus": 3, "reveal": [36], "pause": 1.5}
+      - {"tom": "Thirty-eight. hobby. hobby. What are your hobbies?", "focus": 4, "reveal": [37], "pause": 1.5}
+      - {"tom": "Thirty-nine. doctor. doctor. Her mother is a doctor.", "focus": 5, "reveal": [38], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "teacher", "vi": "giáo viên", "ex": "His father is a teacher."}
+      - {"n": 41, "answer": "shop assistant", "vi": "nhân viên bán hàng", "ex": "She's a shop assistant."}
+      - {"n": 42, "answer": "waiter", "vi": "người phục vụ bàn", "ex": "He's a waiter in a café."}
+      - {"n": 43, "answer": "receptionist", "vi": "lễ tân", "ex": "The receptionist gave him a form."}
+      - {"n": 44, "answer": "unemployed", "vi": "thất nghiệp", "ex": "He's unemployed at the moment."}
+      - {"n": 45, "answer": "engaged", "vi": "đã đính hôn", "ex": "They're engaged. The wedding is in June."}
+    lines:
+      - {"tom": "Forty. teacher. teacher. His father is a teacher.", "focus": 0, "pause": 1.5}
+      - {"tom": "Forty-one. shop assistant. shop assistant. She's a shop assistant.", "focus": 1, "reveal": [40], "pause": 1.5}
+      - {"tom": "Forty-two. waiter. waiter. He's a waiter in a café.", "focus": 2, "reveal": [41], "pause": 1.5}
+      - {"tom": "Forty-three. receptionist. receptionist. The receptionist gave him a form.", "focus": 3, "reveal": [42], "pause": 1.5}
+      - {"tom": "Forty-four. unemployed. unemployed. He's unemployed at the moment.", "focus": 4, "reveal": [43], "pause": 1.5}
+      - {"tom": "Forty-five. engaged. engaged. They're engaged. The wedding is in June.", "focus": 5, "reveal": [44], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 46, "answer": "Can you tell me your full name, please?", "vi": "Bạn cho biết họ tên đầy đủ được không?"}
+      - {"n": 47, "answer": "My full name is Tran Minh Tuan.", "vi": "Họ tên đầy đủ của mình là Trần Minh Tuấn."}
+      - {"n": 48, "answer": "What can I call you?", "vi": "Mình gọi bạn là gì?"}
+      - {"n": 49, "answer": "Please call me Tom.", "vi": "Cứ gọi mình là Tom."}
+      - {"n": 50, "answer": "Where are you from?", "vi": "Bạn từ đâu đến?"}
+      - {"n": 51, "answer": "I'm from Da Lat, in Vietnam.", "vi": "Mình ở Đà Lạt, Việt Nam."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-six. Can you tell me your full name, please? Can you tell me your full name, please?", "focus": 0, "pause": 2.0}
+      - {"tom": "Forty-seven. My full name is Tran Minh Tuan. My full name is Tran Minh Tuan.", "say": "Forty-seven. My full name is Chan Minh Twan. My full name is Chan Minh Twan.", "focus": 1, "reveal": [46], "pause": 2.0}
+      - {"emma": "Forty-eight. What can I call you? What can I call you?", "focus": 2, "reveal": [47], "pause": 2.0}
+      - {"tom": "Forty-nine. Please call me Tom. Please call me Tom.", "focus": 3, "reveal": [48], "pause": 2.0}
+      - {"emma": "Fifty. Where are you from? Where are you from?", "focus": 4, "reveal": [49], "pause": 2.0}
+      - {"tom": "Fifty-one. I'm from Da Lat, in Vietnam. I'm from Da Lat, in Vietnam.", "say": "Fifty-one. I'm from Dah Lot, in Vietnam. I'm from Dah Lot, in Vietnam.", "focus": 5, "reveal": [50], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 52, "answer": "Whereabouts in England are you from?", "vi": "Bạn ở chỗ nào của nước Anh?"}
+      - {"n": 53, "answer": "A small town in the south.", "vi": "Một thị trấn nhỏ ở miền nam."}
+      - {"n": 54, "answer": "Do you work, or are you a student?", "vi": "Bạn đi làm hay đang đi học?"}
+      - {"n": 55, "answer": "I'm a student. I study business.", "vi": "Mình là sinh viên, học ngành kinh doanh."}
+      - {"n": 56, "answer": "What do you do?", "vi": "Bạn làm nghề gì?"}
+      - {"n": 57, "answer": "I'm an English teacher.", "vi": "Mình là giáo viên tiếng Anh."}
+    lines:
+      - {"tom": "Fifty-two. Whereabouts in England are you from? Whereabouts in England are you from?", "focus": 0, "pause": 2.0}
+      - {"emma": "Fifty-three. A small town in the south. A small town in the south.", "focus": 1, "reveal": [52], "pause": 2.0}
+      - {"emma": "Fifty-four. Do you work, or are you a student? Do you work, or are you a student?", "focus": 2, "reveal": [53], "pause": 2.0}
+      - {"tom": "Fifty-five. I'm a student. I study business. I'm a student. I study business.", "focus": 3, "reveal": [54], "pause": 2.0}
+      - {"tom": "Fifty-six. What do you do? What do you do?", "focus": 4, "reveal": [55], "pause": 2.0}
+      - {"emma": "Fifty-seven. I'm an English teacher. I'm an English teacher.", "focus": 5, "reveal": [56], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 58, "answer": "Are you married?", "vi": "Bạn có gia đình chưa?"}
+      - {"n": 59, "answer": "No, I'm single.", "vi": "Chưa, mình độc thân."}
+      - {"n": 60, "answer": "Have you got any brothers or sisters?", "vi": "Bạn có anh chị em không?"}
+      - {"n": 61, "answer": "Yes, one sister and one brother.", "vi": "Có, một chị và một em trai."}
+      - {"n": 62, "answer": "Could you spell your family name, please?", "vi": "Bạn đánh vần họ của bạn được không?"}
+      - {"n": 63, "answer": "T, R, A, N.", "vi": "T, R, A, N."}
+    lines:
+      - {"tom": "Fifty-eight. Are you married? Are you married?", "focus": 0, "pause": 2.0}
+      - {"emma": "Fifty-nine. No, I'm single. No, I'm single.", "focus": 1, "reveal": [58], "pause": 2.0}
+      - {"emma": "Sixty. Have you got any brothers or sisters? Have you got any brothers or sisters?", "focus": 2, "reveal": [59], "pause": 2.0}
+      - {"tom": "Sixty-one. Yes, one sister and one brother. Yes, one sister and one brother.", "focus": 3, "reveal": [60], "pause": 2.0}
+      - {"emma": "Sixty-two. Could you spell your family name, please? Could you spell your family name, please?", "focus": 4, "reveal": [61], "pause": 2.0}
+      - {"tom": "Sixty-three. T, R, A, N. T, R, A, N.", "say": "Sixty-three. tee, ar, eigh, en. tee, ar, eigh, en.", "focus": 5, "reveal": [62], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 64, "answer": "Could I have your phone number?", "vi": "Cho mình xin số điện thoại nhé?"}
+      - {"n": 65, "answer": "Sure. Here's my card.", "vi": "Được. Danh thiếp của mình đây."}
+      - {"n": 66, "answer": "Can I see your identification, please?", "vi": "Cho tôi xem giấy tờ tùy thân được không?"}
+      - {"n": 67, "answer": "Yes. Here you are.", "vi": "Vâng. Đây ạ."}
+      - {"n": 68, "answer": "Nice to meet you.", "vi": "Rất vui được gặp bạn."}
+      - {"n": 69, "answer": "Nice to meet you too.", "vi": "Mình cũng rất vui được gặp bạn."}
+    lines:
+      - {"tom": "Sixty-four. Could I have your phone number? Could I have your phone number?", "focus": 0, "pause": 2.0}
+      - {"emma": "Sixty-five. Sure. Here's my card. Sure. Here's my card.", "focus": 1, "reveal": [64], "pause": 2.0}
+      - {"emma": "Sixty-six. Can I see your identification, please? Can I see your identification, please?", "focus": 2, "reveal": [65], "pause": 2.0}
+      - {"tom": "Sixty-seven. Yes. Here you are. Yes. Here you are.", "focus": 3, "reveal": [66], "pause": 2.0}
+      - {"emma": "Sixty-eight. Nice to meet you. Nice to meet you.", "focus": 4, "reveal": [67], "pause": 2.0}
+      - {"tom": "Sixty-nine. Nice to meet you too. Nice to meet you too.", "focus": 5, "reveal": [68], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (70–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 70, "answer": "How old are you?", "vi": "Bạn bao nhiêu tuổi?"}
+      - {"n": 71, "answer": "I'm twenty-eight.", "vi": "Mình hai mươi tám tuổi."}
+      - {"n": 72, "answer": "Where do your parents live?", "vi": "Bố mẹ bạn sống ở đâu?"}
+      - {"n": 73, "answer": "They live in Da Lat.", "vi": "Họ sống ở Đà Lạt."}
+      - {"n": 74, "answer": "How old is your brother?", "vi": "Em trai bạn bao nhiêu tuổi?"}
+      - {"n": 75, "answer": "He's fifteen. He loves football.", "vi": "Nó mười lăm tuổi, mê bóng đá."}
+    lines:
+      - {"tom": "Seventy. How old are you? How old are you?", "focus": 0, "pause": 2.0}
+      - {"emma": "Seventy-one. I'm twenty-eight. I'm twenty-eight.", "focus": 1, "reveal": [70], "pause": 2.0}
+      - {"emma": "Seventy-two. Where do your parents live? Where do your parents live?", "say": "Seventy-two. Where do your parents liv? Where do your parents liv?", "focus": 2, "reveal": [71], "pause": 2.0}
+      - {"tom": "Seventy-three. They live in Da Lat. They live in Da Lat.", "say": "Seventy-three. They liv in Dah Lot. They liv in Dah Lot.", "focus": 3, "reveal": [72], "pause": 2.0}
+      - {"emma": "Seventy-four. How old is your brother? How old is your brother?", "focus": 4, "reveal": [73], "pause": 2.0}
+      - {"tom": "Seventy-five. He's fifteen. He loves football. He's fifteen. He loves football.", "say": "Seventy-five. He's fif-teen. He loves football. He's fif-teen. He loves football.", "focus": 5, "reveal": [74], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [75], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (76–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 76, "answer": "What does your sister do?", "vi": "Chị bạn làm nghề gì?"}
+      - {"n": 77, "answer": "She's a nurse in Hanoi.", "vi": "Chị ấy là y tá ở Hà Nội."}
+    lines:
+      - {"emma": "Seventy-six. What does your sister do? What does your sister do?", "focus": 0, "pause": 2.0}
+      - {"tom": "Seventy-seven. She's a nurse in Hanoi. She's a nurse in Hanoi.", "say": "Seventy-seven. She's a nurse in Ha Noi. She's a nurse in Ha Noi.", "focus": 1, "reveal": [76], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 1, "reveal": [77], "pause": 2.0}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 9.", "say": "Well done! See you in Unit nine.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 9."}
+

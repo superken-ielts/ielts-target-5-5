@@ -1,0 +1,292 @@
+# Video nghe – viết (dictation) Unit 7 · Questions about language — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U07-questions-language-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
+# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
+# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U07 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U07-questions-language-dictation
+activity: U07-words
+title: "Unit 7 · Questions about language"
+subtitle: "Dictation · listen and write: asking about words"
+title_vi: "Nghe – viết 10 phút: hỏi về từ ngữ — từ trong sách, từ thêm, câu giao tiếp"
+tag: "BASIC ENGLISH · UNIT 7"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 7: Questions about language. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit seven: Questions about language. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 7: hỏi về từ ngữ. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 23 words from the book. You hear each word twice, then a sentence. Then 24 more useful words, and 29 useful sentences for conversation.", "say": "There are three parts. First, twenty-three words from the book. You hear each word twice, then a sentence. Then twenty-four more useful words, and twenty-nine useful sentences for conversation.", "vi": "Ba phần: 23 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 24 từ thêm, 29 câu giao tiếp."}
+      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "mean", "vi": "có nghĩa là", "ex": "What does 'tiny' mean?", "w": ["mean"]}
+      - {"n": 2, "answer": "meaning", "vi": "nghĩa", "ex": "What's the meaning of this word?", "w": ["meaning"]}
+      - {"n": 3, "answer": "say", "vi": "nói", "ex": "How do you say 'cái ô' in English?", "w": ["say"]}
+      - {"n": 4, "answer": "called", "vi": "được gọi là", "ex": "What's this called in English?", "w": ["called"]}
+      - {"n": 5, "answer": "pronounce", "vi": "phát âm", "ex": "How do you pronounce 'tomato'?", "w": ["pronounce"]}
+      - {"n": 6, "answer": "spell", "vi": "đánh vần", "ex": "How do you spell 'necessary'?", "w": ["spell"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. mean. mean. What does 'tiny' mean?", "focus": 0, "pause": 1.5}
+      - {"emma": "Two. meaning. meaning. What's the meaning of this word?", "focus": 1, "reveal": [1], "pause": 1.5}
+      - {"emma": "Three. say. say. How do you say 'cái ô' in English?", "say": "Three. say. say. How do you say kai oh in English?", "focus": 2, "reveal": [2], "pause": 1.5}
+      - {"emma": "Four. called. called. What's this called in English?", "focus": 3, "reveal": [3], "pause": 1.5}
+      - {"emma": "Five. pronounce. pronounce. How do you pronounce 'tomato'?", "focus": 4, "reveal": [4], "pause": 1.5}
+      - {"emma": "Six. spell. spell. How do you spell 'necessary'?", "focus": 5, "reveal": [5], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "difference", "vi": "sự khác nhau", "ex": "What's the difference between 'bye' and 'goodbye'?", "w": ["difference"]}
+      - {"n": 8, "answer": "between", "vi": "giữa", "ex": "There's a big difference between the two words.", "w": ["between"]}
+      - {"n": 9, "answer": "opposite", "vi": "từ trái nghĩa", "ex": "What's the opposite of 'interesting'?", "w": ["opposite"]}
+      - {"n": 10, "answer": "explain", "vi": "giải thích", "ex": "Could you explain 'out of order'?", "w": ["explain"]}
+      - {"n": 11, "answer": "could", "vi": "có thể (lời đề nghị lịch sự)", "ex": "Could you speak more slowly, please?", "w": ["could"]}
+      - {"n": 12, "answer": "repeat", "vi": "nhắc lại", "ex": "Could you repeat the question, please?"}
+    lines:
+      - {"emma": "Seven. difference. difference. What's the difference between 'bye' and 'goodbye'?", "focus": 0, "pause": 1.5}
+      - {"emma": "Eight. between. between. There's a big difference between the two words.", "focus": 1, "reveal": [7], "pause": 1.5}
+      - {"emma": "Nine. opposite. opposite. What's the opposite of 'interesting'?", "focus": 2, "reveal": [8], "pause": 1.5}
+      - {"emma": "Ten. explain. explain. Could you explain 'out of order'?", "focus": 3, "reveal": [9], "pause": 1.5}
+      - {"emma": "Eleven. could. could. Could you speak more slowly, please?", "focus": 4, "reveal": [10], "pause": 1.5}
+      - {"emma": "Twelve. repeat. repeat. Could you repeat the question, please?", "focus": 5, "reveal": [11], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "right", "vi": "đúng", "ex": "Is that right?", "w": ["right"]}
+      - {"n": 14, "answer": "correct", "vi": "sửa (lỗi)", "ex": "Correct the mistakes in the sentences.", "w": ["correct"]}
+      - {"n": 15, "answer": "wrong", "vi": "sai", "ex": "No, that's wrong.", "w": ["wrong"]}
+      - {"n": 16, "answer": "know", "vi": "biết", "ex": "Sorry, I don't know the answer.", "w": ["know"]}
+      - {"n": 17, "answer": "remember", "vi": "nhớ", "ex": "I can't remember the word.", "w": ["remember"]}
+      - {"n": 18, "answer": "sure", "vi": "chắc chắn", "ex": "I'm not sure.", "w": ["sure"]}
+    lines:
+      - {"emma": "Thirteen. right. right. Is that right?", "focus": 0, "pause": 1.5}
+      - {"emma": "Fourteen. correct. correct. Correct the mistakes in the sentences.", "focus": 1, "reveal": [13], "pause": 1.5}
+      - {"emma": "Fifteen. wrong. wrong. No, that's wrong.", "focus": 2, "reveal": [14], "pause": 1.5}
+      - {"emma": "Sixteen. know. know. Sorry, I don't know the answer.", "focus": 3, "reveal": [15], "pause": 1.5}
+      - {"emma": "Seventeen. remember. remember. I can't remember the word.", "focus": 4, "reveal": [16], "pause": 1.5}
+      - {"emma": "Eighteen. sure. sure. I'm not sure.", "focus": 5, "reveal": [17], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–23)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "double", "vi": "đôi (hai chữ giống nhau)", "ex": "'Necessary' has a double 's'.", "w": ["double"]}
+      - {"n": 20, "answer": "article", "vi": "mạo từ", "ex": "Don't forget the article before the noun.", "w": ["article"]}
+      - {"n": 21, "answer": "pronunciation", "vi": "cách phát âm", "ex": "Her pronunciation is very good."}
+      - {"n": 22, "answer": "spelling", "vi": "chính tả", "ex": "Check your spelling."}
+      - {"n": 23, "answer": "alphabet", "vi": "bảng chữ cái", "ex": "There are twenty-six letters in the English alphabet."}
+    lines:
+      - {"emma": "Nineteen. double. double. 'Necessary' has a double 's'.", "say": "Nineteen. double. double. Necessary has a double ess.", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty. article. article. Don't forget the article before the noun.", "focus": 1, "reveal": [19], "pause": 1.5}
+      - {"emma": "Twenty-one. pronunciation. pronunciation. Her pronunciation is very good.", "focus": 2, "reveal": [20], "pause": 1.5}
+      - {"emma": "Twenty-two. spelling. spelling. Check your spelling.", "focus": 3, "reveal": [21], "pause": 1.5}
+      - {"emma": "Twenty-three. alphabet. alphabet. There are twenty-six letters in the English alphabet.", "focus": 4, "reveal": [22], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [23], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (24–29)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 24, "answer": "letter", "vi": "chữ cái", "ex": "Which letter comes after G?"}
+      - {"n": 25, "answer": "look up", "vi": "tra (từ điển)", "ex": "Look up the new words at home."}
+      - {"n": 26, "answer": "translate", "vi": "dịch", "ex": "Can you translate this sentence?"}
+      - {"n": 27, "answer": "definition", "vi": "định nghĩa", "ex": "The dictionary gives a short definition."}
+      - {"n": 28, "answer": "similar", "vi": "tương tự", "ex": "These two words are very similar."}
+      - {"n": 29, "answer": "the same as", "vi": "giống như", "ex": "'Big' is the same as 'large'."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-four. letter. letter. Which letter comes after G?", "say": "Twenty-four. letter. letter. Which letter comes after gee?", "focus": 0, "pause": 1.5}
+      - {"tom": "Twenty-five. look up. look up. Look up the new words at home.", "focus": 1, "reveal": [24], "pause": 1.5}
+      - {"tom": "Twenty-six. translate. translate. Can you translate this sentence?", "focus": 2, "reveal": [25], "pause": 1.5}
+      - {"tom": "Twenty-seven. definition. definition. The dictionary gives a short definition.", "focus": 3, "reveal": [26], "pause": 1.5}
+      - {"tom": "Twenty-eight. similar. similar. These two words are very similar.", "focus": 4, "reveal": [27], "pause": 1.5}
+      - {"tom": "Twenty-nine. the same as. the same as. 'Big' is the same as 'large'.", "focus": 5, "reveal": [28], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [29], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (30–35)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 30, "answer": "different from", "vi": "khác với", "ex": "British English is a little different from American English."}
+      - {"n": 31, "answer": "formal", "vi": "trang trọng", "ex": "'Goodbye' is more formal than 'bye'."}
+      - {"n": 32, "answer": "informal", "vi": "thân mật", "ex": "'Hi' is informal."}
+      - {"n": 33, "answer": "silent letter", "vi": "chữ câm", "ex": "The 'k' in 'know' is a silent letter."}
+      - {"n": 34, "answer": "abbreviation", "vi": "chữ viết tắt", "ex": "'UK' is an abbreviation."}
+      - {"n": 35, "answer": "guess", "vi": "đoán", "ex": "Try to guess the meaning."}
+    lines:
+      - {"tom": "Thirty. different from. different from. British English is a little different from American English.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-one. formal. formal. 'Goodbye' is more formal than 'bye'.", "focus": 1, "reveal": [30], "pause": 1.5}
+      - {"tom": "Thirty-two. informal. informal. 'Hi' is informal.", "focus": 2, "reveal": [31], "pause": 1.5}
+      - {"tom": "Thirty-three. silent letter. silent letter. The 'k' in 'know' is a silent letter.", "say": "Thirty-three. silent letter. silent letter. The kay in know is a silent letter.", "focus": 3, "reveal": [32], "pause": 1.5}
+      - {"tom": "Thirty-four. abbreviation. abbreviation. 'UK' is an abbreviation.", "say": "Thirty-four. abbreviation. abbreviation. U K is an abbreviation.", "focus": 4, "reveal": [33], "pause": 1.5}
+      - {"tom": "Thirty-five. guess. guess. Try to guess the meaning.", "focus": 5, "reveal": [34], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (36–41)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 36, "answer": "understand", "vi": "hiểu", "ex": "I don't understand this word."}
+      - {"n": 37, "answer": "hyphen", "vi": "dấu gạch nối", "ex": "'Twenty-one' has a hyphen."}
+      - {"n": 38, "answer": "rhyme", "vi": "vần với nhau", "ex": "'Cat' rhymes with 'hat'."}
+      - {"n": 39, "answer": "stress", "vi": "trọng âm", "ex": "Where's the stress in 'banana'?"}
+      - {"n": 40, "answer": "slowly", "vi": "chậm rãi", "ex": "Please say it slowly."}
+      - {"n": 41, "answer": "clearly", "vi": "rõ ràng", "ex": "Please speak clearly."}
+    lines:
+      - {"tom": "Thirty-six. understand. understand. I don't understand this word.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-seven. hyphen. hyphen. 'Twenty-one' has a hyphen.", "focus": 1, "reveal": [36], "pause": 1.5}
+      - {"tom": "Thirty-eight. rhyme. rhyme. 'Cat' rhymes with 'hat'.", "focus": 2, "reveal": [37], "pause": 1.5}
+      - {"tom": "Thirty-nine. stress. stress. Where's the stress in 'banana'?", "focus": 3, "reveal": [38], "pause": 1.5}
+      - {"tom": "Forty. slowly. slowly. Please say it slowly.", "focus": 4, "reveal": [39], "pause": 1.5}
+      - {"tom": "Forty-one. clearly. clearly. Please speak clearly.", "focus": 5, "reveal": [40], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [41], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (42–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 42, "answer": "question", "vi": "câu hỏi", "ex": "Can I ask a question?"}
+      - {"n": 43, "answer": "answer", "vi": "câu trả lời", "ex": "Write the answer in the box."}
+      - {"n": 44, "answer": "ask", "vi": "hỏi", "ex": "Ask your teacher if you don't know."}
+      - {"n": 45, "answer": "check", "vi": "kiểm tra", "ex": "Check the meaning in a dictionary."}
+      - {"n": 46, "answer": "example sentence", "vi": "câu ví dụ", "ex": "Write an example sentence for each word."}
+      - {"n": 47, "answer": "small letter", "vi": "chữ thường", "ex": "Write the word in small letters."}
+    lines:
+      - {"tom": "Forty-two. question. question. Can I ask a question?", "focus": 0, "pause": 1.5}
+      - {"tom": "Forty-three. answer. answer. Write the answer in the box.", "focus": 1, "reveal": [42], "pause": 1.5}
+      - {"tom": "Forty-four. ask. ask. Ask your teacher if you don't know.", "focus": 2, "reveal": [43], "pause": 1.5}
+      - {"tom": "Forty-five. check. check. Check the meaning in a dictionary.", "focus": 3, "reveal": [44], "pause": 1.5}
+      - {"tom": "Forty-six. example sentence. example sentence. Write an example sentence for each word.", "focus": 4, "reveal": [45], "pause": 1.5}
+      - {"tom": "Forty-seven. small letter. small letter. Write the word in small letters.", "focus": 5, "reveal": [46], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [47], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 48, "answer": "What does 'exhausted' mean?", "vi": "Exhausted nghĩa là gì?"}
+      - {"n": 49, "answer": "It means 'very tired'.", "vi": "Nghĩa là rất mệt."}
+      - {"n": 50, "answer": "How do you say 'cà phê sữa đá' in English?", "vi": "Cà phê sữa đá tiếng Anh nói thế nào?"}
+      - {"n": 51, "answer": "We say 'iced coffee with milk'.", "vi": "Mình nói iced coffee with milk."}
+      - {"n": 52, "answer": "How do you spell your family name?", "vi": "Họ của bạn đánh vần thế nào?"}
+      - {"n": 53, "answer": "C, L, A, R, K, E.", "vi": "C, L, A, R, K, E."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"tom": "Forty-eight. What does 'exhausted' mean? What does 'exhausted' mean?", "focus": 0, "pause": 2.0}
+      - {"emma": "Forty-nine. It means 'very tired'. It means 'very tired'.", "focus": 1, "reveal": [48], "pause": 2.0}
+      - {"emma": "Fifty. How do you say 'cà phê sữa đá' in English? How do you say 'cà phê sữa đá' in English?", "say": "Fifty. How do you say kah feh suh dah in English? How do you say kah feh suh dah in English?", "focus": 2, "reveal": [49], "pause": 2.0}
+      - {"tom": "Fifty-one. We say 'iced coffee with milk'. We say 'iced coffee with milk'.", "focus": 3, "reveal": [50], "pause": 2.0}
+      - {"tom": "Fifty-two. How do you spell your family name? How do you spell your family name?", "focus": 4, "reveal": [51], "pause": 2.0}
+      - {"emma": "Fifty-three. C, L, A, R, K, E. C, L, A, R, K, E.", "say": "Fifty-three. see, el, eigh, ar, kay, ee. see, el, eigh, ar, kay, ee.", "focus": 5, "reveal": [52], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "Is it one 'p' or two?", "vi": "Một chữ p hay hai?"}
+      - {"n": 55, "answer": "Two. It's a double 'p'.", "vi": "Hai. Hai chữ p."}
+      - {"n": 56, "answer": "How do you pronounce this word?", "vi": "Từ này phát âm thế nào?"}
+      - {"n": 57, "answer": "What's the difference between 'look' and 'see'?", "vi": "Look và see khác nhau thế nào?"}
+      - {"n": 58, "answer": "Could you repeat the question, please?", "vi": "Bạn nhắc lại câu hỏi được không?"}
+      - {"n": 59, "answer": "Sorry, I don't understand.", "vi": "Xin lỗi, mình không hiểu."}
+    lines:
+      - {"tom": "Fifty-four. Is it one 'p' or two? Is it one 'p' or two?", "say": "Fifty-four. Is it one pee or two? Is it one pee or two?", "focus": 0, "pause": 2.0}
+      - {"emma": "Fifty-five. Two. It's a double 'p'. Two. It's a double 'p'.", "say": "Fifty-five. Two. It's a double pee. Two. It's a double pee.", "focus": 1, "reveal": [54], "pause": 2.0}
+      - {"tom": "Fifty-six. How do you pronounce this word? How do you pronounce this word?", "focus": 2, "reveal": [55], "pause": 2.0}
+      - {"tom": "Fifty-seven. What's the difference between 'look' and 'see'? What's the difference between 'look' and 'see'?", "focus": 3, "reveal": [56], "pause": 2.0}
+      - {"tom": "Fifty-eight. Could you repeat the question, please? Could you repeat the question, please?", "focus": 4, "reveal": [57], "pause": 2.0}
+      - {"tom": "Fifty-nine. Sorry, I don't understand. Sorry, I don't understand.", "focus": 5, "reveal": [58], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "I'm not sure. Let me check in the dictionary.", "vi": "Mình không chắc. Để mình tra từ điển."}
+      - {"n": 61, "answer": "I can't remember the word in English.", "vi": "Mình không nhớ từ đó tiếng Anh là gì."}
+      - {"n": 62, "answer": "Can you explain that again, please?", "vi": "Bạn giải thích lại được không?"}
+      - {"n": 63, "answer": "What's the opposite of 'cheap'?", "vi": "Trái nghĩa của cheap là gì?"}
+      - {"n": 64, "answer": "Expensive.", "vi": "Expensive (đắt)."}
+      - {"n": 65, "answer": "Is 'pen' the same as 'pencil'?", "vi": "Pen có giống pencil không?"}
+    lines:
+      - {"emma": "Sixty. I'm not sure. Let me check in the dictionary. I'm not sure. Let me check in the dictionary.", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-one. I can't remember the word in English. I can't remember the word in English.", "focus": 1, "reveal": [60], "pause": 2.0}
+      - {"tom": "Sixty-two. Can you explain that again, please? Can you explain that again, please?", "focus": 2, "reveal": [61], "pause": 2.0}
+      - {"emma": "Sixty-three. What's the opposite of 'cheap'? What's the opposite of 'cheap'?", "focus": 3, "reveal": [62], "pause": 2.0}
+      - {"tom": "Sixty-four. Expensive. Expensive.", "focus": 4, "reveal": [63], "pause": 2.0}
+      - {"emma": "Sixty-five. Is 'pen' the same as 'pencil'? Is 'pen' the same as 'pencil'?", "focus": 5, "reveal": [64], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "No, they're different.", "vi": "Không, chúng khác nhau."}
+      - {"n": 67, "answer": "Is that right?", "vi": "Như vậy đúng không?"}
+      - {"n": 68, "answer": "Yes, that's correct.", "vi": "Đúng rồi."}
+      - {"n": 69, "answer": "What's this called in English?", "vi": "Cái này tiếng Anh gọi là gì?"}
+      - {"n": 70, "answer": "It's a frying pan.", "vi": "Nó là cái chảo rán."}
+      - {"n": 71, "answer": "Can I ask a question?", "vi": "Em hỏi một câu được không ạ?"}
+    lines:
+      - {"tom": "Sixty-six. No, they're different. No, they're different.", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-seven. Is that right? Is that right?", "focus": 1, "reveal": [66], "pause": 2.0}
+      - {"emma": "Sixty-eight. Yes, that's correct. Yes, that's correct.", "focus": 2, "reveal": [67], "pause": 2.0}
+      - {"tom": "Sixty-nine. What's this called in English? What's this called in English?", "focus": 3, "reveal": [68], "pause": 2.0}
+      - {"emma": "Seventy. It's a frying pan. It's a frying pan.", "focus": 4, "reveal": [69], "pause": 2.0}
+      - {"tom": "Seventy-one. Can I ask a question? Can I ask a question?", "focus": 5, "reveal": [70], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Of course. Go ahead.", "vi": "Tất nhiên. Em hỏi đi."}
+      - {"n": 73, "answer": "How do you say this word in Vietnamese?", "vi": "Từ này tiếng Việt nói thế nào?"}
+      - {"n": 74, "answer": "We say 'cái ô'.", "vi": "Mình nói cái ô."}
+      - {"n": 75, "answer": "What's the English word for this?", "vi": "Cái này tiếng Anh là gì?"}
+      - {"n": 76, "answer": "It's an umbrella.", "vi": "Đó là cái ô."}
+    lines:
+      - {"emma": "Seventy-two. Of course. Go ahead. Of course. Go ahead.", "focus": 0, "pause": 2.0}
+      - {"emma": "Seventy-three. How do you say this word in Vietnamese? How do you say this word in Vietnamese?", "focus": 1, "reveal": [72], "pause": 2.0}
+      - {"tom": "Seventy-four. We say 'cái ô'. We say 'cái ô'.", "say": "Seventy-four. We say kai oh. We say kai oh.", "focus": 2, "reveal": [73], "pause": 2.0}
+      - {"tom": "Seventy-five. What's the English word for this? What's the English word for this?", "focus": 3, "reveal": [74], "pause": 2.0}
+      - {"emma": "Seventy-six. It's an umbrella. It's an umbrella.", "focus": 4, "reveal": [75], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [76], "pause": 2.0}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 8.", "say": "Well done! See you in Unit eight.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 8."}
+

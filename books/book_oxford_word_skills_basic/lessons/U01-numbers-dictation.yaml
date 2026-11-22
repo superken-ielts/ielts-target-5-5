@@ -1,0 +1,305 @@
+# Video nghe – viết (dictation) Unit 1 · Numbers — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U01-numbers-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
+# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
+# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U01 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 1 chỉ có about, hundred, thousand, million; phần 1 thêm các số trên trang 14 (11–20, -teen /
+# -ty, số lớn, số điện thoại, giá tiền, phần trăm) — người học viết số bằng chữ.
+id: U01-numbers-dictation
+activity: U01-words
+title: "Unit 1 · Numbers"
+subtitle: "Dictation · listen and write: numbers, prices and phone numbers"
+title_vi: "Nghe – viết 10 phút: số đếm — từ trong sách, từ thêm, câu giao tiếp"
+tag: "BASIC ENGLISH · UNIT 1"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 1: Numbers. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit one: Numbers. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 1: số đếm. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 29 words from the book. You hear each word twice, then a sentence. Then 19 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-nine words from the book. You hear each word twice, then a sentence. Then nineteen more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 29 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 19 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "eleven", "vi": "11 — mười một", "ex": "There are eleven players in a football team."}
+      - {"n": 2, "answer": "twelve", "vi": "12 — mười hai (không viết twoteen)", "ex": "There are twelve months in a year."}
+      - {"n": 3, "answer": "thirteen", "vi": "13 — mười ba", "ex": "Her son is thirteen."}
+      - {"n": 4, "answer": "thirty", "vi": "30 — ba mươi", "ex": "There are thirty days in June."}
+      - {"n": 5, "answer": "fourteen", "vi": "14 — mười bốn", "ex": "The girl in the photo is fourteen."}
+      - {"n": 6, "answer": "forty", "vi": "40 — bốn mươi (không có chữ u)", "ex": "Her father is forty."}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. eleven. eleven. There are eleven players in a football team.", "focus": 0, "pause": 1.5}
+      - {"emma": "Two. twelve. twelve. There are twelve months in a year.", "focus": 1, "reveal": [1], "pause": 1.5}
+      - {"emma": "Three. thirteen. thirteen. Her son is thirteen.", "say": "Three. thir-teen. thir-teen. Her son is thir-teen.", "focus": 2, "reveal": [2], "pause": 1.5}
+      - {"emma": "Four. thirty. thirty. There are thirty days in June.", "focus": 3, "reveal": [3], "pause": 1.5}
+      - {"emma": "Five. fourteen. fourteen. The girl in the photo is fourteen.", "say": "Five. four-teen. four-teen. The girl in the photo is four-teen.", "focus": 4, "reveal": [4], "pause": 1.5}
+      - {"emma": "Six. forty. forty. Her father is forty.", "focus": 5, "reveal": [5], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "fifteen", "vi": "15 — mười lăm (không viết fiveteen)", "ex": "The bus comes every fifteen minutes."}
+      - {"n": 8, "answer": "fifty", "vi": "50 — năm mươi", "ex": "There are fifty students in the hall."}
+      - {"n": 9, "answer": "eighteen", "vi": "18 — mười tám (chỉ một chữ t)", "ex": "You can drive a car at eighteen."}
+      - {"n": 10, "answer": "eighty", "vi": "80 — tám mươi", "ex": "Her grandmother is eighty."}
+      - {"n": 11, "answer": "nineteen", "vi": "19 — mười chín", "ex": "The shop is at number nineteen."}
+      - {"n": 12, "answer": "ninety", "vi": "90 — chín mươi", "ex": "Ninety people came to the party."}
+    lines:
+      - {"emma": "Seven. fifteen. fifteen. The bus comes every fifteen minutes.", "say": "Seven. fif-teen. fif-teen. The bus comes every fifteen minutes.", "focus": 0, "pause": 1.5}
+      - {"emma": "Eight. fifty. fifty. There are fifty students in the hall.", "focus": 1, "reveal": [7], "pause": 1.5}
+      - {"emma": "Nine. eighteen. eighteen. You can drive a car at eighteen.", "say": "Nine. eigh-teen. eigh-teen. You can drive a car at eigh-teen.", "focus": 2, "reveal": [8], "pause": 1.5}
+      - {"emma": "Ten. eighty. eighty. Her grandmother is eighty.", "focus": 3, "reveal": [9], "pause": 1.5}
+      - {"emma": "Eleven. nineteen. nineteen. The shop is at number nineteen.", "say": "Eleven. nine-teen. nine-teen. The shop is at number nine-teen.", "focus": 4, "reveal": [10], "pause": 1.5}
+      - {"emma": "Twelve. ninety. ninety. Ninety people came to the party.", "focus": 5, "reveal": [11], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "twenty-one", "vi": "21 — viết có gạch nối", "ex": "She's twenty-one today."}
+      - {"n": 14, "answer": "forty-five", "vi": "45 — viết có gạch nối", "ex": "The lesson is forty-five minutes long."}
+      - {"n": 15, "answer": "a hundred and forty", "vi": "140 — kiểu Anh thêm and sau hundred", "ex": "The hotel has a hundred and forty rooms."}
+      - {"n": 16, "answer": "two hundred", "vi": "200 — không thêm s", "ex": "Two hundred people work in this factory.", "w": ["hundred"]}
+      - {"n": 17, "answer": "a thousand and fifty", "vi": "1,050 — and trước hai chữ số cuối", "ex": "The school has a thousand and fifty students."}
+      - {"n": 18, "answer": "five thousand", "vi": "5,000", "ex": "Five thousand people live in the town.", "w": ["thousand"]}
+    lines:
+      - {"emma": "Thirteen. twenty-one. twenty-one. She's twenty-one today.", "focus": 0, "pause": 1.5}
+      - {"emma": "Fourteen. forty-five. forty-five. The lesson is forty-five minutes long.", "focus": 1, "reveal": [13], "pause": 1.5}
+      - {"emma": "Fifteen. a hundred and forty. a hundred and forty. The hotel has a hundred and forty rooms.", "focus": 2, "reveal": [14], "pause": 1.5}
+      - {"emma": "Sixteen. two hundred. two hundred. Two hundred people work in this factory.", "focus": 3, "reveal": [15], "pause": 1.5}
+      - {"emma": "Seventeen. a thousand and fifty. a thousand and fifty. The school has a thousand and fifty students.", "focus": 4, "reveal": [16], "pause": 1.5}
+      - {"emma": "Eighteen. five thousand. five thousand. Five thousand people live in the town.", "focus": 5, "reveal": [17], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "a hundred thousand", "vi": "100,000", "ex": "A hundred thousand people watched the match."}
+      - {"n": 20, "answer": "a million", "vi": "1,000,000 — một triệu", "ex": "A million people visit the museum every year.", "w": ["million"]}
+      - {"n": 21, "answer": "two million", "vi": "2,000,000 — không viết two millions", "ex": "Two million people live in the city."}
+      - {"n": 22, "answer": "about", "vi": "khoảng (= approximately)", "ex": "There were about fifty people at the meeting.", "w": ["about"]}
+      - {"n": 23, "answer": "phone number", "vi": "số điện thoại", "ex": "What's your phone number?"}
+      - {"n": 24, "answer": "double five", "vi": "55 trong số điện thoại", "ex": "Her number is 0912 556 870."}
+    lines:
+      - {"emma": "Nineteen. a hundred thousand. a hundred thousand. A hundred thousand people watched the match.", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty. a million. a million. A million people visit the museum every year.", "focus": 1, "reveal": [19], "pause": 1.5}
+      - {"emma": "Twenty-one. two million. two million. Two million people live in the city.", "focus": 2, "reveal": [20], "pause": 1.5}
+      - {"emma": "Twenty-two. about. about. There were about fifty people at the meeting.", "focus": 3, "reveal": [21], "pause": 1.5}
+      - {"emma": "Twenty-three. phone number. phone number. What's your phone number?", "focus": 4, "reveal": [22], "pause": 1.5}
+      - {"emma": "Twenty-four. double five. double five. Her number is 0912 556 870.", "say": "Twenty-four. double five. double five. Her number is oh nine one two, double five six, eight seven oh.", "focus": 5, "reveal": [23], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–29)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "zero", "vi": "0 — số không (đọc số điện thoại thường là oh)", "ex": "Zero is often 'oh' in phone numbers."}
+      - {"n": 26, "answer": "three pounds fifty", "vi": "£3.50 — giá tiền", "ex": "A cup of coffee costs three pounds fifty."}
+      - {"n": 27, "answer": "twelve euros ninety-nine", "vi": "€12.99", "ex": "The book is twelve euros ninety-nine."}
+      - {"n": 28, "answer": "per cent", "vi": "phần trăm (%)", "ex": "Twenty-five per cent of the students are from Asia."}
+      - {"n": 29, "answer": "point", "vi": "dấu chấm thập phân: 2.5 = two point five", "ex": "The baby weighs three point five kilos."}
+    lines:
+      - {"emma": "Twenty-five. zero. zero. Zero is often 'oh' in phone numbers.", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty-six. three pounds fifty. three pounds fifty. A cup of coffee costs three pounds fifty.", "focus": 1, "reveal": [25], "pause": 1.5}
+      - {"emma": "Twenty-seven. twelve euros ninety-nine. twelve euros ninety-nine. The book is twelve euros ninety-nine.", "focus": 2, "reveal": [26], "pause": 1.5}
+      - {"emma": "Twenty-eight. per cent. per cent. Twenty-five per cent of the students are from Asia.", "focus": 3, "reveal": [27], "pause": 1.5}
+      - {"emma": "Twenty-nine. point. point. The baby weighs three point five kilos.", "focus": 4, "reveal": [28], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [29], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (30–35)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 30, "answer": "half", "vi": "một nửa", "ex": "Half of the cake is for you."}
+      - {"n": 31, "answer": "a dozen", "vi": "một tá (12)", "ex": "We need a dozen eggs."}
+      - {"n": 32, "answer": "a pair of", "vi": "một đôi", "ex": "She bought a pair of shoes."}
+      - {"n": 33, "answer": "a couple of", "vi": "vài, một hai", "ex": "Wait a couple of minutes, please."}
+      - {"n": 34, "answer": "count", "vi": "đếm", "ex": "Can you count to twenty in English?"}
+      - {"n": 35, "answer": "plus", "vi": "cộng", "ex": "Two plus two is four."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty. half. half. Half of the cake is for you.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-one. a dozen. a dozen. We need a dozen eggs.", "focus": 1, "reveal": [30], "pause": 1.5}
+      - {"tom": "Thirty-two. a pair of. a pair of. She bought a pair of shoes.", "focus": 2, "reveal": [31], "pause": 1.5}
+      - {"tom": "Thirty-three. a couple of. a couple of. Wait a couple of minutes, please.", "focus": 3, "reveal": [32], "pause": 1.5}
+      - {"tom": "Thirty-four. count. count. Can you count to twenty in English?", "focus": 4, "reveal": [33], "pause": 1.5}
+      - {"tom": "Thirty-five. plus. plus. Two plus two is four.", "focus": 5, "reveal": [34], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (36–41)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 36, "answer": "minus", "vi": "trừ", "ex": "Ten minus three is seven."}
+      - {"n": 37, "answer": "times", "vi": "nhân", "ex": "Three times four is twelve."}
+      - {"n": 38, "answer": "divided by", "vi": "chia", "ex": "Twelve divided by four is three."}
+      - {"n": 39, "answer": "equals", "vi": "bằng", "ex": "Two plus three equals five."}
+      - {"n": 40, "answer": "total", "vi": "tổng cộng", "ex": "The total is forty-five pounds."}
+      - {"n": 41, "answer": "price", "vi": "giá", "ex": "What's the price of this bag?"}
+    lines:
+      - {"tom": "Thirty-six. minus. minus. Ten minus three is seven.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-seven. times. times. Three times four is twelve.", "focus": 1, "reveal": [36], "pause": 1.5}
+      - {"tom": "Thirty-eight. divided by. divided by. Twelve divided by four is three.", "focus": 2, "reveal": [37], "pause": 1.5}
+      - {"tom": "Thirty-nine. equals. equals. Two plus three equals five.", "focus": 3, "reveal": [38], "pause": 1.5}
+      - {"tom": "Forty. total. total. The total is forty-five pounds.", "focus": 4, "reveal": [39], "pause": 1.5}
+      - {"tom": "Forty-one. price. price. What's the price of this bag?", "focus": 5, "reveal": [40], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [41], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (42–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 42, "answer": "cost", "vi": "có giá, tốn", "ex": "How much does this shirt cost?"}
+      - {"n": 43, "answer": "change", "vi": "tiền thối lại", "ex": "Here's your change."}
+      - {"n": 44, "answer": "odd number", "vi": "số lẻ", "ex": "Seven is an odd number."}
+      - {"n": 45, "answer": "even number", "vi": "số chẵn", "ex": "Ten is an even number."}
+      - {"n": 46, "answer": "kilometre", "vi": "ki-lô-mét", "ex": "The station is two kilometres from here."}
+      - {"n": 47, "answer": "kilo", "vi": "ki-lô-gam", "ex": "A kilo of rice, please."}
+    lines:
+      - {"tom": "Forty-two. cost. cost. How much does this shirt cost?", "focus": 0, "pause": 1.5}
+      - {"tom": "Forty-three. change. change. Here's your change.", "focus": 1, "reveal": [42], "pause": 1.5}
+      - {"tom": "Forty-four. odd number. odd number. Seven is an odd number.", "focus": 2, "reveal": [43], "pause": 1.5}
+      - {"tom": "Forty-five. even number. even number. Ten is an even number.", "focus": 3, "reveal": [44], "pause": 1.5}
+      - {"tom": "Forty-six. kilometre. kilometre. The station is two kilometres from here.", "focus": 4, "reveal": [45], "pause": 1.5}
+      - {"tom": "Forty-seven. kilo. kilo. A kilo of rice, please.", "focus": 5, "reveal": [46], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [47], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (48–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 48, "answer": "age", "vi": "tuổi", "ex": "Please write your age on the form."}
+    lines:
+      - {"tom": "Forty-eight. age. age. Please write your age on the form.", "focus": 0, "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 0, "reveal": [48], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (49–54)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 49, "answer": "What's your phone number?", "vi": "Số điện thoại của bạn là gì?"}
+      - {"n": 50, "answer": "It's 0909 123 456.", "vi": "Là 0909 123 456."}
+      - {"n": 51, "answer": "Sorry, is that thirteen or thirty?", "vi": "Xin lỗi, là mười ba hay ba mươi?"}
+      - {"n": 52, "answer": "Thirty. Three zero.", "vi": "Ba mươi. Ba, không."}
+      - {"n": 53, "answer": "Can you say that again, please?", "vi": "Bạn nói lại được không?"}
+      - {"n": 54, "answer": "Could you write the number down, please?", "vi": "Bạn viết số ra giúp mình được không?"}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-nine. What's your phone number? What's your phone number?", "focus": 0, "pause": 2.0}
+      - {"tom": "Fifty. It's 0909 123 456. It's 0909 123 456.", "say": "Fifty. It's oh nine oh nine, one two three, four five six. It's oh nine oh nine, one two three, four five six.", "focus": 1, "reveal": [49], "pause": 2.0}
+      - {"tom": "Fifty-one. Sorry, is that thirteen or thirty? Sorry, is that thirteen or thirty?", "say": "Fifty-one. Sorry, is that thir-teen or thirty? Sorry, is that thir-teen or thirty?", "focus": 2, "reveal": [50], "pause": 2.0}
+      - {"emma": "Fifty-two. Thirty. Three zero. Thirty. Three zero.", "focus": 3, "reveal": [51], "pause": 2.0}
+      - {"emma": "Fifty-three. Can you say that again, please? Can you say that again, please?", "focus": 4, "reveal": [52], "pause": 2.0}
+      - {"tom": "Fifty-four. Could you write the number down, please? Could you write the number down, please?", "focus": 5, "reveal": [53], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "How old are you?", "vi": "Bạn bao nhiêu tuổi?"}
+      - {"n": 56, "answer": "I'm twenty.", "vi": "Mình hai mươi tuổi."}
+      - {"n": 57, "answer": "How much is this?", "vi": "Cái này bao nhiêu tiền?"}
+      - {"n": 58, "answer": "It's fifty thousand dong.", "vi": "Năm mươi nghìn đồng."}
+      - {"n": 59, "answer": "How much are these?", "vi": "Mấy cái này bao nhiêu tiền?"}
+      - {"n": 60, "answer": "They're two pounds each.", "vi": "Mỗi cái hai bảng."}
+    lines:
+      - {"emma": "Fifty-five. How old are you? How old are you?", "focus": 0, "pause": 2.0}
+      - {"tom": "Fifty-six. I'm twenty. I'm twenty.", "focus": 1, "reveal": [55], "pause": 2.0}
+      - {"tom": "Fifty-seven. How much is this? How much is this?", "focus": 2, "reveal": [56], "pause": 2.0}
+      - {"emma": "Fifty-eight. It's fifty thousand dong. It's fifty thousand dong.", "focus": 3, "reveal": [57], "pause": 2.0}
+      - {"emma": "Fifty-nine. How much are these? How much are these?", "focus": 4, "reveal": [58], "pause": 2.0}
+      - {"tom": "Sixty. They're two pounds each. They're two pounds each.", "focus": 5, "reveal": [59], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "How many students are there in your class?", "vi": "Lớp bạn có bao nhiêu học viên?"}
+      - {"n": 62, "answer": "There are about twenty-five.", "vi": "Khoảng hai mươi lăm."}
+      - {"n": 63, "answer": "What's your room number?", "vi": "Phòng bạn số mấy?"}
+      - {"n": 64, "answer": "It's two hundred and five.", "vi": "Phòng hai trăm lẻ năm."}
+      - {"n": 65, "answer": "How far is it?", "vi": "Bao xa?"}
+      - {"n": 66, "answer": "It's about one kilometre.", "vi": "Khoảng một cây số."}
+    lines:
+      - {"emma": "Sixty-one. How many students are there in your class? How many students are there in your class?", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-two. There are about twenty-five. There are about twenty-five.", "focus": 1, "reveal": [61], "pause": 2.0}
+      - {"emma": "Sixty-three. What's your room number? What's your room number?", "focus": 2, "reveal": [62], "pause": 2.0}
+      - {"tom": "Sixty-four. It's two hundred and five. It's two hundred and five.", "focus": 3, "reveal": [63], "pause": 2.0}
+      - {"emma": "Sixty-five. How far is it? How far is it?", "focus": 4, "reveal": [64], "pause": 2.0}
+      - {"tom": "Sixty-six. It's about one kilometre. It's about one kilometre.", "focus": 5, "reveal": [65], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "What's your favourite number?", "vi": "Số yêu thích của bạn là số mấy?"}
+      - {"n": 68, "answer": "Nine. My birthday is on the ninth of March.", "vi": "Số chín. Sinh nhật mình ngày 9 tháng 3."}
+      - {"n": 69, "answer": "How many people live in your home town?", "vi": "Quê bạn có bao nhiêu người?"}
+      - {"n": 70, "answer": "About fifteen thousand.", "vi": "Khoảng mười lăm nghìn."}
+      - {"n": 71, "answer": "Can I pay by card?", "vi": "Tôi trả bằng thẻ được không?"}
+      - {"n": 72, "answer": "Yes, of course.", "vi": "Vâng, tất nhiên."}
+    lines:
+      - {"emma": "Sixty-seven. What's your favourite number? What's your favourite number?", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-eight. Nine. My birthday is on the ninth of March. Nine. My birthday is on the ninth of March.", "focus": 1, "reveal": [67], "pause": 2.0}
+      - {"tom": "Sixty-nine. How many people live in your home town? How many people live in your home town?", "focus": 2, "reveal": [68], "pause": 2.0}
+      - {"emma": "Seventy. About fifteen thousand. About fifteen thousand.", "focus": 3, "reveal": [69], "pause": 2.0}
+      - {"tom": "Seventy-one. Can I pay by card? Can I pay by card?", "focus": 4, "reveal": [70], "pause": 2.0}
+      - {"emma": "Seventy-two. Yes, of course. Yes, of course.", "focus": 5, "reveal": [71], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–78)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "Is it free?", "vi": "Có miễn phí không?"}
+      - {"n": 74, "answer": "No, it costs ten pounds.", "vi": "Không, mất mười bảng."}
+      - {"n": 75, "answer": "What's the total?", "vi": "Tổng cộng bao nhiêu?"}
+      - {"n": 76, "answer": "That's twelve pounds ninety-nine, please.", "vi": "Của bạn mười hai bảng chín mươi chín."}
+      - {"n": 77, "answer": "Keep the change.", "vi": "Khỏi thối lại."}
+      - {"n": 78, "answer": "That's very kind of you.", "vi": "Bạn thật tốt bụng."}
+    lines:
+      - {"tom": "Seventy-three. Is it free? Is it free?", "focus": 0, "pause": 2.0}
+      - {"emma": "Seventy-four. No, it costs ten pounds. No, it costs ten pounds.", "focus": 1, "reveal": [73], "pause": 2.0}
+      - {"tom": "Seventy-five. What's the total? What's the total?", "focus": 2, "reveal": [74], "pause": 2.0}
+      - {"emma": "Seventy-six. That's twelve pounds ninety-nine, please. That's twelve pounds ninety-nine, please.", "focus": 3, "reveal": [75], "pause": 2.0}
+      - {"tom": "Seventy-seven. Keep the change. Keep the change.", "focus": 4, "reveal": [76], "pause": 2.0}
+      - {"emma": "Seventy-eight. That's very kind of you. That's very kind of you.", "focus": 5, "reveal": [77], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [78], "pause": 2.0}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 2.", "say": "Well done! See you in Unit two.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 2."}
+

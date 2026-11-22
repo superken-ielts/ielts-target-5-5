@@ -56,6 +56,11 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
   nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`
   có `image` — file 09 mục 5.3a.
+- Oxford Word Skills Basic, video nghe – viết (đợt 36): mỗi unit thêm `<id>-dictation` khoảng 10 phút (test 9–11), cùng phiên,
+  chạy liền, cảnh `dictation`; đủ mọi mục Word list của unit (`work/wordlist.json`; `python -m lesson_video wordlist
+  ../books/book_oxford_word_skills_basic --unit U0x --level all` ra 0), thêm từ và câu giao tiếp theo chủ đề. Kịch bản sinh từ
+  `work/dictation/units_*.py` bằng `python3 books/book_oxford_word_skills_basic/work/dictation/gen_dictation.py U0x` — sửa
+  dữ liệu rồi sinh lại, không sửa tay .yaml — file 09 mục 5.9.
 
 ## Kiểm tra trước khi commit
 

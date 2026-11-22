@@ -1,0 +1,296 @@
+# Video nghe – viết (dictation) Unit 13 · Describing people — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U13-describing-people-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
+# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
+# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U13 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U13-describing-people-dictation
+activity: U13-words
+title: "Unit 13 · Describing people"
+subtitle: "Dictation · listen and write: what people look like"
+title_vi: "Nghe – viết 10 phút: tả ngoại hình — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PEOPLE · UNIT 13"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 13: Describing people. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirteen: Describing people. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 13: tả ngoại hình. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 36 words from the book. You hear each word twice, then a sentence. Then 18 more useful words, and 24 useful sentences for conversation.", "say": "There are three parts. First, thirty-six words from the book. You hear each word twice, then a sentence. Then eighteen more useful words, and twenty-four useful sentences for conversation.", "vi": "Ba phần: 36 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 18 từ thêm, 24 câu giao tiếp."}
+      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "tall, short", "vi": "cao, thấp", "ex": "He's tall, but his brother is short.", "w": ["tall", "short"]}
+      - {"n": 2, "answer": "average height", "vi": "chiều cao trung bình", "ex": "She's of average height.", "w": ["average", "height"]}
+      - {"n": 3, "answer": "weigh", "vi": "nặng (cân)", "ex": "How much do you weigh?", "w": ["weigh", "how much", "much"]}
+      - {"n": 4, "answer": "weight", "vi": "cân nặng", "ex": "His weight is seventy kilos.", "w": ["weight"]}
+      - {"n": 5, "answer": "slim", "vi": "mảnh mai", "ex": "She's tall and slim.", "w": ["slim"]}
+      - {"n": 6, "answer": "thin", "vi": "gầy", "ex": "He's very thin.", "w": ["thin"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. tall, short. tall, short. He's tall, but his brother is short.", "focus": 0, "pause": 1.5}
+      - {"emma": "Two. average height. average height. She's of average height.", "focus": 1, "reveal": [1], "pause": 1.5}
+      - {"emma": "Three. weigh. weigh. How much do you weigh?", "focus": 2, "reveal": [2], "pause": 1.5}
+      - {"emma": "Four. weight. weight. His weight is seventy kilos.", "focus": 3, "reveal": [3], "pause": 1.5}
+      - {"emma": "Five. slim. slim. She's tall and slim.", "focus": 4, "reveal": [4], "pause": 1.5}
+      - {"emma": "Six. thin. thin. He's very thin.", "focus": 5, "reveal": [5], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "fat, overweight", "vi": "béo, thừa cân (overweight lịch sự hơn)", "ex": "Overweight is more polite than fat.", "w": ["fat", "overweight"]}
+      - {"n": 8, "answer": "good-looking", "vi": "ưa nhìn", "ex": "He's very good-looking.", "w": ["good-looking"]}
+      - {"n": 9, "answer": "attractive", "vi": "hấp dẫn, xinh", "ex": "She's an attractive woman.", "w": ["attractive"]}
+      - {"n": 10, "answer": "beautiful", "vi": "đẹp", "ex": "What a beautiful baby!", "w": ["beautiful"]}
+      - {"n": 11, "answer": "ugly", "vi": "xấu", "ex": "The monster in the film is very ugly.", "w": ["ugly"]}
+      - {"n": 12, "answer": "colour", "vi": "màu", "ex": "What colour are her eyes?", "w": ["colour"]}
+    lines:
+      - {"emma": "Seven. fat, overweight. fat, overweight. Overweight is more polite than fat.", "focus": 0, "pause": 1.5}
+      - {"emma": "Eight. good-looking. good-looking. He's very good-looking.", "focus": 1, "reveal": [7], "pause": 1.5}
+      - {"emma": "Nine. attractive. attractive. She's an attractive woman.", "focus": 2, "reveal": [8], "pause": 1.5}
+      - {"emma": "Ten. beautiful. beautiful. What a beautiful baby!", "focus": 3, "reveal": [9], "pause": 1.5}
+      - {"emma": "Eleven. ugly. ugly. The monster in the film is very ugly.", "focus": 4, "reveal": [10], "pause": 1.5}
+      - {"emma": "Twelve. colour. colour. What colour are her eyes?", "focus": 5, "reveal": [11], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "black", "vi": "đen", "ex": "Tom has short black hair.", "w": ["black"]}
+      - {"n": 14, "answer": "blonde", "vi": "vàng hoe", "ex": "She's got long blonde hair.", "w": ["blonde"]}
+      - {"n": 15, "answer": "dark", "vi": "sẫm", "ex": "He's got dark hair.", "w": ["dark"]}
+      - {"n": 16, "answer": "light brown", "vi": "nâu sáng", "ex": "Her hair is light brown.", "w": ["light", "brown"]}
+      - {"n": 17, "answer": "grey", "vi": "bạc, xám", "ex": "His hair is going grey.", "w": ["grey"]}
+      - {"n": 18, "answer": "long", "vi": "dài", "ex": "Her hair is very long.", "w": ["long"]}
+    lines:
+      - {"emma": "Thirteen. black. black. Tom has short black hair.", "focus": 0, "pause": 1.5}
+      - {"emma": "Fourteen. blonde. blonde. She's got long blonde hair.", "focus": 1, "reveal": [13], "pause": 1.5}
+      - {"emma": "Fifteen. dark. dark. He's got dark hair.", "focus": 2, "reveal": [14], "pause": 1.5}
+      - {"emma": "Sixteen. light brown. light brown. Her hair is light brown.", "focus": 3, "reveal": [15], "pause": 1.5}
+      - {"emma": "Seventeen. grey. grey. His hair is going grey.", "focus": 4, "reveal": [16], "pause": 1.5}
+      - {"emma": "Eighteen. long. long. Her hair is very long.", "focus": 5, "reveal": [17], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "medium-length", "vi": "dài vừa", "ex": "She's got medium-length hair.", "w": ["medium-length", "length"]}
+      - {"n": 20, "answer": "how long", "vi": "dài bao nhiêu", "ex": "How long is her hair?", "w": ["how long"]}
+      - {"n": 21, "answer": "wavy", "vi": "gợn sóng", "ex": "Her hair is long and wavy.", "w": ["wavy"]}
+      - {"n": 22, "answer": "curly", "vi": "xoăn", "ex": "He has short curly hair.", "w": ["curly"]}
+      - {"n": 23, "answer": "straight", "vi": "thẳng", "ex": "Tom's hair is short and straight.", "w": ["straight"]}
+      - {"n": 24, "answer": "beard", "vi": "râu (cằm)", "ex": "Her brother has a beard.", "w": ["beard"]}
+    lines:
+      - {"emma": "Nineteen. medium-length. medium-length. She's got medium-length hair.", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty. how long. how long. How long is her hair?", "focus": 1, "reveal": [19], "pause": 1.5}
+      - {"emma": "Twenty-one. wavy. wavy. Her hair is long and wavy.", "focus": 2, "reveal": [20], "pause": 1.5}
+      - {"emma": "Twenty-two. curly. curly. He has short curly hair.", "focus": 3, "reveal": [21], "pause": 1.5}
+      - {"emma": "Twenty-three. straight. straight. Tom's hair is short and straight.", "focus": 4, "reveal": [22], "pause": 1.5}
+      - {"emma": "Twenty-four. beard. beard. Her brother has a beard.", "focus": 5, "reveal": [23], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "moustache", "vi": "ria mép", "ex": "He's got a moustache.", "w": ["moustache"]}
+      - {"n": 26, "answer": "baby", "vi": "em bé", "ex": "The baby is six months old.", "w": ["baby"]}
+      - {"n": 27, "answer": "child, children", "vi": "đứa trẻ, trẻ em", "ex": "There are three children in the family.", "w": ["child", "children"]}
+      - {"n": 28, "answer": "teenager, teens", "vi": "thiếu niên (13–19 tuổi)", "ex": "She's a teenager. She's in her teens.", "w": ["teenager", "teens"]}
+      - {"n": 29, "answer": "adult", "vi": "người lớn", "ex": "Adults pay ten pounds. Children are free.", "w": ["adult"]}
+      - {"n": 30, "answer": "young", "vi": "trẻ", "ex": "He looks young for his age.", "w": ["young"]}
+    lines:
+      - {"emma": "Twenty-five. moustache. moustache. He's got a moustache.", "focus": 0, "pause": 1.5}
+      - {"emma": "Twenty-six. baby. baby. The baby is six months old.", "focus": 1, "reveal": [25], "pause": 1.5}
+      - {"emma": "Twenty-seven. child, children. child, children. There are three children in the family.", "focus": 2, "reveal": [26], "pause": 1.5}
+      - {"emma": "Twenty-eight. teenager, teens. teenager, teens. She's a teenager. She's in her teens.", "focus": 3, "reveal": [27], "pause": 1.5}
+      - {"emma": "Twenty-nine. adult. adult. Adults pay ten pounds. Children are free.", "focus": 4, "reveal": [28], "pause": 1.5}
+      - {"emma": "Thirty. young. young. He looks young for his age.", "focus": 5, "reveal": [29], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (31–36)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 31, "answer": "middle-aged", "vi": "trung niên", "ex": "Her parents are middle-aged.", "w": ["middle-aged"]}
+      - {"n": 32, "answer": "elderly", "vi": "cao tuổi (lịch sự)", "ex": "An elderly man sat next to her on the bus.", "w": ["elderly"]}
+      - {"n": 33, "answer": "in his twenties", "vi": "khoảng hai mươi mấy tuổi", "ex": "He's in his twenties.", "w": ["in"]}
+      - {"n": 34, "answer": "late fifties", "vi": "gần sáu mươi (57–59)", "ex": "She's in her late fifties.", "w": ["late"]}
+      - {"n": 35, "answer": "person", "vi": "người", "ex": "She's a very kind person.", "w": ["person"]}
+      - {"n": 36, "answer": "have got", "vi": "có", "ex": "She's got blue eyes.", "w": ["have got"]}
+    lines:
+      - {"emma": "Thirty-one. middle-aged. middle-aged. Her parents are middle-aged.", "focus": 0, "pause": 1.5}
+      - {"emma": "Thirty-two. elderly. elderly. An elderly man sat next to her on the bus.", "focus": 1, "reveal": [31], "pause": 1.5}
+      - {"emma": "Thirty-three. in his twenties. in his twenties. He's in his twenties.", "focus": 2, "reveal": [32], "pause": 1.5}
+      - {"emma": "Thirty-four. late fifties. late fifties. She's in her late fifties.", "focus": 3, "reveal": [33], "pause": 1.5}
+      - {"emma": "Thirty-five. person. person. She's a very kind person.", "focus": 4, "reveal": [34], "pause": 1.5}
+      - {"emma": "Thirty-six. have got. have got. She's got blue eyes.", "focus": 5, "reveal": [35], "pause": 1.5}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (37–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "handsome", "vi": "đẹp trai", "ex": "Her brother is very handsome."}
+      - {"n": 38, "answer": "pretty", "vi": "xinh xắn", "ex": "What a pretty dress!"}
+      - {"n": 39, "answer": "cute", "vi": "dễ thương", "ex": "The baby is so cute."}
+      - {"n": 40, "answer": "bald", "vi": "hói", "ex": "Her grandfather is bald."}
+      - {"n": 41, "answer": "glasses", "vi": "kính", "ex": "His friend wears glasses."}
+      - {"n": 42, "answer": "freckles", "vi": "tàn nhang", "ex": "She's got red hair and freckles."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-seven. handsome. handsome. Her brother is very handsome.", "focus": 0, "pause": 1.5}
+      - {"tom": "Thirty-eight. pretty. pretty. What a pretty dress!", "focus": 1, "reveal": [37], "pause": 1.5}
+      - {"tom": "Thirty-nine. cute. cute. The baby is so cute.", "focus": 2, "reveal": [38], "pause": 1.5}
+      - {"tom": "Forty. bald. bald. Her grandfather is bald.", "focus": 3, "reveal": [39], "pause": 1.5}
+      - {"tom": "Forty-one. glasses. glasses. His friend wears glasses.", "focus": 4, "reveal": [40], "pause": 1.5}
+      - {"tom": "Forty-two. freckles. freckles. She's got red hair and freckles.", "focus": 5, "reveal": [41], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "ponytail", "vi": "tóc đuôi ngựa", "ex": "She wears her hair in a ponytail."}
+      - {"n": 44, "answer": "look like", "vi": "trông giống", "ex": "He looks like his mother."}
+      - {"n": 45, "answer": "fringe", "vi": "tóc mái", "ex": "She's got a long fringe."}
+      - {"n": 46, "answer": "wrinkles", "vi": "nếp nhăn", "ex": "Her grandmother has a lot of wrinkles."}
+      - {"n": 47, "answer": "smile", "vi": "nụ cười", "ex": "He has a lovely smile."}
+      - {"n": 48, "answer": "scar", "vi": "vết sẹo", "ex": "He has a small scar on his chin."}
+    lines:
+      - {"tom": "Forty-three. ponytail. ponytail. She wears her hair in a ponytail.", "focus": 0, "pause": 1.5}
+      - {"tom": "Forty-four. look like. look like. He looks like his mother.", "focus": 1, "reveal": [43], "pause": 1.5}
+      - {"tom": "Forty-five. fringe. fringe. She's got a long fringe.", "focus": 2, "reveal": [44], "pause": 1.5}
+      - {"tom": "Forty-six. wrinkles. wrinkles. Her grandmother has a lot of wrinkles.", "focus": 3, "reveal": [45], "pause": 1.5}
+      - {"tom": "Forty-seven. smile. smile. He has a lovely smile.", "focus": 4, "reveal": [46], "pause": 1.5}
+      - {"tom": "Forty-eight. scar. scar. He has a small scar on his chin.", "focus": 5, "reveal": [47], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [48], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (49–54)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 49, "answer": "tattoo", "vi": "hình xăm", "ex": "She has a tattoo on her arm."}
+      - {"n": 50, "answer": "earrings", "vi": "bông tai", "ex": "She's wearing gold earrings."}
+      - {"n": 51, "answer": "well-built", "vi": "vạm vỡ", "ex": "The basketball player is tall and well-built."}
+      - {"n": 52, "answer": "plump", "vi": "mũm mĩm", "ex": "The baby is plump and happy."}
+      - {"n": 53, "answer": "fair", "vi": "(tóc) vàng nhạt, (da) trắng", "ex": "She has fair hair and blue eyes."}
+      - {"n": 54, "answer": "appearance", "vi": "ngoại hình", "ex": "Don't judge people by their appearance."}
+    lines:
+      - {"tom": "Forty-nine. tattoo. tattoo. She has a tattoo on her arm.", "focus": 0, "pause": 1.5}
+      - {"tom": "Fifty. earrings. earrings. She's wearing gold earrings.", "focus": 1, "reveal": [49], "pause": 1.5}
+      - {"tom": "Fifty-one. well-built. well-built. The basketball player is tall and well-built.", "focus": 2, "reveal": [50], "pause": 1.5}
+      - {"tom": "Fifty-two. plump. plump. The baby is plump and happy.", "focus": 3, "reveal": [51], "pause": 1.5}
+      - {"tom": "Fifty-three. fair. fair. She has fair hair and blue eyes.", "focus": 4, "reveal": [52], "pause": 1.5}
+      - {"tom": "Fifty-four. appearance. appearance. Don't judge people by their appearance.", "focus": 5, "reveal": [53], "pause": 1.5}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54], "pause": 2.0}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "What does your best friend look like?", "vi": "Bạn thân của bạn trông thế nào?"}
+      - {"n": 56, "answer": "Lucy's tall and slim, with short curly red hair.", "vi": "Lucy cao, mảnh mai, tóc đỏ ngắn xoăn."}
+      - {"n": 57, "answer": "Who do you look like?", "vi": "Bạn giống ai?"}
+      - {"n": 58, "answer": "I look like my mother.", "vi": "Mình giống mẹ."}
+      - {"n": 59, "answer": "How tall are you?", "vi": "Bạn cao bao nhiêu?"}
+      - {"n": 60, "answer": "About one metre seventy-five.", "vi": "Khoảng một mét bảy lăm."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"tom": "Fifty-five. What does your best friend look like? What does your best friend look like?", "focus": 0, "pause": 2.0}
+      - {"emma": "Fifty-six. Lucy's tall and slim, with short curly red hair. Lucy's tall and slim, with short curly red hair.", "focus": 1, "reveal": [55], "pause": 2.0}
+      - {"emma": "Fifty-seven. Who do you look like? Who do you look like?", "focus": 2, "reveal": [56], "pause": 2.0}
+      - {"tom": "Fifty-eight. I look like my mother. I look like my mother.", "focus": 3, "reveal": [57], "pause": 2.0}
+      - {"emma": "Fifty-nine. How tall are you? How tall are you?", "focus": 4, "reveal": [58], "pause": 2.0}
+      - {"tom": "Sixty. About one metre seventy-five. About one metre seventy-five.", "focus": 5, "reveal": [59], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "What colour are your eyes?", "vi": "Mắt bạn màu gì?"}
+      - {"n": 62, "answer": "They're blue.", "vi": "Màu xanh."}
+      - {"n": 63, "answer": "My aunts say I'm too thin.", "vi": "Các dì bảo mình gầy quá."}
+      - {"n": 64, "answer": "My mother wears glasses, and her hair is grey now.", "vi": "Mẹ mình đeo kính, và giờ tóc đã bạc."}
+      - {"n": 65, "answer": "He looks younger than he is.", "vi": "Anh ấy trông trẻ hơn tuổi."}
+      - {"n": 66, "answer": "How old is she? She's in her early thirties.", "vi": "Cô ấy bao nhiêu tuổi? Khoảng ba mươi mốt, ba mươi hai."}
+    lines:
+      - {"tom": "Sixty-one. What colour are your eyes? What colour are your eyes?", "focus": 0, "pause": 2.0}
+      - {"emma": "Sixty-two. They're blue. They're blue.", "focus": 1, "reveal": [61], "pause": 2.0}
+      - {"tom": "Sixty-three. My aunts say I'm too thin. My aunts say I'm too thin.", "focus": 2, "reveal": [62], "pause": 2.0}
+      - {"emma": "Sixty-four. My mother wears glasses, and her hair is grey now. My mother wears glasses, and her hair is grey now.", "focus": 3, "reveal": [63], "pause": 2.0}
+      - {"emma": "Sixty-five. He looks younger than he is. He looks younger than he is.", "focus": 4, "reveal": [64], "pause": 2.0}
+      - {"tom": "Sixty-six. How old is she? She's in her early thirties. How old is she? She's in her early thirties.", "focus": 5, "reveal": [65], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "Jack's tall and dark, like my dad.", "vi": "Jack cao, tóc sẫm, giống bố mình."}
+      - {"n": 68, "answer": "Can you describe him?", "vi": "Bạn tả anh ấy được không?"}
+      - {"n": 69, "answer": "What does he look like?", "vi": "Anh ấy trông thế nào?"}
+      - {"n": 70, "answer": "He's tall, with short dark hair and glasses.", "vi": "Anh ấy cao, tóc sẫm ngắn, đeo kính."}
+      - {"n": 71, "answer": "Khoa wears glasses, and he's always smiling.", "vi": "Khoa đeo kính, lúc nào cũng cười."}
+      - {"n": 72, "answer": "Has she got long or short hair?", "vi": "Cô ấy tóc dài hay ngắn?"}
+    lines:
+      - {"emma": "Sixty-seven. Jack's tall and dark, like my dad. Jack's tall and dark, like my dad.", "focus": 0, "pause": 2.0}
+      - {"tom": "Sixty-eight. Can you describe him? Can you describe him?", "focus": 1, "reveal": [67], "pause": 2.0}
+      - {"emma": "Sixty-nine. What does he look like? What does he look like?", "focus": 2, "reveal": [68], "pause": 2.0}
+      - {"tom": "Seventy. He's tall, with short dark hair and glasses. He's tall, with short dark hair and glasses.", "focus": 3, "reveal": [69], "pause": 2.0}
+      - {"tom": "Seventy-one. Khoa wears glasses, and he's always smiling. Khoa wears glasses, and he's always smiling.", "say": "Seventy-one. Kwah wears glasses, and he's always smiling. Kwah wears glasses, and he's always smiling.", "focus": 4, "reveal": [70], "pause": 2.0}
+      - {"tom": "Seventy-two. Has she got long or short hair? Has she got long or short hair?", "focus": 5, "reveal": [71], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72], "pause": 2.0}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–78)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "Long and wavy. It's light brown.", "vi": "Dài và gợn sóng, màu nâu sáng."}
+      - {"n": 74, "answer": "You look just like your sister!", "vi": "Bạn trông giống chị bạn y hệt!"}
+      - {"n": 75, "answer": "Everybody says that.", "vi": "Ai cũng nói vậy."}
+      - {"n": 76, "answer": "How tall are you, Emma?", "vi": "Emma cao bao nhiêu?"}
+      - {"n": 77, "answer": "I'm about one metre sixty-five.", "vi": "Mình cao khoảng một mét sáu lăm."}
+      - {"n": 78, "answer": "Is he good-looking?", "vi": "Anh ấy có đẹp trai không?"}
+    lines:
+      - {"emma": "Seventy-three. Long and wavy. It's light brown. Long and wavy. It's light brown.", "focus": 0, "pause": 2.0}
+      - {"emma": "Seventy-four. You look just like your sister! You look just like your sister!", "focus": 1, "reveal": [73], "pause": 2.0}
+      - {"tom": "Seventy-five. Everybody says that. Everybody says that.", "focus": 2, "reveal": [74], "pause": 2.0}
+      - {"tom": "Seventy-six. How tall are you, Emma? How tall are you, Emma?", "focus": 3, "reveal": [75], "pause": 2.0}
+      - {"emma": "Seventy-seven. I'm about one metre sixty-five. I'm about one metre sixty-five.", "focus": 4, "reveal": [76], "pause": 2.0}
+      - {"emma": "Seventy-eight. Is he good-looking? Is he good-looking?", "focus": 5, "reveal": [77], "pause": 2.0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [78], "pause": 2.0}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 14.", "say": "Well done! See you in Unit fourteen.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 14."}
+

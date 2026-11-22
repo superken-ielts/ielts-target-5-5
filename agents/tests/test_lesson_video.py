@@ -600,15 +600,63 @@ def test_words_scene_and_wordlist(tmp_path):
         wordlist.load(tmp_path / "no-book")
 
 
+def test_dictation_scene_hides_answers_until_read(tmp_path):
+    """Nghe – viết liền mạch (đợt 36): cảnh `dictation` tối đa 6 dòng có số; dòng chưa `reveal` chỉ có vạch kẻ, mở ra mới
+    hiện đáp án; phụ đề không bao giờ lộ lời đang đọc; `wordlist --level all` (sách không chia cấp độ như Oxford) tính mục
+    Word list theo `w` của từng dòng, không có `w` thì theo chính `answer`."""
+    from lesson_video import wordlist
+    from lesson_video.slides import BOTTOM, C, TOP, _hex
+    data = copy.deepcopy(WRITING)
+    items = [{"n": 1, "answer": "quarter past", "vi": "quá mười lăm", "ex": "It's quarter past four.", "w": ["quarter"]},
+             {"n": 2, "answer": "midnight", "vi": "nửa đêm", "ex": "The party ends at midnight."}]
+    data["scenes"] = [{"kind": "dictation", "heading": "Dictation 1", "items": items,
+                       "lines": [{"a": "One. quarter past. quarter past. It's quarter past four.", "focus": 0, "pause": 1.5},
+                                 {"a": "Two. midnight. midnight. The party ends at midnight.", "focus": 1, "reveal": [1]},
+                                 {"a": "Check your answers.", "focus": 1, "reveal": [2]}]}]
+    lesson = sc.Lesson.model_validate(data)
+    assert lesson.scenes[0].reveal_keys() == {"1", "2"}
+    tl = timeline.build(lesson, tts.Silent(), say=quiet)
+    slides = Slides(lesson, mini_book(tmp_path), {})
+    shots = [slides.render(fr, fr.start / tl.total) for fr in tl.frames if fr.speaker]
+    ink, rh = _hex(C["ink"]), min(86, (BOTTOM - TOP + 10) / 2)
+
+    def inked(im, box):
+        x0, y0, x1, y1 = (int(v) for v in box)
+        return sum(im.getpixel((x, y)) == ink for x in range(x0, x1, 2) for y in range(y0, y1))
+    row = [(132, TOP + i * rh + 4, W - 82, TOP + (i + 1) * rh - 14) for i in range(2)]
+    assert len(shots) == 3
+    assert inked(shots[0], row[0]) == 0 and inked(shots[0], row[1]) == 0          # đang đọc mục 1: chưa lộ đáp án
+    assert inked(shots[1], row[0]) > 50 and inked(shots[1], row[1]) == 0           # sang mục 2: mở mục 1
+    assert inked(shots[2], row[1]) > 50                                            # câu cuối cảnh: mở mục 2
+    assert all(inked(im, (146, 595, W - 66, 700)) == 0 for im in shots)            # phụ đề không có lời thoại
+    for bad in ([dict(items[0], n=k) for k in range(sc.DICT_MAX + 1)], [items[0], dict(items[1], n=1)], [{"n": 1}]):
+        data["scenes"][0]["items"] = bad                                           # quá 6 dòng; trùng số; thiếu answer
+        with pytest.raises((ValidationError, ValueError)):
+            sc.Lesson.model_validate(data)
+
+    bdir = tmp_path / "ows"
+    (bdir / "work").mkdir(parents=True)
+    entries = [{"unit": "U02", "w": w, "pos": "", "level": "", "def": "", "ex": ""} for w in ("quarter", "midnight", "nearly")]
+    (bdir / wordlist.CACHE).write_text(json.dumps({"source": "Word list", "entries": entries}), encoding="utf-8")
+    (bdir / "lessons").mkdir()
+    (bdir / "lessons" / "U02-time-dictation.yaml").write_text(yaml.safe_dump(
+        {"id": "U02-time-dictation", "scenes": [{"kind": "dictation", "items": items}]}), encoding="utf-8")
+    assert wordlist.missing(bdir, "U02") == []                                     # không có cấp độ A2 nào
+    assert wordlist.missing(bdir, "U02", level=None) == wordlist.missing(bdir, "U02", level="all") == ["nearly"]
+    out = []
+    assert wordlist.run(bdir, "U02", level="all", say=out.append) == 0 and out[-1] == "chưa hiện: 1 — nearly"
+    assert cli.main(["wordlist", str(bdir), "--unit", "U02", "--level", "all"]) == 0
+
+
 @pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")
 def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     """Người học yêu cầu (đợt 26): mỗi unit Oxford Word Skills Basic một video 7–10 phút, không đếm ngược (không `wait` /
     `echo`, người học tự tạm dừng), có 1–2 phần nói theo chủ đề: Tom và Emma hỏi đáp (`qa`) và "Đến lượt bạn"
     (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5. Đợt 29: unit khó (đầu kịch bản ghi "UNIT KHÓ") được dài
     tới 15 phút để ôn tập và luyện nói chung (có bài nói mẫu Part 2 — cảnh `letter`). Hình trong sách (cảnh có `image`):
-    module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có."""
+    module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có. Video nghe – viết (đợt 36) có test riêng."""
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
-    scripts = sorted((OWS / "lessons").glob("U*.yaml"))
+    scripts = sorted(p for p in (OWS / "lessons").glob("U*.yaml") if not p.stem.endswith("-dictation"))
     assert [p.name[:3] for p in scripts][:16] == [f"U{n:02d}" for n in range(1, 17)]   # Basic English và People đủ 16 unit
     hard = []
     for path in scripts:
@@ -626,6 +674,46 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
             assert built[lesson.id]["duration"] > 10 * 60 and "letter" in kinds, lesson.id   # ôn tập + Part 2 mẫu
         assert any(s.image for s in lesson.scenes), lesson.id                                # hình trong sách
     assert hard == ["U10", "U13", "U14", "U16"]
+
+
+@pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")
+def test_word_skills_dictation_videos_cover_the_word_list():
+    """Người học yêu cầu (đợt 36): "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ
+    vựng câu theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao
+    tiếp". Mỗi unit một video nghe – viết `<id video unit>-dictation` cùng phiên, 9–11 phút, chạy liền (không `wait` /
+    `echo`); ba phần: từ trong sách (đủ mọi mục Word list của unit — `work/wordlist.json`), từ thêm theo chủ đề, câu giao
+    tiếp; số mục chạy liền 1…N; đáp án chỉ hiện sau khi đã đọc và cuối cảnh thì hiện đủ — docs/agent-hoc-tap/09 mục 5.9."""
+    from lesson_video import wordlist
+    built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
+    paths = {p.stem: p for p in (OWS / "lessons").glob("U*.yaml")}
+    units = sorted(k for k in paths if not k.endswith("-dictation"))
+    assert sorted(k for k in paths if k.endswith("-dictation")) == [k + "-dictation" for k in units]
+    assert [k[:3] for k in units][:16] == [f"U{n:02d}" for n in range(1, 17)]
+    for unit_id in units:
+        lesson, vid = sc.load(paths[unit_id + "-dictation"]), unit_id + "-dictation"
+        assert lesson.activity == sc.load(paths[unit_id]).activity, vid
+        assert 9 * 60 <= built[vid]["duration"] <= 11 * 60, (vid, built[vid]["duration"])
+        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), vid
+        assert [c for _, c in lesson.chapters()] == ["Giới thiệu", "1. Từ trong sách", "2. Từ thêm theo chủ đề",
+                                                     "3. Câu giao tiếp", "Sau khi nghe – viết"], vid
+        part, size = "", {}
+        for s in lesson.scenes:
+            part = s.chapter or part
+            if s.kind == "dictation":
+                size[part] = size.get(part, 0) + len(s.items)
+                read, shown = {}, {}
+                for i, ln in enumerate(s.lines):
+                    if ln.focus is not None:
+                        read.setdefault(str(s.items[ln.focus]["n"]), i)
+                    for k in ln.reveal or []:
+                        shown.setdefault(str(k), i)
+                assert set(shown) == s.reveal_keys(), (vid, s.heading)
+                assert all(read[k] < shown[k] for k in shown), (vid, s.heading)   # đọc trước, hiện sau
+        assert size["1. Từ trong sách"] >= 20 and size["2. Từ thêm theo chủ đề"] >= 10, (vid, size)
+        assert size["3. Câu giao tiếp"] >= 14, (vid, size)
+        nums = [it["n"] for s in lesson.scenes if s.kind == "dictation" for it in s.items]
+        assert nums == list(range(1, len(nums) + 1)), vid
+        assert wordlist.missing(OWS, unit_id[:3], level="all") == [], vid
 
 
 @pytest.mark.skipif(not (GENKI / "lessons" / "lessons.json").exists(), reason="chưa có video N5")
