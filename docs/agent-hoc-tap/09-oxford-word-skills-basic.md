@@ -452,6 +452,8 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
      - Câu không có trong hồ sơ thì viết trung tính (He / She / They) hoặc thành câu hỏi.
 - **Cảnh `dictation`** (thêm vào `agents/lesson_video` ở đợt 36):
   - tối đa 6 dòng; mỗi dòng có số `n`;
+  - generator chia mỗi phần thành cảnh 6 dòng; cảnh cuối chỉ còn 1–2 dòng thì chia đều hai cảnh cuối (6 + 1 → 4 + 3,
+    6 + 2 → 4 + 4), để không có cảnh gần trống (test: mỗi cảnh ít nhất 3 dòng);
   - dòng chưa `reveal` chỉ có vạch kẻ để viết; mở ra thì hiện `answer` (chữ đậm), nghĩa `vi`, câu ví dụ `ex`;
   - dòng đọc mục k + 1 mở đáp án mục k; câu "Check your answers." cuối cảnh mở mục cuối;
   - phụ đề không bao giờ hiện lời đang đọc, chỉ ghi "Listen and write…";

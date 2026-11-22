@@ -35,6 +35,17 @@ def num(n: int) -> str:
     return w[0].upper() + w[1:]
 
 
+def chunked(entries: list) -> list[list]:
+    """Chia thành cảnh 6 mục; cảnh cuối chỉ còn 1–2 mục thì chia đều hai cảnh cuối (6 + 1 → 4 + 3, 6 + 2 → 4 + 4)
+    để không có cảnh gần trống."""
+    chunks = [entries[i:i + PER] for i in range(0, len(entries), PER)]
+    if len(chunks) > 1 and len(chunks[-1]) <= 2:
+        tail = chunks[-2] + chunks[-1]
+        half = (len(tail) + 1) // 2
+        chunks[-2:] = [tail[:half], tail[half:]]
+    return chunks
+
+
 def j(d: dict) -> str:
     return json.dumps(d, ensure_ascii=False)
 
@@ -55,7 +66,7 @@ def scene_block(kind, chapter, heading, heading_vi, items, lines) -> list[str]:
 def word_items(entries, start, speaker, part_no, title_en, title_vi, chapter, intro):
     """book / extra → các cảnh dictation 6 mục: số, từ hai lần, câu ví dụ; mở đáp án khi sang mục sau."""
     out, n = [], start
-    chunks = [entries[i:i + PER] for i in range(0, len(entries), PER)]
+    chunks = chunked(entries)
     for ci, chunk in enumerate(chunks):
         items, lines = [], []
         if ci == 0 and intro:
@@ -93,7 +104,7 @@ def word_items(entries, start, speaker, part_no, title_en, title_vi, chapter, in
 
 def sentence_items(entries, start, chapter, intro):
     out, n = [], start
-    chunks = [entries[i:i + PER] for i in range(0, len(entries), PER)]
+    chunks = chunked(entries)
     for ci, chunk in enumerate(chunks):
         items, lines = [], []
         if ci == 0 and intro:

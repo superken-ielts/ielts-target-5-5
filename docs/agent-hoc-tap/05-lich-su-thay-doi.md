@@ -61,6 +61,10 @@ Thử và sửa trong lúc làm:
 - **Cặp hỏi – đáp:** năm chỗ một người tự hỏi tự trả lời hoặc câu hỏi không có câu đáp (Unit 1, 8, 14, 15, 16). Đã sửa;
   Unit 1 dựng lại.
 - **Chữ trên thẻ:** soát mọi mục, không có chữ bị cắt.
+- **Cảnh gần trống:** soát khung hình bản dựng thì Unit 4 có cảnh chỉ một mục (mục 43). Chín unit có cảnh cuối của một phần
+  chỉ 1–2 mục (Unit 1, 3, 4, 5, 6, 10, 11, 13, 14).
+  - Generator giờ chia đều hai cảnh cuối (6 + 1 → 4 + 3, 6 + 2 → 4 + 4). Test kiểm mỗi cảnh ít nhất 3 mục.
+  - Unit 10, 11, 13, 14 chưa dựng nên dựng luôn bản mới; Unit 1, 3, 4, 5, 6 dựng lại.
 
 ### File thêm, sửa
 

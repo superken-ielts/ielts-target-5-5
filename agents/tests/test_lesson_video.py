@@ -701,11 +701,12 @@ def test_word_skills_dictation_videos_cover_the_word_list():
             assert transcribe.silences(OWS / built[vid]["file"], noise="-45dB", dur=3.0) == [], vid
         assert [c for _, c in lesson.chapters()] == ["Giới thiệu", "1. Từ trong sách", "2. Từ thêm theo chủ đề",
                                                      "3. Câu giao tiếp", "Sau khi nghe – viết"], vid
-        part, size = "", {}
+        part, size, counts = "", {}, {}
         for s in lesson.scenes:
             part = s.chapter or part
             if s.kind == "dictation":
                 size[part] = size.get(part, 0) + len(s.items)
+                counts.setdefault(part, []).append(len(s.items))
                 read, shown = {}, {}
                 for i, ln in enumerate(s.lines):
                     if ln.focus is not None:
@@ -716,7 +717,8 @@ def test_word_skills_dictation_videos_cover_the_word_list():
                 assert all(read[k] < shown[k] for k in shown), (vid, s.heading)   # đọc trước, hiện sau
         assert size["1. Từ trong sách"] >= 20 and size["2. Từ thêm theo chủ đề"] >= 10, (vid, size)
         assert size["3. Câu giao tiếp"] >= 14, (vid, size)
-        nums = [it["n"] for s in lesson.scenes if s.kind == "dictation" for it in s.items]
+        assert all(n >= 3 for c in counts.values() for n in c), (vid, counts)            # không có cảnh gần trống
+        nums =[it["n"] for s in lesson.scenes if s.kind == "dictation" for it in s.items]
         assert nums == list(range(1, len(nums) + 1)), vid
         assert wordlist.missing(OWS, unit_id[:3], level="all") == [], vid
 
