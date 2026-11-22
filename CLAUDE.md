@@ -56,6 +56,9 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
   nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`
   có `image` — file 09 mục 5.3a.
+- Khoảng lặng (đợt 36, người học: "video ko nên có pause quá 3 giây nếu có ko có càng tốt"): video mới không có khoảng lặng từ
+  3 giây trở lên, tốt nhất là không có. Không dùng `wait`; `pause` + `gap` (+ `scene_gap` ở cuối cảnh) dưới 3 giây; người
+  học tự tạm dừng. Đo: `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -`. Video cũ còn vi phạm: file 04 P2-71.
 - Oxford Word Skills Basic, video nghe – viết (đợt 36): mỗi unit thêm `<id>-dictation` khoảng 10 phút (test 9–11), cùng phiên,
   chạy liền, cảnh `dictation`; đủ mọi mục Word list của unit (`work/wordlist.json`; `python -m lesson_video wordlist
   ../books/book_oxford_word_skills_basic --unit U0x --level all` ra 0), thêm từ và câu giao tiếp theo chủ đề. Kịch bản sinh từ

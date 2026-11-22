@@ -2,9 +2,10 @@
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U04-countries-dictation.yaml
 # Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
 # theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
-# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
-# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
-# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
 # Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all
 # Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
 # sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
@@ -16,6 +17,7 @@ title: "Unit 4 · Countries and nationalities"
 subtitle: "Dictation · listen and write: countries, nationalities and languages"
 title_vi: "Nghe – viết 10 phút: quốc gia, quốc tịch, ngôn ngữ — từ trong sách, từ thêm, câu giao tiếp"
 tag: "BASIC ENGLISH · UNIT 4"
+scene_gap: 0.4
 speakers:
   # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
   emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
@@ -26,8 +28,8 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 4: Countries and nationalities. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit four: Countries and nationalities. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 4: quốc gia, quốc tịch, ngôn ngữ. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 43 words from the book. You hear each word twice, then a sentence. Then 10 more useful words, and 18 useful sentences for conversation.", "say": "There are three parts. First, forty-three words from the book. You hear each word twice, then a sentence. Then ten more useful words, and eighteen useful sentences for conversation.", "vi": "Ba phần: 43 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 10 từ thêm, 18 câu giao tiếp."}
-      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+      - {"emma": "There are three parts. First, 43 words from the book. You hear each word twice, and then an example sentence twice. Then 10 more useful words, and 20 useful sentences for conversation.", "say": "There are three parts. First, forty-three words from the book. You hear each word twice, and then an example sentence twice. Then ten more useful words, and twenty useful sentences for conversation.", "vi": "Ba phần: 43 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 10 từ thêm, 20 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
     chapter: "1. Từ trong sách"
@@ -42,13 +44,13 @@ scenes:
       - {"n": 6, "answer": "the United States of America, the USA", "vi": "Hoa Kỳ", "ex": "New York is in the USA.", "w": ["United States of America", "USA"]}
     lines:
       - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
-      - {"emma": "One. England, English. England, English. People in England speak English.", "focus": 0, "pause": 1.5}
-      - {"emma": "Two. Scotland, Wales. Scotland, Wales. Scotland and Wales are in Great Britain.", "focus": 1, "reveal": [1], "pause": 1.5}
-      - {"emma": "Three. Ireland, Northern Ireland. Ireland, Northern Ireland. Northern Ireland is in the UK, but Ireland isn't.", "say": "Three. Ireland, Northern Ireland. Ireland, Northern Ireland. Northern Ireland is in the U K, but Ireland isn't.", "focus": 2, "reveal": [2], "pause": 1.5}
-      - {"emma": "Four. Great Britain, Britain. Great Britain, Britain. Great Britain is England, Scotland and Wales.", "focus": 3, "reveal": [3], "pause": 1.5}
-      - {"emma": "Five. the United Kingdom, the UK. the United Kingdom, the UK. The UK is Great Britain and Northern Ireland.", "say": "Five. the United Kingdom, the U K. the United Kingdom, the U K. The U K is Great Britain and Northern Ireland.", "focus": 4, "reveal": [4], "pause": 1.5}
-      - {"emma": "Six. the United States of America, the USA. the United States of America, the USA. New York is in the USA.", "say": "Six. the United States of America, the U S A. the United States of America, the U S A. New York is in the U S A.", "focus": 5, "reveal": [5], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+      - {"emma": "One. England, English. England, English. People in England speak English. People in England speak English.", "focus": 0}
+      - {"emma": "Two. Scotland, Wales. Scotland, Wales. Scotland and Wales are in Great Britain. Scotland and Wales are in Great Britain.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. Ireland, Northern Ireland. Ireland, Northern Ireland. Northern Ireland is in the UK, but Ireland isn't. Northern Ireland is in the UK, but Ireland isn't.", "say": "Three. Ireland, Northern Ireland. Ireland, Northern Ireland. Northern Ireland is in the U K, but Ireland isn't. Northern Ireland is in the U K, but Ireland isn't.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. Great Britain, Britain. Great Britain, Britain. Great Britain is England, Scotland and Wales. Great Britain is England, Scotland and Wales.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. the United Kingdom, the UK. the United Kingdom, the UK. The UK is Great Britain and Northern Ireland. The UK is Great Britain and Northern Ireland.", "say": "Five. the United Kingdom, the U K. the United Kingdom, the U K. The U K is Great Britain and Northern Ireland. The U K is Great Britain and Northern Ireland.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. the United States of America, the USA. the United States of America, the USA. New York is in the USA. New York is in the USA.", "say": "Six. the United States of America, the U S A. the United States of America, the U S A. New York is in the U S A. New York is in the U S A.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (7–12)"
@@ -61,13 +63,13 @@ scenes:
       - {"n": 11, "answer": "Argentina, Argentinian", "vi": "Argentina, người Argentina", "ex": "Argentina is in South America.", "w": ["Argentina", "Argentinian"]}
       - {"n": 12, "answer": "France, French", "vi": "Pháp, người Pháp / tiếng Pháp", "ex": "People in France speak French.", "w": ["France", "French"]}
     lines:
-      - {"emma": "Seven. America, American. America, American. Americans speak English.", "focus": 0, "pause": 1.5}
-      - {"emma": "Eight. Canada, Canadian. Canada, Canadian. Canadians speak English or French.", "focus": 1, "reveal": [7], "pause": 1.5}
-      - {"emma": "Nine. Mexico, Mexican. Mexico, Mexican. Mexicans speak Spanish.", "focus": 2, "reveal": [8], "pause": 1.5}
-      - {"emma": "Ten. Brazil, Brazilian. Brazil, Brazilian. Brazilians speak Portuguese.", "focus": 3, "reveal": [9], "pause": 1.5}
-      - {"emma": "Eleven. Argentina, Argentinian. Argentina, Argentinian. Argentina is in South America.", "focus": 4, "reveal": [10], "pause": 1.5}
-      - {"emma": "Twelve. France, French. France, French. People in France speak French.", "focus": 5, "reveal": [11], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+      - {"emma": "Seven. America, American. America, American. Americans speak English. Americans speak English.", "focus": 0}
+      - {"emma": "Eight. Canada, Canadian. Canada, Canadian. Canadians speak English or French. Canadians speak English or French.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. Mexico, Mexican. Mexico, Mexican. Mexicans speak Spanish. Mexicans speak Spanish.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. Brazil, Brazilian. Brazil, Brazilian. Brazilians speak Portuguese. Brazilians speak Portuguese.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. Argentina, Argentinian. Argentina, Argentinian. Argentina is in South America. Argentina is in South America.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. France, French. France, French. People in France speak French. People in France speak French.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (13–18)"
@@ -80,13 +82,13 @@ scenes:
       - {"n": 17, "answer": "Greece, Greek", "vi": "Hy Lạp", "ex": "Greeks speak Greek.", "w": ["Greece", "Greek"]}
       - {"n": 18, "answer": "Switzerland, Swiss", "vi": "Thụy Sĩ", "ex": "The Swiss speak German, French or Italian.", "w": ["Switzerland", "Swiss"]}
     lines:
-      - {"emma": "Thirteen. Germany, German. Germany, German. Germans speak German.", "focus": 0, "pause": 1.5}
-      - {"emma": "Fourteen. Italy, Italian. Italy, Italian. Italians speak Italian.", "focus": 1, "reveal": [13], "pause": 1.5}
-      - {"emma": "Fifteen. Spain, Spanish. Spain, Spanish. People in Spain speak Spanish.", "focus": 2, "reveal": [14], "pause": 1.5}
-      - {"emma": "Sixteen. Portugal, Portuguese. Portugal, Portuguese. Portuguese is the language of Portugal and Brazil.", "focus": 3, "reveal": [15], "pause": 1.5}
-      - {"emma": "Seventeen. Greece, Greek. Greece, Greek. Greeks speak Greek.", "focus": 4, "reveal": [16], "pause": 1.5}
-      - {"emma": "Eighteen. Switzerland, Swiss. Switzerland, Swiss. The Swiss speak German, French or Italian.", "focus": 5, "reveal": [17], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+      - {"emma": "Thirteen. Germany, German. Germany, German. Germans speak German. Germans speak German.", "focus": 0}
+      - {"emma": "Fourteen. Italy, Italian. Italy, Italian. Italians speak Italian. Italians speak Italian.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. Spain, Spanish. Spain, Spanish. People in Spain speak Spanish. People in Spain speak Spanish.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. Portugal, Portuguese. Portugal, Portuguese. Portuguese is the language of Portugal and Brazil. Portuguese is the language of Portugal and Brazil.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. Greece, Greek. Greece, Greek. Greeks speak Greek. Greeks speak Greek.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. Switzerland, Swiss. Switzerland, Swiss. The Swiss speak German, French or Italian. The Swiss speak German, French or Italian.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (19–24)"
@@ -99,13 +101,13 @@ scenes:
       - {"n": 23, "answer": "Turkey, Turkish", "vi": "Thổ Nhĩ Kỳ", "ex": "Turkish people speak Turkish.", "w": ["Turkey", "Turkish"]}
       - {"n": 24, "answer": "Egypt, Egyptian", "vi": "Ai Cập", "ex": "Egyptians speak Arabic.", "w": ["Egypt", "Egyptian"]}
     lines:
-      - {"emma": "Nineteen. Poland, Polish. Poland, Polish. Polish people speak Polish.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty. the Czech Republic, Czech. the Czech Republic, Czech. Prague is in the Czech Republic.", "focus": 1, "reveal": [19], "pause": 1.5}
-      - {"emma": "Twenty-one. Hungary, Hungarian. Hungary, Hungarian. Budapest is in Hungary.", "focus": 2, "reveal": [20], "pause": 1.5}
-      - {"emma": "Twenty-two. Russia, Russian. Russia, Russian. Russians speak Russian.", "focus": 3, "reveal": [21], "pause": 1.5}
-      - {"emma": "Twenty-three. Turkey, Turkish. Turkey, Turkish. Turkish people speak Turkish.", "focus": 4, "reveal": [22], "pause": 1.5}
-      - {"emma": "Twenty-four. Egypt, Egyptian. Egypt, Egyptian. Egyptians speak Arabic.", "focus": 5, "reveal": [23], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+      - {"emma": "Nineteen. Poland, Polish. Poland, Polish. Polish people speak Polish. Polish people speak Polish.", "focus": 0}
+      - {"emma": "Twenty. the Czech Republic, Czech. the Czech Republic, Czech. Prague is in the Czech Republic. Prague is in the Czech Republic.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. Hungary, Hungarian. Hungary, Hungarian. Budapest is in Hungary. Budapest is in Hungary.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. Russia, Russian. Russia, Russian. Russians speak Russian. Russians speak Russian.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. Turkey, Turkish. Turkey, Turkish. Turkish people speak Turkish. Turkish people speak Turkish.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. Egypt, Egyptian. Egypt, Egyptian. Egyptians speak Arabic. Egyptians speak Arabic.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (25–30)"
@@ -118,13 +120,13 @@ scenes:
       - {"n": 29, "answer": "Japan, Japanese", "vi": "Nhật Bản", "ex": "The Japanese speak Japanese.", "w": ["Japan", "Japanese"]}
       - {"n": 30, "answer": "South Korea, Korean", "vi": "Hàn Quốc", "ex": "Koreans speak Korean.", "w": ["South Korea", "Korean"]}
     lines:
-      - {"emma": "Twenty-five. Saudi Arabia, Saudi, Arabic. Saudi Arabia, Saudi, Arabic. Saudis speak Arabic.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty-six. India, Indian. India, Indian. Many Indians speak Hindi and English.", "focus": 1, "reveal": [25], "pause": 1.5}
-      - {"emma": "Twenty-seven. China, Chinese. China, Chinese. The Chinese speak Mandarin or Cantonese.", "focus": 2, "reveal": [26], "pause": 1.5}
-      - {"emma": "Twenty-eight. Mandarin, Cantonese. Mandarin, Cantonese. People in Hong Kong speak Cantonese.", "focus": 3, "reveal": [27], "pause": 1.5}
-      - {"emma": "Twenty-nine. Japan, Japanese. Japan, Japanese. The Japanese speak Japanese.", "focus": 4, "reveal": [28], "pause": 1.5}
-      - {"emma": "Thirty. South Korea, Korean. South Korea, Korean. Koreans speak Korean.", "focus": 5, "reveal": [29], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30], "pause": 2.0}
+      - {"emma": "Twenty-five. Saudi Arabia, Saudi, Arabic. Saudi Arabia, Saudi, Arabic. Saudis speak Arabic. Saudis speak Arabic.", "focus": 0}
+      - {"emma": "Twenty-six. India, Indian. India, Indian. Many Indians speak Hindi and English. Many Indians speak Hindi and English.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. China, Chinese. China, Chinese. The Chinese speak Mandarin or Cantonese. The Chinese speak Mandarin or Cantonese.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. Mandarin, Cantonese. Mandarin, Cantonese. People in Hong Kong speak Cantonese. People in Hong Kong speak Cantonese.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. Japan, Japanese. Japan, Japanese. The Japanese speak Japanese. The Japanese speak Japanese.", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. South Korea, Korean. South Korea, Korean. Koreans speak Korean. Koreans speak Korean.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (31–36)"
@@ -137,13 +139,13 @@ scenes:
       - {"n": 35, "answer": "the Middle East", "vi": "Trung Đông", "ex": "Saudi Arabia is in the Middle East.", "w": ["Middle East"]}
       - {"n": 36, "answer": "Africa", "vi": "châu Phi", "ex": "Egypt is in Africa.", "w": ["Africa"]}
     lines:
-      - {"emma": "Thirty-one. Thailand, Thai. Thailand, Thai. Thais speak Thai.", "focus": 0, "pause": 1.5}
-      - {"emma": "Thirty-two. Australia, Australian. Australia, Australian. Australians speak English.", "focus": 1, "reveal": [31], "pause": 1.5}
-      - {"emma": "Thirty-three. Europe. Europe. Hungary is in Europe.", "focus": 2, "reveal": [32], "pause": 1.5}
-      - {"emma": "Thirty-four. Asia, the Far East. Asia, the Far East. Thailand is in the Far East.", "focus": 3, "reveal": [33], "pause": 1.5}
-      - {"emma": "Thirty-five. the Middle East. the Middle East. Saudi Arabia is in the Middle East.", "focus": 4, "reveal": [34], "pause": 1.5}
-      - {"emma": "Thirty-six. Africa. Africa. Egypt is in Africa.", "focus": 5, "reveal": [35], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36], "pause": 2.0}
+      - {"emma": "Thirty-one. Thailand, Thai. Thailand, Thai. Thais speak Thai. Thais speak Thai.", "focus": 0}
+      - {"emma": "Thirty-two. Australia, Australian. Australia, Australian. Australians speak English. Australians speak English.", "focus": 1, "reveal": [31]}
+      - {"emma": "Thirty-three. Europe. Europe. Hungary is in Europe. Hungary is in Europe.", "focus": 2, "reveal": [32]}
+      - {"emma": "Thirty-four. Asia, the Far East. Asia, the Far East. Thailand is in the Far East. Thailand is in the Far East.", "focus": 3, "reveal": [33]}
+      - {"emma": "Thirty-five. the Middle East. the Middle East. Saudi Arabia is in the Middle East. Saudi Arabia is in the Middle East.", "focus": 4, "reveal": [34]}
+      - {"emma": "Thirty-six. Africa. Africa. Egypt is in Africa. Egypt is in Africa.", "focus": 5, "reveal": [35]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (37–42)"
@@ -156,13 +158,13 @@ scenes:
       - {"n": 41, "answer": "language", "vi": "ngôn ngữ", "ex": "How many languages do you speak?", "w": ["language"]}
       - {"n": 42, "answer": "Where are you from?", "vi": "Bạn từ đâu đến?", "ex": "Where are you from? I'm from Vietnam.", "w": ["Where are you from?", "from"]}
     lines:
-      - {"emma": "Thirty-seven. North America, Central America. North America, Central America. Mexico is in Central America.", "focus": 0, "pause": 1.5}
-      - {"emma": "Thirty-eight. Australasia. Australasia. Australia is in Australasia.", "focus": 1, "reveal": [37], "pause": 1.5}
-      - {"emma": "Thirty-nine. area. area. Which area of the world is Brazil in?", "focus": 2, "reveal": [38], "pause": 1.5}
-      - {"emma": "Forty. nationality. nationality. What nationality are you?", "focus": 3, "reveal": [39], "pause": 1.5}
-      - {"emma": "Forty-one. language. language. How many languages do you speak?", "focus": 4, "reveal": [40], "pause": 1.5}
-      - {"emma": "Forty-two. Where are you from?. Where are you from?. Where are you from? I'm from Vietnam.", "focus": 5, "reveal": [41], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42], "pause": 2.0}
+      - {"emma": "Thirty-seven. North America, Central America. North America, Central America. Mexico is in Central America. Mexico is in Central America.", "focus": 0}
+      - {"emma": "Thirty-eight. Australasia. Australasia. Australia is in Australasia. Australia is in Australasia.", "focus": 1, "reveal": [37]}
+      - {"emma": "Thirty-nine. area. area. Which area of the world is Brazil in? Which area of the world is Brazil in?", "focus": 2, "reveal": [38]}
+      - {"emma": "Forty. nationality. nationality. What nationality are you? What nationality are you?", "focus": 3, "reveal": [39]}
+      - {"emma": "Forty-one. language. language. How many languages do you speak? How many languages do you speak?", "focus": 4, "reveal": [40]}
+      - {"emma": "Forty-two. Where are you from?. Where are you from?. Where are you from? I'm from Vietnam. Where are you from? I'm from Vietnam.", "focus": 5, "reveal": [41]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (43–43)"
@@ -170,8 +172,8 @@ scenes:
     items:
       - {"n": 43, "answer": "come from", "vi": "đến từ", "ex": "Where do you come from?", "w": ["come from"]}
     lines:
-      - {"emma": "Forty-three. come from. come from. Where do you come from?", "focus": 0, "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 0, "reveal": [43], "pause": 2.0}
+      - {"emma": "Forty-three. come from. come from. Where do you come from? Where do you come from?", "focus": 0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 0, "reveal": [43]}
 
   - kind: dictation
     chapter: "2. Từ thêm theo chủ đề"
@@ -186,13 +188,13 @@ scenes:
       - {"n": 49, "answer": "abroad", "vi": "ở nước ngoài", "ex": "She wants to study abroad."}
     lines:
       - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
-      - {"tom": "Forty-four. Vietnam, Vietnamese. Vietnam, Vietnamese. The Vietnamese speak Vietnamese.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-five. Singapore, Singaporean. Singapore, Singaporean. Many Singaporeans speak English and Chinese.", "focus": 1, "reveal": [44], "pause": 1.5}
-      - {"tom": "Forty-six. the Philippines, Filipino. the Philippines, Filipino. Manila is the capital of the Philippines.", "focus": 2, "reveal": [45], "pause": 1.5}
-      - {"tom": "Forty-seven. New Zealand. New Zealand. New Zealand is near Australia.", "focus": 3, "reveal": [46], "pause": 1.5}
-      - {"tom": "Forty-eight. capital city. capital city. Hanoi is the capital city of Vietnam.", "say": "Forty-eight. capital city. capital city. Ha Noi is the capital city of Vietnam.", "focus": 4, "reveal": [47], "pause": 1.5}
-      - {"tom": "Forty-nine. abroad. abroad. She wants to study abroad.", "focus": 5, "reveal": [48], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49], "pause": 2.0}
+      - {"tom": "Forty-four. Vietnam, Vietnamese. Vietnam, Vietnamese. The Vietnamese speak Vietnamese. The Vietnamese speak Vietnamese.", "focus": 0}
+      - {"tom": "Forty-five. Singapore, Singaporean. Singapore, Singaporean. Many Singaporeans speak English and Chinese. Many Singaporeans speak English and Chinese.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. the Philippines, Filipino. the Philippines, Filipino. Manila is the capital of the Philippines. Manila is the capital of the Philippines.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. New Zealand. New Zealand. New Zealand is near Australia. New Zealand is near Australia.", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. capital city. capital city. Hanoi is the capital city of Vietnam. Hanoi is the capital city of Vietnam.", "say": "Forty-eight. capital city. capital city. Ha Noi is the capital city of Vietnam. Ha Noi is the capital city of Vietnam.", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. abroad. abroad. She wants to study abroad. She wants to study abroad.", "focus": 5, "reveal": [48]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (50–53)"
@@ -203,11 +205,11 @@ scenes:
       - {"n": 52, "answer": "accent", "vi": "giọng (vùng miền)", "ex": "He speaks English with an American accent."}
       - {"n": 53, "answer": "flag", "vi": "lá cờ", "ex": "The Vietnamese flag is red and yellow."}
     lines:
-      - {"tom": "Fifty. foreigner. foreigner. Many foreigners live in this area.", "focus": 0, "pause": 1.5}
-      - {"tom": "Fifty-one. native speaker. native speaker. Our teacher is a native speaker of English.", "focus": 1, "reveal": [50], "pause": 1.5}
-      - {"tom": "Fifty-two. accent. accent. He speaks English with an American accent.", "focus": 2, "reveal": [51], "pause": 1.5}
-      - {"tom": "Fifty-three. flag. flag. The Vietnamese flag is red and yellow.", "focus": 3, "reveal": [52], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [53], "pause": 2.0}
+      - {"tom": "Fifty. foreigner. foreigner. Many foreigners live in this area. Many foreigners live in this area.", "focus": 0}
+      - {"tom": "Fifty-one. native speaker. native speaker. Our teacher is a native speaker of English. Our teacher is a native speaker of English.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. accent. accent. He speaks English with an American accent. He speaks English with an American accent.", "focus": 2, "reveal": [51]}
+      - {"tom": "Fifty-three. flag. flag. The Vietnamese flag is red and yellow. The Vietnamese flag is red and yellow.", "focus": 3, "reveal": [52]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [53]}
 
   - kind: dictation
     chapter: "3. Câu giao tiếp"
@@ -222,13 +224,13 @@ scenes:
       - {"n": 59, "answer": "I come from the south of England.", "vi": "Mình đến từ miền nam nước Anh."}
     lines:
       - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
-      - {"emma": "Fifty-four. Where are you from? Where are you from?", "focus": 0, "pause": 2.0}
-      - {"tom": "Fifty-five. I'm from Vietnam. I'm Vietnamese. I'm from Vietnam. I'm Vietnamese.", "focus": 1, "reveal": [54], "pause": 2.0}
-      - {"emma": "Fifty-six. Which part of Vietnam are you from? Which part of Vietnam are you from?", "focus": 2, "reveal": [55], "pause": 2.0}
-      - {"tom": "Fifty-seven. I'm from Da Lat, in the Central Highlands. I'm from Da Lat, in the Central Highlands.", "say": "Fifty-seven. I'm from Dah Lot, in the Central Highlands. I'm from Dah Lot, in the Central Highlands.", "focus": 3, "reveal": [56], "pause": 2.0}
-      - {"tom": "Fifty-eight. Where do you come from? Where do you come from?", "focus": 4, "reveal": [57], "pause": 2.0}
-      - {"emma": "Fifty-nine. I come from the south of England. I come from the south of England.", "focus": 5, "reveal": [58], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59], "pause": 2.0}
+      - {"emma": "Fifty-four. Where are you from? Where are you from?", "focus": 0}
+      - {"tom": "Fifty-five. I'm from Vietnam. I'm Vietnamese. I'm from Vietnam. I'm Vietnamese.", "focus": 1, "reveal": [54]}
+      - {"emma": "Fifty-six. Which part of Vietnam are you from? Which part of Vietnam are you from?", "focus": 2, "reveal": [55]}
+      - {"tom": "Fifty-seven. I'm from Da Lat, in the Central Highlands. I'm from Da Lat, in the Central Highlands.", "say": "Fifty-seven. I'm from Dah Lot, in the Central Highlands. I'm from Dah Lot, in the Central Highlands.", "focus": 3, "reveal": [56]}
+      - {"tom": "Fifty-eight. Where do you come from? Where do you come from?", "focus": 4, "reveal": [57]}
+      - {"emma": "Fifty-nine. I come from the south of England. I come from the south of England.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
 
   - kind: dictation
     heading: "Dictation 3 · Useful sentences (60–65)"
@@ -241,13 +243,13 @@ scenes:
       - {"n": 64, "answer": "Have you ever been abroad?", "vi": "Bạn đi nước ngoài bao giờ chưa?"}
       - {"n": 65, "answer": "Not yet. I hope to go to Australia next year.", "vi": "Chưa. Mình mong năm sau được đi Úc."}
     lines:
-      - {"tom": "Sixty. What languages do you speak? What languages do you speak?", "focus": 0, "pause": 2.0}
-      - {"emma": "Sixty-one. English, French and a little Vietnamese. English, French and a little Vietnamese.", "focus": 1, "reveal": [60], "pause": 2.0}
-      - {"tom": "Sixty-two. How long have you lived in Vietnam? How long have you lived in Vietnam?", "focus": 2, "reveal": [61], "pause": 2.0}
-      - {"emma": "Sixty-three. For three years. For three years.", "focus": 3, "reveal": [62], "pause": 2.0}
-      - {"emma": "Sixty-four. Have you ever been abroad? Have you ever been abroad?", "focus": 4, "reveal": [63], "pause": 2.0}
-      - {"tom": "Sixty-five. Not yet. I hope to go to Australia next year. Not yet. I hope to go to Australia next year.", "focus": 5, "reveal": [64], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65], "pause": 2.0}
+      - {"tom": "Sixty. What languages do you speak? What languages do you speak?", "focus": 0}
+      - {"emma": "Sixty-one. English, French and a little Vietnamese. English, French and a little Vietnamese.", "focus": 1, "reveal": [60]}
+      - {"tom": "Sixty-two. How long have you lived in Vietnam? How long have you lived in Vietnam?", "focus": 2, "reveal": [61]}
+      - {"emma": "Sixty-three. For three years. For three years.", "focus": 3, "reveal": [62]}
+      - {"emma": "Sixty-four. Have you ever been abroad? Have you ever been abroad?", "focus": 4, "reveal": [63]}
+      - {"tom": "Sixty-five. Not yet. I hope to go to Australia next year. Not yet. I hope to go to Australia next year.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
 
   - kind: dictation
     heading: "Dictation 3 · Useful sentences (66–71)"
@@ -260,13 +262,24 @@ scenes:
       - {"n": 70, "answer": "Your English is very good!", "vi": "Tiếng Anh của bạn giỏi quá!"}
       - {"n": 71, "answer": "Thank you. I'm still learning.", "vi": "Cảm ơn. Mình vẫn đang học."}
     lines:
-      - {"tom": "Sixty-six. What language do they speak in Brazil? What language do they speak in Brazil?", "focus": 0, "pause": 2.0}
-      - {"emma": "Sixty-seven. They speak Portuguese. They speak Portuguese.", "focus": 1, "reveal": [66], "pause": 2.0}
-      - {"tom": "Sixty-eight. Is Scotland in England? Is Scotland in England?", "focus": 2, "reveal": [67], "pause": 2.0}
-      - {"emma": "Sixty-nine. No, it's in Great Britain, but it isn't in England. No, it's in Great Britain, but it isn't in England.", "focus": 3, "reveal": [68], "pause": 2.0}
-      - {"emma": "Seventy. Your English is very good! Your English is very good!", "focus": 4, "reveal": [69], "pause": 2.0}
-      - {"tom": "Seventy-one. Thank you. I'm still learning. Thank you. I'm still learning.", "focus": 5, "reveal": [70], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71], "pause": 2.0}
+      - {"tom": "Sixty-six. What language do they speak in Brazil? What language do they speak in Brazil?", "focus": 0}
+      - {"emma": "Sixty-seven. They speak Portuguese. They speak Portuguese.", "focus": 1, "reveal": [66]}
+      - {"tom": "Sixty-eight. Is Scotland in England? Is Scotland in England?", "focus": 2, "reveal": [67]}
+      - {"emma": "Sixty-nine. No, it's in Great Britain, but it isn't in England. No, it's in Great Britain, but it isn't in England.", "focus": 3, "reveal": [68]}
+      - {"emma": "Seventy. Your English is very good! Your English is very good!", "focus": 4, "reveal": [69]}
+      - {"tom": "Seventy-one. Thank you. I'm still learning. Thank you. I'm still learning.", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Do you speak any other languages?", "vi": "Bạn có nói được ngôn ngữ nào khác không?"}
+      - {"n": 73, "answer": "Not yet. I'm still learning English.", "vi": "Chưa. Mình vẫn đang học tiếng Anh."}
+    lines:
+      - {"emma": "Seventy-two. Do you speak any other languages? Do you speak any other languages?", "focus": 0}
+      - {"tom": "Seventy-three. Not yet. I'm still learning English. Not yet. I'm still learning English.", "focus": 1, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 1, "reveal": [73]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"

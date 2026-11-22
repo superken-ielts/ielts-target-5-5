@@ -368,3 +368,39 @@ UNITS["U04"] = dict(
         ("Thank you. I'm still learning.", "Cảm ơn. Mình vẫn đang học.", "tom"),
     ],
 )
+
+# --- thêm sau khi bỏ mọi `pause` (đợt 36): bù thời lượng cho khoảng 10 phút ---
+UNITS["U01"]["extra"] += [
+    ("house number", "số nhà", "What's your house number?", None),
+]
+UNITS["U01"]["phrases"] += [
+    ("How many brothers and sisters have you got?", "Bạn có bao nhiêu anh chị em?", "emma"),
+    ("Two. A sister and a brother.", "Hai. Một chị gái và một em trai.", "tom"),
+    ("What's the score?", "Tỉ số bao nhiêu rồi?", "tom"),
+    ("It's two all.", "Hai đều.", "emma"),
+]
+UNITS["U02"]["extra"] += [
+    ("a quarter of an hour", "mười lăm phút", "The film starts in a quarter of an hour.", None),
+    ("daily", "hằng ngày", "The museum is open daily from nine to five.", None),
+    ("weekday", "ngày thường", "The library opens at eight on weekdays.", None),
+    ("rush hour", "giờ cao điểm", "The traffic is terrible in the rush hour.", None),
+]
+UNITS["U02"]["phrases"] += [
+    ("What time is your flight?", "Chuyến bay của bạn lúc mấy giờ?", "emma"),
+    ("It leaves at ten to six in the morning.", "Lúc sáu giờ kém mười sáng.", "tom"),
+    ("How long is the lesson?", "Buổi học dài bao lâu?", "tom"),
+    ("It's an hour and a half.", "Một tiếng rưỡi.", "emma"),
+    ("Is the shop open on Sundays?", "Chủ nhật cửa hàng có mở không?", "tom"),
+    ("Yes, from ten until four.", "Có, từ mười giờ đến bốn giờ.", "emma"),
+]
+UNITS["U03"]["extra"] += [
+    ("century", "thế kỷ", "We live in the twenty-first century.", None),
+]
+UNITS["U03"]["phrases"] += [
+    ("When does the course start?", "Khóa học bắt đầu khi nào?", "tom"),
+    ("On the first of June.", "Ngày một tháng sáu.", "emma"),
+]
+UNITS["U04"]["phrases"] += [
+    ("Do you speak any other languages?", "Bạn có nói được ngôn ngữ nào khác không?", "emma"),
+    ("Not yet. I'm still learning English.", "Chưa. Mình vẫn đang học tiếng Anh.", "tom"),
+]

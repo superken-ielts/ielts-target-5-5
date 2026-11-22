@@ -496,10 +496,16 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Test: video Unit 5 đủ 11, có hình với `box`, không `wait` / `echo`, từ 5 phút, đáp án hiện sau (dùng chung `_check_answers_after` với test A2), phát đủ ba file nghe; độ phủ Unit 1–5; e2e: Unit 5 có 11 nút video sáu nhóm, từ 5 phút, nút Exam practice: Listening mở đúng phiên.
   - Còn: 4 video luyện nói thêm Unit 4–5 (P2-57); Unit 6 trở đi (file 06 mục 8.2).
 - [x] **P2-70** **Oxford Word Skills Basic: mỗi unit thêm một video nghe – viết 10 phút** (đợt 36, 16 video, {TOTAL36}), theo yêu cầu người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.9.
-  - Video `<id>-dictation` cùng phiên với video bài giảng của unit, chạy liền khoảng 10 phút, không đếm ngược; người học tự tạm dừng để viết. Ba phần: từ trong sách (Emma đọc, mỗi từ hai lần rồi một câu ví dụ), từ thêm theo chủ đề (Tom), câu giao tiếp (mỗi câu hai lần, hai người đọc xen kẽ). Đáp án hiện khi sang mục sau.
+  - Video `<id>-dictation` cùng phiên với video bài giảng của unit, chạy liền khoảng 10 phút, không đếm ngược, không có khoảng lặng (người học: "video ko nên có pause quá 3 giây nếu có ko có càng tốt"); người học tự tạm dừng để viết. Ba phần: từ trong sách (Emma đọc, mỗi từ hai lần rồi câu ví dụ hai lần), từ thêm theo chủ đề (Tom), câu giao tiếp (mỗi câu hai lần, hai người đọc xen kẽ). Đáp án hiện khi sang mục sau.
   - Word list cuối sách (tr. 237–254) OCR hai lần bằng rapidocr, soát tay → `work/wordlist.json` (433 mục Unit 1–16). Mỗi video đủ mọi mục Word list của unit và từ trên trang unit mà Word list không có (số, giờ, thứ, tháng…): `wordlist --level all` ra "chưa hiện: 0" ở cả 16 unit.
   - Công cụ: cảnh `dictation` (tối đa 6 dòng; chưa mở thì chỉ có vạch kẻ, phụ đề không lộ lời đọc), `wordlist --level all` cho sách không chia cấp độ, bộ sinh kịch bản `work/dictation/gen_dictation.py` từ dữ liệu `units_*.py`.
-  - Test: cảnh `dictation` (ẩn tới khi mở, phụ đề không có lời, quá 6 dòng / trùng số bị từ chối, `wordlist --level all`); hồi quy 16 video (9–11 phút, không `wait` / `echo`, đủ ba phần, số mục liền 1…N, đáp án chỉ hiện sau khi đọc, đủ mục Word list); e2e: thẻ sách 32 video, mỗi unit hai nút (bài giảng, nghe – viết 9–10 phút), phiên Unit 6 có hai video.
+  - Test: cảnh `dictation` (ẩn tới khi mở, phụ đề không có lời, quá 6 dòng / trùng số bị từ chối, `wordlist --level all`); hồi quy 16 video (9–11 phút, không `wait` / `echo` / `pause`, ffmpeg không thấy khoảng lặng từ 3 giây, đủ ba phần, số mục liền 1…N, đáp án chỉ hiện sau khi đọc, đủ mục Word list); e2e: thẻ sách 32 video, mỗi unit hai nút (bài giảng, nghe – viết 9–10 phút), phiên Unit 6 có hai video.
+- [ ] **P2-71** **Bỏ khoảng lặng từ 3 giây ở video cũ** (người học, đợt 36: "video ko nên có pause quá 3 giây nếu có ko có càng tốt"). Đo bằng ffmpeg `silencedetect` (−45 dB, từ 3 giây), đợt 36:
+  - IELTS Target 5.0 Unit 1–3: 36 video còn đếm ngược `wait` (khoảng lặng tới 15 giây); Unit 5: 3 video có khoảng lặng 3,0–4,2 giây (trong file nghe của sách hoặc chỗ chuyển cảnh).
+  - English Unlimited A2 Unit 3–5: 8 video, 3,1–5,4 giây.
+  - GENKI: cả 25 video, 3,2–6,4 giây (`pause` 3 giây ở Unit 0, khoảng lặng trong file nghe).
+  - Oxford Word Skills Basic (16 video bài giảng và 16 video nghe – viết): không có.
+  - Cách sửa: bỏ `wait`, cắt `pause` để `pause` + `gap` (+ `scene_gap` ở cuối cảnh) dưới 3 giây, cắt bớt khoảng lặng dài trong đoạn file nghe; dựng lại.
 
 ### Cổng G2
 

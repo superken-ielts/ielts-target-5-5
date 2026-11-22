@@ -2,9 +2,10 @@
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U10-family-dictation.yaml
 # Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
 # theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
-# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
-# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
-# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
 # Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U10 --level all
 # Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
 # sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
@@ -14,6 +15,7 @@ title: "Unit 10 · My family"
 subtitle: "Dictation · listen and write: family words"
 title_vi: "Nghe – viết 10 phút: gia đình — từ trong sách, từ thêm, câu giao tiếp"
 tag: "PEOPLE · UNIT 10"
+scene_gap: 0.4
 speakers:
   # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
   emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
@@ -24,8 +26,8 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 10: My family. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit ten: My family. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 10: gia đình. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 24 words from the book. You hear each word twice, then a sentence. Then 21 more useful words, and 27 useful sentences for conversation.", "say": "There are three parts. First, twenty-four words from the book. You hear each word twice, then a sentence. Then twenty-one more useful words, and twenty-seven useful sentences for conversation.", "vi": "Ba phần: 24 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 21 từ thêm, 27 câu giao tiếp."}
-      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+      - {"emma": "There are three parts. First, 24 words from the book. You hear each word twice, and then an example sentence twice. Then 22 more useful words, and 31 useful sentences for conversation.", "say": "There are three parts. First, twenty-four words from the book. You hear each word twice, and then an example sentence twice. Then twenty-two more useful words, and thirty-one useful sentences for conversation.", "vi": "Ba phần: 24 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 22 từ thêm, 31 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
     chapter: "1. Từ trong sách"
@@ -40,13 +42,13 @@ scenes:
       - {"n": 6, "answer": "brother, sister", "vi": "anh/em trai, chị/em gái", "ex": "Have you got any brothers or sisters?", "w": ["brother", "sister"]}
     lines:
       - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
-      - {"emma": "One. family tree. family tree. Draw your family tree.", "focus": 0, "pause": 1.5}
-      - {"emma": "Two. relative. relative. Many relatives visit at Tết.", "say": "Two. relative. relative. Many relatives visit at Tet.", "focus": 1, "reveal": [1], "pause": 1.5}
-      - {"emma": "Three. parents. parents. Tom's parents live in Da Lat.", "say": "Three. parents. parents. Tom's parents liv in Dah Lot.", "focus": 2, "reveal": [2], "pause": 1.5}
-      - {"emma": "Four. mother, father. mother, father. Her mother and father are both teachers.", "focus": 3, "reveal": [3], "pause": 1.5}
-      - {"emma": "Five. mum, dad. mum, dad. Mum and Dad are at home.", "focus": 4, "reveal": [4], "pause": 1.5}
-      - {"emma": "Six. brother, sister. brother, sister. Have you got any brothers or sisters?", "focus": 5, "reveal": [5], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+      - {"emma": "One. family tree. family tree. Draw your family tree. Draw your family tree.", "focus": 0}
+      - {"emma": "Two. relative. relative. Many relatives visit at Tết. Many relatives visit at Tết.", "say": "Two. relative. relative. Many relatives visit at Tet. Many relatives visit at Tet.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. parents. parents. Tom's parents live in Da Lat. Tom's parents live in Da Lat.", "say": "Three. parents. parents. Tom's parents liv in Dah Lot. Tom's parents liv in Dah Lot.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. mother, father. mother, father. Her mother and father are both teachers. Her mother and father are both teachers.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. mum, dad. mum, dad. Mum and Dad are at home. Mum and Dad are at home.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. brother, sister. brother, sister. Have you got any brothers or sisters? Have you got any brothers or sisters?", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (7–12)"
@@ -59,13 +61,13 @@ scenes:
       - {"n": 11, "answer": "uncle, aunt", "vi": "chú, bác, cậu; cô, dì, bác gái", "ex": "His uncle and aunt live in Hanoi.", "w": ["uncle", "aunt"]}
       - {"n": 12, "answer": "cousin", "vi": "anh chị em họ", "ex": "Her cousin is the same age as her.", "w": ["cousin"]}
     lines:
-      - {"emma": "Seven. son, daughter. son, daughter. They have one son and two daughters.", "focus": 0, "pause": 1.5}
-      - {"emma": "Eight. husband, wife. husband, wife. John is Mary's husband, and Mary is John's wife.", "focus": 1, "reveal": [7], "pause": 1.5}
-      - {"emma": "Nine. grandfather, grandmother. grandfather, grandmother. His grandfather is seventy-eight.", "focus": 2, "reveal": [8], "pause": 1.5}
-      - {"emma": "Ten. grandson, granddaughter. grandson, granddaughter. Their grandson is three, and their granddaughter is five.", "focus": 3, "reveal": [9], "pause": 1.5}
-      - {"emma": "Eleven. uncle, aunt. uncle, aunt. His uncle and aunt live in Hanoi.", "say": "Eleven. uncle, aunt. uncle, aunt. His uncle and aunt liv in Ha Noi.", "focus": 4, "reveal": [10], "pause": 1.5}
-      - {"emma": "Twelve. cousin. cousin. Her cousin is the same age as her.", "focus": 5, "reveal": [11], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+      - {"emma": "Seven. son, daughter. son, daughter. They have one son and two daughters. They have one son and two daughters.", "focus": 0}
+      - {"emma": "Eight. husband, wife. husband, wife. John is Mary's husband, and Mary is John's wife. John is Mary's husband, and Mary is John's wife.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. grandfather, grandmother. grandfather, grandmother. His grandfather is seventy-eight. His grandfather is seventy-eight.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. grandson, granddaughter. grandson, granddaughter. Their grandson is three, and their granddaughter is five. Their grandson is three, and their granddaughter is five.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. uncle, aunt. uncle, aunt. His uncle and aunt live in Hanoi. His uncle and aunt live in Hanoi.", "say": "Eleven. uncle, aunt. uncle, aunt. His uncle and aunt liv in Ha Noi. His uncle and aunt liv in Ha Noi.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. cousin. cousin. Her cousin is the same age as her. Her cousin is the same age as her.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (13–18)"
@@ -78,13 +80,13 @@ scenes:
       - {"n": 17, "answer": "girlfriend", "vi": "bạn gái", "ex": "His girlfriend is from Canada.", "w": ["girlfriend"]}
       - {"n": 18, "answer": "get married", "vi": "kết hôn", "ex": "They got married in 1998.", "w": ["get married", "married"]}
     lines:
-      - {"emma": "Thirteen. nephew, niece. nephew, niece. Her brother's son is her nephew.", "focus": 0, "pause": 1.5}
-      - {"emma": "Fourteen. brother-in-law. brother-in-law. Her sister's husband is her brother-in-law.", "focus": 1, "reveal": [13], "pause": 1.5}
-      - {"emma": "Fifteen. sister-in-law. sister-in-law. His brother's wife is his sister-in-law.", "focus": 2, "reveal": [14], "pause": 1.5}
-      - {"emma": "Sixteen. boyfriend. boyfriend. She's got a new boyfriend.", "focus": 3, "reveal": [15], "pause": 1.5}
-      - {"emma": "Seventeen. girlfriend. girlfriend. His girlfriend is from Canada.", "focus": 4, "reveal": [16], "pause": 1.5}
-      - {"emma": "Eighteen. get married. get married. They got married in 1998.", "say": "Eighteen. get married. get married. They got married in nineteen ninety-eight.", "focus": 5, "reveal": [17], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+      - {"emma": "Thirteen. nephew, niece. nephew, niece. Her brother's son is her nephew. Her brother's son is her nephew.", "focus": 0}
+      - {"emma": "Fourteen. brother-in-law. brother-in-law. Her sister's husband is her brother-in-law. Her sister's husband is her brother-in-law.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. sister-in-law. sister-in-law. His brother's wife is his sister-in-law. His brother's wife is his sister-in-law.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. boyfriend. boyfriend. She's got a new boyfriend. She's got a new boyfriend.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. girlfriend. girlfriend. His girlfriend is from Canada. His girlfriend is from Canada.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. get married. get married. They got married in 1998. They got married in 1998.", "say": "Eighteen. get married. get married. They got married in nineteen ninety-eight. They got married in nineteen ninety-eight.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (19–24)"
@@ -97,13 +99,13 @@ scenes:
       - {"n": 23, "answer": "spend time", "vi": "dành thời gian", "ex": "He spends a lot of time with his sister.", "w": ["spend"]}
       - {"n": 24, "answer": "together", "vi": "cùng nhau", "ex": "The family has dinner together every evening.", "w": ["together"]}
     lines:
-      - {"emma": "Nineteen. get divorced. get divorced. Her parents got divorced last year.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty. born. born. She was born in 1998.", "say": "Twenty. born. born. She was born in nineteen ninety-eight.", "focus": 1, "reveal": [19], "pause": 1.5}
-      - {"emma": "Twenty-one. have got. have got. She's got two brothers.", "focus": 2, "reveal": [20], "pause": 1.5}
-      - {"emma": "Twenty-two. how old. how old. How old is your grandfather?", "focus": 3, "reveal": [21], "pause": 1.5}
-      - {"emma": "Twenty-three. spend time. spend time. He spends a lot of time with his sister.", "focus": 4, "reveal": [22], "pause": 1.5}
-      - {"emma": "Twenty-four. together. together. The family has dinner together every evening.", "focus": 5, "reveal": [23], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+      - {"emma": "Nineteen. get divorced. get divorced. Her parents got divorced last year. Her parents got divorced last year.", "focus": 0}
+      - {"emma": "Twenty. born. born. She was born in 1998. She was born in 1998.", "say": "Twenty. born. born. She was born in nineteen ninety-eight. She was born in nineteen ninety-eight.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. have got. have got. She's got two brothers. She's got two brothers.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. how old. how old. How old is your grandfather? How old is your grandfather?", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. spend time. spend time. He spends a lot of time with his sister. He spends a lot of time with his sister.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. together. together. The family has dinner together every evening. The family has dinner together every evening.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
 
   - kind: dictation
     chapter: "2. Từ thêm theo chủ đề"
@@ -118,13 +120,13 @@ scenes:
       - {"n": 30, "answer": "younger sister", "vi": "em gái", "ex": "His younger sister is at primary school."}
     lines:
       - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
-      - {"tom": "Twenty-five. grandparents. grandparents. Her grandparents live in the country.", "say": "Twenty-five. grandparents. grandparents. Her grandparents liv in the country.", "focus": 0, "pause": 1.5}
-      - {"tom": "Twenty-six. grandchildren. grandchildren. They have five grandchildren.", "focus": 1, "reveal": [25], "pause": 1.5}
-      - {"tom": "Twenty-seven. only child. only child. She's an only child.", "focus": 2, "reveal": [26], "pause": 1.5}
-      - {"tom": "Twenty-eight. twins. twins. The twins look exactly the same.", "focus": 3, "reveal": [27], "pause": 1.5}
-      - {"tom": "Twenty-nine. older brother. older brother. Emma has an older brother, Jack.", "focus": 4, "reveal": [28], "pause": 1.5}
-      - {"tom": "Thirty. younger sister. younger sister. His younger sister is at primary school.", "focus": 5, "reveal": [29], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30], "pause": 2.0}
+      - {"tom": "Twenty-five. grandparents. grandparents. Her grandparents live in the country. Her grandparents live in the country.", "say": "Twenty-five. grandparents. grandparents. Her grandparents liv in the country. Her grandparents liv in the country.", "focus": 0}
+      - {"tom": "Twenty-six. grandchildren. grandchildren. They have five grandchildren. They have five grandchildren.", "focus": 1, "reveal": [25]}
+      - {"tom": "Twenty-seven. only child. only child. She's an only child. She's an only child.", "focus": 2, "reveal": [26]}
+      - {"tom": "Twenty-eight. twins. twins. The twins look exactly the same. The twins look exactly the same.", "focus": 3, "reveal": [27]}
+      - {"tom": "Twenty-nine. older brother. older brother. Emma has an older brother, Jack. Emma has an older brother, Jack.", "focus": 4, "reveal": [28]}
+      - {"tom": "Thirty. younger sister. younger sister. His younger sister is at primary school. His younger sister is at primary school.", "focus": 5, "reveal": [29]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (31–36)"
@@ -137,13 +139,13 @@ scenes:
       - {"n": 35, "answer": "look after", "vi": "chăm sóc", "ex": "Grandparents often look after the children."}
       - {"n": 36, "answer": "grow up", "vi": "lớn lên", "ex": "He grew up in Da Lat."}
     lines:
-      - {"tom": "Thirty-one. stepfather. stepfather. Her stepfather is very kind.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-two. stepmother. stepmother. His stepmother is a doctor.", "focus": 1, "reveal": [31], "pause": 1.5}
-      - {"tom": "Thirty-three. half-sister. half-sister. She has a half-sister in Australia.", "focus": 2, "reveal": [32], "pause": 1.5}
-      - {"tom": "Thirty-four. single parent. single parent. Her mother was a single parent.", "focus": 3, "reveal": [33], "pause": 1.5}
-      - {"tom": "Thirty-five. look after. look after. Grandparents often look after the children.", "focus": 4, "reveal": [34], "pause": 1.5}
-      - {"tom": "Thirty-six. grow up. grow up. He grew up in Da Lat.", "say": "Thirty-six. grow up. grow up. He grew up in Dah Lot.", "focus": 5, "reveal": [35], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36], "pause": 2.0}
+      - {"tom": "Thirty-one. stepfather. stepfather. Her stepfather is very kind. Her stepfather is very kind.", "focus": 0}
+      - {"tom": "Thirty-two. stepmother. stepmother. His stepmother is a doctor. His stepmother is a doctor.", "focus": 1, "reveal": [31]}
+      - {"tom": "Thirty-three. half-sister. half-sister. She has a half-sister in Australia. She has a half-sister in Australia.", "focus": 2, "reveal": [32]}
+      - {"tom": "Thirty-four. single parent. single parent. Her mother was a single parent. Her mother was a single parent.", "focus": 3, "reveal": [33]}
+      - {"tom": "Thirty-five. look after. look after. Grandparents often look after the children. Grandparents often look after the children.", "focus": 4, "reveal": [34]}
+      - {"tom": "Thirty-six. grow up. grow up. He grew up in Da Lat. He grew up in Da Lat.", "say": "Thirty-six. grow up. grow up. He grew up in Dah Lot. He grew up in Dah Lot.", "focus": 5, "reveal": [35]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (37–42)"
@@ -156,117 +158,134 @@ scenes:
       - {"n": 41, "answer": "great-grandmother", "vi": "cụ bà", "ex": "Her great-grandmother is ninety-five."}
       - {"n": 42, "answer": "father-in-law", "vi": "bố vợ, bố chồng", "ex": "His father-in-law is a doctor."}
     lines:
-      - {"tom": "Thirty-seven. bring up. bring up. Her grandmother brought her up.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-eight. the eldest. the eldest. Hoa is the eldest of the three children.", "say": "Thirty-eight. the eldest. the eldest. Whah is the eldest of the three children.", "focus": 1, "reveal": [37], "pause": 1.5}
-      - {"tom": "Thirty-nine. in-laws. in-laws. They spend Christmas with her in-laws.", "focus": 2, "reveal": [38], "pause": 1.5}
-      - {"tom": "Forty. family gathering. family gathering. We have a big family gathering at Tết.", "say": "Forty. family gathering. family gathering. We have a big family gathering at Tet.", "focus": 3, "reveal": [39], "pause": 1.5}
-      - {"tom": "Forty-one. great-grandmother. great-grandmother. Her great-grandmother is ninety-five.", "focus": 4, "reveal": [40], "pause": 1.5}
-      - {"tom": "Forty-two. father-in-law. father-in-law. His father-in-law is a doctor.", "focus": 5, "reveal": [41], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42], "pause": 2.0}
+      - {"tom": "Thirty-seven. bring up. bring up. Her grandmother brought her up. Her grandmother brought her up.", "focus": 0}
+      - {"tom": "Thirty-eight. the eldest. the eldest. Hoa is the eldest of the three children. Hoa is the eldest of the three children.", "say": "Thirty-eight. the eldest. the eldest. Whah is the eldest of the three children. Whah is the eldest of the three children.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. in-laws. in-laws. They spend Christmas with her in-laws. They spend Christmas with her in-laws.", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. family gathering. family gathering. We have a big family gathering at Tết. We have a big family gathering at Tết.", "say": "Forty. family gathering. family gathering. We have a big family gathering at Tet. We have a big family gathering at Tet.", "focus": 3, "reveal": [39]}
+      - {"tom": "Forty-one. great-grandmother. great-grandmother. Her great-grandmother is ninety-five. Her great-grandmother is ninety-five.", "focus": 4, "reveal": [40]}
+      - {"tom": "Forty-two. father-in-law. father-in-law. His father-in-law is a doctor. His father-in-law is a doctor.", "focus": 5, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
 
   - kind: dictation
-    heading: "Dictation 2 · More useful words (43–45)"
+    heading: "Dictation 2 · More useful words (43–46)"
     heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
     items:
       - {"n": 43, "answer": "mother-in-law", "vi": "mẹ vợ, mẹ chồng", "ex": "Her mother-in-law lives with them."}
       - {"n": 44, "answer": "related", "vi": "có họ hàng", "ex": "Are you related to him?"}
       - {"n": 45, "answer": "take after", "vi": "giống (người trong nhà)", "ex": "She takes after her father."}
+      - {"n": 46, "answer": "great-grandfather", "vi": "cụ ông", "ex": "His great-grandfather was a farmer."}
     lines:
-      - {"tom": "Forty-three. mother-in-law. mother-in-law. Her mother-in-law lives with them.", "say": "Forty-three. mother-in-law. mother-in-law. Her mother-in-law livz with them.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-four. related. related. Are you related to him?", "focus": 1, "reveal": [43], "pause": 1.5}
-      - {"tom": "Forty-five. take after. take after. She takes after her father.", "focus": 2, "reveal": [44], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [45], "pause": 2.0}
+      - {"tom": "Forty-three. mother-in-law. mother-in-law. Her mother-in-law lives with them. Her mother-in-law lives with them.", "say": "Forty-three. mother-in-law. mother-in-law. Her mother-in-law livz with them. Her mother-in-law livz with them.", "focus": 0}
+      - {"tom": "Forty-four. related. related. Are you related to him? Are you related to him?", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. take after. take after. She takes after her father. She takes after her father.", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. great-grandfather. great-grandfather. His great-grandfather was a farmer. His great-grandfather was a farmer.", "focus": 3, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [46]}
 
   - kind: dictation
     chapter: "3. Câu giao tiếp"
-    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading: "Dictation 3 · Useful sentences (47–52)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 46, "answer": "How many people are there in your family?", "vi": "Nhà bạn có mấy người?"}
-      - {"n": 47, "answer": "There are six of us.", "vi": "Nhà mình có sáu người."}
-      - {"n": 48, "answer": "Have you got any brothers or sisters?", "vi": "Bạn có anh chị em không?"}
-      - {"n": 49, "answer": "Yes, I've got an older brother, Jack.", "vi": "Có, mình có một anh trai tên Jack."}
-      - {"n": 50, "answer": "Who are you closest to in your family?", "vi": "Trong nhà bạn thân với ai nhất?"}
-      - {"n": 51, "answer": "My sister. She calls me almost every evening.", "vi": "Chị mình. Tối nào chị cũng gần như gọi cho mình."}
+      - {"n": 47, "answer": "How many people are there in your family?", "vi": "Nhà bạn có mấy người?"}
+      - {"n": 48, "answer": "There are six of us.", "vi": "Nhà mình có sáu người."}
+      - {"n": 49, "answer": "Have you got any brothers or sisters?", "vi": "Bạn có anh chị em không?"}
+      - {"n": 50, "answer": "Yes, I've got an older brother, Jack.", "vi": "Có, mình có một anh trai tên Jack."}
+      - {"n": 51, "answer": "Who are you closest to in your family?", "vi": "Trong nhà bạn thân với ai nhất?"}
+      - {"n": 52, "answer": "My sister. She calls me almost every evening.", "vi": "Chị mình. Tối nào chị cũng gần như gọi cho mình."}
     lines:
       - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
-      - {"emma": "Forty-six. How many people are there in your family? How many people are there in your family?", "focus": 0, "pause": 2.0}
-      - {"tom": "Forty-seven. There are six of us. There are six of us.", "focus": 1, "reveal": [46], "pause": 2.0}
-      - {"tom": "Forty-eight. Have you got any brothers or sisters? Have you got any brothers or sisters?", "focus": 2, "reveal": [47], "pause": 2.0}
-      - {"emma": "Forty-nine. Yes, I've got an older brother, Jack. Yes, I've got an older brother, Jack.", "focus": 3, "reveal": [48], "pause": 2.0}
-      - {"emma": "Fifty. Who are you closest to in your family? Who are you closest to in your family?", "focus": 4, "reveal": [49], "pause": 2.0}
-      - {"tom": "Fifty-one. My sister. She calls me almost every evening. My sister. She calls me almost every evening.", "focus": 5, "reveal": [50], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51], "pause": 2.0}
+      - {"emma": "Forty-seven. How many people are there in your family? How many people are there in your family?", "focus": 0}
+      - {"tom": "Forty-eight. There are six of us. There are six of us.", "focus": 1, "reveal": [47]}
+      - {"tom": "Forty-nine. Have you got any brothers or sisters? Have you got any brothers or sisters?", "focus": 2, "reveal": [48]}
+      - {"emma": "Fifty. Yes, I've got an older brother, Jack. Yes, I've got an older brother, Jack.", "focus": 3, "reveal": [49]}
+      - {"emma": "Fifty-one. Who are you closest to in your family? Who are you closest to in your family?", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. My sister. She calls me almost every evening. My sister. She calls me almost every evening.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading: "Dictation 3 · Useful sentences (53–58)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 52, "answer": "How often do you talk to your family?", "vi": "Bạn nói chuyện với gia đình thường xuyên không?"}
-      - {"n": 53, "answer": "I call my mum every Sunday.", "vi": "Chủ nhật nào mình cũng gọi cho mẹ."}
-      - {"n": 54, "answer": "Do you live with your parents?", "vi": "Bạn sống với bố mẹ à?"}
-      - {"n": 55, "answer": "No, they live in England.", "vi": "Không, bố mẹ mình sống ở Anh."}
-      - {"n": 56, "answer": "How old is your grandfather?", "vi": "Ông bạn bao nhiêu tuổi?"}
-      - {"n": 57, "answer": "He's seventy-eight.", "vi": "Ông bảy mươi tám tuổi."}
+      - {"n": 53, "answer": "How often do you talk to your family?", "vi": "Bạn nói chuyện với gia đình thường xuyên không?"}
+      - {"n": 54, "answer": "I call my mum every Sunday.", "vi": "Chủ nhật nào mình cũng gọi cho mẹ."}
+      - {"n": 55, "answer": "Do you live with your parents?", "vi": "Bạn sống với bố mẹ à?"}
+      - {"n": 56, "answer": "No, they live in England.", "vi": "Không, bố mẹ mình sống ở Anh."}
+      - {"n": 57, "answer": "How old is your grandfather?", "vi": "Ông bạn bao nhiêu tuổi?"}
+      - {"n": 58, "answer": "He's seventy-eight.", "vi": "Ông bảy mươi tám tuổi."}
     lines:
-      - {"tom": "Fifty-two. How often do you talk to your family? How often do you talk to your family?", "focus": 0, "pause": 2.0}
-      - {"emma": "Fifty-three. I call my mum every Sunday. I call my mum every Sunday.", "focus": 1, "reveal": [52], "pause": 2.0}
-      - {"tom": "Fifty-four. Do you live with your parents? Do you live with your parents?", "say": "Fifty-four. Do you liv with your parents? Do you liv with your parents?", "focus": 2, "reveal": [53], "pause": 2.0}
-      - {"emma": "Fifty-five. No, they live in England. No, they live in England.", "say": "Fifty-five. No, they liv in England. No, they liv in England.", "focus": 3, "reveal": [54], "pause": 2.0}
-      - {"emma": "Fifty-six. How old is your grandfather? How old is your grandfather?", "focus": 4, "reveal": [55], "pause": 2.0}
-      - {"tom": "Fifty-seven. He's seventy-eight. He's seventy-eight.", "focus": 5, "reveal": [56], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57], "pause": 2.0}
+      - {"tom": "Fifty-three. How often do you talk to your family? How often do you talk to your family?", "focus": 0}
+      - {"emma": "Fifty-four. I call my mum every Sunday. I call my mum every Sunday.", "focus": 1, "reveal": [53]}
+      - {"tom": "Fifty-five. Do you live with your parents? Do you live with your parents?", "say": "Fifty-five. Do you liv with your parents? Do you liv with your parents?", "focus": 2, "reveal": [54]}
+      - {"emma": "Fifty-six. No, they live in England. No, they live in England.", "say": "Fifty-six. No, they liv in England. No, they liv in England.", "focus": 3, "reveal": [55]}
+      - {"emma": "Fifty-seven. How old is your grandfather? How old is your grandfather?", "focus": 4, "reveal": [56]}
+      - {"tom": "Fifty-eight. He's seventy-eight. He's seventy-eight.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading: "Dictation 3 · Useful sentences (59–64)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 58, "answer": "When did your parents get married?", "vi": "Bố mẹ bạn cưới năm nào?"}
-      - {"n": 59, "answer": "In 1998.", "vi": "Năm 1998."}
-      - {"n": 60, "answer": "Are you an only child?", "vi": "Bạn là con một à?"}
-      - {"n": 61, "answer": "No, I've got a sister and a brother.", "vi": "Không, mình có một chị gái và một em trai."}
-      - {"n": 62, "answer": "Do you look like your mother or your father?", "vi": "Bạn giống mẹ hay giống bố?"}
-      - {"n": 63, "answer": "I look like my mother.", "vi": "Mình giống mẹ."}
+      - {"n": 59, "answer": "When did your parents get married?", "vi": "Bố mẹ bạn cưới năm nào?"}
+      - {"n": 60, "answer": "In 1998.", "vi": "Năm 1998."}
+      - {"n": 61, "answer": "Are you an only child?", "vi": "Bạn là con một à?"}
+      - {"n": 62, "answer": "No, I've got a sister and a brother.", "vi": "Không, mình có một chị gái và một em trai."}
+      - {"n": 63, "answer": "Do you look like your mother or your father?", "vi": "Bạn giống mẹ hay giống bố?"}
+      - {"n": 64, "answer": "I look like my mother.", "vi": "Mình giống mẹ."}
     lines:
-      - {"emma": "Fifty-eight. When did your parents get married? When did your parents get married?", "focus": 0, "pause": 2.0}
-      - {"tom": "Fifty-nine. In 1998. In 1998.", "say": "Fifty-nine. In nineteen ninety-eight. In nineteen ninety-eight.", "focus": 1, "reveal": [58], "pause": 2.0}
-      - {"emma": "Sixty. Are you an only child? Are you an only child?", "focus": 2, "reveal": [59], "pause": 2.0}
-      - {"tom": "Sixty-one. No, I've got a sister and a brother. No, I've got a sister and a brother.", "focus": 3, "reveal": [60], "pause": 2.0}
-      - {"tom": "Sixty-two. Do you look like your mother or your father? Do you look like your mother or your father?", "focus": 4, "reveal": [61], "pause": 2.0}
-      - {"emma": "Sixty-three. I look like my mother. I look like my mother.", "focus": 5, "reveal": [62], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63], "pause": 2.0}
+      - {"emma": "Fifty-nine. When did your parents get married? When did your parents get married?", "focus": 0}
+      - {"tom": "Sixty. In 1998. In 1998.", "say": "Sixty. In nineteen ninety-eight. In nineteen ninety-eight.", "focus": 1, "reveal": [59]}
+      - {"emma": "Sixty-one. Are you an only child? Are you an only child?", "focus": 2, "reveal": [60]}
+      - {"tom": "Sixty-two. No, I've got a sister and a brother. No, I've got a sister and a brother.", "focus": 3, "reveal": [61]}
+      - {"tom": "Sixty-three. Do you look like your mother or your father? Do you look like your mother or your father?", "focus": 4, "reveal": [62]}
+      - {"emma": "Sixty-four. I look like my mother. I look like my mother.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading: "Dictation 3 · Useful sentences (65–70)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 64, "answer": "My little brother loves football.", "vi": "Em trai mình mê bóng đá."}
-      - {"n": 65, "answer": "I miss my family most at Christmas.", "vi": "Mình nhớ nhà nhất vào dịp Giáng sinh."}
-      - {"n": 66, "answer": "We all have dinner together at Tết.", "vi": "Tết cả nhà mình ăn tối cùng nhau."}
-      - {"n": 67, "answer": "My grandmother knits jumpers for everyone.", "vi": "Bà mình đan áo len cho cả nhà."}
-      - {"n": 68, "answer": "Where does your sister work?", "vi": "Chị bạn làm việc ở đâu?"}
-      - {"n": 69, "answer": "She's a nurse in a hospital in Hanoi.", "vi": "Chị ấy là y tá ở một bệnh viện ở Hà Nội."}
+      - {"n": 65, "answer": "My little brother loves football.", "vi": "Em trai mình mê bóng đá."}
+      - {"n": 66, "answer": "I miss my family most at Christmas.", "vi": "Mình nhớ nhà nhất vào dịp Giáng sinh."}
+      - {"n": 67, "answer": "We all have dinner together at Tết.", "vi": "Tết cả nhà mình ăn tối cùng nhau."}
+      - {"n": 68, "answer": "My grandmother knits jumpers for everyone.", "vi": "Bà mình đan áo len cho cả nhà."}
+      - {"n": 69, "answer": "Where does your sister work?", "vi": "Chị bạn làm việc ở đâu?"}
+      - {"n": 70, "answer": "She's a nurse in a hospital in Hanoi.", "vi": "Chị ấy là y tá ở một bệnh viện ở Hà Nội."}
     lines:
-      - {"tom": "Sixty-four. My little brother loves football. My little brother loves football.", "focus": 0, "pause": 2.0}
-      - {"emma": "Sixty-five. I miss my family most at Christmas. I miss my family most at Christmas.", "focus": 1, "reveal": [64], "pause": 2.0}
-      - {"tom": "Sixty-six. We all have dinner together at Tết. We all have dinner together at Tết.", "say": "Sixty-six. We all have dinner together at Tet. We all have dinner together at Tet.", "focus": 2, "reveal": [65], "pause": 2.0}
-      - {"emma": "Sixty-seven. My grandmother knits jumpers for everyone. My grandmother knits jumpers for everyone.", "focus": 3, "reveal": [66], "pause": 2.0}
-      - {"emma": "Sixty-eight. Where does your sister work? Where does your sister work?", "focus": 4, "reveal": [67], "pause": 2.0}
-      - {"tom": "Sixty-nine. She's a nurse in a hospital in Hanoi. She's a nurse in a hospital in Hanoi.", "say": "Sixty-nine. She's a nurse in a hospital in Ha Noi. She's a nurse in a hospital in Ha Noi.", "focus": 5, "reveal": [68], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69], "pause": 2.0}
+      - {"tom": "Sixty-five. My little brother loves football. My little brother loves football.", "focus": 0}
+      - {"emma": "Sixty-six. I miss my family most at Christmas. I miss my family most at Christmas.", "focus": 1, "reveal": [65]}
+      - {"tom": "Sixty-seven. We all have dinner together at Tết. We all have dinner together at Tết.", "say": "Sixty-seven. We all have dinner together at Tet. We all have dinner together at Tet.", "focus": 2, "reveal": [66]}
+      - {"emma": "Sixty-eight. My grandmother knits jumpers for everyone. My grandmother knits jumpers for everyone.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. Where does your sister work? Where does your sister work?", "focus": 4, "reveal": [68]}
+      - {"tom": "Seventy. She's a nurse in a hospital in Hanoi. She's a nurse in a hospital in Hanoi.", "say": "Seventy. She's a nurse in a hospital in Ha Noi. She's a nurse in a hospital in Ha Noi.", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (70–72)"
+    heading: "Dictation 3 · Useful sentences (71–76)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 70, "answer": "How old is your brother?", "vi": "Anh bạn bao nhiêu tuổi?"}
-      - {"n": 71, "answer": "He's thirty.", "vi": "Anh ấy ba mươi tuổi."}
-      - {"n": 72, "answer": "My parents are going to retire next year.", "vi": "Sang năm bố mẹ mình nghỉ hưu."}
+      - {"n": 71, "answer": "How old is your brother?", "vi": "Anh bạn bao nhiêu tuổi?"}
+      - {"n": 72, "answer": "He's thirty.", "vi": "Anh ấy ba mươi tuổi."}
+      - {"n": 73, "answer": "My parents are going to retire next year.", "vi": "Sang năm bố mẹ mình nghỉ hưu."}
+      - {"n": 74, "answer": "Do you have a big family?", "vi": "Gia đình bạn có đông không?"}
+      - {"n": 75, "answer": "Quite big. I've got lots of cousins.", "vi": "Khá đông. Mình có nhiều anh chị em họ."}
+      - {"n": 76, "answer": "Who's the oldest person in your family?", "vi": "Ai lớn tuổi nhất trong nhà bạn?"}
     lines:
-      - {"tom": "Seventy. How old is your brother? How old is your brother?", "focus": 0, "pause": 2.0}
-      - {"emma": "Seventy-one. He's thirty. He's thirty.", "focus": 1, "reveal": [70], "pause": 2.0}
-      - {"emma": "Seventy-two. My parents are going to retire next year. My parents are going to retire next year.", "focus": 2, "reveal": [71], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [72], "pause": 2.0}
+      - {"tom": "Seventy-one. How old is your brother? How old is your brother?", "focus": 0}
+      - {"emma": "Seventy-two. He's thirty. He's thirty.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. My parents are going to retire next year. My parents are going to retire next year.", "focus": 2, "reveal": [72]}
+      - {"emma": "Seventy-four. Do you have a big family? Do you have a big family?", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. Quite big. I've got lots of cousins. Quite big. I've got lots of cousins.", "focus": 4, "reveal": [74]}
+      - {"tom": "Seventy-six. Who's the oldest person in your family? Who's the oldest person in your family?", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "My grandmother.", "vi": "Bà mình."}
+    lines:
+      - {"emma": "Seventy-seven. My grandmother. My grandmother.", "focus": 0}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 0, "reveal": [77]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"

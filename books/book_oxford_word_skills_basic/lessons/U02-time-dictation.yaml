@@ -2,9 +2,10 @@
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U02-time-dictation.yaml
 # Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
 # theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
-# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
-# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
-# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
 # Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U02 --level all
 # Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
 # sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
@@ -14,6 +15,7 @@ title: "Unit 2 · The time"
 subtitle: "Dictation · listen and write: telling the time"
 title_vi: "Nghe – viết 10 phút: giờ giấc — từ trong sách, từ thêm, câu giao tiếp"
 tag: "BASIC ENGLISH · UNIT 2"
+scene_gap: 0.4
 speakers:
   # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
   emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
@@ -24,8 +26,8 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 2: The time. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit two: The time. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 2: giờ giấc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 27 words from the book. You hear each word twice, then a sentence. Then 19 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-seven words from the book. You hear each word twice, then a sentence. Then nineteen more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 27 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 19 từ thêm, 30 câu giao tiếp."}
-      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+      - {"emma": "There are three parts. First, 27 words from the book. You hear each word twice, and then an example sentence twice. Then 23 more useful words, and 36 useful sentences for conversation.", "say": "There are three parts. First, twenty-seven words from the book. You hear each word twice, and then an example sentence twice. Then twenty-three more useful words, and thirty-six useful sentences for conversation.", "vi": "Ba phần: 27 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 23 từ thêm, 36 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
     chapter: "1. Từ trong sách"
@@ -40,13 +42,13 @@ scenes:
       - {"n": 6, "answer": "quarter to", "vi": "kém mười lăm", "ex": "It's quarter to five.", "w": ["quarter"]}
     lines:
       - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
-      - {"emma": "One. time. time. What's the time, please?", "focus": 0, "pause": 1.5}
-      - {"emma": "Two. o'clock. o'clock. It's four o'clock.", "focus": 1, "reveal": [1], "pause": 1.5}
-      - {"emma": "Three. past. past. It's five past six.", "focus": 2, "reveal": [2], "pause": 1.5}
-      - {"emma": "Four. to. to. It's ten to eight.", "focus": 3, "reveal": [3], "pause": 1.5}
-      - {"emma": "Five. quarter past. quarter past. It's quarter past four.", "focus": 4, "reveal": [4], "pause": 1.5}
-      - {"emma": "Six. quarter to. quarter to. It's quarter to five.", "focus": 5, "reveal": [5], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+      - {"emma": "One. time. time. What's the time, please? What's the time, please?", "focus": 0}
+      - {"emma": "Two. o'clock. o'clock. It's four o'clock. It's four o'clock.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. past. past. It's five past six. It's five past six.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. to. to. It's ten to eight. It's ten to eight.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. quarter past. quarter past. It's quarter past four. It's quarter past four.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. quarter to. quarter to. It's quarter to five. It's quarter to five.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (7–12)"
@@ -59,13 +61,13 @@ scenes:
       - {"n": 11, "answer": "four fifteen", "vi": "bốn giờ mười lăm", "ex": "The bus comes at four fifteen."}
       - {"n": 12, "answer": "six forty", "vi": "sáu giờ bốn mươi", "ex": "The class starts at six forty."}
     lines:
-      - {"emma": "Seven. half past. half past. It's half past four.", "focus": 0, "pause": 1.5}
-      - {"emma": "Eight. ten past two. ten past two. The meeting starts at ten past two.", "focus": 1, "reveal": [7], "pause": 1.5}
-      - {"emma": "Nine. twenty-five to nine. twenty-five to nine. The train leaves at twenty-five to nine.", "focus": 2, "reveal": [8], "pause": 1.5}
-      - {"emma": "Ten. three minutes to seven. three minutes to seven. It's three minutes to seven.", "focus": 3, "reveal": [9], "pause": 1.5}
-      - {"emma": "Eleven. four fifteen. four fifteen. The bus comes at four fifteen.", "focus": 4, "reveal": [10], "pause": 1.5}
-      - {"emma": "Twelve. six forty. six forty. The class starts at six forty.", "focus": 5, "reveal": [11], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+      - {"emma": "Seven. half past. half past. It's half past four. It's half past four.", "focus": 0}
+      - {"emma": "Eight. ten past two. ten past two. The meeting starts at ten past two. The meeting starts at ten past two.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. twenty-five to nine. twenty-five to nine. The train leaves at twenty-five to nine. The train leaves at twenty-five to nine.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. three minutes to seven. three minutes to seven. It's three minutes to seven. It's three minutes to seven.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. four fifteen. four fifteen. The bus comes at four fifteen. The bus comes at four fifteen.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. six forty. six forty. The class starts at six forty. The class starts at six forty.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (13–18)"
@@ -78,13 +80,13 @@ scenes:
       - {"n": 17, "answer": "in the evening", "vi": "vào buổi tối", "ex": "They watch TV in the evening.", "w": ["evening"]}
       - {"n": 18, "answer": "at night", "vi": "vào ban đêm", "ex": "The streets are quiet at night.", "w": ["night"]}
     lines:
-      - {"emma": "Thirteen. a.m.. a.m.. The shop opens at nine a.m.", "focus": 0, "pause": 1.5}
-      - {"emma": "Fourteen. p.m.. p.m.. The film starts at seven p.m.", "focus": 1, "reveal": [13], "pause": 1.5}
-      - {"emma": "Fifteen. in the morning. in the morning. Many people go to work in the morning.", "focus": 2, "reveal": [14], "pause": 1.5}
-      - {"emma": "Sixteen. in the afternoon. in the afternoon. The children play football in the afternoon.", "focus": 3, "reveal": [15], "pause": 1.5}
-      - {"emma": "Seventeen. in the evening. in the evening. They watch TV in the evening.", "focus": 4, "reveal": [16], "pause": 1.5}
-      - {"emma": "Eighteen. at night. at night. The streets are quiet at night.", "focus": 5, "reveal": [17], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+      - {"emma": "Thirteen. a.m.. a.m.. The shop opens at nine a.m. The shop opens at nine a.m.", "focus": 0}
+      - {"emma": "Fourteen. p.m.. p.m.. The film starts at seven p.m. The film starts at seven p.m.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. in the morning. in the morning. Many people go to work in the morning. Many people go to work in the morning.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. in the afternoon. in the afternoon. The children play football in the afternoon. The children play football in the afternoon.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. in the evening. in the evening. They watch TV in the evening. They watch TV in the evening.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. at night. at night. The streets are quiet at night. The streets are quiet at night.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (19–24)"
@@ -97,13 +99,13 @@ scenes:
       - {"n": 23, "answer": "just after", "vi": "vừa quá", "ex": "It's just after ten.", "w": ["just after"]}
       - {"n": 24, "answer": "after", "vi": "sau", "ex": "Call me after six o'clock.", "w": ["after"]}
     lines:
-      - {"emma": "Nineteen. midday. midday. Most people have lunch at midday.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty. midnight. midnight. The party ends at midnight.", "focus": 1, "reveal": [19], "pause": 1.5}
-      - {"emma": "Twenty-one. nearly. nearly. It's nearly eight o'clock. Hurry up!", "focus": 2, "reveal": [20], "pause": 1.5}
-      - {"emma": "Twenty-two. almost. almost. It's almost nine.", "focus": 3, "reveal": [21], "pause": 1.5}
-      - {"emma": "Twenty-three. just after. just after. It's just after ten.", "focus": 4, "reveal": [22], "pause": 1.5}
-      - {"emma": "Twenty-four. after. after. Call me after six o'clock.", "focus": 5, "reveal": [23], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+      - {"emma": "Nineteen. midday. midday. Most people have lunch at midday. Most people have lunch at midday.", "focus": 0}
+      - {"emma": "Twenty. midnight. midnight. The party ends at midnight. The party ends at midnight.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. nearly. nearly. It's nearly eight o'clock. Hurry up! It's nearly eight o'clock. Hurry up!", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. almost. almost. It's almost nine. It's almost nine.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. just after. just after. It's just after ten. It's just after ten.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. after. after. Call me after six o'clock. Call me after six o'clock.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (25–27)"
@@ -113,10 +115,10 @@ scenes:
       - {"n": 26, "answer": "What's the time?", "vi": "Mấy giờ rồi?", "ex": "Excuse me, what's the time?"}
       - {"n": 27, "answer": "What time is it?", "vi": "Mấy giờ rồi?", "ex": "What time is it, please?"}
     lines:
-      - {"emma": "Twenty-five. at. at. The train leaves at five fifteen.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty-six. What's the time?. What's the time?. Excuse me, what's the time?", "focus": 1, "reveal": [25], "pause": 1.5}
-      - {"emma": "Twenty-seven. What time is it?. What time is it?. What time is it, please?", "focus": 2, "reveal": [26], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [27], "pause": 2.0}
+      - {"emma": "Twenty-five. at. at. The train leaves at five fifteen. The train leaves at five fifteen.", "focus": 0}
+      - {"emma": "Twenty-six. What's the time?. What's the time?. Excuse me, what's the time? Excuse me, what's the time?", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. What time is it?. What time is it?. What time is it, please? What time is it, please?", "focus": 2, "reveal": [26]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [27]}
 
   - kind: dictation
     chapter: "2. Từ thêm theo chủ đề"
@@ -131,13 +133,13 @@ scenes:
       - {"n": 33, "answer": "alarm clock", "vi": "đồng hồ báo thức", "ex": "His alarm clock rings at six."}
     lines:
       - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
-      - {"tom": "Twenty-eight. hour. hour. The lesson is one hour long.", "focus": 0, "pause": 1.5}
-      - {"tom": "Twenty-nine. half an hour. half an hour. The bus takes half an hour.", "focus": 1, "reveal": [28], "pause": 1.5}
-      - {"tom": "Thirty. minute. minute. Wait a minute, please.", "focus": 2, "reveal": [29], "pause": 1.5}
-      - {"tom": "Thirty-one. second. second. It only takes a second.", "focus": 3, "reveal": [30], "pause": 1.5}
-      - {"tom": "Thirty-two. watch. watch. Her watch is a present from her father.", "focus": 4, "reveal": [31], "pause": 1.5}
-      - {"tom": "Thirty-three. alarm clock. alarm clock. His alarm clock rings at six.", "focus": 5, "reveal": [32], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33], "pause": 2.0}
+      - {"tom": "Twenty-eight. hour. hour. The lesson is one hour long. The lesson is one hour long.", "focus": 0}
+      - {"tom": "Twenty-nine. half an hour. half an hour. The bus takes half an hour. The bus takes half an hour.", "focus": 1, "reveal": [28]}
+      - {"tom": "Thirty. minute. minute. Wait a minute, please. Wait a minute, please.", "focus": 2, "reveal": [29]}
+      - {"tom": "Thirty-one. second. second. It only takes a second. It only takes a second.", "focus": 3, "reveal": [30]}
+      - {"tom": "Thirty-two. watch. watch. Her watch is a present from her father. Her watch is a present from her father.", "focus": 4, "reveal": [31]}
+      - {"tom": "Thirty-three. alarm clock. alarm clock. His alarm clock rings at six. His alarm clock rings at six.", "focus": 5, "reveal": [32]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (34–39)"
@@ -150,13 +152,13 @@ scenes:
       - {"n": 38, "answer": "timetable", "vi": "lịch giờ tàu xe, thời khóa biểu", "ex": "Check the bus timetable before you go."}
       - {"n": 39, "answer": "appointment", "vi": "cuộc hẹn", "ex": "He has a doctor's appointment at three."}
     lines:
-      - {"tom": "Thirty-four. early. early. She gets up early on Mondays.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-five. late. late. The bus is late again.", "focus": 1, "reveal": [34], "pause": 1.5}
-      - {"tom": "Thirty-six. on time. on time. The train is always on time.", "focus": 2, "reveal": [35], "pause": 1.5}
-      - {"tom": "Thirty-seven. in time. in time. They arrived in time for dinner.", "focus": 3, "reveal": [36], "pause": 1.5}
-      - {"tom": "Thirty-eight. timetable. timetable. Check the bus timetable before you go.", "focus": 4, "reveal": [37], "pause": 1.5}
-      - {"tom": "Thirty-nine. appointment. appointment. He has a doctor's appointment at three.", "focus": 5, "reveal": [38], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39], "pause": 2.0}
+      - {"tom": "Thirty-four. early. early. She gets up early on Mondays. She gets up early on Mondays.", "focus": 0}
+      - {"tom": "Thirty-five. late. late. The bus is late again. The bus is late again.", "focus": 1, "reveal": [34]}
+      - {"tom": "Thirty-six. on time. on time. The train is always on time. The train is always on time.", "focus": 2, "reveal": [35]}
+      - {"tom": "Thirty-seven. in time. in time. They arrived in time for dinner. They arrived in time for dinner.", "focus": 3, "reveal": [36]}
+      - {"tom": "Thirty-eight. timetable. timetable. Check the bus timetable before you go. Check the bus timetable before you go.", "focus": 4, "reveal": [37]}
+      - {"tom": "Thirty-nine. appointment. appointment. He has a doctor's appointment at three. He has a doctor's appointment at three.", "focus": 5, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (40–45)"
@@ -169,119 +171,146 @@ scenes:
       - {"n": 44, "answer": "tonight", "vi": "tối nay", "ex": "What are you doing tonight?"}
       - {"n": 45, "answer": "soon", "vi": "sắp, chẳng bao lâu nữa", "ex": "The bus will be here soon."}
     lines:
-      - {"tom": "Forty. fast. fast. This clock is five minutes fast.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-one. slow. slow. The kitchen clock is two minutes slow.", "focus": 1, "reveal": [40], "pause": 1.5}
-      - {"tom": "Forty-two. noon. noon. The shop closes at noon on Sundays.", "focus": 2, "reveal": [41], "pause": 1.5}
-      - {"tom": "Forty-three. until. until. The shop is open until ten p.m.", "focus": 3, "reveal": [42], "pause": 1.5}
-      - {"tom": "Forty-four. tonight. tonight. What are you doing tonight?", "focus": 4, "reveal": [43], "pause": 1.5}
-      - {"tom": "Forty-five. soon. soon. The bus will be here soon.", "focus": 5, "reveal": [44], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45], "pause": 2.0}
+      - {"tom": "Forty. fast. fast. This clock is five minutes fast. This clock is five minutes fast.", "focus": 0}
+      - {"tom": "Forty-one. slow. slow. The kitchen clock is two minutes slow. The kitchen clock is two minutes slow.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. noon. noon. The shop closes at noon on Sundays. The shop closes at noon on Sundays.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. until. until. The shop is open until ten p.m. The shop is open until ten p.m.", "focus": 3, "reveal": [42]}
+      - {"tom": "Forty-four. tonight. tonight. What are you doing tonight? What are you doing tonight?", "focus": 4, "reveal": [43]}
+      - {"tom": "Forty-five. soon. soon. The bus will be here soon. The bus will be here soon.", "focus": 5, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45]}
 
   - kind: dictation
-    heading: "Dictation 2 · More useful words (46–46)"
+    heading: "Dictation 2 · More useful words (46–50)"
     heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
     items:
       - {"n": 46, "answer": "free time", "vi": "thời gian rảnh", "ex": "What do you do in your free time?"}
+      - {"n": 47, "answer": "a quarter of an hour", "vi": "mười lăm phút", "ex": "The film starts in a quarter of an hour."}
+      - {"n": 48, "answer": "daily", "vi": "hằng ngày", "ex": "The museum is open daily from nine to five."}
+      - {"n": 49, "answer": "weekday", "vi": "ngày thường", "ex": "The library opens at eight on weekdays."}
+      - {"n": 50, "answer": "rush hour", "vi": "giờ cao điểm", "ex": "The traffic is terrible in the rush hour."}
     lines:
-      - {"tom": "Forty-six. free time. free time. What do you do in your free time?", "focus": 0, "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 0, "reveal": [46], "pause": 2.0}
+      - {"tom": "Forty-six. free time. free time. What do you do in your free time? What do you do in your free time?", "focus": 0}
+      - {"tom": "Forty-seven. a quarter of an hour. a quarter of an hour. The film starts in a quarter of an hour. The film starts in a quarter of an hour.", "focus": 1, "reveal": [46]}
+      - {"tom": "Forty-eight. daily. daily. The museum is open daily from nine to five. The museum is open daily from nine to five.", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. weekday. weekday. The library opens at eight on weekdays. The library opens at eight on weekdays.", "focus": 3, "reveal": [48]}
+      - {"tom": "Fifty. rush hour. rush hour. The traffic is terrible in the rush hour. The traffic is terrible in the rush hour.", "focus": 4, "reveal": [49]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [50]}
 
   - kind: dictation
     chapter: "3. Câu giao tiếp"
-    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading: "Dictation 3 · Useful sentences (51–56)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 47, "answer": "Excuse me, what's the time?", "vi": "Xin lỗi, mấy giờ rồi ạ?"}
-      - {"n": 48, "answer": "It's half past three.", "vi": "Ba giờ rưỡi."}
-      - {"n": 49, "answer": "What time does the class start?", "vi": "Lớp học bắt đầu lúc mấy giờ?"}
-      - {"n": 50, "answer": "It starts at eight o'clock.", "vi": "Lúc tám giờ đúng."}
-      - {"n": 51, "answer": "What time do you usually get up?", "vi": "Bạn thường dậy lúc mấy giờ?"}
-      - {"n": 52, "answer": "At about seven. I'm not an early riser.", "vi": "Khoảng bảy giờ. Mình không phải người dậy sớm."}
+      - {"n": 51, "answer": "Excuse me, what's the time?", "vi": "Xin lỗi, mấy giờ rồi ạ?"}
+      - {"n": 52, "answer": "It's half past three.", "vi": "Ba giờ rưỡi."}
+      - {"n": 53, "answer": "What time does the class start?", "vi": "Lớp học bắt đầu lúc mấy giờ?"}
+      - {"n": 54, "answer": "It starts at eight o'clock.", "vi": "Lúc tám giờ đúng."}
+      - {"n": 55, "answer": "What time do you usually get up?", "vi": "Bạn thường dậy lúc mấy giờ?"}
+      - {"n": 56, "answer": "At about seven. I'm not an early riser.", "vi": "Khoảng bảy giờ. Mình không phải người dậy sớm."}
     lines:
       - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
-      - {"emma": "Forty-seven. Excuse me, what's the time? Excuse me, what's the time?", "focus": 0, "pause": 2.0}
-      - {"tom": "Forty-eight. It's half past three. It's half past three.", "focus": 1, "reveal": [47], "pause": 2.0}
-      - {"emma": "Forty-nine. What time does the class start? What time does the class start?", "focus": 2, "reveal": [48], "pause": 2.0}
-      - {"tom": "Fifty. It starts at eight o'clock. It starts at eight o'clock.", "focus": 3, "reveal": [49], "pause": 2.0}
-      - {"emma": "Fifty-one. What time do you usually get up? What time do you usually get up?", "focus": 4, "reveal": [50], "pause": 2.0}
-      - {"tom": "Fifty-two. At about seven. I'm not an early riser. At about seven. I'm not an early riser.", "focus": 5, "reveal": [51], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52], "pause": 2.0}
+      - {"emma": "Fifty-one. Excuse me, what's the time? Excuse me, what's the time?", "focus": 0}
+      - {"tom": "Fifty-two. It's half past three. It's half past three.", "focus": 1, "reveal": [51]}
+      - {"emma": "Fifty-three. What time does the class start? What time does the class start?", "focus": 2, "reveal": [52]}
+      - {"tom": "Fifty-four. It starts at eight o'clock. It starts at eight o'clock.", "focus": 3, "reveal": [53]}
+      - {"emma": "Fifty-five. What time do you usually get up? What time do you usually get up?", "focus": 4, "reveal": [54]}
+      - {"tom": "Fifty-six. At about seven. I'm not an early riser. At about seven. I'm not an early riser.", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading: "Dictation 3 · Useful sentences (57–62)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 53, "answer": "Are you free at four this afternoon?", "vi": "Chiều nay lúc bốn giờ bạn rảnh không?"}
-      - {"n": 54, "answer": "Sorry, I'm busy until five.", "vi": "Xin lỗi, mình bận đến năm giờ."}
-      - {"n": 55, "answer": "What time does the bank open?", "vi": "Ngân hàng mở cửa lúc mấy giờ?"}
-      - {"n": 56, "answer": "It opens at half past eight.", "vi": "Mở cửa lúc tám giờ rưỡi."}
-      - {"n": 57, "answer": "How long does it take?", "vi": "Mất bao lâu?"}
-      - {"n": 58, "answer": "It takes about twenty minutes.", "vi": "Mất khoảng hai mươi phút."}
+      - {"n": 57, "answer": "Are you free at four this afternoon?", "vi": "Chiều nay lúc bốn giờ bạn rảnh không?"}
+      - {"n": 58, "answer": "Sorry, I'm busy until five.", "vi": "Xin lỗi, mình bận đến năm giờ."}
+      - {"n": 59, "answer": "What time does the bank open?", "vi": "Ngân hàng mở cửa lúc mấy giờ?"}
+      - {"n": 60, "answer": "It opens at half past eight.", "vi": "Mở cửa lúc tám giờ rưỡi."}
+      - {"n": 61, "answer": "How long does it take?", "vi": "Mất bao lâu?"}
+      - {"n": 62, "answer": "It takes about twenty minutes.", "vi": "Mất khoảng hai mươi phút."}
     lines:
-      - {"emma": "Fifty-three. Are you free at four this afternoon? Are you free at four this afternoon?", "focus": 0, "pause": 2.0}
-      - {"tom": "Fifty-four. Sorry, I'm busy until five. Sorry, I'm busy until five.", "focus": 1, "reveal": [53], "pause": 2.0}
-      - {"emma": "Fifty-five. What time does the bank open? What time does the bank open?", "focus": 2, "reveal": [54], "pause": 2.0}
-      - {"tom": "Fifty-six. It opens at half past eight. It opens at half past eight.", "focus": 3, "reveal": [55], "pause": 2.0}
-      - {"emma": "Fifty-seven. How long does it take? How long does it take?", "focus": 4, "reveal": [56], "pause": 2.0}
-      - {"tom": "Fifty-eight. It takes about twenty minutes. It takes about twenty minutes.", "focus": 5, "reveal": [57], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58], "pause": 2.0}
+      - {"emma": "Fifty-seven. Are you free at four this afternoon? Are you free at four this afternoon?", "focus": 0}
+      - {"tom": "Fifty-eight. Sorry, I'm busy until five. Sorry, I'm busy until five.", "focus": 1, "reveal": [57]}
+      - {"emma": "Fifty-nine. What time does the bank open? What time does the bank open?", "focus": 2, "reveal": [58]}
+      - {"tom": "Sixty. It opens at half past eight. It opens at half past eight.", "focus": 3, "reveal": [59]}
+      - {"emma": "Sixty-one. How long does it take? How long does it take?", "focus": 4, "reveal": [60]}
+      - {"tom": "Sixty-two. It takes about twenty minutes. It takes about twenty minutes.", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading: "Dictation 3 · Useful sentences (63–68)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 59, "answer": "Let's meet at quarter to seven.", "vi": "Hẹn gặp lúc bảy giờ kém mười lăm nhé."}
-      - {"n": 60, "answer": "OK. See you then.", "vi": "Được. Hẹn gặp lúc đó."}
-      - {"n": 61, "answer": "Is that clock right?", "vi": "Đồng hồ đó có đúng giờ không?"}
-      - {"n": 62, "answer": "No, it's five minutes fast.", "vi": "Không, nó nhanh năm phút."}
-      - {"n": 63, "answer": "Hurry up! We're late.", "vi": "Nhanh lên! Mình trễ rồi."}
-      - {"n": 64, "answer": "Don't worry. We've got plenty of time.", "vi": "Đừng lo. Mình còn nhiều thời gian."}
+      - {"n": 63, "answer": "Let's meet at quarter to seven.", "vi": "Hẹn gặp lúc bảy giờ kém mười lăm nhé."}
+      - {"n": 64, "answer": "OK. See you then.", "vi": "Được. Hẹn gặp lúc đó."}
+      - {"n": 65, "answer": "Is that clock right?", "vi": "Đồng hồ đó có đúng giờ không?"}
+      - {"n": 66, "answer": "No, it's five minutes fast.", "vi": "Không, nó nhanh năm phút."}
+      - {"n": 67, "answer": "Hurry up! We're late.", "vi": "Nhanh lên! Mình trễ rồi."}
+      - {"n": 68, "answer": "Don't worry. We've got plenty of time.", "vi": "Đừng lo. Mình còn nhiều thời gian."}
     lines:
-      - {"emma": "Fifty-nine. Let's meet at quarter to seven. Let's meet at quarter to seven.", "focus": 0, "pause": 2.0}
-      - {"tom": "Sixty. OK. See you then. OK. See you then.", "focus": 1, "reveal": [59], "pause": 2.0}
-      - {"emma": "Sixty-one. Is that clock right? Is that clock right?", "focus": 2, "reveal": [60], "pause": 2.0}
-      - {"tom": "Sixty-two. No, it's five minutes fast. No, it's five minutes fast.", "focus": 3, "reveal": [61], "pause": 2.0}
-      - {"emma": "Sixty-three. Hurry up! We're late. Hurry up! We're late.", "focus": 4, "reveal": [62], "pause": 2.0}
-      - {"tom": "Sixty-four. Don't worry. We've got plenty of time. Don't worry. We've got plenty of time.", "focus": 5, "reveal": [63], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64], "pause": 2.0}
+      - {"emma": "Sixty-three. Let's meet at quarter to seven. Let's meet at quarter to seven.", "focus": 0}
+      - {"tom": "Sixty-four. OK. See you then. OK. See you then.", "focus": 1, "reveal": [63]}
+      - {"emma": "Sixty-five. Is that clock right? Is that clock right?", "focus": 2, "reveal": [64]}
+      - {"tom": "Sixty-six. No, it's five minutes fast. No, it's five minutes fast.", "focus": 3, "reveal": [65]}
+      - {"emma": "Sixty-seven. Hurry up! We're late. Hurry up! We're late.", "focus": 4, "reveal": [66]}
+      - {"tom": "Sixty-eight. Don't worry. We've got plenty of time. Don't worry. We've got plenty of time.", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading: "Dictation 3 · Useful sentences (69–74)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 65, "answer": "Sorry I'm late. The traffic was terrible.", "vi": "Xin lỗi mình đến trễ. Kẹt xe kinh khủng."}
-      - {"n": 66, "answer": "That's OK. The lesson starts in five minutes.", "vi": "Không sao. Năm phút nữa mới vào học."}
-      - {"n": 67, "answer": "Have you got the time?", "vi": "Bạn có biết mấy giờ không?"}
-      - {"n": 68, "answer": "Yes, it's just after ten.", "vi": "Có, vừa hơn mười giờ."}
-      - {"n": 69, "answer": "When does the shop close?", "vi": "Cửa hàng đóng cửa lúc nào?"}
-      - {"n": 70, "answer": "It closes at nine p.m.", "vi": "Đóng cửa lúc chín giờ tối."}
+      - {"n": 69, "answer": "Sorry I'm late. The traffic was terrible.", "vi": "Xin lỗi mình đến trễ. Kẹt xe kinh khủng."}
+      - {"n": 70, "answer": "That's OK. The lesson starts in five minutes.", "vi": "Không sao. Năm phút nữa mới vào học."}
+      - {"n": 71, "answer": "Have you got the time?", "vi": "Bạn có biết mấy giờ không?"}
+      - {"n": 72, "answer": "Yes, it's just after ten.", "vi": "Có, vừa hơn mười giờ."}
+      - {"n": 73, "answer": "When does the shop close?", "vi": "Cửa hàng đóng cửa lúc nào?"}
+      - {"n": 74, "answer": "It closes at nine p.m.", "vi": "Đóng cửa lúc chín giờ tối."}
     lines:
-      - {"emma": "Sixty-five. Sorry I'm late. The traffic was terrible. Sorry I'm late. The traffic was terrible.", "focus": 0, "pause": 2.0}
-      - {"tom": "Sixty-six. That's OK. The lesson starts in five minutes. That's OK. The lesson starts in five minutes.", "focus": 1, "reveal": [65], "pause": 2.0}
-      - {"emma": "Sixty-seven. Have you got the time? Have you got the time?", "focus": 2, "reveal": [66], "pause": 2.0}
-      - {"tom": "Sixty-eight. Yes, it's just after ten. Yes, it's just after ten.", "focus": 3, "reveal": [67], "pause": 2.0}
-      - {"emma": "Sixty-nine. When does the shop close? When does the shop close?", "say": "Sixty-nine. When does the shop cloze? When does the shop cloze?", "focus": 4, "reveal": [68], "pause": 2.0}
-      - {"tom": "Seventy. It closes at nine p.m. It closes at nine p.m.", "focus": 5, "reveal": [69], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70], "pause": 2.0}
+      - {"emma": "Sixty-nine. Sorry I'm late. The traffic was terrible. Sorry I'm late. The traffic was terrible.", "focus": 0}
+      - {"tom": "Seventy. That's OK. The lesson starts in five minutes. That's OK. The lesson starts in five minutes.", "focus": 1, "reveal": [69]}
+      - {"emma": "Seventy-one. Have you got the time? Have you got the time?", "focus": 2, "reveal": [70]}
+      - {"tom": "Seventy-two. Yes, it's just after ten. Yes, it's just after ten.", "focus": 3, "reveal": [71]}
+      - {"emma": "Seventy-three. When does the shop close? When does the shop close?", "say": "Seventy-three. When does the shop cloze? When does the shop cloze?", "focus": 4, "reveal": [72]}
+      - {"tom": "Seventy-four. It closes at nine p.m. It closes at nine p.m.", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading: "Dictation 3 · Useful sentences (75–80)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 71, "answer": "I'll be there in ten minutes.", "vi": "Mười phút nữa mình tới."}
-      - {"n": 72, "answer": "Can we meet a bit later?", "vi": "Mình gặp muộn hơn một chút được không?"}
-      - {"n": 73, "answer": "What time do your classes finish?", "vi": "Lớp của bạn tan lúc mấy giờ?"}
-      - {"n": 74, "answer": "They finish at half past five.", "vi": "Tan lúc năm giờ rưỡi."}
-      - {"n": 75, "answer": "Is it too late to call him?", "vi": "Bây giờ gọi cho anh ấy có muộn quá không?"}
-      - {"n": 76, "answer": "No, it's only nine o'clock.", "vi": "Không, mới chín giờ thôi."}
+      - {"n": 75, "answer": "I'll be there in ten minutes.", "vi": "Mười phút nữa mình tới."}
+      - {"n": 76, "answer": "Can we meet a bit later?", "vi": "Mình gặp muộn hơn một chút được không?"}
+      - {"n": 77, "answer": "What time do your classes finish?", "vi": "Lớp của bạn tan lúc mấy giờ?"}
+      - {"n": 78, "answer": "They finish at half past five.", "vi": "Tan lúc năm giờ rưỡi."}
+      - {"n": 79, "answer": "Is it too late to call him?", "vi": "Bây giờ gọi cho anh ấy có muộn quá không?"}
+      - {"n": 80, "answer": "No, it's only nine o'clock.", "vi": "Không, mới chín giờ thôi."}
     lines:
-      - {"tom": "Seventy-one. I'll be there in ten minutes. I'll be there in ten minutes.", "focus": 0, "pause": 2.0}
-      - {"emma": "Seventy-two. Can we meet a bit later? Can we meet a bit later?", "focus": 1, "reveal": [71], "pause": 2.0}
-      - {"emma": "Seventy-three. What time do your classes finish? What time do your classes finish?", "focus": 2, "reveal": [72], "pause": 2.0}
-      - {"tom": "Seventy-four. They finish at half past five. They finish at half past five.", "focus": 3, "reveal": [73], "pause": 2.0}
-      - {"emma": "Seventy-five. Is it too late to call him? Is it too late to call him?", "focus": 4, "reveal": [74], "pause": 2.0}
-      - {"tom": "Seventy-six. No, it's only nine o'clock. No, it's only nine o'clock.", "focus": 5, "reveal": [75], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76], "pause": 2.0}
+      - {"tom": "Seventy-five. I'll be there in ten minutes. I'll be there in ten minutes.", "focus": 0}
+      - {"emma": "Seventy-six. Can we meet a bit later? Can we meet a bit later?", "focus": 1, "reveal": [75]}
+      - {"emma": "Seventy-seven. What time do your classes finish? What time do your classes finish?", "focus": 2, "reveal": [76]}
+      - {"tom": "Seventy-eight. They finish at half past five. They finish at half past five.", "focus": 3, "reveal": [77]}
+      - {"emma": "Seventy-nine. Is it too late to call him? Is it too late to call him?", "focus": 4, "reveal": [78]}
+      - {"tom": "Eighty. No, it's only nine o'clock. No, it's only nine o'clock.", "focus": 5, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [80]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (81–86)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 81, "answer": "What time is your flight?", "vi": "Chuyến bay của bạn lúc mấy giờ?"}
+      - {"n": 82, "answer": "It leaves at ten to six in the morning.", "vi": "Lúc sáu giờ kém mười sáng."}
+      - {"n": 83, "answer": "How long is the lesson?", "vi": "Buổi học dài bao lâu?"}
+      - {"n": 84, "answer": "It's an hour and a half.", "vi": "Một tiếng rưỡi."}
+      - {"n": 85, "answer": "Is the shop open on Sundays?", "vi": "Chủ nhật cửa hàng có mở không?"}
+      - {"n": 86, "answer": "Yes, from ten until four.", "vi": "Có, từ mười giờ đến bốn giờ."}
+    lines:
+      - {"emma": "Eighty-one. What time is your flight? What time is your flight?", "focus": 0}
+      - {"tom": "Eighty-two. It leaves at ten to six in the morning. It leaves at ten to six in the morning.", "focus": 1, "reveal": [81]}
+      - {"tom": "Eighty-three. How long is the lesson? How long is the lesson?", "focus": 2, "reveal": [82]}
+      - {"emma": "Eighty-four. It's an hour and a half. It's an hour and a half.", "focus": 3, "reveal": [83]}
+      - {"tom": "Eighty-five. Is the shop open on Sundays? Is the shop open on Sundays?", "focus": 4, "reveal": [84]}
+      - {"emma": "Eighty-six. Yes, from ten until four. Yes, from ten until four.", "focus": 5, "reveal": [85]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [86]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"

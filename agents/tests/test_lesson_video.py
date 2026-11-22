@@ -682,8 +682,10 @@ def test_word_skills_dictation_videos_cover_the_word_list():
     vựng câu theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao
     tiếp". Mỗi unit một video nghe – viết `<id video unit>-dictation` cùng phiên, 9–11 phút, chạy liền (không `wait` /
     `echo`); ba phần: từ trong sách (đủ mọi mục Word list của unit — `work/wordlist.json`), từ thêm theo chủ đề, câu giao
-    tiếp; số mục chạy liền 1…N; đáp án chỉ hiện sau khi đã đọc và cuối cảnh thì hiện đủ — docs/agent-hoc-tap/09 mục 5.9."""
-    from lesson_video import wordlist
+    tiếp; số mục chạy liền 1…N; đáp án chỉ hiện sau khi đã đọc và cuối cảnh thì hiện đủ — docs/agent-hoc-tap/09 mục 5.9.
+    Người học (cũng đợt 36): "video ko nên có pause quá 3 giây nếu có ko có càng tốt" — không dòng nào có `pause`, và đo
+    bằng ffmpeg thì video không có khoảng lặng nào từ 3 giây trở lên."""
+    from lesson_video import transcribe, wordlist
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
     paths = {p.stem: p for p in (OWS / "lessons").glob("U*.yaml")}
     units = sorted(k for k in paths if not k.endswith("-dictation"))
@@ -693,7 +695,10 @@ def test_word_skills_dictation_videos_cover_the_word_list():
         lesson, vid = sc.load(paths[unit_id + "-dictation"]), unit_id + "-dictation"
         assert lesson.activity == sc.load(paths[unit_id]).activity, vid
         assert 9 * 60 <= built[vid]["duration"] <= 11 * 60, (vid, built[vid]["duration"])
-        assert not any(ln.wait or ln.echo for s in lesson.scenes for ln in s.lines), vid
+        assert not any(ln.wait or ln.echo or ln.pause for s in lesson.scenes for ln in s.lines), vid
+        assert lesson.gap + lesson.scene_gap <= 1.0, vid                                  # chỉ còn khoảng ngắt tự nhiên
+        if shutil.which("ffmpeg"):
+            assert transcribe.silences(OWS / built[vid]["file"], noise="-45dB", dur=3.0) == [], vid
         assert [c for _, c in lesson.chapters()] == ["Giới thiệu", "1. Từ trong sách", "2. Từ thêm theo chủ đề",
                                                      "3. Câu giao tiếp", "Sau khi nghe – viết"], vid
         part, size = "", {}

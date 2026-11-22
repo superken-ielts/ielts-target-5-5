@@ -457,3 +457,75 @@ UNITS["U09"] = dict(
         ("In pen, please. Black or blue.", "Bút mực nhé, màu đen hoặc xanh.", "emma"),
     ],
 )
+
+# --- thêm sau khi bỏ mọi `pause` (đợt 36): bù thời lượng cho khoảng 10 phút ---
+UNITS["U05"]["extra"] += [
+    ("marker", "bút lông", "Write your name with a marker.", None),
+    ("paper clip", "kẹp giấy", "Keep the pages together with a paper clip.", None),
+    ("sticky note", "giấy ghi chú dán", "She writes new words on sticky notes.", None),
+]
+UNITS["U05"]["phrases"] += [
+    ("Can you help me with this exercise?", "Cô giúp em bài này được không ạ?", "tom"),
+    ("Of course. Which question?", "Tất nhiên. Câu nào?", "emma"),
+    ("Whose pen is this?", "Bút này của ai?", "emma"),
+    ("It's mine. Thank you.", "Của em ạ. Em cảm ơn.", "tom"),
+    ("Is there a bin in this room?", "Trong phòng có thùng rác không ạ?", "tom"),
+    ("Yes, it's next to the door.", "Có, ở cạnh cửa.", "emma"),
+]
+UNITS["U06"]["extra"] += [
+    ("question word", "từ để hỏi", "'What' and 'where' are question words.", None),
+    ("plural form", "dạng số nhiều", "'Men' is the plural form of 'man'.", None),
+]
+UNITS["U06"]["phrases"] += [
+    ("What's the plural of 'woman'?", "Số nhiều của 'woman' là gì?", "emma"),
+    ("It's 'women'. It's irregular.", "Là 'women'. Đó là số nhiều bất quy tắc.", "tom"),
+    ("Is 'news' singular or plural?", "'News' là số ít hay số nhiều?", "tom"),
+    ("It's singular. The news is good.", "Số ít: The news is good.", "emma"),
+    ("Can you check my grammar, please?", "Bạn xem giúp ngữ pháp của mình được không?", "tom"),
+    ("Sure. There's just one small mistake.", "Được. Chỉ có một lỗi nhỏ.", "emma"),
+]
+UNITS["U07"]["extra"] += [
+    ("synonym", "từ đồng nghĩa", "'Big' is a synonym of 'large'.", None),
+    ("phrasal verb", "cụm động từ", "'Look up' is a phrasal verb.", None),
+    ("dictionary entry", "mục từ trong từ điển", "Read the dictionary entry carefully.", None),
+]
+UNITS["U07"]["phrases"] += [
+    ("Can you say that more slowly, please?", "Bạn nói chậm hơn được không?", "tom"),
+    ("Of course. I'll say it again.", "Được chứ. Mình nói lại nhé.", "emma"),
+    ("Is this word formal or informal?", "Từ này trang trọng hay thân mật?", "tom"),
+    ("It's informal. Don't use it in an essay.", "Thân mật. Đừng dùng trong bài luận.", "emma",
+     {"s": "It's informal. Don't yooz it in an essay."}),
+    ("How do you spell 'Wednesday'?", "'Wednesday' đánh vần thế nào?", "tom"),
+    ("W, E, D, N, E, S, D, A, Y.", "W, E, D, N, E, S, D, A, Y.", "emma",
+     {"s": "double you, ee, dee, en, ee, ess, dee, eigh, why."}),
+]
+UNITS["U08"]["extra"] += [
+    ("contact details", "thông tin liên lạc", "Please leave your contact details.", None),
+    ("graduate", "tốt nghiệp", "She graduated from university last year.", None),
+    ("work for", "làm cho (công ty)", "He works for a bank.", None),
+    ("live alone", "sống một mình", "Her grandmother lives alone.", None, {"s": "liv alone", "se": "Her grandmother livz alone."}),
+]
+UNITS["U08"]["phrases"] += [
+    ("Where do you study?", "Bạn học ở đâu?", "emma"),
+    ("At a university in Ho Chi Minh City.", "Ở một trường đại học tại TP. Hồ Chí Minh.", "tom",
+     {"s": "At a university in Ho Chee Min City."}),
+    ("What are you studying?", "Bạn học ngành gì?", "emma"),
+    ("Business. I really enjoy it.", "Kinh doanh. Mình rất thích.", "tom"),
+    ("Do you have a part-time job?", "Bạn có làm thêm không?", "emma"),
+    ("Yes, I work in a café.", "Có, mình làm ở một quán cà phê.", "tom"),
+    ("How long have you taught in Vietnam?", "Bạn dạy ở Việt Nam bao lâu rồi?", "tom"),
+    ("For three years.", "Ba năm rồi.", "emma"),
+]
+UNITS["U09"]["extra"] += [
+    ("expiry date", "ngày hết hạn", "Check the expiry date on your passport.", None),
+    ("country of birth", "nước nơi sinh", "Country of birth: Vietnam.", None),
+    ("next of kin", "người thân gần nhất", "Write the name of your next of kin.", None),
+]
+UNITS["U09"]["phrases"] += [
+    ("Can I fill it in online?", "Mình điền trực tuyến được không?", "tom"),
+    ("Yes, on the school website.", "Được, trên trang web của trường.", "emma"),
+    ("Do I need a photo?", "Có cần ảnh không?", "tom"),
+    ("Yes, two passport photos.", "Có, hai ảnh hộ chiếu.", "emma"),
+    ("When do I need to send the form?", "Khi nào mình phải gửi phiếu?", "tom"),
+    ("By the end of the month.", "Trước cuối tháng.", "emma"),
+]

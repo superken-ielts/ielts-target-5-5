@@ -432,14 +432,16 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 - **Mỗi unit một video thứ hai** `<id video unit>-dictation`, ví dụ `U02-time-dictation`. Video dùng cùng `activity` với
   video bài giảng, nên nằm cùng phiên, cùng thẻ unit, đứng ngay sau video bài giảng (`lessons.json` xếp theo id). Nút ghi
   "Dictation · listen and write: …".
-- **Khoảng 10 phút, chạy liền:** không `wait` / `echo`, không đếm ngược. Sau mỗi từ nghỉ 1,5 giây, sau mỗi câu 2 giây;
-  người học tự tạm dừng để viết. Test cho phép 9–11 phút.
+- **Khoảng 10 phút, chạy liền, không có khoảng lặng:** không `wait` / `echo`, không đếm ngược, không dòng nào có `pause`.
+  Người học: "video ko nên có pause quá 3 giây nếu có ko có càng tốt" — họ tự tạm dừng để viết. Chỉ còn khoảng ngắt tự nhiên
+  0,45 giây giữa hai câu (`gap`) và 0,4 giây khi sang cảnh (`scene_gap`). Test cho phép 9–11 phút, và đo bằng ffmpeg
+  (`silencedetect`, −45 dB) thì không có khoảng lặng nào từ 3 giây trở lên.
 - **Ba phần**, mỗi phần một chương:
   1. *Từ trong sách* (Emma đọc).
      - Gồm mọi mục Word list của unit (`work/wordlist.json`) và từ trên trang unit không có trong Word list: Unit 1 có số
        11–20, -teen / -ty, số lớn, số điện thoại, giá tiền, %; Unit 2 có cách nói giờ; Unit 3 có thứ, tháng, số thứ tự,
        cách đọc năm.
-     - Mỗi mục đọc số thứ tự, đọc từ hai lần, rồi một câu ví dụ.
+     - Mỗi mục đọc số thứ tự, đọc từ hai lần, rồi câu ví dụ hai lần, để người học viết được cả câu.
      - Mục Word list liền nhau thì ghép một dòng (`France, French`; `grandfather, grandmother`), để Unit 4 (79 mục) vẫn vừa
        10 phút.
   2. *Từ thêm theo chủ đề* (Tom đọc): 10–25 từ ngoài sách, hay gặp và dùng được ngay. Ví dụ Unit 2: hour, on time,
@@ -469,12 +471,16 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
    mà Word list không có.
 2. Viết dữ liệu: từ trong sách 20–45 dòng, từ thêm 10–25, câu 14–30. Sinh kịch bản, rồi chạy `check`, `phonemes` (sửa bằng `s`
    / `se`) và `wordlist --level all` (phải ra 0).
-3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:50–10:10. Bản dựng Kokoro thường dài hơn ước lượng 5–15 giây.
+3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:40–10:00 ({CALIB36}). Thiếu thì thêm từ, câu; không thêm `pause`.
 4. Dựng video, rồi chạy `python3 web/build.py`.
 
 **Lưu ý:**
+- Bản đầu (đợt 36) có nghỉ 1,5 giây sau mỗi từ và 2 giây sau mỗi câu. Đo bản dựng Unit 2: khoảng lặng trung vị 2,0 giây,
+  dài nhất 3,5 giây ở chỗ chuyển cảnh (nghỉ 2 giây + `gap` + `scene_gap` 0,8 giây). Người học yêu cầu không quá 3 giây, tốt
+  nhất là không có, nên đã bỏ mọi `pause`, `scene_gap` còn 0,4, câu ví dụ đọc hai lần, thêm từ và câu cho đủ 10 phút.
 - `a.m.`, `p.m.` Kokoro đọc đúng, không cần `say`. Số -teen đứng riêng hoặc cuối câu vẫn dùng `thir-teen`… (mục 5.5).
-- `use` là danh từ trong "for office use only" (Unit 9) nhưng `phonemes` vẫn báo ⚠: báo nhầm, đã ghi ở đầu kịch bản.
+- `phonemes` báo nhầm ở "for office use only" (Unit 9: use là danh từ) và "close friends" (Unit 15: close là tính từ); đã
+  ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
 <!-- bảng 5.9 -->

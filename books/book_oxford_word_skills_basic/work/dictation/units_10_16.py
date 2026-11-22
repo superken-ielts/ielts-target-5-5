@@ -368,6 +368,7 @@ UNITS["U15"] = dict(
     unit="U15", id="U15-relationships-dictation", activity="U15-words", title="Unit 15 · Relationships",
     topic="Relationships", topic_say="Relationships", topic_en_short="friends and relationships",
     topic_vi="các mối quan hệ", tag="PEOPLE · UNIT 15",
+    notes=["⚠ của `phonemes` ở \"close friends\" là báo nhầm: close là tính từ /kloʊs/, đọc đúng."],
     book=[
         ("best friend", "bạn thân nhất", "Khoa is Tom's best friend.", ["best friend", "friend"],
          {"se": "Kwah is Tom's best friend."}),
@@ -655,4 +656,91 @@ UNITS["U16"]["phrases"] += [
     ("Cheer up! It's nearly the weekend.", "Vui lên nào! Sắp cuối tuần rồi.", "tom"),
     ("Good luck in your exam!", "Chúc thi tốt!", "emma"),
     ("Thanks. I'll need it!", "Cảm ơn. Mình sẽ cần lắm đấy!", "tom"),
+]
+
+# --- thêm sau khi bỏ mọi `pause` (đợt 36): bù thời lượng cho khoảng 10 phút ---
+UNITS["U10"]["extra"] += [
+    ("great-grandfather", "cụ ông", "His great-grandfather was a farmer.", None),
+]
+UNITS["U10"]["phrases"] += [
+    ("Do you have a big family?", "Gia đình bạn có đông không?", "emma"),
+    ("Quite big. I've got lots of cousins.", "Khá đông. Mình có nhiều anh chị em họ.", "tom"),
+    ("Who's the oldest person in your family?", "Ai lớn tuổi nhất trong nhà bạn?", "tom"),
+    ("My grandmother.", "Bà mình.", "emma"),
+]
+UNITS["U11"]["extra"] += [
+    ("kneel", "quỳ", "Kneel down on the mat.", None),
+    ("tap", "gõ nhẹ, chạm", "Tap the screen to start.", None),
+    ("roll", "lăn", "The ball rolled under the car.", None),
+]
+UNITS["U11"]["phrases"] += [
+    ("Can you hold this for a moment?", "Bạn cầm giúp cái này một lát được không?", "emma"),
+    ("Sure. Wow, it's heavy!", "Được. Ồ, nặng thế!", "tom"),
+    ("Don't push! Wait your turn.", "Đừng chen! Đợi đến lượt.", "emma"),
+    ("Can you open the door for me?", "Bạn mở cửa giúp mình được không?", "tom"),
+    ("Of course. After you.", "Tất nhiên. Mời bạn đi trước.", "emma"),
+    ("Pick up your clothes, please!", "Nhặt quần áo lên đi!", "emma"),
+    ("Sorry, I'll do it now.", "Xin lỗi, mình làm ngay.", "tom"),
+]
+UNITS["U12"]["extra"] += [
+    ("eyelash", "lông mi", "She has long eyelashes.", None),
+    ("palm", "lòng bàn tay", "Hold out your palm.", None),
+]
+UNITS["U12"]["phrases"] += [
+    ("Have you hurt yourself?", "Bạn có bị thương không?", "emma"),
+    ("Yes, I've cut my finger.", "Có, mình bị đứt tay.", "tom"),
+    ("Let me have a look.", "Để mình xem nào.", "emma"),
+    ("How often do you go to the dentist?", "Bạn đi nha sĩ bao lâu một lần?", "emma"),
+    ("Twice a year.", "Hai lần một năm.", "tom"),
+    ("Keep your back straight when you sit.", "Ngồi thì giữ lưng thẳng.", "emma"),
+]
+UNITS["U13"]["extra"] += [
+    ("dyed", "nhuộm", "Her hair is dyed blonde.", None),
+    ("tanned", "rám nắng", "He's tanned after his holiday.", None),
+]
+UNITS["U13"]["phrases"] += [
+    ("What colour is your hair?", "Tóc bạn màu gì?", "tom"),
+    ("It's light brown and wavy.", "Nâu sáng và gợn sóng.", "emma"),
+    ("Does Jack have a beard?", "Jack có để râu không?", "tom"),
+    ("Yes, just like my dad.", "Có, giống y bố mình.", "emma"),
+    ("What does your mum look like?", "Mẹ bạn trông thế nào?", "emma"),
+    ("She's short, with short black wavy hair.", "Mẹ thấp, tóc đen ngắn hơi gợn sóng.", "tom"),
+]
+UNITS["U14"]["extra"] += [
+    ("modest", "khiêm tốn", "He's very modest about his success.", None),
+    ("stubborn", "bướng bỉnh", "Her little brother is very stubborn.", None),
+]
+UNITS["U14"]["phrases"] += [
+    ("What's your sister like?", "Chị bạn là người thế nào?", "emma"),
+    ("She's kind and very sensible.", "Chị ấy tốt bụng và rất chín chắn.", "tom"),
+    ("Are you an organized person?", "Bạn có ngăn nắp không?", "tom"),
+    ("Not really. I'm quite relaxed.", "Không hẳn. Mình khá thoải mái.", "emma"),
+    ("Who's the funniest person you know?", "Ai là người hài hước nhất bạn biết?", "emma"),
+    ("Khoa. He's always telling jokes.", "Khoa. Lúc nào cậu ấy cũng kể chuyện cười.", "tom",
+     {"s": "Kwah. He's always telling jokes."}),
+]
+UNITS["U15"]["extra"] += [
+    ("best man", "phù rể", "His brother was the best man at the wedding.", None),
+]
+UNITS["U15"]["phrases"] += [
+    ("Do you have many close friends?", "Bạn có nhiều bạn thân không?", "emma"),
+    ("Not many, but they're very good friends.", "Không nhiều, nhưng đều là bạn rất tốt.", "tom"),
+    ("How did your parents meet?", "Bố mẹ bạn gặp nhau thế nào?", "tom"),
+    ("At a friend's wedding.", "Ở đám cưới một người bạn.", "emma"),
+    ("Are they still together?", "Họ vẫn bên nhau chứ?", "tom"),
+    ("Yes, for thirty-five years now.", "Có, ba mươi lăm năm rồi.", "emma"),
+]
+UNITS["U16"]["extra"] += [
+    ("calm down", "bình tĩnh lại", "Calm down and take a deep breath.", None),
+    ("cheer up", "vui lên", "This song always cheers me up.", None),
+    ("feel sorry for", "thấy tội cho", "I feel sorry for him.", None),
+]
+UNITS["U16"]["phrases"] += [
+    ("Why are you so happy today?", "Sao hôm nay bạn vui thế?", "emma"),
+    ("I got a good mark in my IELTS practice test!", "Mình được điểm tốt ở bài thi thử IELTS!", "tom",
+     {"s": "I got a good mark in my eye-elts practice test!"}),
+    ("How did you feel on your first day at work?", "Ngày đầu đi làm bạn cảm thấy thế nào?", "emma"),
+    ("Very nervous. I dropped a tray of coffee!", "Rất hồi hộp. Mình làm rơi cả khay cà phê!", "tom"),
+    ("Are you afraid of anything?", "Bạn có sợ gì không?", "tom"),
+    ("Yes, spiders! And the traffic here.", "Có, nhện! Và cả giao thông ở đây nữa.", "emma"),
 ]

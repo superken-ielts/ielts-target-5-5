@@ -21,8 +21,8 @@ ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", 
         "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
 TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
 PER = 6
-WORD_PAUSE = 1.5   # sau mỗi từ (giây) — video chạy liền, người học tự tạm dừng khi cần
-SENT_PAUSE = 2.0   # sau mỗi câu giao tiếp
+SCENE_GAP = 0.4   # nghỉ khi sang cảnh (giây). Không có `pause` nào: người học "video ko nên có pause quá 3 giây nếu có ko
+                  # có càng tốt" — chỉ còn khoảng ngắt tự nhiên giữa hai câu (gap 0,45 giây); người học tự tạm dừng để viết
 
 
 def num(n: int) -> str:
@@ -72,19 +72,19 @@ def word_items(entries, start, speaker, part_no, title_en, title_vi, chapter, in
                 it["w"] = keys if isinstance(keys, list) else [keys]
             items.append(it)
             s = o.get("s", a)
-            text = f"{num(n)}. {a}. {a}. {ex}".strip()
-            say = f"{num(n)}. {s}. {s}. {o.get('se', ex)}".strip()
+            se = o.get("se", ex)
+            text = f"{num(n)}. {a}. {a}. {ex} {ex}".strip()        # từ hai lần, câu ví dụ hai lần
+            say = f"{num(n)}. {s}. {s}. {se} {se}".strip()
             ln = {speaker: text}
             if say != text:
                 ln["say"] = say
             ln["focus"] = k
             if k > 0:
                 ln["reveal"] = [n - 1]
-            ln["pause"] = WORD_PAUSE
             lines.append(ln)
             n += 1
         lines.append({speaker: "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": len(chunk) - 1,
-                      "reveal": [n - 1], "pause": 2.0})
+                      "reveal": [n - 1]})
         a0, a1 = items[0]["n"], items[-1]["n"]
         out += scene_block("dictation", chapter if ci == 0 else "", f"Dictation {part_no} · {title_en} ({a0}–{a1})",
                            title_vi, items, lines)
@@ -110,11 +110,10 @@ def sentence_items(entries, start, chapter, intro):
             ln["focus"] = k
             if k > 0:
                 ln["reveal"] = [n - 1]
-            ln["pause"] = SENT_PAUSE
             lines.append(ln)
             n += 1
         lines.append({"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": len(chunk) - 1,
-                      "reveal": [n - 1], "pause": 2.0})
+                      "reveal": [n - 1]})
         a0, a1 = items[0]["n"], items[-1]["n"]
         out += scene_block("dictation", chapter if ci == 0 else "", f"Dictation 3 · Useful sentences ({a0}–{a1})",
                            "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết", items, lines)
@@ -128,9 +127,10 @@ def build(u: dict) -> str:
             f"# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/{u['id']}.yaml",
             "# Người học: \"mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu",
             "# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp\".",
-            "# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang",
-            "# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai",
-            "# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.",
+            "# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: \"video ko nên",
+            "# có pause quá 3 giây nếu có ko có càng tốt\" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục",
+            "# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần",
+            "# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.",
             f"# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit {u['unit']} --level all",
             "# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không",
             "# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính."]
@@ -139,6 +139,7 @@ def build(u: dict) -> str:
              f"subtitle: {j('Dictation · listen and write: ' + u['topic_en_short'])}",
              f"title_vi: {j('Nghe – viết 10 phút: ' + u['topic_vi'] + ' — từ trong sách, từ thêm, câu giao tiếp')}",
              f"tag: {j(u['tag'])}",
+             f"scene_gap: {SCENE_GAP}",
              "speakers:",
              "  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)",
              '  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}',
@@ -149,11 +150,11 @@ def build(u: dict) -> str:
         {"emma": f"Welcome to the dictation for Unit {no}: {u['topic']}. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.",
          "say": f"Welcome to the dictation for Unit {num(no).lower()}: {u['topic_say']}. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.",
          "vi": f"Bài nghe – viết Unit {no}: {u['topic_vi']}. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."},
-        {"emma": f"There are three parts. First, {nb} words from the book. You hear each word twice, then a sentence. Then {nx} more useful words, and {np_} useful sentences for conversation.",
-         "say": f"There are three parts. First, {num(nb).lower()} words from the book. You hear each word twice, then a sentence. Then {num(nx).lower()} more useful words, and {num(np_).lower()} useful sentences for conversation.",
-         "vi": f"Ba phần: {nb} từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), {nx} từ thêm, {np_} câu giao tiếp."},
-        {"tom": "The answer appears when the next one starts. So write first, then check.",
-         "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."},
+        {"emma": f"There are three parts. First, {nb} words from the book. You hear each word twice, and then an example sentence twice. Then {nx} more useful words, and {np_} useful sentences for conversation.",
+         "say": f"There are three parts. First, {num(nb).lower()} words from the book. You hear each word twice, and then an example sentence twice. Then {num(nx).lower()} more useful words, and {num(np_).lower()} useful sentences for conversation.",
+         "vi": f"Ba phần: {nb} từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), {nx} từ thêm, {np_} câu giao tiếp."},
+        {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.",
+         "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."},
     ]
     body = [f"  - kind: title", '    chapter: "Giới thiệu"', "    lines:"] + [f"      - {j(x)}" for x in intro] + [""]
     p1, n = word_items(u["book"], 1, "emma", 1, "Words from the book",

@@ -2,9 +2,10 @@
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U12-body-dictation.yaml
 # Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
 # theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
-# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
-# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
-# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
 # Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U12 --level all
 # Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
 # sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
@@ -14,6 +15,7 @@ title: "Unit 12 · Parts of the body"
 subtitle: "Dictation · listen and write: the body and health"
 title_vi: "Nghe – viết 10 phút: bộ phận cơ thể — từ trong sách, từ thêm, câu giao tiếp"
 tag: "PEOPLE · UNIT 12"
+scene_gap: 0.4
 speakers:
   # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
   emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
@@ -24,8 +26,8 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 12: Parts of the body. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twelve: Parts of the body. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 12: bộ phận cơ thể. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 28 words from the book. You hear each word twice, then a sentence. Then 22 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, twenty-eight words from the book. You hear each word twice, then a sentence. Then twenty-two more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 28 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 22 từ thêm, 28 câu giao tiếp."}
-      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+      - {"emma": "There are three parts. First, 28 words from the book. You hear each word twice, and then an example sentence twice. Then 24 more useful words, and 34 useful sentences for conversation.", "say": "There are three parts. First, twenty-eight words from the book. You hear each word twice, and then an example sentence twice. Then twenty-four more useful words, and thirty-four useful sentences for conversation.", "vi": "Ba phần: 28 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 24 từ thêm, 34 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
     chapter: "1. Từ trong sách"
@@ -40,13 +42,13 @@ scenes:
       - {"n": 6, "answer": "nose", "vi": "mũi", "ex": "Her nose is red because of the cold.", "w": ["nose"]}
     lines:
       - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
-      - {"emma": "One. head. head. His head hurts.", "focus": 0, "pause": 1.5}
-      - {"emma": "Two. hair. hair. She's got long hair.", "focus": 1, "reveal": [1], "pause": 1.5}
-      - {"emma": "Three. face. face. Wash your face.", "focus": 2, "reveal": [2], "pause": 1.5}
-      - {"emma": "Four. eye. eye. She's got blue eyes.", "focus": 3, "reveal": [3], "pause": 1.5}
-      - {"emma": "Five. ear. ear. He's got a pen behind his ear.", "focus": 4, "reveal": [4], "pause": 1.5}
-      - {"emma": "Six. nose. nose. Her nose is red because of the cold.", "focus": 5, "reveal": [5], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+      - {"emma": "One. head. head. His head hurts. His head hurts.", "focus": 0}
+      - {"emma": "Two. hair. hair. She's got long hair. She's got long hair.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. face. face. Wash your face. Wash your face.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. eye. eye. She's got blue eyes. She's got blue eyes.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. ear. ear. He's got a pen behind his ear. He's got a pen behind his ear.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. nose. nose. Her nose is red because of the cold. Her nose is red because of the cold.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (7–12)"
@@ -59,13 +61,13 @@ scenes:
       - {"n": 11, "answer": "chin", "vi": "cằm", "ex": "He's got a small beard on his chin.", "w": ["chin"]}
       - {"n": 12, "answer": "neck", "vi": "cổ", "ex": "Her neck hurts after a long day at the computer.", "w": ["neck"]}
     lines:
-      - {"emma": "Seven. mouth. mouth. Open your mouth, please.", "focus": 0, "pause": 1.5}
-      - {"emma": "Eight. lip. lip. Her lips are dry.", "focus": 1, "reveal": [7], "pause": 1.5}
-      - {"emma": "Nine. tooth, teeth. tooth, teeth. Brush your teeth twice a day.", "focus": 2, "reveal": [8], "pause": 1.5}
-      - {"emma": "Ten. cheek. cheek. She kissed him on the cheek.", "focus": 3, "reveal": [9], "pause": 1.5}
-      - {"emma": "Eleven. chin. chin. He's got a small beard on his chin.", "focus": 4, "reveal": [10], "pause": 1.5}
-      - {"emma": "Twelve. neck. neck. Her neck hurts after a long day at the computer.", "focus": 5, "reveal": [11], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+      - {"emma": "Seven. mouth. mouth. Open your mouth, please. Open your mouth, please.", "focus": 0}
+      - {"emma": "Eight. lip. lip. Her lips are dry. Her lips are dry.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. tooth, teeth. tooth, teeth. Brush your teeth twice a day. Brush your teeth twice a day.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. cheek. cheek. She kissed him on the cheek. She kissed him on the cheek.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. chin. chin. He's got a small beard on his chin. He's got a small beard on his chin.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. neck. neck. Her neck hurts after a long day at the computer. Her neck hurts after a long day at the computer.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (13–18)"
@@ -78,13 +80,13 @@ scenes:
       - {"n": 17, "answer": "fingers", "vi": "ngón tay", "ex": "Count on your fingers.", "w": ["fingers"]}
       - {"n": 18, "answer": "thumb", "vi": "ngón cái", "ex": "He gave me a thumbs up.", "w": ["thumb", "give"]}
     lines:
-      - {"emma": "Thirteen. shoulder. shoulder. Put your bag on your shoulder.", "focus": 0, "pause": 1.5}
-      - {"emma": "Fourteen. arm. arm. He broke his arm playing football.", "focus": 1, "reveal": [13], "pause": 1.5}
-      - {"emma": "Fifteen. hand. hand. Raise your hand.", "focus": 2, "reveal": [14], "pause": 1.5}
-      - {"emma": "Sixteen. wrist. wrist. She wears a watch on her left wrist.", "focus": 3, "reveal": [15], "pause": 1.5}
-      - {"emma": "Seventeen. fingers. fingers. Count on your fingers.", "focus": 4, "reveal": [16], "pause": 1.5}
-      - {"emma": "Eighteen. thumb. thumb. He gave me a thumbs up.", "focus": 5, "reveal": [17], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+      - {"emma": "Thirteen. shoulder. shoulder. Put your bag on your shoulder. Put your bag on your shoulder.", "focus": 0}
+      - {"emma": "Fourteen. arm. arm. He broke his arm playing football. He broke his arm playing football.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. hand. hand. Raise your hand. Raise your hand.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. wrist. wrist. She wears a watch on her left wrist. She wears a watch on her left wrist.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. fingers. fingers. Count on your fingers. Count on your fingers.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. thumb. thumb. He gave me a thumbs up. He gave me a thumbs up.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (19–24)"
@@ -97,13 +99,13 @@ scenes:
       - {"n": 23, "answer": "bottom", "vi": "mông", "ex": "The baby fell on his bottom.", "w": ["bottom"]}
       - {"n": 24, "answer": "leg", "vi": "chân (cả chân)", "ex": "She's got long legs.", "w": ["leg"]}
     lines:
-      - {"emma": "Nineteen. chest. chest. He has a pain in his chest.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty. stomach. stomach. Her stomach hurts after lunch.", "focus": 1, "reveal": [19], "pause": 1.5}
-      - {"emma": "Twenty-one. back. back. Sitting at a laptop all day can give you back pain.", "focus": 2, "reveal": [20], "pause": 1.5}
-      - {"emma": "Twenty-two. waist. waist. These trousers are too big at the waist.", "focus": 3, "reveal": [21], "pause": 1.5}
-      - {"emma": "Twenty-three. bottom. bottom. The baby fell on his bottom.", "focus": 4, "reveal": [22], "pause": 1.5}
-      - {"emma": "Twenty-four. leg. leg. She's got long legs.", "focus": 5, "reveal": [23], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+      - {"emma": "Nineteen. chest. chest. He has a pain in his chest. He has a pain in his chest.", "focus": 0}
+      - {"emma": "Twenty. stomach. stomach. Her stomach hurts after lunch. Her stomach hurts after lunch.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. back. back. Sitting at a laptop all day can give you back pain. Sitting at a laptop all day can give you back pain.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. waist. waist. These trousers are too big at the waist. These trousers are too big at the waist.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. bottom. bottom. The baby fell on his bottom. The baby fell on his bottom.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. leg. leg. She's got long legs. She's got long legs.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (25–28)"
@@ -114,11 +116,11 @@ scenes:
       - {"n": 27, "answer": "foot, feet", "vi": "bàn chân (số nhiều: feet)", "ex": "Her feet hurt after the long walk.", "w": ["foot", "feet"]}
       - {"n": 28, "answer": "toe", "vi": "ngón chân", "ex": "There are five toes on each foot.", "w": ["toe"]}
     lines:
-      - {"emma": "Twenty-five. knee. knee. His grandfather's knees hurt when it rains.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty-six. ankle. ankle. She hurt her ankle playing basketball.", "focus": 1, "reveal": [25], "pause": 1.5}
-      - {"emma": "Twenty-seven. foot, feet. foot, feet. Her feet hurt after the long walk.", "focus": 2, "reveal": [26], "pause": 1.5}
-      - {"emma": "Twenty-eight. toe. toe. There are five toes on each foot.", "focus": 3, "reveal": [27], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28], "pause": 2.0}
+      - {"emma": "Twenty-five. knee. knee. His grandfather's knees hurt when it rains. His grandfather's knees hurt when it rains.", "focus": 0}
+      - {"emma": "Twenty-six. ankle. ankle. She hurt her ankle playing basketball. She hurt her ankle playing basketball.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. foot, feet. foot, feet. Her feet hurt after the long walk. Her feet hurt after the long walk.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. toe. toe. There are five toes on each foot. There are five toes on each foot.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
 
   - kind: dictation
     chapter: "2. Từ thêm theo chủ đề"
@@ -133,13 +135,13 @@ scenes:
       - {"n": 34, "answer": "heart", "vi": "tim", "ex": "Exercise is good for your heart."}
     lines:
       - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
-      - {"tom": "Twenty-nine. elbow. elbow. Don't put your elbows on the table.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty. eyebrow. eyebrow. She has dark eyebrows.", "focus": 1, "reveal": [29], "pause": 1.5}
-      - {"tom": "Thirty-one. forehead. forehead. Feel his forehead. Is he hot?", "focus": 2, "reveal": [30], "pause": 1.5}
-      - {"tom": "Thirty-two. skin. skin. Wear a hat to protect your skin.", "focus": 3, "reveal": [31], "pause": 1.5}
-      - {"tom": "Thirty-three. bone. bone. He broke a bone in his foot.", "focus": 4, "reveal": [32], "pause": 1.5}
-      - {"tom": "Thirty-four. heart. heart. Exercise is good for your heart.", "focus": 5, "reveal": [33], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34], "pause": 2.0}
+      - {"tom": "Twenty-nine. elbow. elbow. Don't put your elbows on the table. Don't put your elbows on the table.", "focus": 0}
+      - {"tom": "Thirty. eyebrow. eyebrow. She has dark eyebrows. She has dark eyebrows.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. forehead. forehead. Feel his forehead. Is he hot? Feel his forehead. Is he hot?", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. skin. skin. Wear a hat to protect your skin. Wear a hat to protect your skin.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. bone. bone. He broke a bone in his foot. He broke a bone in his foot.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. heart. heart. Exercise is good for your heart. Exercise is good for your heart.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (35–40)"
@@ -152,13 +154,13 @@ scenes:
       - {"n": 39, "answer": "stomach ache", "vi": "đau bụng", "ex": "Too much ice cream gave him a stomach ache."}
       - {"n": 40, "answer": "hurt", "vi": "đau, làm đau", "ex": "My back hurts."}
     lines:
-      - {"tom": "Thirty-five. brain. brain. The brain needs a lot of sleep.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-six. headache. headache. She's got a terrible headache.", "focus": 1, "reveal": [35], "pause": 1.5}
-      - {"tom": "Thirty-seven. sore throat. sore throat. He's got a sore throat and a cough.", "focus": 2, "reveal": [36], "pause": 1.5}
-      - {"tom": "Thirty-eight. toothache. toothache. Go to the dentist if you have toothache.", "focus": 3, "reveal": [37], "pause": 1.5}
-      - {"tom": "Thirty-nine. stomach ache. stomach ache. Too much ice cream gave him a stomach ache.", "focus": 4, "reveal": [38], "pause": 1.5}
-      - {"tom": "Forty. hurt. hurt. My back hurts.", "focus": 5, "reveal": [39], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40], "pause": 2.0}
+      - {"tom": "Thirty-five. brain. brain. The brain needs a lot of sleep. The brain needs a lot of sleep.", "focus": 0}
+      - {"tom": "Thirty-six. headache. headache. She's got a terrible headache. She's got a terrible headache.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. sore throat. sore throat. He's got a sore throat and a cough. He's got a sore throat and a cough.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. toothache. toothache. Go to the dentist if you have toothache. Go to the dentist if you have toothache.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. stomach ache. stomach ache. Too much ice cream gave him a stomach ache. Too much ice cream gave him a stomach ache.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. hurt. hurt. My back hurts. My back hurts.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (41–46)"
@@ -171,121 +173,144 @@ scenes:
       - {"n": 45, "answer": "lungs", "vi": "phổi", "ex": "Smoking is bad for your lungs."}
       - {"n": 46, "answer": "muscle", "vi": "cơ bắp", "ex": "Exercise makes your muscles strong."}
     lines:
-      - {"tom": "Forty-one. cough. cough. Cover your mouth when you cough.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-two. temperature. temperature. She's got a high temperature.", "focus": 1, "reveal": [41], "pause": 1.5}
-      - {"tom": "Forty-three. throat. throat. Her throat is sore.", "focus": 2, "reveal": [42], "pause": 1.5}
-      - {"tom": "Forty-four. tongue. tongue. Put out your tongue, please.", "focus": 3, "reveal": [43], "pause": 1.5}
-      - {"tom": "Forty-five. lungs. lungs. Smoking is bad for your lungs.", "focus": 4, "reveal": [44], "pause": 1.5}
-      - {"tom": "Forty-six. muscle. muscle. Exercise makes your muscles strong.", "focus": 5, "reveal": [45], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46], "pause": 2.0}
+      - {"tom": "Forty-one. cough. cough. Cover your mouth when you cough. Cover your mouth when you cough.", "focus": 0}
+      - {"tom": "Forty-two. temperature. temperature. She's got a high temperature. She's got a high temperature.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. throat. throat. Her throat is sore. Her throat is sore.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. tongue. tongue. Put out your tongue, please. Put out your tongue, please.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. lungs. lungs. Smoking is bad for your lungs. Smoking is bad for your lungs.", "focus": 4, "reveal": [44]}
+      - {"tom": "Forty-six. muscle. muscle. Exercise makes your muscles strong. Exercise makes your muscles strong.", "focus": 5, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46]}
 
   - kind: dictation
-    heading: "Dictation 2 · More useful words (47–50)"
+    heading: "Dictation 2 · More useful words (47–52)"
     heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
     items:
       - {"n": 47, "answer": "nail", "vi": "móng tay, móng chân", "ex": "Don't bite your nails."}
       - {"n": 48, "answer": "hip", "vi": "hông", "ex": "She hurt her hip when she fell."}
       - {"n": 49, "answer": "backache", "vi": "đau lưng", "ex": "Sitting all day can cause backache."}
       - {"n": 50, "answer": "medicine", "vi": "thuốc", "ex": "Take your medicine after meals."}
+      - {"n": 51, "answer": "eyelash", "vi": "lông mi", "ex": "She has long eyelashes."}
+      - {"n": 52, "answer": "palm", "vi": "lòng bàn tay", "ex": "Hold out your palm."}
     lines:
-      - {"tom": "Forty-seven. nail. nail. Don't bite your nails.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-eight. hip. hip. She hurt her hip when she fell.", "focus": 1, "reveal": [47], "pause": 1.5}
-      - {"tom": "Forty-nine. backache. backache. Sitting all day can cause backache.", "focus": 2, "reveal": [48], "pause": 1.5}
-      - {"tom": "Fifty. medicine. medicine. Take your medicine after meals.", "focus": 3, "reveal": [49], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [50], "pause": 2.0}
+      - {"tom": "Forty-seven. nail. nail. Don't bite your nails. Don't bite your nails.", "focus": 0}
+      - {"tom": "Forty-eight. hip. hip. She hurt her hip when she fell. She hurt her hip when she fell.", "focus": 1, "reveal": [47]}
+      - {"tom": "Forty-nine. backache. backache. Sitting all day can cause backache. Sitting all day can cause backache.", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. medicine. medicine. Take your medicine after meals. Take your medicine after meals.", "focus": 3, "reveal": [49]}
+      - {"tom": "Fifty-one. eyelash. eyelash. She has long eyelashes. She has long eyelashes.", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. palm. palm. Hold out your palm. Hold out your palm.", "focus": 5, "reveal": [51]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
 
   - kind: dictation
     chapter: "3. Câu giao tiếp"
-    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading: "Dictation 3 · Useful sentences (53–58)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 51, "answer": "What's wrong?", "vi": "Bạn bị sao vậy?"}
-      - {"n": 52, "answer": "My back hurts after a long day at my laptop.", "vi": "Mình đau lưng sau một ngày dài ngồi máy tính."}
-      - {"n": 53, "answer": "Where does it hurt?", "vi": "Đau ở đâu?"}
-      - {"n": 54, "answer": "Here, in my neck.", "vi": "Ở đây, chỗ cổ."}
-      - {"n": 55, "answer": "Open your mouth and say ah.", "vi": "Há miệng ra và nói 'a'."}
-      - {"n": 56, "answer": "Have you got a temperature?", "vi": "Bạn có sốt không?"}
+      - {"n": 53, "answer": "What's wrong?", "vi": "Bạn bị sao vậy?"}
+      - {"n": 54, "answer": "My back hurts after a long day at my laptop.", "vi": "Mình đau lưng sau một ngày dài ngồi máy tính."}
+      - {"n": 55, "answer": "Where does it hurt?", "vi": "Đau ở đâu?"}
+      - {"n": 56, "answer": "Here, in my neck.", "vi": "Ở đây, chỗ cổ."}
+      - {"n": 57, "answer": "Open your mouth and say ah.", "vi": "Há miệng ra và nói 'a'."}
+      - {"n": 58, "answer": "Have you got a temperature?", "vi": "Bạn có sốt không?"}
     lines:
       - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
-      - {"emma": "Fifty-one. What's wrong? What's wrong?", "focus": 0, "pause": 2.0}
-      - {"tom": "Fifty-two. My back hurts after a long day at my laptop. My back hurts after a long day at my laptop.", "focus": 1, "reveal": [51], "pause": 2.0}
-      - {"emma": "Fifty-three. Where does it hurt? Where does it hurt?", "focus": 2, "reveal": [52], "pause": 2.0}
-      - {"tom": "Fifty-four. Here, in my neck. Here, in my neck.", "focus": 3, "reveal": [53], "pause": 2.0}
-      - {"emma": "Fifty-five. Open your mouth and say ah. Open your mouth and say ah.", "focus": 4, "reveal": [54], "pause": 2.0}
-      - {"emma": "Fifty-six. Have you got a temperature? Have you got a temperature?", "focus": 5, "reveal": [55], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56], "pause": 2.0}
+      - {"emma": "Fifty-three. What's wrong? What's wrong?", "focus": 0}
+      - {"tom": "Fifty-four. My back hurts after a long day at my laptop. My back hurts after a long day at my laptop.", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. Where does it hurt? Where does it hurt?", "focus": 2, "reveal": [54]}
+      - {"tom": "Fifty-six. Here, in my neck. Here, in my neck.", "focus": 3, "reveal": [55]}
+      - {"emma": "Fifty-seven. Open your mouth and say ah. Open your mouth and say ah.", "focus": 4, "reveal": [56]}
+      - {"emma": "Fifty-eight. Have you got a temperature? Have you got a temperature?", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading: "Dictation 3 · Useful sentences (59–64)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 57, "answer": "No, but I've got a sore throat.", "vi": "Không, nhưng mình bị đau họng."}
-      - {"n": 58, "answer": "Take this medicine three times a day.", "vi": "Uống thuốc này ngày ba lần."}
-      - {"n": 59, "answer": "You should stay in bed and rest.", "vi": "Bạn nên nằm nghỉ trên giường."}
-      - {"n": 60, "answer": "I've got a headache. Have you got any painkillers?", "vi": "Mình đau đầu. Bạn có thuốc giảm đau không?"}
-      - {"n": 61, "answer": "Wash your hands before you eat.", "vi": "Rửa tay trước khi ăn."}
-      - {"n": 62, "answer": "My eyes are tired. I need a break.", "vi": "Mắt mình mỏi rồi. Mình cần nghỉ một lát."}
+      - {"n": 59, "answer": "No, but I've got a sore throat.", "vi": "Không, nhưng mình bị đau họng."}
+      - {"n": 60, "answer": "Take this medicine three times a day.", "vi": "Uống thuốc này ngày ba lần."}
+      - {"n": 61, "answer": "You should stay in bed and rest.", "vi": "Bạn nên nằm nghỉ trên giường."}
+      - {"n": 62, "answer": "I've got a headache. Have you got any painkillers?", "vi": "Mình đau đầu. Bạn có thuốc giảm đau không?"}
+      - {"n": 63, "answer": "Wash your hands before you eat.", "vi": "Rửa tay trước khi ăn."}
+      - {"n": 64, "answer": "My eyes are tired. I need a break.", "vi": "Mắt mình mỏi rồi. Mình cần nghỉ một lát."}
     lines:
-      - {"tom": "Fifty-seven. No, but I've got a sore throat. No, but I've got a sore throat.", "focus": 0, "pause": 2.0}
-      - {"emma": "Fifty-eight. Take this medicine three times a day. Take this medicine three times a day.", "focus": 1, "reveal": [57], "pause": 2.0}
-      - {"emma": "Fifty-nine. You should stay in bed and rest. You should stay in bed and rest.", "focus": 2, "reveal": [58], "pause": 2.0}
-      - {"tom": "Sixty. I've got a headache. Have you got any painkillers? I've got a headache. Have you got any painkillers?", "focus": 3, "reveal": [59], "pause": 2.0}
-      - {"emma": "Sixty-one. Wash your hands before you eat. Wash your hands before you eat.", "focus": 4, "reveal": [60], "pause": 2.0}
-      - {"tom": "Sixty-two. My eyes are tired. I need a break. My eyes are tired. I need a break.", "focus": 5, "reveal": [61], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62], "pause": 2.0}
+      - {"tom": "Fifty-nine. No, but I've got a sore throat. No, but I've got a sore throat.", "focus": 0}
+      - {"emma": "Sixty. Take this medicine three times a day. Take this medicine three times a day.", "focus": 1, "reveal": [59]}
+      - {"emma": "Sixty-one. You should stay in bed and rest. You should stay in bed and rest.", "focus": 2, "reveal": [60]}
+      - {"tom": "Sixty-two. I've got a headache. Have you got any painkillers? I've got a headache. Have you got any painkillers?", "focus": 3, "reveal": [61]}
+      - {"emma": "Sixty-three. Wash your hands before you eat. Wash your hands before you eat.", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. My eyes are tired. I need a break. My eyes are tired. I need a break.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading: "Dictation 3 · Useful sentences (65–70)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 63, "answer": "Stand up straight.", "vi": "Đứng thẳng lên."}
-      - {"n": 64, "answer": "I can't move my arm.", "vi": "Mình không cử động được cánh tay."}
-      - {"n": 65, "answer": "You need to see a doctor.", "vi": "Bạn cần đi khám bác sĩ."}
-      - {"n": 66, "answer": "I hurt my knee playing basketball.", "vi": "Mình bị đau đầu gối khi chơi bóng rổ."}
-      - {"n": 67, "answer": "Put some ice on it.", "vi": "Chườm đá lên đi."}
-      - {"n": 68, "answer": "Do you feel better now?", "vi": "Giờ bạn thấy đỡ hơn chưa?"}
+      - {"n": 65, "answer": "Stand up straight.", "vi": "Đứng thẳng lên."}
+      - {"n": 66, "answer": "I can't move my arm.", "vi": "Mình không cử động được cánh tay."}
+      - {"n": 67, "answer": "You need to see a doctor.", "vi": "Bạn cần đi khám bác sĩ."}
+      - {"n": 68, "answer": "I hurt my knee playing basketball.", "vi": "Mình bị đau đầu gối khi chơi bóng rổ."}
+      - {"n": 69, "answer": "Put some ice on it.", "vi": "Chườm đá lên đi."}
+      - {"n": 70, "answer": "Do you feel better now?", "vi": "Giờ bạn thấy đỡ hơn chưa?"}
     lines:
-      - {"emma": "Sixty-three. Stand up straight. Stand up straight.", "focus": 0, "pause": 2.0}
-      - {"tom": "Sixty-four. I can't move my arm. I can't move my arm.", "focus": 1, "reveal": [63], "pause": 2.0}
-      - {"emma": "Sixty-five. You need to see a doctor. You need to see a doctor.", "focus": 2, "reveal": [64], "pause": 2.0}
-      - {"tom": "Sixty-six. I hurt my knee playing basketball. I hurt my knee playing basketball.", "focus": 3, "reveal": [65], "pause": 2.0}
-      - {"emma": "Sixty-seven. Put some ice on it. Put some ice on it.", "focus": 4, "reveal": [66], "pause": 2.0}
-      - {"emma": "Sixty-eight. Do you feel better now? Do you feel better now?", "focus": 5, "reveal": [67], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68], "pause": 2.0}
+      - {"emma": "Sixty-five. Stand up straight. Stand up straight.", "focus": 0}
+      - {"tom": "Sixty-six. I can't move my arm. I can't move my arm.", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. You need to see a doctor. You need to see a doctor.", "focus": 2, "reveal": [66]}
+      - {"tom": "Sixty-eight. I hurt my knee playing basketball. I hurt my knee playing basketball.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. Put some ice on it. Put some ice on it.", "focus": 4, "reveal": [68]}
+      - {"emma": "Seventy. Do you feel better now? Do you feel better now?", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading: "Dictation 3 · Useful sentences (71–76)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 69, "answer": "I need to make an appointment with the doctor.", "vi": "Mình cần đặt lịch khám bác sĩ."}
-      - {"n": 70, "answer": "What are your symptoms?", "vi": "Bạn có triệu chứng gì?"}
-      - {"n": 71, "answer": "I've got a cough and a runny nose.", "vi": "Mình bị ho và sổ mũi."}
-      - {"n": 72, "answer": "How long have you had it?", "vi": "Bạn bị bao lâu rồi?"}
-      - {"n": 73, "answer": "Since Monday.", "vi": "Từ thứ Hai."}
-      - {"n": 74, "answer": "Drink lots of water and get some sleep.", "vi": "Uống nhiều nước và ngủ nhiều vào."}
+      - {"n": 71, "answer": "I need to make an appointment with the doctor.", "vi": "Mình cần đặt lịch khám bác sĩ."}
+      - {"n": 72, "answer": "What are your symptoms?", "vi": "Bạn có triệu chứng gì?"}
+      - {"n": 73, "answer": "I've got a cough and a runny nose.", "vi": "Mình bị ho và sổ mũi."}
+      - {"n": 74, "answer": "How long have you had it?", "vi": "Bạn bị bao lâu rồi?"}
+      - {"n": 75, "answer": "Since Monday.", "vi": "Từ thứ Hai."}
+      - {"n": 76, "answer": "Drink lots of water and get some sleep.", "vi": "Uống nhiều nước và ngủ nhiều vào."}
     lines:
-      - {"tom": "Sixty-nine. I need to make an appointment with the doctor. I need to make an appointment with the doctor.", "focus": 0, "pause": 2.0}
-      - {"emma": "Seventy. What are your symptoms? What are your symptoms?", "focus": 1, "reveal": [69], "pause": 2.0}
-      - {"tom": "Seventy-one. I've got a cough and a runny nose. I've got a cough and a runny nose.", "focus": 2, "reveal": [70], "pause": 2.0}
-      - {"emma": "Seventy-two. How long have you had it? How long have you had it?", "focus": 3, "reveal": [71], "pause": 2.0}
-      - {"tom": "Seventy-three. Since Monday. Since Monday.", "focus": 4, "reveal": [72], "pause": 2.0}
-      - {"emma": "Seventy-four. Drink lots of water and get some sleep. Drink lots of water and get some sleep.", "focus": 5, "reveal": [73], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74], "pause": 2.0}
+      - {"tom": "Seventy-one. I need to make an appointment with the doctor. I need to make an appointment with the doctor.", "focus": 0}
+      - {"emma": "Seventy-two. What are your symptoms? What are your symptoms?", "focus": 1, "reveal": [71]}
+      - {"tom": "Seventy-three. I've got a cough and a runny nose. I've got a cough and a runny nose.", "focus": 2, "reveal": [72]}
+      - {"emma": "Seventy-four. How long have you had it? How long have you had it?", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. Since Monday. Since Monday.", "focus": 4, "reveal": [74]}
+      - {"emma": "Seventy-six. Drink lots of water and get some sleep. Drink lots of water and get some sleep.", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (75–78)"
+    heading: "Dictation 3 · Useful sentences (77–82)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 75, "answer": "My grandfather's knees hurt when it rains.", "vi": "Đầu gối ông mình đau khi trời mưa."}
-      - {"n": 76, "answer": "Before an exam, I can't eat breakfast.", "vi": "Trước kỳ thi mình không ăn sáng nổi."}
-      - {"n": 77, "answer": "Get well soon!", "vi": "Mau khỏe nhé!"}
-      - {"n": 78, "answer": "Thanks. I'm feeling better already.", "vi": "Cảm ơn. Mình thấy đỡ rồi."}
+      - {"n": 77, "answer": "My grandfather's knees hurt when it rains.", "vi": "Đầu gối ông mình đau khi trời mưa."}
+      - {"n": 78, "answer": "Before an exam, I can't eat breakfast.", "vi": "Trước kỳ thi mình không ăn sáng nổi."}
+      - {"n": 79, "answer": "Get well soon!", "vi": "Mau khỏe nhé!"}
+      - {"n": 80, "answer": "Thanks. I'm feeling better already.", "vi": "Cảm ơn. Mình thấy đỡ rồi."}
+      - {"n": 81, "answer": "Have you hurt yourself?", "vi": "Bạn có bị thương không?"}
+      - {"n": 82, "answer": "Yes, I've cut my finger.", "vi": "Có, mình bị đứt tay."}
     lines:
-      - {"tom": "Seventy-five. My grandfather's knees hurt when it rains. My grandfather's knees hurt when it rains.", "focus": 0, "pause": 2.0}
-      - {"tom": "Seventy-six. Before an exam, I can't eat breakfast. Before an exam, I can't eat breakfast.", "focus": 1, "reveal": [75], "pause": 2.0}
-      - {"emma": "Seventy-seven. Get well soon! Get well soon!", "focus": 2, "reveal": [76], "pause": 2.0}
-      - {"tom": "Seventy-eight. Thanks. I'm feeling better already. Thanks. I'm feeling better already.", "focus": 3, "reveal": [77], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [78], "pause": 2.0}
+      - {"tom": "Seventy-seven. My grandfather's knees hurt when it rains. My grandfather's knees hurt when it rains.", "focus": 0}
+      - {"tom": "Seventy-eight. Before an exam, I can't eat breakfast. Before an exam, I can't eat breakfast.", "focus": 1, "reveal": [77]}
+      - {"emma": "Seventy-nine. Get well soon! Get well soon!", "focus": 2, "reveal": [78]}
+      - {"tom": "Eighty. Thanks. I'm feeling better already. Thanks. I'm feeling better already.", "focus": 3, "reveal": [79]}
+      - {"emma": "Eighty-one. Have you hurt yourself? Have you hurt yourself?", "focus": 4, "reveal": [80]}
+      - {"tom": "Eighty-two. Yes, I've cut my finger. Yes, I've cut my finger.", "focus": 5, "reveal": [81]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [82]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (83–86)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 83, "answer": "Let me have a look.", "vi": "Để mình xem nào."}
+      - {"n": 84, "answer": "How often do you go to the dentist?", "vi": "Bạn đi nha sĩ bao lâu một lần?"}
+      - {"n": 85, "answer": "Twice a year.", "vi": "Hai lần một năm."}
+      - {"n": 86, "answer": "Keep your back straight when you sit.", "vi": "Ngồi thì giữ lưng thẳng."}
+    lines:
+      - {"emma": "Eighty-three. Let me have a look. Let me have a look.", "focus": 0}
+      - {"emma": "Eighty-four. How often do you go to the dentist? How often do you go to the dentist?", "focus": 1, "reveal": [83]}
+      - {"tom": "Eighty-five. Twice a year. Twice a year.", "focus": 2, "reveal": [84]}
+      - {"emma": "Eighty-six. Keep your back straight when you sit. Keep your back straight when you sit.", "focus": 3, "reveal": [85]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [86]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"

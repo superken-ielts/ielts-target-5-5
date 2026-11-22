@@ -2,9 +2,10 @@
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U03-days-dates-dictation.yaml
 # Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
 # theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
-# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
-# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
-# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
 # Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U03 --level all
 # Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
 # sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
@@ -16,6 +17,7 @@ title: "Unit 3 · Days and dates"
 subtitle: "Dictation · listen and write: days, months, seasons and dates"
 title_vi: "Nghe – viết 10 phút: thứ, tháng, mùa, ngày tháng — từ trong sách, từ thêm, câu giao tiếp"
 tag: "BASIC ENGLISH · UNIT 3"
+scene_gap: 0.4
 speakers:
   # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
   emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
@@ -26,8 +28,8 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 3: Days and dates. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit three: Days and dates. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 3: thứ, tháng, mùa, ngày tháng. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 29 words from the book. You hear each word twice, then a sentence. Then 18 more useful words, and 26 useful sentences for conversation.", "say": "There are three parts. First, twenty-nine words from the book. You hear each word twice, then a sentence. Then eighteen more useful words, and twenty-six useful sentences for conversation.", "vi": "Ba phần: 29 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 18 từ thêm, 26 câu giao tiếp."}
-      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+      - {"emma": "There are three parts. First, 29 words from the book. You hear each word twice, and then an example sentence twice. Then 19 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, twenty-nine words from the book. You hear each word twice, and then an example sentence twice. Then nineteen more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 29 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 19 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
     chapter: "1. Từ trong sách"
@@ -42,13 +44,13 @@ scenes:
       - {"n": 6, "answer": "July, August, September", "vi": "tháng 7, 8, 9", "ex": "Many people go on holiday in July and August."}
     lines:
       - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
-      - {"emma": "One. Monday, Tuesday. Monday, Tuesday. The museum is closed on Monday and Tuesday.", "focus": 0, "pause": 1.5}
-      - {"emma": "Two. Wednesday, Thursday. Wednesday, Thursday. We have English on Wednesday and Thursday.", "focus": 1, "reveal": [1], "pause": 1.5}
-      - {"emma": "Three. Friday, Saturday, Sunday. Friday, Saturday, Sunday. The café is busy on Friday, Saturday and Sunday.", "focus": 2, "reveal": [2], "pause": 1.5}
-      - {"emma": "Four. January, February, March. January, February, March. It's cold in January and February.", "focus": 3, "reveal": [3], "pause": 1.5}
-      - {"emma": "Five. April, May, June. April, May, June. The rainy season in Ho Chi Minh City starts in May.", "say": "Five. April, May, June. April, May, June. The rainy season in Ho Chee Min City starts in May.", "focus": 4, "reveal": [4], "pause": 1.5}
-      - {"emma": "Six. July, August, September. July, August, September. Many people go on holiday in July and August.", "focus": 5, "reveal": [5], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+      - {"emma": "One. Monday, Tuesday. Monday, Tuesday. The museum is closed on Monday and Tuesday. The museum is closed on Monday and Tuesday.", "focus": 0}
+      - {"emma": "Two. Wednesday, Thursday. Wednesday, Thursday. We have English on Wednesday and Thursday. We have English on Wednesday and Thursday.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. Friday, Saturday, Sunday. Friday, Saturday, Sunday. The café is busy on Friday, Saturday and Sunday. The café is busy on Friday, Saturday and Sunday.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. January, February, March. January, February, March. It's cold in January and February. It's cold in January and February.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. April, May, June. April, May, June. The rainy season in Ho Chi Minh City starts in May. The rainy season in Ho Chi Minh City starts in May.", "say": "Five. April, May, June. April, May, June. The rainy season in Ho Chee Min City starts in May. The rainy season in Ho Chee Min City starts in May.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. July, August, September. July, August, September. Many people go on holiday in July and August. Many people go on holiday in July and August.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (7–12)"
@@ -61,13 +63,13 @@ scenes:
       - {"n": 11, "answer": "year", "vi": "năm", "ex": "There are twelve months in a year.", "w": ["year"]}
       - {"n": 12, "answer": "season", "vi": "mùa", "ex": "Which season do you like best?", "w": ["season"]}
     lines:
-      - {"emma": "Seven. October, November, December. October, November, December. The days are short in November and December.", "focus": 0, "pause": 1.5}
-      - {"emma": "Eight. day. day. There are seven days in a week.", "focus": 1, "reveal": [7], "pause": 1.5}
-      - {"emma": "Nine. week. week. See you next week.", "focus": 2, "reveal": [8], "pause": 1.5}
-      - {"emma": "Ten. month. month. February is the shortest month.", "focus": 3, "reveal": [9], "pause": 1.5}
-      - {"emma": "Eleven. year. year. There are twelve months in a year.", "focus": 4, "reveal": [10], "pause": 1.5}
-      - {"emma": "Twelve. season. season. Which season do you like best?", "focus": 5, "reveal": [11], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+      - {"emma": "Seven. October, November, December. October, November, December. The days are short in November and December. The days are short in November and December.", "focus": 0}
+      - {"emma": "Eight. day. day. There are seven days in a week. There are seven days in a week.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. week. week. See you next week. See you next week.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. month. month. February is the shortest month. February is the shortest month.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. year. year. There are twelve months in a year. There are twelve months in a year.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. season. season. Which season do you like best? Which season do you like best?", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (13–18)"
@@ -80,13 +82,13 @@ scenes:
       - {"n": 17, "answer": "date", "vi": "ngày tháng", "ex": "What's the date today?", "w": ["date"]}
       - {"n": 18, "answer": "birthday", "vi": "sinh nhật", "ex": "When's your birthday?", "w": ["birthday"]}
     lines:
-      - {"emma": "Thirteen. spring. spring. In Britain, spring is from March to May.", "focus": 0, "pause": 1.5}
-      - {"emma": "Fourteen. summer. summer. Summer in Britain is from June to August.", "focus": 1, "reveal": [13], "pause": 1.5}
-      - {"emma": "Fifteen. autumn. autumn. In autumn, the leaves fall from the trees.", "focus": 2, "reveal": [14], "pause": 1.5}
-      - {"emma": "Sixteen. winter. winter. It's cold and dark in winter.", "focus": 3, "reveal": [15], "pause": 1.5}
-      - {"emma": "Seventeen. date. date. What's the date today?", "focus": 4, "reveal": [16], "pause": 1.5}
-      - {"emma": "Eighteen. birthday. birthday. When's your birthday?", "focus": 5, "reveal": [17], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+      - {"emma": "Thirteen. spring. spring. In Britain, spring is from March to May. In Britain, spring is from March to May.", "focus": 0}
+      - {"emma": "Fourteen. summer. summer. Summer in Britain is from June to August. Summer in Britain is from June to August.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. autumn. autumn. In autumn, the leaves fall from the trees. In autumn, the leaves fall from the trees.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. winter. winter. It's cold and dark in winter. It's cold and dark in winter.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. date. date. What's the date today? What's the date today?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. birthday. birthday. When's your birthday? When's your birthday?", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (19–24)"
@@ -99,13 +101,13 @@ scenes:
       - {"n": 23, "answer": "eighth, ninth, tenth", "vi": "8th, 9th, 10th — eighth một chữ t, ninth không có e", "ex": "Tom's birthday is on the ninth of March."}
       - {"n": 24, "answer": "twelfth, twentieth", "vi": "12th, 20th — twelfth: ve → f; twentieth: y → ie", "ex": "The concert is on the twentieth of May."}
     lines:
-      - {"emma": "Nineteen. Christmas. Christmas. Christmas Day is on the twenty-fifth of December.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty. New Year's Day. New Year's Day. New Year's Day is on the first of January.", "focus": 1, "reveal": [19], "pause": 1.5}
-      - {"emma": "Twenty-one. first, second, third. first, second, third. January is the first month of the year.", "focus": 2, "reveal": [20], "pause": 1.5}
-      - {"emma": "Twenty-two. fourth, fifth, sixth. fourth, fifth, sixth. Her office is on the fifth floor.", "focus": 3, "reveal": [21], "pause": 1.5}
-      - {"emma": "Twenty-three. eighth, ninth, tenth. eighth, ninth, tenth. Tom's birthday is on the ninth of March.", "focus": 4, "reveal": [22], "pause": 1.5}
-      - {"emma": "Twenty-four. twelfth, twentieth. twelfth, twentieth. The concert is on the twentieth of May.", "focus": 5, "reveal": [23], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24], "pause": 2.0}
+      - {"emma": "Nineteen. Christmas. Christmas. Christmas Day is on the twenty-fifth of December. Christmas Day is on the twenty-fifth of December.", "focus": 0}
+      - {"emma": "Twenty. New Year's Day. New Year's Day. New Year's Day is on the first of January. New Year's Day is on the first of January.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. first, second, third. first, second, third. January is the first month of the year. January is the first month of the year.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. fourth, fifth, sixth. fourth, fifth, sixth. Her office is on the fifth floor. Her office is on the fifth floor.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. eighth, ninth, tenth. eighth, ninth, tenth. Tom's birthday is on the ninth of March. Tom's birthday is on the ninth of March.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. twelfth, twentieth. twelfth, twentieth. The concert is on the twentieth of May. The concert is on the twentieth of May.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (25–29)"
@@ -117,12 +119,12 @@ scenes:
       - {"n": 28, "answer": "2006", "vi": "two thousand and six", "ex": "Tom was born in 2006."}
       - {"n": 29, "answer": "2020", "vi": "twenty twenty", "ex": "The shop opened in 2020."}
     lines:
-      - {"emma": "Twenty-five. twenty-first, thirty-first. twenty-first, thirty-first. The thirty-first of December is the last day of the year.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty-six. the tenth of March. the tenth of March. Her exam is on the tenth of March.", "focus": 1, "reveal": [25], "pause": 1.5}
-      - {"emma": "Twenty-seven. 1995. 1995. Her parents got married in 1995.", "say": "Twenty-seven. nineteen ninety-five. nineteen ninety-five. Her parents got married in nineteen ninety-five.", "focus": 2, "reveal": [26], "pause": 1.5}
-      - {"emma": "Twenty-eight. 2006. 2006. Tom was born in 2006.", "say": "Twenty-eight. two thousand and six. two thousand and six. Tom was born in two thousand and six.", "focus": 3, "reveal": [27], "pause": 1.5}
-      - {"emma": "Twenty-nine. 2020. 2020. The shop opened in 2020.", "say": "Twenty-nine. twenty twenty. twenty twenty. The shop opened in twenty twenty.", "focus": 4, "reveal": [28], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [29], "pause": 2.0}
+      - {"emma": "Twenty-five. twenty-first, thirty-first. twenty-first, thirty-first. The thirty-first of December is the last day of the year. The thirty-first of December is the last day of the year.", "focus": 0}
+      - {"emma": "Twenty-six. the tenth of March. the tenth of March. Her exam is on the tenth of March. Her exam is on the tenth of March.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. 1995. 1995. Her parents got married in 1995. Her parents got married in 1995.", "say": "Twenty-seven. nineteen ninety-five. nineteen ninety-five. Her parents got married in nineteen ninety-five. Her parents got married in nineteen ninety-five.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. 2006. 2006. Tom was born in 2006. Tom was born in 2006.", "say": "Twenty-eight. two thousand and six. two thousand and six. Tom was born in two thousand and six. Tom was born in two thousand and six.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. 2020. 2020. The shop opened in 2020. The shop opened in 2020.", "say": "Twenty-nine. twenty twenty. twenty twenty. The shop opened in twenty twenty. The shop opened in twenty twenty.", "focus": 4, "reveal": [28]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [29]}
 
   - kind: dictation
     chapter: "2. Từ thêm theo chủ đề"
@@ -137,13 +139,13 @@ scenes:
       - {"n": 35, "answer": "last week", "vi": "tuần trước", "ex": "They moved house last week."}
     lines:
       - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
-      - {"tom": "Thirty. weekend. weekend. What do you do at the weekend?", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-one. today. today. Today is a public holiday.", "focus": 1, "reveal": [30], "pause": 1.5}
-      - {"tom": "Thirty-two. tomorrow. tomorrow. The test is tomorrow morning.", "focus": 2, "reveal": [31], "pause": 1.5}
-      - {"tom": "Thirty-three. yesterday. yesterday. It rained all day yesterday.", "focus": 3, "reveal": [32], "pause": 1.5}
-      - {"tom": "Thirty-four. the day after tomorrow. the day after tomorrow. The new teacher starts the day after tomorrow.", "focus": 4, "reveal": [33], "pause": 1.5}
-      - {"tom": "Thirty-five. last week. last week. They moved house last week.", "focus": 5, "reveal": [34], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35], "pause": 2.0}
+      - {"tom": "Thirty. weekend. weekend. What do you do at the weekend? What do you do at the weekend?", "focus": 0}
+      - {"tom": "Thirty-one. today. today. Today is a public holiday. Today is a public holiday.", "focus": 1, "reveal": [30]}
+      - {"tom": "Thirty-two. tomorrow. tomorrow. The test is tomorrow morning. The test is tomorrow morning.", "focus": 2, "reveal": [31]}
+      - {"tom": "Thirty-three. yesterday. yesterday. It rained all day yesterday. It rained all day yesterday.", "focus": 3, "reveal": [32]}
+      - {"tom": "Thirty-four. the day after tomorrow. the day after tomorrow. The new teacher starts the day after tomorrow. The new teacher starts the day after tomorrow.", "focus": 4, "reveal": [33]}
+      - {"tom": "Thirty-five. last week. last week. They moved house last week. They moved house last week.", "focus": 5, "reveal": [34]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (36–41)"
@@ -156,13 +158,13 @@ scenes:
       - {"n": 40, "answer": "Lunar New Year", "vi": "Tết Âm lịch", "ex": "Lunar New Year is in January or February."}
       - {"n": 41, "answer": "anniversary", "vi": "ngày kỷ niệm", "ex": "Today is their tenth wedding anniversary."}
     lines:
-      - {"tom": "Thirty-six. next month. next month. The new course starts next month.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-seven. calendar. calendar. Write the date on the calendar.", "focus": 1, "reveal": [36], "pause": 1.5}
-      - {"tom": "Thirty-eight. holiday. holiday. Where are you going on holiday?", "focus": 2, "reveal": [37], "pause": 1.5}
-      - {"tom": "Thirty-nine. public holiday. public holiday. The second of September is a public holiday in Vietnam.", "focus": 3, "reveal": [38], "pause": 1.5}
-      - {"tom": "Forty. Lunar New Year. Lunar New Year. Lunar New Year is in January or February.", "focus": 4, "reveal": [39], "pause": 1.5}
-      - {"tom": "Forty-one. anniversary. anniversary. Today is their tenth wedding anniversary.", "focus": 5, "reveal": [40], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [41], "pause": 2.0}
+      - {"tom": "Thirty-six. next month. next month. The new course starts next month. The new course starts next month.", "focus": 0}
+      - {"tom": "Thirty-seven. calendar. calendar. Write the date on the calendar. Write the date on the calendar.", "focus": 1, "reveal": [36]}
+      - {"tom": "Thirty-eight. holiday. holiday. Where are you going on holiday? Where are you going on holiday?", "focus": 2, "reveal": [37]}
+      - {"tom": "Thirty-nine. public holiday. public holiday. The second of September is a public holiday in Vietnam. The second of September is a public holiday in Vietnam.", "focus": 3, "reveal": [38]}
+      - {"tom": "Forty. Lunar New Year. Lunar New Year. Lunar New Year is in January or February. Lunar New Year is in January or February.", "focus": 4, "reveal": [39]}
+      - {"tom": "Forty-one. anniversary. anniversary. Today is their tenth wedding anniversary. Today is their tenth wedding anniversary.", "focus": 5, "reveal": [40]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [41]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (42–47)"
@@ -175,102 +177,115 @@ scenes:
       - {"n": 46, "answer": "every day", "vi": "mỗi ngày", "ex": "He goes to the gym every day."}
       - {"n": 47, "answer": "once a week", "vi": "mỗi tuần một lần", "ex": "We have a test once a week."}
     lines:
-      - {"tom": "Forty-two. fortnight. fortnight. She's on holiday for a fortnight.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-three. rainy season. rainy season. Take an umbrella in the rainy season.", "focus": 1, "reveal": [42], "pause": 1.5}
-      - {"tom": "Forty-four. dry season. dry season. The dry season is hot and sunny.", "focus": 2, "reveal": [43], "pause": 1.5}
-      - {"tom": "Forty-five. leap year. leap year. In a leap year, February has twenty-nine days.", "focus": 3, "reveal": [44], "pause": 1.5}
-      - {"tom": "Forty-six. every day. every day. He goes to the gym every day.", "focus": 4, "reveal": [45], "pause": 1.5}
-      - {"tom": "Forty-seven. once a week. once a week. We have a test once a week.", "focus": 5, "reveal": [46], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [47], "pause": 2.0}
+      - {"tom": "Forty-two. fortnight. fortnight. She's on holiday for a fortnight. She's on holiday for a fortnight.", "focus": 0}
+      - {"tom": "Forty-three. rainy season. rainy season. Take an umbrella in the rainy season. Take an umbrella in the rainy season.", "focus": 1, "reveal": [42]}
+      - {"tom": "Forty-four. dry season. dry season. The dry season is hot and sunny. The dry season is hot and sunny.", "focus": 2, "reveal": [43]}
+      - {"tom": "Forty-five. leap year. leap year. In a leap year, February has twenty-nine days. In a leap year, February has twenty-nine days.", "focus": 3, "reveal": [44]}
+      - {"tom": "Forty-six. every day. every day. He goes to the gym every day. He goes to the gym every day.", "focus": 4, "reveal": [45]}
+      - {"tom": "Forty-seven. once a week. once a week. We have a test once a week. We have a test once a week.", "focus": 5, "reveal": [46]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [47]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (48–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 48, "answer": "century", "vi": "thế kỷ", "ex": "We live in the twenty-first century."}
+    lines:
+      - {"tom": "Forty-eight. century. century. We live in the twenty-first century. We live in the twenty-first century.", "focus": 0}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 0, "reveal": [48]}
 
   - kind: dictation
     chapter: "3. Câu giao tiếp"
-    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading: "Dictation 3 · Useful sentences (49–54)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 48, "answer": "What's the date today?", "vi": "Hôm nay ngày bao nhiêu?"}
-      - {"n": 49, "answer": "It's the tenth of March.", "vi": "Ngày mười tháng ba."}
-      - {"n": 50, "answer": "What day is it today?", "vi": "Hôm nay thứ mấy?"}
-      - {"n": 51, "answer": "It's Friday. Thank goodness!", "vi": "Thứ Sáu. May quá!"}
-      - {"n": 52, "answer": "When's your birthday?", "vi": "Sinh nhật bạn ngày nào?"}
-      - {"n": 53, "answer": "It's on the ninth of March.", "vi": "Ngày chín tháng ba."}
+      - {"n": 49, "answer": "What's the date today?", "vi": "Hôm nay ngày bao nhiêu?"}
+      - {"n": 50, "answer": "It's the tenth of March.", "vi": "Ngày mười tháng ba."}
+      - {"n": 51, "answer": "What day is it today?", "vi": "Hôm nay thứ mấy?"}
+      - {"n": 52, "answer": "It's Friday. Thank goodness!", "vi": "Thứ Sáu. May quá!"}
+      - {"n": 53, "answer": "When's your birthday?", "vi": "Sinh nhật bạn ngày nào?"}
+      - {"n": 54, "answer": "It's on the ninth of March.", "vi": "Ngày chín tháng ba."}
     lines:
       - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
-      - {"emma": "Forty-eight. What's the date today? What's the date today?", "focus": 0, "pause": 2.0}
-      - {"tom": "Forty-nine. It's the tenth of March. It's the tenth of March.", "focus": 1, "reveal": [48], "pause": 2.0}
-      - {"tom": "Fifty. What day is it today? What day is it today?", "focus": 2, "reveal": [49], "pause": 2.0}
-      - {"emma": "Fifty-one. It's Friday. Thank goodness! It's Friday. Thank goodness!", "focus": 3, "reveal": [50], "pause": 2.0}
-      - {"emma": "Fifty-two. When's your birthday? When's your birthday?", "focus": 4, "reveal": [51], "pause": 2.0}
-      - {"tom": "Fifty-three. It's on the ninth of March. It's on the ninth of March.", "focus": 5, "reveal": [52], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53], "pause": 2.0}
+      - {"emma": "Forty-nine. What's the date today? What's the date today?", "focus": 0}
+      - {"tom": "Fifty. It's the tenth of March. It's the tenth of March.", "focus": 1, "reveal": [49]}
+      - {"tom": "Fifty-one. What day is it today? What day is it today?", "focus": 2, "reveal": [50]}
+      - {"emma": "Fifty-two. It's Friday. Thank goodness! It's Friday. Thank goodness!", "focus": 3, "reveal": [51]}
+      - {"emma": "Fifty-three. When's your birthday? When's your birthday?", "focus": 4, "reveal": [52]}
+      - {"tom": "Fifty-four. It's on the ninth of March. It's on the ninth of March.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading: "Dictation 3 · Useful sentences (55–60)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 54, "answer": "What year were you born?", "vi": "Bạn sinh năm nào?"}
-      - {"n": 55, "answer": "I was born in 2006.", "vi": "Mình sinh năm 2006."}
-      - {"n": 56, "answer": "What's your favourite month?", "vi": "Tháng bạn thích nhất là tháng nào?"}
-      - {"n": 57, "answer": "December. I love Christmas.", "vi": "Tháng mười hai. Mình mê Giáng sinh."}
-      - {"n": 58, "answer": "What do you usually do at the weekend?", "vi": "Cuối tuần bạn thường làm gì?"}
-      - {"n": 59, "answer": "I play basketball on Saturday.", "vi": "Thứ Bảy mình chơi bóng rổ."}
+      - {"n": 55, "answer": "What year were you born?", "vi": "Bạn sinh năm nào?"}
+      - {"n": 56, "answer": "I was born in 2006.", "vi": "Mình sinh năm 2006."}
+      - {"n": 57, "answer": "What's your favourite month?", "vi": "Tháng bạn thích nhất là tháng nào?"}
+      - {"n": 58, "answer": "December. I love Christmas.", "vi": "Tháng mười hai. Mình mê Giáng sinh."}
+      - {"n": 59, "answer": "What do you usually do at the weekend?", "vi": "Cuối tuần bạn thường làm gì?"}
+      - {"n": 60, "answer": "I play basketball on Saturday.", "vi": "Thứ Bảy mình chơi bóng rổ."}
     lines:
-      - {"emma": "Fifty-four. What year were you born? What year were you born?", "focus": 0, "pause": 2.0}
-      - {"tom": "Fifty-five. I was born in 2006. I was born in 2006.", "say": "Fifty-five. I was born in two thousand and six. I was born in two thousand and six.", "focus": 1, "reveal": [54], "pause": 2.0}
-      - {"tom": "Fifty-six. What's your favourite month? What's your favourite month?", "focus": 2, "reveal": [55], "pause": 2.0}
-      - {"emma": "Fifty-seven. December. I love Christmas. December. I love Christmas.", "focus": 3, "reveal": [56], "pause": 2.0}
-      - {"emma": "Fifty-eight. What do you usually do at the weekend? What do you usually do at the weekend?", "focus": 4, "reveal": [57], "pause": 2.0}
-      - {"tom": "Fifty-nine. I play basketball on Saturday. I play basketball on Saturday.", "focus": 5, "reveal": [58], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59], "pause": 2.0}
+      - {"emma": "Fifty-five. What year were you born? What year were you born?", "focus": 0}
+      - {"tom": "Fifty-six. I was born in 2006. I was born in 2006.", "say": "Fifty-six. I was born in two thousand and six. I was born in two thousand and six.", "focus": 1, "reveal": [55]}
+      - {"tom": "Fifty-seven. What's your favourite month? What's your favourite month?", "focus": 2, "reveal": [56]}
+      - {"emma": "Fifty-eight. December. I love Christmas. December. I love Christmas.", "focus": 3, "reveal": [57]}
+      - {"emma": "Fifty-nine. What do you usually do at the weekend? What do you usually do at the weekend?", "focus": 4, "reveal": [58]}
+      - {"tom": "Sixty. I play basketball on Saturday. I play basketball on Saturday.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading: "Dictation 3 · Useful sentences (61–66)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 60, "answer": "Are you free on Friday evening?", "vi": "Tối thứ Sáu bạn rảnh không?"}
-      - {"n": 61, "answer": "Sorry, I'm busy on Friday. What about Saturday?", "vi": "Xin lỗi, thứ Sáu mình bận. Thứ Bảy thì sao?"}
-      - {"n": 62, "answer": "Happy birthday!", "vi": "Chúc mừng sinh nhật!"}
-      - {"n": 63, "answer": "Thank you very much!", "vi": "Cảm ơn nhiều nhé!"}
-      - {"n": 64, "answer": "Happy New Year!", "vi": "Chúc mừng năm mới!"}
-      - {"n": 65, "answer": "When is Tết this year?", "vi": "Năm nay Tết vào ngày nào?"}
+      - {"n": 61, "answer": "Are you free on Friday evening?", "vi": "Tối thứ Sáu bạn rảnh không?"}
+      - {"n": 62, "answer": "Sorry, I'm busy on Friday. What about Saturday?", "vi": "Xin lỗi, thứ Sáu mình bận. Thứ Bảy thì sao?"}
+      - {"n": 63, "answer": "Happy birthday!", "vi": "Chúc mừng sinh nhật!"}
+      - {"n": 64, "answer": "Thank you very much!", "vi": "Cảm ơn nhiều nhé!"}
+      - {"n": 65, "answer": "Happy New Year!", "vi": "Chúc mừng năm mới!"}
+      - {"n": 66, "answer": "When is Tết this year?", "vi": "Năm nay Tết vào ngày nào?"}
     lines:
-      - {"tom": "Sixty. Are you free on Friday evening? Are you free on Friday evening?", "focus": 0, "pause": 2.0}
-      - {"emma": "Sixty-one. Sorry, I'm busy on Friday. What about Saturday? Sorry, I'm busy on Friday. What about Saturday?", "focus": 1, "reveal": [60], "pause": 2.0}
-      - {"tom": "Sixty-two. Happy birthday! Happy birthday!", "focus": 2, "reveal": [61], "pause": 2.0}
-      - {"emma": "Sixty-three. Thank you very much! Thank you very much!", "focus": 3, "reveal": [62], "pause": 2.0}
-      - {"emma": "Sixty-four. Happy New Year! Happy New Year!", "focus": 4, "reveal": [63], "pause": 2.0}
-      - {"emma": "Sixty-five. When is Tết this year? When is Tết this year?", "say": "Sixty-five. When is Tet this year? When is Tet this year?", "focus": 5, "reveal": [64], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65], "pause": 2.0}
+      - {"tom": "Sixty-one. Are you free on Friday evening? Are you free on Friday evening?", "focus": 0}
+      - {"emma": "Sixty-two. Sorry, I'm busy on Friday. What about Saturday? Sorry, I'm busy on Friday. What about Saturday?", "focus": 1, "reveal": [61]}
+      - {"tom": "Sixty-three. Happy birthday! Happy birthday!", "focus": 2, "reveal": [62]}
+      - {"emma": "Sixty-four. Thank you very much! Thank you very much!", "focus": 3, "reveal": [63]}
+      - {"emma": "Sixty-five. Happy New Year! Happy New Year!", "focus": 4, "reveal": [64]}
+      - {"emma": "Sixty-six. When is Tết this year? When is Tết this year?", "say": "Sixty-six. When is Tet this year? When is Tet this year?", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading: "Dictation 3 · Useful sentences (67–72)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 66, "answer": "It's usually in late January or February.", "vi": "Thường vào cuối tháng Giêng hoặc tháng Hai."}
-      - {"n": 67, "answer": "Have a nice weekend!", "vi": "Cuối tuần vui vẻ nhé!"}
-      - {"n": 68, "answer": "See you on Monday.", "vi": "Hẹn gặp thứ Hai."}
-      - {"n": 69, "answer": "How long is the course?", "vi": "Khóa học kéo dài bao lâu?"}
-      - {"n": 70, "answer": "It's ten weeks long.", "vi": "Mười tuần."}
-      - {"n": 71, "answer": "What's the weather like in winter in England?", "vi": "Mùa đông ở Anh thời tiết thế nào?"}
+      - {"n": 67, "answer": "It's usually in late January or February.", "vi": "Thường vào cuối tháng Giêng hoặc tháng Hai."}
+      - {"n": 68, "answer": "Have a nice weekend!", "vi": "Cuối tuần vui vẻ nhé!"}
+      - {"n": 69, "answer": "See you on Monday.", "vi": "Hẹn gặp thứ Hai."}
+      - {"n": 70, "answer": "How long is the course?", "vi": "Khóa học kéo dài bao lâu?"}
+      - {"n": 71, "answer": "It's ten weeks long.", "vi": "Mười tuần."}
+      - {"n": 72, "answer": "What's the weather like in winter in England?", "vi": "Mùa đông ở Anh thời tiết thế nào?"}
     lines:
-      - {"tom": "Sixty-six. It's usually in late January or February. It's usually in late January or February.", "focus": 0, "pause": 2.0}
-      - {"emma": "Sixty-seven. Have a nice weekend! Have a nice weekend!", "focus": 1, "reveal": [66], "pause": 2.0}
-      - {"tom": "Sixty-eight. See you on Monday. See you on Monday.", "focus": 2, "reveal": [67], "pause": 2.0}
-      - {"tom": "Sixty-nine. How long is the course? How long is the course?", "focus": 3, "reveal": [68], "pause": 2.0}
-      - {"emma": "Seventy. It's ten weeks long. It's ten weeks long.", "focus": 4, "reveal": [69], "pause": 2.0}
-      - {"tom": "Seventy-one. What's the weather like in winter in England? What's the weather like in winter in England?", "focus": 5, "reveal": [70], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71], "pause": 2.0}
+      - {"tom": "Sixty-seven. It's usually in late January or February. It's usually in late January or February.", "focus": 0}
+      - {"emma": "Sixty-eight. Have a nice weekend! Have a nice weekend!", "focus": 1, "reveal": [67]}
+      - {"tom": "Sixty-nine. See you on Monday. See you on Monday.", "focus": 2, "reveal": [68]}
+      - {"tom": "Seventy. How long is the course? How long is the course?", "focus": 3, "reveal": [69]}
+      - {"emma": "Seventy-one. It's ten weeks long. It's ten weeks long.", "focus": 4, "reveal": [70]}
+      - {"tom": "Seventy-two. What's the weather like in winter in England? What's the weather like in winter in England?", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (72–73)"
+    heading: "Dictation 3 · Useful sentences (73–76)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 72, "answer": "It's cold, wet and dark.", "vi": "Lạnh, ẩm ướt và tối."}
-      - {"n": 73, "answer": "The rainy season starts in May.", "vi": "Mùa mưa bắt đầu vào tháng Năm."}
+      - {"n": 73, "answer": "It's cold, wet and dark.", "vi": "Lạnh, ẩm ướt và tối."}
+      - {"n": 74, "answer": "The rainy season starts in May.", "vi": "Mùa mưa bắt đầu vào tháng Năm."}
+      - {"n": 75, "answer": "When does the course start?", "vi": "Khóa học bắt đầu khi nào?"}
+      - {"n": 76, "answer": "On the first of June.", "vi": "Ngày một tháng sáu."}
     lines:
-      - {"emma": "Seventy-two. It's cold, wet and dark. It's cold, wet and dark.", "focus": 0, "pause": 2.0}
-      - {"tom": "Seventy-three. The rainy season starts in May. The rainy season starts in May.", "focus": 1, "reveal": [72], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 1, "reveal": [73], "pause": 2.0}
+      - {"emma": "Seventy-three. It's cold, wet and dark. It's cold, wet and dark.", "focus": 0}
+      - {"tom": "Seventy-four. The rainy season starts in May. The rainy season starts in May.", "focus": 1, "reveal": [73]}
+      - {"tom": "Seventy-five. When does the course start? When does the course start?", "focus": 2, "reveal": [74]}
+      - {"emma": "Seventy-six. On the first of June. On the first of June.", "focus": 3, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [76]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"

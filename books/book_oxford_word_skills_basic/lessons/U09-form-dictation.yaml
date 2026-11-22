@@ -2,9 +2,10 @@
 # Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U09-form-dictation.yaml
 # Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
 # theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
-# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược; cảnh `dictation` ẩn chữ, mở đáp án khi sang
-# mục sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai
-# lần rồi một câu ví dụ; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp hay dùng, mỗi câu đọc hai lần.
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
 # Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U09 --level all
 # Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
 # sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
@@ -15,6 +16,7 @@ title: "Unit 9 · Filling in a form"
 subtitle: "Dictation · listen and write: words on forms"
 title_vi: "Nghe – viết 10 phút: điền form — từ trong sách, từ thêm, câu giao tiếp"
 tag: "PEOPLE · UNIT 9"
+scene_gap: 0.4
 speakers:
   # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
   emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
@@ -25,8 +27,8 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 9: Filling in a form. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit nine: Filling in a form. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 9: điền form. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 21 words from the book. You hear each word twice, then a sentence. Then 24 more useful words, and 29 useful sentences for conversation.", "say": "There are three parts. First, twenty-one words from the book. You hear each word twice, then a sentence. Then twenty-four more useful words, and twenty-nine useful sentences for conversation.", "vi": "Ba phần: 21 từ trong sách (mỗi từ đọc hai lần, rồi một câu ví dụ), 24 từ thêm, 29 câu giao tiếp."}
-      - {"tom": "The answer appears when the next one starts. So write first, then check.", "vi": "Đáp án hiện khi sang mục sau: viết trước, rồi kiểm tra."}
+      - {"emma": "There are three parts. First, 21 words from the book. You hear each word twice, and then an example sentence twice. Then 27 more useful words, and 35 useful sentences for conversation.", "say": "There are three parts. First, twenty-one words from the book. You hear each word twice, and then an example sentence twice. Then twenty-seven more useful words, and thirty-five useful sentences for conversation.", "vi": "Ba phần: 21 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 27 từ thêm, 35 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
     chapter: "1. Từ trong sách"
@@ -41,13 +43,13 @@ scenes:
       - {"n": 6, "answer": "surname", "vi": "họ", "ex": "Write your surname in block capitals.", "w": ["surname"]}
     lines:
       - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
-      - {"emma": "One. form. form. Please fill in this form.", "focus": 0, "pause": 1.5}
-      - {"emma": "Two. Mr. Mr. Mr Brown is our new teacher.", "say": "Two. Mister. Mister. Mister Brown is our new teacher.", "focus": 1, "reveal": [1], "pause": 1.5}
-      - {"emma": "Three. Mrs. Mrs. Mrs Green is married.", "say": "Three. Missiz. Missiz. Missiz Green is married.", "focus": 2, "reveal": [2], "pause": 1.5}
-      - {"emma": "Four. Miss. Miss. Miss Lee is a young teacher.", "focus": 3, "reveal": [3], "pause": 1.5}
-      - {"emma": "Five. Ms. Ms. Emma uses Ms on forms.", "say": "Five. Mizz. Mizz. Emma yoozes Mizz on forms.", "focus": 4, "reveal": [4], "pause": 1.5}
-      - {"emma": "Six. surname. surname. Write your surname in block capitals.", "focus": 5, "reveal": [5], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6], "pause": 2.0}
+      - {"emma": "One. form. form. Please fill in this form. Please fill in this form.", "focus": 0}
+      - {"emma": "Two. Mr. Mr. Mr Brown is our new teacher. Mr Brown is our new teacher.", "say": "Two. Mister. Mister. Mister Brown is our new teacher. Mister Brown is our new teacher.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. Mrs. Mrs. Mrs Green is married. Mrs Green is married.", "say": "Three. Missiz. Missiz. Missiz Green is married. Missiz Green is married.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. Miss. Miss. Miss Lee is a young teacher. Miss Lee is a young teacher.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. Ms. Ms. Emma uses Ms on forms. Emma uses Ms on forms.", "say": "Five. Mizz. Mizz. Emma yoozes Mizz on forms. Emma yoozes Mizz on forms.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. surname. surname. Write your surname in block capitals. Write your surname in block capitals.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (7–12)"
@@ -60,13 +62,13 @@ scenes:
       - {"n": 11, "answer": "level", "vi": "trình độ", "ex": "What's your level of English?", "w": ["level"]}
       - {"n": 12, "answer": "home address", "vi": "địa chỉ nhà", "ex": "Write your home address here.", "w": ["address"]}
     lines:
-      - {"emma": "Seven. forename. forename. 'Forename' means 'first name'.", "focus": 0, "pause": 1.5}
-      - {"emma": "Eight. date of birth. date of birth. Her date of birth is the fifteenth of September.", "focus": 1, "reveal": [7], "pause": 1.5}
-      - {"emma": "Nine. nationality. nationality. Nationality: Vietnamese.", "focus": 2, "reveal": [8], "pause": 1.5}
-      - {"emma": "Ten. mother tongue. mother tongue. Tom's mother tongue is Vietnamese.", "focus": 3, "reveal": [9], "pause": 1.5}
-      - {"emma": "Eleven. level. level. What's your level of English?", "focus": 4, "reveal": [10], "pause": 1.5}
-      - {"emma": "Twelve. home address. home address. Write your home address here.", "focus": 5, "reveal": [11], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12], "pause": 2.0}
+      - {"emma": "Seven. forename. forename. 'Forename' means 'first name'. 'Forename' means 'first name'.", "focus": 0}
+      - {"emma": "Eight. date of birth. date of birth. Her date of birth is the fifteenth of September. Her date of birth is the fifteenth of September.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. nationality. nationality. Nationality: Vietnamese. Nationality: Vietnamese.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. mother tongue. mother tongue. Tom's mother tongue is Vietnamese. Tom's mother tongue is Vietnamese.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. level. level. What's your level of English? What's your level of English?", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. home address. home address. Write your home address here. Write your home address here.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (13–18)"
@@ -79,13 +81,13 @@ scenes:
       - {"n": 17, "answer": "occupation", "vi": "nghề nghiệp", "ex": "'Occupation' means your job.", "w": ["occupation"]}
       - {"n": 18, "answer": "signature", "vi": "chữ ký", "ex": "Put your signature at the bottom.", "w": ["signature"]}
     lines:
-      - {"emma": "Thirteen. email address. email address. What's your email address?", "focus": 0, "pause": 1.5}
-      - {"emma": "Fourteen. daytime. daytime. 'Daytime tel' means your phone number during the day.", "focus": 1, "reveal": [13], "pause": 1.5}
-      - {"emma": "Fifteen. mobile number. mobile number. Write your mobile number in the box.", "focus": 2, "reveal": [14], "pause": 1.5}
-      - {"emma": "Sixteen. marital status. marital status. 'Marital status' means married or single.", "focus": 3, "reveal": [15], "pause": 1.5}
-      - {"emma": "Seventeen. occupation. occupation. 'Occupation' means your job.", "focus": 4, "reveal": [16], "pause": 1.5}
-      - {"emma": "Eighteen. signature. signature. Put your signature at the bottom.", "focus": 5, "reveal": [17], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18], "pause": 2.0}
+      - {"emma": "Thirteen. email address. email address. What's your email address? What's your email address?", "focus": 0}
+      - {"emma": "Fourteen. daytime. daytime. 'Daytime tel' means your phone number during the day. 'Daytime tel' means your phone number during the day.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. mobile number. mobile number. Write your mobile number in the box. Write your mobile number in the box.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. marital status. marital status. 'Marital status' means married or single. 'Marital status' means married or single.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. occupation. occupation. 'Occupation' means your job. 'Occupation' means your job.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. signature. signature. Put your signature at the bottom. Put your signature at the bottom.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
 
   - kind: dictation
     heading: "Dictation 1 · Words from the book (19–21)"
@@ -95,10 +97,10 @@ scenes:
       - {"n": 20, "answer": "block capitals", "vi": "chữ in hoa", "ex": "Please write in block capitals."}
       - {"n": 21, "answer": "not applicable", "vi": "không áp dụng (N/A)", "ex": "Write N/A if the question is not applicable."}
     lines:
-      - {"emma": "Nineteen. tick. tick. Tick the box.", "focus": 0, "pause": 1.5}
-      - {"emma": "Twenty. block capitals. block capitals. Please write in block capitals.", "focus": 1, "reveal": [19], "pause": 1.5}
-      - {"emma": "Twenty-one. not applicable. not applicable. Write N/A if the question is not applicable.", "say": "Twenty-one. not applicable. not applicable. Write N A if the question is not applicable.", "focus": 2, "reveal": [20], "pause": 1.5}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [21], "pause": 2.0}
+      - {"emma": "Nineteen. tick. tick. Tick the box. Tick the box.", "focus": 0}
+      - {"emma": "Twenty. block capitals. block capitals. Please write in block capitals. Please write in block capitals.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. not applicable. not applicable. Write N/A if the question is not applicable. Write N/A if the question is not applicable.", "say": "Twenty-one. not applicable. not applicable. Write N A if the question is not applicable. Write N A if the question is not applicable.", "focus": 2, "reveal": [20]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [21]}
 
   - kind: dictation
     chapter: "2. Từ thêm theo chủ đề"
@@ -113,13 +115,13 @@ scenes:
       - {"n": 27, "answer": "male", "vi": "nam", "ex": "Tick male or female."}
     lines:
       - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
-      - {"tom": "Twenty-two. fill in. fill in. Fill in the form in pen.", "focus": 0, "pause": 1.5}
-      - {"tom": "Twenty-three. application form. application form. Send the application form by Friday.", "focus": 1, "reveal": [22], "pause": 1.5}
-      - {"tom": "Twenty-four. sign. sign. Sign your name here, please.", "focus": 2, "reveal": [23], "pause": 1.5}
-      - {"tom": "Twenty-five. title. title. Write your title: Mr, Mrs, Miss or Ms.", "say": "Twenty-five. title. title. Write your title: Mister, Missiz, Miss or Mizz.", "focus": 3, "reveal": [24], "pause": 1.5}
-      - {"tom": "Twenty-six. gender. gender. Gender: male or female.", "focus": 4, "reveal": [25], "pause": 1.5}
-      - {"tom": "Twenty-seven. male. male. Tick male or female.", "focus": 5, "reveal": [26], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [27], "pause": 2.0}
+      - {"tom": "Twenty-two. fill in. fill in. Fill in the form in pen. Fill in the form in pen.", "focus": 0}
+      - {"tom": "Twenty-three. application form. application form. Send the application form by Friday. Send the application form by Friday.", "focus": 1, "reveal": [22]}
+      - {"tom": "Twenty-four. sign. sign. Sign your name here, please. Sign your name here, please.", "focus": 2, "reveal": [23]}
+      - {"tom": "Twenty-five. title. title. Write your title: Mr, Mrs, Miss or Ms. Write your title: Mr, Mrs, Miss or Ms.", "say": "Twenty-five. title. title. Write your title: Mister, Missiz, Miss or Mizz. Write your title: Mister, Missiz, Miss or Mizz.", "focus": 3, "reveal": [24]}
+      - {"tom": "Twenty-six. gender. gender. Gender: male or female. Gender: male or female.", "focus": 4, "reveal": [25]}
+      - {"tom": "Twenty-seven. male. male. Tick male or female. Tick male or female.", "focus": 5, "reveal": [26]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [27]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (28–33)"
@@ -132,13 +134,13 @@ scenes:
       - {"n": 32, "answer": "passport number", "vi": "số hộ chiếu", "ex": "Write your passport number here."}
       - {"n": 33, "answer": "membership", "vi": "thẻ hội viên, tư cách hội viên", "ex": "Membership of the club costs twenty pounds."}
     lines:
-      - {"tom": "Twenty-eight. female. female. Most of the nurses are female.", "focus": 0, "pause": 1.5}
-      - {"tom": "Twenty-nine. place of birth. place of birth. His place of birth is Da Lat.", "say": "Twenty-nine. place of birth. place of birth. His place of birth is Dah Lot.", "focus": 1, "reveal": [28], "pause": 1.5}
-      - {"tom": "Thirty. initials. initials. Her initials are E. L. C.", "say": "Thirty. initials. initials. Her initials are ee, el, see.", "focus": 2, "reveal": [29], "pause": 1.5}
-      - {"tom": "Thirty-one. emergency contact. emergency contact. Please give us an emergency contact.", "focus": 3, "reveal": [30], "pause": 1.5}
-      - {"tom": "Thirty-two. passport number. passport number. Write your passport number here.", "focus": 4, "reveal": [31], "pause": 1.5}
-      - {"tom": "Thirty-three. membership. membership. Membership of the club costs twenty pounds.", "focus": 5, "reveal": [32], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33], "pause": 2.0}
+      - {"tom": "Twenty-eight. female. female. Most of the nurses are female. Most of the nurses are female.", "focus": 0}
+      - {"tom": "Twenty-nine. place of birth. place of birth. His place of birth is Da Lat. His place of birth is Da Lat.", "say": "Twenty-nine. place of birth. place of birth. His place of birth is Dah Lot. His place of birth is Dah Lot.", "focus": 1, "reveal": [28]}
+      - {"tom": "Thirty. initials. initials. Her initials are E. L. C. Her initials are E. L. C.", "say": "Thirty. initials. initials. Her initials are ee, el, see. Her initials are ee, el, see.", "focus": 2, "reveal": [29]}
+      - {"tom": "Thirty-one. emergency contact. emergency contact. Please give us an emergency contact. Please give us an emergency contact.", "focus": 3, "reveal": [30]}
+      - {"tom": "Thirty-two. passport number. passport number. Write your passport number here. Write your passport number here.", "focus": 4, "reveal": [31]}
+      - {"tom": "Thirty-three. membership. membership. Membership of the club costs twenty pounds. Membership of the club costs twenty pounds.", "focus": 5, "reveal": [32]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (34–39)"
@@ -151,13 +153,13 @@ scenes:
       - {"n": 38, "answer": "for office use only", "vi": "phần dành cho văn phòng", "ex": "Don't write in the box for office use only."}
       - {"n": 39, "answer": "print", "vi": "viết chữ in", "ex": "Print your name under your signature."}
     lines:
-      - {"tom": "Thirty-four. required. required. This box is required.", "focus": 0, "pause": 1.5}
-      - {"tom": "Thirty-five. optional. optional. The phone number is optional.", "focus": 1, "reveal": [34], "pause": 1.5}
-      - {"tom": "Thirty-six. delete. delete. Delete as appropriate.", "focus": 2, "reveal": [35], "pause": 1.5}
-      - {"tom": "Thirty-seven. cross out. cross out. Cross out the wrong answer.", "focus": 3, "reveal": [36], "pause": 1.5}
-      - {"tom": "Thirty-eight. for office use only. for office use only. Don't write in the box for office use only.", "focus": 4, "reveal": [37], "pause": 1.5}
-      - {"tom": "Thirty-nine. print. print. Print your name under your signature.", "focus": 5, "reveal": [38], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39], "pause": 2.0}
+      - {"tom": "Thirty-four. required. required. This box is required. This box is required.", "focus": 0}
+      - {"tom": "Thirty-five. optional. optional. The phone number is optional. The phone number is optional.", "focus": 1, "reveal": [34]}
+      - {"tom": "Thirty-six. delete. delete. Delete as appropriate. Delete as appropriate.", "focus": 2, "reveal": [35]}
+      - {"tom": "Thirty-seven. cross out. cross out. Cross out the wrong answer. Cross out the wrong answer.", "focus": 3, "reveal": [36]}
+      - {"tom": "Thirty-eight. for office use only. for office use only. Don't write in the box for office use only. Don't write in the box for office use only.", "focus": 4, "reveal": [37]}
+      - {"tom": "Thirty-nine. print. print. Print your name under your signature. Print your name under your signature.", "focus": 5, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39]}
 
   - kind: dictation
     heading: "Dictation 2 · More useful words (40–45)"
@@ -170,108 +172,140 @@ scenes:
       - {"n": 44, "answer": "beginner", "vi": "người mới học", "ex": "This class is for beginners."}
       - {"n": 45, "answer": "intermediate", "vi": "trình độ trung cấp", "ex": "Her level is intermediate."}
     lines:
-      - {"tom": "Forty. box. box. Write one letter in each box.", "focus": 0, "pause": 1.5}
-      - {"tom": "Forty-one. details. details. Please check your details.", "focus": 1, "reveal": [40], "pause": 1.5}
-      - {"tom": "Forty-two. first language. first language. Her first language is English.", "focus": 2, "reveal": [41], "pause": 1.5}
-      - {"tom": "Forty-three. contact number. contact number. Please give a contact number.", "focus": 3, "reveal": [42], "pause": 1.5}
-      - {"tom": "Forty-four. beginner. beginner. This class is for beginners.", "focus": 4, "reveal": [43], "pause": 1.5}
-      - {"tom": "Forty-five. intermediate. intermediate. Her level is intermediate.", "focus": 5, "reveal": [44], "pause": 1.5}
-      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45], "pause": 2.0}
+      - {"tom": "Forty. box. box. Write one letter in each box. Write one letter in each box.", "focus": 0}
+      - {"tom": "Forty-one. details. details. Please check your details. Please check your details.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. first language. first language. Her first language is English. Her first language is English.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. contact number. contact number. Please give a contact number. Please give a contact number.", "focus": 3, "reveal": [42]}
+      - {"tom": "Forty-four. beginner. beginner. This class is for beginners. This class is for beginners.", "focus": 4, "reveal": [43]}
+      - {"tom": "Forty-five. intermediate. intermediate. Her level is intermediate. Her level is intermediate.", "focus": 5, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (46–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 46, "answer": "expiry date", "vi": "ngày hết hạn", "ex": "Check the expiry date on your passport."}
+      - {"n": 47, "answer": "country of birth", "vi": "nước nơi sinh", "ex": "Country of birth: Vietnam."}
+      - {"n": 48, "answer": "next of kin", "vi": "người thân gần nhất", "ex": "Write the name of your next of kin."}
+    lines:
+      - {"tom": "Forty-six. expiry date. expiry date. Check the expiry date on your passport. Check the expiry date on your passport.", "focus": 0}
+      - {"tom": "Forty-seven. country of birth. country of birth. Country of birth: Vietnam. Country of birth: Vietnam.", "focus": 1, "reveal": [46]}
+      - {"tom": "Forty-eight. next of kin. next of kin. Write the name of your next of kin. Write the name of your next of kin.", "focus": 2, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [48]}
 
   - kind: dictation
     chapter: "3. Câu giao tiếp"
-    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading: "Dictation 3 · Useful sentences (49–54)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 46, "answer": "Could you fill in this form, please?", "vi": "Bạn điền vào phiếu này nhé?"}
-      - {"n": 47, "answer": "Of course. Have you got a pen?", "vi": "Được ạ. Bạn có bút không?"}
-      - {"n": 48, "answer": "What's your date of birth?", "vi": "Ngày sinh của bạn là gì?"}
-      - {"n": 49, "answer": "The ninth of March, 2006.", "vi": "Ngày chín tháng ba năm 2006."}
-      - {"n": 50, "answer": "Do I write my family name first?", "vi": "Mình viết họ trước à?"}
-      - {"n": 51, "answer": "Yes. Surname first, then forenames.", "vi": "Đúng. Họ trước, rồi đến tên."}
+      - {"n": 49, "answer": "Could you fill in this form, please?", "vi": "Bạn điền vào phiếu này nhé?"}
+      - {"n": 50, "answer": "Of course. Have you got a pen?", "vi": "Được ạ. Bạn có bút không?"}
+      - {"n": 51, "answer": "What's your date of birth?", "vi": "Ngày sinh của bạn là gì?"}
+      - {"n": 52, "answer": "The ninth of March, 2006.", "vi": "Ngày chín tháng ba năm 2006."}
+      - {"n": 53, "answer": "Do I write my family name first?", "vi": "Mình viết họ trước à?"}
+      - {"n": 54, "answer": "Yes. Surname first, then forenames.", "vi": "Đúng. Họ trước, rồi đến tên."}
     lines:
       - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
-      - {"emma": "Forty-six. Could you fill in this form, please? Could you fill in this form, please?", "focus": 0, "pause": 2.0}
-      - {"tom": "Forty-seven. Of course. Have you got a pen? Of course. Have you got a pen?", "focus": 1, "reveal": [46], "pause": 2.0}
-      - {"emma": "Forty-eight. What's your date of birth? What's your date of birth?", "focus": 2, "reveal": [47], "pause": 2.0}
-      - {"tom": "Forty-nine. The ninth of March, 2006. The ninth of March, 2006.", "say": "Forty-nine. The ninth of March, two thousand and six. The ninth of March, two thousand and six.", "focus": 3, "reveal": [48], "pause": 2.0}
-      - {"tom": "Fifty. Do I write my family name first? Do I write my family name first?", "focus": 4, "reveal": [49], "pause": 2.0}
-      - {"emma": "Fifty-one. Yes. Surname first, then forenames. Yes. Surname first, then forenames.", "focus": 5, "reveal": [50], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51], "pause": 2.0}
+      - {"emma": "Forty-nine. Could you fill in this form, please? Could you fill in this form, please?", "focus": 0}
+      - {"tom": "Fifty. Of course. Have you got a pen? Of course. Have you got a pen?", "focus": 1, "reveal": [49]}
+      - {"emma": "Fifty-one. What's your date of birth? What's your date of birth?", "focus": 2, "reveal": [50]}
+      - {"tom": "Fifty-two. The ninth of March, 2006. The ninth of March, 2006.", "say": "Fifty-two. The ninth of March, two thousand and six. The ninth of March, two thousand and six.", "focus": 3, "reveal": [51]}
+      - {"tom": "Fifty-three. Do I write my family name first? Do I write my family name first?", "focus": 4, "reveal": [52]}
+      - {"emma": "Fifty-four. Yes. Surname first, then forenames. Yes. Surname first, then forenames.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading: "Dictation 3 · Useful sentences (55–60)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 52, "answer": "What does 'occupation' mean?", "vi": "Occupation nghĩa là gì?"}
-      - {"n": 53, "answer": "It means 'job'.", "vi": "Nghĩa là nghề nghiệp."}
-      - {"n": 54, "answer": "What should I write here?", "vi": "Ô này mình viết gì?"}
-      - {"n": 55, "answer": "Write N/A. It means not applicable.", "vi": "Viết N/A, nghĩa là không áp dụng."}
-      - {"n": 56, "answer": "Which title do you use?", "vi": "Bạn dùng danh xưng nào?"}
-      - {"n": 57, "answer": "I use Ms.", "vi": "Mình dùng Ms."}
+      - {"n": 55, "answer": "What does 'occupation' mean?", "vi": "Occupation nghĩa là gì?"}
+      - {"n": 56, "answer": "It means 'job'.", "vi": "Nghĩa là nghề nghiệp."}
+      - {"n": 57, "answer": "What should I write here?", "vi": "Ô này mình viết gì?"}
+      - {"n": 58, "answer": "Write N/A. It means not applicable.", "vi": "Viết N/A, nghĩa là không áp dụng."}
+      - {"n": 59, "answer": "Which title do you use?", "vi": "Bạn dùng danh xưng nào?"}
+      - {"n": 60, "answer": "I use Ms.", "vi": "Mình dùng Ms."}
     lines:
-      - {"tom": "Fifty-two. What does 'occupation' mean? What does 'occupation' mean?", "focus": 0, "pause": 2.0}
-      - {"emma": "Fifty-three. It means 'job'. It means 'job'.", "focus": 1, "reveal": [52], "pause": 2.0}
-      - {"tom": "Fifty-four. What should I write here? What should I write here?", "focus": 2, "reveal": [53], "pause": 2.0}
-      - {"emma": "Fifty-five. Write N/A. It means not applicable. Write N/A. It means not applicable.", "say": "Fifty-five. Write N A. It means not applicable. Write N A. It means not applicable.", "focus": 3, "reveal": [54], "pause": 2.0}
-      - {"tom": "Fifty-six. Which title do you use? Which title do you use?", "say": "Fifty-six. Which title do you yooz? Which title do you yooz?", "focus": 4, "reveal": [55], "pause": 2.0}
-      - {"emma": "Fifty-seven. I use Ms. I use Ms.", "say": "Fifty-seven. I yooz Mizz. I yooz Mizz.", "focus": 5, "reveal": [56], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57], "pause": 2.0}
+      - {"tom": "Fifty-five. What does 'occupation' mean? What does 'occupation' mean?", "focus": 0}
+      - {"emma": "Fifty-six. It means 'job'. It means 'job'.", "focus": 1, "reveal": [55]}
+      - {"tom": "Fifty-seven. What should I write here? What should I write here?", "focus": 2, "reveal": [56]}
+      - {"emma": "Fifty-eight. Write N/A. It means not applicable. Write N/A. It means not applicable.", "say": "Fifty-eight. Write N A. It means not applicable. Write N A. It means not applicable.", "focus": 3, "reveal": [57]}
+      - {"tom": "Fifty-nine. Which title do you use? Which title do you use?", "say": "Fifty-nine. Which title do you yooz? Which title do you yooz?", "focus": 4, "reveal": [58]}
+      - {"emma": "Sixty. I use Ms. I use Ms.", "say": "Sixty. I yooz Mizz. I yooz Mizz.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading: "Dictation 3 · Useful sentences (61–66)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 58, "answer": "What's your email address?", "vi": "Email của bạn là gì?"}
-      - {"n": 59, "answer": "It's tuan.tran@example.com.", "vi": "Là tuan.tran@example.com."}
-      - {"n": 60, "answer": "Please sign and date the form at the bottom.", "vi": "Vui lòng ký tên và ghi ngày ở cuối phiếu."}
-      - {"n": 61, "answer": "I made a mistake. Can I have a new form?", "vi": "Mình viết sai rồi. Cho mình xin phiếu mới được không?"}
-      - {"n": 62, "answer": "Is the date British or American style?", "vi": "Ngày tháng theo kiểu Anh hay kiểu Mỹ?"}
-      - {"n": 63, "answer": "British. Day first, then month.", "vi": "Kiểu Anh: ngày trước, tháng sau."}
+      - {"n": 61, "answer": "What's your email address?", "vi": "Email của bạn là gì?"}
+      - {"n": 62, "answer": "It's tuan.tran@example.com.", "vi": "Là tuan.tran@example.com."}
+      - {"n": 63, "answer": "Please sign and date the form at the bottom.", "vi": "Vui lòng ký tên và ghi ngày ở cuối phiếu."}
+      - {"n": 64, "answer": "I made a mistake. Can I have a new form?", "vi": "Mình viết sai rồi. Cho mình xin phiếu mới được không?"}
+      - {"n": 65, "answer": "Is the date British or American style?", "vi": "Ngày tháng theo kiểu Anh hay kiểu Mỹ?"}
+      - {"n": 66, "answer": "British. Day first, then month.", "vi": "Kiểu Anh: ngày trước, tháng sau."}
     lines:
-      - {"emma": "Fifty-eight. What's your email address? What's your email address?", "focus": 0, "pause": 2.0}
-      - {"tom": "Fifty-nine. It's tuan.tran@example.com. It's tuan.tran@example.com.", "say": "Fifty-nine. It's twan dot chan at example dot com. It's twan dot chan at example dot com.", "focus": 1, "reveal": [58], "pause": 2.0}
-      - {"emma": "Sixty. Please sign and date the form at the bottom. Please sign and date the form at the bottom.", "focus": 2, "reveal": [59], "pause": 2.0}
-      - {"tom": "Sixty-one. I made a mistake. Can I have a new form? I made a mistake. Can I have a new form?", "focus": 3, "reveal": [60], "pause": 2.0}
-      - {"tom": "Sixty-two. Is the date British or American style? Is the date British or American style?", "focus": 4, "reveal": [61], "pause": 2.0}
-      - {"emma": "Sixty-three. British. Day first, then month. British. Day first, then month.", "focus": 5, "reveal": [62], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63], "pause": 2.0}
+      - {"emma": "Sixty-one. What's your email address? What's your email address?", "focus": 0}
+      - {"tom": "Sixty-two. It's tuan.tran@example.com. It's tuan.tran@example.com.", "say": "Sixty-two. It's twan dot chan at example dot com. It's twan dot chan at example dot com.", "focus": 1, "reveal": [61]}
+      - {"emma": "Sixty-three. Please sign and date the form at the bottom. Please sign and date the form at the bottom.", "focus": 2, "reveal": [62]}
+      - {"tom": "Sixty-four. I made a mistake. Can I have a new form? I made a mistake. Can I have a new form?", "focus": 3, "reveal": [63]}
+      - {"tom": "Sixty-five. Is the date British or American style? Is the date British or American style?", "focus": 4, "reveal": [64]}
+      - {"emma": "Sixty-six. British. Day first, then month. British. Day first, then month.", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading: "Dictation 3 · Useful sentences (67–72)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 64, "answer": "Tick the box if you agree.", "vi": "Đồng ý thì đánh dấu vào ô."}
-      - {"n": 65, "answer": "Do I need to write my phone number?", "vi": "Mình có cần ghi số điện thoại không?"}
-      - {"n": 66, "answer": "No, it's optional.", "vi": "Không, cái đó không bắt buộc."}
-      - {"n": 67, "answer": "Where do I sign?", "vi": "Mình ký ở đâu?"}
-      - {"n": 68, "answer": "Here, next to your printed name.", "vi": "Ở đây, cạnh tên viết in của bạn."}
-      - {"n": 69, "answer": "Can you help me with this form?", "vi": "Bạn giúp mình điền phiếu này được không?"}
+      - {"n": 67, "answer": "Tick the box if you agree.", "vi": "Đồng ý thì đánh dấu vào ô."}
+      - {"n": 68, "answer": "Do I need to write my phone number?", "vi": "Mình có cần ghi số điện thoại không?"}
+      - {"n": 69, "answer": "No, it's optional.", "vi": "Không, cái đó không bắt buộc."}
+      - {"n": 70, "answer": "Where do I sign?", "vi": "Mình ký ở đâu?"}
+      - {"n": 71, "answer": "Here, next to your printed name.", "vi": "Ở đây, cạnh tên viết in của bạn."}
+      - {"n": 72, "answer": "Can you help me with this form?", "vi": "Bạn giúp mình điền phiếu này được không?"}
     lines:
-      - {"emma": "Sixty-four. Tick the box if you agree. Tick the box if you agree.", "focus": 0, "pause": 2.0}
-      - {"tom": "Sixty-five. Do I need to write my phone number? Do I need to write my phone number?", "focus": 1, "reveal": [64], "pause": 2.0}
-      - {"emma": "Sixty-six. No, it's optional. No, it's optional.", "focus": 2, "reveal": [65], "pause": 2.0}
-      - {"tom": "Sixty-seven. Where do I sign? Where do I sign?", "focus": 3, "reveal": [66], "pause": 2.0}
-      - {"emma": "Sixty-eight. Here, next to your printed name. Here, next to your printed name.", "focus": 4, "reveal": [67], "pause": 2.0}
-      - {"tom": "Sixty-nine. Can you help me with this form? Can you help me with this form?", "focus": 5, "reveal": [68], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69], "pause": 2.0}
+      - {"emma": "Sixty-seven. Tick the box if you agree. Tick the box if you agree.", "focus": 0}
+      - {"tom": "Sixty-eight. Do I need to write my phone number? Do I need to write my phone number?", "focus": 1, "reveal": [67]}
+      - {"emma": "Sixty-nine. No, it's optional. No, it's optional.", "focus": 2, "reveal": [68]}
+      - {"tom": "Seventy. Where do I sign? Where do I sign?", "focus": 3, "reveal": [69]}
+      - {"emma": "Seventy-one. Here, next to your printed name. Here, next to your printed name.", "focus": 4, "reveal": [70]}
+      - {"tom": "Seventy-two. Can you help me with this form? Can you help me with this form?", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
 
   - kind: dictation
-    heading: "Dictation 3 · Useful sentences (70–74)"
+    heading: "Dictation 3 · Useful sentences (73–78)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 70, "answer": "Sure. What's the problem?", "vi": "Được chứ. Vướng chỗ nào?"}
-      - {"n": 71, "answer": "What does 'forename' mean?", "vi": "Forename nghĩa là gì?"}
-      - {"n": 72, "answer": "It means your first name.", "vi": "Nghĩa là tên của bạn."}
-      - {"n": 73, "answer": "Do I write in pen or pencil?", "vi": "Mình viết bằng bút mực hay bút chì?"}
-      - {"n": 74, "answer": "In pen, please. Black or blue.", "vi": "Bút mực nhé, màu đen hoặc xanh."}
+      - {"n": 73, "answer": "Sure. What's the problem?", "vi": "Được chứ. Vướng chỗ nào?"}
+      - {"n": 74, "answer": "What does 'forename' mean?", "vi": "Forename nghĩa là gì?"}
+      - {"n": 75, "answer": "It means your first name.", "vi": "Nghĩa là tên của bạn."}
+      - {"n": 76, "answer": "Do I write in pen or pencil?", "vi": "Mình viết bằng bút mực hay bút chì?"}
+      - {"n": 77, "answer": "In pen, please. Black or blue.", "vi": "Bút mực nhé, màu đen hoặc xanh."}
+      - {"n": 78, "answer": "Can I fill it in online?", "vi": "Mình điền trực tuyến được không?"}
     lines:
-      - {"emma": "Seventy. Sure. What's the problem? Sure. What's the problem?", "focus": 0, "pause": 2.0}
-      - {"tom": "Seventy-one. What does 'forename' mean? What does 'forename' mean?", "focus": 1, "reveal": [70], "pause": 2.0}
-      - {"emma": "Seventy-two. It means your first name. It means your first name.", "focus": 2, "reveal": [71], "pause": 2.0}
-      - {"tom": "Seventy-three. Do I write in pen or pencil? Do I write in pen or pencil?", "focus": 3, "reveal": [72], "pause": 2.0}
-      - {"emma": "Seventy-four. In pen, please. Black or blue. In pen, please. Black or blue.", "focus": 4, "reveal": [73], "pause": 2.0}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [74], "pause": 2.0}
+      - {"emma": "Seventy-three. Sure. What's the problem? Sure. What's the problem?", "focus": 0}
+      - {"tom": "Seventy-four. What does 'forename' mean? What does 'forename' mean?", "focus": 1, "reveal": [73]}
+      - {"emma": "Seventy-five. It means your first name. It means your first name.", "focus": 2, "reveal": [74]}
+      - {"tom": "Seventy-six. Do I write in pen or pencil? Do I write in pen or pencil?", "focus": 3, "reveal": [75]}
+      - {"emma": "Seventy-seven. In pen, please. Black or blue. In pen, please. Black or blue.", "focus": 4, "reveal": [76]}
+      - {"tom": "Seventy-eight. Can I fill it in online? Can I fill it in online?", "focus": 5, "reveal": [77]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [78]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (79–83)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 79, "answer": "Yes, on the school website.", "vi": "Được, trên trang web của trường."}
+      - {"n": 80, "answer": "Do I need a photo?", "vi": "Có cần ảnh không?"}
+      - {"n": 81, "answer": "Yes, two passport photos.", "vi": "Có, hai ảnh hộ chiếu."}
+      - {"n": 82, "answer": "When do I need to send the form?", "vi": "Khi nào mình phải gửi phiếu?"}
+      - {"n": 83, "answer": "By the end of the month.", "vi": "Trước cuối tháng."}
+    lines:
+      - {"emma": "Seventy-nine. Yes, on the school website. Yes, on the school website.", "focus": 0}
+      - {"tom": "Eighty. Do I need a photo? Do I need a photo?", "focus": 1, "reveal": [79]}
+      - {"emma": "Eighty-one. Yes, two passport photos. Yes, two passport photos.", "focus": 2, "reveal": [80]}
+      - {"tom": "Eighty-two. When do I need to send the form? When do I need to send the form?", "focus": 3, "reveal": [81]}
+      - {"emma": "Eighty-three. By the end of the month. By the end of the month.", "focus": 4, "reveal": [82]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [83]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"

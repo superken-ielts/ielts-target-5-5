@@ -14,7 +14,8 @@ như các đợt trước.
 
 Người học: "tiếp tục sách oxford mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ
 vựng câu theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao
-tiếp", rồi "xong rồi commit push lên main".
+tiếp", rồi "xong rồi commit push lên main". Giữa chừng người học nhắc: "nên nhớ video ko nên có pause quá 3 giây nếu có ko
+có càng tốt".
 
 ### Đã làm
 
@@ -36,16 +37,23 @@ tiếp", rồi "xong rồi commit push lên main".
   - mỗi mục gồm từ, nghĩa, câu ví dụ, mục Word list và cách đọc;
   - kịch bản .yaml là bản sinh ra, không sửa tay.
 - **16 video nghe – viết** ({TOTAL36}), id `<id video unit>-dictation`, cùng phiên với video bài giảng:
-  - phần 1 — từ trong sách (Emma): mỗi từ đọc hai lần rồi một câu ví dụ;
+  - phần 1 — từ trong sách (Emma): mỗi từ đọc hai lần rồi câu ví dụ hai lần;
   - phần 2 — từ thêm theo chủ đề (Tom);
   - phần 3 — câu giao tiếp (hai người đọc xen kẽ, mỗi câu hai lần);
-  - đáp án hiện khi sang mục sau; nghỉ 1,5 giây sau mỗi từ, 2 giây sau mỗi câu.
+  - đáp án hiện khi sang mục sau; không có `pause`: chỉ còn khoảng ngắt tự nhiên 0,45 giây giữa hai câu, 0,4 giây khi sang
+    cảnh; đo bằng ffmpeg không có khoảng lặng từ 3 giây.
 
 {TABLE36}
 
 Thử và sửa trong lúc làm:
-- **Thời lượng:** bản thử Unit 2 ước 8:29. Tăng khoảng nghỉ (1 → 1,5 giây, câu 1,4 → 2 giây), thêm từ và câu, thì ước 10:05,
-  dựng thật 10:15. Unit 5–16 lần đầu ước 7:13–9:05, đều thêm từ và câu cho tới khoảng 10 phút.
+- **Thời lượng và khoảng nghỉ:**
+  - Bản thử Unit 2 ước 8:29. Tăng khoảng nghỉ (1 → 1,5 giây, câu 1,4 → 2 giây), thêm từ và câu, thì ước 10:05, dựng thật
+    10:15.
+  - Unit 5–16 lần đầu ước 7:13–9:05, đều thêm từ và câu.
+  - Đã dựng Unit 1–2 thì người học nhắc không để khoảng lặng quá 3 giây, tốt nhất không có. Đo bản Unit 2: trung vị 2,0 giây,
+    dài nhất 3,5 giây ở chỗ chuyển cảnh.
+  - Đã dừng hàng đợi dựng, bỏ mọi `pause`, `scene_gap` 0,8 → 0,4. Câu ví dụ đọc hai lần (người học viết được cả câu), thêm
+    1–12 mục mỗi unit cho đủ khoảng 10 phút. Dựng lại cả 16 video.
 - **Cách đọc:**
   - `use` (động từ) → `yooz`, `live` / `lives` → `liv` / `livz`, `close` → `cloze`;
   - chữ Việt (Tết, Đà Lạt, Hà Nội, Khoa, Hoa, cái ô, cà phê sữa đá) và Ho Chi Minh City sửa bằng `say`;
