@@ -91,6 +91,8 @@ Thử và sửa trong lúc làm:
 
 - Unit 17 trở đi chưa có video (P2-59): mỗi unit hai video, bài giảng và nghe – viết.
 - Sách không kèm CD-ROM nên video không có giọng phát âm gốc của sách.
+- Video cũ của ba sách kia còn khoảng lặng từ 3 giây (P2-71, đo ở đợt 36): IELTS Target 5.0 39/70 video, English
+  Unlimited A2 8/23, GENKI 25/25. Chưa sửa.
 
 ## Đợt 35 — 20/11/2026: IELTS Target 5.0 Unit 5 · Thoughts — 11 video, hình trong sách, đáp án hiện sau
 
