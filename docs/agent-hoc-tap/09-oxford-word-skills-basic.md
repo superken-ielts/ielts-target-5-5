@@ -471,13 +471,15 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
    mà Word list không có.
 2. Viết dữ liệu: từ trong sách 20–45 dòng, từ thêm 10–25, câu 14–30. Sinh kịch bản, rồi chạy `check`, `phonemes` (sửa bằng `s`
    / `se`) và `wordlist --level all` (phải ra 0).
-3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:40–10:00 ({CALIB36}). Thiếu thì thêm từ, câu; không thêm `pause`.
+3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:40–10:00 (bản dựng Kokoro dài hơn ước lượng khoảng 6 %: Unit 2 ước 9:51, dựng thật 10:25). Thiếu thì thêm từ, câu; không thêm `pause`.
 4. Dựng video, rồi chạy `python3 web/build.py`.
 
 **Lưu ý:**
 - Bản đầu (đợt 36) có nghỉ 1,5 giây sau mỗi từ và 2 giây sau mỗi câu. Đo bản dựng Unit 2: khoảng lặng trung vị 2,0 giây,
   dài nhất 3,5 giây ở chỗ chuyển cảnh (nghỉ 2 giây + `gap` + `scene_gap` 0,8 giây). Người học yêu cầu không quá 3 giây, tốt
   nhất là không có, nên đã bỏ mọi `pause`, `scene_gap` còn 0,4, câu ví dụ đọc hai lần, thêm từ và câu cho đủ 10 phút.
+  Đo lại bản dựng mới của Unit 2: khoảng lặng trung vị 0,54 giây; chỗ chuyển cảnh khoảng 1,05 giây; dài nhất 2,05 giây ở
+  cuối video.
 - `a.m.`, `p.m.` Kokoro đọc đúng, không cần `say`. Số -teen đứng riêng hoặc cuối câu vẫn dùng `thir-teen`… (mục 5.5).
 - `phonemes` báo nhầm ở "for office use only" (Unit 9: use là danh từ) và "close friends" (Unit 15: close là tính từ); đã
   ghi ở đầu kịch bản.
