@@ -36,14 +36,31 @@ có càng tốt".
   - dữ liệu từng unit ở `units_01_04.py`, `units_05_09.py`, `units_10_16.py`;
   - mỗi mục gồm từ, nghĩa, câu ví dụ, mục Word list và cách đọc;
   - kịch bản .yaml là bản sinh ra, không sửa tay.
-- **16 video nghe – viết** ({TOTAL36}), id `<id video unit>-dictation`, cùng phiên với video bài giảng:
+- **16 video nghe – viết** (2:42:38), id `<id video unit>-dictation`, cùng phiên với video bài giảng:
   - phần 1 — từ trong sách (Emma): mỗi từ đọc hai lần rồi câu ví dụ hai lần;
   - phần 2 — từ thêm theo chủ đề (Tom);
   - phần 3 — câu giao tiếp (hai người đọc xen kẽ, mỗi câu hai lần);
   - đáp án hiện khi sang mục sau; không có `pause`: chỉ còn khoảng ngắt tự nhiên 0,45 giây giữa hai câu, 0,4 giây khi sang
     cảnh; đo bằng ffmpeg không có khoảng lặng từ 3 giây.
 
-{TABLE36}
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 1 · Numbers | `U01-numbers-dictation` | 10:00 | 29 · 4 | 20 | 34 |
+| 2 · The time | `U02-time-dictation` | 10:25 | 27 · 20 | 23 | 36 |
+| 3 · Days and dates | `U03-days-dates-dictation` | 10:32 | 29 · 14 | 19 | 28 |
+| 4 · Countries and nationalities | `U04-countries-dictation` | 10:55 | 43 · 79 | 10 | 20 |
+| 5 · Classroom vocabulary | `U05-classroom-dictation` | 10:01 | 24 · 22 | 26 | 34 |
+| 6 · English language words | `U06-language-words-dictation` | 10:26 | 22 · 17 | 26 | 32 |
+| 7 · Questions about language | `U07-questions-language-dictation` | 10:01 | 23 · 19 | 27 | 35 |
+| 8 · Personal information | `U08-personal-info-dictation` | 9:58 | 21 · 16 | 28 | 40 |
+| 9 · Filling in a form | `U09-form-dictation` | 10:20 | 21 · 19 | 27 | 35 |
+| 10 · My family | `U10-family-dictation` | 10:06 | 24 · 36 | 22 | 31 |
+| 11 · Physical actions | `U11-actions-dictation` | 9:49 | 25 · 25 | 27 | 37 |
+| 12 · Parts of the body | `U12-body-dictation` | 9:42 | 28 · 30 | 24 | 34 |
+| 13 · Describing people | `U13-describing-people-dictation` | 9:56 | 36 · 45 | 20 | 30 |
+| 14 · Character | `U14-character-dictation` | 10:18 | 28 · 30 | 24 | 32 |
+| 15 · Relationships | `U15-relationships-dictation` | 10:05 | 22 · 32 | 23 | 35 |
+| 16 · Feelings | `U16-feelings-dictation` | 10:04 | 22 · 25 | 28 | 35 |
 
 Thử và sửa trong lúc làm:
 - **Thời lượng và khoảng nghỉ:**
@@ -85,7 +102,16 @@ Thử và sửa trong lúc làm:
 
 ### Kiểm thử
 
-{TESTS36}
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 32 video (16 bài giảng, 16 nghe – viết) |
+| `cd agents && python -m pytest -q` | 149 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford có 32 video, mỗi unit hai nút (bài giảng; nghe – viết 9–10 phút), phiên Unit 6 có hai video |
+| `python -m lesson_video check` / `phonemes` (16 kịch bản nghe – viết) | Hợp lệ; 2 ⚠ còn lại đọc đúng (Unit 9 "for office use only", Unit 15 "close friends"), ghi ở đầu kịch bản |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U01…U16 --level all` | Cả 16 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (16 video) | Không có khoảng lặng từ 3 giây. Dài nhất khoảng 2 giây, chỉ ở cuối video; giữa hai câu khoảng 0,5 giây, chuyển cảnh khoảng 1 giây |
+| Ảnh chụp khung hình bản dựng (Unit 4, 7, 8, 10, 11, 13, 14) | Đáp án ẩn tới khi sang mục sau, cuối cảnh hiện đủ; chữ vừa thẻ; sau khi chia lại, mỗi cảnh có 3–6 mục |
 
 ### Còn treo
 

@@ -487,7 +487,26 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-<!-- bảng 5.9 -->
+**16 video, 2:42:38** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 1 · Numbers | `U01-numbers-dictation` | 10:00 | 29 · 4 | 20 | 34 |
+| 2 · The time | `U02-time-dictation` | 10:25 | 27 · 20 | 23 | 36 |
+| 3 · Days and dates | `U03-days-dates-dictation` | 10:32 | 29 · 14 | 19 | 28 |
+| 4 · Countries and nationalities | `U04-countries-dictation` | 10:55 | 43 · 79 | 10 | 20 |
+| 5 · Classroom vocabulary | `U05-classroom-dictation` | 10:01 | 24 · 22 | 26 | 34 |
+| 6 · English language words | `U06-language-words-dictation` | 10:26 | 22 · 17 | 26 | 32 |
+| 7 · Questions about language | `U07-questions-language-dictation` | 10:01 | 23 · 19 | 27 | 35 |
+| 8 · Personal information | `U08-personal-info-dictation` | 9:58 | 21 · 16 | 28 | 40 |
+| 9 · Filling in a form | `U09-form-dictation` | 10:20 | 21 · 19 | 27 | 35 |
+| 10 · My family | `U10-family-dictation` | 10:06 | 24 · 36 | 22 | 31 |
+| 11 · Physical actions | `U11-actions-dictation` | 9:49 | 25 · 25 | 27 | 37 |
+| 12 · Parts of the body | `U12-body-dictation` | 9:42 | 28 · 30 | 24 | 34 |
+| 13 · Describing people | `U13-describing-people-dictation` | 9:56 | 36 · 45 | 20 | 30 |
+| 14 · Character | `U14-character-dictation` | 10:18 | 28 · 30 | 24 | 32 |
+| 15 · Relationships | `U15-relationships-dictation` | 10:05 | 22 · 32 | 23 | 35 |
+| 16 · Feelings | `U16-feelings-dictation` | 10:04 | 22 · 25 | 28 | 35 |
 
 ## 6. Việc tiếp theo
 

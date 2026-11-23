@@ -127,7 +127,7 @@ Unit 1–2 chưa làm lại (file 08 mục 5).
 trong sách. Từ unit này video IELTS cũng làm trước rồi mới hiện tất cả đáp án như Giai đoạn 0 (file 06 mục 8.1). IELTS Target
 5.0 nay có 70 video.
 
-**Đợt 36 (22/11/2026):** Oxford Word Skills Basic: mỗi unit 1–16 thêm **một video nghe – viết khoảng 10 phút** ({TOTAL36}),
+**Đợt 36 (22/11/2026):** Oxford Word Skills Basic: mỗi unit 1–16 thêm **một video nghe – viết khoảng 10 phút** (2:42:38),
 chạy liền để người học tự tạm dừng và viết: mọi từ của unit trong Word list cuối sách (OCR thành `work/wordlist.json`), từ
 thêm theo chủ đề và câu giao tiếp (file 09 mục 5.9). Sách nay có 32 video.
 
