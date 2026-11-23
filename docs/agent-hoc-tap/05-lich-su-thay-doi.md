@@ -22,19 +22,35 @@ nguyên), làm video Unit 17–23. Theo khuôn đã có, mỗi unit hai video: b
   - lấy từ hai lần OCR của đợt 36; dò khoảng hở giữa các dòng OCR rồi xem ảnh trang: sót *get dressed* (17), bộ tách bỏ qua *red*
     (18);
   - ba mục in số unit của bản thảo cũ (*like* 23 → 21, *have got* 21 → 22, *what's the matter?* 21 → 22) xếp theo trang thật.
-- **7 video bài giảng** ({TOTAL37L}): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+- **7 video bài giảng** (1:07:37): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
   - Unit khó (10–15 phút): 17 My routine, 19 Buying clothes, 22 Illness — ôn tập (lỗi hay gặp, câu đố), Part 2 với bài mẫu của
     Tom và Emma, thảo luận kiểu Part 3; Unit 19 có đóng vai mua đồ, Unit 22 có email xin nghỉ ốm (thư GT Task 1).
   - Unit thường thêm cảnh ngoài sách có ích cho IELTS General Training: mặc gì khi…, đọc và nghe – viết giá tiền, câu hay dùng ở
     chợ, nhiệt độ và dự báo, đọc nhãn thuốc, đóng vai ở hiệu thuốc.
   - Khung đỏ theo dòng chữ đo bằng máy (đếm điểm ảnh tối từng hàng ở 300 dpi) — file 09 mục 5.3a.
 
-{TABLE37L}
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| **17 My routine** | `U17-routine` | 13:22 | 6 | 1–9 (bài 3: Answer key in lệch) |
+| 18 Clothes | `U18-clothes` | 8:06 | 6 | 1–8 |
+| **19 Buying clothes** | `U19-buying-clothes` | 10:58 | 7 | 1–9 |
+| 20 Money | `U20-money` | 8:15 | 4 | 1–6 |
+| 21 The weather | `U21-weather` | 8:03 | 5 | 1–6 |
+| **22 Illness** | `U22-illness` | 11:06 | 4 | 1–5 (bài 1: câu 10 trùng câu 8) |
+| 23 At the chemist's | `U23-chemists` | 7:48 | 5 | 1–3 (bài 3 thành câu đố tranh) |
 
-- **7 video nghe – viết** ({TOTAL37D}), sinh từ `work/dictation/units_17_23.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+- **7 video nghe – viết** (1:06:58), sinh từ `work/dictation/units_17_23.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
   đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`, đo bằng ffmpeg không có khoảng lặng từ 3 giây.
 
-{TABLE37D}
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 17 · My routine | `U17-routine-dictation` | 10:22 | 31 · 46 | 17 | 28 |
+| 18 · Clothes | `U18-clothes-dictation` | 9:41 | 31 · 47 | 21 | 28 |
+| 19 · Buying clothes | `U19-buying-clothes-dictation` | 9:15 | 30 · 41 | 18 | 29 |
+| 20 · Money | `U20-money-dictation` | 9:21 | 27 · 31 | 22 | 30 |
+| 21 · The weather | `U21-weather-dictation` | 9:14 | 26 · 34 | 20 | 28 |
+| 22 · Illness | `U22-illness-dictation` | 9:44 | 25 · 31 | 26 | 32 |
+| 23 · At the chemist's | `U23-chemists-dictation` | 9:22 | 24 · 16 | 20 | 30 |
 
 Thử và sửa trong lúc làm:
 - **Khoảng lặng cuối cảnh "Đến lượt bạn":** bản dựng đầu của Unit 17 có chỗ lặng 2,96 giây (`pause` 1,5 + `gap` + `scene_gap`).
@@ -43,6 +59,8 @@ Thử và sửa trong lúc làm:
 - **Video ngắn hơn mức tối thiểu:** ước lượng đầu Unit 18 6:54, Unit 20 6:06, Unit 21 7:12, Unit 23 6:02; Unit 19 9:30 và
   Unit 22 9:22 (unit khó phải trên 10 phút). Thêm cảnh ngoài sách (liệt kê ở trên).
 - **Video nghe – viết dài quá / ngắn quá:** Unit 17 ước 11:19 (bớt 4 từ, 1 cặp câu); Unit 20, 22 ước 9:06 (thêm 2 từ, 2 câu).
+  Đợt này bản dựng thật chỉ dài hơn ước lượng 0–4 % (đợt 36 khoảng 6 %): Unit 22 dựng thật 9:02, sát mốc 9 phút — thêm 4 từ,
+  1 cặp câu, dựng lại.
 - **Khung đỏ:** đoạn văn Unit 20 và Spotlight too / very Unit 19 lệch nửa dòng khi đọc lưới bằng mắt; mép cắt lộ nửa dòng chữ
   (bong bóng thoại Unit 17, tiêu đề Colours / Accessories Unit 18); đoạn văn Unit 21 và hội thoại Unit 23 cụt chữ bên phải. Sửa
   sau khi xem khung hình.
@@ -65,7 +83,16 @@ Thử và sửa trong lúc làm:
 
 ### Kiểm thử
 
-{TESTS37}
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 46 video (23 bài giảng, 23 nghe – viết) |
+| `cd agents && python -m pytest -q` | 149 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 46 video, Unit 1–23 mỗi unit hai nút (bài giảng 7–10 phút, unit khó 17, 19, 22 từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (14 kịch bản) | Hợp lệ, không còn ⚠ (Unit 21 báo nhầm ở "we use" sau "useful" — vẫn thêm `say`) |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U17…U23 --level all` | Cả 7 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (14 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,3–2,5 giây (cuối cảnh tự trả lời); nghe – viết: khoảng 2 giây, chỉ ở cuối video |
+| Xem trước khung hình (bộ đọc im lặng) và khung hình bản dựng | Khung đỏ đúng tranh, đúng dòng (đo dòng bằng máy); chữ trên thẻ nghe – viết không bị cắt |
 
 ### Còn treo
 

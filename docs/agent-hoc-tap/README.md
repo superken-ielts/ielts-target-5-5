@@ -132,7 +132,7 @@ chạy liền để người học tự tạm dừng và viết: mọi từ củ
 thêm theo chủ đề và câu giao tiếp (file 09 mục 5.9). Sách nay có 32 video.
 
 **Đợt 37 (23/11/2026):** Oxford Word Skills Basic module **Everyday life** (Unit 17–23): mỗi unit một video bài giảng
-({TOTAL37L} cả 7 video; unit khó 17, 19, 22 có ôn tập và Part 2) và một video nghe – viết ({TOTAL37D}); đủ mọi bài tập trong
+(1:07:37 cả 7 video; unit khó 17, 19, 22 có ôn tập và Part 2) và một video nghe – viết (1:06:58); đủ mọi bài tập trong
 sách, hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word list thêm 246 mục. Sách nay có 46 video (file 09 mục 5.7).
 
 ## Tóm tắt trong năm dòng

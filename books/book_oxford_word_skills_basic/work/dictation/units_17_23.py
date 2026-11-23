@@ -648,3 +648,15 @@ UNITS["U23"]["phrases"] += [
     ("Where can I buy plasters?", "Mua băng dán ở đâu?", "emma"),
     ("At any chemist's. There's one on every street.", "Ở hiệu thuốc nào cũng có. Phố nào cũng có một hiệu.", "tom"),
 ]
+
+# Đợt 37: Unit 22 dựng thật 9:02 — thêm cho gần 10 phút.
+UNITS["U22"]["extra"] += [
+    ("cut", "vết đứt", "He's got a cut on his hand.", None),
+    ("bruise", "vết bầm", "She's got a bruise on her leg.", None),
+    ("sprain", "bong gân", "I sprained my ankle playing basketball.", None),
+    ("plaster", "băng dán", "Put a plaster on the cut.", None),
+]
+UNITS["U22"]["phrases"] += [
+    ("How are you feeling now?", "Giờ bạn thấy thế nào?", "emma"),
+    ("A bit better, but I'm still tired.", "Đỡ hơn chút, nhưng vẫn mệt.", "tom"),
+]

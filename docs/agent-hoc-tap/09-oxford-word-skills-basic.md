@@ -348,7 +348,8 @@ Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
-(đợt 29). Cả sách: 16 video, 2:14:06, 48 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+(đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Cả sách: 23 video bài giảng, 3:21:43,
+85 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -431,7 +432,15 @@ Module People (đợt 29) — gia đình, ngoại hình, tính cách lần đầ
 
 Module Everyday life (đợt 37) — **unit khó** in đậm; mọi unit đủ bài tập trong sách (Answer key in lệch ở mục 3.3):
 
-<!-- bảng 5.7 đợt 37 -->
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| **17 My routine** | `U17-routine` | 13:22 | 20 | 6 | 1–9 (bài 3: Answer key in lệch) | Cuối tuần, thói quen (8) | Part 2 "your favourite day of the week" (Tom: thứ Bảy, Emma: Chủ nhật); thảo luận (3) | 10 tranh việc trong ngày, đoạn văn cuối tuần, bảng tìm cụm từ, thang tần suất; ôn tập: lỗi hay gặp |
+| 18 Clothes | `U18-clothes` | 8:06 | 16 | 6 | 1–8 | Bài 7: bạn mặc gì (7) | Part 1 "Clothes" (5 câu) | tranh 12 món quần áo, bảng màu, tranh phụ kiện; wear / put on; mặc gì khi…; Nghe và viết |
+| **19 Buying clothes** | `U19-buying-clothes` | 10:58 | 22 | 7 | 1–9 | Bài 9: mua sắm (6) | đóng vai mua đồ; Part 2 "the last time you bought some clothes" (Tom: sơ mi đen, Emma: giày đi bộ); thảo luận (3) | 12 tranh tả quần áo, bảng cỡ, too / very, hội thoại cửa hàng; câu hỏi thêm khi mua đồ; ôn tập: lỗi, too hay very |
+| 20 Money | `U20-money` | 8:15 | 16 | 4 | 1–6 | Bài 6: tiền ở Việt Nam và ở Anh (7) | Part 1 "Money and shopping" (5 câu) | 7 tranh tiền, đoạn văn mua CD, Spotlight đọc giá, 7 quảng cáo; đọc giá đồng; nghe và viết giá; câu ở chợ; Nghe và viết |
+| 21 The weather | `U21-weather` | 8:03 | 16 | 5 | 1–6 | Thời tiết quê bạn (7) | Part 1 "Weather and seasons" (5 câu) | bảng thời tiết, Spotlight a lot / a bit, ảnh bão, đoạn văn; nhiệt độ và dự báo; bài 6 về miền Nam; Nghe và viết |
+| **22 Illness** | `U22-illness` | 11:06 | 18 | 4 | 1–5 (bài 1: câu 10 trùng câu 8) | Sức khỏe (6) | Part 2 "a time when you were ill" (Tom: cúm, Emma: ho mùa mưa); thảo luận (3) | 11 tranh triệu chứng, tranh lời khuyên, Glossary; Nghe và viết; ôn tập: lỗi, câu đố should; email xin nghỉ ốm |
+| 23 At the chemist's | `U23-chemists` | 7:48 | 15 | 5 | 1–3 (bài 3 thành câu đố tranh) | Hiệu thuốc, tủ thuốc (5) | đóng vai ở hiệu thuốc (5 câu) | 7 tranh, hai hội thoại, Glossary và Spotlight; cần mua gì; đọc nhãn thuốc; hội thoại đau họng; Nghe và viết |
 
 Module Everyday life (đợt 37) — sinh hoạt, mua sắm, tiền, thời tiết, sức khỏe:
 - **Tom:**
@@ -531,7 +540,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
    mà Word list không có.
 2. Viết dữ liệu: từ trong sách 20–45 dòng, từ thêm 10–25, câu 14–30. Sinh kịch bản, rồi chạy `check`, `phonemes` (sửa bằng `s`
    / `se`) và `wordlist --level all` (phải ra 0).
-3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:40–10:00 (bản dựng Kokoro dài hơn ước lượng khoảng 6 %: Unit 2 ước 9:51, dựng thật 10:25). Thiếu thì thêm từ, câu; không thêm `pause`.
+3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:30–10:00 (bản dựng Kokoro dài hơn ước lượng 0–6 %: Unit 2 ước 9:51, dựng thật 10:25; Unit 22 ước 9:02, dựng thật 9:02). Thiếu thì thêm từ, câu; không thêm `pause`.
 4. Dựng video, rồi chạy `python3 web/build.py`.
 
 **Lưu ý:**
@@ -545,7 +554,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**16 video, 2:42:38** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**23 video, 3:49:36** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -565,6 +574,13 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 14 · Character | `U14-character-dictation` | 10:18 | 28 · 30 | 24 | 32 |
 | 15 · Relationships | `U15-relationships-dictation` | 10:05 | 22 · 32 | 23 | 35 |
 | 16 · Feelings | `U16-feelings-dictation` | 10:04 | 22 · 25 | 28 | 35 |
+| 17 · My routine | `U17-routine-dictation` | 10:22 | 31 · 46 | 17 | 28 |
+| 18 · Clothes | `U18-clothes-dictation` | 9:41 | 31 · 47 | 21 | 28 |
+| 19 · Buying clothes | `U19-buying-clothes-dictation` | 9:15 | 30 · 41 | 18 | 29 |
+| 20 · Money | `U20-money-dictation` | 9:21 | 27 · 31 | 22 | 30 |
+| 21 · The weather | `U21-weather-dictation` | 9:14 | 26 · 34 | 20 | 28 |
+| 22 · Illness | `U22-illness-dictation` | 9:44 | 25 · 31 | 26 | 32 |
+| 23 · At the chemist's | `U23-chemists-dictation` | 9:22 | 24 · 16 | 20 | 30 |
 
 ## 6. Việc tiếp theo
 
