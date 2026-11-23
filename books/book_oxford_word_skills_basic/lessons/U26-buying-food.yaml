@@ -1,0 +1,560 @@
+# Video Oxford Word Skills Basic · Unit 26 — I can buy food in a shop (sách in tr. 68–70, Answer key tr. 210–211).
+# UNIT KHÓ (đợt 38): 3 trang — thực phẩm đếm được / không đếm được, đồ đựng và số lượng (a carton of, a packet of, half a kilo…),
+# hội thoại mua thực phẩm, how much / how many (chủ đề hay gặp ở IELTS General Training) — video khoảng 13 phút: phần sách, rồi
+# đóng vai ở chợ, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a shop or market where you often buy food", hai bài mẫu; ba
+# câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–8. Bài 1, 2, 4, 5, 7, 8 theo Answer key tr. 210–211. Bài 3, 6 (Test yourself): Emma nhắc che chữ, nhìn
+# tranh, nói lại. Bài 4 (nhớ tranh 30 giây rồi che): Emma nhắc tạm dừng video để nhìn tranh, không đếm ngược.
+# Hình trong sách: ba hàng tranh thực phẩm kèm Spotlight Uncountable nouns (tr. 68), tranh đồ đựng, cân và ca đong kèm Spotlight
+# tin and can (tr. 69), hai hội thoại (tr. 70, khung theo dòng — Tom đọc người bán SA, Emma đọc khách C), Glossary, Spotlight how
+# much and how many.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom cùng hai bạn cùng phòng đi chợ gần căn hộ sáng thứ Bảy (U17),
+# tiêu khoảng 700.000 đồng một tuần cho ăn uống (U20), mua gạo, trứng, rau, thịt lợn, mì; mua bánh mì ở tiệm đầu ngõ; về Đà Lạt
+# thì đi chợ Đà Lạt với mẹ. Emma đi chợ sáng thứ Bảy rồi nấu món mới (U17), hỏi giá được (U25); mua phô mai và bơ ở một cửa hàng
+# nhỏ bán đồ nhập khẩu vì chợ không có; nhớ bánh mì kiểu Anh.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U26-buying-food.yaml
+id: U26-buying-food
+activity: U26-words
+title: "Unit 26 · Buying food"
+subtitle: "I can buy food in a shop"
+title_vi: "Thực phẩm đếm được / không đếm được, đồ đựng và số lượng, hội thoại mua thực phẩm, how much / how many — kèm ôn tập và luyện nói"
+tag: "FOOD AND DRINK · UNIT 26"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 26: buying food. Today: food words, containers like a packet or a bottle, and how to buy food in a shop. There are three pages, so this video is longer, with a role-play, a review and speaking practice."
+        say: "Welcome to Unit twenty-six: buying food. Today: food words, containers like a packet or a bottle, and how to buy food in a shop. There are three pages, so this video is longer, with a role-play, a review and speaking practice."
+        vi: "Unit 26: mua thực phẩm — từ chỉ đồ ăn, đồ đựng, cách mua ở cửa hàng; có đóng vai, ôn tập, luyện nói."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Thực phẩm"
+    heading: "A · Food (1)"
+    heading_vi: "Tranh trong sách tr. 68 — U = uncountable: không đếm được"
+    image: {pdf: course-book, page: 69, clip: [24, 94, 488, 190]}
+    items:
+      - {box: [26, 96, 79, 189]}
+      - {box: [79, 108, 153, 189]}
+      - {box: [153, 110, 240, 189]}
+      - {box: [240, 98, 335, 189]}
+      - {box: [336, 96, 411, 189]}
+      - {box: [412, 108, 486, 189]}
+    lines:
+      - emma: "Look at page sixty-eight. Milk. The U means uncountable: we can't count it. We say some milk, not a milk."
+        focus: 0
+        vi: "milk: sữa — U: không đếm được"
+      - {tom: "Bread: uncountable too. Some bread, or a loaf of bread.", focus: 1, vi: "bread: bánh mì — a loaf: một ổ"}
+      - {emma: "Butter.", focus: 2, vi: "butter: bơ (làm từ sữa)"}
+      - {tom: "A piece of cheese. Cheese is uncountable, so we say a piece of cheese.", focus: 3, vi: "cheese: phô mai"}
+      - {emma: "Eggs. Eggs are countable: one egg, six eggs.", focus: 4, vi: "eggs: trứng — đếm được"}
+      - {tom: "And sugar, uncountable.", focus: 5, vi: "sugar: đường"}
+
+  - kind: figure
+    heading: "A · Food (2)"
+    heading_vi: "Tranh trong sách tr. 68"
+    image: {pdf: course-book, page: 69, clip: [20, 190, 492, 305]}
+    items:
+      - {box: [20, 228, 107, 304]}
+      - {box: [108, 196, 166, 304]}
+      - {box: [168, 232, 266, 304]}
+      - {box: [267, 192, 322, 304]}
+      - {box: [322, 220, 399, 304]}
+      - {box: [400, 206, 490, 304]}
+    lines:
+      - {emma: "A cake. A cake is countable.", focus: 0, vi: "cake: bánh ngọt"}
+      - {tom: "Jam: uncountable.", focus: 1, vi: "jam: mứt"}
+      - {emma: "Biscuits: countable.", focus: 2, vi: "biscuits: bánh quy"}
+      - {tom: "Olive oil.", focus: 3, vi: "olive oil: dầu ô liu"}
+      - {emma: "Rice. Rice is uncountable: some rice, a kilo of rice. Not rices.", focus: 4, vi: "rice: gạo, cơm"}
+      - {tom: "And pasta.", focus: 5, vi: "pasta: mì Ý"}
+
+  - kind: figure
+    heading: "A · Food (3) · Spotlight: uncountable nouns"
+    heading_vi: "Tranh và khung Spotlight tr. 68 — a piece of, a bar of: biến danh từ không đếm được thành đếm được"
+    image: {pdf: course-book, page: 69, clip: [28, 312, 486, 408]}
+    items:
+      - {box: [30, 318, 78, 406]}
+      - {box: [88, 326, 176, 406]}
+      - {box: [176, 314, 270, 406]}
+      - {box: [278, 340, 482, 364]}
+      - {box: [278, 363, 482, 376]}
+      - {box: [278, 376, 482, 402]}
+    lines:
+      - {emma: "Olives.", focus: 0, vi: "olives: quả ô liu"}
+      - {tom: "Noodles.", focus: 1, vi: "noodles: mì sợi"}
+      - {emma: "A bar of chocolate. Chocolate is uncountable, so we say a bar of chocolate.", focus: 2, vi: "a bar of chocolate: một thanh sô-cô-la"}
+      - {tom: "Look at the spotlight. Nouns with a U are usually uncountable. Butter, or some butter. Not a butter, or butters.", focus: 3}
+      - {emma: "This bread is nice. Not: these breads are nice. Bread takes is, not are.", focus: 4}
+      - {tom: "We can make uncountable nouns countable: a piece of cheese, a bar of chocolate.", focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · Tick the answers that are right, correct the wrong ones (1–6)"
+    heading_vi: "Ví dụ: some oil → right · a milk → milk / some milk (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "biscuits  →  ___", answer: "right"}
+      - {n: 2, q: "a piece of cheese  →  ___", answer: "right"}
+      - {n: 3, q: "a butter  →  ___", answer: "butter / some butter"}
+      - {n: 4, q: "cakes  →  ___", answer: "right"}
+      - {n: 5, q: "a cheese  →  ___", answer: "cheese / some cheese"}
+      - {n: 6, q: "some sugar  →  ___", answer: "right"}
+    lines:
+      - emma: "Exercise 1. Tick the answers that are right, and correct the answers that are wrong. Pause the video and try."
+        say: "Exercise one. Tick the answers that are right, and correct the answers that are wrong. Pause the video and try."
+        vi: "Bài 1: đánh dấu câu đúng, sửa câu sai."
+      - {tom: "One. Right. Two. Right. Three. Wrong: butter, or some butter.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Right: a cake is countable. Five. Wrong: cheese, or some cheese. Six. Right.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    heading: "Exercise 1 · Tick or correct (7–12)"
+    heading_vi: "Answer key tr. 210"
+    items:
+      - {n: 7, q: "eggs  →  ___", answer: "right"}
+      - {n: 8, q: "a bread  →  ___", answer: "bread / some bread"}
+      - {n: 9, q: "pasta  →  ___", answer: "right"}
+      - {n: 10, q: "rices  →  ___", answer: "rice / some rice"}
+      - {n: 11, q: "a jam  →  ___", answer: "jam / some jam"}
+      - {n: 12, q: "olives  →  ___", answer: "right"}
+    lines:
+      - {tom: "Seven. Right. Eight. Wrong: bread, or some bread. Nine. Right.", reveal: [7, 8, 9], focus: 2}
+      - {tom: "Ten. Wrong: rice, or some rice. Eleven. Wrong: jam, or some jam. Twelve. Right.", reveal: [10, 11, 12], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành từ"
+    heading: "Exercise 2 · Complete the words"
+    heading_vi: "Ví dụ: br _ _ _ → bread (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "mi _ _  ·  2 some ch _ _ _ _  ·  3 sug _ _", answer: "milk · some cheese · sugar"}
+      - {n: 4, q: "bis _ _ _ _ _  ·  5 some olive _ _ _", answer: "biscuits · some olive oil"}
+      - {n: 6, q: "six e _ _ _  ·  7 but _ _ _  ·  8 ri _ _", answer: "six eggs · butter · rice"}
+      - {n: 9, q: "a large bar of ch _ _ _ _ _ _ _ _  ·  10 noo _ _ _ _", answer: "a large bar of chocolate · noodles"}
+    lines:
+      - emma: "Exercise 2. Complete the words. Pause the video and try. Exercise 3 is a test: cover the words and say the food in the pictures."
+        say: "Exercise two. Complete the words. Pause the video and try. Exercise three is a test: cover the words and say the food in the pictures."
+        vi: "Bài 2: điền chữ. Bài 3: che chữ, nhìn tranh, nói tên."
+      - {tom: "One. Milk. Two. Some cheese. Three. Sugar. Four. Biscuits. Five. Some olive oil.", reveal: [1, 4], focus: 1}
+      - {tom: "Six. Six eggs. Seven. Butter. Eight. Rice. Nine. A large bar of chocolate. And ten. Noodles.", reveal: [6, 9], focus: 3}
+
+  - kind: figure
+    chapter: "Đồ đựng"
+    heading: "B · Containers"
+    heading_vi: "Tranh trong sách tr. 69 — a carton of, a packet of, a jar of…"
+    image: {pdf: course-book, page: 70, clip: [26, 30, 476, 232]}
+    items:
+      - {box: [28, 44, 109, 139]}
+      - {box: [121, 44, 299, 139]}
+      - {box: [313, 37, 447, 139]}
+      - {box: [28, 141, 107, 231]}
+      - {box: [119, 141, 187, 231]}
+      - {box: [197, 141, 276, 231]}
+      - {box: [288, 141, 473, 231]}
+    lines:
+      - emma: "Now containers, on page sixty-nine. A carton of juice."
+        focus: 0
+        vi: "carton: hộp giấy"
+      - {tom: "A packet of rice, and a packet of biscuits.", focus: 1, vi: "packet: gói"}
+      - {emma: "A jar of jam, and a jar of olives.", focus: 2, vi: "jar: lọ, hũ"}
+      - {tom: "A tin of tomatoes.", focus: 3, vi: "tin: hộp thiếc (đồ ăn)"}
+      - {emma: "A can of soda.", focus: 4, vi: "can: lon (đồ uống)"}
+      - {tom: "A bottle of wine.", focus: 5, vi: "bottle: chai"}
+      - {emma: "And a box of chocolates, and a box of matches. Matches are for starting a fire.", focus: 6, vi: "box: hộp · matches: diêm"}
+
+  - kind: figure
+    chapter: "Số lượng"
+    heading: "B · Quantities · Spotlight: tin and can"
+    heading_vi: "Tranh và khung Spotlight tr. 69 — g = grams, kg = kilo, ml, l = litre"
+    image: {pdf: course-book, page: 70, clip: [26, 232, 488, 342]}
+    items:
+      - {box: [28, 235, 85, 338]}
+      - {box: [86, 235, 143, 338]}
+      - {box: [143, 235, 203, 338]}
+      - {box: [203, 235, 248, 338]}
+      - {box: [248, 250, 306, 338]}
+      - {box: [306, 233, 347, 338]}
+      - {box: [356, 238, 485, 340]}
+    lines:
+      - {emma: "Quantities. One hundred grams.", focus: 0, vi: "100 g: một trăm gam"}
+      - {tom: "Two hundred grams.", focus: 1}
+      - {emma: "Half a kilo. Not a half kilo: half a kilo.", focus: 2, vi: "half a kilo: nửa cân"}
+      - {tom: "A kilo: one kg.", say: "A kilo: one kay gee.", focus: 3, vi: "a kilo: một cân"}
+      - {emma: "Half a litre: five hundred millilitres.", focus: 4, vi: "half a litre: nửa lít"}
+      - {tom: "And a litre.", focus: 5, vi: "a litre: một lít"}
+      - {emma: "Look at the spotlight. We usually say tin when there's food inside, and can when there's something to drink inside. A tin of tuna. A can of beer. Exercise 6 is a test: cover the words and say the containers.", say: "Look at the spotlight. We usually say tin when there's food inside, and can when there's something to drink inside. A tin of tuna. A can of beer. Exercise six is a test: cover the words and say the containers.", focus: 6, vi: "tin: đồ ăn · can: đồ uống"}
+
+  - kind: blanks
+    chapter: "Bài 4: nhớ tranh"
+    heading: "Exercise 4 · Study the pictures, then cover them. True or false?"
+    heading_vi: "Ví dụ: There's a jar of jam. → T (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "There's a box of chocolates.  →  ___", answer: "T"}
+      - {n: 2, q: "There's a bottle of water.  →  ___", answer: "F"}
+      - {n: 3, q: "There's a packet of sugar.  →  ___", answer: "F"}
+      - {n: 4, q: "There's a can of cola.  →  ___", answer: "T"}
+      - {n: 5, q: "There's a jar of coffee.  →  ___", answer: "F"}
+      - {n: 6, q: "There's a box of matches.  →  ___", answer: "T"}
+      - {n: 7, q: "There's a carton of milk.  →  ___", answer: "F"}
+      - {n: 8, q: "There's a jar of olives.  →  ___", answer: "T"}
+      - {n: 9, q: "There's a tin of peas.  →  ___", answer: "F"}
+      - {n: 10, q: "There's a packet of rice.  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 4. Study the pictures in your book for thirty seconds. Then cover them, and say true or false. Pause the video while you study and answer."
+        say: "Exercise four. Study the pictures in your book for thirty seconds. Then cover them, and say true or false. Pause the video while you study and answer."
+        vi: "Bài 4: nhìn tranh 30 giây, che lại, nói đúng / sai — tạm dừng video."
+      - {tom: "One. True. Two. False: it's a bottle of wine. Three. False: a packet of rice. Four. True: soda, or cola. Five. False: jam and olives.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. True. Seven. False: a carton of juice. Eight. True. Nine. False: a tin of tomatoes. Ten. True.", reveal: [6, 7, 8, 9, 10], focus: 9}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành cụm từ"
+    heading: "Exercise 5 · Complete the phrases with a suitable word"
+    heading_vi: "Ví dụ: Can you buy a packet of rice at the shops, please? (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "I bought my sister a lovely ___ of chocolates.", answer: "box"}
+      - {n: 2, q: "Can I have a ___ of strawberry jam, please?", answer: "jar"}
+      - {n: 3, q: "We need a ___ of olive oil.", answer: "bottle"}
+      - {n: 4, q: "There's a ___ of orange juice in the fridge.", answer: "carton / bottle"}
+      - {n: 5, q: "For four people, we'll need a ___ of chicken.", answer: "kilo"}
+      - {n: 6, q: "Can I open this ___ of chocolate biscuits?", answer: "packet"}
+      - {n: 7, q: "I'd like 200 ___ of ham, please.", answer: "grams"}
+      - {n: 8, q: "I think there's a ___ of noodles in the cupboard.", answer: "packet"}
+      - {n: 9, q: "He drinks half a ___ of milk for breakfast.", answer: "litre / bottle / carton"}
+      - {n: 10, q: "I went out and bought a ___ of wine.", answer: "bottle / litre"}
+    lines:
+      - emma: "Exercise 5. Complete the phrases with a suitable word. Pause the video and try."
+        say: "Exercise five. Complete the phrases with a suitable word. Pause the video and try."
+        vi: "Bài 5: điền từ thích hợp."
+      - {tom: "One. A box of chocolates. Two. A jar of jam. Three. A bottle of olive oil. Four. A carton, or a bottle, of orange juice. Five. A kilo of chicken.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. A packet of biscuits. Seven. Two hundred grams of ham. Eight. A packet of noodles. Nine. Half a litre of milk. Or a bottle, or a carton. Ten. A bottle of wine.", reveal: [6, 7, 8, 9, 10], focus: 9}
+
+  - kind: bullets
+    chapter: "Mua thực phẩm (1)"
+    heading: "C · Buying food · conversation 1"
+    heading_vi: "Hội thoại tr. 70 — Tom đọc người bán (SA), Emma đọc khách (C)"
+    image: {pdf: course-book, page: 71, clip: [26, 178, 222, 263]}
+    items:
+      - {en: "Could I have a kilo of onions, please?", vi: "Cho tôi một cân hành tây.", box: [28, 180, 220, 193]}
+      - {en: "And have you got any peaches?", vi: "Có đào không? — Have you got any …?", box: [28, 203, 220, 216]}
+      - {en: "How many would you like?", vi: "Chị lấy mấy quả?", box: [28, 215, 220, 227]}
+      - {en: "I'd like four, please. Are they ripe?", vi: "Cho tôi bốn quả. Chín chưa?", box: [28, 226, 220, 239]}
+      - {en: "Yes, they're lovely. Anything else?", vi: "Chín rồi, ngon lắm. Còn gì nữa không?", box: [28, 238, 220, 250]}
+      - {en: "No, that's all, thanks.", vi: "Không, vậy thôi, cảm ơn.", box: [28, 249, 220, 262]}
+    lines:
+      - {emma: "Could I have a kilo of onions, please?", focus: 0, vi: "Could I have …? — cách xin lịch sự"}
+      - {tom: "Right.", focus: 0}
+      - {emma: "And have you got any peaches?", focus: 1}
+      - {tom: "Yes. How many would you like?", focus: 2, vi: "how many: bao nhiêu (đếm được)"}
+      - {emma: "I'd like four, please. Are they ripe?", focus: 3, vi: "ripe: chín, ăn được rồi"}
+      - {tom: "Yes, they're lovely. Anything else?", focus: 4, vi: "Anything else? = Bạn cần gì nữa không?"}
+      - {emma: "No, that's all, thanks.", focus: 5, vi: "that's all = that's it: vậy thôi"}
+
+  - kind: bullets
+    chapter: "Mua thực phẩm (2)"
+    heading: "C · Buying food · conversation 2"
+    heading_vi: "Hội thoại tr. 70 — Brie: một loại phô mai Pháp"
+    image: {pdf: course-book, page: 71, clip: [258, 156, 450, 264]}
+    items:
+      - {en: "I'd like some cheese, please.", vi: "Cho tôi ít phô mai.", box: [260, 158, 448, 171]}
+      - {en: "Sure. What would you like?", vi: "Vâng. Chị muốn loại nào?", box: [260, 170, 448, 183]}
+      - {en: "Yes, it is. How much would you like?", vi: "Ngon đấy. Chị lấy bao nhiêu?", box: [260, 193, 448, 206]}
+      - {en: "About 200 grams.", vi: "Khoảng 200 gam.", box: [260, 205, 448, 217]}
+      - {en: "Right. This piece is just over.", vi: "Miếng này hơn một chút. — just over ≠ just under", box: [260, 216, 448, 229]}
+      - {en: "OK. Anything else? — No, that's it, thanks.", vi: "Còn gì nữa không? — Vậy thôi, cảm ơn.", box: [260, 239, 448, 262]}
+    lines:
+      - {emma: "I'd like some cheese, please.", focus: 0, vi: "I'd like = I would like: tôi muốn (lịch sự)"}
+      - {tom: "Sure. What would you like?", focus: 1}
+      - {emma: "Oh, that Brie looks nice.", focus: 1, vi: "Brie: một loại phô mai"}
+      - {tom: "Yes, it is. How much would you like?", focus: 2, vi: "how much: bao nhiêu (không đếm được)"}
+      - {emma: "About two hundred grams.", focus: 3}
+      - {tom: "Right. This piece is just over.", focus: 4, vi: "just over: hơn một chút"}
+      - {emma: "That's fine.", focus: 4}
+      - {tom: "OK. Anything else?", focus: 5}
+      - {emma: "No, that's it, thanks.", focus: 5}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary · polite phrases for shopping"
+    heading_vi: "Glossary tr. 70"
+    image: {pdf: course-book, page: 71, clip: [286, 281, 486, 437]}
+    items:
+      - {box: [288, 304, 484, 328]}
+      - {box: [288, 328, 484, 341]}
+      - {box: [288, 340, 484, 353]}
+      - {box: [288, 352, 484, 377]}
+      - {box: [288, 376, 484, 400]}
+      - {box: [288, 400, 484, 413]}
+      - {box: [288, 412, 484, 436]}
+    lines:
+      - {emma: "Look at the glossary. Could I have…? This is another polite way to say: I want.", focus: 0}
+      - {tom: "Have you got any…? means: do you have any?", focus: 1}
+      - {emma: "Ripe: if something is ripe, you can eat it now.", focus: 2}
+      - {tom: "That's it, or that's all, means: I don't want any more things.", focus: 3}
+      - {emma: "I'd like means I would like. It's a polite way to say I want.", focus: 4}
+      - {tom: "Just over means a little more than. The opposite is just under.", focus: 5}
+      - {emma: "And anything else? means: do you want any more things?", focus: 6}
+
+  - kind: bullets
+    chapter: "how much / how many"
+    heading: "Spotlight · how much and how many"
+    heading_vi: "how much + không đếm được · how many + đếm được"
+    image: {pdf: course-book, page: 71, clip: [286, 443, 486, 532]}
+    items:
+      - {en: "How much butter do you want?", vi: "butter: không đếm được", box: [288, 506, 484, 518]}
+      - {en: "How many apples do we need?", vi: "apples: đếm được", box: [288, 518, 484, 530]}
+      - {en: "How much rice / milk / cheese …?", vi: "how much + U"}
+      - {en: "How many eggs / peaches / bottles …?", vi: "how many + danh từ số nhiều"}
+    lines:
+      - {tom: "Look at the spotlight. We use how much with uncountable nouns: how much butter do you want?", say: "Look at the spotlight. We yooz how much with uncountable nouns: how much butter do you want?", focus: 0}
+      - {emma: "And how many with countable nouns: how many apples do we need?", focus: 1}
+      - {tom: "How much rice, how much milk, how much cheese.", focus: 2}
+      - {emma: "How many eggs, how many peaches, how many bottles.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 7: hội thoại"
+    heading: "Exercise 7 · Complete the dialogues"
+    heading_vi: "Ví dụ: I'd like six pears, please. (Answer key tr. 211)"
+    items:
+      - {n: "1a", q: "Have you ___ any apples?", answer: "got"}
+      - {n: "1b", q: "— Yes. How ___ would you like?", answer: "many"}
+      - {n: "2a", q: "I'd like some ham, please. — How ___?", answer: "much"}
+      - {n: "2b", q: "Of course. Anything ___?", answer: "else"}
+      - {n: "2c", q: "— No, ___ it, thanks.", answer: "that's"}
+      - {n: "3a", q: "___ I have half a kilo of onions?", answer: "Could / Can"}
+      - {n: "3b", q: "— Sure. That's ___ under half.", answer: "just"}
+      - {n: "4a", q: "I'd ___ a melon, …", answer: "like"}
+      - {n: "4b", q: "… but these don't look ___.", answer: "ripe"}
+    lines:
+      - emma: "Exercise 7. Complete the dialogues. Pause the video and try."
+        say: "Exercise seven. Complete the dialogues. Pause the video and try."
+        vi: "Bài 7: hoàn thành hội thoại."
+      - {tom: "One. Have you got any apples? Yes. How many would you like? Two. How much? Anything else? No, that's it, thanks.", reveal: ["1a", "1b", "2a", "2b", "2c"], focus: 4}
+      - {tom: "Three. Could, or can, I have half a kilo of onions? That's just under half. Four. I'd like a melon, but these don't look ripe.", reveal: ["3a", "3b", "4a", "4b"], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 8: sắp xếp câu"
+    heading: "Exercise 8 · Make sentences from the words"
+    heading_vi: "Ví dụ: it / that's / thanks → That's it, thanks. (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "twelve / have / could / please / eggs / I / ?  →  ___", answer: "Could I have twelve eggs, please?"}
+      - {n: 2, q: "please / some / like / I'd / sugar  →  ___", answer: "I'd like some sugar, please."}
+      - {n: 3, q: "got / ham / you / any / have / ?  →  ___", answer: "Have you got any ham?"}
+      - {n: 4, q: "much / would / cheese / how / like / you / ?  →  ___", answer: "How much cheese would you like?"}
+      - {n: 5, q: "that's / kilo / just / half / a / over  →  ___", answer: "That's just over half a kilo."}
+      - {n: 6, q: "oranges / many / like / would / how / you / ?  →  ___", answer: "How many oranges would you like?"}
+    lines:
+      - emma: "Exercise 8. Make sentences from the words. Pause the video and try."
+        say: "Exercise eight. Make sentences from the words. Pause the video and try."
+        vi: "Bài 8: sắp xếp từ thành câu."
+      - {tom: "One. Could I have twelve eggs, please? Two. I'd like some sugar, please. Three. Have you got any ham?", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. How much cheese would you like? Five. That's just over half a kilo. Six. How many oranges would you like?", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: đi chợ"
+    heading: "Speaking 1 · Shopping for food"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Who does the food shopping in your flat?"
+        a: "We all do. On Saturday morning, my flatmates and I go to the market near our flat."
+        ask: emma
+        by: tom
+        phrases: ["We all do.", "On Saturday morning…", "the market near…"]
+      - q: "What do you usually buy?"
+        a: "Rice, eggs, vegetables, some pork, and a few packets of noodles for busy days."
+        ask: emma
+        by: tom
+        phrases: ["…, and a few packets of…", "for busy days"]
+      - q: "Where do you buy cheese and butter, Emma?"
+        a: "At a small shop that sells imported food. The market doesn't have them, and they're quite expensive."
+        ask: tom
+        by: emma
+        phrases: ["At a small shop that…", "doesn't have…", "quite expensive"]
+      - q: "What food do you miss from England?"
+        a: "Good bread! English bread is very different from Vietnamese bánh mì."
+        say: "Good bread! English bread is very different from Vietnamese bahn mee."
+        ask: tom
+        by: emma
+        phrases: ["… is very different from…"]
+      - q: "Do you prefer markets or supermarkets?"
+        a: "Markets. The food is fresher, and it's cheaper. But supermarkets are better when it's raining."
+        ask: emma
+        by: tom
+        phrases: ["… is fresher", "it's cheaper", "But … are better when…"]
+    lines:
+      - {emma: "Let's talk about food shopping. Who does the food shopping in your flat, Tom?", focus: 0}
+      - {tom: "We all do. On Saturday morning, my flatmates and I go to the market near our flat.", reveal: 0, vi: "Cả ba: sáng thứ Bảy Tom và bạn cùng phòng đi chợ gần nhà."}
+      - {emma: "What do you usually buy?", focus: 1}
+      - {tom: "Rice, eggs, vegetables, some pork, and a few packets of noodles for busy days.", reveal: 1, vi: "Gạo, trứng, rau, ít thịt lợn, vài gói mì cho ngày bận."}
+      - {tom: "Where do you buy cheese and butter, Emma?", focus: 2}
+      - {emma: "At a small shop that sells imported food. The market doesn't have them, and they're quite expensive.", reveal: 2, vi: "Ở một cửa hàng nhỏ bán đồ nhập khẩu: chợ không có, và khá đắt."}
+      - {tom: "What food do you miss from England?", focus: 3}
+      - {emma: "Good bread! English bread is very different from Vietnamese bánh mì.", say: "Good bread! English bread is very different from Vietnamese bahn mee.", reveal: 3, vi: "Bánh mì ngon kiểu Anh! Khác hẳn bánh mì Việt Nam."}
+      - {emma: "Do you prefer markets or supermarkets?", focus: 4}
+      - {tom: "Markets. The food is fresher, and it's cheaper. But supermarkets are better when it's raining.", reveal: 4, vi: "Chợ: tươi hơn, rẻ hơn. Nhưng trời mưa thì siêu thị tiện hơn."}
+
+  - kind: practice
+    chapter: "Nói 2: đóng vai ở chợ"
+    heading: "Role-play · You are the customer at a market"
+    heading_vi: "Emma là người bán — tạm dừng video sau mỗi câu và trả lời như khách"
+    items:
+      - {q: "Hello! What would you like?", hint: "Could I have a kilo of tomatoes, please?"}
+      - {q: "Here you are. Anything else?", hint: "Yes. Have you got any mangoes?"}
+      - {q: "Yes. How many would you like?", hint: "I'd like four, please. Are they ripe?"}
+      - {q: "Yes, they're lovely. Anything else?", hint: "No, that's all, thanks. How much is that?"}
+      - {q: "That's eighty thousand dong altogether.", hint: "Here you are. Thank you!"}
+    lines:
+      - emma: "Now a role-play. I'm the shop assistant at a market, and you're the customer. Pause the video after each line, and answer."
+        vi: "Đóng vai: Emma là người bán ở chợ, bạn là khách."
+      - {emma: "Hello! What would you like?", focus: 0, pause: 0.5}
+      - {emma: "Here you are. Anything else?", focus: 1, pause: 0.5}
+      - {emma: "Yes. How many would you like?", focus: 2, pause: 0.5}
+      - {emma: "Yes, they're lovely. Anything else?", focus: 3, pause: 0.5}
+      - {emma: "That's eighty thousand dong altogether.", focus: 4, pause: 1.0}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi mua thực phẩm — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I'd like two breads, please.  →  ___", answer: "I'd like two loaves of bread, please."}
+      - {n: 2, q: "How many sugar do you need?  →  ___", answer: "How much sugar do you need?"}
+      - {n: 3, q: "Can I have a half kilo of beef?  →  ___", answer: "Can I have half a kilo of beef?"}
+      - {n: 4, q: "I want a rice and an egg.  →  ___", answer: "I'd like some rice and an egg."}
+      - {n: 5, q: "A can of tuna, please.  →  ___", answer: "A tin of tuna, please."}
+      - {n: 6, q: "These cheese is very nice.  →  ___", answer: "This cheese is very nice."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. Two loaves of bread. Bread is uncountable. Two. How much sugar: sugar is uncountable.", reveal: [1, 2], focus: 1, vi: "a loaf (số nhiều loaves): một ổ bánh mì"}
+      - {tom: "Three. Half a kilo. Four. Some rice, not a rice. And I'd like is more polite than I want.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. A tin of tuna: food is in a tin. Americans say a can of tuna. Six. This cheese is: cheese is uncountable.", reveal: [5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a shop or market where you often buy food"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — hiện tại đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: where it is", vi: "nó ở đâu"}
+      - {en: "what you buy there", vi: "bạn mua gì ở đó"}
+      - {en: "how often you go there", vi: "bạn đến đó thường xuyên thế nào"}
+      - {en: "and explain why you like it", vi: "và giải thích vì sao bạn thích nơi đó"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a shop or market where you often buy food."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a shop or market where you often buy food."
+        vi: "Luyện nói chung kiểu Part 2: cửa hàng hoặc chợ bạn hay mua thực phẩm."
+      - {emma: "You should say where it is,", focus: 0}
+      - {emma: "what you buy there,", focus: 1}
+      - {emma: "how often you go there,", focus: 2}
+      - {emma: "and explain why you like it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — hiện tại đơn, đồ đựng và số lượng"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a small market near my flat in Ho Chi Minh City. It's only five minutes' walk away, in a narrow street behind my university."
+        say: "I'd like to talk about a small market near my flat in Ho Chee Min City. It's only five minutes' walk away, in a narrow street behind my university."
+        note: "where"
+      - text: "I usually buy rice, eggs, vegetables and some meat. A kilo of pork is about one hundred and twenty thousand dong, and a bag of vegetables is only twenty thousand."
+        note: "what"
+      - text: "My flatmates and I go there every Saturday morning, and sometimes I go after class for a few tomatoes or a bunch of bananas."
+        note: "how often"
+      - text: "I like it because everything is fresh and cheap, and the sellers are friendly. One woman always gives me a little extra garlic for free!"
+        note: "why"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about a little shop near my school that sells imported food. It's on a busy street, between a bank and a coffee shop."
+        note: "where"
+      - text: "I buy things I can't find at the market: a piece of cheese, some butter, a jar of strawberry jam, and good bread."
+        note: "what"
+      - text: "I go there about once a week, usually on Friday after work, because I like a special breakfast at the weekend."
+        note: "how often"
+      - text: "I like it because it reminds me of home. The owner is very kind, and she always asks: just over two hundred grams, is that OK?"
+        note: "why"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a shop or market where you often buy food.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a shop or market where you often buy food"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Where is it?", hint: "I'd like to talk about … · It's near my house / in the city centre"}
+      - {q: "What do you buy there?", hint: "I usually buy a kilo of … / a packet of … / some …"}
+      - {q: "How often do you go there?", hint: "I go there every … / once or twice a week"}
+      - {q: "Why do you like it?", hint: "I like it because … · The food is fresh / cheap"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use containers and quantities from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz containers and quantities from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Where is it?", focus: 0, pause: 0.5}
+      - {emma: "What do you buy there?", focus: 1, pause: 0.5}
+      - {emma: "How often do you go there?", focus: 2, pause: 0.5}
+      - {emma: "Why do you like it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · buying food"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do many people prefer supermarkets to markets?"
+        a: "Supermarkets are clean and cool, and you can buy everything in one place. But markets are usually cheaper."
+        ask: tom
+        by: emma
+        phrases: ["… are clean and…", "in one place", "But … are usually…"]
+      - q: "Is it a good idea to buy food online?"
+        a: "For rice or noodles, yes, because they're heavy. But I like to choose fruit and vegetables myself."
+        ask: emma
+        by: tom
+        phrases: ["For …, yes, because…", "But I like to…"]
+      - q: "Do people waste a lot of food today?"
+        a: "Yes, I think so. People buy too much in supermarkets, and then they throw it away. We should buy only what we need."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I think so.", "and then they…", "We should…"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Why do many people prefer supermarkets to markets?", focus: 0}
+      - {emma: "Supermarkets are clean and cool, and you can buy everything in one place. But markets are usually cheaper.", reveal: 0, vi: "Siêu thị sạch, mát, mua được mọi thứ một chỗ; nhưng chợ thường rẻ hơn."}
+      - {emma: "Is it a good idea to buy food online?", focus: 1}
+      - {tom: "For rice or noodles, yes, because they're heavy. But I like to choose fruit and vegetables myself.", reveal: 1, vi: "Gạo, mì thì có, vì nặng; nhưng rau quả thì Tom thích tự chọn."}
+      - {tom: "Do people waste a lot of food today?", focus: 2}
+      - {emma: "Yes, I think so. People buy too much in supermarkets, and then they throw it away. We should buy only what we need.", reveal: 2, vi: "Có: mua quá nhiều rồi vứt đi; nên chỉ mua thứ cần."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 68–69, nhìn tranh, nói lại"
+    items:
+      - {en: "U: milk · bread · butter · cheese · sugar · jam · rice · pasta · chocolate — some milk, NOT a milk", vi: "không đếm được"}
+      - {en: "a carton of · a packet of · a jar of · a tin of · a can of · a bottle of · a box of", vi: "đồ đựng"}
+      - {en: "100 grams · half a kilo · a kilo · half a litre · a litre · a piece of · a bar of", vi: "số lượng"}
+      - {en: "Could I have …? · Have you got any …? · How much / How many …? · Anything else? · That's all.", vi: "câu mua hàng"}
+      - {en: "Next: Unit 27 · In a café", vi: "Tiếp theo: Unit 27 · Ở quán cà phê"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Uncountable: milk, bread, butter, cheese, sugar, jam, rice, pasta, and chocolate. Some milk, not a milk.", focus: 0}
+      - {tom: "A carton of, a packet of, a jar of, a tin of, a can of, a bottle of, and a box of.", focus: 1}
+      - {emma: "One hundred grams, half a kilo, a kilo, half a litre, a litre, a piece of, and a bar of.", focus: 2}
+      - {tom: "Could I have…? Have you got any…? How much, or how many? Anything else? That's all, thanks.", focus: 3}
+      - {emma: "Next time, Unit 27: in a café. See you then!", say: "Next time, Unit twenty-seven: in a cafe. See you then!", focus: 4}

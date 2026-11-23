@@ -1,0 +1,391 @@
+# Video Oxford Word Skills Basic · Unit 24 — I can name meat and fish (sách in tr. 65, Answer key tr. 210).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–5. Bài 1–3 theo Answer key tr. 210 (bài 3: tranh không nhãn, Emma hỏi, Tom nói từ). Bài 4 (ABOUT YOU,
+# Do you like …?): Tom và Emma hỏi đáp (cảnh Nói 1). Bài 5 (Test yourself): Emma nhắc che chữ, nhìn tranh, nói lại.
+# Unit một trang nên thêm ngoài sách: con vật đếm được ≠ thịt không đếm được (a chicken / some chicken), món Việt bằng tiếng
+# Anh (beef noodle soup, grilled pork with rice noodles…), câu đố con vật hay thịt, tả một món ăn (bài mẫu phở bò của Tom, fish and chips của Emma),
+# vegetarian / I don't eat …; Nghe và viết; Nói 2 (Part 1 "Food").
+# Hình trong sách: bảng animal → meat (khung theo cột) kèm bong bóng Do you eat …?, khung Spotlight pig, hàng tranh cá và hải
+# sản, tranh bài 3 (khung theo tranh).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom thích bò (phở bò), thích tôm, không thích mực; mẹ Hạnh nấu
+# canh cá ngon nhất (Tom muốn học công thức — video IELTS U02); quê Đà Lạt xa biển nên hồi nhỏ ít ăn hải sản. Emma lớn lên ở thị
+# trấn ven biển nên thích hải sản, nhất là cua và vẹm (mussels), cá với khoai tây chiên (fish and chips); không thích vịt; ăn sáng
+# kiểu Anh thỉnh thoảng có bacon và xúc xích vào cuối tuần.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U24-meat-fish.yaml
+id: U24-meat-fish
+activity: U24-words
+title: "Unit 24 · Meat and fish"
+subtitle: "I can name meat and fish"
+title_vi: "Thịt (beef, pork, lamb, chicken), cá và hải sản (salmon, prawns, crab…), con vật ≠ thịt — món Việt bằng tiếng Anh"
+tag: "FOOD AND DRINK · UNIT 24"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 24, the first unit in the Food and drink module: meat and fish. We'll learn the names of animals and their meat, fish, and seafood, and talk about what we like to eat."
+        say: "Welcome to Unit twenty-four, the first unit in the Food and drink module: meat and fish. We'll learn the names of animals and their meat, fish, and seafood, and talk about what we like to eat."
+        vi: "Unit 24, unit đầu module Food and drink: thịt, cá, hải sản — và nói về món mình thích."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Con vật và thịt"
+    heading: "Animal → meat"
+    heading_vi: "Bảng trong sách tr. 65 — tên con vật và tên thịt của nó"
+    image: {pdf: course-book, page: 66, clip: [26, 60, 372, 192]}
+    items:
+      - {box: [75, 63, 155, 155]}
+      - {box: [155, 63, 221, 155]}
+      - {box: [221, 63, 283, 155]}
+      - {box: [283, 63, 332, 155]}
+      - {box: [332, 63, 368, 155]}
+      - {box: [28, 160, 368, 190]}
+    lines:
+      - emma: "Look at the table on page sixty-five. The top row is the animal, and the bottom row is the meat. The animal is a cow, but the meat is beef."
+        focus: 0
+        vi: "cow (con bò) → beef (thịt bò)"
+      - {tom: "A young sheep is a lamb, and the meat is lamb too.", focus: 1, vi: "sheep / lamb (con cừu) → lamb (thịt cừu)"}
+      - {emma: "The animal is a pig, but the meat is pork.", focus: 2, vi: "pig (con lợn) → pork (thịt lợn)"}
+      - {tom: "A chicken, and the meat is chicken.", focus: 3, vi: "chicken: con gà, thịt gà"}
+      - {emma: "And a duck: the meat is duck.", focus: 4, vi: "duck: con vịt, thịt vịt"}
+      - {tom: "We ask: do you eat pork, or bacon? And answer: yes, I do. Or: no, I don't.", focus: 5, vi: "Do you eat …? — Yes, I do. / No, I don't."}
+
+  - kind: figure
+    chapter: "Từ con lợn"
+    heading: "Spotlight · pig"
+    heading_vi: "Khung Spotlight tr. 65 — từ thịt lợn ta còn có ham, bacon, sausages"
+    image: {pdf: course-book, page: 66, clip: [370, 62, 486, 206]}
+    items:
+      - {box: [374, 102, 482, 135]}
+      - {box: [374, 136, 482, 168]}
+      - {box: [374, 166, 482, 204]}
+    lines:
+      - {emma: "Look at the spotlight. From a pig we also get ham: thin pieces of cooked meat, for sandwiches.", focus: 0, vi: "ham: giăm bông"}
+      - {tom: "Bacon. In England, people often have bacon and eggs for breakfast.", focus: 1, vi: "bacon: thịt xông khói"}
+      - {emma: "And sausages. I sometimes have bacon and sausages at the weekend, for a big English breakfast!", focus: 2, vi: "sausages: xúc xích"}
+
+  - kind: figure
+    chapter: "Cá và hải sản"
+    heading: "Fish and seafood"
+    heading_vi: "Tranh trong sách tr. 65 — seafood: hải sản (không phải cá)"
+    image: {pdf: course-book, page: 66, clip: [24, 205, 490, 278]}
+    items:
+      - {box: [28, 207, 103, 276]}
+      - {box: [103, 207, 187, 276]}
+      - {box: [189, 207, 263, 276]}
+      - {box: [265, 210, 350, 276]}
+      - {box: [350, 207, 420, 276]}
+      - {box: [420, 207, 489, 276]}
+    lines:
+      - emma: "Now fish. This is salmon. In salmon, the l is silent: salmon."
+        say: "Now fish. This is salmon. In salmon, the el is silent: salmon."
+        focus: 0
+        vi: "salmon /ˈsæmən/: cá hồi — chữ l câm"
+      - {tom: "And tuna.", focus: 1, vi: "tuna: cá ngừ"}
+      - {emma: "Seafood is food from the sea that isn't fish. Squid.", focus: 2, vi: "seafood: hải sản · squid: mực"}
+      - {tom: "Prawns.", focus: 3, vi: "prawns: tôm"}
+      - {emma: "Crab.", focus: 4, vi: "crab: cua"}
+      - {tom: "And mussels. Mussels are very popular in Europe.", focus: 5, vi: "mussels: con vẹm"}
+
+  - kind: blanks
+    chapter: "Bài 1: cái nào khác?"
+    heading: "Exercise 1 · Which one is different? Why?"
+    heading_vi: "Ví dụ: cow · sheep · salmon · pig → Salmon, because it's a fish. (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "cow · pig · pork · sheep  →  ___", answer: "Pork, because it's a meat."}
+      - {n: 2, q: "ham · lamb · sausages · bacon  →  ___", answer: "Lamb, because it isn't from a pig."}
+      - {n: 3, q: "lamb · pork · beef · tuna  →  ___", answer: "Tuna, because it's a fish."}
+      - {n: 4, q: "salmon · prawns · mussels · squid  →  ___", answer: "Salmon, because it's a fish."}
+      - {n: 5, q: "duck · cow · lamb · chicken  →  ___", answer: "Cow, because it's only an animal."}
+    lines:
+      - emma: "Exercise 1. Which one is different, and why? Pause the video and try."
+        say: "Exercise one. Which one is different, and why? Pause the video and try."
+        vi: "Bài 1: từ nào khác nhóm, vì sao?"
+      - {tom: "One. Pork, because it's a meat. The others are animals. Two. Lamb, because it isn't from a pig. Three. Tuna, because it's a fish.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Salmon, because it's a fish. The others are seafood. Five. Cow, because it's only an animal. Duck, lamb and chicken are animals and meat.", reveal: [4, 5], focus: 4, vi: "cow chỉ là tên con vật; thịt bò là beef."}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành tên"
+    heading: "Exercise 2 · Complete the names of meat, fish or seafood"
+    heading_vi: "Ví dụ: lam_ → lamb (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "_ e e _  →  ___", answer: "beef"}
+      - {n: 2, q: "_ o r _  →  ___", answer: "pork"}
+      - {n: 3, q: "_ u n _  →  ___", answer: "tuna"}
+      - {n: 4, q: "_ u c _  →  ___", answer: "duck"}
+      - {n: 5, q: "_ r a _  →  ___", answer: "crab"}
+    lines:
+      - emma: "Exercise 2. Complete the names of meat, fish, or seafood. Pause the video and try."
+        say: "Exercise two. Complete the names of meat, fish, or seafood. Pause the video and try."
+        vi: "Bài 2: điền chữ cho đủ tên."
+      - {tom: "One. Beef. Two. Pork. Three. Tuna. Four. Duck: D, U, C, K. Five. Crab.", say: "One. Beef. Two. Pork. Three. Tuna. Four. Duck: dee, yoo, see, kay. Five. Crab.", reveal: [1, 2, 3, 4, 5], focus: 4}
+
+  - kind: figure
+    chapter: "Bài 3: đây là thịt gì?"
+    heading: "Exercise 3 · Write the word for the meat or fish"
+    heading_vi: "Ví dụ: ▶ beef — tạm dừng video, viết tên từng tranh (Answer key tr. 210)"
+    image: {pdf: course-book, page: 66, clip: [128, 454, 490, 576]}
+    items:
+      - {box: [143, 456, 231, 503]}
+      - {box: [245, 456, 332, 512]}
+      - {box: [334, 456, 425, 514]}
+      - {box: [131, 506, 235, 574]}
+      - {box: [236, 510, 310, 574]}
+      - {box: [310, 514, 421, 574]}
+      - {box: [423, 462, 489, 574]}
+    lines:
+      - emma: "Exercise 3. Write the word for the meat or fish. The example is beef. Pause the video and write the words for pictures one to six."
+        say: "Exercise three. Write the word for the meat or fish. The example is beef. Pause the video and write the words for pictures one to six."
+        focus: 0
+        vi: "Bài 3: viết tên thịt hoặc cá trong tranh."
+      - {tom: "One. Pork.", focus: 1}
+      - {tom: "Two. Lamb.", focus: 2}
+      - {tom: "Three. Salmon.", focus: 3}
+      - {tom: "Four. Tuna.", focus: 4}
+      - {tom: "Five. Bacon.", focus: 5}
+      - {tom: "And six. Chicken. Exercise 5 is a test: cover the words on page sixty-five, look at the pictures, and say the words.", say: "And six. Chicken. Exercise five is a test: cover the words on page sixty-five, look at the pictures, and say the words.", focus: 6}
+
+  - kind: bullets
+    chapter: "Con vật ≠ thịt"
+    heading: "Grammar · a chicken or some chicken?"
+    heading_vi: "Thêm ngoài sách — con vật đếm được, thịt không đếm được"
+    items:
+      - {en: "a chicken, two chickens (animals)", vi: "con gà — đếm được"}
+      - {en: "some chicken, a lot of beef (meat)", vi: "thịt — không đếm được, không có s"}
+      - {en: "a piece of chicken · a slice of ham", vi: "một miếng thịt gà · một lát giăm bông"}
+      - {en: "fish: one fish, two fish · some fish", vi: "fish số nhiều vẫn là fish"}
+      - {en: "two sheep · prawns, mussels (plural)", vi: "sheep số nhiều không đổi"}
+    lines:
+      - emma: "Animals are countable. A chicken, two chickens. There are ten chickens in my grandmother's garden."
+        focus: 0
+        vi: "Con vật: đếm được."
+      - {tom: "But meat is uncountable. Some chicken, a lot of beef. Not: a beef, or two beefs.", focus: 1, vi: "Thịt: không đếm được."}
+      - {emma: "To count meat, say: a piece of chicken, or a slice of ham. A slice is a thin piece.", focus: 2, vi: "slice: lát mỏng"}
+      - {tom: "Fish is special: one fish, two fish. We don't usually say fishes.", focus: 3}
+      - {emma: "And two sheep, not sheeps. But prawns and mussels have an s.", focus: 4}
+
+  - kind: blanks
+    chapter: "Ôn tập: con vật hay thịt?"
+    heading: "Quiz · an animal, meat, or both?"
+    heading_vi: "Thêm ngoài sách — nghe từ, nói: con vật, thịt, hay cả hai; tạm dừng video sau mỗi từ"
+    items:
+      - {n: 1, q: "pork  →  ___", answer: "meat"}
+      - {n: 2, q: "sheep  →  ___", answer: "an animal"}
+      - {n: 3, q: "chicken  →  ___", answer: "both"}
+      - {n: 4, q: "beef  →  ___", answer: "meat"}
+      - {n: 5, q: "cow  →  ___", answer: "an animal"}
+      - {n: 6, q: "lamb  →  ___", answer: "both"}
+    lines:
+      - emma: "A quick quiz. Is it an animal, meat, or both? Pause the video after each word."
+        vi: "Câu đố: con vật, thịt hay cả hai?"
+      - {emma: "Number one. Pork.", focus: 0}
+      - {tom: "Meat. The animal is a pig.", reveal: 1, focus: 0}
+      - {emma: "Number two. Sheep.", focus: 1}
+      - {tom: "An animal. The meat is lamb.", reveal: 2, focus: 1}
+      - {emma: "Number three. Chicken.", focus: 2}
+      - {tom: "Both.", reveal: 3, focus: 2}
+      - {emma: "Number four. Beef.", focus: 3}
+      - {tom: "Meat, from a cow.", reveal: 4, focus: 3}
+      - {emma: "Number five. Cow.", focus: 4}
+      - {tom: "An animal.", reveal: 5, focus: 4}
+      - {emma: "And number six. Lamb.", focus: 5}
+      - {tom: "Both: a young sheep, and its meat.", reveal: 6, focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: bạn có thích …?"
+    heading: "Speaking 1 · Exercise 4: Do you like …?"
+    heading_vi: "Câu hỏi bài 4 — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you like beef?"
+        a: "Yes, I do. My favourite breakfast is beef noodle soup, phở bò."
+        say: "Yes, I do. My favourite breakfast is beef noodle soup, fuh baw."
+        ask: emma
+        by: tom
+        phrases: ["Yes, I do.", "My favourite … is…"]
+      - q: "Do you like squid?"
+        a: "Not really. I don't like the texture. But I love prawns."
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "I don't like…", "But I love…"]
+      - q: "Do you like seafood, Emma?"
+        a: "I love it! I grew up by the sea, so I had crab and mussels a lot. And fish and chips, of course."
+        ask: tom
+        by: emma
+        phrases: ["I love it!", "I grew up by…", "of course"]
+      - q: "Do you like duck?"
+        a: "No, I don't. I tried it once, but I didn't like it."
+        ask: tom
+        by: emma
+        phrases: ["No, I don't.", "I tried it once, but…"]
+      - q: "Do you eat a lot of fish?"
+        a: "Not much when I was a child. Da Lat is in the mountains, far from the sea. But my mum makes great fish soup."
+        say: "Not much when I was a child. Dah Lot is in the mountains, far from the sea. But my mum makes great fish soup."
+        ask: emma
+        by: tom
+        phrases: ["Not much when…", "far from the sea", "But my mum makes…"]
+      - q: "Do you like bacon?"
+        a: "Yes, at the weekend. A big English breakfast with bacon, sausages and eggs. But not every day!"
+        ask: tom
+        by: emma
+        phrases: ["Yes, at the weekend.", "But not every day!"]
+      - q: "Do you like lamb?"
+        a: "I don't know. We hardly ever eat lamb in Vietnam. Is it like beef?"
+        ask: emma
+        by: tom
+        phrases: ["I don't know.", "We hardly ever eat…", "Is it like…?"]
+    lines:
+      - {emma: "Exercise 4. Do you like these things? Here are our answers. Do you like beef, Tom?", say: "Exercise four. Do you like these things? Here are our answers. Do you like beef, Tom?", focus: 0}
+      - {tom: "Yes, I do. My favourite breakfast is beef noodle soup, phở bò.", say: "Yes, I do. My favourite breakfast is beef noodle soup, fuh baw.", reveal: 0, vi: "Có. Bữa sáng Tom thích nhất là phở bò."}
+      - {emma: "Do you like squid?", focus: 1}
+      - {tom: "Not really. I don't like the texture. But I love prawns.", reveal: 1, vi: "Không lắm: không thích độ dai. Nhưng rất thích tôm."}
+      - {tom: "Do you like seafood, Emma?", focus: 2}
+      - {emma: "I love it! I grew up by the sea, so I had crab and mussels a lot. And fish and chips, of course.", reveal: 2, vi: "Rất thích! Lớn lên ở vùng biển nên hay ăn cua, vẹm. Và tất nhiên là cá với khoai tây chiên."}
+      - {tom: "Do you like duck?", focus: 3}
+      - {emma: "No, I don't. I tried it once, but I didn't like it.", reveal: 3, vi: "Không. Ăn thử một lần rồi, không thích."}
+      - {emma: "Do you eat a lot of fish?", focus: 4}
+      - {tom: "Not much when I was a child. Da Lat is in the mountains, far from the sea. But my mum makes great fish soup.", say: "Not much when I was a child. Dah Lot is in the mountains, far from the sea. But my mum makes great fish soup.", reveal: 4, vi: "Hồi nhỏ ít ăn: Đà Lạt trên núi, xa biển. Nhưng mẹ nấu canh cá rất ngon."}
+      - {tom: "Do you like bacon?", focus: 5}
+      - {emma: "Yes, at the weekend. A big English breakfast with bacon, sausages and eggs. But not every day!", reveal: 5, vi: "Có, cuối tuần: bữa sáng kiểu Anh với thịt xông khói, xúc xích, trứng. Nhưng không phải ngày nào!"}
+      - {emma: "Do you like lamb?", focus: 6}
+      - {tom: "I don't know. We hardly ever eat lamb in Vietnam. Is it like beef?", reveal: 6, vi: "Không biết nữa: ở Việt Nam hầu như không ăn thịt cừu. Có giống thịt bò không?"}
+
+  - kind: bullets
+    chapter: "Món Việt bằng tiếng Anh"
+    heading: "Vietnamese food in English"
+    heading_vi: "Thêm ngoài sách — giới thiệu món Việt: tên món + nguyên liệu chính"
+    items:
+      - {en: "beef noodle soup  (phở bò)", vi: "phở bò"}
+      - {en: "grilled pork with rice noodles  (bún chả)", vi: "bún chả — grilled: nướng"}
+      - {en: "broken rice with grilled pork  (cơm tấm)", vi: "cơm tấm"}
+      - {en: "chicken with sticky rice  (xôi gà)", vi: "xôi gà — sticky rice: gạo nếp"}
+      - {en: "fish sauce  (nước mắm)", vi: "nước mắm"}
+    lines:
+      - emma: "In IELTS, you often talk about food from your country. Say the name of the dish, and the main things in it. Phở bò is beef noodle soup."
+        say: "In eye-elts, you often talk about food from your country. Say the name of the dish, and the main things in it. Fuh baw is beef noodle soup."
+        focus: 0
+        vi: "Giới thiệu món: tên món + nguyên liệu chính."
+      - {tom: "Bún chả is grilled pork with rice noodles. It's from Hanoi.", say: "Boon cha is grilled pork with rice noodles. It's from Ha Noi.", focus: 1}
+      - {emma: "Cơm tấm is broken rice with grilled pork. It's popular in Ho Chi Minh City.", say: "Gum tum is broken rice with grilled pork. It's popular in Ho Chee Min City.", focus: 2}
+      - {tom: "Xôi gà is chicken with sticky rice.", say: "Soy gah is chicken with sticky rice.", focus: 3}
+      - {emma: "And nước mắm is fish sauce. It's in almost every Vietnamese dish!", say: "And nuoc mam is fish sauce. It's in almost every Vietnamese dish!", focus: 4}
+
+  - kind: bullets
+    chapter: "Tả một món ăn"
+    heading: "How to describe a dish"
+    heading_vi: "Thêm ngoài sách — bốn ý khi tả món ăn (IELTS Speaking)"
+    items:
+      - {en: "What is it? — It's a kind of soup / salad / sandwich …", vi: "món gì"}
+      - {en: "What's in it? — It's made with beef / rice noodles / …", vi: "làm bằng gì"}
+      - {en: "When do people eat it? — for breakfast / at Tết / at the weekend", vi: "ăn khi nào"}
+      - {en: "Why do you like it? — It's tasty / healthy / cheap …", vi: "vì sao thích"}
+    lines:
+      - {emma: "How do you describe a dish? First, say what it is: it's a kind of soup, or a kind of sandwich.", focus: 0, vi: "It's a kind of …: đó là một loại …"}
+      - {tom: "Then, what's in it: it's made with beef, and rice noodles.", focus: 1, vi: "It's made with …: làm bằng …"}
+      - {emma: "When do people eat it? For breakfast, for lunch, or at a special time, like Tết.", say: "When do people eat it? For breakfast, for lunch, or at a special time, like Tet.", focus: 2}
+      - {tom: "And why you like it. It's tasty, it's healthy, or it's cheap.", focus: 3, vi: "tasty: ngon"}
+
+  - kind: letter
+    heading: "Tom describes phở bò"
+    heading_vi: "Bài mẫu của Tom — bốn ý: món gì, làm bằng gì, ăn khi nào, vì sao thích"
+    roles: {tom: speaker}
+    items:
+      - text: "My favourite dish is phở bò. It's a kind of soup, and it's very famous in Vietnam."
+        say: "My favourite dish is fuh baw. It's a kind of soup, and it's very famous in Vietnam."
+        note: "what"
+      - text: "It's made with beef, rice noodles, onions and herbs. The soup cooks for many hours, so it's very tasty."
+        note: "what's in it"
+      - text: "People usually eat it for breakfast. In Da Lat, I had it on cold mornings with my grandfather."
+        say: "People usually eat it for breakfast. In Dah Lot, I had it on cold mornings with my grandfather."
+        note: "when"
+      - text: "I like it because it's hot, healthy and cheap. A bowl costs about fifty thousand dong."
+        note: "why"
+    lines:
+      - {emma: "Here's Tom's description of his favourite dish.", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {emma: "Very good. Now my favourite English dish: fish and chips. It's fried fish with chips, which are fried potatoes. People eat it on Friday evenings, or at the beach, and I love it because it reminds me of home.", focus: 3, vi: "Emma: fish and chips — cá chiên với khoai tây chiên; ăn tối thứ Sáu hoặc ở bãi biển; gợi nhớ quê nhà."}
+
+  - kind: bullets
+    chapter: "Không ăn thịt"
+    heading: "I don't eat meat"
+    heading_vi: "Thêm ngoài sách — nói về chế độ ăn"
+    items:
+      - {en: "a vegetarian = a person who doesn't eat meat or fish", vi: "người ăn chay"}
+      - {en: "I don't eat pork. · I'm allergic to seafood.", vi: "tôi không ăn thịt lợn · tôi dị ứng hải sản"}
+      - {en: "Is there any meat in this?", vi: "Món này có thịt không?"}
+      - {en: "Do you have any vegetarian dishes?", vi: "Có món chay không?"}
+    lines:
+      - {emma: "Some people don't eat meat. A vegetarian doesn't eat meat or fish. In Vietnam, many people eat vegetarian food on the first and fifteenth day of the lunar month.", focus: 0, vi: "vegetarian: người ăn chay"}
+      - {tom: "Some people don't eat pork, for religious reasons. And some people are allergic to seafood: it makes them ill.", focus: 1, vi: "allergic to: dị ứng với"}
+      - {emma: "In a restaurant, you can ask: is there any meat in this?", focus: 2}
+      - {tom: "Or: do you have any vegetarian dishes? A dish is one kind of food in a meal.", focus: 3, vi: "dish: món ăn"}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · meat and fish"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "I'd like a ___ sandwich, please.", answer: "ham"}
+      - {n: 2, q: "We had grilled ___ with rice for dinner.", answer: "salmon"}
+      - {n: 3, q: "My brother doesn't eat ___.", answer: "seafood"}
+      - {n: 4, q: "There are two ___ in the garden.", answer: "sheep"}
+      - {n: 5, q: "Do you want chicken or ___?", answer: "beef"}
+      - {n: 6, q: "The ___ are very fresh today.", answer: "prawns"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. I'd like a ham sandwich, please.", focus: 0}
+      - {emma: "Number two. We had grilled salmon with rice for dinner.", focus: 1}
+      - {emma: "Number three. My brother doesn't eat seafood.", focus: 2}
+      - {emma: "Number four. There are two sheep in the garden.", focus: 3}
+      - {emma: "Number five. Do you want chicken or beef?", focus: 4}
+      - {emma: "Number six. The prawns are very fresh today.", focus: 5}
+      - {tom: "Ham. Salmon: S, A, L, M, O, N, with a silent l. Seafood: one word.", say: "Ham. Salmon: ess, eigh, el, em, oh, en, with a silent el. Seafood: one word.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Sheep: no s. Beef. And prawns: P, R, A, W, N, S.", say: "Sheep: no ess. Beef. And prawns: pee, ar, eigh, double you, en, ess.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Food"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "What's your favourite food?", hint: "My favourite food is … It's made with …"}
+      - {q: "Do you prefer meat or fish?", hint: "I prefer … because … · I don't eat much …"}
+      - {q: "Is there any food you don't like?", hint: "I don't like … because …"}
+      - {q: "What food is popular in your country?", hint: "… is very popular. It's beef / pork / chicken with …"}
+      - {q: "Do you eat a lot of seafood?", hint: "Yes, I love … / Not much, because …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about food. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about food. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về đồ ăn."
+      - {emma: "What's your favourite food?", focus: 0, pause: 0.5}
+      - {emma: "Do you prefer meat or fish?", focus: 1, pause: 0.5}
+      - {emma: "Is there any food you don't like?", focus: 2, pause: 0.5}
+      - {emma: "What food is popular in your country?", focus: 3, pause: 0.5}
+      - {emma: "Do you eat a lot of seafood?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 65, nhìn tranh, nói lại"
+    items:
+      - {en: "cow → beef · sheep / lamb → lamb · pig → pork · chicken · duck", vi: "con vật → thịt"}
+      - {en: "ham · bacon · sausages (from a pig)", vi: "từ thịt lợn"}
+      - {en: "fish: salmon · tuna — seafood: squid · prawns · crab · mussels", vi: "cá · hải sản"}
+      - {en: "a chicken (animal) ≠ some chicken (meat) · one fish, two fish", vi: "đếm được ≠ không đếm được"}
+      - {en: "Next: Unit 25 · Fruit and vegetables", vi: "Tiếp theo: Unit 25 · Rau quả"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Cow and beef, sheep and lamb, pig and pork, chicken, and duck.", focus: 0}
+      - {tom: "From a pig: ham, bacon, and sausages.", focus: 1}
+      - {emma: "Fish: salmon and tuna. Seafood: squid, prawns, crab, and mussels.", focus: 2}
+      - {tom: "A chicken is an animal. Some chicken is meat.", focus: 3}
+      - {emma: "Next time, Unit 25: fruit and vegetables. See you then!", say: "Next time, Unit twenty-five: fruit and vegetables. See you then!", focus: 4}
