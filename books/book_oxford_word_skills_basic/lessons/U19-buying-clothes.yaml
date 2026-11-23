@@ -1,0 +1,521 @@
+# Video Oxford Word Skills Basic · Unit 19 — I can buy clothes (sách in tr. 51–53, Answer key tr. 209). Học sau Unit 18.
+# UNIT KHÓ (đợt 37): 3 trang — tính từ tả quần áo theo cặp trái nghĩa, hỏi cỡ, too / very, hội thoại trong cửa hàng (chủ đề
+# hay gặp ở IELTS General Training) — video khoảng 13 phút: phần sách, rồi ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2
+# "the last time you bought some clothes", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2.
+# Không `wait` / `echo`; không khoảng lặng từ 3 giây. Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–9. Bài 1–3, 5–8 theo Answer key tr. 209. Bài 4 (Test yourself): Tom nhắc che chữ, nhìn tranh, nói lại.
+# Bài 9 (ABOUT YOU): Tom và Emma hỏi đáp (cảnh Nói 1; Answer key là câu của "a Turkish person").
+# Thêm ngoài sách: cách đọc comfortable; câu hỏi thêm khi mua đồ (How much are they? bigger size, just looking); đóng vai mua đồ (Emma là người bán, người học là khách); câu đố too / very.
+# Hội thoại trong cửa hàng (tr. 53): Tom đọc lời người bán (SA), Emma đọc lời khách (C), mỗi dòng có khung đỏ và giải nghĩa
+# theo Glossary — thay cho việc đọc riêng Glossary.
+# Hình trong sách: 12 tranh tả quần áo và hai bong bóng nice / horrible (tr. 51), bảng hỏi cỡ, ảnh cửa hàng (tr. 52), khung
+# Spotlight too / very, 4 tranh bài 6, hội thoại tr. 53 (hai cảnh, khung theo dòng).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7, U18): Tom mua áo sơ mi đen ở chợ Bến Thành trước ngày đầu làm ở
+# quán (tháng 9), cỡ M, 150.000 đồng, thử áo L trước thì quá rộng; thích mua đồ trực tuyến hơn nhưng quần áo thì phải thử.
+# Emma mua đôi giày đi bộ đường dài (sở thích hồ sơ) ở một cửa hàng thể thao tháng trước, cỡ 39, khoảng hai triệu đồng, trả
+# bằng thẻ ghi nợ; ở Việt Nam khó tìm cỡ giày của Emma; mua quần áo khoảng ba lần một năm, thường ở chợ.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U19-buying-clothes.yaml
+id: U19-buying-clothes
+activity: U19-words
+title: "Unit 19 · Buying clothes"
+subtitle: "I can buy clothes"
+title_vi: "Tả quần áo (long / short, tight / loose…), hỏi cỡ, too và very, hội thoại mua đồ — kèm ôn tập và luyện nói"
+tag: "EVERYDAY LIFE · UNIT 19"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 19: buying clothes. Please do Unit 18 first. Today we'll describe clothes, talk about size, and buy something in a shop. There are three pages, so the video is longer, with a review and speaking practice."
+        say: "Welcome to Unit nineteen: buying clothes. Please do Unit eighteen first. Today we'll describe clothes, talk about size, and buy something in a shop. There are three pages, so the video is longer, with a review and speaking practice."
+        vi: "Unit 19: mua quần áo (học Unit 18 trước). Tả quần áo, hỏi cỡ, mua đồ — có ôn tập và luyện nói."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Tả quần áo"
+    heading: "A · Describing clothes"
+    heading_vi: "Tranh trong sách tr. 51 — tính từ đi theo cặp trái nghĩa"
+    image: {pdf: course-book, page: 52, clip: [26, 62, 490, 300]}
+    items:
+      - {box: [134, 96, 222, 192]}
+      - {box: [243, 86, 342, 193]}
+      - {box: [369, 88, 452, 186]}
+      - {box: [134, 192, 218, 272]}
+      - {box: [258, 196, 312, 272]}
+      - {box: [352, 196, 474, 272]}
+      - {box: [42, 276, 192, 300]}
+      - {box: [234, 276, 404, 300]}
+    lines:
+      - emma: "Look at page fifty-one. The adjectives come in pairs. Number one is a long skirt, and number two is a short skirt."
+        focus: 0
+        vi: "long ≠ short: dài ≠ ngắn"
+      - {tom: "Three is a cheap tie: only five euros. Four is an expensive tie: seventy-five euros!", focus: 1, vi: "cheap ≠ expensive: rẻ ≠ đắt"}
+      - {emma: "Five: smart clothes, for work or a party. Six: casual clothes, for the weekend.", focus: 2, vi: "smart: lịch sự, trang trọng ≠ casual: thoải mái, thường ngày"}
+      - {tom: "Seven is a small bag, or a little bag. Eight is a large bag, or a big bag.", focus: 3, vi: "small = little ≠ large = big"}
+      - {emma: "Nine: uncomfortable shoes. They hurt your feet. Ten: comfortable shoes. Listen: comfortable. Only three syllables: comf-ta-ble.", say: "Nine: uncomfortable shoes. They hurt your feet. Ten: comfortable shoes. Listen: comfortable. Only three syllables: kumf, tuh, bul.", focus: 4, vi: "comfortable /ˈkʌmftəbl/: thoải mái, dễ chịu ≠ uncomfortable"}
+      - {tom: "Eleven is a tight T-shirt: very small on the body. Twelve is a loose T-shirt: big, with lots of space.", focus: 5, vi: "tight: chật, bó ≠ loose: rộng"}
+      - {emma: "When you like something, say: I like it. It's really nice, or lovely.", focus: 6, vi: "nice = lovely: đẹp"}
+      - {tom: "And when you don't like it: it's horrible, or awful. Exercise four is a test: cover the words, and say the adjectives and clothes in the pictures.", say: "And when you don't like it: it's horrible, or awful. Exercise four is a test: cover the words, and say the adjectives and clothes in the pictures.", focus: 7, vi: "horrible = awful: xấu, kinh khủng"}
+
+  - kind: blanks
+    chapter: "Bài 1: tả quần áo"
+    heading: "Exercise 1 · Look at the pictures and describe the clothes"
+    heading_vi: "Ví dụ: a cheap tie (Answer key tr. 209)"
+    image: {pdf: course-book, page: 52, clip: [130, 84, 478, 274]}
+    items:
+      - {n: 1, q: "a s___ skirt", answer: "short"}
+      - {n: 2, q: "c___ shoes", answer: "comfortable"}
+      - {n: 3, q: "a s___ handbag", answer: "small"}
+      - {n: 4, q: "c___ clothes", answer: "casual"}
+      - {n: 5, q: "a l___ T-shirt", answer: "loose"}
+      - {n: 6, q: "an e___ tie", answer: "expensive"}
+      - {n: 7, q: "s___ clothes", answer: "smart"}
+      - {n: 8, q: "a l___ skirt", answer: "long"}
+    lines:
+      - emma: "Exercise 1. Look at the pictures and describe the clothes. The first letter is there to help you. Pause the video and try."
+        say: "Exercise one. Look at the pictures and describe the clothes. The first letter is there to help you. Pause the video and try."
+        vi: "Bài 1: tả quần áo trong tranh (có chữ cái đầu)."
+      - {tom: "One. A short skirt. Two. Comfortable shoes. Three. A small handbag. Four. Casual clothes.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. A loose T-shirt. Six. An expensive tie. Seven. Smart clothes. Eight. A long skirt.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: chọn từ đúng"
+    heading: "Exercise 2 · Circle the correct word"
+    heading_vi: "Ví dụ: My handbag is very large / small, so I put lots in it. → large (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "I like these trainers, but they're very comfortable / uncomfortable.  →  ___", answer: "uncomfortable"}
+      - {n: 2, q: "I've got some really nice / horrible boots. I wear them a lot.  →  ___", answer: "nice"}
+      - {n: 3, q: "At the weekend, I usually wear casual / smart clothes.  →  ___", answer: "casual"}
+      - {n: 4, q: "I haven't got much money, so I don't wear cheap / expensive clothes.  →  ___", answer: "expensive"}
+      - {n: 5, q: "He's only seven years old, so just buy him a small / large T-shirt.  →  ___", answer: "small"}
+      - {n: 6, q: "You need your long / short coat today; it's really cold.  →  ___", answer: "long"}
+      - {n: 7, q: "If you are going to the gym, it's better to wear tight / loose clothes.  →  ___", answer: "loose"}
+      - {n: 8, q: "That suit is awful / lovely – you must buy it.  →  ___", answer: "lovely"}
+    lines:
+      - emma: "Exercise 2. Circle the correct word. Pause the video and try."
+        say: "Exercise two. Circle the correct word. Pause the video and try."
+        vi: "Bài 2: chọn từ đúng."
+      - {tom: "One. Uncomfortable: I like them, but. Two. Nice. Three. Casual. Four. Expensive.", reveal: [1, 2, 3, 4], focus: 3, vi: "but báo hiệu ý ngược lại → uncomfortable."}
+      - {tom: "Five. Small. Six. Long. Seven. Loose. And eight. Lovely: you must buy it.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 3: từ trái nghĩa"
+    heading: "Exercise 3 · Write the opposite of the underlined word"
+    heading_vi: "Ví dụ: You need a large belt. → small (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "She's wearing a LONG coat.  →  ___", answer: "short"}
+      - {n: 2, q: "Are those boots COMFORTABLE?  →  ___", answer: "uncomfortable"}
+      - {n: 3, q: "We can wear SMART clothes.  →  ___", answer: "casual"}
+      - {n: 4, q: "Was the belt very CHEAP?  →  ___", answer: "expensive"}
+      - {n: 5, q: "She doesn't want TIGHT trousers.  →  ___", answer: "loose"}
+      - {n: 6, q: "Does this look NICE?  →  ___", answer: "horrible / awful / terrible"}
+    lines:
+      - emma: "Exercise 3. Write the opposite of the underlined word. Pause the video and try."
+        say: "Exercise three. Write the opposite of the underlined word. Pause the video and try."
+        vi: "Bài 3: viết từ trái nghĩa."
+      - {tom: "One. Short. Two. Uncomfortable. Three. Casual.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Expensive. Five. Loose. Six. Horrible, awful, or terrible.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: figure
+    chapter: "Hỏi cỡ"
+    heading: "B · Talking about size"
+    heading_vi: "Bảng và ảnh trong sách tr. 52 — shop assistant: người bán · customer: khách"
+    image: {pdf: course-book, page: 53, clip: [28, 60, 474, 294]}
+    items:
+      - {box: [32, 84, 158, 112]}
+      - {box: [158, 84, 296, 124]}
+      - {box: [296, 86, 472, 138]}
+      - {box: [296, 140, 472, 180]}
+      - {box: [296, 184, 472, 250]}
+      - {box: [30, 130, 294, 292]}
+    lines:
+      - emma: "Now, size. The shop assistant asks: what size are you? Or: what size do you take?"
+        focus: 0
+        vi: "Bạn mặc cỡ nào?"
+      - {tom: "The customer answers: I'm a size twelve. Or: I take size forty. Or just: small, medium, or large.", focus: 1, vi: "medium: cỡ vừa"}
+      - {emma: "Problems with size: it's the wrong size. It doesn't fit. Fit means it's the right size for your body.", focus: 2, vi: "fit: vừa (người)"}
+      - {tom: "The sleeve is too long. Too means more than is good: it's a problem.", focus: 3, vi: "too long: dài quá"}
+      - {emma: "And these sandals are too big.", focus: 4, vi: "too big: to quá"}
+      - {tom: "In the photo, you can see the shop assistant, and the customer.", focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 5: hỏi cỡ"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Answer key tr. 209"
+    items:
+      - {n: 1, q: "What size are you? — I'm ___ 14.", answer: "a / a size"}
+      - {n: 2, q: "Is she small, ___, or large?", answer: "medium"}
+      - {n: 3, q: "I'm sorry, this shirt is the ___ size.", answer: "wrong"}
+      - {n: "4a", q: "Does this jumper ___?", answer: "fit"}
+      - {n: "4b", q: "— No, it's ___ tight for me.", answer: "too"}
+      - {n: 5, q: "What size do you ___? — Small.", answer: "take"}
+      - {n: "6a", q: "I like the trousers but they don't ___;", answer: "fit"}
+      - {n: "6b", q: "they're ___ long.", answer: "too"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. Pause the video and try."
+        say: "Exercise five. Complete the sentences. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. I'm a fourteen, or I'm a size fourteen. Two. Medium. Three. The wrong size.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Does this jumper fit? No, it's too tight for me. Five. What size do you take? Six. They don't fit; they're too long.", reveal: ["4a", "4b", 5, "6a", "6b"], focus: 7}
+
+  - kind: figure
+    chapter: "too và very"
+    heading: "Spotlight · too and very"
+    heading_vi: "very: rất (vẫn được) · too: quá (có vấn đề) — khung Spotlight tr. 52"
+    image: {pdf: course-book, page: 53, clip: [336, 308, 484, 444]}
+    items:
+      - {box: [339, 335, 482, 377]}
+      - {box: [339, 376, 482, 411]}
+      - {box: [339, 409, 482, 435]}
+    lines:
+      - {emma: "Look at the spotlight. There's a difference between too and very. Her coat is very long: it's OK.", focus: 0, vi: "very long: rất dài (không sao)"}
+      - {tom: "Her coat is too long: it's not OK. She can't wear it. These trousers are very tight, but I'm going to buy them.", focus: 1, vi: "too long: dài quá (không mặc được)"}
+      - {emma: "These boots are too tight; I can't wear them. So after too, we often say: I can't.", focus: 2, vi: "too … → I can't …"}
+
+  - kind: blanks
+    chapter: "Bài 6: vấn đề gì?"
+    heading: "Exercise 6 · Look at the pictures. What's the problem?"
+    heading_vi: "Ví dụ: The jacket's too short. (Answer key tr. 209)"
+    image: {pdf: course-book, page: 53, clip: [76, 480, 396, 666]}
+    items:
+      - {n: 1, q: "the shirt  →  ___", answer: "The shirt is too small / tight."}
+      - {n: 2, q: "the trousers  →  ___", answer: "The trousers are too long."}
+      - {n: 3, q: "the hat  →  ___", answer: "The hat's too big."}
+    lines:
+      - emma: "Exercise 6. Look at the pictures. What's the problem? The example is: the jacket's too short. Pause the video and try."
+        say: "Exercise six. Look at the pictures. What's the problem? The example is: the jacket's too short. Pause the video and try."
+        vi: "Bài 6: nhìn tranh, nói vấn đề."
+      - {tom: "One. The shirt is too small, or too tight. Two. The trousers are too long. Three. The hat's too big.", reveal: [1, 2, 3], focus: 2}
+
+  - kind: bullets
+    chapter: "Trong cửa hàng (1)"
+    heading: "C · In a shop (1)"
+    heading_vi: "Hội thoại tr. 53 — Tom đọc người bán (SA), Emma đọc khách (C)"
+    image: {pdf: course-book, page: 54, clip: [22, 62, 280, 214]}
+    items:
+      - {en: "Do you need any help? = Can I help you?", vi: "Anh / chị cần giúp gì không?", box: [24, 85, 278, 98]}
+      - {en: "I'm looking for … = I want …", vi: "Tôi đang tìm …", box: [24, 98, 278, 111]}
+      - {en: "What size do you take? — I'm a 12.", vi: "Chị mặc cỡ nào? — Cỡ 12.", box: [24, 110, 278, 134]}
+      - {en: "Can I try it on?", vi: "Tôi mặc thử được không? — try something on", box: [24, 146, 278, 160]}
+      - {en: "The changing room is over there.", vi: "Phòng thử đồ ở đằng kia.", box: [24, 158, 278, 171]}
+      - {en: "It's too tight. — Here's a size 14.", vi: "Chật quá. — Đây là cỡ 14.", box: [24, 181, 278, 206]}
+    lines:
+      - {tom: "Do you need any help?", focus: 0, vi: "Câu mở đầu của người bán; cũng nói Can I help you?"}
+      - {emma: "Yes, I'm looking for a smart, black skirt.", focus: 1, vi: "I'm looking for = I want"}
+      - {tom: "What size do you take?", focus: 2}
+      - {emma: "I'm a twelve.", focus: 2}
+      - {emma: "Oh, this is lovely. Can I try it on?", focus: 3, vi: "try it on: mặc thử — it đứng giữa try và on"}
+      - {tom: "Yes, sure. The changing room is over there.", focus: 4, vi: "changing room: phòng thử đồ"}
+      - {emma: "Oh, no, it's too tight.", focus: 5}
+      - {tom: "Here's a size fourteen.", focus: 5}
+
+  - kind: bullets
+    chapter: "Trong cửa hàng (2)"
+    heading: "C · In a shop (2) · I'll take it / I'll leave it"
+    heading_vi: "Hội thoại tr. 53 — quyết định mua: I'll take it / them (KHÔNG nói I take it / I buy it)"
+    image: {pdf: course-book, page: 54, clip: [22, 209, 280, 316]}
+    items:
+      - {en: "That looks really nice. = I think it's really nice on you", vi: "Trông đẹp lắm.", box: [24, 215, 278, 230]}
+      - {en: "I think I'll take it. Where do I pay?", vi: "Tôi lấy cái này. Trả tiền ở đâu?", box: [24, 229, 278, 254]}
+      - {en: "The cash desk is at the front.", vi: "Quầy thu ngân ở phía trước.", box: [24, 253, 278, 266]}
+      - {en: "How would you like to pay? — By credit card.", vi: "Chị muốn trả bằng gì? — Bằng thẻ tín dụng.", box: [24, 278, 278, 302]}
+      - {en: "No, I'll leave it / them, thanks.", vi: "Thôi, tôi không lấy, cảm ơn.", box: [24, 229, 278, 254]}
+    lines:
+      - {tom: "That looks really nice.", focus: 0, vi: "That looks nice = tôi nghĩ bạn mặc đẹp"}
+      - {emma: "Thanks. Yes, it's fine. I think I'll take it. Where do I pay?", focus: 1}
+      - {tom: "The cash desk is at the front.", focus: 2, vi: "cash desk: quầy thu ngân"}
+      - {tom: "How would you like to pay?", focus: 3}
+      - {emma: "By credit card.", focus: 3}
+      - {tom: "That's fine. Thank you.", focus: 3}
+      - {emma: "Look at the spotlight. When you decide to buy something, say: I'll take it, or I'll take them. Not: I take it, or I buy it. And if you don't want it: no, I'll leave it, thanks.", focus: 4, vi: "I'll take it ≠ I'll leave it"}
+
+  - kind: bullets
+    chapter: "Câu hỏi thêm khi mua đồ"
+    heading: "More useful questions in a clothes shop"
+    heading_vi: "Thêm ngoài sách — câu khách hay hỏi"
+    items:
+      - {en: "How much is it? · How much are they?", vi: "Cái này bao nhiêu tiền? · Mấy cái này bao nhiêu?"}
+      - {en: "Have you got this in a bigger / smaller size?", vi: "Có cỡ lớn hơn / nhỏ hơn không?"}
+      - {en: "Have you got it in black?", vi: "Có màu đen không?"}
+      - {en: "Can I pay by card?", vi: "Trả bằng thẻ được không?"}
+      - {en: "No, thanks. I'm just looking.", vi: "Không, cảm ơn. Tôi chỉ xem thôi."}
+    lines:
+      - emma: "Here are some more useful questions for a clothes shop. How much is it? For plural things: how much are they?"
+        focus: 0
+        vi: "is it (số ít) · are they (số nhiều: jeans, shoes)"
+      - {tom: "Have you got this in a bigger size? Or: in a smaller size?", focus: 1}
+      - {emma: "Have you got it in black? Or in blue?", focus: 2}
+      - {tom: "Can I pay by card?", focus: 3}
+      - {emma: "And when the shop assistant says, do you need any help, you can say: no, thanks. I'm just looking.", focus: 4, vi: "Câu từ chối lịch sự khi chỉ xem."}
+
+  - kind: blanks
+    chapter: "Bài 7: sắp xếp câu"
+    heading: "Exercise 7 · Write the words in correct sentences"
+    heading_vi: "Ví dụ: help / can / I / you / ? → Can I help you? (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "I / where / pay / do / ?  →  ___", answer: "Where do I pay?"}
+      - {n: 2, q: "thanks / no / I'll / it / leave  →  ___", answer: "No thanks, I'll leave it."}
+      - {n: 3, q: "changing / where's / excuse me / the / room / ?  →  ___", answer: "Excuse me, where's the changing room?"}
+      - {n: 4, q: "dress / can / on / this / try / I / ?  →  ___", answer: "Can I try this dress on?"}
+      - {n: 5, q: "pair / I'm / of / looking / trousers / for / a  →  ___", answer: "I'm looking for a pair of trousers."}
+      - {n: 6, q: "help / you / need / do / any / ?  →  ___", answer: "Do you need any help?"}
+    lines:
+      - emma: "Exercise 7. Write the words in correct sentences. Pause the video and try."
+        say: "Exercise seven. Write the words in correct sentences. Pause the video and try."
+        vi: "Bài 7: sắp xếp từ thành câu."
+      - {tom: "One. Where do I pay? Two. No thanks, I'll leave it. Three. Excuse me, where's the changing room?", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Can I try this dress on? Five. I'm looking for a pair of trousers. Six. Do you need any help?", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 8: từ cuối câu"
+    heading: "Exercise 8 · Write the final word in each sentence"
+    heading_vi: "Ví dụ: What size do you take? (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "Can I try these ___?", answer: "on"}
+      - {n: 2, q: "Pay at the cash ___.", answer: "desk"}
+      - {n: 3, q: "I like these. I'll take ___.", answer: "them"}
+      - {n: 4, q: "I'd like to pay by credit ___.", answer: "card"}
+      - {n: 5, q: "Excuse me. Where's the changing ___?", answer: "room"}
+      - {n: 6, q: "Do you need any ___?", answer: "help"}
+      - {n: 7, q: "Oh, that looks ___. You must buy it.", answer: "lovely / nice"}
+      - {n: 8, q: "How would you like to ___?", answer: "pay"}
+    lines:
+      - emma: "Exercise 8. Write the final word in each sentence. Pause the video and try."
+        say: "Exercise eight. Write the final word in each sentence. Pause the video and try."
+        vi: "Bài 8: viết từ cuối câu."
+      - {tom: "One. On. Two. Desk. Three. Them: these is plural. Four. Card.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Room. Six. Help. Seven. Lovely, or nice. Eight. Pay.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: bạn mua đồ thế nào?"
+    heading: "Speaking 1 · Exercise 9: About you"
+    heading_vi: "Câu hỏi bài 9 — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you like shopping for clothes?"
+        a: "Not really. I prefer shopping online, but for clothes, I need to try them on first."
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "I prefer…", "I need to try them on"]
+      - q: "How often do you buy clothes, Emma?"
+        a: "About three times a year. I usually go to the market, because the clothes there are cheap."
+        ask: tom
+        by: emma
+        phrases: ["About … times a year.", "I usually go to…", "because…"]
+      - q: "What was the last thing you bought?"
+        a: "A pair of walking boots, last month. They were expensive, but they're really comfortable."
+        ask: tom
+        by: emma
+        phrases: ["A pair of…", "They were…, but…"]
+      - q: "Do you always know what you're looking for?"
+        a: "Yes, always. I make a list, and I never buy things I don't need."
+        ask: emma
+        by: tom
+        phrases: ["Yes, always.", "I make a list", "I never…"]
+      - q: "Do you always try clothes on?"
+        a: "Yes. In Vietnam, my size is often difficult to find, so I always try shoes on."
+        ask: tom
+        by: emma
+        phrases: ["Yes.", "… is often difficult to find", "so I always…"]
+      - q: "How do you usually pay?"
+        a: "At the market, in cash. In big shops, I usually pay by card."
+        ask: emma
+        by: tom
+        phrases: ["At the market, …", "In big shops, …", "by card"]
+    lines:
+      - {emma: "Exercise 9. Do you like shopping for clothes, Tom?", say: "Exercise nine. Do you like shopping for clothes, Tom?", focus: 0}
+      - {tom: "Not really. I prefer shopping online, but for clothes, I need to try them on first.", reveal: 0, vi: "Không thích lắm: thích mua trực tuyến, nhưng quần áo thì phải thử trước."}
+      - {tom: "How often do you buy clothes, Emma?", focus: 1}
+      - {emma: "About three times a year. I usually go to the market, because the clothes there are cheap.", reveal: 1, vi: "Khoảng ba lần một năm, thường ra chợ vì quần áo rẻ."}
+      - {tom: "What was the last thing you bought?", focus: 2}
+      - {emma: "A pair of walking boots, last month. They were expensive, but they're really comfortable.", reveal: 2, vi: "Đôi giày đi bộ đường dài, tháng trước: đắt nhưng rất êm."}
+      - {emma: "Do you always know what you're looking for?", focus: 3}
+      - {tom: "Yes, always. I make a list, and I never buy things I don't need.", reveal: 3, vi: "Luôn luôn: ghi danh sách, không mua thứ không cần."}
+      - {tom: "Do you always try clothes on?", focus: 4}
+      - {emma: "Yes. In Vietnam, my size is often difficult to find, so I always try shoes on.", reveal: 4, vi: "Có: ở Việt Nam khó tìm cỡ của Emma, nên giày lúc nào cũng thử."}
+      - {emma: "How do you usually pay?", focus: 5}
+      - {tom: "At the market, in cash. In big shops, I usually pay by card.", reveal: 5, vi: "Ở chợ trả tiền mặt; ở cửa hàng lớn thường trả bằng thẻ."}
+
+  - kind: practice
+    chapter: "Nói 2: đóng vai mua đồ"
+    heading: "Role-play · You are the customer"
+    heading_vi: "Emma là người bán — tạm dừng video sau mỗi câu và trả lời như khách"
+    items:
+      - {q: "Do you need any help?", hint: "Yes, I'm looking for a … / No, thanks. I'm just looking."}
+      - {q: "What size do you take?", hint: "I'm a medium. / I take size …"}
+      - {q: "Is it OK? Does it fit?", hint: "It's too tight / long. Have you got a bigger size? / It fits!"}
+      - {q: "That looks really nice!", hint: "Thanks. I'll take it. / No, I'll leave it, thanks."}
+      - {q: "How would you like to pay?", hint: "By credit card. / In cash."}
+    lines:
+      - emma: "Now let's practise in a shop. I'm the shop assistant, and you're the customer. Pause the video after each question, and answer."
+        vi: "Đóng vai: Emma là người bán, bạn là khách. Tạm dừng video sau mỗi câu và trả lời."
+      - {emma: "Hello! Do you need any help?", focus: 0, pause: 0.5}
+      - {emma: "What size do you take?", focus: 1, pause: 0.5}
+      - {emma: "The changing room is over there. Is it OK? Does it fit?", focus: 2, pause: 0.5}
+      - {emma: "Oh, that looks really nice!", focus: 3, pause: 0.5}
+      - {emma: "How would you like to pay?", focus: 4, pause: 1.0}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi mua đồ — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I like it. I take it.  →  ___", answer: "I'll take it."}
+      - {n: 2, q: "Can I try on it?  →  ___", answer: "Can I try it on?"}
+      - {n: 3, q: "This trouser is too long.  →  ___", answer: "These trousers are too long."}
+      - {n: 4, q: "These boots are very tight, so I can't wear them.  →  ___", answer: "These boots are too tight …"}
+      - {n: 5, q: "How much is this jeans?  →  ___", answer: "How much are these jeans?"}
+      - {n: 6, q: "It doesn't fit with me.  →  ___", answer: "It doesn't fit (me)."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I'll take it: we use will when we decide. Two. Can I try it on? It goes in the middle.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. These trousers are too long. Four. Too tight: I can't wear them, so it's a problem.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. How much are these jeans? Jeans is plural. Six. It doesn't fit, or it doesn't fit me. No with.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Ôn tập: too hay very?"
+    heading: "Review · too or very?"
+    heading_vi: "very: rất (vẫn được) · too: quá (có vấn đề) — tạm dừng video và chọn"
+    items:
+      - {n: 1, q: "This coat is ___ big. I can't wear it.", answer: "too"}
+      - {n: 2, q: "These shoes are ___ comfortable. I love them.", answer: "very"}
+      - {n: 3, q: "The T-shirt is ___ small for me. I need a medium.", answer: "too"}
+      - {n: 4, q: "That dress is ___ nice. You should buy it.", answer: "very"}
+      - {n: 5, q: "This jacket is ___ expensive. I haven't got enough money.", answer: "too"}
+      - {n: 6, q: "It's ___ cold today. Wear your long coat.", answer: "very"}
+    lines:
+      - emma: "One more review. Too, or very? Pause the video and choose."
+        vi: "Ôn tập: chọn too hay very."
+      - {tom: "One. Too big: I can't wear it. Two. Very comfortable: that's good. Three. Too small: I need a medium.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Very nice: you should buy it. Five. Too expensive: I can't buy it. Six. Very cold: it's OK, but wear your coat.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe the last time you bought some clothes"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể ở quá khứ đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: what you bought", vi: "bạn đã mua gì"}
+      - {en: "where you bought it", vi: "mua ở đâu"}
+      - {en: "how much it cost", vi: "giá bao nhiêu"}
+      - {en: "and explain why you bought it", vi: "và giải thích vì sao bạn mua"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe the last time you bought some clothes."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe the last time you bought some clothes."
+        vi: "Luyện nói chung kiểu Part 2: lần gần nhất bạn mua quần áo."
+      - {emma: "You should say what you bought,", focus: 0}
+      - {emma: "where you bought it,", focus: 1}
+      - {emma: "how much it cost,", focus: 2}
+      - {emma: "and explain why you bought it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — quá khứ đơn, cỡ, too / very, I'll take it"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a black shirt that I bought last September. I needed it for my new part-time job at a café, because all the staff wear black shirts."
+        note: "what"
+      - text: "I bought it at Ben Thanh Market in Ho Chi Minh City. First, I tried on a large shirt, but it was too loose. The shop assistant gave me a medium, and it fitted perfectly."
+        say: "I bought it at Ben Tahn Market in Ho Chee Min City. First, I tried on a large shirt, but it was too loose. The shop assistant gave me a medium, and it fitted perfectly."
+        note: "where"
+      - text: "It cost one hundred and fifty thousand dong, which is quite cheap. I paid in cash, because it's easier at the market."
+        note: "how much"
+      - text: "I bought it because I wanted to look smart on my first day. I still wear it twice a week, so it was a good choice."
+        note: "why"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "The last thing I bought was a pair of walking boots, last month. I love walking in the mountains, and my old boots were very old and uncomfortable."
+        note: "what"
+      - text: "I bought them in a big sports shop in the city centre. Shoes in my size are hard to find here, so I tried on four or five pairs. The first pair was too small, but a size thirty-nine fitted."
+        note: "where"
+      - text: "They were quite expensive: about two million dong. I paid by debit card."
+        note: "how much"
+      - text: "I bought them because good boots are important for long walks. They're really comfortable, and next month I'm going to wear them in Da Lat."
+        say: "I bought them because good boots are important for long walks. They're really comfortable, and next month I'm going to wear them in Dah Lot."
+        note: "why"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe the last time you bought some clothes.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: the last time you bought some clothes"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What did you buy?", hint: "I'd like to talk about a … that I bought last …"}
+      - {q: "Where did you buy it?", hint: "I bought it at … · First, I tried on … but it was too …"}
+      - {q: "How much did it cost?", hint: "It cost … · It was quite cheap / expensive · I paid in cash / by card"}
+      - {q: "Why did you buy it?", hint: "I bought it because … · I still wear it …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple, and the words from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple, and the words from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút — dùng quá khứ đơn và từ trong unit."
+      - {emma: "What did you buy?", focus: 0, pause: 0.5}
+      - {emma: "Where did you buy it?", focus: 1, pause: 0.5}
+      - {emma: "How much did it cost?", focus: 2, pause: 0.5}
+      - {emma: "Why did you buy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · shopping for clothes"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do some people spend a lot of money on clothes?"
+        a: "Because they want to look good, and some people follow fashion. But expensive clothes aren't always better."
+        ask: tom
+        by: emma
+        phrases: ["Because they want to…", "some people…", "But … aren't always…"]
+      - q: "Is it better to buy clothes online or in a shop?"
+        a: "Online is cheaper and faster. But in a shop, you can try clothes on, so you know they fit."
+        ask: emma
+        by: tom
+        phrases: ["Online is…", "But in a shop, …", "so you know…"]
+      - q: "Should students wear a uniform at school?"
+        a: "I think so. Uniforms are cheap and smart, and nobody worries about what to wear in the morning."
+        ask: tom
+        by: emma
+        phrases: ["I think so.", "Uniforms are…", "nobody worries about…"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Why do some people spend a lot of money on clothes?", focus: 0}
+      - {emma: "Because they want to look good, and some people follow fashion. But expensive clothes aren't always better.", reveal: 0, vi: "Vì muốn trông đẹp, có người chạy theo thời trang; nhưng đồ đắt không phải lúc nào cũng tốt hơn."}
+      - {emma: "Is it better to buy clothes online or in a shop?", focus: 1}
+      - {tom: "Online is cheaper and faster. But in a shop, you can try clothes on, so you know they fit.", reveal: 1, vi: "Mua trực tuyến rẻ và nhanh; ở cửa hàng thì thử được, biết có vừa không."}
+      - {tom: "Should students wear a uniform at school?", focus: 2}
+      - {emma: "I think so. Uniforms are cheap and smart, and nobody worries about what to wear in the morning.", reveal: 2, vi: "Nên: đồng phục rẻ, lịch sự, sáng ra không ai phải lo mặc gì."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 51, nhìn tranh, nói lại"
+    items:
+      - {en: "long ≠ short · cheap ≠ expensive · smart ≠ casual · small = little ≠ large = big", vi: "tính từ tả quần áo"}
+      - {en: "comfortable ≠ uncomfortable · tight ≠ loose · nice = lovely ≠ horrible = awful", vi: "thêm cặp trái nghĩa"}
+      - {en: "What size do you take? · It doesn't fit. · It's too long. (very = OK, too = not OK)", vi: "hỏi cỡ · too ≠ very"}
+      - {en: "Can I try it on? · I'll take it. / I'll leave it. · Where do I pay?", vi: "câu dùng trong cửa hàng"}
+      - {en: "Next: Unit 20 · Money", vi: "Tiếp theo: Unit 20 · Tiền bạc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Long and short, cheap and expensive, smart and casual, small or little, large or big.", focus: 0}
+      - {tom: "Comfortable and uncomfortable, tight and loose, nice or lovely, horrible or awful.", focus: 1}
+      - {emma: "What size do you take? It doesn't fit. It's too long. Remember: very is OK, but too is a problem.", focus: 2}
+      - {tom: "Can I try it on? I'll take it, or I'll leave it. Where do I pay?", focus: 3}
+      - {emma: "Next time, Unit 20: money. See you then!", say: "Next time, Unit twenty: money. See you then!", focus: 4}

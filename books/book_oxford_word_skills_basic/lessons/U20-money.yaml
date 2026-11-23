@@ -1,0 +1,372 @@
+# Video Oxford Word Skills Basic · Unit 20 — I can talk about money (sách in tr. 54–55, Answer key tr. 209). Học sau Unit 1.
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây.
+# Bài trong sách: đủ 1–6. Bài 1–5 theo Answer key tr. 209. Bài 6 (ABOUT YOU AND YOUR COUNTRY): Tom trả lời về Việt Nam, Emma về
+# nước Anh (cảnh Nói 1; Answer key là câu của "a Greek person").
+# Thêm ngoài sách: đọc giá tiền đồng Việt Nam (fifty thousand dong, one point five million dong); nghe và viết giá tiền;
+# câu hay dùng ở chợ (discount, Keep the change); Nghe và viết; Nói 2 (Part 1 "Money and shopping").
+# Hình trong sách: 7 tranh tiền mặt, thẻ, máy nhập PIN, séc, hóa đơn (tr. 54, khung theo tranh), đoạn văn đi mua CD (khung theo
+# dòng, Glossary bên phải), khung Spotlight Money, 7 quảng cáo (tr. 55, khung theo quảng cáo).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom tiêu khoảng 700.000 đồng một tuần cho ăn uống; hay mua sách,
+# ốp điện thoại trực tuyến; cước điện thoại khoảng 100.000 đồng một tháng; về Đà Lạt bằng xe khách, vé khoảng 300.000 đồng;
+# nhận lương làm thêm ở quán cà phê bằng chuyển khoản; đang để dành tiền đi trao đổi ở Úc. Emma: ở Anh vé tàu rất đắt, nước
+# máy ở nhà hàng miễn phí; ở Việt Nam thích trà đá miễn phí ở quán ăn.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U20-money.yaml
+id: U20-money
+activity: U20-words
+title: "Unit 20 · Money"
+subtitle: "I can talk about money"
+title_vi: "Tiền trong cửa hàng (cash, change, receipt, PIN) và trong quảng cáo (price, free, save, earn, win) — đọc giá tiền"
+tag: "EVERYDAY LIFE · UNIT 20"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 20: money. Please do Unit 1 first, because we need numbers. Today: paying in a shop, money words in adverts, and how to say prices."
+        say: "Welcome to Unit twenty: money. Please do Unit one first, because we need numbers. Today: paying in a shop, money words in adverts, and how to say prices."
+        vi: "Unit 20: tiền bạc (học Unit 1 trước). Trả tiền ở cửa hàng, từ về tiền trong quảng cáo, cách đọc giá."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Tiền trong cửa hàng"
+    heading: "A · Money in shops"
+    heading_vi: "Tranh trong sách tr. 54"
+    image: {pdf: course-book, page: 55, clip: [24, 92, 290, 242]}
+    items:
+      - {box: [28, 98, 122, 146]}
+      - {box: [28, 148, 118, 197]}
+      - {box: [28, 204, 92, 241]}
+      - {box: [124, 95, 192, 140]}
+      - {box: [120, 142, 212, 236]}
+      - {box: [194, 95, 288, 146]}
+      - {box: [200, 150, 262, 236]}
+    lines:
+      - emma: "Look at the pictures on page fifty-four. Number one is cash: money you can hold in your hand."
+        focus: 0
+        vi: "cash: tiền mặt"
+      - {tom: "Two, notes: paper money. A ten euro note.", focus: 1, vi: "notes: tiền giấy"}
+      - {emma: "Three, coins: metal money.", focus: 2, vi: "coins: tiền xu"}
+      - {tom: "Four, a credit card.", focus: 3, vi: "credit card: thẻ tín dụng"}
+      - {emma: "Five, enter your PIN: type your secret number in the machine.", focus: 4, vi: "enter / put in your PIN: nhập mã PIN"}
+      - {tom: "Six, a cheque. People don't use them much now.", say: "Six, a cheque. People don't yooz them much now.", focus: 5, vi: "cheque: séc"}
+      - {emma: "And seven, a receipt: the paper that shows what you paid. The p is silent: receipt.", say: "And seven, a receipt: the paper that shows what you paid. The pee is silent: receipt.", focus: 6, vi: "receipt /rɪˈsiːt/: hóa đơn, biên lai — chữ p câm"}
+
+  - kind: bullets
+    chapter: "Đoạn văn: mua CD"
+    heading: "A · Money in shops · the text"
+    heading_vi: "Đoạn văn tr. 54 và Glossary — PT = quá khứ: cost / cost"
+    image: {pdf: course-book, page: 55, clip: [22, 246, 290, 352]}
+    items:
+      - {en: "They cost €9 each. = €9 for one", vi: "giá 9 euro mỗi cái — How much does it cost? = How much is it?", box: [24, 251, 288, 276]}
+      - {en: "€27 altogether = for everything", vi: "tổng cộng", box: [24, 263, 288, 276]}
+      - {en: "pay in cash (notes and coins)", vi: "trả tiền mặt", box: [24, 276, 288, 288]}
+      - {en: "change = money you get back", vi: "tiền thừa (trả lại)", box: [24, 288, 288, 300]}
+      - {en: "pay by credit card / debit card / cheque", vi: "debit card: thẻ ghi nợ — tiền trừ thẳng vào bank account", box: [24, 299, 288, 336]}
+      - {en: "a receipt", vi: "hóa đơn", box: [24, 335, 288, 348]}
+    lines:
+      - {emma: "Now read the text. You buy three CDs. They cost nine euros each. Each means for one.", focus: 0, vi: "each: mỗi cái"}
+      - {tom: "Which is twenty-seven euros altogether. Altogether means for everything.", focus: 1, vi: "altogether: tổng cộng"}
+      - {emma: "You can pay in cash: notes and coins. In cash, with in.", focus: 2, vi: "pay in cash"}
+      - {tom: "You give thirty euros, and you get three euros change: the money you get back.", focus: 3, vi: "change: tiền thừa"}
+      - {emma: "Or you pay by credit card, or by debit card. With a debit card, the money comes out of your bank account. By card, with by.", focus: 4, vi: "pay by card"}
+      - {tom: "And at the end, you get a receipt.", focus: 5}
+
+  - kind: figure
+    chapter: "Đọc giá tiền"
+    heading: "Spotlight · Money: saying prices"
+    heading_vi: "Khung Spotlight tr. 54 — KHÔNG nói five euros and thirty, a ten pounds note"
+    image: {pdf: course-book, page: 55, clip: [290, 252, 484, 352]}
+    items:
+      - {box: [292, 274, 482, 302]}
+      - {box: [292, 301, 482, 327]}
+      - {box: [292, 326, 482, 351]}
+    lines:
+      - {emma: "Look at the spotlight. Five euros thirty, or just five thirty. Not five euros and thirty.", focus: 0, vi: "€5.30 = five euros thirty / five thirty"}
+      - {tom: "Ten pounds ninety-nine, or ten ninety-nine.", focus: 1, vi: "£10.99"}
+      - {emma: "And a ten pound note, a ten euro note. No s, because ten pound is like an adjective here.", focus: 2, vi: "a ten pound note (không có s)"}
+      - {tom: "In Vietnam, we say: fifty thousand dong, or one point five million dong. And a fifty thousand dong note.", focus: 2, vi: "50.000 đồng · 1,5 triệu đồng · tờ 50.000 đồng"}
+
+  - kind: blanks
+    chapter: "Bài 1: sửa lỗi"
+    heading: "Exercise 1 · Correct the mistakes"
+    heading_vi: "Ví dụ: Can I pay for cheque? → Can I pay by cheque? (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "The dictionary cost me eight euros and fifty.  →  ___", answer: "eight euros fifty"}
+      - {n: 2, q: "Could you put your PIN, please?  →  ___", answer: "put in / enter your PIN"}
+      - {n: 3, q: "She paid for the dress of cash.  →  ___", answer: "in cash"}
+      - {n: 4, q: "I've only got a 50 pounds note.  →  ___", answer: "a 50 pound note"}
+      - {n: 5, q: "They're €6 for each.  →  ___", answer: "They're €6 each."}
+      - {n: 6, q: "Have you got a bank count?  →  ___", answer: "a bank account"}
+      - {n: 7, q: "Three books. That's €42 together.  →  ___", answer: "€42 altogether"}
+      - {n: 8, q: "… I gave her £5 and she gave me £1.80 money.  →  ___", answer: "£1.80 change"}
+    lines:
+      - emma: "Exercise 1. Correct the mistakes. Pause the video and try."
+        say: "Exercise one. Correct the mistakes. Pause the video and try."
+        vi: "Bài 1: sửa lỗi."
+      - {tom: "One. Eight euros fifty: no and. Two. Put in your PIN, or enter your PIN. Three. In cash. Four. A fifty pound note.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Six euros each: no for. Six. A bank account. Seven. Altogether. Eight. She gave me one pound eighty change.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: hội thoại"
+    heading: "Exercise 2 · Complete the dialogues"
+    heading_vi: "A mua đồng hồ, trả bằng debit card · C mua đào ở chợ (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "Could you ___ …", answer: "put in / enter"}
+      - {n: 2, q: "… your ___, please?", answer: "PIN"}
+      - {n: 3, q: "Here's your watch and your ___.", answer: "receipt"}
+      - {n: 4, q: "How much do these peaches ___?", answer: "cost"}
+      - {n: 5, q: "They're 50 cents ___.", answer: "each"}
+      - {n: 6, q: "That's €4.30 ___.", answer: "altogether"}
+      - {n: 7, q: "I'm sorry, I've only got a €50 ___.", answer: "note"}
+      - {n: 8, q: "That's OK. I've got lots of ___.", answer: "change"}
+    lines:
+      - emma: "Exercise 2. Complete the dialogues. In the first one, A pays for a watch by debit card. In the second, C buys some peaches. Pause the video and try."
+        say: "Exercise two. Complete the dialogues. In the first one, eigh pays for a watch by debit card. In the second, see buys some peaches. Pause the video and try."
+        vi: "Bài 2: hoàn thành hai hội thoại."
+      - {tom: "Could you put in, or enter, your PIN, please? Here's your watch and your receipt.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "How much do these peaches cost? They're fifty cents each. That's four euros thirty altogether. I've only got a fifty euro note. That's OK. I've got lots of change.", reveal: [4, 5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Nghe và viết giá tiền"
+    heading: "Listen and write the prices"
+    heading_vi: "Thêm ngoài sách — nghe giá, tạm dừng video và viết bằng số"
+    items:
+      - {n: 1, q: "The T-shirt costs ___.", answer: "€5.30"}
+      - {n: 2, q: "The book is ___.", answer: "£10.99"}
+      - {n: 3, q: "Two coffees: ___.", answer: "75,000 dong"}
+      - {n: 4, q: "The new phone costs ___.", answer: "1.5 million dong"}
+      - {n: 5, q: "Fares from ___.", answer: "£16"}
+      - {n: 6, q: "That's ___ altogether.", answer: "€42.50"}
+    lines:
+      - emma: "Now, listen and write the prices in numbers. Pause the video after each one."
+        vi: "Nghe và viết giá tiền bằng số."
+      - {emma: "Number one. The T-shirt costs five euros thirty.", focus: 0}
+      - {emma: "Number two. The book is ten ninety-nine. That's ten pounds ninety-nine.", focus: 1}
+      - {emma: "Number three. Two coffees: seventy-five thousand dong.", focus: 2}
+      - {emma: "Number four. The new phone costs one point five million dong.", focus: 3}
+      - {emma: "Number five. Fares from sixteen pounds.", focus: 4}
+      - {emma: "And number six. That's forty-two euros fifty altogether.", focus: 5}
+      - {tom: "Here are the answers. Five euros thirty. Ten pounds ninety-nine. Seventy-five thousand dong.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "One point five million dong. Sixteen pounds. And forty-two euros fifty.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: figure
+    chapter: "Tiền trong quảng cáo"
+    heading: "B · Money in adverts"
+    heading_vi: "Quảng cáo trong sách tr. 55 — PT: sell / sold, buy / bought, spend / spent, win / won"
+    image: {pdf: course-book, page: 56, clip: [24, 48, 282, 290]}
+    items:
+      - {box: [34, 56, 172, 82]}
+      - {box: [34, 85, 168, 154]}
+      - {box: [170, 56, 276, 157]}
+      - {box: [34, 164, 122, 222]}
+      - {box: [122, 164, 280, 236]}
+      - {box: [40, 238, 150, 288]}
+      - {box: [150, 248, 262, 288]}
+    lines:
+      - emma: "Now, money words in adverts on page fifty-five. Sell your car. Sell means give something to someone who pays you. The past is sold. The opposite is buy, bought."
+        focus: 0
+        vi: "sell (sold) ≠ buy (bought): bán ≠ mua"
+      - {tom: "Photo printer, half price. The price is the money you pay. Half price means you pay fifty percent.", focus: 1, vi: "price: giá · half price: nửa giá"}
+      - {emma: "Spend fifty euros on Italian wine, and get a free pizza. Spend money on something, past spent. Free means you don't pay.", focus: 2, vi: "spend … on (spent): tiêu tiền vào · free: miễn phí"}
+      - {tom: "Pay your gas bill online, and save five percent. A bill shows how much you need to pay. Online means on the internet. Save five percent means you pay ninety-five percent.", focus: 3, vi: "bill: hóa đơn cần trả · online: trên mạng · save: tiết kiệm"}
+      - {emma: "Fly to Dublin, fares from sixteen pounds. A fare is the money you pay to travel by plane, train or bus.", focus: 4, vi: "fare: tiền vé (đi lại)"}
+      - {tom: "Earn thirty pounds an hour. You earn money for the work you do.", focus: 5, vi: "earn: kiếm (tiền) bằng sức lao động"}
+      - {emma: "Play the lottery and win a million euros! You win money in a game. The past is won.", focus: 6, vi: "lottery: xổ số · win (won): trúng, thắng"}
+
+  - kind: blanks
+    chapter: "Bài 3: chọn từ đúng"
+    heading: "Exercise 3 · Circle the correct answer"
+    heading_vi: "Ví dụ: I bought this table online / free. → online (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "What's the price / bill of these shoes?  →  ___", answer: "price"}
+      - {n: 2, q: "I don't spend / pay a lot on food.  →  ___", answer: "spend"}
+      - {n: 3, q: "I bought ten bottles and earned / saved €3.  →  ___", answer: "saved"}
+      - {n: 4, q: "I won / earned £100 in the lottery.  →  ___", answer: "won"}
+      - {n: 5, q: "How much was the train bill / fare?  →  ___", answer: "fare"}
+      - {n: 6, q: "Doctors win / earn a lot of money.  →  ___", answer: "earn"}
+      - {n: 7, q: "I bought / sold my old car and got a new one.  →  ___", answer: "sold"}
+      - {n: 8, q: "She paid the restaurant bill / receipt.  →  ___", answer: "bill"}
+    lines:
+      - emma: "Exercise 3. Circle the correct answer. Pause the video and try."
+        say: "Exercise three. Circle the correct answer. Pause the video and try."
+        vi: "Bài 3: chọn từ đúng."
+      - {tom: "One. Price. Two. Spend: spend a lot on food. Three. Saved. Four. Won: in the lottery.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Fare. Six. Earn: for your work. Seven. Sold. Eight. Bill: you pay the bill, and then you get a receipt.", reveal: [5, 6, 7, 8], focus: 7, vi: "bill: hóa đơn phải trả · receipt: biên lai sau khi trả"}
+
+  - kind: blanks
+    chapter: "Bài 4: quá khứ"
+    heading: "Exercise 4 · Write the past simple forms"
+    heading_vi: "Test yourself: che Glossary — ví dụ: pay → paid (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "buy  →  ___", answer: "bought"}
+      - {n: 2, q: "spend  →  ___", answer: "spent"}
+      - {n: 3, q: "sell  →  ___", answer: "sold"}
+      - {n: 4, q: "earn  →  ___", answer: "earned"}
+      - {n: 5, q: "win  →  ___", answer: "won"}
+      - {n: 6, q: "save  →  ___", answer: "saved"}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the glossary, and write the past simple forms. Pause the video and try."
+        say: "Exercise four is a test. Cover the glossary, and write the past simple forms. Pause the video and try."
+        vi: "Bài 4: che Glossary, viết dạng quá khứ."
+      - {tom: "Bought, spent, sold. Earned, won, saved. Won sounds like one.", reveal: [1, 2, 3, 4, 5, 6], focus: 5, vi: "won đọc giống one /wʌn/"}
+
+  - kind: blanks
+    chapter: "Bài 5: câu hỏi"
+    heading: "Exercise 5 · Complete the questions with a word from the box"
+    heading_vi: "fares · online · price · earn · spend · bill · free — ví dụ: How much do you spend on food every week? (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "Do you ever shop ___?", answer: "online"}
+      - {n: 2, q: "Is your phone ___ expensive?", answer: "bill"}
+      - {n: 3, q: "Is water ___ in restaurants?", answer: "free"}
+      - {n: 4, q: "What's the ___ of a litre of milk?", answer: "price"}
+      - {n: 5, q: "Are train ___ cheap?", answer: "fares"}
+      - {n: 6, q: "Do women ___ more than men?", answer: "earn"}
+    lines:
+      - emma: "Exercise 5. Complete the questions with a word from the box. Pause the video and try."
+        say: "Exercise five. Complete the questions with a word from the box. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu hỏi."
+      - {tom: "One. Online. Two. Bill. Three. Free. Four. Price. Five. Fares. Six. Earn.", reveal: [1, 2, 3, 4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Bài 6: về bạn và đất nước bạn"
+    heading: "Exercise 6 · About you and your country"
+    heading_vi: "Tom nói về Việt Nam, Emma nói về nước Anh — tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "How much do you spend on food every week?"
+        a: "About seven hundred thousand dong. I cook with my flatmates, so it's quite cheap."
+        ask: emma
+        by: tom
+        phrases: ["About … dong.", "so it's quite cheap"]
+      - q: "Do you ever shop online?"
+        a: "All the time. I buy books and phone cases online. It's cheaper, and sometimes delivery is free."
+        ask: emma
+        by: tom
+        phrases: ["All the time.", "It's cheaper", "delivery is free"]
+      - q: "Is your phone bill expensive?"
+        a: "No, it's about a hundred thousand dong a month. That's about four dollars."
+        ask: emma
+        by: tom
+        phrases: ["No, it's about…", "a month"]
+      - q: "Is water free in restaurants?"
+        a: "In England, tap water is always free. In Vietnam, I love the free iced tea in small restaurants!"
+        ask: tom
+        by: emma
+        phrases: ["… is always free", "I love the free…"]
+      - q: "Are train fares cheap?"
+        a: "Not in England! They're very expensive. Here, I take the bus, and the fares are cheap."
+        ask: tom
+        by: emma
+        phrases: ["Not in…!", "They're very expensive.", "the fares are cheap"]
+      - q: "And how do you go home to Da Lat, Tom?"
+        a: "By bus. The fare is about three hundred thousand dong, and it takes about seven hours."
+        say: "By bus. The fare is about three hundred thousand dong, and it takes about seven hours."
+        ask: emma
+        by: tom
+        phrases: ["By bus.", "The fare is about…", "it takes about…"]
+      - q: "Do women earn more than men?"
+        a: "Usually less, in most countries. I don't think that's fair."
+        ask: tom
+        by: emma
+        phrases: ["Usually less", "I don't think that's fair"]
+    lines:
+      - {emma: "Exercise 6. Answer the questions from Exercise 5 about you and your country. How much do you spend on food every week, Tom?", say: "Exercise six. Answer the questions from Exercise five about you and your country. How much do you spend on food every week, Tom?", focus: 0}
+      - {tom: "About seven hundred thousand dong. I cook with my flatmates, so it's quite cheap.", reveal: 0, vi: "Khoảng 700.000 đồng; nấu ăn với bạn cùng phòng nên khá rẻ."}
+      - {emma: "Do you ever shop online?", focus: 1}
+      - {tom: "All the time. I buy books and phone cases online. It's cheaper, and sometimes delivery is free.", reveal: 1, vi: "Suốt: mua sách, ốp điện thoại trên mạng — rẻ hơn, có khi miễn phí giao hàng."}
+      - {emma: "Is your phone bill expensive?", focus: 2}
+      - {tom: "No, it's about a hundred thousand dong a month. That's about four dollars.", reveal: 2, vi: "Không: khoảng 100.000 đồng một tháng, chừng 4 đô."}
+      - {tom: "Is water free in restaurants?", focus: 3}
+      - {emma: "In England, tap water is always free. In Vietnam, I love the free iced tea in small restaurants!", reveal: 3, vi: "Ở Anh nước máy luôn miễn phí; ở Việt Nam Emma thích trà đá miễn phí ở quán nhỏ!"}
+      - {tom: "Are train fares cheap?", focus: 4}
+      - {emma: "Not in England! They're very expensive. Here, I take the bus, and the fares are cheap.", reveal: 4, vi: "Ở Anh thì không, rất đắt! Ở đây Emma đi xe buýt, vé rẻ."}
+      - {emma: "And how do you go home to Da Lat, Tom?", say: "And how do you go home to Dah Lot, Tom?", focus: 5}
+      - {tom: "By bus. The fare is about three hundred thousand dong, and it takes about seven hours.", reveal: 5, vi: "Đi xe khách: vé khoảng 300.000 đồng, mất khoảng 7 tiếng."}
+      - {tom: "Do women earn more than men?", focus: 6}
+      - {emma: "Usually less, in most countries. I don't think that's fair.", reveal: 6, vi: "Thường ít hơn, ở hầu hết các nước — Emma thấy không công bằng."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · money"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "Can I have a ___, please?", answer: "receipt"}
+      - {n: 2, q: "I'd like to pay in ___.", answer: "cash"}
+      - {n: 3, q: "That's thirty euros ___.", answer: "altogether"}
+      - {n: 4, q: "Here's your ___. Thank you.", answer: "change"}
+      - {n: 5, q: "How much did you ___ on clothes?", answer: "spend"}
+      - {n: 6, q: "She ___ a lot of money in her new job.", answer: "earns"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Can I have a receipt, please?", focus: 0}
+      - {emma: "Number two. I'd like to pay in cash.", focus: 1}
+      - {emma: "Number three. That's thirty euros altogether.", focus: 2}
+      - {emma: "Number four. Here's your change. Thank you.", focus: 3}
+      - {emma: "Number five. How much did you spend on clothes?", focus: 4}
+      - {emma: "Number six. She earns a lot of money in her new job.", focus: 5}
+      - {tom: "Receipt: R, E, C, E, I, P, T. Remember the silent p. Cash. Altogether: one word.", say: "Receipt: ar, ee, see, ee, eye, pee, tee. Remember the silent pee. Cash. Altogether: one word.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Change. Spend. And earns: E, A, R, N, S.", say: "Change. Spend. And earns: ee, eigh, ar, en, ess.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Ở chợ: câu hay dùng"
+    heading: "At the market · useful phrases"
+    heading_vi: "Thêm ngoài sách — mua bán, mặc cả"
+    items:
+      - {en: "How much is this? · How much are these?", vi: "Cái này bao nhiêu? · Mấy cái này bao nhiêu?"}
+      - {en: "That's too expensive!", vi: "Đắt quá!"}
+      - {en: "Can you give me a discount?", vi: "Bớt cho tôi được không?"}
+      - {en: "OK, I'll take two.", vi: "Được, tôi lấy hai cái."}
+      - {en: "Keep the change.", vi: "Khỏi trả lại tiền thừa."}
+    lines:
+      - emma: "Here are some useful phrases for a market. How much is this? Or for plural things: how much are these?"
+        focus: 0
+      - {tom: "That's too expensive! Remember: too means it's a problem.", focus: 1}
+      - {emma: "Can you give me a discount? A discount is a lower price.", focus: 2, vi: "discount: giảm giá"}
+      - {tom: "OK, I'll take two. We use I'll when we decide to buy.", focus: 3}
+      - {emma: "And if you don't want your change, say: keep the change. People often say it to taxi drivers.", focus: 4, vi: "Keep the change: không cần trả lại tiền thừa"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Money and shopping"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu — dùng spend, save, in cash, by card"
+    items:
+      - {q: "What do you spend most of your money on?", hint: "I spend most of my money on food / books / …"}
+      - {q: "Do you prefer to pay in cash or by card?", hint: "I usually pay by card, because … / in cash at the market"}
+      - {q: "Is it easy for you to save money?", hint: "Not really. … / Yes, I save … every month for …"}
+      - {q: "Do you ever buy things online?", hint: "Yes, I often buy … online because it's cheaper / free delivery"}
+      - {q: "Do young people in your country spend too much?", hint: "Some do. They spend a lot on … / I don't think so …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about money and shopping. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about money and shopping. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về tiền và mua sắm."
+      - {emma: "What do you spend most of your money on?", focus: 0, pause: 0.5}
+      - {emma: "Do you prefer to pay in cash or by card?", focus: 1, pause: 0.5}
+      - {emma: "Is it easy for you to save money?", focus: 2, pause: 0.5}
+      - {emma: "Do you ever buy things online?", focus: 3, pause: 0.5}
+      - {emma: "Do young people in your country spend too much?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che Glossary ở tr. 54–55, nói lại nghĩa"
+    items:
+      - {en: "cost · €9 each · €27 altogether · change · a receipt", vi: "giá · mỗi cái · tổng cộng · tiền thừa · hóa đơn"}
+      - {en: "pay in cash · pay by credit card / debit card / cheque · enter your PIN", vi: "in cash, by card"}
+      - {en: "five euros thirty · ten ninety-nine · a ten pound note", vi: "đọc giá tiền"}
+      - {en: "sell (sold) ≠ buy (bought) · spend (spent) · earn ≠ win (won) · save", vi: "earn: bằng sức lao động · win: trúng"}
+      - {en: "price · half price · free · bill · online · fare · lottery", vi: "từ trong quảng cáo"}
+      - {en: "Next: Unit 21 · The weather", vi: "Tiếp theo: Unit 21 · Thời tiết"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Cost, each, altogether, change, and a receipt.", focus: 0}
+      - {tom: "Pay in cash, or pay by card. Enter your PIN.", focus: 1}
+      - {emma: "Five euros thirty, ten ninety-nine, and a ten pound note.", focus: 2}
+      - {tom: "Sell and buy, spend, earn and win, and save.", focus: 3}
+      - {emma: "Price, half price, free, bill, online, fare, and lottery.", focus: 4}
+      - {tom: "Next time, Unit 21: the weather. See you then!", say: "Next time, Unit twenty-one: the weather. See you then!", focus: 5}

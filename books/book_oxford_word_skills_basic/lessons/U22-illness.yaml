@@ -1,0 +1,478 @@
+# Video Oxford Word Skills Basic · Unit 22 — I can talk about illness (sách in tr. 58–59, Answer key tr. 210). Học sau Unit 12.
+# UNIT KHÓ (đợt 37): 11 bệnh, triệu chứng dễ nhầm mạo từ (a headache / toothache / flu), be ill ≠ be sick, hurt / pain, lời
+# khuyên với should — chủ đề hay gặp ở IELTS General Training (xin nghỉ ốm) — video khoảng 12 phút: phần sách, rồi ÔN TẬP
+# (lỗi hay gặp, email xin nghỉ ốm) và LUYỆN NÓI CHUNG (Part 2 "a time when you were ill", hai bài mẫu; ba câu thảo luận).
+# Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây.
+# Thêm ngoài sách: Nghe và viết; câu đố "What should I do?" (dentist, take a break); email xin nghỉ ốm (thư GT Task 1).
+# Bài trong sách: đủ 1–5. Bài 1, 2, 4, 5 theo Answer key tr. 210. Bài 1 câu 10 in trùng câu 8 ("Is / Has she got a
+# temperature?" — file 09 mục 3.3), video nói rõ. Bài 3 (Test yourself): Emma nhắc che chữ, nhìn tranh, nói lại.
+# Hình trong sách: hai dải tranh triệu chứng kèm bong bóng What's the matter? (tr. 58, khung theo tranh), tranh người ốm với
+# bốn lời khuyên (tr. 59, khung theo bong bóng), Glossary kèm tranh lie down (khung theo dòng), khung Spotlight should.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom bị cúm tháng 12 năm ngoái, tuần trước kỳ thi giữa kỳ, sốt 39
+# độ, nằm giường ba ngày; hai bạn cùng phòng nấu cháo; chị Hoa (y tá ở Hà Nội) gọi dặn uống nhiều nước, nghỉ ngơi; không đi làm
+# ở quán được nên nhắn quản lý. Đau lưng khi ngồi laptop lâu, đau bụng trước kỳ thi (U12, U16). Emma: ở Anh khám bác sĩ gia
+# đình (GP); ở Việt Nam ra hiệu thuốc trước, hiệu thuốc có ở khắp nơi; mùa mưa đầu tiên ở Việt Nam bị cảm và ho hai tuần, dược
+# sĩ hiệu thuốc gần nhà giúp, nói tiếng Anh một chút; uống trà gừng mật ong.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U22-illness.yaml
+id: U22-illness
+activity: U22-words
+title: "Unit 22 · Illness"
+subtitle: "I can talk about illness"
+title_vi: "Ốm đau: a headache, toothache, a cold, flu, a sore throat…; be ill / feel sick; lời khuyên với should — kèm ôn tập và luyện nói"
+tag: "EVERYDAY LIFE · UNIT 22"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 22: illness. Please do Unit 12, parts of the body, first. Today we'll say what's wrong, and give advice with should. There's a review and speaking practice at the end, and an email to say you're ill."
+        say: "Welcome to Unit twenty-two: illness. Please do Unit twelve, parts of the body, first. Today we'll say what's wrong, and give advice with should. There's a review and speaking practice at the end, and an email to say you're ill."
+        vi: "Unit 22: ốm đau (học Unit 12 trước). Nói bệnh, khuyên với should; cuối video có ôn tập, luyện nói và email xin nghỉ ốm."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Bệnh thường gặp (1)"
+    heading: "A · Common problems (1)"
+    heading_vi: "Tranh trong sách tr. 58 — What's the matter? = có chuyện gì vậy?"
+    image: {pdf: course-book, page: 59, clip: [20, 88, 488, 232]}
+    items:
+      - {box: [40, 90, 146, 118]}
+      - {box: [174, 100, 272, 126]}
+      - {box: [302, 94, 376, 118]}
+      - {box: [20, 130, 99, 231]}
+      - {box: [100, 130, 179, 231]}
+      - {box: [179, 130, 257, 231]}
+      - {box: [257, 130, 336, 231]}
+      - {box: [336, 130, 413, 231]}
+      - {box: [413, 130, 487, 231]}
+    lines:
+      - emma: "Look at the pictures on page fifty-eight. When someone looks ill, we ask: what's the matter?"
+        focus: 0
+        vi: "What's the matter? = có chuyện gì vậy?"
+      - {tom: "I don't feel well.", focus: 1, vi: "Tôi thấy không khỏe."}
+      - {emma: "Then we say: I've got, and the problem.", focus: 2, vi: "I've got + bệnh"}
+      - {tom: "I've got a headache. With a.", focus: 3, vi: "a headache: đau đầu"}
+      - {emma: "Toothache. Usually no a: I've got toothache.", focus: 4, vi: "toothache: đau răng"}
+      - {tom: "Stomach-ache. Also no a. Stomach, with c h, sounds like k.", say: "Stomach-ache. Also no eigh. Stomach, with see aitch, sounds like kay.", focus: 5, vi: "stomach-ache /ˈstʌmək eɪk/: đau bụng"}
+      - {emma: "A cold.", focus: 6, vi: "a cold: cảm lạnh"}
+      - {tom: "A cough.", focus: 7, vi: "a cough /kɒf/: ho"}
+      - {emma: "And a sore throat. Sore means painful.", focus: 8, vi: "a sore throat: đau họng"}
+
+  - kind: figure
+    chapter: "Bệnh thường gặp (2)"
+    heading: "A · Common problems (2)"
+    heading_vi: "Tranh trong sách tr. 58 — a pain in my leg = my leg hurts"
+    image: {pdf: course-book, page: 59, clip: [20, 232, 488, 356]}
+    items:
+      - {box: [24, 234, 104, 352]}
+      - {box: [106, 234, 199, 352]}
+      - {box: [199, 234, 290, 354]}
+      - {box: [290, 234, 375, 352]}
+      - {box: [375, 234, 464, 352]}
+    lines:
+      - {emma: "Flu. No a: I've got flu. You have a temperature, and your body hurts.", focus: 0, vi: "flu: cúm (không có a)"}
+      - {tom: "A temperature: your body is very hot, for example thirty-nine degrees.", focus: 1, vi: "a temperature: sốt"}
+      - {emma: "A pain in my leg. Or: my leg hurts.", focus: 2, vi: "a pain in …: đau ở … · my leg hurts: chân tôi đau"}
+      - {tom: "Backache. No a.", focus: 3, vi: "backache: đau lưng"}
+      - {emma: "And I feel sick. Look at the spotlight on page fifty-eight. Ill means not well. Rafa's not here today; he's ill. But be sick means bring up food from your stomach. If you feel sick, you think you are going to be sick.", focus: 4, vi: "ill: ốm · be sick: nôn · feel sick: buồn nôn"}
+
+  - kind: blanks
+    chapter: "Bài 1: chọn từ đúng"
+    heading: "Exercise 1 · Circle the correct answer (1–6)"
+    heading_vi: "Ví dụ: I'm / I've got a temperature. → I've got (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "My back pain / hurts.  →  ___", answer: "hurts"}
+      - {n: 2, q: "I feel / 've got a cold.  →  ___", answer: "'ve got"}
+      - {n: 3, q: "He doesn't feel / be well.  →  ___", answer: "feel"}
+      - {n: 4, q: "I feel / 've got toothache.  →  ___", answer: "'ve got"}
+      - {n: 5, q: "Do you feel / be sick?  →  ___", answer: "feel"}
+      - {n: 6, q: "My knee feels / hurts.  →  ___", answer: "hurts"}
+    lines:
+      - emma: "Exercise 1. Circle the correct answer. Pause the video and try."
+        say: "Exercise one. Circle the correct answer. Pause the video and try."
+        vi: "Bài 1: chọn từ đúng."
+      - {tom: "One. My back hurts. Pain is a noun. Two. I've got a cold. Three. He doesn't feel well.", reveal: [1, 2, 3], focus: 2, vi: "pain: danh từ · hurt: động từ"}
+      - {tom: "Four. I've got toothache. Five. Do you feel sick? Six. My knee hurts.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    heading: "Exercise 1 · Circle the correct answer (7–12)"
+    heading_vi: "Câu 10 in trùng câu 8 — Answer key tr. 210"
+    items:
+      - {n: 7, q: "He's got flu / a flu?  →  ___", answer: "flu"}
+      - {n: 8, q: "Is / Has she got a temperature?  →  ___", answer: "Has"}
+      - {n: 9, q: "I hurt / 've got a pain in my eye.  →  ___", answer: "'ve got"}
+      - {n: 10, q: "Is / Has she got a temperature?  →  ___", answer: "Has"}
+      - {n: 11, q: "She is / 's got a sore throat.  →  ___", answer: "'s"}
+      - {n: 12, q: "I don't feel / haven't got a cough.  →  ___", answer: "haven't got"}
+    lines:
+      - {tom: "Seven. He's got flu, with no a. Eight. Has she got a temperature? Nine. I've got a pain in my eye.", reveal: [7, 8, 9], focus: 2}
+      - {tom: "Ten is the same question as eight in the book: has she got a temperature? Eleven. She's got a sore throat. Twelve. I haven't got a cough.", reveal: [10, 11, 12], focus: 5, vi: "Câu 10 trùng câu 8 — đáp án vẫn là Has."}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "Ví dụ: I had to stand up for ten hours; now I've got backache. (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "She has always smoked a lot, and now she's got a bad ___.", answer: "cough"}
+      - {n: 2, q: "He's got a ___ – look, it's 39 degrees.", answer: "temperature"}
+      - {n: 3, q: "I walked 20 kilometres today, and my feet ___.", answer: "hurt"}
+      - {n: "4a", q: "What's the ___? You look terrible.", answer: "matter"}
+      - {n: "4b", q: "— I don't feel ___.", answer: "well"}
+      - {n: 5, q: "I ate too much at lunch and now I've got ___.", answer: "stomach-ache"}
+      - {n: 6, q: "My little boy had four ice creams and now he feels ___.", answer: "sick"}
+      - {n: 7, q: "I've got a temperature and a terrible headache. I think I've got ___.", answer: "flu"}
+      - {n: 8, q: "I can't eat anything; I've got a sore ___.", answer: "throat"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. Pause the video and try. Exercise 3 is a test: cover the words, look at the pictures, and say the words."
+        say: "Exercise two. Complete the sentences. Pause the video and try. Exercise three is a test: cover the words, look at the pictures, and say the words."
+        vi: "Bài 2: hoàn thành câu. Bài 3: che chữ, nhìn tranh, nói lại."
+      - {tom: "One. A bad cough. Two. A temperature. Three. My feet hurt. Four. What's the matter? I don't feel well.", reveal: [1, 2, 3, "4a", "4b"], focus: 4}
+      - {tom: "Five. Stomach-ache. Six. He feels sick. Seven. I think I've got flu. Eight. A sore throat.", reveal: [5, 6, 7, 8], focus: 8}
+
+  - kind: figure
+    chapter: "Nên làm gì?"
+    heading: "B · What should I do?"
+    heading_vi: "Tranh trong sách tr. 59 — should + động từ: nên …"
+    image: {pdf: course-book, page: 60, clip: [26, 50, 490, 220]}
+    items:
+      - {box: [92, 78, 210, 116]}
+      - {box: [352, 62, 486, 98]}
+      - {box: [352, 100, 486, 136]}
+      - {box: [352, 138, 486, 174]}
+      - {box: [352, 174, 486, 214]}
+    lines:
+      - {emma: "Look at the picture on page fifty-nine. The man says: I don't feel very well. I've got a temperature. What should he do?", focus: 0}
+      - {tom: "You should go and see your GP. A GP is a family doctor.", focus: 1, vi: "GP: bác sĩ gia đình"}
+      - {emma: "You should go to the chemist's. The chemist's is the shop where you get medicine. Another word is pharmacy.", focus: 2, vi: "the chemist's = pharmacy: hiệu thuốc"}
+      - {tom: "You should stay in bed for a day or two.", focus: 3, vi: "stay in bed: nằm nghỉ trên giường"}
+      - {emma: "You should go and lie down for a while.", focus: 4, vi: "lie down: nằm xuống · for a while: một lúc"}
+
+  - kind: bullets
+    chapter: "Glossary và should"
+    heading: "B · Glossary · should + verb"
+    heading_vi: "Glossary tr. 59 — should + động từ nguyên mẫu (không có to)"
+    image: {pdf: course-book, page: 60, clip: [28, 236, 254, 446]}
+    items:
+      - {en: "go and see = go to, visit", vi: "đi gặp, đi khám", box: [30, 252, 252, 265]}
+      - {en: "GP (General Practitioner) = family doctor", vi: "bác sĩ gia đình", box: [30, 264, 252, 276]}
+      - {en: "chemist's = pharmacy", vi: "hiệu thuốc", box: [30, 276, 252, 300]}
+      - {en: "lie down", vi: "nằm xuống", box: [30, 300, 252, 388]}
+      - {en: "for a while = for a short time · for a day or two", vi: "một lúc · một hai ngày", box: [30, 395, 252, 444]}
+      - {en: "You should go to bed. You shouldn't go to work today.", vi: "should: lời khuyên · shouldn't = should not"}
+    lines:
+      - {emma: "Let's look at the glossary. Go and see means go to, or visit.", focus: 0}
+      - {tom: "GP means General Practitioner: a family doctor.", focus: 1}
+      - {emma: "The chemist's, or pharmacy: a shop where you get medicine.", focus: 2}
+      - {tom: "Lie down: put your body flat on a bed. The past is lay.", focus: 3, vi: "lie down (lay): nằm xuống"}
+      - {emma: "For a while means for a short time. For a day or two means not more than three days.", focus: 4}
+      - {tom: "Look at the spotlight. We use should to give advice. I feel terrible. You should go to bed. You shouldn't go to work today. After should, there's no to.", say: "Look at the spotlight. We yooz should to give advice. I feel terrible. You should go to bed. You shouldn't go to work today. After should, there's no to.", focus: 5, vi: "should + V nguyên mẫu (không to)"}
+
+  - kind: blanks
+    chapter: "Bài 4: gạch từ thừa"
+    heading: "Exercise 4 · Cross out one word you don't need"
+    heading_vi: "Ví dụ: I don't feel me very well. → gạch me (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "You should to go to the chemist's.  →  ___", answer: "to"}
+      - {n: 2, q: "Go and lie you down for a while.  →  ___", answer: "you"}
+      - {n: 3, q: "Go and see your GP doctor.  →  ___", answer: "doctor (or GP)"}
+      - {n: 4, q: "Stay in the bed and don't do anything.  →  ___", answer: "the"}
+      - {n: 5, q: "Go to bed for a day or two days.  →  ___", answer: "days"}
+      - {n: 6, q: "You should go and to see your doctor.  →  ___", answer: "to"}
+      - {n: 7, q: "You shouldn't don't go to work today.  →  ___", answer: "don't"}
+      - {n: 8, q: "Lie down for the a while.  →  ___", answer: "the"}
+    lines:
+      - emma: "Exercise 4. Cross out one word you don't need in each sentence. Pause the video and try."
+        say: "Exercise four. Cross out one word you don't need in each sentence. Pause the video and try."
+        vi: "Bài 4: gạch một từ thừa."
+      - {tom: "One. To: should go. Two. You. Three. Doctor, or GP: they mean the same. Four. The: stay in bed.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Days: a day or two. Six. To: go and see. Seven. Don't: shouldn't is already negative. Eight. The: for a while.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: lời khuyên"
+    heading: "Exercise 5 · Write some advice using should and the word in brackets"
+    heading_vi: "Ví dụ: I've got a cold. (chemist's) → You should go to the chemist's. (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "I've got backache. (lie)  →  ___", answer: "You should go and lie down for a while."}
+      - {n: 2, q: "My ear hurts. (pharmacy)  →  ___", answer: "You should go to the pharmacy."}
+      - {n: 3, q: "I've got a sore throat, a cough and a temperature. (stay)  →  ___", answer: "You should stay in bed for a day or two."}
+      - {n: 4, q: "I feel sick. (while)  →  ___", answer: "You should go and lie down for a while."}
+      - {n: 5, q: "I've got flu. (GP)  →  ___", answer: "You should go and see your GP."}
+    lines:
+      - emma: "Exercise 5. Write some advice, using should and the word in brackets. Pause the video and try."
+        say: "Exercise five. Write some advice, using should and the word in brackets. Pause the video and try."
+        vi: "Bài 5: viết lời khuyên với should."
+      - {tom: "One. You should go and lie down for a while. Two. You should go to the pharmacy. Three. You should stay in bed for a day or two.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. You should go and lie down for a while. Five. You should go and see your GP.", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · illness"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "I've got a terrible ___. Can you turn the music down?", answer: "headache"}
+      - {n: 2, q: "She's got a ___ of thirty-nine degrees.", answer: "temperature"}
+      - {n: 3, q: "I can't talk much. I've got a sore ___.", answer: "throat"}
+      - {n: 4, q: "He's got a bad ___. He should stop smoking.", answer: "cough"}
+      - {n: 5, q: "You should go to the ___ and get some medicine.", answer: "chemist's"}
+      - {n: 6, q: "I ate too much, and now I've got ___.", answer: "stomach-ache"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. I've got a terrible headache. Can you turn the music down?", focus: 0}
+      - {emma: "Number two. She's got a temperature of thirty-nine degrees.", focus: 1}
+      - {emma: "Number three. I can't talk much. I've got a sore throat.", focus: 2}
+      - {emma: "Number four. He's got a bad cough. He should stop smoking.", focus: 3}
+      - {emma: "Number five. You should go to the chemist's and get some medicine.", focus: 4}
+      - {emma: "Number six. I ate too much, and now I've got stomach-ache.", focus: 5}
+      - {tom: "Headache: one word. Temperature: T, E, M, P, E, R, A, T, U, R, E. Throat, with t h.", say: "Headache: one word. Temperature: tee, ee, em, pee, ee, ar, eigh, tee, yoo, ar, ee. Throat, with tee aitch.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Cough: C, O, U, G, H. Chemist's, with apostrophe s. And stomach-ache, with a hyphen.", say: "Cough: see, oh, yoo, gee, aitch. Chemist's, with apostrophe ess. And stomach-ache, with a hyphen.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: sức khỏe"
+    heading: "Speaking 1 · Health and illness"
+    heading_vi: "Câu hỏi kiểu IELTS Part 1 — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "When were you last ill?"
+        a: "Last December, just before my exams. I had flu, with a temperature of thirty-nine degrees."
+        ask: emma
+        by: tom
+        phrases: ["Last …, just before…", "I had flu", "a temperature of … degrees"]
+      - q: "What do you do when you have a cold, Emma?"
+        a: "I drink hot tea with ginger and honey, and I go to bed early. I hardly ever take medicine."
+        ask: tom
+        by: emma
+        phrases: ["I drink…", "I go to bed early", "I hardly ever…"]
+      - q: "How often do you go to the doctor?"
+        a: "Not very often. In Vietnam, I usually go to the pharmacy first. There's one on every street!"
+        ask: tom
+        by: emma
+        phrases: ["Not very often.", "I usually go to … first", "on every street"]
+      - q: "Who do you call when you're ill, Tom?"
+        a: "My sister Hoa. She's a nurse, so she always knows what I should do. She says: drink lots of water and rest."
+        say: "My sister Whah. She's a nurse, so she always knows what I should do. She says: drink lots of water and rest."
+        ask: emma
+        by: tom
+        phrases: ["My sister…", "she always knows…", "She says: …"]
+      - q: "Do you ever get backache?"
+        a: "Yes, when I sit at my laptop for too long. Then I stand up and walk around for a while."
+        ask: emma
+        by: tom
+        phrases: ["Yes, when I…", "for too long", "for a while"]
+      - q: "What should people do to stay healthy?"
+        a: "They should sleep seven or eight hours a night, eat well, and do some exercise. And they shouldn't work all day without a break."
+        ask: tom
+        by: emma
+        phrases: ["They should…", "And they shouldn't…"]
+    lines:
+      - {emma: "Now let's talk about health. When were you last ill, Tom?", focus: 0}
+      - {tom: "Last December, just before my exams. I had flu, with a temperature of thirty-nine degrees.", reveal: 0, vi: "Tháng 12 năm ngoái, ngay trước kỳ thi: bị cúm, sốt 39 độ."}
+      - {tom: "What do you do when you have a cold, Emma?", focus: 1}
+      - {emma: "I drink hot tea with ginger and honey, and I go to bed early. I hardly ever take medicine.", reveal: 1, vi: "Uống trà gừng mật ong nóng, đi ngủ sớm; hầu như không uống thuốc."}
+      - {tom: "How often do you go to the doctor?", focus: 2}
+      - {emma: "Not very often. In Vietnam, I usually go to the pharmacy first. There's one on every street!", reveal: 2, vi: "Không thường xuyên. Ở Việt Nam thường ra hiệu thuốc trước — phố nào cũng có!"}
+      - {emma: "Who do you call when you're ill, Tom?", focus: 3}
+      - {tom: "My sister Hoa. She's a nurse, so she always knows what I should do. She says: drink lots of water and rest.", say: "My sister Whah. She's a nurse, so she always knows what I should do. She says: drink lots of water and rest.", reveal: 3, vi: "Chị Hoa — y tá, luôn biết Tom nên làm gì: uống nhiều nước và nghỉ ngơi."}
+      - {emma: "Do you ever get backache?", focus: 4}
+      - {tom: "Yes, when I sit at my laptop for too long. Then I stand up and walk around for a while.", reveal: 4, vi: "Có, khi ngồi laptop quá lâu; lúc đó đứng dậy đi lại một lúc."}
+      - {tom: "What should people do to stay healthy?", focus: 5}
+      - {emma: "They should sleep seven or eight hours a night, eat well, and do some exercise. And they shouldn't work all day without a break.", reveal: 5, vi: "Nên ngủ 7–8 tiếng, ăn uống tốt, tập thể dục; không nên làm cả ngày không nghỉ."}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về bệnh — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I'm headache.  →  ___", answer: "I've got a headache."}
+      - {n: 2, q: "He's got a flu.  →  ___", answer: "He's got flu."}
+      - {n: 3, q: "My back is pain.  →  ___", answer: "My back hurts. / I've got backache."}
+      - {n: 4, q: "You should to stay in bed.  →  ___", answer: "You should stay in bed."}
+      - {n: 5, q: "I feel not well.  →  ___", answer: "I don't feel well."}
+      - {n: 6, q: "I'm going to the chemist to buy some medicine.  →  ___", answer: "I'm going to the chemist's …"}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I've got a headache: have got, not be. Two. He's got flu, with no a.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. My back hurts, or I've got backache. Pain is a noun. Four. You should stay in bed: no to after should.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I don't feel well. Six. The chemist's, with apostrophe s: that's the shop. The chemist is the person.", reveal: [5, 6], focus: 5, vi: "the chemist's: hiệu thuốc · the chemist: dược sĩ"}
+
+  - kind: blanks
+    chapter: "Ôn tập: nên làm gì?"
+    heading: "Review · What should I do?"
+    heading_vi: "Nghe vấn đề, khuyên với should / shouldn't — tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "I've got toothache.  →  ___", answer: "You should go to the dentist."}
+      - {n: 2, q: "I've got a headache after four hours at my laptop.  →  ___", answer: "You should take a break."}
+      - {n: 3, q: "I feel sick after lunch.  →  ___", answer: "You should go and lie down for a while."}
+      - {n: 4, q: "My leg hurts after football.  →  ___", answer: "You shouldn't play tomorrow."}
+      - {n: 5, q: "I've got a bad cough.  →  ___", answer: "You should get some cough medicine."}
+      - {n: 6, q: "I've got flu and a temperature.  →  ___", answer: "You should stay in bed for a day or two."}
+    lines:
+      - emma: "Another review. I tell you my problem, and you give me advice with should, or shouldn't. Pause the video after each one."
+        vi: "Ôn tập: nghe vấn đề, cho lời khuyên với should / shouldn't."
+      - {emma: "Number one. I've got toothache.", focus: 0}
+      - {tom: "You should go to the dentist. A dentist is a doctor for your teeth.", reveal: 1, focus: 0, vi: "dentist: nha sĩ"}
+      - {emma: "Number two. I've got a headache after four hours at my laptop.", focus: 1}
+      - {tom: "You should take a break, and drink some water.", reveal: 2, focus: 1}
+      - {emma: "Number three. I feel sick after lunch.", focus: 2}
+      - {tom: "You should go and lie down for a while.", reveal: 3, focus: 2}
+      - {emma: "Number four. My leg hurts after football.", focus: 3}
+      - {tom: "You shouldn't play tomorrow. Rest your leg.", reveal: 4, focus: 3}
+      - {emma: "Number five. I've got a bad cough.", focus: 4}
+      - {tom: "You should get some cough medicine from the chemist's.", reveal: 5, focus: 4}
+      - {emma: "Number six. I've got flu and a temperature.", focus: 5}
+      - {tom: "You should stay in bed for a day or two. And you shouldn't go to work!", reveal: 6, focus: 5}
+
+  - kind: letter
+    chapter: "Email xin nghỉ ốm"
+    heading: "Writing · An email to say you're ill"
+    heading_vi: "Kiểu thư IELTS General Training Task 1 — Tom nhắn quản lý quán cà phê"
+    roles: {tom: writer}
+    items:
+      - text: "Dear Ms Linh,"
+        say: "Dear Mizz Linn,"
+        note: "greeting"
+      - text: "I'm sorry, but I can't come to work this evening. I don't feel well: I've got a temperature and a bad cough, and I think I've got flu."
+        note: "the problem"
+      - text: "My sister is a nurse, and she says I should stay in bed for a day or two. I'm going to see a doctor tomorrow morning."
+        note: "advice · plan"
+      - text: "I hope I can come back on Thursday. I'm sorry about the short notice. Best wishes, Tom"
+        note: "ending"
+    lines:
+      - {emma: "In the IELTS General Training test, you sometimes write a letter. Here's Tom's email to his manager at the café. Listen to the useful phrases.", say: "In the eye-elts General Training test, you sometimes write a letter. Here's Tom's email to his manager at the café. Listen to the useful phrases.", focus: 0, vi: "Email xin nghỉ ốm: chào, nêu vấn đề, lời khuyên / kế hoạch, kết thư."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+      - {emma: "Good. He says sorry, he explains the problem with I've got, and he uses should for the advice.", focus: 3}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a time when you were ill"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể ở quá khứ đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: when it was", vi: "khi nào"}
+      - {en: "what was wrong with you", vi: "bạn bị làm sao"}
+      - {en: "what you did to get better", vi: "bạn làm gì để khỏi bệnh"}
+      - {en: "and explain how you felt", vi: "và giải thích bạn cảm thấy thế nào"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a time when you were ill."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a time when you were ill."
+        vi: "Luyện nói chung kiểu Part 2: một lần bạn bị ốm."
+      - {emma: "You should say when it was,", focus: 0}
+      - {emma: "what was wrong with you,", focus: 1}
+      - {emma: "what you did to get better,", focus: 2}
+      - {emma: "and explain how you felt.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — quá khứ đơn, I had…, should"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about last December, when I had flu. It was one week before my exams, so it was really bad timing."
+        note: "when"
+      - text: "First I had a sore throat, and then I had a temperature of thirty-nine degrees, a headache and a bad cough. My whole body hurt."
+        note: "what was wrong"
+      - text: "I stayed in bed for three days, and my flatmates made rice soup for me. My sister Hoa called every evening. She said I should drink lots of water and rest, and she was right."
+        say: "I stayed in bed for three days, and my flatmates made rice soup for me. My sister Whah called every evening. She said I should drink lots of water and rest, and she was right."
+        note: "what I did"
+      - text: "I felt terrible, and very worried about my exams. But after a week I was well again, and the exams were fine."
+        note: "how I felt"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my first rainy season in Vietnam, three years ago. I was very busy at school, and I often got wet on the way to work."
+        note: "when"
+      - text: "I got a bad cold and a cough, and the cough didn't stop for two weeks. I couldn't sleep well, and I had backache from coughing."
+        note: "what was wrong"
+      - text: "I went to the pharmacy near my flat. The pharmacist spoke a little English, and she gave me some cough medicine. She said I should drink hot tea with ginger and honey."
+        note: "what I did"
+      - text: "I felt tired and a bit homesick. But everyone was so kind to me, and now I always have ginger tea at home!"
+        note: "how I felt"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a time when you were ill.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a time when you were ill"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "When was it?", hint: "I'd like to talk about … when I had …"}
+      - {q: "What was wrong with you?", hint: "I had a temperature / a bad cough / … · My … hurt"}
+      - {q: "What did you do to get better?", hint: "I stayed in bed … · I went to the doctor / pharmacy · … said I should …"}
+      - {q: "How did you feel?", hint: "I felt terrible / tired / worried … · After … I was well again"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple, I had, and should for advice."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple, I had, and should for advice."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "When was it?", focus: 0, pause: 0.5}
+      - {emma: "What was wrong with you?", focus: 1, pause: 0.5}
+      - {emma: "What did you do to get better?", focus: 2, pause: 0.5}
+      - {emma: "How did you feel?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · health"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Should people go to work when they're ill?"
+        a: "No, they shouldn't. They can make other people ill, and they need to rest. But some people are worried about losing money."
+        ask: tom
+        by: emma
+        phrases: ["No, they shouldn't.", "They can make…", "But some people…"]
+      - q: "Is it better to see a doctor or go to a pharmacy for small problems?"
+        a: "For a cold or a headache, a pharmacy is fine, and it's faster. But for something serious, you should see a doctor."
+        ask: emma
+        by: tom
+        phrases: ["For a cold…, … is fine", "But for something serious, …"]
+      - q: "Why do people get ill more in some seasons?"
+        a: "In the rainy season, people get wet and cold, and in winter they stay inside together, so colds and flu move quickly."
+        ask: tom
+        by: emma
+        phrases: ["In the rainy season, …", "so … move quickly"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Should people go to work when they're ill?", focus: 0}
+      - {emma: "No, they shouldn't. They can make other people ill, and they need to rest. But some people are worried about losing money.", reveal: 0, vi: "Không nên: lây cho người khác, và cần nghỉ; nhưng có người lo mất tiền."}
+      - {emma: "Is it better to see a doctor or go to a pharmacy for small problems?", focus: 1}
+      - {tom: "For a cold or a headache, a pharmacy is fine, and it's faster. But for something serious, you should see a doctor.", reveal: 1, vi: "Cảm, đau đầu thì ra hiệu thuốc là được, nhanh hơn; bệnh nặng thì nên đi khám."}
+      - {tom: "Why do people get ill more in some seasons?", focus: 2}
+      - {emma: "In the rainy season, people get wet and cold, and in winter they stay inside together, so colds and flu move quickly.", reveal: 2, vi: "Mùa mưa người ta bị ướt, lạnh; mùa đông ở trong nhà với nhau nên cảm cúm lây nhanh."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 58, nhìn tranh, nói lại"
+    items:
+      - {en: "What's the matter? — I don't feel well. I've got …", vi: "hỏi và nói bệnh"}
+      - {en: "a headache · a cold · a cough · a sore throat · a temperature · a pain in my leg", vi: "có a"}
+      - {en: "toothache · stomach-ache · backache · flu", vi: "thường không có a"}
+      - {en: "My leg hurts. · be ill (not well) ≠ be sick (vomit) · feel sick", vi: "hurt · ill ≠ sick"}
+      - {en: "You should go and see your GP / go to the chemist's / stay in bed / lie down for a while.", vi: "should + V (không to)"}
+      - {en: "Next: Unit 23 · At the chemist's", vi: "Tiếp theo: Unit 23 · Ở hiệu thuốc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "What's the matter? I don't feel well. I've got…", focus: 0}
+      - {tom: "A headache, a cold, a cough, a sore throat, a temperature, and a pain in my leg.", focus: 1}
+      - {emma: "Toothache, stomach-ache, backache, and flu, usually with no a.", focus: 2}
+      - {tom: "My leg hurts. Ill means not well, but be sick means bring up food.", focus: 3}
+      - {emma: "You should go and see your GP, go to the chemist's, stay in bed, or lie down for a while.", focus: 4}
+      - {tom: "Next time, Unit 23: at the chemist's. See you then!", say: "Next time, Unit twenty-three: at the chemist's. See you then!", focus: 5}
