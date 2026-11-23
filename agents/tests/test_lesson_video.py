@@ -654,7 +654,9 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     `echo`, người học tự tạm dừng), có 1–2 phần nói theo chủ đề: Tom và Emma hỏi đáp (`qa`) và "Đến lượt bạn"
     (`practice` tự tạm dừng) — docs/agent-hoc-tap/09 mục 5. Đợt 29: unit khó (đầu kịch bản ghi "UNIT KHÓ") được dài
     tới 15 phút để ôn tập và luyện nói chung (có bài nói mẫu Part 2 — cảnh `letter`). Hình trong sách (cảnh có `image`):
-    module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có. Video nghe – viết (đợt 36) có test riêng."""
+    module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có. Video nghe – viết (đợt 36) có test riêng.
+    Đợt 37: module Everyday life (Unit 17–23), unit khó 17, 19, 22; câu cuối cảnh `practice` nghỉ tối đa 1 giây để khoảng
+    lặng (pause + gap + scene_gap) dưới 3 giây — người học: "video ko nên có pause quá 3 giây"."""
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
     scripts = sorted(p for p in (OWS / "lessons").glob("U*.yaml") if not p.stem.endswith("-dictation"))
     assert [p.name[:3] for p in scripts][:16] == [f"U{n:02d}" for n in range(1, 17)]   # Basic English và People đủ 16 unit
@@ -673,7 +675,9 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
         if is_hard:
             assert built[lesson.id]["duration"] > 10 * 60 and "letter" in kinds, lesson.id   # ôn tập + Part 2 mẫu
         assert any(s.image for s in lesson.scenes), lesson.id                                # hình trong sách
-    assert hard == ["U10", "U13", "U14", "U16"]
+        if lesson.id[:3] >= "U17":                                                           # video từ đợt 37
+            assert all((ln.pause or 0) + lesson.gap + lesson.scene_gap < 3.0 for s in lesson.scenes for ln in s.lines), lesson.id
+    assert hard == ["U10", "U13", "U14", "U16", "U17", "U19", "U22"]
 
 
 @pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")

@@ -1,0 +1,305 @@
+# Video nghe – viết (dictation) Unit 22 · Illness — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U22-illness-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U22 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list in "have got … 21 …" và "what's the matter? 16, 21"; hai cụm ở Unit 22 (tr. 58) nên xếp vào Unit 22 —
+# file 09 mục 5.9.
+id: U22-illness-dictation
+activity: U22-words
+title: "Unit 22 · Illness"
+subtitle: "Dictation · listen and write: illness and advice"
+title_vi: "Nghe – viết 10 phút: ốm đau — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 22"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 22: Illness. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-two: Illness. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 22: ốm đau. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 25 words from the book. You hear each word twice, and then an example sentence twice. Then 22 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-five words from the book. You hear each word twice, and then an example sentence twice. Then twenty-two more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 25 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 22 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "What's the matter?", "vi": "Có chuyện gì vậy?", "ex": "What's the matter? You look tired.", "w": ["What's the matter?", "matter"]}
+      - {"n": 2, "answer": "feel", "vi": "cảm thấy", "ex": "I don't feel well.", "w": ["feel", "well"]}
+      - {"n": 3, "answer": "have got", "vi": "có (bệnh)", "ex": "She's got a cold.", "w": ["have got", "cold"]}
+      - {"n": 4, "answer": "headache", "vi": "đau đầu", "ex": "I've got a terrible headache.", "w": ["headache"]}
+      - {"n": 5, "answer": "toothache", "vi": "đau răng", "ex": "He's got toothache. He should see a dentist.", "w": ["toothache"]}
+      - {"n": 6, "answer": "stomach-ache", "vi": "đau bụng", "ex": "I ate too much, and now I've got stomach-ache.", "w": ["stomach-ache"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. What's the matter?. What's the matter?. What's the matter? You look tired. What's the matter? You look tired.", "focus": 0}
+      - {"emma": "Two. feel. feel. I don't feel well. I don't feel well.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. have got. have got. She's got a cold. She's got a cold.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. headache. headache. I've got a terrible headache. I've got a terrible headache.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. toothache. toothache. He's got toothache. He should see a dentist. He's got toothache. He should see a dentist.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. stomach-ache. stomach-ache. I ate too much, and now I've got stomach-ache. I ate too much, and now I've got stomach-ache.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "cough", "vi": "ho", "ex": "She's got a bad cough.", "w": ["cough"]}
+      - {"n": 8, "answer": "sore throat", "vi": "đau họng", "ex": "I can't talk much. I've got a sore throat.", "w": ["sore", "throat"]}
+      - {"n": 9, "answer": "flu", "vi": "cúm", "ex": "He's in bed with flu.", "w": ["flu"]}
+      - {"n": 10, "answer": "temperature", "vi": "sốt", "ex": "She's got a temperature of thirty-nine degrees.", "w": ["temperature"]}
+      - {"n": 11, "answer": "pain", "vi": "cơn đau", "ex": "I've got a pain in my leg.", "w": ["pain", "leg"]}
+      - {"n": 12, "answer": "hurt", "vi": "đau", "ex": "My back hurts.", "w": ["hurt"]}
+    lines:
+      - {"emma": "Seven. cough. cough. She's got a bad cough. She's got a bad cough.", "focus": 0}
+      - {"emma": "Eight. sore throat. sore throat. I can't talk much. I've got a sore throat. I can't talk much. I've got a sore throat.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. flu. flu. He's in bed with flu. He's in bed with flu.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. temperature. temperature. She's got a temperature of thirty-nine degrees. She's got a temperature of thirty-nine degrees.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. pain. pain. I've got a pain in my leg. I've got a pain in my leg.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. hurt. hurt. My back hurts. My back hurts.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "backache", "vi": "đau lưng", "ex": "Sitting all day gives me backache.", "w": ["backache"]}
+      - {"n": 14, "answer": "ill", "vi": "ốm", "ex": "He's not at school today. He's ill.", "w": ["ill"]}
+      - {"n": 15, "answer": "sick", "vi": "buồn nôn, nôn", "ex": "I feel sick after the boat trip.", "w": ["sick"]}
+      - {"n": 16, "answer": "should", "vi": "nên", "ex": "You should drink lots of water.", "w": ["should"]}
+      - {"n": 17, "answer": "go and see", "vi": "đi gặp, đi khám", "ex": "You should go and see your doctor.", "w": ["go"]}
+      - {"n": 18, "answer": "GP", "vi": "bác sĩ gia đình", "ex": "In England, you see your GP first.", "w": ["GP"]}
+    lines:
+      - {"emma": "Thirteen. backache. backache. Sitting all day gives me backache. Sitting all day gives me backache.", "focus": 0}
+      - {"emma": "Fourteen. ill. ill. He's not at school today. He's ill. He's not at school today. He's ill.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. sick. sick. I feel sick after the boat trip. I feel sick after the boat trip.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. should. should. You should drink lots of water. You should drink lots of water.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. go and see. go and see. You should go and see your doctor. You should go and see your doctor.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. GP. GP. In England, you see your GP first. In England, you see your GP first.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "chemist's, chemist", "vi": "hiệu thuốc, dược sĩ", "ex": "The chemist at the chemist's can help you.", "w": ["chemist's", "chemist"]}
+      - {"n": 20, "answer": "pharmacy", "vi": "hiệu thuốc", "ex": "There's a pharmacy on every street.", "w": ["pharmacy"]}
+      - {"n": 21, "answer": "stay in bed", "vi": "nằm nghỉ trên giường", "ex": "Stay in bed for a day or two.", "w": ["stay in bed", "bed"]}
+      - {"n": 22, "answer": "lie down", "vi": "nằm xuống", "ex": "Go and lie down for a while.", "w": ["lie down"]}
+    lines:
+      - {"emma": "Nineteen. chemist's, chemist. chemist's, chemist. The chemist at the chemist's can help you. The chemist at the chemist's can help you.", "focus": 0}
+      - {"emma": "Twenty. pharmacy. pharmacy. There's a pharmacy on every street. There's a pharmacy on every street.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. stay in bed. stay in bed. Stay in bed for a day or two. Stay in bed for a day or two.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. lie down. lie down. Go and lie down for a while. Go and lie down for a while.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–25)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "for a while", "vi": "một lúc", "ex": "Rest for a while.", "w": ["for a while", "while"]}
+      - {"n": 24, "answer": "for a day or two", "vi": "một hai ngày", "ex": "You should stay at home for a day or two."}
+      - {"n": 25, "answer": "I don't feel well", "vi": "tôi thấy không khỏe", "ex": "I don't feel well. I'm going home."}
+    lines:
+      - {"emma": "Twenty-three. for a while. for a while. Rest for a while. Rest for a while.", "focus": 0}
+      - {"emma": "Twenty-four. for a day or two. for a day or two. You should stay at home for a day or two. You should stay at home for a day or two.", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. I don't feel well. I don't feel well. I don't feel well. I'm going home. I don't feel well. I'm going home.", "focus": 2, "reveal": [24]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [25]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (26–31)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 26, "answer": "doctor", "vi": "bác sĩ", "ex": "You should see a doctor."}
+      - {"n": 27, "answer": "dentist", "vi": "nha sĩ", "ex": "I'm going to the dentist tomorrow."}
+      - {"n": 28, "answer": "nurse", "vi": "y tá", "ex": "Tom's sister is a nurse."}
+      - {"n": 29, "answer": "hospital", "vi": "bệnh viện", "ex": "He's in hospital."}
+      - {"n": 30, "answer": "appointment", "vi": "cuộc hẹn", "ex": "I've got an appointment at nine."}
+      - {"n": 31, "answer": "medicine", "vi": "thuốc", "ex": "Take this medicine after meals."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-six. doctor. doctor. You should see a doctor. You should see a doctor.", "focus": 0}
+      - {"tom": "Twenty-seven. dentist. dentist. I'm going to the dentist tomorrow. I'm going to the dentist tomorrow.", "focus": 1, "reveal": [26]}
+      - {"tom": "Twenty-eight. nurse. nurse. Tom's sister is a nurse. Tom's sister is a nurse.", "focus": 2, "reveal": [27]}
+      - {"tom": "Twenty-nine. hospital. hospital. He's in hospital. He's in hospital.", "focus": 3, "reveal": [28]}
+      - {"tom": "Thirty. appointment. appointment. I've got an appointment at nine. I've got an appointment at nine.", "focus": 4, "reveal": [29]}
+      - {"tom": "Thirty-one. medicine. medicine. Take this medicine after meals. Take this medicine after meals.", "focus": 5, "reveal": [30]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [31]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "prescription", "vi": "đơn thuốc", "ex": "The doctor gave me a prescription."}
+      - {"n": 33, "answer": "painkiller", "vi": "thuốc giảm đau", "ex": "Take a painkiller for the headache."}
+      - {"n": 34, "answer": "rest", "vi": "nghỉ ngơi", "ex": "You need to rest."}
+      - {"n": 35, "answer": "get better", "vi": "khỏe lại", "ex": "I hope you get better soon."}
+      - {"n": 36, "answer": "catch a cold", "vi": "bị cảm", "ex": "I caught a cold in the rain."}
+      - {"n": 37, "answer": "runny nose", "vi": "sổ mũi", "ex": "I've got a runny nose."}
+    lines:
+      - {"tom": "Thirty-two. prescription. prescription. The doctor gave me a prescription. The doctor gave me a prescription.", "focus": 0}
+      - {"tom": "Thirty-three. painkiller. painkiller. Take a painkiller for the headache. Take a painkiller for the headache.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. rest. rest. You need to rest. You need to rest.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. get better. get better. I hope you get better soon. I hope you get better soon.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. catch a cold. catch a cold. I caught a cold in the rain. I caught a cold in the rain.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. runny nose. runny nose. I've got a runny nose. I've got a runny nose.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "sneeze", "vi": "hắt hơi", "ex": "He can't stop sneezing."}
+      - {"n": 39, "answer": "dizzy", "vi": "chóng mặt", "ex": "I feel dizzy."}
+      - {"n": 40, "answer": "injury", "vi": "chấn thương", "ex": "He has a knee injury."}
+      - {"n": 41, "answer": "allergy", "vi": "dị ứng", "ex": "She has an allergy to cats."}
+      - {"n": 42, "answer": "healthy", "vi": "khỏe mạnh", "ex": "Eat well and stay healthy."}
+      - {"n": 43, "answer": "sick note", "vi": "giấy nghỉ ốm", "ex": "The doctor gave him a sick note."}
+    lines:
+      - {"tom": "Thirty-eight. sneeze. sneeze. He can't stop sneezing. He can't stop sneezing.", "focus": 0}
+      - {"tom": "Thirty-nine. dizzy. dizzy. I feel dizzy. I feel dizzy.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. injury. injury. He has a knee injury. He has a knee injury.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. allergy. allergy. She has an allergy to cats. She has an allergy to cats.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. healthy. healthy. Eat well and stay healthy. Eat well and stay healthy.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. sick note. sick note. The doctor gave him a sick note. The doctor gave him a sick note.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "take a day off", "vi": "nghỉ một ngày", "ex": "I need to take a day off work."}
+      - {"n": 45, "answer": "feel better", "vi": "thấy đỡ hơn", "ex": "Do you feel better today?"}
+      - {"n": 46, "answer": "headache tablets", "vi": "thuốc đau đầu", "ex": "Have you got any headache tablets?"}
+      - {"n": 47, "answer": "blow your nose", "vi": "hỉ mũi", "ex": "Here's a tissue. Blow your nose."}
+    lines:
+      - {"tom": "Forty-four. take a day off. take a day off. I need to take a day off work. I need to take a day off work.", "focus": 0}
+      - {"tom": "Forty-five. feel better. feel better. Do you feel better today? Do you feel better today?", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. headache tablets. headache tablets. Have you got any headache tablets? Have you got any headache tablets?", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. blow your nose. blow your nose. Here's a tissue. Blow your nose. Here's a tissue. Blow your nose.", "focus": 3, "reveal": [46]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [47]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 48, "answer": "What's the matter?", "vi": "Có chuyện gì vậy?"}
+      - {"n": 49, "answer": "I don't feel very well.", "vi": "Mình thấy không khỏe lắm."}
+      - {"n": 50, "answer": "What's wrong?", "vi": "Bạn bị sao?"}
+      - {"n": 51, "answer": "I've got a headache and a sore throat.", "vi": "Mình đau đầu và đau họng."}
+      - {"n": 52, "answer": "Have you got a temperature?", "vi": "Bạn có sốt không?"}
+      - {"n": 53, "answer": "Yes, I think so. I feel hot.", "vi": "Có, mình nghĩ vậy. Mình thấy nóng người."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-eight. What's the matter? What's the matter?", "focus": 0}
+      - {"tom": "Forty-nine. I don't feel very well. I don't feel very well.", "focus": 1, "reveal": [48]}
+      - {"tom": "Fifty. What's wrong? What's wrong?", "focus": 2, "reveal": [49]}
+      - {"emma": "Fifty-one. I've got a headache and a sore throat. I've got a headache and a sore throat.", "focus": 3, "reveal": [50]}
+      - {"emma": "Fifty-two. Have you got a temperature? Have you got a temperature?", "focus": 4, "reveal": [51]}
+      - {"tom": "Fifty-three. Yes, I think so. I feel hot. Yes, I think so. I feel hot.", "focus": 5, "reveal": [52]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "You should go and see a doctor.", "vi": "Bạn nên đi khám."}
+      - {"n": 55, "answer": "You should stay in bed today.", "vi": "Hôm nay bạn nên nằm nghỉ."}
+      - {"n": 56, "answer": "You shouldn't go to work.", "vi": "Bạn không nên đi làm."}
+      - {"n": 57, "answer": "Drink lots of water and rest.", "vi": "Uống nhiều nước và nghỉ ngơi."}
+      - {"n": 58, "answer": "I hope you feel better soon.", "vi": "Mong bạn sớm khỏe."}
+      - {"n": 59, "answer": "Thanks. I'm sure I'll be fine.", "vi": "Cảm ơn. Chắc mình sẽ ổn thôi."}
+    lines:
+      - {"emma": "Fifty-four. You should go and see a doctor. You should go and see a doctor.", "focus": 0}
+      - {"tom": "Fifty-five. You should stay in bed today. You should stay in bed today.", "focus": 1, "reveal": [54]}
+      - {"tom": "Fifty-six. You shouldn't go to work. You shouldn't go to work.", "focus": 2, "reveal": [55]}
+      - {"tom": "Fifty-seven. Drink lots of water and rest. Drink lots of water and rest.", "focus": 3, "reveal": [56]}
+      - {"emma": "Fifty-eight. I hope you feel better soon. I hope you feel better soon.", "focus": 4, "reveal": [57]}
+      - {"tom": "Fifty-nine. Thanks. I'm sure I'll be fine. Thanks. I'm sure I'll be fine.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "I'm sorry, I can't come to class today. I'm ill.", "vi": "Xin lỗi, hôm nay mình không đến lớp được. Mình bị ốm."}
+      - {"n": 61, "answer": "Don't worry. Get well soon.", "vi": "Đừng lo. Mau khỏe nhé."}
+      - {"n": 62, "answer": "My back hurts.", "vi": "Lưng mình đau."}
+      - {"n": 63, "answer": "You should stand up and walk for a while.", "vi": "Bạn nên đứng dậy đi lại một lúc."}
+      - {"n": 64, "answer": "I feel sick.", "vi": "Mình buồn nôn."}
+      - {"n": 65, "answer": "Go and lie down for a while.", "vi": "Đi nằm một lát đi."}
+    lines:
+      - {"tom": "Sixty. I'm sorry, I can't come to class today. I'm ill. I'm sorry, I can't come to class today. I'm ill.", "focus": 0}
+      - {"emma": "Sixty-one. Don't worry. Get well soon. Don't worry. Get well soon.", "focus": 1, "reveal": [60]}
+      - {"tom": "Sixty-two. My back hurts. My back hurts.", "focus": 2, "reveal": [61]}
+      - {"emma": "Sixty-three. You should stand up and walk for a while. You should stand up and walk for a while.", "focus": 3, "reveal": [62]}
+      - {"emma": "Sixty-four. I feel sick. I feel sick.", "focus": 4, "reveal": [63]}
+      - {"tom": "Sixty-five. Go and lie down for a while. Go and lie down for a while.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "How long have you had this cough?", "vi": "Bạn bị ho bao lâu rồi?"}
+      - {"n": 67, "answer": "About a week.", "vi": "Khoảng một tuần."}
+      - {"n": 68, "answer": "Is there a pharmacy near here?", "vi": "Gần đây có hiệu thuốc không?"}
+      - {"n": 69, "answer": "Yes, there's one on the corner.", "vi": "Có, ở góc phố."}
+      - {"n": 70, "answer": "I'd like to make an appointment with the doctor.", "vi": "Tôi muốn đặt lịch khám bác sĩ."}
+      - {"n": 71, "answer": "Are you feeling better today?", "vi": "Hôm nay bạn thấy đỡ hơn chưa?"}
+    lines:
+      - {"emma": "Sixty-six. How long have you had this cough? How long have you had this cough?", "focus": 0}
+      - {"tom": "Sixty-seven. About a week. About a week.", "focus": 1, "reveal": [66]}
+      - {"emma": "Sixty-eight. Is there a pharmacy near here? Is there a pharmacy near here?", "focus": 2, "reveal": [67]}
+      - {"tom": "Sixty-nine. Yes, there's one on the corner. Yes, there's one on the corner.", "focus": 3, "reveal": [68]}
+      - {"emma": "Seventy. I'd like to make an appointment with the doctor. I'd like to make an appointment with the doctor.", "focus": 4, "reveal": [69]}
+      - {"emma": "Seventy-one. Are you feeling better today? Are you feeling better today?", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Yes, much better, thanks.", "vi": "Rồi, đỡ nhiều rồi, cảm ơn."}
+      - {"n": 73, "answer": "You look tired. Are you OK?", "vi": "Trông bạn mệt. Bạn ổn chứ?"}
+      - {"n": 74, "answer": "I didn't sleep well. I had a bad cough.", "vi": "Mình ngủ không ngon. Mình ho nhiều quá."}
+      - {"n": 75, "answer": "You should drink some hot tea with ginger.", "vi": "Bạn nên uống trà gừng nóng."}
+      - {"n": 76, "answer": "Can I see a doctor today?", "vi": "Hôm nay tôi khám bác sĩ được không?"}
+      - {"n": 77, "answer": "Yes, there's an appointment at four o'clock.", "vi": "Được, có lịch lúc 4 giờ."}
+    lines:
+      - {"tom": "Seventy-two. Yes, much better, thanks. Yes, much better, thanks.", "focus": 0}
+      - {"tom": "Seventy-three. You look tired. Are you OK? You look tired. Are you OK?", "focus": 1, "reveal": [72]}
+      - {"emma": "Seventy-four. I didn't sleep well. I had a bad cough. I didn't sleep well. I had a bad cough.", "focus": 2, "reveal": [73]}
+      - {"tom": "Seventy-five. You should drink some hot tea with ginger. You should drink some hot tea with ginger.", "focus": 3, "reveal": [74]}
+      - {"emma": "Seventy-six. Can I see a doctor today? Can I see a doctor today?", "focus": 4, "reveal": [75]}
+      - {"tom": "Seventy-seven. Yes, there's an appointment at four o'clock. Yes, there's an appointment at four o'clock.", "focus": 5, "reveal": [76]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [77]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 23.", "say": "Well done! See you in Unit twenty-three.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 23."}
+

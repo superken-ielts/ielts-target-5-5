@@ -1,0 +1,296 @@
+# Video nghe – viết (dictation) Unit 19 · Buying clothes — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U19-buying-clothes-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U19 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U19-buying-clothes-dictation
+activity: U19-words
+title: "Unit 19 · Buying clothes"
+subtitle: "Dictation · listen and write: buying clothes"
+title_vi: "Nghe – viết 10 phút: mua quần áo — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 19"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 19: Buying clothes. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit nineteen: Buying clothes. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 19: mua quần áo. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 30 words from the book. You hear each word twice, and then an example sentence twice. Then 18 more useful words, and 29 useful sentences for conversation.", "say": "There are three parts. First, thirty words from the book. You hear each word twice, and then an example sentence twice. Then eighteen more useful words, and twenty-nine useful sentences for conversation.", "vi": "Ba phần: 30 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 18 từ thêm, 29 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "long, short", "vi": "dài, ngắn", "ex": "She wants a long skirt, not a short one.", "w": ["long", "short"]}
+      - {"n": 2, "answer": "cheap, expensive", "vi": "rẻ, đắt", "ex": "This tie is cheap, but that one is expensive.", "w": ["cheap", "expensive"]}
+      - {"n": 3, "answer": "smart, casual", "vi": "lịch sự, thường ngày", "ex": "Wear smart clothes for work, and casual clothes at home.", "w": ["smart", "casual"]}
+      - {"n": 4, "answer": "small, little", "vi": "nhỏ", "ex": "She's got a small bag. It's a little bag.", "w": ["small", "little"]}
+      - {"n": 5, "answer": "large, big", "vi": "to, lớn", "ex": "He needs a large bag. A big one.", "w": ["large", "big"]}
+      - {"n": 6, "answer": "comfortable", "vi": "thoải mái, êm", "ex": "These shoes are very comfortable.", "w": ["comfortable"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. long, short. long, short. She wants a long skirt, not a short one. She wants a long skirt, not a short one.", "focus": 0}
+      - {"emma": "Two. cheap, expensive. cheap, expensive. This tie is cheap, but that one is expensive. This tie is cheap, but that one is expensive.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. smart, casual. smart, casual. Wear smart clothes for work, and casual clothes at home. Wear smart clothes for work, and casual clothes at home.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. small, little. small, little. She's got a small bag. It's a little bag. She's got a small bag. It's a little bag.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. large, big. large, big. He needs a large bag. A big one. He needs a large bag. A big one.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. comfortable. comfortable. These shoes are very comfortable. These shoes are very comfortable.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "uncomfortable", "vi": "không thoải mái", "ex": "Those boots are uncomfortable.", "w": ["uncomfortable"]}
+      - {"n": 8, "answer": "tight, loose", "vi": "chật, rộng", "ex": "The shirt is tight, but the jumper is loose.", "w": ["tight", "loose"]}
+      - {"n": 9, "answer": "nice, lovely", "vi": "đẹp", "ex": "That's a really nice dress. It's lovely.", "w": ["nice", "lovely"]}
+      - {"n": 10, "answer": "horrible, awful", "vi": "xấu, kinh khủng", "ex": "I don't like that hat. It's horrible.", "w": ["horrible", "awful"]}
+      - {"n": 11, "answer": "size", "vi": "cỡ", "ex": "What size are you?", "w": ["size"]}
+      - {"n": 12, "answer": "medium", "vi": "cỡ vừa", "ex": "I'm a medium.", "w": ["medium"]}
+    lines:
+      - {"emma": "Seven. uncomfortable. uncomfortable. Those boots are uncomfortable. Those boots are uncomfortable.", "focus": 0}
+      - {"emma": "Eight. tight, loose. tight, loose. The shirt is tight, but the jumper is loose. The shirt is tight, but the jumper is loose.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. nice, lovely. nice, lovely. That's a really nice dress. It's lovely. That's a really nice dress. It's lovely.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. horrible, awful. horrible, awful. I don't like that hat. It's horrible. I don't like that hat. It's horrible.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. size. size. What size are you? What size are you?", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. medium. medium. I'm a medium. I'm a medium.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "take", "vi": "mặc cỡ (số)", "ex": "What size do you take?", "w": ["take"]}
+      - {"n": 14, "answer": "wrong", "vi": "sai", "ex": "This shirt is the wrong size.", "w": ["wrong"]}
+      - {"n": 15, "answer": "fit", "vi": "vừa", "ex": "These trousers don't fit.", "w": ["fit"]}
+      - {"n": 16, "answer": "too", "vi": "quá", "ex": "It's too long for me.", "w": ["too"]}
+      - {"n": 17, "answer": "very", "vi": "rất", "ex": "It's very long, but I like it.", "w": ["very"]}
+      - {"n": 18, "answer": "help", "vi": "giúp", "ex": "Do you need any help?", "w": ["help"]}
+    lines:
+      - {"emma": "Thirteen. take. take. What size do you take? What size do you take?", "focus": 0}
+      - {"emma": "Fourteen. wrong. wrong. This shirt is the wrong size. This shirt is the wrong size.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. fit. fit. These trousers don't fit. These trousers don't fit.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. too. too. It's too long for me. It's too long for me.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. very. very. It's very long, but I like it. It's very long, but I like it.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. help. help. Do you need any help? Do you need any help?", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "I'm looking for", "vi": "tôi đang tìm", "ex": "I'm looking for a black skirt."}
+      - {"n": 20, "answer": "can", "vi": "có thể", "ex": "Can I help you?", "w": ["can"]}
+      - {"n": 21, "answer": "try on", "vi": "mặc thử", "ex": "Can I try it on?", "w": ["try on"]}
+      - {"n": 22, "answer": "changing room", "vi": "phòng thử đồ", "ex": "The changing room is over there.", "w": ["changing room"]}
+      - {"n": 23, "answer": "look", "vi": "trông", "ex": "That looks really nice.", "w": ["look"]}
+      - {"n": 24, "answer": "I'll take it", "vi": "tôi lấy cái này", "ex": "I like it. I'll take it.", "w": ["take"]}
+    lines:
+      - {"emma": "Nineteen. I'm looking for. I'm looking for. I'm looking for a black skirt. I'm looking for a black skirt.", "focus": 0}
+      - {"emma": "Twenty. can. can. Can I help you? Can I help you?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. try on. try on. Can I try it on? Can I try it on?", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. changing room. changing room. The changing room is over there. The changing room is over there.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. look. look. That looks really nice. That looks really nice.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. I'll take it. I'll take it. I like it. I'll take it. I like it. I'll take it.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "I'll leave it", "vi": "tôi không lấy", "ex": "No, thanks. I'll leave it.", "w": ["I'll leave it/them", "leave"]}
+      - {"n": 26, "answer": "pay", "vi": "trả tiền", "ex": "Where do I pay?", "w": ["pay"]}
+      - {"n": 27, "answer": "cash desk", "vi": "quầy thu ngân", "ex": "The cash desk is at the front.", "w": ["cash desk", "desk"]}
+      - {"n": 28, "answer": "credit card", "vi": "thẻ tín dụng", "ex": "Can I pay by credit card?", "w": ["credit card", "card"]}
+      - {"n": 29, "answer": "need", "vi": "cần", "ex": "I need a new coat.", "w": ["need"]}
+      - {"n": 30, "answer": "shop assistant, customer", "vi": "người bán hàng, khách hàng", "ex": "The shop assistant helps the customer.", "w": ["shop assistant", "customer"]}
+    lines:
+      - {"emma": "Twenty-five. I'll leave it. I'll leave it. No, thanks. I'll leave it. No, thanks. I'll leave it.", "focus": 0}
+      - {"emma": "Twenty-six. pay. pay. Where do I pay? Where do I pay?", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. cash desk. cash desk. The cash desk is at the front. The cash desk is at the front.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. credit card. credit card. Can I pay by credit card? Can I pay by credit card?", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. need. need. I need a new coat. I need a new coat.", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. shop assistant, customer. shop assistant, customer. The shop assistant helps the customer. The shop assistant helps the customer.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (31–36)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 31, "answer": "department store", "vi": "cửa hàng bách hóa", "ex": "We bought it in a big department store."}
+      - {"n": 32, "answer": "sale", "vi": "đợt giảm giá", "ex": "Everything is half price in the sale."}
+      - {"n": 33, "answer": "discount", "vi": "giảm giá", "ex": "Can I have a discount?"}
+      - {"n": 34, "answer": "refund", "vi": "hoàn tiền", "ex": "I'd like a refund, please."}
+      - {"n": 35, "answer": "exchange", "vi": "đổi hàng", "ex": "Can I exchange this for a bigger size?"}
+      - {"n": 36, "answer": "receipt", "vi": "hóa đơn", "ex": "Keep the receipt."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-one. department store. department store. We bought it in a big department store. We bought it in a big department store.", "focus": 0}
+      - {"tom": "Thirty-two. sale. sale. Everything is half price in the sale. Everything is half price in the sale.", "focus": 1, "reveal": [31]}
+      - {"tom": "Thirty-three. discount. discount. Can I have a discount? Can I have a discount?", "focus": 2, "reveal": [32]}
+      - {"tom": "Thirty-four. refund. refund. I'd like a refund, please. I'd like a refund, please.", "focus": 3, "reveal": [33]}
+      - {"tom": "Thirty-five. exchange. exchange. Can I exchange this for a bigger size? Can I exchange this for a bigger size?", "focus": 4, "reveal": [34]}
+      - {"tom": "Thirty-six. receipt. receipt. Keep the receipt. Keep the receipt.", "focus": 5, "reveal": [35]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (37–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "price tag", "vi": "nhãn giá", "ex": "There's no price tag on this shirt."}
+      - {"n": 38, "answer": "brand", "vi": "thương hiệu", "ex": "It's an expensive brand."}
+      - {"n": 39, "answer": "fashion", "vi": "thời trang", "ex": "She's very interested in fashion."}
+      - {"n": 40, "answer": "second-hand", "vi": "đồ cũ", "ex": "He buys second-hand clothes online."}
+      - {"n": 41, "answer": "queue", "vi": "hàng (người xếp hàng)", "ex": "There's a long queue at the cash desk."}
+      - {"n": 42, "answer": "bargain", "vi": "món hời", "ex": "Only five dollars? That's a bargain!"}
+    lines:
+      - {"tom": "Thirty-seven. price tag. price tag. There's no price tag on this shirt. There's no price tag on this shirt.", "focus": 0}
+      - {"tom": "Thirty-eight. brand. brand. It's an expensive brand. It's an expensive brand.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. fashion. fashion. She's very interested in fashion. She's very interested in fashion.", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. second-hand. second-hand. He buys second-hand clothes online. He buys second-hand clothes online.", "focus": 3, "reveal": [39]}
+      - {"tom": "Forty-one. queue. queue. There's a long queue at the cash desk. There's a long queue at the cash desk.", "focus": 4, "reveal": [40]}
+      - {"tom": "Forty-two. bargain. bargain. Only five dollars? That's a bargain! Only five dollars? That's a bargain!", "focus": 5, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "suit someone", "vi": "hợp với ai", "ex": "That colour really suits you."}
+      - {"n": 44, "answer": "go with", "vi": "hợp với (đồ khác)", "ex": "These shoes go with my dress."}
+      - {"n": 45, "answer": "in stock", "vi": "còn hàng", "ex": "Have you got this in stock?"}
+      - {"n": 46, "answer": "browse", "vi": "xem hàng", "ex": "I'm just browsing, thanks."}
+      - {"n": 47, "answer": "mirror", "vi": "gương", "ex": "Is there a mirror in the changing room?"}
+      - {"n": 48, "answer": "shopping centre", "vi": "trung tâm mua sắm", "ex": "Let's meet at the shopping centre."}
+    lines:
+      - {"tom": "Forty-three. suit someone. suit someone. That colour really suits you. That colour really suits you.", "focus": 0}
+      - {"tom": "Forty-four. go with. go with. These shoes go with my dress. These shoes go with my dress.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. in stock. in stock. Have you got this in stock? Have you got this in stock?", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. browse. browse. I'm just browsing, thanks. I'm just browsing, thanks.", "focus": 3, "reveal": [45]}
+      - {"tom": "Forty-seven. mirror. mirror. Is there a mirror in the changing room? Is there a mirror in the changing room?", "focus": 4, "reveal": [46]}
+      - {"tom": "Forty-eight. shopping centre. shopping centre. Let's meet at the shopping centre. Let's meet at the shopping centre.", "focus": 5, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [48]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (49–54)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 49, "answer": "Can I help you?", "vi": "Tôi giúp gì được ạ?"}
+      - {"n": 50, "answer": "Yes, I'm looking for a jacket.", "vi": "Vâng, tôi đang tìm áo khoác."}
+      - {"n": 51, "answer": "What size are you?", "vi": "Chị mặc cỡ nào?"}
+      - {"n": 52, "answer": "I'm a medium, I think.", "vi": "Tôi nghĩ là cỡ vừa."}
+      - {"n": 53, "answer": "Can I try this on, please?", "vi": "Tôi mặc thử cái này được không?"}
+      - {"n": 54, "answer": "Of course. The changing room is over there.", "vi": "Tất nhiên. Phòng thử đồ ở đằng kia."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"tom": "Forty-nine. Can I help you? Can I help you?", "focus": 0}
+      - {"emma": "Fifty. Yes, I'm looking for a jacket. Yes, I'm looking for a jacket.", "focus": 1, "reveal": [49]}
+      - {"tom": "Fifty-one. What size are you? What size are you?", "focus": 2, "reveal": [50]}
+      - {"emma": "Fifty-two. I'm a medium, I think. I'm a medium, I think.", "focus": 3, "reveal": [51]}
+      - {"emma": "Fifty-three. Can I try this on, please? Can I try this on, please?", "focus": 4, "reveal": [52]}
+      - {"tom": "Fifty-four. Of course. The changing room is over there. Of course. The changing room is over there.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "It's too tight. Have you got a bigger size?", "vi": "Chật quá. Có cỡ lớn hơn không?"}
+      - {"n": 56, "answer": "Here's a large.", "vi": "Đây là cỡ lớn."}
+      - {"n": 57, "answer": "How much is it?", "vi": "Cái này bao nhiêu tiền?"}
+      - {"n": 58, "answer": "It's on sale. Only two hundred thousand dong.", "vi": "Đang giảm giá. Chỉ hai trăm nghìn đồng."}
+      - {"n": 59, "answer": "Have you got it in black?", "vi": "Có màu đen không?"}
+      - {"n": 60, "answer": "Sorry, only in blue and grey.", "vi": "Xin lỗi, chỉ có màu xanh và xám."}
+    lines:
+      - {"emma": "Fifty-five. It's too tight. Have you got a bigger size? It's too tight. Have you got a bigger size?", "focus": 0}
+      - {"tom": "Fifty-six. Here's a large. Here's a large.", "focus": 1, "reveal": [55]}
+      - {"emma": "Fifty-seven. How much is it? How much is it?", "focus": 2, "reveal": [56]}
+      - {"tom": "Fifty-eight. It's on sale. Only two hundred thousand dong. It's on sale. Only two hundred thousand dong.", "focus": 3, "reveal": [57]}
+      - {"emma": "Fifty-nine. Have you got it in black? Have you got it in black?", "focus": 4, "reveal": [58]}
+      - {"tom": "Sixty. Sorry, only in blue and grey. Sorry, only in blue and grey.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "That looks great on you.", "vi": "Bạn mặc trông đẹp lắm."}
+      - {"n": 62, "answer": "Thanks. I'll take it.", "vi": "Cảm ơn. Tôi lấy cái này."}
+      - {"n": 63, "answer": "How would you like to pay?", "vi": "Chị muốn trả bằng gì?"}
+      - {"n": 64, "answer": "By card, please.", "vi": "Bằng thẻ."}
+      - {"n": 65, "answer": "Do you need any help?", "vi": "Anh cần giúp gì không?"}
+      - {"n": 66, "answer": "No, thanks. I'm just looking.", "vi": "Không, cảm ơn. Tôi chỉ xem thôi."}
+    lines:
+      - {"tom": "Sixty-one. That looks great on you. That looks great on you.", "focus": 0}
+      - {"emma": "Sixty-two. Thanks. I'll take it. Thanks. I'll take it.", "focus": 1, "reveal": [61]}
+      - {"tom": "Sixty-three. How would you like to pay? How would you like to pay?", "focus": 2, "reveal": [62]}
+      - {"emma": "Sixty-four. By card, please. By card, please.", "focus": 3, "reveal": [63]}
+      - {"emma": "Sixty-five. Do you need any help? Do you need any help?", "focus": 4, "reveal": [64]}
+      - {"tom": "Sixty-six. No, thanks. I'm just looking. No, thanks. I'm just looking.", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "These shoes don't fit. Can I change them?", "vi": "Giày này không vừa. Tôi đổi được không?"}
+      - {"n": 68, "answer": "Yes, if you've got the receipt.", "vi": "Được, nếu anh còn hóa đơn."}
+      - {"n": 69, "answer": "Where's the cash desk, please?", "vi": "Quầy thu ngân ở đâu ạ?"}
+      - {"n": 70, "answer": "It's at the front, near the door.", "vi": "Ở phía trước, gần cửa."}
+      - {"n": 71, "answer": "It's a bit expensive. I'll leave it, thanks.", "vi": "Hơi đắt. Tôi không lấy, cảm ơn."}
+      - {"n": 72, "answer": "Do you like shopping for clothes?", "vi": "Bạn có thích mua quần áo không?"}
+    lines:
+      - {"tom": "Sixty-seven. These shoes don't fit. Can I change them? These shoes don't fit. Can I change them?", "focus": 0}
+      - {"emma": "Sixty-eight. Yes, if you've got the receipt. Yes, if you've got the receipt.", "focus": 1, "reveal": [67]}
+      - {"tom": "Sixty-nine. Where's the cash desk, please? Where's the cash desk, please?", "focus": 2, "reveal": [68]}
+      - {"emma": "Seventy. It's at the front, near the door. It's at the front, near the door.", "focus": 3, "reveal": [69]}
+      - {"tom": "Seventy-one. It's a bit expensive. I'll leave it, thanks. It's a bit expensive. I'll leave it, thanks.", "focus": 4, "reveal": [70]}
+      - {"emma": "Seventy-two. Do you like shopping for clothes? Do you like shopping for clothes?", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "Not really. I prefer shopping online.", "vi": "Không lắm. Mình thích mua trên mạng hơn."}
+      - {"n": 74, "answer": "How often do you buy clothes?", "vi": "Bao lâu bạn mua quần áo một lần?"}
+      - {"n": 75, "answer": "About three times a year.", "vi": "Khoảng ba lần một năm."}
+      - {"n": 76, "answer": "What was the last thing you bought?", "vi": "Lần gần nhất bạn mua gì?"}
+      - {"n": 77, "answer": "A black shirt for my job at the café.", "vi": "Một chiếc sơ mi đen để đi làm ở quán."}
+    lines:
+      - {"tom": "Seventy-three. Not really. I prefer shopping online. Not really. I prefer shopping online.", "focus": 0}
+      - {"tom": "Seventy-four. How often do you buy clothes? How often do you buy clothes?", "focus": 1, "reveal": [73]}
+      - {"emma": "Seventy-five. About three times a year. About three times a year.", "focus": 2, "reveal": [74]}
+      - {"emma": "Seventy-six. What was the last thing you bought? What was the last thing you bought?", "focus": 3, "reveal": [75]}
+      - {"tom": "Seventy-seven. A black shirt for my job at the café. A black shirt for my job at the café.", "say": "Seventy-seven. A black shirt for my job at the cafe. A black shirt for my job at the cafe.", "focus": 4, "reveal": [76]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [77]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 20.", "say": "Well done! See you in Unit twenty.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 20."}
+

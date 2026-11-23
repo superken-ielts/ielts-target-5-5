@@ -1,0 +1,307 @@
+# Video nghe – viết (dictation) Unit 20 · Money — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U20-money-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U20 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U20-money-dictation
+activity: U20-words
+title: "Unit 20 · Money"
+subtitle: "Dictation · listen and write: money and paying"
+title_vi: "Nghe – viết 10 phút: tiền bạc — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 20"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 20: Money. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty: Money. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 20: tiền bạc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 27 words from the book. You hear each word twice, and then an example sentence twice. Then 22 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-seven words from the book. You hear each word twice, and then an example sentence twice. Then twenty-two more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 27 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 22 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "cost", "vi": "giá, tốn", "ex": "How much does it cost?", "w": ["cost"]}
+      - {"n": 2, "answer": "each", "vi": "mỗi cái", "ex": "The CDs cost nine euros each.", "w": ["each"]}
+      - {"n": 3, "answer": "altogether", "vi": "tổng cộng", "ex": "That's twenty-seven euros altogether.", "w": ["altogether"]}
+      - {"n": 4, "answer": "cash", "vi": "tiền mặt", "ex": "Can I pay in cash?", "w": ["cash"]}
+      - {"n": 5, "answer": "notes", "vi": "tiền giấy", "ex": "I've only got notes, no coins.", "w": ["notes"]}
+      - {"n": 6, "answer": "coin", "vi": "tiền xu", "ex": "Have you got a one euro coin?", "w": ["coin"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. cost. cost. How much does it cost? How much does it cost?", "focus": 0}
+      - {"emma": "Two. each. each. The CDs cost nine euros each. The CDs cost nine euros each.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. altogether. altogether. That's twenty-seven euros altogether. That's twenty-seven euros altogether.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. cash. cash. Can I pay in cash? Can I pay in cash?", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. notes. notes. I've only got notes, no coins. I've only got notes, no coins.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. coin. coin. Have you got a one euro coin? Have you got a one euro coin?", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "change", "vi": "tiền thừa", "ex": "Here's your change.", "w": ["change"]}
+      - {"n": 8, "answer": "credit card", "vi": "thẻ tín dụng", "ex": "Can I pay by credit card?", "w": ["credit card", "card"]}
+      - {"n": 9, "answer": "debit card", "vi": "thẻ ghi nợ", "ex": "I usually pay by debit card.", "w": ["debit card"]}
+      - {"n": 10, "answer": "bank account", "vi": "tài khoản ngân hàng", "ex": "The money comes out of my bank account.", "w": ["bank account", "account"]}
+      - {"n": 11, "answer": "enter, put in", "vi": "nhập", "ex": "Please enter your PIN.", "w": ["enter", "put in"]}
+      - {"n": 12, "answer": "PIN number", "vi": "mã PIN", "ex": "Don't tell anyone your PIN number.", "w": ["PIN", "number"]}
+    lines:
+      - {"emma": "Seven. change. change. Here's your change. Here's your change.", "focus": 0}
+      - {"emma": "Eight. credit card. credit card. Can I pay by credit card? Can I pay by credit card?", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. debit card. debit card. I usually pay by debit card. I usually pay by debit card.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. bank account. bank account. The money comes out of my bank account. The money comes out of my bank account.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. enter, put in. enter, put in. Please enter your PIN. Please enter your PIN.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. PIN number. PIN number. Don't tell anyone your PIN number. Don't tell anyone your PIN number.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "cheque", "vi": "séc", "ex": "Can I pay by cheque?", "w": ["cheque"]}
+      - {"n": 14, "answer": "receipt", "vi": "hóa đơn", "ex": "Can I have a receipt, please?", "w": ["receipt"]}
+      - {"n": 15, "answer": "buy, bought", "vi": "mua", "ex": "She bought a new phone.", "w": ["buy"]}
+      - {"n": 16, "answer": "sell, sold", "vi": "bán", "ex": "He sold his old car.", "w": ["sell"]}
+      - {"n": 17, "answer": "price", "vi": "giá", "ex": "What's the price of this bag?", "w": ["price"]}
+      - {"n": 18, "answer": "half price", "vi": "nửa giá", "ex": "The jeans are half price today.", "w": ["half price"]}
+    lines:
+      - {"emma": "Thirteen. cheque. cheque. Can I pay by cheque? Can I pay by cheque?", "focus": 0}
+      - {"emma": "Fourteen. receipt. receipt. Can I have a receipt, please? Can I have a receipt, please?", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. buy, bought. buy, bought. She bought a new phone. She bought a new phone.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. sell, sold. sell, sold. He sold his old car. He sold his old car.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. price. price. What's the price of this bag? What's the price of this bag?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. half price. half price. The jeans are half price today. The jeans are half price today.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "spend, spent", "vi": "tiêu (tiền)", "ex": "How much do you spend on food?", "w": ["spend"]}
+      - {"n": 20, "answer": "free", "vi": "miễn phí", "ex": "The water is free.", "w": ["free"]}
+      - {"n": 21, "answer": "bill", "vi": "hóa đơn (phải trả)", "ex": "Can we have the bill, please?", "w": ["bill"]}
+      - {"n": 22, "answer": "online", "vi": "trên mạng", "ex": "I pay my phone bill online.", "w": ["online"]}
+      - {"n": 23, "answer": "save", "vi": "tiết kiệm", "ex": "You save ten percent if you pay now.", "w": ["save"]}
+      - {"n": 24, "answer": "fare", "vi": "tiền vé", "ex": "The bus fare is very cheap.", "w": ["fare"]}
+    lines:
+      - {"emma": "Nineteen. spend, spent. spend, spent. How much do you spend on food? How much do you spend on food?", "focus": 0}
+      - {"emma": "Twenty. free. free. The water is free. The water is free.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. bill. bill. Can we have the bill, please? Can we have the bill, please?", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. online. online. I pay my phone bill online. I pay my phone bill online.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. save. save. You save ten percent if you pay now. You save ten percent if you pay now.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. fare. fare. The bus fare is very cheap. The bus fare is very cheap.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–27)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "earn", "vi": "kiếm (tiền)", "ex": "She earns a lot of money.", "w": ["earn"]}
+      - {"n": 26, "answer": "lottery", "vi": "xổ số", "ex": "He plays the lottery every week.", "w": ["lottery"]}
+      - {"n": 27, "answer": "win, won", "vi": "trúng, thắng", "ex": "She won a lot of money.", "w": ["win"]}
+    lines:
+      - {"emma": "Twenty-five. earn. earn. She earns a lot of money. She earns a lot of money.", "focus": 0}
+      - {"emma": "Twenty-six. lottery. lottery. He plays the lottery every week. He plays the lottery every week.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. win, won. win, won. She won a lot of money. She won a lot of money.", "focus": 2, "reveal": [26]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [27]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (28–33)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 28, "answer": "wallet", "vi": "ví (nam)", "ex": "I left my wallet at home."}
+      - {"n": 29, "answer": "purse", "vi": "ví (nữ)", "ex": "Her purse is in her handbag."}
+      - {"n": 30, "answer": "cash machine", "vi": "máy rút tiền", "ex": "Is there a cash machine near here?"}
+      - {"n": 31, "answer": "take out money", "vi": "rút tiền", "ex": "I need to take out some money."}
+      - {"n": 32, "answer": "borrow", "vi": "mượn", "ex": "Can I borrow ten thousand dong?"}
+      - {"n": 33, "answer": "lend", "vi": "cho mượn", "ex": "Can you lend me some money?"}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-eight. wallet. wallet. I left my wallet at home. I left my wallet at home.", "focus": 0}
+      - {"tom": "Twenty-nine. purse. purse. Her purse is in her handbag. Her purse is in her handbag.", "focus": 1, "reveal": [28]}
+      - {"tom": "Thirty. cash machine. cash machine. Is there a cash machine near here? Is there a cash machine near here?", "focus": 2, "reveal": [29]}
+      - {"tom": "Thirty-one. take out money. take out money. I need to take out some money. I need to take out some money.", "focus": 3, "reveal": [30]}
+      - {"tom": "Thirty-two. borrow. borrow. Can I borrow ten thousand dong? Can I borrow ten thousand dong?", "focus": 4, "reveal": [31]}
+      - {"tom": "Thirty-three. lend. lend. Can you lend me some money? Can you lend me some money?", "focus": 5, "reveal": [32]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (34–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 34, "answer": "pay back", "vi": "trả lại (tiền nợ)", "ex": "I'll pay you back tomorrow."}
+      - {"n": 35, "answer": "salary", "vi": "lương", "ex": "Her salary is paid every month."}
+      - {"n": 36, "answer": "pocket money", "vi": "tiền tiêu vặt", "ex": "The children get pocket money every week."}
+      - {"n": 37, "answer": "rent", "vi": "tiền thuê nhà", "ex": "We pay the rent every month."}
+      - {"n": 38, "answer": "budget", "vi": "ngân sách", "ex": "We're on a small budget."}
+      - {"n": 39, "answer": "afford", "vi": "đủ tiền (mua)", "ex": "I can't afford a new laptop."}
+    lines:
+      - {"tom": "Thirty-four. pay back. pay back. I'll pay you back tomorrow. I'll pay you back tomorrow.", "focus": 0}
+      - {"tom": "Thirty-five. salary. salary. Her salary is paid every month. Her salary is paid every month.", "focus": 1, "reveal": [34]}
+      - {"tom": "Thirty-six. pocket money. pocket money. The children get pocket money every week. The children get pocket money every week.", "focus": 2, "reveal": [35]}
+      - {"tom": "Thirty-seven. rent. rent. We pay the rent every month. We pay the rent every month.", "focus": 3, "reveal": [36]}
+      - {"tom": "Thirty-eight. budget. budget. We're on a small budget. We're on a small budget.", "focus": 4, "reveal": [37]}
+      - {"tom": "Thirty-nine. afford. afford. I can't afford a new laptop. I can't afford a new laptop.", "focus": 5, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "waste money", "vi": "phí tiền", "ex": "Don't waste money on things you don't need."}
+      - {"n": 41, "answer": "discount", "vi": "giảm giá", "ex": "Students get a ten percent discount."}
+      - {"n": 42, "answer": "tip", "vi": "tiền boa", "ex": "Leave a tip for the waiter."}
+      - {"n": 43, "answer": "expensive, cheap", "vi": "đắt, rẻ", "ex": "Taxis are expensive, but buses are cheap."}
+      - {"n": 44, "answer": "bank transfer", "vi": "chuyển khoản", "ex": "I paid by bank transfer."}
+      - {"n": 45, "answer": "exchange rate", "vi": "tỉ giá", "ex": "What's the exchange rate today?"}
+    lines:
+      - {"tom": "Forty. waste money. waste money. Don't waste money on things you don't need. Don't waste money on things you don't need.", "focus": 0}
+      - {"tom": "Forty-one. discount. discount. Students get a ten percent discount. Students get a ten percent discount.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. tip. tip. Leave a tip for the waiter. Leave a tip for the waiter.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. expensive, cheap. expensive, cheap. Taxis are expensive, but buses are cheap. Taxis are expensive, but buses are cheap.", "focus": 3, "reveal": [42]}
+      - {"tom": "Forty-four. bank transfer. bank transfer. I paid by bank transfer. I paid by bank transfer.", "focus": 4, "reveal": [43]}
+      - {"tom": "Forty-five. exchange rate. exchange rate. What's the exchange rate today? What's the exchange rate today?", "focus": 5, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (46–49)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 46, "answer": "currency", "vi": "tiền tệ", "ex": "The currency in Vietnam is the dong."}
+      - {"n": 47, "answer": "price tag", "vi": "nhãn giá", "ex": "Look at the price tag."}
+      - {"n": 48, "answer": "cashier", "vi": "thu ngân", "ex": "Pay the cashier at the front."}
+      - {"n": 49, "answer": "save up", "vi": "để dành", "ex": "He's saving up for a new laptop."}
+    lines:
+      - {"tom": "Forty-six. currency. currency. The currency in Vietnam is the dong. The currency in Vietnam is the dong.", "focus": 0}
+      - {"tom": "Forty-seven. price tag. price tag. Look at the price tag. Look at the price tag.", "focus": 1, "reveal": [46]}
+      - {"tom": "Forty-eight. cashier. cashier. Pay the cashier at the front. Pay the cashier at the front.", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. save up. save up. He's saving up for a new laptop. He's saving up for a new laptop.", "focus": 3, "reveal": [48]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [49]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (50–55)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 50, "answer": "How much is this?", "vi": "Cái này bao nhiêu tiền?"}
+      - {"n": 51, "answer": "It's fifty thousand dong.", "vi": "Năm mươi nghìn đồng."}
+      - {"n": 52, "answer": "How much are these?", "vi": "Mấy cái này bao nhiêu?"}
+      - {"n": 53, "answer": "They're five euros each.", "vi": "Năm euro mỗi cái."}
+      - {"n": 54, "answer": "Can I pay by card?", "vi": "Tôi trả bằng thẻ được không?"}
+      - {"n": 55, "answer": "Sorry, cash only.", "vi": "Xin lỗi, chỉ nhận tiền mặt."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty. How much is this? How much is this?", "focus": 0}
+      - {"tom": "Fifty-one. It's fifty thousand dong. It's fifty thousand dong.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. How much are these? How much are these?", "focus": 2, "reveal": [51]}
+      - {"emma": "Fifty-three. They're five euros each. They're five euros each.", "focus": 3, "reveal": [52]}
+      - {"emma": "Fifty-four. Can I pay by card? Can I pay by card?", "focus": 4, "reveal": [53]}
+      - {"tom": "Fifty-five. Sorry, cash only. Sorry, cash only.", "focus": 5, "reveal": [54]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [55]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (56–61)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 56, "answer": "Please enter your PIN.", "vi": "Vui lòng nhập mã PIN."}
+      - {"n": 57, "answer": "Can I have a receipt, please?", "vi": "Cho tôi xin hóa đơn."}
+      - {"n": 58, "answer": "Keep the change.", "vi": "Khỏi trả lại tiền thừa."}
+      - {"n": 59, "answer": "Can we have the bill, please?", "vi": "Cho chúng tôi tính tiền."}
+      - {"n": 60, "answer": "That's too expensive.", "vi": "Đắt quá."}
+      - {"n": 61, "answer": "Can you give me a discount?", "vi": "Bớt cho tôi được không?"}
+    lines:
+      - {"tom": "Fifty-six. Please enter your PIN. Please enter your PIN.", "focus": 0}
+      - {"emma": "Fifty-seven. Can I have a receipt, please? Can I have a receipt, please?", "focus": 1, "reveal": [56]}
+      - {"tom": "Fifty-eight. Keep the change. Keep the change.", "focus": 2, "reveal": [57]}
+      - {"emma": "Fifty-nine. Can we have the bill, please? Can we have the bill, please?", "focus": 3, "reveal": [58]}
+      - {"tom": "Sixty. That's too expensive. That's too expensive.", "focus": 4, "reveal": [59]}
+      - {"tom": "Sixty-one. Can you give me a discount? Can you give me a discount?", "focus": 5, "reveal": [60]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [61]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (62–67)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 62, "answer": "Is there a cash machine near here?", "vi": "Gần đây có máy rút tiền không?"}
+      - {"n": 63, "answer": "Yes, there's one next to the bank.", "vi": "Có, cạnh ngân hàng."}
+      - {"n": 64, "answer": "How much do you spend on food every week?", "vi": "Mỗi tuần bạn tiêu bao nhiêu cho ăn uống?"}
+      - {"n": 65, "answer": "About seven hundred thousand dong.", "vi": "Khoảng bảy trăm nghìn đồng."}
+      - {"n": 66, "answer": "Do you ever shop online?", "vi": "Bạn có hay mua hàng trên mạng không?"}
+      - {"n": 67, "answer": "All the time. Delivery is often free.", "vi": "Suốt. Thường được miễn phí giao hàng."}
+    lines:
+      - {"emma": "Sixty-two. Is there a cash machine near here? Is there a cash machine near here?", "focus": 0}
+      - {"tom": "Sixty-three. Yes, there's one next to the bank. Yes, there's one next to the bank.", "focus": 1, "reveal": [62]}
+      - {"emma": "Sixty-four. How much do you spend on food every week? How much do you spend on food every week?", "focus": 2, "reveal": [63]}
+      - {"tom": "Sixty-five. About seven hundred thousand dong. About seven hundred thousand dong.", "focus": 3, "reveal": [64]}
+      - {"emma": "Sixty-six. Do you ever shop online? Do you ever shop online?", "focus": 4, "reveal": [65]}
+      - {"tom": "Sixty-seven. All the time. Delivery is often free. All the time. Delivery is often free.", "focus": 5, "reveal": [66]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (68–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 68, "answer": "Can you lend me some money?", "vi": "Bạn cho mình mượn ít tiền được không?"}
+      - {"n": 69, "answer": "Sure. How much do you need?", "vi": "Được. Bạn cần bao nhiêu?"}
+      - {"n": 70, "answer": "I'll pay you back on Friday.", "vi": "Thứ Sáu mình trả lại."}
+      - {"n": 71, "answer": "I'm saving money for a trip.", "vi": "Mình đang để dành tiền đi du lịch."}
+      - {"n": 72, "answer": "Where are you going?", "vi": "Bạn định đi đâu?"}
+      - {"n": 73, "answer": "Australia, I hope, for my studies.", "vi": "Úc, mình mong vậy, để đi học."}
+    lines:
+      - {"tom": "Sixty-eight. Can you lend me some money? Can you lend me some money?", "focus": 0}
+      - {"emma": "Sixty-nine. Sure. How much do you need? Sure. How much do you need?", "focus": 1, "reveal": [68]}
+      - {"tom": "Seventy. I'll pay you back on Friday. I'll pay you back on Friday.", "focus": 2, "reveal": [69]}
+      - {"tom": "Seventy-one. I'm saving money for a trip. I'm saving money for a trip.", "focus": 3, "reveal": [70]}
+      - {"emma": "Seventy-two. Where are you going? Where are you going?", "focus": 4, "reveal": [71]}
+      - {"tom": "Seventy-three. Australia, I hope, for my studies. Australia, I hope, for my studies.", "focus": 5, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [73]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (74–79)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 74, "answer": "The bus fare is only seven thousand dong.", "vi": "Vé xe buýt chỉ bảy nghìn đồng."}
+      - {"n": 75, "answer": "I won a prize in the lottery!", "vi": "Mình trúng xổ số!"}
+      - {"n": 76, "answer": "Really? How much did you win?", "vi": "Thật à? Bạn trúng bao nhiêu?"}
+      - {"n": 77, "answer": "Only twenty thousand dong!", "vi": "Chỉ hai mươi nghìn đồng thôi!"}
+      - {"n": 78, "answer": "Do you take credit cards?", "vi": "Ở đây có nhận thẻ tín dụng không?"}
+      - {"n": 79, "answer": "Yes, Visa and Mastercard.", "vi": "Có, Visa và Mastercard."}
+    lines:
+      - {"emma": "Seventy-four. The bus fare is only seven thousand dong. The bus fare is only seven thousand dong.", "focus": 0}
+      - {"emma": "Seventy-five. I won a prize in the lottery! I won a prize in the lottery!", "focus": 1, "reveal": [74]}
+      - {"tom": "Seventy-six. Really? How much did you win? Really? How much did you win?", "focus": 2, "reveal": [75]}
+      - {"emma": "Seventy-seven. Only twenty thousand dong! Only twenty thousand dong!", "focus": 3, "reveal": [76]}
+      - {"emma": "Seventy-eight. Do you take credit cards? Do you take credit cards?", "focus": 4, "reveal": [77]}
+      - {"tom": "Seventy-nine. Yes, Visa and Mastercard. Yes, Visa and Mastercard.", "focus": 5, "reveal": [78]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [79]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 21.", "say": "Well done! See you in Unit twenty-one.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 21."}
+

@@ -1,0 +1,292 @@
+# Video nghe – viết (dictation) Unit 23 · At the chemist's — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U23-chemists-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U23 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 23 chỉ có 16 mục; phần 1 thêm từ và câu trên trang 60 (Can I help you?, how often, a box of tissues,
+# pharmacist ở bài 1…).
+id: U23-chemists-dictation
+activity: U23-words
+title: "Unit 23 · At the chemist's"
+subtitle: "Dictation · listen and write: at the chemist's"
+title_vi: "Nghe – viết 10 phút: ở hiệu thuốc — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 23"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 23: At the chemist's. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-three: At the chemist's. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 23: ở hiệu thuốc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 24 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-four words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 24 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "chemist's", "vi": "hiệu thuốc", "ex": "Is there a chemist's near here?", "w": ["chemist's"]}
+      - {"n": 2, "answer": "pharmacist", "vi": "dược sĩ", "ex": "Ask the pharmacist for help."}
+      - {"n": 3, "answer": "customer", "vi": "khách hàng", "ex": "The pharmacist is talking to a customer.", "w": ["customer"]}
+      - {"n": 4, "answer": "Can I help you?", "vi": "Tôi giúp gì được ạ?", "ex": "Can I help you? — Yes, please."}
+      - {"n": 5, "answer": "cut", "vi": "cắt, đứt", "ex": "I cut my finger yesterday.", "w": ["cut"]}
+      - {"n": 6, "answer": "hurt", "vi": "đau", "ex": "It really hurts."}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. chemist's. chemist's. Is there a chemist's near here? Is there a chemist's near here?", "focus": 0}
+      - {"emma": "Two. pharmacist. pharmacist. Ask the pharmacist for help. Ask the pharmacist for help.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. customer. customer. The pharmacist is talking to a customer. The pharmacist is talking to a customer.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. Can I help you?. Can I help you?. Can I help you? — Yes, please. Can I help you? — Yes, please.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. cut. cut. I cut my finger yesterday. I cut my finger yesterday.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. hurt. hurt. It really hurts. It really hurts.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "need", "vi": "cần", "ex": "You need some antiseptic cream.", "w": ["need"]}
+      - {"n": 8, "answer": "antiseptic cream", "vi": "kem sát trùng", "ex": "Put some antiseptic cream on the cut.", "w": ["antiseptic", "cream"]}
+      - {"n": 9, "answer": "plaster", "vi": "băng dán", "ex": "Put a plaster on your finger.", "w": ["plaster"]}
+      - {"n": 10, "answer": "cotton wool", "vi": "bông gòn", "ex": "Clean the cut with some cotton wool.", "w": ["cotton wool", "wool"]}
+      - {"n": 11, "answer": "could", "vi": "có thể (xin lịch sự)", "ex": "Could I have some plasters, please?", "w": ["could"]}
+      - {"n": 12, "answer": "something", "vi": "cái gì đó", "ex": "I need something for a cold.", "w": ["something"]}
+    lines:
+      - {"emma": "Seven. need. need. You need some antiseptic cream. You need some antiseptic cream.", "focus": 0}
+      - {"emma": "Eight. antiseptic cream. antiseptic cream. Put some antiseptic cream on the cut. Put some antiseptic cream on the cut.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. plaster. plaster. Put a plaster on your finger. Put a plaster on your finger.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. cotton wool. cotton wool. Clean the cut with some cotton wool. Clean the cut with some cotton wool.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. could. could. Could I have some plasters, please? Could I have some plasters, please?", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. something. something. I need something for a cold. I need something for a cold.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "something for a cold", "vi": "thuốc trị cảm", "ex": "Have you got something for a cold?"}
+      - {"n": 14, "answer": "tablet", "vi": "viên thuốc", "ex": "Take one tablet with water.", "w": ["tablet"]}
+      - {"n": 15, "answer": "try", "vi": "dùng thử", "ex": "Try these tablets. They're very good.", "w": ["try"]}
+      - {"n": 16, "answer": "take", "vi": "uống (thuốc)", "ex": "Take two tablets every four hours.", "w": ["take"]}
+      - {"n": 17, "answer": "how often", "vi": "bao lâu một lần", "ex": "How often do I take them?"}
+      - {"n": 18, "answer": "every four hours", "vi": "cứ bốn tiếng", "ex": "Take them every four hours."}
+    lines:
+      - {"emma": "Thirteen. something for a cold. something for a cold. Have you got something for a cold? Have you got something for a cold?", "focus": 0}
+      - {"emma": "Fourteen. tablet. tablet. Take one tablet with water. Take one tablet with water.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. try. try. Try these tablets. They're very good. Try these tablets. They're very good.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. take. take. Take two tablets every four hours. Take two tablets every four hours.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. how often. how often. How often do I take them? How often do I take them?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. every four hours. every four hours. Take them every four hours. Take them every four hours.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "with water", "vi": "với nước", "ex": "Take the tablets with water."}
+      - {"n": 20, "answer": "tissue", "vi": "khăn giấy", "ex": "Can I have a tissue, please?", "w": ["tissue"]}
+      - {"n": 21, "answer": "a box of tissues", "vi": "một hộp khăn giấy", "ex": "I'd like a box of tissues."}
+      - {"n": 22, "answer": "medicine", "vi": "thuốc", "ex": "This medicine is very good.", "w": ["medicine"]}
+      - {"n": 23, "answer": "cough medicine", "vi": "thuốc ho", "ex": "I need some cough medicine."}
+      - {"n": 24, "answer": "three times a day", "vi": "ngày ba lần", "ex": "Take one tablet three times a day."}
+    lines:
+      - {"emma": "Nineteen. with water. with water. Take the tablets with water. Take the tablets with water.", "focus": 0}
+      - {"emma": "Twenty. tissue. tissue. Can I have a tissue, please? Can I have a tissue, please?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. a box of tissues. a box of tissues. I'd like a box of tissues. I'd like a box of tissues.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. medicine. medicine. This medicine is very good. This medicine is very good.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. cough medicine. cough medicine. I need some cough medicine. I need some cough medicine.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. three times a day. three times a day. Take one tablet three times a day. Take one tablet three times a day.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (25–30)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 25, "answer": "painkiller", "vi": "thuốc giảm đau", "ex": "Take a painkiller for your headache."}
+      - {"n": 26, "answer": "vitamins", "vi": "vitamin", "ex": "She takes vitamins every morning."}
+      - {"n": 27, "answer": "eye drops", "vi": "thuốc nhỏ mắt", "ex": "These eye drops are for dry eyes."}
+      - {"n": 28, "answer": "bandage", "vi": "băng gạc", "ex": "The nurse put a bandage on his arm."}
+      - {"n": 29, "answer": "thermometer", "vi": "nhiệt kế", "ex": "Use a thermometer to take your temperature."}
+      - {"n": 30, "answer": "first-aid kit", "vi": "hộp sơ cứu", "ex": "There's a first-aid kit in the kitchen."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-five. painkiller. painkiller. Take a painkiller for your headache. Take a painkiller for your headache.", "focus": 0}
+      - {"tom": "Twenty-six. vitamins. vitamins. She takes vitamins every morning. She takes vitamins every morning.", "focus": 1, "reveal": [25]}
+      - {"tom": "Twenty-seven. eye drops. eye drops. These eye drops are for dry eyes. These eye drops are for dry eyes.", "focus": 2, "reveal": [26]}
+      - {"tom": "Twenty-eight. bandage. bandage. The nurse put a bandage on his arm. The nurse put a bandage on his arm.", "focus": 3, "reveal": [27]}
+      - {"tom": "Twenty-nine. thermometer. thermometer. Use a thermometer to take your temperature. Use a thermometer to take your temperature.", "say": "Twenty-nine. thermometer. thermometer. Yooz a thermometer to take your temperature. Yooz a thermometer to take your temperature.", "focus": 4, "reveal": [28]}
+      - {"tom": "Thirty. first-aid kit. first-aid kit. There's a first-aid kit in the kitchen. There's a first-aid kit in the kitchen.", "focus": 5, "reveal": [29]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (31–36)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 31, "answer": "prescription", "vi": "đơn thuốc", "ex": "You need a prescription for this medicine."}
+      - {"n": 32, "answer": "dose", "vi": "liều", "ex": "Don't take more than the dose on the box."}
+      - {"n": 33, "answer": "side effect", "vi": "tác dụng phụ", "ex": "This medicine can make you sleepy. That's a side effect."}
+      - {"n": 34, "answer": "label", "vi": "nhãn", "ex": "Read the label before you take it."}
+      - {"n": 35, "answer": "after meals", "vi": "sau bữa ăn", "ex": "Take it after meals."}
+      - {"n": 36, "answer": "syrup", "vi": "siro", "ex": "The cough syrup tastes sweet."}
+    lines:
+      - {"tom": "Thirty-one. prescription. prescription. You need a prescription for this medicine. You need a prescription for this medicine.", "focus": 0}
+      - {"tom": "Thirty-two. dose. dose. Don't take more than the dose on the box. Don't take more than the dose on the box.", "focus": 1, "reveal": [31]}
+      - {"tom": "Thirty-three. side effect. side effect. This medicine can make you sleepy. That's a side effect. This medicine can make you sleepy. That's a side effect.", "focus": 2, "reveal": [32]}
+      - {"tom": "Thirty-four. label. label. Read the label before you take it. Read the label before you take it.", "focus": 3, "reveal": [33]}
+      - {"tom": "Thirty-five. after meals. after meals. Take it after meals. Take it after meals.", "focus": 4, "reveal": [34]}
+      - {"tom": "Thirty-six. syrup. syrup. The cough syrup tastes sweet. The cough syrup tastes sweet.", "focus": 5, "reveal": [35]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (37–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "cream", "vi": "kem bôi", "ex": "Put this cream on twice a day."}
+      - {"n": 38, "answer": "sunscreen", "vi": "kem chống nắng", "ex": "Wear sunscreen at the beach."}
+      - {"n": 39, "answer": "insect bite", "vi": "vết côn trùng cắn", "ex": "This cream is good for insect bites."}
+      - {"n": 40, "answer": "sore", "vi": "đau, rát", "ex": "My eyes are sore."}
+    lines:
+      - {"tom": "Thirty-seven. cream. cream. Put this cream on twice a day. Put this cream on twice a day.", "focus": 0}
+      - {"tom": "Thirty-eight. sunscreen. sunscreen. Wear sunscreen at the beach. Wear sunscreen at the beach.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. insect bite. insect bite. This cream is good for insect bites. This cream is good for insect bites.", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. sore. sore. My eyes are sore. My eyes are sore.", "focus": 3, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–44)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "allergic", "vi": "dị ứng", "ex": "Are you allergic to anything?"}
+      - {"n": 42, "answer": "swallow", "vi": "nuốt", "ex": "Swallow the tablet with water."}
+      - {"n": 43, "answer": "spoonful", "vi": "một thìa đầy", "ex": "Take two spoonfuls of the syrup."}
+      - {"n": 44, "answer": "keep out of reach of children", "vi": "để xa tầm tay trẻ em", "ex": "Keep all medicine out of reach of children."}
+    lines:
+      - {"tom": "Forty-one. allergic. allergic. Are you allergic to anything? Are you allergic to anything?", "focus": 0}
+      - {"tom": "Forty-two. swallow. swallow. Swallow the tablet with water. Swallow the tablet with water.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. spoonful. spoonful. Take two spoonfuls of the syrup. Take two spoonfuls of the syrup.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. keep out of reach of children. keep out of reach of children. Keep all medicine out of reach of children. Keep all medicine out of reach of children.", "focus": 3, "reveal": [43]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [44]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (45–50)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 45, "answer": "Can I help you?", "vi": "Tôi giúp gì được ạ?"}
+      - {"n": 46, "answer": "Yes, could I have something for a headache?", "vi": "Cho tôi thuốc trị đau đầu."}
+      - {"n": 47, "answer": "Try these tablets. They're very good.", "vi": "Thử thuốc này xem, tốt lắm."}
+      - {"n": 48, "answer": "How often do I take them?", "vi": "Bao lâu uống một lần?"}
+      - {"n": 49, "answer": "Take two every four hours, with water.", "vi": "Hai viên, bốn tiếng một lần, với nước."}
+      - {"n": 50, "answer": "I need something for a cough.", "vi": "Tôi cần thuốc ho."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-five. Can I help you? Can I help you?", "focus": 0}
+      - {"tom": "Forty-six. Yes, could I have something for a headache? Yes, could I have something for a headache?", "focus": 1, "reveal": [45]}
+      - {"emma": "Forty-seven. Try these tablets. They're very good. Try these tablets. They're very good.", "focus": 2, "reveal": [46]}
+      - {"tom": "Forty-eight. How often do I take them? How often do I take them?", "focus": 3, "reveal": [47]}
+      - {"emma": "Forty-nine. Take two every four hours, with water. Take two every four hours, with water.", "focus": 4, "reveal": [48]}
+      - {"tom": "Fifty. I need something for a cough. I need something for a cough.", "focus": 5, "reveal": [49]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [50]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 51, "answer": "Have you got a temperature?", "vi": "Anh có sốt không?"}
+      - {"n": 52, "answer": "No, I haven't. Just a sore throat.", "vi": "Không. Chỉ đau họng thôi."}
+      - {"n": 53, "answer": "This medicine is good for both.", "vi": "Thuốc này trị được cả hai."}
+      - {"n": 54, "answer": "I cut my finger. Have you got any plasters?", "vi": "Tôi bị đứt tay. Có băng dán không?"}
+      - {"n": 55, "answer": "Yes, and you need some antiseptic cream.", "vi": "Có, và anh cần kem sát trùng."}
+      - {"n": 56, "answer": "I'd like a box of tissues, please.", "vi": "Cho tôi một hộp khăn giấy."}
+    lines:
+      - {"emma": "Fifty-one. Have you got a temperature? Have you got a temperature?", "focus": 0}
+      - {"tom": "Fifty-two. No, I haven't. Just a sore throat. No, I haven't. Just a sore throat.", "focus": 1, "reveal": [51]}
+      - {"emma": "Fifty-three. This medicine is good for both. This medicine is good for both.", "focus": 2, "reveal": [52]}
+      - {"tom": "Fifty-four. I cut my finger. Have you got any plasters? I cut my finger. Have you got any plasters?", "focus": 3, "reveal": [53]}
+      - {"emma": "Fifty-five. Yes, and you need some antiseptic cream. Yes, and you need some antiseptic cream.", "focus": 4, "reveal": [54]}
+      - {"tom": "Fifty-six. I'd like a box of tissues, please. I'd like a box of tissues, please.", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 57, "answer": "Anything else?", "vi": "Anh cần gì nữa không?"}
+      - {"n": 58, "answer": "No, that's all, thanks.", "vi": "Không, vậy thôi, cảm ơn."}
+      - {"n": 59, "answer": "That's sixty thousand dong, please.", "vi": "Sáu mươi nghìn đồng ạ."}
+      - {"n": 60, "answer": "Can I take this with food?", "vi": "Tôi uống thuốc này cùng bữa ăn được không?"}
+      - {"n": 61, "answer": "Yes, take it after meals.", "vi": "Được, uống sau bữa ăn."}
+      - {"n": 62, "answer": "Is this medicine OK for children?", "vi": "Thuốc này trẻ em dùng được không?"}
+    lines:
+      - {"emma": "Fifty-seven. Anything else? Anything else?", "focus": 0}
+      - {"tom": "Fifty-eight. No, that's all, thanks. No, that's all, thanks.", "focus": 1, "reveal": [57]}
+      - {"emma": "Fifty-nine. That's sixty thousand dong, please. That's sixty thousand dong, please.", "focus": 2, "reveal": [58]}
+      - {"tom": "Sixty. Can I take this with food? Can I take this with food?", "focus": 3, "reveal": [59]}
+      - {"emma": "Sixty-one. Yes, take it after meals. Yes, take it after meals.", "focus": 4, "reveal": [60]}
+      - {"emma": "Sixty-two. Is this medicine OK for children? Is this medicine OK for children?", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 63, "answer": "No, it's only for adults.", "vi": "Không, chỉ cho người lớn."}
+      - {"n": 64, "answer": "Do I need a prescription?", "vi": "Có cần đơn thuốc không?"}
+      - {"n": 65, "answer": "No, you can buy it here.", "vi": "Không, mua ở đây được."}
+      - {"n": 66, "answer": "Read the label before you take it.", "vi": "Đọc nhãn trước khi uống."}
+      - {"n": 67, "answer": "Don't take more than eight tablets a day.", "vi": "Không uống quá tám viên một ngày."}
+      - {"n": 68, "answer": "If you still feel ill, see a doctor.", "vi": "Nếu vẫn thấy ốm thì đi khám."}
+    lines:
+      - {"tom": "Sixty-three. No, it's only for adults. No, it's only for adults.", "focus": 0}
+      - {"tom": "Sixty-four. Do I need a prescription? Do I need a prescription?", "focus": 1, "reveal": [63]}
+      - {"emma": "Sixty-five. No, you can buy it here. No, you can buy it here.", "focus": 2, "reveal": [64]}
+      - {"emma": "Sixty-six. Read the label before you take it. Read the label before you take it.", "focus": 3, "reveal": [65]}
+      - {"emma": "Sixty-seven. Don't take more than eight tablets a day. Don't take more than eight tablets a day.", "focus": 4, "reveal": [66]}
+      - {"emma": "Sixty-eight. If you still feel ill, see a doctor. If you still feel ill, see a doctor.", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "Where's the nearest pharmacy, Tom?", "vi": "Hiệu thuốc gần nhất ở đâu hả Tom?"}
+      - {"n": 70, "answer": "There's one right under my flat.", "vi": "Có một hiệu ngay dưới căn hộ của mình."}
+      - {"n": 71, "answer": "Thank you for your help.", "vi": "Cảm ơn đã giúp đỡ."}
+      - {"n": 72, "answer": "You're welcome. Get well soon!", "vi": "Không có gì. Mau khỏe nhé!"}
+      - {"n": 73, "answer": "Where can I buy plasters?", "vi": "Mua băng dán ở đâu?"}
+      - {"n": 74, "answer": "At any chemist's. There's one on every street.", "vi": "Ở hiệu thuốc nào cũng có. Phố nào cũng có một hiệu."}
+    lines:
+      - {"emma": "Sixty-nine. Where's the nearest pharmacy, Tom? Where's the nearest pharmacy, Tom?", "focus": 0}
+      - {"tom": "Seventy. There's one right under my flat. There's one right under my flat.", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. Thank you for your help. Thank you for your help.", "focus": 2, "reveal": [70]}
+      - {"emma": "Seventy-two. You're welcome. Get well soon! You're welcome. Get well soon!", "focus": 3, "reveal": [71]}
+      - {"emma": "Seventy-three. Where can I buy plasters? Where can I buy plasters?", "focus": 4, "reveal": [72]}
+      - {"tom": "Seventy-four. At any chemist's. There's one on every street. At any chemist's. There's one on every street.", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in the next module.", "say": "Well done! See you in the next module.", "vi": "Giỏi lắm! Hẹn gặp ở module tiếp theo."}
+
