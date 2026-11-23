@@ -1,0 +1,310 @@
+# Video nghe – viết (dictation) Unit 15 · Relationships — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U15-relationships-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U15 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# ⚠ của `phonemes` ở "close friends" là báo nhầm: close là tính từ /kloʊs/, đọc đúng.
+id: U15-relationships-dictation
+activity: U15-words
+title: "Unit 15 · Relationships"
+subtitle: "Dictation · listen and write: friends and relationships"
+title_vi: "Nghe – viết 10 phút: các mối quan hệ — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PEOPLE · UNIT 15"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 15: Relationships. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit fifteen: Relationships. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 15: các mối quan hệ. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 22 words from the book. You hear each word twice, and then an example sentence twice. Then 23 more useful words, and 35 useful sentences for conversation.", "say": "There are three parts. First, twenty-two words from the book. You hear each word twice, and then an example sentence twice. Then twenty-three more useful words, and thirty-five useful sentences for conversation.", "vi": "Ba phần: 22 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 23 từ thêm, 35 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "best friend", "vi": "bạn thân nhất", "ex": "Khoa is Tom's best friend.", "w": ["best friend", "friend"]}
+      - {"n": 2, "answer": "closest friend", "vi": "bạn thân", "ex": "Lucy is one of Emma's closest friends.", "w": ["closest friend"]}
+      - {"n": 3, "answer": "meet", "vi": "gặp (lần đầu)", "ex": "Her parents met at a friend's wedding.", "w": ["meet"]}
+      - {"n": 4, "answer": "get to know someone", "vi": "làm quen, hiểu ai", "ex": "It takes time to get to know people.", "w": ["get to know someone", "know"]}
+      - {"n": 5, "answer": "become", "vi": "trở thành", "ex": "They became friends at school.", "w": ["become"]}
+      - {"n": 6, "answer": "go out with someone", "vi": "hẹn hò với ai", "ex": "He's going out with a girl from his class.", "w": ["go out with someone"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. best friend. best friend. Khoa is Tom's best friend. Khoa is Tom's best friend.", "say": "One. best friend. best friend. Kwah is Tom's best friend. Kwah is Tom's best friend.", "focus": 0}
+      - {"emma": "Two. closest friend. closest friend. Lucy is one of Emma's closest friends. Lucy is one of Emma's closest friends.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. meet. meet. Her parents met at a friend's wedding. Her parents met at a friend's wedding.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. get to know someone. get to know someone. It takes time to get to know people. It takes time to get to know people.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. become. become. They became friends at school. They became friends at school.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. go out with someone. go out with someone. He's going out with a girl from his class. He's going out with a girl from his class.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "boyfriend, girlfriend", "vi": "bạn trai, bạn gái", "ex": "Has she got a boyfriend?", "w": ["boyfriend", "girlfriend"]}
+      - {"n": 8, "answer": "couple", "vi": "cặp đôi", "ex": "They're a lovely couple.", "w": ["couple"]}
+      - {"n": 9, "answer": "partner", "vi": "người yêu, bạn đời", "ex": "She lives with her partner.", "w": ["partner"]}
+      - {"n": 10, "answer": "relationship", "vi": "mối quan hệ", "ex": "They have a good relationship.", "w": ["relationship"]}
+      - {"n": 11, "answer": "get on with someone", "vi": "hợp với ai", "ex": "She gets on well with her flatmate.", "w": ["get on with someone", "well", "flatmate"]}
+      - {"n": 12, "answer": "flatmate", "vi": "bạn ở chung căn hộ", "ex": "His flatmate is from Japan.", "w": ["flatmate"]}
+    lines:
+      - {"emma": "Seven. boyfriend, girlfriend. boyfriend, girlfriend. Has she got a boyfriend? Has she got a boyfriend?", "focus": 0}
+      - {"emma": "Eight. couple. couple. They're a lovely couple. They're a lovely couple.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. partner. partner. She lives with her partner. She lives with her partner.", "say": "Nine. partner. partner. She livz with her partner. She livz with her partner.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. relationship. relationship. They have a good relationship. They have a good relationship.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. get on with someone. get on with someone. She gets on well with her flatmate. She gets on well with her flatmate.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. flatmate. flatmate. His flatmate is from Japan. His flatmate is from Japan.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "each other", "vi": "nhau", "ex": "They text each other almost every day.", "w": ["each other", "other"]}
+      - {"n": 14, "answer": "together", "vi": "cùng nhau", "ex": "Her parents have been together for thirty-five years.", "w": ["together"]}
+      - {"n": 15, "answer": "get married", "vi": "kết hôn", "ex": "They got married last summer.", "w": ["get married", "married"]}
+      - {"n": 16, "answer": "have a baby", "vi": "sinh con", "ex": "They're going to have a baby in May.", "w": ["have a baby", "baby"]}
+      - {"n": 17, "answer": "split up", "vi": "chia tay", "ex": "They split up after two years.", "w": ["split up"]}
+      - {"n": 18, "answer": "divorced", "vi": "đã ly hôn", "ex": "His parents are divorced.", "w": ["divorced"]}
+    lines:
+      - {"emma": "Thirteen. each other. each other. They text each other almost every day. They text each other almost every day.", "focus": 0}
+      - {"emma": "Fourteen. together. together. Her parents have been together for thirty-five years. Her parents have been together for thirty-five years.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. get married. get married. They got married last summer. They got married last summer.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. have a baby. have a baby. They're going to have a baby in May. They're going to have a baby in May.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. split up. split up. They split up after two years. They split up after two years.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. divorced. divorced. His parents are divorced. His parents are divorced.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "ex-boyfriend, ex-girlfriend", "vi": "bạn trai cũ, bạn gái cũ", "ex": "She's still friends with her ex-boyfriend.", "w": ["ex-boyfriend", "ex-girlfriend"]}
+      - {"n": 20, "answer": "ex-husband, ex-wife", "vi": "chồng cũ, vợ cũ", "ex": "His ex-wife lives in Canada.", "w": ["ex-husband", "ex-wife"]}
+      - {"n": 21, "answer": "see", "vi": "gặp, thăm", "ex": "They only see each other at Tết.", "w": ["see"]}
+      - {"n": 22, "answer": "advice", "vi": "lời khuyên (không đếm được)", "ex": "Her sister always gives her good advice.", "w": ["advice", "give"]}
+    lines:
+      - {"emma": "Nineteen. ex-boyfriend, ex-girlfriend. ex-boyfriend, ex-girlfriend. She's still friends with her ex-boyfriend. She's still friends with her ex-boyfriend.", "focus": 0}
+      - {"emma": "Twenty. ex-husband, ex-wife. ex-husband, ex-wife. His ex-wife lives in Canada. His ex-wife lives in Canada.", "say": "Twenty. ex-husband, ex-wife. ex-husband, ex-wife. His ex-wife livz in Canada. His ex-wife livz in Canada.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. see. see. They only see each other at Tết. They only see each other at Tết.", "say": "Twenty-one. see. see. They only see each other at Tet. They only see each other at Tet.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. advice. advice. Her sister always gives her good advice. Her sister always gives her good advice.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (23–28)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 23, "answer": "wedding", "vi": "đám cưới", "ex": "The wedding is in June."}
+      - {"n": 24, "answer": "bride", "vi": "cô dâu", "ex": "The bride wore a long white dress."}
+      - {"n": 25, "answer": "groom", "vi": "chú rể", "ex": "The groom looked very nervous."}
+      - {"n": 26, "answer": "honeymoon", "vi": "tuần trăng mật", "ex": "They went to Bali on their honeymoon."}
+      - {"n": 27, "answer": "go on a date", "vi": "đi hẹn hò", "ex": "They went on a date to the cinema."}
+      - {"n": 28, "answer": "fall in love", "vi": "phải lòng, yêu", "ex": "They fell in love in Paris."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-three. wedding. wedding. The wedding is in June. The wedding is in June.", "focus": 0}
+      - {"tom": "Twenty-four. bride. bride. The bride wore a long white dress. The bride wore a long white dress.", "focus": 1, "reveal": [23]}
+      - {"tom": "Twenty-five. groom. groom. The groom looked very nervous. The groom looked very nervous.", "focus": 2, "reveal": [24]}
+      - {"tom": "Twenty-six. honeymoon. honeymoon. They went to Bali on their honeymoon. They went to Bali on their honeymoon.", "focus": 3, "reveal": [25]}
+      - {"tom": "Twenty-seven. go on a date. go on a date. They went on a date to the cinema. They went on a date to the cinema.", "focus": 4, "reveal": [26]}
+      - {"tom": "Twenty-eight. fall in love. fall in love. They fell in love in Paris. They fell in love in Paris.", "focus": 5, "reveal": [27]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "propose", "vi": "cầu hôn", "ex": "He proposed to her on the beach."}
+      - {"n": 30, "answer": "trust", "vi": "tin tưởng", "ex": "You can trust him."}
+      - {"n": 31, "answer": "argue", "vi": "cãi nhau", "ex": "They sometimes argue about money."}
+      - {"n": 32, "answer": "make friends", "vi": "kết bạn", "ex": "It's easy to make friends at university."}
+      - {"n": 33, "answer": "keep in touch", "vi": "giữ liên lạc", "ex": "Let's keep in touch."}
+      - {"n": 34, "answer": "lose touch", "vi": "mất liên lạc", "ex": "They lost touch after school."}
+    lines:
+      - {"tom": "Twenty-nine. propose. propose. He proposed to her on the beach. He proposed to her on the beach.", "focus": 0}
+      - {"tom": "Thirty. trust. trust. You can trust him. You can trust him.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. argue. argue. They sometimes argue about money. They sometimes argue about money.", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. make friends. make friends. It's easy to make friends at university. It's easy to make friends at university.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. keep in touch. keep in touch. Let's keep in touch. Let's keep in touch.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. lose touch. lose touch. They lost touch after school. They lost touch after school.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "friendship", "vi": "tình bạn", "ex": "Their friendship is very strong."}
+      - {"n": 36, "answer": "childhood friend", "vi": "bạn thời thơ ấu", "ex": "Lucy is Emma's childhood friend."}
+      - {"n": 37, "answer": "get engaged", "vi": "đính hôn", "ex": "They got engaged at Christmas."}
+      - {"n": 38, "answer": "fiancé", "vi": "chồng chưa cưới", "ex": "Her fiancé is a doctor."}
+      - {"n": 39, "answer": "get together", "vi": "tụ họp", "ex": "Let's get together at the weekend."}
+      - {"n": 40, "answer": "hang out", "vi": "đi chơi cùng", "ex": "They hang out at the café after class."}
+    lines:
+      - {"tom": "Thirty-five. friendship. friendship. Their friendship is very strong. Their friendship is very strong.", "focus": 0}
+      - {"tom": "Thirty-six. childhood friend. childhood friend. Lucy is Emma's childhood friend. Lucy is Emma's childhood friend.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. get engaged. get engaged. They got engaged at Christmas. They got engaged at Christmas.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. fiancé. fiancé. Her fiancé is a doctor. Her fiancé is a doctor.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. get together. get together. Let's get together at the weekend. Let's get together at the weekend.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. hang out. hang out. They hang out at the café after class. They hang out at the café after class.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "introduce", "vi": "giới thiệu", "ex": "Let me introduce my friend."}
+      - {"n": 42, "answer": "have a lot in common", "vi": "có nhiều điểm chung", "ex": "They have a lot in common."}
+      - {"n": 43, "answer": "fall out", "vi": "giận nhau", "ex": "They fell out over money."}
+      - {"n": 44, "answer": "make up", "vi": "làm lành", "ex": "They argued, but they made up the next day."}
+      - {"n": 45, "answer": "best man", "vi": "phù rể", "ex": "His brother was the best man at the wedding."}
+    lines:
+      - {"tom": "Forty-one. introduce. introduce. Let me introduce my friend. Let me introduce my friend.", "focus": 0}
+      - {"tom": "Forty-two. have a lot in common. have a lot in common. They have a lot in common. They have a lot in common.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. fall out. fall out. They fell out over money. They fell out over money.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. make up. make up. They argued, but they made up the next day. They argued, but they made up the next day.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. best man. best man. His brother was the best man at the wedding. His brother was the best man at the wedding.", "focus": 4, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [45]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 46, "answer": "How did you meet?", "vi": "Hai bạn quen nhau thế nào?"}
+      - {"n": 47, "answer": "We sat next to each other in Year One.", "vi": "Tụi mình ngồi cạnh nhau từ lớp một."}
+      - {"n": 48, "answer": "How long have you known each other?", "vi": "Hai bạn quen nhau bao lâu rồi?"}
+      - {"n": 49, "answer": "For fourteen years.", "vi": "Mười bốn năm."}
+      - {"n": 50, "answer": "Do you get on well with your sister?", "vi": "Bạn có hợp với chị gái không?"}
+      - {"n": 51, "answer": "Yes. She gives me great advice.", "vi": "Có. Chị cho mình nhiều lời khuyên hay."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-six. How did you meet? How did you meet?", "focus": 0}
+      - {"tom": "Forty-seven. We sat next to each other in Year One. We sat next to each other in Year One.", "focus": 1, "reveal": [46]}
+      - {"emma": "Forty-eight. How long have you known each other? How long have you known each other?", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. For fourteen years. For fourteen years.", "say": "Forty-nine. For four-teen years. For four-teen years.", "focus": 3, "reveal": [48]}
+      - {"emma": "Fifty. Do you get on well with your sister? Do you get on well with your sister?", "focus": 4, "reveal": [49]}
+      - {"tom": "Fifty-one. Yes. She gives me great advice. Yes. She gives me great advice.", "focus": 5, "reveal": [50]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 52, "answer": "How often do you see each other?", "vi": "Hai bạn gặp nhau thường xuyên không?"}
+      - {"n": 53, "answer": "Only at Tết, but we text almost every day.", "vi": "Chỉ dịp Tết thôi, nhưng gần như ngày nào cũng nhắn tin."}
+      - {"n": 54, "answer": "Lucy and I have been friends since we were five.", "vi": "Mình với Lucy là bạn từ năm năm tuổi."}
+      - {"n": 55, "answer": "We have a video call every month.", "vi": "Tháng nào tụi mình cũng gọi video."}
+      - {"n": 56, "answer": "Let's keep in touch!", "vi": "Giữ liên lạc nhé!"}
+      - {"n": 57, "answer": "Congratulations on your wedding!", "vi": "Chúc mừng đám cưới của bạn!"}
+    lines:
+      - {"emma": "Fifty-two. How often do you see each other? How often do you see each other?", "focus": 0}
+      - {"tom": "Fifty-three. Only at Tết, but we text almost every day. Only at Tết, but we text almost every day.", "say": "Fifty-three. Only at Tet, but we text almost every day. Only at Tet, but we text almost every day.", "focus": 1, "reveal": [52]}
+      - {"emma": "Fifty-four. Lucy and I have been friends since we were five. Lucy and I have been friends since we were five.", "focus": 2, "reveal": [53]}
+      - {"emma": "Fifty-five. We have a video call every month. We have a video call every month.", "focus": 3, "reveal": [54]}
+      - {"tom": "Fifty-six. Let's keep in touch! Let's keep in touch!", "focus": 4, "reveal": [55]}
+      - {"emma": "Fifty-seven. Congratulations on your wedding! Congratulations on your wedding!", "focus": 5, "reveal": [56]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 58, "answer": "I'm sorry to hear that you split up.", "vi": "Mình rất tiếc khi nghe tin hai bạn chia tay."}
+      - {"n": 59, "answer": "Can I ask you for some advice?", "vi": "Mình xin bạn vài lời khuyên được không?"}
+      - {"n": 60, "answer": "Of course. What's the problem?", "vi": "Tất nhiên. Có chuyện gì vậy?"}
+      - {"n": 61, "answer": "He's my best friend. I can tell him anything.", "vi": "Cậu ấy là bạn thân nhất. Chuyện gì mình cũng kể được."}
+      - {"n": 62, "answer": "Do you have a lot in common?", "vi": "Hai bạn có nhiều điểm chung không?"}
+      - {"n": 63, "answer": "Not really, but we're still good friends.", "vi": "Không hẳn, nhưng vẫn là bạn tốt."}
+    lines:
+      - {"tom": "Fifty-eight. I'm sorry to hear that you split up. I'm sorry to hear that you split up.", "focus": 0}
+      - {"tom": "Fifty-nine. Can I ask you for some advice? Can I ask you for some advice?", "focus": 1, "reveal": [58]}
+      - {"emma": "Sixty. Of course. What's the problem? Of course. What's the problem?", "focus": 2, "reveal": [59]}
+      - {"tom": "Sixty-one. He's my best friend. I can tell him anything. He's my best friend. I can tell him anything.", "focus": 3, "reveal": [60]}
+      - {"emma": "Sixty-two. Do you have a lot in common? Do you have a lot in common?", "focus": 4, "reveal": [61]}
+      - {"tom": "Sixty-three. Not really, but we're still good friends. Not really, but we're still good friends.", "focus": 5, "reveal": [62]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 64, "answer": "Who do you call first when you have a problem?", "vi": "Có chuyện thì bạn gọi ai đầu tiên?"}
+      - {"n": 65, "answer": "I call Khoa.", "vi": "Mình gọi Khoa."}
+      - {"n": 66, "answer": "Let me introduce my friend Lucy.", "vi": "Để mình giới thiệu bạn mình là Lucy."}
+      - {"n": 67, "answer": "Hi, Lucy. Nice to meet you.", "vi": "Chào Lucy. Rất vui được gặp bạn."}
+      - {"n": 68, "answer": "Are you seeing anyone at the moment?", "vi": "Hiện giờ bạn có đang hẹn hò ai không?"}
+      - {"n": 69, "answer": "No, I'm single. My grandmother asks me every Christmas!", "vi": "Không, mình độc thân. Giáng sinh nào bà cũng hỏi!"}
+    lines:
+      - {"emma": "Sixty-four. Who do you call first when you have a problem? Who do you call first when you have a problem?", "focus": 0}
+      - {"tom": "Sixty-five. I call Khoa. I call Khoa.", "say": "Sixty-five. I call Kwah. I call Kwah.", "focus": 1, "reveal": [64]}
+      - {"emma": "Sixty-six. Let me introduce my friend Lucy. Let me introduce my friend Lucy.", "focus": 2, "reveal": [65]}
+      - {"tom": "Sixty-seven. Hi, Lucy. Nice to meet you. Hi, Lucy. Nice to meet you.", "focus": 3, "reveal": [66]}
+      - {"tom": "Sixty-eight. Are you seeing anyone at the moment? Are you seeing anyone at the moment?", "focus": 4, "reveal": [67]}
+      - {"emma": "Sixty-nine. No, I'm single. My grandmother asks me every Christmas! No, I'm single. My grandmother asks me every Christmas!", "focus": 5, "reveal": [68]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (70–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 70, "answer": "Let's get together this weekend.", "vi": "Cuối tuần này mình tụ tập nhé."}
+      - {"n": 71, "answer": "Great idea. Where shall we meet?", "vi": "Ý hay. Mình gặp ở đâu?"}
+      - {"n": 72, "answer": "At the café near the school.", "vi": "Ở quán cà phê gần trường."}
+      - {"n": 73, "answer": "Give my love to your family.", "vi": "Cho mình gửi lời hỏi thăm gia đình bạn."}
+      - {"n": 74, "answer": "Thanks, I will.", "vi": "Cảm ơn, mình sẽ chuyển lời."}
+      - {"n": 75, "answer": "Do you have many close friends?", "vi": "Bạn có nhiều bạn thân không?"}
+    lines:
+      - {"tom": "Seventy. Let's get together this weekend. Let's get together this weekend.", "focus": 0}
+      - {"emma": "Seventy-one. Great idea. Where shall we meet? Great idea. Where shall we meet?", "focus": 1, "reveal": [70]}
+      - {"tom": "Seventy-two. At the café near the school. At the café near the school.", "focus": 2, "reveal": [71]}
+      - {"emma": "Seventy-three. Give my love to your family. Give my love to your family.", "focus": 3, "reveal": [72]}
+      - {"tom": "Seventy-four. Thanks, I will. Thanks, I will.", "focus": 4, "reveal": [73]}
+      - {"emma": "Seventy-five. Do you have many close friends? Do you have many close friends?", "focus": 5, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [75]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (76–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 76, "answer": "Not many, but they're very good friends.", "vi": "Không nhiều, nhưng đều là bạn rất tốt."}
+      - {"n": 77, "answer": "How did your parents meet?", "vi": "Bố mẹ bạn gặp nhau thế nào?"}
+      - {"n": 78, "answer": "At a friend's wedding.", "vi": "Ở đám cưới một người bạn."}
+      - {"n": 79, "answer": "Are they still together?", "vi": "Họ vẫn bên nhau chứ?"}
+      - {"n": 80, "answer": "Yes, for thirty-five years now.", "vi": "Có, ba mươi lăm năm rồi."}
+    lines:
+      - {"tom": "Seventy-six. Not many, but they're very good friends. Not many, but they're very good friends.", "focus": 0}
+      - {"tom": "Seventy-seven. How did your parents meet? How did your parents meet?", "focus": 1, "reveal": [76]}
+      - {"emma": "Seventy-eight. At a friend's wedding. At a friend's wedding.", "focus": 2, "reveal": [77]}
+      - {"tom": "Seventy-nine. Are they still together? Are they still together?", "focus": 3, "reveal": [78]}
+      - {"emma": "Eighty. Yes, for thirty-five years now. Yes, for thirty-five years now.", "focus": 4, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [80]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 16.", "say": "Well done! See you in Unit sixteen.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 16."}
+

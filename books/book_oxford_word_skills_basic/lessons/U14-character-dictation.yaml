@@ -1,0 +1,324 @@
+# Video nghe – viết (dictation) Unit 14 · Character — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U14-character-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U14 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U14-character-dictation
+activity: U14-words
+title: "Unit 14 · Character"
+subtitle: "Dictation · listen and write: what people are like"
+title_vi: "Nghe – viết 10 phút: tính cách — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PEOPLE · UNIT 14"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 14: Character. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit fourteen: Character. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 14: tính cách. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 28 words from the book. You hear each word twice, and then an example sentence twice. Then 24 more useful words, and 32 useful sentences for conversation.", "say": "There are three parts. First, twenty-eight words from the book. You hear each word twice, and then an example sentence twice. Then twenty-four more useful words, and thirty-two useful sentences for conversation.", "vi": "Ba phần: 28 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 24 từ thêm, 32 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "What's he like?", "vi": "Anh ấy là người thế nào? (tính cách)", "ex": "What's your new teacher like?", "w": ["like"]}
+      - {"n": 2, "answer": "friendly", "vi": "thân thiện", "ex": "The people here are very friendly.", "w": ["friendly"]}
+      - {"n": 3, "answer": "unfriendly", "vi": "không thân thiện", "ex": "The waiter was unfriendly.", "w": ["unfriendly"]}
+      - {"n": 4, "answer": "kind", "vi": "tốt bụng", "ex": "She's very kind to animals.", "w": ["kind"]}
+      - {"n": 5, "answer": "nice", "vi": "dễ mến", "ex": "He's a nice man.", "w": ["nice"]}
+      - {"n": 6, "answer": "pleasant", "vi": "dễ chịu", "ex": "We had a pleasant evening.", "w": ["pleasant"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. What's he like?. What's he like?. What's your new teacher like? What's your new teacher like?", "focus": 0}
+      - {"emma": "Two. friendly. friendly. The people here are very friendly. The people here are very friendly.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. unfriendly. unfriendly. The waiter was unfriendly. The waiter was unfriendly.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. kind. kind. She's very kind to animals. She's very kind to animals.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. nice. nice. He's a nice man. He's a nice man.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. pleasant. pleasant. We had a pleasant evening. We had a pleasant evening.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "horrible", "vi": "kinh khủng, khó chịu", "ex": "He was horrible to his sister.", "w": ["horrible"]}
+      - {"n": 8, "answer": "clever", "vi": "thông minh, lanh lợi", "ex": "She's very clever. She always gets top marks.", "w": ["clever"]}
+      - {"n": 9, "answer": "intelligent", "vi": "thông minh", "ex": "Dolphins are intelligent animals.", "w": ["intelligent"]}
+      - {"n": 10, "answer": "stupid", "vi": "ngốc", "ex": "That was a stupid mistake.", "w": ["stupid"]}
+      - {"n": 11, "answer": "funny", "vi": "hài hước", "ex": "He tells funny stories.", "w": ["funny"]}
+      - {"n": 12, "answer": "fun", "vi": "vui (người vui vẻ)", "ex": "She's a lot of fun.", "w": ["fun"]}
+    lines:
+      - {"emma": "Seven. horrible. horrible. He was horrible to his sister. He was horrible to his sister.", "focus": 0}
+      - {"emma": "Eight. clever. clever. She's very clever. She always gets top marks. She's very clever. She always gets top marks.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. intelligent. intelligent. Dolphins are intelligent animals. Dolphins are intelligent animals.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. stupid. stupid. That was a stupid mistake. That was a stupid mistake.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. funny. funny. He tells funny stories. He tells funny stories.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. fun. fun. She's a lot of fun. She's a lot of fun.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "laugh", "vi": "cười", "ex": "He makes everyone laugh.", "w": ["laugh"]}
+      - {"n": 14, "answer": "serious", "vi": "nghiêm túc", "ex": "He's a serious student.", "w": ["serious"]}
+      - {"n": 15, "answer": "hard-working", "vi": "chăm chỉ", "ex": "Tom is very hard-working.", "w": ["hard-working"]}
+      - {"n": 16, "answer": "lazy", "vi": "lười", "ex": "Don't be lazy. Do your homework.", "w": ["lazy"]}
+      - {"n": 17, "answer": "organized", "vi": "ngăn nắp, có tổ chức", "ex": "Lucy is very organized.", "w": ["organized"]}
+      - {"n": 18, "answer": "tidy", "vi": "gọn gàng", "ex": "His desk is tidy.", "w": ["tidy"]}
+    lines:
+      - {"emma": "Thirteen. laugh. laugh. He makes everyone laugh. He makes everyone laugh.", "focus": 0}
+      - {"emma": "Fourteen. serious. serious. He's a serious student. He's a serious student.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. hard-working. hard-working. Tom is very hard-working. Tom is very hard-working.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. lazy. lazy. Don't be lazy. Do your homework. Don't be lazy. Do your homework.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. organized. organized. Lucy is very organized. Lucy is very organized.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. tidy. tidy. His desk is tidy. His desk is tidy.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "untidy", "vi": "bừa bộn", "ex": "But his room is very untidy.", "w": ["untidy"]}
+      - {"n": 20, "answer": "shy", "vi": "nhút nhát", "ex": "She was very shy as a teenager.", "w": ["shy"]}
+      - {"n": 21, "answer": "quiet", "vi": "trầm, ít nói", "ex": "He's quiet when he meets new people.", "w": ["quiet"]}
+      - {"n": 22, "answer": "sociable", "vi": "hòa đồng", "ex": "She's very sociable. She loves parties.", "w": ["sociable"]}
+      - {"n": 23, "answer": "relaxed", "vi": "thoải mái, thư thái", "ex": "Emma is quite relaxed.", "w": ["relaxed"]}
+      - {"n": 24, "answer": "sporty", "vi": "thích thể thao", "ex": "He's sporty. He plays basketball.", "w": ["sporty"]}
+    lines:
+      - {"emma": "Nineteen. untidy. untidy. But his room is very untidy. But his room is very untidy.", "focus": 0}
+      - {"emma": "Twenty. shy. shy. She was very shy as a teenager. She was very shy as a teenager.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. quiet. quiet. He's quiet when he meets new people. He's quiet when he meets new people.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. sociable. sociable. She's very sociable. She loves parties. She's very sociable. She loves parties.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. relaxed. relaxed. Emma is quite relaxed. Emma is quite relaxed.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. sporty. sporty. He's sporty. He plays basketball. He's sporty. He plays basketball.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "complete opposites", "vi": "trái ngược hoàn toàn", "ex": "The two sisters are complete opposites.", "w": ["complete opposites", "opposites"]}
+      - {"n": 26, "answer": "on my own", "vi": "một mình", "ex": "I like doing things on my own.", "w": ["on my own", "own"]}
+      - {"n": 27, "answer": "share", "vi": "chia sẻ, dùng chung", "ex": "They share a flat.", "w": ["share"]}
+      - {"n": 28, "answer": "really", "vi": "thật sự, rất", "ex": "She's really friendly.", "w": ["really"]}
+    lines:
+      - {"emma": "Twenty-five. complete opposites. complete opposites. The two sisters are complete opposites. The two sisters are complete opposites.", "focus": 0}
+      - {"emma": "Twenty-six. on my own. on my own. I like doing things on my own. I like doing things on my own.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. share. share. They share a flat. They share a flat.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. really. really. She's really friendly. She's really friendly.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "patient", "vi": "kiên nhẫn", "ex": "Her grandfather is very patient."}
+      - {"n": 30, "answer": "honest", "vi": "trung thực", "ex": "He always tells the truth. He's honest."}
+      - {"n": 31, "answer": "generous", "vi": "hào phóng", "ex": "She's generous with her time."}
+      - {"n": 32, "answer": "polite", "vi": "lịch sự", "ex": "Be polite to your teachers."}
+      - {"n": 33, "answer": "rude", "vi": "thô lỗ", "ex": "It's rude to talk with your mouth full."}
+      - {"n": 34, "answer": "selfish", "vi": "ích kỷ", "ex": "Don't be selfish. Share your sweets."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-nine. patient. patient. Her grandfather is very patient. Her grandfather is very patient.", "focus": 0}
+      - {"tom": "Thirty. honest. honest. He always tells the truth. He's honest. He always tells the truth. He's honest.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. generous. generous. She's generous with her time. She's generous with her time.", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. polite. polite. Be polite to your teachers. Be polite to your teachers.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. rude. rude. It's rude to talk with your mouth full. It's rude to talk with your mouth full.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. selfish. selfish. Don't be selfish. Share your sweets. Don't be selfish. Share your sweets.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "confident", "vi": "tự tin", "ex": "Teaching made her more confident."}
+      - {"n": 36, "answer": "calm", "vi": "bình tĩnh", "ex": "Stay calm in the exam."}
+      - {"n": 37, "answer": "cheerful", "vi": "vui vẻ", "ex": "She's always cheerful in the morning."}
+      - {"n": 38, "answer": "brave", "vi": "dũng cảm", "ex": "The firefighter was very brave."}
+      - {"n": 39, "answer": "careful", "vi": "cẩn thận", "ex": "Be careful with that knife."}
+      - {"n": 40, "answer": "easy-going", "vi": "dễ tính", "ex": "Her parents are very easy-going."}
+    lines:
+      - {"tom": "Thirty-five. confident. confident. Teaching made her more confident. Teaching made her more confident.", "focus": 0}
+      - {"tom": "Thirty-six. calm. calm. Stay calm in the exam. Stay calm in the exam.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. cheerful. cheerful. She's always cheerful in the morning. She's always cheerful in the morning.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. brave. brave. The firefighter was very brave. The firefighter was very brave.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. careful. careful. Be careful with that knife. Be careful with that knife.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. easy-going. easy-going. Her parents are very easy-going. Her parents are very easy-going.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "talkative", "vi": "nói nhiều", "ex": "He's very talkative in class."}
+      - {"n": 42, "answer": "reliable", "vi": "đáng tin cậy", "ex": "She's reliable. She never forgets."}
+      - {"n": 43, "answer": "helpful", "vi": "hay giúp đỡ", "ex": "The staff were very helpful."}
+      - {"n": 44, "answer": "bossy", "vi": "hách dịch", "ex": "Her older sister is a bit bossy."}
+      - {"n": 45, "answer": "moody", "vi": "tính khí thất thường", "ex": "Teenagers can be moody."}
+      - {"n": 46, "answer": "ambitious", "vi": "có hoài bão", "ex": "She's ambitious. She wants to be a manager."}
+    lines:
+      - {"tom": "Forty-one. talkative. talkative. He's very talkative in class. He's very talkative in class.", "focus": 0}
+      - {"tom": "Forty-two. reliable. reliable. She's reliable. She never forgets. She's reliable. She never forgets.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. helpful. helpful. The staff were very helpful. The staff were very helpful.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. bossy. bossy. Her older sister is a bit bossy. Her older sister is a bit bossy.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. moody. moody. Teenagers can be moody. Teenagers can be moody.", "focus": 4, "reveal": [44]}
+      - {"tom": "Forty-six. ambitious. ambitious. She's ambitious. She wants to be a manager. She's ambitious. She wants to be a manager.", "focus": 5, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (47–52)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 47, "answer": "curious", "vi": "tò mò", "ex": "Children are curious about everything."}
+      - {"n": 48, "answer": "sensible", "vi": "biết điều, chín chắn", "ex": "He's very sensible with money."}
+      - {"n": 49, "answer": "strict", "vi": "nghiêm khắc", "ex": "Our teacher was strict but fair."}
+      - {"n": 50, "answer": "lively", "vi": "sôi nổi", "ex": "Her classes are always lively."}
+      - {"n": 51, "answer": "modest", "vi": "khiêm tốn", "ex": "He's very modest about his success."}
+      - {"n": 52, "answer": "stubborn", "vi": "bướng bỉnh", "ex": "Her little brother is very stubborn."}
+    lines:
+      - {"tom": "Forty-seven. curious. curious. Children are curious about everything. Children are curious about everything.", "focus": 0}
+      - {"tom": "Forty-eight. sensible. sensible. He's very sensible with money. He's very sensible with money.", "focus": 1, "reveal": [47]}
+      - {"tom": "Forty-nine. strict. strict. Our teacher was strict but fair. Our teacher was strict but fair.", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. lively. lively. Her classes are always lively. Her classes are always lively.", "focus": 3, "reveal": [49]}
+      - {"tom": "Fifty-one. modest. modest. He's very modest about his success. He's very modest about his success.", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. stubborn. stubborn. Her little brother is very stubborn. Her little brother is very stubborn.", "focus": 5, "reveal": [51]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "What's your best friend like?", "vi": "Bạn thân của bạn là người thế nào?"}
+      - {"n": 54, "answer": "He's funny, kind and hard-working.", "vi": "Cậu ấy vui tính, tốt bụng và chăm chỉ."}
+      - {"n": 55, "answer": "What's your new classmate like?", "vi": "Bạn cùng lớp mới của bạn là người thế nào?"}
+      - {"n": 56, "answer": "He's quiet at first, but very friendly.", "vi": "Lúc đầu cậu ấy ít nói, nhưng rất thân thiện."}
+      - {"n": 57, "answer": "Were you shy as a child?", "vi": "Hồi nhỏ bạn có nhút nhát không?"}
+      - {"n": 58, "answer": "Yes, very. Teaching helped me a lot.", "vi": "Có, rất nhút nhát. Đi dạy giúp mình nhiều lắm."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-three. What's your best friend like? What's your best friend like?", "focus": 0}
+      - {"tom": "Fifty-four. He's funny, kind and hard-working. He's funny, kind and hard-working.", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. What's your new classmate like? What's your new classmate like?", "focus": 2, "reveal": [54]}
+      - {"tom": "Fifty-six. He's quiet at first, but very friendly. He's quiet at first, but very friendly.", "focus": 3, "reveal": [55]}
+      - {"tom": "Fifty-seven. Were you shy as a child? Were you shy as a child?", "focus": 4, "reveal": [56]}
+      - {"emma": "Fifty-eight. Yes, very. Teaching helped me a lot. Yes, very. Teaching helped me a lot.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "My grandfather is very patient.", "vi": "Ông mình rất kiên nhẫn."}
+      - {"n": 60, "answer": "My grandmother is the kindest person I know.", "vi": "Bà là người tốt bụng nhất mà mình biết."}
+      - {"n": 61, "answer": "Is your room tidy?", "vi": "Phòng bạn có gọn không?"}
+      - {"n": 62, "answer": "My desk is tidy, but my room isn't!", "vi": "Bàn học thì gọn, còn phòng thì không!"}
+      - {"n": 63, "answer": "I'm not very tidy at home.", "vi": "Ở nhà mình không gọn gàng lắm."}
+      - {"n": 64, "answer": "She's really easy to talk to.", "vi": "Nói chuyện với cô ấy rất dễ."}
+    lines:
+      - {"tom": "Fifty-nine. My grandfather is very patient. My grandfather is very patient.", "focus": 0}
+      - {"emma": "Sixty. My grandmother is the kindest person I know. My grandmother is the kindest person I know.", "focus": 1, "reveal": [59]}
+      - {"emma": "Sixty-one. Is your room tidy? Is your room tidy?", "focus": 2, "reveal": [60]}
+      - {"tom": "Sixty-two. My desk is tidy, but my room isn't! My desk is tidy, but my room isn't!", "focus": 3, "reveal": [61]}
+      - {"emma": "Sixty-three. I'm not very tidy at home. I'm not very tidy at home.", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. She's really easy to talk to. She's really easy to talk to.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "He's a bit lazy, but he's very funny.", "vi": "Cậu ấy hơi lười, nhưng rất hài hước."}
+      - {"n": 66, "answer": "We're complete opposites, but we're good friends.", "vi": "Tụi mình trái ngược hoàn toàn nhưng là bạn tốt."}
+      - {"n": 67, "answer": "Do you prefer working on your own or in a team?", "vi": "Bạn thích làm một mình hay làm theo nhóm?"}
+      - {"n": 68, "answer": "In a team. It's more fun.", "vi": "Theo nhóm. Vui hơn."}
+      - {"n": 69, "answer": "How would you describe yourself?", "vi": "Bạn tự mô tả mình thế nào?"}
+      - {"n": 70, "answer": "I'm quite quiet, but I'm a good listener.", "vi": "Mình khá ít nói, nhưng biết lắng nghe."}
+    lines:
+      - {"emma": "Sixty-five. He's a bit lazy, but he's very funny. He's a bit lazy, but he's very funny.", "focus": 0}
+      - {"tom": "Sixty-six. We're complete opposites, but we're good friends. We're complete opposites, but we're good friends.", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. Do you prefer working on your own or in a team? Do you prefer working on your own or in a team?", "focus": 2, "reveal": [66]}
+      - {"tom": "Sixty-eight. In a team. It's more fun. In a team. It's more fun.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. How would you describe yourself? How would you describe yourself?", "focus": 4, "reveal": [68]}
+      - {"tom": "Seventy. I'm quite quiet, but I'm a good listener. I'm quite quiet, but I'm a good listener.", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "What kind of people do you like?", "vi": "Bạn thích kiểu người nào?"}
+      - {"n": 72, "answer": "People who are honest and make me laugh.", "vi": "Người trung thực và làm mình cười."}
+      - {"n": 73, "answer": "He's always ready to help.", "vi": "Anh ấy luôn sẵn lòng giúp đỡ."}
+      - {"n": 74, "answer": "She's very sociable. She knows everyone.", "vi": "Cô ấy rất hòa đồng, quen hết mọi người."}
+      - {"n": 75, "answer": "Lucy is very tidy and very organized.", "vi": "Lucy rất gọn gàng, ngăn nắp."}
+      - {"n": 76, "answer": "Khoa always makes me laugh.", "vi": "Khoa lúc nào cũng làm mình cười."}
+    lines:
+      - {"tom": "Seventy-one. What kind of people do you like? What kind of people do you like?", "focus": 0}
+      - {"emma": "Seventy-two. People who are honest and make me laugh. People who are honest and make me laugh.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. He's always ready to help. He's always ready to help.", "focus": 2, "reveal": [72]}
+      - {"tom": "Seventy-four. She's very sociable. She knows everyone. She's very sociable. She knows everyone.", "focus": 3, "reveal": [73]}
+      - {"emma": "Seventy-five. Lucy is very tidy and very organized. Lucy is very tidy and very organized.", "focus": 4, "reveal": [74]}
+      - {"tom": "Seventy-six. Khoa always makes me laugh. Khoa always makes me laugh.", "say": "Seventy-six. Kwah always makes me laugh. Kwah always makes me laugh.", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "Don't be so lazy!", "vi": "Đừng lười thế!"}
+      - {"n": 78, "answer": "I'm not lazy. I'm just tired!", "vi": "Mình không lười. Mình chỉ mệt thôi!"}
+      - {"n": 79, "answer": "What's your sister like?", "vi": "Chị bạn là người thế nào?"}
+      - {"n": 80, "answer": "She's kind and very sensible.", "vi": "Chị ấy tốt bụng và rất chín chắn."}
+    lines:
+      - {"emma": "Seventy-seven. Don't be so lazy! Don't be so lazy!", "focus": 0}
+      - {"tom": "Seventy-eight. I'm not lazy. I'm just tired! I'm not lazy. I'm just tired!", "focus": 1, "reveal": [77]}
+      - {"emma": "Seventy-nine. What's your sister like? What's your sister like?", "focus": 2, "reveal": [78]}
+      - {"tom": "Eighty. She's kind and very sensible. She's kind and very sensible.", "focus": 3, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [80]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (81–84)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 81, "answer": "Are you an organized person?", "vi": "Bạn có ngăn nắp không?"}
+      - {"n": 82, "answer": "Not really. I'm quite relaxed.", "vi": "Không hẳn. Mình khá thoải mái."}
+      - {"n": 83, "answer": "Who's the funniest person you know?", "vi": "Ai là người hài hước nhất bạn biết?"}
+      - {"n": 84, "answer": "Khoa. He's always telling jokes.", "vi": "Khoa. Lúc nào cậu ấy cũng kể chuyện cười."}
+    lines:
+      - {"tom": "Eighty-one. Are you an organized person? Are you an organized person?", "focus": 0}
+      - {"emma": "Eighty-two. Not really. I'm quite relaxed. Not really. I'm quite relaxed.", "focus": 1, "reveal": [81]}
+      - {"emma": "Eighty-three. Who's the funniest person you know? Who's the funniest person you know?", "focus": 2, "reveal": [82]}
+      - {"tom": "Eighty-four. Khoa. He's always telling jokes. Khoa. He's always telling jokes.", "say": "Eighty-four. Kwah. He's always telling jokes. Kwah. He's always telling jokes.", "focus": 3, "reveal": [83]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [84]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 15.", "say": "Well done! See you in Unit fifteen.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 15."}
+

@@ -1,0 +1,316 @@
+# Video nghe – viết (dictation) Unit 6 · English language words — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U06-language-words-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U06 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U06-language-words-dictation
+activity: U06-words
+title: "Unit 6 · English language words"
+subtitle: "Dictation · listen and write: grammar words"
+title_vi: "Nghe – viết 10 phút: từ chỉ ngữ pháp — từ trong sách, từ thêm, câu giao tiếp"
+tag: "BASIC ENGLISH · UNIT 6"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 6: English language words. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit six: English language words. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 6: từ chỉ ngữ pháp. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 22 words from the book. You hear each word twice, and then an example sentence twice. Then 26 more useful words, and 32 useful sentences for conversation.", "say": "There are three parts. First, twenty-two words from the book. You hear each word twice, and then an example sentence twice. Then twenty-six more useful words, and thirty-two useful sentences for conversation.", "vi": "Ba phần: 22 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 26 từ thêm, 32 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "word", "vi": "từ", "ex": "Write the new word in your notebook.", "w": ["word"]}
+      - {"n": 2, "answer": "sentence", "vi": "câu", "ex": "A sentence starts with a capital letter."}
+      - {"n": 3, "answer": "phrase", "vi": "cụm từ", "ex": "'In the morning' is a phrase.", "w": ["phrase"]}
+      - {"n": 4, "answer": "noun", "vi": "danh từ", "ex": "'Teacher' is a noun.", "w": ["noun"]}
+      - {"n": 5, "answer": "singular noun", "vi": "danh từ số ít", "ex": "'Child' is a singular noun.", "w": ["singular noun"]}
+      - {"n": 6, "answer": "plural noun", "vi": "danh từ số nhiều", "ex": "'Children' is a plural noun.", "w": ["plural noun"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. word. word. Write the new word in your notebook. Write the new word in your notebook.", "focus": 0}
+      - {"emma": "Two. sentence. sentence. A sentence starts with a capital letter. A sentence starts with a capital letter.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. phrase. phrase. 'In the morning' is a phrase. 'In the morning' is a phrase.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. noun. noun. 'Teacher' is a noun. 'Teacher' is a noun.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. singular noun. singular noun. 'Child' is a singular noun. 'Child' is a singular noun.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. plural noun. plural noun. 'Children' is a plural noun. 'Children' is a plural noun.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "verb", "vi": "động từ", "ex": "'Speak' is a verb.", "w": ["verb"]}
+      - {"n": 8, "answer": "adjective", "vi": "tính từ", "ex": "'Happy' is an adjective.", "w": ["adjective"]}
+      - {"n": 9, "answer": "adverb", "vi": "trạng từ", "ex": "'Quickly' is an adverb.", "w": ["adverb"]}
+      - {"n": 10, "answer": "preposition", "vi": "giới từ", "ex": "'Under' is a preposition.", "w": ["preposition"]}
+      - {"n": 11, "answer": "pronoun", "vi": "đại từ", "ex": "'They' is a pronoun.", "w": ["pronoun"]}
+      - {"n": 12, "answer": "definite article", "vi": "mạo từ xác định (the)", "ex": "'The' is the definite article.", "w": ["definite article"]}
+    lines:
+      - {"emma": "Seven. verb. verb. 'Speak' is a verb. 'Speak' is a verb.", "focus": 0}
+      - {"emma": "Eight. adjective. adjective. 'Happy' is an adjective. 'Happy' is an adjective.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. adverb. adverb. 'Quickly' is an adverb. 'Quickly' is an adverb.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. preposition. preposition. 'Under' is a preposition. 'Under' is a preposition.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. pronoun. pronoun. 'They' is a pronoun. 'They' is a pronoun.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. definite article. definite article. 'The' is the definite article. 'The' is the definite article.", "say": "Twelve. definite article. definite article. Thee is the definite article. Thee is the definite article.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "indefinite article", "vi": "mạo từ không xác định (a, an)", "ex": "'A' and 'an' are indefinite articles.", "w": ["indefinite article"]}
+      - {"n": 14, "answer": "regular", "vi": "có quy tắc", "ex": "'Walk' is a regular verb.", "w": ["regular"]}
+      - {"n": 15, "answer": "irregular", "vi": "bất quy tắc", "ex": "'Speak' is an irregular verb.", "w": ["irregular"]}
+      - {"n": 16, "answer": "walk, walked", "vi": "đi bộ — động từ có quy tắc", "ex": "An old man walked slowly down the hill.", "w": ["walk"]}
+      - {"n": 17, "answer": "speak, spoke, spoken", "vi": "nói — động từ bất quy tắc", "ex": "He spoke to a little girl and two boys."}
+      - {"n": 18, "answer": "past simple", "vi": "thì quá khứ đơn", "ex": "'Walked' is the past simple of 'walk'."}
+    lines:
+      - {"emma": "Thirteen. indefinite article. indefinite article. 'A' and 'an' are indefinite articles. 'A' and 'an' are indefinite articles.", "say": "Thirteen. indefinite article. indefinite article. Eigh and ann are indefinite articles. Eigh and ann are indefinite articles.", "focus": 0}
+      - {"emma": "Fourteen. regular. regular. 'Walk' is a regular verb. 'Walk' is a regular verb.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. irregular. irregular. 'Speak' is an irregular verb. 'Speak' is an irregular verb.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. walk, walked. walk, walked. An old man walked slowly down the hill. An old man walked slowly down the hill.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. speak, spoke, spoken. speak, spoke, spoken. He spoke to a little girl and two boys. He spoke to a little girl and two boys.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. past simple. past simple. 'Walked' is the past simple of 'walk'. 'Walked' is the past simple of 'walk'.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "past participle", "vi": "quá khứ phân từ", "ex": "'Spoken' is the past participle of 'speak'.", "w": ["past participle", "participle"]}
+      - {"n": 20, "answer": "child, children", "vi": "đứa trẻ — số nhiều bất quy tắc", "ex": "There are three children in the picture."}
+      - {"n": 21, "answer": "singular, plural", "vi": "số ít, số nhiều", "ex": "'Books' is plural. 'Book' is singular."}
+      - {"n": 22, "answer": "capital letter", "vi": "chữ in hoa", "ex": "Names start with a capital letter."}
+    lines:
+      - {"emma": "Nineteen. past participle. past participle. 'Spoken' is the past participle of 'speak'. 'Spoken' is the past participle of 'speak'.", "focus": 0}
+      - {"emma": "Twenty. child, children. child, children. There are three children in the picture. There are three children in the picture.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. singular, plural. singular, plural. 'Books' is plural. 'Book' is singular. 'Books' is plural. 'Book' is singular.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. capital letter. capital letter. Names start with a capital letter. Names start with a capital letter.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (23–28)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 23, "answer": "grammar", "vi": "ngữ pháp", "ex": "Grammar is important, but so is vocabulary."}
+      - {"n": 24, "answer": "vocabulary", "vi": "từ vựng", "ex": "Read every day to learn new vocabulary."}
+      - {"n": 25, "answer": "tense", "vi": "thì", "ex": "English has many tenses."}
+      - {"n": 26, "answer": "present simple", "vi": "thì hiện tại đơn", "ex": "We use the present simple for habits."}
+      - {"n": 27, "answer": "future", "vi": "tương lai", "ex": "We often use 'will' for the future."}
+      - {"n": 28, "answer": "full stop", "vi": "dấu chấm", "ex": "Put a full stop at the end of the sentence."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-three. grammar. grammar. Grammar is important, but so is vocabulary. Grammar is important, but so is vocabulary.", "focus": 0}
+      - {"tom": "Twenty-four. vocabulary. vocabulary. Read every day to learn new vocabulary. Read every day to learn new vocabulary.", "focus": 1, "reveal": [23]}
+      - {"tom": "Twenty-five. tense. tense. English has many tenses. English has many tenses.", "focus": 2, "reveal": [24]}
+      - {"tom": "Twenty-six. present simple. present simple. We use the present simple for habits. We use the present simple for habits.", "say": "Twenty-six. present simple. present simple. We yooz the present simple for habits. We yooz the present simple for habits.", "focus": 3, "reveal": [25]}
+      - {"tom": "Twenty-seven. future. future. We often use 'will' for the future. We often use 'will' for the future.", "say": "Twenty-seven. future. future. We often yooz will for the future. We often yooz will for the future.", "focus": 4, "reveal": [26]}
+      - {"tom": "Twenty-eight. full stop. full stop. Put a full stop at the end of the sentence. Put a full stop at the end of the sentence.", "focus": 5, "reveal": [27]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "comma", "vi": "dấu phẩy", "ex": "Use a comma between the two names."}
+      - {"n": 30, "answer": "question mark", "vi": "dấu chấm hỏi", "ex": "A question ends with a question mark."}
+      - {"n": 31, "answer": "apostrophe", "vi": "dấu nháy (I'm, Tom's)", "ex": "'I'm' has an apostrophe."}
+      - {"n": 32, "answer": "vowel", "vi": "nguyên âm", "ex": "A, E, I, O and U are vowels."}
+      - {"n": 33, "answer": "consonant", "vi": "phụ âm", "ex": "B and C are consonants."}
+      - {"n": 34, "answer": "syllable", "vi": "âm tiết", "ex": "'Banana' has three syllables."}
+    lines:
+      - {"tom": "Twenty-nine. comma. comma. Use a comma between the two names. Use a comma between the two names.", "say": "Twenty-nine. comma. comma. Yooz a comma between the two names. Yooz a comma between the two names.", "focus": 0}
+      - {"tom": "Thirty. question mark. question mark. A question ends with a question mark. A question ends with a question mark.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. apostrophe. apostrophe. 'I'm' has an apostrophe. 'I'm' has an apostrophe.", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. vowel. vowel. A, E, I, O and U are vowels. A, E, I, O and U are vowels.", "say": "Thirty-two. vowel. vowel. Eigh, ee, eye, oh, and yoo are vowels. Eigh, ee, eye, oh, and yoo are vowels.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. consonant. consonant. B and C are consonants. B and C are consonants.", "say": "Thirty-three. consonant. consonant. Bee and see are consonants. Bee and see are consonants.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. syllable. syllable. 'Banana' has three syllables. 'Banana' has three syllables.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "paragraph", "vi": "đoạn văn", "ex": "Write a short paragraph about your family."}
+      - {"n": 36, "answer": "example", "vi": "ví dụ", "ex": "Can you give me an example?"}
+      - {"n": 37, "answer": "rule", "vi": "quy tắc", "ex": "There's an easy rule for plurals."}
+      - {"n": 38, "answer": "short form", "vi": "dạng viết tắt", "ex": "'Don't' is the short form of 'do not'."}
+      - {"n": 39, "answer": "underline", "vi": "gạch chân", "ex": "Underline the verbs in each sentence."}
+      - {"n": 40, "answer": "countable", "vi": "đếm được", "ex": "'Apple' is a countable noun."}
+    lines:
+      - {"tom": "Thirty-five. paragraph. paragraph. Write a short paragraph about your family. Write a short paragraph about your family.", "focus": 0}
+      - {"tom": "Thirty-six. example. example. Can you give me an example? Can you give me an example?", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. rule. rule. There's an easy rule for plurals. There's an easy rule for plurals.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. short form. short form. 'Don't' is the short form of 'do not'. 'Don't' is the short form of 'do not'.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. underline. underline. Underline the verbs in each sentence. Underline the verbs in each sentence.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. countable. countable. 'Apple' is a countable noun. 'Apple' is a countable noun.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–44)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "uncountable", "vi": "không đếm được", "ex": "'Information' is an uncountable noun."}
+      - {"n": 42, "answer": "subject", "vi": "chủ ngữ", "ex": "In 'Tom runs', 'Tom' is the subject."}
+      - {"n": 43, "answer": "object", "vi": "tân ngữ", "ex": "In 'I like tea', 'tea' is the object."}
+      - {"n": 44, "answer": "conjunction", "vi": "liên từ", "ex": "'And' and 'but' are conjunctions."}
+    lines:
+      - {"tom": "Forty-one. uncountable. uncountable. 'Information' is an uncountable noun. 'Information' is an uncountable noun.", "focus": 0}
+      - {"tom": "Forty-two. subject. subject. In 'Tom runs', 'Tom' is the subject. In 'Tom runs', 'Tom' is the subject.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. object. object. In 'I like tea', 'tea' is the object. In 'I like tea', 'tea' is the object.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. conjunction. conjunction. 'And' and 'but' are conjunctions. 'And' and 'but' are conjunctions.", "focus": 3, "reveal": [43]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [44]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (45–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 45, "answer": "infinitive", "vi": "động từ nguyên mẫu", "ex": "'Go' is the infinitive. 'Went' is the past simple."}
+      - {"n": 46, "answer": "negative", "vi": "phủ định", "ex": "'Don't' makes a sentence negative."}
+      - {"n": 47, "answer": "question word", "vi": "từ để hỏi", "ex": "'What' and 'where' are question words."}
+      - {"n": 48, "answer": "plural form", "vi": "dạng số nhiều", "ex": "'Men' is the plural form of 'man'."}
+    lines:
+      - {"tom": "Forty-five. infinitive. infinitive. 'Go' is the infinitive. 'Went' is the past simple. 'Go' is the infinitive. 'Went' is the past simple.", "focus": 0}
+      - {"tom": "Forty-six. negative. negative. 'Don't' makes a sentence negative. 'Don't' makes a sentence negative.", "focus": 1, "reveal": [45]}
+      - {"tom": "Forty-seven. question word. question word. 'What' and 'where' are question words. 'What' and 'where' are question words.", "focus": 2, "reveal": [46]}
+      - {"tom": "Forty-eight. plural form. plural form. 'Men' is the plural form of 'man'. 'Men' is the plural form of 'man'.", "focus": 3, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [48]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (49–54)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 49, "answer": "What's the past simple of 'go'?", "vi": "Quá khứ đơn của go là gì?"}
+      - {"n": 50, "answer": "It's 'went'. 'Go' is irregular.", "vi": "Là went. Go là động từ bất quy tắc."}
+      - {"n": 51, "answer": "What's the plural of 'child'?", "vi": "Số nhiều của child là gì?"}
+      - {"n": 52, "answer": "Children.", "vi": "Children."}
+      - {"n": 53, "answer": "Is 'quickly' an adjective or an adverb?", "vi": "Quickly là tính từ hay trạng từ?"}
+      - {"n": 54, "answer": "It's an adverb. It ends in 'ly'.", "vi": "Trạng từ. Nó tận cùng bằng l y."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"tom": "Forty-nine. What's the past simple of 'go'? What's the past simple of 'go'?", "focus": 0}
+      - {"emma": "Fifty. It's 'went'. 'Go' is irregular. It's 'went'. 'Go' is irregular.", "focus": 1, "reveal": [49]}
+      - {"emma": "Fifty-one. What's the plural of 'child'? What's the plural of 'child'?", "focus": 2, "reveal": [50]}
+      - {"tom": "Fifty-two. Children. Children.", "focus": 3, "reveal": [51]}
+      - {"tom": "Fifty-three. Is 'quickly' an adjective or an adverb? Is 'quickly' an adjective or an adverb?", "focus": 4, "reveal": [52]}
+      - {"emma": "Fifty-four. It's an adverb. It ends in 'ly'. It's an adverb. It ends in 'ly'.", "say": "Fifty-four. It's an adverb. It ends in el, why. It's an adverb. It ends in el, why.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "Articles are the hardest part of English for me.", "vi": "Mạo từ là phần khó nhất của tiếng Anh với mình."}
+      - {"n": 56, "answer": "Don't worry. They're difficult for many learners.", "vi": "Đừng lo. Nhiều người học thấy khó lắm."}
+      - {"n": 57, "answer": "Is this sentence correct?", "vi": "Câu này đúng chưa?"}
+      - {"n": 58, "answer": "Almost. You need an article before the noun.", "vi": "Gần đúng. Bạn cần mạo từ trước danh từ."}
+      - {"n": 59, "answer": "Could you give me an example?", "vi": "Bạn cho mình một ví dụ được không?"}
+      - {"n": 60, "answer": "Underline the verbs in each sentence.", "vi": "Gạch chân các động từ trong mỗi câu."}
+    lines:
+      - {"tom": "Fifty-five. Articles are the hardest part of English for me. Articles are the hardest part of English for me.", "focus": 0}
+      - {"emma": "Fifty-six. Don't worry. They're difficult for many learners. Don't worry. They're difficult for many learners.", "focus": 1, "reveal": [55]}
+      - {"tom": "Fifty-seven. Is this sentence correct? Is this sentence correct?", "focus": 2, "reveal": [56]}
+      - {"emma": "Fifty-eight. Almost. You need an article before the noun. Almost. You need an article before the noun.", "focus": 3, "reveal": [57]}
+      - {"tom": "Fifty-nine. Could you give me an example? Could you give me an example?", "focus": 4, "reveal": [58]}
+      - {"emma": "Sixty. Underline the verbs in each sentence. Underline the verbs in each sentence.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "Circle the correct answer.", "vi": "Khoanh tròn đáp án đúng."}
+      - {"n": 62, "answer": "Don't forget the full stop.", "vi": "Đừng quên dấu chấm."}
+      - {"n": 63, "answer": "Names always start with a capital letter.", "vi": "Tên riêng luôn viết hoa chữ cái đầu."}
+      - {"n": 64, "answer": "What does 'adj' mean in the dictionary?", "vi": "Trong từ điển adj nghĩa là gì?"}
+      - {"n": 65, "answer": "It means adjective.", "vi": "Nghĩa là tính từ."}
+      - {"n": 66, "answer": "I write new words in my notebook every day.", "vi": "Mỗi ngày mình chép từ mới vào vở."}
+    lines:
+      - {"emma": "Sixty-one. Circle the correct answer. Circle the correct answer.", "focus": 0}
+      - {"emma": "Sixty-two. Don't forget the full stop. Don't forget the full stop.", "focus": 1, "reveal": [61]}
+      - {"emma": "Sixty-three. Names always start with a capital letter. Names always start with a capital letter.", "focus": 2, "reveal": [62]}
+      - {"tom": "Sixty-four. What does 'adj' mean in the dictionary? What does 'adj' mean in the dictionary?", "say": "Sixty-four. What does A D J mean in the dictionary? What does A D J mean in the dictionary?", "focus": 3, "reveal": [63]}
+      - {"emma": "Sixty-five. It means adjective. It means adjective.", "focus": 4, "reveal": [64]}
+      - {"tom": "Sixty-six. I write new words in my notebook every day. I write new words in my notebook every day.", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "My favourite English word is 'delicious'.", "vi": "Từ tiếng Anh mình thích nhất là delicious."}
+      - {"n": 68, "answer": "Mine is 'cosy'.", "vi": "Của mình là cosy."}
+      - {"n": 69, "answer": "Read the sentence aloud, please.", "vi": "Đọc to câu này nhé."}
+      - {"n": 70, "answer": "I always check the grammar at the end.", "vi": "Mình luôn soát ngữ pháp ở cuối bài."}
+      - {"n": 71, "answer": "What kind of word is it?", "vi": "Đó là loại từ gì?"}
+      - {"n": 72, "answer": "It's a noun.", "vi": "Là danh từ."}
+    lines:
+      - {"tom": "Sixty-seven. My favourite English word is 'delicious'. My favourite English word is 'delicious'.", "focus": 0}
+      - {"emma": "Sixty-eight. Mine is 'cosy'. Mine is 'cosy'.", "focus": 1, "reveal": [67]}
+      - {"emma": "Sixty-nine. Read the sentence aloud, please. Read the sentence aloud, please.", "focus": 2, "reveal": [68]}
+      - {"tom": "Seventy. I always check the grammar at the end. I always check the grammar at the end.", "focus": 3, "reveal": [69]}
+      - {"tom": "Seventy-one. What kind of word is it? What kind of word is it?", "focus": 4, "reveal": [70]}
+      - {"emma": "Seventy-two. It's a noun. It's a noun.", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "How many syllables are there in 'banana'?", "vi": "Banana có mấy âm tiết?"}
+      - {"n": 74, "answer": "Three. Ba, na, na.", "vi": "Ba: ba, na, na."}
+      - {"n": 75, "answer": "What's the plural of 'woman'?", "vi": "Số nhiều của 'woman' là gì?"}
+      - {"n": 76, "answer": "It's 'women'. It's irregular.", "vi": "Là 'women'. Đó là số nhiều bất quy tắc."}
+    lines:
+      - {"emma": "Seventy-three. How many syllables are there in 'banana'? How many syllables are there in 'banana'?", "focus": 0}
+      - {"tom": "Seventy-four. Three. Ba, na, na. Three. Ba, na, na.", "focus": 1, "reveal": [73]}
+      - {"emma": "Seventy-five. What's the plural of 'woman'? What's the plural of 'woman'?", "focus": 2, "reveal": [74]}
+      - {"tom": "Seventy-six. It's 'women'. It's irregular. It's 'women'. It's irregular.", "focus": 3, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "Is 'news' singular or plural?", "vi": "'News' là số ít hay số nhiều?"}
+      - {"n": 78, "answer": "It's singular. The news is good.", "vi": "Số ít: The news is good."}
+      - {"n": 79, "answer": "Can you check my grammar, please?", "vi": "Bạn xem giúp ngữ pháp của mình được không?"}
+      - {"n": 80, "answer": "Sure. There's just one small mistake.", "vi": "Được. Chỉ có một lỗi nhỏ."}
+    lines:
+      - {"tom": "Seventy-seven. Is 'news' singular or plural? Is 'news' singular or plural?", "focus": 0}
+      - {"emma": "Seventy-eight. It's singular. The news is good. It's singular. The news is good.", "focus": 1, "reveal": [77]}
+      - {"tom": "Seventy-nine. Can you check my grammar, please? Can you check my grammar, please?", "focus": 2, "reveal": [78]}
+      - {"emma": "Eighty. Sure. There's just one small mistake. Sure. There's just one small mistake.", "focus": 3, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [80]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 7.", "say": "Well done! See you in Unit seven.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 7."}
+

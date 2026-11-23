@@ -6,6 +6,9 @@
 - học bằng video 7–10 phút, không đếm ngược;
 - mỗi video có 1–2 phần luyện nói theo chủ đề từ vựng của unit.
 
+Đợt 36, người học yêu cầu thêm mỗi chủ đề một video nghe – viết 10 phút chạy liền, gồm mọi từ của unit trong sách, thêm từ
+và câu giao tiếp theo chủ đề (mục 5.9).
+
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, hồ sơ lộ trình | `books/book_oxford_word_skills_basic/`: `Oxford_Word_Skills_Bas.pdf` (bản quét, 254 trang), `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (122 đoạn PDF, 83 MB) |
@@ -13,6 +16,7 @@
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
 | Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–16 đã có (mục 5.7) |
+| Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
 
@@ -419,8 +423,94 @@ Module People (đợt 29) — gia đình, ngoại hình, tính cách lần đầ
 Nhân vật đã có nhiều chi tiết về giờ giấc (Unit 2), quán cà phê (Unit 16), đi khám (Unit 12) — soát mục 5.7 trước khi viết.
 Phiên Review của module chưa có video. Nếu làm thì dùng cảnh `blanks` ôn từ của cả module, không đếm ngược.
 
+### 5.9 Video nghe – viết 10 phút (đợt 36)
+
+Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu theo chủ đề
+phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+
+**Khuôn:**
+- **Mỗi unit một video thứ hai** `<id video unit>-dictation`, ví dụ `U02-time-dictation`. Video dùng cùng `activity` với
+  video bài giảng, nên nằm cùng phiên, cùng thẻ unit, đứng ngay sau video bài giảng (`lessons.json` xếp theo id). Nút ghi
+  "Dictation · listen and write: …".
+- **Khoảng 10 phút, chạy liền, không có khoảng lặng:** không `wait` / `echo`, không đếm ngược, không dòng nào có `pause`.
+  Người học: "video ko nên có pause quá 3 giây nếu có ko có càng tốt" — họ tự tạm dừng để viết. Chỉ còn khoảng ngắt tự nhiên
+  0,45 giây giữa hai câu (`gap`) và 0,4 giây khi sang cảnh (`scene_gap`). Test cho phép 9–11 phút, và đo bằng ffmpeg
+  (`silencedetect`, −45 dB) thì không có khoảng lặng nào từ 3 giây trở lên.
+- **Ba phần**, mỗi phần một chương:
+  1. *Từ trong sách* (Emma đọc).
+     - Gồm mọi mục Word list của unit (`work/wordlist.json`) và từ trên trang unit không có trong Word list: Unit 1 có số
+       11–20, -teen / -ty, số lớn, số điện thoại, giá tiền, %; Unit 2 có cách nói giờ; Unit 3 có thứ, tháng, số thứ tự,
+       cách đọc năm.
+     - Mỗi mục đọc số thứ tự, đọc từ hai lần, rồi câu ví dụ hai lần, để người học viết được cả câu.
+     - Mục Word list liền nhau thì ghép một dòng (`France, French`; `grandfather, grandmother`), để Unit 4 (79 mục) vẫn vừa
+       10 phút.
+  2. *Từ thêm theo chủ đề* (Tom đọc): 10–25 từ ngoài sách, hay gặp và dùng được ngay. Ví dụ Unit 2: hour, on time,
+     appointment; Unit 12: headache, sore throat.
+  3. *Câu giao tiếp*: 14–30 câu, phần lớn là cặp hỏi – đáp, Emma và Tom đọc xen kẽ, mỗi câu đọc hai lần.
+     - Câu ngôi thứ nhất khớp hồ sơ nhân vật (mục 5.7, file 06 mục 9.4), ví dụ: Tom 20 tuổi, quê Đà Lạt, sinh 9/3/2006, chị
+       Hoa là y tá ở Hà Nội; Emma 28 tuổi, dạy ở TP. HCM ba năm, gọi cho mẹ mỗi Chủ nhật, sợ nhện.
+     - Câu không có trong hồ sơ thì viết trung tính (He / She / They) hoặc thành câu hỏi.
+- **Cảnh `dictation`** (thêm vào `agents/lesson_video` ở đợt 36):
+  - tối đa 6 dòng; mỗi dòng có số `n`;
+  - generator chia mỗi phần thành cảnh 6 dòng; cảnh cuối chỉ còn 1–2 dòng thì chia đều hai cảnh cuối (6 + 1 → 4 + 3,
+    6 + 2 → 4 + 4), để không có cảnh gần trống (test: mỗi cảnh ít nhất 3 dòng);
+  - dòng chưa `reveal` chỉ có vạch kẻ để viết; mở ra thì hiện `answer` (chữ đậm), nghĩa `vi`, câu ví dụ `ex`;
+  - dòng đọc mục k + 1 mở đáp án mục k; câu "Check your answers." cuối cảnh mở mục cuối;
+  - phụ đề không bao giờ hiện lời đang đọc, chỉ ghi "Listen and write…";
+  - `w` là mục Word list mà dòng đó phủ (một hoặc nhiều); lệnh `wordlist` dùng `w` để soát đủ từ.
+- **Word list của sách** (tr. 237–254, tức PDF 236–253; hai cột, mỗi từ kèm số unit):
+  - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai lề
+    8 điểm thì đọc "11" thành "1l". Lấy hợp của hai lần rồi soát tay theo ảnh trang.
+  - Kết quả ở `work/wordlist.json`: 433 mục của Unit 1–16; `level` để trống vì sách không chia cấp độ.
+  - Soát đủ từ: `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all` phải ra
+    "chưa hiện: 0" (test kiểm cả 16 unit).
+- **Sinh kịch bản:** dữ liệu từng unit (từ, nghĩa, câu ví dụ, mục Word list, cách đọc `s` / `se`) ở `work/dictation/units_*.py`.
+  Lệnh `python3 books/book_oxford_word_skills_basic/work/dictation/gen_dictation.py U02` ghi
+  `lessons/U02-time-dictation.yaml`. Kịch bản là bản sinh ra: sửa dữ liệu rồi sinh lại, không sửa tay.
+
+**Quy trình một unit:**
+1. In mục Word list của unit: `python -m lesson_video wordlist … --unit U17 --level all`. Xem trang unit để thêm từ trên trang
+   mà Word list không có.
+2. Viết dữ liệu: từ trong sách 20–45 dòng, từ thêm 10–25, câu 14–30. Sinh kịch bản, rồi chạy `check`, `phonemes` (sửa bằng `s`
+   / `se`) và `wordlist --level all` (phải ra 0).
+3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:40–10:00 (bản dựng Kokoro dài hơn ước lượng khoảng 6 %: Unit 2 ước 9:51, dựng thật 10:25). Thiếu thì thêm từ, câu; không thêm `pause`.
+4. Dựng video, rồi chạy `python3 web/build.py`.
+
+**Lưu ý:**
+- Bản đầu (đợt 36) có nghỉ 1,5 giây sau mỗi từ và 2 giây sau mỗi câu. Đo bản dựng Unit 2: khoảng lặng trung vị 2,0 giây,
+  dài nhất 3,5 giây ở chỗ chuyển cảnh (nghỉ 2 giây + `gap` + `scene_gap` 0,8 giây). Người học yêu cầu không quá 3 giây, tốt
+  nhất là không có, nên đã bỏ mọi `pause`, `scene_gap` còn 0,4, câu ví dụ đọc hai lần, thêm từ và câu cho đủ 10 phút.
+  Đo lại bản dựng mới của Unit 2: khoảng lặng trung vị 0,54 giây; chỗ chuyển cảnh khoảng 1,05 giây; dài nhất 2,05 giây ở
+  cuối video.
+- `a.m.`, `p.m.` Kokoro đọc đúng, không cần `say`. Số -teen đứng riêng hoặc cuối câu vẫn dùng `thir-teen`… (mục 5.5).
+- `phonemes` báo nhầm ở "for office use only" (Unit 9: use là danh từ) và "close friends" (Unit 15: close là tính từ); đã
+  ghi ở đầu kịch bản.
+- Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
+
+**16 video, 2:42:38** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 1 · Numbers | `U01-numbers-dictation` | 10:00 | 29 · 4 | 20 | 34 |
+| 2 · The time | `U02-time-dictation` | 10:25 | 27 · 20 | 23 | 36 |
+| 3 · Days and dates | `U03-days-dates-dictation` | 10:32 | 29 · 14 | 19 | 28 |
+| 4 · Countries and nationalities | `U04-countries-dictation` | 10:55 | 43 · 79 | 10 | 20 |
+| 5 · Classroom vocabulary | `U05-classroom-dictation` | 10:01 | 24 · 22 | 26 | 34 |
+| 6 · English language words | `U06-language-words-dictation` | 10:26 | 22 · 17 | 26 | 32 |
+| 7 · Questions about language | `U07-questions-language-dictation` | 10:01 | 23 · 19 | 27 | 35 |
+| 8 · Personal information | `U08-personal-info-dictation` | 9:58 | 21 · 16 | 28 | 40 |
+| 9 · Filling in a form | `U09-form-dictation` | 10:20 | 21 · 19 | 27 | 35 |
+| 10 · My family | `U10-family-dictation` | 10:06 | 24 · 36 | 22 | 31 |
+| 11 · Physical actions | `U11-actions-dictation` | 9:49 | 25 · 25 | 27 | 37 |
+| 12 · Parts of the body | `U12-body-dictation` | 9:42 | 28 · 30 | 24 | 34 |
+| 13 · Describing people | `U13-describing-people-dictation` | 9:56 | 36 · 45 | 20 | 30 |
+| 14 · Character | `U14-character-dictation` | 10:18 | 28 · 30 | 24 | 32 |
+| 15 · Relationships | `U15-relationships-dictation` | 10:05 | 22 · 32 | 23 | 35 |
+| 16 · Feelings | `U16-feelings-dictation` | 10:04 | 22 · 25 | 28 | 35 |
+
 ## 6. Việc tiếp theo
 
-1. Video Unit 17 trở đi theo mục 5 (checklist P2-59), kế hoạch module Everyday life ở mục 5.8.
+1. Video Unit 17 trở đi theo mục 5 (checklist P2-59), kế hoạch module Everyday life ở mục 5.8. Mỗi unit hai video: bài
+   giảng (mục 5) và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

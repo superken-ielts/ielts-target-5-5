@@ -1,0 +1,326 @@
+# Video nghe – viết (dictation) Unit 16 · Feelings — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U16-feelings-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U16 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U16-feelings-dictation
+activity: U16-words
+title: "Unit 16 · Feelings"
+subtitle: "Dictation · listen and write: how you feel"
+title_vi: "Nghe – viết 10 phút: cảm xúc — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PEOPLE · UNIT 16"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 16: Feelings. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit sixteen: Feelings. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 16: cảm xúc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 22 words from the book. You hear each word twice, and then an example sentence twice. Then 28 more useful words, and 35 useful sentences for conversation.", "say": "There are three parts. First, twenty-two words from the book. You hear each word twice, and then an example sentence twice. Then twenty-eight more useful words, and thirty-five useful sentences for conversation.", "vi": "Ba phần: 22 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 28 từ thêm, 35 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "feel", "vi": "cảm thấy", "ex": "How do you feel today?", "w": ["feel"]}
+      - {"n": 2, "answer": "happy", "vi": "vui, hạnh phúc", "ex": "She's very happy in her new job.", "w": ["happy"]}
+      - {"n": 3, "answer": "unhappy", "vi": "không vui", "ex": "He's unhappy at work.", "w": ["unhappy"]}
+      - {"n": 4, "answer": "sad", "vi": "buồn", "ex": "The film was very sad.", "w": ["sad"]}
+      - {"n": 5, "answer": "upset", "vi": "buồn bực, phiền lòng", "ex": "She was upset when she lost her phone.", "w": ["upset"]}
+      - {"n": 6, "answer": "angry", "vi": "giận", "ex": "Emma gets angry when people are late.", "w": ["angry", "get"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. feel. feel. How do you feel today? How do you feel today?", "focus": 0}
+      - {"emma": "Two. happy. happy. She's very happy in her new job. She's very happy in her new job.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. unhappy. unhappy. He's unhappy at work. He's unhappy at work.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. sad. sad. The film was very sad. The film was very sad.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. upset. upset. She was upset when she lost her phone. She was upset when she lost her phone.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. angry. angry. Emma gets angry when people are late. Emma gets angry when people are late.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "worried", "vi": "lo lắng", "ex": "Don't be worried. Everything is OK.", "w": ["worried", "be"]}
+      - {"n": 8, "answer": "nervous", "vi": "hồi hộp, bồn chồn", "ex": "He always feels nervous before exams.", "w": ["nervous"]}
+      - {"n": 9, "answer": "excited", "vi": "háo hức", "ex": "The children are excited about Christmas.", "w": ["excited"]}
+      - {"n": 10, "answer": "surprised", "vi": "ngạc nhiên", "ex": "She was surprised to see him.", "w": ["surprised"]}
+      - {"n": 11, "answer": "embarrassed", "vi": "xấu hổ, ngượng", "ex": "He felt embarrassed when he dropped the tray.", "w": ["embarrassed"]}
+      - {"n": 12, "answer": "frightened", "vi": "sợ hãi", "ex": "She's frightened of spiders.", "w": ["frightened"]}
+    lines:
+      - {"emma": "Seven. worried. worried. Don't be worried. Everything is OK. Don't be worried. Everything is OK.", "focus": 0}
+      - {"emma": "Eight. nervous. nervous. He always feels nervous before exams. He always feels nervous before exams.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. excited. excited. The children are excited about Christmas. The children are excited about Christmas.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. surprised. surprised. She was surprised to see him. She was surprised to see him.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. embarrassed. embarrassed. He felt embarrassed when he dropped the tray. He felt embarrassed when he dropped the tray.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. frightened. frightened. She's frightened of spiders. She's frightened of spiders.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "scared", "vi": "sợ", "ex": "Are you scared of the dark?", "w": ["scared"]}
+      - {"n": 14, "answer": "in love", "vi": "đang yêu", "ex": "They're in love.", "w": ["in love"]}
+      - {"n": 15, "answer": "tired", "vi": "mệt", "ex": "She's very tired after work.", "w": ["tired"]}
+      - {"n": 16, "answer": "hungry", "vi": "đói", "ex": "Are you hungry? Let's eat.", "w": ["hungry"]}
+      - {"n": 17, "answer": "thirsty", "vi": "khát", "ex": "Are you thirsty? Have some water.", "w": ["thirsty"]}
+      - {"n": 18, "answer": "boiling", "vi": "nóng như thiêu (= very hot)", "ex": "It's boiling today!", "w": ["boiling"]}
+    lines:
+      - {"emma": "Thirteen. scared. scared. Are you scared of the dark? Are you scared of the dark?", "focus": 0}
+      - {"emma": "Fourteen. in love. in love. They're in love. They're in love.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. tired. tired. She's very tired after work. She's very tired after work.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. hungry. hungry. Are you hungry? Let's eat. Are you hungry? Let's eat.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. thirsty. thirsty. Are you thirsty? Have some water. Are you thirsty? Have some water.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. boiling. boiling. It's boiling today! It's boiling today!", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "freezing", "vi": "lạnh cóng (= very cold)", "ex": "It's freezing outside.", "w": ["freezing"]}
+      - {"n": 20, "answer": "ill", "vi": "ốm", "ex": "He's ill in bed.", "w": ["ill"]}
+      - {"n": 21, "answer": "well", "vi": "khỏe (không ốm)", "ex": "She doesn't feel well.", "w": ["well"]}
+      - {"n": 22, "answer": "What's the matter?", "vi": "Có chuyện gì vậy?", "ex": "What's the matter? You look sad.", "w": ["What's the matter?", "matter"]}
+    lines:
+      - {"emma": "Nineteen. freezing. freezing. It's freezing outside. It's freezing outside.", "focus": 0}
+      - {"emma": "Twenty. ill. ill. He's ill in bed. He's ill in bed.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. well. well. She doesn't feel well. She doesn't feel well.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. What's the matter?. What's the matter?. What's the matter? You look sad. What's the matter? You look sad.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (23–28)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 23, "answer": "bored", "vi": "chán (người cảm thấy)", "ex": "The students are bored."}
+      - {"n": 24, "answer": "boring", "vi": "chán (việc gây chán)", "ex": "The lesson is boring."}
+      - {"n": 25, "answer": "proud", "vi": "tự hào", "ex": "Her parents are very proud of her."}
+      - {"n": 26, "answer": "lonely", "vi": "cô đơn", "ex": "He felt lonely in the new city."}
+      - {"n": 27, "answer": "homesick", "vi": "nhớ nhà", "ex": "She feels homesick at Christmas."}
+      - {"n": 28, "answer": "stressed", "vi": "căng thẳng", "ex": "He's stressed about his exams."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-three. bored. bored. The students are bored. The students are bored.", "focus": 0}
+      - {"tom": "Twenty-four. boring. boring. The lesson is boring. The lesson is boring.", "focus": 1, "reveal": [23]}
+      - {"tom": "Twenty-five. proud. proud. Her parents are very proud of her. Her parents are very proud of her.", "focus": 2, "reveal": [24]}
+      - {"tom": "Twenty-six. lonely. lonely. He felt lonely in the new city. He felt lonely in the new city.", "focus": 3, "reveal": [25]}
+      - {"tom": "Twenty-seven. homesick. homesick. She feels homesick at Christmas. She feels homesick at Christmas.", "focus": 4, "reveal": [26]}
+      - {"tom": "Twenty-eight. stressed. stressed. He's stressed about his exams. He's stressed about his exams.", "focus": 5, "reveal": [27]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "calm", "vi": "bình tĩnh", "ex": "Take a deep breath and stay calm."}
+      - {"n": 30, "answer": "jealous", "vi": "ghen tị", "ex": "He's jealous of his brother's new phone."}
+      - {"n": 31, "answer": "confused", "vi": "bối rối", "ex": "I'm confused. Can you explain again?"}
+      - {"n": 32, "answer": "afraid", "vi": "sợ", "ex": "Don't be afraid to make mistakes."}
+      - {"n": 33, "answer": "disappointed", "vi": "thất vọng", "ex": "She was disappointed with her score."}
+      - {"n": 34, "answer": "pleased", "vi": "hài lòng", "ex": "The teacher was pleased with our work."}
+    lines:
+      - {"tom": "Twenty-nine. calm. calm. Take a deep breath and stay calm. Take a deep breath and stay calm.", "focus": 0}
+      - {"tom": "Thirty. jealous. jealous. He's jealous of his brother's new phone. He's jealous of his brother's new phone.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. confused. confused. I'm confused. Can you explain again? I'm confused. Can you explain again?", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. afraid. afraid. Don't be afraid to make mistakes. Don't be afraid to make mistakes.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. disappointed. disappointed. She was disappointed with her score. She was disappointed with her score.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. pleased. pleased. The teacher was pleased with our work. The teacher was pleased with our work.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "annoyed", "vi": "bực mình", "ex": "She gets annoyed when people don't text."}
+      - {"n": 36, "answer": "relieved", "vi": "nhẹ nhõm", "ex": "He was relieved when the exam was over."}
+      - {"n": 37, "answer": "starving", "vi": "đói lả", "ex": "I'm starving. When's dinner?"}
+      - {"n": 38, "answer": "exhausted", "vi": "kiệt sức", "ex": "After the long walk, they were exhausted."}
+      - {"n": 39, "answer": "sleepy", "vi": "buồn ngủ", "ex": "The baby is sleepy."}
+      - {"n": 40, "answer": "grateful", "vi": "biết ơn", "ex": "We're very grateful for your help."}
+    lines:
+      - {"tom": "Thirty-five. annoyed. annoyed. She gets annoyed when people don't text. She gets annoyed when people don't text.", "focus": 0}
+      - {"tom": "Thirty-six. relieved. relieved. He was relieved when the exam was over. He was relieved when the exam was over.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. starving. starving. I'm starving. When's dinner? I'm starving. When's dinner?", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. exhausted. exhausted. After the long walk, they were exhausted. After the long walk, they were exhausted.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. sleepy. sleepy. The baby is sleepy. The baby is sleepy.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. grateful. grateful. We're very grateful for your help. We're very grateful for your help.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "shocked", "vi": "sốc", "ex": "Everyone was shocked by the news."}
+      - {"n": 42, "answer": "terrified", "vi": "kinh hãi", "ex": "She's terrified of flying."}
+      - {"n": 43, "answer": "fed up", "vi": "chán ngấy", "ex": "He's fed up with the rain."}
+      - {"n": 44, "answer": "in a good mood", "vi": "tâm trạng tốt", "ex": "She's in a good mood today."}
+      - {"n": 45, "answer": "in a bad mood", "vi": "tâm trạng xấu", "ex": "He's in a bad mood. Leave him alone."}
+      - {"n": 46, "answer": "cry", "vi": "khóc", "ex": "The baby started to cry."}
+    lines:
+      - {"tom": "Forty-one. shocked. shocked. Everyone was shocked by the news. Everyone was shocked by the news.", "focus": 0}
+      - {"tom": "Forty-two. terrified. terrified. She's terrified of flying. She's terrified of flying.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. fed up. fed up. He's fed up with the rain. He's fed up with the rain.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. in a good mood. in a good mood. She's in a good mood today. She's in a good mood today.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. in a bad mood. in a bad mood. He's in a bad mood. Leave him alone. He's in a bad mood. Leave him alone.", "focus": 4, "reveal": [44]}
+      - {"tom": "Forty-six. cry. cry. The baby started to cry. The baby started to cry.", "focus": 5, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (47–50)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 47, "answer": "miss", "vi": "nhớ", "ex": "She misses her family."}
+      - {"n": 48, "answer": "calm down", "vi": "bình tĩnh lại", "ex": "Calm down and take a deep breath."}
+      - {"n": 49, "answer": "cheer up", "vi": "vui lên", "ex": "This song always cheers me up."}
+      - {"n": 50, "answer": "feel sorry for", "vi": "thấy tội cho", "ex": "I feel sorry for him."}
+    lines:
+      - {"tom": "Forty-seven. miss. miss. She misses her family. She misses her family.", "focus": 0}
+      - {"tom": "Forty-eight. calm down. calm down. Calm down and take a deep breath. Calm down and take a deep breath.", "focus": 1, "reveal": [47]}
+      - {"tom": "Forty-nine. cheer up. cheer up. This song always cheers me up. This song always cheers me up.", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. feel sorry for. feel sorry for. I feel sorry for him. I feel sorry for him.", "focus": 3, "reveal": [49]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [50]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 51, "answer": "What's the matter?", "vi": "Có chuyện gì vậy?"}
+      - {"n": 52, "answer": "I'm a bit worried about my exam.", "vi": "Mình hơi lo về bài thi."}
+      - {"n": 53, "answer": "Don't worry. You'll be fine.", "vi": "Đừng lo. Bạn sẽ ổn thôi."}
+      - {"n": 54, "answer": "How are you feeling today?", "vi": "Hôm nay bạn thấy thế nào?"}
+      - {"n": 55, "answer": "Much better, thanks.", "vi": "Đỡ nhiều rồi, cảm ơn."}
+      - {"n": 56, "answer": "Are you OK? You look tired.", "vi": "Bạn ổn không? Trông bạn mệt."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-one. What's the matter? What's the matter?", "focus": 0}
+      - {"tom": "Fifty-two. I'm a bit worried about my exam. I'm a bit worried about my exam.", "focus": 1, "reveal": [51]}
+      - {"emma": "Fifty-three. Don't worry. You'll be fine. Don't worry. You'll be fine.", "focus": 2, "reveal": [52]}
+      - {"emma": "Fifty-four. How are you feeling today? How are you feeling today?", "focus": 3, "reveal": [53]}
+      - {"tom": "Fifty-five. Much better, thanks. Much better, thanks.", "focus": 4, "reveal": [54]}
+      - {"tom": "Fifty-six. Are you OK? You look tired. Are you OK? You look tired.", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 57, "answer": "I didn't sleep well last night.", "vi": "Tối qua mình ngủ không ngon."}
+      - {"n": 58, "answer": "I always get nervous before exams.", "vi": "Trước kỳ thi mình luôn hồi hộp."}
+      - {"n": 59, "answer": "I feel homesick at Christmas.", "vi": "Giáng sinh mình thấy nhớ nhà."}
+      - {"n": 60, "answer": "I'm frightened of spiders.", "vi": "Mình sợ nhện."}
+      - {"n": 61, "answer": "I was so embarrassed when I dropped the tray.", "vi": "Mình xấu hổ lắm khi làm rơi cái khay."}
+      - {"n": 62, "answer": "I'm so excited about the trip!", "vi": "Mình háo hức với chuyến đi quá!"}
+    lines:
+      - {"emma": "Fifty-seven. I didn't sleep well last night. I didn't sleep well last night.", "focus": 0}
+      - {"tom": "Fifty-eight. I always get nervous before exams. I always get nervous before exams.", "focus": 1, "reveal": [57]}
+      - {"emma": "Fifty-nine. I feel homesick at Christmas. I feel homesick at Christmas.", "focus": 2, "reveal": [58]}
+      - {"emma": "Sixty. I'm frightened of spiders. I'm frightened of spiders.", "focus": 3, "reveal": [59]}
+      - {"tom": "Sixty-one. I was so embarrassed when I dropped the tray. I was so embarrassed when I dropped the tray.", "focus": 4, "reveal": [60]}
+      - {"tom": "Sixty-two. I'm so excited about the trip! I'm so excited about the trip!", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 63, "answer": "I'm boiling. Can we turn on the fan?", "vi": "Nóng quá. Bật quạt được không?"}
+      - {"n": 64, "answer": "That's great news! I'm so happy for you.", "vi": "Tin tuyệt quá! Mình mừng cho bạn."}
+      - {"n": 65, "answer": "I'm sorry to hear that.", "vi": "Mình rất tiếc khi nghe vậy."}
+      - {"n": 66, "answer": "Is everything all right?", "vi": "Mọi chuyện ổn chứ?"}
+      - {"n": 67, "answer": "Yes, everything's fine, thanks.", "vi": "Ừ, mọi chuyện ổn, cảm ơn."}
+      - {"n": 68, "answer": "You look happy today!", "vi": "Hôm nay trông bạn vui thế!"}
+    lines:
+      - {"tom": "Sixty-three. I'm boiling. Can we turn on the fan? I'm boiling. Can we turn on the fan?", "focus": 0}
+      - {"emma": "Sixty-four. That's great news! I'm so happy for you. That's great news! I'm so happy for you.", "focus": 1, "reveal": [63]}
+      - {"emma": "Sixty-five. I'm sorry to hear that. I'm sorry to hear that.", "focus": 2, "reveal": [64]}
+      - {"tom": "Sixty-six. Is everything all right? Is everything all right?", "focus": 3, "reveal": [65]}
+      - {"emma": "Sixty-seven. Yes, everything's fine, thanks. Yes, everything's fine, thanks.", "focus": 4, "reveal": [66]}
+      - {"tom": "Sixty-eight. You look happy today! You look happy today!", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "I am. It's a beautiful day!", "vi": "Đúng vậy. Trời đẹp quá!"}
+      - {"n": 70, "answer": "How do you feel before an exam?", "vi": "Trước kỳ thi bạn cảm thấy thế nào?"}
+      - {"n": 71, "answer": "Very nervous. I can't eat breakfast.", "vi": "Rất hồi hộp. Mình không ăn sáng nổi."}
+      - {"n": 72, "answer": "What makes you angry?", "vi": "Điều gì làm bạn tức giận?"}
+      - {"n": 73, "answer": "People who are late and don't text.", "vi": "Người đến muộn mà không nhắn tin."}
+      - {"n": 74, "answer": "When I'm worried, I call my sister.", "vi": "Khi lo lắng, mình gọi cho chị gái."}
+    lines:
+      - {"emma": "Sixty-nine. I am. It's a beautiful day! I am. It's a beautiful day!", "focus": 0}
+      - {"emma": "Seventy. How do you feel before an exam? How do you feel before an exam?", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. Very nervous. I can't eat breakfast. Very nervous. I can't eat breakfast.", "focus": 2, "reveal": [70]}
+      - {"tom": "Seventy-two. What makes you angry? What makes you angry?", "focus": 3, "reveal": [71]}
+      - {"emma": "Seventy-three. People who are late and don't text. People who are late and don't text.", "focus": 4, "reveal": [72]}
+      - {"tom": "Seventy-four. When I'm worried, I call my sister. When I'm worried, I call my sister.", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (75–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 75, "answer": "Do you feel like a coffee?", "vi": "Bạn có muốn uống cà phê không?"}
+      - {"n": 76, "answer": "Yes, please. An iced coffee with milk.", "vi": "Có. Một ly cà phê sữa đá."}
+      - {"n": 77, "answer": "Cheer up! It's nearly the weekend.", "vi": "Vui lên nào! Sắp cuối tuần rồi."}
+      - {"n": 78, "answer": "Good luck in your exam!", "vi": "Chúc thi tốt!"}
+      - {"n": 79, "answer": "Thanks. I'll need it!", "vi": "Cảm ơn. Mình sẽ cần lắm đấy!"}
+      - {"n": 80, "answer": "Why are you so happy today?", "vi": "Sao hôm nay bạn vui thế?"}
+    lines:
+      - {"emma": "Seventy-five. Do you feel like a coffee? Do you feel like a coffee?", "focus": 0}
+      - {"tom": "Seventy-six. Yes, please. An iced coffee with milk. Yes, please. An iced coffee with milk.", "focus": 1, "reveal": [75]}
+      - {"tom": "Seventy-seven. Cheer up! It's nearly the weekend. Cheer up! It's nearly the weekend.", "focus": 2, "reveal": [76]}
+      - {"emma": "Seventy-eight. Good luck in your exam! Good luck in your exam!", "focus": 3, "reveal": [77]}
+      - {"tom": "Seventy-nine. Thanks. I'll need it! Thanks. I'll need it!", "focus": 4, "reveal": [78]}
+      - {"emma": "Eighty. Why are you so happy today? Why are you so happy today?", "focus": 5, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [80]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (81–85)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 81, "answer": "I got a good mark in my IELTS practice test!", "vi": "Mình được điểm tốt ở bài thi thử IELTS!"}
+      - {"n": 82, "answer": "How did you feel on your first day at work?", "vi": "Ngày đầu đi làm bạn cảm thấy thế nào?"}
+      - {"n": 83, "answer": "Very nervous. I dropped a tray of coffee!", "vi": "Rất hồi hộp. Mình làm rơi cả khay cà phê!"}
+      - {"n": 84, "answer": "Are you afraid of anything?", "vi": "Bạn có sợ gì không?"}
+      - {"n": 85, "answer": "Yes, spiders! And the traffic here.", "vi": "Có, nhện! Và cả giao thông ở đây nữa."}
+    lines:
+      - {"tom": "Eighty-one. I got a good mark in my IELTS practice test! I got a good mark in my IELTS practice test!", "say": "Eighty-one. I got a good mark in my eye-elts practice test! I got a good mark in my eye-elts practice test!", "focus": 0}
+      - {"emma": "Eighty-two. How did you feel on your first day at work? How did you feel on your first day at work?", "focus": 1, "reveal": [81]}
+      - {"tom": "Eighty-three. Very nervous. I dropped a tray of coffee! Very nervous. I dropped a tray of coffee!", "focus": 2, "reveal": [82]}
+      - {"tom": "Eighty-four. Are you afraid of anything? Are you afraid of anything?", "focus": 3, "reveal": [83]}
+      - {"emma": "Eighty-five. Yes, spiders! And the traffic here. Yes, spiders! And the traffic here.", "focus": 4, "reveal": [84]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [85]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in the next module.", "say": "Well done! See you in the next module.", "vi": "Giỏi lắm! Hẹn gặp ở module tiếp theo."}
+

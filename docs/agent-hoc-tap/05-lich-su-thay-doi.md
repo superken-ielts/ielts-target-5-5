@@ -5,6 +5,121 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 36 — 22/11/2026: Oxford Word Skills Basic — mỗi unit thêm một video nghe – viết 10 phút
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 35 (`3b8fefd`, đã lên `main`). Đẩy lên nhánh và `main` thành một commit
+như các đợt trước.
+
+### Yêu cầu
+
+Người học: "tiếp tục sách oxford mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ
+vựng câu theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao
+tiếp", rồi "xong rồi commit push lên main". Giữa chừng người học nhắc: "nên nhớ video ko nên có pause quá 3 giây nếu có ko
+có càng tốt".
+
+### Đã làm
+
+- **Word list cuối sách** (tr. 237–254 = PDF 236–253):
+  - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai
+    lề 8 điểm thì đọc "11" thành "1l", mất break, run của Unit 11.
+  - Lấy hợp của hai lần rồi soát tay theo ảnh trang: tách từ dính liền, bỏ dòng lạc unit ("United States of America" nằm
+    nhầm ở Unit 3).
+  - Kết quả `work/wordlist.json`: 433 mục của Unit 1–16 (Unit 4 có 79 mục, Unit 1 chỉ có 4).
+  - Word list không có từ cơ bản trên trang (số ở Unit 1, thứ và tháng ở Unit 3), nên phần 1 của video thêm các từ đó.
+- **Cảnh `dictation`** (`agents/lesson_video`):
+  - tối đa 6 dòng có số; dòng chưa mở chỉ có vạch kẻ để viết;
+  - mở ra thì hiện từ / câu (đậm), nghĩa tiếng Việt, câu ví dụ;
+  - phụ đề luôn ghi "Listen and write…", không lộ lời đang đọc;
+  - `w` = mục Word list mà dòng phủ.
+- **Lệnh `wordlist`:** thêm `--level all` cho sách không chia cấp độ; tính cả mục `w` của cảnh `dictation`.
+- **Bộ sinh kịch bản** `books/book_oxford_word_skills_basic/work/dictation/gen_dictation.py`:
+  - dữ liệu từng unit ở `units_01_04.py`, `units_05_09.py`, `units_10_16.py`;
+  - mỗi mục gồm từ, nghĩa, câu ví dụ, mục Word list và cách đọc;
+  - kịch bản .yaml là bản sinh ra, không sửa tay.
+- **16 video nghe – viết** (2:42:38), id `<id video unit>-dictation`, cùng phiên với video bài giảng:
+  - phần 1 — từ trong sách (Emma): mỗi từ đọc hai lần rồi câu ví dụ hai lần;
+  - phần 2 — từ thêm theo chủ đề (Tom);
+  - phần 3 — câu giao tiếp (hai người đọc xen kẽ, mỗi câu hai lần);
+  - đáp án hiện khi sang mục sau; không có `pause`: chỉ còn khoảng ngắt tự nhiên 0,45 giây giữa hai câu, 0,4 giây khi sang
+    cảnh; đo bằng ffmpeg không có khoảng lặng từ 3 giây.
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 1 · Numbers | `U01-numbers-dictation` | 10:00 | 29 · 4 | 20 | 34 |
+| 2 · The time | `U02-time-dictation` | 10:25 | 27 · 20 | 23 | 36 |
+| 3 · Days and dates | `U03-days-dates-dictation` | 10:32 | 29 · 14 | 19 | 28 |
+| 4 · Countries and nationalities | `U04-countries-dictation` | 10:55 | 43 · 79 | 10 | 20 |
+| 5 · Classroom vocabulary | `U05-classroom-dictation` | 10:01 | 24 · 22 | 26 | 34 |
+| 6 · English language words | `U06-language-words-dictation` | 10:26 | 22 · 17 | 26 | 32 |
+| 7 · Questions about language | `U07-questions-language-dictation` | 10:01 | 23 · 19 | 27 | 35 |
+| 8 · Personal information | `U08-personal-info-dictation` | 9:58 | 21 · 16 | 28 | 40 |
+| 9 · Filling in a form | `U09-form-dictation` | 10:20 | 21 · 19 | 27 | 35 |
+| 10 · My family | `U10-family-dictation` | 10:06 | 24 · 36 | 22 | 31 |
+| 11 · Physical actions | `U11-actions-dictation` | 9:49 | 25 · 25 | 27 | 37 |
+| 12 · Parts of the body | `U12-body-dictation` | 9:42 | 28 · 30 | 24 | 34 |
+| 13 · Describing people | `U13-describing-people-dictation` | 9:56 | 36 · 45 | 20 | 30 |
+| 14 · Character | `U14-character-dictation` | 10:18 | 28 · 30 | 24 | 32 |
+| 15 · Relationships | `U15-relationships-dictation` | 10:05 | 22 · 32 | 23 | 35 |
+| 16 · Feelings | `U16-feelings-dictation` | 10:04 | 22 · 25 | 28 | 35 |
+
+Thử và sửa trong lúc làm:
+- **Thời lượng và khoảng nghỉ:**
+  - Bản thử Unit 2 ước 8:29. Tăng khoảng nghỉ (1 → 1,5 giây, câu 1,4 → 2 giây), thêm từ và câu, thì ước 10:05, dựng thật
+    10:15.
+  - Unit 5–16 lần đầu ước 7:13–9:05, đều thêm từ và câu.
+  - Đã dựng Unit 1–2 thì người học nhắc không để khoảng lặng quá 3 giây, tốt nhất không có. Đo bản Unit 2: trung vị 2,0 giây,
+    dài nhất 3,5 giây ở chỗ chuyển cảnh.
+  - Đã dừng hàng đợi dựng, bỏ mọi `pause`, `scene_gap` 0,8 → 0,4. Câu ví dụ đọc hai lần (người học viết được cả câu), thêm
+    1–12 mục mỗi unit cho đủ khoảng 10 phút. Dựng lại cả 16 video.
+- **Cách đọc:**
+  - `use` (động từ) → `yooz`, `live` / `lives` → `liv` / `livz`, `close` → `cloze`;
+  - chữ Việt (Tết, Đà Lạt, Hà Nội, Khoa, Hoa, cái ô, cà phê sữa đá) và Ho Chi Minh City sửa bằng `say`;
+  - `a.m.` / `p.m.` Kokoro đọc đúng, bỏ `say` thử lúc đầu.
+- **Cặp hỏi – đáp:** năm chỗ một người tự hỏi tự trả lời hoặc câu hỏi không có câu đáp (Unit 1, 8, 14, 15, 16). Đã sửa;
+  Unit 1 dựng lại.
+- **Chữ trên thẻ:** soát mọi mục, không có chữ bị cắt.
+- **Cảnh gần trống:** soát khung hình bản dựng thì Unit 4 có cảnh chỉ một mục (mục 43). Chín unit có cảnh cuối của một phần
+  chỉ 1–2 mục (Unit 1, 3, 4, 5, 6, 10, 11, 13, 14).
+  - Generator giờ chia đều hai cảnh cuối (6 + 1 → 4 + 3, 6 + 2 → 4 + 4). Test kiểm mỗi cảnh ít nhất 3 mục.
+  - Unit 10, 11, 13, 14 chưa dựng nên dựng luôn bản mới; Unit 1, 3, 4, 5, 6 dựng lại.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `agents/lesson_video/script.py` | Kiểu cảnh `dictation`, `DICT_MAX = 6`, từ chối trùng số, `reveal_keys` |
+| `agents/lesson_video/slides.py` | `_k_dictation`; phụ đề cảnh `dictation` chỉ ghi "Listen and write…" |
+| `agents/lesson_video/wordlist.py`, `cli.py` | `--level all`; đếm mục `w` của cảnh `dictation` |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 1–16 (433 mục) |
+| `books/book_oxford_word_skills_basic/work/dictation/` | Bộ sinh kịch bản và dữ liệu 16 unit |
+| `books/book_oxford_word_skills_basic/lessons/U*-dictation.yaml` (+ `.mp4`), `lessons.json` | 16 kịch bản và video mới |
+| `agents/tests/test_lesson_video.py` | Test cảnh `dictation` và `wordlist --level all`; hồi quy 16 video nghe – viết; test 7–10 phút cũ bỏ qua video nghe – viết |
+| `tests/web/book.e2e.mjs` | Thẻ sách 32 video; mỗi unit hai nút (bài giảng, nghe – viết 9–10 phút); phiên Unit 6 có hai video |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Mục 5.9 (khuôn, Word list, quy trình, bảng 16 video), đầu file, mục 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-70 (xong); dòng đợt 36 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 36; quy tắc video nghe – viết |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 32 video (16 bài giảng, 16 nghe – viết) |
+| `cd agents && python -m pytest -q` | 149 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford có 32 video, mỗi unit hai nút (bài giảng; nghe – viết 9–10 phút), phiên Unit 6 có hai video |
+| `python -m lesson_video check` / `phonemes` (16 kịch bản nghe – viết) | Hợp lệ; 2 ⚠ còn lại đọc đúng (Unit 9 "for office use only", Unit 15 "close friends"), ghi ở đầu kịch bản |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U01…U16 --level all` | Cả 16 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (16 video) | Không có khoảng lặng từ 3 giây. Dài nhất khoảng 2 giây, chỉ ở cuối video; giữa hai câu khoảng 0,5 giây, chuyển cảnh khoảng 1 giây |
+| Ảnh chụp khung hình bản dựng (Unit 4, 7, 8, 10, 11, 13, 14) | Đáp án ẩn tới khi sang mục sau, cuối cảnh hiện đủ; chữ vừa thẻ; sau khi chia lại, mỗi cảnh có 3–6 mục |
+
+### Còn treo
+
+- Unit 17 trở đi chưa có video (P2-59): mỗi unit hai video, bài giảng và nghe – viết.
+- Sách không kèm CD-ROM nên video không có giọng phát âm gốc của sách.
+- Video cũ của ba sách kia còn khoảng lặng từ 3 giây (P2-71, đo ở đợt 36): IELTS Target 5.0 39/70 video, English
+  Unlimited A2 8/23, GENKI 25/25. Chưa sửa.
+
 ## Đợt 35 — 20/11/2026: IELTS Target 5.0 Unit 5 · Thoughts — 11 video, hình trong sách, đáp án hiện sau
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 34 (`3297a9d`, đã lên `main`). Đẩy lên nhánh và `main` thành một commit

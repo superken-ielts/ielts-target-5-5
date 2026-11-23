@@ -1,0 +1,348 @@
+# Video nghe – viết (dictation) Unit 11 · Physical actions — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U11-actions-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U11 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U11-actions-dictation
+activity: U11-words
+title: "Unit 11 · Physical actions"
+subtitle: "Dictation · listen and write: action verbs"
+title_vi: "Nghe – viết 10 phút: hành động — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PEOPLE · UNIT 11"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 11: Physical actions. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit eleven: Physical actions. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 11: hành động. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 25 words from the book. You hear each word twice, and then an example sentence twice. Then 27 more useful words, and 37 useful sentences for conversation.", "say": "There are three parts. First, twenty-five words from the book. You hear each word twice, and then an example sentence twice. Then twenty-seven more useful words, and thirty-seven useful sentences for conversation.", "vi": "Ba phần: 25 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 27 từ thêm, 37 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "walk", "vi": "đi bộ", "ex": "Many students walk to school.", "w": ["walk"]}
+      - {"n": 2, "answer": "run", "vi": "chạy", "ex": "He runs five kilometres every morning.", "w": ["run"]}
+      - {"n": 3, "answer": "jump", "vi": "nhảy", "ex": "The cat jumped onto the table.", "w": ["jump"]}
+      - {"n": 4, "answer": "climb", "vi": "leo", "ex": "They climbed Langbiang Mountain.", "w": ["climb"]}
+      - {"n": 5, "answer": "dance", "vi": "nhảy múa", "ex": "She loves to dance.", "w": ["dance"]}
+      - {"n": 6, "answer": "ride", "vi": "đi (xe đạp, xe máy), cưỡi", "ex": "Can you ride a bike?", "w": ["ride"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. walk. walk. Many students walk to school. Many students walk to school.", "focus": 0}
+      - {"emma": "Two. run. run. He runs five kilometres every morning. He runs five kilometres every morning.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. jump. jump. The cat jumped onto the table. The cat jumped onto the table.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. climb. climb. They climbed Langbiang Mountain. They climbed Langbiang Mountain.", "say": "Four. climb. climb. They climbed Lang Bee-ang Mountain. They climbed Lang Bee-ang Mountain.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. dance. dance. She loves to dance. She loves to dance.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. ride. ride. Can you ride a bike? Can you ride a bike?", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "carry", "vi": "mang, xách", "ex": "Can you carry this bag for me?", "w": ["carry"]}
+      - {"n": 8, "answer": "hold", "vi": "cầm, nắm", "ex": "Hold my hand when we cross the road.", "w": ["hold"]}
+      - {"n": 9, "answer": "drop", "vi": "đánh rơi", "ex": "Don't drop the glasses!", "w": ["drop"]}
+      - {"n": 10, "answer": "break", "vi": "làm gãy, làm vỡ", "ex": "He broke his wrist when he was twelve.", "w": ["break"]}
+      - {"n": 11, "answer": "fall over", "vi": "ngã", "ex": "She fell over on the wet road.", "w": ["fall over"]}
+      - {"n": 12, "answer": "lie down", "vi": "nằm xuống", "ex": "Lie down on the bed and rest.", "w": ["lie down"]}
+    lines:
+      - {"emma": "Seven. carry. carry. Can you carry this bag for me? Can you carry this bag for me?", "focus": 0}
+      - {"emma": "Eight. hold. hold. Hold my hand when we cross the road. Hold my hand when we cross the road.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. drop. drop. Don't drop the glasses! Don't drop the glasses!", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. break. break. He broke his wrist when he was twelve. He broke his wrist when he was twelve.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. fall over. fall over. She fell over on the wet road. She fell over on the wet road.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. lie down. lie down. Lie down on the bed and rest. Lie down on the bed and rest.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "sit down", "vi": "ngồi xuống", "ex": "Please sit down.", "w": ["sit down"]}
+      - {"n": 14, "answer": "stand up", "vi": "đứng dậy", "ex": "Stand up, please.", "w": ["stand up"]}
+      - {"n": 15, "answer": "pick up", "vi": "nhặt lên", "ex": "Pick up the paper from the floor.", "w": ["pick up"]}
+      - {"n": 16, "answer": "put down", "vi": "đặt xuống", "ex": "Put your bags down, please.", "w": ["put something down"]}
+      - {"n": 17, "answer": "push", "vi": "đẩy", "ex": "Push the door to open it.", "w": ["push"]}
+      - {"n": 18, "answer": "pull", "vi": "kéo", "ex": "Pull the door. Don't push it.", "w": ["pull"]}
+    lines:
+      - {"emma": "Thirteen. sit down. sit down. Please sit down. Please sit down.", "focus": 0}
+      - {"emma": "Fourteen. stand up. stand up. Stand up, please. Stand up, please.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. pick up. pick up. Pick up the paper from the floor. Pick up the paper from the floor.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. put down. put down. Put your bags down, please. Put your bags down, please.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. push. push. Push the door to open it. Push the door to open it.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. pull. pull. Pull the door. Don't push it. Pull the door. Don't push it.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "open", "vi": "mở", "ex": "Open the window, please.", "w": ["open"]}
+      - {"n": 20, "answer": "close", "vi": "đóng", "ex": "Close the door, please.", "w": ["close"]}
+      - {"n": 21, "answer": "shut", "vi": "đóng (= close)", "ex": "Shut the window. It's cold.", "w": ["shut"]}
+      - {"n": 22, "answer": "touch", "vi": "chạm, sờ", "ex": "Don't touch the paintings.", "w": ["touch"]}
+    lines:
+      - {"emma": "Nineteen. open. open. Open the window, please. Open the window, please.", "focus": 0}
+      - {"emma": "Twenty. close. close. Close the door, please. Close the door, please.", "say": "Twenty. cloze. cloze. Cloze the door, please. Cloze the door, please.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. shut. shut. Shut the window. It's cold. Shut the window. It's cold.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. touch. touch. Don't touch the paintings. Don't touch the paintings.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–25)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "turn on", "vi": "bật", "ex": "Turn on the light, please.", "w": ["turn something on"]}
+      - {"n": 24, "answer": "get on", "vi": "lên (xe buýt, tàu)", "ex": "Get on the bus here.", "w": ["get on"]}
+      - {"n": 25, "answer": "get off", "vi": "xuống (xe buýt, tàu)", "ex": "Get off at the next stop.", "w": ["get off"]}
+    lines:
+      - {"emma": "Twenty-three. turn on. turn on. Turn on the light, please. Turn on the light, please.", "focus": 0}
+      - {"emma": "Twenty-four. get on. get on. Get on the bus here. Get on the bus here.", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. get off. get off. Get off at the next stop. Get off at the next stop.", "focus": 2, "reveal": [24]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [25]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (26–31)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 26, "answer": "turn off", "vi": "tắt", "ex": "Turn off the lights when you leave."}
+      - {"n": 27, "answer": "throw", "vi": "ném", "ex": "Throw the ball to me."}
+      - {"n": 28, "answer": "catch", "vi": "bắt (bóng)", "ex": "Can you catch the ball?"}
+      - {"n": 29, "answer": "kick", "vi": "đá", "ex": "Kick the ball into the goal."}
+      - {"n": 30, "answer": "swim", "vi": "bơi", "ex": "She can swim very well."}
+      - {"n": 31, "answer": "wave", "vi": "vẫy tay", "ex": "The children waved goodbye."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-six. turn off. turn off. Turn off the lights when you leave. Turn off the lights when you leave.", "focus": 0}
+      - {"tom": "Twenty-seven. throw. throw. Throw the ball to me. Throw the ball to me.", "focus": 1, "reveal": [26]}
+      - {"tom": "Twenty-eight. catch. catch. Can you catch the ball? Can you catch the ball?", "focus": 2, "reveal": [27]}
+      - {"tom": "Twenty-nine. kick. kick. Kick the ball into the goal. Kick the ball into the goal.", "focus": 3, "reveal": [28]}
+      - {"tom": "Thirty. swim. swim. She can swim very well. She can swim very well.", "focus": 4, "reveal": [29]}
+      - {"tom": "Thirty-one. wave. wave. The children waved goodbye. The children waved goodbye.", "focus": 5, "reveal": [30]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [31]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "point", "vi": "chỉ tay", "ex": "Don't point at people."}
+      - {"n": 33, "answer": "knock", "vi": "gõ (cửa)", "ex": "Knock on the door before you go in."}
+      - {"n": 34, "answer": "lift", "vi": "nâng, nhấc", "ex": "This box is too heavy to lift."}
+      - {"n": 35, "answer": "shake hands", "vi": "bắt tay", "ex": "They shook hands and smiled."}
+      - {"n": 36, "answer": "nod", "vi": "gật đầu", "ex": "She nodded and said yes."}
+      - {"n": 37, "answer": "bend", "vi": "cúi, gập", "ex": "Bend your knees."}
+    lines:
+      - {"tom": "Thirty-two. point. point. Don't point at people. Don't point at people.", "focus": 0}
+      - {"tom": "Thirty-three. knock. knock. Knock on the door before you go in. Knock on the door before you go in.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. lift. lift. This box is too heavy to lift. This box is too heavy to lift.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. shake hands. shake hands. They shook hands and smiled. They shook hands and smiled.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. nod. nod. She nodded and said yes. She nodded and said yes.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. bend. bend. Bend your knees. Bend your knees.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "stretch", "vi": "vươn vai, duỗi", "ex": "Stand up and stretch your arms."}
+      - {"n": 39, "answer": "slip", "vi": "trượt", "ex": "Be careful. Don't slip on the wet floor."}
+      - {"n": 40, "answer": "cross", "vi": "băng qua", "ex": "Look both ways before you cross the road."}
+      - {"n": 41, "answer": "hurry", "vi": "vội, nhanh lên", "ex": "Hurry! The bus is coming."}
+      - {"n": 42, "answer": "crawl", "vi": "bò", "ex": "Babies crawl before they walk."}
+      - {"n": 43, "answer": "wake up", "vi": "thức dậy", "ex": "She wakes up at six every morning."}
+    lines:
+      - {"tom": "Thirty-eight. stretch. stretch. Stand up and stretch your arms. Stand up and stretch your arms.", "focus": 0}
+      - {"tom": "Thirty-nine. slip. slip. Be careful. Don't slip on the wet floor. Be careful. Don't slip on the wet floor.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. cross. cross. Look both ways before you cross the road. Look both ways before you cross the road.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. hurry. hurry. Hurry! The bus is coming. Hurry! The bus is coming.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. crawl. crawl. Babies crawl before they walk. Babies crawl before they walk.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. wake up. wake up. She wakes up at six every morning. She wakes up at six every morning.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–49)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "get up", "vi": "ra khỏi giường", "ex": "He gets up at seven."}
+      - {"n": 45, "answer": "lean", "vi": "dựa", "ex": "Don't lean on the door."}
+      - {"n": 46, "answer": "hit", "vi": "đánh, va", "ex": "He hit his head on the door."}
+      - {"n": 47, "answer": "fall off", "vi": "ngã khỏi", "ex": "He fell off his bike."}
+      - {"n": 48, "answer": "hop", "vi": "nhảy lò cò", "ex": "Can you hop on one foot?"}
+      - {"n": 49, "answer": "go upstairs", "vi": "lên lầu", "ex": "Go upstairs and wash your hands."}
+    lines:
+      - {"tom": "Forty-four. get up. get up. He gets up at seven. He gets up at seven.", "focus": 0}
+      - {"tom": "Forty-five. lean. lean. Don't lean on the door. Don't lean on the door.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. hit. hit. He hit his head on the door. He hit his head on the door.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. fall off. fall off. He fell off his bike. He fell off his bike.", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. hop. hop. Can you hop on one foot? Can you hop on one foot?", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. go upstairs. go upstairs. Go upstairs and wash your hands. Go upstairs and wash your hands.", "focus": 5, "reveal": [48]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (50–52)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 50, "answer": "kneel", "vi": "quỳ", "ex": "Kneel down on the mat."}
+      - {"n": 51, "answer": "tap", "vi": "gõ nhẹ, chạm", "ex": "Tap the screen to start."}
+      - {"n": 52, "answer": "roll", "vi": "lăn", "ex": "The ball rolled under the car."}
+    lines:
+      - {"tom": "Fifty. kneel. kneel. Kneel down on the mat. Kneel down on the mat.", "focus": 0}
+      - {"tom": "Fifty-one. tap. tap. Tap the screen to start. Tap the screen to start.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. roll. roll. The ball rolled under the car. The ball rolled under the car.", "focus": 2, "reveal": [51]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [52]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "Can you help me carry these boxes?", "vi": "Bạn giúp mình bê mấy cái thùng này được không?"}
+      - {"n": 54, "answer": "Sure. Where do you want them?", "vi": "Được. Bạn muốn để đâu?"}
+      - {"n": 55, "answer": "Be careful! Don't drop it.", "vi": "Cẩn thận! Đừng làm rơi."}
+      - {"n": 56, "answer": "Could you open the window, please? It's hot.", "vi": "Bạn mở cửa sổ giúp được không? Nóng quá."}
+      - {"n": 57, "answer": "Sit down and relax.", "vi": "Ngồi xuống nghỉ ngơi đi."}
+      - {"n": 58, "answer": "I broke my wrist when I was twelve.", "vi": "Mình bị gãy cổ tay năm mười hai tuổi."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-three. Can you help me carry these boxes? Can you help me carry these boxes?", "focus": 0}
+      - {"tom": "Fifty-four. Sure. Where do you want them? Sure. Where do you want them?", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. Be careful! Don't drop it. Be careful! Don't drop it.", "focus": 2, "reveal": [54]}
+      - {"tom": "Fifty-six. Could you open the window, please? It's hot. Could you open the window, please? It's hot.", "focus": 3, "reveal": [55]}
+      - {"emma": "Fifty-seven. Sit down and relax. Sit down and relax.", "focus": 4, "reveal": [56]}
+      - {"tom": "Fifty-eight. I broke my wrist when I was twelve. I broke my wrist when I was twelve.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "I fell off my bike on a hill in Da Lat.", "vi": "Mình ngã xe đạp trên một con dốc ở Đà Lạt."}
+      - {"n": 60, "answer": "I slipped on a wet road last month.", "vi": "Tháng trước mình trượt ngã trên đường ướt."}
+      - {"n": 61, "answer": "Did you hurt yourself?", "vi": "Bạn có bị đau không?"}
+      - {"n": 62, "answer": "Only a little. I'm fine now.", "vi": "Chỉ hơi đau thôi. Giờ ổn rồi."}
+      - {"n": 63, "answer": "Can you ride a motorbike?", "vi": "Bạn đi được xe máy không?"}
+      - {"n": 64, "answer": "No. I walk, or I book a motorbike taxi on an app.", "vi": "Không. Mình đi bộ, hoặc gọi xe ôm qua ứng dụng."}
+    lines:
+      - {"tom": "Fifty-nine. I fell off my bike on a hill in Da Lat. I fell off my bike on a hill in Da Lat.", "say": "Fifty-nine. I fell off my bike on a hill in Dah Lot. I fell off my bike on a hill in Dah Lot.", "focus": 0}
+      - {"emma": "Sixty. I slipped on a wet road last month. I slipped on a wet road last month.", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. Did you hurt yourself? Did you hurt yourself?", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Only a little. I'm fine now. Only a little. I'm fine now.", "focus": 3, "reveal": [61]}
+      - {"tom": "Sixty-three. Can you ride a motorbike? Can you ride a motorbike?", "focus": 4, "reveal": [62]}
+      - {"emma": "Sixty-four. No. I walk, or I book a motorbike taxi on an app. No. I walk, or I book a motorbike taxi on an app.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "I play basketball twice a week.", "vi": "Mình chơi bóng rổ hai buổi một tuần."}
+      - {"n": 66, "answer": "Let's dance!", "vi": "Nhảy đi nào!"}
+      - {"n": 67, "answer": "Sorry, I'm a terrible dancer.", "vi": "Xin lỗi, mình nhảy dở tệ."}
+      - {"n": 68, "answer": "The bus is crowded, so I usually stand.", "vi": "Xe buýt đông nên mình thường phải đứng."}
+      - {"n": 69, "answer": "Push the button to stop the bus.", "vi": "Bấm nút để xe buýt dừng."}
+      - {"n": 70, "answer": "Hold on tight!", "vi": "Bám chặt vào!"}
+    lines:
+      - {"tom": "Sixty-five. I play basketball twice a week. I play basketball twice a week.", "focus": 0}
+      - {"tom": "Sixty-six. Let's dance! Let's dance!", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. Sorry, I'm a terrible dancer. Sorry, I'm a terrible dancer.", "focus": 2, "reveal": [66]}
+      - {"tom": "Sixty-eight. The bus is crowded, so I usually stand. The bus is crowded, so I usually stand.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. Push the button to stop the bus. Push the button to stop the bus.", "focus": 4, "reveal": [68]}
+      - {"tom": "Seventy. Hold on tight! Hold on tight!", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "Don't run in the corridor.", "vi": "Đừng chạy ngoài hành lang."}
+      - {"n": 72, "answer": "I walk around my room when I learn new words.", "vi": "Mình đi quanh phòng khi học từ mới."}
+      - {"n": 73, "answer": "Turn off your phone, please.", "vi": "Vui lòng tắt điện thoại."}
+      - {"n": 74, "answer": "Can you pick me up at six?", "vi": "Bạn đón mình lúc sáu giờ được không?"}
+      - {"n": 75, "answer": "Sure. See you then.", "vi": "Được. Hẹn gặp lúc đó."}
+      - {"n": 76, "answer": "Mind your head!", "vi": "Coi chừng đụng đầu!"}
+    lines:
+      - {"emma": "Seventy-one. Don't run in the corridor. Don't run in the corridor.", "focus": 0}
+      - {"tom": "Seventy-two. I walk around my room when I learn new words. I walk around my room when I learn new words.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. Turn off your phone, please. Turn off your phone, please.", "focus": 2, "reveal": [72]}
+      - {"emma": "Seventy-four. Can you pick me up at six? Can you pick me up at six?", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. Sure. See you then. Sure. See you then.", "focus": 4, "reveal": [74]}
+      - {"emma": "Seventy-six. Mind your head! Mind your head!", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–82)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "Wait for me!", "vi": "Đợi mình với!"}
+      - {"n": 78, "answer": "Let's go for a walk.", "vi": "Mình đi dạo đi."}
+      - {"n": 79, "answer": "Good idea. I need some exercise.", "vi": "Ý hay đấy. Mình cần vận động."}
+      - {"n": 80, "answer": "Shall I carry your bag?", "vi": "Để mình xách túi giúp nhé?"}
+      - {"n": 81, "answer": "Thanks, that's really kind.", "vi": "Cảm ơn, bạn tốt quá."}
+      - {"n": 82, "answer": "Don't lean on the door. It might open.", "vi": "Đừng dựa vào cửa. Nó có thể mở ra đấy."}
+    lines:
+      - {"tom": "Seventy-seven. Wait for me! Wait for me!", "focus": 0}
+      - {"emma": "Seventy-eight. Let's go for a walk. Let's go for a walk.", "focus": 1, "reveal": [77]}
+      - {"tom": "Seventy-nine. Good idea. I need some exercise. Good idea. I need some exercise.", "focus": 2, "reveal": [78]}
+      - {"tom": "Eighty. Shall I carry your bag? Shall I carry your bag?", "focus": 3, "reveal": [79]}
+      - {"emma": "Eighty-one. Thanks, that's really kind. Thanks, that's really kind.", "focus": 4, "reveal": [80]}
+      - {"emma": "Eighty-two. Don't lean on the door. It might open. Don't lean on the door. It might open.", "focus": 5, "reveal": [81]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [82]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (83–86)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 83, "answer": "Can you hold this for a moment?", "vi": "Bạn cầm giúp cái này một lát được không?"}
+      - {"n": 84, "answer": "Sure. Wow, it's heavy!", "vi": "Được. Ồ, nặng thế!"}
+      - {"n": 85, "answer": "Don't push! Wait your turn.", "vi": "Đừng chen! Đợi đến lượt."}
+      - {"n": 86, "answer": "Can you open the door for me?", "vi": "Bạn mở cửa giúp mình được không?"}
+    lines:
+      - {"emma": "Eighty-three. Can you hold this for a moment? Can you hold this for a moment?", "focus": 0}
+      - {"tom": "Eighty-four. Sure. Wow, it's heavy! Sure. Wow, it's heavy!", "focus": 1, "reveal": [83]}
+      - {"emma": "Eighty-five. Don't push! Wait your turn. Don't push! Wait your turn.", "focus": 2, "reveal": [84]}
+      - {"tom": "Eighty-six. Can you open the door for me? Can you open the door for me?", "focus": 3, "reveal": [85]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [86]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (87–89)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 87, "answer": "Of course. After you.", "vi": "Tất nhiên. Mời bạn đi trước."}
+      - {"n": 88, "answer": "Pick up your clothes, please!", "vi": "Nhặt quần áo lên đi!"}
+      - {"n": 89, "answer": "Sorry, I'll do it now.", "vi": "Xin lỗi, mình làm ngay."}
+    lines:
+      - {"emma": "Eighty-seven. Of course. After you. Of course. After you.", "focus": 0}
+      - {"emma": "Eighty-eight. Pick up your clothes, please! Pick up your clothes, please!", "focus": 1, "reveal": [87]}
+      - {"tom": "Eighty-nine. Sorry, I'll do it now. Sorry, I'll do it now.", "focus": 2, "reveal": [88]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [89]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 12.", "say": "Well done! See you in Unit twelve.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 12."}
+
