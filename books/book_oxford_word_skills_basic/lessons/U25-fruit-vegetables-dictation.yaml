@@ -1,0 +1,314 @@
+# Video nghe – viết (dictation) Unit 25 · Fruit and vegetables — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U25-fruit-vegetables-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U25 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 25 có 38 mục: phần 1 dài, nên phần 2 và 3 ngắn hơn các unit khác.
+id: U25-fruit-vegetables-dictation
+activity: U25-words
+title: "Unit 25 · Fruit and vegetables"
+subtitle: "Dictation · listen and write: fruit and vegetables"
+title_vi: "Nghe – viết 10 phút: trái cây và rau — từ trong sách, từ thêm, câu giao tiếp"
+tag: "FOOD AND DRINK · UNIT 25"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 25: Fruit and vegetables. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-five: Fruit and vegetables. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 25: trái cây và rau. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 36 words from the book. You hear each word twice, and then an example sentence twice. Then 18 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, thirty-six words from the book. You hear each word twice, and then an example sentence twice. Then eighteen more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 36 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 18 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "banana", "vi": "quả chuối", "ex": "Bananas are cheap in Vietnam.", "w": ["banana"]}
+      - {"n": 2, "answer": "orange", "vi": "quả cam", "ex": "I have an orange every morning.", "w": ["orange"]}
+      - {"n": 3, "answer": "peach", "vi": "quả đào", "ex": "These peaches are very sweet.", "w": ["peach"]}
+      - {"n": 4, "answer": "apple", "vi": "quả táo", "ex": "Would you like an apple?", "w": ["apple"]}
+      - {"n": 5, "answer": "pear", "vi": "quả lê", "ex": "A pear is green or yellow.", "w": ["pear"]}
+      - {"n": 6, "answer": "lemon", "vi": "quả chanh vàng", "ex": "I'd like a tea with lemon.", "w": ["lemon"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. banana. banana. Bananas are cheap in Vietnam. Bananas are cheap in Vietnam.", "focus": 0}
+      - {"emma": "Two. orange. orange. I have an orange every morning. I have an orange every morning.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. peach. peach. These peaches are very sweet. These peaches are very sweet.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. apple. apple. Would you like an apple? Would you like an apple?", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. pear. pear. A pear is green or yellow. A pear is green or yellow.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. lemon. lemon. I'd like a tea with lemon. I'd like a tea with lemon.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "mango", "vi": "quả xoài", "ex": "Vietnamese mangoes are delicious.", "w": ["mango"]}
+      - {"n": 8, "answer": "strawberry", "vi": "dâu tây", "ex": "Da Lat is famous for strawberries.", "w": ["strawberry"]}
+      - {"n": 9, "answer": "cherry", "vi": "quả anh đào", "ex": "Cherries are expensive here.", "w": ["cherry"]}
+      - {"n": 10, "answer": "melon", "vi": "quả dưa", "ex": "Melons are big and sweet.", "w": ["melon"]}
+      - {"n": 11, "answer": "grapes", "vi": "nho", "ex": "Can I have a bunch of grapes?", "w": ["grapes"]}
+      - {"n": 12, "answer": "pineapple", "vi": "quả dứa", "ex": "I love fresh pineapple.", "w": ["pineapple"]}
+    lines:
+      - {"emma": "Seven. mango. mango. Vietnamese mangoes are delicious. Vietnamese mangoes are delicious.", "focus": 0}
+      - {"emma": "Eight. strawberry. strawberry. Da Lat is famous for strawberries. Da Lat is famous for strawberries.", "say": "Eight. strawberry. strawberry. Dah Lot is famous for strawberries. Dah Lot is famous for strawberries.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. cherry. cherry. Cherries are expensive here. Cherries are expensive here.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. melon. melon. Melons are big and sweet. Melons are big and sweet.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. grapes. grapes. Can I have a bunch of grapes? Can I have a bunch of grapes?", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. pineapple. pineapple. I love fresh pineapple. I love fresh pineapple.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "avocado", "vi": "quả bơ", "ex": "Tom loves avocado smoothies.", "w": ["avocado"]}
+      - {"n": 14, "answer": "taste", "vi": "có vị", "ex": "This juice tastes of orange and lemon.", "w": ["taste"]}
+      - {"n": 15, "answer": "sweet", "vi": "ngọt", "ex": "Strawberries are very sweet.", "w": ["sweet"]}
+      - {"n": 16, "answer": "bitter", "vi": "đắng", "ex": "Black coffee is bitter.", "w": ["bitter"]}
+      - {"n": 17, "answer": "fresh", "vi": "tươi", "ex": "I eat a lot of fresh fruit.", "w": ["fresh"]}
+      - {"n": 18, "answer": "tin", "vi": "hộp thiếc", "ex": "Fresh fruit is better than fruit from a tin.", "w": ["tin"]}
+    lines:
+      - {"emma": "Thirteen. avocado. avocado. Tom loves avocado smoothies. Tom loves avocado smoothies.", "focus": 0}
+      - {"emma": "Fourteen. taste. taste. This juice tastes of orange and lemon. This juice tastes of orange and lemon.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. sweet. sweet. Strawberries are very sweet. Strawberries are very sweet.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. bitter. bitter. Black coffee is bitter. Black coffee is bitter.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. fresh. fresh. I eat a lot of fresh fruit. I eat a lot of fresh fruit.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. tin. tin. Fresh fruit is better than fruit from a tin. Fresh fruit is better than fruit from a tin.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "potato", "vi": "khoai tây", "ex": "We need two potatoes.", "w": ["potato"]}
+      - {"n": 20, "answer": "beans", "vi": "đậu", "ex": "Do you like green beans?", "w": ["beans"]}
+      - {"n": 21, "answer": "onion", "vi": "hành tây", "ex": "Cut the onion into small pieces.", "w": ["onion"]}
+      - {"n": 22, "answer": "carrot", "vi": "cà rốt", "ex": "Rabbits love carrots.", "w": ["carrot"]}
+      - {"n": 23, "answer": "cauliflower", "vi": "súp lơ trắng", "ex": "Cauliflower is white.", "w": ["cauliflower"]}
+      - {"n": 24, "answer": "cabbage", "vi": "bắp cải", "ex": "His grandfather grows cabbages.", "w": ["cabbage"]}
+    lines:
+      - {"emma": "Nineteen. potato. potato. We need two potatoes. We need two potatoes.", "focus": 0}
+      - {"emma": "Twenty. beans. beans. Do you like green beans? Do you like green beans?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. onion. onion. Cut the onion into small pieces. Cut the onion into small pieces.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. carrot. carrot. Rabbits love carrots. Rabbits love carrots.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. cauliflower. cauliflower. Cauliflower is white. Cauliflower is white.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. cabbage. cabbage. His grandfather grows cabbages. His grandfather grows cabbages.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "peas", "vi": "đậu Hà Lan", "ex": "Peas are often frozen.", "w": ["peas"]}
+      - {"n": 26, "answer": "aubergine", "vi": "cà tím", "ex": "Aubergines are purple.", "w": ["aubergine"]}
+      - {"n": 27, "answer": "courgette", "vi": "bí ngòi", "ex": "A courgette is long and green.", "w": ["courgette"]}
+      - {"n": 28, "answer": "mushroom", "vi": "nấm", "ex": "Add some mushrooms to the soup.", "w": ["mushroom"]}
+      - {"n": 29, "answer": "garlic, a clove of garlic", "vi": "tỏi, một tép tỏi", "ex": "Add a clove of garlic.", "w": ["garlic", "clove"]}
+      - {"n": 30, "answer": "chilli", "vi": "quả ớt", "ex": "Chillies make your mouth hot.", "w": ["chilli"]}
+    lines:
+      - {"emma": "Twenty-five. peas. peas. Peas are often frozen. Peas are often frozen.", "focus": 0}
+      - {"emma": "Twenty-six. aubergine. aubergine. Aubergines are purple. Aubergines are purple.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. courgette. courgette. A courgette is long and green. A courgette is long and green.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. mushroom. mushroom. Add some mushrooms to the soup. Add some mushrooms to the soup.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. garlic, a clove of garlic. garlic, a clove of garlic. Add a clove of garlic. Add a clove of garlic.", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. chilli. chilli. Chillies make your mouth hot. Chillies make your mouth hot.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (31–36)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 31, "answer": "lettuce", "vi": "xà lách", "ex": "A salad usually has lettuce in it.", "w": ["lettuce"]}
+      - {"n": 32, "answer": "tomato", "vi": "cà chua", "ex": "Cut the tomato into slices.", "w": ["tomato"]}
+      - {"n": 33, "answer": "cucumber", "vi": "dưa chuột", "ex": "Cucumber is cool and fresh.", "w": ["cucumber"]}
+      - {"n": 34, "answer": "red pepper, green pepper", "vi": "ớt chuông đỏ, ớt chuông xanh", "ex": "I'd like a red pepper and a green pepper.", "w": ["pepper"]}
+      - {"n": 35, "answer": "raw, cooked", "vi": "sống, đã nấu chín", "ex": "You can eat carrots raw or cooked.", "w": ["raw", "cooked"]}
+      - {"n": 36, "answer": "frozen", "vi": "đông lạnh", "ex": "We keep frozen peas in the freezer.", "w": ["frozen"]}
+    lines:
+      - {"emma": "Thirty-one. lettuce. lettuce. A salad usually has lettuce in it. A salad usually has lettuce in it.", "focus": 0}
+      - {"emma": "Thirty-two. tomato. tomato. Cut the tomato into slices. Cut the tomato into slices.", "focus": 1, "reveal": [31]}
+      - {"emma": "Thirty-three. cucumber. cucumber. Cucumber is cool and fresh. Cucumber is cool and fresh.", "focus": 2, "reveal": [32]}
+      - {"emma": "Thirty-four. red pepper, green pepper. red pepper, green pepper. I'd like a red pepper and a green pepper. I'd like a red pepper and a green pepper.", "focus": 3, "reveal": [33]}
+      - {"emma": "Thirty-five. raw, cooked. raw, cooked. You can eat carrots raw or cooked. You can eat carrots raw or cooked.", "focus": 4, "reveal": [34]}
+      - {"emma": "Thirty-six. frozen. frozen. We keep frozen peas in the freezer. We keep frozen peas in the freezer.", "focus": 5, "reveal": [35]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (37–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "dragon fruit", "vi": "thanh long", "ex": "Dragon fruit is pink outside and white inside."}
+      - {"n": 38, "answer": "lychee", "vi": "quả vải", "ex": "Lychees are small and sweet."}
+      - {"n": 39, "answer": "papaya", "vi": "đu đủ", "ex": "Papaya is good for breakfast."}
+      - {"n": 40, "answer": "coconut", "vi": "quả dừa", "ex": "Coconut water is great on a hot day."}
+      - {"n": 41, "answer": "durian", "vi": "sầu riêng", "ex": "Durian has a very strong smell."}
+      - {"n": 42, "answer": "watermelon", "vi": "dưa hấu", "ex": "We always eat watermelon at Tết."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-seven. dragon fruit. dragon fruit. Dragon fruit is pink outside and white inside. Dragon fruit is pink outside and white inside.", "focus": 0}
+      - {"tom": "Thirty-eight. lychee. lychee. Lychees are small and sweet. Lychees are small and sweet.", "say": "Thirty-eight. lie-chee. lie-chee. Lie-chees are small and sweet. Lie-chees are small and sweet.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. papaya. papaya. Papaya is good for breakfast. Papaya is good for breakfast.", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. coconut. coconut. Coconut water is great on a hot day. Coconut water is great on a hot day.", "focus": 3, "reveal": [39]}
+      - {"tom": "Forty-one. durian. durian. Durian has a very strong smell. Durian has a very strong smell.", "focus": 4, "reveal": [40]}
+      - {"tom": "Forty-two. watermelon. watermelon. We always eat watermelon at Tết. We always eat watermelon at Tết.", "say": "Forty-two. watermelon. watermelon. We always eat watermelon at Tet. We always eat watermelon at Tet.", "focus": 5, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "sour", "vi": "chua", "ex": "Lemons are sour."}
+      - {"n": 44, "answer": "salty", "vi": "mặn", "ex": "Fish sauce is very salty."}
+      - {"n": 45, "answer": "spicy", "vi": "cay", "ex": "This soup is too spicy for me."}
+      - {"n": 46, "answer": "bitter melon", "vi": "mướp đắng", "ex": "Bitter melon is very bitter."}
+      - {"n": 47, "answer": "spring onion", "vi": "hành lá", "ex": "Put some spring onions on the soup."}
+      - {"n": 48, "answer": "ginger", "vi": "gừng", "ex": "Emma drinks tea with ginger and honey."}
+    lines:
+      - {"tom": "Forty-three. sour. sour. Lemons are sour. Lemons are sour.", "focus": 0}
+      - {"tom": "Forty-four. salty. salty. Fish sauce is very salty. Fish sauce is very salty.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. spicy. spicy. This soup is too spicy for me. This soup is too spicy for me.", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. bitter melon. bitter melon. Bitter melon is very bitter. Bitter melon is very bitter.", "focus": 3, "reveal": [45]}
+      - {"tom": "Forty-seven. spring onion. spring onion. Put some spring onions on the soup. Put some spring onions on the soup.", "focus": 4, "reveal": [46]}
+      - {"tom": "Forty-eight. ginger. ginger. Emma drinks tea with ginger and honey. Emma drinks tea with ginger and honey.", "focus": 5, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [48]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (49–54)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 49, "answer": "herbs", "vi": "rau thơm", "ex": "Beef noodle soup comes with fresh herbs."}
+      - {"n": 50, "answer": "peel", "vi": "gọt vỏ", "ex": "Peel the potatoes first."}
+      - {"n": 51, "answer": "chop", "vi": "thái nhỏ", "ex": "Chop the onions and the garlic."}
+      - {"n": 52, "answer": "juice", "vi": "nước ép", "ex": "A glass of fresh mango juice, please."}
+      - {"n": 53, "answer": "seeds", "vi": "hạt", "ex": "Watermelons have lots of black seeds."}
+      - {"n": 54, "answer": "corn", "vi": "ngô, bắp", "ex": "Grilled corn is a popular street food."}
+    lines:
+      - {"tom": "Forty-nine. herbs. herbs. Beef noodle soup comes with fresh herbs. Beef noodle soup comes with fresh herbs.", "focus": 0}
+      - {"tom": "Fifty. peel. peel. Peel the potatoes first. Peel the potatoes first.", "focus": 1, "reveal": [49]}
+      - {"tom": "Fifty-one. chop. chop. Chop the onions and the garlic. Chop the onions and the garlic.", "focus": 2, "reveal": [50]}
+      - {"tom": "Fifty-two. juice. juice. A glass of fresh mango juice, please. A glass of fresh mango juice, please.", "focus": 3, "reveal": [51]}
+      - {"tom": "Fifty-three. seeds. seeds. Watermelons have lots of black seeds. Watermelons have lots of black seeds.", "focus": 4, "reveal": [52]}
+      - {"tom": "Fifty-four. corn. corn. Grilled corn is a popular street food. Grilled corn is a popular street food.", "focus": 5, "reveal": [53]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "What's your favourite fruit?", "vi": "Bạn thích trái cây nào nhất?"}
+      - {"n": 56, "answer": "Mango. I eat one every day in summer.", "vi": "Xoài. Mùa hè ngày nào mình cũng ăn một quả."}
+      - {"n": 57, "answer": "Do you like durian?", "vi": "Bạn có thích sầu riêng không?"}
+      - {"n": 58, "answer": "No, I don't. The smell is too strong!", "vi": "Không. Mùi nồng quá!"}
+      - {"n": 59, "answer": "Are these strawberries sweet?", "vi": "Dâu này có ngọt không?"}
+      - {"n": 60, "answer": "Yes, they're from Da Lat.", "vi": "Có, dâu Đà Lạt mà."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-five. What's your favourite fruit? What's your favourite fruit?", "focus": 0}
+      - {"tom": "Fifty-six. Mango. I eat one every day in summer. Mango. I eat one every day in summer.", "focus": 1, "reveal": [55]}
+      - {"tom": "Fifty-seven. Do you like durian? Do you like durian?", "focus": 2, "reveal": [56]}
+      - {"emma": "Fifty-eight. No, I don't. The smell is too strong! No, I don't. The smell is too strong!", "focus": 3, "reveal": [57]}
+      - {"emma": "Fifty-nine. Are these strawberries sweet? Are these strawberries sweet?", "focus": 4, "reveal": [58]}
+      - {"tom": "Sixty. Yes, they're from Da Lat. Yes, they're from Da Lat.", "say": "Sixty. Yes, they're from Dah Lot. Yes, they're from Dah Lot.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "How much are the mangoes?", "vi": "Xoài bao nhiêu tiền?"}
+      - {"n": 62, "answer": "Fifty thousand dong a kilo.", "vi": "Năm mươi nghìn đồng một cân."}
+      - {"n": 63, "answer": "Can I have a bunch of grapes, please?", "vi": "Cho tôi một chùm nho."}
+      - {"n": 64, "answer": "Sure. Anything else?", "vi": "Vâng. Còn gì nữa không ạ?"}
+      - {"n": 65, "answer": "Do you eat a lot of vegetables?", "vi": "Bạn có ăn nhiều rau không?"}
+      - {"n": 66, "answer": "Yes, I have a big salad every day.", "vi": "Có, ngày nào mình cũng ăn một đĩa rau trộn lớn."}
+    lines:
+      - {"tom": "Sixty-one. How much are the mangoes? How much are the mangoes?", "focus": 0}
+      - {"emma": "Sixty-two. Fifty thousand dong a kilo. Fifty thousand dong a kilo.", "focus": 1, "reveal": [61]}
+      - {"emma": "Sixty-three. Can I have a bunch of grapes, please? Can I have a bunch of grapes, please?", "focus": 2, "reveal": [62]}
+      - {"tom": "Sixty-four. Sure. Anything else? Sure. Anything else?", "focus": 3, "reveal": [63]}
+      - {"tom": "Sixty-five. Do you eat a lot of vegetables? Do you eat a lot of vegetables?", "focus": 4, "reveal": [64]}
+      - {"emma": "Sixty-six. Yes, I have a big salad every day. Yes, I have a big salad every day.", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "What's in this salad?", "vi": "Đĩa rau trộn này có gì?"}
+      - {"n": 68, "answer": "Lettuce, tomatoes and cucumber.", "vi": "Xà lách, cà chua và dưa chuột."}
+      - {"n": 69, "answer": "Do you prefer fresh or frozen vegetables?", "vi": "Bạn thích rau tươi hay rau đông lạnh?"}
+      - {"n": 70, "answer": "Fresh. We buy them at the market.", "vi": "Rau tươi. Bọn mình mua ở chợ."}
+      - {"n": 71, "answer": "I don't like bitter melon.", "vi": "Mình không thích mướp đắng."}
+      - {"n": 72, "answer": "But it's very healthy!", "vi": "Nhưng nó rất tốt cho sức khỏe!"}
+    lines:
+      - {"emma": "Sixty-seven. What's in this salad? What's in this salad?", "focus": 0}
+      - {"tom": "Sixty-eight. Lettuce, tomatoes and cucumber. Lettuce, tomatoes and cucumber.", "focus": 1, "reveal": [67]}
+      - {"emma": "Sixty-nine. Do you prefer fresh or frozen vegetables? Do you prefer fresh or frozen vegetables?", "focus": 2, "reveal": [68]}
+      - {"tom": "Seventy. Fresh. We buy them at the market. Fresh. We buy them at the market.", "focus": 3, "reveal": [69]}
+      - {"tom": "Seventy-one. I don't like bitter melon. I don't like bitter melon.", "focus": 4, "reveal": [70]}
+      - {"emma": "Seventy-two. But it's very healthy! But it's very healthy!", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–78)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "Can you cut the onions, please?", "vi": "Bạn thái giúp mình hành tây nhé?"}
+      - {"n": 74, "answer": "Sure. How many?", "vi": "Được. Mấy củ?"}
+      - {"n": 75, "answer": "My grandfather grows vegetables in his garden.", "vi": "Ông mình trồng rau trong vườn."}
+      - {"n": 76, "answer": "What does he grow?", "vi": "Ông trồng những gì?"}
+      - {"n": 77, "answer": "Cabbages, carrots and lettuce.", "vi": "Bắp cải, cà rốt và xà lách."}
+      - {"n": 78, "answer": "Let's make an avocado smoothie.", "vi": "Làm sinh tố bơ đi."}
+    lines:
+      - {"emma": "Seventy-three. Can you cut the onions, please? Can you cut the onions, please?", "focus": 0}
+      - {"tom": "Seventy-four. Sure. How many? Sure. How many?", "focus": 1, "reveal": [73]}
+      - {"tom": "Seventy-five. My grandfather grows vegetables in his garden. My grandfather grows vegetables in his garden.", "focus": 2, "reveal": [74]}
+      - {"emma": "Seventy-six. What does he grow? What does he grow?", "focus": 3, "reveal": [75]}
+      - {"tom": "Seventy-seven. Cabbages, carrots and lettuce. Cabbages, carrots and lettuce.", "focus": 4, "reveal": [76]}
+      - {"emma": "Seventy-eight. Let's make an avocado smoothie. Let's make an avocado smoothie.", "focus": 5, "reveal": [77]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [78]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (79–82)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 79, "answer": "Do you put sugar on your strawberries?", "vi": "Bạn có rắc đường lên dâu không?"}
+      - {"n": 80, "answer": "No, they're sweet enough.", "vi": "Không, dâu ngọt sẵn rồi."}
+      - {"n": 81, "answer": "Which fruit is popular at Tết?", "vi": "Dịp Tết hay ăn quả gì?"}
+      - {"n": 82, "answer": "Watermelon. Red is a lucky colour.", "vi": "Dưa hấu. Màu đỏ là màu may mắn."}
+    lines:
+      - {"emma": "Seventy-nine. Do you put sugar on your strawberries? Do you put sugar on your strawberries?", "focus": 0}
+      - {"tom": "Eighty. No, they're sweet enough. No, they're sweet enough.", "focus": 1, "reveal": [79]}
+      - {"emma": "Eighty-one. Which fruit is popular at Tết? Which fruit is popular at Tết?", "say": "Eighty-one. Which fruit is popular at Tet? Which fruit is popular at Tet?", "focus": 2, "reveal": [80]}
+      - {"tom": "Eighty-two. Watermelon. Red is a lucky colour. Watermelon. Red is a lucky colour.", "focus": 3, "reveal": [81]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [82]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 26.", "say": "Well done! See you in Unit twenty-six.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 26."}
+
