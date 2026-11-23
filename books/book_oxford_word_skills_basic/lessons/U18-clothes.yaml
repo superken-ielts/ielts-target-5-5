@@ -1,0 +1,426 @@
+# Video Oxford Word Skills Basic · Unit 18 — I can talk about clothes (sách in tr. 49–50, Answer key tr. 209).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây.
+# Bài trong sách: đủ 1–8. Bài 1, 3, 5, 6 theo Answer key tr. 209 (bài 3: "a pale yellow top" là T theo Answer key). Bài 7
+# (ABOUT YOU): Tom và Emma hỏi đáp (cảnh Nói 1). Bài 2, 4, 8 (Test yourself): Emma / Tom nhắc che chữ, nhìn tranh, nói lại.
+# Thêm ngoài sách: wear / put on; cách đọc suit, sweater; mặc gì khi đi phỏng vấn, đi biển, trời mưa…; Nghe và viết; Nói 2
+# (Part 1 "Clothes").
+# Hình trong sách: tranh 12 món quần áo (tr. 49, khung theo tranh), bảng màu (khung theo ô màu), tranh quần áo cạnh câu
+# đúng / sai của bài 3, hai dải tranh phụ kiện (tr. 50, khung theo tranh).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom không đeo kính, mặc áo phông, quần jean, giày thể thao đi học
+# ("đồng phục sinh viên"), có ba đôi giày thể thao; làm ở quán mặc áo sơ mi đen; đeo kính râm mùa khô; ở TP. HCM không bao
+# giờ quàng khăn, ở Đà Lạt tháng 12 thì có; luôn đeo đồng hồ (quà của bố). Emma đi dạy mặc váy dài hoặc quần và áo sơ mi,
+# đi dép xăng-đan; giày thể thao khi đi bộ đường dài; kính râm và mũ suốt; hầu như không đeo đồng hồ (xem giờ trên điện
+# thoại); mùa mưa luôn mang ô.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U18-clothes.yaml
+id: U18-clothes
+activity: U18-words
+title: "Unit 18 · Clothes"
+subtitle: "I can talk about clothes"
+title_vi: "Quần áo (shirt, trousers, jacket…), màu sắc và phụ kiện (scarf, belt, gloves…) — danh từ luôn ở số nhiều"
+tag: "EVERYDAY LIFE · UNIT 18"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 18: clothes. We'll learn the names of clothes, colours and accessories, and talk about what we wear."
+        say: "Welcome to Unit eighteen: clothes. We'll learn the names of clothes, colours and accessories, and talk about what we wear."
+        vi: "Unit 18: quần áo, màu sắc, phụ kiện — và nói về đồ mình mặc."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Quần áo"
+    heading: "A · Clothes"
+    heading_vi: "Tranh trong sách tr. 49 — jumper = sweater (SYN: đồng nghĩa)"
+    image: {pdf: course-book, page: 50, clip: [30, 98, 492, 302]}
+    items:
+      - {box: [110, 103, 172, 175]}
+      - {box: [172, 98, 222, 171]}
+      - {box: [231, 104, 298, 176]}
+      - {box: [306, 102, 358, 196]}
+      - {box: [360, 135, 418, 236]}
+      - {box: [420, 102, 476, 178]}
+      - {box: [100, 199, 154, 296]}
+      - {box: [168, 178, 236, 236]}
+      - {box: [164, 238, 236, 300]}
+      - {box: [246, 174, 297, 296]}
+      - {box: [300, 210, 361, 296]}
+      - {box: [406, 186, 491, 300]}
+    lines:
+      - emma: "Look at the pictures on page forty-nine. Number one is a shirt."
+        focus: 0
+        vi: "shirt: áo sơ mi"
+      - {tom: "Two, a top.", focus: 1, vi: "top: áo (nữ) không tay, áo phông kiểu"}
+      - {emma: "Three, a jumper. Another word is sweater: it means the same.", focus: 2, vi: "jumper = sweater: áo len"}
+      - {tom: "Four, trousers. Always plural: my trousers are grey.", focus: 3, vi: "trousers: quần dài"}
+      - {emma: "Five, jeans.", focus: 4, vi: "jeans: quần bò"}
+      - {tom: "Six, a skirt.", focus: 5, vi: "skirt: chân váy"}
+      - {emma: "Seven, a dress.", focus: 6, vi: "dress: váy liền"}
+      - {tom: "Eight, a T-shirt.", focus: 7, vi: "T-shirt: áo phông"}
+      - {emma: "Nine, a jacket.", focus: 8, vi: "jacket: áo khoác ngắn"}
+      - {tom: "Ten, a suit. Say suit, like suitcase, not sweet.", focus: 9, vi: "suit /suːt/: bộ com-lê"}
+      - {emma: "Eleven, a coat.", focus: 10, vi: "coat: áo khoác dài"}
+      - {tom: "And twelve, a raincoat: a coat for the rain.", focus: 11, vi: "raincoat: áo mưa"}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành từ"
+    heading: "Exercise 1 · Complete the words"
+    heading_vi: "Ví dụ: s _ _ t → suit (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "j _ _ _ _ t  →  ___", answer: "jacket"}
+      - {n: 2, q: "t _ _ _ _ _ _ s  →  ___", answer: "trousers"}
+      - {n: 3, q: "j _ _ _ _ r  →  ___", answer: "jumper"}
+      - {n: 4, q: "c _ _ t  →  ___", answer: "coat"}
+      - {n: 5, q: "r _ _ _ _ _ _ t  →  ___", answer: "raincoat"}
+      - {n: 6, q: "T- _ _ _ _ t  →  ___", answer: "T-shirt"}
+      - {n: 7, q: "d _ _ _ s  →  ___", answer: "dress"}
+      - {n: 8, q: "j _ _ _ s  →  ___", answer: "jeans"}
+      - {n: 9, q: "s _ _ _ _ _ r  →  ___", answer: "sweater"}
+    lines:
+      - emma: "Exercise 1. Complete the words. Pause the video and try. Exercise 2 is a test: cover the words, and name the things in the pictures."
+        say: "Exercise one. Complete the words. Pause the video and try. Exercise two is a test: cover the words, and name the things in the pictures."
+        vi: "Bài 1: điền chữ. Bài 2: che chữ, gọi tên đồ trong tranh."
+      - {tom: "One, jacket. Two, trousers. Three, jumper. Four, coat. Five, raincoat.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six, T-shirt. Seven, dress. Eight, jeans. Nine, sweater: S, W, E, A, T, E, R.", say: "Six, T-shirt. Seven, dress. Eight, jeans. Nine, sweater: ess, double you, ee, eigh, tee, ee, ar.", reveal: [6, 7, 8, 9], focus: 8, vi: "sweater đọc /ˈswetə/, không phải \"swee-ter\"."}
+
+  - kind: bullets
+    chapter: "Spotlight: wear"
+    heading: "Spotlight · wear (PT wore)"
+    heading_vi: "wear = mặc, đội, đeo, đi (giày) — put on = mặc vào (một hành động)"
+    items:
+      - {en: "I often wear jeans.", vi: "Tôi hay mặc quần bò."}
+      - {en: "She isn't wearing a skirt today.", vi: "Hôm nay cô ấy không mặc chân váy."}
+      - {en: "I wore a blue shirt yesterday.", vi: "Hôm qua tôi mặc áo sơ mi xanh — wear, wore, worn."}
+      - {en: "put on your coat = start to wear it", vi: "mặc áo khoác vào"}
+    lines:
+      - {emma: "Look at the spotlight. We use wear for clothes, and also for glasses, a watch and shoes. I often wear jeans.", focus: 0, vi: "wear dùng cho cả kính, đồng hồ, giày."}
+      - {tom: "She isn't wearing a skirt today.", focus: 1}
+      - {emma: "The past is wore. I wore a blue shirt yesterday.", focus: 2}
+      - {tom: "And put on is the action. It's cold: put on your coat! Now you're wearing it.", focus: 3, vi: "put on = hành động mặc vào · wear = đang mặc"}
+
+  - kind: figure
+    chapter: "Màu sắc"
+    heading: "B · Colours"
+    heading_vi: "Bảng màu trong sách tr. 49 — pale blue = light blue"
+    image: {pdf: course-book, page: 50, clip: [20, 456, 492, 556]}
+    items:
+      - {box: [40, 474, 90, 512]}
+      - {box: [96, 474, 142, 512]}
+      - {box: [150, 474, 196, 512]}
+      - {box: [204, 474, 248, 512]}
+      - {box: [258, 474, 300, 512]}
+      - {box: [310, 474, 354, 512]}
+      - {box: [368, 474, 414, 512]}
+      - {box: [40, 514, 92, 553]}
+      - {box: [96, 514, 142, 553]}
+      - {box: [150, 514, 198, 553]}
+      - {box: [204, 514, 248, 553]}
+      - {box: [258, 514, 300, 553]}
+      - {box: [308, 514, 372, 553]}
+      - {box: [376, 514, 490, 553]}
+    lines:
+      - emma: "Now colours. White."
+        focus: 0
+      - {tom: "Cream: a very pale yellow, almost white.", focus: 1, vi: "cream: màu kem"}
+      - {emma: "Yellow.", focus: 2}
+      - {tom: "Green.", focus: 3}
+      - {emma: "Blue.", focus: 4}
+      - {tom: "Purple.", focus: 5, vi: "purple: tím"}
+      - {emma: "Pink.", focus: 6}
+      - {tom: "Brown.", focus: 7}
+      - {emma: "Red.", focus: 8}
+      - {tom: "Orange.", focus: 9}
+      - {emma: "Grey.", focus: 10, vi: "grey: xám (Anh) · gray (Mỹ)"}
+      - {tom: "Black.", focus: 11}
+      - {emma: "Dark blue.", focus: 12, vi: "dark: đậm, sẫm"}
+      - {tom: "And pale blue, or light blue. Exercise 4 is a test: cover the words, and name the colours.", say: "And pale blue, or light blue. Exercise four is a test: cover the words, and name the colours.", focus: 13, vi: "pale = light: nhạt"}
+
+  - kind: blanks
+    chapter: "Bài 3: đúng hay sai?"
+    heading: "Exercise 3 · Look at the clothes. True or false? (1–6)"
+    heading_vi: "Ví dụ: a green sweater → T · red trousers → F (Answer key tr. 209)"
+    image: {pdf: course-book, page: 50, clip: [98, 98, 492, 302]}
+    items:
+      - {n: 1, q: "a pale blue shirt  →  ___", answer: "F (dark blue)"}
+      - {n: 2, q: "dark blue jeans  →  ___", answer: "F (pale blue)"}
+      - {n: 3, q: "a light blue coat  →  ___", answer: "F (black)"}
+      - {n: 4, q: "grey trousers  →  ___", answer: "T"}
+      - {n: 5, q: "a black suit  →  ___", answer: "T"}
+      - {n: 6, q: "a brown jacket  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 3. Look at the clothes. True or false? Pause the video and try."
+        say: "Exercise three. Look at the clothes. True or false? Pause the video and try."
+        vi: "Bài 3: nhìn tranh, đúng hay sai?"
+      - {tom: "One. False: the shirt is dark blue. Two. False: the jeans are pale blue. Three. False: the coat is black.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. True. Five. True. Six. True: a brown jacket.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    heading: "Exercise 3 · True or false? (7–12)"
+    heading_vi: "Answer key tr. 209"
+    image: {pdf: course-book, page: 50, clip: [98, 98, 492, 302]}
+    items:
+      - {n: 7, q: "a pale yellow top  →  ___", answer: "T"}
+      - {n: 8, q: "a pink raincoat  →  ___", answer: "F (red)"}
+      - {n: 9, q: "a blue skirt  →  ___", answer: "T"}
+      - {n: 10, q: "an orange and white T-shirt  →  ___", answer: "F (orange)"}
+      - {n: 11, q: "a purple dress  →  ___", answer: "T"}
+      - {n: 12, q: "a cream jumper  →  ___", answer: "F (green)"}
+    lines:
+      - {tom: "Seven. True. Eight. False: the raincoat is red. Nine. True.", reveal: [7, 8, 9], focus: 2}
+      - {tom: "Ten. False: the T-shirt is orange. Eleven. True. Twelve. False: the jumper is green.", reveal: [10, 11, 12], focus: 5}
+
+  - kind: figure
+    chapter: "Phụ kiện (1)"
+    heading: "C · Accessories (1)"
+    heading_vi: "Tranh trong sách tr. 50"
+    image: {pdf: course-book, page: 51, clip: [20, 20, 492, 150]}
+    items:
+      - {box: [20, 62, 82, 149]}
+      - {box: [82, 48, 136, 149]}
+      - {box: [138, 66, 208, 149]}
+      - {box: [208, 80, 282, 149]}
+      - {box: [282, 70, 350, 149]}
+      - {box: [328, 40, 458, 149]}
+      - {box: [396, 78, 480, 149]}
+    lines:
+      - emma: "Accessories are the things we wear or carry with our clothes. A scarf."
+        focus: 0
+        vi: "accessories: phụ kiện · scarf: khăn quàng"
+      - {tom: "A tie.", focus: 1, vi: "tie: cà vạt"}
+      - {emma: "A hat.", focus: 2, vi: "hat: mũ"}
+      - {tom: "A belt.", focus: 3, vi: "belt: thắt lưng"}
+      - {emma: "A handbag.", focus: 4, vi: "handbag: túi xách tay"}
+      - {tom: "An umbrella. Umbrella starts with a vowel sound, so we say an umbrella.", focus: 5, vi: "umbrella: cái ô"}
+      - {emma: "And a watch.", focus: 6, vi: "watch: đồng hồ đeo tay"}
+
+  - kind: figure
+    chapter: "Phụ kiện (2)"
+    heading: "C · Accessories (2) · a pair of / some"
+    heading_vi: "Tranh trong sách tr. 50 — đồ đi theo đôi: a pair of shoes = some shoes"
+    image: {pdf: course-book, page: 51, clip: [20, 148, 492, 312]}
+    items:
+      - {box: [24, 150, 140, 228]}
+      - {box: [146, 150, 240, 228]}
+      - {box: [246, 160, 358, 228]}
+      - {box: [360, 158, 462, 228]}
+      - {box: [24, 226, 116, 310]}
+      - {box: [120, 230, 216, 310]}
+      - {box: [220, 209, 286, 310]}
+      - {box: [286, 252, 376, 310]}
+      - {box: [376, 230, 484, 310]}
+    lines:
+      - emma: "Some things come in twos. We say a pair of shoes, or some shoes."
+        focus: 0
+        vi: "a pair of shoes: một đôi giày"
+      - {tom: "Sandals.", focus: 1, vi: "sandals: dép xăng-đan"}
+      - {emma: "Socks.", focus: 2, vi: "socks: tất"}
+      - {tom: "Gloves.", focus: 3, vi: "gloves: găng tay"}
+      - {emma: "Boots.", focus: 4, vi: "boots: ủng, bốt"}
+      - {tom: "Trainers: shoes for sport.", focus: 5, vi: "trainers: giày thể thao"}
+      - {emma: "Tights.", focus: 6, vi: "tights: quần tất"}
+      - {tom: "Glasses.", focus: 7, vi: "glasses: kính"}
+      - {emma: "And sunglasses. Exercise 8 is a test: cover the words, and name the things in the pictures.", say: "And sunglasses. Exercise eight is a test: cover the words, and name the things in the pictures.", focus: 8, vi: "sunglasses: kính râm"}
+
+  - kind: blanks
+    chapter: "Bài 5: từ không cùng nhóm"
+    heading: "Exercise 5 · One word in each group is wrong. Cross it out."
+    heading_vi: "Ví dụ: trousers · trainers · jeans → trainers (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "trainers · boots · gloves  →  ___", answer: "gloves"}
+      - {n: 2, q: "scarf · umbrella · tie  →  ___", answer: "umbrella"}
+      - {n: 3, q: "jeans · socks · shoes  →  ___", answer: "jeans"}
+      - {n: 4, q: "sandals · glasses · hat  →  ___", answer: "sandals"}
+      - {n: 5, q: "glove · watch · hat  →  ___", answer: "hat"}
+      - {n: 6, q: "scarf · belt · jeans  →  ___", answer: "jeans"}
+    lines:
+      - emma: "Exercise 5. One word in each group is wrong. Pause the video and try."
+        say: "Exercise five. One word in each group is wrong. Pause the video and try."
+        vi: "Bài 5: gạch từ không cùng nhóm."
+      - {tom: "One. Gloves: the others go on your feet. Two. Umbrella: you wear a scarf and a tie round your neck. Three. Jeans: socks and shoes are for your feet.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Sandals: glasses and a hat are for your head. Five. Hat: a glove and a watch are for your hand. Six. Jeans: a scarf and a belt are accessories.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Danh từ luôn số nhiều"
+    heading: "Spotlight · Plural nouns"
+    heading_vi: "trousers, jeans, tights, clothes, glasses, sunglasses: luôn số nhiều, động từ số nhiều"
+    items:
+      - {en: "These trousers are very nice.  (NOT This trouser is …)", vi: "Cái quần này rất đẹp."}
+      - {en: "My jeans were cheap.", vi: "Quần bò của tôi rẻ."}
+      - {en: "a pair of trousers · two pairs of jeans", vi: "một cái quần · hai cái quần bò"}
+      - {en: "clothes: my clothes are … (no singular)", vi: "quần áo: không có số ít"}
+    lines:
+      - {emma: "Look at the spotlight. Trousers, jeans, tights, clothes, glasses and sunglasses are always plural. These trousers are very nice. Not: this trouser is.", focus: 0, vi: "Luôn số nhiều, động từ chia số nhiều."}
+      - {tom: "My jeans were cheap. Were, not was.", focus: 1}
+      - {emma: "To count them, use pair: a pair of trousers, two pairs of jeans.", say: "To count them, yooz pair: a pair of trousers, two pairs of jeans.", focus: 2, vi: "Đếm bằng pair."}
+      - {tom: "And clothes has no singular. My clothes are on the chair.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 6: đổi sang số ít"
+    heading: "Exercise 6 · Make the sentences singular if possible"
+    heading_vi: "Ví dụ: Are these your boots? → Is this your boot? · Her glasses are nice. → Not possible. (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "Give me the socks.  →  ___", answer: "Give me the sock."}
+      - {n: 2, q: "Where are my tights?  →  ___", answer: "Not possible."}
+      - {n: 3, q: "I've got two pairs of sandals.  →  ___", answer: "I've got one pair of sandals."}
+      - {n: 4, q: "Do you like my new trousers?  →  ___", answer: "Not possible."}
+      - {n: 5, q: "She's wearing my scarves.  →  ___", answer: "She's wearing my scarf."}
+      - {n: 6, q: "Where are my gloves?  →  ___", answer: "Where is my glove?"}
+      - {n: 7, q: "The jeans cost €20.  →  ___", answer: "Not possible."}
+      - {n: 8, q: "I don't like these sunglasses.  →  ___", answer: "Not possible."}
+    lines:
+      - emma: "Exercise 6. Make the sentences singular, if possible. Pause the video and try."
+        say: "Exercise six. Make the sentences singular, if possible. Pause the video and try."
+        vi: "Bài 6: đổi sang số ít nếu được."
+      - {tom: "One. Give me the sock. Two. Not possible: tights are always plural. Three. I've got one pair of sandals. Four. Not possible.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. She's wearing my scarf. Scarves becomes scarf. Six. Where is my glove? Seven. Not possible. Eight. Not possible.", reveal: [5, 6, 7, 8], focus: 7, vi: "scarf → scarves (số nhiều)"}
+
+  - kind: blanks
+    chapter: "Mặc gì khi …?"
+    heading: "What do you wear …?"
+    heading_vi: "Thêm ngoài sách: quần áo theo dịp và thời tiết — tạm dừng video và trả lời"
+    items:
+      - {n: 1, q: "to a job interview?  →  ___", answer: "a suit, a shirt and a tie / a smart dress"}
+      - {n: 2, q: "to the beach?  →  ___", answer: "a T-shirt, shorts, sandals, sunglasses and a hat"}
+      - {n: 3, q: "in the rain?  →  ___", answer: "a raincoat and boots, or take an umbrella"}
+      - {n: 4, q: "to play basketball?  →  ___", answer: "shorts, a T-shirt and trainers"}
+      - {n: 5, q: "to a wedding?  →  ___", answer: "smart clothes: a suit, or a nice dress"}
+      - {n: 6, q: "in Da Lat in December?  →  ___", answer: "a jumper, a coat and a scarf"}
+    lines:
+      - emma: "What do you wear for different times and places? Pause the video, and answer each question. Then listen."
+        vi: "Mặc gì cho từng dịp, từng thời tiết? Tạm dừng video và trả lời."
+      - {emma: "Number one. What do you wear to a job interview?", focus: 0}
+      - {tom: "Smart clothes: a suit, a shirt and a tie. Or a smart dress.", reveal: 1, focus: 0}
+      - {emma: "Number two. What do you wear to the beach?", focus: 1}
+      - {tom: "A T-shirt, shorts and sandals. And sunglasses and a hat, because the sun is strong.", reveal: 2, focus: 1}
+      - {emma: "Number three. What do you wear in the rain?", focus: 2}
+      - {tom: "A raincoat and boots. Or take an umbrella.", reveal: 3, focus: 2}
+      - {emma: "Number four. What do you wear to play basketball?", focus: 3}
+      - {tom: "Shorts, a T-shirt, and good trainers.", reveal: 4, focus: 3}
+      - {emma: "Number five. What do you wear to a wedding?", focus: 4}
+      - {tom: "Smart clothes. Men often wear a suit, and women wear a nice dress.", reveal: 5, focus: 4}
+      - {emma: "And number six. What do you wear in Da Lat in December?", say: "And number six. What do you wear in Dah Lot in December?", focus: 5}
+      - {tom: "A jumper, a coat and a scarf. It's cold at night, believe me!", reveal: 6, focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: bạn mặc gì?"
+    heading: "Speaking 1 · Exercise 7: About you"
+    heading_vi: "Câu hỏi bài 7 — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What are you wearing today?"
+        a: "A white T-shirt, light blue jeans and trainers. It's my student uniform!"
+        ask: emma
+        by: tom
+        phrases: ["A white T-shirt…", "It's my … uniform!"]
+      - q: "And you, Emma?"
+        a: "A long green skirt, a cream top, and sandals, because it's hot today."
+        ask: tom
+        by: emma
+        phrases: ["A long … skirt", "because it's hot"]
+      - q: "What clothes do you wear at the weekend?"
+        a: "Casual clothes: T-shirts and shorts. At the café, I wear a black shirt."
+        ask: emma
+        by: tom
+        phrases: ["Casual clothes:", "At the café, I wear…"]
+      - q: "Do you wear trainers a lot?"
+        a: "Not at school. I usually wear sandals or shoes. But I wear trainers when I go walking in the mountains."
+        ask: tom
+        by: emma
+        phrases: ["Not at school.", "I usually wear…", "when I go walking"]
+      - q: "Do you wear glasses or sunglasses?"
+        a: "I don't wear glasses, but I wear sunglasses in the dry season, because the sun is very strong."
+        ask: emma
+        by: tom
+        phrases: ["I don't wear…", "but I wear…", "because…"]
+      - q: "How often do you wear a hat, a scarf, or a watch?"
+        a: "I wear a hat every day here! I hardly ever wear a watch: I look at my phone. And I never wear a scarf in Vietnam."
+        ask: tom
+        by: emma
+        phrases: ["every day", "I hardly ever wear…", "I never wear…"]
+      - q: "And you, Tom? Do you wear a scarf?"
+        a: "Never in Ho Chi Minh City! But in Da Lat in December, I sometimes do. And I always wear a watch. It was a present from my dad."
+        say: "Never in Ho Chee Min City! But in Dah Lot in December, I sometimes do. And I always wear a watch. It was a present from my dad."
+        ask: emma
+        by: tom
+        phrases: ["Never in…", "I sometimes do", "It was a present from…"]
+    lines:
+      - {emma: "Exercise 7. What are you wearing today, Tom?", say: "Exercise seven. What are you wearing today, Tom?", focus: 0}
+      - {tom: "A white T-shirt, light blue jeans and trainers. It's my student uniform!", reveal: 0, vi: "Áo phông trắng, quần bò xanh nhạt, giày thể thao — \"đồng phục sinh viên\"!"}
+      - {tom: "And you, Emma?", focus: 1}
+      - {emma: "A long green skirt, a cream top, and sandals, because it's hot today.", reveal: 1, vi: "Chân váy dài màu xanh lá, áo màu kem, dép xăng-đan vì trời nóng."}
+      - {emma: "What clothes do you wear at the weekend?", focus: 2}
+      - {tom: "Casual clothes: T-shirts and shorts. At the café, I wear a black shirt.", reveal: 2, vi: "Đồ thoải mái: áo phông, quần soóc. Ở quán thì mặc sơ mi đen."}
+      - {tom: "Do you wear trainers a lot?", focus: 3}
+      - {emma: "Not at school. I usually wear sandals or shoes. But I wear trainers when I go walking in the mountains.", reveal: 3, vi: "Đi dạy thì không: thường đi xăng-đan hoặc giày; đi bộ đường dài trên núi thì đi giày thể thao."}
+      - {emma: "Do you wear glasses or sunglasses?", focus: 4}
+      - {tom: "I don't wear glasses, but I wear sunglasses in the dry season, because the sun is very strong.", reveal: 4, vi: "Không đeo kính cận; mùa khô đeo kính râm vì nắng gắt."}
+      - {tom: "How often do you wear a hat, a scarf, or a watch?", focus: 5}
+      - {emma: "I wear a hat every day here! I hardly ever wear a watch: I look at my phone. And I never wear a scarf in Vietnam.", reveal: 5, vi: "Ngày nào cũng đội mũ; hầu như không đeo đồng hồ, xem điện thoại; ở Việt Nam không bao giờ quàng khăn."}
+      - {emma: "And you, Tom? Do you wear a scarf?", focus: 6}
+      - {tom: "Never in Ho Chi Minh City! But in Da Lat in December, I sometimes do. And I always wear a watch. It was a present from my dad.", say: "Never in Ho Chee Min City! But in Dah Lot in December, I sometimes do. And I always wear a watch. It was a present from my dad.", reveal: 6, vi: "Ở TP. HCM thì không bao giờ; Đà Lạt tháng 12 thỉnh thoảng có. Luôn đeo đồng hồ — quà của bố."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · clothes"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "She's wearing a long purple ___.", answer: "dress"}
+      - {n: 2, q: "I need a new pair of ___.", answer: "trainers"}
+      - {n: 3, q: "Take your ___. It's going to rain.", answer: "umbrella"}
+      - {n: 4, q: "He always wears a ___ and tie to work.", answer: "suit"}
+      - {n: 5, q: "My ___ were very cheap.", answer: "sunglasses"}
+      - {n: 6, q: "It's freezing. Wear a scarf and ___.", answer: "gloves"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. She's wearing a long purple dress.", focus: 0}
+      - {emma: "Number two. I need a new pair of trainers.", focus: 1}
+      - {emma: "Number three. Take your umbrella. It's going to rain.", focus: 2}
+      - {emma: "Number four. He always wears a suit and tie to work.", focus: 3}
+      - {emma: "Number five. My sunglasses were very cheap.", focus: 4}
+      - {emma: "Number six. It's freezing. Wear a scarf and gloves.", focus: 5}
+      - {tom: "Dress, with double s. Trainers. Umbrella, with double l.", say: "Dress, with double ess. Trainers. Umbrella, with double el.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Suit: S, U, I, T. Sunglasses: one word. And gloves.", say: "Suit: ess, yoo, eye, tee. Sunglasses: one word. And gloves.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Clothes"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu — dùng màu sắc và wear"
+    items:
+      - {q: "What kind of clothes do you usually wear?", hint: "I usually wear casual / smart clothes, like …"}
+      - {q: "Do you wear different clothes at the weekend?", hint: "Yes. During the week I wear …, but at the weekend …"}
+      - {q: "What's your favourite colour for clothes?", hint: "My favourite colour is … because …"}
+      - {q: "Did you wear a uniform at school?", hint: "Yes, I wore a white shirt and dark blue trousers / a skirt …"}
+      - {q: "Are clothes important to you? Why?", hint: "Not really / Yes, very. I think …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about clothes. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about clothes. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về quần áo."
+      - {emma: "What kind of clothes do you usually wear?", focus: 0, pause: 0.5}
+      - {emma: "Do you wear different clothes at the weekend?", focus: 1, pause: 0.5}
+      - {emma: "What's your favourite colour for clothes?", focus: 2, pause: 0.5}
+      - {emma: "Did you wear a uniform at school?", focus: 3, pause: 0.5}
+      - {emma: "Are clothes important to you? Why?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 49–50, nhìn tranh, gọi tên đồ và màu"
+    items:
+      - {en: "shirt · top · jumper = sweater · trousers · jeans · skirt · dress · T-shirt · jacket · suit · coat · raincoat", vi: "quần áo"}
+      - {en: "dark blue · pale blue = light blue · cream · grey · purple", vi: "màu sắc: dark (đậm) ≠ pale / light (nhạt)"}
+      - {en: "scarf · tie · hat · belt · handbag · umbrella · watch · a pair of shoes / boots / gloves", vi: "phụ kiện"}
+      - {en: "trousers, jeans, tights, clothes, (sun)glasses: always plural", vi: "luôn số nhiều: These jeans are …"}
+      - {en: "Next: Unit 19 · Buying clothes", vi: "Tiếp theo: Unit 19 · Mua quần áo"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Shirt, top, jumper or sweater, trousers, jeans, skirt, dress, T-shirt, jacket, suit, coat, and raincoat.", focus: 0}
+      - {tom: "Dark blue, pale blue or light blue, cream, grey and purple.", focus: 1}
+      - {emma: "A scarf, a tie, a hat, a belt, a handbag, an umbrella, a watch, and a pair of shoes.", focus: 2}
+      - {tom: "Trousers, jeans, tights, clothes and sunglasses are always plural.", focus: 3}
+      - {emma: "Next time, Unit 19: buying clothes. See you then!", say: "Next time, Unit nineteen: buying clothes. See you then!", focus: 4}

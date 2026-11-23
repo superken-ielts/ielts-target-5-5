@@ -1,0 +1,299 @@
+# Video nghe – viết (dictation) Unit 21 · The weather — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U21-weather-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U21 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list in "like as in What's he/she/it like? 14, 23, 62"; mục này xếp vào Unit 21 (What's the weather like?) —
+# file 09 mục 5.9.
+id: U21-weather-dictation
+activity: U21-words
+title: "Unit 21 · The weather"
+subtitle: "Dictation · listen and write: the weather"
+title_vi: "Nghe – viết 10 phút: thời tiết — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 21"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 21: The weather. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-one: The weather. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 21: thời tiết. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 26 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, twenty-six words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 26 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "What's the weather like?", "vi": "Thời tiết thế nào?", "ex": "What's the weather like today?", "w": ["what", "like"]}
+      - {"n": 2, "answer": "sun, sunny", "vi": "mặt trời, nắng", "ex": "It's sunny. The sun is shining.", "w": ["sun", "sunny"]}
+      - {"n": 3, "answer": "sunshine", "vi": "ánh nắng", "ex": "We had lots of sunshine last week.", "w": ["sunshine"]}
+      - {"n": 4, "answer": "cloud, cloudy", "vi": "mây, nhiều mây", "ex": "It's cloudy. There are a lot of clouds.", "w": ["cloud", "cloudy"]}
+      - {"n": 5, "answer": "rain, wet", "vi": "mưa, ướt", "ex": "It's raining. It's very wet outside.", "w": ["rain", "wet"]}
+      - {"n": 6, "answer": "wind, windy", "vi": "gió, nhiều gió", "ex": "It's windy. The wind is blowing.", "w": ["wind", "windy"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. What's the weather like?. What's the weather like?. What's the weather like today? What's the weather like today?", "focus": 0}
+      - {"emma": "Two. sun, sunny. sun, sunny. It's sunny. The sun is shining. It's sunny. The sun is shining.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. sunshine. sunshine. We had lots of sunshine last week. We had lots of sunshine last week.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. cloud, cloudy. cloud, cloudy. It's cloudy. There are a lot of clouds. It's cloudy. There are a lot of clouds.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. rain, wet. rain, wet. It's raining. It's very wet outside. It's raining. It's very wet outside.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. wind, windy. wind, windy. It's windy. The wind is blowing. It's windy. The wind is blowing.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "blow, blew", "vi": "thổi", "ex": "The wind blew my hat off.", "w": ["blow"]}
+      - {"n": 8, "answer": "ice, icy", "vi": "băng, đóng băng", "ex": "Be careful. The roads are icy.", "w": ["ice", "icy"]}
+      - {"n": 9, "answer": "fog, foggy", "vi": "sương mù", "ex": "It's foggy. I can't see the road.", "w": ["fog", "foggy"]}
+      - {"n": 10, "answer": "snow", "vi": "tuyết", "ex": "It hardly ever snows in Vietnam.", "w": ["snow"]}
+      - {"n": 11, "answer": "a lot of", "vi": "nhiều", "ex": "We had a lot of rain last night.", "w": ["lot"]}
+      - {"n": 12, "answer": "a bit of", "vi": "một chút", "ex": "There's a bit of cloud today.", "w": ["bit"]}
+    lines:
+      - {"emma": "Seven. blow, blew. blow, blew. The wind blew my hat off. The wind blew my hat off.", "focus": 0}
+      - {"emma": "Eight. ice, icy. ice, icy. Be careful. The roads are icy. Be careful. The roads are icy.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. fog, foggy. fog, foggy. It's foggy. I can't see the road. It's foggy. I can't see the road.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. snow. snow. It hardly ever snows in Vietnam. It hardly ever snows in Vietnam.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. a lot of. a lot of. We had a lot of rain last night. We had a lot of rain last night.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. a bit of. a bit of. There's a bit of cloud today. There's a bit of cloud today.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "changeable", "vi": "hay thay đổi", "ex": "The weather in spring is very changeable.", "w": ["changeable"]}
+      - {"n": 14, "answer": "pleasant", "vi": "dễ chịu", "ex": "It's a pleasant evening.", "w": ["pleasant"]}
+      - {"n": 15, "answer": "dry", "vi": "khô", "ex": "The dry season is from December to April.", "w": ["dry"]}
+      - {"n": 16, "answer": "shower", "vi": "mưa rào", "ex": "We had a short shower in the afternoon.", "w": ["shower"]}
+      - {"n": 17, "answer": "hot, cold", "vi": "nóng, lạnh", "ex": "It's hot in the day and cold at night.", "w": ["hot", "cold"]}
+      - {"n": 18, "answer": "humid", "vi": "nóng ẩm", "ex": "Ho Chi Minh City is hot and humid.", "w": ["humid"]}
+    lines:
+      - {"emma": "Thirteen. changeable. changeable. The weather in spring is very changeable. The weather in spring is very changeable.", "focus": 0}
+      - {"emma": "Fourteen. pleasant. pleasant. It's a pleasant evening. It's a pleasant evening.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. dry. dry. The dry season is from December to April. The dry season is from December to April.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. shower. shower. We had a short shower in the afternoon. We had a short shower in the afternoon.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. hot, cold. hot, cold. It's hot in the day and cold at night. It's hot in the day and cold at night.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. humid. humid. Ho Chi Minh City is hot and humid. Ho Chi Minh City is hot and humid.", "say": "Eighteen. humid. humid. Ho Chee Min City is hot and humid. Ho Chee Min City is hot and humid.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "storm", "vi": "bão, mưa giông", "ex": "There was a big storm last night.", "w": ["storm"]}
+      - {"n": 20, "answer": "cool", "vi": "mát", "ex": "It's cooler on the coast.", "w": ["cool"]}
+      - {"n": 21, "answer": "breeze", "vi": "gió nhẹ", "ex": "There's a nice breeze by the sea.", "w": ["breeze"]}
+      - {"n": 22, "answer": "heavy rain", "vi": "mưa to", "ex": "The heavy rain stopped the traffic.", "w": ["heavy"]}
+    lines:
+      - {"emma": "Nineteen. storm. storm. There was a big storm last night. There was a big storm last night.", "focus": 0}
+      - {"emma": "Twenty. cool. cool. It's cooler on the coast. It's cooler on the coast.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. breeze. breeze. There's a nice breeze by the sea. There's a nice breeze by the sea.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. heavy rain. heavy rain. The heavy rain stopped the traffic. The heavy rain stopped the traffic.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–26)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "thunder", "vi": "sấm", "ex": "The thunder woke me up.", "w": ["thunder"]}
+      - {"n": 24, "answer": "lightning", "vi": "chớp", "ex": "Did you see the lightning?", "w": ["lightning"]}
+      - {"n": 25, "answer": "freezing", "vi": "lạnh cóng", "ex": "It's freezing outside. Wear a coat.", "w": ["freezing"]}
+      - {"n": 26, "answer": "damp", "vi": "ẩm", "ex": "My clothes feel damp.", "w": ["damp"]}
+    lines:
+      - {"emma": "Twenty-three. thunder. thunder. The thunder woke me up. The thunder woke me up.", "focus": 0}
+      - {"emma": "Twenty-four. lightning. lightning. Did you see the lightning? Did you see the lightning?", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. freezing. freezing. It's freezing outside. Wear a coat. It's freezing outside. Wear a coat.", "focus": 2, "reveal": [24]}
+      - {"emma": "Twenty-six. damp. damp. My clothes feel damp. My clothes feel damp.", "focus": 3, "reveal": [25]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [26]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (27–32)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 27, "answer": "temperature", "vi": "nhiệt độ", "ex": "What's the temperature today?"}
+      - {"n": 28, "answer": "degrees", "vi": "độ", "ex": "It's thirty-five degrees."}
+      - {"n": 29, "answer": "weather forecast", "vi": "dự báo thời tiết", "ex": "The weather forecast says it will rain."}
+      - {"n": 30, "answer": "season", "vi": "mùa", "ex": "My favourite season is autumn."}
+      - {"n": 31, "answer": "rainy season", "vi": "mùa mưa", "ex": "The rainy season starts in May."}
+      - {"n": 32, "answer": "dry season", "vi": "mùa khô", "ex": "It hardly ever rains in the dry season."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-seven. temperature. temperature. What's the temperature today? What's the temperature today?", "focus": 0}
+      - {"tom": "Twenty-eight. degrees. degrees. It's thirty-five degrees. It's thirty-five degrees.", "focus": 1, "reveal": [27]}
+      - {"tom": "Twenty-nine. weather forecast. weather forecast. The weather forecast says it will rain. The weather forecast says it will rain.", "focus": 2, "reveal": [28]}
+      - {"tom": "Thirty. season. season. My favourite season is autumn. My favourite season is autumn.", "focus": 3, "reveal": [29]}
+      - {"tom": "Thirty-one. rainy season. rainy season. The rainy season starts in May. The rainy season starts in May.", "focus": 4, "reveal": [30]}
+      - {"tom": "Thirty-two. dry season. dry season. It hardly ever rains in the dry season. It hardly ever rains in the dry season.", "focus": 5, "reveal": [31]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [32]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (33–38)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 33, "answer": "flood", "vi": "lũ lụt", "ex": "The heavy rain caused floods."}
+      - {"n": 34, "answer": "typhoon", "vi": "bão nhiệt đới", "ex": "A typhoon hit the coast last week."}
+      - {"n": 35, "answer": "mild", "vi": "ôn hòa", "ex": "The winter here is quite mild."}
+      - {"n": 36, "answer": "warm", "vi": "ấm", "ex": "It's warm and sunny today."}
+      - {"n": 37, "answer": "boiling", "vi": "nóng như thiêu", "ex": "It's boiling in here!"}
+      - {"n": 38, "answer": "misty", "vi": "có sương mỏng", "ex": "Da Lat is misty in the morning."}
+    lines:
+      - {"tom": "Thirty-three. flood. flood. The heavy rain caused floods. The heavy rain caused floods.", "focus": 0}
+      - {"tom": "Thirty-four. typhoon. typhoon. A typhoon hit the coast last week. A typhoon hit the coast last week.", "focus": 1, "reveal": [33]}
+      - {"tom": "Thirty-five. mild. mild. The winter here is quite mild. The winter here is quite mild.", "focus": 2, "reveal": [34]}
+      - {"tom": "Thirty-six. warm. warm. It's warm and sunny today. It's warm and sunny today.", "focus": 3, "reveal": [35]}
+      - {"tom": "Thirty-seven. boiling. boiling. It's boiling in here! It's boiling in here!", "focus": 4, "reveal": [36]}
+      - {"tom": "Thirty-eight. misty. misty. Da Lat is misty in the morning. Da Lat is misty in the morning.", "say": "Thirty-eight. misty. misty. Dah Lot is misty in the morning. Dah Lot is misty in the morning.", "focus": 5, "reveal": [37]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [38]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (39–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 39, "answer": "rainbow", "vi": "cầu vồng", "ex": "Look, there's a rainbow!"}
+      - {"n": 40, "answer": "puddle", "vi": "vũng nước", "ex": "The children jumped in the puddles."}
+      - {"n": 41, "answer": "get wet", "vi": "bị ướt", "ex": "I got wet on the way home."}
+      - {"n": 42, "answer": "pour", "vi": "mưa như trút", "ex": "It's pouring with rain."}
+    lines:
+      - {"tom": "Thirty-nine. rainbow. rainbow. Look, there's a rainbow! Look, there's a rainbow!", "focus": 0}
+      - {"tom": "Forty. puddle. puddle. The children jumped in the puddles. The children jumped in the puddles.", "focus": 1, "reveal": [39]}
+      - {"tom": "Forty-one. get wet. get wet. I got wet on the way home. I got wet on the way home.", "focus": 2, "reveal": [40]}
+      - {"tom": "Forty-two. pour. pour. It's pouring with rain. It's pouring with rain.", "focus": 3, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "drizzle", "vi": "mưa phùn", "ex": "It's only drizzle. You don't need an umbrella."}
+      - {"n": 44, "answer": "heatwave", "vi": "đợt nắng nóng", "ex": "There's a heatwave this week."}
+      - {"n": 45, "answer": "climate", "vi": "khí hậu", "ex": "Vietnam has a tropical climate."}
+      - {"n": 46, "answer": "below zero", "vi": "dưới không độ", "ex": "In winter it can be below zero."}
+    lines:
+      - {"tom": "Forty-three. drizzle. drizzle. It's only drizzle. You don't need an umbrella. It's only drizzle. You don't need an umbrella.", "focus": 0}
+      - {"tom": "Forty-four. heatwave. heatwave. There's a heatwave this week. There's a heatwave this week.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. climate. climate. Vietnam has a tropical climate. Vietnam has a tropical climate.", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. below zero. below zero. In winter it can be below zero. In winter it can be below zero.", "focus": 3, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [46]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 47, "answer": "What's the weather like today?", "vi": "Hôm nay thời tiết thế nào?"}
+      - {"n": 48, "answer": "It's hot and sunny.", "vi": "Nóng và nắng."}
+      - {"n": 49, "answer": "Lovely day, isn't it?", "vi": "Đẹp trời nhỉ?"}
+      - {"n": 50, "answer": "Yes, it's beautiful.", "vi": "Ừ, đẹp thật."}
+      - {"n": 51, "answer": "Terrible weather, isn't it?", "vi": "Thời tiết tệ quá nhỉ?"}
+      - {"n": 52, "answer": "Yes, it's raining again.", "vi": "Ừ, lại mưa nữa."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-seven. What's the weather like today? What's the weather like today?", "focus": 0}
+      - {"tom": "Forty-eight. It's hot and sunny. It's hot and sunny.", "focus": 1, "reveal": [47]}
+      - {"emma": "Forty-nine. Lovely day, isn't it? Lovely day, isn't it?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. Yes, it's beautiful. Yes, it's beautiful.", "focus": 3, "reveal": [49]}
+      - {"tom": "Fifty-one. Terrible weather, isn't it? Terrible weather, isn't it?", "focus": 4, "reveal": [50]}
+      - {"emma": "Fifty-two. Yes, it's raining again. Yes, it's raining again.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "Take an umbrella. It's going to rain.", "vi": "Mang ô đi. Sắp mưa đấy."}
+      - {"n": 54, "answer": "What's the temperature?", "vi": "Bao nhiêu độ?"}
+      - {"n": 55, "answer": "About thirty-four degrees.", "vi": "Khoảng 34 độ."}
+      - {"n": 56, "answer": "What's your favourite season?", "vi": "Bạn thích mùa nào nhất?"}
+      - {"n": 57, "answer": "The dry season. It's sunny every day.", "vi": "Mùa khô. Ngày nào cũng nắng."}
+      - {"n": 58, "answer": "Do you like rainy days?", "vi": "Bạn có thích ngày mưa không?"}
+    lines:
+      - {"emma": "Fifty-three. Take an umbrella. It's going to rain. Take an umbrella. It's going to rain.", "focus": 0}
+      - {"tom": "Fifty-four. What's the temperature? What's the temperature?", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. About thirty-four degrees. About thirty-four degrees.", "focus": 2, "reveal": [54]}
+      - {"emma": "Fifty-six. What's your favourite season? What's your favourite season?", "focus": 3, "reveal": [55]}
+      - {"tom": "Fifty-seven. The dry season. It's sunny every day. The dry season. It's sunny every day.", "focus": 4, "reveal": [56]}
+      - {"tom": "Fifty-eight. Do you like rainy days? Do you like rainy days?", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "Yes, I stay in and read a book.", "vi": "Có, mình ở nhà đọc sách."}
+      - {"n": 60, "answer": "What's the weather like in Da Lat?", "vi": "Thời tiết Đà Lạt thế nào?"}
+      - {"n": 61, "answer": "It's cool all year, and foggy in the morning.", "vi": "Mát quanh năm, sáng có sương mù."}
+      - {"n": 62, "answer": "Does it ever snow in Vietnam?", "vi": "Việt Nam có bao giờ có tuyết không?"}
+      - {"n": 63, "answer": "Hardly ever. Only in the mountains in the north.", "vi": "Hầu như không. Chỉ trên núi ở miền Bắc."}
+      - {"n": 64, "answer": "It's freezing. Close the window, please.", "vi": "Lạnh cóng. Đóng cửa sổ giúp mình."}
+    lines:
+      - {"emma": "Fifty-nine. Yes, I stay in and read a book. Yes, I stay in and read a book.", "focus": 0}
+      - {"emma": "Sixty. What's the weather like in Da Lat? What's the weather like in Da Lat?", "say": "Sixty. What's the weather like in Dah Lot? What's the weather like in Dah Lot?", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. It's cool all year, and foggy in the morning. It's cool all year, and foggy in the morning.", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Does it ever snow in Vietnam? Does it ever snow in Vietnam?", "focus": 3, "reveal": [61]}
+      - {"tom": "Sixty-three. Hardly ever. Only in the mountains in the north. Hardly ever. Only in the mountains in the north.", "focus": 4, "reveal": [62]}
+      - {"emma": "Sixty-four. It's freezing. Close the window, please. It's freezing. Close the window, please.", "say": "Sixty-four. It's freezing. Cloze the window, please. It's freezing. Cloze the window, please.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "It's so humid today.", "vi": "Hôm nay oi quá."}
+      - {"n": 66, "answer": "Yes, I think there will be a storm.", "vi": "Ừ, mình nghĩ sắp có giông."}
+      - {"n": 67, "answer": "Did you hear the thunder last night?", "vi": "Tối qua bạn có nghe sấm không?"}
+      - {"n": 68, "answer": "Yes, it woke me up.", "vi": "Có, nó làm mình tỉnh giấc."}
+      - {"n": 69, "answer": "The weather in England is very changeable.", "vi": "Thời tiết ở Anh rất hay thay đổi."}
+      - {"n": 70, "answer": "I got wet on the way to work.", "vi": "Mình bị ướt trên đường đi làm."}
+    lines:
+      - {"tom": "Sixty-five. It's so humid today. It's so humid today.", "focus": 0}
+      - {"emma": "Sixty-six. Yes, I think there will be a storm. Yes, I think there will be a storm.", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. Did you hear the thunder last night? Did you hear the thunder last night?", "focus": 2, "reveal": [66]}
+      - {"tom": "Sixty-eight. Yes, it woke me up. Yes, it woke me up.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. The weather in England is very changeable. The weather in England is very changeable.", "focus": 4, "reveal": [68]}
+      - {"emma": "Seventy. I got wet on the way to work. I got wet on the way to work.", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "What does the weather forecast say?", "vi": "Dự báo thời tiết nói gì?"}
+      - {"n": 72, "answer": "Sunny in the morning, and showers later.", "vi": "Sáng nắng, chiều có mưa rào."}
+      - {"n": 73, "answer": "It's a bit windy by the sea.", "vi": "Gần biển hơi có gió."}
+      - {"n": 74, "answer": "I love the sound of rain.", "vi": "Mình thích tiếng mưa."}
+    lines:
+      - {"tom": "Seventy-one. What does the weather forecast say? What does the weather forecast say?", "focus": 0}
+      - {"emma": "Seventy-two. Sunny in the morning, and showers later. Sunny in the morning, and showers later.", "focus": 1, "reveal": [71]}
+      - {"tom": "Seventy-three. It's a bit windy by the sea. It's a bit windy by the sea.", "focus": 2, "reveal": [72]}
+      - {"tom": "Seventy-four. I love the sound of rain. I love the sound of rain.", "focus": 3, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [74]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 22.", "say": "Well done! See you in Unit twenty-two.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 22."}
+

@@ -1,0 +1,318 @@
+# Video nghe – viết (dictation) Unit 18 · Clothes — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U18-clothes-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U18 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 18 có 47 mục; câu ví dụ ghép màu với quần áo để phủ mọi màu (red có trong Word list nhưng OCR sót,
+# đã thêm tay — file 09 mục 5.9).
+id: U18-clothes-dictation
+activity: U18-words
+title: "Unit 18 · Clothes"
+subtitle: "Dictation · listen and write: clothes and colours"
+title_vi: "Nghe – viết 10 phút: quần áo, màu sắc — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 18"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 18: Clothes. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit eighteen: Clothes. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 18: quần áo, màu sắc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 31 words from the book. You hear each word twice, and then an example sentence twice. Then 21 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, thirty-one words from the book. You hear each word twice, and then an example sentence twice. Then twenty-one more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 31 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 21 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "shirt", "vi": "áo sơ mi", "ex": "He's wearing a white shirt.", "w": ["shirt", "white"]}
+      - {"n": 2, "answer": "top", "vi": "áo (nữ)", "ex": "She's wearing a yellow top.", "w": ["top", "yellow"]}
+      - {"n": 3, "answer": "jumper, sweater", "vi": "áo len", "ex": "It's cold. Wear a jumper.", "w": ["jumper", "sweater"]}
+      - {"n": 4, "answer": "trousers", "vi": "quần dài", "ex": "His trousers are grey.", "w": ["trousers", "grey"]}
+      - {"n": 5, "answer": "jeans", "vi": "quần bò", "ex": "She often wears jeans.", "w": ["jeans"]}
+      - {"n": 6, "answer": "skirt", "vi": "chân váy", "ex": "She's got a long blue skirt.", "w": ["skirt", "blue"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. shirt. shirt. He's wearing a white shirt. He's wearing a white shirt.", "focus": 0}
+      - {"emma": "Two. top. top. She's wearing a yellow top. She's wearing a yellow top.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. jumper, sweater. jumper, sweater. It's cold. Wear a jumper. It's cold. Wear a jumper.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. trousers. trousers. His trousers are grey. His trousers are grey.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. jeans. jeans. She often wears jeans. She often wears jeans.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. skirt. skirt. She's got a long blue skirt. She's got a long blue skirt.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "dress", "vi": "váy liền", "ex": "The purple dress is lovely.", "w": ["dress", "purple"]}
+      - {"n": 8, "answer": "T-shirt", "vi": "áo phông", "ex": "He's wearing an orange T-shirt.", "w": ["T-shirt", "orange"]}
+      - {"n": 9, "answer": "jacket", "vi": "áo khoác ngắn", "ex": "I like your brown jacket.", "w": ["jacket", "brown"]}
+      - {"n": 10, "answer": "suit", "vi": "bộ com-lê", "ex": "He wears a black suit to work.", "w": ["suit", "black"]}
+      - {"n": 11, "answer": "coat", "vi": "áo khoác dài", "ex": "Put your coat on. It's cold.", "w": ["coat"]}
+      - {"n": 12, "answer": "raincoat", "vi": "áo mưa", "ex": "Take your raincoat. It's raining.", "w": ["raincoat"]}
+    lines:
+      - {"emma": "Seven. dress. dress. The purple dress is lovely. The purple dress is lovely.", "focus": 0}
+      - {"emma": "Eight. T-shirt. T-shirt. He's wearing an orange T-shirt. He's wearing an orange T-shirt.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. jacket. jacket. I like your brown jacket. I like your brown jacket.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. suit. suit. He wears a black suit to work. He wears a black suit to work.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. coat. coat. Put your coat on. It's cold. Put your coat on. It's cold.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. raincoat. raincoat. Take your raincoat. It's raining. Take your raincoat. It's raining.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "red, pink", "vi": "đỏ, hồng", "ex": "Her raincoat is red, not pink.", "w": ["red", "pink"]}
+      - {"n": 14, "answer": "green, cream", "vi": "xanh lá, màu kem", "ex": "He's got a green jumper and a cream scarf.", "w": ["green", "cream"]}
+      - {"n": 15, "answer": "dark, light, pale", "vi": "đậm, nhạt", "ex": "Dark blue jeans and a light blue shirt.", "w": ["dark", "light", "pale"]}
+      - {"n": 16, "answer": "accessories", "vi": "phụ kiện", "ex": "Bags and belts are accessories.", "w": ["accessories"]}
+      - {"n": 17, "answer": "scarf", "vi": "khăn quàng", "ex": "Wear a scarf in winter.", "w": ["scarf"]}
+      - {"n": 18, "answer": "tie", "vi": "cà vạt", "ex": "He always wears a tie at work.", "w": ["tie"]}
+    lines:
+      - {"emma": "Thirteen. red, pink. red, pink. Her raincoat is red, not pink. Her raincoat is red, not pink.", "focus": 0}
+      - {"emma": "Fourteen. green, cream. green, cream. He's got a green jumper and a cream scarf. He's got a green jumper and a cream scarf.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. dark, light, pale. dark, light, pale. Dark blue jeans and a light blue shirt. Dark blue jeans and a light blue shirt.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. accessories. accessories. Bags and belts are accessories. Bags and belts are accessories.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. scarf. scarf. Wear a scarf in winter. Wear a scarf in winter.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. tie. tie. He always wears a tie at work. He always wears a tie at work.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "hat", "vi": "mũ", "ex": "Take a hat. The sun is strong.", "w": ["hat"]}
+      - {"n": 20, "answer": "belt", "vi": "thắt lưng", "ex": "These trousers need a belt.", "w": ["belt"]}
+      - {"n": 21, "answer": "handbag", "vi": "túi xách tay", "ex": "Her handbag is very small.", "w": ["handbag"]}
+      - {"n": 22, "answer": "umbrella", "vi": "cái ô", "ex": "Don't forget your umbrella.", "w": ["umbrella"]}
+      - {"n": 23, "answer": "watch", "vi": "đồng hồ đeo tay", "ex": "My watch was a present from my dad.", "w": ["watch"]}
+      - {"n": 24, "answer": "a pair of shoes", "vi": "một đôi giày", "ex": "I need a new pair of shoes.", "w": ["pair", "shoe"]}
+    lines:
+      - {"emma": "Nineteen. hat. hat. Take a hat. The sun is strong. Take a hat. The sun is strong.", "focus": 0}
+      - {"emma": "Twenty. belt. belt. These trousers need a belt. These trousers need a belt.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. handbag. handbag. Her handbag is very small. Her handbag is very small.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. umbrella. umbrella. Don't forget your umbrella. Don't forget your umbrella.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. watch. watch. My watch was a present from my dad. My watch was a present from my dad.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. a pair of shoes. a pair of shoes. I need a new pair of shoes. I need a new pair of shoes.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "sandals, socks", "vi": "dép xăng-đan, tất", "ex": "Don't wear socks with sandals!", "w": ["sandals", "sock"]}
+      - {"n": 26, "answer": "gloves", "vi": "găng tay", "ex": "My hands are cold. Where are my gloves?", "w": ["gloves"]}
+      - {"n": 27, "answer": "boots", "vi": "ủng, bốt", "ex": "She's got some black boots.", "w": ["boots"]}
+      - {"n": 28, "answer": "trainers", "vi": "giày thể thao", "ex": "He's wearing his old trainers.", "w": ["trainers"]}
+    lines:
+      - {"emma": "Twenty-five. sandals, socks. sandals, socks. Don't wear socks with sandals! Don't wear socks with sandals!", "focus": 0}
+      - {"emma": "Twenty-six. gloves. gloves. My hands are cold. Where are my gloves? My hands are cold. Where are my gloves?", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. boots. boots. She's got some black boots. She's got some black boots.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. trainers. trainers. He's wearing his old trainers. He's wearing his old trainers.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (29–31)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 29, "answer": "tights", "vi": "quần tất", "ex": "These tights are too long.", "w": ["tights"]}
+      - {"n": 30, "answer": "glasses, sunglasses", "vi": "kính, kính râm", "ex": "She wears glasses for reading, and sunglasses outside.", "w": ["glasses", "sunglasses"]}
+      - {"n": 31, "answer": "wear", "vi": "mặc, đội, đeo", "ex": "What are you wearing today?", "w": ["wear"]}
+    lines:
+      - {"emma": "Twenty-nine. tights. tights. These tights are too long. These tights are too long.", "focus": 0}
+      - {"emma": "Thirty. glasses, sunglasses. glasses, sunglasses. She wears glasses for reading, and sunglasses outside. She wears glasses for reading, and sunglasses outside.", "focus": 1, "reveal": [29]}
+      - {"emma": "Thirty-one. wear. wear. What are you wearing today? What are you wearing today?", "focus": 2, "reveal": [30]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [31]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "shorts", "vi": "quần soóc", "ex": "He wears shorts when he plays basketball."}
+      - {"n": 33, "answer": "uniform", "vi": "đồng phục", "ex": "All the students wear a uniform."}
+      - {"n": 34, "answer": "pyjamas", "vi": "đồ ngủ", "ex": "The children are in their pyjamas."}
+      - {"n": 35, "answer": "swimming costume", "vi": "đồ bơi", "ex": "Don't forget your swimming costume."}
+      - {"n": 36, "answer": "cap", "vi": "mũ lưỡi trai", "ex": "He always wears a cap."}
+      - {"n": 37, "answer": "blouse", "vi": "áo sơ mi nữ", "ex": "She's wearing a silk blouse."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-two. shorts. shorts. He wears shorts when he plays basketball. He wears shorts when he plays basketball.", "focus": 0}
+      - {"tom": "Thirty-three. uniform. uniform. All the students wear a uniform. All the students wear a uniform.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. pyjamas. pyjamas. The children are in their pyjamas. The children are in their pyjamas.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. swimming costume. swimming costume. Don't forget your swimming costume. Don't forget your swimming costume.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. cap. cap. He always wears a cap. He always wears a cap.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. blouse. blouse. She's wearing a silk blouse. She's wearing a silk blouse.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "hoodie", "vi": "áo nỉ có mũ", "ex": "My favourite hoodie is grey."}
+      - {"n": 39, "answer": "cardigan", "vi": "áo len cài khuy", "ex": "Take a cardigan. It's cool in the evening."}
+      - {"n": 40, "answer": "pocket", "vi": "túi (quần áo)", "ex": "My phone is in my pocket."}
+      - {"n": 41, "answer": "button", "vi": "cúc áo", "ex": "One button is missing."}
+      - {"n": 42, "answer": "put on", "vi": "mặc vào", "ex": "Put on your jacket. It's cold."}
+      - {"n": 43, "answer": "take off", "vi": "cởi ra", "ex": "Please take off your shoes."}
+    lines:
+      - {"tom": "Thirty-eight. hoodie. hoodie. My favourite hoodie is grey. My favourite hoodie is grey.", "focus": 0}
+      - {"tom": "Thirty-nine. cardigan. cardigan. Take a cardigan. It's cool in the evening. Take a cardigan. It's cool in the evening.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. pocket. pocket. My phone is in my pocket. My phone is in my pocket.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. button. button. One button is missing. One button is missing.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. put on. put on. Put on your jacket. It's cold. Put on your jacket. It's cold.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. take off. take off. Please take off your shoes. Please take off your shoes.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–49)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "get dressed", "vi": "mặc quần áo", "ex": "Hurry up and get dressed!"}
+      - {"n": 45, "answer": "cotton", "vi": "vải bông", "ex": "This T-shirt is cotton."}
+      - {"n": 46, "answer": "leather", "vi": "da", "ex": "He's got leather shoes."}
+      - {"n": 47, "answer": "wool", "vi": "len", "ex": "A wool scarf is very warm."}
+      - {"n": 48, "answer": "striped", "vi": "kẻ sọc", "ex": "She's wearing a striped dress."}
+      - {"n": 49, "answer": "spotted", "vi": "chấm bi", "ex": "I like your spotted tie."}
+    lines:
+      - {"tom": "Forty-four. get dressed. get dressed. Hurry up and get dressed! Hurry up and get dressed!", "focus": 0}
+      - {"tom": "Forty-five. cotton. cotton. This T-shirt is cotton. This T-shirt is cotton.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. leather. leather. He's got leather shoes. He's got leather shoes.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. wool. wool. A wool scarf is very warm. A wool scarf is very warm.", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. striped. striped. She's wearing a striped dress. She's wearing a striped dress.", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. spotted. spotted. I like your spotted tie. I like your spotted tie.", "focus": 5, "reveal": [48]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (50–52)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 50, "answer": "fashionable", "vi": "hợp thời trang", "ex": "Her clothes are always fashionable."}
+      - {"n": 51, "answer": "old-fashioned", "vi": "lỗi mốt", "ex": "That jacket is a bit old-fashioned."}
+      - {"n": 52, "answer": "match", "vi": "hợp (màu)", "ex": "The shoes match the dress."}
+    lines:
+      - {"tom": "Fifty. fashionable. fashionable. Her clothes are always fashionable. Her clothes are always fashionable.", "focus": 0}
+      - {"tom": "Fifty-one. old-fashioned. old-fashioned. That jacket is a bit old-fashioned. That jacket is a bit old-fashioned.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. match. match. The shoes match the dress. The shoes match the dress.", "focus": 2, "reveal": [51]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [52]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "What are you wearing today?", "vi": "Hôm nay bạn mặc gì?"}
+      - {"n": 54, "answer": "A white T-shirt, jeans and trainers.", "vi": "Áo phông trắng, quần bò và giày thể thao."}
+      - {"n": 55, "answer": "What's your favourite colour?", "vi": "Bạn thích màu gì nhất?"}
+      - {"n": 56, "answer": "Green. I've got lots of green clothes.", "vi": "Màu xanh lá. Mình có nhiều đồ màu xanh lá."}
+      - {"n": 57, "answer": "I like your jacket. Is it new?", "vi": "Mình thích áo khoác của bạn. Mới à?"}
+      - {"n": 58, "answer": "Yes, I got it last week.", "vi": "Ừ, mình mua tuần trước."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-three. What are you wearing today? What are you wearing today?", "focus": 0}
+      - {"tom": "Fifty-four. A white T-shirt, jeans and trainers. A white T-shirt, jeans and trainers.", "focus": 1, "reveal": [53]}
+      - {"tom": "Fifty-five. What's your favourite colour? What's your favourite colour?", "focus": 2, "reveal": [54]}
+      - {"emma": "Fifty-six. Green. I've got lots of green clothes. Green. I've got lots of green clothes.", "focus": 3, "reveal": [55]}
+      - {"emma": "Fifty-seven. I like your jacket. Is it new? I like your jacket. Is it new?", "focus": 4, "reveal": [56]}
+      - {"tom": "Fifty-eight. Yes, I got it last week. Yes, I got it last week.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "Does this shirt go with these trousers?", "vi": "Áo này có hợp quần này không?"}
+      - {"n": 60, "answer": "Yes, they look great together.", "vi": "Có, trông rất hợp."}
+      - {"n": 61, "answer": "What should I wear to the party?", "vi": "Mình nên mặc gì đi tiệc?"}
+      - {"n": 62, "answer": "Something smart, but not a suit.", "vi": "Lịch sự một chút, nhưng không cần com-lê."}
+      - {"n": 63, "answer": "Do I need to wear a tie?", "vi": "Mình có cần đeo cà vạt không?"}
+      - {"n": 64, "answer": "No, it's quite casual.", "vi": "Không, khá thoải mái."}
+    lines:
+      - {"tom": "Fifty-nine. Does this shirt go with these trousers? Does this shirt go with these trousers?", "focus": 0}
+      - {"emma": "Sixty. Yes, they look great together. Yes, they look great together.", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. What should I wear to the party? What should I wear to the party?", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Something smart, but not a suit. Something smart, but not a suit.", "focus": 3, "reveal": [61]}
+      - {"tom": "Sixty-three. Do I need to wear a tie? Do I need to wear a tie?", "focus": 4, "reveal": [62]}
+      - {"emma": "Sixty-four. No, it's quite casual. No, it's quite casual.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "It's cold. Take a scarf and gloves.", "vi": "Trời lạnh. Mang khăn và găng tay đi."}
+      - {"n": 66, "answer": "Where are my sunglasses?", "vi": "Kính râm của mình đâu?"}
+      - {"n": 67, "answer": "They're on your head!", "vi": "Trên đầu bạn kìa!"}
+      - {"n": 68, "answer": "Do you wear a uniform at work?", "vi": "Ở chỗ làm bạn có mặc đồng phục không?"}
+      - {"n": 69, "answer": "Yes, a black shirt at the café.", "vi": "Có, ở quán mình mặc sơ mi đen."}
+      - {"n": 70, "answer": "My jeans are too old. I need new ones.", "vi": "Quần bò của mình cũ quá. Mình cần quần mới."}
+    lines:
+      - {"emma": "Sixty-five. It's cold. Take a scarf and gloves. It's cold. Take a scarf and gloves.", "focus": 0}
+      - {"tom": "Sixty-six. Where are my sunglasses? Where are my sunglasses?", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. They're on your head! They're on your head!", "focus": 2, "reveal": [66]}
+      - {"emma": "Sixty-eight. Do you wear a uniform at work? Do you wear a uniform at work?", "focus": 3, "reveal": [67]}
+      - {"tom": "Sixty-nine. Yes, a black shirt at the café. Yes, a black shirt at the café.", "say": "Sixty-nine. Yes, a black shirt at the cafe. Yes, a black shirt at the cafe.", "focus": 4, "reveal": [68]}
+      - {"tom": "Seventy. My jeans are too old. I need new ones. My jeans are too old. I need new ones.", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "Do you wear a watch?", "vi": "Bạn có đeo đồng hồ không?"}
+      - {"n": 72, "answer": "Not really. I look at my phone.", "vi": "Không hẳn. Mình xem điện thoại."}
+      - {"n": 73, "answer": "What did you wear yesterday?", "vi": "Hôm qua bạn mặc gì?"}
+      - {"n": 74, "answer": "I wore a blue shirt and grey trousers.", "vi": "Mình mặc sơ mi xanh và quần xám."}
+      - {"n": 75, "answer": "These shoes are very comfortable.", "vi": "Đôi giày này rất êm."}
+      - {"n": 76, "answer": "You look nice in that colour.", "vi": "Bạn mặc màu đó đẹp đấy."}
+    lines:
+      - {"tom": "Seventy-one. Do you wear a watch? Do you wear a watch?", "focus": 0}
+      - {"emma": "Seventy-two. Not really. I look at my phone. Not really. I look at my phone.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. What did you wear yesterday? What did you wear yesterday?", "focus": 2, "reveal": [72]}
+      - {"tom": "Seventy-four. I wore a blue shirt and grey trousers. I wore a blue shirt and grey trousers.", "focus": 3, "reveal": [73]}
+      - {"emma": "Seventy-five. These shoes are very comfortable. These shoes are very comfortable.", "focus": 4, "reveal": [74]}
+      - {"tom": "Seventy-six. You look nice in that colour. You look nice in that colour.", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "Thank you! It's my favourite dress.", "vi": "Cảm ơn! Đây là váy mình thích nhất."}
+      - {"n": 78, "answer": "Put on your raincoat. It's raining.", "vi": "Mặc áo mưa vào. Trời đang mưa."}
+      - {"n": 79, "answer": "Can I borrow your umbrella?", "vi": "Cho mình mượn ô được không?"}
+      - {"n": 80, "answer": "Of course. Here you are.", "vi": "Tất nhiên. Đây."}
+    lines:
+      - {"emma": "Seventy-seven. Thank you! It's my favourite dress. Thank you! It's my favourite dress.", "focus": 0}
+      - {"tom": "Seventy-eight. Put on your raincoat. It's raining. Put on your raincoat. It's raining.", "focus": 1, "reveal": [77]}
+      - {"tom": "Seventy-nine. Can I borrow your umbrella? Can I borrow your umbrella?", "focus": 2, "reveal": [78]}
+      - {"emma": "Eighty. Of course. Here you are. Of course. Here you are.", "focus": 3, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [80]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 19.", "say": "Well done! See you in Unit nineteen.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 19."}
+

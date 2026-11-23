@@ -53,12 +53,12 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   luyện phát âm hay đóng vai để ép dưới 10 phút. Chỉ bỏ bài cần trang không có trong bản quét, ghi ở đầu kịch bản.
   Trước khi dựng, đối chiếu danh sách bài tập của trang sách với kịch bản (file 08 mục 6.1, 6.4).
 - Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
-  và độ phủ ở file 09 mục 5 (Unit 1–16 đã có). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới 15 phút: thêm ôn tập và luyện
-  nói chung. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`
+  và độ phủ ở file 09 mục 5 (Unit 1–23 đã có; đợt 37 người học: "ko sửa cái cũ"). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới
+  15 phút: thêm ôn tập và luyện nói chung. Đủ mọi bài tập trên trang; câu cuối cảnh `practice` `pause: 1.0`. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`
   có `image` — file 09 mục 5.3a.
 - Khoảng lặng (đợt 36, người học: "video ko nên có pause quá 3 giây nếu có ko có càng tốt"): video mới không có khoảng lặng từ
-  3 giây trở lên, tốt nhất là không có. Không dùng `wait`; `pause` + `gap` (+ `scene_gap` ở cuối cảnh) dưới 3 giây; người
-  học tự tạm dừng. Đo: `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -`. Video cũ còn vi phạm: file 04 P2-71.
+  3 giây trở lên, tốt nhất là không có. Không dùng `wait`; `pause` + `gap` (+ `scene_gap` ở cuối cảnh) dưới 3 giây (cộng thêm
+  khoảng 0,2 giây đuôi lặng của giọng đọc); người học tự tạm dừng. Đo: `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -`. Video cũ còn vi phạm: file 04 P2-71.
 - Oxford Word Skills Basic, video nghe – viết (đợt 36): mỗi unit thêm `<id>-dictation` khoảng 10 phút (test 9–11), cùng phiên,
   chạy liền, cảnh `dictation`; đủ mọi mục Word list của unit (`work/wordlist.json`; `python -m lesson_video wordlist
   ../books/book_oxford_word_skills_basic --unit U0x --level all` ra 0), thêm từ và câu giao tiếp theo chủ đề. Kịch bản sinh từ

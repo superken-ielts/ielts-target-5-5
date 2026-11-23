@@ -1,0 +1,568 @@
+# Video Oxford Word Skills Basic · Unit 17 — I can describe my routine (sách in tr. 46–48, Answer key tr. 208).
+# UNIT KHÓ (đợt 37): 3 trang, nhiều cụm động từ sinh hoạt (get up, get dressed, leave home…), cụm cuối tuần (stay in, come
+# round, go out…) và trạng từ tần suất (always → never, every / all) — video khoảng 13 phút: phần sách, rồi ÔN TẬP (lỗi hay
+# gặp) và LUYỆN NÓI CHUNG (Part 2 "your favourite day of the week", hai bài mẫu; ba câu thảo luận kiểu Part 3).
+# Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây.
+# Bài trong sách: đủ 1–9. Bài 1, 2, 5–8 theo Answer key tr. 208. Bài 3 (ABOUT YOU): Tom trả lời sáu câu của bài 2 — Answer
+# key in tám câu trả lời mẫu của "a Japanese person" cho sáu câu hỏi (in lệch, file 09 mục 3.3), video nói rõ. Bài 4 (Test
+# yourself): Tom nhắc che chữ, nhìn tranh, nói lại. Bài 9: Tom trả lời đúng / sai cho chính mình (Answer key là câu của "a
+# British person").
+# Không có cảnh "Nghe và viết" (mục 5.2 hàng 5): bài trong sách đã dài, và unit có video nghe – viết riêng (U17-routine-dictation).
+# Hình trong sách: 10 tranh việc trong ngày và khung Spotlight usually / normally (tr. 46, hai cảnh), đoạn văn cuối tuần kèm
+# Glossary (tr. 47, hai cảnh, khung theo dòng), bảng tìm cụm từ bài 5 (khung theo cụm), thang tần suất, ghi chú vị trí trạng
+# từ và Spotlight every / all (tr. 48).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom dậy khoảng 6:30 (U02), Chủ nhật sau 9 giờ; ăn sáng trước rồi
+# mới thay đồ; đi bộ 15 phút đến trường (U11), lớp đầu tiên 7:30; ăn tối với hai bạn cùng phòng (chia nhau nấu, U15), thứ Ba
+# và thứ Năm làm ở quán cà phê đến 10 giờ tối (hồ sơ); đi ngủ khoảng 11:30, ngủ khoảng bảy tiếng; sáng thứ Bảy cùng bạn cùng
+# phòng đi chợ (do the shopping), chiều thứ Bảy chơi bóng rổ (hai buổi một tuần), tối xem phim khoa học viễn tưởng; Chủ nhật
+# gọi video cho bố mẹ ở Đà Lạt, ôn IELTS. Emma dậy 6 giờ, học tiếng Việt nửa tiếng trước bữa sáng (U02); đi làm bằng xe ôm
+# công nghệ (không đi xe máy); dạy khoảng 25 giờ một tuần, thường xong lúc 6 giờ chiều; học tiếng Việt tối thứ Hai và thứ Tư
+# (hai buổi một tuần, hồ sơ); đi ngủ khoảng 10:30; sáng thứ Bảy đi chợ rồi nấu ăn (sở thích nấu ăn), thỉnh thoảng đi bộ đường
+# dài cuối tuần; Chủ nhật gọi video cho mẹ (U16), đọc truyện trinh thám.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U17-routine.yaml
+id: U17-routine
+activity: U17-words
+title: "Unit 17 · My routine"
+subtitle: "I can describe my routine"
+title_vi: "Sinh hoạt hằng ngày (get up, leave home, go to bed), cuối tuần (stay in, go out) và trạng từ tần suất — kèm ôn tập và luyện nói"
+tag: "EVERYDAY LIFE · UNIT 17"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 17, the first unit in the Everyday life module: my routine. Your routine is what you usually do every day. There are three pages, so this video is longer, with a review and speaking practice at the end."
+        say: "Welcome to Unit seventeen, the first unit in the Everyday life module: my routine. Your routine is what you usually do every day. There are three pages, so this video is longer, with a review and speaking practice at the end."
+        vi: "Unit 17, unit đầu module Everyday life: sinh hoạt hằng ngày. Ba trang sách nên video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Ngày thường (1)"
+    heading: "A · Weekdays (Monday to Friday)"
+    heading_vi: "Tranh trong sách tr. 46 — What do you do on weekdays?"
+    image: {pdf: course-book, page: 47, clip: [24, 97, 488, 273]}
+    items:
+      - {box: [27, 98, 142, 179]}
+      - {box: [143, 98, 256, 179]}
+      - {box: [258, 98, 372, 179]}
+      - {box: [373, 98, 487, 179]}
+      - {box: [27, 179, 142, 272]}
+      - {box: [143, 179, 256, 272]}
+      - {box: [258, 179, 372, 272]}
+      - {box: [373, 179, 487, 272]}
+    lines:
+      - emma: "Look at the pictures on page forty-six. What do you do on weekdays, from Monday to Friday? I usually get up at seven o'clock. Get up means leave your bed."
+        focus: 0
+        vi: "get up: thức dậy, ra khỏi giường"
+      - {tom: "I have a shower. In English, we have a shower, not take a shower. Well, Americans take a shower!", focus: 1, vi: "have a shower: tắm (vòi sen)"}
+      - {emma: "I get dressed. I put on my clothes.", focus: 2, vi: "get dressed: mặc quần áo, thay đồ"}
+      - {tom: "I have breakfast. Not eat breakfast: have breakfast.", focus: 3, vi: "have breakfast: ăn sáng"}
+      - {emma: "I usually leave home at eight o'clock.", focus: 4, vi: "leave home: ra khỏi nhà"}
+      - {tom: "I get to work at half past eight. Get to means arrive at.", focus: 5, vi: "get to work: đến chỗ làm"}
+      - {emma: "I finish work at five o'clock.", focus: 6, vi: "finish work: tan làm"}
+      - {tom: "And I have dinner at a quarter past eight.", focus: 7, vi: "have dinner: ăn tối"}
+
+  - kind: figure
+    chapter: "Ngày thường (2)"
+    heading: "A · Weekdays · usually and normally"
+    heading_vi: "Tranh và khung Spotlight tr. 46 — usually / normally = phần lớn các ngày"
+    image: {pdf: course-book, page: 47, clip: [24, 269, 488, 354]}
+    items:
+      - {box: [27, 270, 142, 352]}
+      - {box: [143, 270, 254, 352]}
+      - {box: [282, 277, 472, 335]}
+    lines:
+      - {emma: "I go to bed at half past eleven.", focus: 0, vi: "go to bed: đi ngủ"}
+      - {tom: "And I sleep seven hours a night. A night, not in a night.", focus: 1, vi: "seven hours a night: bảy tiếng mỗi đêm"}
+      - {emma: "Look at the spotlight. I usually, or normally, go to work by bus, means that I go to work by bus most days.", focus: 2, vi: "usually = normally: thường thường, phần lớn các ngày"}
+      - {tom: "Exercise four is a test: cover the sentences in your book, look at the pictures, and say the phrases. Pause the video and try it now.", say: "Exercise four is a test: cover the sentences in your book, look at the pictures, and say the phrases. Pause the video and try it now.", focus: 1, vi: "Bài 4: che chữ, nhìn tranh, nói lại các cụm."}
+
+  - kind: blanks
+    chapter: "Bài 1: ghép câu"
+    heading: "Exercise 1 · Match the verbs with words in columns 2 and 3"
+    heading_vi: "Ví dụ: I get up + at + 7.30 a.m. → I get up at 7.30 a.m. (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "I get … (dressed / before breakfast)  →  ___", answer: "I get dressed before breakfast."}
+      - {n: 2, q: "I have … (breakfast / at 8.00 a.m.)  →  ___", answer: "I have breakfast at 8 a.m."}
+      - {n: 3, q: "I leave … (home / at 8.30 a.m.)  →  ___", answer: "I leave home at 8.30 a.m."}
+      - {n: 4, q: "I finish … (work / at 6 p.m.)  →  ___", answer: "I finish work at 6 p.m."}
+      - {n: 5, q: "I have … (dinner / with my family)  →  ___", answer: "I have dinner with my family."}
+      - {n: 6, q: "I go … (to bed / at 11 o'clock)  →  ___", answer: "I go to bed at 11 o'clock."}
+      - {n: 7, q: "I sleep … (seven hours / a night)  →  ___", answer: "I sleep seven hours a night."}
+    lines:
+      - emma: "Exercise 1. Match the verbs in column one with words in columns two and three, and write the sentences. Pause the video and try."
+        say: "Exercise one. Match the verbs in column one with words in columns two and three, and write the sentences. Pause the video and try."
+        vi: "Bài 1: ghép ba cột thành câu. Tạm dừng video và làm."
+      - {tom: "One. I get dressed before breakfast. Two. I have breakfast at eight a.m. Three. I leave home at eight thirty a.m.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. I finish work at six p.m. Five. I have dinner with my family. Six. I go to bed at eleven o'clock. Seven. I sleep seven hours a night.", reveal: [4, 5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 2: câu hỏi"
+    heading: "Exercise 2 · Complete the questions with the correct verb"
+    heading_vi: "Ví dụ: What time do you usually get up in the morning? (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "Do you ___ dressed before or after breakfast?", answer: "get"}
+      - {n: 2, q: "Do you ___ a shower in the morning?", answer: "have"}
+      - {n: 3, q: "What time do you ___ home in the morning?", answer: "leave"}
+      - {n: 4, q: "What time do you ___ to school / university / work?", answer: "get"}
+      - {n: 5, q: "Who do you ___ dinner with?", answer: "have"}
+      - {n: 6, q: "What time do you normally ___ to bed?", answer: "go"}
+    lines:
+      - emma: "Exercise 2. Complete the questions with the correct verb. Pause the video and try."
+        say: "Exercise two. Complete the questions with the correct verb. Pause the video and try."
+        vi: "Bài 2: điền động từ vào câu hỏi."
+      - {tom: "One. Do you get dressed? Two. Do you have a shower? Three. What time do you leave home?", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. What time do you get to university? Five. Who do you have dinner with? Six. What time do you normally go to bed?", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Bài 3: về bạn"
+    heading: "Exercise 3 · About you: Tom answers the questions"
+    heading_vi: "Answer key in tám câu trả lời mẫu cho sáu câu hỏi — cứ trả lời sáu câu của bài 2"
+    items:
+      - q: "What time do you usually get up in the morning?"
+        a: "At about half past six. I'm not a morning person, so I need a coffee first!"
+        ask: emma
+        by: tom
+        phrases: ["At about…", "I'm not a morning person"]
+      - q: "Do you get dressed before or after breakfast?"
+        a: "After breakfast. I have breakfast first, and then I get dressed."
+        ask: emma
+        by: tom
+        phrases: ["After breakfast.", "first, and then…"]
+      - q: "Do you have a shower in the morning?"
+        a: "Yes, every morning. In Ho Chi Minh City, it's always hot!"
+        say: "Yes, every morning. In Ho Chee Min City, it's always hot!"
+        ask: emma
+        by: tom
+        phrases: ["Yes, every morning."]
+      - q: "What time do you leave home, and get to university?"
+        a: "I leave home at about ten past seven. I walk, and I get to university at about twenty-five past."
+        ask: emma
+        by: tom
+        phrases: ["I leave home at…", "I get to … at…"]
+      - q: "Who do you have dinner with?"
+        a: "With my two flatmates. We share the cooking. But on Tuesdays and Thursdays, I have dinner at the café, because I work there."
+        ask: emma
+        by: tom
+        phrases: ["With my…", "We share…", "on Tuesdays and Thursdays"]
+      - q: "What time do you normally go to bed?"
+        a: "At about half past eleven. So I sleep about seven hours a night."
+        ask: emma
+        by: tom
+        phrases: ["At about…", "I sleep … a night"]
+    lines:
+      - emma: "Exercise 3 says: write your answers to Exercise 2. The Answer key has eight answers from a Japanese person, but there are only six questions, so just answer the six questions. Here are Tom's answers."
+        say: "Exercise three says: write your answers to Exercise two. The Answer key has eight answers from a Japanese person, but there are only six questions, so just answer the six questions. Here are Tom's answers."
+        vi: "Answer key in 8 câu trả lời cho 6 câu hỏi — chỉ cần trả lời 6 câu. Nghe Tom trả lời."
+      - {emma: "What time do you usually get up in the morning, Tom?", focus: 0}
+      - {tom: "At about half past six. I'm not a morning person, so I need a coffee first!", reveal: 0, vi: "Khoảng 6:30. Tom không quen dậy sớm, phải uống cà phê trước!"}
+      - {emma: "Do you get dressed before or after breakfast?", focus: 1}
+      - {tom: "After breakfast. I have breakfast first, and then I get dressed.", reveal: 1, vi: "Sau bữa sáng: ăn trước rồi mới thay đồ."}
+      - {emma: "Do you have a shower in the morning?", focus: 2}
+      - {tom: "Yes, every morning. In Ho Chi Minh City, it's always hot!", say: "Yes, every morning. In Ho Chee Min City, it's always hot!", reveal: 2, vi: "Có, sáng nào cũng tắm: TP. HCM lúc nào cũng nóng!"}
+      - {emma: "What time do you leave home, and get to university?", focus: 3}
+      - {tom: "I leave home at about ten past seven. I walk, and I get to university at about twenty-five past.", reveal: 3, vi: "Ra khỏi nhà khoảng 7:10, đi bộ, đến trường khoảng 7:25."}
+      - {emma: "Who do you have dinner with?", focus: 4}
+      - {tom: "With my two flatmates. We share the cooking. But on Tuesdays and Thursdays, I have dinner at the café, because I work there.", reveal: 4, vi: "Với hai bạn cùng phòng, chia nhau nấu; thứ Ba, thứ Năm ăn ở quán cà phê vì làm ở đó."}
+      - {emma: "What time do you normally go to bed?", focus: 5}
+      - {tom: "At about half past eleven. So I sleep about seven hours a night.", reveal: 5, vi: "Khoảng 11:30, nên ngủ khoảng bảy tiếng mỗi đêm."}
+
+  - kind: bullets
+    chapter: "Cuối tuần (1)"
+    heading: "B · Weekends (Saturday and Sunday)"
+    heading_vi: "Đoạn văn và Glossary tr. 47 — What do you do at the weekend?"
+    image: {pdf: course-book, page: 48, clip: [30, 152, 216, 326]}
+    items:
+      - {en: "during the week (Mon–Fri) ≠ at the weekend", vi: "trong tuần ≠ cuối tuần (thứ Bảy, Chủ nhật)", box: [32, 159, 214, 172]}
+      - {en: "stay in = stay at home", vi: "ở nhà, không ra ngoài", box: [32, 159, 214, 183]}
+      - {en: "once a week · twice a week", vi: "một lần / hai lần mỗi tuần", box: [32, 193, 214, 217]}
+      - {en: "come round = come to my home", vi: "ghé nhà (mình)", box: [32, 205, 214, 217]}
+      - {en: "go and see a film", vi: "đi xem phim", box: [32, 216, 214, 240]}
+      - {en: "go out = go to a bar, cinema, restaurant…", vi: "đi chơi, ra ngoài", box: [32, 228, 214, 240]}
+    lines:
+      - emma: "Now the weekend: Saturday and Sunday. Read the text on page forty-seven. During the week means from Monday to Friday."
+        focus: 0
+        vi: "during the week ≠ at the weekend"
+      - {tom: "During the week I usually stay in after school. Stay in means stay at home.", focus: 1, vi: "stay in: ở nhà"}
+      - {emma: "Once a week is one time in every week. Twice a week is two times.", focus: 2, vi: "once = 1 lần · twice = 2 lần"}
+      - {tom: "Her boyfriend comes round. Come round means come to my home.", focus: 3, vi: "come round: ghé nhà"}
+      - {emma: "They have dinner together, or go and see a film.", focus: 4, vi: "go and see a film: đi xem phim"}
+      - {tom: "At the weekend, I go out a lot more. Go out means leave home to go to a bar, a cinema, or a restaurant.", focus: 5, vi: "go out: ra ngoài chơi"}
+
+  - kind: bullets
+    chapter: "Cuối tuần (2)"
+    heading: "B · Weekends · more phrases"
+    heading_vi: "Đoạn văn và Glossary tr. 47 — do the shopping = mua thức ăn"
+    image: {pdf: course-book, page: 48, clip: [30, 152, 216, 326]}
+    items:
+      - {en: "go shopping (clothes, CDs) · do the shopping (food)", vi: "đi mua sắm · đi chợ", box: [32, 250, 214, 263]}
+      - {en: "go to the gym", vi: "đi tập thể dục ở phòng tập", box: [32, 250, 214, 275]}
+      - {en: "get up late  (late ≠ early)", vi: "dậy muộn (≠ sớm)", box: [32, 285, 214, 309]}
+      - {en: "go for a walk", vi: "đi dạo", box: [32, 296, 214, 309]}
+      - {en: "play tennis", vi: "chơi quần vợt", box: [32, 307, 214, 321]}
+    lines:
+      - {emma: "On Saturday morning she usually goes shopping. Go shopping means go to the shops to buy clothes. But when you buy food, you do the shopping.", focus: 0, vi: "go shopping: mua sắm · do the shopping: đi chợ, mua đồ ăn"}
+      - {tom: "Or she goes to the gym.", focus: 1, vi: "the gym: phòng tập"}
+      - {emma: "On Sundays, she gets up late. Late means after the usual time. The opposite is early.", focus: 2, vi: "late ≠ early"}
+      - {tom: "They often go for a walk, a short walk to enjoy themselves.", focus: 3, vi: "go for a walk: đi dạo"}
+      - {emma: "And in the summer they play tennis.", focus: 4, vi: "play tennis"}
+
+  - kind: figure
+    chapter: "Bài 5: tìm cụm từ"
+    heading: "Exercise 5 · Find nine more phrases (up, down, or across)"
+    heading_vi: "Ví dụ: during → the → week ↑ (Answer key tr. 208)"
+    image: {pdf: course-book, page: 48, clip: [44, 374, 436, 488]}
+    items:
+      - {box: [49, 399, 203, 433], label: "during the week"}
+      - {box: [49, 380, 203, 416], label: "do the shopping"}
+      - {box: [49, 433, 124, 468], label: "stay in"}
+      - {box: [124, 433, 203, 468], label: "play tennis"}
+      - {box: [49, 468, 203, 486], label: "come round"}
+      - {box: [203, 380, 431, 416], label: "go for a walk"}
+      - {box: [203, 399, 431, 433], label: "once or twice a week"}
+      - {box: [203, 433, 356, 451], label: "go shopping"}
+      - {box: [203, 451, 356, 486], label: "go to the gym"}
+      - {box: [356, 433, 431, 486], label: "at the weekend"}
+    lines:
+      - emma: "Exercise 5. Find nine more phrases in the table. You can go up, down, or across. The example is during the week. Pause the video and try."
+        say: "Exercise five. Find nine more phrases in the table. You can go up, down, or across. The example is during the week. Pause the video and try."
+        focus: 0
+        vi: "Bài 5: tìm thêm 9 cụm (đi lên, xuống, sang ngang)."
+      - {tom: "Do the shopping.", focus: 1}
+      - {tom: "Stay in.", focus: 2}
+      - {tom: "Play tennis.", focus: 3}
+      - {tom: "Come round.", focus: 4}
+      - {tom: "Go for a walk.", focus: 5}
+      - {tom: "Once or twice a week.", focus: 6}
+      - {tom: "Go shopping.", focus: 7}
+      - {tom: "Go to the gym.", focus: 8}
+      - {tom: "And at the weekend.", focus: 9}
+
+  - kind: blanks
+    chapter: "Bài 6: hoàn thành câu"
+    heading: "Exercise 6 · Complete the sentences (1–5)"
+    heading_vi: "Ví dụ: I go to a restaurant once or twice a week. (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "Do you want to ___ shopping?", answer: "go"}
+      - {n: 2, q: "Come ___ to my flat after work.", answer: "round"}
+      - {n: 3, q: "I can't ___ tennis this weekend.", answer: "play"}
+      - {n: 4, q: "Do you want to go ___ on Saturday?", answer: "out / shopping"}
+      - {n: "5a", q: "___ the week …", answer: "During"}
+      - {n: "5b", q: "… I usually stay ___.", answer: "in"}
+    lines:
+      - emma: "Exercise 6. Complete the sentences. Pause the video and try."
+        say: "Exercise six. Complete the sentences. Pause the video and try."
+        vi: "Bài 6: hoàn thành câu."
+      - {tom: "One. Do you want to go shopping? Two. Come round to my flat after work. Three. I can't play tennis this weekend.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Do you want to go out on Saturday? Or: go shopping. Five. During the week I usually stay in.", reveal: [4, "5a", "5b"], focus: 5}
+
+  - kind: blanks
+    heading: "Exercise 6 · Complete the sentences (6–10)"
+    heading_vi: "Answer key tr. 208"
+    items:
+      - {n: 6, q: "I'm really tired today because I went to bed ___ last night.", answer: "late"}
+      - {n: 7, q: "What are you doing ___ the weekend?", answer: "at"}
+      - {n: 8, q: "I go to the ___ twice a week because I like to exercise.", answer: "gym"}
+      - {n: "9a", q: "I often ___ the shopping …", answer: "do"}
+      - {n: "9b", q: "… very ___, at 8.00 in the morning.", answer: "early"}
+      - {n: 10, q: "We often go and ___ a film on Sunday.", answer: "see"}
+    lines:
+      - {tom: "Six. I went to bed late. Seven. What are you doing at the weekend? Eight. I go to the gym twice a week.", reveal: [6, 7, 8], focus: 2}
+      - {tom: "Nine. I often do the shopping very early. Ten. We often go and see a film on Sunday.", reveal: ["9a", "9b", 10], focus: 5}
+
+  - kind: figure
+    chapter: "Trạng từ tần suất"
+    heading: "C · Frequency words"
+    heading_vi: "Thang tần suất, vị trí trạng từ và Spotlight every / all — tr. 48"
+    image: {pdf: course-book, page: 49, clip: [28, 56, 486, 210]}
+    items:
+      - {box: [32, 78, 82, 99]}
+      - {box: [118, 78, 172, 99]}
+      - {box: [202, 78, 266, 99]}
+      - {box: [278, 78, 354, 99]}
+      - {box: [360, 78, 430, 110]}
+      - {box: [434, 78, 482, 99]}
+      - {box: [32, 112, 198, 208]}
+      - {box: [200, 112, 486, 200]}
+    lines:
+      - emma: "Frequency words tell us how often. Always is one hundred percent."
+        focus: 0
+        vi: "always: luôn luôn (100%)"
+      - {tom: "Often.", focus: 1, vi: "often: thường, hay"}
+      - {emma: "Sometimes.", focus: 2, vi: "sometimes: thỉnh thoảng"}
+      - {tom: "Occasionally: not very often.", focus: 3, vi: "occasionally: đôi khi, hiếm hơn sometimes"}
+      - {emma: "Hardly ever, or rarely: almost never.", focus: 4, vi: "hardly ever = rarely: hầu như không"}
+      - {tom: "And never: zero percent.", focus: 5, vi: "never: không bao giờ (0%)"}
+      - {emma: "These words go before the main verb: I always get up late on Sundays. But after be, and after do, have or can: I'm hardly ever ill. Do you often go out?", focus: 6, vi: "Trước động từ chính; sau be và trợ động từ: I'm hardly ever ill."}
+      - {tom: "Be careful with every and all. He works every day means from Monday to Sunday. He works all day means from nine a.m. to six p.m.", focus: 7, vi: "every day: ngày nào cũng · all day: cả ngày"}
+
+  - kind: blanks
+    chapter: "Bài 7: giống hay khác?"
+    heading: "Exercise 7 · Same or different? Write S or D"
+    heading_vi: "Ví dụ: I always go shopping on Saturdays. = I go shopping every Saturday. → S (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "I sometimes work at home. · I often work at home.  →  ___", answer: "D"}
+      - {n: 2, q: "She's hardly ever late for work. · She's rarely late for work.  →  ___", answer: "S"}
+      - {n: 3, q: "We often finish classes early. · We finish classes early every day.  →  ___", answer: "D"}
+      - {n: 4, q: "I never eat meat. · I occasionally eat meat.  →  ___", answer: "D"}
+      - {n: 5, q: "She always has a shower in the morning. · She has a shower every morning.  →  ___", answer: "S"}
+      - {n: 6, q: "In August we play tennis every day. · In August we play tennis all day.  →  ___", answer: "D"}
+    lines:
+      - emma: "Exercise 7. Is the meaning of the sentences the same, or different? Pause the video and try."
+        say: "Exercise seven. Is the meaning of the sentences the same, or different? Pause the video and try."
+        vi: "Bài 7: nghĩa giống (S) hay khác (D)?"
+      - {tom: "One. Different: sometimes is less than often. Two. Same: hardly ever means rarely. Three. Different.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Different. Five. Same. And six. Different: every day is Monday to Sunday, but all day is from morning to evening.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 8: viết lại câu"
+    heading: "Exercise 8 · Write the sentences using a word from the box"
+    heading_vi: "every day · always · often · hardly ever · all day · occasionally · never (Answer key tr. 208)"
+    items:
+      - {n: 1, q: "Haruko always gets up early.  →  ___", answer: "Haruko gets up early every day."}
+      - {n: 2, q: "Hiro goes to the gym once a year.  →  ___", answer: "Hiro hardly ever goes to the gym."}
+      - {n: 3, q: "Haruko stays in seven nights a week.  →  ___", answer: "Haruko always stays in."}
+      - {n: 4, q: "Hiro studies from 9.00 to 5.00.  →  ___", answer: "Hiro studies all day."}
+      - {n: 5, q: "Haruko doesn't have a shower in the morning.  →  ___", answer: "Haruko never has a shower in the morning."}
+      - {n: 6, q: "Hiro goes to the cinema about six times a year.  →  ___", answer: "Hiro occasionally goes to the cinema."}
+    lines:
+      - emma: "Exercise 8. Write the sentences using a word from the box. The example: Hiro goes to restaurants two or three times a week. Hiro often goes to restaurants. Pause the video and try."
+        say: "Exercise eight. Write the sentences using a word from the box. The example: Hiro goes to restaurants two or three times a week. Hiro often goes to restaurants. Pause the video and try."
+        vi: "Bài 8: viết lại câu với một từ trong khung."
+      - {tom: "One. Haruko gets up early every day. Two. Hiro hardly ever goes to the gym. Three. Haruko always stays in.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Hiro studies all day. Five. Haruko never has a shower in the morning. Six. Hiro occasionally goes to the cinema.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 9: đúng hay sai với bạn?"
+    heading: "Exercise 9 · About you: true or false? Tom's answers"
+    heading_vi: "Sai thì đổi từ in đậm cho đúng với mình — Answer key là câu trả lời của một người Anh"
+    items:
+      - {n: 1, q: "I always have a shower before breakfast.  →  ___", answer: "True."}
+      - {n: 2, q: "I often go out on Friday evening.  →  ___", answer: "True."}
+      - {n: 3, q: "I never listen to music in the evening.  →  ___", answer: "False. I often listen to music in the evening."}
+      - {n: 4, q: "I rarely study on Sunday.  →  ___", answer: "False. I usually study on Sunday."}
+      - {n: 5, q: "I sometimes watch TV at the weekend.  →  ___", answer: "False. I hardly ever watch TV. I watch films online."}
+      - {n: 6, q: "I never work in the evening.  →  ___", answer: "False. I often work in the evening."}
+      - {n: 7, q: "I usually go shopping on Monday.  →  ___", answer: "False. I never go shopping on Monday."}
+      - {n: 8, q: "I occasionally go to the gym after dinner.  →  ___", answer: "False. I never go to the gym."}
+    lines:
+      - emma: "Exercise 9. True or false for you? If a sentence is false, change the frequency word. Pause the video and answer for you. Then listen to Tom."
+        say: "Exercise nine. True or false for you? If a sentence is false, change the frequency word. Pause the video and answer for you. Then listen to Tom."
+        vi: "Bài 9: đúng hay sai với bạn? Tạm dừng video, tự trả lời, rồi nghe Tom."
+      - {tom: "One. True. Two. True: I often go out with my classmates on Friday evening. Three. False. I often listen to music in the evening.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. False. I usually study on Sunday. My IELTS exam is in December! Five. False. I hardly ever watch TV. I watch films online.", say: "Four. False. I usually study on Sunday. My eye-elts exam is in December! Five. False. I hardly ever watch TV. I watch films online.", reveal: [4, 5], focus: 4}
+      - {tom: "Six. False. I often work in the evening, at the café. Seven. False. I never go shopping on Monday. Eight. False. I never go to the gym. I play basketball twice a week.", reveal: [6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: cuối tuần của bạn"
+    heading: "Speaking 1 · Weekends and routines"
+    heading_vi: "Câu hỏi kiểu IELTS Part 1 — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What do you usually do on Saturday morning?"
+        a: "I usually do the shopping at the market with my flatmates. Then we cook lunch together."
+        ask: emma
+        by: tom
+        phrases: ["I usually…", "do the shopping", "Then we…"]
+      - q: "And what about you, Emma?"
+        a: "I go to the market too, and then I cook something new. Cooking is my favourite way to relax."
+        ask: tom
+        by: emma
+        phrases: ["I go to … too", "my favourite way to relax"]
+      - q: "Do you go out a lot at the weekend?"
+        a: "On Saturday afternoon, I play basketball, and in the evening I sometimes go out with friends. But I often stay in and watch a science fiction film."
+        ask: emma
+        by: tom
+        phrases: ["On Saturday afternoon…", "I sometimes go out", "I often stay in"]
+      - q: "What time do you get up on Sundays?"
+        a: "Just after nine. It's my only late morning! On weekdays I get up at about half past six."
+        ask: emma
+        by: tom
+        phrases: ["Just after…", "my only late morning"]
+      - q: "Do you get up late at the weekend, Emma?"
+        a: "Not really. I'm a morning person. I get up at six every day, and I study Vietnamese for half an hour before breakfast."
+        say: "Not really. I'm a morning person. I get up at six every day, and I study Vietnamese for half an hour before breakfast."
+        ask: tom
+        by: emma
+        phrases: ["Not really.", "I'm a morning person.", "before breakfast"]
+      - q: "How often do you call your family?"
+        a: "My sister Hoa calls me almost every evening, and on Sundays I call my parents in Da Lat."
+        say: "My sister Whah calls me almost every evening, and on Sundays I call my parents in Dah Lot."
+        ask: emma
+        by: tom
+        phrases: ["almost every evening", "on Sundays I…"]
+      - q: "How do you get to work?"
+        a: "I don't ride a motorbike, so I usually take a motorbike taxi with an app. It takes about twenty minutes."
+        ask: tom
+        by: emma
+        phrases: ["I usually take…", "It takes about…"]
+      - q: "Is your routine the same every week?"
+        a: "Almost. But in the exam season, I study all day at the weekend, and I hardly ever go out."
+        ask: emma
+        by: tom
+        phrases: ["Almost.", "I study all day", "I hardly ever…"]
+    lines:
+      - {emma: "Now let's talk about weekends. What do you usually do on Saturday morning, Tom?", focus: 0}
+      - {tom: "I usually do the shopping at the market with my flatmates. Then we cook lunch together.", reveal: 0, vi: "Thường cùng bạn cùng phòng đi chợ, rồi cùng nấu bữa trưa."}
+      - {tom: "And what about you, Emma?", focus: 1}
+      - {emma: "I go to the market too, and then I cook something new. Cooking is my favourite way to relax.", reveal: 1, vi: "Cũng đi chợ, rồi nấu món mới — nấu ăn là cách thư giãn Emma thích nhất."}
+      - {emma: "Do you go out a lot at the weekend?", focus: 2}
+      - {tom: "On Saturday afternoon, I play basketball, and in the evening I sometimes go out with friends. But I often stay in and watch a science fiction film.", reveal: 2, vi: "Chiều thứ Bảy chơi bóng rổ, tối thỉnh thoảng đi chơi với bạn; nhưng hay ở nhà xem phim khoa học viễn tưởng."}
+      - {emma: "What time do you get up on Sundays?", focus: 3}
+      - {tom: "Just after nine. It's my only late morning! On weekdays I get up at about half past six.", reveal: 3, vi: "Ngay sau 9 giờ — buổi sáng duy nhất được dậy muộn!"}
+      - {tom: "Do you get up late at the weekend, Emma?", focus: 4}
+      - {emma: "Not really. I'm a morning person. I get up at six every day, and I study Vietnamese for half an hour before breakfast.", reveal: 4, vi: "Không hẳn: Emma quen dậy sớm, 6 giờ mỗi ngày, học tiếng Việt nửa tiếng trước bữa sáng."}
+      - {emma: "How often do you call your family?", focus: 5}
+      - {tom: "My sister Hoa calls me almost every evening, and on Sundays I call my parents in Da Lat.", say: "My sister Whah calls me almost every evening, and on Sundays I call my parents in Dah Lot.", reveal: 5, vi: "Chị Hoa gọi gần như tối nào; Chủ nhật Tom gọi cho bố mẹ ở Đà Lạt."}
+      - {tom: "How do you get to work?", focus: 6}
+      - {emma: "I don't ride a motorbike, so I usually take a motorbike taxi with an app. It takes about twenty minutes.", reveal: 6, vi: "Không đi xe máy nên thường gọi xe ôm qua ứng dụng, khoảng 20 phút."}
+      - {emma: "Is your routine the same every week?", focus: 7}
+      - {tom: "Almost. But in the exam season, I study all day at the weekend, and I hardly ever go out.", reveal: 7, vi: "Gần như vậy; mùa thi thì học cả ngày cuối tuần, hầu như không đi chơi."}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi kể sinh hoạt — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I always am late for class.  →  ___", answer: "I'm always late for class."}
+      - {n: 2, q: "I go to bed at eleven usually.  →  ___", answer: "I usually go to bed at eleven."}
+      - {n: 3, q: "I sleep seven hours in a night.  →  ___", answer: "I sleep seven hours a night."}
+      - {n: 4, q: "She plays tennis two times in a week.  →  ___", answer: "She plays tennis twice a week."}
+      - {n: 5, q: "On Saturday I do shopping for food.  →  ___", answer: "On Saturday I do the shopping."}
+      - {n: 6, q: "Every days I eat breakfast at seven.  →  ___", answer: "Every day I have breakfast at seven."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I'm always late. The frequency word goes after be. Two. I usually go to bed at eleven: before the main verb.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Seven hours a night. Four. Twice a week. Not two times in a week.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I do the shopping, with the. Six. Every day, not every days. And have breakfast is more natural than eat breakfast.", reveal: [5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe your favourite day of the week"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể thói quen ở hiện tại đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: which day it is", vi: "đó là ngày nào"}
+      - {en: "what you usually do on that day", vi: "bạn thường làm gì vào ngày đó"}
+      - {en: "who you spend it with", vi: "bạn ở cùng ai"}
+      - {en: "and explain why it is your favourite day", vi: "và giải thích vì sao bạn thích ngày đó nhất"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe your favourite day of the week."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe your favourite day of the week."
+        vi: "Luyện nói chung kiểu Part 2: ngày bạn thích nhất trong tuần."
+      - {emma: "You should say which day it is,", focus: 0}
+      - {emma: "what you usually do on that day,", focus: 1}
+      - {emma: "who you spend it with,", focus: 2}
+      - {emma: "and explain why it is your favourite day.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — hiện tại đơn và trạng từ tần suất"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "My favourite day of the week is Saturday. During the week I'm very busy: I have classes every morning, and on Tuesdays and Thursdays I work at a café in the evening."
+        note: "which day"
+      - text: "On Saturday morning, I don't have classes, but I usually get up at about eight, because my flatmates and I do the shopping at the market. Then we cook lunch together."
+        note: "what I do"
+      - text: "In the afternoon, I play basketball with my friends from university, and in the evening we sometimes go out for a meal, or we stay in and watch a film."
+        note: "who with"
+      - text: "It's my favourite day because I can relax, and I always spend it with people I like. And I never have to think about my IELTS homework, well, until Sunday!"
+        say: "It's my favourite day because I can relax, and I always spend it with people I like. And I never have to think about my eye-elts homework, well, until Sunday!"
+        note: "why"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "My favourite day is Sunday. I teach about twenty-five hours a week, and on Monday and Wednesday evenings I have Vietnamese lessons, so the weekdays are long."
+        note: "which day"
+      - text: "On Sunday, I get up at six as usual, but I never hurry. I have a long breakfast, and if the weather is good, I go for a walk in the park."
+        note: "what I do"
+      - text: "In the afternoon, I read a detective novel, and in the evening I always call my mum in England. We talk for about an hour."
+        note: "who with"
+      - text: "It's my favourite day because it's quiet and slow. I don't have to be anywhere at a certain time, and talking to my family makes me happy."
+        note: "why"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe your favourite day of the week.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: your favourite day of the week"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Which day is it?", hint: "My favourite day of the week is … · During the week I'm …"}
+      - {q: "What do you usually do on that day?", hint: "I usually get up at … · Then I … · In the afternoon …"}
+      - {q: "Who do you spend it with?", hint: "I spend it with … · We sometimes / often …"}
+      - {q: "Why is it your favourite day?", hint: "It's my favourite day because … · I never have to …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the present simple, and frequency words like usually, often and never."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the present simple, and frequency words like usually, often and never."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút — dùng hiện tại đơn và trạng từ tần suất."
+      - {emma: "Which day is it?", focus: 0, pause: 0.5}
+      - {emma: "What do you usually do on that day?", focus: 1, pause: 0.5}
+      - {emma: "Who do you spend it with?", focus: 2, pause: 0.5}
+      - {emma: "Why is it your favourite day?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · routines"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Is it important to have a daily routine?"
+        a: "Yes, I think so. A routine helps you to sleep well and to study regularly. But it's good to do something different at the weekend."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I think so.", "helps you to…", "But it's good to…"]
+      - q: "Do young people in Vietnam go to bed late?"
+        a: "Many students do. They study late, or they use their phones in bed. So they're often tired in the morning."
+        say: "Many students do. They study late, or they yooz their phones in bed. So they're often tired in the morning."
+        ask: emma
+        by: tom
+        phrases: ["Many students do.", "or they…", "So they're often…"]
+      - q: "How are weekends different now from in the past?"
+        a: "People work longer hours now, so some people work at the weekend too. In the past, families usually spent Sunday together."
+        ask: tom
+        by: emma
+        phrases: ["People … now, so…", "In the past, …"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Is it important to have a daily routine?", focus: 0}
+      - {emma: "Yes, I think so. A routine helps you to sleep well and to study regularly. But it's good to do something different at the weekend.", reveal: 0, vi: "Có: nề nếp giúp ngủ tốt, học đều; nhưng cuối tuần nên làm gì đó khác."}
+      - {emma: "Do young people in Vietnam go to bed late?", focus: 1}
+      - {tom: "Many students do. They study late, or they use their phones in bed. So they're often tired in the morning.", say: "Many students do. They study late, or they yooz their phones in bed. So they're often tired in the morning.", reveal: 1, vi: "Nhiều sinh viên ngủ muộn: học khuya hoặc dùng điện thoại trên giường, nên sáng hay mệt."}
+      - {tom: "How are weekends different now from in the past?", focus: 2}
+      - {emma: "People work longer hours now, so some people work at the weekend too. In the past, families usually spent Sunday together.", reveal: 2, vi: "Giờ người ta làm lâu hơn, có người làm cả cuối tuần; ngày xưa Chủ nhật cả nhà thường ở bên nhau."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 46, nhìn tranh, nói lại các cụm"
+    items:
+      - {en: "get up · have a shower · get dressed · have breakfast · leave home · get to work · finish work · have dinner · go to bed", vi: "sinh hoạt ngày thường"}
+      - {en: "at the weekend · stay in · come round · go out · go shopping ≠ do the shopping · go for a walk", vi: "cuối tuần"}
+      - {en: "always · often · sometimes · occasionally · hardly ever / rarely · never", vi: "trước động từ chính, sau be: I'm always late"}
+      - {en: "every day (Mon–Sun) ≠ all day (morning to evening) · once / twice a week", vi: "mỗi ngày ≠ cả ngày · 1 / 2 lần mỗi tuần"}
+      - {en: "Next: Unit 18 · Clothes", vi: "Tiếp theo: Unit 18 · Quần áo"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Get up, have a shower, get dressed, have breakfast, leave home, get to work, finish work, have dinner, and go to bed.", focus: 0}
+      - {tom: "At the weekend: stay in, come round, go out, go shopping, do the shopping, and go for a walk.", focus: 1}
+      - {emma: "Always, often, sometimes, occasionally, hardly ever or rarely, and never. They go before the main verb, but after be.", focus: 2}
+      - {tom: "Every day is Monday to Sunday. All day is from morning to evening. And once or twice a week.", focus: 3}
+      - {emma: "Next time, Unit 18: clothes. See you then!", say: "Next time, Unit eighteen: clothes. See you then!", focus: 4}

@@ -5,6 +5,100 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 37 — 23/11/2026: Oxford Word Skills Basic — module Everyday life (Unit 17–23), 14 video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 36 (`c19864a`, đã lên `main`).
+
+### Yêu cầu
+
+Người học: "ko sửa cái cũ, tiếp tục làm video bài học unit 17-23 của oxford" — không sửa khoảng lặng của video cũ (P2-71 để
+nguyên), làm video Unit 17–23. Theo khuôn đã có, mỗi unit hai video: bài giảng (file 09 mục 5) và nghe – viết (mục 5.9).
+
+### Đã làm
+
+- **Rà trang sách và Answer key** (tr. 46–60, Answer key tr. 208–210): ghi đề và đáp án từng bài. Hai chỗ in lệch: Unit 17
+  bài 3 có 8 câu trả lời mẫu cho 6 câu hỏi; Unit 22 bài 1 câu 10 trùng câu 8 (file 09 mục 3.3). Video nói rõ cả hai.
+- **Word list Unit 17–23** (246 mục) thêm vào `work/wordlist.json` (nay 679 mục):
+  - lấy từ hai lần OCR của đợt 36; dò khoảng hở giữa các dòng OCR rồi xem ảnh trang: sót *get dressed* (17), bộ tách bỏ qua *red*
+    (18);
+  - ba mục in số unit của bản thảo cũ (*like* 23 → 21, *have got* 21 → 22, *what's the matter?* 21 → 22) xếp theo trang thật.
+- **7 video bài giảng** (1:07:37): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+  - Unit khó (10–15 phút): 17 My routine, 19 Buying clothes, 22 Illness — ôn tập (lỗi hay gặp, câu đố), Part 2 với bài mẫu của
+    Tom và Emma, thảo luận kiểu Part 3; Unit 19 có đóng vai mua đồ, Unit 22 có email xin nghỉ ốm (thư GT Task 1).
+  - Unit thường thêm cảnh ngoài sách có ích cho IELTS General Training: mặc gì khi…, đọc và nghe – viết giá tiền, câu hay dùng ở
+    chợ, nhiệt độ và dự báo, đọc nhãn thuốc, đóng vai ở hiệu thuốc.
+  - Khung đỏ theo dòng chữ đo bằng máy (đếm điểm ảnh tối từng hàng ở 300 dpi) — file 09 mục 5.3a.
+
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| **17 My routine** | `U17-routine` | 13:22 | 6 | 1–9 (bài 3: Answer key in lệch) |
+| 18 Clothes | `U18-clothes` | 8:06 | 6 | 1–8 |
+| **19 Buying clothes** | `U19-buying-clothes` | 10:58 | 7 | 1–9 |
+| 20 Money | `U20-money` | 8:15 | 4 | 1–6 |
+| 21 The weather | `U21-weather` | 8:03 | 5 | 1–6 |
+| **22 Illness** | `U22-illness` | 11:06 | 4 | 1–5 (bài 1: câu 10 trùng câu 8) |
+| 23 At the chemist's | `U23-chemists` | 7:48 | 5 | 1–3 (bài 3 thành câu đố tranh) |
+
+- **7 video nghe – viết** (1:06:58), sinh từ `work/dictation/units_17_23.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+  đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`, đo bằng ffmpeg không có khoảng lặng từ 3 giây.
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 17 · My routine | `U17-routine-dictation` | 10:22 | 31 · 46 | 17 | 28 |
+| 18 · Clothes | `U18-clothes-dictation` | 9:41 | 31 · 47 | 21 | 28 |
+| 19 · Buying clothes | `U19-buying-clothes-dictation` | 9:15 | 30 · 41 | 18 | 29 |
+| 20 · Money | `U20-money-dictation` | 9:21 | 27 · 31 | 22 | 30 |
+| 21 · The weather | `U21-weather-dictation` | 9:14 | 26 · 34 | 20 | 28 |
+| 22 · Illness | `U22-illness-dictation` | 9:44 | 25 · 31 | 26 | 32 |
+| 23 · At the chemist's | `U23-chemists-dictation` | 9:22 | 24 · 16 | 20 | 30 |
+
+Thử và sửa trong lúc làm:
+- **Khoảng lặng cuối cảnh "Đến lượt bạn":** bản dựng đầu của Unit 17 có chỗ lặng 2,96 giây (`pause` 1,5 + `gap` + `scene_gap`).
+  Đổi câu cuối sang `pause: 1.0` ở mọi kịch bản mới (khoảng 2,4 giây), dựng lại Unit 17, 18 (giọng đọc đã có trong bộ nhớ đệm,
+  mỗi video khoảng một phút). Test kiểm video từ Unit 17.
+- **Video ngắn hơn mức tối thiểu:** ước lượng đầu Unit 18 6:54, Unit 20 6:06, Unit 21 7:12, Unit 23 6:02; Unit 19 9:30 và
+  Unit 22 9:22 (unit khó phải trên 10 phút). Thêm cảnh ngoài sách (liệt kê ở trên).
+- **Video nghe – viết dài quá / ngắn quá:** Unit 17 ước 11:19 (bớt 4 từ, 1 cặp câu); Unit 20, 22 ước 9:06 (thêm 2 từ, 2 câu).
+  Đợt này bản dựng thật chỉ dài hơn ước lượng 0–4 % (đợt 36 khoảng 6 %): Unit 22 dựng thật 9:02, sát mốc 9 phút — thêm 4 từ,
+  1 cặp câu, dựng lại.
+- **Khung đỏ:** đoạn văn Unit 20 và Spotlight too / very Unit 19 lệch nửa dòng khi đọc lưới bằng mắt; mép cắt lộ nửa dòng chữ
+  (bong bóng thoại Unit 17, tiêu đề Colours / Accessories Unit 18); đoạn văn Unit 21 và hội thoại Unit 23 cụt chữ bên phải. Sửa
+  sau khi xem khung hình.
+- **Câu hỏi – đáp:** một chỗ Tom tự hỏi tự trả lời (nghe – viết Unit 23) — đã đổi người hỏi.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U17-routine.yaml` … `U23-chemists.yaml` (+ `.mp4`) | 7 video bài giảng |
+| `books/book_oxford_word_skills_basic/lessons/U1[7-9]-*-dictation.yaml`, `U2[0-3]-*-dictation.yaml` (+ `.mp4`), `lessons.json` | 7 video nghe – viết |
+| `books/book_oxford_word_skills_basic/work/dictation/units_17_23.py` | Dữ liệu nghe – viết Unit 17–23 |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 17–23 (246 mục) |
+| `agents/tests/test_lesson_video.py` | Unit khó U17, U19, U22; video từ Unit 17 không có khoảng lặng từ 3 giây theo kịch bản |
+| `tests/web/book.e2e.mjs` | Thẻ sách 46 video; Unit 1–23 mỗi unit hai nút |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 3.3, 5.2, 5.3a, 5.6, 5.7, 5.8, 5.9, 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-72 (xong); đợt 37 ở P2-59, P2-71 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 37 |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 46 video (23 bài giảng, 23 nghe – viết) |
+| `cd agents && python -m pytest -q` | 149 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 46 video, Unit 1–23 mỗi unit hai nút (bài giảng 7–10 phút, unit khó 17, 19, 22 từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (14 kịch bản) | Hợp lệ, không còn ⚠ (Unit 21 báo nhầm ở "we use" sau "useful" — vẫn thêm `say`) |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U17…U23 --level all` | Cả 7 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (14 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,3–2,5 giây (cuối cảnh tự trả lời); nghe – viết: khoảng 2 giây, chỉ ở cuối video |
+| Xem trước khung hình (bộ đọc im lặng) và khung hình bản dựng | Khung đỏ đúng tranh, đúng dòng (đo dòng bằng máy); chữ trên thẻ nghe – viết không bị cắt |
+
+### Còn treo
+
+- Unit 24 trở đi chưa có video (P2-59): module Food and drink ở cuối file 09 mục 5.8.
+- Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
+
 ## Đợt 36 — 22/11/2026: Oxford Word Skills Basic — mỗi unit thêm một video nghe – viết 10 phút
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 35 (`3b8fefd`, đã lên `main`). Đẩy lên nhánh và `main` thành một commit

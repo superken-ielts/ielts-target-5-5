@@ -1,0 +1,350 @@
+# Video Oxford Word Skills Basic · Unit 21 — I can talk about the weather (sách in tr. 56–57, Answer key tr. 209–210).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 209–210. Bài 3 (Test yourself): Tom nhắc che chữ, nhìn hình, nói lại.
+# Bài 6 (ABOUT YOUR COUNTRY): Tom sửa câu cho đúng với miền Nam Việt Nam (Answer key là câu của "an Argentinian person").
+# Thêm ngoài sách: nhiệt độ (It's thirty-five degrees), hai mùa của miền Nam; Nghe và viết; Nói 1 (Part 1 "Weather"); Nói 2.
+# Hình trong sách: bảng What's the weather like? (tr. 56, khung theo hàng), khung Spotlight a lot (of) / a bit (of), ảnh bão
+# và đoạn văn In my country… (tr. 57, hai cảnh, khung theo dòng, Glossary bên phải).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Đà Lạt mát quanh năm (khoảng 15–25 độ), sáng hay có sương mù,
+# tháng 12 tối lạnh; TP. HCM mùa khô tháng 12 – tháng 4, mùa mưa tháng 5 – tháng 11, chiều hay mưa giông; Tom thích nghe tiếng
+# mưa nhưng ghét đi xe máy dưới mưa (ở Đà Lạt); ngày âm u thì hơi uể oải. Emma: quê thị trấn nhỏ ven biển ở miền nam nước Anh
+# (hồ sơ) lúc nào cũng có gió biển; thời tiết Anh hay thay đổi, mưa lắt nhắt; thích ngày xuân nắng mà không nóng; thấy TP. HCM
+# rất ẩm; ngày mưa ở nhà đọc truyện trinh thám; mùa mưa luôn mang ô (U18).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U21-weather.yaml
+id: U21-weather
+activity: U21-words
+title: "Unit 21 · The weather"
+subtitle: "I can talk about the weather"
+title_vi: "Thời tiết: tính từ, động từ, danh từ (sunny / the sun's shining / sunshine), a lot of / a bit of, mưa nắng gió bão"
+tag: "EVERYDAY LIFE · UNIT 21"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 21: the weather. In England, people talk about the weather all the time, so this is a very useful unit!"
+        say: "Welcome to Unit twenty-one: the weather. In England, people talk about the weather all the time, so this is a very useful unit!"
+        vi: "Unit 21: thời tiết — người Anh nói chuyện thời tiết suốt ngày!"
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Thời tiết thế nào?"
+    heading: "A · What's the weather like?"
+    heading_vi: "Bảng trong sách tr. 56 — tính từ · động từ · danh từ (U = không đếm được)"
+    image: {pdf: course-book, page: 57, clip: [24, 62, 470, 331]}
+    items:
+      - {box: [28, 128, 466, 156]}
+      - {box: [28, 156, 466, 185]}
+      - {box: [28, 185, 466, 213]}
+      - {box: [28, 213, 466, 242]}
+      - {box: [28, 242, 466, 271]}
+      - {box: [28, 271, 466, 300]}
+      - {box: [28, 300, 466, 328]}
+    lines:
+      - emma: "Look at the table on page fifty-six. What's the weather like? It's sunny. The sun's shining. The nouns are sun, and sunshine."
+        focus: 0
+        vi: "sunny · the sun's shining · sun / sunshine: nắng"
+      - {tom: "It's cloudy. The noun is cloud.", focus: 1, vi: "cloudy: nhiều mây · cloud: mây"}
+      - {emma: "It's wet. It's raining. The noun is rain.", focus: 2, vi: "wet: ướt (trời mưa) · rain: mưa"}
+      - {tom: "It's windy. The wind's blowing. The past of blow is blew.", focus: 3, vi: "windy: nhiều gió · blow (blew): thổi"}
+      - {emma: "It's icy. The noun is ice. Be careful on the roads!", focus: 4, vi: "icy: đóng băng · ice: băng"}
+      - {tom: "It's foggy. The noun is fog. In Da Lat, the mornings are often foggy.", say: "It's foggy. The noun is fog. In Dah Lot, the mornings are often foggy.", focus: 5, vi: "foggy: có sương mù · fog: sương mù"}
+      - {emma: "And it's snowing. The noun is snow. Rain, ice, fog and snow are uncountable: we don't say a rain.", focus: 6, vi: "snow: tuyết — danh từ không đếm được"}
+
+  - kind: blanks
+    chapter: "Bài 1: ghép câu"
+    heading: "Exercise 1 · Match 1–9 with a–j"
+    heading_vi: "Ví dụ: It's → d cold this morning. (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "It …  →  ___", answer: "c isn't raining."}
+      - {n: 2, q: "The wind …  →  ___", answer: "i blew my hat off."}
+      - {n: 3, q: "It isn't …  →  ___", answer: "h very windy."}
+      - {n: 4, q: "The sun …  →  ___", answer: "j is shining."}
+      - {n: 5, q: "Is …  →  ___", answer: "b it foggy outside?"}
+      - {n: 6, q: "There's a bit …  →  ___", answer: "a of cloud today."}
+      - {n: 7, q: "There's a lot of …  →  ___", answer: "e snow on the roads."}
+      - {n: 8, q: "It doesn't …  →  ___", answer: "f rain a lot here."}
+      - {n: 9, q: "What's …  →  ___", answer: "g the weather like?"}
+    lines:
+      - emma: "Exercise 1. Match one to nine with a to j. Pause the video and try."
+        say: "Exercise one. Match one to nine with eigh to jay. Pause the video and try."
+        vi: "Bài 1: ghép 1–9 với a–j."
+      - {tom: "One. It isn't raining. Two. The wind blew my hat off. Three. It isn't very windy. Four. The sun is shining.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Is it foggy outside? Six. There's a bit of cloud today. Seven. There's a lot of snow on the roads. Eight. It doesn't rain a lot here. Nine. What's the weather like?", reveal: [5, 6, 7, 8, 9], focus: 8}
+
+  - kind: figure
+    chapter: "a lot of / a bit of"
+    heading: "Spotlight · a lot (of) / a bit (of)"
+    heading_vi: "Khung Spotlight tr. 56 — a lot = nhiều · a bit = một chút"
+    image: {pdf: course-book, page: 57, clip: [320, 346, 482, 506]}
+    items:
+      - {box: [322, 366, 480, 410]}
+      - {box: [322, 414, 480, 458]}
+      - {box: [322, 462, 480, 504]}
+    lines:
+      - {emma: "Look at the spotlight. A lot of, or a bit of, plus a noun. We had a lot of rain. There's a bit of fog.", focus: 0, vi: "a lot of / a bit of + danh từ"}
+      - {tom: "A verb, plus a lot or a bit. It snowed a lot. It's raining a bit.", focus: 1, vi: "động từ + a lot / a bit"}
+      - {emma: "And a bit, plus an adjective. It's a bit foggy today. It was a bit windy. But not a lot foggy: we say very foggy.", focus: 2, vi: "a bit + tính từ (không nói a lot + tính từ)"}
+
+  - kind: blanks
+    chapter: "Bài 2: viết lại câu"
+    heading: "Exercise 2 · Rewrite the sentences using the correct word"
+    heading_vi: "Ví dụ: There was a lot of ice. → It was very icy. (Answer key tr. 209)"
+    items:
+      - {n: 1, q: "It isn't raining.  →  There's no ___.", answer: "rain"}
+      - {n: 2, q: "Is the sun shining?  →  Is it ___?", answer: "sunny"}
+      - {n: 3, q: "We often have snow.  →  It often ___.", answer: "snows"}
+      - {n: 4, q: "She doesn't like fog.  →  She doesn't like ___ weather.", answer: "foggy"}
+      - {n: 5, q: "It was very windy on Friday.  →  There was a lot of ___ on Friday.", answer: "wind"}
+      - {n: 6, q: "There are no clouds.  →  It isn't ___.", answer: "cloudy"}
+    lines:
+      - emma: "Exercise 2. Rewrite the sentences using the correct word. Is it an adjective, a verb, or a noun? Pause the video and try. Exercise 3 is a test: cover the table, and say what the weather is like."
+        say: "Exercise two. Rewrite the sentences using the correct word. Is it an adjective, a verb, or a noun? Pause the video and try. Exercise three is a test: cover the table, and say what the weather is like."
+        vi: "Bài 2: viết lại câu — tính từ, động từ hay danh từ? Bài 3: che bảng, nói thời tiết."
+      - {tom: "One. There's no rain. Two. Is it sunny? Three. It often snows.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Foggy weather. Five. A lot of wind. Six. It isn't cloudy.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Nhiệt độ và dự báo"
+    heading: "Temperature and the weather forecast"
+    heading_vi: "Thêm ngoài sách — nhiệt độ, dự báo thời tiết, câu bắt chuyện"
+    items:
+      - {en: "What's the temperature? — It's 35 degrees.", vi: "Bao nhiêu độ? — 35 độ."}
+      - {en: "It's below zero. = It's freezing.", vi: "Dưới 0 độ."}
+      - {en: "The weather forecast says it's going to rain.", vi: "Dự báo thời tiết nói trời sắp mưa."}
+      - {en: "Lovely day, isn't it? · Terrible weather, isn't it?", vi: "Câu bắt chuyện về thời tiết"}
+    lines:
+      - emma: "Some more useful language. What's the temperature? It's thirty-five degrees. In Vietnam and in England, we use Celsius."
+        say: "Some more useful language. What's the temperature? It's thirty-five degrees. In Vietnam and in England, we yooz Celsius."
+        focus: 0
+        vi: "degrees: độ (C)"
+      - {tom: "In Da Lat it's never below zero. Below zero means freezing.", say: "In Dah Lot it's never below zero. Below zero means freezing.", focus: 1}
+      - {emma: "The weather forecast tells us about tomorrow. The forecast says it's going to rain, so take an umbrella.", focus: 2, vi: "weather forecast: dự báo thời tiết"}
+      - {tom: "And to start a conversation: lovely day, isn't it? Or: terrible weather, isn't it? The answer is: yes, it is!", focus: 3, vi: "Câu hỏi đuôi để bắt chuyện"}
+
+  - kind: figure
+    chapter: "Mưa và nắng"
+    heading: "B · Wet and dry weather · a storm"
+    heading_vi: "Ảnh trong sách tr. 57 — storm: bão, giông · lightning: chớp · thunder: sấm"
+    image: {pdf: course-book, page: 58, clip: [66, 50, 232, 140]}
+    items:
+      - {box: [70, 52, 230, 138], label: "a storm"}
+      - {box: [96, 54, 214, 112], label: "lightning"}
+    lines:
+      - {emma: "Look at the photo on page fifty-seven. This is a storm: strong wind and heavy rain.", focus: 0, vi: "storm: bão, mưa giông"}
+      - {tom: "And this is lightning: the bright light in the sky. The loud noise is thunder. First you see lightning, then you hear thunder.", focus: 1, vi: "lightning: chớp · thunder: sấm"}
+
+  - kind: bullets
+    chapter: "Đoạn văn (1)"
+    heading: "B · Wet and dry weather · In my country… (1)"
+    heading_vi: "Đoạn văn và Glossary tr. 57"
+    image: {pdf: course-book, page: 58, clip: [34, 144, 292, 252]}
+    items:
+      - {en: "changeable = changing a lot", vi: "hay thay đổi", box: [36, 148, 290, 161]}
+      - {en: "pleasant = nice · dry ≠ wet · showers", vi: "dễ chịu · khô ≠ ướt · mưa rào", box: [36, 160, 290, 172]}
+      - {en: "hot ≠ cold · humid", vi: "nóng ≠ lạnh · nóng ẩm, oi", box: [36, 172, 290, 196]}
+      - {en: "cool · a sea breeze", vi: "mát · gió biển nhẹ", box: [36, 196, 290, 220]}
+    lines:
+      - {emma: "Now read the text. In my country, the weather in spring is very changeable. Changeable means changing a lot.", focus: 0, vi: "changeable: hay thay đổi"}
+      - {tom: "It can be pleasant and dry, but we often have showers. A shower is a short period of rain.", focus: 1, vi: "shower: cơn mưa rào ngắn"}
+      - {emma: "It can get hot in the summer, and in the cities it's often humid. Humid means warm, wet and uncomfortable, like Ho Chi Minh City in May!", say: "It can get hot in the summer, and in the cities it's often humid. Humid means warm, wet and uncomfortable, like Ho Chee Min City in May!", focus: 2, vi: "humid: nóng ẩm, oi"}
+      - {tom: "It's cooler on the coast, where there's a sea breeze. Cool is not hot, but pleasant. A breeze is a light, pleasant wind.", focus: 3, vi: "cool: mát · breeze: gió nhẹ"}
+
+  - kind: bullets
+    chapter: "Đoạn văn (2)"
+    heading: "B · Wet and dry weather · In my country… (2)"
+    heading_vi: "Đoạn văn và Glossary tr. 57"
+    image: {pdf: course-book, page: 58, clip: [34, 144, 292, 252]}
+    items:
+      - {en: "heavy rain = a lot of rain", vi: "mưa to", box: [36, 208, 290, 220]}
+      - {en: "thunder and lightning", vi: "sấm và chớp", box: [36, 220, 290, 233]}
+      - {en: "freezing = very, very cold", vi: "lạnh cóng", box: [36, 232, 290, 245]}
+      - {en: "damp = cold and a bit wet", vi: "ẩm lạnh", box: [36, 232, 290, 245]}
+    lines:
+      - {emma: "In autumn, we get some heavy rain. Heavy rain means a lot of rain.", focus: 0, vi: "heavy rain: mưa to (không nói strong rain)"}
+      - {tom: "Perhaps with thunder and lightning.", focus: 1}
+      - {emma: "In winter, it can be dry, sunny and freezing. Freezing means very, very cold.", focus: 2}
+      - {tom: "Or grey and damp. Damp means cold and a bit wet. My clothes feel damp in the rainy season!", focus: 3, vi: "damp: ẩm (lạnh)"}
+
+  - kind: blanks
+    chapter: "Bài 4: chọn từ đúng"
+    heading: "Exercise 4 · Circle the correct word"
+    heading_vi: "Ví dụ: Humid weather is very pleasant / uncomfortable. → uncomfortable (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "There was a bit of sunshine between the showers / lightning.  →  ___", answer: "showers"}
+      - {n: 2, q: "Do you like watching the lightning / thunder when it's stormy?  →  ___", answer: "lightning"}
+      - {n: "3a", q: "The air in the Sahara Desert is dry / humid, …  →  ___", answer: "dry"}
+      - {n: "3b", q: "… and it's very hot / cool at midday.  →  ___", answer: "hot"}
+      - {n: 4, q: "Showers usually last a few hours / minutes.  →  ___", answer: "minutes"}
+      - {n: 5, q: "In cold, wet weather, your clothes feel damp / humid.  →  ___", answer: "damp"}
+      - {n: 6, q: "By the sea you get a nice breeze / wind.  →  ___", answer: "breeze"}
+    lines:
+      - emma: "Exercise 4. Circle the correct word. Pause the video and try."
+        say: "Exercise four. Circle the correct word. Pause the video and try."
+        vi: "Bài 4: chọn từ đúng."
+      - {tom: "One. Showers. Two. Lightning: you watch lightning, but you hear thunder. Three. Dry, and very hot.", reveal: [1, 2, "3a", "3b"], focus: 3}
+      - {tom: "Four. Minutes: showers are short. Five. Damp. Six. Breeze: a nice, light wind.", reveal: [4, 5, 6], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 5: viết lại câu"
+    heading: "Exercise 5 · Rewrite the sentences using the words in brackets"
+    heading_vi: "Ví dụ: It's wet outside. (rain) → It's raining outside. (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "It rained a lot last night. (heavy)  →  ___", answer: "There was heavy rain last night."}
+      - {n: 2, q: "It was warm and damp yesterday. (humid)  →  ___", answer: "It was humid yesterday."}
+      - {n: 3, q: "There was a bit of rain in the afternoon. (shower)  →  ___", answer: "There was a shower in the afternoon."}
+      - {n: 4, q: "The weather changes a lot. (changeable)  →  ___", answer: "The weather's changeable."}
+      - {n: 5, q: "It isn't wet today. (dry)  →  ___", answer: "It's dry today."}
+      - {n: 6, q: "We had heavy rain and thunder. (storm)  →  ___", answer: "We had a storm."}
+    lines:
+      - emma: "Exercise 5. Rewrite the sentences using the words in brackets. Pause the video and try."
+        say: "Exercise five. Rewrite the sentences using the words in brackets. Pause the video and try."
+        vi: "Bài 5: viết lại câu với từ trong ngoặc."
+      - {tom: "One. There was heavy rain last night. Two. It was humid yesterday. Three. There was a shower in the afternoon.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. The weather's changeable. Five. It's dry today. Six. We had a storm.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 6: đất nước bạn"
+    heading: "Exercise 6 · About your country: Tom's answers (the south of Vietnam)"
+    heading_vi: "Sửa câu cho đúng với đất nước bạn — ví dụ: We often have storms in July. → (miền Nam) True, in the rainy season."
+    items:
+      - {n: 1, q: "We have a lot of showers in the spring.  →  ___", answer: "We have a lot of showers in the rainy season, from May to November."}
+      - {n: 2, q: "In winter it's always freezing at night.  →  ___", answer: "It's never freezing here. (Da Lat is cold at night.)"}
+      - {n: 3, q: "The weather is always the same in the summer.  →  ___", answer: "True. It's hot and humid every day."}
+      - {n: 4, q: "We sometimes have heavy rain for 24 hours.  →  ___", answer: "True, when there's a big storm."}
+      - {n: 5, q: "It often snows in the winter.  →  ___", answer: "It hardly ever snows (only in the mountains in the north)."}
+      - {n: 6, q: "Our winters are usually dry.  →  ___", answer: "True. The dry season is from December to April."}
+      - {n: 7, q: "We often have thunder and lightning.  →  ___", answer: "True, in the rainy season."}
+      - {n: 8, q: "It is usually hot and dry in summer.  →  ___", answer: "It's usually hot and humid."}
+    lines:
+      - emma: "Exercise 6. Make the sentences true for your country. Pause the video and try. Then listen to Tom. He talks about the south of Vietnam, where there are two seasons: the dry season and the rainy season."
+        say: "Exercise six. Make the sentences true for your country. Pause the video and try. Then listen to Tom. He talks about the south of Vietnam, where there are two seasons: the dry season and the rainy season."
+        vi: "Bài 6: sửa câu cho đúng với đất nước bạn. Tom nói về miền Nam: mùa khô và mùa mưa."
+      - {tom: "One. We have a lot of showers in the rainy season, from May to November. Two. It's never freezing here. But in Da Lat, it's cold at night!", say: "One. We have a lot of showers in the rainy season, from May to November. Two. It's never freezing here. But in Dah Lot, it's cold at night!", reveal: [1, 2], focus: 1}
+      - {tom: "Three. True. It's hot and humid every day. Four. True, when there's a big storm. Five. It hardly ever snows. Only in the mountains in the north, and only in some years.", reveal: [3, 4, 5], focus: 4}
+      - {tom: "Six. True. The dry season is from December to April. Seven. True, in the rainy season, often in the afternoon. Eight. It's usually hot and humid, not dry.", reveal: [6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · the weather"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "It's very ___ this morning. I can't see the road.", answer: "foggy"}
+      - {n: 2, q: "Take an umbrella. It's going to ___.", answer: "rain"}
+      - {n: 3, q: "It's hot and ___ in Ho Chi Minh City today.", answer: "humid"}
+      - {n: 4, q: "I heard ___ in the night.", answer: "thunder"}
+      - {n: 5, q: "There's a nice ___ by the sea.", answer: "breeze"}
+      - {n: 6, q: "Wear a coat. It's ___ outside!", answer: "freezing"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. It's very foggy this morning. I can't see the road.", focus: 0}
+      - {emma: "Number two. Take an umbrella. It's going to rain.", focus: 1}
+      - {emma: "Number three. It's hot and humid in Ho Chi Minh City today.", say: "Number three. It's hot and humid in Ho Chee Min City today.", focus: 2}
+      - {emma: "Number four. I heard thunder in the night.", focus: 3}
+      - {emma: "Number five. There's a nice breeze by the sea.", focus: 4}
+      - {emma: "Number six. Wear a coat. It's freezing outside!", focus: 5}
+      - {tom: "Foggy, with double g. Rain. Humid: H, U, M, I, D.", say: "Foggy, with double gee. Rain. Humid: aitch, yoo, em, eye, dee.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Thunder. Breeze, with double e. And freezing.", say: "Thunder. Breeze, with double ee. And freezing.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: thời tiết quê bạn"
+    heading: "Speaking 1 · The weather"
+    heading_vi: "Câu hỏi kiểu IELTS Part 1 — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What's the weather like in your hometown?"
+        a: "Da Lat is cool all year: about fifteen to twenty-five degrees. The mornings are often foggy, and in December it's cold at night."
+        say: "Dah Lot is cool all year: about fifteen to twenty-five degrees. The mornings are often foggy, and in December it's cold at night."
+        ask: emma
+        by: tom
+        phrases: ["… is cool all year", "about … degrees", "The mornings are often…"]
+      - q: "And your hometown, Emma?"
+        a: "It's a small town by the sea, so there's always a breeze. The weather is very changeable: sunny in the morning, and showers in the afternoon."
+        ask: tom
+        by: emma
+        phrases: ["by the sea", "there's always a breeze", "very changeable"]
+      - q: "What's your favourite kind of weather?"
+        a: "A sunny spring day in England: warm, but not too hot. Ho Chi Minh City is a bit too humid for me!"
+        say: "A sunny spring day in England: warm, but not too hot. Ho Chee Min City is a bit too humid for me!"
+        ask: tom
+        by: emma
+        phrases: ["warm, but not too hot", "a bit too humid for me"]
+      - q: "Do you like rainy days?"
+        a: "I like the sound of rain when I'm at home. But riding a motorbike in heavy rain is terrible!"
+        ask: emma
+        by: tom
+        phrases: ["I like the sound of…", "But … is terrible!"]
+      - q: "What do you do when it rains?"
+        a: "I stay in and read a detective novel. And in the rainy season, I always have an umbrella in my bag."
+        ask: tom
+        by: emma
+        phrases: ["I stay in and…", "I always have … in my bag"]
+      - q: "Does the weather change how you feel?"
+        a: "A bit. On grey days I feel a bit tired. When it's sunny, I want to go out."
+        ask: emma
+        by: tom
+        phrases: ["A bit.", "On grey days I feel…", "When it's sunny, …"]
+      - q: "Do English people really talk about the weather a lot?"
+        a: "All the time! Lovely day, isn't it? It's a bit cold today. It's the easiest way to start a conversation."
+        ask: tom
+        by: emma
+        phrases: ["All the time!", "…, isn't it?", "the easiest way to…"]
+    lines:
+      - {emma: "Now let's talk about the weather. What's the weather like in your hometown, Tom?", focus: 0}
+      - {tom: "Da Lat is cool all year: about fifteen to twenty-five degrees. The mornings are often foggy, and in December it's cold at night.", say: "Dah Lot is cool all year: about fifteen to twenty-five degrees. The mornings are often foggy, and in December it's cold at night.", reveal: 0, vi: "Đà Lạt mát quanh năm, khoảng 15–25 độ; sáng hay có sương mù, tháng 12 tối lạnh."}
+      - {tom: "And your hometown, Emma?", focus: 1}
+      - {emma: "It's a small town by the sea, so there's always a breeze. The weather is very changeable: sunny in the morning, and showers in the afternoon.", reveal: 1, vi: "Thị trấn nhỏ ven biển, lúc nào cũng có gió nhẹ; thời tiết rất hay đổi: sáng nắng, chiều mưa rào."}
+      - {tom: "What's your favourite kind of weather?", focus: 2}
+      - {emma: "A sunny spring day in England: warm, but not too hot. Ho Chi Minh City is a bit too humid for me!", say: "A sunny spring day in England: warm, but not too hot. Ho Chee Min City is a bit too humid for me!", reveal: 2, vi: "Ngày xuân nắng ở Anh: ấm mà không nóng. TP. HCM hơi quá ẩm với Emma!"}
+      - {emma: "Do you like rainy days?", focus: 3}
+      - {tom: "I like the sound of rain when I'm at home. But riding a motorbike in heavy rain is terrible!", reveal: 3, vi: "Thích nghe tiếng mưa khi ở nhà; nhưng đi xe máy dưới mưa to thì kinh khủng!"}
+      - {tom: "What do you do when it rains?", focus: 4}
+      - {emma: "I stay in and read a detective novel. And in the rainy season, I always have an umbrella in my bag.", reveal: 4, vi: "Ở nhà đọc truyện trinh thám; mùa mưa luôn để ô trong túi."}
+      - {emma: "Does the weather change how you feel?", focus: 5}
+      - {tom: "A bit. On grey days I feel a bit tired. When it's sunny, I want to go out.", reveal: 5, vi: "Có chút: ngày âm u thấy hơi mệt; trời nắng thì muốn ra ngoài."}
+      - {tom: "Do English people really talk about the weather a lot?", focus: 6}
+      - {emma: "All the time! Lovely day, isn't it? It's a bit cold today. It's the easiest way to start a conversation.", reveal: 6, vi: "Suốt! \"Đẹp trời nhỉ?\", \"Hôm nay hơi lạnh\" — cách dễ nhất để bắt chuyện."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Weather and seasons"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu — dùng a bit, a lot of, very"
+    items:
+      - {q: "What's the weather like today?", hint: "It's sunny / cloudy / a bit windy … · It's about … degrees"}
+      - {q: "What's your favourite season? Why?", hint: "I like the dry season / spring because it's …"}
+      - {q: "Do you prefer hot or cold weather?", hint: "I prefer … because … · I don't like humid weather"}
+      - {q: "What do you do when it's raining?", hint: "I usually stay in and … · I take an umbrella"}
+      - {q: "Has the weather in your country changed?", hint: "Yes, I think it's hotter now. We have more storms …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about the weather. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about the weather. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về thời tiết."
+      - {emma: "What's the weather like today?", focus: 0, pause: 0.5}
+      - {emma: "What's your favourite season? Why?", focus: 1, pause: 0.5}
+      - {emma: "Do you prefer hot or cold weather?", focus: 2, pause: 0.5}
+      - {emma: "What do you do when it's raining?", focus: 3, pause: 0.5}
+      - {emma: "Has the weather in your country changed?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che bảng ở tr. 56, nhìn hình, nói thời tiết"
+    items:
+      - {en: "It's sunny / cloudy / wet / windy / icy / foggy · It's raining / snowing", vi: "tính từ · động từ (-ing)"}
+      - {en: "sun(shine) · cloud · rain · wind · ice · fog · snow (rain, ice, fog, snow: uncountable)", vi: "danh từ"}
+      - {en: "a lot of rain · a bit of fog · it rained a lot · a bit windy", vi: "a lot (of) / a bit (of)"}
+      - {en: "changeable · pleasant · humid · cool · a breeze · a shower · heavy rain · a storm · thunder · lightning · freezing · damp", vi: "từ trong đoạn văn"}
+      - {en: "Next: Unit 22 · Illness", vi: "Tiếp theo: Unit 22 · Ốm đau"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "It's sunny, cloudy, wet, windy, icy, or foggy. It's raining, or snowing.", focus: 0}
+      - {tom: "The nouns: sun, sunshine, cloud, rain, wind, ice, fog and snow.", focus: 1}
+      - {emma: "A lot of rain, a bit of fog. It rained a lot. It's a bit windy.", focus: 2}
+      - {tom: "Changeable, pleasant, humid, cool, a breeze, a shower, heavy rain, a storm, thunder and lightning, freezing, and damp.", focus: 3}
+      - {emma: "Next time, Unit 22: illness. See you then!", say: "Next time, Unit twenty-two: illness. See you then!", focus: 4}

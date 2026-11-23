@@ -1,0 +1,303 @@
+# Video nghe – viết (dictation) Unit 17 · My routine — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U17-routine-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U17 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 17 có 46 mục; dòng ghép các mục đi cùng nhau (usually, normally; once, twice a week) và thêm cụm
+# trên trang không có trong Word list (stay in).
+id: U17-routine-dictation
+activity: U17-words
+title: "Unit 17 · My routine"
+subtitle: "Dictation · listen and write: daily routines"
+title_vi: "Nghe – viết 10 phút: sinh hoạt hằng ngày — từ trong sách, từ thêm, câu giao tiếp"
+tag: "EVERYDAY LIFE · UNIT 17"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 17: My routine. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit seventeen: My routine. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 17: sinh hoạt hằng ngày. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 31 words from the book. You hear each word twice, and then an example sentence twice. Then 17 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, thirty-one words from the book. You hear each word twice, and then an example sentence twice. Then seventeen more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 31 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 17 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "get up", "vi": "thức dậy", "ex": "She usually gets up at seven o'clock.", "w": ["get up"]}
+      - {"n": 2, "answer": "have a shower", "vi": "tắm (vòi sen)", "ex": "I have a shower every morning.", "w": ["have", "shower"]}
+      - {"n": 3, "answer": "get dressed", "vi": "mặc quần áo", "ex": "He gets dressed after breakfast.", "w": ["get dressed"]}
+      - {"n": 4, "answer": "have breakfast", "vi": "ăn sáng", "ex": "They have breakfast together at seven.", "w": ["breakfast"]}
+      - {"n": 5, "answer": "clean your teeth", "vi": "đánh răng", "ex": "Clean your teeth twice a day.", "w": ["clean", "teeth"]}
+      - {"n": 6, "answer": "leave home", "vi": "ra khỏi nhà", "ex": "He leaves home at eight o'clock.", "w": ["leave home"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. get up. get up. She usually gets up at seven o'clock. She usually gets up at seven o'clock.", "focus": 0}
+      - {"emma": "Two. have a shower. have a shower. I have a shower every morning. I have a shower every morning.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. get dressed. get dressed. He gets dressed after breakfast. He gets dressed after breakfast.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. have breakfast. have breakfast. They have breakfast together at seven. They have breakfast together at seven.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. clean your teeth. clean your teeth. Clean your teeth twice a day. Clean your teeth twice a day.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. leave home. leave home. He leaves home at eight o'clock. He leaves home at eight o'clock.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "get to work", "vi": "đến chỗ làm", "ex": "She gets to work at half past eight.", "w": ["get to work", "work"]}
+      - {"n": 8, "answer": "finish work", "vi": "tan làm", "ex": "I finish work at six o'clock.", "w": ["finish"]}
+      - {"n": 9, "answer": "have dinner", "vi": "ăn tối", "ex": "They have dinner with their family.", "w": ["dinner"]}
+      - {"n": 10, "answer": "go to bed", "vi": "đi ngủ", "ex": "He goes to bed at eleven o'clock.", "w": ["bed"]}
+      - {"n": 11, "answer": "sleep", "vi": "ngủ", "ex": "I sleep about seven hours a night.", "w": ["sleep"]}
+      - {"n": 12, "answer": "usually, normally", "vi": "thường thường", "ex": "I normally go to work by motorbike taxi.", "w": ["usually", "normally"]}
+    lines:
+      - {"emma": "Seven. get to work. get to work. She gets to work at half past eight. She gets to work at half past eight.", "focus": 0}
+      - {"emma": "Eight. finish work. finish work. I finish work at six o'clock. I finish work at six o'clock.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. have dinner. have dinner. They have dinner with their family. They have dinner with their family.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. go to bed. go to bed. He goes to bed at eleven o'clock. He goes to bed at eleven o'clock.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. sleep. sleep. I sleep about seven hours a night. I sleep about seven hours a night.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. usually, normally. usually, normally. I normally go to work by motorbike taxi. I normally go to work by motorbike taxi.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "always", "vi": "luôn luôn", "ex": "He always has a shower in the evening.", "w": ["always"]}
+      - {"n": 14, "answer": "often", "vi": "thường, hay", "ex": "Do you often go out in the evening?", "w": ["often"]}
+      - {"n": 15, "answer": "sometimes", "vi": "thỉnh thoảng", "ex": "They sometimes go for a walk after dinner.", "w": ["sometimes", "walk"]}
+      - {"n": 16, "answer": "occasionally", "vi": "đôi khi", "ex": "She occasionally goes to the cinema.", "w": ["occasionally"]}
+      - {"n": 17, "answer": "hardly ever, rarely", "vi": "hầu như không", "ex": "He hardly ever watches TV.", "w": ["hardly ever", "rarely"]}
+      - {"n": 18, "answer": "never", "vi": "không bao giờ", "ex": "I never get up late.", "w": ["never"]}
+    lines:
+      - {"emma": "Thirteen. always. always. He always has a shower in the evening. He always has a shower in the evening.", "focus": 0}
+      - {"emma": "Fourteen. often. often. Do you often go out in the evening? Do you often go out in the evening?", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. sometimes. sometimes. They sometimes go for a walk after dinner. They sometimes go for a walk after dinner.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. occasionally. occasionally. She occasionally goes to the cinema. She occasionally goes to the cinema.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. hardly ever, rarely. hardly ever, rarely. He hardly ever watches TV. He hardly ever watches TV.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. never. never. I never get up late. I never get up late.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "every day, all day", "vi": "mỗi ngày, cả ngày", "ex": "He works every day, and sometimes all day.", "w": ["every", "all"]}
+      - {"n": 20, "answer": "once a week, twice a week", "vi": "một lần, hai lần mỗi tuần", "ex": "They play tennis twice a week.", "w": ["once", "twice", "week", "play", "tennis"]}
+      - {"n": 21, "answer": "weekday, weekend", "vi": "ngày thường, cuối tuần", "ex": "On weekdays she works, and at the weekend she relaxes.", "w": ["weekday", "weekend"]}
+      - {"n": 22, "answer": "during the week", "vi": "trong tuần", "ex": "During the week, he stays in after school.", "w": ["during the week"]}
+      - {"n": 23, "answer": "stay in", "vi": "ở nhà", "ex": "They often stay in on Sunday evening."}
+      - {"n": 24, "answer": "come round", "vi": "ghé nhà", "ex": "Come round to my flat after work.", "w": ["come round"]}
+    lines:
+      - {"emma": "Nineteen. every day, all day. every day, all day. He works every day, and sometimes all day. He works every day, and sometimes all day.", "focus": 0}
+      - {"emma": "Twenty. once a week, twice a week. once a week, twice a week. They play tennis twice a week. They play tennis twice a week.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. weekday, weekend. weekday, weekend. On weekdays she works, and at the weekend she relaxes. On weekdays she works, and at the weekend she relaxes.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. during the week. during the week. During the week, he stays in after school. During the week, he stays in after school.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. stay in. stay in. They often stay in on Sunday evening. They often stay in on Sunday evening.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. come round. come round. Come round to my flat after work. Come round to my flat after work.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "go out", "vi": "đi chơi, ra ngoài", "ex": "Do you want to go out on Saturday?", "w": ["go out", "go"]}
+      - {"n": 26, "answer": "go shopping", "vi": "đi mua sắm", "ex": "Let's go shopping for clothes.", "w": ["shopping"]}
+      - {"n": 27, "answer": "do the shopping", "vi": "đi chợ, mua thức ăn", "ex": "He does the shopping on Saturday morning.", "w": ["do the shopping", "do"]}
+      - {"n": 28, "answer": "go to the gym", "vi": "đến phòng tập", "ex": "She goes to the gym before work.", "w": ["gym"]}
+    lines:
+      - {"emma": "Twenty-five. go out. go out. Do you want to go out on Saturday? Do you want to go out on Saturday?", "focus": 0}
+      - {"emma": "Twenty-six. go shopping. go shopping. Let's go shopping for clothes. Let's go shopping for clothes.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. do the shopping. do the shopping. He does the shopping on Saturday morning. He does the shopping on Saturday morning.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. go to the gym. go to the gym. She goes to the gym before work. She goes to the gym before work.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (29–31)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 29, "answer": "go and see a film", "vi": "đi xem phim", "ex": "Let's go and see a film tonight.", "w": ["see", "film"]}
+      - {"n": 30, "answer": "early, late", "vi": "sớm, muộn", "ex": "He goes to bed late and gets up early.", "w": ["early", "late"]}
+      - {"n": 31, "answer": "What do you do?", "vi": "Bạn làm nghề gì?", "ex": "What do you do? I'm a teacher.", "w": ["do"]}
+    lines:
+      - {"emma": "Twenty-nine. go and see a film. go and see a film. Let's go and see a film tonight. Let's go and see a film tonight.", "focus": 0}
+      - {"emma": "Thirty. early, late. early, late. He goes to bed late and gets up early. He goes to bed late and gets up early.", "focus": 1, "reveal": [29]}
+      - {"emma": "Thirty-one. What do you do?. What do you do?. What do you do? I'm a teacher. What do you do? I'm a teacher.", "focus": 2, "reveal": [30]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [31]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "wake up", "vi": "tỉnh giấc", "ex": "I wake up at six without an alarm."}
+      - {"n": 33, "answer": "alarm clock", "vi": "đồng hồ báo thức", "ex": "My alarm clock rings at half past six."}
+      - {"n": 34, "answer": "oversleep", "vi": "ngủ quên", "ex": "He overslept and missed the bus."}
+      - {"n": 35, "answer": "have a nap", "vi": "chợp mắt", "ex": "She has a short nap after lunch."}
+      - {"n": 36, "answer": "take a break", "vi": "nghỉ giải lao", "ex": "Let's take a break for ten minutes."}
+      - {"n": 37, "answer": "lunch break", "vi": "giờ nghỉ trưa", "ex": "Our lunch break is from twelve to one."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-two. wake up. wake up. I wake up at six without an alarm. I wake up at six without an alarm.", "focus": 0}
+      - {"tom": "Thirty-three. alarm clock. alarm clock. My alarm clock rings at half past six. My alarm clock rings at half past six.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. oversleep. oversleep. He overslept and missed the bus. He overslept and missed the bus.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. have a nap. have a nap. She has a short nap after lunch. She has a short nap after lunch.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. take a break. take a break. Let's take a break for ten minutes. Let's take a break for ten minutes.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. lunch break. lunch break. Our lunch break is from twelve to one. Our lunch break is from twelve to one.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "commute", "vi": "đi lại từ nhà đến chỗ làm", "ex": "His commute takes forty minutes."}
+      - {"n": 39, "answer": "rush hour", "vi": "giờ cao điểm", "ex": "The traffic is terrible in the rush hour."}
+      - {"n": 40, "answer": "on time", "vi": "đúng giờ", "ex": "The class always starts on time."}
+      - {"n": 41, "answer": "free time", "vi": "thời gian rảnh", "ex": "What do you do in your free time?"}
+      - {"n": 42, "answer": "routine", "vi": "nếp sinh hoạt", "ex": "Her daily routine is very busy."}
+      - {"n": 43, "answer": "busy", "vi": "bận", "ex": "Monday is my busiest day."}
+    lines:
+      - {"tom": "Thirty-eight. commute. commute. His commute takes forty minutes. His commute takes forty minutes.", "focus": 0}
+      - {"tom": "Thirty-nine. rush hour. rush hour. The traffic is terrible in the rush hour. The traffic is terrible in the rush hour.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. on time. on time. The class always starts on time. The class always starts on time.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. free time. free time. What do you do in your free time? What do you do in your free time?", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. routine. routine. Her daily routine is very busy. Her daily routine is very busy.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. busy. busy. Monday is my busiest day. Monday is my busiest day.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "relax", "vi": "thư giãn", "ex": "He relaxes with music in the evening."}
+      - {"n": 45, "answer": "a lie-in", "vi": "ngủ nướng", "ex": "On Sundays I have a lie-in until nine."}
+      - {"n": 46, "answer": "do the housework", "vi": "làm việc nhà", "ex": "They share the housework."}
+      - {"n": 47, "answer": "do the washing-up", "vi": "rửa bát", "ex": "I do the washing-up after dinner."}
+      - {"n": 48, "answer": "go jogging", "vi": "chạy bộ", "ex": "He goes jogging in the park at six."}
+    lines:
+      - {"tom": "Forty-four. relax. relax. He relaxes with music in the evening. He relaxes with music in the evening.", "focus": 0}
+      - {"tom": "Forty-five. a lie-in. a lie-in. On Sundays I have a lie-in until nine. On Sundays I have a lie-in until nine.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. do the housework. do the housework. They share the housework. They share the housework.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. do the washing-up. do the washing-up. I do the washing-up after dinner. I do the washing-up after dinner.", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. go jogging. go jogging. He goes jogging in the park at six. He goes jogging in the park at six.", "focus": 4, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [48]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (49–54)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 49, "answer": "What time do you usually get up?", "vi": "Bạn thường dậy lúc mấy giờ?"}
+      - {"n": 50, "answer": "At about half past six on weekdays.", "vi": "Ngày thường khoảng 6 giờ rưỡi."}
+      - {"n": 51, "answer": "Are you a morning person?", "vi": "Bạn có quen dậy sớm không?"}
+      - {"n": 52, "answer": "Yes. I get up at six every day.", "vi": "Có. Ngày nào mình cũng dậy lúc 6 giờ."}
+      - {"n": 53, "answer": "What do you have for breakfast?", "vi": "Bạn ăn sáng món gì?"}
+      - {"n": 54, "answer": "Usually bread and a coffee.", "vi": "Thường là bánh mì và một ly cà phê."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-nine. What time do you usually get up? What time do you usually get up?", "focus": 0}
+      - {"tom": "Fifty. At about half past six on weekdays. At about half past six on weekdays.", "focus": 1, "reveal": [49]}
+      - {"tom": "Fifty-one. Are you a morning person? Are you a morning person?", "focus": 2, "reveal": [50]}
+      - {"emma": "Fifty-two. Yes. I get up at six every day. Yes. I get up at six every day.", "focus": 3, "reveal": [51]}
+      - {"emma": "Fifty-three. What do you have for breakfast? What do you have for breakfast?", "focus": 4, "reveal": [52]}
+      - {"tom": "Fifty-four. Usually bread and a coffee. Usually bread and a coffee.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "How do you get to work?", "vi": "Bạn đi làm bằng gì?"}
+      - {"n": 56, "answer": "I take a motorbike taxi. It takes about twenty minutes.", "vi": "Mình đi xe ôm, mất khoảng 20 phút."}
+      - {"n": 57, "answer": "Do you work at the weekend?", "vi": "Bạn có làm cuối tuần không?"}
+      - {"n": 58, "answer": "No, but I work at a café on Tuesday and Thursday evenings.", "vi": "Không, nhưng tối thứ Ba và thứ Năm mình làm ở quán cà phê."}
+      - {"n": 59, "answer": "What do you do in the evening?", "vi": "Buổi tối bạn làm gì?"}
+      - {"n": 60, "answer": "I have Vietnamese lessons on Monday and Wednesday.", "vi": "Thứ Hai và thứ Tư mình học tiếng Việt."}
+    lines:
+      - {"tom": "Fifty-five. How do you get to work? How do you get to work?", "focus": 0}
+      - {"emma": "Fifty-six. I take a motorbike taxi. It takes about twenty minutes. I take a motorbike taxi. It takes about twenty minutes.", "focus": 1, "reveal": [55]}
+      - {"emma": "Fifty-seven. Do you work at the weekend? Do you work at the weekend?", "focus": 2, "reveal": [56]}
+      - {"tom": "Fifty-eight. No, but I work at a café on Tuesday and Thursday evenings. No, but I work at a café on Tuesday and Thursday evenings.", "say": "Fifty-eight. No, but I work at a cafe on Tuesday and Thursday evenings. No, but I work at a cafe on Tuesday and Thursday evenings.", "focus": 3, "reveal": [57]}
+      - {"tom": "Fifty-nine. What do you do in the evening? What do you do in the evening?", "focus": 4, "reveal": [58]}
+      - {"emma": "Sixty. I have Vietnamese lessons on Monday and Wednesday. I have Vietnamese lessons on Monday and Wednesday.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "How often do you play basketball?", "vi": "Bạn chơi bóng rổ bao lâu một lần?"}
+      - {"n": 62, "answer": "Twice a week, on Saturday and one evening.", "vi": "Hai lần một tuần: thứ Bảy và một buổi tối."}
+      - {"n": 63, "answer": "What time do you go to bed?", "vi": "Bạn đi ngủ lúc mấy giờ?"}
+      - {"n": 64, "answer": "At about half past eleven.", "vi": "Khoảng 11 giờ rưỡi."}
+      - {"n": 65, "answer": "What do you usually do on Sundays?", "vi": "Chủ nhật bạn thường làm gì?"}
+      - {"n": 66, "answer": "I go for a walk, and then I read a book.", "vi": "Mình đi dạo, rồi đọc sách."}
+    lines:
+      - {"emma": "Sixty-one. How often do you play basketball? How often do you play basketball?", "focus": 0}
+      - {"tom": "Sixty-two. Twice a week, on Saturday and one evening. Twice a week, on Saturday and one evening.", "focus": 1, "reveal": [61]}
+      - {"emma": "Sixty-three. What time do you go to bed? What time do you go to bed?", "focus": 2, "reveal": [62]}
+      - {"tom": "Sixty-four. At about half past eleven. At about half past eleven.", "focus": 3, "reveal": [63]}
+      - {"tom": "Sixty-five. What do you usually do on Sundays? What do you usually do on Sundays?", "focus": 4, "reveal": [64]}
+      - {"emma": "Sixty-six. I go for a walk, and then I read a book. I go for a walk, and then I read a book.", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "Do you want to come round for dinner?", "vi": "Bạn có muốn ghé nhà ăn tối không?"}
+      - {"n": 68, "answer": "I'd love to. Thank you!", "vi": "Rất thích. Cảm ơn bạn!"}
+      - {"n": 69, "answer": "Shall we go out on Saturday evening?", "vi": "Tối thứ Bảy mình đi chơi nhé?"}
+      - {"n": 70, "answer": "Sorry, I'm busy. How about Sunday?", "vi": "Xin lỗi, mình bận. Chủ nhật được không?"}
+      - {"n": 71, "answer": "I'm sorry I'm late. I got up late.", "vi": "Xin lỗi mình đến muộn. Mình dậy muộn."}
+      - {"n": 72, "answer": "Don't worry. The class hasn't started.", "vi": "Không sao. Lớp chưa bắt đầu."}
+    lines:
+      - {"tom": "Sixty-seven. Do you want to come round for dinner? Do you want to come round for dinner?", "focus": 0}
+      - {"emma": "Sixty-eight. I'd love to. Thank you! I'd love to. Thank you!", "focus": 1, "reveal": [67]}
+      - {"emma": "Sixty-nine. Shall we go out on Saturday evening? Shall we go out on Saturday evening?", "focus": 2, "reveal": [68]}
+      - {"tom": "Seventy. Sorry, I'm busy. How about Sunday? Sorry, I'm busy. How about Sunday?", "focus": 3, "reveal": [69]}
+      - {"tom": "Seventy-one. I'm sorry I'm late. I got up late. I'm sorry I'm late. I got up late.", "focus": 4, "reveal": [70]}
+      - {"emma": "Seventy-two. Don't worry. The class hasn't started. Don't worry. The class hasn't started.", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "How many hours do you sleep a night?", "vi": "Mỗi đêm bạn ngủ mấy tiếng?"}
+      - {"n": 74, "answer": "About seven. I need more!", "vi": "Khoảng bảy tiếng. Mình cần ngủ nhiều hơn!"}
+      - {"n": 75, "answer": "What's your favourite day of the week?", "vi": "Bạn thích ngày nào nhất trong tuần?"}
+      - {"n": 76, "answer": "Saturday. I play basketball with my friends.", "vi": "Thứ Bảy. Mình chơi bóng rổ với bạn."}
+    lines:
+      - {"emma": "Seventy-three. How many hours do you sleep a night? How many hours do you sleep a night?", "focus": 0}
+      - {"tom": "Seventy-four. About seven. I need more! About seven. I need more!", "focus": 1, "reveal": [73]}
+      - {"emma": "Seventy-five. What's your favourite day of the week? What's your favourite day of the week?", "focus": 2, "reveal": [74]}
+      - {"tom": "Seventy-six. Saturday. I play basketball with my friends. Saturday. I play basketball with my friends.", "focus": 3, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [76]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 18.", "say": "Well done! See you in Unit eighteen.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 18."}
+

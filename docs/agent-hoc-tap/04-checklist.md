@@ -442,6 +442,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 30:* Unit 1–7 thêm hình trong sách (P2-64); Unit 17 trở đi cũng phải có ít nhất một cảnh có hình (test kiểm).
   - *Đợt 36:* mỗi unit 1–16 thêm một video nghe – viết 10 phút (P2-70). Unit 17 trở đi mỗi unit hai video: bài giảng (file 09
     mục 5) và nghe – viết (mục 5.9).
+  - *Đợt 37:* xong module Everyday life, Unit 17–23 — 14 video (P2-72). Còn Unit 24 trở đi; module Food and drink ở cuối file 09
+    mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -506,6 +508,14 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - GENKI: cả 25 video, 3,2–6,4 giây (`pause` 3 giây ở Unit 0, khoảng lặng trong file nghe).
   - Oxford Word Skills Basic (16 video bài giảng và 16 video nghe – viết): không có.
   - Cách sửa: bỏ `wait`, cắt `pause` để `pause` + `gap` (+ `scene_gap` ở cuối cảnh) dưới 3 giây, cắt bớt khoảng lặng dài trong đoạn file nghe; dựng lại.
+  - Đợt 37: người học "ko sửa cái cũ" — giữ nguyên, chỉ video mới tuân theo quy tắc.
+- [x] **P2-72** **Oxford Word Skills Basic module Everyday life: 7 video bài giảng và 7 video nghe – viết, Unit 17–23** (đợt 37, bài giảng 1:07:37, nghe – viết 1:06:58), theo yêu cầu người học: "ko sửa cái cũ, tiếp tục làm video bài học unit 17-23 của oxford". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+  - Bài giảng theo khuôn file 09 mục 5: đủ mọi bài tập trong sách (tr. 46–60), hình trong sách ở mọi video (tranh, bảng, đoạn văn, hội thoại — khung theo tranh hoặc theo dòng), không đếm ngược. Unit khó 17 My routine, 19 Buying clothes, 22 Illness (10–15 phút): ôn tập, Part 2 (favourite day of the week, the last time you bought some clothes, a time when you were ill), thảo luận; Unit 22 có email xin nghỉ ốm (thư GT Task 1).
+  - Thêm ngoài sách cho unit thường: mặc gì khi…, đọc giá tiền và nghe – viết giá, câu ở chợ, nhiệt độ và dự báo, đọc nhãn thuốc, đóng vai mua đồ / ở hiệu thuốc.
+  - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0 (đo bản dựng: dài nhất khoảng 2,4 giây ở bài giảng); dựng lại Unit 17, 18 sau khi đổi.
+  - Word list Unit 17–23 (246 mục) thêm vào `work/wordlist.json`; OCR sót get dressed, red; ba mục in số unit cũ xếp theo trang thật. Video nghe – viết đủ mọi mục ("chưa hiện: 0").
+  - Answer key in lệch (file 09 mục 3.3): Unit 17 bài 3 (8 câu trả lời cho 6 câu hỏi), Unit 22 bài 1 (câu 10 trùng câu 8).
+  - Test: unit khó U17, U19, U22; video từ Unit 17 có `pause` + `gap` + `scene_gap` dưới 3 giây; hồi quy nghe – viết cả 23 unit; e2e: thẻ sách 46 video, Unit 1–23 mỗi unit hai nút.
 
 ### Cổng G2
 

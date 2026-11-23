@@ -1,0 +1,365 @@
+# Video Oxford Word Skills Basic · Unit 23 — I can get help at the chemist's (sách in tr. 60, Answer key tr. 210). Học sau Unit 22.
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây.
+# Bài trong sách: đủ 1–3. Bài 1, 2 theo Answer key tr. 210 (bài 2: câu 1 là a sore throat, câu 3 là for toothache, please —
+# theo Answer key). Bài 3 (Test yourself): cảnh riêng — tranh không nhãn, Emma hỏi "What's this?", tạm dừng, Tom trả lời.
+# Unit một trang nên thêm ngoài sách: cần mua gì (câu đố), đọc nhãn thuốc (kiểu bài đọc IELTS General Training), hội thoại mới
+# (thuốc đau họng), Nghe và viết; Nói 1 (hiệu thuốc, tủ thuốc ở nhà); Nói 2 đóng vai: Emma là dược sĩ, người học là khách.
+# Hình trong sách: 7 tranh đồ ở hiệu thuốc (khung theo tranh), hai đoạn hội thoại (khung theo dòng — Tom đọc dược sĩ Ch, Emma
+# đọc khách C), Glossary và Spotlight "Asking for things in a chemist's".
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7, U22): Tom tuần trước bị đứt tay khi thái rau — đang học nấu ăn (hồ sơ:
+# chỉ biết nấu mì và trứng); tủ thuốc của Tom có băng dán, kem sát trùng, thuốc đau đầu; hiệu thuốc ngay dưới căn hộ. Emma
+# giữ thuốc ho từ mùa mưa đầu tiên (U22), thích trà gừng hơn thuốc; ở Anh mua thuốc đau đầu ở siêu thị được.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U23-chemists.yaml
+id: U23-chemists
+activity: U23-words
+title: "Unit 23 · At the chemist's"
+subtitle: "I can get help at the chemist's"
+title_vi: "Ở hiệu thuốc: plasters, cotton wool, tablets, cough medicine; Could I have something for …? — đọc nhãn thuốc, đóng vai"
+tag: "EVERYDAY LIFE · UNIT 23"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 23: at the chemist's. Please do Unit 22 first. Today we'll learn the things you can buy at a chemist's, and how to ask for help. This is the last unit in the Everyday life module."
+        say: "Welcome to Unit twenty-three: at the chemist's. Please do Unit twenty-two first. Today we'll learn the things you can buy at a chemist's, and how to ask for help. This is the last unit in the Everyday life module."
+        vi: "Unit 23: ở hiệu thuốc (học Unit 22 trước). Đồ bán ở hiệu thuốc, cách nhờ giúp — unit cuối module Everyday life."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Đồ ở hiệu thuốc"
+    heading: "At the chemist's · things you can buy"
+    heading_vi: "Tranh trong sách tr. 60 — chemist's = pharmacy: hiệu thuốc"
+    image: {pdf: course-book, page: 61, clip: [268, 60, 484, 292]}
+    items:
+      - {box: [272, 64, 362, 114], label: "cut"}
+      - {box: [388, 62, 460, 121], label: "antiseptic cream"}
+      - {box: [282, 117, 358, 189], label: "plasters"}
+      - {box: [356, 124, 436, 207], label: "cotton wool"}
+      - {box: [279, 199, 340, 250], label: "tablets"}
+      - {box: [322, 217, 411, 286], label: "a box of tissues"}
+      - {box: [418, 206, 480, 289], label: "cough medicine"}
+    lines:
+      - emma: "Look at the pictures on page sixty. Number one: a cut. If you cut your finger, it bleeds."
+        focus: 0
+        vi: "cut (cut, cut): cắt, đứt tay · a cut: vết đứt"
+      - {tom: "Two: antiseptic cream. You put it on a cut to clean it.", focus: 1, vi: "antiseptic cream: kem sát trùng"}
+      - {emma: "Three: plasters. You put a plaster on a small cut.", focus: 2, vi: "plaster: băng dán cá nhân"}
+      - {tom: "Four: cotton wool. Soft and white.", focus: 3, vi: "cotton wool: bông gòn"}
+      - {emma: "Five: tablets. You take tablets with water. We say take a tablet, not eat or drink a tablet.", focus: 4, vi: "tablet: viên thuốc · take a tablet: uống thuốc"}
+      - {tom: "Six: a box of tissues, for a cold.", focus: 5, vi: "tissues: khăn giấy"}
+      - {emma: "And seven: cough medicine. We also say take medicine.", focus: 6, vi: "medicine: thuốc · take medicine: uống thuốc"}
+
+  - kind: bullets
+    chapter: "Hội thoại (1)"
+    heading: "At the chemist's · conversation 1"
+    heading_vi: "Hội thoại tr. 60 — Tom đọc dược sĩ (Ch), Emma đọc khách (C)"
+    image: {pdf: course-book, page: 61, clip: [24, 108, 272, 184]}
+    items:
+      - {en: "Can I help you?", vi: "Tôi giúp gì được ạ?", box: [26, 112, 270, 124]}
+      - {en: "I cut my finger yesterday, and it really hurts.", vi: "Hôm qua tôi bị đứt tay, đau lắm.", box: [26, 124, 270, 137]}
+      - {en: "You need some antiseptic cream for it.", vi: "Chị cần kem sát trùng. — need: cần", box: [26, 136, 270, 147]}
+      - {en: "Could I have some plasters and cotton wool?", vi: "Cho tôi ít băng dán và bông gòn.", box: [26, 147, 270, 170]}
+      - {en: "Yes, of course. That's €5.60, please.", vi: "Vâng. 5 euro 60 ạ.", box: [26, 170, 270, 182]}
+    lines:
+      - {tom: "Can I help you?", focus: 0}
+      - {emma: "Yes, I cut my finger yesterday, and it really hurts.", focus: 1, vi: "cut: quá khứ vẫn là cut"}
+      - {tom: "You need some antiseptic cream for it.", focus: 2, vi: "need: cần (cái gì quan trọng, cần thiết)"}
+      - {emma: "Right. Could I have some plasters and some cotton wool, please?", focus: 3, vi: "Could I have …? — cách xin lịch sự"}
+      - {tom: "Yes, of course. That's five euros sixty, please.", focus: 4}
+
+  - kind: bullets
+    chapter: "Hội thoại (2)"
+    heading: "At the chemist's · conversation 2"
+    heading_vi: "Hội thoại tr. 60 — try: dùng thử · take: uống (thuốc)"
+    image: {pdf: course-book, page: 61, clip: [24, 191, 272, 276]}
+    items:
+      - {en: "Yes? — Er, I need something for a cold.", vi: "Tôi cần thuốc trị cảm.", box: [26, 193, 270, 218]}
+      - {en: "Try these tablets – they're very good.", vi: "Thử thuốc này xem, tốt lắm.", box: [26, 216, 270, 230]}
+      - {en: "How often do I take them?", vi: "Bao lâu uống một lần?", box: [26, 228, 270, 239]}
+      - {en: "Take two tablets every four hours with water.", vi: "Uống hai viên, bốn tiếng một lần, với nước.", box: [26, 239, 270, 251]}
+      - {en: "I'd like a box of tissues and some cough medicine.", vi: "Cho tôi một hộp khăn giấy và ít thuốc ho.", box: [26, 251, 270, 274]}
+    lines:
+      - {tom: "Yes?", focus: 0}
+      - {emma: "Er, I need something for a cold.", focus: 0, vi: "something for + bệnh: thuốc trị …"}
+      - {tom: "Right, well, try these tablets. They're very good.", focus: 1, vi: "try: dùng thử xem có đỡ không"}
+      - {emma: "OK, and how often do I take them?", focus: 2}
+      - {tom: "Take two tablets every four hours with water.", focus: 3, vi: "every four hours: cứ bốn tiếng"}
+      - {emma: "Thanks. And I'd like a box of tissues, please, and some cough medicine.", focus: 4}
+
+  - kind: figure
+    chapter: "Glossary và Spotlight"
+    heading: "Glossary · Spotlight: asking for things in a chemist's"
+    heading_vi: "tr. 60 — Could I have something for a headache? = cho tôi thuốc trị đau đầu"
+    image: {pdf: course-book, page: 61, clip: [24, 298, 490, 400]}
+    items:
+      - {box: [26, 323, 264, 347]}
+      - {box: [26, 348, 264, 360]}
+      - {box: [26, 360, 264, 383]}
+      - {box: [26, 383, 264, 397]}
+      - {box: [268, 328, 488, 391]}
+    lines:
+      - {emma: "Look at the glossary. If you need something, it's necessary, or important, for you to have it.", focus: 0}
+      - {tom: "Antiseptic: you put antiseptic cream on a cut to clean it.", focus: 1}
+      - {emma: "Try means use something, for example a tablet, to see if it helps.", say: "Try means yooz something, for example a tablet, to see if it helps.", focus: 2}
+      - {tom: "Take a tablet means eat a tablet. We also say take medicine.", focus: 3}
+      - {emma: "And look at the spotlight. Could I have something for a headache, please? This means: please give me some medicine because I've got a headache. Or: I need something for a cold.", focus: 4, vi: "something for + bệnh"}
+
+  - kind: blanks
+    chapter: "Bài 1: sửa chính tả"
+    heading: "Exercise 1 · Correct the spelling. Be careful: one is correct."
+    heading_vi: "Ví dụ: chimist → chemist (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "coton wool  →  ___", answer: "cotton wool"}
+      - {n: 2, q: "tissus  →  ___", answer: "tissues"}
+      - {n: 3, q: "something  →  ___", answer: "correct"}
+      - {n: 4, q: "anteseptic  →  ___", answer: "antiseptic"}
+      - {n: 5, q: "plastres  →  ___", answer: "plasters"}
+      - {n: 6, q: "farmacist  →  ___", answer: "pharmacist"}
+      - {n: 7, q: "creme  →  ___", answer: "cream"}
+      - {n: 8, q: "medicin  →  ___", answer: "medicine"}
+    lines:
+      - emma: "Exercise 1. Correct the spelling. Be careful: one is correct. Pause the video and try."
+        say: "Exercise one. Correct the spelling. Be careful: one is correct. Pause the video and try."
+        vi: "Bài 1: sửa chính tả — có một từ đúng."
+      - {tom: "One. Cotton, with double t. Two. Tissues, with u, e, s. Three. Something is correct. Four. Antiseptic: a, n, t, i.", say: "One. Cotton, with double tee. Two. Tissues, with yoo, ee, ess. Three. Something is correct. Four. Antiseptic: eigh, en, tee, eye.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Plasters: e, r, s at the end. Six. Pharmacist, with p h. Seven. Cream: c, r, e, a, m. Eight. Medicine, with an e at the end.", say: "Five. Plasters: ee, ar, ess at the end. Six. Pharmacist, with pee aitch. Seven. Cream: see, ar, ee, eigh, em. Eight. Medicine, with an ee at the end.", reveal: [5, 6, 7, 8], focus: 7, vi: "pharmacist: dược sĩ — ph đọc /f/"}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences · the customer (1–5)"
+    heading_vi: "Ví dụ: I'd like a box of tissues, please. (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "Have you got something for ___?", answer: "a sore throat"}
+      - {n: 2, q: "How often do I ___?", answer: "take these tablets"}
+      - {n: 3, q: "I need something ___.", answer: "for toothache, please"}
+      - {n: 4, q: "I need some cotton ___.", answer: "wool"}
+      - {n: 5, q: "Could I have ___?", answer: "some plasters, please"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences using phrases from the box. First, the customer. Pause the video and try."
+        say: "Exercise two. Complete the sentences using phrases from the box. First, the customer. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu bằng cụm trong khung — trước hết là lời khách."
+      - {tom: "One. Have you got something for a sore throat? Two. How often do I take these tablets? Three. I need something for toothache, please.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. I need some cotton wool. Five. Could I have some plasters, please?", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    heading: "Exercise 2 · Complete the sentences · the chemist (6–10)"
+    heading_vi: "Answer key tr. 210"
+    items:
+      - {n: 6, q: "You need some plasters ___.", answer: "for your finger"}
+      - {n: 7, q: "Try ___.", answer: "this medicine – it's very good"}
+      - {n: 8, q: "Take one ___.", answer: "tablet three times a day"}
+      - {n: 9, q: "Do you need antiseptic ___?", answer: "cream"}
+      - {n: 10, q: "Can I ___?", answer: "help you"}
+    lines:
+      - emma: "Now the chemist."
+        vi: "Lời dược sĩ."
+      - {tom: "Six. You need some plasters for your finger. Seven. Try this medicine, it's very good. Eight. Take one tablet three times a day.", reveal: [6, 7, 8], focus: 2}
+      - {tom: "Nine. Do you need antiseptic cream? Ten. Can I help you?", reveal: [9, 10], focus: 4}
+
+  - kind: figure
+    chapter: "Bài 3: tự kiểm tra"
+    heading: "Exercise 3 · Test yourself: say the words"
+    heading_vi: "Che hội thoại, nhìn tranh, nói từ — tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 61, clip: [268, 60, 484, 292]}
+    items:
+      - {box: [272, 64, 362, 114]}
+      - {box: [388, 62, 460, 121]}
+      - {box: [282, 117, 358, 189]}
+      - {box: [356, 124, 436, 207]}
+      - {box: [279, 199, 340, 250]}
+      - {box: [322, 217, 411, 286]}
+      - {box: [418, 206, 480, 289]}
+    lines:
+      - {emma: "Exercise 3. Cover the conversations, look at the pictures, and say the words. Pause the video after each question. What's this?", say: "Exercise three. Cover the conversations, look at the pictures, and say the words. Pause the video after each question. What's this?", focus: 0}
+      - {tom: "A cut.", focus: 0}
+      - {emma: "And this?", focus: 1}
+      - {tom: "Antiseptic cream.", focus: 1}
+      - {emma: "What are these?", focus: 2}
+      - {tom: "Plasters.", focus: 2}
+      - {emma: "And this?", focus: 3}
+      - {tom: "Cotton wool.", focus: 3}
+      - {emma: "What are these?", focus: 4}
+      - {tom: "Tablets.", focus: 4}
+      - {emma: "And this?", focus: 5}
+      - {tom: "A box of tissues.", focus: 5}
+      - {emma: "And the last one?", focus: 6}
+      - {tom: "Cough medicine.", focus: 6}
+
+  - kind: blanks
+    chapter: "Bạn cần mua gì?"
+    heading: "What do you need from the chemist's?"
+    heading_vi: "Thêm ngoài sách — nghe vấn đề, nói cần mua gì; tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "I've got a small cut on my finger.  →  ___", answer: "some plasters and antiseptic cream"}
+      - {n: 2, q: "I've got a bad cold.  →  ___", answer: "a box of tissues and some tablets for a cold"}
+      - {n: 3, q: "I can't stop coughing.  →  ___", answer: "some cough medicine"}
+      - {n: 4, q: "I've got a terrible headache.  →  ___", answer: "some tablets for a headache"}
+      - {n: 5, q: "I need to clean a cut on my knee.  →  ___", answer: "some cotton wool and antiseptic cream"}
+      - {n: 6, q: "My little boy has got a temperature.  →  ___", answer: "medicine for children – ask the chemist"}
+    lines:
+      - emma: "What do you need from the chemist's? Listen to the problem, pause the video, and say what to buy."
+        vi: "Nghe vấn đề, nói cần mua gì ở hiệu thuốc."
+      - {emma: "Number one. I've got a small cut on my finger.", focus: 0}
+      - {tom: "Some plasters, and some antiseptic cream.", reveal: 1, focus: 0}
+      - {emma: "Number two. I've got a bad cold.", focus: 1}
+      - {tom: "A box of tissues, and some tablets for a cold.", reveal: 2, focus: 1}
+      - {emma: "Number three. I can't stop coughing.", focus: 2}
+      - {tom: "Some cough medicine.", reveal: 3, focus: 2}
+      - {emma: "Number four. I've got a terrible headache.", focus: 3}
+      - {tom: "Some tablets for a headache.", reveal: 4, focus: 3}
+      - {emma: "Number five. I need to clean a cut on my knee.", focus: 4}
+      - {tom: "Some cotton wool, and antiseptic cream.", reveal: 5, focus: 4}
+      - {emma: "And number six. My little boy has got a temperature.", focus: 5}
+      - {tom: "Some medicine for children. You should ask the chemist, and read the label!", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Đọc nhãn thuốc"
+    heading: "Reading a medicine label"
+    heading_vi: "Thêm ngoài sách — kiểu bài đọc IELTS General Training"
+    items:
+      - {en: "Take one tablet three times a day, after meals.", vi: "Uống một viên, ngày ba lần, sau bữa ăn."}
+      - {en: "Do not take more than 8 tablets in 24 hours.", vi: "Không uống quá 8 viên trong 24 giờ."}
+      - {en: "Do not give to children under 12.", vi: "Không dùng cho trẻ dưới 12 tuổi."}
+      - {en: "If you still feel ill after 3 days, see your doctor.", vi: "Sau 3 ngày vẫn ốm thì đi khám."}
+      - {en: "Keep out of the reach of children.", vi: "Để xa tầm tay trẻ em."}
+    lines:
+      - emma: "In the IELTS General Training reading test, you sometimes read labels and instructions. Here's a medicine label. Take one tablet three times a day, after meals."
+        say: "In the eye-elts General Training reading test, you sometimes read labels and instructions. Here's a medicine label. Take one tablet three times a day, after meals."
+        focus: 0
+        vi: "after meals: sau bữa ăn"
+      - {tom: "Do not take more than eight tablets in twenty-four hours.", focus: 1, vi: "more than: hơn"}
+      - {emma: "Do not give to children under twelve.", focus: 2, vi: "under 12: dưới 12 tuổi"}
+      - {tom: "If you still feel ill after three days, see your doctor.", focus: 3}
+      - {emma: "And keep out of the reach of children. That means: put it where children can't get it.", focus: 4, vi: "để xa tầm tay trẻ em"}
+
+  - kind: bullets
+    chapter: "Hội thoại mới: đau họng"
+    heading: "A new conversation · something for a sore throat"
+    heading_vi: "Thêm ngoài sách — Tom là khách, Emma là dược sĩ"
+    items:
+      - {en: "Hello. Can I help you?", vi: "Chào anh. Tôi giúp gì được ạ?"}
+      - {en: "Yes, could I have something for a sore throat, please?", vi: "Cho tôi thuốc trị đau họng."}
+      - {en: "Of course. Have you got a temperature?", vi: "Vâng. Anh có sốt không?"}
+      - {en: "No, I haven't. But I've got a cough too.", vi: "Không, nhưng tôi cũng bị ho."}
+      - {en: "Try this medicine. Take two spoons three times a day, after meals.", vi: "Thử thuốc này: hai thìa, ngày ba lần, sau ăn."}
+      - {en: "Thanks. How much is it? — It's sixty thousand dong.", vi: "Bao nhiêu tiền? — 60.000 đồng."}
+    lines:
+      - emma: "Here's a new conversation. Tom is the customer, and I'm the chemist. Listen, and notice the phrases from this unit."
+        vi: "Hội thoại mới: Tom là khách, Emma là dược sĩ."
+      - {emma: "Hello. Can I help you?", focus: 0}
+      - {tom: "Yes, could I have something for a sore throat, please?", focus: 1}
+      - {emma: "Of course. Have you got a temperature?", focus: 2}
+      - {tom: "No, I haven't. But I've got a cough too.", focus: 3}
+      - {emma: "Try this medicine. It's good for both. Take two spoons three times a day, after meals.", focus: 4, vi: "spoon: thìa"}
+      - {tom: "Thanks. How much is it?", focus: 5}
+      - {emma: "It's sixty thousand dong.", focus: 5}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · at the chemist's"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "Could I have some ___, please?", answer: "plasters"}
+      - {n: 2, q: "I need something for a ___.", answer: "cough"}
+      - {n: 3, q: "Take two ___ every four hours.", answer: "tablets"}
+      - {n: 4, q: "Put some ___ cream on the cut.", answer: "antiseptic"}
+      - {n: 5, q: "I'd like a box of ___, please.", answer: "tissues"}
+      - {n: 6, q: "Is this ___ OK for children?", answer: "medicine"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Could I have some plasters, please?", focus: 0}
+      - {emma: "Number two. I need something for a cough.", focus: 1}
+      - {emma: "Number three. Take two tablets every four hours.", focus: 2}
+      - {emma: "Number four. Put some antiseptic cream on the cut.", focus: 3}
+      - {emma: "Number five. I'd like a box of tissues, please.", focus: 4}
+      - {emma: "Number six. Is this medicine OK for children?", focus: 5}
+      - {tom: "Plasters. Cough: C, O, U, G, H. Tablets.", say: "Plasters. Cough: see, oh, yoo, gee, aitch. Tablets.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Antiseptic. Tissues, with double s. And medicine.", say: "Antiseptic. Tissues, with double ess. And medicine.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: hiệu thuốc và tủ thuốc"
+    heading: "Speaking 1 · Chemists and medicine"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Is there a chemist's near your home?"
+        a: "Yes, there's one right under my flat. In Ho Chi Minh City, there are pharmacies everywhere."
+        say: "Yes, there's one right under my flat. In Ho Chee Min City, there are pharmacies everywhere."
+        ask: emma
+        by: tom
+        phrases: ["Yes, there's one…", "there are … everywhere"]
+      - q: "What do you keep in your medicine box at home?"
+        a: "Plasters, antiseptic cream, and some tablets for headaches. Last week I cut my finger when I was cooking, so I needed the plasters!"
+        ask: emma
+        by: tom
+        phrases: ["Plasters, …, and…", "I cut my finger when…", "I needed…"]
+      - q: "Do you often buy medicine, Emma?"
+        a: "Not very often. I still have some cough medicine from my first rainy season. I prefer ginger tea!"
+        ask: tom
+        by: emma
+        phrases: ["Not very often.", "I still have…", "I prefer…"]
+      - q: "Is buying medicine different in England?"
+        a: "A little. You can buy tablets for a headache in a supermarket, but for many medicines you need to see a doctor first."
+        ask: tom
+        by: emma
+        phrases: ["A little.", "You can buy … in…", "you need to … first"]
+      - q: "What do you do when you cut your finger?"
+        a: "I clean it with water, put some antiseptic cream on it, and then a plaster."
+        ask: emma
+        by: tom
+        phrases: ["I clean it…", "put … on it", "and then…"]
+    lines:
+      - {emma: "Let's talk about chemists. Is there a chemist's near your home, Tom?", focus: 0}
+      - {tom: "Yes, there's one right under my flat. In Ho Chi Minh City, there are pharmacies everywhere.", say: "Yes, there's one right under my flat. In Ho Chee Min City, there are pharmacies everywhere.", reveal: 0, vi: "Có, ngay dưới căn hộ. Ở TP. HCM hiệu thuốc ở khắp nơi."}
+      - {emma: "What do you keep in your medicine box at home?", focus: 1}
+      - {tom: "Plasters, antiseptic cream, and some tablets for headaches. Last week I cut my finger when I was cooking, so I needed the plasters!", reveal: 1, vi: "Băng dán, kem sát trùng, thuốc đau đầu. Tuần trước đứt tay khi nấu ăn nên phải dùng băng dán!"}
+      - {tom: "Do you often buy medicine, Emma?", focus: 2}
+      - {emma: "Not very often. I still have some cough medicine from my first rainy season. I prefer ginger tea!", reveal: 2, vi: "Không thường xuyên: vẫn còn thuốc ho từ mùa mưa đầu tiên. Emma thích trà gừng hơn!"}
+      - {tom: "Is buying medicine different in England?", focus: 3}
+      - {emma: "A little. You can buy tablets for a headache in a supermarket, but for many medicines you need to see a doctor first.", reveal: 3, vi: "Hơi khác: thuốc đau đầu mua ở siêu thị được, nhưng nhiều loại phải đi khám trước."}
+      - {emma: "What do you do when you cut your finger?", focus: 4}
+      - {tom: "I clean it with water, put some antiseptic cream on it, and then a plaster.", reveal: 4, vi: "Rửa bằng nước, bôi kem sát trùng, rồi dán băng."}
+
+  - kind: practice
+    chapter: "Nói 2: đóng vai ở hiệu thuốc"
+    heading: "Role-play · You are the customer at a chemist's"
+    heading_vi: "Emma là dược sĩ — tạm dừng video sau mỗi câu và trả lời như khách"
+    items:
+      - {q: "Can I help you?", hint: "Yes, could I have something for a headache / a cough, please?"}
+      - {q: "Have you got a temperature?", hint: "Yes, I have. / No, I haven't. I've got a sore throat."}
+      - {q: "Try these tablets. They're very good.", hint: "Thanks. How often do I take them?"}
+      - {q: "Anything else?", hint: "Yes, I'd like a box of tissues, please."}
+      - {q: "That's eighty-five thousand dong, please.", hint: "Here you are. Thank you."}
+    lines:
+      - emma: "Now, a role-play. I'm the chemist, and you're the customer. Pause the video after each line, and answer."
+        vi: "Đóng vai: Emma là dược sĩ, bạn là khách. Tạm dừng video sau mỗi câu và trả lời."
+      - {emma: "Hello. Can I help you?", focus: 0, pause: 0.5}
+      - {emma: "Have you got a temperature?", focus: 1, pause: 0.5}
+      - {emma: "Try these tablets. They're very good.", focus: 2, pause: 0.5}
+      - {emma: "Anything else?", focus: 3, pause: 0.5}
+      - {emma: "That's eighty-five thousand dong, please.", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che hội thoại ở tr. 60, nhìn tranh, nói lại"
+    items:
+      - {en: "a cut · antiseptic cream · plasters · cotton wool · tablets · a box of tissues · cough medicine", vi: "đồ ở hiệu thuốc"}
+      - {en: "Could I have something for a headache? · I need something for a cold.", vi: "xin thuốc trị …"}
+      - {en: "Try these tablets. · Take two tablets every four hours.", vi: "try: dùng thử · take: uống thuốc"}
+      - {en: "chemist's = pharmacy · chemist = pharmacist", vi: "hiệu thuốc · dược sĩ"}
+      - {en: "Next: Review · Everyday life (pages 61–64), then Unit 24 · Food", vi: "Tiếp theo: ôn tập module, rồi Unit 24"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A cut, antiseptic cream, plasters, cotton wool, tablets, a box of tissues, and cough medicine.", focus: 0}
+      - {tom: "Could I have something for a headache? I need something for a cold.", focus: 1}
+      - {emma: "Try these tablets. Take two tablets every four hours.", focus: 2}
+      - {tom: "The chemist's is the shop. The chemist, or pharmacist, is the person.", focus: 3}
+      - {emma: "That's the end of the Everyday life module. Next time, it's the review on pages sixty-one to sixty-four. Well done!", focus: 4}

@@ -9,13 +9,16 @@
 Đợt 36, người học yêu cầu thêm mỗi chủ đề một video nghe – viết 10 phút chạy liền, gồm mọi từ của unit trong sách, thêm từ
 và câu giao tiếp theo chủ đề (mục 5.9).
 
+Đợt 37, người học: "tiếp tục làm video bài học unit 17-23 của oxford" — module Everyday life, mỗi unit hai video (bài giảng
+mục 5.7, nghe – viết mục 5.9); không sửa video cũ.
+
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, hồ sơ lộ trình | `books/book_oxford_word_skills_basic/`: `Oxford_Word_Skills_Bas.pdf` (bản quét, 254 trang), `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (122 đoạn PDF, 83 MB) |
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–16 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–23 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -142,6 +145,9 @@ irregular verbs (tr. 202).
 | Unit | Bài | Answer key ghi | Đúng theo nhãn trong sách |
 |---|---|---|---|
 | 6 | 2 | 4 a · 5 from/in · 8 asked · 9 spoke | 4 *a preposition*: from / in · 5 *an indefinite article*: a · 8 *an irregular past simple*: spoke · 9 *a regular past simple*: asked |
+| 17 | 3 (ABOUT YOU) | 8 câu trả lời mẫu ("a Japanese person"), có câu không ứng với câu hỏi nào (In the sitting room, About 8 hours) | Bài 2 chỉ có 6 câu hỏi: trả lời 6 câu (video nói rõ) |
+| 22 | 1 | (đề in trùng) câu 10 giống hệt câu 8: *Is / Has she got a temperature?* | Đáp án cả hai câu là Has (video nói rõ) |
+| Word list | — | like *as in* What's he/she/it like? 14, **23**, 62 · have got 10, 13, **21**, … · what's the matter? 16, **21** | Unit 21 (What's the weather like?), Unit 22, Unit 22 — có vẻ số unit của bản thảo cũ; `work/wordlist.json` xếp theo trang thật (mục 5.9) |
 
 Gặp lỗi mới thì thêm vào bảng này. Video phải nói rõ chỗ in nhầm, vì người học chữa bài bằng Answer key.
 
@@ -185,7 +191,7 @@ lại ra y hệt).
 | 4 | Thêm ngoài sách (tùy unit) | `blanks` / `bullets` | Câu đố mô tả đồ vật, tự đặt câu hỏi, mẹo IELTS: đoán loại từ cần điền, xin nhắc lại câu hỏi, đánh vần tên |
 | 5 | Nghe và viết | `blanks` | Emma đọc 6 câu, người học tạm dừng sau mỗi câu và viết từ còn thiếu. Tom chữa, đánh vần từ khó. Như IELTS Listening phần 1 |
 | 6 | Nói 1 | `qa` | 7–10 cặp hỏi đáp về chủ đề: ABOUT YOU của sách (Emma dùng câu mẫu Answer key nếu có), chủ đề IELTS Part 1 gần nhất |
-| 7 | Nói 2 · đến lượt bạn | `practice` (self-paced) | 5 câu hỏi có gợi ý. Emma đọc hết, `pause: 0.5`, câu cuối `pause: 1.5` |
+| 7 | Nói 2 · đến lượt bạn | `practice` (self-paced) | 5 câu hỏi có gợi ý. Emma đọc hết, `pause: 0.5`, câu cuối `pause: 1.0` (từ đợt 37; trước là 1.5 — mục 5.6) |
 | 8 | Tổng kết | `bullets` | 4 điều cần nhớ, Test yourself của sách, unit tiếp theo |
 | 9 | Ôn tập (unit khó) | `blanks` | Lỗi người Việt hay mắc (6 câu sửa lỗi) và một câu đố ôn từ (từ trái nghĩa, "ai là ai", đoán cảm xúc theo tình huống) |
 | 10 | Luyện nói chung (unit khó) | `bullets` (thẻ đề) → `bullets` (ghi chú) → `letter` → `practice` → `qa` | Thẻ đề Part 2 theo chủ đề; ghi chú 1 phút của Tom; bài nói mẫu của Tom và của Emma (đổi vai giám khảo); người học tự nói theo bốn ý trên thẻ; 3 câu thảo luận kiểu Part 3 |
@@ -238,6 +244,9 @@ Cách khai:
 - `page` là **trang PDF** (sách này: trang in + 1), `clip` và `box` tính bằng điểm PDF (trang 496 × 737).
 - Lấy toạ độ: vẽ trang kèm lưới 25 điểm (đợt 29 dùng `grid.py` trong scratchpad: `pymupdf`, vạch đỏ theo x, xanh theo y,
   số mỗi 50 điểm), đọc vùng cần cắt, rồi xem trước khung hình (mục 5.4 bước 4).
+- Khung theo dòng chữ (đoạn văn, hội thoại, Glossary — đợt 37): đo bằng máy thay vì đọc lưới. Dựng vùng bằng `pymupdf` ở 300
+  dpi, thang xám; đếm điểm ảnh tối (< 110) trên mỗi hàng; mỗi dải hàng liền nhau là một dòng chữ, tâm dòng = giữa hai mép (đổi ra
+  điểm PDF: y0 + hàng × 72 / 300). Khung một dòng lấy tâm ± 6 điểm; dòng sách cách nhau khoảng 12 điểm.
 - `box` không dùng với `grid` > 1. Hình chỉ dùng trong `match`, `figure`, `bullets`, `blanks` câu điền từ; khai sai thì
   `check` báo lỗi.
 - Bảng đã ghi sẵn chữ thì bỏ `label`, để khung đỏ tự nói. Tranh không có chữ thì ghi `label` ngắn.
@@ -323,11 +332,24 @@ Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `
   không vừa nửa khung còn lại nên bị thu nhỏ. Rút gọn mục (mục 5.3a).
 - **Mép vùng cắt lộ nửa dòng chữ** của phần liền trên (đợt 30: bảng thứ hai Unit 7). Xem trước khung hình rồi nhích `clip`
   vài điểm.
+- **Khung theo dòng lệch nửa dòng** (đợt 37: đoạn văn Unit 20, Spotlight too / very Unit 19): đọc lưới bằng mắt sai vài điểm,
+  lần sửa thứ hai còn lệch ngược lại. Đo dòng bằng máy (mục 5.3a) thì khớp ngay. Ảnh thu nhỏ dễ đánh lừa: viền khung chạm chữ dòng
+  bên cạnh vì dòng sát nhau — xem khung hình cỡ thật trước khi sửa.
+- **Khoảng lặng cuối cảnh "Đến lượt bạn"** (đợt 37: Unit 17 dựng lần đầu): `pause` 1,5 giây ở câu cuối + `gap` 0,45 + `scene_gap`
+  0,8 + đuôi lặng của giọng đọc = 2,96 giây, sát mức 3 giây người học cho phép. Từ đợt 37 câu cuối `pause: 1.0` (khoảng 2,5 giây),
+  dựng lại Unit 17, 18; test kiểm video từ Unit 17.
+- **Video ngắn hơn mức tối thiểu** (đợt 37): ước lượng đầu Unit 18 6:54, Unit 20 6:06, Unit 21 7:12, Unit 23 6:02; unit khó
+  Unit 19 9:30, Unit 22 9:22 (phải trên 10 phút). Thêm cảnh ngoài sách có ích cho IELTS General Training (mặc gì khi…, nghe và
+  viết giá tiền, câu hay dùng ở chợ, nhiệt độ và dự báo, đóng vai mua đồ, câu đố too / very, email xin nghỉ ốm, đọc nhãn thuốc),
+  không kéo dài câu thoại.
+- **Bỏ cảnh "Nghe và viết"** (mục 5.2 hàng 5) ở unit có nhiều bài trong sách (Unit 17, 19): unit đã có video nghe – viết riêng;
+  ghi ở đầu kịch bản.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
-(đợt 29). Cả sách: 16 video, 2:14:06, 48 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+(đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Cả sách: 23 video bài giảng, 3:21:43,
+85 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -408,7 +430,45 @@ Module People (đợt 29) — gia đình, ngoại hình, tính cách lần đầ
   - Lucy: hàng xóm, quen từ năm 5 tuổi, nay sống ở Bristol, gọi video mỗi tháng; cao, mảnh mai, tóc đỏ ngắn xoăn; rất hòa
     đồng, rất ngăn nắp.
 
-### 5.8 Module tiếp theo: Everyday life (Unit 17–23, Review tr. 61–64)
+Module Everyday life (đợt 37) — **unit khó** in đậm; mọi unit đủ bài tập trong sách (Answer key in lệch ở mục 3.3):
+
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| **17 My routine** | `U17-routine` | 13:22 | 20 | 6 | 1–9 (bài 3: Answer key in lệch) | Cuối tuần, thói quen (8) | Part 2 "your favourite day of the week" (Tom: thứ Bảy, Emma: Chủ nhật); thảo luận (3) | 10 tranh việc trong ngày, đoạn văn cuối tuần, bảng tìm cụm từ, thang tần suất; ôn tập: lỗi hay gặp |
+| 18 Clothes | `U18-clothes` | 8:06 | 16 | 6 | 1–8 | Bài 7: bạn mặc gì (7) | Part 1 "Clothes" (5 câu) | tranh 12 món quần áo, bảng màu, tranh phụ kiện; wear / put on; mặc gì khi…; Nghe và viết |
+| **19 Buying clothes** | `U19-buying-clothes` | 10:58 | 22 | 7 | 1–9 | Bài 9: mua sắm (6) | đóng vai mua đồ; Part 2 "the last time you bought some clothes" (Tom: sơ mi đen, Emma: giày đi bộ); thảo luận (3) | 12 tranh tả quần áo, bảng cỡ, too / very, hội thoại cửa hàng; câu hỏi thêm khi mua đồ; ôn tập: lỗi, too hay very |
+| 20 Money | `U20-money` | 8:15 | 16 | 4 | 1–6 | Bài 6: tiền ở Việt Nam và ở Anh (7) | Part 1 "Money and shopping" (5 câu) | 7 tranh tiền, đoạn văn mua CD, Spotlight đọc giá, 7 quảng cáo; đọc giá đồng; nghe và viết giá; câu ở chợ; Nghe và viết |
+| 21 The weather | `U21-weather` | 8:03 | 16 | 5 | 1–6 | Thời tiết quê bạn (7) | Part 1 "Weather and seasons" (5 câu) | bảng thời tiết, Spotlight a lot / a bit, ảnh bão, đoạn văn; nhiệt độ và dự báo; bài 6 về miền Nam; Nghe và viết |
+| **22 Illness** | `U22-illness` | 11:06 | 18 | 4 | 1–5 (bài 1: câu 10 trùng câu 8) | Sức khỏe (6) | Part 2 "a time when you were ill" (Tom: cúm, Emma: ho mùa mưa); thảo luận (3) | 11 tranh triệu chứng, tranh lời khuyên, Glossary; Nghe và viết; ôn tập: lỗi, câu đố should; email xin nghỉ ốm |
+| 23 At the chemist's | `U23-chemists` | 7:48 | 15 | 5 | 1–3 (bài 3 thành câu đố tranh) | Hiệu thuốc, tủ thuốc (5) | đóng vai ở hiệu thuốc (5 câu) | 7 tranh, hai hội thoại, Glossary và Spotlight; cần mua gì; đọc nhãn thuốc; hội thoại đau họng; Nghe và viết |
+
+Module Everyday life (đợt 37) — sinh hoạt, mua sắm, tiền, thời tiết, sức khỏe:
+- **Tom:**
+  - dậy khoảng 6:30 ngày thường (U02), Chủ nhật sau 9 giờ; ăn sáng rồi mới thay đồ; đi bộ 15 phút đến trường, lớp đầu 7:30;
+    ăn tối với hai bạn cùng phòng (chia nhau nấu), thứ Ba và thứ Năm ăn ở quán; ngủ khoảng 11:30, khoảng bảy tiếng; sáng thứ
+    Bảy đi chợ với bạn cùng phòng, chiều chơi bóng rổ, tối xem phim khoa học viễn tưởng; Chủ nhật gọi bố mẹ ở Đà Lạt, ôn IELTS;
+  - áo phông, quần bò, giày thể thao ("đồng phục sinh viên"); không đeo kính, kính râm mùa khô; luôn đeo đồng hồ (quà của
+    bố); ở quán mặc sơ mi đen — mua ở chợ Bến Thành tháng 9, cỡ M, 150.000 đồng (cỡ L quá rộng); thích mua trực tuyến nhưng
+    quần áo phải thử; ghi danh sách, không mua thứ không cần;
+  - khoảng 700.000 đồng một tuần cho ăn uống; cước điện thoại khoảng 100.000 đồng một tháng; về Đà Lạt bằng xe khách (khoảng
+    300.000 đồng, bảy tiếng); để dành tiền đi trao đổi ở Úc;
+  - Đà Lạt mát quanh năm (15–25 độ), sáng sương mù, tháng 12 tối lạnh; thích tiếng mưa, ghét đi xe máy dưới mưa to;
+  - cúm tháng 12 năm ngoái trước kỳ thi (sốt 39 độ, nằm ba ngày, bạn cùng phòng nấu cháo, chị Hoa dặn uống nhiều nước); email
+    xin nghỉ gửi quản lý quán, Ms Linh; tuần trước đứt tay khi thái rau (đang học nấu ăn); hiệu thuốc ngay dưới căn hộ; tủ
+    thuốc có băng dán, kem sát trùng, thuốc đau đầu.
+- **Emma:**
+  - dậy 6 giờ, học tiếng Việt nửa tiếng trước bữa sáng (U02); đi làm bằng xe ôm công nghệ (khoảng 20 phút); dạy khoảng 25
+    giờ một tuần, thường xong 6 giờ chiều; học tiếng Việt tối thứ Hai và thứ Tư; ngủ khoảng 10:30; sáng thứ Bảy đi chợ rồi nấu
+    món mới; Chủ nhật đi dạo, đọc truyện trinh thám, gọi cho mẹ;
+  - chân váy dài, áo màu kem, xăng-đan; giày thể thao khi đi bộ đường dài; đội mũ mỗi ngày; hầu như không đeo đồng hồ; thích
+    màu xanh lá; mua quần áo khoảng ba lần một năm, thường ở chợ; tháng trước mua giày đi bộ đường dài (cỡ 39, khoảng hai triệu
+    đồng, thẻ ghi nợ) — ở Việt Nam khó tìm cỡ giày của Emma;
+  - ở Anh vé tàu rất đắt, nước máy ở nhà hàng miễn phí; thích trà đá miễn phí ở quán nhỏ; quê ven biển lúc nào cũng có gió nhẹ,
+    thời tiết hay đổi; thích ngày xuân nắng mà không nóng, thấy TP. HCM quá ẩm; ngày mưa ở nhà đọc sách, mùa mưa luôn có ô;
+  - mùa mưa đầu tiên ở Việt Nam bị cảm và ho hai tuần, dược sĩ gần nhà giúp, từ đó luôn có trà gừng; ít uống thuốc; ở Anh khám
+    GP, ở Việt Nam ra hiệu thuốc trước.
+
+### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
 | Unit | Trang | Có thể khó (tới 15 phút) | Gợi ý phần nói | Hình trong sách (đã xem trang) |
 |---|---|---|---|---|
@@ -422,6 +482,10 @@ Module People (đợt 29) — gia đình, ngoại hình, tính cách lần đầ
 
 Nhân vật đã có nhiều chi tiết về giờ giấc (Unit 2), quán cà phê (Unit 16), đi khám (Unit 12) — soát mục 5.7 trước khi viết.
 Phiên Review của module chưa có video. Nếu làm thì dùng cảnh `blanks` ôn từ của cả module, không đếm ngược.
+
+Đã làm ở đợt 37 (bảng mục 5.7): unit khó là 17, 19, 22 như dự kiến. Module tiếp theo: **Food and drink** (Unit 24–28, Review
+tr. 75–77) — 24 Meat and fish (tr. 65), 25 Fruit and vegetables (66–67), 26 Buying food (68–70), 27 In a café (71), 28 In a
+restaurant (72–74). Chưa xem trang; unit ba trang (26, 28) có thể là unit khó, unit một trang (24, 27) cần thêm cảnh ngoài sách.
 
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
@@ -461,7 +525,10 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 - **Word list của sách** (tr. 237–254, tức PDF 236–253; hai cột, mỗi từ kèm số unit):
   - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai lề
     8 điểm thì đọc "11" thành "1l". Lấy hợp của hai lần rồi soát tay theo ảnh trang.
-  - Kết quả ở `work/wordlist.json`: 433 mục của Unit 1–16; `level` để trống vì sách không chia cấp độ.
+  - Kết quả ở `work/wordlist.json`: 679 mục của Unit 1–23; `level` để trống vì sách không chia cấp độ.
+  - Đợt 37 thêm 246 mục Unit 17–23 từ cùng hai lần OCR. Soát khoảng hở giữa các dòng OCR (dòng bị bỏ) rồi xem ảnh: sót *get dressed*
+    (17); bộ tách bỏ qua dòng *red* (18). Ba mục in số unit của bản thảo cũ (mục 3.3) xếp theo trang thật: *like* vào Unit 21, *have
+    got* và *what's the matter?* vào Unit 22; câu chú thích ở `make_wordlist.py` và đầu kịch bản nghe – viết.
   - Soát đủ từ: `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all` phải ra
     "chưa hiện: 0" (test kiểm cả 16 unit).
 - **Sinh kịch bản:** dữ liệu từng unit (từ, nghĩa, câu ví dụ, mục Word list, cách đọc `s` / `se`) ở `work/dictation/units_*.py`.
@@ -473,7 +540,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
    mà Word list không có.
 2. Viết dữ liệu: từ trong sách 20–45 dòng, từ thêm 10–25, câu 14–30. Sinh kịch bản, rồi chạy `check`, `phonemes` (sửa bằng `s`
    / `se`) và `wordlist --level all` (phải ra 0).
-3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:40–10:00 (bản dựng Kokoro dài hơn ước lượng khoảng 6 %: Unit 2 ước 9:51, dựng thật 10:25). Thiếu thì thêm từ, câu; không thêm `pause`.
+3. Ước lượng thời lượng bằng bộ đọc im lặng; nhắm 9:30–10:00 (bản dựng Kokoro dài hơn ước lượng 0–6 %: Unit 2 ước 9:51, dựng thật 10:25; Unit 22 ước 9:02, dựng thật 9:02). Thiếu thì thêm từ, câu; không thêm `pause`.
 4. Dựng video, rồi chạy `python3 web/build.py`.
 
 **Lưu ý:**
@@ -487,7 +554,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**16 video, 2:42:38** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**23 video, 3:49:36** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -507,10 +574,17 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 14 · Character | `U14-character-dictation` | 10:18 | 28 · 30 | 24 | 32 |
 | 15 · Relationships | `U15-relationships-dictation` | 10:05 | 22 · 32 | 23 | 35 |
 | 16 · Feelings | `U16-feelings-dictation` | 10:04 | 22 · 25 | 28 | 35 |
+| 17 · My routine | `U17-routine-dictation` | 10:22 | 31 · 46 | 17 | 28 |
+| 18 · Clothes | `U18-clothes-dictation` | 9:41 | 31 · 47 | 21 | 28 |
+| 19 · Buying clothes | `U19-buying-clothes-dictation` | 9:15 | 30 · 41 | 18 | 29 |
+| 20 · Money | `U20-money-dictation` | 9:21 | 27 · 31 | 22 | 30 |
+| 21 · The weather | `U21-weather-dictation` | 9:14 | 26 · 34 | 20 | 28 |
+| 22 · Illness | `U22-illness-dictation` | 9:44 | 25 · 31 | 26 | 32 |
+| 23 · At the chemist's | `U23-chemists-dictation` | 9:22 | 24 · 16 | 20 | 30 |
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 17 trở đi theo mục 5 (checklist P2-59), kế hoạch module Everyday life ở mục 5.8. Mỗi unit hai video: bài
-   giảng (mục 5) và nghe – viết (mục 5.9).
+1. Video Unit 24 trở đi theo mục 5 (checklist P2-59), module Food and drink (cuối mục 5.8). Mỗi unit hai video: bài giảng
+   (mục 5) và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.
