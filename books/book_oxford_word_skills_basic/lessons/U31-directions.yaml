@@ -1,0 +1,383 @@
+# Video Oxford Word Skills Basic · Unit 31 — I can ask for and give directions (sách in tr. 82–83, Answer key tr. 212).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–4. Bài 1–3 theo Answer key tr. 212 (bài 3: ba hội thoại, mỗi hội thoại một cảnh, bản đồ nhỏ của sách bên
+# trái). Bài 4 (Test yourself): che chữ tr. 82, nhìn năm sơ đồ, nói lại lời chỉ đường — cảnh riêng, tạm dừng rồi nghe Tom.
+# Thêm ngoài sách: giới từ chỉ vị trí (next to, between, opposite, on the corner, at the end of, behind) — hay gặp ở bài bản đồ IELTS
+# Listening; câu khi bị lạc (on foot, could you say that again?); chỉ đường ở thành phố Việt Nam (alley, crossroads, traffic lights,
+# go past); câu đố tình huống; Nghe và viết; Nói 1 (chỉ đường quanh nhà, quanh trường); Nói 2: đóng vai chỉ đường cho khách du lịch
+# (Emma hỏi).
+# Hình trong sách: ba câu hỏi đường và Spotlight Excuse me (tr. 82), năm sơ đồ chỉ đường kèm lời (ba cảnh), ba bản đồ bài 3 (tr. 83).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): chợ nhỏ sau trường đại học, cách căn hộ của Tom năm phút đi bộ (U26);
+# hiệu thuốc dưới căn hộ (U23), trạm xe buýt trước hiệu thuốc (U29); quán cà phê gần trường của Emma, nơi Emma chấm bài chiều thứ
+# Bảy (U27); Emma hơi sợ giao thông (hồ sơ), đi lại bằng xe ôm công nghệ (U17). Mới: Tom ít hỏi đường, dùng bản đồ trên điện thoại.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U31-directions.yaml
+id: U31-directions
+activity: U31-words
+title: "Unit 31 · Directions"
+subtitle: "I can ask for and give directions"
+title_vi: "Hỏi và chỉ đường: Excuse me, how do I get to …? Go straight on, take the second turning on the left, opposite, on the corner"
+tag: "GETTING AROUND · UNIT 31"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 31: directions. Today we'll ask for directions, and give directions, in English. This is very useful in IELTS listening, too."
+        say: "Welcome to Unit thirty-one: directions. Today we'll ask for directions, and give directions, in English. This is very useful in eye-elts listening, too."
+        vi: "Unit 31: hỏi và chỉ đường — rất có ích cho IELTS Listening."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Hỏi đường"
+    heading: "Asking the way"
+    heading_vi: "tr. 82 — How do I get to …? · Do you know the way to …? · Is there a … near here?"
+    image: {pdf: course-book, page: 83, clip: [26, 60, 460, 245]}
+    items:
+      - {box: [28, 63, 300, 92]}
+      - {box: [28, 100, 320, 129]}
+      - {box: [52, 138, 283, 167]}
+      - {box: [28, 177, 240, 234]}
+    lines:
+      - {emma: "Look at page eighty-two. Here are three ways to ask for directions. Excuse me. How do I get to the river from here?", focus: 0, vi: "How do I get to …?: Đến … đi thế nào?"}
+      - {tom: "Excuse me. Do you know the way to the railway station?", focus: 1, vi: "the way to …: đường đến …"}
+      - {emma: "Excuse me. Is there a hotel near here?", focus: 2, vi: "Is there a … near here?: Gần đây có … không?"}
+      - {tom: "Look at the spotlight. It's polite to say excuse me to someone you don't know when you ask them a question.", focus: 3, vi: "excuse me: xin lỗi (mở đầu lịch sự)"}
+
+  - kind: figure
+    chapter: "Chỉ đường (1)"
+    heading: "Giving directions (1)"
+    heading_vi: "go straight on = just keep going: đi thẳng · the second turning on the left: ngã rẽ thứ hai bên trái"
+    image: {pdf: course-book, page: 83, clip: [24, 246, 462, 398]}
+    items:
+      - {box: [26, 248, 200, 396]}
+      - {box: [256, 250, 462, 398]}
+    lines:
+      - {emma: "Now the answers. Go straight on, or just keep going. It's about ten minutes.", focus: 0, vi: "go straight on / just keep going: đi thẳng"}
+      - {tom: "Go along here, and take the second turning on the left.", focus: 1, vi: "turning: chỗ rẽ · take the second turning: rẽ vào đường thứ hai"}
+
+  - kind: figure
+    chapter: "Chỉ đường (2)"
+    heading: "Giving directions (2)"
+    heading_vi: "turn left: rẽ trái · opposite: đối diện · on the corner: ở góc đường"
+    image: {pdf: course-book, page: 83, clip: [24, 400, 462, 537]}
+    items:
+      - {box: [24, 400, 212, 536]}
+      - {box: [256, 400, 462, 536]}
+    lines:
+      - {emma: "Go along here and turn left. The bookshop is opposite the Hotel Plaza.", focus: 0, vi: "opposite: đối diện"}
+      - {tom: "It's the third turning on the right. There's a cinema on the corner.", focus: 1, vi: "on the corner: ở góc đường"}
+
+  - kind: figure
+    chapter: "Chỉ đường (3)"
+    heading: "Giving directions (3)"
+    heading_vi: "turn right at …: rẽ phải ở … · left into Abbey Road: rẽ trái vào đường Abbey · on your right: bên tay phải"
+    image: {pdf: course-book, page: 83, clip: [22, 540, 484, 678]}
+    items:
+      - {box: [24, 541, 250, 670]}
+      - {box: [248, 546, 484, 676]}
+    lines:
+      - {emma: "Turn right at the café, then left into Abbey Road, and the bank is on your right.", say: "Turn right at the cafe, then left into Abbey Road, and the bank is on your right.", focus: 0, vi: "on your right: ở bên phải bạn"}
+      - {tom: "Thanks very much.", focus: 1}
+      - {emma: "You're welcome! You can also say: no problem, or not at all.", focus: 1, vi: "You're welcome / No problem / Not at all: không có gì"}
+
+  - kind: blanks
+    chapter: "Bài 1: sắp xếp câu"
+    heading: "Exercise 1 · Make sentences from the words"
+    heading_vi: "Ví dụ: Go along here and turn right. (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "excuse / I / get / do / bank / the / me / how / to / ?  →  ___", answer: "Excuse me. How do I get to the bank?"}
+      - {n: 2, q: "here / left / along / and / turn / go  →  ___", answer: "Go along here and turn left."}
+      - {n: 3, q: "bank / me / near / there / is / a / excuse / here / ?  →  ___", answer: "Excuse me. Is there a bank near here?"}
+      - {n: 4, q: "the / turning / it's / right / on / the / third  →  ___", answer: "It's the third turning on the right."}
+      - {n: 5, q: "way / the / excuse / to / know / me / do / bank / the / you / ?  →  ___", answer: "Excuse me. Do you know the way to the bank?"}
+      - {n: 6, q: "left / Road / into / Foster / turn  →  ___", answer: "Turn left into Foster Road."}
+    lines:
+      - emma: "Exercise 1. Make sentences from the words. The example is: go along here and turn right. Pause the video and try."
+        say: "Exercise one. Make sentences from the words. The example is: go along here and turn right. Pause the video and try."
+        vi: "Bài 1: sắp xếp từ thành câu."
+      - {tom: "One. Excuse me. How do I get to the bank? Two. Go along here and turn left. Three. Excuse me. Is there a bank near here?", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. It's the third turning on the right. Five. Excuse me. Do you know the way to the bank? Six. Turn left into Foster Road.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành cụm từ"
+    heading: "Exercise 2 · Complete the phrases"
+    heading_vi: "Ví dụ: Turn left or right. (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "Take the second ___", answer: "turning"}
+      - {n: 2, q: "Thanks very ___", answer: "much"}
+      - {n: 3, q: "On the ___", answer: "left / right / corner"}
+      - {n: 4, q: "Excuse ___", answer: "me"}
+      - {n: 5, q: "Keep ___", answer: "going"}
+      - {n: 6, q: "Go straight ___", answer: "on"}
+      - {n: 7, q: "Go along ___", answer: "here"}
+      - {n: 8, q: "Do you know the ___?", answer: "way"}
+    lines:
+      - emma: "Exercise 2. Complete the phrases. The example is: turn left, or turn right. Pause the video and try."
+        say: "Exercise two. Complete the phrases. The example is: turn left, or turn right. Pause the video and try."
+        vi: "Bài 2: hoàn thành cụm từ."
+      - {tom: "One. Take the second turning. Two. Thanks very much. Three. On the left, on the right, or on the corner. Four. Excuse me.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Keep going. Six. Go straight on. Seven. Go along here. Eight. Do you know the way?", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 3: hội thoại 1"
+    heading: "Exercise 3 · Dialogue 1: the cinema"
+    heading_vi: "Dùng bản đồ (X: bạn đang ở đây) — ví dụ: Excuse me (Answer key tr. 212)"
+    image: {pdf: course-book, page: 84, clip: [397, 262, 460, 371]}
+    items:
+      - {n: 1, q: "A: How do I ___ to the cinema from here?", answer: "get"}
+      - {n: 2, q: "B: OK. Go ___ on,", answer: "straight"}
+      - {n: 3, q: "it's the second… no, the third ___", answer: "turning"}
+      - {n: 4, q: "on the ___.", answer: "left"}
+      - {n: 5, q: "A: Thanks very ___.", answer: "much"}
+    lines:
+      - emma: "Exercise 3. Complete the dialogues. Use the maps to help you. X is where you are. Pause the video and try. Dialogue one."
+        say: "Exercise three. Complete the dialogues. Yooz the maps to help you. Ex is where you are. Pause the video and try. Dialogue one."
+        vi: "Bài 3: hoàn thành hội thoại, nhìn bản đồ (X = bạn đang ở đây)."
+      - {emma: "Excuse me. How do I get to the cinema from here?", reveal: [1], focus: 0}
+      - {tom: "OK. Go straight on, and it's the second… no, the third turning on the left.", reveal: [2, 3, 4], focus: 3}
+      - {emma: "Thanks very much.", reveal: [5], focus: 4}
+      - {tom: "You're welcome.", focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 3: hội thoại 2"
+    heading: "Exercise 3 · Dialogue 2: the post office"
+    heading_vi: "Answer key tr. 212"
+    image: {pdf: course-book, page: 84, clip: [396, 376, 460, 486]}
+    items:
+      - {n: 1, q: "A: ___ me.", answer: "Excuse"}
+      - {n: 2, q: "Is there a post office ___ here?", answer: "near"}
+      - {n: 3, q: "B: Yes. Go ___ here", answer: "along"}
+      - {n: 4, q: "and ___ the second", answer: "take"}
+      - {n: 5, q: "the second ___", answer: "turning"}
+      - {n: 6, q: "on the ___.", answer: "right"}
+      - {n: 7, q: "The post office is ___ the bank.", answer: "opposite"}
+      - {n: 8, q: "A: ___ very much.", answer: "Thanks"}
+    lines:
+      - {emma: "Dialogue two. Pause the video and try.", focus: 0}
+      - {emma: "Excuse me. Is there a post office near here?", reveal: [1, 2], focus: 1}
+      - {tom: "Yes. Go along here, and take the second turning on the right. The post office is opposite the bank.", reveal: [3, 4, 5, 6, 7], focus: 6}
+      - {emma: "Thanks very much.", reveal: [8], focus: 7}
+      - {tom: "That's OK. No problem.", focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 3: hội thoại 3"
+    heading: "Exercise 3 · Dialogue 3: the Bonham Hotel"
+    heading_vi: "Answer key tr. 212"
+    image: {pdf: course-book, page: 84, clip: [394, 494, 463, 622]}
+    items:
+      - {n: 1, q: "A: Do you know the ___ to the Bonham Hotel?", answer: "way"}
+      - {n: 2, q: "C: Yes. ___ left", answer: "Turn"}
+      - {n: 3, q: "___ Frith Street,", answer: "into"}
+      - {n: 4, q: "the hotel is on the next ___", answer: "corner"}
+      - {n: 5, q: "on your ___.", answer: "right"}
+    lines:
+      - {emma: "Dialogue three. Pause the video and try.", focus: 0}
+      - {emma: "Excuse me. Do you know the way to the Bonham Hotel?", reveal: [1], focus: 0}
+      - {tom: "No, I'm sorry, I don't.", focus: 0}
+      - {emma: "OK. Thanks. Excuse me, do you know the Bonham Hotel?", focus: 1}
+      - {tom: "Yes. Turn left into Frith Street, and the hotel is on the next corner, on your right.", reveal: [2, 3, 4, 5], focus: 4}
+      - {emma: "Thanks very much. And the first person says: not at all.", focus: 4, vi: "Not at all: không có gì"}
+
+  - kind: bullets
+    chapter: "Giới từ chỉ vị trí"
+    heading: "Where is it? · prepositions of place"
+    heading_vi: "Thêm ngoài sách — hay gặp ở bài bản đồ IELTS Listening"
+    items:
+      - {en: "next to · between", vi: "ngay cạnh · ở giữa"}
+      - {en: "opposite · in front of · behind", vi: "đối diện · phía trước · phía sau"}
+      - {en: "on the corner (of …)", vi: "ở góc đường"}
+      - {en: "at the end of the road", vi: "ở cuối đường"}
+      - {en: "on your left · on your right", vi: "bên tay trái · bên tay phải"}
+    lines:
+      - {emma: "In IELTS listening, there's often a map, and you hear where places are. Next to means right beside. Between means in the middle of two places: the bank is between the café and the bookshop.", say: "In eye-elts listening, there's often a map, and you hear where places are. Next to means right beside. Between means in the middle of two places: the bank is between the cafe and the bookshop.", focus: 0, vi: "between A and B: giữa A và B"}
+      - {tom: "Opposite: on the other side of the street. In front of, and behind. The market near my flat is behind the university.", focus: 1}
+      - {emma: "On the corner: where two streets meet. There's a cinema on the corner.", focus: 2}
+      - {tom: "At the end of the road. Emma's parents have a bus stop at the end of the road.", focus: 3}
+      - {emma: "And on your left, or on your right. Walk for two minutes, and it's on your left.", focus: 4}
+
+  - kind: bullets
+    chapter: "Khi bị lạc"
+    heading: "When you're lost · useful phrases"
+    heading_vi: "Thêm ngoài sách — nhờ giúp, hỏi xa gần, xin nhắc lại"
+    items:
+      - {en: "Sorry, I'm lost. Can you help me?", vi: "Xin lỗi, tôi bị lạc. Bạn giúp tôi được không?"}
+      - {en: "Could you show me on the map?", vi: "Bạn chỉ trên bản đồ giúp tôi được không?"}
+      - {en: "Is it far? — It's about five minutes on foot.", vi: "Có xa không? — Đi bộ khoảng năm phút."}
+      - {en: "Can I walk there, or should I take a taxi?", vi: "Đi bộ được không, hay nên đi taxi?"}
+      - {en: "Sorry, could you say that again, please?", vi: "Xin lỗi, bạn nói lại được không?"}
+      - {en: "Sorry, I don't know. I'm not from here.", vi: "Xin lỗi, tôi không biết. Tôi không phải người ở đây."}
+    lines:
+      - {emma: "What do you say when you're lost? Sorry, I'm lost. Can you help me?", focus: 0, vi: "lost: bị lạc"}
+      - {tom: "Could you show me on the map? Most people have a map on their phone now.", focus: 1}
+      - {emma: "Is it far? It's about five minutes on foot. On foot means walking.", focus: 2, vi: "on foot: đi bộ"}
+      - {tom: "Can I walk there, or should I take a taxi?", focus: 3}
+      - {emma: "If people speak fast, say: sorry, could you say that again, please? That's useful in the IELTS speaking test, too.", say: "If people speak fast, say: sorry, could you say that again, please? That's useful in the eye-elts speaking test, too.", focus: 4}
+      - {tom: "And if someone asks you the way, but you don't know: sorry, I don't know. I'm not from here.", focus: 5}
+
+  - kind: bullets
+    chapter: "Chỉ đường ở thành phố Việt Nam"
+    heading: "Directions in a Vietnamese city"
+    heading_vi: "Thêm ngoài sách — hẻm, ngã tư, đèn giao thông bằng tiếng Anh"
+    items:
+      - {en: "an alley: a very small street", vi: "hẻm, ngõ"}
+      - {en: "a crossroads: where two roads cross", vi: "ngã tư"}
+      - {en: "the traffic lights", vi: "đèn giao thông"}
+      - {en: "Go past the traffic lights.", vi: "Đi qua đèn giao thông."}
+      - {en: "It's down a small alley, number 25.", vi: "Ở trong hẻm nhỏ, số 25."}
+    lines:
+      - {tom: "In Vietnamese cities, many houses are down small alleys. An alley is a very small street.", focus: 0, vi: "alley: hẻm"}
+      - {emma: "At the crossroads, turn left. A crossroads is where two roads cross.", focus: 1, vi: "crossroads: ngã tư"}
+      - {tom: "The traffic lights: red, yellow, and green. We'll see them again in Unit 32.", say: "The traffic lights: red, yellow, and green. We'll see them again in Unit thirty-two.", focus: 2}
+      - {emma: "Go past the traffic lights. Past means you don't stop or turn: you continue.", focus: 3, vi: "go past: đi qua"}
+      - {tom: "It's down a small alley, number twenty-five. Lots of my friends live down alleys, and delivery drivers often get lost!", say: "It's down a small alley, number twenty-five. Lots of my friends liv down alleys, and delivery drivers often get lost!", focus: 4}
+
+  - kind: blanks
+    chapter: "Bạn nói gì?"
+    heading: "What do you say?"
+    heading_vi: "Thêm ngoài sách — nghe tình huống, nói câu phù hợp; tạm dừng video sau mỗi tình huống"
+    items:
+      - {n: 1, q: "You want to find a chemist's.  →  ___", answer: "Excuse me, is there a chemist's near here?"}
+      - {n: 2, q: "You don't know the way to the station.  →  ___", answer: "Excuse me, how do I get to the station?"}
+      - {n: 3, q: "You didn't hear the directions.  →  ___", answer: "Sorry, could you say that again, please?"}
+      - {n: 4, q: "Someone asks you the way, but you don't know.  →  ___", answer: "Sorry, I don't know. I'm not from here."}
+      - {n: 5, q: "You want to know if you can walk.  →  ___", answer: "Is it far?"}
+      - {n: 6, q: "Someone says: thanks very much.  →  ___", answer: "You're welcome."}
+    lines:
+      - emma: "What do you say? I describe a situation, and you say the right phrase. Pause the video after each one."
+        vi: "Nghe tình huống, nói câu phù hợp."
+      - {emma: "Number one. You want to find a chemist's.", focus: 0}
+      - {tom: "Excuse me, is there a chemist's near here?", reveal: 1, focus: 0}
+      - {emma: "Number two. You don't know the way to the station.", focus: 1}
+      - {tom: "Excuse me, how do I get to the station?", reveal: 2, focus: 1}
+      - {emma: "Number three. You didn't hear the directions.", focus: 2}
+      - {tom: "Sorry, could you say that again, please?", reveal: 3, focus: 2}
+      - {emma: "Number four. Someone asks you the way, but you don't know.", focus: 3}
+      - {tom: "Sorry, I don't know. I'm not from here.", reveal: 4, focus: 3}
+      - {emma: "Number five. You want to know if you can walk.", focus: 4}
+      - {tom: "Is it far?", reveal: 5, focus: 4}
+      - {emma: "And number six. Someone says: thanks very much.", focus: 5}
+      - {tom: "You're welcome.", reveal: 6, focus: 5}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · directions"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "Go ___ on for about five minutes.", answer: "straight"}
+      - {n: 2, q: "Take the second ___ on the left.", answer: "turning"}
+      - {n: 3, q: "The bank is ___ the post office.", answer: "opposite"}
+      - {n: 4, q: "There's a café on the ___.", answer: "corner"}
+      - {n: 5, q: "Turn right ___ Abbey Road.", answer: "into"}
+      - {n: 6, q: "Do you know the ___ to the station?", answer: "way"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Go straight on for about five minutes.", focus: 0}
+      - {emma: "Number two. Take the second turning on the left.", focus: 1}
+      - {emma: "Number three. The bank is opposite the post office.", focus: 2}
+      - {emma: "Number four. There's a café on the corner.", say: "Number four. There's a cafe on the corner.", focus: 3}
+      - {emma: "Number five. Turn right into Abbey Road.", focus: 4}
+      - {emma: "Number six. Do you know the way to the station?", focus: 5}
+      - {tom: "Straight: S, T, R, A, I, G, H, T, with a silent g h. Turning: T, U, R, N, I, N, G. Opposite: double p.", say: "Straight: ess, tee, ar, eigh, eye, gee, aitch, tee, with a silent gee aitch. Turning: tee, yoo, ar, en, eye, en, gee. Opposite: double pee.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Corner. Into: one word. And way: W, A, Y.", say: "Corner. Into: one word. And way: double you, eigh, why.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: chỉ đường gần nhà"
+    heading: "Speaking 1 · Directions near you"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How do I get from your flat to the market, Tom?"
+        a: "It's easy. Go out of my building and turn left. Then take the first turning on the right. The market is behind the university."
+        ask: emma
+        by: tom
+        phrases: ["Go out of … and turn left.", "take the first turning on the right", "behind…"]
+      - q: "Is there a café near your school, Emma?"
+        a: "Yes, there's one on the corner, opposite the bank. Just keep going for two minutes, and it's on your left."
+        ask: tom
+        by: emma
+        phrases: ["on the corner, opposite…", "Just keep going for…", "on your left"]
+      - q: "Do you often ask for directions?"
+        a: "Not really. I usually use the map on my phone. But in Da Lat, tourists often ask me the way to the market."
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "I usually use…", "ask me the way to…"]
+      - q: "Is it easy to find places in Ho Chi Minh City?"
+        a: "Not always! The streets are very busy, and many small streets look the same. I always check the map on my phone."
+        ask: tom
+        by: emma
+        phrases: ["Not always!", "look the same", "I always check…"]
+    lines:
+      - {emma: "Let's talk about directions near you. Tom, how do I get from your flat to the market?", focus: 0}
+      - {tom: "It's easy. Go out of my building and turn left. Then take the first turning on the right. The market is behind the university.", reveal: 0, vi: "Ra khỏi tòa nhà, rẽ trái, rồi rẽ phải ở ngã rẽ đầu tiên; chợ ở sau trường đại học."}
+      - {tom: "Is there a café near your school, Emma?", say: "Is there a cafe near your school, Emma?", focus: 1}
+      - {emma: "Yes, there's one on the corner, opposite the bank. Just keep going for two minutes, and it's on your left.", reveal: 1, vi: "Có, ở góc đường, đối diện ngân hàng; đi thẳng hai phút, ở bên trái."}
+      - {emma: "Do you often ask for directions?", focus: 2}
+      - {tom: "Not really. I usually use the map on my phone. But in Da Lat, tourists often ask me the way to the market.", say: "Not really. I usually yooz the map on my phone. But in Dah Lot, tourists often ask me the way to the market.", reveal: 2, vi: "Ít khi; Tom dùng bản đồ trên điện thoại. Ở Đà Lạt, khách du lịch hay hỏi Tom đường ra chợ."}
+      - {tom: "Is it easy to find places in Ho Chi Minh City?", say: "Is it easy to find places in Ho Chee Min City?", focus: 3}
+      - {emma: "Not always! The streets are very busy, and many small streets look the same. I always check the map on my phone.", reveal: 3, vi: "Không phải lúc nào cũng dễ: đường đông, nhiều hẻm nhỏ trông giống nhau."}
+
+  - kind: blanks
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: the maps on page 82"
+    heading_vi: "Che chữ tr. 82, nhìn năm sơ đồ và nói lời chỉ đường — tạm dừng video sau mỗi sơ đồ"
+    items:
+      - {n: 1, q: "Map 1: the long straight road  →  ___", answer: "Go straight on. / Just keep going."}
+      - {n: 2, q: "Map 2: the second road on the left  →  ___", answer: "Take the second turning on the left."}
+      - {n: 3, q: "Map 3: the bookshop and the Hotel Plaza  →  ___", answer: "Turn left. The bookshop is opposite the Hotel Plaza."}
+      - {n: 4, q: "Map 4: the cinema  →  ___", answer: "It's the third turning on the right."}
+      - {n: 5, q: "Map 5: the café, Abbey Road, the bank  →  ___", answer: "Turn right at the café, then left into Abbey Road."}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the words on page eighty-two, and look at the five maps. Can you remember the directions? Pause the video after each map."
+        say: "Exercise four is a test. Cover the words on page eighty-two, and look at the five maps. Can you remember the directions? Pause the video after each map."
+        vi: "Bài 4: che chữ, nhìn sơ đồ, nói lại lời chỉ đường."
+      - {tom: "Map one. Go straight on, or just keep going.", reveal: [1], focus: 0}
+      - {tom: "Map two. Go along here, and take the second turning on the left.", reveal: [2], focus: 1}
+      - {tom: "Map three. Go along here and turn left. The bookshop is opposite the Hotel Plaza.", reveal: [3], focus: 2}
+      - {tom: "Map four. It's the third turning on the right. There's a cinema on the corner.", reveal: [4], focus: 3}
+      - {tom: "Map five. Turn right at the café, then left into Abbey Road, and the bank is on your right.", say: "Map five. Turn right at the cafe, then left into Abbey Road, and the bank is on your right.", reveal: [5], focus: 4}
+
+  - kind: practice
+    chapter: "Nói 2: chỉ đường cho khách"
+    heading: "Role-play · A tourist asks you the way"
+    heading_vi: "Emma là khách du lịch — tạm dừng video sau mỗi câu và chỉ đường quanh nơi bạn ở"
+    items:
+      - {q: "Excuse me. Is there a bank near here?", hint: "Yes. Go along here and take the first turning on the left …"}
+      - {q: "Excuse me. How do I get to the market from here?", hint: "Go straight on, and it's on your right …"}
+      - {q: "Do you know the way to the bus station?", hint: "Sorry, I don't. / Yes, turn left at the café …"}
+      - {q: "Is it far?", hint: "No, it's about five minutes. / Yes, you can take a bus."}
+      - {q: "Thanks very much.", hint: "You're welcome. / No problem."}
+    lines:
+      - emma: "Your turn. I'm a tourist in your town, and I ask you the way. Pause the video after each question, and give directions."
+        vi: "Đến lượt bạn: Emma là khách du lịch hỏi đường — bạn chỉ đường."
+      - {emma: "Excuse me. Is there a bank near here?", focus: 0, pause: 0.5}
+      - {emma: "Excuse me. How do I get to the market from here?", focus: 1, pause: 0.5}
+      - {emma: "Do you know the way to the bus station?", focus: 2, pause: 0.5}
+      - {emma: "Is it far?", focus: 3, pause: 0.5}
+      - {emma: "Thanks very much.", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4: che chữ tr. 82, nhìn sơ đồ, nói lại"
+    items:
+      - {en: "Excuse me. How do I get to …? · Do you know the way to …? · Is there a … near here?", vi: "hỏi đường"}
+      - {en: "Go straight on. · Just keep going. · Go along here.", vi: "đi thẳng"}
+      - {en: "Turn left / right (into …). · Take the second turning on the left.", vi: "rẽ trái / phải · ngã rẽ thứ hai"}
+      - {en: "opposite · on the corner · on your right · next to · between", vi: "vị trí"}
+      - {en: "Thanks very much. — You're welcome. / No problem. / Not at all.", vi: "cảm ơn — không có gì"}
+      - {en: "Next: Unit 32 · Roads and traffic", vi: "Tiếp theo: Unit 32 · Đường sá và giao thông"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Excuse me. How do I get to the bank? Do you know the way to the station? Is there a hotel near here?", focus: 0}
+      - {tom: "Go straight on. Just keep going. Go along here.", focus: 1}
+      - {emma: "Turn left into Abbey Road. Take the second turning on the left.", focus: 2}
+      - {tom: "Opposite, on the corner, on your right, next to, and between.", focus: 3}
+      - {emma: "Thanks very much. You're welcome, no problem, or not at all.", focus: 4}
+      - {tom: "Next time, Unit 32: roads and traffic. See you then!", say: "Next time, Unit thirty-two: roads and traffic. See you then!", focus: 5}

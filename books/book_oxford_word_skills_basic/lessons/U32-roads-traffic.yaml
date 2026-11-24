@@ -1,0 +1,472 @@
+# Video Oxford Word Skills Basic · Unit 32 — I can talk about roads and traffic (sách in tr. 84–85, Answer key tr. 212).
+# UNIT KHÓ (đợt 39): 2 trang, hai phần — 12 từ trong tranh khu phố (junction, roundabout, traffic jam, pedestrian crossing…) và
+# hội thoại đường cao tốc (how far, motorway, speed limit, rush hour, lane, overtake), Glossary nhiều từ — giao thông là chủ đề hay
+# gặp ở IELTS (Part 1–3, Writing Task 2) — video khoảng 13 phút: phần sách, rồi giao thông ở Việt Nam, ÔN TẬP (lỗi hay gặp, tự kiểm
+# tra tranh khu phố) và LUYỆN NÓI CHUNG (Part 2 "a place in your city where there is often a lot of traffic", hai bài mẫu; ba câu
+# thảo luận kiểu Part 3); thêm How far? / How long? (khoảng cách, thời gian). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời
+# `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 212 (bài 5: câu có hai chỗ trống tách 2a/2b, 4a/4b). Bài 3 (Test
+# yourself): cảnh tự kiểm tra tranh khu phố ở phần ôn tập (khung đỏ ở số được hỏi, đáp án hiện thành nhãn khi Tom trả lời). Bài 6
+# (ABOUT YOUR COUNTRY): Tom trả lời về Việt Nam, Emma thêm về nước Anh (cảnh Nói 1; Answer key là câu của "a Turkish person").
+# Hình trong sách: tranh khu phố 12 mục (tr. 84, hai cảnh nửa trên / nửa dưới kèm danh sách tên, khung theo số), hội thoại Beth – Marco (tr. 85, khung theo dòng —
+# Emma đọc Beth, Tom đọc Marco), Glossary hai cảnh (tranh accident, lane).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom biết đi xe máy (hồ sơ: bố dạy), ghét đi xe máy dưới mưa to (U21);
+# Emma không đi xe máy, hơi sợ giao thông, giận xe máy chạy trên vỉa hè (hồ sơ), đi xe ôm công nghệ (U17). Mới: Tom thỉnh thoảng
+# đi xe máy, tránh giờ cao điểm; vòng xoay lớn gần trường đại học hay kẹt xe; đường trước trường Emma đông vào giờ đưa đón học sinh.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U32-roads-traffic.yaml
+id: U32-roads-traffic
+activity: U32-words
+title: "Unit 32 · Roads and traffic"
+subtitle: "I can talk about roads and traffic"
+title_vi: "Đường sá và giao thông: junction, roundabout, traffic jam, pedestrian crossing, motorway, speed limit, rush hour, overtake — kèm ôn tập và luyện nói"
+tag: "GETTING AROUND · UNIT 32"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 32: roads and traffic. Today: words for roads in town and out of town, and how to talk about traffic. Traffic is a very common IELTS topic, so this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit thirty-two: roads and traffic. Today: words for roads in town and out of town, and how to talk about traffic. Traffic is a very common eye-elts topic, so this video is longer, with a review and speaking practice."
+        vi: "Unit 32: đường sá và giao thông — chủ đề hay gặp ở IELTS; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Trong thành phố (1)"
+    heading: "A · In town (1)"
+    heading_vi: "Tranh trong sách tr. 84, nửa trên — số 1–8, khung đỏ theo số"
+    image: {pdf: course-book, page: 85, clip: [46, 88, 438, 222]}
+    items:
+      - {box: [120, 92, 184, 132]}
+      - {box: [222, 96, 312, 136]}
+      - {box: [300, 96, 358, 145]}
+      - {box: [356, 96, 420, 154]}
+      - {box: [48, 166, 104, 220]}
+      - {box: [138, 154, 174, 175]}
+      - {box: [196, 162, 348, 216]}
+      - {box: [332, 160, 370, 214]}
+    lines:
+      - {emma: "Look at page eighty-four. Part A: in town. Number one is a junction: a place where roads meet.", focus: 0, vi: "junction: giao lộ"}
+      - {tom: "Two: traffic: all the cars, buses and motorbikes on the road. Traffic is uncountable: a lot of traffic.", focus: 1, vi: "traffic (U): xe cộ — không đếm được"}
+      - {emma: "Three: a roundabout. The cars go round and round.", focus: 2, vi: "roundabout: vòng xoay, bùng binh"}
+      - {tom: "Four: a traffic jam: a long line of cars that can't move.", focus: 3, vi: "traffic jam: kẹt xe"}
+      - {emma: "Five: a car park: a place where you leave your car.", focus: 4, vi: "car park: bãi đỗ xe"}
+      - {tom: "Six: a speed camera. It takes photos of cars that go too fast.", focus: 5, vi: "speed camera: camera bắn tốc độ"}
+      - {emma: "Seven: a main road: a big, important road.", focus: 6, vi: "main road: đường lớn"}
+      - {tom: "Eight: a road sign. It tells you where the road goes.", focus: 7, vi: "road sign: biển chỉ đường"}
+
+  - kind: figure
+    chapter: "Trong thành phố (2)"
+    heading: "A · In town (2)"
+    heading_vi: "Tranh trong sách tr. 84, nửa dưới — số 9–12 và danh sách 12 từ"
+    image: {pdf: course-book, page: 85, clip: [46, 200, 438, 390]}
+    items:
+      - {box: [50, 218, 122, 280]}
+      - {box: [134, 264, 164, 296]}
+      - {box: [208, 320, 258, 350]}
+      - {box: [260, 312, 308, 350]}
+    lines:
+      - {emma: "Nine: a petrol station, where you buy petrol for your car.", focus: 0, vi: "petrol station: cây xăng"}
+      - {tom: "Ten: traffic lights: red, amber, and green. Amber is the British word for this yellow light.", focus: 1, vi: "traffic lights: đèn giao thông"}
+      - {emma: "Eleven: a pedestrian crossing. A pedestrian is a person who is walking.", focus: 2, vi: "pedestrian crossing: vạch qua đường"}
+      - {tom: "And twelve: the pavement: the part at the side of the road where people walk.", focus: 3, vi: "pavement: vỉa hè"}
+
+  - kind: blanks
+    chapter: "Bài 1: chọn từ đúng"
+    heading: "Exercise 1 · Circle the correct answer"
+    heading_vi: "Ví dụ: traffic light (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "petrol station / jam  →  ___", answer: "petrol station"}
+      - {n: 2, q: "main sign / road  →  ___", answer: "main road"}
+      - {n: 3, q: "speed light / camera  →  ___", answer: "speed camera"}
+      - {n: 4, q: "road camera / sign  →  ___", answer: "road sign"}
+      - {n: 5, q: "pedestrian crossing / park  →  ___", answer: "pedestrian crossing"}
+      - {n: 6, q: "car road / park  →  ___", answer: "car park"}
+      - {n: 7, q: "traffic jam / crossing  →  ___", answer: "traffic jam"}
+    lines:
+      - emma: "Exercise 1. Circle the correct answer. The example is: traffic light, not traffic park. Pause the video and try."
+        say: "Exercise one. Circle the correct answer. The example is: traffic light, not traffic park. Pause the video and try."
+        vi: "Bài 1: chọn từ đúng."
+      - {tom: "One. Petrol station. Two. Main road. Three. Speed camera. Four. Road sign.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Pedestrian crossing. Six. Car park. Seven. Traffic jam.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "Ví dụ: You can go – the traffic light is green. (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "Where's the nearest petrol ___?", answer: "station"}
+      - {n: 2, q: "We live on a noisy ___ road.", answer: "main"}
+      - {n: 3, q: "Can you read that road ___?", answer: "sign"}
+      - {n: 4, q: "The car ___ was full, so we parked on the street.", answer: "park"}
+      - {n: 5, q: "Drivers have to stop at a pedestrian ___.", answer: "crossing"}
+      - {n: 6, q: "Be careful! There are ___ cameras on the main road.", answer: "speed"}
+      - {n: 7, q: "At the ___, do we go left, right or straight on?", answer: "roundabout"}
+      - {n: 8, q: "The ___ is always bad between 8 a.m. and 10 a.m.", answer: "traffic"}
+      - {n: 9, q: "Walk on the ___, not in the road!", answer: "pavement"}
+      - {n: 10, q: "Drive slowly and turn left at the next ___.", answer: "junction"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. The example is: you can go: the traffic light is green. Pause the video and try."
+        say: "Exercise two. Complete the sentences. The example is: you can go: the traffic light is green. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu."
+      - {tom: "One. The nearest petrol station. Two. A noisy main road. Three. That road sign. Four. The car park was full.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. A pedestrian crossing. Six. Speed cameras. Seven. At the roundabout.", reveal: [5, 6, 7], focus: 6}
+      - {tom: "Eight. The traffic is always bad. Nine. Walk on the pavement. Ten. The next junction.", reveal: [8, 9, 10], focus: 9}
+
+  - kind: bullets
+    chapter: "Ngoài thành phố"
+    heading: "B · Out of town"
+    heading_vi: "Hội thoại tr. 85 — Emma đọc Beth (B), Tom đọc Marco (M)"
+    image: {pdf: course-book, page: 86, clip: [28, 62, 252, 288]}
+    items:
+      - {en: "How far is it from London to Bath? — About 115 miles.", vi: "Từ London đến Bath bao xa? — Khoảng 115 dặm.", box: [29, 78, 250, 101]}
+      - {en: "The best way? — Take the M4 motorway.", vi: "Đi đường nào tốt nhất? — Đi cao tốc M4.", box: [29, 101, 250, 147]}
+      - {en: "The speed limit? — 70 miles an hour.", vi: "Tốc độ tối đa? — 70 dặm một giờ.", box: [29, 147, 250, 193]}
+      - {en: "Are they busy? — Yes, in the rush hour.", vi: "Có đông không? — Có, vào giờ cao điểm.", box: [29, 193, 250, 229]}
+      - {en: "Three lanes, so it's easy to overtake.", vi: "Ba làn đường nên dễ vượt.", box: [29, 228, 250, 263]}
+      - {en: "Remember to drive on the left!", vi: "Nhớ lái xe bên trái nhé!", box: [29, 262, 250, 287]}
+    lines:
+      - {emma: "Now part B: out of town. Beth and Marco are talking. I'm Beth, and Tom is Marco.", focus: 0}
+      - {tom: "How far is it from London to Bath?", focus: 0, vi: "How far?: bao xa?"}
+      - {emma: "It's about a hundred and fifteen miles. That's a hundred and eighty-five kilometres.", focus: 0, vi: "mile: dặm (khoảng 1,6 km)"}
+      - {tom: "And what's the best way to get there?", focus: 1}
+      - {emma: "Right. Take the M4 motorway from London. At junction eighteen, take the A46. It's ten miles from there.", say: "Right. Take the M4 motorway from London. At junction eigh-teen, take the A46. It's ten miles from there.", focus: 1, vi: "motorway: đường cao tốc"}
+      - {tom: "Thanks. And what's the speed limit on motorways here?", focus: 2}
+      - {emma: "Seventy miles an hour. That's about a hundred and ten kilometres an hour.", focus: 2}
+      - {tom: "OK. And are they very busy?", focus: 3}
+      - {emma: "Yes, and you get traffic jams in the rush hour, especially when there's an accident.", focus: 3}
+      - {tom: "But you still use the motorway?", say: "But you still yooz the motorway?", focus: 4}
+      - {emma: "Yes, because there are three lanes on most motorways in Britain, so it's easy to overtake.", focus: 4}
+      - {emma: "Oh, and Marco: remember to drive on the left!", focus: 5}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary · out of town (1)"
+    heading_vi: "tr. 85 — How far?: bao xa? · motorway: cao tốc · speed limit: tốc độ tối đa · rush hour: giờ cao điểm"
+    image: {pdf: course-book, page: 86, clip: [258, 62, 490, 170]}
+    items:
+      - {box: [262, 85, 488, 97]}
+      - {box: [262, 97, 488, 109]}
+      - {box: [262, 109, 488, 121]}
+      - {box: [262, 121, 488, 133]}
+      - {box: [262, 133, 488, 145]}
+      - {box: [262, 145, 488, 169]}
+    lines:
+      - {emma: "Look at the glossary. How far is it? means how many kilometres, or miles, is it?", focus: 0, vi: "How far is it?: bao xa?"}
+      - {tom: "Take the M4: go on to the M4, and travel on it.", focus: 1}
+      - {emma: "A motorway: a large, fast road between towns.", focus: 2, vi: "motorway (Anh): đường cao tốc"}
+      - {tom: "The speed limit: the fastest speed you are permitted to go.", focus: 3, vi: "speed limit: tốc độ tối đa cho phép"}
+      - {emma: "A busy road has a lot of cars on it. The opposite is quiet.", focus: 4, vi: "busy ≠ quiet: đông ≠ vắng"}
+      - {tom: "The rush hour: the time when a lot of people are travelling to and from work.", focus: 5, vi: "rush hour: giờ cao điểm"}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary · out of town (2)"
+    heading_vi: "tr. 85 — accident: tai nạn · lane: làn đường · overtake: vượt · drive: lái xe"
+    image: {pdf: course-book, page: 86, clip: [258, 168, 490, 320]}
+    items:
+      - {box: [262, 170, 488, 221]}
+      - {box: [262, 223, 488, 290]}
+      - {box: [262, 295, 488, 307]}
+      - {box: [262, 307, 488, 319]}
+    lines:
+      - {emma: "An accident: when something bad happens, for example, cars crash.", focus: 0, vi: "accident: tai nạn"}
+      - {tom: "A lane: part of the road, with white lines. Many motorways have three lanes.", focus: 1, vi: "lane: làn đường"}
+      - {emma: "Overtake: pass another car by going faster.", focus: 2, vi: "overtake: vượt xe khác"}
+      - {tom: "And drive: go somewhere in your car. But for a motorbike, we say ride: I ride my motorbike.", focus: 3, vi: "drive a car · ride a motorbike"}
+
+  - kind: blanks
+    chapter: "Bài 4: viết từ theo nghĩa"
+    heading: "Exercise 4 · Cover the glossary. Write the words for the meanings."
+    heading_vi: "Ví dụ: the part of the road where cars travel, with white lines → lane (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "A large, fast road between two towns.  →  ___", answer: "motorway"}
+      - {n: 2, q: "The busy time when people go to work.  →  ___", answer: "rush hour"}
+      - {n: 3, q: "Pass another car by driving faster.  →  ___", answer: "overtake"}
+      - {n: 4, q: "The fastest speed you are permitted to go.  →  ___", answer: "speed limit"}
+      - {n: 5, q: "When something bad happens, e.g. cars crash.  →  ___", answer: "accident"}
+      - {n: 6, q: "The opposite of a busy road.  →  ___", answer: "a quiet road"}
+    lines:
+      - emma: "Exercise 4. Cover the glossary, and write the words for the meanings. The example is: lane. Pause the video and try."
+        say: "Exercise four. Cover the glossary, and write the words for the meanings. The example is: lane. Pause the video and try."
+        vi: "Bài 4: che Glossary, viết từ theo nghĩa."
+      - {tom: "One. Motorway. Two. Rush hour. Three. Overtake.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Speed limit. Five. Accident. Six. A quiet road.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Ví dụ: You can take a country road, but the motorway is quicker. (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "It's a very ___ road in the rush hour.", answer: "busy"}
+      - {n: "2a", q: "Go into the fast ___", answer: "lane"}
+      - {n: "2b", q: "when you ___ other cars on the motorway.", answer: "overtake"}
+      - {n: 3, q: "How ___ is it from Paris to Marseille? ~ It's 740 kms.", answer: "far"}
+      - {n: "4a", q: "The best way to get to the airport is to ___ the M25.", answer: "take"}
+      - {n: "4b", q: "Oh, remember to ___ on the left!", answer: "drive"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. The example is: you can take a country road, but the motorway is quicker. Pause the video and try."
+        say: "Exercise five. Complete the sentences. The example is: you can take a country road, but the motorway is quicker. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. A very busy road. Two. Go into the fast lane when you overtake other cars.", reveal: ["1", "2a", "2b"], focus: 2}
+      - {tom: "Three. How far is it from Paris to Marseille? It's seven hundred and forty kilometres. Four. Take the M25, and remember to drive on the left!", reveal: ["3", "4a", "4b"], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: giao thông ở nước bạn"
+    heading: "Speaking 1 · Exercise 6: roads in your country"
+    heading_vi: "Bài 6 (ABOUT YOUR COUNTRY) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How many lanes do motorways have in Vietnam?"
+        a: "We call them expressways. Most have two lanes on each side, and some new ones have more."
+        ask: emma
+        by: tom
+        phrases: ["We call them…", "on each side"]
+      - q: "What's the speed limit on motorways?"
+        a: "Up to a hundred and twenty kilometres an hour on some expressways. In Britain, it's seventy miles an hour."
+        ask: emma
+        by: tom
+        phrases: ["Up to…", "kilometres an hour"]
+      - q: "Do you have speed cameras on roads?"
+        a: "Yes, there are more and more cameras now, especially in big cities."
+        ask: emma
+        by: tom
+        phrases: ["more and more…", "especially in…"]
+      - q: "Do you drive on the left in your country?"
+        a: "No, we drive on the right in Vietnam, like most countries. But in Britain, they drive on the left."
+        ask: emma
+        by: tom
+        phrases: ["No, we drive on the right…", "like most countries"]
+      - q: "When's the rush hour?"
+        a: "From about seven to eight in the morning, and five to seven in the evening. The traffic jams are terrible!"
+        ask: emma
+        by: tom
+        phrases: ["From about … to…", "The traffic jams are terrible!"]
+    lines:
+      - {emma: "Exercise 6 is about your country. Tom, how many lanes do motorways have in Vietnam?", say: "Exercise six is about your country. Tom, how many lanes do motorways have in Vietnam?", focus: 0}
+      - {tom: "We call them expressways. Most have two lanes on each side, and some new ones have more.", reveal: 0, vi: "Ở Việt Nam gọi là expressway (cao tốc); phần lớn có hai làn mỗi chiều."}
+      - {emma: "What's the speed limit on motorways?", focus: 1}
+      - {tom: "Up to a hundred and twenty kilometres an hour on some expressways. In Britain, it's seventy miles an hour.", reveal: 1, vi: "Tối đa 120 km/h trên một số tuyến; ở Anh là 70 dặm/giờ."}
+      - {emma: "Do you have speed cameras on roads?", focus: 2}
+      - {tom: "Yes, there are more and more cameras now, especially in big cities.", reveal: 2, vi: "Có, ngày càng nhiều, nhất là ở thành phố lớn."}
+      - {emma: "Do you drive on the left in your country?", focus: 3}
+      - {tom: "No, we drive on the right in Vietnam, like most countries. But in Britain, they drive on the left.", reveal: 3, vi: "Không, Việt Nam đi bên phải; ở Anh đi bên trái."}
+      - {emma: "When's the rush hour?", focus: 4}
+      - {tom: "From about seven to eight in the morning, and five to seven in the evening. The traffic jams are terrible!", reveal: 4, vi: "Khoảng 7–8 giờ sáng và 5–7 giờ tối; kẹt xe kinh khủng!"}
+
+  - kind: bullets
+    chapter: "Giao thông ở Việt Nam"
+    heading: "Traffic in Vietnam"
+    heading_vi: "Thêm ngoài sách — nói về giao thông Việt Nam bằng tiếng Anh"
+    items:
+      - {en: "millions of motorbikes · ride a motorbike", vi: "hàng triệu xe máy · đi xe máy"}
+      - {en: "wear a helmet", vi: "đội mũ bảo hiểm"}
+      - {en: "beep the horn", vi: "bấm còi"}
+      - {en: "flooded streets in the rainy season", vi: "đường ngập vào mùa mưa"}
+      - {en: "a motorbike taxi · a ride-hailing app", vi: "xe ôm · ứng dụng gọi xe"}
+    lines:
+      - {tom: "In Ho Chi Minh City, there are millions of motorbikes. Remember: we ride a motorbike. We don't drive it.", say: "In Ho Chee Min City, there are millions of motorbikes. Remember: we ride a motorbike. We don't drive it.", focus: 0}
+      - {emma: "Everyone on a motorbike has to wear a helmet. That's the law in Vietnam.", focus: 1, vi: "helmet: mũ bảo hiểm"}
+      - {tom: "And people often beep the horn. It means: I'm here, be careful!", focus: 2, vi: "beep the horn: bấm còi"}
+      - {emma: "In the rainy season, some streets are flooded, and the traffic is terrible.", focus: 3, vi: "flooded: ngập nước"}
+      - {tom: "I ride my motorbike sometimes, but I hate riding in heavy rain.", focus: 3}
+      - {emma: "I don't ride a motorbike. I book a motorbike taxi with a ride-hailing app, or I walk.", focus: 4}
+
+  - kind: bullets
+    chapter: "Bao xa, bao lâu"
+    heading: "How far? · How long?"
+    heading_vi: "Thêm ngoài sách — khoảng cách và thời gian, hay gặp ở IELTS Listening"
+    items:
+      - {en: "How far is it? — It's about 100 kilometres.", vi: "Bao xa? — Khoảng 100 km."}
+      - {en: "How long does it take? — About two hours by car.", vi: "Mất bao lâu? — Khoảng hai tiếng đi ô tô."}
+      - {en: "Ho Chi Minh City → Vung Tau: about 100 km, two hours", vi: "TP. HCM → Vũng Tàu"}
+      - {en: "Ho Chi Minh City → Da Lat: about 300 km, seven hours by coach", vi: "TP. HCM → Đà Lạt"}
+      - {en: "km/h = kilometres an hour · mph = miles an hour", vi: "km/giờ · dặm/giờ"}
+    lines:
+      - {emma: "How far and how long are different. How far asks about distance. How far is it? It's about a hundred kilometres.", focus: 0, vi: "How far: hỏi khoảng cách"}
+      - {tom: "How long asks about time. How long does it take? About two hours by car.", focus: 1, vi: "How long: hỏi thời gian"}
+      - {emma: "For example, from Ho Chi Minh City to Vung Tau, it's about a hundred kilometres, and it takes about two hours.", say: "For example, from Ho Chee Min City to Voong Tau, it's about a hundred kilometres, and it takes about two hours.", focus: 2}
+      - {tom: "And from Ho Chi Minh City to Da Lat, it's about three hundred kilometres. By coach, it takes about seven hours.", say: "And from Ho Chee Min City to Dah Lot, it's about three hundred kilometres. By coach, it takes about seven hours.", focus: 3}
+      - {emma: "When you write a speed, km/h means kilometres an hour, and mph means miles an hour. But say them in full.", say: "When you write a speed, kay em aitch means kilometres an hour, and em pee aitch means miles an hour. But say them in full.", focus: 4}
+      - {tom: "In IELTS listening, you often hear distances and times, so listen carefully for the numbers.", say: "In eye-elts listening, you often hear distances and times, so listen carefully for the numbers.", focus: 4}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về giao thông — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "There are a lot of traffics in my city.  →  ___", answer: "There is a lot of traffic in my city."}
+      - {n: 2, q: "I drive a motorbike to school.  →  ___", answer: "I ride a motorbike to school."}
+      - {n: 3, q: "The traffic is very crowded.  →  ___", answer: "The traffic is very heavy. / The roads are very busy."}
+      - {n: 4, q: "How long is it from Hanoi to Hue? (distance)  →  ___", answer: "How far is it from Hanoi to Hue?"}
+      - {n: 5, q: "We were late because the traffic jam.  →  ___", answer: "We were late because of the traffic jam."}
+      - {n: 6, q: "People walk on the road side.  →  ___", answer: "People walk on the pavement."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. There is a lot of traffic: traffic is uncountable. Two. I ride a motorbike.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. The traffic is heavy, or the roads are busy. People are crowded, not traffic. Four. How far is it: far is for distance.", reveal: [3, 4], focus: 3, vi: "heavy traffic: xe cộ đông · How far: hỏi khoảng cách"}
+      - {tom: "Five. Because of the traffic jam: because of, before a noun. Six. On the pavement.", reveal: [5, 6], focus: 5, vi: "because + mệnh đề · because of + danh từ"}
+
+  - kind: figure
+    chapter: "Ôn tập: tranh khu phố"
+    heading: "Review · Exercise 3: test yourself"
+    heading_vi: "Che chữ, nhìn tranh, nói tên — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 85, clip: [46, 88, 438, 352]}
+    items:
+      - {box: [120, 92, 184, 132]}
+      - {box: [120, 92, 184, 132], label: "a junction"}
+      - {box: [300, 96, 358, 145]}
+      - {box: [300, 96, 358, 145], label: "a roundabout"}
+      - {box: [356, 96, 420, 154]}
+      - {box: [356, 96, 420, 154], label: "a traffic jam"}
+      - {box: [138, 154, 174, 175]}
+      - {box: [138, 154, 174, 175], label: "a speed camera"}
+      - {box: [50, 218, 122, 280]}
+      - {box: [50, 218, 122, 280], label: "a petrol station"}
+      - {box: [208, 320, 258, 350]}
+      - {box: [208, 320, 258, 350], label: "a pedestrian crossing"}
+    lines:
+      - {emma: "Exercise 3 is a test. Cover the words, and name the things in the picture. Pause the video after each question. What's number one?", say: "Exercise three is a test. Cover the words, and name the things in the picture. Pause the video after each question. What's number one?", focus: 0}
+      - {tom: "A junction.", focus: 1}
+      - {emma: "Number three?", focus: 2}
+      - {tom: "A roundabout.", focus: 3}
+      - {emma: "Number four?", focus: 4}
+      - {tom: "A traffic jam.", focus: 5}
+      - {emma: "Number six?", focus: 6}
+      - {tom: "A speed camera.", focus: 7}
+      - {emma: "Number nine?", focus: 8}
+      - {tom: "A petrol station.", focus: 9}
+      - {emma: "And number eleven?", focus: 10}
+      - {tom: "A pedestrian crossing.", focus: 11}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a place in your city where there is often a lot of traffic"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — hiện tại đơn, từ về giao thông"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: where it is", vi: "nơi đó ở đâu"}
+      - {en: "when the traffic is bad", vi: "khi nào kẹt xe"}
+      - {en: "what it's like there", vi: "ở đó thế nào"}
+      - {en: "and explain how people feel about it", vi: "và giải thích mọi người cảm thấy thế nào"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a place in your city where there is often a lot of traffic."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a place in your city where there is often a lot of traffic."
+        vi: "Luyện nói chung kiểu Part 2: một nơi trong thành phố hay kẹt xe."
+      - {emma: "You should say where it is,", focus: 0}
+      - {emma: "when the traffic is bad,", focus: 1}
+      - {emma: "what it's like there,", focus: 2}
+      - {emma: "and explain how people feel about it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — từ về giao thông"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a big roundabout near my university in Ho Chi Minh City. Five main roads meet there, so it's a very busy junction."
+        say: "I'd like to talk about a big roundabout near my university in Ho Chee Min City. Five main roads meet there, so it's a very busy junction."
+        note: "where"
+      - text: "The traffic is worst in the rush hour, from five to seven in the evening, and when it rains."
+        note: "when"
+      - text: "There are thousands of motorbikes, cars and buses, and everybody beeps their horn. Sometimes there's a traffic jam for half an hour, and the traffic police come to help."
+        note: "what it's like"
+      - text: "People feel tired and angry, and the air is bad. When I ride my motorbike there, I always leave early, so I don't get stuck in the traffic."
+        note: "how people feel"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about the street outside my school in Ho Chi Minh City. It's a main road, with lots of shops and cafés."
+        say: "I'd like to talk about the street outside my school in Ho Chee Min City. It's a main road, with lots of shops and cafes."
+        note: "where"
+      - text: "It's very busy in the morning, when parents take their children to school, and again in the evening rush hour."
+        note: "when"
+      - text: "There are motorbikes everywhere. Sometimes they even ride on the pavement, and that makes me angry! I'm a bit afraid of the traffic, so I always cross at the pedestrian crossing."
+        note: "what it's like"
+      - text: "Most people are very patient, and the drivers are very skilful. But I think the city needs more buses and metro lines, so people can leave their motorbikes at home."
+        note: "how people feel"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a place in your city where there is often a lot of traffic.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a place with a lot of traffic"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Where is it?", hint: "I'd like to talk about a roundabout / a junction / a main road near …"}
+      - {q: "When is the traffic bad?", hint: "It's worst in the rush hour, from … to …"}
+      - {q: "What's it like there?", hint: "There are lots of motorbikes … · people beep their horns …"}
+      - {q: "How do people feel about it?", hint: "People feel tired and angry … · I think the city needs …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the traffic words from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the traffic words from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Where is it?", focus: 0, pause: 0.5}
+      - {emma: "When is the traffic bad?", focus: 1, pause: 0.5}
+      - {emma: "What's it like there?", focus: 2, pause: 0.5}
+      - {emma: "How do people feel about it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · traffic in cities"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why is traffic a big problem in many cities?"
+        a: "Because more and more people have motorbikes and cars, but the roads are the same size. And many people travel at the same time, in the rush hour."
+        ask: emma
+        by: tom
+        phrases: ["Because more and more people…", "at the same time"]
+      - q: "How can cities reduce traffic jams?"
+        a: "They can build more metro lines and buses, and make them cheap. In London, drivers pay money to go into the city centre."
+        ask: tom
+        by: emma
+        phrases: ["They can build…", "and make them cheap"]
+      - q: "Is it better to live in the city centre or outside the city?"
+        a: "For students, the city centre is better, because you can walk to school. But for families, a quiet place outside the city is nice, if there's a good bus or train."
+        ask: emma
+        by: tom
+        phrases: ["For students, …", "But for families, …", "if there's a good…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Why is traffic a big problem in many cities?", focus: 0}
+      - {tom: "Because more and more people have motorbikes and cars, but the roads are the same size. And many people travel at the same time, in the rush hour.", reveal: 0, vi: "Ngày càng nhiều xe nhưng đường vẫn vậy; nhiều người đi cùng giờ cao điểm."}
+      - {tom: "How can cities reduce traffic jams?", focus: 1}
+      - {emma: "They can build more metro lines and buses, and make them cheap. In London, drivers pay money to go into the city centre.", reveal: 1, vi: "Xây thêm metro, xe buýt và để giá rẻ; ở London ô tô phải trả phí vào trung tâm."}
+      - {emma: "Is it better to live in the city centre or outside the city?", focus: 2}
+      - {tom: "For students, the city centre is better, because you can walk to school. But for families, a quiet place outside the city is nice, if there's a good bus or train.", reveal: 2, vi: "Sinh viên: ở trung tâm tốt hơn vì đi bộ đến trường; gia đình: ngoại thành yên tĩnh, nếu có xe buýt, tàu tốt."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 3: che chữ tr. 84, nhìn tranh, nói tên"
+    items:
+      - {en: "junction · roundabout · traffic lights · pedestrian crossing · pavement", vi: "giao lộ · vòng xoay · đèn · vạch qua đường · vỉa hè"}
+      - {en: "traffic (U) · a traffic jam · a car park · a petrol station · a speed camera", vi: "xe cộ · kẹt xe · bãi đỗ · cây xăng · camera tốc độ"}
+      - {en: "a main road · a road sign · a motorway · a lane · the speed limit", vi: "đường lớn · biển chỉ đường · cao tốc · làn · tốc độ tối đa"}
+      - {en: "busy ≠ quiet · the rush hour · an accident · overtake", vi: "đông ≠ vắng · giờ cao điểm · tai nạn · vượt"}
+      - {en: "How far is it? · drive a car · ride a motorbike", vi: "bao xa? · lái ô tô · đi xe máy"}
+      - {en: "Next: Unit 33 · Signs and notices", vi: "Tiếp theo: Unit 33 · Biển báo và thông báo"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A junction, a roundabout, traffic lights, a pedestrian crossing, and the pavement.", focus: 0}
+      - {tom: "Traffic, a traffic jam, a car park, a petrol station, and a speed camera.", focus: 1}
+      - {emma: "A main road, a road sign, a motorway, a lane, and the speed limit.", focus: 2}
+      - {tom: "Busy or quiet, the rush hour, an accident, and overtake.", focus: 3}
+      - {emma: "How far is it? And remember: drive a car, but ride a motorbike.", focus: 4}
+      - {tom: "Next time, Unit 33: signs and notices. See you then!", say: "Next time, Unit thirty-three: signs and notices. See you then!", focus: 5}

@@ -1,0 +1,357 @@
+# Video Oxford Word Skills Basic · Unit 33 — I can understand signs and notices (sách in tr. 86, Answer key tr. 212).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–3. Bài 1–2 theo Answer key tr. 212 (bài 2: mỗi chỗ trống có nhiều đáp án — video chọn một đáp án khác nhau
+# cho hai câu cùng mở đầu, rồi đọc các đáp án khác). Bài 1: danh sách a–j của sách bên trái. Bài 3 (Test yourself): câu đố nghe
+# nghĩa, nói biển báo ở cuối video.
+# Unit một trang nên thêm ngoài sách: biển báo hay gặp khác (Push / Pull, Open / Closed, Staff only, Wet floor, Keep off the grass,
+# Fire exit); biển báo tiếng Việt → tiếng Anh; thông báo kiểu IELTS General Training Reading phần 1 (opening hours, no food or drink,
+# lift out of order) kèm một thông báo thư viện và câu True / False; câu đố "Where would you see it?"; Nghe và viết; Nói 1 (biển
+# báo quanh bạn); Nói 2 (biển báo trong đời sống).
+# Hình trong sách: bảng 14 biển báo (ba cảnh, khung theo dòng đo bằng máy), danh sách a–j của bài 1.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom làm ở quán cà phê (hồ sơ) — mới: cửa bếp có biển Staff only; metro
+# TP. HCM có biển tiếng Việt và tiếng Anh (U30). Emma học tiếng Việt (hồ sơ), hỏi giá ở chợ (U25) — mới: biển tiếng Việt học đầu
+# tiên là "lối ra" và "giảm giá"; ngân hàng, bưu điện có biển xếp hàng; trường của Emma có biển nhắc tắt điện thoại trong lớp.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U33-signs-notices.yaml
+id: U33-signs-notices
+activity: U33-words
+title: "Unit 33 · Signs and notices"
+subtitle: "I can understand signs and notices"
+title_vi: "Biển báo và thông báo: entrance, exit, no entry, no smoking, queue here, out of order, no vacancies — biển báo tiếng Việt bằng tiếng Anh"
+tag: "GETTING AROUND · UNIT 33"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 33, the last unit in the Getting around module: signs and notices. You see them everywhere: in stations, hotels, shops and airports. And short notices are common in IELTS General Training reading."
+        say: "Welcome to Unit thirty-three, the last unit in the Getting around module: signs and notices. You see them everywhere: in stations, hotels, shops and airports. And short notices are common in eye-elts General Training reading."
+        vi: "Unit 33, unit cuối module Getting around: biển báo và thông báo — gặp khắp nơi, và trong bài đọc IELTS General Training."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Biển báo (1)"
+    heading: "Signs and notices (1)"
+    heading_vi: "Bảng tr. 86 — biển báo · ở đâu · nghĩa là gì"
+    image: {pdf: course-book, page: 87, clip: [26, 78, 484, 200]}
+    items:
+      - {box: [28, 96, 482, 120]}
+      - {box: [28, 119, 482, 137]}
+      - {box: [28, 135, 482, 157]}
+      - {box: [28, 155, 482, 180]}
+      - {box: [28, 178, 482, 199]}
+    lines:
+      - {emma: "Look at page eighty-six. The first column is the sign, then where you see it, and then what it means. Ladies, gents, toilet. Ladies is for women, and gents is for men.", focus: 0, vi: "ladies: nữ · gents: nam · toilet: nhà vệ sinh"}
+      - {tom: "Entrance, or way in, means go in here. You see it in a car park, a museum, or a cinema.", focus: 1, vi: "entrance / way in: lối vào"}
+      - {emma: "Exit, or way out, means go out, or leave, here.", focus: 2, vi: "exit / way out: lối ra"}
+      - {tom: "No entry: you can't go in here.", focus: 3, vi: "no entry: cấm vào"}
+      - {emma: "And no exit: you can't go out here.", focus: 4, vi: "no exit: không có lối ra"}
+
+  - kind: figure
+    chapter: "Biển báo (2)"
+    heading: "Signs and notices (2)"
+    heading_vi: "Bảng tr. 86 (tiếp) — no smoking, no parking, please do not disturb, queue here, nothing to declare"
+    image: {pdf: course-book, page: 87, clip: [26, 196, 484, 308]}
+    items:
+      - {box: [28, 198, 482, 220]}
+      - {box: [28, 218, 482, 248]}
+      - {box: [28, 246, 482, 264]}
+      - {box: [28, 262, 482, 292]}
+      - {box: [28, 290, 482, 307]}
+    lines:
+      - {tom: "No smoking: you can't smoke here. You see it in a cinema, a restaurant, and many other places.", focus: 0, vi: "no smoking: cấm hút thuốc"}
+      - {emma: "No parking: you can't leave your car here. You see it in the street, or in front of a garage.", focus: 1, vi: "no parking: cấm đỗ xe"}
+      - {tom: "Please do not disturb, on a hotel room door. It means: I'm sleeping, so don't come in.", focus: 2, vi: "please do not disturb: xin đừng làm phiền"}
+      - {emma: "Queue here: wait in a line here, at a cash desk in a shop, or in a bank or a post office.", focus: 3, vi: "queue: xếp hàng"}
+      - {tom: "Nothing to declare: you see it at an airport. It means you have no tax to pay.", focus: 4, vi: "nothing to declare: không có gì phải khai báo (hải quan)"}
+
+  - kind: figure
+    chapter: "Biển báo (3)"
+    heading: "Signs and notices (3)"
+    heading_vi: "Bảng tr. 86 (tiếp) — sale, out of order, please ring for attention, no vacancies"
+    image: {pdf: course-book, page: 87, clip: [26, 304, 484, 410]}
+    items:
+      - {box: [28, 305, 482, 336]}
+      - {box: [28, 333, 482, 364]}
+      - {box: [28, 361, 482, 391]}
+      - {box: [28, 388, 482, 409]}
+    lines:
+      - {emma: "Sale, in a shop window: a period when a shop sells things at a lower price than normal.", focus: 0, vi: "sale: đợt giảm giá"}
+      - {tom: "Out of order, on a public telephone or a drinks machine: it isn't working, or it's broken.", focus: 1, vi: "out of order: hỏng"}
+      - {emma: "Please ring for attention, at reception in a hotel or an office. Ring the bell, and somebody will come.", focus: 2, vi: "ring the bell: bấm chuông"}
+      - {tom: "And no vacancies, in the window of a small hotel: the hotel is full.", focus: 3, vi: "no vacancies: hết phòng"}
+
+  - kind: blanks
+    chapter: "Bài 1: nối biển báo với nơi"
+    heading: "Exercise 1 · Match 1–9 with a–j"
+    heading_vi: "Danh sách a–j của sách bên trái — ví dụ: No smoking → d, in a café (Answer key tr. 212)"
+    image: {pdf: course-book, page: 87, clip: [249, 436, 402, 589]}
+    items:
+      - {n: 1, q: "No parking  →  ___", answer: "f"}
+      - {n: 2, q: "Toilet  →  ___", answer: "h"}
+      - {n: 3, q: "Queue here  →  ___", answer: "j"}
+      - {n: 4, q: "Out of order  →  ___", answer: "c"}
+      - {n: 5, q: "Please do not disturb  →  ___", answer: "b"}
+      - {n: 6, q: "Sale  →  ___", answer: "e"}
+      - {n: 7, q: "Entrance  →  ___", answer: "i"}
+      - {n: 8, q: "No vacancies  →  ___", answer: "g"}
+      - {n: 9, q: "Please ring for attention  →  ___", answer: "a"}
+    lines:
+      - emma: "Exercise 1. Match the signs with the places. The example is: no smoking, in a café. Pause the video and try."
+        say: "Exercise one. Match the signs with the places. The example is: no smoking, in a cafe. Pause the video and try."
+        vi: "Bài 1: nối biển báo với nơi bạn thấy nó."
+      - {tom: "One, f: no parking, in front of a garage. Two, h: toilet, at the back of a restaurant. Three, j: queue here, inside a post office.", say: "One, ef: no parking, in front of a garage. Two, aitch: toilet, at the back of a restaurant. Three, jay: queue here, inside a post office.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four, c: out of order, on a drinks machine. Five, b: please do not disturb, on a hotel room door. Six, e: sale, in a shop window.", say: "Four, see: out of order, on a drinks machine. Five, bee: please do not disturb, on a hotel room door. Six, ee: sale, in a shop window.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven, i: entrance, at the front door of a museum. Eight, g: no vacancies, in a hotel window. Nine, a: please ring for attention, in a hotel reception.", say: "Seven, eye: entrance, at the front door of a museum. Eight, gee: no vacancies, in a hotel window. Nine, eigh: please ring for attention, in a hotel reception.", reveal: [7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành biển báo"
+    heading: "Exercise 2 · Complete the signs in different ways"
+    heading_vi: "Ví dụ: No smoking — hai câu cùng mở đầu cần hai đáp án khác nhau (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "No ___", answer: "parking (or entry / exit / vacancies)"}
+      - {n: 2, q: "Way ___", answer: "in"}
+      - {n: 3, q: "Please ___", answer: "do not disturb"}
+      - {n: 4, q: "No ___", answer: "vacancies (or parking / entry / exit)"}
+      - {n: 5, q: "Way ___", answer: "out"}
+      - {n: 6, q: "Please ring ___", answer: "for attention"}
+      - {n: 7, q: "Nothing to ___", answer: "declare"}
+    lines:
+      - emma: "Exercise 2. Complete the signs in different ways. The example is: no smoking. Pause the video and try."
+        say: "Exercise two. Complete the signs in different ways. The example is: no smoking. Pause the video and try."
+        vi: "Bài 2: hoàn thành biển báo theo nhiều cách."
+      - {tom: "One. No parking. You can also say no entry, no exit, or no vacancies. Two. Way in. Three. Please do not disturb.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. A different one: no vacancies. Five. Way out. Six. Please ring for attention. Seven. Nothing to declare.", reveal: [4, 5, 6, 7], focus: 6}
+
+  - kind: bullets
+    chapter: "Thêm biển báo"
+    heading: "More signs you often see"
+    heading_vi: "Thêm ngoài sách — biển báo hay gặp ở cửa hàng, công viên, tòa nhà"
+    items:
+      - {en: "Push · Pull", vi: "Đẩy · Kéo"}
+      - {en: "Open · Closed", vi: "Mở cửa · Đóng cửa"}
+      - {en: "Staff only", vi: "Chỉ dành cho nhân viên"}
+      - {en: "Wet floor", vi: "Sàn ướt"}
+      - {en: "Keep off the grass", vi: "Không giẫm lên cỏ"}
+      - {en: "Fire exit · Emergency exit", vi: "Lối thoát hiểm"}
+    lines:
+      - {emma: "Here are some more signs you often see. Push and pull, on doors.", focus: 0}
+      - {tom: "Open and closed, on shop doors.", focus: 1}
+      - {emma: "Staff only: only people who work there can go in.", focus: 2, vi: "staff: nhân viên"}
+      - {tom: "At my café, there's a staff only sign on the kitchen door.", say: "At my cafe, there's a staff only sign on the kitchen door.", focus: 2}
+      - {emma: "Wet floor: be careful, the floor is wet.", focus: 3}
+      - {tom: "Keep off the grass: don't walk on the grass in the park.", focus: 4}
+      - {emma: "And fire exit, or emergency exit: the way out if there's a fire.", focus: 5, vi: "emergency: tình huống khẩn cấp"}
+
+  - kind: blanks
+    chapter: "Biển báo tiếng Việt"
+    heading: "Vietnamese signs in English"
+    heading_vi: "Thêm ngoài sách — đọc biển tiếng Việt, nói biển tiếng Anh; tạm dừng video sau mỗi biển"
+    items:
+      - {n: 1, q: "Cấm hút thuốc  →  ___", answer: "No smoking"}
+      - {n: 2, q: "Lối ra  →  ___", answer: "Exit / Way out"}
+      - {n: 3, q: "Cấm đỗ xe  →  ___", answer: "No parking"}
+      - {n: 4, q: "Giảm giá  →  ___", answer: "Sale"}
+      - {n: 5, q: "Hết phòng  →  ___", answer: "No vacancies"}
+      - {n: 6, q: "Nhà vệ sinh nữ  →  ___", answer: "Ladies"}
+      - {n: 7, q: "Máy hỏng  →  ___", answer: "Out of order"}
+      - {n: 8, q: "Xin đừng làm phiền  →  ___", answer: "Please do not disturb"}
+    lines:
+      - emma: "Now a test. Read the Vietnamese sign, and say the English sign. Pause the video after each one."
+        vi: "Đọc biển tiếng Việt, nói biển tiếng Anh."
+      - {tom: "One. No smoking. Two. Exit, or way out. Three. No parking. Four. Sale.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. No vacancies. Six. Ladies. Seven. Out of order. Eight. Please do not disturb.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Thấy biển này ở đâu?"
+    heading: "Where would you see it?"
+    heading_vi: "Thêm ngoài sách — nghe biển báo, nói nơi bạn thấy nó; tạm dừng video sau mỗi biển"
+    items:
+      - {n: 1, q: "Mind the gap  →  ___", answer: "at a station, on the London Underground"}
+      - {n: 2, q: "Staff only  →  ___", answer: "on a door in a shop, café or hotel"}
+      - {n: 3, q: "Fasten your seat belt  →  ___", answer: "on a plane"}
+      - {n: 4, q: "Silence, please  →  ___", answer: "in a library or a hospital"}
+      - {n: 5, q: "Do not feed the animals  →  ___", answer: "in a zoo"}
+      - {n: 6, q: "Check-in  →  ___", answer: "at an airport or a hotel"}
+    lines:
+      - emma: "Where would you see these signs? I read the sign, and you say the place. Pause the video after each one."
+        vi: "Nghe biển báo, nói nơi bạn thấy nó."
+      - {emma: "Number one. Mind the gap.", focus: 0}
+      - {tom: "At a station, on the London Underground. We heard it in Unit 30!", say: "At a station, on the London Underground. We heard it in Unit thirty!", reveal: 1, focus: 0}
+      - {emma: "Number two. Staff only.", focus: 1}
+      - {tom: "On a door in a shop, a café, or a hotel.", say: "On a door in a shop, a cafe, or a hotel.", reveal: 2, focus: 1}
+      - {emma: "Number three. Fasten your seat belt.", focus: 2, vi: "fasten your seat belt: thắt dây an toàn"}
+      - {tom: "On a plane.", reveal: 3, focus: 2}
+      - {emma: "Number four. Silence, please.", focus: 3, vi: "silence: im lặng"}
+      - {tom: "In a library, or in a hospital.", reveal: 4, focus: 3}
+      - {emma: "Number five. Do not feed the animals.", focus: 4, vi: "feed: cho ăn"}
+      - {tom: "In a zoo.", reveal: 5, focus: 4}
+      - {emma: "And number six. Check-in.", focus: 5}
+      - {tom: "At an airport, or at a hotel.", reveal: 6, focus: 5}
+
+  - kind: bullets
+    chapter: "Thông báo kiểu IELTS"
+    heading: "Notices in IELTS General Training reading"
+    heading_vi: "Thêm ngoài sách — thông báo ngắn ở thư viện, khách sạn, tòa nhà (Reading phần 1)"
+    items:
+      - {en: "Opening hours: 9 a.m. – 5 p.m.", vi: "Giờ mở cửa: 9 giờ sáng – 5 giờ chiều"}
+      - {en: "Closed on Sundays and public holidays", vi: "Đóng cửa Chủ nhật và ngày lễ"}
+      - {en: "No food or drink in the library", vi: "Không mang đồ ăn, thức uống vào thư viện"}
+      - {en: "Please switch off your mobile phone", vi: "Vui lòng tắt điện thoại di động"}
+      - {en: "Lift out of order. Please use the stairs.", vi: "Thang máy hỏng. Vui lòng đi cầu thang bộ."}
+    lines:
+      - {emma: "In IELTS General Training reading, section one often has short notices, for example, in a library or a hotel. Opening hours: nine a.m. to five p.m.", say: "In eye-elts General Training reading, section one often has short notices, for example, in a library or a hotel. Opening hours: nine a.m. to five p.m.", focus: 0, vi: "opening hours: giờ mở cửa"}
+      - {tom: "Closed on Sundays and public holidays.", focus: 1, vi: "public holiday: ngày lễ"}
+      - {emma: "No food or drink in the library.", focus: 2}
+      - {tom: "Please switch off your mobile phone.", focus: 3, vi: "switch off: tắt"}
+      - {emma: "Lift out of order. Please use the stairs. A lift is a machine that takes you up and down in a building.", say: "Lift out of order. Please yooz the stairs. A lift is a machine that takes you up and down in a building.", focus: 4, vi: "lift (Anh) = elevator (Mỹ): thang máy"}
+
+  - kind: bullets
+    chapter: "Đọc thông báo"
+    heading: "Read the notice · City Library"
+    heading_vi: "Thêm ngoài sách — một thông báo kiểu IELTS General Training Reading phần 1"
+    items:
+      - {en: "Monday – Friday: 9 a.m. – 8 p.m.", vi: "Thứ Hai – thứ Sáu: 9 giờ sáng – 8 giờ tối"}
+      - {en: "Saturday: 9 a.m. – 1 p.m. · Closed on Sundays", vi: "Thứ Bảy: 9 giờ – 1 giờ chiều · Đóng cửa Chủ nhật"}
+      - {en: "No food or drink · Please switch off your phone", vi: "Không đồ ăn, thức uống · Vui lòng tắt điện thoại"}
+      - {en: "Return books within three weeks", vi: "Trả sách trong vòng ba tuần"}
+    lines:
+      - {emma: "Here's a notice from a library. Read it, and then answer some true or false questions, like in IELTS. City Library. Monday to Friday, nine a.m. to eight p.m.", say: "Here's a notice from a library. Read it, and then answer some true or false questions, like in eye-elts. City Library. Monday to Friday, nine a.m. to eight p.m.", focus: 0}
+      - {tom: "Saturday, nine a.m. to one p.m. Closed on Sundays.", focus: 1}
+      - {emma: "No food or drink. Please switch off your phone.", focus: 2}
+      - {tom: "Return books within three weeks. Within means in, or before the end of, three weeks.", focus: 3, vi: "within: trong vòng"}
+
+  - kind: blanks
+    chapter: "Đúng hay sai?"
+    heading: "True or false? · the library notice"
+    heading_vi: "Tạm dừng video, đọc lại thông báo và trả lời True / False"
+    items:
+      - {n: 1, q: "The library opens at 9 a.m. on Saturday.  →  ___", answer: "True"}
+      - {n: 2, q: "You can visit the library on Sunday afternoon.  →  ___", answer: "False"}
+      - {n: 3, q: "You can have a coffee in the library.  →  ___", answer: "False"}
+      - {n: 4, q: "The library closes at 1 p.m. on Saturday.  →  ___", answer: "True"}
+      - {n: 5, q: "You can keep a book for a month.  →  ___", answer: "False: three weeks"}
+    lines:
+      - emma: "True or false? Pause the video and decide."
+        vi: "Đúng hay sai? Tạm dừng video và chọn."
+      - {tom: "One. True: nine a.m. on Saturday. Two. False: it's closed on Sundays. Three. False: no food or drink.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. True. Five. False: you have to return books within three weeks, not a month.", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · signs and notices"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "The lift is ___ of order.", answer: "out"}
+      - {n: 2, q: "Please do not ___.", answer: "disturb"}
+      - {n: 3, q: "No ___: the hotel is full.", answer: "vacancies"}
+      - {n: 4, q: "___ here for tickets.", answer: "Queue"}
+      - {n: 5, q: "Please ring the ___ for attention.", answer: "bell"}
+      - {n: 6, q: "The ___ is on the left.", answer: "entrance"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. The lift is out of order.", focus: 0}
+      - {emma: "Number two. Please do not disturb.", focus: 1}
+      - {emma: "Number three. No vacancies: the hotel is full.", focus: 2}
+      - {emma: "Number four. Queue here for tickets.", focus: 3}
+      - {emma: "Number five. Please ring the bell for attention.", focus: 4}
+      - {emma: "Number six. The entrance is on the left.", focus: 5}
+      - {tom: "Out. Disturb: D, I, S, T, U, R, B. Vacancies: V, A, C, A, N, C, I, E, S.", say: "Out. Disturb: dee, eye, ess, tee, yoo, ar, bee. Vacancies: vee, eigh, see, eigh, en, see, eye, ee, ess.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Queue: Q, U, E, U, E. Only the first letter is pronounced! Bell: double l. Entrance.", say: "Queue: kyoo, yoo, ee, yoo, ee. Only the first letter is pronounced! Bell: double el. Entrance.", reveal: [4, 5, 6], focus: 5, vi: "queue đọc như chữ Q"}
+
+  - kind: qa
+    chapter: "Nói 1: biển báo quanh bạn"
+    heading: "Speaking 1 · Signs around you"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Are there signs in English in Vietnam?"
+        a: "Yes, in airports, hotels and big shops. And at the new metro stations, all the signs are in Vietnamese and English."
+        ask: emma
+        by: tom
+        phrases: ["Yes, in…", "all the signs are in … and…"]
+      - q: "Which sign did you learn first in Vietnamese, Emma?"
+        a: "Lối ra: way out! And giảm giá: sale. Very useful at the market!"
+        ask: tom
+        by: emma
+        phrases: ["… : way out!", "Very useful at…"]
+      - q: "Which sign do you see every day?"
+        a: "Queue here, at the bank and the post office. And at my school, there's a sign: please switch off your phone in class."
+        ask: tom
+        by: emma
+        phrases: ["… , at the bank", "there's a sign: …"]
+      - q: "Do you always follow signs, Tom?"
+        a: "Usually! But when I was a child, I walked on the grass in a park in Da Lat, and a man shouted: keep off the grass!"
+        ask: emma
+        by: tom
+        phrases: ["Usually!", "But when I was a child…"]
+    lines:
+      - {emma: "Let's talk about signs. Tom, are there signs in English in Vietnam?", focus: 0}
+      - {tom: "Yes, in airports, hotels and big shops. And at the new metro stations, all the signs are in Vietnamese and English.", reveal: 0, vi: "Có, ở sân bay, khách sạn, cửa hàng lớn; ga metro mới có biển hai thứ tiếng."}
+      - {tom: "Which sign did you learn first in Vietnamese, Emma?", focus: 1}
+      - {emma: "Lối ra: way out! And giảm giá: sale. Very useful at the market!", say: "Loy rah: way out! And yahm yah: sale. Very useful at the market!", reveal: 1, vi: "Lối ra và giảm giá — rất có ích ở chợ!"}
+      - {tom: "Which sign do you see every day?", focus: 2}
+      - {emma: "Queue here, at the bank and the post office. And at my school, there's a sign: please switch off your phone in class.", reveal: 2, vi: "Biển xếp hàng ở ngân hàng, bưu điện; ở trường có biển nhắc tắt điện thoại trong lớp."}
+      - {emma: "Do you always follow signs, Tom?", focus: 3}
+      - {tom: "Usually! But when I was a child, I walked on the grass in a park in Da Lat, and a man shouted: keep off the grass!", say: "Usually! But when I was a child, I walked on the grass in a park in Dah Lot, and a man shouted: keep off the grass!", reveal: 3, vi: "Thường thì có! Hồi nhỏ Tom giẫm lên cỏ trong công viên ở Đà Lạt và bị nhắc."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · Speaking: signs in your life"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "What signs do you see on your way to school or work?", hint: "I see … · There's a … sign near …"}
+      - {q: "Are there many English signs in your town?", hint: "Yes, in … / No, not many …"}
+      - {q: "Do you always follow signs, like no parking?", hint: "Yes, I always … / Not always …"}
+      - {q: "Which sign is the most useful, do you think?", hint: "I think … is the most useful, because …"}
+      - {q: "Have you ever seen a funny sign?", hint: "Yes, I once saw … / No, never …"}
+    lines:
+      - emma: "Your turn. Pause the video after each question, and answer in two or three sentences."
+        vi: "Đến lượt bạn: trả lời 2–3 câu mỗi câu hỏi."
+      - {emma: "What signs do you see on your way to school or work?", focus: 0, pause: 0.5}
+      - {emma: "Are there many English signs in your town?", focus: 1, pause: 0.5}
+      - {emma: "Do you always follow signs, like no parking?", focus: 2, pause: 0.5}
+      - {emma: "Which sign is the most useful, do you think?", focus: 3, pause: 0.5}
+      - {emma: "Have you ever seen a funny sign?", focus: 4, pause: 1.0}
+
+  - kind: blanks
+    chapter: "Bài 3: tự kiểm tra"
+    heading: "Exercise 3 · Test yourself: say the signs"
+    heading_vi: "Che biển báo tr. 86, nghe nghĩa và nói biển báo — tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "Go in here.  →  ___", answer: "Entrance / Way in"}
+      - {n: 2, q: "You can't smoke here.  →  ___", answer: "No smoking"}
+      - {n: 3, q: "Wait in a line here.  →  ___", answer: "Queue here"}
+      - {n: 4, q: "This isn't working.  →  ___", answer: "Out of order"}
+      - {n: 5, q: "The hotel is full.  →  ___", answer: "No vacancies"}
+      - {n: 6, q: "Ring the bell and somebody will come.  →  ___", answer: "Please ring for attention"}
+    lines:
+      - emma: "Exercise 3 is a test. Cover the signs on page eighty-six, and look at the meanings. Say the signs. Pause the video after each one."
+        say: "Exercise three is a test. Cover the signs on page eighty-six, and look at the meanings. Say the signs. Pause the video after each one."
+        vi: "Bài 3: che biển báo, nhìn nghĩa, nói biển báo."
+      - {tom: "One. Entrance, or way in. Two. No smoking. Three. Queue here.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Out of order. Five. No vacancies. Six. Please ring for attention.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi ôn tập cả module Getting around ở tr. 87–89"
+    items:
+      - {en: "ladies · gents · toilet · entrance / way in · exit / way out", vi: "nữ · nam · nhà vệ sinh · lối vào · lối ra"}
+      - {en: "no entry · no exit · no smoking · no parking", vi: "cấm vào · không có lối ra · cấm hút thuốc · cấm đỗ xe"}
+      - {en: "please do not disturb · queue here · nothing to declare", vi: "xin đừng làm phiền · xếp hàng · không có gì khai báo"}
+      - {en: "sale · out of order · please ring for attention · no vacancies", vi: "giảm giá · hỏng · bấm chuông · hết phòng"}
+      - {en: "Next: Review · Getting around (pages 87–89)", vi: "Tiếp theo: ôn tập module, tr. 87–89"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Ladies, gents, toilet, entrance or way in, and exit or way out.", focus: 0}
+      - {tom: "No entry, no exit, no smoking, and no parking.", focus: 1}
+      - {emma: "Please do not disturb, queue here, and nothing to declare.", focus: 2}
+      - {tom: "Sale, out of order, please ring for attention, and no vacancies.", focus: 3}
+      - {emma: "That's the end of the Getting around module. Next, do the review on pages eighty-seven to eighty-nine. See you then!", focus: 4}
