@@ -1,0 +1,632 @@
+# Video Oxford Word Skills Basic · Unit 28 — I can order in a restaurant (sách in tr. 72–74, Answer key tr. 211). Học sau Unit 25–27.
+# UNIT KHÓ (đợt 38): 3 trang — đồ trên bàn ăn, cách nấu (boiled, fried, grilled, roast), steak rare / medium / well done, thực đơn
+# (starter, main course, dessert), hội thoại gọi món, another / some more — chủ đề hay gặp ở IELTS General Training (đặt bàn, gọi
+# món) — video khoảng 14 phút: phần sách, rồi đặt bàn qua điện thoại, đóng vai, ÔN TẬP (lỗi hay gặp, tự kiểm tra tranh bàn ăn) và
+# LUYỆN NÓI CHUNG (Part 2 "a restaurant that you enjoyed going to", hai bài mẫu; ba câu thảo luận kiểu Part 3).
+# Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`).
+# Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–9. Bài 1, 4, 5, 8, 9 theo Answer key tr. 211. Bài 2 (ABOUT YOUR COUNTRY): Tom nói về Việt Nam, Emma về nước
+# Anh (Answer key là câu của "an Argentinian person"). Bài 3, 7 (Test yourself): cảnh tự kiểm tra tranh bàn ăn ở phần ôn tập; Emma
+# nhắc che chữ thực đơn. Bài 6 (ABOUT YOU): Tom và Emma chọn món (cảnh Nói 1).
+# Hình trong sách: tranh bàn ăn 12 đồ vật kèm nhãn (tr. 72, khung theo đồ vật), ảnh món ăn và thang steak, thực đơn (tr. 73, khung
+# theo dòng) và 8 tranh món, hội thoại khách – phục vụ (tr. 74, khung theo dòng — Tom đọc người phục vụ W, Emma đọc khách C),
+# Glossary và Spotlight another or some more.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7, U24–U27): Tom thích tôm (U24), mới ăn bít tết một lần, thích chín vừa;
+# Tết năm nay cả nhà (ông, bố mẹ, chị Hoa từ Hà Nội về, em Bao) đi ăn lẩu bò ở một quán gần chợ Đà Lạt. Emma thích hải sản, nhất là
+# vẹm (U24), không thích vịt (U24); hè năm ngoái đi Vũng Tàu với ba giáo viên cùng trường, ăn ở một quán hải sản cạnh biển — gợi nhớ
+# quê ven biển ở Anh.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U28-restaurant.yaml
+id: U28-restaurant
+activity: U28-words
+title: "Unit 28 · In a restaurant"
+subtitle: "I can order in a restaurant"
+title_vi: "Bàn ăn (knife, fork, napkin…), cách nấu, steak rare / medium / well done, thực đơn, gọi món, another / some more — kèm ôn tập và luyện nói"
+tag: "FOOD AND DRINK · UNIT 28"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 28, the last unit in the Food and drink module: in a restaurant. Please do Units 25, 26 and 27 first. There are three pages, so this video is longer, with a role-play, a review and speaking practice."
+        say: "Welcome to Unit twenty-eight, the last unit in the Food and drink module: in a restaurant. Please do Units twenty-five, twenty-six and twenty-seven first. There are three pages, so this video is longer, with a role-play, a review and speaking practice."
+        vi: "Unit 28, unit cuối module Food and drink: ở nhà hàng (học Unit 25–27 trước). Có đóng vai, ôn tập, luyện nói."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Trên bàn ăn"
+    heading: "A · The table"
+    heading_vi: "Tranh và nhãn trong sách tr. 72"
+    image: {pdf: course-book, page: 73, clip: [28, 88, 478, 289]}
+    items:
+      - {box: [95, 95, 135, 185]}
+      - {box: [178, 106, 225, 170]}
+      - {box: [218, 88, 264, 192]}
+      - {box: [262, 104, 286, 160]}
+      - {box: [286, 104, 306, 160]}
+      - {box: [325, 92, 362, 170]}
+      - {box: [335, 128, 392, 158]}
+      - {box: [362, 146, 432, 186]}
+      - {box: [328, 156, 462, 196]}
+      - {box: [300, 186, 412, 208]}
+      - {box: [300, 198, 414, 214]}
+      - {box: [240, 158, 318, 190]}
+    lines:
+      - emma: "Look at the table on page seventy-two. Number one: a glass of red wine."
+        focus: 0
+        vi: "a glass of red wine: một ly rượu vang đỏ"
+      - {tom: "Two: salt, and black pepper.", focus: 1, vi: "salt: muối · pepper: tiêu"}
+      - {emma: "Three: a bottle of mineral water.", focus: 2, vi: "mineral water: nước khoáng"}
+      - {tom: "Four: oil.", focus: 3, vi: "oil: dầu"}
+      - {emma: "Five: vinegar. People put oil and vinegar on salad.", focus: 4, vi: "vinegar: giấm"}
+      - {tom: "Six: a glass of white wine.", focus: 5}
+      - {emma: "Seven: a napkin, for your hands and face.", focus: 6, vi: "napkin: khăn ăn"}
+      - {tom: "Eight: a bowl.", focus: 7, vi: "bowl: bát, tô"}
+      - {emma: "Nine: a plate.", focus: 8, vi: "plate: đĩa"}
+      - {tom: "Ten: a fork.", focus: 9, vi: "fork: nĩa"}
+      - {emma: "Eleven: a knife. The k is silent: knife.", say: "Eleven: a knife. The kay is silent: knife.", focus: 10, vi: "knife /naɪf/: dao — chữ k câm"}
+      - {tom: "And twelve: a spoon.", focus: 11, vi: "spoon: thìa"}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành đoạn văn"
+    heading: "Exercise 1 · Look at the picture and complete the text (1–8)"
+    heading_vi: "On the table, each person has a knife, … (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "each person has a knife, a f _ _ k, …", answer: "fork"}
+      - {n: 2, q: "… and a s _ _ _ n, …", answer: "spoon"}
+      - {n: 3, q: "and a n _ _ _ _ n for their hands and face.", answer: "napkin"}
+      - {n: 4, q: "They each have a white p _ _ _ e …", answer: "plate"}
+      - {n: 5, q: "… and a b _ _ l.", answer: "bowl"}
+      - {n: 6, q: "To drink, there's a b _ _ _ _ e of …", answer: "bottle"}
+      - {n: 7, q: "… m _ _ _ _ _ l w _ _ _ r, …", answer: "mineral water"}
+      - {n: 8, q: "and two g _ _ _ _ _ s of …", answer: "glasses"}
+    lines:
+      - emma: "Exercise 1. Look at the picture and complete the text. Pause the video and try."
+        say: "Exercise one. Look at the picture and complete the text. Pause the video and try."
+        vi: "Bài 1: nhìn tranh, hoàn thành đoạn văn."
+      - {tom: "One. Fork. Two. Spoon. Three. Napkin. Four. Plate.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Bowl. Six. Bottle. Seven. Mineral water. Eight. Glasses.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    heading: "Exercise 1 · Complete the text (9–16)"
+    heading_vi: "Answer key tr. 211"
+    items:
+      - {n: 9, q: "… two glasses of w _ _ e:", answer: "wine"}
+      - {n: 10, q: "one r _ d …", answer: "red"}
+      - {n: 11, q: "… and the other w _ _ _ e.", answer: "white"}
+      - {n: 12, q: "There is also some s _ _ t …", answer: "salt"}
+      - {n: 13, q: "… and b _ _ _ k p _ _ _ _ _ r,", answer: "black pepper"}
+      - {n: 14, q: "and little b _ _ _ _ _ s of …", answer: "bottles"}
+      - {n: 15, q: "… o _ l …", answer: "oil"}
+      - {n: 16, q: "… and v _ _ _ _ _ r.", answer: "vinegar"}
+    lines:
+      - {tom: "Nine. Wine. Ten. Red. Eleven. White. Twelve. Salt.", reveal: [9, 10, 11, 12], focus: 3}
+      - {tom: "Thirteen. Black pepper. Fourteen. Bottles. Fifteen. Oil. Sixteen. Vinegar.", say: "Thir-teen. Black pepper. Four-teen. Bottles. Fif-teen. Oil. Six-teen. Vinegar.", reveal: [13, 14, 15, 16], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: bàn ăn ở nước bạn"
+    heading: "Exercise 2 · About your country: Tom's answers"
+    heading_vi: "Answer key: câu của một người Argentina — Tom nói về Việt Nam"
+    items:
+      - {n: 1, q: "On restaurant tables in my country we usually or sometimes have ___", answer: "chopsticks, spoons, napkins, chilli sauce and fish sauce"}
+      - {n: 2, q: "We don't usually have ___", answer: "knives, wine glasses, oil or vinegar"}
+    lines:
+      - emma: "Exercise 2. Think about one to twelve in the picture, and complete the sentences about your country. Pause the video and try. Then listen to Tom."
+        say: "Exercise two. Think about one to twelve in the picture, and complete the sentences about your country. Pause the video and try. Then listen to Tom."
+        vi: "Bài 2: trên bàn ăn ở nước bạn thường có gì, không có gì?"
+      - {tom: "On restaurant tables in Vietnam, we usually have chopsticks, spoons, and napkins. And sometimes chilli sauce, and fish sauce.", reveal: [1], focus: 0, vi: "chopsticks: đũa"}
+      - {tom: "We don't usually have knives, wine glasses, oil or vinegar.", reveal: [2], focus: 1}
+      - {emma: "In England, there's usually salt and pepper, a knife and fork, and sometimes oil and vinegar. But no chopsticks!", focus: 1}
+
+  - kind: figure
+    chapter: "Cách nấu và steak"
+    heading: "B · What shall we have?"
+    heading_vi: "Ảnh trong sách tr. 72 — boiled, fried, grilled, roast · rare → medium → well done"
+    image: {pdf: course-book, page: 73, clip: [26, 503, 488, 690]}
+    items:
+      - {box: [45, 524, 106, 625]}
+      - {box: [130, 524, 226, 625]}
+      - {box: [248, 524, 333, 625]}
+      - {box: [343, 524, 441, 625]}
+      - {box: [124, 628, 230, 688]}
+      - {box: [230, 628, 335, 688]}
+      - {box: [335, 628, 441, 688]}
+    lines:
+      - emma: "What shall we have? Look at the photos on page seventy-two. Boiled rice: cooked in hot water."
+        focus: 0
+        vi: "boiled: luộc, nấu trong nước sôi"
+      - {tom: "Fried eggs: cooked in hot oil, in a pan.", focus: 1, vi: "fried: rán, chiên"}
+      - {emma: "Grilled fish: cooked under or over strong heat.", focus: 2, vi: "grilled: nướng (vỉ)"}
+      - {tom: "Roast chicken: cooked in the oven.", focus: 3, vi: "roast: quay, nướng lò"}
+      - {emma: "And steak can be rare: red inside.", focus: 4, vi: "rare: tái"}
+      - {tom: "Medium: pink inside.", focus: 5, vi: "medium: chín vừa"}
+      - {emma: "Or well done: cooked for a long time, brown inside.", focus: 6, vi: "well done: chín kỹ"}
+
+  - kind: figure
+    chapter: "Thực đơn"
+    heading: "B · The menu: starters and main courses"
+    heading_vi: "Thực đơn trong sách tr. 73 — starter: món khai vị · main course: món chính"
+    image: {pdf: course-book, page: 74, clip: [44, 60, 252, 216]}
+    items:
+      - {box: [52, 64, 246, 122]}
+      - {box: [52, 81, 246, 95]}
+      - {box: [52, 94, 246, 108]}
+      - {box: [52, 107, 246, 122]}
+      - {box: [52, 132, 246, 214]}
+      - {box: [52, 161, 246, 176]}
+      - {box: [52, 175, 246, 189]}
+      - {box: [52, 200, 246, 214]}
+    lines:
+      - emma: "Now the menu on page seventy-three. A menu is the list of food in a restaurant. First, the starters: small dishes at the beginning of the meal."
+        focus: 0
+        vi: "menu: thực đơn · starter: món khai vị"
+      - {tom: "Tomato soup.", focus: 1}
+      - {emma: "Grilled prawns in soy sauce.", focus: 2}
+      - {tom: "Mussels in white wine and garlic.", focus: 3}
+      - {emma: "Then the main courses: the big part of the meal. Pan fried tuna with green beans, fillet steak with chips and mushrooms…", focus: 4, vi: "main course: món chính"}
+      - {tom: "Fillet steak is the best part of the beef.", focus: 5, vi: "fillet steak: thăn bò"}
+      - {emma: "Roast duck with cabbage and peas, and grilled chicken with boiled potatoes.", focus: 6}
+      - {tom: "And cheese tart with mixed salad.", focus: 7}
+
+  - kind: figure
+    heading: "B · Food on the menu (1)"
+    heading_vi: "Tranh trong sách tr. 73 — số nhỏ trong thực đơn ứng với tranh"
+    image: {pdf: course-book, page: 74, clip: [268, 33, 480, 164]}
+    items:
+      - {box: [272, 40, 366, 92]}
+      - {box: [393, 33, 446, 100]}
+      - {box: [272, 103, 365, 162]}
+      - {box: [380, 103, 474, 162]}
+    lines:
+      - {emma: "The small numbers in the menu go with the pictures. One: soup.", focus: 0, vi: "soup: súp, canh"}
+      - {tom: "Two: soy sauce.", focus: 1, vi: "soy sauce: xì dầu"}
+      - {emma: "Three: steak.", focus: 2, vi: "steak: bít tết"}
+      - {tom: "Four: chips: fried potatoes. Americans say French fries.", focus: 3, vi: "chips (Anh) = French fries (Mỹ): khoai tây chiên"}
+
+  - kind: figure
+    heading: "B · Food on the menu (2) · desserts"
+    heading_vi: "Thực đơn và tranh tr. 73 — dessert: món tráng miệng"
+    image: {pdf: course-book, page: 74, clip: [44, 162.5, 480, 294]}
+    items:
+      - {box: [272, 162, 365, 218]}
+      - {box: [380, 162, 476, 218]}
+      - {box: [52, 225, 246, 268]}
+      - {box: [284, 217, 352, 292]}
+      - {box: [395, 217, 445, 292]}
+    lines:
+      - {emma: "Five: a tart.", focus: 0, vi: "tart: bánh tart"}
+      - {tom: "Six: a mixed salad.", focus: 1, vi: "mixed salad: rau trộn"}
+      - {emma: "Finally, the desserts: something sweet at the end of the meal. Apple tart, and ice cream with chocolate sauce.", focus: 2, vi: "dessert: món tráng miệng"}
+      - {tom: "Seven: ice cream.", focus: 3, vi: "ice cream: kem"}
+      - {emma: "And eight: sauce. This is chocolate sauce. Exercise 7 is a test: cover the menu, and say the words for the pictures.", say: "And eight: sauce. This is chocolate sauce. Exercise seven is a test: cover the menu, and say the words for the pictures.", focus: 4, vi: "sauce: nước sốt"}
+
+  - kind: blanks
+    chapter: "Bài 4: đúng hay sai?"
+    heading: "Exercise 4 · True or false? (1–5)"
+    heading_vi: "Ví dụ: You eat the starter after the main course. → F (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "You eat ice cream with a knife and fork.  →  ___", answer: "F"}
+      - {n: 2, q: "You eat the main course before dessert.  →  ___", answer: "T"}
+      - {n: 3, q: "Mixed salad can have lettuce and tomato in.  →  ___", answer: "T"}
+      - {n: 4, q: "You eat soup and chips in the same bowl.  →  ___", answer: "F"}
+      - {n: 5, q: "The list of food to eat is called a menu.  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 4. True or false? Pause the video and try."
+        say: "Exercise four. True or false? Pause the video and try."
+        vi: "Bài 4: đúng hay sai?"
+      - {tom: "One. False: you eat ice cream with a spoon. Two. True. Three. True.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. False! Five. True.", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    heading: "Exercise 4 · True or false? (6–10)"
+    heading_vi: "Answer key tr. 211"
+    items:
+      - {n: 6, q: "Dessert is the first thing you eat.  →  ___", answer: "F"}
+      - {n: 7, q: "You can roast a chicken or a duck.  →  ___", answer: "T"}
+      - {n: 8, q: "You can boil rice or potatoes.  →  ___", answer: "T"}
+      - {n: 9, q: "Fillet steak comes from a pig.  →  ___", answer: "F"}
+      - {n: 10, q: "You can have cheese tart or apple tart.  →  ___", answer: "T"}
+    lines:
+      - {tom: "Six. False: dessert is the last thing. Seven. True. Eight. True.", reveal: [6, 7, 8], focus: 2}
+      - {tom: "Nine. False: fillet steak comes from a cow. Ten. True.", reveal: [9, 10], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Ví dụ: I'd like roast chicken. (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "I love ice c ___.", answer: "cream"}
+      - {n: 2, q: "Could I have fillet s ___?", answer: "steak"}
+      - {n: 3, q: "I'd like a mixed s ___.", answer: "salad"}
+      - {n: 4, q: "My starter was tomato s ___.", answer: "soup"}
+      - {n: 5, q: "What's your main c ___?", answer: "course"}
+      - {n: 6, q: "Pass me the soy s ___.", answer: "sauce"}
+      - {n: 7, q: "Do you like your steak well d ___?", answer: "done"}
+      - {n: 8, q: "I had chicken with b ___ rice.", answer: "boiled"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. Pause the video and try."
+        say: "Exercise five. Complete the sentences. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. Ice cream. Two. Fillet steak. Three. A mixed salad. Four. Tomato soup.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Main course. Six. Soy sauce. Seven. Well done. Eight. Boiled rice.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: chọn món"
+    heading: "Speaking 1 · Exercise 6: Look at the menu"
+    heading_vi: "Câu hỏi bài 6 — tạm dừng sau mỗi câu hỏi để tự chọn món, rồi nghe câu mẫu"
+    items:
+      - q: "Which starter would you like?"
+        a: "The grilled prawns in soy sauce. I love prawns."
+        ask: emma
+        by: tom
+        phrases: ["The …", "I love…"]
+      - q: "And you, Emma?"
+        a: "The mussels in white wine and garlic. They remind me of home."
+        ask: tom
+        by: emma
+        phrases: ["The …", "They remind me of…"]
+      - q: "Which main course would you like?"
+        a: "The fillet steak with chips, please. I've only had steak once, so I'd like to try it again. Medium, please."
+        ask: emma
+        by: tom
+        phrases: ["…, please.", "I've only had … once", "Medium, please."]
+      - q: "What about you? The roast duck?"
+        a: "No, I don't like duck. I'll have the pan fried tuna with green beans."
+        ask: tom
+        by: emma
+        phrases: ["No, I don't like…", "I'll have…"]
+      - q: "Which dessert would you like?"
+        a: "Ice cream with chocolate sauce! And Emma always has the apple tart."
+        ask: emma
+        by: tom
+        phrases: ["… !", "always has…"]
+    lines:
+      - {emma: "Exercise 6. Look at the menu. Which starter would you like, Tom?", say: "Exercise six. Look at the menu. Which starter would you like, Tom?", focus: 0}
+      - {tom: "The grilled prawns in soy sauce. I love prawns.", reveal: 0, vi: "Tôm nướng sốt xì dầu — Tom rất thích tôm."}
+      - {tom: "And you, Emma?", focus: 1}
+      - {emma: "The mussels in white wine and garlic. They remind me of home.", reveal: 1, vi: "Vẹm nấu vang trắng và tỏi — gợi nhớ quê nhà."}
+      - {emma: "Which main course would you like?", focus: 2}
+      - {tom: "The fillet steak with chips, please. I've only had steak once, so I'd like to try it again. Medium, please.", reveal: 2, vi: "Thăn bò với khoai tây chiên — mới ăn bít tết một lần, muốn thử lại. Chín vừa."}
+      - {tom: "What about you? The roast duck?", focus: 3}
+      - {emma: "No, I don't like duck. I'll have the pan fried tuna with green beans.", reveal: 3, vi: "Không, Emma không thích vịt. Lấy cá ngừ áp chảo với đậu."}
+      - {emma: "Which dessert would you like?", focus: 4}
+      - {tom: "Ice cream with chocolate sauce! And Emma always has the apple tart.", reveal: 4, vi: "Kem sốt sô-cô-la! Còn Emma lúc nào cũng chọn bánh táo."}
+
+  - kind: bullets
+    chapter: "Khách và phục vụ (1)"
+    heading: "C · Customer and waiter (1)"
+    heading_vi: "Hội thoại tr. 74 — Tom đọc người phục vụ (W), Emma đọc khách (C)"
+    image: {pdf: course-book, page: 75, clip: [26, 54, 242, 163]}
+    items:
+      - {en: "Are you ready to order?", vi: "Anh / chị gọi món chưa ạ?", box: [27, 70, 240, 83]}
+      - {en: "Yes, I'll have the fillet steak.", vi: "Rồi, tôi lấy thăn bò.", box: [27, 82, 240, 94]}
+      - {en: "And how would you like your steak?", vi: "Chị muốn bít tết chín thế nào?", box: [27, 93, 240, 106]}
+      - {en: "Rare, please. And a glass of red wine …", vi: "Tái. Và một ly vang đỏ, ít nước khoáng.", box: [27, 105, 240, 128]}
+      - {en: "Still or sparkling? — Sparkling. — Fine.", vi: "Nước thường hay có ga? — Có ga.", box: [27, 127, 240, 162]}
+    lines:
+      - {tom: "Are you ready to order?", focus: 0, vi: "= Do you know what you want to eat?"}
+      - {emma: "Yes, I'll have the fillet steak.", focus: 1, vi: "I'll have … = I'd like …"}
+      - {tom: "And how would you like your steak?", focus: 2}
+      - {emma: "Rare, please. And I'd like a glass of red wine, and some mineral water.", focus: 3}
+      - {tom: "Still, or sparkling?", focus: 4, vi: "still: không ga · sparkling: có ga"}
+      - {emma: "Sparkling.", focus: 4}
+      - {tom: "Fine.", focus: 4}
+
+  - kind: bullets
+    chapter: "Khách và phục vụ (2)"
+    heading: "C · Customer and waiter (2) · later in the meal"
+    heading_vi: "Hội thoại tr. 74 — another (đếm được) · some more (không đếm được)"
+    image: {pdf: course-book, page: 75, clip: [26, 166, 242, 285]}
+    items:
+      - {en: "Could I have another glass of wine?", vi: "Cho tôi thêm một ly vang. — Yes, of course: vâng, tất nhiên.", box: [27, 179, 240, 203]}
+      - {en: "Oh, and some more water, please.", vi: "À, thêm ít nước nữa. — Certainly: vâng ạ.", box: [27, 202, 240, 227]}
+      - {en: "Would you like to see the dessert menu?", vi: "Chị có muốn xem thực đơn tráng miệng không?", box: [27, 236, 240, 249]}
+      - {en: "I'll have a coffee. And could I have the bill?", vi: "Thôi, cho tôi cà phê. Và cho tôi tính tiền.", box: [27, 248, 240, 272]}
+      - {en: "Yes, sure.", vi: "Vâng.", box: [27, 271, 240, 284]}
+    lines:
+      - {emma: "Could I have another glass of wine?", focus: 0}
+      - {tom: "Yes, of course.", focus: 0}
+      - {emma: "Oh, and some more water, please.", focus: 1}
+      - {tom: "Certainly.", focus: 1, vi: "of course = sure = certainly: vâng, được ạ"}
+      - {tom: "Would you like to see the dessert menu?", focus: 2}
+      - {emma: "No thanks, but I'll have a coffee. And could I have the bill, please?", focus: 3, vi: "the bill: hóa đơn"}
+      - {tom: "Yes, sure.", focus: 4}
+
+  - kind: figure
+    chapter: "Glossary và Spotlight"
+    heading: "Glossary · ordering in a restaurant"
+    heading_vi: "Glossary tr. 74"
+    image: {pdf: course-book, page: 75, clip: [262, 256, 486, 424]}
+    items:
+      - {box: [264, 278, 484, 301]}
+      - {box: [264, 302, 484, 313]}
+      - {box: [264, 314, 484, 338]}
+      - {box: [264, 338, 484, 363]}
+      - {box: [264, 363, 484, 374]}
+      - {box: [264, 374, 484, 398]}
+      - {box: [264, 398, 484, 422]}
+    lines:
+      - {emma: "Look at the glossary. Are you ready to order? means: do you know what you want to eat?", focus: 0}
+      - {tom: "I'll have steak means I'd like steak, or I want steak.", focus: 1}
+      - {emma: "How would you like your steak? Rare, medium, or well done?", focus: 2}
+      - {tom: "Still water is water without gas. Sparkling water is water with gas.", focus: 3}
+      - {emma: "Breakfast, lunch and dinner are meals.", focus: 4, vi: "meal: bữa ăn"}
+      - {tom: "Of course, sure, and certainly all mean: yes, no problem.", focus: 5}
+      - {emma: "And the bill is a piece of paper which shows the money you must pay for the meal.", focus: 6}
+
+  - kind: figure
+    heading: "Spotlight · another or some more"
+    heading_vi: "tr. 74 — another + danh từ đếm được số ít · some more + danh từ không đếm được"
+    image: {pdf: course-book, page: 75, clip: [262, 430, 486, 510]}
+    items:
+      - {box: [264, 457, 484, 483]}
+      - {box: [264, 482, 484, 508]}
+    lines:
+      - {tom: "Look at the spotlight. Say another, meaning one more, with countable nouns: another glass, another biscuit, another apple.", focus: 0, vi: "another = one more: thêm một (đếm được)"}
+      - {emma: "Say some more with uncountable nouns: some more water, some more wine, some more bread.", focus: 1, vi: "some more: thêm (không đếm được)"}
+
+  - kind: blanks
+    chapter: "Bài 8: chọn từ đúng"
+    heading: "Exercise 8 · Circle the correct word"
+    heading_vi: "Ví dụ: I like / I'd like a coffee. → I'd like (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "Could I have some more / another potatoes?  →  ___", answer: "some more"}
+      - {n: 2, q: "Are you ready order / to order?  →  ___", answer: "to order"}
+      - {n: 3, q: "Do you want another / some more bottle?  →  ___", answer: "another"}
+      - {n: 4, q: "We had a delicious meal / food last night.  →  ___", answer: "meal"}
+      - {n: 5, q: "Yes, course / of course.  →  ___", answer: "of course"}
+      - {n: 6, q: "Could I have a / the bill, please?  →  ___", answer: "the"}
+      - {n: 7, q: "I / I'll have the prawns, please.  →  ___", answer: "I'll"}
+      - {n: 8, q: "Yes, certainly / certain.  →  ___", answer: "certainly"}
+    lines:
+      - emma: "Exercise 8. Circle the correct word. Pause the video and try."
+        say: "Exercise eight. Circle the correct word. Pause the video and try."
+        vi: "Bài 8: chọn từ đúng."
+      - {tom: "One. Some more potatoes: potatoes is plural. Two. Ready to order. Three. Another bottle. Four. A delicious meal: food is uncountable.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Of course. Six. The bill. Seven. I'll have the prawns. Eight. Certainly.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 9: hoàn thành hội thoại"
+    heading: "Exercise 9 · Complete the conversations"
+    heading_vi: "Ví dụ: Are you ready to order? (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "C: Yes, I'll ___ the steak.", answer: "have"}
+      - {n: 2, q: "W: And ___ would you like it?", answer: "how"}
+      - {n: 3, q: "W: Yes, of ___.", answer: "course"}
+      - {n: 4, q: "W: Still or ___?", answer: "sparkling"}
+      - {n: 5, q: "C: Could I have ___ more water, please?", answer: "some"}
+      - {n: 6, q: "W: Certainly. And would you like a ___?", answer: "dessert"}
+      - {n: 7, q: "C: Yes, I ___ have the ice cream.", answer: "'ll"}
+      - {n: 8, q: "C: Then could I have the ___?", answer: "bill"}
+      - {n: 9, q: "W: Yes, ___.", answer: "sure / certainly"}
+    lines:
+      - emma: "Exercise 9. Complete the conversations. Pause the video and try."
+        say: "Exercise nine. Complete the conversations. Pause the video and try."
+        vi: "Bài 9: hoàn thành hội thoại."
+      - {tom: "Conversation one. I'll have the steak. And how would you like it? Yes, of course. Still or sparkling?", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Conversation two. Could I have some more water? Would you like a dessert? Yes, I'll have the ice cream. Could I have the bill? Yes, sure. Or certainly.", reveal: [5, 6, 7, 8, 9], focus: 8}
+
+  - kind: bullets
+    chapter: "Đặt bàn qua điện thoại"
+    heading: "Booking a table on the phone"
+    heading_vi: "Thêm ngoài sách — hay gặp ở IELTS Listening phần 1"
+    items:
+      - {en: "I'd like to book a table for four, please.", vi: "Tôi muốn đặt bàn cho bốn người."}
+      - {en: "For what time? — For seven o'clock this evening.", vi: "Mấy giờ ạ? — Bảy giờ tối nay."}
+      - {en: "Can I have your name, please? — It's Clarke: C, L, A, R, K, E.", vi: "Cho tôi xin tên. — Clarke, đánh vần …"}
+      - {en: "Could we have a table by the window?", vi: "Cho chúng tôi bàn cạnh cửa sổ được không?"}
+      - {en: "Do you have a vegetarian menu?", vi: "Có thực đơn chay không?"}
+    lines:
+      - emma: "In IELTS listening part one, you often hear people booking a table. Listen to the phrases. I'd like to book a table for four, please."
+        say: "In eye-elts listening part one, you often hear people booking a table. Listen to the phrases. I'd like to book a table for four, please."
+        focus: 0
+        vi: "book a table: đặt bàn"
+      - {tom: "For what time?", focus: 1}
+      - {emma: "For seven o'clock this evening.", focus: 1}
+      - {tom: "Can I have your name, please?", focus: 2}
+      - {emma: "It's Clarke: C, L, A, R, K, E.", say: "It's Clarke: see, el, eigh, ar, kay, ee.", focus: 2, vi: "Bài nghe IELTS hay bắt đánh vần tên."}
+      - {tom: "Could we have a table by the window? Or outside?", focus: 3}
+      - {emma: "And: do you have a vegetarian menu?", focus: 4}
+
+  - kind: practice
+    chapter: "Đóng vai: gọi món"
+    heading: "Role-play · You are the customer. Emma is the waiter."
+    heading_vi: "Tạm dừng video sau mỗi câu của Emma và trả lời như khách — nhìn thực đơn tr. 73"
+    items:
+      - {q: "Good evening. Are you ready to order?", hint: "Yes, I'll have the tomato soup, and then the …"}
+      - {q: "How would you like your steak?", hint: "Medium, please. / Well done, please."}
+      - {q: "And what would you like to drink?", hint: "Some mineral water, please."}
+      - {q: "Still or sparkling?", hint: "Still, please."}
+      - {q: "Would you like to see the dessert menu?", hint: "Yes, please. / No, thanks. Could I have the bill, please?"}
+    lines:
+      - emma: "Now a role-play. I'm the waiter, and you're the customer. Look at the menu on page seventy-three. Pause the video after each question, and answer."
+        vi: "Đóng vai: Emma là người phục vụ, bạn là khách — nhìn thực đơn tr. 73."
+      - {emma: "Good evening. Are you ready to order?", focus: 0, pause: 0.5}
+      - {emma: "How would you like your steak?", focus: 1, pause: 0.5}
+      - {emma: "And what would you like to drink?", focus: 2, pause: 0.5}
+      - {emma: "Still, or sparkling?", focus: 3, pause: 0.5}
+      - {emma: "Would you like to see the dessert menu?", focus: 4, pause: 1.0}
+
+  - kind: figure
+    chapter: "Ôn tập: trên bàn ăn"
+    heading: "Review · Test yourself: what's on the table?"
+    heading_vi: "Bài 3: che nhãn, nhìn tranh, nói tên — tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 73, clip: [28, 88, 478, 214]}
+    items:
+      - {box: [95, 95, 135, 185]}
+      - {box: [178, 106, 225, 170]}
+      - {box: [218, 88, 264, 192]}
+      - {box: [262, 104, 306, 160]}
+      - {box: [335, 128, 392, 158]}
+      - {box: [362, 146, 432, 186]}
+      - {box: [300, 186, 414, 214]}
+      - {box: [240, 158, 318, 190]}
+    lines:
+      - {emma: "Exercise 3 is a test. Look at the picture without the words, and say what it is. Pause the video after each question. What's this?", say: "Exercise three is a test. Look at the picture without the words, and say what it is. Pause the video after each question. What's this?", focus: 0}
+      - {tom: "A glass of red wine.", focus: 0}
+      - {emma: "And these?", focus: 1}
+      - {tom: "Salt and pepper.", focus: 1}
+      - {emma: "What's this?", focus: 2}
+      - {tom: "A bottle of mineral water.", focus: 2}
+      - {emma: "And these two little bottles?", focus: 3}
+      - {tom: "Oil and vinegar.", focus: 3}
+      - {emma: "What's this?", focus: 4}
+      - {tom: "A napkin.", focus: 4}
+      - {emma: "And this?", focus: 5}
+      - {tom: "A bowl, on a plate.", focus: 5}
+      - {emma: "And these?", focus: 6}
+      - {tom: "A knife and a fork.", focus: 6}
+      - {emma: "And the last one?", focus: 7}
+      - {tom: "A spoon.", focus: 7}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc ở nhà hàng — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "Can I have another water?  →  ___", answer: "Can I have some more water?"}
+      - {n: 2, q: "Are you ready for order?  →  ___", answer: "Are you ready to order?"}
+      - {n: 3, q: "I take the fish, please.  →  ___", answer: "I'll have the fish, please."}
+      - {n: 4, q: "We had a delicious food last night.  →  ___", answer: "We had a delicious meal last night."}
+      - {n: 5, q: "Pass me the salt.  →  ___", answer: "Could you pass the salt, please?"}
+      - {n: 6, q: "I want the bill.  →  ___", answer: "Could I have the bill, please?"}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake, or they aren't polite. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi hoặc chưa lịch sự — tạm dừng video và sửa."
+      - {tom: "One. Some more water: water is uncountable. Two. Ready to order.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. I'll have the fish. Four. A delicious meal, or just delicious food: food is uncountable.", reveal: [3, 4], focus: 3}
+      - {tom: "Five and six aren't polite. Could you pass the salt, please? And: could I have the bill, please?", reveal: [5, 6], focus: 5, vi: "Could you / Could I … please?: lịch sự hơn"}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a restaurant that you enjoyed going to"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể ở quá khứ đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: where it is", vi: "nó ở đâu"}
+      - {en: "who you went with", vi: "bạn đi với ai"}
+      - {en: "what you ate there", vi: "bạn ăn gì ở đó"}
+      - {en: "and explain why you enjoyed it", vi: "và giải thích vì sao bạn thích"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a restaurant that you enjoyed going to."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a restaurant that you enjoyed going to."
+        vi: "Luyện nói chung kiểu Part 2: một nhà hàng bạn thích."
+      - {emma: "You should say where it is,", focus: 0}
+      - {emma: "who you went with,", focus: 1}
+      - {emma: "what you ate there,", focus: 2}
+      - {emma: "and explain why you enjoyed it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — quá khứ đơn, từ chỉ món ăn và cách nấu"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a hot pot restaurant in Da Lat. It's near the market in the city centre, and it's always full in the evening."
+        say: "I'd like to talk about a hot pot restaurant in Dah Lot. It's near the market in the city centre, and it's always full in the evening."
+        note: "where"
+      - text: "I went there at Tết this year with my whole family: my grandfather, my parents, my little brother Bao, and my sister Hoa, who came home from Hanoi."
+        say: "I went there at Tet this year with my whole family: my grandfather, my parents, my little brother Bao, and my sister Whah, who came home from Ha Noi."
+        note: "who with"
+      - text: "We had a big beef hot pot with lots of vegetables, mushrooms and noodles. You cook the food yourself at the table, so it's fun, and everyone shares."
+        note: "what"
+      - text: "I enjoyed it because the food was hot and delicious on a cold Da Lat evening, and because the whole family was together. My grandfather told funny stories all night!"
+        say: "I enjoyed it because the food was hot and delicious on a cold Dah Lot evening, and because the whole family was together. My grandfather told funny stories all night!"
+        note: "why"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about a seafood restaurant in Vung Tau, a small city by the sea about two hours from Ho Chi Minh City."
+        say: "I'd like to talk about a seafood restaurant in Voong Tau, a small city by the sea about two hours from Ho Chee Min City."
+        note: "where"
+      - text: "I went there last summer with three teachers from my school. We sat outside, right next to the beach."
+        note: "who with"
+      - text: "We had grilled prawns, crab with garlic, and some fresh fish, with a big plate of fried rice. For dessert, we had fresh mango."
+        note: "what"
+      - text: "I enjoyed it because the seafood was really fresh, and the sea breeze was lovely. It reminded me of my hometown in England, which is also by the sea. And it was cheap!"
+        note: "why"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a restaurant that you enjoyed going to.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a restaurant that you enjoyed going to"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Where is it?", hint: "I'd like to talk about … · It's in / near …"}
+      - {q: "Who did you go with?", hint: "I went there with my family / friends / …"}
+      - {q: "What did you eat there?", hint: "We had grilled … / fried … / a big …"}
+      - {q: "Why did you enjoy it?", hint: "I enjoyed it because the food was … and …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple, and the food words from this module."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple, and the food words from this module."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Where is it?", focus: 0, pause: 0.5}
+      - {emma: "Who did you go with?", focus: 1, pause: 0.5}
+      - {emma: "What did you eat there?", focus: 2, pause: 0.5}
+      - {emma: "Why did you enjoy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · eating out"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do people like eating out?"
+        a: "It's relaxing: there's no cooking and no washing-up. And it's a good way to meet friends or celebrate something special."
+        ask: tom
+        by: emma
+        phrases: ["It's relaxing:", "And it's a good way to…"]
+      - q: "Is it better to eat at home or in a restaurant?"
+        a: "At home is cheaper and usually healthier, I think. But restaurants are great for special days, like birthdays."
+        ask: emma
+        by: tom
+        phrases: ["… is cheaper and…", "But … are great for…"]
+      - q: "How is eating out in Vietnam different from England?"
+        a: "In Vietnam, people often share all the dishes, and street food is very cheap. In England, everyone orders their own meal, and people usually leave a tip."
+        ask: tom
+        by: emma
+        phrases: ["In Vietnam, …", "In England, …", "leave a tip"]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Why do people like eating out?", focus: 0}
+      - {emma: "It's relaxing: there's no cooking and no washing-up. And it's a good way to meet friends or celebrate something special.", reveal: 0, vi: "Thư giãn: không nấu, không rửa bát; dịp gặp bạn bè, ăn mừng."}
+      - {emma: "Is it better to eat at home or in a restaurant?", focus: 1}
+      - {tom: "At home is cheaper and usually healthier, I think. But restaurants are great for special days, like birthdays.", reveal: 1, vi: "Ở nhà rẻ và thường lành hơn; nhà hàng hợp cho ngày đặc biệt."}
+      - {tom: "How is eating out in Vietnam different from England?", focus: 2}
+      - {emma: "In Vietnam, people often share all the dishes, and street food is very cheap. In England, everyone orders their own meal, and people usually leave a tip.", reveal: 2, vi: "Ở Việt Nam hay ăn chung các món, đồ ăn đường phố rẻ; ở Anh mỗi người gọi phần riêng, thường để lại tiền boa."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 72–73, nhìn tranh, nói lại"
+    items:
+      - {en: "glass · bottle · salt and pepper · oil · vinegar · napkin · bowl · plate · knife · fork · spoon", vi: "trên bàn ăn"}
+      - {en: "boiled · fried · grilled · roast — steak: rare · medium · well done", vi: "cách nấu"}
+      - {en: "menu · starter · main course · dessert · soup · sauce · tart · chips · mixed salad · ice cream", vi: "thực đơn"}
+      - {en: "Are you ready to order? · I'll have … · Still or sparkling? · the bill", vi: "gọi món"}
+      - {en: "another glass (countable) · some more water (uncountable)", vi: "another ≠ some more"}
+      - {en: "Next: Review · Food and drink (pages 75–77)", vi: "Tiếp theo: ôn tập module, tr. 75–77"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A glass, a bottle, salt and pepper, oil, vinegar, a napkin, a bowl, a plate, a knife, a fork, and a spoon.", focus: 0}
+      - {tom: "Boiled, fried, grilled, and roast. And steak: rare, medium, or well done.", focus: 1}
+      - {emma: "The menu: starter, main course, and dessert. Soup, sauce, tart, chips, mixed salad, and ice cream.", focus: 2}
+      - {tom: "Are you ready to order? I'll have… Still or sparkling? And the bill, please.", focus: 3}
+      - {emma: "Another glass, but some more water.", focus: 4}
+      - {tom: "That's the end of the Food and drink module. Next time, it's the review on pages seventy-five to seventy-seven. Well done!", focus: 5}

@@ -1,0 +1,324 @@
+# Video nghe – viết (dictation) Unit 27 · In a café — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U27-cafe-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U27 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+id: U27-cafe-dictation
+activity: U27-words
+title: "Unit 27 · In a café"
+subtitle: "Dictation · listen and write: ordering in a café"
+title_vi: "Nghe – viết 10 phút: ở quán cà phê — từ trong sách, từ thêm, câu giao tiếp"
+tag: "FOOD AND DRINK · UNIT 27"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 27: In a café. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-seven: In a cafe. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 27: ở quán cà phê. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 22 words from the book. You hear each word twice, and then an example sentence twice. Then 28 more useful words, and 34 useful sentences for conversation.", "say": "There are three parts. First, twenty-two words from the book. You hear each word twice, and then an example sentence twice. Then twenty-eight more useful words, and thirty-four useful sentences for conversation.", "vi": "Ba phần: 22 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 28 từ thêm, 34 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "coffee", "vi": "cà phê", "ex": "Would you like a coffee?", "w": ["coffee"]}
+      - {"n": 2, "answer": "white coffee, black coffee", "vi": "cà phê sữa, cà phê đen", "ex": "A white coffee and a black coffee, please.", "w": ["white", "black coffee"]}
+      - {"n": 3, "answer": "cappuccino", "vi": "cà phê cappuccino", "ex": "I'd like a cappuccino, please.", "w": ["cappuccino"]}
+      - {"n": 4, "answer": "espresso", "vi": "cà phê espresso", "ex": "An espresso is small and strong.", "w": ["espresso"]}
+      - {"n": 5, "answer": "tea", "vi": "trà", "ex": "Two teas with milk, please.", "w": ["tea"]}
+      - {"n": 6, "answer": "milk", "vi": "sữa", "ex": "Do you take milk?", "w": ["milk"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. coffee. coffee. Would you like a coffee? Would you like a coffee?", "focus": 0}
+      - {"emma": "Two. white coffee, black coffee. white coffee, black coffee. A white coffee and a black coffee, please. A white coffee and a black coffee, please.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. cappuccino. cappuccino. I'd like a cappuccino, please. I'd like a cappuccino, please.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. espresso. espresso. An espresso is small and strong. An espresso is small and strong.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. tea. tea. Two teas with milk, please. Two teas with milk, please.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. milk. milk. Do you take milk? Do you take milk?", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "hot chocolate", "vi": "sô-cô-la nóng", "ex": "The children want hot chocolate."}
+      - {"n": 8, "answer": "orange juice", "vi": "nước cam", "ex": "A glass of orange juice, please.", "w": ["orange juice", "juice"]}
+      - {"n": 9, "answer": "croissant", "vi": "bánh sừng bò", "ex": "I'll have a croissant.", "w": ["croissant"]}
+      - {"n": 10, "answer": "baguette", "vi": "bánh mì dài", "ex": "Two chicken baguettes, please.", "w": ["baguette"]}
+      - {"n": 11, "answer": "sandwich", "vi": "bánh mì kẹp", "ex": "A ham sandwich on brown bread, please.", "w": ["sandwich", "bread", "brown"]}
+      - {"n": 12, "answer": "toasted sandwich", "vi": "bánh mì kẹp nướng", "ex": "Can I have a toasted cheese sandwich?", "w": ["toasted sandwich"]}
+    lines:
+      - {"emma": "Seven. hot chocolate. hot chocolate. The children want hot chocolate. The children want hot chocolate.", "focus": 0}
+      - {"emma": "Eight. orange juice. orange juice. A glass of orange juice, please. A glass of orange juice, please.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. croissant. croissant. I'll have a croissant. I'll have a croissant.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. baguette. baguette. Two chicken baguettes, please. Two chicken baguettes, please.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. sandwich. sandwich. A ham sandwich on brown bread, please. A ham sandwich on brown bread, please.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. toasted sandwich. toasted sandwich. Can I have a toasted cheese sandwich? Can I have a toasted cheese sandwich?", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "roll", "vi": "bánh mì tròn nhỏ", "ex": "I'd like a cheese roll.", "w": ["roll"]}
+      - {"n": 14, "answer": "What would you like?", "vi": "Anh dùng gì ạ?", "ex": "What would you like to drink?", "w": ["what"]}
+      - {"n": 15, "answer": "I'd like", "vi": "tôi muốn", "ex": "I'd like two coffees, please.", "w": ["I'd like", "like"]}
+      - {"n": 16, "answer": "please", "vi": "làm ơn (lịch sự)", "ex": "A tea, please.", "w": ["please"]}
+      - {"n": 17, "answer": "Yes, please.", "vi": "Vâng, cảm ơn.", "ex": "Would you like some water? — Yes, please.", "w": ["yes, please"]}
+      - {"n": 18, "answer": "order", "vi": "gọi món", "ex": "Can I order now?", "w": ["order"]}
+    lines:
+      - {"emma": "Thirteen. roll. roll. I'd like a cheese roll. I'd like a cheese roll.", "focus": 0}
+      - {"emma": "Fourteen. What would you like?. What would you like?. What would you like to drink? What would you like to drink?", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. I'd like. I'd like. I'd like two coffees, please. I'd like two coffees, please.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. please. please. A tea, please. A tea, please.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. Yes, please.. Yes, please.. Would you like some water? — Yes, please. Would you like some water? — Yes, please.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. order. order. Can I order now? Can I order now?", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "take away", "vi": "mang đi", "ex": "Is that to eat here or take away?", "w": ["take away"]}
+      - {"n": 20, "answer": "a couple of minutes", "vi": "vài phút", "ex": "The food will be a couple of minutes.", "w": ["couple"]}
+      - {"n": 21, "answer": "Have a seat.", "vi": "Mời ngồi.", "ex": "Have a seat, please.", "w": ["have a seat", "seat"]}
+      - {"n": 22, "answer": "two coffees", "vi": "hai ly cà phê", "ex": "Two coffees and a cappuccino, please."}
+    lines:
+      - {"emma": "Nineteen. take away. take away. Is that to eat here or take away? Is that to eat here or take away?", "focus": 0}
+      - {"emma": "Twenty. a couple of minutes. a couple of minutes. The food will be a couple of minutes. The food will be a couple of minutes.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. Have a seat.. Have a seat.. Have a seat, please. Have a seat, please.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. two coffees. two coffees. Two coffees and a cappuccino, please. Two coffees and a cappuccino, please.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (23–28)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 23, "answer": "iced coffee with milk", "vi": "cà phê sữa đá", "ex": "Tom drinks iced coffee with milk every morning."}
+      - {"n": 24, "answer": "egg coffee", "vi": "cà phê trứng", "ex": "Egg coffee comes from Hanoi."}
+      - {"n": 25, "answer": "iced tea", "vi": "trà đá", "ex": "Iced tea is often free in small restaurants."}
+      - {"n": 26, "answer": "smoothie", "vi": "sinh tố", "ex": "An avocado smoothie, please."}
+      - {"n": 27, "answer": "waiter", "vi": "người phục vụ", "ex": "The waiter brought our drinks."}
+      - {"n": 28, "answer": "counter", "vi": "quầy", "ex": "You pay at the counter."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-three. iced coffee with milk. iced coffee with milk. Tom drinks iced coffee with milk every morning. Tom drinks iced coffee with milk every morning.", "focus": 0}
+      - {"tom": "Twenty-four. egg coffee. egg coffee. Egg coffee comes from Hanoi. Egg coffee comes from Hanoi.", "say": "Twenty-four. egg coffee. egg coffee. Egg coffee comes from Ha Noi. Egg coffee comes from Ha Noi.", "focus": 1, "reveal": [23]}
+      - {"tom": "Twenty-five. iced tea. iced tea. Iced tea is often free in small restaurants. Iced tea is often free in small restaurants.", "focus": 2, "reveal": [24]}
+      - {"tom": "Twenty-six. smoothie. smoothie. An avocado smoothie, please. An avocado smoothie, please.", "focus": 3, "reveal": [25]}
+      - {"tom": "Twenty-seven. waiter. waiter. The waiter brought our drinks. The waiter brought our drinks.", "focus": 4, "reveal": [26]}
+      - {"tom": "Twenty-eight. counter. counter. You pay at the counter. You pay at the counter.", "focus": 5, "reveal": [27]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "cup", "vi": "tách", "ex": "Would you like a cup of tea?"}
+      - {"n": 30, "answer": "mug", "vi": "cốc to", "ex": "She drinks coffee from a big mug."}
+      - {"n": 31, "answer": "straw", "vi": "ống hút", "ex": "Can I have a straw, please?"}
+      - {"n": 32, "answer": "small, medium, large", "vi": "cỡ nhỏ, vừa, lớn", "ex": "A large iced coffee, please."}
+      - {"n": 33, "answer": "less sugar", "vi": "ít đường", "ex": "Less sugar, please."}
+      - {"n": 34, "answer": "no ice", "vi": "không đá", "ex": "An orange juice with no ice, please."}
+    lines:
+      - {"tom": "Twenty-nine. cup. cup. Would you like a cup of tea? Would you like a cup of tea?", "focus": 0}
+      - {"tom": "Thirty. mug. mug. She drinks coffee from a big mug. She drinks coffee from a big mug.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. straw. straw. Can I have a straw, please? Can I have a straw, please?", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. small, medium, large. small, medium, large. A large iced coffee, please. A large iced coffee, please.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. less sugar. less sugar. Less sugar, please. Less sugar, please.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. no ice. no ice. An orange juice with no ice, please. An orange juice with no ice, please.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "to go", "vi": "mang đi (Mỹ)", "ex": "A coffee to go, please."}
+      - {"n": 36, "answer": "Wi-Fi password", "vi": "mật khẩu wifi", "ex": "What's the Wi-Fi password?"}
+      - {"n": 37, "answer": "snack", "vi": "đồ ăn nhẹ", "ex": "I usually have a snack in the afternoon."}
+      - {"n": 38, "answer": "muffin", "vi": "bánh muffin", "ex": "A chocolate muffin, please."}
+      - {"n": 39, "answer": "barista", "vi": "người pha chế", "ex": "The barista makes great coffee."}
+      - {"n": 40, "answer": "tip", "vi": "tiền boa", "ex": "Leave a tip for the waiter."}
+    lines:
+      - {"tom": "Thirty-five. to go. to go. A coffee to go, please. A coffee to go, please.", "focus": 0}
+      - {"tom": "Thirty-six. Wi-Fi password. Wi-Fi password. What's the Wi-Fi password? What's the Wi-Fi password?", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. snack. snack. I usually have a snack in the afternoon. I usually have a snack in the afternoon.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. muffin. muffin. A chocolate muffin, please. A chocolate muffin, please.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. barista. barista. The barista makes great coffee. The barista makes great coffee.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. tip. tip. Leave a tip for the waiter. Leave a tip for the waiter.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "decaf", "vi": "cà phê không caffeine", "ex": "I'll have a decaf, please."}
+      - {"n": 42, "answer": "strong", "vi": "đậm, đặc", "ex": "Vietnamese coffee is very strong."}
+      - {"n": 43, "answer": "milkshake", "vi": "sữa lắc", "ex": "A strawberry milkshake, please."}
+      - {"n": 44, "answer": "caffeine", "vi": "caffeine", "ex": "Coffee has a lot of caffeine."}
+      - {"n": 45, "answer": "cream", "vi": "kem sữa", "ex": "Coffee with cream and sugar, please."}
+      - {"n": 46, "answer": "sit outside", "vi": "ngồi bên ngoài", "ex": "Can we sit outside?"}
+    lines:
+      - {"tom": "Forty-one. decaf. decaf. I'll have a decaf, please. I'll have a decaf, please.", "focus": 0}
+      - {"tom": "Forty-two. strong. strong. Vietnamese coffee is very strong. Vietnamese coffee is very strong.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. milkshake. milkshake. A strawberry milkshake, please. A strawberry milkshake, please.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. caffeine. caffeine. Coffee has a lot of caffeine. Coffee has a lot of caffeine.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. cream. cream. Coffee with cream and sugar, please. Coffee with cream and sugar, please.", "focus": 4, "reveal": [44]}
+      - {"tom": "Forty-six. sit outside. sit outside. Can we sit outside? Can we sit outside?", "focus": 5, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (47–50)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 47, "answer": "busy", "vi": "đông khách", "ex": "The café is busy in the evening."}
+      - {"n": 48, "answer": "a table for two", "vi": "bàn cho hai người", "ex": "A table for two, please."}
+      - {"n": 49, "answer": "opening hours", "vi": "giờ mở cửa", "ex": "What are the opening hours?"}
+      - {"n": 50, "answer": "coffee beans", "vi": "hạt cà phê", "ex": "Tom's dad buys coffee beans in Da Lat."}
+    lines:
+      - {"tom": "Forty-seven. busy. busy. The café is busy in the evening. The café is busy in the evening.", "say": "Forty-seven. busy. busy. The cafe is busy in the evening. The cafe is busy in the evening.", "focus": 0}
+      - {"tom": "Forty-eight. a table for two. a table for two. A table for two, please. A table for two, please.", "focus": 1, "reveal": [47]}
+      - {"tom": "Forty-nine. opening hours. opening hours. What are the opening hours? What are the opening hours?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. coffee beans. coffee beans. Tom's dad buys coffee beans in Da Lat. Tom's dad buys coffee beans in Da Lat.", "say": "Fifty. coffee beans. coffee beans. Tom's dad buys coffee beans in Dah Lot. Tom's dad buys coffee beans in Dah Lot.", "focus": 3, "reveal": [49]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [50]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 51, "answer": "Yes, please?", "vi": "Anh chị dùng gì ạ?"}
+      - {"n": 52, "answer": "A cappuccino and a croissant, please.", "vi": "Một cappuccino và một bánh sừng bò."}
+      - {"n": 53, "answer": "Is that to eat here or take away?", "vi": "Ăn ở đây hay mang đi ạ?"}
+      - {"n": 54, "answer": "To eat here, please.", "vi": "Ăn ở đây."}
+      - {"n": 55, "answer": "Can I have an iced coffee with milk?", "vi": "Cho tôi một cà phê sữa đá."}
+      - {"n": 56, "answer": "Sure. Small, medium or large?", "vi": "Vâng. Cỡ nhỏ, vừa hay lớn ạ?"}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"tom": "Fifty-one. Yes, please? Yes, please?", "focus": 0}
+      - {"emma": "Fifty-two. A cappuccino and a croissant, please. A cappuccino and a croissant, please.", "focus": 1, "reveal": [51]}
+      - {"tom": "Fifty-three. Is that to eat here or take away? Is that to eat here or take away?", "focus": 2, "reveal": [52]}
+      - {"emma": "Fifty-four. To eat here, please. To eat here, please.", "focus": 3, "reveal": [53]}
+      - {"emma": "Fifty-five. Can I have an iced coffee with milk? Can I have an iced coffee with milk?", "focus": 4, "reveal": [54]}
+      - {"tom": "Fifty-six. Sure. Small, medium or large? Sure. Small, medium or large?", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 57, "answer": "Medium, please. With less sugar.", "vi": "Cỡ vừa. Ít đường nhé."}
+      - {"n": 58, "answer": "Anything else?", "vi": "Còn gì nữa không ạ?"}
+      - {"n": 59, "answer": "No, that's all, thanks.", "vi": "Không, vậy thôi, cảm ơn."}
+      - {"n": 60, "answer": "What's the Wi-Fi password?", "vi": "Mật khẩu wifi là gì?"}
+      - {"n": 61, "answer": "It's on the menu.", "vi": "Có ghi trên thực đơn ạ."}
+      - {"n": 62, "answer": "Have a seat. I'll bring it to you.", "vi": "Mời ngồi. Tôi sẽ mang ra."}
+    lines:
+      - {"emma": "Fifty-seven. Medium, please. With less sugar. Medium, please. With less sugar.", "focus": 0}
+      - {"tom": "Fifty-eight. Anything else? Anything else?", "focus": 1, "reveal": [57]}
+      - {"emma": "Fifty-nine. No, that's all, thanks. No, that's all, thanks.", "focus": 2, "reveal": [58]}
+      - {"emma": "Sixty. What's the Wi-Fi password? What's the Wi-Fi password?", "focus": 3, "reveal": [59]}
+      - {"tom": "Sixty-one. It's on the menu. It's on the menu.", "focus": 4, "reveal": [60]}
+      - {"tom": "Sixty-two. Have a seat. I'll bring it to you. Have a seat. I'll bring it to you.", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 63, "answer": "Thank you.", "vi": "Cảm ơn."}
+      - {"n": 64, "answer": "Excuse me, I ordered a tea, not a coffee.", "vi": "Xin lỗi, tôi gọi trà, không phải cà phê."}
+      - {"n": 65, "answer": "I'm so sorry. I'll change it.", "vi": "Xin lỗi chị. Tôi đổi ngay."}
+      - {"n": 66, "answer": "Do you prefer coffee or tea?", "vi": "Bạn thích cà phê hay trà?"}
+      - {"n": 67, "answer": "Both. Coffee in the morning, tea in the afternoon.", "vi": "Cả hai. Sáng cà phê, chiều trà."}
+      - {"n": 68, "answer": "Shall we meet in a café after class?", "vi": "Tan học gặp nhau ở quán cà phê nhé?"}
+    lines:
+      - {"emma": "Sixty-three. Thank you. Thank you.", "focus": 0}
+      - {"emma": "Sixty-four. Excuse me, I ordered a tea, not a coffee. Excuse me, I ordered a tea, not a coffee.", "focus": 1, "reveal": [63]}
+      - {"tom": "Sixty-five. I'm so sorry. I'll change it. I'm so sorry. I'll change it.", "focus": 2, "reveal": [64]}
+      - {"tom": "Sixty-six. Do you prefer coffee or tea? Do you prefer coffee or tea?", "focus": 3, "reveal": [65]}
+      - {"emma": "Sixty-seven. Both. Coffee in the morning, tea in the afternoon. Both. Coffee in the morning, tea in the afternoon.", "focus": 4, "reveal": [66]}
+      - {"emma": "Sixty-eight. Shall we meet in a café after class? Shall we meet in a café after class?", "say": "Sixty-eight. Shall we meet in a cafe after class? Shall we meet in a cafe after class?", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "Good idea. See you at five.", "vi": "Ý hay. Hẹn lúc năm giờ."}
+      - {"n": 70, "answer": "Two teas with milk, please.", "vi": "Hai trà sữa."}
+      - {"n": 71, "answer": "Coming right up!", "vi": "Có ngay ạ!"}
+      - {"n": 72, "answer": "Where do I pay?", "vi": "Tôi trả tiền ở đâu?"}
+      - {"n": 73, "answer": "At the counter, please.", "vi": "Ở quầy ạ."}
+      - {"n": 74, "answer": "This coffee is too strong for me.", "vi": "Cà phê này đậm quá với tôi."}
+    lines:
+      - {"tom": "Sixty-nine. Good idea. See you at five. Good idea. See you at five.", "focus": 0}
+      - {"emma": "Seventy. Two teas with milk, please. Two teas with milk, please.", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. Coming right up! Coming right up!", "focus": 2, "reveal": [70]}
+      - {"emma": "Seventy-two. Where do I pay? Where do I pay?", "focus": 3, "reveal": [71]}
+      - {"tom": "Seventy-three. At the counter, please. At the counter, please.", "focus": 4, "reveal": [72]}
+      - {"emma": "Seventy-four. This coffee is too strong for me. This coffee is too strong for me.", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (75–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 75, "answer": "Would you like some more milk?", "vi": "Chị có muốn thêm sữa không?"}
+      - {"n": 76, "answer": "Yes, please. Thank you.", "vi": "Có, cảm ơn."}
+      - {"n": 77, "answer": "Can we sit outside?", "vi": "Chúng tôi ngồi bên ngoài được không?"}
+      - {"n": 78, "answer": "Of course. Follow me.", "vi": "Được ạ. Mời đi theo tôi."}
+      - {"n": 79, "answer": "Would you like your drink hot or iced?", "vi": "Chị uống nóng hay đá ạ?"}
+      - {"n": 80, "answer": "Iced, please. It's so hot today.", "vi": "Đá nhé. Hôm nay nóng quá."}
+    lines:
+      - {"tom": "Seventy-five. Would you like some more milk? Would you like some more milk?", "focus": 0}
+      - {"emma": "Seventy-six. Yes, please. Thank you. Yes, please. Thank you.", "focus": 1, "reveal": [75]}
+      - {"emma": "Seventy-seven. Can we sit outside? Can we sit outside?", "focus": 2, "reveal": [76]}
+      - {"tom": "Seventy-eight. Of course. Follow me. Of course. Follow me.", "focus": 3, "reveal": [77]}
+      - {"tom": "Seventy-nine. Would you like your drink hot or iced? Would you like your drink hot or iced?", "focus": 4, "reveal": [78]}
+      - {"emma": "Eighty. Iced, please. It's so hot today. Iced, please. It's so hot today.", "focus": 5, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [80]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (81–84)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 81, "answer": "What time do you open in the morning?", "vi": "Buổi sáng quán mở cửa lúc mấy giờ?"}
+      - {"n": 82, "answer": "At seven o'clock.", "vi": "Bảy giờ ạ."}
+      - {"n": 83, "answer": "Is this seat free?", "vi": "Chỗ này có ai ngồi không?"}
+      - {"n": 84, "answer": "Yes, go ahead.", "vi": "Không có ai, bạn ngồi đi."}
+    lines:
+      - {"emma": "Eighty-one. What time do you open in the morning? What time do you open in the morning?", "focus": 0}
+      - {"tom": "Eighty-two. At seven o'clock. At seven o'clock.", "focus": 1, "reveal": [81]}
+      - {"tom": "Eighty-three. Is this seat free? Is this seat free?", "focus": 2, "reveal": [82]}
+      - {"emma": "Eighty-four. Yes, go ahead. Yes, go ahead.", "focus": 3, "reveal": [83]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [84]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 28.", "say": "Well done! See you in Unit twenty-eight.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 28."}
+

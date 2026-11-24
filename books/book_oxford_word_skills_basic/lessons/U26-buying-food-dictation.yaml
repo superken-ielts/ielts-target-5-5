@@ -1,0 +1,316 @@
+# Video nghe – viết (dictation) Unit 26 · Buying food — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U26-buying-food-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U26 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 26 có 47 mục: dòng ghép các mục đi cùng nhau (how many / many, just over / over …).
+id: U26-buying-food-dictation
+activity: U26-words
+title: "Unit 26 · Buying food"
+subtitle: "Dictation · listen and write: buying food"
+title_vi: "Nghe – viết 10 phút: mua thực phẩm — từ trong sách, từ thêm, câu giao tiếp"
+tag: "FOOD AND DRINK · UNIT 26"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 26: Buying food. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-six: Buying food. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 26: mua thực phẩm. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 35 words from the book. You hear each word twice, and then an example sentence twice. Then 18 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, thirty-five words from the book. You hear each word twice, and then an example sentence twice. Then eighteen more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 35 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 18 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "milk", "vi": "sữa", "ex": "Can you buy some milk?", "w": ["milk"]}
+      - {"n": 2, "answer": "bread", "vi": "bánh mì", "ex": "This bread is very fresh.", "w": ["bread"]}
+      - {"n": 3, "answer": "butter", "vi": "bơ (sữa)", "ex": "Would you like some butter?", "w": ["butter"]}
+      - {"n": 4, "answer": "a piece of cheese", "vi": "một miếng phô mai", "ex": "I'd like a piece of cheese.", "w": ["cheese", "piece"]}
+      - {"n": 5, "answer": "eggs", "vi": "trứng", "ex": "We need six eggs.", "w": ["egg"]}
+      - {"n": 6, "answer": "sugar", "vi": "đường", "ex": "Do you take sugar in your coffee?", "w": ["sugar"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. milk. milk. Can you buy some milk? Can you buy some milk?", "focus": 0}
+      - {"emma": "Two. bread. bread. This bread is very fresh. This bread is very fresh.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. butter. butter. Would you like some butter? Would you like some butter?", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. a piece of cheese. a piece of cheese. I'd like a piece of cheese. I'd like a piece of cheese.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. eggs. eggs. We need six eggs. We need six eggs.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. sugar. sugar. Do you take sugar in your coffee? Do you take sugar in your coffee?", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "a cake", "vi": "bánh ngọt", "ex": "She made a chocolate cake.", "w": ["cake"]}
+      - {"n": 8, "answer": "jam", "vi": "mứt", "ex": "I love strawberry jam.", "w": ["jam"]}
+      - {"n": 9, "answer": "biscuits", "vi": "bánh quy", "ex": "Have a biscuit with your tea.", "w": ["biscuits"]}
+      - {"n": 10, "answer": "olive oil", "vi": "dầu ô liu", "ex": "Cook the vegetables in olive oil.", "w": ["olive oil"]}
+      - {"n": 11, "answer": "rice", "vi": "gạo, cơm", "ex": "We buy a big bag of rice every month.", "w": ["rice"]}
+      - {"n": 12, "answer": "pasta", "vi": "mì Ý", "ex": "Pasta comes from Italy.", "w": ["pasta"]}
+    lines:
+      - {"emma": "Seven. a cake. a cake. She made a chocolate cake. She made a chocolate cake.", "focus": 0}
+      - {"emma": "Eight. jam. jam. I love strawberry jam. I love strawberry jam.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. biscuits. biscuits. Have a biscuit with your tea. Have a biscuit with your tea.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. olive oil. olive oil. Cook the vegetables in olive oil. Cook the vegetables in olive oil.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. rice. rice. We buy a big bag of rice every month. We buy a big bag of rice every month.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. pasta. pasta. Pasta comes from Italy. Pasta comes from Italy.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "olives", "vi": "quả ô liu", "ex": "Do you like olives?", "w": ["olives"]}
+      - {"n": 14, "answer": "noodles", "vi": "mì sợi", "ex": "I had noodles for lunch.", "w": ["noodles"]}
+      - {"n": 15, "answer": "a bar of chocolate", "vi": "một thanh sô-cô-la", "ex": "He bought a bar of chocolate.", "w": ["bar", "chocolate"]}
+      - {"n": 16, "answer": "a carton of juice", "vi": "một hộp nước quả", "ex": "There's a carton of juice in the fridge.", "w": ["carton"]}
+      - {"n": 17, "answer": "a packet of rice", "vi": "một gói gạo", "ex": "I need a packet of biscuits too.", "w": ["packet"]}
+      - {"n": 18, "answer": "a jar of jam", "vi": "một lọ mứt", "ex": "Can I have a jar of jam?", "w": ["jar"]}
+    lines:
+      - {"emma": "Thirteen. olives. olives. Do you like olives? Do you like olives?", "focus": 0}
+      - {"emma": "Fourteen. noodles. noodles. I had noodles for lunch. I had noodles for lunch.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. a bar of chocolate. a bar of chocolate. He bought a bar of chocolate. He bought a bar of chocolate.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. a carton of juice. a carton of juice. There's a carton of juice in the fridge. There's a carton of juice in the fridge.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. a packet of rice. a packet of rice. I need a packet of biscuits too. I need a packet of biscuits too.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. a jar of jam. a jar of jam. Can I have a jar of jam? Can I have a jar of jam?", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "a tin of tomatoes", "vi": "một hộp cà chua", "ex": "Open a tin of tomatoes.", "w": ["tin"]}
+      - {"n": 20, "answer": "a can of soda", "vi": "một lon nước ngọt", "ex": "He drank a can of cola.", "w": ["can"]}
+      - {"n": 21, "answer": "a bottle of wine", "vi": "một chai rượu vang", "ex": "We need a bottle of olive oil.", "w": ["bottle"]}
+      - {"n": 22, "answer": "a box of chocolates", "vi": "một hộp sô-cô-la", "ex": "I bought her a box of chocolates.", "w": ["box"]}
+      - {"n": 23, "answer": "a box of matches", "vi": "một hộp diêm", "ex": "Have you got any matches?", "w": ["matches"]}
+      - {"n": 24, "answer": "grams", "vi": "gam", "ex": "I'd like two hundred grams of ham.", "w": ["grams"]}
+    lines:
+      - {"emma": "Nineteen. a tin of tomatoes. a tin of tomatoes. Open a tin of tomatoes. Open a tin of tomatoes.", "focus": 0}
+      - {"emma": "Twenty. a can of soda. a can of soda. He drank a can of cola. He drank a can of cola.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. a bottle of wine. a bottle of wine. We need a bottle of olive oil. We need a bottle of olive oil.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. a box of chocolates. a box of chocolates. I bought her a box of chocolates. I bought her a box of chocolates.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. a box of matches. a box of matches. Have you got any matches? Have you got any matches?", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. grams. grams. I'd like two hundred grams of ham. I'd like two hundred grams of ham.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "half a kilo", "vi": "nửa cân", "ex": "Half a kilo of onions, please.", "w": ["half", "kilo"]}
+      - {"n": 26, "answer": "a litre", "vi": "một lít", "ex": "He drinks a litre of milk a day.", "w": ["litre"]}
+      - {"n": 27, "answer": "Could I have …, please?", "vi": "Cho tôi … nhé?", "ex": "Could I have a kilo of onions, please?", "w": ["please"]}
+      - {"n": 28, "answer": "Have you got any …?", "vi": "Có … không?", "ex": "Have you got any peaches?", "w": ["have got"]}
+      - {"n": 29, "answer": "How many would you like?", "vi": "Lấy bao nhiêu (đếm được)?", "ex": "How many apples would you like?", "w": ["how many", "many"]}
+      - {"n": 30, "answer": "How much would you like?", "vi": "Lấy bao nhiêu (không đếm được)?", "ex": "How much cheese would you like?", "w": ["how much", "much"]}
+    lines:
+      - {"emma": "Twenty-five. half a kilo. half a kilo. Half a kilo of onions, please. Half a kilo of onions, please.", "focus": 0}
+      - {"emma": "Twenty-six. a litre. a litre. He drinks a litre of milk a day. He drinks a litre of milk a day.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. Could I have …, please?. Could I have …, please?. Could I have a kilo of onions, please? Could I have a kilo of onions, please?", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. Have you got any …?. Have you got any …?. Have you got any peaches? Have you got any peaches?", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. How many would you like?. How many would you like?. How many apples would you like? How many apples would you like?", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. How much would you like?. How much would you like?. How much cheese would you like? How much cheese would you like?", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (31–35)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 31, "answer": "I'd like", "vi": "tôi muốn", "ex": "I'd like four peaches, please.", "w": ["I'd like", "like"]}
+      - {"n": 32, "answer": "ripe", "vi": "chín", "ex": "Are the mangoes ripe?", "w": ["ripe"]}
+      - {"n": 33, "answer": "Anything else?", "vi": "Còn gì nữa không?", "ex": "Anything else? — No, thanks.", "w": ["anything else?", "else"]}
+      - {"n": 34, "answer": "That's all, thanks.", "vi": "Vậy thôi, cảm ơn.", "ex": "No, that's all, thanks.", "w": ["that's all", "all", "thanks"]}
+      - {"n": 35, "answer": "just over, just under", "vi": "hơn một chút, kém một chút", "ex": "This piece is just over two hundred grams.", "w": ["just over", "just under", "over", "under"]}
+    lines:
+      - {"emma": "Thirty-one. I'd like. I'd like. I'd like four peaches, please. I'd like four peaches, please.", "focus": 0}
+      - {"emma": "Thirty-two. ripe. ripe. Are the mangoes ripe? Are the mangoes ripe?", "focus": 1, "reveal": [31]}
+      - {"emma": "Thirty-three. Anything else?. Anything else?. Anything else? — No, thanks. Anything else? — No, thanks.", "focus": 2, "reveal": [32]}
+      - {"emma": "Thirty-four. That's all, thanks.. That's all, thanks.. No, that's all, thanks. No, that's all, thanks.", "focus": 3, "reveal": [33]}
+      - {"emma": "Thirty-five. just over, just under. just over, just under. This piece is just over two hundred grams. This piece is just over two hundred grams.", "focus": 4, "reveal": [34]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [35]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (36–41)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 36, "answer": "supermarket", "vi": "siêu thị", "ex": "The supermarket opens at eight."}
+      - {"n": 37, "answer": "market", "vi": "chợ", "ex": "We buy vegetables at the market."}
+      - {"n": 38, "answer": "a loaf of bread", "vi": "một ổ bánh mì", "ex": "Can I have a loaf of bread?"}
+      - {"n": 39, "answer": "yoghurt", "vi": "sữa chua", "ex": "I have yoghurt for breakfast."}
+      - {"n": 40, "answer": "flour", "vi": "bột mì", "ex": "You need flour to make a cake."}
+      - {"n": 41, "answer": "bag", "vi": "túi", "ex": "Do you need a bag?"}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-six. supermarket. supermarket. The supermarket opens at eight. The supermarket opens at eight.", "focus": 0}
+      - {"tom": "Thirty-seven. market. market. We buy vegetables at the market. We buy vegetables at the market.", "focus": 1, "reveal": [36]}
+      - {"tom": "Thirty-eight. a loaf of bread. a loaf of bread. Can I have a loaf of bread? Can I have a loaf of bread?", "focus": 2, "reveal": [37]}
+      - {"tom": "Thirty-nine. yoghurt. yoghurt. I have yoghurt for breakfast. I have yoghurt for breakfast.", "focus": 3, "reveal": [38]}
+      - {"tom": "Forty. flour. flour. You need flour to make a cake. You need flour to make a cake.", "focus": 4, "reveal": [39]}
+      - {"tom": "Forty-one. bag. bag. Do you need a bag? Do you need a bag?", "focus": 5, "reveal": [40]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [41]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (42–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 42, "answer": "basket", "vi": "giỏ", "ex": "Put the fruit in the basket."}
+      - {"n": 43, "answer": "trolley", "vi": "xe đẩy", "ex": "Get a trolley at the door."}
+      - {"n": 44, "answer": "shopping list", "vi": "danh sách đồ cần mua", "ex": "Don't forget the shopping list."}
+      - {"n": 45, "answer": "fridge", "vi": "tủ lạnh", "ex": "Put the milk in the fridge."}
+      - {"n": 46, "answer": "cupboard", "vi": "tủ bếp", "ex": "The rice is in the cupboard."}
+      - {"n": 47, "answer": "best before", "vi": "dùng tốt nhất trước ngày", "ex": "Check the best before date."}
+    lines:
+      - {"tom": "Forty-two. basket. basket. Put the fruit in the basket. Put the fruit in the basket.", "focus": 0}
+      - {"tom": "Forty-three. trolley. trolley. Get a trolley at the door. Get a trolley at the door.", "focus": 1, "reveal": [42]}
+      - {"tom": "Forty-four. shopping list. shopping list. Don't forget the shopping list. Don't forget the shopping list.", "focus": 2, "reveal": [43]}
+      - {"tom": "Forty-five. fridge. fridge. Put the milk in the fridge. Put the milk in the fridge.", "focus": 3, "reveal": [44]}
+      - {"tom": "Forty-six. cupboard. cupboard. The rice is in the cupboard. The rice is in the cupboard.", "focus": 4, "reveal": [45]}
+      - {"tom": "Forty-seven. best before. best before. Check the best before date. Check the best before date.", "focus": 5, "reveal": [46]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [47]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (48–53)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 48, "answer": "on special offer", "vi": "đang khuyến mãi", "ex": "Coffee is on special offer this week."}
+      - {"n": 49, "answer": "a dozen eggs", "vi": "một tá trứng", "ex": "A dozen eggs is twelve eggs."}
+      - {"n": 50, "answer": "a bag of rice", "vi": "một túi gạo", "ex": "Can you carry the bag of rice?"}
+      - {"n": 51, "answer": "checkout", "vi": "quầy thanh toán", "ex": "There's a long queue at the checkout."}
+      - {"n": 52, "answer": "receipt", "vi": "hóa đơn", "ex": "Can I have a receipt, please?"}
+      - {"n": 53, "answer": "price", "vi": "giá", "ex": "The price of rice is going up."}
+    lines:
+      - {"tom": "Forty-eight. on special offer. on special offer. Coffee is on special offer this week. Coffee is on special offer this week.", "focus": 0}
+      - {"tom": "Forty-nine. a dozen eggs. a dozen eggs. A dozen eggs is twelve eggs. A dozen eggs is twelve eggs.", "focus": 1, "reveal": [48]}
+      - {"tom": "Fifty. a bag of rice. a bag of rice. Can you carry the bag of rice? Can you carry the bag of rice?", "focus": 2, "reveal": [49]}
+      - {"tom": "Fifty-one. checkout. checkout. There's a long queue at the checkout. There's a long queue at the checkout.", "focus": 3, "reveal": [50]}
+      - {"tom": "Fifty-two. receipt. receipt. Can I have a receipt, please? Can I have a receipt, please?", "focus": 4, "reveal": [51]}
+      - {"tom": "Fifty-three. price. price. The price of rice is going up. The price of rice is going up.", "focus": 5, "reveal": [52]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "Could I have a kilo of tomatoes, please?", "vi": "Cho tôi một cân cà chua."}
+      - {"n": 55, "answer": "Sure. Anything else?", "vi": "Vâng. Còn gì nữa không ạ?"}
+      - {"n": 56, "answer": "Have you got any eggs?", "vi": "Có trứng không ạ?"}
+      - {"n": 57, "answer": "Yes. How many would you like?", "vi": "Có. Anh lấy mấy quả?"}
+      - {"n": 58, "answer": "How much cheese would you like?", "vi": "Chị lấy bao nhiêu phô mai?"}
+      - {"n": 59, "answer": "About two hundred grams.", "vi": "Khoảng hai trăm gam."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-four. Could I have a kilo of tomatoes, please? Could I have a kilo of tomatoes, please?", "focus": 0}
+      - {"tom": "Fifty-five. Sure. Anything else? Sure. Anything else?", "focus": 1, "reveal": [54]}
+      - {"tom": "Fifty-six. Have you got any eggs? Have you got any eggs?", "focus": 2, "reveal": [55]}
+      - {"emma": "Fifty-seven. Yes. How many would you like? Yes. How many would you like?", "focus": 3, "reveal": [56]}
+      - {"tom": "Fifty-eight. How much cheese would you like? How much cheese would you like?", "focus": 4, "reveal": [57]}
+      - {"emma": "Fifty-nine. About two hundred grams. About two hundred grams.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "Are these mangoes ripe?", "vi": "Xoài này chín chưa?"}
+      - {"n": 61, "answer": "Yes, you can eat them today.", "vi": "Chín rồi, hôm nay ăn được."}
+      - {"n": 62, "answer": "Do you need a bag?", "vi": "Anh có cần túi không?"}
+      - {"n": 63, "answer": "No, thanks. I've got one.", "vi": "Không, cảm ơn. Tôi có rồi."}
+      - {"n": 64, "answer": "Where's the rice, please?", "vi": "Gạo để ở đâu ạ?"}
+      - {"n": 65, "answer": "It's next to the noodles.", "vi": "Ở cạnh chỗ mì."}
+    lines:
+      - {"tom": "Sixty. Are these mangoes ripe? Are these mangoes ripe?", "focus": 0}
+      - {"emma": "Sixty-one. Yes, you can eat them today. Yes, you can eat them today.", "focus": 1, "reveal": [60]}
+      - {"emma": "Sixty-two. Do you need a bag? Do you need a bag?", "focus": 2, "reveal": [61]}
+      - {"tom": "Sixty-three. No, thanks. I've got one. No, thanks. I've got one.", "focus": 3, "reveal": [62]}
+      - {"tom": "Sixty-four. Where's the rice, please? Where's the rice, please?", "focus": 4, "reveal": [63]}
+      - {"emma": "Sixty-five. It's next to the noodles. It's next to the noodles.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "We need some milk and bread.", "vi": "Mình cần mua sữa và bánh mì."}
+      - {"n": 67, "answer": "I'll go to the shop after class.", "vi": "Tan học mình ra cửa hàng."}
+      - {"n": 68, "answer": "How much is a packet of noodles?", "vi": "Một gói mì bao nhiêu tiền?"}
+      - {"n": 69, "answer": "Five thousand dong.", "vi": "Năm nghìn đồng."}
+      - {"n": 70, "answer": "Can I pay by card?", "vi": "Tôi trả bằng thẻ được không?"}
+      - {"n": 71, "answer": "Yes, of course.", "vi": "Được ạ."}
+    lines:
+      - {"emma": "Sixty-six. We need some milk and bread. We need some milk and bread.", "focus": 0}
+      - {"tom": "Sixty-seven. I'll go to the shop after class. I'll go to the shop after class.", "focus": 1, "reveal": [66]}
+      - {"tom": "Sixty-eight. How much is a packet of noodles? How much is a packet of noodles?", "focus": 2, "reveal": [67]}
+      - {"emma": "Sixty-nine. Five thousand dong. Five thousand dong.", "focus": 3, "reveal": [68]}
+      - {"emma": "Seventy. Can I pay by card? Can I pay by card?", "focus": 4, "reveal": [69]}
+      - {"tom": "Seventy-one. Yes, of course. Yes, of course.", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Is that all?", "vi": "Vậy thôi ạ?"}
+      - {"n": 73, "answer": "Yes, that's all, thanks.", "vi": "Vâng, vậy thôi, cảm ơn."}
+      - {"n": 74, "answer": "This piece is just over half a kilo.", "vi": "Miếng này hơn nửa cân một chút."}
+      - {"n": 75, "answer": "That's fine.", "vi": "Được ạ."}
+      - {"n": 76, "answer": "Don't forget the shopping list!", "vi": "Đừng quên danh sách đồ cần mua nhé!"}
+      - {"n": 77, "answer": "It's in my bag.", "vi": "Nó ở trong túi mình."}
+    lines:
+      - {"tom": "Seventy-two. Is that all? Is that all?", "focus": 0}
+      - {"emma": "Seventy-three. Yes, that's all, thanks. Yes, that's all, thanks.", "focus": 1, "reveal": [72]}
+      - {"emma": "Seventy-four. This piece is just over half a kilo. This piece is just over half a kilo.", "focus": 2, "reveal": [73]}
+      - {"tom": "Seventy-five. That's fine. That's fine.", "focus": 3, "reveal": [74]}
+      - {"tom": "Seventy-six. Don't forget the shopping list! Don't forget the shopping list!", "focus": 4, "reveal": [75]}
+      - {"emma": "Seventy-seven. It's in my bag. It's in my bag.", "focus": 5, "reveal": [76]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [77]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (78–83)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 78, "answer": "Do you prefer markets or supermarkets?", "vi": "Bạn thích chợ hay siêu thị?"}
+      - {"n": 79, "answer": "Markets. The food is fresher.", "vi": "Chợ. Đồ ăn tươi hơn."}
+      - {"n": 80, "answer": "Can I have a receipt, please?", "vi": "Cho tôi xin hóa đơn."}
+      - {"n": 81, "answer": "Here you are.", "vi": "Đây ạ."}
+      - {"n": 82, "answer": "Excuse me, where can I find the butter?", "vi": "Xin lỗi, bơ để ở đâu ạ?"}
+      - {"n": 83, "answer": "In the fridge at the back.", "vi": "Trong tủ lạnh ở phía sau."}
+    lines:
+      - {"emma": "Seventy-eight. Do you prefer markets or supermarkets? Do you prefer markets or supermarkets?", "focus": 0}
+      - {"tom": "Seventy-nine. Markets. The food is fresher. Markets. The food is fresher.", "focus": 1, "reveal": [78]}
+      - {"emma": "Eighty. Can I have a receipt, please? Can I have a receipt, please?", "focus": 2, "reveal": [79]}
+      - {"tom": "Eighty-one. Here you are. Here you are.", "focus": 3, "reveal": [80]}
+      - {"tom": "Eighty-two. Excuse me, where can I find the butter? Excuse me, where can I find the butter?", "focus": 4, "reveal": [81]}
+      - {"emma": "Eighty-three. In the fridge at the back. In the fridge at the back.", "focus": 5, "reveal": [82]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [83]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 27.", "say": "Well done! See you in Unit twenty-seven.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 27."}
+

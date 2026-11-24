@@ -1,0 +1,443 @@
+# Video Oxford Word Skills Basic · Unit 25 — I can name fruit and vegetables (sách in tr. 66–67, Answer key tr. 210).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–7. Bài 1, 2, 4, 5 theo Answer key tr. 210. Bài 2 câu 2: Answer key ghi lemons are bitter (sách dùng
+# bitter là trái nghĩa của sweet) — video nói thêm: tiếng Anh hằng ngày gọi vị chanh là sour. Bài 6 (ABOUT YOUR COUNTRY): Tom trả
+# lời về Việt Nam (Answer key: Your own answers). Bài 3 (Test yourself): Tom nhắc che chữ, nói tên trái cây; bài 7: cảnh riêng — tranh rau, Emma hỏi, Tom trả lời.
+# Thêm ngoài sách: sour ≠ bitter, a bunch of grapes, a clove of garlic; trái cây Việt Nam bằng tiếng Anh; câu đố vị (sweet, sour,
+# bitter, salty, spicy); Nghe và viết; Nói 1 (rau quả ở Đà Lạt, chợ); Nói 2 (Part 1 "Fruit").
+# Hình trong sách: hai hàng tranh trái cây, bảng taste / sweet / bitter / fresh (khung theo hàng), chuỗi chữ bài 1, bốn hàng tranh
+# rau kèm raw / frozen / cooked và khung Spotlight salad (khung theo tranh).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Đà Lạt nổi tiếng dâu tây, bơ, rau; ông của Tom trồng bắp cải, cà rốt,
+# xà lách trong vườn (hồ sơ: làm vườn rau mỗi sáng); Tom thích xoài và sinh tố bơ, không thích mướp đắng (bitter melon) — mẹ bảo
+# tốt cho sức khỏe. Emma thích dâu tây với kem (mùa hè ở Anh); đã thử sầu riêng một lần, không
+# thích; sáng thứ Bảy đi chợ mua rau quả (U17).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U25-fruit-vegetables.yaml
+id: U25-fruit-vegetables
+activity: U25-words
+title: "Unit 25 · Fruit and vegetables"
+subtitle: "I can name fruit and vegetables"
+title_vi: "Trái cây (banana, mango, pineapple…), rau (cabbage, garlic, lettuce…), vị (sweet, bitter), fresh / raw / frozen / cooked"
+tag: "FOOD AND DRINK · UNIT 25"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 25: fruit and vegetables. There are a lot of words on these two pages, so let's start."
+        say: "Welcome to Unit twenty-five: fruit and vegetables. There are a lot of words on these two pages, so let's start."
+        vi: "Unit 25: trái cây và rau — hai trang nhiều từ."
+      - tom: "No countdown. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Trái cây"
+    heading: "A · Fruit (1)"
+    heading_vi: "Tranh trong sách tr. 66"
+    image: {pdf: course-book, page: 67, clip: [26, 86, 466, 172]}
+    items:
+      - {box: [28, 88, 107, 171]}
+      - {box: [109, 88, 172, 171]}
+      - {box: [172, 88, 226, 171]}
+      - {box: [226, 86, 288, 171]}
+      - {box: [289, 86, 341, 171]}
+      - {box: [341, 88, 394, 171]}
+      - {box: [396, 88, 464, 171]}
+    lines:
+      - emma: "Look at the fruit on page sixty-six. A banana. Listen to the stress: ba-NA-na."
+        say: "Look at the fruit on page sixty-six. A banana. Listen to the stress: buh, NAH, nuh."
+        focus: 0
+        vi: "banana: chuối — nhấn âm giữa"
+      - {tom: "An orange. Orange is also a colour.", focus: 1, vi: "orange: quả cam"}
+      - {emma: "A peach.", focus: 2, vi: "peach: quả đào"}
+      - {tom: "An apple.", focus: 3, vi: "apple: quả táo"}
+      - {emma: "A pear. It sounds like pair.", focus: 4, vi: "pear /peə/: quả lê — đọc như pair"}
+      - {tom: "A lemon.", focus: 5, vi: "lemon: quả chanh vàng"}
+      - {emma: "And a mango. Vietnam has wonderful mangoes.", focus: 6, vi: "mango: quả xoài"}
+
+  - kind: figure
+    heading: "A · Fruit (2)"
+    heading_vi: "Tranh trong sách tr. 66"
+    image: {pdf: course-book, page: 67, clip: [40, 174, 466, 267]}
+    items:
+      - {box: [46, 206, 110, 266]}
+      - {box: [128, 179, 176, 266]}
+      - {box: [184, 188, 252, 266]}
+      - {box: [256, 179, 304, 266]}
+      - {box: [318, 176, 380, 266]}
+      - {box: [392, 197, 464, 266]}
+    lines:
+      - {tom: "A strawberry. Da Lat is famous for strawberries.", say: "A strawberry. Dah Lot is famous for strawberries.", focus: 0, vi: "strawberry: dâu tây"}
+      - {emma: "A cherry.", focus: 1, vi: "cherry: quả anh đào"}
+      - {tom: "A melon.", focus: 2, vi: "melon: dưa"}
+      - {emma: "Grapes. We usually say grapes, or a bunch of grapes.", focus: 3, vi: "grapes: nho — a bunch of grapes: một chùm nho"}
+      - {tom: "A pineapple.", focus: 4, vi: "pineapple: quả dứa"}
+      - {emma: "And an avocado.", focus: 5, vi: "avocado: quả bơ"}
+
+  - kind: figure
+    chapter: "Vị của trái cây"
+    heading: "Taste · sweet · bitter · fresh"
+    heading_vi: "Bảng trong sách tr. 66 — OPP = trái nghĩa"
+    image: {pdf: course-book, page: 67, clip: [30, 278, 486, 407]}
+    items:
+      - {box: [33, 297, 482, 324]}
+      - {box: [33, 324, 482, 341]}
+      - {box: [33, 340, 482, 357]}
+      - {box: [33, 356, 482, 405]}
+    lines:
+      - {emma: "Look at the table. This juice tastes of orange and lemon. That means: it's like orange and lemon when you drink it.", focus: 0, vi: "taste of …: có vị …"}
+      - {tom: "Strawberries are very sweet. Sweet means tasting of sugar.", focus: 1, vi: "sweet: ngọt"}
+      - {emma: "The book says lemons are very bitter, the opposite of sweet. But in everyday English, we usually say lemons are sour. Bitter is like black coffee.", focus: 2, vi: "sour: chua (chanh) · bitter: đắng (cà phê đen, mướp đắng)"}
+      - {tom: "I eat a lot of fresh fruit. Fresh means not old, and not from a tin.", focus: 3, vi: "fresh: tươi · tin: hộp thiếc"}
+
+  - kind: figure
+    chapter: "Bài 1: tìm chỗ hết từ"
+    heading: "Exercise 1 · Find the end of each word"
+    heading_vi: "Ví dụ: banana / grapes … (Answer key tr. 210)"
+    image: {pdf: course-book, page: 67, clip: [30, 436, 492, 494]}
+    items:
+      - {box: [34, 438, 262, 492]}
+      - {box: [262, 438, 491, 492]}
+    lines:
+      - emma: "Exercise 1. Find the end of each word. The first word is banana. Pause the video and try."
+        say: "Exercise one. Find the end of each word. The first word is banana. Pause the video and try."
+        vi: "Bài 1: tìm chỗ kết thúc mỗi từ."
+      - {tom: "Grapes, melon, lemon, avocado, strawberry.", focus: 0}
+      - {tom: "Cherry, pineapple, pear, orange, peach, and apple. Exercise 3 is a test: cover the words and name the fruit.", say: "Cherry, pineapple, pear, orange, peach, and apple. Exercise three is a test: cover the words and name the fruit.", focus: 1}
+
+  - kind: bullets
+    chapter: "Trái cây Việt Nam"
+    heading: "Vietnamese fruit in English"
+    heading_vi: "Thêm ngoài sách — trái cây quê mình bằng tiếng Anh"
+    items:
+      - {en: "dragon fruit", vi: "thanh long"}
+      - {en: "lychee · longan", vi: "vải · nhãn"}
+      - {en: "rambutan", vi: "chôm chôm"}
+      - {en: "papaya · coconut", vi: "đu đủ · dừa"}
+      - {en: "durian · jackfruit", vi: "sầu riêng · mít"}
+      - {en: "star fruit · custard apple", vi: "khế · na (mãng cầu)"}
+    lines:
+      - emma: "Vietnam has lots of fruit that isn't in the book. Dragon fruit: pink outside, white inside."
+        focus: 0
+        vi: "dragon fruit: thanh long"
+      - {tom: "Lychee and longan. They're small, sweet and white inside.", say: "Lie-chee and longan. They're small, sweet and white inside.", focus: 1}
+      - {emma: "Rambutan: it's red and hairy!", focus: 2}
+      - {tom: "Papaya, and coconut. Coconut water is great on a hot day.", focus: 3}
+      - {emma: "Durian and jackfruit: very big, with a strong smell.", focus: 4}
+      - {tom: "And star fruit, and custard apple.", focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: trả lời câu hỏi"
+    heading: "Exercise 2 · Answer the questions"
+    heading_vi: "Ví dụ: Are strawberries red or green? → red (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "Are peaches sweet or bitter?  →  ___", answer: "sweet"}
+      - {n: 2, q: "Are lemons sweet or bitter?  →  ___", answer: "bitter (sour)"}
+      - {n: 3, q: "Are cherries red or green?  →  ___", answer: "red"}
+      - {n: 4, q: "Are avocados red or green?  →  ___", answer: "green"}
+      - {n: 5, q: "Are grapes big or small?  →  ___", answer: "small"}
+      - {n: 6, q: "Is fresh fruit good or bad?  →  ___", answer: "good"}
+      - {n: 7, q: "Do mangoes taste sweet or bitter?  →  ___", answer: "sweet"}
+      - {n: 8, q: "Are melons big or small?  →  ___", answer: "big"}
+    lines:
+      - emma: "Exercise 2. Answer the questions. Pause the video and try."
+        say: "Exercise two. Answer the questions. Pause the video and try."
+        vi: "Bài 2: trả lời câu hỏi."
+      - {tom: "One. Sweet. Two. Bitter, in the book. We often say sour. Three. Red. Four. Green.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Small. Six. Good. Seven. Sweet. Eight. Big.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Vị: ngọt, chua, đắng, mặn, cay"
+    heading: "Taste quiz · sweet, sour, bitter, salty or spicy?"
+    heading_vi: "Thêm ngoài sách — tạm dừng video, nói vị của từng thứ"
+    items:
+      - {n: 1, q: "a lemon  →  ___", answer: "sour"}
+      - {n: 2, q: "a ripe mango  →  ___", answer: "sweet"}
+      - {n: 3, q: "black coffee  →  ___", answer: "bitter"}
+      - {n: 4, q: "fish sauce  →  ___", answer: "salty"}
+      - {n: 5, q: "a red chilli  →  ___", answer: "spicy / hot"}
+      - {n: 6, q: "bitter melon  →  ___", answer: "bitter"}
+    lines:
+      - emma: "Five taste words: sweet, sour, bitter, salty, and spicy. Salty means with a lot of salt. Spicy means hot, like chillies. Pause the video and say the taste of each thing."
+        vi: "sweet ngọt · sour chua · bitter đắng · salty mặn · spicy cay"
+      - {tom: "One. A lemon is sour. Two. A ripe mango is sweet. Ripe means ready to eat. Three. Black coffee is bitter.", reveal: [1, 2, 3], focus: 2, vi: "ripe: chín"}
+      - {tom: "Four. Fish sauce is salty. Five. A red chilli is spicy, or hot. Six. Bitter melon is bitter, of course!", reveal: [4, 5, 6], focus: 5}
+
+  - kind: figure
+    chapter: "Rau"
+    heading: "B · Vegetables (1)"
+    heading_vi: "Tranh trong sách tr. 67"
+    image: {pdf: course-book, page: 68, clip: [24, 28, 468, 118]}
+    items:
+      - {box: [28, 58, 112, 115]}
+      - {box: [112, 72, 174, 115]}
+      - {box: [176, 40, 243, 115]}
+      - {box: [246, 33, 296, 115]}
+      - {box: [300, 48, 390, 115]}
+      - {box: [394, 48, 466, 115]}
+    lines:
+      - emma: "Now vegetables, on page sixty-seven. A potato."
+        focus: 0
+        vi: "potato: khoai tây"
+      - {tom: "Beans.", focus: 1, vi: "beans: đậu (đỗ)"}
+      - {emma: "An onion.", focus: 2, vi: "onion: hành tây"}
+      - {tom: "A carrot.", focus: 3, vi: "carrot: cà rốt"}
+      - {emma: "A cauliflower.", focus: 4, vi: "cauliflower: súp lơ trắng"}
+      - {tom: "And a cabbage. My grandfather grows cabbages and carrots in his garden in Da Lat.", say: "And a cabbage. My grandfather grows cabbages and carrots in his garden in Dah Lot.", focus: 5, vi: "cabbage: bắp cải"}
+
+  - kind: figure
+    heading: "B · Vegetables (2)"
+    heading_vi: "Tranh trong sách tr. 67 — a clove of garlic: một tép tỏi"
+    image: {pdf: course-book, page: 68, clip: [24, 114, 462, 196]}
+    items:
+      - {box: [24, 134, 101, 195]}
+      - {box: [101, 133, 172, 195]}
+      - {box: [174, 116, 236, 195]}
+      - {box: [240, 129, 312, 195]}
+      - {box: [316, 116, 402, 195]}
+      - {box: [404, 117, 458, 195]}
+    lines:
+      - {emma: "Peas.", focus: 0, vi: "peas: đậu Hà Lan"}
+      - {tom: "An aubergine.", focus: 1, vi: "aubergine (Anh) = eggplant (Mỹ): cà tím"}
+      - {emma: "A courgette.", focus: 2, vi: "courgette (Anh) = zucchini (Mỹ): bí ngòi"}
+      - {tom: "A mushroom.", focus: 3, vi: "mushroom: nấm"}
+      - {emma: "Garlic. One small piece is a clove of garlic.", focus: 4, vi: "garlic: tỏi · clove: tép"}
+      - {tom: "And a chilli. Chillies make your mouth hot!", focus: 5, vi: "chilli: ớt"}
+
+  - kind: figure
+    heading: "B · Vegetables (3)"
+    heading_vi: "Tranh trong sách tr. 67"
+    image: {pdf: course-book, page: 68, clip: [34, 195, 446, 279]}
+    items:
+      - {box: [38, 197, 107, 278]}
+      - {box: [116, 199, 198, 278]}
+      - {box: [200, 220, 316, 278]}
+      - {box: [322, 197, 442, 278]}
+    lines:
+      - {emma: "Lettuce.", focus: 0, vi: "lettuce: xà lách"}
+      - {tom: "A tomato. British people say to-MAH-to, and Americans say to-MAY-to.", say: "A tomato. British people say tuh, MAH, toe, and Americans say tuh, MAY, toe.", focus: 1, vi: "tomato: cà chua"}
+      - {emma: "A cucumber.", focus: 2, vi: "cucumber: dưa chuột"}
+      - {tom: "And a red pepper and a green pepper.", focus: 3, vi: "pepper: ớt chuông"}
+
+  - kind: figure
+    chapter: "Sống, đông lạnh, nấu chín"
+    heading: "raw · frozen · cooked · Spotlight: salad"
+    heading_vi: "Ảnh và khung Spotlight tr. 67"
+    image: {pdf: course-book, page: 68, clip: [24, 281, 486, 375]}
+    items:
+      - {box: [26, 289, 100, 374]}
+      - {box: [100, 285, 199, 374]}
+      - {box: [201, 282, 277, 374]}
+      - {box: [296, 282, 484, 374]}
+    lines:
+      - {emma: "Look at the photos. Raw means not cooked. You can eat raw peas.", focus: 0, vi: "raw: sống"}
+      - {tom: "Frozen: very cold, like ice. You keep frozen peas in the freezer.", focus: 1, vi: "frozen: đông lạnh"}
+      - {emma: "And cooked: hot and ready to eat.", focus: 2, vi: "cooked: đã nấu chín"}
+      - {tom: "Look at the spotlight. A salad can have different raw vegetables in it. It usually has lettuce, and often tomatoes and cucumber. A salad is often part of a meal.", focus: 3, vi: "salad: món rau trộn"}
+
+  - kind: blanks
+    chapter: "Bài 4: sắp xếp chữ cái"
+    heading: "Exercise 4 · Make the names of vegetables from the letters"
+    heading_vi: "Ví dụ: sape → peas (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "ractor  →  ___", answer: "carrot"}
+      - {n: 2, q: "nonio  →  ___", answer: "onion"}
+      - {n: 3, q: "prepep  →  ___", answer: "pepper"}
+      - {n: 4, q: "gacabeb  →  ___", answer: "cabbage"}
+      - {n: 5, q: "naseb  →  ___", answer: "beans"}
+      - {n: 6, q: "roucteget  →  ___", answer: "courgette"}
+      - {n: 7, q: "motaot  →  ___", answer: "tomato"}
+      - {n: 8, q: "ragcil  →  ___", answer: "garlic"}
+    lines:
+      - emma: "Exercise 4. Make the names of vegetables from the letters. Pause the video and try."
+        say: "Exercise four. Make the names of vegetables from the letters. Pause the video and try."
+        vi: "Bài 4: sắp xếp chữ cái thành tên rau."
+      - {tom: "One. Carrot, with double r. Two. Onion. Three. Pepper. Four. Cabbage.", say: "One. Carrot, with double ar. Two. Onion. Three. Pepper. Four. Cabbage.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Beans. Six. Courgette. Seven. Tomato. Eight. Garlic.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: đúng hay sai?"
+    heading: "Exercise 5 · True or false? Write T or F"
+    heading_vi: "Ví dụ: Carrots are small and round. → F (Answer key tr. 210)"
+    items:
+      - {n: 1, q: "People often eat raw potatoes.  →  ___", answer: "F"}
+      - {n: 2, q: "Chillies make your mouth hot.  →  ___", answer: "T"}
+      - {n: 3, q: "Lettuce is often frozen.  →  ___", answer: "F"}
+      - {n: 4, q: "Cauliflower is white.  →  ___", answer: "T"}
+      - {n: 5, q: "Peas are often frozen.  →  ___", answer: "T"}
+      - {n: 6, q: "You often have tomatoes in a salad.  →  ___", answer: "T"}
+      - {n: 7, q: "Salad is often cooked.  →  ___", answer: "F"}
+    lines:
+      - emma: "Exercise 5. True or false? Pause the video and try."
+        say: "Exercise five. True or false? Pause the video and try."
+        vi: "Bài 5: đúng hay sai?"
+      - {tom: "One. False: we cook potatoes. Two. True. Three. False. Four. True.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. True. Six. True. Seven. False: salad is usually raw.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: figure
+    chapter: "Bài 7: tự kiểm tra"
+    heading: "Exercise 7 · Test yourself: name the vegetables"
+    heading_vi: "Che chữ, nhìn tranh, nói tên — tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 68, clip: [24, 114, 462, 177]}
+    items:
+      - {box: [24, 134, 101, 176]}
+      - {box: [101, 133, 172, 176]}
+      - {box: [174, 116, 236, 176]}
+      - {box: [240, 129, 312, 176]}
+      - {box: [316, 116, 402, 176]}
+      - {box: [404, 117, 458, 176]}
+    lines:
+      - {emma: "Exercise 7. Cover the words, and name the things in the pictures. Pause the video after each question. What are these?", say: "Exercise seven. Cover the words, and name the things in the pictures. Pause the video after each question. What are these?", focus: 0}
+      - {tom: "Peas.", focus: 0}
+      - {emma: "What's this?", focus: 1}
+      - {tom: "An aubergine.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "A courgette.", focus: 2}
+      - {emma: "What's this?", focus: 3}
+      - {tom: "A mushroom.", focus: 3}
+      - {emma: "And this?", focus: 4}
+      - {tom: "Garlic. And a clove of garlic.", focus: 4}
+      - {emma: "And the last one?", focus: 5}
+      - {tom: "A chilli.", focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 6: đất nước bạn"
+    heading: "Exercise 6 · About your country: Tom's answers (1–6)"
+    heading_vi: "Yes, a lot · Yes · Yes, but not much · No, we don't — Tom nói về Việt Nam"
+    items:
+      - {n: 1, q: "raw cabbage  →  ___", answer: "Yes, in salads."}
+      - {n: 2, q: "garlic  →  ___", answer: "Yes, a lot."}
+      - {n: 3, q: "cherries  →  ___", answer: "Yes, but not much."}
+      - {n: 4, q: "frozen carrots  →  ___", answer: "No, we don't."}
+      - {n: 5, q: "mushrooms  →  ___", answer: "Yes, a lot."}
+      - {n: 6, q: "aubergine  →  ___", answer: "Yes."}
+    lines:
+      - emma: "Exercise 6. Do you eat these things in your country? Answer: yes, a lot. Yes. Yes, but not much. Or: no, we don't. Pause the video and answer for your country. Then listen to Tom."
+        say: "Exercise six. Do you eat these things in your country? Answer: yes, a lot. Yes. Yes, but not much. Or: no, we don't. Pause the video and answer for your country. Then listen to Tom."
+        vi: "Bài 6: ở nước bạn có ăn những thứ này không? Tạm dừng video, tự trả lời, rồi nghe Tom."
+      - {tom: "One. Raw cabbage: yes, in salads. Two. Garlic: yes, a lot! Three. Cherries: yes, but not much. They're expensive.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Frozen carrots: no, we don't. We buy fresh vegetables at the market. Five. Mushrooms: yes, a lot. Six. Aubergine: yes.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    heading: "Exercise 6 · About your country: Tom's answers (7–12)"
+    heading_vi: "Tom nói về Việt Nam"
+    items:
+      - {n: 7, q: "cucumber  →  ___", answer: "Yes, a lot."}
+      - {n: 8, q: "avocado  →  ___", answer: "Yes, a lot."}
+      - {n: 9, q: "mangoes  →  ___", answer: "Yes, a lot."}
+      - {n: 10, q: "fresh pineapple  →  ___", answer: "Yes, a lot."}
+      - {n: 11, q: "lettuce  →  ___", answer: "Yes, a lot."}
+      - {n: 12, q: "courgette  →  ___", answer: "Yes, but not much."}
+    lines:
+      - {tom: "Seven. Cucumber: yes, a lot. Eight. Avocado: yes, a lot. In Vietnam, we make avocado smoothies. Nine. Mangoes: yes, a lot.", reveal: [7, 8, 9], focus: 2, vi: "avocado smoothie: sinh tố bơ"}
+      - {tom: "Ten. Fresh pineapple: yes, a lot. Eleven. Lettuce: yes, a lot, with spring rolls. Twelve. Courgette: yes, but not much.", reveal: [10, 11, 12], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: rau quả"
+    heading: "Speaking 1 · Fruit and vegetables"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What's your favourite fruit?"
+        a: "Mango. And I love avocado smoothies. In Da Lat, avocados are very cheap."
+        say: "Mango. And I love avocado smoothies. In Dah Lot, avocados are very cheap."
+        ask: emma
+        by: tom
+        phrases: ["…, and I love…", "… are very cheap"]
+      - q: "And yours, Emma?"
+        a: "Strawberries. In England, we eat strawberries and cream in the summer. But I tried durian once, and I didn't like it at all!"
+        ask: tom
+        by: emma
+        phrases: ["In England, we…", "I tried … once", "I didn't like it at all"]
+      - q: "Is there a vegetable you don't like?"
+        a: "Bitter melon! It's very bitter, but my mum says it's healthy."
+        ask: emma
+        by: tom
+        phrases: ["… ! It's very…", "… says it's healthy"]
+      - q: "Where do you buy fruit and vegetables?"
+        a: "At the market on Saturday morning. Everything is fresh, and I can ask the price."
+        ask: tom
+        by: emma
+        phrases: ["At the market…", "Everything is fresh", "I can…"]
+      - q: "Does your family grow vegetables?"
+        a: "Yes. My grandfather has a garden in Da Lat. He grows cabbages, carrots and lettuce, and he works in it every morning."
+        say: "Yes. My grandfather has a garden in Dah Lot. He grows cabbages, carrots and lettuce, and he works in it every morning."
+        ask: emma
+        by: tom
+        phrases: ["My grandfather has…", "He grows…", "every morning"]
+    lines:
+      - {emma: "Let's talk about fruit and vegetables. What's your favourite fruit, Tom?", focus: 0}
+      - {tom: "Mango. And I love avocado smoothies. In Da Lat, avocados are very cheap.", say: "Mango. And I love avocado smoothies. In Dah Lot, avocados are very cheap.", reveal: 0, vi: "Xoài. Và rất thích sinh tố bơ — ở Đà Lạt bơ rất rẻ."}
+      - {tom: "And yours, Emma?", focus: 1}
+      - {emma: "Strawberries. In England, we eat strawberries and cream in the summer. But I tried durian once, and I didn't like it at all!", reveal: 1, vi: "Dâu tây: mùa hè ở Anh ăn dâu với kem. Đã thử sầu riêng một lần — không thích chút nào!"}
+      - {emma: "Is there a vegetable you don't like?", focus: 2}
+      - {tom: "Bitter melon! It's very bitter, but my mum says it's healthy.", reveal: 2, vi: "Mướp đắng! Rất đắng, nhưng mẹ bảo tốt cho sức khỏe."}
+      - {tom: "Where do you buy fruit and vegetables?", focus: 3}
+      - {emma: "At the market on Saturday morning. Everything is fresh, and I can ask the price.", reveal: 3, vi: "Ở chợ sáng thứ Bảy: cái gì cũng tươi, hỏi giá được."}
+      - {emma: "Does your family grow vegetables?", focus: 4}
+      - {tom: "Yes. My grandfather has a garden in Da Lat. He grows cabbages, carrots and lettuce, and he works in it every morning.", say: "Yes. My grandfather has a garden in Dah Lot. He grows cabbages, carrots and lettuce, and he works in it every morning.", reveal: 4, vi: "Có: ông có vườn ở Đà Lạt, trồng bắp cải, cà rốt, xà lách, sáng nào cũng ra vườn."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · fruit and vegetables"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "Can you buy a ___ at the market?", answer: "pineapple"}
+      - {n: 2, q: "I put some ___ in the soup.", answer: "garlic"}
+      - {n: 3, q: "These ___ are very sweet.", answer: "strawberries"}
+      - {n: 4, q: "Do you like ___ in your salad?", answer: "cucumber"}
+      - {n: 5, q: "We need two ___ and a carrot.", answer: "potatoes"}
+      - {n: 6, q: "This ___ isn't ripe yet.", answer: "avocado"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Can you buy a pineapple at the market?", focus: 0}
+      - {emma: "Number two. I put some garlic in the soup.", focus: 1}
+      - {emma: "Number three. These strawberries are very sweet.", focus: 2}
+      - {emma: "Number four. Do you like cucumber in your salad?", focus: 3}
+      - {emma: "Number five. We need two potatoes and a carrot.", focus: 4}
+      - {emma: "Number six. This avocado isn't ripe yet.", focus: 5}
+      - {tom: "Pineapple: one word. Garlic. Strawberries: y becomes i, e, s.", say: "Pineapple: one word. Garlic. Strawberries: why becomes eye, ee, ess.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Cucumber. Potatoes: with e, s. And avocado.", say: "Cucumber. Potatoes: with ee, ess. And avocado.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Fruit"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you like eating fruit?", hint: "Yes, I eat fruit every day, especially …"}
+      - {q: "What fruit is popular in your country?", hint: "Mangoes, … are very popular, because …"}
+      - {q: "Did you eat a lot of fruit when you were a child?", hint: "Yes, my mother always gave me …"}
+      - {q: "Do you prefer fresh fruit or fruit juice?", hint: "I prefer fresh fruit, because …"}
+      - {q: "Is it important to eat vegetables every day?", hint: "Yes, I think so. Vegetables are healthy …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about fruit. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about fruit. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về trái cây."
+      - {emma: "Do you like eating fruit?", focus: 0, pause: 0.5}
+      - {emma: "What fruit is popular in your country?", focus: 1, pause: 0.5}
+      - {emma: "Did you eat a lot of fruit when you were a child?", focus: 2, pause: 0.5}
+      - {emma: "Do you prefer fresh fruit or fruit juice?", focus: 3, pause: 0.5}
+      - {emma: "Is it important to eat vegetables every day?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 66–67, nhìn tranh, nói lại"
+    items:
+      - {en: "banana · orange · peach · apple · pear · lemon · mango · strawberry · cherry · melon · grapes · pineapple · avocado", vi: "trái cây"}
+      - {en: "potato · beans · onion · carrot · cauliflower · cabbage · peas · aubergine · courgette · mushroom · garlic · chilli", vi: "rau (1)"}
+      - {en: "lettuce · tomato · cucumber · pepper · a salad", vi: "rau (2)"}
+      - {en: "taste · sweet ≠ bitter (sour) · fresh · raw · frozen · cooked", vi: "vị và trạng thái"}
+      - {en: "Next: Unit 26 · Buying food", vi: "Tiếp theo: Unit 26 · Mua thực phẩm"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Banana, orange, peach, apple, pear, lemon, mango, strawberry, cherry, melon, grapes, pineapple, and avocado.", focus: 0}
+      - {tom: "Potato, beans, onion, carrot, cauliflower, cabbage, peas, aubergine, courgette, mushroom, garlic, and chilli.", focus: 1}
+      - {emma: "Lettuce, tomato, cucumber, pepper, and a salad.", focus: 2}
+      - {tom: "Taste, sweet, bitter or sour, fresh, raw, frozen, and cooked.", focus: 3}
+      - {emma: "Next time, Unit 26: buying food. See you then!", say: "Next time, Unit twenty-six: buying food. See you then!", focus: 4}

@@ -5,6 +5,101 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 38 — 24/11/2026: Oxford Word Skills Basic — module Food and drink (Unit 24–28), 10 video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 37 (`e975d58`, đã lên `main`).
+
+### Yêu cầu
+
+Người học: "tạo các video của phần tiếp theo sách oxford xong rồi commit push main luôn". Phần tiếp theo là module Food and
+drink (Unit 24–28, tr. 65–74). Theo khuôn đợt 37, mỗi unit hai video: bài giảng (file 09 mục 5) và nghe – viết (mục 5.9). Xong
+thì commit và đưa lên `main`.
+
+### Đã làm
+
+- **Rà trang sách và Answer key** (tr. 65–74, Answer key tr. 210–211): ghi đề và đáp án từng bài.
+  - Unit 25 bài 2 câu 2: Answer key ghi *lemons are bitter* (sách dùng bitter là trái nghĩa của sweet). Video nói thêm: tiếng Anh
+    hằng ngày gọi vị chanh là *sour*.
+  - Unit 27 bài 4 (Test yourself) in tên kèm tranh nên không che được. Video đổi thành nghe tiếng Việt, nói tên tiếng Anh.
+- **Word list Unit 24–28** (184 mục, 157 từ chưa có ở Unit 1–23) thêm vào `work/wordlist.json` (nay 863 mục). Lấy từ hai lần OCR
+  của đợt 36, soát khoảng hở như đợt 37: không sót mục nào. Mục có chú thích nghĩa (*can* =container, *pepper* =vegetable /
+  =spice…) giữ chú thích.
+- **5 video bài giảng** (48:22): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+  - Unit khó (10–15 phút): 26 Buying food, 28 In a restaurant. Có đóng vai (mua thực phẩm ở chợ; gọi món, Emma là người phục vụ),
+    ôn tập (lỗi hay gặp, tự kiểm tra tranh bàn ăn), Part 2 với bài mẫu của Tom và Emma, thảo luận kiểu Part 3. Unit 28 có thêm đặt
+    bàn qua điện thoại (như IELTS Listening phần 1).
+  - Unit thường thêm cảnh ngoài sách có ích cho IELTS General Training:
+    - Unit 24: món Việt bằng tiếng Anh, tả một món ăn;
+    - Unit 25: trái cây Việt Nam, câu đố vị;
+    - Unit 27: đồ uống quán Việt, cỡ ly, câu hay dùng ở quán, đóng vai gọi đồ (Tom là phục vụ).
+  - Khung đỏ theo tranh đo bằng máy (`blobs.py`: dải mực theo hàng rồi theo cột) — file 09 mục 5.3a.
+
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| 24 Meat and fish | `U24-meat-fish` | 8:03 | 4 | 1–5 (bài 4 thành Nói 1) |
+| 25 Fruit and vegetables | `U25-fruit-vegetables` | 8:14 | 9 | 1–7 |
+| **26 Buying food** | `U26-buying-food` | 11:35 | 9 | 1–8 |
+| 27 In a café | `U27-cafe` | 8:01 | 3 | 1–4 (bài 4 thành nghe tiếng Việt, nói tiếng Anh) |
+| **28 In a restaurant** | `U28-restaurant` | 12:30 | 10 | 1–9 (bài 3, 7: tự kiểm tra ở phần ôn tập) |
+
+- **5 video nghe – viết** (50:14), sinh từ `work/dictation/units_24_28.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+  đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`.
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 24 · Meat and fish | `U24-meat-fish-dictation` | 10:24 | 21 · 21 | 27 | 34 |
+| 25 · Fruit and vegetables | `U25-fruit-vegetables-dictation` | 10:05 | 36 · 38 | 18 | 28 |
+| 26 · Buying food | `U26-buying-food-dictation` | 9:48 | 35 · 47 | 18 | 30 |
+| 27 · In a café | `U27-cafe-dictation` | 10:03 | 22 · 26 | 28 | 34 |
+| 28 · In a restaurant | `U28-restaurant-dictation` | 9:55 | 35 · 52 | 17 | 28 |
+
+Thử và sửa trong lúc làm:
+- **Khung hình** (sửa sau khi xem khung hình mọi cảnh có hình bằng `scenepick.py`):
+  - mép cắt mất dòng nhãn dưới hàng trái cây (Unit 25) và nhãn đồ vật trên bàn ăn (Unit 28), tiêu đề hàng cá (Unit 24) và đồ đựng
+    (Unit 26);
+  - thực đơn Unit 28 quá nhỏ, tách ba cảnh; Glossary Unit 28 tách hai cảnh;
+  - câu hội thoại dài bên cạnh hình bị thu nhỏ, đã rút gọn.
+- **Cách đọc:**
+  - `Voong Tow` (Vũng Tàu) đọc "Tow" thành /toʊ/: sửa thành `Voong Tau` trước khi dựng Unit 28;
+  - `why-fy` nhấn âm sau, trong khi "Wi-Fi" vốn đọc đúng: bỏ ở Unit 27 (dựng lại bài giảng) và ở dữ liệu nghe – viết;
+  - soát cả 184 mục Word list bằng bộ tách âm của Kokoro: đều đúng.
+- **Phiên làm việc khởi động lại** giữa lúc dựng Unit 25: commit phần đã xong, xếp dựng lại.
+- **Đáp án "I'll have …"** (nghe – viết Unit 28) trông như chữ bị cắt: bỏ dấu ba chấm.
+- **Nhân vật:** câu về bà của Tom (Unit 25) đổi thành mẹ, vì hồ sơ chỉ có ông sống cùng nhà.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U24-meat-fish.yaml` … `U28-restaurant.yaml` (+ `.mp4`) | 5 video bài giảng |
+| `books/book_oxford_word_skills_basic/lessons/U2[4-8]-*-dictation.yaml` (+ `.mp4`), `lessons.json` | 5 video nghe – viết |
+| `books/book_oxford_word_skills_basic/work/dictation/units_24_28.py` | Dữ liệu nghe – viết Unit 24–28 |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 24–28 (184 mục) |
+| `agents/tests/test_lesson_video.py` | Unit khó U26, U28 |
+| `tests/web/book.e2e.mjs` | Thẻ sách 56 video; Unit 1–28 mỗi unit hai nút; unit khó 26, 28 |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 5.1, 5.3a, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-73 (xong); đợt 38 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 38 |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 56 video (28 bài giảng, 28 nghe – viết) |
+| `cd agents && python -m pytest -q` | 149 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 56 video, Unit 1–28 mỗi unit hai nút (bài giảng 7–10 phút, unit khó 26, 28 từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (10 kịch bản) | Hợp lệ, không còn ⚠ |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U24…U28 --level all` | Cả 5 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (10 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,35–2,48 giây (cuối cảnh tự trả lời); nghe – viết: chỗ lặng duy nhất trên 1,2 giây là 2,0–2,1 giây ở cuối video |
+| Xem trước khung hình (bộ đọc im lặng, `scenepick.py`) và khung hình bản dựng | Khung đỏ đúng tranh, đúng dòng; không mất nhãn hay tiêu đề; chữ trên thẻ nghe – viết không bị cắt |
+
+### Còn treo
+
+- Unit 29 trở đi chưa có video (P2-59): module Getting around ở cuối file 09 mục 5.8.
+- Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
+
 ## Đợt 37 — 23/11/2026: Oxford Word Skills Basic — module Everyday life (Unit 17–23), 14 video
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 36 (`c19864a`, đã lên `main`).

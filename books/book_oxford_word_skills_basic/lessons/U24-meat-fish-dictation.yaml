@@ -1,0 +1,322 @@
+# Video nghe – viết (dictation) Unit 24 · Meat and fish — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U24-meat-fish-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U24 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 24 có 21 mục; phần 1 thêm cụm trên trang 65 (Do you eat …?, a piece of / a slice of).
+# Phần 2 và 3 nhiều hơn vì unit chỉ có một trang.
+id: U24-meat-fish-dictation
+activity: U24-words
+title: "Unit 24 · Meat and fish"
+subtitle: "Dictation · listen and write: meat, fish and seafood"
+title_vi: "Nghe – viết 10 phút: thịt, cá, hải sản — từ trong sách, từ thêm, câu giao tiếp"
+tag: "FOOD AND DRINK · UNIT 24"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 24: Meat and fish. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-four: Meat and fish. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 24: thịt, cá, hải sản. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 21 words from the book. You hear each word twice, and then an example sentence twice. Then 27 more useful words, and 34 useful sentences for conversation.", "say": "There are three parts. First, twenty-one words from the book. You hear each word twice, and then an example sentence twice. Then twenty-seven more useful words, and thirty-four useful sentences for conversation.", "vi": "Ba phần: 21 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 27 từ thêm, 34 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "meat", "vi": "thịt", "ex": "Do you eat meat?", "w": ["meat"]}
+      - {"n": 2, "answer": "animal", "vi": "con vật", "ex": "A cow is an animal, but beef is meat.", "w": ["animal"]}
+      - {"n": 3, "answer": "cow, beef", "vi": "con bò, thịt bò", "ex": "The meat from a cow is beef.", "w": ["cow", "beef"]}
+      - {"n": 4, "answer": "sheep, lamb", "vi": "con cừu, thịt cừu", "ex": "A young sheep is a lamb.", "w": ["sheep", "lamb"]}
+      - {"n": 5, "answer": "pig, pork", "vi": "con lợn, thịt lợn", "ex": "Pork comes from a pig.", "w": ["pig", "pork"]}
+      - {"n": 6, "answer": "chicken", "vi": "con gà, thịt gà", "ex": "I'd like the chicken with rice, please.", "w": ["chicken"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. meat. meat. Do you eat meat? Do you eat meat?", "focus": 0}
+      - {"emma": "Two. animal. animal. A cow is an animal, but beef is meat. A cow is an animal, but beef is meat.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. cow, beef. cow, beef. The meat from a cow is beef. The meat from a cow is beef.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. sheep, lamb. sheep, lamb. A young sheep is a lamb. A young sheep is a lamb.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. pig, pork. pig, pork. Pork comes from a pig. Pork comes from a pig.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. chicken. chicken. I'd like the chicken with rice, please. I'd like the chicken with rice, please.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "duck", "vi": "con vịt, thịt vịt", "ex": "Emma doesn't like duck.", "w": ["duck"]}
+      - {"n": 8, "answer": "ham", "vi": "giăm bông", "ex": "I'll have a ham sandwich.", "w": ["ham"]}
+      - {"n": 9, "answer": "bacon", "vi": "thịt xông khói", "ex": "They had bacon and eggs for breakfast.", "w": ["bacon"]}
+      - {"n": 10, "answer": "sausages", "vi": "xúc xích", "ex": "The children love sausages.", "w": ["sausages"]}
+      - {"n": 11, "answer": "fish", "vi": "cá", "ex": "We often have fish on Fridays.", "w": ["fish"]}
+      - {"n": 12, "answer": "salmon", "vi": "cá hồi", "ex": "Salmon is a pink fish.", "w": ["salmon"]}
+    lines:
+      - {"emma": "Seven. duck. duck. Emma doesn't like duck. Emma doesn't like duck.", "focus": 0}
+      - {"emma": "Eight. ham. ham. I'll have a ham sandwich. I'll have a ham sandwich.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. bacon. bacon. They had bacon and eggs for breakfast. They had bacon and eggs for breakfast.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. sausages. sausages. The children love sausages. The children love sausages.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. fish. fish. We often have fish on Fridays. We often have fish on Fridays.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. salmon. salmon. Salmon is a pink fish. Salmon is a pink fish.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "tuna", "vi": "cá ngừ", "ex": "I bought a tin of tuna.", "w": ["tuna"]}
+      - {"n": 14, "answer": "seafood", "vi": "hải sản", "ex": "Emma loves seafood.", "w": ["seafood"]}
+      - {"n": 15, "answer": "squid", "vi": "mực", "ex": "Tom doesn't like squid.", "w": ["squid"]}
+      - {"n": 16, "answer": "prawns", "vi": "tôm", "ex": "The prawns are very fresh today.", "w": ["prawns"]}
+      - {"n": 17, "answer": "crab", "vi": "cua", "ex": "We had crab with garlic.", "w": ["crab"]}
+      - {"n": 18, "answer": "mussels", "vi": "con vẹm", "ex": "Mussels are very popular in Europe.", "w": ["mussels"]}
+    lines:
+      - {"emma": "Thirteen. tuna. tuna. I bought a tin of tuna. I bought a tin of tuna.", "focus": 0}
+      - {"emma": "Fourteen. seafood. seafood. Emma loves seafood. Emma loves seafood.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. squid. squid. Tom doesn't like squid. Tom doesn't like squid.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. prawns. prawns. The prawns are very fresh today. The prawns are very fresh today.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. crab. crab. We had crab with garlic. We had crab with garlic.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. mussels. mussels. Mussels are very popular in Europe. Mussels are very popular in Europe.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–21)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "Do you eat pork?", "vi": "Bạn có ăn thịt lợn không?", "ex": "Do you eat pork? — Yes, I do."}
+      - {"n": 20, "answer": "a piece of chicken", "vi": "một miếng thịt gà", "ex": "Would you like a piece of chicken?"}
+      - {"n": 21, "answer": "a slice of ham", "vi": "một lát giăm bông", "ex": "Put a slice of ham on the bread."}
+    lines:
+      - {"emma": "Nineteen. Do you eat pork?. Do you eat pork?. Do you eat pork? — Yes, I do. Do you eat pork? — Yes, I do.", "focus": 0}
+      - {"emma": "Twenty. a piece of chicken. a piece of chicken. Would you like a piece of chicken? Would you like a piece of chicken?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. a slice of ham. a slice of ham. Put a slice of ham on the bread. Put a slice of ham on the bread.", "focus": 2, "reveal": [20]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [21]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (22–27)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 22, "answer": "beef noodle soup", "vi": "phở bò", "ex": "Tom's favourite breakfast is beef noodle soup."}
+      - {"n": 23, "answer": "grilled pork", "vi": "thịt lợn nướng", "ex": "Bún chả is grilled pork with rice noodles."}
+      - {"n": 24, "answer": "fish sauce", "vi": "nước mắm", "ex": "Vietnamese food often has fish sauce in it."}
+      - {"n": 25, "answer": "spring rolls", "vi": "chả giò, nem rán", "ex": "Her spring rolls are delicious."}
+      - {"n": 26, "answer": "vegetarian", "vi": "người ăn chay", "ex": "A vegetarian doesn't eat meat or fish."}
+      - {"n": 27, "answer": "steak", "vi": "bít tết", "ex": "He ordered a big steak."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-two. beef noodle soup. beef noodle soup. Tom's favourite breakfast is beef noodle soup. Tom's favourite breakfast is beef noodle soup.", "focus": 0}
+      - {"tom": "Twenty-three. grilled pork. grilled pork. Bún chả is grilled pork with rice noodles. Bún chả is grilled pork with rice noodles.", "say": "Twenty-three. grilled pork. grilled pork. Boon cha is grilled pork with rice noodles. Boon cha is grilled pork with rice noodles.", "focus": 1, "reveal": [22]}
+      - {"tom": "Twenty-four. fish sauce. fish sauce. Vietnamese food often has fish sauce in it. Vietnamese food often has fish sauce in it.", "focus": 2, "reveal": [23]}
+      - {"tom": "Twenty-five. spring rolls. spring rolls. Her spring rolls are delicious. Her spring rolls are delicious.", "focus": 3, "reveal": [24]}
+      - {"tom": "Twenty-six. vegetarian. vegetarian. A vegetarian doesn't eat meat or fish. A vegetarian doesn't eat meat or fish.", "focus": 4, "reveal": [25]}
+      - {"tom": "Twenty-seven. steak. steak. He ordered a big steak. He ordered a big steak.", "focus": 5, "reveal": [26]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [27]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (28–33)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 28, "answer": "turkey", "vi": "gà tây", "ex": "People eat turkey at Christmas in England."}
+      - {"n": 29, "answer": "lobster", "vi": "tôm hùm", "ex": "Lobster is very expensive."}
+      - {"n": 30, "answer": "oysters", "vi": "hàu", "ex": "These oysters are very fresh."}
+      - {"n": 31, "answer": "shrimp", "vi": "tôm (Mỹ)", "ex": "Americans say shrimp, not prawns."}
+      - {"n": 32, "answer": "minced meat", "vi": "thịt băm", "ex": "Mix the minced meat with onion."}
+      - {"n": 33, "answer": "chicken wings", "vi": "cánh gà", "ex": "We ordered some chicken wings."}
+    lines:
+      - {"tom": "Twenty-eight. turkey. turkey. People eat turkey at Christmas in England. People eat turkey at Christmas in England.", "focus": 0}
+      - {"tom": "Twenty-nine. lobster. lobster. Lobster is very expensive. Lobster is very expensive.", "focus": 1, "reveal": [28]}
+      - {"tom": "Thirty. oysters. oysters. These oysters are very fresh. These oysters are very fresh.", "focus": 2, "reveal": [29]}
+      - {"tom": "Thirty-one. shrimp. shrimp. Americans say shrimp, not prawns. Americans say shrimp, not prawns.", "focus": 3, "reveal": [30]}
+      - {"tom": "Thirty-two. minced meat. minced meat. Mix the minced meat with onion. Mix the minced meat with onion.", "focus": 4, "reveal": [31]}
+      - {"tom": "Thirty-three. chicken wings. chicken wings. We ordered some chicken wings. We ordered some chicken wings.", "focus": 5, "reveal": [32]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (34–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 34, "answer": "meatballs", "vi": "thịt viên", "ex": "The soup has meatballs in it."}
+      - {"n": 35, "answer": "fried chicken", "vi": "gà rán", "ex": "Fried chicken is popular with children."}
+      - {"n": 36, "answer": "smoked salmon", "vi": "cá hồi hun khói", "ex": "Smoked salmon is good with brown bread."}
+      - {"n": 37, "answer": "raw fish", "vi": "cá sống", "ex": "Sushi is made with raw fish."}
+      - {"n": 38, "answer": "butcher's", "vi": "hàng thịt", "ex": "You can buy meat at the butcher's."}
+      - {"n": 39, "answer": "protein", "vi": "chất đạm", "ex": "Fish is a good source of protein."}
+    lines:
+      - {"tom": "Thirty-four. meatballs. meatballs. The soup has meatballs in it. The soup has meatballs in it.", "focus": 0}
+      - {"tom": "Thirty-five. fried chicken. fried chicken. Fried chicken is popular with children. Fried chicken is popular with children.", "focus": 1, "reveal": [34]}
+      - {"tom": "Thirty-six. smoked salmon. smoked salmon. Smoked salmon is good with brown bread. Smoked salmon is good with brown bread.", "focus": 2, "reveal": [35]}
+      - {"tom": "Thirty-seven. raw fish. raw fish. Sushi is made with raw fish. Sushi is made with raw fish.", "focus": 3, "reveal": [36]}
+      - {"tom": "Thirty-eight. butcher's. butcher's. You can buy meat at the butcher's. You can buy meat at the butcher's.", "focus": 4, "reveal": [37]}
+      - {"tom": "Thirty-nine. protein. protein. Fish is a good source of protein. Fish is a good source of protein.", "focus": 5, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "allergic to", "vi": "dị ứng với", "ex": "Some people are allergic to seafood."}
+      - {"n": 41, "answer": "slice", "vi": "lát", "ex": "Cut the beef into thin slices."}
+      - {"n": 42, "answer": "bone", "vi": "xương", "ex": "Be careful. This fish has a lot of bones."}
+      - {"n": 43, "answer": "tender", "vi": "mềm (thịt)", "ex": "The beef is very tender."}
+      - {"n": 44, "answer": "roast beef", "vi": "thịt bò nướng lò", "ex": "Roast beef is a traditional Sunday lunch in England."}
+      - {"n": 45, "answer": "fish fillet", "vi": "phi lê cá", "ex": "A fish fillet has no bones."}
+    lines:
+      - {"tom": "Forty. allergic to. allergic to. Some people are allergic to seafood. Some people are allergic to seafood.", "focus": 0}
+      - {"tom": "Forty-one. slice. slice. Cut the beef into thin slices. Cut the beef into thin slices.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. bone. bone. Be careful. This fish has a lot of bones. Be careful. This fish has a lot of bones.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. tender. tender. The beef is very tender. The beef is very tender.", "focus": 3, "reveal": [42]}
+      - {"tom": "Forty-four. roast beef. roast beef. Roast beef is a traditional Sunday lunch in England. Roast beef is a traditional Sunday lunch in England.", "focus": 4, "reveal": [43]}
+      - {"tom": "Forty-five. fish fillet. fish fillet. A fish fillet has no bones. A fish fillet has no bones.", "focus": 5, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (46–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 46, "answer": "chicken breast", "vi": "ức gà", "ex": "People who do sport often eat chicken breast."}
+      - {"n": 47, "answer": "lean meat", "vi": "thịt nạc", "ex": "Lean meat has very little fat."}
+      - {"n": 48, "answer": "fat", "vi": "mỡ", "ex": "Cut the fat off the meat."}
+    lines:
+      - {"tom": "Forty-six. chicken breast. chicken breast. People who do sport often eat chicken breast. People who do sport often eat chicken breast.", "focus": 0}
+      - {"tom": "Forty-seven. lean meat. lean meat. Lean meat has very little fat. Lean meat has very little fat.", "focus": 1, "reveal": [46]}
+      - {"tom": "Forty-eight. fat. fat. Cut the fat off the meat. Cut the fat off the meat.", "focus": 2, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [48]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (49–54)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 49, "answer": "What's your favourite meat?", "vi": "Bạn thích loại thịt nào nhất?"}
+      - {"n": 50, "answer": "Beef. I love beef noodle soup.", "vi": "Thịt bò. Mình rất thích phở bò."}
+      - {"n": 51, "answer": "Do you like seafood?", "vi": "Bạn có thích hải sản không?"}
+      - {"n": 52, "answer": "I love it, especially crab and mussels.", "vi": "Rất thích, nhất là cua và vẹm."}
+      - {"n": 53, "answer": "Do you eat a lot of pork?", "vi": "Bạn có ăn nhiều thịt lợn không?"}
+      - {"n": 54, "answer": "Yes, we eat a lot of pork in Vietnam.", "vi": "Có, ở Việt Nam ăn nhiều thịt lợn lắm."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-nine. What's your favourite meat? What's your favourite meat?", "focus": 0}
+      - {"tom": "Fifty. Beef. I love beef noodle soup. Beef. I love beef noodle soup.", "focus": 1, "reveal": [49]}
+      - {"tom": "Fifty-one. Do you like seafood? Do you like seafood?", "focus": 2, "reveal": [50]}
+      - {"emma": "Fifty-two. I love it, especially crab and mussels. I love it, especially crab and mussels.", "focus": 3, "reveal": [51]}
+      - {"emma": "Fifty-three. Do you eat a lot of pork? Do you eat a lot of pork?", "focus": 4, "reveal": [52]}
+      - {"tom": "Fifty-four. Yes, we eat a lot of pork in Vietnam. Yes, we eat a lot of pork in Vietnam.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "Is this chicken or duck?", "vi": "Đây là thịt gà hay vịt?"}
+      - {"n": 56, "answer": "It's chicken. I don't eat duck.", "vi": "Là gà. Mình không ăn vịt."}
+      - {"n": 57, "answer": "Are you a vegetarian?", "vi": "Bạn có ăn chay không?"}
+      - {"n": 58, "answer": "No, but I eat a lot of vegetables.", "vi": "Không, nhưng mình ăn nhiều rau."}
+      - {"n": 59, "answer": "How do you cook the fish?", "vi": "Bạn nấu cá thế nào?"}
+      - {"n": 60, "answer": "I usually grill it with lemon.", "vi": "Mình thường nướng với chanh."}
+    lines:
+      - {"tom": "Fifty-five. Is this chicken or duck? Is this chicken or duck?", "focus": 0}
+      - {"emma": "Fifty-six. It's chicken. I don't eat duck. It's chicken. I don't eat duck.", "focus": 1, "reveal": [55]}
+      - {"emma": "Fifty-seven. Are you a vegetarian? Are you a vegetarian?", "focus": 2, "reveal": [56]}
+      - {"tom": "Fifty-eight. No, but I eat a lot of vegetables. No, but I eat a lot of vegetables.", "focus": 3, "reveal": [57]}
+      - {"tom": "Fifty-nine. How do you cook the fish? How do you cook the fish?", "focus": 4, "reveal": [58]}
+      - {"emma": "Sixty. I usually grill it with lemon. I usually grill it with lemon.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "Is the fish fresh?", "vi": "Cá có tươi không?"}
+      - {"n": 62, "answer": "Yes, it came this morning.", "vi": "Có, mới về sáng nay."}
+      - {"n": 63, "answer": "I'd like a kilo of pork, please.", "vi": "Cho tôi một cân thịt lợn."}
+      - {"n": 64, "answer": "Here you are. Anything else?", "vi": "Đây ạ. Còn gì nữa không?"}
+      - {"n": 65, "answer": "Can I have the salmon, please?", "vi": "Cho tôi món cá hồi."}
+      - {"n": 66, "answer": "Of course. With rice or chips?", "vi": "Vâng. Ăn với cơm hay khoai tây chiên ạ?"}
+    lines:
+      - {"emma": "Sixty-one. Is the fish fresh? Is the fish fresh?", "focus": 0}
+      - {"tom": "Sixty-two. Yes, it came this morning. Yes, it came this morning.", "focus": 1, "reveal": [61]}
+      - {"tom": "Sixty-three. I'd like a kilo of pork, please. I'd like a kilo of pork, please.", "focus": 2, "reveal": [62]}
+      - {"emma": "Sixty-four. Here you are. Anything else? Here you are. Anything else?", "focus": 3, "reveal": [63]}
+      - {"emma": "Sixty-five. Can I have the salmon, please? Can I have the salmon, please?", "focus": 4, "reveal": [64]}
+      - {"tom": "Sixty-six. Of course. With rice or chips? Of course. With rice or chips?", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "Prawns are my favourite seafood.", "vi": "Tôm là món hải sản mình thích nhất."}
+      - {"n": 68, "answer": "Fish and chips is a famous English dish.", "vi": "Cá chiên khoai tây là món nổi tiếng của Anh."}
+      - {"n": 69, "answer": "What's in this soup?", "vi": "Món canh này có gì?"}
+      - {"n": 70, "answer": "Chicken, onions and noodles.", "vi": "Thịt gà, hành tây và mì."}
+      - {"n": 71, "answer": "Do you prefer meat or fish?", "vi": "Bạn thích thịt hay cá hơn?"}
+      - {"n": 72, "answer": "Fish, I think. It's healthier.", "vi": "Cá, chắc vậy. Tốt cho sức khỏe hơn."}
+    lines:
+      - {"tom": "Sixty-seven. Prawns are my favourite seafood. Prawns are my favourite seafood.", "focus": 0}
+      - {"emma": "Sixty-eight. Fish and chips is a famous English dish. Fish and chips is a famous English dish.", "focus": 1, "reveal": [67]}
+      - {"tom": "Sixty-nine. What's in this soup? What's in this soup?", "focus": 2, "reveal": [68]}
+      - {"emma": "Seventy. Chicken, onions and noodles. Chicken, onions and noodles.", "focus": 3, "reveal": [69]}
+      - {"emma": "Seventy-one. Do you prefer meat or fish? Do you prefer meat or fish?", "focus": 4, "reveal": [70]}
+      - {"tom": "Seventy-two. Fish, I think. It's healthier. Fish, I think. It's healthier.", "focus": 5, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [72]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (73–78)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 73, "answer": "How much is the beef?", "vi": "Thịt bò bao nhiêu tiền?"}
+      - {"n": 74, "answer": "Two hundred and fifty thousand dong a kilo.", "vi": "Hai trăm năm mươi nghìn đồng một cân."}
+      - {"n": 75, "answer": "My mum makes great fish soup.", "vi": "Mẹ mình nấu canh cá ngon lắm."}
+      - {"n": 76, "answer": "I'd love to try it!", "vi": "Mình rất muốn thử!"}
+      - {"n": 77, "answer": "We had bacon and sausages for breakfast.", "vi": "Bọn mình ăn sáng với thịt xông khói và xúc xích."}
+      - {"n": 78, "answer": "That sounds delicious!", "vi": "Nghe ngon quá!"}
+    lines:
+      - {"tom": "Seventy-three. How much is the beef? How much is the beef?", "focus": 0}
+      - {"emma": "Seventy-four. Two hundred and fifty thousand dong a kilo. Two hundred and fifty thousand dong a kilo.", "focus": 1, "reveal": [73]}
+      - {"tom": "Seventy-five. My mum makes great fish soup. My mum makes great fish soup.", "focus": 2, "reveal": [74]}
+      - {"emma": "Seventy-six. I'd love to try it! I'd love to try it!", "focus": 3, "reveal": [75]}
+      - {"emma": "Seventy-seven. We had bacon and sausages for breakfast. We had bacon and sausages for breakfast.", "focus": 4, "reveal": [76]}
+      - {"tom": "Seventy-eight. That sounds delicious! That sounds delicious!", "focus": 5, "reveal": [77]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [78]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (79–82)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 79, "answer": "Have you ever tried crab with garlic?", "vi": "Bạn đã ăn cua rang tỏi bao giờ chưa?"}
+      - {"n": 80, "answer": "No, never. Is it nice?", "vi": "Chưa bao giờ. Có ngon không?"}
+      - {"n": 81, "answer": "Do people eat a lot of beef in England?", "vi": "Ở Anh người ta có ăn nhiều thịt bò không?"}
+      - {"n": 82, "answer": "Yes, especially roast beef on Sundays.", "vi": "Có, nhất là bò nướng lò ngày Chủ nhật."}
+    lines:
+      - {"emma": "Seventy-nine. Have you ever tried crab with garlic? Have you ever tried crab with garlic?", "focus": 0}
+      - {"tom": "Eighty. No, never. Is it nice? No, never. Is it nice?", "focus": 1, "reveal": [79]}
+      - {"tom": "Eighty-one. Do people eat a lot of beef in England? Do people eat a lot of beef in England?", "focus": 2, "reveal": [80]}
+      - {"emma": "Eighty-two. Yes, especially roast beef on Sundays. Yes, especially roast beef on Sundays.", "focus": 3, "reveal": [81]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [82]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 25.", "say": "Well done! See you in Unit twenty-five.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 25."}
+

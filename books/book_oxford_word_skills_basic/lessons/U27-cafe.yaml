@@ -1,0 +1,382 @@
+# Video Oxford Word Skills Basic · Unit 27 — I can order in a café (sách in tr. 71, Answer key tr. 211). Học sau Unit 26.
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–4. Bài 1–3 theo Answer key tr. 211. Bài 4 (Test yourself): tranh trong sách in kèm danh sách tên nên
+# không che được — video làm dạng nghe tiếng Việt, nói tên tiếng Anh (tạm dừng video).
+# Hội thoại tr. 71: Tom đọc người phục vụ (W) — Tom làm thêm ở quán cà phê (hồ sơ), Emma đọc khách (C).
+# Unit một trang nên thêm ngoài sách: đồ uống quán Việt bằng tiếng Anh (iced coffee with milk, egg coffee…), cỡ ly và yêu cầu riêng
+# (less sugar, no ice), take away (Anh) = to go (Mỹ); câu hay dùng (menu, Wi-Fi, gọi nhầm món, tính tiền), câu đố tình huống; đóng vai gọi đồ (Tom là phục vụ); Nghe và viết; Nói 1, Nói 2 (Part 1
+# "Coffee and tea").
+# Hình trong sách: 12 tranh đồ uống và đồ ăn (khung theo tranh, danh sách tên bên trái), hội thoại (khung theo dòng), Glossary và
+# Spotlight Yes, please? / Yes, please.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom làm phục vụ ở quán cà phê gần trường tối thứ Ba, thứ Năm (hồ
+# sơ), mặc sơ mi đen (U19); món khách gọi nhiều nhất là cà phê sữa đá; Tom thích nhất cà phê sữa đá (U07), uống ít đường. Emma uống
+# cappuccino buổi sáng, chiều uống trà sữa kiểu Anh (tea with milk); đã thử cà phê trứng ở Hà Nội và rất thích.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U27-cafe.yaml
+id: U27-cafe
+activity: U27-words
+title: "Unit 27 · In a café"
+subtitle: "I can order in a café"
+title_vi: "Gọi đồ ở quán cà phê: coffee, cappuccino, tea, sandwich, roll; I'd like…, take away, Have a seat — đồ uống quán Việt bằng tiếng Anh"
+tag: "FOOD AND DRINK · UNIT 27"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 27: in a café. Please do Unit 26 first. Today we'll order drinks and food in a café. And Tom is the expert: he works in one!"
+        say: "Welcome to Unit twenty-seven: in a cafe. Please do Unit twenty-six first. Today we'll order drinks and food in a cafe. And Tom is the expert: he works in one!"
+        vi: "Unit 27: ở quán cà phê (học Unit 26 trước). Gọi đồ uống, đồ ăn — Tom làm ở quán cà phê!"
+      - tom: "That's right. No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Đồ uống và đồ ăn"
+    heading: "In a café · drinks and food"
+    heading_vi: "Tranh trong sách tr. 71 — danh sách tên ở bên trái"
+    image: {pdf: course-book, page: 72, clip: [28, 58, 492, 256]}
+    items:
+      - {box: [132, 62, 207, 143]}
+      - {box: [210, 62, 305, 143]}
+      - {box: [306, 74, 375, 114]}
+      - {box: [389, 74, 456, 112]}
+      - {box: [153, 149, 228, 190]}
+      - {box: [232, 146, 290, 196]}
+      - {box: [312, 119, 365, 193]}
+      - {box: [366, 118, 484, 191]}
+      - {box: [175, 199, 261, 244]}
+      - {box: [262, 199, 342, 244]}
+      - {box: [336, 193, 421, 249]}
+      - {box: [421, 179, 490, 244]}
+    lines:
+      - emma: "Look at page seventy-one. Number one is coffee, or white coffee: coffee with milk."
+        focus: 0
+        vi: "white coffee: cà phê sữa"
+      - {tom: "Two: black coffee, with no milk.", focus: 1, vi: "black coffee: cà phê đen"}
+      - {emma: "Three: a cappuccino: coffee with hot milk on top.", focus: 2, vi: "cappuccino"}
+      - {tom: "Four: an espresso: a small, very strong coffee.", focus: 3, vi: "espresso: cà phê đậm, ly nhỏ"}
+      - {emma: "Five: tea. In England, we usually have tea with milk.", focus: 4, vi: "tea (with milk): trà (sữa)"}
+      - {tom: "Six: hot chocolate.", focus: 5, vi: "hot chocolate: sô-cô-la nóng"}
+      - {emma: "Seven: orange juice.", focus: 6, vi: "orange juice: nước cam"}
+      - {tom: "Eight: a baguette: a long, thin piece of bread, from France.", focus: 7, vi: "baguette: bánh mì dài kiểu Pháp"}
+      - {emma: "Nine: a sandwich on white bread.", focus: 8, vi: "sandwich (white bread): bánh mì kẹp (bánh mì trắng)"}
+      - {tom: "Ten: a sandwich on brown bread.", focus: 9, vi: "brown bread: bánh mì đen"}
+      - {emma: "Eleven: a toasted sandwich: a hot sandwich.", focus: 10, vi: "toasted sandwich: bánh mì kẹp nướng"}
+      - {tom: "And twelve: a roll: a small, round piece of bread.", focus: 11, vi: "roll: bánh mì tròn nhỏ"}
+
+  - kind: bullets
+    chapter: "Hội thoại"
+    heading: "A waiter and a customer"
+    heading_vi: "Hội thoại tr. 71 — Tom đọc người phục vụ (W), Emma đọc khách (C)"
+    image: {pdf: course-book, page: 72, clip: [28, 262, 256, 382]}
+    items:
+      - {en: "Yes, please?", vi: "Anh / chị dùng gì ạ?", box: [30, 277, 254, 290]}
+      - {en: "I'd like a ham sandwich on brown bread …", vi: "Cho tôi bánh mì kẹp giăm bông (bánh mì đen) và hai baguette gà.", box: [30, 289, 254, 313]}
+      - {en: "Is that to eat here or take away?", vi: "Ăn ở đây hay mang đi?", box: [30, 312, 254, 325]}
+      - {en: "To eat here.", vi: "Ăn ở đây.", box: [30, 324, 254, 335]}
+      - {en: "Anything else? — Two coffees and a cappuccino.", vi: "Còn gì nữa không? — Hai cà phê và một cappuccino.", box: [30, 335, 254, 359]}
+      - {en: "The food will be a couple of minutes. Have a seat.", vi: "Đồ ăn có sau vài phút. Mời ngồi.", box: [30, 358, 254, 381]}
+    lines:
+      - {tom: "Yes, please?", focus: 0, vi: "Yes, please? = What would you like?"}
+      - {emma: "I'd like a ham sandwich on brown bread, please, and two chicken baguettes.", focus: 1}
+      - {tom: "Is that to eat here, or take away?", focus: 2, vi: "take away: mang đi"}
+      - {emma: "To eat here.", focus: 3}
+      - {tom: "OK. Anything else?", focus: 4}
+      - {emma: "Yes, two coffees, please, and a cappuccino.", focus: 4, vi: "two coffees = two cups of coffee"}
+      - {tom: "OK. The food will be a couple of minutes. Have a seat.", focus: 5, vi: "a couple of minutes: vài phút · have a seat: mời ngồi"}
+
+  - kind: figure
+    chapter: "Glossary và Spotlight"
+    heading: "Glossary · Spotlight: Yes, please? and Yes, please."
+    heading_vi: "tr. 71 — Yes, please? (lên giọng) = Anh dùng gì? · Yes, please. (xuống giọng) = Vâng, cảm ơn"
+    image: {pdf: course-book, page: 72, clip: [262, 257, 487, 395]}
+    items:
+      - {box: [264, 278, 485, 291]}
+      - {box: [264, 290, 485, 303]}
+      - {box: [264, 302, 485, 315]}
+      - {box: [264, 314, 485, 327]}
+      - {box: [264, 326, 485, 338]}
+      - {box: [264, 368, 485, 381]}
+      - {box: [264, 380, 485, 393]}
+    lines:
+      - {emma: "Look at the glossary. I'd like means I would like. It's a polite way to say I want.", focus: 0}
+      - {tom: "Take away: eat in another place, not in the café.", say: "Take away: eat in another place, not in the cafe.", focus: 1, vi: "Người Mỹ nói to go."}
+      - {emma: "Two coffees means two cups of coffee. We also say two teas.", focus: 2}
+      - {tom: "A couple of minutes: two or three minutes.", focus: 3}
+      - {emma: "Have a seat means sit down.", focus: 4}
+      - {tom: "Look at the spotlight. Yes, please, with a question, means: what would you like? I say it at work all the time!", focus: 5, vi: "Yes, please? (lên giọng): hỏi khách muốn gì"}
+      - {emma: "And yes, please, as an answer, is a polite way to say yes. Would you like some water? Yes, please.", focus: 6, vi: "Yes, please. (xuống giọng): vâng, cảm ơn"}
+
+  - kind: blanks
+    chapter: "Bài 1: tìm chỗ hết từ"
+    heading: "Exercise 1 · Find the end of each word"
+    heading_vi: "Answer key tr. 211"
+    items:
+      - {n: 1, q: "You can have a rollbaguettesandwichtoastedsandwich.  →  ___", answer: "roll · baguette · sandwich · toasted sandwich"}
+      - {n: 2, q: "You can have a cappuccinoteaorangejuiceespressoblackcoffee.  →  ___", answer: "cappuccino · tea · orange juice · espresso · black coffee"}
+    lines:
+      - emma: "Exercise 1. Find the end of each word. Pause the video and try."
+        say: "Exercise one. Find the end of each word. Pause the video and try."
+        vi: "Bài 1: tìm chỗ kết thúc mỗi từ."
+      - {tom: "One. Roll, baguette, sandwich, toasted sandwich.", reveal: [1], focus: 0}
+      - {tom: "Two. Cappuccino, tea, orange juice, espresso, black coffee.", reveal: [2], focus: 1}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành cụm từ"
+    heading: "Exercise 2 · Complete the phrases"
+    heading_vi: "Ví dụ: a ham sandwich (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "brown ___", answer: "bread"}
+      - {n: 2, q: "a toasted ___", answer: "sandwich"}
+      - {n: 3, q: "hot ___", answer: "chocolate"}
+      - {n: 4, q: "black ___", answer: "coffee"}
+      - {n: 5, q: "eat here or ___ ___", answer: "take away"}
+      - {n: 6, q: "a ___ of minutes", answer: "couple"}
+      - {n: 7, q: "brown or ___ bread?", answer: "white"}
+      - {n: 8, q: "black or ___ coffee?", answer: "white"}
+      - {n: 9, q: "___ a seat, please.", answer: "Have"}
+    lines:
+      - emma: "Exercise 2. Complete the phrases. Pause the video and try."
+        say: "Exercise two. Complete the phrases. Pause the video and try."
+        vi: "Bài 2: hoàn thành cụm từ."
+      - {tom: "One. Brown bread. Two. A toasted sandwich. Three. Hot chocolate. Four. Black coffee. Five. Eat here or take away.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. A couple of minutes. Seven. Brown or white bread? Eight. Black or white coffee? Nine. Have a seat, please.", reveal: [6, 7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 3: thêm một từ"
+    heading: "Exercise 3 · Add one word to each line of the conversation"
+    heading_vi: "Ví dụ: Please? → Yes, please? (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "C: I like two coffees please.  →  ___", answer: "I'd like two coffees, please."}
+      - {n: 2, q: "W: To drink here or away?  →  ___", answer: "To drink here or take away?"}
+      - {n: 3, q: "C: To drink here. And a toasted ham.  →  ___", answer: "To drink here. And a toasted ham sandwich."}
+      - {n: 4, q: "W: OK. It will be a couple minutes.  →  ___", answer: "OK. It will be a couple of minutes."}
+      - {n: 5, q: "W: Have seat, please.  →  ___", answer: "Have a seat, please."}
+    lines:
+      - emma: "Exercise 3. Add one word to each line of the conversation. The first line is: please? It needs yes: yes, please? Pause the video and try."
+        say: "Exercise three. Add one word to each line of the conversation. The first line is: please? It needs yes: yes, please? Pause the video and try."
+        vi: "Bài 3: thêm một từ vào mỗi dòng."
+      - {tom: "One. I'd like two coffees, please. Two. To drink here or take away? Three. And a toasted ham sandwich.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. A couple of minutes. Five. Have a seat, please.", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: say it in English"
+    heading_vi: "Nghe tiếng Việt, nói tên tiếng Anh — tạm dừng video sau mỗi từ"
+    items:
+      - {n: 1, q: "cà phê đen  →  ___", answer: "black coffee"}
+      - {n: 2, q: "bánh mì kẹp nướng  →  ___", answer: "a toasted sandwich"}
+      - {n: 3, q: "sô-cô-la nóng  →  ___", answer: "hot chocolate"}
+      - {n: 4, q: "nước cam  →  ___", answer: "orange juice"}
+      - {n: 5, q: "bánh mì tròn nhỏ  →  ___", answer: "a roll"}
+      - {n: 6, q: "trà sữa (kiểu Anh)  →  ___", answer: "tea with milk"}
+    lines:
+      - emma: "Exercise 4 is a test. Read the Vietnamese, and say the English. Pause the video after each one."
+        say: "Exercise four is a test. Read the Vietnamese, and say the English. Pause the video after each one."
+        vi: "Bài 4: đọc tiếng Việt, nói tiếng Anh."
+      - {tom: "One. Black coffee. Two. A toasted sandwich. Three. Hot chocolate.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Orange juice. Five. A roll. Six. Tea with milk.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Đồ uống quán Việt"
+    heading: "Vietnamese café drinks in English"
+    heading_vi: "Thêm ngoài sách — gọi món quen thuộc bằng tiếng Anh"
+    items:
+      - {en: "iced coffee with milk", vi: "cà phê sữa đá"}
+      - {en: "black iced coffee", vi: "cà phê đen đá"}
+      - {en: "egg coffee · coconut coffee", vi: "cà phê trứng · cà phê dừa"}
+      - {en: "iced lemon tea", vi: "trà chanh"}
+      - {en: "an avocado smoothie", vi: "sinh tố bơ"}
+      - {en: "sugar cane juice", vi: "nước mía"}
+    lines:
+      - tom: "At my café, the most popular drink is iced coffee with milk. That's cà phê sữa đá, and it's my favourite too."
+        say: "At my cafe, the most popular drink is iced coffee with milk. That's kah feh suh dah, and it's my favourite too."
+        focus: 0
+      - {emma: "Black iced coffee is cà phê đen đá.", say: "Black iced coffee is kah feh den dah.", focus: 1}
+      - {tom: "Egg coffee is from Hanoi, and coconut coffee is very popular with tourists.", say: "Egg coffee is from Ha Noi, and coconut coffee is very popular with tourists.", focus: 2}
+      - {emma: "I tried egg coffee in Hanoi, and I loved it! Iced lemon tea is great on a hot day.", say: "I tried egg coffee in Ha Noi, and I loved it! Iced lemon tea is great on a hot day.", focus: 3}
+      - {tom: "An avocado smoothie.", focus: 4}
+      - {emma: "And sugar cane juice. Very sweet!", focus: 5}
+
+  - kind: bullets
+    chapter: "Cỡ ly và yêu cầu riêng"
+    heading: "Ordering a drink · sizes and requests"
+    heading_vi: "Thêm ngoài sách — câu gọi đồ uống hay dùng"
+    items:
+      - {en: "small · medium · large", vi: "cỡ nhỏ · vừa · lớn"}
+      - {en: "Can I have a large iced coffee, please?", vi: "Cho tôi một cà phê sữa đá cỡ lớn."}
+      - {en: "less sugar · no sugar · no ice · less ice", vi: "ít đường · không đường · không đá · ít đá"}
+      - {en: "take away (UK) = to go (US)", vi: "mang đi"}
+      - {en: "Can I pay by card? · Keep the change.", vi: "Trả bằng thẻ được không? · Khỏi trả lại tiền thừa."}
+    lines:
+      - {emma: "When you order a drink, you often choose the size: small, medium, or large.", focus: 0}
+      - {tom: "Can I have a large iced coffee, please?", focus: 1}
+      - {emma: "You can ask for less sugar, no sugar, no ice, or less ice. Tom, what do customers usually ask for?", focus: 2}
+      - {tom: "Less sugar! Many young people want less sugar now. I drink my coffee with less sugar too.", focus: 2, vi: "less sugar: ít đường"}
+      - {emma: "In British English, we say take away. In American English, people say to go.", focus: 3}
+      - {tom: "And when you pay: can I pay by card? Or, if you're kind: keep the change!", focus: 4}
+
+  - kind: bullets
+    chapter: "Câu hay dùng trong quán"
+    heading: "More useful phrases in a café"
+    heading_vi: "Thêm ngoài sách — hỏi han và nhờ giúp trong quán"
+    items:
+      - {en: "Could I see the menu, please?", vi: "Cho tôi xem thực đơn."}
+      - {en: "What's the Wi-Fi password?", vi: "Mật khẩu wifi là gì?"}
+      - {en: "Excuse me, where's the toilet?", vi: "Xin lỗi, nhà vệ sinh ở đâu?"}
+      - {en: "Excuse me, I ordered a tea, not a coffee.", vi: "Xin lỗi, tôi gọi trà, không phải cà phê."}
+      - {en: "Could we have the bill, please?", vi: "Cho chúng tôi tính tiền."}
+    lines:
+      - emma: "Here are some more useful phrases. Could I see the menu, please?"
+        focus: 0
+      - {tom: "What's the Wi-Fi password? Customers ask me that every evening!", focus: 1}
+      - {emma: "Excuse me, where's the toilet?", focus: 2}
+      - {tom: "If there's a mistake, say: excuse me, I ordered a tea, not a coffee. And then I say: I'm so sorry!", focus: 3}
+      - {emma: "And at the end: could we have the bill, please? In many cafés in Vietnam, you pay at the counter.", say: "And at the end: could we have the bill, please? In many cafes in Vietnam, you pay at the counter.", focus: 4, vi: "pay at the counter: trả tiền ở quầy"}
+
+  - kind: blanks
+    chapter: "Bạn nói gì?"
+    heading: "What do you say?"
+    heading_vi: "Thêm ngoài sách — nghe tình huống, nói câu phù hợp; tạm dừng video sau mỗi tình huống"
+    items:
+      - {n: 1, q: "You want your coffee in a cup to carry to work.  →  ___", answer: "Take away, please."}
+      - {n: 2, q: "You want a coffee, but you don't like sugar.  →  ___", answer: "A coffee with no sugar, please."}
+      - {n: 3, q: "The waiter says: Would you like some water?  →  ___", answer: "Yes, please."}
+      - {n: 4, q: "You want to use the internet.  →  ___", answer: "What's the Wi-Fi password?"}
+      - {n: 5, q: "The waiter brings a coffee, but you ordered a tea.  →  ___", answer: "Excuse me, I ordered a tea."}
+      - {n: 6, q: "You finish and want to pay.  →  ___", answer: "Could I have the bill, please?"}
+    lines:
+      - emma: "What do you say? I describe a situation, and you say the right phrase. Pause the video after each one."
+        vi: "Nghe tình huống, nói câu phù hợp."
+      - {emma: "Number one. You want your coffee in a cup, to carry to work.", focus: 0}
+      - {tom: "Take away, please.", reveal: 1, focus: 0}
+      - {emma: "Number two. You want a coffee, but you don't like sugar.", focus: 1}
+      - {tom: "A coffee with no sugar, please.", reveal: 2, focus: 1}
+      - {emma: "Number three. The waiter says: would you like some water?", focus: 2}
+      - {tom: "Yes, please.", reveal: 3, focus: 2}
+      - {emma: "Number four. You want to use the internet.", focus: 3}
+      - {tom: "What's the Wi-Fi password?", reveal: 4, focus: 3}
+      - {emma: "Number five. The waiter brings a coffee, but you ordered a tea.", focus: 4}
+      - {tom: "Excuse me, I ordered a tea.", reveal: 5, focus: 4}
+      - {emma: "And number six. You finish, and you want to pay.", focus: 5}
+      - {tom: "Could I have the bill, please?", reveal: 6, focus: 5}
+
+  - kind: practice
+    chapter: "Đóng vai: gọi đồ"
+    heading: "Role-play · You are the customer. Tom is the waiter."
+    heading_vi: "Tạm dừng video sau mỗi câu của Tom và trả lời như khách"
+    items:
+      - {q: "Yes, please?", hint: "I'd like an iced coffee with milk, please."}
+      - {q: "Small, medium or large?", hint: "Medium, please. With less sugar."}
+      - {q: "Is that to drink here or take away?", hint: "To drink here, please. / Take away, please."}
+      - {q: "Anything else?", hint: "Yes, a toasted sandwich, please. / No, that's all, thanks."}
+      - {q: "That's sixty thousand dong. Have a seat.", hint: "Here you are. Thank you!"}
+    lines:
+      - emma: "Now a role-play. Tom is the waiter, and you're the customer. Pause the video after each line, and answer."
+        vi: "Đóng vai: Tom là người phục vụ, bạn là khách."
+      - {tom: "Yes, please?", focus: 0, pause: 0.5}
+      - {tom: "Small, medium, or large?", focus: 1, pause: 0.5}
+      - {tom: "Is that to drink here, or take away?", focus: 2, pause: 0.5}
+      - {tom: "Anything else?", focus: 3, pause: 0.5}
+      - {tom: "That's sixty thousand dong. Have a seat, and I'll bring it to you.", focus: 4, pause: 1.0}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · in a café"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "I'd like a ___ and a croissant, please.", answer: "cappuccino"}
+      - {n: 2, q: "Is that to eat here or take ___?", answer: "away"}
+      - {n: 3, q: "Two ___ with milk, please.", answer: "teas"}
+      - {n: 4, q: "Could I have a cheese ___, please?", answer: "sandwich"}
+      - {n: 5, q: "The food will be a ___ of minutes.", answer: "couple"}
+      - {n: 6, q: "Have a ___, please.", answer: "seat"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. I'd like a cappuccino and a croissant, please.", focus: 0, vi: "croissant: bánh sừng bò"}
+      - {emma: "Number two. Is that to eat here or take away?", focus: 1}
+      - {emma: "Number three. Two teas with milk, please.", focus: 2}
+      - {emma: "Number four. Could I have a cheese sandwich, please?", focus: 3}
+      - {emma: "Number five. The food will be a couple of minutes.", focus: 4}
+      - {emma: "Number six. Have a seat, please.", focus: 5}
+      - {tom: "Cappuccino: double p, double c. Away. Teas: T, E, A, S.", say: "Cappuccino: double pee, double see. Away. Teas: tee, ee, eigh, ess.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Sandwich: there's a d in the middle. Couple. And seat.", say: "Sandwich: there's a dee in the middle. Couple. And seat.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: cà phê và trà"
+    heading: "Speaking 1 · Coffee, tea and cafés"
+    heading_vi: "Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you prefer coffee or tea?"
+        a: "Coffee, of course! My dad works for a coffee company. I have an iced coffee with milk every morning."
+        ask: emma
+        by: tom
+        phrases: ["…, of course!", "I have … every morning"]
+      - q: "And you, Emma?"
+        a: "Both. A cappuccino in the morning, and tea with milk in the afternoon. Very English!"
+        ask: tom
+        by: emma
+        phrases: ["Both.", "… in the morning, and…"]
+      - q: "What's difficult about working in a café?"
+        a: "The evenings are busy, and I have to remember every order. On my first day, I dropped a tray of iced coffees!"
+        ask: emma
+        by: tom
+        phrases: ["… are busy", "I have to…", "On my first day…"]
+      - q: "Do you often go to cafés?"
+        a: "Yes, I mark homework in a café near my school on Saturday afternoons. It's quieter than my flat."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I … in a café", "It's quieter than…"]
+    lines:
+      - {emma: "Let's talk about cafés. Do you prefer coffee or tea, Tom?", focus: 0}
+      - {tom: "Coffee, of course! My dad works for a coffee company. I have an iced coffee with milk every morning.", reveal: 0, vi: "Cà phê chứ! Bố làm cho công ty cà phê. Sáng nào cũng một ly cà phê sữa đá."}
+      - {tom: "And you, Emma?", focus: 1}
+      - {emma: "Both. A cappuccino in the morning, and tea with milk in the afternoon. Very English!", reveal: 1, vi: "Cả hai: sáng cappuccino, chiều trà sữa — rất Anh!"}
+      - {emma: "What's difficult about working in a café?", say: "What's difficult about working in a cafe?", focus: 2}
+      - {tom: "The evenings are busy, and I have to remember every order. On my first day, I dropped a tray of iced coffees!", reveal: 2, vi: "Buổi tối đông, phải nhớ hết các món khách gọi. Ngày đầu tiên Tom làm rơi cả khay cà phê sữa đá!"}
+      - {tom: "Do you often go to cafés?", say: "Do you often go to cafes?", focus: 3}
+      - {emma: "Yes, I mark homework in a café near my school on Saturday afternoons. It's quieter than my flat.", say: "Yes, I mark homework in a cafe near my school on Saturday afternoons. It's quieter than my flat.", reveal: 3, vi: "Có: chiều thứ Bảy chấm bài ở quán gần trường — yên tĩnh hơn căn hộ."}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Coffee and tea"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you prefer coffee or tea? Why?", hint: "I prefer … because …"}
+      - {q: "How often do you drink coffee?", hint: "I have … every morning / once a day …"}
+      - {q: "Are cafés popular in your country?", hint: "Yes, very. Young people often meet friends in cafés …"}
+      - {q: "What do you usually order in a café?", hint: "I usually have … with less sugar …"}
+      - {q: "Would you like to work in a café?", hint: "Yes / No, because …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about coffee and tea. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about coffee and tea. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về cà phê và trà."
+      - {emma: "Do you prefer coffee or tea? Why?", focus: 0, pause: 0.5}
+      - {emma: "How often do you drink coffee?", focus: 1, pause: 0.5}
+      - {emma: "Are cafés popular in your country?", say: "Are cafes popular in your country?", focus: 2, pause: 0.5}
+      - {emma: "What do you usually order in a café?", say: "What do you usually order in a cafe?", focus: 3, pause: 0.5}
+      - {emma: "Would you like to work in a café?", say: "Would you like to work in a cafe?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 71, nhìn tranh, nói lại"
+    items:
+      - {en: "white / black coffee · cappuccino · espresso · tea (with milk) · hot chocolate · orange juice", vi: "đồ uống"}
+      - {en: "baguette · sandwich (white / brown bread) · toasted sandwich · roll", vi: "đồ ăn"}
+      - {en: "Yes, please? · I'd like … · to eat here or take away? · Anything else?", vi: "câu gọi món"}
+      - {en: "two coffees · a couple of minutes · Have a seat.", vi: "hai ly cà phê · vài phút · mời ngồi"}
+      - {en: "Next: Unit 28 · In a restaurant", vi: "Tiếp theo: Unit 28 · Ở nhà hàng"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "White or black coffee, cappuccino, espresso, tea with milk, hot chocolate, and orange juice.", focus: 0}
+      - {tom: "A baguette, a sandwich on white or brown bread, a toasted sandwich, and a roll.", focus: 1}
+      - {emma: "Yes, please? I'd like… To eat here or take away? Anything else?", focus: 2}
+      - {tom: "Two coffees, a couple of minutes, and have a seat.", focus: 3}
+      - {emma: "Next time, Unit 28: in a restaurant. See you then!", say: "Next time, Unit twenty-eight: in a restaurant. See you then!", focus: 4}
