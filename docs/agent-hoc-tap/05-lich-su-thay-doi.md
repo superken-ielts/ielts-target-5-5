@@ -24,7 +24,7 @@ thì commit và đưa lên `main`.
 - **Word list Unit 24–28** (184 mục, 157 từ chưa có ở Unit 1–23) thêm vào `work/wordlist.json` (nay 863 mục). Lấy từ hai lần OCR
   của đợt 36, soát khoảng hở như đợt 37: không sót mục nào. Mục có chú thích nghĩa (*can* =container, *pepper* =vegetable /
   =spice…) giữ chú thích.
-- **5 video bài giảng** ({TOTAL38L}): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+- **5 video bài giảng** (48:22): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
   - Unit khó (10–15 phút): 26 Buying food, 28 In a restaurant. Có đóng vai (mua thực phẩm ở chợ; gọi món, Emma là người phục vụ),
     ôn tập (lỗi hay gặp, tự kiểm tra tranh bàn ăn), Part 2 với bài mẫu của Tom và Emma, thảo luận kiểu Part 3. Unit 28 có thêm đặt
     bàn qua điện thoại (như IELTS Listening phần 1).
@@ -34,12 +34,24 @@ thì commit và đưa lên `main`.
     - Unit 27: đồ uống quán Việt, cỡ ly, câu hay dùng ở quán, đóng vai gọi đồ (Tom là phục vụ).
   - Khung đỏ theo tranh đo bằng máy (`blobs.py`: dải mực theo hàng rồi theo cột) — file 09 mục 5.3a.
 
-{TABLE38L}
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| 24 Meat and fish | `U24-meat-fish` | 8:03 | 4 | 1–5 (bài 4 thành Nói 1) |
+| 25 Fruit and vegetables | `U25-fruit-vegetables` | 8:14 | 9 | 1–7 |
+| **26 Buying food** | `U26-buying-food` | 11:35 | 9 | 1–8 |
+| 27 In a café | `U27-cafe` | 8:01 | 3 | 1–4 (bài 4 thành nghe tiếng Việt, nói tiếng Anh) |
+| **28 In a restaurant** | `U28-restaurant` | 12:30 | 10 | 1–9 (bài 3, 7: tự kiểm tra ở phần ôn tập) |
 
-- **5 video nghe – viết** ({TOTAL38D}), sinh từ `work/dictation/units_24_28.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+- **5 video nghe – viết** (50:14), sinh từ `work/dictation/units_24_28.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
   đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`.
 
-{TABLE38D}
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 24 · Meat and fish | `U24-meat-fish-dictation` | 10:24 | 21 · 21 | 27 | 34 |
+| 25 · Fruit and vegetables | `U25-fruit-vegetables-dictation` | 10:05 | 36 · 38 | 18 | 28 |
+| 26 · Buying food | `U26-buying-food-dictation` | 9:48 | 35 · 47 | 18 | 30 |
+| 27 · In a café | `U27-cafe-dictation` | 10:03 | 22 · 26 | 28 | 34 |
+| 28 · In a restaurant | `U28-restaurant-dictation` | 9:55 | 35 · 52 | 17 | 28 |
 
 Thử và sửa trong lúc làm:
 - **Khung hình** (sửa sau khi xem khung hình mọi cảnh có hình bằng `scenepick.py`):

@@ -386,8 +386,8 @@ thì Kokoro nhấn âm sau, nên đã bỏ. Thử một cách đọc mới trư�
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
-(đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Cả sách: 23 video bài giảng, 3:21:43,
-85 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+(đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
+48:22 (đợt 38). Cả sách: 28 video bài giảng, 4:10:04, 120 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -508,7 +508,13 @@ Module Everyday life (đợt 37) — sinh hoạt, mua sắm, tiền, thời ti�
 
 Module Food and drink (đợt 38) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
 
-<!-- bảng 5.7 đợt 38 -->
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| 24 Meat and fish | `U24-meat-fish` | 8:03 | 16 | 4 | 1–5 (bài 4 thành Nói 1) | Bài 4: Do you like …? (7) | Part 1 "Food" (5 câu) | bảng animal → meat, Spotlight pig, tranh cá và hải sản, tranh bài 3; a chicken / some chicken; câu đố con vật hay thịt; món Việt bằng tiếng Anh; tả một món ăn (Tom: phở bò); I don't eat meat; Nghe và viết |
+| 25 Fruit and vegetables | `U25-fruit-vegetables` | 8:14 | 17 | 9 | 1–7 | Rau quả ở Đà Lạt, đi chợ (5) | Part 1 "Fruit" (5 câu) | hai hàng tranh trái cây, bảng vị, bốn hàng tranh rau, raw / frozen / cooked, Spotlight salad; sour ≠ bitter; trái cây Việt Nam; câu đố vị; Nghe và viết |
+| **26 Buying food** | `U26-buying-food` | 11:35 | 21 | 9 | 1–8 | Đi chợ mua thực phẩm (5) | đóng vai ở chợ; Part 2 "a shop or market where you often buy food" (Tom: chợ nhỏ gần căn hộ, Emma: cửa hàng đồ nhập khẩu gần trường); thảo luận (3) | ba hàng tranh thực phẩm, đồ đựng và số lượng, Spotlight tin / can, hai hội thoại, Glossary, Spotlight how much / how many; ôn tập: lỗi hay gặp |
+| 27 In a café | `U27-cafe` | 8:01 | 17 | 3 | 1–4 (bài 4 thành nghe tiếng Việt, nói tiếng Anh) | Cà phê, trà, quán (4) | Part 1 "Coffee and tea" (5 câu) | 12 tranh đồ uống và đồ ăn, hội thoại, Glossary và Spotlight; đồ uống quán Việt; cỡ ly và yêu cầu riêng; câu hay dùng ở quán; câu đố tình huống; đóng vai gọi đồ (Tom là phục vụ); Nghe và viết |
+| **28 In a restaurant** | `U28-restaurant` | 12:30 | 22 | 10 | 1–9 (bài 3, 7: tự kiểm tra ở phần ôn tập) | Bài 6: chọn món (5) | đóng vai gọi món (Emma là phục vụ); Part 2 "a restaurant that you enjoyed going to" (Tom: lẩu bò ở Đà Lạt dịp Tết, Emma: hải sản ở Vũng Tàu); thảo luận (3) | tranh bàn ăn 12 đồ vật, cách nấu và thang steak, thực đơn (ba cảnh), hai hội thoại, Glossary, Spotlight another / some more; đặt bàn qua điện thoại; ôn tập: tự kiểm tra bàn ăn, lỗi hay gặp |
 
 Module Food and drink (đợt 38) — món ăn, đi chợ, quán cà phê, nhà hàng:
 - **Tom:**
@@ -626,7 +632,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**23 video, 3:49:36** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**28 video, 4:39:50** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -653,6 +659,11 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 21 · The weather | `U21-weather-dictation` | 9:14 | 26 · 34 | 20 | 28 |
 | 22 · Illness | `U22-illness-dictation` | 9:44 | 25 · 31 | 26 | 32 |
 | 23 · At the chemist's | `U23-chemists-dictation` | 9:22 | 24 · 16 | 20 | 30 |
+| 24 · Meat and fish | `U24-meat-fish-dictation` | 10:24 | 21 · 21 | 27 | 34 |
+| 25 · Fruit and vegetables | `U25-fruit-vegetables-dictation` | 10:05 | 36 · 38 | 18 | 28 |
+| 26 · Buying food | `U26-buying-food-dictation` | 9:48 | 35 · 47 | 18 | 30 |
+| 27 · In a café | `U27-cafe-dictation` | 10:03 | 22 · 26 | 28 | 34 |
+| 28 · In a restaurant | `U28-restaurant-dictation` | 9:55 | 35 · 52 | 17 | 28 |
 
 ## 6. Việc tiếp theo
 

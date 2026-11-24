@@ -136,7 +136,7 @@ thêm theo chủ đề và câu giao tiếp (file 09 mục 5.9). Sách nay có 3
 sách, hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word list thêm 246 mục. Sách nay có 46 video (file 09 mục 5.7).
 
 **Đợt 38 (24/11/2026):** Oxford Word Skills Basic module **Food and drink** (Unit 24–28): mỗi unit một video bài giảng
-({TOTAL38L} cả 5 video; unit khó 26, 28 có đóng vai, ôn tập và Part 2) và một video nghe – viết ({TOTAL38D}); đủ mọi bài tập
+(48:22 cả 5 video; unit khó 26, 28 có đóng vai, ôn tập và Part 2) và một video nghe – viết (50:14); đủ mọi bài tập
 trong sách, hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word list thêm 184 mục. Sách nay có 56 video (file 09
 mục 5.7).
 
