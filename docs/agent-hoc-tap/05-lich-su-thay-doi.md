@@ -84,7 +84,16 @@ Thử và sửa trong lúc làm:
 
 ### Kiểm thử
 
-{TESTS38}
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 56 video (28 bài giảng, 28 nghe – viết) |
+| `cd agents && python -m pytest -q` | 149 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 56 video, Unit 1–28 mỗi unit hai nút (bài giảng 7–10 phút, unit khó 26, 28 từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (10 kịch bản) | Hợp lệ, không còn ⚠ |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U24…U28 --level all` | Cả 5 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (10 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,35–2,48 giây (cuối cảnh tự trả lời); nghe – viết: chỗ lặng duy nhất trên 1,2 giây là 2,0–2,1 giây ở cuối video |
+| Xem trước khung hình (bộ đọc im lặng, `scenepick.py`) và khung hình bản dựng | Khung đỏ đúng tranh, đúng dòng; không mất nhãn hay tiêu đề; chữ trên thẻ nghe – viết không bị cắt |
 
 ### Còn treo
 
