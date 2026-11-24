@@ -656,6 +656,7 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     tới 15 phút để ôn tập và luyện nói chung (có bài nói mẫu Part 2 — cảnh `letter`). Hình trong sách (cảnh có `image`):
     module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có. Video nghe – viết (đợt 36) có test riêng.
     Đợt 37: module Everyday life (Unit 17–23), unit khó 17, 19, 22; đợt 38: Food and drink (Unit 24–28), unit khó 26, 28;
+    đợt 39: Getting around (Unit 29–33), unit khó 30, 32;
     câu cuối cảnh `practice` nghỉ tối đa 1 giây để khoảng lặng (pause + gap + scene_gap) dưới 3 giây — người học: "video ko
     nên có pause quá 3 giây"."""
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
@@ -678,7 +679,7 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
         assert any(s.image for s in lesson.scenes), lesson.id                                # hình trong sách
         if lesson.id[:3] >= "U17":                                                           # video từ đợt 37
             assert all((ln.pause or 0) + lesson.gap + lesson.scene_gap < 3.0 for s in lesson.scenes for ln in s.lines), lesson.id
-    assert hard == ["U10", "U13", "U14", "U16", "U17", "U19", "U22", "U26", "U28"]
+    assert hard == ["U10", "U13", "U14", "U16", "U17", "U19", "U22", "U26", "U28", "U30", "U32"]
 
 
 @pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")

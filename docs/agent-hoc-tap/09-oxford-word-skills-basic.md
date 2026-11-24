@@ -15,13 +15,16 @@ mục 5.7, nghe – viết mục 5.9); không sửa video cũ.
 Đợt 38, người học: "tạo các video của phần tiếp theo sách oxford xong rồi commit push main luôn" — module Food and drink
 (Unit 24–28), mỗi unit hai video như đợt 37.
 
+Đợt 39, người học: "tiếp tục module tiếp theo", rồi "xong rồi commit push lên main" — module Getting around (Unit 29–33), mỗi
+unit hai video như đợt 37–38.
+
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, hồ sơ lộ trình | `books/book_oxford_word_skills_basic/`: `Oxford_Word_Skills_Bas.pdf` (bản quét, 254 trang), `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (122 đoạn PDF, 83 MB) |
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–28 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–33 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -179,7 +182,7 @@ lại ra y hệt).
 - **Unit khó** (đợt 29): video dài tới khoảng 15 phút. Sau phần sách thêm **ôn tập** và **luyện nói chung** theo chủ đề,
   vẫn trong cùng một video (mục 5.2, hàng 9–10). Unit khó là unit nhiều từ, từ trừu tượng, nhiều cặp dễ nhầm, hay chủ đề
   hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings;
-  Everyday life có 3 (17, 19, 22 — đợt 37); Food and drink có 2 (26, 28 — đợt 38).
+  Everyday life có 3 (17, 19, 22 — đợt 37); Food and drink có 2 (26, 28 — đợt 38); Getting around có 2 (30, 32 — đợt 39).
   Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
 - **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
   khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Mọi unit đều có ít nhất một cảnh có hình (test kiểm): module People
@@ -256,6 +259,12 @@ Cách khai:
   dải là các đoạn theo x cách nhau ít nhất 4 điểm trắng. Mỗi đoạn là một tranh hay một nhãn; `box` lấy mép đo được, nới 2–4
   điểm. Dải thấp khoảng 10 điểm ngay dưới hàng tranh là dòng nhãn, không phải khoảng trống giữa hai hàng: `clip` phải gồm cả dải
   đó (mục 5.6).
+- Đáp án hiện trên hình (đợt 39), dùng cho bài tự kiểm tra nhìn bản đồ hay tranh (Unit 29 bài 5, Unit 32 bài 3): mỗi câu hỏi
+  hai mục `figure` cùng `box`. Mục thứ nhất không có `label`, dùng lúc Emma hỏi; mục thứ hai có `label` là đáp án (nhãn đỏ trên
+  khung), dùng lúc Tom trả lời.
+- `blanks` + `image` chỉ hợp với hình cao, hẹp: bản đồ nhỏ bài 3 Unit 31, danh sách a–j bài 1 Unit 33. Hình rộng như bản đồ
+  tuyến xe buýt Unit 29 chỉ chiếm khoảng 40 % bề ngang khung hình, tên trạm cao khoảng 10 điểm ảnh ở 1080p, khó đọc; khi đó dùng
+  cảnh `figure` riêng (mục 5.6).
 - `box` không dùng với `grid` > 1. Hình chỉ dùng trong `match`, `figure`, `bullets`, `blanks` câu điền từ; khai sai thì
   `check` báo lỗi.
 - Bảng đã ghi sẵn chữ thì bỏ `label`, để khung đỏ tự nói. Tranh không có chữ thì ghi `label` ngắn.
@@ -310,6 +319,12 @@ Cách khai:
 | phở bò, xôi gà, cơm tấm, bún chả | `fuh baw`, `Soy gah`, `Gum tum`, `Boon cha` | Món Việt (đợt 38): chữ có dấu bị đọc thành từng chữ cái |
 | Vũng Tàu (viết Vung Tau), Ho Chi Minh City | `Voong Tau`, `Ho Chee Min City` | "Vung" đọc /vʌŋ/; Chi đọc /kaɪ/ (file 08). Bản nháp đợt 38 viết `Voong Tow` thì "Tow" thành /toʊ/ — đã sửa trước khi dựng |
 | lychee | `lie-chee` | Kokoro đọc kiểu Mỹ /ˈliːtʃi/; sách dùng tiếng Anh – Anh |
+| Nha Trang | `Nah Trang` | Đợt 39: "Nha" bị đọc thành từng chữ cái; `Nya` đọc /naɪə/ |
+| Trại Mát, Phan Thiết, Mũi Né, Suối Tiên, Bến Thành | `Chai Mat`, `Fan Tee-et`, `Moo-ee Neh`, `Soo-ee Tee-en`, `Ben Tahn` | Địa danh Việt (đợt 39; `Ben Tahn` như Unit 19) |
+| lối ra, giảm giá | `Loy rah`, `yahm yah` | Chữ Việt trên biển báo (Unit 33) |
+| Cheltenham | `Cheltnum` | Kokoro đọc "Chel-ten-ham"; tiếng Anh – Anh đọc /ˈtʃeltnəm/ |
+| số tuyến xe 16 (cuối câu, đứng riêng), 109 | `six-teen`, `one oh nine` | Như -teen ở trên; số tuyến đọc từng chữ số |
+| km/h, mph (khi nói về chữ viết tắt) | `kay em aitch`, `em pee aitch` | M4, A46, M25 thì Kokoro đọc đúng, không cần `say` |
 
 Từ thường đúng, không cần `say`: Anki, Mandarin, Cantonese, Australasia, Portuguese, Egypt, comfortable, island,
 Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `tomahto`). Đợt 38 soát cả 184 mục Word list Unit 24–28
@@ -382,6 +397,21 @@ thì Kokoro nhấn âm sau, nên đã bỏ. Thử một cách đọc mới trư�
   (`trunc_check.py` báo), mà người học cũng không viết dấu đó. Đã bỏ dấu ba chấm ở `answer`.
 - **Unit một trang ngắn** (đợt 38): Unit 24, 27 (và Unit 25) thêm cảnh ngoài sách có ích cho IELTS: tả một món ăn, câu đố con vật
   hay thịt, trái cây Việt Nam, câu đố vị, đồ uống quán Việt, câu hay dùng ở quán, câu đố tình huống.
+- **Hình rộng cạnh bài tập quá nhỏ** (đợt 39, Unit 29 bài 2 và bài 5): bản đồ tuyến xe buýt đặt cạnh câu hỏi (`blanks` + `image`)
+  chỉ chiếm khoảng 40 % bề ngang khung hình, tên trạm khó đọc. Bài 2 bỏ hình, ghi đủ câu hỏi; bài 5 thành cảnh `figure` với đáp án
+  hiện trên hình (mục 5.3a).
+- **Glossary cao, hẹp** (đợt 39, Unit 30 tr. 81): Glossary và Spotlight chung một cảnh thì chữ quá nhỏ — tách hai cảnh, như Unit 28.
+- **Tranh lấn xuống bài tập** (đợt 39, Unit 32 tr. 84): `blobs.py` gộp tranh và danh sách tên thành một dải (y 91–389), nên
+  đọc nhầm mép dưới của tranh; `clip` lấy thêm bài 1, tranh bị thu nhỏ. Đo lại riêng dải danh sách tên (y 354–389), rồi tách tranh
+  thành nửa trên, nửa dưới; cảnh tự kiểm tra cắt bỏ danh sách tên.
+- **Video ngắn hơn mức tối thiểu** (đợt 39): ước lượng đầu Unit 31 6:44, Unit 33 6:34; unit khó Unit 30 10:35, Unit 32 10:15 (sát
+  10 phút). Thêm cảnh ngoài sách có ích cho IELTS: câu khi bị lạc, chỉ đường ở thành phố Việt Nam, câu đố tình huống (Unit 31);
+  câu đố "Where would you see it?", thông báo thư viện và câu True / False (Unit 33); thông báo ở nhà ga (Unit 30); How far? /
+  How long? (Unit 32).
+- **`say` tự đặt đọc sai** (đợt 39): `Nya Trang` cho /naɪə/; thử bằng bộ tách âm thì `Nah Trang` gần nhất (mục 5.5).
+- **Chi tiết nhân vật mâu thuẫn** (đợt 39, bản nháp Unit 31): "căn hộ của Tom ở trong hẻm" trái với Unit 29 (trạm xe buýt ngay
+  trước hiệu thuốc dưới căn hộ) — đổi thành "nhiều bạn của Tom sống trong hẻm". Đầu kịch bản Unit 29–31 ghi vài chi tiết không có
+  trong lời thoại — sửa đầu kịch bản cho khớp. Soát đầu kịch bản với lời thoại trước khi ghi mục 5.7.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
@@ -537,6 +567,32 @@ Module Food and drink (đợt 38) — món ăn, đi chợ, quán cà phê, nhà 
     cà phê gần trường (yên hơn căn hộ);
   - hè năm ngoái đi Vũng Tàu với ba giáo viên cùng trường, ăn ở một quán hải sản cạnh biển — gợi nhớ quê.
 
+Module Getting around (đợt 39) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
+
+<!-- bảng 5.7 đợt 39 -->
+
+Module Getting around (đợt 39) — xe buýt, tàu hỏa, chỉ đường, giao thông, biển báo:
+- **Tom:**
+  - trạm xe buýt ngay trước hiệu thuốc dưới căn hộ, tuyến 19 và 33, khoảng 15 phút một chuyến (xem giờ trên ứng dụng); về Đà Lạt
+    thường đi xe khách đêm, ngủ suốt đường; trước Tết luôn đặt vé xe trước;
+  - Đà Lạt không có tàu đi TP. HCM, chỉ có ga cổ và tàu du lịch đi Trại Mát; năm 10 tuổi đi tàu đó với ông (ghế gỗ, khoảng 30
+    phút, ông mua cho một túi dâu tây); hè năm ngoái đi tàu ra Nha Trang với hai bạn cùng phòng (vé ngồi khoảng 300.000 đồng, đi
+    thẳng khoảng tám tiếng);
+  - từ căn hộ ra chợ: ra khỏi tòa nhà rẽ trái, rồi rẽ phải ở ngã rẽ đầu tiên, chợ sau trường đại học; ít hỏi đường, dùng bản đồ
+    trên điện thoại; ở Đà Lạt khách du lịch hay hỏi Tom đường ra chợ; nhiều bạn sống trong hẻm;
+  - thỉnh thoảng đi xe máy, ghét đi dưới mưa to; vòng xoay lớn gần trường đại học hay kẹt xe (5–7 giờ tối, khi mưa) — Tom đi sớm;
+  - cửa bếp ở quán cà phê có biển Staff only; hồi nhỏ giẫm lên cỏ trong công viên ở Đà Lạt và bị nhắc "keep off the grass".
+- **Emma:**
+  - nhà bố mẹ ở Anh có trạm xe buýt cuối đường, đi vào trung tâm thị trấn bốn trạm, 5–10 phút; ở TP. HCM đi xe ôm công nghệ;
+  - luôn đặt vé tàu trước vì được giảm giá; tháng Tư năm nay đi tàu một mình ra Phan Thiết (đặt qua ứng dụng, khoảng bốn tiếng),
+    ngồi cạnh một gia đình Việt, tập nói tiếng Việt với bọn trẻ, đi qua nhiều trang trại thanh long; thích tuyến metro mới (nhanh,
+    sạch);
+  - quán cà phê gần trường ở góc đường, đối diện ngân hàng; luôn xem bản đồ trên điện thoại, thấy hẻm nhỏ ở TP. HCM dễ lẫn;
+  - không đi xe máy, hơi sợ giao thông nên luôn qua đường ở vạch kẻ; đường trước trường đông vào giờ đưa đón học sinh và giờ cao
+    điểm, giận xe máy chạy trên vỉa hè; cho rằng thành phố cần thêm xe buýt, metro;
+  - biển tiếng Việt học đầu tiên: "lối ra", "giảm giá"; ngân hàng, bưu điện có biển xếp hàng; trường có biển nhắc tắt điện thoại
+    trong lớp.
+
 ### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
 | Unit | Trang | Có thể khó (tới 15 phút) | Gợi ý phần nói | Hình trong sách (đã xem trang) |
@@ -561,6 +617,12 @@ restaurant (72–74). Chưa xem trang; unit ba trang (26, 28) có thể là unit
 - 29 Buses (tr. 78–79), 30 Trains (80–81), 31 Directions (82–83), 32 Roads and traffic (84–85), 33 Signs and notices (86);
 - Answer key tr. 211 đã có đáp án Unit 29–30;
 - chưa xem trang; chủ đề đi lại hay gặp ở IELTS General Training (hỏi đường, mua vé, biển báo).
+
+Đã làm ở đợt 39 (bảng mục 5.7): unit khó là 30 Trains, 32 Roads and traffic (hai trang, hai phần, nhiều từ, chủ đề IELTS); unit
+một trang 33 và unit 31 thêm cảnh ngoài sách. Module tiếp theo: **Places** (Unit 34–41, Review tr. 105–108):
+- 34 My country (tr. 90), 35 My town (91–93), 36 The countryside (94–95), 37 Shops (96–97), 38 My home (98–99), 39 The kitchen
+  (100–101), 40 Bedroom and bathroom (102–103), 41 The living room (104);
+- chưa xem trang; unit ba trang (35) có thể là unit khó; chủ đề nơi ở, quê hương, nhà cửa hay gặp ở IELTS Part 1–2.
 
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
@@ -600,13 +662,17 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 - **Word list của sách** (tr. 237–254, tức PDF 236–253; hai cột, mỗi từ kèm số unit):
   - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai lề
     8 điểm thì đọc "11" thành "1l". Lấy hợp của hai lần rồi soát tay theo ảnh trang.
-  - Kết quả ở `work/wordlist.json`: 863 mục của Unit 1–28 (776 từ khác nhau); `level` để trống vì sách không chia cấp độ.
+  - Kết quả ở `work/wordlist.json`: 990 mục của Unit 1–33 (868 từ khác nhau); `level` để trống vì sách không chia cấp độ.
   - Đợt 37 thêm 246 mục Unit 17–23 từ cùng hai lần OCR. Soát khoảng hở giữa các dòng OCR (dòng bị bỏ) rồi xem ảnh: sót *get dressed*
     (17); bộ tách bỏ qua dòng *red* (18). Ba mục in số unit của bản thảo cũ (mục 3.3) xếp theo trang thật: *like* vào Unit 21, *have
     got* và *what's the matter?* vào Unit 22; câu chú thích ở `make_wordlist.py` và đầu kịch bản nghe – viết.
   - Đợt 38 thêm 184 mục Unit 24–28 (157 từ chưa có ở Unit 1–23), soát như đợt 37: không sót mục nào. Mục có chú thích nghĩa
     (*can* =container, *matches* =to start a fire, *pepper* =vegetable ở Unit 25 và =spice ở Unit 28, *well done* =cooked for a
     long time…) giữ chú thích ở `def`. `make_wordlist.py` thêm loại từ `adv` (*sure*).
+  - Đợt 39 thêm 127 mục Unit 29–33 (92 từ chưa có ở Unit 1–28). Soát khoảng hở như đợt 37: không sót mục nào. Sách in số của
+    bản thảo cũ cho năm mục, xếp theo trang thật: *accident* 29 và *kilometres* 31 vào Unit 32 (tr. 85); *order* (out of order),
+    *queue here*, *ring* (of a bell) 29 vào Unit 33 (tr. 86). *long* (a metre long) 29 không có trên trang nào nên để Unit 29 như
+    sách in. `make_wordlist.py` thêm loại từ `prep` (*outside*, *opposite*).
   - Soát đủ từ: `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all` phải ra
     "chưa hiện: 0" (test kiểm mọi unit có video).
 - **Sinh kịch bản:** dữ liệu từng unit (từ, nghĩa, câu ví dụ, mục Word list, cách đọc `s` / `se`) ở `work/dictation/units_*.py`.
@@ -667,7 +733,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 29 trở đi theo mục 5 (checklist P2-59), module Getting around (cuối mục 5.8). Mỗi unit hai video: bài giảng
-   (mục 5) và nghe – viết (mục 5.9).
+1. Video Unit 34 trở đi theo mục 5 (checklist P2-59), module Places (cuối mục 5.8). Mỗi unit hai video: bài giảng (mục 5) và
+   nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

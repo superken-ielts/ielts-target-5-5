@@ -5,6 +5,84 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 39 — 24/11/2026: Oxford Word Skills Basic — module Getting around (Unit 29–33), 10 video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 38 (`3470ce2`, đã lên `main`).
+
+### Yêu cầu
+
+Người học: "tiếp tục module tiếp theo", rồi "xong rồi commit push lên main". Module tiếp theo là Getting around (Unit 29–33,
+tr. 78–86). Như đợt 37–38, mỗi unit có hai video: bài giảng (file 09 mục 5) và nghe – viết (mục 5.9).
+
+### Đã làm
+
+- **Rà trang sách và Answer key** (tr. 78–86, Answer key tr. 211–212): ghi đề và đáp án từng bài. Bài có nhiều đáp án (Unit 30
+  bài 2 câu 5, 6; Unit 33 bài 2) đọc đủ các đáp án.
+- **Word list Unit 29–33** (127 mục, 92 từ chưa có ở Unit 1–28) thêm vào `work/wordlist.json` (nay 990 mục). Lấy từ hai lần
+  OCR của đợt 36, soát khoảng hở như đợt 37: không sót mục nào.
+  - Sách in số của bản thảo cũ cho năm mục, xếp theo trang thật: *accident* (29) và *kilometres* (31) vào Unit 32; *out of
+    order*, *queue here*, *ring* (29) vào Unit 33.
+  - *long* (a metre long, 29) không có trên trang nào nên để Unit 29 như sách in.
+- **5 video bài giảng** ({TOTAL39L}): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+  - Unit khó (10–15 phút): 30 Trains, 32 Roads and traffic. Có ôn tập (lỗi hay gặp, tự kiểm tra tranh), Part 2 với bài mẫu của
+    Tom và Emma, thảo luận kiểu Part 3. Unit 30 có thêm đóng vai mua vé, đường sắt Việt Nam và thông báo ở nhà ga; Unit 32 có
+    thêm giao thông ở Việt Nam và How far? / How long?
+  - Unit thường thêm cảnh ngoài sách có ích cho IELTS:
+    - Unit 29: đi lại ở Việt Nam, nghe và viết thông tin xe buýt;
+    - Unit 31: giới từ chỉ vị trí cho bài bản đồ IELTS Listening, câu khi bị lạc, chỉ đường ở thành phố Việt Nam, câu đố tình
+      huống, đóng vai chỉ đường;
+    - Unit 33: thêm biển báo, biển tiếng Việt → tiếng Anh, "Where would you see it?", thông báo thư viện với câu True / False
+      kiểu General Training Reading.
+  - Bài tự kiểm tra nhìn hình (Unit 29 bài 5, Unit 32 bài 3): khung đỏ ở chỗ được hỏi, đáp án hiện thành nhãn trên hình khi
+    Tom trả lời — file 09 mục 5.3a.
+
+{TABLE39L}
+
+- **5 video nghe – viết** ({TOTAL39D}), sinh từ `work/dictation/units_29_33.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+  đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`.
+
+{TABLE39D}
+
+Thử và sửa trong lúc làm:
+- **Khung hình:**
+  - bản đồ xe buýt cạnh câu hỏi (Unit 29 bài 2, 5) quá nhỏ: bài 2 bỏ hình, bài 5 thành cảnh `figure`;
+  - Glossary tr. 81 (Unit 30) quá nhỏ: tách Glossary và Spotlight;
+  - tranh khu phố (Unit 32) lấn xuống bài 1 vì mép dưới đo nhầm: đo lại dải danh sách tên, tách tranh làm hai nửa.
+- **Video ngắn:** ước lượng đầu Unit 31 6:44, Unit 33 6:34, unit khó Unit 30 10:35, Unit 32 10:15 — thêm cảnh ngoài sách (liệt kê
+  ở trên).
+- **Cách đọc:**
+  - "Nha Trang" bị đọc thành từng chữ cái, `Nya Trang` thành /naɪə/: dùng `Nah Trang`;
+  - "Cheltenham" sửa thành `Cheltnum`;
+  - thêm `say` cho địa danh Việt và chữ trên biển báo (file 09 mục 5.5);
+  - lệnh `phonemes` bắt "use" (động từ) và "live": sửa bằng `yooz`, `liv`.
+- **Nhân vật:** bản nháp Unit 31 cho căn hộ của Tom nằm trong hẻm, trái với Unit 29 (trạm xe buýt ngay trước hiệu thuốc dưới căn
+  hộ) — đổi thành "nhiều bạn của Tom sống trong hẻm". Đầu kịch bản Unit 29–31 có vài chi tiết không có trong lời thoại — đã sửa
+  cho khớp.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U29-buses.yaml` … `U33-signs-notices.yaml` (+ `.mp4`) | 5 video bài giảng |
+| `books/book_oxford_word_skills_basic/lessons/U29-buses-dictation.yaml` … `U33-signs-notices-dictation.yaml` (+ `.mp4`), `lessons.json` | 5 video nghe – viết |
+| `books/book_oxford_word_skills_basic/work/dictation/units_29_33.py` | Dữ liệu nghe – viết Unit 29–33 |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 29–33 (127 mục) |
+| `agents/tests/test_lesson_video.py` | Unit khó U30, U32 |
+| `tests/web/book.e2e.mjs` | Thẻ sách 66 video; Unit 1–33 mỗi unit hai nút; unit khó 30, 32 |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 5.1, 5.3a, 5.5, 5.6, 5.7, 5.8, 5.9, 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-74 (xong); đợt 39 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 39 |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+{TESTS39}
+
+### Còn treo
+
+- Unit 34 trở đi chưa có video (P2-59): module Places ở cuối file 09 mục 5.8.
+- Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
+
 ## Đợt 38 — 24/11/2026: Oxford Word Skills Basic — module Food and drink (Unit 24–28), 10 video
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 37 (`e975d58`, đã lên `main`).

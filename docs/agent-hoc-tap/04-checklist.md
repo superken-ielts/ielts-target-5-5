@@ -446,6 +446,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     mục 5.8.
   - *Đợt 38:* xong module Food and drink, Unit 24–28 — 10 video (P2-73). Còn Unit 29 trở đi; module Getting around ở cuối file 09
     mục 5.8.
+  - *Đợt 39:* xong module Getting around, Unit 29–33 — 10 video (P2-74). Còn Unit 34 trở đi; module Places ở cuối file 09 mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -525,6 +526,13 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Word list Unit 24–28 (184 mục) thêm vào `work/wordlist.json` (nay 863 mục); video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Cách đọc: soát cả 184 mục Word list bằng bộ tách âm của Kokoro (đều đúng); sửa `say` Vũng Tàu (`Voong Tau`), bỏ `why-fy` (Wi-Fi vốn đọc đúng) và dựng lại Unit 27.
   - Test: unit khó U26, U28; hồi quy nghe – viết cả 28 unit; e2e: thẻ sách 56 video, Unit 1–28 mỗi unit hai nút.
+- [x] **P2-74** **Oxford Word Skills Basic module Getting around: 5 video bài giảng và 5 video nghe – viết, Unit 29–33** (đợt 39, bài giảng {TOTAL39L}, nghe – viết {TOTAL39D}), theo yêu cầu người học: "tiếp tục module tiếp theo", rồi "xong rồi commit push lên main". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+  - Bài giảng theo khuôn file 09 mục 5: đủ mọi bài tập trong sách (tr. 78–86, Answer key tr. 211–212), hình trong sách ở mọi video (bản đồ tuyến xe buýt, bảng hỏi – đáp, tranh ga tàu, bảng giờ tàu, sơ đồ chỉ đường, tranh khu phố, bảng biển báo — khung theo tranh hoặc theo dòng), không đếm ngược. Unit khó 30 Trains, 32 Roads and traffic (10–15 phút): ôn tập (lỗi hay gặp, tự kiểm tra tranh), Part 2 (a journey that you remember, a place in your city where there is often a lot of traffic), thảo luận; Unit 30 có đóng vai mua vé và thông báo ở nhà ga.
+  - Thêm ngoài sách cho unit thường: đi lại ở Việt Nam, câu khi bị lạc, chỉ đường ở thành phố Việt Nam, giới từ chỉ vị trí cho bài bản đồ IELTS Listening, biển báo tiếng Việt → tiếng Anh, thông báo và câu True / False kiểu IELTS General Training Reading, đóng vai chỉ đường.
+  - Bài tự kiểm tra nhìn bản đồ / tranh: đáp án hiện thành nhãn trên hình khi Tom trả lời (file 09 mục 5.3a).
+  - Không khoảng lặng từ 3 giây: {MAXSIL}.
+  - Word list Unit 29–33 (127 mục) thêm vào `work/wordlist.json` (nay 990 mục); năm mục in số bản thảo cũ xếp theo trang thật; video nghe – viết đủ mọi mục ("chưa hiện: 0").
+  - Test: unit khó U30, U32; hồi quy nghe – viết cả 33 unit; e2e: thẻ sách 66 video, Unit 1–33 mỗi unit hai nút.
 
 ### Cổng G2
 
