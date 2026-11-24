@@ -233,7 +233,7 @@ scenes:
     lines:
       - emma: "Here are some more useful phrases. Could I see the menu, please?"
         focus: 0
-      - {tom: "What's the Wi-Fi password? Customers ask me that every evening!", say: "What's the why-fy password? Customers ask me that every evening!", focus: 1}
+      - {tom: "What's the Wi-Fi password? Customers ask me that every evening!", focus: 1}
       - {emma: "Excuse me, where's the toilet?", focus: 2}
       - {tom: "If there's a mistake, say: excuse me, I ordered a tea, not a coffee. And then I say: I'm so sorry!", focus: 3}
       - {emma: "And at the end: could we have the bill, please? In many cafés in Vietnam, you pay at the counter.", say: "And at the end: could we have the bill, please? In many cafes in Vietnam, you pay at the counter.", focus: 4, vi: "pay at the counter: trả tiền ở quầy"}
@@ -259,7 +259,7 @@ scenes:
       - {emma: "Number three. The waiter says: would you like some water?", focus: 2}
       - {tom: "Yes, please.", reveal: 3, focus: 2}
       - {emma: "Number four. You want to use the internet.", focus: 3}
-      - {tom: "What's the Wi-Fi password?", say: "What's the why-fy password?", reveal: 4, focus: 3}
+      - {tom: "What's the Wi-Fi password?", reveal: 4, focus: 3}
       - {emma: "Number five. The waiter brings a coffee, but you ordered a tea.", focus: 4}
       - {tom: "Excuse me, I ordered a tea.", reveal: 5, focus: 4}
       - {emma: "And number six. You finish, and you want to pay.", focus: 5}

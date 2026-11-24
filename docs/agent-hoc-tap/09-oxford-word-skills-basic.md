@@ -12,13 +12,16 @@ và câu giao tiếp theo chủ đề (mục 5.9).
 Đợt 37, người học: "tiếp tục làm video bài học unit 17-23 của oxford" — module Everyday life, mỗi unit hai video (bài giảng
 mục 5.7, nghe – viết mục 5.9); không sửa video cũ.
 
+Đợt 38, người học: "tạo các video của phần tiếp theo sách oxford xong rồi commit push main luôn" — module Food and drink
+(Unit 24–28), mỗi unit hai video như đợt 37.
+
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, hồ sơ lộ trình | `books/book_oxford_word_skills_basic/`: `Oxford_Word_Skills_Bas.pdf` (bản quét, 254 trang), `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (122 đoạn PDF, 83 MB) |
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–23 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–28 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -175,7 +178,8 @@ lại ra y hệt).
   - Nói 2 (`practice` không có `wait`): người học tự tạm dừng và trả lời.
 - **Unit khó** (đợt 29): video dài tới khoảng 15 phút. Sau phần sách thêm **ôn tập** và **luyện nói chung** theo chủ đề,
   vẫn trong cùng một video (mục 5.2, hàng 9–10). Unit khó là unit nhiều từ, từ trừu tượng, nhiều cặp dễ nhầm, hay chủ đề
-  hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings.
+  hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings;
+  Everyday life có 3 (17, 19, 22 — đợt 37); Food and drink có 2 (26, 28 — đợt 38).
   Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
 - **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
   khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Mọi unit đều có ít nhất một cảnh có hình (test kiểm): module People
@@ -247,6 +251,11 @@ Cách khai:
 - Khung theo dòng chữ (đoạn văn, hội thoại, Glossary — đợt 37): đo bằng máy thay vì đọc lưới. Dựng vùng bằng `pymupdf` ở 300
   dpi, thang xám; đếm điểm ảnh tối (< 110) trên mỗi hàng; mỗi dải hàng liền nhau là một dòng chữ, tâm dòng = giữa hai mép (đổi ra
   điểm PDF: y0 + hàng × 72 / 300). Khung một dòng lấy tâm ± 6 điểm; dòng sách cách nhau khoảng 12 điểm.
+- Khung theo tranh (hàng tranh, đồ vật trên bàn ăn, đồ đựng — đợt 38): đo theo cả hai chiều. `blobs.py` trong scratchpad dựng
+  vùng ở 200 dpi, thang xám, điểm ảnh "có mực" khi xám < 235. Nó in các dải ngang cách nhau ít nhất 3 điểm trắng, rồi trong mỗi
+  dải là các đoạn theo x cách nhau ít nhất 4 điểm trắng. Mỗi đoạn là một tranh hay một nhãn; `box` lấy mép đo được, nới 2–4
+  điểm. Dải thấp khoảng 10 điểm ngay dưới hàng tranh là dòng nhãn, không phải khoảng trống giữa hai hàng: `clip` phải gồm cả dải
+  đó (mục 5.6).
 - `box` không dùng với `grid` > 1. Hình chỉ dùng trong `match`, `figure`, `bullets`, `blanks` câu điền từ; khai sai thì
   `check` báo lỗi.
 - Bảng đã ghi sẵn chữ thì bỏ `label`, để khung đỏ tự nói. Tranh không có chữ thì ghi `label` ngắn.
@@ -266,7 +275,9 @@ Cách khai:
    ```
 3. Soát cách đọc bằng `python -m lesson_video phonemes <kịch bản>` và sửa bằng `say` (mục 5.5).
 4. Ước lượng thời lượng, rồi xem vài khung hình bằng bộ đọc im lặng (`tts.Silent()` + `Slides.render`, như
-   `preview.py` trong đợt 26). Dưới 7:00 thì thêm cảnh; chữ tràn thì sửa.
+   `preview.py` trong đợt 26). Dưới 7:00 thì thêm cảnh; chữ tràn thì sửa. Từ đợt 38 dùng `scenepick.py` (scratchpad): mỗi
+   cảnh có hình lấy ba khung hình (mục đầu, giữa, cuối được `focus`), ghép thành một tờ, để soát khung đỏ và mép cắt của cả
+   video một lần.
 5. Dựng từng video một (Kokoro dùng hết CPU):
    ```bash
    cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/<id>.yaml
@@ -296,9 +307,15 @@ Cách khai:
 | Langbiang | `Lang Bee-ang` | Núi ở Đà Lạt (Unit 11) |
 | live, lives (động từ) | `liv`, `livz` | Đọc /laɪv/ (⚠ của `phonemes`); "lived" đọc đúng, không cần `say` |
 | used (động từ, quá khứ) | `yoozd` | Như `yooz` |
+| phở bò, xôi gà, cơm tấm, bún chả | `fuh baw`, `Soy gah`, `Gum tum`, `Boon cha` | Món Việt (đợt 38): chữ có dấu bị đọc thành từng chữ cái |
+| Vũng Tàu (viết Vung Tau), Ho Chi Minh City | `Voong Tau`, `Ho Chee Min City` | "Vung" đọc /vʌŋ/; Chi đọc /kaɪ/ (file 08). Bản nháp đợt 38 viết `Voong Tow` thì "Tow" thành /toʊ/ — đã sửa trước khi dựng |
+| lychee | `lie-chee` | Kokoro đọc kiểu Mỹ /ˈliːtʃi/; sách dùng tiếng Anh – Anh |
 
 Từ thường đúng, không cần `say`: Anki, Mandarin, Cantonese, Australasia, Portuguese, Egypt, comfortable, island,
-Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `tomahto`).
+Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `tomahto`). Đợt 38 soát cả 184 mục Word list Unit 24–28
+bằng bộ tách âm của Kokoro: đều đúng (chữ câm trong salmon, lamb; aubergine, croissant, dessert…), kể cả Wi-Fi và café — viết `why-fy`
+thì Kokoro nhấn âm sau, nên đã bỏ. Thử một cách đọc mới trước khi dựng (trong `agents/`):
+`python -c "from lesson_video import phonemes; print(phonemes.tokenizer()('Voong Tau', 'en-us'))"`.
 
 ### 5.6 Lỗi đã gặp
 
@@ -344,6 +361,27 @@ Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `
   không kéo dài câu thoại.
 - **Bỏ cảnh "Nghe và viết"** (mục 5.2 hàng 5) ở unit có nhiều bài trong sách (Unit 17, 19): unit đã có video nghe – viết riêng;
   ghi ở đầu kịch bản.
+- **Mép cắt mất dòng nhãn hay tiêu đề** (đợt 38):
+  - hàng trái cây Unit 25: dải nhãn cao khoảng 10 điểm bị tưởng là khoảng trống giữa hai hàng tranh;
+  - tranh bàn ăn Unit 28: mất nhãn đồ vật;
+  - tiêu đề hàng cá Unit 24, tiêu đề đồ đựng Unit 26, dòng đầu bài 3 Unit 24.
+
+  Đo dải bằng `blobs.py` (mục 5.3a), rồi xem khung hình của mọi cảnh có hình trước khi dựng.
+- **Hình quá nhỏ** (đợt 38):
+  - thực đơn Unit 28 (hai cột chữ nhỏ và 8 tranh món) tách ba cảnh: món khai vị và món chính; tranh 1–4; tranh 5–8 và món
+    tráng miệng;
+  - Glossary và Spotlight another / some more tách hai cảnh.
+- **Chữ hội thoại bên cạnh hình bị thu nhỏ** (đợt 38: hội thoại Unit 26, 27, 28): câu thoại đầy đủ như sách không vừa nửa khung.
+  Rút gọn mục, ví dụ "I'd like a ham sandwich on brown bread …" (mục 5.3a).
+- **Phiên làm việc khởi động lại giữa lúc dựng** (đợt 38, Unit 25): lệnh nền mất, video dở không vào `lessons.json`. Trước một
+  hàng đợi dựng dài thì commit phần đã xong (kịch bản, video đã dựng). Bị ngắt thì xếp dựng lại; câu đã đọc lấy từ bộ nhớ đệm.
+- **`say` tự đặt bị đọc sai** (đợt 38): `Voong Tow` (Vũng Tàu) cho "Tow" /toʊ/; `why-fy` nhấn âm sau, trong khi "Wi-Fi" vốn
+  được đọc đúng. Thử từng cách đọc mới bằng bộ tách âm của Kokoro (mục 5.5) và sửa trước khi dựng. Unit 27 đã dựng nên phải dựng
+  lại.
+- **Dấu "…" trong đáp án nghe – viết** (đợt 38, Unit 28): đáp án "I'll have …" trông như chữ bị cắt khi soát thẻ
+  (`trunc_check.py` báo), mà người học cũng không viết dấu đó. Đã bỏ dấu ba chấm ở `answer`.
+- **Unit một trang ngắn** (đợt 38): Unit 24, 27 (và Unit 25) thêm cảnh ngoài sách có ích cho IELTS: tả một món ăn, câu đố con vật
+  hay thịt, trái cây Việt Nam, câu đố vị, đồ uống quán Việt, câu hay dùng ở quán, câu đố tình huống.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
@@ -468,6 +506,31 @@ Module Everyday life (đợt 37) — sinh hoạt, mua sắm, tiền, thời ti�
   - mùa mưa đầu tiên ở Việt Nam bị cảm và ho hai tuần, dược sĩ gần nhà giúp, từ đó luôn có trà gừng; ít uống thuốc; ở Anh khám
     GP, ở Việt Nam ra hiệu thuốc trước.
 
+Module Food and drink (đợt 38) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
+
+<!-- bảng 5.7 đợt 38 -->
+
+Module Food and drink (đợt 38) — món ăn, đi chợ, quán cà phê, nhà hàng:
+- **Tom:**
+  - thích thịt bò (bữa sáng yêu thích là phở bò), thích tôm, không thích mực; Đà Lạt trên núi, xa biển, nên hồi nhỏ ít ăn hải
+    sản; mẹ nấu canh cá ngon nhất;
+  - thích xoài và sinh tố bơ (bơ ở Đà Lạt rẻ); không thích mướp đắng, dù mẹ bảo tốt cho sức khỏe; ông trồng bắp cải, cà rốt, xà
+    lách trong vườn;
+  - sáng thứ Bảy đi chợ gần căn hộ với hai bạn cùng phòng (gạo, trứng, rau, thịt lợn, mì), mua bánh mì ở tiệm đầu ngõ; về Đà Lạt
+    thì đi chợ với mẹ;
+  - ở quán cà phê: món khách gọi nhiều nhất là cà phê sữa đá, cũng là món Tom thích nhất (ít đường); tối nào cũng có khách hỏi
+    mật khẩu wifi;
+  - mới ăn bít tết một lần, thích chín vừa; Tết năm nay cả nhà (ông, bố mẹ, chị Hoa từ Hà Nội về, em Bao) đi ăn lẩu bò ở một quán
+    gần chợ Đà Lạt.
+- **Emma:**
+  - lớn lên ở thị trấn ven biển nên thích hải sản, nhất là cua và vẹm, và fish and chips; không thích vịt; cuối tuần thỉnh thoảng
+    ăn sáng kiểu Anh (bacon, xúc xích);
+  - thích dâu tây với kem (mùa hè ở Anh); đã thử sầu riêng một lần, không thích;
+  - mua phô mai và bơ ở một cửa hàng nhỏ bán đồ nhập khẩu vì chợ không có; nhớ bánh mì kiểu Anh;
+  - sáng uống cappuccino, chiều uống trà sữa kiểu Anh; đã thử cà phê trứng ở Hà Nội và rất thích; chiều thứ Bảy chấm bài ở một quán
+    cà phê gần trường (yên hơn căn hộ);
+  - hè năm ngoái đi Vũng Tàu với ba giáo viên cùng trường, ăn ở một quán hải sản cạnh biển — gợi nhớ quê.
+
 ### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
 | Unit | Trang | Có thể khó (tới 15 phút) | Gợi ý phần nói | Hình trong sách (đã xem trang) |
@@ -486,6 +549,12 @@ Phiên Review của module chưa có video. Nếu làm thì dùng cảnh `blanks
 Đã làm ở đợt 37 (bảng mục 5.7): unit khó là 17, 19, 22 như dự kiến. Module tiếp theo: **Food and drink** (Unit 24–28, Review
 tr. 75–77) — 24 Meat and fish (tr. 65), 25 Fruit and vegetables (66–67), 26 Buying food (68–70), 27 In a café (71), 28 In a
 restaurant (72–74). Chưa xem trang; unit ba trang (26, 28) có thể là unit khó, unit một trang (24, 27) cần thêm cảnh ngoài sách.
+
+Đã làm ở đợt 38 (bảng mục 5.7): unit ba trang 26, 28 là unit khó; unit một trang 24, 27 thêm cảnh ngoài sách. Module tiếp theo:
+**Getting around** (Unit 29–33, Review tr. 87–89):
+- 29 Buses (tr. 78–79), 30 Trains (80–81), 31 Directions (82–83), 32 Roads and traffic (84–85), 33 Signs and notices (86);
+- Answer key tr. 211 đã có đáp án Unit 29–30;
+- chưa xem trang; chủ đề đi lại hay gặp ở IELTS General Training (hỏi đường, mua vé, biển báo).
 
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
@@ -525,12 +594,15 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 - **Word list của sách** (tr. 237–254, tức PDF 236–253; hai cột, mỗi từ kèm số unit):
   - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai lề
     8 điểm thì đọc "11" thành "1l". Lấy hợp của hai lần rồi soát tay theo ảnh trang.
-  - Kết quả ở `work/wordlist.json`: 679 mục của Unit 1–23; `level` để trống vì sách không chia cấp độ.
+  - Kết quả ở `work/wordlist.json`: 863 mục của Unit 1–28 (776 từ khác nhau); `level` để trống vì sách không chia cấp độ.
   - Đợt 37 thêm 246 mục Unit 17–23 từ cùng hai lần OCR. Soát khoảng hở giữa các dòng OCR (dòng bị bỏ) rồi xem ảnh: sót *get dressed*
     (17); bộ tách bỏ qua dòng *red* (18). Ba mục in số unit của bản thảo cũ (mục 3.3) xếp theo trang thật: *like* vào Unit 21, *have
     got* và *what's the matter?* vào Unit 22; câu chú thích ở `make_wordlist.py` và đầu kịch bản nghe – viết.
+  - Đợt 38 thêm 184 mục Unit 24–28 (157 từ chưa có ở Unit 1–23), soát như đợt 37: không sót mục nào. Mục có chú thích nghĩa
+    (*can* =container, *matches* =to start a fire, *pepper* =vegetable ở Unit 25 và =spice ở Unit 28, *well done* =cooked for a
+    long time…) giữ chú thích ở `def`. `make_wordlist.py` thêm loại từ `adv` (*sure*).
   - Soát đủ từ: `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all` phải ra
-    "chưa hiện: 0" (test kiểm cả 16 unit).
+    "chưa hiện: 0" (test kiểm mọi unit có video).
 - **Sinh kịch bản:** dữ liệu từng unit (từ, nghĩa, câu ví dụ, mục Word list, cách đọc `s` / `se`) ở `work/dictation/units_*.py`.
   Lệnh `python3 books/book_oxford_word_skills_basic/work/dictation/gen_dictation.py U02` ghi
   `lessons/U02-time-dictation.yaml`. Kịch bản là bản sinh ra: sửa dữ liệu rồi sinh lại, không sửa tay.
@@ -584,7 +656,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 24 trở đi theo mục 5 (checklist P2-59), module Food and drink (cuối mục 5.8). Mỗi unit hai video: bài giảng
+1. Video Unit 29 trở đi theo mục 5 (checklist P2-59), module Getting around (cuối mục 5.8). Mỗi unit hai video: bài giảng
    (mục 5) và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

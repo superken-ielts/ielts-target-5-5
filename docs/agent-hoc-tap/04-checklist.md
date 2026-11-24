@@ -444,6 +444,8 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     mục 5) và nghe – viết (mục 5.9).
   - *Đợt 37:* xong module Everyday life, Unit 17–23 — 14 video (P2-72). Còn Unit 24 trở đi; module Food and drink ở cuối file 09
     mục 5.8.
+  - *Đợt 38:* xong module Food and drink, Unit 24–28 — 10 video (P2-73). Còn Unit 29 trở đi; module Getting around ở cuối file 09
+    mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -516,6 +518,13 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Word list Unit 17–23 (246 mục) thêm vào `work/wordlist.json`; OCR sót get dressed, red; ba mục in số unit cũ xếp theo trang thật. Video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Answer key in lệch (file 09 mục 3.3): Unit 17 bài 3 (8 câu trả lời cho 6 câu hỏi), Unit 22 bài 1 (câu 10 trùng câu 8).
   - Test: unit khó U17, U19, U22; video từ Unit 17 có `pause` + `gap` + `scene_gap` dưới 3 giây; hồi quy nghe – viết cả 23 unit; e2e: thẻ sách 46 video, Unit 1–23 mỗi unit hai nút.
+- [x] **P2-73** **Oxford Word Skills Basic module Food and drink: 5 video bài giảng và 5 video nghe – viết, Unit 24–28** (đợt 38, bài giảng {TOTAL38L}, nghe – viết {TOTAL38D}), theo yêu cầu người học: "tạo các video của phần tiếp theo sách oxford xong rồi commit push main luôn". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+  - Bài giảng theo khuôn file 09 mục 5: đủ mọi bài tập trong sách (tr. 65–74, Answer key tr. 210–211), hình trong sách ở mọi video (bảng animal → meat, hàng tranh trái cây và rau, đồ đựng, bàn ăn, thực đơn, hội thoại — khung theo tranh hoặc theo dòng), không đếm ngược. Unit khó 26 Buying food, 28 In a restaurant (10–15 phút): đóng vai (mua thực phẩm, gọi món), ôn tập, Part 2 (a shop or market where you often buy food, a restaurant that you enjoyed going to), thảo luận; Unit 28 có đặt bàn qua điện thoại.
+  - Thêm ngoài sách cho unit thường: món Việt bằng tiếng Anh, tả một món ăn, a chicken / some chicken, trái cây Việt Nam, câu đố vị, đồ uống quán Việt, cỡ ly và yêu cầu riêng, câu hay dùng ở quán, đóng vai gọi đồ.
+  - Không khoảng lặng từ 3 giây: {MAXSIL}.
+  - Word list Unit 24–28 (184 mục) thêm vào `work/wordlist.json` (nay 863 mục); video nghe – viết đủ mọi mục ("chưa hiện: 0").
+  - Cách đọc: soát cả 184 mục Word list bằng bộ tách âm của Kokoro (đều đúng); sửa `say` Vũng Tàu (`Voong Tau`), bỏ `why-fy` (Wi-Fi vốn đọc đúng) và dựng lại Unit 27.
+  - Test: unit khó U26, U28; hồi quy nghe – viết cả 28 unit; e2e: thẻ sách 56 video, Unit 1–28 mỗi unit hai nút.
 
 ### Cổng G2
 
