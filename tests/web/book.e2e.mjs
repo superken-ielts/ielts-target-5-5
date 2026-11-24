@@ -454,13 +454,13 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
-  await step("Oxford Word Skills Basic: 92 phiên 30 phút; Unit 1–28 mỗi unit một video (7–10 phút, unit khó tới 15 phút) và một video nghe – viết 10 phút; phiên Unit 6 mở trang sách và Answer key", async () => {
+  await step("Oxford Word Skills Basic: 92 phiên 30 phút; Unit 1–33 mỗi unit một video (7–10 phút, unit khó tới 15 phút) và một video nghe – viết 10 phút; phiên Unit 6 mở trang sách và Answer key", async () => {
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
     const card = page.locator("#p-book .bk-lib", { hasText: "Oxford Word Skills Basic" });
     const text = await card.textContent();
     assert.match(text, /Elementary – Pre-intermediate · CEFR A1 → A2/);
-    assert.match(text, /81 unit · 11 test · 56 video bài giảng/);       // sách không kèm audio (thiếu CD-ROM)
+    assert.match(text, /81 unit · 11 test · 66 video bài giảng/);       // sách không kèm audio (thiếu CD-ROM)
     assert.match(text, /92 phiên × 30 phút/);
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
@@ -475,10 +475,12 @@ try{
                    "Unit 16 · Feelings", "Unit 17 · My routine", "Unit 18 · Clothes", "Unit 19 · Buying clothes", "Unit 20 · Money",
                    "Unit 21 · The weather", "Unit 22 · Illness", "Unit 23 · At the chemist's",    // đợt 37: module Everyday life
                    "Unit 24 · Meat and fish", "Unit 25 · Fruit and vegetables", "Unit 26 · Buying food",
-                   "Unit 27 · In a café", "Unit 28 · In a restaurant"];                            // đợt 38: Food and drink
+                   "Unit 27 · In a café", "Unit 28 · In a restaurant",                             // đợt 38: Food and drink
+                   "Unit 29 · Buses", "Unit 30 · Trains", "Unit 31 · Directions", "Unit 32 · Roads and traffic",
+                   "Unit 33 · Signs and notices"];                                                  // đợt 39: Getting around
     const hard = ["Unit 10 · My family", "Unit 13 · Describing people", "Unit 14 · Character", "Unit 16 · Feelings",
                   "Unit 17 · My routine", "Unit 19 · Buying clothes", "Unit 22 · Illness", "Unit 26 · Buying food",
-                  "Unit 28 · In a restaurant"];
+                  "Unit 28 · In a restaurant", "Unit 30 · Trains", "Unit 32 · Roads and traffic"];
     for(const unit of units){
       const got = await page.locator("#p-book .bk-unit", { hasText: unit }).locator(".bk-vids button").allTextContents();
       assert.equal(got.length, 2, unit);

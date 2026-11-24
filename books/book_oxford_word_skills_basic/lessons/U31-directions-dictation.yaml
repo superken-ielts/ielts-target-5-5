@@ -1,0 +1,305 @@
+# Video nghe – viết (dictation) Unit 31 · Directions — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U31-directions-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U31 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 31 có 18 mục; kilometres in số 31 xếp ở Unit 32 (tr. 85) — make_wordlist.py.
+# Phần 2 và 3 nhiều hơn vì Word list của unit ngắn.
+id: U31-directions-dictation
+activity: U31-words
+title: "Unit 31 · Directions"
+subtitle: "Dictation · listen and write: asking for and giving directions"
+title_vi: "Nghe – viết 10 phút: hỏi và chỉ đường — từ trong sách, từ thêm, câu giao tiếp"
+tag: "GETTING AROUND · UNIT 31"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 31: Directions. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-one: Directions. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 31: hỏi và chỉ đường. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 20 words from the book. You hear each word twice, and then an example sentence twice. Then 24 more useful words, and 33 useful sentences for conversation.", "say": "There are three parts. First, twenty words from the book. You hear each word twice, and then an example sentence twice. Then twenty-four more useful words, and thirty-three useful sentences for conversation.", "vi": "Ba phần: 20 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 24 từ thêm, 33 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "Excuse me.", "vi": "Xin lỗi (khi hỏi người lạ).", "ex": "Excuse me. How do I get to the river?", "w": ["excuse me"]}
+      - {"n": 2, "answer": "get to", "vi": "đến", "ex": "How do I get to the bank from here?", "w": ["get"]}
+      - {"n": 3, "answer": "Do you know the way to …?", "vi": "Bạn có biết đường đến … không?", "ex": "Do you know the way to the railway station?", "w": ["know", "way", "railway station", "station"]}
+      - {"n": 4, "answer": "Is there a … near here?", "vi": "Gần đây có … không?", "ex": "Is there a hotel near here?"}
+      - {"n": 5, "answer": "Go straight on.", "vi": "Đi thẳng.", "ex": "Go straight on for about ten minutes.", "w": ["straight", "go"]}
+      - {"n": 6, "answer": "Just keep going.", "vi": "Cứ đi tiếp.", "ex": "Just keep going, and it's on your left.", "w": ["just", "keep going"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. Excuse me.. Excuse me.. Excuse me. How do I get to the river? Excuse me. How do I get to the river?", "focus": 0}
+      - {"emma": "Two. get to. get to. How do I get to the bank from here? How do I get to the bank from here?", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. Do you know the way to …?. Do you know the way to …?. Do you know the way to the railway station? Do you know the way to the railway station?", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. Is there a … near here?. Is there a … near here?. Is there a hotel near here? Is there a hotel near here?", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. Go straight on.. Go straight on.. Go straight on for about ten minutes. Go straight on for about ten minutes.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. Just keep going.. Just keep going.. Just keep going, and it's on your left. Just keep going, and it's on your left.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "Go along here.", "vi": "Đi dọc đường này.", "ex": "Go along here and turn left.", "w": ["along"]}
+      - {"n": 8, "answer": "turn left", "vi": "rẽ trái", "ex": "Turn left at the café.", "w": ["left"]}
+      - {"n": 9, "answer": "turn right", "vi": "rẽ phải", "ex": "Turn right into Abbey Road.", "w": ["right"]}
+      - {"n": 10, "answer": "turning", "vi": "chỗ rẽ", "ex": "Take the second turning on the left.", "w": ["turning"]}
+      - {"n": 11, "answer": "take the first turning", "vi": "rẽ vào ngã rẽ đầu tiên", "ex": "Take the first turning on the right, and it's opposite the bank.", "w": ["take the first turning"]}
+      - {"n": 12, "answer": "on the left, on the right", "vi": "bên trái, bên phải", "ex": "The bank is on your right."}
+    lines:
+      - {"emma": "Seven. Go along here.. Go along here.. Go along here and turn left. Go along here and turn left.", "focus": 0}
+      - {"emma": "Eight. turn left. turn left. Turn left at the café. Turn left at the café.", "say": "Eight. turn left. turn left. Turn left at the cafe. Turn left at the cafe.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. turn right. turn right. Turn right into Abbey Road. Turn right into Abbey Road.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. turning. turning. Take the second turning on the left. Take the second turning on the left.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. take the first turning. take the first turning. Take the first turning on the right, and it's opposite the bank. Take the first turning on the right, and it's opposite the bank.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. on the left, on the right. on the left, on the right. The bank is on your right. The bank is on your right.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–16)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "opposite", "vi": "đối diện", "ex": "The bookshop is opposite the hotel.", "w": ["opposite"]}
+      - {"n": 14, "answer": "on the corner", "vi": "ở góc đường", "ex": "There's a cinema on the corner.", "w": ["corner"]}
+      - {"n": 15, "answer": "into", "vi": "vào (con đường)", "ex": "Turn left into Foster Road."}
+      - {"n": 16, "answer": "It's about ten minutes.", "vi": "Khoảng mười phút.", "ex": "It's about ten minutes on foot."}
+    lines:
+      - {"emma": "Thirteen. opposite. opposite. The bookshop is opposite the hotel. The bookshop is opposite the hotel.", "focus": 0}
+      - {"emma": "Fourteen. on the corner. on the corner. There's a cinema on the corner. There's a cinema on the corner.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. into. into. Turn left into Foster Road. Turn left into Foster Road.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. It's about ten minutes.. It's about ten minutes.. It's about ten minutes on foot. It's about ten minutes on foot.", "focus": 3, "reveal": [15]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [16]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (17–20)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 17, "answer": "Thanks very much.", "vi": "Cảm ơn nhiều.", "ex": "Thanks very much for your help.", "w": ["thanks"]}
+      - {"n": 18, "answer": "You're welcome.", "vi": "Không có gì.", "ex": "You're welcome. Have a nice day."}
+      - {"n": 19, "answer": "No problem.", "vi": "Không có gì.", "ex": "That's OK. No problem."}
+      - {"n": 20, "answer": "Not at all.", "vi": "Không có gì.", "ex": "Thank you. — Not at all."}
+    lines:
+      - {"emma": "Seventeen. Thanks very much.. Thanks very much.. Thanks very much for your help. Thanks very much for your help.", "focus": 0}
+      - {"emma": "Eighteen. You're welcome.. You're welcome.. You're welcome. Have a nice day. You're welcome. Have a nice day.", "focus": 1, "reveal": [17]}
+      - {"emma": "Nineteen. No problem.. No problem.. That's OK. No problem. That's OK. No problem.", "focus": 2, "reveal": [18]}
+      - {"emma": "Twenty. Not at all.. Not at all.. Thank you. — Not at all. Thank you. — Not at all.", "focus": 3, "reveal": [19]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [20]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (21–26)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 21, "answer": "next to", "vi": "ngay cạnh", "ex": "The bank is next to the post office."}
+      - {"n": 22, "answer": "between", "vi": "ở giữa", "ex": "The café is between the bank and the bookshop."}
+      - {"n": 23, "answer": "behind", "vi": "phía sau", "ex": "The market is behind the university."}
+      - {"n": 24, "answer": "in front of", "vi": "phía trước", "ex": "Meet me in front of the cinema."}
+      - {"n": 25, "answer": "at the end of", "vi": "ở cuối", "ex": "The hotel is at the end of the road."}
+      - {"n": 26, "answer": "crossroads", "vi": "ngã tư", "ex": "Turn left at the crossroads."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-one. next to. next to. The bank is next to the post office. The bank is next to the post office.", "focus": 0}
+      - {"tom": "Twenty-two. between. between. The café is between the bank and the bookshop. The café is between the bank and the bookshop.", "say": "Twenty-two. between. between. The cafe is between the bank and the bookshop. The cafe is between the bank and the bookshop.", "focus": 1, "reveal": [21]}
+      - {"tom": "Twenty-three. behind. behind. The market is behind the university. The market is behind the university.", "focus": 2, "reveal": [22]}
+      - {"tom": "Twenty-four. in front of. in front of. Meet me in front of the cinema. Meet me in front of the cinema.", "focus": 3, "reveal": [23]}
+      - {"tom": "Twenty-five. at the end of. at the end of. The hotel is at the end of the road. The hotel is at the end of the road.", "focus": 4, "reveal": [24]}
+      - {"tom": "Twenty-six. crossroads. crossroads. Turn left at the crossroads. Turn left at the crossroads.", "focus": 5, "reveal": [25]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [26]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (27–32)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 27, "answer": "alley", "vi": "hẻm", "ex": "His house is down a small alley."}
+      - {"n": 28, "answer": "go past", "vi": "đi qua", "ex": "Go past the school and turn right."}
+      - {"n": 29, "answer": "on foot", "vi": "đi bộ", "ex": "It's five minutes on foot."}
+      - {"n": 30, "answer": "lost", "vi": "bị lạc", "ex": "Excuse me, I'm lost."}
+      - {"n": 31, "answer": "map", "vi": "bản đồ", "ex": "Could you show me on the map?"}
+      - {"n": 32, "answer": "directions", "vi": "chỉ dẫn đường", "ex": "Can you give me directions to the station?"}
+    lines:
+      - {"tom": "Twenty-seven. alley. alley. His house is down a small alley. His house is down a small alley.", "focus": 0}
+      - {"tom": "Twenty-eight. go past. go past. Go past the school and turn right. Go past the school and turn right.", "focus": 1, "reveal": [27]}
+      - {"tom": "Twenty-nine. on foot. on foot. It's five minutes on foot. It's five minutes on foot.", "focus": 2, "reveal": [28]}
+      - {"tom": "Thirty. lost. lost. Excuse me, I'm lost. Excuse me, I'm lost.", "focus": 3, "reveal": [29]}
+      - {"tom": "Thirty-one. map. map. Could you show me on the map? Could you show me on the map?", "focus": 4, "reveal": [30]}
+      - {"tom": "Thirty-two. directions. directions. Can you give me directions to the station? Can you give me directions to the station?", "focus": 5, "reveal": [31]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [32]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (33–38)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 33, "answer": "cross the road", "vi": "băng qua đường", "ex": "Cross the road at the traffic lights."}
+      - {"n": 34, "answer": "bridge", "vi": "cây cầu", "ex": "Go over the bridge, and the museum is on the left."}
+      - {"n": 35, "answer": "square", "vi": "quảng trường", "ex": "The hotel is in the main square."}
+      - {"n": 36, "answer": "river", "vi": "con sông", "ex": "How do I get to the river from here?"}
+      - {"n": 37, "answer": "nearby", "vi": "gần đây", "ex": "Is there a chemist's nearby?"}
+      - {"n": 38, "answer": "straight ahead", "vi": "thẳng phía trước", "ex": "The station is straight ahead."}
+    lines:
+      - {"tom": "Thirty-three. cross the road. cross the road. Cross the road at the traffic lights. Cross the road at the traffic lights.", "focus": 0}
+      - {"tom": "Thirty-four. bridge. bridge. Go over the bridge, and the museum is on the left. Go over the bridge, and the museum is on the left.", "focus": 1, "reveal": [33]}
+      - {"tom": "Thirty-five. square. square. The hotel is in the main square. The hotel is in the main square.", "focus": 2, "reveal": [34]}
+      - {"tom": "Thirty-six. river. river. How do I get to the river from here? How do I get to the river from here?", "focus": 3, "reveal": [35]}
+      - {"tom": "Thirty-seven. nearby. nearby. Is there a chemist's nearby? Is there a chemist's nearby?", "focus": 4, "reveal": [36]}
+      - {"tom": "Thirty-eight. straight ahead. straight ahead. The station is straight ahead. The station is straight ahead.", "focus": 5, "reveal": [37]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [38]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (39–44)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 39, "answer": "signpost", "vi": "biển chỉ đường", "ex": "Follow the signposts to the beach."}
+      - {"n": 40, "answer": "landmark", "vi": "địa điểm dễ nhận ra", "ex": "The big church is a good landmark."}
+      - {"n": 41, "answer": "downstairs, upstairs", "vi": "tầng dưới, tầng trên", "ex": "The toilets are downstairs."}
+      - {"n": 42, "answer": "say that again", "vi": "nói lại", "ex": "Sorry, could you say that again?"}
+      - {"n": 43, "answer": "slowly", "vi": "chậm", "ex": "Could you speak more slowly, please?"}
+      - {"n": 44, "answer": "on your left", "vi": "bên tay trái bạn", "ex": "Walk for two minutes, and it's on your left."}
+    lines:
+      - {"tom": "Thirty-nine. signpost. signpost. Follow the signposts to the beach. Follow the signposts to the beach.", "focus": 0}
+      - {"tom": "Forty. landmark. landmark. The big church is a good landmark. The big church is a good landmark.", "focus": 1, "reveal": [39]}
+      - {"tom": "Forty-one. downstairs, upstairs. downstairs, upstairs. The toilets are downstairs. The toilets are downstairs.", "focus": 2, "reveal": [40]}
+      - {"tom": "Forty-two. say that again. say that again. Sorry, could you say that again? Sorry, could you say that again?", "focus": 3, "reveal": [41]}
+      - {"tom": "Forty-three. slowly. slowly. Could you speak more slowly, please? Could you speak more slowly, please?", "focus": 4, "reveal": [42]}
+      - {"tom": "Forty-four. on your left. on your left. Walk for two minutes, and it's on your left. Walk for two minutes, and it's on your left.", "focus": 5, "reveal": [43]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [44]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (45–50)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 45, "answer": "Excuse me, how do I get to the station?", "vi": "Xin lỗi, đến ga đi thế nào?"}
+      - {"n": 46, "answer": "Go straight on, and take the second turning on the left.", "vi": "Đi thẳng, rẽ vào ngã rẽ thứ hai bên trái."}
+      - {"n": 47, "answer": "Is it far?", "vi": "Có xa không?"}
+      - {"n": 48, "answer": "No, it's about five minutes on foot.", "vi": "Không, đi bộ khoảng năm phút."}
+      - {"n": 49, "answer": "Excuse me, is there a bank near here?", "vi": "Xin lỗi, gần đây có ngân hàng không?"}
+      - {"n": 50, "answer": "Yes, there's one opposite the post office.", "vi": "Có, đối diện bưu điện."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-five. Excuse me, how do I get to the station? Excuse me, how do I get to the station?", "focus": 0}
+      - {"tom": "Forty-six. Go straight on, and take the second turning on the left. Go straight on, and take the second turning on the left.", "focus": 1, "reveal": [45]}
+      - {"emma": "Forty-seven. Is it far? Is it far?", "focus": 2, "reveal": [46]}
+      - {"tom": "Forty-eight. No, it's about five minutes on foot. No, it's about five minutes on foot.", "focus": 3, "reveal": [47]}
+      - {"emma": "Forty-nine. Excuse me, is there a bank near here? Excuse me, is there a bank near here?", "focus": 4, "reveal": [48]}
+      - {"tom": "Fifty. Yes, there's one opposite the post office. Yes, there's one opposite the post office.", "focus": 5, "reveal": [49]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [50]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 51, "answer": "Do you know the way to the museum?", "vi": "Bạn biết đường đến bảo tàng không?"}
+      - {"n": 52, "answer": "Sorry, I don't know. I'm not from here.", "vi": "Xin lỗi, tôi không biết. Tôi không ở đây."}
+      - {"n": 53, "answer": "Could you show me on the map?", "vi": "Bạn chỉ trên bản đồ giúp tôi?"}
+      - {"n": 54, "answer": "Sure. We're here, and the museum is there.", "vi": "Được. Mình đang ở đây, bảo tàng ở đó."}
+      - {"n": 55, "answer": "Turn right at the café, then left into Abbey Road.", "vi": "Rẽ phải ở quán cà phê, rồi rẽ trái vào đường Abbey."}
+      - {"n": 56, "answer": "Sorry, could you say that again, please?", "vi": "Xin lỗi, nói lại giúp tôi?"}
+    lines:
+      - {"emma": "Fifty-one. Do you know the way to the museum? Do you know the way to the museum?", "focus": 0}
+      - {"tom": "Fifty-two. Sorry, I don't know. I'm not from here. Sorry, I don't know. I'm not from here.", "focus": 1, "reveal": [51]}
+      - {"emma": "Fifty-three. Could you show me on the map? Could you show me on the map?", "focus": 2, "reveal": [52]}
+      - {"tom": "Fifty-four. Sure. We're here, and the museum is there. Sure. We're here, and the museum is there.", "focus": 3, "reveal": [53]}
+      - {"tom": "Fifty-five. Turn right at the café, then left into Abbey Road. Turn right at the café, then left into Abbey Road.", "say": "Fifty-five. Turn right at the cafe, then left into Abbey Road. Turn right at the cafe, then left into Abbey Road.", "focus": 4, "reveal": [54]}
+      - {"emma": "Fifty-six. Sorry, could you say that again, please? Sorry, could you say that again, please?", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 57, "answer": "Of course. Turn right at the café.", "vi": "Được. Rẽ phải ở quán cà phê."}
+      - {"n": 58, "answer": "Thanks very much.", "vi": "Cảm ơn nhiều."}
+      - {"n": 59, "answer": "You're welcome.", "vi": "Không có gì."}
+      - {"n": 60, "answer": "Where's the nearest chemist's?", "vi": "Hiệu thuốc gần nhất ở đâu?"}
+      - {"n": 61, "answer": "It's on the corner, next to the bank.", "vi": "Ở góc đường, cạnh ngân hàng."}
+      - {"n": 62, "answer": "Can I walk there?", "vi": "Tôi đi bộ đến đó được không?"}
+    lines:
+      - {"tom": "Fifty-seven. Of course. Turn right at the café. Of course. Turn right at the café.", "say": "Fifty-seven. Of course. Turn right at the cafe. Of course. Turn right at the cafe.", "focus": 0}
+      - {"emma": "Fifty-eight. Thanks very much. Thanks very much.", "focus": 1, "reveal": [57]}
+      - {"tom": "Fifty-nine. You're welcome. You're welcome.", "focus": 2, "reveal": [58]}
+      - {"emma": "Sixty. Where's the nearest chemist's? Where's the nearest chemist's?", "focus": 3, "reveal": [59]}
+      - {"tom": "Sixty-one. It's on the corner, next to the bank. It's on the corner, next to the bank.", "focus": 4, "reveal": [60]}
+      - {"emma": "Sixty-two. Can I walk there? Can I walk there?", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 63, "answer": "Yes, just keep going for two minutes.", "vi": "Được, cứ đi tiếp hai phút."}
+      - {"n": 64, "answer": "I'm lost. Can you help me?", "vi": "Tôi bị lạc. Bạn giúp tôi được không?"}
+      - {"n": 65, "answer": "Where do you want to go?", "vi": "Bạn muốn đi đâu?"}
+      - {"n": 66, "answer": "To the Grand Hotel.", "vi": "Đến khách sạn Grand."}
+      - {"n": 67, "answer": "Go along here and turn left. It's on your right.", "vi": "Đi dọc đường này rồi rẽ trái. Nó ở bên phải bạn."}
+      - {"n": 68, "answer": "Is the market behind the university?", "vi": "Chợ ở sau trường đại học à?"}
+    lines:
+      - {"tom": "Sixty-three. Yes, just keep going for two minutes. Yes, just keep going for two minutes.", "focus": 0}
+      - {"emma": "Sixty-four. I'm lost. Can you help me? I'm lost. Can you help me?", "focus": 1, "reveal": [63]}
+      - {"tom": "Sixty-five. Where do you want to go? Where do you want to go?", "focus": 2, "reveal": [64]}
+      - {"emma": "Sixty-six. To the Grand Hotel. To the Grand Hotel.", "focus": 3, "reveal": [65]}
+      - {"tom": "Sixty-seven. Go along here and turn left. It's on your right. Go along here and turn left. It's on your right.", "focus": 4, "reveal": [66]}
+      - {"emma": "Sixty-eight. Is the market behind the university? Is the market behind the university?", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "Yes, it's five minutes from my flat.", "vi": "Đúng, cách căn hộ của mình năm phút."}
+      - {"n": 70, "answer": "Which way is the river?", "vi": "Sông ở hướng nào?"}
+      - {"n": 71, "answer": "It's that way, past the church.", "vi": "Ở hướng kia, qua nhà thờ."}
+      - {"n": 72, "answer": "Is there a toilet near here?", "vi": "Gần đây có nhà vệ sinh không?"}
+      - {"n": 73, "answer": "Yes, in the shopping centre opposite.", "vi": "Có, trong trung tâm mua sắm đối diện."}
+      - {"n": 74, "answer": "How long does it take to walk there?", "vi": "Đi bộ đến đó mất bao lâu?"}
+    lines:
+      - {"tom": "Sixty-nine. Yes, it's five minutes from my flat. Yes, it's five minutes from my flat.", "focus": 0}
+      - {"emma": "Seventy. Which way is the river? Which way is the river?", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. It's that way, past the church. It's that way, past the church.", "focus": 2, "reveal": [70]}
+      - {"emma": "Seventy-two. Is there a toilet near here? Is there a toilet near here?", "focus": 3, "reveal": [71]}
+      - {"tom": "Seventy-three. Yes, in the shopping centre opposite. Yes, in the shopping centre opposite.", "focus": 4, "reveal": [72]}
+      - {"emma": "Seventy-four. How long does it take to walk there? How long does it take to walk there?", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (75–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 75, "answer": "About fifteen minutes.", "vi": "Khoảng mười lăm phút."}
+      - {"n": 76, "answer": "I always check the map on my phone.", "vi": "Mình luôn xem bản đồ trên điện thoại."}
+      - {"n": 77, "answer": "Me too. It's very useful.", "vi": "Mình cũng vậy. Rất có ích."}
+    lines:
+      - {"tom": "Seventy-five. About fifteen minutes. About fifteen minutes.", "say": "Seventy-five. About fif-teen minutes. About fif-teen minutes.", "focus": 0}
+      - {"emma": "Seventy-six. I always check the map on my phone. I always check the map on my phone.", "focus": 1, "reveal": [75]}
+      - {"tom": "Seventy-seven. Me too. It's very useful. Me too. It's very useful.", "focus": 2, "reveal": [76]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [77]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 32.", "say": "Well done! See you in Unit thirty-two.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 32."}
+

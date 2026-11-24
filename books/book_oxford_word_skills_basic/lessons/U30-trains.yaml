@@ -1,0 +1,487 @@
+# Video Oxford Word Skills Basic · Unit 30 — I can get around on trains (sách in tr. 80–81, Answer key tr. 211–212). Học sau Unit 29.
+# UNIT KHÓ (đợt 39): 2 trang, hai phần — từ về tàu hỏa (carriage, platform, miss / catch, journey, fare) và hội thoại mua vé
+# (single / return, change, direct, book in advance), bảng giờ tàu — chủ đề hay gặp ở IELTS General Training (mua vé, giờ tàu,
+# đi lại) — video khoảng 13 phút: phần sách, rồi đường sắt Việt Nam, đóng vai mua vé, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG
+# (Part 2 "a journey that you remember", hai bài mẫu; ba câu thảo luận kiểu Part 3); thêm thông báo ở nhà ga (delayed,
+# cancelled) cho IELTS Listening. Khuôn: file 09 mục 5.2. Không `wait` /
+# `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe –
+# viết riêng.
+# Bài trong sách: đủ 1–5. Bài 1–4 theo Answer key tr. 211–212 (bài 2 câu 5, 6 có hai đáp án: last / next, waited / wait). Bài 4:
+# bảng giờ tàu hiện riêng trước khi làm. Bài 5 (ABOUT YOU): Tom và Emma hỏi đáp (cảnh Nói 1); Emma dùng ý của câu mẫu Answer key
+# ("I always do, because you get reduced prices").
+# Hình trong sách: tranh ga tàu (khung theo nhãn: train, carriage, timetable, seat, get on / off, wait for, miss / catch), Glossary
+# và Spotlight last (tr. 80); hội thoại mua vé (khung theo dòng — Emma đọc hành khách P, Tom đọc nhân viên phòng vé O), Glossary và
+# Spotlight book something in advance (tr. 81, hai cảnh để chữ đủ to), bảng giờ tàu bài 4.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom về Đà Lạt bằng xe khách (U20, U29), đặt vé xe trước dịp Tết; Đà Lạt
+# không có tàu đi TP. HCM, chỉ có ga cổ và tàu du lịch đi Trại Mát; mới: năm 10 tuổi đi tàu Đà Lạt – Trại Mát với ông (ông mua cho
+# một túi dâu tây); hè năm ngoái đi tàu ra Nha Trang với hai bạn cùng phòng (vé ngồi khoảng 300.000 đồng, đi thẳng khoảng tám
+# tiếng). Emma không đi xe máy (hồ sơ), học tiếng Việt; ở Anh vé tàu rất đắt (U20) nên luôn đặt trước; mới: tháng Tư
+# năm nay đi tàu một mình ra Phan Thiết (đặt vé qua ứng dụng, khoảng bốn tiếng), ngồi cạnh một gia đình Việt, tập nói tiếng Việt với
+# bọn trẻ; thích tuyến metro mới của TP. HCM (nhanh, sạch).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U30-trains.yaml
+id: U30-trains
+activity: U30-words
+title: "Unit 30 · Trains"
+subtitle: "I can get around on trains"
+title_vi: "Đi tàu hỏa: carriage, platform, miss / catch a train, journey, fare, single / return, change, direct, book in advance — kèm ôn tập và luyện nói"
+tag: "GETTING AROUND · UNIT 30"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 30: trains. Please do Unit 29 first. Today: train words, buying a ticket, and reading a timetable. There are two pages, so this video is longer, with a role-play, a review and speaking practice."
+        say: "Welcome to Unit thirty: trains. Please do Unit twenty-nine first. Today: train words, buying a ticket, and reading a timetable. There are two pages, so this video is longer, with a role-play, a review and speaking practice."
+        vi: "Unit 30: tàu hỏa (học Unit 29 trước). Từ về tàu, mua vé, đọc bảng giờ — video dài hơn, có đóng vai, ôn tập, luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Từ về tàu hỏa"
+    heading: "A · Train vocabulary"
+    heading_vi: "Tranh trong sách tr. 80 — carriage: toa · platform: sân ga · miss ≠ catch: lỡ ≠ kịp"
+    image: {pdf: course-book, page: 81, clip: [50, 88, 486, 336]}
+    items:
+      - {box: [52, 92, 152, 178]}
+      - {box: [166, 96, 302, 180]}
+      - {box: [374, 92, 484, 140]}
+      - {box: [112, 224, 198, 306]}
+      - {box: [54, 218, 196, 334]}
+      - {box: [388, 110, 484, 248]}
+      - {box: [232, 158, 432, 334]}
+    lines:
+      - {emma: "Look at page eighty. Part A is train vocabulary. This is a train.", focus: 0}
+      - {tom: "And this is a carriage: one part of a train. A train has many carriages.", focus: 1, vi: "carriage: toa tàu"}
+      - {emma: "The timetable tells you when the trains leave and arrive.", focus: 2, vi: "timetable: bảng giờ tàu"}
+      - {tom: "A seat: you sit on a seat.", focus: 3, vi: "seat: ghế ngồi"}
+      - {emma: "This girl is getting on the train. The opposite is get off the train.", focus: 4, vi: "get on ≠ get off: lên ≠ xuống tàu"}
+      - {tom: "This man is waiting for a train.", focus: 5, vi: "wait for a train: đợi tàu"}
+      - {emma: "And this man is late. Is he going to miss the train? The opposite is catch a train.", focus: 6, vi: "miss a train ≠ catch a train: lỡ tàu ≠ kịp tàu"}
+      - {tom: "I hope he catches it!", focus: 6}
+
+  - kind: figure
+    chapter: "Glossary và Spotlight (1)"
+    heading: "Glossary · Spotlight: last"
+    heading_vi: "tr. 80 — journey: chuyến đi · fare: tiền vé · last: cuối cùng / gần đây nhất"
+    image: {pdf: course-book, page: 81, clip: [50, 334, 486, 436]}
+    items:
+      - {box: [52, 351, 282, 366]}
+      - {box: [52, 365, 282, 378]}
+      - {box: [52, 377, 282, 389]}
+      - {box: [52, 388, 282, 400]}
+      - {box: [52, 399, 282, 411]}
+      - {box: [52, 410, 282, 435]}
+      - {box: [286, 362, 484, 375]}
+      - {box: [286, 374, 484, 400]}
+      - {box: [286, 398, 484, 424]}
+    lines:
+      - {emma: "Look at the glossary. Get a train, or take a train: travel by train.", focus: 0}
+      - {tom: "The twelve o'clock train: the train that leaves at twelve.", focus: 1}
+      - {emma: "A journey: when you travel from A to B.", say: "A journey: when you travel from eigh to bee.", focus: 2, vi: "journey: chuyến đi"}
+      - {tom: "The fare: the money you pay to travel.", focus: 3, vi: "fare: tiền vé"}
+      - {emma: "A fast train. The opposite is a slow train.", focus: 4}
+      - {tom: "A railway station, or just a station: a place where trains stop, and people get on and off.", focus: 5, vi: "(railway) station: ga tàu"}
+      - {emma: "Look at the spotlight. Last has different meanings.", focus: 6}
+      - {tom: "One: final. The last train leaves at eleven thirty p.m. There are no trains after that.", focus: 7, vi: "last = final: chuyến cuối"}
+      - {emma: "Two: most recent. The book's example is: my last train journey was two weeks ago.", focus: 8, vi: "last = most recent: gần đây nhất"}
+
+  - kind: blanks
+    chapter: "Bài 1: trả lời câu hỏi"
+    heading: "Exercise 1 · Answer the questions"
+    heading_vi: "Ví dụ: another verb for get a train → take a train (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "What's the opposite of a fast train?  →  ___", answer: "a slow train"}
+      - {n: 2, q: "What's the opposite of get on the train?  →  ___", answer: "get off the train"}
+      - {n: 3, q: "What's the opposite of miss a train?  →  ___", answer: "catch a train"}
+      - {n: 4, q: "Another way of saying the train that leaves at 7?  →  ___", answer: "the 7 o'clock train"}
+      - {n: 5, q: "What do you sit on in a train?  →  ___", answer: "a seat"}
+      - {n: 6, q: "Where do you catch a train?  →  ___", answer: "at a (railway) station"}
+    lines:
+      - emma: "Exercise 1. Answer the questions. The example is: what's another verb for get a train? Take a train. Pause the video and try."
+        say: "Exercise one. Answer the questions. The example is: what's another verb for get a train? Take a train. Pause the video and try."
+        vi: "Bài 1: trả lời câu hỏi."
+      - {tom: "One. A slow train. Two. Get off the train. Three. Catch a train.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. The seven o'clock train. Five. A seat. Six. At a station, or a railway station.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "Ví dụ: We can get the 7.45 train. (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "How much was the train ___?", answer: "fare"}
+      - {n: 2, q: "Our seats are in the second ___.", answer: "carriage"}
+      - {n: 3, q: "Sorry I'm late. I ___ the train to Zug.", answer: "missed"}
+      - {n: 4, q: "We can ___ a train.", answer: "get / take"}
+      - {n: 5, q: "The ___ train is at 12.00 p.m.", answer: "last / next"}
+      - {n: 6, q: "We ___ for the train in the café.", answer: "waited / wait"}
+      - {n: 7, q: "Have a look at the ___. I think there's a train to London at 6.15.", answer: "timetable"}
+      - {n: 8, q: "It's a long ___ from Lisbon to Paris.", answer: "journey"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. The example is: we can get the seven forty-five train. Pause the video and try."
+        say: "Exercise two. Complete the sentences. The example is: we can get the seven forty-five train. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu."
+      - {tom: "One. How much was the train fare? Two. In the second carriage. Three. I missed the train to Zug.", say: "One. How much was the train fare? Two. In the second carriage. Three. I missed the train to Zoog.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. We can get, or take, a train. Five. The last train, or the next train. Six. We waited, or we wait, for the train.", reveal: [4, 5, 6], focus: 5}
+      - {tom: "Seven. Have a look at the timetable. Eight. It's a long journey.", reveal: [7, 8], focus: 7}
+
+  - kind: bullets
+    chapter: "Mua vé tàu"
+    heading: "B · Buying a ticket"
+    heading_vi: "Hội thoại tr. 81 — Emma đọc hành khách (P), Tom đọc nhân viên phòng vé (O)"
+    image: {pdf: course-book, page: 82, clip: [27, 26, 241, 230]}
+    items:
+      - {en: "a passenger · the ticket office", vi: "hành khách · phòng bán vé", box: [28, 62, 239, 88]}
+      - {en: "A single to Cardiff, please. — That's £10.", vi: "Một vé một chiều đi Cardiff. — 10 bảng.", box: [28, 88, 239, 113]}
+      - {en: "When's the next train? — There's one at 10.07.", vi: "Chuyến tiếp theo lúc mấy giờ? — 10 giờ 07.", box: [28, 111, 239, 135]}
+      - {en: "Do I have to change? — No, it's direct.", vi: "Có phải đổi tàu không? — Không, đi thẳng.", box: [28, 134, 239, 158]}
+      - {en: "When does it get to Cardiff? — 10.56.", vi: "Mấy giờ đến Cardiff? — 10 giờ 56.", box: [28, 157, 239, 192]}
+      - {en: "Which platform is it? — Platform 6.", vi: "Sân ga số mấy? — Sân ga 6.", box: [28, 191, 239, 215]}
+    lines:
+      - {emma: "Now part B: buying a ticket. It's half past nine. A passenger is talking to someone at the ticket office at Bristol station. I'm the passenger.", focus: 0, vi: "passenger: hành khách · ticket office: phòng bán vé"}
+      - {emma: "A single to Cardiff, please.", focus: 1}
+      - {tom: "That's ten pounds, please.", focus: 1}
+      - {emma: "Right, and when's the next train?", focus: 2}
+      - {tom: "There's one at ten oh seven.", focus: 2}
+      - {emma: "Fine. Do I have to change?", focus: 3}
+      - {tom: "No, it's direct.", focus: 3}
+      - {emma: "That's good. And when does it get to Cardiff?", focus: 4}
+      - {tom: "Ten fifty-six.", focus: 4}
+      - {emma: "OK. And which platform is it?", focus: 5}
+      - {tom: "Platform six.", focus: 5}
+      - {emma: "Right, thanks.", focus: 5}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary · buying a ticket"
+    heading_vi: "tr. 81 — single ≠ return: vé một chiều ≠ khứ hồi · change: đổi tàu · direct: đi thẳng · platform: sân ga"
+    image: {pdf: course-book, page: 82, clip: [252, 26, 486, 217]}
+    items:
+      - {box: [256, 48, 484, 72]}
+      - {box: [256, 72, 484, 96]}
+      - {box: [256, 96, 484, 133]}
+      - {box: [256, 132, 484, 145]}
+      - {box: [256, 144, 484, 157]}
+      - {box: [256, 156, 484, 180]}
+      - {box: [256, 180, 484, 193]}
+      - {box: [256, 192, 484, 215]}
+    lines:
+      - {emma: "Look at the glossary. A passenger: a person travelling, or going to travel, in a train, a bus, or a car.", focus: 0}
+      - {tom: "The ticket office: the place where you buy tickets in a station.", focus: 1}
+      - {emma: "A single, or a single ticket, is for a journey from A to B. A return is for A to B, and then from B back to A.", say: "A single, or a single ticket, is for a journey from eigh to bee. A return is for eigh to bee, and then from bee back to eigh.", focus: 2, vi: "single: vé một chiều · return: vé khứ hồi"}
+      - {tom: "The next train is the first one after now.", focus: 3}
+      - {emma: "Change trains: get off one train, and get on another.", focus: 4, vi: "change (trains): đổi tàu"}
+      - {tom: "A journey is direct if you don't need to change trains.", focus: 5, vi: "direct: đi thẳng"}
+      - {emma: "Get to means arrive at, or arrive in. The opposite is leave.", focus: 6, vi: "get to = arrive: đến"}
+      - {tom: "And the platform: the part of the station where you get on and off the train.", focus: 7, vi: "platform: sân ga"}
+
+  - kind: figure
+    chapter: "Spotlight: đặt trước"
+    heading: "Spotlight · book something in advance"
+    heading_vi: "tr. 81 — book / reserve (in advance): đặt trước — vé tàu, phòng khách sạn, bàn ở nhà hàng"
+    image: {pdf: course-book, page: 82, clip: [252, 217, 486, 308]}
+    items:
+      - {box: [256, 245, 484, 282]}
+      - {box: [256, 270, 484, 295]}
+      - {box: [256, 293, 484, 306]}
+    lines:
+      - {emma: "Look at the spotlight. If you book a seat in advance, you buy a ticket days or weeks before you travel, with a seat number on the ticket.", focus: 0, vi: "book a seat (in advance): đặt chỗ trước"}
+      - {tom: "In a hotel, you can book a room, and in a restaurant, you can book a table.", focus: 1}
+      - {emma: "You can also say reserve: reserve a seat, a room, or a table.", focus: 2, vi: "reserve = book: đặt trước"}
+      - {tom: "Before Tết, I always book my coach ticket to Da Lat in advance. Everyone goes home then!", say: "Before Tet, I always book my coach ticket to Dah Lot in advance. Everyone goes home then!", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 3: hoàn thành câu hỏi"
+    heading: "Exercise 3 · Complete the questions using words from the box"
+    heading_vi: "direct · London · office · train · is it · return · advance · seat — ví dụ: Which platform is it? (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "Can I book in ___?", answer: "advance"}
+      - {n: 2, q: "Do you want a single or ___?", answer: "return"}
+      - {n: 3, q: "Is the train ___?", answer: "direct"}
+      - {n: 4, q: "When do we get to ___?", answer: "London"}
+      - {n: 5, q: "Where's the ticket ___?", answer: "office"}
+      - {n: 6, q: "When's the next ___?", answer: "train"}
+      - {n: 7, q: "Can I reserve a ___?", answer: "seat"}
+    lines:
+      - emma: "Exercise 3. Complete the questions using words from the box. The example is: which platform is it? Pause the video and try."
+        say: "Exercise three. Complete the questions using words from the box. The example is: which platform is it? Pause the video and try."
+        vi: "Bài 3: điền từ trong khung vào câu hỏi."
+      - {tom: "One. Can I book in advance? Two. Do you want a single or return? Three. Is the train direct? Four. When do we get to London?", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Where's the ticket office? Six. When's the next train? Seven. Can I reserve a seat?", reveal: [5, 6, 7], focus: 6}
+
+  - kind: figure
+    chapter: "Bài 4: bảng giờ tàu"
+    heading: "Exercise 4 · Look at the timetable"
+    heading_vi: "Bảng giờ tàu và đoạn văn tr. 81 — ⊠ = đổi tàu ở Kemble"
+    image: {pdf: course-book, page: 82, clip: [28, 436, 486, 580]}
+    items:
+      - {box: [49, 456, 392, 500]}
+      - {box: [48, 502, 484, 578]}
+    lines:
+      - {emma: "Exercise 4. Look at the timetable. The train leaves Cheltenham at eight thirty-five, from platform two, and it gets to Kemble at nine oh eight.", say: "Exercise four. Look at the timetable. The train leaves Cheltnum at eight thirty-five, from platform two, and it gets to Kemble at nine oh eight.", focus: 0}
+      - {tom: "Then you change trains, and the nine eighteen gets to London Paddington at ten forty.", focus: 0}
+      - {emma: "Now read the text, and complete it. Pause the video and try.", focus: 1}
+
+  - kind: blanks
+    chapter: "Bài 4: hoàn thành đoạn văn"
+    heading: "Exercise 4 · Complete the text"
+    heading_vi: "Ví dụ: There isn't a direct train. (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "There isn't a direct train, so I have to ___ at Kemble.", answer: "change"}
+      - {n: 2, q: "The train ___ Cheltenham at 8.35", answer: "leaves"}
+      - {n: 3, q: "from ___ 2,", answer: "platform"}
+      - {n: 4, q: "and it ___ to Kemble at 9.08.", answer: "gets"}
+      - {n: 5, q: "Then I have to catch the 9.18, which gets ___ London Paddington at 10.40.", answer: "to"}
+      - {n: 6, q: "A ___ ticket costs £22,", answer: "single"}
+      - {n: 7, q: "but I can get a return for £40 if I book in ___.", answer: "advance"}
+    lines:
+      - {tom: "One. I have to change at Kemble. Two. The train leaves Cheltenham. Three. From platform two. Four. It gets to Kemble.", say: "One. I have to change at Kemble. Two. The train leaves Cheltnum. Three. From platform two. Four. It gets to Kemble.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Which gets to London Paddington. Six. A single ticket costs twenty-two pounds. Seven. If I book in advance.", reveal: [5, 6, 7], focus: 6}
+      - {emma: "Notice: a single is twenty-two pounds, but a return is only forty, if you book in advance. That's very British!", focus: 6, vi: "Ở Anh, đặt trước thường rẻ hơn nhiều."}
+
+  - kind: qa
+    chapter: "Nói 1: chuyến tàu gần đây"
+    heading: "Speaking 1 · Exercise 5: your last train journey"
+    heading_vi: "Bài 5 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "When was your last train journey?"
+        a: "Last summer. I don't often take the train, because there's no train to Da Lat."
+        ask: emma
+        by: tom
+        phrases: ["Last summer.", "I don't often…"]
+      - q: "Where did you go, and why?"
+        a: "I went to Nha Trang with my two flatmates. We wanted three days at the beach."
+        ask: emma
+        by: tom
+        phrases: ["I went to … with…", "We wanted…"]
+      - q: "What was the fare?"
+        a: "About three hundred thousand dong each, for a seat."
+        ask: emma
+        by: tom
+        phrases: ["About … each"]
+      - q: "Was it direct, or did you have to change trains?"
+        a: "It was direct. It took about eight hours, but the seats were comfortable."
+        ask: emma
+        by: tom
+        phrases: ["It was direct.", "It took about…"]
+      - q: "Do you book in advance, Emma?"
+        a: "Yes, I always do, because you get reduced prices. In England, train tickets are very expensive."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I always do, because…", "reduced prices"]
+    lines:
+      - {emma: "Exercise 5 is about you. Tom, when was your last train journey?", say: "Exercise five is about you. Tom, when was your last train journey?", focus: 0}
+      - {tom: "Last summer. I don't often take the train, because there's no train to Da Lat.", say: "Last summer. I don't often take the train, because there's no train to Dah Lot.", reveal: 0, vi: "Hè năm ngoái. Tom ít đi tàu vì không có tàu về Đà Lạt."}
+      - {emma: "Where did you go, and why?", focus: 1}
+      - {tom: "I went to Nha Trang with my two flatmates. We wanted three days at the beach.", say: "I went to Nah Trang with my two flatmates. We wanted three days at the beach.", reveal: 1, vi: "Đi Nha Trang với hai bạn cùng phòng, ba ngày ở biển."}
+      - {emma: "What was the fare?", focus: 2}
+      - {tom: "About three hundred thousand dong each, for a seat.", reveal: 2, vi: "Khoảng 300.000 đồng mỗi người, vé ngồi."}
+      - {emma: "Was it direct, or did you have to change trains?", focus: 3}
+      - {tom: "It was direct. It took about eight hours, but the seats were comfortable.", reveal: 3, vi: "Đi thẳng, khoảng tám tiếng; ghế ngồi êm."}
+      - {tom: "Do you book in advance, Emma?", focus: 4}
+      - {emma: "Yes, I always do, because you get reduced prices. In England, train tickets are very expensive.", reveal: 4, vi: "Luôn đặt trước vì được giảm giá; ở Anh vé tàu rất đắt."}
+
+  - kind: bullets
+    chapter: "Tàu hỏa ở Việt Nam"
+    heading: "Trains in Vietnam"
+    heading_vi: "Thêm ngoài sách — nói về đường sắt Việt Nam bằng tiếng Anh"
+    items:
+      - {en: "the North–South railway: Hanoi to Ho Chi Minh City", vi: "đường sắt Bắc – Nam: Hà Nội – TP. HCM"}
+      - {en: "about 1,700 kilometres · more than 30 hours", vi: "khoảng 1.700 km · hơn 30 tiếng"}
+      - {en: "a sleeper · a soft seat · a hard seat", vi: "giường nằm · ghế mềm · ghế cứng"}
+      - {en: "Da Lat station: a short tourist train to Trai Mat", vi: "Ga Đà Lạt: tàu du lịch đi Trại Mát"}
+      - {en: "a metro line: Ben Thanh to Suoi Tien", vi: "tuyến metro Bến Thành – Suối Tiên"}
+    lines:
+      - {tom: "In Vietnam, the main railway goes from Hanoi to Ho Chi Minh City.", say: "In Vietnam, the main railway goes from Ha Noi to Ho Chee Min City.", focus: 0}
+      - {emma: "It's about seventeen hundred kilometres, and the journey takes more than thirty hours!", focus: 1}
+      - {tom: "So on a long journey, most people book a sleeper. You can also choose a soft seat, or a hard seat.", focus: 2, vi: "sleeper: giường nằm"}
+      - {emma: "Tom, is there a train to Da Lat?", say: "Tom, is there a train to Dah Lot?", focus: 3}
+      - {tom: "Not from here, no. But Da Lat has a beautiful old railway station, and a short tourist train goes to Trai Mat village.", say: "Not from here, no. But Dah Lot has a beautiful old railway station, and a short tourist train goes to Chai Mat village.", focus: 3}
+      - {emma: "And Ho Chi Minh City has a new metro line, from Ben Thanh to Suoi Tien. I love it: it's fast and clean!", say: "And Ho Chee Min City has a new metro line, from Ben Tahn to Soo-ee Tee-en. I love it: it's fast and clean!", focus: 4, vi: "metro: tàu điện ngầm / đường sắt đô thị"}
+
+  - kind: bullets
+    chapter: "Thông báo ở nhà ga"
+    heading: "Station announcements"
+    heading_vi: "Thêm ngoài sách — nghe giờ tàu và số sân ga, hay gặp ở IELTS Listening"
+    items:
+      - {en: "The train at platform 4 is the 10.15 to Bristol.", vi: "Tàu ở sân ga 4 là chuyến 10 giờ 15 đi Bristol."}
+      - {en: "The 9.30 to London is delayed by 20 minutes.", vi: "Chuyến 9 giờ 30 đi London trễ 20 phút."}
+      - {en: "The 11.05 to Cardiff is cancelled.", vi: "Chuyến 11 giờ 05 đi Cardiff bị hủy."}
+      - {en: "Passengers for London, please change at Kemble.", vi: "Hành khách đi London xin đổi tàu ở Kemble."}
+      - {en: "Mind the gap.", vi: "Chú ý khoảng trống giữa tàu và sân ga."}
+    lines:
+      - {emma: "At a British station, you hear announcements. Listen. The train now standing at platform four is the ten fifteen to Bristol.", focus: 0, vi: "announcement: thông báo"}
+      - {tom: "Delayed means late. The nine thirty to London is delayed by twenty minutes.", focus: 1, vi: "delayed: bị trễ"}
+      - {emma: "Cancelled means there's no train. The eleven oh five to Cardiff is cancelled.", focus: 2, vi: "cancelled: bị hủy"}
+      - {tom: "Passengers for London, please change at Kemble.", focus: 3}
+      - {emma: "And on the London Underground, you always hear: mind the gap!", focus: 4, vi: "the Underground: tàu điện ngầm London"}
+      - {tom: "Announcements like these are common in IELTS listening, so listen carefully for the times and the platform numbers.", say: "Announcements like these are common in eye-elts listening, so listen carefully for the times and the platform numbers.", focus: 4}
+
+  - kind: practice
+    chapter: "Đóng vai: mua vé"
+    heading: "Role-play · You are the passenger. Tom is at the ticket office."
+    heading_vi: "Tạm dừng video sau mỗi câu của Tom và trả lời như hành khách"
+    items:
+      - {q: "Good morning. Where would you like to go?", hint: "A ticket to Bristol, please."}
+      - {q: "Single or return?", hint: "A return, please."}
+      - {q: "That's thirty pounds. When do you want to travel?", hint: "Today. When's the next train?"}
+      - {q: "There's one at 10.15. It's direct.", hint: "Great. Which platform is it?"}
+      - {q: "Platform 3. Would you like to reserve a seat?", hint: "Yes, please. / No, thanks."}
+    lines:
+      - emma: "Now a role-play. Tom works at the ticket office, and you're the passenger. Pause the video after each line, and answer."
+        vi: "Đóng vai: Tom ở phòng bán vé, bạn là hành khách."
+      - {tom: "Good morning. Where would you like to go?", focus: 0, pause: 0.5}
+      - {tom: "Single, or return?", focus: 1, pause: 0.5}
+      - {tom: "That's thirty pounds. When do you want to travel?", focus: 2, pause: 0.5}
+      - {tom: "There's one at ten fifteen. It's direct.", focus: 3, pause: 0.5}
+      - {tom: "Platform three. Would you like to reserve a seat?", focus: 4, pause: 1.0}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về tàu xe — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I lost the train this morning.  →  ___", answer: "I missed the train this morning."}
+      - {n: 2, q: "We got in the train at platform 4.  →  ___", answer: "We got on the train at platform 4."}
+      - {n: 3, q: "The train arrives to Hanoi at 6 a.m.  →  ___", answer: "The train gets to / arrives in Hanoi at 6 a.m."}
+      - {n: 4, q: "A ticket go and back, please.  →  ___", answer: "A return ticket, please."}
+      - {n: 5, q: "Our travel by train was very long.  →  ___", answer: "Our train journey was very long."}
+      - {n: 6, q: "Do I have to change the train?  →  ___", answer: "Do I have to change trains?"}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I missed the train: lose is for things, like a key. Two. We got on the train, not in.", reveal: [1, 2], focus: 1, vi: "miss a train (lỡ tàu) — không dùng lose"}
+      - {tom: "Three. It gets to Hanoi, or it arrives in Hanoi. Four. A return ticket, please.", say: "Three. It gets to Ha Noi, or it arrives in Ha Noi. Four. A return ticket, please.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. Our train journey: a journey is one trip. Six. Change trains, with an s.", say: "Five. Our train journey: a journey is one trip. Six. Change trains, with an ess.", reveal: [5, 6], focus: 5, vi: "travel thường là động từ; một chuyến đi là a journey / a trip"}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a journey that you remember"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể ở quá khứ đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: where you went", vi: "bạn đã đi đâu"}
+      - {en: "how you travelled", vi: "bạn đi bằng gì"}
+      - {en: "who you went with", vi: "bạn đi với ai"}
+      - {en: "and explain why you remember it", vi: "và giải thích vì sao bạn nhớ chuyến đi đó"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a journey that you remember."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a journey that you remember."
+        vi: "Luyện nói chung kiểu Part 2: một chuyến đi bạn còn nhớ."
+      - {emma: "You should say where you went,", focus: 0}
+      - {emma: "how you travelled,", focus: 1}
+      - {emma: "who you went with,", focus: 2}
+      - {emma: "and explain why you remember it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — quá khứ đơn, từ về tàu hỏa"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a short train journey from Da Lat railway station to Trai Mat, a small village about seven kilometres away. I was ten years old."
+        say: "I'd like to talk about a short train journey from Dah Lot railway station to Chai Mat, a small village about seven kilometres away. I was ten years old."
+        note: "where"
+      - text: "We took the old tourist train. It was very slow, with wooden seats, and the journey took about thirty minutes."
+        note: "how"
+      - text: "I went with my grandfather. He told me stories about the railway when he was young."
+        note: "who with"
+      - text: "I remember it because it was my first train journey, and the views of the hills and the vegetable gardens were beautiful. And at Trai Mat, my grandfather bought me a big bag of strawberries!"
+        say: "I remember it because it was my first train journey, and the views of the hills and the vegetable gardens were beautiful. And at Chai Mat, my grandfather bought me a big bag of strawberries!"
+        note: "why"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about a train journey from Ho Chi Minh City to Phan Thiet, near the beach at Mui Ne. I went there last April."
+        say: "I'd like to talk about a train journey from Ho Chee Min City to Fan Tee-et, near the beach at Moo-ee Neh. I went there last April."
+        note: "where"
+      - text: "I don't ride a motorbike, and I wanted to see the countryside, so I took the train. I booked my ticket in advance on an app, and the journey took about four hours."
+        note: "how"
+      - text: "I travelled alone, but I sat next to a Vietnamese family, and they were very friendly. I practised my Vietnamese with their children!"
+        note: "who with"
+      - text: "I remember it because the family shared their food with me, and we passed lots of dragon fruit farms. It was a lovely start to my holiday."
+        note: "why"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a journey that you remember.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a journey that you remember"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Where did you go?", hint: "I'd like to talk about a journey to … · I went there last …"}
+      - {q: "How did you travel?", hint: "I took the train / a coach / … · It took about … hours."}
+      - {q: "Who did you go with?", hint: "I went with my family / friends / … · I travelled alone."}
+      - {q: "Why do you remember it?", hint: "I remember it because …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple, and the travel words from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple, and the travel words from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Where did you go?", focus: 0, pause: 0.5}
+      - {emma: "How did you travel?", focus: 1, pause: 0.5}
+      - {emma: "Who did you go with?", focus: 2, pause: 0.5}
+      - {emma: "Why do you remember it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · travelling by train"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do some people prefer trains to planes?"
+        a: "Trains are comfortable, and you can see the countryside. And the station is usually in the city centre, so it's easy to get to."
+        ask: emma
+        by: tom
+        phrases: ["… are comfortable, and…", "so it's easy to…"]
+      - q: "Should governments spend more money on railways?"
+        a: "Yes, I think so. Trains are better for the environment than cars and planes, and they help with traffic jams."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I think so.", "… are better for the environment than…"]
+      - q: "How will people travel in the future?"
+        a: "I think more people will use electric trains and buses. Ho Chi Minh City has a new metro line, so it's already changing."
+        ask: emma
+        by: tom
+        phrases: ["I think more people will…", "so it's already changing"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Why do some people prefer trains to planes?", focus: 0}
+      - {tom: "Trains are comfortable, and you can see the countryside. And the station is usually in the city centre, so it's easy to get to.", reveal: 0, vi: "Tàu thoải mái, ngắm được cảnh; ga thường ở trung tâm nên dễ đến."}
+      - {tom: "Should governments spend more money on railways?", focus: 1}
+      - {emma: "Yes, I think so. Trains are better for the environment than cars and planes, and they help with traffic jams.", reveal: 1, vi: "Có: tàu tốt cho môi trường hơn ô tô, máy bay, và giảm kẹt xe."}
+      - {emma: "How will people travel in the future?", focus: 2}
+      - {tom: "I think more people will use electric trains and buses. Ho Chi Minh City has a new metro line, so it's already changing.", say: "I think more people will yooz electric trains and buses. Ho Chee Min City has a new metro line, so it's already changing.", reveal: 2, vi: "Nhiều người sẽ đi tàu, xe buýt điện; TP. HCM đã có metro."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ ở tr. 80–81, nhìn tranh, nói lại"
+    items:
+      - {en: "train · carriage · seat · platform · timetable · (railway) station", vi: "tàu · toa · ghế · sân ga · bảng giờ · ga"}
+      - {en: "get on ≠ get off · miss ≠ catch a train · wait for a train", vi: "lên ≠ xuống · lỡ ≠ kịp tàu · đợi tàu"}
+      - {en: "a single ≠ a return · the fare · a journey · a fast ≠ a slow train", vi: "vé một chiều ≠ khứ hồi · tiền vé · chuyến đi"}
+      - {en: "Do I have to change? · Is it direct? · When does it get to …?", vi: "đổi tàu? · đi thẳng? · mấy giờ đến?"}
+      - {en: "book / reserve a seat in advance · the last train", vi: "đặt chỗ trước · chuyến cuối"}
+      - {en: "Next: Unit 31 · Directions", vi: "Tiếp theo: Unit 31 · Hỏi và chỉ đường"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A train, a carriage, a seat, the platform, the timetable, and the station.", focus: 0}
+      - {tom: "Get on and get off. Miss a train, or catch a train. Wait for a train.", focus: 1}
+      - {emma: "A single or a return, the fare, a journey, and a fast or a slow train.", focus: 2}
+      - {tom: "Do I have to change? Is it direct? When does it get to Cardiff?", focus: 3}
+      - {emma: "Book a seat in advance, so you don't miss the last train!", focus: 4}
+      - {tom: "Next time, Unit 31: directions. See you then!", say: "Next time, Unit thirty-one: directions. See you then!", focus: 5}

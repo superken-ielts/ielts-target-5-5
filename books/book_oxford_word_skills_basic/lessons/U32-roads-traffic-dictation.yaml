@@ -1,0 +1,302 @@
+# Video nghe – viết (dictation) Unit 32 · Roads and traffic — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U32-roads-traffic-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U32 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 32 có 32 mục, gồm accident (sách in 29) và kilometres (sách in 31) xếp theo trang thật (tr. 85).
+id: U32-roads-traffic-dictation
+activity: U32-words
+title: "Unit 32 · Roads and traffic"
+subtitle: "Dictation · listen and write: roads and traffic"
+title_vi: "Nghe – viết 10 phút: đường sá và giao thông — từ trong sách, từ thêm, câu giao tiếp"
+tag: "GETTING AROUND · UNIT 32"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 32: Roads and traffic. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-two: Roads and traffic. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 32: đường sá và giao thông. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 26 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-six words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 26 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "junction", "vi": "giao lộ", "ex": "Turn left at the next junction.", "w": ["junction"]}
+      - {"n": 2, "answer": "traffic", "vi": "xe cộ", "ex": "The traffic is always bad in the morning.", "w": ["traffic"]}
+      - {"n": 3, "answer": "roundabout", "vi": "vòng xoay", "ex": "Go round the roundabout and take the second exit.", "w": ["roundabout"]}
+      - {"n": 4, "answer": "traffic jam", "vi": "kẹt xe", "ex": "We were late because of the traffic jam.", "w": ["traffic jam"]}
+      - {"n": 5, "answer": "car park", "vi": "bãi đỗ xe", "ex": "The car park was full.", "w": ["car park", "park"]}
+      - {"n": 6, "answer": "speed camera", "vi": "camera bắn tốc độ", "ex": "There are speed cameras on the main road.", "w": ["speed camera"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. junction. junction. Turn left at the next junction. Turn left at the next junction.", "focus": 0}
+      - {"emma": "Two. traffic. traffic. The traffic is always bad in the morning. The traffic is always bad in the morning.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. roundabout. roundabout. Go round the roundabout and take the second exit. Go round the roundabout and take the second exit.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. traffic jam. traffic jam. We were late because of the traffic jam. We were late because of the traffic jam.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. car park. car park. The car park was full. The car park was full.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. speed camera. speed camera. There are speed cameras on the main road. There are speed cameras on the main road.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "main road", "vi": "đường lớn", "ex": "We live on a noisy main road.", "w": ["main road", "road"]}
+      - {"n": 8, "answer": "road sign", "vi": "biển chỉ đường", "ex": "Can you read that road sign?", "w": ["road sign", "sign"]}
+      - {"n": 9, "answer": "petrol station", "vi": "cây xăng", "ex": "Where's the nearest petrol station?", "w": ["petrol station", "station"]}
+      - {"n": 10, "answer": "traffic lights", "vi": "đèn giao thông", "ex": "Stop at the traffic lights.", "w": ["traffic light"]}
+      - {"n": 11, "answer": "pedestrian crossing", "vi": "vạch qua đường", "ex": "Cross the road at the pedestrian crossing.", "w": ["pedestrian crossing", "crossing"]}
+      - {"n": 12, "answer": "pavement", "vi": "vỉa hè", "ex": "Walk on the pavement, not in the road.", "w": ["pavement"]}
+    lines:
+      - {"emma": "Seven. main road. main road. We live on a noisy main road. We live on a noisy main road.", "focus": 0}
+      - {"emma": "Eight. road sign. road sign. Can you read that road sign? Can you read that road sign?", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. petrol station. petrol station. Where's the nearest petrol station? Where's the nearest petrol station?", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. traffic lights. traffic lights. Stop at the traffic lights. Stop at the traffic lights.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. pedestrian crossing. pedestrian crossing. Cross the road at the pedestrian crossing. Cross the road at the pedestrian crossing.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. pavement. pavement. Walk on the pavement, not in the road. Walk on the pavement, not in the road.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "How far is it?", "vi": "Bao xa?", "ex": "How far is it from London to Bath?", "w": ["how far", "far"]}
+      - {"n": 14, "answer": "kilometres", "vi": "ki-lô-mét", "ex": "It's about a hundred and eighty-five kilometres.", "w": ["kilometres"]}
+      - {"n": 15, "answer": "miles an hour", "vi": "dặm một giờ", "ex": "The speed limit is seventy miles an hour.", "w": ["miles an hour"]}
+      - {"n": 16, "answer": "motorway", "vi": "đường cao tốc", "ex": "Take the motorway from London.", "w": ["motorway", "take"]}
+      - {"n": 17, "answer": "speed limit", "vi": "tốc độ tối đa", "ex": "What's the speed limit here?", "w": ["speed limit", "limit"]}
+      - {"n": 18, "answer": "busy", "vi": "đông", "ex": "The motorways are very busy.", "w": ["busy"]}
+    lines:
+      - {"emma": "Thirteen. How far is it?. How far is it?. How far is it from London to Bath? How far is it from London to Bath?", "focus": 0}
+      - {"emma": "Fourteen. kilometres. kilometres. It's about a hundred and eighty-five kilometres. It's about a hundred and eighty-five kilometres.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. miles an hour. miles an hour. The speed limit is seventy miles an hour. The speed limit is seventy miles an hour.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. motorway. motorway. Take the motorway from London. Take the motorway from London.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. speed limit. speed limit. What's the speed limit here? What's the speed limit here?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. busy. busy. The motorways are very busy. The motorways are very busy.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "quiet", "vi": "vắng", "ex": "We took a quiet country road.", "w": ["quiet"]}
+      - {"n": 20, "answer": "rush hour", "vi": "giờ cao điểm", "ex": "There are traffic jams in the rush hour.", "w": ["rush hour"]}
+      - {"n": 21, "answer": "accident", "vi": "tai nạn", "ex": "There was an accident on the motorway.", "w": ["accident"]}
+      - {"n": 22, "answer": "lane", "vi": "làn đường", "ex": "There are three lanes on most motorways.", "w": ["lane"]}
+    lines:
+      - {"emma": "Nineteen. quiet. quiet. We took a quiet country road. We took a quiet country road.", "focus": 0}
+      - {"emma": "Twenty. rush hour. rush hour. There are traffic jams in the rush hour. There are traffic jams in the rush hour.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. accident. accident. There was an accident on the motorway. There was an accident on the motorway.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. lane. lane. There are three lanes on most motorways. There are three lanes on most motorways.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–26)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "overtake", "vi": "vượt", "ex": "It's easy to overtake on the motorway.", "w": ["overtake"]}
+      - {"n": 24, "answer": "drive", "vi": "lái xe", "ex": "Remember to drive on the left in Britain.", "w": ["drive"]}
+      - {"n": 25, "answer": "drive a car, ride a motorbike", "vi": "lái ô tô, đi xe máy", "ex": "Tom doesn't drive a car, but he rides a motorbike."}
+      - {"n": 26, "answer": "the M4", "vi": "cao tốc M4", "ex": "Take the M4 from London."}
+    lines:
+      - {"emma": "Twenty-three. overtake. overtake. It's easy to overtake on the motorway. It's easy to overtake on the motorway.", "focus": 0}
+      - {"emma": "Twenty-four. drive. drive. Remember to drive on the left in Britain. Remember to drive on the left in Britain.", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. drive a car, ride a motorbike. drive a car, ride a motorbike. Tom doesn't drive a car, but he rides a motorbike. Tom doesn't drive a car, but he rides a motorbike.", "focus": 2, "reveal": [24]}
+      - {"emma": "Twenty-six. the M4. the M4. Take the M4 from London. Take the M4 from London.", "focus": 3, "reveal": [25]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [26]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (27–32)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 27, "answer": "helmet", "vi": "mũ bảo hiểm", "ex": "Always wear a helmet on a motorbike."}
+      - {"n": 28, "answer": "horn", "vi": "còi xe", "ex": "Drivers beep their horns all the time."}
+      - {"n": 29, "answer": "flooded", "vi": "ngập nước", "ex": "The street was flooded after the rain."}
+      - {"n": 30, "answer": "expressway", "vi": "đường cao tốc (Việt Nam)", "ex": "The new expressway is very fast."}
+      - {"n": 31, "answer": "traffic police", "vi": "cảnh sát giao thông", "ex": "The traffic police stopped the car."}
+      - {"n": 32, "answer": "crash", "vi": "va chạm", "ex": "Two cars crashed at the junction."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-seven. helmet. helmet. Always wear a helmet on a motorbike. Always wear a helmet on a motorbike.", "focus": 0}
+      - {"tom": "Twenty-eight. horn. horn. Drivers beep their horns all the time. Drivers beep their horns all the time.", "focus": 1, "reveal": [27]}
+      - {"tom": "Twenty-nine. flooded. flooded. The street was flooded after the rain. The street was flooded after the rain.", "focus": 2, "reveal": [28]}
+      - {"tom": "Thirty. expressway. expressway. The new expressway is very fast. The new expressway is very fast.", "focus": 3, "reveal": [29]}
+      - {"tom": "Thirty-one. traffic police. traffic police. The traffic police stopped the car. The traffic police stopped the car.", "focus": 4, "reveal": [30]}
+      - {"tom": "Thirty-two. crash. crash. Two cars crashed at the junction. Two cars crashed at the junction.", "focus": 5, "reveal": [31]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [32]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (33–38)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 33, "answer": "speed", "vi": "tốc độ", "ex": "Drive at a safe speed."}
+      - {"n": 34, "answer": "slow down", "vi": "giảm tốc độ", "ex": "Slow down near the school."}
+      - {"n": 35, "answer": "seat belt", "vi": "dây an toàn", "ex": "Always wear your seat belt."}
+      - {"n": 36, "answer": "driving licence", "vi": "bằng lái xe", "ex": "You need a driving licence to drive."}
+      - {"n": 37, "answer": "parking space", "vi": "chỗ đỗ xe", "ex": "I can't find a parking space."}
+      - {"n": 38, "answer": "one-way street", "vi": "đường một chiều", "ex": "You can't turn left: it's a one-way street."}
+    lines:
+      - {"tom": "Thirty-three. speed. speed. Drive at a safe speed. Drive at a safe speed.", "focus": 0}
+      - {"tom": "Thirty-four. slow down. slow down. Slow down near the school. Slow down near the school.", "focus": 1, "reveal": [33]}
+      - {"tom": "Thirty-five. seat belt. seat belt. Always wear your seat belt. Always wear your seat belt.", "focus": 2, "reveal": [34]}
+      - {"tom": "Thirty-six. driving licence. driving licence. You need a driving licence to drive. You need a driving licence to drive.", "focus": 3, "reveal": [35]}
+      - {"tom": "Thirty-seven. parking space. parking space. I can't find a parking space. I can't find a parking space.", "focus": 4, "reveal": [36]}
+      - {"tom": "Thirty-eight. one-way street. one-way street. You can't turn left: it's a one-way street. You can't turn left: it's a one-way street.", "focus": 5, "reveal": [37]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [38]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (39–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 39, "answer": "bend", "vi": "khúc cua", "ex": "Drive slowly on the bend."}
+      - {"n": 40, "answer": "motorbike", "vi": "xe máy", "ex": "There are millions of motorbikes in Vietnam."}
+      - {"n": 41, "answer": "pollution", "vi": "ô nhiễm", "ex": "Traffic causes a lot of pollution."}
+      - {"n": 42, "answer": "cyclist", "vi": "người đi xe đạp", "ex": "The cyclist stopped at the red light."}
+    lines:
+      - {"tom": "Thirty-nine. bend. bend. Drive slowly on the bend. Drive slowly on the bend.", "focus": 0}
+      - {"tom": "Forty. motorbike. motorbike. There are millions of motorbikes in Vietnam. There are millions of motorbikes in Vietnam.", "focus": 1, "reveal": [39]}
+      - {"tom": "Forty-one. pollution. pollution. Traffic causes a lot of pollution. Traffic causes a lot of pollution.", "focus": 2, "reveal": [40]}
+      - {"tom": "Forty-two. cyclist. cyclist. The cyclist stopped at the red light. The cyclist stopped at the red light.", "focus": 3, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "bus lane", "vi": "làn xe buýt", "ex": "Cars can't use the bus lane."}
+      - {"n": 44, "answer": "toll", "vi": "phí đường bộ", "ex": "You pay a toll on the expressway."}
+      - {"n": 45, "answer": "petrol", "vi": "xăng", "ex": "Petrol is expensive this year."}
+      - {"n": 46, "answer": "headlights", "vi": "đèn pha", "ex": "Turn on your headlights at night."}
+    lines:
+      - {"tom": "Forty-three. bus lane. bus lane. Cars can't use the bus lane. Cars can't use the bus lane.", "say": "Forty-three. bus lane. bus lane. Cars can't yooz the bus lane. Cars can't yooz the bus lane.", "focus": 0}
+      - {"tom": "Forty-four. toll. toll. You pay a toll on the expressway. You pay a toll on the expressway.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. petrol. petrol. Petrol is expensive this year. Petrol is expensive this year.", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. headlights. headlights. Turn on your headlights at night. Turn on your headlights at night.", "focus": 3, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [46]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 47, "answer": "How far is it to the airport?", "vi": "Đến sân bay bao xa?"}
+      - {"n": 48, "answer": "About ten kilometres.", "vi": "Khoảng mười cây số."}
+      - {"n": 49, "answer": "What's the best way to get there?", "vi": "Đi đường nào tốt nhất?"}
+      - {"n": 50, "answer": "Take the main road, and turn right at the roundabout.", "vi": "Đi đường lớn, rẽ phải ở vòng xoay."}
+      - {"n": 51, "answer": "Is the traffic bad at this time?", "vi": "Giờ này có kẹt xe không?"}
+      - {"n": 52, "answer": "Yes, it's the rush hour.", "vi": "Có, đang giờ cao điểm."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-seven. How far is it to the airport? How far is it to the airport?", "focus": 0}
+      - {"tom": "Forty-eight. About ten kilometres. About ten kilometres.", "focus": 1, "reveal": [47]}
+      - {"emma": "Forty-nine. What's the best way to get there? What's the best way to get there?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. Take the main road, and turn right at the roundabout. Take the main road, and turn right at the roundabout.", "focus": 3, "reveal": [49]}
+      - {"emma": "Fifty-one. Is the traffic bad at this time? Is the traffic bad at this time?", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. Yes, it's the rush hour. Yes, it's the rush hour.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "Sorry I'm late. There was a traffic jam.", "vi": "Xin lỗi tôi trễ. Bị kẹt xe."}
+      - {"n": 54, "answer": "Don't worry. The traffic is terrible today.", "vi": "Không sao. Hôm nay kẹt xe kinh khủng."}
+      - {"n": 55, "answer": "Is there a petrol station near here?", "vi": "Gần đây có cây xăng không?"}
+      - {"n": 56, "answer": "Yes, after the next junction.", "vi": "Có, qua giao lộ tới."}
+      - {"n": 57, "answer": "Where can I park my car?", "vi": "Tôi đỗ xe ở đâu?"}
+      - {"n": 58, "answer": "There's a car park behind the hotel.", "vi": "Có bãi đỗ xe sau khách sạn."}
+    lines:
+      - {"tom": "Fifty-three. Sorry I'm late. There was a traffic jam. Sorry I'm late. There was a traffic jam.", "focus": 0}
+      - {"emma": "Fifty-four. Don't worry. The traffic is terrible today. Don't worry. The traffic is terrible today.", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. Is there a petrol station near here? Is there a petrol station near here?", "focus": 2, "reveal": [54]}
+      - {"tom": "Fifty-six. Yes, after the next junction. Yes, after the next junction.", "focus": 3, "reveal": [55]}
+      - {"emma": "Fifty-seven. Where can I park my car? Where can I park my car?", "focus": 4, "reveal": [56]}
+      - {"tom": "Fifty-eight. There's a car park behind the hotel. There's a car park behind the hotel.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "What's the speed limit here?", "vi": "Tốc độ tối đa ở đây là bao nhiêu?"}
+      - {"n": 60, "answer": "Fifty kilometres an hour.", "vi": "Năm mươi cây số một giờ."}
+      - {"n": 61, "answer": "Be careful! There's a speed camera.", "vi": "Cẩn thận! Có camera tốc độ."}
+      - {"n": 62, "answer": "Do you ride a motorbike?", "vi": "Bạn có đi xe máy không?"}
+      - {"n": 63, "answer": "Yes, but I hate riding in the rain.", "vi": "Có, nhưng mình ghét đi xe dưới mưa."}
+      - {"n": 64, "answer": "Do you drive?", "vi": "Bạn có lái xe không?"}
+    lines:
+      - {"emma": "Fifty-nine. What's the speed limit here? What's the speed limit here?", "focus": 0}
+      - {"tom": "Sixty. Fifty kilometres an hour. Fifty kilometres an hour.", "focus": 1, "reveal": [59]}
+      - {"emma": "Sixty-one. Be careful! There's a speed camera. Be careful! There's a speed camera.", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Do you ride a motorbike? Do you ride a motorbike?", "focus": 3, "reveal": [61]}
+      - {"tom": "Sixty-three. Yes, but I hate riding in the rain. Yes, but I hate riding in the rain.", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. Do you drive? Do you drive?", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "No, I don't. I take a motorbike taxi.", "vi": "Không. Mình đi xe ôm."}
+      - {"n": 66, "answer": "Was anyone hurt in the accident?", "vi": "Có ai bị thương trong vụ tai nạn không?"}
+      - {"n": 67, "answer": "No, luckily. Everyone was OK.", "vi": "May là không. Mọi người đều ổn."}
+      - {"n": 68, "answer": "Cross at the pedestrian crossing.", "vi": "Hãy qua đường ở vạch kẻ."}
+      - {"n": 69, "answer": "Wait for the green light.", "vi": "Chờ đèn xanh."}
+      - {"n": 70, "answer": "The road is very quiet at night.", "vi": "Ban đêm đường rất vắng."}
+    lines:
+      - {"emma": "Sixty-five. No, I don't. I take a motorbike taxi. No, I don't. I take a motorbike taxi.", "focus": 0}
+      - {"emma": "Sixty-six. Was anyone hurt in the accident? Was anyone hurt in the accident?", "focus": 1, "reveal": [65]}
+      - {"tom": "Sixty-seven. No, luckily. Everyone was OK. No, luckily. Everyone was OK.", "focus": 2, "reveal": [66]}
+      - {"emma": "Sixty-eight. Cross at the pedestrian crossing. Cross at the pedestrian crossing.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. Wait for the green light. Wait for the green light.", "focus": 4, "reveal": [68]}
+      - {"tom": "Seventy. The road is very quiet at night. The road is very quiet at night.", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "Which lane should I be in?", "vi": "Tôi nên đi làn nào?"}
+      - {"n": 72, "answer": "The left lane, for the next exit.", "vi": "Làn trái, để ra lối tiếp theo."}
+      - {"n": 73, "answer": "Remember to drive on the left!", "vi": "Nhớ lái xe bên trái nhé!"}
+      - {"n": 74, "answer": "How long does it take by motorbike?", "vi": "Đi xe máy mất bao lâu?"}
+      - {"n": 75, "answer": "About twenty minutes, if there's no traffic.", "vi": "Khoảng hai mươi phút nếu không kẹt xe."}
+      - {"n": 76, "answer": "Please slow down. You're driving too fast!", "vi": "Chạy chậm lại. Bạn lái nhanh quá!"}
+    lines:
+      - {"emma": "Seventy-one. Which lane should I be in? Which lane should I be in?", "focus": 0}
+      - {"tom": "Seventy-two. The left lane, for the next exit. The left lane, for the next exit.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. Remember to drive on the left! Remember to drive on the left!", "focus": 2, "reveal": [72]}
+      - {"emma": "Seventy-four. How long does it take by motorbike? How long does it take by motorbike?", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. About twenty minutes, if there's no traffic. About twenty minutes, if there's no traffic.", "focus": 4, "reveal": [74]}
+      - {"emma": "Seventy-six. Please slow down. You're driving too fast! Please slow down. You're driving too fast!", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 33.", "say": "Well done! See you in Unit thirty-three.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 33."}
+

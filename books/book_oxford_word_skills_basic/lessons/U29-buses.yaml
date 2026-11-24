@@ -1,0 +1,384 @@
+# Video Oxford Word Skills Basic · Unit 29 — I can get around on buses (sách in tr. 78–79, Answer key tr. 211).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–5. Bài 1–3 theo Answer key tr. 211 (bài 3: câu có hai chỗ trống tách thành hai mục). Bài 4 (ABOUT YOU):
+# Tom và Emma hỏi đáp (cảnh Nói 1); Emma dùng câu trả lời mẫu "from a British person" của Answer key cho nhà bố mẹ ở Anh. Bài 5
+# (Test yourself): che câu trả lời, nhìn bản đồ — video hỏi thêm câu mới về cùng bản đồ, tạm dừng rồi nghe Tom.
+# Thêm ngoài sách: đi lại ở Việt Nam (xe buýt, xe khách, xe giường nằm, xe ôm đặt qua ứng dụng; Does this bus go to …? How much
+# is the fare?); Nghe và viết; Nói 2 (Part 1 "Public transport").
+# Hình trong sách: bản đồ tuyến 24 và 16 (khung theo trạm, bảng giờ), bảng hỏi – đáp (khung theo dòng, đo bằng máy), Glossary
+# (tranh near / outside) và Spotlight How long does it take?; bản đồ lần nữa ở bài 5.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom đi bộ đến trường (U17), về Đà Lạt bằng xe khách khoảng bảy tiếng
+# (U20); mới: trạm xe buýt ngay trước hiệu thuốc dưới căn hộ (hiệu thuốc: U23), tuyến 19 và 33, khoảng 15 phút một chuyến, Tom
+# xem giờ trên ứng dụng; về Đà Lạt thường đi xe khách đêm, ngủ suốt đường. Emma đi làm bằng xe ôm công nghệ khoảng 20 phút (U17);
+# mới: nhà bố mẹ ở Anh có trạm xe buýt cuối đường, thỉnh thoảng đi xe buýt vào trung tâm thị trấn, bốn trạm, 5–10 phút (câu mẫu
+# Answer key).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U29-buses.yaml
+id: U29-buses
+activity: U29-words
+title: "Unit 29 · Buses"
+subtitle: "I can get around on buses"
+title_vi: "Đi xe buýt: bus route, bus stop, get on / get off, timetable, every 10 minutes, How long does it take? — đi lại ở Việt Nam"
+tag: "GETTING AROUND · UNIT 29"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 29, the first unit in the Getting around module: buses. We'll read a bus map, ask questions about buses, and talk about how you get around."
+        say: "Welcome to Unit twenty-nine, the first unit in the Getting around module: buses. We'll read a bus map, ask questions about buses, and talk about how you get around."
+        vi: "Unit 29, unit đầu của module Getting around (đi lại): xe buýt — đọc bản đồ tuyến, hỏi về xe buýt."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Bản đồ tuyến xe buýt"
+    heading: "Bus routes 24 and 16"
+    heading_vi: "Bản đồ trong sách tr. 78 — route: tuyến xe · you are here: bạn đang ở đây"
+    image: {pdf: course-book, page: 79, clip: [25, 70, 482, 274]}
+    items:
+      - {box: [27, 116, 94, 154]}
+      - {box: [46, 100, 154, 172]}
+      - {box: [123, 155, 174, 195]}
+      - {box: [213, 155, 260, 195]}
+      - {box: [243, 120, 282, 163]}
+      - {box: [338, 120, 400, 163]}
+      - {box: [396, 85, 480, 127]}
+      - {box: [280, 235, 342, 274]}
+      - {box: [344, 235, 390, 274]}
+      - {box: [382, 185, 480, 229]}
+      - {box: [30, 219, 188, 273]}
+    lines:
+      - emma: "Look at page seventy-eight. This is a map of two bus routes: the 24 and the 16. A route is the way a bus goes."
+        say: "Look at page seventy-eight. This is a map of two bus routes: the twenty-four and the six-teen. A route is the way a bus goes."
+        focus: 0
+        vi: "route: tuyến (đường xe chạy)"
+      - {tom: "You are here, at the museum. Both buses start here.", focus: 1, vi: "you are here: bạn đang ở đây"}
+      - {emma: "The next stop is the cinema.", focus: 2}
+      - {tom: "Then the school. Both buses stop there too.", focus: 3}
+      - {emma: "After the school, the 16 goes to the park,", say: "After the school, the six-teen goes to the park,", focus: 4}
+      - {tom: "then the hospital,", focus: 5}
+      - {emma: "and its last stop is the railway station.", focus: 6}
+      - {tom: "The 24 goes a different way: to the post office,", say: "The twenty-four goes a different way: to the post office,", focus: 7}
+      - {emma: "the bank,", focus: 8}
+      - {tom: "and its last stop is the bus station.", focus: 9}
+      - emma: "Now look at the timetable. From Monday to Saturday, the 24 runs every ten minutes, and the 16 runs every twelve minutes. And it's two minutes from stop to stop."
+        say: "Now look at the timetable. From Monday to Saturday, the twenty-four runs every ten minutes, and the sixteen runs every twelve minutes. And it's two minutes from stop to stop."
+        focus: 10
+        vi: "timetable: bảng giờ · every 10 minutes: 10 phút một chuyến"
+
+  - kind: figure
+    chapter: "Hỏi – đáp về xe buýt"
+    heading: "Questions and answers"
+    heading_vi: "Bảng tr. 78 — Emma hỏi, Tom trả lời theo bản đồ"
+    image: {pdf: course-book, page: 79, clip: [26, 297, 412, 465]}
+    items:
+      - {box: [28, 316, 410, 334]}
+      - {box: [28, 332, 410, 350]}
+      - {box: [28, 348, 410, 366]}
+      - {box: [28, 364, 410, 382]}
+      - {box: [28, 380, 410, 398]}
+      - {box: [28, 396, 410, 414]}
+      - {box: [28, 412, 410, 431]}
+      - {box: [28, 429, 410, 447]}
+      - {box: [28, 445, 410, 463]}
+    lines:
+      - emma: "Now the questions and answers. Excuse me, which bus do I get to the park?"
+        focus: 0
+        vi: "Excuse me: mở đầu lịch sự khi hỏi người lạ · get a bus: đi xe buýt"
+      - {tom: "The 16.", say: "The six-teen.", focus: 0}
+      - {emma: "Does the 24 go to the railway station?", say: "Does the twenty-four go to the railway station?", focus: 1}
+      - {tom: "No, it doesn't.", focus: 1}
+      - {emma: "Does the 24 stop near the bank?", say: "Does the twenty-four stop near the bank?", focus: 2}
+      - {tom: "Yes, it does.", focus: 2}
+      - {emma: "Does the 16 stop outside the park?", say: "Does the six-teen stop outside the park?", focus: 3}
+      - {tom: "Yes, it does.", focus: 3}
+      - {emma: "How often does the 16 run?", say: "How often does the six-teen run?", focus: 4, vi: "How often: bao lâu một chuyến · run: chạy (theo tuyến)"}
+      - {tom: "Every twelve minutes.", focus: 4}
+      - {emma: "How many stops is it to the park?", focus: 5}
+      - {tom: "Three: the cinema, the school, and then the park.", focus: 5}
+      - {emma: "Which is the last stop for the 24?", say: "Which is the last stop for the twenty-four?", focus: 6}
+      - {tom: "The bus station.", focus: 6}
+      - {emma: "Where do I get off for the cinema?", focus: 7, vi: "get off: xuống xe"}
+      - {tom: "At the next stop.", focus: 7}
+      - {emma: "How long does it take to the bus station?", focus: 8}
+      - {tom: "It takes about ten minutes: five stops, and two minutes from stop to stop.", focus: 8}
+
+  - kind: figure
+    chapter: "Glossary và Spotlight"
+    heading: "Glossary · Spotlight: How long does it take?"
+    heading_vi: "tr. 78 — near: gần · outside: ngay trước · How long does it take?: mất bao lâu?"
+    image: {pdf: course-book, page: 79, clip: [26, 476, 484, 680]}
+    items:
+      - {box: [30, 498, 296, 522]}
+      - {box: [30, 522, 296, 535]}
+      - {box: [30, 534, 296, 547]}
+      - {box: [30, 546, 153, 599]}
+      - {box: [154, 546, 292, 599]}
+      - {box: [30, 606, 296, 619]}
+      - {box: [30, 618, 296, 631]}
+      - {box: [30, 630, 296, 643]}
+      - {box: [30, 642, 296, 655]}
+      - {box: [30, 654, 296, 667]}
+      - {box: [30, 666, 296, 679]}
+      - {box: [304, 502, 482, 516]}
+      - {box: [304, 515, 482, 538]}
+      - {box: [304, 538, 482, 551]}
+      - {box: [304, 550, 482, 574]}
+    lines:
+      - {emma: "Look at the glossary. We say excuse me when we start talking to someone we don't know.", focus: 0}
+      - {tom: "Get a bus means travel on a bus. You can also say take a bus.", focus: 1, vi: "get / take a bus: đi xe buýt"}
+      - {emma: "Go means travel: does the 24 go to the park?", say: "Go means travel: does the twenty-four go to the park?", focus: 2}
+      - {tom: "Near: not far from a place. In the picture, the bus is near the bank.", focus: 3, vi: "near: gần"}
+      - {emma: "Outside: right in front of it. Here, the bus is outside the bank.", focus: 4, vi: "outside: ngay trước (bên ngoài)"}
+      - {tom: "Run: travel on a route. The 16 runs from the museum to the railway station.", say: "Run: travel on a route. The sixteen runs from the museum to the railway station.", focus: 5}
+      - {emma: "Every twelve minutes means at one o'clock, one twelve, one twenty-four, and so on.", focus: 6}
+      - {tom: "A bus stop: the place where you get on or off a bus.", focus: 7, vi: "bus stop: trạm xe buýt"}
+      - {emma: "The last stop: the bus stop at the end of the route.", focus: 8, vi: "last stop: trạm cuối"}
+      - {tom: "Get off means leave the bus. The opposite is get on.", focus: 9, vi: "get on ≠ get off: lên xe ≠ xuống xe"}
+      - {emma: "And the next stop is the first stop after now.", focus: 10, vi: "next stop: trạm kế tiếp"}
+      - {tom: "Look at the spotlight. How long? means how much time?", focus: 11}
+      - {emma: "How long does it take to get to the station?", focus: 12}
+      - {tom: "It takes about ten minutes.", focus: 13}
+      - {emma: "Or, if it's quick: it doesn't take long.", focus: 14, vi: "It doesn't take long: không lâu đâu"}
+
+  - kind: blanks
+    chapter: "Bài 1: sắp xếp câu hỏi"
+    heading: "Exercise 1 · Write the words in the correct order (1–4)"
+    heading_vi: "Ví dụ: Does the 24 stop near the bank? (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "stops / many / to / how / it / railway station / is / the / ?  →  ___", answer: "How many stops is it to the railway station?"}
+      - {n: 2, q: "school / me / bus / which / excuse / get / I / to / do / the / ?  →  ___", answer: "Excuse me, which bus do I get to the school?"}
+      - {n: 3, q: "take / long / how / does / to / railway station / it / the / ?  →  ___", answer: "How long does it take to the railway station?"}
+      - {n: 4, q: "post office / the 24 / does / outside / stop / the / ?  →  ___", answer: "Does the 24 stop outside the post office?"}
+    lines:
+      - emma: "Exercise 1. Write the words in the correct order to make questions. The example is: does the 24 stop near the bank? Pause the video and try."
+        say: "Exercise one. Write the words in the correct order to make questions. The example is: does the twenty-four stop near the bank? Pause the video and try."
+        vi: "Bài 1: sắp xếp từ thành câu hỏi."
+      - {tom: "One. How many stops is it to the railway station? Two. Excuse me, which bus do I get to the school?", reveal: [1, 2], focus: 1}
+      - {tom: "Three. How long does it take to the railway station? Four. Does the 24 stop outside the post office?", say: "Three. How long does it take to the railway station? Four. Does the twenty-four stop outside the post office?", reveal: [3, 4], focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1 (tiếp)"
+    heading: "Exercise 1 · Write the words in the correct order (5–8)"
+    heading_vi: "Answer key tr. 211"
+    items:
+      - {n: 5, q: "off / do / get / I / where / cinema / for / the / ?  →  ___", answer: "Where do I get off for the cinema?"}
+      - {n: 6, q: "park / the 24 / does / to / go / the / ?  →  ___", answer: "Does the 24 go to the park?"}
+      - {n: 7, q: "often / run / does / the 24 / how / ?  →  ___", answer: "How often does the 24 run?"}
+      - {n: 8, q: "which / stop / last / is / for / the 16 / the / ?  →  ___", answer: "Which is the last stop for the 16?"}
+    lines:
+      - {emma: "Now questions five to eight. Pause the video and try.", focus: 0}
+      - {tom: "Five. Where do I get off for the cinema? Six. Does the 24 go to the park?", say: "Five. Where do I get off for the cinema? Six. Does the twenty-four go to the park?", reveal: [5, 6], focus: 1}
+      - {tom: "Seven. How often does the 24 run? Eight. Which is the last stop for the 16?", say: "Seven. How often does the twenty-four run? Eight. Which is the last stop for the six-teen?", reveal: [7, 8], focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 2: trả lời theo bản đồ"
+    heading: "Exercise 2 · Answer the questions in Exercise 1"
+    heading_vi: "Bạn đang ở bảo tàng (museum) — dùng bản đồ tr. 78 (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "How many stops is it to the railway station?  →  ___", answer: "Five."}
+      - {n: 2, q: "Excuse me, which bus do I get to the school?  →  ___", answer: "The 16 or the 24."}
+      - {n: 3, q: "How long does it take to the railway station?  →  ___", answer: "About ten minutes."}
+      - {n: 4, q: "Does the 24 stop outside the post office?  →  ___", answer: "Yes, it does."}
+      - {n: 5, q: "Where do I get off for the cinema?  →  ___", answer: "At the next stop."}
+      - {n: 6, q: "Does the 24 go to the park?  →  ___", answer: "No, it doesn't."}
+      - {n: 7, q: "How often does the 24 run?  →  ___", answer: "Every ten minutes."}
+      - {n: 8, q: "Which is the last stop for the 16?  →  ___", answer: "The railway station."}
+    lines:
+      - emma: "Exercise 2. Answer the questions in Exercise 1. Remember, you are at the museum. Pause the video and try."
+        say: "Exercise two. Answer the questions in Exercise one. Remember, you are at the museum. Pause the video and try."
+        vi: "Bài 2: trả lời các câu hỏi ở bài 1 — bạn đang ở bảo tàng."
+      - {tom: "One. Five: the cinema, the school, the park, the hospital, and the railway station. Two. The 16 or the 24.", say: "One. Five: the cinema, the school, the park, the hospital, and the railway station. Two. The sixteen or the twenty-four.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. About ten minutes: five stops. Four. Yes, it does. Five. At the next stop.", reveal: [3, 4, 5], focus: 4}
+      - {tom: "Six. No, it doesn't. Seven. Every ten minutes. Eight. The railway station.", reveal: [6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 3: hoàn thành đoạn văn"
+    heading: "Exercise 3 · Complete the text"
+    heading_vi: "Ví dụ: two bus routes (Answer key tr. 211)"
+    items:
+      - {n: 1, q: "For the 24, the first ___ is the museum,", answer: "stop"}
+      - {n: 2, q: "and the ___ stop is the cinema;", answer: "next / second"}
+      - {n: 3, q: "the ___ stop is the bus station,", answer: "last / final"}
+      - {n: 4, q: "where everybody has to ___ the bus.", answer: "get off"}
+      - {n: 5, q: "The 16 starts at the museum too, but it ___ to the railway station.", answer: "goes / runs"}
+      - {n: 6, q: "The ___ tells you how often the buses run.", answer: "timetable"}
+      - {n: 7, q: "The timetable tells you how often the buses ___.", answer: "run"}
+      - {n: 8, q: "The 24 bus ___ every ten minutes.", answer: "runs"}
+      - {n: 9, q: "The 24 bus runs ___ ten minutes.", answer: "every"}
+      - {n: 10, q: "It ___ two minutes to get from the school to the park.", answer: "takes"}
+    lines:
+      - emma: "Exercise 3. Complete the text, using the bus map. The example is: there are two bus routes. Pause the video and try."
+        say: "Exercise three. Complete the text, using the bus map. The example is: there are two bus routes. Pause the video and try."
+        vi: "Bài 3: hoàn thành đoạn văn theo bản đồ."
+      - {tom: "One. The first stop. Two. The next stop, or the second stop. Three. The last stop, or the final stop. Four. Get off.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. It goes, or it runs, to the railway station. Six. The timetable. Seven. Run.", reveal: [5, 6, 7], focus: 6}
+      - {tom: "Eight. Runs. Nine. Every. Ten. It takes two minutes.", reveal: [8, 9, 10], focus: 9}
+
+  - kind: bullets
+    chapter: "Đi lại ở Việt Nam"
+    heading: "Getting around in Vietnam"
+    heading_vi: "Thêm ngoài sách — xe buýt, xe khách, xe ôm bằng tiếng Anh"
+    items:
+      - {en: "a city bus · a coach (a long-distance bus)", vi: "xe buýt · xe khách (đường dài)"}
+      - {en: "a sleeper bus", vi: "xe giường nằm"}
+      - {en: "a motorbike taxi · book it with an app", vi: "xe ôm · đặt qua ứng dụng"}
+      - {en: "Does this bus go to Ben Thanh Market?", vi: "Xe này có đến chợ Bến Thành không?"}
+      - {en: "How much is the fare?", vi: "Giá vé bao nhiêu?"}
+    lines:
+      - {tom: "In Ho Chi Minh City, there are lots of city buses, and they're cheap. But to go home to Da Lat, I take a coach: a long-distance bus.", say: "In Ho Chee Min City, there are lots of city buses, and they're cheap. But to go home to Dah Lot, I take a coach: a long-distance bus.", focus: 0, vi: "coach: xe khách"}
+      - {emma: "Many coaches in Vietnam are sleeper buses, with beds! How long does it take to Da Lat, Tom?", say: "Many coaches in Vietnam are sleeper buses, with beds! How long does it take to Dah Lot, Tom?", focus: 1}
+      - {tom: "About seven hours. But I usually go at night, so I sleep all the way!", focus: 1}
+      - {emma: "I don't often get the bus here. I usually book a motorbike taxi with an app. It takes about twenty minutes to my school.", focus: 2, vi: "book: đặt (xe, vé)"}
+      - {tom: "On a city bus, you can ask: excuse me, does this bus go to Ben Thanh Market?", say: "On a city bus, you can ask: excuse me, does this bus go to Ben Tahn Market?", focus: 3}
+      - {emma: "And: how much is the fare? The fare is the money you pay to travel. We'll see it again in Unit 30.", say: "And: how much is the fare? The fare is the money you pay to travel. We'll see it again in Unit thirty.", focus: 4, vi: "fare: tiền vé"}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · bus information"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả — như IELTS Listening phần 1"
+    items:
+      - {n: 1, q: "Excuse me, which bus do I get to the ___?", answer: "hospital"}
+      - {n: 2, q: "The 16 runs every ___ minutes.", answer: "12"}
+      - {n: 3, q: "The bus ___ is outside the bank.", answer: "stop"}
+      - {n: 4, q: "Get ___ at the next stop.", answer: "off"}
+      - {n: 5, q: "How long does it ___ to the station?", answer: "take"}
+      - {n: 6, q: "Check the ___ before you go.", answer: "timetable"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Excuse me, which bus do I get to the hospital?", focus: 0}
+      - {emma: "Number two. The 16 runs every twelve minutes.", say: "Number two. The sixteen runs every twelve minutes.", focus: 1}
+      - {emma: "Number three. The bus stop is outside the bank.", focus: 2}
+      - {emma: "Number four. Get off at the next stop.", focus: 3}
+      - {emma: "Number five. How long does it take to the station?", focus: 4}
+      - {emma: "Number six. Check the timetable before you go.", focus: 5}
+      - {tom: "Hospital: H, O, S, P, I, T, A, L. Twelve: in IELTS, you can write the number. Stop.", say: "Hospital: aitch, oh, ess, pee, eye, tee, eigh, el. Twelve: in eye-elts, you can write the number. Stop.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Off: double f. Take. And timetable: one word.", say: "Off: double ef. Take. And timetable: one word.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: xe buýt gần nhà"
+    heading: "Speaking 1 · Exercise 4: buses near you"
+    heading_vi: "Bài 4 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Is there a bus stop near your house? Where is it exactly?"
+        a: "Yes, there's one right outside the chemist's under my flat."
+        ask: emma
+        by: tom
+        phrases: ["Yes, there's one…", "right outside…"]
+      - q: "Which buses stop there?"
+        a: "Two buses: the 19 and the 33."
+        ask: emma
+        by: tom
+        phrases: ["Two buses:"]
+      - q: "How often do they run?"
+        a: "About every fifteen minutes. I check the times on an app."
+        ask: emma
+        by: tom
+        phrases: ["About every…"]
+      - q: "Do you often get the bus, Emma?"
+        a: "Not here. But at my parents' house in England, there's a stop at the end of the road. I sometimes get the bus to the town centre."
+        ask: tom
+        by: emma
+        phrases: ["Not here.", "at the end of the road", "I sometimes get the bus to…"]
+      - q: "How many stops is it?"
+        a: "Four."
+        ask: tom
+        by: emma
+        phrases: ["Four."]
+      - q: "How long does it take?"
+        a: "Five to ten minutes. It doesn't take long."
+        ask: tom
+        by: emma
+        phrases: ["… to … minutes", "It doesn't take long."]
+    lines:
+      - {emma: "Exercise 4 is about you. Tom, is there a bus stop near your house? Where is it exactly?", say: "Exercise four is about you. Tom, is there a bus stop near your house? Where is it exactly?", focus: 0}
+      - {tom: "Yes, there's one right outside the chemist's under my flat.", reveal: 0, vi: "Có, ngay trước hiệu thuốc dưới căn hộ."}
+      - {emma: "Which buses stop there?", focus: 1}
+      - {tom: "Two buses: the 19 and the 33.", say: "Two buses: the nine-teen and the thirty-three.", reveal: 1, vi: "Hai tuyến: 19 và 33."}
+      - {emma: "How often do they run?", focus: 2}
+      - {tom: "About every fifteen minutes. I check the times on an app.", say: "About every fif-teen minutes. I check the times on an app.", reveal: 2, vi: "Khoảng 15 phút một chuyến; Tom xem giờ trên ứng dụng."}
+      - {tom: "Do you often get the bus, Emma?", focus: 3}
+      - {emma: "Not here. But at my parents' house in England, there's a stop at the end of the road. I sometimes get the bus to the town centre.", reveal: 3, vi: "Ở đây thì không. Ở nhà bố mẹ bên Anh có trạm cuối đường; thỉnh thoảng Emma đi xe buýt vào trung tâm thị trấn."}
+      - {tom: "How many stops is it?", focus: 4}
+      - {emma: "Four.", reveal: 4}
+      - {tom: "And how long does it take?", focus: 5}
+      - {emma: "Five to ten minutes. It doesn't take long.", reveal: 5, vi: "5–10 phút. Không lâu."}
+
+  - kind: figure
+    chapter: "Bài 5: tự kiểm tra"
+    heading: "Exercise 5 · Test yourself: more questions about the map"
+    heading_vi: "Che câu trả lời tr. 78, nhìn bản đồ — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 79, clip: [25, 70, 482, 274]}
+    items:
+      - {box: [338, 120, 400, 163]}
+      - {box: [338, 120, 400, 163], label: "The 16."}
+      - {box: [344, 235, 390, 274]}
+      - {box: [344, 235, 390, 274], label: "No, it doesn't."}
+      - {box: [382, 185, 480, 229]}
+      - {box: [382, 185, 480, 229], label: "Five."}
+      - {box: [338, 120, 400, 163]}
+      - {box: [338, 120, 400, 163], label: "About eight minutes."}
+      - {box: [280, 235, 342, 274]}
+      - {box: [280, 235, 342, 274], label: "At the third stop."}
+      - {box: [30, 219, 188, 273]}
+      - {box: [30, 219, 188, 273], label: "Every 12 minutes."}
+    lines:
+      - emma: "Exercise 5 is a test. Cover the answers on page seventy-eight, and look at the map. I'll ask some new questions. Pause the video after each one. You're at the museum. Which bus do I get to the hospital?"
+        say: "Exercise five is a test. Cover the answers on page seventy-eight, and look at the map. I'll ask some new questions. Pause the video after each one. You're at the museum. Which bus do I get to the hospital?"
+        focus: 0
+      - {tom: "The 16.", say: "The six-teen.", focus: 1}
+      - {emma: "Does the 16 stop near the bank?", say: "Does the six-teen stop near the bank?", focus: 2}
+      - {tom: "No, it doesn't. The 24 stops near the bank.", say: "No, it doesn't. The twenty-four stops near the bank.", focus: 3}
+      - {emma: "How many stops is it to the bus station?", focus: 4}
+      - {tom: "Five.", focus: 5}
+      - {emma: "How long does it take to the hospital?", focus: 6}
+      - {tom: "About eight minutes: four stops.", focus: 7}
+      - {emma: "Where do I get off for the post office?", focus: 8}
+      - {tom: "At the third stop.", focus: 9}
+      - {emma: "And how often does the 16 run?", say: "And how often does the six-teen run?", focus: 10}
+      - {tom: "Every twelve minutes.", focus: 11}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Public transport"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "How do you usually travel to school or work?", hint: "I usually walk / take the bus / ride my motorbike …"}
+      - {q: "Do you often take the bus? Why or why not?", hint: "Not very often, because … / Yes, because it's cheap …"}
+      - {q: "Is public transport good in your city?", hint: "It's cheap, but … / The buses run every …"}
+      - {q: "What's the best way to get around your city?", hint: "I think the best way is … because …"}
+      - {q: "Did you take the bus when you were a child?", hint: "Yes, I took the bus to school … / No, my parents …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about public transport. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about public transport. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về phương tiện công cộng."
+      - {emma: "How do you usually travel to school or work?", focus: 0, pause: 0.5}
+      - {emma: "Do you often take the bus? Why, or why not?", focus: 1, pause: 0.5}
+      - {emma: "Is public transport good in your city?", focus: 2, pause: 0.5}
+      - {emma: "What's the best way to get around your city?", focus: 3, pause: 0.5}
+      - {emma: "Did you take the bus when you were a child?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 5: che câu trả lời tr. 78, nhìn bản đồ, trả lời"
+    items:
+      - {en: "bus route · bus stop · last stop · next stop · timetable", vi: "tuyến · trạm · trạm cuối · trạm kế · bảng giờ"}
+      - {en: "get on ≠ get off · get / take a bus · go · run", vi: "lên ≠ xuống xe · đi xe buýt · chạy"}
+      - {en: "near · outside · every 12 minutes", vi: "gần · ngay trước · 12 phút một chuyến"}
+      - {en: "Which bus do I get to …? · How often does … run? · How long does it take?", vi: "câu hỏi khi đi xe buýt"}
+      - {en: "Next: Unit 30 · Trains", vi: "Tiếp theo: Unit 30 · Tàu hỏa"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A bus route, a bus stop, the last stop, the next stop, and the timetable.", focus: 0}
+      - {tom: "Get on and get off. Get a bus, or take a bus. Go, and run: the 16 runs every twelve minutes.", say: "Get on and get off. Get a bus, or take a bus. Go, and run: the sixteen runs every twelve minutes.", focus: 1}
+      - {emma: "Near: not far. Outside: right in front.", focus: 2}
+      - {tom: "Which bus do I get to the park? How often does it run? How long does it take?", focus: 3}
+      - {emma: "Next time, Unit 30: trains. See you then!", say: "Next time, Unit thirty: trains. See you then!", focus: 4}
