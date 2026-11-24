@@ -1,0 +1,307 @@
+# Video nghe – viết (dictation) Unit 29 · Buses — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U29-buses-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U29 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 29 có 18 mục (hai nghĩa của long gộp một mục). Bốn mục sách in số 29 (accident, out of order,
+# queue here, ring) xếp theo trang thật ở Unit 32, 33 — make_wordlist.py, file 09 mục 5.9.
+id: U29-buses-dictation
+activity: U29-words
+title: "Unit 29 · Buses"
+subtitle: "Dictation · listen and write: getting around on buses"
+title_vi: "Nghe – viết 10 phút: đi xe buýt — từ trong sách, từ thêm, câu giao tiếp"
+tag: "GETTING AROUND · UNIT 29"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 29: Buses. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit twenty-nine: Buses. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 29: đi xe buýt. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 21 words from the book. You hear each word twice, and then an example sentence twice. Then 24 more useful words, and 33 useful sentences for conversation.", "say": "There are three parts. First, twenty-one words from the book. You hear each word twice, and then an example sentence twice. Then twenty-four more useful words, and thirty-three useful sentences for conversation.", "vi": "Ba phần: 21 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 24 từ thêm, 33 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "bus", "vi": "xe buýt", "ex": "I sometimes get the bus to the town centre.", "w": ["bus"]}
+      - {"n": 2, "answer": "bus stop", "vi": "trạm xe buýt", "ex": "The bus stop is outside the bank.", "w": ["bus stop", "stop"]}
+      - {"n": 3, "answer": "route", "vi": "tuyến xe", "ex": "There are two bus routes: the 24 and the 16.", "w": ["route"]}
+      - {"n": 4, "answer": "timetable", "vi": "bảng giờ", "ex": "Look at the timetable before you go.", "w": ["timetable"]}
+      - {"n": 5, "answer": "every ten minutes", "vi": "mười phút một chuyến", "ex": "The 24 runs every ten minutes.", "w": ["every"]}
+      - {"n": 6, "answer": "run", "vi": "chạy (theo tuyến)", "ex": "The buses don't run on Sundays.", "w": ["run"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. bus. bus. I sometimes get the bus to the town centre. I sometimes get the bus to the town centre.", "focus": 0}
+      - {"emma": "Two. bus stop. bus stop. The bus stop is outside the bank. The bus stop is outside the bank.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. route. route. There are two bus routes: the 24 and the 16. There are two bus routes: the 24 and the 16.", "say": "Three. route. route. There are two bus routes: the twenty-four and the six-teen. There are two bus routes: the twenty-four and the six-teen.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. timetable. timetable. Look at the timetable before you go. Look at the timetable before you go.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. every ten minutes. every ten minutes. The 24 runs every ten minutes. The 24 runs every ten minutes.", "say": "Five. every ten minutes. every ten minutes. The twenty-four runs every ten minutes. The twenty-four runs every ten minutes.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. run. run. The buses don't run on Sundays. The buses don't run on Sundays.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "get a bus", "vi": "đi xe buýt", "ex": "Which bus do I get to the park?", "w": ["get"]}
+      - {"n": 8, "answer": "get on", "vi": "lên xe", "ex": "Get on at the front of the bus.", "w": ["get on"]}
+      - {"n": 9, "answer": "get off", "vi": "xuống xe", "ex": "Where do I get off for the cinema?", "w": ["get off"]}
+      - {"n": 10, "answer": "next stop", "vi": "trạm kế tiếp", "ex": "Get off at the next stop.", "w": ["next stop"]}
+      - {"n": 11, "answer": "last stop", "vi": "trạm cuối", "ex": "The last stop is the bus station.", "w": ["last stop"]}
+      - {"n": 12, "answer": "near", "vi": "gần", "ex": "Does the 24 stop near the bank?", "w": ["near"]}
+    lines:
+      - {"emma": "Seven. get a bus. get a bus. Which bus do I get to the park? Which bus do I get to the park?", "focus": 0}
+      - {"emma": "Eight. get on. get on. Get on at the front of the bus. Get on at the front of the bus.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. get off. get off. Where do I get off for the cinema? Where do I get off for the cinema?", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. next stop. next stop. Get off at the next stop. Get off at the next stop.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. last stop. last stop. The last stop is the bus station. The last stop is the bus station.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. near. near. Does the 24 stop near the bank? Does the 24 stop near the bank?", "say": "Twelve. near. near. Does the twenty-four stop near the bank? Does the twenty-four stop near the bank?", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "outside", "vi": "ngay trước", "ex": "The bus stops outside the park.", "w": ["outside"]}
+      - {"n": 14, "answer": "excuse me", "vi": "xin lỗi (khi hỏi người lạ)", "ex": "Excuse me, which bus goes to the hospital?", "w": ["excuse me"]}
+      - {"n": 15, "answer": "How long does it take?", "vi": "Mất bao lâu?", "ex": "How long does it take to the station?", "w": ["how long", "long"]}
+      - {"n": 16, "answer": "It takes about ten minutes.", "vi": "Mất khoảng mười phút.", "ex": "It takes about ten minutes by bus."}
+      - {"n": 17, "answer": "It doesn't take long.", "vi": "Không lâu đâu.", "ex": "Don't worry, it doesn't take long."}
+      - {"n": 18, "answer": "a metre long", "vi": "dài một mét", "ex": "This bus is twelve metres long.", "w": ["long"]}
+    lines:
+      - {"emma": "Thirteen. outside. outside. The bus stops outside the park. The bus stops outside the park.", "focus": 0}
+      - {"emma": "Fourteen. excuse me. excuse me. Excuse me, which bus goes to the hospital? Excuse me, which bus goes to the hospital?", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. How long does it take?. How long does it take?. How long does it take to the station? How long does it take to the station?", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. It takes about ten minutes.. It takes about ten minutes.. It takes about ten minutes by bus. It takes about ten minutes by bus.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. It doesn't take long.. It doesn't take long.. Don't worry, it doesn't take long. Don't worry, it doesn't take long.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. a metre long. a metre long. This bus is twelve metres long. This bus is twelve metres long.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–21)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "How often?", "vi": "Bao lâu một chuyến?", "ex": "How often does the 16 run?"}
+      - {"n": 20, "answer": "How many stops?", "vi": "Mấy trạm?", "ex": "How many stops is it to the park?"}
+      - {"n": 21, "answer": "Which bus?", "vi": "Xe số mấy?", "ex": "Which bus do I get to the school?"}
+    lines:
+      - {"emma": "Nineteen. How often?. How often?. How often does the 16 run? How often does the 16 run?", "say": "Nineteen. How often?. How often?. How often does the six-teen run? How often does the six-teen run?", "focus": 0}
+      - {"emma": "Twenty. How many stops?. How many stops?. How many stops is it to the park? How many stops is it to the park?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. Which bus?. Which bus?. Which bus do I get to the school? Which bus do I get to the school?", "focus": 2, "reveal": [20]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [21]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (22–27)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 22, "answer": "bus ticket", "vi": "vé xe buýt", "ex": "You can buy a bus ticket from the driver."}
+      - {"n": 23, "answer": "bus pass", "vi": "vé tháng", "ex": "Students can buy a cheap bus pass."}
+      - {"n": 24, "answer": "bus driver", "vi": "tài xế xe buýt", "ex": "The bus driver was very helpful."}
+      - {"n": 25, "answer": "coach", "vi": "xe khách", "ex": "Tom goes home to Da Lat by coach."}
+      - {"n": 26, "answer": "sleeper bus", "vi": "xe giường nằm", "ex": "We took a sleeper bus to the beach."}
+      - {"n": 27, "answer": "motorbike taxi", "vi": "xe ôm", "ex": "Emma books a motorbike taxi with an app."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-two. bus ticket. bus ticket. You can buy a bus ticket from the driver. You can buy a bus ticket from the driver.", "focus": 0}
+      - {"tom": "Twenty-three. bus pass. bus pass. Students can buy a cheap bus pass. Students can buy a cheap bus pass.", "focus": 1, "reveal": [22]}
+      - {"tom": "Twenty-four. bus driver. bus driver. The bus driver was very helpful. The bus driver was very helpful.", "focus": 2, "reveal": [23]}
+      - {"tom": "Twenty-five. coach. coach. Tom goes home to Da Lat by coach. Tom goes home to Da Lat by coach.", "say": "Twenty-five. coach. coach. Tom goes home to Dah Lot by coach. Tom goes home to Dah Lot by coach.", "focus": 3, "reveal": [24]}
+      - {"tom": "Twenty-six. sleeper bus. sleeper bus. We took a sleeper bus to the beach. We took a sleeper bus to the beach.", "focus": 4, "reveal": [25]}
+      - {"tom": "Twenty-seven. motorbike taxi. motorbike taxi. Emma books a motorbike taxi with an app. Emma books a motorbike taxi with an app.", "focus": 5, "reveal": [26]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [27]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (28–33)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 28, "answer": "double-decker", "vi": "xe buýt hai tầng", "ex": "London has red double-decker buses."}
+      - {"n": 29, "answer": "crowded", "vi": "đông đúc", "ex": "The bus is always crowded in the morning."}
+      - {"n": 30, "answer": "on time", "vi": "đúng giờ", "ex": "The bus was on time today."}
+      - {"n": 31, "answer": "late", "vi": "trễ", "ex": "The bus is ten minutes late."}
+      - {"n": 32, "answer": "stand", "vi": "đứng", "ex": "There were no seats, so I had to stand."}
+      - {"n": 33, "answer": "city centre", "vi": "trung tâm thành phố", "ex": "This bus goes to the city centre."}
+    lines:
+      - {"tom": "Twenty-eight. double-decker. double-decker. London has red double-decker buses. London has red double-decker buses.", "focus": 0}
+      - {"tom": "Twenty-nine. crowded. crowded. The bus is always crowded in the morning. The bus is always crowded in the morning.", "focus": 1, "reveal": [28]}
+      - {"tom": "Thirty. on time. on time. The bus was on time today. The bus was on time today.", "focus": 2, "reveal": [29]}
+      - {"tom": "Thirty-one. late. late. The bus is ten minutes late. The bus is ten minutes late.", "focus": 3, "reveal": [30]}
+      - {"tom": "Thirty-two. stand. stand. There were no seats, so I had to stand. There were no seats, so I had to stand.", "focus": 4, "reveal": [31]}
+      - {"tom": "Thirty-three. city centre. city centre. This bus goes to the city centre. This bus goes to the city centre.", "focus": 5, "reveal": [32]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (34–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 34, "answer": "bus station", "vi": "bến xe buýt", "ex": "The last stop is the bus station."}
+      - {"n": 35, "answer": "public transport", "vi": "phương tiện công cộng", "ex": "Public transport is cheap in Vietnam."}
+      - {"n": 36, "answer": "app", "vi": "ứng dụng", "ex": "I check the bus times on an app."}
+      - {"n": 37, "answer": "cash", "vi": "tiền mặt", "ex": "Can I pay in cash?"}
+      - {"n": 38, "answer": "air-conditioned", "vi": "có điều hòa", "ex": "The new buses are air-conditioned."}
+      - {"n": 39, "answer": "arrive", "vi": "đến", "ex": "The bus arrives at eight fifteen."}
+    lines:
+      - {"tom": "Thirty-four. bus station. bus station. The last stop is the bus station. The last stop is the bus station.", "focus": 0}
+      - {"tom": "Thirty-five. public transport. public transport. Public transport is cheap in Vietnam. Public transport is cheap in Vietnam.", "focus": 1, "reveal": [34]}
+      - {"tom": "Thirty-six. app. app. I check the bus times on an app. I check the bus times on an app.", "focus": 2, "reveal": [35]}
+      - {"tom": "Thirty-seven. cash. cash. Can I pay in cash? Can I pay in cash?", "focus": 3, "reveal": [36]}
+      - {"tom": "Thirty-eight. air-conditioned. air-conditioned. The new buses are air-conditioned. The new buses are air-conditioned.", "focus": 4, "reveal": [37]}
+      - {"tom": "Thirty-nine. arrive. arrive. The bus arrives at eight fifteen. The bus arrives at eight fifteen.", "focus": 5, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "depart", "vi": "khởi hành", "ex": "The coach departs at nine p.m."}
+      - {"n": 41, "answer": "night bus", "vi": "xe buýt đêm", "ex": "The night bus runs every hour."}
+      - {"n": 42, "answer": "airport bus", "vi": "xe buýt sân bay", "ex": "Take the airport bus to the city centre."}
+      - {"n": 43, "answer": "minibus", "vi": "xe buýt nhỏ", "ex": "A minibus takes about twelve people."}
+      - {"n": 44, "answer": "press the button", "vi": "bấm nút", "ex": "Press the button before your stop."}
+      - {"n": 45, "answer": "front door", "vi": "cửa trước", "ex": "Get on at the front door."}
+    lines:
+      - {"tom": "Forty. depart. depart. The coach departs at nine p.m. The coach departs at nine p.m.", "focus": 0}
+      - {"tom": "Forty-one. night bus. night bus. The night bus runs every hour. The night bus runs every hour.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. airport bus. airport bus. Take the airport bus to the city centre. Take the airport bus to the city centre.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. minibus. minibus. A minibus takes about twelve people. A minibus takes about twelve people.", "focus": 3, "reveal": [42]}
+      - {"tom": "Forty-four. press the button. press the button. Press the button before your stop. Press the button before your stop.", "focus": 4, "reveal": [43]}
+      - {"tom": "Forty-five. front door. front door. Get on at the front door. Get on at the front door.", "focus": 5, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 46, "answer": "Excuse me, does this bus go to the market?", "vi": "Xin lỗi, xe này có đến chợ không?"}
+      - {"n": 47, "answer": "Yes, it does. It's the fourth stop.", "vi": "Có. Trạm thứ tư."}
+      - {"n": 48, "answer": "How much is it?", "vi": "Bao nhiêu tiền?"}
+      - {"n": 49, "answer": "It's seven thousand dong.", "vi": "Bảy nghìn đồng."}
+      - {"n": 50, "answer": "Can I pay by card?", "vi": "Trả bằng thẻ được không?"}
+      - {"n": 51, "answer": "Sorry, cash only.", "vi": "Xin lỗi, chỉ nhận tiền mặt."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-six. Excuse me, does this bus go to the market? Excuse me, does this bus go to the market?", "focus": 0}
+      - {"tom": "Forty-seven. Yes, it does. It's the fourth stop. Yes, it does. It's the fourth stop.", "focus": 1, "reveal": [46]}
+      - {"emma": "Forty-eight. How much is it? How much is it?", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. It's seven thousand dong. It's seven thousand dong.", "focus": 3, "reveal": [48]}
+      - {"emma": "Fifty. Can I pay by card? Can I pay by card?", "focus": 4, "reveal": [49]}
+      - {"tom": "Fifty-one. Sorry, cash only. Sorry, cash only.", "focus": 5, "reveal": [50]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 52, "answer": "Which bus do I get to the airport?", "vi": "Đi sân bay thì đón xe số mấy?"}
+      - {"n": 53, "answer": "The 109. It stops outside the hotel.", "vi": "Xe 109. Dừng ngay trước khách sạn."}
+      - {"n": 54, "answer": "How often does it run?", "vi": "Bao lâu có một chuyến?"}
+      - {"n": 55, "answer": "Every twenty minutes.", "vi": "Hai mươi phút một chuyến."}
+      - {"n": 56, "answer": "How long does it take to the airport?", "vi": "Đến sân bay mất bao lâu?"}
+      - {"n": 57, "answer": "About forty minutes.", "vi": "Khoảng bốn mươi phút."}
+    lines:
+      - {"emma": "Fifty-two. Which bus do I get to the airport? Which bus do I get to the airport?", "focus": 0}
+      - {"tom": "Fifty-three. The 109. It stops outside the hotel. The 109. It stops outside the hotel.", "say": "Fifty-three. The one oh nine. It stops outside the hotel. The one oh nine. It stops outside the hotel.", "focus": 1, "reveal": [52]}
+      - {"emma": "Fifty-four. How often does it run? How often does it run?", "focus": 2, "reveal": [53]}
+      - {"tom": "Fifty-five. Every twenty minutes. Every twenty minutes.", "focus": 3, "reveal": [54]}
+      - {"emma": "Fifty-six. How long does it take to the airport? How long does it take to the airport?", "focus": 4, "reveal": [55]}
+      - {"tom": "Fifty-seven. About forty minutes. About forty minutes.", "focus": 5, "reveal": [56]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 58, "answer": "Where do I get off for the museum?", "vi": "Đi bảo tàng thì xuống ở đâu?"}
+      - {"n": 59, "answer": "Get off at the next stop.", "vi": "Xuống ở trạm tới."}
+      - {"n": 60, "answer": "Can you tell me when to get off?", "vi": "Bạn nhắc tôi khi nào xuống được không?"}
+      - {"n": 61, "answer": "Of course. I'll tell you.", "vi": "Được chứ. Tôi sẽ nhắc."}
+      - {"n": 62, "answer": "Is there a bus stop near here?", "vi": "Gần đây có trạm xe buýt không?"}
+      - {"n": 63, "answer": "Yes, it's outside the bank.", "vi": "Có, ngay trước ngân hàng."}
+    lines:
+      - {"emma": "Fifty-eight. Where do I get off for the museum? Where do I get off for the museum?", "focus": 0}
+      - {"tom": "Fifty-nine. Get off at the next stop. Get off at the next stop.", "focus": 1, "reveal": [58]}
+      - {"emma": "Sixty. Can you tell me when to get off? Can you tell me when to get off?", "focus": 2, "reveal": [59]}
+      - {"tom": "Sixty-one. Of course. I'll tell you. Of course. I'll tell you.", "focus": 3, "reveal": [60]}
+      - {"emma": "Sixty-two. Is there a bus stop near here? Is there a bus stop near here?", "focus": 4, "reveal": [61]}
+      - {"tom": "Sixty-three. Yes, it's outside the bank. Yes, it's outside the bank.", "focus": 5, "reveal": [62]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 64, "answer": "What time is the last bus?", "vi": "Chuyến cuối lúc mấy giờ?"}
+      - {"n": 65, "answer": "At half past ten.", "vi": "Mười giờ rưỡi."}
+      - {"n": 66, "answer": "Do you often get the bus?", "vi": "Bạn có hay đi xe buýt không?"}
+      - {"n": 67, "answer": "Not very often. I usually walk.", "vi": "Không thường lắm. Mình hay đi bộ."}
+      - {"n": 68, "answer": "The bus is late again.", "vi": "Xe buýt lại trễ rồi."}
+      - {"n": 69, "answer": "Let's take a motorbike taxi.", "vi": "Mình đi xe ôm đi."}
+    lines:
+      - {"emma": "Sixty-four. What time is the last bus? What time is the last bus?", "focus": 0}
+      - {"tom": "Sixty-five. At half past ten. At half past ten.", "focus": 1, "reveal": [64]}
+      - {"emma": "Sixty-six. Do you often get the bus? Do you often get the bus?", "focus": 2, "reveal": [65]}
+      - {"tom": "Sixty-seven. Not very often. I usually walk. Not very often. I usually walk.", "focus": 3, "reveal": [66]}
+      - {"emma": "Sixty-eight. The bus is late again. The bus is late again.", "focus": 4, "reveal": [67]}
+      - {"tom": "Sixty-nine. Let's take a motorbike taxi. Let's take a motorbike taxi.", "focus": 5, "reveal": [68]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (70–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 70, "answer": "How many stops is it?", "vi": "Mấy trạm?"}
+      - {"n": 71, "answer": "Five stops. It doesn't take long.", "vi": "Năm trạm. Không lâu đâu."}
+      - {"n": 72, "answer": "Does this bus stop near the hospital?", "vi": "Xe này có dừng gần bệnh viện không?"}
+      - {"n": 73, "answer": "No, you need the number 8.", "vi": "Không, bạn cần xe số 8."}
+      - {"n": 74, "answer": "Where can I buy a bus pass?", "vi": "Mua vé tháng ở đâu?"}
+      - {"n": 75, "answer": "At the bus station.", "vi": "Ở bến xe buýt."}
+    lines:
+      - {"emma": "Seventy. How many stops is it? How many stops is it?", "focus": 0}
+      - {"tom": "Seventy-one. Five stops. It doesn't take long. Five stops. It doesn't take long.", "focus": 1, "reveal": [70]}
+      - {"emma": "Seventy-two. Does this bus stop near the hospital? Does this bus stop near the hospital?", "focus": 2, "reveal": [71]}
+      - {"tom": "Seventy-three. No, you need the number 8. No, you need the number 8.", "focus": 3, "reveal": [72]}
+      - {"emma": "Seventy-four. Where can I buy a bus pass? Where can I buy a bus pass?", "focus": 4, "reveal": [73]}
+      - {"tom": "Seventy-five. At the bus station. At the bus station.", "focus": 5, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [75]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (76–78)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 76, "answer": "Press the button for the next stop.", "vi": "Bấm nút để xuống trạm tới."}
+      - {"n": 77, "answer": "Thank you, driver!", "vi": "Cảm ơn bác tài!"}
+      - {"n": 78, "answer": "You're welcome. Have a nice day!", "vi": "Không có gì. Chúc một ngày tốt lành!"}
+    lines:
+      - {"tom": "Seventy-six. Press the button for the next stop. Press the button for the next stop.", "focus": 0}
+      - {"emma": "Seventy-seven. Thank you, driver! Thank you, driver!", "focus": 1, "reveal": [76]}
+      - {"tom": "Seventy-eight. You're welcome. Have a nice day! You're welcome. Have a nice day!", "focus": 2, "reveal": [77]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [78]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 30.", "say": "Well done! See you in Unit thirty.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 30."}
+

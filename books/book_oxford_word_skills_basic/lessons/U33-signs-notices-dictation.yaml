@@ -1,0 +1,309 @@
+# Video nghe – viết (dictation) Unit 33 · Signs and notices — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U33-signs-notices-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U33 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 33 có 25 mục, gồm out of order, queue here, ring (sách in 29) xếp theo trang thật (tr. 86).
+# Phần 2 và 3 nhiều hơn vì unit chỉ có một trang.
+id: U33-signs-notices-dictation
+activity: U33-words
+title: "Unit 33 · Signs and notices"
+subtitle: "Dictation · listen and write: signs and notices"
+title_vi: "Nghe – viết 10 phút: biển báo và thông báo — từ trong sách, từ thêm, câu giao tiếp"
+tag: "GETTING AROUND · UNIT 33"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 33: Signs and notices. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-three: Signs and notices. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 33: biển báo và thông báo. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 23 words from the book. You hear each word twice, and then an example sentence twice. Then 24 more useful words, and 32 useful sentences for conversation.", "say": "There are three parts. First, twenty-three words from the book. You hear each word twice, and then an example sentence twice. Then twenty-four more useful words, and thirty-two useful sentences for conversation.", "vi": "Ba phần: 23 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 24 từ thêm, 32 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "ladies, gents", "vi": "nhà vệ sinh nữ, nam", "ex": "The ladies is on the left, and the gents is on the right.", "w": ["ladies", "gents"]}
+      - {"n": 2, "answer": "toilet", "vi": "nhà vệ sinh", "ex": "Excuse me, where's the toilet?", "w": ["toilet"]}
+      - {"n": 3, "answer": "entrance", "vi": "lối vào", "ex": "The entrance is at the front of the museum.", "w": ["entrance"]}
+      - {"n": 4, "answer": "way in", "vi": "lối vào", "ex": "Follow the sign to the way in.", "w": ["way in"]}
+      - {"n": 5, "answer": "way out", "vi": "lối ra", "ex": "Where's the way out?", "w": ["way out"]}
+      - {"n": 6, "answer": "exit", "vi": "lối ra", "ex": "Leave by the exit at the back.", "w": ["exit"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. ladies, gents. ladies, gents. The ladies is on the left, and the gents is on the right. The ladies is on the left, and the gents is on the right.", "focus": 0}
+      - {"emma": "Two. toilet. toilet. Excuse me, where's the toilet? Excuse me, where's the toilet?", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. entrance. entrance. The entrance is at the front of the museum. The entrance is at the front of the museum.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. way in. way in. Follow the sign to the way in. Follow the sign to the way in.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. way out. way out. Where's the way out? Where's the way out?", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. exit. exit. Leave by the exit at the back. Leave by the exit at the back.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "go in, go out", "vi": "đi vào, đi ra", "ex": "Go in here, and go out at the back.", "w": ["go"]}
+      - {"n": 8, "answer": "no entry", "vi": "cấm vào", "ex": "You can't go in there. It says no entry.", "w": ["no entry", "entry"]}
+      - {"n": 9, "answer": "no exit", "vi": "không có lối ra", "ex": "This door says no exit.", "w": ["no exit"]}
+      - {"n": 10, "answer": "no smoking", "vi": "cấm hút thuốc", "ex": "This is a no smoking area.", "w": ["no smoking", "smoking"]}
+      - {"n": 11, "answer": "no parking", "vi": "cấm đỗ xe", "ex": "There's a no parking sign outside the garage.", "w": ["no parking"]}
+      - {"n": 12, "answer": "please do not disturb", "vi": "xin đừng làm phiền", "ex": "Put the please do not disturb sign on your door.", "w": ["please do not disturb", "disturb"]}
+    lines:
+      - {"emma": "Seven. go in, go out. go in, go out. Go in here, and go out at the back. Go in here, and go out at the back.", "focus": 0}
+      - {"emma": "Eight. no entry. no entry. You can't go in there. It says no entry. You can't go in there. It says no entry.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. no exit. no exit. This door says no exit. This door says no exit.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. no smoking. no smoking. This is a no smoking area. This is a no smoking area.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. no parking. no parking. There's a no parking sign outside the garage. There's a no parking sign outside the garage.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. please do not disturb. please do not disturb. Put the please do not disturb sign on your door. Put the please do not disturb sign on your door.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "queue here", "vi": "xếp hàng ở đây", "ex": "Queue here for tickets.", "w": ["queue here"]}
+      - {"n": 14, "answer": "nothing to declare", "vi": "không có gì phải khai báo", "ex": "We went through nothing to declare at the airport.", "w": ["nothing to declare", "declare"]}
+      - {"n": 15, "answer": "sale", "vi": "đợt giảm giá", "ex": "There's a sale at the shoe shop.", "w": ["sale"]}
+      - {"n": 16, "answer": "out of order", "vi": "hỏng", "ex": "The lift is out of order.", "w": ["out of order", "order"]}
+      - {"n": 17, "answer": "ring the bell", "vi": "bấm chuông", "ex": "Please ring the bell for attention.", "w": ["ring", "bell"]}
+      - {"n": 18, "answer": "no vacancies", "vi": "hết phòng", "ex": "The hotel is full: no vacancies.", "w": ["vacancies"]}
+    lines:
+      - {"emma": "Thirteen. queue here. queue here. Queue here for tickets. Queue here for tickets.", "focus": 0}
+      - {"emma": "Fourteen. nothing to declare. nothing to declare. We went through nothing to declare at the airport. We went through nothing to declare at the airport.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. sale. sale. There's a sale at the shoe shop. There's a sale at the shoe shop.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. out of order. out of order. The lift is out of order. The lift is out of order.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. ring the bell. ring the bell. Please ring the bell for attention. Please ring the bell for attention.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. no vacancies. no vacancies. The hotel is full: no vacancies. The hotel is full: no vacancies.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–23)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "in a hotel reception", "vi": "ở quầy lễ tân khách sạn", "ex": "Ring the bell in the hotel reception."}
+      - {"n": 20, "answer": "on a drinks machine", "vi": "trên máy bán nước", "ex": "The drinks machine is out of order again."}
+      - {"n": 21, "answer": "in a shop window", "vi": "ở cửa kính cửa hàng", "ex": "There's a big sale sign in the shop window."}
+      - {"n": 22, "answer": "a cash desk", "vi": "quầy thu ngân", "ex": "Pay at the cash desk."}
+      - {"n": 23, "answer": "You can't smoke here.", "vi": "Bạn không được hút thuốc ở đây.", "ex": "Sorry, you can't smoke here."}
+    lines:
+      - {"emma": "Nineteen. in a hotel reception. in a hotel reception. Ring the bell in the hotel reception. Ring the bell in the hotel reception.", "focus": 0}
+      - {"emma": "Twenty. on a drinks machine. on a drinks machine. The drinks machine is out of order again. The drinks machine is out of order again.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. in a shop window. in a shop window. There's a big sale sign in the shop window. There's a big sale sign in the shop window.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. a cash desk. a cash desk. Pay at the cash desk. Pay at the cash desk.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. You can't smoke here.. You can't smoke here.. Sorry, you can't smoke here. Sorry, you can't smoke here.", "focus": 4, "reveal": [22]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [23]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (24–29)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 24, "answer": "push", "vi": "đẩy", "ex": "Push the door to open it."}
+      - {"n": 25, "answer": "pull", "vi": "kéo", "ex": "This door says pull."}
+      - {"n": 26, "answer": "open", "vi": "mở cửa", "ex": "The shop is open until nine."}
+      - {"n": 27, "answer": "closed", "vi": "đóng cửa", "ex": "The museum is closed on Mondays."}
+      - {"n": 28, "answer": "staff only", "vi": "chỉ dành cho nhân viên", "ex": "There's a staff only sign on the kitchen door."}
+      - {"n": 29, "answer": "wet floor", "vi": "sàn ướt", "ex": "Careful! Wet floor."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-four. push. push. Push the door to open it. Push the door to open it.", "focus": 0}
+      - {"tom": "Twenty-five. pull. pull. This door says pull. This door says pull.", "focus": 1, "reveal": [24]}
+      - {"tom": "Twenty-six. open. open. The shop is open until nine. The shop is open until nine.", "focus": 2, "reveal": [25]}
+      - {"tom": "Twenty-seven. closed. closed. The museum is closed on Mondays. The museum is closed on Mondays.", "focus": 3, "reveal": [26]}
+      - {"tom": "Twenty-eight. staff only. staff only. There's a staff only sign on the kitchen door. There's a staff only sign on the kitchen door.", "focus": 4, "reveal": [27]}
+      - {"tom": "Twenty-nine. wet floor. wet floor. Careful! Wet floor. Careful! Wet floor.", "focus": 5, "reveal": [28]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [29]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (30–35)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 30, "answer": "keep off the grass", "vi": "không giẫm lên cỏ", "ex": "Keep off the grass, please."}
+      - {"n": 31, "answer": "fire exit", "vi": "lối thoát hiểm", "ex": "Don't park in front of the fire exit."}
+      - {"n": 32, "answer": "emergency", "vi": "khẩn cấp", "ex": "In an emergency, call 115."}
+      - {"n": 33, "answer": "lift", "vi": "thang máy", "ex": "The lift is on the left."}
+      - {"n": 34, "answer": "stairs", "vi": "cầu thang", "ex": "Please use the stairs."}
+      - {"n": 35, "answer": "closing time", "vi": "giờ đóng cửa", "ex": "Closing time is ten p.m."}
+    lines:
+      - {"tom": "Thirty. keep off the grass. keep off the grass. Keep off the grass, please. Keep off the grass, please.", "focus": 0}
+      - {"tom": "Thirty-one. fire exit. fire exit. Don't park in front of the fire exit. Don't park in front of the fire exit.", "focus": 1, "reveal": [30]}
+      - {"tom": "Thirty-two. emergency. emergency. In an emergency, call 115. In an emergency, call 115.", "say": "Thirty-two. emergency. emergency. In an emergency, call one one five. In an emergency, call one one five.", "focus": 2, "reveal": [31]}
+      - {"tom": "Thirty-three. lift. lift. The lift is on the left. The lift is on the left.", "focus": 3, "reveal": [32]}
+      - {"tom": "Thirty-four. stairs. stairs. Please use the stairs. Please use the stairs.", "say": "Thirty-four. stairs. stairs. Please yooz the stairs. Please yooz the stairs.", "focus": 4, "reveal": [33]}
+      - {"tom": "Thirty-five. closing time. closing time. Closing time is ten p.m. Closing time is ten p.m.", "focus": 5, "reveal": [34]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (36–41)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 36, "answer": "check-in", "vi": "làm thủ tục", "ex": "Check-in starts at two p.m."}
+      - {"n": 37, "answer": "reception", "vi": "quầy lễ tân", "ex": "Leave your key at reception."}
+      - {"n": 38, "answer": "notice", "vi": "thông báo", "ex": "Read the notice on the door."}
+      - {"n": 39, "answer": "warning", "vi": "cảnh báo", "ex": "There's a warning sign near the river."}
+      - {"n": 40, "answer": "silence", "vi": "im lặng", "ex": "Silence, please. This is a library."}
+      - {"n": 41, "answer": "fasten your seat belt", "vi": "thắt dây an toàn", "ex": "Fasten your seat belt, please."}
+    lines:
+      - {"tom": "Thirty-six. check-in. check-in. Check-in starts at two p.m. Check-in starts at two p.m.", "focus": 0}
+      - {"tom": "Thirty-seven. reception. reception. Leave your key at reception. Leave your key at reception.", "focus": 1, "reveal": [36]}
+      - {"tom": "Thirty-eight. notice. notice. Read the notice on the door. Read the notice on the door.", "focus": 2, "reveal": [37]}
+      - {"tom": "Thirty-nine. warning. warning. There's a warning sign near the river. There's a warning sign near the river.", "focus": 3, "reveal": [38]}
+      - {"tom": "Forty. silence. silence. Silence, please. This is a library. Silence, please. This is a library.", "focus": 4, "reveal": [39]}
+      - {"tom": "Forty-one. fasten your seat belt. fasten your seat belt. Fasten your seat belt, please. Fasten your seat belt, please.", "focus": 5, "reveal": [40]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [41]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (42–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 42, "answer": "do not feed the animals", "vi": "không cho thú ăn", "ex": "Do not feed the animals at the zoo."}
+      - {"n": 43, "answer": "no photos", "vi": "cấm chụp ảnh", "ex": "No photos in the museum."}
+      - {"n": 44, "answer": "switch off", "vi": "tắt", "ex": "Please switch off your phone."}
+      - {"n": 45, "answer": "customs", "vi": "hải quan", "ex": "We went through customs at the airport."}
+      - {"n": 46, "answer": "special offer", "vi": "ưu đãi đặc biệt", "ex": "There's a special offer on shoes this week."}
+      - {"n": 47, "answer": "vacancy", "vi": "phòng trống", "ex": "Do you have a vacancy for tonight?"}
+    lines:
+      - {"tom": "Forty-two. do not feed the animals. do not feed the animals. Do not feed the animals at the zoo. Do not feed the animals at the zoo.", "focus": 0}
+      - {"tom": "Forty-three. no photos. no photos. No photos in the museum. No photos in the museum.", "focus": 1, "reveal": [42]}
+      - {"tom": "Forty-four. switch off. switch off. Please switch off your phone. Please switch off your phone.", "focus": 2, "reveal": [43]}
+      - {"tom": "Forty-five. customs. customs. We went through customs at the airport. We went through customs at the airport.", "focus": 3, "reveal": [44]}
+      - {"tom": "Forty-six. special offer. special offer. There's a special offer on shoes this week. There's a special offer on shoes this week.", "focus": 4, "reveal": [45]}
+      - {"tom": "Forty-seven. vacancy. vacancy. Do you have a vacancy for tonight? Do you have a vacancy for tonight?", "focus": 5, "reveal": [46]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [47]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 48, "answer": "Excuse me, where's the toilet?", "vi": "Xin lỗi, nhà vệ sinh ở đâu?"}
+      - {"n": 49, "answer": "The ladies is downstairs, on the left.", "vi": "Nhà vệ sinh nữ ở tầng dưới, bên trái."}
+      - {"n": 50, "answer": "Is this the way out?", "vi": "Đây có phải lối ra không?"}
+      - {"n": 51, "answer": "No, the exit is over there.", "vi": "Không, lối ra ở đằng kia."}
+      - {"n": 52, "answer": "Can I smoke here?", "vi": "Tôi hút thuốc ở đây được không?"}
+      - {"n": 53, "answer": "No, it's a no smoking area.", "vi": "Không, đây là khu vực cấm hút thuốc."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-eight. Excuse me, where's the toilet? Excuse me, where's the toilet?", "focus": 0}
+      - {"tom": "Forty-nine. The ladies is downstairs, on the left. The ladies is downstairs, on the left.", "focus": 1, "reveal": [48]}
+      - {"emma": "Fifty. Is this the way out? Is this the way out?", "focus": 2, "reveal": [49]}
+      - {"tom": "Fifty-one. No, the exit is over there. No, the exit is over there.", "focus": 3, "reveal": [50]}
+      - {"tom": "Fifty-two. Can I smoke here? Can I smoke here?", "focus": 4, "reveal": [51]}
+      - {"emma": "Fifty-three. No, it's a no smoking area. No, it's a no smoking area.", "focus": 5, "reveal": [52]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "You can't park here. Can't you see the sign?", "vi": "Bạn không được đỗ ở đây. Không thấy biển à?"}
+      - {"n": 55, "answer": "Sorry, I didn't see it.", "vi": "Xin lỗi, tôi không thấy."}
+      - {"n": 56, "answer": "The machine is out of order.", "vi": "Máy hỏng rồi."}
+      - {"n": 57, "answer": "Let's try the one downstairs.", "vi": "Thử cái ở tầng dưới đi."}
+      - {"n": 58, "answer": "Do you have any vacancies?", "vi": "Còn phòng trống không?"}
+      - {"n": 59, "answer": "Sorry, we're full tonight.", "vi": "Xin lỗi, tối nay hết phòng."}
+    lines:
+      - {"emma": "Fifty-four. You can't park here. Can't you see the sign? You can't park here. Can't you see the sign?", "focus": 0}
+      - {"tom": "Fifty-five. Sorry, I didn't see it. Sorry, I didn't see it.", "focus": 1, "reveal": [54]}
+      - {"tom": "Fifty-six. The machine is out of order. The machine is out of order.", "focus": 2, "reveal": [55]}
+      - {"emma": "Fifty-seven. Let's try the one downstairs. Let's try the one downstairs.", "focus": 3, "reveal": [56]}
+      - {"emma": "Fifty-eight. Do you have any vacancies? Do you have any vacancies?", "focus": 4, "reveal": [57]}
+      - {"tom": "Fifty-nine. Sorry, we're full tonight. Sorry, we're full tonight.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "Please ring the bell for attention.", "vi": "Vui lòng bấm chuông."}
+      - {"n": 61, "answer": "I rang the bell, but nobody came.", "vi": "Tôi bấm chuông nhưng không ai ra."}
+      - {"n": 62, "answer": "Do I have to queue here?", "vi": "Tôi phải xếp hàng ở đây à?"}
+      - {"n": 63, "answer": "Yes, the queue starts here.", "vi": "Đúng, hàng bắt đầu từ đây."}
+      - {"n": 64, "answer": "Anything to declare?", "vi": "Có gì cần khai báo không?"}
+      - {"n": 65, "answer": "No, nothing to declare.", "vi": "Không, không có gì."}
+    lines:
+      - {"tom": "Sixty. Please ring the bell for attention. Please ring the bell for attention.", "focus": 0}
+      - {"emma": "Sixty-one. I rang the bell, but nobody came. I rang the bell, but nobody came.", "focus": 1, "reveal": [60]}
+      - {"emma": "Sixty-two. Do I have to queue here? Do I have to queue here?", "focus": 2, "reveal": [61]}
+      - {"tom": "Sixty-three. Yes, the queue starts here. Yes, the queue starts here.", "focus": 3, "reveal": [62]}
+      - {"tom": "Sixty-four. Anything to declare? Anything to declare?", "focus": 4, "reveal": [63]}
+      - {"emma": "Sixty-five. No, nothing to declare. No, nothing to declare.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "Is the sale still on?", "vi": "Còn giảm giá không?"}
+      - {"n": 67, "answer": "Yes, until Sunday. Everything is half price.", "vi": "Còn, đến Chủ nhật. Mọi thứ giảm nửa giá."}
+      - {"n": 68, "answer": "Please don't disturb me. I'm studying.", "vi": "Đừng làm phiền mình. Mình đang học."}
+      - {"n": 69, "answer": "Sorry! I'll come back later.", "vi": "Xin lỗi! Lát mình quay lại."}
+      - {"n": 70, "answer": "What does this sign mean?", "vi": "Biển này nghĩa là gì?"}
+      - {"n": 71, "answer": "It means you can't go in.", "vi": "Nghĩa là không được vào."}
+    lines:
+      - {"emma": "Sixty-six. Is the sale still on? Is the sale still on?", "focus": 0}
+      - {"tom": "Sixty-seven. Yes, until Sunday. Everything is half price. Yes, until Sunday. Everything is half price.", "focus": 1, "reveal": [66]}
+      - {"tom": "Sixty-eight. Please don't disturb me. I'm studying. Please don't disturb me. I'm studying.", "focus": 2, "reveal": [67]}
+      - {"emma": "Sixty-nine. Sorry! I'll come back later. Sorry! I'll come back later.", "focus": 3, "reveal": [68]}
+      - {"emma": "Seventy. What does this sign mean? What does this sign mean?", "focus": 4, "reveal": [69]}
+      - {"tom": "Seventy-one. It means you can't go in. It means you can't go in.", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Push or pull?", "vi": "Đẩy hay kéo?"}
+      - {"n": 73, "answer": "Pull. It says pull on the door.", "vi": "Kéo. Trên cửa ghi kéo."}
+      - {"n": 74, "answer": "Is the museum open on Mondays?", "vi": "Bảo tàng có mở cửa thứ Hai không?"}
+      - {"n": 75, "answer": "No, it's closed on Mondays.", "vi": "Không, thứ Hai đóng cửa."}
+    lines:
+      - {"emma": "Seventy-two. Push or pull? Push or pull?", "focus": 0}
+      - {"tom": "Seventy-three. Pull. It says pull on the door. Pull. It says pull on the door.", "focus": 1, "reveal": [72]}
+      - {"emma": "Seventy-four. Is the museum open on Mondays? Is the museum open on Mondays?", "focus": 2, "reveal": [73]}
+      - {"tom": "Seventy-five. No, it's closed on Mondays. No, it's closed on Mondays.", "focus": 3, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [75]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (76–79)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 76, "answer": "Where's the entrance?", "vi": "Lối vào ở đâu?"}
+      - {"n": 77, "answer": "It's round the corner.", "vi": "Ở ngay góc đường."}
+      - {"n": 78, "answer": "Please switch off your phones.", "vi": "Vui lòng tắt điện thoại."}
+      - {"n": 79, "answer": "The lift is out of order, so we have to use the stairs.", "vi": "Thang máy hỏng nên phải đi cầu thang bộ."}
+    lines:
+      - {"emma": "Seventy-six. Where's the entrance? Where's the entrance?", "focus": 0}
+      - {"tom": "Seventy-seven. It's round the corner. It's round the corner.", "focus": 1, "reveal": [76]}
+      - {"emma": "Seventy-eight. Please switch off your phones. Please switch off your phones.", "focus": 2, "reveal": [77]}
+      - {"tom": "Seventy-nine. The lift is out of order, so we have to use the stairs. The lift is out of order, so we have to use the stairs.", "say": "Seventy-nine. The lift is out of order, so we have to yooz the stairs. The lift is out of order, so we have to yooz the stairs.", "focus": 3, "reveal": [78]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [79]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in the next module.", "say": "Well done! See you in the next module.", "vi": "Giỏi lắm! Hẹn gặp ở module tiếp theo."}
+

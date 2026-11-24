@@ -1,0 +1,304 @@
+# Video nghe – viết (dictation) Unit 30 · Trains — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U30-trains-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U30 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 30 có 34 mục: dòng ghép các mục đi cùng nhau (get on, get off; a fast train, a slow train …).
+id: U30-trains-dictation
+activity: U30-words
+title: "Unit 30 · Trains"
+subtitle: "Dictation · listen and write: getting around on trains"
+title_vi: "Nghe – viết 10 phút: đi tàu hỏa — từ trong sách, từ thêm, câu giao tiếp"
+tag: "GETTING AROUND · UNIT 30"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 30: Trains. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty: Trains. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 30: đi tàu hỏa. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 28 words from the book. You hear each word twice, and then an example sentence twice. Then 19 more useful words, and 30 useful sentences for conversation.", "say": "There are three parts. First, twenty-eight words from the book. You hear each word twice, and then an example sentence twice. Then nineteen more useful words, and thirty useful sentences for conversation.", "vi": "Ba phần: 28 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 19 từ thêm, 30 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "train", "vi": "tàu hỏa", "ex": "I love travelling by train.", "w": ["train"]}
+      - {"n": 2, "answer": "get a train, take a train", "vi": "đi tàu", "ex": "We can get a train or take a bus.", "w": ["get", "take"]}
+      - {"n": 3, "answer": "carriage", "vi": "toa tàu", "ex": "Our carriage is near the front of the train.", "w": ["carriage"]}
+      - {"n": 4, "answer": "seat", "vi": "ghế, chỗ ngồi", "ex": "Is this seat free?", "w": ["seat"]}
+      - {"n": 5, "answer": "get on, get off", "vi": "lên tàu, xuống tàu", "ex": "Get on the train at platform 2, and get off at Kemble.", "w": ["get on", "get off"]}
+      - {"n": 6, "answer": "wait for a train", "vi": "đợi tàu", "ex": "We waited for the train in the café.", "w": ["wait"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. train. train. I love travelling by train. I love travelling by train.", "focus": 0}
+      - {"emma": "Two. get a train, take a train. get a train, take a train. We can get a train or take a bus. We can get a train or take a bus.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. carriage. carriage. Our carriage is near the front of the train. Our carriage is near the front of the train.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. seat. seat. Is this seat free? Is this seat free?", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. get on, get off. get on, get off. Get on the train at platform 2, and get off at Kemble. Get on the train at platform 2, and get off at Kemble.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. wait for a train. wait for a train. We waited for the train in the café. We waited for the train in the café.", "say": "Six. wait for a train. wait for a train. We waited for the train in the cafe. We waited for the train in the cafe.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "miss a train", "vi": "lỡ tàu", "ex": "Sorry I'm late. I missed the train.", "w": ["miss"]}
+      - {"n": 8, "answer": "catch a train", "vi": "kịp tàu", "ex": "Hurry, or we won't catch the train!", "w": ["catch"]}
+      - {"n": 9, "answer": "timetable", "vi": "bảng giờ tàu", "ex": "Have a look at the timetable.", "w": ["timetable"]}
+      - {"n": 10, "answer": "the twelve o'clock train", "vi": "chuyến tàu 12 giờ", "ex": "The twelve o'clock train is direct.", "w": ["o'clock", "clock"]}
+      - {"n": 11, "answer": "journey", "vi": "chuyến đi", "ex": "It's a long journey from Hanoi to Ho Chi Minh City.", "w": ["journey"]}
+      - {"n": 12, "answer": "fare", "vi": "tiền vé", "ex": "How much was the train fare?", "w": ["fare"]}
+    lines:
+      - {"emma": "Seven. miss a train. miss a train. Sorry I'm late. I missed the train. Sorry I'm late. I missed the train.", "focus": 0}
+      - {"emma": "Eight. catch a train. catch a train. Hurry, or we won't catch the train! Hurry, or we won't catch the train!", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. timetable. timetable. Have a look at the timetable. Have a look at the timetable.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. the twelve o'clock train. the twelve o'clock train. The twelve o'clock train is direct. The twelve o'clock train is direct.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. journey. journey. It's a long journey from Hanoi to Ho Chi Minh City. It's a long journey from Hanoi to Ho Chi Minh City.", "say": "Eleven. journey. journey. It's a long journey from Ha Noi to Ho Chee Min City. It's a long journey from Ha Noi to Ho Chee Min City.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. fare. fare. How much was the train fare? How much was the train fare?", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "a fast train, a slow train", "vi": "tàu nhanh, tàu chậm", "ex": "The fast train takes three hours.", "w": ["fast", "slow"]}
+      - {"n": 14, "answer": "railway station", "vi": "ga tàu", "ex": "The railway station is in the city centre."}
+      - {"n": 15, "answer": "the last train", "vi": "chuyến tàu cuối", "ex": "The last train leaves at eleven thirty.", "w": ["last", "leave"]}
+      - {"n": 16, "answer": "passenger", "vi": "hành khách", "ex": "The passenger is talking to the ticket office.", "w": ["passenger"]}
+      - {"n": 17, "answer": "ticket office", "vi": "phòng bán vé", "ex": "Where's the ticket office?", "w": ["ticket office", "office"]}
+      - {"n": 18, "answer": "ticket", "vi": "vé", "ex": "I bought my ticket on an app.", "w": ["ticket"]}
+    lines:
+      - {"emma": "Thirteen. a fast train, a slow train. a fast train, a slow train. The fast train takes three hours. The fast train takes three hours.", "focus": 0}
+      - {"emma": "Fourteen. railway station. railway station. The railway station is in the city centre. The railway station is in the city centre.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. the last train. the last train. The last train leaves at eleven thirty. The last train leaves at eleven thirty.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. passenger. passenger. The passenger is talking to the ticket office. The passenger is talking to the ticket office.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. ticket office. ticket office. Where's the ticket office? Where's the ticket office?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. ticket. ticket. I bought my ticket on an app. I bought my ticket on an app.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "a single, a single ticket", "vi": "vé một chiều", "ex": "A single to Cardiff, please.", "w": ["single"]}
+      - {"n": 20, "answer": "a return", "vi": "vé khứ hồi", "ex": "A return is cheaper than two singles.", "w": ["return"]}
+      - {"n": 21, "answer": "the next train", "vi": "chuyến tàu tiếp theo", "ex": "When's the next train to London?", "w": ["next"]}
+      - {"n": 22, "answer": "change trains", "vi": "đổi tàu", "ex": "Do I have to change trains?", "w": ["change"]}
+      - {"n": 23, "answer": "direct", "vi": "đi thẳng", "ex": "No, the train is direct.", "w": ["direct"]}
+      - {"n": 24, "answer": "get to", "vi": "đến", "ex": "When does it get to Cardiff?", "w": ["get"]}
+    lines:
+      - {"emma": "Nineteen. a single, a single ticket. a single, a single ticket. A single to Cardiff, please. A single to Cardiff, please.", "focus": 0}
+      - {"emma": "Twenty. a return. a return. A return is cheaper than two singles. A return is cheaper than two singles.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. the next train. the next train. When's the next train to London? When's the next train to London?", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. change trains. change trains. Do I have to change trains? Do I have to change trains?", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. direct. direct. No, the train is direct. No, the train is direct.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. get to. get to. When does it get to Cardiff? When does it get to Cardiff?", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "platform", "vi": "sân ga", "ex": "The train leaves from platform 6.", "w": ["platform"]}
+      - {"n": 26, "answer": "book a seat", "vi": "đặt chỗ", "ex": "I always book a seat on long journeys.", "w": ["book"]}
+      - {"n": 27, "answer": "in advance", "vi": "trước", "ex": "Book your ticket in advance.", "w": ["in advance", "advance"]}
+      - {"n": 28, "answer": "reserve", "vi": "đặt trước", "ex": "Can I reserve a seat?", "w": ["reserve"]}
+    lines:
+      - {"emma": "Twenty-five. platform. platform. The train leaves from platform 6. The train leaves from platform 6.", "focus": 0}
+      - {"emma": "Twenty-six. book a seat. book a seat. I always book a seat on long journeys. I always book a seat on long journeys.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. in advance. in advance. Book your ticket in advance. Book your ticket in advance.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. reserve. reserve. Can I reserve a seat? Can I reserve a seat?", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "station announcement", "vi": "thông báo ở ga", "ex": "Listen to the station announcement."}
+      - {"n": 30, "answer": "delayed", "vi": "bị trễ", "ex": "The nine thirty to London is delayed."}
+      - {"n": 31, "answer": "cancelled", "vi": "bị hủy", "ex": "The last train is cancelled."}
+      - {"n": 32, "answer": "sleeper", "vi": "giường nằm (trên tàu)", "ex": "We booked a sleeper for the night train."}
+      - {"n": 33, "answer": "night train", "vi": "tàu đêm", "ex": "The night train leaves at ten p.m."}
+      - {"n": 34, "answer": "railway", "vi": "đường sắt", "ex": "The railway goes from Hanoi to Ho Chi Minh City."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-nine. station announcement. station announcement. Listen to the station announcement. Listen to the station announcement.", "focus": 0}
+      - {"tom": "Thirty. delayed. delayed. The nine thirty to London is delayed. The nine thirty to London is delayed.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. cancelled. cancelled. The last train is cancelled. The last train is cancelled.", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. sleeper. sleeper. We booked a sleeper for the night train. We booked a sleeper for the night train.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. night train. night train. The night train leaves at ten p.m. The night train leaves at ten p.m.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. railway. railway. The railway goes from Hanoi to Ho Chi Minh City. The railway goes from Hanoi to Ho Chi Minh City.", "say": "Thirty-four. railway. railway. The railway goes from Ha Noi to Ho Chee Min City. The railway goes from Ha Noi to Ho Chee Min City.", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "metro", "vi": "tàu điện (metro)", "ex": "Ho Chi Minh City has a new metro line."}
+      - {"n": 36, "answer": "the Underground", "vi": "tàu điện ngầm London", "ex": "In London, people take the Underground."}
+      - {"n": 37, "answer": "guard", "vi": "nhân viên trên tàu", "ex": "The guard checks the tickets."}
+      - {"n": 38, "answer": "luggage", "vi": "hành lý", "ex": "Put your luggage on the rack."}
+      - {"n": 39, "answer": "arrive", "vi": "đến nơi", "ex": "The train arrives at ten fifty-six."}
+      - {"n": 40, "answer": "depart", "vi": "khởi hành", "ex": "The train departs from platform two."}
+    lines:
+      - {"tom": "Thirty-five. metro. metro. Ho Chi Minh City has a new metro line. Ho Chi Minh City has a new metro line.", "say": "Thirty-five. metro. metro. Ho Chee Min City has a new metro line. Ho Chee Min City has a new metro line.", "focus": 0}
+      - {"tom": "Thirty-six. the Underground. the Underground. In London, people take the Underground. In London, people take the Underground.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. guard. guard. The guard checks the tickets. The guard checks the tickets.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. luggage. luggage. Put your luggage on the rack. Put your luggage on the rack.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. arrive. arrive. The train arrives at ten fifty-six. The train arrives at ten fifty-six.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. depart. depart. The train departs from platform two. The train departs from platform two.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–44)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "half price", "vi": "nửa giá", "ex": "Children travel half price."}
+      - {"n": 42, "answer": "discount", "vi": "giảm giá", "ex": "Students get a discount on train tickets."}
+      - {"n": 43, "answer": "reduced price", "vi": "giá giảm", "ex": "You get a reduced price if you book early."}
+      - {"n": 44, "answer": "window seat", "vi": "ghế cạnh cửa sổ", "ex": "Can I have a window seat, please?"}
+    lines:
+      - {"tom": "Forty-one. half price. half price. Children travel half price. Children travel half price.", "focus": 0}
+      - {"tom": "Forty-two. discount. discount. Students get a discount on train tickets. Students get a discount on train tickets.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. reduced price. reduced price. You get a reduced price if you book early. You get a reduced price if you book early.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. window seat. window seat. Can I have a window seat, please? Can I have a window seat, please?", "focus": 3, "reveal": [43]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [44]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (45–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 45, "answer": "first class", "vi": "hạng nhất", "ex": "First class is very expensive."}
+      - {"n": 46, "answer": "mind the gap", "vi": "chú ý khoảng trống", "ex": "Mind the gap when you get off."}
+      - {"n": 47, "answer": "countryside", "vi": "vùng quê", "ex": "I love looking at the countryside from the train."}
+    lines:
+      - {"tom": "Forty-five. first class. first class. First class is very expensive. First class is very expensive.", "focus": 0}
+      - {"tom": "Forty-six. mind the gap. mind the gap. Mind the gap when you get off. Mind the gap when you get off.", "focus": 1, "reveal": [45]}
+      - {"tom": "Forty-seven. countryside. countryside. I love looking at the countryside from the train. I love looking at the countryside from the train.", "focus": 2, "reveal": [46]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [47]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 48, "answer": "A single to Bristol, please.", "vi": "Một vé một chiều đi Bristol."}
+      - {"n": 49, "answer": "That's twenty pounds, please.", "vi": "Hai mươi bảng."}
+      - {"n": 50, "answer": "When's the next train?", "vi": "Chuyến tiếp theo lúc mấy giờ?"}
+      - {"n": 51, "answer": "There's one at 10.15.", "vi": "Có chuyến lúc 10 giờ 15."}
+      - {"n": 52, "answer": "Do I have to change?", "vi": "Có phải đổi tàu không?"}
+      - {"n": 53, "answer": "No, it's direct.", "vi": "Không, đi thẳng."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-eight. A single to Bristol, please. A single to Bristol, please.", "focus": 0}
+      - {"tom": "Forty-nine. That's twenty pounds, please. That's twenty pounds, please.", "focus": 1, "reveal": [48]}
+      - {"emma": "Fifty. When's the next train? When's the next train?", "focus": 2, "reveal": [49]}
+      - {"tom": "Fifty-one. There's one at 10.15. There's one at 10.15.", "say": "Fifty-one. There's one at ten fif-teen. There's one at ten fif-teen.", "focus": 3, "reveal": [50]}
+      - {"emma": "Fifty-two. Do I have to change? Do I have to change?", "focus": 4, "reveal": [51]}
+      - {"tom": "Fifty-three. No, it's direct. No, it's direct.", "focus": 5, "reveal": [52]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "Which platform is it?", "vi": "Sân ga số mấy?"}
+      - {"n": 55, "answer": "Platform four.", "vi": "Sân ga số bốn."}
+      - {"n": 56, "answer": "What time does it get to London?", "vi": "Mấy giờ đến London?"}
+      - {"n": 57, "answer": "At twenty past twelve.", "vi": "Mười hai giờ hai mươi."}
+      - {"n": 58, "answer": "Can I book a seat in advance?", "vi": "Tôi đặt chỗ trước được không?"}
+      - {"n": 59, "answer": "Yes, you can book online.", "vi": "Được, đặt trực tuyến được."}
+    lines:
+      - {"emma": "Fifty-four. Which platform is it? Which platform is it?", "focus": 0}
+      - {"tom": "Fifty-five. Platform four. Platform four.", "focus": 1, "reveal": [54]}
+      - {"emma": "Fifty-six. What time does it get to London? What time does it get to London?", "focus": 2, "reveal": [55]}
+      - {"tom": "Fifty-seven. At twenty past twelve. At twenty past twelve.", "focus": 3, "reveal": [56]}
+      - {"emma": "Fifty-eight. Can I book a seat in advance? Can I book a seat in advance?", "focus": 4, "reveal": [57]}
+      - {"tom": "Fifty-nine. Yes, you can book online. Yes, you can book online.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "Is this the train to Cardiff?", "vi": "Đây có phải tàu đi Cardiff không?"}
+      - {"n": 61, "answer": "Yes, it is. Hurry, it's leaving!", "vi": "Đúng rồi. Nhanh lên, tàu sắp chạy!"}
+      - {"n": 62, "answer": "Excuse me, I think you're in my seat.", "vi": "Xin lỗi, hình như bạn ngồi nhầm ghế của tôi."}
+      - {"n": 63, "answer": "Oh, sorry! Let me check my ticket.", "vi": "Ồ, xin lỗi! Để tôi xem vé."}
+      - {"n": 64, "answer": "The train is delayed by twenty minutes.", "vi": "Tàu trễ hai mươi phút."}
+      - {"n": 65, "answer": "Oh no, I'll miss my meeting.", "vi": "Ôi, tôi sẽ lỡ cuộc họp mất."}
+    lines:
+      - {"emma": "Sixty. Is this the train to Cardiff? Is this the train to Cardiff?", "focus": 0}
+      - {"tom": "Sixty-one. Yes, it is. Hurry, it's leaving! Yes, it is. Hurry, it's leaving!", "focus": 1, "reveal": [60]}
+      - {"emma": "Sixty-two. Excuse me, I think you're in my seat. Excuse me, I think you're in my seat.", "focus": 2, "reveal": [61]}
+      - {"tom": "Sixty-three. Oh, sorry! Let me check my ticket. Oh, sorry! Let me check my ticket.", "focus": 3, "reveal": [62]}
+      - {"tom": "Sixty-four. The train is delayed by twenty minutes. The train is delayed by twenty minutes.", "focus": 4, "reveal": [63]}
+      - {"emma": "Sixty-five. Oh no, I'll miss my meeting. Oh no, I'll miss my meeting.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "How long is the journey?", "vi": "Chuyến đi mất bao lâu?"}
+      - {"n": 67, "answer": "About eight hours.", "vi": "Khoảng tám tiếng."}
+      - {"n": 68, "answer": "Would you like a single or a return?", "vi": "Bạn muốn vé một chiều hay khứ hồi?"}
+      - {"n": 69, "answer": "A return, please. I'm coming back on Sunday.", "vi": "Vé khứ hồi. Chủ nhật tôi về."}
+      - {"n": 70, "answer": "I missed the last train!", "vi": "Mình lỡ chuyến tàu cuối rồi!"}
+      - {"n": 71, "answer": "Let's get a taxi, then.", "vi": "Vậy mình đi taxi đi."}
+    lines:
+      - {"emma": "Sixty-six. How long is the journey? How long is the journey?", "focus": 0}
+      - {"tom": "Sixty-seven. About eight hours. About eight hours.", "focus": 1, "reveal": [66]}
+      - {"tom": "Sixty-eight. Would you like a single or a return? Would you like a single or a return?", "focus": 2, "reveal": [67]}
+      - {"emma": "Sixty-nine. A return, please. I'm coming back on Sunday. A return, please. I'm coming back on Sunday.", "focus": 3, "reveal": [68]}
+      - {"tom": "Seventy. I missed the last train! I missed the last train!", "focus": 4, "reveal": [69]}
+      - {"emma": "Seventy-one. Let's get a taxi, then. Let's get a taxi, then.", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Is there a café on the train?", "vi": "Trên tàu có quầy cà phê không?"}
+      - {"n": 73, "answer": "Yes, in carriage C.", "vi": "Có, ở toa C."}
+      - {"n": 74, "answer": "Where's the ticket office?", "vi": "Phòng bán vé ở đâu?"}
+      - {"n": 75, "answer": "It's next to platform one.", "vi": "Ngay cạnh sân ga số một."}
+      - {"n": 76, "answer": "Do you prefer the train or the coach?", "vi": "Bạn thích tàu hay xe khách hơn?"}
+      - {"n": 77, "answer": "The train. It's more comfortable.", "vi": "Tàu. Thoải mái hơn."}
+    lines:
+      - {"emma": "Seventy-two. Is there a café on the train? Is there a café on the train?", "say": "Seventy-two. Is there a cafe on the train? Is there a cafe on the train?", "focus": 0}
+      - {"tom": "Seventy-three. Yes, in carriage C. Yes, in carriage C.", "say": "Seventy-three. Yes, in carriage see. Yes, in carriage see.", "focus": 1, "reveal": [72]}
+      - {"emma": "Seventy-four. Where's the ticket office? Where's the ticket office?", "focus": 2, "reveal": [73]}
+      - {"tom": "Seventy-five. It's next to platform one. It's next to platform one.", "focus": 3, "reveal": [74]}
+      - {"emma": "Seventy-six. Do you prefer the train or the coach? Do you prefer the train or the coach?", "focus": 4, "reveal": [75]}
+      - {"tom": "Seventy-seven. The train. It's more comfortable. The train. It's more comfortable.", "focus": 5, "reveal": [76]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [77]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 31.", "say": "Well done! See you in Unit thirty-one.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 31."}
+
