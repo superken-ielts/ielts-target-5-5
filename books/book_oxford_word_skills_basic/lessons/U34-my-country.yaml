@@ -1,0 +1,336 @@
+# Video Oxford Word Skills Basic · Unit 34 — I can talk about my country (sách in tr. 90, Answer key tr. 212).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–3. Bài 1 theo Answer key tr. 212 (bản đồ Brazil bên trái). Bài 2 (Test yourself): "Possible answers" của
+# Answer key — đáp án hiện thành nhãn trên bản đồ khi Tom trả lời. Bài 3 (ABOUT YOUR COUNTRY): Tom trả lời về Việt Nam, Emma về
+# nước Anh (cảnh Nói 1; Answer key là câu của "a Greek person").
+# Unit một trang nên thêm ngoài sách: nước Việt Nam bằng tiếng Anh (thủ đô, thành phố lớn, sông, núi, bờ biển, biên giới, nơi nổi
+# tiếng), famous for / popular with, high hay tall, câu đố "in the north / on the coast / inland" về Việt Nam; Nghe và viết; Nói 2
+# (Part 1 "Your country").
+# Hình trong sách: bản đồ Brazil (khung theo địa danh, la bàn), đoạn văn (khung theo dòng, đo bằng máy), Glossary hai cảnh.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom sinh ở Hà Nội, lớn lên ở Đà Lạt (hồ sơ); chị Hoa ở Hà Nội; đã leo
+# Langbiang (U11); mẹ có cửa hàng hoa ở Đà Lạt (U15, IELTS U04); mới: muốn leo Fansipan một ngày nào đó. Emma lớn lên ở thị trấn nhỏ ven biển miền nam nước Anh (hồ sơ); mới:
+# mùa hè người Anh thích ra bờ biển miền tây nam (Cornwall).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U34-my-country.yaml
+id: U34-my-country
+activity: U34-words
+title: "Unit 34 · My country"
+subtitle: "I can talk about my country"
+title_vi: "Nói về đất nước: capital, coast, border, river, mountain, in the north, inland, famous, popular — Việt Nam bằng tiếng Anh"
+tag: "PLACES · UNIT 34"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 34, the first unit in the Places module: my country. We'll read about Brazil, and then talk about Vietnam and England. Your country is a very common IELTS topic."
+        say: "Welcome to Unit thirty-four, the first unit in the Places module: my country. We'll read about Brazil, and then talk about Vietnam and England. Your country is a very common eye-elts topic."
+        vi: "Unit 34, unit đầu của module Places (nơi chốn): đất nước — đọc về Brazil, rồi nói về Việt Nam và nước Anh."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Bản đồ Brazil"
+    heading: "Brazil · the map"
+    heading_vi: "Bản đồ trong sách tr. 90 — 1 coast · 2 border · 3 river · 4 mountain"
+    image: {pdf: course-book, page: 91, clip: [70, 64, 290, 282]}
+    items:
+      - {box: [226, 100, 284, 200]}
+      - {box: [96, 86, 176, 206]}
+      - {box: [104, 119, 160, 138]}
+      - {box: [104, 92, 196, 117]}
+      - {box: [170, 167, 212, 185]}
+      - {box: [186, 199, 244, 218]}
+      - {box: [242, 135, 282, 157]}
+      - {box: [172, 223, 208, 253]}
+      - {box: [250, 66, 286, 112]}
+    lines:
+      - {emma: "Look at the map of Brazil on page ninety. Number one is the coast: the land next to the sea. Here, it's the Atlantic coast.", focus: 0, vi: "coast: bờ biển"}
+      - {tom: "Number two is a border: the line between two countries. Brazil has borders with ten countries.", focus: 1, vi: "border: biên giới"}
+      - {emma: "Three is a river: the Amazon. It's the longest river in Brazil.", focus: 2, vi: "river: sông"}
+      - {tom: "And four is a mountain: Pico da Neblina, the highest mountain in Brazil.", focus: 3, vi: "mountain: núi"}
+      - {emma: "Here's the capital, Brasilia.", focus: 4, vi: "capital: thủ đô"}
+      - {tom: "The most famous city is Rio de Janeiro, on the coast.", focus: 5}
+      - {emma: "Recife is a town in the north.", say: "Reh-see-fee is a town in the north.", focus: 6}
+      - {tom: "And Porto Alegre is a town in the south.", say: "And Porto Ah-leg-ree is a town in the south.", focus: 7}
+      - {emma: "Look at the compass: north, south, east, and west. We say: in the north of Brazil, or in the south of Brazil.", focus: 8, vi: "in the north of …: ở phía bắc …"}
+
+  - kind: figure
+    chapter: "Bài đọc về Brazil"
+    heading: "Brazil · the text"
+    heading_vi: "Đoạn văn tr. 90 — Emma đọc, Tom giải thích từ mới"
+    image: {pdf: course-book, page: 91, clip: [50, 286, 322, 382]}
+    items:
+      - {box: [52, 289, 320, 312]}
+      - {box: [52, 311, 320, 334]}
+      - {box: [52, 333, 320, 356]}
+      - {box: [52, 355, 320, 379]}
+    lines:
+      - {emma: "Now read the text. Brazil is enormous. The Atlantic coast is more than three thousand kilometres long, and in the north, south, and west, there are borders with ten different countries.", focus: 0, vi: "enormous: rất lớn · three thousand kilometres long: dài 3.000 km"}
+      - {tom: "The longest river is the Amazon, and Pico da Neblina is about three thousand metres high: it's the highest mountain in Brazil.", focus: 1, vi: "high: cao — dùng cho núi, không dùng tall"}
+      - {emma: "The capital, Brasilia, is inland, but many of the major cities are on the coast.", focus: 2, vi: "inland: sâu trong đất liền · major: lớn, quan trọng"}
+      - {tom: "The most famous is Rio de Janeiro, which has Sugar Loaf mountain, Corcovado, and some great beaches. It's very popular with tourists.", focus: 3, vi: "famous: nổi tiếng · beach: bãi biển · popular: được ưa chuộng"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 90 — enormous · long · high · capital · inland"
+    image: {pdf: course-book, page: 91, clip: [330, 72, 490, 203]}
+    items:
+      - {box: [334, 95, 488, 108]}
+      - {box: [334, 107, 488, 131]}
+      - {box: [334, 131, 488, 168]}
+      - {box: [334, 167, 488, 192]}
+      - {box: [334, 191, 488, 203]}
+    lines:
+      - {emma: "Look at the glossary. Enormous means very big.", focus: 0}
+      - {tom: "Three thousand kilometres long: three thousand kilometres from one end to the other.", focus: 1}
+      - {emma: "Three thousand metres high: from top to bottom. A mountain is high, not tall. Tall is for people and buildings.", focus: 2, vi: "a high mountain · a tall man"}
+      - {tom: "The capital is a city where a country has its government.", focus: 3, vi: "government: chính phủ"}
+      - {emma: "And inland means not near the sea.", focus: 4}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 90 — major · famous · beach · popular"
+    image: {pdf: course-book, page: 91, clip: [330, 201, 490, 301]}
+    items:
+      - {box: [334, 203, 488, 216]}
+      - {box: [334, 215, 488, 252]}
+      - {box: [334, 251, 488, 276]}
+      - {box: [334, 275, 488, 300]}
+    lines:
+      - {tom: "Major means large and important: the major cities.", focus: 0}
+      - {emma: "If something is famous, many people know about it. Rio is famous for Carnival.", focus: 1, vi: "famous for: nổi tiếng vì"}
+      - {tom: "A beach is an area of sand next to the sea, for example Copacabana.", focus: 2}
+      - {emma: "If something is popular, many people like it. We say: popular with tourists.", focus: 3, vi: "popular with: được … ưa chuộng"}
+
+  - kind: bullets
+    chapter: "famous for · popular with"
+    heading: "famous for · popular with · high or tall?"
+    heading_vi: "Thêm ngoài sách — nói về nơi nổi tiếng ở Việt Nam"
+    items:
+      - {en: "Vietnam is famous for its food and coffee.", vi: "Việt Nam nổi tiếng về ẩm thực và cà phê."}
+      - {en: "Da Lat is famous for flowers and strawberries.", vi: "Đà Lạt nổi tiếng về hoa và dâu tây."}
+      - {en: "Hoi An is famous for its old town and lanterns.", vi: "Hội An nổi tiếng về phố cổ và đèn lồng."}
+      - {en: "Nha Trang is very popular with tourists in summer.", vi: "Nha Trang rất đông khách du lịch vào mùa hè."}
+      - {en: "a high mountain · a tall man · a tall building", vi: "núi cao (high) · người cao, tòa nhà cao (tall)"}
+    lines:
+      - {emma: "Let's practise famous for. Vietnam is famous for its food and coffee.", focus: 0}
+      - {tom: "Da Lat is famous for flowers and strawberries. My mum has a flower shop there!", say: "Dah Lot is famous for flowers and strawberries. My mum has a flower shop there!", focus: 1}
+      - {emma: "Hoi An is famous for its old town and lanterns.", say: "Hoy Ann is famous for its old town and lanterns.", focus: 2, vi: "lantern: đèn lồng"}
+      - {tom: "And popular with: Nha Trang is very popular with tourists in summer.", say: "And popular with: Nah Trang is very popular with tourists in summer.", focus: 3}
+      - {emma: "Remember: a high mountain, but a tall man, or a tall building. In Ho Chi Minh City, there are lots of tall buildings.", say: "Remember: a high mountain, but a tall man, or a tall building. In Ho Chee Min City, there are lots of tall buildings.", focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành câu"
+    heading: "Exercise 1 · Complete the sentences (1–5)"
+    heading_vi: "Nhìn bản đồ một phút — ví dụ: The town in the north is Recife. (Answer key tr. 212)"
+    image: {pdf: course-book, page: 91, clip: [70, 64, 290, 282]}
+    items:
+      - {n: 1, q: "The town in the south is ___.", answer: "Porto Alegre"}
+      - {n: 2, q: "The capital is ___.", answer: "Brasilia"}
+      - {n: 3, q: "The longest river is the ___.", answer: "Amazon"}
+      - {n: 4, q: "The highest mountain is ___.", answer: "Pico da Neblina"}
+      - {n: 5, q: "In the south, it has a border with ___.", answer: "Argentina"}
+    lines:
+      - emma: "Exercise 1. Study the map of Brazil for one minute, then complete the sentences. The example is: the town in the north is Recife. Pause the video and try."
+        say: "Exercise one. Study the map of Brazil for one minute, then complete the sentences. The example is: the town in the north is Reh-see-fee. Pause the video and try."
+        vi: "Bài 1: nhìn bản đồ một phút rồi hoàn thành câu."
+      - {tom: "One. Porto Alegre. Two. Brasilia. Three. The Amazon.", say: "One. Porto Ah-leg-ree. Two. Brasilia. Three. The Amazon.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Pico da Neblina. Five. Argentina.", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 1 (tiếp)"
+    heading: "Exercise 1 · Complete the sentences (6–10)"
+    heading_vi: "Answer key tr. 212"
+    image: {pdf: course-book, page: 91, clip: [70, 64, 290, 282]}
+    items:
+      - {n: 6, q: "In the north, it has a border with ___.", answer: "Colombia"}
+      - {n: 7, q: "A popular city with tourists is ___.", answer: "Rio de Janeiro"}
+      - {n: 8, q: "It's famous for Sugar Loaf ___.", answer: "Mountain"}
+      - {n: 9, q: "Brasilia isn't near the sea; it's ___.", answer: "inland"}
+      - {n: 10, q: "Rio is on the ___.", answer: "coast"}
+    lines:
+      - {emma: "Now six to ten. Pause the video and try.", focus: 0}
+      - {tom: "Six. Colombia. Seven. Rio de Janeiro. Eight. Sugar Loaf Mountain.", reveal: [6, 7, 8], focus: 2}
+      - {tom: "Nine. It's inland. Ten. Rio is on the coast.", reveal: [9, 10], focus: 4}
+
+  - kind: figure
+    chapter: "Bài 2: tự kiểm tra"
+    heading: "Exercise 2 · Test yourself: what can you say about these places?"
+    heading_vi: "Đừng nhìn bài 1 — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 91, clip: [70, 64, 290, 282]}
+    items:
+      - {box: [104, 119, 160, 138]}
+      - {box: [104, 119, 160, 138], label: "the longest river"}
+      - {box: [104, 92, 196, 117]}
+      - {box: [104, 92, 196, 117], label: "the highest mountain"}
+      - {box: [170, 167, 212, 185]}
+      - {box: [170, 167, 212, 185], label: "the capital"}
+      - {box: [172, 223, 208, 253]}
+      - {box: [172, 223, 208, 253], label: "a town in the south"}
+      - {box: [98, 244, 160, 265]}
+      - {box: [98, 244, 160, 265], label: "a border in the south"}
+      - {box: [186, 199, 244, 218]}
+      - {box: [186, 199, 244, 218], label: "a famous city"}
+    lines:
+      - emma: "Exercise 2 is a test. Don't look at Exercise 1. What can you say about these places? The example is Recife: it's a town in the north of Brazil. Pause the video after each one. The Amazon?"
+        say: "Exercise two is a test. Don't look at Exercise one. What can you say about these places? The example is Reh-see-fee: it's a town in the north of Brazil. Pause the video after each one. The Amazon?"
+        focus: 0
+      - {tom: "It's the longest river in Brazil.", focus: 1}
+      - {emma: "Pico da Neblina?", focus: 2}
+      - {tom: "It's the highest mountain in Brazil.", focus: 3}
+      - {emma: "Brasilia?", focus: 4}
+      - {tom: "It's the capital. And it's inland.", focus: 5}
+      - {emma: "Porto Alegre?", say: "Porto Ah-leg-ree?", focus: 6}
+      - {tom: "It's a town in the south.", focus: 7}
+      - {emma: "Argentina?", focus: 8}
+      - {tom: "It has a border with the south of Brazil.", focus: 9}
+      - {emma: "And Rio de Janeiro?", focus: 10}
+      - {tom: "It's a famous city on the coast, and it's very popular with tourists.", focus: 11}
+
+  - kind: bullets
+    chapter: "Việt Nam bằng tiếng Anh"
+    heading: "Talking about Vietnam"
+    heading_vi: "Thêm ngoài sách — dùng từ của unit để nói về Việt Nam"
+    items:
+      - {en: "The capital, Hanoi, is in the north.", vi: "Thủ đô Hà Nội ở miền Bắc."}
+      - {en: "The largest city is Ho Chi Minh City, in the south.", vi: "Thành phố lớn nhất là TP. HCM, ở miền Nam."}
+      - {en: "The coast is more than 3,000 kilometres long.", vi: "Bờ biển dài hơn 3.000 km."}
+      - {en: "It has borders with China, Laos and Cambodia.", vi: "Có biên giới với Trung Quốc, Lào, Campuchia."}
+      - {en: "The highest mountain is Fansipan: 3,143 metres high.", vi: "Núi cao nhất là Fansipan: 3.143 m."}
+      - {en: "Ha Long Bay and Hoi An are famous and very popular.", vi: "Vịnh Hạ Long và Hội An nổi tiếng, rất đông khách."}
+    lines:
+      - {tom: "Let's use these words for Vietnam. The capital, Hanoi, is in the north. I was born there, and my sister lives there now.", say: "Let's yooz these words for Vietnam. The capital, Ha Noi, is in the north. I was born there, and my sister livz there now.", focus: 0}
+      - {emma: "The largest city is Ho Chi Minh City, in the south. Tom and I both live here.", say: "The largest city is Ho Chee Min City, in the south. Tom and I both liv here.", focus: 1}
+      - {tom: "Vietnam is long and thin, so the coast is more than three thousand kilometres long. There are some great beaches, like Nha Trang and Da Nang.", say: "Vietnam is long and thin, so the coast is more than three thousand kilometres long. There are some great beaches, like Nah Trang and Dah Nahng.", focus: 2}
+      - {emma: "In the north and the west, it has borders with China, Laos and Cambodia.", focus: 3}
+      - {tom: "The highest mountain is Fansipan, in the north: three thousand, one hundred and forty-three metres high. I'd love to climb it one day!", say: "The highest mountain is Fan-see-pan, in the north: three thousand, one hundred and forty-three metres high. I'd love to climb it one day!", focus: 4}
+      - {emma: "And two famous places: Ha Long Bay, on the coast, and the old town of Hoi An. They're very popular with tourists.", say: "And two famous places: Hah Long Bay, on the coast, and the old town of Hoy Ann. They're very popular with tourists.", focus: 5}
+
+  - kind: blanks
+    chapter: "Câu đố: Việt Nam"
+    heading: "Quiz · in the north, in the south, on the coast or inland?"
+    heading_vi: "Thêm ngoài sách — tạm dừng video và trả lời; có câu có hai đáp án"
+    items:
+      - {n: 1, q: "Hanoi  →  ___", answer: "in the north (the capital)"}
+      - {n: 2, q: "Da Lat  →  ___", answer: "inland, in the mountains"}
+      - {n: 3, q: "Nha Trang  →  ___", answer: "on the coast"}
+      - {n: 4, q: "Can Tho  →  ___", answer: "in the south, on the Mekong River"}
+      - {n: 5, q: "Fansipan  →  ___", answer: "in the north: the highest mountain"}
+      - {n: 6, q: "Da Nang  →  ___", answer: "in the centre, on the coast"}
+    lines:
+      - emma: "A quiz about Vietnam. Is it in the north, in the south, on the coast, or inland? Some have two answers. Pause the video and try."
+        vi: "Câu đố: ở miền Bắc, miền Nam, ven biển hay trong đất liền?"
+      - {tom: "One. Hanoi is in the north: it's the capital. Two. Da Lat is inland, in the mountains. My home town!", say: "One. Ha Noi is in the north: it's the capital. Two. Dah Lot is inland, in the mountains. My home town!", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Nha Trang is on the coast. Four. Can Tho is in the south, on the Mekong River.", say: "Three. Nah Trang is on the coast. Four. Kahn Toh is in the south, on the Mekong River.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. Fansipan is in the north. Six. Da Nang is in the centre of Vietnam, on the coast.", say: "Five. Fan-see-pan is in the north. Six. Dah Nahng is in the centre of Vietnam, on the coast.", reveal: [5, 6], focus: 5, vi: "in the centre: ở miền Trung"}
+
+  - kind: qa
+    chapter: "Nói 1: đất nước bạn"
+    heading: "Speaking 1 · Exercise 3: about your country"
+    heading_vi: "Bài 3 (ABOUT YOUR COUNTRY) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "What's the capital of England, and where is it?"
+        a: "London. It's in the south-east of England, on the River Thames."
+        ask: tom
+        by: emma
+        phrases: ["It's in the south-east of…", "on the River…"]
+      - q: "What are some of the other major cities?"
+        a: "Birmingham, Manchester and Liverpool. They're all in the middle or the north."
+        ask: tom
+        by: emma
+        phrases: ["They're all in…"]
+      - q: "Does England have borders with any other countries?"
+        a: "Yes, with Scotland in the north, and Wales in the west."
+        ask: tom
+        by: emma
+        phrases: ["Yes, with … in the north"]
+      - q: "Which places are popular in summer, Tom?"
+        a: "The beaches, like Nha Trang and Da Nang. And Da Lat, because it's cool in the mountains."
+        ask: emma
+        by: tom
+        phrases: ["The beaches, like…", "because it's cool…"]
+      - q: "What are the famous places in your capital city?"
+        a: "In Hanoi, Hoan Kiem Lake and the Old Quarter are very famous. They're in the centre of the city."
+        ask: emma
+        by: tom
+        phrases: ["… are very famous", "in the centre of the city"]
+    lines:
+      - {tom: "Exercise 3 is about your country. Emma, what's the capital of England, and where is it?", say: "Exercise three is about your country. Emma, what's the capital of England, and where is it?", focus: 0}
+      - {emma: "London. It's in the south-east of England, on the River Thames.", reveal: 0, vi: "London, ở phía đông nam nước Anh, bên sông Thames."}
+      - {tom: "What are some of the other major cities?", focus: 1}
+      - {emma: "Birmingham, Manchester and Liverpool. They're all in the middle or the north.", reveal: 1, vi: "Birmingham, Manchester, Liverpool — ở miền giữa hoặc miền bắc."}
+      - {tom: "Does England have borders with any other countries?", focus: 2}
+      - {emma: "Yes, with Scotland in the north, and Wales in the west.", reveal: 2, vi: "Có: Scotland ở phía bắc, xứ Wales ở phía tây."}
+      - {emma: "Which places are popular in summer, Tom?", focus: 3}
+      - {tom: "The beaches, like Nha Trang and Da Nang. And Da Lat, because it's cool in the mountains.", say: "The beaches, like Nah Trang and Dah Nahng. And Dah Lot, because it's cool in the mountains.", reveal: 3, vi: "Các bãi biển như Nha Trang, Đà Nẵng; và Đà Lạt vì mát."}
+      - {emma: "What are the famous places in your capital city?", focus: 4}
+      - {tom: "In Hanoi, Hoan Kiem Lake and the Old Quarter are very famous. They're in the centre of the city.", say: "In Ha Noi, Hoan Kiem Lake and the Old Quarter are very famous. They're in the centre of the city.", reveal: 4, vi: "Ở Hà Nội: hồ Hoàn Kiếm và phố cổ rất nổi tiếng."}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · my country"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "The ___ is in the north.", answer: "capital"}
+      - {n: 2, q: "Many major cities are on the ___.", answer: "coast"}
+      - {n: 3, q: "It has a ___ with three countries.", answer: "border"}
+      - {n: 4, q: "The longest ___ is the Mekong.", answer: "river"}
+      - {n: 5, q: "Ha Long Bay is ___ for its islands.", answer: "famous"}
+      - {n: 6, q: "Da Lat is ___, in the mountains.", answer: "inland"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. The capital is in the north.", focus: 0}
+      - {emma: "Number two. Many major cities are on the coast.", focus: 1}
+      - {emma: "Number three. It has a border with three countries.", focus: 2}
+      - {emma: "Number four. The longest river is the Mekong.", focus: 3}
+      - {emma: "Number five. Ha Long Bay is famous for its islands.", say: "Number five. Hah Long Bay is famous for its islands.", focus: 4}
+      - {emma: "Number six. Da Lat is inland, in the mountains.", say: "Number six. Dah Lot is inland, in the mountains.", focus: 5}
+      - {tom: "Capital: C, A, P, I, T, A, L. Coast: C, O, A, S, T. Border: B, O, R, D, E, R.", say: "Capital: see, eigh, pee, eye, tee, eigh, el. Coast: see, oh, eigh, ess, tee. Border: bee, oh, ar, dee, ee, ar.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "River. Famous: F, A, M, O, U, S. And inland: one word.", say: "River. Famous: ef, eigh, em, oh, yoo, ess. And inland: one word.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Your country"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Where in your country do you live?", hint: "I live in … It's in the south / north / centre …"}
+      - {q: "What's the most famous place in your country?", hint: "I think … is the most famous, because …"}
+      - {q: "Which places are popular with tourists?", hint: "… is very popular, because it has great beaches / …"}
+      - {q: "Do you prefer the coast or the mountains?", hint: "I prefer … because …"}
+      - {q: "Is there a place in your country you'd like to visit?", hint: "I'd love to visit … because …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about your country. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about your country. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về đất nước bạn."
+      - {emma: "Where in your country do you live?", focus: 0, pause: 0.5}
+      - {emma: "What's the most famous place in your country?", focus: 1, pause: 0.5}
+      - {emma: "Which places are popular with tourists?", focus: 2, pause: 0.5}
+      - {emma: "Do you prefer the coast or the mountains?", focus: 3, pause: 0.5}
+      - {emma: "Is there a place in your country you'd like to visit?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 2: nhìn bản đồ, nói về từng nơi"
+    items:
+      - {en: "coast · border · river · mountain · beach · capital", vi: "bờ biển · biên giới · sông · núi · bãi biển · thủ đô"}
+      - {en: "in the north / south / east / west · on the coast · inland", vi: "vị trí"}
+      - {en: "3,000 kilometres long · 3,000 metres high (not tall)", vi: "dài · cao"}
+      - {en: "enormous · major · famous (for) · popular (with)", vi: "rất lớn · lớn và quan trọng · nổi tiếng · được ưa chuộng"}
+      - {en: "Next: Unit 35 · My town", vi: "Tiếp theo: Unit 35 · Thành phố của tôi"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The coast, a border, a river, a mountain, a beach, and the capital.", focus: 0}
+      - {tom: "In the north, south, east or west. On the coast, or inland.", focus: 1}
+      - {emma: "Three thousand kilometres long, and three thousand metres high. Remember: a high mountain, not a tall mountain.", focus: 2}
+      - {tom: "Enormous, major, famous for, and popular with.", focus: 3}
+      - {emma: "Next time, Unit 35: my town. See you then!", say: "Next time, Unit thirty-five: my town. See you then!", focus: 4}

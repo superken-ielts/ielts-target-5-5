@@ -1,0 +1,618 @@
+# Video Oxford Word Skills Basic · Unit 35 — I can talk about my town (sách in tr. 91–93, Answer key tr. 212–213). Học sau Unit 34.
+# UNIT KHÓ (đợt 40): 3 trang, ba phần — công trình trong thành phố (castle, cathedral, temple, mosque…), sự thật về một nơi (size,
+# location, population, industrial, historic) và ý kiến (crowded, polluted, cosmopolitan, nightlife, safe); "your hometown" là chủ đề
+# IELTS Part 1–2 hay gặp nhất — video khoảng 13 phút: phần sách, rồi ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "your
+# hometown", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây
+# (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–9. Bài 1, 2, 4, 5, 7, 8 theo Answer key tr. 212–213 (bài 2 câu 6, 7 có hai chỗ trống: 6a/6b, 7a/7b). Bài 3
+# (Test yourself): hai cảnh tranh không có chữ, đáp án hiện thành nhãn khi Tom trả lời. Bài 6 (ABOUT YOUR TOWN): đoạn văn mẫu của Tom
+# về TP. Hồ Chí Minh. Bài 9 (ABOUT YOUR TOWN): Tom và Emma nói về TP. Hồ Chí Minh (cảnh Nói 1).
+# Hình trong sách: ba hàng tranh công trình (hai cảnh), Spotlight place, bảng Facts (hai cảnh), bảng
+# Opinions (hai cảnh), Glossary tr. 92 ba cảnh — khung theo tranh / theo dòng, đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom lớn lên ở Đà Lạt (hồ sơ), trường gần hồ (hồ sơ), mẹ có cửa hàng
+# hoa gần chợ (IELTS U04), quán lẩu gần chợ (U28); Đà Lạt đông khách du lịch hơn trước (IELTS U01-speaking-practice); căn hộ ở TP.
+# HCM: khu sôi động, nhiều quán ăn rẻ, sáng ồn vì xe (IELTS U01). Emma lớn lên ở thị trấn nhỏ ven biển miền nam nước Anh, khoảng
+# 15.000 dân, yên tĩnh, ai cũng biết nhau, hè nào cũng về thăm bố mẹ (hồ sơ, IELTS U01); fish and chips (U24); mới: thị trấn có
+# nhà thờ cổ, bến cảng nhỏ, bãi biển; Emma thấy TP. HCM rất đa văn hóa, an toàn nhưng ồn.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U35-my-town.yaml
+id: U35-my-town
+activity: U35-words
+title: "Unit 35 · My town"
+subtitle: "I can talk about my town"
+title_vi: "Nói về thành phố, thị trấn: cathedral, temple, square, statue; size, location, population; crowded, polluted, nightlife, safe — kèm ôn tập và luyện nói"
+tag: "PLACES · UNIT 35"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 35: my town. Please do Unit 34 first. Today: buildings and places in a town, facts about a town, and opinions. Your hometown is the most common topic in the IELTS speaking test, so this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit thirty-five: my town. Please do Unit thirty-four first. Today: buildings and places in a town, facts about a town, and opinions. Your hometown is the most common topic in the eye-elts speaking test, so this video is longer, with a review and speaking practice."
+        vi: "Unit 35: thành phố của tôi (học Unit 34 trước) — công trình, sự thật, ý kiến; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Công trình (1)"
+    heading: "A · Buildings and places in a town (1)"
+    heading_vi: "Tranh trong sách tr. 91 — castle, palace, statue, square; cathedral, church, temple, mosque"
+    image: {pdf: course-book, page: 92, clip: [22, 94, 466, 298]}
+    items:
+      - {box: [28, 96, 108, 187]}
+      - {box: [106, 96, 268, 187]}
+      - {box: [280, 96, 330, 187]}
+      - {box: [360, 96, 460, 187]}
+      - {box: [30, 187, 110, 297]}
+      - {box: [140, 187, 220, 297]}
+      - {box: [244, 187, 362, 297]}
+      - {box: [364, 187, 460, 297]}
+    lines:
+      - {emma: "Look at page ninety-one. A castle: an old, strong building, where kings and soldiers lived.", focus: 0, vi: "castle: lâu đài (thành trì)"}
+      - {tom: "A palace: a very big, beautiful house for a king or a queen.", focus: 1, vi: "palace: cung điện"}
+      - {emma: "A statue: a figure of a person, made of stone or metal.", focus: 2, vi: "statue: tượng"}
+      - {tom: "A square: an open area in a town, with buildings around it.", focus: 3, vi: "square: quảng trường"}
+      - {emma: "A cathedral is a big, important church. Both are for Christians.", focus: 4, vi: "cathedral: nhà thờ lớn"}
+      - {tom: "A church: a smaller building for Christians.", focus: 5, vi: "church: nhà thờ"}
+      - {emma: "A temple, for example, for Hindus and Buddhists. Vietnam has lots of temples and pagodas.", focus: 6, vi: "temple: đền, chùa · pagoda: chùa (có tháp)"}
+      - {tom: "And a mosque, for Muslims.", focus: 7, vi: "mosque: nhà thờ Hồi giáo"}
+
+  - kind: figure
+    chapter: "Công trình (2)"
+    heading: "A · Buildings and places in a town (2)"
+    heading_vi: "tr. 91 — market, bridge, park, museum; building (shop, church, castle — không phải square, park)"
+    image: {pdf: course-book, page: 92, clip: [18, 297, 486, 406]}
+    items:
+      - {box: [20, 299, 108, 378]}
+      - {box: [112, 299, 238, 378]}
+      - {box: [242, 299, 358, 378]}
+      - {box: [362, 299, 482, 378]}
+      - {box: [30, 383, 288, 404]}
+    lines:
+      - {emma: "A market, with lots of stalls.", focus: 0, vi: "market: chợ"}
+      - {tom: "A bridge goes over a river.", focus: 1, vi: "bridge: cây cầu"}
+      - {emma: "A park, with trees and grass.", focus: 2, vi: "park: công viên"}
+      - {tom: "And a museum, where you can see old and interesting things.", focus: 3, vi: "museum: bảo tàng"}
+      - {emma: "Look at the box. A building has walls and a roof: a shop, a church, or a castle. But a square or a park is not a building.", focus: 4, vi: "building: tòa nhà, công trình (có tường, mái)"}
+
+  - kind: blanks
+    chapter: "Bài 1: sửa chính tả"
+    heading: "Exercise 1 · Correct the spelling mistakes"
+    heading_vi: "Ví dụ: museom → museum (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "brige  →  ___", answer: "bridge"}
+      - {n: 2, q: "scuare  →  ___", answer: "square"}
+      - {n: 3, q: "castel  →  ___", answer: "castle"}
+      - {n: 4, q: "catedral  →  ___", answer: "cathedral"}
+      - {n: 5, q: "parque  →  ___", answer: "park"}
+      - {n: 6, q: "musque  →  ___", answer: "mosque"}
+      - {n: 7, q: "bilding  →  ___", answer: "building"}
+    lines:
+      - emma: "Exercise 1. Correct the spelling mistakes. The example is museum: M, U, S, E, U, M. Pause the video and try."
+        say: "Exercise one. Correct the spelling mistakes. The example is museum: em, yoo, ess, ee, yoo, em. Pause the video and try."
+        vi: "Bài 1: sửa lỗi chính tả."
+      - {tom: "One. Bridge: there's a D before the G. Two. Square: S, Q, U. Three. Castle: L, E at the end, and the T is silent.", say: "One. Bridge: there's a dee before the gee. Two. Square: ess, kyoo, yoo. Three. Castle: el, ee at the end, and the tee is silent.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Cathedral: T, H. Five. Park, with a K. Six. Mosque: M, O, S. Seven. Building: there's a U after the B.", say: "Four. Cathedral: tee, aitch. Five. Park, with a kay. Six. Mosque: em, oh, ess. Seven. Building: there's a yoo after the bee.", reveal: [4, 5, 6, 7], focus: 6}
+
+  - kind: figure
+    chapter: "Spotlight: place"
+    heading: "Spotlight · place"
+    heading_vi: "tr. 91 — place: nơi, chốn (thành phố, khu phố, khách sạn…)"
+    image: {pdf: course-book, page: 92, clip: [324, 412, 486, 504]}
+    items:
+      - {box: [328, 440, 484, 478]}
+      - {box: [328, 477, 484, 490]}
+      - {box: [328, 489, 484, 503]}
+    lines:
+      - {emma: "Look at the spotlight. We can use place as a general word for a town, part of a town, a hotel, and so on.", focus: 0}
+      - {tom: "Prague is a nice place.", say: "Prahg is a nice place.", focus: 1}
+      - {emma: "The Ritz is a great place to stay. In IELTS, you can say: Da Lat is a lovely place to visit.", say: "The Ritz is a great place to stay. In eye-elts, you can say: Dah Lot is a lovely place to visit.", focus: 2, vi: "a great place to stay / to visit"}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences (1–5)"
+    heading_vi: "Ví dụ: My sister got married in our little church. (Answer key tr. 212)"
+    items:
+      - {n: 1, q: "I think Buddhists use that ___.", answer: "temple"}
+      - {n: 2, q: "The ___ is the best place to see the river.", answer: "bridge"}
+      - {n: 3, q: "The ___ is the cheapest place to buy food.", answer: "market"}
+      - {n: 4, q: "You can learn about the history of the town in the local ___.", answer: "museum"}
+      - {n: 5, q: "You can see children playing in the ___ from my hotel window.", answer: "park"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. The example is: my sister got married in our little church. Pause the video and try."
+        say: "Exercise two. Complete the sentences. The example is: my sister got married in our little church. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu."
+      - {tom: "One. Temple. Two. Bridge. Three. Market.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. The local museum. Five. The park.", reveal: [4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 2 (tiếp)"
+    heading: "Exercise 2 · Complete the sentences (6–8)"
+    heading_vi: "Câu 6, 7 có hai chỗ trống (Answer key tr. 212)"
+    items:
+      - {n: "6a", q: "There is a ___ of Nelson Mandela", answer: "statue"}
+      - {n: "6b", q: "in the main ___.", answer: "square"}
+      - {n: "7a", q: "The ___ and", answer: "castle"}
+      - {n: "7b", q: "the ___ are both open to visitors from 10 until 5.", answer: "palace"}
+      - {n: 8, q: "The square is a nice ___ to sit and watch people.", answer: "place"}
+    lines:
+      - {emma: "Now six to eight. Pause the video and try.", focus: 0}
+      - {tom: "Six. There's a statue of Nelson Mandela in the main square.", reveal: ["6a", "6b"], focus: 1}
+      - {tom: "Seven. The castle and the palace. Eight. A nice place to sit and watch people.", reveal: ["7a", "7b", "8"], focus: 4}
+
+  - kind: figure
+    chapter: "Bài 3: tự kiểm tra"
+    heading: "Exercise 3 · Test yourself (1)"
+    heading_vi: "Không có chữ — nói tên từng tranh; tạm dừng video, đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 92, clip: [22, 96, 466, 174]}
+    items:
+      - {box: [28, 97, 108, 173]}
+      - {box: [28, 97, 108, 173], label: "a castle"}
+      - {box: [106, 97, 268, 173]}
+      - {box: [106, 97, 268, 173], label: "a palace"}
+      - {box: [280, 97, 330, 173]}
+      - {box: [280, 97, 330, 173], label: "a statue"}
+      - {box: [360, 97, 460, 173]}
+      - {box: [360, 97, 460, 173], label: "a square"}
+    lines:
+      - {emma: "Exercise 3 is a test. Here are the pictures without the words. What's this?", say: "Exercise three is a test. Here are the pictures without the words. What's this?", focus: 0}
+      - {tom: "A castle.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "A palace.", focus: 3}
+      - {emma: "This?", focus: 4}
+      - {tom: "A statue.", focus: 5}
+      - {emma: "And this?", focus: 6}
+      - {tom: "A square.", focus: 7}
+
+  - kind: figure
+    chapter: "Bài 3 (tiếp)"
+    heading: "Exercise 3 · Test yourself (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 92, clip: [22, 187, 466, 273]}
+    items:
+      - {box: [30, 188, 110, 272]}
+      - {box: [30, 188, 110, 272], label: "a cathedral"}
+      - {box: [140, 188, 220, 272]}
+      - {box: [140, 188, 220, 272], label: "a church"}
+      - {box: [244, 188, 362, 272]}
+      - {box: [244, 188, 362, 272], label: "a temple"}
+      - {box: [364, 188, 460, 272]}
+      - {box: [364, 188, 460, 272], label: "a mosque"}
+    lines:
+      - {emma: "And these? What's this big building?", focus: 0}
+      - {tom: "A cathedral.", focus: 1}
+      - {emma: "And this small one?", focus: 2}
+      - {tom: "A church.", focus: 3}
+      - {emma: "This?", focus: 4}
+      - {tom: "A temple.", focus: 5}
+      - {emma: "And the last one?", focus: 6}
+      - {tom: "A mosque.", focus: 7}
+
+  - kind: figure
+    chapter: "Sự thật (1)"
+    heading: "B · Facts: size and location"
+    heading_vi: "Bảng tr. 92 — size: kích cỡ · location: vị trí"
+    image: {pdf: course-book, page: 93, clip: [30, 62, 334, 262]}
+    items:
+      - {box: [32, 64, 332, 110]}
+      - {box: [146, 110, 332, 123]}
+      - {box: [146, 122, 332, 135]}
+      - {box: [146, 134, 332, 158]}
+      - {box: [146, 156, 332, 252]}
+    lines:
+      - {emma: "Part B: facts. Size: it's a big, or large, city. It's a medium-sized town. Or it's a small village.", focus: 0, vi: "size: kích cỡ · medium-sized: cỡ vừa"}
+      - {tom: "Location: it's in the north-east of Poland.", focus: 1, vi: "location: vị trí"}
+      - {emma: "It's fifty kilometres west of Moscow. We say: west of a place.", focus: 2}
+      - {tom: "It's on the coast, or on a river.", focus: 3}
+      - {emma: "And between the directions: north-east, north-west, south-east, and south-west.", focus: 4}
+
+  - kind: figure
+    chapter: "Sự thật (2)"
+    heading: "B · Facts: population and interesting facts"
+    heading_vi: "Bảng tr. 92 — population: dân số · modern ≠ old · industrial · historic"
+    image: {pdf: course-book, page: 93, clip: [30, 258, 334, 374]}
+    items:
+      - {box: [146, 262, 332, 302]}
+      - {box: [146, 304, 332, 317]}
+      - {box: [146, 316, 332, 329]}
+      - {box: [146, 328, 332, 341]}
+      - {box: [141, 350, 332, 371]}
+    lines:
+      - {tom: "Population: it's over ten thousand, about ten thousand, or just under ten thousand.", focus: 0, vi: "over: hơn · just under: chỉ dưới một chút"}
+      - {emma: "Interesting facts: it's famous for its cathedral.", focus: 1}
+      - {tom: "It's modern.", focus: 2}
+      - {emma: "It's industrial.", focus: 3}
+      - {tom: "And it has lots of historic buildings.", focus: 4}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 92 — fact · size · city · town · village"
+    image: {pdf: course-book, page: 93, clip: [340, 62, 490, 207]}
+    items:
+      - {box: [342, 85, 488, 98]}
+      - {box: [342, 97, 488, 122]}
+      - {box: [342, 121, 488, 146]}
+      - {box: [342, 145, 488, 170]}
+      - {box: [342, 169, 488, 206]}
+    lines:
+      - {emma: "Look at the glossary. A fact is a piece of true information.", focus: 0, vi: "fact: sự thật"}
+      - {tom: "Size: how big or small something is.", focus: 1}
+      - {emma: "A city is a very large town, for example, two million people.", focus: 2, vi: "city: thành phố lớn"}
+      - {tom: "A town is smaller than a city: for example, thirty thousand people.", focus: 3, vi: "town: thị trấn, thành phố nhỏ"}
+      - {emma: "And a village is smaller than a town, for example, a thousand people, in the countryside.", focus: 4, vi: "village: làng"}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 92 — location · population · over ≠ under"
+    image: {pdf: course-book, page: 93, clip: [340, 205, 490, 290]}
+    items:
+      - {box: [342, 205, 488, 241]}
+      - {box: [342, 241, 488, 266]}
+      - {box: [342, 265, 488, 289]}
+    lines:
+      - {tom: "Location: the place where something is, for example, fifty kilometres from Rome.", focus: 0}
+      - {emma: "Population: the number of people who live in a place.", say: "Population: the number of people who liv in a place.", focus: 1}
+      - {tom: "Over one mile means more than one mile. The opposite is under.", focus: 2, vi: "over ≠ under: hơn ≠ dưới"}
+
+  - kind: figure
+    chapter: "Glossary (3)"
+    heading: "Glossary (3)"
+    heading_vi: "tr. 92 — just under · modern · industrial · historic"
+    image: {pdf: course-book, page: 93, clip: [340, 288, 490, 375]}
+    items:
+      - {box: [342, 289, 488, 314]}
+      - {box: [342, 313, 488, 326]}
+      - {box: [342, 325, 488, 361]}
+      - {box: [342, 361, 488, 374]}
+    lines:
+      - {emma: "Just under: a little under. We also say just over.", focus: 0}
+      - {tom: "Modern: of the present time. The opposite is old.", focus: 1}
+      - {emma: "Industrial: having a lot of industry, for example, making cars or steel.", focus: 2, vi: "industrial: có nhiều nhà máy, công nghiệp"}
+      - {tom: "And historic: important in history.", focus: 3, vi: "historic: có giá trị lịch sử"}
+
+  - kind: blanks
+    chapter: "Bài 4: xếp vào cột"
+    heading: "Exercise 4 · Write the phrases in the correct columns (1)"
+    heading_vi: "Size · Location · Population · Interesting facts — ví dụ: in the north-east → Location (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "on the coast  →  ___", answer: "Location"}
+      - {n: 2, q: "famous for historic buildings  →  ___", answer: "Interesting facts"}
+      - {n: 3, q: "over two million  →  ___", answer: "Population"}
+      - {n: 4, q: "an industrial town  →  ___", answer: "Interesting facts"}
+      - {n: 5, q: "just under 50,000  →  ___", answer: "Population"}
+      - {n: 6, q: "on the River Duero  →  ___", answer: "Location"}
+    lines:
+      - emma: "Exercise 4. Write the phrases in the correct columns: size, location, population, or interesting facts. The example is: in the north-east: location. Pause the video and try."
+        say: "Exercise four. Write the phrases in the correct columns: size, location, population, or interesting facts. The example is: in the north-east: location. Pause the video and try."
+        vi: "Bài 4: xếp cụm từ vào đúng cột."
+      - {tom: "One. On the coast: location. Two. Famous for historic buildings: interesting facts. Three. Over two million: population.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. An industrial town: interesting facts. Five. Just under fifty thousand: population. Six. On the River Duero: location.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 4 (tiếp)"
+    heading: "Exercise 4 · Write the phrases in the correct columns (2)"
+    heading_vi: "Answer key tr. 213"
+    items:
+      - {n: 7, q: "a small village  →  ___", answer: "Size"}
+      - {n: 8, q: "south-west of the capital  →  ___", answer: "Location"}
+      - {n: 9, q: "about 3,000  →  ___", answer: "Population"}
+      - {n: 10, q: "a large city  →  ___", answer: "Size"}
+      - {n: 11, q: "a medium-sized town  →  ___", answer: "Size"}
+    lines:
+      - {emma: "Now seven to eleven. Pause the video and try.", focus: 0}
+      - {tom: "Seven. A small village: size. Eight. South-west of the capital: location. Nine. About three thousand: population.", reveal: [7, 8, 9], focus: 2}
+      - {tom: "Ten. A large city: size. Eleven. A medium-sized town: size.", reveal: [10, 11], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 5: Turin"
+    heading: "Exercise 5 · Complete the text about Turin"
+    heading_vi: "Ví dụ: Turin is a large city (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "140 km south-west ___ Milan,", answer: "of"}
+      - {n: 2, q: "___ the north-west", answer: "in"}
+      - {n: 3, q: "___ Italy.", answer: "of"}
+      - {n: 4, q: "It is ___ the River Po and three other rivers.", answer: "on"}
+      - {n: 5, q: "The ___ is just", answer: "population"}
+      - {n: 6, q: "just ___ one million (in fact, it is 908,000).", answer: "under"}
+      - {n: 7, q: "It is an ___ city: the car makers, Fiat, are based here,", answer: "industrial"}
+      - {n: 8, q: "but it also has many ___ buildings, including palaces and castles.", answer: "historic"}
+    lines:
+      - emma: "Exercise 5. Complete the text about Turin, a city in Italy. Pause the video and try."
+        say: "Exercise five. Complete the text about Turin, a city in Italy. Pause the video and try."
+        vi: "Bài 5: hoàn thành đoạn văn về Turin (Ý)."
+      - {tom: "Turin is a large city, a hundred and forty kilometres south-west of Milan, in the north-west of Italy. It's on the River Po, and three other rivers.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "The population is just under one million. It's an industrial city: Fiat is based here. But it also has many historic buildings.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: letter
+    chapter: "Bài 6: thành phố của bạn"
+    heading: "Exercise 6 · Tom writes about Ho Chi Minh City"
+    heading_vi: "Bài 6 (ABOUT YOUR TOWN) — đoạn văn mẫu, cùng cách viết với đoạn văn về Turin"
+    items:
+      - text: "Ho Chi Minh City is a very large city in the south of Vietnam, about 1,700 kilometres south of Hanoi."
+        say: "Ho Chee Min City is a very large city in the south of Vietnam, about seventeen hundred kilometres south of Ha Noi."
+        note: "size · location"
+      - text: "It's on the Saigon River, not far from the coast."
+        say: "It's on the Sigh-gon River, not far from the coast."
+        note: "location"
+      - text: "The population is over nine million."
+        note: "population"
+      - text: "It's a modern and industrial city, but it also has some historic buildings, like the cathedral and the old post office."
+        note: "interesting facts"
+    lines:
+      - {emma: "Exercise 6 is about your town. Write a similar text about your city, town, or village. Here's Tom's text.", say: "Exercise six is about your town. Write a similar text about your city, town, or village. Here's Tom's text.", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: figure
+    chapter: "Ý kiến (1)"
+    heading: "C · Opinions (1)"
+    heading_vi: "Bảng tr. 93 — opinion · busy · crowded · polluted, dirty ≠ clean"
+    image: {pdf: course-book, page: 94, clip: [26, 60, 486, 193]}
+    items:
+      - {box: [28, 79, 484, 109]}
+      - {box: [28, 107, 484, 136]}
+      - {box: [28, 135, 484, 163]}
+      - {box: [28, 162, 484, 192]}
+    lines:
+      - {emma: "Part C: opinions. Your opinion is what you think about something. It's not a fact. What's your opinion of the new cathedral? I think it's wonderful.", focus: 0, vi: "opinion: ý kiến · What's your opinion of …?"}
+      - {tom: "If a place is busy, it's full of people, cars, and activity. It's busy in the summer, when the tourists arrive. The opposite is quiet.", focus: 1}
+      - {emma: "Crowded: full of people, or too full of people. The bars get very crowded in the evenings.", focus: 2, vi: "crowded: đông nghẹt"}
+      - {tom: "A polluted place has dirty air, water, and so on. The opposite is clean.", focus: 3, vi: "polluted: ô nhiễm · dirty ≠ clean"}
+
+  - kind: figure
+    chapter: "Ý kiến (2)"
+    heading: "C · Opinions (2)"
+    heading_vi: "Bảng tr. 93 — cosmopolitan · there's lots to do ≠ nothing to do · nightlife · safe ≠ dangerous"
+    image: {pdf: course-book, page: 94, clip: [26, 189, 486, 298]}
+    items:
+      - {box: [28, 190, 484, 219]}
+      - {box: [28, 218, 484, 250]}
+      - {box: [28, 248, 484, 267]}
+      - {box: [28, 265, 484, 296]}
+    lines:
+      - {emma: "Cosmopolitan: having people from many different countries living there. London and New York are very cosmopolitan.", focus: 0, vi: "cosmopolitan: đa văn hóa"}
+      - {tom: "There's lots to do: there are many activities and places to visit. The opposite is: there's nothing to do.", focus: 1}
+      - {emma: "Nightlife: places to go in the evening, like bars and clubs.", focus: 2, vi: "nightlife: cuộc sống về đêm"}
+      - {tom: "And safe: free from danger. It's safe during the day, but it can be dangerous at night.", focus: 3, vi: "safe ≠ dangerous: an toàn ≠ nguy hiểm"}
+
+  - kind: blanks
+    chapter: "Bài 7: thích hay không?"
+    heading: "Exercise 7 · Do the speakers like the places? Yes or no?"
+    heading_vi: "Ví dụ: 'The streets are very dirty.' → no (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "'I think it's very polluted, don't you?'  →  ___", answer: "no"}
+      - {n: 2, q: "'There's lots to do during the day.'  →  ___", answer: "yes"}
+      - {n: 3, q: "'I think the nightlife is great.'  →  ___", answer: "yes"}
+      - {n: 4, q: "'There's nothing to do at night.'  →  ___", answer: "no"}
+      - {n: 5, q: "'It's so clean on the coast.'  →  ___", answer: "yes"}
+      - {n: 6, q: "'I always feel safe at night.'  →  ___", answer: "yes"}
+      - {n: 7, q: "'It's a really dangerous city.'  →  ___", answer: "no"}
+    lines:
+      - emma: "Exercise 7. Do the speakers like the places they're talking about? Yes or no? The example is: the streets are very dirty. No. Pause the video and try."
+        say: "Exercise seven. Do the speakers like the places they're talking about? Yes or no? The example is: the streets are very dirty. No. Pause the video and try."
+        vi: "Bài 7: người nói có thích nơi đó không?"
+      - {tom: "One. No: polluted is bad. Two. Yes. Three. Yes. Four. No.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Yes: clean is good. Six. Yes. Seven. No.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 8: hội thoại"
+    heading: "Exercise 8 · Complete the dialogue"
+    heading_vi: "Ví dụ: What's your opinion of Walton? (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "B: There are people from all over the world, so it's very ___ – I love that.", answer: "cosmopolitan"}
+      - {n: 2, q: "B: Every city is a bit ___ at night,", answer: "dangerous"}
+      - {n: 3, q: "but there's a lot to ___ here,", answer: "do"}
+      - {n: 4, q: "and the ___ is very good – lots of bars and clubs.", answer: "nightlife"}
+      - {n: 5, q: "B: It gets very ___ at the weekends, with all the tourists.", answer: "crowded / busy"}
+      - {n: 6, q: "The river is ___ because of the industry.", answer: "polluted"}
+    lines:
+      - emma: "Exercise 8. Complete the dialogue. The example is: what's your opinion of Walton? Pause the video and try."
+        say: "Exercise eight. Complete the dialogue. The example is: what's your opinion of Walton? Pause the video and try."
+        vi: "Bài 8: hoàn thành hội thoại."
+      - {emma: "What's your opinion of Walton?", focus: 0}
+      - {tom: "Well, there are people from all over the world, so it's very cosmopolitan. I love that.", reveal: [1], focus: 0}
+      - {emma: "Yes, but is it safe?", focus: 1}
+      - {tom: "Well, every city is a bit dangerous at night, but there's a lot to do here, and the nightlife is very good: lots of bars and clubs.", reveal: [2, 3, 4], focus: 3}
+      - {emma: "And is it very busy in the centre?", focus: 4}
+      - {tom: "It's OK on weekdays, but it gets very crowded, or busy, at the weekends, with all the tourists. The centre is also quite dirty; the river is polluted because of the industry.", reveal: [5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: thành phố bạn sống"
+    heading: "Speaking 1 · Exercise 9: about your town"
+    heading_vi: "Bài 9 (ABOUT YOUR TOWN) — Tom và Emma nói về TP. Hồ Chí Minh; tạm dừng để tự trả lời"
+    items:
+      - q: "Is Ho Chi Minh City a safe place to live, or is it dangerous?"
+        a: "It's quite safe, I think. But be careful with your phone in the street, especially at night."
+        ask: emma
+        by: tom
+        phrases: ["It's quite safe, I think.", "be careful with…"]
+      - q: "What is there to do during the day?"
+        a: "There's lots to do: markets, museums, parks, shopping centres, and hundreds of cafés."
+        ask: emma
+        by: tom
+        phrases: ["There's lots to do:", "hundreds of…"]
+      - q: "Is it usually busy or quiet?"
+        a: "Busy! It's never quiet. The streets are full of motorbikes from early morning."
+        ask: emma
+        by: tom
+        phrases: ["… ! It's never quiet.", "full of…"]
+      - q: "What about the nightlife, Emma?"
+        a: "It's great. There are lots of night markets, street food, and rooftop bars, and some cafés are open very late."
+        ask: tom
+        by: emma
+        phrases: ["It's great.", "There are lots of…"]
+      - q: "Is it a very cosmopolitan place?"
+        a: "Yes, quite. There are people from Korea, Japan, Europe, and America, and you can find food from everywhere."
+        ask: tom
+        by: emma
+        phrases: ["Yes, quite.", "you can find … from everywhere"]
+      - q: "Is it a nice place to live?"
+        a: "Yes, I love it. It's noisy and hot, but it's friendly and full of energy."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I love it.", "It's … , but it's…"]
+    lines:
+      - {emma: "Exercise 9 is about your town. Tom and I both live in Ho Chi Minh City. Tom, is it a safe place to live, or is it dangerous?", say: "Exercise nine is about your town. Tom and I both liv in Ho Chee Min City. Tom, is it a safe place to liv, or is it dangerous?", focus: 0}
+      - {tom: "It's quite safe, I think. But be careful with your phone in the street, especially at night.", reveal: 0, vi: "Khá an toàn; nhưng cẩn thận với điện thoại ngoài đường, nhất là ban đêm."}
+      - {emma: "What is there to do during the day?", focus: 1}
+      - {tom: "There's lots to do: markets, museums, parks, shopping centres, and hundreds of cafés.", say: "There's lots to do: markets, museums, parks, shopping centres, and hundreds of cafes.", reveal: 1, vi: "Rất nhiều thứ: chợ, bảo tàng, công viên, trung tâm mua sắm, hàng trăm quán cà phê."}
+      - {emma: "Is it usually busy or quiet?", focus: 2}
+      - {tom: "Busy! It's never quiet. The streets are full of motorbikes from early morning.", reveal: 2, vi: "Đông! Không bao giờ yên tĩnh; đường đầy xe máy từ sáng sớm."}
+      - {tom: "What about the nightlife, Emma?", focus: 3}
+      - {emma: "It's great. There are lots of night markets, street food, and rooftop bars, and some cafés are open very late.", say: "It's great. There are lots of night markets, street food, and rooftop bars, and some cafes are open very late.", reveal: 3, vi: "Tuyệt: chợ đêm, đồ ăn đường phố, quán bar trên sân thượng, quán mở rất khuya."}
+      - {tom: "Is it a very cosmopolitan place?", focus: 4}
+      - {emma: "Yes, quite. There are people from Korea, Japan, Europe, and America, and you can find food from everywhere.", reveal: 4, vi: "Khá đa văn hóa: người Hàn, Nhật, châu Âu, Mỹ; đồ ăn khắp nơi."}
+      - {tom: "Is it a nice place to live?", say: "Is it a nice place to liv?", focus: 5}
+      - {emma: "Yes, I love it. It's noisy and hot, but it's friendly and full of energy.", reveal: 5, vi: "Có, Emma rất thích: ồn và nóng, nhưng thân thiện, tràn đầy năng lượng."}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về thành phố — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "My city is very crowd.  →  ___", answer: "My city is very crowded."}
+      - {n: 2, q: "It is located at the south of Vietnam.  →  ___", answer: "It is in the south of Vietnam."}
+      - {n: 3, q: "The population is about ten millions.  →  ___", answer: "The population is about ten million."}
+      - {n: 4, q: "There are many historical buildings.  →  ___", answer: "There are many historic buildings."}
+      - {n: 5, q: "There is many things to do.  →  ___", answer: "There's lots to do. / There are many things to do."}
+      - {n: 6, q: "Da Lat is a beautiful city for visit.  →  ___", answer: "Da Lat is a beautiful place to visit."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. Crowded, with E, D: it's an adjective. Two. In the south of Vietnam.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Ten million, no S, after a number. Four. Historic buildings: important in history.", reveal: [3, 4], focus: 3, vi: "two million (không có s) · historic buildings"}
+      - {tom: "Five. There's lots to do, or there are many things to do. Six. A beautiful place to visit.", reveal: [5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe your hometown"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — sự thật và ý kiến"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: where it is", vi: "nó ở đâu"}
+      - {en: "what it's like: size, buildings, places", vi: "nó thế nào: kích cỡ, công trình, địa điểm"}
+      - {en: "what people can do there", vi: "người ta có thể làm gì ở đó"}
+      - {en: "and explain how you feel about it", vi: "và giải thích bạn cảm thấy thế nào về nó"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe your hometown."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe your hometown."
+        vi: "Luyện nói chung kiểu Part 2: quê của bạn."
+      - {emma: "You should say where it is,", focus: 0}
+      - {emma: "what it's like,", focus: 1}
+      - {emma: "what people can do there,", focus: 2}
+      - {emma: "and explain how you feel about it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — Đà Lạt"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about Da Lat, my hometown. It's in the Central Highlands, about 300 kilometres north-east of Ho Chi Minh City, and it's 1,500 metres high, in the mountains."
+        say: "I'd like to talk about Dah Lot, my hometown. It's in the Central Highlands, about three hundred kilometres north-east of Ho Chee Min City, and it's fifteen hundred metres high, in the mountains."
+        note: "where"
+      - text: "It's a medium-sized city, with a population of about 400,000. There's a lovely lake in the centre, a big market, and lots of old French buildings and flower gardens."
+        note: "what it's like"
+      - text: "People can walk around the lake, visit the gardens, or eat hot pot near the market in the evening. My mum's flower shop is near there too."
+        note: "what to do"
+      - text: "I love it because the air is fresh, and it's cool all year. It's busier now, with more tourists, but it's still quiet and safe, and it's always home to me."
+        note: "how you feel"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my hometown. It's a small town on the south coast of England, about two hours from London by train."
+        note: "where"
+      - text: "The population is about 15,000, so it's quite small. It has an old church, a little harbour with fishing boats, and a long beach."
+        note: "what it's like"
+      - text: "In summer, people swim, walk along the cliffs, and eat fish and chips on the beach. But there isn't much nightlife: it's very quiet in the evening."
+        note: "what to do"
+      - text: "I love it because it's friendly: everybody knows everybody. I miss the sea, so I go back every summer to see my parents."
+        note: "how you feel"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe your hometown.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: your hometown"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Where is it?", hint: "It's in the north / south of … · about … kilometres from …"}
+      - {q: "What's it like?", hint: "It's a small / medium-sized / large … · The population is about … · There's a …"}
+      - {q: "What can people do there?", hint: "There's lots to do: … / There isn't much to do, but …"}
+      - {q: "How do you feel about it?", hint: "I love it because … · It's a bit … , but …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use facts and opinions from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz facts and opinions from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Where is it?", focus: 0, pause: 0.5}
+      - {emma: "What's it like?", focus: 1, pause: 0.5}
+      - {emma: "What can people do there?", focus: 2, pause: 0.5}
+      - {emma: "How do you feel about it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · cities and towns"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do many young people move to big cities?"
+        a: "For jobs and education, mostly. Big cities have more universities and companies, and there's lots to do."
+        ask: emma
+        by: tom
+        phrases: ["For … and … , mostly.", "there's lots to do"]
+      - q: "What are the problems of living in a big city?"
+        a: "Traffic, pollution, and noise. And flats are often small and expensive."
+        ask: tom
+        by: emma
+        phrases: ["… , … , and …", "are often small and expensive"]
+      - q: "How can a town become more popular with tourists?"
+        a: "It can keep its historic buildings clean and safe, and it can have good public transport and interesting festivals."
+        ask: emma
+        by: tom
+        phrases: ["It can keep…", "and it can have…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Why do many young people move to big cities?", focus: 0}
+      - {tom: "For jobs and education, mostly. Big cities have more universities and companies, and there's lots to do.", reveal: 0, vi: "Chủ yếu vì việc làm và học hành; thành phố lớn có nhiều trường, công ty, nhiều thứ để làm."}
+      - {tom: "What are the problems of living in a big city?", say: "What are the problems of living in a big city?", focus: 1}
+      - {emma: "Traffic, pollution, and noise. And flats are often small and expensive.", reveal: 1, vi: "Giao thông, ô nhiễm, tiếng ồn; căn hộ thường nhỏ và đắt."}
+      - {emma: "How can a town become more popular with tourists?", focus: 2}
+      - {tom: "It can keep its historic buildings clean and safe, and it can have good public transport and interesting festivals.", reveal: 2, vi: "Giữ công trình lịch sử sạch đẹp, an toàn; có giao thông công cộng tốt và lễ hội hay."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm Test yourself: che chữ tr. 91, nhìn tranh, nói tên"
+    items:
+      - {en: "castle · palace · statue · square · cathedral · church · temple · mosque · market · bridge · park · museum", vi: "công trình, địa điểm"}
+      - {en: "a city · a town · a village · a large / medium-sized / small …", vi: "kích cỡ"}
+      - {en: "in the north-east of … · 50 km west of … · on the coast · on a river", vi: "vị trí"}
+      - {en: "over / about / just under 10,000 · modern · industrial · historic", vi: "dân số · đặc điểm"}
+      - {en: "busy · crowded · polluted ≠ clean · cosmopolitan · nightlife · safe ≠ dangerous", vi: "ý kiến"}
+      - {en: "Next: Unit 36 · The countryside", vi: "Tiếp theo: Unit 36 · Vùng nông thôn"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A castle, a palace, a statue, a square, a cathedral, a church, a temple, a mosque, a market, a bridge, a park, and a museum.", focus: 0}
+      - {tom: "A city, a town, or a village: large, medium-sized, or small.", focus: 1}
+      - {emma: "In the north-east of Poland, fifty kilometres west of Moscow, on the coast, or on a river.", focus: 2}
+      - {tom: "Over, about, or just under ten thousand. Modern, industrial, and historic.", focus: 3}
+      - {emma: "Busy, crowded, polluted, cosmopolitan, the nightlife, and safe or dangerous.", focus: 4}
+      - {tom: "Next time, Unit 36: the countryside. See you then!", say: "Next time, Unit thirty-six: the countryside. See you then!", focus: 5}

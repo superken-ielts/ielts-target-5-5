@@ -1,0 +1,400 @@
+# Video Oxford Word Skills Basic · Unit 36 — I can describe the countryside (sách in tr. 94–95, Answer key tr. 213).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng và đã đủ 7 bài trong sách.
+# Bài trong sách: đủ 1–7. Bài 1, 2, 5, 6 theo Answer key tr. 213. Answer key in lệch (file 09 mục 3.3): bài 1 câu 2 "The farmer's
+# in the boat" ghi T, nhưng tranh cho thấy người nông dân đứng cạnh hàng rào, thuyền trống — video nói rõ đáp án là F. Bài 3 (ABOUT
+# YOU AND YOUR COUNTRY): Tom và Emma hỏi đáp câu hỏi bài 2 (cảnh Nói 1). Bài 4 (Test yourself): tranh trang trại, đáp án hiện thành
+# nhãn khi Tom trả lời. Bài 7 (ABOUT YOU): câu bài 6 sửa cho đúng với Tom.
+# Thêm ngoài sách: nông thôn Việt Nam bằng tiếng Anh (rice field, water buffalo, terraced fields, fruit farms, coffee farms); Nói 2
+# (Part 1 "The countryside").
+# Hình trong sách: tranh trang trại 14 mục (khung theo số), đoạn Jack Robson và Glossary, lời kể của người phụ nữ (khung theo dòng,
+# đo bằng máy), Glossary tr. 95 hai cảnh, Spotlight alone and lonely.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): ông của Tom trồng rau trong vườn (hồ sơ, U25), bố làm cho công ty cà
+# phê (hồ sơ), mẹ có cửa hàng hoa (IELTS U04); Tom ở chung căn hộ với hai bạn (hồ sơ), chơi bóng rổ (hồ sơ), ăn xoài (U25), xe buýt
+# đông (U11, U29), gọi về nhà mỗi Chủ nhật (U17). Emma đi bộ đường dài (hồ sơ), quê ven biển (hồ sơ), căn hộ tầng 8 có ban công
+# (IELTS U01). Mới: nhà Tom ở Đà Lạt trên đồi, nhìn xuống thung lũng; Tom không nuôi chó, ông muốn nuôi một con chó cho khu vườn; quanh
+# Đà Lạt trồng rau, hoa, dâu tây, cà phê, công ty của bố mua cà phê của nông dân; Tom ăn xoài mỗi ngày, đôi khi thấy cô đơn, nhớ nhà.
+# Gần quê Emma có nhiều trang trại, bố mẹ mua trứng, rau tươi ở đó; từ ban công Emma chỉ thấy vài cây; Emma đi Sa Pa hai năm trước.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U36-countryside.yaml
+id: U36-countryside
+activity: U36-words
+title: "Unit 36 · The countryside"
+subtitle: "I can describe the countryside"
+title_vi: "Nông thôn: farm, field, hill, valley, wood, crops, grow; fresh food, healthy, public transport, alone ≠ lonely"
+tag: "PLACES · UNIT 36"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 36: the countryside. Today: words for a farm and the countryside, and how to talk about life outside the city."
+        say: "Welcome to Unit thirty-six: the countryside. Today: words for a farm and the countryside, and how to talk about life outside the city."
+        vi: "Unit 36: nông thôn — từ về trang trại, cảnh quê, cuộc sống ngoài thành phố."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Trang trại"
+    heading: "A · On the farm"
+    heading_vi: "Tranh trong sách tr. 94 — 14 từ, khung đỏ theo số"
+    image: {pdf: course-book, page: 95, clip: [30, 88, 488, 312]}
+    items:
+      - {box: [306, 89, 486, 114]}
+      - {box: [366, 102, 412, 132]}
+      - {box: [418, 98, 478, 130]}
+      - {box: [234, 146, 282, 252]}
+      - {box: [276, 128, 332, 158]}
+      - {box: [322, 150, 358, 188]}
+      - {box: [398, 150, 454, 180]}
+      - {box: [420, 116, 486, 158]}
+      - {box: [104, 178, 142, 208]}
+      - {box: [128, 170, 214, 234]}
+      - {box: [274, 184, 314, 212]}
+      - {box: [150, 240, 238, 292]}
+      - {box: [278, 206, 326, 264]}
+      - {box: [398, 198, 472, 244]}
+    lines:
+      - {emma: "Look at page ninety-four. One: the sky.", focus: 0, vi: "sky: bầu trời"}
+      - {tom: "Two: a wood: a small area with lots of trees.", focus: 1, vi: "wood: khu rừng nhỏ"}
+      - {emma: "Three: a hill.", focus: 2, vi: "hill: ngọn đồi"}
+      - {tom: "Four: a farmer. He works on a farm.", focus: 3, vi: "farmer: nông dân"}
+      - {emma: "Five: a valley: the low land between hills.", focus: 4, vi: "valley: thung lũng"}
+      - {tom: "Six: a tree.", focus: 5}
+      - {emma: "Seven: a field: an area of land for crops or animals.", focus: 6, vi: "field: cánh đồng"}
+      - {tom: "Eight: a farm: the house and the fields.", focus: 7, vi: "farm: trang trại"}
+      - {emma: "Nine: a lake.", focus: 8, vi: "lake: hồ"}
+      - {tom: "Ten: a horse.", focus: 9}
+      - {emma: "Eleven: a boat.", focus: 10}
+      - {tom: "Twelve: grass.", focus: 11, vi: "grass: cỏ"}
+      - {emma: "Thirteen: a dog.", say: "Thir-teen: a dog.", focus: 12}
+      - {tom: "And fourteen: a path: a narrow way for walking.", say: "And four-teen: a path: a narrow way for walking.", focus: 13, vi: "path: lối mòn, đường nhỏ"}
+
+  - kind: figure
+    chapter: "Jack Robson · Glossary"
+    heading: "Jack Robson · Glossary"
+    heading_vi: "tr. 94 — own: sở hữu · grow: trồng · a few: một vài · crop: cây trồng, vụ mùa"
+    image: {pdf: course-book, page: 95, clip: [34, 302, 488, 353]}
+    items:
+      - {box: [36, 320, 238, 349]}
+      - {box: [316, 304, 487, 316]}
+      - {box: [316, 316, 487, 328]}
+      - {box: [316, 328, 487, 339]}
+      - {box: [316, 340, 487, 352]}
+    lines:
+      - {emma: "Read the text. Jack Robson is a farmer. He owns Eatwell Farm. He grows fruit and a few other crops.", focus: 0}
+      - {tom: "Look at the glossary. Own: if you own something, it is yours.", focus: 1, vi: "own: sở hữu"}
+      - {emma: "Grow: farmers grow potatoes, rice, and so on, to sell.", focus: 2, vi: "grow: trồng"}
+      - {tom: "A few: some, not a lot.", focus: 3, vi: "a few: một vài"}
+      - {emma: "And a crop: a plant a farmer grows and sells, for example, rice or apples.", focus: 4, vi: "crop: cây trồng (để bán)"}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · True or false? (1–5)"
+    heading_vi: "Nhìn tranh và đoạn văn — ví dụ: There's a lake near the trees. → T (Answer key tr. 213)"
+    image: {pdf: course-book, page: 95, clip: [103, 88, 488, 282]}
+    items:
+      - {n: 1, q: "There is nothing in the field.  →  ___", answer: "T"}
+      - {n: 2, q: "The farmer's in the boat.  →  ___", answer: "F (Answer key: T)"}
+      - {n: 3, q: "The path goes to the lake.  →  ___", answer: "F"}
+      - {n: 4, q: "The wood is on the hill.  →  ___", answer: "T"}
+      - {n: 5, q: "The dog lives on the farm.  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 1. Look at the picture and the text. True or false? The example is: there's a lake near the trees. True. Pause the video and try."
+        say: "Exercise one. Look at the picture and the text. True or false? The example is: there's a lake near the trees. True. Pause the video and try."
+        vi: "Bài 1: nhìn tranh và đoạn văn — đúng hay sai?"
+      - {tom: "One. True: the field is empty. Two. The Answer key says true, but look at the picture: the farmer is next to the fence, and the boat is empty. So it's false.", reveal: [1, 2], focus: 1, vi: "Answer key in lệch: câu 2 đúng ra là F."}
+      - {tom: "Three. False: the path goes to the farm. Four. True. Five. True.", reveal: [3, 4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 1 (tiếp)"
+    heading: "Exercise 1 · True or false? (6–9)"
+    heading_vi: "Answer key tr. 213"
+    image: {pdf: course-book, page: 95, clip: [103, 88, 488, 282]}
+    items:
+      - {n: 6, q: "The horse is eating the grass.  →  ___", answer: "T"}
+      - {n: 7, q: "The sky's grey.  →  ___", answer: "F"}
+      - {n: 8, q: "There are a lot of chickens.  →  ___", answer: "F"}
+      - {n: 9, q: "The farmer grows fruit.  →  ___", answer: "T"}
+    lines:
+      - {emma: "Now six to nine. Pause the video and try.", focus: 0}
+      - {tom: "Six. True. Seven. False: the sky is blue.", reveal: [6, 7], focus: 1}
+      - {tom: "Eight. False: there are only three chickens. Nine. True: he grows fruit and a few other crops.", reveal: [8, 9], focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành từ"
+    heading: "Exercise 2 · Complete the words in the questions"
+    heading_vi: "Ví dụ: Do you live near a wood? (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "Do you live in a v_ll_y or on a h_ll?  →  ___", answer: "valley, hill"}
+      - {n: 2, q: "Can you see any gra__ where you are now?  →  ___", answer: "grass"}
+      - {n: 3, q: "Can you see a f_w tr__s where you are now?  →  ___", answer: "few trees"}
+      - {n: 4, q: "Are there any f___ds near your home?  →  ___", answer: "fields"}
+      - {n: 5, q: "Do you _wn a d_g or a h_rs_?  →  ___", answer: "own, dog, horse"}
+      - {n: 6, q: "What cr_ps do people gr_w where you live?  →  ___", answer: "crops, grow"}
+      - {n: 7, q: "Do you know any f_r_e_s?  →  ___", answer: "farmers"}
+    lines:
+      - emma: "Exercise 2. Complete the words. You'll answer the questions in Exercise 3. The example is: do you live near a wood? Pause the video and try."
+        say: "Exercise two. Complete the words. You'll answer the questions in Exercise three. The example is: do you live near a wood? Pause the video and try."
+        vi: "Bài 2: hoàn thành từ trong câu hỏi."
+      - {tom: "One. Valley and hill. Two. Grass. Three. A few trees. Four. Fields.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Own, dog, and horse. Six. Crops and grow. Seven. Farmers.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: qa
+    chapter: "Nói 1: quê bạn"
+    heading: "Speaking 1 · Exercise 3: about you and your country"
+    heading_vi: "Bài 3 — trả lời câu hỏi bài 2; tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you live in a valley or on a hill, Tom?"
+        a: "Here in Ho Chi Minh City, neither: it's flat. But my family's house in Da Lat is on a hill, and we can see the valley."
+        ask: emma
+        by: tom
+        phrases: ["… , neither: it's flat.", "we can see…"]
+      - q: "Do you own a dog or a horse?"
+        a: "No, I don't. My flat is too small. But my grandfather wants a dog for his garden!"
+        ask: emma
+        by: tom
+        phrases: ["No, I don't.", "… is too small."]
+      - q: "What crops do people grow where you live?"
+        a: "Around Da Lat, they grow vegetables, flowers, strawberries, and coffee. My dad's company buys coffee from the farmers."
+        ask: emma
+        by: tom
+        phrases: ["Around … , they grow…"]
+      - q: "Do you know any farmers, Emma?"
+        a: "Yes, a few. Near my hometown, there are lots of farms, and my parents buy fresh eggs and vegetables from them."
+        ask: tom
+        by: emma
+        phrases: ["Yes, a few.", "there are lots of…"]
+      - q: "Can you see any trees where you are now?"
+        a: "Only a few, from my balcony. Most of the view is tall buildings!"
+        ask: tom
+        by: emma
+        phrases: ["Only a few…", "Most of the view is…"]
+    lines:
+      - {emma: "Exercise 3. Let's answer the questions from Exercise 2. Tom, do you live in a valley, or on a hill?", say: "Exercise three. Let's answer the questions from Exercise two. Tom, do you liv in a valley, or on a hill?", focus: 0}
+      - {tom: "Here in Ho Chi Minh City, neither: it's flat. But my family's house in Da Lat is on a hill, and we can see the valley.", say: "Here in Ho Chee Min City, neither: it's flat. But my family's house in Dah Lot is on a hill, and we can see the valley.", reveal: 0, vi: "Ở TP. HCM thì không: đất bằng. Nhà ở Đà Lạt trên đồi, nhìn xuống thung lũng."}
+      - {emma: "Do you own a dog or a horse?", focus: 1}
+      - {tom: "No, I don't. My flat is too small. But my grandfather wants a dog for his garden!", reveal: 1, vi: "Không. Căn hộ nhỏ quá; nhưng ông muốn nuôi một con chó cho khu vườn."}
+      - {emma: "What crops do people grow where you live?", say: "What crops do people grow where you liv?", focus: 2}
+      - {tom: "Around Da Lat, they grow vegetables, flowers, strawberries, and coffee. My dad's company buys coffee from the farmers.", say: "Around Dah Lot, they grow vegetables, flowers, strawberries, and coffee. My dad's company buys coffee from the farmers.", reveal: 2, vi: "Quanh Đà Lạt: rau, hoa, dâu tây, cà phê; công ty của bố mua cà phê của nông dân."}
+      - {tom: "Do you know any farmers, Emma?", focus: 3}
+      - {emma: "Yes, a few. Near my hometown, there are lots of farms, and my parents buy fresh eggs and vegetables from them.", reveal: 3, vi: "Có vài người; gần quê Emma có nhiều trang trại, bố mẹ mua trứng, rau tươi ở đó."}
+      - {tom: "Can you see any trees where you are now?", focus: 4}
+      - {emma: "Only a few, from my balcony. Most of the view is tall buildings!", reveal: 4, vi: "Chỉ vài cây, nhìn từ ban công; còn lại toàn nhà cao tầng!"}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: what are the words?"
+    heading_vi: "Che danh sách từ, nhìn tranh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 95, clip: [103, 88, 488, 282]}
+    items:
+      - {box: [418, 98, 478, 130]}
+      - {box: [418, 98, 478, 130], label: "a hill"}
+      - {box: [276, 128, 332, 158]}
+      - {box: [276, 128, 332, 158], label: "a valley"}
+      - {box: [366, 102, 412, 132]}
+      - {box: [366, 102, 412, 132], label: "a wood"}
+      - {box: [398, 150, 454, 180]}
+      - {box: [398, 150, 454, 180], label: "a field"}
+      - {box: [398, 198, 472, 244]}
+      - {box: [398, 198, 472, 244], label: "a path"}
+      - {box: [150, 240, 238, 282]}
+      - {box: [150, 240, 238, 282], label: "grass"}
+    lines:
+      - {emma: "Exercise 4 is a test. Cover the words, and look at the picture. Can you remember the words? Pause the video after each one. What's number three?", say: "Exercise four is a test. Cover the words, and look at the picture. Can you remember the words? Pause the video after each one. What's number three?", focus: 0}
+      - {tom: "A hill.", focus: 1}
+      - {emma: "Number five?", focus: 2}
+      - {tom: "A valley.", focus: 3}
+      - {emma: "Number two?", focus: 4}
+      - {tom: "A wood.", focus: 5}
+      - {emma: "Number seven?", focus: 6}
+      - {tom: "A field.", focus: 7}
+      - {emma: "Fourteen?", say: "Four-teen?", focus: 8}
+      - {tom: "A path.", focus: 9}
+      - {emma: "And twelve?", focus: 10}
+      - {tom: "Grass.", focus: 11}
+
+  - kind: figure
+    chapter: "Ở nông thôn"
+    heading: "B · In the countryside"
+    heading_vi: "Lời kể tr. 95 — Emma đọc"
+    image: {pdf: course-book, page: 96, clip: [24, 56, 254, 180]}
+    items:
+      - {box: [30, 60, 250, 96]}
+      - {box: [30, 95, 250, 131]}
+      - {box: [30, 130, 250, 155]}
+      - {box: [30, 153, 250, 178]}
+    lines:
+      - {emma: "Part B. Listen to this woman. I live alone in a beautiful area in the countryside. In the mornings, it is so quiet, I sit and listen to the birds. It's wonderful.", focus: 0}
+      - {emma: "I've got a garden with lots of flowers, and I grow all my fruit and vegetables, so I only eat fresh food, which is very healthy.", focus: 1}
+      - {emma: "The big problem is that public transport is terrible, but I've got a bike if I need to go to town.", focus: 2}
+      - {emma: "And it's a bit lonely too, but I can always talk to Jack at Eatwell Farm, and sometimes I look after his chickens for him.", focus: 3}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 95 — area · the countryside · bird · wonderful ≠ terrible · flower"
+    image: {pdf: course-book, page: 96, clip: [266, 26, 484, 145]}
+    items:
+      - {box: [268, 48, 482, 61]}
+      - {box: [268, 60, 482, 84]}
+      - {box: [268, 84, 482, 108]}
+      - {box: [268, 108, 482, 120]}
+      - {box: [268, 120, 482, 144]}
+    lines:
+      - {tom: "Look at the glossary. An area: a part of a town, a country, or the world.", focus: 0, vi: "area: khu vực, vùng"}
+      - {emma: "The countryside: a place with fields, woods, farms, and so on, that is outside towns or cities.", focus: 1, vi: "the countryside: vùng nông thôn"}
+      - {tom: "A bird.", focus: 2}
+      - {emma: "Wonderful means very good. The opposite is terrible.", focus: 3, vi: "wonderful ≠ terrible"}
+      - {tom: "And a flower.", focus: 4}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 95 — fresh food · healthy · public transport · bike · look after"
+    image: {pdf: course-book, page: 96, clip: [266, 143, 484, 266]}
+    items:
+      - {box: [268, 144, 482, 167]}
+      - {box: [268, 168, 482, 193]}
+      - {box: [268, 192, 482, 205]}
+      - {box: [268, 204, 482, 241]}
+      - {box: [268, 240, 482, 265]}
+    lines:
+      - {emma: "Fresh food: food taken from the tree or plant, not old, or from a tin.", focus: 0, vi: "fresh food: thực phẩm tươi"}
+      - {tom: "Healthy: if something is healthy, it helps to keep you well. If a person is healthy, they are well.", focus: 1, vi: "healthy: tốt cho sức khỏe; khỏe mạnh"}
+      - {emma: "Public transport: the system of buses and trains.", focus: 2, vi: "public transport: giao thông công cộng"}
+      - {tom: "A bike, or a bicycle. You ride a bike, or go somewhere by bike.", focus: 3}
+      - {emma: "And look after: if you look after an animal, you give it food and see that it is healthy.", focus: 4, vi: "look after: chăm sóc"}
+
+  - kind: blanks
+    chapter: "Bài 5: giống hay khác?"
+    heading: "Exercise 5 · Same or different meaning? Write S or D."
+    heading_vi: "Ví dụ: public transport / the buses and trains → S (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "These carrots are fresh / clean.  →  ___", answer: "D"}
+      - {n: 2, q: "She's looking at / looking after the dog.  →  ___", answer: "D"}
+      - {n: 3, q: "I think city life is wonderful / terrible.  →  ___", answer: "D"}
+      - {n: 4, q: "Have you got a bike / bicycle?  →  ___", answer: "S"}
+      - {n: 5, q: "Are you alone / lonely at the moment?  →  ___", answer: "D"}
+      - {n: 6, q: "She's healthy / very well.  →  ___", answer: "S"}
+      - {n: 7, q: "He lives in the countryside / on a farm.  →  ___", answer: "D"}
+      - {n: 8, q: "He rides his bike to work / goes to work by bike.  →  ___", answer: "S"}
+    lines:
+      - emma: "Exercise 5. Is the meaning of the two words the same or different? Write S or D. The example is: public transport, and the buses and trains: same. Pause the video and try."
+        say: "Exercise five. Is the meaning of the two words the same or different? Write ess or dee. The example is: public transport, and the buses and trains: same. Pause the video and try."
+        vi: "Bài 5: nghĩa giống (S) hay khác (D)?"
+      - {tom: "One. Different. Two. Different. Three. Different: they're opposites. Four. Same.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Different: look at the spotlight. Six. Same. Seven. Different: a farm is only one place in the countryside. Eight. Same.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: figure
+    chapter: "Spotlight: alone và lonely"
+    heading: "Spotlight · alone and lonely"
+    heading_vi: "tr. 95 — alone: một mình (vui hay buồn đều được) · lonely: cô đơn (buồn)"
+    image: {pdf: course-book, page: 96, clip: [342, 304, 488, 440]}
+    items:
+      - {box: [346, 331, 486, 392]}
+      - {box: [346, 391, 486, 416]}
+      - {box: [346, 415, 486, 438]}
+    lines:
+      - {emma: "Look at the spotlight. Alone and lonely mean: not with other people. If you are lonely, you aren't happy about it. If you are alone, you can be happy or unhappy.", focus: 0}
+      - {tom: "She likes living alone. Not: she likes living lonely.", say: "She likes living alone. Not: she likes living lonely.", focus: 1}
+      - {emma: "She's lonely means: she would like to have more friends.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 6: sửa chính tả"
+    heading: "Exercise 6 · Correct the spelling mistakes"
+    heading_vi: "Có câu có hai lỗi — ví dụ: look afer → look after (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "I often buy floweres.  →  ___", answer: "flowers"}
+      - {n: 2, q: "I love the contryside.  →  ___", answer: "countryside"}
+      - {n: 3, q: "I'm very helthy.  →  ___", answer: "healthy"}
+      - {n: 4, q: "I see lots of brids in my aerea.  →  ___", answer: "birds, area"}
+      - {n: 5, q: "Our public transporte is wonderfull.  →  ___", answer: "transport, wonderful"}
+      - {n: 6, q: "I'm often alon in the evening.  →  ___", answer: "alone"}
+      - {n: 7, q: "I eat fraish fruit every day.  →  ___", answer: "fresh"}
+      - {n: 8, q: "I never feel lonley.  →  ___", answer: "lonely"}
+    lines:
+      - emma: "Exercise 6. Correct the spelling mistakes. Be careful: some sentences have two mistakes. Pause the video and try."
+        say: "Exercise six. Correct the spelling mistakes. Be careful: some sentences have two mistakes. Pause the video and try."
+        vi: "Bài 6: sửa lỗi chính tả — có câu có hai lỗi."
+      - {tom: "One. Flowers. Two. Countryside: C, O, U. Three. Healthy: E, A. Four. Birds, and area: A, R, E, A.", say: "One. Flowers. Two. Countryside: see, oh, yoo. Three. Healthy: ee, eigh. Four. Birds, and area: eigh, ar, ee, eigh.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Transport, no E, and wonderful, with one L. Six. Alone. Seven. Fresh. Eight. Lonely: L, Y at the end.", say: "Five. Transport, no ee, and wonderful, with one el. Six. Alone. Seven. Fresh. Eight. Lonely: el, why at the end.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 7: đúng với bạn?"
+    heading: "Exercise 7 · About you: are the sentences true for Tom?"
+    heading_vi: "Bài 7 — Tom sửa câu bài 6 cho đúng với mình; tạm dừng và làm cho bạn"
+    items:
+      - {n: 1, q: "I often buy flowers.  →  ___", answer: "False: my mum sells them!"}
+      - {n: 2, q: "I love the countryside.  →  ___", answer: "True."}
+      - {n: 3, q: "I'm very healthy.  →  ___", answer: "True: I play basketball."}
+      - {n: 4, q: "I see lots of birds in my area.  →  ___", answer: "False: only a few."}
+      - {n: 5, q: "Our public transport is wonderful.  →  ___", answer: "False: the buses are crowded."}
+      - {n: 6, q: "I'm often alone in the evening.  →  ___", answer: "False: I share a flat."}
+      - {n: 7, q: "I eat fresh fruit every day.  →  ___", answer: "True: mangoes!"}
+      - {n: 8, q: "I never feel lonely.  →  ___", answer: "False: sometimes."}
+    lines:
+      - emma: "Exercise 7 is about you. Are the sentences in Exercise 6 true about you? If not, change them. Pause the video and try, then listen to Tom."
+        say: "Exercise seven is about you. Are the sentences in Exercise six true about you? If not, change them. Pause the video and try, then listen to Tom."
+        vi: "Bài 7: các câu ở bài 6 có đúng với bạn không? Nếu không, sửa lại."
+      - {tom: "One. False: I don't buy flowers. My mum sells them! Two. True: I love the countryside around Da Lat. Three. True: I play basketball twice a week. Four. False: I only see a few birds in the city.", say: "One. False: I don't buy flowers. My mum sells them! Two. True: I love the countryside around Dah Lot. Three. True: I play basketball twice a week. Four. False: I only see a few birds in the city.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. False: the buses are cheap, but they're crowded. Six. False: I share a flat with two friends. Seven. True: I eat a mango every day! Eight. False: sometimes I feel a bit lonely, and I miss my family.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: bullets
+    chapter: "Nông thôn Việt Nam"
+    heading: "The countryside in Vietnam"
+    heading_vi: "Thêm ngoài sách — tả cảnh quê Việt Nam bằng tiếng Anh"
+    items:
+      - {en: "rice fields · a water buffalo", vi: "cánh đồng lúa · con trâu"}
+      - {en: "terraced rice fields in Sa Pa", vi: "ruộng bậc thang ở Sa Pa"}
+      - {en: "fruit farms in the Mekong Delta", vi: "vườn trái cây ở đồng bằng sông Cửu Long"}
+      - {en: "coffee farms in the Central Highlands", vi: "trang trại cà phê ở Tây Nguyên"}
+      - {en: "a village · a farmer · a quiet, peaceful life", vi: "làng · nông dân · cuộc sống yên bình"}
+    lines:
+      - {tom: "In the Vietnamese countryside, you see rice fields everywhere, and sometimes a water buffalo.", focus: 0, vi: "water buffalo: con trâu"}
+      - {emma: "In the north, in Sa Pa, there are beautiful terraced rice fields on the hills. I went there two years ago.", focus: 1, vi: "terraced fields: ruộng bậc thang"}
+      - {tom: "In the south, the Mekong Delta has lots of fruit farms. Farmers grow mangoes, coconuts, and durian.", focus: 2}
+      - {emma: "And in the Central Highlands, there are lots of coffee farms.", focus: 3}
+      - {tom: "Life in a village is quiet and peaceful, but many young people move to the cities for work.", focus: 4, vi: "peaceful: yên bình"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: The countryside"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you prefer the city or the countryside? Why?", hint: "I prefer … because it's quieter / there's more to do …"}
+      - {q: "How often do you go to the countryside?", hint: "About once a … · I go with my family / friends …"}
+      - {q: "What can people do in the countryside?", hint: "They can walk, ride a bike, fish in the lake …"}
+      - {q: "Is life in the countryside healthy?", hint: "Yes, the air is fresh and people eat fresh food, but …"}
+      - {q: "Would you like to live on a farm?", hint: "Yes, because … / No, because it's a bit lonely …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about the countryside. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about the countryside. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về nông thôn."
+      - {emma: "Do you prefer the city or the countryside? Why?", focus: 0, pause: 0.5}
+      - {emma: "How often do you go to the countryside?", focus: 1, pause: 0.5}
+      - {emma: "What can people do in the countryside?", focus: 2, pause: 0.5}
+      - {emma: "Is life in the countryside healthy?", focus: 3, pause: 0.5}
+      - {emma: "Would you like to live on a farm?", say: "Would you like to liv on a farm?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4: che chữ tr. 94, nhìn tranh, nói tên"
+    items:
+      - {en: "sky · wood · hill · valley · tree · field · lake · path · grass", vi: "cảnh quê"}
+      - {en: "a farm · a farmer · own · grow · crops · a few", vi: "trang trại"}
+      - {en: "the countryside · area · fresh food · healthy · public transport", vi: "cuộc sống ở quê"}
+      - {en: "wonderful ≠ terrible · look after · alone ≠ lonely", vi: "từ dễ nhầm"}
+      - {en: "Next: Unit 37 · Shops", vi: "Tiếp theo: Unit 37 · Cửa hàng"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The sky, a wood, a hill, a valley, a tree, a field, a lake, a path, and grass.", focus: 0}
+      - {tom: "A farm, a farmer: he owns the farm and grows a few crops.", focus: 1}
+      - {emma: "The countryside, an area, fresh food, healthy, and public transport.", focus: 2}
+      - {tom: "Wonderful or terrible, look after, and remember: alone isn't the same as lonely.", focus: 3}
+      - {emma: "Next time, Unit 37: shops. See you then!", say: "Next time, Unit thirty-seven: shops. See you then!", focus: 4}
