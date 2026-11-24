@@ -526,11 +526,11 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Word list Unit 24–28 (184 mục) thêm vào `work/wordlist.json` (nay 863 mục); video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Cách đọc: soát cả 184 mục Word list bằng bộ tách âm của Kokoro (đều đúng); sửa `say` Vũng Tàu (`Voong Tau`), bỏ `why-fy` (Wi-Fi vốn đọc đúng) và dựng lại Unit 27.
   - Test: unit khó U26, U28; hồi quy nghe – viết cả 28 unit; e2e: thẻ sách 56 video, Unit 1–28 mỗi unit hai nút.
-- [x] **P2-74** **Oxford Word Skills Basic module Getting around: 5 video bài giảng và 5 video nghe – viết, Unit 29–33** (đợt 39, bài giảng {TOTAL39L}, nghe – viết {TOTAL39D}), theo yêu cầu người học: "tiếp tục module tiếp theo", rồi "xong rồi commit push lên main". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+- [x] **P2-74** **Oxford Word Skills Basic module Getting around: 5 video bài giảng và 5 video nghe – viết, Unit 29–33** (đợt 39, bài giảng 48:26, nghe – viết 50:21), theo yêu cầu người học: "tiếp tục module tiếp theo", rồi "xong rồi commit push lên main". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
   - Bài giảng theo khuôn file 09 mục 5: đủ mọi bài tập trong sách (tr. 78–86, Answer key tr. 211–212), hình trong sách ở mọi video (bản đồ tuyến xe buýt, bảng hỏi – đáp, tranh ga tàu, bảng giờ tàu, sơ đồ chỉ đường, tranh khu phố, bảng biển báo — khung theo tranh hoặc theo dòng), không đếm ngược. Unit khó 30 Trains, 32 Roads and traffic (10–15 phút): ôn tập (lỗi hay gặp, tự kiểm tra tranh), Part 2 (a journey that you remember, a place in your city where there is often a lot of traffic), thảo luận; Unit 30 có đóng vai mua vé và thông báo ở nhà ga.
   - Thêm ngoài sách cho unit thường: đi lại ở Việt Nam, câu khi bị lạc, chỉ đường ở thành phố Việt Nam, giới từ chỉ vị trí cho bài bản đồ IELTS Listening, biển báo tiếng Việt → tiếng Anh, thông báo và câu True / False kiểu IELTS General Training Reading, đóng vai chỉ đường.
   - Bài tự kiểm tra nhìn bản đồ / tranh: đáp án hiện thành nhãn trên hình khi Tom trả lời (file 09 mục 5.3a).
-  - Không khoảng lặng từ 3 giây: {MAXSIL}.
+  - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0. Đo bản dựng: bài giảng dài nhất 2,39–2,45 giây, nghe – viết 2,0–2,1 giây (cuối video).
   - Word list Unit 29–33 (127 mục) thêm vào `work/wordlist.json` (nay 990 mục); năm mục in số bản thảo cũ xếp theo trang thật; video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Test: unit khó U30, U32; hồi quy nghe – viết cả 33 unit; e2e: thẻ sách 66 video, Unit 1–33 mỗi unit hai nút.
 

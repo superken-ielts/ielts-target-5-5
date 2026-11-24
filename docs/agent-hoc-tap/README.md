@@ -141,7 +141,7 @@ trong sách, hình trong sách ở mọi video, không có khoảng lặng từ 
 mục 5.7).
 
 **Đợt 39 (24/11/2026):** Oxford Word Skills Basic module **Getting around** (Unit 29–33): mỗi unit một video bài giảng
-({TOTAL39L} cả 5 video; unit khó 30, 32 có ôn tập và Part 2) và một video nghe – viết ({TOTAL39D}); đủ mọi bài tập trong sách,
+(48:26 cả 5 video; unit khó 30, 32 có ôn tập và Part 2) và một video nghe – viết (50:21); đủ mọi bài tập trong sách,
 hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word list thêm 127 mục. Sách nay có 66 video (file 09 mục 5.7).
 
 ## Tóm tắt trong năm dòng

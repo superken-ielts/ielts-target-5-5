@@ -417,7 +417,7 @@ thì Kokoro nhấn âm sau, nên đã bỏ. Thử một cách đọc mới trư�
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
 (đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
-48:22 (đợt 38). Cả sách: 28 video bài giảng, 4:10:04, 120 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Cả sách: 33 video bài giảng, 4:58:31, 147 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -569,7 +569,13 @@ Module Food and drink (đợt 38) — món ăn, đi chợ, quán cà phê, nhà 
 
 Module Getting around (đợt 39) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
 
-<!-- bảng 5.7 đợt 39 -->
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| 29 Buses | `U29-buses` | 8:25 | 14 | 4 | 1–5 (bài 5: câu hỏi mới về bản đồ, đáp án hiện trên hình) | Bài 4: xe buýt gần nhà (6) | Part 1 "Public transport" (5 câu) | bản đồ tuyến 24 / 16, bảng hỏi – đáp, Glossary (near / outside) và Spotlight How long does it take?; đi lại ở Việt Nam (xe khách, xe giường nằm, xe ôm qua ứng dụng); Nghe và viết |
+| **30 Trains** | `U30-trains` | 11:32 | 20 | 6 | 1–5 (bài 4: bảng giờ tàu hiện riêng) | Bài 5: chuyến tàu gần đây (5) | đóng vai mua vé; Part 2 "a journey that you remember" (Tom: tàu Đà Lạt – Trại Mát với ông, Emma: tàu ra Phan Thiết); thảo luận (3) | tranh ga tàu, hai Glossary, Spotlight last / book in advance, hội thoại mua vé; đường sắt Việt Nam, thông báo ở nhà ga; ôn tập: lỗi hay gặp |
+| 31 Directions | `U31-directions` | 8:37 | 19 | 7 | 1–4 (bài 3: ba hội thoại, bản đồ nhỏ của sách) | Chỉ đường quanh nhà, trường (4) | đóng vai chỉ đường cho khách du lịch (5 câu) | câu hỏi đường, năm sơ đồ chỉ đường; giới từ chỉ vị trí (bài bản đồ IELTS Listening); câu khi bị lạc; chỉ đường ở thành phố Việt Nam; câu đố tình huống; Nghe và viết |
+| **32 Roads and traffic** | `U32-roads-traffic` | 11:30 | 19 | 6 | 1–6 (bài 3: tự kiểm tra tranh ở phần ôn tập) | Bài 6: đường sá ở Việt Nam và ở Anh (5) | Part 2 "a place in your city where there is often a lot of traffic" (Tom: vòng xoay gần trường, Emma: đường trước trường); thảo luận (3) | tranh khu phố 12 mục (hai cảnh), hội thoại Beth – Marco, Glossary hai cảnh; giao thông ở Việt Nam; How far? / How long?; ôn tập: lỗi hay gặp, tự kiểm tra tranh |
+| 33 Signs and notices | `U33-signs-notices` | 8:23 | 17 | 4 | 1–3 (bài 1: danh sách a–j của sách) | Biển báo quanh bạn (4) | biển báo trong đời sống (5 câu) | bảng 14 biển báo (ba cảnh); thêm biển báo; biển tiếng Việt → tiếng Anh; Where would you see it?; thông báo kiểu IELTS GT Reading, câu True / False; Nghe và viết |
 
 Module Getting around (đợt 39) — xe buýt, tàu hỏa, chỉ đường, giao thông, biển báo:
 - **Tom:**
@@ -698,7 +704,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**28 video, 4:39:50** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**33 video, 5:30:12** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -730,6 +736,11 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 26 · Buying food | `U26-buying-food-dictation` | 9:48 | 35 · 47 | 18 | 30 |
 | 27 · In a café | `U27-cafe-dictation` | 10:03 | 22 · 26 | 28 | 34 |
 | 28 · In a restaurant | `U28-restaurant-dictation` | 9:55 | 35 · 52 | 17 | 28 |
+| 29 · Buses | `U29-buses-dictation` | 10:03 | 21 · 18 | 24 | 33 |
+| 30 · Trains | `U30-trains-dictation` | 10:06 | 28 · 34 | 19 | 30 |
+| 31 · Directions | `U31-directions-dictation` | 10:00 | 20 · 18 | 24 | 33 |
+| 32 · Roads and traffic | `U32-roads-traffic-dictation` | 10:06 | 26 · 32 | 20 | 30 |
+| 33 · Signs and notices | `U33-signs-notices-dictation` | 10:06 | 23 · 25 | 24 | 32 |
 
 ## 6. Việc tiếp theo
 

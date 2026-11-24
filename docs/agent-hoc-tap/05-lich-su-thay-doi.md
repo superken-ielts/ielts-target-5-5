@@ -23,7 +23,7 @@ tr. 78–86). Như đợt 37–38, mỗi unit có hai video: bài giảng (file 
   - Sách in số của bản thảo cũ cho năm mục, xếp theo trang thật: *accident* (29) và *kilometres* (31) vào Unit 32; *out of
     order*, *queue here*, *ring* (29) vào Unit 33.
   - *long* (a metre long, 29) không có trên trang nào nên để Unit 29 như sách in.
-- **5 video bài giảng** ({TOTAL39L}): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+- **5 video bài giảng** (48:26): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
   - Unit khó (10–15 phút): 30 Trains, 32 Roads and traffic. Có ôn tập (lỗi hay gặp, tự kiểm tra tranh), Part 2 với bài mẫu của
     Tom và Emma, thảo luận kiểu Part 3. Unit 30 có thêm đóng vai mua vé, đường sắt Việt Nam và thông báo ở nhà ga; Unit 32 có
     thêm giao thông ở Việt Nam và How far? / How long?
@@ -36,12 +36,24 @@ tr. 78–86). Như đợt 37–38, mỗi unit có hai video: bài giảng (file 
   - Bài tự kiểm tra nhìn hình (Unit 29 bài 5, Unit 32 bài 3): khung đỏ ở chỗ được hỏi, đáp án hiện thành nhãn trên hình khi
     Tom trả lời — file 09 mục 5.3a.
 
-{TABLE39L}
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| 29 Buses | `U29-buses` | 8:25 | 4 | 1–5 (bài 5: câu hỏi mới về bản đồ, đáp án hiện trên hình) |
+| **30 Trains** | `U30-trains` | 11:32 | 6 | 1–5 (bài 4: bảng giờ tàu hiện riêng) |
+| 31 Directions | `U31-directions` | 8:37 | 7 | 1–4 (bài 3: ba hội thoại, bản đồ nhỏ của sách) |
+| **32 Roads and traffic** | `U32-roads-traffic` | 11:30 | 6 | 1–6 (bài 3: tự kiểm tra tranh ở phần ôn tập) |
+| 33 Signs and notices | `U33-signs-notices` | 8:23 | 4 | 1–3 (bài 1: danh sách a–j của sách) |
 
-- **5 video nghe – viết** ({TOTAL39D}), sinh từ `work/dictation/units_29_33.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+- **5 video nghe – viết** (50:21), sinh từ `work/dictation/units_29_33.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
   đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`.
 
-{TABLE39D}
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 29 · Buses | `U29-buses-dictation` | 10:03 | 21 · 18 | 24 | 33 |
+| 30 · Trains | `U30-trains-dictation` | 10:06 | 28 · 34 | 19 | 30 |
+| 31 · Directions | `U31-directions-dictation` | 10:00 | 20 · 18 | 24 | 33 |
+| 32 · Roads and traffic | `U32-roads-traffic-dictation` | 10:06 | 26 · 32 | 20 | 30 |
+| 33 · Signs and notices | `U33-signs-notices-dictation` | 10:06 | 23 · 25 | 24 | 32 |
 
 Thử và sửa trong lúc làm:
 - **Khung hình:**
