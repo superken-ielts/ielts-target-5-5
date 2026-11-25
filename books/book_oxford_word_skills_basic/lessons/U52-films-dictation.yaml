@@ -1,0 +1,322 @@
+# Video nghe – viết (dictation) Unit 52 · Films — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U52-films-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U52 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 52 có 28 mục (27 khóa: in có hai mục): what's on? phủ on, love story phủ story, action film phủ
+# action, horror film phủ horror; film, movie và actor, actress ghép một dòng; phần 1 thêm where's it on?
+id: U52-films-dictation
+activity: U52-words
+title: "Unit 52 · Films"
+subtitle: "Dictation · listen and write: talking about films"
+title_vi: "Nghe – viết 10 phút: phim ảnh — từ trong sách, từ thêm, câu giao tiếp"
+tag: "HOBBIES AND INTERESTS · UNIT 52"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 52: Films. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit fifty-two: Films. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 52: phim ảnh. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 24 words from the book. You hear each word twice, and then an example sentence twice. Then 21 more useful words, and 37 useful sentences for conversation.", "say": "There are three parts. First, twenty-four words from the book. You hear each word twice, and then an example sentence twice. Then twenty-one more useful words, and thirty-seven useful sentences for conversation.", "vi": "Ba phần: 24 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 21 từ thêm, 37 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "film, movie", "vi": "phim", "ex": "A movie is a film.", "w": ["film", "movie"]}
+      - {"n": 2, "answer": "cinema", "vi": "rạp chiếu phim", "ex": "Let's go to the cinema tonight.", "w": ["cinema"]}
+      - {"n": 3, "answer": "what's on?", "vi": "có phim gì chiếu?", "ex": "What's on at the cinema?", "w": ["what's on?", "on"]}
+      - {"n": 4, "answer": "kind", "vi": "loại", "ex": "What kind of film is it?", "w": ["kind"]}
+      - {"n": 5, "answer": "thriller", "vi": "phim giật gân", "ex": "A thriller is often exciting.", "w": ["thriller"]}
+      - {"n": 6, "answer": "exciting", "vi": "gay cấn, hồi hộp", "ex": "The ending was really exciting.", "w": ["exciting"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. film, movie. film, movie. A movie is a film. A movie is a film.", "focus": 0}
+      - {"emma": "Two. cinema. cinema. Let's go to the cinema tonight. Let's go to the cinema tonight.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. what's on?. what's on?. What's on at the cinema? What's on at the cinema?", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. kind. kind. What kind of film is it? What kind of film is it?", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. thriller. thriller. A thriller is often exciting. A thriller is often exciting.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. exciting. exciting. The ending was really exciting. The ending was really exciting.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "comedy", "vi": "phim hài", "ex": "It's a romantic comedy.", "w": ["comedy"]}
+      - {"n": 8, "answer": "funny", "vi": "buồn cười", "ex": "The film was very funny.", "w": ["funny"]}
+      - {"n": 9, "answer": "war film", "vi": "phim chiến tranh", "ex": "A war film is often violent.", "w": ["war film"]}
+      - {"n": 10, "answer": "violent", "vi": "bạo lực", "ex": "I don't like violent films.", "w": ["violent"]}
+      - {"n": 11, "answer": "love story", "vi": "phim tình cảm", "ex": "A love story is romantic.", "w": ["love story", "story"]}
+      - {"n": 12, "answer": "romantic", "vi": "lãng mạn", "ex": "It's a very romantic film.", "w": ["romantic"]}
+    lines:
+      - {"emma": "Seven. comedy. comedy. It's a romantic comedy. It's a romantic comedy.", "focus": 0}
+      - {"emma": "Eight. funny. funny. The film was very funny. The film was very funny.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. war film. war film. A war film is often violent. A war film is often violent.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. violent. violent. I don't like violent films. I don't like violent films.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. love story. love story. A love story is romantic. A love story is romantic.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. romantic. romantic. It's a very romantic film. It's a very romantic film.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "action film", "vi": "phim hành động", "ex": "An action film is exciting.", "w": ["action"]}
+      - {"n": 14, "answer": "horror film", "vi": "phim kinh dị", "ex": "A horror film is frightening.", "w": ["horror"]}
+      - {"n": 15, "answer": "frightening", "vi": "đáng sợ", "ex": "The end of the film was frightening.", "w": ["frightening"]}
+      - {"n": 16, "answer": "cartoon", "vi": "phim hoạt hình", "ex": "Children love cartoons.", "w": ["cartoon"]}
+      - {"n": 17, "answer": "about", "vi": "về (nội dung)", "ex": "It's about a woman and her family.", "w": ["about"]}
+      - {"n": 18, "answer": "review", "vi": "bài nhận xét", "ex": "The film has had good reviews.", "w": ["review"]}
+    lines:
+      - {"emma": "Thirteen. action film. action film. An action film is exciting. An action film is exciting.", "focus": 0}
+      - {"emma": "Fourteen. horror film. horror film. A horror film is frightening. A horror film is frightening.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. frightening. frightening. The end of the film was frightening. The end of the film was frightening.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. cartoon. cartoon. Children love cartoons. Children love cartoons.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. about. about. It's about a woman and her family. It's about a woman and her family.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. review. review. The film has had good reviews. The film has had good reviews.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "in", "vi": "đóng (trong phim)", "ex": "Who's in it?", "w": ["in"]}
+      - {"n": 20, "answer": "star", "vi": "đóng vai chính; ngôi sao", "ex": "It stars Kevin Costner and Jennifer Aniston.", "w": ["star"]}
+      - {"n": 21, "answer": "actor, actress", "vi": "diễn viên nam, nữ", "ex": "She's a fantastic actress.", "w": ["actor", "actress"]}
+      - {"n": 22, "answer": "director", "vi": "đạo diễn", "ex": "Who's the director?", "w": ["director"]}
+      - {"n": 23, "answer": "see", "vi": "xem (ở rạp)", "ex": "Let's go and see it.", "w": ["see"]}
+      - {"n": 24, "answer": "where's it on?", "vi": "chiếu ở đâu?", "ex": "Where's it on? At the Odeon."}
+    lines:
+      - {"emma": "Nineteen. in. in. Who's in it? Who's in it?", "focus": 0}
+      - {"emma": "Twenty. star. star. It stars Kevin Costner and Jennifer Aniston. It stars Kevin Costner and Jennifer Aniston.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. actor, actress. actor, actress. She's a fantastic actress. She's a fantastic actress.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. director. director. Who's the director? Who's the director?", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. see. see. Let's go and see it. Let's go and see it.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. where's it on?. where's it on?. Where's it on? At the Odeon. Where's it on? At the Odeon.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (25–30)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 25, "answer": "science fiction", "vi": "khoa học viễn tưởng", "ex": "I love science fiction films."}
+      - {"n": 26, "answer": "documentary", "vi": "phim tài liệu", "ex": "We watched a documentary about the ocean."}
+      - {"n": 27, "answer": "scary", "vi": "đáng sợ", "ex": "The film was really scary."}
+      - {"n": 28, "answer": "subtitles", "vi": "phụ đề", "ex": "I watch films with English subtitles."}
+      - {"n": 29, "answer": "trailer", "vi": "đoạn giới thiệu phim", "ex": "The trailer looks exciting."}
+      - {"n": 30, "answer": "plot", "vi": "cốt truyện", "ex": "The plot is very clever."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-five. science fiction. science fiction. I love science fiction films. I love science fiction films.", "focus": 0}
+      - {"tom": "Twenty-six. documentary. documentary. We watched a documentary about the ocean. We watched a documentary about the ocean.", "focus": 1, "reveal": [25]}
+      - {"tom": "Twenty-seven. scary. scary. The film was really scary. The film was really scary.", "focus": 2, "reveal": [26]}
+      - {"tom": "Twenty-eight. subtitles. subtitles. I watch films with English subtitles. I watch films with English subtitles.", "focus": 3, "reveal": [27]}
+      - {"tom": "Twenty-nine. trailer. trailer. The trailer looks exciting. The trailer looks exciting.", "focus": 4, "reveal": [28]}
+      - {"tom": "Thirty. plot. plot. The plot is very clever. The plot is very clever.", "focus": 5, "reveal": [29]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (31–36)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 31, "answer": "ending", "vi": "đoạn kết", "ex": "I didn't like the ending."}
+      - {"n": 32, "answer": "scene", "vi": "cảnh", "ex": "The last scene is very sad."}
+      - {"n": 33, "answer": "special effects", "vi": "kỹ xảo", "ex": "The special effects are amazing."}
+      - {"n": 34, "answer": "character", "vi": "nhân vật", "ex": "Who's your favourite character?"}
+      - {"n": 35, "answer": "screen", "vi": "màn hình", "ex": "The cinema has a huge screen."}
+      - {"n": 36, "answer": "ticket", "vi": "vé", "ex": "Two tickets for the seven o'clock film, please."}
+    lines:
+      - {"tom": "Thirty-one. ending. ending. I didn't like the ending. I didn't like the ending.", "focus": 0}
+      - {"tom": "Thirty-two. scene. scene. The last scene is very sad. The last scene is very sad.", "focus": 1, "reveal": [31]}
+      - {"tom": "Thirty-three. special effects. special effects. The special effects are amazing. The special effects are amazing.", "focus": 2, "reveal": [32]}
+      - {"tom": "Thirty-four. character. character. Who's your favourite character? Who's your favourite character?", "focus": 3, "reveal": [33]}
+      - {"tom": "Thirty-five. screen. screen. The cinema has a huge screen. The cinema has a huge screen.", "focus": 4, "reveal": [34]}
+      - {"tom": "Thirty-six. ticket. ticket. Two tickets for the seven o'clock film, please. Two tickets for the seven o'clock film, please.", "focus": 5, "reveal": [35]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (37–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "popcorn", "vi": "bỏng ngô", "ex": "Do you want some popcorn?"}
+      - {"n": 38, "answer": "be set in", "vi": "lấy bối cảnh ở", "ex": "The film is set in the future."}
+      - {"n": 39, "answer": "be based on", "vi": "dựa trên", "ex": "It's based on a true story."}
+      - {"n": 40, "answer": "recommend", "vi": "giới thiệu, khuyên", "ex": "I'd recommend it to everyone."}
+      - {"n": 41, "answer": "animated", "vi": "hoạt hình", "ex": "It's an animated film from Japan."}
+      - {"n": 42, "answer": "seat", "vi": "ghế ngồi", "ex": "Our seats are in the middle."}
+    lines:
+      - {"tom": "Thirty-seven. popcorn. popcorn. Do you want some popcorn? Do you want some popcorn?", "focus": 0}
+      - {"tom": "Thirty-eight. be set in. be set in. The film is set in the future. The film is set in the future.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. be based on. be based on. It's based on a true story. It's based on a true story.", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. recommend. recommend. I'd recommend it to everyone. I'd recommend it to everyone.", "focus": 3, "reveal": [39]}
+      - {"tom": "Forty-one. animated. animated. It's an animated film from Japan. It's an animated film from Japan.", "focus": 4, "reveal": [40]}
+      - {"tom": "Forty-two. seat. seat. Our seats are in the middle. Our seats are in the middle.", "focus": 5, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "soundtrack", "vi": "nhạc phim", "ex": "I love the soundtrack of this film."}
+      - {"n": 44, "answer": "sequel", "vi": "phần tiếp theo", "ex": "The sequel is coming out next year."}
+      - {"n": 45, "answer": "main character", "vi": "nhân vật chính", "ex": "The main character is a young doctor."}
+    lines:
+      - {"tom": "Forty-three. soundtrack. soundtrack. I love the soundtrack of this film. I love the soundtrack of this film.", "focus": 0}
+      - {"tom": "Forty-four. sequel. sequel. The sequel is coming out next year. The sequel is coming out next year.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. main character. main character. The main character is a young doctor. The main character is a young doctor.", "focus": 2, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [45]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 46, "answer": "What's on at the cinema tonight?", "vi": "Tối nay rạp chiếu phim gì?"}
+      - {"n": 47, "answer": "There's a new action film.", "vi": "Có một phim hành động mới."}
+      - {"n": 48, "answer": "What kind of film is it?", "vi": "Phim thuộc thể loại gì?"}
+      - {"n": 49, "answer": "It's a romantic comedy.", "vi": "Phim hài lãng mạn."}
+      - {"n": 50, "answer": "Who's in it?", "vi": "Ai đóng vậy?"}
+      - {"n": 51, "answer": "I'm not sure. Let's check online.", "vi": "Mình không chắc. Lên mạng xem nhé."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-six. What's on at the cinema tonight? What's on at the cinema tonight?", "focus": 0}
+      - {"tom": "Forty-seven. There's a new action film. There's a new action film.", "focus": 1, "reveal": [46]}
+      - {"tom": "Forty-eight. What kind of film is it? What kind of film is it?", "focus": 2, "reveal": [47]}
+      - {"emma": "Forty-nine. It's a romantic comedy. It's a romantic comedy.", "focus": 3, "reveal": [48]}
+      - {"emma": "Fifty. Who's in it? Who's in it?", "focus": 4, "reveal": [49]}
+      - {"tom": "Fifty-one. I'm not sure. Let's check online. I'm not sure. Let's check online.", "focus": 5, "reveal": [50]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 52, "answer": "What's it about?", "vi": "Phim kể về gì?"}
+      - {"n": 53, "answer": "It's about a family in Hanoi.", "vi": "Phim kể về một gia đình ở Hà Nội."}
+      - {"n": 54, "answer": "Is it any good?", "vi": "Phim có hay không?"}
+      - {"n": 55, "answer": "It's had great reviews.", "vi": "Phim được khen nhiều lắm."}
+      - {"n": 56, "answer": "What time does it start?", "vi": "Mấy giờ phim bắt đầu?"}
+      - {"n": 57, "answer": "At half past seven.", "vi": "Bảy giờ rưỡi."}
+    lines:
+      - {"tom": "Fifty-two. What's it about? What's it about?", "focus": 0}
+      - {"emma": "Fifty-three. It's about a family in Hanoi. It's about a family in Hanoi.", "say": "Fifty-three. It's about a family in Ha Noi. It's about a family in Ha Noi.", "focus": 1, "reveal": [52]}
+      - {"tom": "Fifty-four. Is it any good? Is it any good?", "focus": 2, "reveal": [53]}
+      - {"emma": "Fifty-five. It's had great reviews. It's had great reviews.", "focus": 3, "reveal": [54]}
+      - {"emma": "Fifty-six. What time does it start? What time does it start?", "focus": 4, "reveal": [55]}
+      - {"tom": "Fifty-seven. At half past seven. At half past seven.", "focus": 5, "reveal": [56]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 58, "answer": "Shall I book the tickets online?", "vi": "Mình đặt vé trên mạng nhé?"}
+      - {"n": 59, "answer": "Yes, please. Two tickets.", "vi": "Ừ, hai vé nhé."}
+      - {"n": 60, "answer": "Where do you want to sit?", "vi": "Bạn muốn ngồi ở đâu?"}
+      - {"n": 61, "answer": "Near the back, please.", "vi": "Gần cuối rạp nhé."}
+      - {"n": 62, "answer": "That was so frightening!", "vi": "Phim đáng sợ quá!"}
+      - {"n": 63, "answer": "Really? I thought it was funny.", "vi": "Thật à? Mình thấy buồn cười mà."}
+    lines:
+      - {"tom": "Fifty-eight. Shall I book the tickets online? Shall I book the tickets online?", "focus": 0}
+      - {"emma": "Fifty-nine. Yes, please. Two tickets. Yes, please. Two tickets.", "focus": 1, "reveal": [58]}
+      - {"tom": "Sixty. Where do you want to sit? Where do you want to sit?", "focus": 2, "reveal": [59]}
+      - {"emma": "Sixty-one. Near the back, please. Near the back, please.", "focus": 3, "reveal": [60]}
+      - {"emma": "Sixty-two. That was so frightening! That was so frightening!", "focus": 4, "reveal": [61]}
+      - {"tom": "Sixty-three. Really? I thought it was funny. Really? I thought it was funny.", "focus": 5, "reveal": [62]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 64, "answer": "Did you enjoy the film?", "vi": "Bạn có thích phim không?"}
+      - {"n": 65, "answer": "Yes, the ending was amazing.", "vi": "Có, đoạn kết tuyệt lắm."}
+      - {"n": 66, "answer": "I don't like horror films.", "vi": "Mình không thích phim kinh dị."}
+      - {"n": 67, "answer": "Me neither. They give me bad dreams.", "vi": "Mình cũng vậy. Xem xong là gặp ác mộng."}
+      - {"n": 68, "answer": "Have you seen this film before?", "vi": "Bạn xem phim này chưa?"}
+      - {"n": 69, "answer": "Yes, twice. It's brilliant.", "vi": "Rồi, hai lần. Hay tuyệt."}
+    lines:
+      - {"tom": "Sixty-four. Did you enjoy the film? Did you enjoy the film?", "focus": 0}
+      - {"emma": "Sixty-five. Yes, the ending was amazing. Yes, the ending was amazing.", "focus": 1, "reveal": [64]}
+      - {"emma": "Sixty-six. I don't like horror films. I don't like horror films.", "focus": 2, "reveal": [65]}
+      - {"tom": "Sixty-seven. Me neither. They give me bad dreams. Me neither. They give me bad dreams.", "focus": 3, "reveal": [66]}
+      - {"emma": "Sixty-eight. Have you seen this film before? Have you seen this film before?", "focus": 4, "reveal": [67]}
+      - {"tom": "Sixty-nine. Yes, twice. It's brilliant. Yes, twice. It's brilliant.", "focus": 5, "reveal": [68]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (70–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 70, "answer": "The book was better than the film.", "vi": "Sách hay hơn phim."}
+      - {"n": 71, "answer": "I haven't read the book.", "vi": "Mình chưa đọc sách."}
+      - {"n": 72, "answer": "Can we watch it with subtitles?", "vi": "Mình xem có phụ đề được không?"}
+      - {"n": 73, "answer": "Sure. English or Vietnamese?", "vi": "Được. Tiếng Anh hay tiếng Việt?"}
+      - {"n": 74, "answer": "Who's your favourite actor?", "vi": "Diễn viên bạn thích nhất là ai?"}
+      - {"n": 75, "answer": "I don't have one favourite. I like lots of actors.", "vi": "Mình không có ai thích nhất. Mình thích nhiều diễn viên."}
+    lines:
+      - {"emma": "Seventy. The book was better than the film. The book was better than the film.", "focus": 0}
+      - {"tom": "Seventy-one. I haven't read the book. I haven't read the book.", "focus": 1, "reveal": [70]}
+      - {"emma": "Seventy-two. Can we watch it with subtitles? Can we watch it with subtitles?", "focus": 2, "reveal": [71]}
+      - {"tom": "Seventy-three. Sure. English or Vietnamese? Sure. English or Vietnamese?", "focus": 3, "reveal": [72]}
+      - {"tom": "Seventy-four. Who's your favourite actor? Who's your favourite actor?", "focus": 4, "reveal": [73]}
+      - {"emma": "Seventy-five. I don't have one favourite. I like lots of actors. I don't have one favourite. I like lots of actors.", "focus": 5, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [75]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (76–79)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 76, "answer": "I'd recommend it to everyone.", "vi": "Mình khuyên mọi người nên xem."}
+      - {"n": 77, "answer": "Then I'll see it this weekend.", "vi": "Vậy cuối tuần này mình sẽ đi xem."}
+      - {"n": 78, "answer": "Please turn off your phone in the cinema.", "vi": "Vui lòng tắt điện thoại trong rạp."}
+      - {"n": 79, "answer": "How long is the film?", "vi": "Phim dài bao lâu?"}
+    lines:
+      - {"tom": "Seventy-six. I'd recommend it to everyone. I'd recommend it to everyone.", "focus": 0}
+      - {"emma": "Seventy-seven. Then I'll see it this weekend. Then I'll see it this weekend.", "focus": 1, "reveal": [76]}
+      - {"emma": "Seventy-eight. Please turn off your phone in the cinema. Please turn off your phone in the cinema.", "focus": 2, "reveal": [77]}
+      - {"tom": "Seventy-nine. How long is the film? How long is the film?", "focus": 3, "reveal": [78]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [79]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (80–82)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 80, "answer": "About two hours.", "vi": "Khoảng hai tiếng."}
+      - {"n": 81, "answer": "Can I pay by card?", "vi": "Tôi trả bằng thẻ được không?"}
+      - {"n": 82, "answer": "Yes, of course.", "vi": "Được chứ."}
+    lines:
+      - {"emma": "Eighty. About two hours. About two hours.", "focus": 0}
+      - {"emma": "Eighty-one. Can I pay by card? Can I pay by card?", "focus": 1, "reveal": [80]}
+      - {"tom": "Eighty-two. Yes, of course. Yes, of course.", "focus": 2, "reveal": [81]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [82]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 53.", "say": "Well done! See you in Unit fifty-three.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 53."}
+
