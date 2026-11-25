@@ -1,0 +1,520 @@
+# Video Oxford Word Skills Basic · Unit 48 — I can say what I like (sách in tr. 126–127, Answer key tr. 216).
+# UNIT KHÓ (đợt 42): unit đầu module Hobbies and interests — tám mức thích (love → hate) với trật tự từ really / quite / very much,
+# like / love / hate / enjoy + -ing, prefer … to …, keen on, interesting ≠ interested (lỗi người Việt rất hay mắc); "Do you like…?"
+# là câu hỏi IELTS Part 1 hay gặp nhất — video khoảng 13 phút: phần sách, rồi câu nói thích / không thích kiểu IELTS, ÔN TẬP (lỗi hay
+# gặp) và LUYỆN NÓI CHUNG (Part 2 "something you enjoy doing in your free time", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn:
+# file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe
+# và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 216 (bài 4: ví dụ chỉ trên bảng, đáp án có hình bảng bên cạnh; bài 5:
+# khung từ hiện trước). Bài 3 và 6 (ABOUT YOU): Tom và Emma tự trả lời (cảnh Nói 1, Nói 2) — Answer key chỉ có câu trả lời mẫu của
+# một người Đức / Thổ Nhĩ Kỳ.
+# Hình trong sách: thang Love it or hate it? (khung theo câu), Spotlight like / love / hate + -ing, hồ sơ của Mirko Zitec (khung theo
+# dòng), Glossary, Spotlight interesting / interested, bảng bài 4 (hai cảnh), khung từ bài 5 — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom mê phim khoa học viễn tưởng, chơi bóng rổ, học tiếng Anh thấy nghe
+# khó, ít gửi email mà hay nhắn tin, chỉ mua thứ cần, hồi đi học thấy Sử chán, thích nhạc pop và vài ban nhạc Việt, quê Đà Lạt; hai năm
+# trước chỉ biết nấu mì và trứng, nay đang học nấu ăn, chia nhau nấu với hai bạn cùng phòng, tháng trước nấu canh cá của mẹ; Emma lớn
+# lên ở thị trấn ven biển (thích hải sản), không đi xe ở TP. HCM, ở nhà không gọn gàng, gọi cho mẹ mỗi Chủ nhật, thích màu xanh lá,
+# mê truyện trinh thám, đi bộ đường dài, ông dạy bơi năm 10 tuổi, bà đan áo cho cả nhà. Mới: Tom không thích xem TV lắm (xem phim trên
+# laptop), rất thích học tiếng Anh, thích đi rạp; nấu ăn buổi tối hoặc cuối tuần, gọi mẹ xin công thức, muốn học thêm món Âu; Emma khá
+# thích lái xe ở Anh, ghét dọn nhà, thích nói chuyện điện thoại (gọi mẹ cả tiếng), thích cá hơn thịt, không mê thể thao nhưng thích
+# bơi; đi bộ đường dài khi có cuối tuần rảnh (ở Anh: dọc biển; ở Việt Nam: đồi gần Đà Lạt), với bạn ở trường hoặc một mình.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U48-likes-dislikes.yaml
+id: U48-likes-dislikes
+activity: U48-words
+title: "Unit 48 · Likes and dislikes"
+subtitle: "I can say what I like"
+title_vi: "Thích và không thích: love, really like, quite like, don't like very much, hate; like + -ing; enjoy, prefer, keen on, interested"
+tag: "HOBBIES AND INTERESTS · UNIT 48"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 48: likes and dislikes. It's the first unit of a new module: hobbies and interests. Today: how to say what you like, and what you don't like."
+        say: "Welcome to Unit forty-eight: likes and dislikes. It's the first unit of a new module: hobbies and interests. Today: how to say what you like, and what you don't like."
+        vi: "Unit 48: thích và không thích — unit đầu của module Sở thích."
+      - tom: "It's a long unit, with lots of speaking practice. No countdown, as always: pause the video whenever you want to answer."
+        vi: "Unit dài, nhiều phần luyện nói; không đếm ngược — tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Love it or hate it?"
+    heading: "A · Love it or hate it?"
+    heading_vi: "tr. 126 — tám mức thích, từ love đến hate"
+    image: {pdf: course-book, page: 127, clip: [26, 72, 484, 212]}
+    items:
+      - {box: [42, 97, 111, 126]}
+      - {box: [78, 180, 151, 210]}
+      - {box: [145, 97, 187, 126]}
+      - {box: [166, 180, 236, 210]}
+      - {box: [222, 97, 297, 126]}
+      - {box: [256, 180, 378, 210]}
+      - {box: [333, 97, 402, 126]}
+      - {box: [411, 180, 482, 210]}
+    lines:
+      - {emma: "Look at page one hundred and twenty-six. Here are eight ways to say how much you like something. Number one: I love football.", focus: 0, vi: "love: rất thích, mê"}
+      - {tom: "Two: I really like it.", focus: 1, vi: "really like: rất thích"}
+      - {emma: "Three: I like it.", focus: 2, vi: "like: thích"}
+      - {tom: "Four: I quite like it. Quite like is a little less than like.", focus: 3, vi: "quite like: khá thích"}
+      - {emma: "Five: I think it's OK. Not good, and not bad.", focus: 4, vi: "I think it's OK: cũng được"}
+      - {tom: "Six: I don't like it very much.", focus: 5, vi: "don't like it very much: không thích lắm"}
+      - {emma: "Seven: I don't like it.", focus: 6, vi: "don't like: không thích"}
+      - {tom: "And eight: I hate football. Hate is the opposite of love.", focus: 7, vi: "hate: ghét"}
+      - {emma: "Look at the word order. Really and quite go before like, but very much goes at the end: I don't like it very much.", focus: 5, vi: "really / quite đứng trước like; very much đứng cuối câu"}
+
+  - kind: figure
+    chapter: "Spotlight: like + -ing"
+    heading: "Spotlight · like / love / hate + -ing"
+    heading_vi: "tr. 126 — sau like, love, hate: danh từ, đại từ hoặc động từ thêm -ing"
+    image: {pdf: course-book, page: 127, clip: [24, 216, 316, 288]}
+    items:
+      - {box: [30, 243, 306, 257]}
+      - {box: [30, 256, 150, 281]}
+      - {box: [150, 256, 308, 281]}
+    lines:
+      - {tom: "Look at the spotlight. After like, love and hate, use a noun, a pronoun, or the -ing form of a verb.", say: "Look at the spotlight. After like, love and hate, yooz a noun, a pronoun, or the ing form of a verb.", focus: 0, vi: "noun: danh từ · pronoun: đại từ (it, them) · -ing form: động từ thêm -ing"}
+      - {emma: "I like football. I love it. I hate it.", focus: 1}
+      - {tom: "I love playing football. I like learning English. Not: I like play football.", focus: 2, vi: "like / love / hate + V-ing"}
+
+  - kind: blanks
+    chapter: "Bài 1: A hay B?"
+    heading: "Exercise 1 · Who likes it more? A or B?"
+    heading_vi: "Ví dụ: A quite likes coffee. B really likes coffee. → B likes coffee more. (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "A doesn't like studying. B thinks studying is OK.  →  ___ likes studying less.", answer: "A"}
+      - {n: 2, q: "A likes chocolate. B loves chocolate.  →  ___ likes chocolate more.", answer: "B"}
+      - {n: 3, q: "A really likes sport. B thinks it's OK.  →  ___ likes sport more.", answer: "A"}
+      - {n: 4, q: "A doesn't like shopping very much. B doesn't like shopping.  →  ___ likes shopping less.", answer: "B"}
+      - {n: 5, q: "A hates pop music. B doesn't like pop music very much.  →  ___ likes pop music less.", answer: "A"}
+      - {n: 6, q: "A really likes tea. B quite likes tea.  →  ___ likes tea more.", answer: "A"}
+    lines:
+      - emma: "Exercise 1. Who likes it more, A or B? The example is: A quite likes coffee, and B really likes coffee. So B likes coffee more. Pause the video and try."
+        say: "Exercise one. Who likes it more, eigh or bee? The example is: eigh quite likes coffee, and bee really likes coffee. So bee likes coffee more. Pause the video and try."
+        vi: "Bài 1: ai thích hơn, A hay B?"
+      - {tom: "One. A likes studying less: don't like is less than OK. Two. B: love is more than like. Three. A: really like is more than OK.", say: "One. Eigh likes studying less: don't like is less than OK. Two. Bee: love is more than like. Three. Eigh: really like is more than OK.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. B likes shopping less: don't like is less than don't like very much. Five. A: hate is the lowest. Six. A: really like is more than quite like.", say: "Four. Bee likes shopping less: don't like is less than don't like very much. Five. Eigh: hate is the lowest. Six. Eigh: really like is more than quite like.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: sửa lỗi"
+    heading: "Exercise 2 · Correct the mistakes"
+    heading_vi: "Ví dụ: Do you like watch tennis? → Do you like watching tennis? (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "I hate it chocolate.  →  ___", answer: "I hate chocolate."}
+      - {n: 2, q: "They don't like to doing homework very much.  →  ___", answer: "They don't like doing homework very much."}
+      - {n: 3, q: "He doesn't like very much speaking English.  →  ___", answer: "He doesn't like speaking English very much."}
+      - {n: 4, q: "I like quite shopping.  →  ___", answer: "I quite like shopping."}
+      - {n: 5, q: "She doesn't like drive.  →  ___", answer: "She doesn't like driving."}
+      - {n: 6, q: "I think tennis OK.  →  ___", answer: "I think tennis is OK."}
+      - {n: 7, q: "I like really going out with friends.  →  ___", answer: "I really like going out with friends."}
+      - {n: 8, q: "She loves watch sport.  →  ___", answer: "She loves watching sport."}
+    lines:
+      - emma: "Exercise 2. Correct the mistakes. The example is: do you like watching tennis? Not: like watch. Pause the video and try."
+        say: "Exercise two. Correct the mistakes. The example is: do you like watching tennis? Not: like watch. Pause the video and try."
+        vi: "Bài 2: sửa lỗi."
+      - {tom: "One. I hate chocolate, with no it. Two. They don't like doing homework very much, with no to. Three. He doesn't like speaking English very much: very much goes at the end. Four. I quite like shopping.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. She doesn't like driving. Six. I think tennis is OK: we need is. Seven. I really like going out with friends. Eight. She loves watching sport.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: bạn có thích…?"
+    heading: "Speaking 1 · Exercise 3: about you"
+    heading_vi: "Bài 3 (ABOUT YOU) — trả lời bằng tám mức ở phần A; tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Do you like watching TV, Tom?"
+        a: "I don't like watching TV very much. I prefer watching films on my laptop."
+        ask: emma
+        by: tom
+        phrases: ["I don't like … very much.", "I prefer…"]
+      - q: "Do you like studying English?"
+        a: "I really like studying English. But listening is difficult for me."
+        ask: emma
+        by: tom
+        phrases: ["I really like…", "But…"]
+      - q: "Emma, do you like driving?"
+        a: "I quite like driving in England. But I never drive in Ho Chi Minh City: the traffic is too busy!"
+        ask: tom
+        by: emma
+        phrases: ["I quite like…", "But I never…"]
+      - q: "Do you like shopping for clothes?"
+        a: "I don't like it very much. I only buy the things I need."
+        ask: emma
+        by: tom
+        phrases: ["I don't like it very much."]
+      - q: "Do you like cleaning the house?"
+        a: "I hate cleaning the house! I'm not very tidy at home."
+        ask: tom
+        by: emma
+        phrases: ["I hate…!"]
+      - q: "Do you like writing emails?"
+        a: "I don't like writing emails. I prefer sending messages."
+        ask: emma
+        by: tom
+        phrases: ["I don't like…", "I prefer…"]
+      - q: "Do you like talking on the phone?"
+        a: "I love it. I talk to my mum every Sunday, for an hour!"
+        ask: tom
+        by: emma
+        phrases: ["I love it."]
+      - q: "Do you like going to the cinema?"
+        a: "I love going to the cinema, especially to see science fiction films."
+        ask: emma
+        by: tom
+        phrases: ["I love …ing", "especially…"]
+    lines:
+      - {emma: "Exercise 3 is about you. Answer with the phrases from part A. Tom, do you like watching TV?", say: "Exercise three is about you. Answer with the phrases from part eigh. Tom, do you like watching TV?", focus: 0}
+      - {tom: "I don't like watching TV very much. I prefer watching films on my laptop.", reveal: 0, vi: "Không thích xem TV lắm; thích xem phim trên laptop hơn."}
+      - {emma: "Do you like studying English?", focus: 1}
+      - {tom: "I really like studying English. But listening is difficult for me.", reveal: 1, vi: "Rất thích học tiếng Anh, nhưng nghe thì khó."}
+      - {tom: "Emma, do you like driving?", focus: 2}
+      - {emma: "I quite like driving in England. But I never drive in Ho Chi Minh City: the traffic is too busy!", say: "I quite like driving in England. But I never drive in Ho Chee Min City: the traffic is too busy!", reveal: 2, vi: "Khá thích lái xe ở Anh, nhưng không bao giờ lái ở TP. HCM: đường quá đông."}
+      - {emma: "Do you like shopping for clothes?", focus: 3}
+      - {tom: "I don't like it very much. I only buy the things I need.", reveal: 3, vi: "Không thích lắm; chỉ mua thứ cần."}
+      - {tom: "Do you like cleaning the house?", focus: 4}
+      - {emma: "I hate cleaning the house! I'm not very tidy at home.", reveal: 4, vi: "Ghét dọn nhà! Ở nhà không gọn gàng lắm."}
+      - {emma: "Do you like writing emails?", focus: 5}
+      - {tom: "I don't like writing emails. I prefer sending messages.", reveal: 5, vi: "Không thích viết email; thích nhắn tin hơn."}
+      - {tom: "Do you like talking on the phone?", focus: 6}
+      - {emma: "I love it. I talk to my mum every Sunday, for an hour!", reveal: 6, vi: "Rất thích; Chủ nhật nào cũng nói chuyện với mẹ cả tiếng."}
+      - {emma: "Do you like going to the cinema?", focus: 7}
+      - {tom: "I love going to the cinema, especially to see science fiction films.", reveal: 7, vi: "Rất thích đi rạp, nhất là xem phim khoa học viễn tưởng."}
+
+  - kind: figure
+    chapter: "Mirko Zitec"
+    heading: "B · It's my favourite thing: Mirko Zitec"
+    heading_vi: "tr. 127 — hồ sơ trên trang web kết bạn: Mirko nói về những điều anh ấy thích"
+    image: {pdf: course-book, page: 128, clip: [28, 46, 286, 181]}
+    items:
+      - {box: [34, 85, 207, 97]}
+      - {box: [34, 99.5, 207, 126]}
+      - {box: [34, 126.5, 247, 153]}
+      - {box: [34, 153.5, 240, 179.5]}
+    lines:
+      - {emma: "Now page one hundred and twenty-seven. This is Mirko Zitec's page on a website for meeting people. He talks about the things he likes.", focus: 0, vi: "Hồ sơ của Mirko trên trang web kết bạn"}
+      - {tom: "Work: I work for a TV company. It's a wonderful job, I love it.", focus: 1, vi: "wonderful: tuyệt vời"}
+      - {emma: "Study: I'm learning to play the guitar. It's good fun, and my teacher's fantastic.", focus: 2, vi: "good fun: rất vui · fantastic: tuyệt vời"}
+      - {tom: "Sports: my favourite sport is tennis, but I also enjoy playing football.", focus: 3, vi: "favourite: yêu thích nhất · enjoy + V-ing"}
+
+  - kind: figure
+    heading: "B · Mirko Zitec: TV / cinema · Music"
+    heading_vi: "tr. 127 — hồ sơ của Mirko (tiếp)"
+    image: {pdf: course-book, page: 128, clip: [28, 178, 286, 264]}
+    items:
+      - {box: [34, 180.5, 240, 229.5]}
+      - {box: [34, 231, 240, 257]}
+    lines:
+      - {emma: "TV and cinema: I don't watch TV, it's very boring. But I'm interested in old films from the 1960s. I prefer old films to modern ones, in fact.", say: "TV and cinema: I don't watch TV, it's very boring. But I'm interested in old films from the nineteen sixties. I prefer old films to modern ones, in fact.", focus: 0, vi: "boring: chán · be interested in: quan tâm · prefer A to B: thích A hơn B"}
+      - {tom: "Music: I'm very keen on jazz. I go to a club every Friday.", focus: 1, vi: "be keen on: rất thích, mê"}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary (1) · wonderful / fantastic · fun · favourite · enjoy doing something"
+    heading_vi: "tr. 127 — nghĩa của các từ in đậm"
+    image: {pdf: course-book, page: 128, clip: [290, 25, 488, 132]}
+    items:
+      - {box: [293, 46.5, 486, 59.5]}
+      - {box: [293, 59.5, 486, 71.5]}
+      - {box: [293, 71.5, 486, 95]}
+      - {box: [293, 95, 486, 131.5]}
+    lines:
+      - {emma: "Look at the glossary. Wonderful and fantastic mean very good. Ho Chi Minh City has some wonderful food.", say: "Look at the glossary. Wonderful and fantastic mean very good. Ho Chee Min City has some wonderful food.", focus: 0, vi: "wonderful / fantastic: rất tốt, tuyệt vời"}
+      - {tom: "Fun: if something is fun, it makes you happy. Playing basketball with my friends is good fun.", focus: 1, vi: "fun: vui · good fun: rất vui"}
+      - {emma: "Favourite: your favourite thing or person is the one you like most. My favourite colour is green.", focus: 2, vi: "favourite: yêu thích nhất"}
+      - {tom: "Enjoy doing something: you like it a lot, and it makes you happy. I enjoy cooking. The adjective is enjoyable: cooking is enjoyable.", focus: 3, vi: "enjoy + V-ing · enjoyable (tính từ): thú vị"}
+
+  - kind: figure
+    heading: "Glossary (2) · boring · prefer … to … · be keen on something"
+    heading_vi: "tr. 127 — nghĩa của các từ in đậm (tiếp)"
+    image: {pdf: course-book, page: 128, clip: [290, 130.6, 488, 193]}
+    items:
+      - {box: [293, 131.5, 486, 143]}
+      - {box: [293, 143, 486, 167.5]}
+      - {box: [293, 167.5, 486, 191]}
+    lines:
+      - {emma: "Boring: the opposite is interesting. Long meetings are boring.", focus: 0, vi: "boring ≠ interesting"}
+      - {tom: "Prefer one thing to another: you like it more than the other thing. I prefer coffee to tea.", focus: 1, vi: "prefer A to B: thích A hơn B"}
+      - {emma: "And be keen on something: you like it, or you're interested in it. I'm very keen on detective stories.", focus: 2, vi: "be keen on: rất thích"}
+
+  - kind: figure
+    chapter: "Spotlight: interesting / interested"
+    heading: "Spotlight · interesting / interested"
+    heading_vi: "tr. 127 — interesting: tả sự vật · interested: cảm nhận của người"
+    image: {pdf: course-book, page: 128, clip: [290, 195, 488, 262]}
+    items:
+      - {box: [294, 221.5, 486, 245.5]}
+      - {box: [294, 246, 486, 259.5]}
+    lines:
+      - {tom: "Look at the spotlight. I think modern art is interesting means: I'm interested in modern art.", focus: 0, vi: "Tôi thấy nghệ thuật hiện đại thú vị = Tôi quan tâm đến nghệ thuật hiện đại"}
+      - {emma: "Not: I'm interesting in modern art. The thing is interesting, and the person is interested: that's how you feel.", focus: 1, vi: "vật / việc: interesting · người: interested in"}
+      - {tom: "It's the same with boring and bored: the film was boring, so I was bored.", focus: 1, vi: "boring: gây chán · bored: thấy chán"}
+
+  - kind: figure
+    chapter: "Bài 4: ghép ba cột"
+    heading: "Exercise 4 · Write eight more sentences using words from columns 1, 2, and 3"
+    heading_vi: "tr. 127 — ví dụ: It's + a wonderful + city. → It's a wonderful city."
+    image: {pdf: course-book, page: 128, clip: [44, 272, 488, 464]}
+    items:
+      - {box: [73.8, 312.5, 121.4, 330]}
+      - {box: [121.4, 394.6, 205.6, 411.4]}
+      - {box: [205.6, 329.9, 286.8, 346.7]}
+      - {box: [286.8, 312.5, 483.5, 330]}
+    lines:
+      - emma: "Exercise 4. Write eight more sentences, using words from columns one, two and three. Look at the example. Column one: it's."
+        say: "Exercise four. Write eight more sentences, using words from columns one, two and three. Look at the example. Column one: it's."
+        focus: 0
+        vi: "Bài 4: ghép từ ở ba cột thành tám câu."
+      - {tom: "Column two: a wonderful.", focus: 1}
+      - {emma: "Column three: city.", focus: 2}
+      - {tom: "So the sentence is: it's a wonderful city. You use each word or phrase once. Pause the video and write the sentences.", focus: 3, vi: "Mỗi ô dùng một lần — tạm dừng và viết."}
+
+  - kind: blanks
+    chapter: "Bài 4: đáp án"
+    heading: "Exercise 4 · Answers"
+    heading_vi: "Answer key tr. 216 — cột 1 cho sẵn, ghép thêm cột 2 và cột 3"
+    image: {pdf: course-book, page: 128, clip: [48, 293, 290, 462]}
+    items:
+      - {n: 1, q: "I ___", answer: "enjoy watching TV.", box: [50, 329.9, 121.4, 346.7]}
+      - {n: 2, q: "I'm ___", answer: "not interested in politics.", box: [50, 346.7, 121.4, 362.5]}
+      - {n: 3, q: "My ___", answer: "favourite film is 'Tootsie'.", box: [50, 362.5, 121.4, 378.7]}
+      - {n: 4, q: "She ___", answer: "prefers reading to writing.", box: [50, 378.7, 121.4, 394.6]}
+      - {n: 5, q: "He's a ___", answer: "fantastic boss.", box: [50, 394.6, 121.4, 411.4]}
+      - {n: 6, q: "Was ___", answer: "the party good fun?", box: [50, 411.4, 121.4, 427.3]}
+      - {n: 7, q: "It's ___", answer: "a boring programme.", box: [50, 427.3, 121.4, 443.4]}
+      - {n: 8, q: "Are ___", answer: "you keen on tennis?", box: [50, 443.4, 121.4, 460.8]}
+    lines:
+      - {tom: "One. I enjoy watching TV. Two. I'm not interested in politics. Three. My favourite film is Tootsie. Four. She prefers reading to writing.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. He's a fantastic boss. Six. Was the party good fun? Seven. It's a boring programme. Eight. Are you keen on tennis?", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: figure
+    chapter: "Bài 5: khung từ"
+    heading: "Exercise 5 · Complete the questions, using the words in the box"
+    heading_vi: "tr. 127 — interesting · fun · interested · keen · enjoy · favourite · prefer · enjoyable"
+    image: {pdf: course-book, page: 128, clip: [28, 466, 488, 658]}
+    items:
+      - {box: [52, 491, 470, 516]}
+      - {box: [43, 534, 254, 551]}
+      - {box: [43, 551, 308, 657]}
+    lines:
+      - emma: "Exercise 5. Complete the questions, using the words in the box: interesting, fun, interested, keen, enjoy, favourite, prefer, and enjoyable."
+        say: "Exercise five. Complete the questions, using the words in the box: interesting, fun, interested, keen, enjoy, favourite, prefer, and enjoyable."
+        focus: 0
+        vi: "Bài 5: điền từ trong khung vào câu hỏi."
+      - {tom: "The example is: do you think flying is enjoyable?", focus: 1}
+      - {emma: "Pause the video, and complete questions one to seven.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu hỏi"
+    heading: "Exercise 5 · Complete the questions"
+    heading_vi: "Answer key tr. 216"
+    items:
+      - {n: 1, q: "Is learning English good ___?", answer: "fun"}
+      - {n: 2, q: "Do you ___ meat to fish?", answer: "prefer"}
+      - {n: 3, q: "What's your ___ city?", answer: "favourite"}
+      - {n: 4, q: "Are you ___ in sport?", answer: "interested"}
+      - {n: 5, q: "Are you ___ on classical music?", answer: "keen"}
+      - {n: 6, q: "Do you ___ walking in the countryside?", answer: "enjoy"}
+      - {n: 7, q: "Do you think history is ___?", answer: "interesting"}
+    lines:
+      - {tom: "One. Is learning English good fun? Two. Do you prefer meat to fish? Three. What's your favourite city? Four. Are you interested in sport?", reveal: [1, 2, 3, 4], focus: 3, vi: "prefer A to B · interested in"}
+      - {tom: "Five. Are you keen on classical music? Six. Do you enjoy walking in the countryside? Seven. Do you think history is interesting?", reveal: [5, 6, 7], focus: 6, vi: "keen on · enjoy + V-ing · interesting (tả môn học)"}
+
+  - kind: qa
+    chapter: "Nói 2: trả lời câu hỏi bài 5"
+    heading: "Speaking 2 · Exercise 6: about you"
+    heading_vi: "Bài 6 (ABOUT YOU) — trả lời các câu hỏi ở bài 5; tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Is learning English good fun, Tom?"
+        a: "Yes, it's good fun, especially when I watch films in English."
+        ask: emma
+        by: tom
+        phrases: ["especially when…"]
+      - q: "Emma, do you prefer meat to fish?"
+        a: "No, I prefer fish to meat. I grew up by the sea, so I love seafood."
+        ask: tom
+        by: emma
+        phrases: ["I prefer … to …", "so I…"]
+      - q: "What's your favourite city?"
+        a: "Da Lat, my home town. It's cool all year, and the coffee is fantastic!"
+        ask: emma
+        by: tom
+        phrases: ["…, my home town.", "fantastic"]
+      - q: "Are you interested in sport?"
+        a: "Not very. I don't watch sport on TV, but I enjoy swimming."
+        ask: tom
+        by: emma
+        phrases: ["Not very.", "but I enjoy…"]
+      - q: "Are you keen on classical music?"
+        a: "Not really. I prefer pop music, and some Vietnamese bands."
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "I prefer…"]
+      - q: "Do you enjoy walking in the countryside?"
+        a: "Yes, I love it! I go hiking in the hills when I can."
+        ask: tom
+        by: emma
+        phrases: ["Yes, I love it!", "when I can"]
+      - q: "Do you think history is interesting?"
+        a: "Not really. I thought it was boring at school. But I quite like history films!"
+        ask: emma
+        by: tom
+        phrases: ["Not really.", "I thought it was…"]
+    lines:
+      - {emma: "Exercise 6: answer the questions in exercise 5. Tom, is learning English good fun?", say: "Exercise six: answer the questions in exercise five. Tom, is learning English good fun?", focus: 0}
+      - {tom: "Yes, it's good fun, especially when I watch films in English.", reveal: 0, vi: "Có, rất vui, nhất là khi xem phim tiếng Anh."}
+      - {tom: "Emma, do you prefer meat to fish?", focus: 1}
+      - {emma: "No, I prefer fish to meat. I grew up by the sea, so I love seafood.", reveal: 1, vi: "Không, thích cá hơn thịt: lớn lên ở ven biển nên mê hải sản."}
+      - {emma: "What's your favourite city?", focus: 2}
+      - {tom: "Da Lat, my home town. It's cool all year, and the coffee is fantastic!", say: "Dah Lot, my home town. It's cool all year, and the coffee is fantastic!", reveal: 2, vi: "Đà Lạt, quê mình: mát quanh năm, cà phê tuyệt vời."}
+      - {tom: "Are you interested in sport?", focus: 3}
+      - {emma: "Not very. I don't watch sport on TV, but I enjoy swimming.", reveal: 3, vi: "Không lắm: không xem thể thao trên TV, nhưng thích bơi."}
+      - {emma: "Are you keen on classical music?", focus: 4}
+      - {tom: "Not really. I prefer pop music, and some Vietnamese bands.", reveal: 4, vi: "Không hẳn: thích nhạc pop và vài ban nhạc Việt hơn."}
+      - {tom: "Do you enjoy walking in the countryside?", focus: 5}
+      - {emma: "Yes, I love it! I go hiking in the hills when I can.", reveal: 5, vi: "Có, rất thích! Có dịp là đi bộ đường dài trên đồi."}
+      - {emma: "Do you think history is interesting?", focus: 6}
+      - {tom: "Not really. I thought it was boring at school. But I quite like history films!", reveal: 6, vi: "Không hẳn: hồi đi học thấy chán, nhưng khá thích phim lịch sử."}
+
+  - kind: bullets
+    chapter: "Nói về sở thích kiểu IELTS"
+    heading: "Talking about likes and dislikes in IELTS"
+    heading_vi: "Thêm ngoài sách — trả lời Part 1 bằng nhiều cách, luôn kèm lý do"
+    items:
+      - {en: "I'm a big fan of … · I'm really keen on …", vi: "rất thích, mê"}
+      - {en: "I enjoy …ing · I'm interested in …", vi: "thích làm · quan tâm đến"}
+      - {en: "I don't mind …ing.", vi: "không ngại, cũng được"}
+      - {en: "… isn't really my thing. · I can't stand …", vi: "không hợp với tôi · không chịu nổi"}
+      - {en: "… because … · The best thing about it is …", vi: "luôn nói thêm lý do"}
+    lines:
+      - {emma: "In part one of the IELTS speaking test, the examiner often asks: do you like…? Don't just say yes or no. Here are some more useful phrases. I'm a big fan of football. I'm really keen on jazz.", say: "In part one of the eye-elts speaking test, the examiner often asks: do you like…? Don't just say yes or no. Here are some more useful phrases. I'm a big fan of football. I'm really keen on jazz.", focus: 0, vi: "big fan of: rất mê"}
+      - {tom: "I enjoy playing basketball. I'm interested in marketing.", focus: 1}
+      - {emma: "I don't mind cleaning: it's OK, it's not a problem.", focus: 2, vi: "don't mind: không ngại"}
+      - {tom: "Shopping isn't really my thing. And I can't stand waiting in long queues.", focus: 3, vi: "can't stand: không chịu nổi · queue: hàng người xếp hàng"}
+      - {emma: "And always give a reason. I love cooking because it helps me relax. The best thing about it is eating!", focus: 4}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói thích / không thích — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I'm interesting in music.  →  ___", answer: "I'm interested in music."}
+      - {n: 2, q: "I like very much football.  →  ___", answer: "I like football very much."}
+      - {n: 3, q: "I enjoy to play tennis.  →  ___", answer: "I enjoy playing tennis."}
+      - {n: 4, q: "I prefer tea than coffee.  →  ___", answer: "I prefer tea to coffee."}
+      - {n: 5, q: "She is keen in jazz.  →  ___", answer: "She is keen on jazz."}
+      - {n: 6, q: "The film was very bored.  →  ___", answer: "The film was very boring."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I'm interested in music: the person is interested. Two. I like football very much: very much goes at the end.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Enjoy playing, not enjoy to play. Four. Prefer tea to coffee, not than.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. Keen on, not keen in. Six. The film was very boring: the film is boring, and I'm bored.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe something you enjoy doing in your free time"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about cooking. Two years ago, I could only cook noodles and eggs. But now I really enjoy cooking."
+        note: "what it is"
+      - text: "I usually cook in the evening or at the weekend, in the small flat near my university."
+        note: "when and where you do it"
+      - text: "I share the cooking with my two flatmates. I often call my mum and ask for her recipes. Last month, I made her fish soup. It wasn't as good as hers, but my friends loved it!"
+        note: "who you do it with"
+      - text: "I enjoy it because it's relaxing after a busy day, and it's cheaper than eating out. Next, I'd like to learn some Western dishes."
+        note: "why you enjoy it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe something you enjoy doing in your free time. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe something you enjoy doing in your free time. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: việc bạn thích làm lúc rảnh."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about hiking. I love walking in the countryside, especially in the hills."
+        note: "what it is"
+      - text: "I go when I have a free weekend. In England, I walked by the sea near my home town. Here in Vietnam, I sometimes go to the hills near Da Lat."
+        say: "I go when I have a free weekend. In England, I walked by the sea near my home town. Here in Vietnam, I sometimes go to the hills near Dah Lot."
+        note: "when and where you do it"
+      - text: "I sometimes go with friends from my school, but I also enjoy walking alone. It's very quiet."
+        note: "who you do it with"
+      - text: "I enjoy it because it's good exercise, and it helps me relax after a busy week of teaching. And the views are fantastic!"
+        note: "why you enjoy it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe something you enjoy doing in your free time.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: something you enjoy doing in your free time"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What is it?", hint: "I'd like to talk about … · I really enjoy …ing"}
+      - {q: "When and where do you do it?", hint: "I usually … in the evening / at the weekend, at / in …"}
+      - {q: "Who do you do it with?", hint: "I … with my friends / family · I prefer …ing alone"}
+      - {q: "Why do you enjoy it?", hint: "because it's good fun / relaxing · The best thing about it is …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use love, really like, enjoy, and prefer."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz love, really like, enjoy, and prefer."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "What is it?", focus: 0, pause: 0.5}
+      - {emma: "When and where do you do it?", focus: 1, pause: 0.5}
+      - {emma: "Who do you do it with?", focus: 2, pause: 0.5}
+      - {emma: "Why do you enjoy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · hobbies and free time"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why is it important to have a hobby?"
+        a: "Because life isn't only work or study. A hobby helps you relax, and you meet people with the same interests."
+        ask: emma
+        by: tom
+        phrases: ["Because…", "helps you relax"]
+      - q: "Do young people and older people enjoy the same things?"
+        a: "Not always. Young people are often keen on computer games, but older people prefer reading or gardening. My grandmother loves knitting!"
+        ask: tom
+        by: emma
+        phrases: ["Not always.", "… are often keen on…"]
+      - q: "Is it better to do a hobby alone or with other people?"
+        a: "It depends. Basketball is more fun with friends, but I prefer reading alone, because it's quiet."
+        ask: emma
+        by: tom
+        phrases: ["It depends.", "… is more fun with…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Why is it important to have a hobby?", focus: 0}
+      - {tom: "Because life isn't only work or study. A hobby helps you relax, and you meet people with the same interests.", reveal: 0, vi: "Cuộc sống không chỉ có làm và học: sở thích giúp thư giãn, gặp người cùng sở thích."}
+      - {tom: "Do young people and older people enjoy the same things?", focus: 1}
+      - {emma: "Not always. Young people are often keen on computer games, but older people prefer reading or gardening. My grandmother loves knitting!", reveal: 1, vi: "Không hẳn: người trẻ mê trò chơi điện tử, người lớn tuổi thích đọc sách, làm vườn; bà của Emma mê đan len."}
+      - {emma: "Is it better to do a hobby alone, or with other people?", focus: 2}
+      - {tom: "It depends. Basketball is more fun with friends, but I prefer reading alone, because it's quiet.", reveal: 2, vi: "Tùy: bóng rổ thì chơi với bạn vui hơn, đọc sách thì một mình vì yên tĩnh."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 2 và bài 4 không nhìn đáp án"
+    items:
+      - {en: "I love it · I really like it · I like it · I quite like it · I think it's OK", vi: "thích (từ nhiều đến ít)"}
+      - {en: "I don't like it very much · I don't like it · I hate it", vi: "không thích"}
+      - {en: "like / love / hate / enjoy + -ing: I enjoy playing football.", vi: "sau like, love, hate, enjoy: V-ing"}
+      - {en: "wonderful · fantastic · fun · favourite · enjoyable · boring ≠ interesting", vi: "tính từ"}
+      - {en: "prefer A to B · be keen on · be interested in (person) · interesting (thing)", vi: "cụm từ"}
+      - {en: "Next: Unit 49 · Sport", vi: "Tiếp theo: Unit 49 · Thể thao"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "I love it, I really like it, I like it, I quite like it, I think it's OK.", focus: 0}
+      - {tom: "I don't like it very much, I don't like it, I hate it.", focus: 1}
+      - {emma: "After like, love, hate and enjoy, use the -ing form. I enjoy playing football.", say: "After like, love, hate and enjoy, yooz the ing form. I enjoy playing football.", focus: 2}
+      - {tom: "Wonderful, fantastic, fun, favourite, and enjoyable. Boring is the opposite of interesting.", focus: 3}
+      - {emma: "Prefer one thing to another, be keen on something, and be interested in something.", focus: 4}
+      - {tom: "Next time, Unit 49: sport. See you then!", say: "Next time, Unit forty-nine: sport. See you then!", focus: 5}
