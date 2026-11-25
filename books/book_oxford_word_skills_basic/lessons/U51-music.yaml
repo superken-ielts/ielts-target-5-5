@@ -1,0 +1,377 @@
+# Video Oxford Word Skills Basic · Unit 51 — I can talk about music (sách in tr. 132–133, Answer key tr. 217).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời
+# `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 217 (bài 5 câu 9 có hai chỗ trống tách 9a / 9b). Bài 3 (ABOUT YOU):
+# Tom nói về Coldplay (ví dụ trong Glossary của sách), Emma về The Beatles — dữ kiện thật, như câu trả lời mẫu của Answer key (cảnh
+# Nói 1). Bài 6 (Test yourself): hai hàng ảnh cắt bỏ chú thích, đáp án hiện thành nhãn khi Tom trả lời.
+# Thêm ngoài sách: các loại nhạc và câu nói về âm nhạc; Nghe và viết; Nói 2 (Part 1 "Music").
+# Hình trong sách: bài đọc Arctic Monkeys (hai cảnh, khung theo câu) và ảnh ban nhạc, Glossary (hai cảnh), sáu ảnh nhạc cổ điển kèm chú
+# thích (hai cảnh), Spotlight by, hai hàng ảnh tự kiểm tra — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom thích nhạc pop và vài ban nhạc indie Việt, nghe nhạc trên xe buýt,
+# nghe trực tuyến (không tải nhạc nữa), không mê nhạc cổ điển, mê karaoke dù hát không hay; Emma nghe Mozart khi chấm bài, muốn học
+# guitar, anh Jack chơi guitar và là kỹ sư âm thanh ở một nhà hát lớn tại London. Mới: Tom thích Coldplay (chị Hoa cũng thích), hay
+# nghe Fix You trên xe buýt; Emma thích The Beatles vì bố mở album của họ mỗi Chủ nhật.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U51-music.yaml
+id: U51-music
+activity: U51-words
+title: "Unit 51 · Music"
+subtitle: "I can talk about music"
+title_vi: "Âm nhạc: band, lead singer, drummer, single, album, singles chart, download; orchestra, conductor, pianist, violinist, cellist, composer, concert, perform"
+tag: "HOBBIES AND INTERESTS · UNIT 51"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 51: music. Today: words for pop and rock bands, and words for classical music."
+        say: "Welcome to Unit fifty-one: music. Today: words for pop and rock bands, and words for classical music."
+        vi: "Unit 51: âm nhạc — từ về ban nhạc pop, rock và nhạc cổ điển."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Pop and rock"
+    heading: "A · Pop and rock: Arctic Monkeys"
+    heading_vi: "tr. 132 — bài đọc về một ban nhạc rock Anh"
+    image: {pdf: course-book, page: 133, clip: [48, 95, 258, 196]}
+    items:
+      - {box: [50, 97, 255.5, 123]}
+      - {box: [50, 110, 255.5, 147]}
+      - {box: [50, 146, 255.5, 195]}
+    lines:
+      - {emma: "Look at page one hundred and thirty-two. Arctic Monkeys are a four-piece band from Sheffield, England.", focus: 0, vi: "band: ban nhạc · four-piece: bốn người"}
+      - {tom: "They first became well known in 2004, when people were able to download their music from the internet.", say: "They first became well known in two thousand and four, when people were able to download their music from the internet.", focus: 1, vi: "well known: nổi tiếng · be able to: có thể · download: tải về"}
+      - {emma: "Their first two singles went to number one in the UK singles chart in 2005, and their first album sold over three hundred and fifty thousand copies in its first week.", say: "Their first two singles went to number one in the you kay singles chart in two thousand and five, and their first album sold over three hundred and fifty thousand copies in its first week.", focus: 2, vi: "single: đĩa đơn · singles chart: bảng xếp hạng đĩa đơn · album: album"}
+
+  - kind: figure
+    heading: "A · Pop and rock: the band"
+    heading_vi: "tr. 132 — ai làm gì trong ban nhạc; ảnh: guitar, drums"
+    image: {pdf: course-book, page: 133, clip: [48, 92, 490, 252]}
+    items:
+      - {box: [50, 198, 255.5, 244.5]}
+      - {box: [264, 94, 488, 250]}
+    lines:
+      - {tom: "The group are: Alex Turner, who is the lead singer and plays the guitar, Jamie Cook and Nick O'Malley, who both play the guitar, and Matthew Helder, who is the drummer and also sings.", focus: 0, vi: "group = band · lead singer: ca sĩ chính · drummer: người chơi trống"}
+      - {emma: "Look at the photo: you can see the guitars, and the drums at the back.", focus: 1, vi: "guitar · drums: trống"}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary (1) · band · well known · be able to · download music"
+    heading_vi: "tr. 132 — nghĩa của các từ in đậm"
+    image: {pdf: course-book, page: 133, clip: [338, 256, 490, 386]}
+    items:
+      - {box: [343, 277.5, 487, 302.5]}
+      - {box: [343, 302.5, 487, 313.5]}
+      - {box: [343, 313.5, 487, 349]}
+      - {box: [343, 349.5, 487, 386]}
+    lines:
+      - {emma: "Look at the glossary. A band: for example Coldplay, Franz Ferdinand or U2. We also say a group.", say: "Look at the glossary. A band: for example Coldplay, Franz Ferdinand or you two. We also say a group.", focus: 0, vi: "band = group: ban nhạc"}
+      - {tom: "Well known means famous.", focus: 1, vi: "well known = famous: nổi tiếng"}
+      - {emma: "Be able to: if you are able to do something, you can do it. The opposite is unable.", focus: 2, vi: "be able to: có thể · unable: không thể"}
+      - {tom: "Download music: copy music from the internet onto a computer, an MP3 player, or a phone.", say: "Download music: copy music from the internet onto a computer, an em pee three player, or a phone.", focus: 3, vi: "download: tải về"}
+
+  - kind: figure
+    heading: "Glossary (2) · single · number 1 · the singles chart · album · lead singer"
+    heading_vi: "tr. 132 — nghĩa của các từ in đậm (tiếp)"
+    image: {pdf: course-book, page: 133, clip: [338, 386, 490, 507]}
+    items:
+      - {box: [343, 386.2, 487, 398]}
+      - {box: [343, 398, 487, 421]}
+      - {box: [343, 421, 487, 457]}
+      - {box: [343, 457, 487, 482]}
+      - {box: [343, 482, 487, 506]}
+    lines:
+      - {emma: "A single: one song on a CD, or online.", focus: 0, vi: "single: đĩa đơn, một bài hát"}
+      - {tom: "Number one: the single that sells the most in one week.", focus: 1, vi: "number 1: đứng đầu bảng xếp hạng"}
+      - {emma: "The singles chart: the list of pop music singles that sell the most in one week.", focus: 2, vi: "the singles chart: bảng xếp hạng đĩa đơn"}
+      - {tom: "An album: a number of songs, usually about ten.", focus: 3, vi: "album: tập nhiều bài hát"}
+      - {emma: "And the lead singer: the most important singer.", focus: 4, vi: "lead singer: ca sĩ chính"}
+
+  - kind: blanks
+    chapter: "Bài 1: bạn nhớ được gì?"
+    heading: "Exercise 1 · What can you remember? Circle the correct answer"
+    heading_vi: "Ví dụ: There are four / five people in the band. → four (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "They first became well known in 2004 / 2005.  →  ___", answer: "2004"}
+      - {n: 2, q: "People were able / unable to download music in 2004.  →  ___", answer: "able"}
+      - {n: 3, q: "Their first two / three singles went to number 1.  →  ___", answer: "two"}
+      - {n: 4, q: "Their first single / album sold over 350,000 copies.  →  ___", answer: "album"}
+      - {n: 5, q: "Alex Turner / Jamie Cook is the lead singer.  →  ___", answer: "Alex Turner"}
+      - {n: 6, q: "Matthew Helder plays the guitar / drums.  →  ___", answer: "drums"}
+    lines:
+      - emma: "Exercise 1. What can you remember? Circle the correct answer. The example is: there are four people in the band. Pause the video and try."
+        say: "Exercise one. What can you remember? Circle the correct answer. The example is: there are four people in the band. Pause the video and try."
+        vi: "Bài 1: nhớ lại bài đọc, chọn đáp án đúng."
+      - {tom: "One. 2004. Two. Able. Three. Two singles went to number one. Four. Their first album. Five. Alex Turner. Six. Matthew Helder plays the drums.", say: "One. Two thousand and four. Two. Able. Three. Two singles went to number one. Four. Their first album. Five. Alex Turner. Six. Matthew Helder plays the drums.", reveal: [1, 2, 3, 4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "Ví dụ: Paul McCartney plays the guitar. (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "Another word for a band is a ___.", answer: "group"}
+      - {n: 2, q: "The most important singer is the ___ singer.", answer: "lead"}
+      - {n: 3, q: "Someone who plays the drums is the ___.", answer: "drummer"}
+      - {n: 4, q: "A CD with one song on it is a ___.", answer: "single"}
+      - {n: 5, q: "A CD with about ten songs on it is an ___.", answer: "album"}
+      - {n: 6, q: "The singles ___ is the list of singles that sell most in a week.", answer: "chart"}
+      - {n: 7, q: "The Beatles first became well ___ in the 1960s.", answer: "known"}
+      - {n: 8, q: "You can ___ music from the internet.", answer: "download"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. The example is: Paul McCartney plays the guitar. Pause the video and try."
+        say: "Exercise two. Complete the sentences. The example is: Paul McCartney plays the guitar. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu."
+      - {tom: "One. A group. Two. The lead singer. Three. The drummer. Four. A single.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. An album. Six. The singles chart. Seven. The Beatles first became well known in the 1960s. Eight. You can download music.", say: "Five. An album. Six. The singles chart. Seven. The Beatles first became well known in the nineteen sixties. Eight. You can download music.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: ban nhạc bạn thích"
+    heading: "Speaking 1 · Exercise 3: about you"
+    heading_vi: "Bài 3 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời về ban nhạc bạn thích"
+    items:
+      - q: "Who's your favourite group, Tom?"
+        a: "Coldplay. My sister Hoa loves them too."
+        ask: emma
+        by: tom
+        phrases: ["…loves them too"]
+      - q: "Who's in the band, and what instruments do they play?"
+        a: "Chris Martin is the lead singer, and he plays the piano. Jonny Buckland plays the guitar, Guy Berryman plays the bass guitar, and Will Champion is the drummer."
+        ask: emma
+        by: tom
+        phrases: ["… is the lead singer", "… plays the …", "… is the drummer"]
+      - q: "When did they first become well known?"
+        a: "In 2000, with a song called Yellow."
+        ask: emma
+        by: tom
+        phrases: ["In …, with a song called…"]
+      - q: "What's the name of one of their singles, and one of their albums?"
+        a: "Yellow was a single, and their first album was Parachutes."
+        ask: emma
+        by: tom
+        phrases: ["… was a single", "their first album was…"]
+      - q: "What's your favourite song by this band?"
+        a: "Fix You. I listen to it on the bus."
+        ask: emma
+        by: tom
+        phrases: ["I listen to it…"]
+      - q: "And your favourite group, Emma?"
+        a: "The Beatles. My dad played their albums every Sunday, so I know all their songs!"
+        ask: tom
+        by: emma
+        phrases: ["… every Sunday", "so I know…"]
+    lines:
+      - {emma: "Exercise 3 is about you. Think of your favourite band. Tom, who's your favourite group?", say: "Exercise three is about you. Think of your favourite band. Tom, who's your favourite group?", focus: 0}
+      - {tom: "Coldplay. My sister Hoa loves them too.", say: "Coldplay. My sister Whah loves them too.", reveal: 0, vi: "Coldplay; chị Hoa cũng thích."}
+      - {emma: "Who's in the band, and what instruments do they play?", focus: 1}
+      - {tom: "Chris Martin is the lead singer, and he plays the piano. Jonny Buckland plays the guitar, Guy Berryman plays the bass guitar, and Will Champion is the drummer.", reveal: 1, vi: "Chris Martin hát chính, chơi piano; Jonny Buckland guitar; Guy Berryman guitar bass; Will Champion trống."}
+      - {emma: "When did they first become well known?", focus: 2}
+      - {tom: "In 2000, with a song called Yellow.", say: "In two thousand, with a song called Yellow.", reveal: 2, vi: "Năm 2000, với bài Yellow."}
+      - {emma: "What's the name of one of their singles, and one of their albums?", focus: 3}
+      - {tom: "Yellow was a single, and their first album was Parachutes.", reveal: 3, vi: "Đĩa đơn Yellow; album đầu tay Parachutes."}
+      - {emma: "What's your favourite song by this band?", focus: 4}
+      - {tom: "Fix You. I listen to it on the bus.", reveal: 4, vi: "Fix You — hay nghe trên xe buýt."}
+      - {tom: "And your favourite group, Emma?", focus: 5}
+      - {emma: "The Beatles. My dad played their albums every Sunday, so I know all their songs!", reveal: 5, vi: "The Beatles: bố mở album của họ mỗi Chủ nhật nên Emma thuộc hết."}
+
+  - kind: figure
+    chapter: "Classical music"
+    heading: "B · Classical music (1): concert · conductor · violinist"
+    heading_vi: "tr. 133 — ảnh và chú thích"
+    image: {pdf: course-book, page: 134, clip: [27, 52, 486, 221]}
+    items:
+      - {box: [29, 54, 251, 219]}
+      - {box: [257, 54, 367, 219]}
+      - {box: [372, 54, 484, 220]}
+    lines:
+      - {emma: "Now page one hundred and thirty-three: classical music. This is a concert of classical music.", focus: 0, vi: "concert: buổi hòa nhạc"}
+      - {tom: "Sir Simon Rattle, conductor of the Berlin Philharmonic Orchestra.", focus: 1, vi: "conductor: nhạc trưởng · orchestra: dàn nhạc"}
+      - {emma: "Vanessa Mae, violinist, playing a violin concerto by Mozart.", say: "Vanessa May, violinist, playing a violin concerto by Mozart.", focus: 2, vi: "violinist: nghệ sĩ vĩ cầm · violin: vĩ cầm"}
+
+  - kind: figure
+    heading: "B · Classical music (2): pianist · opera singer · cellist"
+    heading_vi: "tr. 133 — ảnh và chú thích"
+    image: {pdf: course-book, page: 134, clip: [27, 224, 371, 385]}
+    items:
+      - {box: [29, 225, 148, 371]}
+      - {box: [153, 225, 250, 370]}
+      - {box: [256, 225, 369.5, 383]}
+    lines:
+      - {tom: "Pianist Sviatoslav Richter, playing one of Beethoven's piano sonatas.", say: "Pianist Svee-ah-toh-slav Richter, playing one of Beethoven's piano sonatas.", focus: 0, vi: "pianist: nghệ sĩ dương cầm · piano: dương cầm"}
+      - {emma: "Opera singer Cecilia Bartoli, performing in Cosi Fan Tutte.", say: "Opera singer Cheh-cheel-ya Bartoli, performing in Ko-zee fan Too-tay.", focus: 1, vi: "opera singer: ca sĩ opera · perform: biểu diễn"}
+      - {tom: "And cellist Yo Yo Ma, playing the cello concerto by the English composer, Edward Elgar.", focus: 2, vi: "cellist: nghệ sĩ cello · composer: nhà soạn nhạc"}
+
+  - kind: figure
+    chapter: "Spotlight: by"
+    heading: "Spotlight · by"
+    heading_vi: "tr. 133 — a book by, a song by, a symphony by, a painting by, a film by"
+    image: {pdf: course-book, page: 134, clip: [360, 224, 486, 331]}
+    items:
+      - {box: [362, 244, 484, 328]}
+    lines:
+      - {emma: "Look at the spotlight. We say a book by Tolstoy, a song by Robbie Williams, a symphony by Mozart, a painting by Picasso, and a film by Martin Scorsese.", focus: 0, vi: "by: của (tác giả, người sáng tác)"}
+      - {tom: "So: Fix You is a song by Coldplay.", focus: 0}
+
+  - kind: blanks
+    chapter: "Bài 4: sửa chính tả"
+    heading: "Exercise 4 · Correct the spelling mistakes"
+    heading_vi: "Ví dụ: violinista → violinist (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "conducter  →  ___", answer: "conductor"}
+      - {n: 2, q: "orchestre  →  ___", answer: "orchestra"}
+      - {n: 3, q: "clasical  →  ___", answer: "classical"}
+      - {n: 4, q: "conciert  →  ___", answer: "concert"}
+      - {n: 5, q: "celo  →  ___", answer: "cello"}
+      - {n: 6, q: "composor  →  ___", answer: "composer"}
+      - {n: 7, q: "performe  →  ___", answer: "perform"}
+      - {n: 8, q: "pianiste  →  ___", answer: "pianist"}
+    lines:
+      - emma: "Exercise 4. Correct the spelling mistakes. The example is: violinist, with no A at the end. Pause the video and try."
+        say: "Exercise four. Correct the spelling mistakes. The example is: violinist, with no eigh at the end. Pause the video and try."
+        vi: "Bài 4: sửa lỗi chính tả."
+      - {tom: "One. Conductor: O, R. Two. Orchestra: A at the end. Three. Classical: double S. Four. Concert: no I.", say: "One. Conductor: oh, ar. Two. Orchestra: eigh at the end. Three. Classical: double ess. Four. Concert: no eye.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Cello: double L. Six. Composer: E, R. Seven. Perform: no E. Eight. Pianist: no E.", say: "Five. Cello: double el. Six. Composer: ee, ar. Seven. Perform: no ee. Eight. Pianist: no ee.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Ví dụ: Music by Bach, Brahms or Mozart is classical music. — câu 9 có hai chỗ trống tách 9a / 9b (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "A large group of people who play classical music together is called an ___.", answer: "orchestra"}
+      - {n: 2, q: "The person who stands in front of them is the ___.", answer: "conductor"}
+      - {n: 3, q: "A person who plays the piano is a ___.", answer: "pianist"}
+      - {n: 4, q: "A person who plays the violin is a ___.", answer: "violinist"}
+      - {n: 5, q: "A person who plays the cello is a ___.", answer: "cellist"}
+      - {n: 6, q: "A person who sings opera is an ___.", answer: "opera singer"}
+      - {n: 7, q: "A person who writes music is a ___.", answer: "composer"}
+      - {n: 8, q: "'Carmen' is an opera ___ Bizet.", answer: "by"}
+      - {n: "9a", q: "Last night we went to a classical music ___. Placido Domingo was …", answer: "concert"}
+      - {n: "9b", q: "… Placido Domingo was ___ with the London Symphony Orchestra.", answer: "performing / singing"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. The example is: music by Bach, Brahms or Mozart is classical music. Pause the video and try."
+        say: "Exercise five. Complete the sentences. The example is: music by Bahk, Brahms or Mozart is classical music. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. An orchestra. Two. The conductor. Three. A pianist. Four. A violinist. Five. A cellist.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. An opera singer. Seven. A composer. Eight. An opera by Bizet. Nine. A classical music concert. Placido Domingo was performing, or singing.", say: "Six. An opera singer. Seven. A composer. Eight. An opera by Bee-zay. Nine. A classical music concert. Plah-thee-doh Domingo was performing, or singing.", reveal: [6, 7, 8, "9a", "9b"], focus: 9}
+
+  - kind: figure
+    chapter: "Bài 6: tự kiểm tra"
+    heading: "Exercise 6 · Cover the texts. What can you see in each picture? (1)"
+    heading_vi: "Che chú thích, nhìn ảnh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 134, clip: [27, 54, 486, 182]}
+    items:
+      - {box: [30, 56, 250, 181.5]}
+      - {box: [30, 56, 250, 181.5], label: "a concert of classical music"}
+      - {box: [258, 56.8, 366, 181.5]}
+      - {box: [258, 56.8, 366, 181.5], label: "a conductor"}
+      - {box: [373, 57.2, 482, 181.5]}
+      - {box: [373, 57.2, 482, 181.5], label: "a violinist"}
+    lines:
+      - emma: "Exercise 6 is a test. Cover the texts, and look at the pictures. What can you see in each one? Pause the video after each question. What's this?"
+        say: "Exercise six is a test. Cover the texts, and look at the pictures. What can you see in each one? Pause the video after each question. What's this?"
+        focus: 0
+        vi: "Bài 6: che chú thích, nhìn ảnh, nói tên."
+      - {tom: "A concert of classical music, with an orchestra.", focus: 1}
+      - {emma: "And who's this?", focus: 2}
+      - {tom: "A conductor.", focus: 3}
+      - {emma: "And this?", focus: 4}
+      - {tom: "A violinist, playing the violin.", focus: 5}
+
+  - kind: figure
+    heading: "Exercise 6 · What can you see? (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 134, clip: [27, 225, 356, 330]}
+    items:
+      - {box: [30, 226.7, 146, 328.5]}
+      - {box: [30, 226.7, 146, 328.5], label: "a pianist"}
+      - {box: [154, 227.4, 249, 328.5]}
+      - {box: [154, 227.4, 249, 328.5], label: "an opera singer"}
+      - {box: [258, 227.4, 353, 328.5]}
+      - {box: [258, 227.4, 353, 328.5], label: "a cellist"}
+    lines:
+      - {emma: "Who's this?", focus: 0}
+      - {tom: "A pianist, playing the piano.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "An opera singer.", focus: 3}
+      - {emma: "And the last one?", focus: 4}
+      - {tom: "A cellist, playing the cello.", focus: 5}
+
+  - kind: bullets
+    chapter: "Thêm: các loại nhạc"
+    heading: "Kinds of music"
+    heading_vi: "Thêm ngoài sách — nói về gu âm nhạc (IELTS Part 1 \"Music\")"
+    items:
+      - {en: "pop · rock · jazz · classical · hip hop · K-pop · folk music", vi: "các loại nhạc · folk music: nhạc dân gian"}
+      - {en: "I'm a big fan of … · I listen to … on the bus / when I study", vi: "nói về gu nhạc"}
+      - {en: "stream music · a playlist · headphones · a live concert · a music festival", vi: "nghe trực tuyến · danh sách nhạc · tai nghe · nhạc sống · lễ hội âm nhạc"}
+      - {en: "a catchy song · relaxing music · the lyrics", vi: "bài hát dễ nhớ · nhạc thư giãn · lời bài hát"}
+    lines:
+      - {emma: "Here are some more words. Kinds of music: pop, rock, jazz, classical, hip hop, K-pop, and folk music.", focus: 0}
+      - {tom: "I'm a big fan of pop music. I listen to it on the bus.", focus: 1}
+      - {emma: "I don't download music now: I stream it. I make a playlist, and I use headphones. And it's fantastic to see a live concert, or go to a music festival.", focus: 2, vi: "stream: nghe trực tuyến"}
+      - {tom: "A catchy song is easy to remember. And the lyrics are the words of a song.", focus: 3, vi: "catchy: dễ nhớ · lyrics: lời bài hát"}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · music"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "Chris Martin is the lead ___ of Coldplay.", answer: "singer"}
+      - {n: 2, q: "Their first ___ was called Parachutes.", answer: "album"}
+      - {n: 3, q: "The ___ plays the drums.", answer: "drummer"}
+      - {n: 4, q: "We went to a classical music ___.", answer: "concert"}
+      - {n: 5, q: "The ___ stands in front of the orchestra.", answer: "conductor"}
+      - {n: 6, q: "Mozart was a famous ___.", answer: "composer"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. Chris Martin is the lead singer of Coldplay.", focus: 0}
+      - {emma: "Number two. Their first album was called Parachutes.", focus: 1}
+      - {emma: "Number three. The drummer plays the drums.", focus: 2}
+      - {emma: "Number four. We went to a classical music concert.", focus: 3}
+      - {emma: "Number five. The conductor stands in front of the orchestra.", focus: 4}
+      - {emma: "Number six. Mozart was a famous composer.", focus: 5}
+      - {tom: "Singer: S, I, N, G, E, R. Album: A, L, B, U, M. Drummer: double M.", say: "Singer: ess, eye, en, gee, ee, ar. Album: eigh, el, bee, yoo, em. Drummer: double em.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Concert: C, O, N, C, E, R, T. Conductor: O, R at the end. Composer: E, R at the end.", say: "Concert: see, oh, en, see, ee, ar, tee. Conductor: oh, ar at the end. Composer: ee, ar at the end.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Music"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "What kind of music do you like? Why?", hint: "I'm a big fan of … because …"}
+      - {q: "When do you usually listen to music?", hint: "I listen to music on the bus / when I study / …"}
+      - {q: "Can you play a musical instrument?", hint: "Yes, I play the … · No, but I'd like to learn the …"}
+      - {q: "Have you ever been to a concert?", hint: "Yes, I went to … · No, but I'd love to see …"}
+      - {q: "Is music important in your country?", hint: "Yes, people … · Karaoke is very popular …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about music. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about music. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về âm nhạc."
+      - {emma: "What kind of music do you like? Why?", focus: 0, pause: 0.5}
+      - {emma: "When do you usually listen to music?", focus: 1, pause: 0.5}
+      - {emma: "Can you play a musical instrument?", focus: 2, pause: 0.5}
+      - {emma: "Have you ever been to a concert?", focus: 3, pause: 0.5}
+      - {emma: "Is music important in your country?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 6: che chú thích tr. 133, nhìn ảnh, nói tên"
+    items:
+      - {en: "a band (a group) · the lead singer · the drummer · guitar · drums", vi: "ban nhạc"}
+      - {en: "a single · an album · number 1 in the singles chart · well known · download music", vi: "đĩa nhạc, bảng xếp hạng"}
+      - {en: "an orchestra · a conductor · a concert · perform · a composer · classical music", vi: "nhạc cổ điển"}
+      - {en: "a pianist · a violinist · a cellist · an opera singer · a song by …", vi: "nghệ sĩ: -ist · by"}
+      - {en: "Next: Unit 52 · Films", vi: "Tiếp theo: Unit 52 · Phim ảnh"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A band, or a group: the lead singer, the drummer, the guitar and the drums.", focus: 0}
+      - {tom: "A single, an album, number one in the singles chart, well known, and download music.", focus: 1}
+      - {emma: "An orchestra, a conductor, a concert, perform, a composer, and classical music.", focus: 2}
+      - {tom: "A pianist, a violinist, a cellist, an opera singer, and a song by Coldplay.", focus: 3}
+      - {emma: "Next time, Unit 52: films. See you then!", say: "Next time, Unit fifty-two: films. See you then!", focus: 4}

@@ -1,0 +1,303 @@
+# Video nghe – viết (dictation) Unit 51 · Music — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U51-music-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U51 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 51 có 31 mục: cặp nhạc cụ – người chơi ghép một dòng (piano, pianist; violin, violinist; cello,
+# cellist; drums, drummer); band, group và well known, famous ghép một dòng; singles chart phủ chart; phần 1 thêm opera, symphony.
+id: U51-music-dictation
+activity: U51-words
+title: "Unit 51 · Music"
+subtitle: "Dictation · listen and write: talking about music"
+title_vi: "Nghe – viết 10 phút: âm nhạc — từ trong sách, từ thêm, câu giao tiếp"
+tag: "HOBBIES AND INTERESTS · UNIT 51"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 51: Music. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit fifty-one: Music. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 51: âm nhạc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 25 words from the book. You hear each word twice, and then an example sentence twice. Then 18 more useful words, and 33 useful sentences for conversation.", "say": "There are three parts. First, twenty-five words from the book. You hear each word twice, and then an example sentence twice. Then eighteen more useful words, and thirty-three useful sentences for conversation.", "vi": "Ba phần: 25 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 18 từ thêm, 33 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "band, group", "vi": "ban nhạc", "ex": "Arctic Monkeys are a four-piece band.", "w": ["band", "group"]}
+      - {"n": 2, "answer": "lead singer", "vi": "ca sĩ chính", "ex": "Alex Turner is the lead singer.", "w": ["lead singer"]}
+      - {"n": 3, "answer": "singer", "vi": "ca sĩ", "ex": "She's a famous singer.", "w": ["singer"]}
+      - {"n": 4, "answer": "guitar", "vi": "đàn guitar", "ex": "He plays the guitar.", "w": ["guitar"]}
+      - {"n": 5, "answer": "drums, drummer", "vi": "trống, người chơi trống", "ex": "Matthew Helder is the drummer.", "w": ["drums", "drummer"]}
+      - {"n": 6, "answer": "well known, famous", "vi": "nổi tiếng", "ex": "They first became well known in 2004.", "w": ["well known", "famous"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. band, group. band, group. Arctic Monkeys are a four-piece band. Arctic Monkeys are a four-piece band.", "focus": 0}
+      - {"emma": "Two. lead singer. lead singer. Alex Turner is the lead singer. Alex Turner is the lead singer.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. singer. singer. She's a famous singer. She's a famous singer.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. guitar. guitar. He plays the guitar. He plays the guitar.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. drums, drummer. drums, drummer. Matthew Helder is the drummer. Matthew Helder is the drummer.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. well known, famous. well known, famous. They first became well known in 2004. They first became well known in 2004.", "say": "Six. well known, famous. well known, famous. They first became well known in two thousand and four. They first became well known in two thousand and four.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "able, unable", "vi": "có thể, không thể", "ex": "People were able to download their music.", "w": ["able", "unable"]}
+      - {"n": 8, "answer": "download", "vi": "tải về", "ex": "You can download music from the internet.", "w": ["download"]}
+      - {"n": 9, "answer": "single", "vi": "đĩa đơn", "ex": "Their first single was a big hit.", "w": ["single"]}
+      - {"n": 10, "answer": "number 1", "vi": "hạng nhất", "ex": "The song was number 1 for three weeks.", "w": ["number 1"]}
+      - {"n": 11, "answer": "singles chart", "vi": "bảng xếp hạng đĩa đơn", "ex": "It went to the top of the singles chart.", "w": ["singles chart", "chart"]}
+      - {"n": 12, "answer": "album", "vi": "album", "ex": "Their first album sold over 350,000 copies.", "w": ["album"]}
+    lines:
+      - {"emma": "Seven. able, unable. able, unable. People were able to download their music. People were able to download their music.", "focus": 0}
+      - {"emma": "Eight. download. download. You can download music from the internet. You can download music from the internet.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. single. single. Their first single was a big hit. Their first single was a big hit.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. number 1. number 1. The song was number 1 for three weeks. The song was number 1 for three weeks.", "say": "Ten. number one. number one. The song was number one for three weeks. The song was number one for three weeks.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. singles chart. singles chart. It went to the top of the singles chart. It went to the top of the singles chart.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. album. album. Their first album sold over 350,000 copies. Their first album sold over 350,000 copies.", "say": "Twelve. album. album. Their first album sold over three hundred and fifty thousand copies. Their first album sold over three hundred and fifty thousand copies.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "by", "vi": "của (tác giả)", "ex": "It's a song by Robbie Williams.", "w": ["by"]}
+      - {"n": 14, "answer": "classical", "vi": "cổ điển", "ex": "I listen to classical music when I work.", "w": ["classical"]}
+      - {"n": 15, "answer": "concert", "vi": "buổi hòa nhạc", "ex": "We went to a concert last night.", "w": ["concert"]}
+      - {"n": 16, "answer": "orchestra", "vi": "dàn nhạc", "ex": "She plays in an orchestra.", "w": ["orchestra"]}
+      - {"n": 17, "answer": "conductor", "vi": "nhạc trưởng", "ex": "The conductor stands in front of the orchestra.", "w": ["conductor"]}
+      - {"n": 18, "answer": "composer", "vi": "nhà soạn nhạc", "ex": "Mozart was a famous composer.", "w": ["composer"]}
+    lines:
+      - {"emma": "Thirteen. by. by. It's a song by Robbie Williams. It's a song by Robbie Williams.", "focus": 0}
+      - {"emma": "Fourteen. classical. classical. I listen to classical music when I work. I listen to classical music when I work.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. concert. concert. We went to a concert last night. We went to a concert last night.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. orchestra. orchestra. She plays in an orchestra. She plays in an orchestra.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. conductor. conductor. The conductor stands in front of the orchestra. The conductor stands in front of the orchestra.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. composer. composer. Mozart was a famous composer. Mozart was a famous composer.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "perform", "vi": "biểu diễn", "ex": "She's performing in an opera tonight.", "w": ["perform"]}
+      - {"n": 20, "answer": "opera singer", "vi": "ca sĩ opera", "ex": "Cecilia Bartoli is an opera singer.", "w": ["opera singer"]}
+      - {"n": 21, "answer": "opera", "vi": "nhạc kịch opera", "ex": "'Carmen' is an opera by Bizet."}
+      - {"n": 22, "answer": "piano, pianist", "vi": "đàn piano, nghệ sĩ piano", "ex": "A pianist plays the piano.", "w": ["piano", "pianist"]}
+    lines:
+      - {"emma": "Nineteen. perform. perform. She's performing in an opera tonight. She's performing in an opera tonight.", "focus": 0}
+      - {"emma": "Twenty. opera singer. opera singer. Cecilia Bartoli is an opera singer. Cecilia Bartoli is an opera singer.", "say": "Twenty. opera singer. opera singer. Cheh-cheel-ya Bartoli is an opera singer. Cheh-cheel-ya Bartoli is an opera singer.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. opera. opera. 'Carmen' is an opera by Bizet. 'Carmen' is an opera by Bizet.", "say": "Twenty-one. opera. opera. Carmen is an opera by Bee-zay. Carmen is an opera by Bee-zay.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. piano, pianist. piano, pianist. A pianist plays the piano. A pianist plays the piano.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–25)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "violin, violinist", "vi": "vĩ cầm, nghệ sĩ vĩ cầm", "ex": "A violinist plays the violin.", "w": ["violin", "violinist"]}
+      - {"n": 24, "answer": "cello, cellist", "vi": "đàn cello, nghệ sĩ cello", "ex": "Yo Yo Ma is a famous cellist.", "w": ["cello", "cellist"]}
+      - {"n": 25, "answer": "symphony", "vi": "bản giao hưởng", "ex": "We listened to a symphony by Mozart."}
+    lines:
+      - {"emma": "Twenty-three. violin, violinist. violin, violinist. A violinist plays the violin. A violinist plays the violin.", "focus": 0}
+      - {"emma": "Twenty-four. cello, cellist. cello, cellist. Yo Yo Ma is a famous cellist. Yo Yo Ma is a famous cellist.", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. symphony. symphony. We listened to a symphony by Mozart. We listened to a symphony by Mozart.", "focus": 2, "reveal": [24]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [25]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (26–31)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 26, "answer": "pop music", "vi": "nhạc pop", "ex": "I'm a big fan of pop music."}
+      - {"n": 27, "answer": "rock", "vi": "nhạc rock", "ex": "My brother loves rock music."}
+      - {"n": 28, "answer": "jazz", "vi": "nhạc jazz", "ex": "There's a jazz club near my flat."}
+      - {"n": 29, "answer": "lyrics", "vi": "lời bài hát", "ex": "I don't understand all the lyrics."}
+      - {"n": 30, "answer": "chorus", "vi": "điệp khúc", "ex": "Everyone sang the chorus."}
+      - {"n": 31, "answer": "tune", "vi": "giai điệu", "ex": "It's a lovely tune."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-six. pop music. pop music. I'm a big fan of pop music. I'm a big fan of pop music.", "focus": 0}
+      - {"tom": "Twenty-seven. rock. rock. My brother loves rock music. My brother loves rock music.", "focus": 1, "reveal": [26]}
+      - {"tom": "Twenty-eight. jazz. jazz. There's a jazz club near my flat. There's a jazz club near my flat.", "focus": 2, "reveal": [27]}
+      - {"tom": "Twenty-nine. lyrics. lyrics. I don't understand all the lyrics. I don't understand all the lyrics.", "focus": 3, "reveal": [28]}
+      - {"tom": "Thirty. chorus. chorus. Everyone sang the chorus. Everyone sang the chorus.", "focus": 4, "reveal": [29]}
+      - {"tom": "Thirty-one. tune. tune. It's a lovely tune. It's a lovely tune.", "focus": 5, "reveal": [30]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [31]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "catchy", "vi": "dễ nhớ, bắt tai", "ex": "The song is really catchy."}
+      - {"n": 33, "answer": "playlist", "vi": "danh sách nhạc", "ex": "I made a playlist for the journey."}
+      - {"n": 34, "answer": "headphones", "vi": "tai nghe", "ex": "I always wear headphones on the bus."}
+      - {"n": 35, "answer": "stream", "vi": "nghe trực tuyến", "ex": "I stream music on my phone."}
+      - {"n": 36, "answer": "live music", "vi": "nhạc sống", "ex": "This café has live music on Fridays."}
+      - {"n": 37, "answer": "music festival", "vi": "lễ hội âm nhạc", "ex": "We went to a music festival last summer."}
+    lines:
+      - {"tom": "Thirty-two. catchy. catchy. The song is really catchy. The song is really catchy.", "focus": 0}
+      - {"tom": "Thirty-three. playlist. playlist. I made a playlist for the journey. I made a playlist for the journey.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. headphones. headphones. I always wear headphones on the bus. I always wear headphones on the bus.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. stream. stream. I stream music on my phone. I stream music on my phone.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. live music. live music. This café has live music on Fridays. This café has live music on Fridays.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. music festival. music festival. We went to a music festival last summer. We went to a music festival last summer.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "choir", "vi": "dàn hợp xướng", "ex": "She sings in a choir."}
+      - {"n": 39, "answer": "hit", "vi": "bài hát ăn khách", "ex": "It was their biggest hit."}
+      - {"n": 40, "answer": "on tour", "vi": "đi lưu diễn", "ex": "The band is on tour in Asia."}
+      - {"n": 41, "answer": "record", "vi": "thu âm", "ex": "They recorded a new album."}
+      - {"n": 42, "answer": "audience", "vi": "khán giả", "ex": "The audience loved the concert."}
+      - {"n": 43, "answer": "microphone", "vi": "micrô", "ex": "The singer dropped the microphone."}
+    lines:
+      - {"tom": "Thirty-eight. choir. choir. She sings in a choir. She sings in a choir.", "focus": 0}
+      - {"tom": "Thirty-nine. hit. hit. It was their biggest hit. It was their biggest hit.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. on tour. on tour. The band is on tour in Asia. The band is on tour in Asia.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. record. record. They recorded a new album. They recorded a new album.", "say": "Forty-one. re-cord. re-cord. They recorded a new album. They recorded a new album.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. audience. audience. The audience loved the concert. The audience loved the concert.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. microphone. microphone. The singer dropped the microphone. The singer dropped the microphone.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (44–49)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 44, "answer": "What kind of music do you like?", "vi": "Bạn thích loại nhạc nào?"}
+      - {"n": 45, "answer": "Mostly pop, and some Vietnamese bands.", "vi": "Chủ yếu là pop, và vài ban nhạc Việt."}
+      - {"n": 46, "answer": "Who's your favourite group?", "vi": "Ban nhạc bạn thích nhất là ai?"}
+      - {"n": 47, "answer": "The Beatles. I know all their songs.", "vi": "The Beatles. Mình thuộc hết bài của họ."}
+      - {"n": 48, "answer": "Can you play an instrument?", "vi": "Bạn chơi nhạc cụ được không?"}
+      - {"n": 49, "answer": "No, but I'd like to learn.", "vi": "Không, nhưng mình muốn học."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-four. What kind of music do you like? What kind of music do you like?", "focus": 0}
+      - {"tom": "Forty-five. Mostly pop, and some Vietnamese bands. Mostly pop, and some Vietnamese bands.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. Who's your favourite group? Who's your favourite group?", "focus": 2, "reveal": [45]}
+      - {"emma": "Forty-seven. The Beatles. I know all their songs. The Beatles. I know all their songs.", "focus": 3, "reveal": [46]}
+      - {"emma": "Forty-eight. Can you play an instrument? Can you play an instrument?", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. No, but I'd like to learn. No, but I'd like to learn.", "focus": 5, "reveal": [48]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (50–55)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 50, "answer": "Have you heard their new song?", "vi": "Bạn nghe bài mới của họ chưa?"}
+      - {"n": 51, "answer": "Yes, it's really catchy.", "vi": "Rồi, bắt tai lắm."}
+      - {"n": 52, "answer": "Do you download music?", "vi": "Bạn có tải nhạc về không?"}
+      - {"n": 53, "answer": "No, I stream it on my phone.", "vi": "Không, mình nghe trực tuyến trên điện thoại."}
+      - {"n": 54, "answer": "Let's go to the concert on Saturday.", "vi": "Thứ Bảy đi xem hòa nhạc nhé."}
+      - {"n": 55, "answer": "Good idea. How much are the tickets?", "vi": "Ý hay. Vé bao nhiêu tiền?"}
+    lines:
+      - {"tom": "Fifty. Have you heard their new song? Have you heard their new song?", "focus": 0}
+      - {"emma": "Fifty-one. Yes, it's really catchy. Yes, it's really catchy.", "focus": 1, "reveal": [50]}
+      - {"emma": "Fifty-two. Do you download music? Do you download music?", "focus": 2, "reveal": [51]}
+      - {"tom": "Fifty-three. No, I stream it on my phone. No, I stream it on my phone.", "focus": 3, "reveal": [52]}
+      - {"tom": "Fifty-four. Let's go to the concert on Saturday. Let's go to the concert on Saturday.", "focus": 4, "reveal": [53]}
+      - {"emma": "Fifty-five. Good idea. How much are the tickets? Good idea. How much are the tickets?", "focus": 5, "reveal": [54]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [55]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (56–61)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 56, "answer": "Could you turn the music down, please?", "vi": "Bạn vặn nhỏ nhạc giúp mình nhé?"}
+      - {"n": 57, "answer": "Sorry, is it too loud?", "vi": "Xin lỗi, to quá à?"}
+      - {"n": 58, "answer": "I listen to music when I study.", "vi": "Mình nghe nhạc khi học."}
+      - {"n": 59, "answer": "Really? I need silence.", "vi": "Thật à? Mình cần yên tĩnh."}
+      - {"n": 60, "answer": "Who sings this song?", "vi": "Ai hát bài này vậy?"}
+      - {"n": 61, "answer": "It's by Coldplay.", "vi": "Của Coldplay đấy."}
+    lines:
+      - {"emma": "Fifty-six. Could you turn the music down, please? Could you turn the music down, please?", "focus": 0}
+      - {"tom": "Fifty-seven. Sorry, is it too loud? Sorry, is it too loud?", "focus": 1, "reveal": [56]}
+      - {"tom": "Fifty-eight. I listen to music when I study. I listen to music when I study.", "focus": 2, "reveal": [57]}
+      - {"emma": "Fifty-nine. Really? I need silence. Really? I need silence.", "focus": 3, "reveal": [58]}
+      - {"emma": "Sixty. Who sings this song? Who sings this song?", "focus": 4, "reveal": [59]}
+      - {"tom": "Sixty-one. It's by Coldplay. It's by Coldplay.", "focus": 5, "reveal": [60]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [61]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (62–67)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 62, "answer": "What's number one this week?", "vi": "Tuần này bài nào đứng đầu?"}
+      - {"n": 63, "answer": "I don't know. I never listen to the charts.", "vi": "Mình không biết. Mình chẳng bao giờ nghe bảng xếp hạng."}
+      - {"n": 64, "answer": "Do you know the words?", "vi": "Bạn có thuộc lời không?"}
+      - {"n": 65, "answer": "Only the chorus!", "vi": "Chỉ thuộc điệp khúc thôi!"}
+      - {"n": 66, "answer": "My brother plays the guitar very well.", "vi": "Anh mình chơi guitar rất hay."}
+      - {"n": 67, "answer": "Is he in a band?", "vi": "Anh ấy có trong ban nhạc nào không?"}
+    lines:
+      - {"tom": "Sixty-two. What's number one this week? What's number one this week?", "focus": 0}
+      - {"emma": "Sixty-three. I don't know. I never listen to the charts. I don't know. I never listen to the charts.", "focus": 1, "reveal": [62]}
+      - {"emma": "Sixty-four. Do you know the words? Do you know the words?", "focus": 2, "reveal": [63]}
+      - {"tom": "Sixty-five. Only the chorus! Only the chorus!", "focus": 3, "reveal": [64]}
+      - {"emma": "Sixty-six. My brother plays the guitar very well. My brother plays the guitar very well.", "focus": 4, "reveal": [65]}
+      - {"tom": "Sixty-seven. Is he in a band? Is he in a band?", "focus": 5, "reveal": [66]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (68–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 68, "answer": "Have you ever been to a classical concert?", "vi": "Bạn từng đi nghe hòa nhạc cổ điển chưa?"}
+      - {"n": 69, "answer": "Yes, once, in London. It was wonderful.", "vi": "Rồi, một lần, ở London. Tuyệt lắm."}
+      - {"n": 70, "answer": "I sing in the shower every morning.", "vi": "Sáng nào mình cũng hát khi tắm."}
+      - {"n": 71, "answer": "I hope your flatmates don't mind!", "vi": "Mong là bạn cùng phòng không phiền!"}
+      - {"n": 72, "answer": "This song always makes me happy.", "vi": "Bài này lúc nào cũng làm mình vui."}
+      - {"n": 73, "answer": "Can you send me the link?", "vi": "Bạn gửi mình đường dẫn nhé?"}
+    lines:
+      - {"tom": "Sixty-eight. Have you ever been to a classical concert? Have you ever been to a classical concert?", "focus": 0}
+      - {"emma": "Sixty-nine. Yes, once, in London. It was wonderful. Yes, once, in London. It was wonderful.", "focus": 1, "reveal": [68]}
+      - {"tom": "Seventy. I sing in the shower every morning. I sing in the shower every morning.", "focus": 2, "reveal": [69]}
+      - {"emma": "Seventy-one. I hope your flatmates don't mind! I hope your flatmates don't mind!", "focus": 3, "reveal": [70]}
+      - {"tom": "Seventy-two. This song always makes me happy. This song always makes me happy.", "focus": 4, "reveal": [71]}
+      - {"emma": "Seventy-three. Can you send me the link? Can you send me the link?", "focus": 5, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [73]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (74–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 74, "answer": "Is there a music festival in your city?", "vi": "Thành phố bạn có lễ hội âm nhạc không?"}
+      - {"n": 75, "answer": "Yes, there's a big one every year.", "vi": "Có, năm nào cũng có một lễ hội lớn."}
+      - {"n": 76, "answer": "Music helps me relax after work.", "vi": "Âm nhạc giúp mình thư giãn sau giờ làm."}
+    lines:
+      - {"emma": "Seventy-four. Is there a music festival in your city? Is there a music festival in your city?", "focus": 0}
+      - {"tom": "Seventy-five. Yes, there's a big one every year. Yes, there's a big one every year.", "focus": 1, "reveal": [74]}
+      - {"emma": "Seventy-six. Music helps me relax after work. Music helps me relax after work.", "focus": 2, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [76]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 52.", "say": "Well done! See you in Unit fifty-two.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 52."}
+
