@@ -1,0 +1,699 @@
+# Video Oxford Word Skills Basic · Unit 42 — I can talk about my school (sách in tr. 109–111, Answer key tr. 214–215).
+# UNIT KHÓ (đợt 41): 3 trang, ba phần — môn học (be good at), hệ thống giáo dục (nursery → primary → secondary school, state /
+# private school, leave school, college, university) và thi cử (take / pass / fail an exam, results, grade, mark, do well / badly);
+# "work or study" là câu mở đầu IELTS Part 1, "a subject you enjoyed at school" là đề Part 2 hay gặp — video khoảng 14 phút: phần
+# sách (bài 7: trường học ở Việt Nam), ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a subject you enjoyed at school", hai
+# bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh
+# tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–10. Bài 1, 2, 5, 6, 8, 9 theo Answer key tr. 214–215 (bài 6 câu 3, 4, 5 và bài 9 câu 3, 5 có hai chỗ trống:
+# 3a/3b…). Bài 3 (ABOUT YOU): câu của Tom và Emma. Bài 4 (Test yourself): ba hàng tranh môn học cắt bỏ dòng chữ, đáp án hiện thành
+# nhãn khi Tom trả lời. Bài 5: cảnh `order` (Tom trong bài là người khác — video nói rõ). Bài 7 (ABOUT YOUR COUNTRY): Tom trả lời về
+# Việt Nam (cảnh Nói 1). Bài 10 (ABOUT YOU): Emma hỏi Tom, rồi Tom hỏi Emma.
+# Hình trong sách: hai cảnh tranh môn học (có chữ), ba hàng tranh để tự kiểm tra (không chữ), khung ghi chú ICT / PE / RE, Spotlight
+# be good at, sơ đồ hệ thống giáo dục (khung theo ô), Glossary B hai cảnh, khung pupils / uniform, Spotlight at (the age of) (hai cảnh riêng), lời kể
+# của Rafael (hai cảnh, khung theo câu), Glossary C, Spotlight exam, bảng điểm của Rafael — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom học trường công lớn gần hồ ở Đà Lạt, đồng phục sơ mi trắng quần
+# xanh, thích Hóa (thầy Nam), thấy Lý khó, thi đại học năm 18 tuổi, ông (thầy giáo Toán đã nghỉ hưu) kèm Toán; Emma học trường nhỏ
+# khoảng 400 học sinh, thích Anh văn và Mỹ thuật, kém Toán (thi trượt năm 15 tuổi, phải thi lại), học tiếng Pháp 5 năm, A level Anh
+# văn – Pháp – Sử (A, A, B), cô Green dạy Anh văn là lý do Emma đi dạy. Mới: tiết học của Tom 45 phút; kỳ thi năm 18 tuổi Tom thi
+# sáu môn (Toán, Văn, tiếng Anh, Lý, Hóa, Sinh), đỗ cả, điểm Lý không cao; Emma thi mười môn năm 16 tuổi, không học tiếng Trung.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U42-school.yaml
+id: U42-school
+activity: U42-words
+title: "Unit 42 · My school"
+subtitle: "I can talk about my school"
+title_vi: "Trường học: môn học, be good at; nursery / primary / secondary school, state / private school; take / pass / fail an exam, results, grade, mark — kèm ôn tập và luyện nói"
+tag: "STUDY AND WORK · UNIT 42"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 42: my school. Today: school subjects, the education system, and exams. In the IELTS speaking test, the first question is often: do you work, or are you a student? So this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit forty-two: my school. Today: school subjects, the education system, and exams. In the eye-elts speaking test, the first question is often: do you work, or are you a student? So this video is longer, with a review and speaking practice."
+        vi: "Unit 42: trường học — môn học, hệ thống giáo dục, thi cử; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Môn học (1)"
+    heading: "A · School subjects (1)"
+    heading_vi: "Tranh tr. 109 — chemistry · physics · biology · maths · ICT · geography · history · literature · music"
+    image: {pdf: course-book, page: 110, clip: [40, 88, 480, 221]}
+    items:
+      - {box: [48, 90, 118, 150]}
+      - {box: [126, 90, 194, 150]}
+      - {box: [214, 90, 258, 150]}
+      - {box: [272, 108, 382, 151]}
+      - {box: [412, 90, 462, 152]}
+      - {box: [48, 153, 106, 219]}
+      - {box: [128, 153, 178, 219]}
+      - {box: [208, 156, 268, 220]}
+      - {box: [282, 166, 376, 220]}
+    lines:
+      - {emma: "Look at page one hundred and nine: school subjects. Chemistry. Notice: C, H sounds like K.", say: "Look at page one hundred and nine: school subjects. Chemistry. Notice: see, aitch sounds like kay.", focus: 0, vi: "chemistry: hóa học (ch đọc như k)"}
+      - {tom: "Physics. P, H sounds like F.", say: "Physics. Pee, aitch sounds like ef.", focus: 1, vi: "physics: vật lý (ph đọc như f)"}
+      - {emma: "Biology.", focus: 2, vi: "biology: sinh học"}
+      - {tom: "Maths: short for mathematics.", focus: 3, vi: "maths (mathematics): toán"}
+      - {emma: "ICT: computers.", say: "Eye see tee: computers.", focus: 4, vi: "ICT: tin học"}
+      - {tom: "Geography: countries, mountains, and rivers.", focus: 5, vi: "geography: địa lý"}
+      - {emma: "History.", focus: 6, vi: "history: lịch sử"}
+      - {tom: "Literature: books, plays, and poems. The red book is Macbeth, by Shakespeare.", focus: 7, vi: "literature: văn học"}
+      - {emma: "And music.", focus: 8, vi: "music: âm nhạc"}
+
+  - kind: figure
+    chapter: "Môn học (2)"
+    heading: "A · School subjects (2)"
+    heading_vi: "Tranh tr. 109 — art · PE · design and technology · modern languages; ICT, PE, RE"
+    image: {pdf: course-book, page: 110, clip: [40, 221, 490, 380]}
+    items:
+      - {box: [46, 223, 92, 290]}
+      - {box: [118, 225, 176, 290]}
+      - {box: [190, 223, 302, 291]}
+      - {box: [336, 222, 430, 292]}
+      - {box: [44, 299, 262, 328]}
+      - {box: [44, 328, 262, 369]}
+    lines:
+      - {tom: "Art.", focus: 0, vi: "art: mỹ thuật"}
+      - {emma: "PE: in PE, you do sport.", say: "Pee ee: in pee ee, you do sport.", focus: 1, vi: "PE: thể dục"}
+      - {tom: "Design and technology: you design and make things.", focus: 2, vi: "design and technology: công nghệ"}
+      - {emma: "And modern languages, for example Spanish, German, or French.", focus: 3, vi: "modern languages: ngoại ngữ"}
+      - {tom: "Chemistry, physics, biology, and so on, are school subjects.", focus: 4, vi: "subject: môn học"}
+      - {emma: "ICT means information communication technology. PE is physical education, and RE is religious education.", say: "Eye see tee means information communication technology. Pee ee is physical education, and ar ee is religious education.", focus: 5, vi: "RE: giáo dục tôn giáo (ở Anh)"}
+
+  - kind: figure
+    chapter: "Spotlight: be good at"
+    heading: "Spotlight · be good at something"
+    heading_vi: "tr. 109 — good at ≠ terrible at (không nói good in)"
+    image: {pdf: course-book, page: 110, clip: [283, 296, 484, 378]}
+    items:
+      - {box: [286, 321, 482, 336]}
+      - {box: [286, 335, 482, 349]}
+      - {box: [286, 348, 482, 362]}
+      - {box: [286, 360, 482, 375]}
+    lines:
+      - {emma: "Look at the spotlight. If you are good at something, you do it well.", focus: 0, vi: "be good at: giỏi"}
+      - {tom: "If you are terrible at it, you do it very badly.", focus: 1, vi: "be terrible at: rất dở"}
+      - {emma: "I'm quite good at languages. Notice: good at, not good in.", focus: 2, vi: "quite good at: khá giỏi"}
+      - {tom: "And: I'm terrible at maths.", focus: 3}
+      - {emma: "That one is true for me!", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành từ"
+    heading: "Exercise 1 · Complete the words"
+    heading_vi: "Ví dụ: _ r t → art (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "h _ st _ ry  →  ___", answer: "history"}
+      - {n: 2, q: "g _ _ gr _ ph _  →  ___", answer: "geography"}
+      - {n: 3, q: "b _ _ l _ g _  →  ___", answer: "biology"}
+      - {n: 4, q: "d _ s _ gn  →  ___", answer: "design"}
+      - {n: 5, q: "ph _ s _ cs  →  ___", answer: "physics"}
+      - {n: 6, q: "m _ th _  →  ___", answer: "maths"}
+      - {n: 7, q: "m _ s _ c  →  ___", answer: "music"}
+      - {n: 8, q: "l _ t _ r _ t _ r _  →  ___", answer: "literature"}
+    lines:
+      - emma: "Exercise 1. Complete the words. The example is: art. Pause the video and try."
+        say: "Exercise one. Complete the words. The example is: art. Pause the video and try."
+        vi: "Bài 1: điền chữ cái còn thiếu."
+      - {tom: "One. History. Two. Geography. Three. Biology. Four. Design.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Physics. Six. Maths. Seven. Music. Eight. Literature.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: tên môn học"
+    heading: "Exercise 2 · Write the name of a school subject"
+    heading_vi: "Ví dụ: Beethoven, jazz → music (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "football, gym  →  ___", answer: "PE / physical education"}
+      - {n: 2, q: "computers  →  ___", answer: "ICT"}
+      - {n: 3, q: "Shakespeare  →  ___", answer: "literature"}
+      - {n: 4, q: "Spanish, German  →  ___", answer: "modern languages"}
+      - {n: 5, q: "church, mosque, etc.  →  ___", answer: "RE / religious education"}
+      - {n: 6, q: "CO2, H2O  →  ___", answer: "chemistry"}
+      - {n: 7, q: "Picasso, Monet  →  ___", answer: "art"}
+    lines:
+      - emma: "Exercise 2. Write the name of a school subject. The example is: Beethoven, jazz: music. Pause the video and try."
+        say: "Exercise two. Write the name of a school subject. The example is: Beethoven, jazz: music. Pause the video and try."
+        vi: "Bài 2: viết tên môn học."
+      - {tom: "One. Football and gym: PE. Two. Computers: ICT. Three. Shakespeare: literature. Four. Spanish and German: modern languages.", say: "One. Football and gym: pee ee. Two. Computers: eye see tee. Three. Shakespeare: literature. Four. Spanish and German: modern languages.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Church and mosque: RE, religious education. Six. C O two, H two O: chemistry. Seven. Picasso and Monet: art.", say: "Five. Church and mosque: ar ee, religious education. Six. See oh two, aitch two oh: chemistry. Seven. Picasso and Monet: art.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: bullets
+    chapter: "Bài 3: còn bạn?"
+    heading: "Exercise 3 · About you: I'm / I was good at…"
+    heading_vi: "Bài 3 (ABOUT YOU) — còn đi học: I'm; đã học xong: I was; tạm dừng video, viết câu của bạn"
+    items:
+      - {en: "Tom: At school, I was good at chemistry, and quite good at maths.", vi: "Giỏi Hóa, khá Toán."}
+      - {en: "Tom: I was terrible at physics, and we didn't study RE.", vi: "Rất dở Lý; trường không học giáo dục tôn giáo."}
+      - {en: "Tom: The subject I liked most was chemistry.", vi: "Môn thích nhất: Hóa."}
+      - {en: "Emma: At school, I was good at English and art, and quite good at French.", vi: "Giỏi Anh văn, Mỹ thuật; khá tiếng Pháp."}
+      - {en: "Emma: I was terrible at maths, and we didn't study Chinese.", vi: "Rất dở Toán; không học tiếng Trung."}
+      - {en: "Emma: The subject I liked most was English.", vi: "Môn thích nhất: Anh văn."}
+    lines:
+      - emma: "Exercise 3 is about you. If you're at school now, use I'm. If you finished school, use I was. Tom?"
+        say: "Exercise three is about you. If you're at school now, yooz I'm. If you finished school, yooz I was. Tom?"
+        vi: "Bài 3: còn đi học dùng I'm, đã học xong dùng I was."
+      - {tom: "At school, I was good at chemistry, and quite good at maths.", focus: 0}
+      - {tom: "I was terrible at physics, and we didn't study RE at my school.", say: "I was terrible at physics, and we didn't study ar ee at my school.", focus: 1}
+      - {tom: "The subject I liked most was chemistry.", focus: 2}
+      - {emma: "At school, I was good at English and art, and quite good at French.", focus: 3}
+      - {emma: "I was terrible at maths, and we didn't study Chinese.", focus: 4}
+      - {emma: "The subject I liked most was English. Now pause the video, and write your sentences.", focus: 5}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: say the subjects (1)"
+    heading_vi: "Che chữ, nhìn tranh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 110, clip: [40, 88, 480, 137]}
+    items:
+      - {box: [48, 90, 118, 136]}
+      - {box: [48, 90, 118, 136], label: "chemistry"}
+      - {box: [126, 90, 194, 136]}
+      - {box: [126, 90, 194, 136], label: "physics"}
+      - {box: [214, 90, 258, 136]}
+      - {box: [214, 90, 258, 136], label: "biology"}
+      - {box: [272, 108, 382, 136]}
+      - {box: [272, 108, 382, 136], label: "maths"}
+      - {box: [412, 90, 462, 137]}
+      - {box: [412, 90, 462, 137], label: "ICT"}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the words, and look at the pictures. Say the subjects. Pause the video after each question. What's this subject?"
+        say: "Exercise four is a test. Cover the words, and look at the pictures. Say the subjects. Pause the video after each question. What's this subject?"
+        focus: 0
+        vi: "Bài 4: che chữ, nhìn tranh, nói tên môn học."
+      - {tom: "Chemistry.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "Physics.", focus: 3}
+      - {emma: "This one?", focus: 4}
+      - {tom: "Biology.", focus: 5}
+      - {emma: "And this?", focus: 6}
+      - {tom: "Maths.", focus: 7}
+      - {emma: "And this one?", focus: 8}
+      - {tom: "ICT.", say: "Eye see tee.", focus: 9}
+
+  - kind: figure
+    chapter: "Bài 4 (tiếp)"
+    heading: "Exercise 4 · Test yourself: say the subjects (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 110, clip: [40, 152, 390, 206]}
+    items:
+      - {box: [48, 153, 106, 204]}
+      - {box: [48, 153, 106, 204], label: "geography"}
+      - {box: [128, 154, 178, 205]}
+      - {box: [128, 154, 178, 205], label: "history"}
+      - {box: [208, 156, 268, 205]}
+      - {box: [208, 156, 268, 205], label: "literature"}
+      - {box: [282, 166, 376, 206]}
+      - {box: [282, 166, 376, 206], label: "music"}
+    lines:
+      - {emma: "What's this subject?", focus: 0}
+      - {tom: "Geography.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "History.", focus: 3}
+      - {emma: "This one?", focus: 4}
+      - {tom: "Literature.", focus: 5}
+      - {emma: "And this?", focus: 6}
+      - {tom: "Music.", focus: 7}
+
+  - kind: figure
+    chapter: "Bài 4 (tiếp)"
+    heading: "Exercise 4 · Test yourself: say the subjects (3)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 110, clip: [40, 221, 440, 277]}
+    items:
+      - {box: [46, 222, 92, 276]}
+      - {box: [46, 222, 92, 276], label: "art"}
+      - {box: [118, 224, 176, 276]}
+      - {box: [118, 224, 176, 276], label: "PE"}
+      - {box: [190, 222, 302, 277]}
+      - {box: [190, 222, 302, 277], label: "design and technology"}
+      - {box: [336, 222, 430, 274]}
+      - {box: [336, 222, 430, 274], label: "modern languages"}
+    lines:
+      - {emma: "What's this subject?", focus: 0}
+      - {tom: "Art.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "PE: physical education.", say: "Pee ee: physical education.", focus: 3}
+      - {emma: "This one?", focus: 4}
+      - {tom: "Design and technology.", focus: 5}
+      - {emma: "And the last one?", focus: 6}
+      - {tom: "Modern languages.", focus: 7}
+
+  - kind: figure
+    chapter: "Hệ thống giáo dục"
+    heading: "B · The education system in England and Wales"
+    heading_vi: "Sơ đồ tr. 110 — nursery → primary → secondary school → college / university / a job"
+    image: {pdf: course-book, page: 111, clip: [24, 78, 492, 216]}
+    items:
+      - {box: [28, 82, 168, 120]}
+      - {box: [184, 83, 302, 120]}
+      - {box: [330, 84, 489, 124]}
+      - {box: [346, 138, 451, 166]}
+      - {box: [324, 184, 401, 212]}
+      - {box: [409, 185, 486, 213]}
+      - {box: [192, 137, 309, 164]}
+      - {box: [27, 134, 126, 162]}
+      - {box: [222, 183, 281, 210]}
+    lines:
+      - {emma: "Part B: the education system in England and Wales. You can start nursery school at three.", focus: 0, vi: "nursery school: trường mầm non"}
+      - {tom: "Then you go to primary school at five.", focus: 1, vi: "primary school: trường tiểu học"}
+      - {emma: "At eleven, you go to secondary school: a state school, or a private school.", focus: 2, vi: "secondary school: trường trung học · state school ≠ private school: trường công ≠ trường tư"}
+      - {tom: "You can leave school at sixteen,", say: "You can leave school at six-teen,", focus: 3, vi: "leave school: thôi học, ra trường"}
+      - {emma: "and go to college,", focus: 4, vi: "college: trường cao đẳng, trường nghề"}
+      - {tom: "or get a job.", focus: 5, vi: "get a job: tìm được việc"}
+      - {emma: "Or you can stay at school until eighteen.", say: "Or you can stay at school until eigh-teen.", focus: 6, vi: "stay at school until 18: học tiếp đến 18 tuổi"}
+      - {tom: "Then you go to university,", focus: 7, vi: "university: đại học"}
+      - {emma: "or get a job.", focus: 8}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 110 — start school · state school · stay at school · until"
+    image: {pdf: course-book, page: 111, clip: [294, 218, 488, 336]}
+    items:
+      - {box: [296, 239, 486, 262]}
+      - {box: [296, 263, 486, 286]}
+      - {box: [296, 286, 486, 310]}
+      - {box: [296, 309, 486, 335]}
+    lines:
+      - {emma: "Look at the glossary. Start school: go to a new school for the first time.", focus: 0}
+      - {tom: "A state school: a school where education is free. The opposite is a private school.", focus: 1, vi: "free: miễn phí"}
+      - {emma: "Stay at school: go to school for a period of time. We also say: continue at school.", focus: 2, vi: "continue at school: tiếp tục đi học"}
+      - {tom: "Until: up to that time. I was there until three o'clock means: after three o'clock, I went away.", focus: 3, vi: "until: cho đến khi"}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 110 — college · leave school · get a job · uniform"
+    image: {pdf: course-book, page: 111, clip: [294, 331, 488, 409]}
+    items:
+      - {box: [296, 334, 486, 359]}
+      - {box: [296, 359, 486, 373]}
+      - {box: [296, 371, 486, 384]}
+      - {box: [296, 383, 486, 407]}
+    lines:
+      - {emma: "College: a place where you can study after you leave school.", focus: 0}
+      - {tom: "Leave school: stop going to school.", focus: 1}
+      - {emma: "Get a job: find a job.", focus: 2}
+      - {tom: "And a uniform: special clothes that children wear in a school.", focus: 3, vi: "uniform: đồng phục"}
+
+  - kind: figure
+    chapter: "Pupils · uniform"
+    heading: "pupils · uniform"
+    heading_vi: "tr. 110 — pupil: học sinh (đến 16 tuổi) · uniform: đồng phục"
+    image: {pdf: course-book, page: 111, clip: [22, 243, 262, 282]}
+    items:
+      - {box: [24, 245, 260, 280]}
+    lines:
+      - {emma: "Look at the blue box. Some pupils wear a uniform. Pupils are schoolchildren up to the age of sixteen.", say: "Look at the blue box. Some pupils wear a uniform. Pupils are schoolchildren up to the age of six-teen.", focus: 0, vi: "pupil: học sinh"}
+
+  - kind: figure
+    chapter: "Spotlight: at the age of"
+    heading: "Spotlight · at (the age of) …"
+    heading_vi: "tr. 110 — at 5 = at the age of 5 = when they are five (years old)"
+    image: {pdf: course-book, page: 111, clip: [294, 412, 488, 486]}
+    items:
+      - {box: [296, 434, 486, 483]}
+    lines:
+      - {tom: "Now the spotlight. Children go to school at five, or at the age of five. That means: when they are five years old.", focus: 0, vi: "at the age of 5 = when they are five (years old)"}
+      - {emma: "Be careful: at the age of five, not at the age of five years old.", focus: 0}
+
+  - kind: order
+    chapter: "Bài 5: sắp xếp câu chuyện"
+    heading: "Exercise 5 · Put the story in order"
+    heading_vi: "Câu chuyện của một bạn tên Tom (không phải Tom của chúng ta) — Answer key tr. 215"
+    items:
+      - {k: a, text: "where he learnt to read and write.", pos: 5}
+      - {k: b, text: "He stayed there until he was sixteen,", pos: 7}
+      - {k: c, text: "When Tom was three,", pos: 1}
+      - {k: d, text: "and then he went to college.", pos: 8}
+      - {k: e, text: "After that, he went to secondary school.", pos: 6}
+      - {k: f, text: "He left college when he was 18", pos: 9}
+      - {k: g, text: "At the age of five,", pos: 3}
+      - {k: h, text: "he started nursery school.", pos: 2}
+      - {k: i, text: "he went to primary school,", pos: 4}
+      - {k: j, text: "and got a job in a bank.", pos: 10}
+    lines:
+      - emma: "Exercise 5. Put the story in order. Number one is c: when Tom was three. Pause the video and try."
+        say: "Exercise five. Put the story in order. Number one is see: when Tom was three. Pause the video and try."
+        reveal: c
+        vi: "Bài 5: sắp xếp câu chuyện."
+      - {tom: "By the way, this Tom isn't me. I'm still at university!", vi: "Tom trong bài không phải Tom của chúng ta."}
+      - {tom: "Two to five: h, g, i, a. He started nursery school. At the age of five, he went to primary school, where he learnt to read and write.", say: "Two to five: aitch, gee, eye, eigh. He started nursery school. At the age of five, he went to primary school, where he learnt to read and write.", reveal: [h, g, i, a]}
+      - {tom: "Six to eight: e, b, d. After that, he went to secondary school. He stayed there until he was sixteen, and then he went to college.", say: "Six to eight: ee, bee, dee. After that, he went to secondary school. He stayed there until he was six-teen, and then he went to college.", reveal: [e, b, d]}
+      - {tom: "Nine and ten: f, j. He left college when he was eighteen, and got a job in a bank.", say: "Nine and ten: ef, jay. He left college when he was eigh-teen, and got a job in a bank.", reveal: [f, j]}
+
+  - kind: blanks
+    chapter: "Bài 6: hoàn thành câu hỏi"
+    heading: "Exercise 6 · Complete the questions, but don't write answers"
+    heading_vi: "Ví dụ: At what age do children go to nursery school? (Answer key tr. 215) — bạn trả lời ở bài 7"
+    items:
+      - {n: 1, q: "When do they s___ primary school?", answer: "start"}
+      - {n: 2, q: "Do they usually wear a u___ at primary school?", answer: "uniform"}
+      - {n: "3a", q: "When do p___", answer: "pupils"}
+      - {n: "3b", q: "start s___ school?", answer: "secondary"}
+      - {n: "4a", q: "When can they l___ school", answer: "leave"}
+      - {n: "4b", q: "and g___ a job?", answer: "get"}
+      - {n: "5a", q: "Do they go to st___ schools,", answer: "state"}
+      - {n: "5b", q: "pr___ schools, or both?", answer: "private"}
+    lines:
+      - emma: "Exercise 6. Complete the questions, but don't write answers. You'll answer them in Exercise 7. The example is: at what age do children go to nursery school? Pause the video and try."
+        say: "Exercise six. Complete the questions, but don't write answers. You'll answer them in Exercise seven. The example is: at what age do children go to nursery school? Pause the video and try."
+        vi: "Bài 6: hoàn thành câu hỏi (trả lời ở bài 7)."
+      - {tom: "One. When do they start primary school? Two. Do they usually wear a uniform at primary school? Three. When do pupils start secondary school?", reveal: ["1", "2", "3a", "3b"], focus: 3}
+      - {tom: "Four. When can they leave school and get a job? Five. Do they go to state schools, private schools, or both?", reveal: ["4a", "4b", "5a", "5b"], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: trường học ở Việt Nam"
+    heading: "Speaking 1 · Exercise 7: about your country"
+    heading_vi: "Bài 7 (ABOUT YOUR COUNTRY) — Tom trả lời về Việt Nam; tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "At what age do children go to nursery school in Vietnam?"
+        a: "Usually at three."
+        ask: emma
+        by: tom
+        phrases: ["Usually at…"]
+      - q: "When do they start primary school?"
+        a: "At six, at the age of six."
+        ask: emma
+        by: tom
+        phrases: ["At the age of…"]
+      - q: "Do they usually wear a uniform at primary school?"
+        a: "Yes, most of them do. At my school in Da Lat, we had white shirts and blue trousers."
+        ask: emma
+        by: tom
+        phrases: ["Yes, most of them do.", "we had…"]
+      - q: "When do pupils start secondary school?"
+        a: "At eleven. Lower secondary school is from eleven to fifteen, and upper secondary school is from fifteen to eighteen."
+        ask: emma
+        by: tom
+        phrases: ["… is from … to …"]
+      - q: "When can they leave school and get a job?"
+        a: "At fifteen, but most people stay at school until eighteen."
+        ask: emma
+        by: tom
+        phrases: ["… but most people stay at school until…"]
+      - q: "Do they go to state schools, private schools, or both?"
+        a: "Both, but most children go to state schools. I went to a big state school near the lake."
+        ask: emma
+        by: tom
+        phrases: ["Both, but most…", "I went to…"]
+    lines:
+      - {emma: "Exercise 7 is about your country. Tom, at what age do children go to nursery school in Vietnam?", say: "Exercise seven is about your country. Tom, at what age do children go to nursery school in Vietnam?", focus: 0}
+      - {tom: "Usually at three.", reveal: 0, vi: "Thường từ ba tuổi."}
+      - {emma: "When do they start primary school?", focus: 1}
+      - {tom: "At six, at the age of six.", reveal: 1, vi: "Sáu tuổi vào tiểu học."}
+      - {emma: "Do they usually wear a uniform at primary school?", focus: 2}
+      - {tom: "Yes, most of them do. At my school in Da Lat, we had white shirts and blue trousers.", say: "Yes, most of them do. At my school in Dah Lot, we had white shirts and blue trousers.", reveal: 2, vi: "Phần lớn có đồng phục; trường Tom: áo sơ mi trắng, quần xanh."}
+      - {emma: "When do pupils start secondary school?", focus: 3}
+      - {tom: "At eleven. Lower secondary school is from eleven to fifteen, and upper secondary school is from fifteen to eighteen.", say: "At eleven. Lower secondary school is from eleven to fif-teen, and upper secondary school is from fif-teen to eigh-teen.", reveal: 3, vi: "11 tuổi: trung học cơ sở (11–15), trung học phổ thông (15–18)."}
+      - {emma: "When can they leave school and get a job?", focus: 4}
+      - {tom: "At fifteen, but most people stay at school until eighteen.", say: "At fif-teen, but most people stay at school until eigh-teen.", reveal: 4, vi: "15 tuổi, nhưng phần lớn học đến 18 tuổi."}
+      - {emma: "Do they go to state schools, private schools, or both?", focus: 5}
+      - {tom: "Both, but most children go to state schools. I went to a big state school near the lake.", reveal: 5, vi: "Cả hai, phần lớn học trường công; Tom học trường công lớn gần hồ."}
+
+  - kind: figure
+    chapter: "Thi cử: lời kể của Rafael (1)"
+    heading: "C · Exams: Rafael's story (1)"
+    heading_vi: "tr. 111 — lessons · do homework · work hard · take exams · results · pass · fail"
+    image: {pdf: course-book, page: 112, clip: [24, 52, 202, 141]}
+    items:
+      - {box: [30, 58, 196, 96]}
+      - {box: [30, 93, 196, 118]}
+      - {box: [30, 116, 196, 140.5]}
+    lines:
+      - {emma: "Part C: exams. Listen to Rafael. When I was at secondary school, I went to all the lessons and did my homework, but I didn't work very hard.", say: "Part see: exams. Listen to Rafael. When I was at secondary school, I went to all the lessons and did my homework, but I didn't work very hard.", focus: 0, vi: "lesson: tiết học · do homework: làm bài tập về nhà · work hard: học chăm"}
+      - {emma: "So, when I took exams at sixteen, my results weren't fantastic.", say: "So, when I took exams at six-teen, my results weren't fantastic.", focus: 1, vi: "take an exam: dự thi · results: kết quả"}
+      - {emma: "I passed six, which was good, but I failed maths.", focus: 2, vi: "pass: đỗ ≠ fail: trượt"}
+
+  - kind: figure
+    chapter: "Thi cử: lời kể của Rafael (2)"
+    heading: "C · Exams: Rafael's story (2)"
+    heading_vi: "tr. 111 — worst · grade · do well"
+    image: {pdf: course-book, page: 112, clip: [24, 129, 202, 212]}
+    items:
+      - {box: [30, 129, 196, 163]}
+      - {box: [30, 151, 196, 187]}
+      - {box: [30, 174, 196, 209]}
+    lines:
+      - {emma: "My worst result was physics: I got a grade E, which was terrible.", say: "My worst result was physics: I got a grade ee, which was terrible.", focus: 0, vi: "worst: tệ nhất · grade: điểm (A, B…)"}
+      - {emma: "After that, I went to a sixth form college, where I worked hard and did well.", focus: 1, vi: "sixth form college: trường dự bị đại học (16–18 tuổi) · do well: học tốt"}
+      - {emma: "I passed all my exams at eighteen and went to university. That's where I am now.", say: "I passed all my exams at eigh-teen and went to university. That's where I am now.", focus: 2}
+
+  - kind: figure
+    chapter: "Glossary (3)"
+    heading: "Glossary · Exams"
+    heading_vi: "tr. 111 — lesson · do homework (U) · work hard · result · the worst · grade · mark · do well ≠ do badly"
+    image: {pdf: course-book, page: 112, clip: [200, 50, 488, 197]}
+    items:
+      - {box: [202, 73, 486, 99]}
+      - {box: [202, 97, 486, 123]}
+      - {box: [202, 121, 486, 135]}
+      - {box: [202, 133, 486, 147]}
+      - {box: [202, 145, 486, 159]}
+      - {box: [202, 157, 486, 183]}
+      - {box: [202, 180, 486, 196]}
+    lines:
+      - {tom: "Look at the glossary. A lesson: a period of time, about an hour, in school, when you are learning something.", focus: 0}
+      - {emma: "Do homework: do work the teacher has given you to do at home. Homework is uncountable: not homeworks!", focus: 1, vi: "homework (U): không có số nhiều"}
+      - {tom: "Work hard: work a lot.", focus: 2}
+      - {emma: "A result: what you get in an exam, for example eighty per cent, A, or eight out of ten.", say: "A result: what you get in an exam, for example eighty per cent, eigh, or eight out of ten.", focus: 3}
+      - {tom: "The worst is the superlative of bad. The opposite is the best, the superlative of good.", focus: 4, vi: "bad → worse → the worst · good → better → the best"}
+      - {emma: "You get a grade, for example A or B, or a mark, for example fifteen out of twenty, in an exam.", say: "You get a grade, for example eigh or bee, or a mark, for example fif-teen out of twenty, in an exam.", focus: 5, vi: "grade: điểm chữ · mark: điểm số"}
+      - {tom: "Do well: be good at something and get better at it. The opposite is do badly.", focus: 6}
+
+  - kind: figure
+    chapter: "Spotlight: exam"
+    heading: "Spotlight · exam (examination)"
+    heading_vi: "tr. 111 — take an exam: dự thi · pass an exam: đỗ · fail an exam: trượt"
+    image: {pdf: course-book, page: 112, clip: [204, 202, 486, 280]}
+    items:
+      - {box: [206, 224, 484, 240]}
+      - {box: [206, 238, 484, 252]}
+      - {box: [206, 250, 484, 264]}
+      - {box: [206, 262, 484, 277]}
+    lines:
+      - {emma: "Look at the spotlight. An exam is an important test at the end of a period of study.", focus: 0}
+      - {tom: "Take an exam: sit down and write your answers in the exam.", focus: 1, vi: "take an exam = dự thi (không nói make an exam)"}
+      - {emma: "Pass an exam: take an exam and do well, for example grade A, or eighty-five per cent.", say: "Pass an exam: take an exam and do well, for example grade eigh, or eighty-five per cent.", focus: 2}
+      - {tom: "Fail an exam: take an exam and do badly, for example grade D, or thirty-five per cent.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 8: kết quả thi của Rafael"
+    heading: "Exercise 8 · Look at Rafael's exam results and answer the questions"
+    heading_vi: "A, B, C: đỗ · D, E: trượt — ví dụ: How many exams did he take? → 7 (Answer key tr. 215)"
+    image: {pdf: course-book, page: 112, clip: [270, 307, 478, 427]}
+    items:
+      - {n: 1, q: "Did he take an exam in chemistry?  →  ___", answer: "No"}
+      - {n: 2, q: "How many did he pass?  →  ___", answer: "5"}
+      - {n: 3, q: "How many did he fail?  →  ___", answer: "2"}
+      - {n: 4, q: "What was his best grade?  →  ___", answer: "A"}
+      - {n: 5, q: "What was his worst grade?  →  ___", answer: "E"}
+      - {n: 6, q: "What did he get in English?  →  ___", answer: "C"}
+    lines:
+      - emma: "Exercise 8. Look at Rafael's exam results, and answer the questions. A, B and C are a pass. D and E are a fail. The example is: how many exams did he take? Seven. Pause the video and try."
+        say: "Exercise eight. Look at Rafael's exam results, and answer the questions. Eigh, bee and see are a pass. Dee and ee are a fail. The example is: how many exams did he take? Seven. Pause the video and try."
+        vi: "Bài 8: đọc bảng điểm của Rafael và trả lời."
+      - {tom: "One. No, he didn't. Two. He passed five. Three. He failed two: geography and maths.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. His best grade was A, in biology. Five. His worst grade was E, in maths. Six. He got a C in English.", say: "Four. His best grade was eigh, in biology. Five. His worst grade was ee, in maths. Six. He got a see in English.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 9: hoàn thành câu"
+    heading: "Exercise 9 · Complete the sentences"
+    heading_vi: "Ví dụ: Six out of ten isn't a very good mark. (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "I have to ___ an English exam tomorrow.", answer: "take"}
+      - {n: 2, q: "Did you ___ your homework last night?", answer: "do"}
+      - {n: "3a", q: "Paula did very ___ in her German exam;", answer: "well"}
+      - {n: "3b", q: "she got a ___ A.", answer: "grade"}
+      - {n: 4, q: "I got my exam ___ yesterday. I passed all of them.", answer: "results"}
+      - {n: "5a", q: "Andre is very unhappy. He's doing ___ at school,", answer: "badly"}
+      - {n: "5b", q: "and last week he ___ an important maths exam.", answer: "failed"}
+      - {n: 6, q: "Maths is my ___ subject. I'm terrible at it.", answer: "worst"}
+    lines:
+      - emma: "Exercise 9. Complete the sentences. The example is: six out of ten isn't a very good mark. Pause the video and try."
+        say: "Exercise nine. Complete the sentences. The example is: six out of ten isn't a very good mark. Pause the video and try."
+        vi: "Bài 9: hoàn thành câu."
+      - {tom: "One. Take an English exam. Two. Do your homework. Three. Paula did very well; she got a grade A.", say: "One. Take an English exam. Two. Do your homework. Three. Paula did very well; she got a grade eigh.", reveal: ["1", "2", "3a", "3b"], focus: 3}
+      - {tom: "Four. My exam results. Five. He's doing badly, and he failed an important maths exam. Six. Maths is my worst subject.", reveal: ["4", "5a", "5b", "6"], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 2: chuyện học hành"
+    heading: "Speaking 2 · Exercise 10: about you"
+    heading_vi: "Bài 10 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How long were your lessons at school, Tom?"
+        a: "Forty-five minutes."
+        ask: emma
+        by: tom
+        phrases: ["… minutes"]
+      - q: "Did you work hard at school most of the time?"
+        a: "Yes, most of the time. My grandfather helped me with maths every evening."
+        ask: emma
+        by: tom
+        phrases: ["Yes, most of the time.", "… helped me with…"]
+      - q: "At what age did you take important exams?"
+        a: "At fifteen and at eighteen. At eighteen, it was the national exam."
+        ask: emma
+        by: tom
+        phrases: ["At … and at …"]
+      - q: "How many did you take?"
+        a: "Six: maths, literature, English, physics, chemistry, and biology."
+        ask: emma
+        by: tom
+        phrases: ["Six: …"]
+      - q: "Did you pass all of them?"
+        a: "Yes, I did. But my physics result wasn't very good!"
+        ask: emma
+        by: tom
+        phrases: ["Yes, I did.", "But my … result wasn't…"]
+      - q: "And you, Emma? Did you pass all your exams?"
+        a: "At eighteen, yes: two As and a B. But at fifteen, I failed a maths exam, and I had to take it again."
+        ask: tom
+        by: emma
+        phrases: ["At eighteen, yes.", "I had to take it again."]
+    lines:
+      - {emma: "Exercise 10 is about you. Tom, how long were your lessons at school?", say: "Exercise ten is about you. Tom, how long were your lessons at school?", focus: 0}
+      - {tom: "Forty-five minutes.", reveal: 0, vi: "Mỗi tiết 45 phút."}
+      - {emma: "Did you work hard at school most of the time?", focus: 1}
+      - {tom: "Yes, most of the time. My grandfather helped me with maths every evening.", reveal: 1, vi: "Phần lớn thời gian có; tối nào ông cũng kèm Toán."}
+      - {emma: "At what age did you take important exams?", focus: 2}
+      - {tom: "At fifteen and at eighteen. At eighteen, it was the national exam.", say: "At fif-teen and at eigh-teen. At eigh-teen, it was the national exam.", reveal: 2, vi: "Năm 15 tuổi và 18 tuổi; 18 tuổi là kỳ thi quốc gia."}
+      - {emma: "How many did you take?", focus: 3}
+      - {tom: "Six: maths, literature, English, physics, chemistry, and biology.", reveal: 3, vi: "Sáu môn: Toán, Văn, Anh, Lý, Hóa, Sinh."}
+      - {emma: "Did you pass all of them?", focus: 4}
+      - {tom: "Yes, I did. But my physics result wasn't very good!", reveal: 4, vi: "Đỗ cả, nhưng điểm Lý không cao."}
+      - {tom: "And you, Emma? Did you pass all your exams?", focus: 5}
+      - {emma: "At eighteen, yes: two As and a B. But at fifteen, I failed a maths exam, and I had to take it again.", say: "At eigh-teen, yes: two eighs and a bee. But at fif-teen, I failed a maths exam, and I had to take it again.", reveal: 5, vi: "18 tuổi đỗ cả (A, A, B); 15 tuổi trượt một bài thi Toán, phải thi lại."}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về trường học — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I was good in maths.  →  ___", answer: "I was good at maths."}
+      - {n: 2, q: "We had a lot of homeworks.  →  ___", answer: "We had a lot of homework."}
+      - {n: 3, q: "I made an exam yesterday.  →  ___", answer: "I took an exam yesterday."}
+      - {n: 4, q: "I passed the exam, but I failed.  →  ___", answer: "I took the exam, but I failed."}
+      - {n: 5, q: "Physics was my worse subject.  →  ___", answer: "Physics was my worst subject."}
+      - {n: 6, q: "I started school at the age of six years old.  →  ___", answer: "I started school at the age of six."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. Good at maths, not good in. Two. A lot of homework, with no S: homework is uncountable.", say: "One. Good at maths, not good in. Two. A lot of homework, with no ess: homework is uncountable.", reveal: [1, 2], focus: 1, vi: "good at · homework (U)"}
+      - {tom: "Three. Took an exam: we take an exam, we don't make it. Four. I took the exam, but I failed. Pass means you did well.", reveal: [3, 4], focus: 3, vi: "take ≠ pass: pass = đỗ, không phải 'đã thi'"}
+      - {tom: "Five. My worst subject: the superlative. Six. At the age of six, or when I was six years old.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a subject you enjoyed at school"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about chemistry. I studied it at my secondary school in Da Lat, and it was my favourite subject."
+        say: "I'd like to talk about chemistry. I studied it at my secondary school in Dah Lot, and it was my favourite subject."
+        note: "what it was"
+      - text: "Our teacher was Mr Nam. He was young and very friendly, and he always explained things clearly."
+        note: "who taught it"
+      - text: "We learnt about water, air, and the things in our kitchen. Sometimes we did experiments, and that was the best part of the lesson."
+        note: "what you learnt"
+      - text: "I enjoyed it because it was interesting and useful, and I was good at it. I worked hard, and I did well in my exams at eighteen."
+        say: "I enjoyed it because it was interesting and useful, and I was good at it. I worked hard, and I did well in my exams at eigh-teen."
+        note: "why you enjoyed it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a subject you enjoyed at school. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a subject you enjoyed at school. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: một môn bạn thích ở trường."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about English. I studied it at secondary school in England, from eleven to eighteen."
+        say: "I'd like to talk about English. I studied it at secondary school in England, from eleven to eigh-teen."
+        note: "what it was"
+      - text: "Our teacher was Miss Green. She was kind but strict, and she always gave us lots of books to read."
+        note: "who taught it"
+      - text: "We studied novels, plays, and poems, for example Shakespeare, and we wrote lots of essays."
+        note: "what you learnt"
+      - text: "I enjoyed it because I loved reading, and Miss Green made every lesson interesting. She's the reason I became a teacher!"
+        note: "why you enjoyed it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a subject you enjoyed at school.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a subject you enjoyed at school"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What was the subject?", hint: "I'd like to talk about … · It was my favourite subject."}
+      - {q: "Who taught it?", hint: "Our teacher was Mr / Ms … · He / She was …"}
+      - {q: "What did you learn?", hint: "We learnt about … · Sometimes we …"}
+      - {q: "Why did you enjoy it?", hint: "I enjoyed it because … · I was good at it · I did well in …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the words for subjects and exams from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the words for subjects and exams from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "What was the subject?", focus: 0, pause: 0.5}
+      - {emma: "Who taught it?", focus: 1, pause: 0.5}
+      - {emma: "What did you learn?", focus: 2, pause: 0.5}
+      - {emma: "Why did you enjoy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · school"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Should pupils wear a school uniform?"
+        a: "Yes, I think so. Everyone looks the same, so rich and poor pupils are equal. And it's quick to get dressed in the morning."
+        ask: emma
+        by: tom
+        phrases: ["Yes, I think so.", "… so … are equal."]
+      - q: "Are exams a good way to test students?"
+        a: "Partly. They're fair, because everyone takes the same exam. But some students get nervous and do badly, so teachers should also look at their work during the year."
+        ask: tom
+        by: emma
+        phrases: ["Partly.", "But some students…"]
+      - q: "Should all children learn a foreign language at school?"
+        a: "Definitely. A foreign language like English helps you get a good job, and it's very useful when you travel."
+        ask: emma
+        by: tom
+        phrases: ["Definitely.", "… helps you…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Should pupils wear a school uniform?", focus: 0}
+      - {tom: "Yes, I think so. Everyone looks the same, so rich and poor pupils are equal. And it's quick to get dressed in the morning.", reveal: 0, vi: "Có: ai cũng như nhau, giàu nghèo bình đẳng; sáng mặc đồ nhanh."}
+      - {tom: "Are exams a good way to test students?", focus: 1}
+      - {emma: "Partly. They're fair, because everyone takes the same exam. But some students get nervous and do badly, so teachers should also look at their work during the year.", reveal: 1, vi: "Một phần: công bằng, nhưng có em hồi hộp nên làm bài kém; giáo viên nên xem cả quá trình học."}
+      - {emma: "Should all children learn a foreign language at school?", focus: 2}
+      - {tom: "Definitely. A foreign language like English helps you get a good job, and it's very useful when you travel.", reveal: 2, vi: "Chắc chắn: ngoại ngữ giúp tìm việc tốt, có ích khi đi du lịch."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4: che chữ tr. 109, nhìn tranh, nói tên môn học"
+    items:
+      - {en: "chemistry · physics · biology · maths · ICT · geography · history · literature · music · art · PE · RE · design and technology · modern languages", vi: "môn học (subjects)"}
+      - {en: "be good at ≠ be terrible at · work hard · do well ≠ do badly · lesson · homework (U)", vi: "học hành"}
+      - {en: "nursery → primary → secondary school · state ≠ private school · pupil · uniform", vi: "trường học"}
+      - {en: "start / leave school · stay at school until 18 · go to college / university · get a job", vi: "sau khi học xong"}
+      - {en: "take / pass / fail an exam · results · grade · mark · the best ≠ the worst", vi: "thi cử"}
+      - {en: "Next: Unit 43 · University", vi: "Tiếp theo: Unit 43 · Đại học"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Fourteen school subjects, from chemistry to modern languages.", say: "Four-teen school subjects, from chemistry to modern languages.", focus: 0}
+      - {tom: "Be good at, or terrible at something. Work hard, and do well.", focus: 1}
+      - {emma: "Nursery, primary, and secondary school: a state school, or a private school.", focus: 2}
+      - {tom: "Leave school, or stay at school until eighteen.", say: "Leave school, or stay at school until eigh-teen.", focus: 3}
+      - {emma: "Take an exam, pass or fail it, and get your results.", focus: 4}
+      - {tom: "Next time, Unit 43: university. See you then!", say: "Next time, Unit forty-three: university. See you then!", focus: 5}

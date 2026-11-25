@@ -1,0 +1,536 @@
+# Video Oxford Word Skills Basic · Unit 43 — I can talk about university (sách in tr. 112–113, Answer key tr. 215).
+# UNIT KHÓ (đợt 41): 2 trang, 44 mục Word list — bằng cấp và khóa học (do a degree, course, term, undergraduate / graduate, BA /
+# BSc / MA / MSc / PhD, do research) và cặp ngành học – người (economics → an economist, politics → a politician…); "Do you work or
+# are you a student? What are you studying?" là câu Part 1 hay gặp nhất — video khoảng 13 phút: phần sách, rồi họ từ -ist / -er /
+# -ian và trọng âm, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a course you have taken or are taking", hai bài mẫu; ba câu
+# thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời
+# `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 215 (bài 2 câu 3 hai chỗ trống: 3a/3b). Bài 3 (ABOUT YOUR COUNTRY): Tom
+# trả lời về Việt Nam, Emma về nước Anh (cảnh Nói 1). Bài 6 (Test yourself): tranh 1–10 (hai cảnh), đáp án hiện thành nhãn khi Tom
+# trả lời.
+# Hình trong sách: lời kể của sinh viên (hai cảnh, khung theo câu), Glossary hai cảnh, Spotlight How long does it last?, bảng ngành
+# học – người cùng tranh (hai cảnh: hàng 1–5, hàng 6–10; khung theo hàng), tranh 1–10 để tự kiểm tra — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom học năm hai ngành kinh doanh ở TP. HCM, thích Marketing, vào đại
+# học khoảng hai năm trước (tháng 8), cần IELTS 5.5 để đi trao đổi ở Úc, muốn làm marketing cho công ty cà phê quốc tế; Emma học Văn
+# học Anh ở đại học, làm văn phòng một năm rồi học khóa đào tạo giáo viên, thi trượt Toán năm 15 tuổi phải thi lại (U42). Mới: khóa
+# học của Tom bốn năm, hai học kỳ mỗi năm, viết nhiều bài luận, hay học ở thư viện; học kỳ này học môn Marketing 15 tuần (học thứ
+# Hai, làm dự án nhóm); Emma có bằng BA, khóa đào tạo giáo viên một tháng ở London, xong khóa thì có việc dạy đầu tiên.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U43-university.yaml
+id: U43-university
+activity: U43-words
+title: "Unit 43 · University"
+subtitle: "I can talk about university"
+title_vi: "Đại học: do a degree, course, term, undergraduate, BA / MA / PhD, do research; economics → economist, politics → politician — kèm ôn tập và luyện nói"
+tag: "STUDY AND WORK · UNIT 43"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 43: university. Today: degrees, courses, and the names of subjects and the people who do them. In IELTS part one, you often hear: what are you studying? So this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit forty-three: university. Today: degrees, courses, and the names of subjects and the people who do them. In eye-elts part one, you often hear: what are you studying? So this video is longer, with a review and speaking practice."
+        vi: "Unit 43: đại học — bằng cấp, khóa học, ngành học và nghề; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Một tấm bằng đại học (1)"
+    heading: "A · A university degree (1)"
+    heading_vi: "Lời kể tr. 112 — do a degree · course · last · term · library"
+    image: {pdf: course-book, page: 113, clip: [30, 90, 222, 163.5]}
+    items:
+      - {box: [34, 93, 210, 117.5]}
+      - {box: [34, 105, 210, 128.5]}
+      - {box: [34, 116.5, 210, 151.5]}
+      - {box: [34, 140, 210, 163.5]}
+    lines:
+      - {emma: "Look at page one hundred and twelve. A student says: I started university two years ago, when I was nineteen,", say: "Look at page one hundred and twelve. A student says: I started university two years ago, when I was nine-teen,", focus: 0}
+      - {emma: "and I'm doing a degree in Spanish and French.", focus: 1, vi: "do a degree: học lấy bằng (đại học)"}
+      - {emma: "The course lasts three years, and there are three terms a year.", focus: 2, vi: "course: khóa học · last: kéo dài · term: học kỳ"}
+      - {emma: "I work in the library a lot,", focus: 3, vi: "library: thư viện"}
+
+  - kind: figure
+    chapter: "Một tấm bằng đại học (2)"
+    heading: "A · A university degree (2)"
+    heading_vi: "Lời kể tr. 112 — undergraduate · write an essay · again · fortunately · BA · do research · PhD"
+    image: {pdf: course-book, page: 113, clip: [30, 150, 222, 243]}
+    items:
+      - {box: [34, 151, 210, 185.5]}
+      - {box: [34, 174, 210, 208.5]}
+      - {box: [34, 197, 210, 220.5]}
+      - {box: [34, 220, 210, 241]}
+    lines:
+      - {emma: "because, like many undergraduates, I have to write lots of essays.", focus: 0, vi: "undergraduate: sinh viên (chưa tốt nghiệp) · essay: bài luận"}
+      - {emma: "I also have to take exams, and last term I failed one and had to take it again.", focus: 1, vi: "again: lại, lần nữa"}
+      - {emma: "I got the result two weeks ago; fortunately I passed this time.", focus: 2, vi: "fortunately: may mắn là"}
+      - {emma: "When I've got my degree, a BA, I want to do research for a PhD.", say: "When I've got my degree, a bee eigh, I want to do research for a PhD.", focus: 3, vi: "BA: cử nhân · do research: nghiên cứu · PhD: tiến sĩ"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 112 — do a degree · course · term · library · undergraduate ≠ graduate"
+    image: {pdf: course-book, page: 113, clip: [244, 86, 488, 193]}
+    items:
+      - {box: [246, 107.5, 486, 121]}
+      - {box: [246, 120, 486, 144]}
+      - {box: [246, 143.5, 486, 156.5]}
+      - {box: [246, 155.5, 486, 168.5]}
+      - {box: [246, 167.5, 486, 192]}
+    lines:
+      - {tom: "Look at the glossary. Do a degree: study at university for three or four years.", focus: 0}
+      - {emma: "A course: a number of classes on a subject, for example, an English course.", focus: 1}
+      - {tom: "A term: a period of study, usually about ten weeks.", focus: 2}
+      - {emma: "A library: a place where you can read and borrow books.", focus: 3, vi: "borrow: mượn"}
+      - {tom: "An undergraduate: a student doing a first degree. A graduate has a degree.", focus: 4, vi: "undergraduate: đang học ≠ graduate: đã có bằng"}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 112 — write an essay · again · fortunately ≠ unfortunately · BA / BSc · MA / MSc · do research · PhD"
+    image: {pdf: course-book, page: 113, clip: [244, 191, 488, 301]}
+    items:
+      - {box: [246, 192, 486, 205]}
+      - {box: [246, 204, 486, 216]}
+      - {box: [246, 215.5, 486, 240]}
+      - {box: [246, 239.5, 486, 251.5]}
+      - {box: [246, 251.5, 486, 263.5]}
+      - {box: [246, 263.5, 486, 287]}
+      - {box: [246, 287.5, 486, 300]}
+    lines:
+      - {emma: "Write an essay: do a piece of writing on a subject.", focus: 0}
+      - {tom: "Again: one more time.", focus: 1}
+      - {emma: "We say fortunately when we give good news. The opposite is unfortunately.", focus: 2, vi: "fortunately ≠ unfortunately: may mắn là ≠ không may là"}
+      - {tom: "A BA, or a BSc: a Bachelor of Arts, or Science.", say: "A bee eigh, or a bee ess see: a Bachelor of Arts, or Science.", focus: 3, vi: "Bachelor: cử nhân"}
+      - {emma: "An MA, or an MSc: a Master of Arts, or Science.", say: "An em eigh, or an em ess see: a Master of Arts, or Science.", focus: 4, vi: "Master: thạc sĩ"}
+      - {tom: "Do research: study a subject for a long time to learn new information.", focus: 5}
+      - {emma: "And a PhD: a Doctor of Philosophy.", focus: 6, vi: "PhD: tiến sĩ"}
+
+  - kind: figure
+    chapter: "Spotlight: How long does it last?"
+    heading: "Spotlight · How long does it last?"
+    heading_vi: "tr. 112 — last = kéo dài (động từ)"
+    image: {pdf: course-book, page: 113, clip: [248, 304, 488, 375]}
+    items:
+      - {box: [252, 330, 486, 343.5]}
+      - {box: [252, 342.5, 486, 355]}
+      - {box: [252, 354.5, 486, 367.5]}
+    lines:
+      - {emma: "Look at the spotlight. To last is to continue for a period of time.", focus: 0, vi: "last (v): kéo dài"}
+      - {tom: "How long does the film last? Two hours.", focus: 1}
+      - {emma: "The Masters course lasts two years.", focus: 2, vi: "Masters course: khóa thạc sĩ"}
+
+  - kind: blanks
+    chapter: "Bài 1: chọn từ đúng"
+    heading: "Exercise 1 · Circle the correct word"
+    heading_vi: "Ví dụ: She did an English course / term. → course (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "I want to do / make a degree in maths.  →  ___", answer: "do"}
+      - {n: 2, q: "A term / degree lasts about ten weeks.  →  ___", answer: "term"}
+      - {n: 3, q: "I've got a BA / BSc in physics.  →  ___", answer: "BSc"}
+      - {n: 4, q: "I study a lot in the library / bookshop.  →  ___", answer: "library"}
+      - {n: 5, q: "A graduate / An undergraduate has a degree.  →  ___", answer: "A graduate"}
+      - {n: 6, q: "Fortunately / Unfortunately, I failed the exam.  →  ___", answer: "Unfortunately"}
+      - {n: 7, q: "You can do research before / after a degree.  →  ___", answer: "after"}
+    lines:
+      - emma: "Exercise 1. Circle the correct word. The example is: she did an English course. Pause the video and try."
+        say: "Exercise one. Circle the correct word. The example is: she did an English course. Pause the video and try."
+        vi: "Bài 1: khoanh từ đúng."
+      - {tom: "One. Do a degree. Two. A term lasts about ten weeks. Three. A BSc: physics is a science. Four. The library.", say: "One. Do a degree. Two. A term lasts about ten weeks. Three. A bee ess see: physics is a science. Four. The library.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. A graduate has a degree. Six. Unfortunately, I failed. Seven. You do research after a degree.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành hội thoại"
+    heading: "Exercise 2 · Complete the dialogues"
+    heading_vi: "Ví dụ: How long does the term last? ~ About twelve weeks. (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "Have you got a ___? ~ Yes, a BSc.", answer: "degree"}
+      - {n: 2, q: "Did she have to ___ an essay? ~ Yes, three, in fact.", answer: "do / write"}
+      - {n: "3a", q: "Can you ___ research next year?", answer: "do"}
+      - {n: "3b", q: "~ Yes, I want to do a ___.", answer: "PhD"}
+      - {n: 4, q: "Did he get his exam results? ~ Yes. ___, he passed.", answer: "Fortunately"}
+      - {n: 5, q: "Can he take the exam ___? ~ Yes, next summer.", answer: "again"}
+      - {n: 6, q: "How long does the course ___? ~ It's only one term.", answer: "last"}
+    lines:
+      - emma: "Exercise 2. Complete the dialogues. The example is: how long does the term last? About twelve weeks. Pause the video and try."
+        say: "Exercise two. Complete the dialogues. The example is: how long does the term last? About twelve weeks. Pause the video and try."
+        vi: "Bài 2: hoàn thành hội thoại."
+      - {tom: "One. Have you got a degree? Two. Did she have to do, or write, an essay? Three. Can you do research next year? Yes, I want to do a PhD.", reveal: ["1", "2", "3a", "3b"], focus: 3}
+      - {tom: "Four. Fortunately, he passed. Five. Can he take the exam again? Six. How long does the course last?", reveal: ["4", "5", "6"], focus: 6}
+
+  - kind: qa
+    chapter: "Nói 1: đại học ở nước bạn"
+    heading: "Speaking 1 · Exercise 3: about your country"
+    heading_vi: "Bài 3 (ABOUT YOUR COUNTRY) — Tom nói về Việt Nam, Emma về nước Anh; tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "How long do you need to study for a degree in chemistry?"
+        a: "Four years, usually."
+        ask: emma
+        by: tom
+        phrases: ["… years, usually."]
+      - q: "How long do you need to study for a Masters degree?"
+        a: "About two years."
+        ask: emma
+        by: tom
+        phrases: ["About … years."]
+      - q: "How long does a university term last?"
+        a: "We have two terms a year, and each one lasts about four months."
+        ask: emma
+        by: tom
+        phrases: ["We have … terms a year", "each one lasts…"]
+      - q: "How long does a school term last in England, Emma?"
+        a: "About twelve weeks. There are three terms a year."
+        ask: tom
+        by: emma
+        phrases: ["About … weeks.", "There are … terms a year."]
+      - q: "If you fail exams, can you always take them again?"
+        a: "Usually, yes. I failed maths at fifteen, and I took it again the next year."
+        ask: tom
+        by: emma
+        phrases: ["Usually, yes.", "I took it again…"]
+    lines:
+      - {emma: "Exercise 3 is about your country. Tom, how long do you need to study for a degree in chemistry in Vietnam?", say: "Exercise three is about your country. Tom, how long do you need to study for a degree in chemistry in Vietnam?", focus: 0}
+      - {tom: "Four years, usually.", reveal: 0, vi: "Thường là bốn năm."}
+      - {emma: "How long do you need to study for a Masters degree?", focus: 1}
+      - {tom: "About two years.", reveal: 1, vi: "Khoảng hai năm."}
+      - {emma: "How long does a university term last?", focus: 2}
+      - {tom: "We have two terms a year, and each one lasts about four months.", reveal: 2, vi: "Hai học kỳ một năm, mỗi kỳ khoảng bốn tháng."}
+      - {tom: "How long does a school term last in England, Emma?", focus: 3}
+      - {emma: "About twelve weeks. There are three terms a year.", reveal: 3, vi: "Khoảng mười hai tuần; một năm ba học kỳ."}
+      - {tom: "If you fail exams, can you always take them again?", focus: 4}
+      - {emma: "Usually, yes. I failed maths at fifteen, and I took it again the next year.", say: "Usually, yes. I failed maths at fif-teen, and I took it again the next year.", reveal: 4, vi: "Thường là được; Emma trượt Toán năm 15 tuổi, năm sau thi lại."}
+
+  - kind: figure
+    chapter: "Ngành học và người (1)"
+    heading: "B · Degree subjects and people (1)"
+    heading_vi: "Bảng tr. 113 — medicine · psychology · economics · law · politics"
+    image: {pdf: course-book, page: 114, clip: [28, 58, 496, 212]}
+    items:
+      - {box: [30, 81, 256, 107.5]}
+      - {box: [30, 106.5, 256, 133.5]}
+      - {box: [30, 132.5, 256, 159]}
+      - {box: [30, 158, 256, 184.5]}
+      - {box: [30, 183.5, 256, 210]}
+    lines:
+      - {emma: "Part B: degree subjects and people. If you study medicine, you become a doctor.", focus: 0, vi: "medicine: ngành y · a doctor: bác sĩ"}
+      - {tom: "Psychology: a psychologist. The P is silent.", say: "Psychology: a psychologist. The pee is silent.", focus: 1, vi: "psychology: tâm lý học (p câm)"}
+      - {emma: "Economics: an economist.", focus: 2, vi: "economics: kinh tế học"}
+      - {tom: "Law: a lawyer.", focus: 3, vi: "law: luật · lawyer: luật sư"}
+      - {emma: "And politics: a politician.", focus: 4, vi: "politics: chính trị · politician: chính trị gia"}
+
+  - kind: figure
+    chapter: "Ngành học và người (2)"
+    heading: "B · Degree subjects and people (2)"
+    heading_vi: "Bảng tr. 113 — engineering · architecture · computer science · journalism · business studies"
+    image: {pdf: course-book, page: 114, clip: [28, 206, 496, 352]}
+    items:
+      - {box: [30, 209, 256, 235.5]}
+      - {box: [30, 234.5, 256, 261]}
+      - {box: [30, 260, 256, 289.5]}
+      - {box: [30, 288.5, 256, 318]}
+      - {box: [30, 317, 256, 347]}
+    lines:
+      - {tom: "Engineering: an engineer.", focus: 0, vi: "engineering: kỹ thuật · engineer: kỹ sư"}
+      - {emma: "Architecture: an architect. C, H sounds like K.", say: "Architecture: an architect. See, aitch sounds like kay.", focus: 1, vi: "architecture: kiến trúc (ch đọc như k)"}
+      - {tom: "Computer science: an IT manager, or a software engineer.", say: "Computer science: an eye tee manager, or a software engineer.", focus: 2, vi: "computer science: khoa học máy tính · software engineer: kỹ sư phần mềm"}
+      - {emma: "Journalism: a journalist, or a reporter.", focus: 3, vi: "journalism: báo chí · reporter: phóng viên"}
+      - {tom: "And business studies: a businessman, a businesswoman, or a manager. That's what I'm studying!", focus: 4, vi: "business studies: quản trị kinh doanh"}
+
+  - kind: blanks
+    chapter: "Bài 4: hoàn thành câu"
+    heading: "Exercise 4 · Complete the sentences. Use the degree subject to help you"
+    heading_vi: "Ví dụ: He always wanted to be a lawyer. (LAW) (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "She wants to be a ___.", hint: "MEDICINE", answer: "doctor"}
+      - {n: 2, q: "When did he become an ___?", hint: "ENGINEERING", answer: "engineer"}
+      - {n: 3, q: "She's studying to become an ___.", hint: "ARCHITECTURE", answer: "architect"}
+      - {n: 4, q: "Why does he want to be a ___?", hint: "PSYCHOLOGY", answer: "psychologist"}
+      - {n: 5, q: "She works as an ___.", hint: "ECONOMICS", answer: "economist"}
+      - {n: 6, q: "I don't know anyone who wants to be a ___.", hint: "POLITICS", answer: "politician"}
+      - {n: 7, q: "Is it difficult to become a ___?", hint: "JOURNALISM", answer: "journalist"}
+      - {n: 8, q: "I knew he'd become a ___.", hint: "BUSINESS STUDIES", answer: "businessman / manager"}
+    lines:
+      - emma: "Exercise 4. Complete the sentences. Use the degree subject on the right to help you. The example is: he always wanted to be a lawyer. Pause the video and try."
+        say: "Exercise four. Complete the sentences. Yooz the degree subject on the right to help you. The example is: he always wanted to be a lawyer. Pause the video and try."
+        vi: "Bài 4: hoàn thành câu bằng tên người theo ngành học."
+      - {tom: "One. A doctor. Two. An engineer. Three. An architect. Four. A psychologist.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. An economist. Six. A politician. Seven. A journalist. Eight. A businessman, or a manager.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: ngành học hay người?"
+    heading: "Exercise 5 · Complete the words. Degree subject (DS) or person (P)?"
+    heading_vi: "Ví dụ: jo_rnal_s_m → journalism (DS) (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "l _ wy _ r  →  ___", answer: "lawyer (P)"}
+      - {n: 2, q: "ar _ _ it _ ct _ _ _  →  ___", answer: "architecture (DS)"}
+      - {n: 3, q: "c _ mp _ t _ _ sci _ _ c _  →  ___", answer: "computer science (DS)"}
+      - {n: 4, q: "s _ _ tw _ r _  e _ g _ ne _ r  →  ___", answer: "software engineer (P)"}
+      - {n: 5, q: "ps _ ch _ l _ g _  →  ___", answer: "psychology (DS)"}
+      - {n: 6, q: "b _ s _ n _ ss  st _ d _ _ s  →  ___", answer: "business studies (DS)"}
+      - {n: 7, q: "p _ l _ t _ c _  →  ___", answer: "politics (DS)"}
+      - {n: 8, q: "eng _ n _ _ r  →  ___", answer: "engineer (P)"}
+      - {n: 9, q: "m _ d _ c _ n _  →  ___", answer: "medicine (DS)"}
+      - {n: 10, q: "ec _ n _ m _ c _  →  ___", answer: "economics (DS)"}
+      - {n: 11, q: "IT m _ n _ g _ r  →  ___", answer: "IT manager (P)"}
+      - {n: 12, q: "r _ p _ rt _ _  →  ___", answer: "reporter (P)"}
+    lines:
+      - emma: "Exercise 5. Complete the words. Is it a degree subject, or a person? Write DS or P. The example is: journalism, a degree subject. Pause the video and try."
+        say: "Exercise five. Complete the words. Is it a degree subject, or a person? Write dee ess, or pee. The example is: journalism, a degree subject. Pause the video and try."
+        vi: "Bài 5: điền chữ; ngành học (DS) hay người (P)?"
+      - {tom: "One. Lawyer: a person. Two. Architecture: a subject. Three. Computer science: a subject. Four. Software engineer: a person. Five. Psychology: a subject. Six. Business studies: a subject.", reveal: [1, 2, 3, 4, 5, 6], focus: 5}
+      - {tom: "Seven. Politics: a subject. Eight. Engineer: a person. Nine. Medicine: a subject. Ten. Economics: a subject. Eleven. IT manager: a person. Twelve. Reporter: a person.", say: "Seven. Politics: a subject. Eight. Engineer: a person. Nine. Medicine: a subject. Ten. Economics: a subject. Eleven. Eye tee manager: a person. Twelve. Reporter: a person.", reveal: [7, 8, 9, 10, 11, 12], focus: 11}
+
+  - kind: figure
+    chapter: "Bài 6: tự kiểm tra"
+    heading: "Exercise 6 · Test yourself: the subjects and people (1)"
+    heading_vi: "Che bảng, nhìn tranh 1–6 — tạm dừng video sau mỗi số; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 114, clip: [262, 58, 496, 212]}
+    items:
+      - {box: [266, 64, 314, 136]}
+      - {box: [266, 64, 314, 136], label: "medicine · a doctor"}
+      - {box: [334, 64, 402, 134]}
+      - {box: [334, 64, 402, 134], label: "psychology · a psychologist"}
+      - {box: [420, 59, 490, 137]}
+      - {box: [420, 59, 490, 137], label: "economics · an economist"}
+      - {box: [266, 140, 324, 210]}
+      - {box: [266, 140, 324, 210], label: "law · a lawyer"}
+      - {box: [335, 140, 410, 210]}
+      - {box: [335, 140, 410, 210], label: "politics · a politician"}
+      - {box: [426, 136, 495, 210]}
+      - {box: [426, 136, 495, 210], label: "engineering · an engineer"}
+    lines:
+      - emma: "Exercise 6 is a test. Cover the table, and look at the pictures. Say the subject, and the person. Pause the video after each number. Number one?"
+        say: "Exercise six is a test. Cover the table, and look at the pictures. Say the subject, and the person. Pause the video after each number. Number one?"
+        focus: 0
+        vi: "Bài 6: che bảng, nhìn tranh, nói ngành học và người."
+      - {tom: "Medicine: a doctor.", focus: 1}
+      - {emma: "Number two?", focus: 2}
+      - {tom: "Psychology: a psychologist.", focus: 3}
+      - {emma: "Number three?", focus: 4}
+      - {tom: "Economics: an economist.", focus: 5}
+      - {emma: "Number four?", focus: 6}
+      - {tom: "Law: a lawyer.", focus: 7}
+      - {emma: "Number five?", focus: 8}
+      - {tom: "Politics: a politician.", focus: 9}
+      - {emma: "Number six?", focus: 10}
+      - {tom: "Engineering: an engineer.", focus: 11}
+
+  - kind: figure
+    chapter: "Bài 6 (tiếp)"
+    heading: "Exercise 6 · Test yourself: the subjects and people (2)"
+    heading_vi: "Tranh 7–10 — tạm dừng video sau mỗi số"
+    image: {pdf: course-book, page: 114, clip: [262, 212, 496, 352]}
+    items:
+      - {box: [264, 214, 352, 284]}
+      - {box: [264, 214, 352, 284], label: "architecture · an architect"}
+      - {box: [424, 215, 495, 280]}
+      - {box: [424, 215, 495, 280], label: "computer science · an IT manager"}
+      - {box: [264, 278, 334, 350]}
+      - {box: [264, 278, 334, 350], label: "journalism · a journalist"}
+      - {box: [352, 246, 422, 350]}
+      - {box: [352, 246, 422, 350], label: "business studies · a businessman"}
+    lines:
+      - {emma: "Number seven?", focus: 0}
+      - {tom: "Architecture: an architect.", focus: 1}
+      - {emma: "Number eight?", focus: 2}
+      - {tom: "Computer science: an IT manager, or a software engineer.", say: "Computer science: an eye tee manager, or a software engineer.", focus: 3}
+      - {emma: "Number nine?", focus: 4}
+      - {tom: "Journalism: a journalist, or a reporter.", focus: 5}
+      - {emma: "And number ten?", focus: 6}
+      - {tom: "Business studies: a businessman, or a manager.", focus: 7}
+
+  - kind: bullets
+    chapter: "Họ từ và trọng âm"
+    heading: "Word families and stress"
+    heading_vi: "Thêm ngoài sách — người làm nghề: -ist, -er, -ian; trọng âm đổi chỗ"
+    items:
+      - {en: "-ist: psychology → a psychologist · economics → an economist · journalism → a journalist", vi: "đuôi -ist"}
+      - {en: "-er: law → a lawyer · engineering → an engineer · report → a reporter", vi: "đuôi -er"}
+      - {en: "-ian: politics → a politician · music → a musician", vi: "đuôi -ian"}
+      - {en: "different: medicine → a doctor · architecture → an architect", vi: "khác hẳn"}
+      - {en: "stress: ecoNOmics → eCOnomist · POlitics → poliTIcian · PHOtograph → phoTOgrapher", vi: "trọng âm đổi chỗ"}
+    lines:
+      - {emma: "Look at the endings. Many people words end in I, S, T: psychology, a psychologist; economics, an economist; journalism, a journalist.", say: "Look at the endings. Many people words end in eye, ess, tee: psychology, a psychologist; economics, an economist; journalism, a journalist.", focus: 0, vi: "-ist: người làm nghề"}
+      - {tom: "Some end in E, R: law, a lawyer; engineering, an engineer; report, a reporter.", say: "Some end in ee, ar: law, a lawyer; engineering, an engineer; report, a reporter.", focus: 1}
+      - {emma: "Some end in I, A, N: politics, a politician; music, a musician.", say: "Some end in eye, eigh, en: politics, a politician; music, a musician.", focus: 2, vi: "musician: nhạc sĩ, nhạc công"}
+      - {tom: "And some are different: medicine, a doctor; architecture, an architect.", focus: 3}
+      - {emma: "Be careful with stress. Economics, but economist. Politics, but politician. Photograph, but photographer. Listen again: economics, economist.", focus: 4, vi: "trọng âm: ecoNOmics / eCOnomist · POlitics / poliTIcian"}
+
+  - kind: qa
+    chapter: "Nói 2: việc học của bạn"
+    heading: "Speaking 2 · IELTS Part 1: your studies"
+    heading_vi: "Câu hỏi Part 1 hay gặp nhất — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you work, or are you a student?"
+        a: "I'm a student. I'm in my second year at university in Ho Chi Minh City."
+        ask: emma
+        by: tom
+        phrases: ["I'm a student.", "I'm in my … year"]
+      - q: "What are you studying?"
+        a: "I'm doing a degree in business studies. My favourite subject is marketing."
+        ask: emma
+        by: tom
+        phrases: ["I'm doing a degree in…", "My favourite subject is…"]
+      - q: "How long does your course last?"
+        a: "Four years. There are two terms a year, and we have exams at the end of each term."
+        ask: emma
+        by: tom
+        phrases: ["… years.", "There are … terms a year"]
+      - q: "What do you have to do on your course?"
+        a: "We have to write lots of essays, and we often work in groups. I work in the library a lot."
+        ask: emma
+        by: tom
+        phrases: ["We have to…", "I work in the library a lot."]
+      - q: "What do you want to do after your degree?"
+        a: "I'd like to get a job in marketing, maybe at an international coffee company."
+        ask: emma
+        by: tom
+        phrases: ["I'd like to get a job in…"]
+      - q: "What did you study at university, Emma?"
+        a: "English literature. I've got a BA. Then, after a year in an office, I did a teacher training course."
+        ask: tom
+        by: emma
+        phrases: ["I've got a BA.", "Then I did…"]
+    lines:
+      - {emma: "Now, IELTS part one. These are the most common questions. Tom, do you work, or are you a student?", say: "Now, eye-elts part one. These are the most common questions. Tom, do you work, or are you a student?", focus: 0}
+      - {tom: "I'm a student. I'm in my second year at university in Ho Chi Minh City.", say: "I'm a student. I'm in my second year at university in Ho Chee Min City.", reveal: 0, vi: "Là sinh viên năm hai ở TP. HCM."}
+      - {emma: "What are you studying?", focus: 1}
+      - {tom: "I'm doing a degree in business studies. My favourite subject is marketing.", reveal: 1, vi: "Học quản trị kinh doanh; thích nhất môn Marketing."}
+      - {emma: "How long does your course last?", focus: 2}
+      - {tom: "Four years. There are two terms a year, and we have exams at the end of each term.", reveal: 2, vi: "Bốn năm; hai học kỳ mỗi năm, thi cuối mỗi kỳ."}
+      - {emma: "What do you have to do on your course?", focus: 3}
+      - {tom: "We have to write lots of essays, and we often work in groups. I work in the library a lot.", reveal: 3, vi: "Viết nhiều bài luận, hay làm việc nhóm; học ở thư viện nhiều."}
+      - {emma: "What do you want to do after your degree?", focus: 4}
+      - {tom: "I'd like to get a job in marketing, maybe at an international coffee company.", reveal: 4, vi: "Muốn làm marketing, có thể ở một công ty cà phê quốc tế."}
+      - {tom: "What did you study at university, Emma?", focus: 5}
+      - {emma: "English literature. I've got a BA. Then, after a year in an office, I did a teacher training course.", say: "English literature. I've got a bee eigh. Then, after a year in an office, I did a teacher training course.", reveal: 5, vi: "Văn học Anh, bằng cử nhân; làm văn phòng một năm rồi học khóa đào tạo giáo viên."}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về việc học — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I'm doing a degree in economy.  →  ___", answer: "I'm doing a degree in economics."}
+      - {n: 2, q: "My sister is a psychology.  →  ___", answer: "My sister is a psychologist."}
+      - {n: 3, q: "I want to make a Masters next year.  →  ___", answer: "I want to do a Masters next year."}
+      - {n: 4, q: "The course is long three years.  →  ___", answer: "The course lasts three years."}
+      - {n: 5, q: "I'm a graduate. I'm in my second year.  →  ___", answer: "I'm an undergraduate. I'm in my second year."}
+      - {n: 6, q: "Fortunately, I failed the exam.  →  ___", answer: "Unfortunately, I failed the exam."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. A degree in economics: economy is the money and business of a country. Two. My sister is a psychologist: the person, not the subject.", reveal: [1, 2], focus: 1, vi: "economy: nền kinh tế ≠ economics: ngành kinh tế học"}
+      - {tom: "Three. Do a Masters, not make. Four. The course lasts three years.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I'm an undergraduate: a graduate has finished the degree. Six. Unfortunately, for bad news.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a course you have taken or are taking"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about my marketing course. It's part of my business studies degree, and I started it this term."
+        note: "what the course is"
+      - text: "It lasts fifteen weeks. We have a class every Monday morning, and we also work in groups on real projects."
+        say: "It lasts fif-teen weeks. We have a class every Monday morning, and we also work in groups on real projects."
+        note: "when and how you study"
+      - text: "We learn how companies sell their products, and how they use the internet. At the end, we have to write an essay and take an exam."
+        say: "We learn how companies sell their products, and how they yooz the internet. At the end, we have to write an essay and take an exam."
+        note: "what you learn"
+      - text: "It's useful because I want to work in marketing one day, maybe for a coffee company. And it's my favourite course, because it's creative. I hope I get a good grade!"
+        note: "why it is useful"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe a course you have taken, or are taking. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe a course you have taken, or are taking. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: một khóa học bạn đã / đang học."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my teacher training course. I took it in London, after I worked in an office for a year."
+        note: "what the course is"
+      - text: "It lasted only one month, but it was very hard work. We studied every day from nine to six."
+        note: "when and how you studied"
+      - text: "We learnt how to plan lessons, and how to teach grammar and vocabulary. Every day, we taught real students, and our trainers watched us."
+        note: "what you learnt"
+      - text: "It changed my life. After the course, I got my first teaching job, and three years ago I came to Vietnam."
+        note: "why it was useful"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a course you have taken.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a course you have taken or are taking"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What is the course?", hint: "I'd like to talk about my … course · It's part of …"}
+      - {q: "When and how do / did you study?", hint: "It lasts / lasted … · We have / had classes …"}
+      - {q: "What do / did you learn?", hint: "We learn / learnt how to … · We have to …"}
+      - {q: "Why is / was it useful?", hint: "It's useful because … · After the course, I …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. It can be a university course, an English course, or any course."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút — khóa học nào cũng được."
+      - {emma: "What is the course?", focus: 0, pause: 0.5}
+      - {emma: "When and how do you study?", focus: 1, pause: 0.5}
+      - {emma: "What do you learn?", focus: 2, pause: 0.5}
+      - {emma: "Why is it useful?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · university"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Is it important to go to university?"
+        a: "For some jobs, yes: doctors, lawyers, and engineers need a degree. But some people go to college, or start a business, and they do very well."
+        ask: emma
+        by: tom
+        phrases: ["For some jobs, yes.", "But some people…"]
+      - q: "Should university be free?"
+        a: "I think it should be cheaper, so that students from poor families can go too. A good education shouldn't only be for rich people."
+        ask: tom
+        by: emma
+        phrases: ["I think it should be…", "so that…"]
+      - q: "Is it better to study in your own country, or abroad?"
+        a: "Studying abroad is expensive, but you can improve your English and meet people from other countries. That's why I want to go to Australia on an exchange."
+        ask: emma
+        by: tom
+        phrases: ["… is expensive, but…", "That's why…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Is it important to go to university?", focus: 0}
+      - {tom: "For some jobs, yes: doctors, lawyers, and engineers need a degree. But some people go to college, or start a business, and they do very well.", reveal: 0, vi: "Với một số nghề thì có; nhưng có người học cao đẳng hay khởi nghiệp vẫn rất thành công."}
+      - {tom: "Should university be free?", focus: 1}
+      - {emma: "I think it should be cheaper, so that students from poor families can go too. A good education shouldn't only be for rich people.", reveal: 1, vi: "Nên rẻ hơn để sinh viên nhà nghèo cũng được học."}
+      - {emma: "Is it better to study in your own country, or abroad?", focus: 2}
+      - {tom: "Studying abroad is expensive, but you can improve your English and meet people from other countries. That's why I want to go to Australia on an exchange.", reveal: 2, vi: "Du học đắt nhưng giỏi tiếng Anh hơn, quen bạn nước khác — vì thế Tom muốn đi trao đổi ở Úc."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 6: che bảng tr. 113, nhìn tranh, nói ngành học và người"
+    items:
+      - {en: "do a degree · a course · a term · last · the library · write an essay · take an exam again", vi: "học đại học"}
+      - {en: "an undergraduate ≠ a graduate · a BA / BSc · an MA / MSc · do research · a PhD", vi: "bằng cấp"}
+      - {en: "medicine → doctor · psychology → psychologist · economics → economist · law → lawyer · politics → politician", vi: "ngành học → người (1)"}
+      - {en: "engineering → engineer · architecture → architect · computer science → IT manager · journalism → journalist", vi: "ngành học → người (2)"}
+      - {en: "fortunately ≠ unfortunately · business studies → a businessman / a manager", vi: "từ khác"}
+      - {en: "Next: Unit 44 · Jobs", vi: "Tiếp theo: Unit 44 · Nghề nghiệp"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Do a degree: a course, terms, the library, essays, and exams.", focus: 0}
+      - {tom: "An undergraduate is still studying; a graduate has a degree: a BA, then maybe an MA, or a PhD.", say: "An undergraduate is still studying; a graduate has a degree: a bee eigh, then maybe an em eigh, or a PhD.", focus: 1}
+      - {emma: "Medicine, a doctor. Psychology, a psychologist. Economics, an economist. Law, a lawyer. Politics, a politician.", focus: 2}
+      - {tom: "Engineering, an engineer. Architecture, an architect. Computer science, an IT manager. Journalism, a journalist.", say: "Engineering, an engineer. Architecture, an architect. Computer science, an eye tee manager. Journalism, a journalist.", focus: 3}
+      - {emma: "Fortunately, for good news; unfortunately, for bad news.", focus: 4}
+      - {tom: "Next time, Unit 44: jobs. See you then!", say: "Next time, Unit forty-four: jobs. See you then!", focus: 5}
