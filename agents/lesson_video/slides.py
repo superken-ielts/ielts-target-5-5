@@ -106,6 +106,13 @@ def _hex(c: str) -> tuple[int, int, int]:
     return tuple(int(c[i:i + 2], 16) for i in (1, 3, 5))
 
 
+def text_col(d, items, left: float) -> int:
+    """Mép trái cột câu của cảnh `blanks` câu điền từ: nhãn số vẽ ở left + 14, câu bắt đầu ở left + 52; nhãn dài như "10a."
+    (đợt 40: dính vào chữ đầu câu) thì cả cột câu lùi theo nhãn dài nhất của cảnh."""
+    lab_w = max((d.textlength(f"{it['n']}.", font=font("bold", 22)) for it in items), default=0)
+    return int(left + max(52, 14 + lab_w + 8))
+
+
 def tint(c: str, a: float) -> str:
     """Pha màu c với nền trắng (a = độ đậm)."""
     r, g, b = _hex(c)
@@ -794,6 +801,7 @@ class Slides:
         # ô gợi ý: rộng 166 px, nới ra (tối đa 420 px) cho gợi ý dài như "gets better / is not so good"
         need = max((d.textlength(str(it["hint"]), font=font("italic", 19)) for it in sc.items if it.get("hint")), default=0)
         hint_x = W - 64 - int(min(max(166, need + 28), 420))
+        tx = text_col(d, sc.items, L)
         for i, it in enumerate(sc.items):
             y = TOP + i * rh
             mid = y + (rh - 4) / 2
@@ -804,7 +812,7 @@ class Slides:
             q = str(it.get("q") or "___")
             before, _, after = q.partition("___")
             ans = str(it["answer"])
-            room = (hint_x - 16 if it.get("hint") else W - 64) - (L + 52)
+            room = (hint_x - 16 if it.get("hint") else W - 64) - tx
             size = 22
             while size > 15:  # câu dài thì thu nhỏ chữ cho vừa một dòng
                 f, fb = font("regular", size), font("bold", size)
@@ -813,7 +821,7 @@ class Slides:
                     break
                 size -= 1
             f = font("regular", size)
-            x = L + 52
+            x = tx
             if before:
                 d.text((x, mid), before, font=f, fill=C["ink"], anchor="lm")
                 x += d.textlength(before, font=f) + 6

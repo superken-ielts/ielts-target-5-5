@@ -756,6 +756,17 @@ SELF_PACED = {
 }
 
 
+def test_blank_sentences_leave_room_for_long_number_labels():
+    """Đợt 40: nhãn "10a." dính vào chữ đầu câu ("10a.Heat the soup…"). Nhãn một – hai ký tự giữ cột câu ở L + 52 như cũ;
+    nhãn dài hơn thì cả cột câu lùi theo nhãn dài nhất, cách nhãn ít nhất 8 điểm ảnh."""
+    from PIL import Image, ImageDraw
+    from lesson_video.slides import font, text_col
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    assert text_col(d, [{"n": 9}, {"n": 12}, {"n": "2a"}], 52) == 52 + 52
+    long = text_col(d, [{"n": 9}, {"n": "10a"}, {"n": "10b"}], 52)
+    assert long >= 52 + 14 + d.textlength("10a.", font=font("bold", 22)) + 8
+
+
 def test_practice_without_wait_is_self_paced(tmp_path):
     """"Đến lượt bạn" không có `wait`: không đếm ngược; slide hiện cả danh sách câu và tô câu đang đọc (đợt 24)."""
     from lesson_video.slides import C, _hex
