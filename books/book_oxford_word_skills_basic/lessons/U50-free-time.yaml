@@ -1,0 +1,607 @@
+# Video Oxford Word Skills Basic · Unit 50 — I can talk about my free time (sách in tr. 130–131, Answer key tr. 217).
+# UNIT KHÓ (đợt 42): 35 mục Word list, cụm động từ go / play / do (some, a lot of) / collect / spend / make đi với từng hoạt động
+# (lỗi người Việt rất hay mắc: play camping, go to fishing, listen music), sở thích là chủ đề IELTS Part 1 bắt buộc, "a hobby you had
+# as a child" là đề Part 2 hay gặp — video khoảng 13 phút: phần sách, rồi bảng go / play / do, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI
+# CHUNG (Part 2 "a hobby you had as a child", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` /
+# `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết
+# riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 5 theo Answer key tr. 217. Bài 3 (ABOUT YOU) thành cảnh Nói 1, bài 6 (ABOUT YOU AND YOUR COUNTRY)
+# thành Nói 2 — Answer key chỉ có câu trả lời mẫu của một người Nhật. Bài 4 (Test yourself): bốn hàng tranh cắt bỏ dải tên, mỗi nửa hàng một cảnh (đáp án
+# hiện thành nhãn khi Tom trả lời).
+# Hình trong sách: bảng Common activities (hai cảnh, khung theo cột rồi theo ô), tranh tự kiểm tra (tám cảnh), bài đọc Favourite
+# hobbies in Russia (ba cảnh, khung theo câu), Glossary (ba cảnh) — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom chơi bóng rổ, mê phim khoa học viễn tưởng, ngày mưa chơi game, đang học
+# nấu ăn, hồi bé mê vẽ (mơ làm kiến trúc sư), mẹ có cửa hàng hoa, ông là thầy giáo Toán (nay nghỉ hưu, làm vườn); Emma nấu ăn, đi bộ
+# đường dài, đọc truyện trinh thám, bơi, muốn học guitar (anh Jack chơi rất hay), học tiếng Việt, nhảy dở, ông dạy bơi năm 10 tuổi (ông
+# đã mất), bà đan áo cho cả nhà, lớn lên ở thị trấn ven biển. Mới: Tom muốn một lần đi trượt tuyết (Việt Nam không có tuyết), không
+# hứng thú cắm hoa, ông sưu tầm tiền xu cũ, thích hát karaoke dù hát không hay; hồi bé vẽ nhà, hoa, rừng thông gần nhà ở Đà Lạt bên bàn
+# bếp trong lúc ông chấm bài, ông mua hộp bút chì màu đầu tiên và treo tranh đẹp lên tường, giờ vẫn vẽ vào vở trong giờ học chán; Emma
+# hay đi du lịch, thỉnh thoảng tập gym, không hứng thú câu cá (chậm, thương con cá), nghe Mozart khi chấm bài; hồi bé sưu tầm vỏ sò: cuối
+# tuần đi dọc biển với ông, cất trong hộp to dưới gầm giường (hơn hai trăm cái), hộp vẫn ở nhà bố mẹ.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U50-free-time.yaml
+id: U50-free-time
+activity: U50-words
+title: "Unit 50 · Free time"
+subtitle: "I can talk about my free time"
+title_vi: "Thời gian rảnh: go camping / fishing / skiing, play cards / the guitar, do some cooking / a lot of travelling, collect, spend time, hobby, popular"
+tag: "HOBBIES AND INTERESTS · UNIT 50"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 50: free time. What do you do in your free time? Today: common activities, and the verbs that go with them: go, play, do, collect and spend."
+        say: "Welcome to Unit fifty: free time. What do you do in your free time? Today: common activities, and the verbs that go with them: go, play, do, collect and spend."
+        vi: "Unit 50: thời gian rảnh — các hoạt động và động từ đi kèm."
+      - tom: "It's a long unit, with lots of speaking practice. No countdown: pause the video whenever you want to answer."
+        vi: "Unit dài, nhiều phần luyện nói; không đếm ngược — tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Common activities (1)"
+    heading: "A · Common activities (1): I go … · I play … · I do some … / a lot of …"
+    heading_vi: "tr. 130 — mỗi cột một động từ; cột cuối: collect, watch, spend time, make"
+    image: {pdf: course-book, page: 131, clip: [34, 89, 490, 249]}
+    items:
+      - {box: [36, 91.5, 150.4, 119.5]}
+      - {box: [150.4, 91.5, 264.2, 119.5]}
+      - {box: [264.2, 91.5, 382.5, 119.5]}
+      - {box: [37, 120, 150, 184]}
+      - {box: [150.5, 120, 264, 184]}
+      - {box: [264.5, 120, 382.3, 184]}
+      - {box: [382.7, 120, 488.5, 184]}
+      - {box: [37, 185, 92.5, 248]}
+      - {box: [93.3, 185, 150, 248]}
+      - {box: [150.5, 185, 264, 248]}
+      - {box: [264.5, 185, 382.3, 248]}
+      - {box: [382.7, 185, 488.5, 248]}
+    lines:
+      - {emma: "Look at page one hundred and thirty. The first column is: I go. We use go with activities ending in -ing, and with places.", say: "Look at page one hundred and thirty. The first column is: I go. We yooz go with activities ending in ing, and with places.", focus: 0, vi: "go + V-ing (go camping) · go to + nơi chốn (go to the gym)"}
+      - {tom: "The second column is: I play. We play games, sports and musical instruments.", focus: 1, vi: "play + trò chơi, môn thể thao, nhạc cụ"}
+      - {emma: "And the third column: I do some, or I do a lot of, or quite a lot of.", focus: 2, vi: "do some / a lot of / quite a lot of + V-ing"}
+      - {tom: "I go camping.", focus: 3, vi: "go camping: đi cắm trại"}
+      - {emma: "I play cards.", focus: 4, vi: "play cards: chơi bài"}
+      - {tom: "I do a lot of travelling.", focus: 5, vi: "travelling: đi du lịch"}
+      - {emma: "I collect things, for example stamps.", focus: 6, vi: "collect: sưu tầm"}
+      - {tom: "I go skiing.", focus: 7, vi: "skiing: trượt tuyết"}
+      - {emma: "I go fishing.", focus: 8, vi: "fishing: câu cá"}
+      - {tom: "I play table tennis.", focus: 9, vi: "table tennis: bóng bàn"}
+      - {emma: "I do some flower arranging.", focus: 10, vi: "flower arranging: cắm hoa"}
+      - {tom: "And I watch TV and DVDs.", say: "And I watch TV and dee vee dees.", focus: 11, vi: "watch TV: xem ti vi"}
+
+  - kind: figure
+    heading: "A · Common activities (2)"
+    heading_vi: "tr. 130 — go to the cinema / the gym · play computer games / the guitar · do some cooking / drawing and painting"
+    image: {pdf: course-book, page: 131, clip: [34, 247, 490, 400]}
+    items:
+      - {box: [37, 249, 150, 318.5]}
+      - {box: [150.5, 249, 264, 318.5]}
+      - {box: [264.5, 249, 382.3, 318.5]}
+      - {box: [382.7, 249, 488.5, 318.5]}
+      - {box: [37, 319.5, 150, 398]}
+      - {box: [150.5, 319.5, 264, 398]}
+      - {box: [264.5, 319.5, 382.3, 398]}
+      - {box: [382.7, 319.5, 488.5, 398]}
+    lines:
+      - {emma: "I go to the cinema.", focus: 0, vi: "go to the cinema: đi xem phim"}
+      - {tom: "I play computer games.", focus: 1, vi: "computer games: trò chơi điện tử"}
+      - {emma: "I do a lot of cooking.", focus: 2, vi: "cooking: nấu ăn"}
+      - {tom: "I spend time with friends.", focus: 3, vi: "spend time with: dành thời gian với"}
+      - {emma: "I go to the gym.", focus: 4, vi: "gym: phòng tập"}
+      - {tom: "I play the guitar. With musical instruments, we say: play the guitar, play the piano.", focus: 5, vi: "play the + nhạc cụ"}
+      - {emma: "I do some drawing and painting.", focus: 6, vi: "drawing: vẽ (bút chì) · painting: vẽ màu"}
+      - {tom: "And: I make my own clothes.", focus: 7, vi: "make: tự làm, may"}
+
+  - kind: blanks
+    chapter: "Bài 1: ở nhà hay nơi khác?"
+    heading: "Exercise 1 · Can you do these things inside your home? Or do you have to do them in another place?"
+    heading_vi: "Ví dụ: watch TV → inside · go to the gym → another place (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "go fishing  →  ___", answer: "another place"}
+      - {n: 2, q: "do a lot of cooking  →  ___", answer: "inside"}
+      - {n: 3, q: "do flower arranging  →  ___", answer: "inside"}
+      - {n: 4, q: "do some drawing  →  ___", answer: "inside"}
+      - {n: 5, q: "go camping  →  ___", answer: "another place"}
+      - {n: 6, q: "play cards  →  ___", answer: "inside"}
+      - {n: 7, q: "do a lot of travelling  →  ___", answer: "another place"}
+      - {n: 8, q: "play computer games  →  ___", answer: "inside"}
+    lines:
+      - emma: "Exercise 1. Can you do these things inside your home, or do you have to do them in another place? The examples are: watch TV, inside. Go to the gym, another place. Pause the video and try."
+        say: "Exercise one. Can you do these things inside your home, or do you have to do them in another place? The examples are: watch TV, inside. Go to the gym, another place. Pause the video and try."
+        vi: "Bài 1: làm ở nhà được, hay phải đi nơi khác?"
+      - {tom: "One. Go fishing: another place, a river or a lake. Two. Cooking: inside. Three. Flower arranging: inside. Four. Drawing: inside.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Camping: another place. Six. Cards: inside. Seven. Travelling: another place, of course. Eight. Computer games: inside.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: go, play, do, collect, spend"
+    heading: "Exercise 2 · Complete the sentences with go, play, do, collect, or spend"
+    heading_vi: "Ví dụ: I never play cards. (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "Do you often ___ to the cinema?", answer: "go"}
+      - {n: 2, q: "My brother ___ old clocks.", answer: "collects"}
+      - {n: 3, q: "I'd like to ___ the guitar.", answer: "play"}
+      - {n: 4, q: "She ___ a lot of cooking.", answer: "does"}
+      - {n: 5, q: "Do you ___ table tennis?", answer: "play"}
+      - {n: 6, q: "Do you ___ time with your family?", answer: "spend"}
+      - {n: 7, q: "They ___ skiing every February.", answer: "go"}
+      - {n: 8, q: "She ___ quite a lot of travelling in spring.", answer: "does"}
+      - {n: 9, q: "She ___ all her own dresses.", answer: "makes"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences with go, play, do, collect, or spend. The example is: I never play cards. Pause the video and try."
+        say: "Exercise two. Complete the sentences with go, play, do, collect, or spend. The example is: I never play cards. Pause the video and try."
+        vi: "Bài 2: điền go, play, do, collect, spend."
+      - {tom: "One. Do you often go to the cinema? Two. My brother collects old clocks. Three. I'd like to play the guitar. Four. She does a lot of cooking. Five. Do you play table tennis?", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. Do you spend time with your family? Seven. They go skiing every February. Eight. She does quite a lot of travelling. Nine. She makes all her own dresses: make is in the table too.", reveal: [6, 7, 8, 9], focus: 8}
+
+  - kind: qa
+    chapter: "Nói 1: bạn làm gì lúc rảnh?"
+    heading: "Speaking 1 · Exercise 3: about you"
+    heading_vi: "Bài 3 (ABOUT YOU) — hoạt động nào bạn làm, muốn làm, không hứng thú? Tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Which activities in the table do you do now, Tom?"
+        a: "I go to the cinema, I play computer games on rainy days, and now I do quite a lot of cooking."
+        ask: emma
+        by: tom
+        phrases: ["I go to…", "I play…", "I do quite a lot of…"]
+      - q: "And you, Emma?"
+        a: "I do a lot of cooking and travelling, and I sometimes go to the gym."
+        ask: tom
+        by: emma
+        phrases: ["I do a lot of…", "I sometimes go to…"]
+      - q: "Which ones would you like to do?"
+        a: "I'd like to go skiing one day. There's no snow in Vietnam!"
+        ask: emma
+        by: tom
+        phrases: ["I'd like to … one day"]
+      - q: "Which ones would you like to do, Emma?"
+        a: "I'd love to play the guitar. My brother plays very well."
+        ask: tom
+        by: emma
+        phrases: ["I'd love to…"]
+      - q: "Which ones aren't you interested in?"
+        a: "Flower arranging. My mum has a flower shop, but it isn't for me!"
+        ask: emma
+        by: tom
+        phrases: ["…, but it isn't for me"]
+      - q: "Do you collect anything?"
+        a: "No, but my grandfather collects old coins. He has hundreds!"
+        ask: emma
+        by: tom
+        phrases: ["… collects …"]
+    lines:
+      - {emma: "Exercise 3 is about you. Look at the table again. Tom, which activities do you do now?", say: "Exercise three is about you. Look at the table again. Tom, which activities do you do now?", focus: 0}
+      - {tom: "I go to the cinema, I play computer games on rainy days, and now I do quite a lot of cooking.", reveal: 0, vi: "Đi xem phim, ngày mưa chơi game, giờ nấu ăn khá nhiều."}
+      - {tom: "And you, Emma?", focus: 1}
+      - {emma: "I do a lot of cooking and travelling, and I sometimes go to the gym.", reveal: 1, vi: "Nấu ăn và đi du lịch nhiều, thỉnh thoảng tập gym."}
+      - {emma: "Which ones would you like to do?", focus: 2}
+      - {tom: "I'd like to go skiing one day. There's no snow in Vietnam!", reveal: 2, vi: "Muốn một lần đi trượt tuyết — Việt Nam không có tuyết!"}
+      - {tom: "Which ones would you like to do, Emma?", focus: 3}
+      - {emma: "I'd love to play the guitar. My brother plays very well.", reveal: 3, vi: "Rất muốn chơi guitar; anh trai chơi rất hay."}
+      - {emma: "Which ones aren't you interested in?", focus: 4}
+      - {tom: "Flower arranging. My mum has a flower shop, but it isn't for me!", reveal: 4, vi: "Cắm hoa: mẹ có cửa hàng hoa, nhưng việc này không hợp với mình."}
+      - {emma: "Do you collect anything?", focus: 5}
+      - {tom: "No, but my grandfather collects old coins. He has hundreds!", reveal: 5, vi: "Không, nhưng ông sưu tầm tiền xu cũ — có hàng trăm đồng."}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: what are the activities? (1)"
+    heading_vi: "Che chữ, nhìn tranh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 131, clip: [34, 119, 264.5, 162]}
+    items:
+      - {box: [37, 120, 150, 161.5]}
+      - {box: [37, 120, 150, 161.5], label: "go camping"}
+      - {box: [150.5, 120, 264, 161.5]}
+      - {box: [150.5, 120, 264, 161.5], label: "play cards"}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the words, and look at the pictures. What are the activities? Pause the video after each question. What's this?"
+        say: "Exercise four is a test. Cover the words, and look at the pictures. What are the activities? Pause the video after each question. What's this?"
+        focus: 0
+        vi: "Bài 4: che chữ, nhìn tranh, nói tên hoạt động."
+      - {tom: "I go camping.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I play cards.", focus: 3}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [264, 119, 490, 162]}
+    items:
+      - {box: [264.5, 120, 382.3, 161.5]}
+      - {box: [264.5, 120, 382.3, 161.5], label: "do a lot of travelling"}
+      - {box: [382.7, 120, 488.5, 161.5]}
+      - {box: [382.7, 120, 488.5, 161.5], label: "collect things"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I do a lot of travelling.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I collect things, like stamps.", focus: 3}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (3)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [34, 184, 264.5, 233]}
+    items:
+      - {box: [37, 185, 92.5, 232.5]}
+      - {box: [37, 185, 92.5, 232.5], label: "go skiing"}
+      - {box: [93.3, 185, 150, 232.5]}
+      - {box: [93.3, 185, 150, 232.5], label: "go fishing"}
+      - {box: [150.5, 185, 264, 232.5]}
+      - {box: [150.5, 185, 264, 232.5], label: "play table tennis"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I go skiing.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I go fishing.", focus: 3}
+      - {emma: "And this one?", focus: 4}
+      - {tom: "I play table tennis.", focus: 5}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (4)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [264, 184, 490, 233]}
+    items:
+      - {box: [264.5, 185, 382.3, 232.5]}
+      - {box: [264.5, 185, 382.3, 232.5], label: "do flower arranging"}
+      - {box: [382.7, 185, 488.5, 232.5]}
+      - {box: [382.7, 185, 488.5, 232.5], label: "watch TV and DVDs"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I do some flower arranging.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I watch TV and DVDs.", say: "I watch TV and dee vee dees.", focus: 3}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (5)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [34, 249, 264.5, 296.5]}
+    items:
+      - {box: [37, 250, 150, 296]}
+      - {box: [37, 250, 150, 296], label: "go to the cinema"}
+      - {box: [150.5, 250, 264, 296]}
+      - {box: [150.5, 250, 264, 296], label: "play computer games"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I go to the cinema.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I play computer games.", focus: 3}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (6)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [264, 249, 490, 296.5]}
+    items:
+      - {box: [264.5, 250, 382.3, 296]}
+      - {box: [264.5, 250, 382.3, 296], label: "do a lot of cooking"}
+      - {box: [382.7, 250, 488.5, 296]}
+      - {box: [382.7, 250, 488.5, 296], label: "spend time with friends"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I do a lot of cooking.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I spend time with friends.", focus: 3}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (7)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [34, 320, 264.5, 373]}
+    items:
+      - {box: [37, 321, 150, 372.5]}
+      - {box: [37, 321, 150, 372.5], label: "go to the gym"}
+      - {box: [150.5, 321, 264, 372.5]}
+      - {box: [150.5, 321, 264, 372.5], label: "play the guitar"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I go to the gym.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I play the guitar.", focus: 3}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (8)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 131, clip: [264, 320, 490, 373]}
+    items:
+      - {box: [264.5, 321, 382.3, 372.5]}
+      - {box: [264.5, 321, 382.3, 372.5], label: "do some drawing and painting"}
+      - {box: [382.7, 321, 488.5, 372.5]}
+      - {box: [382.7, 321, 488.5, 372.5], label: "make my own clothes"}
+    lines:
+      - {emma: "What's this?", focus: 0}
+      - {tom: "I do some drawing and painting.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "I make my own clothes.", focus: 3}
+
+  - kind: figure
+    chapter: "Hobbies in Russia"
+    heading: "B · Hobbies: Favourite hobbies in Russia"
+    heading_vi: "tr. 131 — bài đọc: hobbies, gardening, repairing cars, various clubs, popular, musical instruments"
+    image: {pdf: course-book, page: 132, clip: [29, 56, 327, 137]}
+    items:
+      - {box: [48, 80, 316, 114]}
+      - {box: [48, 103, 316, 125]}
+      - {box: [48, 114, 316, 137]}
+    lines:
+      - {emma: "Now page one hundred and thirty-one: favourite hobbies in Russia. Russian people have many hobbies. Older people enjoy gardening, fishing, and repairing cars.", focus: 0, vi: "hobby: sở thích · gardening: làm vườn · repair cars: sửa xe"}
+      - {tom: "For younger people, there are various clubs in school, where children can learn many activities.", focus: 1, vi: "various: nhiều, khác nhau · club: câu lạc bộ"}
+      - {emma: "Popular hobbies include sport, playing musical instruments, computers, listening to music, cooking, and collecting different things.", focus: 2, vi: "popular: phổ biến · musical instrument: nhạc cụ"}
+
+  - kind: figure
+    heading: "B · Hobbies: Alexandra"
+    heading_vi: "tr. 131 — Alexandra: nghe nhạc rock và nhạc cổ điển, đá bóng, bắn súng"
+    image: {pdf: course-book, page: 132, clip: [29, 138, 327, 302]}
+    items:
+      - {box: [47, 140, 216, 246]}
+      - {box: [47, 255, 296, 300]}
+    lines:
+      - {tom: "Three young people talk about their hobbies. This is Alexandra.", focus: 0}
+      - {tom: "I like listening to rock and classical music. I also like playing football with my friends. But my favourite hobby is shooting, you can see me in the photo, and I'm quite good at it.", focus: 1, vi: "classical music: nhạc cổ điển · shooting: bắn súng · quite good at: khá giỏi"}
+
+  - kind: figure
+    heading: "B · Hobbies: Veronica and Dima"
+    heading_vi: "tr. 131 — Veronica: nấu ăn, đọc sách, vẽ, hát · Dima: guitar, hát, bơi, trượt tuyết, du lịch"
+    image: {pdf: course-book, page: 132, clip: [29, 302, 327, 380]}
+    items:
+      - {box: [47, 305, 296, 339.5]}
+      - {box: [47, 344, 296, 378]}
+    lines:
+      - {emma: "Veronica: I have many hobbies: cooking, reading, drawing, and singing in the shower. My favourite is drawing. It's wonderful to see pictures appearing on paper.", focus: 0, vi: "singing in the shower: hát khi tắm"}
+      - {tom: "Dima: I play the guitar, and I can sing Russian and English songs. I'm good at swimming, snowboarding and skiing. I also like travelling very much.", focus: 1, vi: "sing songs: hát · snowboarding: trượt ván tuyết"}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary (1) · hobby · gardening · repair cars · various"
+    heading_vi: "tr. 131 — nghĩa của các từ in đậm"
+    image: {pdf: course-book, page: 132, clip: [340, 48, 488, 178]}
+    items:
+      - {box: [343, 69.5, 486, 105]}
+      - {box: [343, 105, 486, 130]}
+      - {box: [343, 130, 486, 154.5]}
+      - {box: [343, 154.5, 486, 178]}
+    lines:
+      - {emma: "Look at the glossary. A hobby, plural hobbies: an activity that you like doing in your free time.", focus: 0, vi: "hobby (số nhiều hobbies): sở thích"}
+      - {tom: "Gardening: working in your garden. My grandfather loves gardening.", focus: 1, vi: "gardening: làm vườn"}
+      - {emma: "Repair cars: make cars work when they have a problem.", focus: 2, vi: "repair: sửa chữa"}
+      - {tom: "Various, or various places: a number of different places.", focus: 3, vi: "various: nhiều … khác nhau"}
+
+  - kind: figure
+    heading: "Glossary (2) · club · popular · musical instrument · listen to something"
+    heading_vi: "tr. 131 — nghĩa của các từ in đậm (tiếp)"
+    image: {pdf: course-book, page: 132, clip: [340, 178, 488, 287]}
+    items:
+      - {box: [343, 178, 486, 202.5]}
+      - {box: [343, 202.5, 486, 226.5]}
+      - {box: [343, 226.5, 486, 250.5]}
+      - {box: [343, 250.5, 486, 286.5]}
+    lines:
+      - {emma: "A club: a group of people who do something together. A chess club, or a football club.", focus: 0, vi: "club: câu lạc bộ"}
+      - {tom: "Popular: if something is popular, many people like it.", focus: 1, vi: "popular: được nhiều người thích, phổ biến"}
+      - {emma: "A musical instrument: a thing used for playing music, for example a guitar.", focus: 2, vi: "musical instrument: nhạc cụ"}
+      - {tom: "And listen to something: listen to music, listen to the radio. Don't forget the word to!", focus: 3, vi: "listen to + danh từ (có to)"}
+
+  - kind: figure
+    heading: "Glossary (3) · classical music · read · sing"
+    heading_vi: "tr. 131 — classical music (không phải classic music) · read · sing, singer, song"
+    image: {pdf: course-book, page: 132, clip: [340, 286.5, 488, 408]}
+    items:
+      - {box: [343, 286.5, 486, 322.5]}
+      - {box: [343, 322.5, 486, 358]}
+      - {box: [343, 356, 486, 406]}
+    lines:
+      - {emma: "Classical music: for example, music by Bach and Mozart. Not: classic music.", say: "Classical music: for example, music by Bahk and Mozart. Not: classic music.", focus: 0, vi: "classical music: nhạc cổ điển"}
+      - {tom: "Read: I read every evening.", focus: 1, vi: "read: đọc"}
+      - {emma: "And sing: Robbie Williams is a singer. He sings songs.", focus: 2, vi: "sing: hát · singer: ca sĩ · song: bài hát"}
+
+  - kind: blanks
+    chapter: "Bài 5: đúng hay sai?"
+    heading: "Exercise 5 · True or false? Correct the false sentences"
+    heading_vi: "Ví dụ: Alexandra doesn't like rock music. → False. She likes rock music. (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "Older people enjoy gardening.  →  ___", answer: "True."}
+      - {n: 2, q: "Playing a musical instrument isn't popular in Russia.  →  ___", answer: "False. It's popular."}
+      - {n: 3, q: "Dima plays the piano.  →  ___", answer: "False. He plays the guitar."}
+      - {n: 4, q: "Veronica's favourite hobby is reading.  →  ___", answer: "False. It's drawing."}
+      - {n: 5, q: "Dima has various hobbies.  →  ___", answer: "True."}
+      - {n: 6, q: "Veronica's quite good at shooting.  →  ___", answer: "False. Alexandra is."}
+      - {n: 7, q: "Veronica dances in the shower.  →  ___", answer: "False. She sings in the shower."}
+      - {n: 8, q: "Younger people like repairing cars.  →  ___", answer: "False. Older people do."}
+    lines:
+      - emma: "Exercise 5. True or false? Correct the false sentences. The example is: Alexandra doesn't like rock music. False: she likes rock music. Pause the video and try."
+        say: "Exercise five. True or false? Correct the false sentences. The example is: Alexandra doesn't like rock music. False: she likes rock music. Pause the video and try."
+        vi: "Bài 5: đúng hay sai — sửa câu sai."
+      - {tom: "One. True. Two. False: playing a musical instrument is popular in Russia. Three. False: Dima plays the guitar. Four. False: Veronica's favourite hobby is drawing.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. True. Six. False: Alexandra's quite good at shooting. Seven. False: Veronica sings in the shower. Eight. False: older people like repairing cars.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 2: sở thích ở nước bạn"
+    heading: "Speaking 2 · Exercise 6: about you and your country"
+    heading_vi: "Bài 6 (ABOUT YOU AND YOUR COUNTRY) — tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "What's your favourite hobby, Tom?"
+        a: "Basketball, I think. But I'm enjoying cooking more and more."
+        ask: emma
+        by: tom
+        phrases: ["…, I think.", "more and more"]
+      - q: "What hobbies are popular with older people in Vietnam?"
+        a: "Lots of older people exercise in the park early in the morning. They also play Chinese chess, and do some gardening, like my grandfather."
+        ask: emma
+        by: tom
+        phrases: ["Lots of…", "They also…"]
+      - q: "What hobbies are popular with younger people?"
+        a: "My students love karaoke, coffee shops and computer games. In England, it's quite similar, but with less karaoke!"
+        ask: tom
+        by: emma
+        phrases: ["… love …", "it's quite similar"]
+      - q: "What classical music do you listen to?"
+        a: "Mozart, usually, when I'm marking homework. It helps me relax."
+        ask: tom
+        by: emma
+        phrases: ["…, usually, when I'm…"]
+      - q: "Can you play a musical instrument?"
+        a: "Not yet, but I'd love to learn the guitar."
+        ask: tom
+        by: emma
+        phrases: ["Not yet, but…"]
+      - q: "Are you a good singer, Tom?"
+        a: "Not really, but I love karaoke! Everyone sings at parties in Vietnam."
+        ask: emma
+        by: tom
+        phrases: ["Not really, but…"]
+    lines:
+      - {emma: "Exercise 6 is about you and your country. Tom, what's your favourite hobby?", say: "Exercise six is about you and your country. Tom, what's your favourite hobby?", focus: 0}
+      - {tom: "Basketball, I think. But I'm enjoying cooking more and more.", reveal: 0, vi: "Bóng rổ; nhưng càng ngày càng thích nấu ăn."}
+      - {emma: "What hobbies are popular with older people in Vietnam?", focus: 1}
+      - {tom: "Lots of older people exercise in the park early in the morning. They also play Chinese chess, and do some gardening, like my grandfather.", reveal: 1, vi: "Người lớn tuổi tập thể dục ở công viên buổi sáng sớm, chơi cờ tướng, làm vườn như ông của Tom."}
+      - {tom: "What hobbies are popular with younger people?", focus: 2}
+      - {emma: "My students love karaoke, coffee shops and computer games. In England, it's quite similar, but with less karaoke!", reveal: 2, vi: "Học viên mê karaoke, quán cà phê, trò chơi điện tử; ở Anh cũng gần vậy, nhưng ít karaoke hơn."}
+      - {tom: "What classical music do you listen to?", focus: 3}
+      - {emma: "Mozart, usually, when I'm marking homework. It helps me relax.", reveal: 3, vi: "Thường nghe Mozart khi chấm bài, cho dễ chịu."}
+      - {tom: "Can you play a musical instrument?", focus: 4}
+      - {emma: "Not yet, but I'd love to learn the guitar.", reveal: 4, vi: "Chưa, nhưng rất muốn học guitar."}
+      - {emma: "Are you a good singer, Tom?", focus: 5}
+      - {tom: "Not really, but I love karaoke! Everyone sings at parties in Vietnam.", reveal: 5, vi: "Không hay lắm, nhưng mê karaoke; ở Việt Nam tiệc nào cũng hát."}
+
+  - kind: bullets
+    chapter: "go, play hay do?"
+    heading: "go · play · do: which verb?"
+    heading_vi: "Thêm ngoài sách — quy tắc gọn cho bảng tr. 130"
+    items:
+      - {en: "go + -ing: go camping / fishing / skiing / swimming / shopping", vi: "hoạt động đuôi -ing (thường ở nơi khác)"}
+      - {en: "go to + place: go to the cinema / the gym / the park", vi: "đến một nơi"}
+      - {en: "play + game or sport: play cards / table tennis / football / computer games", vi: "trò chơi, môn thể thao có bóng"}
+      - {en: "play + the + instrument: play the guitar / the piano", vi: "nhạc cụ: có the"}
+      - {en: "do some / a lot of + -ing: do some cooking / drawing · do a lot of travelling", vi: "hoạt động -ing, thường có some / a lot of"}
+    lines:
+      - {emma: "Here's a short rule for go, play and do. Go plus -ing: go camping, go fishing, go swimming, go shopping.", say: "Here's a short rule for go, play and do. Go plus ing: go camping, go fishing, go swimming, go shopping.", focus: 0}
+      - {tom: "Go to, plus a place: go to the cinema, go to the gym.", focus: 1}
+      - {emma: "Play, plus a game or a sport: play cards, play table tennis, play computer games.", focus: 2}
+      - {tom: "Play the, plus a musical instrument: play the guitar, play the piano.", focus: 3}
+      - {emma: "And do some, or do a lot of, plus -ing: do some cooking, do a lot of travelling.", say: "And do some, or do a lot of, plus ing: do some cooking, do a lot of travelling.", focus: 4}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về sở thích — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I play camping every summer.  →  ___", answer: "I go camping every summer."}
+      - {n: 2, q: "We go to fishing at the weekend.  →  ___", answer: "We go fishing at the weekend."}
+      - {n: 3, q: "My hobby is collect stamps.  →  ___", answer: "My hobby is collecting stamps."}
+      - {n: 4, q: "I listen music every day.  →  ___", answer: "I listen to music every day."}
+      - {n: 5, q: "She's good in drawing.  →  ___", answer: "She's good at drawing."}
+      - {n: 6, q: "I spend time for my family.  →  ___", answer: "I spend time with my family."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. I go camping: go plus -ing. Two. We go fishing, with no to.", say: "One. I go camping: go plus ing. Two. We go fishing, with no to.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. My hobby is collecting stamps. Four. I listen to music: listen to.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. She's good at drawing. Six. I spend time with my family.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a hobby you had as a child"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about drawing. When I was a child in Da Lat, I drew all the time: houses, flowers, and the pine trees near our house."
+        say: "I'd like to talk about drawing. When I was a child in Dah Lot, I drew all the time: houses, flowers, and the pine trees near our house."
+        note: "what the hobby was"
+      - text: "I usually drew after school, at the kitchen table, while my grandfather marked his students' homework."
+        note: "when and where you did it"
+      - text: "My grandfather bought me my first box of coloured pencils, and he put my best pictures on the wall."
+        note: "who you did it with"
+      - text: "I enjoyed it because it was relaxing, and I wanted to be an architect. I don't draw much now, but I still draw in my notebook in boring lessons!"
+        note: "why you enjoyed it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe a hobby you had as a child. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe a hobby you had as a child. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: sở thích hồi nhỏ."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about collecting shells. I grew up in a small town by the sea, so the beach was my playground."
+        note: "what the hobby was"
+      - text: "Every weekend, I walked along the beach and looked for shells and interesting stones."
+        note: "when and where you did it"
+      - text: "I usually went with my grandfather. We kept the shells in a big box under my bed. I had more than two hundred!"
+        note: "who you did it with"
+      - text: "I enjoyed it because every shell was different, and I loved those walks with my grandfather. The box is still at my parents' house."
+        note: "why you enjoyed it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a hobby you had as a child.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a hobby you had as a child"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What was the hobby?", hint: "I'd like to talk about … · When I was a child, I …"}
+      - {q: "When and where did you do it?", hint: "I usually … after school / at the weekend, in / at …"}
+      - {q: "Who did you do it with?", hint: "I … with my friends / brother / grandfather · I … alone"}
+      - {q: "Why did you enjoy it?", hint: "because it was fun / relaxing · I still … / I don't … now"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple: I played, I went, I collected."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple: I played, I went, I collected."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút — dùng quá khứ đơn."
+      - {emma: "What was the hobby?", focus: 0, pause: 0.5}
+      - {emma: "When and where did you do it?", focus: 1, pause: 0.5}
+      - {emma: "Who did you do it with?", focus: 2, pause: 0.5}
+      - {emma: "Why did you enjoy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · hobbies"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why do people collect things?"
+        a: "I think it's exciting to find something rare, and a collection has lots of memories. My grandmother keeps every postcard I send her!"
+        ask: tom
+        by: emma
+        phrases: ["I think it's…", "lots of memories"]
+      - q: "Do children today have different hobbies from children in the past?"
+        a: "Yes. Today, children spend a lot of time on screens. When I was a child, we played outside much more."
+        ask: emma
+        by: tom
+        phrases: ["Yes. Today,…", "When I was a child,…"]
+      - q: "Is it important for adults to try new hobbies?"
+        a: "Definitely. It's never too late. I'm learning Vietnamese now, and it's one of my favourite hobbies!"
+        ask: tom
+        by: emma
+        phrases: ["Definitely.", "It's never too late."]
+    lines:
+      - {tom: "Let's finish with some discussion questions. Emma, why do people collect things?", focus: 0}
+      - {emma: "I think it's exciting to find something rare, and a collection has lots of memories. My grandmother keeps every postcard I send her!", reveal: 0, vi: "Tìm được món hiếm thì thích, bộ sưu tập chứa nhiều kỷ niệm; bà giữ mọi bưu thiếp Emma gửi."}
+      - {emma: "Do children today have different hobbies from children in the past?", focus: 1}
+      - {tom: "Yes. Today, children spend a lot of time on screens. When I was a child, we played outside much more.", reveal: 1, vi: "Có: trẻ bây giờ dành nhiều thời gian bên màn hình; hồi Tom còn nhỏ thì chơi ngoài trời nhiều hơn."}
+      - {tom: "Is it important for adults to try new hobbies?", focus: 2}
+      - {emma: "Definitely. It's never too late. I'm learning Vietnamese now, and it's one of my favourite hobbies!", reveal: 2, vi: "Chắc chắn: không bao giờ là muộn; Emma đang học tiếng Việt — một trong những sở thích yêu thích."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 2 và bài 4 không nhìn đáp án"
+    items:
+      - {en: "go camping / fishing / skiing · go to the cinema / the gym", vi: "go"}
+      - {en: "play cards / table tennis / computer games · play the guitar", vi: "play"}
+      - {en: "do some cooking / drawing and painting · do a lot of travelling · do flower arranging", vi: "do"}
+      - {en: "collect things · watch TV · spend time with friends · make my own clothes", vi: "động từ khác"}
+      - {en: "hobby (hobbies) · popular · various · club · musical instrument · listen to · classical music", vi: "từ trong bài đọc"}
+      - {en: "Next: Unit 51 · Music", vi: "Tiếp theo: Unit 51 · Âm nhạc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Go camping, go fishing, go skiing, go to the cinema, and go to the gym.", focus: 0}
+      - {tom: "Play cards, play table tennis, play computer games, and play the guitar.", focus: 1}
+      - {emma: "Do some cooking, do some drawing and painting, do a lot of travelling, and do flower arranging.", focus: 2}
+      - {tom: "Collect things, watch TV, spend time with friends, and make my own clothes.", focus: 3}
+      - {emma: "A hobby, popular, various, a club, a musical instrument, listen to, and classical music.", focus: 4}
+      - {tom: "Next time, Unit 51: music. See you then!", say: "Next time, Unit fifty-one: music. See you then!", focus: 5}
