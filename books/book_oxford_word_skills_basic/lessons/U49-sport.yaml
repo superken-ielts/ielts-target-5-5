@@ -1,0 +1,473 @@
+# Video Oxford Word Skills Basic · Unit 49 — I can talk about sport (sách in tr. 128–129, Answer key tr. 217).
+# UNIT KHÓ (đợt 42): 40 mục Word list (nhiều nhất module), môn – sân – dụng cụ – cách tính điểm (pitch / court / rink, goals ≠
+# points, nil, set), cặp động từ dễ nhầm win ≠ beat, draw with, lose to (bất quy tắc), bảng xếp hạng; "a sport you like" là đề Part 2
+# hay gặp — video khoảng 13 phút: phần sách, rồi câu nói về trận đấu, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a sport you
+# like", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu
+# cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6 theo Answer key tr. 217 (bài 3, 5: câu có hai chỗ trống tách thành 3a / 3b…; bài 4: từ in đậm ghi trong
+# ngoặc). Bài 6 (ABOUT YOUR COUNTRY: chép tỉ số cuối tuần bằng tiếng Anh) thành cảnh câu mẫu, Tom kể trận bóng rổ của đội trường.
+# Hình trong sách: bảng Games (hai cảnh, khung theo cột rồi theo hàng), ô chữ bài 1, kết quả bóng đá Ý, bảng xếp hạng, bài báo (hai
+# cột, khung theo dòng), Glossary (hai cảnh), Spotlight động từ bất quy tắc — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom chơi bóng rổ hai buổi một tuần (áo số 9, số may mắn), học chơi từ hồi
+# cấp ba ở Đà Lạt; em Bao 15 tuổi mê bóng đá; Emma không mê thể thao (không xem trên TV) nhưng thích bơi, ông dạy bơi năm 10 tuổi ở
+# biển gần quê; anh Jack. Mới: Tom chơi ở sân ngoài trời gần trường, mùa mưa chơi trong nhà thi đấu, đôi khi đấu với trường khác; thứ
+# Bảy vừa rồi đội Tom thắng trường y 62–58, Tom ghi 18 điểm; Bao chiều nào tan học cũng đá bóng, muốn làm cầu thủ; Emma hồi đi học chơi
+# khúc côn cầu trên cỏ (không giỏi), Jack mê bóng bầu dục; Emma bơi ở hồ bơi gần nhà sau giờ làm, hai ba lần một tuần.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U49-sport.yaml
+id: U49-sport
+activity: U49-words
+title: "Unit 49 · Sport"
+subtitle: "I can talk about sport"
+title_vi: "Thể thao: game, pitch / court / rink, equipment, score, goal, points, nil, set; match, against, win, beat, draw, lose, league table"
+tag: "HOBBIES AND INTERESTS · UNIT 49"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 49: sport. Today: six games, where you play them, the equipment, and how to talk about scores and results."
+        say: "Welcome to Unit forty-nine: sport. Today: six games, where you play them, the equipment, and how to talk about scores and results."
+        vi: "Unit 49: thể thao — sáu môn, nơi chơi, dụng cụ, cách nói tỉ số và kết quả."
+      - tom: "It's a long unit, with lots of new words. No countdown: pause the video whenever you want to answer."
+        vi: "Unit dài, nhiều từ mới; không đếm ngược — tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Games (1)"
+    heading: "A · Games (1): game · place · equipment · score"
+    heading_vi: "tr. 128 — bảng bốn cột: môn, nơi chơi, dụng cụ, tỉ số"
+    image: {pdf: course-book, page: 129, clip: [26, 64, 484, 234]}
+    items:
+      - {box: [29, 95, 90.5, 123]}
+      - {box: [90.5, 95, 128.1, 123]}
+      - {box: [128.1, 95, 304, 123]}
+      - {box: [304, 95, 480.5, 123]}
+      - {box: [29, 122.8, 480.5, 163.6]}
+      - {box: [29, 163.6, 480.5, 193.5]}
+      - {box: [29, 193.5, 480.5, 232.8]}
+    lines:
+      - {emma: "Look at page one hundred and twenty-eight. The table has four columns. Game: football, rugby, and so on.", focus: 0, vi: "game: môn thể thao, trận đấu"}
+      - {tom: "Place: where you play the game.", focus: 1, vi: "place: nơi chơi"}
+      - {emma: "Equipment: the special things you need for the game.", focus: 2, vi: "equipment: dụng cụ"}
+      - {tom: "And score: the number of points or goals you have.", focus: 3, vi: "score: tỉ số · points: điểm · goals: bàn thắng"}
+      - {emma: "Football: you play it on a pitch, with a ball, and you score goals. One nil, or two one: two goals to one.", focus: 4, vi: "pitch: sân cỏ · goal: bàn thắng, khung thành · nil: không"}
+      - {tom: "Rugby: you play it on a pitch too, with a rugby ball. You score points: ten six, ten points to six.", focus: 5, vi: "rugby: bóng bầu dục"}
+      - {emma: "Ice hockey: you play it on a rink, with a stick and a puck. Three two: three goals to two.", focus: 6, vi: "ice hockey: khúc côn cầu trên băng · rink: sân băng · stick: gậy · puck: bóng"}
+
+  - kind: figure
+    heading: "A · Games (2): volleyball · tennis · basketball"
+    heading_vi: "tr. 128 — court: sân của bóng chuyền, quần vợt, bóng rổ"
+    image: {pdf: course-book, page: 129, clip: [26, 231, 484, 338]}
+    items:
+      - {box: [29, 232.8, 480.5, 262.5]}
+      - {box: [29, 262.5, 480.5, 301.6]}
+      - {box: [29, 301.6, 480.5, 336]}
+    lines:
+      - {tom: "Volleyball: you play it on a court, with a net. Fifteen ten: fifteen points to ten.", focus: 0, vi: "volleyball: bóng chuyền · court: sân · net: lưới"}
+      - {emma: "Tennis: a court, a net, a racket and a tennis ball. Six three: six games to three. And six two is one set.", focus: 1, vi: "racket: vợt · set: séc"}
+      - {tom: "Basketball: you play it on a court, with a basket. Sixty forty-four: sixty points to forty-four.", focus: 2, vi: "basketball: bóng rổ · basket: rổ"}
+      - {emma: "So: a pitch for football and rugby, a rink for ice hockey, and a court for volleyball, tennis and basketball.", focus: 2, vi: "pitch · rink · court"}
+
+  - kind: figure
+    chapter: "Bài 1: ghép từ"
+    heading: "Exercise 1 · Combine words to find games, places, equipment and scores"
+    heading_vi: "tr. 128 — ví dụ: volley + ball → volleyball"
+    image: {pdf: course-book, page: 129, clip: [44, 344, 484, 413]}
+    items:
+      - {box: [46, 365, 240, 412]}
+      - {box: [266, 365, 366, 381]}
+    lines:
+      - emma: "Exercise 1. Combine words to find games, places, equipment and scores. There are twelve words in the box."
+        say: "Exercise one. Combine words to find games, places, equipment and scores. There are twelve words in the box."
+        focus: 0
+        vi: "Bài 1: ghép từ thành tên môn, nơi chơi, dụng cụ, tỉ số."
+      - {tom: "The example is: volley, and ball: volleyball. Pause the video and find five more.", focus: 1}
+
+  - kind: blanks
+    chapter: "Bài 1: đáp án"
+    heading: "Exercise 1 · Answers"
+    heading_vi: "Answer key tr. 217"
+    items:
+      - {n: 1, q: "football ___", answer: "pitch"}
+      - {n: 2, q: "tennis ___", answer: "racket"}
+      - {n: 3, q: "basket ___", answer: "ball → basketball"}
+      - {n: 4, q: "ice ___", answer: "hockey"}
+      - {n: 5, q: "three ___", answer: "nil"}
+    lines:
+      - {tom: "One. Football pitch. Two. Tennis racket. Three. Basketball: one word. Four. Ice hockey. Five. Three nil: three goals to nothing.", reveal: [1, 2, 3, 4, 5], focus: 4}
+
+  - kind: blanks
+    chapter: "Bài 2: đúng hay sai?"
+    heading: "Exercise 2 · True or false? Change the false sentences and make them true"
+    heading_vi: "Ví dụ: You score goals in basketball. → F: You score points in basketball. (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "Sticks and rackets are equipment.  →  ___", answer: "T"}
+      - {n: 2, q: "You have a net in tennis and volleyball.  →  ___", answer: "T"}
+      - {n: 3, q: "You score points in ice hockey.  →  ___", answer: "F: You score goals in ice hockey."}
+      - {n: 4, q: "You play football on a court.  →  ___", answer: "F: You play football on a pitch."}
+      - {n: 5, q: "You play ice hockey with rackets.  →  ___", answer: "F: You play ice hockey with sticks."}
+      - {n: 6, q: "You play volleyball on a court.  →  ___", answer: "T"}
+      - {n: 7, q: "You score points in rugby.  →  ___", answer: "T"}
+      - {n: 8, q: "You play rugby with a puck.  →  ___", answer: "F: You play rugby with a rugby ball."}
+    lines:
+      - emma: "Exercise 2. True or false? Change the false sentences and make them true. The example is: you score goals in basketball. False: you score points in basketball. Pause the video and try."
+        say: "Exercise two. True or false? Change the false sentences and make them true. The example is: you score goals in basketball. False: you score points in basketball. Pause the video and try."
+        vi: "Bài 2: đúng hay sai — sửa câu sai."
+      - {tom: "One. True. Two. True. Three. False: you score goals in ice hockey. Four. False: you play football on a pitch.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. False: you play ice hockey with sticks. Six. True. Seven. True. Eight. False: you play rugby with a rugby ball.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 3: hoàn thành câu"
+    heading: "Exercise 3 · Complete the sentences"
+    heading_vi: "Ví dụ: I need to get a new tennis racket. — câu có hai chỗ trống tách thành a / b (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "I watched a fantastic ___ of ice hockey on TV last night.", answer: "game"}
+      - {n: 2, q: "People who play ___ are usually very tall.", answer: "basketball"}
+      - {n: "3a", q: "It was six ___ to four to Federer in the second …", answer: "games"}
+      - {n: "3b", q: "… to four to Federer in the second ___.", answer: "set"}
+      - {n: "4a", q: "What was the football ___? ~ It was three …", answer: "score / result"}
+      - {n: "4b", q: "… It was three ___ (3–0).", answer: "nil"}
+      - {n: "5a", q: "The football ___ is next to the tennis …", answer: "pitch"}
+      - {n: "5b", q: "… is next to the tennis ___.", answer: "court"}
+    lines:
+      - emma: "Exercise 3. Complete the sentences. The example is: I need to get a new tennis racket. Pause the video and try."
+        say: "Exercise three. Complete the sentences. The example is: I need to get a new tennis racket. Pause the video and try."
+        vi: "Bài 3: hoàn thành câu."
+      - {tom: "One. A fantastic game of ice hockey. Two. People who play basketball are usually very tall. Three. It was six games to four to Federer in the second set.", reveal: [1, 2, "3a", "3b"], focus: 3}
+      - {tom: "Four. What was the football score, or result? It was three nil. Five. The football pitch is next to the tennis court.", reveal: ["4a", "4b", "5a", "5b"], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: thể thao và bạn"
+    heading: "Speaking 1 · Sport and you"
+    heading_vi: "IELTS Part 1 \"Sport\" — tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Do you play any sports, Tom?"
+        a: "Yes, I play basketball twice a week, with my friends from university. My shirt number is nine!"
+        ask: emma
+        by: tom
+        phrases: ["I play … twice a week"]
+      - q: "Where do you play?"
+        a: "On an outdoor court near our university. In the rainy season, we play in the sports hall."
+        ask: emma
+        by: tom
+        phrases: ["on a court", "In the rainy season…"]
+      - q: "Emma, did you play sport at school?"
+        a: "Yes, hockey: on a pitch, not on ice! But I wasn't very good."
+        ask: tom
+        by: emma
+        phrases: ["… wasn't very good"]
+      - q: "What sports are popular in England?"
+        a: "Football, of course, and rugby and tennis. My brother Jack loves rugby."
+        ask: tom
+        by: emma
+        phrases: ["…, of course", "… loves…"]
+      - q: "And which sports are popular in Vietnam?"
+        a: "Football, definitely. When the national team wins, people go out on their motorbikes and celebrate! Badminton and volleyball are popular too."
+        ask: emma
+        by: tom
+        phrases: ["…, definitely.", "… are popular too"]
+      - q: "Does your brother play football?"
+        a: "Yes, Bao plays every afternoon after school. He wants to be a footballer."
+        ask: emma
+        by: tom
+        phrases: ["every afternoon after school", "He wants to be…"]
+    lines:
+      - {emma: "Let's talk about sport, like part one of the IELTS speaking test. Tom, do you play any sports?", say: "Let's talk about sport, like part one of the eye-elts speaking test. Tom, do you play any sports?", focus: 0}
+      - {tom: "Yes, I play basketball twice a week, with my friends from university. My shirt number is nine!", reveal: 0, vi: "Chơi bóng rổ tuần hai buổi với bạn ở trường; áo số 9."}
+      - {emma: "Where do you play?", focus: 1}
+      - {tom: "On an outdoor court near our university. In the rainy season, we play in the sports hall.", reveal: 1, vi: "Sân ngoài trời gần trường; mùa mưa chơi trong nhà thi đấu."}
+      - {tom: "Emma, did you play sport at school?", focus: 2}
+      - {emma: "Yes, hockey: on a pitch, not on ice! But I wasn't very good.", reveal: 2, vi: "Có, khúc côn cầu trên cỏ, không phải trên băng — nhưng chơi không giỏi."}
+      - {tom: "What sports are popular in England?", focus: 3}
+      - {emma: "Football, of course, and rugby and tennis. My brother Jack loves rugby.", reveal: 3, vi: "Bóng đá, bóng bầu dục, quần vợt; anh Jack mê bóng bầu dục."}
+      - {emma: "And which sports are popular in Vietnam?", focus: 4}
+      - {tom: "Football, definitely. When the national team wins, people go out on their motorbikes and celebrate! Badminton and volleyball are popular too.", reveal: 4, vi: "Bóng đá: đội tuyển thắng là mọi người chạy xe máy ra đường ăn mừng; cầu lông, bóng chuyền cũng phổ biến."}
+      - {emma: "Does your brother play football?", focus: 5}
+      - {tom: "Yes, Bao plays every afternoon after school. He wants to be a footballer.", reveal: 5, vi: "Bao chiều nào tan học cũng đá bóng, muốn làm cầu thủ."}
+
+  - kind: figure
+    chapter: "Football: kết quả"
+    heading: "B · Football: results from Italy"
+    heading_vi: "tr. 129 — kết quả các trận đấu"
+    image: {pdf: course-book, page: 130, clip: [42, 70, 174, 204]}
+    items:
+      - {box: [48, 74, 170, 88]}
+      - {box: [48, 94, 170, 108]}
+      - {box: [48, 114, 170, 128]}
+      - {box: [48, 135, 170, 149]}
+      - {box: [48, 155, 170, 169]}
+      - {box: [48, 176, 170, 202]}
+    lines:
+      - {emma: "Now page one hundred and twenty-nine: football results from Italy. Cagliari one, Torino one: it was a draw.", say: "Now page one hundred and twenty-nine: football results from Italy. Kalyari one, Torino one: it was a draw.", focus: 0, vi: "draw: trận hòa"}
+      - {tom: "Lazio three, Livorno one: Lazio won.", focus: 1}
+      - {emma: "Palermo three, AS Roma three: another draw.", say: "Palermo three, ay ess Roma three: another draw.", focus: 2}
+      - {tom: "Sampdoria one, Parma two: Parma won.", focus: 3}
+      - {emma: "Treviso one, Fiorentina three: Treviso lost.", focus: 4, vi: "lose (lost): thua"}
+      - {tom: "And on Friday, AC Milan one, Inter Milan nil.", say: "And on Friday, ay see Milan one, Inter Milan nil.", focus: 5}
+
+  - kind: figure
+    heading: "B · Football: the league table"
+    heading_vi: "tr. 129 — bảng xếp hạng: played, won, drawn, lost, goals for / against, points"
+    image: {pdf: course-book, page: 130, clip: [176, 44, 490, 134]}
+    items:
+      - {box: [180, 68, 488, 94]}
+      - {box: [180, 94, 488, 106]}
+      - {box: [180, 106, 488, 118]}
+      - {box: [180, 118, 488, 132]}
+    lines:
+      - {tom: "This is the league table. Played, won, drawn, lost, goals for, goals against, and points.", focus: 0, vi: "league table: bảng xếp hạng"}
+      - {emma: "AC Milan are top of the table, with eighty-one points.", say: "ay see Milan are top of the table, with eighty-one points.", focus: 1, vi: "top of the table: đầu bảng"}
+      - {tom: "Inter Milan are second, with seventy-six.", focus: 2}
+      - {emma: "And AS Roma are third, with seventy-one.", say: "And ay ess Roma are third, with seventy-one.", focus: 3}
+
+  - kind: figure
+    heading: "B · Football: the weekend's news"
+    heading_vi: "tr. 129 — bài báo: match, against, scored, top of the table, lead, half-time, second half, final score, beat, lost to"
+    image: {pdf: course-book, page: 130, clip: [176, 136, 488, 215]}
+    items:
+      - {box: [178, 139, 330, 176.8]}
+      - {box: [178, 176.8, 330, 212]}
+      - {box: [331, 142, 486, 179]}
+      - {box: [331, 179, 486, 214]}
+    lines:
+      - {emma: "Read the news. On Friday, AC Milan won their important match against Inter Milan. Khaladze scored the only goal in the 70th minute.", say: "Read the news. On Friday, ay see Milan won their important match against Inter Milan. Kalad-zay scored the only goal in the seventieth minute.", focus: 0, vi: "match against: trận đấu với · score a goal: ghi bàn"}
+      - {tom: "This means they are still top of the table, but now lead Inter by five points. On Saturday, Cagliari could…", say: "This means they are still top of the table, but now leed Inter by five points. On Saturday, Kalyari could…", focus: 1, vi: "lead … by five points: dẫn … năm điểm"}
+      - {emma: "…only draw their match with Torino. At Palermo, Roma were leading three nil at half-time, but Palermo came back in…", focus: 2, vi: "draw with: hòa với · half-time: giờ nghỉ giữa hiệp"}
+      - {tom: "…the second half to make the final score three all. Lazio beat Livorno three one, while Treviso lost three one to Fiorentina.", focus: 3, vi: "second half: hiệp hai · final score: tỉ số cuối · beat: thắng · lose to: thua"}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary (1) · match · against · score · top of the table"
+    heading_vi: "tr. 129 — nghĩa của các từ in đậm"
+    image: {pdf: course-book, page: 130, clip: [327, 232, 488, 352]}
+    items:
+      - {box: [330, 255.5, 486, 279.5]}
+      - {box: [330, 279.5, 486, 304]}
+      - {box: [330, 304, 486, 327.5]}
+      - {box: [330, 327.5, 486, 351.5]}
+    lines:
+      - {emma: "Look at the glossary. A match is a game between two teams, for example Parma and Lazio.", focus: 0, vi: "match = game: trận đấu"}
+      - {tom: "Against: one player or team plays against another player or team.", focus: 1, vi: "against: đấu với"}
+      - {emma: "Score: get a goal, or points, in a game.", focus: 2, vi: "score (động từ): ghi bàn, ghi điểm"}
+      - {tom: "Top of the table, or top of the league: number one in the table.", focus: 3, vi: "top of the table / league: đứng đầu bảng"}
+
+  - kind: figure
+    heading: "Glossary (2) · lead · half-time · first / second half · final score"
+    heading_vi: "tr. 129 — nghĩa của các từ in đậm (tiếp)"
+    image: {pdf: course-book, page: 130, clip: [327, 351.7, 488, 462]}
+    items:
+      - {box: [330, 351.7, 486, 375.3]}
+      - {box: [330, 375.3, 486, 399]}
+      - {box: [330, 399, 486, 435.4]}
+      - {box: [330, 435.4, 486, 460.5]}
+    lines:
+      - {emma: "Lead: be in front of others in a game or sport.", say: "Leed: be in front of others in a game or sport.", focus: 0, vi: "lead: dẫn trước"}
+      - {tom: "Half-time: a period of rest between the first and second half.", focus: 1, vi: "half-time: giờ nghỉ giữa hai hiệp"}
+      - {emma: "First half and second half: the game is in two halves. Each half is forty-five minutes long.", focus: 2, vi: "half (số nhiều halves): hiệp"}
+      - {tom: "And the final score: the number of goals at the end of a game. For example, three two.", focus: 3, vi: "final score: tỉ số cuối cùng"}
+
+  - kind: figure
+    chapter: "Spotlight: động từ bất quy tắc"
+    heading: "Spotlight · Irregular verbs: win · beat · draw · lose"
+    heading_vi: "tr. 129 — win (won) a match / against · beat someone · draw (drew) with · lose (lost) to"
+    image: {pdf: course-book, page: 130, clip: [327, 480, 488, 618]}
+    items:
+      - {box: [330, 508, 486, 533]}
+      - {box: [330, 532.5, 486, 556]}
+      - {box: [330, 556, 486, 591]}
+      - {box: [330, 591.5, 486, 615.5]}
+    lines:
+      - {emma: "Look at the spotlight: four irregular verbs. Win, past tense won. We won two one against Sampdoria.", focus: 0, vi: "win – won: thắng (một trận đấu)"}
+      - {tom: "Beat someone, past tense beat. We beat Sampdoria two one. You win a match, but you beat a team.", focus: 1, vi: "beat – beat: thắng (một đội), đánh bại"}
+      - {emma: "Draw with someone: past tense drew, past participle drawn. We drew three all with Roma.", focus: 2, vi: "draw with – drew – drawn: hòa với"}
+      - {tom: "And lose to someone, past tense lost. We lost one nil to Milan.", focus: 3, vi: "lose to – lost: thua"}
+
+  - kind: blanks
+    chapter: "Bài 4: sửa từ in đậm"
+    heading: "Exercise 4 · Correct the bold words"
+    heading_vi: "Từ in đậm trong sách ghi trong ngoặc — ví dụ: Shevchenko did two goals. (did) → scored (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "Lazio have a play next Saturday. (play)  →  ___", answer: "match / game"}
+      - {n: 2, q: "Inter are playing with Parma. (with)  →  ___", answer: "against"}
+      - {n: 3, q: "AC Milan are number one of the table. (number one)  →  ___", answer: "top"}
+      - {n: 4, q: "Treviso lost 3–1 with Fiorentina. (with)  →  ___", answer: "to"}
+      - {n: 5, q: "Parma beated Sampdoria. (beated)  →  ___", answer: "beat"}
+      - {n: 6, q: "Milan win their game last week. (win)  →  ___", answer: "won"}
+      - {n: 7, q: "Palermo draw with AS Roma. (draw)  →  ___", answer: "drew"}
+      - {n: 8, q: "Lazio won Livorno 3–1. (won)  →  ___", answer: "beat"}
+    lines:
+      - emma: "Exercise 4. Correct the bold words. The example is: Shevchenko did two goals. No: Shevchenko scored two goals. Pause the video and try."
+        say: "Exercise four. Correct the bold words. The example is: Shevchenko did two goals. No: Shevchenko scored two goals. Pause the video and try."
+        vi: "Bài 4: sửa từ in đậm."
+      - {tom: "One. Lazio have a match, or a game, next Saturday. Two. Inter are playing against Parma. Three. AC Milan are top of the table. Four. Treviso lost three one to Fiorentina.", say: "One. Lazio have a match, or a game, next Saturday. Two. Inter are playing against Parma. Three. ay see Milan are top of the table. Four. Treviso lost three one to Fiorentina.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Parma beat Sampdoria: beat is irregular. Six. Milan won their game last week. Seven. Palermo drew with AS Roma. Eight. Lazio beat Livorno: you win a game, but you beat a team.", say: "Five. Parma beat Sampdoria: beat is irregular. Six. Milan won their game last week. Seven. Palermo drew with ay ess Roma. Eight. Lazio beat Livorno: you win a game, but you beat a team.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Ví dụ: They scored in the second half. — câu 4 có hai chỗ trống tách thành 4a / 4b (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "It's an important ___ next week.", answer: "match / game"}
+      - {n: 2, q: "We are playing ___ Valencia.", answer: "against"}
+      - {n: 3, q: "Seville ___ 1–2 to Barcelona.", answer: "lost"}
+      - {n: "4a", q: "Bilbao ___ 2–2 … Villareal.", answer: "drew"}
+      - {n: "4b", q: "Bilbao drew 2–2 ___ Villareal.", answer: "with"}
+      - {n: 5, q: "It was 0–0 at ___.", answer: "half-time"}
+      - {n: 6, q: "On Sunday Espanyol ___ Real Betis 2–1.", answer: "beat"}
+      - {n: 7, q: "Ronaldinho ___ the goal.", answer: "scored"}
+      - {n: 8, q: "We ___ our last match 4–1.", answer: "won"}
+      - {n: 9, q: "They were ___ 1–0 at half-time.", answer: "leading"}
+      - {n: 10, q: "What was the final ___?", answer: "score"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. The example is: they scored in the second half. Pause the video and try."
+        say: "Exercise five. Complete the sentences. The example is: they scored in the second half. Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. It's an important match, or game, next week. Two. We are playing against Valencia. Three. Seville lost one two to Barcelona. Four. Bilbao drew two all with Villareal.", reveal: [1, 2, 3, "4a", "4b"], focus: 4}
+      - {tom: "Five. It was nil nil at half-time. Six. Espanyol beat Real Betis. Seven. Ronaldinho scored the goal. Eight. We won our last match four one.", say: "Five. It was nil nil at half-time. Six. Espanyol beat Ray-al Betis. Seven. Ronaldinho scored the goal. Eight. We won our last match four one.", reveal: [5, 6, 7, 8], focus: 8}
+      - {tom: "Nine. They were leading one nil at half-time. Ten. What was the final score?", reveal: [9, 10], focus: 10}
+
+  - kind: bullets
+    chapter: "Bài 6: tỉ số bằng tiếng Anh"
+    heading: "Exercise 6 · About your country: football scores in English"
+    heading_vi: "Bài 6 — xem tỉ số bóng đá cuối tuần này, viết bằng tiếng Anh: kết quả và người ghi bàn"
+    items:
+      - {en: "Bayern Munich beat Borussia Dortmund 1–0. Ballack scored in the 34th minute.", vi: "câu mẫu của sách: beat + tỉ số; scored in the … minute"}
+      - {en: "[Team A] drew 2–2 with [Team B]. · [Team A] lost 0–1 to [Team B].", vi: "hòa với · thua"}
+      - {en: "It was 0–0 at half-time. · The final score was 3–1.", vi: "nil nil · tỉ số cuối"}
+      - {en: "Our team beat the medical school 62–58. I scored 18 points!", vi: "Tom kể trận bóng rổ thứ Bảy vừa rồi"}
+    lines:
+      - {emma: "Exercise 6 is about your country. Look at the football scores this weekend, and write the final scores in English, and the people who scored. The example is: Bayern Munich beat Borussia Dortmund one nil. Ballack scored in the thirty-fourth minute.", say: "Exercise six is about your country. Look at the football scores this weekend, and write the final scores in English, and the people who scored. The example is: Bayern Munich beat Borussia Dortmund one nil. Ballack scored in the thirty-fourth minute.", focus: 0}
+      - {tom: "Use drew with, and lost to. Team A drew two all with team B. Team A lost nil one to team B.", say: "Yooz drew with, and lost to. Team eigh drew two all with team bee. Team eigh lost nil one to team bee.", focus: 1}
+      - {emma: "It was nil nil at half-time. The final score was three one.", focus: 2}
+      - {tom: "Or use your own team. Last Saturday, our basketball team beat the medical school sixty-two to fifty-eight. I scored eighteen points!", say: "Or yooz your own team. Last Saturday, our basketball team beat the medical school sixty-two to fifty-eight. I scored eighteen points!", focus: 3, vi: "Tom ghi 18 điểm, đội thắng trường y 62–58."}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về thể thao — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "We won them 3–1.  →  ___", answer: "We beat them 3–1."}
+      - {n: 2, q: "He made two goals.  →  ___", answer: "He scored two goals."}
+      - {n: 3, q: "Yesterday we draw 2–2.  →  ___", answer: "Yesterday we drew 2–2."}
+      - {n: 4, q: "They lost with Fiorentina.  →  ___", answer: "They lost to Fiorentina."}
+      - {n: 5, q: "You play tennis on a pitch.  →  ___", answer: "You play tennis on a court."}
+      - {n: 6, q: "The score was three-zero.  →  ___", answer: "The score was three nil."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. We beat them three one: you beat a team, you win a match. Two. He scored two goals.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. Yesterday we drew: drew is the past of draw. Four. They lost to Fiorentina.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. You play tennis on a court. Six. Three nil: in football, we say nil, not zero.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a sport you like"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about basketball. I started playing at high school in Da Lat, and now I play twice a week."
+        say: "I'd like to talk about basketball. I started playing at high school in Dah Lot, and now I play twice a week."
+        note: "what the sport is"
+      - text: "It's a game for two teams of five players. You play on a court, and you score points when you throw the ball into the basket."
+        note: "how you play it"
+      - text: "I play with my friends from university, on a court near our flat. Sometimes we play against other universities."
+        note: "where and who with"
+      - text: "I like it because it's fast and exciting, and it's good exercise after a long day of studying. And my shirt number is nine: my lucky number!"
+        note: "why you like it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe a sport you like. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe a sport you like. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: môn thể thao bạn thích."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'm not very keen on team sports, so I'd like to talk about swimming. My grandfather taught me to swim when I was ten, in the sea near my home town."
+        note: "what the sport is"
+      - text: "You don't need much equipment: just a swimsuit and some goggles. You can swim alone, or race against other people."
+        note: "how you play it"
+      - text: "Here in Ho Chi Minh City, I go to a pool near my flat after work, two or three times a week. I usually go alone."
+        say: "Here in Ho Chee Min City, I go to a pool near my flat after work, two or three times a week. I usually go alone."
+        note: "where and who with"
+      - text: "I like it because it's relaxing, and it's good for my back after a long day of teaching. And I'm never on the losing team!"
+        note: "why you like it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a sport you like.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a sport you like"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What is the sport?", hint: "I'd like to talk about … · I started playing / watching it …"}
+      - {q: "How do you play it?", hint: "It's a game for … · You play on a court / pitch … · You score …"}
+      - {q: "Where do you play or watch it, and who with?", hint: "I play with … at / on … · I watch it on TV with …"}
+      - {q: "Why do you like it?", hint: "because it's exciting / good exercise · The best thing about it is …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the words from today: pitch, court, score, win, and beat."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the words from today: pitch, court, score, win, and beat."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "What is the sport?", focus: 0, pause: 0.5}
+      - {emma: "How do you play it?", focus: 1, pause: 0.5}
+      - {emma: "Where do you play or watch it, and who with?", focus: 2, pause: 0.5}
+      - {emma: "Why do you like it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · sport"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Why is football so popular?"
+        a: "Because it's simple: you only need a ball. Children can play it anywhere, in the street or in the park."
+        ask: emma
+        by: tom
+        phrases: ["Because it's simple:", "anywhere"]
+      - q: "Is it better to play sport or to watch it?"
+        a: "Play it, definitely. Watching is fun, but playing is good for your health, and you meet people."
+        ask: tom
+        by: emma
+        phrases: ["…, definitely.", "… is good for your health"]
+      - q: "Should schools have more PE lessons?"
+        a: "Yes. Students sit at their desks all day. Two hours of sport a week isn't enough."
+        ask: emma
+        by: tom
+        phrases: ["Yes.", "… isn't enough"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Why is football so popular?", focus: 0}
+      - {tom: "Because it's simple: you only need a ball. Children can play it anywhere, in the street or in the park.", reveal: 0, vi: "Vì đơn giản: chỉ cần quả bóng; trẻ em đá ở đâu cũng được."}
+      - {tom: "Is it better to play sport, or to watch it?", focus: 1}
+      - {emma: "Play it, definitely. Watching is fun, but playing is good for your health, and you meet people.", reveal: 1, vi: "Chơi thì hơn: xem thì vui, nhưng chơi tốt cho sức khỏe, lại gặp gỡ mọi người."}
+      - {emma: "Should schools have more PE lessons?", say: "Should schools have more pee ee lessons?", focus: 2}
+      - {tom: "Yes. Students sit at their desks all day. Two hours of sport a week isn't enough.", reveal: 2, vi: "Có: học sinh ngồi cả ngày; hai giờ thể thao một tuần là không đủ."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 2 và bài 4 không nhìn đáp án"
+    items:
+      - {en: "football, rugby: pitch · ice hockey: rink · volleyball, tennis, basketball: court", vi: "nơi chơi"}
+      - {en: "ball · net · racket · stick · puck · basket = equipment", vi: "dụng cụ"}
+      - {en: "goals (football, ice hockey) · points (rugby, volleyball, basketball) · games, sets (tennis) · 3–0 = three nil", vi: "tỉ số"}
+      - {en: "win (won) a match · beat (beat) a team · draw (drew) with · lose (lost) to", vi: "động từ bất quy tắc"}
+      - {en: "match · against · top of the table · lead · half-time · first / second half · final score", vi: "nói về trận đấu"}
+      - {en: "Next: Unit 50 · Free time", vi: "Tiếp theo: Unit 50 · Thời gian rảnh"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Football and rugby on a pitch, ice hockey on a rink, and volleyball, tennis and basketball on a court.", focus: 0}
+      - {tom: "A ball, a net, a racket, a stick, a puck and a basket: all equipment.", focus: 1}
+      - {emma: "Goals in football and ice hockey, points in rugby, volleyball and basketball. Three nil.", focus: 2}
+      - {tom: "Win a match, beat a team, draw with, and lose to. Won, beat, drew, lost.", focus: 3}
+      - {emma: "A match against, top of the table, lead, half-time, the second half, and the final score.", say: "A match against, top of the table, leed, half-time, the second half, and the final score.", focus: 4}
+      - {tom: "Next time, Unit 50: free time. See you then!", say: "Next time, Unit fifty: free time. See you then!", focus: 5}

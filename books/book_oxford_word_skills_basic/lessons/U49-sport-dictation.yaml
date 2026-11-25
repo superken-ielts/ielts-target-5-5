@@ -1,0 +1,322 @@
+# Video nghe – viết (dictation) Unit 49 · Sport — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U49-sport-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U49 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 49 có 40 mục: môn – sân – dụng cụ ghép một dòng (football, pitch; ice hockey, rink; stick, puck…);
+# ice hockey phủ hockey, half-time phủ time, first half phủ half; win, beat, draw, lose đọc kèm quá khứ trong câu ví dụ.
+id: U49-sport-dictation
+activity: U49-words
+title: "Unit 49 · Sport"
+subtitle: "Dictation · listen and write: talking about sport"
+title_vi: "Nghe – viết 10 phút: thể thao — từ trong sách, từ thêm, câu giao tiếp"
+tag: "HOBBIES AND INTERESTS · UNIT 49"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 49: Sport. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-nine: Sport. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 49: thể thao. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 31 words from the book. You hear each word twice, and then an example sentence twice. Then 18 more useful words, and 33 useful sentences for conversation.", "say": "There are three parts. First, thirty-one words from the book. You hear each word twice, and then an example sentence twice. Then eighteen more useful words, and thirty-three useful sentences for conversation.", "vi": "Ba phần: 31 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 18 từ thêm, 33 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "game", "vi": "trận đấu, môn thể thao", "ex": "Football is a game for two teams.", "w": ["game"]}
+      - {"n": 2, "answer": "football, pitch", "vi": "bóng đá, sân cỏ", "ex": "You play football on a pitch.", "w": ["football", "pitch"]}
+      - {"n": 3, "answer": "rugby", "vi": "bóng bầu dục", "ex": "You play rugby with a rugby ball.", "w": ["rugby"]}
+      - {"n": 4, "answer": "ice hockey, rink", "vi": "khúc côn cầu trên băng, sân băng", "ex": "You play ice hockey on a rink.", "w": ["ice hockey", "hockey", "rink"]}
+      - {"n": 5, "answer": "stick, puck", "vi": "gậy, bóng khúc côn cầu", "ex": "You hit the puck with a stick.", "w": ["stick", "puck"]}
+      - {"n": 6, "answer": "volleyball, court", "vi": "bóng chuyền, sân", "ex": "You play volleyball on a court.", "w": ["volleyball", "court"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. game. game. Football is a game for two teams. Football is a game for two teams.", "focus": 0}
+      - {"emma": "Two. football, pitch. football, pitch. You play football on a pitch. You play football on a pitch.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. rugby. rugby. You play rugby with a rugby ball. You play rugby with a rugby ball.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. ice hockey, rink. ice hockey, rink. You play ice hockey on a rink. You play ice hockey on a rink.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. stick, puck. stick, puck. You hit the puck with a stick. You hit the puck with a stick.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. volleyball, court. volleyball, court. You play volleyball on a court. You play volleyball on a court.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "net", "vi": "lưới", "ex": "There's a net in tennis and volleyball.", "w": ["net"]}
+      - {"n": 8, "answer": "tennis, racket", "vi": "quần vợt, vợt", "ex": "I need to get a new tennis racket.", "w": ["tennis", "racket"]}
+      - {"n": 9, "answer": "basketball, basket", "vi": "bóng rổ, rổ", "ex": "In basketball, you throw the ball into the basket.", "w": ["basketball", "basket"]}
+      - {"n": 10, "answer": "ball", "vi": "quả bóng", "ex": "He kicked the ball into the goal.", "w": ["ball"]}
+      - {"n": 11, "answer": "equipment", "vi": "dụng cụ", "ex": "Sticks and rackets are equipment.", "w": ["equipment"]}
+      - {"n": 12, "answer": "score", "vi": "tỉ số; ghi bàn", "ex": "What was the score?", "w": ["score"]}
+    lines:
+      - {"emma": "Seven. net. net. There's a net in tennis and volleyball. There's a net in tennis and volleyball.", "focus": 0}
+      - {"emma": "Eight. tennis, racket. tennis, racket. I need to get a new tennis racket. I need to get a new tennis racket.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. basketball, basket. basketball, basket. In basketball, you throw the ball into the basket. In basketball, you throw the ball into the basket.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. ball. ball. He kicked the ball into the goal. He kicked the ball into the goal.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. equipment. equipment. Sticks and rackets are equipment. Sticks and rackets are equipment.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. score. score. What was the score? What was the score?", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "goal", "vi": "bàn thắng; khung thành", "ex": "Khaladze scored the only goal.", "w": ["goal"]}
+      - {"n": 14, "answer": "points", "vi": "điểm", "ex": "You score points in basketball.", "w": ["points"]}
+      - {"n": 15, "answer": "nil", "vi": "không (tỉ số)", "ex": "It was three nil.", "w": ["nil"]}
+      - {"n": 16, "answer": "set", "vi": "séc (quần vợt)", "ex": "Six two is one set in tennis.", "w": ["set"]}
+      - {"n": 17, "answer": "team", "vi": "đội", "ex": "Which team do you support?", "w": ["team"]}
+      - {"n": 18, "answer": "match", "vi": "trận đấu", "ex": "It's an important match next week.", "w": ["match"]}
+    lines:
+      - {"emma": "Thirteen. goal. goal. Khaladze scored the only goal. Khaladze scored the only goal.", "focus": 0}
+      - {"emma": "Fourteen. points. points. You score points in basketball. You score points in basketball.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. nil. nil. It was three nil. It was three nil.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. set. set. Six two is one set in tennis. Six two is one set in tennis.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. team. team. Which team do you support? Which team do you support?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. match. match. It's an important match next week. It's an important match next week.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "against", "vi": "đấu với", "ex": "We are playing against Valencia.", "w": ["against"]}
+      - {"n": 20, "answer": "win", "vi": "thắng", "ex": "Milan won their game last week.", "w": ["win"]}
+      - {"n": 21, "answer": "beat", "vi": "đánh bại", "ex": "Parma beat Sampdoria.", "w": ["beat"]}
+      - {"n": 22, "answer": "draw", "vi": "hòa", "ex": "Palermo drew with AS Roma.", "w": ["draw"]}
+      - {"n": 23, "answer": "lose", "vi": "thua", "ex": "Treviso lost 3–1 to Fiorentina.", "w": ["lose"]}
+      - {"n": 24, "answer": "league", "vi": "giải đấu", "ex": "They are top of the league.", "w": ["league"]}
+    lines:
+      - {"emma": "Nineteen. against. against. We are playing against Valencia. We are playing against Valencia.", "focus": 0}
+      - {"emma": "Twenty. win. win. Milan won their game last week. Milan won their game last week.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. beat. beat. Parma beat Sampdoria. Parma beat Sampdoria.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. draw. draw. Palermo drew with AS Roma. Palermo drew with AS Roma.", "say": "Twenty-two. draw. draw. Palermo drew with ay ess Roma. Palermo drew with ay ess Roma.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. lose. lose. Treviso lost 3–1 to Fiorentina. Treviso lost 3–1 to Fiorentina.", "say": "Twenty-three. lose. lose. Treviso lost three one to Fiorentina. Treviso lost three one to Fiorentina.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. league. league. They are top of the league. They are top of the league.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "table", "vi": "bảng xếp hạng", "ex": "Look at the league table.", "w": ["table"]}
+      - {"n": 26, "answer": "top", "vi": "đầu (bảng)", "ex": "AC Milan are top of the table.", "w": ["top"]}
+      - {"n": 27, "answer": "lead", "vi": "dẫn trước", "ex": "Milan now lead Inter by five points.", "w": ["lead"]}
+      - {"n": 28, "answer": "place", "vi": "vị trí, hạng", "ex": "They finished in third place.", "w": ["place"]}
+    lines:
+      - {"emma": "Twenty-five. table. table. Look at the league table. Look at the league table.", "focus": 0}
+      - {"emma": "Twenty-six. top. top. AC Milan are top of the table. AC Milan are top of the table.", "say": "Twenty-six. top. top. ay see Milan are top of the table. ay see Milan are top of the table.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. lead. lead. Milan now lead Inter by five points. Milan now lead Inter by five points.", "say": "Twenty-seven. leed. leed. Milan now lead Inter by five points. Milan now lead Inter by five points.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. place. place. They finished in third place. They finished in third place.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (29–31)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 29, "answer": "half, first half", "vi": "hiệp, hiệp một", "ex": "There were no goals in the first half.", "w": ["half", "first half"]}
+      - {"n": 30, "answer": "half-time", "vi": "giờ nghỉ giữa hai hiệp", "ex": "It was 0–0 at half-time.", "w": ["half-time", "time"]}
+      - {"n": 31, "answer": "final score", "vi": "tỉ số cuối cùng", "ex": "What was the final score?", "w": ["final score"]}
+    lines:
+      - {"emma": "Twenty-nine. half, first half. half, first half. There were no goals in the first half. There were no goals in the first half.", "focus": 0}
+      - {"emma": "Thirty. half-time. half-time. It was 0–0 at half-time. It was 0–0 at half-time.", "say": "Thirty. half-time. half-time. It was nil nil at half-time. It was nil nil at half-time.", "focus": 1, "reveal": [29]}
+      - {"emma": "Thirty-one. final score. final score. What was the final score? What was the final score?", "focus": 2, "reveal": [30]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [31]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "player", "vi": "cầu thủ, người chơi", "ex": "He's the best player in the team."}
+      - {"n": 33, "answer": "fan", "vi": "người hâm mộ", "ex": "My brother is a big football fan."}
+      - {"n": 34, "answer": "referee", "vi": "trọng tài", "ex": "The referee stopped the game."}
+      - {"n": 35, "answer": "stadium", "vi": "sân vận động", "ex": "The stadium was full."}
+      - {"n": 36, "answer": "coach", "vi": "huấn luyện viên", "ex": "Our coach is very strict."}
+      - {"n": 37, "answer": "training", "vi": "buổi tập", "ex": "We have training on Tuesday evenings."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-two. player. player. He's the best player in the team. He's the best player in the team.", "focus": 0}
+      - {"tom": "Thirty-three. fan. fan. My brother is a big football fan. My brother is a big football fan.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. referee. referee. The referee stopped the game. The referee stopped the game.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. stadium. stadium. The stadium was full. The stadium was full.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. coach. coach. Our coach is very strict. Our coach is very strict.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. training. training. We have training on Tuesday evenings. We have training on Tuesday evenings.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "kick", "vi": "đá", "ex": "Kick the ball to me!"}
+      - {"n": 39, "answer": "throw", "vi": "ném", "ex": "Throw the ball into the basket."}
+      - {"n": 40, "answer": "hit", "vi": "đánh", "ex": "Hit the ball over the net."}
+      - {"n": 41, "answer": "champion", "vi": "nhà vô địch", "ex": "They're the champions this year."}
+      - {"n": 42, "answer": "cup", "vi": "cúp", "ex": "Vietnam won the cup in 2018."}
+      - {"n": 43, "answer": "medal", "vi": "huy chương", "ex": "She won a gold medal."}
+    lines:
+      - {"tom": "Thirty-eight. kick. kick. Kick the ball to me! Kick the ball to me!", "focus": 0}
+      - {"tom": "Thirty-nine. throw. throw. Throw the ball into the basket. Throw the ball into the basket.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. hit. hit. Hit the ball over the net. Hit the ball over the net.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. champion. champion. They're the champions this year. They're the champions this year.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. cup. cup. Vietnam won the cup in 2018. Vietnam won the cup in 2018.", "say": "Forty-two. cup. cup. Vietnam won the cup in twenty eighteen. Vietnam won the cup in twenty eighteen.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. medal. medal. She won a gold medal. She won a gold medal.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–49)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "badminton", "vi": "cầu lông", "ex": "Badminton is very popular in Vietnam."}
+      - {"n": 45, "answer": "penalty", "vi": "quả phạt đền", "ex": "He scored from a penalty."}
+      - {"n": 46, "answer": "support", "vi": "ủng hộ, cổ vũ", "ex": "Which team do you support?"}
+      - {"n": 47, "answer": "draw", "vi": "trận hòa", "ex": "It was a draw."}
+      - {"n": 48, "answer": "extra time", "vi": "hiệp phụ", "ex": "They won in extra time."}
+      - {"n": 49, "answer": "athletics", "vi": "điền kinh", "ex": "I watch athletics on TV."}
+    lines:
+      - {"tom": "Forty-four. badminton. badminton. Badminton is very popular in Vietnam. Badminton is very popular in Vietnam.", "focus": 0}
+      - {"tom": "Forty-five. penalty. penalty. He scored from a penalty. He scored from a penalty.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. support. support. Which team do you support? Which team do you support?", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. draw. draw. It was a draw. It was a draw.", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. extra time. extra time. They won in extra time. They won in extra time.", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. athletics. athletics. I watch athletics on TV. I watch athletics on TV.", "focus": 5, "reveal": [48]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (50–55)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 50, "answer": "Do you play any sports?", "vi": "Bạn có chơi môn thể thao nào không?"}
+      - {"n": 51, "answer": "Yes, I play basketball twice a week.", "vi": "Có, mình chơi bóng rổ tuần hai lần."}
+      - {"n": 52, "answer": "Did you watch the match last night?", "vi": "Tối qua bạn có xem trận đấu không?"}
+      - {"n": 53, "answer": "No, I missed it. What was the score?", "vi": "Không, mình lỡ mất. Tỉ số thế nào?"}
+      - {"n": 54, "answer": "We won two one.", "vi": "Đội mình thắng hai một."}
+      - {"n": 55, "answer": "Who scored?", "vi": "Ai ghi bàn?"}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty. Do you play any sports? Do you play any sports?", "focus": 0}
+      - {"tom": "Fifty-one. Yes, I play basketball twice a week. Yes, I play basketball twice a week.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. Did you watch the match last night? Did you watch the match last night?", "focus": 2, "reveal": [51]}
+      - {"emma": "Fifty-three. No, I missed it. What was the score? No, I missed it. What was the score?", "focus": 3, "reveal": [52]}
+      - {"tom": "Fifty-four. We won two one. We won two one.", "focus": 4, "reveal": [53]}
+      - {"emma": "Fifty-five. Who scored? Who scored?", "focus": 5, "reveal": [54]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [55]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (56–61)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 56, "answer": "Our captain scored twice.", "vi": "Đội trưởng đội mình ghi hai bàn."}
+      - {"n": 57, "answer": "It was nil nil at half-time.", "vi": "Hết hiệp một tỉ số không không."}
+      - {"n": 58, "answer": "It was a draw.", "vi": "Trận đấu hòa."}
+      - {"n": 59, "answer": "Which team do you support?", "vi": "Bạn cổ vũ đội nào?"}
+      - {"n": 60, "answer": "My brother is a big fan of Hanoi FC.", "vi": "Em trai mình rất mê câu lạc bộ Hà Nội."}
+      - {"n": 61, "answer": "Who are you playing against?", "vi": "Bạn đấu với đội nào?"}
+    lines:
+      - {"tom": "Fifty-six. Our captain scored twice. Our captain scored twice.", "focus": 0}
+      - {"tom": "Fifty-seven. It was nil nil at half-time. It was nil nil at half-time.", "focus": 1, "reveal": [56]}
+      - {"tom": "Fifty-eight. It was a draw. It was a draw.", "focus": 2, "reveal": [57]}
+      - {"emma": "Fifty-nine. Which team do you support? Which team do you support?", "focus": 3, "reveal": [58]}
+      - {"tom": "Sixty. My brother is a big fan of Hanoi FC. My brother is a big fan of Hanoi FC.", "say": "Sixty. My brother is a big fan of Ha Noi eff see. My brother is a big fan of Ha Noi eff see.", "focus": 4, "reveal": [59]}
+      - {"emma": "Sixty-one. Who are you playing against? Who are you playing against?", "focus": 5, "reveal": [60]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [61]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (62–67)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 62, "answer": "We're playing against the medical school.", "vi": "Đội mình đấu với trường y."}
+      - {"n": 63, "answer": "Good luck!", "vi": "Chúc may mắn!"}
+      - {"n": 64, "answer": "Good game!", "vi": "Trận đấu hay lắm!"}
+      - {"n": 65, "answer": "Unlucky! You played well.", "vi": "Tiếc quá! Bạn chơi hay mà."}
+      - {"n": 66, "answer": "Shall we play tennis on Saturday?", "vi": "Thứ Bảy mình chơi quần vợt nhé?"}
+      - {"n": 67, "answer": "Sorry, I haven't got a racket.", "vi": "Xin lỗi, mình không có vợt."}
+    lines:
+      - {"tom": "Sixty-two. We're playing against the medical school. We're playing against the medical school.", "focus": 0}
+      - {"emma": "Sixty-three. Good luck! Good luck!", "focus": 1, "reveal": [62]}
+      - {"emma": "Sixty-four. Good game! Good game!", "focus": 2, "reveal": [63]}
+      - {"emma": "Sixty-five. Unlucky! You played well. Unlucky! You played well.", "focus": 3, "reveal": [64]}
+      - {"tom": "Sixty-six. Shall we play tennis on Saturday? Shall we play tennis on Saturday?", "focus": 4, "reveal": [65]}
+      - {"emma": "Sixty-seven. Sorry, I haven't got a racket. Sorry, I haven't got a racket.", "focus": 5, "reveal": [66]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (68–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 68, "answer": "You can borrow mine.", "vi": "Bạn mượn của mình nhé."}
+      - {"n": 69, "answer": "Who won?", "vi": "Ai thắng?"}
+      - {"n": 70, "answer": "They beat us three one.", "vi": "Họ thắng đội mình ba một."}
+      - {"n": 71, "answer": "We lost, but it was a good match.", "vi": "Đội mình thua, nhưng trận đấu hay."}
+      - {"n": 72, "answer": "Is football popular in your country?", "vi": "Bóng đá có phổ biến ở nước bạn không?"}
+      - {"n": 73, "answer": "Yes, very. Everyone watches the national team.", "vi": "Có, rất phổ biến. Ai cũng xem đội tuyển quốc gia."}
+    lines:
+      - {"tom": "Sixty-eight. You can borrow mine. You can borrow mine.", "focus": 0}
+      - {"emma": "Sixty-nine. Who won? Who won?", "focus": 1, "reveal": [68]}
+      - {"tom": "Seventy. They beat us three one. They beat us three one.", "focus": 2, "reveal": [69]}
+      - {"tom": "Seventy-one. We lost, but it was a good match. We lost, but it was a good match.", "focus": 3, "reveal": [70]}
+      - {"emma": "Seventy-two. Is football popular in your country? Is football popular in your country?", "focus": 4, "reveal": [71]}
+      - {"tom": "Seventy-three. Yes, very. Everyone watches the national team. Yes, very. Everyone watches the national team.", "focus": 5, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [73]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (74–79)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 74, "answer": "I prefer playing sport to watching it.", "vi": "Mình thích chơi thể thao hơn xem."}
+      - {"n": 75, "answer": "I'm not very good at sport.", "vi": "Mình chơi thể thao không giỏi lắm."}
+      - {"n": 76, "answer": "Come on! Pass the ball!", "vi": "Cố lên! Chuyền bóng đi!"}
+      - {"n": 77, "answer": "Where's the nearest sports centre?", "vi": "Trung tâm thể thao gần nhất ở đâu?"}
+      - {"n": 78, "answer": "It's next to the university.", "vi": "Ở cạnh trường đại học."}
+      - {"n": 79, "answer": "How often do you train?", "vi": "Bạn tập bao lâu một lần?"}
+    lines:
+      - {"tom": "Seventy-four. I prefer playing sport to watching it. I prefer playing sport to watching it.", "focus": 0}
+      - {"emma": "Seventy-five. I'm not very good at sport. I'm not very good at sport.", "focus": 1, "reveal": [74]}
+      - {"tom": "Seventy-six. Come on! Pass the ball! Come on! Pass the ball!", "focus": 2, "reveal": [75]}
+      - {"emma": "Seventy-seven. Where's the nearest sports centre? Where's the nearest sports centre?", "focus": 3, "reveal": [76]}
+      - {"tom": "Seventy-eight. It's next to the university. It's next to the university.", "focus": 4, "reveal": [77]}
+      - {"emma": "Seventy-nine. How often do you train? How often do you train?", "focus": 5, "reveal": [78]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [79]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (80–82)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 80, "answer": "Every Wednesday and Saturday.", "vi": "Thứ Tư và thứ Bảy hằng tuần."}
+      - {"n": 81, "answer": "Who's top of the league?", "vi": "Đội nào đứng đầu giải?"}
+      - {"n": 82, "answer": "Our team, by three points!", "vi": "Đội mình, hơn ba điểm!"}
+    lines:
+      - {"tom": "Eighty. Every Wednesday and Saturday. Every Wednesday and Saturday.", "focus": 0}
+      - {"emma": "Eighty-one. Who's top of the league? Who's top of the league?", "focus": 1, "reveal": [80]}
+      - {"tom": "Eighty-two. Our team, by three points! Our team, by three points!", "focus": 2, "reveal": [81]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [82]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 50.", "say": "Well done! See you in Unit fifty.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 50."}
+
