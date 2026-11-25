@@ -1,0 +1,532 @@
+# Video Oxford Word Skills Basic · Unit 39 — I can describe a kitchen (sách in tr. 100–101, Answer key tr. 214).
+# UNIT KHÓ (đợt 40): 2 trang, nhiều từ — 17 đồ dùng trong bếp và 10 cụm việc nhà (do the shopping, put away, empty the bin, do the
+# washing-up…), do + danh từ; nấu ăn và việc nhà là chủ đề IELTS Part 1–3 hay gặp — video khoảng 13 phút: phần sách, rồi do hay
+# make (giải thích, câu đố), bếp Việt Nam, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a time when you cooked a meal for other people", hai bài mẫu; ba câu thảo
+# luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời
+# `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 4 theo Answer key tr. 214 (bài 1 có câu hai chỗ trống: 2a/2b, 3a/3b, 10a/10b). Bài 2 (ABOUT YOU):
+# câu của Tom và Emma. Bài 3 (Test yourself): tranh bếp không có danh sách, đáp án hiện thành nhãn khi Tom trả lời. Bài 5 (ABOUT
+# YOU): Tom và Emma hỏi đáp (cảnh Nói 1). Bài 6 (Test yourself): nghe mô tả, nói cụm việc nhà.
+# Hình trong sách: tranh bếp 17 mục (hai cảnh: nửa trên, nửa dưới; khung theo số), 10 tranh việc nhà (hai cảnh), Spotlight do + noun.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom ở chung căn hộ với hai bạn, chia nhau nấu (U17), đang học nấu ăn
+# (U22), muốn học món canh cá và chả giò của mẹ, mẹ chỉ nói "a little of this, and a little of that" (IELTS U02); bếp ở nhà Đà Lạt là
+# phòng yêu thích (IELTS U01, U38). Emma thích nấu ăn, đã học lớp nấu món Việt (hồ sơ), bếp luôn bừa sau khi nấu (U14), nhớ nhà nhất
+# dịp Giáng sinh (U16). Mới: căn hộ của Tom không có lò nướng, máy rửa bát, nấu bằng bếp ga; máy giặt ở ban công; Tom đổ rác, ba
+# người thay nhau rửa bát, không ai là quần áo. Emma có lò nướng nhỏ mua ở TP. HCM, không có máy rửa bát, máy giặt trong phòng tắm,
+# tự làm mọi việc nhà. Part 2: tháng trước Tom nấu canh cá của mẹ cho hai bạn cùng phòng (gọi video hỏi mẹ); Giáng sinh năm ngoái Emma
+# nấu bữa tối kiểu Anh (gà quay, khoai tây nướng) cho ba giáo viên cùng trường ở căn hộ của mình.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U39-kitchen.yaml
+id: U39-kitchen
+activity: U39-words
+title: "Unit 39 · The kitchen"
+subtitle: "I can describe a kitchen"
+title_vi: "Căn bếp: fridge, freezer, cooker, oven, hob, sink, cupboard, saucepan, frying pan; việc nhà: do the shopping, put away, empty the bin, do the washing-up — kèm ôn tập và luyện nói"
+tag: "PLACES · UNIT 39"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 39: the kitchen. Today: things in the kitchen, and housework. There are lots of words, and cooking and housework are common IELTS topics, so this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit thirty-nine: the kitchen. Today: things in the kitchen, and housework. There are lots of words, and cooking and housework are common eye-elts topics, so this video is longer, with a review and speaking practice."
+        vi: "Unit 39: căn bếp — đồ dùng trong bếp và việc nhà; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Trong bếp (1)"
+    heading: "A · In the kitchen (1)"
+    heading_vi: "Tranh trong sách tr. 100, nửa trên — số 1–10"
+    image: {pdf: course-book, page: 101, clip: [46, 96, 487, 258]}
+    items:
+      - {box: [302, 126, 356, 182]}
+      - {box: [210, 210, 240, 242]}
+      - {box: [250, 220, 280, 242]}
+      - {box: [276, 202, 330, 234]}
+      - {box: [330, 224, 380, 246]}
+      - {box: [398, 152, 486, 224]}
+      - {box: [194, 238, 250, 258]}
+      - {box: [236, 232, 258, 252]}
+      - {box: [318, 236, 386, 256]}
+      - {box: [350, 228, 388, 252]}
+    lines:
+      - {emma: "Look at page one hundred. One: a shelf. The plural is shelves.", focus: 0, vi: "shelf, shelves: cái giá, kệ"}
+      - {tom: "Two: a tap. You turn the tap on, and you turn it off.", focus: 1, vi: "tap: vòi nước · turn on ≠ turn off"}
+      - {emma: "Three: cups.", focus: 2}
+      - {tom: "Four: a microwave.", focus: 3, vi: "microwave: lò vi sóng"}
+      - {emma: "Five: a frying pan.", focus: 4, vi: "frying pan: chảo"}
+      - {tom: "Six: the freezer: it's very cold, for frozen food.", focus: 5, vi: "freezer: ngăn đá, tủ đông"}
+      - {emma: "Seven: the sink.", focus: 6, vi: "sink: bồn rửa"}
+      - {tom: "Eight: saucers. You put a cup on a saucer.", focus: 7, vi: "saucer: đĩa lót tách"}
+      - {emma: "Nine: the hob: the top of the cooker.", focus: 8, vi: "hob: mặt bếp"}
+      - {tom: "Ten: a saucepan.", focus: 9, vi: "saucepan: nồi có cán"}
+
+  - kind: figure
+    chapter: "Trong bếp (2)"
+    heading: "A · In the kitchen (2)"
+    heading_vi: "Tranh tr. 100, nửa dưới — số 11–17; The bin is full ≠ empty"
+    image: {pdf: course-book, page: 101, clip: [46, 232, 487, 378]}
+    items:
+      - {box: [226, 262, 262, 322]}
+      - {box: [52, 245, 182, 259]}
+      - {box: [322, 258, 386, 322]}
+      - {box: [400, 256, 486, 374]}
+      - {box: [254, 254, 300, 322]}
+      - {box: [380, 262, 408, 330]}
+      - {box: [180, 298, 264, 374]}
+      - {box: [318, 254, 394, 360]}
+    lines:
+      - {emma: "Eleven: the bin, or the rubbish bin.", focus: 0, vi: "(rubbish) bin: thùng rác"}
+      - {tom: "Look at the list: the bin is full. The opposite is empty.", focus: 1, vi: "full ≠ empty: đầy ≠ rỗng"}
+      - {emma: "Twelve: the oven.", focus: 2, vi: "oven: lò nướng"}
+      - {tom: "Thirteen: the fridge.", say: "Thir-teen: the fridge.", focus: 3, vi: "fridge: tủ lạnh"}
+      - {emma: "Fourteen: a washing machine.", say: "Four-teen: a washing machine.", focus: 4, vi: "washing machine: máy giặt"}
+      - {tom: "Fifteen: a cupboard. Listen: cupboard. The P is silent.", say: "Fif-teen: a cupboard. Listen: cupboard. The pee is silent.", focus: 5, vi: "cupboard: tủ chạn — chữ p câm"}
+      - {emma: "Sixteen: the dishwasher.", say: "Six-teen: the dishwasher.", focus: 6, vi: "dishwasher: máy rửa bát"}
+      - {tom: "And seventeen: the cooker: the oven and the hob together.", say: "And seven-teen: the cooker: the oven and the hob together.", focus: 7, vi: "cooker: bếp (lò + mặt bếp)"}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành câu"
+    heading: "Exercise 1 · Complete the sentences (1–6)"
+    heading_vi: "Ví dụ: Put the milk in the fridge. (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "Put those dirty clothes in the w___ m___.", answer: "washing machine"}
+      - {n: "2a", q: "Put the dirty plates in the d___", answer: "dishwasher"}
+      - {n: "2b", q: "or the s___.", answer: "sink"}
+      - {n: "3a", q: "Put the cups and s___", answer: "saucers"}
+      - {n: "3b", q: "in the c___.", answer: "cupboard"}
+      - {n: 4, q: "Put the books on the s___.", answer: "shelf / shelves"}
+      - {n: 5, q: "Put the empty packets in the b___.", answer: "bin"}
+      - {n: 6, q: "Put the meat in the o___.", answer: "oven"}
+    lines:
+      - emma: "Exercise 1. Complete the sentences, using vocabulary from the picture. The example is: put the milk in the fridge. Pause the video and try."
+        say: "Exercise one. Complete the sentences, using vocabulary from the picture. The example is: put the milk in the fridge. Pause the video and try."
+        vi: "Bài 1: hoàn thành câu bằng từ trong tranh."
+      - {tom: "One. The washing machine. Two. The dishwasher, or the sink. Three. Cups and saucers in the cupboard.", reveal: ["1", "2a", "2b", "3a", "3b"], focus: 4}
+      - {tom: "Four. On the shelf, or the shelves. Five. In the bin. Six. In the oven.", reveal: ["4", "5", "6"], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 1 (tiếp)"
+    heading: "Exercise 1 · Complete the sentences (7–12)"
+    heading_vi: "Answer key tr. 214"
+    items:
+      - {n: 7, q: "Cook the eggs in the f___ p___.", answer: "frying pan"}
+      - {n: 8, q: "Put the ice cream in the f___.", answer: "freezer"}
+      - {n: 9, q: "Is the rubbish bin f___?", answer: "full"}
+      - {n: "10a", q: "Heat the soup in the m___", answer: "microwave"}
+      - {n: "10b", q: "or on the h___.", answer: "hob"}
+      - {n: 11, q: "Could you turn the t___ off?", answer: "tap"}
+      - {n: 12, q: "Boil the potatoes in that s___.", answer: "saucepan"}
+    lines:
+      - {emma: "Now seven to twelve. Pause the video and try.", focus: 0}
+      - {tom: "Seven. The frying pan. Eight. The freezer: ice cream needs to be very cold. Nine. Full.", reveal: ["7", "8", "9"], focus: 2}
+      - {tom: "Ten. The microwave, or on the hob. Eleven. The tap. Twelve. A saucepan.", reveal: ["10a", "10b", "11", "12"], focus: 6}
+
+  - kind: bullets
+    chapter: "Bài 2: bạn không có gì?"
+    heading: "Exercise 2 · About you: what haven't you got?"
+    heading_vi: "Bài 2 (ABOUT YOU) — viết những thứ trong tranh mà nhà bạn không có"
+    items:
+      - {en: "Tom: I haven't got an oven or a dishwasher. We cook on a gas hob.", vi: "Không có lò nướng, máy rửa bát; nấu bằng bếp ga."}
+      - {en: "Tom: Our washing machine isn't in the kitchen. It's on the balcony.", vi: "Máy giặt ở ban công."}
+      - {en: "Emma: I haven't got a dishwasher. I do the washing-up in the sink.", vi: "Không có máy rửa bát; rửa ở bồn."}
+      - {en: "Emma: My washing machine is in the bathroom.", vi: "Máy giặt ở phòng tắm."}
+    lines:
+      - emma: "Exercise 2 is about you. Write down anything in the picture you haven't got. The example is: I haven't got a microwave, and my washing machine isn't in the kitchen. Tom?"
+        say: "Exercise two is about you. Write down anything in the picture you haven't got. The example is: I haven't got a microwave, and my washing machine isn't in the kitchen. Tom?"
+        vi: "Bài 2: viết những thứ trong tranh mà bạn không có."
+      - {tom: "I haven't got an oven or a dishwasher. In Vietnam, lots of people cook on a gas hob.", focus: 0}
+      - {tom: "And our washing machine isn't in the kitchen. It's on the balcony.", focus: 1}
+      - {emma: "I haven't got a dishwasher, so I do the washing-up in the sink.", focus: 2}
+      - {emma: "And my washing machine is in the bathroom. Pause the video and write your sentences.", focus: 3}
+
+  - kind: figure
+    chapter: "Bài 3: tự kiểm tra"
+    heading: "Exercise 3 · Test yourself: say the words"
+    heading_vi: "Che danh sách, nhìn tranh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 101, clip: [182, 96, 487, 378]}
+    items:
+      - {box: [398, 152, 486, 224]}
+      - {box: [398, 152, 486, 224], label: "the freezer"}
+      - {box: [318, 236, 386, 256]}
+      - {box: [318, 236, 386, 256], label: "the hob"}
+      - {box: [194, 238, 250, 258]}
+      - {box: [194, 238, 250, 258], label: "the sink"}
+      - {box: [180, 298, 264, 374]}
+      - {box: [180, 298, 264, 374], label: "the dishwasher"}
+      - {box: [380, 262, 408, 330]}
+      - {box: [380, 262, 408, 330], label: "a cupboard"}
+      - {box: [350, 228, 388, 252]}
+      - {box: [350, 228, 388, 252], label: "a saucepan"}
+    lines:
+      - {emma: "Exercise 3 is a test. Cover the words, and look at the picture. Say the words. Pause the video after each question. What's number six?", say: "Exercise three is a test. Cover the words, and look at the picture. Say the words. Pause the video after each question. What's number six?", focus: 0}
+      - {tom: "The freezer.", focus: 1}
+      - {emma: "Nine?", focus: 2}
+      - {tom: "The hob.", focus: 3}
+      - {emma: "Seven?", focus: 4}
+      - {tom: "The sink.", focus: 5}
+      - {emma: "Sixteen?", say: "Six-teen?", focus: 6}
+      - {tom: "The dishwasher.", focus: 7}
+      - {emma: "Fifteen?", say: "Fif-teen?", focus: 8}
+      - {tom: "A cupboard.", focus: 9}
+      - {emma: "And ten?", focus: 10}
+      - {tom: "A saucepan.", focus: 11}
+
+  - kind: figure
+    chapter: "Việc nhà (1)"
+    heading: "B · Using the kitchen: housework (1)"
+    heading_vi: "Tranh tr. 101 — số 1–6"
+    image: {pdf: course-book, page: 102, clip: [28, 52, 488, 252]}
+    items:
+      - {box: [196, 57, 292, 151]}
+      - {box: [294, 57, 390, 151]}
+      - {box: [392, 57, 486, 151]}
+      - {box: [196, 160, 292, 250]}
+      - {box: [294, 160, 390, 250]}
+      - {box: [392, 160, 486, 250]}
+    lines:
+      - {emma: "Part B: using the kitchen. Housework. One: do the shopping.", focus: 0, vi: "housework: việc nhà · do the shopping: đi mua đồ"}
+      - {tom: "Two: put the shopping away: in the cupboards, the fridge, and so on.", focus: 1, vi: "put … away: cất đi"}
+      - {emma: "Three: put the dirty clothes in the washing machine, and turn it on.", focus: 2}
+      - {tom: "Four: clean the cooker.", focus: 3}
+      - {emma: "Five: take the washing, that means the clothes, out of the washing machine.", focus: 4, vi: "the washing: quần áo giặt · take … out: lấy ra"}
+      - {tom: "Six: make a sandwich.", focus: 5}
+
+  - kind: figure
+    chapter: "Việc nhà (2)"
+    heading: "B · Using the kitchen: housework (2)"
+    heading_vi: "Tranh tr. 101 — số 7–10"
+    image: {pdf: course-book, page: 102, clip: [98, 262, 488, 364]}
+    items:
+      - {box: [100, 264, 196, 355], label: "7 empty the bin"}
+      - {box: [196, 264, 292, 355], label: "8 do the ironing"}
+      - {box: [294, 264, 390, 355], label: "9 cook lunch"}
+      - {box: [392, 264, 486, 355], label: "10 do the washing-up"}
+    lines:
+      - {emma: "Seven: empty the bin.", focus: 0, vi: "empty (v): đổ (rác)"}
+      - {tom: "Eight: do the ironing.", focus: 1, vi: "do the ironing: là / ủi quần áo"}
+      - {emma: "Nine: cook lunch for the family.", focus: 2}
+      - {tom: "And ten: do the washing-up: wash the plates, cups and pans.", focus: 3, vi: "do the washing-up: rửa bát"}
+
+  - kind: figure
+    chapter: "Spotlight: do + danh từ"
+    heading: "Spotlight · do + noun"
+    heading_vi: "tr. 101 — housework (việc nhà) ≠ homework (bài tập về nhà)"
+    image: {pdf: course-book, page: 102, clip: [28, 369, 436, 460]}
+    items:
+      - {box: [32, 395, 434, 421]}
+      - {box: [32, 431, 434, 457]}
+    lines:
+      - {emma: "Look at the spotlight. These phrases are very common in spoken English: do the shopping, do the washing-up, do the housework, do the ironing.", focus: 0}
+      - {tom: "Be careful! Housework is cleaning the house. Homework is work teachers give students to do after class.", focus: 1, vi: "housework: việc nhà · homework: bài tập về nhà"}
+
+  - kind: blanks
+    chapter: "Bài 4: hoàn thành đoạn văn"
+    heading: "Exercise 4 · Complete the text (1–6)"
+    heading_vi: "Ví dụ: Saturday is my day for doing the housework. (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "First, I go to town and do the ___.", answer: "shopping"}
+      - {n: 2, q: "Then I come back, ___ everything", answer: "put"}
+      - {n: 3, q: "___ in the cupboards,", answer: "away"}
+      - {n: 4, q: "and ___ the bin.", answer: "empty"}
+      - {n: 5, q: "If the kitchen's dirty, I ___ it,", answer: "clean"}
+      - {n: 6, q: "and then I ___ a cup of tea.", answer: "make"}
+    lines:
+      - emma: "Exercise 4. Complete the text. The example is: Saturday is my day for doing the housework. Pause the video and try."
+        say: "Exercise four. Complete the text. The example is: Saturday is my day for doing the housework. Pause the video and try."
+        vi: "Bài 4: hoàn thành đoạn văn."
+      - {tom: "First, I go to town and do the shopping. Then I come back, put everything away in the cupboards, and empty the bin.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "If the kitchen's dirty, I clean it, and then I make a cup of tea.", reveal: [5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 4 (tiếp)"
+    heading: "Exercise 4 · Complete the text (7–11)"
+    heading_vi: "Answer key tr. 214"
+    items:
+      - {n: 7, q: "My sister ___ all the dirty clothes in the washing machine", answer: "puts"}
+      - {n: 8, q: "and ___ the washing out when it's finished.", answer: "takes"}
+      - {n: 9, q: "I ___ lunch,", answer: "cook"}
+      - {n: 10, q: "but afterwards, we do the ___ together.", answer: "washing-up"}
+      - {n: 11, q: "When the clothes are dry, I do the ___.", answer: "ironing"}
+    lines:
+      - {emma: "Now seven to eleven. Pause the video and try.", focus: 0}
+      - {tom: "My sister usually helps me. She puts all the dirty clothes in the washing machine, and takes the washing out when it's finished.", reveal: [7, 8], focus: 1}
+      - {tom: "I cook lunch, but afterwards, we do the washing-up together. When the clothes are dry, I do the ironing.", reveal: [9, 10, 11], focus: 4}
+
+  - kind: qa
+    chapter: "Nói 1: việc nhà"
+    heading: "Speaking 1 · Exercise 5: housework in your home"
+    heading_vi: "Bài 5 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "In your flat, who does the shopping, Tom?"
+        a: "We all do. We go to the market together on Saturday morning."
+        ask: emma
+        by: tom
+        phrases: ["We all do."]
+      - q: "Who cooks the dinner?"
+        a: "We take turns. I'm learning to cook, so my food isn't always great!"
+        ask: emma
+        by: tom
+        phrases: ["We take turns.", "I'm learning to…"]
+      - q: "Who empties the bin?"
+        a: "I do. It's my job every evening."
+        ask: emma
+        by: tom
+        phrases: ["I do.", "It's my job…"]
+      - q: "Who does the ironing?"
+        a: "Nobody! We don't iron our clothes."
+        ask: emma
+        by: tom
+        phrases: ["Nobody!"]
+      - q: "And who does the housework in your flat, Emma?"
+        a: "I do everything, because I live alone. I don't mind cooking, but I hate cleaning the kitchen afterwards!"
+        ask: tom
+        by: emma
+        phrases: ["I do everything, because…", "I don't mind … , but I hate…"]
+    lines:
+      - {emma: "Exercise 5 is about you. In your flat, who does the shopping, Tom?", say: "Exercise five is about you. In your flat, who does the shopping, Tom?", focus: 0}
+      - {tom: "We all do. We go to the market together on Saturday morning.", reveal: 0, vi: "Cả ba: sáng thứ Bảy cùng đi chợ."}
+      - {emma: "Who cooks the dinner?", focus: 1}
+      - {tom: "We take turns. I'm learning to cook, so my food isn't always great!", reveal: 1, vi: "Thay nhau nấu; Tom đang học nấu nên không phải lúc nào cũng ngon!"}
+      - {emma: "Who empties the bin?", focus: 2}
+      - {tom: "I do. It's my job every evening.", reveal: 2, vi: "Tom — việc của Tom mỗi tối."}
+      - {emma: "Who does the ironing?", focus: 3}
+      - {tom: "Nobody! We don't iron our clothes.", reveal: 3, vi: "Không ai cả! Không là quần áo."}
+      - {tom: "And who does the housework in your flat, Emma?", focus: 4}
+      - {emma: "I do everything, because I live alone. I don't mind cooking, but I hate cleaning the kitchen afterwards!", say: "I do everything, because I liv alone. I don't mind cooking, but I hate cleaning the kitchen afterwards!", reveal: 4, vi: "Emma làm hết vì sống một mình; thích nấu nhưng ghét dọn bếp sau đó!"}
+
+  - kind: practice
+    chapter: "Nói 2: nấu ăn"
+    heading: "Your turn · IELTS Part 1: Cooking"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you like cooking? Why or why not?", hint: "Yes, I love it, because … / Not really, because …"}
+      - {q: "Who usually cooks in your family?", hint: "My mum / dad usually cooks … · We take turns …"}
+      - {q: "What can you cook?", hint: "I can cook … · I can only make …"}
+      - {q: "Do you prefer eating at home or eating out?", hint: "I prefer … because it's cheaper / healthier …"}
+      - {q: "Which housework do you hate?", hint: "I hate … because … · I don't mind …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about cooking and housework. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about cooking and housework. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về nấu ăn, việc nhà."
+      - {emma: "Do you like cooking? Why, or why not?", focus: 0, pause: 0.5}
+      - {emma: "Who usually cooks in your family?", focus: 1, pause: 0.5}
+      - {emma: "What can you cook?", focus: 2, pause: 0.5}
+      - {emma: "Do you prefer eating at home, or eating out?", focus: 3, pause: 0.5}
+      - {emma: "Which housework do you hate?", focus: 4, pause: 1.0}
+
+  - kind: blanks
+    chapter: "Bài 6: tự kiểm tra"
+    heading: "Exercise 6 · Test yourself: say the housework phrases"
+    heading_vi: "Che chữ, nghe mô tả và nói cụm việc nhà — tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "You wash the plates after dinner.  →  ___", answer: "do the washing-up"}
+      - {n: 2, q: "You make your clothes flat and smooth.  →  ___", answer: "do the ironing"}
+      - {n: 3, q: "You put food in the cupboards and the fridge.  →  ___", answer: "put the shopping away"}
+      - {n: 4, q: "The bin is full.  →  ___", answer: "empty the bin"}
+      - {n: 5, q: "The washing machine has finished.  →  ___", answer: "take the washing out"}
+      - {n: 6, q: "You go to the supermarket for food.  →  ___", answer: "do the shopping"}
+    lines:
+      - emma: "Exercise 6 is a test. Cover the words. I describe a job, and you say the phrase. Pause the video after each one."
+        say: "Exercise six is a test. Cover the words. I describe a job, and you say the phrase. Pause the video after each one."
+        vi: "Bài 6: nghe mô tả, nói cụm việc nhà."
+      - {tom: "One. Do the washing-up. Two. Do the ironing. Three. Put the shopping away.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Empty the bin. Five. Take the washing out. Six. Do the shopping.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "do hay make?"
+    heading: "do or make?"
+    heading_vi: "Thêm ngoài sách — người Việt hay nhầm vì cả hai đều là 'làm'"
+    items:
+      - {en: "do: the shopping · the washing-up · the ironing · the housework · homework", vi: "do: việc, nhiệm vụ"}
+      - {en: "make: a sandwich · a cup of tea · dinner · a cake · the bed", vi: "make: tạo ra cái gì đó"}
+      - {en: "do your homework (not make your homework)", vi: "làm bài tập về nhà"}
+      - {en: "make your bed: tidy the sheets in the morning", vi: "dọn giường"}
+    lines:
+      - {emma: "Do or make? We use do for jobs and tasks: do the shopping, do the washing-up, do the ironing, do the housework, and do your homework.", focus: 0}
+      - {tom: "We use make when we produce something new: make a sandwich, make a cup of tea, make dinner, make a cake.", focus: 1, vi: "make = produce: tạo ra"}
+      - {emma: "So it's do your homework, not make your homework. That's a very common mistake.", focus: 2}
+      - {tom: "And make your bed means tidy the sheets in the morning. My mum always says: make your bed, Tom!", focus: 3}
+
+  - kind: blanks
+    chapter: "Câu đố: do hay make?"
+    heading: "Quiz · do or make?"
+    heading_vi: "Thêm ngoài sách — tạm dừng video và chọn do hoặc make"
+    items:
+      - {n: 1, q: "___ the washing-up  →  ___", answer: "do"}
+      - {n: 2, q: "___ a cake  →  ___", answer: "make"}
+      - {n: 3, q: "___ your homework  →  ___", answer: "do"}
+      - {n: 4, q: "___ your bed  →  ___", answer: "make"}
+      - {n: 5, q: "___ a cup of coffee  →  ___", answer: "make"}
+      - {n: 6, q: "___ the ironing  →  ___", answer: "do"}
+    lines:
+      - emma: "A quick quiz. Do or make? Pause the video and try."
+        vi: "Câu đố: do hay make?"
+      - {tom: "One. Do the washing-up: it's a job. Two. Make a cake: you produce something. Three. Do your homework.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Make your bed. Five. Make a cup of coffee. Six. Do the ironing.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Bếp Việt Nam"
+    heading: "A Vietnamese kitchen"
+    heading_vi: "Thêm ngoài sách — đồ dùng trong bếp Việt bằng tiếng Anh"
+    items:
+      - {en: "a rice cooker", vi: "nồi cơm điện"}
+      - {en: "a gas hob · a gas bottle", vi: "bếp ga · bình ga"}
+      - {en: "chopsticks · a bowl · a ladle", vi: "đũa · bát · muôi"}
+      - {en: "a kettle · a water filter", vi: "ấm đun nước · máy lọc nước"}
+      - {en: "fish sauce · chilli sauce · a pot of rice", vi: "nước mắm · tương ớt · nồi cơm"}
+    lines:
+      - {tom: "In every Vietnamese kitchen, there's a rice cooker. We cook rice every day.", focus: 0, vi: "rice cooker: nồi cơm điện"}
+      - {emma: "Lots of people cook on a gas hob, with a gas bottle under it.", focus: 1}
+      - {tom: "We eat with chopsticks, from a bowl, and we serve soup with a ladle.", focus: 2, vi: "ladle: cái muôi, vá"}
+      - {emma: "You boil water in a kettle. And many homes have a water filter, because people don't drink tap water.", focus: 3, vi: "tap water: nước máy"}
+      - {tom: "And on the table: fish sauce, chilli sauce, and a big pot of rice. I miss my mum's kitchen!", focus: 4}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về bếp và việc nhà — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I make the housework on Sundays.  →  ___", answer: "I do the housework on Sundays."}
+      - {n: 2, q: "Can you open the tap, please?  →  ___", answer: "Can you turn on the tap, please?"}
+      - {n: 3, q: "Put the milk in the ice box.  →  ___", answer: "Put the milk in the fridge."}
+      - {n: 4, q: "I wash the dishes by washing machine.  →  ___", answer: "I wash the dishes in the dishwasher."}
+      - {n: 5, q: "My mother cooks very delicious.  →  ___", answer: "My mother is a very good cook."}
+      - {n: 6, q: "Please close the light in the kitchen.  →  ___", answer: "Please turn off the light in the kitchen."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. Do the housework. Two. Turn on the tap: we don't open a tap.", reveal: [1, 2], focus: 1, vi: "turn on / turn off: bật / tắt (vòi, đèn, máy)"}
+      - {tom: "Three. The fridge. Four. In the dishwasher: a washing machine is for clothes.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. She's a very good cook, or her food is delicious. Cook is also a noun! Six. Turn off the light.", reveal: [5, 6], focus: 5, vi: "a good cook: người nấu ăn giỏi"}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a time when you cooked a meal for other people"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — kể ở quá khứ đơn"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: when it was", vi: "khi nào"}
+      - {en: "who you cooked for", vi: "bạn nấu cho ai"}
+      - {en: "what you cooked and how", vi: "bạn nấu gì và nấu thế nào"}
+      - {en: "and explain how you felt about it", vi: "và giải thích bạn cảm thấy thế nào"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a time when you cooked a meal for other people."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a time when you cooked a meal for other people."
+        vi: "Luyện nói chung kiểu Part 2: một lần bạn nấu ăn cho người khác."
+      - {emma: "You should say when it was,", focus: 0}
+      - {emma: "who you cooked for,", focus: 1}
+      - {emma: "what you cooked, and how,", focus: 2}
+      - {emma: "and explain how you felt about it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — canh cá của mẹ"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about the first time I cooked my mum's fish soup. It was last month, on a Saturday evening."
+        note: "when"
+      - text: "I cooked it for my two flatmates. They always cook for me, so I wanted to say thank you."
+        note: "who for"
+      - text: "In the morning, we did the shopping at the market. Then I called my mum on a video call, and she showed me what to do. I cooked the fish in a big saucepan with tomatoes and pineapple."
+        note: "what and how"
+      - text: "I was nervous, but my flatmates loved it, and they did the washing-up for me! It wasn't as good as my mum's, but I felt very proud."
+        note: "how you felt"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about a Christmas dinner I cooked last year, here in Ho Chi Minh City."
+        say: "I'd like to talk about a Christmas dinner I cooked last year, here in Ho Chee Min City."
+        note: "when"
+      - text: "I cooked for three teachers from my school. I always miss my family at Christmas, so I wanted a little piece of home."
+        note: "who for"
+      - text: "I made a traditional English meal: roast chicken, roast potatoes, and vegetables. I haven't got a big oven, so I bought a small one, and I cooked everything in two parts!"
+        note: "what and how"
+      - text: "It was hard work, and my kitchen was a terrible mess. But my friends loved it, and it felt like Christmas at home. I was really happy."
+        note: "how you felt"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a time when you cooked a meal for other people.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a meal you cooked for other people"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "When was it?", hint: "I'd like to talk about … · It was last …"}
+      - {q: "Who did you cook for?", hint: "I cooked for my family / friends / …"}
+      - {q: "What did you cook, and how?", hint: "I made … · I cooked it in a frying pan / saucepan / the oven …"}
+      - {q: "How did you feel about it?", hint: "I was nervous / proud / happy because …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the past simple, and the kitchen words from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the past simple, and the kitchen words from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "When was it?", focus: 0, pause: 0.5}
+      - {emma: "Who did you cook for?", focus: 1, pause: 0.5}
+      - {emma: "What did you cook, and how?", focus: 2, pause: 0.5}
+      - {emma: "How did you feel about it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · housework"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Should children help with the housework?"
+        a: "Yes, I think so. Small jobs, like making their bed or doing the washing-up, teach them to be responsible."
+        ask: emma
+        by: tom
+        phrases: ["Yes, I think so.", "teach them to…"]
+      - q: "Do men and women share the housework equally in your country?"
+        a: "More than before, I think. But in many families, women still do most of the cooking and cleaning."
+        ask: tom
+        by: emma
+        phrases: ["More than before, I think.", "But in many families…"]
+      - q: "Will machines do all our housework in the future?"
+        a: "Some of it. We already have dishwashers and robot vacuum cleaners. But I don't think a machine can cook like my mum!"
+        ask: emma
+        by: tom
+        phrases: ["Some of it.", "We already have…", "But I don't think…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Should children help with the housework?", focus: 0}
+      - {tom: "Yes, I think so. Small jobs, like making their bed or doing the washing-up, teach them to be responsible.", reveal: 0, vi: "Có: việc nhỏ như dọn giường, rửa bát dạy trẻ có trách nhiệm."}
+      - {tom: "Do men and women share the housework equally in your country?", focus: 1}
+      - {emma: "More than before, I think. But in many families, women still do most of the cooking and cleaning.", reveal: 1, vi: "Hơn trước; nhưng nhiều nhà phụ nữ vẫn làm phần lớn việc nấu nướng, dọn dẹp."}
+      - {emma: "Will machines do all our housework in the future?", focus: 2}
+      - {tom: "Some of it. We already have dishwashers and robot vacuum cleaners. But I don't think a machine can cook like my mum!", reveal: 2, vi: "Một phần: đã có máy rửa bát, robot hút bụi; nhưng máy không nấu ngon như mẹ!"}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 3 và bài 6: che chữ, nhìn tranh, nói"
+    items:
+      - {en: "fridge · freezer · cooker = oven + hob · microwave · sink · tap · dishwasher · washing machine", vi: "thiết bị"}
+      - {en: "cupboard · shelf, shelves · bin (full ≠ empty) · cups · saucers · saucepan · frying pan", vi: "đồ dùng"}
+      - {en: "do the shopping · put the shopping away · empty the bin · clean the cooker", vi: "việc nhà (1)"}
+      - {en: "take the washing out · do the ironing · do the washing-up · make a sandwich · cook lunch", vi: "việc nhà (2)"}
+      - {en: "do (jobs) ≠ make (produce) · housework ≠ homework · turn on / off", vi: "từ dễ nhầm"}
+      - {en: "Next: Unit 40 · Bedroom and bathroom", vi: "Tiếp theo: Unit 40 · Phòng ngủ và phòng tắm"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The fridge, the freezer, the cooker, the microwave, the sink, the tap, the dishwasher, and the washing machine.", focus: 0}
+      - {tom: "A cupboard, a shelf, the bin, cups and saucers, a saucepan, and a frying pan.", focus: 1}
+      - {emma: "Do the shopping, put the shopping away, empty the bin, and clean the cooker.", focus: 2}
+      - {tom: "Take the washing out, do the ironing, do the washing-up, make a sandwich, and cook lunch.", focus: 3}
+      - {emma: "Remember: do for jobs, and make for things you produce. Housework isn't homework!", focus: 4}
+      - {tom: "Next time, Unit 40: bedroom and bathroom. See you then!", say: "Next time, Unit forty: bedroom and bathroom. See you then!", focus: 5}
