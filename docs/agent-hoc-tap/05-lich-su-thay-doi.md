@@ -5,6 +5,84 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 42 — 25/11/2026: Oxford Word Skills Basic — module Hobbies and interests (Unit 48), 2 video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 41 (`3c69de9`, đã lên `main`). Xong unit nào thì đưa lên `main` một commit.
+
+### Yêu cầu
+
+Người học: "tiếp tục module tiếp theo xong tới đâu commit push main tới đó". Module tiếp theo là Hobbies and interests (Unit
+48–53, tr. 126–137). Như đợt 37–41, mỗi unit có hai video: bài giảng (file 09 mục 5) và nghe – viết (mục 5.9); khác các đợt trước,
+xong unit nào thì đưa lên `main` unit đó (chạy đủ bốn bước kiểm thử trước mỗi lần).
+
+### Đã làm
+
+- **Word list Unit 48–53** (191 mục, 141 từ chưa có ở Unit 1–47) thêm vào `work/wordlist.json` (nay 1687 mục) ngay từ đầu đợt.
+  Soát từng dòng có số unit 48–53 bằng tờ ảnh cắt dòng và khoảng hở giữa các dòng OCR (`gap_ocr.py`): không sót mục nào.
+- **Unit 48 Likes and dislikes** (unit khó, tr. 126–127, Answer key tr. 216): tám mức thích từ *love* đến *hate* với trật tự
+  *really / quite / very much*, *like / love / hate / enjoy* + -ing, *prefer … to …*, *keen on*, *interesting ≠ interested* — lỗi
+  người Việt rất hay mắc, và "Do you like…?" là câu hỏi Part 1 hay gặp nhất. Bài 3 và 6 (ABOUT YOU) thành hai cảnh Tom – Emma hỏi
+  đáp; thêm câu nói thích / không thích kiểu IELTS (*a big fan of*, *don't mind*, *can't stand*, luôn kèm lý do), ôn tập lỗi hay
+  gặp, Part 2 "something you enjoy doing in your free time" (Tom: nấu ăn, Emma: đi bộ đường dài), thảo luận kiểu Part 3. Nghe –
+  viết: Word list chỉ có 18 mục nên phần 1 thêm cụm từ trên trang sách (good fun, be interested in…).
+
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| **48 Likes and dislikes** | `U48-likes-dislikes` | 11:58 | 10 | 1–6 (bài 4: bảng ba cột, đáp án có hình bảng) |
+
+- **1 video nghe – viết** (9:37), sinh từ `work/dictation/units_48_53.py`: đủ mọi mục Word list của unit, từ thêm theo chủ đề, câu
+  giao tiếp khớp hồ sơ nhân vật; không `pause`.
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 48 · Likes and dislikes | `U48-likes-dislikes-dictation` | 9:37 | 24 · 18 | 20 | 36 |
+
+Thử và sửa trong lúc làm:
+- **Hồ sơ, Glossary nhiều chữ** (đợt 42, Unit 48): hồ sơ của Mirko (sáu hàng, có ảnh) để chung một cảnh thì chữ chỉ cao khoảng 16
+  điểm ảnh; tách theo hàng thành hai cảnh, Glossary cũng tách hai cảnh. Mép cắt đặt vào khoảng trắng giữa hai dòng (đo bằng
+  `textlines.py`), không để lộ chân hay đầu chữ của dòng bên cạnh.
+- **Đo dòng chữ cạnh ảnh** (đợt 42, Unit 48): vùng đo của `textlines.py` hẹp hơn dòng chữ thì mép phải của vùng thành mép chữ
+  (dòng dưới ảnh Mirko dài tới 243 điểm, vùng đo dừng ở 210), khung đỏ cắt ngang chữ. Đo lại với vùng rộng hơn, chừa viền khung.
+- **Bài ghép cột** (đợt 42, Unit 48 bài 4): cảnh `figure` giảng ví dụ trên bảng (khung đỏ lần lượt ba ô It's / a wonderful / city
+  rồi ô đáp án), rồi cảnh `blanks` có hình bảng bên trái: `q` là chữ ở cột 1 (`I ___`), khung đỏ theo hàng đang chữa.
+- **Bài giảng dài hơn ước lượng tới 6 %** (đợt 42, Unit 48): ước 11:18, dựng thật 11:58 (các đợt trước 0–4 %). Unit khó nhắm ước
+  lượng dưới 14 phút vẫn an toàn; unit thường nhắm dưới 9:20 để không chạm 10 phút.
+- **Máy chạy khởi động lại** (đợt 42, khi đang dựng video nghe – viết Unit 48): video bài giảng đã xong nên commit ngay, rồi dựng
+  lại phần nghe – viết (7 phút).
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U48-likes-dislikes.yaml` (+ `.mp4`) | Video bài giảng Unit 48 |
+| `books/book_oxford_word_skills_basic/lessons/U48-likes-dislikes-dictation.yaml` (+ `.mp4`), `lessons.json` | Video nghe – viết Unit 48 |
+| `books/book_oxford_word_skills_basic/work/dictation/units_48_53.py` | Dữ liệu nghe – viết Unit 48 |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 48–53 (191 mục) |
+| `agents/tests/test_lesson_video.py` | Unit khó U48 |
+| `tests/web/book.e2e.mjs` | Thẻ sách 96 video; Unit 1–48 mỗi unit hai nút; unit khó 48 |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 5.1, 5.6, 5.7, 5.8, 5.9, 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-77; đợt 42 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 42 |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 96 video (48 bài giảng, 48 nghe – viết) |
+| `cd agents && python -m pytest -q` | 150 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 96 video, Unit 1–48 mỗi unit hai nút (bài giảng 7–10 phút, unit khó từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (2 kịch bản) | Hợp lệ, không còn ⚠ |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U48 --level all` | Unit 48 "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (2 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,40 giây (cuối cảnh tự trả lời); nghe – viết: dài nhất 2,03 giây (cuối video) |
+| Xem trước khung hình (`kindsheet.py`, `scenepick.py`) và khung hình bản dựng | Khung đỏ đúng dòng, đúng ô; chữ trên hình đủ to; đáp án hiện đúng lúc; mỗi câu một chỗ trống |
+
+### Còn treo
+
+- Unit 49–53 chưa có video (P2-77): làm tiếp theo kế hoạch cuối file 09 mục 5.8, xong unit nào đưa lên `main` unit đó.
+- Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
+
 ## Đợt 41 — 25/11/2026: Oxford Word Skills Basic — module Study and work (Unit 42–47), 12 video
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 40 (`96987ce`, đã lên `main`).
