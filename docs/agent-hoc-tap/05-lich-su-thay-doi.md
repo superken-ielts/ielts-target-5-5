@@ -5,9 +5,9 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
-## Đợt 42 — 25/11/2026: Oxford Word Skills Basic — module Hobbies and interests (Unit 48–50), 6 video
+## Đợt 42 — 25/11/2026: Oxford Word Skills Basic — module Hobbies and interests (Unit 48–51), 8 video
 
-Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 41 (`3c69de9`, đã lên `main`). Xong unit nào thì đưa lên `main` một commit; đã lên: Unit 48 (`c8c6a2c`), Unit 49 (`d330923`).
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 41 (`3c69de9`, đã lên `main`). Xong unit nào thì đưa lên `main` một commit; đã lên: Unit 48 (`c8c6a2c`), Unit 49 (`d330923`), Unit 50 (`1439cce`).
 
 ### Yêu cầu
 
@@ -36,14 +36,20 @@ xong unit nào thì đưa lên `main` unit đó (chạy đủ bốn bước ki�
   Việt rất hay mắc (*play camping*, *go to fishing*, *listen music*); bài đọc Favourite hobbies in Russia. Bài 4 (Test yourself)
   là bốn hàng tranh cắt bỏ dải tên; bài 3 và 6 (ABOUT YOU) thành hai cảnh Tom – Emma hỏi đáp. Thêm quy tắc go / play / do, ôn tập
   lỗi hay gặp, Part 2 "a hobby you had as a child" (Tom: vẽ, Emma: sưu tầm vỏ sò), thảo luận kiểu Part 3.
+- **Unit 51 Music** (unit thường, tr. 132–133, Answer key tr. 217): bài đọc về ban nhạc Arctic Monkeys (*band*, *lead singer*,
+  *drummer*, *single*, *album*, *singles chart*, *well known*, *download*) và nhạc cổ điển qua sáu ảnh có chú thích (*orchestra*,
+  *conductor*, *pianist*, *violinist*, *cellist*, *opera singer*, *composer*, *perform*), Spotlight *a song by*. Bài 3 (ABOUT
+  YOU): Tom nói về Coldplay, Emma về The Beatles — dữ kiện thật như câu trả lời mẫu của Answer key. Bài 6 (Test yourself): hai
+  hàng ảnh cắt bỏ chú thích. Thêm các loại nhạc, Nghe và viết, Part 1 "Music".
 
 | Unit | Video | Dài | Cảnh có hình | Bài trong sách |
 |---|---|---|---|---|
 | **48 Likes and dislikes** | `U48-likes-dislikes` | 11:58 | 10 | 1–6 (bài 4: bảng ba cột, đáp án có hình bảng) |
 | **49 Sport** | `U49-sport` | 11:49 | 9 | 1–6 (bài 3, 5: câu hai chỗ trống tách a / b) |
 | **50 Free time** | `U50-free-time` | 12:13 | 16 | 1–6 (bài 4: bốn hàng tranh không chữ) |
+| 51 Music | `U51-music` | 7:52 | 9 | 1–6 (bài 6: hai hàng ảnh không chú thích) |
 
-- **3 video nghe – viết** (28:54), sinh từ `work/dictation/units_48_53.py`: đủ mọi mục Word list của unit, từ thêm theo chủ đề,
+- **4 video nghe – viết** (38:36), sinh từ `work/dictation/units_48_53.py`: đủ mọi mục Word list của unit, từ thêm theo chủ đề,
   câu giao tiếp khớp hồ sơ nhân vật; không `pause`.
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
@@ -51,6 +57,7 @@ xong unit nào thì đưa lên `main` unit đó (chạy đủ bốn bước ki�
 | 48 · Likes and dislikes | `U48-likes-dislikes-dictation` | 9:37 | 24 · 18 | 20 | 36 |
 | 49 · Sport | `U49-sport-dictation` | 9:31 | 31 · 40 | 18 | 33 |
 | 50 · Free time | `U50-free-time-dictation` | 9:46 | 32 · 35 | 15 | 33 |
+| 51 · Music | `U51-music-dictation` | 9:41 | 25 · 31 | 18 | 33 |
 
 Thử và sửa trong lúc làm:
 - **Hồ sơ, Glossary nhiều chữ** (đợt 42, Unit 48): hồ sơ của Mirko (sáu hàng, có ảnh) để chung một cảnh thì chữ chỉ cao khoảng 16
@@ -78,13 +85,15 @@ Thử và sửa trong lúc làm:
 | `books/book_oxford_word_skills_basic/lessons/U48-likes-dislikes.yaml` (+ `.mp4`) | Video bài giảng Unit 48 |
 | `books/book_oxford_word_skills_basic/lessons/U49-sport.yaml` (+ `.mp4`) | Video bài giảng Unit 49 |
 | `books/book_oxford_word_skills_basic/lessons/U50-free-time.yaml` (+ `.mp4`) | Video bài giảng Unit 50 |
+| `books/book_oxford_word_skills_basic/lessons/U51-music.yaml` (+ `.mp4`) | Video bài giảng Unit 51 |
 | `books/book_oxford_word_skills_basic/lessons/U48-likes-dislikes-dictation.yaml` (+ `.mp4`), `lessons.json` | Video nghe – viết Unit 48 |
 | `books/book_oxford_word_skills_basic/lessons/U49-sport-dictation.yaml` (+ `.mp4`), `lessons.json` | Video nghe – viết Unit 49 |
 | `books/book_oxford_word_skills_basic/lessons/U50-free-time-dictation.yaml` (+ `.mp4`), `lessons.json` | Video nghe – viết Unit 50 |
-| `books/book_oxford_word_skills_basic/work/dictation/units_48_53.py` | Dữ liệu nghe – viết Unit 48–50 |
+| `books/book_oxford_word_skills_basic/lessons/U51-music-dictation.yaml` (+ `.mp4`), `lessons.json` | Video nghe – viết Unit 51 |
+| `books/book_oxford_word_skills_basic/work/dictation/units_48_53.py` | Dữ liệu nghe – viết Unit 48–51 |
 | `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 48–53 (191 mục) |
 | `agents/tests/test_lesson_video.py` | Unit khó U48, U49, U50 |
-| `tests/web/book.e2e.mjs` | Thẻ sách 100 video; Unit 1–50 mỗi unit hai nút; unit khó 48, 49, 50 |
+| `tests/web/book.e2e.mjs` | Thẻ sách 102 video; Unit 1–51 mỗi unit hai nút; unit khó 48, 49, 50 |
 | `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 5.1, 5.6, 5.7, 5.8, 5.9, 6 |
 | `docs/agent-hoc-tap/04-checklist.md` | P2-77; đợt 42 ở P2-59 |
 | `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 42 |
@@ -94,18 +103,18 @@ Thử và sửa trong lúc làm:
 
 | Lệnh | Kết quả |
 |---|---|
-| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 100 video (50 bài giảng, 50 nghe – viết) |
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 102 video (51 bài giảng, 51 nghe – viết) |
 | `cd agents && python -m pytest -q` | 150 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
 | `node --test "tests/web/*.test.mjs"` | 16 passed |
-| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 100 video, Unit 1–50 mỗi unit hai nút (bài giảng 7–10 phút, unit khó từ 10 phút; nghe – viết 9–10 phút) |
-| `python -m lesson_video check` / `phonemes` (6 kịch bản) | Hợp lệ, không còn ⚠ |
-| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U48…U50 --level all` | Cả 3 unit "chưa hiện: 0" |
-| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (6 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,39–2,43 giây (cuối cảnh tự trả lời); nghe – viết: dài nhất 2,03–2,08 giây (cuối video) |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 102 video, Unit 1–51 mỗi unit hai nút (bài giảng 7–10 phút, unit khó từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (8 kịch bản) | Hợp lệ, không còn ⚠ |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U48…U51 --level all` | Cả 4 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (8 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,39–2,43 giây (cuối cảnh tự trả lời); nghe – viết: dài nhất 2,03–2,08 giây (cuối video) |
 | Xem trước khung hình (`kindsheet.py`, `scenepick.py`) và khung hình bản dựng | Khung đỏ đúng dòng, đúng ô; chữ trên hình đủ to; đáp án hiện đúng lúc; mỗi câu một chỗ trống |
 
 ### Còn treo
 
-- Unit 51–53 chưa có video (P2-77): làm tiếp theo kế hoạch cuối file 09 mục 5.8, xong unit nào đưa lên `main` unit đó.
+- Unit 52–53 chưa có video (P2-77): làm tiếp theo kế hoạch cuối file 09 mục 5.8, xong unit nào đưa lên `main` unit đó.
 - Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
 
 ## Đợt 41 — 25/11/2026: Oxford Word Skills Basic — module Study and work (Unit 42–47), 12 video
