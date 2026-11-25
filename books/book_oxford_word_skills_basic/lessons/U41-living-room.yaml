@@ -1,0 +1,413 @@
+# Video Oxford Word Skills Basic · Unit 41 — I can describe a living room (sách in tr. 104, Answer key tr. 214). Unit cuối module
+# Places: tổng kết module, nhắc làm Review tr. 105–108.
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–4. Bài 1, 2 theo Answer key tr. 214 (bài 1 câu 3 "cushion" F: sô-pha cũng có gối tựa). Bài 3 (ABOUT YOUR
+# HOME): Tom và Emma hỏi đáp sáu câu (cảnh Nói 1). Bài 4 (Test yourself): tranh phòng khách (hai cảnh: nửa trên, nửa dưới — tranh
+# to gấp đôi), đáp án hiện thành nhãn khi Tom trả lời, đủ 19 từ.
+# Thêm ngoài sách: furniture không đếm được (a piece of furniture, không nói furnitures); giới từ tả vị trí trong phòng trên tranh
+# sách (on the wall, above, under, in front of, next to, between, in the corner); phòng khách Việt Nam bằng tiếng Anh (ceiling fan,
+# tiled floor, wooden sofa set, take off your shoes, Make yourself at home!); bài nói mẫu của Tom tả phòng khách nhà ở Đà Lạt (cảnh
+# letter); Nói 2 (Part 1 "Your home").
+# Hình trong sách: tranh phòng khách 19 mục (hai cảnh: nửa trên, nửa dưới, khung theo số; bài 4 cũng vậy), ghi chú furniture, tranh
+# cả phòng ở bài 1 và cảnh giới từ.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom ở chung căn hộ tầng ba với hai bạn, phòng khách rất nhỏ (U38), mê
+# bóng rổ (U01, U03); Emma ở căn hộ nhỏ tầng tám có ban công (U38), quê ở Anh. Mới: phòng khách của Tom có một cửa sổ nhỏ, sàn lát
+# gạch, đèn và quạt trần; phòng khách của Emma có máy lạnh (ở Anh nhà bố mẹ có lò sưởi radiator), ảnh gia đình và bản đồ Việt Nam
+# trên tường, sô-pha, bàn nước, giá sách — không đủ chỗ cho ghế bành.
+# Phòng khách nhà Đà Lạt (nhà hai tầng của gia đình Tom, U38): tầng dưới cạnh bếp, khá rộng, bộ bàn ghế gỗ, sàn gạch, thảm, ảnh gia
+# đình và tranh núi trên tường; buổi tối cả nhà uống trà, xem ti vi, ông luôn ngồi một ghế bành.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U41-living-room.yaml
+id: U41-living-room
+activity: U41-words
+title: "Unit 41 · The living room"
+subtitle: "I can describe a living room"
+title_vi: "Phòng khách: window, ceiling, wall, curtains, bookshelves, cushion, armchair, sofa, coffee table, rug, carpet; furniture (không đếm được)"
+tag: "PLACES · UNIT 41"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 41: the living room. Today: nineteen words for the things in a living room, and how to describe your home. This is the last unit in the Places module."
+        say: "Welcome to Unit forty-one: the living room. Today: nineteen words for the things in a living room, and how to describe your home. This is the last unit in the Places module."
+        vi: "Unit 41: phòng khách — unit cuối của module Places."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Phòng khách (1)"
+    heading: "The living room (1)"
+    heading_vi: "Tranh tr. 104, nửa trên — window · light · ceiling · wall · curtains · TV · picture · bookshelves · DVD player · lamp"
+    image: {pdf: course-book, page: 105, clip: [106, 78, 404, 214]}
+    items:
+      - {box: [160, 100, 246, 224]}
+      - {box: [228, 92, 272, 122]}
+      - {box: [108, 79, 400, 108]}
+      - {box: [108, 110, 136, 200]}
+      - {box: [132, 108, 272, 240]}
+      - {box: [274, 136, 318, 168]}
+      - {box: [330, 122, 372, 203]}
+      - {box: [374, 122, 402, 282]}
+      - {box: [274, 165, 318, 182]}
+      - {box: [294, 182, 324, 207]}
+    lines:
+      - {emma: "Look at page one hundred and four: a living room. Number one: a window.", focus: 0, vi: "living room: phòng khách · window: cửa sổ"}
+      - {tom: "Two: a light, on the ceiling.", focus: 1, vi: "light: đèn"}
+      - {emma: "Three: the ceiling, the top of a room.", focus: 2, vi: "ceiling: trần nhà"}
+      - {tom: "Four: a wall.", focus: 3, vi: "wall: bức tường"}
+      - {emma: "Five: curtains. We close the curtains at night.", focus: 4, vi: "curtains: rèm cửa"}
+      - {tom: "Six: a TV, or television.", focus: 5, vi: "TV / television: ti vi"}
+      - {emma: "Seven: a picture.", focus: 6, vi: "picture: bức tranh"}
+      - {tom: "Eight: bookshelves. One bookshelf, two bookshelves.", focus: 7, vi: "bookshelf (số nhiều: bookshelves): giá sách"}
+      - {emma: "Eleven: a DVD player, under the TV.", say: "Eleven: a dee vee dee player, under the TV.", focus: 8, vi: "DVD player: đầu đĩa DVD"}
+      - {tom: "Twelve: a lamp, on a small table.", focus: 9, vi: "lamp: đèn bàn, đèn cây"}
+
+  - kind: figure
+    chapter: "Phòng khách (2)"
+    heading: "The living room (2)"
+    heading_vi: "Tranh tr. 104, nửa dưới — radiator · cushion · armchair · coffee table · fireplace · floor · sofa · rug · carpet"
+    image: {pdf: course-book, page: 105, clip: [106, 196, 404, 332]}
+    items:
+      - {box: [112, 202, 142, 249]}
+      - {box: [166, 214, 200, 236]}
+      - {box: [140, 206, 210, 280]}
+      - {box: [216, 228, 280, 250]}
+      - {box: [308, 210, 370, 280]}
+      - {box: [108, 278, 160, 326]}
+      - {box: [172, 236, 308, 320]}
+      - {box: [296, 250, 358, 300]}
+      - {box: [306, 296, 402, 328]}
+    lines:
+      - {emma: "Nine: a radiator. It makes the room warm.", focus: 0, vi: "radiator: lò sưởi (bộ tản nhiệt chạy nước nóng)"}
+      - {tom: "Ten: a cushion, on the armchair.", focus: 1, vi: "cushion: gối tựa, nệm ghế"}
+      - {emma: "Thirteen: an armchair, a comfortable chair for one person.", say: "Thir-teen: an armchair, a comfortable chair for one person.", focus: 2, vi: "armchair: ghế bành"}
+      - {tom: "Fourteen: a coffee table, a low table.", say: "Four-teen: a coffee table, a low table.", focus: 3, vi: "coffee table: bàn nước, bàn trà"}
+      - {emma: "Fifteen: a fireplace. You can make a fire in it.", say: "Fif-teen: a fireplace. You can make a fire in it.", focus: 4, vi: "fireplace: lò sưởi đốt củi"}
+      - {tom: "Sixteen: the floor.", say: "Six-teen: the floor.", focus: 5, vi: "floor: sàn nhà"}
+      - {emma: "Seventeen: a sofa, for two or three people.", say: "Seven-teen: a sofa, for two or three people.", focus: 6, vi: "sofa: ghế sô-pha"}
+      - {tom: "Eighteen: a rug, a small carpet.", say: "Eigh-teen: a rug, a small carpet.", focus: 7, vi: "rug: tấm thảm nhỏ"}
+      - {emma: "And nineteen: a carpet. It covers all the floor.", say: "And nine-teen: a carpet. It covers all the floor.", focus: 8, vi: "carpet: thảm trải sàn"}
+
+  - kind: figure
+    chapter: "Furniture: không đếm được"
+    heading: "furniture (U) · a piece of furniture"
+    heading_vi: "Ghi chú dưới tranh tr. 104 — U: danh từ không đếm được"
+    image: {pdf: course-book, page: 105, clip: [24, 326, 404, 352]}
+    items:
+      - {box: [26, 329, 400, 350]}
+    lines:
+      - {emma: "Look at the note under the picture. An armchair, a sofa, and a coffee table are furniture. Furniture is uncountable.", focus: 0, vi: "furniture: đồ đạc (không đếm được)"}
+      - {tom: "So we say: some furniture, or a piece of furniture. Never a furniture, or furnitures.", focus: 0, vi: "a piece of furniture: một món đồ đạc · pieces of furniture"}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · True or false? In the living room, there is only one… (1–7)"
+    heading_vi: "Ví dụ: TV → T, picture → T (Answer key tr. 214)"
+    image: {pdf: course-book, page: 105, clip: [106, 78, 404, 332]}
+    items:
+      - {n: 1, q: "light  →  ___", answer: "T"}
+      - {n: 2, q: "lamp  →  ___", answer: "T"}
+      - {n: 3, q: "cushion  →  ___", answer: "F"}
+      - {n: 4, q: "carpet  →  ___", answer: "T"}
+      - {n: 5, q: "curtain  →  ___", answer: "F"}
+      - {n: 6, q: "fireplace  →  ___", answer: "T"}
+      - {n: 7, q: "rug  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 1. Look at the picture. True or false? In the living room, there is only one… The examples are: TV: true, and picture: true. Pause the video and try."
+        say: "Exercise one. Look at the picture. True or false? In the living room, there is only one… The examples are: TV: true, and picture: true. Pause the video and try."
+        vi: "Bài 1: trong phòng khách chỉ có một…? Đúng hay sai?"
+      - {tom: "One. Light: true. Two. Lamp: true. Three. Cushion: false. Look at the sofa: it has cushions, too. Four. Carpet: true.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Curtain: false. There are two curtains. Six. Fireplace: true. Seven. Rug: true.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 1 (tiếp)"
+    heading: "Exercise 1 · True or false? (8–14)"
+    heading_vi: "Answer key tr. 214"
+    image: {pdf: course-book, page: 105, clip: [106, 78, 404, 332]}
+    items:
+      - {n: 8, q: "radiator  →  ___", answer: "T"}
+      - {n: 9, q: "armchair  →  ___", answer: "T"}
+      - {n: 10, q: "sofa  →  ___", answer: "T"}
+      - {n: 11, q: "picture  →  ___", answer: "T"}
+      - {n: 12, q: "wall  →  ___", answer: "F"}
+      - {n: 13, q: "DVD player  →  ___", answer: "T"}
+      - {n: 14, q: "piece of furniture  →  ___", answer: "F"}
+    lines:
+      - {emma: "Now eight to fourteen. Pause the video and try.", focus: 0}
+      - {tom: "Eight. Radiator: true. Nine. Armchair: true. Ten. Sofa: true. Eleven. Picture: true.", reveal: [8, 9, 10, 11], focus: 3}
+      - {tom: "Twelve. Wall: false. There are three walls. Thirteen. DVD player: true. Fourteen. Piece of furniture: false. There are a lot of pieces of furniture.", say: "Twelve. Wall: false. There are three walls. Thir-teen. Dee vee dee player: true. Four-teen. Piece of furniture: false. There are a lot of pieces of furniture.", reveal: [12, 13, 14], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành từ"
+    heading: "Exercise 2 · Complete the words"
+    heading_vi: "Ví dụ: _ _ _dow → window (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "_ _ _or  →  ___", answer: "floor"}
+      - {n: 2, q: "_ _ _pet  →  ___", answer: "carpet"}
+      - {n: 3, q: "_ _ _hion  →  ___", answer: "cushion"}
+      - {n: 4, q: "_ _ _iator  →  ___", answer: "radiator"}
+      - {n: 5, q: "_ _ _fee _ _ _le  →  ___", answer: "coffee table"}
+      - {n: 6, q: "_ _ _ling  →  ___", answer: "ceiling"}
+      - {n: 7, q: "_ _ _ _ _ _ _ _ves  →  ___", answer: "bookshelves"}
+      - {n: 8, q: "_ _ _ht  →  ___", answer: "light"}
+      - {n: 9, q: "_ _ _tains  →  ___", answer: "curtains"}
+      - {n: 10, q: "_ _ _ _hair  →  ___", answer: "armchair"}
+      - {n: 11, q: "_ _g  →  ___", answer: "rug"}
+      - {n: 12, q: "_ _ _ _place  →  ___", answer: "fireplace"}
+    lines:
+      - emma: "Exercise 2. Complete the words. The example is: W, I, N: window. Pause the video and try."
+        say: "Exercise two. Complete the words. The example is: double-yoo, eye, en: window. Pause the video and try."
+        vi: "Bài 2: điền các chữ cái còn thiếu."
+      - {tom: "One. Floor. Two. Carpet. Three. Cushion. Four. Radiator. Five. Coffee table. Six. Ceiling: after C, we write E, I.", say: "One. Floor. Two. Carpet. Three. Cushion. Four. Radiator. Five. Coffee table. Six. Ceiling: after see, we write ee, eye.", reveal: [1, 2, 3, 4, 5, 6], focus: 5, vi: "ceiling: sau c viết ei"}
+      - {tom: "Seven. Bookshelves: one word. Eight. Light. Nine. Curtains. Ten. Armchair: one word. Eleven. Rug. Twelve. Fireplace: one word.", reveal: [7, 8, 9, 10, 11, 12], focus: 11}
+
+  - kind: qa
+    chapter: "Nói 1: phòng khách của bạn"
+    heading: "Speaking 1 · Exercise 3: about your home"
+    heading_vi: "Bài 3 (ABOUT YOUR HOME) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How many windows have you got in your living room, Tom?"
+        a: "Only one, and it's quite small. But the living room is tiny, too!"
+        ask: emma
+        by: tom
+        phrases: ["Only one, and…", "… is tiny"]
+      - q: "Have you got radiators, a fireplace, or both?"
+        a: "Neither. It's never cold here, so I've got air conditioning. At home in England, we've got radiators."
+        ask: tom
+        by: emma
+        phrases: ["Neither.", "At home in …, we've got…"]
+      - q: "What have you got on the floor?"
+        a: "Tiles. Most homes in Vietnam have tiles, because they're cool in hot weather."
+        ask: emma
+        by: tom
+        phrases: ["Tiles.", "… because they're cool"]
+      - q: "What's on the walls?"
+        a: "Some photos of my family, and a big map of Vietnam."
+        ask: tom
+        by: emma
+        phrases: ["Some photos of…", "a big map of…"]
+      - q: "Are the lights on the ceiling or the walls?"
+        a: "On the ceiling. And there's a ceiling fan, too."
+        ask: emma
+        by: tom
+        phrases: ["On the ceiling.", "There's a … too."]
+      - q: "What furniture have you got?"
+        a: "A sofa, a coffee table, and a bookshelf. There's no space for an armchair!"
+        ask: tom
+        by: emma
+        phrases: ["A sofa, a coffee table, and…", "There's no space for…"]
+    lines:
+      - {emma: "Exercise 3 is about your home. Write your answers, or ask another student. Tom, how many windows have you got in your living room?", say: "Exercise three is about your home. Write your answers, or ask another student. Tom, how many windows have you got in your living room?", focus: 0}
+      - {tom: "Only one, and it's quite small. But the living room is tiny, too!", reveal: 0, vi: "Chỉ một cửa sổ, khá nhỏ — phòng khách cũng rất nhỏ."}
+      - {tom: "Emma, have you got radiators, a fireplace, or both?", focus: 1}
+      - {emma: "Neither. It's never cold here, so I've got air conditioning. At home in England, we've got radiators.", reveal: 1, vi: "Không có: ở đây không bao giờ lạnh, Emma dùng máy lạnh; nhà ở Anh có lò sưởi."}
+      - {emma: "What have you got on the floor, Tom?", focus: 2}
+      - {tom: "Tiles. Most homes in Vietnam have tiles, because they're cool in hot weather.", reveal: 2, vi: "Gạch: phần lớn nhà ở Việt Nam lát gạch vì mát khi trời nóng."}
+      - {tom: "What's on the walls?", focus: 3}
+      - {emma: "Some photos of my family, and a big map of Vietnam.", reveal: 3, vi: "Ảnh gia đình và một tấm bản đồ Việt Nam lớn."}
+      - {emma: "Are the lights on the ceiling, or the walls?", focus: 4}
+      - {tom: "On the ceiling. And there's a ceiling fan, too.", reveal: 4, vi: "Trên trần, có cả quạt trần."}
+      - {tom: "What furniture have you got?", focus: 5}
+      - {emma: "A sofa, a coffee table, and a bookshelf. There's no space for an armchair!", reveal: 5, vi: "Sô-pha, bàn nước, giá sách — không đủ chỗ cho ghế bành."}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra (1)"
+    heading: "Exercise 4 · Test yourself: say the words (1)"
+    heading_vi: "Che danh sách từ, nhìn tranh (nửa trên) — tạm dừng video sau mỗi số; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 105, clip: [106, 78, 404, 214]}
+    items:
+      - {box: [160, 100, 246, 224]}
+      - {box: [160, 100, 246, 224], label: "a window"}
+      - {box: [228, 92, 272, 122]}
+      - {box: [228, 92, 272, 122], label: "a light"}
+      - {box: [108, 79, 400, 108]}
+      - {box: [108, 79, 400, 108], label: "the ceiling"}
+      - {box: [108, 110, 136, 200]}
+      - {box: [108, 110, 136, 200], label: "a wall"}
+      - {box: [132, 108, 272, 240]}
+      - {box: [132, 108, 272, 240], label: "curtains"}
+      - {box: [274, 136, 318, 168]}
+      - {box: [274, 136, 318, 168], label: "a TV / television"}
+      - {box: [330, 122, 372, 203]}
+      - {box: [330, 122, 372, 203], label: "a picture"}
+      - {box: [374, 122, 402, 282]}
+      - {box: [374, 122, 402, 282], label: "bookshelves"}
+      - {box: [274, 165, 318, 182]}
+      - {box: [274, 165, 318, 182], label: "a DVD player"}
+      - {box: [294, 182, 324, 207]}
+      - {box: [294, 182, 324, 207], label: "a lamp"}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the words, and look at the picture. Say the words. Pause the video after each number. Number one?"
+        say: "Exercise four is a test. Cover the words, and look at the picture. Say the words. Pause the video after each number. Number one?"
+        focus: 0
+        vi: "Bài 4: che danh sách từ, nhìn tranh, nói tên đồ vật."
+      - {tom: "A window.", focus: 1}
+      - {emma: "Number two?", focus: 2}
+      - {tom: "A light.", focus: 3}
+      - {emma: "Number three?", focus: 4}
+      - {tom: "The ceiling.", focus: 5}
+      - {emma: "Number four?", focus: 6}
+      - {tom: "A wall.", focus: 7}
+      - {emma: "Number five?", focus: 8}
+      - {tom: "Curtains.", focus: 9}
+      - {emma: "Number six?", focus: 10}
+      - {tom: "A TV, or a television.", focus: 11}
+      - {emma: "Number seven?", focus: 12}
+      - {tom: "A picture.", focus: 13}
+      - {emma: "Number eight?", focus: 14}
+      - {tom: "Bookshelves.", focus: 15}
+      - {emma: "Number eleven?", focus: 16}
+      - {tom: "A DVD player.", say: "A dee vee dee player.", focus: 17}
+      - {emma: "Number twelve?", focus: 18}
+      - {tom: "A lamp.", focus: 19}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra (2)"
+    heading: "Exercise 4 · Test yourself: say the words (2)"
+    heading_vi: "Nửa dưới của tranh — tạm dừng video sau mỗi số; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 105, clip: [106, 196, 404, 332]}
+    items:
+      - {box: [112, 202, 142, 249]}
+      - {box: [112, 202, 142, 249], label: "a radiator"}
+      - {box: [166, 214, 200, 236]}
+      - {box: [166, 214, 200, 236], label: "a cushion"}
+      - {box: [140, 206, 210, 280]}
+      - {box: [140, 206, 210, 280], label: "an armchair"}
+      - {box: [216, 228, 280, 250]}
+      - {box: [216, 228, 280, 250], label: "a coffee table"}
+      - {box: [308, 210, 370, 280]}
+      - {box: [308, 210, 370, 280], label: "a fireplace"}
+      - {box: [108, 278, 160, 326]}
+      - {box: [108, 278, 160, 326], label: "the floor"}
+      - {box: [172, 236, 308, 320]}
+      - {box: [172, 236, 308, 320], label: "a sofa"}
+      - {box: [296, 250, 358, 300]}
+      - {box: [296, 250, 358, 300], label: "a rug"}
+      - {box: [306, 296, 402, 328]}
+      - {box: [306, 296, 402, 328], label: "a carpet"}
+    lines:
+      - emma: "Now the bottom of the picture. Number nine?"
+        say: "Now the bottom of the picture. Number nine?"
+        focus: 0
+        vi: "Nửa dưới của tranh."
+      - {tom: "A radiator.", focus: 1}
+      - {emma: "Number ten?", focus: 2}
+      - {tom: "A cushion.", focus: 3}
+      - {emma: "Number thirteen?", say: "Number thir-teen?", focus: 4}
+      - {tom: "An armchair.", focus: 5}
+      - {emma: "Number fourteen?", say: "Number four-teen?", focus: 6}
+      - {tom: "A coffee table.", focus: 7}
+      - {emma: "Number fifteen?", say: "Number fif-teen?", focus: 8}
+      - {tom: "A fireplace.", focus: 9}
+      - {emma: "Number sixteen?", say: "Number six-teen?", focus: 10}
+      - {tom: "The floor.", focus: 11}
+      - {emma: "Number seventeen?", say: "Number seven-teen?", focus: 12}
+      - {tom: "A sofa.", focus: 13}
+      - {emma: "Number eighteen?", say: "Number eigh-teen?", focus: 14}
+      - {tom: "A rug.", focus: 15}
+      - {emma: "And number nineteen?", say: "And number nine-teen?", focus: 16}
+      - {tom: "A carpet.", focus: 17}
+
+  - kind: figure
+    chapter: "Ở đâu? Giới từ chỉ vị trí"
+    heading: "Where is it? Describing a room"
+    heading_vi: "Thêm ngoài sách — on the wall · above · under · in front of · next to · between · in the corner"
+    image: {pdf: course-book, page: 105, clip: [106, 78, 404, 332]}
+    items:
+      - {box: [308, 122, 372, 280]}
+      - {box: [296, 210, 370, 300]}
+      - {box: [272, 134, 326, 242]}
+      - {box: [274, 136, 318, 182]}
+      - {box: [110, 200, 212, 282]}
+      - {box: [140, 206, 370, 280]}
+      - {box: [308, 122, 402, 282]}
+    lines:
+      - {emma: "Now let's describe the room. Where's the picture? It's on the wall, above the fireplace.", focus: 0, vi: "on the wall: trên tường · above: phía trên"}
+      - {tom: "The rug is in front of the fireplace.", focus: 1, vi: "in front of: phía trước"}
+      - {emma: "The lamp is on a small table, between the TV and the fireplace.", focus: 2, vi: "between … and …: ở giữa … và …"}
+      - {tom: "The DVD player is under the TV.", say: "The dee vee dee player is under the TV.", focus: 3, vi: "under: bên dưới"}
+      - {emma: "The armchair is next to the radiator.", focus: 4, vi: "next to: bên cạnh"}
+      - {tom: "The coffee table is between the armchair and the fireplace.", focus: 5}
+      - {emma: "And the bookshelves are in the corner, next to the fireplace.", focus: 6, vi: "in the corner: ở góc phòng"}
+
+  - kind: bullets
+    chapter: "Phòng khách Việt Nam"
+    heading: "Living rooms in Vietnam"
+    heading_vi: "Thêm ngoài sách — tả phòng khách Việt Nam bằng tiếng Anh"
+    items:
+      - {en: "a ceiling fan · air conditioning", vi: "quạt trần · máy lạnh"}
+      - {en: "a tiled floor: cool in hot weather", vi: "sàn lát gạch: mát khi trời nóng"}
+      - {en: "a wooden sofa set: a sofa, two armchairs and a coffee table", vi: "bộ bàn ghế gỗ (salon gỗ)"}
+      - {en: "Take off your shoes at the door. · a shoe rack", vi: "cởi giày ở cửa · kệ giày"}
+      - {en: "Make yourself at home! · Have a seat.", vi: "Cứ tự nhiên như ở nhà! · Mời ngồi."}
+    lines:
+      - {tom: "In Vietnam, most living rooms have a ceiling fan, and a lot of homes have air conditioning.", focus: 0, vi: "ceiling fan: quạt trần"}
+      - {emma: "The floor is usually tiled. Tiles are cool in hot weather.", focus: 1, vi: "tiled: lát gạch"}
+      - {tom: "Many families have a wooden sofa set: a wooden sofa, two armchairs, and a coffee table.", focus: 2, vi: "wooden: bằng gỗ"}
+      - {emma: "And remember: in a Vietnamese home, you take off your shoes at the door. There's often a shoe rack.", focus: 3, vi: "take off your shoes: cởi giày"}
+      - {tom: "When guests come, we say: make yourself at home! Have a seat.", focus: 4, vi: "guest: khách"}
+
+  - kind: letter
+    heading: "Model answer · Tom's living room"
+    heading_vi: "Bài nói mẫu — Tom tả phòng khách nhà ở Đà Lạt: ở đâu, đồ đạc, trên tường, vì sao thích"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to describe the living room in my family's house in Da Lat. It's downstairs, next to the kitchen, and it's quite big."
+        say: "I'd like to describe the living room in my family's house in Dah Lot. It's downstairs, next to the kitchen, and it's quite big."
+        note: "where"
+      - text: "In the middle of the room, there's a wooden sofa set: a sofa, two armchairs, and a coffee table. The floor is tiled, and there's a rug in front of the sofa."
+        note: "furniture"
+      - text: "On the walls, there are family photos and a big picture of the mountains. The TV is on the wall, opposite the sofa."
+        note: "the walls"
+      - text: "In the evening, we sit there, drink tea, and watch TV together. My grandfather always sits in the same armchair!"
+        note: "why I like it"
+    lines:
+      - {emma: "Now, a model answer. Tom, can you describe the living room in your family's home?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Your home"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you live in a house or a flat?", hint: "I live in a … · on the … floor"}
+      - {q: "What's your favourite room? Why?", hint: "My favourite room is the …, because …"}
+      - {q: "What do you usually do in your living room?", hint: "We watch TV, chat, eat … · I relax there"}
+      - {q: "Is there anything you'd like to change in your living room?", hint: "I'd like a bigger … / a new …"}
+      - {q: "Do you often have guests at home?", hint: "Yes, my friends often come … / Not very often"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about your home. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about your home. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về nhà của bạn."
+      - {emma: "Do you live in a house, or a flat?", say: "Do you liv in a house, or a flat?", focus: 0, pause: 0.5}
+      - {emma: "What's your favourite room? Why?", focus: 1, pause: 0.5}
+      - {emma: "What do you usually do in your living room?", focus: 2, pause: 0.5}
+      - {emma: "Is there anything you'd like to change in your living room?", focus: 3, pause: 0.5}
+      - {emma: "Do you often have guests at home?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary · end of the Places module"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4: che danh sách từ, nhìn tranh, nói tên"
+    items:
+      - {en: "window · light · ceiling · wall · curtains · TV / television · picture · bookshelves · radiator", vi: "1–9"}
+      - {en: "cushion · DVD player · lamp · armchair · coffee table · fireplace · floor · sofa · rug · carpet", vi: "10–19"}
+      - {en: "furniture (U) · a piece of furniture · pieces of furniture", vi: "đồ đạc: không đếm được"}
+      - {en: "Places: my country · my town · the countryside · shops · my home · kitchen · bedroom and bathroom · living room", vi: "module Places: Unit 34–41"}
+      - {en: "Next: Review · Places (pages 105–108)", vi: "Tiếp theo: ôn tập module, tr. 105–108"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A window, a light, the ceiling, a wall, curtains, a TV, a picture, bookshelves, and a radiator.", focus: 0}
+      - {tom: "A cushion, a DVD player, a lamp, an armchair, a coffee table, a fireplace, the floor, a sofa, a rug, and a carpet.", say: "A cushion, a dee vee dee player, a lamp, an armchair, a coffee table, a fireplace, the floor, a sofa, a rug, and a carpet.", focus: 1}
+      - {emma: "Furniture is uncountable: a piece of furniture, or pieces of furniture.", focus: 2}
+      - {tom: "In this module, we talked about countries, towns, the countryside, shops, homes, kitchens, bedrooms and bathrooms, and living rooms.", focus: 3}
+      - {emma: "That's the end of the Places module. Next, do the review on pages one hundred and five to one hundred and eight. See you then!", focus: 4}

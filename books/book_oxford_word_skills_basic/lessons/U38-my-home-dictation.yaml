@@ -1,0 +1,301 @@
+# Video nghe – viết (dictation) Unit 38 · My home — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U38-my-home-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U38 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 38 có 36 mục: ground floor phủ floor, front door phủ door, town centre phủ centre; upstairs,
+# downstairs và inside, outside ghép một dòng.
+id: U38-my-home-dictation
+activity: U38-words
+title: "Unit 38 · My home"
+subtitle: "Dictation · listen and write: talking about my home"
+title_vi: "Nghe – viết 10 phút: nhà của tôi — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 38"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 38: My home. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-eight: My home. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 38: nhà của tôi. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 31 words from the book. You hear each word twice, and then an example sentence twice. Then 16 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, thirty-one words from the book. You hear each word twice, and then an example sentence twice. Then sixteen more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 31 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 16 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "flat", "vi": "căn hộ", "ex": "I live in a flat with two friends.", "w": ["flat"]}
+      - {"n": 2, "answer": "block of flats", "vi": "tòa chung cư", "ex": "Emma lives in a block of flats.", "w": ["block of flats"]}
+      - {"n": 3, "answer": "house", "vi": "nhà riêng", "ex": "My family's house has two floors.", "w": ["house"]}
+      - {"n": 4, "answer": "home", "vi": "nhà (nơi mình sống)", "ex": "I usually go home at six o'clock.", "w": ["home"]}
+      - {"n": 5, "answer": "ground floor", "vi": "tầng trệt", "ex": "There's a chemist's on the ground floor.", "w": ["ground floor", "floor"]}
+      - {"n": 6, "answer": "on the first floor", "vi": "ở tầng một (trên tầng trệt)", "ex": "John and Lucy live on the first floor.", "w": ["on the first floor"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. flat. flat. I live in a flat with two friends. I live in a flat with two friends.", "say": "One. flat. flat. I liv in a flat with two friends. I liv in a flat with two friends.", "focus": 0}
+      - {"emma": "Two. block of flats. block of flats. Emma lives in a block of flats. Emma lives in a block of flats.", "say": "Two. block of flats. block of flats. Emma livz in a block of flats. Emma livz in a block of flats.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. house. house. My family's house has two floors. My family's house has two floors.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. home. home. I usually go home at six o'clock. I usually go home at six o'clock.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. ground floor. ground floor. There's a chemist's on the ground floor. There's a chemist's on the ground floor.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. on the first floor. on the first floor. John and Lucy live on the first floor. John and Lucy live on the first floor.", "say": "Six. on the first floor. on the first floor. John and Lucy liv on the first floor. John and Lucy liv on the first floor.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "top", "vi": "trên cùng", "ex": "Miki and Ferdy live on the top floor.", "w": ["top"]}
+      - {"n": 8, "answer": "basement", "vi": "tầng hầm", "ex": "They keep their bikes in the basement.", "w": ["basement"]}
+      - {"n": 9, "answer": "stairs", "vi": "cầu thang", "ex": "There's no lift, so we walk up the stairs.", "w": ["stairs"]}
+      - {"n": 10, "answer": "lift", "vi": "thang máy", "ex": "I always take the lift.", "w": ["lift"]}
+      - {"n": 11, "answer": "steps", "vi": "bậc thềm", "ex": "There are three steps up to the house.", "w": ["steps"]}
+      - {"n": 12, "answer": "front door", "vi": "cửa chính", "ex": "Close the front door, please.", "w": ["front door", "door"]}
+    lines:
+      - {"emma": "Seven. top. top. Miki and Ferdy live on the top floor. Miki and Ferdy live on the top floor.", "say": "Seven. top. top. Miki and Ferdy liv on the top floor. Miki and Ferdy liv on the top floor.", "focus": 0}
+      - {"emma": "Eight. basement. basement. They keep their bikes in the basement. They keep their bikes in the basement.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. stairs. stairs. There's no lift, so we walk up the stairs. There's no lift, so we walk up the stairs.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. lift. lift. I always take the lift. I always take the lift.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. steps. steps. There are three steps up to the house. There are three steps up to the house.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. front door. front door. Close the front door, please. Close the front door, please.", "say": "Twelve. front door. front door. Cloze the front door, please. Cloze the front door, please.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "balcony", "vi": "ban công", "ex": "I grow herbs and tomatoes on my balcony.", "w": ["balcony"]}
+      - {"n": 14, "answer": "garden", "vi": "vườn", "ex": "My grandfather grows vegetables in the garden.", "w": ["garden"]}
+      - {"n": 15, "answer": "garage", "vi": "nhà để xe", "ex": "We don't have a garage.", "w": ["garage"]}
+      - {"n": 16, "answer": "parking", "vi": "chỗ đỗ xe", "ex": "There's parking for two cars.", "w": ["parking"]}
+      - {"n": 17, "answer": "park", "vi": "đỗ xe", "ex": "You can park in front of the house.", "w": ["park"]}
+      - {"n": 18, "answer": "neighbours", "vi": "hàng xóm", "ex": "My neighbours are very friendly.", "w": ["neighbours"]}
+    lines:
+      - {"emma": "Thirteen. balcony. balcony. I grow herbs and tomatoes on my balcony. I grow herbs and tomatoes on my balcony.", "focus": 0}
+      - {"emma": "Fourteen. garden. garden. My grandfather grows vegetables in the garden. My grandfather grows vegetables in the garden.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. garage. garage. We don't have a garage. We don't have a garage.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. parking. parking. There's parking for two cars. There's parking for two cars.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. park. park. You can park in front of the house. You can park in front of the house.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. neighbours. neighbours. My neighbours are very friendly. My neighbours are very friendly.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "town centre", "vi": "trung tâm thị trấn", "ex": "The flat is near the town centre.", "w": ["town centre", "centre"]}
+      - {"n": 20, "answer": "views", "vi": "quang cảnh", "ex": "The house has lovely views of the countryside.", "w": ["views"]}
+      - {"n": 21, "answer": "modern", "vi": "hiện đại", "ex": "It's a modern house. It's only four years old.", "w": ["modern"]}
+      - {"n": 22, "answer": "living room", "vi": "phòng khách", "ex": "We watch TV in the living room.", "w": ["living room"]}
+      - {"n": 23, "answer": "dining room", "vi": "phòng ăn", "ex": "We eat in the dining room.", "w": ["dining room"]}
+      - {"n": 24, "answer": "kitchen", "vi": "nhà bếp", "ex": "The kitchen is my favourite room.", "w": ["kitchen"]}
+    lines:
+      - {"emma": "Nineteen. town centre. town centre. The flat is near the town centre. The flat is near the town centre.", "focus": 0}
+      - {"emma": "Twenty. views. views. The house has lovely views of the countryside. The house has lovely views of the countryside.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. modern. modern. It's a modern house. It's only four years old. It's a modern house. It's only four years old.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. living room. living room. We watch TV in the living room. We watch TV in the living room.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. dining room. dining room. We eat in the dining room. We eat in the dining room.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. kitchen. kitchen. The kitchen is my favourite room. The kitchen is my favourite room.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "study", "vi": "phòng làm việc", "ex": "My brother works in the study.", "w": ["study"]}
+      - {"n": 26, "answer": "utility room", "vi": "phòng giặt ủi", "ex": "The washing machine is in the utility room.", "w": ["utility room"]}
+      - {"n": 27, "answer": "bedroom", "vi": "phòng ngủ", "ex": "There are four bedrooms upstairs.", "w": ["bedroom"]}
+      - {"n": 28, "answer": "bathroom", "vi": "phòng tắm", "ex": "There's a bathroom next to my bedroom.", "w": ["bathroom"]}
+    lines:
+      - {"emma": "Twenty-five. study. study. My brother works in the study. My brother works in the study.", "focus": 0}
+      - {"emma": "Twenty-six. utility room. utility room. The washing machine is in the utility room. The washing machine is in the utility room.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. bedroom. bedroom. There are four bedrooms upstairs. There are four bedrooms upstairs.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. bathroom. bathroom. There's a bathroom next to my bedroom. There's a bathroom next to my bedroom.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (29–31)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 29, "answer": "upstairs, downstairs", "vi": "tầng trên, tầng dưới", "ex": "The kitchen is downstairs, and the bedrooms are upstairs.", "w": ["upstairs", "downstairs"]}
+      - {"n": 30, "answer": "inside, outside", "vi": "bên trong, bên ngoài", "ex": "In summer, we eat outside.", "w": ["inside", "outside"]}
+      - {"n": 31, "answer": "rubbish", "vi": "rác", "ex": "Put the rubbish in the bin.", "w": ["rubbish"]}
+    lines:
+      - {"emma": "Twenty-nine. upstairs, downstairs. upstairs, downstairs. The kitchen is downstairs, and the bedrooms are upstairs. The kitchen is downstairs, and the bedrooms are upstairs.", "focus": 0}
+      - {"emma": "Thirty. inside, outside. inside, outside. In summer, we eat outside. In summer, we eat outside.", "focus": 1, "reveal": [29]}
+      - {"emma": "Thirty-one. rubbish. rubbish. Put the rubbish in the bin. Put the rubbish in the bin.", "focus": 2, "reveal": [30]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [31]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "tube house", "vi": "nhà ống", "ex": "Many families live in a tube house."}
+      - {"n": 33, "answer": "rent", "vi": "tiền thuê nhà", "ex": "The rent is six million dong a month."}
+      - {"n": 34, "answer": "landlord", "vi": "chủ nhà", "ex": "The landlord lives downstairs."}
+      - {"n": 35, "answer": "deposit", "vi": "tiền đặt cọc", "ex": "You pay one month's rent as a deposit."}
+      - {"n": 36, "answer": "furnished", "vi": "có sẵn đồ đạc", "ex": "The flat is fully furnished."}
+      - {"n": 37, "answer": "roof", "vi": "mái nhà", "ex": "There's a small garden on the roof."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-two. tube house. tube house. Many families live in a tube house. Many families live in a tube house.", "say": "Thirty-two. tube house. tube house. Many families liv in a tube house. Many families liv in a tube house.", "focus": 0}
+      - {"tom": "Thirty-three. rent. rent. The rent is six million dong a month. The rent is six million dong a month.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. landlord. landlord. The landlord lives downstairs. The landlord lives downstairs.", "say": "Thirty-four. landlord. landlord. The landlord livz downstairs. The landlord livz downstairs.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. deposit. deposit. You pay one month's rent as a deposit. You pay one month's rent as a deposit.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. furnished. furnished. The flat is fully furnished. The flat is fully furnished.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. roof. roof. There's a small garden on the roof. There's a small garden on the roof.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "security guard", "vi": "bảo vệ", "ex": "There's a security guard at the entrance."}
+      - {"n": 39, "answer": "car park", "vi": "bãi đỗ xe", "ex": "The car park is in the basement."}
+      - {"n": 40, "answer": "move house", "vi": "chuyển nhà", "ex": "We moved house last year."}
+      - {"n": 41, "answer": "flatmate", "vi": "bạn cùng nhà", "ex": "I share a flat with two flatmates."}
+      - {"n": 42, "answer": "spacious", "vi": "rộng rãi", "ex": "The living room is bright and spacious."}
+      - {"n": 43, "answer": "bright", "vi": "sáng sủa", "ex": "My bedroom is small but bright."}
+    lines:
+      - {"tom": "Thirty-eight. security guard. security guard. There's a security guard at the entrance. There's a security guard at the entrance.", "focus": 0}
+      - {"tom": "Thirty-nine. car park. car park. The car park is in the basement. The car park is in the basement.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. move house. move house. We moved house last year. We moved house last year.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. flatmate. flatmate. I share a flat with two flatmates. I share a flat with two flatmates.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. spacious. spacious. The living room is bright and spacious. The living room is bright and spacious.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. bright. bright. My bedroom is small but bright. My bedroom is small but bright.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–47)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "altar", "vi": "bàn thờ", "ex": "Many homes have a family altar."}
+      - {"n": 45, "answer": "address", "vi": "địa chỉ", "ex": "What's your new address?"}
+      - {"n": 46, "answer": "hallway", "vi": "hành lang, lối vào", "ex": "Leave your shoes in the hallway."}
+      - {"n": 47, "answer": "key", "vi": "chìa khóa", "ex": "I can't find my key!"}
+    lines:
+      - {"tom": "Forty-four. altar. altar. Many homes have a family altar. Many homes have a family altar.", "focus": 0}
+      - {"tom": "Forty-five. address. address. What's your new address? What's your new address?", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. hallway. hallway. Leave your shoes in the hallway. Leave your shoes in the hallway.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. key. key. I can't find my key! I can't find my key!", "focus": 3, "reveal": [46]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [47]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (48–53)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 48, "answer": "Do you live in a house or a flat?", "vi": "Bạn ở nhà riêng hay căn hộ?"}
+      - {"n": 49, "answer": "A flat, on the third floor.", "vi": "Căn hộ, ở tầng ba."}
+      - {"n": 50, "answer": "Is there a lift?", "vi": "Có thang máy không?"}
+      - {"n": 51, "answer": "No, we walk up the stairs.", "vi": "Không, bọn mình đi cầu thang bộ."}
+      - {"n": 52, "answer": "How many bedrooms are there?", "vi": "Có mấy phòng ngủ?"}
+      - {"n": 53, "answer": "Three small bedrooms.", "vi": "Ba phòng ngủ nhỏ."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-eight. Do you live in a house or a flat? Do you live in a house or a flat?", "say": "Forty-eight. Do you liv in a house or a flat? Do you liv in a house or a flat?", "focus": 0}
+      - {"tom": "Forty-nine. A flat, on the third floor. A flat, on the third floor.", "focus": 1, "reveal": [48]}
+      - {"emma": "Fifty. Is there a lift? Is there a lift?", "focus": 2, "reveal": [49]}
+      - {"tom": "Fifty-one. No, we walk up the stairs. No, we walk up the stairs.", "focus": 3, "reveal": [50]}
+      - {"emma": "Fifty-two. How many bedrooms are there? How many bedrooms are there?", "focus": 4, "reveal": [51]}
+      - {"tom": "Fifty-three. Three small bedrooms. Three small bedrooms.", "focus": 5, "reveal": [52]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [53]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "Have you got a garden?", "vi": "Bạn có vườn không?"}
+      - {"n": 55, "answer": "No, but I've got a little balcony.", "vi": "Không, nhưng có một ban công nhỏ."}
+      - {"n": 56, "answer": "What's the view like?", "vi": "Nhìn ra thấy gì?"}
+      - {"n": 57, "answer": "Tall buildings, and the city lights at night.", "vi": "Nhà cao tầng, và đèn thành phố ban đêm."}
+      - {"n": 58, "answer": "Where can I park my motorbike?", "vi": "Tôi để xe máy ở đâu?"}
+      - {"n": 59, "answer": "On the ground floor.", "vi": "Ở tầng trệt."}
+    lines:
+      - {"tom": "Fifty-four. Have you got a garden? Have you got a garden?", "focus": 0}
+      - {"emma": "Fifty-five. No, but I've got a little balcony. No, but I've got a little balcony.", "focus": 1, "reveal": [54]}
+      - {"tom": "Fifty-six. What's the view like? What's the view like?", "focus": 2, "reveal": [55]}
+      - {"emma": "Fifty-seven. Tall buildings, and the city lights at night. Tall buildings, and the city lights at night.", "focus": 3, "reveal": [56]}
+      - {"emma": "Fifty-eight. Where can I park my motorbike? Where can I park my motorbike?", "focus": 4, "reveal": [57]}
+      - {"tom": "Fifty-nine. On the ground floor. On the ground floor.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "How much is the rent?", "vi": "Tiền thuê bao nhiêu?"}
+      - {"n": 61, "answer": "Six million dong a month.", "vi": "Sáu triệu đồng một tháng."}
+      - {"n": 62, "answer": "Is the flat furnished?", "vi": "Căn hộ có sẵn đồ đạc không?"}
+      - {"n": 63, "answer": "Yes, there's a bed, a desk, and a wardrobe.", "vi": "Có giường, bàn học và tủ quần áo."}
+      - {"n": 64, "answer": "When can I move in?", "vi": "Khi nào tôi dọn vào được?"}
+      - {"n": 65, "answer": "Next Monday, if you like.", "vi": "Thứ Hai tới, nếu chị muốn."}
+    lines:
+      - {"emma": "Sixty. How much is the rent? How much is the rent?", "focus": 0}
+      - {"tom": "Sixty-one. Six million dong a month. Six million dong a month.", "focus": 1, "reveal": [60]}
+      - {"emma": "Sixty-two. Is the flat furnished? Is the flat furnished?", "focus": 2, "reveal": [61]}
+      - {"tom": "Sixty-three. Yes, there's a bed, a desk, and a wardrobe. Yes, there's a bed, a desk, and a wardrobe.", "focus": 3, "reveal": [62]}
+      - {"emma": "Sixty-four. When can I move in? When can I move in?", "focus": 4, "reveal": [63]}
+      - {"tom": "Sixty-five. Next Monday, if you like. Next Monday, if you like.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "What's your favourite room?", "vi": "Bạn thích phòng nào nhất?"}
+      - {"n": 67, "answer": "The kitchen in our house in Da Lat.", "vi": "Bếp ở nhà mình ở Đà Lạt."}
+      - {"n": 68, "answer": "Do you know your neighbours?", "vi": "Bạn có quen hàng xóm không?"}
+      - {"n": 69, "answer": "Yes, my neighbour is an old lady. We often chat.", "vi": "Có, hàng xóm là một cụ bà. Bọn mình hay trò chuyện."}
+      - {"n": 70, "answer": "Welcome to my home!", "vi": "Chào mừng đến nhà mình!"}
+      - {"n": 71, "answer": "What a lovely flat!", "vi": "Căn hộ đẹp quá!"}
+    lines:
+      - {"emma": "Sixty-six. What's your favourite room? What's your favourite room?", "focus": 0}
+      - {"tom": "Sixty-seven. The kitchen in our house in Da Lat. The kitchen in our house in Da Lat.", "say": "Sixty-seven. The kitchen in our house in Dah Lot. The kitchen in our house in Dah Lot.", "focus": 1, "reveal": [66]}
+      - {"tom": "Sixty-eight. Do you know your neighbours? Do you know your neighbours?", "focus": 2, "reveal": [67]}
+      - {"emma": "Sixty-nine. Yes, my neighbour is an old lady. We often chat. Yes, my neighbour is an old lady. We often chat.", "focus": 3, "reveal": [68]}
+      - {"emma": "Seventy. Welcome to my home! Welcome to my home!", "focus": 4, "reveal": [69]}
+      - {"tom": "Seventy-one. What a lovely flat! What a lovely flat!", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "Please take off your shoes.", "vi": "Bạn cởi giày ra nhé."}
+      - {"n": 73, "answer": "Of course.", "vi": "Tất nhiên rồi."}
+      - {"n": 74, "answer": "Which floor do you live on, Emma?", "vi": "Emma ở tầng mấy?"}
+      - {"n": 75, "answer": "The eighth floor, so I always take the lift.", "vi": "Tầng tám, nên lúc nào mình cũng đi thang máy."}
+    lines:
+      - {"emma": "Seventy-two. Please take off your shoes. Please take off your shoes.", "focus": 0}
+      - {"tom": "Seventy-three. Of course. Of course.", "focus": 1, "reveal": [72]}
+      - {"tom": "Seventy-four. Which floor do you live on, Emma? Which floor do you live on, Emma?", "say": "Seventy-four. Which floor do you liv on, Emma? Which floor do you liv on, Emma?", "focus": 2, "reveal": [73]}
+      - {"emma": "Seventy-five. The eighth floor, so I always take the lift. The eighth floor, so I always take the lift.", "focus": 3, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [75]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 39.", "say": "Well done! See you in Unit thirty-nine.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 39."}
+

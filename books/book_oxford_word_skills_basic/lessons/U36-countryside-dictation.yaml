@@ -1,0 +1,298 @@
+# Video nghe – viết (dictation) Unit 36 · The countryside — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U36-countryside-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U36 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 36 có 34 mục: bike, bicycle và public transport, transport ghép một dòng.
+id: U36-countryside-dictation
+activity: U36-words
+title: "Unit 36 · The countryside"
+subtitle: "Dictation · listen and write: describing the countryside"
+title_vi: "Nghe – viết 10 phút: nông thôn — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 36"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 36: The countryside. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-six: The countryside. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 36: nông thôn. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 32 words from the book. You hear each word twice, and then an example sentence twice. Then 16 more useful words, and 26 useful sentences for conversation.", "say": "There are three parts. First, thirty-two words from the book. You hear each word twice, and then an example sentence twice. Then sixteen more useful words, and twenty-six useful sentences for conversation.", "vi": "Ba phần: 32 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 16 từ thêm, 26 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "countryside", "vi": "nông thôn", "ex": "Life in the countryside is quiet.", "w": ["countryside"]}
+      - {"n": 2, "answer": "farm", "vi": "trang trại", "ex": "Jack Robson owns Eatwell Farm.", "w": ["farm"]}
+      - {"n": 3, "answer": "farmer", "vi": "nông dân", "ex": "The farmer grows fruit and vegetables.", "w": ["farmer"]}
+      - {"n": 4, "answer": "own", "vi": "sở hữu", "ex": "He owns a small farm near the lake.", "w": ["own"]}
+      - {"n": 5, "answer": "grow", "vi": "trồng", "ex": "Farmers grow strawberries near Da Lat.", "w": ["grow"]}
+      - {"n": 6, "answer": "crop", "vi": "cây trồng, vụ mùa", "ex": "Rice is an important crop in Vietnam.", "w": ["crop"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. countryside. countryside. Life in the countryside is quiet. Life in the countryside is quiet.", "focus": 0}
+      - {"emma": "Two. farm. farm. Jack Robson owns Eatwell Farm. Jack Robson owns Eatwell Farm.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. farmer. farmer. The farmer grows fruit and vegetables. The farmer grows fruit and vegetables.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. own. own. He owns a small farm near the lake. He owns a small farm near the lake.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. grow. grow. Farmers grow strawberries near Da Lat. Farmers grow strawberries near Da Lat.", "say": "Five. grow. grow. Farmers grow strawberries near Dah Lot. Farmers grow strawberries near Dah Lot.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. crop. crop. Rice is an important crop in Vietnam. Rice is an important crop in Vietnam.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "a few", "vi": "một vài", "ex": "He grows a few other crops.", "w": ["few"]}
+      - {"n": 8, "answer": "field", "vi": "cánh đồng", "ex": "There is nothing in the field.", "w": ["field"]}
+      - {"n": 9, "answer": "grass", "vi": "cỏ", "ex": "The horse is eating the grass.", "w": ["grass"]}
+      - {"n": 10, "answer": "hill", "vi": "đồi", "ex": "Tom's family house is on a hill.", "w": ["hill"]}
+      - {"n": 11, "answer": "valley", "vi": "thung lũng", "ex": "From the garden, you can see the valley.", "w": ["valley"]}
+      - {"n": 12, "answer": "wood", "vi": "khu rừng nhỏ", "ex": "The wood is on the hill.", "w": ["wood"]}
+    lines:
+      - {"emma": "Seven. a few. a few. He grows a few other crops. He grows a few other crops.", "focus": 0}
+      - {"emma": "Eight. field. field. There is nothing in the field. There is nothing in the field.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. grass. grass. The horse is eating the grass. The horse is eating the grass.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. hill. hill. Tom's family house is on a hill. Tom's family house is on a hill.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. valley. valley. From the garden, you can see the valley. From the garden, you can see the valley.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. wood. wood. The wood is on the hill. The wood is on the hill.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "tree", "vi": "cây", "ex": "There's a lake near the trees.", "w": ["tree"]}
+      - {"n": 14, "answer": "lake", "vi": "hồ", "ex": "We sometimes go fishing on the lake.", "w": ["lake"]}
+      - {"n": 15, "answer": "path", "vi": "lối đi, đường mòn", "ex": "The path goes to the farm.", "w": ["path"]}
+      - {"n": 16, "answer": "sky", "vi": "bầu trời", "ex": "The sky is blue today.", "w": ["sky"]}
+      - {"n": 17, "answer": "bird", "vi": "chim", "ex": "In the mornings, I listen to the birds.", "w": ["bird"]}
+      - {"n": 18, "answer": "flower", "vi": "hoa", "ex": "My garden has lots of flowers.", "w": ["flower"]}
+    lines:
+      - {"emma": "Thirteen. tree. tree. There's a lake near the trees. There's a lake near the trees.", "focus": 0}
+      - {"emma": "Fourteen. lake. lake. We sometimes go fishing on the lake. We sometimes go fishing on the lake.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. path. path. The path goes to the farm. The path goes to the farm.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. sky. sky. The sky is blue today. The sky is blue today.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. bird. bird. In the mornings, I listen to the birds. In the mornings, I listen to the birds.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. flower. flower. My garden has lots of flowers. My garden has lots of flowers.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "horse", "vi": "ngựa", "ex": "The horse lives on the farm.", "w": ["horse"]}
+      - {"n": 20, "answer": "dog", "vi": "chó", "ex": "The farmer has a big dog.", "w": ["dog"]}
+      - {"n": 21, "answer": "boat", "vi": "thuyền", "ex": "There's a small boat on the lake.", "w": ["boat"]}
+      - {"n": 22, "answer": "bike, bicycle", "vi": "xe đạp", "ex": "I go to town by bike.", "w": ["bike", "bicycle"]}
+      - {"n": 23, "answer": "ride", "vi": "đi (xe đạp), cưỡi (ngựa)", "ex": "Can you ride a horse?", "w": ["ride"]}
+      - {"n": 24, "answer": "area", "vi": "khu vực, vùng", "ex": "I live in a beautiful area.", "w": ["area"]}
+    lines:
+      - {"emma": "Nineteen. horse. horse. The horse lives on the farm. The horse lives on the farm.", "say": "Nineteen. horse. horse. The horse livz on the farm. The horse livz on the farm.", "focus": 0}
+      - {"emma": "Twenty. dog. dog. The farmer has a big dog. The farmer has a big dog.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. boat. boat. There's a small boat on the lake. There's a small boat on the lake.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. bike, bicycle. bike, bicycle. I go to town by bike. I go to town by bike.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. ride. ride. Can you ride a horse? Can you ride a horse?", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. area. area. I live in a beautiful area. I live in a beautiful area.", "say": "Twenty-four. area. area. I liv in a beautiful area. I liv in a beautiful area.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "fresh food", "vi": "thực phẩm tươi", "ex": "I grow my own vegetables, so I eat fresh food.", "w": ["fresh food"]}
+      - {"n": 26, "answer": "healthy", "vi": "khỏe mạnh, tốt cho sức khỏe", "ex": "Life in the countryside is very healthy.", "w": ["healthy"]}
+      - {"n": 27, "answer": "public transport", "vi": "phương tiện công cộng", "ex": "The public transport here is terrible.", "w": ["public transport", "transport"]}
+      - {"n": 28, "answer": "terrible", "vi": "rất tệ", "ex": "The weather was terrible yesterday.", "w": ["terrible"]}
+    lines:
+      - {"emma": "Twenty-five. fresh food. fresh food. I grow my own vegetables, so I eat fresh food. I grow my own vegetables, so I eat fresh food.", "focus": 0}
+      - {"emma": "Twenty-six. healthy. healthy. Life in the countryside is very healthy. Life in the countryside is very healthy.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. public transport. public transport. The public transport here is terrible. The public transport here is terrible.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. terrible. terrible. The weather was terrible yesterday. The weather was terrible yesterday.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (29–32)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 29, "answer": "wonderful", "vi": "tuyệt vời", "ex": "It's so quiet. It's wonderful!", "w": ["wonderful"]}
+      - {"n": 30, "answer": "look after", "vi": "chăm sóc", "ex": "Jack looks after his chickens for him.", "w": ["look after"]}
+      - {"n": 31, "answer": "alone", "vi": "một mình", "ex": "She likes living alone.", "w": ["alone"]}
+      - {"n": 32, "answer": "lonely", "vi": "cô đơn", "ex": "Sometimes I feel lonely in the city.", "w": ["lonely"]}
+    lines:
+      - {"emma": "Twenty-nine. wonderful. wonderful. It's so quiet. It's wonderful! It's so quiet. It's wonderful!", "focus": 0}
+      - {"emma": "Thirty. look after. look after. Jack looks after his chickens for him. Jack looks after his chickens for him.", "focus": 1, "reveal": [29]}
+      - {"emma": "Thirty-one. alone. alone. She likes living alone. She likes living alone.", "focus": 2, "reveal": [30]}
+      - {"emma": "Thirty-two. lonely. lonely. Sometimes I feel lonely in the city. Sometimes I feel lonely in the city.", "focus": 3, "reveal": [31]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [32]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (33–38)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 33, "answer": "rice field", "vi": "ruộng lúa", "ex": "There are rice fields everywhere in the delta."}
+      - {"n": 34, "answer": "water buffalo", "vi": "con trâu", "ex": "A water buffalo is working in the field."}
+      - {"n": 35, "answer": "terraced fields", "vi": "ruộng bậc thang", "ex": "Sa Pa is famous for its terraced fields."}
+      - {"n": 36, "answer": "chicken", "vi": "con gà", "ex": "There are only three chickens on the farm."}
+      - {"n": 37, "answer": "cow", "vi": "con bò", "ex": "The cows are in the field."}
+      - {"n": 38, "answer": "fence", "vi": "hàng rào", "ex": "The farmer is standing next to the fence."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-three. rice field. rice field. There are rice fields everywhere in the delta. There are rice fields everywhere in the delta.", "focus": 0}
+      - {"tom": "Thirty-four. water buffalo. water buffalo. A water buffalo is working in the field. A water buffalo is working in the field.", "focus": 1, "reveal": [33]}
+      - {"tom": "Thirty-five. terraced fields. terraced fields. Sa Pa is famous for its terraced fields. Sa Pa is famous for its terraced fields.", "say": "Thirty-five. terraced fields. terraced fields. Sah Pah is famous for its terraced fields. Sah Pah is famous for its terraced fields.", "focus": 2, "reveal": [34]}
+      - {"tom": "Thirty-six. chicken. chicken. There are only three chickens on the farm. There are only three chickens on the farm.", "focus": 3, "reveal": [35]}
+      - {"tom": "Thirty-seven. cow. cow. The cows are in the field. The cows are in the field.", "focus": 4, "reveal": [36]}
+      - {"tom": "Thirty-eight. fence. fence. The farmer is standing next to the fence. The farmer is standing next to the fence.", "focus": 5, "reveal": [37]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [38]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (39–44)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 39, "answer": "village", "vi": "làng", "ex": "Many people in the village are farmers."}
+      - {"n": 40, "answer": "fresh air", "vi": "không khí trong lành", "ex": "I love the fresh air in the mountains."}
+      - {"n": 41, "answer": "peaceful", "vi": "yên bình", "ex": "Life in the village is quiet and peaceful."}
+      - {"n": 42, "answer": "strawberry", "vi": "dâu tây", "ex": "Da Lat is famous for strawberries."}
+      - {"n": 43, "answer": "coffee farm", "vi": "trang trại cà phê", "ex": "My dad's company buys coffee from farmers."}
+      - {"n": 44, "answer": "harvest", "vi": "vụ thu hoạch", "ex": "Farmers are very busy at harvest time."}
+    lines:
+      - {"tom": "Thirty-nine. village. village. Many people in the village are farmers. Many people in the village are farmers.", "focus": 0}
+      - {"tom": "Forty. fresh air. fresh air. I love the fresh air in the mountains. I love the fresh air in the mountains.", "focus": 1, "reveal": [39]}
+      - {"tom": "Forty-one. peaceful. peaceful. Life in the village is quiet and peaceful. Life in the village is quiet and peaceful.", "focus": 2, "reveal": [40]}
+      - {"tom": "Forty-two. strawberry. strawberry. Da Lat is famous for strawberries. Da Lat is famous for strawberries.", "say": "Forty-two. strawberry. strawberry. Dah Lot is famous for strawberries. Dah Lot is famous for strawberries.", "focus": 3, "reveal": [41]}
+      - {"tom": "Forty-three. coffee farm. coffee farm. My dad's company buys coffee from farmers. My dad's company buys coffee from farmers.", "focus": 4, "reveal": [42]}
+      - {"tom": "Forty-four. harvest. harvest. Farmers are very busy at harvest time. Farmers are very busy at harvest time.", "focus": 5, "reveal": [43]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [44]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (45–48)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 45, "answer": "hiking", "vi": "đi bộ đường dài", "ex": "Emma loves hiking in the hills."}
+      - {"n": 46, "answer": "insect", "vi": "côn trùng", "ex": "There are lots of insects in summer."}
+      - {"n": 47, "answer": "mud", "vi": "bùn", "ex": "After the rain, the path was full of mud."}
+      - {"n": 48, "answer": "pond", "vi": "ao", "ex": "There are fish in the pond."}
+    lines:
+      - {"tom": "Forty-five. hiking. hiking. Emma loves hiking in the hills. Emma loves hiking in the hills.", "focus": 0}
+      - {"tom": "Forty-six. insect. insect. There are lots of insects in summer. There are lots of insects in summer.", "focus": 1, "reveal": [45]}
+      - {"tom": "Forty-seven. mud. mud. After the rain, the path was full of mud. After the rain, the path was full of mud.", "focus": 2, "reveal": [46]}
+      - {"tom": "Forty-eight. pond. pond. There are fish in the pond. There are fish in the pond.", "focus": 3, "reveal": [47]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [48]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (49–54)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 49, "answer": "Do you prefer the city or the countryside?", "vi": "Bạn thích thành phố hay nông thôn hơn?"}
+      - {"n": 50, "answer": "The countryside. It's quieter, and the air is fresh.", "vi": "Nông thôn. Yên tĩnh hơn, không khí trong lành."}
+      - {"n": 51, "answer": "How often do you go home?", "vi": "Bạn có hay về nhà không?"}
+      - {"n": 52, "answer": "Two or three times a year.", "vi": "Hai ba lần một năm."}
+      - {"n": 53, "answer": "What can you do there?", "vi": "Ở đó có thể làm gì?"}
+      - {"n": 54, "answer": "You can walk, ride a bike, or go fishing on the lake.", "vi": "Đi dạo, đạp xe, hoặc câu cá trên hồ."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-nine. Do you prefer the city or the countryside? Do you prefer the city or the countryside?", "focus": 0}
+      - {"tom": "Fifty. The countryside. It's quieter, and the air is fresh. The countryside. It's quieter, and the air is fresh.", "focus": 1, "reveal": [49]}
+      - {"emma": "Fifty-one. How often do you go home? How often do you go home?", "focus": 2, "reveal": [50]}
+      - {"tom": "Fifty-two. Two or three times a year. Two or three times a year.", "focus": 3, "reveal": [51]}
+      - {"emma": "Fifty-three. What can you do there? What can you do there?", "focus": 4, "reveal": [52]}
+      - {"tom": "Fifty-four. You can walk, ride a bike, or go fishing on the lake. You can walk, ride a bike, or go fishing on the lake.", "focus": 5, "reveal": [53]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [54]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (55–60)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 55, "answer": "Is there any public transport?", "vi": "Có phương tiện công cộng không?"}
+      - {"n": 56, "answer": "Not much. You need a motorbike.", "vi": "Không nhiều. Cần có xe máy."}
+      - {"n": 57, "answer": "Do you grow any vegetables, Emma?", "vi": "Emma có trồng rau không?"}
+      - {"n": 58, "answer": "Only herbs and tomatoes on my balcony.", "vi": "Chỉ rau thơm và cà chua trên ban công."}
+      - {"n": 59, "answer": "Where do your parents buy their eggs?", "vi": "Bố mẹ bạn mua trứng ở đâu?"}
+      - {"n": 60, "answer": "From a farm near their town.", "vi": "Ở một trang trại gần thị trấn."}
+    lines:
+      - {"emma": "Fifty-five. Is there any public transport? Is there any public transport?", "focus": 0}
+      - {"tom": "Fifty-six. Not much. You need a motorbike. Not much. You need a motorbike.", "focus": 1, "reveal": [55]}
+      - {"tom": "Fifty-seven. Do you grow any vegetables, Emma? Do you grow any vegetables, Emma?", "focus": 2, "reveal": [56]}
+      - {"emma": "Fifty-eight. Only herbs and tomatoes on my balcony. Only herbs and tomatoes on my balcony.", "focus": 3, "reveal": [57]}
+      - {"tom": "Fifty-nine. Where do your parents buy their eggs? Where do your parents buy their eggs?", "focus": 4, "reveal": [58]}
+      - {"emma": "Sixty. From a farm near their town. From a farm near their town.", "focus": 5, "reveal": [59]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [60]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (61–66)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 61, "answer": "Have you been to Sa Pa?", "vi": "Bạn đã đến Sa Pa chưa?"}
+      - {"n": 62, "answer": "Yes, two years ago. The fields were wonderful.", "vi": "Rồi, hai năm trước. Ruộng đẹp tuyệt."}
+      - {"n": 63, "answer": "Do you ever feel lonely?", "vi": "Bạn có bao giờ thấy cô đơn không?"}
+      - {"n": 64, "answer": "Sometimes, when I miss my family.", "vi": "Đôi khi, lúc nhớ nhà."}
+      - {"n": 65, "answer": "Who looks after the garden?", "vi": "Ai chăm sóc khu vườn?"}
+      - {"n": 66, "answer": "My grandfather. He's very healthy for his age!", "vi": "Ông mình. Ông rất khỏe so với tuổi!"}
+    lines:
+      - {"tom": "Sixty-one. Have you been to Sa Pa? Have you been to Sa Pa?", "say": "Sixty-one. Have you been to Sah Pah? Have you been to Sah Pah?", "focus": 0}
+      - {"emma": "Sixty-two. Yes, two years ago. The fields were wonderful. Yes, two years ago. The fields were wonderful.", "focus": 1, "reveal": [61]}
+      - {"emma": "Sixty-three. Do you ever feel lonely? Do you ever feel lonely?", "focus": 2, "reveal": [62]}
+      - {"tom": "Sixty-four. Sometimes, when I miss my family. Sometimes, when I miss my family.", "focus": 3, "reveal": [63]}
+      - {"emma": "Sixty-five. Who looks after the garden? Who looks after the garden?", "focus": 4, "reveal": [64]}
+      - {"tom": "Sixty-six. My grandfather. He's very healthy for his age! My grandfather. He's very healthy for his age!", "focus": 5, "reveal": [65]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [66]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (67–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 67, "answer": "Would you like to live on a farm?", "vi": "Bạn có muốn sống ở trang trại không?"}
+      - {"n": 68, "answer": "No, it's too much work!", "vi": "Không, nhiều việc quá!"}
+      - {"n": 69, "answer": "Let's go for a walk in the hills.", "vi": "Mình đi dạo trên đồi đi."}
+      - {"n": 70, "answer": "Good idea. Don't forget your water.", "vi": "Ý hay đấy. Nhớ mang nước nhé."}
+    lines:
+      - {"emma": "Sixty-seven. Would you like to live on a farm? Would you like to live on a farm?", "say": "Sixty-seven. Would you like to liv on a farm? Would you like to liv on a farm?", "focus": 0}
+      - {"tom": "Sixty-eight. No, it's too much work! No, it's too much work!", "focus": 1, "reveal": [67]}
+      - {"emma": "Sixty-nine. Let's go for a walk in the hills. Let's go for a walk in the hills.", "focus": 2, "reveal": [68]}
+      - {"tom": "Seventy. Good idea. Don't forget your water. Good idea. Don't forget your water.", "focus": 3, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "Look at the view of the valley!", "vi": "Nhìn thung lũng kìa!"}
+      - {"n": 72, "answer": "It's wonderful.", "vi": "Tuyệt quá."}
+      - {"n": 73, "answer": "Is the path to the lake long?", "vi": "Đường ra hồ có dài không?"}
+      - {"n": 74, "answer": "No, it only takes ten minutes.", "vi": "Không, chỉ mất mười phút."}
+    lines:
+      - {"tom": "Seventy-one. Look at the view of the valley! Look at the view of the valley!", "focus": 0}
+      - {"emma": "Seventy-two. It's wonderful. It's wonderful.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. Is the path to the lake long? Is the path to the lake long?", "focus": 2, "reveal": [72]}
+      - {"tom": "Seventy-four. No, it only takes ten minutes. No, it only takes ten minutes.", "focus": 3, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [74]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 37.", "say": "Well done! See you in Unit thirty-seven.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 37."}
+

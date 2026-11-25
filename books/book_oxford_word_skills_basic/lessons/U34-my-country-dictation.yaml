@@ -1,0 +1,296 @@
+# Video nghe – viết (dictation) Unit 34 · My country — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U34-my-country-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U34 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 34 có 19 mục; phần 1 thêm từ trên trang (country, compass, famous for, tall, the longest river…).
+id: U34-my-country-dictation
+activity: U34-words
+title: "Unit 34 · My country"
+subtitle: "Dictation · listen and write: talking about my country"
+title_vi: "Nghe – viết 10 phút: đất nước của tôi — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 34"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 34: My country. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-four: My country. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 34: đất nước của tôi. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 25 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 28 useful sentences for conversation.", "say": "There are three parts. First, twenty-five words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and twenty-eight useful sentences for conversation.", "vi": "Ba phần: 25 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 28 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "country", "vi": "đất nước", "ex": "Brazil is a country in South America."}
+      - {"n": 2, "answer": "enormous", "vi": "rất lớn, khổng lồ", "ex": "Brazil is enormous.", "w": ["enormous"]}
+      - {"n": 3, "answer": "coast", "vi": "bờ biển", "ex": "The coast is more than three thousand kilometres long.", "w": ["coast"]}
+      - {"n": 4, "answer": "kilometres", "vi": "ki-lô-mét", "ex": "The Amazon is about six thousand kilometres long.", "w": ["kilometres"]}
+      - {"n": 5, "answer": "border", "vi": "biên giới", "ex": "Brazil has borders with ten countries.", "w": ["border"]}
+      - {"n": 6, "answer": "river", "vi": "sông", "ex": "There's a river in the centre of the town.", "w": ["river"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. country. country. Brazil is a country in South America. Brazil is a country in South America.", "focus": 0}
+      - {"emma": "Two. enormous. enormous. Brazil is enormous. Brazil is enormous.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. coast. coast. The coast is more than three thousand kilometres long. The coast is more than three thousand kilometres long.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. kilometres. kilometres. The Amazon is about six thousand kilometres long. The Amazon is about six thousand kilometres long.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. border. border. Brazil has borders with ten countries. Brazil has borders with ten countries.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. river. river. There's a river in the centre of the town. There's a river in the centre of the town.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "the longest river", "vi": "con sông dài nhất", "ex": "The Amazon is the longest river in South America."}
+      - {"n": 8, "answer": "mountain", "vi": "núi", "ex": "Da Lat is in the mountains.", "w": ["mountain"]}
+      - {"n": 9, "answer": "high", "vi": "cao (núi)", "ex": "The mountain is about three thousand metres high.", "w": ["high"]}
+      - {"n": 10, "answer": "the highest mountain", "vi": "ngọn núi cao nhất", "ex": "Fansipan is the highest mountain in Vietnam."}
+      - {"n": 11, "answer": "tall", "vi": "cao (người, tòa nhà)", "ex": "There are lots of tall buildings in the city."}
+      - {"n": 12, "answer": "capital", "vi": "thủ đô", "ex": "Hanoi is the capital of Vietnam.", "w": ["capital"]}
+    lines:
+      - {"emma": "Seven. the longest river. the longest river. The Amazon is the longest river in South America. The Amazon is the longest river in South America.", "focus": 0}
+      - {"emma": "Eight. mountain. mountain. Da Lat is in the mountains. Da Lat is in the mountains.", "say": "Eight. mountain. mountain. Dah Lot is in the mountains. Dah Lot is in the mountains.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. high. high. The mountain is about three thousand metres high. The mountain is about three thousand metres high.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. the highest mountain. the highest mountain. Fansipan is the highest mountain in Vietnam. Fansipan is the highest mountain in Vietnam.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. tall. tall. There are lots of tall buildings in the city. There are lots of tall buildings in the city.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. capital. capital. Hanoi is the capital of Vietnam. Hanoi is the capital of Vietnam.", "say": "Twelve. capital. capital. Ha Noi is the capital of Vietnam. Ha Noi is the capital of Vietnam.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "inland", "vi": "trong đất liền, xa biển", "ex": "The capital, Brasilia, is inland.", "w": ["inland"]}
+      - {"n": 14, "answer": "on the coast", "vi": "ven biển", "ex": "Nha Trang is on the coast.", "w": ["on the coast"]}
+      - {"n": 15, "answer": "major", "vi": "lớn và quan trọng", "ex": "Many of the major cities are on the coast.", "w": ["major"]}
+      - {"n": 16, "answer": "famous", "vi": "nổi tiếng", "ex": "Rio de Janeiro is a famous city.", "w": ["famous"]}
+      - {"n": 17, "answer": "famous for", "vi": "nổi tiếng về", "ex": "Da Lat is famous for flowers."}
+      - {"n": 18, "answer": "beach", "vi": "bãi biển", "ex": "Rio has some great beaches.", "w": ["beach"]}
+    lines:
+      - {"emma": "Thirteen. inland. inland. The capital, Brasilia, is inland. The capital, Brasilia, is inland.", "focus": 0}
+      - {"emma": "Fourteen. on the coast. on the coast. Nha Trang is on the coast. Nha Trang is on the coast.", "say": "Fourteen. on the coast. on the coast. Nah Trang is on the coast. Nah Trang is on the coast.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. major. major. Many of the major cities are on the coast. Many of the major cities are on the coast.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. famous. famous. Rio de Janeiro is a famous city. Rio de Janeiro is a famous city.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. famous for. famous for. Da Lat is famous for flowers. Da Lat is famous for flowers.", "say": "Seventeen. famous for. famous for. Dah Lot is famous for flowers. Dah Lot is famous for flowers.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. beach. beach. Rio has some great beaches. Rio has some great beaches.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "popular", "vi": "được nhiều người thích", "ex": "Rio is very popular with tourists.", "w": ["popular"]}
+      - {"n": 20, "answer": "north", "vi": "phía bắc", "ex": "Hanoi is in the north of Vietnam.", "w": ["north"]}
+      - {"n": 21, "answer": "in the north", "vi": "ở phía bắc", "ex": "Recife is a town in the north of Brazil.", "w": ["in the north"]}
+      - {"n": 22, "answer": "south", "vi": "phía nam", "ex": "Can Tho is in the south.", "w": ["south"]}
+    lines:
+      - {"emma": "Nineteen. popular. popular. Rio is very popular with tourists. Rio is very popular with tourists.", "focus": 0}
+      - {"emma": "Twenty. north. north. Hanoi is in the north of Vietnam. Hanoi is in the north of Vietnam.", "say": "Twenty. north. north. Ha Noi is in the north of Vietnam. Ha Noi is in the north of Vietnam.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. in the north. in the north. Recife is a town in the north of Brazil. Recife is a town in the north of Brazil.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. south. south. Can Tho is in the south. Can Tho is in the south.", "say": "Twenty-two. south. south. Kahn Toh is in the south. Kahn Toh is in the south.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–25)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "east", "vi": "phía đông", "ex": "The sun rises in the east.", "w": ["east"]}
+      - {"n": 24, "answer": "west", "vi": "phía tây", "ex": "Laos is to the west of Vietnam.", "w": ["west"]}
+      - {"n": 25, "answer": "compass", "vi": "la bàn", "ex": "Look at the compass on the map."}
+    lines:
+      - {"emma": "Twenty-three. east. east. The sun rises in the east. The sun rises in the east.", "focus": 0}
+      - {"emma": "Twenty-four. west. west. Laos is to the west of Vietnam. Laos is to the west of Vietnam.", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. compass. compass. Look at the compass on the map. Look at the compass on the map.", "focus": 2, "reveal": [24]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [25]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (26–31)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 26, "answer": "island", "vi": "đảo", "ex": "There are some beautiful islands in the south."}
+      - {"n": 27, "answer": "bay", "vi": "vịnh", "ex": "Ha Long Bay is very popular with tourists."}
+      - {"n": 28, "answer": "lake", "vi": "hồ", "ex": "There's a big lake in the centre of Da Lat."}
+      - {"n": 29, "answer": "delta", "vi": "đồng bằng châu thổ", "ex": "The Mekong Delta is in the south."}
+      - {"n": 30, "answer": "population", "vi": "dân số", "ex": "Vietnam has a population of about a hundred million."}
+      - {"n": 31, "answer": "north-west", "vi": "tây bắc", "ex": "Sa Pa is in the north-west of Vietnam."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-six. island. island. There are some beautiful islands in the south. There are some beautiful islands in the south.", "focus": 0}
+      - {"tom": "Twenty-seven. bay. bay. Ha Long Bay is very popular with tourists. Ha Long Bay is very popular with tourists.", "say": "Twenty-seven. bay. bay. Hah Long Bay is very popular with tourists. Hah Long Bay is very popular with tourists.", "focus": 1, "reveal": [26]}
+      - {"tom": "Twenty-eight. lake. lake. There's a big lake in the centre of Da Lat. There's a big lake in the centre of Da Lat.", "say": "Twenty-eight. lake. lake. There's a big lake in the centre of Dah Lot. There's a big lake in the centre of Dah Lot.", "focus": 2, "reveal": [27]}
+      - {"tom": "Twenty-nine. delta. delta. The Mekong Delta is in the south. The Mekong Delta is in the south.", "focus": 3, "reveal": [28]}
+      - {"tom": "Thirty. population. population. Vietnam has a population of about a hundred million. Vietnam has a population of about a hundred million.", "focus": 4, "reveal": [29]}
+      - {"tom": "Thirty-one. north-west. north-west. Sa Pa is in the north-west of Vietnam. Sa Pa is in the north-west of Vietnam.", "say": "Thirty-one. north-west. north-west. Sah Pah is in the north-west of Vietnam. Sah Pah is in the north-west of Vietnam.", "focus": 5, "reveal": [30]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [31]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "south-east", "vi": "đông nam", "ex": "London is in the south-east of England."}
+      - {"n": 33, "answer": "the centre", "vi": "miền Trung", "ex": "Hue is in the centre of Vietnam."}
+      - {"n": 34, "answer": "sea", "vi": "biển", "ex": "I love swimming in the sea."}
+      - {"n": 35, "answer": "climate", "vi": "khí hậu", "ex": "The climate in the south is hot all year."}
+      - {"n": 36, "answer": "tropical", "vi": "nhiệt đới", "ex": "Vietnam has a tropical climate."}
+      - {"n": 37, "answer": "tourist", "vi": "khách du lịch", "ex": "Hoi An is full of tourists in summer."}
+    lines:
+      - {"tom": "Thirty-two. south-east. south-east. London is in the south-east of England. London is in the south-east of England.", "focus": 0}
+      - {"tom": "Thirty-three. the centre. the centre. Hue is in the centre of Vietnam. Hue is in the centre of Vietnam.", "say": "Thirty-three. the centre. the centre. Whey is in the centre of Vietnam. Whey is in the centre of Vietnam.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. sea. sea. I love swimming in the sea. I love swimming in the sea.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. climate. climate. The climate in the south is hot all year. The climate in the south is hot all year.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. tropical. tropical. Vietnam has a tropical climate. Vietnam has a tropical climate.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. tourist. tourist. Hoi An is full of tourists in summer. Hoi An is full of tourists in summer.", "say": "Thirty-seven. tourist. tourist. Hoy Ann is full of tourists in summer. Hoy Ann is full of tourists in summer.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–41)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "national park", "vi": "vườn quốc gia", "ex": "There are some beautiful national parks in the north."}
+      - {"n": 39, "answer": "waterfall", "vi": "thác nước", "ex": "There are some lovely waterfalls near Da Lat."}
+      - {"n": 40, "answer": "cave", "vi": "hang động", "ex": "There are some enormous caves in the centre of Vietnam."}
+      - {"n": 41, "answer": "abroad", "vi": "nước ngoài", "ex": "Have you ever been abroad?"}
+    lines:
+      - {"tom": "Thirty-eight. national park. national park. There are some beautiful national parks in the north. There are some beautiful national parks in the north.", "focus": 0}
+      - {"tom": "Thirty-nine. waterfall. waterfall. There are some lovely waterfalls near Da Lat. There are some lovely waterfalls near Da Lat.", "say": "Thirty-nine. waterfall. waterfall. There are some lovely waterfalls near Dah Lot. There are some lovely waterfalls near Dah Lot.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. cave. cave. There are some enormous caves in the centre of Vietnam. There are some enormous caves in the centre of Vietnam.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. abroad. abroad. Have you ever been abroad? Have you ever been abroad?", "focus": 3, "reveal": [40]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [41]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (42–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 42, "answer": "foreign", "vi": "(thuộc) nước ngoài", "ex": "Many foreign tourists visit Vietnam."}
+      - {"n": 43, "answer": "Vietnamese", "vi": "người Việt, tiếng Việt", "ex": "I'm Vietnamese, and Emma is learning Vietnamese."}
+      - {"n": 44, "answer": "British", "vi": "người Anh", "ex": "Emma is British. She's from England."}
+      - {"n": 45, "answer": "long and thin", "vi": "dài và hẹp", "ex": "Vietnam is long and thin."}
+    lines:
+      - {"tom": "Forty-two. foreign. foreign. Many foreign tourists visit Vietnam. Many foreign tourists visit Vietnam.", "focus": 0}
+      - {"tom": "Forty-three. Vietnamese. Vietnamese. I'm Vietnamese, and Emma is learning Vietnamese. I'm Vietnamese, and Emma is learning Vietnamese.", "focus": 1, "reveal": [42]}
+      - {"tom": "Forty-four. British. British. Emma is British. She's from England. Emma is British. She's from England.", "focus": 2, "reveal": [43]}
+      - {"tom": "Forty-five. long and thin. long and thin. Vietnam is long and thin. Vietnam is long and thin.", "focus": 3, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [45]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 46, "answer": "Where are you from?", "vi": "Bạn đến từ đâu?"}
+      - {"n": 47, "answer": "I'm from Vietnam.", "vi": "Mình đến từ Việt Nam."}
+      - {"n": 48, "answer": "Which part of Vietnam?", "vi": "Vùng nào của Việt Nam?"}
+      - {"n": 49, "answer": "I grew up in Da Lat, in the mountains.", "vi": "Mình lớn lên ở Đà Lạt, trên núi."}
+      - {"n": 50, "answer": "How far is it from here?", "vi": "Từ đây đến đó bao xa?"}
+      - {"n": 51, "answer": "About three hundred kilometres.", "vi": "Khoảng ba trăm ki-lô-mét."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-six. Where are you from? Where are you from?", "focus": 0}
+      - {"tom": "Forty-seven. I'm from Vietnam. I'm from Vietnam.", "focus": 1, "reveal": [46]}
+      - {"emma": "Forty-eight. Which part of Vietnam? Which part of Vietnam?", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. I grew up in Da Lat, in the mountains. I grew up in Da Lat, in the mountains.", "say": "Forty-nine. I grew up in Dah Lot, in the mountains. I grew up in Dah Lot, in the mountains.", "focus": 3, "reveal": [48]}
+      - {"emma": "Fifty. How far is it from here? How far is it from here?", "focus": 4, "reveal": [49]}
+      - {"tom": "Fifty-one. About three hundred kilometres. About three hundred kilometres.", "focus": 5, "reveal": [50]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 52, "answer": "What's your country famous for?", "vi": "Đất nước bạn nổi tiếng về gì?"}
+      - {"n": 53, "answer": "Its food, its beaches, and its coffee.", "vi": "Đồ ăn, bãi biển và cà phê."}
+      - {"n": 54, "answer": "Is it a big country?", "vi": "Đó có phải là một nước lớn không?"}
+      - {"n": 55, "answer": "Not really, but it's very long.", "vi": "Không hẳn, nhưng rất dài."}
+      - {"n": 56, "answer": "Which places are popular with tourists?", "vi": "Những nơi nào được khách du lịch thích?"}
+      - {"n": 57, "answer": "Ha Long Bay and Hoi An.", "vi": "Vịnh Hạ Long và Hội An."}
+    lines:
+      - {"emma": "Fifty-two. What's your country famous for? What's your country famous for?", "focus": 0}
+      - {"tom": "Fifty-three. Its food, its beaches, and its coffee. Its food, its beaches, and its coffee.", "focus": 1, "reveal": [52]}
+      - {"emma": "Fifty-four. Is it a big country? Is it a big country?", "focus": 2, "reveal": [53]}
+      - {"tom": "Fifty-five. Not really, but it's very long. Not really, but it's very long.", "focus": 3, "reveal": [54]}
+      - {"emma": "Fifty-six. Which places are popular with tourists? Which places are popular with tourists?", "focus": 4, "reveal": [55]}
+      - {"tom": "Fifty-seven. Ha Long Bay and Hoi An. Ha Long Bay and Hoi An.", "say": "Fifty-seven. Hah Long Bay and Hoy Ann. Hah Long Bay and Hoy Ann.", "focus": 5, "reveal": [56]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 58, "answer": "What's the weather like in the south?", "vi": "Thời tiết miền Nam thế nào?"}
+      - {"n": 59, "answer": "It's hot all year.", "vi": "Nóng quanh năm."}
+      - {"n": 60, "answer": "I'd love to climb Fansipan one day.", "vi": "Một ngày nào đó mình rất muốn leo Fansipan."}
+      - {"n": 61, "answer": "Where in England are you from, Emma?", "vi": "Emma ở vùng nào của nước Anh?"}
+      - {"n": 62, "answer": "A small town on the south coast.", "vi": "Một thị trấn nhỏ ở bờ biển phía nam."}
+      - {"n": 63, "answer": "Is it near London?", "vi": "Có gần Luân Đôn không?"}
+    lines:
+      - {"emma": "Fifty-eight. What's the weather like in the south? What's the weather like in the south?", "focus": 0}
+      - {"tom": "Fifty-nine. It's hot all year. It's hot all year.", "focus": 1, "reveal": [58]}
+      - {"tom": "Sixty. I'd love to climb Fansipan one day. I'd love to climb Fansipan one day.", "focus": 2, "reveal": [59]}
+      - {"tom": "Sixty-one. Where in England are you from, Emma? Where in England are you from, Emma?", "focus": 3, "reveal": [60]}
+      - {"emma": "Sixty-two. A small town on the south coast. A small town on the south coast.", "focus": 4, "reveal": [61]}
+      - {"tom": "Sixty-three. Is it near London? Is it near London?", "focus": 5, "reveal": [62]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 64, "answer": "About two hours by train.", "vi": "Khoảng hai tiếng đi tàu."}
+      - {"n": 65, "answer": "What's the most famous place in England?", "vi": "Nơi nổi tiếng nhất nước Anh là đâu?"}
+      - {"n": 66, "answer": "Probably London, or Stonehenge.", "vi": "Có lẽ là Luân Đôn, hoặc Stonehenge."}
+      - {"n": 67, "answer": "Which country has the longest coast?", "vi": "Nước nào có bờ biển dài nhất?"}
+      - {"n": 68, "answer": "Canada, I think.", "vi": "Mình nghĩ là Canada."}
+      - {"n": 69, "answer": "Vietnam has borders with three countries.", "vi": "Việt Nam có biên giới với ba nước."}
+    lines:
+      - {"emma": "Sixty-four. About two hours by train. About two hours by train.", "focus": 0}
+      - {"tom": "Sixty-five. What's the most famous place in England? What's the most famous place in England?", "focus": 1, "reveal": [64]}
+      - {"emma": "Sixty-six. Probably London, or Stonehenge. Probably London, or Stonehenge.", "focus": 2, "reveal": [65]}
+      - {"tom": "Sixty-seven. Which country has the longest coast? Which country has the longest coast?", "focus": 3, "reveal": [66]}
+      - {"emma": "Sixty-eight. Canada, I think. Canada, I think.", "focus": 4, "reveal": [67]}
+      - {"tom": "Sixty-nine. Vietnam has borders with three countries. Vietnam has borders with three countries.", "focus": 5, "reveal": [68]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (70–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 70, "answer": "Which ones?", "vi": "Những nước nào?"}
+      - {"n": 71, "answer": "China, Laos, and Cambodia.", "vi": "Trung Quốc, Lào và Campuchia."}
+      - {"n": 72, "answer": "You should visit the beaches in the centre.", "vi": "Bạn nên đi các bãi biển miền Trung."}
+      - {"n": 73, "answer": "Thanks! I'd love to.", "vi": "Cảm ơn! Mình rất muốn."}
+    lines:
+      - {"emma": "Seventy. Which ones? Which ones?", "focus": 0}
+      - {"tom": "Seventy-one. China, Laos, and Cambodia. China, Laos, and Cambodia.", "focus": 1, "reveal": [70]}
+      - {"tom": "Seventy-two. You should visit the beaches in the centre. You should visit the beaches in the centre.", "focus": 2, "reveal": [71]}
+      - {"emma": "Seventy-three. Thanks! I'd love to. Thanks! I'd love to.", "focus": 3, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [73]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 35.", "say": "Well done! See you in Unit thirty-five.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 35."}
+
