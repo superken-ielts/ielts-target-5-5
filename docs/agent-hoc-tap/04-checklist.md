@@ -447,6 +447,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 38:* xong module Food and drink, Unit 24–28 — 10 video (P2-73). Còn Unit 29 trở đi; module Getting around ở cuối file 09
     mục 5.8.
   - *Đợt 39:* xong module Getting around, Unit 29–33 — 10 video (P2-74). Còn Unit 34 trở đi; module Places ở cuối file 09 mục 5.8.
+  - *Đợt 40:* xong module Places, Unit 34–41 — 16 video (P2-75). Còn Unit 42 trở đi; module Study and work ở cuối file 09 mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -533,6 +534,14 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0. Đo bản dựng: bài giảng dài nhất 2,39–2,45 giây, nghe – viết 2,0–2,1 giây (cuối video).
   - Word list Unit 29–33 (127 mục) thêm vào `work/wordlist.json` (nay 990 mục); năm mục in số bản thảo cũ xếp theo trang thật; video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Test: unit khó U30, U32; hồi quy nghe – viết cả 33 unit; e2e: thẻ sách 66 video, Unit 1–33 mỗi unit hai nút.
+- [x] **P2-75** **Oxford Word Skills Basic module Places: 8 video bài giảng và 8 video nghe – viết, Unit 34–41** (đợt 40, bài giảng 1:17:38, nghe – viết 1:17:29), theo yêu cầu người học: "tiếp tục module tiếp theo của oxford". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+  - Bài giảng theo khuôn file 09 mục 5: đủ mọi bài tập trong sách (tr. 90–104, Answer key tr. 212–214), hình trong sách ở mọi video (bản đồ Brazil, tranh công trình, bảng sự thật và ý kiến, tranh trang trại, bảng cửa hàng, tranh tòa nhà, sơ đồ nhà, tranh bếp và việc nhà, tranh phòng ngủ, phòng tắm, phòng khách — khung theo tranh hoặc theo dòng), không đếm ngược. Unit khó 35 My town, 38 My home, 39 The kitchen (10–15 phút): ôn tập (lỗi hay gặp, tự kiểm tra tranh), Part 2 (your hometown, a home you like, a time when you cooked a meal for other people), thảo luận.
+  - Thêm ngoài sách cho unit thường: Việt Nam bằng tiếng Anh (thủ đô, sông, núi, nơi nổi tiếng), nông thôn Việt Nam, mua sắm ở Việt Nam, sự cố trong phòng (câu cho thư phàn nàn GT Task 1), giới từ tả vị trí trong phòng, phòng khách Việt Nam, bài nói mẫu tả phòng khách.
+  - Answer key in lệch Unit 36 bài 1 câu 2 (ghi T, tranh cho thấy F): video nói rõ, ghi ở file 09 mục 3.3.
+  - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0. Đo bản dựng: bài giảng dài nhất 2,36–2,43 giây, nghe – viết 2,02–2,11 giây.
+  - Word list Unit 34–41 (271 mục) thêm vào `work/wordlist.json` (nay 1261 mục); OCR sót *enormous*, thêm tay; video nghe – viết đủ mọi mục ("chưa hiện: 0").
+  - Cảnh `blanks`: mỗi câu đúng một chỗ trống (Unit 36, 39 sửa rồi dựng lại); `slides.py` lùi cột câu theo nhãn số dài như "10a.".
+  - Test: unit khó U35, U38, U39; nhãn số dài không dính vào câu; hồi quy nghe – viết cả 41 unit; e2e: thẻ sách 82 video, Unit 1–41 mỗi unit hai nút.
 
 ### Cổng G2
 

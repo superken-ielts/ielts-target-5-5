@@ -5,6 +5,118 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 40 — 25/11/2026: Oxford Word Skills Basic — module Places (Unit 34–41), 16 video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 39 (`cbd5d34`, đã lên `main`).
+
+### Yêu cầu
+
+Người học: "tiếp tục module tiếp theo của oxford". Module tiếp theo là Places (Unit 34–41, tr. 90–104). Như đợt 37–39, mỗi unit
+có hai video: bài giảng (file 09 mục 5) và nghe – viết (mục 5.9).
+
+### Đã làm
+
+- **Rà trang sách và Answer key** (tr. 90–104, Answer key tr. 212–214): ghi đề và đáp án từng bài. Answer key in lệch Unit 36
+  bài 1 câu 2 (*The farmer's in the boat* ghi T, tranh cho thấy F): video nói rõ, ghi ở file 09 mục 3.3.
+- **Word list Unit 34–41** (271 mục, 219 từ chưa có ở Unit 1–33) thêm vào `work/wordlist.json` (nay 1261 mục). Lấy từ hai lần
+  OCR của đợt 36, soát khoảng hở như đợt 37: OCR sót *enormous* (34), thêm tay theo ảnh trang.
+- **8 video bài giảng** (1:17:38): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+  - Unit khó (10–15 phút): 35 My town, 38 My home, 39 The kitchen. Có ôn tập (lỗi hay gặp, tự kiểm tra tranh), Part 2 với bài mẫu
+    của Tom và Emma (your hometown, a home you like, a time when you cooked a meal for other people), thảo luận kiểu Part 3. Unit 38
+    có thêm nhà ở Việt Nam và câu khi thuê nhà (thư GT Task 1); Unit 39 có thêm do hay make và bếp Việt Nam.
+  - Unit thường thêm cảnh ngoài sách có ích cho IELTS:
+    - Unit 34 (một trang): Việt Nam bằng tiếng Anh (thủ đô, sông, núi, bờ biển, biên giới, nơi nổi tiếng), famous for / popular with,
+      high hay tall, câu đố vị trí, Nghe và viết, Part 1 "Your country";
+    - Unit 36: nông thôn Việt Nam; Unit 37: noun + shop, mua sắm ở Việt Nam, Nghe và viết;
+    - Unit 40: double bed, have a shower (Anh) / take a shower (Mỹ), sự cố trong phòng — câu cho thư phàn nàn GT Task 1;
+    - Unit 41 (một trang, cuối module): furniture không đếm được, giới từ tả vị trí trên tranh sách, phòng khách Việt Nam, bài nói
+      mẫu của Tom tả phòng khách nhà ở Đà Lạt; tổng kết module, nhắc làm Review tr. 105–108.
+  - Bài tự kiểm tra nhìn tranh (Unit 34, 35, 36, 38, 39, 40, 41): khung đỏ ở chỗ được hỏi, đáp án hiện thành nhãn trên hình khi
+    Tom trả lời.
+
+| Unit | Video | Dài | Cảnh có hình | Bài trong sách |
+|---|---|---|---|---|
+| 34 My country | `U34-my-country` | 8:00 | 7 | 1–3 (bài 2: đáp án hiện trên bản đồ) |
+| **35 My town** | `U35-my-town` | 13:50 | 12 | 1–9 (bài 6: đoạn văn mẫu của Tom về TP. HCM) |
+| 36 The countryside | `U36-countryside` | 8:36 | 9 | 1–7 (bài 1 câu 2: Answer key in lệch) |
+| 37 Shops | `U37-shops` | 8:29 | 6 | 1–6 (bài 6 thành Nói 1) |
+| **38 My home** | `U38-my-home` | 11:02 | 10 | 1–6 (bài 3: tự kiểm tra tranh ở phần ôn tập) |
+| **39 The kitchen** | `U39-kitchen` | 10:52 | 6 | 1–6 (bài 3: tự kiểm tra tranh) |
+| 40 Bedroom and bathroom | `U40-bedroom-bathroom` | 8:58 | 6 | 1–7 (bài 4: tự kiểm tra tranh) |
+| 41 The living room | `U41-living-room` | 7:51 | 8 | 1–4 (bài 4: tự kiểm tra hai nửa tranh) |
+
+- **8 video nghe – viết** (1:17:29), sinh từ `work/dictation/units_34_41.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+  đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`. Unit 35 có 54 mục Word list: phần 1 ghép dòng các mục đi cùng nhau.
+
+| Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
+|---|---|---|---|---|---|
+| 34 · My country | `U34-my-country-dictation` | 10:05 | 25 · 19 | 20 | 28 |
+| 35 · My town | `U35-my-town-dictation` | 10:10 | 45 · 54 | 10 | 18 |
+| 36 · The countryside | `U36-countryside-dictation` | 9:38 | 32 · 34 | 16 | 26 |
+| 37 · Shops | `U37-shops-dictation` | 9:28 | 26 · 30 | 20 | 29 |
+| 38 · My home | `U38-my-home-dictation` | 9:27 | 31 · 36 | 16 | 28 |
+| 39 · The kitchen | `U39-kitchen-dictation` | 9:30 | 29 · 36 | 19 | 32 |
+| 40 · Bedroom and bathroom | `U40-bedroom-bathroom-dictation` | 9:33 | 34 · 39 | 16 | 29 |
+| 41 · The living room | `U41-living-room-dictation` | 9:37 | 21 · 23 | 24 | 31 |
+
+Thử và sửa trong lúc làm:
+- **Máy chạy khởi động lại** khi đang dựng Unit 37: hàng đợi dựng mất. Unit 35, 36 đã xong được commit làm mốc; Unit 37–39 xếp
+  dựng lại.
+- **Khung hình:**
+  - Spotlight alone and lonely (Unit 36) cắt nhầm sang cột ABOUT YOU: đo lại riêng cột phải;
+  - Glossary Unit 34 bỏ la bàn, Glossary Unit 35 tách ba cảnh, bảng cửa hàng Unit 37 cắt lại cho chữ đủ to;
+  - tranh tự kiểm tra Unit 38 lẫn chữ của lời kể: dời mép trái;
+  - tranh phòng khách Unit 41 gần vuông nên nhỏ (khoảng 450 điểm ảnh): tách nửa trên, nửa dưới cho phần giới thiệu và bài tự kiểm
+    tra.
+- **Video ngắn:** ước lượng đầu Unit 34 7:14, Unit 41 6:23, unit khó Unit 38 10:12, Unit 39 9:34 — thêm cảnh ngoài sách (liệt kê
+  ở trên).
+- **Cách đọc:**
+  - bản nháp Unit 40 viết `ay` cho chữ cái A ("Write a, an or nothing", "Tick a or b") thì Kokoro đọc /aɪ/: đổi thành `eigh` như
+    bảng file 09 mục 5.5. Sửa lúc video đang dựng nên video chưa nhận bản sửa — dựng lại Unit 40;
+  - thêm `say` cho Hội An, Hạ Long, Cần Thơ, Sa Pa, Huế, Montpellier, DVD (file 09 mục 5.5);
+  - lệnh `phonemes` bắt "close" (động từ), "use", "live" trong dữ liệu nghe – viết: sửa bằng `cloze`, `yooz`, `liv`.
+- **Chỗ trống:** câu có hai `___` chỉ được điền chỗ đầu — Unit 36 bài 2 câu 4 hiện "f fields ds … → ___", Unit 39 bài 1 câu 1, 7
+  và câu đố do / make còn thừa một chỗ trống: sửa mỗi câu một `___` (chữ gợi ý vào `hint`), dựng lại Unit 36, 39. Nhãn "10a." dính
+  vào chữ đầu câu: `slides.py` lùi cột câu theo nhãn dài nhất (hàm `text_col`, có test). Unit 27 (đợt 38) cũng có câu hai chỗ
+  trống — video cũ, không sửa.
+- **Nghe – viết:** bản nháp Unit 37–41 ước 8:20–8:50 (bản dựng thật dài hơn ước lượng 5–9 %): thêm từ và câu. Unit 35 chỉ có 8 từ
+  thêm (test cần 10): thêm 2 từ; ước lượng 10:02 có thể vượt 11 phút khi dựng (Unit 34 dài hơn ước lượng 9 %) nên bớt 6 câu, còn
+  9:38.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U34-my-country.yaml` … `U41-living-room.yaml` (+ `.mp4`) | 8 video bài giảng |
+| `books/book_oxford_word_skills_basic/lessons/U34-my-country-dictation.yaml` … `U41-living-room-dictation.yaml` (+ `.mp4`), `lessons.json` | 8 video nghe – viết |
+| `books/book_oxford_word_skills_basic/work/dictation/units_34_41.py` | Dữ liệu nghe – viết Unit 34–41 |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 34–41 (271 mục) |
+| `agents/lesson_video/slides.py` | Cảnh `blanks`: cột câu lùi theo nhãn số dài (`text_col`) |
+| `agents/tests/test_lesson_video.py` | Unit khó U35, U38, U39; nhãn số dài không dính vào câu |
+| `tests/web/book.e2e.mjs` | Thẻ sách 82 video; Unit 1–41 mỗi unit hai nút; unit khó 35, 38, 39 |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 3.3, 5.1, 5.5, 5.6, 5.7, 5.8, 5.9, 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-75 (xong); đợt 40 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 40 |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+| Lệnh | Kết quả |
+|---|---|
+| `python3 web/build.py && git diff --stat` | Bản dựng khớp nguồn: Oxford Word Skills Basic có 92 phiên, 82 video (41 bài giảng, 41 nghe – viết) |
+| `cd agents && python -m pytest -q` | 150 passed, 5 skipped (5 test video tiếng Nhật cần `misaki[ja]`) |
+| `node --test "tests/web/*.test.mjs"` | 16 passed |
+| `node tests/web/book.e2e.mjs` | E2E OK, mọi bước; thẻ Oxford 82 video, Unit 1–41 mỗi unit hai nút (bài giảng 7–10 phút, unit khó 35, 38, 39 từ 10 phút; nghe – viết 9–10 phút) |
+| `python -m lesson_video check` / `phonemes` (16 kịch bản) | Hợp lệ, không còn ⚠ |
+| `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U34…U41 --level all` | Cả 8 unit "chưa hiện: 0" |
+| `ffmpeg -i <video>.mp4 -af silencedetect=noise=-45dB:d=3 -f null -` (16 video) | Không có khoảng lặng từ 3 giây. Bài giảng: dài nhất 2,36–2,43 giây (cuối cảnh tự trả lời); nghe – viết: dài nhất 2,02–2,11 giây (cuối video) |
+| Xem trước khung hình (`kindsheet.py`, `scenepick.py`) và khung hình bản dựng (cả 8 bài giảng, một bài nghe – viết) | Khung đỏ đúng tranh, đúng dòng; đáp án hiện trên hình đúng lúc; mỗi câu một chỗ trống; chữ trên thẻ nghe – viết không bị cắt (`trunc_check.py`) |
+
+### Còn treo
+
+- Unit 42 trở đi chưa có video (P2-59): module Study and work ở cuối file 09 mục 5.8.
+- Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
+
 ## Đợt 39 — 24/11/2026: Oxford Word Skills Basic — module Getting around (Unit 29–33), 10 video
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 38 (`3470ce2`, đã lên `main`).

@@ -1,0 +1,290 @@
+# Video nghe – viết (dictation) Unit 35 · My town — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U35-my-town-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U35 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 35 có 54 mục: dòng ghép các mục đi cùng nhau (north, south, east, west; over, under; safe,
+# dangerous …) để video vẫn khoảng 10 phút.
+id: U35-my-town-dictation
+activity: U35-words
+title: "Unit 35 · My town"
+subtitle: "Dictation · listen and write: talking about my town"
+title_vi: "Nghe – viết 10 phút: thành phố, thị trấn của tôi — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 35"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 35: My town. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-five: My town. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 35: thành phố, thị trấn của tôi. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 45 words from the book. You hear each word twice, and then an example sentence twice. Then 10 more useful words, and 18 useful sentences for conversation.", "say": "There are three parts. First, forty-five words from the book. You hear each word twice, and then an example sentence twice. Then ten more useful words, and eighteen useful sentences for conversation.", "vi": "Ba phần: 45 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 10 từ thêm, 18 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "town", "vi": "thị trấn, thành phố nhỏ", "ex": "I grew up in a small town.", "w": ["town"]}
+      - {"n": 2, "answer": "city", "vi": "thành phố", "ex": "Ho Chi Minh City is very large.", "w": ["city"]}
+      - {"n": 3, "answer": "village", "vi": "làng", "ex": "There's a small village near the lake.", "w": ["village"]}
+      - {"n": 4, "answer": "place", "vi": "nơi, chỗ", "ex": "Prague is a nice place.", "w": ["place"]}
+      - {"n": 5, "answer": "building", "vi": "tòa nhà", "ex": "The post office is a beautiful old building.", "w": ["building"]}
+      - {"n": 6, "answer": "castle", "vi": "lâu đài", "ex": "The castle is on a hill.", "w": ["castle"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. town. town. I grew up in a small town. I grew up in a small town.", "focus": 0}
+      - {"emma": "Two. city. city. Ho Chi Minh City is very large. Ho Chi Minh City is very large.", "say": "Two. city. city. Ho Chee Min City is very large. Ho Chee Min City is very large.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. village. village. There's a small village near the lake. There's a small village near the lake.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. place. place. Prague is a nice place. Prague is a nice place.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. building. building. The post office is a beautiful old building. The post office is a beautiful old building.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. castle. castle. The castle is on a hill. The castle is on a hill.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "palace", "vi": "cung điện", "ex": "The king lived in the palace.", "w": ["palace"]}
+      - {"n": 8, "answer": "statue", "vi": "tượng", "ex": "There's a statue in the main square.", "w": ["statue"]}
+      - {"n": 9, "answer": "square", "vi": "quảng trường", "ex": "The square is a nice place to sit.", "w": ["square"]}
+      - {"n": 10, "answer": "cathedral", "vi": "nhà thờ lớn", "ex": "The cathedral is very old.", "w": ["cathedral"]}
+      - {"n": 11, "answer": "church", "vi": "nhà thờ", "ex": "There's an old church in Emma's town.", "w": ["church"]}
+      - {"n": 12, "answer": "temple", "vi": "đền, chùa", "ex": "There are lots of temples in Hue.", "w": ["temple"]}
+    lines:
+      - {"emma": "Seven. palace. palace. The king lived in the palace. The king lived in the palace.", "focus": 0}
+      - {"emma": "Eight. statue. statue. There's a statue in the main square. There's a statue in the main square.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. square. square. The square is a nice place to sit. The square is a nice place to sit.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. cathedral. cathedral. The cathedral is very old. The cathedral is very old.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. church. church. There's an old church in Emma's town. There's an old church in Emma's town.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. temple. temple. There are lots of temples in Hue. There are lots of temples in Hue.", "say": "Twelve. temple. temple. There are lots of temples in Whey. There are lots of temples in Whey.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "mosque", "vi": "nhà thờ Hồi giáo", "ex": "There's a beautiful mosque in the city centre.", "w": ["mosque"]}
+      - {"n": 14, "answer": "market", "vi": "chợ", "ex": "Ben Thanh Market is very busy.", "w": ["market"]}
+      - {"n": 15, "answer": "bridge", "vi": "cây cầu", "ex": "There's a new bridge over the river.", "w": ["bridge"]}
+      - {"n": 16, "answer": "park", "vi": "công viên", "ex": "We often walk in the park.", "w": ["park"]}
+      - {"n": 17, "answer": "museum", "vi": "bảo tàng", "ex": "The museum is open from ten until five.", "w": ["museum"]}
+      - {"n": 18, "answer": "fact", "vi": "sự thật", "ex": "Here are some facts about my town.", "w": ["fact"]}
+    lines:
+      - {"emma": "Thirteen. mosque. mosque. There's a beautiful mosque in the city centre. There's a beautiful mosque in the city centre.", "focus": 0}
+      - {"emma": "Fourteen. market. market. Ben Thanh Market is very busy. Ben Thanh Market is very busy.", "say": "Fourteen. market. market. Ben Tahn Market is very busy. Ben Tahn Market is very busy.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. bridge. bridge. There's a new bridge over the river. There's a new bridge over the river.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. park. park. We often walk in the park. We often walk in the park.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. museum. museum. The museum is open from ten until five. The museum is open from ten until five.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. fact. fact. Here are some facts about my town. Here are some facts about my town.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "opinion", "vi": "ý kiến", "ex": "What's your opinion of the new cathedral?", "w": ["opinion"]}
+      - {"n": 20, "answer": "size", "vi": "kích cỡ", "ex": "What size is your town?", "w": ["size"]}
+      - {"n": 21, "answer": "medium-sized", "vi": "cỡ vừa", "ex": "It's a medium-sized town.", "w": ["medium-sized"]}
+      - {"n": 22, "answer": "location", "vi": "vị trí", "ex": "The location is great.", "w": ["location"]}
+      - {"n": 23, "answer": "north, south, east, west", "vi": "bắc, nam, đông, tây", "ex": "The sun sets in the west.", "w": ["north", "south", "east", "west"]}
+      - {"n": 24, "answer": "north-east, north-west", "vi": "đông bắc, tây bắc", "ex": "Turin is in the north-west of Italy.", "w": ["north-east", "north-west"]}
+    lines:
+      - {"emma": "Nineteen. opinion. opinion. What's your opinion of the new cathedral? What's your opinion of the new cathedral?", "focus": 0}
+      - {"emma": "Twenty. size. size. What size is your town? What size is your town?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. medium-sized. medium-sized. It's a medium-sized town. It's a medium-sized town.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. location. location. The location is great. The location is great.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. north, south, east, west. north, south, east, west. The sun sets in the west. The sun sets in the west.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. north-east, north-west. north-east, north-west. Turin is in the north-west of Italy. Turin is in the north-west of Italy.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "south-east, south-west", "vi": "đông nam, tây nam", "ex": "London is in the south-east of England.", "w": ["south-east", "south-west"]}
+      - {"n": 26, "answer": "on a river", "vi": "bên sông", "ex": "Hue is on a river.", "w": ["on a river"]}
+      - {"n": 27, "answer": "on the coast", "vi": "ven biển", "ex": "Emma's town is on the coast.", "w": ["on the coast"]}
+      - {"n": 28, "answer": "population", "vi": "dân số", "ex": "The population is about fifteen thousand.", "w": ["population"]}
+      - {"n": 29, "answer": "over, under", "vi": "hơn, dưới (một con số)", "ex": "The population is over nine million.", "w": ["over", "under"]}
+      - {"n": 30, "answer": "just over, just under", "vi": "hơn một chút, dưới một chút", "ex": "It's just under fifty thousand.", "w": ["just over", "just under"]}
+    lines:
+      - {"emma": "Twenty-five. south-east, south-west. south-east, south-west. London is in the south-east of England. London is in the south-east of England.", "focus": 0}
+      - {"emma": "Twenty-six. on a river. on a river. Hue is on a river. Hue is on a river.", "say": "Twenty-six. on a river. on a river. Whey is on a river. Whey is on a river.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. on the coast. on the coast. Emma's town is on the coast. Emma's town is on the coast.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. population. population. The population is about fifteen thousand. The population is about fifteen thousand.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. over, under. over, under. The population is over nine million. The population is over nine million.", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. just over, just under. just over, just under. It's just under fifty thousand. It's just under fifty thousand.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (31–36)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 31, "answer": "mile", "vi": "dặm", "ex": "A mile is about one point six kilometres.", "w": ["mile"]}
+      - {"n": 32, "answer": "industrial", "vi": "công nghiệp", "ex": "It's an industrial city.", "w": ["industrial"]}
+      - {"n": 33, "answer": "historic", "vi": "có giá trị lịch sử", "ex": "Hoi An has lots of historic buildings.", "w": ["historic"]}
+      - {"n": 34, "answer": "modern", "vi": "hiện đại", "ex": "There are lots of modern buildings.", "w": ["modern"]}
+      - {"n": 35, "answer": "interesting", "vi": "thú vị", "ex": "It's an interesting place to visit.", "w": ["interesting"]}
+      - {"n": 36, "answer": "busy", "vi": "nhộn nhịp, đông", "ex": "It gets very busy at the weekends.", "w": ["busy"]}
+    lines:
+      - {"emma": "Thirty-one. mile. mile. A mile is about one point six kilometres. A mile is about one point six kilometres.", "focus": 0}
+      - {"emma": "Thirty-two. industrial. industrial. It's an industrial city. It's an industrial city.", "focus": 1, "reveal": [31]}
+      - {"emma": "Thirty-three. historic. historic. Hoi An has lots of historic buildings. Hoi An has lots of historic buildings.", "say": "Thirty-three. historic. historic. Hoy Ann has lots of historic buildings. Hoy Ann has lots of historic buildings.", "focus": 2, "reveal": [32]}
+      - {"emma": "Thirty-four. modern. modern. There are lots of modern buildings. There are lots of modern buildings.", "focus": 3, "reveal": [33]}
+      - {"emma": "Thirty-five. interesting. interesting. It's an interesting place to visit. It's an interesting place to visit.", "focus": 4, "reveal": [34]}
+      - {"emma": "Thirty-six. busy. busy. It gets very busy at the weekends. It gets very busy at the weekends.", "focus": 5, "reveal": [35]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (37–42)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 37, "answer": "quiet", "vi": "yên tĩnh", "ex": "My hometown is very quiet in winter.", "w": ["quiet"]}
+      - {"n": 38, "answer": "crowded", "vi": "đông đúc, chật người", "ex": "The bars get very crowded.", "w": ["crowded"]}
+      - {"n": 39, "answer": "polluted", "vi": "ô nhiễm", "ex": "The river is polluted.", "w": ["polluted"]}
+      - {"n": 40, "answer": "dirty, clean", "vi": "bẩn, sạch", "ex": "The streets are clean, but the river is dirty.", "w": ["dirty", "clean"]}
+      - {"n": 41, "answer": "cosmopolitan", "vi": "đa văn hóa", "ex": "Ho Chi Minh City is very cosmopolitan.", "w": ["cosmopolitan"]}
+      - {"n": 42, "answer": "nightlife", "vi": "cuộc sống về đêm", "ex": "The nightlife is very good.", "w": ["nightlife"]}
+    lines:
+      - {"emma": "Thirty-seven. quiet. quiet. My hometown is very quiet in winter. My hometown is very quiet in winter.", "focus": 0}
+      - {"emma": "Thirty-eight. crowded. crowded. The bars get very crowded. The bars get very crowded.", "focus": 1, "reveal": [37]}
+      - {"emma": "Thirty-nine. polluted. polluted. The river is polluted. The river is polluted.", "focus": 2, "reveal": [38]}
+      - {"emma": "Forty. dirty, clean. dirty, clean. The streets are clean, but the river is dirty. The streets are clean, but the river is dirty.", "focus": 3, "reveal": [39]}
+      - {"emma": "Forty-one. cosmopolitan. cosmopolitan. Ho Chi Minh City is very cosmopolitan. Ho Chi Minh City is very cosmopolitan.", "say": "Forty-one. cosmopolitan. cosmopolitan. Ho Chee Min City is very cosmopolitan. Ho Chee Min City is very cosmopolitan.", "focus": 4, "reveal": [40]}
+      - {"emma": "Forty-two. nightlife. nightlife. The nightlife is very good. The nightlife is very good.", "focus": 5, "reveal": [41]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (43–45)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 43, "answer": "lots to do", "vi": "nhiều thứ để làm", "ex": "There's lots to do in the evening.", "w": ["lots"]}
+      - {"n": 44, "answer": "nothing to do", "vi": "không có gì để làm", "ex": "There's nothing to do at night.", "w": ["nothing"]}
+      - {"n": 45, "answer": "safe, dangerous", "vi": "an toàn, nguy hiểm", "ex": "It's safe during the day, but dangerous at night.", "w": ["safe", "dangerous"]}
+    lines:
+      - {"emma": "Forty-three. lots to do. lots to do. There's lots to do in the evening. There's lots to do in the evening.", "focus": 0}
+      - {"emma": "Forty-four. nothing to do. nothing to do. There's nothing to do at night. There's nothing to do at night.", "focus": 1, "reveal": [43]}
+      - {"emma": "Forty-five. safe, dangerous. safe, dangerous. It's safe during the day, but dangerous at night. It's safe during the day, but dangerous at night.", "focus": 2, "reveal": [44]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [45]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (46–51)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 46, "answer": "hometown", "vi": "quê nhà", "ex": "My hometown is famous for flowers."}
+      - {"n": 47, "answer": "city centre", "vi": "trung tâm thành phố", "ex": "My flat is near the city centre."}
+      - {"n": 48, "answer": "traffic", "vi": "giao thông, xe cộ", "ex": "The traffic is terrible in the morning."}
+      - {"n": 49, "answer": "noisy", "vi": "ồn ào", "ex": "My street is very noisy."}
+      - {"n": 50, "answer": "pagoda", "vi": "chùa", "ex": "There's an old pagoda near my flat."}
+      - {"n": 51, "answer": "lively", "vi": "sôi động", "ex": "My area is very lively at night."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Forty-six. hometown. hometown. My hometown is famous for flowers. My hometown is famous for flowers.", "focus": 0}
+      - {"tom": "Forty-seven. city centre. city centre. My flat is near the city centre. My flat is near the city centre.", "focus": 1, "reveal": [46]}
+      - {"tom": "Forty-eight. traffic. traffic. The traffic is terrible in the morning. The traffic is terrible in the morning.", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. noisy. noisy. My street is very noisy. My street is very noisy.", "focus": 3, "reveal": [48]}
+      - {"tom": "Fifty. pagoda. pagoda. There's an old pagoda near my flat. There's an old pagoda near my flat.", "focus": 4, "reveal": [49]}
+      - {"tom": "Fifty-one. lively. lively. My area is very lively at night. My area is very lively at night.", "focus": 5, "reveal": [50]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (52–55)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 52, "answer": "street food", "vi": "đồ ăn đường phố", "ex": "The street food here is cheap and delicious."}
+      - {"n": 53, "answer": "harbour", "vi": "bến cảng", "ex": "Emma's town has a small harbour."}
+      - {"n": 54, "answer": "district", "vi": "quận", "ex": "My flat is in District Three."}
+      - {"n": 55, "answer": "high-rise building", "vi": "nhà cao tầng", "ex": "There are more and more high-rise buildings."}
+    lines:
+      - {"tom": "Fifty-two. street food. street food. The street food here is cheap and delicious. The street food here is cheap and delicious.", "focus": 0}
+      - {"tom": "Fifty-three. harbour. harbour. Emma's town has a small harbour. Emma's town has a small harbour.", "focus": 1, "reveal": [52]}
+      - {"tom": "Fifty-four. district. district. My flat is in District Three. My flat is in District Three.", "focus": 2, "reveal": [53]}
+      - {"tom": "Fifty-five. high-rise building. high-rise building. There are more and more high-rise buildings. There are more and more high-rise buildings.", "focus": 3, "reveal": [54]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [55]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (56–61)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 56, "answer": "Where's your hometown?", "vi": "Quê bạn ở đâu?"}
+      - {"n": 57, "answer": "It's in the mountains, about three hundred kilometres from here.", "vi": "Ở trên núi, cách đây khoảng ba trăm cây số."}
+      - {"n": 58, "answer": "What's it like?", "vi": "Ở đó thế nào?"}
+      - {"n": 59, "answer": "It's quiet and beautiful, but there are more tourists now.", "vi": "Yên tĩnh và đẹp, nhưng giờ đông khách du lịch hơn."}
+      - {"n": 60, "answer": "Is there much to do there?", "vi": "Ở đó có nhiều thứ để làm không?"}
+      - {"n": 61, "answer": "Yes, there's the lake, the market, and the flower gardens.", "vi": "Có: hồ, chợ và các vườn hoa."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-six. Where's your hometown? Where's your hometown?", "focus": 0}
+      - {"tom": "Fifty-seven. It's in the mountains, about three hundred kilometres from here. It's in the mountains, about three hundred kilometres from here.", "focus": 1, "reveal": [56]}
+      - {"emma": "Fifty-eight. What's it like? What's it like?", "focus": 2, "reveal": [57]}
+      - {"tom": "Fifty-nine. It's quiet and beautiful, but there are more tourists now. It's quiet and beautiful, but there are more tourists now.", "focus": 3, "reveal": [58]}
+      - {"emma": "Sixty. Is there much to do there? Is there much to do there?", "focus": 4, "reveal": [59]}
+      - {"tom": "Sixty-one. Yes, there's the lake, the market, and the flower gardens. Yes, there's the lake, the market, and the flower gardens.", "focus": 5, "reveal": [60]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [61]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (62–67)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 62, "answer": "What do you think of Ho Chi Minh City, Emma?", "vi": "Emma thấy TP. Hồ Chí Minh thế nào?"}
+      - {"n": 63, "answer": "It's very cosmopolitan, and quite safe, but noisy.", "vi": "Rất đa văn hóa, khá an toàn, nhưng ồn."}
+      - {"n": 64, "answer": "Where did you grow up?", "vi": "Bạn lớn lên ở đâu?"}
+      - {"n": 65, "answer": "In a small town on the south coast of England.", "vi": "Ở một thị trấn nhỏ ven biển phía nam nước Anh."}
+      - {"n": 66, "answer": "What's special about it?", "vi": "Ở đó có gì đặc biệt?"}
+      - {"n": 67, "answer": "It has an old church, a small harbour, and a lovely beach.", "vi": "Có nhà thờ cổ, bến cảng nhỏ và bãi biển đẹp."}
+    lines:
+      - {"tom": "Sixty-two. What do you think of Ho Chi Minh City, Emma? What do you think of Ho Chi Minh City, Emma?", "say": "Sixty-two. What do you think of Ho Chee Min City, Emma? What do you think of Ho Chee Min City, Emma?", "focus": 0}
+      - {"emma": "Sixty-three. It's very cosmopolitan, and quite safe, but noisy. It's very cosmopolitan, and quite safe, but noisy.", "focus": 1, "reveal": [62]}
+      - {"tom": "Sixty-four. Where did you grow up? Where did you grow up?", "focus": 2, "reveal": [63]}
+      - {"emma": "Sixty-five. In a small town on the south coast of England. In a small town on the south coast of England.", "focus": 3, "reveal": [64]}
+      - {"tom": "Sixty-six. What's special about it? What's special about it?", "focus": 4, "reveal": [65]}
+      - {"emma": "Sixty-seven. It has an old church, a small harbour, and a lovely beach. It has an old church, a small harbour, and a lovely beach.", "focus": 5, "reveal": [66]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (68–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 68, "answer": "Is it a good place for young people?", "vi": "Đó có phải là nơi tốt cho người trẻ không?"}
+      - {"n": 69, "answer": "Not really. There's nothing to do at night.", "vi": "Không hẳn. Buổi tối chẳng có gì để làm."}
+      - {"n": 70, "answer": "Excuse me, where's the museum?", "vi": "Xin lỗi, bảo tàng ở đâu?"}
+      - {"n": 71, "answer": "It's in the main square, next to the cathedral.", "vi": "Ở quảng trường chính, cạnh nhà thờ lớn."}
+      - {"n": 72, "answer": "The bridge is the best place to see the river.", "vi": "Cây cầu là chỗ ngắm sông đẹp nhất."}
+      - {"n": 73, "answer": "Let's meet in front of the statue.", "vi": "Mình gặp nhau trước bức tượng nhé."}
+    lines:
+      - {"tom": "Sixty-eight. Is it a good place for young people? Is it a good place for young people?", "focus": 0}
+      - {"emma": "Sixty-nine. Not really. There's nothing to do at night. Not really. There's nothing to do at night.", "focus": 1, "reveal": [68]}
+      - {"emma": "Seventy. Excuse me, where's the museum? Excuse me, where's the museum?", "focus": 2, "reveal": [69]}
+      - {"tom": "Seventy-one. It's in the main square, next to the cathedral. It's in the main square, next to the cathedral.", "focus": 3, "reveal": [70]}
+      - {"tom": "Seventy-two. The bridge is the best place to see the river. The bridge is the best place to see the river.", "focus": 4, "reveal": [71]}
+      - {"emma": "Seventy-three. Let's meet in front of the statue. Let's meet in front of the statue.", "focus": 5, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [73]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 36.", "say": "Well done! See you in Unit thirty-six.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 36."}
+

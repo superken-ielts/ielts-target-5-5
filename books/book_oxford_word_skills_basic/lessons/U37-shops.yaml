@@ -1,0 +1,360 @@
+# Video Oxford Word Skills Basic · Unit 37 — I can talk about shops (sách in tr. 96–97, Answer key tr. 213).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 213 (bài 2: "Possible answers"). Bài 3 (Test yourself: che cột
+# Places, nhìn What they sell): câu đố "Where can you buy …?". Bài 6 (ABOUT YOU): Tom và Emma trả lời câu hỏi bài 5 (cảnh Nói 1).
+# Thêm ngoài sách: noun + shop (flower shop, phone shop…), mua sắm ở Việt Nam bằng tiếng Anh (convenience store, wet market, street
+# vendor, shopping app, delivery); Nghe và viết; Nói 2 (Part 1 "Shopping").
+# Hình trong sách: bảng Places / What they sell (hai cảnh, khung theo hàng) kèm ảnh chợ trong nhà và Spotlight noun + shop, sáu lời
+# nói về thói quen mua sắm (hai cảnh), Glossary (hai cảnh).
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): sáng thứ Bảy Tom đi chợ sau trường đại học với hai bạn cùng phòng (U17,
+# U26), mua bánh mì ở tiệm đầu ngõ (U26), mẹ có cửa hàng hoa (IELTS U04); Emma đi chợ sáng thứ Bảy (U17), mua phô mai, bơ ở cửa hàng
+# nhỏ bán đồ nhập khẩu (U26), hỏi giá bằng tiếng Việt (U25). Mới: Tom mua đồ dùng, mì gói ở cửa hàng tiện lợi dưới phố, đặt hàng qua
+# ứng dụng; Emma thấy siêu thị tiện nhưng thích chợ vì thân thiện, được tập nói tiếng Việt.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U37-shops.yaml
+id: U37-shops
+activity: U37-words
+title: "Unit 37 · Shops"
+subtitle: "I can talk about shops"
+title_vi: "Cửa hàng: market, supermarket, butcher's, baker's, chemist's, newsagent's; do the shopping, queue, checkout, convenient, deliver"
+tag: "PLACES · UNIT 37"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 37: shops. Today: places to shop, what they sell, and how to talk about your shopping habits. Shopping is a very common IELTS topic."
+        say: "Welcome to Unit thirty-seven: shops. Today: places to shop, what they sell, and how to talk about your shopping habits. Shopping is a very common eye-elts topic."
+        vi: "Unit 37: cửa hàng — nơi mua sắm, bán gì, thói quen mua sắm."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Nơi mua sắm (1)"
+    heading: "A · Places to shop (1)"
+    heading_vi: "Bảng tr. 96 — market · shopping centre · department store · supermarket"
+    image: {pdf: course-book, page: 97, clip: [28, 98, 488, 277]}
+    items:
+      - {box: [30, 119, 312, 157]}
+      - {box: [322, 100, 486, 276]}
+      - {box: [30, 157, 312, 196]}
+      - {box: [30, 196, 312, 236]}
+      - {box: [30, 236, 312, 275]}
+    lines:
+      - {emma: "Look at page ninety-six. A market: a number of stalls, outdoors or indoors. They sell food, and sometimes furniture, CDs, books, or flowers.", focus: 0, vi: "market: chợ · stall: sạp · outdoors ≠ indoors: ngoài trời ≠ trong nhà"}
+      - {tom: "Look at the photo: an indoor market.", focus: 1}
+      - {emma: "A shopping centre: a number of shops, usually indoors. They sell everything.", focus: 2, vi: "shopping centre: trung tâm mua sắm"}
+      - {tom: "A department store: a large shop. It sells almost everything, but not usually food: beds, books, televisions, clothes, perfume.", focus: 3, vi: "department store: cửa hàng bách hóa"}
+      - {emma: "A supermarket: a large shop for food, drinks, cleaning products for the house, shampoo, and things for the kitchen.", focus: 4, vi: "supermarket: siêu thị"}
+
+  - kind: figure
+    chapter: "Nơi mua sắm (2)"
+    heading: "A · Places to shop (2) · Spotlight: noun + shop"
+    heading_vi: "Bảng tr. 96 — hypermarket · butcher's · baker's · chemist's · deli · paper shop, newsagent's"
+    image: {pdf: course-book, page: 97, clip: [28, 272, 488, 420]}
+    items:
+      - {box: [30, 275, 312, 314]}
+      - {box: [30, 314, 312, 330]}
+      - {box: [30, 330, 312, 346]}
+      - {box: [30, 346, 312, 375]}
+      - {box: [30, 374, 312, 392]}
+      - {box: [30, 390, 312, 418]}
+      - {box: [322, 330, 486, 418]}
+    lines:
+      - {tom: "A hypermarket: the same as a supermarket, but it also sells clothes, TVs, and furniture. Hypermarkets are outside towns.", focus: 0, vi: "hypermarket: đại siêu thị"}
+      - {emma: "A butcher's sells meat.", focus: 1, vi: "butcher's: hàng thịt"}
+      - {tom: "A baker's sells bread and cakes.", focus: 2, vi: "baker's: tiệm bánh"}
+      - {emma: "A chemist's sells medicine, for example aspirin, and also soap and shampoo.", focus: 3, vi: "chemist's: hiệu thuốc"}
+      - {tom: "A deli, or delicatessen: sandwiches, bread, cheese, ham, and coffee.", focus: 4}
+      - {emma: "And a paper shop, or newsagent's: newspapers, chocolates, and cigarettes.", focus: 5, vi: "newsagent's: sạp báo"}
+      - {tom: "Look at the spotlight. For many shops, we use a noun plus shop: a shoe shop, a clothes shop, a bookshop, a music shop, or a fruit and vegetable shop.", focus: 6, vi: "noun + shop"}
+
+  - kind: blanks
+    chapter: "Bài 1: câu trả lời sai"
+    heading: "Exercise 1 · Three answers are correct. Find the wrong answer."
+    heading_vi: "Ví dụ: I got the vegetables from the… baker's (sai) (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "I got the bread from the… hypermarket / baker's / deli / butcher's  →  ___", answer: "butcher's"}
+      - {n: 2, q: "I got the meat from the… supermarket / baker's / market / butcher's  →  ___", answer: "baker's"}
+      - {n: 3, q: "I got these jeans from a… market / paper shop / department store / clothes shop  →  ___", answer: "paper shop"}
+      - {n: 4, q: "I got this shampoo from the… deli / chemist's / supermarket / department store  →  ___", answer: "deli"}
+      - {n: 5, q: "I got the cheese from a… supermarket / market stall / deli / chemist's  →  ___", answer: "chemist's"}
+      - {n: 6, q: "I got these CDs from the… shopping centre / newsagent's / department store / music shop  →  ___", answer: "newsagent's"}
+    lines:
+      - emma: "Exercise 1. Three answers are correct. Find the wrong answer. The example is: I got the vegetables from the baker's. That's wrong: a baker's sells bread and cakes. Pause the video and try."
+        say: "Exercise one. Three answers are correct. Find the wrong answer. The example is: I got the vegetables from the baker's. That's wrong: a baker's sells bread and cakes. Pause the video and try."
+        vi: "Bài 1: tìm câu trả lời sai."
+      - {tom: "One. The butcher's: it sells meat, not bread. Two. The baker's. Three. The paper shop.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. The deli. Five. The chemist's. Six. The newsagent's.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: hai thứ mua được"
+    heading: "Exercise 2 · Write two things you can buy in each place"
+    heading_vi: "Ví dụ: department store → bed, television (Answer key tr. 213: Possible answers)"
+    items:
+      - {n: 1, q: "deli  →  ___", answer: "sandwiches, cheese"}
+      - {n: 2, q: "chemist's  →  ___", answer: "medicine, soap"}
+      - {n: 3, q: "market  →  ___", answer: "fruit, vegetables"}
+      - {n: 4, q: "newsagent's  →  ___", answer: "newspapers, chocolates"}
+      - {n: 5, q: "baker's  →  ___", answer: "bread, cakes"}
+      - {n: 6, q: "music shop  →  ___", answer: "CDs, DVDs"}
+    lines:
+      - emma: "Exercise 2. Write two things you can buy in each of these places. The example is: department store: a bed and a television. Pause the video and try."
+        say: "Exercise two. Write two things you can buy in each of these places. The example is: department store: a bed and a television. Pause the video and try."
+        vi: "Bài 2: viết hai thứ mua được ở mỗi nơi."
+      - {tom: "Here are some possible answers. One. Deli: sandwiches and cheese. Two. Chemist's: medicine and soap. Three. Market: fruit and vegetables.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Newsagent's: newspapers and chocolates. Five. Baker's: bread and cakes. Six. Music shop: CDs and DVDs.", say: "Four. Newsagent's: newspapers and chocolates. Five. Baker's: bread and cakes. Six. Music shop: see dees and dee vee dees.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 3: tự kiểm tra"
+    heading: "Exercise 3 · Test yourself: where can you buy it?"
+    heading_vi: "Che cột Places — nghe thứ cần mua, nói tên cửa hàng; tạm dừng video sau mỗi câu"
+    items:
+      - {n: 1, q: "meat  →  ___", answer: "a butcher's"}
+      - {n: 2, q: "bread and cakes  →  ___", answer: "a baker's"}
+      - {n: 3, q: "medicine and shampoo  →  ___", answer: "a chemist's"}
+      - {n: 4, q: "newspapers  →  ___", answer: "a newsagent's / a paper shop"}
+      - {n: 5, q: "a bed, a TV, perfume (not food)  →  ___", answer: "a department store"}
+      - {n: 6, q: "food and clothes, outside town  →  ___", answer: "a hypermarket"}
+    lines:
+      - emma: "Exercise 3 is a test. Cover the column Places, and look at What they sell. Where can you buy these things? Pause the video after each one."
+        say: "Exercise three is a test. Cover the column Places, and look at What they sell. Where can you buy these things? Pause the video after each one."
+        vi: "Bài 3: che cột Places, nói tên nơi bán."
+      - {tom: "One. Meat: a butcher's. Two. Bread and cakes: a baker's. Three. Medicine and shampoo: a chemist's.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Newspapers: a newsagent's, or a paper shop. Five. A department store. Six. A hypermarket.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: figure
+    chapter: "Thói quen mua sắm (1)"
+    heading: "B · Shopping habits (1)"
+    heading_vi: "Lời nói tr. 97 — convenient · do the shopping · queue · checkout"
+    image: {pdf: course-book, page: 98, clip: [18, 72, 248, 190]}
+    items:
+      - {box: [22, 76, 246, 104]}
+      - {box: [22, 117, 246, 145]}
+      - {box: [22, 158, 246, 186]}
+    lines:
+      - {emma: "Part B: shopping habits. Hypermarkets are so convenient: you can get everything in one place.", focus: 0, vi: "convenient: tiện lợi · get = buy"}
+      - {tom: "I do the supermarket shopping on Thursdays, when it's quiet.", focus: 1, vi: "do the shopping: đi mua đồ (thường ngày)"}
+      - {emma: "Supermarkets are so busy at the weekend. I don't like queueing at the checkout!", focus: 2, vi: "queue: xếp hàng · checkout: quầy thanh toán"}
+
+  - kind: figure
+    chapter: "Thói quen mua sắm (2)"
+    heading: "B · Shopping habits (2)"
+    heading_vi: "Lời nói tr. 97 — choose · prefer · fill a trolley · deliver"
+    image: {pdf: course-book, page: 98, clip: [18, 196, 248, 324]}
+    items:
+      - {box: [22, 199, 246, 240]}
+      - {box: [22, 252, 246, 281]}
+      - {box: [22, 293, 246, 322]}
+    lines:
+      - {tom: "You can choose from a lot of different things in a supermarket, but I prefer markets. They're friendlier.", focus: 0, vi: "choose: chọn · prefer: thích hơn"}
+      - {emma: "There are six of us in my family, so I fill two trolleys every week!", focus: 1, vi: "fill: làm đầy · trolley: xe đẩy"}
+      - {tom: "I get a lot of things on the internet. They always deliver to your home.", focus: 2, vi: "deliver: giao hàng"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 97 — convenient · get · do the shopping · queue · checkout · choose · prefer · fill"
+    image: {pdf: course-book, page: 98, clip: [260, 54, 484, 207]}
+    items:
+      - {box: [262, 75, 482, 88]}
+      - {box: [262, 87, 482, 100]}
+      - {box: [262, 99, 482, 124]}
+      - {box: [262, 123, 482, 136]}
+      - {box: [262, 135, 482, 148]}
+      - {box: [262, 147, 482, 160]}
+      - {box: [262, 159, 482, 182]}
+      - {box: [262, 183, 482, 206]}
+    lines:
+      - {emma: "Look at the glossary. Convenient: easy and quick to use.", focus: 0}
+      - {tom: "Get means buy.", focus: 1}
+      - {emma: "Do the shopping: buy food and things you need often, for example, soap.", focus: 2}
+      - {tom: "Queue: wait in a line of people.", focus: 3}
+      - {emma: "The checkout: the place in a supermarket where you pay.", focus: 4}
+      - {tom: "Choose: decide which thing you want.", focus: 5}
+      - {emma: "Prefer: like something or someone more than another.", focus: 6}
+      - {tom: "And fill: make something full. The trolley in the picture is full.", focus: 7}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 97 — trolley · basket · deliver"
+    image: {pdf: course-book, page: 98, clip: [260, 205, 484, 342]}
+    items:
+      - {box: [262, 207, 482, 269]}
+      - {box: [262, 268, 482, 320]}
+      - {box: [262, 326, 482, 341]}
+    lines:
+      - {emma: "A trolley: you push it around the supermarket.", focus: 0, vi: "trolley: xe đẩy"}
+      - {tom: "A basket: you carry it.", focus: 1, vi: "basket: giỏ"}
+      - {emma: "And deliver: take things to a person or a place.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 4: đúng hay sai?"
+    heading: "Exercise 4 · True or false? Write T or F."
+    heading_vi: "Ví dụ: If you have a car, supermarkets are very convenient. → T (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "You can't get CDs in a hypermarket.  →  ___", answer: "F"}
+      - {n: 2, q: "You can fill a trolley or a basket.  →  ___", answer: "T"}
+      - {n: 3, q: "You go to clothes shops to do the shopping.  →  ___", answer: "F"}
+      - {n: 4, q: "You sometimes have to queue when you want to pay.  →  ___", answer: "T"}
+      - {n: 5, q: "You can choose from a lot of different things in small shops.  →  ___", answer: "F"}
+      - {n: 6, q: "You pay at the checkout in a supermarket.  →  ___", answer: "T"}
+      - {n: 7, q: "At a supermarket, you put things in a trolley or basket.  →  ___", answer: "T"}
+      - {n: 8, q: "All shops will deliver the things you buy to your home.  →  ___", answer: "F"}
+    lines:
+      - emma: "Exercise 4. True or false? The example is: if you have a car, supermarkets are very convenient. True. Pause the video and try."
+        say: "Exercise four. True or false? The example is: if you have a car, supermarkets are very convenient. True. Pause the video and try."
+        vi: "Bài 4: đúng hay sai?"
+      - {tom: "One. False: hypermarkets sell everything. Two. True. Three. False: do the shopping is for food, and things you need often. Four. True.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. False: small shops don't have a lot of things. Six. True. Seven. True. Eight. False: not all shops deliver.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu hỏi"
+    heading: "Exercise 5 · Complete the words in the questions"
+    heading_vi: "Bạn sẽ trả lời ở bài 6 (Answer key tr. 213)"
+    items:
+      - {n: 1, q: "When do you or your family usually do the s___?", answer: "shopping"}
+      - {n: 2, q: "Do you pr___ supermarkets or small shops?", answer: "prefer"}
+      - {n: 3, q: "Do you often have to q___ at the checkout?", answer: "queue"}
+      - {n: 4, q: "Do you think supermarkets are co___?", answer: "convenient"}
+      - {n: 5, q: "Do supermarkets in your town d___ things to your home?", answer: "deliver"}
+      - {n: 6, q: "Where do you g___ your fruit and vegetables?", answer: "get"}
+    lines:
+      - emma: "Exercise 5. Complete the words in the questions. You'll answer them in Exercise 6. Pause the video and try."
+        say: "Exercise five. Complete the words in the questions. You'll answer them in Exercise six. Pause the video and try."
+        vi: "Bài 5: hoàn thành từ trong câu hỏi."
+      - {tom: "One. Do the shopping. Two. Prefer. Three. Queue: Q, U, E, U, E.", say: "One. Do the shopping. Two. Prefer. Three. Queue: kyoo, yoo, ee, yoo, ee.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Convenient. Five. Deliver. Six. Get.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: thói quen mua sắm"
+    heading: "Speaking 1 · Exercise 6: about you"
+    heading_vi: "Bài 6 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "When do you usually do the shopping, Tom?"
+        a: "On Saturday morning. My flatmates and I go to the market behind the university."
+        ask: emma
+        by: tom
+        phrases: ["On … morning.", "go to the market"]
+      - q: "Do you prefer supermarkets or small shops?"
+        a: "Small shops and markets. They're cheaper, and the people are friendlier. But I buy rice and noodles at the supermarket."
+        ask: emma
+        by: tom
+        phrases: ["… are cheaper, and…", "But I buy … at…"]
+      - q: "Do supermarkets in your town deliver things to your home?"
+        a: "Yes, most of them do. And I often order things on an app. They deliver very fast."
+        ask: emma
+        by: tom
+        phrases: ["Yes, most of them do.", "order … on an app"]
+      - q: "Do you often have to queue at the checkout, Emma?"
+        a: "Only at the weekend. That's why I go to the market early on Saturday morning."
+        ask: tom
+        by: emma
+        phrases: ["Only at the weekend.", "That's why…"]
+      - q: "Where do you get your fruit and vegetables?"
+        a: "At the market. It's friendly, and I can practise my Vietnamese when I ask about prices."
+        ask: tom
+        by: emma
+        phrases: ["At the market.", "I can practise…"]
+      - q: "Do you think supermarkets are convenient?"
+        a: "Yes, very. I buy cheese and butter at a small shop, but I get everything else at the supermarket near my flat."
+        ask: tom
+        by: emma
+        phrases: ["Yes, very.", "I get everything else at…"]
+    lines:
+      - {emma: "Exercise 6. Let's answer the questions. Tom, when do you usually do the shopping?", say: "Exercise six. Let's answer the questions. Tom, when do you usually do the shopping?", focus: 0}
+      - {tom: "On Saturday morning. My flatmates and I go to the market behind the university.", reveal: 0, vi: "Sáng thứ Bảy, Tom và hai bạn cùng phòng đi chợ sau trường."}
+      - {emma: "Do you prefer supermarkets or small shops?", focus: 1}
+      - {tom: "Small shops and markets. They're cheaper, and the people are friendlier. But I buy rice and noodles at the supermarket.", reveal: 1, vi: "Cửa hàng nhỏ và chợ: rẻ hơn, thân thiện hơn; gạo, mì thì mua ở siêu thị."}
+      - {emma: "Do supermarkets in your town deliver things to your home?", focus: 2}
+      - {tom: "Yes, most of them do. And I often order things on an app. They deliver very fast.", reveal: 2, vi: "Phần lớn có giao hàng; Tom hay đặt qua ứng dụng, giao rất nhanh."}
+      - {tom: "Do you often have to queue at the checkout, Emma?", focus: 3}
+      - {emma: "Only at the weekend. That's why I go to the market early on Saturday morning.", reveal: 3, vi: "Chỉ cuối tuần; vì thế Emma đi chợ sớm sáng thứ Bảy."}
+      - {tom: "Where do you get your fruit and vegetables?", focus: 4}
+      - {emma: "At the market. It's friendly, and I can practise my Vietnamese when I ask about prices.", reveal: 4, vi: "Ở chợ: thân thiện, lại tập nói tiếng Việt khi hỏi giá."}
+      - {tom: "Do you think supermarkets are convenient?", focus: 5}
+      - {emma: "Yes, very. I buy cheese and butter at a small shop, but I get everything else at the supermarket near my flat.", reveal: 5, vi: "Rất tiện; phô mai, bơ mua ở cửa hàng nhỏ, còn lại mua ở siêu thị gần nhà."}
+
+  - kind: bullets
+    chapter: "Mua sắm ở Việt Nam"
+    heading: "Shopping in Vietnam"
+    heading_vi: "Thêm ngoài sách — nói về nơi mua sắm quen thuộc bằng tiếng Anh"
+    items:
+      - {en: "a convenience store: open 24 hours", vi: "cửa hàng tiện lợi: mở 24 giờ"}
+      - {en: "a wet market: fresh meat, fish and vegetables", vi: "chợ (bán đồ tươi sống)"}
+      - {en: "a street vendor", vi: "người bán hàng rong"}
+      - {en: "a flower shop · a phone shop · a pharmacy", vi: "cửa hàng hoa · cửa hàng điện thoại · nhà thuốc"}
+      - {en: "a shopping app · fast delivery · cash on delivery", vi: "ứng dụng mua sắm · giao nhanh · trả tiền khi nhận hàng"}
+    lines:
+      - {tom: "In Vietnam, there are convenience stores everywhere. They're open twenty-four hours. I buy snacks and instant noodles at the one down my street.", focus: 0, vi: "instant noodles: mì gói"}
+      - {emma: "A wet market sells fresh meat, fish, and vegetables. The floor is often wet, so we call it a wet market.", focus: 1}
+      - {tom: "A street vendor sells food or drinks in the street, often from a bicycle or a motorbike.", focus: 2, vi: "vendor: người bán"}
+      - {emma: "And with noun plus shop: a flower shop, a phone shop. In British English, a pharmacy is also a chemist's.", focus: 3}
+      - {tom: "My mum has a flower shop in Da Lat! And lots of people use shopping apps. Delivery is very fast, and you can pay cash on delivery.", say: "My mum has a flower shop in Dah Lot! And lots of people yooz shopping apps. Delivery is very fast, and you can pay cash on delivery.", focus: 4}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · shops"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "I bought some sausages at the ___.", answer: "butcher's"}
+      - {n: 2, q: "The ___ is busy on Saturday mornings.", answer: "supermarket"}
+      - {n: 3, q: "I don't like queueing at the ___.", answer: "checkout"}
+      - {n: 4, q: "Supermarkets are very ___.", answer: "convenient"}
+      - {n: 5, q: "They ___ to your home.", answer: "deliver"}
+      - {n: 6, q: "I ___ small shops.", answer: "prefer"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. I bought some sausages at the butcher's.", focus: 0}
+      - {emma: "Number two. The supermarket is busy on Saturday mornings.", focus: 1}
+      - {emma: "Number three. I don't like queueing at the checkout.", focus: 2}
+      - {emma: "Number four. Supermarkets are very convenient.", focus: 3}
+      - {emma: "Number five. They deliver to your home.", focus: 4}
+      - {emma: "Number six. I prefer small shops.", focus: 5}
+      - {tom: "Butcher's: B, U, T, C, H, E, R, apostrophe, S. Supermarket: one word. Checkout: one word.", say: "Butcher's: bee, yoo, tee, see, aitch, ee, ar, apostrophe, ess. Supermarket: one word. Checkout: one word.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Convenient: C, O, N, V, E, N, I, E, N, T. Deliver. And prefer: one F, one R at the end.", say: "Convenient: see, oh, en, vee, ee, en, eye, ee, en, tee. Deliver. And prefer: one ef, one ar at the end.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Shopping"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you like shopping? Why or why not?", hint: "Yes, I love it, because … / Not really, because …"}
+      - {q: "Where do you usually go shopping?", hint: "I usually go to … · near my home / in the city centre"}
+      - {q: "Do you prefer shopping online or in shops?", hint: "I prefer … because it's more convenient / I can see …"}
+      - {q: "Who does the shopping in your family?", hint: "My mum / I / We all … · usually on …"}
+      - {q: "Are there any shops you'd like to have near your home?", hint: "I'd like a … near my home, because …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about shopping. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about shopping. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về mua sắm."
+      - {emma: "Do you like shopping? Why, or why not?", focus: 0, pause: 0.5}
+      - {emma: "Where do you usually go shopping?", focus: 1, pause: 0.5}
+      - {emma: "Do you prefer shopping online, or in shops?", focus: 2, pause: 0.5}
+      - {emma: "Who does the shopping in your family?", focus: 3, pause: 0.5}
+      - {emma: "Are there any shops you'd like to have near your home?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 3: che cột Places, nói tên cửa hàng"
+    items:
+      - {en: "market (stalls) · shopping centre · department store · supermarket · hypermarket", vi: "nơi mua sắm lớn"}
+      - {en: "butcher's · baker's · chemist's · deli · newsagent's / paper shop · noun + shop", vi: "cửa hàng nhỏ"}
+      - {en: "do the shopping · get (= buy) · choose · prefer · queue · the checkout", vi: "thói quen mua sắm"}
+      - {en: "a trolley · a basket · fill · deliver · convenient", vi: "xe đẩy · giỏ · làm đầy · giao hàng · tiện lợi"}
+      - {en: "Next: Unit 38 · My home", vi: "Tiếp theo: Unit 38 · Nhà của tôi"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A market, a shopping centre, a department store, a supermarket, and a hypermarket.", focus: 0}
+      - {tom: "A butcher's, a baker's, a chemist's, a deli, and a newsagent's. And noun plus shop: a shoe shop.", focus: 1}
+      - {emma: "Do the shopping, get, choose, prefer, and queue at the checkout.", focus: 2}
+      - {tom: "Fill a trolley or a basket. Shops deliver, and supermarkets are convenient.", focus: 3}
+      - {emma: "Next time, Unit 38: my home. See you then!", say: "Next time, Unit thirty-eight: my home. See you then!", focus: 4}

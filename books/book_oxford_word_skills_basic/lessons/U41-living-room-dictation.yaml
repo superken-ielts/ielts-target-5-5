@@ -1,0 +1,303 @@
+# Video nghe – viết (dictation) Unit 41 · The living room — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U41-living-room-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U41 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 41 có 23 mục: TV, television ghép một dòng; DVD player phủ player, a piece of furniture phủ piece.
+# Unit cuối module Places: lời chào cuối hẹn gặp ở module tiếp theo.
+id: U41-living-room-dictation
+activity: U41-words
+title: "Unit 41 · The living room"
+subtitle: "Dictation · listen and write: describing a living room"
+title_vi: "Nghe – viết 10 phút: phòng khách — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 41"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 41: The living room. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-one: The living room. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 41: phòng khách. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 21 words from the book. You hear each word twice, and then an example sentence twice. Then 24 more useful words, and 31 useful sentences for conversation.", "say": "There are three parts. First, twenty-one words from the book. You hear each word twice, and then an example sentence twice. Then twenty-four more useful words, and thirty-one useful sentences for conversation.", "vi": "Ba phần: 21 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 24 từ thêm, 31 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "window", "vi": "cửa sổ", "ex": "There's one small window in our living room.", "w": ["window"]}
+      - {"n": 2, "answer": "light", "vi": "đèn", "ex": "The light is on the ceiling.", "w": ["light"]}
+      - {"n": 3, "answer": "ceiling", "vi": "trần nhà", "ex": "There's a fan on the ceiling.", "w": ["ceiling"]}
+      - {"n": 4, "answer": "wall", "vi": "bức tường", "ex": "There are family photos on the wall.", "w": ["wall"]}
+      - {"n": 5, "answer": "curtain", "vi": "rèm cửa", "ex": "Close the curtains, please.", "w": ["curtain"]}
+      - {"n": 6, "answer": "TV, television", "vi": "ti vi", "ex": "We watch TV in the evening.", "w": ["TV", "television"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. window. window. There's one small window in our living room. There's one small window in our living room.", "focus": 0}
+      - {"emma": "Two. light. light. The light is on the ceiling. The light is on the ceiling.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. ceiling. ceiling. There's a fan on the ceiling. There's a fan on the ceiling.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. wall. wall. There are family photos on the wall. There are family photos on the wall.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. curtain. curtain. Close the curtains, please. Close the curtains, please.", "say": "Five. curtain. curtain. Cloze the curtains, please. Cloze the curtains, please.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. TV, television. TV, television. We watch TV in the evening. We watch TV in the evening.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "picture", "vi": "bức tranh", "ex": "The picture is above the fireplace.", "w": ["picture"]}
+      - {"n": 8, "answer": "bookshelf", "vi": "giá sách", "ex": "My bookshelf is full of English books.", "w": ["bookshelf"]}
+      - {"n": 9, "answer": "radiator", "vi": "lò sưởi (bộ tản nhiệt)", "ex": "At home in England, we've got radiators.", "w": ["radiator"]}
+      - {"n": 10, "answer": "cushion", "vi": "gối tựa", "ex": "There's a cushion on the armchair.", "w": ["cushion"]}
+      - {"n": 11, "answer": "DVD player", "vi": "đầu đĩa DVD", "ex": "The DVD player is under the TV.", "w": ["DVD player", "player"]}
+      - {"n": 12, "answer": "lamp", "vi": "đèn bàn, đèn cây", "ex": "The lamp is on a small table.", "w": ["lamp"]}
+    lines:
+      - {"emma": "Seven. picture. picture. The picture is above the fireplace. The picture is above the fireplace.", "focus": 0}
+      - {"emma": "Eight. bookshelf. bookshelf. My bookshelf is full of English books. My bookshelf is full of English books.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. radiator. radiator. At home in England, we've got radiators. At home in England, we've got radiators.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. cushion. cushion. There's a cushion on the armchair. There's a cushion on the armchair.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. DVD player. DVD player. The DVD player is under the TV. The DVD player is under the TV.", "say": "Eleven. dee vee dee player. dee vee dee player. The dee vee dee player is under the TV. The dee vee dee player is under the TV.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. lamp. lamp. The lamp is on a small table. The lamp is on a small table.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "armchair", "vi": "ghế bành", "ex": "My grandfather always sits in the same armchair.", "w": ["armchair"]}
+      - {"n": 14, "answer": "coffee table", "vi": "bàn nước", "ex": "Put your cup on the coffee table.", "w": ["coffee table"]}
+      - {"n": 15, "answer": "fireplace", "vi": "lò sưởi đốt củi", "ex": "The rug is in front of the fireplace.", "w": ["fireplace"]}
+      - {"n": 16, "answer": "floor", "vi": "sàn nhà", "ex": "The floor is tiled.", "w": ["floor"]}
+      - {"n": 17, "answer": "sofa", "vi": "ghế sô-pha", "ex": "We sit on the sofa and watch TV.", "w": ["sofa"]}
+      - {"n": 18, "answer": "rug", "vi": "tấm thảm nhỏ", "ex": "There's a rug in front of the sofa.", "w": ["rug"]}
+    lines:
+      - {"emma": "Thirteen. armchair. armchair. My grandfather always sits in the same armchair. My grandfather always sits in the same armchair.", "focus": 0}
+      - {"emma": "Fourteen. coffee table. coffee table. Put your cup on the coffee table. Put your cup on the coffee table.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. fireplace. fireplace. The rug is in front of the fireplace. The rug is in front of the fireplace.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. floor. floor. The floor is tiled. The floor is tiled.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. sofa. sofa. We sit on the sofa and watch TV. We sit on the sofa and watch TV.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. rug. rug. There's a rug in front of the sofa. There's a rug in front of the sofa.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–21)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "carpet", "vi": "thảm trải sàn", "ex": "Many British homes have carpets.", "w": ["carpet"]}
+      - {"n": 20, "answer": "furniture", "vi": "đồ đạc", "ex": "We haven't got much furniture.", "w": ["furniture"]}
+      - {"n": 21, "answer": "a piece of furniture", "vi": "một món đồ đạc", "ex": "A sofa is a piece of furniture.", "w": ["piece"]}
+    lines:
+      - {"emma": "Nineteen. carpet. carpet. Many British homes have carpets. Many British homes have carpets.", "focus": 0}
+      - {"emma": "Twenty. furniture. furniture. We haven't got much furniture. We haven't got much furniture.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. a piece of furniture. a piece of furniture. A sofa is a piece of furniture. A sofa is a piece of furniture.", "focus": 2, "reveal": [20]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [21]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (22–27)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 22, "answer": "in front of", "vi": "phía trước", "ex": "The coffee table is in front of the sofa."}
+      - {"n": 23, "answer": "next to", "vi": "bên cạnh", "ex": "The armchair is next to the radiator."}
+      - {"n": 24, "answer": "between", "vi": "ở giữa", "ex": "The lamp is between the TV and the fireplace."}
+      - {"n": 25, "answer": "above", "vi": "phía trên", "ex": "There's a clock above the door."}
+      - {"n": 26, "answer": "opposite", "vi": "đối diện", "ex": "The TV is opposite the sofa."}
+      - {"n": 27, "answer": "in the corner", "vi": "ở góc phòng", "ex": "The bookshelves are in the corner."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-two. in front of. in front of. The coffee table is in front of the sofa. The coffee table is in front of the sofa.", "focus": 0}
+      - {"tom": "Twenty-three. next to. next to. The armchair is next to the radiator. The armchair is next to the radiator.", "focus": 1, "reveal": [22]}
+      - {"tom": "Twenty-four. between. between. The lamp is between the TV and the fireplace. The lamp is between the TV and the fireplace.", "focus": 2, "reveal": [23]}
+      - {"tom": "Twenty-five. above. above. There's a clock above the door. There's a clock above the door.", "focus": 3, "reveal": [24]}
+      - {"tom": "Twenty-six. opposite. opposite. The TV is opposite the sofa. The TV is opposite the sofa.", "focus": 4, "reveal": [25]}
+      - {"tom": "Twenty-seven. in the corner. in the corner. The bookshelves are in the corner. The bookshelves are in the corner.", "focus": 5, "reveal": [26]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [27]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (28–33)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 28, "answer": "ceiling fan", "vi": "quạt trần", "ex": "Turn on the ceiling fan, please."}
+      - {"n": 29, "answer": "air conditioning", "vi": "máy lạnh", "ex": "I've got air conditioning in the living room."}
+      - {"n": 30, "answer": "tiles", "vi": "gạch lát", "ex": "Most homes in Vietnam have tiles on the floor."}
+      - {"n": 31, "answer": "wooden", "vi": "bằng gỗ", "ex": "We've got a wooden sofa set."}
+      - {"n": 32, "answer": "shoe rack", "vi": "kệ giày", "ex": "Leave your shoes on the shoe rack."}
+      - {"n": 33, "answer": "remote control", "vi": "điều khiển từ xa", "ex": "Where's the remote control?"}
+    lines:
+      - {"tom": "Twenty-eight. ceiling fan. ceiling fan. Turn on the ceiling fan, please. Turn on the ceiling fan, please.", "focus": 0}
+      - {"tom": "Twenty-nine. air conditioning. air conditioning. I've got air conditioning in the living room. I've got air conditioning in the living room.", "focus": 1, "reveal": [28]}
+      - {"tom": "Thirty. tiles. tiles. Most homes in Vietnam have tiles on the floor. Most homes in Vietnam have tiles on the floor.", "focus": 2, "reveal": [29]}
+      - {"tom": "Thirty-one. wooden. wooden. We've got a wooden sofa set. We've got a wooden sofa set.", "focus": 3, "reveal": [30]}
+      - {"tom": "Thirty-two. shoe rack. shoe rack. Leave your shoes on the shoe rack. Leave your shoes on the shoe rack.", "focus": 4, "reveal": [31]}
+      - {"tom": "Thirty-three. remote control. remote control. Where's the remote control? Where's the remote control?", "focus": 5, "reveal": [32]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [33]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (34–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 34, "answer": "photo", "vi": "ảnh", "ex": "There are some photos of my family on the wall."}
+      - {"n": 35, "answer": "map", "vi": "bản đồ", "ex": "There's a big map of Vietnam on the wall."}
+      - {"n": 36, "answer": "clock", "vi": "đồng hồ treo tường", "ex": "The clock on the wall is slow."}
+      - {"n": 37, "answer": "plant", "vi": "cây cảnh", "ex": "There's a big plant next to the window."}
+      - {"n": 38, "answer": "comfortable", "vi": "thoải mái, êm", "ex": "This sofa is very comfortable."}
+      - {"n": 39, "answer": "guest", "vi": "khách", "ex": "We often have guests at the weekend."}
+    lines:
+      - {"tom": "Thirty-four. photo. photo. There are some photos of my family on the wall. There are some photos of my family on the wall.", "focus": 0}
+      - {"tom": "Thirty-five. map. map. There's a big map of Vietnam on the wall. There's a big map of Vietnam on the wall.", "focus": 1, "reveal": [34]}
+      - {"tom": "Thirty-six. clock. clock. The clock on the wall is slow. The clock on the wall is slow.", "focus": 2, "reveal": [35]}
+      - {"tom": "Thirty-seven. plant. plant. There's a big plant next to the window. There's a big plant next to the window.", "focus": 3, "reveal": [36]}
+      - {"tom": "Thirty-eight. comfortable. comfortable. This sofa is very comfortable. This sofa is very comfortable.", "focus": 4, "reveal": [37]}
+      - {"tom": "Thirty-nine. guest. guest. We often have guests at the weekend. We often have guests at the weekend.", "focus": 5, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [39]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–45)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "relax", "vi": "thư giãn", "ex": "I relax in the living room after dinner."}
+      - {"n": 41, "answer": "speaker", "vi": "loa", "ex": "My speakers are next to the TV."}
+      - {"n": 42, "answer": "light switch", "vi": "công tắc đèn", "ex": "The light switch is next to the door."}
+      - {"n": 43, "answer": "socket", "vi": "ổ cắm điện", "ex": "Is there a socket near the sofa?"}
+      - {"n": 44, "answer": "vase", "vi": "lọ hoa", "ex": "There's a vase of flowers on the table."}
+      - {"n": 45, "answer": "cosy", "vi": "ấm cúng", "ex": "Our living room is small but cosy."}
+    lines:
+      - {"tom": "Forty. relax. relax. I relax in the living room after dinner. I relax in the living room after dinner.", "focus": 0}
+      - {"tom": "Forty-one. speaker. speaker. My speakers are next to the TV. My speakers are next to the TV.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. light switch. light switch. The light switch is next to the door. The light switch is next to the door.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. socket. socket. Is there a socket near the sofa? Is there a socket near the sofa?", "focus": 3, "reveal": [42]}
+      - {"tom": "Forty-four. vase. vase. There's a vase of flowers on the table. There's a vase of flowers on the table.", "focus": 4, "reveal": [43]}
+      - {"tom": "Forty-five. cosy. cosy. Our living room is small but cosy. Our living room is small but cosy.", "focus": 5, "reveal": [44]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [45]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (46–51)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 46, "answer": "Come in! Make yourself at home.", "vi": "Vào đi! Cứ tự nhiên như ở nhà."}
+      - {"n": 47, "answer": "Thank you. What a lovely living room!", "vi": "Cảm ơn. Phòng khách đẹp quá!"}
+      - {"n": 48, "answer": "Have a seat.", "vi": "Mời ngồi."}
+      - {"n": 49, "answer": "Thanks. This sofa is very comfortable.", "vi": "Cảm ơn. Ghế sô-pha này êm quá."}
+      - {"n": 50, "answer": "Would you like a cup of tea?", "vi": "Bạn uống trà nhé?"}
+      - {"n": 51, "answer": "Yes, please.", "vi": "Vâng, cảm ơn."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-six. Come in! Make yourself at home. Come in! Make yourself at home.", "focus": 0}
+      - {"tom": "Forty-seven. Thank you. What a lovely living room! Thank you. What a lovely living room!", "focus": 1, "reveal": [46]}
+      - {"emma": "Forty-eight. Have a seat. Have a seat.", "focus": 2, "reveal": [47]}
+      - {"tom": "Forty-nine. Thanks. This sofa is very comfortable. Thanks. This sofa is very comfortable.", "focus": 3, "reveal": [48]}
+      - {"emma": "Fifty. Would you like a cup of tea? Would you like a cup of tea?", "focus": 4, "reveal": [49]}
+      - {"tom": "Fifty-one. Yes, please. Yes, please.", "focus": 5, "reveal": [50]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [51]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (52–57)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 52, "answer": "Where shall I put my shoes?", "vi": "Mình để giày ở đâu?"}
+      - {"n": 53, "answer": "On the shoe rack, next to the door.", "vi": "Trên kệ giày, cạnh cửa."}
+      - {"n": 54, "answer": "Can you turn on the light?", "vi": "Bạn bật đèn giúp nhé?"}
+      - {"n": 55, "answer": "Sure. Where's the switch?", "vi": "Được. Công tắc ở đâu?"}
+      - {"n": 56, "answer": "It's next to the door.", "vi": "Cạnh cửa ấy."}
+      - {"n": 57, "answer": "Can you close the curtains?", "vi": "Bạn kéo rèm giúp nhé?"}
+    lines:
+      - {"tom": "Fifty-two. Where shall I put my shoes? Where shall I put my shoes?", "focus": 0}
+      - {"emma": "Fifty-three. On the shoe rack, next to the door. On the shoe rack, next to the door.", "focus": 1, "reveal": [52]}
+      - {"emma": "Fifty-four. Can you turn on the light? Can you turn on the light?", "focus": 2, "reveal": [53]}
+      - {"tom": "Fifty-five. Sure. Where's the switch? Sure. Where's the switch?", "focus": 3, "reveal": [54]}
+      - {"emma": "Fifty-six. It's next to the door. It's next to the door.", "focus": 4, "reveal": [55]}
+      - {"emma": "Fifty-seven. Can you close the curtains? Can you close the curtains?", "focus": 5, "reveal": [56]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [57]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (58–63)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 58, "answer": "Of course.", "vi": "Tất nhiên."}
+      - {"n": 59, "answer": "It's hot in here.", "vi": "Trong này nóng quá."}
+      - {"n": 60, "answer": "I'll turn on the air conditioning.", "vi": "Để mình bật máy lạnh."}
+      - {"n": 61, "answer": "Where's the remote control?", "vi": "Điều khiển đâu rồi?"}
+      - {"n": 62, "answer": "It's on the coffee table.", "vi": "Trên bàn nước ấy."}
+      - {"n": 63, "answer": "I love your pictures.", "vi": "Mình thích mấy bức tranh của bạn."}
+    lines:
+      - {"tom": "Fifty-eight. Of course. Of course.", "focus": 0}
+      - {"tom": "Fifty-nine. It's hot in here. It's hot in here.", "focus": 1, "reveal": [58]}
+      - {"emma": "Sixty. I'll turn on the air conditioning. I'll turn on the air conditioning.", "focus": 2, "reveal": [59]}
+      - {"tom": "Sixty-one. Where's the remote control? Where's the remote control?", "focus": 3, "reveal": [60]}
+      - {"emma": "Sixty-two. It's on the coffee table. It's on the coffee table.", "focus": 4, "reveal": [61]}
+      - {"tom": "Sixty-three. I love your pictures. I love your pictures.", "focus": 5, "reveal": [62]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [63]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (64–69)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 64, "answer": "Thanks. They're photos of my family.", "vi": "Cảm ơn. Đó là ảnh gia đình mình."}
+      - {"n": 65, "answer": "How many windows have you got?", "vi": "Nhà bạn có mấy cửa sổ?"}
+      - {"n": 66, "answer": "Only one, and it's small.", "vi": "Chỉ một, mà còn nhỏ."}
+      - {"n": 67, "answer": "Have you got a fireplace?", "vi": "Nhà bạn có lò sưởi không?"}
+      - {"n": 68, "answer": "No, it's never cold here!", "vi": "Không, ở đây chẳng bao giờ lạnh!"}
+      - {"n": 69, "answer": "What furniture have you got?", "vi": "Nhà bạn có những đồ đạc gì?"}
+    lines:
+      - {"emma": "Sixty-four. Thanks. They're photos of my family. Thanks. They're photos of my family.", "focus": 0}
+      - {"emma": "Sixty-five. How many windows have you got? How many windows have you got?", "focus": 1, "reveal": [64]}
+      - {"tom": "Sixty-six. Only one, and it's small. Only one, and it's small.", "focus": 2, "reveal": [65]}
+      - {"emma": "Sixty-seven. Have you got a fireplace? Have you got a fireplace?", "focus": 3, "reveal": [66]}
+      - {"tom": "Sixty-eight. No, it's never cold here! No, it's never cold here!", "focus": 4, "reveal": [67]}
+      - {"emma": "Sixty-nine. What furniture have you got? What furniture have you got?", "focus": 5, "reveal": [68]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [69]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (70–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 70, "answer": "A sofa, a coffee table, and a TV.", "vi": "Ghế sô-pha, bàn nước và ti vi."}
+      - {"n": 71, "answer": "Where do you usually relax?", "vi": "Bạn thường thư giãn ở đâu?"}
+      - {"n": 72, "answer": "In the living room, on the sofa.", "vi": "Ở phòng khách, trên ghế sô-pha."}
+      - {"n": 73, "answer": "Do you mind if I open the window?", "vi": "Mình mở cửa sổ được không?"}
+    lines:
+      - {"tom": "Seventy. A sofa, a coffee table, and a TV. A sofa, a coffee table, and a TV.", "focus": 0}
+      - {"emma": "Seventy-one. Where do you usually relax? Where do you usually relax?", "focus": 1, "reveal": [70]}
+      - {"tom": "Seventy-two. In the living room, on the sofa. In the living room, on the sofa.", "focus": 2, "reveal": [71]}
+      - {"tom": "Seventy-three. Do you mind if I open the window? Do you mind if I open the window?", "focus": 3, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [73]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (74–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 74, "answer": "Not at all. Go ahead.", "vi": "Không sao. Cứ mở đi."}
+      - {"n": 75, "answer": "Can I charge my phone?", "vi": "Mình sạc điện thoại nhờ được không?"}
+      - {"n": 76, "answer": "Yes, there's a socket behind the lamp.", "vi": "Được, có ổ cắm sau cây đèn."}
+    lines:
+      - {"emma": "Seventy-four. Not at all. Go ahead. Not at all. Go ahead.", "focus": 0}
+      - {"tom": "Seventy-five. Can I charge my phone? Can I charge my phone?", "focus": 1, "reveal": [74]}
+      - {"emma": "Seventy-six. Yes, there's a socket behind the lamp. Yes, there's a socket behind the lamp.", "focus": 2, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [76]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in the next module.", "say": "Well done! See you in the next module.", "vi": "Giỏi lắm! Hẹn gặp ở module tiếp theo."}
+

@@ -1,0 +1,413 @@
+# Video Oxford Word Skills Basic · Unit 40 — I can describe a bedroom and bathroom (sách in tr. 102–103, Answer key tr. 214).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–7. Bài 1, 2, 5, 6 theo Answer key tr. 214 (bài 6 câu 8 có hai chỗ trống: 8a/8b). Bài 3 (ABOUT YOU): câu
+# của Tom và Emma. Bài 4 (Test yourself): hai tranh không có chữ, đáp án hiện thành nhãn khi Tom trả lời. Bài 7 (ABOUT YOU): Tom
+# và Emma hỏi đáp (cảnh Nói 1), đủ 6 câu (câu 5 cho nữ: Emma trả lời; câu 6 cho nam: Tom trả lời).
+# Thêm ngoài sách: double bed, bidet (chữ t câm), have a shower (Anh) / take a shower (Mỹ); sự cố trong phòng — câu cho thư phàn
+# nàn IELTS General Task 1 (The shower doesn't work…); Nói 2 (Part 1 "Your room").
+# Hình trong sách: tờ giới thiệu International student house (khung theo đoạn), tranh phòng ngủ và phòng tắm 14 mục (khung theo
+# số), bảng In the bathroom (hai cảnh: ba dòng đầu, bốn dòng sau), Spotlight have + noun.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom ở chung căn hộ tầng ba với hai bạn (U38), bàn học gọn nhưng
+# phòng bừa (U14), chơi bóng rổ (U01, U03); Emma ở căn hộ tầng tám (U38), máy giặt trong phòng tắm (U39). Mới: phòng Tom có giường
+# đơn, bàn ghế, tủ quần áo nhỏ; phòng tắm có vòi sen, không có bồn tắm; Tom gội đầu gần như mỗi ngày vì chơi bóng rổ, dùng lược,
+# máy cạo râu điện. Phòng Emma có giường đôi, bàn đầu giường, tủ ngăn kéo, tủ quần áo lớn; phòng tắm có bồn tắm kèm vòi sen, gương
+# dài; Emma ít dùng nước hoa, trang điểm nhẹ khi đi làm.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U40-bedroom-bathroom.yaml
+id: U40-bedroom-bathroom
+activity: U40-words
+title: "Unit 40 · Bedroom and bathroom"
+subtitle: "I can describe a bedroom and bathroom"
+title_vi: "Phòng ngủ và phòng tắm: single bed, wardrobe, chest of drawers, washbasin, towel; soap, toothpaste, shampoo, razor, comb; have a shower"
+tag: "PLACES · UNIT 40"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 40: bedroom and bathroom. Today: the furniture in a bedroom, the things in a bathroom, and what you use when you wash, clean your teeth, or do your hair."
+        say: "Welcome to Unit forty: bedroom and bathroom. Today: the furniture in a bedroom, the things in a bathroom, and what you use when you wash, clean your teeth, or do your hair."
+        vi: "Unit 40: phòng ngủ, phòng tắm — đồ đạc, đồ dùng vệ sinh."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Ký túc xá quốc tế"
+    heading: "A · International student house"
+    heading_vi: "Tờ giới thiệu tr. 102 — newly furnished · on each floor · provide · bring your own"
+    image: {pdf: course-book, page: 103, clip: [30, 104, 490, 205]}
+    items:
+      - {box: [40, 108, 248, 183]}
+      - {box: [262, 134, 470, 173]}
+      - {box: [262, 176, 470, 204]}
+    lines:
+      - {emma: "Look at page one hundred and two: an advert for an international student house. Our rooms are all newly furnished, and include: a single bed, bedside table, desk and chair, chest of drawers, and wardrobe.", focus: 0, vi: "newly furnished: đồ đạc mới · include: gồm có"}
+      - {tom: "There are three bathrooms on each floor: each has a bath, shower, washbasin, mirror, toilet, and bidet.", focus: 1, vi: "on each floor: ở mỗi tầng"}
+      - {emma: "We provide blankets, but students must bring their own sheets and towels.", focus: 2, vi: "provide: cung cấp · bring their own: tự mang theo"}
+      - {tom: "So the house gives you blankets, but you bring your own sheets and towels.", focus: 2}
+
+  - kind: figure
+    chapter: "Phòng ngủ và phòng tắm"
+    heading: "A · Bedroom and bathroom: 1–14"
+    heading_vi: "Tranh tr. 102 — khung đỏ theo số"
+    image: {pdf: course-book, page: 103, clip: [34, 203, 482, 338]}
+    items:
+      - {box: [56, 238, 160, 314]}
+      - {box: [37, 278, 74, 310]}
+      - {box: [112, 228, 176, 276]}
+      - {box: [211, 246, 254, 310]}
+      - {box: [174, 204, 219, 294]}
+      - {box: [326, 268, 408, 328]}
+      - {box: [334, 226, 368, 276]}
+      - {box: [408, 270, 448, 328]}
+      - {box: [414, 244, 450, 274]}
+      - {box: [270, 274, 302, 336]}
+      - {box: [300, 278, 330, 326]}
+      - {box: [86, 258, 146, 298]}
+      - {box: [62, 252, 112, 282]}
+      - {box: [444, 286, 472, 326]}
+    lines:
+      - {emma: "Now the pictures. Number one: a single bed, a bed for one person. A bed for two people is a double bed.", focus: 0, vi: "single bed: giường đơn · double bed: giường đôi"}
+      - {tom: "Two: a bedside table, next to the bed.", focus: 1, vi: "bedside table: bàn (tủ) đầu giường"}
+      - {emma: "Three: a desk, and a chair.", focus: 2, vi: "desk: bàn học, bàn làm việc"}
+      - {tom: "Four: a chest of drawers. A drawer is like a box that you pull out.", focus: 3, vi: "chest of drawers: tủ ngăn kéo · drawer: ngăn kéo"}
+      - {emma: "Five: a wardrobe, for your clothes.", focus: 4, vi: "wardrobe: tủ quần áo"}
+      - {tom: "In the bathroom, six: a bath.", focus: 5, vi: "bath: bồn tắm"}
+      - {emma: "Seven: a shower.", focus: 6, vi: "shower: vòi sen"}
+      - {tom: "Eight: a washbasin, where you wash your hands and face.", focus: 7, vi: "washbasin: bồn rửa mặt"}
+      - {emma: "Nine: a mirror.", focus: 8, vi: "mirror: gương"}
+      - {tom: "Ten: a toilet.", focus: 9, vi: "toilet: bồn cầu"}
+      - {emma: "Eleven: a bidet. You can wash in it. Notice: the T is silent.", say: "Eleven: a bidet. You can wash in it. Notice: the tee is silent.", focus: 10, vi: "bidet: bồn rửa vệ sinh (chữ t câm)"}
+      - {tom: "Back on the bed, twelve: a blanket. It keeps you warm.", focus: 11, vi: "blanket: chăn"}
+      - {emma: "Thirteen: a sheet. You sleep on it.", say: "Thir-teen: a sheet. You sleep on it.", focus: 12, vi: "sheet: ga trải giường"}
+      - {tom: "And fourteen: a towel.", say: "And four-teen: a towel.", focus: 13, vi: "towel: khăn tắm"}
+
+  - kind: blanks
+    chapter: "Bài 1: từ nào khác?"
+    heading: "Exercise 1 · One word is different. Which one?"
+    heading_vi: "Ví dụ: bedside table, toilet, wardrobe → toilet (hai từ kia ở phòng ngủ) (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "bath / shower / mirror  →  ___ is different. You can wash in the other two.", answer: "mirror"}
+      - {n: 2, q: "wardrobe / desk / chest of drawers  →  ___ is different. You put clothes in the other two.", answer: "desk"}
+      - {n: 3, q: "blanket / desk / chest of drawers  →  ___ is different. The other two are pieces of furniture.", answer: "blanket"}
+      - {n: 4, q: "bed / chest of drawers / bidet  →  ___ is different. The other two are in a bedroom.", answer: "bidet"}
+      - {n: 5, q: "wardrobe / toilet / washbasin  →  ___ is different. The other two are in a bathroom.", answer: "wardrobe"}
+      - {n: 6, q: "towel / blanket / sheet  →  ___ is different. The other two are on a bed.", answer: "towel"}
+    lines:
+      - emma: "Exercise 1. One word is different. Which one? The example is: bedside table, toilet, wardrobe. Toilet is different: the other two are in a bedroom. Pause the video and try."
+        say: "Exercise one. One word is different. Which one? The example is: bedside table, toilet, wardrobe. Toilet is different: the other two are in a bedroom. Pause the video and try."
+        vi: "Bài 1: từ nào khác loại?"
+      - {tom: "One. Mirror: you can wash in a bath, or a shower. Two. Desk: you put clothes in a wardrobe, and a chest of drawers. Three. Blanket: a desk and a chest of drawers are pieces of furniture.", reveal: [1, 2, 3], focus: 2, vi: "furniture: đồ đạc (không đếm được) — a piece of furniture"}
+      - {tom: "Four. Bidet: it's in a bathroom. Five. Wardrobe: it's in a bedroom. Six. Towel: it isn't on a bed.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: điền chữ còn thiếu"
+    heading: "Exercise 2 · Write in the missing letter"
+    heading_vi: "Ví dụ: dek → desk (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "beside table  →  ___", answer: "bedside table"}
+      - {n: 2, q: "miror  →  ___", answer: "mirror"}
+      - {n: 3, q: "ath  →  ___", answer: "bath"}
+      - {n: 4, q: "chest of drawes  →  ___", answer: "chest of drawers"}
+      - {n: 5, q: "wasbasin  →  ___", answer: "washbasin"}
+      - {n: 6, q: "tolet  →  ___", answer: "toilet"}
+      - {n: 7, q: "wadrobe  →  ___", answer: "wardrobe"}
+      - {n: 8, q: "bide  →  ___", answer: "bidet"}
+      - {n: 9, q: "blanke  →  ___", answer: "blanket"}
+      - {n: 10, q: "seet  →  ___", answer: "sheet"}
+      - {n: 11, q: "twel  →  ___", answer: "towel"}
+      - {n: 12, q: "shoer  →  ___", answer: "shower"}
+    lines:
+      - emma: "Exercise 2. Write in the missing letter. The example is: D, E, K. The missing letter is S: desk. Pause the video and try."
+        say: "Exercise two. Write in the missing letter. The example is: dee, ee, kay. The missing letter is ess: desk. Pause the video and try."
+        vi: "Bài 2: điền chữ cái còn thiếu."
+      - {tom: "One. Bedside table: D. Two. Mirror: R. Three. Bath: B. Four. Chest of drawers: R. Five. Washbasin: H. Six. Toilet: I.", say: "One. Bedside table: dee. Two. Mirror: ar. Three. Bath: bee. Four. Chest of drawers: ar. Five. Washbasin: aitch. Six. Toilet: eye.", reveal: [1, 2, 3, 4, 5, 6], focus: 5}
+      - {tom: "Seven. Wardrobe: R. Eight. Bidet: T. Nine. Blanket: T. Ten. Sheet: H. Eleven. Towel: O. Twelve. Shower: W.", say: "Seven. Wardrobe: ar. Eight. Bidet: tee. Nine. Blanket: tee. Ten. Sheet: aitch. Eleven. Towel: oh. Twelve. Shower: double-yoo.", reveal: [7, 8, 9, 10, 11, 12], focus: 11}
+
+  - kind: bullets
+    chapter: "Bài 3: phòng của bạn"
+    heading: "Exercise 3 · About you: my bedroom and bathroom"
+    heading_vi: "Bài 3 (ABOUT YOU) — câu của Tom và Emma; tạm dừng video, viết câu của bạn"
+    items:
+      - {en: "Tom: In my bedroom, there's a single bed, a desk and chair, and a small wardrobe.", vi: "Giường đơn, bàn ghế, tủ quần áo nhỏ."}
+      - {en: "Tom: In my bathroom, there's a shower, a washbasin, a mirror, and a toilet.", vi: "Vòi sen, bồn rửa mặt, gương, bồn cầu — không có bồn tắm."}
+      - {en: "Emma: In my bedroom, there's a double bed, a bedside table, a chest of drawers, and a big wardrobe.", vi: "Giường đôi, bàn đầu giường, tủ ngăn kéo, tủ quần áo lớn."}
+      - {en: "Emma: In my bathroom, there's a bath with a shower, a washbasin, a long mirror, and a toilet.", vi: "Bồn tắm có vòi sen, bồn rửa mặt, gương dài, bồn cầu… và máy giặt."}
+    lines:
+      - emma: "Exercise 3 is about you. Complete the sentences about your bedroom and bathroom. Tom?"
+        say: "Exercise three is about you. Complete the sentences about your bedroom and bathroom. Tom?"
+        vi: "Bài 3: viết câu về phòng ngủ, phòng tắm của bạn."
+      - {tom: "In my bedroom, there's a single bed, a desk and chair, and a small wardrobe. My desk is tidy, but my room isn't!", focus: 0}
+      - {tom: "In my bathroom, there's a shower, a washbasin, a mirror, and a toilet. There's no bath.", focus: 1}
+      - {emma: "In my bedroom, there's a double bed, a bedside table, a chest of drawers, and a big wardrobe.", focus: 2}
+      - {emma: "In my bathroom, there's a bath with a shower, a washbasin, a long mirror, and a toilet. And my washing machine! Now pause the video, and write your sentences.", focus: 3}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: say the words for 1–14"
+    heading_vi: "Che phần chữ, nhìn tranh — tạm dừng video sau mỗi số; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 103, clip: [34, 203, 482, 338]}
+    items:
+      - {box: [56, 238, 160, 314]}
+      - {box: [56, 238, 160, 314], label: "a single bed"}
+      - {box: [37, 278, 74, 310]}
+      - {box: [37, 278, 74, 310], label: "a bedside table"}
+      - {box: [112, 228, 176, 276]}
+      - {box: [112, 228, 176, 276], label: "a desk and a chair"}
+      - {box: [211, 246, 254, 310]}
+      - {box: [211, 246, 254, 310], label: "a chest of drawers"}
+      - {box: [174, 204, 219, 294]}
+      - {box: [174, 204, 219, 294], label: "a wardrobe"}
+      - {box: [326, 268, 408, 328]}
+      - {box: [326, 268, 408, 328], label: "a bath"}
+      - {box: [334, 226, 368, 276]}
+      - {box: [334, 226, 368, 276], label: "a shower"}
+      - {box: [408, 270, 448, 328]}
+      - {box: [408, 270, 448, 328], label: "a washbasin"}
+      - {box: [414, 244, 450, 274]}
+      - {box: [414, 244, 450, 274], label: "a mirror"}
+      - {box: [270, 274, 302, 336]}
+      - {box: [270, 274, 302, 336], label: "a toilet"}
+      - {box: [300, 278, 330, 326]}
+      - {box: [300, 278, 330, 326], label: "a bidet"}
+      - {box: [86, 258, 146, 298]}
+      - {box: [86, 258, 146, 298], label: "a blanket"}
+      - {box: [62, 252, 112, 282]}
+      - {box: [62, 252, 112, 282], label: "a sheet"}
+      - {box: [444, 286, 472, 326]}
+      - {box: [444, 286, 472, 326], label: "a towel"}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the text, and look at the pictures. Say the words for one to fourteen. Pause the video after each number. Number one?"
+        say: "Exercise four is a test. Cover the text, and look at the pictures. Say the words for one to fourteen. Pause the video after each number. Number one?"
+        focus: 0
+        vi: "Bài 4: che chữ, nhìn tranh, nói tên đồ vật."
+      - {tom: "A single bed.", focus: 1}
+      - {emma: "Number two?", focus: 2}
+      - {tom: "A bedside table.", focus: 3}
+      - {emma: "Number three?", focus: 4}
+      - {tom: "A desk, and a chair.", focus: 5}
+      - {emma: "Number four?", focus: 6}
+      - {tom: "A chest of drawers.", focus: 7}
+      - {emma: "Number five?", focus: 8}
+      - {tom: "A wardrobe.", focus: 9}
+      - {emma: "Number six?", focus: 10}
+      - {tom: "A bath.", focus: 11}
+      - {emma: "Number seven?", focus: 12}
+      - {tom: "A shower.", focus: 13}
+      - {emma: "Number eight?", focus: 14}
+      - {tom: "A washbasin.", focus: 15}
+      - {emma: "Number nine?", focus: 16}
+      - {tom: "A mirror.", focus: 17}
+      - {emma: "Number ten?", focus: 18}
+      - {tom: "A toilet.", focus: 19}
+      - {emma: "Number eleven?", focus: 20}
+      - {tom: "A bidet.", focus: 21}
+      - {emma: "Number twelve?", focus: 22}
+      - {tom: "A blanket.", focus: 23}
+      - {emma: "Number thirteen?", say: "Number thir-teen?", focus: 24}
+      - {tom: "A sheet.", focus: 25}
+      - {emma: "And number fourteen?", say: "And number four-teen?", focus: 26}
+      - {tom: "A towel.", focus: 27}
+
+  - kind: figure
+    chapter: "Trong phòng tắm (1)"
+    heading: "B · In the bathroom (1)"
+    heading_vi: "tr. 103 — have a wash · clean your teeth · wash your hair; U = không đếm được"
+    image: {pdf: course-book, page: 104, clip: [34, 44, 492, 156]}
+    items:
+      - {box: [104, 46, 340, 77]}
+      - {box: [104, 70, 490, 122]}
+      - {box: [104, 104, 340, 156]}
+    lines:
+      - {emma: "Part B: in the bathroom. When you have a wash, you use soap. Soap is uncountable: the book writes U. We say some soap, not a soap.", focus: 0, vi: "have a wash: rửa ráy · soap: xà phòng (U: không đếm được)"}
+      - {tom: "When you clean your teeth, you use toothpaste, and a toothbrush. Toothpaste is uncountable, but a toothbrush is countable.", focus: 1, vi: "clean your teeth: đánh răng · toothpaste: kem đánh răng · toothbrush: bàn chải đánh răng"}
+      - {emma: "When you wash your hair, you use shampoo. Shampoo is uncountable, too.", focus: 2, vi: "wash your hair: gội đầu · shampoo: dầu gội (U)"}
+
+  - kind: figure
+    chapter: "Trong phòng tắm (2)"
+    heading: "B · In the bathroom (2)"
+    heading_vi: "tr. 103 — have a shave · do your hair · put on / take off make-up · wear perfume"
+    image: {pdf: course-book, page: 104, clip: [34, 138, 492, 286]}
+    items:
+      - {box: [104, 140, 488, 174]}
+      - {box: [104, 177, 450, 205]}
+      - {box: [104, 204, 488, 237]}
+      - {box: [36, 236, 262, 284]}
+    lines:
+      - {tom: "When you have a shave, you use a razor, or an electric razor.", focus: 0, vi: "have a shave: cạo râu · razor: dao cạo · electric razor: máy cạo râu"}
+      - {emma: "When you do your hair, you use a brush, or a comb. Do your hair means make your hair look nice.", focus: 1, vi: "do your hair: chải, làm tóc · brush: lược chải · comb: lược"}
+      - {tom: "When you put on, or take off make-up, you use make-up, and tissues. Make-up is uncountable.", focus: 2, vi: "put on ≠ take off: trang điểm ≠ tẩy trang · make-up (U) · tissue: khăn giấy"}
+      - {emma: "You can also put on, or wear perfume. Perfume is uncountable, too.", focus: 3, vi: "perfume: nước hoa (U) · wear perfume: dùng nước hoa"}
+
+  - kind: blanks
+    chapter: "Bài 5: chọn từ đúng"
+    heading: "Exercise 5 · Circle the correct word"
+    heading_vi: "Ví dụ: I wash / clean my teeth with toothpaste / a comb. → clean, toothpaste (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "I do / put on my hair with a razor / a brush.  →  ___", answer: "do, a brush"}
+      - {n: 2, q: "Do you have / do a bath every day?  →  ___", answer: "have"}
+      - {n: 3, q: "She puts on / has make-up when she goes out.  →  ___", answer: "puts on"}
+      - {n: 4, q: "Do you often have a shave / wash with an electric razor?  →  ___", answer: "shave"}
+      - {n: 5, q: "He washes / cleans his hair with expensive perfume / shampoo.  →  ___", answer: "washes, shampoo"}
+      - {n: 6, q: "When you take off make-up you use tissues / a comb.  →  ___", answer: "tissues"}
+    lines:
+      - emma: "Exercise 5. Circle the correct word. The example is: I clean my teeth with toothpaste. Pause the video and try."
+        say: "Exercise five. Circle the correct word. The example is: I clean my teeth with toothpaste. Pause the video and try."
+        vi: "Bài 5: khoanh từ đúng."
+      - {tom: "One. I do my hair with a brush. Two. Do you have a bath every day? Three. She puts on make-up when she goes out.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Do you often have a shave with an electric razor? Five. He washes his hair with expensive shampoo. Six. When you take off make-up, you use tissues.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: figure
+    chapter: "Spotlight: have + noun"
+    heading: "Spotlight · have + noun"
+    heading_vi: "tr. 103 — have a shower · have a bath · have a shave · have a wash"
+    image: {pdf: course-book, page: 104, clip: [328, 296, 488, 392]}
+    items:
+      - {box: [332, 333, 486, 346]}
+      - {box: [332, 346, 486, 359]}
+      - {box: [332, 359, 486, 372]}
+      - {box: [332, 371, 486, 385]}
+    lines:
+      - {emma: "Look at the spotlight. Notice these phrases with have. I have a shower every day.", focus: 0, vi: "have a shower: tắm vòi sen"}
+      - {tom: "I don't have a bath very often.", focus: 1, vi: "have a bath: tắm bồn"}
+      - {emma: "Do you have a shave every morning?", focus: 2}
+      - {tom: "I have a wash after work. And remember: in British English, we have a shower. Americans take a shower.", focus: 3, vi: "Anh: have a shower · Mỹ: take a shower"}
+
+  - kind: blanks
+    chapter: "Bài 6: a, an hay không?"
+    heading: "Exercise 6 · Write a, an, or nothing (–)"
+    heading_vi: "Ví dụ: I don't use – make-up. (make-up không đếm được) (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "I need ___ new comb.", answer: "a"}
+      - {n: 2, q: "Do you want ___ tissue?", answer: "a"}
+      - {n: 3, q: "I never use ___ perfume.", answer: "–"}
+      - {n: 4, q: "I must buy ___ brush.", answer: "a"}
+      - {n: 5, q: "I buy ___ shampoo every week.", answer: "–"}
+      - {n: 6, q: "Have you got ___ electric razor?", answer: "an"}
+      - {n: 7, q: "I just use ___ soap.", answer: "–"}
+      - {n: "8a", q: "I need ___ new toothbrush", answer: "a"}
+      - {n: "8b", q: "and ___ toothpaste.", answer: "–"}
+    lines:
+      - emma: "Exercise 6. Write a, an, or nothing. Remember: uncountable nouns, like make-up, don't have a or an. The example is: I don't use make-up. Pause the video and try."
+        say: "Exercise six. Write eigh, an, or nothing. Remember: uncountable nouns, like make-up, don't have eigh, or an. The example is: I don't use make-up. Pause the video and try."
+        vi: "Bài 6: viết a, an hoặc để trống (–)."
+      - {tom: "One. A new comb. Two. A tissue. Three. Nothing: perfume is uncountable. Four. A brush.", reveal: ["1", "2", "3", "4"], focus: 3}
+      - {tom: "Five. Nothing: shampoo. Six. An electric razor. Seven. Nothing: soap. Eight. A new toothbrush, and nothing before toothpaste.", reveal: ["5", "6", "7", "8a", "8b"], focus: 8}
+
+  - kind: qa
+    chapter: "Nói 1: thói quen của bạn"
+    heading: "Speaking 1 · Exercise 7: about you"
+    heading_vi: "Bài 7 (ABOUT YOU) — a hay b? Tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you usually have a bath or a shower, Tom?"
+        a: "I usually have a shower. We haven't got a bath in our flat."
+        ask: emma
+        by: tom
+        phrases: ["I usually have a …", "We haven't got a …"]
+      - q: "Do you clean your teeth before or after breakfast?"
+        a: "After breakfast. And before I go to bed, of course."
+        ask: emma
+        by: tom
+        phrases: ["After breakfast.", "before I go to bed"]
+      - q: "How often do you wash your hair?"
+        a: "More than twice a week. I play basketball, so I wash it almost every day."
+        ask: emma
+        by: tom
+        phrases: ["More than twice a week.", "almost every day"]
+      - q: "Do you use a brush or a comb on your hair?"
+        a: "A comb. My hair is short, so it's quick."
+        ask: emma
+        by: tom
+        phrases: ["A comb.", "My hair is short, so…"]
+      - q: "Do you use an electric razor?"
+        a: "Yes, I do. It's quick, and I can have a shave anywhere."
+        ask: emma
+        by: tom
+        phrases: ["Yes, I do.", "have a shave"]
+      - q: "Do you often wear perfume, Emma?"
+        a: "Not very much. I only wear perfume when I go out in the evening."
+        ask: tom
+        by: emma
+        phrases: ["Not very much.", "I only wear … when…"]
+      - q: "Do you usually wear make-up?"
+        a: "A little, for work. When I get home, I take it off."
+        ask: tom
+        by: emma
+        phrases: ["A little, for work.", "I take it off."]
+    lines:
+      - {emma: "Exercise 7 is about you. Tick a or b. Then tell another student your answers. Tom, do you usually have a bath, or a shower?", say: "Exercise seven is about you. Tick eigh or bee. Then tell another student your answers. Tom, do you usually have a bath, or a shower?", focus: 0}
+      - {tom: "I usually have a shower. We haven't got a bath in our flat.", reveal: 0, vi: "Tom thường tắm vòi sen; căn hộ không có bồn tắm."}
+      - {emma: "Do you clean your teeth before, or after breakfast?", focus: 1}
+      - {tom: "After breakfast. And before I go to bed, of course.", reveal: 1, vi: "Sau bữa sáng, và trước khi đi ngủ."}
+      - {emma: "How often do you wash your hair?", focus: 2}
+      - {tom: "More than twice a week. I play basketball, so I wash it almost every day.", reveal: 2, vi: "Hơn hai lần một tuần: chơi bóng rổ nên gội gần như mỗi ngày."}
+      - {emma: "Do you use a brush, or a comb on your hair?", focus: 3}
+      - {tom: "A comb. My hair is short, so it's quick.", reveal: 3, vi: "Dùng lược: tóc ngắn nên nhanh."}
+      - {emma: "Do you use an electric razor?", focus: 4}
+      - {tom: "Yes, I do. It's quick, and I can have a shave anywhere.", reveal: 4, vi: "Có: nhanh, cạo ở đâu cũng được."}
+      - {tom: "Question five is for women. Do you often wear perfume, Emma?", focus: 5}
+      - {emma: "Not very much. I only wear perfume when I go out in the evening.", reveal: 5, vi: "Không nhiều: chỉ dùng nước hoa khi đi chơi buổi tối."}
+      - {tom: "Do you usually wear make-up?", focus: 6}
+      - {emma: "A little, for work. When I get home, I take it off.", reveal: 6, vi: "Một chút khi đi làm; về nhà thì tẩy trang."}
+
+  - kind: bullets
+    chapter: "Sự cố trong phòng"
+    heading: "Problems in your room"
+    heading_vi: "Thêm ngoài sách — câu cho thư phàn nàn (IELTS General, Task 1) gửi chủ nhà, khách sạn"
+    items:
+      - {en: "The shower doesn't work.", vi: "Vòi sen bị hỏng."}
+      - {en: "There's no hot water.", vi: "Không có nước nóng."}
+      - {en: "The toilet is broken. · The washbasin is blocked.", vi: "Bồn cầu hỏng · bồn rửa mặt bị tắc."}
+      - {en: "The wardrobe door doesn't close.", vi: "Cửa tủ quần áo không đóng được."}
+      - {en: "There were no towels, and the sheets were dirty.", vi: "Không có khăn tắm, ga giường bẩn."}
+      - {en: "Could you please send someone to fix it?", vi: "Xin vui lòng cử người tới sửa."}
+    lines:
+      - {emma: "In the IELTS General Training test, writing task one is often a letter. You may need to complain about a problem in your room. For example: the shower doesn't work.", say: "In the eye-elts General Training test, writing task one is often a letter. You may need to complain about a problem in your room. For example: the shower doesn't work.", focus: 0, vi: "complain: phàn nàn"}
+      - {tom: "There's no hot water.", focus: 1}
+      - {emma: "The toilet is broken. Or: the washbasin is blocked: the water can't go down.", focus: 2, vi: "blocked: bị tắc"}
+      - {tom: "The wardrobe door doesn't close.", focus: 3}
+      - {emma: "In a hotel: there were no towels, and the sheets were dirty.", focus: 4}
+      - {tom: "And a polite request: could you please send someone to fix it?", focus: 5, vi: "polite request: lời đề nghị lịch sự"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Your room"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "Do you have your own bedroom?", hint: "Yes, I do. / No, I share it with my …"}
+      - {q: "What is there in your bedroom?", hint: "There's a … and a … · There isn't a …"}
+      - {q: "What do you usually do in your bedroom?", hint: "I sleep, study, and … · I relax there"}
+      - {q: "Would you like to change anything in your room?", hint: "I'd like a bigger … / a new …"}
+      - {q: "Do you prefer a bath or a shower? Why?", hint: "I prefer a …, because it's quicker / relaxing"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about your room. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about your room. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về phòng của bạn."
+      - {emma: "Do you have your own bedroom?", focus: 0, pause: 0.5}
+      - {emma: "What is there in your bedroom?", focus: 1, pause: 0.5}
+      - {emma: "What do you usually do in your bedroom?", focus: 2, pause: 0.5}
+      - {emma: "Would you like to change anything in your room?", focus: 3, pause: 0.5}
+      - {emma: "Do you prefer a bath, or a shower? Why?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4: che chữ tr. 102, nhìn tranh, nói tên đồ vật"
+    items:
+      - {en: "single bed · bedside table · desk and chair · chest of drawers · wardrobe", vi: "phòng ngủ"}
+      - {en: "bath · shower · washbasin · mirror · toilet · bidet · blanket · sheet · towel", vi: "phòng tắm; chăn, ga, khăn"}
+      - {en: "soap · toothpaste · shampoo · make-up · perfume (U) · a toothbrush · a razor · a brush · a comb · tissues", vi: "đồ dùng vệ sinh (U: không đếm được)"}
+      - {en: "have a wash / a shower / a bath / a shave · clean your teeth · wash / do your hair · put on ≠ take off", vi: "cụm từ"}
+      - {en: "Next: Unit 41 · The living room", vi: "Tiếp theo: Unit 41 · Phòng khách"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "In the bedroom: a single bed, a bedside table, a desk and chair, a chest of drawers, and a wardrobe.", focus: 0}
+      - {tom: "In the bathroom: a bath, a shower, a washbasin, a mirror, a toilet, and a bidet. And a blanket, a sheet, and a towel.", focus: 1}
+      - {emma: "Soap, toothpaste, shampoo, make-up, and perfume are uncountable. A toothbrush, a razor, a brush, a comb, and tissues.", focus: 2}
+      - {tom: "Have a wash, a shower, a bath, or a shave. Clean your teeth, wash your hair, do your hair, and put on or take off make-up.", focus: 3}
+      - {emma: "Next time, Unit 41: the living room. See you then!", say: "Next time, Unit forty-one: the living room. See you then!", focus: 4}

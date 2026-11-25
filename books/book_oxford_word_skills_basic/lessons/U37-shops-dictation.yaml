@@ -1,0 +1,301 @@
+# Video nghe – viết (dictation) Unit 37 · Shops — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U37-shops-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U37 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 37 có 30 mục: shopping centre phủ cả centre, department store phủ store, do the shopping phủ do
+# và shopping.
+id: U37-shops-dictation
+activity: U37-words
+title: "Unit 37 · Shops"
+subtitle: "Dictation · listen and write: talking about shops"
+title_vi: "Nghe – viết 10 phút: cửa hàng — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 37"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 37: Shops. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-seven: Shops. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 37: cửa hàng. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 26 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 29 useful sentences for conversation.", "say": "There are three parts. First, twenty-six words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and twenty-nine useful sentences for conversation.", "vi": "Ba phần: 26 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 29 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "shop", "vi": "cửa hàng", "ex": "There's a small shop at the end of my street.", "w": ["shop"]}
+      - {"n": 2, "answer": "market", "vi": "chợ", "ex": "I buy fruit and vegetables at the market.", "w": ["market"]}
+      - {"n": 3, "answer": "stalls", "vi": "sạp hàng", "ex": "There are lots of stalls at the market.", "w": ["stalls"]}
+      - {"n": 4, "answer": "indoors, outdoors", "vi": "trong nhà, ngoài trời", "ex": "Some markets are indoors, and some are outdoors.", "w": ["indoors", "outdoors"]}
+      - {"n": 5, "answer": "shopping centre", "vi": "trung tâm mua sắm", "ex": "There's a new shopping centre in the city.", "w": ["shopping centre", "centre"]}
+      - {"n": 6, "answer": "department store", "vi": "cửa hàng bách hóa", "ex": "A department store sells almost everything.", "w": ["department store", "store"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. shop. shop. There's a small shop at the end of my street. There's a small shop at the end of my street.", "focus": 0}
+      - {"emma": "Two. market. market. I buy fruit and vegetables at the market. I buy fruit and vegetables at the market.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. stalls. stalls. There are lots of stalls at the market. There are lots of stalls at the market.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. indoors, outdoors. indoors, outdoors. Some markets are indoors, and some are outdoors. Some markets are indoors, and some are outdoors.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. shopping centre. shopping centre. There's a new shopping centre in the city. There's a new shopping centre in the city.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. department store. department store. A department store sells almost everything. A department store sells almost everything.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "supermarket", "vi": "siêu thị", "ex": "I buy rice and noodles at the supermarket.", "w": ["supermarket"]}
+      - {"n": 8, "answer": "hypermarket", "vi": "đại siêu thị", "ex": "Hypermarkets are usually outside towns.", "w": ["hypermarket"]}
+      - {"n": 9, "answer": "butcher's", "vi": "hàng thịt", "ex": "I bought some sausages at the butcher's.", "w": ["butcher's"]}
+      - {"n": 10, "answer": "baker's", "vi": "tiệm bánh", "ex": "The baker's sells bread and cakes.", "w": ["baker's"]}
+      - {"n": 11, "answer": "chemist's", "vi": "hiệu thuốc", "ex": "There's a chemist's under Tom's flat.", "w": ["chemist's"]}
+      - {"n": 12, "answer": "deli", "vi": "cửa hàng đồ ăn sẵn", "ex": "You can get sandwiches and cheese at the deli.", "w": ["deli"]}
+    lines:
+      - {"emma": "Seven. supermarket. supermarket. I buy rice and noodles at the supermarket. I buy rice and noodles at the supermarket.", "focus": 0}
+      - {"emma": "Eight. hypermarket. hypermarket. Hypermarkets are usually outside towns. Hypermarkets are usually outside towns.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. butcher's. butcher's. I bought some sausages at the butcher's. I bought some sausages at the butcher's.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. baker's. baker's. The baker's sells bread and cakes. The baker's sells bread and cakes.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. chemist's. chemist's. There's a chemist's under Tom's flat. There's a chemist's under Tom's flat.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. deli. deli. You can get sandwiches and cheese at the deli. You can get sandwiches and cheese at the deli.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "newsagent's, paper shop", "vi": "sạp báo", "ex": "I get my newspaper from the newsagent's.", "w": ["newsagent's", "paper shop"]}
+      - {"n": 14, "answer": "shoe shop", "vi": "cửa hàng giày", "ex": "There's a good shoe shop in the shopping centre."}
+      - {"n": 15, "answer": "do the shopping", "vi": "đi mua đồ", "ex": "I do the shopping on Saturday mornings.", "w": ["do the shopping", "do", "shopping"]}
+      - {"n": 16, "answer": "get", "vi": "mua", "ex": "Where do you get your fruit?"}
+      - {"n": 17, "answer": "prefer", "vi": "thích hơn", "ex": "I prefer markets. They're friendlier.", "w": ["prefer"]}
+      - {"n": 18, "answer": "choose", "vi": "chọn", "ex": "You can choose from lots of different things.", "w": ["choose"]}
+    lines:
+      - {"emma": "Thirteen. newsagent's, paper shop. newsagent's, paper shop. I get my newspaper from the newsagent's. I get my newspaper from the newsagent's.", "focus": 0}
+      - {"emma": "Fourteen. shoe shop. shoe shop. There's a good shoe shop in the shopping centre. There's a good shoe shop in the shopping centre.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. do the shopping. do the shopping. I do the shopping on Saturday mornings. I do the shopping on Saturday mornings.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. get. get. Where do you get your fruit? Where do you get your fruit?", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. prefer. prefer. I prefer markets. They're friendlier. I prefer markets. They're friendlier.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. choose. choose. You can choose from lots of different things. You can choose from lots of different things.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–22)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "convenient", "vi": "tiện lợi", "ex": "Supermarkets are very convenient.", "w": ["convenient"]}
+      - {"n": 20, "answer": "queue", "vi": "xếp hàng", "ex": "I don't like queueing at the checkout.", "w": ["queue"]}
+      - {"n": 21, "answer": "checkout", "vi": "quầy thanh toán", "ex": "You pay at the checkout.", "w": ["checkout"]}
+      - {"n": 22, "answer": "trolley", "vi": "xe đẩy", "ex": "I push a trolley around the supermarket.", "w": ["trolley"]}
+    lines:
+      - {"emma": "Nineteen. convenient. convenient. Supermarkets are very convenient. Supermarkets are very convenient.", "focus": 0}
+      - {"emma": "Twenty. queue. queue. I don't like queueing at the checkout. I don't like queueing at the checkout.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. checkout. checkout. You pay at the checkout. You pay at the checkout.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. trolley. trolley. I push a trolley around the supermarket. I push a trolley around the supermarket.", "focus": 3, "reveal": [21]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [22]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (23–26)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 23, "answer": "basket", "vi": "giỏ", "ex": "I only need a basket today.", "w": ["basket"]}
+      - {"n": 24, "answer": "fill", "vi": "làm đầy", "ex": "We fill two trolleys every week.", "w": ["fill"]}
+      - {"n": 25, "answer": "full", "vi": "đầy", "ex": "The trolley is full.", "w": ["full"]}
+      - {"n": 26, "answer": "deliver", "vi": "giao hàng", "ex": "They deliver to your home.", "w": ["deliver"]}
+    lines:
+      - {"emma": "Twenty-three. basket. basket. I only need a basket today. I only need a basket today.", "focus": 0}
+      - {"emma": "Twenty-four. fill. fill. We fill two trolleys every week. We fill two trolleys every week.", "focus": 1, "reveal": [23]}
+      - {"emma": "Twenty-five. full. full. The trolley is full. The trolley is full.", "focus": 2, "reveal": [24]}
+      - {"emma": "Twenty-six. deliver. deliver. They deliver to your home. They deliver to your home.", "focus": 3, "reveal": [25]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [26]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (27–32)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 27, "answer": "convenience store", "vi": "cửa hàng tiện lợi", "ex": "The convenience store is open all night."}
+      - {"n": 28, "answer": "wet market", "vi": "chợ đồ tươi sống", "ex": "I buy fish at the wet market."}
+      - {"n": 29, "answer": "street vendor", "vi": "người bán hàng rong", "ex": "A street vendor sells fruit from her bike."}
+      - {"n": 30, "answer": "pharmacy", "vi": "nhà thuốc", "ex": "A pharmacy is the same as a chemist's."}
+      - {"n": 31, "answer": "price", "vi": "giá", "ex": "The prices at the market are lower."}
+      - {"n": 32, "answer": "cheap, expensive", "vi": "rẻ, đắt", "ex": "Clothes are cheap here, but cheese is expensive."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-seven. convenience store. convenience store. The convenience store is open all night. The convenience store is open all night.", "focus": 0}
+      - {"tom": "Twenty-eight. wet market. wet market. I buy fish at the wet market. I buy fish at the wet market.", "focus": 1, "reveal": [27]}
+      - {"tom": "Twenty-nine. street vendor. street vendor. A street vendor sells fruit from her bike. A street vendor sells fruit from her bike.", "focus": 2, "reveal": [28]}
+      - {"tom": "Thirty. pharmacy. pharmacy. A pharmacy is the same as a chemist's. A pharmacy is the same as a chemist's.", "focus": 3, "reveal": [29]}
+      - {"tom": "Thirty-one. price. price. The prices at the market are lower. The prices at the market are lower.", "focus": 4, "reveal": [30]}
+      - {"tom": "Thirty-two. cheap, expensive. cheap, expensive. Clothes are cheap here, but cheese is expensive. Clothes are cheap here, but cheese is expensive.", "focus": 5, "reveal": [31]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [32]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (33–38)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 33, "answer": "discount", "vi": "giảm giá", "ex": "There's a ten per cent discount today."}
+      - {"n": 34, "answer": "receipt", "vi": "hóa đơn", "ex": "Can I have a receipt, please?"}
+      - {"n": 35, "answer": "cash", "vi": "tiền mặt", "ex": "The market only takes cash."}
+      - {"n": 36, "answer": "pay by card", "vi": "trả bằng thẻ", "ex": "Can I pay by card?"}
+      - {"n": 37, "answer": "change", "vi": "tiền thừa", "ex": "Here's your change."}
+      - {"n": 38, "answer": "customer", "vi": "khách hàng", "ex": "The shop is full of customers."}
+    lines:
+      - {"tom": "Thirty-three. discount. discount. There's a ten per cent discount today. There's a ten per cent discount today.", "focus": 0}
+      - {"tom": "Thirty-four. receipt. receipt. Can I have a receipt, please? Can I have a receipt, please?", "focus": 1, "reveal": [33]}
+      - {"tom": "Thirty-five. cash. cash. The market only takes cash. The market only takes cash.", "focus": 2, "reveal": [34]}
+      - {"tom": "Thirty-six. pay by card. pay by card. Can I pay by card? Can I pay by card?", "focus": 3, "reveal": [35]}
+      - {"tom": "Thirty-seven. change. change. Here's your change. Here's your change.", "focus": 4, "reveal": [36]}
+      - {"tom": "Thirty-eight. customer. customer. The shop is full of customers. The shop is full of customers.", "focus": 5, "reveal": [37]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [38]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (39–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 39, "answer": "shop assistant", "vi": "nhân viên bán hàng", "ex": "The shop assistant was very helpful."}
+      - {"n": 40, "answer": "online", "vi": "trên mạng", "ex": "I often buy things online."}
+      - {"n": 41, "answer": "order", "vi": "đặt hàng", "ex": "I order things on an app."}
+      - {"n": 42, "answer": "delivery", "vi": "việc giao hàng", "ex": "Delivery is free."}
+    lines:
+      - {"tom": "Thirty-nine. shop assistant. shop assistant. The shop assistant was very helpful. The shop assistant was very helpful.", "focus": 0}
+      - {"tom": "Forty. online. online. I often buy things online. I often buy things online.", "focus": 1, "reveal": [39]}
+      - {"tom": "Forty-one. order. order. I order things on an app. I order things on an app.", "focus": 2, "reveal": [40]}
+      - {"tom": "Forty-two. delivery. delivery. Delivery is free. Delivery is free.", "focus": 3, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "bargain", "vi": "mặc cả", "ex": "At the market, you can bargain."}
+      - {"n": 44, "answer": "closed", "vi": "đóng cửa", "ex": "The baker's is closed on Sundays."}
+      - {"n": 45, "answer": "try on", "vi": "mặc thử", "ex": "Can I try it on?"}
+      - {"n": 46, "answer": "price tag", "vi": "nhãn giá", "ex": "There's no price tag on this shirt."}
+    lines:
+      - {"tom": "Forty-three. bargain. bargain. At the market, you can bargain. At the market, you can bargain.", "focus": 0}
+      - {"tom": "Forty-four. closed. closed. The baker's is closed on Sundays. The baker's is closed on Sundays.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. try on. try on. Can I try it on? Can I try it on?", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. price tag. price tag. There's no price tag on this shirt. There's no price tag on this shirt.", "focus": 3, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [46]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 47, "answer": "Can I help you?", "vi": "Tôi giúp gì được ạ?"}
+      - {"n": 48, "answer": "Yes, I'm looking for a birthday present.", "vi": "Vâng, tôi đang tìm quà sinh nhật."}
+      - {"n": 49, "answer": "How much is this?", "vi": "Cái này bao nhiêu?"}
+      - {"n": 50, "answer": "It's fifty thousand dong.", "vi": "Năm mươi nghìn đồng."}
+      - {"n": 51, "answer": "Can you make it cheaper?", "vi": "Bớt cho tôi được không?"}
+      - {"n": 52, "answer": "OK, forty-five thousand.", "vi": "Được, bốn mươi lăm nghìn."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"tom": "Forty-seven. Can I help you? Can I help you?", "focus": 0}
+      - {"emma": "Forty-eight. Yes, I'm looking for a birthday present. Yes, I'm looking for a birthday present.", "focus": 1, "reveal": [47]}
+      - {"emma": "Forty-nine. How much is this? How much is this?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. It's fifty thousand dong. It's fifty thousand dong.", "focus": 3, "reveal": [49]}
+      - {"emma": "Fifty-one. Can you make it cheaper? Can you make it cheaper?", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. OK, forty-five thousand. OK, forty-five thousand.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "Do you take cards?", "vi": "Có nhận thẻ không?"}
+      - {"n": 54, "answer": "Sorry, cash only.", "vi": "Xin lỗi, chỉ nhận tiền mặt."}
+      - {"n": 55, "answer": "Where can I find the rice?", "vi": "Gạo để ở đâu ạ?"}
+      - {"n": 56, "answer": "In aisle three, next to the noodles.", "vi": "Ở dãy số ba, cạnh mì."}
+      - {"n": 57, "answer": "Do you need a bag?", "vi": "Chị có cần túi không?"}
+      - {"n": 58, "answer": "No, thanks. I've got one.", "vi": "Không, cảm ơn. Tôi có rồi."}
+    lines:
+      - {"emma": "Fifty-three. Do you take cards? Do you take cards?", "focus": 0}
+      - {"tom": "Fifty-four. Sorry, cash only. Sorry, cash only.", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. Where can I find the rice? Where can I find the rice?", "focus": 2, "reveal": [54]}
+      - {"tom": "Fifty-six. In aisle three, next to the noodles. In aisle three, next to the noodles.", "focus": 3, "reveal": [55]}
+      - {"tom": "Fifty-seven. Do you need a bag? Do you need a bag?", "focus": 4, "reveal": [56]}
+      - {"emma": "Fifty-eight. No, thanks. I've got one. No, thanks. I've got one.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "When do you usually do the shopping?", "vi": "Bạn thường đi mua đồ khi nào?"}
+      - {"n": 60, "answer": "On Saturday morning, with my flatmates.", "vi": "Sáng thứ Bảy, với các bạn cùng phòng."}
+      - {"n": 61, "answer": "Do you prefer supermarkets or markets?", "vi": "Bạn thích siêu thị hay chợ hơn?"}
+      - {"n": 62, "answer": "Markets. I can practise my Vietnamese.", "vi": "Chợ. Mình được tập nói tiếng Việt."}
+      - {"n": 63, "answer": "The queue is very long.", "vi": "Hàng dài quá."}
+      - {"n": 64, "answer": "Let's come back later.", "vi": "Lát nữa mình quay lại nhé."}
+    lines:
+      - {"emma": "Fifty-nine. When do you usually do the shopping? When do you usually do the shopping?", "focus": 0}
+      - {"tom": "Sixty. On Saturday morning, with my flatmates. On Saturday morning, with my flatmates.", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. Do you prefer supermarkets or markets? Do you prefer supermarkets or markets?", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Markets. I can practise my Vietnamese. Markets. I can practise my Vietnamese.", "focus": 3, "reveal": [61]}
+      - {"emma": "Sixty-three. The queue is very long. The queue is very long.", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. Let's come back later. Let's come back later.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "Do they deliver?", "vi": "Họ có giao hàng không?"}
+      - {"n": 66, "answer": "Yes, and delivery is free.", "vi": "Có, mà giao miễn phí."}
+      - {"n": 67, "answer": "Have you got this in a smaller size?", "vi": "Cái này có cỡ nhỏ hơn không?"}
+      - {"n": 68, "answer": "Let me check.", "vi": "Để tôi xem."}
+      - {"n": 69, "answer": "I'm just looking, thanks.", "vi": "Tôi chỉ xem thôi, cảm ơn."}
+      - {"n": 70, "answer": "What time does the shop close?", "vi": "Mấy giờ cửa hàng đóng cửa?"}
+    lines:
+      - {"emma": "Sixty-five. Do they deliver? Do they deliver?", "focus": 0}
+      - {"tom": "Sixty-six. Yes, and delivery is free. Yes, and delivery is free.", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. Have you got this in a smaller size? Have you got this in a smaller size?", "focus": 2, "reveal": [66]}
+      - {"tom": "Sixty-eight. Let me check. Let me check.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. I'm just looking, thanks. I'm just looking, thanks.", "focus": 4, "reveal": [68]}
+      - {"emma": "Seventy. What time does the shop close? What time does the shop close?", "say": "Seventy. What time does the shop cloze? What time does the shop cloze?", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "At ten o'clock in the evening.", "vi": "Mười giờ tối."}
+      - {"n": 72, "answer": "Can I have a receipt, please?", "vi": "Cho tôi xin hóa đơn."}
+      - {"n": 73, "answer": "Here you are.", "vi": "Của chị đây."}
+      - {"n": 74, "answer": "Is there a supermarket near here?", "vi": "Gần đây có siêu thị không?"}
+      - {"n": 75, "answer": "Yes, it's opposite the bank.", "vi": "Có, đối diện ngân hàng."}
+    lines:
+      - {"tom": "Seventy-one. At ten o'clock in the evening. At ten o'clock in the evening.", "focus": 0}
+      - {"emma": "Seventy-two. Can I have a receipt, please? Can I have a receipt, please?", "focus": 1, "reveal": [71]}
+      - {"tom": "Seventy-three. Here you are. Here you are.", "focus": 2, "reveal": [72]}
+      - {"emma": "Seventy-four. Is there a supermarket near here? Is there a supermarket near here?", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. Yes, it's opposite the bank. Yes, it's opposite the bank.", "focus": 4, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [75]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 38.", "say": "Well done! See you in Unit thirty-eight.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 38."}
+

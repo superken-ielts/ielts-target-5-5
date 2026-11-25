@@ -1,0 +1,309 @@
+# Video nghe – viết (dictation) Unit 40 · Bedroom and bathroom — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U40-bedroom-bathroom-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U40 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 40 có 39 mục: wash (danh từ, động từ) một khóa; single bed phủ single và bed, chest of drawers phủ
+# drawers, have a wash phủ have và wash, clean your teeth phủ clean và teeth.
+id: U40-bedroom-bathroom-dictation
+activity: U40-words
+title: "Unit 40 · Bedroom and bathroom"
+subtitle: "Dictation · listen and write: describing a bedroom and bathroom"
+title_vi: "Nghe – viết 10 phút: phòng ngủ và phòng tắm — từ trong sách, từ thêm, câu giao tiếp"
+tag: "PLACES · UNIT 40"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 40: Bedroom and bathroom. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty: Bedroom and bathroom. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 40: phòng ngủ và phòng tắm. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 34 words from the book. You hear each word twice, and then an example sentence twice. Then 16 more useful words, and 29 useful sentences for conversation.", "say": "There are three parts. First, thirty-four words from the book. You hear each word twice, and then an example sentence twice. Then sixteen more useful words, and twenty-nine useful sentences for conversation.", "vi": "Ba phần: 34 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 16 từ thêm, 29 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "single bed", "vi": "giường đơn", "ex": "Our rooms have a single bed.", "w": ["single", "bed"]}
+      - {"n": 2, "answer": "bedside table", "vi": "bàn đầu giường", "ex": "My phone is on the bedside table.", "w": ["bedside table"]}
+      - {"n": 3, "answer": "desk", "vi": "bàn học", "ex": "My desk is tidy, but my room isn't!", "w": ["desk"]}
+      - {"n": 4, "answer": "chest of drawers", "vi": "tủ ngăn kéo", "ex": "My T-shirts are in the chest of drawers.", "w": ["chest of drawers", "drawers"]}
+      - {"n": 5, "answer": "wardrobe", "vi": "tủ quần áo", "ex": "Hang your clothes in the wardrobe.", "w": ["wardrobe"]}
+      - {"n": 6, "answer": "blanket", "vi": "chăn", "ex": "It's cold. I need another blanket.", "w": ["blanket"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. single bed. single bed. Our rooms have a single bed. Our rooms have a single bed.", "focus": 0}
+      - {"emma": "Two. bedside table. bedside table. My phone is on the bedside table. My phone is on the bedside table.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. desk. desk. My desk is tidy, but my room isn't! My desk is tidy, but my room isn't!", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. chest of drawers. chest of drawers. My T-shirts are in the chest of drawers. My T-shirts are in the chest of drawers.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. wardrobe. wardrobe. Hang your clothes in the wardrobe. Hang your clothes in the wardrobe.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. blanket. blanket. It's cold. I need another blanket. It's cold. I need another blanket.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "sheet", "vi": "ga trải giường", "ex": "Students must bring their own sheets.", "w": ["sheet"]}
+      - {"n": 8, "answer": "towel", "vi": "khăn tắm", "ex": "Don't forget your towel.", "w": ["towel"]}
+      - {"n": 9, "answer": "bath", "vi": "bồn tắm", "ex": "We haven't got a bath in our flat.", "w": ["bath"]}
+      - {"n": 10, "answer": "shower", "vi": "vòi sen", "ex": "I have a shower every morning.", "w": ["shower"]}
+      - {"n": 11, "answer": "washbasin", "vi": "bồn rửa mặt", "ex": "Wash your hands in the washbasin.", "w": ["washbasin"]}
+      - {"n": 12, "answer": "mirror", "vi": "gương", "ex": "There's a long mirror in my bathroom.", "w": ["mirror"]}
+    lines:
+      - {"emma": "Seven. sheet. sheet. Students must bring their own sheets. Students must bring their own sheets.", "focus": 0}
+      - {"emma": "Eight. towel. towel. Don't forget your towel. Don't forget your towel.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. bath. bath. We haven't got a bath in our flat. We haven't got a bath in our flat.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. shower. shower. I have a shower every morning. I have a shower every morning.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. washbasin. washbasin. Wash your hands in the washbasin. Wash your hands in the washbasin.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. mirror. mirror. There's a long mirror in my bathroom. There's a long mirror in my bathroom.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "toilet", "vi": "bồn cầu, nhà vệ sinh", "ex": "Where's the toilet, please?", "w": ["toilet"]}
+      - {"n": 14, "answer": "bidet", "vi": "bồn rửa vệ sinh", "ex": "Each bathroom has a bidet.", "w": ["bidet"]}
+      - {"n": 15, "answer": "have a wash", "vi": "rửa ráy", "ex": "I have a wash after work.", "w": ["have", "wash"]}
+      - {"n": 16, "answer": "soap", "vi": "xà phòng", "ex": "Wash your hands with soap.", "w": ["soap"]}
+      - {"n": 17, "answer": "clean your teeth", "vi": "đánh răng", "ex": "I clean my teeth after breakfast.", "w": ["clean", "teeth"]}
+      - {"n": 18, "answer": "toothpaste", "vi": "kem đánh răng", "ex": "We need some toothpaste.", "w": ["toothpaste"]}
+    lines:
+      - {"emma": "Thirteen. toilet. toilet. Where's the toilet, please? Where's the toilet, please?", "focus": 0}
+      - {"emma": "Fourteen. bidet. bidet. Each bathroom has a bidet. Each bathroom has a bidet.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. have a wash. have a wash. I have a wash after work. I have a wash after work.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. soap. soap. Wash your hands with soap. Wash your hands with soap.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. clean your teeth. clean your teeth. I clean my teeth after breakfast. I clean my teeth after breakfast.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. toothpaste. toothpaste. We need some toothpaste. We need some toothpaste.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "toothbrush", "vi": "bàn chải đánh răng", "ex": "I need a new toothbrush.", "w": ["toothbrush"]}
+      - {"n": 20, "answer": "wash your hair", "vi": "gội đầu", "ex": "I wash my hair almost every day.", "w": ["hair"]}
+      - {"n": 21, "answer": "shampoo", "vi": "dầu gội", "ex": "He washes his hair with expensive shampoo.", "w": ["shampoo"]}
+      - {"n": 22, "answer": "have a shave", "vi": "cạo râu", "ex": "Do you have a shave every morning?", "w": ["shave"]}
+      - {"n": 23, "answer": "razor", "vi": "dao cạo", "ex": "This razor is very sharp.", "w": ["razor"]}
+      - {"n": 24, "answer": "electric razor", "vi": "máy cạo râu", "ex": "Have you got an electric razor?", "w": ["electric razor"]}
+    lines:
+      - {"emma": "Nineteen. toothbrush. toothbrush. I need a new toothbrush. I need a new toothbrush.", "focus": 0}
+      - {"emma": "Twenty. wash your hair. wash your hair. I wash my hair almost every day. I wash my hair almost every day.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. shampoo. shampoo. He washes his hair with expensive shampoo. He washes his hair with expensive shampoo.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. have a shave. have a shave. Do you have a shave every morning? Do you have a shave every morning?", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. razor. razor. This razor is very sharp. This razor is very sharp.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. electric razor. electric razor. Have you got an electric razor? Have you got an electric razor?", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "do your hair", "vi": "chải tóc, làm tóc", "ex": "I do my hair with a brush.", "w": ["do"]}
+      - {"n": 26, "answer": "brush", "vi": "lược chải", "ex": "I must buy a brush.", "w": ["brush"]}
+      - {"n": 27, "answer": "comb", "vi": "lược", "ex": "I need a new comb.", "w": ["comb"]}
+      - {"n": 28, "answer": "make-up", "vi": "đồ trang điểm", "ex": "I only wear a little make-up for work.", "w": ["make-up"]}
+      - {"n": 29, "answer": "put on", "vi": "đánh (trang điểm), mặc vào", "ex": "She puts on make-up when she goes out.", "w": ["put something on"]}
+      - {"n": 30, "answer": "take off", "vi": "tẩy (trang điểm), cởi ra", "ex": "When you take off make-up, you use tissues.", "w": ["take off"]}
+    lines:
+      - {"emma": "Twenty-five. do your hair. do your hair. I do my hair with a brush. I do my hair with a brush.", "focus": 0}
+      - {"emma": "Twenty-six. brush. brush. I must buy a brush. I must buy a brush.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. comb. comb. I need a new comb. I need a new comb.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. make-up. make-up. I only wear a little make-up for work. I only wear a little make-up for work.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. put on. put on. She puts on make-up when she goes out. She puts on make-up when she goes out.", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. take off. take off. When you take off make-up, you use tissues. When you take off make-up, you use tissues.", "say": "Thirty. take off. take off. When you take off make-up, you yooz tissues. When you take off make-up, you yooz tissues.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (31–34)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 31, "answer": "tissue", "vi": "khăn giấy", "ex": "Do you want a tissue?", "w": ["tissue"]}
+      - {"n": 32, "answer": "perfume", "vi": "nước hoa", "ex": "I never use perfume.", "w": ["perfume"]}
+      - {"n": 33, "answer": "wear", "vi": "dùng (nước hoa), mặc", "ex": "I only wear perfume in the evening.", "w": ["wear"]}
+      - {"n": 34, "answer": "use", "vi": "dùng", "ex": "When you have a wash, you use soap.", "w": ["use"]}
+    lines:
+      - {"emma": "Thirty-one. tissue. tissue. Do you want a tissue? Do you want a tissue?", "focus": 0}
+      - {"emma": "Thirty-two. perfume. perfume. I never use perfume. I never use perfume.", "say": "Thirty-two. perfume. perfume. I never yooz perfume. I never yooz perfume.", "focus": 1, "reveal": [31]}
+      - {"emma": "Thirty-three. wear. wear. I only wear perfume in the evening. I only wear perfume in the evening.", "focus": 2, "reveal": [32]}
+      - {"emma": "Thirty-four. use. use. When you have a wash, you use soap. When you have a wash, you use soap.", "say": "Thirty-four. yooz. yooz. When you have a wash, you yooz soap. When you have a wash, you yooz soap.", "focus": 3, "reveal": [33]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [34]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "double bed", "vi": "giường đôi", "ex": "There's a double bed in my room."}
+      - {"n": 36, "answer": "pillow", "vi": "gối", "ex": "I like a soft pillow."}
+      - {"n": 37, "answer": "hairdryer", "vi": "máy sấy tóc", "ex": "Is there a hairdryer in the room?"}
+      - {"n": 38, "answer": "hot water", "vi": "nước nóng", "ex": "There's no hot water."}
+      - {"n": 39, "answer": "water heater", "vi": "bình nóng lạnh", "ex": "Turn on the water heater first."}
+      - {"n": 40, "answer": "air conditioning", "vi": "máy lạnh", "ex": "My bedroom has air conditioning."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-five. double bed. double bed. There's a double bed in my room. There's a double bed in my room.", "focus": 0}
+      - {"tom": "Thirty-six. pillow. pillow. I like a soft pillow. I like a soft pillow.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. hairdryer. hairdryer. Is there a hairdryer in the room? Is there a hairdryer in the room?", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. hot water. hot water. There's no hot water. There's no hot water.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. water heater. water heater. Turn on the water heater first. Turn on the water heater first.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. air conditioning. air conditioning. My bedroom has air conditioning. My bedroom has air conditioning.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "fan", "vi": "quạt", "ex": "I sleep with the fan on."}
+      - {"n": 42, "answer": "alarm clock", "vi": "đồng hồ báo thức", "ex": "My alarm clock rings at six."}
+      - {"n": 43, "answer": "untidy", "vi": "bừa bộn", "ex": "My room is very untidy."}
+      - {"n": 44, "answer": "hanger", "vi": "móc áo", "ex": "Put your shirt on a hanger."}
+      - {"n": 45, "answer": "toilet paper", "vi": "giấy vệ sinh", "ex": "We need some toilet paper."}
+      - {"n": 46, "answer": "blocked", "vi": "bị tắc", "ex": "The washbasin is blocked."}
+    lines:
+      - {"tom": "Forty-one. fan. fan. I sleep with the fan on. I sleep with the fan on.", "focus": 0}
+      - {"tom": "Forty-two. alarm clock. alarm clock. My alarm clock rings at six. My alarm clock rings at six.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. untidy. untidy. My room is very untidy. My room is very untidy.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. hanger. hanger. Put your shirt on a hanger. Put your shirt on a hanger.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. toilet paper. toilet paper. We need some toilet paper. We need some toilet paper.", "focus": 4, "reveal": [44]}
+      - {"tom": "Forty-six. blocked. blocked. The washbasin is blocked. The washbasin is blocked.", "focus": 5, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (47–50)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 47, "answer": "broken", "vi": "bị hỏng", "ex": "The shower is broken."}
+      - {"n": 48, "answer": "get dressed", "vi": "mặc quần áo", "ex": "I get dressed after breakfast."}
+      - {"n": 49, "answer": "pyjamas", "vi": "đồ ngủ", "ex": "I put on my pyjamas and go to bed."}
+      - {"n": 50, "answer": "bunk bed", "vi": "giường tầng", "ex": "There's a bunk bed in the students' room."}
+    lines:
+      - {"tom": "Forty-seven. broken. broken. The shower is broken. The shower is broken.", "focus": 0}
+      - {"tom": "Forty-eight. get dressed. get dressed. I get dressed after breakfast. I get dressed after breakfast.", "focus": 1, "reveal": [47]}
+      - {"tom": "Forty-nine. pyjamas. pyjamas. I put on my pyjamas and go to bed. I put on my pyjamas and go to bed.", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. bunk bed. bunk bed. There's a bunk bed in the students' room. There's a bunk bed in the students' room.", "focus": 3, "reveal": [49]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [50]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 51, "answer": "Do you have a bath or a shower?", "vi": "Bạn tắm bồn hay tắm vòi sen?"}
+      - {"n": 52, "answer": "A shower. It's quicker.", "vi": "Vòi sen. Nhanh hơn."}
+      - {"n": 53, "answer": "Can I use your bathroom?", "vi": "Mình dùng nhờ phòng tắm được không?"}
+      - {"n": 54, "answer": "Of course. It's the first door on the left.", "vi": "Tất nhiên. Cửa đầu tiên bên trái."}
+      - {"n": 55, "answer": "Hello, reception. Can I help you?", "vi": "Lễ tân xin nghe. Tôi giúp gì được ạ?"}
+      - {"n": 56, "answer": "Yes, the shower in my room doesn't work.", "vi": "Vâng, vòi sen trong phòng tôi bị hỏng."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-one. Do you have a bath or a shower? Do you have a bath or a shower?", "focus": 0}
+      - {"tom": "Fifty-two. A shower. It's quicker. A shower. It's quicker.", "focus": 1, "reveal": [51]}
+      - {"tom": "Fifty-three. Can I use your bathroom? Can I use your bathroom?", "say": "Fifty-three. Can I yooz your bathroom? Can I yooz your bathroom?", "focus": 2, "reveal": [52]}
+      - {"emma": "Fifty-four. Of course. It's the first door on the left. Of course. It's the first door on the left.", "focus": 3, "reveal": [53]}
+      - {"tom": "Fifty-five. Hello, reception. Can I help you? Hello, reception. Can I help you?", "focus": 4, "reveal": [54]}
+      - {"emma": "Fifty-six. Yes, the shower in my room doesn't work. Yes, the shower in my room doesn't work.", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 57, "answer": "I'm sorry. I'll send someone now.", "vi": "Xin lỗi chị. Tôi cho người lên ngay."}
+      - {"n": 58, "answer": "And there are no towels.", "vi": "Và không có khăn tắm."}
+      - {"n": 59, "answer": "No problem. I'll bring some.", "vi": "Không sao ạ. Tôi sẽ mang lên."}
+      - {"n": 60, "answer": "There's no hot water.", "vi": "Không có nước nóng."}
+      - {"n": 61, "answer": "Turn on the water heater first.", "vi": "Bật bình nóng lạnh trước đã."}
+      - {"n": 62, "answer": "What time do you get up?", "vi": "Bạn dậy lúc mấy giờ?"}
+    lines:
+      - {"tom": "Fifty-seven. I'm sorry. I'll send someone now. I'm sorry. I'll send someone now.", "focus": 0}
+      - {"emma": "Fifty-eight. And there are no towels. And there are no towels.", "focus": 1, "reveal": [57]}
+      - {"tom": "Fifty-nine. No problem. I'll bring some. No problem. I'll bring some.", "focus": 2, "reveal": [58]}
+      - {"emma": "Sixty. There's no hot water. There's no hot water.", "focus": 3, "reveal": [59]}
+      - {"tom": "Sixty-one. Turn on the water heater first. Turn on the water heater first.", "focus": 4, "reveal": [60]}
+      - {"emma": "Sixty-two. What time do you get up? What time do you get up?", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 63, "answer": "At six. Then I have a shower.", "vi": "Lúc sáu giờ. Rồi tắm."}
+      - {"n": 64, "answer": "Do you clean your teeth after breakfast?", "vi": "Bạn có đánh răng sau bữa sáng không?"}
+      - {"n": 65, "answer": "Yes, and before I go to bed.", "vi": "Có, và trước khi đi ngủ."}
+      - {"n": 66, "answer": "Have you got a comb?", "vi": "Bạn có lược không?"}
+      - {"n": 67, "answer": "There's one in the drawer.", "vi": "Có một cái trong ngăn kéo."}
+      - {"n": 68, "answer": "Is your room tidy?", "vi": "Phòng bạn có gọn không?"}
+    lines:
+      - {"tom": "Sixty-three. At six. Then I have a shower. At six. Then I have a shower.", "focus": 0}
+      - {"emma": "Sixty-four. Do you clean your teeth after breakfast? Do you clean your teeth after breakfast?", "focus": 1, "reveal": [63]}
+      - {"tom": "Sixty-five. Yes, and before I go to bed. Yes, and before I go to bed.", "focus": 2, "reveal": [64]}
+      - {"tom": "Sixty-six. Have you got a comb? Have you got a comb?", "focus": 3, "reveal": [65]}
+      - {"emma": "Sixty-seven. There's one in the drawer. There's one in the drawer.", "focus": 4, "reveal": [66]}
+      - {"emma": "Sixty-eight. Is your room tidy? Is your room tidy?", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "My desk is tidy, but my room isn't!", "vi": "Bàn học thì gọn, nhưng phòng thì không!"}
+      - {"n": 70, "answer": "Do you share a room?", "vi": "Bạn có ở chung phòng không?"}
+      - {"n": 71, "answer": "No, I've got my own room.", "vi": "Không, mình có phòng riêng."}
+      - {"n": 72, "answer": "Where can I put my clothes?", "vi": "Mình để quần áo ở đâu?"}
+      - {"n": 73, "answer": "In the wardrobe, or the chest of drawers.", "vi": "Trong tủ quần áo, hoặc tủ ngăn kéo."}
+      - {"n": 74, "answer": "I need some new shampoo.", "vi": "Mình cần mua dầu gội mới."}
+    lines:
+      - {"tom": "Sixty-nine. My desk is tidy, but my room isn't! My desk is tidy, but my room isn't!", "focus": 0}
+      - {"emma": "Seventy. Do you share a room? Do you share a room?", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. No, I've got my own room. No, I've got my own room.", "focus": 2, "reveal": [70]}
+      - {"tom": "Seventy-two. Where can I put my clothes? Where can I put my clothes?", "focus": 3, "reveal": [71]}
+      - {"emma": "Seventy-three. In the wardrobe, or the chest of drawers. In the wardrobe, or the chest of drawers.", "focus": 4, "reveal": [72]}
+      - {"emma": "Seventy-four. I need some new shampoo. I need some new shampoo.", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (75–79)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 75, "answer": "There's a chemist's downstairs.", "vi": "Dưới nhà có hiệu thuốc đấy."}
+      - {"n": 76, "answer": "What time do you go to bed?", "vi": "Bạn đi ngủ lúc mấy giờ?"}
+      - {"n": 77, "answer": "About eleven, after I study.", "vi": "Khoảng mười một giờ, sau khi học."}
+      - {"n": 78, "answer": "Is there a hairdryer in the room?", "vi": "Trong phòng có máy sấy tóc không?"}
+      - {"n": 79, "answer": "Yes, it's in the drawer.", "vi": "Có, ở trong ngăn kéo."}
+    lines:
+      - {"tom": "Seventy-five. There's a chemist's downstairs. There's a chemist's downstairs.", "focus": 0}
+      - {"emma": "Seventy-six. What time do you go to bed? What time do you go to bed?", "focus": 1, "reveal": [75]}
+      - {"tom": "Seventy-seven. About eleven, after I study. About eleven, after I study.", "focus": 2, "reveal": [76]}
+      - {"emma": "Seventy-eight. Is there a hairdryer in the room? Is there a hairdryer in the room?", "focus": 3, "reveal": [77]}
+      - {"tom": "Seventy-nine. Yes, it's in the drawer. Yes, it's in the drawer.", "focus": 4, "reveal": [78]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [79]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 41.", "say": "Well done! See you in Unit forty-one.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 41."}
+

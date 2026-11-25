@@ -657,6 +657,7 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
     module People từ đợt 29, Basic English (Unit 1–7) từ đợt 30 — mọi unit đều có. Video nghe – viết (đợt 36) có test riêng.
     Đợt 37: module Everyday life (Unit 17–23), unit khó 17, 19, 22; đợt 38: Food and drink (Unit 24–28), unit khó 26, 28;
     đợt 39: Getting around (Unit 29–33), unit khó 30, 32;
+    đợt 40: Places (Unit 34–41), unit khó 35, 38, 39;
     câu cuối cảnh `practice` nghỉ tối đa 1 giây để khoảng lặng (pause + gap + scene_gap) dưới 3 giây — người học: "video ko
     nên có pause quá 3 giây"."""
     built = {x["id"]: x for x in json.loads((OWS / "lessons" / "lessons.json").read_text(encoding="utf-8"))["lessons"]}
@@ -679,7 +680,7 @@ def test_word_skills_videos_are_7_to_10_minutes_without_countdown():
         assert any(s.image for s in lesson.scenes), lesson.id                                # hình trong sách
         if lesson.id[:3] >= "U17":                                                           # video từ đợt 37
             assert all((ln.pause or 0) + lesson.gap + lesson.scene_gap < 3.0 for s in lesson.scenes for ln in s.lines), lesson.id
-    assert hard == ["U10", "U13", "U14", "U16", "U17", "U19", "U22", "U26", "U28", "U30", "U32"]
+    assert hard == ["U10", "U13", "U14", "U16", "U17", "U19", "U22", "U26", "U28", "U30", "U32", "U35", "U38", "U39"]
 
 
 @pytest.mark.skipif(not (OWS / "lessons" / "lessons.json").exists(), reason="chưa có video Oxford Word Skills Basic")
@@ -753,6 +754,17 @@ SELF_PACED = {
                    {"a": "Did you have to wear a uniform?", "focus": 1, "pause": 1.5}]},
     ],
 }
+
+
+def test_blank_sentences_leave_room_for_long_number_labels():
+    """Đợt 40: nhãn "10a." dính vào chữ đầu câu ("10a.Heat the soup…"). Nhãn một – hai ký tự giữ cột câu ở L + 52 như cũ;
+    nhãn dài hơn thì cả cột câu lùi theo nhãn dài nhất, cách nhãn ít nhất 8 điểm ảnh."""
+    from PIL import Image, ImageDraw
+    from lesson_video.slides import font, text_col
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    assert text_col(d, [{"n": 9}, {"n": 12}, {"n": "2a"}], 52) == 52 + 52
+    long = text_col(d, [{"n": 9}, {"n": "10a"}, {"n": "10b"}], 52)
+    assert long >= 52 + 14 + d.textlength("10a.", font=font("bold", 22)) + 8
 
 
 def test_practice_without_wait_is_self_paced(tmp_path):

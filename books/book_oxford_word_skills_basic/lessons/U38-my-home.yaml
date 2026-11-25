@@ -1,0 +1,536 @@
+# Video Oxford Word Skills Basic · Unit 38 — I can talk about my home (sách in tr. 98–99, Answer key tr. 214).
+# UNIT KHÓ (đợt 40): 2 trang, hai phần — căn hộ trong tòa nhà (tầng, cầu thang, thang máy, ban công…) và nhà riêng (phòng, sơ đồ,
+# quảng cáo nhà, flat / house / home); "your home" là chủ đề IELTS Part 1–2 hay gặp, và thuê nhà là chủ đề thư GT Task 1 — video
+# khoảng 13 phút: phần sách, rồi nhà ở Việt Nam, câu khi thuê nhà, ÔN TẬP (lỗi hay gặp, tự kiểm tra tranh tòa nhà) và LUYỆN NÓI CHUNG (Part 2 "a home
+# you like", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây
+# (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 214. Bài 3 (Test yourself): hai cảnh tranh tòa nhà, đáp án hiện thành
+# nhãn khi Tom trả lời (phần ôn tập). Bài 6 (ABOUT YOU): Tom và Emma trả lời (cảnh Nói 1).
+# Hình trong sách: tranh tòa nhà (hai cảnh: nửa trên, nửa dưới; khung theo số), lời kể, sơ đồ nhà Bathford (khung theo phòng),
+# quảng cáo (khung theo dòng), Glossary (hai cảnh), Spotlight flat, house and home — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom ở chung căn hộ nhỏ gần trường với hai bạn (hồ sơ), không có phòng yêu
+# thích vì căn hộ quá nhỏ (IELTS U01), hiệu thuốc dưới căn hộ (U23), trạm xe buýt trước hiệu thuốc (U29), thỉnh thoảng đi xe máy (U32);
+# nhà ở Đà Lạt trên đồi nhìn xuống thung lũng (U36), bếp ấm cúng là phòng yêu thích (IELTS U01), ông trồng rau trong vườn (hồ sơ).
+# Emma ở căn hộ nhỏ tầng 8, ban công trồng rau thơm và cà chua, hàng xóm là cụ bà sống một mình (IELTS U01), bếp luôn bừa sau khi nấu
+# (U14), từ ban công thấy nhà cao tầng (U36), không đi xe máy (hồ sơ). Mới: căn hộ của Tom ở tầng ba, không có thang máy, ba phòng ngủ
+# nhỏ, bếp nhỏ, phòng tắm, phòng khách rất nhỏ, chỗ để xe máy ở tầng trệt; nhà ở Đà Lạt hai tầng (tầng dưới: bếp lớn, phòng khách, phòng
+# của ông; tầng trên: ba phòng ngủ, phòng tắm). Căn hộ của Emma: phòng khách, phòng ngủ, bếp nhỏ, phòng tắm; tòa nhà có thang máy, chỗ
+# để xe ở tầng hầm; ban đêm nhìn đèn thành phố.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U38-my-home.yaml
+id: U38-my-home
+activity: U38-words
+title: "Unit 38 · My home"
+subtitle: "I can talk about my home"
+title_vi: "Nhà ở: block of flats, ground floor, stairs, lift, balcony; living room, kitchen, utility room, garage; flat, house, home — kèm ôn tập và luyện nói"
+tag: "PLACES · UNIT 38"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 38: my home. Today: flats, houses, and rooms. Your home is a very common topic in the IELTS speaking test, so this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit thirty-eight: my home. Today: flats, houses, and rooms. Your home is a very common topic in the eye-elts speaking test, so this video is longer, with a review and speaking practice."
+        vi: "Unit 38: nhà của tôi — căn hộ, nhà riêng, các phòng; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Căn hộ (1)"
+    heading: "A · Flats (1)"
+    heading_vi: "Tranh trong sách tr. 98, nửa trên — block of flats · top floor · second floor · balcony · lift · stairs"
+    image: {pdf: course-book, page: 99, clip: [20, 92, 488, 258]}
+    items:
+      - {box: [22, 94, 158, 200]}
+      - {box: [126, 140, 394, 199]}
+      - {box: [186, 182, 364, 206]}
+      - {box: [380, 136, 432, 176]}
+      - {box: [414, 150, 468, 206]}
+      - {box: [126, 199, 394, 252]}
+      - {box: [356, 194, 408, 258]}
+    lines:
+      - {emma: "Look at page ninety-eight. Listen: I live in a block of flats near the town centre, in an area called Montpellier. I really like the flat, and my neighbour, Simon, is very friendly.", say: "Look at page ninety-eight. Listen: I live in a block of flats near the town centre, in an area called Mon-pel-yay. I really like the flat, and my neighbour, Simon, is very friendly.", focus: 0, vi: "block of flats: tòa nhà chung cư · town centre: trung tâm thị trấn · neighbour: hàng xóm"}
+      - {tom: "Number one: Miki and Ferdy live on the top floor.", say: "Number one: Miki and Ferdy liv on the top floor.", focus: 1, vi: "on the top floor: ở tầng trên cùng"}
+      - {emma: "Thirteen: a balcony. Ferdy's flat has got a balcony.", say: "Thir-teen: a balcony. Ferdy's flat has got a balcony.", focus: 2, vi: "balcony: ban công"}
+      - {tom: "Twelve: a flat: the rooms where one person or family lives.", say: "Twelve: a flat: the rooms where one person or family livz.", focus: 3, vi: "flat: căn hộ"}
+      - {emma: "Eleven: a lift. It takes you up and down.", focus: 4, vi: "lift (Anh) = elevator (Mỹ): thang máy"}
+      - {tom: "Two: Helen and Simon live on the second floor.", say: "Two: Helen and Simon liv on the second floor.", focus: 5}
+      - {emma: "And ten: the stairs.", focus: 6, vi: "stairs: cầu thang"}
+
+  - kind: figure
+    chapter: "Căn hộ (2)"
+    heading: "A · Flats (2)"
+    heading_vi: "Tranh tr. 98, nửa dưới — first floor · ground floor · garden · steps · basement · rubbish · front door"
+    image: {pdf: course-book, page: 99, clip: [20, 250, 488, 436]}
+    items:
+      - {box: [126, 252, 394, 302]}
+      - {box: [126, 302, 394, 354]}
+      - {box: [130, 352, 340, 420]}
+      - {box: [336, 342, 400, 368]}
+      - {box: [414, 330, 480, 378]}
+      - {box: [434, 336, 472, 362]}
+      - {box: [370, 298, 402, 356]}
+    lines:
+      - {tom: "Three: John and Lucy live on the first floor.", say: "Three: John and Lucy liv on the first floor.", focus: 0}
+      - {emma: "Four: Anna and Rob live on the ground floor. In British English, the ground floor is the floor at street level. Americans call it the first floor!", say: "Four: Anna and Rob liv on the ground floor. In British English, the ground floor is the floor at street level. Americans call it the first floor!", focus: 1, vi: "ground floor (Anh) = first floor (Mỹ): tầng trệt"}
+      - {tom: "Five: a garden.", focus: 2, vi: "garden: vườn"}
+      - {emma: "Six: the steps, in front of the front door.", focus: 3, vi: "steps: bậc thềm"}
+      - {tom: "Seven: the basement: a room or floor under the ground.", focus: 4, vi: "basement: tầng hầm"}
+      - {emma: "Eight: rubbish. It's uncountable.", focus: 5, vi: "rubbish (U): rác"}
+      - {tom: "And nine: the front door.", focus: 6, vi: "front door: cửa chính"}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · True or false? Write T or F."
+    heading_vi: "Ví dụ: Helen lives on the second floor. → T (Answer key tr. 214)"
+    image: {pdf: course-book, page: 99, clip: [120, 92, 488, 436]}
+    items:
+      - {n: 1, q: "John and Lucy live on the ground floor.  →  ___", answer: "F"}
+      - {n: 2, q: "Miki lives on the top floor.  →  ___", answer: "T"}
+      - {n: 3, q: "Anna lives on the first floor.  →  ___", answer: "F"}
+      - {n: 4, q: "They put their rubbish in the lift.  →  ___", answer: "F"}
+      - {n: 5, q: "Simon lives in the basement.  →  ___", answer: "F"}
+      - {n: 6, q: "Ferdy's flat has got a balcony.  →  ___", answer: "T"}
+      - {n: 7, q: "Rob's flat has got a garden.  →  ___", answer: "T"}
+      - {n: 8, q: "The steps are at the front door.  →  ___", answer: "T"}
+      - {n: 9, q: "Ferdy needs to use the stairs or lift.  →  ___", answer: "T"}
+    lines:
+      - emma: "Exercise 1. True or false? The example is: Helen lives on the second floor. True. Pause the video and try."
+        say: "Exercise one. True or false? The example is: Helen livz on the second floor. True. Pause the video and try."
+        vi: "Bài 1: đúng hay sai?"
+      - {tom: "One. False: they live on the first floor. Two. True. Three. False: Anna lives on the ground floor. Four. False: they put it in the basement.", say: "One. False: they liv on the first floor. Two. True. Three. False: Anna livz on the ground floor. Four. False: they put it in the basement.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. False: Simon lives on the second floor. Six. True. Seven. True. Eight. True. Nine. True: he lives on the top floor.", say: "Five. False: Simon livz on the second floor. Six. True. Seven. True. Eight. True. Nine. True: he livz on the top floor.", reveal: [5, 6, 7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành từ"
+    heading: "Exercise 2 · Complete the words"
+    heading_vi: "Ví dụ: l_ft → lift (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "b _ _ _ _ _ _ t", answer: "basement"}
+      - {n: 2, q: "b _ _ _ k  of  f _ _ _ s", answer: "block of flats"}
+      - {n: 3, q: "g _ _ _ _ d  f _ _ _ r", answer: "ground floor"}
+      - {n: 4, q: "f _ _ _ t  d _ _ r", answer: "front door"}
+      - {n: 5, q: "s _ _ _ _ s", answer: "stairs"}
+      - {n: 6, q: "g _ _ _ _ n", answer: "garden"}
+      - {n: 7, q: "s _ _ _ s", answer: "steps"}
+      - {n: 8, q: "n _ _ _ _ _ _ _ r", answer: "neighbour"}
+      - {n: 9, q: "b _ _ _ _ _ y", answer: "balcony"}
+      - {n: 10, q: "t _ _ n  c _ _ _ _ e", answer: "town centre"}
+    lines:
+      - emma: "Exercise 2. Complete the words. The example is lift. Pause the video and try."
+        say: "Exercise two. Complete the words. The example is lift. Pause the video and try."
+        vi: "Bài 2: hoàn thành từ."
+      - {tom: "One. Basement. Two. Block of flats. Three. Ground floor. Four. Front door. Five. Stairs.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. Garden. Seven. Steps. Eight. Neighbour: N, E, I, G, H, B, O, U, R. Nine. Balcony. Ten. Town centre.", say: "Six. Garden. Seven. Steps. Eight. Neighbour: en, ee, eye, gee, aitch, bee, oh, yoo, ar. Nine. Balcony. Ten. Town centre.", reveal: [6, 7, 8, 9, 10], focus: 9}
+
+  - kind: figure
+    chapter: "Nhà riêng: sơ đồ"
+    heading: "B · Houses: the plan"
+    heading_vi: "Sơ đồ nhà tr. 99 — tầng dưới (downstairs) và tầng trên (upstairs)"
+    image: {pdf: course-book, page: 100, clip: [50, 58, 304, 242]}
+    items:
+      - {box: [53, 96, 114, 163]}
+      - {box: [113, 100, 155, 163]}
+      - {box: [53, 61, 89, 97]}
+      - {box: [113, 61, 172, 102]}
+      - {box: [171, 61, 233, 126]}
+      - {box: [180, 143, 302, 240]}
+      - {box: [255, 145, 302, 176]}
+    lines:
+      - {emma: "Part B: houses. Look at the plan of a house. Downstairs: one, the living room.", focus: 0, vi: "downstairs: tầng dưới · living room: phòng khách"}
+      - {tom: "Two: the dining room, where you eat.", focus: 1, vi: "dining room: phòng ăn"}
+      - {emma: "Three: a study, a room for working or studying.", focus: 2, vi: "study: phòng làm việc"}
+      - {tom: "Four: the kitchen.", focus: 3}
+      - {emma: "And the garage, for the car.", focus: 4, vi: "garage: nhà để xe"}
+      - {tom: "Upstairs, there are four bedrooms: number five.", focus: 5, vi: "upstairs: tầng trên · bedroom: phòng ngủ"}
+      - {emma: "And six: the bathroom.", focus: 6}
+
+  - kind: figure
+    chapter: "Nhà riêng: quảng cáo"
+    heading: "B · Houses: the advert"
+    heading_vi: "Quảng cáo nhà ở Bathford tr. 99 — Emma đọc"
+    image: {pdf: course-book, page: 100, clip: [44, 226, 302, 310]}
+    items:
+      - {box: [48, 247, 300, 261]}
+      - {box: [48, 260, 300, 273]}
+      - {box: [48, 272, 300, 285]}
+      - {box: [48, 284, 300, 297]}
+      - {box: [48, 296, 300, 309]}
+    lines:
+      - {emma: "Read the advert. Bathford. Modern family house in this quiet village, with lovely views of the countryside.", say: "Read the advert. Bathford. Modern family house in this quiet village, with lovely views of the countryside.", focus: 0, vi: "modern: hiện đại · view: cảnh nhìn ra"}
+      - {emma: "Large living room, dining room, study,", focus: 1}
+      - {emma: "modern kitchen and utility room. Upstairs, there are four", focus: 2}
+      - {emma: "good-sized bedrooms, and a family bathroom. Outside, there", focus: 3}
+      - {emma: "is a large garden, a garage, and further parking for two cars.", focus: 4, vi: "parking: chỗ đỗ xe"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 99 — modern ≠ old · view · utility room · upstairs ≠ downstairs"
+    image: {pdf: course-book, page: 100, clip: [310, 42, 486, 178]}
+    items:
+      - {box: [312, 64, 484, 77]}
+      - {box: [312, 76, 484, 89]}
+      - {box: [312, 88, 484, 113]}
+      - {box: [312, 112, 484, 177]}
+    lines:
+      - {tom: "Look at the glossary. Modern: of the present time. The opposite is old.", focus: 0}
+      - {emma: "A view: what you see from the house.", focus: 1}
+      - {tom: "A utility room: a room where you do the washing, ironing, and so on.", focus: 2, vi: "utility room: phòng giặt ủi"}
+      - {emma: "Upstairs. The opposite is downstairs.", focus: 3}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 99 — outside ≠ inside · garage · parking"
+    image: {pdf: course-book, page: 100, clip: [310, 176, 486, 252]}
+    items:
+      - {box: [312, 178, 484, 203]}
+      - {box: [312, 202, 484, 227]}
+      - {box: [312, 226, 484, 251]}
+    lines:
+      - {tom: "Outside: not in a house or other building. The opposite is inside.", focus: 0, vi: "outside ≠ inside"}
+      - {emma: "A garage: a building where you park your car.", focus: 1}
+      - {tom: "And parking: a place where you can park, or leave, your car. Parking is uncountable.", focus: 2, vi: "park (v): đỗ xe · parking (U): chỗ đỗ xe"}
+
+  - kind: figure
+    chapter: "Spotlight: flat, house, home"
+    heading: "Spotlight · flat, house and home"
+    heading_vi: "tr. 99 — flat: căn hộ · house: nhà riêng · home: nơi bạn sống"
+    image: {pdf: course-book, page: 100, clip: [310, 266, 486, 366]}
+    items:
+      - {box: [312, 294, 484, 319]}
+      - {box: [312, 318, 484, 342]}
+      - {box: [312, 342, 484, 365]}
+    lines:
+      - {emma: "Look at the spotlight. A flat is a number of rooms on one floor of a building.", focus: 0}
+      - {tom: "A house is a building with rooms on two or more floors.", focus: 1}
+      - {emma: "And home is where you live, in a flat or a house. We say: I go home, not I go to home.", focus: 2, vi: "go home (không có to)"}
+
+  - kind: blanks
+    chapter: "Bài 4: tìm chỗ hết từ"
+    heading: "Exercise 4 · Find the end of each word"
+    heading_vi: "Ví dụ: study (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "studyviewmodernlivingroomtoiletkitchenhomeparking  →  ___", answer: "study · view · modern · living room · toilet · kitchen · home · parking"}
+      - {n: 2, q: "diningroomupstairsbedroomutilityroombathroom  →  ___", answer: "dining room · upstairs · bedroom · utility room · bathroom"}
+    lines:
+      - emma: "Exercise 4. Find the end of each word. The first one is study. Pause the video and try."
+        say: "Exercise four. Find the end of each word. The first one is study. Pause the video and try."
+        vi: "Bài 4: tìm chỗ kết thúc mỗi từ."
+      - {tom: "Study, view, modern, living room, toilet, kitchen, home, parking.", reveal: [1], focus: 0}
+      - {tom: "Dining room, upstairs, bedroom, utility room, bathroom.", reveal: [2], focus: 1}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành đoạn văn"
+    heading: "Exercise 5 · Complete the text (1–7)"
+    heading_vi: "Ví dụ: I live in a modern house (Answer key tr. 214)"
+    items:
+      - {n: 1, q: "It's got a ___ room, dining room, kitchen,", answer: "living"}
+      - {n: 2, q: "two bedrooms and a ___.", answer: "bathroom"}
+      - {n: 3, q: "From the living room I've only got a ___ of the railway station.", answer: "view"}
+      - {n: 4, q: "I leave my car on the street because I don't have a ___,", answer: "garage"}
+      - {n: 5, q: "but it's got a small ___,", answer: "garden"}
+      - {n: 6, q: "so I can eat ___ when it's warm.", answer: "outside"}
+      - {n: 7, q: "From the house he's got fantastic ___ of the countryside.", answer: "views"}
+    lines:
+      - emma: "Exercise 5. Complete the text. The example is: I live in a modern house. It's only four years old. Pause the video and try."
+        say: "Exercise five. Complete the text. The example is: I liv in a modern house. It's only four years old. Pause the video and try."
+        vi: "Bài 5: hoàn thành đoạn văn."
+      - {tom: "One. A living room. Two. A bathroom. Three. A view of the railway station. Four. I don't have a garage.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. A small garden. Six. I can eat outside. Seven. Fantastic views of the countryside.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 5 (tiếp)"
+    heading: "Exercise 5 · Complete the text (8–14)"
+    heading_vi: "Answer key tr. 214"
+    items:
+      - {n: 8, q: "Downstairs there's a living room, dining room, large ___", answer: "kitchen"}
+      - {n: 9, q: "and a ___ where my brother works.", answer: "study"}
+      - {n: 10, q: "___ there are four", answer: "Upstairs"}
+      - {n: 11, q: "four ___", answer: "bedrooms"}
+      - {n: 12, q: "and two ___, so there's lots of space.", answer: "bathrooms"}
+      - {n: 13, q: "There's also ___ for two cars, and a large garden.", answer: "parking"}
+      - {n: 14, q: "In the summer they eat ___ all the time.", answer: "outside"}
+    lines:
+      - {emma: "Now eight to fourteen. Pause the video and try.", focus: 0}
+      - {tom: "Eight. A large kitchen. Nine. A study, where my brother works. Ten. Upstairs. Eleven. Four bedrooms.", reveal: [8, 9, 10, 11], focus: 3}
+      - {tom: "Twelve. Two bathrooms. Thirteen. Parking for two cars. Fourteen. They eat outside.", say: "Twelve. Two bathrooms. Thir-teen. Parking for two cars. Four-teen. They eat outside.", reveal: [12, 13, 14], focus: 6}
+
+  - kind: qa
+    chapter: "Nói 1: nhà của bạn"
+    heading: "Speaking 1 · Exercise 6: about you"
+    heading_vi: "Bài 6 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Do you live in a house or a flat, Tom?"
+        a: "Here, I live in a flat with two friends. It's on the third floor, above a chemist's. There's no lift, so we use the stairs."
+        ask: emma
+        by: tom
+        phrases: ["It's on the … floor", "There's no lift, so…"]
+      - q: "What rooms have you got in your home?"
+        a: "Three small bedrooms, a small kitchen, a bathroom, and a tiny living room."
+        ask: emma
+        by: tom
+        phrases: ["… , a small … , and a tiny…"]
+      - q: "Have you got parking?"
+        a: "Only for motorbikes, on the ground floor."
+        ask: emma
+        by: tom
+        phrases: ["Only for…"]
+      - q: "And you, Emma? Which floor are you on?"
+        a: "I live in a block of flats, on the eighth floor, so I always take the lift."
+        ask: tom
+        by: emma
+        phrases: ["on the … floor", "so I always…"]
+      - q: "Have you got a garden?"
+        a: "No, but I've got a little balcony, where I grow herbs and tomatoes."
+        ask: tom
+        by: emma
+        phrases: ["No, but I've got…", "where I grow…"]
+      - q: "What's the view? Is it nice?"
+        a: "It's mostly tall buildings. But at night, the city lights are beautiful."
+        ask: tom
+        by: emma
+        phrases: ["It's mostly…", "But at night…"]
+    lines:
+      - {emma: "Exercise 6 is about you. Tom, do you live in a house or a flat?", say: "Exercise six is about you. Tom, do you liv in a house or a flat?", focus: 0}
+      - {tom: "Here, I live in a flat with two friends. It's on the third floor, above a chemist's. There's no lift, so we use the stairs.", say: "Here, I liv in a flat with two friends. It's on the third floor, above a chemist's. There's no lift, so we yooz the stairs.", reveal: 0, vi: "Ở đây Tom ở căn hộ với hai bạn, tầng ba, trên hiệu thuốc; không có thang máy nên đi cầu thang."}
+      - {emma: "What rooms have you got in your home?", focus: 1}
+      - {tom: "Three small bedrooms, a small kitchen, a bathroom, and a tiny living room.", reveal: 1, vi: "Ba phòng ngủ nhỏ, bếp nhỏ, phòng tắm, phòng khách rất nhỏ."}
+      - {emma: "Have you got parking?", focus: 2}
+      - {tom: "Only for motorbikes, on the ground floor.", reveal: 2, vi: "Chỉ có chỗ để xe máy ở tầng trệt."}
+      - {tom: "And you, Emma? Which floor are you on?", focus: 3}
+      - {emma: "I live in a block of flats, on the eighth floor, so I always take the lift.", say: "I liv in a block of flats, on the eighth floor, so I always take the lift.", reveal: 3, vi: "Emma ở chung cư, tầng tám, nên luôn đi thang máy."}
+      - {tom: "Have you got a garden?", focus: 4}
+      - {emma: "No, but I've got a little balcony, where I grow herbs and tomatoes.", reveal: 4, vi: "Không, nhưng có ban công nhỏ trồng rau thơm và cà chua."}
+      - {tom: "What's the view? Is it nice?", focus: 5}
+      - {emma: "It's mostly tall buildings. But at night, the city lights are beautiful.", reveal: 5, vi: "Chủ yếu là nhà cao tầng; nhưng ban đêm đèn thành phố rất đẹp."}
+
+  - kind: bullets
+    chapter: "Nhà ở Việt Nam"
+    heading: "Homes in Vietnam"
+    heading_vi: "Thêm ngoài sách — tả nhà ở Việt Nam bằng tiếng Anh"
+    items:
+      - {en: "a tube house: tall and narrow, with three or four floors", vi: "nhà ống: cao và hẹp, ba bốn tầng"}
+      - {en: "a shop on the ground floor, and the family lives upstairs", vi: "tầng trệt bán hàng, gia đình ở tầng trên"}
+      - {en: "the motorbikes are inside, in the living room, at night", vi: "ban đêm xe máy để trong phòng khách"}
+      - {en: "a family altar · a rooftop garden", vi: "bàn thờ gia đình · vườn trên sân thượng"}
+      - {en: "a modern block of flats with a lift, a car park and a security guard", vi: "chung cư hiện đại có thang máy, bãi xe, bảo vệ"}
+    lines:
+      - {tom: "In Vietnamese cities, many people live in a tube house: it's tall and narrow, with three or four floors.", say: "In Vietnamese cities, many people liv in a tube house: it's tall and narrow, with three or four floors.", focus: 0, vi: "tube house: nhà ống"}
+      - {emma: "Often, there's a shop on the ground floor, and the family lives upstairs.", say: "Often, there's a shop on the ground floor, and the family livz upstairs.", focus: 1}
+      - {tom: "At night, people bring their motorbikes inside, into the living room!", focus: 2}
+      - {emma: "Many homes have a family altar, and some have a small garden on the roof: a rooftop garden.", focus: 3, vi: "altar: bàn thờ · rooftop: sân thượng"}
+      - {tom: "And in big cities, there are more and more modern blocks of flats, with a lift, a car park, and a security guard.", focus: 4, vi: "security guard: bảo vệ"}
+
+  - kind: bullets
+    chapter: "Thuê nhà"
+    heading: "Renting a flat · useful words"
+    heading_vi: "Thêm ngoài sách — hay gặp ở thư IELTS General Training Task 1"
+    items:
+      - {en: "the landlord · the rent · a deposit · the bills", vi: "chủ nhà · tiền thuê · tiền cọc · hóa đơn (điện, nước)"}
+      - {en: "a furnished flat · a two-bedroom flat", vi: "căn hộ có đồ đạc · căn hộ hai phòng ngủ"}
+      - {en: "Is the rent per month? Are the bills included?", vi: "Tiền thuê tính theo tháng? Đã gồm hóa đơn chưa?"}
+      - {en: "The lift is out of order, and the tap in the kitchen doesn't work.", vi: "Thang máy hỏng, vòi nước ở bếp không chạy."}
+      - {en: "Could you send someone to fix it, please?", vi: "Ông / bà cho người đến sửa giúp được không?"}
+    lines:
+      - {emma: "In IELTS General Training writing, you often write a letter to a landlord: the person who owns the flat. You pay the rent every month, and a deposit at the start.", say: "In eye-elts General Training writing, you often write a letter to a landlord: the person who owns the flat. You pay the rent every month, and a deposit at the start.", focus: 0, vi: "landlord: chủ nhà · rent: tiền thuê · deposit: tiền cọc"}
+      - {tom: "A furnished flat has furniture: beds, a sofa, a table. A two-bedroom flat has two bedrooms.", focus: 1, vi: "furnished: có sẵn đồ đạc"}
+      - {emma: "Useful questions: is the rent per month? Are the bills included?", focus: 2, vi: "included: đã bao gồm"}
+      - {tom: "And for a problem: the lift is out of order, and the tap in the kitchen doesn't work.", focus: 3}
+      - {emma: "Could you send someone to fix it, please? That's a polite request for your letter.", focus: 4}
+
+  - kind: figure
+    chapter: "Ôn tập: tự kiểm tra (1)"
+    heading: "Review · Exercise 3: test yourself (1)"
+    heading_vi: "Che danh sách từ, nhìn tranh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 99, clip: [160, 92, 488, 258]}
+    items:
+      - {box: [186, 182, 364, 206]}
+      - {box: [186, 182, 364, 206], label: "a balcony"}
+      - {box: [414, 150, 468, 206]}
+      - {box: [414, 150, 468, 206], label: "a lift"}
+      - {box: [356, 194, 408, 258]}
+      - {box: [356, 194, 408, 258], label: "the stairs"}
+    lines:
+      - {emma: "Let's review. Exercise 3 is a test. Cover the words, and name the things in the picture. Pause the video after each question. What's thirteen?", say: "Let's review. Exercise three is a test. Cover the words, and name the things in the picture. Pause the video after each question. What's thir-teen?", focus: 0}
+      - {tom: "A balcony.", focus: 1}
+      - {emma: "Eleven?", focus: 2}
+      - {tom: "A lift.", focus: 3}
+      - {emma: "Ten?", focus: 4}
+      - {tom: "The stairs.", focus: 5}
+
+  - kind: figure
+    chapter: "Ôn tập: tự kiểm tra (2)"
+    heading: "Review · Exercise 3: test yourself (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 99, clip: [120, 250, 488, 436]}
+    items:
+      - {box: [414, 330, 480, 378]}
+      - {box: [414, 330, 480, 378], label: "the basement"}
+      - {box: [336, 342, 400, 368]}
+      - {box: [336, 342, 400, 368], label: "the steps"}
+      - {box: [370, 298, 402, 356]}
+      - {box: [370, 298, 402, 356], label: "the front door"}
+      - {box: [126, 302, 394, 354]}
+      - {box: [126, 302, 394, 354], label: "the ground floor"}
+    lines:
+      - {emma: "Seven?", focus: 0}
+      - {tom: "The basement.", focus: 1}
+      - {emma: "Six?", focus: 2}
+      - {tom: "The steps.", focus: 3}
+      - {emma: "Nine?", focus: 4}
+      - {tom: "The front door.", focus: 5}
+      - {emma: "And where do Anna and Rob live?", say: "And where do Anna and Rob liv?", focus: 6}
+      - {tom: "On the ground floor.", focus: 7}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về nhà — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "I live in the third floor.  →  ___", answer: "I live on the third floor."}
+      - {n: 2, q: "I usually go to home at six.  →  ___", answer: "I usually go home at six."}
+      - {n: 3, q: "My flat has two bedroom.  →  ___", answer: "My flat has two bedrooms."}
+      - {n: 4, q: "There's a garden in front my house.  →  ___", answer: "There's a garden in front of my house."}
+      - {n: 5, q: "The view from my room is very beauty.  →  ___", answer: "The view from my room is very beautiful."}
+      - {n: 6, q: "We have a lift, but I always go by stair.  →  ___", answer: "We have a lift, but I always take the stairs."}
+    lines:
+      - emma: "These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. On the third floor, not in. Two. Go home, with no to.", reveal: [1, 2], focus: 1, vi: "on the third floor · go home"}
+      - {tom: "Three. Two bedrooms, with an S. Four. In front of my house.", say: "Three. Two bedrooms, with an ess. Four. In front of my house.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. Very beautiful: we need an adjective. Six. I always take the stairs, or use the stairs.", say: "Five. Very beautiful: we need an adjective. Six. I always take the stairs, or yooz the stairs.", reveal: [5, 6], focus: 5}
+
+  - kind: bullets
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a home you like"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - {en: "You should say: where it is", vi: "nó ở đâu"}
+      - {en: "what it looks like", vi: "nó trông thế nào"}
+      - {en: "who lives there", vi: "ai sống ở đó"}
+      - {en: "and explain why you like it", vi: "và giải thích vì sao bạn thích nó"}
+    lines:
+      - emma: "Now, general speaking practice, like part two of the IELTS speaking test. Here's your card. Describe a home you like."
+        say: "Now, general speaking practice, like part two of the eye-elts speaking test. Here's your card. Describe a home you like."
+        vi: "Luyện nói chung kiểu Part 2: một ngôi nhà bạn thích."
+      - {emma: "You should say where it is,", focus: 0}
+      - {emma: "what it looks like,", focus: 1}
+      - {emma: "who lives there,", say: "who livz there,", focus: 2}
+      - {emma: "and explain why you like it.", focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Tom's talk"
+    heading_vi: "Bài nói mẫu của Tom — nhà ở Đà Lạt"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about my family's house in Da Lat. It's on a hill, about ten minutes from the city centre, and from the garden you can see the valley."
+        say: "I'd like to talk about my family's house in Dah Lot. It's on a hill, about ten minutes from the city centre, and from the garden you can see the valley."
+        note: "where"
+      - text: "It's a house with two floors. Downstairs, there's a big kitchen, a living room, and my grandfather's bedroom. Upstairs, there are three bedrooms and a bathroom."
+        note: "what it looks like"
+      - text: "My grandfather, my parents, and my little brother Bao live there. Outside, there's a big garden, where my grandfather grows vegetables."
+        say: "My grandfather, my parents, and my little brother Bao liv there. Outside, there's a big garden, where my grandfather grows vegetables."
+        note: "who lives there"
+      - text: "I like it because it's quiet and warm, and the kitchen is my favourite room: it's where we eat and talk. It's always home to me."
+        note: "why"
+    lines:
+      - {emma: "All right? Can you start speaking now, please?", focus: 0}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about my flat in Ho Chi Minh City. It's in a modern block of flats, about fifteen minutes from my school."
+        say: "I'd like to talk about my flat in Ho Chee Min City. It's in a modern block of flats, about fifteen minutes from my school."
+        note: "where"
+      - text: "It's on the eighth floor. It's small: a living room, a bedroom, a little kitchen, and a bathroom. But it has a lovely balcony."
+        note: "what it looks like"
+      - text: "I live there alone, but I'm never lonely: my neighbour is an old lady, and we often chat. She gives me delicious soup!"
+        say: "I liv there alone, but I'm never lonely: my neighbour is an old lady, and we often chat. She gives me delicious soup!"
+        note: "who lives there"
+      - text: "I like it because I can grow herbs and tomatoes on the balcony, and at night the view of the city lights is beautiful. My kitchen is always a mess, but it's my home!"
+        note: "why"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a home you like.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a home you like"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "Where is it?", hint: "I'd like to talk about … · It's in / near …"}
+      - {q: "What does it look like?", hint: "It's a house with … floors / a flat on the … floor · Downstairs / Upstairs there's …"}
+      - {q: "Who lives there?", hint: "My … and … live there. · I live there alone / with …"}
+      - {q: "Why do you like it?", hint: "I like it because … · My favourite room is … because …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use the words for rooms and floors from this unit."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz the words for rooms and floors from this unit."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "Where is it?", focus: 0, pause: 0.5}
+      - {emma: "What does it look like?", focus: 1, pause: 0.5}
+      - {emma: "Who lives there?", say: "Who livz there?", focus: 2, pause: 0.5}
+      - {emma: "Why do you like it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · homes"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Is it better to live in a house or a flat?"
+        a: "A house has more space and often a garden, so it's better for families. But a flat is cheaper, safer, and usually closer to the city centre."
+        ask: emma
+        by: tom
+        phrases: ["… has more space…", "But a flat is…"]
+      - q: "Why do many young people rent a flat?"
+        a: "Because buying a home is very expensive in big cities. And young people often move for work or study."
+        ask: tom
+        by: emma
+        phrases: ["Because buying … is very expensive", "And young people often…"]
+      - q: "How have homes changed in your country?"
+        a: "In the past, big families lived together in one house. Now, more people live in modern flats in tall buildings, with lifts and car parks."
+        ask: emma
+        by: tom
+        phrases: ["In the past, …", "Now, more people…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Is it better to live in a house or a flat?", say: "Let's finish with some discussion questions. Is it better to liv in a house or a flat?", focus: 0}
+      - {tom: "A house has more space and often a garden, so it's better for families. But a flat is cheaper, safer, and usually closer to the city centre.", reveal: 0, vi: "Nhà riêng rộng, thường có vườn — hợp gia đình; căn hộ rẻ hơn, an toàn hơn, gần trung tâm hơn."}
+      - {tom: "Why do many young people rent a flat?", focus: 1}
+      - {emma: "Because buying a home is very expensive in big cities. And young people often move for work or study.", reveal: 1, vi: "Mua nhà ở thành phố lớn rất đắt; người trẻ hay chuyển chỗ vì việc làm, học hành."}
+      - {emma: "How have homes changed in your country?", focus: 2}
+      - {tom: "In the past, big families lived together in one house. Now, more people live in modern flats in tall buildings, with lifts and car parks.", say: "In the past, big families lived together in one house. Now, more people liv in modern flats in tall buildings, with lifts and car parks.", reveal: 2, vi: "Trước đây đại gia đình sống chung một nhà; giờ nhiều người ở căn hộ hiện đại trong nhà cao tầng."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 3: che chữ tr. 98, nhìn tranh, nói tên"
+    items:
+      - {en: "a block of flats · a flat · the town centre · a neighbour", vi: "chung cư · căn hộ · trung tâm · hàng xóm"}
+      - {en: "on the ground / first / second / top floor · in the basement", vi: "tầng"}
+      - {en: "the front door · the steps · the stairs · the lift · a balcony · a garden · rubbish (U)", vi: "các phần của tòa nhà"}
+      - {en: "living room · dining room · study · kitchen · utility room · bedroom · bathroom · garage", vi: "các phòng"}
+      - {en: "upstairs ≠ downstairs · outside ≠ inside · a view · parking (U) · flat / house / home", vi: "từ khác"}
+      - {en: "Next: Unit 39 · The kitchen", vi: "Tiếp theo: Unit 39 · Căn bếp"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A block of flats, a flat, the town centre, and a neighbour.", focus: 0}
+      - {tom: "On the ground floor, the first floor, the second floor, or the top floor. In the basement.", focus: 1}
+      - {emma: "The front door, the steps, the stairs, the lift, a balcony, a garden, and rubbish.", focus: 2}
+      - {tom: "The living room, dining room, study, kitchen, utility room, bedroom, bathroom, and garage.", focus: 3}
+      - {emma: "Upstairs and downstairs, outside and inside, a view, parking. And remember: I go home.", focus: 4}
+      - {tom: "Next time, Unit 39: the kitchen. See you then!", say: "Next time, Unit thirty-nine: the kitchen. See you then!", focus: 5}
