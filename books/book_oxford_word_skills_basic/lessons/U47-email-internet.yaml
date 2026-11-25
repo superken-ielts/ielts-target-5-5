@@ -1,0 +1,434 @@
+# Video Oxford Word Skills Basic · Unit 47 — I can use email and the internet (sách in tr. 120–121, Answer key tr. 216). Unit cuối
+# module Study and work: tổng kết module, nhắc làm Review tr. 122–125.
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–6. Bài 1, 2, 4, 5 theo Answer key tr. 216 (bài 2: câu đúng hiện đủ, từ còn thiếu nói rõ). Bài 3 (ABOUT YOU):
+# Emma hỏi Tom, Tom hỏi Emma (cảnh Nói 1). Bài 6 (ABOUT YOU, cột ABOUT YOU của bảng): Tom và Emma trả lời sáu câu (cảnh Nói 2).
+# Thêm ngoài sách: câu hay dùng khi viết email (IELTS General Training, Writing Task 1), internet ngày nay (sách in năm 2008:
+# chatroom, MP3 player nay ít dùng — group chat, stream, Wi-Fi, social media); Nghe và viết; Nói 3 (Part 1 "The internet").
+# Hình trong sách: màn hình email (hai cảnh: thanh công cụ và hộp thư đến, thư của Karl), lời Jan và Lucy, Glossary A, bảng câu hỏi
+# về internet (hai cảnh, khung theo hàng), Glossary B hai cảnh — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom là sinh viên, gọi video về nhà mỗi Chủ nhật (U17, U46), hay đặt hàng
+# qua ứng dụng (U37); Emma dạy cả trực tuyến (U45), dùng webcam gọi cho bố mẹ (U46). Mới: Tom ít gửi email (hai ba thư một tuần, cho
+# thầy cô và công ty khi tìm việc), hay nhắn tin trên điện thoại; mua quần áo, sách qua ứng dụng; đọc tin trên ứng dụng; không tải
+# nhạc nữa mà nghe trực tuyến. Emma nhận nhiều thư rác (vé máy bay rẻ, du lịch miễn phí), học viên gửi bài tập dạng tệp đính kèm, trả
+# lời trong ngày nhưng không trả lời cuối tuần; có internet băng thông rộng khá nhanh; hay vào YouTube và một trang tin của Anh;
+# không vào phòng chat, chỉ nhắn tin với bạn bè.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U47-email-internet.yaml
+id: U47-email-internet
+activity: U47-words
+title: "Unit 47 · Email and the internet"
+subtitle: "I can use email and the internet"
+title_vi: "Email và internet: check your emails, send, receive, reply to, forward, attachment, delete, junk; online, website, broadband, download, search engine"
+tag: "STUDY AND WORK · UNIT 47"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 47: email and the internet. Today: how to talk about emails, and about what you do online. This is the last unit in the Study and work module."
+        say: "Welcome to Unit forty-seven: email and the internet. Today: how to talk about emails, and about what you do online. This is the last unit in the Study and work module."
+        vi: "Unit 47: email và internet — unit cuối của module Study and work."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Hộp thư đến"
+    heading: "A · Email: Lucy's inbox"
+    heading_vi: "tr. 120 — Delete · Junk · Reply · Reply All · Forward · New · Get Mail; inbox"
+    image: {pdf: course-book, page: 121, clip: [36, 92, 394, 202]}
+    items:
+      - {box: [42, 94, 392, 116]}
+      - {box: [40, 117, 244, 130]}
+      - {box: [40, 150, 244, 166]}
+      - {box: [40, 166, 244, 182]}
+      - {box: [40, 182, 244, 198]}
+    lines:
+      - {emma: "Look at page one hundred and twenty: Lucy's email. The buttons at the top: delete, junk, reply, reply all, forward, new, and get mail.", focus: 0, vi: "delete: xóa · junk: thư rác · reply: trả lời · forward: chuyển tiếp"}
+      - {tom: "This is Lucy's inbox: the place for the emails she receives.", focus: 1, vi: "inbox: hộp thư đến · receive: nhận"}
+      - {emma: "A message from Karl Muller, about a meeting. It came today, at ten twelve, with an attachment.", focus: 2, vi: "message: thư, tin nhắn · attachment: tệp đính kèm"}
+      - {tom: "A message from Alice Rees: my new car!", focus: 3}
+      - {emma: "And one from Walkers: free holidays. That's junk mail: emails from companies that you don't want.", focus: 4, vi: "junk mail: thư rác"}
+
+  - kind: figure
+    chapter: "Thư của Karl"
+    heading: "A · Email: Karl's message"
+    heading_vi: "tr. 120 — From · Subject · Date · To; send it on; email address; attachment"
+    image: {pdf: course-book, page: 121, clip: [242, 116, 482, 264]}
+    items:
+      - {box: [244, 120, 478, 165]}
+      - {box: [244, 174, 478, 222]}
+      - {box: [244, 221, 478, 242]}
+      - {box: [244, 242, 478, 260]}
+    lines:
+      - {tom: "Karl's message: from Karl Muller, subject: meeting, date: the sixteenth of April, to Lucy Atkins.", focus: 0, vi: "subject: chủ đề · date: ngày"}
+      - {emma: "Hi Lucy. Here's the information about the meeting in London on Friday. Could you send it on to Mark, please? I haven't got his email address.", focus: 1, vi: "send it on: gửi tiếp · email address: địa chỉ email"}
+      - {tom: "Thanks, Karl.", focus: 2}
+      - {emma: "And the attachment: London meeting.", focus: 3}
+
+  - kind: figure
+    chapter: "Jan và Lucy"
+    heading: "A · Jan and Lucy"
+    heading_vi: "tr. 120 — check your emails · send · attachment · forward · get an email from · reply to"
+    image: {pdf: course-book, page: 121, clip: [24, 266, 420, 307]}
+    items:
+      - {box: [26, 268.5, 418, 281]}
+      - {box: [26, 280.5, 418, 292]}
+      - {box: [26, 292, 418, 305]}
+    lines:
+      - {tom: "Jan asks: have you checked your emails this morning?", focus: 0, vi: "check your emails: xem email"}
+      - {emma: "Lucy: yes, Karl sent me an email with an attachment, and I have to forward it to Mark.", focus: 1, vi: "send (sent): gửi · forward it to: chuyển tiếp cho"}
+      - {emma: "And I got an email from Alice about her new car. I'll reply to it later.", focus: 2, vi: "get an email from: nhận email từ · reply to: trả lời"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 120 — check your emails · send (sent) · get an email (= receive) · reply to an email"
+    image: {pdf: course-book, page: 121, clip: [324, 330, 486, 462]}
+    items:
+      - {box: [328, 353, 484, 377]}
+      - {box: [328, 377, 484, 412.5]}
+      - {box: [328, 413, 484, 437]}
+      - {box: [328, 437, 484, 460.5]}
+    lines:
+      - {tom: "Look at the glossary. Check your emails: look and see if you have any email messages.", focus: 0}
+      - {emma: "Send, past tense sent: if you send someone an email, you write it, and then send it to the person.", focus: 1, vi: "send → sent"}
+      - {tom: "Get an email: if someone sends you an email, you get it. We also say: receive.", focus: 2, vi: "get = receive: nhận"}
+      - {emma: "And reply to an email: write an answer to a message, and send it.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 1: đúng hay sai?"
+    heading: "Exercise 1 · True or false? Write T or F"
+    heading_vi: "Ví dụ: There are two messages in Lucy's inbox. → F (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "Lucy received two junk mail messages.  →  ___", answer: "F"}
+      - {n: 2, q: "Lucy has to send an attachment to Mark.  →  ___", answer: "T"}
+      - {n: 3, q: "There's an attachment with Alice's email.  →  ___", answer: "F"}
+      - {n: 4, q: "Lucy sent Karl an email.  →  ___", answer: "F"}
+      - {n: 5, q: "Lucy hasn't deleted Alice's message.  →  ___", answer: "T"}
+      - {n: 6, q: "Lucy will reply to Walkers' email.  →  ___", answer: "F"}
+      - {n: 7, q: "Lucy got an email from Karl.  →  ___", answer: "T"}
+      - {n: 8, q: "Karl has got Mark's email address.  →  ___", answer: "F"}
+    lines:
+      - emma: "Exercise 1. True or false? The example is: there are two messages in Lucy's inbox. False: there are three. Pause the video and try."
+        say: "Exercise one. True or false? The example is: there are two messages in Lucy's inbox. False: there are three. Pause the video and try."
+        vi: "Bài 1: đúng hay sai?"
+      - {tom: "One. False: only one, from Walkers. Two. True: she has to forward it. Three. False: the attachment is with Karl's email. Four. False: Karl sent Lucy an email.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. True. Six. False: it's junk mail. Seven. True. Eight. False: he hasn't got Mark's address.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: thiếu một từ"
+    heading: "Exercise 2 · One word is missing. Where from?"
+    heading_vi: "Ví dụ: I have to delete the junk mail. (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "I must reply Jean's message.  →  ___", answer: "I must reply to Jean's message."}
+      - {n: 2, q: "Did you my message?  →  ___", answer: "Did you get / receive my message?"}
+      - {n: 3, q: "I received an from Li today.  →  ___", answer: "I received an email from Li today."}
+      - {n: 4, q: "Have you checked your?  →  ___", answer: "Have you checked your emails / messages?"}
+      - {n: 5, q: "Forward the attachment John.  →  ___", answer: "Forward the attachment to John."}
+      - {n: 6, q: "She Tia an email yesterday.  →  ___", answer: "She sent Tia an email yesterday."}
+    lines:
+      - emma: "Exercise 2. One word is missing. Where from? The example is: I have to delete the junk mail. Pause the video and try."
+        say: "Exercise two. One word is missing. Where from? The example is: I have to delete the junk mail. Pause the video and try."
+        vi: "Bài 2: mỗi câu thiếu một từ — thiếu ở đâu?"
+      - {tom: "One. Reply to: I must reply to Jean's message. Two. Did you get, or receive, my message? Three. I received an email from Li today.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Have you checked your emails, or messages? Five. Forward the attachment to John. Six. She sent Tia an email yesterday.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 1: email của bạn"
+    heading: "Speaking 1 · Exercise 3: about you"
+    heading_vi: "Bài 3 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "How often do you send emails, Tom?"
+        a: "Not very often: two or three a week. I usually send messages on my phone."
+        ask: emma
+        by: tom
+        phrases: ["Not very often:", "I usually send messages on…"]
+      - q: "Who do you send them to?"
+        a: "My teachers at university, and sometimes companies, when I look for a job."
+        ask: emma
+        by: tom
+        phrases: ["My teachers…", "when I look for a job"]
+      - q: "What kind of junk mail do you receive, Emma?"
+        a: "Lots! Adverts for cheap flights, and free holidays, like Lucy."
+        ask: tom
+        by: emma
+        phrases: ["Lots!", "Adverts for…"]
+      - q: "Do people send you attachments? What's in them?"
+        a: "Yes: my students send me their homework as attachments."
+        ask: tom
+        by: emma
+        phrases: ["Yes:", "… as attachments"]
+      - q: "Do you always reply to emails quickly?"
+        a: "I try to reply on the same day, but not at the weekend!"
+        ask: tom
+        by: emma
+        phrases: ["I try to…", "but not at the weekend"]
+    lines:
+      - {emma: "Exercise 3 is about you. Tom, how often do you send emails?", say: "Exercise three is about you. Tom, how often do you send emails?", focus: 0}
+      - {tom: "Not very often: two or three a week. I usually send messages on my phone.", reveal: 0, vi: "Ít khi: hai ba thư một tuần; thường nhắn tin trên điện thoại."}
+      - {emma: "Who do you send them to?", focus: 1}
+      - {tom: "My teachers at university, and sometimes companies, when I look for a job.", reveal: 1, vi: "Cho thầy cô ở trường, đôi khi cho công ty khi tìm việc."}
+      - {tom: "What kind of junk mail do you receive, Emma?", focus: 2}
+      - {emma: "Lots! Adverts for cheap flights, and free holidays, like Lucy.", reveal: 2, vi: "Rất nhiều: quảng cáo vé máy bay rẻ, du lịch miễn phí."}
+      - {tom: "Do people send you attachments? What's in them?", focus: 3}
+      - {emma: "Yes: my students send me their homework as attachments.", reveal: 3, vi: "Có: học viên gửi bài tập dạng tệp đính kèm."}
+      - {tom: "Do you always reply to emails quickly?", focus: 4}
+      - {emma: "I try to reply on the same day, but not at the weekend!", reveal: 4, vi: "Cố trả lời trong ngày, nhưng cuối tuần thì không."}
+
+  - kind: figure
+    chapter: "Internet (1)"
+    heading: "B · The internet: questions and answers (1)"
+    heading_vi: "Bảng tr. 121 — email address · on the internet · web address · website · visit · broadband · fast"
+    image: {pdf: course-book, page: 122, clip: [30, 56, 329, 168]}
+    items:
+      - {box: [31, 75, 328, 91]}
+      - {box: [31, 91, 328, 107.2]}
+      - {box: [31, 107.2, 328, 135]}
+      - {box: [31, 135, 328, 151.2]}
+      - {box: [31, 151.2, 328, 167.5]}
+    lines:
+      - {emma: "Part B: the internet. What's your email address? It's louella at yahoo dot co dot uk.", say: "Part bee: the internet. What's your email address? It's loo-ella at yahoo dot co dot you kay.", focus: 0, vi: "@ = at · . = dot"}
+      - {tom: "Do you buy things on the internet? Yes, I buy books.", focus: 1, vi: "on the internet (không nói on internet)"}
+      - {emma: "What's a web address for news in your country? It's www dot bbc dot co dot uk slash news.", say: "What's a web address for news in your country? It's double-yoo double-yoo double-yoo dot bee bee see dot co dot you kay slash news.", focus: 2, vi: "web address: địa chỉ trang web"}
+      - {tom: "Which websites do you visit most? eBay and MySpace.", focus: 3, vi: "visit a website: vào trang web"}
+      - {emma: "Have you got broadband? Yes, it's very fast.", focus: 4, vi: "broadband: internet băng thông rộng"}
+
+  - kind: figure
+    chapter: "Internet (2)"
+    heading: "B · The internet: questions and answers (2)"
+    heading_vi: "Bảng tr. 121 — go online · use the internet · chatroom · chat online · download · MP3 player · search engine"
+    image: {pdf: course-book, page: 122, clip: [30, 166, 329, 257]}
+    items:
+      - {box: [31, 167.5, 328, 195]}
+      - {box: [31, 195, 328, 211.3]}
+      - {box: [31, 211.3, 328, 239]}
+      - {box: [31, 239, 328, 255]}
+    lines:
+      - {tom: "How often do you go online? I use the internet every evening.", say: "How often do you go online? I yooz the internet every evening.", focus: 0, vi: "go online: lên mạng"}
+      - {emma: "Do you visit chatrooms? Yes, I often chat online.", focus: 1, vi: "chatroom: phòng chat · chat: trò chuyện"}
+      - {tom: "Do you download music onto your computer? Yes, or I download it onto my MP3 player.", focus: 2, vi: "download: tải về · MP3 player: máy nghe nhạc MP3"}
+      - {emma: "Which search engines do you use? I use Google and Yahoo.", say: "Which search engines do you yooz? I yooz Google and Yahoo.", focus: 3, vi: "search engine: công cụ tìm kiếm"}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 121 — on the internet · web address · broadband · fast (quick) ≠ slow · online"
+    image: {pdf: course-book, page: 122, clip: [335, 268, 496, 398]}
+    items:
+      - {box: [337, 291, 494, 302.5]}
+      - {box: [337, 303, 494, 313.5]}
+      - {box: [337, 314.5, 494, 362.5]}
+      - {box: [337, 363, 494, 387]}
+      - {box: [337, 387, 494, 397]}
+    lines:
+      - {tom: "Look at the glossary. On the internet: not on internet. We need the.", focus: 0}
+      - {emma: "A web address is an internet address.", focus: 1}
+      - {tom: "Broadband: with a broadband connection, you can get information from the internet very fast.", focus: 2, vi: "connection: kết nối"}
+      - {emma: "Fast, also quick. The opposite is slow. A hundred and fifty kilometres an hour is fast for cars; twenty is slow.", focus: 3, vi: "fast = quick ≠ slow"}
+      - {tom: "Online: on the internet.", focus: 4}
+
+  - kind: figure
+    chapter: "Glossary (3)"
+    heading: "Glossary (3)"
+    heading_vi: "tr. 121 — chatroom · chat · download · data · MP3 player"
+    image: {pdf: course-book, page: 122, clip: [335, 397, 496, 520]}
+    items:
+      - {box: [337, 398.5, 494, 447]}
+      - {box: [337, 447, 494, 495]}
+      - {box: [337, 495, 494, 519]}
+    lines:
+      - {emma: "A chatroom: a place on the internet where people read and reply to messages, usually about a subject, for example cars, or music. The verb is chat.", focus: 0}
+      - {tom: "Download: if you download information from the internet, you copy it to your computer. The information is called data.", focus: 1, vi: "data: dữ liệu"}
+      - {emma: "And an MP3 player: a small machine you can listen to music on, for example an iPod.", say: "And an em pee three player: a small machine you can listen to music on, for example an eye pod.", focus: 2}
+
+  - kind: blanks
+    chapter: "Bài 4: giống hay khác?"
+    heading: "Exercise 4 · Is the meaning the same (S) or different (D)?"
+    heading_vi: "Ví dụ: online / on the internet → S (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "web address / email address  →  ___", answer: "D"}
+      - {n: 2, q: "visit a website / go to a website  →  ___", answer: "S"}
+      - {n: 3, q: "a search engine / a website  →  ___", answer: "D"}
+      - {n: 4, q: "fast / quick  →  ___", answer: "S"}
+      - {n: 5, q: "MP3 player / CD player  →  ___", answer: "D"}
+      - {n: 6, q: "download songs / copy songs from the internet  →  ___", answer: "S"}
+      - {n: 7, q: "go online / use the internet  →  ___", answer: "S"}
+      - {n: 8, q: "visit a chatroom / chat online  →  ___", answer: "S"}
+      - {n: 9, q: "broadband / download  →  ___", answer: "D"}
+      - {n: 10, q: "data / computer information  →  ___", answer: "S"}
+    lines:
+      - emma: "Exercise 4. Is the meaning the same, or different? The example is: online, and on the internet: the same. Pause the video and try."
+        say: "Exercise four. Is the meaning the same, or different? The example is: online, and on the internet: the same. Pause the video and try."
+        vi: "Bài 4: nghĩa giống (S) hay khác (D)?"
+      - {tom: "One. Different. Two. Same. Three. Different: a search engine helps you find websites. Four. Same. Five. Different.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. Same. Seven. Same. Eight. Same. Nine. Different: broadband is a fast connection. Ten. Same: data is computer information.", reveal: [6, 7, 8, 9, 10], focus: 9}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành câu"
+    heading: "Exercise 5 · Complete the sentences"
+    heading_vi: "Ví dụ: Have you got an MP3 player? (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "We use different ___ engines.", answer: "search"}
+      - {n: 2, q: "It's not very expensive to ___ music from the internet.", answer: "download"}
+      - {n: 3, q: "Do you spend a lot of time ___ the internet?", answer: "on / using"}
+      - {n: 4, q: "I'd like to get ___ because my internet connection is very slow.", answer: "broadband"}
+      - {n: 5, q: "My favourite ___ is eBay.", answer: "website"}
+      - {n: 6, q: "You can ___ websites or chatrooms.", answer: "visit"}
+    lines:
+      - emma: "Exercise 5. Complete the sentences. The example is: have you got an MP3 player? Pause the video and try."
+        say: "Exercise five. Complete the sentences. The example is: have you got an em pee three player? Pause the video and try."
+        vi: "Bài 5: hoàn thành câu."
+      - {tom: "One. Search engines. Two. Download music. Three. On the internet, or using the internet.", say: "One. Search engines. Two. Download music. Three. On the internet, or yoozing the internet.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Four. Broadband. Five. My favourite website. Six. You can visit websites or chatrooms.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: qa
+    chapter: "Nói 2: internet và bạn"
+    heading: "Speaking 2 · Exercise 6: about you"
+    heading_vi: "Bài 6 (ABOUT YOU) — câu hỏi trong bảng; tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Do you buy things on the internet, Tom?"
+        a: "Yes, I buy clothes and books on a shopping app. It's cheap, and they deliver fast."
+        ask: emma
+        by: tom
+        phrases: ["Yes, I buy … on…", "It's cheap, and…"]
+      - q: "How often do you go online?"
+        a: "All the time! My phone is always online."
+        ask: emma
+        by: tom
+        phrases: ["All the time!"]
+      - q: "Do you download music onto your computer?"
+        a: "Not any more. I listen to music online, on my phone."
+        ask: emma
+        by: tom
+        phrases: ["Not any more.", "I listen to … online"]
+      - q: "Which websites do you visit most, Emma?"
+        a: "YouTube, and a news website from England."
+        ask: tom
+        by: emma
+        phrases: ["…, and a … website from…"]
+      - q: "Have you got broadband?"
+        a: "Yes, and it's quite fast. I need it for my online lessons."
+        ask: tom
+        by: emma
+        phrases: ["Yes, and it's quite…", "I need it for…"]
+      - q: "Do you visit chatrooms?"
+        a: "No, never. But I chat with my friends on my phone every day."
+        ask: tom
+        by: emma
+        phrases: ["No, never.", "But I chat with…"]
+    lines:
+      - {emma: "Exercise 6 is about you. Answer the questions in the table. Tom, do you buy things on the internet?", say: "Exercise six is about you. Answer the questions in the table. Tom, do you buy things on the internet?", focus: 0}
+      - {tom: "Yes, I buy clothes and books on a shopping app. It's cheap, and they deliver fast.", reveal: 0, vi: "Có: mua quần áo, sách qua ứng dụng — rẻ, giao nhanh."}
+      - {emma: "How often do you go online?", focus: 1}
+      - {tom: "All the time! My phone is always online.", reveal: 1, vi: "Lúc nào cũng online: điện thoại luôn kết nối."}
+      - {emma: "Do you download music onto your computer?", focus: 2}
+      - {tom: "Not any more. I listen to music online, on my phone.", reveal: 2, vi: "Không tải nữa, nghe nhạc trực tuyến trên điện thoại."}
+      - {tom: "Which websites do you visit most, Emma?", focus: 3}
+      - {emma: "YouTube, and a news website from England.", reveal: 3, vi: "YouTube và một trang tin của Anh."}
+      - {tom: "Have you got broadband?", focus: 4}
+      - {emma: "Yes, and it's quite fast. I need it for my online lessons.", reveal: 4, vi: "Có, khá nhanh — cần cho các lớp trực tuyến."}
+      - {tom: "Do you visit chatrooms?", focus: 5}
+      - {emma: "No, never. But I chat with my friends on my phone every day.", reveal: 5, vi: "Không bao giờ, nhưng ngày nào cũng nhắn tin với bạn bè."}
+
+  - kind: bullets
+    chapter: "Viết email kiểu IELTS"
+    heading: "Writing an email: useful phrases"
+    heading_vi: "Thêm ngoài sách — IELTS General Training, Writing Task 1 (thư, email)"
+    items:
+      - {en: "Dear Mr Smith, · Hi Karl,", vi: "mở đầu: trang trọng · thân mật"}
+      - {en: "I'm writing to ask about … / to tell you about …", vi: "nêu lý do viết"}
+      - {en: "Could you please send me …? · I've attached …", vi: "đề nghị · đính kèm"}
+      - {en: "I look forward to hearing from you.", vi: "mong nhận được hồi âm"}
+      - {en: "Best wishes, · Kind regards,", vi: "kết thư"}
+    lines:
+      - {emma: "In the IELTS General Training test, writing task one is a letter, or an email. Start with: Dear Mister Smith, for a formal email, or Hi Karl, for a friend.", say: "In the eye-elts General Training test, writing task one is a letter, or an email. Start with: Dear Mister Smith, for a formal email, or Hi Karl, for a friend.", focus: 0, vi: "formal: trang trọng"}
+      - {tom: "Then say why you're writing: I'm writing to ask about the meeting.", focus: 1}
+      - {emma: "Could you please send me the information? I've attached my report.", focus: 2}
+      - {tom: "At the end: I look forward to hearing from you.", focus: 3}
+      - {emma: "And finish with: best wishes, or kind regards.", focus: 4}
+
+  - kind: bullets
+    chapter: "Internet ngày nay"
+    heading: "The internet today"
+    heading_vi: "Thêm ngoài sách — sách in năm 2008; ngày nay người ta hay nói thế này"
+    items:
+      - {en: "a chatroom → a group chat · chat online → send messages", vi: "nhóm chat · nhắn tin"}
+      - {en: "an MP3 player → a music app · download music → stream music", vi: "ứng dụng nghe nhạc · nghe trực tuyến"}
+      - {en: "broadband → Wi-Fi, 4G / 5G · What's the Wi-Fi password?", vi: "wifi, mạng di động"}
+      - {en: "social media: post a photo · share a link · follow someone", vi: "mạng xã hội: đăng ảnh, chia sẻ, theo dõi"}
+      - {en: "a video call · an online lesson · online shopping", vi: "gọi video · học trực tuyến · mua sắm trực tuyến"}
+    lines:
+      - {emma: "This book is from two thousand and eight. Today, we don't often say chatroom. We say a group chat, and we send messages.", focus: 0, vi: "sách in năm 2008"}
+      - {tom: "MP3 players are old now. People use a music app, and they stream music: they listen online, without downloading.", say: "MP3 players are old now. People yooz a music app, and they stream music: they listen online, without downloading.", focus: 1, vi: "stream: phát trực tuyến"}
+      - {emma: "At home, we say Wi-Fi more than broadband. In a café, ask: what's the Wi-Fi password?", focus: 2}
+      - {tom: "On social media, you post a photo, share a link, and follow people.", focus: 3, vi: "social media: mạng xã hội"}
+      - {emma: "And we have video calls, online lessons, and online shopping.", focus: 4}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · email and the internet"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "I've checked my ___.", answer: "emails"}
+      - {n: 2, q: "There's an ___ with the email.", answer: "attachment"}
+      - {n: 3, q: "Please ___ it to Mark.", answer: "forward"}
+      - {n: 4, q: "I always ___ junk mail.", answer: "delete"}
+      - {n: 5, q: "Which ___ do you visit most?", answer: "websites"}
+      - {n: 6, q: "I ___ music from the internet.", answer: "download"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. I've checked my emails.", focus: 0}
+      - {emma: "Number two. There's an attachment with the email.", focus: 1}
+      - {emma: "Number three. Please forward it to Mark.", focus: 2}
+      - {emma: "Number four. I always delete junk mail.", focus: 3}
+      - {emma: "Number five. Which websites do you visit most?", focus: 4}
+      - {emma: "Number six. I download music from the internet.", focus: 5}
+      - {tom: "Emails, with an S. Attachment: A, double T, A, C, H, M, E, N, T. Forward: F, O, R, W, A, R, D.", say: "Emails, with an ess. Attachment: eigh, double tee, eigh, see, aitch, em, ee, en, tee. Forward: ef, oh, ar, double-yoo, eigh, ar, dee.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Delete: D, E, L, E, T, E. Websites: one word. Download: one word.", say: "Delete: dee, ee, el, ee, tee, ee. Websites: one word. Download: one word.", reveal: [4, 5, 6], focus: 5}
+
+  - kind: practice
+    chapter: "Nói 3: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: The internet"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "How often do you use the internet?", hint: "Every day · all the time · for about … hours a day"}
+      - {q: "What do you usually do online?", hint: "I watch … · I read … · I chat with … · I buy …"}
+      - {q: "Do you prefer emails or text messages? Why?", hint: "I prefer … because they're quicker / more formal"}
+      - {q: "Do you buy things online?", hint: "Yes, I buy … on … · No, I prefer shops because …"}
+      - {q: "Is the internet good for children?", hint: "Yes, because … · But they shouldn't …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about the internet. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about the internet. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về internet."
+      - {emma: "How often do you use the internet?", say: "How often do you yooz the internet?", focus: 0, pause: 0.5}
+      - {emma: "What do you usually do online?", focus: 1, pause: 0.5}
+      - {emma: "Do you prefer emails, or text messages? Why?", focus: 2, pause: 0.5}
+      - {emma: "Do you buy things online?", focus: 3, pause: 0.5}
+      - {emma: "Is the internet good for children?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary · end of the Study and work module"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 2 và bài 4 không nhìn đáp án"
+    items:
+      - {en: "check your emails · send (sent) · get / receive an email · reply to · forward … to · delete", vi: "email (1)"}
+      - {en: "inbox · message · attachment · junk mail · email address", vi: "email (2)"}
+      - {en: "on the internet · online · go online · website · web address · visit · search engine", vi: "internet (1)"}
+      - {en: "broadband · fast = quick ≠ slow · download · data · chatroom · chat", vi: "internet (2)"}
+      - {en: "Study and work: my school · university · jobs · describing a job · computers · email and the internet", vi: "module Study and work: Unit 42–47"}
+      - {en: "Next: Review · Study and work (pages 122–125)", vi: "Tiếp theo: ôn tập module, tr. 122–125"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Check your emails, send, get or receive an email, reply to it, forward it to someone, or delete it.", focus: 0}
+      - {tom: "Your inbox, a message, an attachment, junk mail, and your email address.", focus: 1}
+      - {emma: "On the internet, online, go online, a website, a web address, visit, and a search engine.", focus: 2}
+      - {tom: "Broadband is fast, or quick, not slow. Download data. Chat in a chatroom.", focus: 3}
+      - {emma: "In this module, we talked about school, university, jobs, computers, and the internet.", focus: 4}
+      - {tom: "That's the end of the Study and work module. Next, do the review on pages one hundred and twenty-two to one hundred and twenty-five. See you then!", focus: 5}

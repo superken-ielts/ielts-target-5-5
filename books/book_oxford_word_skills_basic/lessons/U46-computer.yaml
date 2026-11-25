@@ -1,0 +1,453 @@
+# Video Oxford Word Skills Basic · Unit 46 — I can talk about using a computer (sách in tr. 118–119, Answer key tr. 216).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–7. Bài 1, 2, 5, 6 theo Answer key tr. 216 (bài 2 câu 5 và bài 6 câu 2 có hai chỗ trống: 5a/5b, 2a/2b). Bài 3
+# (ABOUT YOU): Emma hỏi Tom, Tom hỏi Emma (cảnh Nói 1). Bài 4 (Test yourself): tranh máy tính 1–13 (hai cảnh), đáp án hiện thành nhãn
+# khi Tom trả lời. Bài 7 (Test yourself): bảy biểu tượng (hai cảnh, cắt bỏ chữ dưới hình), đáp án hiện thành nhãn.
+# Thêm ngoài sách: máy tính ngày nay (smartphone, tablet, charger, the cloud, password) và phím tắt (Ctrl + C / X / V / S / P); Nói 2
+# (Part 1 "Computers").
+# Hình trong sách: tranh máy tính 13 mục (khung theo đồ vật), Spotlight keep, bảy biểu tượng, sáu câu dùng máy tính (khung theo câu),
+# Glossary hai cảnh — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom là sinh viên, gọi về nhà mỗi Chủ nhật (U17); Emma dạy cả trực tuyến
+# (U45). Mới: Tom chỉ có một máy tính xách tay cũ, để trong ba lô vì ngày nào cũng mang lên trường, in tài liệu ở thư viện trường, máy
+# có webcam để gọi video về nhà; Emma có máy tính xách tay và máy in nhỏ ở nhà để in phiếu bài tập, lưu ảnh gia đình ở Anh và ảnh đi
+# chơi ở Việt Nam, dùng webcam để dạy trực tuyến và gọi cho bố mẹ.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U46-computer.yaml
+id: U46-computer
+activity: U46-words
+title: "Unit 46 · Using a computer"
+subtitle: "I can talk about using a computer"
+title_vi: "Dùng máy tính: screen, keyboard, mouse, printer, laptop, memory stick; open, save, cut, copy, paste, print, click on, a backup copy"
+tag: "STUDY AND WORK · UNIT 46"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 46: using a computer. Today: the parts of a computer, and what we do when we write and save a document."
+        say: "Welcome to Unit forty-six: using a computer. Today: the parts of a computer, and what we do when we write and save a document."
+        vi: "Unit 46: dùng máy tính — các bộ phận, các thao tác khi soạn và lưu văn bản."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Máy tính (1)"
+    heading: "A · The computer (1)"
+    heading_vi: "Tranh tr. 118 — 1 webcam · 2 printer · 3 laptop · 4 hard drive · 5 screen · 6 monitor · 7 disk"
+    image: {pdf: course-book, page: 119, clip: [32, 88, 472, 202]}
+    items:
+      - {box: [198, 88, 234, 110]}
+      - {box: [312, 92, 400, 148]}
+      - {box: [56, 116, 132, 200]}
+      - {box: [126, 87, 202, 162]}
+      - {box: [202, 100, 246, 160]}
+      - {box: [198, 96, 268, 174]}
+      - {box: [262, 132, 290, 162]}
+    lines:
+      - {emma: "Look at page one hundred and eighteen: a PC, or personal computer. Number one: a webcam, a small camera.", say: "Look at page one hundred and eighteen: a PC, or personal computer. Number one: a webcam, a small camera.", focus: 0, vi: "PC (personal computer): máy tính cá nhân · webcam"}
+      - {tom: "Two: a printer.", focus: 1, vi: "printer: máy in"}
+      - {emma: "Three: a laptop, a small computer you can carry.", focus: 2, vi: "laptop: máy tính xách tay"}
+      - {tom: "Four: the hard drive. The information in your computer is on the hard drive.", focus: 3, vi: "hard drive: ổ cứng"}
+      - {emma: "Five: the screen.", focus: 4, vi: "screen: màn hình (mặt hiển thị)"}
+      - {tom: "Six: the monitor.", focus: 5, vi: "monitor: màn hình (cả khối)"}
+      - {emma: "Seven: a disk.", focus: 6, vi: "disk: đĩa"}
+
+  - kind: figure
+    chapter: "Máy tính (2)"
+    heading: "A · The computer (2)"
+    heading_vi: "Tranh tr. 118 — 8 mouse · 9 hard copy / printout · 10 memory stick · 11 speaker · 12 keyboard · 13 mouse mat"
+    image: {pdf: course-book, page: 119, clip: [32, 88, 472, 202]}
+    items:
+      - {box: [258, 160, 292, 178]}
+      - {box: [318, 128, 378, 160]}
+      - {box: [46, 182, 90, 200]}
+      - {box: [168, 178, 214, 202]}
+      - {box: [214, 166, 290, 200]}
+      - {box: [276, 178, 312, 202]}
+    lines:
+      - {tom: "Eight: a mouse.", focus: 0, vi: "mouse: chuột"}
+      - {emma: "Nine: a hard copy, or a printout: the paper from the printer.", focus: 1, vi: "hard copy / printout: bản in"}
+      - {tom: "Ten: a memory stick.", focus: 2, vi: "memory stick: thẻ nhớ, USB"}
+      - {emma: "Eleven: a speaker. You listen to music with it.", focus: 3, vi: "speaker: loa"}
+      - {tom: "Twelve: the keyboard. You type with it.", focus: 4, vi: "keyboard: bàn phím"}
+      - {emma: "And thirteen: a mouse mat.", say: "And thir-teen: a mouse mat.", focus: 5, vi: "mouse mat: tấm lót chuột"}
+
+  - kind: figure
+    chapter: "Spotlight: keep"
+    heading: "Spotlight · keep"
+    heading_vi: "tr. 118 — keep: cất, để (ở chỗ nào đó)"
+    image: {pdf: course-book, page: 119, clip: [330, 202, 488, 278]}
+    items:
+      - {box: [332, 228.5, 486, 252]}
+      - {box: [332, 252.5, 486, 276.5]}
+    lines:
+      - {emma: "Look at the spotlight. Keep means: to put something in a place so that you know where it is.", focus: 0, vi: "keep: cất giữ"}
+      - {tom: "Where do you keep your passport? I keep it in a box under the bed.", focus: 1}
+      - {emma: "So: where do you keep your laptop? I keep it in my bag.", focus: 1}
+
+  - kind: blanks
+    chapter: "Bài 1: sửa chính tả"
+    heading: "Exercise 1 · Correct the spelling mistakes"
+    heading_vi: "Ví dụ: hard copie → hard copy (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "scream  →  ___", answer: "screen"}
+      - {n: 2, q: "maus  →  ___", answer: "mouse"}
+      - {n: 3, q: "personal commuter  →  ___", answer: "personal computer"}
+      - {n: 4, q: "memory stik  →  ___", answer: "memory stick"}
+      - {n: 5, q: "moniter  →  ___", answer: "monitor"}
+      - {n: 6, q: "keybord  →  ___", answer: "keyboard"}
+      - {n: 7, q: "disque  →  ___", answer: "disk"}
+      - {n: 8, q: "webcame  →  ___", answer: "webcam"}
+    lines:
+      - emma: "Exercise 1. Correct the spelling mistakes. The example is: hard copy, with a Y. Pause the video and try."
+        say: "Exercise one. Correct the spelling mistakes. The example is: hard copy, with a why. Pause the video and try."
+        vi: "Bài 1: sửa lỗi chính tả."
+      - {tom: "One. Screen: S, C, R, E, E, N. Scream is a loud noise! Two. Mouse: M, O, U, S, E. Three. Personal computer. Four. Memory stick: C, K at the end.", say: "One. Screen: ess, see, ar, ee, ee, en. Scream is a loud noise! Two. Mouse: em, oh, yoo, ess, ee. Three. Personal computer. Four. Memory stick: see, kay at the end.", reveal: [1, 2, 3, 4], focus: 3, vi: "scream: tiếng hét"}
+      - {tom: "Five. Monitor: O, R at the end. Six. Keyboard: B, O, A, R, D. Seven. Disk: D, I, S, K. Eight. Webcam, with no E.", say: "Five. Monitor: oh, ar at the end. Six. Keyboard: bee, oh, eigh, ar, dee. Seven. Disk: dee, eye, ess, kay. Eight. Webcam, with no ee.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành câu"
+    heading: "Exercise 2 · Complete the sentences"
+    heading_vi: "Ví dụ: You type information using the keyboard. (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "You listen to music using the ___.", answer: "speaker"}
+      - {n: 2, q: "You get ___ using the printer.", answer: "hard copies"}
+      - {n: 3, q: "The information in your computer is on the ___.", answer: "hard drive"}
+      - {n: 4, q: "A small computer you can carry is called a ___.", answer: "laptop"}
+      - {n: "5a", q: "You can keep a copy of information from your computer on a ___", answer: "memory stick"}
+      - {n: "5b", q: "or a ___.", answer: "disk"}
+      - {n: 6, q: "You move the ___ with your hand.", answer: "mouse"}
+      - {n: 7, q: "You put the mouse on the ___.", answer: "mouse mat"}
+      - {n: 8, q: "You read your emails on the ___.", answer: "screen"}
+    lines:
+      - emma: "Exercise 2. Complete the sentences. The example is: you type information using the keyboard. Pause the video and try."
+        say: "Exercise two. Complete the sentences. The example is: you type information using the keyboard. Pause the video and try."
+        vi: "Bài 2: hoàn thành câu."
+      - {tom: "One. The speaker. Two. You get hard copies using the printer. Three. The hard drive. Four. A laptop. Five. On a memory stick, or a disk.", reveal: ["1", "2", "3", "4", "5a", "5b"], focus: 5}
+      - {tom: "Six. You move the mouse with your hand. Seven. You put the mouse on the mouse mat. Eight. You read your emails on the screen.", reveal: ["6", "7", "8"], focus: 8}
+
+  - kind: qa
+    chapter: "Nói 1: máy tính của bạn"
+    heading: "Speaking 1 · Exercise 3: about you"
+    heading_vi: "Bài 3 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời, rồi nghe câu mẫu"
+    items:
+      - q: "Have you got a PC, Tom? If so, what kind is it?"
+        a: "No, I haven't. I've only got a laptop. It's quite old, but it works!"
+        ask: emma
+        by: tom
+        phrases: ["No, I haven't.", "I've only got a…"]
+      - q: "Have you got a printer? If so, how often do you use it?"
+        a: "No. When I need a hard copy, I print it at the university library."
+        ask: emma
+        by: tom
+        phrases: ["When I need…, I…"]
+      - q: "Where do you keep your laptop?"
+        a: "I keep it in my bag, because I take it to university every day."
+        ask: emma
+        by: tom
+        phrases: ["I keep it in…", "because…"]
+      - q: "Do you keep photos on your computer, Emma? If so, what kind of photos?"
+        a: "Yes, lots: photos of my family in England, and of my trips around Vietnam."
+        ask: tom
+        by: emma
+        phrases: ["Yes, lots:", "photos of…"]
+      - q: "Have you got a webcam? If so, what do you use it for?"
+        a: "My laptop has one. I use it for my online lessons, and to call my parents."
+        ask: tom
+        by: emma
+        phrases: ["… has one.", "I use it for… and to…"]
+    lines:
+      - {emma: "Exercise 3 is about you. Tom, have you got a PC? If so, what kind is it?", say: "Exercise three is about you. Tom, have you got a PC? If so, what kind is it?", focus: 0}
+      - {tom: "No, I haven't. I've only got a laptop. It's quite old, but it works!", reveal: 0, vi: "Không có máy để bàn, chỉ có máy xách tay cũ nhưng vẫn chạy tốt."}
+      - {emma: "Have you got a printer? If so, how often do you use it?", say: "Have you got a printer? If so, how often do you yooz it?", focus: 1}
+      - {tom: "No. When I need a hard copy, I print it at the university library.", reveal: 1, vi: "Không; cần bản in thì in ở thư viện trường."}
+      - {emma: "Where do you keep your laptop?", focus: 2}
+      - {tom: "I keep it in my bag, because I take it to university every day.", reveal: 2, vi: "Để trong ba lô vì ngày nào cũng mang lên trường."}
+      - {tom: "Do you keep photos on your computer, Emma? If so, what kind of photos?", focus: 3}
+      - {emma: "Yes, lots: photos of my family in England, and of my trips around Vietnam.", reveal: 3, vi: "Rất nhiều: ảnh gia đình ở Anh và ảnh đi chơi khắp Việt Nam."}
+      - {tom: "Have you got a webcam? If so, what do you use it for?", say: "Have you got a webcam? If so, what do you yooz it for?", focus: 4}
+      - {emma: "My laptop has one. I use it for my online lessons, and to call my parents.", say: "My laptop has one. I yooz it for my online lessons, and to call my parents.", reveal: 4, vi: "Máy có sẵn webcam: dùng để dạy trực tuyến và gọi cho bố mẹ."}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: say the words (1–7)"
+    heading_vi: "Che danh sách từ, nhìn tranh — tạm dừng video sau mỗi số; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 119, clip: [32, 88, 472, 202]}
+    items:
+      - {box: [198, 88, 234, 110]}
+      - {box: [198, 88, 234, 110], label: "a webcam"}
+      - {box: [312, 92, 400, 148]}
+      - {box: [312, 92, 400, 148], label: "a printer"}
+      - {box: [56, 116, 132, 200]}
+      - {box: [56, 116, 132, 200], label: "a laptop"}
+      - {box: [126, 87, 202, 162]}
+      - {box: [126, 87, 202, 162], label: "the hard drive"}
+      - {box: [202, 100, 246, 160]}
+      - {box: [202, 100, 246, 160], label: "the screen"}
+      - {box: [198, 96, 268, 174]}
+      - {box: [198, 96, 268, 174], label: "the monitor"}
+      - {box: [262, 132, 290, 162]}
+      - {box: [262, 132, 290, 162], label: "a disk"}
+    lines:
+      - emma: "Exercise 4 is a test. Look at the picture, and cover the words. Say the words. Pause the video after each number. Number one?"
+        say: "Exercise four is a test. Look at the picture, and cover the words. Say the words. Pause the video after each number. Number one?"
+        focus: 0
+        vi: "Bài 4: che danh sách từ, nhìn tranh, nói tên."
+      - {tom: "A webcam.", focus: 1}
+      - {emma: "Number two?", focus: 2}
+      - {tom: "A printer.", focus: 3}
+      - {emma: "Number three?", focus: 4}
+      - {tom: "A laptop.", focus: 5}
+      - {emma: "Number four?", focus: 6}
+      - {tom: "The hard drive.", focus: 7}
+      - {emma: "Number five?", focus: 8}
+      - {tom: "The screen.", focus: 9}
+      - {emma: "Number six?", focus: 10}
+      - {tom: "The monitor.", focus: 11}
+      - {emma: "Number seven?", focus: 12}
+      - {tom: "A disk.", focus: 13}
+
+  - kind: figure
+    chapter: "Bài 4 (tiếp)"
+    heading: "Exercise 4 · Test yourself: say the words (8–13)"
+    heading_vi: "Tạm dừng video sau mỗi số"
+    image: {pdf: course-book, page: 119, clip: [32, 88, 472, 202]}
+    items:
+      - {box: [258, 160, 292, 178]}
+      - {box: [258, 160, 292, 178], label: "a mouse"}
+      - {box: [318, 128, 378, 160]}
+      - {box: [318, 128, 378, 160], label: "a hard copy / printout"}
+      - {box: [46, 182, 90, 200]}
+      - {box: [46, 182, 90, 200], label: "a memory stick"}
+      - {box: [168, 178, 214, 202]}
+      - {box: [168, 178, 214, 202], label: "a speaker"}
+      - {box: [214, 166, 290, 200]}
+      - {box: [214, 166, 290, 200], label: "the keyboard"}
+      - {box: [276, 178, 312, 202]}
+      - {box: [276, 178, 312, 202], label: "a mouse mat"}
+    lines:
+      - {emma: "Number eight?", focus: 0}
+      - {tom: "A mouse.", focus: 1}
+      - {emma: "Number nine?", focus: 2}
+      - {tom: "A hard copy, or a printout.", focus: 3}
+      - {emma: "Number ten?", focus: 4}
+      - {tom: "A memory stick.", focus: 5}
+      - {emma: "Number eleven?", focus: 6}
+      - {tom: "A speaker.", focus: 7}
+      - {emma: "Number twelve?", focus: 8}
+      - {tom: "The keyboard.", focus: 9}
+      - {emma: "And number thirteen?", say: "And number thir-teen?", focus: 10}
+      - {tom: "A mouse mat.", focus: 11}
+
+  - kind: figure
+    chapter: "Soạn thảo văn bản: biểu tượng"
+    heading: "B · Word processing: icons"
+    heading_vi: "tr. 119 — document · cut · paste · save · print · folder · copy"
+    image: {pdf: course-book, page: 120, clip: [32, 42, 410, 224]}
+    items:
+      - {box: [94, 47, 152, 132]}
+      - {box: [176, 47, 228, 132]}
+      - {box: [258, 47, 313, 132]}
+      - {box: [348, 47, 404, 133]}
+      - {box: [92, 140, 152, 221]}
+      - {box: [168, 140, 240, 221]}
+      - {box: [258, 138, 314, 222]}
+    lines:
+      - {emma: "Part B: word processing. These are icons: small pictures on the screen. A document.", focus: 0, vi: "icon: biểu tượng · document: văn bản, tài liệu"}
+      - {tom: "Cut.", focus: 1, vi: "cut: cắt"}
+      - {emma: "Paste.", focus: 2, vi: "paste: dán"}
+      - {tom: "Save.", focus: 3, vi: "save: lưu"}
+      - {emma: "Print.", focus: 4, vi: "print: in"}
+      - {tom: "A folder.", focus: 5, vi: "folder: thư mục"}
+      - {emma: "And copy.", focus: 6, vi: "copy: sao chép"}
+
+  - kind: figure
+    chapter: "Soạn thảo văn bản: sáu câu"
+    heading: "B · Word processing: what I did"
+    heading_vi: "tr. 119 — open · cut · move · click on · save · print out / do a printout · make a backup copy"
+    image: {pdf: course-book, page: 120, clip: [28, 228, 300, 314]}
+    items:
+      - {box: [30, 229.5, 284, 243.3]}
+      - {box: [30, 243.3, 284, 257.3]}
+      - {box: [30, 257.3, 284, 271.5]}
+      - {box: [30, 271.5, 284, 285]}
+      - {box: [30, 285, 284, 299.2]}
+      - {box: [30, 299.2, 284, 312.5]}
+    lines:
+      - {tom: "One. I opened a new document and typed a letter.", focus: 0, vi: "open: mở"}
+      - {emma: "Two. I cut a sentence from the beginning of the letter.", focus: 1, vi: "beginning: phần đầu"}
+      - {tom: "Three. I moved it to the end. I clicked on the paste icon.", focus: 2, vi: "move: chuyển · click on: nhấp vào"}
+      - {emma: "Four. I saved the document in my letters folder.", focus: 3}
+      - {tom: "Five. I printed it out. Or: I did a printout.", focus: 4, vi: "print out = do a printout: in ra"}
+      - {emma: "Six. I made a backup copy on a disk.", focus: 5, vi: "backup copy: bản sao dự phòng"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary (1)"
+    heading_vi: "tr. 119 — beginning ≠ end · middle · move something"
+    image: {pdf: course-book, page: 120, clip: [364, 264, 488, 372]}
+    items:
+      - {box: [366, 287.5, 486, 336]}
+      - {box: [366, 336, 486, 371.5]}
+    lines:
+      - {emma: "Look at the glossary. The beginning: the first part of something. The opposite is the end. The middle is between the beginning and the end.", focus: 0, vi: "beginning ≠ end · middle: phần giữa"}
+      - {tom: "Move something: take something and put it in another place.", focus: 1}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 119 — click on something · a backup copy"
+    image: {pdf: course-book, page: 120, clip: [364, 370, 488, 492]}
+    items:
+      - {box: [366, 371.5, 486, 422]}
+      - {box: [366, 431, 486, 491]}
+    lines:
+      - {emma: "Click on something: press the button on the mouse, like in the picture.", focus: 0, vi: "click on: nhấp chuột vào"}
+      - {tom: "A backup copy: a copy of a document or folder that you can use if you lose the first one. You make a backup copy.", focus: 1, vi: "make a backup copy: tạo bản sao dự phòng"}
+
+  - kind: blanks
+    chapter: "Bài 5: nối 1–7 với a–h"
+    heading: "Exercise 5 · Match 1–7 with a–h"
+    heading_vi: "Ví dụ: You type → d · your letter or report (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "You open  →  ___", answer: "g · a new document"}
+      - {n: 2, q: "You print out  →  ___", answer: "a · a paper copy of your letter"}
+      - {n: 3, q: "You cut  →  ___", answer: "e · a word or sentence from your document"}
+      - {n: 4, q: "You click on  →  ___", answer: "h · an icon"}
+      - {n: 5, q: "You make  →  ___", answer: "b · a backup copy"}
+      - {n: 6, q: "You move  →  ___", answer: "f · a sentence to a different place"}
+      - {n: 7, q: "You save  →  ___", answer: "c · the letter you typed in a folder"}
+    lines:
+      - emma: "Exercise 5. Match one to seven with a to h. The example is: you type, d: your letter or report. Pause the video and try."
+        say: "Exercise five. Match one to seven with eigh to aitch. The example is: you type, dee: your letter or report. Pause the video and try."
+        vi: "Bài 5: nối 1–7 với a–h."
+      - {tom: "One, g: you open a new document. Two, a: you print out a paper copy of your letter. Three, e: you cut a word or sentence from your document. Four, h: you click on an icon.", say: "One, gee: you open a new document. Two, eigh: you print out a paper copy of your letter. Three, ee: you cut a word or sentence from your document. Four, aitch: you click on an icon.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five, b: you make a backup copy. Six, f: you move a sentence to a different place. Seven, c: you save the letter you typed in a folder.", say: "Five, bee: you make a backup copy. Six, ef: you move a sentence to a different place. Seven, see: you save the letter you typed in a folder.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: blanks
+    chapter: "Bài 6: hoàn thành câu"
+    heading: "Exercise 6 · Complete the sentences"
+    heading_vi: "Ví dụ: Which folder did you save the document in? (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "She ___ on the copy icon.", answer: "clicked"}
+      - {n: "2a", q: "You can write 'Hello' at the ___ of an email,", answer: "beginning"}
+      - {n: "2b", q: "and 'best wishes' at the ___.", answer: "end"}
+      - {n: 3, q: "I always ___ a backup copy of my work.", answer: "make / save"}
+      - {n: 4, q: "I typed a letter to my boss and then I ___ a printout.", answer: "did"}
+      - {n: 5, q: "My letter wasn't very interesting, so I ___ a few sentences.", answer: "cut"}
+      - {n: 6, q: "Did you ___ your work in the correct folder?", answer: "save"}
+      - {n: 7, q: "When you ___ a new document, you can start writing.", answer: "open"}
+      - {n: 8, q: "The beginning and the end of the letter were good, but the ___ part was terrible.", answer: "middle"}
+    lines:
+      - emma: "Exercise 6. Complete the sentences. The example is: which folder did you save the document in? Pause the video and try."
+        say: "Exercise six. Complete the sentences. The example is: which folder did you save the document in? Pause the video and try."
+        vi: "Bài 6: hoàn thành câu."
+      - {tom: "One. She clicked on the copy icon. Two. Hello at the beginning, and best wishes at the end. Three. I always make, or save, a backup copy. Four. I did a printout.", reveal: ["1", "2a", "2b", "3", "4"], focus: 4}
+      - {tom: "Five. I cut a few sentences. Six. Did you save your work? Seven. When you open a new document. Eight. The middle part was terrible.", reveal: ["5", "6", "7", "8"], focus: 8}
+
+  - kind: figure
+    chapter: "Bài 7: tự kiểm tra"
+    heading: "Exercise 7 · Test yourself: what do the icons mean? (1)"
+    heading_vi: "Che chữ, nhìn biểu tượng — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 120, clip: [90, 42, 410, 119.5]}
+    items:
+      - {box: [94, 46, 152, 119]}
+      - {box: [94, 46, 152, 119], label: "a document"}
+      - {box: [176, 46, 228, 119]}
+      - {box: [176, 46, 228, 119], label: "cut"}
+      - {box: [258, 44, 313, 119]}
+      - {box: [258, 44, 313, 119], label: "paste"}
+      - {box: [348, 50, 404, 119]}
+      - {box: [348, 50, 404, 119], label: "save"}
+    lines:
+      - emma: "Exercise 7 is a test. Cover the words. Can you remember what the icons mean? Pause the video after each one. What's this icon?"
+        say: "Exercise seven is a test. Cover the words. Can you remember what the icons mean? Pause the video after each one. What's this icon?"
+        focus: 0
+        vi: "Bài 7: che chữ, nhìn biểu tượng, nói nghĩa."
+      - {tom: "A document.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "Cut.", focus: 3}
+      - {emma: "This one?", focus: 4}
+      - {tom: "Paste.", focus: 5}
+      - {emma: "And this?", focus: 6}
+      - {tom: "Save.", focus: 7}
+
+  - kind: figure
+    chapter: "Bài 7 (tiếp)"
+    heading: "Exercise 7 · Test yourself: what do the icons mean? (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 120, clip: [90, 136, 330, 208.5]}
+    items:
+      - {box: [92, 140, 152, 208]}
+      - {box: [92, 140, 152, 208], label: "print"}
+      - {box: [168, 140, 240, 208]}
+      - {box: [168, 140, 240, 208], label: "a folder"}
+      - {box: [258, 137, 314, 208.5]}
+      - {box: [258, 137, 314, 208.5], label: "copy"}
+    lines:
+      - {emma: "What's this icon?", focus: 0}
+      - {tom: "Print.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "A folder.", focus: 3}
+      - {emma: "And the last one?", focus: 4}
+      - {tom: "Copy.", focus: 5}
+
+  - kind: bullets
+    chapter: "Máy tính ngày nay"
+    heading: "Computers today"
+    heading_vi: "Thêm ngoài sách — từ hay dùng ngày nay và phím tắt"
+    items:
+      - {en: "a smartphone · a tablet · a touch screen", vi: "điện thoại thông minh · máy tính bảng · màn hình cảm ứng"}
+      - {en: "a charger · charge your phone · the battery is low", vi: "sạc · sạc điện thoại · pin yếu"}
+      - {en: "a USB stick (= a memory stick) · save your files in the cloud", vi: "USB · lưu tệp trên đám mây"}
+      - {en: "a password · log in ≠ log out", vi: "mật khẩu · đăng nhập ≠ đăng xuất"}
+      - {en: "Ctrl + C: copy · Ctrl + X: cut · Ctrl + V: paste · Ctrl + S: save · Ctrl + P: print", vi: "phím tắt"}
+    lines:
+      - {tom: "Today, many people use a smartphone or a tablet more than a computer. They have a touch screen.", say: "Today, many people yooz a smartphone or a tablet more than a computer. They have a touch screen.", focus: 0}
+      - {emma: "Don't forget your charger! The battery is low, so I need to charge my phone.", focus: 1, vi: "battery: pin"}
+      - {tom: "We often say a USB stick, not a memory stick. And lots of people save their files in the cloud: on the internet.", say: "We often say a you ess bee stick, not a memory stick. And lots of people save their files in the cloud: on the internet.", focus: 2}
+      - {emma: "To log in, you need a password. When you finish, log out.", focus: 3}
+      - {tom: "And some useful shortcuts: control C to copy, control X to cut, control V to paste, control S to save, and control P to print.", say: "And some useful shortcuts: control see to copy, control ex to cut, control vee to paste, control ess to save, and control pee to print.", focus: 4, vi: "shortcut: phím tắt"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Computers"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "How often do you use a computer?", hint: "Every day / Almost every day · for work / for study"}
+      - {q: "What do you usually use it for?", hint: "I use it to … · I write … / I read … / I watch …"}
+      - {q: "Do you prefer a laptop or a smartphone? Why?", hint: "I prefer … because it's …"}
+      - {q: "When did you first use a computer?", hint: "When I was … years old, at school / at home"}
+      - {q: "Do people spend too much time on computers?", hint: "I think so, because … / Not really, because …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about computers. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about computers. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về máy tính."
+      - {emma: "How often do you use a computer?", say: "How often do you yooz a computer?", focus: 0, pause: 0.5}
+      - {emma: "What do you usually use it for?", say: "What do you usually yooz it for?", focus: 1, pause: 0.5}
+      - {emma: "Do you prefer a laptop, or a smartphone? Why?", focus: 2, pause: 0.5}
+      - {emma: "When did you first use a computer?", say: "When did you first yooz a computer?", focus: 3, pause: 0.5}
+      - {emma: "Do people spend too much time on computers?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4 và bài 7: che chữ, nhìn tranh, nói tên"
+    items:
+      - {en: "a PC · a laptop · a webcam · a printer · a hard copy / printout · a speaker · the hard drive", vi: "máy tính (1)"}
+      - {en: "the screen · the monitor · the keyboard · a mouse · a mouse mat · a disk · a memory stick", vi: "máy tính (2)"}
+      - {en: "a document · a folder · an icon · open · save · cut · copy · paste · print (out) · move · click on", vi: "soạn thảo văn bản"}
+      - {en: "make a backup copy · do a printout · the beginning · the middle · the end · keep", vi: "cụm từ"}
+      - {en: "Next: Unit 47 · Email and the internet", vi: "Tiếp theo: Unit 47 · Email và internet"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A PC, a laptop, a webcam, a printer, a hard copy, a speaker, and the hard drive.", focus: 0}
+      - {tom: "The screen, the monitor, the keyboard, a mouse, a mouse mat, a disk, and a memory stick.", focus: 1}
+      - {emma: "Open a document, save it in a folder, cut, copy, paste, print, move, and click on an icon.", focus: 2}
+      - {tom: "Make a backup copy, do a printout. The beginning, the middle, and the end. And: where do you keep it?", focus: 3}
+      - {emma: "Next time, Unit 47: email and the internet. See you then!", say: "Next time, Unit forty-seven: email and the internet. See you then!", focus: 4}
