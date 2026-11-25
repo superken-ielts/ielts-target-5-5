@@ -23,13 +23,16 @@ unit hai video như đợt 37–38.
 Đợt 41, người học: "tiếp tục module tiếp theo của sách oxford basic", rồi "xong rồi commit push main" — module Study and work
 (Unit 42–47), mỗi unit hai video như đợt 37–40.
 
+Đợt 42, người học: "tiếp tục module tiếp theo xong tới đâu commit push main tới đó" — module Hobbies and interests
+(Unit 48–53), mỗi unit hai video như đợt 37–41; xong unit nào thì đưa lên `main` unit đó.
+
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, hồ sơ lộ trình | `books/book_oxford_word_skills_basic/`: `Oxford_Word_Skills_Bas.pdf` (bản quét, 254 trang), `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (122 đoạn PDF, 83 MB) |
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–47 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–48 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -189,7 +192,7 @@ lại ra y hệt).
   vẫn trong cùng một video (mục 5.2, hàng 9–10). Unit khó là unit nhiều từ, từ trừu tượng, nhiều cặp dễ nhầm, hay chủ đề
   hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings;
   Everyday life có 3 (17, 19, 22 — đợt 37); Food and drink có 2 (26, 28 — đợt 38); Getting around có 2 (30, 32 — đợt 39);
-  Places có 3 (35, 38, 39 — đợt 40); Study and work có 3 (42, 43, 45 — đợt 41).
+  Places có 3 (35, 38, 39 — đợt 40); Study and work có 3 (42, 43, 45 — đợt 41); Hobbies and interests có 1 (48 — đợt 42).
   Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
 - **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
   khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Mọi unit đều có ít nhất một cảnh có hình (test kiểm): module People
@@ -476,12 +479,21 @@ khi dựng (trong `agents/`):
   hình. Cảnh tự kiểm tra cắt bỏ dải tên (đo bằng `blobs.py`: dải thấp khoảng 10 điểm dưới hàng tranh), mỗi hàng một cảnh.
 - **Sắp xếp câu chuyện** (đợt 41, Unit 42 bài 5): dùng cảnh `order` như Giai đoạn 0 (cột trái a–j, cột phải thứ tự đúng). Nhân vật
   trong bài tên Tom nên Tom nói rõ "this Tom isn't me".
+- **Hồ sơ, Glossary nhiều chữ** (đợt 42, Unit 48): hồ sơ của Mirko (sáu hàng, có ảnh) để chung một cảnh thì chữ chỉ cao khoảng 16
+  điểm ảnh; tách theo hàng thành hai cảnh, Glossary cũng tách hai cảnh. Mép cắt đặt vào khoảng trắng giữa hai dòng (đo bằng
+  `textlines.py`), không để lộ chân hay đầu chữ của dòng bên cạnh.
+- **Đo dòng chữ cạnh ảnh** (đợt 42, Unit 48): vùng đo của `textlines.py` hẹp hơn dòng chữ thì mép phải của vùng thành mép chữ
+  (dòng dưới ảnh Mirko dài tới 243 điểm, vùng đo dừng ở 210), khung đỏ cắt ngang chữ. Đo lại với vùng rộng hơn, chừa viền khung.
+- **Bài ghép cột** (đợt 42, Unit 48 bài 4): cảnh `figure` giảng ví dụ trên bảng (khung đỏ lần lượt ba ô It's / a wonderful / city
+  rồi ô đáp án), rồi cảnh `blanks` có hình bảng bên trái: `q` là chữ ở cột 1 (`I ___`), khung đỏ theo hàng đang chữa.
+- **Bài giảng dài hơn ước lượng tới 6 %** (đợt 42, Unit 48): ước 11:18, dựng thật 11:58 (các đợt trước 0–4 %). Unit khó nhắm ước
+  lượng dưới 14 phút vẫn an toàn; unit thường nhắm dưới 9:20 để không chạm 10 phút.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
 (đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
-48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Cả sách: 47 video bài giảng, 7:20:06, 276 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Module Hobbies and interests có 1/6 unit, tổng 11:58 (đợt 42). Cả sách: 48 video bài giảng, 7:32:04, 286 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -743,6 +755,25 @@ Module Study and work (đợt 41) — trường học, đại học, nghề nghi
   - nhận nhiều thư rác (vé máy bay rẻ, du lịch miễn phí), học viên gửi bài tập dạng tệp đính kèm, trả lời trong ngày trừ cuối tuần;
     internet băng thông rộng khá nhanh; hay vào YouTube và một trang tin của Anh; không vào phòng chat, nhắn tin với bạn bè (Unit 47).
 
+Module Hobbies and interests (đợt 42, đưa lên `main` từng unit) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
+
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| **48 Likes and dislikes** | `U48-likes-dislikes` | 11:58 | 20 | 10 | 1–6 (bài 4: bảng ba cột, đáp án có hình bảng; bài 3, 6 thành Nói 1, Nói 2) | Bài 3: bạn có thích…? (8); bài 6: trả lời câu hỏi bài 5 (7) | Part 2 "something you enjoy doing in your free time" (Tom: nấu ăn, Emma: đi bộ đường dài); thảo luận (3) | thang Love it or hate it?, Spotlight like + -ing, hồ sơ của Mirko (hai cảnh), Glossary hai cảnh, Spotlight interesting / interested, bảng bài 4 (hai cảnh), khung từ bài 5; câu nói thích / không thích kiểu IELTS; ôn tập: lỗi hay gặp |
+
+Module Hobbies and interests (đợt 42) — thích và không thích, thể thao, thời gian rảnh, âm nhạc, phim, báo đài:
+- **Tom:**
+  - không thích xem TV lắm (xem phim trên laptop), rất thích học tiếng Anh dù nghe khó, không thích mua quần áo lắm (chỉ mua thứ
+    cần), không thích viết email (thích nhắn tin hơn), rất thích đi rạp xem phim khoa học viễn tưởng; thành phố yêu thích là Đà
+    Lạt; không mê nhạc cổ điển (thích pop và vài ban nhạc Việt); hồi đi học thấy Sử chán nhưng khá thích phim lịch sử; Part 2: nấu
+    ăn — hai năm trước chỉ biết nấu mì và trứng, nay nấu buổi tối hoặc cuối tuần, chia nhau nấu với hai bạn cùng phòng, gọi mẹ xin
+    công thức, tháng trước nấu canh cá của mẹ, muốn học món Âu; bóng rổ chơi với bạn mới vui, đọc sách thì một mình (Unit 48).
+- **Emma:**
+  - khá thích lái xe ở Anh nhưng không bao giờ lái ở TP. HCM; ghét dọn nhà; thích nói chuyện điện thoại (Chủ nhật nói với mẹ cả
+    tiếng); thích cá hơn thịt (lớn lên ven biển, mê hải sản); không mê thể thao, không xem trên TV, nhưng thích bơi; Part 2: đi bộ
+    đường dài khi có cuối tuần rảnh — ở Anh dọc biển gần quê, ở Việt Nam đồi gần Đà Lạt, đi với bạn ở trường hoặc một mình; bà mê
+    đan len (Unit 48).
+
 ### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
 | Unit | Trang | Có thể khó (tới 15 phút) | Gợi ý phần nói | Hình trong sách (đã xem trang) |
@@ -791,6 +822,11 @@ Module tiếp theo: **Hobbies and interests** (Unit 48–53, Review tr. 138–14
 - Answer key tr. 216 đã có đáp án Unit 48;
 - chưa xem trang; sở thích, thể thao, âm nhạc, phim là chủ đề IELTS Part 1–2 rất hay gặp.
 
+Đợt 42 (đưa lên `main` từng unit, bảng mục 5.7): xong Unit 48. Unit khó: 48 Likes and dislikes (tám mức thích với trật tự really /
+quite / very much, like + -ing, interesting ≠ interested; "Do you like…?" là câu hỏi Part 1 hay gặp nhất). Còn Unit 49–53; Part 2
+dự kiến không trùng nhau: 49 "a sport you like", 50 "a hobby you had as a child", 51 "a song or a piece of music you like", 52 "a
+film you enjoyed", 53 "a TV programme you enjoy" (unit nào khó thì chọn sau khi xem trang).
+
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
 Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu theo chủ đề
@@ -829,7 +865,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 - **Word list của sách** (tr. 237–254, tức PDF 236–253; hai cột, mỗi từ kèm số unit):
   - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai lề
     8 điểm thì đọc "11" thành "1l". Lấy hợp của hai lần rồi soát tay theo ảnh trang.
-  - Kết quả ở `work/wordlist.json`: 1496 mục của Unit 1–47 (1276 từ khác nhau); `level` để trống vì sách không chia cấp độ.
+  - Kết quả ở `work/wordlist.json`: 1687 mục của Unit 1–53 (1417 từ khác nhau); `level` để trống vì sách không chia cấp độ.
   - Đợt 37 thêm 246 mục Unit 17–23 từ cùng hai lần OCR. Soát khoảng hở giữa các dòng OCR (dòng bị bỏ) rồi xem ảnh: sót *get dressed*
     (17); bộ tách bỏ qua dòng *red* (18). Ba mục in số unit của bản thảo cũ (mục 3.3) xếp theo trang thật: *like* vào Unit 21, *have
     got* và *what's the matter?* vào Unit 22; câu chú thích ở `make_wordlist.py` và đầu kịch bản nghe – viết.
@@ -848,6 +884,9 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
     lần OCR) và khoảng hở giữa các dòng: OCR sót năm mục — *computer science* 43, *get a grade* 42, *print something out* 46, và *ICT*,
     *PE* 42 (OCR chỉ đọc được dòng phiên âm) — thêm tay. Unit 42 có 58 mục, nhiều nhất từ đầu sách; *technology* có hai mục (as in
     IT, ICT; as in design and technology) chung một khóa.
+  - Đợt 42 thêm 191 mục Unit 48–53 (141 từ chưa có ở Unit 1–47) ngay từ đầu đợt. Soát từng dòng có số unit 48–53 bằng tờ ảnh
+    cắt dòng và khoảng hở giữa các dòng OCR (`gap_ocr.py`, OCR lại ở 400 dpi): năm chỗ hở đều là mục đã có, không sót mục nào.
+    Unit 52 có hai mục *in* (= taking part; as in Who's in it?) chung một khóa; *on TV/on the radio* (Unit 53) là một mục.
   - Soát đủ từ: `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all` phải ra
     "chưa hiện: 0" (test kiểm mọi unit có video).
 - **Sinh kịch bản:** dữ liệu từng unit (từ, nghĩa, câu ví dụ, mục Word list, cách đọc `s` / `se`) ở `work/dictation/units_*.py`.
@@ -873,7 +912,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**47 video, 7:47:42** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**48 video, 7:57:19** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -924,10 +963,11 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 45 · Describing a job | `U45-describing-job-dictation` | 9:50 | 30 · 36 | 16 | 34 |
 | 46 · Using a computer | `U46-computer-dictation` | 9:43 | 30 · 34 | 16 | 35 |
 | 47 · Email and the internet | `U47-email-internet-dictation` | 9:44 | 28 · 35 | 18 | 33 |
+| 48 · Likes and dislikes | `U48-likes-dislikes-dictation` | 9:37 | 24 · 18 | 20 | 36 |
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 48 trở đi theo mục 5 (checklist P2-59), module Hobbies and interests (cuối mục 5.8). Mỗi unit hai video: bài
-   giảng (mục 5) và nghe – viết (mục 5.9).
+1. Video Unit 49 trở đi theo mục 5 (checklist P2-59, P2-77), module Hobbies and interests (cuối mục 5.8): xong unit nào
+   thì đưa lên `main` unit đó. Mỗi unit hai video: bài giảng (mục 5) và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

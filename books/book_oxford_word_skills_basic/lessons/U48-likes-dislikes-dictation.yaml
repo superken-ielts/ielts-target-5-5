@@ -1,0 +1,311 @@
+# Video nghe – viết (dictation) Unit 48 · Likes and dislikes — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U48-likes-dislikes-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U48 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 48 chỉ có 18 mục (like, really, quite, think, very theo thang love → hate): phần 1 thêm cụm từ
+# trên trang sách (like doing something, good fun, be interested in, modern art, TV company, go out with friends).
+id: U48-likes-dislikes-dictation
+activity: U48-words
+title: "Unit 48 · Likes and dislikes"
+subtitle: "Dictation · listen and write: saying what you like"
+title_vi: "Nghe – viết 10 phút: thích và không thích — từ trong sách, từ thêm, câu giao tiếp"
+tag: "HOBBIES AND INTERESTS · UNIT 48"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 48: Likes and dislikes. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-eight: Likes and dislikes. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 48: thích và không thích. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 24 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 36 useful sentences for conversation.", "say": "There are three parts. First, twenty-four words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and thirty-six useful sentences for conversation.", "vi": "Ba phần: 24 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 36 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "love", "vi": "rất thích, yêu", "ex": "I love football.", "w": ["love"]}
+      - {"n": 2, "answer": "like", "vi": "thích", "ex": "I like cooking.", "w": ["like"]}
+      - {"n": 3, "answer": "really like", "vi": "rất thích", "ex": "I really like going out with friends.", "w": ["really"]}
+      - {"n": 4, "answer": "quite like", "vi": "khá thích", "ex": "I quite like shopping.", "w": ["quite"]}
+      - {"n": 5, "answer": "I think it's OK", "vi": "tôi thấy cũng được", "ex": "I think tennis is OK.", "w": ["think"]}
+      - {"n": 6, "answer": "not very much", "vi": "không … lắm", "ex": "He doesn't like speaking English very much.", "w": ["very"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. love. love. I love football. I love football.", "focus": 0}
+      - {"emma": "Two. like. like. I like cooking. I like cooking.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. really like. really like. I really like going out with friends. I really like going out with friends.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. quite like. quite like. I quite like shopping. I quite like shopping.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. I think it's OK. I think it's OK. I think tennis is OK. I think tennis is OK.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. not very much. not very much. He doesn't like speaking English very much. He doesn't like speaking English very much.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "hate", "vi": "ghét", "ex": "I hate chocolate.", "w": ["hate"]}
+      - {"n": 8, "answer": "like doing something", "vi": "thích làm gì", "ex": "She loves watching sport."}
+      - {"n": 9, "answer": "wonderful", "vi": "tuyệt vời", "ex": "It's a wonderful job.", "w": ["wonderful"]}
+      - {"n": 10, "answer": "fantastic", "vi": "tuyệt vời", "ex": "My teacher's fantastic.", "w": ["fantastic"]}
+      - {"n": 11, "answer": "fun", "vi": "niềm vui, vui", "ex": "If something is fun, it makes you happy.", "w": ["fun"]}
+      - {"n": 12, "answer": "good fun", "vi": "rất vui", "ex": "Was the party good fun?"}
+    lines:
+      - {"emma": "Seven. hate. hate. I hate chocolate. I hate chocolate.", "focus": 0}
+      - {"emma": "Eight. like doing something. like doing something. She loves watching sport. She loves watching sport.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. wonderful. wonderful. It's a wonderful job. It's a wonderful job.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. fantastic. fantastic. My teacher's fantastic. My teacher's fantastic.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. fun. fun. If something is fun, it makes you happy. If something is fun, it makes you happy.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. good fun. good fun. Was the party good fun? Was the party good fun?", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "favourite", "vi": "yêu thích nhất", "ex": "My favourite sport is tennis.", "w": ["favourite"]}
+      - {"n": 14, "answer": "enjoy", "vi": "thích (làm gì)", "ex": "I also enjoy playing football.", "w": ["enjoy"]}
+      - {"n": 15, "answer": "enjoyable", "vi": "thú vị", "ex": "Do you think flying is enjoyable?", "w": ["enjoyable"]}
+      - {"n": 16, "answer": "boring", "vi": "chán", "ex": "I don't watch TV. It's very boring.", "w": ["boring"]}
+      - {"n": 17, "answer": "interesting", "vi": "thú vị", "ex": "Do you think history is interesting?", "w": ["interesting"]}
+      - {"n": 18, "answer": "interested", "vi": "quan tâm, thích", "ex": "I'm not interested in politics.", "w": ["interested"]}
+    lines:
+      - {"emma": "Thirteen. favourite. favourite. My favourite sport is tennis. My favourite sport is tennis.", "focus": 0}
+      - {"emma": "Fourteen. enjoy. enjoy. I also enjoy playing football. I also enjoy playing football.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. enjoyable. enjoyable. Do you think flying is enjoyable? Do you think flying is enjoyable?", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. boring. boring. I don't watch TV. It's very boring. I don't watch TV. It's very boring.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. interesting. interesting. Do you think history is interesting? Do you think history is interesting?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. interested. interested. I'm not interested in politics. I'm not interested in politics.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "be interested in", "vi": "quan tâm đến", "ex": "I'm interested in old films."}
+      - {"n": 20, "answer": "modern art", "vi": "nghệ thuật hiện đại", "ex": "I think modern art is interesting."}
+      - {"n": 21, "answer": "prefer", "vi": "thích hơn", "ex": "She prefers reading to writing.", "w": ["prefer"]}
+      - {"n": 22, "answer": "TV company", "vi": "công ty truyền hình", "ex": "I work for a TV company."}
+      - {"n": 23, "answer": "keen on", "vi": "rất thích, mê", "ex": "I'm very keen on jazz.", "w": ["keen"]}
+      - {"n": 24, "answer": "go out with friends", "vi": "đi chơi với bạn bè", "ex": "I really like going out with friends."}
+    lines:
+      - {"emma": "Nineteen. be interested in. be interested in. I'm interested in old films. I'm interested in old films.", "focus": 0}
+      - {"emma": "Twenty. modern art. modern art. I think modern art is interesting. I think modern art is interesting.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. prefer. prefer. She prefers reading to writing. She prefers reading to writing.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. TV company. TV company. I work for a TV company. I work for a TV company.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. keen on. keen on. I'm very keen on jazz. I'm very keen on jazz.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. go out with friends. go out with friends. I really like going out with friends. I really like going out with friends.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (25–30)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 25, "answer": "dislike", "vi": "không thích", "ex": "I dislike waiting in queues."}
+      - {"n": 26, "answer": "can't stand", "vi": "không chịu nổi", "ex": "I can't stand cold weather."}
+      - {"n": 27, "answer": "don't mind", "vi": "không ngại", "ex": "I don't mind cooking."}
+      - {"n": 28, "answer": "big fan", "vi": "người rất mê", "ex": "I'm a big fan of science fiction films."}
+      - {"n": 29, "answer": "be into", "vi": "mê, thích", "ex": "My brother is really into football."}
+      - {"n": 30, "answer": "crazy about", "vi": "mê mẩn", "ex": "Lots of teenagers are crazy about K-pop."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-five. dislike. dislike. I dislike waiting in queues. I dislike waiting in queues.", "focus": 0}
+      - {"tom": "Twenty-six. can't stand. can't stand. I can't stand cold weather. I can't stand cold weather.", "focus": 1, "reveal": [25]}
+      - {"tom": "Twenty-seven. don't mind. don't mind. I don't mind cooking. I don't mind cooking.", "focus": 2, "reveal": [26]}
+      - {"tom": "Twenty-eight. big fan. big fan. I'm a big fan of science fiction films. I'm a big fan of science fiction films.", "focus": 3, "reveal": [27]}
+      - {"tom": "Twenty-nine. be into. be into. My brother is really into football. My brother is really into football.", "focus": 4, "reveal": [28]}
+      - {"tom": "Thirty. crazy about. crazy about. Lots of teenagers are crazy about K-pop. Lots of teenagers are crazy about K-pop.", "focus": 5, "reveal": [29]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (31–36)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 31, "answer": "adore", "vi": "rất yêu thích", "ex": "My mum adores flowers."}
+      - {"n": 32, "answer": "amazing", "vi": "tuyệt vời", "ex": "The view from the mountain was amazing."}
+      - {"n": 33, "answer": "brilliant", "vi": "xuất sắc, tuyệt", "ex": "That's a brilliant idea!"}
+      - {"n": 34, "answer": "dull", "vi": "tẻ nhạt", "ex": "The lesson was a bit dull."}
+      - {"n": 35, "answer": "excellent", "vi": "xuất sắc", "ex": "The food here is excellent."}
+      - {"n": 36, "answer": "relaxing", "vi": "thư giãn", "ex": "Reading is very relaxing."}
+    lines:
+      - {"tom": "Thirty-one. adore. adore. My mum adores flowers. My mum adores flowers.", "focus": 0}
+      - {"tom": "Thirty-two. amazing. amazing. The view from the mountain was amazing. The view from the mountain was amazing.", "focus": 1, "reveal": [31]}
+      - {"tom": "Thirty-three. brilliant. brilliant. That's a brilliant idea! That's a brilliant idea!", "focus": 2, "reveal": [32]}
+      - {"tom": "Thirty-four. dull. dull. The lesson was a bit dull. The lesson was a bit dull.", "focus": 3, "reveal": [33]}
+      - {"tom": "Thirty-five. excellent. excellent. The food here is excellent. The food here is excellent.", "focus": 4, "reveal": [34]}
+      - {"tom": "Thirty-six. relaxing. relaxing. Reading is very relaxing. Reading is very relaxing.", "focus": 5, "reveal": [35]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (37–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "annoying", "vi": "khó chịu", "ex": "Loud music at night is annoying."}
+      - {"n": 38, "answer": "interest", "vi": "sở thích", "ex": "We have the same interests."}
+      - {"n": 39, "answer": "spare time", "vi": "thời gian rảnh", "ex": "What do you do in your spare time?"}
+      - {"n": 40, "answer": "taste", "vi": "gu, khẩu vị", "ex": "We have the same taste in music."}
+    lines:
+      - {"tom": "Thirty-seven. annoying. annoying. Loud music at night is annoying. Loud music at night is annoying.", "focus": 0}
+      - {"tom": "Thirty-eight. interest. interest. We have the same interests. We have the same interests.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. spare time. spare time. What do you do in your spare time? What do you do in your spare time?", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. taste. taste. We have the same taste in music. We have the same taste in music.", "focus": 3, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–44)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "feel like", "vi": "muốn (làm gì)", "ex": "I don't feel like going out tonight."}
+      - {"n": 42, "answer": "would rather", "vi": "muốn … hơn", "ex": "I'd rather stay at home."}
+      - {"n": 43, "answer": "look forward to", "vi": "mong chờ", "ex": "I'm looking forward to the weekend."}
+      - {"n": 44, "answer": "not my thing", "vi": "không hợp với tôi", "ex": "Dancing isn't really my thing."}
+    lines:
+      - {"tom": "Forty-one. feel like. feel like. I don't feel like going out tonight. I don't feel like going out tonight.", "focus": 0}
+      - {"tom": "Forty-two. would rather. would rather. I'd rather stay at home. I'd rather stay at home.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. look forward to. look forward to. I'm looking forward to the weekend. I'm looking forward to the weekend.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. not my thing. not my thing. Dancing isn't really my thing. Dancing isn't really my thing.", "focus": 3, "reveal": [43]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [44]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (45–50)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 45, "answer": "What do you like doing at the weekend?", "vi": "Cuối tuần bạn thích làm gì?"}
+      - {"n": 46, "answer": "I love going out with my friends.", "vi": "Mình rất thích đi chơi với bạn bè."}
+      - {"n": 47, "answer": "Do you like cooking?", "vi": "Bạn có thích nấu ăn không?"}
+      - {"n": 48, "answer": "Yes, I really enjoy it.", "vi": "Có, mình rất thích."}
+      - {"n": 49, "answer": "What's your favourite colour?", "vi": "Màu bạn thích nhất là gì?"}
+      - {"n": 50, "answer": "Green. It's the colour of nature.", "vi": "Màu xanh lá. Màu của thiên nhiên."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-five. What do you like doing at the weekend? What do you like doing at the weekend?", "focus": 0}
+      - {"tom": "Forty-six. I love going out with my friends. I love going out with my friends.", "focus": 1, "reveal": [45]}
+      - {"tom": "Forty-seven. Do you like cooking? Do you like cooking?", "focus": 2, "reveal": [46]}
+      - {"emma": "Forty-eight. Yes, I really enjoy it. Yes, I really enjoy it.", "focus": 3, "reveal": [47]}
+      - {"tom": "Forty-nine. What's your favourite colour? What's your favourite colour?", "focus": 4, "reveal": [48]}
+      - {"emma": "Fifty. Green. It's the colour of nature. Green. It's the colour of nature.", "focus": 5, "reveal": [49]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [50]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (51–56)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 51, "answer": "What's your favourite food?", "vi": "Món ăn bạn thích nhất là gì?"}
+      - {"n": 52, "answer": "Beef noodle soup, definitely!", "vi": "Phở bò, chắc chắn rồi!"}
+      - {"n": 53, "answer": "Do you prefer tea or coffee?", "vi": "Bạn thích trà hay cà phê hơn?"}
+      - {"n": 54, "answer": "I prefer tea, especially in the afternoon.", "vi": "Mình thích trà hơn, nhất là buổi chiều."}
+      - {"n": 55, "answer": "Are you interested in art?", "vi": "Bạn có quan tâm đến nghệ thuật không?"}
+      - {"n": 56, "answer": "Not really. I find it a bit boring.", "vi": "Không hẳn. Mình thấy hơi chán."}
+    lines:
+      - {"emma": "Fifty-one. What's your favourite food? What's your favourite food?", "focus": 0}
+      - {"tom": "Fifty-two. Beef noodle soup, definitely! Beef noodle soup, definitely!", "focus": 1, "reveal": [51]}
+      - {"tom": "Fifty-three. Do you prefer tea or coffee? Do you prefer tea or coffee?", "focus": 2, "reveal": [52]}
+      - {"emma": "Fifty-four. I prefer tea, especially in the afternoon. I prefer tea, especially in the afternoon.", "focus": 3, "reveal": [53]}
+      - {"emma": "Fifty-five. Are you interested in art? Are you interested in art?", "focus": 4, "reveal": [54]}
+      - {"tom": "Fifty-six. Not really. I find it a bit boring. Not really. I find it a bit boring.", "focus": 5, "reveal": [55]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [56]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (57–62)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 57, "answer": "I'm not very keen on shopping.", "vi": "Mình không mê mua sắm lắm."}
+      - {"n": 58, "answer": "Me neither. It's so tiring!", "vi": "Mình cũng vậy. Mệt lắm!"}
+      - {"n": 59, "answer": "I can't stand loud music.", "vi": "Mình không chịu nổi nhạc ồn."}
+      - {"n": 60, "answer": "Really? I quite like it.", "vi": "Thật à? Mình khá thích."}
+      - {"n": 61, "answer": "What do you think of this song?", "vi": "Bạn thấy bài hát này thế nào?"}
+      - {"n": 62, "answer": "It's OK, but it's a bit long.", "vi": "Cũng được, nhưng hơi dài."}
+    lines:
+      - {"tom": "Fifty-seven. I'm not very keen on shopping. I'm not very keen on shopping.", "focus": 0}
+      - {"emma": "Fifty-eight. Me neither. It's so tiring! Me neither. It's so tiring!", "focus": 1, "reveal": [57]}
+      - {"emma": "Fifty-nine. I can't stand loud music. I can't stand loud music.", "focus": 2, "reveal": [58]}
+      - {"tom": "Sixty. Really? I quite like it. Really? I quite like it.", "focus": 3, "reveal": [59]}
+      - {"emma": "Sixty-one. What do you think of this song? What do you think of this song?", "focus": 4, "reveal": [60]}
+      - {"tom": "Sixty-two. It's OK, but it's a bit long. It's OK, but it's a bit long.", "focus": 5, "reveal": [61]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [62]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (63–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 63, "answer": "Do you enjoy learning English?", "vi": "Bạn có thích học tiếng Anh không?"}
+      - {"n": 64, "answer": "Yes, it's good fun.", "vi": "Có, rất vui."}
+      - {"n": 65, "answer": "Which do you like better, the beach or the mountains?", "vi": "Bạn thích biển hay núi hơn?"}
+      - {"n": 66, "answer": "Both! But I love walking in the hills.", "vi": "Cả hai! Nhưng mình mê đi bộ trên đồi."}
+      - {"n": 67, "answer": "I'm a big fan of science fiction.", "vi": "Mình mê khoa học viễn tưởng."}
+      - {"n": 68, "answer": "I know! You talk about it all the time.", "vi": "Biết mà! Bạn nói về nó suốt."}
+    lines:
+      - {"emma": "Sixty-three. Do you enjoy learning English? Do you enjoy learning English?", "focus": 0}
+      - {"tom": "Sixty-four. Yes, it's good fun. Yes, it's good fun.", "focus": 1, "reveal": [63]}
+      - {"tom": "Sixty-five. Which do you like better, the beach or the mountains? Which do you like better, the beach or the mountains?", "focus": 2, "reveal": [64]}
+      - {"emma": "Sixty-six. Both! But I love walking in the hills. Both! But I love walking in the hills.", "focus": 3, "reveal": [65]}
+      - {"tom": "Sixty-seven. I'm a big fan of science fiction. I'm a big fan of science fiction.", "focus": 4, "reveal": [66]}
+      - {"emma": "Sixty-eight. I know! You talk about it all the time. I know! You talk about it all the time.", "focus": 5, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–74)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "Would you like to come with us?", "vi": "Bạn muốn đi cùng không?"}
+      - {"n": 70, "answer": "I'd love to. Thanks!", "vi": "Mình rất muốn. Cảm ơn!"}
+      - {"n": 71, "answer": "I hate getting up early.", "vi": "Mình ghét dậy sớm."}
+      - {"n": 72, "answer": "Really? I quite like mornings.", "vi": "Thật à? Mình khá thích buổi sáng."}
+      - {"n": 73, "answer": "What kind of books do you like?", "vi": "Bạn thích loại sách nào?"}
+      - {"n": 74, "answer": "Detective stories. I love them.", "vi": "Truyện trinh thám. Mình mê lắm."}
+    lines:
+      - {"tom": "Sixty-nine. Would you like to come with us? Would you like to come with us?", "focus": 0}
+      - {"emma": "Seventy. I'd love to. Thanks! I'd love to. Thanks!", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. I hate getting up early. I hate getting up early.", "focus": 2, "reveal": [70]}
+      - {"emma": "Seventy-two. Really? I quite like mornings. Really? I quite like mornings.", "focus": 3, "reveal": [71]}
+      - {"tom": "Seventy-three. What kind of books do you like? What kind of books do you like?", "focus": 4, "reveal": [72]}
+      - {"emma": "Seventy-four. Detective stories. I love them. Detective stories. I love them.", "focus": 5, "reveal": [73]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [74]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (75–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 75, "answer": "That sounds interesting.", "vi": "Nghe thú vị đấy."}
+      - {"n": 76, "answer": "We've got a lot in common.", "vi": "Chúng ta có nhiều điểm chung."}
+      - {"n": 77, "answer": "Do you feel like going out tonight?", "vi": "Tối nay bạn có muốn đi chơi không?"}
+      - {"n": 78, "answer": "Not really. I'd rather stay in.", "vi": "Không hẳn. Mình muốn ở nhà hơn."}
+      - {"n": 79, "answer": "I don't mind waiting.", "vi": "Mình đợi cũng được."}
+      - {"n": 80, "answer": "Thanks. I'll be quick.", "vi": "Cảm ơn. Mình sẽ nhanh thôi."}
+    lines:
+      - {"tom": "Seventy-five. That sounds interesting. That sounds interesting.", "focus": 0}
+      - {"emma": "Seventy-six. We've got a lot in common. We've got a lot in common.", "focus": 1, "reveal": [75]}
+      - {"tom": "Seventy-seven. Do you feel like going out tonight? Do you feel like going out tonight?", "focus": 2, "reveal": [76]}
+      - {"emma": "Seventy-eight. Not really. I'd rather stay in. Not really. I'd rather stay in.", "focus": 3, "reveal": [77]}
+      - {"emma": "Seventy-nine. I don't mind waiting. I don't mind waiting.", "focus": 4, "reveal": [78]}
+      - {"tom": "Eighty. Thanks. I'll be quick. Thanks. I'll be quick.", "focus": 5, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [80]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 49.", "say": "Well done! See you in Unit forty-nine.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 49."}
+
