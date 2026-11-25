@@ -149,7 +149,7 @@ hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word
 sách, hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word list thêm 271 mục. Sách nay có 82 video (file 09 mục 5.7).
 
 **Đợt 41 (25/11/2026):** Oxford Word Skills Basic module **Study and work** (Unit 42–47): mỗi unit một video bài giảng
-({TOTAL41L} cả 6 video; unit khó 42, 43, 45 có ôn tập và Part 2) và một video nghe – viết ({TOTAL41D}); đủ mọi bài tập trong
+(1:03:57 cả 6 video; unit khó 42, 43, 45 có ôn tập và Part 2) và một video nghe – viết (1:00:01); đủ mọi bài tập trong
 sách, hình trong sách ở mọi video, không có khoảng lặng từ 3 giây. Word list thêm 235 mục. Sách nay có 94 video (file 09 mục 5.7).
 
 ## Tóm tắt trong năm dòng

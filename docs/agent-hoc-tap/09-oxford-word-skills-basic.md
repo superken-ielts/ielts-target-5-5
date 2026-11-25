@@ -481,7 +481,7 @@ khi dựng (trong `agents/`):
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
 (đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
-48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Cả sách: 41 video bài giảng, 6:16:09, 211 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Cả sách: 47 video bài giảng, 7:20:06, 276 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -706,7 +706,14 @@ Module Places (đợt 40) — đất nước, thành phố, nông thôn, cửa h
 
 Module Study and work (đợt 41) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
 
-<!-- bảng 5.7 đợt 41 -->
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| **42 My school** | `U42-school` | 14:24 | 30 | 16 | 1–10 (bài 4: ba hàng tranh không chữ; bài 5: cảnh order) | Bài 7: trường học ở Việt Nam (6); bài 10: chuyện học hành (6) | Part 2 "a subject you enjoyed at school" (Tom: Hóa, Emma: Anh văn); thảo luận (3) | tranh môn học (hai cảnh), Spotlight be good at, sơ đồ hệ thống giáo dục, Glossary ba cảnh, Spotlight at the age of, lời kể của Rafael (hai cảnh), Spotlight exam, bảng điểm; ôn tập: lỗi hay gặp |
+| **43 University** | `U43-university` | 11:50 | 22 | 9 | 1–6 (bài 6: tự kiểm tra tranh 1–10) | Bài 3: đại học ở Việt Nam và ở Anh (5); Part 1 "your studies" (6) | Part 2 "a course you have taken or are taking" (Tom: môn Marketing, Emma: khóa đào tạo giáo viên); thảo luận (3) | lời kể của sinh viên (hai cảnh), Glossary hai cảnh, Spotlight How long does it last?, bảng ngành học – người (hai cảnh); họ từ -ist / -er / -ian, trọng âm; ôn tập: lỗi hay gặp |
+| 44 Jobs | `U44-jobs` | 8:11 | 20 | 11 | 1–5 (bài 5: năm hàng tranh và cột Meaning) | Bài 4: người quen làm các nghề (6) | Part 1 "Work" (5 câu) | What do you do? và Spotlight a / an, 15 tranh nghề (ba cảnh), bảng self-employed … boss; thêm nghề hay gặp ở Việt Nam; Nghe và viết |
+| **45 Describing a job** | `U45-describing-job` | 11:27 | 23 | 10 | 1–5 (bài 1: khung từ hiện trước) | Bài 3: công việc của bạn (6); việc phải làm (5) | Part 2 "a job you would like to do in the future" (Tom: marketing cà phê, Emma: trường ngoại ngữ riêng); thảo luận (3) | thông tin cơ bản (hai cảnh), Glossary A, tranh văn phòng 1–5, lời kể của Daniel và Eliane, Spotlight spend time doing, Glossary B hai cảnh; câu tả công việc kiểu IELTS; ôn tập: lỗi hay gặp |
+| 46 Using a computer | `U46-computer` | 8:16 | 20 | 11 | 1–7 (bài 4: tranh 1–13; bài 7: biểu tượng) | Bài 3: máy tính của bạn (5) | Part 1 "Computers" (5 câu) | tranh máy tính 13 mục (hai cảnh), Spotlight keep, bảy biểu tượng, sáu câu dùng máy tính, Glossary hai cảnh; máy tính ngày nay, phím tắt |
+| 47 Email and the internet | `U47-email-internet` | 9:49 | 20 | 8 | 1–6 (bài 6 thành Nói 2) | Bài 3: email của bạn (5); bài 6: internet và bạn (6) | Part 1 "The internet" (5 câu) | màn hình email (hai cảnh), lời Jan và Lucy, Glossary A, bảng câu hỏi về internet (hai cảnh), Glossary B hai cảnh; câu viết email (GT Task 1), internet ngày nay; Nghe và viết; tổng kết module |
 
 Module Study and work (đợt 41) — trường học, đại học, nghề nghiệp, công việc, máy tính, email và internet:
 - **Tom:**
@@ -866,7 +873,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**41 video, 6:47:41** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**47 video, 7:47:42** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -911,6 +918,12 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 39 · The kitchen | `U39-kitchen-dictation` | 9:30 | 29 · 36 | 19 | 32 |
 | 40 · Bedroom and bathroom | `U40-bedroom-bathroom-dictation` | 9:33 | 34 · 39 | 16 | 29 |
 | 41 · The living room | `U41-living-room-dictation` | 9:37 | 21 · 23 | 24 | 31 |
+| 42 · My school | `U42-school-dictation` | 10:07 | 43 · 58 | 10 | 18 |
+| 43 · University | `U43-university-dictation` | 10:19 | 31 · 45 | 15 | 26 |
+| 44 · Jobs | `U44-jobs-dictation` | 10:17 | 23 · 27 | 20 | 37 |
+| 45 · Describing a job | `U45-describing-job-dictation` | 9:50 | 30 · 36 | 16 | 34 |
+| 46 · Using a computer | `U46-computer-dictation` | 9:43 | 30 · 34 | 16 | 35 |
+| 47 · Email and the internet | `U47-email-internet-dictation` | 9:44 | 28 · 35 | 18 | 33 |
 
 ## 6. Việc tiếp theo
 
