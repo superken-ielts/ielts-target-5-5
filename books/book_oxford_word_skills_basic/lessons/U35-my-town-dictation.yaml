@@ -28,7 +28,7 @@ scenes:
     chapter: "Giới thiệu"
     lines:
       - {"emma": "Welcome to the dictation for Unit 35: My town. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit thirty-five: My town. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 35: thành phố, thị trấn của tôi. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
-      - {"emma": "There are three parts. First, 45 words from the book. You hear each word twice, and then an example sentence twice. Then 10 more useful words, and 22 useful sentences for conversation.", "say": "There are three parts. First, forty-five words from the book. You hear each word twice, and then an example sentence twice. Then ten more useful words, and twenty-two useful sentences for conversation.", "vi": "Ba phần: 45 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 10 từ thêm, 22 câu giao tiếp."}
+      - {"emma": "There are three parts. First, 45 words from the book. You hear each word twice, and then an example sentence twice. Then 10 more useful words, and 18 useful sentences for conversation.", "say": "There are three parts. First, forty-five words from the book. You hear each word twice, and then an example sentence twice. Then ten more useful words, and eighteen useful sentences for conversation.", "vi": "Ba phần: 45 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 10 từ thêm, 18 câu giao tiếp."}
       - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
 
   - kind: dictation
@@ -240,54 +240,39 @@ scenes:
     heading: "Dictation 3 · Useful sentences (62–67)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 62, "answer": "What's the nightlife like?", "vi": "Cuộc sống về đêm thế nào?"}
-      - {"n": 63, "answer": "Not great, but the night market is nice.", "vi": "Không sôi động lắm, nhưng chợ đêm thì hay."}
-      - {"n": 64, "answer": "What do you think of Ho Chi Minh City, Emma?", "vi": "Emma thấy TP. Hồ Chí Minh thế nào?"}
-      - {"n": 65, "answer": "It's very cosmopolitan, and quite safe, but noisy.", "vi": "Rất đa văn hóa, khá an toàn, nhưng ồn."}
-      - {"n": 66, "answer": "Is it polluted?", "vi": "Có ô nhiễm không?"}
-      - {"n": 67, "answer": "Sometimes, because of the traffic.", "vi": "Đôi khi có, vì xe cộ."}
+      - {"n": 62, "answer": "What do you think of Ho Chi Minh City, Emma?", "vi": "Emma thấy TP. Hồ Chí Minh thế nào?"}
+      - {"n": 63, "answer": "It's very cosmopolitan, and quite safe, but noisy.", "vi": "Rất đa văn hóa, khá an toàn, nhưng ồn."}
+      - {"n": 64, "answer": "Where did you grow up?", "vi": "Bạn lớn lên ở đâu?"}
+      - {"n": 65, "answer": "In a small town on the south coast of England.", "vi": "Ở một thị trấn nhỏ ven biển phía nam nước Anh."}
+      - {"n": 66, "answer": "What's special about it?", "vi": "Ở đó có gì đặc biệt?"}
+      - {"n": 67, "answer": "It has an old church, a small harbour, and a lovely beach.", "vi": "Có nhà thờ cổ, bến cảng nhỏ và bãi biển đẹp."}
     lines:
-      - {"emma": "Sixty-two. What's the nightlife like? What's the nightlife like?", "focus": 0}
-      - {"tom": "Sixty-three. Not great, but the night market is nice. Not great, but the night market is nice.", "focus": 1, "reveal": [62]}
-      - {"tom": "Sixty-four. What do you think of Ho Chi Minh City, Emma? What do you think of Ho Chi Minh City, Emma?", "say": "Sixty-four. What do you think of Ho Chee Min City, Emma? What do you think of Ho Chee Min City, Emma?", "focus": 2, "reveal": [63]}
-      - {"emma": "Sixty-five. It's very cosmopolitan, and quite safe, but noisy. It's very cosmopolitan, and quite safe, but noisy.", "focus": 3, "reveal": [64]}
-      - {"tom": "Sixty-six. Is it polluted? Is it polluted?", "focus": 4, "reveal": [65]}
-      - {"emma": "Sixty-seven. Sometimes, because of the traffic. Sometimes, because of the traffic.", "focus": 5, "reveal": [66]}
+      - {"tom": "Sixty-two. What do you think of Ho Chi Minh City, Emma? What do you think of Ho Chi Minh City, Emma?", "say": "Sixty-two. What do you think of Ho Chee Min City, Emma? What do you think of Ho Chee Min City, Emma?", "focus": 0}
+      - {"emma": "Sixty-three. It's very cosmopolitan, and quite safe, but noisy. It's very cosmopolitan, and quite safe, but noisy.", "focus": 1, "reveal": [62]}
+      - {"tom": "Sixty-four. Where did you grow up? Where did you grow up?", "focus": 2, "reveal": [63]}
+      - {"emma": "Sixty-five. In a small town on the south coast of England. In a small town on the south coast of England.", "focus": 3, "reveal": [64]}
+      - {"tom": "Sixty-six. What's special about it? What's special about it?", "focus": 4, "reveal": [65]}
+      - {"emma": "Sixty-seven. It has an old church, a small harbour, and a lovely beach. It has an old church, a small harbour, and a lovely beach.", "focus": 5, "reveal": [66]}
       - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
 
   - kind: dictation
     heading: "Dictation 3 · Useful sentences (68–73)"
     heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
     items:
-      - {"n": 68, "answer": "Where did you grow up?", "vi": "Bạn lớn lên ở đâu?"}
-      - {"n": 69, "answer": "In a small town on the south coast of England.", "vi": "Ở một thị trấn nhỏ ven biển phía nam nước Anh."}
-      - {"n": 70, "answer": "What's special about it?", "vi": "Ở đó có gì đặc biệt?"}
-      - {"n": 71, "answer": "It has an old church, a small harbour, and a lovely beach.", "vi": "Có nhà thờ cổ, bến cảng nhỏ và bãi biển đẹp."}
-      - {"n": 72, "answer": "Is it a good place for young people?", "vi": "Đó có phải là nơi tốt cho người trẻ không?"}
-      - {"n": 73, "answer": "Not really. There's nothing to do at night.", "vi": "Không hẳn. Buổi tối chẳng có gì để làm."}
+      - {"n": 68, "answer": "Is it a good place for young people?", "vi": "Đó có phải là nơi tốt cho người trẻ không?"}
+      - {"n": 69, "answer": "Not really. There's nothing to do at night.", "vi": "Không hẳn. Buổi tối chẳng có gì để làm."}
+      - {"n": 70, "answer": "Excuse me, where's the museum?", "vi": "Xin lỗi, bảo tàng ở đâu?"}
+      - {"n": 71, "answer": "It's in the main square, next to the cathedral.", "vi": "Ở quảng trường chính, cạnh nhà thờ lớn."}
+      - {"n": 72, "answer": "The bridge is the best place to see the river.", "vi": "Cây cầu là chỗ ngắm sông đẹp nhất."}
+      - {"n": 73, "answer": "Let's meet in front of the statue.", "vi": "Mình gặp nhau trước bức tượng nhé."}
     lines:
-      - {"tom": "Sixty-eight. Where did you grow up? Where did you grow up?", "focus": 0}
-      - {"emma": "Sixty-nine. In a small town on the south coast of England. In a small town on the south coast of England.", "focus": 1, "reveal": [68]}
-      - {"tom": "Seventy. What's special about it? What's special about it?", "focus": 2, "reveal": [69]}
-      - {"emma": "Seventy-one. It has an old church, a small harbour, and a lovely beach. It has an old church, a small harbour, and a lovely beach.", "focus": 3, "reveal": [70]}
-      - {"tom": "Seventy-two. Is it a good place for young people? Is it a good place for young people?", "focus": 4, "reveal": [71]}
-      - {"emma": "Seventy-three. Not really. There's nothing to do at night. Not really. There's nothing to do at night.", "focus": 5, "reveal": [72]}
+      - {"tom": "Sixty-eight. Is it a good place for young people? Is it a good place for young people?", "focus": 0}
+      - {"emma": "Sixty-nine. Not really. There's nothing to do at night. Not really. There's nothing to do at night.", "focus": 1, "reveal": [68]}
+      - {"emma": "Seventy. Excuse me, where's the museum? Excuse me, where's the museum?", "focus": 2, "reveal": [69]}
+      - {"tom": "Seventy-one. It's in the main square, next to the cathedral. It's in the main square, next to the cathedral.", "focus": 3, "reveal": [70]}
+      - {"tom": "Seventy-two. The bridge is the best place to see the river. The bridge is the best place to see the river.", "focus": 4, "reveal": [71]}
+      - {"emma": "Seventy-three. Let's meet in front of the statue. Let's meet in front of the statue.", "focus": 5, "reveal": [72]}
       - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [73]}
-
-  - kind: dictation
-    heading: "Dictation 3 · Useful sentences (74–77)"
-    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
-    items:
-      - {"n": 74, "answer": "Excuse me, where's the museum?", "vi": "Xin lỗi, bảo tàng ở đâu?"}
-      - {"n": 75, "answer": "It's in the main square, next to the cathedral.", "vi": "Ở quảng trường chính, cạnh nhà thờ lớn."}
-      - {"n": 76, "answer": "The bridge is the best place to see the river.", "vi": "Cây cầu là chỗ ngắm sông đẹp nhất."}
-      - {"n": 77, "answer": "Let's meet in front of the statue.", "vi": "Mình gặp nhau trước bức tượng nhé."}
-    lines:
-      - {"emma": "Seventy-four. Excuse me, where's the museum? Excuse me, where's the museum?", "focus": 0}
-      - {"tom": "Seventy-five. It's in the main square, next to the cathedral. It's in the main square, next to the cathedral.", "focus": 1, "reveal": [74]}
-      - {"tom": "Seventy-six. The bridge is the best place to see the river. The bridge is the best place to see the river.", "focus": 2, "reveal": [75]}
-      - {"emma": "Seventy-seven. Let's meet in front of the statue. Let's meet in front of the statue.", "focus": 3, "reveal": [76]}
-      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [77]}
 
   - kind: bullets
     chapter: "Sau khi nghe – viết"
