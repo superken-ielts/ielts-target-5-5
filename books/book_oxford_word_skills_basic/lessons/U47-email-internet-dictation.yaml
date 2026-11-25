@@ -1,0 +1,309 @@
+# Video nghe – viết (dictation) Unit 47 · Email and the internet — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U47-email-internet-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U47 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 47 có 35 mục: search engine phủ engine, MP3 player phủ player; get an email phủ get; fast, quick,
+# slow ghép một dòng. Unit cuối module Study and work: lời chào cuối hẹn gặp ở module tiếp theo.
+id: U47-email-internet-dictation
+activity: U47-words
+title: "Unit 47 · Email and the internet"
+subtitle: "Dictation · listen and write: using email and the internet"
+title_vi: "Nghe – viết 10 phút: email và internet — từ trong sách, từ thêm, câu giao tiếp"
+tag: "STUDY AND WORK · UNIT 47"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 47: Email and the internet. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-seven: Email and the internet. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 47: email và internet. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 28 words from the book. You hear each word twice, and then an example sentence twice. Then 18 more useful words, and 33 useful sentences for conversation.", "say": "There are three parts. First, twenty-eight words from the book. You hear each word twice, and then an example sentence twice. Then eighteen more useful words, and thirty-three useful sentences for conversation.", "vi": "Ba phần: 28 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 18 từ thêm, 33 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "email address", "vi": "địa chỉ email", "ex": "What's your email address?", "w": ["email address"]}
+      - {"n": 2, "answer": "address", "vi": "địa chỉ", "ex": "I haven't got his address.", "w": ["address"]}
+      - {"n": 3, "answer": "check your emails", "vi": "xem email", "ex": "Have you checked your emails this morning?", "w": ["check"]}
+      - {"n": 4, "answer": "inbox", "vi": "hộp thư đến", "ex": "There are three messages in my inbox.", "w": ["inbox"]}
+      - {"n": 5, "answer": "message", "vi": "thư, tin nhắn", "ex": "Did you get my message?", "w": ["message"]}
+      - {"n": 6, "answer": "date", "vi": "ngày", "ex": "Look at the date on the email.", "w": ["date"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. email address. email address. What's your email address? What's your email address?", "focus": 0}
+      - {"emma": "Two. address. address. I haven't got his address. I haven't got his address.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. check your emails. check your emails. Have you checked your emails this morning? Have you checked your emails this morning?", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. inbox. inbox. There are three messages in my inbox. There are three messages in my inbox.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. message. message. Did you get my message? Did you get my message?", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. date. date. Look at the date on the email. Look at the date on the email.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "send", "vi": "gửi", "ex": "Karl sent me an email.", "w": ["send"]}
+      - {"n": 8, "answer": "get an email", "vi": "nhận email", "ex": "I got an email from Alice.", "w": ["get an email", "get"]}
+      - {"n": 9, "answer": "receive", "vi": "nhận", "ex": "I received an email from Li today.", "w": ["receive"]}
+      - {"n": 10, "answer": "reply", "vi": "trả lời", "ex": "I'll reply to it later.", "w": ["reply"]}
+      - {"n": 11, "answer": "forward", "vi": "chuyển tiếp", "ex": "Please forward the attachment to John.", "w": ["forward"]}
+      - {"n": 12, "answer": "attachment", "vi": "tệp đính kèm", "ex": "There's an attachment with the email.", "w": ["attachment"]}
+    lines:
+      - {"emma": "Seven. send. send. Karl sent me an email. Karl sent me an email.", "focus": 0}
+      - {"emma": "Eight. get an email. get an email. I got an email from Alice. I got an email from Alice.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. receive. receive. I received an email from Li today. I received an email from Li today.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. reply. reply. I'll reply to it later. I'll reply to it later.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. forward. forward. Please forward the attachment to John. Please forward the attachment to John.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. attachment. attachment. There's an attachment with the email. There's an attachment with the email.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "delete", "vi": "xóa", "ex": "I always delete junk mail.", "w": ["delete"]}
+      - {"n": 14, "answer": "junk", "vi": "thư rác", "ex": "I get lots of junk mail.", "w": ["junk"]}
+      - {"n": 15, "answer": "chat", "vi": "trò chuyện", "ex": "I chat with my friends every day.", "w": ["chat"]}
+      - {"n": 16, "answer": "chatroom", "vi": "phòng chat", "ex": "Do you visit chatrooms?", "w": ["chatroom"]}
+      - {"n": 17, "answer": "internet", "vi": "internet", "ex": "Do you buy things on the internet?", "w": ["internet", "on the internet"]}
+      - {"n": 18, "answer": "online", "vi": "trực tuyến", "ex": "I go online every evening.", "w": ["online", "go online"]}
+    lines:
+      - {"emma": "Thirteen. delete. delete. I always delete junk mail. I always delete junk mail.", "focus": 0}
+      - {"emma": "Fourteen. junk. junk. I get lots of junk mail. I get lots of junk mail.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. chat. chat. I chat with my friends every day. I chat with my friends every day.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. chatroom. chatroom. Do you visit chatrooms? Do you visit chatrooms?", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. internet. internet. Do you buy things on the internet? Do you buy things on the internet?", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. online. online. I go online every evening. I go online every evening.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "website", "vi": "trang web", "ex": "Which websites do you visit most?", "w": ["website"]}
+      - {"n": 20, "answer": "web address", "vi": "địa chỉ trang web", "ex": "What's the web address?", "w": ["web address"]}
+      - {"n": 21, "answer": "visit", "vi": "vào (trang web)", "ex": "You can visit websites or chatrooms.", "w": ["visit"]}
+      - {"n": 22, "answer": "search engine", "vi": "công cụ tìm kiếm", "ex": "We use different search engines.", "w": ["search engine", "engine"]}
+      - {"n": 23, "answer": "use", "vi": "dùng", "ex": "I use the internet every evening.", "w": ["use"]}
+      - {"n": 24, "answer": "broadband", "vi": "băng thông rộng", "ex": "I'd like to get broadband.", "w": ["broadband"]}
+    lines:
+      - {"emma": "Nineteen. website. website. Which websites do you visit most? Which websites do you visit most?", "focus": 0}
+      - {"emma": "Twenty. web address. web address. What's the web address? What's the web address?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. visit. visit. You can visit websites or chatrooms. You can visit websites or chatrooms.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. search engine. search engine. We use different search engines. We use different search engines.", "say": "Twenty-two. search engine. search engine. We yooz different search engines. We yooz different search engines.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. use. use. I use the internet every evening. I use the internet every evening.", "say": "Twenty-three. yooz. yooz. I yooz the internet every evening. I yooz the internet every evening.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. broadband. broadband. I'd like to get broadband. I'd like to get broadband.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "fast, quick, slow", "vi": "nhanh, nhanh, chậm", "ex": "My connection is slow, but broadband is fast and quick.", "w": ["fast", "quick", "slow"]}
+      - {"n": 26, "answer": "download", "vi": "tải về", "ex": "It's not expensive to download music.", "w": ["download"]}
+      - {"n": 27, "answer": "data", "vi": "dữ liệu", "ex": "Data is computer information.", "w": ["data"]}
+      - {"n": 28, "answer": "MP3 player", "vi": "máy nghe nhạc MP3", "ex": "I download music onto my MP3 player.", "w": ["MP3 player", "player"]}
+    lines:
+      - {"emma": "Twenty-five. fast, quick, slow. fast, quick, slow. My connection is slow, but broadband is fast and quick. My connection is slow, but broadband is fast and quick.", "focus": 0}
+      - {"emma": "Twenty-six. download. download. It's not expensive to download music. It's not expensive to download music.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. data. data. Data is computer information. Data is computer information.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. MP3 player. MP3 player. I download music onto my MP3 player. I download music onto my MP3 player.", "say": "Twenty-eight. em pee three player. em pee three player. I download music onto my em pee three player. I download music onto my em pee three player.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (29–34)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 29, "answer": "password", "vi": "mật khẩu", "ex": "I forgot my password."}
+      - {"n": 30, "answer": "username", "vi": "tên đăng nhập", "ex": "Type your username and password."}
+      - {"n": 31, "answer": "Wi-Fi", "vi": "wifi", "ex": "Is there free Wi-Fi here?"}
+      - {"n": 32, "answer": "social media", "vi": "mạng xã hội", "ex": "I don't spend much time on social media."}
+      - {"n": 33, "answer": "post", "vi": "đăng", "ex": "She posted a photo of her new car."}
+      - {"n": 34, "answer": "share", "vi": "chia sẻ", "ex": "Can you share the link with me?"}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-nine. password. password. I forgot my password. I forgot my password.", "focus": 0}
+      - {"tom": "Thirty. username. username. Type your username and password. Type your username and password.", "focus": 1, "reveal": [29]}
+      - {"tom": "Thirty-one. Wi-Fi. Wi-Fi. Is there free Wi-Fi here? Is there free Wi-Fi here?", "focus": 2, "reveal": [30]}
+      - {"tom": "Thirty-two. social media. social media. I don't spend much time on social media. I don't spend much time on social media.", "focus": 3, "reveal": [31]}
+      - {"tom": "Thirty-three. post. post. She posted a photo of her new car. She posted a photo of her new car.", "focus": 4, "reveal": [32]}
+      - {"tom": "Thirty-four. share. share. Can you share the link with me? Can you share the link with me?", "focus": 5, "reveal": [33]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [34]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (35–40)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 35, "answer": "link", "vi": "đường dẫn", "ex": "Click on the link in the email."}
+      - {"n": 36, "answer": "subject", "vi": "chủ đề (email)", "ex": "Write the subject of your email."}
+      - {"n": 37, "answer": "spam", "vi": "thư rác", "ex": "This email went into my spam folder."}
+      - {"n": 38, "answer": "video call", "vi": "cuộc gọi video", "ex": "I make a video call home every Sunday."}
+      - {"n": 39, "answer": "stream", "vi": "phát trực tuyến", "ex": "I stream music on my phone."}
+      - {"n": 40, "answer": "app", "vi": "ứng dụng", "ex": "There's an app for everything."}
+    lines:
+      - {"tom": "Thirty-five. link. link. Click on the link in the email. Click on the link in the email.", "focus": 0}
+      - {"tom": "Thirty-six. subject. subject. Write the subject of your email. Write the subject of your email.", "focus": 1, "reveal": [35]}
+      - {"tom": "Thirty-seven. spam. spam. This email went into my spam folder. This email went into my spam folder.", "focus": 2, "reveal": [36]}
+      - {"tom": "Thirty-eight. video call. video call. I make a video call home every Sunday. I make a video call home every Sunday.", "focus": 3, "reveal": [37]}
+      - {"tom": "Thirty-nine. stream. stream. I stream music on my phone. I stream music on my phone.", "focus": 4, "reveal": [38]}
+      - {"tom": "Forty. app. app. There's an app for everything. There's an app for everything.", "focus": 5, "reveal": [39]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (41–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 41, "answer": "online shopping", "vi": "mua sắm trực tuyến", "ex": "Online shopping is very popular."}
+      - {"n": 42, "answer": "search", "vi": "tìm kiếm", "ex": "I searched for a cheap hotel."}
+      - {"n": 43, "answer": "signal", "vi": "sóng", "ex": "There's no signal in the mountains."}
+      - {"n": 44, "answer": "connection", "vi": "kết nối", "ex": "The internet connection is very slow."}
+      - {"n": 45, "answer": "text message", "vi": "tin nhắn", "ex": "Send me a text message."}
+      - {"n": 46, "answer": "emoji", "vi": "biểu tượng cảm xúc", "ex": "She always sends lots of emojis."}
+    lines:
+      - {"tom": "Forty-one. online shopping. online shopping. Online shopping is very popular. Online shopping is very popular.", "focus": 0}
+      - {"tom": "Forty-two. search. search. I searched for a cheap hotel. I searched for a cheap hotel.", "focus": 1, "reveal": [41]}
+      - {"tom": "Forty-three. signal. signal. There's no signal in the mountains. There's no signal in the mountains.", "focus": 2, "reveal": [42]}
+      - {"tom": "Forty-four. connection. connection. The internet connection is very slow. The internet connection is very slow.", "focus": 3, "reveal": [43]}
+      - {"tom": "Forty-five. text message. text message. Send me a text message. Send me a text message.", "focus": 4, "reveal": [44]}
+      - {"tom": "Forty-six. emoji. emoji. She always sends lots of emojis. She always sends lots of emojis.", "focus": 5, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [46]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 47, "answer": "What's your email address?", "vi": "Địa chỉ email của bạn là gì?"}
+      - {"n": 48, "answer": "It's tom dot tran at gmail dot com.", "vi": "Là tom chấm tran a còng gmail chấm com."}
+      - {"n": 49, "answer": "Did you get my email?", "vi": "Bạn nhận được email của mình chưa?"}
+      - {"n": 50, "answer": "Yes, I'll reply this evening.", "vi": "Rồi, tối nay mình trả lời."}
+      - {"n": 51, "answer": "Can you forward it to me?", "vi": "Bạn chuyển tiếp cho mình nhé?"}
+      - {"n": 52, "answer": "Sure. I'll send it now.", "vi": "Được. Mình gửi ngay."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-seven. What's your email address? What's your email address?", "focus": 0}
+      - {"tom": "Forty-eight. It's tom dot tran at gmail dot com. It's tom dot tran at gmail dot com.", "say": "Forty-eight. It's tom dot chan at gee mail dot com. It's tom dot chan at gee mail dot com.", "focus": 1, "reveal": [47]}
+      - {"emma": "Forty-nine. Did you get my email? Did you get my email?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. Yes, I'll reply this evening. Yes, I'll reply this evening.", "focus": 3, "reveal": [49]}
+      - {"tom": "Fifty-one. Can you forward it to me? Can you forward it to me?", "focus": 4, "reveal": [50]}
+      - {"emma": "Fifty-two. Sure. I'll send it now. Sure. I'll send it now.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "There's no attachment.", "vi": "Không có tệp đính kèm."}
+      - {"n": 54, "answer": "Sorry, I forgot to attach it.", "vi": "Xin lỗi, mình quên đính kèm."}
+      - {"n": 55, "answer": "How often do you go online?", "vi": "Bạn có hay lên mạng không?"}
+      - {"n": 56, "answer": "All the time, on my phone.", "vi": "Lúc nào cũng vậy, trên điện thoại."}
+      - {"n": 57, "answer": "Do you buy things on the internet?", "vi": "Bạn có mua đồ trên mạng không?"}
+      - {"n": 58, "answer": "Yes, clothes and books.", "vi": "Có, quần áo và sách."}
+    lines:
+      - {"tom": "Fifty-three. There's no attachment. There's no attachment.", "focus": 0}
+      - {"emma": "Fifty-four. Sorry, I forgot to attach it. Sorry, I forgot to attach it.", "focus": 1, "reveal": [53]}
+      - {"emma": "Fifty-five. How often do you go online? How often do you go online?", "focus": 2, "reveal": [54]}
+      - {"tom": "Fifty-six. All the time, on my phone. All the time, on my phone.", "focus": 3, "reveal": [55]}
+      - {"emma": "Fifty-seven. Do you buy things on the internet? Do you buy things on the internet?", "focus": 4, "reveal": [56]}
+      - {"tom": "Fifty-eight. Yes, clothes and books. Yes, clothes and books.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "Is there Wi-Fi here?", "vi": "Ở đây có wifi không?"}
+      - {"n": 60, "answer": "Yes, the password is on the wall.", "vi": "Có, mật khẩu ghi trên tường."}
+      - {"n": 61, "answer": "The internet is very slow today.", "vi": "Hôm nay mạng chậm quá."}
+      - {"n": 62, "answer": "Let's try again later.", "vi": "Lát nữa thử lại nhé."}
+      - {"n": 63, "answer": "I'll send you the link.", "vi": "Mình gửi bạn đường dẫn nhé."}
+      - {"n": 64, "answer": "Thanks. I'll check it later.", "vi": "Cảm ơn. Lát mình xem."}
+    lines:
+      - {"tom": "Fifty-nine. Is there Wi-Fi here? Is there Wi-Fi here?", "focus": 0}
+      - {"emma": "Sixty. Yes, the password is on the wall. Yes, the password is on the wall.", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. The internet is very slow today. The internet is very slow today.", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Let's try again later. Let's try again later.", "focus": 3, "reveal": [61]}
+      - {"emma": "Sixty-three. I'll send you the link. I'll send you the link.", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. Thanks. I'll check it later. Thanks. I'll check it later.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "I look forward to hearing from you.", "vi": "Mong nhận được hồi âm của bạn."}
+      - {"n": 66, "answer": "Have you checked your emails?", "vi": "Bạn xem email chưa?"}
+      - {"n": 67, "answer": "Not yet. I'll do it now.", "vi": "Chưa. Mình xem ngay."}
+      - {"n": 68, "answer": "I sent you a message yesterday.", "vi": "Hôm qua mình gửi bạn tin nhắn."}
+      - {"n": 69, "answer": "Sorry, I didn't see it.", "vi": "Xin lỗi, mình không thấy."}
+      - {"n": 70, "answer": "Which search engine do you use?", "vi": "Bạn dùng công cụ tìm kiếm nào?"}
+    lines:
+      - {"emma": "Sixty-five. I look forward to hearing from you. I look forward to hearing from you.", "focus": 0}
+      - {"emma": "Sixty-six. Have you checked your emails? Have you checked your emails?", "focus": 1, "reveal": [65]}
+      - {"tom": "Sixty-seven. Not yet. I'll do it now. Not yet. I'll do it now.", "focus": 2, "reveal": [66]}
+      - {"emma": "Sixty-eight. I sent you a message yesterday. I sent you a message yesterday.", "focus": 3, "reveal": [67]}
+      - {"tom": "Sixty-nine. Sorry, I didn't see it. Sorry, I didn't see it.", "focus": 4, "reveal": [68]}
+      - {"emma": "Seventy. Which search engine do you use? Which search engine do you use?", "say": "Seventy. Which search engine do you yooz? Which search engine do you yooz?", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "Google, like most people.", "vi": "Google, như mọi người."}
+      - {"n": 72, "answer": "Can you send me the photos?", "vi": "Bạn gửi mình mấy tấm ảnh nhé?"}
+      - {"n": 73, "answer": "I'll send them as attachments.", "vi": "Mình gửi dạng tệp đính kèm."}
+      - {"n": 74, "answer": "Do you spend a lot of time online?", "vi": "Bạn có lên mạng nhiều không?"}
+      - {"n": 75, "answer": "Too much! About five hours a day.", "vi": "Nhiều quá! Khoảng năm tiếng một ngày."}
+      - {"n": 76, "answer": "Don't open emails from people you don't know.", "vi": "Đừng mở email từ người lạ."}
+    lines:
+      - {"tom": "Seventy-one. Google, like most people. Google, like most people.", "focus": 0}
+      - {"tom": "Seventy-two. Can you send me the photos? Can you send me the photos?", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. I'll send them as attachments. I'll send them as attachments.", "focus": 2, "reveal": [72]}
+      - {"emma": "Seventy-four. Do you spend a lot of time online? Do you spend a lot of time online?", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. Too much! About five hours a day. Too much! About five hours a day.", "focus": 4, "reveal": [74]}
+      - {"emma": "Seventy-six. Don't open emails from people you don't know. Don't open emails from people you don't know.", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–79)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "Good idea. They might be dangerous.", "vi": "Đúng vậy. Có thể nguy hiểm."}
+      - {"n": 78, "answer": "Can you reply to Karl for me?", "vi": "Bạn trả lời Karl giúp mình nhé?"}
+      - {"n": 79, "answer": "Sure. What shall I say?", "vi": "Được. Mình nói gì đây?"}
+    lines:
+      - {"tom": "Seventy-seven. Good idea. They might be dangerous. Good idea. They might be dangerous.", "focus": 0}
+      - {"emma": "Seventy-eight. Can you reply to Karl for me? Can you reply to Karl for me?", "focus": 1, "reveal": [77]}
+      - {"tom": "Seventy-nine. Sure. What shall I say? Sure. What shall I say?", "focus": 2, "reveal": [78]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [79]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in the next module.", "say": "Well done! See you in the next module.", "vi": "Giỏi lắm! Hẹn gặp ở module tiếp theo."}
+

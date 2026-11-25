@@ -1,0 +1,448 @@
+# Video Oxford Word Skills Basic · Unit 44 — I can talk about jobs (sách in tr. 114–115, Answer key tr. 215).
+# Khuôn: file 09 mục 5.2 (unit thường, 7–10 phút). Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả
+# lời `pause: 1.0`).
+# Bài trong sách: đủ 1–5. Bài 1, 2, 3 theo Answer key tr. 215. Bài 4 (ABOUT YOU): Tom và Emma nói về người quen làm các nghề trong
+# danh sách (cảnh Nói 1). Bài 5 (Test yourself): năm hàng tranh cắt bỏ dòng chữ (đáp án hiện thành nhãn khi Tom trả lời), rồi cột
+# Meaning của bảng — Emma đọc nghĩa, Tom nói từ.
+# Thêm ngoài sách: thêm nghề hay gặp ở Việt Nam (waiter / waitress, farmer, factory worker, tour guide, receptionist, delivery
+# driver); Nghe và viết; Nói 2 (Part 1 "Work").
+# Hình trong sách: lời hỏi What do you do? và Spotlight a / an with jobs, 15 tranh nghề (ba cảnh, khung theo tranh), bảng
+# self-employed … boss (khung theo hàng) — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom làm thêm phục vụ ở quán cà phê gần trường, quản lý (nữ) nghiêm nhưng
+# công bằng; bố làm cho công ty cà phê, mẹ có cửa hàng hoa (tự làm chủ), chị Hoa là y tá ở Hà Nội, ông là thầy giáo Toán đã nghỉ hưu,
+# chăm vườn, chú là phi công; Emma dạy tiếng Anh ở trường có 12 giáo viên từ 5 nước, bố mẹ sắp nghỉ hưu. Mới: chú của Tom bay đi
+# Singapore và Bangkok; Tom không quen ai là lính; giám đốc trường của Emma (nữ) tốt bụng, giúp giáo viên mới.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U44-jobs.yaml
+id: U44-jobs
+activity: U44-words
+title: "Unit 44 · Jobs"
+subtitle: "I can talk about jobs"
+title_vi: "Nghề nghiệp: police officer, shop assistant, builder, nurse, secretary, hairdresser, chef, dentist, vet, pilot; self-employed, unemployed, retired, boss; a / an với nghề"
+tag: "STUDY AND WORK · UNIT 44"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 44: jobs. Today: twenty jobs, and some words for people who don't go to work. When you meet someone, you often ask: what do you do?"
+        say: "Welcome to Unit forty-four: jobs. Today: twenty jobs, and some words for people who don't go to work. When you meet someone, you often ask: what do you do?"
+        vi: "Unit 44: nghề nghiệp — hai mươi nghề và những người không đi làm."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "What do you do?"
+    heading: "What do you do? · Spotlight: a / an with jobs"
+    heading_vi: "tr. 114 — hỏi nghề; nói nghề luôn có a / an"
+    image: {pdf: course-book, page: 115, clip: [26, 64, 488, 134]}
+    items:
+      - {box: [28, 66, 258, 130]}
+      - {box: [266, 92, 484, 105]}
+      - {box: [266, 104.5, 484, 115.5]}
+      - {box: [266, 116, 484, 129]}
+    lines:
+      - {emma: "Look at page one hundred and fourteen. To ask about someone's job, we say: what do you do? Or: what's your job? And we answer: I'm a teacher.", focus: 0, vi: "What do you do? = What's your job?"}
+      - {tom: "Look at the spotlight. We use a or an when we say what people's jobs are.", say: "Look at the spotlight. We yooz eigh or an when we say what people's jobs are.", focus: 1, vi: "a / an trước tên nghề"}
+      - {emma: "He's a builder, not: he's builder.", focus: 2}
+      - {tom: "She's a teacher, and he's an engineer.", focus: 3, vi: "an trước nguyên âm: an engineer, an architect"}
+
+  - kind: figure
+    chapter: "Nghề nghiệp (1)"
+    heading: "Jobs (1)"
+    heading_vi: "Tranh tr. 114 — police officer · shop assistant · builder · businessman / businesswoman · nurse · teacher"
+    image: {pdf: course-book, page: 115, clip: [26, 134, 446, 302]}
+    items:
+      - {box: [27, 136, 130, 214.5]}
+      - {box: [183, 136, 287, 214.5]}
+      - {box: [337, 136, 441, 214.5]}
+      - {box: [27, 214, 130, 302.5]}
+      - {box: [183, 214, 286, 291.5]}
+      - {box: [337, 214, 440, 291.5]}
+    lines:
+      - {emma: "Here are some jobs. A police officer.", focus: 0, vi: "police officer: cảnh sát"}
+      - {tom: "A shop assistant: he works in a shop.", focus: 1, vi: "shop assistant: nhân viên bán hàng"}
+      - {emma: "A builder: he builds houses.", focus: 2, vi: "builder: thợ xây"}
+      - {tom: "A businessman, or a businesswoman.", focus: 3, vi: "businessman / businesswoman: doanh nhân"}
+      - {emma: "A nurse: she works in a hospital.", focus: 4, vi: "nurse: y tá"}
+      - {tom: "And a teacher, like Emma!", focus: 5, vi: "teacher: giáo viên"}
+
+  - kind: figure
+    chapter: "Nghề nghiệp (2)"
+    heading: "Jobs (2)"
+    heading_vi: "Tranh tr. 114 — secretary · hairdresser · chef · dentist · soldier · cleaner"
+    image: {pdf: course-book, page: 115, clip: [26, 302, 446, 460]}
+    items:
+      - {box: [27, 304, 131, 381.5]}
+      - {box: [182, 304, 285, 381.5]}
+      - {box: [337, 304, 441, 381.5]}
+      - {box: [27, 383, 130, 459.5]}
+      - {box: [183, 383, 287, 459.5]}
+      - {box: [337, 383, 440, 459.5]}
+    lines:
+      - {emma: "A secretary: she works in an office.", focus: 0, vi: "secretary: thư ký"}
+      - {tom: "A hairdresser: he cuts people's hair.", focus: 1, vi: "hairdresser: thợ làm tóc"}
+      - {emma: "A chef: he cooks in a restaurant.", focus: 2, vi: "chef: đầu bếp"}
+      - {tom: "A dentist looks after people's teeth.", focus: 3, vi: "dentist: nha sĩ"}
+      - {emma: "A soldier.", focus: 4, vi: "soldier: người lính"}
+      - {tom: "And a cleaner.", focus: 5, vi: "cleaner: người dọn dẹp, lao công"}
+
+  - kind: figure
+    chapter: "Nghề nghiệp (3)"
+    heading: "Jobs (3)"
+    heading_vi: "Tranh tr. 114 — vet · pilot · lorry driver; also a train / bus / taxi driver"
+    image: {pdf: course-book, page: 115, clip: [26, 461, 488, 542]}
+    items:
+      - {box: [27, 463, 130, 542.5]}
+      - {box: [183, 463, 286, 542.5]}
+      - {box: [287, 463, 484, 542.5]}
+    lines:
+      - {emma: "A vet: a doctor for animals.", focus: 0, vi: "vet: bác sĩ thú y"}
+      - {tom: "A pilot. My uncle is a pilot!", focus: 1, vi: "pilot: phi công"}
+      - {emma: "And a lorry driver. A lorry is a big truck. We also say: a train driver, a bus driver, or a taxi driver.", focus: 2, vi: "lorry driver: tài xế xe tải (lorry = truck)"}
+
+  - kind: figure
+    chapter: "Người không đi làm"
+    heading: "self-employed · unemployed · retired · housewife / househusband · boss"
+    heading_vi: "Bảng tr. 114 — Word · Example · Meaning"
+    image: {pdf: course-book, page: 115, clip: [28, 542, 484, 678]}
+    items:
+      - {box: [30, 560, 482, 577]}
+      - {box: [30, 577, 482, 604]}
+      - {box: [30, 604, 482, 632]}
+      - {box: [30, 632, 482, 660]}
+      - {box: [30, 660, 482, 676]}
+    lines:
+      - {emma: "Look at the table. Self-employed: working for yourself, not for a company. Are you self-employed?", focus: 0, vi: "self-employed: tự làm chủ"}
+      - {tom: "Unemployed: with no job, but wanting to work. I'm unemployed, but I'm looking for a job.", focus: 1, vi: "unemployed: thất nghiệp"}
+      - {emma: "Retired: my grandfather is retired now. He stopped work because he is over sixty-five.", focus: 2, vi: "retired: đã nghỉ hưu"}
+      - {tom: "A housewife, or a househusband: a woman or a man who looks after the house and family, and doesn't go out to work.", focus: 3, vi: "housewife / househusband: người nội trợ"}
+      - {emma: "And the boss: a person who tells people what to do in their jobs. Who's the boss in this company?", focus: 4, vi: "boss: sếp"}
+
+  - kind: blanks
+    chapter: "Bài 1: chọn đáp án đúng"
+    heading: "Exercise 1 · Circle the correct answer"
+    heading_vi: "Ví dụ: The most important person in the company is the boss / hairdresser. → boss (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "A police officer / vet works with dogs and cats.  →  ___", answer: "vet"}
+      - {n: 2, q: "A shop assistant / dentist sells things.  →  ___", answer: "shop assistant"}
+      - {n: 3, q: "A housewife / nurse works in a hospital.  →  ___", answer: "nurse"}
+      - {n: 4, q: "Retired people are usually young / old.  →  ___", answer: "old"}
+      - {n: 5, q: "An unemployed person has / hasn't got a job.  →  ___", answer: "hasn't"}
+      - {n: 6, q: "A businesswoman / soldier can be self-employed.  →  ___", answer: "businesswoman"}
+      - {n: 7, q: "A businessman usually has a secretary / househusband.  →  ___", answer: "secretary"}
+      - {n: 8, q: "A pilot / dentist looks after people's teeth.  →  ___", answer: "dentist"}
+      - {n: 9, q: "A lorry driver / chef works in a kitchen.  →  ___", answer: "chef"}
+      - {n: 10, q: "A builder / cleaner works outdoors a lot.  →  ___", answer: "builder"}
+    lines:
+      - emma: "Exercise 1. Circle the correct answer. The example is: the most important person in the company is the boss. Pause the video and try."
+        say: "Exercise one. Circle the correct answer. The example is: the most important person in the company is the boss. Pause the video and try."
+        vi: "Bài 1: khoanh đáp án đúng."
+      - {tom: "One. A vet. Two. A shop assistant. Three. A nurse. Four. Old. Five. Hasn't got a job.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. A businesswoman. Seven. A secretary. Eight. A dentist. Nine. A chef. Ten. A builder: builders often work outdoors.", reveal: [6, 7, 8, 9, 10], focus: 9, vi: "outdoors: ngoài trời"}
+
+  - kind: blanks
+    chapter: "Bài 2: sửa chính tả"
+    heading: "Exercise 2 · Correct the spelling mistakes"
+    heading_vi: "Ví dụ: teecher → teacher (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "bisnessman  →  ___", answer: "businessman"}
+      - {n: 2, q: "shop asistant  →  ___", answer: "shop assistant"}
+      - {n: 3, q: "airdresser  →  ___", answer: "hairdresser"}
+      - {n: 4, q: "secretairy  →  ___", answer: "secretary"}
+      - {n: 5, q: "polis officer  →  ___", answer: "police officer"}
+      - {n: 6, q: "retaired  →  ___", answer: "retired"}
+      - {n: 7, q: "bilder  →  ___", answer: "builder"}
+      - {n: 8, q: "lory driver  →  ___", answer: "lorry driver"}
+      - {n: 9, q: "cleener  →  ___", answer: "cleaner"}
+      - {n: 10, q: "houswife  →  ___", answer: "housewife"}
+      - {n: 11, q: "self-emploied  →  ___", answer: "self-employed"}
+      - {n: 12, q: "solder  →  ___", answer: "soldier"}
+    lines:
+      - emma: "Exercise 2. Correct the spelling mistakes. The example is: teacher, with E, A. Pause the video and try."
+        say: "Exercise two. Correct the spelling mistakes. The example is: teacher, with ee, eigh. Pause the video and try."
+        vi: "Bài 2: sửa lỗi chính tả."
+      - {tom: "One. Businessman: B, U, S, I. Two. Shop assistant: double S. Three. Hairdresser: with an H. Four. Secretary: A, R, Y at the end. Five. Police officer. Six. Retired.", say: "One. Businessman: bee, yoo, ess, eye. Two. Shop assistant: double ess. Three. Hairdresser: with an aitch. Four. Secretary: eigh, ar, why at the end. Five. Police officer. Six. Retired.", reveal: [1, 2, 3, 4, 5, 6], focus: 5}
+      - {tom: "Seven. Builder: U, I. Eight. Lorry driver: double R. Nine. Cleaner: E, A. Ten. Housewife: with an E. Eleven. Self-employed: Y, E, D. Twelve. Soldier: I, E, R.", say: "Seven. Builder: yoo, eye. Eight. Lorry driver: double ar. Nine. Cleaner: ee, eigh. Ten. Housewife: with an ee. Eleven. Self-employed: why, ee, dee. Twelve. Soldier: eye, ee, ar.", reveal: [7, 8, 9, 10, 11, 12], focus: 11}
+
+  - kind: blanks
+    chapter: "Bài 3: hoàn thành câu"
+    heading: "Exercise 3 · Complete the sentences"
+    heading_vi: "Ví dụ: Does she stay at home with the children? ~ Yes, she's a housewife. (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "Could she cut my hair? ~ Yes, she's ___.", answer: "a hairdresser"}
+      - {n: 2, q: "Does he work for Alitalia? ~ Yes, he's ___.", answer: "a pilot"}
+      - {n: 3, q: "Has she got a job? ~ No, she's ___.", answer: "unemployed"}
+      - {n: 4, q: "Does he tell people what to do? ~ Yes, he's ___.", answer: "the boss / a manager"}
+      - {n: 5, q: "She's seventy – has she got a job? ~ No, she's ___.", answer: "retired"}
+      - {n: 6, q: "Does he work for other people? ~ No, he's ___.", answer: "self-employed"}
+      - {n: 7, q: "Does she work with students? ~ Yes, she's ___.", answer: "a teacher"}
+      - {n: 8, q: "Does he work in that restaurant? ~ Yes, he's ___.", answer: "a chef"}
+    lines:
+      - emma: "Exercise 3. Complete the sentences. The example is: does she stay at home with the children? Yes, she's a housewife. Pause the video and try."
+        say: "Exercise three. Complete the sentences. The example is: does she stay at home with the children? Yes, she's a housewife. Pause the video and try."
+        vi: "Bài 3: hoàn thành câu."
+      - {tom: "One. A hairdresser. Two. A pilot: Alitalia is an airline. Three. Unemployed. Four. The boss, or a manager.", reveal: [1, 2, 3, 4], focus: 3, vi: "airline: hãng hàng không"}
+      - {tom: "Five. Retired. Six. Self-employed. Seven. A teacher. Eight. A chef, or maybe a waiter!", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: người quen của bạn"
+    heading: "Speaking 1 · Exercise 4: about you"
+    heading_vi: "Bài 4 (ABOUT YOU) — bạn có quen ai làm nghề này không? Tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Do you know a nurse, Tom?"
+        a: "Yes, my sister Hoa. She's a nurse in a big hospital in Hanoi."
+        ask: emma
+        by: tom
+        phrases: ["Yes, my…", "She's a … in…"]
+      - q: "Do you know someone who is retired?"
+        a: "My grandfather. He was a maths teacher, and now he looks after the garden."
+        ask: emma
+        by: tom
+        phrases: ["He was a…", "now he…"]
+      - q: "Do you know a pilot?"
+        a: "Yes, my uncle is a pilot. He flies to Singapore and Bangkok."
+        ask: emma
+        by: tom
+        phrases: ["Yes, my … is a…"]
+      - q: "Do you know a soldier?"
+        a: "No, I don't know anyone who's a soldier."
+        ask: emma
+        by: tom
+        phrases: ["I don't know anyone who's a…"]
+      - q: "Do you know a businessman or woman?"
+        a: "My dad works for a coffee company, and my mum is self-employed: she has a flower shop in Da Lat."
+        ask: emma
+        by: tom
+        phrases: ["… works for…", "… is self-employed"]
+      - q: "Who's your boss, Emma?"
+        a: "The director of my school. She's very kind, and she helps all the new teachers."
+        ask: tom
+        by: emma
+        phrases: ["The director of…", "She's very…"]
+    lines:
+      - {emma: "Exercise 4 is about you. Think about your family, and people you know. Tom, do you know a nurse?", say: "Exercise four is about you. Think about your family, and people you know. Tom, do you know a nurse?", focus: 0}
+      - {tom: "Yes, my sister Hoa. She's a nurse in a big hospital in Hanoi.", say: "Yes, my sister Whah. She's a nurse in a big hospital in Ha Noi.", reveal: 0, vi: "Chị Hoa là y tá ở một bệnh viện lớn ở Hà Nội."}
+      - {emma: "Do you know someone who is retired?", focus: 1}
+      - {tom: "My grandfather. He was a maths teacher, and now he looks after the garden.", reveal: 1, vi: "Ông: trước là thầy giáo Toán, giờ chăm vườn."}
+      - {emma: "Do you know a pilot?", focus: 2}
+      - {tom: "Yes, my uncle is a pilot. He flies to Singapore and Bangkok.", reveal: 2, vi: "Chú là phi công, bay đi Singapore và Bangkok."}
+      - {emma: "Do you know a soldier?", focus: 3}
+      - {tom: "No, I don't know anyone who's a soldier.", reveal: 3, vi: "Không quen ai là lính."}
+      - {emma: "Do you know a businessman or woman?", focus: 4}
+      - {tom: "My dad works for a coffee company, and my mum is self-employed: she has a flower shop in Da Lat.", say: "My dad works for a coffee company, and my mum is self-employed: she has a flower shop in Dah Lot.", reveal: 4, vi: "Bố làm cho công ty cà phê; mẹ tự làm chủ cửa hàng hoa ở Đà Lạt."}
+      - {tom: "Who's your boss, Emma?", focus: 5}
+      - {emma: "The director of my school. She's very kind, and she helps all the new teachers.", reveal: 5, vi: "Giám đốc trường — rất tốt bụng, giúp mọi giáo viên mới."}
+
+  - kind: figure
+    chapter: "Bài 5: tự kiểm tra"
+    heading: "Exercise 5 · Test yourself: what are the jobs? (1)"
+    heading_vi: "Che chữ, nhìn tranh — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 115, clip: [28, 135, 443, 201]}
+    items:
+      - {box: [30, 136, 131, 200.5]}
+      - {box: [30, 136, 131, 200.5], label: "a police officer"}
+      - {box: [186, 136, 287, 200.5]}
+      - {box: [186, 136, 287, 200.5], label: "a shop assistant"}
+      - {box: [340, 136, 441, 200.5]}
+      - {box: [340, 136, 441, 200.5], label: "a builder"}
+    lines:
+      - emma: "Exercise 5 is a test. Look at the pictures, and cover the words. What are the jobs? Pause the video after each question. What's this job?"
+        say: "Exercise five is a test. Look at the pictures, and cover the words. What are the jobs? Pause the video after each question. What's this job?"
+        focus: 0
+        vi: "Bài 5: che chữ, nhìn tranh, nói tên nghề."
+      - {tom: "A police officer.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "A shop assistant.", focus: 3}
+      - {emma: "And this?", focus: 4}
+      - {tom: "A builder.", focus: 5}
+
+  - kind: figure
+    chapter: "Bài 5 (tiếp)"
+    heading: "Exercise 5 · Test yourself: what are the jobs? (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 115, clip: [28, 213, 443, 279]}
+    items:
+      - {box: [30, 214, 131, 278.5]}
+      - {box: [30, 214, 131, 278.5], label: "a businessman"}
+      - {box: [186, 214, 286, 278.5]}
+      - {box: [186, 214, 286, 278.5], label: "a nurse"}
+      - {box: [340, 214, 440, 278.5]}
+      - {box: [340, 214, 440, 278.5], label: "a teacher"}
+    lines:
+      - {emma: "What's this job?", focus: 0}
+      - {tom: "A businessman. Or a businesswoman: there's a woman too.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "A nurse.", focus: 3}
+      - {emma: "And this?", focus: 4}
+      - {tom: "A teacher.", focus: 5}
+
+  - kind: figure
+    chapter: "Bài 5 (tiếp)"
+    heading: "Exercise 5 · Test yourself: what are the jobs? (3)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 115, clip: [28, 303, 443, 369.5]}
+    items:
+      - {box: [30, 304, 131, 369]}
+      - {box: [30, 304, 131, 369], label: "a secretary"}
+      - {box: [185, 304, 285, 369]}
+      - {box: [185, 304, 285, 369], label: "a hairdresser"}
+      - {box: [340, 304, 441, 369]}
+      - {box: [340, 304, 441, 369], label: "a chef"}
+    lines:
+      - {emma: "What's this job?", focus: 0}
+      - {tom: "A secretary.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "A hairdresser.", focus: 3}
+      - {emma: "And this?", focus: 4}
+      - {tom: "A chef.", focus: 5}
+
+  - kind: figure
+    chapter: "Bài 5 (tiếp)"
+    heading: "Exercise 5 · Test yourself: what are the jobs? (4)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 115, clip: [28, 382, 443, 448]}
+    items:
+      - {box: [30, 383, 130, 447.8]}
+      - {box: [30, 383, 130, 447.8], label: "a dentist"}
+      - {box: [186, 383, 287, 447.8]}
+      - {box: [186, 383, 287, 447.8], label: "a soldier"}
+      - {box: [340, 383, 440, 447.8]}
+      - {box: [340, 383, 440, 447.8], label: "a cleaner"}
+    lines:
+      - {emma: "What's this job?", focus: 0}
+      - {tom: "A dentist.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "A soldier.", focus: 3}
+      - {emma: "And this?", focus: 4}
+      - {tom: "A cleaner.", focus: 5}
+
+  - kind: figure
+    chapter: "Bài 5 (tiếp)"
+    heading: "Exercise 5 · Test yourself: what are the jobs? (5)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 115, clip: [28, 462, 443, 528]}
+    items:
+      - {box: [29, 463, 130, 527.8]}
+      - {box: [29, 463, 130, 527.8], label: "a vet"}
+      - {box: [186, 463, 286, 527.8]}
+      - {box: [186, 463, 286, 527.8], label: "a pilot"}
+      - {box: [339, 463, 440, 527.8]}
+      - {box: [339, 463, 440, 527.8], label: "a lorry driver"}
+    lines:
+      - {emma: "What's this job?", focus: 0}
+      - {tom: "A vet.", focus: 1}
+      - {emma: "And this one?", focus: 2}
+      - {tom: "A pilot.", focus: 3}
+      - {emma: "And the last one?", focus: 4}
+      - {tom: "A lorry driver.", focus: 5}
+
+  - kind: figure
+    chapter: "Bài 5: nghĩa của từ"
+    heading: "Exercise 5 · Cover the words. Look at the meanings. Can you say the words?"
+    heading_vi: "Che cột Word và Example, nhìn Meaning — tạm dừng video sau mỗi nghĩa; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 115, clip: [256, 558, 486, 678]}
+    items:
+      - {box: [258, 560, 484, 577]}
+      - {box: [258, 560, 484, 577], label: "self-employed"}
+      - {box: [258, 577, 484, 604]}
+      - {box: [258, 577, 484, 604], label: "unemployed"}
+      - {box: [258, 604, 484, 632]}
+      - {box: [258, 604, 484, 632], label: "retired"}
+      - {box: [258, 632, 484, 660]}
+      - {box: [258, 632, 484, 660], label: "a housewife / a househusband"}
+      - {box: [258, 660, 484, 676]}
+      - {box: [258, 660, 484, 676], label: "the boss"}
+    lines:
+      - {emma: "Now cover the words and examples in the table, and look at the meanings. Working for yourself, not for a company.", focus: 0}
+      - {tom: "Self-employed.", focus: 1}
+      - {emma: "With no job, but wanting to work.", focus: 2}
+      - {tom: "Unemployed.", focus: 3}
+      - {emma: "Stopped work because you are over sixty-five.", focus: 4}
+      - {tom: "Retired.", focus: 5}
+      - {emma: "A woman or a man who looks after the house and family.", focus: 6}
+      - {tom: "A housewife, or a househusband.", focus: 7}
+      - {emma: "A person who tells people what to do in their jobs.", focus: 8}
+      - {tom: "The boss.", focus: 9}
+
+  - kind: bullets
+    chapter: "Thêm nghề hay gặp"
+    heading: "More jobs"
+    heading_vi: "Thêm ngoài sách — nghề hay gặp ở Việt Nam"
+    items:
+      - {en: "a waiter / a waitress: in a café or restaurant", vi: "phục vụ (nam / nữ)"}
+      - {en: "a farmer · a factory worker", vi: "nông dân · công nhân"}
+      - {en: "a tour guide · a receptionist", vi: "hướng dẫn viên du lịch · lễ tân"}
+      - {en: "a delivery driver · a motorbike taxi driver", vi: "tài xế giao hàng · xe ôm"}
+      - {en: "a part-time job · a full-time job", vi: "việc bán thời gian · toàn thời gian"}
+    lines:
+      - {tom: "I'm a waiter. I work in a café near my university. A woman is a waitress.", focus: 0, vi: "Tom làm phục vụ ở quán cà phê gần trường."}
+      - {emma: "Lots of people in Vietnam are farmers, or factory workers.", focus: 1}
+      - {tom: "In Da Lat and Hoi An, there are lots of tour guides, and receptionists in hotels.", say: "In Dah Lot and Hoy Ann, there are lots of tour guides, and receptionists in hotels.", focus: 2}
+      - {emma: "In big cities, many young people are delivery drivers, or motorbike taxi drivers.", focus: 3}
+      - {tom: "My job is a part-time job: I only work on Tuesday and Thursday evenings.", focus: 4, vi: "part-time: bán thời gian"}
+
+  - kind: blanks
+    chapter: "Nghe và viết"
+    heading: "Listen and write · jobs"
+    heading_vi: "Tạm dừng sau mỗi câu, viết đúng chính tả"
+    items:
+      - {n: 1, q: "My sister is a ___ in a hospital.", answer: "nurse"}
+      - {n: 2, q: "He's a ___: he cuts hair.", answer: "hairdresser"}
+      - {n: 3, q: "She works in an office as a ___.", answer: "secretary"}
+      - {n: 4, q: "My grandfather is ___ now.", answer: "retired"}
+      - {n: 5, q: "My mum is ___: she has a shop.", answer: "self-employed"}
+      - {n: 6, q: "The ___ looks after people's teeth.", answer: "dentist"}
+    lines:
+      - emma: "Now, a listening test. Pause the video after each sentence, and write the missing word."
+        vi: "Bài nghe: tạm dừng sau mỗi câu, viết từ còn thiếu."
+      - {emma: "Number one. My sister is a nurse in a hospital.", focus: 0}
+      - {emma: "Number two. He's a hairdresser: he cuts hair.", focus: 1}
+      - {emma: "Number three. She works in an office as a secretary.", focus: 2}
+      - {emma: "Number four. My grandfather is retired now.", focus: 3}
+      - {emma: "Number five. My mum is self-employed: she has a shop.", focus: 4}
+      - {emma: "Number six. The dentist looks after people's teeth.", focus: 5}
+      - {tom: "Nurse: N, U, R, S, E. Hairdresser: one word, double S. Secretary: S, E, C, R, E, T, A, R, Y.", say: "Nurse: en, yoo, ar, ess, ee. Hairdresser: one word, double ess. Secretary: ess, ee, see, ar, ee, tee, eigh, ar, why.", reveal: [1, 2, 3], focus: 2}
+      - {tom: "Retired: R, E, T, I, R, E, D. Self-employed: with a hyphen. Dentist: D, E, N, T, I, S, T.", say: "Retired: ar, ee, tee, eye, ar, ee, dee. Self-employed: with a hyphen. Dentist: dee, ee, en, tee, eye, ess, tee.", reveal: [4, 5, 6], focus: 5, vi: "hyphen: dấu gạch nối"}
+
+  - kind: practice
+    chapter: "Nói 2: đến lượt bạn"
+    heading: "Your turn · IELTS Part 1: Work"
+    heading_vi: "Tạm dừng video sau mỗi câu và trả lời 2–3 câu"
+    items:
+      - {q: "What do you do? / Are you a student?", hint: "I'm a … · I work for / in … · I'm a student at …"}
+      - {q: "Do you like your job or your studies? Why?", hint: "Yes, because … · Not really, because …"}
+      - {q: "What job did you want to do when you were a child?", hint: "When I was a child, I wanted to be a …"}
+      - {q: "What job would you like to do in the future?", hint: "I'd like to be a … because …"}
+      - {q: "What jobs are popular in your country?", hint: "Many people want to be … · … is a good job because …"}
+    lines:
+      - emma: "Your turn. These are IELTS part one questions about work. Pause the video after each question, and answer."
+        say: "Your turn. These are eye-elts part one questions about work. Pause the video after each question, and answer."
+        vi: "Đến lượt bạn: câu hỏi Part 1 về công việc."
+      - {emma: "What do you do? Are you a student?", focus: 0, pause: 0.5}
+      - {emma: "Do you like your job, or your studies? Why?", focus: 1, pause: 0.5}
+      - {emma: "What job did you want to do when you were a child?", focus: 2, pause: 0.5}
+      - {emma: "What job would you like to do in the future?", focus: 3, pause: 0.5}
+      - {emma: "What jobs are popular in your country?", focus: 4, pause: 1.0}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 5: che chữ tr. 114, nhìn tranh, nói tên nghề"
+    items:
+      - {en: "What do you do? = What's your job? · I'm a teacher. · He's an engineer.", vi: "hỏi và nói nghề (luôn có a / an)"}
+      - {en: "police officer · shop assistant · builder · businessman / businesswoman · nurse · teacher · secretary", vi: "nghề (1)"}
+      - {en: "hairdresser · chef · dentist · soldier · cleaner · vet · pilot · lorry / train / bus / taxi driver", vi: "nghề (2)"}
+      - {en: "self-employed · unemployed · retired · a housewife / a househusband · the boss", vi: "tình trạng công việc"}
+      - {en: "Next: Unit 45 · Describing a job", vi: "Tiếp theo: Unit 45 · Mô tả công việc"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "What do you do? I'm a teacher. Remember a or an.", say: "What do you do? I'm a teacher. Remember eigh or an.", focus: 0}
+      - {tom: "A police officer, a shop assistant, a builder, a businessman, a nurse, a teacher, and a secretary.", focus: 1}
+      - {emma: "A hairdresser, a chef, a dentist, a soldier, a cleaner, a vet, a pilot, and a lorry driver.", focus: 2}
+      - {tom: "Self-employed, unemployed, retired, a housewife or a househusband, and the boss.", focus: 3}
+      - {emma: "Next time, Unit 45: describing a job. See you then!", say: "Next time, Unit forty-five: describing a job. See you then!", focus: 4}

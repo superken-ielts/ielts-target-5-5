@@ -1,0 +1,311 @@
+# Video nghe – viết (dictation) Unit 45 · Describing a job — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U45-describing-job-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U45 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 45 có 36 mục: how much phủ much; salary, wages và low, high ghép một dòng; week, year, day phủ trong
+# các cụm hours a week / a year / a day.
+id: U45-describing-job-dictation
+activity: U45-words
+title: "Unit 45 · Describing a job"
+subtitle: "Dictation · listen and write: describing a job"
+title_vi: "Nghe – viết 10 phút: mô tả công việc — từ trong sách, từ thêm, câu giao tiếp"
+tag: "STUDY AND WORK · UNIT 45"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 45: Describing a job. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-five: Describing a job. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 45: mô tả công việc. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 30 words from the book. You hear each word twice, and then an example sentence twice. Then 16 more useful words, and 34 useful sentences for conversation.", "say": "There are three parts. First, thirty words from the book. You hear each word twice, and then an example sentence twice. Then sixteen more useful words, and thirty-four useful sentences for conversation.", "vi": "Ba phần: 30 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 16 từ thêm, 34 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "work", "vi": "làm việc", "ex": "Where does he work?", "w": ["work"]}
+      - {"n": 2, "answer": "hospital", "vi": "bệnh viện", "ex": "My sister works in a hospital.", "w": ["hospital"]}
+      - {"n": 3, "answer": "factory", "vi": "nhà máy", "ex": "He works in a factory.", "w": ["factory"]}
+      - {"n": 4, "answer": "building", "vi": "tòa nhà", "ex": "Daniel designs buildings.", "w": ["building"]}
+      - {"n": 5, "answer": "company", "vi": "công ty", "ex": "She works for a car company.", "w": ["company"]}
+      - {"n": 6, "answer": "airline", "vi": "hãng hàng không", "ex": "He works for an airline.", "w": ["airline"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. work. work. Where does he work? Where does he work?", "focus": 0}
+      - {"emma": "Two. hospital. hospital. My sister works in a hospital. My sister works in a hospital.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. factory. factory. He works in a factory. He works in a factory.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. building. building. Daniel designs buildings. Daniel designs buildings.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. company. company. She works for a car company. She works for a car company.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. airline. airline. He works for an airline. He works for an airline.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "full-time, part-time", "vi": "toàn thời gian, bán thời gian", "ex": "It's a full-time job, not a part-time job.", "w": ["full-time", "part-time"]}
+      - {"n": 8, "answer": "hours", "vi": "giờ", "ex": "How many hours do you work?", "w": ["hours"]}
+      - {"n": 9, "answer": "long hours", "vi": "làm nhiều giờ", "ex": "Doctors often work long hours.", "w": ["long hours"]}
+      - {"n": 10, "answer": "a day, a week, a year", "vi": "mỗi ngày, mỗi tuần, mỗi năm", "ex": "She works eight hours a day, five days a week.", "w": ["day", "week", "year"]}
+      - {"n": 11, "answer": "from nine to five", "vi": "từ chín giờ đến năm giờ", "ex": "I work from nine to five, Monday to Friday.", "w": ["from"]}
+      - {"n": 12, "answer": "earn", "vi": "kiếm (tiền)", "ex": "She earns a lot of money.", "w": ["earn"]}
+    lines:
+      - {"emma": "Seven. full-time, part-time. full-time, part-time. It's a full-time job, not a part-time job. It's a full-time job, not a part-time job.", "focus": 0}
+      - {"emma": "Eight. hours. hours. How many hours do you work? How many hours do you work?", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. long hours. long hours. Doctors often work long hours. Doctors often work long hours.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. a day, a week, a year. a day, a week, a year. She works eight hours a day, five days a week. She works eight hours a day, five days a week.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. from nine to five. from nine to five. I work from nine to five, Monday to Friday. I work from nine to five, Monday to Friday.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. earn. earn. She earns a lot of money. She earns a lot of money.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "how much", "vi": "bao nhiêu", "ex": "How much does he earn?", "w": ["how much", "much"]}
+      - {"n": 14, "answer": "salary", "vi": "lương (tháng, năm)", "ex": "Her salary is eighty thousand dollars a year.", "w": ["salary"]}
+      - {"n": 15, "answer": "wages", "vi": "tiền công (tuần)", "ex": "Nurses often get low wages.", "w": ["wages"]}
+      - {"n": 16, "answer": "low, high", "vi": "thấp, cao", "ex": "Her wages are low, but his salary is high.", "w": ["low", "high"]}
+      - {"n": 17, "answer": "have to", "vi": "phải", "ex": "I have to write reports.", "w": ["have to"]}
+      - {"n": 18, "answer": "design", "vi": "thiết kế", "ex": "An architect designs buildings.", "w": ["design"]}
+    lines:
+      - {"emma": "Thirteen. how much. how much. How much does he earn? How much does he earn?", "focus": 0}
+      - {"emma": "Fourteen. salary. salary. Her salary is eighty thousand dollars a year. Her salary is eighty thousand dollars a year.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. wages. wages. Nurses often get low wages. Nurses often get low wages.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. low, high. low, high. Her wages are low, but his salary is high. Her wages are low, but his salary is high.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. have to. have to. I have to write reports. I have to write reports.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. design. design. An architect designs buildings. An architect designs buildings.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "meet", "vi": "gặp", "ex": "I meet clients every week.", "w": ["meet"]}
+      - {"n": 20, "answer": "client", "vi": "khách hàng", "ex": "We discussed the problem with our clients.", "w": ["client"]}
+      - {"n": 21, "answer": "discuss", "vi": "thảo luận", "ex": "We discussed our problems.", "w": ["discuss"]}
+      - {"n": 22, "answer": "meeting", "vi": "cuộc họp", "ex": "I have a meeting this afternoon.", "w": ["meeting"]}
+      - {"n": 23, "answer": "colleague", "vi": "đồng nghiệp", "ex": "I really like my colleagues.", "w": ["colleague"]}
+      - {"n": 24, "answer": "report", "vi": "báo cáo", "ex": "I wrote the report last night.", "w": ["report"]}
+    lines:
+      - {"emma": "Nineteen. meet. meet. I meet clients every week. I meet clients every week.", "focus": 0}
+      - {"emma": "Twenty. client. client. We discussed the problem with our clients. We discussed the problem with our clients.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. discuss. discuss. We discussed our problems. We discussed our problems.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. meeting. meeting. I have a meeting this afternoon. I have a meeting this afternoon.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. colleague. colleague. I really like my colleagues. I really like my colleagues.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. report. report. I wrote the report last night. I wrote the report last night.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "type", "vi": "đánh máy", "ex": "She types reports for her boss.", "w": ["type"]}
+      - {"n": 26, "answer": "make a phone call", "vi": "gọi điện thoại", "ex": "He makes a lot of phone calls.", "w": ["make", "phone call"]}
+      - {"n": 27, "answer": "answer the phone", "vi": "nghe điện thoại", "ex": "I spend a lot of time answering the phone.", "w": ["answer the phone"]}
+      - {"n": 28, "answer": "send", "vi": "gửi", "ex": "I send letters and emails.", "w": ["send"]}
+      - {"n": 29, "answer": "organize", "vi": "sắp xếp, tổ chức", "ex": "Could you organize a meeting?", "w": ["organize"]}
+      - {"n": 30, "answer": "spend time", "vi": "dành thời gian", "ex": "I spend a lot of time talking to people.", "w": ["spend"]}
+    lines:
+      - {"emma": "Twenty-five. type. type. She types reports for her boss. She types reports for her boss.", "focus": 0}
+      - {"emma": "Twenty-six. make a phone call. make a phone call. He makes a lot of phone calls. He makes a lot of phone calls.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. answer the phone. answer the phone. I spend a lot of time answering the phone. I spend a lot of time answering the phone.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. send. send. I send letters and emails. I send letters and emails.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. organize. organize. Could you organize a meeting? Could you organize a meeting?", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. spend time. spend time. I spend a lot of time talking to people. I spend a lot of time talking to people.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (31–36)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 31, "answer": "responsible for", "vi": "chịu trách nhiệm", "ex": "I'm responsible for new students."}
+      - {"n": 32, "answer": "overtime", "vi": "làm thêm giờ", "ex": "He often works overtime."}
+      - {"n": 33, "answer": "shift", "vi": "ca làm việc", "ex": "I work the evening shift."}
+      - {"n": 34, "answer": "holiday pay", "vi": "lương ngày nghỉ", "ex": "Do you get holiday pay?"}
+      - {"n": 35, "answer": "pay rise", "vi": "tăng lương", "ex": "I asked my boss for a pay rise."}
+      - {"n": 36, "answer": "interview", "vi": "phỏng vấn", "ex": "I have a job interview tomorrow."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-one. responsible for. responsible for. I'm responsible for new students. I'm responsible for new students.", "focus": 0}
+      - {"tom": "Thirty-two. overtime. overtime. He often works overtime. He often works overtime.", "focus": 1, "reveal": [31]}
+      - {"tom": "Thirty-three. shift. shift. I work the evening shift. I work the evening shift.", "focus": 2, "reveal": [32]}
+      - {"tom": "Thirty-four. holiday pay. holiday pay. Do you get holiday pay? Do you get holiday pay?", "focus": 3, "reveal": [33]}
+      - {"tom": "Thirty-five. pay rise. pay rise. I asked my boss for a pay rise. I asked my boss for a pay rise.", "focus": 4, "reveal": [34]}
+      - {"tom": "Thirty-six. interview. interview. I have a job interview tomorrow. I have a job interview tomorrow.", "focus": 5, "reveal": [35]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (37–42)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 37, "answer": "experience", "vi": "kinh nghiệm", "ex": "Do you have any experience?"}
+      - {"n": 38, "answer": "training", "vi": "đào tạo", "ex": "The company gives you training."}
+      - {"n": 39, "answer": "deadline", "vi": "hạn chót", "ex": "We have to finish the report before the deadline."}
+      - {"n": 40, "answer": "work from home", "vi": "làm việc ở nhà", "ex": "I work from home on Fridays."}
+      - {"n": 41, "answer": "staff", "vi": "nhân viên", "ex": "The café has five staff."}
+      - {"n": 42, "answer": "employer", "vi": "người chủ, nhà tuyển dụng", "ex": "My employer is very fair."}
+    lines:
+      - {"tom": "Thirty-seven. experience. experience. Do you have any experience? Do you have any experience?", "focus": 0}
+      - {"tom": "Thirty-eight. training. training. The company gives you training. The company gives you training.", "focus": 1, "reveal": [37]}
+      - {"tom": "Thirty-nine. deadline. deadline. We have to finish the report before the deadline. We have to finish the report before the deadline.", "focus": 2, "reveal": [38]}
+      - {"tom": "Forty. work from home. work from home. I work from home on Fridays. I work from home on Fridays.", "focus": 3, "reveal": [39]}
+      - {"tom": "Forty-one. staff. staff. The café has five staff. The café has five staff.", "focus": 4, "reveal": [40]}
+      - {"tom": "Forty-two. employer. employer. My employer is very fair. My employer is very fair.", "focus": 5, "reveal": [41]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [42]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (43–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 43, "answer": "employee", "vi": "nhân viên", "ex": "The company has two hundred employees."}
+      - {"n": 44, "answer": "contract", "vi": "hợp đồng", "ex": "I signed a contract for one year."}
+      - {"n": 45, "answer": "busy", "vi": "bận rộn", "ex": "Tuesday evenings are very busy."}
+      - {"n": 46, "answer": "tired", "vi": "mệt", "ex": "I'm tired after work."}
+    lines:
+      - {"tom": "Forty-three. employee. employee. The company has two hundred employees. The company has two hundred employees.", "focus": 0}
+      - {"tom": "Forty-four. contract. contract. I signed a contract for one year. I signed a contract for one year.", "focus": 1, "reveal": [43]}
+      - {"tom": "Forty-five. busy. busy. Tuesday evenings are very busy. Tuesday evenings are very busy.", "focus": 2, "reveal": [44]}
+      - {"tom": "Forty-six. tired. tired. I'm tired after work. I'm tired after work.", "focus": 3, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [46]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 47, "answer": "Where do you work?", "vi": "Bạn làm ở đâu?"}
+      - {"n": 48, "answer": "In a small café near my university.", "vi": "Ở một quán cà phê nhỏ gần trường."}
+      - {"n": 49, "answer": "How many hours do you work?", "vi": "Bạn làm bao nhiêu giờ?"}
+      - {"n": 50, "answer": "Eight hours a week, on Tuesday and Thursday evenings.", "vi": "Tám tiếng một tuần, tối thứ Ba và thứ Năm."}
+      - {"n": 51, "answer": "What do you have to do?", "vi": "Bạn phải làm những gì?"}
+      - {"n": 52, "answer": "I take orders, make coffee, and clean the tables.", "vi": "Mình nhận order, pha cà phê, lau bàn."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-seven. Where do you work? Where do you work?", "focus": 0}
+      - {"tom": "Forty-eight. In a small café near my university. In a small café near my university.", "focus": 1, "reveal": [47]}
+      - {"emma": "Forty-nine. How many hours do you work? How many hours do you work?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. Eight hours a week, on Tuesday and Thursday evenings. Eight hours a week, on Tuesday and Thursday evenings.", "focus": 3, "reveal": [49]}
+      - {"emma": "Fifty-one. What do you have to do? What do you have to do?", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. I take orders, make coffee, and clean the tables. I take orders, make coffee, and clean the tables.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "Do you earn much?", "vi": "Bạn kiếm được nhiều không?"}
+      - {"n": 54, "answer": "Not much, but it's useful.", "vi": "Không nhiều, nhưng có ích."}
+      - {"n": 55, "answer": "Who do you work for?", "vi": "Bạn làm cho ai?"}
+      - {"n": 56, "answer": "A language school in the city centre.", "vi": "Một trường ngoại ngữ ở trung tâm."}
+      - {"n": 57, "answer": "Is it a full-time job?", "vi": "Đó có phải việc toàn thời gian không?"}
+      - {"n": 58, "answer": "Yes, about twenty-five hours a week.", "vi": "Có, khoảng hai mươi lăm giờ một tuần."}
+    lines:
+      - {"emma": "Fifty-three. Do you earn much? Do you earn much?", "focus": 0}
+      - {"tom": "Fifty-four. Not much, but it's useful. Not much, but it's useful.", "focus": 1, "reveal": [53]}
+      - {"tom": "Fifty-five. Who do you work for? Who do you work for?", "focus": 2, "reveal": [54]}
+      - {"emma": "Fifty-six. A language school in the city centre. A language school in the city centre.", "focus": 3, "reveal": [55]}
+      - {"tom": "Fifty-seven. Is it a full-time job? Is it a full-time job?", "focus": 4, "reveal": [56]}
+      - {"emma": "Fifty-eight. Yes, about twenty-five hours a week. Yes, about twenty-five hours a week.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "What do you spend most time doing?", "vi": "Bạn dành nhiều thời gian nhất để làm gì?"}
+      - {"n": 60, "answer": "Preparing lessons, usually in the evening.", "vi": "Soạn bài, thường vào buổi tối."}
+      - {"n": 61, "answer": "Do you have to go to meetings?", "vi": "Bạn có phải đi họp không?"}
+      - {"n": 62, "answer": "Yes, once a week.", "vi": "Có, mỗi tuần một lần."}
+      - {"n": 63, "answer": "Could you organize a meeting for Friday?", "vi": "Bạn sắp xếp giúp một cuộc họp vào thứ Sáu nhé?"}
+      - {"n": 64, "answer": "Of course. What time?", "vi": "Được chứ. Mấy giờ?"}
+    lines:
+      - {"tom": "Fifty-nine. What do you spend most time doing? What do you spend most time doing?", "focus": 0}
+      - {"emma": "Sixty. Preparing lessons, usually in the evening. Preparing lessons, usually in the evening.", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. Do you have to go to meetings? Do you have to go to meetings?", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Yes, once a week. Yes, once a week.", "focus": 3, "reveal": [61]}
+      - {"emma": "Sixty-three. Could you organize a meeting for Friday? Could you organize a meeting for Friday?", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. Of course. What time? Of course. What time?", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–70)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "I have a job interview tomorrow.", "vi": "Mai mình có buổi phỏng vấn xin việc."}
+      - {"n": 66, "answer": "Good luck! Be on time.", "vi": "Chúc may mắn! Nhớ đến đúng giờ."}
+      - {"n": 67, "answer": "Do you like your colleagues?", "vi": "Bạn có quý đồng nghiệp không?"}
+      - {"n": 68, "answer": "Yes, they're very friendly.", "vi": "Có, họ rất thân thiện."}
+      - {"n": 69, "answer": "What time do you start work?", "vi": "Mấy giờ bạn bắt đầu làm?"}
+      - {"n": 70, "answer": "At six o'clock in the evening.", "vi": "Sáu giờ tối."}
+    lines:
+      - {"tom": "Sixty-five. I have a job interview tomorrow. I have a job interview tomorrow.", "focus": 0}
+      - {"emma": "Sixty-six. Good luck! Be on time. Good luck! Be on time.", "focus": 1, "reveal": [65]}
+      - {"tom": "Sixty-seven. Do you like your colleagues? Do you like your colleagues?", "focus": 2, "reveal": [66]}
+      - {"emma": "Sixty-eight. Yes, they're very friendly. Yes, they're very friendly.", "focus": 3, "reveal": [67]}
+      - {"emma": "Sixty-nine. What time do you start work? What time do you start work?", "focus": 4, "reveal": [68]}
+      - {"tom": "Seventy. At six o'clock in the evening. At six o'clock in the evening.", "focus": 5, "reveal": [69]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [70]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (71–76)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 71, "answer": "And what time do you finish?", "vi": "Còn mấy giờ xong?"}
+      - {"n": 72, "answer": "At ten. Then I walk home.", "vi": "Mười giờ. Rồi mình đi bộ về."}
+      - {"n": 73, "answer": "Is your boss strict?", "vi": "Sếp bạn có nghiêm không?"}
+      - {"n": 74, "answer": "Yes, but she's fair.", "vi": "Có, nhưng công bằng."}
+      - {"n": 75, "answer": "Do you work at the weekend?", "vi": "Cuối tuần bạn có làm không?"}
+      - {"n": 76, "answer": "No, never. I rest and go hiking.", "vi": "Không bao giờ. Mình nghỉ và đi bộ đường dài."}
+    lines:
+      - {"emma": "Seventy-one. And what time do you finish? And what time do you finish?", "focus": 0}
+      - {"tom": "Seventy-two. At ten. Then I walk home. At ten. Then I walk home.", "focus": 1, "reveal": [71]}
+      - {"emma": "Seventy-three. Is your boss strict? Is your boss strict?", "focus": 2, "reveal": [72]}
+      - {"tom": "Seventy-four. Yes, but she's fair. Yes, but she's fair.", "focus": 3, "reveal": [73]}
+      - {"tom": "Seventy-five. Do you work at the weekend? Do you work at the weekend?", "focus": 4, "reveal": [74]}
+      - {"emma": "Seventy-six. No, never. I rest and go hiking. No, never. I rest and go hiking.", "focus": 5, "reveal": [75]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [76]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (77–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 77, "answer": "What's the best thing about your job?", "vi": "Điều tốt nhất trong công việc của bạn là gì?"}
+      - {"n": 78, "answer": "My students. They work very hard.", "vi": "Học viên của mình. Họ học rất chăm."}
+      - {"n": 79, "answer": "Do you get paid well?", "vi": "Lương bạn có cao không?"}
+      - {"n": 80, "answer": "It's OK. Teachers don't earn very much.", "vi": "Cũng được. Giáo viên không kiếm được nhiều."}
+    lines:
+      - {"tom": "Seventy-seven. What's the best thing about your job? What's the best thing about your job?", "focus": 0}
+      - {"emma": "Seventy-eight. My students. They work very hard. My students. They work very hard.", "focus": 1, "reveal": [77]}
+      - {"tom": "Seventy-nine. Do you get paid well? Do you get paid well?", "focus": 2, "reveal": [78]}
+      - {"emma": "Eighty. It's OK. Teachers don't earn very much. It's OK. Teachers don't earn very much.", "focus": 3, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [80]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 46.", "say": "Well done! See you in Unit forty-six.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 46."}
+

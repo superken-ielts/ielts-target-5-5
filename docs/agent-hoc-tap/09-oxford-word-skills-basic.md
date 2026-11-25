@@ -20,13 +20,16 @@ unit hai video như đợt 37–38.
 
 Đợt 40, người học: "tiếp tục module tiếp theo của oxford" — module Places (Unit 34–41), mỗi unit hai video như đợt 37–39.
 
+Đợt 41, người học: "tiếp tục module tiếp theo của sách oxford basic", rồi "xong rồi commit push main" — module Study and work
+(Unit 42–47), mỗi unit hai video như đợt 37–40.
+
 | Thành phần | Ở đâu |
 |---|---|
 | Sách, hồ sơ lộ trình | `books/book_oxford_word_skills_basic/`: `Oxford_Word_Skills_Bas.pdf` (bản quét, 254 trang), `book.yaml` (mẫu `lessons-v1`), `book.json`, `plan.json`, `report.md`, `web/` (122 đoạn PDF, 83 MB) |
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–41 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–47 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -186,7 +189,7 @@ lại ra y hệt).
   vẫn trong cùng một video (mục 5.2, hàng 9–10). Unit khó là unit nhiều từ, từ trừu tượng, nhiều cặp dễ nhầm, hay chủ đề
   hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings;
   Everyday life có 3 (17, 19, 22 — đợt 37); Food and drink có 2 (26, 28 — đợt 38); Getting around có 2 (30, 32 — đợt 39);
-  Places có 3 (35, 38, 39 — đợt 40).
+  Places có 3 (35, 38, 39 — đợt 40); Study and work có 3 (42, 43, 45 — đợt 41).
   Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
 - **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
   khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Mọi unit đều có ít nhất một cảnh có hình (test kiểm): module People
@@ -332,12 +335,18 @@ Cách khai:
 | Hội An, Hạ Long, Cần Thơ, Sa Pa, Huế | `Hoy Ann`, `Hah Long`, `Kahn Toh`, `Sah Pah`, `Whey` | Địa danh Việt (đợt 40; `Whey` như Giai đoạn 0) |
 | Montpellier | `Mon-pel-yay` | Tên khu phố trong lời kể Unit 38 |
 | DVD, DVD player | `dee vee dee` | Đọc từng chữ cái như CD; "TV" thì Kokoro đọc đúng |
+| PE, ICT, RE, IT (môn học) | `pee ee`, `eye see tee`, `ar ee`, `eye tee` | Đợt 41: "PE" đọc /piː/, "ICT" thành một âm /aɪkt/, "RE" /riː/ |
+| BA, BSc, MA, MSc | `bee eigh`, `bee ess see`, `em eigh`, `em ess see` | "BA" đọc /bɑː/, "MA" /mɑː/; PhD đọc đúng |
+| A levels, GCSEs | `eigh levels`, `gee see ess eez` | "A" đọc như mạo từ /ə/ (như chữ cái khi đánh vần) |
+| địa chỉ email, web (louella@yahoo.co.uk, www.bbc.co.uk) | `loo-ella at yahoo dot co dot you kay`, `double-yoo double-yoo double-yoo dot bee bee see dot co dot you kay` | @, dấu chấm, chữ viết tắt phải viết ra |
+| Ctrl + C / X / V / S / P | `control see`, `control ex`, `control vee`, `control ess`, `control pee` | Phím tắt (Unit 46) |
 
 Từ thường đúng, không cần `say`: Anki, Mandarin, Cantonese, Australasia, Portuguese, Egypt, comfortable, island,
 Wednesday, umbrella, tomato (Kokoro đọc kiểu Mỹ; muốn kiểu Anh thì `tomahto`). Đợt 38 soát cả 184 mục Word list Unit 24–28
 bằng bộ tách âm của Kokoro: đều đúng (chữ câm trong salmon, lamb; aubergine, croissant, dessert…), kể cả Wi-Fi và café — viết `why-fy`
 thì Kokoro nhấn âm sau, nên đã bỏ. Đợt 40 thêm: Fansipan, Pico da Neblina, Brasilia, Recife, Stonehenge, bidet (chữ t câm),
-washbasin, chest of drawers, toothpaste, saucer, hob, deli, newsagent's, chemist's — đều đúng. Thử một cách đọc mới trước
+washbasin, chest of drawers, toothpaste, saucer, hob, deli, newsagent's, chemist's — đều đúng. Đợt 41: psychology, psychologist (p câm), economist, politician, architecture, Cathay Pacific, PC, webcam, iPod — đều
+đúng. Thử một cách đọc mới trước
 khi dựng (trong `agents/`):
 `python -c "from lesson_video import phonemes; print(phonemes.tokenizer()('Voong Tau', 'en-us'))"`.
 
@@ -450,12 +459,29 @@ khi dựng (trong `agents/`):
   (`text_col`) cho cột câu lùi theo nhãn dài nhất của cảnh; nhãn một – hai ký tự ("12.", "2a.") giữ vị trí cũ.
 - **Nghe – viết dài hơn ước lượng tới 9 %** (đợt 40): Unit 34 ước 9:15, dựng thật 10:05 (các đợt trước 5–6 %). Unit 35 ước 10:02
   thì có thể chạm 11 phút — bớt câu trước khi dựng, còn ước 9:38. Nhắm ước lượng 9:10–9:40.
+- **Máy chạy khởi động lại lần nữa** (đợt 41, hai lần): mất hàng đợi khi đang dựng Unit 42 (kịch bản Unit 42–44 chưa commit), rồi
+  khi đang dựng Unit 45 (mất khoảng hai tiếng). Commit kịch bản ngay khi viết xong (không chờ video), commit từng video ngay khi dựng
+  xong, rồi xếp dựng lại phần còn thiếu trong **một** hàng đợi (nhiều hàng đợi cùng chờ `flock` thì không chạy theo thứ tự xếp). Câu đã đọc lấy từ bộ nhớ đệm giọng đọc (`~/.cache/lesson_video/tts`),
+  nên lần dựng lại Unit 42 chỉ mất 3,5 phút.
+- **Unit khó sát 15 phút** (đợt 41, Unit 42: 3 trang, 10 bài): ước lượng đầu 14:41, bản dựng thật dài hơn 0–4 % nên có thể vượt 15
+  phút. Bỏ cảnh ngoài sách (trường học ở Việt Nam và ở Anh — bài 7 đã nói về Việt Nam), rút gọn tổng kết: ước 13:48, thật 14:24. Nhắm
+  ước lượng unit khó dưới 14 phút.
+- **Dấu ✓ trong đáp án `blanks`** (đợt 41, Unit 45 bài 4): phông Liberation Sans không có ✓ nên hiện ô vuông. Câu đúng ghi
+  "correct (no mistake)". Cảnh `errors` vẽ ✓ ✗ bằng phông riêng nên không bị.
+- **Chỗ trống liền hậu tố** (đợt 41, Unit 45 bài 2: `___-time`): đáp án "part" hiện thành "part -time". Đưa cả từ vào `answer`
+  ("part-time"), chỗ trống đứng riêng.
+- **Khung đỏ cắt ngang chữ** (đợt 41, Unit 45 phần A): sách in "She works for { a car company / an airline", khung theo dòng lấy từ
+  mép trái nên đè lên "She works for". Khung chỉ lấy phần sau dấu ngoặc.
+- **Tranh tự kiểm tra lộ đáp án** (đợt 41): tranh môn học (Unit 42), tranh nghề (Unit 44) và biểu tượng (Unit 46) in tên ngay dưới
+  hình. Cảnh tự kiểm tra cắt bỏ dải tên (đo bằng `blobs.py`: dải thấp khoảng 10 điểm dưới hàng tranh), mỗi hàng một cảnh.
+- **Sắp xếp câu chuyện** (đợt 41, Unit 42 bài 5): dùng cảnh `order` như Giai đoạn 0 (cột trái a–j, cột phải thứ tự đúng). Nhân vật
+  trong bài tên Tom nên Tom nói rõ "this Tom isn't me".
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
 (đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
-48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Cả sách: 41 video bài giảng, 6:16:09, 211 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Cả sách: 47 video bài giảng, 7:20:06, 276 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -678,6 +704,45 @@ Module Places (đợt 40) — đất nước, thành phố, nông thôn, cửa h
   - phòng khách có máy lạnh (nhà bố mẹ ở Anh có lò sưởi radiator), ảnh gia đình và bản đồ Việt Nam trên tường, sô-pha, bàn nước, giá
     sách — không đủ chỗ cho ghế bành (Unit 41).
 
+Module Study and work (đợt 41) — **unit khó** in đậm; mọi unit đủ bài tập trong sách:
+
+| Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Luyện nói chung / Nói 2 | Thêm ngoài sách |
+|---|---|---|---|---|---|---|---|---|
+| **42 My school** | `U42-school` | 14:24 | 30 | 16 | 1–10 (bài 4: ba hàng tranh không chữ; bài 5: cảnh order) | Bài 7: trường học ở Việt Nam (6); bài 10: chuyện học hành (6) | Part 2 "a subject you enjoyed at school" (Tom: Hóa, Emma: Anh văn); thảo luận (3) | tranh môn học (hai cảnh), Spotlight be good at, sơ đồ hệ thống giáo dục, Glossary ba cảnh, Spotlight at the age of, lời kể của Rafael (hai cảnh), Spotlight exam, bảng điểm; ôn tập: lỗi hay gặp |
+| **43 University** | `U43-university` | 11:50 | 22 | 9 | 1–6 (bài 6: tự kiểm tra tranh 1–10) | Bài 3: đại học ở Việt Nam và ở Anh (5); Part 1 "your studies" (6) | Part 2 "a course you have taken or are taking" (Tom: môn Marketing, Emma: khóa đào tạo giáo viên); thảo luận (3) | lời kể của sinh viên (hai cảnh), Glossary hai cảnh, Spotlight How long does it last?, bảng ngành học – người (hai cảnh); họ từ -ist / -er / -ian, trọng âm; ôn tập: lỗi hay gặp |
+| 44 Jobs | `U44-jobs` | 8:11 | 20 | 11 | 1–5 (bài 5: năm hàng tranh và cột Meaning) | Bài 4: người quen làm các nghề (6) | Part 1 "Work" (5 câu) | What do you do? và Spotlight a / an, 15 tranh nghề (ba cảnh), bảng self-employed … boss; thêm nghề hay gặp ở Việt Nam; Nghe và viết |
+| **45 Describing a job** | `U45-describing-job` | 11:27 | 23 | 10 | 1–5 (bài 1: khung từ hiện trước) | Bài 3: công việc của bạn (6); việc phải làm (5) | Part 2 "a job you would like to do in the future" (Tom: marketing cà phê, Emma: trường ngoại ngữ riêng); thảo luận (3) | thông tin cơ bản (hai cảnh), Glossary A, tranh văn phòng 1–5, lời kể của Daniel và Eliane, Spotlight spend time doing, Glossary B hai cảnh; câu tả công việc kiểu IELTS; ôn tập: lỗi hay gặp |
+| 46 Using a computer | `U46-computer` | 8:16 | 20 | 11 | 1–7 (bài 4: tranh 1–13; bài 7: biểu tượng) | Bài 3: máy tính của bạn (5) | Part 1 "Computers" (5 câu) | tranh máy tính 13 mục (hai cảnh), Spotlight keep, bảy biểu tượng, sáu câu dùng máy tính, Glossary hai cảnh; máy tính ngày nay, phím tắt |
+| 47 Email and the internet | `U47-email-internet` | 9:49 | 20 | 8 | 1–6 (bài 6 thành Nói 2) | Bài 3: email của bạn (5); bài 6: internet và bạn (6) | Part 1 "The internet" (5 câu) | màn hình email (hai cảnh), lời Jan và Lucy, Glossary A, bảng câu hỏi về internet (hai cảnh), Glossary B hai cảnh; câu viết email (GT Task 1), internet ngày nay; Nghe và viết; tổng kết module |
+
+Module Study and work (đợt 41) — trường học, đại học, nghề nghiệp, công việc, máy tính, email và internet:
+- **Tom:**
+  - ở trường: tiết học 45 phút, giỏi Hóa, khá Toán (ông kèm Toán mỗi tối), rất dở Lý, trường không học giáo dục tôn giáo; năm 18 tuổi
+    thi quốc gia sáu môn (Toán, Văn, Anh, Lý, Hóa, Sinh), đỗ cả nhưng điểm Lý không cao (Unit 42); Part 2 "a subject you enjoyed at
+    school": Hóa với thầy Nam (trẻ, thân thiện, giảng rõ, hay làm thí nghiệm);
+  - đại học: năm hai ngành quản trị kinh doanh ở TP. HCM, khóa bốn năm, hai học kỳ mỗi năm, thi cuối kỳ, viết nhiều bài luận, hay học
+    ở thư viện; học kỳ này học môn Marketing 15 tuần (thứ Hai, dự án nhóm); cần IELTS 5.5 để đi trao đổi ở Úc (Unit 43);
+  - người quen: chị Hoa là y tá ở bệnh viện lớn ở Hà Nội, ông là thầy giáo Toán đã nghỉ hưu và chăm vườn, chú là phi công bay đi
+    Singapore và Bangkok, bố làm cho công ty cà phê, mẹ tự làm chủ cửa hàng hoa; Tom không quen ai là lính (Unit 44);
+  - làm thêm phục vụ ở quán cà phê nhỏ gần trường, 8 tiếng một tuần (6–10 giờ tối thứ Ba và thứ Năm), nhận đồ uống, pha cà phê, lau
+    bàn, tối thứ Ba pha khoảng một trăm ly cà phê đá; Part 2 "a job you would like to do in the future": trưởng phòng marketing của
+    một công ty cà phê quốc tế, mơ có thương hiệu cà phê Đà Lạt riêng (Unit 45);
+  - chỉ có một máy tính xách tay cũ, để trong ba lô vì ngày nào cũng mang lên trường, in tài liệu ở thư viện trường (Unit 46);
+  - ít gửi email (hai ba thư một tuần, cho thầy cô và công ty khi tìm việc), hay nhắn tin; mua quần áo, sách qua ứng dụng; không tải
+    nhạc nữa mà nghe trực tuyến (Unit 47).
+- **Emma:**
+  - ở trường: giỏi Anh văn và Mỹ thuật, khá tiếng Pháp, rất dở Toán, không học tiếng Trung; 15 tuổi trượt một bài thi Toán, năm sau thi
+    lại; 18 tuổi đỗ cả (A, A, B); Part 2: môn Anh văn với cô Green (tốt bụng nhưng nghiêm, cho đọc nhiều sách) — lý do Emma đi dạy
+    (Unit 42);
+  - có bằng BA Văn học Anh; làm văn phòng một năm rồi học khóa đào tạo giáo viên một tháng ở London (học 9–6 giờ mỗi ngày, dạy học viên
+    thật), xong khóa thì có việc dạy đầu tiên; ba năm trước sang Việt Nam (Unit 43);
+  - sếp là giám đốc trường (nữ), rất tốt bụng, giúp giáo viên mới (Unit 44);
+  - dạy khoảng 25 giờ một tuần ở trường và trực tuyến: soạn bài (thường vào buổi tối), dạy, chấm bài, họp giáo viên mỗi tuần một lần;
+    Part 2: muốn mở trường ngoại ngữ nhỏ ở quê ven biển, tầng trệt có quán cà phê (Unit 45);
+  - có máy tính xách tay có webcam (dạy trực tuyến, gọi cho bố mẹ), lưu ảnh gia đình ở Anh và ảnh đi chơi ở Việt Nam (Unit 46);
+  - nhận nhiều thư rác (vé máy bay rẻ, du lịch miễn phí), học viên gửi bài tập dạng tệp đính kèm, trả lời trong ngày trừ cuối tuần;
+    internet băng thông rộng khá nhanh; hay vào YouTube và một trang tin của Anh; không vào phòng chat, nhắn tin với bạn bè (Unit 47).
+
 ### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
 | Unit | Trang | Có thể khó (tới 15 phút) | Gợi ý phần nói | Hình trong sách (đã xem trang) |
@@ -718,6 +783,14 @@ ngoài sách. Module tiếp theo: **Study and work** (Unit 42–47, Review tr. 1
 - chưa xem trang; unit ba trang (42) có thể là unit khó; học tập và công việc là chủ đề IELTS Part 1 bắt buộc ("Do you work or
   are you a student?"), email là chủ đề thư GT Task 1.
 
+Đã làm ở đợt 41 (bảng mục 5.7): unit khó là 42 My school (ba trang, 10 bài), 43 University (44 mục Word list, cặp ngành học – người)
+và 45 Describing a job (hai phần, "work" là chủ đề Part 1 bắt buộc); unit 47 thêm câu viết email (GT Task 1) và internet ngày nay.
+Module tiếp theo: **Hobbies and interests** (Unit 48–53, Review tr. 138–140):
+- 48 Likes and dislikes (tr. 126–127), 49 Sport (128–129), 50 Free time (130–131), 51 Music (132–133), 52 Films (134–135), 53 The
+  media (136–137);
+- Answer key tr. 216 đã có đáp án Unit 48;
+- chưa xem trang; sở thích, thể thao, âm nhạc, phim là chủ đề IELTS Part 1–2 rất hay gặp.
+
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
 Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu theo chủ đề
@@ -756,7 +829,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 - **Word list của sách** (tr. 237–254, tức PDF 236–253; hai cột, mỗi từ kèm số unit):
   - Bản quét không có lớp chữ, nên OCR bằng rapidocr hai lần. Lần đầu lề trên 30 điểm làm mất dòng đầu mỗi cột; lần hai lề
     8 điểm thì đọc "11" thành "1l". Lấy hợp của hai lần rồi soát tay theo ảnh trang.
-  - Kết quả ở `work/wordlist.json`: 1261 mục của Unit 1–41 (1087 từ khác nhau); `level` để trống vì sách không chia cấp độ.
+  - Kết quả ở `work/wordlist.json`: 1496 mục của Unit 1–47 (1276 từ khác nhau); `level` để trống vì sách không chia cấp độ.
   - Đợt 37 thêm 246 mục Unit 17–23 từ cùng hai lần OCR. Soát khoảng hở giữa các dòng OCR (dòng bị bỏ) rồi xem ảnh: sót *get dressed*
     (17); bộ tách bỏ qua dòng *red* (18). Ba mục in số unit của bản thảo cũ (mục 3.3) xếp theo trang thật: *like* vào Unit 21, *have
     got* và *what's the matter?* vào Unit 22; câu chú thích ở `make_wordlist.py` và đầu kịch bản nghe – viết.
@@ -771,6 +844,10 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
     theo ảnh trang. Từ có ở nhiều unit (*market* 35, 37; *do the shopping* 37, 39; *clean* 35, 39, 40; *floor* 38, 41…) thì unit nào
     cũng phải phủ trong video của unit đó; *wash* (danh từ) và *wash* (động từ) chung một khóa. Unit 35 có 54 mục, nhiều nhất từ
     đầu sách (mục 5.6).
+  - Đợt 41 thêm 235 mục Unit 42–47 (189 từ chưa có ở Unit 1–41). Soát từng dòng có số unit 42–47 bằng tờ ảnh cắt dòng (hợp hai
+    lần OCR) và khoảng hở giữa các dòng: OCR sót năm mục — *computer science* 43, *get a grade* 42, *print something out* 46, và *ICT*,
+    *PE* 42 (OCR chỉ đọc được dòng phiên âm) — thêm tay. Unit 42 có 58 mục, nhiều nhất từ đầu sách; *technology* có hai mục (as in
+    IT, ICT; as in design and technology) chung một khóa.
   - Soát đủ từ: `python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U04 --level all` phải ra
     "chưa hiện: 0" (test kiểm mọi unit có video).
 - **Sinh kịch bản:** dữ liệu từng unit (từ, nghĩa, câu ví dụ, mục Word list, cách đọc `s` / `se`) ở `work/dictation/units_*.py`.
@@ -796,7 +873,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**41 video, 6:47:41** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**47 video, 7:47:42** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -841,10 +918,16 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 39 · The kitchen | `U39-kitchen-dictation` | 9:30 | 29 · 36 | 19 | 32 |
 | 40 · Bedroom and bathroom | `U40-bedroom-bathroom-dictation` | 9:33 | 34 · 39 | 16 | 29 |
 | 41 · The living room | `U41-living-room-dictation` | 9:37 | 21 · 23 | 24 | 31 |
+| 42 · My school | `U42-school-dictation` | 10:07 | 43 · 58 | 10 | 18 |
+| 43 · University | `U43-university-dictation` | 10:19 | 31 · 45 | 15 | 26 |
+| 44 · Jobs | `U44-jobs-dictation` | 10:17 | 23 · 27 | 20 | 37 |
+| 45 · Describing a job | `U45-describing-job-dictation` | 9:50 | 30 · 36 | 16 | 34 |
+| 46 · Using a computer | `U46-computer-dictation` | 9:43 | 30 · 34 | 16 | 35 |
+| 47 · Email and the internet | `U47-email-internet-dictation` | 9:44 | 28 · 35 | 18 | 33 |
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 42 trở đi theo mục 5 (checklist P2-59), module Study and work (cuối mục 5.8). Mỗi unit hai video: bài giảng
-   (mục 5) và nghe – viết (mục 5.9).
+1. Video Unit 48 trở đi theo mục 5 (checklist P2-59), module Hobbies and interests (cuối mục 5.8). Mỗi unit hai video: bài
+   giảng (mục 5) và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

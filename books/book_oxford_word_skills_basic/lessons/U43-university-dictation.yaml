@@ -1,0 +1,295 @@
+# Video nghe – viết (dictation) Unit 43 · University — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U43-university-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U43 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 43 có 45 mục: cặp ngành học – người ghép một dòng (economics, economist…); graduate (danh từ,
+# động từ) một khóa. OCR sót computer science — thêm tay.
+id: U43-university-dictation
+activity: U43-words
+title: "Unit 43 · University"
+subtitle: "Dictation · listen and write: talking about university"
+title_vi: "Nghe – viết 10 phút: đại học — từ trong sách, từ thêm, câu giao tiếp"
+tag: "STUDY AND WORK · UNIT 43"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 43: University. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-three: University. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 43: đại học. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 31 words from the book. You hear each word twice, and then an example sentence twice. Then 15 more useful words, and 26 useful sentences for conversation.", "say": "There are three parts. First, thirty-one words from the book. You hear each word twice, and then an example sentence twice. Then fifteen more useful words, and twenty-six useful sentences for conversation.", "vi": "Ba phần: 31 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 15 từ thêm, 26 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "university", "vi": "đại học", "ex": "I started university two years ago."}
+      - {"n": 2, "answer": "degree", "vi": "bằng đại học", "ex": "I'm doing a degree in business studies.", "w": ["degree"]}
+      - {"n": 3, "answer": "do a degree, do research", "vi": "học lấy bằng, nghiên cứu", "ex": "After my degree, I want to do research.", "w": ["do"]}
+      - {"n": 4, "answer": "course", "vi": "khóa học", "ex": "The course lasts three years.", "w": ["course"]}
+      - {"n": 5, "answer": "last", "vi": "kéo dài", "ex": "How long does the film last?", "w": ["last"]}
+      - {"n": 6, "answer": "term", "vi": "học kỳ", "ex": "There are three terms a year.", "w": ["term"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. university. university. I started university two years ago. I started university two years ago.", "focus": 0}
+      - {"emma": "Two. degree. degree. I'm doing a degree in business studies. I'm doing a degree in business studies.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. do a degree, do research. do a degree, do research. After my degree, I want to do research. After my degree, I want to do research.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. course. course. The course lasts three years. The course lasts three years.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. last. last. How long does the film last? How long does the film last?", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. term. term. There are three terms a year. There are three terms a year.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "library", "vi": "thư viện", "ex": "I work in the library a lot.", "w": ["library"]}
+      - {"n": 8, "answer": "undergraduate", "vi": "sinh viên đại học", "ex": "I'm an undergraduate in my second year.", "w": ["undergraduate"]}
+      - {"n": 9, "answer": "graduate", "vi": "người có bằng; tốt nghiệp", "ex": "She graduated last year, so now she's a graduate.", "w": ["graduate"]}
+      - {"n": 10, "answer": "write, essay", "vi": "viết, bài luận", "ex": "We have to write lots of essays.", "w": ["write", "essay"]}
+      - {"n": 11, "answer": "again", "vi": "lại, lần nữa", "ex": "I failed the exam, so I took it again.", "w": ["again"]}
+      - {"n": 12, "answer": "fortunately, unfortunately", "vi": "may mắn là, không may là", "ex": "Unfortunately I failed; fortunately I passed the second time.", "w": ["fortunately", "unfortunately"]}
+    lines:
+      - {"emma": "Seven. library. library. I work in the library a lot. I work in the library a lot.", "focus": 0}
+      - {"emma": "Eight. undergraduate. undergraduate. I'm an undergraduate in my second year. I'm an undergraduate in my second year.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. graduate. graduate. She graduated last year, so now she's a graduate. She graduated last year, so now she's a graduate.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. write, essay. write, essay. We have to write lots of essays. We have to write lots of essays.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. again. again. I failed the exam, so I took it again. I failed the exam, so I took it again.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. fortunately, unfortunately. fortunately, unfortunately. Unfortunately I failed; fortunately I passed the second time. Unfortunately I failed; fortunately I passed the second time.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "BA, BSc", "vi": "cử nhân xã hội, cử nhân tự nhiên", "ex": "Emma has got a BA in English literature.", "w": ["BA", "BSc"]}
+      - {"n": 14, "answer": "MA, MSc", "vi": "thạc sĩ", "ex": "My cousin is doing an MSc in physics.", "w": ["MA", "MSc"]}
+      - {"n": 15, "answer": "PhD", "vi": "tiến sĩ", "ex": "She wants to do a PhD.", "w": ["PhD"]}
+      - {"n": 16, "answer": "research", "vi": "nghiên cứu", "ex": "He does research at the university.", "w": ["research"]}
+      - {"n": 17, "answer": "medicine, doctor", "vi": "ngành y, bác sĩ", "ex": "If you study medicine, you become a doctor.", "w": ["medicine", "doctor"]}
+      - {"n": 18, "answer": "psychology, psychologist", "vi": "tâm lý học, nhà tâm lý", "ex": "She studied psychology and now she's a psychologist.", "w": ["psychology", "psychologist"]}
+    lines:
+      - {"emma": "Thirteen. BA, BSc. BA, BSc. Emma has got a BA in English literature. Emma has got a BA in English literature.", "say": "Thirteen. bee eigh, bee ess see. bee eigh, bee ess see. Emma has got a bee eigh in English literature. Emma has got a bee eigh in English literature.", "focus": 0}
+      - {"emma": "Fourteen. MA, MSc. MA, MSc. My cousin is doing an MSc in physics. My cousin is doing an MSc in physics.", "say": "Fourteen. em eigh, em ess see. em eigh, em ess see. My cousin is doing an em ess see in physics. My cousin is doing an em ess see in physics.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. PhD. PhD. She wants to do a PhD. She wants to do a PhD.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. research. research. He does research at the university. He does research at the university.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. medicine, doctor. medicine, doctor. If you study medicine, you become a doctor. If you study medicine, you become a doctor.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. psychology, psychologist. psychology, psychologist. She studied psychology and now she's a psychologist. She studied psychology and now she's a psychologist.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "economics, economist", "vi": "kinh tế học, nhà kinh tế", "ex": "An economist studied economics.", "w": ["economics", "economist"]}
+      - {"n": 20, "answer": "law, lawyer", "vi": "luật, luật sư", "ex": "He always wanted to be a lawyer, so he studied law.", "w": ["law", "lawyer"]}
+      - {"n": 21, "answer": "politics, politician", "vi": "chính trị, chính trị gia", "ex": "I don't know anyone who wants to be a politician.", "w": ["politics", "politician"]}
+      - {"n": 22, "answer": "engineering, engineer", "vi": "kỹ thuật, kỹ sư", "ex": "My brother is an engineer.", "w": ["engineering", "engineer"]}
+      - {"n": 23, "answer": "architecture, architect", "vi": "kiến trúc, kiến trúc sư", "ex": "She's studying to become an architect.", "w": ["architecture", "architect"]}
+      - {"n": 24, "answer": "computer science", "vi": "khoa học máy tính", "ex": "Computer science is very popular.", "w": ["computer science"]}
+    lines:
+      - {"emma": "Nineteen. economics, economist. economics, economist. An economist studied economics. An economist studied economics.", "focus": 0}
+      - {"emma": "Twenty. law, lawyer. law, lawyer. He always wanted to be a lawyer, so he studied law. He always wanted to be a lawyer, so he studied law.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. politics, politician. politics, politician. I don't know anyone who wants to be a politician. I don't know anyone who wants to be a politician.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. engineering, engineer. engineering, engineer. My brother is an engineer. My brother is an engineer.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. architecture, architect. architecture, architect. She's studying to become an architect. She's studying to become an architect.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. computer science. computer science. Computer science is very popular. Computer science is very popular.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–28)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "software engineer", "vi": "kỹ sư phần mềm", "ex": "He works as a software engineer.", "w": ["software engineer"]}
+      - {"n": 26, "answer": "manager", "vi": "quản lý", "ex": "She's a manager in a bank.", "w": ["manager"]}
+      - {"n": 27, "answer": "journalism, journalist", "vi": "báo chí, nhà báo", "ex": "Is it difficult to become a journalist?", "w": ["journalism", "journalist"]}
+      - {"n": 28, "answer": "reporter", "vi": "phóng viên", "ex": "The reporter wrote about the meeting.", "w": ["reporter"]}
+    lines:
+      - {"emma": "Twenty-five. software engineer. software engineer. He works as a software engineer. He works as a software engineer.", "focus": 0}
+      - {"emma": "Twenty-six. manager. manager. She's a manager in a bank. She's a manager in a bank.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. journalism, journalist. journalism, journalist. Is it difficult to become a journalist? Is it difficult to become a journalist?", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. reporter. reporter. The reporter wrote about the meeting. The reporter wrote about the meeting.", "focus": 3, "reveal": [27]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [28]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (29–31)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 29, "answer": "business studies", "vi": "quản trị kinh doanh", "ex": "Tom is studying business studies.", "w": ["business studies", "studies"]}
+      - {"n": 30, "answer": "businessman, businesswoman", "vi": "doanh nhân", "ex": "I knew he'd become a businessman.", "w": ["businessman", "businesswoman"]}
+      - {"n": 31, "answer": "get a job", "vi": "tìm được việc", "ex": "I want to get a job in marketing.", "w": ["get a job"]}
+    lines:
+      - {"emma": "Twenty-nine. business studies. business studies. Tom is studying business studies. Tom is studying business studies.", "focus": 0}
+      - {"emma": "Thirty. businessman, businesswoman. businessman, businesswoman. I knew he'd become a businessman. I knew he'd become a businessman.", "focus": 1, "reveal": [29]}
+      - {"emma": "Thirty-one. get a job. get a job. I want to get a job in marketing. I want to get a job in marketing.", "focus": 2, "reveal": [30]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [31]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (32–37)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 32, "answer": "campus", "vi": "khuôn viên trường", "ex": "The campus is very green."}
+      - {"n": 33, "answer": "lecture", "vi": "bài giảng", "ex": "The lecture starts at eight."}
+      - {"n": 34, "answer": "lecturer", "vi": "giảng viên", "ex": "Our lecturer is very kind."}
+      - {"n": 35, "answer": "assignment", "vi": "bài tập lớn", "ex": "I have to finish my assignment tonight."}
+      - {"n": 36, "answer": "deadline", "vi": "hạn nộp", "ex": "The deadline is next Friday."}
+      - {"n": 37, "answer": "scholarship", "vi": "học bổng", "ex": "She got a scholarship to study in Australia."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty-two. campus. campus. The campus is very green. The campus is very green.", "focus": 0}
+      - {"tom": "Thirty-three. lecture. lecture. The lecture starts at eight. The lecture starts at eight.", "focus": 1, "reveal": [32]}
+      - {"tom": "Thirty-four. lecturer. lecturer. Our lecturer is very kind. Our lecturer is very kind.", "focus": 2, "reveal": [33]}
+      - {"tom": "Thirty-five. assignment. assignment. I have to finish my assignment tonight. I have to finish my assignment tonight.", "focus": 3, "reveal": [34]}
+      - {"tom": "Thirty-six. deadline. deadline. The deadline is next Friday. The deadline is next Friday.", "focus": 4, "reveal": [35]}
+      - {"tom": "Thirty-seven. scholarship. scholarship. She got a scholarship to study in Australia. She got a scholarship to study in Australia.", "focus": 5, "reveal": [36]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [37]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (38–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 38, "answer": "tuition fees", "vi": "học phí", "ex": "Tuition fees are very high."}
+      - {"n": 39, "answer": "exchange programme", "vi": "chương trình trao đổi", "ex": "Tom wants to go on an exchange programme."}
+      - {"n": 40, "answer": "dormitory", "vi": "ký túc xá", "ex": "Many students live in a dormitory."}
+      - {"n": 41, "answer": "graduation", "vi": "lễ tốt nghiệp", "ex": "My parents came to my graduation."}
+      - {"n": 42, "answer": "major", "vi": "chuyên ngành", "ex": "My major is marketing."}
+      - {"n": 43, "answer": "presentation", "vi": "bài thuyết trình", "ex": "I have to give a presentation in English."}
+    lines:
+      - {"tom": "Thirty-eight. tuition fees. tuition fees. Tuition fees are very high. Tuition fees are very high.", "focus": 0}
+      - {"tom": "Thirty-nine. exchange programme. exchange programme. Tom wants to go on an exchange programme. Tom wants to go on an exchange programme.", "focus": 1, "reveal": [38]}
+      - {"tom": "Forty. dormitory. dormitory. Many students live in a dormitory. Many students live in a dormitory.", "say": "Forty. dormitory. dormitory. Many students liv in a dormitory. Many students liv in a dormitory.", "focus": 2, "reveal": [39]}
+      - {"tom": "Forty-one. graduation. graduation. My parents came to my graduation. My parents came to my graduation.", "focus": 3, "reveal": [40]}
+      - {"tom": "Forty-two. major. major. My major is marketing. My major is marketing.", "focus": 4, "reveal": [41]}
+      - {"tom": "Forty-three. presentation. presentation. I have to give a presentation in English. I have to give a presentation in English.", "focus": 5, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [43]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (44–46)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "group project", "vi": "dự án nhóm", "ex": "We are doing a group project on coffee."}
+      - {"n": 45, "answer": "study abroad", "vi": "du học", "ex": "Many students want to study abroad."}
+      - {"n": 46, "answer": "student card", "vi": "thẻ sinh viên", "ex": "Show your student card at the library."}
+    lines:
+      - {"tom": "Forty-four. group project. group project. We are doing a group project on coffee. We are doing a group project on coffee.", "focus": 0}
+      - {"tom": "Forty-five. study abroad. study abroad. Many students want to study abroad. Many students want to study abroad.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. student card. student card. Show your student card at the library. Show your student card at the library.", "focus": 2, "reveal": [45]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [46]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (47–52)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 47, "answer": "What are you studying?", "vi": "Bạn đang học ngành gì?"}
+      - {"n": 48, "answer": "I'm doing a degree in business studies.", "vi": "Mình học quản trị kinh doanh."}
+      - {"n": 49, "answer": "Which year are you in?", "vi": "Bạn học năm mấy?"}
+      - {"n": 50, "answer": "I'm in my second year.", "vi": "Mình học năm hai."}
+      - {"n": 51, "answer": "How long does your course last?", "vi": "Khóa học của bạn kéo dài bao lâu?"}
+      - {"n": 52, "answer": "Four years.", "vi": "Bốn năm."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-seven. What are you studying? What are you studying?", "focus": 0}
+      - {"tom": "Forty-eight. I'm doing a degree in business studies. I'm doing a degree in business studies.", "focus": 1, "reveal": [47]}
+      - {"emma": "Forty-nine. Which year are you in? Which year are you in?", "focus": 2, "reveal": [48]}
+      - {"tom": "Fifty. I'm in my second year. I'm in my second year.", "focus": 3, "reveal": [49]}
+      - {"emma": "Fifty-one. How long does your course last? How long does your course last?", "focus": 4, "reveal": [50]}
+      - {"tom": "Fifty-two. Four years. Four years.", "focus": 5, "reveal": [51]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [52]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (53–58)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 53, "answer": "What do you want to do after your degree?", "vi": "Học xong bạn muốn làm gì?"}
+      - {"n": 54, "answer": "I'd like to get a job in marketing.", "vi": "Mình muốn làm marketing."}
+      - {"n": 55, "answer": "What did you study at university?", "vi": "Bạn học ngành gì ở đại học?"}
+      - {"n": 56, "answer": "English literature. I've got a BA.", "vi": "Văn học Anh. Mình có bằng cử nhân."}
+      - {"n": 57, "answer": "Did you enjoy university?", "vi": "Bạn có thích thời đại học không?"}
+      - {"n": 58, "answer": "Yes, but I had to write lots of essays.", "vi": "Có, nhưng phải viết rất nhiều bài luận."}
+    lines:
+      - {"emma": "Fifty-three. What do you want to do after your degree? What do you want to do after your degree?", "focus": 0}
+      - {"tom": "Fifty-four. I'd like to get a job in marketing. I'd like to get a job in marketing.", "focus": 1, "reveal": [53]}
+      - {"tom": "Fifty-five. What did you study at university? What did you study at university?", "focus": 2, "reveal": [54]}
+      - {"emma": "Fifty-six. English literature. I've got a BA. English literature. I've got a BA.", "say": "Fifty-six. English literature. I've got a bee eigh. English literature. I've got a bee eigh.", "focus": 3, "reveal": [55]}
+      - {"tom": "Fifty-seven. Did you enjoy university? Did you enjoy university?", "focus": 4, "reveal": [56]}
+      - {"emma": "Fifty-eight. Yes, but I had to write lots of essays. Yes, but I had to write lots of essays.", "focus": 5, "reveal": [57]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [58]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (59–64)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 59, "answer": "I have to finish my essay tonight.", "vi": "Tối nay mình phải viết xong bài luận."}
+      - {"n": 60, "answer": "Good luck! When's the deadline?", "vi": "Chúc may mắn! Khi nào hết hạn?"}
+      - {"n": 61, "answer": "Fortunately, I passed the exam.", "vi": "May là mình đỗ rồi."}
+      - {"n": 62, "answer": "Well done! I'm really pleased for you.", "vi": "Giỏi quá! Mình mừng cho bạn."}
+      - {"n": 63, "answer": "Where do you study?", "vi": "Bạn hay học ở đâu?"}
+      - {"n": 64, "answer": "Usually in the library. It's quiet.", "vi": "Thường ở thư viện. Ở đó yên tĩnh."}
+    lines:
+      - {"tom": "Fifty-nine. I have to finish my essay tonight. I have to finish my essay tonight.", "focus": 0}
+      - {"emma": "Sixty. Good luck! When's the deadline? Good luck! When's the deadline?", "focus": 1, "reveal": [59]}
+      - {"tom": "Sixty-one. Fortunately, I passed the exam. Fortunately, I passed the exam.", "focus": 2, "reveal": [60]}
+      - {"emma": "Sixty-two. Well done! I'm really pleased for you. Well done! I'm really pleased for you.", "focus": 3, "reveal": [61]}
+      - {"emma": "Sixty-three. Where do you study? Where do you study?", "focus": 4, "reveal": [62]}
+      - {"tom": "Sixty-four. Usually in the library. It's quiet. Usually in the library. It's quiet.", "focus": 5, "reveal": [63]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [64]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (65–68)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 65, "answer": "How many terms are there a year?", "vi": "Một năm có mấy học kỳ?"}
+      - {"n": 66, "answer": "Two. Each one lasts about four months.", "vi": "Hai. Mỗi kỳ khoảng bốn tháng."}
+      - {"n": 67, "answer": "Do you want to study abroad?", "vi": "Bạn có muốn du học không?"}
+      - {"n": 68, "answer": "Yes, in Australia, on an exchange programme.", "vi": "Có, ở Úc, theo chương trình trao đổi."}
+    lines:
+      - {"emma": "Sixty-five. How many terms are there a year? How many terms are there a year?", "focus": 0}
+      - {"tom": "Sixty-six. Two. Each one lasts about four months. Two. Each one lasts about four months.", "focus": 1, "reveal": [65]}
+      - {"emma": "Sixty-seven. Do you want to study abroad? Do you want to study abroad?", "focus": 2, "reveal": [66]}
+      - {"tom": "Sixty-eight. Yes, in Australia, on an exchange programme. Yes, in Australia, on an exchange programme.", "focus": 3, "reveal": [67]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [68]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (69–72)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 69, "answer": "What score do you need?", "vi": "Bạn cần bao nhiêu điểm?"}
+      - {"n": 70, "answer": "I need IELTS five point five.", "vi": "Mình cần IELTS năm phẩy năm."}
+      - {"n": 71, "answer": "Is university expensive in England?", "vi": "Học đại học ở Anh có đắt không?"}
+      - {"n": 72, "answer": "Yes, tuition fees are very high.", "vi": "Có, học phí rất cao."}
+    lines:
+      - {"emma": "Sixty-nine. What score do you need? What score do you need?", "focus": 0}
+      - {"tom": "Seventy. I need IELTS five point five. I need IELTS five point five.", "say": "Seventy. I need eye-elts five point five. I need eye-elts five point five.", "focus": 1, "reveal": [69]}
+      - {"tom": "Seventy-one. Is university expensive in England? Is university expensive in England?", "focus": 2, "reveal": [70]}
+      - {"emma": "Seventy-two. Yes, tuition fees are very high. Yes, tuition fees are very high.", "focus": 3, "reveal": [71]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [72]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 44.", "say": "Well done! See you in Unit forty-four.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 44."}
+

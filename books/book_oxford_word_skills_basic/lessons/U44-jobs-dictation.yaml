@@ -1,0 +1,318 @@
+# Video nghe – viết (dictation) Unit 44 · Jobs — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U44-jobs-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U44 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 44 có 27 mục: police officer phủ officer; bus, taxi, lorry, train driver và driver ghép hai dòng;
+# businessman, businesswoman ghép một dòng.
+id: U44-jobs-dictation
+activity: U44-words
+title: "Unit 44 · Jobs"
+subtitle: "Dictation · listen and write: talking about jobs"
+title_vi: "Nghe – viết 10 phút: nghề nghiệp — từ trong sách, từ thêm, câu giao tiếp"
+tag: "STUDY AND WORK · UNIT 44"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 44: Jobs. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-four: Jobs. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 44: nghề nghiệp. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 23 words from the book. You hear each word twice, and then an example sentence twice. Then 20 more useful words, and 37 useful sentences for conversation.", "say": "There are three parts. First, twenty-three words from the book. You hear each word twice, and then an example sentence twice. Then twenty more useful words, and thirty-seven useful sentences for conversation.", "vi": "Ba phần: 23 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 20 từ thêm, 37 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "job", "vi": "nghề, việc làm", "ex": "What's your job?"}
+      - {"n": 2, "answer": "What do you do?", "vi": "Bạn làm nghề gì?", "ex": "What do you do? I'm a teacher."}
+      - {"n": 3, "answer": "teacher", "vi": "giáo viên", "ex": "Emma is a teacher.", "w": ["teacher"]}
+      - {"n": 4, "answer": "police officer", "vi": "cảnh sát", "ex": "My uncle is a police officer.", "w": ["police officer", "officer"]}
+      - {"n": 5, "answer": "shop assistant", "vi": "nhân viên bán hàng", "ex": "A shop assistant sells things.", "w": ["shop assistant"]}
+      - {"n": 6, "answer": "builder", "vi": "thợ xây", "ex": "A builder works outdoors a lot.", "w": ["builder"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. job. job. What's your job? What's your job?", "focus": 0}
+      - {"emma": "Two. What do you do?. What do you do?. What do you do? I'm a teacher. What do you do? I'm a teacher.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. teacher. teacher. Emma is a teacher. Emma is a teacher.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. police officer. police officer. My uncle is a police officer. My uncle is a police officer.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. shop assistant. shop assistant. A shop assistant sells things. A shop assistant sells things.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. builder. builder. A builder works outdoors a lot. A builder works outdoors a lot.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "businessman, businesswoman", "vi": "doanh nhân", "ex": "She's a businesswoman with her own company.", "w": ["businessman", "businesswoman"]}
+      - {"n": 8, "answer": "nurse", "vi": "y tá", "ex": "Tom's sister is a nurse in Hanoi.", "w": ["nurse"]}
+      - {"n": 9, "answer": "secretary", "vi": "thư ký", "ex": "A businessman usually has a secretary.", "w": ["secretary"]}
+      - {"n": 10, "answer": "hairdresser", "vi": "thợ làm tóc", "ex": "Could she cut my hair? Yes, she's a hairdresser.", "w": ["hairdresser"]}
+      - {"n": 11, "answer": "chef", "vi": "đầu bếp", "ex": "A chef works in a kitchen.", "w": ["chef"]}
+      - {"n": 12, "answer": "dentist", "vi": "nha sĩ", "ex": "A dentist looks after people's teeth.", "w": ["dentist"]}
+    lines:
+      - {"emma": "Seven. businessman, businesswoman. businessman, businesswoman. She's a businesswoman with her own company. She's a businesswoman with her own company.", "focus": 0}
+      - {"emma": "Eight. nurse. nurse. Tom's sister is a nurse in Hanoi. Tom's sister is a nurse in Hanoi.", "say": "Eight. nurse. nurse. Tom's sister is a nurse in Ha Noi. Tom's sister is a nurse in Ha Noi.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. secretary. secretary. A businessman usually has a secretary. A businessman usually has a secretary.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. hairdresser. hairdresser. Could she cut my hair? Yes, she's a hairdresser. Could she cut my hair? Yes, she's a hairdresser.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. chef. chef. A chef works in a kitchen. A chef works in a kitchen.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. dentist. dentist. A dentist looks after people's teeth. A dentist looks after people's teeth.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "soldier", "vi": "người lính", "ex": "I don't know anyone who's a soldier.", "w": ["soldier"]}
+      - {"n": 14, "answer": "cleaner", "vi": "người dọn dẹp", "ex": "The cleaner comes every evening.", "w": ["cleaner"]}
+      - {"n": 15, "answer": "vet", "vi": "bác sĩ thú y", "ex": "A vet works with dogs and cats.", "w": ["vet"]}
+      - {"n": 16, "answer": "pilot", "vi": "phi công", "ex": "Tom's uncle is a pilot.", "w": ["pilot"]}
+      - {"n": 17, "answer": "lorry driver, train driver", "vi": "tài xế xe tải, lái tàu", "ex": "A lorry driver drives a big truck.", "w": ["lorry driver", "train driver"]}
+      - {"n": 18, "answer": "bus driver, taxi driver", "vi": "tài xế xe buýt, taxi", "ex": "The bus driver was very helpful.", "w": ["bus driver", "taxi driver", "driver"]}
+    lines:
+      - {"emma": "Thirteen. soldier. soldier. I don't know anyone who's a soldier. I don't know anyone who's a soldier.", "focus": 0}
+      - {"emma": "Fourteen. cleaner. cleaner. The cleaner comes every evening. The cleaner comes every evening.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. vet. vet. A vet works with dogs and cats. A vet works with dogs and cats.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. pilot. pilot. Tom's uncle is a pilot. Tom's uncle is a pilot.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. lorry driver, train driver. lorry driver, train driver. A lorry driver drives a big truck. A lorry driver drives a big truck.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. bus driver, taxi driver. bus driver, taxi driver. The bus driver was very helpful. The bus driver was very helpful.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–23)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "self-employed", "vi": "tự làm chủ", "ex": "My mum is self-employed: she has a shop.", "w": ["self-employed"]}
+      - {"n": 20, "answer": "unemployed", "vi": "thất nghiệp", "ex": "I'm unemployed, but I'm looking for a job.", "w": ["unemployed"]}
+      - {"n": 21, "answer": "retired", "vi": "đã nghỉ hưu", "ex": "My grandfather is retired now.", "w": ["retired"]}
+      - {"n": 22, "answer": "housewife, househusband", "vi": "người nội trợ", "ex": "She stays at home with the children: she's a housewife.", "w": ["housewife", "househusband"]}
+      - {"n": 23, "answer": "boss", "vi": "sếp", "ex": "Who's the boss in this company?", "w": ["boss"]}
+    lines:
+      - {"emma": "Nineteen. self-employed. self-employed. My mum is self-employed: she has a shop. My mum is self-employed: she has a shop.", "focus": 0}
+      - {"emma": "Twenty. unemployed. unemployed. I'm unemployed, but I'm looking for a job. I'm unemployed, but I'm looking for a job.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. retired. retired. My grandfather is retired now. My grandfather is retired now.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. housewife, househusband. housewife, househusband. She stays at home with the children: she's a housewife. She stays at home with the children: she's a housewife.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. boss. boss. Who's the boss in this company? Who's the boss in this company?", "focus": 4, "reveal": [22]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [23]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (24–29)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 24, "answer": "waiter, waitress", "vi": "phục vụ", "ex": "Tom is a waiter in a café."}
+      - {"n": 25, "answer": "farmer", "vi": "nông dân", "ex": "Many people in the village are farmers."}
+      - {"n": 26, "answer": "factory worker", "vi": "công nhân", "ex": "She's a factory worker."}
+      - {"n": 27, "answer": "tour guide", "vi": "hướng dẫn viên du lịch", "ex": "The tour guide speaks three languages."}
+      - {"n": 28, "answer": "receptionist", "vi": "lễ tân", "ex": "Ask the receptionist for a key."}
+      - {"n": 29, "answer": "delivery driver", "vi": "tài xế giao hàng", "ex": "The delivery driver brought my parcel."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Twenty-four. waiter, waitress. waiter, waitress. Tom is a waiter in a café. Tom is a waiter in a café.", "focus": 0}
+      - {"tom": "Twenty-five. farmer. farmer. Many people in the village are farmers. Many people in the village are farmers.", "focus": 1, "reveal": [24]}
+      - {"tom": "Twenty-six. factory worker. factory worker. She's a factory worker. She's a factory worker.", "focus": 2, "reveal": [25]}
+      - {"tom": "Twenty-seven. tour guide. tour guide. The tour guide speaks three languages. The tour guide speaks three languages.", "focus": 3, "reveal": [26]}
+      - {"tom": "Twenty-eight. receptionist. receptionist. Ask the receptionist for a key. Ask the receptionist for a key.", "focus": 4, "reveal": [27]}
+      - {"tom": "Twenty-nine. delivery driver. delivery driver. The delivery driver brought my parcel. The delivery driver brought my parcel.", "focus": 5, "reveal": [28]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [29]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (30–35)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 30, "answer": "mechanic", "vi": "thợ sửa xe", "ex": "The mechanic fixed my motorbike."}
+      - {"n": 31, "answer": "accountant", "vi": "kế toán", "ex": "My aunt is an accountant."}
+      - {"n": 32, "answer": "photographer", "vi": "nhiếp ảnh gia", "ex": "The photographer took lots of pictures."}
+      - {"n": 33, "answer": "firefighter", "vi": "lính cứu hỏa", "ex": "Firefighters are very brave."}
+      - {"n": 34, "answer": "electrician", "vi": "thợ điện", "ex": "We need an electrician to fix the lights."}
+      - {"n": 35, "answer": "plumber", "vi": "thợ sửa ống nước", "ex": "Call a plumber: the tap doesn't work."}
+    lines:
+      - {"tom": "Thirty. mechanic. mechanic. The mechanic fixed my motorbike. The mechanic fixed my motorbike.", "focus": 0}
+      - {"tom": "Thirty-one. accountant. accountant. My aunt is an accountant. My aunt is an accountant.", "focus": 1, "reveal": [30]}
+      - {"tom": "Thirty-two. photographer. photographer. The photographer took lots of pictures. The photographer took lots of pictures.", "focus": 2, "reveal": [31]}
+      - {"tom": "Thirty-three. firefighter. firefighter. Firefighters are very brave. Firefighters are very brave.", "focus": 3, "reveal": [32]}
+      - {"tom": "Thirty-four. electrician. electrician. We need an electrician to fix the lights. We need an electrician to fix the lights.", "focus": 4, "reveal": [33]}
+      - {"tom": "Thirty-five. plumber. plumber. Call a plumber: the tap doesn't work. Call a plumber: the tap doesn't work.", "focus": 5, "reveal": [34]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (36–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 36, "answer": "cashier", "vi": "thu ngân", "ex": "Pay the cashier at the checkout."}
+      - {"n": 37, "answer": "security guard", "vi": "bảo vệ", "ex": "The security guard checks everyone."}
+      - {"n": 38, "answer": "part-time job", "vi": "việc bán thời gian", "ex": "I've got a part-time job."}
+      - {"n": 39, "answer": "apply for a job", "vi": "nộp đơn xin việc", "ex": "I applied for a job in a bank."}
+    lines:
+      - {"tom": "Thirty-six. cashier. cashier. Pay the cashier at the checkout. Pay the cashier at the checkout.", "focus": 0}
+      - {"tom": "Thirty-seven. security guard. security guard. The security guard checks everyone. The security guard checks everyone.", "focus": 1, "reveal": [36]}
+      - {"tom": "Thirty-eight. part-time job. part-time job. I've got a part-time job. I've got a part-time job.", "focus": 2, "reveal": [37]}
+      - {"tom": "Thirty-nine. apply for a job. apply for a job. I applied for a job in a bank. I applied for a job in a bank.", "focus": 3, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [39]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "salary", "vi": "lương", "ex": "Pilots get a high salary."}
+      - {"n": 41, "answer": "uniform", "vi": "đồng phục", "ex": "Police officers wear a uniform."}
+      - {"n": 42, "answer": "office", "vi": "văn phòng", "ex": "My dad works in an office."}
+      - {"n": 43, "answer": "customer", "vi": "khách hàng", "ex": "A shop assistant helps customers."}
+    lines:
+      - {"tom": "Forty. salary. salary. Pilots get a high salary. Pilots get a high salary.", "focus": 0}
+      - {"tom": "Forty-one. uniform. uniform. Police officers wear a uniform. Police officers wear a uniform.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. office. office. My dad works in an office. My dad works in an office.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. customer. customer. A shop assistant helps customers. A shop assistant helps customers.", "focus": 3, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [43]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (44–49)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 44, "answer": "What do you do?", "vi": "Bạn làm nghề gì?"}
+      - {"n": 45, "answer": "I'm a student, but I work part-time as a waiter.", "vi": "Mình là sinh viên, làm thêm phục vụ."}
+      - {"n": 46, "answer": "What does your sister do?", "vi": "Chị bạn làm nghề gì?"}
+      - {"n": 47, "answer": "She's a nurse in a big hospital.", "vi": "Chị ấy là y tá ở một bệnh viện lớn."}
+      - {"n": 48, "answer": "What does your father do?", "vi": "Bố bạn làm nghề gì?"}
+      - {"n": 49, "answer": "He works for a coffee company.", "vi": "Bố mình làm cho một công ty cà phê."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-four. What do you do? What do you do?", "focus": 0}
+      - {"tom": "Forty-five. I'm a student, but I work part-time as a waiter. I'm a student, but I work part-time as a waiter.", "focus": 1, "reveal": [44]}
+      - {"emma": "Forty-six. What does your sister do? What does your sister do?", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. She's a nurse in a big hospital. She's a nurse in a big hospital.", "focus": 3, "reveal": [46]}
+      - {"emma": "Forty-eight. What does your father do? What does your father do?", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. He works for a coffee company. He works for a coffee company.", "focus": 5, "reveal": [48]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (50–55)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 50, "answer": "Is your grandfather still working?", "vi": "Ông bạn còn đi làm không?"}
+      - {"n": 51, "answer": "No, he's retired. He was a maths teacher.", "vi": "Không, ông nghỉ hưu rồi. Trước ông dạy toán."}
+      - {"n": 52, "answer": "What did you want to be when you were a child?", "vi": "Hồi nhỏ bạn muốn làm nghề gì?"}
+      - {"n": 53, "answer": "An astronaut! But I'm a teacher now.", "vi": "Phi hành gia! Nhưng giờ mình là giáo viên."}
+      - {"n": 54, "answer": "Do you like your job?", "vi": "Bạn có thích công việc của mình không?"}
+      - {"n": 55, "answer": "Yes, I love it. My students are great.", "vi": "Có, mình rất thích. Học viên rất dễ thương."}
+    lines:
+      - {"emma": "Fifty. Is your grandfather still working? Is your grandfather still working?", "focus": 0}
+      - {"tom": "Fifty-one. No, he's retired. He was a maths teacher. No, he's retired. He was a maths teacher.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. What did you want to be when you were a child? What did you want to be when you were a child?", "focus": 2, "reveal": [51]}
+      - {"emma": "Fifty-three. An astronaut! But I'm a teacher now. An astronaut! But I'm a teacher now.", "focus": 3, "reveal": [52]}
+      - {"tom": "Fifty-four. Do you like your job? Do you like your job?", "focus": 4, "reveal": [53]}
+      - {"emma": "Fifty-five. Yes, I love it. My students are great. Yes, I love it. My students are great.", "focus": 5, "reveal": [54]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [55]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (56–61)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 56, "answer": "Who's your boss?", "vi": "Sếp của bạn là ai?"}
+      - {"n": 57, "answer": "The director of my school. She's very kind.", "vi": "Giám đốc trường. Cô ấy rất tốt."}
+      - {"n": 58, "answer": "Is your mum self-employed?", "vi": "Mẹ bạn tự làm chủ à?"}
+      - {"n": 59, "answer": "Yes, she has her own flower shop.", "vi": "Đúng, mẹ mình có cửa hàng hoa riêng."}
+      - {"n": 60, "answer": "I'm looking for a job.", "vi": "Mình đang tìm việc."}
+      - {"n": 61, "answer": "Why don't you apply to that new hotel?", "vi": "Sao bạn không nộp đơn vào khách sạn mới kia?"}
+    lines:
+      - {"tom": "Fifty-six. Who's your boss? Who's your boss?", "focus": 0}
+      - {"emma": "Fifty-seven. The director of my school. She's very kind. The director of my school. She's very kind.", "focus": 1, "reveal": [56]}
+      - {"emma": "Fifty-eight. Is your mum self-employed? Is your mum self-employed?", "focus": 2, "reveal": [57]}
+      - {"tom": "Fifty-nine. Yes, she has her own flower shop. Yes, she has her own flower shop.", "focus": 3, "reveal": [58]}
+      - {"tom": "Sixty. I'm looking for a job. I'm looking for a job.", "focus": 4, "reveal": [59]}
+      - {"emma": "Sixty-one. Why don't you apply to that new hotel? Why don't you apply to that new hotel?", "focus": 5, "reveal": [60]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [61]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (62–67)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 62, "answer": "My uncle is a pilot.", "vi": "Chú mình là phi công."}
+      - {"n": 63, "answer": "Wow! Where does he fly to?", "vi": "Ồ! Chú ấy bay đi đâu?"}
+      - {"n": 64, "answer": "Singapore and Bangkok, mostly.", "vi": "Chủ yếu là Singapore và Bangkok."}
+      - {"n": 65, "answer": "Do you know a good hairdresser?", "vi": "Bạn có biết thợ làm tóc nào giỏi không?"}
+      - {"n": 66, "answer": "Yes, there's one near my flat.", "vi": "Có, gần căn hộ mình có một chỗ."}
+      - {"n": 67, "answer": "Do you need a dentist?", "vi": "Bạn cần nha sĩ à?"}
+    lines:
+      - {"tom": "Sixty-two. My uncle is a pilot. My uncle is a pilot.", "focus": 0}
+      - {"emma": "Sixty-three. Wow! Where does he fly to? Wow! Where does he fly to?", "focus": 1, "reveal": [62]}
+      - {"tom": "Sixty-four. Singapore and Bangkok, mostly. Singapore and Bangkok, mostly.", "focus": 2, "reveal": [63]}
+      - {"emma": "Sixty-five. Do you know a good hairdresser? Do you know a good hairdresser?", "focus": 3, "reveal": [64]}
+      - {"tom": "Sixty-six. Yes, there's one near my flat. Yes, there's one near my flat.", "focus": 4, "reveal": [65]}
+      - {"tom": "Sixty-seven. Do you need a dentist? Do you need a dentist?", "focus": 5, "reveal": [66]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (68–73)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 68, "answer": "Yes, I've got toothache.", "vi": "Ừ, mình bị đau răng."}
+      - {"n": 69, "answer": "Is it a good job?", "vi": "Đó có phải công việc tốt không?"}
+      - {"n": 70, "answer": "Yes, but the hours are long.", "vi": "Có, nhưng phải làm nhiều giờ."}
+      - {"n": 71, "answer": "What does your brother want to be?", "vi": "Em trai bạn muốn làm nghề gì?"}
+      - {"n": 72, "answer": "A pilot, like our uncle.", "vi": "Phi công, giống chú mình."}
+      - {"n": 73, "answer": "Are your parents retired?", "vi": "Bố mẹ bạn nghỉ hưu chưa?"}
+    lines:
+      - {"emma": "Sixty-eight. Yes, I've got toothache. Yes, I've got toothache.", "focus": 0}
+      - {"emma": "Sixty-nine. Is it a good job? Is it a good job?", "focus": 1, "reveal": [68]}
+      - {"tom": "Seventy. Yes, but the hours are long. Yes, but the hours are long.", "focus": 2, "reveal": [69]}
+      - {"emma": "Seventy-one. What does your brother want to be? What does your brother want to be?", "focus": 3, "reveal": [70]}
+      - {"tom": "Seventy-two. A pilot, like our uncle. A pilot, like our uncle.", "focus": 4, "reveal": [71]}
+      - {"tom": "Seventy-three. Are your parents retired? Are your parents retired?", "focus": 5, "reveal": [72]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [73]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (74–77)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 74, "answer": "Not yet, but they will be soon.", "vi": "Chưa, nhưng sắp rồi."}
+      - {"n": 75, "answer": "I'd like to be self-employed one day.", "vi": "Một ngày nào đó mình muốn tự làm chủ."}
+      - {"n": 76, "answer": "That's a great idea!", "vi": "Ý hay đấy!"}
+      - {"n": 77, "answer": "Do you know a good vet?", "vi": "Bạn có biết bác sĩ thú y nào giỏi không?"}
+    lines:
+      - {"emma": "Seventy-four. Not yet, but they will be soon. Not yet, but they will be soon.", "focus": 0}
+      - {"tom": "Seventy-five. I'd like to be self-employed one day. I'd like to be self-employed one day.", "focus": 1, "reveal": [74]}
+      - {"emma": "Seventy-six. That's a great idea! That's a great idea!", "focus": 2, "reveal": [75]}
+      - {"emma": "Seventy-seven. Do you know a good vet? Do you know a good vet?", "focus": 3, "reveal": [76]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [77]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (78–80)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 78, "answer": "Yes, there's one near the market.", "vi": "Có, gần chợ có một người."}
+      - {"n": 79, "answer": "What does a secretary do?", "vi": "Thư ký làm những việc gì?"}
+      - {"n": 80, "answer": "She answers the phone and organizes meetings.", "vi": "Nghe điện thoại và sắp xếp các cuộc họp."}
+    lines:
+      - {"tom": "Seventy-eight. Yes, there's one near the market. Yes, there's one near the market.", "focus": 0}
+      - {"tom": "Seventy-nine. What does a secretary do? What does a secretary do?", "focus": 1, "reveal": [78]}
+      - {"emma": "Eighty. She answers the phone and organizes meetings. She answers the phone and organizes meetings.", "focus": 2, "reveal": [79]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [80]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 45.", "say": "Well done! See you in Unit forty-five.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 45."}
+

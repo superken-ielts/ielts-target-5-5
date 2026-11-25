@@ -1,0 +1,536 @@
+# Video Oxford Word Skills Basic · Unit 45 — I can describe a job (sách in tr. 116–117, Answer key tr. 215–216).
+# UNIT KHÓ (đợt 41): 2 trang, hai phần — thông tin cơ bản về công việc (work in / for, full-time / part-time, long hours, earn,
+# salary ≠ wages, low ≠ high) và việc phải làm (have to, meet clients, discuss, colleague, report, organize, answer the phone,
+# spend time doing); "Work" là chủ đề Part 1 bắt buộc, "a job you would like to do in the future" là đề Part 2 hay gặp — video
+# khoảng 13 phút: phần sách, rồi câu tả công việc kiểu IELTS, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a job you would like
+# to do in the future", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không khoảng lặng
+# từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–5. Bài 1, 2, 4, 5 theo Answer key tr. 215–216 (bài 1: khung từ của sách hiện trước; bài 4: sáu câu sai, hai
+# câu đúng). Bài 3 (ABOUT YOU): Emma hỏi Tom về việc làm thêm, Tom hỏi Emma (cảnh Nói 1).
+# Hình trong sách: thông tin cơ bản (hai cảnh, khung theo câu), Glossary A, khung từ bài 1, tranh văn phòng 1–5, lời kể của Daniel
+# Alessi và Eliane Sotano (hai cảnh, khung theo dòng), Spotlight spend time doing, Glossary B (hai cảnh) — đo bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom làm thêm phục vụ ở quán cà phê gần trường, tối thứ Ba và thứ Năm 6–10
+# giờ, quản lý (nữ) nghiêm nhưng công bằng; muốn làm trưởng phòng marketing cho công ty cà phê quốc tế, một ngày có thương hiệu cà phê
+# Đà Lạt riêng; Emma dạy khoảng 25 giờ một tuần, trường có 12 giáo viên từ 5 nước, một ngày muốn mở trường ngoại ngữ nhỏ có quán cà phê
+# ở quê ven biển. Mới: Tom làm 8 tiếng một tuần, nhận đồ uống, pha cà phê, lau bàn; Emma soạn bài, dạy, chấm bài, họp giáo viên mỗi
+# tuần một lần, dạy cả trực tuyến.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U45-describing-job.yaml
+id: U45-describing-job
+activity: U45-words
+title: "Unit 45 · Describing a job"
+subtitle: "I can describe a job"
+title_vi: "Mô tả công việc: work in / for, full-time / part-time, earn, salary, wages; have to, meet clients, discuss, colleague, report, organize, spend time doing — kèm ôn tập và luyện nói"
+tag: "STUDY AND WORK · UNIT 45"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 45: describing a job. Today: where people work, their hours, how much they earn, and what they have to do. Work is a topic in almost every IELTS speaking test, so this video is longer, with a review and speaking practice."
+        say: "Welcome to Unit forty-five: describing a job. Today: where people work, their hours, how much they earn, and what they have to do. Work is a topic in almost every eye-elts speaking test, so this video is longer, with a review and speaking practice."
+        vi: "Unit 45: mô tả công việc — nơi làm, giờ làm, thu nhập, việc phải làm; video dài hơn, có ôn tập và luyện nói."
+      - tom: "No countdown, as always. Pause the video whenever you want to answer."
+        vi: "Không đếm ngược: tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Thông tin cơ bản (1)"
+    heading: "A · Basic information (1)"
+    heading_vi: "tr. 116 — Where does he work? · Who does she work for?"
+    image: {pdf: course-book, page: 117, clip: [24, 84, 426, 185]}
+    items:
+      - {box: [26, 86, 162, 105]}
+      - {box: [146, 92, 234, 130]}
+      - {box: [238, 92, 334, 130]}
+      - {box: [334, 92, 424, 130]}
+      - {box: [26, 137, 166, 158]}
+      - {box: [170, 157, 312, 171]}
+      - {box: [170, 171, 312, 184.5]}
+    lines:
+      - {emma: "Look at page one hundred and sixteen. Where does he work?", focus: 0}
+      - {tom: "He works in an office,", focus: 1, vi: "work in an office: làm ở văn phòng"}
+      - {emma: "in a factory,", focus: 2, vi: "factory: nhà máy"}
+      - {tom: "or in a hospital.", focus: 3}
+      - {emma: "Who does she work for?", focus: 4, vi: "work for: làm cho (công ty nào)"}
+      - {tom: "She works for a car company, for example Toyota,", focus: 5, vi: "company: công ty"}
+      - {emma: "or an airline, for example Cathay Pacific.", focus: 6, vi: "airline: hãng hàng không"}
+
+  - kind: figure
+    chapter: "Thông tin cơ bản (2)"
+    heading: "A · Basic information (2)"
+    heading_vi: "tr. 116 — What hours does he work? · How much does she earn?"
+    image: {pdf: course-book, page: 117, clip: [24, 190, 346, 314]}
+    items:
+      - {box: [26, 191, 170, 213]}
+      - {box: [170, 214, 344, 227]}
+      - {box: [170, 226.5, 344, 239]}
+      - {box: [170, 243, 322, 255.5]}
+      - {box: [170, 254.5, 322, 266]}
+      - {box: [26, 266, 170, 287]}
+      - {box: [44, 287, 294, 300]}
+      - {box: [44, 299.5, 294, 313]}
+    lines:
+      - {emma: "What hours does he work?", focus: 0}
+      - {tom: "He's got a full-time job, for example forty hours a week,", focus: 1, vi: "full-time: toàn thời gian · a week: mỗi tuần"}
+      - {emma: "or a part-time job, for example fifteen hours a week.", say: "or a part-time job, for example fif-teen hours a week.", focus: 2, vi: "part-time: bán thời gian"}
+      - {tom: "He works long hours, for example twelve hours a day,", focus: 3, vi: "long hours: làm nhiều giờ"}
+      - {emma: "or from nine to five.", focus: 4, vi: "from … to …: từ … đến …"}
+      - {tom: "How much does she earn?", focus: 5, vi: "earn: kiếm (tiền)"}
+      - {emma: "She earns a lot. Her salary is eighty thousand dollars a year.", focus: 6, vi: "salary: lương (tháng, năm)"}
+      - {tom: "He doesn't earn very much. He gets low wages.", focus: 7, vi: "wages: tiền công (tuần) · low: thấp"}
+
+  - kind: figure
+    chapter: "Glossary (1)"
+    heading: "Glossary · earn · salary · wages · low ≠ high"
+    heading_vi: "tr. 116 — salary: theo tháng · wages: theo tuần"
+    image: {pdf: course-book, page: 117, clip: [350, 184, 490, 314]}
+    items:
+      - {box: [352, 204.5, 488, 228]}
+      - {box: [352, 228.5, 488, 252.5]}
+      - {box: [352, 253.5, 488, 276.5]}
+      - {box: [352, 276.5, 488, 299]}
+      - {box: [352, 299.5, 488, 312]}
+    lines:
+      - {emma: "Look at the glossary. Earn: receive money for the work that you do.", focus: 0}
+      - {tom: "Salary: money you receive every month for the work that you do.", focus: 1}
+      - {emma: "Wages: money you receive every week for the work that you do.", focus: 2}
+      - {tom: "Low: if you earn low wages, you earn less than is normal.", focus: 3, vi: "less than is normal: ít hơn bình thường"}
+      - {emma: "And the opposite of low is high: a high salary.", focus: 4, vi: "low ≠ high"}
+
+  - kind: figure
+    chapter: "Bài 1: khung từ"
+    heading: "Exercise 1 · The words and phrases in the box"
+    heading_vi: "tr. 116 — dùng cụm từ trong khung để hoàn thành câu"
+    image: {pdf: course-book, page: 117, clip: [54, 344, 432, 386]}
+    items:
+      - {box: [56, 346.8, 430, 383.6]}
+    lines:
+      - {emma: "Exercise 1. Complete the sentences with words and phrases in the box: office, an American airline, she work, hours a day, work for, long hours, earn much, job, ten to six, a factory, and does he earn.", say: "Exercise one. Complete the sentences with words and phrases in the box: office, an American airline, she work, hours a day, work for, long hours, earn much, job, ten to six, a factory, and does he earn.", focus: 0, vi: "Bài 1: hoàn thành câu bằng từ trong khung."}
+
+  - kind: blanks
+    chapter: "Bài 1: hoàn thành câu"
+    heading: "Exercise 1 · Complete the sentences with words and phrases in the box"
+    heading_vi: "Ví dụ: He works long hours. (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "She works ten ___.", answer: "hours a day"}
+      - {n: 2, q: "I work in ___.", answer: "a factory"}
+      - {n: 3, q: "He works in an ___?", answer: "office"}
+      - {n: 4, q: "Who do you ___?", answer: "work for"}
+      - {n: 5, q: "How much ___?", answer: "does he earn"}
+      - {n: 6, q: "Where does ___?", answer: "she work"}
+      - {n: 7, q: "She works for ___.", answer: "an American airline"}
+      - {n: 8, q: "She doesn't ___.", answer: "earn much"}
+      - {n: 9, q: "It's a full-time ___.", answer: "job"}
+      - {n: 10, q: "I work from ___.", answer: "ten to six"}
+    lines:
+      - emma: "The example is: he works long hours. Pause the video and try."
+        vi: "Ví dụ: He works long hours."
+      - {tom: "One. She works ten hours a day. Two. I work in a factory. Three. He works in an office? Four. Who do you work for? Five. How much does he earn?", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. Where does she work? Seven. She works for an American airline. Eight. She doesn't earn much. Nine. It's a full-time job. Ten. I work from ten to six.", reveal: [6, 7, 8, 9, 10], focus: 9}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành đoạn văn"
+    heading: "Exercise 2 · Complete the text"
+    heading_vi: "Ví dụ: My sister's a nurse in our local hospital. (Answer key tr. 215)"
+    items:
+      - {n: 1, q: "She only works ___", answer: "part-time"}
+      - {n: 2, q: "– about 15 hours ___ week –", answer: "a"}
+      - {n: 3, q: "and she doesn't ___ much money.", answer: "earn"}
+      - {n: 4, q: "Nurses in our country generally get ___ wages.", answer: "low"}
+      - {n: 5, q: "Her husband is a doctor, and he works very long ___", answer: "hours"}
+      - {n: 6, q: "– sometimes 14 hours a ___.", answer: "day"}
+      - {n: 7, q: "He earns about $90,000 a ___,", answer: "year"}
+      - {n: 8, q: "which is a very high ___ in our country.", answer: "salary"}
+    lines:
+      - emma: "Exercise 2. Complete the text. The example is: my sister's a nurse in our local hospital. Pause the video and try."
+        say: "Exercise two. Complete the text. The example is: my sister's a nurse in our local hospital. Pause the video and try."
+        vi: "Bài 2: hoàn thành đoạn văn."
+      - {tom: "One. She only works part-time. Two. About fifteen hours a week. Three. She doesn't earn much money. Four. Nurses get low wages.", say: "One. She only works part-time. Two. About fif-teen hours a week. Three. She doesn't earn much money. Four. Nurses get low wages.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. He works very long hours. Six. Sometimes fourteen hours a day. Seven. He earns about ninety thousand dollars a year. Eight. A very high salary.", say: "Five. He works very long hours. Six. Sometimes four-teen hours a day. Seven. He earns about ninety thousand dollars a year. Eight. A very high salary.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: qa
+    chapter: "Nói 1: công việc của bạn"
+    heading: "Speaking 1 · Exercise 3: about you"
+    heading_vi: "Bài 3 (ABOUT YOU) — có việc làm thì tự trả lời, chưa có thì hỏi người có việc; tạm dừng sau mỗi câu hỏi"
+    items:
+      - q: "What's your job, Tom?"
+        a: "I'm a student, but I've got a part-time job: I'm a waiter."
+        ask: emma
+        by: tom
+        phrases: ["I'm a student, but…", "I've got a part-time job"]
+      - q: "Who do you work for?"
+        a: "A small café near my university. My boss is strict, but fair."
+        ask: emma
+        by: tom
+        phrases: ["A small … near…", "My boss is…"]
+      - q: "Where do you work?"
+        a: "In the café, of course! Sometimes I work outside, at the tables on the street."
+        ask: emma
+        by: tom
+        phrases: ["In the …", "Sometimes I…"]
+      - q: "How many hours do you work?"
+        a: "Eight hours a week: from six to ten on Tuesday and Thursday evenings."
+        ask: emma
+        by: tom
+        phrases: ["… hours a week", "from … to … on…"]
+      - q: "What about you, Emma? Who do you work for?"
+        a: "A language school in Ho Chi Minh City. I'm an English teacher there."
+        ask: tom
+        by: emma
+        phrases: ["A … school in…", "I'm a … there."]
+      - q: "How many hours do you work?"
+        a: "About twenty-five hours a week. I teach in the school, and sometimes online."
+        ask: tom
+        by: emma
+        phrases: ["About … hours a week.", "I teach…"]
+    lines:
+      - {emma: "Exercise 3 is about you. If you have a job, answer the questions. If you don't, ask someone who has a job. Tom, what's your job?", say: "Exercise three is about you. If you have a job, answer the questions. If you don't, ask someone who has a job. Tom, what's your job?", focus: 0}
+      - {tom: "I'm a student, but I've got a part-time job: I'm a waiter.", reveal: 0, vi: "Là sinh viên, có việc làm thêm: phục vụ."}
+      - {emma: "Who do you work for?", focus: 1}
+      - {tom: "A small café near my university. My boss is strict, but fair.", reveal: 1, vi: "Một quán cà phê nhỏ gần trường; quản lý nghiêm nhưng công bằng."}
+      - {emma: "Where do you work?", focus: 2}
+      - {tom: "In the café, of course! Sometimes I work outside, at the tables on the street.", reveal: 2, vi: "Trong quán; đôi khi phục vụ bàn ngoài vỉa hè."}
+      - {emma: "How many hours do you work?", focus: 3}
+      - {tom: "Eight hours a week: from six to ten on Tuesday and Thursday evenings.", reveal: 3, vi: "8 tiếng một tuần: 6–10 giờ tối thứ Ba và thứ Năm."}
+      - {tom: "What about you, Emma? Who do you work for?", focus: 4}
+      - {emma: "A language school in Ho Chi Minh City. I'm an English teacher there.", say: "A language school in Ho Chee Min City. I'm an English teacher there.", reveal: 4, vi: "Một trường ngoại ngữ ở TP. HCM; Emma dạy tiếng Anh."}
+      - {tom: "How many hours do you work?", focus: 5}
+      - {emma: "About twenty-five hours a week. I teach in the school, and sometimes online.", reveal: 5, vi: "Khoảng 25 giờ một tuần, dạy ở trường và đôi khi trực tuyến."}
+
+  - kind: figure
+    chapter: "Việc phải làm: tranh"
+    heading: "B · What do you have to do?"
+    heading_vi: "Tranh tr. 117 — 1 design buildings · 2 meet clients · 3 go to meetings · 4 make phone calls · 5 type reports"
+    image: {pdf: course-book, page: 118, clip: [28, 56, 486, 180]}
+    items:
+      - {box: [30, 60, 106, 178]}
+      - {box: [86, 60, 206, 178]}
+      - {box: [200, 60, 342, 178]}
+      - {box: [284, 58, 344, 130]}
+      - {box: [380, 140, 485, 179]}
+    lines:
+      - {emma: "Part B: what do you have to do? Look at the picture. Number one: he designs buildings.", focus: 0, vi: "design: thiết kế"}
+      - {tom: "Two: he meets a client.", focus: 1, vi: "meet: gặp · client: khách hàng"}
+      - {emma: "Three: they're in a meeting.", focus: 2, vi: "meeting: cuộc họp"}
+      - {tom: "Four: she's making a phone call.", focus: 3, vi: "make a phone call: gọi điện thoại"}
+      - {emma: "And five: she's typing a report.", focus: 4, vi: "type: đánh máy · report: báo cáo"}
+
+  - kind: figure
+    chapter: "Daniel Alessi, kiến trúc sư"
+    heading: "B · Daniel Alessi, architect"
+    heading_vi: "tr. 117 — design · have to · meet clients · discuss · go to meetings · colleagues · write reports · spend time"
+    image: {pdf: course-book, page: 118, clip: [32, 182, 250, 284]}
+    items:
+      - {box: [40, 184, 248, 201]}
+      - {box: [40, 203, 248, 216]}
+      - {box: [40, 216, 248, 239]}
+      - {box: [40, 239, 248, 251]}
+      - {box: [40, 250, 248, 261.5]}
+      - {box: [40, 263, 248, 276]}
+    lines:
+      - {tom: "Listen to Daniel Alessi, an architect.", focus: 0}
+      - {emma: "I design buildings, but I also have to:", focus: 1, vi: "have to: phải"}
+      - {emma: "meet clients and discuss problems with them,", focus: 2, vi: "discuss: thảo luận"}
+      - {emma: "go to meetings with colleagues,", focus: 3, vi: "colleague: đồng nghiệp"}
+      - {emma: "and write reports.", focus: 4}
+      - {emma: "I spend a lot of time talking to people.", focus: 5, vi: "spend time doing: dành thời gian làm gì"}
+
+  - kind: figure
+    chapter: "Eliane Sotano, thư ký"
+    heading: "B · Eliane Sotano, secretary"
+    heading_vi: "tr. 117 — part-time · make phone calls · send · organize meetings · type · answer the phone"
+    image: {pdf: course-book, page: 118, clip: [266, 182, 482, 284]}
+    items:
+      - {box: [272, 184, 480, 201]}
+      - {box: [272, 204, 480, 217]}
+      - {box: [272, 216, 480, 228.5]}
+      - {box: [272, 228.5, 480, 240.5]}
+      - {box: [272, 240, 480, 251.5]}
+      - {box: [272, 251, 480, 262]}
+      - {box: [272, 264, 480, 276]}
+    lines:
+      - {tom: "And Eliane Sotano, a secretary.", focus: 0}
+      - {emma: "I only work part-time now. I have to:", focus: 1}
+      - {emma: "make phone calls,", focus: 2}
+      - {emma: "send letters, faxes and emails,", focus: 3, vi: "send: gửi"}
+      - {emma: "organize meetings for my boss,", focus: 4, vi: "organize: sắp xếp, tổ chức"}
+      - {emma: "and type reports.", focus: 5}
+      - {emma: "I spend a lot of time answering the phone!", focus: 6, vi: "answer the phone: nghe điện thoại"}
+
+  - kind: figure
+    chapter: "Spotlight: spend time doing"
+    heading: "Spotlight · Spend time doing something"
+    heading_vi: "tr. 117 — spend + thời gian + động từ -ing"
+    image: {pdf: course-book, page: 118, clip: [28, 303, 298, 368]}
+    items:
+      - {box: [30, 330, 296, 342.5]}
+      - {box: [30, 342.5, 296, 354]}
+      - {box: [30, 354, 296, 366]}
+    lines:
+      - {emma: "Look at the spotlight. Spend time means to do something for a period of time.", focus: 0}
+      - {tom: "I spend a lot of time working and travelling.", focus: 1}
+      - {emma: "I spent a week writing the report. Notice: spend time, plus a verb with I, N, G.", say: "I spent a week writing the report. Notice: spend time, plus a verb with eye, en, gee.", focus: 2, vi: "spend … doing (không nói spend … to do)"}
+
+  - kind: figure
+    chapter: "Glossary (2)"
+    heading: "Glossary (2)"
+    heading_vi: "tr. 117 — have to · client · discuss something · colleague"
+    image: {pdf: course-book, page: 118, clip: [302, 304, 488, 412]}
+    items:
+      - {box: [304, 327, 486, 350.5]}
+      - {box: [304, 351, 486, 375]}
+      - {box: [304, 375.5, 486, 399]}
+      - {box: [304, 399, 486, 411]}
+    lines:
+      - {tom: "Look at the glossary. Have to do something: must do something.", focus: 0, vi: "have to = must"}
+      - {emma: "A client: a person who pays an architect, lawyer, etc. for his or her work and help.", focus: 1}
+      - {tom: "Discuss something: talk about something. Be careful: not discuss about something!", focus: 2, vi: "discuss something (không có about)"}
+      - {emma: "A colleague: a person who works with you.", focus: 3}
+
+  - kind: figure
+    chapter: "Glossary (3)"
+    heading: "Glossary (3)"
+    heading_vi: "tr. 117 — report · send · organize · answer the phone"
+    image: {pdf: course-book, page: 118, clip: [302, 411, 488, 520]}
+    items:
+      - {box: [304, 411.5, 486, 434]}
+      - {box: [304, 435, 486, 459]}
+      - {box: [304, 459, 486, 495]}
+      - {box: [304, 495.5, 486, 519]}
+    lines:
+      - {emma: "A report: a piece of writing giving information about work you have done.", focus: 0}
+      - {tom: "Send: you write a letter, then you send it to the person.", focus: 1}
+      - {emma: "Organize: if you organize a meeting, you find a time and a place when everybody can go to it.", focus: 2}
+      - {tom: "And answer the phone: pick up the phone when it rings, and speak.", focus: 3}
+
+  - kind: blanks
+    chapter: "Bài 4: tìm lỗi"
+    heading: "Exercise 4 · There are mistakes in six sentences. Find the mistakes and correct them"
+    heading_vi: "Ví dụ: I spent a day to meet clients. → meeting (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "He does a lot of phone calls.  →  ___", answer: "He makes a lot of phone calls."}
+      - {n: 2, q: "I have a meet this afternoon.  →  ___", answer: "I have a meeting this afternoon."}
+      - {n: 3, q: "She spends a lot of time type.  →  ___", answer: "She spends a lot of time typing."}
+      - {n: 4, q: "She designs offices.  →  ___", answer: "correct (no mistake)"}
+      - {n: 5, q: "Could you organizate a meeting?  →  ___", answer: "Could you organize a meeting?"}
+      - {n: 6, q: "I wrote the report last night.  →  ___", answer: "correct (no mistake)"}
+      - {n: 7, q: "We discussed about our problems.  →  ___", answer: "We discussed our problems."}
+      - {n: 8, q: "I answered to the phone.  →  ___", answer: "I answered the phone."}
+    lines:
+      - emma: "Exercise 4. There are mistakes in six sentences. Find the mistakes, and correct them. The example is: I spent a day meeting clients, not to meet. Pause the video and try."
+        say: "Exercise four. There are mistakes in six sentences. Find the mistakes, and correct them. The example is: I spent a day meeting clients, not to meet. Pause the video and try."
+        vi: "Bài 4: sáu câu có lỗi — tìm và sửa."
+      - {tom: "One. He makes a lot of phone calls: we make a phone call. Two. A meeting: meet is a verb. Three. She spends a lot of time typing. Four is correct.", reveal: [1, 2, 3, 4], focus: 3, vi: "make a phone call · a meeting (danh từ)"}
+      - {tom: "Five. Organize. Six is correct. Seven. We discussed our problems, with no about. Eight. I answered the phone, with no to.", reveal: [5, 6, 7, 8], focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành đoạn văn"
+    heading: "Exercise 5 · Complete the text"
+    heading_vi: "Ví dụ: It's a full-time job and I work from nine to five. (Answer key tr. 216)"
+    items:
+      - {n: 1, q: "I ___ new students when they arrive at the school,", answer: "meet"}
+      - {n: 2, q: "and of course, I ___ the phone", answer: "answer"}
+      - {n: 3, q: "and ___ letters and emails.", answer: "send / write"}
+      - {n: 4, q: "I ___ a lot of time", answer: "spend"}
+      - {n: 5, q: "___ phone calls to help students who don't speak much English.", answer: "making"}
+      - {n: 6, q: "I really like my other ___ in the office –", answer: "colleagues"}
+      - {n: 7, q: "if I have any problems we can ___ them.", answer: "discuss"}
+      - {n: 8, q: "I also ___ meetings for my boss", answer: "organize"}
+      - {n: 9, q: "with important ___ from other countries.", answer: "clients"}
+      - {n: 10, q: "Sometimes, I ___ to go to meetings with her.", answer: "have"}
+    lines:
+      - emma: "Exercise 5. Complete the text. I have a really interesting new job in the office of a language school. The example is: it's a full-time job, and I work from nine to five. Pause the video and try."
+        say: "Exercise five. Complete the text. I have a really interesting new job in the office of a language school. The example is: it's a full-time job, and I work from nine to five. Pause the video and try."
+        vi: "Bài 5: hoàn thành đoạn văn."
+      - {tom: "One. I meet new students. Two. I answer the phone. Three. And send, or write, letters and emails. Four. I spend a lot of time. Five. Making phone calls.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. My other colleagues. Seven. We can discuss them. Eight. I organize meetings. Nine. Important clients. Ten. Sometimes, I have to go to meetings with her.", reveal: [6, 7, 8, 9, 10], focus: 9}
+
+  - kind: qa
+    chapter: "Nói 2: việc phải làm"
+    heading: "Speaking 2 · What do you have to do?"
+    heading_vi: "Tom và Emma hỏi nhau về việc phải làm — tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "What do you have to do in your job, Emma?"
+        a: "I have to plan lessons, teach classes, and mark homework."
+        ask: tom
+        by: emma
+        phrases: ["I have to…", "plan lessons · mark homework"]
+      - q: "What do you spend a lot of time doing?"
+        a: "I spend a lot of time preparing lessons, usually in the evening."
+        ask: tom
+        by: emma
+        phrases: ["I spend a lot of time …ing"]
+      - q: "Do you have to go to meetings?"
+        a: "Yes, once a week. We discuss our students' problems with our colleagues."
+        ask: tom
+        by: emma
+        phrases: ["Yes, once a week.", "We discuss…"]
+      - q: "What do you have to do at the café, Tom?"
+        a: "I have to take orders, make coffee, and clean the tables."
+        ask: emma
+        by: tom
+        phrases: ["I have to…", "take orders · clean the tables"]
+      - q: "What do you spend most time doing?"
+        a: "Making drinks! On Tuesday evenings, we make about a hundred iced coffees."
+        ask: emma
+        by: tom
+        phrases: ["…ing!", "we make about…"]
+    lines:
+      - {tom: "Now let's talk about what we have to do. What do you have to do in your job, Emma?", focus: 0}
+      - {emma: "I have to plan lessons, teach classes, and mark homework.", reveal: 0, vi: "Soạn bài, dạy, chấm bài tập."}
+      - {tom: "What do you spend a lot of time doing?", focus: 1}
+      - {emma: "I spend a lot of time preparing lessons, usually in the evening.", reveal: 1, vi: "Dành nhiều thời gian soạn bài, thường vào buổi tối."}
+      - {tom: "Do you have to go to meetings?", focus: 2}
+      - {emma: "Yes, once a week. We discuss our students' problems with our colleagues.", reveal: 2, vi: "Mỗi tuần một lần, thảo luận vấn đề của học viên với đồng nghiệp."}
+      - {emma: "What do you have to do at the café, Tom?", focus: 3}
+      - {tom: "I have to take orders, make coffee, and clean the tables.", reveal: 3, vi: "Nhận đồ uống khách gọi, pha cà phê, lau bàn."}
+      - {emma: "What do you spend most time doing?", focus: 4}
+      - {tom: "Making drinks! On Tuesday evenings, we make about a hundred iced coffees.", reveal: 4, vi: "Pha đồ uống — tối thứ Ba pha khoảng một trăm ly cà phê đá."}
+
+  - kind: bullets
+    chapter: "Tả công việc kiểu IELTS"
+    heading: "Describing your job in IELTS"
+    heading_vi: "Thêm ngoài sách — năm câu khung để tả công việc (Part 1 \"Work\", Part 2)"
+    items:
+      - {en: "I work for … / I work in … as a …", vi: "làm cho (công ty) · làm ở (nơi) với vai trò …"}
+      - {en: "I've got a full-time / part-time job. I work … hours a week.", vi: "toàn thời gian / bán thời gian; số giờ"}
+      - {en: "I have to … and … · I'm responsible for …", vi: "phải làm · chịu trách nhiệm"}
+      - {en: "I spend a lot of time …ing.", vi: "dành nhiều thời gian làm gì"}
+      - {en: "The best thing about my job is … · The worst thing is …", vi: "điều tốt nhất · điều tệ nhất"}
+    lines:
+      - {emma: "Here are five useful sentences to describe your job in the IELTS test. One: I work for a company, or I work in a place, as a secretary, a waiter, and so on.", focus: 0}
+      - {tom: "Two: I've got a part-time job. I work eight hours a week.", focus: 1}
+      - {emma: "Three: I have to plan lessons. Or: I'm responsible for new students.", focus: 2, vi: "responsible for: chịu trách nhiệm"}
+      - {tom: "Four: I spend a lot of time making drinks.", focus: 3}
+      - {emma: "And five: the best thing about my job is my colleagues. The worst thing is the long hours.", focus: 4}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi tả công việc — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "What do you work?  →  ___", answer: "What do you do?"}
+      - {n: 2, q: "She earns much money.  →  ___", answer: "She earns a lot of money."}
+      - {n: 3, q: "I must to write a report.  →  ___", answer: "I have to write a report."}
+      - {n: 4, q: "I spend a lot of time to answer emails.  →  ___", answer: "I spend a lot of time answering emails."}
+      - {n: 5, q: "I work a part-time job.  →  ___", answer: "I've got a part-time job."}
+      - {n: 6, q: "I work eight hours every days.  →  ___", answer: "I work eight hours every day."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. What do you do? Not what do you work. Two. She earns a lot of money: in positive sentences, a lot of is more natural than much.", reveal: [1, 2], focus: 1, vi: "câu khẳng định: a lot of; câu phủ định: not much"}
+      - {tom: "Three. I have to write a report, or I must write. Must has no to. Four. Spend a lot of time answering.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. I've got a part-time job, or I work part-time. Six. Every day, with no S.", say: "Five. I've got a part-time job, or I work part-time. Six. Every day, with no ess.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a job you would like to do in the future"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a job in marketing. One day, I'd like to be the marketing manager of an international coffee company."
+        note: "what the job is"
+      - text: "I'd work in an office in Ho Chi Minh City, but I'd also travel to coffee farms and meet clients in other countries."
+        say: "I'd work in an office in Ho Chee Min City, but I'd also travel to coffee farms and meet clients in other countries."
+        note: "where you would work"
+      - text: "I'd have to organize meetings, discuss ideas with my colleagues, and write reports. I'd probably spend a lot of time on the phone!"
+        note: "what you would have to do"
+      - text: "I'd like this job because my dad works for a coffee company, and I love Da Lat coffee. My dream is to start my own Da Lat coffee brand."
+        say: "I'd like this job because my dad works for a coffee company, and I love Dah Lot coffee. My dream is to start my own Dah Lot coffee brand."
+        note: "why you would like it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe a job you would like to do in the future. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe a job you would like to do in the future. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: công việc bạn muốn làm trong tương lai."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about running my own language school. I'm a teacher now, but one day I'd like to be the boss!"
+        note: "what the job is"
+      - text: "It would be a small school in my home town, by the sea in the south of England, with a café on the ground floor."
+        note: "where you would work"
+      - text: "I'd have to find teachers and students, organize the classes, and answer lots of emails. I'd still teach some lessons, too."
+        note: "what you would have to do"
+      - text: "I'd like it because I love teaching, and I miss the sea. The salary probably wouldn't be very high, but I'd be happy."
+        note: "why you would like it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a job you would like to do in the future.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a job you would like to do in the future"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What is the job?", hint: "I'd like to talk about … · One day, I'd like to be a …"}
+      - {q: "Where would you work?", hint: "I'd work in / for … · I'd travel to …"}
+      - {q: "What would you have to do?", hint: "I'd have to … · I'd spend a lot of time …ing"}
+      - {q: "Why would you like it?", hint: "I'd like it because … · The salary … but …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Use have to, and spend time doing."
+        say: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Yooz have to, and spend time doing."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "What is the job?", focus: 0, pause: 0.5}
+      - {emma: "Where would you work?", focus: 1, pause: 0.5}
+      - {emma: "What would you have to do?", focus: 2, pause: 0.5}
+      - {emma: "Why would you like it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · work"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Is a high salary more important than an interesting job?"
+        a: "Not for me. You spend a lot of time at work, so it's important to enjoy it. But the salary must be enough to live on."
+        ask: emma
+        by: tom
+        phrases: ["Not for me.", "But … must be enough…"]
+      - q: "Is it a good idea for students to have a part-time job?"
+        a: "Yes, if they don't work too many hours. They learn to work with colleagues and clients, and they earn some money."
+        ask: tom
+        by: emma
+        phrases: ["Yes, if…", "They learn to…"]
+      - q: "Will more people work from home in the future?"
+        a: "I think so. With email and video calls, you can discuss things with your colleagues from anywhere."
+        ask: emma
+        by: tom
+        phrases: ["I think so.", "With …, you can…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Is a high salary more important than an interesting job?", focus: 0}
+      - {tom: "Not for me. You spend a lot of time at work, so it's important to enjoy it. But the salary must be enough to live on.", say: "Not for me. You spend a lot of time at work, so it's important to enjoy it. But the salary must be enough to liv on.", reveal: 0, vi: "Không: ở chỗ làm rất nhiều thời gian nên phải thích việc; nhưng lương phải đủ sống."}
+      - {tom: "Is it a good idea for students to have a part-time job?", focus: 1}
+      - {emma: "Yes, if they don't work too many hours. They learn to work with colleagues and clients, and they earn some money.", reveal: 1, vi: "Có, nếu không làm quá nhiều giờ: học cách làm việc với đồng nghiệp, khách hàng, lại có tiền."}
+      - {emma: "Will more people work from home in the future?", focus: 2}
+      - {tom: "I think so. With email and video calls, you can discuss things with your colleagues from anywhere.", reveal: 2, vi: "Có: nhờ email và gọi video, thảo luận với đồng nghiệp ở đâu cũng được."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 1 và bài 5 không nhìn đáp án"
+    items:
+      - {en: "work in an office / a factory / a hospital · work for a company / an airline", vi: "nơi làm việc"}
+      - {en: "a full-time / part-time job · long hours · from nine to five · hours a day / a week", vi: "giờ làm"}
+      - {en: "earn · a salary (every month) · wages (every week) · low ≠ high", vi: "thu nhập"}
+      - {en: "have to · meet clients · discuss something · colleagues · go to meetings · write / type reports", vi: "việc phải làm (1)"}
+      - {en: "make phone calls · answer the phone · send letters · organize meetings · spend time doing", vi: "việc phải làm (2)"}
+      - {en: "Next: Unit 46 · Using a computer", vi: "Tiếp theo: Unit 46 · Dùng máy tính"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "Work in an office, a factory, or a hospital. Work for a company, or an airline.", focus: 0}
+      - {tom: "A full-time or part-time job, long hours, or from nine to five.", focus: 1}
+      - {emma: "Earn a salary every month, or wages every week. Low, or high.", focus: 2}
+      - {tom: "Have to meet clients, discuss problems with colleagues, go to meetings, and write reports.", focus: 3}
+      - {emma: "Make phone calls, answer the phone, send letters, organize meetings, and spend time doing things.", focus: 4}
+      - {tom: "Next time, Unit 46: using a computer. See you then!", say: "Next time, Unit forty-six: using a computer. See you then!", focus: 5}

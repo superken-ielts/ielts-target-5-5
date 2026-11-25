@@ -1,0 +1,286 @@
+# Video nghe – viết (dictation) Unit 42 · My school — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U42-school-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U42 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 42 có 58 mục: dòng ghép các mục đi cùng nhau (biology, chemistry, physics; IT, ICT; pass, fail…);
+# technology có hai mục (IT, ICT và design and technology) chung một khóa. OCR sót get a grade, ICT, PE — thêm tay.
+id: U42-school-dictation
+activity: U42-words
+title: "Unit 42 · My school"
+subtitle: "Dictation · listen and write: talking about my school"
+title_vi: "Nghe – viết 10 phút: trường học — từ trong sách, từ thêm, câu giao tiếp"
+tag: "STUDY AND WORK · UNIT 42"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 42: My school. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit forty-two: My school. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 42: trường học. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 43 words from the book. You hear each word twice, and then an example sentence twice. Then 10 more useful words, and 18 useful sentences for conversation.", "say": "There are three parts. First, forty-three words from the book. You hear each word twice, and then an example sentence twice. Then ten more useful words, and eighteen useful sentences for conversation.", "vi": "Ba phần: 43 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 10 từ thêm, 18 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "subject", "vi": "môn học", "ex": "My favourite subject was chemistry.", "w": ["subject"]}
+      - {"n": 2, "answer": "biology, chemistry, physics", "vi": "sinh, hóa, lý", "ex": "I studied biology, chemistry and physics.", "w": ["biology", "chemistry", "physics"]}
+      - {"n": 3, "answer": "maths", "vi": "toán", "ex": "I was terrible at maths.", "w": ["maths"]}
+      - {"n": 4, "answer": "history, geography", "vi": "sử, địa", "ex": "We had history and geography on Mondays.", "w": ["history", "geography"]}
+      - {"n": 5, "answer": "literature", "vi": "văn học", "ex": "We read Shakespeare in literature lessons.", "w": ["literature"]}
+      - {"n": 6, "answer": "art, music", "vi": "mỹ thuật, âm nhạc", "ex": "Emma was good at art and music.", "w": ["art", "music"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. subject. subject. My favourite subject was chemistry. My favourite subject was chemistry.", "focus": 0}
+      - {"emma": "Two. biology, chemistry, physics. biology, chemistry, physics. I studied biology, chemistry and physics. I studied biology, chemistry and physics.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. maths. maths. I was terrible at maths. I was terrible at maths.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. history, geography. history, geography. We had history and geography on Mondays. We had history and geography on Mondays.", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. literature. literature. We read Shakespeare in literature lessons. We read Shakespeare in literature lessons.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. art, music. art, music. Emma was good at art and music. Emma was good at art and music.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "modern languages", "vi": "ngoại ngữ", "ex": "She studied modern languages: French and Spanish.", "w": ["modern languages"]}
+      - {"n": 8, "answer": "IT, ICT", "vi": "tin học", "ex": "We learnt to use computers in ICT.", "w": ["IT", "ICT", "technology"]}
+      - {"n": 9, "answer": "design and technology", "vi": "công nghệ", "ex": "In design and technology, we made a small table.", "w": ["design and technology"]}
+      - {"n": 10, "answer": "PE", "vi": "thể dục", "ex": "We played football in PE.", "w": ["PE"]}
+      - {"n": 11, "answer": "RE", "vi": "giáo dục tôn giáo", "ex": "We didn't study RE at my school.", "w": ["RE"]}
+      - {"n": 12, "answer": "good at something", "vi": "giỏi về", "ex": "I'm quite good at languages.", "w": ["good at something", "at"]}
+    lines:
+      - {"emma": "Seven. modern languages. modern languages. She studied modern languages: French and Spanish. She studied modern languages: French and Spanish.", "focus": 0}
+      - {"emma": "Eight. IT, ICT. IT, ICT. We learnt to use computers in ICT. We learnt to use computers in ICT.", "say": "Eight. eye tee, eye see tee. eye tee, eye see tee. We learnt to yooz computers in eye see tee. We learnt to yooz computers in eye see tee.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. design and technology. design and technology. In design and technology, we made a small table. In design and technology, we made a small table.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. PE. PE. We played football in PE. We played football in PE.", "say": "Ten. pee ee. pee ee. We played football in pee ee. We played football in pee ee.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. RE. RE. We didn't study RE at my school. We didn't study RE at my school.", "say": "Eleven. ar ee. ar ee. We didn't study ar ee at my school. We didn't study ar ee at my school.", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. good at something. good at something. I'm quite good at languages. I'm quite good at languages.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "terrible", "vi": "rất dở", "ex": "I'm terrible at maths.", "w": ["terrible"]}
+      - {"n": 14, "answer": "school", "vi": "trường học", "ex": "My school was near the lake.", "w": ["school"]}
+      - {"n": 15, "answer": "nursery school", "vi": "trường mầm non", "ex": "Children start nursery school at three.", "w": ["nursery school"]}
+      - {"n": 16, "answer": "go to primary school", "vi": "học tiểu học", "ex": "Children go to primary school at five.", "w": ["go to primary school", "primary school"]}
+      - {"n": 17, "answer": "secondary school", "vi": "trường trung học", "ex": "At eleven, they go to secondary school.", "w": ["secondary school"]}
+      - {"n": 18, "answer": "state school, private school", "vi": "trường công, trường tư", "ex": "I went to a state school, not a private school.", "w": ["state school", "private school"]}
+    lines:
+      - {"emma": "Thirteen. terrible. terrible. I'm terrible at maths. I'm terrible at maths.", "focus": 0}
+      - {"emma": "Fourteen. school. school. My school was near the lake. My school was near the lake.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. nursery school. nursery school. Children start nursery school at three. Children start nursery school at three.", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. go to primary school. go to primary school. Children go to primary school at five. Children go to primary school at five.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. secondary school. secondary school. At eleven, they go to secondary school. At eleven, they go to secondary school.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. state school, private school. state school, private school. I went to a state school, not a private school. I went to a state school, not a private school.", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "pupil", "vi": "học sinh", "ex": "There are four hundred pupils at the school.", "w": ["pupil"]}
+      - {"n": 20, "answer": "uniform", "vi": "đồng phục", "ex": "We wore a white shirt and blue trousers as our uniform.", "w": ["uniform"]}
+      - {"n": 21, "answer": "start", "vi": "bắt đầu", "ex": "When did you start school?", "w": ["start"]}
+      - {"n": 22, "answer": "stay at school", "vi": "học tiếp ở trường", "ex": "Most people stay at school until eighteen.", "w": ["stay at school"]}
+      - {"n": 23, "answer": "continue at school", "vi": "tiếp tục đi học", "ex": "Did you continue at school after sixteen?", "w": ["continue"]}
+      - {"n": 24, "answer": "until", "vi": "cho đến khi", "ex": "I was at school until four o'clock.", "w": ["until"]}
+    lines:
+      - {"emma": "Nineteen. pupil. pupil. There are four hundred pupils at the school. There are four hundred pupils at the school.", "focus": 0}
+      - {"emma": "Twenty. uniform. uniform. We wore a white shirt and blue trousers as our uniform. We wore a white shirt and blue trousers as our uniform.", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. start. start. When did you start school? When did you start school?", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. stay at school. stay at school. Most people stay at school until eighteen. Most people stay at school until eighteen.", "say": "Twenty-two. stay at school. stay at school. Most people stay at school until eigh-teen. Most people stay at school until eigh-teen.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. continue at school. continue at school. Did you continue at school after sixteen? Did you continue at school after sixteen?", "say": "Twenty-three. continue at school. continue at school. Did you continue at school after six-teen? Did you continue at school after six-teen?", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. until. until. I was at school until four o'clock. I was at school until four o'clock.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–30)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "leave school", "vi": "thôi học, ra trường", "ex": "You can leave school at sixteen.", "w": ["leave school"]}
+      - {"n": 26, "answer": "leave", "vi": "rời khỏi", "ex": "What time does the train leave?", "w": ["leave"]}
+      - {"n": 27, "answer": "college", "vi": "trường cao đẳng", "ex": "He went to college after school.", "w": ["college"]}
+      - {"n": 28, "answer": "university", "vi": "đại học", "ex": "I'm in my second year at university.", "w": ["university"]}
+      - {"n": 29, "answer": "job", "vi": "việc làm", "ex": "She left school and got a job.", "w": ["job"]}
+      - {"n": 30, "answer": "lesson", "vi": "tiết học", "ex": "Our lessons were forty-five minutes long.", "w": ["lesson"]}
+    lines:
+      - {"emma": "Twenty-five. leave school. leave school. You can leave school at sixteen. You can leave school at sixteen.", "say": "Twenty-five. leave school. leave school. You can leave school at six-teen. You can leave school at six-teen.", "focus": 0}
+      - {"emma": "Twenty-six. leave. leave. What time does the train leave? What time does the train leave?", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. college. college. He went to college after school. He went to college after school.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. university. university. I'm in my second year at university. I'm in my second year at university.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. job. job. She left school and got a job. She left school and got a job.", "focus": 4, "reveal": [28]}
+      - {"emma": "Thirty. lesson. lesson. Our lessons were forty-five minutes long. Our lessons were forty-five minutes long.", "focus": 5, "reveal": [29]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [30]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (31–36)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 31, "answer": "homework", "vi": "bài tập về nhà", "ex": "Did you do your homework last night?", "w": ["homework"]}
+      - {"n": 32, "answer": "do homework", "vi": "làm bài tập", "ex": "I do my homework in the evening.", "w": ["do"]}
+      - {"n": 33, "answer": "work hard", "vi": "học chăm", "ex": "She worked hard and passed all her exams.", "w": ["work", "hard"]}
+      - {"n": 34, "answer": "exams", "vi": "kỳ thi", "ex": "We took important exams at eighteen.", "w": ["exams"]}
+      - {"n": 35, "answer": "take an exam", "vi": "dự thi", "ex": "I have to take an English exam tomorrow.", "w": ["take an exam"]}
+      - {"n": 36, "answer": "pass an exam, fail an exam", "vi": "đỗ, trượt", "ex": "I passed six exams, but I failed maths.", "w": ["pass an exam", "fail an exam"]}
+    lines:
+      - {"emma": "Thirty-one. homework. homework. Did you do your homework last night? Did you do your homework last night?", "focus": 0}
+      - {"emma": "Thirty-two. do homework. do homework. I do my homework in the evening. I do my homework in the evening.", "focus": 1, "reveal": [31]}
+      - {"emma": "Thirty-three. work hard. work hard. She worked hard and passed all her exams. She worked hard and passed all her exams.", "focus": 2, "reveal": [32]}
+      - {"emma": "Thirty-four. exams. exams. We took important exams at eighteen. We took important exams at eighteen.", "say": "Thirty-four. exams. exams. We took important exams at eigh-teen. We took important exams at eigh-teen.", "focus": 3, "reveal": [33]}
+      - {"emma": "Thirty-five. take an exam. take an exam. I have to take an English exam tomorrow. I have to take an English exam tomorrow.", "focus": 4, "reveal": [34]}
+      - {"emma": "Thirty-six. pass an exam, fail an exam. pass an exam, fail an exam. I passed six exams, but I failed maths. I passed six exams, but I failed maths.", "focus": 5, "reveal": [35]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [36]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (37–40)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 37, "answer": "results", "vi": "kết quả", "ex": "I got my exam results yesterday.", "w": ["results"]}
+      - {"n": 38, "answer": "grade", "vi": "điểm (chữ)", "ex": "She got a grade A in German.", "w": ["grade"]}
+      - {"n": 39, "answer": "get a grade", "vi": "được điểm", "ex": "What grade did you get in English?", "w": ["get a grade", "get"]}
+      - {"n": 40, "answer": "mark", "vi": "điểm (số)", "ex": "Six out of ten isn't a very good mark.", "w": ["mark"]}
+    lines:
+      - {"emma": "Thirty-seven. results. results. I got my exam results yesterday. I got my exam results yesterday.", "focus": 0}
+      - {"emma": "Thirty-eight. grade. grade. She got a grade A in German. She got a grade A in German.", "say": "Thirty-eight. grade. grade. She got a grade eigh in German. She got a grade eigh in German.", "focus": 1, "reveal": [37]}
+      - {"emma": "Thirty-nine. get a grade. get a grade. What grade did you get in English? What grade did you get in English?", "focus": 2, "reveal": [38]}
+      - {"emma": "Forty. mark. mark. Six out of ten isn't a very good mark. Six out of ten isn't a very good mark.", "focus": 3, "reveal": [39]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [40]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (41–43)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 41, "answer": "do well", "vi": "học tốt", "ex": "Paula did very well in her exams.", "w": ["do well", "well"]}
+      - {"n": 42, "answer": "badly", "vi": "kém", "ex": "Andre is doing badly at school.", "w": ["badly"]}
+      - {"n": 43, "answer": "best, worst", "vi": "tốt nhất, tệ nhất", "ex": "Biology was my best subject, and maths was my worst.", "w": ["best", "worst"]}
+    lines:
+      - {"emma": "Forty-one. do well. do well. Paula did very well in her exams. Paula did very well in her exams.", "focus": 0}
+      - {"emma": "Forty-two. badly. badly. Andre is doing badly at school. Andre is doing badly at school.", "focus": 1, "reveal": [41]}
+      - {"emma": "Forty-three. best, worst. best, worst. Biology was my best subject, and maths was my worst. Biology was my best subject, and maths was my worst.", "focus": 2, "reveal": [42]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 2, "reveal": [43]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (44–49)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 44, "answer": "timetable", "vi": "thời khóa biểu", "ex": "Look at the timetable for Monday."}
+      - {"n": 45, "answer": "classmate", "vi": "bạn cùng lớp", "ex": "My classmates were very friendly."}
+      - {"n": 46, "answer": "head teacher", "vi": "hiệu trưởng", "ex": "The head teacher was very strict."}
+      - {"n": 47, "answer": "break", "vi": "giờ ra chơi", "ex": "We played football at break."}
+      - {"n": 48, "answer": "extra classes", "vi": "lớp học thêm", "ex": "Many pupils go to extra classes in the evening."}
+      - {"n": 49, "answer": "strict", "vi": "nghiêm khắc", "ex": "My maths teacher was strict but fair."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Forty-four. timetable. timetable. Look at the timetable for Monday. Look at the timetable for Monday.", "focus": 0}
+      - {"tom": "Forty-five. classmate. classmate. My classmates were very friendly. My classmates were very friendly.", "focus": 1, "reveal": [44]}
+      - {"tom": "Forty-six. head teacher. head teacher. The head teacher was very strict. The head teacher was very strict.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. break. break. We played football at break. We played football at break.", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. extra classes. extra classes. Many pupils go to extra classes in the evening. Many pupils go to extra classes in the evening.", "focus": 4, "reveal": [47]}
+      - {"tom": "Forty-nine. strict. strict. My maths teacher was strict but fair. My maths teacher was strict but fair.", "focus": 5, "reveal": [48]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (50–53)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 50, "answer": "revise", "vi": "ôn bài", "ex": "I need to revise for my exam."}
+      - {"n": 51, "answer": "cheat", "vi": "gian lận", "ex": "You mustn't cheat in an exam."}
+      - {"n": 52, "answer": "certificate", "vi": "chứng chỉ", "ex": "You get a certificate at the end of the course."}
+      - {"n": 53, "answer": "boarding school", "vi": "trường nội trú", "ex": "He went to a boarding school in England."}
+    lines:
+      - {"tom": "Fifty. revise. revise. I need to revise for my exam. I need to revise for my exam.", "focus": 0}
+      - {"tom": "Fifty-one. cheat. cheat. You mustn't cheat in an exam. You mustn't cheat in an exam.", "focus": 1, "reveal": [50]}
+      - {"tom": "Fifty-two. certificate. certificate. You get a certificate at the end of the course. You get a certificate at the end of the course.", "focus": 2, "reveal": [51]}
+      - {"tom": "Fifty-three. boarding school. boarding school. He went to a boarding school in England. He went to a boarding school in England.", "focus": 3, "reveal": [52]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [53]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (54–59)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 54, "answer": "What was your favourite subject at school?", "vi": "Ở trường bạn thích môn nào nhất?"}
+      - {"n": 55, "answer": "Chemistry. Our teacher was great.", "vi": "Hóa. Thầy dạy rất hay."}
+      - {"n": 56, "answer": "Were you good at maths?", "vi": "Bạn có giỏi toán không?"}
+      - {"n": 57, "answer": "No, I was terrible at it!", "vi": "Không, mình dở lắm!"}
+      - {"n": 58, "answer": "Did you wear a uniform?", "vi": "Bạn có mặc đồng phục không?"}
+      - {"n": 59, "answer": "Yes, a white shirt and blue trousers.", "vi": "Có, áo sơ mi trắng, quần xanh."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Fifty-four. What was your favourite subject at school? What was your favourite subject at school?", "focus": 0}
+      - {"tom": "Fifty-five. Chemistry. Our teacher was great. Chemistry. Our teacher was great.", "focus": 1, "reveal": [54]}
+      - {"tom": "Fifty-six. Were you good at maths? Were you good at maths?", "focus": 2, "reveal": [55]}
+      - {"emma": "Fifty-seven. No, I was terrible at it! No, I was terrible at it!", "focus": 3, "reveal": [56]}
+      - {"emma": "Fifty-eight. Did you wear a uniform? Did you wear a uniform?", "focus": 4, "reveal": [57]}
+      - {"tom": "Fifty-nine. Yes, a white shirt and blue trousers. Yes, a white shirt and blue trousers.", "focus": 5, "reveal": [58]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [59]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (60–65)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 60, "answer": "When did you leave school?", "vi": "Bạn ra trường khi nào?"}
+      - {"n": 61, "answer": "At eighteen, after my exams.", "vi": "Năm mười tám tuổi, sau kỳ thi."}
+      - {"n": 62, "answer": "Did you pass all your exams?", "vi": "Bạn có đỗ hết các kỳ thi không?"}
+      - {"n": 63, "answer": "Yes, but my physics result wasn't very good.", "vi": "Có, nhưng điểm lý không cao."}
+      - {"n": 64, "answer": "How long were your lessons?", "vi": "Mỗi tiết học bao lâu?"}
+      - {"n": 65, "answer": "About forty-five minutes.", "vi": "Khoảng bốn mươi lăm phút."}
+    lines:
+      - {"tom": "Sixty. When did you leave school? When did you leave school?", "focus": 0}
+      - {"emma": "Sixty-one. At eighteen, after my exams. At eighteen, after my exams.", "say": "Sixty-one. At eigh-teen, after my exams. At eigh-teen, after my exams.", "focus": 1, "reveal": [60]}
+      - {"emma": "Sixty-two. Did you pass all your exams? Did you pass all your exams?", "focus": 2, "reveal": [61]}
+      - {"tom": "Sixty-three. Yes, but my physics result wasn't very good. Yes, but my physics result wasn't very good.", "focus": 3, "reveal": [62]}
+      - {"emma": "Sixty-four. How long were your lessons? How long were your lessons?", "focus": 4, "reveal": [63]}
+      - {"tom": "Sixty-five. About forty-five minutes. About forty-five minutes.", "focus": 5, "reveal": [64]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [65]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (66–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 66, "answer": "Did you do a lot of homework?", "vi": "Bạn có làm nhiều bài tập về nhà không?"}
+      - {"n": 67, "answer": "Every evening. My grandfather helped me.", "vi": "Tối nào cũng làm. Ông giúp mình."}
+      - {"n": 68, "answer": "I have an exam tomorrow.", "vi": "Mai mình có bài thi."}
+      - {"n": 69, "answer": "Good luck! I hope you pass.", "vi": "Chúc may mắn! Mong bạn đỗ."}
+      - {"n": 70, "answer": "I failed my driving test.", "vi": "Mình trượt bài thi lái xe rồi."}
+      - {"n": 71, "answer": "Don't worry. You can take it again.", "vi": "Đừng lo. Bạn có thể thi lại."}
+    lines:
+      - {"emma": "Sixty-six. Did you do a lot of homework? Did you do a lot of homework?", "focus": 0}
+      - {"tom": "Sixty-seven. Every evening. My grandfather helped me. Every evening. My grandfather helped me.", "focus": 1, "reveal": [66]}
+      - {"tom": "Sixty-eight. I have an exam tomorrow. I have an exam tomorrow.", "focus": 2, "reveal": [67]}
+      - {"emma": "Sixty-nine. Good luck! I hope you pass. Good luck! I hope you pass.", "focus": 3, "reveal": [68]}
+      - {"emma": "Seventy. I failed my driving test. I failed my driving test.", "focus": 4, "reveal": [69]}
+      - {"tom": "Seventy-one. Don't worry. You can take it again. Don't worry. You can take it again.", "focus": 5, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [71]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in Unit 43.", "say": "Well done! See you in Unit forty-three.", "vi": "Giỏi lắm! Hẹn gặp ở Unit 43."}
+
