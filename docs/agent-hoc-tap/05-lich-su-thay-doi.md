@@ -5,6 +5,80 @@ Ghi lại từng đợt triển khai: thêm, sửa, xóa file nào và vì sao. 
 
 ---
 
+## Đợt 41 — 25/11/2026: Oxford Word Skills Basic — module Study and work (Unit 42–47), 12 video
+
+Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 40 (`96987ce`, đã lên `main`).
+
+### Yêu cầu
+
+Người học hỏi đã học được bao nhiêu từ và luyện nói trên vốn từ đó đạt mức nào (trả lời trong trò chuyện: khoảng 1.800 từ, A2+,
+IELTS Speaking 4.0–4.5), rồi: "tiếp tục module tiếp theo của sách oxford basic", sau đó "xong rồi commit push main". Module tiếp
+theo là Study and work (Unit 42–47, tr. 109–121). Như đợt 37–40, mỗi unit có hai video: bài giảng (file 09 mục 5) và nghe – viết
+(mục 5.9).
+
+### Đã làm
+
+- **Rà trang sách và Answer key** (tr. 109–121, Answer key tr. 214–216): ghi đề và đáp án từng bài. Không gặp lỗi in mới.
+- **Word list Unit 42–47** (235 mục, 189 từ chưa có ở Unit 1–41) thêm vào `work/wordlist.json` (nay 1496 mục). Soát từng dòng có số
+  unit 42–47 bằng tờ ảnh cắt dòng và khoảng hở giữa các dòng OCR: sót năm mục (*computer science*, *get a grade*, *ICT*, *PE*, *print
+  something out*), thêm tay.
+- **6 video bài giảng** ({TOTAL41L}): đủ mọi bài tập trong sách, hình trong sách ở mọi video, không đếm ngược.
+  - Unit khó (10–15 phút): 42 My school (ba trang, 10 bài), 43 University, 45 Describing a job. Có ôn tập (lỗi hay gặp), Part 2 với
+    bài mẫu của Tom và Emma (a subject you enjoyed at school, a course you have taken or are taking, a job you would like to do in the
+    future), thảo luận kiểu Part 3. Unit 43 thêm họ từ -ist / -er / -ian và trọng âm; Unit 45 thêm năm câu khung tả công việc.
+  - Unit thường: Unit 44 thêm nghề hay gặp ở Việt Nam, Nghe và viết, Part 1 "Work"; Unit 46 thêm máy tính ngày nay và phím tắt, Part 1
+    "Computers"; Unit 47 (cuối module) thêm câu viết email cho GT Writing Task 1, internet ngày nay, Nghe và viết, Part 1 "The internet",
+    tổng kết module, nhắc làm Review tr. 122–125.
+  - Unit 42 bài 5 (sắp xếp câu chuyện) dùng cảnh `order`.
+
+{TABLE41L}
+
+- **6 video nghe – viết** ({TOTAL41D}), sinh từ `work/dictation/units_42_47.py`: đủ mọi mục Word list của unit, từ thêm theo chủ
+  đề, câu giao tiếp khớp hồ sơ nhân vật; không `pause`.
+
+{TABLE41D}
+
+Thử và sửa trong lúc làm:
+- **Máy chạy khởi động lại hai lần** (khi đang dựng Unit 42 và Unit 45): mất hàng đợi. Commit kịch bản, rồi xếp dựng lại phần còn
+  thiếu trong một hàng đợi; câu đã đọc lấy từ bộ nhớ đệm nên dựng lại Unit 42 chỉ mất 3,5 phút.
+- **Khung hình:**
+  - tranh tự kiểm tra (môn học, nghề, biểu tượng) in tên dưới hình: cắt bỏ dải tên, mỗi hàng một cảnh;
+  - "pupils / at the age of" chung một cảnh thì chữ quá nhỏ: tách hai cảnh; lời kể của Rafael cắt lại theo dòng;
+  - khung "She works for { a car company…" đè lên chữ bên trái dấu ngoặc: khung chỉ lấy phần sau ngoặc;
+  - khung tranh nghề đè chữ đầu nhãn: nới mép trái 3 điểm.
+- **Thời lượng:** Unit 42 ước 14:41 (có thể vượt 15 phút): bỏ cảnh ngoài sách, rút tổng kết, còn 13:48. Unit 44, 47 ước 7:05, 8:07:
+  thêm Nghe và viết, internet ngày nay. Nghe – viết Unit 43–47 ước đầu 7:20–8:14: thêm từ và câu; Unit 43 thêm quá tay (10:11) nên
+  bớt câu.
+- **Chữ trên màn hình:** dấu ✓ trong đáp án `blanks` hiện ô vuông (phông không có ✓): ghi "correct (no mistake)"; `___-time` hiện
+  "part -time": đưa cả từ vào đáp án; nghe – viết "from … to …" bị `trunc_check.py` báo: đổi thành "from nine to five".
+- **Cách đọc:** chữ viết tắt môn học và bằng cấp (PE, ICT, RE, BA, MA…), địa chỉ email và web, phím tắt: thêm `say` (file 09 mục 5.5).
+- **Nhân vật:** đầu kịch bản Unit 42, 46, 47 ghi vài chi tiết không có trong lời thoại (Emma thi mười môn năm 16 tuổi, webcam của Tom,
+  máy in của Emma, đọc tin trên ứng dụng) — đã sửa cho khớp.
+
+### File thêm, sửa
+
+| File | Thay đổi |
+|---|---|
+| `books/book_oxford_word_skills_basic/lessons/U42-school.yaml` … `U47-email-internet.yaml` (+ `.mp4`) | 6 video bài giảng |
+| `books/book_oxford_word_skills_basic/lessons/U42-school-dictation.yaml` … `U47-email-internet-dictation.yaml` (+ `.mp4`), `lessons.json` | 6 video nghe – viết |
+| `books/book_oxford_word_skills_basic/work/dictation/units_42_47.py` | Dữ liệu nghe – viết Unit 42–47 |
+| `books/book_oxford_word_skills_basic/work/wordlist.json` | Word list Unit 42–47 (235 mục) |
+| `agents/tests/test_lesson_video.py` | Unit khó U42, U43, U45 |
+| `tests/web/book.e2e.mjs` | Thẻ sách 94 video; Unit 1–47 mỗi unit hai nút; unit khó 42, 43, 45 |
+| `docs/agent-hoc-tap/09-oxford-word-skills-basic.md` | Đầu file, mục 5.1, 5.5, 5.6, 5.7, 5.8, 5.9, 6 |
+| `docs/agent-hoc-tap/04-checklist.md` | P2-76 (xong); đợt 41 ở P2-59 |
+| `docs/agent-hoc-tap/README.md`, `CLAUDE.md` | Đợt 41 |
+| `web/index.html`, `web/ielts-companion.html` | Dựng lại |
+
+### Kiểm thử
+
+{TESTS41}
+
+### Còn treo
+
+- Unit 48 trở đi chưa có video (P2-59): module Hobbies and interests ở cuối file 09 mục 5.8.
+- Video cũ còn khoảng lặng từ 3 giây (P2-71) — người học không muốn sửa.
+
 ## Đợt 40 — 25/11/2026: Oxford Word Skills Basic — module Places (Unit 34–41), 16 video
 
 Nhánh `claude/cool-archimedes-xalg78`, nối tiếp đợt 39 (`cbd5d34`, đã lên `main`).

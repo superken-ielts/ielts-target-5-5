@@ -448,6 +448,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
     mục 5.8.
   - *Đợt 39:* xong module Getting around, Unit 29–33 — 10 video (P2-74). Còn Unit 34 trở đi; module Places ở cuối file 09 mục 5.8.
   - *Đợt 40:* xong module Places, Unit 34–41 — 16 video (P2-75). Còn Unit 42 trở đi; module Study and work ở cuối file 09 mục 5.8.
+  - *Đợt 41:* xong module Study and work, Unit 42–47 — 12 video (P2-76). Còn Unit 48 trở đi; module Hobbies and interests ở cuối file 09 mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -542,6 +543,13 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Word list Unit 34–41 (271 mục) thêm vào `work/wordlist.json` (nay 1261 mục); OCR sót *enormous*, thêm tay; video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Cảnh `blanks`: mỗi câu đúng một chỗ trống (Unit 36, 39 sửa rồi dựng lại); `slides.py` lùi cột câu theo nhãn số dài như "10a.".
   - Test: unit khó U35, U38, U39; nhãn số dài không dính vào câu; hồi quy nghe – viết cả 41 unit; e2e: thẻ sách 82 video, Unit 1–41 mỗi unit hai nút.
+- [x] **P2-76** **Oxford Word Skills Basic module Study and work: 6 video bài giảng và 6 video nghe – viết, Unit 42–47** (đợt 41, bài giảng {TOTAL41L}, nghe – viết {TOTAL41D}), theo yêu cầu người học: "tiếp tục module tiếp theo của sách oxford basic", rồi "xong rồi commit push main". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+  - Bài giảng theo khuôn file 09 mục 5: đủ mọi bài tập trong sách (tr. 109–121, Answer key tr. 214–216), hình trong sách ở mọi video (tranh môn học, sơ đồ hệ thống giáo dục, lời kể, bảng điểm, bảng ngành học – người, 15 tranh nghề, bảng tình trạng công việc, tranh văn phòng, tranh máy tính, biểu tượng, màn hình email, bảng câu hỏi về internet — khung theo tranh hoặc theo dòng), không đếm ngược. Unit khó 42 My school, 43 University, 45 Describing a job (10–15 phút): ôn tập (lỗi hay gặp), Part 2 (a subject you enjoyed at school, a course you have taken, a job you would like to do in the future), thảo luận.
+  - Thêm ngoài sách: họ từ -ist / -er / -ian và trọng âm (Unit 43), thêm nghề hay gặp ở Việt Nam (Unit 44), câu tả công việc kiểu IELTS (Unit 45), máy tính ngày nay và phím tắt (Unit 46), câu viết email cho GT Writing Task 1 và internet ngày nay (Unit 47); Nghe và viết ở Unit 44, 47.
+  - Bài tự kiểm tra nhìn tranh (môn học, ngành học – người, nghề, máy tính, biểu tượng): cắt bỏ dải tên dưới hình, đáp án hiện thành nhãn khi Tom trả lời.
+  - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0. Đo bản dựng: bài giảng dài nhất {SIL41L} giây, nghe – viết {SIL41D} giây.
+  - Word list Unit 42–47 (235 mục) thêm vào `work/wordlist.json` (nay 1496 mục); OCR sót năm mục (computer science, get a grade, ICT, PE, print something out), thêm tay; video nghe – viết đủ mọi mục ("chưa hiện: 0").
+  - Test: unit khó U42, U43, U45; hồi quy nghe – viết cả 47 unit; e2e: thẻ sách 94 video, Unit 1–47 mỗi unit hai nút.
 
 ### Cổng G2
 
