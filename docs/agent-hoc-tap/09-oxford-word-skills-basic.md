@@ -32,7 +32,7 @@ unit hai video như đợt 37–38.
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–50 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–51 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -499,7 +499,7 @@ khi dựng (trong `agents/`):
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
 (đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
-48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Module Hobbies and interests có 3/6 unit, tổng 36:01 (đợt 42). Cả sách: 50 video bài giảng, 7:56:06, 311 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Module Hobbies and interests có 4/6 unit, tổng 43:52 (đợt 42). Cả sách: 51 video bài giảng, 8:03:58, 320 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -768,6 +768,7 @@ Module Hobbies and interests (đợt 42, đưa lên `main` từng unit) — **un
 | **48 Likes and dislikes** | `U48-likes-dislikes` | 11:58 | 20 | 10 | 1–6 (bài 4: bảng ba cột, đáp án có hình bảng; bài 3, 6 thành Nói 1, Nói 2) | Bài 3: bạn có thích…? (8); bài 6: trả lời câu hỏi bài 5 (7) | Part 2 "something you enjoy doing in your free time" (Tom: nấu ăn, Emma: đi bộ đường dài); thảo luận (3) | thang Love it or hate it?, Spotlight like + -ing, hồ sơ của Mirko (hai cảnh), Glossary hai cảnh, Spotlight interesting / interested, bảng bài 4 (hai cảnh), khung từ bài 5; câu nói thích / không thích kiểu IELTS; ôn tập: lỗi hay gặp |
 | **49 Sport** | `U49-sport` | 11:49 | 18 | 9 | 1–6 (bài 3, 5: câu hai chỗ trống tách a / b; bài 6: câu mẫu và trận bóng rổ của Tom) | Thể thao và bạn (6) | Part 2 "a sport you like" (Tom: bóng rổ, Emma: bơi); thảo luận (3) | bảng Games hai cảnh, ô chữ bài 1, kết quả bóng đá Ý, bảng xếp hạng, bài báo hai cột, Glossary hai cảnh, Spotlight động từ bất quy tắc; ôn tập: lỗi hay gặp (win / beat, lose to, nil) |
 | **50 Free time** | `U50-free-time` | 12:13 | 16 | 16 | 1–6 (bài 4: bốn hàng tranh không chữ; bài 3, 6 thành Nói 1, Nói 2) | Bài 3: bạn làm gì lúc rảnh (6); bài 6: sở thích ở nước bạn (6) | Part 2 "a hobby you had as a child" (Tom: vẽ, Emma: sưu tầm vỏ sò); thảo luận (3) | bảng Common activities hai cảnh, bài đọc Favourite hobbies in Russia ba cảnh, Glossary ba cảnh; quy tắc go / play / do; ôn tập: lỗi hay gặp |
+| 51 Music | `U51-music` | 7:52 | 15 | 9 | 1–6 (bài 5 câu 9 tách 9a / 9b; bài 6: hai hàng ảnh không chú thích) | Bài 3: ban nhạc bạn thích (6) | Part 1 "Music" (5 câu) | bài đọc Arctic Monkeys hai cảnh, Glossary hai cảnh, sáu ảnh nhạc cổ điển (hai cảnh), Spotlight by; các loại nhạc; Nghe và viết |
 
 Module Hobbies and interests (đợt 42) — thích và không thích, thể thao, thời gian rảnh, âm nhạc, phim, báo đài:
 - **Tom:**
@@ -782,7 +783,9 @@ Module Hobbies and interests (đợt 42) — thích và không thích, thể tha
   - chơi game ngày mưa, đi xem phim, nấu ăn khá nhiều; muốn một lần đi trượt tuyết; không hứng thú cắm hoa (dù mẹ có cửa hàng
     hoa); ông sưu tầm tiền xu cũ (hàng trăm đồng); thích karaoke dù hát không hay; Part 2: hồi bé ở Đà Lạt vẽ nhà, hoa, rừng thông
     gần nhà, bên bàn bếp trong lúc ông chấm bài; ông mua hộp bút chì màu đầu tiên, treo tranh đẹp lên tường; giờ vẫn vẽ vào vở
-    trong giờ học chán (Unit 50).
+    trong giờ học chán (Unit 50);
+  - ban nhạc yêu thích là Coldplay (chị Hoa cũng thích), hay nghe Fix You trên xe buýt; nghe nhạc trực tuyến, có danh sách nhạc và
+    tai nghe (Unit 51).
 - **Emma:**
   - khá thích lái xe ở Anh nhưng không bao giờ lái ở TP. HCM; ghét dọn nhà; thích nói chuyện điện thoại (Chủ nhật nói với mẹ cả
     tiếng); thích cá hơn thịt (lớn lên ven biển, mê hải sản); không mê thể thao, không xem trên TV, nhưng thích bơi; Part 2: đi bộ
@@ -792,7 +795,8 @@ Module Hobbies and interests (đợt 42) — thích và không thích, thể tha
     giờ làm, hai ba lần một tuần, thường đi một mình; bơi tốt cho lưng sau ngày dạy dài (Unit 49);
   - nấu ăn và đi du lịch nhiều, thỉnh thoảng tập gym; không hứng thú câu cá; nghe Mozart khi chấm bài; học viên mê karaoke, quán
     cà phê, trò chơi điện tử; Part 2: hồi bé sưu tầm vỏ sò — cuối tuần đi dọc biển với ông, cất trong hộp to dưới gầm giường (hơn
-    hai trăm cái), hộp vẫn ở nhà bố mẹ; bà giữ mọi bưu thiếp Emma gửi (Unit 50).
+    hai trăm cái), hộp vẫn ở nhà bố mẹ; bà giữ mọi bưu thiếp Emma gửi (Unit 50);
+  - thích The Beatles vì bố mở album của họ mỗi Chủ nhật, thuộc hết bài; đã nghe hòa nhạc cổ điển một lần ở London (Unit 51).
 
 ### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
@@ -842,12 +846,11 @@ Module tiếp theo: **Hobbies and interests** (Unit 48–53, Review tr. 138–14
 - Answer key tr. 216 đã có đáp án Unit 48;
 - chưa xem trang; sở thích, thể thao, âm nhạc, phim là chủ đề IELTS Part 1–2 rất hay gặp.
 
-Đợt 42 (đưa lên `main` từng unit, bảng mục 5.7): xong Unit 48–50. Unit khó: 48 Likes and dislikes (tám mức thích với trật tự
+Đợt 42 (đưa lên `main` từng unit, bảng mục 5.7): xong Unit 48–51. Unit khó: 48 Likes and dislikes (tám mức thích với trật tự
 really / quite / very much, like + -ing, interesting ≠ interested; "Do you like…?" là câu hỏi Part 1 hay gặp nhất); 49 Sport (40
 mục Word list; win ≠ beat, draw with, lose to; goals ≠ points; "a sport you like" là đề Part 2 hay gặp); 50 Free time (go / play /
-do đi với từng hoạt động; sở thích là chủ đề Part 1 bắt buộc, "a hobby you had as a child" là đề Part 2 hay gặp). Còn Unit 51–53;
-Part 2 dự kiến không trùng nhau: 51 "a song or a piece of music you like", 52 "a film you enjoyed", 53 "a TV programme you enjoy"
-(unit nào khó thì chọn sau khi xem trang).
+do đi với từng hoạt động; sở thích là chủ đề Part 1 bắt buộc, "a hobby you had as a child" là đề Part 2 hay gặp). Còn Unit 52–53;
+Part 2 dự kiến không trùng nhau: 52 "a film you enjoyed", 53 "a TV programme you enjoy" (unit nào khó thì chọn sau khi xem trang).
 
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
@@ -934,7 +937,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**50 video, 8:16:36** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**51 video, 8:26:17** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -988,10 +991,11 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 48 · Likes and dislikes | `U48-likes-dislikes-dictation` | 9:37 | 24 · 18 | 20 | 36 |
 | 49 · Sport | `U49-sport-dictation` | 9:31 | 31 · 40 | 18 | 33 |
 | 50 · Free time | `U50-free-time-dictation` | 9:46 | 32 · 35 | 15 | 33 |
+| 51 · Music | `U51-music-dictation` | 9:41 | 25 · 31 | 18 | 33 |
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 51 trở đi theo mục 5 (checklist P2-59, P2-77), module Hobbies and interests (cuối mục 5.8): xong unit nào
+1. Video Unit 52 trở đi theo mục 5 (checklist P2-59, P2-77), module Hobbies and interests (cuối mục 5.8): xong unit nào
    thì đưa lên `main` unit đó. Mỗi unit hai video: bài giảng (mục 5) và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.

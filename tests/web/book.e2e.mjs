@@ -454,13 +454,13 @@ try{
     await page.waitForSelector("#p-book .bk-next");
   });
 
-  await step("Oxford Word Skills Basic: 92 phiên 30 phút; Unit 1–50 mỗi unit một video (7–10 phút, unit khó tới 15 phút) và một video nghe – viết 10 phút; phiên Unit 6 mở trang sách và Answer key", async () => {
+  await step("Oxford Word Skills Basic: 92 phiên 30 phút; Unit 1–51 mỗi unit một video (7–10 phút, unit khó tới 15 phút) và một video nghe – viết 10 phút; phiên Unit 6 mở trang sách và Answer key", async () => {
     await page.click('nav button[data-go="book"]');
     await page.waitForSelector("#p-book .bk-lib");
     const card = page.locator("#p-book .bk-lib", { hasText: "Oxford Word Skills Basic" });
     const text = await card.textContent();
     assert.match(text, /Elementary – Pre-intermediate · CEFR A1 → A2/);
-    assert.match(text, /81 unit · 11 test · 100 video bài giảng/);       // sách không kèm audio (thiếu CD-ROM)
+    assert.match(text, /81 unit · 11 test · 102 video bài giảng/);       // sách không kèm audio (thiếu CD-ROM)
     assert.match(text, /92 phiên × 30 phút/);
     await card.locator(".btn-primary").click();
     await page.waitForSelector("#p-book .bk-next");
@@ -483,7 +483,8 @@ try{
                    "Unit 41 · The living room",                                                     // đợt 40: Places
                    "Unit 42 · My school", "Unit 43 · University", "Unit 44 · Jobs", "Unit 45 · Describing a job",
                    "Unit 46 · Using a computer", "Unit 47 · Email and the internet",               // đợt 41: Study and work
-                   "Unit 48 · Likes and dislikes", "Unit 49 · Sport", "Unit 50 · Free time"];      // đợt 42: Hobbies and interests
+                   "Unit 48 · Likes and dislikes", "Unit 49 · Sport", "Unit 50 · Free time",       // đợt 42: Hobbies and interests
+                   "Unit 51 · Music"];
     const hard = ["Unit 10 · My family", "Unit 13 · Describing people", "Unit 14 · Character", "Unit 16 · Feelings",
                   "Unit 17 · My routine", "Unit 19 · Buying clothes", "Unit 22 · Illness", "Unit 26 · Buying food",
                   "Unit 28 · In a restaurant", "Unit 30 · Trains", "Unit 32 · Roads and traffic", "Unit 35 · My town",
