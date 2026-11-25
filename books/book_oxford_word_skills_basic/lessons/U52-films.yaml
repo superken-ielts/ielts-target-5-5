@@ -1,0 +1,551 @@
+# Video Oxford Word Skills Basic · Unit 52 — I can talk about films (sách in tr. 134–135, Answer key tr. 217–218).
+# UNIT KHÓ (đợt 42): bảy loại phim đi với tính từ (exciting, funny, violent, romantic, frightening), cách hỏi về phim (What's on?
+# What kind of…? Who's in it? Who's the director? Where's it on? It's about…), see a film at the cinema ≠ watch a film at home, tính từ
+# -ing ≠ -ed (frightening / frightened — nối Unit 48); "a film you enjoyed" là đề Part 2 rất hay gặp — video khoảng 13 phút: phần sách,
+# rồi ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a film you enjoyed", hai bài mẫu; ba câu thảo luận kiểu Part 3). Khuôn: file 09
+# mục 5.2. Không `wait` / `echo`; không khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết":
+# unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6 theo Answer key tr. 217–218 (bài 2: 1c 2f 3a 4b 5e; bài 3: đáp án hiện thành nhãn trên tranh). Bài 4 (Test
+# yourself): hai hàng tranh cắt bỏ chú thích. Bài 6 (ABOUT YOU): Tom nói về phim Interstellar (dữ kiện thật: Christopher Nolan, Matthew
+# McConaughey, Anne Hathaway) — cảnh Nói 2.
+# Hình trong sách: bảy tranh loại phim và Spotlight What kind of…? (hai cảnh), năm tranh bài 3, tranh tự kiểm tra (hai cảnh), áp phích và
+# hội thoại What's on? (ba cảnh), Glossary (hai cảnh) — đo bằng máy.
+# Thêm ngoài sách: tính từ -ing / -ed, câu mua vé ở rạp (General Training), năm câu khung tả phim kiểu IELTS.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom mê phim khoa học viễn tưởng, thích đi rạp, xem phim trên laptop, chị Hoa;
+# Emma mê truyện trinh thám, anh Jack ở London, sang Việt Nam ba năm trước. Mới: Tom thích cả phim hài; gần đây xem lại Interstellar ở
+# nhà trên laptop; hồi khoảng 12 tuổi xem phim hoạt hình Spirited Away trên TV với chị Hoa, Tết vừa rồi xem lại cùng chị; rạp gần trường
+# chiếu nhiều phim Hàn và phim Mỹ, Tom đi rạp khoảng tháng một lần;
+# Emma ghét phim kinh dị, xem Knives Out ở rạp ở London với anh Jack trước khi sang Việt Nam, không đoán được kết; thích đọc sách trước
+# rồi mới xem phim; học viên xem phim Mỹ để luyện tiếng Anh; tháng trước đi xem phim hài Việt với học viên (phụ đề tiếng Anh). Tom xem
+# phim tiếng Anh có phụ đề tiếng Anh để luyện nghe.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U52-films.yaml
+id: U52-films
+activity: U52-words
+title: "Unit 52 · Films"
+subtitle: "I can talk about films"
+title_vi: "Phim ảnh: thriller, comedy, war film, love story, action film, horror film, cartoon; exciting, funny, violent, romantic, frightening; What's on? Who's in it?"
+tag: "HOBBIES AND INTERESTS · UNIT 52"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 52: films. Today: kinds of films, adjectives to describe them, and how to talk about a film you want to see."
+        say: "Welcome to Unit fifty-two: films. Today: kinds of films, adjectives to describe them, and how to talk about a film you want to see."
+        vi: "Unit 52: phim ảnh — loại phim, tính từ tả phim, cách nói về một bộ phim."
+      - tom: "My favourite topic! No countdown, as always: pause the video whenever you want to answer."
+        vi: "Chủ đề Tom thích nhất! Không đếm ngược — tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "Describing films"
+    heading: "A · Describing films (1)"
+    heading_vi: "tr. 134 — loại phim và tính từ đi kèm"
+    image: {pdf: course-book, page: 135, clip: [28, 95, 440, 200]}
+    items:
+      - {box: [30, 96, 118, 196]}
+      - {box: [134, 96, 231, 196]}
+      - {box: [242, 96, 328, 196]}
+      - {box: [343, 96, 438, 198.5]}
+    lines:
+      - {emma: "Look at page one hundred and thirty-four. A thriller is often exciting.", focus: 0, vi: "thriller: phim giật gân · exciting: hồi hộp, gay cấn"}
+      - {tom: "A comedy is funny.", focus: 1, vi: "comedy: phim hài · funny: buồn cười"}
+      - {emma: "A war film is often violent.", focus: 2, vi: "war film: phim chiến tranh · violent: bạo lực"}
+      - {tom: "A love story is romantic.", focus: 3, vi: "love story: phim tình cảm · romantic: lãng mạn"}
+
+  - kind: figure
+    heading: "A · Describing films (2) · Spotlight: What kind of …?"
+    heading_vi: "tr. 134 — action film, horror film, cartoon; hỏi loại phim, loại nhạc"
+    image: {pdf: course-book, page: 135, clip: [26, 206, 486, 320]}
+    items:
+      - {box: [27, 208, 114, 308]}
+      - {box: [134, 207, 219, 309]}
+      - {box: [242, 208, 337, 308]}
+      - {box: [338, 240, 485, 318]}
+    lines:
+      - {tom: "An action film is exciting.", focus: 0, vi: "action film: phim hành động"}
+      - {emma: "A horror film is frightening.", focus: 1, vi: "horror film: phim kinh dị · frightening: đáng sợ"}
+      - {tom: "A cartoon is often funny.", focus: 2, vi: "cartoon: phim hoạt hình"}
+      - {emma: "Look at the spotlight. What kind of film is it? It's a thriller. What kind of music do you like? Rock music.", focus: 3, vi: "What kind of …?: loại … nào?"}
+
+  - kind: blanks
+    chapter: "Bài 1: sắp xếp chữ"
+    heading: "Exercise 1 · Make kinds of film from the letters"
+    heading_vi: "Ví dụ: rwa milf → war film (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "rillerht  →  ___", answer: "thriller"}
+      - {n: 2, q: "moyecd  →  ___", answer: "comedy"}
+      - {n: 3, q: "tanico ifml  →  ___", answer: "action film"}
+      - {n: 4, q: "onacrot  →  ___", answer: "cartoon"}
+      - {n: 5, q: "vole rosty  →  ___", answer: "love story"}
+      - {n: 6, q: "rohror limf  →  ___", answer: "horror film"}
+    lines:
+      - emma: "Exercise 1. Make kinds of film from the letters. The example is: war film. Pause the video and try."
+        say: "Exercise one. Make kinds of film from the letters. The example is: war film. Pause the video and try."
+        vi: "Bài 1: sắp xếp chữ cái thành tên loại phim."
+      - {tom: "One. Thriller. Two. Comedy. Three. Action film. Four. Cartoon. Five. Love story. Six. Horror film.", reveal: [1, 2, 3, 4, 5, 6], focus: 5}
+
+  - kind: blanks
+    chapter: "Bài 2: ghép tính từ"
+    heading: "Exercise 2 · Match 1–5 with a–f"
+    heading_vi: "a war film · b comedy · c love story · d action film · e thriller · f horror film — ví dụ: an exciting → d (Answer key tr. 217)"
+    items:
+      - {n: 1, q: "a romantic  →  ___", answer: "c, love story"}
+      - {n: 2, q: "a frightening  →  ___", answer: "f, horror film"}
+      - {n: 3, q: "a violent  →  ___", answer: "a, war film"}
+      - {n: 4, q: "a funny  →  ___", answer: "b, comedy"}
+      - {n: 5, q: "an exciting  →  ___", answer: "e, thriller"}
+    lines:
+      - emma: "Exercise 2. Match one to five with A to F. The example is: an exciting action film. Pause the video and try."
+        say: "Exercise two. Match one to five with eigh to ef. The example is: an exciting action film. Pause the video and try."
+        vi: "Bài 2: ghép tính từ với loại phim."
+      - {tom: "One. A romantic love story. Two. A frightening horror film. Three. A violent war film. Four. A funny comedy. Five. An exciting thriller.", reveal: [1, 2, 3, 4, 5], focus: 4}
+
+  - kind: figure
+    chapter: "Bài 3: một tính từ cho mỗi tranh"
+    heading: "Exercise 3 · Write one adjective to describe each picture"
+    heading_vi: "Ví dụ: tranh 1 → exciting; đáp án hiện thành nhãn trên tranh (Answer key tr. 217)"
+    image: {pdf: course-book, page: 135, clip: [44, 549, 478, 633]}
+    items:
+      - {box: [47, 551, 122, 621]}
+      - {box: [136, 551, 208, 621]}
+      - {box: [136, 551, 208, 621], label: "romantic"}
+      - {box: [224, 551, 298, 621]}
+      - {box: [224, 551, 298, 621], label: "violent"}
+      - {box: [313, 551, 387, 621]}
+      - {box: [313, 551, 387, 621], label: "frightening"}
+      - {box: [402, 551, 475, 621]}
+      - {box: [402, 551, 475, 621], label: "funny"}
+    lines:
+      - emma: "Exercise 3. Write one adjective to describe each picture. The example is: exciting. Pause the video and try."
+        say: "Exercise three. Write one adjective to describe each picture. The example is: exciting. Pause the video and try."
+        focus: 0
+        vi: "Bài 3: viết một tính từ cho mỗi tranh."
+      - {emma: "Number one?", focus: 1}
+      - {tom: "Romantic.", focus: 2}
+      - {emma: "Two?", focus: 3}
+      - {tom: "Violent.", focus: 4}
+      - {emma: "Three?", focus: 5}
+      - {tom: "Frightening, or scary.", focus: 6, vi: "scary = frightening: đáng sợ"}
+      - {emma: "And four?", focus: 7}
+      - {tom: "Funny.", focus: 8}
+
+  - kind: figure
+    chapter: "Bài 4: tự kiểm tra"
+    heading: "Exercise 4 · Test yourself: what kinds of film are they? (1)"
+    heading_vi: "Che chữ, nhìn tranh đầu trang — tạm dừng video sau mỗi câu hỏi; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 135, clip: [28, 96, 440, 172]}
+    items:
+      - {box: [31, 97, 116, 171.5]}
+      - {box: [31, 97, 116, 171.5], label: "a thriller"}
+      - {box: [135, 97, 230, 171.5]}
+      - {box: [135, 97, 230, 171.5], label: "a comedy"}
+      - {box: [247, 97, 326, 171.5]}
+      - {box: [247, 97, 326, 171.5], label: "a war film"}
+      - {box: [343, 97, 438, 171.5]}
+      - {box: [343, 97, 438, 171.5], label: "a love story"}
+    lines:
+      - emma: "Exercise 4 is a test. Cover the words, and look at the pictures at the top of the page. What kind of film is it? Pause the video after each question."
+        say: "Exercise four is a test. Cover the words, and look at the pictures at the top of the page. What kind of film is it? Pause the video after each question."
+        focus: 0
+        vi: "Bài 4: che chữ, nhìn tranh, nói loại phim."
+      - {tom: "A thriller.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "A comedy.", focus: 3}
+      - {emma: "This one?", focus: 4}
+      - {tom: "A war film.", focus: 5}
+      - {emma: "And this?", focus: 6}
+      - {tom: "A love story.", focus: 7}
+
+  - kind: figure
+    heading: "Exercise 4 · Test yourself (2)"
+    heading_vi: "Tạm dừng video sau mỗi câu hỏi"
+    image: {pdf: course-book, page: 135, clip: [26, 208, 332, 284.4]}
+    items:
+      - {box: [30, 210, 114, 284]}
+      - {box: [30, 210, 114, 284], label: "an action film"}
+      - {box: [135, 209, 219, 284]}
+      - {box: [135, 209, 219, 284], label: "a horror film"}
+      - {box: [244, 210, 330, 284]}
+      - {box: [244, 210, 330, 284], label: "a cartoon"}
+    lines:
+      - {emma: "What kind of film is it?", focus: 0}
+      - {tom: "An action film.", focus: 1}
+      - {emma: "And this?", focus: 2}
+      - {tom: "A horror film.", focus: 3}
+      - {emma: "And the last one?", focus: 4}
+      - {tom: "A cartoon.", focus: 5}
+
+  - kind: bullets
+    chapter: "-ing hay -ed?"
+    heading: "Adjectives: frightening or frightened?"
+    heading_vi: "Thêm ngoài sách — -ing: tả phim, sự việc · -ed: cảm giác của người (như interesting / interested ở Unit 48)"
+    items:
+      - {en: "The film was frightening. → I was frightened.", vi: "đáng sợ → thấy sợ"}
+      - {en: "The ending was exciting. → We were excited.", vi: "gay cấn → thấy háo hức"}
+      - {en: "The story was boring. → I was bored.", vi: "chán → thấy chán"}
+      - {en: "The film is interesting. → I'm interested in it.", vi: "thú vị → quan tâm"}
+    lines:
+      - {emma: "Remember interesting and interested from Unit 48? It's the same with film adjectives. The film was frightening, so I was frightened.", say: "Remember interesting and interested from Unit forty-eight? It's the same with film adjectives. The film was frightening, so I was frightened.", focus: 0}
+      - {tom: "The ending was exciting, so we were excited.", focus: 1}
+      - {emma: "The story was boring, so I was bored.", focus: 2}
+      - {tom: "And the film is interesting: I'm interested in it. The -ing word is for the film; the -ed word is for the person.", say: "And the film is interesting: I'm interested in it. The ing word is for the film; the ee dee word is for the person.", focus: 3}
+
+  - kind: qa
+    chapter: "Nói 1: phim và bạn"
+    heading: "Speaking 1 · Films and you"
+    heading_vi: "IELTS Part 1 \"Films\" — tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "What kind of films do you like, Tom?"
+        a: "Science fiction films, definitely. And comedies: I like films that make me laugh."
+        ask: emma
+        by: tom
+        phrases: ["…, definitely.", "films that make me laugh"]
+      - q: "How often do you go to the cinema?"
+        a: "About once a month. The cinema near my university shows lots of Korean and American films."
+        ask: emma
+        by: tom
+        phrases: ["About once a month."]
+      - q: "Emma, do you like horror films?"
+        a: "No, I hate them! They're too frightening. I prefer thrillers and detective stories."
+        ask: tom
+        by: emma
+        phrases: ["… too frightening", "I prefer…"]
+      - q: "Do you prefer the book or the film?"
+        a: "Usually the book. I always read the book first, and then I see the film."
+        ask: tom
+        by: emma
+        phrases: ["Usually…", "first, and then…"]
+      - q: "Do you watch films in English, Tom?"
+        a: "Yes, with English subtitles. It's good practice for my listening."
+        ask: emma
+        by: tom
+        phrases: ["with English subtitles", "It's good practice for…"]
+      - q: "And do you watch Vietnamese films, Emma?"
+        a: "Sometimes, with English subtitles. Last month, I saw a Vietnamese comedy with my students, and I understood quite a lot!"
+        ask: tom
+        by: emma
+        phrases: ["Sometimes,…", "I understood quite a lot"]
+    lines:
+      - {emma: "Let's talk about films, like part one of the IELTS speaking test. Tom, what kind of films do you like?", say: "Let's talk about films, like part one of the eye-elts speaking test. Tom, what kind of films do you like?", focus: 0}
+      - {tom: "Science fiction films, definitely. And comedies: I like films that make me laugh.", reveal: 0, vi: "Phim khoa học viễn tưởng; cả phim hài — phim làm mình cười."}
+      - {emma: "How often do you go to the cinema?", focus: 1}
+      - {tom: "About once a month. The cinema near my university shows lots of Korean and American films.", reveal: 1, vi: "Khoảng tháng một lần; rạp gần trường chiếu nhiều phim Hàn, phim Mỹ."}
+      - {tom: "Emma, do you like horror films?", focus: 2}
+      - {emma: "No, I hate them! They're too frightening. I prefer thrillers and detective stories.", reveal: 2, vi: "Ghét phim kinh dị: quá sợ; thích phim giật gân và trinh thám hơn."}
+      - {tom: "Do you prefer the book or the film?", focus: 3}
+      - {emma: "Usually the book. I always read the book first, and then I see the film.", reveal: 3, vi: "Thường là sách: luôn đọc sách trước rồi mới xem phim."}
+      - {emma: "Do you watch films in English, Tom?", focus: 4}
+      - {tom: "Yes, with English subtitles. It's good practice for my listening.", reveal: 4, vi: "Có, với phụ đề tiếng Anh — luyện nghe tốt."}
+      - {tom: "And do you watch Vietnamese films, Emma?", focus: 5}
+      - {emma: "Sometimes, with English subtitles. Last month, I saw a Vietnamese comedy with my students, and I understood quite a lot!", reveal: 5, vi: "Thỉnh thoảng, có phụ đề tiếng Anh; tháng trước đi xem một phim hài Việt với học viên, hiểu khá nhiều!"}
+
+  - kind: figure
+    chapter: "What's on?"
+    heading: "B · What's on? Rumor Has It"
+    heading_vi: "tr. 135 — áp phích phim và hội thoại của Mercedes và Enrique"
+    image: {pdf: course-book, page: 136, clip: [10, 48, 488, 393]}
+    items:
+      - {box: [12, 50, 241, 391]}
+      - {box: [246, 49, 486, 224]}
+    lines:
+      - {emma: "Now page one hundred and thirty-five. This is a poster for a film called Rumor Has It.", focus: 0}
+      - {tom: "Mercedes and Enrique are talking about it. Let's read the conversation.", focus: 1}
+
+  - kind: figure
+    heading: "B · What's on? The conversation (1)"
+    heading_vi: "What's on? · What kind of movie is it? · It's about … · reviews · Who's in it?"
+    image: {pdf: course-book, page: 136, clip: [246, 61.6, 488, 141]}
+    items:
+      - {box: [248, 62, 486, 84]}
+      - {box: [248, 84.5, 486, 95.5]}
+      - {box: [248, 95.5, 486, 130.5]}
+      - {box: [248, 130.5, 486, 141]}
+    lines:
+      - {emma: "What's on at the cinema?", focus: 0, vi: "What's on? = Có phim gì chiếu?"}
+      - {tom: "There's a film on called Rumor Has It.", focus: 0}
+      - {emma: "Mmm. What kind of movie is it?", focus: 1, vi: "movie = film"}
+      - {tom: "It's a romantic comedy. It's about a woman and her relationship with her boyfriend and family. It's had good reviews.", focus: 2, vi: "It's about…: phim kể về… · review: bài nhận xét"}
+      - {emma: "OK. Who's in it?", focus: 3, vi: "Who's in it?: ai đóng?"}
+
+  - kind: figure
+    heading: "B · What's on? The conversation (2)"
+    heading_vi: "stars · a good actor · Who's the director? · Where's it on? · Let's go and see it."
+    image: {pdf: course-book, page: 136, clip: [246, 141, 488, 223]}
+    items:
+      - {box: [248, 142, 486, 154.5]}
+      - {box: [248, 154.5, 486, 176]}
+      - {box: [248, 176.5, 486, 189]}
+      - {box: [248, 189, 486, 210]}
+      - {box: [248, 210.5, 486, 222.5]}
+    lines:
+      - {tom: "Er, it stars Kevin Costner and Jennifer Aniston.", focus: 0, vi: "star: đóng vai chính"}
+      - {emma: "Oh, I like Kevin Costner. He's a good actor. Who's the director?", focus: 1, vi: "actor: diễn viên · director: đạo diễn"}
+      - {tom: "Rob Reiner. He made When Harry Met Sally.", say: "Rob Ryner. He made When Harry Met Sally.", focus: 2}
+      - {emma: "Right. And where's it on?", focus: 3, vi: "Where's it on?: chiếu ở đâu?"}
+      - {tom: "The Odeon.", focus: 3}
+      - {emma: "OK. Let's go and see it.", focus: 4, vi: "see a film (ở rạp)"}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary (1) · What's on? · cinema · movie · It's about … · review"
+    heading_vi: "tr. 135 — nghĩa của các từ in đậm"
+    image: {pdf: course-book, page: 136, clip: [241, 227, 488, 320]}
+    items:
+      - {box: [245, 249, 487, 260.5]}
+      - {box: [245, 260.5, 487, 273.5]}
+      - {box: [245, 273.5, 487, 285]}
+      - {box: [245, 285, 487, 297.5]}
+      - {box: [245, 297.5, 487, 320]}
+    lines:
+      - {emma: "Look at the glossary. What's on? means: what film can we see?", focus: 0}
+      - {tom: "A cinema: a place where you see films.", focus: 1, vi: "cinema: rạp chiếu phim"}
+      - {emma: "A movie is a film. Movie is American English.", focus: 2, vi: "movie (Anh – Mỹ) = film (Anh – Anh)"}
+      - {tom: "It's about: the subject is.", focus: 3}
+      - {emma: "A review: an opinion of a film in a newspaper, or on the radio, TV, or internet.", focus: 4, vi: "review: bài nhận xét, phê bình"}
+
+  - kind: figure
+    heading: "Glossary (2) · star · actor / actress · director · Where's it on? · see a film"
+    heading_vi: "tr. 135 — see a film at the cinema (không nói watch a film at the cinema)"
+    image: {pdf: course-book, page: 136, clip: [241, 320, 488, 408]}
+    items:
+      - {box: [245, 321, 487, 345.5]}
+      - {box: [245, 345.5, 487, 369.5]}
+      - {box: [245, 369.5, 487, 382]}
+      - {box: [245, 382, 487, 393]}
+      - {box: [245, 393.5, 487, 407]}
+    lines:
+      - {emma: "Star: be one of the main actors in a film. The person is a star.", focus: 0, vi: "star: ngôi sao; đóng vai chính"}
+      - {tom: "An actor, for example Kevin Costner or Jennifer Aniston. A female actor can also be called an actress.", focus: 1, vi: "actor · actress: diễn viên nam / nữ"}
+      - {emma: "A director: the person who makes a film, for example Steven Spielberg.", focus: 2, vi: "director: đạo diễn"}
+      - {tom: "Where's it on? means: where can we see it?", focus: 3}
+      - {emma: "And remember: we see a film at the cinema. Not: watch a film at the cinema. At home, we watch a film on TV.", focus: 4, vi: "see a film ở rạp · watch a film ở nhà, trên TV"}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành hội thoại"
+    heading: "Exercise 5 · Complete the conversation"
+    heading_vi: "Ví dụ: A What's on at the cinema? B A film called The Constant Gardener. (Answer key tr. 218)"
+    items:
+      - {n: 1, q: "A: Oh, what ___ of film is it?  B: It's a thriller.", answer: "kind"}
+      - {n: 2, q: "A: What's it ___?", answer: "about"}
+      - {n: 3, q: "B: I'm not sure, but it's had good ___.", answer: "reviews"}
+      - {n: 4, q: "A: Oh, and who's ___ it?", answer: "in"}
+      - {n: 5, q: "B: It ___ Ralph Fiennes and Rachel Weiss.", answer: "stars"}
+      - {n: 6, q: "A: They're both good ___.", answer: "actors"}
+      - {n: 7, q: "A: Who's the ___?  B: A Brazilian called Fernando Meirelles.", answer: "director"}
+      - {n: 8, q: "A: OK. And where's it ___?  B: At the ABC cinema.", answer: "on"}
+      - {n: 9, q: "A: Let's go and ___ it.  B: Fine.", answer: "see"}
+    lines:
+      - emma: "Exercise 5. Complete the conversation. The example is: what's on at the cinema? A film called The Constant Gardener. Pause the video and try."
+        say: "Exercise five. Complete the conversation. The example is: what's on at the cinema? A film called The Constant Gardener. Pause the video and try."
+        vi: "Bài 5: hoàn thành hội thoại."
+      - {tom: "One. What kind of film is it? Two. What's it about? Three. It's had good reviews. Four. Who's in it? Five. It stars Ralph Fiennes and Rachel Weiss.", say: "One. What kind of film is it? Two. What's it about? Three. It's had good reviews. Four. Who's in it? Five. It stars Rafe Fines and Rachel Weiss.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. They're both good actors. Seven. Who's the director? Eight. Where's it on? Nine. Let's go and see it.", reveal: [6, 7, 8, 9], focus: 8}
+
+  - kind: bullets
+    chapter: "Ở rạp chiếu phim"
+    heading: "At the cinema: buying tickets"
+    heading_vi: "Thêm ngoài sách — câu mua vé ở rạp (tình huống General Training)"
+    items:
+      - {en: "Two tickets for … , please. · Which showing: the 7.30 or the 9.45?", vi: "mua vé · suất chiếu"}
+      - {en: "Where would you like to sit? · Near the back, please.", vi: "chọn chỗ ngồi"}
+      - {en: "Is it in English with Vietnamese subtitles?", vi: "hỏi ngôn ngữ, phụ đề"}
+      - {en: "How long is the film? · About two and a half hours.", vi: "hỏi thời lượng"}
+      - {en: "Which screen is it? · Screen 3, on the second floor.", vi: "phòng chiếu số mấy"}
+    lines:
+      - {emma: "Here are some useful sentences for buying tickets at the cinema. Two tickets for Interstellar, please. Which showing: the seven thirty, or the nine forty-five?", focus: 0, vi: "showing: suất chiếu"}
+      - {tom: "Where would you like to sit? Near the back, please.", focus: 1}
+      - {emma: "Is it in English, with Vietnamese subtitles?", focus: 2}
+      - {tom: "How long is the film? About two and a half hours.", focus: 3}
+      - {emma: "And: which screen is it? Screen three, on the second floor.", focus: 4, vi: "screen: phòng chiếu, màn hình"}
+
+  - kind: qa
+    chapter: "Nói 2: bộ phim bạn xem gần nhất"
+    heading: "Speaking 2 · Exercise 6: about you"
+    heading_vi: "Bài 6 (ABOUT YOU) — tạm dừng sau mỗi câu hỏi để tự trả lời về bộ phim bạn xem gần nhất"
+    items:
+      - q: "What was the last film you saw, Tom?"
+        a: "Interstellar. I saw it again last weekend."
+        ask: emma
+        by: tom
+        phrases: ["… again last weekend"]
+      - q: "Where was it on?"
+        a: "It wasn't on at the cinema. I watched it at home, on my laptop."
+        ask: emma
+        by: tom
+        phrases: ["I watched it at home"]
+      - q: "Who are the stars of the film?"
+        a: "Matthew McConaughey and Anne Hathaway."
+        ask: emma
+        by: tom
+        phrases: ["… and …"]
+      - q: "Who's the director?"
+        a: "Christopher Nolan. He made Inception too."
+        ask: emma
+        by: tom
+        phrases: ["He made … too"]
+      - q: "What's it about?"
+        a: "It's about a group of astronauts. They travel through space to find a new home for people, because life on Earth is very difficult."
+        ask: emma
+        by: tom
+        phrases: ["It's about…", "because…"]
+    lines:
+      - {emma: "Exercise 6 is about you. Think about the last film you saw. Tom, what was the last film you saw?", say: "Exercise six is about you. Think about the last film you saw. Tom, what was the last film you saw?", focus: 0}
+      - {tom: "Interstellar. I saw it again last weekend.", reveal: 0, vi: "Interstellar — cuối tuần trước xem lại."}
+      - {emma: "Where was it on?", focus: 1}
+      - {tom: "It wasn't on at the cinema. I watched it at home, on my laptop.", reveal: 1, vi: "Không chiếu ở rạp: xem ở nhà trên laptop (watch, không phải see)."}
+      - {emma: "Who are the stars of the film?", focus: 2}
+      - {tom: "Matthew McConaughey and Anne Hathaway.", say: "Matthew Mac-uh-nay and Anne Hathaway.", reveal: 2, vi: "Matthew McConaughey và Anne Hathaway."}
+      - {emma: "Who's the director?", focus: 3}
+      - {tom: "Christopher Nolan. He made Inception too.", reveal: 3, vi: "Christopher Nolan — người làm cả phim Inception."}
+      - {emma: "What's it about?", focus: 4}
+      - {tom: "It's about a group of astronauts. They travel through space to find a new home for people, because life on Earth is very difficult.", reveal: 4, vi: "Một nhóm phi hành gia du hành vũ trụ tìm nhà mới cho loài người vì sự sống trên Trái Đất quá khó khăn."}
+
+  - kind: bullets
+    chapter: "Tả phim kiểu IELTS"
+    heading: "Describing a film in IELTS"
+    heading_vi: "Thêm ngoài sách — năm câu khung để tả một bộ phim (Part 1 \"Films\", Part 2)"
+    items:
+      - {en: "It's set in … (the future / Tokyo / the 1960s)", vi: "bối cảnh ở …"}
+      - {en: "It's based on a true story / a book.", vi: "dựa trên chuyện có thật / một cuốn sách"}
+      - {en: "The acting is brilliant. · The special effects are amazing.", vi: "diễn xuất · kỹ xảo"}
+      - {en: "The ending is sad / surprising / happy.", vi: "đoạn kết"}
+      - {en: "I'd recommend it to …", vi: "tôi muốn giới thiệu phim này cho …"}
+    lines:
+      - {emma: "Here are five useful sentences to describe a film. It's set in: Interstellar is set in the future.", focus: 0, vi: "be set in: lấy bối cảnh ở"}
+      - {tom: "It's based on: many war films are based on true stories.", focus: 1, vi: "be based on: dựa trên"}
+      - {emma: "The acting is brilliant, and the special effects are amazing.", focus: 2}
+      - {tom: "The ending is sad, or surprising, or happy.", focus: 3}
+      - {emma: "And: I'd recommend it to anyone who likes detective stories.", focus: 4, vi: "recommend: giới thiệu, khuyên xem"}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về phim — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "Let's watch a film at the cinema tonight.  →  ___", answer: "Let's see a film at the cinema tonight."}
+      - {n: 2, q: "It was a very frightened film.  →  ___", answer: "It was a very frightening film."}
+      - {n: 3, q: "The film talks about a family in Hanoi.  →  ___", answer: "The film is about a family in Hanoi."}
+      - {n: 4, q: "Who plays in the film?  →  ___", answer: "Who's in the film?"}
+      - {n: 5, q: "What's on the cinema?  →  ___", answer: "What's on at the cinema?"}
+      - {n: 6, q: "I like cartoon films very much.  →  ___", answer: "I like cartoons very much."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. See a film at the cinema; watch a film at home. Two. A frightening film: the film is frightening, and I'm frightened.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. The film is about a family in Hanoi. Four. Who's in the film? Or: who are the stars?", say: "Three. The film is about a family in Ha Noi. Four. Who's in the film? Or: who are the stars?", reveal: [3, 4], focus: 3}
+      - {tom: "Five. What's on at the cinema? Six. We say cartoons, not cartoon films.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a film you enjoyed"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about a Japanese cartoon called Spirited Away. The director is Hayao Miyazaki."
+        say: "I'd like to talk about a Japanese cartoon called Spirited Away. The director is Hah-yah-oh Mee-yah-zah-kee."
+        note: "what the film is"
+      - text: "I watched it on TV when I was about twelve, with my sister Hoa. We watched it again together last Tet."
+        say: "I watched it on TV when I was about twelve, with my sister Whah. We watched it again together last Tet."
+        note: "when and where you saw it"
+      - text: "It's about a ten-year-old girl called Chihiro. Her parents turn into pigs, and she has to work in a big bathhouse for spirits to save them."
+        say: "It's about a ten-year-old girl called Chee-hee-roh. Her parents turn into pigs, and she has to work in a big bathhouse for spirits to save them."
+        note: "what it is about"
+      - text: "I enjoyed it because it's beautiful, a bit frightening, and very exciting. It's a cartoon, but it's great for adults too."
+        note: "why you enjoyed it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe a film you enjoyed. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe a film you enjoyed. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: một bộ phim bạn thích."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about Knives Out. It's a detective story, and the director is Rian Johnson."
+        say: "I'd like to talk about Knives Out. It's a detective story, and the director is Ryan Johnson."
+        note: "what the film is"
+      - text: "I saw it at the cinema in London, with my brother Jack, before I came to Vietnam."
+        note: "when and where you saw it"
+      - text: "It's about a rich crime writer who dies after his eighty-fifth birthday party. A famous detective, played by Daniel Craig, tries to find out what happened."
+        note: "what it is about"
+      - text: "I enjoyed it because it's funny and very clever, and I love detective stories. I didn't guess the ending!"
+        note: "why you enjoyed it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a film you enjoyed.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a film you enjoyed"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What is the film?", hint: "I'd like to talk about … · It's a comedy / thriller … · The director is …"}
+      - {q: "When and where did you see it?", hint: "I saw it at the cinema … · I watched it at home / on TV …"}
+      - {q: "What is it about?", hint: "It's about … · It stars …"}
+      - {q: "Why did you enjoy it?", hint: "because it's exciting / funny / romantic · The best thing about it is …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Remember: see a film at the cinema, and it's about."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "What is the film?", focus: 0, pause: 0.5}
+      - {emma: "When and where did you see it?", focus: 1, pause: 0.5}
+      - {emma: "What is it about?", focus: 2, pause: 0.5}
+      - {emma: "Why did you enjoy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · films"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Is it better to see a film at the cinema or at home?"
+        a: "For action films, the cinema is better: the screen is big, and the sound is fantastic. But at home it's cheaper, and you can stop the film."
+        ask: emma
+        by: tom
+        phrases: ["For …, … is better", "But at home…"]
+      - q: "Why are films from other countries popular in Vietnam?"
+        a: "Because people enjoy learning about other cultures. And my students watch American films to practise their English: first with subtitles, then without!"
+        ask: tom
+        by: emma
+        phrases: ["Because people enjoy…", "first …, then …"]
+      - q: "Should children watch violent films?"
+        a: "No, I don't think so. Young children can get frightened, and they copy what they see."
+        ask: emma
+        by: tom
+        phrases: ["No, I don't think so.", "they copy…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Is it better to see a film at the cinema, or at home?", focus: 0}
+      - {tom: "For action films, the cinema is better: the screen is big, and the sound is fantastic. But at home it's cheaper, and you can stop the film.", reveal: 0, vi: "Phim hành động thì rạp hơn: màn hình to, âm thanh tuyệt; ở nhà thì rẻ, dừng phim được."}
+      - {tom: "Why are films from other countries popular in Vietnam?", focus: 1}
+      - {emma: "Because people enjoy learning about other cultures. And my students watch American films to practise their English: first with subtitles, then without!", reveal: 1, vi: "Người ta thích tìm hiểu văn hóa khác; học viên xem phim Mỹ để luyện tiếng Anh: lúc đầu có phụ đề, sau thì không."}
+      - {emma: "Should children watch violent films?", focus: 2}
+      - {tom: "No, I don't think so. Young children can get frightened, and they copy what they see.", reveal: 2, vi: "Không: trẻ nhỏ dễ sợ, và hay bắt chước những gì xem."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 4: che chữ tr. 134, nhìn tranh, nói loại phim"
+    items:
+      - {en: "a thriller · a comedy · a war film · a love story · an action film · a horror film · a cartoon", vi: "loại phim"}
+      - {en: "exciting · funny · violent · romantic · frightening (I'm frightened)", vi: "tính từ"}
+      - {en: "What's on? · What kind of film is it? · What's it about? · Who's in it? · Where's it on?", vi: "hỏi về phim"}
+      - {en: "a star · an actor / actress · a director · a review · a movie = a film", vi: "người và từ khác"}
+      - {en: "see a film at the cinema · watch a film at home", vi: "see / watch"}
+      - {en: "Next: Unit 53 · The media", vi: "Tiếp theo: Unit 53 · Báo đài, truyền thông"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "A thriller, a comedy, a war film, a love story, an action film, a horror film, and a cartoon.", focus: 0}
+      - {tom: "Exciting, funny, violent, romantic, and frightening.", focus: 1}
+      - {emma: "What's on? What kind of film is it? What's it about? Who's in it? And where's it on?", focus: 2}
+      - {tom: "A star, an actor or an actress, a director, a review, and a movie.", focus: 3}
+      - {emma: "See a film at the cinema, but watch a film at home.", focus: 4}
+      - {tom: "Next time, Unit 53: the media. See you then!", say: "Next time, Unit fifty-three: the media. See you then!", focus: 5}

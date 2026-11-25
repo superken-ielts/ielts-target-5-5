@@ -53,7 +53,7 @@ và agent nhập sách (`agents/`). Kế hoạch kỹ thuật và checklist: `do
   luyện phát âm hay đóng vai để ép dưới 10 phút. Chỉ bỏ bài cần trang không có trong bản quét, ghi ở đầu kịch bản.
   Trước khi dựng, đối chiếu danh sách bài tập của trang sách với kịch bản (file 08 mục 6.1, 6.4).
 - Oxford Word Skills Basic: mỗi unit một video 7–10 phút, không `wait` / `echo`, 1–2 phần nói theo chủ đề; khuôn, bảng `say`
-  và độ phủ ở file 09 mục 5 (Unit 1–51 đã có; đợt 37 người học: "ko sửa cái cũ"). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới
+  và độ phủ ở file 09 mục 5 (Unit 1–52 đã có; đợt 37 người học: "ko sửa cái cũ"). Unit khó (đầu kịch bản ghi `UNIT KHÓ`) tới
   15 phút: thêm ôn tập và luyện nói chung. Đủ mọi bài tập trên trang; câu cuối cảnh `practice` `pause: 1.0`. Mỗi unit có ít nhất một cảnh dùng hình trong sách: cảnh `figure` (khung đỏ theo `box`), `bullets` / `blanks`
   có `image` — file 09 mục 5.3a.
 - Khoảng lặng (đợt 36, người học: "video ko nên có pause quá 3 giây nếu có ko có càng tốt"): video mới không có khoảng lặng từ
