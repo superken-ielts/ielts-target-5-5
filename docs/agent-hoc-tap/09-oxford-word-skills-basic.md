@@ -32,7 +32,7 @@ unit hai video như đợt 37–38.
 | Dữ liệu dò trang | `books/book_oxford_word_skills_basic/work/`: `scan.json`, `chunks.json`, `ocr-pages.json` (OCR dải đầu / chân trang), `ocr-answer-key.json` (unit nào ở trang Answer key nào) |
 | Vị trí trong tab Sách | `books/catalog.json`: nhóm `ielts`, sau English Unlimited A2, trước IELTS Target 5.0 |
 | Mẫu lộ trình | `agents/book_ingest/lessons.py`: tên bước dùng được `{title}`, `{no}`… như ghi chú (đợt 26, mục 4) |
-| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–52 đã có (mục 5.7) |
+| Video bài giảng | `books/book_oxford_word_skills_basic/lessons/` (kịch bản `.yaml`, `.mp4`, `lessons.json`); sổ tay ở mục 5; Unit 1–53 đã có (mục 5.7) |
 | Video nghe – viết (đợt 36) | cùng thư mục, `<id>-dictation`; dữ liệu và bộ sinh kịch bản ở `work/dictation/`; Word list cuối sách ở `work/wordlist.json` (mục 5.9) |
 
 ---
@@ -192,7 +192,7 @@ lại ra y hệt).
   vẫn trong cùng một video (mục 5.2, hàng 9–10). Unit khó là unit nhiều từ, từ trừu tượng, nhiều cặp dễ nhầm, hay chủ đề
   hay gặp ở IELTS Part 2. Module People có 4 unit khó: 10 My family, 13 Describing people, 14 Character, 16 Feelings;
   Everyday life có 3 (17, 19, 22 — đợt 37); Food and drink có 2 (26, 28 — đợt 38); Getting around có 2 (30, 32 — đợt 39);
-  Places có 3 (35, 38, 39 — đợt 40); Study and work có 3 (42, 43, 45 — đợt 41); Hobbies and interests có 4 (48, 49, 50, 52 — đợt 42).
+  Places có 3 (35, 38, 39 — đợt 40); Study and work có 3 (42, 43, 45 — đợt 41); Hobbies and interests có 5 (48, 49, 50, 52, 53 — đợt 42).
   Đầu kịch bản ghi `# UNIT KHÓ (đợt …)`; test dùng dấu này để cho phép tới 15 phút.
 - **Hình trong sách** (đợt 29, theo góp ý người học): tranh, bảng, đoạn văn của trang sách hiện ngay trong video, kèm
   khung đỏ chỉ đúng chỗ đang nói tới (mục 5.3a). Mọi unit đều có ít nhất một cảnh có hình (test kiểm): module People
@@ -501,12 +501,15 @@ khi dựng (trong `agents/`):
   `lessons/` (test đòi mỗi kịch bản có video trong `lessons.json`). Xem trước hình trong một thư mục tạm có `lessons/` và liên kết
   tới `book.json`, PDF, `work/wordlist.json` (`script.book_dir` lấy cha của `lessons/`); sinh thử video nghe – viết bằng bản sao
   `gen_dictation.py` đặt trong `work/dictation/` của thư mục tạm.
+- **Bảng hỏi nhiều phương án** (đợt 42, Unit 53): bảng hỏi bốn câu (mỗi câu a–d) để hai câu một cảnh thì chữ nhỏ; mỗi câu một
+  cảnh, khung theo câu hỏi rồi từng phương án, Tom và Emma đọc xen kẽ. Glossary bảy mục cũng tách hai cảnh. Bài ghép nghĩa S / D
+  (bài 1) chỉ cần ô ví dụ và các ô có nhãn: Tom đọc đáp án, nhãn hiện trên đúng hàng.
 
 ### 5.7 Độ phủ video và chi tiết nhân vật
 
 Module Basic English đủ 7/7 unit, tổng 51:11 (đợt 26, thêm hình ở đợt 30). Module People đủ 9/9 unit, tổng 1:22:54
 (đợt 29). Module Everyday life đủ 7/7 unit, tổng 1:07:37 (đợt 37). Module Food and drink đủ 5/5 unit, tổng
-48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Module Hobbies and interests có 5/6 unit, tổng 54:38 (đợt 42). Cả sách: 52 video bài giảng, 8:14:44, 330 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
+48:22 (đợt 38). Module Getting around đủ 5/5 unit, tổng 48:26 (đợt 39). Module Places đủ 8/8 unit, tổng 1:17:38 (đợt 40). Module Study and work đủ 6/6 unit, tổng 1:03:57 (đợt 41). Module Hobbies and interests đủ 6/6 unit, tổng 1:06:52 (đợt 42). Cả sách: 53 video bài giảng, 8:26:58, 343 cảnh có hình. Cột "Hình" là số cảnh có hình trong sách (mục 5.3a).
 
 | Unit | Video | Dài | Chương | Hình | Bài trong sách | Nói 1 (Tom ↔ Emma) | Nói 2 (đến lượt bạn) | Thêm ngoài sách |
 |---|---|---|---|---|---|---|---|---|
@@ -774,9 +777,10 @@ Module Hobbies and interests (đợt 42, đưa lên `main` từng unit) — **un
 |---|---|---|---|---|---|---|---|---|
 | **48 Likes and dislikes** | `U48-likes-dislikes` | 11:58 | 20 | 10 | 1–6 (bài 4: bảng ba cột, đáp án có hình bảng; bài 3, 6 thành Nói 1, Nói 2) | Bài 3: bạn có thích…? (8); bài 6: trả lời câu hỏi bài 5 (7) | Part 2 "something you enjoy doing in your free time" (Tom: nấu ăn, Emma: đi bộ đường dài); thảo luận (3) | thang Love it or hate it?, Spotlight like + -ing, hồ sơ của Mirko (hai cảnh), Glossary hai cảnh, Spotlight interesting / interested, bảng bài 4 (hai cảnh), khung từ bài 5; câu nói thích / không thích kiểu IELTS; ôn tập: lỗi hay gặp |
 | **49 Sport** | `U49-sport` | 11:49 | 18 | 9 | 1–6 (bài 3, 5: câu hai chỗ trống tách a / b; bài 6: câu mẫu và trận bóng rổ của Tom) | Thể thao và bạn (6) | Part 2 "a sport you like" (Tom: bóng rổ, Emma: bơi); thảo luận (3) | bảng Games hai cảnh, ô chữ bài 1, kết quả bóng đá Ý, bảng xếp hạng, bài báo hai cột, Glossary hai cảnh, Spotlight động từ bất quy tắc; ôn tập: lỗi hay gặp (win / beat, lose to, nil) |
-| **50 Free time** | `U50-free-time` | 12:13 | 16 | 16 | 1–6 (bài 4: bốn hàng tranh không chữ; bài 3, 6 thành Nói 1, Nói 2) | Bài 3: bạn làm gì lúc rảnh (6); bài 6: sở thích ở nước bạn (6) | Part 2 "a hobby you had as a child" (Tom: vẽ, Emma: sưu tầm vỏ sò); thảo luận (3) | bảng Common activities hai cảnh, bài đọc Favourite hobbies in Russia ba cảnh, Glossary ba cảnh; quy tắc go / play / do; ôn tập: lỗi hay gặp |
+| **50 Free time** | `U50-free-time` | 12:13 | 16 | 16 | 1–6 (bài 4: tám cảnh nửa hàng tranh không chữ; bài 3, 6 thành Nói 1, Nói 2) | Bài 3: bạn làm gì lúc rảnh (6); bài 6: sở thích ở nước bạn (6) | Part 2 "a hobby you had as a child" (Tom: vẽ, Emma: sưu tầm vỏ sò); thảo luận (3) | bảng Common activities hai cảnh, bài đọc Favourite hobbies in Russia ba cảnh, Glossary ba cảnh; quy tắc go / play / do; ôn tập: lỗi hay gặp |
 | 51 Music | `U51-music` | 7:52 | 15 | 9 | 1–6 (bài 5 câu 9 tách 9a / 9b; bài 6: hai hàng ảnh không chú thích) | Bài 3: ban nhạc bạn thích (6) | Part 1 "Music" (5 câu) | bài đọc Arctic Monkeys hai cảnh, Glossary hai cảnh, sáu ảnh nhạc cổ điển (hai cảnh), Spotlight by; các loại nhạc; Nghe và viết |
 | **52 Films** | `U52-films` | 10:46 | 19 | 10 | 1–6 (bài 3: nhãn trên tranh; bài 4: hai hàng tranh không chữ; bài 6 thành Nói 2) | Phim và bạn (6); bài 6: bộ phim xem gần nhất (5) | Part 2 "a film you enjoyed" (Tom: Spirited Away, Emma: Knives Out); thảo luận (3) | bảy tranh loại phim (hai cảnh), Spotlight What kind of…?, áp phích và hội thoại What's on? (ba cảnh), Glossary hai cảnh; tính từ -ing / -ed, câu mua vé ở rạp (GT), câu tả phim kiểu IELTS; ôn tập: lỗi hay gặp |
+| **53 The media** | `U53-media` | 12:14 | 17 | 13 | 1–6 (bài 1: nhãn S / D trên bảng; bài 3: cột Meaning; bài 5: câu hai chỗ trống tách a / b) | Bài 6: bảng hỏi về báo đài (6) | Part 2 "a TV programme you enjoy" (Tom: Planet Earth, Emma: Sherlock); thảo luận (3) | bảng Word – Example – Meaning hai cảnh, bảng bài 1, bảng hỏi bốn cảnh, Glossary ba cảnh, Spotlight watch / see / listen / hear; câu nói về tin tức kiểu IELTS; ôn tập: lỗi hay gặp; tổng kết module |
 
 Module Hobbies and interests (đợt 42) — thích và không thích, thể thao, thời gian rảnh, âm nhạc, phim, báo đài:
 - **Tom:**
@@ -796,7 +800,10 @@ Module Hobbies and interests (đợt 42) — thích và không thích, thể tha
     tai nghe (Unit 51);
   - thích phim khoa học viễn tưởng và phim hài, không thích phim kinh dị; đi rạp khoảng tháng một lần (rạp gần trường chiếu nhiều
     phim Hàn, phim Mỹ); xem phim tiếng Anh có phụ đề tiếng Anh để luyện nghe; gần đây xem lại Interstellar ở nhà trên laptop; Part
-    2: hồi khoảng 12 tuổi xem Spirited Away trên TV với chị Hoa, Tết vừa rồi xem lại cùng chị (Unit 52).
+    2: hồi khoảng 12 tuổi xem Spirited Away trên TV với chị Hoa, Tết vừa rồi xem lại cùng chị (Unit 52);
+  - không mua báo, đọc tin trên ứng dụng điện thoại, xem phim và phim tài liệu trên laptop, không nghe đài, chỉ tin một phần tin
+    trên mạng (kiểm tra ở hai ba trang); Part 2: Planet Earth (phim tài liệu thiên nhiên của BBC, David Attenborough kể chuyện),
+    xem trên laptop vào cuối tuần, thích nhất phần về đại dương (Unit 53).
 - **Emma:**
   - khá thích lái xe ở Anh nhưng không bao giờ lái ở TP. HCM; ghét dọn nhà; thích nói chuyện điện thoại (Chủ nhật nói với mẹ cả
     tiếng); thích cá hơn thịt (lớn lên ven biển, mê hải sản); không mê thể thao, không xem trên TV, nhưng thích bơi; Part 2: đi bộ
@@ -810,7 +817,9 @@ Module Hobbies and interests (đợt 42) — thích và không thích, thể tha
   - thích The Beatles vì bố mở album của họ mỗi Chủ nhật, thuộc hết bài; đã nghe hòa nhạc cổ điển một lần ở London (Unit 51);
   - ghét phim kinh dị, thích phim giật gân và trinh thám; luôn đọc sách trước rồi mới xem phim; thỉnh thoảng xem phim Việt có phụ
     đề tiếng Anh, tháng trước đi xem một phim hài Việt với học viên; học viên xem phim Mỹ để luyện tiếng Anh; Part 2: xem Knives
-    Out ở rạp ở London với anh Jack trước khi sang Việt Nam, không đoán được kết (Unit 52).
+    Out ở rạp ở London với anh Jack trước khi sang Việt Nam, không đoán được kết (Unit 52);
+  - sáng nào cũng đọc một trang tin của Anh, nghe BBC qua mạng khi làm bữa sáng, tin phần lớn tin tức; Part 2: phim truyền hình
+    Sherlock, xem ở nhà tại Anh với anh Jack, nay thỉnh thoảng xem lại trên mạng (Unit 53).
 
 ### 5.8 Module Everyday life (Unit 17–23, Review tr. 61–64) — kế hoạch đợt 37
 
@@ -860,12 +869,16 @@ Module tiếp theo: **Hobbies and interests** (Unit 48–53, Review tr. 138–14
 - Answer key tr. 216 đã có đáp án Unit 48;
 - chưa xem trang; sở thích, thể thao, âm nhạc, phim là chủ đề IELTS Part 1–2 rất hay gặp.
 
-Đợt 42 (đưa lên `main` từng unit, bảng mục 5.7): xong Unit 48–52. Unit khó: 48 Likes and dislikes (tám mức thích với trật tự
+Đợt 42 (đưa lên `main` từng unit, bảng mục 5.7): xong Unit 48–53. Unit khó: 48 Likes and dislikes (tám mức thích với trật tự
 really / quite / very much, like + -ing, interesting ≠ interested; "Do you like…?" là câu hỏi Part 1 hay gặp nhất); 49 Sport (40
 mục Word list; win ≠ beat, draw with, lose to; goals ≠ points; "a sport you like" là đề Part 2 hay gặp); 50 Free time (go / play /
 do đi với từng hoạt động; sở thích là chủ đề Part 1 bắt buộc, "a hobby you had as a child" là đề Part 2 hay gặp); 52 Films (hỏi về
-phim, see ≠ watch, -ing / -ed; "a film you enjoyed" là đề Part 2 rất hay gặp). Còn Unit 53–53; Part 2 dự kiến không trùng nhau: 53
-"a TV programme you enjoy" (unit nào khó thì chọn sau khi xem trang).
+phim, see ≠ watch, -ing / -ed; "a film you enjoyed" là đề Part 2 rất hay gặp); 53 The media (39 mục Word list, watch / see /
+listen / hear, in the paper ≠ on TV, the news is; tin tức và TV là chủ đề Part 1). Module đủ 6/6 unit; unit 51 Music là unit
+thường. Module tiếp theo: **Holidays** (Unit 54–59, Review tr. 150–152): 54 Arranging a holiday (tr. 141), 55 Booking a hotel room
+(142–143), 56 At the airport (144–145), 57 Beach holidays (146), 58 Sightseeing holidays (147), 59 The bank and post office
+(148–149); Answer key tr. 218–219; chưa xem trang; đặt phòng, sân bay, ngân hàng là tình huống General Training, kỳ nghỉ là đề
+Part 2 hay gặp.
 
 ### 5.9 Video nghe – viết 10 phút (đợt 36)
 
@@ -952,7 +965,7 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
   ghi ở đầu kịch bản.
 - Đáp án dài thì chữ tự thu nhỏ. Đã soát: không mục nào bị cắt chữ.
 
-**52 video, 8:35:48** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
+**53 video, 8:45:30** (dòng của phần 1 ghép các mục Word list liền nhau, nên có khi ít hơn số mục):
 
 | Unit | Video | Dài | Từ trong sách (dòng · mục Word list) | Từ thêm | Câu giao tiếp |
 |---|---|---|---|---|---|
@@ -1008,10 +1021,11 @@ phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách r�
 | 50 · Free time | `U50-free-time-dictation` | 9:46 | 32 · 35 | 15 | 33 |
 | 51 · Music | `U51-music-dictation` | 9:41 | 25 · 31 | 18 | 33 |
 | 52 · Films | `U52-films-dictation` | 9:31 | 24 · 28 | 21 | 37 |
+| 53 · The media | `U53-media-dictation` | 9:43 | 29 · 39 | 14 | 32 |
 
 ## 6. Việc tiếp theo
 
-1. Video Unit 53 trở đi theo mục 5 (checklist P2-59, P2-77), module Hobbies and interests (cuối mục 5.8): xong unit nào
-   thì đưa lên `main` unit đó. Mỗi unit hai video: bài giảng (mục 5) và nghe – viết (mục 5.9).
+1. Video Unit 54 trở đi theo mục 5 (checklist P2-59), module Holidays (cuối mục 5.8). Mỗi unit hai video: bài giảng (mục 5)
+   và nghe – viết (mục 5.9).
 2. Có CD-ROM thì thêm audio phát âm từng từ (khai thư mục audio trong `files`, như sách có track).
 3. Gặp thêm lỗi in trong Answer key thì ghi vào mục 3.3.
