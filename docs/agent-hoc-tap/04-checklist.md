@@ -449,7 +449,7 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - *Đợt 39:* xong module Getting around, Unit 29–33 — 10 video (P2-74). Còn Unit 34 trở đi; module Places ở cuối file 09 mục 5.8.
   - *Đợt 40:* xong module Places, Unit 34–41 — 16 video (P2-75). Còn Unit 42 trở đi; module Study and work ở cuối file 09 mục 5.8.
   - *Đợt 41:* xong module Study and work, Unit 42–47 — 12 video (P2-76). Còn Unit 48 trở đi; module Hobbies and interests ở cuối file 09 mục 5.8.
-  - *Đợt 42:* module Hobbies and interests, đưa lên `main` từng unit — xong Unit 48–52 (10 video, P2-77). Còn Unit 53 trở đi.
+  - *Đợt 42:* module Hobbies and interests, đưa lên `main` từng unit — xong Unit 48–53 (12 video, P2-77). Còn Unit 54 trở đi; module Holidays ở cuối file 09 mục 5.8.
 - [x] **P2-60** **GENKI Unit 0: gom thành bảy video 7–10 phút, bỏ đếm ngược** (đợt 27, 7 video, 1:00:10), theo yêu cầu người học. Chi tiết: file 07 mục 4.1, 4.4.
   - 19 video 2,5–5 phút của đợt 23 gom thành 7 video theo thứ tự học: Hiragana 1 (Unit 0 học gì, cách xem video, ba loại chữ, nguyên âm, hàng か さ), Hiragana 2 (hàng た → ん, cả bảng), Hiragana 3 (luyện tập, ゛゜, ゃゅょ), Hiragana 4 & Katakana 1 (っ, trường âm, bảng katakana), Katakana 2 (chữ dễ nhầm, dấu và ー, từ mượn, chữ Hán), Greetings, Numbers.
   - Không còn `wait` / `echo`: nhắc lại trong khoảng nghỉ sau mỗi chữ hoặc đọc cùng Yuki; câu đố nghỉ 3 giây (nghe – viết 2,5 giây) rồi tới đáp án, Emma nhắc "Pause the video if you need more time"; viết tay, tự giới thiệu, đếm 1–20 thì tự tạm dừng video.
@@ -551,12 +551,12 @@ Mã task dùng chung với [03-ke-hoach-trien-khai.md](03-ke-hoach-trien-khai.md
   - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0. Đo bản dựng: bài giảng dài nhất 2,38–2,42 giây, nghe – viết 2,00–2,08 giây.
   - Word list Unit 42–47 (235 mục) thêm vào `work/wordlist.json` (nay 1496 mục); OCR sót năm mục (computer science, get a grade, ICT, PE, print something out), thêm tay; video nghe – viết đủ mọi mục ("chưa hiện: 0").
   - Test: unit khó U42, U43, U45; hồi quy nghe – viết cả 47 unit; e2e: thẻ sách 94 video, Unit 1–47 mỗi unit hai nút.
-- [ ] **P2-77** **Oxford Word Skills Basic module Hobbies and interests: bài giảng và nghe – viết Unit 48–53, đưa lên `main` từng unit** (đợt 42; xong Unit 48–52: bài giảng 54:38, nghe – viết 48:06), theo yêu cầu người học: "tiếp tục module tiếp theo xong tới đâu commit push main tới đó". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
-  - Bài giảng theo khuôn file 09 mục 5, đủ mọi bài tập trong sách, hình trong sách ở mọi video: Unit 48 Likes and dislikes (unit khó, 11:58); Unit 49 Sport (unit khó, 11:49); Unit 50 Free time (unit khó, 12:13); Unit 51 Music (7:52); Unit 52 Films (unit khó, 10:46).
+- [x] **P2-77** **Oxford Word Skills Basic module Hobbies and interests: bài giảng và nghe – viết Unit 48–53, đưa lên `main` từng unit** (đợt 42; xong Unit 48–53: bài giảng 1:06:52, nghe – viết 57:49), theo yêu cầu người học: "tiếp tục module tiếp theo xong tới đâu commit push main tới đó". Chi tiết: [09-oxford-word-skills-basic.md](09-oxford-word-skills-basic.md) mục 5.7, 5.9.
+  - Bài giảng theo khuôn file 09 mục 5, đủ mọi bài tập trong sách, hình trong sách ở mọi video: Unit 48 Likes and dislikes (unit khó, 11:58); Unit 49 Sport (unit khó, 11:49); Unit 50 Free time (unit khó, 12:13); Unit 51 Music (7:52); Unit 52 Films (unit khó, 10:46); Unit 53 The media (unit khó, 12:14).
   - Unit 48: thêm câu nói thích / không thích kiểu IELTS, ôn tập lỗi hay gặp (interesting / interested, like very much…), Part 2 "something you enjoy doing in your free time" với bài mẫu của Tom và Emma, thảo luận kiểu Part 3.
   - Không khoảng lặng từ 3 giây: câu cuối cảnh tự trả lời `pause` 1,0. Đo bản dựng: bài giảng dài nhất 2,39–2,43 giây, nghe – viết 2,03–2,08 giây.
   - Word list Unit 48–53 (191 mục) thêm vào `work/wordlist.json` (nay 1687 mục), không sót mục nào; video nghe – viết đủ mọi mục ("chưa hiện: 0").
-  - Test: unit khó U48, U49, U50, U52; e2e: thẻ sách 104 video, Unit 1–52 mỗi unit hai nút.
+  - Test: unit khó U48, U49, U50, U52, U53; e2e: thẻ sách 106 video, Unit 1–53 mỗi unit hai nút.
 
 ### Cổng G2
 

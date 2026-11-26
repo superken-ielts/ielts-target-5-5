@@ -1,0 +1,543 @@
+# Video Oxford Word Skills Basic · Unit 53 — I can talk about the media (sách in tr. 136–137, Answer key tr. 218).
+# UNIT KHÓ (đợt 42): 39 mục Word list, từ trừu tượng (media, opinion, event, disaster, celebrity), cặp động từ dễ nhầm watch / see,
+# listen / hear, giới từ in the paper ≠ on TV / on the radio, all / most / some / none of it, news là danh từ không đếm được; tin tức
+# và TV là chủ đề IELTS Part 1 hay gặp, "a TV programme you enjoy" là đề Part 2 — video khoảng 13 phút: phần sách, rồi câu nói về tin
+# tức kiểu IELTS, ÔN TẬP (lỗi hay gặp) và LUYỆN NÓI CHUNG (Part 2 "a TV programme you enjoy", hai bài mẫu; ba câu thảo luận kiểu Part 3).
+# Unit cuối module Hobbies and interests: tổng kết nhắc làm Review tr. 138–140. Khuôn: file 09 mục 5.2. Không `wait` / `echo`; không
+# khoảng lặng từ 3 giây (câu cuối cảnh tự trả lời `pause: 1.0`). Không có cảnh "Nghe và viết": unit có video nghe – viết riêng.
+# Bài trong sách: đủ 1–6 theo Answer key tr. 218 (bài 1: đáp án hiện thành nhãn trên từng hàng của bảng; bài 5: câu hai chỗ trống tách
+# a / b). Bài 3 (Test yourself): cột Meaning của bảng (hai cảnh) — Emma đọc nghĩa, Tom nói từ, đáp án hiện thành nhãn. Bài 6 (ABOUT
+# YOU): Tom và Emma trả lời bảng hỏi (cảnh Nói 2).
+# Hình trong sách: bảng Word – Example – Meaning (hai cảnh, khung theo hàng), bảng bài 1, cột Meaning (hai cảnh), bảng hỏi Media
+# questionnaire (bốn cảnh, khung theo câu hỏi rồi từng phương án), Glossary (ba cảnh), Spotlight watch / see / listen / hear — đo
+# bằng máy.
+# Chi tiết nhân vật (khớp file 06 mục 9.4, file 09 mục 5.7): Tom đọc tin trên điện thoại, không xem TV nhiều (xem phim trên laptop),
+# nghe nhạc trực tuyến; Emma hay vào một trang tin của Anh và YouTube, mê truyện trinh thám, gọi cho mẹ mỗi Chủ nhật. Mới: Tom không mua
+# báo, đọc tin trên ứng dụng để biết chuyện gì đã xảy ra, không nghe đài, tin một phần tin trên mạng; xem Planet Earth (phim tài liệu
+# thiên nhiên của BBC, David Attenborough kể chuyện) trên laptop, thích nhất phần về đại dương; Emma đọc các bài báo hay trên trang tin của
+# Anh, tối nào cũng xem bản tin, nghe tin buổi sáng trên đài BBC qua mạng khi nấu bữa sáng, tin phần lớn tin tức; xem phim truyền hình
+# Sherlock (Benedict Cumberbatch đóng Sherlock Holmes) với anh Jack.
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U53-media.yaml
+id: U53-media
+activity: U53-words
+title: "Unit 53 · The media"
+subtitle: "I can talk about the media"
+title_vi: "Báo đài, truyền thông: media, magazine, opinion, report, event, disaster, celebrity, advert; the news, programme, soap, weather forecast; watch, see, listen, hear"
+tag: "HOBBIES AND INTERESTS · UNIT 53"
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - emma: "Welcome to Unit 53: the media. It's the last unit of the module. Today: words for newspapers, TV and radio, and the verbs watch, see, listen and hear."
+        say: "Welcome to Unit fifty-three: the media. It's the last unit of the module. Today: words for newspapers, TV and radio, and the verbs watch, see, listen and hear."
+        vi: "Unit 53: báo đài — unit cuối của module Sở thích."
+      - tom: "It's a long unit, with lots of speaking practice. No countdown: pause the video whenever you want to answer."
+        vi: "Unit dài, nhiều phần luyện nói; không đếm ngược — tự tạm dừng khi muốn trả lời."
+
+  - kind: figure
+    chapter: "What is the media?"
+    heading: "A · What is the media? (1)"
+    heading_vi: "tr. 136 — bảng Word · Example · Meaning"
+    image: {pdf: course-book, page: 137, clip: [28, 98, 484, 256]}
+    items:
+      - {box: [32, 116.4, 480, 144]}
+      - {box: [32, 144, 480, 183.3]}
+      - {box: [32, 183.3, 480, 199.4]}
+      - {box: [32, 199.4, 480, 227.2]}
+      - {box: [32, 227.2, 480, 254.8]}
+    lines:
+      - {emma: "Look at page one hundred and thirty-six. The media: TV, radio, newspapers, magazines, and the internet. The media often write about famous people.", focus: 0, vi: "the media: truyền thông, báo đài"}
+      - {tom: "A magazine: something you can buy every week or month, often with stories and coloured photos. Do you read women's magazines?", focus: 1, vi: "magazine: tạp chí"}
+      - {emma: "Opinion: what you think about something. What's your opinion of the events?", focus: 2, vi: "opinion: ý kiến"}
+      - {tom: "Report: give information on the news. The person is a reporter, or a journalist. Journalists report the news from all over the world.", focus: 3, vi: "report: đưa tin · reporter = journalist: phóng viên"}
+      - {emma: "An event: something important that happens. It can be good or bad. The Olympic Games is a very big event.", focus: 4, vi: "event: sự kiện"}
+
+  - kind: figure
+    heading: "A · What is the media? (2)"
+    heading_vi: "tr. 136 — die, war ≠ peace, disaster, celebrity, advertisement (advert)"
+    image: {pdf: course-book, page: 137, clip: [28, 253, 484, 396]}
+    items:
+      - {box: [32, 254.8, 480, 271.2]}
+      - {box: [32, 271.2, 480, 310.3]}
+      - {box: [32, 310.3, 480, 338]}
+      - {box: [32, 338, 480, 365.7]}
+      - {box: [32, 365.7, 480, 393.4]}
+    lines:
+      - {tom: "Die: stop living. Fortunately, nobody died in the accident.", focus: 0, vi: "die: chết"}
+      - {emma: "War: if a country is at war, it is fighting with another country. When a war ends, there is peace.", focus: 1, vi: "war: chiến tranh · peace: hòa bình"}
+      - {tom: "A disaster: something very bad that happens, often when a lot of people die. The tsunami was a terrible disaster.", focus: 2, vi: "disaster: thảm họa"}
+      - {emma: "A celebrity, plural celebrities: a famous person, usually from TV, film or sport.", focus: 3, vi: "celebrity: người nổi tiếng"}
+      - {tom: "And an advertisement, or an advert: text, a picture or a short film which tries to sell you something. There are too many adverts on TV.", focus: 4, vi: "advertisement = advert: quảng cáo"}
+
+  - kind: figure
+    chapter: "Bài 1: giống hay khác?"
+    heading: "Exercise 1 · Is the meaning of the sentences the same or different? Write S or D"
+    heading_vi: "Ví dụ: What do the media say about him? / What does the advert say about him? → D (Answer key tr. 218)"
+    image: {pdf: course-book, page: 137, clip: [26, 408, 484, 558]}
+    items:
+      - {box: [51, 429.5, 480, 446]}
+      - {box: [51, 446, 480, 462], label: "D: different"}
+      - {box: [51, 462, 480, 477.5], label: "S: the same"}
+      - {box: [51, 477.5, 480, 493], label: "D: different"}
+      - {box: [51, 493, 480, 508.5], label: "S: the same"}
+      - {box: [51, 508.5, 480, 524], label: "D: different"}
+      - {box: [51, 524, 480, 540], label: "S: the same"}
+      - {box: [51, 540, 480, 556], label: "D: different"}
+    lines:
+      - emma: "Exercise 1. Is the meaning of the sentences the same, or different? Write S or D. The example is: what do the media say about him, and what does the advert say about him. Different. Pause the video and try."
+        say: "Exercise one. Is the meaning of the sentences the same, or different? Write ess or dee. The example is: what do the media say about him, and what does the advert say about him. Different. Pause the video and try."
+        focus: 0
+        vi: "Bài 1: nghĩa hai câu giống (S) hay khác (D)?"
+      - {tom: "One. Different: peace is the opposite of war.", focus: 1}
+      - {tom: "Two. The same: your opinion is what you think.", focus: 2}
+      - {tom: "Three. Different: an event isn't an advertisement.", focus: 3}
+      - {tom: "Four. The same: reporting means giving the news.", focus: 4}
+      - {tom: "Five. Different: an article isn't an advertisement.", focus: 5}
+      - {tom: "Six. The same: a TV celebrity is on TV a lot.", focus: 6}
+      - {tom: "Seven. Different: live and die are opposites.", say: "Seven. Different: liv and die are opposites.", focus: 7}
+
+  - kind: blanks
+    chapter: "Bài 2: hoàn thành đoạn văn"
+    heading: "Exercise 2 · Complete the text with words from the table in the correct form"
+    heading_vi: "Ví dụ: The media is TV, radio, newspapers, … (Answer key tr. 218)"
+    items:
+      - {n: 1, q: "The media is TV, radio, newspapers, ___, and the internet.", answer: "magazines"}
+      - {n: 2, q: "The media ___ on important …", answer: "report"}
+      - {n: 3, q: "… on important ___ from around the world;", answer: "events / news"}
+      - {n: 4, q: "for example, ___ like the Asian tsunami,", answer: "disasters"}
+      - {n: 5, q: "or ___ between different countries.", answer: "wars"}
+      - {n: 6, q: "As well as reporting the news, the media give their ___ of events round the world.", answer: "opinion(s)"}
+      - {n: 7, q: "And reporters also like to write about ___ such as Tom Cruise and Angelina Jolie.", answer: "celebrities"}
+    lines:
+      - emma: "Exercise 2. Complete the text with words from the table, in the correct form. Pause the video and try."
+        say: "Exercise two. Complete the text with words from the table, in the correct form. Pause the video and try."
+        vi: "Bài 2: điền từ trong bảng, đúng dạng."
+      - {tom: "One. Magazines, plural. Two. The media report. Three. Important events, or news. Four. Disasters, like the Asian tsunami.", reveal: [1, 2, 3, 4], focus: 3}
+      - {tom: "Five. Wars between different countries. Six. The media give their opinion, or opinions. Seven. Celebrities: the plural ends in -ies.", say: "Five. Wars between different countries. Six. The media give their opinion, or opinions. Seven. Celebrities: the plural ends in eye ee ess.", reveal: [5, 6, 7], focus: 6}
+
+  - kind: figure
+    chapter: "Bài 3: tự kiểm tra"
+    heading: "Exercise 3 · Cover the words and examples. Look at the meanings. Say the words (1)"
+    heading_vi: "Che cột Word và Example, nhìn Meaning — tạm dừng video sau mỗi nghĩa; đáp án hiện khi Tom trả lời"
+    image: {pdf: course-book, page: 137, clip: [303, 114, 484, 256]}
+    items:
+      - {box: [306, 116.4, 481, 144]}
+      - {box: [306, 116.4, 481, 144], label: "the media"}
+      - {box: [306, 144, 481, 183.3]}
+      - {box: [306, 144, 481, 183.3], label: "a magazine"}
+      - {box: [306, 183.3, 481, 199.4]}
+      - {box: [306, 183.3, 481, 199.4], label: "an opinion"}
+      - {box: [306, 199.4, 481, 227.2]}
+      - {box: [306, 199.4, 481, 227.2], label: "report"}
+      - {box: [306, 227.2, 481, 254.8]}
+      - {box: [306, 227.2, 481, 254.8], label: "an event"}
+    lines:
+      - emma: "Exercise 3 is a test. Cover the words and examples, and look at the meanings. Pause the video after each meaning, and say the word. TV, radio, newspapers, magazines and the internet."
+        say: "Exercise three is a test. Cover the words and examples, and look at the meanings. Pause the video after each meaning, and say the word. TV, radio, newspapers, magazines and the internet."
+        focus: 0
+        vi: "Bài 3: che từ và ví dụ, nhìn nghĩa, nói từ."
+      - {tom: "The media.", focus: 1}
+      - {emma: "Something you can buy every week or month, with stories and photos.", focus: 2}
+      - {tom: "A magazine.", focus: 3}
+      - {emma: "What you think about something.", focus: 4}
+      - {tom: "An opinion.", focus: 5}
+      - {emma: "Give information on the news.", focus: 6}
+      - {tom: "Report.", focus: 7}
+      - {emma: "Something important that happens.", focus: 8}
+      - {tom: "An event.", focus: 9}
+
+  - kind: figure
+    heading: "Exercise 3 · Say the words (2)"
+    heading_vi: "Tạm dừng video sau mỗi nghĩa"
+    image: {pdf: course-book, page: 137, clip: [303, 253, 484, 396]}
+    items:
+      - {box: [306, 254.8, 481, 271.2]}
+      - {box: [306, 254.8, 481, 271.2], label: "die"}
+      - {box: [306, 271.2, 481, 310.3]}
+      - {box: [306, 271.2, 481, 310.3], label: "war (≠ peace)"}
+      - {box: [306, 310.3, 481, 338]}
+      - {box: [306, 310.3, 481, 338], label: "a disaster"}
+      - {box: [306, 338, 481, 365.7]}
+      - {box: [306, 338, 481, 365.7], label: "a celebrity"}
+      - {box: [306, 365.7, 481, 393.4]}
+      - {box: [306, 365.7, 481, 393.4], label: "an advertisement / an advert"}
+    lines:
+      - {emma: "Stop living.", focus: 0}
+      - {tom: "Die.", focus: 1}
+      - {emma: "When a country is fighting with another country.", focus: 2}
+      - {tom: "War. And when it ends, there is peace.", focus: 3}
+      - {emma: "Something very bad that happens, when a lot of people die.", focus: 4}
+      - {tom: "A disaster.", focus: 5}
+      - {emma: "A famous person, usually from TV, film or sport.", focus: 6}
+      - {tom: "A celebrity.", focus: 7}
+      - {emma: "Something which tries to sell you something.", focus: 8}
+      - {tom: "An advertisement, or an advert.", focus: 9}
+
+  - kind: figure
+    chapter: "Your media: bảng hỏi"
+    heading: "B · Your media: Media questionnaire (1)"
+    heading_vi: "tr. 137 — câu 1: đọc báo để làm gì?"
+    image: {pdf: course-book, page: 138, clip: [29, 78, 256, 145]}
+    items:
+      - {box: [38, 79.5, 254, 94.5]}
+      - {box: [52, 94.5, 254, 107]}
+      - {box: [52, 107, 254, 120]}
+      - {box: [52, 120, 254, 132.5]}
+      - {box: [52, 132.5, 254, 144]}
+    lines:
+      - {"emma": "Now page one hundred and thirty-seven: a media questionnaire. Question one. Why do you read a newspaper?", "focus": 0}
+      - {"tom": "A: to find out what has happened.", "say": "Eigh: to find out what has happened.", "focus": 1, "vi": "find out: tìm hiểu, biết được · happen: xảy ra"}
+      - {"emma": "B: because it has interesting articles.", "say": "Bee: because it has interesting articles.", "focus": 2, "vi": "article: bài báo"}
+      - {"tom": "C: for the sports results.", "say": "See: for the sports results.", "focus": 3}
+      - {"emma": "D: for the business news.", "say": "Dee: for the business news.", "focus": 4}
+
+  - kind: figure
+    heading: "B · Your media: Media questionnaire (2)"
+    heading_vi: "tr. 137 — câu 2: xem gì trên TV?"
+    image: {pdf: course-book, page: 138, clip: [29, 148, 256, 216]}
+    items:
+      - {box: [38, 149.5, 254, 165]}
+      - {box: [52, 165, 254, 176]}
+      - {box: [52, 176, 254, 190.5]}
+      - {box: [52, 190.5, 254, 202]}
+      - {box: [52, 202, 254, 215]}
+    lines:
+      - {"tom": "Question two. What do you watch on TV?", "focus": 0}
+      - {"emma": "A: the news.", "say": "Eigh: the news.", "focus": 1, "vi": "the news: bản tin"}
+      - {"tom": "B: soaps.", "say": "Bee: soaps.", "focus": 2, "vi": "soap: phim truyền hình dài tập"}
+      - {"emma": "C: films.", "say": "See: films.", "focus": 3}
+      - {"tom": "D: nothing much.", "say": "Dee: nothing much.", "focus": 4, "vi": "nothing much: chẳng có gì nhiều"}
+
+  - kind: figure
+    heading: "B · Your media: Media questionnaire (3)"
+    heading_vi: "tr. 137 — câu 3: nghe gì trên đài?"
+    image: {pdf: course-book, page: 138, clip: [29, 219, 256, 287]}
+    items:
+      - {box: [38, 220, 254, 236]}
+      - {box: [52, 236, 254, 247]}
+      - {box: [52, 247, 254, 261]}
+      - {box: [52, 261, 254, 273]}
+      - {box: [52, 273, 254, 286]}
+    lines:
+      - {"emma": "Question three. What do you listen to on the radio?", "focus": 0}
+      - {"tom": "A: the news.", "say": "Eigh: the news.", "focus": 1}
+      - {"emma": "B: music programmes.", "say": "Bee: music programmes.", "focus": 2, "vi": "programme: chương trình"}
+      - {"tom": "C: the weather forecast.", "say": "See: the weather forecast.", "focus": 3, "vi": "weather forecast: dự báo thời tiết"}
+      - {"emma": "D: nothing much.", "say": "Dee: nothing much.", "focus": 4}
+
+  - kind: figure
+    heading: "B · Your media: Media questionnaire (4)"
+    heading_vi: "tr. 137 — câu 4: có tin tin tức không?"
+    image: {pdf: course-book, page: 138, clip: [29, 290, 256, 370]}
+    items:
+      - {box: [38, 291, 254, 316]}
+      - {box: [52, 317.5, 254, 331]}
+      - {box: [52, 331, 254, 344]}
+      - {box: [52, 344, 254, 357]}
+      - {box: [52, 357, 254, 369]}
+    lines:
+      - {"tom": "Question four. Do you believe what you read or hear in the news?", "focus": 0, "vi": "believe: tin"}
+      - {"emma": "A: yes, all of it.", "say": "Eigh: yes, all of it.", "focus": 1, "vi": "all of it: tất cả"}
+      - {"tom": "B: yes, most of it.", "say": "Bee: yes, most of it.", "focus": 2, "vi": "most of it: phần lớn"}
+      - {"emma": "C: yes, some of it.", "say": "See: yes, some of it.", "focus": 3, "vi": "some of it: một phần"}
+      - {"tom": "D: no, none of it.", "say": "Dee: no, none of it.", "focus": 4, "vi": "none of it: không chút nào"}
+
+  - kind: figure
+    chapter: "Glossary"
+    heading: "Glossary (1) · newspaper · find out · happen · article · on TV / on the radio"
+    heading_vi: "tr. 137 — nghĩa của các từ in đậm"
+    image: {pdf: course-book, page: 138, clip: [273, 50, 486, 168]}
+    items:
+      - {box: [276, 72.5, 485, 96.5]}
+      - {box: [276, 96.5, 485, 108.5]}
+      - {box: [276, 108.5, 485, 132]}
+      - {box: [276, 132, 485, 145]}
+      - {box: [276, 145, 485, 168]}
+    lines:
+      - {emma: "Look at the glossary. A newspaper, for example The Times, or Le Monde. We also say a paper.", focus: 0, vi: "newspaper = paper: tờ báo"}
+      - {tom: "Find out: get information or facts.", focus: 1, vi: "find out: tìm ra, biết được"}
+      - {emma: "Happen: take place. We don't know what will happen tomorrow.", focus: 2, vi: "happen: xảy ra"}
+      - {tom: "An article: a piece of writing in a paper or magazine.", focus: 3, vi: "article: bài báo"}
+      - {emma: "And: on TV, on the radio, but in the paper. Not in TV, not in the radio.", focus: 4, vi: "on TV · on the radio · in the paper"}
+
+  - kind: figure
+    heading: "Glossary (2) · the news · soap · nothing much · programme"
+    heading_vi: "tr. 137 — nghĩa của các từ in đậm (tiếp)"
+    image: {pdf: course-book, page: 138, clip: [273, 168, 486, 241]}
+    items:
+      - {box: [276, 168.5, 485, 192.8]}
+      - {box: [276, 192.8, 485, 217]}
+      - {box: [276, 217, 485, 228.8]}
+      - {box: [276, 228.8, 485, 240.6]}
+    lines:
+      - {emma: "The news: a TV or radio programme about important things happening in the world.", focus: 0, vi: "the news: bản tin (không đếm được: the news is…)"}
+      - {tom: "A soap: a story on TV two or three times a week, about the lives and problems of a group of people.", focus: 1, vi: "soap (soap opera): phim truyền hình dài tập"}
+      - {emma: "Nothing much: nothing important.", focus: 2}
+      - {tom: "A programme: a TV or radio show, for example the news.", focus: 3, vi: "programme: chương trình"}
+
+  - kind: figure
+    heading: "Glossary (3) · weather forecast · believe · all / most / some / none"
+    heading_vi: "tr. 137 — nghĩa của các từ in đậm (tiếp)"
+    image: {pdf: course-book, page: 138, clip: [273, 240.6, 486, 300]}
+    items:
+      - {box: [276, 240.8, 485, 264.5]}
+      - {box: [276, 264.5, 485, 276.5]}
+      - {box: [276, 276.5, 485, 299]}
+    lines:
+      - {emma: "The weather forecast: a description of the weather for the next few days.", focus: 0, vi: "weather forecast: dự báo thời tiết"}
+      - {tom: "Believe: think that something is true.", focus: 1, vi: "believe: tin"}
+      - {emma: "And all is a hundred per cent, most is eighty to ninety-five per cent, some is thirty to fifty per cent, and none is zero.", focus: 2, vi: "all · most · some · none"}
+
+  - kind: figure
+    chapter: "Spotlight: watch, see, listen, hear"
+    heading: "Spotlight · watch, see, listen, hear"
+    heading_vi: "tr. 137 — watch TV · see / watch a programme · listen to the radio · hear / listen to a programme"
+    image: {pdf: course-book, page: 138, clip: [273, 306, 486, 384]}
+    items:
+      - {box: [276, 334, 485, 357.5]}
+      - {box: [276, 357.5, 485, 382]}
+    lines:
+      - {emma: "Look at the spotlight. We watch TV, but we see, or watch, a programme. I saw a great programme last night.", focus: 0, vi: "watch TV · see / watch a programme"}
+      - {tom: "We listen to the radio, but we hear, or listen to, a programme. I heard the news on the radio this morning.", focus: 1, vi: "listen to the radio · hear / listen to a programme"}
+
+  - kind: blanks
+    chapter: "Bài 4: chọn đáp án đúng"
+    heading: "Exercise 4 · Circle the correct answer"
+    heading_vi: "Ví dụ: See – / to the film. → see the film (không có to) · \"–\" nghĩa là không cần từ nào (Answer key tr. 218)"
+    items:
+      - {n: 1, q: "Read an article on / in the paper.  →  ___", answer: "in"}
+      - {n: 2, q: "Let's listen to the / a news.  →  ___", answer: "the"}
+      - {n: 3, q: "Watch a programme in / on TV.  →  ___", answer: "on"}
+      - {n: 4, q: "Find – / out what has happened.  →  ___", answer: "out"}
+      - {n: 5, q: "See the programme / article on TV.  →  ___", answer: "programme"}
+      - {n: 6, q: "Did you hear – / to the sports results?  →  ___", answer: "– (hear the sports results)"}
+      - {n: 7, q: "I heard all – / of it on / in the radio.  →  ___", answer: "of, on"}
+      - {n: 8, q: "Don't believe / listen what you see.  →  ___", answer: "believe"}
+      - {n: 9, q: "I watched most – / of it.  →  ___", answer: "of"}
+    lines:
+      - emma: "Exercise 4. Circle the correct answer. The example is: see the film, with no to. Pause the video and try."
+        say: "Exercise four. Circle the correct answer. The example is: see the film, with no to. Pause the video and try."
+        vi: "Bài 4: khoanh đáp án đúng."
+      - {tom: "One. Read an article in the paper. Two. Listen to the news. Three. Watch a programme on TV. Four. Find out what has happened. Five. See the programme on TV.", reveal: [1, 2, 3, 4, 5], focus: 4}
+      - {tom: "Six. Did you hear the sports results? No word. Seven. I heard all of it on the radio. Eight. Don't believe what you see. Nine. I watched most of it.", reveal: [6, 7, 8, 9], focus: 8}
+
+  - kind: blanks
+    chapter: "Bài 5: hoàn thành hội thoại"
+    heading: "Exercise 5 · Complete the dialogues"
+    heading_vi: "Ví dụ: I always read a paper at the weekend. ~ But do you read all of it? — câu hai chỗ trống tách a / b (Answer key tr. 218)"
+    items:
+      - {n: "1a", q: "Did you ___ TV last night? ~ Yes, I …", answer: "watch"}
+      - {n: "1b", q: "~ Yes, I ___ a programme about dogs.", answer: "saw / watched"}
+      - {n: "2a", q: "I read the story but I don't ___ it's true. ~ No, …", answer: "believe / think"}
+      - {n: "2b", q: "~ No, ___ of it is true. It's all false.", answer: "none"}
+      - {n: "3a", q: "Have you heard the ___? ~ No, what's …", answer: "news"}
+      - {n: "3b", q: "~ No, what's ___?", answer: "happened"}
+      - {n: "4a", q: "Did you ___ to the radio this morning? ~ Yes, I …", answer: "listen"}
+      - {n: "4b", q: "~ Yes, I ___ the 8 o'clock news.", answer: "heard / listened to"}
+      - {n: 5, q: "What's in the ___ this morning? ~ I don't know; I never buy one.", answer: "paper / newspaper"}
+      - {n: 6, q: "Have you seen the weather ___? ~ Yes, it's going to rain.", answer: "forecast"}
+      - {n: "7a", q: "What did you ___ on TV? ~ Oh, nothing …", answer: "watch"}
+      - {n: "7b", q: "~ Oh, nothing ___.", answer: "much"}
+    lines:
+      - emma: "Exercise 5. Complete the dialogues. The example is: I always read a paper at the weekend. But do you read all of it? Pause the video and try."
+        say: "Exercise five. Complete the dialogues. The example is: I always read a paper at the weekend. But do you read all of it? Pause the video and try."
+        vi: "Bài 5: hoàn thành hội thoại."
+      - {tom: "One. Did you watch TV last night? Yes, I saw, or watched, a programme about dogs. Two. I don't believe, or think, it's true. No, none of it is true. Three. Have you heard the news? No, what's happened?", reveal: ["1a", "1b", "2a", "2b", "3a", "3b"], focus: 5}
+      - {tom: "Four. Did you listen to the radio? Yes, I heard, or listened to, the eight o'clock news. Five. What's in the paper this morning? Six. The weather forecast. Seven. What did you watch on TV? Oh, nothing much.", reveal: ["4a", "4b", 5, 6, "7a", "7b"], focus: 11}
+
+  - kind: qa
+    chapter: "Nói 1: bảng hỏi của bạn"
+    heading: "Speaking 1 · Exercise 6: about you"
+    heading_vi: "Bài 6 (ABOUT YOU) — trả lời bảng hỏi; tạm dừng sau mỗi câu hỏi để tự trả lời"
+    items:
+      - q: "Why do you read a newspaper, Tom?"
+        a: "I don't buy newspapers. I read the news on an app on my phone, to find out what has happened."
+        ask: emma
+        by: tom
+        phrases: ["I don't buy…", "to find out…"]
+      - q: "And you, Emma?"
+        a: "Because it has interesting articles. I read a British news website every morning."
+        ask: tom
+        by: emma
+        phrases: ["Because it has…", "every morning"]
+      - q: "What do you watch on TV?"
+        a: "Nothing much! I watch films and documentaries on my laptop."
+        ask: emma
+        by: tom
+        phrases: ["Nothing much!"]
+      - q: "What do you listen to on the radio?"
+        a: "The news. I listen to the BBC online while I make breakfast."
+        ask: tom
+        by: emma
+        phrases: ["while I…"]
+      - q: "Do you believe what you read in the news?"
+        a: "Some of it. There's a lot of false news online, so I check it on two or three websites."
+        ask: emma
+        by: tom
+        phrases: ["Some of it.", "so I check it…"]
+      - q: "And you?"
+        a: "Most of it, but not all of it. Newspapers give their opinions too."
+        ask: tom
+        by: emma
+        phrases: ["Most of it, but not all of it."]
+    lines:
+      - {emma: "Exercise 6 is about you. Read the questionnaire again, and answer the questions. Tom, why do you read a newspaper?", say: "Exercise six is about you. Read the questionnaire again, and answer the questions. Tom, why do you read a newspaper?", focus: 0}
+      - {tom: "I don't buy newspapers. I read the news on an app on my phone, to find out what has happened.", reveal: 0, vi: "Không mua báo; đọc tin trên ứng dụng điện thoại để biết chuyện gì đã xảy ra."}
+      - {tom: "And you, Emma?", focus: 1}
+      - {emma: "Because it has interesting articles. I read a British news website every morning.", reveal: 1, vi: "Vì có bài hay; sáng nào cũng đọc một trang tin của Anh."}
+      - {emma: "What do you watch on TV?", focus: 2}
+      - {tom: "Nothing much! I watch films and documentaries on my laptop.", reveal: 2, vi: "Chẳng mấy khi! Xem phim, phim tài liệu trên laptop."}
+      - {tom: "What do you listen to on the radio?", focus: 3}
+      - {emma: "The news. I listen to the BBC online while I make breakfast.", say: "The news. I listen to the bee bee see online while I make breakfast.", reveal: 3, vi: "Bản tin: nghe BBC qua mạng khi làm bữa sáng."}
+      - {emma: "Do you believe what you read in the news?", focus: 4}
+      - {tom: "Some of it. There's a lot of false news online, so I check it on two or three websites.", reveal: 4, vi: "Tin một phần: trên mạng nhiều tin sai, nên kiểm tra ở hai ba trang."}
+      - {tom: "And you?", focus: 5}
+      - {emma: "Most of it, but not all of it. Newspapers give their opinions too.", reveal: 5, vi: "Phần lớn, nhưng không phải tất cả: báo chí cũng đưa ý kiến của họ."}
+
+  - kind: bullets
+    chapter: "Nói về tin tức kiểu IELTS"
+    heading: "Talking about the news in IELTS"
+    heading_vi: "Thêm ngoài sách — câu khung cho Part 1 \"News\", \"TV\""
+    items:
+      - {en: "I usually get the news from … (an app / TV / social media)", vi: "lấy tin từ đâu"}
+      - {en: "I keep up with … · I follow the news about …", vi: "theo dõi tin tức"}
+      - {en: "The news is … (news + is: no plural)", vi: "news không đếm được: the news is"}
+      - {en: "I don't trust … · fake news", vi: "không tin · tin giả"}
+      - {en: "In my country, the most popular programmes are …", vi: "chương trình được ưa chuộng"}
+    lines:
+      - {emma: "Here are some useful sentences for IELTS part one. I usually get the news from an app, or from TV.", say: "Here are some useful sentences for eye-elts part one. I usually get the news from an app, or from TV.", focus: 0}
+      - {tom: "I keep up with the news about my city. I follow the football news.", focus: 1, vi: "keep up with: cập nhật"}
+      - {emma: "Remember: the news is, not the news are. News has no plural.", focus: 2}
+      - {tom: "I don't trust everything on social media: there's a lot of fake news.", focus: 3, vi: "fake news: tin giả"}
+      - {emma: "And: in my country, the most popular programmes are game shows and soaps.", focus: 4, vi: "game show: trò chơi truyền hình"}
+
+  - kind: blanks
+    chapter: "Ôn tập: lỗi hay gặp"
+    heading: "Review · Common mistakes: correct the sentences"
+    heading_vi: "Lỗi người Việt hay mắc khi nói về báo đài — tạm dừng video và sửa"
+    items:
+      - {n: 1, q: "The news are very bad today.  →  ___", answer: "The news is very bad today."}
+      - {n: 2, q: "I saw TV last night.  →  ___", answer: "I watched TV last night."}
+      - {n: 3, q: "I listened the news this morning.  →  ___", answer: "I listened to the news this morning."}
+      - {n: 4, q: "I read it on the newspaper.  →  ___", answer: "I read it in the newspaper."}
+      - {n: 5, q: "I heard it in the radio.  →  ___", answer: "I heard it on the radio."}
+      - {n: 6, q: "Most of people watch TV every day.  →  ___", answer: "Most people watch TV every day."}
+    lines:
+      - emma: "Let's review. These sentences all have a mistake. Pause the video and correct them."
+        vi: "Ôn tập: mỗi câu có một lỗi — tạm dừng video và sửa."
+      - {tom: "One. The news is very bad: news is singular. Two. I watched TV: we watch TV.", reveal: [1, 2], focus: 1}
+      - {tom: "Three. I listened to the news. Four. In the newspaper.", reveal: [3, 4], focus: 3}
+      - {tom: "Five. On the radio. Six. Most people, or most of the people.", reveal: [5, 6], focus: 5}
+
+  - kind: letter
+    chapter: "Luyện nói chung: Part 2"
+    heading: "IELTS Part 2 · Describe a TV programme you enjoy"
+    heading_vi: "Thẻ đề Part 2: 1 phút chuẩn bị, nói 1–2 phút — bài mẫu của Tom"
+    roles: {emma: examiner, tom: candidate}
+    items:
+      - text: "I'd like to talk about Planet Earth. It's a nature documentary by the BBC, and David Attenborough tells the story."
+        say: "I'd like to talk about Planet Earth. It's a nature documentary by the bee bee see, and David Attenborough tells the story."
+        note: "what the programme is"
+      - text: "I don't watch much TV, so I watch it on my laptop, usually at the weekend."
+        note: "when and where you watch it"
+      - text: "Every programme is about a different place: mountains, deserts, jungles, or the ocean. My favourite part is about the ocean."
+        note: "what it is about"
+      - text: "I enjoy it because the photography is amazing, and I learn a lot about animals. It's relaxing after a busy week."
+        note: "why you enjoy it"
+    lines:
+      - {emma: "Now, general speaking practice, like part two of the IELTS speaking test. Describe a TV programme you enjoy. Tom, can you start speaking now, please?", say: "Now, general speaking practice, like part two of the eye-elts speaking test. Describe a TV programme you enjoy. Tom, can you start speaking now, please?", focus: 0, vi: "Luyện nói chung kiểu Part 2: chương trình truyền hình bạn thích."}
+      - {read: tom, focus: 0}
+      - {read: tom, focus: 1}
+      - {read: tom, focus: 2}
+      - {read: tom, focus: 3}
+
+  - kind: letter
+    heading: "Part 2 · Emma's talk"
+    heading_vi: "Cùng thẻ đề — Emma trả lời, Tom làm giám khảo"
+    roles: {emma: candidate}
+    items:
+      - text: "I'd like to talk about Sherlock. It's a British detective series, and Benedict Cumberbatch plays Sherlock Holmes."
+        note: "what the programme is"
+      - text: "I watched it at home in England with my brother Jack. Now I sometimes watch it again online."
+        note: "when and where you watch it"
+      - text: "It's about a very clever detective in modern London. He and his friend, Doctor Watson, help the police with difficult crimes."
+        note: "what it is about"
+      - text: "I enjoy it because I love detective stories. The stories are exciting, and Sherlock is very funny!"
+        note: "why you enjoy it"
+    lines:
+      - {tom: "Thank you. Now it's my turn to be the examiner. Emma, please describe a TV programme you enjoy.", focus: 0}
+      - {read: emma, focus: 0}
+      - {read: emma, focus: 1}
+      - {read: emma, focus: 2}
+      - {read: emma, focus: 3}
+
+  - kind: practice
+    chapter: "Luyện nói chung: đến lượt bạn"
+    heading: "Your turn · Part 2: a TV programme you enjoy"
+    heading_vi: "Tạm dừng video: 1 phút ghi từ khóa, rồi nói 1–2 phút theo bốn ý"
+    items:
+      - {q: "What is the programme?", hint: "I'd like to talk about … · It's a soap / a documentary / a game show …"}
+      - {q: "When and where do you watch it?", hint: "I watch it on TV / online, on … evenings, with …"}
+      - {q: "What is it about?", hint: "It's about … · Every programme …"}
+      - {q: "Why do you enjoy it?", hint: "because it's funny / exciting / interesting · I learn …"}
+    lines:
+      - emma: "Now it's your turn. Pause the video. Take one minute to write some key words, then talk for one to two minutes. Remember: watch TV, and on TV."
+        vi: "Đến lượt bạn: tạm dừng video, 1 phút ghi từ khóa, nói 1–2 phút."
+      - {emma: "What is the programme?", focus: 0, pause: 0.5}
+      - {emma: "When and where do you watch it?", focus: 1, pause: 0.5}
+      - {emma: "What is it about?", focus: 2, pause: 0.5}
+      - {emma: "Why do you enjoy it?", focus: 3, pause: 1.0}
+
+  - kind: qa
+    chapter: "Luyện nói chung: thảo luận"
+    heading: "Discussion · the media"
+    heading_vi: "Câu hỏi kiểu Part 3: ý kiến + lý do + ví dụ"
+    items:
+      - q: "Do young people still read newspapers?"
+        a: "Not many. Most young people get the news on their phones, from apps and social media."
+        ask: emma
+        by: tom
+        phrases: ["Not many.", "Most young people…"]
+      - q: "Why are celebrities so popular?"
+        a: "I think people like to know about their lives, and adverts use celebrities to sell things. But sometimes the media write too much about them."
+        ask: tom
+        by: emma
+        phrases: ["I think people like…", "But sometimes…"]
+      - q: "Is it a good idea to watch the news every day?"
+        a: "Yes, but not too much. It's important to know what's happening, but a lot of the news is bad, and it can make you feel worried."
+        ask: emma
+        by: tom
+        phrases: ["Yes, but not too much.", "It's important to…"]
+    lines:
+      - {emma: "Let's finish with some discussion questions. Do young people still read newspapers?", focus: 0}
+      - {tom: "Not many. Most young people get the news on their phones, from apps and social media.", reveal: 0, vi: "Không nhiều: phần lớn người trẻ đọc tin trên điện thoại, qua ứng dụng và mạng xã hội."}
+      - {tom: "Why are celebrities so popular?", focus: 1}
+      - {emma: "I think people like to know about their lives, and adverts use celebrities to sell things. But sometimes the media write too much about them.", say: "I think people like to know about their lives, and adverts yooz celebrities to sell things. But sometimes the media write too much about them.", reveal: 1, vi: "Người ta thích biết về cuộc sống của họ, quảng cáo dùng người nổi tiếng để bán hàng; nhưng đôi khi báo chí viết về họ quá nhiều."}
+      - {emma: "Is it a good idea to watch the news every day?", focus: 2}
+      - {tom: "Yes, but not too much. It's important to know what's happening, but a lot of the news is bad, and it can make you feel worried.", reveal: 2, vi: "Có, nhưng đừng quá nhiều: cần biết chuyện gì đang xảy ra, nhưng tin xấu nhiều dễ làm mình lo lắng."}
+
+  - kind: bullets
+    chapter: "Tổng kết"
+    heading: "Summary"
+    heading_vi: "Ghi nhớ — rồi làm lại bài 3 (che cột Word, nhìn Meaning) và Review tr. 138–140"
+    items:
+      - {en: "the media · a magazine · a newspaper (a paper) · an article · a reporter · an advert", vi: "báo đài"}
+      - {en: "an opinion · an event · a disaster · a war ≠ peace · a celebrity · die", vi: "tin tức nói về gì"}
+      - {en: "the news (is) · a programme · a soap · the weather forecast · nothing much", vi: "chương trình"}
+      - {en: "watch TV · see a programme · listen to the radio · hear the news · in the paper · on TV", vi: "động từ và giới từ"}
+      - {en: "all / most / some / none of it · believe · find out · happen", vi: "bao nhiêu phần"}
+      - {en: "Next: the Review (p. 138–140), then the next module", vi: "Tiếp theo: Review tr. 138–140, rồi module tiếp theo"}
+    lines:
+      - emma: "Let's review."
+        vi: "Cùng ôn lại."
+      - {emma: "The media, a magazine, a newspaper or a paper, an article, a reporter, and an advert.", focus: 0}
+      - {tom: "An opinion, an event, a disaster, a war, peace, a celebrity, and die.", focus: 1}
+      - {emma: "The news is, a programme, a soap, the weather forecast, and nothing much.", focus: 2}
+      - {tom: "Watch TV, see a programme, listen to the radio, hear the news, in the paper, and on TV.", focus: 3}
+      - {emma: "All, most, some, or none of it. Believe, find out, and happen.", focus: 4}
+      - {tom: "That's the end of the module: hobbies and interests. Do the review on pages one hundred and thirty-eight to one hundred and forty, and see you in the next module!", focus: 5}

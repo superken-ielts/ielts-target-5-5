@@ -1,0 +1,302 @@
+# Video nghe – viết (dictation) Unit 53 · The media — Oxford Word Skills Basic (đợt 36).
+# Dựng: cd agents && python -m lesson_video build ../books/book_oxford_word_skills_basic/lessons/U53-media-dictation.yaml
+# Người học: "mỗi chủ đề thêm 1 video luyện nghe 10 phút ko đứt quãng tôi tự pause lại để viết theo từ vựng câu
+# theo chủ đề phải bao gồm các từ vựng trong sách thuộc chủ đề trong sách rồi tìm thêm các từ vựng câu hay giao tiếp".
+# Khuôn (file 09 mục 5.9): video chạy liền khoảng 10 phút, không đếm ngược, không có `pause` (người học: "video ko nên
+# có pause quá 3 giây nếu có ko có càng tốt" — tự tạm dừng để viết); cảnh `dictation` ẩn chữ, mở đáp án khi sang mục
+# sau; phần 1 = mọi mục Word list của unit (tr. 237–254, `work/wordlist.json`) và từ trên trang unit, mỗi từ đọc hai lần
+# rồi câu ví dụ hai lần; phần 2 = từ thêm theo chủ đề (ngoài sách); phần 3 = câu giao tiếp, mỗi câu đọc hai lần.
+# Soát đủ từ: python -m lesson_video wordlist ../books/book_oxford_word_skills_basic --unit U53 --level all
+# Sinh bằng work/dictation/gen_dictation.py từ dữ liệu work/dictation/units_*.py — sửa dữ liệu rồi sinh lại, không
+# sửa tay file này. Câu ngôi thứ nhất khớp hồ sơ nhân vật (file 06 mục 9.4, file 09 mục 5.7) hoặc viết trung tính.
+# Word list của Unit 53 có 39 mục: các mục đi cùng nhau ghép một dòng (newspaper, paper; the news, news; war, peace; all,
+# most; some, none…); weather forecast phủ forecast, nothing much phủ much. Unit cuối module Hobbies and interests: lời chào
+# cuối hẹn gặp ở module tiếp theo.
+id: U53-media-dictation
+activity: U53-words
+title: "Unit 53 · The media"
+subtitle: "Dictation · listen and write: talking about the media"
+title_vi: "Nghe – viết 10 phút: báo đài, truyền thông — từ trong sách, từ thêm, câu giao tiếp"
+tag: "HOBBIES AND INTERESTS · UNIT 53"
+scene_gap: 0.4
+speakers:
+  # giọng theo bộ đọc: kokoro (mặc định khi có model) hoặc flite (dự phòng, có sẵn trên Ubuntu)
+  emma: {name: Emma, role: teacher, color: "#C8102E", voice: {kokoro: af_heart, flite: slt}}
+  tom: {name: Tom, role: student, color: "#1F5FAD", voice: {kokoro: am_michael, flite: rms}}
+
+scenes:
+  - kind: title
+    chapter: "Giới thiệu"
+    lines:
+      - {"emma": "Welcome to the dictation for Unit 53: The media. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "say": "Welcome to the dictation for Unit fifty-three: The media. Listen and write. The video doesn't stop, so pause it whenever you need more time to write.", "vi": "Bài nghe – viết Unit 53: báo đài, truyền thông. Video chạy liền — bạn tự tạm dừng khi cần thời gian viết."}
+      - {"emma": "There are three parts. First, 29 words from the book. You hear each word twice, and then an example sentence twice. Then 14 more useful words, and 32 useful sentences for conversation.", "say": "There are three parts. First, twenty-nine words from the book. You hear each word twice, and then an example sentence twice. Then fourteen more useful words, and thirty-two useful sentences for conversation.", "vi": "Ba phần: 29 từ trong sách (mỗi từ đọc hai lần, rồi câu ví dụ hai lần), 14 từ thêm, 32 câu giao tiếp."}
+      - {"tom": "There are no breaks, and the answer appears when the next one starts. So pause the video, write, and then check.", "vi": "Không có khoảng nghỉ, đáp án hiện khi sang mục sau: tạm dừng video, viết, rồi kiểm tra."}
+
+  - kind: dictation
+    chapter: "1. Từ trong sách"
+    heading: "Dictation 1 · Words from the book (1–6)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 1, "answer": "the media", "vi": "truyền thông, báo đài", "ex": "The media often write about famous people.", "w": ["media"]}
+      - {"n": 2, "answer": "newspaper, paper", "vi": "tờ báo", "ex": "I buy a paper every Sunday.", "w": ["newspaper", "paper"]}
+      - {"n": 3, "answer": "in the paper", "vi": "trên báo", "ex": "There's an article about it in the paper.", "w": ["in the paper"]}
+      - {"n": 4, "answer": "magazine", "vi": "tạp chí", "ex": "Do you read women's magazines?", "w": ["magazine"]}
+      - {"n": 5, "answer": "article", "vi": "bài báo", "ex": "It has interesting articles.", "w": ["article"]}
+      - {"n": 6, "answer": "TV, radio", "vi": "ti vi, đài", "ex": "I watch TV and listen to the radio.", "w": ["TV", "radio"]}
+    lines:
+      - {"emma": "Part one. Words from the book.", "vi": "Phần 1: từ trong sách."}
+      - {"emma": "One. the media. the media. The media often write about famous people. The media often write about famous people.", "focus": 0}
+      - {"emma": "Two. newspaper, paper. newspaper, paper. I buy a paper every Sunday. I buy a paper every Sunday.", "focus": 1, "reveal": [1]}
+      - {"emma": "Three. in the paper. in the paper. There's an article about it in the paper. There's an article about it in the paper.", "focus": 2, "reveal": [2]}
+      - {"emma": "Four. magazine. magazine. Do you read women's magazines? Do you read women's magazines?", "focus": 3, "reveal": [3]}
+      - {"emma": "Five. article. article. It has interesting articles. It has interesting articles.", "focus": 4, "reveal": [4]}
+      - {"emma": "Six. TV, radio. TV, radio. I watch TV and listen to the radio. I watch TV and listen to the radio.", "focus": 5, "reveal": [5]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [6]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (7–12)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 7, "answer": "on TV, on the radio", "vi": "trên ti vi, trên đài", "ex": "I heard it on the radio.", "w": ["on TV/on the radio"]}
+      - {"n": 8, "answer": "the news", "vi": "bản tin, tin tức", "ex": "I watch the news every evening.", "w": ["the news", "news"]}
+      - {"n": 9, "answer": "programme", "vi": "chương trình", "ex": "It's a programme about dogs.", "w": ["programme"]}
+      - {"n": 10, "answer": "soap", "vi": "phim truyền hình dài tập", "ex": "She watches soaps every evening.", "w": ["soap"]}
+      - {"n": 11, "answer": "weather forecast", "vi": "dự báo thời tiết", "ex": "Have you seen the weather forecast?", "w": ["weather forecast", "forecast"]}
+      - {"n": 12, "answer": "nothing much", "vi": "chẳng có gì nhiều", "ex": "What did you watch? Oh, nothing much.", "w": ["nothing much", "much"]}
+    lines:
+      - {"emma": "Seven. on TV, on the radio. on TV, on the radio. I heard it on the radio. I heard it on the radio.", "focus": 0}
+      - {"emma": "Eight. the news. the news. I watch the news every evening. I watch the news every evening.", "focus": 1, "reveal": [7]}
+      - {"emma": "Nine. programme. programme. It's a programme about dogs. It's a programme about dogs.", "focus": 2, "reveal": [8]}
+      - {"emma": "Ten. soap. soap. She watches soaps every evening. She watches soaps every evening.", "focus": 3, "reveal": [9]}
+      - {"emma": "Eleven. weather forecast. weather forecast. Have you seen the weather forecast? Have you seen the weather forecast?", "focus": 4, "reveal": [10]}
+      - {"emma": "Twelve. nothing much. nothing much. What did you watch? Oh, nothing much. What did you watch? Oh, nothing much.", "focus": 5, "reveal": [11]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [12]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (13–18)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 13, "answer": "watch", "vi": "xem (ti vi)", "ex": "Did you watch TV last night?", "w": ["watch"]}
+      - {"n": 14, "answer": "see", "vi": "xem (một chương trình)", "ex": "I saw a great programme last night.", "w": ["see"]}
+      - {"n": 15, "answer": "listen to", "vi": "nghe", "ex": "Did you listen to the radio this morning?", "w": ["listen to"]}
+      - {"n": 16, "answer": "hear", "vi": "nghe thấy", "ex": "I heard the eight o'clock news.", "w": ["hear"]}
+      - {"n": 17, "answer": "report, reporter", "vi": "đưa tin, phóng viên", "ex": "Reporters report the news from all over the world.", "w": ["report", "reporter"]}
+      - {"n": 18, "answer": "opinion", "vi": "ý kiến", "ex": "What's your opinion of the news?", "w": ["opinion"]}
+    lines:
+      - {"emma": "Thirteen. watch. watch. Did you watch TV last night? Did you watch TV last night?", "focus": 0}
+      - {"emma": "Fourteen. see. see. I saw a great programme last night. I saw a great programme last night.", "focus": 1, "reveal": [13]}
+      - {"emma": "Fifteen. listen to. listen to. Did you listen to the radio this morning? Did you listen to the radio this morning?", "focus": 2, "reveal": [14]}
+      - {"emma": "Sixteen. hear. hear. I heard the eight o'clock news. I heard the eight o'clock news.", "focus": 3, "reveal": [15]}
+      - {"emma": "Seventeen. report, reporter. report, reporter. Reporters report the news from all over the world. Reporters report the news from all over the world.", "focus": 4, "reveal": [16]}
+      - {"emma": "Eighteen. opinion. opinion. What's your opinion of the news? What's your opinion of the news?", "focus": 5, "reveal": [17]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [18]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (19–24)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 19, "answer": "event", "vi": "sự kiện", "ex": "The Olympic Games is a very big event.", "w": ["event"]}
+      - {"n": 20, "answer": "happen", "vi": "xảy ra", "ex": "Have you heard the news? What's happened?", "w": ["happen"]}
+      - {"n": 21, "answer": "find out", "vi": "tìm hiểu, biết được", "ex": "I read the paper to find out what has happened.", "w": ["find out"]}
+      - {"n": 22, "answer": "die", "vi": "chết", "ex": "Fortunately, nobody died in the accident.", "w": ["die"]}
+      - {"n": 23, "answer": "war, peace", "vi": "chiến tranh, hòa bình", "ex": "When a war ends, there is peace.", "w": ["war", "peace"]}
+      - {"n": 24, "answer": "disaster", "vi": "thảm họa", "ex": "The tsunami was a terrible disaster.", "w": ["disaster"]}
+    lines:
+      - {"emma": "Nineteen. event. event. The Olympic Games is a very big event. The Olympic Games is a very big event.", "focus": 0}
+      - {"emma": "Twenty. happen. happen. Have you heard the news? What's happened? Have you heard the news? What's happened?", "focus": 1, "reveal": [19]}
+      - {"emma": "Twenty-one. find out. find out. I read the paper to find out what has happened. I read the paper to find out what has happened.", "focus": 2, "reveal": [20]}
+      - {"emma": "Twenty-two. die. die. Fortunately, nobody died in the accident. Fortunately, nobody died in the accident.", "focus": 3, "reveal": [21]}
+      - {"emma": "Twenty-three. war, peace. war, peace. When a war ends, there is peace. When a war ends, there is peace.", "focus": 4, "reveal": [22]}
+      - {"emma": "Twenty-four. disaster. disaster. The tsunami was a terrible disaster. The tsunami was a terrible disaster.", "focus": 5, "reveal": [23]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [24]}
+
+  - kind: dictation
+    heading: "Dictation 1 · Words from the book (25–29)"
+    heading_vi: "Từ trong sách — nghe từ hai lần rồi câu ví dụ; tạm dừng video để viết"
+    items:
+      - {"n": 25, "answer": "celebrity", "vi": "người nổi tiếng", "ex": "There were a lot of celebrities at the first night of the film.", "w": ["celebrity"]}
+      - {"n": 26, "answer": "advertisement, advert", "vi": "quảng cáo", "ex": "There are too many adverts on TV.", "w": ["advertisement", "advert"]}
+      - {"n": 27, "answer": "believe", "vi": "tin", "ex": "Don't believe everything you read.", "w": ["believe"]}
+      - {"n": 28, "answer": "all, most", "vi": "tất cả, phần lớn", "ex": "I didn't read all of it, but I read most of it.", "w": ["all", "most"]}
+      - {"n": 29, "answer": "some, none", "vi": "một phần, không chút nào", "ex": "Some of the story is true, but none of it is new.", "w": ["some", "none"]}
+    lines:
+      - {"emma": "Twenty-five. celebrity. celebrity. There were a lot of celebrities at the first night of the film. There were a lot of celebrities at the first night of the film.", "focus": 0}
+      - {"emma": "Twenty-six. advertisement, advert. advertisement, advert. There are too many adverts on TV. There are too many adverts on TV.", "focus": 1, "reveal": [25]}
+      - {"emma": "Twenty-seven. believe. believe. Don't believe everything you read. Don't believe everything you read.", "focus": 2, "reveal": [26]}
+      - {"emma": "Twenty-eight. all, most. all, most. I didn't read all of it, but I read most of it. I didn't read all of it, but I read most of it.", "focus": 3, "reveal": [27]}
+      - {"emma": "Twenty-nine. some, none. some, none. Some of the story is true, but none of it is new. Some of the story is true, but none of it is new.", "focus": 4, "reveal": [28]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 4, "reveal": [29]}
+
+  - kind: dictation
+    chapter: "2. Từ thêm theo chủ đề"
+    heading: "Dictation 2 · More useful words (30–35)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 30, "answer": "journalist", "vi": "nhà báo", "ex": "Her cousin is a journalist."}
+      - {"n": 31, "answer": "headline", "vi": "tiêu đề", "ex": "Did you see the headlines today?"}
+      - {"n": 32, "answer": "front page", "vi": "trang nhất", "ex": "The story was on the front page."}
+      - {"n": 33, "answer": "channel", "vi": "kênh", "ex": "Which channel is the match on?"}
+      - {"n": 34, "answer": "presenter", "vi": "người dẫn chương trình", "ex": "The presenter is very funny."}
+      - {"n": 35, "answer": "interview", "vi": "cuộc phỏng vấn", "ex": "There's an interview with the president."}
+    lines:
+      - {"tom": "Part two. More useful words.", "vi": "Phần 2: từ thêm theo chủ đề."}
+      - {"tom": "Thirty. journalist. journalist. Her cousin is a journalist. Her cousin is a journalist.", "focus": 0}
+      - {"tom": "Thirty-one. headline. headline. Did you see the headlines today? Did you see the headlines today?", "focus": 1, "reveal": [30]}
+      - {"tom": "Thirty-two. front page. front page. The story was on the front page. The story was on the front page.", "focus": 2, "reveal": [31]}
+      - {"tom": "Thirty-three. channel. channel. Which channel is the match on? Which channel is the match on?", "focus": 3, "reveal": [32]}
+      - {"tom": "Thirty-four. presenter. presenter. The presenter is very funny. The presenter is very funny.", "focus": 4, "reveal": [33]}
+      - {"tom": "Thirty-five. interview. interview. There's an interview with the president. There's an interview with the president.", "focus": 5, "reveal": [34]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [35]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (36–39)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 36, "answer": "game show", "vi": "trò chơi truyền hình", "ex": "Game shows are very popular in Vietnam."}
+      - {"n": 37, "answer": "viewers", "vi": "khán giả xem truyền hình", "ex": "The programme has millions of viewers."}
+      - {"n": 38, "answer": "social media", "vi": "mạng xã hội", "ex": "Many people get the news from social media."}
+      - {"n": 39, "answer": "podcast", "vi": "chương trình phát thanh trên mạng", "ex": "I listen to podcasts on the bus."}
+    lines:
+      - {"tom": "Thirty-six. game show. game show. Game shows are very popular in Vietnam. Game shows are very popular in Vietnam.", "focus": 0}
+      - {"tom": "Thirty-seven. viewers. viewers. The programme has millions of viewers. The programme has millions of viewers.", "focus": 1, "reveal": [36]}
+      - {"tom": "Thirty-eight. social media. social media. Many people get the news from social media. Many people get the news from social media.", "focus": 2, "reveal": [37]}
+      - {"tom": "Thirty-nine. podcast. podcast. I listen to podcasts on the bus. I listen to podcasts on the bus.", "focus": 3, "reveal": [38]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [39]}
+
+  - kind: dictation
+    heading: "Dictation 2 · More useful words (40–43)"
+    heading_vi: "Từ thêm theo chủ đề (ngoài sách) — nghe hai lần rồi câu ví dụ"
+    items:
+      - {"n": 40, "answer": "breaking news", "vi": "tin nóng", "ex": "Here is some breaking news."}
+      - {"n": 41, "answer": "fake news", "vi": "tin giả", "ex": "There's a lot of fake news online."}
+      - {"n": 42, "answer": "local news", "vi": "tin địa phương", "ex": "I read the local news on an app."}
+      - {"n": 43, "answer": "subscribe", "vi": "đăng ký theo dõi", "ex": "I subscribe to a cooking channel."}
+    lines:
+      - {"tom": "Forty. breaking news. breaking news. Here is some breaking news. Here is some breaking news.", "focus": 0}
+      - {"tom": "Forty-one. fake news. fake news. There's a lot of fake news online. There's a lot of fake news online.", "focus": 1, "reveal": [40]}
+      - {"tom": "Forty-two. local news. local news. I read the local news on an app. I read the local news on an app.", "focus": 2, "reveal": [41]}
+      - {"tom": "Forty-three. subscribe. subscribe. I subscribe to a cooking channel. I subscribe to a cooking channel.", "focus": 3, "reveal": [42]}
+      - {"tom": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [43]}
+
+  - kind: dictation
+    chapter: "3. Câu giao tiếp"
+    heading: "Dictation 3 · Useful sentences (44–49)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 44, "answer": "Have you heard the news?", "vi": "Bạn nghe tin chưa?"}
+      - {"n": 45, "answer": "No, what's happened?", "vi": "Chưa, có chuyện gì vậy?"}
+      - {"n": 46, "answer": "There was an accident on the bridge.", "vi": "Có tai nạn trên cầu."}
+      - {"n": 47, "answer": "Was anyone hurt?", "vi": "Có ai bị thương không?"}
+      - {"n": 48, "answer": "Did you see the match on TV?", "vi": "Bạn có xem trận đấu trên ti vi không?"}
+      - {"n": 49, "answer": "No, I listened to it on the radio.", "vi": "Không, mình nghe trên đài."}
+    lines:
+      - {"emma": "Part three. Useful sentences. You hear each sentence twice.", "vi": "Phần 3: câu giao tiếp — mỗi câu đọc hai lần."}
+      - {"emma": "Forty-four. Have you heard the news? Have you heard the news?", "focus": 0}
+      - {"tom": "Forty-five. No, what's happened? No, what's happened?", "focus": 1, "reveal": [44]}
+      - {"emma": "Forty-six. There was an accident on the bridge. There was an accident on the bridge.", "focus": 2, "reveal": [45]}
+      - {"tom": "Forty-seven. Was anyone hurt? Was anyone hurt?", "focus": 3, "reveal": [46]}
+      - {"tom": "Forty-eight. Did you see the match on TV? Did you see the match on TV?", "focus": 4, "reveal": [47]}
+      - {"emma": "Forty-nine. No, I listened to it on the radio. No, I listened to it on the radio.", "focus": 5, "reveal": [48]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [49]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (50–55)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 50, "answer": "What's on TV tonight?", "vi": "Tối nay ti vi có gì?"}
+      - {"n": 51, "answer": "Nothing much. Just a soap.", "vi": "Chẳng có gì. Chỉ có phim dài tập."}
+      - {"n": 52, "answer": "I read about it in the paper.", "vi": "Mình đọc chuyện đó trên báo."}
+      - {"n": 53, "answer": "Which paper?", "vi": "Báo nào?"}
+      - {"n": 54, "answer": "The news is starting. Turn on the TV!", "vi": "Bản tin bắt đầu rồi. Bật ti vi lên!"}
+      - {"n": 55, "answer": "OK. I'll turn it up.", "vi": "Được. Mình vặn to lên."}
+    lines:
+      - {"tom": "Fifty. What's on TV tonight? What's on TV tonight?", "focus": 0}
+      - {"emma": "Fifty-one. Nothing much. Just a soap. Nothing much. Just a soap.", "focus": 1, "reveal": [50]}
+      - {"emma": "Fifty-two. I read about it in the paper. I read about it in the paper.", "focus": 2, "reveal": [51]}
+      - {"tom": "Fifty-three. Which paper? Which paper?", "focus": 3, "reveal": [52]}
+      - {"emma": "Fifty-four. The news is starting. Turn on the TV! The news is starting. Turn on the TV!", "focus": 4, "reveal": [53]}
+      - {"tom": "Fifty-five. OK. I'll turn it up. OK. I'll turn it up.", "focus": 5, "reveal": [54]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [55]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (56–61)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 56, "answer": "What's the weather forecast for tomorrow?", "vi": "Dự báo thời tiết ngày mai thế nào?"}
+      - {"n": 57, "answer": "Sunny, but cold in the morning.", "vi": "Nắng, nhưng buổi sáng lạnh."}
+      - {"n": 58, "answer": "Do you believe everything you read online?", "vi": "Bạn có tin mọi thứ đọc trên mạng không?"}
+      - {"n": 59, "answer": "No, I check it on other websites.", "vi": "Không, mình kiểm tra ở trang khác."}
+      - {"n": 60, "answer": "I don't watch much TV these days.", "vi": "Dạo này mình không xem ti vi nhiều."}
+      - {"n": 61, "answer": "Me neither. I watch videos on my phone.", "vi": "Mình cũng vậy. Mình xem video trên điện thoại."}
+    lines:
+      - {"tom": "Fifty-six. What's the weather forecast for tomorrow? What's the weather forecast for tomorrow?", "focus": 0}
+      - {"emma": "Fifty-seven. Sunny, but cold in the morning. Sunny, but cold in the morning.", "focus": 1, "reveal": [56]}
+      - {"emma": "Fifty-eight. Do you believe everything you read online? Do you believe everything you read online?", "focus": 2, "reveal": [57]}
+      - {"tom": "Fifty-nine. No, I check it on other websites. No, I check it on other websites.", "focus": 3, "reveal": [58]}
+      - {"tom": "Sixty. I don't watch much TV these days. I don't watch much TV these days.", "focus": 4, "reveal": [59]}
+      - {"emma": "Sixty-one. Me neither. I watch videos on my phone. Me neither. I watch videos on my phone.", "focus": 5, "reveal": [60]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [61]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (62–67)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 62, "answer": "There are too many adverts on this channel.", "vi": "Kênh này nhiều quảng cáo quá."}
+      - {"n": 63, "answer": "Let's change the channel.", "vi": "Đổi kênh đi."}
+      - {"n": 64, "answer": "Did you hear what happened?", "vi": "Bạn có nghe chuyện gì xảy ra không?"}
+      - {"n": 65, "answer": "Yes, I heard it on the radio.", "vi": "Có, mình nghe trên đài."}
+      - {"n": 66, "answer": "She's a famous TV celebrity.", "vi": "Cô ấy là người nổi tiếng trên truyền hình."}
+      - {"n": 67, "answer": "Really? I've never heard of her.", "vi": "Thật à? Mình chưa nghe tên cô ấy bao giờ."}
+    lines:
+      - {"emma": "Sixty-two. There are too many adverts on this channel. There are too many adverts on this channel.", "focus": 0}
+      - {"tom": "Sixty-three. Let's change the channel. Let's change the channel.", "focus": 1, "reveal": [62]}
+      - {"tom": "Sixty-four. Did you hear what happened? Did you hear what happened?", "focus": 2, "reveal": [63]}
+      - {"emma": "Sixty-five. Yes, I heard it on the radio. Yes, I heard it on the radio.", "focus": 3, "reveal": [64]}
+      - {"emma": "Sixty-six. She's a famous TV celebrity. She's a famous TV celebrity.", "focus": 4, "reveal": [65]}
+      - {"tom": "Sixty-seven. Really? I've never heard of her. Really? I've never heard of her.", "focus": 5, "reveal": [66]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 5, "reveal": [67]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (68–71)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 68, "answer": "What's your opinion?", "vi": "Ý kiến của bạn thế nào?"}
+      - {"n": 69, "answer": "I think the reporter is right.", "vi": "Mình nghĩ phóng viên nói đúng."}
+      - {"n": 70, "answer": "I'd like a newspaper, please.", "vi": "Cho tôi một tờ báo."}
+      - {"n": 71, "answer": "Which one would you like?", "vi": "Chị muốn tờ nào?"}
+    lines:
+      - {"tom": "Sixty-eight. What's your opinion? What's your opinion?", "focus": 0}
+      - {"emma": "Sixty-nine. I think the reporter is right. I think the reporter is right.", "focus": 1, "reveal": [68]}
+      - {"emma": "Seventy. I'd like a newspaper, please. I'd like a newspaper, please.", "focus": 2, "reveal": [69]}
+      - {"tom": "Seventy-one. Which one would you like? Which one would you like?", "focus": 3, "reveal": [70]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [71]}
+
+  - kind: dictation
+    heading: "Dictation 3 · Useful sentences (72–75)"
+    heading_vi: "Câu giao tiếp hay dùng — mỗi câu đọc hai lần; tạm dừng video để viết"
+    items:
+      - {"n": 72, "answer": "The news is on at seven o'clock.", "vi": "Bản tin chiếu lúc bảy giờ."}
+      - {"n": 73, "answer": "I'll watch it after dinner.", "vi": "Ăn tối xong mình sẽ xem."}
+      - {"n": 74, "answer": "Is it true, or is it fake news?", "vi": "Thật hay là tin giả vậy?"}
+      - {"n": 75, "answer": "I'm not sure. Let's find out.", "vi": "Mình không chắc. Tìm hiểu xem."}
+    lines:
+      - {"emma": "Seventy-two. The news is on at seven o'clock. The news is on at seven o'clock.", "focus": 0}
+      - {"tom": "Seventy-three. I'll watch it after dinner. I'll watch it after dinner.", "focus": 1, "reveal": [72]}
+      - {"tom": "Seventy-four. Is it true, or is it fake news? Is it true, or is it fake news?", "focus": 2, "reveal": [73]}
+      - {"emma": "Seventy-five. I'm not sure. Let's find out. I'm not sure. Let's find out.", "focus": 3, "reveal": [74]}
+      - {"emma": "Check your answers.", "vi": "Kiểm tra bài viết của bạn.", "focus": 3, "reveal": [75]}
+
+  - kind: bullets
+    chapter: "Sau khi nghe – viết"
+    heading: "After the dictation"
+    heading_vi: "Ôn lại"
+    items:
+      - {"en": "Check your spelling with the answers on the screen.", "vi": "Soát chính tả với đáp án trên màn hình"}
+      - {"en": "Cover the English. Read the Vietnamese and say the word.", "vi": "Che tiếng Anh, nhìn nghĩa tiếng Việt, nói lại từ"}
+      - {"en": "Say five of the useful sentences out loud today.", "vi": "Nói to 5 câu giao tiếp trong hôm nay"}
+    lines:
+      - {"emma": "Check your spelling with the answers on the screen.", "focus": 0}
+      - {"emma": "Cover the English. Read the Vietnamese and say the word.", "focus": 1}
+      - {"emma": "Say five of the useful sentences out loud today.", "focus": 2}
+      - {"tom": "Well done! See you in the next module.", "say": "Well done! See you in the next module.", "vi": "Giỏi lắm! Hẹn gặp ở module tiếp theo."}
+
